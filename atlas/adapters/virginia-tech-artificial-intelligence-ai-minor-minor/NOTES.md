@@ -1,9 +1,25 @@
-# Artificial Intelligence (AI)
+# Reviewed local minor inventory
 
-Official identity source: https://website.cs.vt.edu/academic/undergraduate/ai-minor.html
+Reviewed 2026-10-10. Status: **partial**. This scope is the minor, not the parent degree.
 
-Directory/identity verified; curriculum pending. No courses, requirements or outcomes have yet been extracted.
+## Evidence and coverage
 
-Official undergraduate program source inspected; qualifying title confirmed. Institution-wide inventory and curriculum extraction remain incomplete.
+- Artificial Intelligence (AI) minor: https://website.cs.vt.edu/academic/undergraduate/ai-minor.html — Who should pursue this minor; How to pursue the minor; introductory program aims
+- Engineering minors: https://eng.vt.edu/undergraduate/minors.html — Non-Restricted Engineering Minors: Artificial Intelligence; application procedure
 
-The adapter validates a title in visible content headings or links and the award/kind in its local card or heading section. It returns only observed identity fields and never replays seed metadata, curriculum, or dates. A failure means review is required; it does not mean the program is absent. Tests use synthetic HTML to verify rejection behavior; live refresh is not claimed.
+0 course records and 3 requirement nodes. Courses include alternatives/elective pools; not all are required. Course metadata is separate from inventory completeness.
+
+## Unresolved requirements
+
+- Catalog course and study-track inventory, credits, alternatives and completion constraints remain unreviewed because catalog access was unavailable.
+- Minor grade, overlap, residency and transfer policies are not verified.
+
+## Interpretation and refresh
+
+- Official catalog fetch was stopped because robots policy could not be obtained (HTTP 202); no catalog body was accessed and no restriction was bypassed.
+- August 2026 declaration availability is not evidence of a first instruction date; first_offered remains null.
+- This partial inventory represents the minor only, not the host degree or an individual graduation audit.
+- Course inventory contains alternatives and elective examples; not every listed course is compulsory.
+- Adapters extract actual local headings, course choices and numeric rules; secondary pages validate relevant policies and emit content digests. Changed sources create candidates and never recertify completeness. Scrapers emit no review audit or verification date.
+- The Duke adapter scopes to the ML section or AI applications accordion, excluding adjacent minors. Cross-listed identifiers remain one record; different named ME 555 topics remain separate examples with approval context.
+- Focused synthetic fixtures cover changed counts/units/declaration dates, omitted subject prefixes, cross-listing identity and unknown metadata. No fetched source bodies are committed.

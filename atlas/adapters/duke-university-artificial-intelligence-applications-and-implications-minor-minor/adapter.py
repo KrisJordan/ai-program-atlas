@@ -1,8 +1,17 @@
-"""Identity-only observation; full curriculum extraction is pending."""
-from atlas.adapters.discovery_common import parse_identity
+"""Actual local-minor observations; refresh never certifies completeness."""
+from atlas.adapters.vt_duke_minors import parse_duke_apps, policy_observation
 
 PROGRAM_ID = 'duke-university-artificial-intelligence-applications-and-implications-minor-minor'
-SOURCES = ('https://cs.duke.edu/undergraduate/degrees/minors',)
+SOURCE_ID = 'duke-apps-department'
+SOURCES = ('https://cs.duke.edu/undergraduate/degrees/minors', 'https://cs.duke.edu/undergraduate/degrees/BS/concentrations/ai-ml', 'https://trinity.duke.edu/undergraduate/academic-policies/change-major-minor-certificate')
 
 def parse(html: str) -> dict:
-    return parse_identity(html, program_id=PROGRAM_ID, title='Artificial Intelligence: Applications and Implications', award='minor', kind='minor', aliases=(), award_terms=())
+    return parse_duke_apps(html, PROGRAM_ID, SOURCE_ID, SOURCES[0])
+
+def parse_policy_0(html: str) -> dict:
+    return policy_observation(html, PROGRAM_ID, 'duke-apps-linked-concentration', 'concentration')
+
+def parse_policy_1(html: str) -> dict:
+    return policy_observation(html, PROGRAM_ID, 'duke-trinity-minor-policy', 'trinity')
+
+SOURCE_PARSERS = {'https://cs.duke.edu/undergraduate/degrees/BS/concentrations/ai-ml': parse_policy_0, 'https://trinity.duke.edu/undergraduate/academic-policies/change-major-minor-certificate': parse_policy_1}

@@ -1,8 +1,14 @@
-"""Identity-only observation; full curriculum extraction is pending."""
-from atlas.adapters.discovery_common import parse_identity
+"""Actual local-minor observations; refresh never certifies completeness."""
+from atlas.adapters.vt_duke_minors import parse_vt, policy_observation
 
 PROGRAM_ID = 'virginia-tech-artificial-intelligence-ai-minor-minor'
-SOURCES = ('https://website.cs.vt.edu/academic/undergraduate/ai-minor.html',)
+SOURCE_ID = 'vt-ai-department'
+SOURCES = ('https://website.cs.vt.edu/academic/undergraduate/ai-minor.html', 'https://eng.vt.edu/undergraduate/minors.html')
 
 def parse(html: str) -> dict:
-    return parse_identity(html, program_id=PROGRAM_ID, title='Artificial Intelligence (AI)', award='minor', kind='minor', aliases=(), award_terms=())
+    return parse_vt(html, PROGRAM_ID, SOURCE_ID, SOURCES[0])
+
+def parse_policy_0(html: str) -> dict:
+    return policy_observation(html, PROGRAM_ID, 'vt-engineering-minors', 'vt')
+
+SOURCE_PARSERS = {'https://eng.vt.edu/undergraduate/minors.html': parse_policy_0}

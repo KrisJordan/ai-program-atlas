@@ -10,38 +10,142 @@
   "title": "Artificial Intelligence (AI)",
   "award_level": "minor",
   "program_kind": "minor",
-  "hosting_unit": null,
-  "status": "unknown",
+  "hosting_unit": "Department of Computer Science",
+  "status": "active",
   "first_offered": null,
-  "overview": "Official university content identifies this undergraduate minor. Curriculum details and complete institutional coverage remain pending.",
+  "overview": "An interdisciplinary minor open to Virginia Tech undergraduates across majors, combining technical AI foundations, ethical and societal context, and applied study in a chosen domain. The detailed requirement inventory remains unavailable to this research pass.",
   "catalog_year": null,
-  "verification_status": "partial",
+  "verification_status": "confirmed",
   "last_verified": "2026-10-10",
-  "curriculum_status": "pending",
+  "curriculum_status": "partial",
   "links": [
     {
       "kind": "overview",
       "url": "https://website.cs.vt.edu/academic/undergraduate/ai-minor.html",
       "label": "Official program identity source"
+    },
+    {
+      "kind": "catalog",
+      "url": "https://catalog.vt.edu/undergraduate/minors/artificial-intelligence-minor/",
+      "label": "Official catalog — access unavailable to research fetcher"
+    },
+    {
+      "kind": "study",
+      "url": "https://eng.vt.edu/undergraduate/minors.html",
+      "label": "Engineering minor application policy"
     }
   ],
   "sources": [
     {
-      "id": "virginia-tech-artificial-intelligence-ai-minor-minor-official",
+      "id": "vt-ai-department",
       "url": "https://website.cs.vt.edu/academic/undergraduate/ai-minor.html",
-      "title": "Artificial Intelligence (AI)",
+      "title": "Artificial Intelligence (AI) minor",
       "fetched_at": "2026-10-10",
       "source_date": null,
       "catalog_year": null,
-      "locator": "Named undergraduate program entry: Artificial Intelligence (AI); award/type: minor / minor",
+      "locator": "Who should pursue this minor; How to pursue the minor; introductory program aims",
+      "confidence": "high"
+    },
+    {
+      "id": "vt-engineering-minors",
+      "url": "https://eng.vt.edu/undergraduate/minors.html",
+      "title": "Engineering minors",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Non-Restricted Engineering Minors: Artificial Intelligence; application procedure",
       "confidence": "high"
     }
   ],
-  "outcomes": [],
+  "outcomes": [
+    {
+      "text": "Develop practical AI literacy across technical foundations, responsible interpretation and communication, ethical and societal questions, and applied study.",
+      "kind": "source_stated",
+      "source_id": "vt-ai-department",
+      "locator": "Introductory program aims"
+    },
+    {
+      "text": "Responsible AI and society",
+      "kind": "inferred_taxonomy",
+      "source_id": "vt-ai-department",
+      "locator": "Documented inference from explicit ethical/societal study and responsible communication aims"
+    },
+    {
+      "text": "Applied AI",
+      "kind": "inferred_taxonomy",
+      "source_id": "vt-ai-department",
+      "locator": "Documented inference from explicit domain-based hands-on applied study"
+    }
+  ],
   "courses": [],
-  "requirements": [],
+  "requirements": [
+    {
+      "id": "vt-who-should-pursue-this-minor",
+      "parent_id": null,
+      "title": "Who should pursue this minor",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "vt-ai-department",
+      "source_text": null,
+      "summary": "Open to Virginia Tech undergraduates regardless of major.",
+      "course_ids": []
+    },
+    {
+      "id": "vt-how-to-pursue-the-minor",
+      "parent_id": null,
+      "title": "How to pursue the minor",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "vt-ai-department",
+      "source_text": null,
+      "summary": "Minor declarations begin with the August 2026 major/minor application review. The department permits adding classes without prerequisites from June 10, 2026; students must check prerequisites before enrolling. These administrative dates do not establish first instruction.",
+      "course_ids": []
+    },
+    {
+      "id": "vt-declaration",
+      "parent_id": null,
+      "title": "Engineering minor application",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "vt-engineering-minors",
+      "source_text": null,
+      "summary": "AI is listed as a non-restricted engineering minor. Students submit the College of Engineering minor application during an application window; the page identifies availability from the August 2026 review.",
+      "course_ids": []
+    }
+  ],
   "notes": [
-    "Directory/identity verified; curriculum pending. No courses, requirements or outcomes have yet been extracted.",
-    "Official undergraduate program source inspected; qualifying title confirmed. Institution-wide inventory and curriculum extraction remain incomplete."
-  ]
+    "Official catalog fetch was stopped because robots policy could not be obtained (HTTP 202); no catalog body was accessed and no restriction was bypassed.",
+    "August 2026 declaration availability is not evidence of a first instruction date; first_offered remains null.",
+    "This partial inventory represents the minor only, not the host degree or an individual graduation audit.",
+    "Course inventory contains alternatives and elective examples; not every listed course is compulsory."
+  ],
+  "curriculum_audit": {
+    "scope": "minor",
+    "reviewed_at": "2026-10-10",
+    "source_ids": [
+      "vt-ai-department",
+      "vt-engineering-minors"
+    ],
+    "sections": [
+      "Program purpose and undergraduate eligibility",
+      "Declaration/application policy"
+    ],
+    "unresolved_requirements": [
+      "Catalog course and study-track inventory, credits, alternatives and completion constraints remain unreviewed because catalog access was unavailable.",
+      "Minor grade, overlap, residency and transfer policies are not verified."
+    ],
+    "metadata_gaps": [
+      "Course descriptions, per-course prerequisites and credit amounts have not been verified. Missing prerequisites do not mean no prerequisites.",
+      "Public course sites and syllabi have not been verified."
+    ]
+  }
 }
