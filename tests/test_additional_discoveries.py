@@ -25,7 +25,8 @@ def columbia_fixture():
 
     choice = "<tr><td>Choose one:</td></tr>"
     return (
-        "<h3>\u200bMinor in Artificial Intelligence</h3><p>The minor consists of 6 courses.</p>"
+        columbia_policies_fixture()
+        + "<h3>\u200bMinor in Artificial Intelligence</h3><p>The minor consists of 6 courses.</p>"
         + table(
             [
                 row("MATH UN2015", "Example Math"),
@@ -58,9 +59,7 @@ def test_columbia_preserves_duplicate_ambiguity_and_blank_points():
     assert data["program_kind"] == "minor" and data["curriculum_status"] == "partial"
     assert len([c for c in data["courses"] if c["code"] == "IEOR E2000"]) == 1
     assert all(c["credits"] is None for c in data["courses"])
-    assert next(c for c in data["courses"] if c["code"] == "STAT GU4243")["name"].endswith(
-        "(title not supplied)"
-    )
+    assert next(c for c in data["courses"] if c["code"] == "STAT GU4243")["name"] is None
     assert any(r["id"].endswith("duplicate-source-row") for r in data["requirements"])
     assert any(r["id"].endswith("broad-electives") for r in data["requirements"])
     assert "curriculum_audit" not in data and "last_verified" not in data
@@ -93,8 +92,10 @@ def test_additional_survey_integrity():
     assert all(r["status"] != "no_qualifying_program_found" for r in rows)
     confirmed = {r["institution_id"]: r for r in rows if r["status"] == "confirmed"}
     assert {
-        "stanford-university", "columbia-university",
-        "university-of-virginia", "villanova-university",
+        "stanford-university",
+        "columbia-university",
+        "university-of-virginia",
+        "villanova-university",
     } <= set(confirmed)
     assert all(r["discoveries"] and r["checked_at"] and r["sources"] for r in confirmed.values())
     for pid in ["columbia-ai-minor", "stanford-ai-track"]:
@@ -105,3 +106,52 @@ def test_additional_survey_integrity():
         from atlas.db import validate_program
 
         validate_program(p)
+
+
+def columbia_policies_fixture():
+    def table(label, code):
+        return f'<table><tr><td>{label}: Select one of the following courses</td></tr><tr><td class="codecol">{code}</td><td>Example</td></tr><tr><td class="codecol">MATH UN2015</td><td>Combined</td></tr></table>'
+
+    return (
+        "<h3>Double Counting</h3><p>Subject to student's home school. No other courses can be double-counted. One Linear Algebra course; One Probability/Statistics course; COMS W1004.</p>"
+        "<h3>D Grades</h3><p>one course of 4 points with grade of D toward major or minor</p>"
+        "<h4>Mathematics Requirement (6-11 points)</h4><table><tr><td>Calculus</td></tr></table>"
+        + table("Linear Algebra Requirement", "MATH UN2010")
+        + table("Probability / Statistics Requirement", "STAT UN1201")
+        + "<p>MATH UN2015 may simultaneously satisfy both without the need to take additional classes.</p>"
+    )
+
+
+def test_columbia_substitution_has_two_branches_not_extra_requirements():
+    parse = load("columbia-ai-minor").parse
+    data = parse(columbia_fixture())
+    rows = {r["id"].removeprefix("columbia-ai-minor-"): r for r in data["requirements"]}
+    assert rows["foundation-0"]["kind"] == "alternative"
+    assert rows["foundation-0"]["course_ids"] == []
+    assert rows["math-combined"]["course_ids"] == ["columbia-math-un2015"]
+    assert (
+        rows["math-linear"]["parent_id"]
+        == rows["math-probability"]["parent_id"]
+        == rows["math-separate"]["id"]
+    )
+    assert "columbia-math-un2015" not in rows["math-linear"]["course_ids"]
+    changed = parse(columbia_fixture().replace("MATH UN2010", "MATH UN2020"))
+    assert any(c["code"] == "MATH UN2020" for c in changed["courses"])
+    assert not any(c["code"] == "MATH UN2010" for c in changed["courses"])
+    with pytest.raises(ValueError, match="Columbia policy"):
+        parse(columbia_fixture().replace("4 points", "5 points"))
+
+
+def test_columbia_college_policy_guard_and_scope():
+    parse = load("columbia-ai-minor").parse_college
+    html = (
+        "<h2>Minors</h2><p>Spring semester of their sophomore year or they can declare a minor at a later point</p>"
+        "<h2>Maximum Number of Programs of Study</h2><p>eight semesters; three (3); more than two minors; same offering unit; All joint majors</p>"
+        "<h2>Policy on Double-Counting Courses toward Requirements</h2><p>STAT UN1101 or UN1201; COMS W1004; maximum of two classes already approved; shared Core may not be double-counted; three declared programs</p>"
+    )
+    data = parse(html)
+    assert len(data["requirements"]) == 3 and data["courses"] == []
+    assert all(r["source_id"] == "columbia-ai-minor-college-policies" for r in data["requirements"])
+    assert "curriculum_audit" not in data
+    with pytest.raises(ValueError, match="Columbia policy"):
+        parse(html.replace("maximum of two classes", "maximum of three classes"))

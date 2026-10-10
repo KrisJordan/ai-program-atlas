@@ -10,6 +10,8 @@ SOURCES = (
     "https://bulletin.columbia.edu/columbia-college/departments-instruction/computer-science/",
 )
 SOURCE_ID = PROGRAM_ID + "-identity"
+COLLEGE_URL = "https://bulletin.columbia.edu/columbia-college/requirements-degree-bachelor-arts/"
+SOURCES += (COLLEGE_URL,)
 
 
 def text(node):
@@ -97,7 +99,7 @@ def parse(html: str) -> dict:
             courses[cid] = {
                 "id": cid,
                 "code": code,
-                "name": title or code + " (title not supplied)",
+                "name": title or None,
                 "description": None,
                 "prerequisites": None,
                 "credits": float(credit) if credit else None,
@@ -208,6 +210,9 @@ def parse(html: str) -> dict:
             summary="Students pursuing a major or minor offered solely or jointly by the CS department are ineligible, including CS, Information Science, Data Science, CS and Mathematics, and Computational Biology.",
         )
     )
+    from atlas.adapters.columbia_minor_policies import enrich_department
+
+    enrich_department(soup, courses, requirements, requirement, key, SOURCE_ID, SOURCES[0])
     return {
         "id": PROGRAM_ID,
         "title": "Artificial Intelligence",
@@ -217,3 +222,8 @@ def parse(html: str) -> dict:
         "courses": list(courses.values()),
         "requirements": requirements,
     }
+
+
+from atlas.adapters.columbia_minor_policies import parse_college
+
+SOURCE_PARSERS = {SOURCES[0]: parse, COLLEGE_URL: parse_college}

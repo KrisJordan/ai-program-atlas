@@ -33,7 +33,17 @@
       "fetched_at": "2026-10-10",
       "source_date": null,
       "catalog_year": null,
-      "locator": "Minor in Artificial Intelligence: foundation table, AI/Ethics/Elective tables, math substitution and CS-program exclusion",
+      "locator": "Minor in Artificial Intelligence: foundation table, AI/Ethics/Elective tables, math substitution and CS-program exclusion; Mathematics Requirement (6-11 points), Restrictions / Double Counting and D Grades",
+      "confidence": "high"
+    },
+    {
+      "id": "columbia-ai-minor-college-policies",
+      "url": "https://bulletin.columbia.edu/columbia-college/requirements-degree-bachelor-arts/",
+      "title": "Academic Requirements — Columbia College bulletin",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Minors; Maximum Number of Programs of Study; Policy on Double-Counting Courses toward Requirements",
       "confidence": "high"
     }
   ],
@@ -490,7 +500,7 @@
     {
       "id": "columbia-stat-gu4243",
       "code": "STAT GU4243",
-      "name": "STAT GU4243 (title not supplied)",
+      "name": null,
       "description": null,
       "prerequisites": null,
       "credits": null,
@@ -514,6 +524,118 @@
       "url": "https://bulletin.columbia.edu/search/?P=STAT%20GU4244",
       "public_site": null,
       "syllabus": null
+    },
+    {
+      "id": "columbia-coms-w3251",
+      "code": "COMS W3251",
+      "name": "COMPUTATIONAL LINEAR ALGEBRA",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "foundations",
+      "source_id": "columbia-ai-minor-identity",
+      "url": "https://bulletin.columbia.edu/search/?P=COMS%20W3251",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "columbia-math-un2010",
+      "code": "MATH UN2010",
+      "name": "LINEAR ALGEBRA",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "foundations",
+      "source_id": "columbia-ai-minor-identity",
+      "url": "https://bulletin.columbia.edu/search/?P=MATH%20UN2010",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "columbia-math-un2020",
+      "code": "MATH UN2020",
+      "name": "Honors Linear Algebra",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "foundations",
+      "source_id": "columbia-ai-minor-identity",
+      "url": "https://bulletin.columbia.edu/search/?P=MATH%20UN2020",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "columbia-apma-e2101",
+      "code": "APMA E2101",
+      "name": "INTRO TO APPLIED MATHEMATICS",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "foundations",
+      "source_id": "columbia-ai-minor-identity",
+      "url": "https://bulletin.columbia.edu/search/?P=APMA%20E2101",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "columbia-apma-e3101",
+      "code": "APMA E3101",
+      "name": "APPLIED MATH I: LINEAR ALGEBRA",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "foundations",
+      "source_id": "columbia-ai-minor-identity",
+      "url": "https://bulletin.columbia.edu/search/?P=APMA%20E3101",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "columbia-ieor-e3658",
+      "code": "IEOR E3658",
+      "name": "PROBABILITY FOR ENGINEERS",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "foundations",
+      "source_id": "columbia-ai-minor-identity",
+      "url": "https://bulletin.columbia.edu/search/?P=IEOR%20E3658",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "columbia-stat-un1201",
+      "code": "STAT UN1201",
+      "name": "CALC-BASED INTRO TO STATISTICS",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "foundations",
+      "source_id": "columbia-ai-minor-identity",
+      "url": "https://bulletin.columbia.edu/search/?P=STAT%20UN1201",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "columbia-stat-gu4001",
+      "code": "STAT GU4001",
+      "name": "INTRODUCTION TO PROBABILITY AND STATISTICS",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "foundations",
+      "source_id": "columbia-ai-minor-identity",
+      "url": "https://bulletin.columbia.edu/search/?P=STAT%20GU4001",
+      "public_site": null,
+      "syllabus": null
     }
   ],
   "requirements": [
@@ -535,17 +657,15 @@
       "id": "columbia-ai-minor-foundation-0",
       "parent_id": "columbia-ai-minor-total",
       "title": "Foundation requirement 1",
-      "kind": "all",
-      "count": null,
+      "kind": "alternative",
+      "count": 1,
       "credits": null,
       "credit_unit": "unknown",
       "category": "other",
       "source_id": "columbia-ai-minor-identity",
       "source_text": null,
       "summary": "",
-      "course_ids": [
-        "columbia-math-un2015"
-      ]
+      "course_ids": []
     },
     {
       "id": "columbia-ai-minor-foundation-1",
@@ -696,7 +816,7 @@
       "category": "other",
       "source_id": "columbia-ai-minor-identity",
       "source_text": null,
-      "summary": "MATH UN2015 may be replaced by separate linear algebra and probability courses, following the CS Core. Detailed approved combinations await review.",
+      "summary": "MATH UN2015 can satisfy both components alone; alternatively select a separate course from each referenced CS Core mathematics list. The CS major's separate calculus requirement is not imposed on this minor. COMS W3251 is the recommended linear algebra option.",
       "course_ids": []
     },
     {
@@ -712,21 +832,160 @@
       "source_text": null,
       "summary": "Students pursuing a major or minor offered solely or jointly by the CS department are ineligible, including CS, Information Science, Data Science, CS and Mathematics, and Computational Biology.",
       "course_ids": []
+    },
+    {
+      "id": "columbia-ai-minor-math-combined",
+      "parent_id": "columbia-ai-minor-foundation-0",
+      "title": "Combined linear algebra and probability",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "columbia-ai-minor-identity",
+      "source_text": null,
+      "summary": "",
+      "course_ids": [
+        "columbia-math-un2015"
+      ]
+    },
+    {
+      "id": "columbia-ai-minor-math-separate",
+      "parent_id": "columbia-ai-minor-foundation-0",
+      "title": "Separate linear algebra and probability",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "columbia-ai-minor-identity",
+      "source_text": null,
+      "summary": "",
+      "course_ids": []
+    },
+    {
+      "id": "columbia-ai-minor-math-linear",
+      "parent_id": "columbia-ai-minor-math-separate",
+      "title": "Linear Algebra Requirement",
+      "kind": "choose_courses",
+      "count": 1,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "columbia-ai-minor-identity",
+      "source_text": null,
+      "summary": "",
+      "course_ids": [
+        "columbia-coms-w3251",
+        "columbia-math-un2010",
+        "columbia-math-un2020",
+        "columbia-apma-e2101",
+        "columbia-apma-e3101"
+      ]
+    },
+    {
+      "id": "columbia-ai-minor-math-probability",
+      "parent_id": "columbia-ai-minor-math-separate",
+      "title": "Probability / Statistics Requirement",
+      "kind": "choose_courses",
+      "count": 1,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "columbia-ai-minor-identity",
+      "source_text": null,
+      "summary": "",
+      "course_ids": [
+        "columbia-ieor-e3658",
+        "columbia-stat-un1201",
+        "columbia-stat-gu4001"
+      ]
+    },
+    {
+      "id": "columbia-ai-minor-department-overlap",
+      "parent_id": null,
+      "title": "Department limits on overlap with other programs",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "columbia-ai-minor-identity",
+      "source_text": null,
+      "summary": "Subject to home-school rules, CS permits overlap only for COMS W1004, calculus (including Honors Math A/B), one linear algebra course and one probability/statistics course; other courses cannot overlap another program. This does not resolve reuse between the AI requirement and AI elective within this minor.",
+      "course_ids": []
+    },
+    {
+      "id": "columbia-ai-minor-department-d-grade",
+      "parent_id": null,
+      "title": "Department D-grade exception",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "columbia-ai-minor-identity",
+      "source_text": null,
+      "summary": "At most one course worth no more than four points with grade D may count toward the major or minor, as stated in departmental Restrictions / D Grades.",
+      "course_ids": []
+    },
+    {
+      "id": "columbia-ai-minor-college-declaration",
+      "parent_id": null,
+      "title": "Minor declaration and host degree",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "columbia-ai-minor-college-policies",
+      "source_text": null,
+      "summary": "The College minor accompanies a major. Declaration may occur in spring of sophomore year or later if completion fits the student's program.",
+      "course_ids": []
+    },
+    {
+      "id": "columbia-ai-minor-college-program-limits",
+      "parent_id": null,
+      "title": "Number, duration and offering-unit limits",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "columbia-ai-minor-college-policies",
+      "source_text": null,
+      "summary": "At most three programs, no more than two majors or two minors, and at least one major. No additional semesters are granted for another program beyond eight total semesters, including prior transfer terms; additional programs must fit the expected workload without regular petitions above 18 points. Programs cannot share an offering unit, and joint majors belong to both units.",
+      "course_ids": []
+    },
+    {
+      "id": "columbia-ai-minor-college-college-overlap",
+      "parent_id": null,
+      "title": "College overlap framework",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "columbia-ai-minor-college-policies",
+      "source_text": null,
+      "summary": "Eligible shared foundational skills include elementary/intermediate languages, the listed calculus sequences, STAT UN1101/UN1201 and COMS W1004. Other foundational exceptions require Committee on Instruction approval. Core Global Core, Science and Language distribution courses may also overlap, but shared Core courses cannot. Up to two additional already-approved classes may overlap two programs; substitutions should not be sought solely to create overlap. An applicable condition may span three programs. Departmental restrictions must also be observed.",
+      "course_ids": []
     }
   ],
   "notes": [
     "Current Columbia College bulletin explicitly lists a six-course Minor in Artificial Intelligence. Other CS-department majors/minors are excluded from eligibility by the source. Institution-wide inventory remains incomplete.",
     "No public syllabus or course-site verification was performed for this discovery.",
     "The source declares six courses but repeats IEOR E2000 as both an intermediate-computing alternative and a standalone row. The duplicate is represented as an unresolved note, not an extra course to count.",
-    "STAT GU4243 is listed without a title. Its displayed name is an explicit placeholder. Points columns are blank throughout this minor table; credits and normalized credit unit remain unknown.",
-    "Broad COMS 47XX and relevant COMS 4995/6998 elective routes are preserved as rules, without inventing a finite approved list. Mathematics substitution refers to CS Core combinations not yet expanded.",
-    "Requirement inventory is partial; general minor grade and overlap policies still need separate review. No claim about Engineering or Barnard applicability is made."
+    "The referenced mathematics lists are now represented as combined MATH UN2015 OR separate linear algebra and probability choices. This imports only the mathematics substitutions explicitly referenced by the AI minor, not the CS major calculus requirement.",
+    "Department and College overlap rules are both represented; the more permissive College framework does not override the CS restriction. The departmental D-grade exception explicitly covers a minor. Required-versus-elective reuse inside the same AI minor is still unspecified.",
+    "STAT GU4243 title is null because the minor table supplies none. Blank points remain unknown; no credit inference from course codes."
   ],
   "curriculum_audit": {
     "scope": "minor",
     "reviewed_at": "2026-10-10",
     "source_ids": [
-      "columbia-ai-minor-identity"
+      "columbia-ai-minor-identity",
+      "columbia-ai-minor-college-policies"
     ],
     "sections": [
       "Published six-course count",
@@ -735,12 +994,14 @@
       "Ethics alternatives",
       "Named and broad AI electives",
       "Math substitution reference",
-      "CS-program exclusion"
+      "CS-program exclusion",
+      "CS Core referenced separate linear algebra/probability option pools",
+      "Departmental D-grade exception and overlap restrictions",
+      "College minor declaration, program limits and overlap framework"
     ],
     "unresolved_requirements": [
       "Duplicated IEOR E2000 foundation row and six-course count ambiguity",
-      "Detailed CS Core mathematics substitution combinations",
-      "General minor grade/overlap policies and broad elective overlap"
+      "Whether required COMS W4701 may also satisfy the broad COMS 47XX elective within the six-course minor; published inter-program overlap rules do not answer this"
     ],
     "metadata_gaps": [
       "Course descriptions/prerequisites/credits unverified",
