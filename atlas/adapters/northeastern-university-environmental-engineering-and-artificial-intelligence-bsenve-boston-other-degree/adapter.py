@@ -24,3 +24,9 @@ def parse_ge_metadata(html: str) -> dict:
 
 SOURCES = ('https://catalog.northeastern.edu/undergraduate/engineering/civil-environmental/environmental-engineering-artificial-intelligence-bsenve/', 'https://catalog.northeastern.edu/course-descriptions/ds/', 'https://catalog.northeastern.edu/course-descriptions/cive/', 'https://catalog.northeastern.edu/course-descriptions/ge/')
 SOURCE_PARSERS = {'https://catalog.northeastern.edu/course-descriptions/ds/': parse_ds_metadata, 'https://catalog.northeastern.edu/course-descriptions/cive/': parse_cive_metadata, 'https://catalog.northeastern.edu/course-descriptions/ge/': parse_ge_metadata}
+
+# Shared policy facts are observed independently for each concrete program.
+from atlas.adapters.northeastern_policies import register_policy_sources
+_POLICY_PARSERS = register_policy_sources(PROGRAM_ID)
+SOURCES = tuple(SOURCES) + tuple(_POLICY_PARSERS)
+SOURCE_PARSERS = {**globals().get('SOURCE_PARSERS', {}), **_POLICY_PARSERS}

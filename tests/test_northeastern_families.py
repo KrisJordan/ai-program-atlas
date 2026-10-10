@@ -47,11 +47,12 @@ def program(pid):return json.loads((ROOT/'data/programs'/f'{pid}.json').read_tex
 @pytest.mark.parametrize('pid',EXPECTED)
 def test_reviewed_variant_reconstruction_preserves_entire_original_graph(pid):
     p=program(pid);f=family();db.validate_program(p,f);resolved=resolve_program(p,f)
-    rows=[{k:v for k,v in r.items() if k not in ANNOTATIONS} for r in resolved['requirements']]
+    rows=[{k:v for k,v in r.items() if k not in ANNOTATIONS} for r in resolved['requirements'] if not r.get('family_requirement_id','').startswith('policy-')]
     digest=hashlib.sha256(json.dumps(sorted(rows,key=lambda r:r['id']),sort_keys=True,separators=(',',':')).encode()).hexdigest()
     assert digest==EXPECTED[pid]
     shared=[r for r in resolved['requirements'] if r['origin']=='family']
-    assert len(shared)==9
+    assert len(shared)==len(f['shared_requirements'])
+    assert len([r for r in shared if not r['family_requirement_id'].startswith('policy-')])==9
     assert not {r['id'] for r in p['requirements']} & {r['id'] for r in shared}
     assert p['award_level']==('other' if 'bsenve' in pid else 'BS') and p['curriculum_status']=='partial'
     assert p['curriculum_audit']['unresolved_requirements']
@@ -79,9 +80,9 @@ def test_real_family_persists_once_and_exports_distinct_awards(tmp_path):
     assert not ingest_family(conn,family(),program_updates=variants)
     exported=db.export_data(conn)
     assert {p['id'] for p in exported['programs']}==set(EXPECTED)
-    assert conn.execute('SELECT count(*) FROM family_requirement_groups').fetchone()[0]==9
+    assert conn.execute('SELECT count(*) FROM family_requirement_groups').fetchone()[0]==len(family()['shared_requirements'])
     for p in exported['programs']:
-        assert len([r for r in p['requirements'] if r['origin']=='family'])==9
+        assert len([r for r in p['requirements'] if r['origin']=='family'])==len(family()['shared_requirements'])
         assert p['family']['id']==FID
     assert conn.execute('PRAGMA integrity_check').fetchone()[0]=='ok'
 
@@ -112,7 +113,7 @@ def test_engineering_variant_keeps_distinct_award_and_verified_hosting_units():
     assert {h['name'] for h in p['family']['hosting_units']}=={'College of Engineering','Civil and Environmental Engineering'}
     assert p['family']['disciplines']==['Environmental Engineering','Artificial Intelligence']
     assert p['family']['relationship']=='integrated'
-    assert len([q for q in r['requirements'] if q['origin']=='family'])==9
+    assert len([q for q in r['requirements'] if q['origin']=='family'])==len(family()['shared_requirements'])
     assert len(EXPECTED)==23
 
 
@@ -121,3 +122,16 @@ def test_communication_variant_uses_its_own_verified_college_context():
     p=program('northeastern-university-artificial-intelligence-and-communication-studies-bs-boston-bs-degree')
     assert {h['name'] for h in p['family']['hosting_units']}=={'College of Arts, Media and Design','Communication Studies'}
     assert all(h['source_id']==p['id']+'-catalog' for h in p['family']['hosting_units'])
+
+
+
+def test_shared_policy_scope_is_proven_and_distinct_from_original_ai_core():
+    f=family();policy=[r for r in f['shared_requirements'] if r['id'].startswith('policy-')]
+    assert len(policy)==43 and all(r['component']=='other' and not r['course_codes'] for r in policy)
+    for pid in EXPECTED:
+        p=program(pid);resolved=resolve_program(p,f)
+        assert len([r for r in resolved['requirements'] if r.get('family_requirement_id','').startswith('policy-')])==43
+        assert all('college' in gap.lower() or 'concentration' in gap.lower() for gap in p['curriculum_audit']['unresolved_requirements'])
+        assert all(any(s['url']==url for s in p['sources']) for url in [
+            'https://catalog.northeastern.edu/undergraduate/university-academics/university-wide-requirements/',
+            'https://catalog.northeastern.edu/undergraduate/university-academics/general-education-requirements/'])

@@ -21,3 +21,9 @@ def parse_ling_metadata(html: str) -> dict:
 
 SOURCES = ('https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-linguistics-bs-bos/', 'https://catalog.northeastern.edu/course-descriptions/ds/', 'https://catalog.northeastern.edu/course-descriptions/ling/')
 SOURCE_PARSERS = {'https://catalog.northeastern.edu/course-descriptions/ds/': parse_ds_metadata, 'https://catalog.northeastern.edu/course-descriptions/ling/': parse_ling_metadata}
+
+# Shared policy facts are observed independently for each concrete program.
+from atlas.adapters.northeastern_policies import register_policy_sources
+_POLICY_PARSERS = register_policy_sources(PROGRAM_ID)
+SOURCES = tuple(SOURCES) + tuple(_POLICY_PARSERS)
+SOURCE_PARSERS = {**globals().get('SOURCE_PARSERS', {}), **_POLICY_PARSERS}

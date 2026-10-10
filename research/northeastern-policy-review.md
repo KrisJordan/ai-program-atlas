@@ -1,0 +1,56 @@
+# Northeastern shared degree-policy review
+
+Reviewed 2026-10-10 for the 23 documented Boston combined degrees: 22 BS and one Environmental Engineering BSEnvE. This review closes shared university-policy omissions while retaining precise scope gaps. It does not certify an individual graduation audit or promote any degree to complete.
+
+## Shared policies now represented
+
+Every program's own requirements page links the universitywide and NUpath rules. Each is an undergraduate Boston degree and an officially identified combined major. Those facts were checked before binding the shared rules; the machine-readable applicability ledger is `research/families/northeastern-university-policies.json`.
+
+| Official source | Represented criteria |
+| --- | --- |
+| [Universitywide Requirements](https://catalog.northeastern.edu/undergraduate/university-academics/university-wide-requirements/) | Minimum 128 total semester hours, overall GPA 2.000, 64 Northeastern-earned semester hours, all applicable program/university rules and experiential graduation requirement. Higher program minima remain controlling. |
+| [General Education Requirements — NUpath](https://catalog.northeastern.edu/undergraduate/university-academics/general-education-requirements/#nupathtext) | Eleven competencies; approved course-attribute eligibility; grading restrictions; overlap and transfer/placement limits; first-year/advanced writing standards and two additional writing-intensive major courses. |
+| [Experiential Learning Graduation Requirement](https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/experiential-learning-graduation-requirement/) | One qualifying co-op, internship, clinical placement or approved industry-project course, with published scope/exceptions. Program-specific experiences can impose additional conditions. |
+| [Graduation Requirements](https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/graduation-requirements/) | Good standing and academic/residency/experiential completion, advising audit and diploma clearance, approved coursework after matriculation, college petitions for outside coursework, and graduation application. |
+| [Degrees, Majors, and Minors — Combined Majors](https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/degrees-majors-minors/) | At least nine courses in each discipline, at most two shared between them, at least 16 overall, curricular integration, designated home-college choice and one-major/one-degree/one-diploma identity. These do not add another 16 courses to the prescribed plan. |
+| [Academic Progression Standards](https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/progression-standards/) | First-year GPA 1.800 and subsequent cumulative GPA 2.000, 12 earned semester hours for standing, incomplete-grade handling, probation/dismissal and college appeal conditions. College additions remain separately applicable. |
+
+Six shared sources add 43 policy nodes, stored once alongside the nine previously reviewed computing/AI nodes. Every policy has explicit per-program bindings and source provenance. Policies are tagged `other`, not counted as additional AI courses. The existing 2,597 major/core requirement nodes retain every field and relationship; 989 policy instances produce 3,586 effective nodes across 23 programs. Course observations remain 1,466. The family now has 52 shared definitions and 1,196 bindings, with 2,390 local nodes.
+
+NUpath expressly defines competency-based eligibility rather than a fixed program course list. The published rules allow qualifying major, minor, concentration and elective courses without extra course-level or semester-hour restrictions. A course can fulfill at most two of the first eight competencies, plus unrestricted additional writing-intensive/capstone/experiential attributes. Transfer/placement credit can meet at most five of those eight; transfer cannot meet capstone/experience, and only first-year writing permits transferred/placement writing credit. Advanced writing requires first-year writing, at least 64 academic hours including the enrollment term, junior/senior standing, and a C or higher. First-year writing also requires C or qualifying placement/transfer credit. These are accurately represented criteria, not a fabricated exhaustive inventory of class sections.
+
+The source's BA language, NYC liberal-arts and nursing-specific panels are outside these Boston BS/BSEnvE scopes. They are deliberately not inherited. The generic first-year-writing paragraph refers to a course list absent from that policy panel; each major already publishes its own specific writing options, which are retained. No absent general list is invented.
+
+## College policy evidence and actual remaining applicability gap
+
+The [combined-major policy](https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/degrees-majors-minors/) says a home college is designated and most combined majors let students choose it. Therefore a catalog breadcrumb identifies verified hosting context, **not an unconditional home-college assignment**. Existing hosting units remain intact: Khoury in 21 catalog records, CAMD/Communication Studies in one, Engineering/Civil and Environmental Engineering in one. Partner colleges are not inferred from discipline names.
+
+Three official college sources were inspected:
+
+| Source | Published college conditions | Applicability treatment |
+| --- | --- | --- |
+| [Khoury College](https://catalog.northeastern.edu/undergraduate/computer-information-science/) | Four-course full-time load with labs/recitations unless approved otherwise, at least 12 hours per semester, overall graduation GPA 2.000, satisfactory/unsatisfactory restricted to electives outside major/minor/NUpath, additional probation/progression conditions. | These rules address Khoury students. Hosting context alone does not prove every student's home-college choice. |
+| [College of Arts, Media and Design](https://catalog.northeastern.edu/undergraduate/arts-media-design/) | University progression standards, any program-specific additions, graduation-clearance meeting with the assigned adviser (planned in junior year), NUpath; BA requirements only for BA students. | CAMD-specific clearance is conditional on the designated home college. BA language rules are not applied to this BS. |
+| [College of Engineering](https://catalog.northeastern.edu/undergraduate/engineering/) | Four-course full-time expectation and 12-hour progression minimum, college probation/dismissal criteria, major and overall graduation GPA 2.000, satisfactory/unsatisfactory only for general electives outside engineering, maximum nine such hours toward degree and four per semester, approved program/year-of-graduation planning. | Engineering conditions have been documented but are not generalized to all AI combined degrees. Exact allowed home-college options require further program-specific confirmation. |
+
+The applicable home-college choices and all resulting college progression/graduation rules remain unverified for each degree's full scope. These are a **research/applicability gap**, not a claim that the university has failed to publish rules. No college requirement is silently waived, excluded or inherited from a breadcrumb. These policies are recorded here for the next scope review; six universally applicable source profiles alone are bound into the production family.
+
+## Distinguishing real gaps from represented criteria
+
+- **Known finite inventory still missing:** Business Administration requires a business concentration. Its linked published concentration curricula have not been expanded. The main degree's Marketing Analytics additional-general-elective condition is already represented, but it does not substitute for the concentration inventory.
+- **Published eligibility criteria, already represented:** Open CS/CY/DS or partner-subject number ranges, named exclusions, minimum/maximum selection counts, grade/GPA thresholds, non-reuse rules and choice distributions. Not listing every current course satisfying an open subject/range predicate is not the same as omitting a finite department-approved list.
+- **Published individual approval rules, already represented:** Adviser-approved research/directed study/graduate electives, placement substitutions, approved study-abroad equivalencies and similar alternatives. Their future individual approvals are not unpublished course facts. The notes preserve the conditions without promising approval or claiming automatic equivalence.
+- **Published source-specific conditions, retained:** Ecology distribution minima and prohibited program combinations; Economics lower-level limits; Biology concurrent research/capstone; Public Health alternative science paths; International Affairs same-region and experience rules; Journalism transfer residency and overlap; Engineering allocation/substitution rules; other major-specific grade policies. Notes may represent these without a separate automated degree-audit evaluator.
+- **Separate metadata gaps:** Course prerequisites/descriptions, public course websites and syllabi remain incomplete. A missing prerequisite field means unverified. These are not reclassified as program absence or invented prerequisites.
+
+The prior generic audit wording often listed approval-based options and explicit policy notes as if they were missing finite course inventories. That wording has been corrected. All 23 audits remain partial because the home-college scope gap remains; Business retains its additional finite-concentration gap. No record gains a completeness claim from adding shared university policy.
+
+## Implementation and verification
+
+`atlas/adapters/northeastern_policies.py` observes exact official titles and scoped panels/sections, including CourseLeaf spans that split individual words. Numeric thresholds are extracted from current source text; changed semantic guards fail for review. Separate source parsers are registered for each concrete degree. They emit policy-only observations, never a reviewer audit, verification timestamp or complete status. Original major-page adapters remain independent.
+
+Synthetic tests exercise changed credit/GPA/residency and NUpath thresholds, altered semantics, wrong/scoped-out source content, competency-count mismatch, excluded BA/NYC panels and the home-college-choice distinction. Real-family tests retain all 23 original graph fingerprints, check policy/source bindings, preserve distinct awards and hosting, and exercise atomic ingest/export/repeat idempotence. Raw policy HTML remains in the ignored HTTP cache.
+
+Validation result: 176 focused tests passed. A fresh temporary database ingested all 23 variants then repeated with zero changes. All 190 registered source parsers succeeded using the safe Fetcher; the second run added zero candidates and observed zero source changes. Export and static build produced 3,586 effective requirements; SQLite integrity passed. The maintained database and release plan were not changed.
+
+The full repository suite at this checkpoint passed: 575 tests, with 17 skipped.

@@ -88,3 +88,10 @@ Hosting units also differ. Communication Studies' scoped catalog breadcrumb iden
 The final family contains nine shared definitions, 207 explicit bindings, 2,390 local requirement nodes and 2,597 effective nodes across 23 concrete awards. All original requirement fields, IDs, parents, course memberships and source references reconstruct exactly; sources/courses remain individual program observations. All 23 curricula remain partial with their existing audits. International Affairs' regional paths, Journalism's transfer condition, Engineering's credit allocations and substitutions, and every local integration/capstone rule remain variant-specific.
 
 Final expansion validation: 73 focused Northeastern/family tests passed, including all 23 original-graph fingerprints, shared-change propagation, separate awards/hosting, relational idempotence and export. A clean temporary database ingested 23 variants, repeated with zero changes, built 2,597 effective requirements and 1,466 course observations, and passed SQLite integrity.
+
+
+## Shared university-policy extension
+
+The subsequent review in `research/northeastern-policy-review.md` adds 43 sourced university-policy nodes to the existing nine computing/AI definitions. The family now stores 52 definitions and 1,196 bindings across the same 23 distinct degrees. The original 2,597 major/core nodes remain identical; 989 additional policy instances produce 3,586 effective requirements. These policy nodes are `other` rather than additional AI coursework. No completeness status changes.
+
+The official combined-major policy makes the designated home college a student choice for most combined majors. Existing hosting units therefore describe verified catalog context; they do not assign every student to that college. Exact home-college applicability and Business’s finite concentration curricula remain the explicit scope gaps. Published open-course criteria and advisor-approved alternatives are represented policies rather than invented missing inventories.

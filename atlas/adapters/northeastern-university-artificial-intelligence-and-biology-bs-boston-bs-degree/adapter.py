@@ -8,3 +8,9 @@ def parse(html: str) -> dict:
     return parse_catalog(html, program_id=PROGRAM_ID, title='Artificial Intelligence and Biology, BS (Boston)', url=SOURCES[0],
         required_sections=['Artificial Intelligence Requirements', 'Biology Requirements', 'Integrative Requirements', 'Science GPA Requirement (Biology)', 'Program Requirement'],
         outcome_claims=[('organization and processes of life', 'Students study biological organization and processes from molecular to ecological scales.'), ('software development and algorithms', 'The program develops foundations in biological sciences, mathematics and computing.')])
+
+# Shared policy facts are observed independently for each concrete program.
+from atlas.adapters.northeastern_policies import register_policy_sources
+_POLICY_PARSERS = register_policy_sources(PROGRAM_ID)
+SOURCES = tuple(SOURCES) + tuple(_POLICY_PARSERS)
+SOURCE_PARSERS = {**globals().get('SOURCE_PARSERS', {}), **_POLICY_PARSERS}

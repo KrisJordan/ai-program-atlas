@@ -27,7 +27,7 @@
     {
       "kind": "study",
       "url": "https://catalog.northeastern.edu/undergraduate/university-academics/university-wide-requirements/",
-      "label": "Referenced policy or catalog: Universitywide Requirements"
+      "label": "Reviewed university policy: Universitywide Requirements"
     },
     {
       "kind": "study",
@@ -43,6 +43,31 @@
       "kind": "study",
       "url": "https://catalog.northeastern.edu/course-descriptions/socl/",
       "label": "Official Sociology (SOCL) course descriptions"
+    },
+    {
+      "kind": "study",
+      "url": "https://catalog.northeastern.edu/undergraduate/university-academics/general-education-requirements/",
+      "label": "Reviewed university policy: General Education Requirements"
+    },
+    {
+      "kind": "study",
+      "url": "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/experiential-learning-graduation-requirement/",
+      "label": "Reviewed university policy: Experiential Learning Graduation Requirement"
+    },
+    {
+      "kind": "study",
+      "url": "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/graduation-requirements/",
+      "label": "Reviewed university policy: Graduation Requirements"
+    },
+    {
+      "kind": "study",
+      "url": "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/degrees-majors-minors/",
+      "label": "Reviewed university policy: Degrees, Majors, and Minors"
+    },
+    {
+      "kind": "study",
+      "url": "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/progression-standards/",
+      "label": "Reviewed university policy: Academic Progression Standards"
     }
   ],
   "sources": [
@@ -74,6 +99,66 @@
       "source_date": null,
       "catalog_year": "2026-2027",
       "locator": "Named course blocks: SOCL 1101, SOCL 3300, SOCL 2321, SOCL 4600, SOCL 1000, SOCL 2320, SOCL 2485, SOCL 4528",
+      "confidence": "high"
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-universitywide-policy",
+      "url": "https://catalog.northeastern.edu/undergraduate/university-academics/university-wide-requirements/",
+      "title": "Universitywide Requirements",
+      "fetched_at": "2026-10-10T22:59:30+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "textcontainer; named completion/eligibility sections only",
+      "confidence": "high"
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-nupath-policy",
+      "url": "https://catalog.northeastern.edu/undergraduate/university-academics/general-education-requirements/",
+      "title": "General Education Requirements",
+      "fetched_at": "2026-10-10T22:59:32+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "nupathtextcontainer; named completion/eligibility sections only",
+      "confidence": "high"
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-experiential-policy",
+      "url": "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/experiential-learning-graduation-requirement/",
+      "title": "Experiential Learning Graduation Requirement",
+      "fetched_at": "2026-10-10T23:01:06+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "textcontainer; named completion/eligibility sections only",
+      "confidence": "high"
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-graduation-policy",
+      "url": "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/graduation-requirements/",
+      "title": "Graduation Requirements",
+      "fetched_at": "2026-10-10T23:01:08+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "textcontainer; named completion/eligibility sections only",
+      "confidence": "high"
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-combined-policy",
+      "url": "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/degrees-majors-minors/",
+      "title": "Degrees, Majors, and Minors",
+      "fetched_at": "2026-10-10T22:18:06+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "textcontainer; named completion/eligibility sections only",
+      "confidence": "high"
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-progression-policy",
+      "url": "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/progression-standards/",
+      "title": "Academic Progression Standards",
+      "fetched_at": "2026-10-10T23:01:11+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "textcontainer; named completion/eligibility sections only",
       "confidence": "high"
     }
   ],
@@ -1639,13 +1724,14 @@
     }
   ],
   "notes": [
-    "Universitywide and NUpath requirements are referenced but not fully expanded.",
-    "Placement substitutions, open elective ranges, grade policies and reuse restrictions require individual review.",
-    "Sociology electives require two unused 1000–2999 courses and three unused 3000–4999 courses; individual eligible courses remain unexpanded.",
     "Semester-hour units are explicit in the catalog. Published degree totals and category allocations are source rules, not calculated inventory sums.",
     "Course categories are editorial. Source-stated outcomes are paraphrased program aims, not measured graduate outcomes.",
     "The local curriculum is represented; the degree remains partial because full universitywide and conditional policy execution has not been established.",
-    "Official subject-catalog metadata checked for 13 courses; each course cites that source. Variable subject-catalog credit ranges remain null in scalar credits, while program-specific required credits remain on their requirement nodes."
+    "Official subject-catalog metadata checked for 13 courses; each course cites that source. Variable subject-catalog credit ranges remain null in scalar credits, while program-specific required credits remain on their requirement nodes.",
+    "Universitywide and NUpath criteria are now represented through verified shared policy bindings. The major-page reference notes describe what that page incorporates; linked policy rules appear separately in the resolved graph.",
+    "Open subject/level ranges, explicit grade/overlap limits and advisor-approved substitutions are represented criteria, not missing invented finite course lists. Individual approvals and registration eligibility remain governed by those rules.",
+    "NUpath is competency-based: approved attributes may be met through major or elective courses. This inventory does not fabricate all eligible class sections. BA-language, NYC-campus and nursing-specific general-education panels are not inherited by these Boston BS/BSEnvE degrees.",
+    "Permitted home-college options and their additional progression/graduation rules have not been exhaustively verified for this combined degree. Catalog hosting context is not assumed to fix the student’s designated home college."
   ],
   "curriculum_audit": {
     "scope": "degree",
@@ -1653,7 +1739,13 @@
     "source_ids": [
       "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-catalog",
       "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-ds-courses",
-      "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-socl-courses"
+      "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-socl-courses",
+      "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-universitywide-policy",
+      "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-nupath-policy",
+      "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-experiential-policy",
+      "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-graduation-policy",
+      "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-combined-policy",
+      "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-progression-policy"
     ],
     "sections": [
       "Universitywide Requirements",
@@ -1665,12 +1757,13 @@
       "Integrative Course",
       "Required General Electives",
       "NUpath Requirements Satisfied",
-      "Program Requirement"
+      "Program Requirement",
+      "Shared universitywide credit/GPA/residency minima",
+      "Shared NUpath competencies, overlap, transfer and writing rules",
+      "Shared experiential, graduation, combined-major/home-college and academic-standing criteria"
     ],
     "unresolved_requirements": [
-      "Universitywide and NUpath requirements are referenced but not fully expanded.",
-      "Placement substitutions, open elective ranges, grade policies and reuse restrictions require individual review.",
-      "Sociology electives require two unused 1000–2999 courses and three unused 3000–4999 courses; individual eligible courses remain unexpanded."
+      "Permitted home-college options and their additional progression/graduation rules have not been exhaustively verified for this combined degree. Catalog hosting context is not assumed to fix the student’s designated home college."
     ],
     "metadata_gaps": [
       "Official DS and partner-subject catalogs supply available credits and prerequisites; selected descriptions are paraphrased. Other course metadata remains unresearched. Missing prerequisites mean unknown, not none.",
@@ -1688,7 +1781,13 @@
     "relationship": "integrated",
     "classification_kind": "source_stated",
     "source_ids": [
-      "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-catalog"
+      "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-catalog",
+      "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-universitywide-policy",
+      "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-nupath-policy",
+      "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-experiential-policy",
+      "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-graduation-policy",
+      "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-combined-policy",
+      "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-progression-policy"
     ],
     "hosting_units": [
       {
@@ -1776,6 +1875,307 @@
         "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-fundamental-courses-rule",
         "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-fundamental-courses",
         "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-catalog",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-universitywide",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-universitywide",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-universitywide-requirements",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-universitywide-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-university-credit-minimum",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-university-credit-minimum",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-universitywide",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-universitywide-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-university-gpa",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-university-gpa",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-universitywide",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-universitywide-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-university-residency",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-university-residency",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-universitywide",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-universitywide-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-university-all-requirements",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-university-all-requirements",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-universitywide",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-universitywide-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-nupath",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-nupath-requirements",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-nupath-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-nupath-competency-1",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath-competency-1",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-nupath-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-nupath-competency-2",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath-competency-2",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-nupath-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-nupath-competency-3",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath-competency-3",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-nupath-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-nupath-competency-4",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath-competency-4",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-nupath-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-nupath-competency-5",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath-competency-5",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-nupath-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-nupath-competency-6",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath-competency-6",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-nupath-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-nupath-competency-7",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath-competency-7",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-nupath-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-nupath-competency-8",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath-competency-8",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-nupath-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-nupath-competency-9",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath-competency-9",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-nupath-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-nupath-competency-10",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath-competency-10",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-nupath-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-nupath-competency-11",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath-competency-11",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-nupath-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-nupath-applicability",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath-applicability",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-nupath-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-nupath-eligibility",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath-eligibility",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-nupath-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-nupath-overlap",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath-overlap",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-nupath-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-nupath-transfer",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath-transfer",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-nupath-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-nupath-first-year-writing",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath-first-year-writing",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-nupath-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-nupath-advanced-writing",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath-advanced-writing",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-nupath-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-nupath-major-writing",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath-major-writing",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-nupath-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-experiential",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-experiential",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-published-program-requirements",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-experiential-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-experiential-choice",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-experiential-choice",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-experiential",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-experiential-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-experiential-co-op",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-experiential-co-op",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-experiential-choice",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-experiential-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-experiential-internship",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-experiential-internship",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-experiential-choice",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-experiential-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-experiential-clinical",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-experiential-clinical",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-experiential-choice",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-experiential-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-experiential-industry-project",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-experiential-industry-project",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-experiential-choice",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-experiential-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-experiential-scope",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-experiential-scope",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-experiential",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-experiential-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-graduation",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-graduation",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-published-program-requirements",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-graduation-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-graduation-clearance",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-graduation-clearance",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-graduation",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-graduation-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-graduation-coursework",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-graduation-coursework",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-graduation",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-graduation-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-graduation-application",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-graduation-application",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-graduation",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-graduation-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-combined",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-combined",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-published-program-requirements",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-combined-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-combined-design",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-combined-design",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-combined",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-combined-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-combined-home-college",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-combined-home-college",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-combined",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-combined-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-combined-one-award",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-combined-one-award",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-combined",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-combined-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-progression",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-progression",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-published-program-requirements",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-progression-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-progression-standing",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-progression-standing",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-progression",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-progression-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-progression-incomplete",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-progression-incomplete",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-progression",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-progression-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-progression-dismissal",
+        "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-progression-dismissal",
+        "parent_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-progression",
+        "source_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-progression-policy",
         "course_ids": []
       }
     ],
@@ -1886,6 +2286,63 @@
         "classification_kind": "analyst_classified",
         "source_ids": [
           "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-catalog"
+        ]
+      },
+      {
+        "kind": "other",
+        "requirement_ids": [
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-universitywide",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-university-credit-minimum",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-university-gpa",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-university-residency",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-university-all-requirements",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath-competency-1",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath-competency-2",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath-competency-3",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath-competency-4",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath-competency-5",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath-competency-6",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath-competency-7",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath-competency-8",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath-competency-9",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath-competency-10",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath-competency-11",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath-applicability",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath-eligibility",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath-overlap",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath-transfer",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath-first-year-writing",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath-advanced-writing",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-nupath-major-writing",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-experiential",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-experiential-choice",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-experiential-co-op",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-experiential-internship",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-experiential-clinical",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-experiential-industry-project",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-experiential-scope",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-graduation",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-graduation-clearance",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-graduation-coursework",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-graduation-application",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-combined",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-combined-design",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-combined-home-college",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-combined-one-award",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-progression",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-progression-standing",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-progression-incomplete",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-req-policy-progression-dismissal"
+        ],
+        "classification_kind": "analyst_classified",
+        "source_ids": [
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-universitywide-policy",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-nupath-policy",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-experiential-policy",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-graduation-policy",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-combined-policy",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-progression-policy"
         ]
       }
     ]
