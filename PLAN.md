@@ -36,7 +36,7 @@ Qualifying official undergraduate titles contain AI or Artificial Intelligence. 
 
 The target is **2027 U.S. News Best Colleges**, separately covering every institution ranked 100 or better in **National Universities** and **National Liberal Arts Colleges**, including all cutoff ties. The edition was released September 22, 2026. Category ranks are never combined.
 
-National Universities enumeration has 108 members from a cited secondary table, including nine tied at 100; authoritative primary enumeration remains unverified. Liberal arts coverage contains 85 cited members but is incomplete: 80 have edition-specific numeric evidence, two have explicitly qualified inferred editions and three have verified top-100 membership with unknown exact ranks. Exact rank null never becomes rank100. Both category completeness flags remain false. Publisher restrictions were not bypassed. See [cohort research](research/cohort.md).
+National Universities enumeration has 108 members from a cited secondary table, including nine tied at 100; authoritative primary enumeration remains unverified. Current local liberal arts coverage contains 86 cited members but is incomplete: 80 have edition-specific numeric evidence, three have explicitly qualified inferred editions and three have verified top-100 membership with unknown exact ranks. Exact rank null never becomes rank 100. Both category completeness flags remain false. Publisher restrictions were not bypassed. See [cohort research](research/cohort.md).
 
 ## Delivered engineering and product
 
@@ -54,18 +54,30 @@ National Universities enumeration has 108 members from a cited secondary table, 
 
 The published Northeastern comparison family has 16 independently verified combined BS variants sharing nine definitions, with 144 provenance bindings. Program-specific integration roles and parents remain intact. This grouping is explicitly analyst-classified; combined-major relationships are source-stated. Buffalo's seven BS variants share five university-described AI+X framework notes, not an asserted identical course inventory. Detailed Buffalo catalog requirements remain unverified. Together these families organize 23 concrete degrees while retaining individual titles, awards, hosts, local additions and comparisons.
 
-Newer committed local research expands Northeastern to 23 variants, preserving 22 BS plus one BSEnvE and the distinct Communication Studies/Engineering hosting units. This brings the local two-family model to 30 variants, pending the next verified release. See [family contract](docs/PROGRAM_FAMILIES.md), [Northeastern evidence](research/program-families.md) and [Buffalo evidence](research/families/buffalo-ai-plus-x.md).
+The next committed release candidate expands Northeastern to 23 variants (22 BS and one BSEnvE), preserves their hosting distinctions, and adds 43 university policy definitions beside the nine shared AI/core definitions. College-specific applicability remains conditional. Buffalo now has eight independently verified BS variants; PPE's award is verified directly from its department. Together the two families organize 31 concrete degrees. See [family contract](docs/PROGRAM_FAMILIES.md), [Northeastern evidence](research/program-families.md) and [Buffalo evidence](research/families/buffalo-ai-plus-x.md).
 
-## Active continuation — beyond the published checkpoint
+## Next release candidate — verification in progress
 
-Newer work is committed or being reviewed locally and is not represented by the published counts above:
+Committed research through `a3948a3` has been ingested into the maintained database, with repeat ingest changing zero records and integrity checks passing. These counts are **local**, pending clean tests and remote publication verification:
 
-- All 23 documented Northeastern combined-degree curricula are mapped as partial; common university/college degree policies and competency-based NUpath requirements are being checked.
-- BC/Duke/Emory and Indiana concentration requirements, Case Applied AI minor, Maryland/California/USF degrees, Delaware/Drexel/Stevens, Miami degree variants and RIT are being researched or integrated. New identities preserve source/status conflicts rather than implying launch dates.
-- Source statement types now distinguish learning outcomes, program aims, career pathways and unclassified statements independently of source/inferred provenance. Buffalo career lists are explicitly tagged; associated UI verification is underway.
-- Penn BSE remaining FAQ/elective/policy gaps are under review. Already-partial degree records remain partial until published requirements and interpretations are accounted for.
+| Measure | Candidate count |
+| --- | ---: |
+| Institutions / National Universities / Liberal Arts Colleges | 194 / 108 / 86 |
+| Confirmed / inspected / inaccessible / pending / absence conclusions | 58 / 128 / 8 / 0 / 0 |
+| Programs / degrees / minors / concentrations / additional majors | 124 / 60 / 42 / 19 / 3 |
+| Complete / partial / pending curricula | 25 / 84 / 15 |
+| Program-course records / resolved requirement nodes | 4,811 / 5,519 |
+| Families / concrete variants | 2 / 31 |
+| Descriptions / prerequisite statements / known credit amounts with units | 256 / 329 / 1,423 |
+| Public course sites / example syllabi | 22 / 18 |
 
-Each adapter's NOTES.md records the exact evidence, interpretations, unresolved lists, source discrepancies and next checks. Working-tree data may include uncommitted research. Release snapshots are made from a fixed committed tree before updating the maintained database, testing and pushing; unrelated agent edits are preserved.
+This candidate adds the full 23-variant Northeastern mapping and common university policies; canonical Penn handbook evidence; Purdue college rules; CMU/Penn core-course metadata and term-labelled course sites; complete scoped Lake Forest, Emory, Indiana and Case minor/concentration reviews; expanded Ursinus, Miami, RIT, Maryland/California/USF, Delaware/Drexel/Stevens and other curricula. Status/source discrepancies remain explicit. Separate source-statement types distinguish learning outcomes, program aims and career pathways from inferred taxonomy.
+
+Nine newly verified identities at MIT, NC State, Villanova, UVA and Tufts still need curriculum review. Six older pending inventories have documented access barriers. HWS adds one qualified inferred-edition ranking row and an inspected program-directory/catalog ledger; no absence conclusion. See [access review](research/access-review.md), [pending curriculum barriers](research/pending-curriculum-barriers.md) and each adapter's NOTES.md.
+
+## Active continuation
+
+Northeastern Business concentration curricula and Notre Dame's two minor inventories are being reviewed. The newly accessible MIT/NC State/Villanova/UVA/Tufts records are next in the extraction queue. Research continues during fixed-snapshot tests. Working-tree edits are excluded from the release until committed, ingested and verified. Raw pages remain ignored.
 
 ## Remaining work and access blockers
 
