@@ -1,0 +1,9 @@
+# Tulane — Artificial Intelligence (AI) Literacy Minor
+
+The official [2026–27 catalog](https://catalog.tulane.edu/newcomb-tulane/ai-literacy-minor/) was read on 2026-10-10 through the ordinary public web and browser. It explicitly distinguishes this Newcomb-Tulane minor from the technical AI minor. No launch date follows from the edition or image filename. Raw safe-fetch transport failed; no denial was bypassed and no raw page is committed.
+
+**Partial**: 14 named courses/26 nodes cover the published 15 credits, 3/6/6 groups, two electives in each pool, GPA 2.000, three-credit major overlap, no minor/certificate overlap, and committee-approved equivalent/special-topic options. Each BUSG/ENGP or CMPS 1100/1500 OR pair is one option. The parser reads current table counts, values, titles and rows, preserves blank individual credits, guards policy wording and never emits a review audit.
+
+The [CS course catalog](https://catalog.tulane.edu/science-engineering/computer-science/) gives CMPS 1500 four credits and a zero-credit CMPS 1501 lab corequisite. Its allocation inside the literacy table's six-credit group/15-credit total is unresolved; neither the four-credit amount nor the group total is silently changed. Other individual credits/prerequisites remain unknown.
+
+The [NTC policies](https://catalog.tulane.edu/newcomb-tulane/) provide grade, overlap, transfer and credit-age rules. [SSE rules](https://catalog.tulane.edu/science-engineering/) are conditional on an SSE degree student: one/two minors and 24 unshared major credits. The SSE declaration rule is not applied to this NTC-hosted minor. Remaining checks: literacy declaration process, allocation of excess CMPS 1500 credit, additional host-school restrictions, and course metadata. No family relationship or shared curriculum is inferred from the two AI titles. Source-stated overview is labeled a program aim, not a learning-outcome assessment.

@@ -217,3 +217,19 @@ def parse(html: str) -> dict:
         "courses": list(courses.values()),
         "requirements": requirements,
     }
+
+
+from atlas.adapters.tulane_policies import NTC_URL, SSE_URL, parse_ntc, parse_sse
+
+SOURCES += (NTC_URL, SSE_URL)
+
+
+def parse_college(html):
+    return parse_ntc(html, PROGRAM_ID)
+
+
+def parse_school(html):
+    return parse_sse(html, PROGRAM_ID)
+
+
+SOURCE_PARSERS = {NTC_URL: parse_college, SSE_URL: parse_school}

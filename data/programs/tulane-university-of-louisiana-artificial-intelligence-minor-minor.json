@@ -5,7 +5,7 @@
     "name": "Tulane University of Louisiana",
     "aliases": [],
     "website": "https://tulane.edu/",
-    "calendar": "unknown"
+    "calendar": "semester"
   },
   "title": "Artificial Intelligence",
   "award_level": "minor",
@@ -15,9 +15,9 @@
   "first_offered": null,
   "overview": "A five-course, 16-credit AI minor with a separate prerequisite sequence, AI/ML foundations and two electives.",
   "catalog_year": "2026-2027",
-  "verification_status": "partial",
+  "verification_status": "confirmed",
   "last_verified": "2026-10-10",
-  "curriculum_status": "partial",
+  "curriculum_status": "complete",
   "links": [
     {
       "kind": "overview",
@@ -34,6 +34,26 @@
       "source_date": null,
       "catalog_year": "2026-2027",
       "locator": "Requirements: Algorithms, AI/ML Foundations, AI/ML Electives; footnote 1; Academic Prerequisites/Requirements; CS-major overlap; declaration",
+      "confidence": "high"
+    },
+    {
+      "id": "tulane-university-of-louisiana-artificial-intelligence-minor-minor-ntc-policies",
+      "url": "https://catalog.tulane.edu/newcomb-tulane/",
+      "title": "Newcomb-Tulane College catalog policies",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Minor Component; Undergraduate Certificates; S/U Grading Option; Credit Expiration; Transfer Credit",
+      "confidence": "high"
+    },
+    {
+      "id": "tulane-university-of-louisiana-artificial-intelligence-minor-minor-sse-policies",
+      "url": "https://catalog.tulane.edu/science-engineering/",
+      "title": "School of Science and Engineering catalog policies",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Undergraduate Programs; Second Majors, Minors, and Certificates",
       "confidence": "high"
     }
   ],
@@ -505,22 +525,123 @@
       "category": "other",
       "source_id": "tulane-university-of-louisiana-artificial-intelligence-minor-minor-official",
       "source_text": null,
-      "summary": "After prerequisite completion, submit a signed declaration form through the department for advisor and chair signatures, then to the Advising Office. The page's declaration paragraph calls it the computer science minor despite its AI heading; confirm form selection with the department."
+      "summary": "After prerequisites, obtain advisor/chair signatures and submit the declaration to advising. The AI page calls this a CS minor; the school explicitly supplies a general Major/Minor Declaration Form for its minors."
+    },
+    {
+      "id": "tulane-university-of-louisiana-artificial-intelligence-minor-minor-college-minor-gpa",
+      "parent_id": null,
+      "title": "College minor GPA floor",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "tulane-university-of-louisiana-artificial-intelligence-minor-minor-ntc-policies",
+      "source_text": null,
+      "summary": "Minor courses require at least 2.000 GPA; the program may impose a higher minimum.",
+      "course_ids": []
+    },
+    {
+      "id": "tulane-university-of-louisiana-artificial-intelligence-minor-minor-college-overlap",
+      "parent_id": null,
+      "title": "Separate minor and certificate credit",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "tulane-university-of-louisiana-artificial-intelligence-minor-minor-ntc-policies",
+      "source_text": null,
+      "summary": "A course cannot count toward two minors or both a minor and a certificate. Departments and schools set major overlap and minor-count limits.",
+      "course_ids": []
+    },
+    {
+      "id": "tulane-university-of-louisiana-artificial-intelligence-minor-minor-college-grading",
+      "parent_id": null,
+      "title": "S/U restriction",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "tulane-university-of-louisiana-artificial-intelligence-minor-minor-ntc-policies",
+      "source_text": null,
+      "summary": "Credit-bearing minor requirements cannot use S/U grading; both the pre-Fall-2025 and current policies exclude minors.",
+      "course_ids": []
+    },
+    {
+      "id": "tulane-university-of-louisiana-artificial-intelligence-minor-minor-college-expiration",
+      "parent_id": null,
+      "title": "Age of prior credit",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "tulane-university-of-louisiana-artificial-intelligence-minor-minor-ntc-policies",
+      "source_text": null,
+      "summary": "Credit older than ten years at latest admission/readmission is ineligible; qualifying credit remains valid during continuous enrollment.",
+      "course_ids": []
+    },
+    {
+      "id": "tulane-university-of-louisiana-artificial-intelligence-minor-minor-college-transfer",
+      "parent_id": null,
+      "title": "Transfer approval and grades",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "tulane-university-of-louisiana-artificial-intelligence-minor-minor-ntc-policies",
+      "source_text": null,
+      "summary": "Transfer requires college and academic-unit approval and an official transcript with C or better. Grades do not transfer. Pre-matriculation courses need an accredited institution, catalog listing, college faculty, degree-seeking peers and review documents.",
+      "course_ids": []
+    },
+    {
+      "id": "tulane-university-of-louisiana-artificial-intelligence-minor-minor-school-overlap",
+      "parent_id": null,
+      "title": "Additional conditions for SSE degree students",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "tulane-university-of-louisiana-artificial-intelligence-minor-minor-sse-policies",
+      "source_text": null,
+      "summary": "SSE students may add one or two minors. At least 24 major credits must remain separate from minors/certificates; minor GPA is at least 2.000, subject to stricter department rules.",
+      "course_ids": []
+    },
+    {
+      "id": "tulane-university-of-louisiana-artificial-intelligence-minor-minor-school-declaration",
+      "parent_id": null,
+      "title": "School minor declaration",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "tulane-university-of-louisiana-artificial-intelligence-minor-minor-sse-policies",
+      "source_text": null,
+      "summary": "The department supplies the Major/Minor Declaration Form; obtain chair approval and return the signed form to the Newcomb-Tulane advisor.",
+      "course_ids": []
     }
   ],
   "notes": [
     "Evidence reviewed from the hash-verified permitted HTTP 200 cache fetched 2026-10-10T21:55:13+00:00. This follow-up did not freshly retrieve the page: live robots checks failed with connection errors.",
     "The 16-credit minor excludes declaration prerequisites. The prerequisite programming alternative has distinct 4/3-credit options; CMPS/MATH 2170 is one cross-listed course.",
     "Individual elective credits are blank in the source and remain null; the choose-two elective group is six credits. Corresponding 6000-level sections are allowed for AI/ML foundations and electives, not explicitly for Algorithms.",
-    "The declaration paragraph refers to the computer science minor under an AI-minor heading; its process is represented with a clarification note, not silently corrected.",
-    "College/university-wide minor policies could not be reviewed because the policy-page robots check failed. The requirement inventory remains partial despite detailed local rules.",
-    "Credits are source-stated, with unit normalization unknown. Calendar, course descriptions/prerequisites, public sites/syllabi and launch date remain unverified."
+    "NTC and SSE policies were read on the ordinary public web on 2026-10-10 after safe-fetch transport errors; this is manual source review, not a fresh raw HTTP-cache claim. The generic school declaration procedure resolves form applicability without editing the AI page wording.",
+    "Complete inventory scope is the AI minor and its declared preparation/grade/overlap rules, not the parent bachelor degree. The school half-residency rule explicitly governs majors and is not invented as a minor rule. School-specific conditions are labeled for SSE degree students.",
+    "Semester calendar is explicit in NTC grading rules. Course credit unit normalization, elective details, public sites/syllabi and launch date remain unverified.",
+    "Course-level prerequisite/corequisite metadata can impose additional registration conditions; the program declaration sequence is mapped, but metadata is not a full enrollment planner."
   ],
   "curriculum_audit": {
     "scope": "minor",
     "reviewed_at": "2026-10-10",
     "source_ids": [
-      "tulane-university-of-louisiana-artificial-intelligence-minor-minor-official"
+      "tulane-university-of-louisiana-artificial-intelligence-minor-minor-official",
+      "tulane-university-of-louisiana-artificial-intelligence-minor-minor-ntc-policies",
+      "tulane-university-of-louisiana-artificial-intelligence-minor-minor-sse-policies"
     ],
     "sections": [
       "Five-course 16-credit minor",
@@ -530,18 +651,18 @@
       "Three declaration prerequisites and programming alternative",
       "2.5 minor GPA",
       "CS-major overlap restrictions",
-      "Declaration approval process"
+      "Declaration approval process",
+      "NTC minor GPA, S/U and minor/certificate overlap",
+      "NTC transfer approval and credit age",
+      "SSE generic declaration process and conditional degree-student overlap"
     ],
-    "unresolved_requirements": [
-      "General college/university minor policies not yet reviewed",
-      "Declaration paragraph names CS minor under AI heading; form applicability needs clarification"
-    ],
+    "unresolved_requirements": [],
     "metadata_gaps": [
       "Individual elective credits unverified",
-      "Credit unit/calendar normalization unverified",
       "Course descriptions and prerequisites beyond declaration sequence unverified",
       "Public course sites and syllabi unverified",
-      "Launch date unverified"
+      "Launch date unverified",
+      "Credit unit normalization unverified"
     ]
   }
 }
