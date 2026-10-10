@@ -49,7 +49,7 @@ def parse(html):
         for li in lists[idx].find_all('li',recursive=False):
             texts=re.split(r'\s+or\s+(?=[A-Z]+ \d)',clean(li.get_text(' ',strip=True))) if idx==3 else [clean(li.get_text(' ',strip=True))]
             for text in texts:ids+=item(text)
-        groups.append(rule(gid,title,SOURCE_ID,ids,kind=kind,count=count,credits=4 if idx==4 else None,unit='units' if idx==4 else 'unknown',summary='At least4units from the listed pool. Individual elective credits require course-page review.' if idx==4 else title))
+        groups.append(rule(gid,title,SOURCE_ID,ids,kind=kind,count=count,credits=4 if idx==4 else None,unit='units' if idx==4 else 'unknown',summary='At least 4 units from the listed pool. Individual elective credits require course-page review.' if idx==4 else title))
     groups.append(policy(section,'All undergraduate students are eligible','scu-eligibility','Eligibility','All undergraduate students are eligible; check and satisfy individual course prerequisites before scheduling or registering.',SOURCE_ID))
     groups.append(policy(section,'cannot be used to satisfy university core requirements','scu-core-overlap','University core exclusion','Asterisk-marked minor courses cannot also satisfy university core requirements.',SOURCE_ID));groups[-1]['course_ids']=starred
     return dict(id=PROGRAM_ID,title='Responsible Artificial Intelligence',award_level='minor',program_kind='minor',courses=list(courses.values()),requirements=groups)

@@ -42,7 +42,7 @@ def parse(html):
     if 'CS 170 is a viable substitution for CS 110' not in clean(root.get_text(' ',strip=True)):raise ValueError('Substitution policy changed')
     courses.append(substitution);g=next(g for g in groups if g['id']=='emory-required-cs-110');g.update(kind='choose_courses',count=1,title='Introductory computing alternative',summary='CS170 is an explicitly approved substitute for CS110.');g['course_ids'].append(substitution['id'])
     for marker,gid,title,summary in [
-      ('taken for a letter grade','grading','Grading and GPA','All counted courses require letter grades. Department major/minor GPA must be at least2.0; repeated courses use the better grade.'),
+      ('taken for a letter grade','grading','Grading and GPA','All counted courses require letter grades. Department major/minor GPA must be at least 2.0; repeated courses use the better grade.'),
       ('cannot be combined with any other CS or AI major/minor','eligibility','Combination restriction','The CS/AI minors cannot be combined with any other CS or AI major or minor.'),
       ('must successfully complete all prerequisite courses','prerequisites','Prerequisite enforcement','All course prerequisites must be completed before enrollment; the department states this cannot be bypassed. Consult the current Atlas course catalog.'),
       ('more than one CS 485 topics course','topics','Repeatable topics','Multiple CS485 topics may count when their subjects differ.'),

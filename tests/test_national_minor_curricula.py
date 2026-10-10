@@ -97,3 +97,13 @@ def test_applications_minor_requires_four_whole_tracks_and_named_topics():
 def test_tamu_rejects_changed_credit_eligibility_even_when_gpa_is_unchanged():
     with pytest.raises(ValueError):
         adapter('tamu').parse(fixture('tamu').replace('completed 24 credit hours','completed 30 credit hours'))
+
+
+def test_tamu_changed_published_total_is_observed_consistently():
+    source = fixture('tamu')
+    assert '>15<' in source
+    observed = adapter('tamu').parse(source.replace('>15<', '>18<'))
+    core = next(rule for rule in observed['requirements'] if rule['id'] == 'tamu-business-ai-core')
+    assert core['credits'] == 18
+    assert 'published 18 semester credit hours' in core['summary']
+    assert '15' not in core['summary']
