@@ -2,6 +2,16 @@
 
 Updated 2026-10-10. This is a published, working research release, **not a completed survey of the full target cohort**.
 
+## Current local release candidate — families and functional redesign
+
+The maintained SQLite database has **110 program records across 193 institutions**, with **20 complete / 47 partial / 43 pending** requirement inventories. It exports 2,315 program-course records and 2,353 resolved requirement nodes. Metadata includes 154 descriptions, 204 prerequisite statements, 890 known credit amounts with units, five public course-site links and nine syllabus links; repeated observations across programs are included. The roster comprises 108 National Universities and 85 National Liberal Arts Colleges. Institution states: 53 confirmed, 123 inspected, 17 inaccessible, zero pending and zero absence conclusions. Both target cohorts remain incomplete.
+
+The new Carolina-blue/navy, modern sans-serif interface is implemented with responsive filters and explicit program-family expansion. Family schema/resolution, atomic updates, revision history, evidence-backed exclusions/replacements and complete-audit hash checks are committed. The first real family covers Northeastern AI combined degrees with Philosophy, Business Administration and Biology: nine common requirement definitions stored once, 27 ID/provenance bindings, all original resolved requirements and concrete URLs preserved. Other combined degrees remain distinct until their inherited rules are reviewed.
+
+Validation so far: 72 family-model tests, full nonbrowser suite, clean temporary reconstruction/build, SQLite integrity, a zero-change re-ingest, and successful reruns of all three family adapters with zero new candidates or source changes. Real-data browser verification and a clean committed-snapshot CI/Pages release are in progress. **This local candidate is not yet the verified published checkpoint below.**
+
+Active research continues independently on Northeastern family expansion, Buffalo AI+X, WPI degree-wide requirements, Case Western/Northwestern/Rice degrees, and Clemson/FIU/Stevens/Minnesota minors. Program adapter notes identify exact outstanding lists and access limits. Counts in this section describe the maintained database at this checkpoint; newer commits may be awaiting ingestion.
+
 ## Project and publication
 
 - Dedicated repository: https://github.com/KrisJordan/ai-program-atlas
