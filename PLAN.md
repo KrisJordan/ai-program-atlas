@@ -20,3 +20,5 @@ Dedicated repository, provisionally KrisJordan/ai-program-atlas. Two independent
 
 ## Coverage log
 To be generated from the database. Pending is the default for uninspected cohort members; no qualifying program found requires a documented search of official catalogs and program directories.
+
+2026-10-10 pilot research: Added separate Purdue AI BS and Liberal Arts BA, plus Penn State Artificial Intelligence Engineering minor. BS department curriculum has 42 courses / 17 requirement nodes; Purdue catalog 403 leaves college-level coverage partial and BA curriculum pending. Penn State current 2026–27 bulletin yields 5 courses / 6 nodes; approved department elective list remains unexpanded. All first-offering dates are null. Three real HTML parsers, synthetic regression tests and adapter NOTES document exact evidence/next checks.

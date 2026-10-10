@@ -1,0 +1,269 @@
+{
+  "id": "penn-state-ai-engineering-minor",
+  "title": "Artificial Intelligence Engineering, Minor",
+  "award_level": "minor",
+  "program_kind": "minor",
+  "catalog_year": "2026-2027",
+  "curriculum_status": "partial",
+  "courses": [
+    {
+      "id": "penn-state-a-i-305",
+      "code": "A-I 305",
+      "name": "Algorithmic Foundations for Artificial Intelligence",
+      "description": "Algorithm design and data structures for machine-learning work; includes classical, randomized and optimization methods.",
+      "prerequisites": "(CMPSC 132 or CMPSC 122) and (MATH 225 or (MATH 220 and (MATH 231 or MATH 230))) and (CMPSC 360 or MATH 311W) and (STAT 401 or STAT 414 or STAT 418 or EE 465 or STAT 318).",
+      "credits": 3,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "penn-state-a-i-305-course",
+      "url": "https://bulletins.psu.edu/search/?P=A-I%20305",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "penn-state-a-i-410",
+      "code": "A-I 410",
+      "name": "AI Systems and Tools",
+      "description": "Hardware and software constraints in deploying and monitoring practical AI systems.",
+      "prerequisites": "(CMPSC 448 or DS 310) and A-I 341W and EE 456.",
+      "credits": 3,
+      "credit_unit": "semester_hours",
+      "category": "systems",
+      "source_id": "penn-state-a-i-410-course",
+      "url": "https://bulletins.psu.edu/search/?P=A-I%20410",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "penn-state-ee-456",
+      "code": "EE 456",
+      "name": "Introduction to Neural Networks",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "penn-state-ai-engineering-minor-catalog",
+      "url": "https://bulletins.psu.edu/search/?P=EE%20456",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "penn-state-cmpsc-448",
+      "code": "CMPSC 448",
+      "name": "Machine Learning and Algorithmic AI",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "penn-state-ai-engineering-minor-catalog",
+      "url": "https://bulletins.psu.edu/search/?P=CMPSC%20448",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "penn-state-cmpsc-445",
+      "code": "CMPSC 445",
+      "name": "Applied Machine Learning in Data Science",
+      "description": "Applied supervised and unsupervised learning, NLP and neural networks with Python and cloud-service projects.",
+      "prerequisites": "STAT 318 and MATH 220 and (CMPSC 122 or CMPSC 132).",
+      "credits": 3,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "penn-state-cmpsc-445-course",
+      "url": "https://bulletins.psu.edu/search/?P=CMPSC%20445",
+      "public_site": null,
+      "syllabus": null
+    }
+  ],
+  "requirements": [
+    {
+      "id": "penn-state-ai-engineering-minor-total",
+      "parent_id": null,
+      "title": "Minor requirements",
+      "kind": "all",
+      "count": null,
+      "credits": 18,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "penn-state-ai-engineering-minor-catalog",
+      "source_text": null,
+      "summary": "Complete the prescribed, alternative and supporting requirements.",
+      "course_ids": []
+    },
+    {
+      "id": "penn-state-ai-engineering-minor-prescribed",
+      "parent_id": "penn-state-ai-engineering-minor-total",
+      "title": "Prescribed courses",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "penn-state-ai-engineering-minor-catalog",
+      "source_text": null,
+      "summary": "",
+      "course_ids": [
+        "penn-state-a-i-305",
+        "penn-state-a-i-410",
+        "penn-state-ee-456"
+      ]
+    },
+    {
+      "id": "penn-state-ai-engineering-minor-ml-choice",
+      "parent_id": "penn-state-ai-engineering-minor-total",
+      "title": "Machine learning alternative",
+      "kind": "alternative",
+      "count": 1,
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "penn-state-ai-engineering-minor-catalog",
+      "source_text": null,
+      "summary": "Complete one machine-learning alternative.",
+      "course_ids": [
+        "penn-state-cmpsc-448",
+        "penn-state-cmpsc-445"
+      ]
+    },
+    {
+      "id": "penn-state-ai-engineering-minor-supporting",
+      "parent_id": "penn-state-ai-engineering-minor-total",
+      "title": "Department-list electives",
+      "kind": "choose_credits",
+      "count": null,
+      "credits": 6,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "penn-state-ai-engineering-minor-catalog",
+      "source_text": null,
+      "summary": "Department-list courses not required by the major; at least three credits at 400-level. List not extracted.",
+      "course_ids": []
+    },
+    {
+      "id": "penn-state-ai-engineering-minor-grade-overlap",
+      "parent_id": "penn-state-ai-engineering-minor-total",
+      "title": "Grade and overlap rules",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "penn-state-ai-engineering-minor-catalog",
+      "source_text": null,
+      "summary": "C or better in all minor courses; six minor credits must be unique from prescribed major courses.",
+      "course_ids": []
+    },
+    {
+      "id": "penn-state-ai-engineering-minor-entrance",
+      "parent_id": "penn-state-ai-engineering-minor-total",
+      "title": "Entrance requirements",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "penn-state-ai-engineering-minor-catalog",
+      "source_text": null,
+      "summary": "Complete ((CMPSC 121 and DS 120) or CMPSC 131), plus either CMPSC 122 or CMPSC 132. Entrance credits are not added to the 18-credit minor total.",
+      "course_ids": []
+    }
+  ],
+  "notes": [
+    "Department-list elective options are not enumerated on the inspected bulletin page; course prerequisites may add preparation outside the minor total.",
+    "The minor is available where the required courses are offered; students cannot change campus solely to complete it. This is a University Park-administered engineering minor, not a separate campus degree.",
+    "The minor bulletin does not supply a standalone learning-outcomes section. The displayed source-stated objective is paraphrased from Program Description.",
+    "No launch date or public syllabus was established. No claim of comprehensive Penn State AI-program inventory is made.",
+    "Course descriptions are concise editorial paraphrases; prerequisites preserve the logical alternatives published by the bulletin.",
+    "Pilot record; institution ranking/cohort membership is established separately. Null fields indicate unverified facts, not absence."
+  ],
+  "institution": {
+    "id": "pennsylvania-state-university",
+    "name": "Pennsylvania State University",
+    "aliases": [
+      "Penn State",
+      "Penn State University Park"
+    ],
+    "calendar": "semester",
+    "website": "https://www.psu.edu/"
+  },
+  "status": "active",
+  "first_offered": null,
+  "verification_status": "partial",
+  "last_verified": "2026-10-10",
+  "hosting_unit": "Department of Computer Science and Engineering, College of Engineering",
+  "sources": [
+    {
+      "id": "penn-state-ai-engineering-minor-catalog",
+      "url": "https://bulletins.psu.edu/undergraduate/colleges/engineering/artificial-intelligence-engineering-minor/",
+      "title": "Artificial Intelligence Engineering, Minor",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Program Description; Entrance to Minor; Program Requirements",
+      "confidence": "high"
+    },
+    {
+      "id": "penn-state-calendar-2026",
+      "url": "https://www.registrar.psu.edu/academic-calendars/2026-27.cfm",
+      "title": "2026-27 Academic Calendar",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Fall and Spring regular sessions; full semester footnote",
+      "confidence": "high"
+    },
+    {
+      "id": "penn-state-a-i-305-course",
+      "url": "https://bulletins.psu.edu/search/?P=A-I%20305",
+      "title": "A-I 305: Algorithmic Foundations for Artificial Intelligence",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Course result; credits; Enforced Prerequisite at Enrollment",
+      "confidence": "high"
+    },
+    {
+      "id": "penn-state-a-i-410-course",
+      "url": "https://bulletins.psu.edu/search/?P=A-I%20410",
+      "title": "A-I 410: AI Systems and Tools",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Course result; credits; Enforced Prerequisite at Enrollment",
+      "confidence": "high"
+    },
+    {
+      "id": "penn-state-cmpsc-445-course",
+      "url": "https://bulletins.psu.edu/search/?P=CMPSC%20445",
+      "title": "CMPSC 445: Applied Machine Learning in Data Science",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Course result; credits; Enforced Prerequisite at Enrollment",
+      "confidence": "high"
+    }
+  ],
+  "outcomes": [
+    {
+      "text": "Apply mathematical and computational AI foundations within the student’s major discipline.",
+      "kind": "source_stated",
+      "source_id": "penn-state-ai-engineering-minor-catalog",
+      "locator": "Program Description"
+    }
+  ],
+  "overview": "An engineering AI minor pairing algorithmic foundations, neural networks and AI systems with machine-learning and department-list choices.",
+  "links": [
+    {
+      "kind": "catalog",
+      "url": "https://bulletins.psu.edu/undergraduate/colleges/engineering/artificial-intelligence-engineering-minor/",
+      "label": "2026–27 undergraduate bulletin"
+    },
+    {
+      "kind": "study",
+      "url": "https://bulletins.psu.edu/undergraduate/colleges/engineering/artificial-intelligence-engineering-minor/#programrequirementstext",
+      "label": "Minor requirements"
+    }
+  ]
+}

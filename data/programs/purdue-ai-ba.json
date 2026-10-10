@@ -1,0 +1,81 @@
+{
+  "id": "purdue-ai-ba",
+  "title": "Artificial Intelligence (Liberal Arts)",
+  "award_level": "BA",
+  "program_kind": "degree",
+  "hosting_unit": "College of Liberal Arts",
+  "catalog_year": null,
+  "curriculum_status": "pending",
+  "courses": [],
+  "requirements": [],
+  "links": [
+    {
+      "kind": "overview",
+      "url": "https://admissions.purdue.edu/majors/artificial-intelligence/",
+      "label": "Official BA admissions overview"
+    },
+    {
+      "kind": "catalog",
+      "url": "http://catalog.purdue.edu/preview_program.php?catoid=19&poid=35726",
+      "label": "Official plan of study (access blocked during pilot)"
+    }
+  ],
+  "notes": [
+    "Identity and BA award verified from admissions Quick Facts; course-level requirements await catalog access.",
+    "The current plan-of-study link returned HTTP 403 on 2026-10-10. Catalog year, total credits, required courses and launch date remain unknown.",
+    "Official admissions h1 is Artificial Intelligence (Liberal Arts); its Quick Facts explicitly identifies the Bachelor of Arts award. Do not merge with the separate BS.",
+    "Admissions includes potentially inconsistent marketing language about coding; do not interpret it as a waiver of technical coursework.",
+    "Pilot record; institution ranking/cohort membership is established separately. Null fields indicate unverified facts, not absence."
+  ],
+  "institution": {
+    "id": "purdue-university",
+    "name": "Purdue University",
+    "aliases": [
+      "Purdue",
+      "Purdue University—Main Campus"
+    ],
+    "calendar": "semester",
+    "website": "https://www.purdue.edu/"
+  },
+  "status": "active",
+  "first_offered": null,
+  "verification_status": "partial",
+  "last_verified": "2026-10-10",
+  "sources": [
+    {
+      "id": "purdue-ai-ba-admissions",
+      "url": "https://admissions.purdue.edu/majors/artificial-intelligence/",
+      "title": "Artificial Intelligence (Liberal Arts)",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "h1; Program Summary; Quick Facts; Possible Careers",
+      "confidence": "high"
+    },
+    {
+      "id": "purdue-calendar-2026",
+      "url": "https://www.purdue.edu/registrar/calendars/academic/",
+      "title": "2026–27 Academic Calendar",
+      "fetched_at": "2026-10-10",
+      "source_date": "2026-02-09",
+      "catalog_year": "2026-2027",
+      "locator": "2026 and 2027 fall/spring term dates; semester sequence also stated on department curriculum",
+      "confidence": "high"
+    }
+  ],
+  "outcomes": [
+    {
+      "text": "Examine privacy, bias and responsible technology alongside programming and data skills.",
+      "kind": "source_stated",
+      "source_id": "purdue-ai-ba-admissions",
+      "locator": "Program Summary"
+    },
+    {
+      "text": "Career examples include policy analysis, user experience design and project management; these are prospective paths, not placement statistics.",
+      "kind": "source_stated",
+      "source_id": "purdue-ai-ba-admissions",
+      "locator": "Possible Careers"
+    }
+  ],
+  "overview": "A Bachelor of Arts exploring AI through philosophy, ethics, human experience, and technical study."
+}
