@@ -1,4 +1,5 @@
 from atlas.adapters.cmu_bs.common import parse_catalog
+from atlas.adapters.cmu_additional.requirements import enrich_requirements
 
 SOURCES = [
     "https://coursecatalog.web.cmu.edu/schools-colleges/schoolofcomputerscience/artificialintelligence/artificial-intelligence-additional-major/"
@@ -6,7 +7,7 @@ SOURCES = [
 
 
 def parse(html: str) -> dict:
-    return parse_catalog(
+    observed = parse_catalog(
         html,
         pid="cmu-additional-ai",
         title="Artificial Intelligence, Additional Major",
@@ -20,6 +21,7 @@ def parse(html: str) -> dict:
             "Ethics and Human Cognition": "ethics",
         },
     )
+    return enrich_requirements(html, observed, SOURCES[0])
 
 
 PROGRAM_ID = "cmu-additional-ai"

@@ -32,3 +32,9 @@ Course `source_id` still cites the curriculum; resource metadata independently s
 ## Inferred comparison themes
 
 Added explicitly `inferred_taxonomy` labels from the existing cited curriculum: AI methods, Mathematical foundations, Responsible AI and society, Software and systems, Applied AI. Locators name the supporting core, requirement, overview or elective-pool section. These are analyst classifications for comparison, not university-stated outcomes, and elective-pool themes do not imply every student takes every option. Existing source-stated outcomes are unchanged.
+
+## Local inventory review — 2026-10-10
+
+The complete local additional-major curriculum is now mapped: 61 observed course records and 30 nested requirement/policy nodes. Mathematics preserves six alternative probability paths, including four two-course AND sequences. Published combined 18-unit values remain on sequence requirements, not copied to each course. Admission includes the B average and course prerequisites; the 07-180 exception and aggregate five-course overlap cap (including the 36-402 exception) are explicit. This complete local inventory does not certify the host degree. Individual descriptions, prerequisites and blank course-unit cells remain separate metadata gaps.
+
+`requirements.py` extends the source table parser, validates the complete heading inventory and admission/policy markers, and extracts actual row values. It fails on changed policies for review. Parsing remains `partial`, emits no audit, and cannot renew the reviewed complete seed automatically. Synthetic tests cover sequence units, alternatives, admission and policy drift.

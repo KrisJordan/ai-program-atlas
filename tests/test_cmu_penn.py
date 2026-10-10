@@ -24,6 +24,8 @@ def table(rows, label="All of the following:"):
 def cmu_fixture(name):
     if name == "cmu_minor":
         return minor_fixture()
+    if name == "cmu_additional":
+        return additional_fixture()
     headings = {
         "cmu_bs": (
             "Artificial Intelligence, B.S.",
@@ -119,6 +121,70 @@ def minor_fixture():
         + "<h4>Societal Aspects of AI</h4><p>Choose from one of the following two cluster areas. Two mini courses can be combined to form one 9 unit course.</p>"
         + table(societal)
         + "<h4>Double Counting</h4><p>Double count at most two courses total, not counting the prerequisite courses, toward all other majors and minors.</p></main>"
+    )
+
+
+def additional_fixture():
+    comment = lambda label: '<tr><td><span class="courselistcomment">' + label + "</span></td></tr>"
+    pair = lambda a, b: (
+        '<tr><td class="codecol"><a href="/a">'
+        + a
+        + '</a> &amp; <a href="/b">'
+        + b
+        + '</a></td><td>Synthetic probability<br/>and Synthetic inference</td><td class="hourscol">18</td></tr>'
+    )
+    math = (
+        row("21-112")
+        + row("21-120", other=True)
+        + row("21-127")
+        + row("21-128", other=True)
+        + row("15-151", other=True)
+        + row("21-122")
+        + row("21-241")
+    )
+    math += (
+        comment("Probability and Statistics (one of)")
+        + row("36-218")
+        + row("15-259", "Synthetic computing (if taken Sp24 or later)")
+    )
+    math += (
+        pair("21-325", "36-226")
+        + pair("21-425", "36-226")
+        + pair("36-225", "36-226")
+        + pair("36-235", "36-236")
+        + comment("Modern Regression Course")
+        + row("36-401")
+    )
+    clusters = "".join(
+        comment(label + " (1 course)") + row(code)
+        for label, code in [
+            ("Cognition and Action Cluster", "15-386"),
+            ("Machine Learning Cluster", "36-402"),
+            ("Perception and Language Cluster", "11-411"),
+            ("Human-AI Interaction Cluster", "05-317"),
+        ]
+    )
+    ethics = (
+        comment("Ethics (1 course)")
+        + row("16-161")
+        + comment("Human Cognition (1 course)")
+        + row("85-110")
+    )
+    return (
+        '<div>2030-2031 Catalog</div><main><h1>Artificial Intelligence, Additional Major</h1><p>Consult the Program Administrator. Students must complete 21-112 or 21-120, 15-122, 15-150, one of 15-210, 15-213, or 15-251, as well as 07-280 with a "B" average.</p>'
+        + "<h4>Prerequisites</h4>"
+        + table(row("15-112"))
+        + "<h4>Math and Statistics Core</h4>"
+        + table(math)
+        + "<h4>Computer Science Core</h4>"
+        + table("".join(row(c) for c in ["15-122", "15-150", "15-210", "15-213", "15-251"]))
+        + "<h4>Artificial Intelligence Core</h4>"
+        + table(row() + row("07-380"))
+        + "<h4>AI Cluster Electives</h4>"
+        + table(clusters)
+        + "<h4>Ethics and Human Cognition</h4>"
+        + table(ethics)
+        + "<p>07-180 is encouraged before 07-280 and not required for additional majors. Double count at most five courses total across all other majors and minors. Math, ethics and human cognition double count without restriction except for 36-402.</p></main>"
     )
 
 
@@ -320,3 +386,30 @@ def test_cs_parent_degree_eligibility_cannot_be_assumed_from_title():
                 "one concentration per degree", "multiple concentrations per degree"
             )
         )
+
+
+def test_additional_probability_sequences_are_and_options_with_combined_units():
+    p = adapter("cmu_additional").parse(additional_fixture())
+    probability = next(r for r in p["requirements"] if r["id"].endswith("-probability"))
+    choices = [r for r in p["requirements"] if r["parent_id"] == probability["id"]]
+    assert probability["kind"] == "alternative" and probability["count"] == 1
+    assert len(choices) == 6
+    pair = next(r for r in choices if r["course_ids"] == ["cmu-21-325", "cmu-36-226"])
+    assert pair["kind"] == "all" and pair["credits"] == 18
+    courses = {c["id"]: c for c in p["courses"]}
+    assert courses["cmu-21-325"]["credits"] is None
+    assert courses["cmu-36-226"]["credits"] is None
+    assert "curriculum_audit" not in p and p["curriculum_status"] == "partial"
+
+
+@pytest.mark.parametrize(
+    "old,new",
+    [
+        ("Sp24 or later", "Sp25 or later"),
+        ("at most five courses total", "at most six courses total"),
+        ("one of 15-210", "all of 15-210"),
+    ],
+)
+def test_additional_policy_changes_require_review(old, new):
+    with pytest.raises(ValueError):
+        adapter("cmu_additional").parse(additional_fixture().replace(old, new))
