@@ -1,0 +1,92 @@
+"""Observe Penn Engineering's current accordion curriculum; never load seed data."""
+
+import re
+
+from bs4 import BeautifulSoup
+
+from atlas.adapters.cmu_bs.common import slug
+
+from .common import list_courses, req, text
+
+SOURCES = ["https://ai.engineering.upenn.edu/academics/undergraduate/"]
+PID = "penn-bse-ai"
+
+
+def parse(html: str) -> dict:
+    soup = BeautifulSoup(html, "html.parser")
+    h1 = soup.find("h1")
+    if not h1 or text(h1) != "B.S.E. in AI Curriculum":
+        raise ValueError("Penn undergraduate heading missing")
+    blocks = {}
+    for item in soup.select(".accordion-item"):
+        heading = item.find("h2")
+        body = item.select_one(".accordion-body")
+        if heading and body:
+            blocks[text(heading)] = body
+    expected = ["Computing (5 CUs)", "AI Core (6 CUs)", "AI Electives (6 CUs)"]
+    if any(k not in blocks for k in expected):
+        raise ValueError("Penn AI curriculum sections missing or changed")
+    source = PID + "-curriculum"
+    courses = {}
+    requirements = []
+    for title in expected:
+        body = blocks[title]
+        key = slug(title)
+        category = "foundations" if title.startswith("Computing") else "ai_ml"
+        items = list_courses(body, source, SOURCES[0], category)
+        if not items:
+            raise ValueError("Penn course list missing: " + title)
+        courses.update({c["id"]: c for c in items})
+        parent = req(
+            PID,
+            key,
+            title,
+            source,
+            category=category,
+            kind="all" if not title.startswith("AI Electives") else "choose_credits",
+            credits=5 if category == "foundations" else 6,
+        )
+        requirements.append(parent)
+        if title.startswith("AI Core"):
+            if not re.search(r"at least one course unit from each", text(body), re.IGNORECASE):
+                raise ValueError("Penn AI core selection rule changed")
+            headings = body.find_all("h5")
+            if len(headings) != 6:
+                raise ValueError("Expected six Penn AI core areas")
+            for heading in headings:
+                ul = heading.find_next_sibling("ul")
+                if ul is None:
+                    raise ValueError("AI core area list missing")
+                options = list_courses(ul, source, SOURCES[0])
+                if not options:
+                    raise ValueError("AI core area empty")
+                requirements.append(
+                    req(
+                        PID,
+                        key + "-" + slug(text(heading)),
+                        text(heading),
+                        source,
+                        kind="choose_credits",
+                        credits=1,
+                        parent=parent["id"],
+                        course_ids=[c["id"] for c in options],
+                    )
+                )
+        else:
+            parent["course_ids"] = [c["id"] for c in items]
+    return {
+        "id": PID,
+        "title": "Artificial Intelligence, BSE",
+        "award_level": "BSE",
+        "program_kind": "degree",
+        "catalog_year": None,
+        "curriculum_status": "partial",
+        "courses": list(courses.values()),
+        "requirements": requirements,
+        "notes": [
+            "Live program page does not state a catalog edition. Extracted computing, all six AI core areas and AI elective options; other degree components and optional concentrations require review. Course unit values are not inferred for individual courses."
+        ],
+    }
+
+
+PROGRAM_ID = "penn-bse-ai"
