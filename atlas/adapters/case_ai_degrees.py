@@ -1,6 +1,6 @@
 """Observe the Case AI BA and BS major tables; university requirements remain reviewed gaps."""
 from atlas.adapters.national_curriculum_common import content, clean, require_phrases
-from atlas.adapters.degree_table_observations import Tables
+from atlas.adapters.degree_table_observations import Tables, reviewed_outcomes
 
 
 def parse_case(html, program_id, award, url):
@@ -35,4 +35,11 @@ def parse_case(html, program_id, award, url):
         elective=t.group('Four technical electives',kind='choose_courses',count=4,ids=all_ids,summary='Choose four technical electives without double counting. At most two may come from Group 2. The displayed inventory is not exhaustive: Group 2 permits any CSDS course; unlisted AI-related courses need prior chair or designee approval.')
         t.group('Group 1 membership',parent=elective['id'],kind='note',ids=list(dict.fromkeys(breadth+pools[0])),summary='Group 1 includes the entire AI breadth pool and these additional listed courses.')
         t.group('Group 2 limit and open pool',parent=elective['id'],kind='note',ids=pools[1],summary='Group 2 includes any CSDS course and these listed courses. No more than two Group 2 courses may count toward the four technical electives; courses cannot be double counted.')
-    return {'id':program_id,'title':'Artificial Intelligence','award_level':award,'program_kind':'degree','courses':list(t.courses.values()),'requirements':t.rules}
+    outcomes=reviewed_outcomes(root,'Learning Outcomes',[
+        (['analyze a complex computing problem','identify solutions'],'Analyze computing problems using computing and other relevant disciplines.'),
+        (['design, implement, and evaluate','computing requirements'],'Develop and evaluate computing solutions against stated requirements.'),
+        (['communicate effectively','professional contexts'],'Communicate effectively in professional settings.'),
+        (['professional responsibilities','legal and ethical principles'],'Make professional computing decisions informed by law and ethics.'),
+        (['member or leader','team'],'Contribute to and lead teams working in the discipline.'),
+        (['theory, techniques, and tools','assumptions','societal benefits and risks',"stakeholders' needs"],'Apply AI methods with awareness of their assumptions, societal impacts and stakeholder needs.')],sid)
+    return {'outcomes':outcomes,'id':program_id,'title':'Artificial Intelligence','award_level':award,'program_kind':'degree','courses':list(t.courses.values()),'requirements':t.rules}

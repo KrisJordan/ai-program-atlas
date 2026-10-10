@@ -49,7 +49,7 @@ class Tables:
             if prior and c['credits'] is None:c['credits']=prior['credits']
             self.courses[c['id']]=c;ids.append(c['id'])
         bundle='&' in clean(codecell.get_text(' ',strip=True))
-        return dict(ids=ids,title=' + '.join(names),topic=topic_name,indented=bool(codecell.find(class_='blockindent')),bundle=bundle)
+        return dict(ids=ids,title=' + '.join(names),topic=topic_name,indented=bool(codecell.find(class_='blockindent')),bundle=bundle,crosslisted=len(links)>1 and not bundle)
 
     def table(self,table,title,*,parent=None,kind='all',count=None,category='other',interpret_choices=True):
         root=self.group(title,parent=parent,kind=kind,count=count,category=category)
@@ -76,8 +76,23 @@ class Tables:
                 if not last.get('alternative'):
                     alt=self.group('Choose an alternative for '+previous['title'],parent=previous['parent_id'],kind='alternative',summary='Complete one listed course or course bundle for this slot.')
                     previous['parent_id']=alt['id'];last['alternative']=alt
-                entry=self.group(parsed['title'],parent=last['alternative']['id'],ids=parsed['ids'])
+                entry=self.group(parsed['title'],parent=last['alternative']['id'],ids=parsed['ids'],kind='choose_courses' if parsed['crosslisted'] else 'all',count=1 if parsed['crosslisted'] else None)
             else:
-                entry=self.group(parsed['title'],parent=scope['id'],ids=parsed['ids'])
+                entry=self.group(parsed['title'],parent=scope['id'],ids=parsed['ids'],kind='choose_courses' if parsed['crosslisted'] else 'all',count=1 if parsed['crosslisted'] else None)
                 last=dict(node=entry,topic=parsed['topic'])
         return root
+
+
+def reviewed_outcomes(root, heading_text, summaries, sid):
+    """Retain short reviewed paraphrases only while every corresponding statement matches."""
+    heading=next((h for h in root.find_all(['h2','h3']) if clean(h.get_text(' ',strip=True))==heading_text),None)
+    if heading is None:raise ValueError('Learning outcomes heading missing')
+    listing=heading.find_next(['ul','ol'])
+    items=listing.find_all('li',recursive=False) if listing else []
+    if len(items)!=len(summaries):raise ValueError('Learning outcome count changed')
+    outcomes=[]
+    for item,(markers,summary) in zip(items,summaries):
+        text=clean(item.get_text(' ',strip=True)).casefold()
+        if any(marker.casefold() not in text for marker in markers):raise ValueError('Reviewed learning outcome changed')
+        outcomes.append(dict(text=summary,kind='source_stated',source_id=sid,locator=heading_text+'; reviewed paraphrase'))
+    return outcomes

@@ -4,7 +4,7 @@ The official Program Requirements tab supplies the mapped major tables. Sample p
 
 The science requirement retains either a physics sequence or a completed qualifying science credential. Four technical electives allow at most two Group 2 courses, without double counting. Group 1 includes the AI breadth pool; Group 2 allows any CSDS course. Prior approval is needed for unlisted AI-related technical electives.
 
-Partial degree coverage: university general degree rules and the Unified General Education Requirements approved course lists remain to be fully mapped. Course metadata and structured outcomes also remain incomplete.
+Partial degree coverage: university general degree rules and the Unified General Education Requirements approved course lists remain to be fully mapped. Course metadata remains incomplete. Six published learning outcomes are recorded as short source-backed paraphrases. The page identifies the 2026–2027 Bulletin.
 
 Sources inspected on 2026-10-10:
 - https://bulletin.case.edu/engineering/computer-data-sciences/artificial-intelligence-bs/

@@ -14,7 +14,7 @@
   "status": "unknown",
   "first_offered": null,
   "overview": "The official catalog publishes the AI major core and elective requirements. General education and degree-wide requirements still need a complete structured inventory.",
-  "catalog_year": null,
+  "catalog_year": "2026-2027",
   "verification_status": "partial",
   "last_verified": "2026-10-10",
   "curriculum_status": "partial",
@@ -47,12 +47,49 @@
       "title": "Artificial Intelligence, BA \u2014 Case Western Reserve University Bulletin",
       "fetched_at": "2026-10-10",
       "source_date": null,
-      "catalog_year": null,
+      "catalog_year": "2026-2027",
       "locator": "Program Requirements tab; sample plan excluded",
       "confidence": "high"
     }
   ],
-  "outcomes": [],
+  "outcomes": [
+    {
+      "text": "Analyze computing problems using computing and other relevant disciplines.",
+      "kind": "source_stated",
+      "source_id": "case-western-reserve-university-artificial-intelligence-ba-degree-catalog",
+      "locator": "Learning Outcomes; reviewed paraphrase"
+    },
+    {
+      "text": "Develop and evaluate computing solutions against stated requirements.",
+      "kind": "source_stated",
+      "source_id": "case-western-reserve-university-artificial-intelligence-ba-degree-catalog",
+      "locator": "Learning Outcomes; reviewed paraphrase"
+    },
+    {
+      "text": "Communicate effectively in professional settings.",
+      "kind": "source_stated",
+      "source_id": "case-western-reserve-university-artificial-intelligence-ba-degree-catalog",
+      "locator": "Learning Outcomes; reviewed paraphrase"
+    },
+    {
+      "text": "Make professional computing decisions informed by law and ethics.",
+      "kind": "source_stated",
+      "source_id": "case-western-reserve-university-artificial-intelligence-ba-degree-catalog",
+      "locator": "Learning Outcomes; reviewed paraphrase"
+    },
+    {
+      "text": "Contribute to and lead teams working in the discipline.",
+      "kind": "source_stated",
+      "source_id": "case-western-reserve-university-artificial-intelligence-ba-degree-catalog",
+      "locator": "Learning Outcomes; reviewed paraphrase"
+    },
+    {
+      "text": "Apply AI methods with awareness of their assumptions, societal impacts and stakeholder needs.",
+      "kind": "source_stated",
+      "source_id": "case-western-reserve-university-artificial-intelligence-ba-degree-catalog",
+      "locator": "Learning Outcomes; reviewed paraphrase"
+    }
+  ],
   "courses": [
     {
       "id": "case-ba-math-121",
@@ -1563,7 +1600,8 @@
     ],
     "sections": [
       "Required major courses and bundled alternatives",
-      "Societal impact and technical/application electives"
+      "Societal impact and technical/application electives",
+      "Published learning outcomes, summarized with source provenance"
     ],
     "unresolved_requirements": [
       "Full general degree and Unified General Education Requirements inventory and policies remain to be mapped.",
@@ -1571,8 +1609,7 @@
     ],
     "metadata_gaps": [
       "Course descriptions and prerequisites are not yet extracted.",
-      "Some individual credits and normalized credit units remain unknown.",
-      "Published learning outcomes have not yet been extracted into structured outcomes."
+      "Some individual credits and normalized credit units remain unknown."
     ]
   }
 }

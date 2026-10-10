@@ -1,9 +1,19 @@
-# Artificial Intelligence Major, BS in Engineering
+# AI degree curriculum observations
 
-Official identity source: https://catalogs.northwestern.edu/undergraduate/engineering-applied-science/artificial-intelligence/artificial-intelligence-major/
+Reviewed the official catalog on 2026-10-10: https://catalogs.northwestern.edu/undergraduate/engineering-applied-science/artificial-intelligence/artificial-intelligence-major/
 
-Directory/identity verified; curriculum pending. No courses, requirements or outcomes have yet been extracted.
+Mapped sections:
+- Listed mathematics and physics core and substitutions
+- Five major course slots and advanced-elective category
+- Five of six breadth domains with topic-specific options
+- Societal impact and seven technical electives
 
-Official undergraduate program source inspected; qualifying title confirmed. Institution-wide inventory and curriculum extraction remain incomplete.
+Remaining degree-audit gaps:
+- School-wide engineering, science, design and humanities approved pools and policies remain incomplete.
+- The college page explicitly defers complete humanities criteria to its advising system; public rules alone are not a full degree audit.
+- Four advanced-elective introductory exceptions and physics-substitute metadata remain to be expanded.
+- The Undergraduate Registration Requirement and full college degree policies remain to be mapped.
 
-The adapter validates a title in visible content headings or links and the award/kind in its local card or heading section. It returns only observed identity fields and never replays seed metadata, curriculum, or dates. A failure means review is required; it does not mean the program is absent. Tests use synthetic HTML to verify rejection behavior; live refresh is not claimed.
+Course descriptions, prerequisites, missing individual credits remain separate metadata gaps. Parser output never asserts review status or completeness.
+
+The catalog banner identifies the 2026–2027 edition. No learning-outcome section was published on the inspected major page.

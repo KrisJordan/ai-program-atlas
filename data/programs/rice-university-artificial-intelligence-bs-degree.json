@@ -13,16 +13,21 @@
   "hosting_unit": null,
   "status": "unknown",
   "first_offered": null,
-  "overview": "Official university content identifies this undergraduate degree. Curriculum details and complete institutional coverage remain pending.",
-  "catalog_year": null,
+  "overview": "The official catalog supplies structured AI major requirements. The record remains partial pending full school and university degree-policy mapping.",
+  "catalog_year": "2026-2027",
   "verification_status": "partial",
   "last_verified": "2026-10-10",
-  "curriculum_status": "pending",
+  "curriculum_status": "partial",
   "links": [
     {
       "kind": "overview",
       "url": "https://ga.rice.edu/programs-study/departments-programs/engineering/artificial-intelligence/",
       "label": "Official program identity source"
+    },
+    {
+      "kind": "catalog",
+      "url": "https://ga.rice.edu/programs-study/departments-programs/engineering/artificial-intelligence/artificial-intelligence-bs/",
+      "label": "Official curriculum requirements"
     }
   ],
   "sources": [
@@ -35,13 +40,1486 @@
       "catalog_year": null,
       "locator": "Named undergraduate program entry: Artificial Intelligence; award/type: BS / degree",
       "confidence": "high"
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/programs-study/departments-programs/engineering/artificial-intelligence/artificial-intelligence-bs/",
+      "title": "Artificial Intelligence \u2014 official degree catalog",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Degree requirements tables and associated major policies",
+      "confidence": "high"
     }
   ],
-  "outcomes": [],
-  "courses": [],
-  "requirements": [],
+  "outcomes": [
+    {
+      "text": "Use calculus, linear algebra, probability and statistics to solve AI problems.",
+      "kind": "source_stated",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "locator": "Program Learning Outcomes for the BS Degree with a Major in Artificial Intelligence; reviewed paraphrase"
+    },
+    {
+      "text": "Build AI algorithms and models for complex computational tasks.",
+      "kind": "source_stated",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "locator": "Program Learning Outcomes for the BS Degree with a Major in Artificial Intelligence; reviewed paraphrase"
+    },
+    {
+      "text": "Assess AI performance and limitations through suitable metrics and tests.",
+      "kind": "source_stated",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "locator": "Program Learning Outcomes for the BS Degree with a Major in Artificial Intelligence; reviewed paraphrase"
+    },
+    {
+      "text": "Incorporate ethical analysis and responsible AI practices into development.",
+      "kind": "source_stated",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "locator": "Program Learning Outcomes for the BS Degree with a Major in Artificial Intelligence; reviewed paraphrase"
+    }
+  ],
+  "courses": [
+    {
+      "id": "rice-ai-math-101",
+      "code": "MATH 101",
+      "name": "SINGLE VARIABLE CALCULUS I",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3.0,
+      "credit_unit": "unknown",
+      "category": "mathematics",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=MATH%20101",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rice-ai-math-105",
+      "code": "MATH 105",
+      "name": "AP/OTH CREDIT IN CALCULUS I",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "mathematics",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=MATH%20105",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rice-ai-math-102",
+      "code": "MATH 102",
+      "name": "SINGLE VARIABLE CALCULUS II",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3.0,
+      "credit_unit": "unknown",
+      "category": "mathematics",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=MATH%20102",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rice-ai-math-106",
+      "code": "MATH 106",
+      "name": "AP/OTH CREDIT IN CALCULUS II",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "mathematics",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=MATH%20106",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rice-ai-cmor-302",
+      "code": "CMOR 302",
+      "name": "MATRIX ANALYSIS",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "mathematics",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=CMOR%20302",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rice-ai-cmor-303",
+      "code": "CMOR 303",
+      "name": "MATRIX ANALYSIS FOR DATA SCIENCE",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "mathematics",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=CMOR%20303",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rice-ai-math-221",
+      "code": "MATH 221",
+      "name": "HONORS CALCULUS III",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "mathematics",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=MATH%20221",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rice-ai-math-354",
+      "code": "MATH 354",
+      "name": "HONORS LINEAR ALGEBRA",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "mathematics",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=MATH%20354",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rice-ai-math-355",
+      "code": "MATH 355",
+      "name": "LINEAR ALGEBRA",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "mathematics",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=MATH%20355",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rice-ai-stat-310",
+      "code": "STAT 310",
+      "name": "PROBABILITY AND STATISTICS",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "mathematics",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=STAT%20310",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rice-ai-stat-314",
+      "code": "STAT 314",
+      "name": "COMPUTING FOR STATISTICAL ANALYSIS BRIDGE",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "mathematics",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=STAT%20314",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rice-ai-stat-311",
+      "code": "STAT 311",
+      "name": "HONORS PROBABILITY AND MATHEMATICAL STATISTICS",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "mathematics",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=STAT%20311",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rice-ai-stat-315",
+      "code": "STAT 315",
+      "name": "PROBABILITY AND STATISTICS FOR DATA SCIENCE",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "mathematics",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=STAT%20315",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rice-ai-dsci-301",
+      "code": "DSCI 301",
+      "name": "PROBABILITY AND STATISTICS FOR DATA SCIENCE",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=DSCI%20301",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rice-ai-comp-140",
+      "code": "COMP 140",
+      "name": "COMPUTATIONAL THINKING",
+      "description": null,
+      "prerequisites": null,
+      "credits": 4.0,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=COMP%20140",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rice-ai-comp-182",
+      "code": "COMP 182",
+      "name": "ALGORITHMIC THINKING",
+      "description": null,
+      "prerequisites": null,
+      "credits": 4.0,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=COMP%20182",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rice-ai-comp-215",
+      "code": "COMP 215",
+      "name": "INTRODUCTION TO PROGRAM DESIGN",
+      "description": null,
+      "prerequisites": null,
+      "credits": 4.0,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=COMP%20215",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rice-ai-comp-222",
+      "code": "COMP 222",
+      "name": "INTRODUCTION TO COMPUTER ORGANIZATION",
+      "description": null,
+      "prerequisites": null,
+      "credits": 4.0,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=COMP%20222",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rice-ai-comp-282",
+      "code": "COMP 282",
+      "name": "COMPUTATIONAL OPTIMIZATION FOR AI",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3.0,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=COMP%20282",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rice-ai-comp-329",
+      "code": "COMP 329",
+      "name": "SYSTEMS FOR ARTIFICAL INTELLIGENCE",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3.0,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=COMP%20329",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rice-ai-comp-345",
+      "code": "COMP 345",
+      "name": "FOUNDATIONS OF MACHINE LEARNING",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3.0,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=COMP%20345",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rice-ai-comp-346",
+      "code": "COMP 346",
+      "name": "INTRODUCTION TO ARTIFICAL INTELLIGENCE",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3.0,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=COMP%20346",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rice-ai-comp-348",
+      "code": "COMP 348",
+      "name": "INTRODUCTION TO DEEP LEARNING",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3.0,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=COMP%20348",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rice-ai-comp-456",
+      "code": "COMP 456",
+      "name": "AI SENIOR DESIGN I",
+      "description": null,
+      "prerequisites": null,
+      "credits": 4.0,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=COMP%20456",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rice-ai-comp-457",
+      "code": "COMP 457",
+      "name": "AI SENIOR DESIGN II",
+      "description": null,
+      "prerequisites": null,
+      "credits": 4.0,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=COMP%20457",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rice-ai-phil-108",
+      "code": "PHIL 108",
+      "name": "ETHICS OF ARTIFICIAL INTELLIGENCE",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3.0,
+      "credit_unit": "unknown",
+      "category": "human_context",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=PHIL%20108",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rice-ai-psyc-203",
+      "code": "PSYC 203",
+      "name": "INTRODUCTION TO COGNITIVE PSYCHOLOGY",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3.0,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=PSYC%20203",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rice-ai-comp-409",
+      "code": "COMP 409",
+      "name": "LOGIC AND COMPUTER SCIENCE AND ARTIFICIAL INTELLIGENCE",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=COMP%20409",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rice-ai-comp-414",
+      "code": "COMP 414",
+      "name": "OPTIMIZATION: ALGORITHMS, COMPLEXITY AND APPROXIMATIONS",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=COMP%20414",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rice-ai-comp-480",
+      "code": "COMP 480",
+      "name": "PROBABILISTIC ALGORITHMS AND DATA STRUCTURE",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=COMP%20480",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rice-ai-comp-585",
+      "code": "COMP 585",
+      "name": "PROBABILISTIC TOOLKIT FOR LEARNING AND COMPUTING",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=COMP%20585",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rice-ai-psyc-430",
+      "code": "PSYC 430",
+      "name": "COMPUTATIONAL MODELING OF COGNITIVE PROCESSES",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=PSYC%20430",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rice-ai-psyc-468",
+      "code": "PSYC 468",
+      "name": "HUMAN FACTORS IN ARTIFICIAL INTELLIGENCE",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=PSYC%20468",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rice-ai-comp-459",
+      "code": "COMP 459",
+      "name": "MACHINE LEARNING WITH GRAPHS",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=COMP%20459",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rice-ai-comp-631",
+      "code": "COMP 631",
+      "name": "INTRODUCTION TO INFORMATION RETRIEVAL",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=COMP%20631",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rice-ai-comp-447",
+      "code": "COMP 447",
+      "name": "INTRODUCTION TO COMPUTER VISION",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=COMP%20447",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rice-ai-elec-447",
+      "code": "ELEC 447",
+      "name": "INTRODUCTION TO COMPUTER VISION",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=ELEC%20447",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rice-ai-comp-484",
+      "code": "COMP 484",
+      "name": "NATURAL LANGUAGE PROCESSING",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=COMP%20484",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rice-ai-comp-442",
+      "code": "COMP 442",
+      "name": "REINFORCEMENT LEARNING",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=COMP%20442",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rice-ai-comp-450",
+      "code": "COMP 450",
+      "name": "ALGORITHMIC AND AI-ENABLED ROBOTICS",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=COMP%20450",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rice-ai-elec-450",
+      "code": "ELEC 450",
+      "name": "ALGORITHMIC AND AI-ENABLED ROBOTICS",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=ELEC%20450",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rice-ai-mech-450",
+      "code": "MECH 450",
+      "name": "ALGORITHMIC AND AI-ENABLED ROBOTICS",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=MECH%20450",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rice-ai-comp-462",
+      "code": "COMP 462",
+      "name": "INTRODUCTION TO MODERN ROBOTICS",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "url": "https://ga.rice.edu/search/?P=COMP%20462",
+      "public_site": null,
+      "syllabus": null
+    }
+  ],
+  "requirements": [
+    {
+      "id": "rice-ai-r1",
+      "parent_id": null,
+      "title": "Required mathematics, computing and AI courses",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "Required mathematics, computing and AI courses",
+      "course_ids": []
+    },
+    {
+      "id": "rice-ai-r2",
+      "parent_id": "rice-ai-r3",
+      "title": "SINGLE VARIABLE CALCULUS I",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "SINGLE VARIABLE CALCULUS I",
+      "course_ids": [
+        "rice-ai-math-101"
+      ]
+    },
+    {
+      "id": "rice-ai-r3",
+      "parent_id": "rice-ai-r1",
+      "title": "Choose an alternative for SINGLE VARIABLE CALCULUS I",
+      "kind": "alternative",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "Complete one listed course or course bundle for this slot.",
+      "course_ids": []
+    },
+    {
+      "id": "rice-ai-r4",
+      "parent_id": "rice-ai-r3",
+      "title": "AP/OTH CREDIT IN CALCULUS I",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "AP/OTH CREDIT IN CALCULUS I",
+      "course_ids": [
+        "rice-ai-math-105"
+      ]
+    },
+    {
+      "id": "rice-ai-r5",
+      "parent_id": "rice-ai-r6",
+      "title": "SINGLE VARIABLE CALCULUS II",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "SINGLE VARIABLE CALCULUS II",
+      "course_ids": [
+        "rice-ai-math-102"
+      ]
+    },
+    {
+      "id": "rice-ai-r6",
+      "parent_id": "rice-ai-r1",
+      "title": "Choose an alternative for SINGLE VARIABLE CALCULUS II",
+      "kind": "alternative",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "Complete one listed course or course bundle for this slot.",
+      "course_ids": []
+    },
+    {
+      "id": "rice-ai-r7",
+      "parent_id": "rice-ai-r6",
+      "title": "AP/OTH CREDIT IN CALCULUS II",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "AP/OTH CREDIT IN CALCULUS II",
+      "course_ids": [
+        "rice-ai-math-106"
+      ]
+    },
+    {
+      "id": "rice-ai-r8",
+      "parent_id": "rice-ai-r1",
+      "title": "Choose 1 course option",
+      "kind": "alternative",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "Select 1 listed option. A bundled row requires every course in that option.",
+      "course_ids": []
+    },
+    {
+      "id": "rice-ai-r9",
+      "parent_id": "rice-ai-r8",
+      "title": "MATRIX ANALYSIS",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "MATRIX ANALYSIS",
+      "course_ids": [
+        "rice-ai-cmor-302"
+      ]
+    },
+    {
+      "id": "rice-ai-r10",
+      "parent_id": "rice-ai-r8",
+      "title": "MATRIX ANALYSIS FOR DATA SCIENCE",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "MATRIX ANALYSIS FOR DATA SCIENCE",
+      "course_ids": [
+        "rice-ai-cmor-303"
+      ]
+    },
+    {
+      "id": "rice-ai-r11",
+      "parent_id": "rice-ai-r8",
+      "title": "HONORS CALCULUS III",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "HONORS CALCULUS III",
+      "course_ids": [
+        "rice-ai-math-221"
+      ]
+    },
+    {
+      "id": "rice-ai-r12",
+      "parent_id": "rice-ai-r8",
+      "title": "HONORS LINEAR ALGEBRA",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "HONORS LINEAR ALGEBRA",
+      "course_ids": [
+        "rice-ai-math-354"
+      ]
+    },
+    {
+      "id": "rice-ai-r13",
+      "parent_id": "rice-ai-r8",
+      "title": "LINEAR ALGEBRA",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "LINEAR ALGEBRA",
+      "course_ids": [
+        "rice-ai-math-355"
+      ]
+    },
+    {
+      "id": "rice-ai-r14",
+      "parent_id": "rice-ai-r1",
+      "title": "Choose 1 course option",
+      "kind": "alternative",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "Select 1 listed option. A bundled row requires every course in that option.",
+      "course_ids": []
+    },
+    {
+      "id": "rice-ai-r15",
+      "parent_id": "rice-ai-r14",
+      "title": "PROBABILITY AND STATISTICS + COMPUTING FOR STATISTICAL ANALYSIS BRIDGE",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "PROBABILITY AND STATISTICS + COMPUTING FOR STATISTICAL ANALYSIS BRIDGE",
+      "course_ids": [
+        "rice-ai-stat-310",
+        "rice-ai-stat-314"
+      ]
+    },
+    {
+      "id": "rice-ai-r16",
+      "parent_id": "rice-ai-r14",
+      "title": "HONORS PROBABILITY AND MATHEMATICAL STATISTICS + COMPUTING FOR STATISTICAL ANALYSIS BRIDGE",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "HONORS PROBABILITY AND MATHEMATICAL STATISTICS + COMPUTING FOR STATISTICAL ANALYSIS BRIDGE",
+      "course_ids": [
+        "rice-ai-stat-311",
+        "rice-ai-stat-314"
+      ]
+    },
+    {
+      "id": "rice-ai-r17",
+      "parent_id": "rice-ai-r14",
+      "title": "PROBABILITY AND STATISTICS FOR DATA SCIENCE + PROBABILITY AND STATISTICS FOR DATA SCIENCE",
+      "kind": "choose_courses",
+      "count": 1,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "PROBABILITY AND STATISTICS FOR DATA SCIENCE + PROBABILITY AND STATISTICS FOR DATA SCIENCE",
+      "course_ids": [
+        "rice-ai-stat-315",
+        "rice-ai-dsci-301"
+      ]
+    },
+    {
+      "id": "rice-ai-r18",
+      "parent_id": "rice-ai-r1",
+      "title": "COMPUTATIONAL THINKING",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "COMPUTATIONAL THINKING",
+      "course_ids": [
+        "rice-ai-comp-140"
+      ]
+    },
+    {
+      "id": "rice-ai-r19",
+      "parent_id": "rice-ai-r1",
+      "title": "ALGORITHMIC THINKING",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "ALGORITHMIC THINKING",
+      "course_ids": [
+        "rice-ai-comp-182"
+      ]
+    },
+    {
+      "id": "rice-ai-r20",
+      "parent_id": "rice-ai-r1",
+      "title": "INTRODUCTION TO PROGRAM DESIGN",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "INTRODUCTION TO PROGRAM DESIGN",
+      "course_ids": [
+        "rice-ai-comp-215"
+      ]
+    },
+    {
+      "id": "rice-ai-r21",
+      "parent_id": "rice-ai-r1",
+      "title": "INTRODUCTION TO COMPUTER ORGANIZATION",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "INTRODUCTION TO COMPUTER ORGANIZATION",
+      "course_ids": [
+        "rice-ai-comp-222"
+      ]
+    },
+    {
+      "id": "rice-ai-r22",
+      "parent_id": "rice-ai-r1",
+      "title": "COMPUTATIONAL OPTIMIZATION FOR AI",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "COMPUTATIONAL OPTIMIZATION FOR AI",
+      "course_ids": [
+        "rice-ai-comp-282"
+      ]
+    },
+    {
+      "id": "rice-ai-r23",
+      "parent_id": "rice-ai-r1",
+      "title": "SYSTEMS FOR ARTIFICAL INTELLIGENCE",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "SYSTEMS FOR ARTIFICAL INTELLIGENCE",
+      "course_ids": [
+        "rice-ai-comp-329"
+      ]
+    },
+    {
+      "id": "rice-ai-r24",
+      "parent_id": "rice-ai-r1",
+      "title": "FOUNDATIONS OF MACHINE LEARNING",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "FOUNDATIONS OF MACHINE LEARNING",
+      "course_ids": [
+        "rice-ai-comp-345"
+      ]
+    },
+    {
+      "id": "rice-ai-r25",
+      "parent_id": "rice-ai-r1",
+      "title": "INTRODUCTION TO ARTIFICAL INTELLIGENCE",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "INTRODUCTION TO ARTIFICAL INTELLIGENCE",
+      "course_ids": [
+        "rice-ai-comp-346"
+      ]
+    },
+    {
+      "id": "rice-ai-r26",
+      "parent_id": "rice-ai-r1",
+      "title": "INTRODUCTION TO DEEP LEARNING",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "INTRODUCTION TO DEEP LEARNING",
+      "course_ids": [
+        "rice-ai-comp-348"
+      ]
+    },
+    {
+      "id": "rice-ai-r27",
+      "parent_id": "rice-ai-r1",
+      "title": "AI SENIOR DESIGN I",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "AI SENIOR DESIGN I",
+      "course_ids": [
+        "rice-ai-comp-456"
+      ]
+    },
+    {
+      "id": "rice-ai-r28",
+      "parent_id": "rice-ai-r1",
+      "title": "AI SENIOR DESIGN II",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "AI SENIOR DESIGN II",
+      "course_ids": [
+        "rice-ai-comp-457"
+      ]
+    },
+    {
+      "id": "rice-ai-r29",
+      "parent_id": "rice-ai-r1",
+      "title": "ETHICS OF ARTIFICIAL INTELLIGENCE",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "ETHICS OF ARTIFICIAL INTELLIGENCE",
+      "course_ids": [
+        "rice-ai-phil-108"
+      ]
+    },
+    {
+      "id": "rice-ai-r30",
+      "parent_id": "rice-ai-r1",
+      "title": "INTRODUCTION TO COGNITIVE PSYCHOLOGY",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "INTRODUCTION TO COGNITIVE PSYCHOLOGY",
+      "course_ids": [
+        "rice-ai-psyc-203"
+      ]
+    },
+    {
+      "id": "rice-ai-r31",
+      "parent_id": null,
+      "title": "Choose three of five elective areas",
+      "kind": "choose_courses",
+      "count": 3,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "Choose three distinct areas. In each chosen area take one course carrying 3\u20134 credit hours; the three electives total 9\u201311 credit hours.",
+      "course_ids": []
+    },
+    {
+      "id": "rice-ai-r32",
+      "parent_id": "rice-ai-r31",
+      "title": "Artificial Intelligence Theory",
+      "kind": "alternative",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "Artificial Intelligence Theory",
+      "course_ids": []
+    },
+    {
+      "id": "rice-ai-r33",
+      "parent_id": "rice-ai-r32",
+      "title": "LOGIC AND COMPUTER SCIENCE AND ARTIFICIAL INTELLIGENCE",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "LOGIC AND COMPUTER SCIENCE AND ARTIFICIAL INTELLIGENCE",
+      "course_ids": [
+        "rice-ai-comp-409"
+      ]
+    },
+    {
+      "id": "rice-ai-r34",
+      "parent_id": "rice-ai-r32",
+      "title": "OPTIMIZATION: ALGORITHMS, COMPLEXITY AND APPROXIMATIONS",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "OPTIMIZATION: ALGORITHMS, COMPLEXITY AND APPROXIMATIONS",
+      "course_ids": [
+        "rice-ai-comp-414"
+      ]
+    },
+    {
+      "id": "rice-ai-r35",
+      "parent_id": "rice-ai-r32",
+      "title": "PROBABILISTIC ALGORITHMS AND DATA STRUCTURE",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "PROBABILISTIC ALGORITHMS AND DATA STRUCTURE",
+      "course_ids": [
+        "rice-ai-comp-480"
+      ]
+    },
+    {
+      "id": "rice-ai-r36",
+      "parent_id": "rice-ai-r32",
+      "title": "PROBABILISTIC TOOLKIT FOR LEARNING AND COMPUTING",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "PROBABILISTIC TOOLKIT FOR LEARNING AND COMPUTING",
+      "course_ids": [
+        "rice-ai-comp-585"
+      ]
+    },
+    {
+      "id": "rice-ai-r37",
+      "parent_id": "rice-ai-r31",
+      "title": "Cognitive Psychology",
+      "kind": "alternative",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "Cognitive Psychology",
+      "course_ids": []
+    },
+    {
+      "id": "rice-ai-r38",
+      "parent_id": "rice-ai-r37",
+      "title": "COMPUTATIONAL MODELING OF COGNITIVE PROCESSES",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "COMPUTATIONAL MODELING OF COGNITIVE PROCESSES",
+      "course_ids": [
+        "rice-ai-psyc-430"
+      ]
+    },
+    {
+      "id": "rice-ai-r39",
+      "parent_id": "rice-ai-r37",
+      "title": "HUMAN FACTORS IN ARTIFICIAL INTELLIGENCE",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "HUMAN FACTORS IN ARTIFICIAL INTELLIGENCE",
+      "course_ids": [
+        "rice-ai-psyc-468"
+      ]
+    },
+    {
+      "id": "rice-ai-r40",
+      "parent_id": "rice-ai-r31",
+      "title": "Knowledge and Graphs",
+      "kind": "alternative",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "Knowledge and Graphs",
+      "course_ids": []
+    },
+    {
+      "id": "rice-ai-r41",
+      "parent_id": "rice-ai-r40",
+      "title": "MACHINE LEARNING WITH GRAPHS",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "MACHINE LEARNING WITH GRAPHS",
+      "course_ids": [
+        "rice-ai-comp-459"
+      ]
+    },
+    {
+      "id": "rice-ai-r42",
+      "parent_id": "rice-ai-r40",
+      "title": "INTRODUCTION TO INFORMATION RETRIEVAL",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "INTRODUCTION TO INFORMATION RETRIEVAL",
+      "course_ids": [
+        "rice-ai-comp-631"
+      ]
+    },
+    {
+      "id": "rice-ai-r43",
+      "parent_id": "rice-ai-r31",
+      "title": "Perception and Language",
+      "kind": "alternative",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "Perception and Language",
+      "course_ids": []
+    },
+    {
+      "id": "rice-ai-r44",
+      "parent_id": "rice-ai-r43",
+      "title": "INTRODUCTION TO COMPUTER VISION + INTRODUCTION TO COMPUTER VISION",
+      "kind": "choose_courses",
+      "count": 1,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "INTRODUCTION TO COMPUTER VISION + INTRODUCTION TO COMPUTER VISION",
+      "course_ids": [
+        "rice-ai-comp-447",
+        "rice-ai-elec-447"
+      ]
+    },
+    {
+      "id": "rice-ai-r45",
+      "parent_id": "rice-ai-r43",
+      "title": "NATURAL LANGUAGE PROCESSING",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "NATURAL LANGUAGE PROCESSING",
+      "course_ids": [
+        "rice-ai-comp-484"
+      ]
+    },
+    {
+      "id": "rice-ai-r46",
+      "parent_id": "rice-ai-r31",
+      "title": "Robotics and Autonomy",
+      "kind": "alternative",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "Robotics and Autonomy",
+      "course_ids": []
+    },
+    {
+      "id": "rice-ai-r47",
+      "parent_id": "rice-ai-r46",
+      "title": "REINFORCEMENT LEARNING",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "REINFORCEMENT LEARNING",
+      "course_ids": [
+        "rice-ai-comp-442"
+      ]
+    },
+    {
+      "id": "rice-ai-r48",
+      "parent_id": "rice-ai-r46",
+      "title": "ALGORITHMIC AND AI-ENABLED ROBOTICS + ALGORITHMIC AND AI-ENABLED ROBOTICS + ALGORITHMIC AND AI-ENABLED ROBOTICS",
+      "kind": "choose_courses",
+      "count": 1,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "ALGORITHMIC AND AI-ENABLED ROBOTICS + ALGORITHMIC AND AI-ENABLED ROBOTICS + ALGORITHMIC AND AI-ENABLED ROBOTICS",
+      "course_ids": [
+        "rice-ai-comp-450",
+        "rice-ai-elec-450",
+        "rice-ai-mech-450"
+      ]
+    },
+    {
+      "id": "rice-ai-r49",
+      "parent_id": "rice-ai-r46",
+      "title": "INTRODUCTION TO MODERN ROBOTICS",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "INTRODUCTION TO MODERN ROBOTICS",
+      "course_ids": [
+        "rice-ai-comp-462"
+      ]
+    },
+    {
+      "id": "rice-ai-r50",
+      "parent_id": null,
+      "title": "Major and degree totals",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "The major requires 20\u201321 courses and 67\u201369 credit hours, including at least 10 courses and 33 credit hours at level 300 or above. The degree requires at least 120 credit hours. Course choices determine the ranges.",
+      "course_ids": []
+    },
+    {
+      "id": "rice-ai-r51",
+      "parent_id": null,
+      "title": "Major GPA and transfer limits",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "Major coursework requires a GPA of at least 2.00. After matriculation, at most five courses and 20 credit hours of transfer or study abroad credit may apply to specific major requirements; departmental equivalency approval is required.",
+      "course_ids": []
+    },
+    {
+      "id": "rice-ai-r52",
+      "parent_id": null,
+      "title": "Course substitutions",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
+      "source_text": null,
+      "summary": "Unlisted substitutions require the major advisor or applicable director of undergraduate studies to approve them and the official certifier to record them in Degree Works.",
+      "course_ids": []
+    }
+  ],
   "notes": [
-    "Directory/identity verified; curriculum pending. No courses, requirements or outcomes have yet been extracted.",
-    "Official undergraduate program source inspected; qualifying title confirmed. Institution-wide inventory and curriculum extraction remain incomplete."
-  ]
+    "Major requirements are observed from the catalog; sample plans and optional graduate opportunities are not degree requirements.",
+    "Course descriptions, prerequisites and missing credits remain unknown. Open elective categories are explicitly identified and not represented as exhaustive course lists.",
+    "University graduation, residence, distribution, communication, diversity and physical activity policies require full structured mapping.",
+    "Program substitutions and transfer rules link to university policies that remain incompletely mapped."
+  ],
+  "curriculum_audit": {
+    "scope": "degree",
+    "reviewed_at": "2026-10-10",
+    "source_ids": [
+      "rice-university-artificial-intelligence-bs-degree-catalog"
+    ],
+    "sections": [
+      "Mathematics and computing core with whole statistics bundles",
+      "AI core and cross-listed alternatives",
+      "Three of five elective areas",
+      "Major credit totals, level minimum, GPA and transfer limits",
+      "Published learning outcomes, summarized with source provenance"
+    ],
+    "unresolved_requirements": [
+      "University graduation, residence, distribution, communication, diversity and physical activity policies require full structured mapping.",
+      "Program substitutions and transfer rules link to university policies that remain incompletely mapped."
+    ],
+    "metadata_gaps": [
+      "Course descriptions and prerequisites remain unextracted.",
+      "Individual credits absent from the catalog requirement tables remain unknown."
+    ]
+  }
 }
