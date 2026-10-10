@@ -96,13 +96,16 @@
       if (!family) return 'No family relationship recorded';
       const requirements = family.shared_requirements || [];
       const sources = new Map([...(family.sources || []), ...(p.sources || [])].map(source => [source.id, source]));
-      return requirements.length ? '<ul>' + requirements.map(r => `<li>${e(r.title)}<small>${r.summary ? e(r.summary) + ' · ' : ''}${link(sources.get(r.source_id)?.url, 'Requirement source')}</small></li>`).join('') + '</ul><small>Shared requirement groups include containers and choices; not a course total. Follow variant replacements below.</small>' : 'Shared requirement structure not recorded';
+      const changes = new Map((p.family?.requirement_overrides || []).map(change => [change.shared_id, change]));
+      return requirements.length ? '<ul>' + requirements.map(r => `<li>${e(r.title)}${changes.has(r.id) ? '<small><strong>' + (changes.get(r.id).operation === 'exclude' ? 'Excluded for this variant' : 'Replaced for this variant') + '</strong></small>' : ''}<small>${r.summary ? e(r.summary) + ' · ' : ''}${link(sources.get(r.source_id)?.url, 'Requirement source')}</small></li>`).join('') + '</ul><small>Shared requirement groups include containers and choices; not a course total. Follow variant changes below.</small>' : 'Shared requirement structure not recorded';
     };
     const variantRequirementList = p => {
       if (!p.family) return 'No family relationship recorded';
       const requirements = (p.requirements || []).filter(r => ['variant', 'replacement'].includes(r.origin));
       const sources = new Map((p.sources || []).map(source => [source.id, source]));
-      return requirements.length ? '<ul>' + requirements.map(r => `<li>${e(r.title)}<small>${r.origin === 'replacement' ? 'Replaces a shared requirement' : 'Variant-specific'}${r.component && r.component !== 'other' ? ' · ' + e(pretty(r.component)) : ''}${r.summary ? ' · ' + e(r.summary) : ''}</small><small>${link(sources.get(r.source_id)?.url, 'Requirement source')}</small></li>`).join('') + '</ul>' : 'Variant differences not yet recorded';
+      const shared = new Map((familyMap.get(p.family.id)?.shared_requirements || []).map(r => [r.id, r]));
+      const changes = (p.family.requirement_overrides || []).map(change => `<li><strong>${e(pretty(change.operation))}: ${e(shared.get(change.shared_id)?.title || change.shared_id)}</strong><small>${e(change.reason || 'Reason not recorded')}</small><small>${link(sources.get(change.source_id)?.url, 'Change source')}</small></li>`).join('');
+      return requirements.length || changes ? '<ul>' + changes + requirements.map(r => `<li>${e(r.title)}<small>${r.origin === 'replacement' ? 'Replaces a shared requirement' : 'Variant-specific'}${r.component && r.component !== 'other' ? ' · ' + e(pretty(r.component)) : ''}${r.summary ? ' · ' + e(r.summary) : ''}</small><small>${link(sources.get(r.source_id)?.url, 'Requirement source')}</small></li>`).join('') + '</ul>' : 'Variant differences not yet recorded';
     };
     const rows = [
       ['Program family', p => p.family ? e(familyMap.get(p.family.id)?.name || p.family.id) + '<small>' + e(pretty(p.family.classification_kind)) + '</small>' : 'No family relationship recorded'],

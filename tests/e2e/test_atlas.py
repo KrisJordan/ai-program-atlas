@@ -285,3 +285,18 @@ def test_family_native_disclosure_works_without_javascript(browser,site,tmp_path
     page.locator('.family-variants').get_by_role('link',name='View program').first.click()
     expect(page.locator('.family-context')).to_be_visible()
     context.close()
+
+
+def test_explicit_family_exclusion_is_visible_in_compare_and_detail(page,site,tmp_path,site_data):
+    from playwright.sync_api import expect
+    data=family_fixture(site_data)
+    p=data['programs'][1]
+    p['requirements']=[r for r in p['requirements'] if r.get('origin')!='family']
+    p['family']['requirement_overrides']=[{'shared_id':'shared-core','operation':'exclude','reason':'A documented exception for this variant.','source_id':'family-source'}]
+    build(data,tmp_path/'ai-program-atlas')
+    page.goto(site+'?compare=test-ai-0,test-ai-1')
+    expect(page.locator('.compare-table')).to_contain_text('Excluded for this variant')
+    expect(page.locator('.compare-table')).to_contain_text('A documented exception for this variant.')
+    page.goto(site+'programs/test-ai-1/')
+    expect(page.locator('.family-changes')).to_contain_text('Exclude: Shared AI core')
+    expect(page.locator('.family-changes a')).to_have_attribute('href','https://example.edu/family')
