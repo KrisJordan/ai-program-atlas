@@ -5,7 +5,7 @@
     "name": "Northwestern University",
     "aliases": [],
     "website": null,
-    "calendar": "unknown"
+    "calendar": "quarter"
   },
   "title": "Artificial Intelligence Minor",
   "award_level": "minor",
@@ -28,6 +28,11 @@
       "kind": "catalog",
       "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/comp_sci/",
       "label": "Course metadata source"
+    },
+    {
+      "kind": "catalog",
+      "url": "https://catalogs.northwestern.edu/undergraduate/requirements-policies/courses-credit/",
+      "label": "Courses and Credit"
     }
   ],
   "sources": [
@@ -49,6 +54,16 @@
       "source_date": null,
       "catalog_year": null,
       "locator": "Individual course blocks for listed CS course codes; credits and selected descriptions/prerequisites",
+      "confidence": "high"
+    },
+    {
+      "id": "northwestern-university-artificial-intelligence-minor-minor-minor-calendar",
+      "url": "https://catalogs.northwestern.edu/undergraduate/requirements-policies/courses-credit/",
+      "title": "Courses and Credit",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Undergraduate Course Credits and Quarters",
       "confidence": "high"
     }
   ],
@@ -1663,14 +1678,16 @@
   "notes": [
     "Parsed program-specific requirements and policies. Topic variants have distinct IDs; alternative listings do not create additional course slots. Catalog labels units; no conversion to semester hours.",
     "Complete means all minor-specific requirements and policies on the catalog page are mapped. Course descriptions, individual prerequisites and non-CS credit metadata remain incomplete. The catalog contains a truncated COMP_SCI320 title and spelling in Artifical Life; these are retained as published.",
-    "Individual CS credits and selected core-course descriptions/prerequisites were checked against https://catalogs.northwestern.edu/undergraduate/courses-az/comp_sci/ (northwestern-cs-course-catalog). Course source IDs retain the minor/thread eligibility provenance. No credits inferred by dividing program totals; variable-credit topics remain unknown when not explicitly fixed."
+    "Individual CS credits and selected core-course descriptions/prerequisites were checked against https://catalogs.northwestern.edu/undergraduate/courses-az/comp_sci/ (northwestern-cs-course-catalog). Course source IDs retain the minor/thread eligibility provenance. No credits inferred by dividing program totals; variable-credit topics remain unknown when not explicitly fixed.",
+    "Quarter calendar verified from the official undergraduate calendar/policy source. Published course units remain units; no credit conversion is inferred."
   ],
   "curriculum_audit": {
     "scope": "minor",
     "reviewed_at": "2026-10-10",
     "source_ids": [
       "northwestern-university-artificial-intelligence-minor-minor-minor-official",
-      "northwestern-cs-course-catalog"
+      "northwestern-cs-course-catalog",
+      "northwestern-university-artificial-intelligence-minor-minor-minor-calendar"
     ],
     "sections": [
       "Five prerequisite units and alternative course slots",

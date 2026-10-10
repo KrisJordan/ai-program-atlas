@@ -1,6 +1,6 @@
 # Artificial Intelligence Minor — curriculum review
 
-Reviewed2026-10-10. Status: **complete**. 59 course/approved-topic entries; 47 requirement and policy groups.
+Reviewed 2026-10-10. Status: **complete**. 59 course/approved-topic entries; 47 requirement and policy groups.
 
 - Artificial Intelligence Minor: https://catalogs.northwestern.edu/undergraduate/engineering-applied-science/artificial-intelligence/artificial-intelligence-minor/
 - Computer Science course catalog: https://catalogs.northwestern.edu/undergraduate/courses-az/comp_sci/
@@ -14,3 +14,5 @@ Individual CS credits and selected core-course descriptions/prerequisites were c
 Unresolved requirements: None within the reviewed program-specific minor scope.
 
 Metadata gaps: Course descriptions and individual prerequisites are not fully mapped. Credits remain unknown wherever the source does not specify an individual course value. Public course sites and syllabi remain unverified.
+
+Quarter calendar independently verified: https://catalogs.northwestern.edu/undergraduate/requirements-policies/courses-credit/. Units remain as published without inferred conversion.

@@ -1,6 +1,6 @@
 # Artificial Intelligence — curriculum review
 
-Reviewed2026-10-10. Status: **partial**. 0 course/approved-topic entries; 6 requirement and policy groups.
+Reviewed 2026-10-10. Status: **partial**. 0 course/approved-topic entries; 6 requirement and policy groups.
 
 - Artificial Intelligence: https://bowers.cornell.edu/programs/artificial-intelligence-minor
 

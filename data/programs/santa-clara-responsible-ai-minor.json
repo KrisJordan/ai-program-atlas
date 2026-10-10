@@ -4,7 +4,7 @@
     "id": "santa-clara-university",
     "name": "Santa Clara University",
     "aliases": [],
-    "calendar": "unknown",
+    "calendar": "quarter",
     "website": null
   },
   "title": "Responsible Artificial Intelligence",
@@ -23,6 +23,11 @@
       "kind": "catalog",
       "url": "https://www.scu.edu/bulletin/undergraduate/chapter-5-school-of-engineering/computer-science-and-engineering.html",
       "label": "Official program identity source"
+    },
+    {
+      "kind": "catalog",
+      "url": "https://www.scu.edu/bulletin/undergraduate/academic-calendar.html",
+      "label": "Undergraduate Academic Calendar2026\u201327"
     }
   ],
   "sources": [
@@ -34,6 +39,16 @@
       "source_date": null,
       "catalog_year": "2026-2027",
       "locator": "Minor-specific requirement groups, course choices, eligibility and policy text",
+      "confidence": "high"
+    },
+    {
+      "id": "santa-clara-responsible-ai-minor-calendar",
+      "url": "https://www.scu.edu/bulletin/undergraduate/academic-calendar.html",
+      "title": "Undergraduate Academic Calendar 2026\u201327",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Fall2026, Winter2027 and Spring2027 quarter headings",
       "confidence": "high"
     }
   ],
@@ -993,7 +1008,7 @@
       "category": "other",
       "source_id": "santa-clara-responsible-ai-minor-identity",
       "source_text": null,
-      "summary": "At least4units from the listed pool. Individual elective credits require course-page review.",
+      "summary": "At least 4 units from the listed pool. Individual elective credits require course-page review.",
       "course_ids": [
         "scu-bioe-180",
         "scu-comm-141",
@@ -1073,13 +1088,15 @@
     }
   ],
   "notes": [
-    "Complete refers to program-specific minor requirements. The three CSEN lecture/lab pairs are represented as bundles at their published combined5units, not as separate5-unit courses. AMATH108/MATH122 is a one-course alternative; CSEN19/MATH51 is a cross-listed course. Elective entries with slash numbers remain source-listed aliases. No total minor unit amount is synthesized across foundation alternatives."
+    "Complete refers to program-specific minor requirements. The three CSEN lecture/lab pairs are represented as bundles at their published combined 5 units, not as separate 5-unit courses. AMATH108/MATH122 is a one-course alternative; CSEN19/MATH51 is a cross-listed course. Elective entries with slash numbers remain source-listed aliases. No total minor unit amount is synthesized across foundation alternatives.",
+    "Quarter calendar verified from the official undergraduate calendar/policy source. Published course units remain units; no credit conversion is inferred."
   ],
   "curriculum_audit": {
     "scope": "minor",
     "reviewed_at": "2026-10-10",
     "source_ids": [
-      "santa-clara-responsible-ai-minor-identity"
+      "santa-clara-responsible-ai-minor-identity",
+      "santa-clara-responsible-ai-minor-calendar"
     ],
     "sections": [
       "Choose one complete computing foundation A/B/C",
@@ -1088,7 +1105,7 @@
       "One technology-ethics course",
       "Required AI ethics",
       "One AI technology course",
-      "At least4elective units",
+      "At least 4 elective units",
       "All-undergraduate eligibility and prerequisite reminder",
       "Starred-course university-core exclusions"
     ],
