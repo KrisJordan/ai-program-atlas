@@ -18,16 +18,21 @@
     "evidence_url": "https://engineering.tufts.edu/cs/current-students/undergraduate/minor-application-ai",
     "uncertainty": "Source states effective/available beginning Fall 2026; first actual enrollment is not independently verified."
   },
-  "overview": "Official source identifies this undergraduate minor. Curriculum extraction is pending.",
+  "overview": "Reviewed visible AI minor curriculum with separate course choices and local policies; linked checklist constraints remain unverified.",
   "catalog_year": null,
   "verification_status": "partial",
   "last_verified": "2026-10-10",
-  "curriculum_status": "pending",
+  "curriculum_status": "partial",
   "links": [
     {
       "kind": "overview",
       "url": "https://engineering.tufts.edu/cs/current-students/undergraduate/minor-application-ai",
       "label": "Minor in the Application of AI"
+    },
+    {
+      "kind": "study",
+      "url": "https://tufts.box.com/v/cs-minor-appai-checklist",
+      "label": "Officially linked checklist form (unread during review)"
     }
   ],
   "sources": [
@@ -38,7 +43,7 @@
       "fetched_at": "2026-10-10",
       "source_date": null,
       "catalog_year": null,
-      "locator": "Program heading and local award/parent-program section",
+      "locator": "Full local program section: required courses, electives, topic restrictions, eligibility and published policy statements",
       "confidence": "high"
     },
     {
@@ -50,13 +55,506 @@
       "catalog_year": null,
       "locator": "Official undergraduate directory or catalog context",
       "confidence": "high"
+    },
+    {
+      "id": "tufts-application-ai-minor-forms-directory",
+      "url": "https://engineering.tufts.edu/cs/current-students/undergraduate/student-forms",
+      "title": "Student Forms — undergraduate minor checklists",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Minor in the Application of AI and Minor in AI Development checklist links",
+      "confidence": "high"
     }
   ],
-  "outcomes": [],
-  "courses": [],
-  "requirements": [],
+  "outcomes": [
+    {
+      "text": "AI methods",
+      "kind": "inferred_taxonomy",
+      "statement_type": "unspecified",
+      "source_id": "tufts-application-ai-minor-identity",
+      "locator": "Required core and available elective curriculum; analyst theme classification"
+    },
+    {
+      "text": "Responsible AI and society",
+      "kind": "inferred_taxonomy",
+      "statement_type": "unspecified",
+      "source_id": "tufts-application-ai-minor-identity",
+      "locator": "Required core and available elective curriculum; analyst theme classification"
+    },
+    {
+      "text": "Applied AI",
+      "kind": "inferred_taxonomy",
+      "statement_type": "unspecified",
+      "source_id": "tufts-application-ai-minor-identity",
+      "locator": "Required core and available elective curriculum; analyst theme classification"
+    }
+  ],
+  "courses": [
+    {
+      "id": "tufts-cs-10",
+      "code": "CS 10",
+      "name": "Programming Fundamentals",
+      "description": null,
+      "prerequisites": "no enrollment requirements)",
+      "credits": 4,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "tufts-application-ai-minor-identity",
+      "url": "https://engineering.tufts.edu/cs/current-students/undergraduate/minor-application-ai",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "tufts-es-2",
+      "code": "ES 2",
+      "name": "Introduction to Computing in Engineering",
+      "description": null,
+      "prerequisites": "no enrollment requirements)",
+      "credits": 4,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "tufts-application-ai-minor-identity",
+      "url": "https://engineering.tufts.edu/cs/current-students/undergraduate/minor-application-ai",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "tufts-cs-31",
+      "code": "CS 31",
+      "name": "Foundations for Artificial Intelligence",
+      "description": null,
+      "prerequisites": "requires prior completion of (CS 10 OR ES2) AND (CS 61 OR Math 21 OR Math 32 OR Math 61 OR Math 65 OR Math 70)",
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "tufts-application-ai-minor-identity",
+      "url": "https://engineering.tufts.edu/cs/current-students/undergraduate/minor-application-ai",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "tufts-cs-35",
+      "code": "CS 35",
+      "name": "Foundations for Machine Learning",
+      "description": null,
+      "prerequisites": "requires prior completion of (CS 10 OR ES2) AND (CS 61 OR Math 21 OR Math 32 OR Math 61 OR Math 65 OR Math 70)",
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "tufts-application-ai-minor-identity",
+      "url": "https://engineering.tufts.edu/cs/current-students/undergraduate/minor-application-ai",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "tufts-ast-51",
+      "code": "AST 51",
+      "name": "Astro Lab",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "tufts-application-ai-minor-identity",
+      "url": "https://engineering.tufts.edu/cs/current-students/undergraduate/minor-application-ai",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "tufts-bme-144-cs-166",
+      "code": "BME 144/CS 166",
+      "name": "Computational Systems Biology",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "tufts-application-ai-minor-identity",
+      "url": "https://engineering.tufts.edu/cs/current-students/undergraduate/minor-application-ai",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "tufts-bme-167-cs-167",
+      "code": "BME 167/CS 167",
+      "name": "Computational Biology",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "tufts-application-ai-minor-identity",
+      "url": "https://engineering.tufts.edu/cs/current-students/undergraduate/minor-application-ai",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "tufts-cee-127-me-176",
+      "code": "CEE 127/ME 176",
+      "name": "Structural Health Monitoring",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "tufts-application-ai-minor-identity",
+      "url": "https://engineering.tufts.edu/cs/current-students/undergraduate/minor-application-ai",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "tufts-cee-132-ds-143-me-173",
+      "code": "CEE 132/DS 143/ME 173",
+      "name": "Data Science for Sustainability",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "tufts-application-ai-minor-identity",
+      "url": "https://engineering.tufts.edu/cs/current-students/undergraduate/minor-application-ai",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "tufts-cee-152",
+      "code": "CEE 152",
+      "name": "Environmental Health Data Lab",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "tufts-application-ai-minor-identity",
+      "url": "https://engineering.tufts.edu/cs/current-students/undergraduate/minor-application-ai",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "tufts-chbe-147",
+      "code": "CHBE 147",
+      "name": "Computational Catalysis",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "tufts-application-ai-minor-identity",
+      "url": "https://engineering.tufts.edu/cs/current-students/undergraduate/minor-application-ai",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "tufts-chem-194-special-topics-computer-aided-drug-design",
+      "code": "CHEM 194",
+      "name": "Special Topics: Computer-aided Drug Design",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "tufts-application-ai-minor-identity",
+      "url": "https://engineering.tufts.edu/cs/current-students/undergraduate/minor-application-ai",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "tufts-chem-193-special-topics-machine-learning-molecular-dynamics-for-biophysics",
+      "code": "CHEM 193",
+      "name": "Special Topics: Machine Learning & Molecular Dynamics for Biophysics",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "tufts-application-ai-minor-identity",
+      "url": "https://engineering.tufts.edu/cs/current-students/undergraduate/minor-application-ai",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "tufts-math-123",
+      "code": "MATH 123",
+      "name": "Math Aspects of Data Analysis",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "tufts-application-ai-minor-identity",
+      "url": "https://engineering.tufts.edu/cs/current-students/undergraduate/minor-application-ai",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "tufts-math-167",
+      "code": "MATH 167",
+      "name": "Stochastic Processes",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "tufts-application-ai-minor-identity",
+      "url": "https://engineering.tufts.edu/cs/current-students/undergraduate/minor-application-ai",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "tufts-phy-68-118",
+      "code": "PHY 68/118",
+      "name": "Computational Physics",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "tufts-application-ai-minor-identity",
+      "url": "https://engineering.tufts.edu/cs/current-students/undergraduate/minor-application-ai",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "tufts-phil-57",
+      "code": "PHIL 57",
+      "name": "Philosophy of Technology",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "tufts-application-ai-minor-identity",
+      "url": "https://engineering.tufts.edu/cs/current-students/undergraduate/minor-application-ai",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "tufts-phil-110",
+      "code": "PHIL 110",
+      "name": "Philosophy of Artificial Intelligence",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "tufts-application-ai-minor-identity",
+      "url": "https://engineering.tufts.edu/cs/current-students/undergraduate/minor-application-ai",
+      "public_site": null,
+      "syllabus": null
+    }
+  ],
+  "requirements": [
+    {
+      "id": "tufts-application-ai-minor-curriculum",
+      "parent_id": null,
+      "title": "Five courses and at least 15 credits",
+      "kind": "all",
+      "count": null,
+      "credits": 15,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "tufts-application-ai-minor-identity",
+      "source_text": null,
+      "summary": "Complete five courses and at least 15 source credits, including the alternatives and policies below. Credit-unit normalization remains unknown.",
+      "course_ids": []
+    },
+    {
+      "id": "tufts-application-ai-minor-eligibility",
+      "parent_id": "tufts-application-ai-minor-curriculum",
+      "title": "Eligibility",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "tufts-application-ai-minor-identity",
+      "source_text": null,
+      "summary": "Open to Arts and Sciences and Engineering undergraduates except Engineering BS students in CS, Data Science or Computer Engineering, and Arts and Sciences BA/BS students in CS.",
+      "course_ids": []
+    },
+    {
+      "id": "tufts-application-ai-minor-core",
+      "parent_id": "tufts-application-ai-minor-curriculum",
+      "title": "Core Courses (Three Required)",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "tufts-application-ai-minor-identity",
+      "source_text": null,
+      "summary": "Each following core slot is required; alternatives within one slot satisfy that slot once.",
+      "course_ids": []
+    },
+    {
+      "id": "tufts-application-ai-minor-core-slot-1",
+      "parent_id": "tufts-application-ai-minor-core",
+      "title": "Core slot 1",
+      "kind": "choose_courses",
+      "count": 1,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "tufts-application-ai-minor-identity",
+      "source_text": null,
+      "summary": "Choose one alternative.",
+      "course_ids": [
+        "tufts-cs-10",
+        "tufts-es-2"
+      ]
+    },
+    {
+      "id": "tufts-application-ai-minor-preparation-cs-31",
+      "parent_id": "tufts-application-ai-minor-curriculum",
+      "title": "Published preparation for CS 31",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "foundations",
+      "source_id": "tufts-application-ai-minor-identity",
+      "source_text": null,
+      "summary": "Source preparation statement for CS 31: requires prior completion of (CS 10 OR ES2) AND (CS 61 OR Math 21 OR Math 32 OR Math 61 OR Math 65 OR Math 70) Recommended preparation is distinguished from required prior completion; source punctuation is retained.",
+      "course_ids": [
+        "tufts-cs-31"
+      ]
+    },
+    {
+      "id": "tufts-application-ai-minor-core-slot-2",
+      "parent_id": "tufts-application-ai-minor-core",
+      "title": "Core slot 2",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "tufts-application-ai-minor-identity",
+      "source_text": null,
+      "summary": "Required course.",
+      "course_ids": [
+        "tufts-cs-31"
+      ]
+    },
+    {
+      "id": "tufts-application-ai-minor-preparation-cs-35",
+      "parent_id": "tufts-application-ai-minor-curriculum",
+      "title": "Published preparation for CS 35",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "foundations",
+      "source_id": "tufts-application-ai-minor-identity",
+      "source_text": null,
+      "summary": "Source preparation statement for CS 35: requires prior completion of (CS 10 OR ES2) AND (CS 61 OR Math 21 OR Math 32 OR Math 61 OR Math 65 OR Math 70) Recommended preparation is distinguished from required prior completion; source punctuation is retained.",
+      "course_ids": [
+        "tufts-cs-35"
+      ]
+    },
+    {
+      "id": "tufts-application-ai-minor-core-slot-3",
+      "parent_id": "tufts-application-ai-minor-core",
+      "title": "Core slot 3",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "tufts-application-ai-minor-identity",
+      "source_text": null,
+      "summary": "Required course.",
+      "course_ids": [
+        "tufts-cs-35"
+      ]
+    },
+    {
+      "id": "tufts-application-ai-minor-approved-independent-work",
+      "parent_id": "tufts-application-ai-minor-curriculum",
+      "title": "Approved independent work",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "tufts-application-ai-minor-identity",
+      "source_text": null,
+      "summary": "AI-related directed study, research or thesis may satisfy the disciplinary elective category with minor-director approval; this is an open approval option, not an additional required course.",
+      "course_ids": []
+    },
+    {
+      "id": "tufts-application-ai-minor-electives",
+      "parent_id": "tufts-application-ai-minor-curriculum",
+      "title": "Disciplinary Electives (Select Two)",
+      "kind": "choose_courses",
+      "count": 2,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "tufts-application-ai-minor-identity",
+      "source_text": null,
+      "summary": "Choose two disciplinary electives; approved independent-work options may substitute under the separate approval rule.",
+      "course_ids": [
+        "tufts-ast-51",
+        "tufts-bme-144-cs-166",
+        "tufts-bme-167-cs-167",
+        "tufts-cee-127-me-176",
+        "tufts-cee-132-ds-143-me-173",
+        "tufts-cee-152",
+        "tufts-chbe-147",
+        "tufts-chem-194-special-topics-computer-aided-drug-design",
+        "tufts-chem-193-special-topics-machine-learning-molecular-dynamics-for-biophysics",
+        "tufts-math-123",
+        "tufts-math-167",
+        "tufts-phy-68-118",
+        "tufts-phil-57",
+        "tufts-phil-110"
+      ]
+    },
+    {
+      "id": "tufts-application-ai-minor-elective-list-review",
+      "parent_id": "tufts-application-ai-minor-curriculum",
+      "title": "Elective list review",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "tufts-application-ai-minor-identity",
+      "source_text": null,
+      "summary": "Changes to the disciplinary elective list are made in consultation with AI Council members from Engineering and Arts and Sciences.",
+      "course_ids": []
+    }
+  ],
   "notes": [
-    "Official program identity verified; requirements, course metadata and outcomes remain unextracted. Identity refresh does not verify a curriculum inventory.",
-    "Official page says available beginning Fall 2026 and excludes several CS, data science and computer engineering degrees. Eligibility and course rules await structured extraction; actual enrollment not independently verified."
-  ]
+    "All visible program-page core slots, electives and stated eligibility/preparation rules mapped. Linked checklist forms are not yet reviewed; the inventory remains partial.",
+    "Five-course minimum and at least 15 source credits are separate constraints. Elective individual credits are not stated on this page and remain null; credit-unit normalization is unverified.",
+    "Slash codes are retained as one published combined course option; they must not be counted as multiple elective slots. Distinct CS 150 topics retain separate course observations. Source prerequisite punctuation is retained; recommended background is not promoted to a requirement.",
+    "Available beginning Fall 2026 is source-stated. Announced status is retained because actual enrollment has not been independently verified.",
+    "Inferred taxonomy summarizes available curriculum themes, including optional electives, rather than claiming institution-stated learning outcomes."
+  ],
+  "curriculum_audit": {
+    "scope": "minor",
+    "reviewed_at": "2026-10-10",
+    "source_ids": [
+      "tufts-application-ai-minor-identity",
+      "tufts-application-ai-minor-context-1",
+      "tufts-application-ai-minor-forms-directory"
+    ],
+    "sections": [
+      "Program eligibility",
+      "Five courses and at least 15 credits",
+      "Core slots and within-slot alternatives",
+      "Explicit required/recommended preparation",
+      "Complete visible elective list and named topics",
+      "Minor-director approval for AI independent work and elective-list governance"
+    ],
+    "unresolved_requirements": [
+      "Officially linked checklist form was inaccessible; checklist-specific completion, signature or overlap constraints remain unverified."
+    ],
+    "metadata_gaps": [
+      "Course descriptions, most prerequisites and public teaching resources remain unverified.",
+      "Credit units and unstated course credit amounts remain unknown."
+    ]
+  }
 }

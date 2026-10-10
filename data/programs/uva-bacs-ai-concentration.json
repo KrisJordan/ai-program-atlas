@@ -18,16 +18,21 @@
     "evidence_url": "https://uvacsadvising.org/ai-concentration.html",
     "uncertainty": "Source states effective/available beginning Fall 2026; first actual enrollment is not independently verified."
   },
-  "overview": "Official source identifies this undergraduate concentration. Curriculum extraction is pending.",
+  "overview": "Reviewed visible AI concentration curriculum with separate course choices and local policies; linked registrar requirements remain unverified.",
   "catalog_year": null,
   "verification_status": "partial",
   "last_verified": "2026-10-10",
-  "curriculum_status": "pending",
+  "curriculum_status": "partial",
   "links": [
     {
       "kind": "overview",
       "url": "https://uvacsadvising.org/ai-concentration.html",
       "label": "Artificial Intelligence Concentration — BACS AI Concentration"
+    },
+    {
+      "kind": "catalog",
+      "url": "https://records.ureg.virginia.edu/preview_program.php?catoid=72&poid=11789",
+      "label": "Linked registrar program page (access blocked during review)"
     }
   ],
   "sources": [
@@ -38,7 +43,7 @@
       "fetched_at": "2026-10-10",
       "source_date": null,
       "catalog_year": null,
-      "locator": "Program heading and local award/parent-program section",
+      "locator": "Full local program section: required courses, electives, topic restrictions, eligibility and published policy statements",
       "confidence": "high"
     },
     {
@@ -50,13 +55,441 @@
       "catalog_year": null,
       "locator": "Official undergraduate directory or catalog context",
       "confidence": "high"
+    },
+    {
+      "id": "uva-bacs-ai-concentration-department-context",
+      "url": "https://engineering.virginia.edu/department/computer-science/cs-undergraduate-artificial-intelligence-concentrations",
+      "title": "CS Undergraduate Artificial Intelligence Concentrations",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "About the AI Concentration; BS/BA concentration sections",
+      "confidence": "high"
     }
   ],
-  "outcomes": [],
-  "courses": [],
-  "requirements": [],
+  "outcomes": [
+    {
+      "text": "Relate AI methods to interdisciplinary Arts and Sciences contexts.",
+      "kind": "source_stated",
+      "statement_type": "learning_outcome",
+      "source_id": "uva-bacs-ai-concentration-department-context",
+      "locator": "BACS concentration outcomes"
+    },
+    {
+      "text": "Evaluate AI uses and consequences across disciplines.",
+      "kind": "source_stated",
+      "statement_type": "learning_outcome",
+      "source_id": "uva-bacs-ai-concentration-department-context",
+      "locator": "BACS concentration outcomes"
+    },
+    {
+      "text": "Apply data and algorithmic methods to cross-disciplinary questions.",
+      "kind": "source_stated",
+      "statement_type": "learning_outcome",
+      "source_id": "uva-bacs-ai-concentration-department-context",
+      "locator": "BACS concentration outcomes"
+    },
+    {
+      "text": "Communicate technical and social perspectives to broad audiences.",
+      "kind": "source_stated",
+      "statement_type": "learning_outcome",
+      "source_id": "uva-bacs-ai-concentration-department-context",
+      "locator": "BACS concentration outcomes"
+    },
+    {
+      "text": "AI methods",
+      "kind": "inferred_taxonomy",
+      "statement_type": "unspecified",
+      "source_id": "uva-bacs-ai-concentration-identity",
+      "locator": "Required core and available elective curriculum; analyst theme classification"
+    },
+    {
+      "text": "Responsible AI and society",
+      "kind": "inferred_taxonomy",
+      "statement_type": "unspecified",
+      "source_id": "uva-bacs-ai-concentration-identity",
+      "locator": "Required core and available elective curriculum; analyst theme classification"
+    },
+    {
+      "text": "Applied AI",
+      "kind": "inferred_taxonomy",
+      "statement_type": "unspecified",
+      "source_id": "uva-bacs-ai-concentration-identity",
+      "locator": "Required core and available elective curriculum; analyst theme classification"
+    }
+  ],
+  "courses": [
+    {
+      "id": "uva-cs-4710",
+      "code": "CS 4710",
+      "name": "Artificial Intelligence",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "uva-bacs-ai-concentration-identity",
+      "url": "https://uvacsadvising.org/ai-concentration.html",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "uva-cs-4774",
+      "code": "CS 4774",
+      "name": "Machine Learning",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "uva-bacs-ai-concentration-identity",
+      "url": "https://uvacsadvising.org/ai-concentration.html",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "uva-cs-4770",
+      "code": "CS 4770",
+      "name": "Natural Language Processing",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "uva-bacs-ai-concentration-identity",
+      "url": "https://uvacsadvising.org/ai-concentration.html",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "uva-cs-4771",
+      "code": "CS 4771",
+      "name": "Reinforcement Learning",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "uva-bacs-ai-concentration-identity",
+      "url": "https://uvacsadvising.org/ai-concentration.html",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "uva-econ-4444",
+      "code": "ECON 4444",
+      "name": "Artificial Intelligence and the Future of Work",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "uva-bacs-ai-concentration-identity",
+      "url": "https://uvacsadvising.org/ai-concentration.html",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "uva-mdst-3430",
+      "code": "MDST 3430",
+      "name": "Rendering AI: Cinema and Artificial Intelligence",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "uva-bacs-ai-concentration-identity",
+      "url": "https://uvacsadvising.org/ai-concentration.html",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "uva-mdst-3510",
+      "code": "MDST 3510",
+      "name": "Topics in Media Research",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "uva-bacs-ai-concentration-identity",
+      "url": "https://uvacsadvising.org/ai-concentration.html",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "uva-phil-2350",
+      "code": "PHIL 2350",
+      "name": "Minds, Machines, and Persons",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "uva-bacs-ai-concentration-identity",
+      "url": "https://uvacsadvising.org/ai-concentration.html",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "uva-phil-4410",
+      "code": "PHIL 4410",
+      "name": "Mathematics, Computability, and Philosophy",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "uva-bacs-ai-concentration-identity",
+      "url": "https://uvacsadvising.org/ai-concentration.html",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "uva-plap-3242",
+      "code": "PLAP 3242",
+      "name": "The Politics of Artificial Intelligence",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "uva-bacs-ai-concentration-identity",
+      "url": "https://uvacsadvising.org/ai-concentration.html",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "uva-stat-4630",
+      "code": "STAT 4630",
+      "name": "Statistical Machine Learning",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "uva-bacs-ai-concentration-identity",
+      "url": "https://uvacsadvising.org/ai-concentration.html",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "uva-cs-4501-law-and-ai",
+      "code": "CS 4501",
+      "name": "Special Topics in Computer Science: Law and AI",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "uva-bacs-ai-concentration-identity",
+      "url": "https://uvacsadvising.org/ai-concentration.html",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "uva-cs-4501-risks-and-benefits-of-generative-ai-and-llms",
+      "code": "CS 4501",
+      "name": "Special Topics in Computer Science: Risks and Benefits of Generative AI and LLMs",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "uva-bacs-ai-concentration-identity",
+      "url": "https://uvacsadvising.org/ai-concentration.html",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "uva-cs-4501-ai-powered-cybersecurity",
+      "code": "CS 4501",
+      "name": "Special Topics in Computer Science: AI-Powered Cybersecurity",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "uva-bacs-ai-concentration-identity",
+      "url": "https://uvacsadvising.org/ai-concentration.html",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "uva-cs-4501-llms-and-software-engineering",
+      "code": "CS 4501",
+      "name": "Special Topics in Computer Science: LLMs and Software Engineering",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "uva-bacs-ai-concentration-identity",
+      "url": "https://uvacsadvising.org/ai-concentration.html",
+      "public_site": null,
+      "syllabus": null
+    }
+  ],
+  "requirements": [
+    {
+      "id": "uva-bacs-ai-concentration-curriculum",
+      "parent_id": null,
+      "title": "Four-course AI concentration",
+      "kind": "all",
+      "count": null,
+      "credits": 12,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "uva-bacs-ai-concentration-identity",
+      "source_text": null,
+      "summary": "Four courses: two foundations and two electives. Credit amounts are source credits; unit normalization is unverified.",
+      "course_ids": []
+    },
+    {
+      "id": "uva-bacs-ai-concentration-parent-degree",
+      "parent_id": "uva-bacs-ai-concentration-curriculum",
+      "title": "Parent degree",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "uva-bacs-ai-concentration-identity",
+      "source_text": null,
+      "summary": "BACS majors may pursue this concentration, effective Fall 2026. This local inventory does not certify the host degree.",
+      "course_ids": []
+    },
+    {
+      "id": "uva-bacs-ai-concentration-transcript-and-overlap",
+      "parent_id": "uva-bacs-ai-concentration-curriculum",
+      "title": "Transcript and overlap",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "uva-bacs-ai-concentration-identity",
+      "source_text": null,
+      "summary": "The concentration appears on the transcript, not the diploma. Its courses may also count toward other major or minor requirements.",
+      "course_ids": []
+    },
+    {
+      "id": "uva-bacs-ai-concentration-declaration",
+      "parent_id": "uva-bacs-ai-concentration-curriculum",
+      "title": "Declaration",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "uva-bacs-ai-concentration-identity",
+      "source_text": null,
+      "summary": "Declare via AirTable when the announced form becomes available; the source still marks this process coming soon.",
+      "course_ids": []
+    },
+    {
+      "id": "uva-bacs-ai-concentration-major-overlap",
+      "parent_id": "uva-bacs-ai-concentration-curriculum",
+      "title": "Major overlap",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "uva-bacs-ai-concentration-identity",
+      "source_text": null,
+      "summary": "Concentration courses also satisfy BACS requirements; the two core courses satisfy the CS Restricted Electives. No additional courses beyond the host major are required for the concentration.",
+      "course_ids": []
+    },
+    {
+      "id": "uva-bacs-ai-concentration-core",
+      "parent_id": "uva-bacs-ai-concentration-curriculum",
+      "title": "AI Concentration Core",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "uva-bacs-ai-concentration-identity",
+      "source_text": null,
+      "summary": "All listed foundation courses.",
+      "course_ids": [
+        "uva-cs-4710",
+        "uva-cs-4774"
+      ]
+    },
+    {
+      "id": "uva-bacs-ai-concentration-electives",
+      "parent_id": "uva-bacs-ai-concentration-curriculum",
+      "title": "AI Concentration Electives",
+      "kind": "choose_courses",
+      "count": 2,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "uva-bacs-ai-concentration-identity",
+      "source_text": null,
+      "summary": "Choose 2 course(s). Topic-specific entries qualify only for the named topics; alternatives are not all required.",
+      "course_ids": [
+        "uva-cs-4770",
+        "uva-cs-4771",
+        "uva-econ-4444",
+        "uva-mdst-3430",
+        "uva-mdst-3510",
+        "uva-phil-2350",
+        "uva-phil-4410",
+        "uva-plap-3242",
+        "uva-stat-4630"
+      ]
+    },
+    {
+      "id": "uva-bacs-ai-concentration-manual-topics",
+      "parent_id": "uva-bacs-ai-concentration-curriculum",
+      "title": "Additional eligible topics with manual override",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "uva-bacs-ai-concentration-identity",
+      "source_text": null,
+      "summary": "These named CS 4501 topics may satisfy the two-course elective category only with departmental manual override. They are not additional required courses; their individual credits are not stated here.",
+      "course_ids": [
+        "uva-cs-4501-law-and-ai",
+        "uva-cs-4501-risks-and-benefits-of-generative-ai-and-llms",
+        "uva-cs-4501-ai-powered-cybersecurity",
+        "uva-cs-4501-llms-and-software-engineering"
+      ]
+    }
+  ],
   "notes": [
-    "Official program identity verified; requirements, course metadata and outcomes remain unextracted. Identity refresh does not verify a curriculum inventory.",
-    "BACS concentration, separately specified from BSCS. Official engineering undergraduate page links this advising domain. Effective Fall 2026; transcript designation, not a standalone degree."
-  ]
+    "BACS local concentration inventory only; this does not certify the host BA/BS degree. Effective Fall 2026 is source-stated; actual first enrollment remains unverified.",
+    "Advising page supplies the complete visible local course lists and policies. Registrar page https://records.ureg.virginia.edu/preview_program.php?catoid=72&poid=11789 was inaccessible; no catalog-policy agreement is asserted.",
+    "Each approved special topic has a separate course observation using its published common code. Topic labels are not separate catalog codes. BA MDST 3510 has no topic restriction stated here; the BS list limits it to AI Policy and Society.",
+    "Credit unit normalization and course descriptions/prerequisites remain unverified. BACS manual-override CS 4501 individual credits are unstated and null.",
+    "Inferred taxonomy summarizes available curriculum themes, including optional electives; it is separate from source-stated learning outcomes."
+  ],
+  "curriculum_audit": {
+    "scope": "concentration",
+    "reviewed_at": "2026-10-10",
+    "source_ids": [
+      "uva-bacs-ai-concentration-identity",
+      "uva-bacs-ai-concentration-context-1",
+      "uva-bacs-ai-concentration-department-context"
+    ],
+    "sections": [
+      "Distinct BACS parent-degree section",
+      "Two-course core and two elective requirements",
+      "Approved special topics and manual override where applicable",
+      "Declaration, transcript and overlap policies",
+      "Department-stated learning outcomes"
+    ],
+    "unresolved_requirements": [
+      "Linked registrar program page could not be inspected; additional catalog constraints or discrepancies remain unverified."
+    ],
+    "metadata_gaps": [
+      "Course descriptions, most prerequisites and public teaching resources remain unverified.",
+      "Credit units and unstated course credit amounts remain unknown."
+    ]
+  }
 }
