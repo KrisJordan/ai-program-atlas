@@ -67,3 +67,26 @@ def test_final_survey_has_actual_attempts_and_no_absence_claims():
     assert all(r['status'] in {'confirmed', 'inspected', 'inaccessible'} for r in survey)
     assert sum(len(r['discoveries']) for r in survey) == len(MANIFEST) == 12
     assert sum(r['status'] == 'confirmed' for r in survey) == 9
+
+
+def test_scoped_content_title_header_is_preserved_but_outer_header_is_rejected():
+    config = dict(program_id='sample', title='Artificial Intelligence', award='minor',
+                  kind='minor', heading='AI minor', claims=['Undergraduate AI minor'],
+                  content_header_class='m-title')
+    good = '<main><header class="m-title"><h1>AI minor</h1></header><p>Undergraduate AI minor</p></main>'
+    assert parse_claims(good, **config)['award_level'] == 'minor'
+    for html in (
+        '<header class="m-title"><h1>AI minor</h1></header><main><p>Undergraduate AI minor</p></main>',
+        '<main><header class="other"><h1>AI minor</h1></header><p>Undergraduate AI minor</p></main>',
+        '<main><header class="m-title"><h1>AI minor</h1></header><p>Research news</p></main>',
+    ):
+        with pytest.raises(ValueError):
+            parse_claims(html, **config)
+
+
+def test_njit_requires_explicit_award_in_content():
+    adapter = importlib.import_module('atlas.adapters.new-jersey-institute-of-technology-business-with-ai-bs-degree.adapter')
+    heading = '<main><h3>What is Business with AI?</h3>'
+    assert adapter.parse(heading + '<p>Bachelor of Science in Business with AI</p></main>')['award_level'] == 'BS'
+    with pytest.raises(ValueError):
+        adapter.parse(heading + '<a href="business-with-ai-bs/">Business with AI</a></main>')

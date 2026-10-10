@@ -10,7 +10,7 @@
   "title": "Business with AI",
   "award_level": "BS",
   "program_kind": "degree",
-  "hosting_unit": null,
+  "hosting_unit": "Martin Tuchman School of Management",
   "status": "unknown",
   "first_offered": null,
   "overview": "Official university content identifies this undergraduate degree. Curriculum details and complete institutional coverage remain pending.",
@@ -21,11 +21,26 @@
   "links": [
     {
       "kind": "overview",
+      "url": "https://management.njit.edu/bachelors-science-business-ai",
+      "label": "School overview with explicit BS award"
+    },
+    {
+      "kind": "catalog",
       "url": "https://catalog.njit.edu/undergraduate/management/management/business-with-ai-bs/",
-      "label": "Official program identity source"
+      "label": "Official catalog plan of study"
     }
   ],
   "sources": [
+    {
+      "id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-award",
+      "url": "https://management.njit.edu/bachelors-science-business-ai",
+      "title": "Bachelors of Science in Business with AI",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Opening paragraph explicitly identifies Bachelor of Science in Business with AI; What is Business with AI section.",
+      "confidence": "high"
+    },
     {
       "id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-official",
       "url": "https://catalog.njit.edu/undergraduate/management/management/business-with-ai-bs/",
@@ -33,7 +48,7 @@
       "fetched_at": "2026-10-10",
       "source_date": null,
       "catalog_year": null,
-      "locator": "Named undergraduate program entry: Business with AI; award/type: BS / degree",
+      "locator": "Business with AI heading and undergraduate plan of study; explicit BS award is established by the separate school overview source.",
       "confidence": "high"
     }
   ],
@@ -42,6 +57,7 @@
   "requirements": [],
   "notes": [
     "Directory/identity verified; curriculum pending. No courses, requirements or outcomes have yet been extracted.",
-    "Official undergraduate program source inspected; qualifying title confirmed. Institution-wide inventory and curriculum extraction remain incomplete."
+    "Official undergraduate program source inspected; qualifying title confirmed. Institution-wide inventory and curriculum extraction remain incomplete.",
+    "BS award verified in the school overview opening paragraph; the catalog URL suffix alone is not award evidence. Identity refresh now uses the explicit-award overview page."
   ]
 }
