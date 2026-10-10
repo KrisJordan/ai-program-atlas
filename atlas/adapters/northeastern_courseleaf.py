@@ -37,7 +37,7 @@ def numeric(text):
 def summarize_rule(text):
     """Keep concise rule facts; do not reproduce explanatory catalog paragraphs."""
     if 'self-assessment' in text:
-        match = re.search(r'(\d+\s*-\s*\d+) semester hours', text)
+        match = re.search(r'(\d+\s*-\s*\d+) semester hours?', text)
         if not match or '3000' not in text: raise ValueError('Changed placement substitution requires review')
         return f'Placement may replace CS 2000/2001 with {match[1]} semester hours of otherwise unused CS/CY/DS courses at level 3000 or above.'
     if text.startswith('With advisor approval'):
@@ -59,6 +59,8 @@ def parse_catalog(html, *, program_id, title, url, required_sections, outcome_cl
     if not panel: raise ValueError('Program requirements panel missing')
     if 'semester hours' not in clean(panel) or 'quarter hours' in clean(panel):
         raise ValueError('Expected explicit semester-hour unit missing or changed')
+    for marker in panel.find_all('sup'):
+        marker.decompose()
     headings = {clean(x) for x in panel.find_all('h2')}
     if not set(required_sections) <= headings: raise ValueError('Expected curriculum sections missing')
     year = re.search(r'Academic Catalog\s+(20\d{2})[–-](\d{2,4})', clean(soup))
@@ -80,10 +82,10 @@ def parse_catalog(html, *, program_id, title, url, required_sections, outcome_cl
 
     root = rule('Published program requirements', summary='Major-page requirements; external policies and open elective inventories remain partial.')
     section = root
-    for element in panel.find_all(['h2', 'table', 'p', 'ul'], recursive=False):
+    for element in panel.find_all(['h2', 'table', 'p', 'ul', 'dl'], recursive=False):
         if element.name == 'h2':
             section = rule(clean(element), root['id']); continue
-        if element.name in {'p', 'ul'}:
+        if element.name in {'p', 'ul', 'dl'}:
             text = clean(element)
             if text:
                 # Preserve only concise policy facts, not NUpath marketing descriptions.
@@ -95,6 +97,7 @@ def parse_catalog(html, *, program_id, title, url, required_sections, outcome_cl
             continue
         if 'sc_courselist' not in element.get('class', []): continue
         area, parent, previous, choice = section, section, None, None
+        option_choice = None
         for row in element.find_all('tr'):
             cells = row.find_all('td', recursive=False)
             if not cells: continue
@@ -111,30 +114,38 @@ def parse_catalog(html, *, program_id, title, url, required_sections, outcome_cl
                      summary='Published section subtotal; overlapping courses and choices are not summed by this parser.')
                 continue
             if 'areaheader' in classes:
-                area = rule(text, section['id']); parent, previous, choice = area, None, None; continue
+                area = rule(text, (option_choice or section)['id']); parent, previous, choice = area, None, None; continue
             if 'areasubheader' in classes:
                 if choice:
                     rule(text, choice['id'], kind='note', summary='Subgroup within the preceding elective choice.'); continue
                 parent = rule(text, area['id']); previous = None; continue
             codecell = row.find('td', class_='codecol')
             if codecell is None:
-                number = re.search(r'(?:Complete|Choose)\s+(?:at least\s+)?(one|two|three|\d+)', text, re.I)
-                unitmatch = re.search(r'(\d+) semester hours', text)
+                number = re.search(r'(?:Complete|Choose)\s+(?:at least\s+)?(one|two|three|four|five|six|seven|eight|nine|ten|\d+)\b', text, re.I)
+                unitmatch = re.search(r'(one|two|three|four|five|six|seven|eight|nine|ten|\d+) semester hours', text, re.I)
+                numbers = dict(one=1,two=2,three=3,four=4,five=5,six=6,seven=7,eight=8,nine=9,ten=10)
+                amount = (numbers.get(unitmatch[1].lower(), int(unitmatch[1]) if unitmatch[1].isdigit() else None) if unitmatch else None)
                 if unitmatch and text.startswith('Complete'):
-                    if credit is not None and credit != int(unitmatch[1]):
+                    if credit is not None and credit != amount:
                         raise ValueError('Conflicting credit-choice amounts')
-                    choice = rule(area['title'] + ' credit choice', parent['id'], 'choose_credits', credits=int(unitmatch[1]), summary=summarize_rule(text) + range_note)
+                    choice = rule(area['title'] + ' credit choice', parent['id'], 'choose_credits', credits=amount, summary=summarize_rule(text) + range_note)
                 elif number:
-                    word = number[1].lower(); count = {'one':1,'two':2,'three':3}.get(word, int(word) if word.isdigit() else None)
+                    word = number[1].lower(); count = numbers.get(word, int(word) if word.isdigit() else None)
                     # A course+lab combination is one alternative, not two independently selectable courses.
-                    bundled = 'corresponding lab' in text
+                    bundled = 'corresponding lab' in text or 'following options' in text and count == 1
                     choice = rule(area['title'] + ' course choice', parent['id'], 'alternative' if bundled else 'choose_courses', credits=credit, count=None if bundled else count, summary=summarize_rule(text) + range_note)
+                    if 'following options' in text and count == 1:
+                        option_choice = choice
                 else:
+                    if text.startswith(('Complete', 'Choose')) and any(word in text for word in ('following', 'courses', 'semester hours')) and 'home college' not in text:
+                        raise ValueError('Unsupported choice count requires review')
                     rule(area['title'] + ' rule', (choice or parent)['id'], kind='note', summary=summarize_rule(text) + range_note)
                 previous = None; continue
             links = codecell.find_all('a', class_='code')
             if not links or len(cells) < 2: raise ValueError('Unrecognized course row')
             codes = [clean(a) for a in links]
+            if choice and choice['kind'] == 'choose_courses' and choice['count'] == 1 and len(codes) > 1:
+                choice['kind'], choice['count'] = 'alternative', None
             if any(not re.fullmatch(r'[A-Z]+ \d+[A-Z]?', x) for x in codes): raise ValueError('Unrecognized course code')
             titlecell = BeautifulSoup(str(cells[1]), 'html.parser')
             for br in titlecell.find_all('br'):

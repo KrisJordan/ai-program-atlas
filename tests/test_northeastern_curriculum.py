@@ -118,3 +118,50 @@ def test_capstone_concurrent_alternative_is_nested_under_that_capstone():
     assert {r['course_ids'][0] for r in options}=={'test-program-biol-4991','test-program-biol-4994'}
     assert len(result['courses'])==3
     validate_requirements(result)
+
+
+def test_design_paths_are_alternative_bundles_not_all_required():
+    rows='<tr><td>Complete one of the following options:</td><td class="hourscol">8</td></tr>'
+    for label,a,b in [('Design A','ARTG 1000','ARTG 2000'),('Design B','ARTG 3000','ARTG 4000')]:
+        rows+=f'<tr class="areaheader"><td>{label}</td></tr>'+row(a,'Principles')+row(b,'Studio')
+    result=parse(document(rows))
+    choice=next(r for r in result['requirements'] if r['kind']=='alternative')
+    paths=[r for r in result['requirements'] if r['parent_id']==choice['id']]
+    assert {p['title'] for p in paths}=={'Design A','Design B'}
+    for path in paths:
+        assert path['kind']=='all'
+        assert len([r for r in result['requirements'] if r['parent_id']==path['id']])==2
+
+
+@pytest.mark.parametrize('count,number',[('four',4),('five',5)])
+def test_written_course_counts_are_choices(count,number):
+    rows=f'<tr><td>Complete {count} courses from the following:</td><td class="hourscol">20</td></tr>'+row('LING 3000','Linguistics')
+    result=parse(document(rows))
+    choice=next(r for r in result['requirements'] if r['kind']=='choose_courses')
+    assert choice['count']==number
+    changed=parse(document(rows.replace(count,'six')))
+    assert next(r for r in changed['requirements'] if r['kind']=='choose_courses')['count']==6
+
+
+def test_written_semester_hours_are_credit_choice_and_footnotes_preserved():
+    rows='<tr><td>Complete four semester hours from the following:</td><td class="hourscol">4</td></tr>'+row('ARTG 1000','Design<sup>1</sup>')
+    html=document(rows).replace('</table>','</table><dl class="sc_footnotes"><dt><sup>1</sup></dt><dd><p>A seminar is recommended, not required.</p></dd></dl>')
+    result=parse(html)
+    assert next(r for r in result['requirements'] if r['kind']=='choose_credits')['credits']==4
+    assert result['courses'][0]['name']=='Design'
+    assert any('recommended, not required' in r['summary'] for r in result['requirements'])
+
+
+def test_single_selection_pool_with_bundle_is_an_alternative():
+    rows='<tr><td>Complete one of the following:</td><td class="hourscol">4-5</td></tr>'+row('ENVR 2500','Statistics','',bundle=('ENVR 2501','Lab'))+row('MATH 3000','Statistics')
+    result=parse(document(rows))
+    choice=next(r for r in result['requirements'] if r['kind']=='alternative')
+    assert choice['count'] is None
+    assert '4-5 semester hours' in choice['summary']
+    assert len([r for r in result['requirements'] if r['parent_id']==choice['id']])==2
+
+
+def test_unhandled_number_word_does_not_turn_choices_into_required_courses():
+    rows='<tr><td>Complete fourteen courses from the following:</td><td class="hourscol">56</td></tr>'+row('LING 3000','Linguistics')
+    with pytest.raises(ValueError,match='Unsupported choice count'):
+        parse(document(rows))
