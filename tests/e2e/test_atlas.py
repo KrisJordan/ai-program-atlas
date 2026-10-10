@@ -185,6 +185,7 @@ def test_complete_concentration_scope_metadata_and_nested_choices(page, site, tm
     from playwright.sync_api import expect
     program = site_data['programs'][0]
     program.update(program_kind='concentration', curriculum_status='complete')
+    program['notes'] = ['Public source URL remains readable: https://example.edu/evidence/' + 'a' * 100 + '/view.']
     course = dict(program['courses'][0], description='A sourced description.', prerequisites=None, credits=0)
     unsourced = dict(course, id='course-unsourced', code='AI 999', name='An elective option', description='Unverified text', credits=None, credit_unit='unknown', url=None, source_id=None)
     program['courses'] = [course, unsourced, dict(course)]

@@ -58,7 +58,7 @@ def test_real_database_pages_comparison_and_mobile(browser, tmp_path):
             assert response.status == 200
             expect(page.locator("h1")).to_be_visible()
             expect(page.locator("body")).not_to_contain_text("NaN")
-        for path in ["", "coverage/", "methodology/", "programs/penn-bse-ai/"]:
+        for path in ["", "coverage/", "methodology/", "programs/penn-bse-ai/", "programs/stanford-ai-track/"]:
             page.set_viewport_size({"width": 390, "height": 844})
             page.goto(base + path)
             assert page.evaluate("document.documentElement.scrollWidth <= innerWidth")
