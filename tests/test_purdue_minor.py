@@ -144,3 +144,65 @@ def test_curated_seed_references_and_unknowns():
         for req in data["requirements"]:
             assert set(req["course_ids"]) <= course_ids
             assert req["parent_id"] is None or req["parent_id"] in requirement_ids
+
+
+def subject_fixture(credits=3, prerequisite="EXAMPLE 100 or EXAMPLE 200"):
+    return f"""<h1>Electrical Engineering (EE)</h1><div class="courseblock">
+    <div class="course_codetitle">EE 456: Example Neural Course</div>
+    <div class="course_code"><span>EE</span><span>456</span></div>
+    <div class="course_credits">{credits} Credits</div>
+    <div class="courseblockextra">Enforced Prerequisite at Enrollment: {prerequisite}</div>
+    <div class="courseblockdesc">Synthetic long description not copied into observation.</div></div>"""
+
+
+def test_subject_metadata_reads_changed_credit_and_prerequisite():
+    module = adapter("penn-state-ai-engineering-minor")
+    course = module.parse_ee(subject_fixture(4, "EXAMPLE 300"))["courses"][0]
+    assert course["credits"] == 4
+    assert course["prerequisites"] == "EXAMPLE 300"
+    assert course["description"] is None
+    assert course["name"] == "Example Neural Course"
+    assert "search/" not in course["url"]
+    with pytest.raises(ValueError, match="blocks missing"):
+        module.parse_ee(subject_fixture().replace("456", "457"))
+    with pytest.raises(ValueError, match="credit format"):
+        module.parse_ee(subject_fixture("1-4"))
+
+
+def test_ba_department_extracts_totals_without_dividing_course_credits():
+    html = """<h1>Artificial Intelligence</h1><h2>Plan of Study</h2>
+    <p>The BA in AI degree requires 24 credit hours in philosophy, with an additional 15 credit hours in CS.</p>
+    <ul><li>CS 10100: Example Digital</li><li>CS 24300: Example AI</li></ul>"""
+    module = adapter("purdue-ai-ba")
+    data = module.parse_department(html)
+    assert data["curriculum_status"] == "partial"
+    assert [r["credits"] for r in data["requirements"]] == [24, 15]
+    assert all(c["credits"] is None for c in data["courses"])
+    assert data["requirements"][0]["course_ids"] == []
+    changed = module.parse_department(html.replace("24 credit", "27 credit"))
+    assert changed["requirements"][0]["credits"] == 27
+    with pytest.raises(ValueError, match="totals"):
+        module.parse_department(html.replace("24 credit hours", "many credit hours"))
+
+
+def test_college_core_observation_does_not_invent_choices_or_add_credits():
+    html = """<h1>College of Science Core Curriculum Requirements</h1>
+    <p>The core requires the completion of approved coursework and/or experiences.</p>
+    <ul><li><a href="/math">Mathematics</a></li><li><a href="/writing">Written Communication</a></li></ul>"""
+    data = adapter("purdue-ai-bs").parse_college_core(html)
+    assert len(data["requirements"]) == 3
+    assert all(r["credits"] is None and not r["course_ids"] for r in data["requirements"])
+    assert all(r["parent_id"] == "purdue-ai-bs-college-core" for r in data["requirements"][1:])
+    assert data["curriculum_status"] == "partial"
+    assert "curriculum_audit" not in data
+
+
+def test_reviewed_partial_audits_preserve_exact_gaps():
+    from atlas.db import validate_program
+
+    for slug in ["purdue-ai-bs", "purdue-ai-ba", "penn-state-ai-engineering-minor"]:
+        data = json.loads((ROOT / "data" / "programs" / f"{slug}.json").read_text())
+        validate_program(data)
+        assert data["curriculum_status"] == "partial"
+        assert data["curriculum_audit"]["unresolved_requirements"]
+        assert data["curriculum_audit"]["scope"] == data["program_kind"]

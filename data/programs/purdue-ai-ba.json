@@ -5,9 +5,115 @@
   "program_kind": "degree",
   "hosting_unit": "College of Liberal Arts",
   "catalog_year": null,
-  "curriculum_status": "pending",
-  "courses": [],
-  "requirements": [],
+  "curriculum_status": "partial",
+  "courses": [
+    {
+      "id": "purdue-cs-10100",
+      "code": "CS 10100",
+      "name": "Digital Literacy",
+      "description": "Survey of computing, programming, data, networks, media, cloud services, AI, security and privacy.",
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "foundations",
+      "source_id": "purdue-ai-ba-department",
+      "url": "https://www.cla.purdue.edu/academic/philosophy/students/undergraduate/majors/artificial-intelligence/index.html",
+      "public_site": null,
+      "syllabus": "https://www.cs.purdue.edu/academic-programs/courses/canonical/cs10100.html"
+    },
+    {
+      "id": "purdue-cs-17600",
+      "code": "CS 17600",
+      "name": "Introduction to Python",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "foundations",
+      "source_id": "purdue-ai-ba-department",
+      "url": "https://www.cla.purdue.edu/academic/philosophy/students/undergraduate/majors/artificial-intelligence/index.html",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "purdue-cs-18000",
+      "code": "CS 18000",
+      "name": "Problem Solving and Object-Oriented Programming",
+      "description": "Programming with data types, control flow, arrays, debugging, objects, exceptions, concurrency, input/output and data structures.",
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "foundations",
+      "source_id": "purdue-ai-ba-department",
+      "url": "https://www.cla.purdue.edu/academic/philosophy/students/undergraduate/majors/artificial-intelligence/index.html",
+      "public_site": null,
+      "syllabus": "https://www.cs.purdue.edu/academic-programs/courses/canonical/cs180.html"
+    },
+    {
+      "id": "purdue-cs-18200",
+      "code": "CS 18200",
+      "name": "Foundations of Computer Science",
+      "description": "Discrete mathematics for computing: logic, proof, sets, counting, graphs, recursion, probability, automata and computability.",
+      "prerequisites": "CS 18000 (Problem Solving and Object-Oriented Programming)",
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "foundations",
+      "source_id": "purdue-ai-ba-department",
+      "url": "https://www.cla.purdue.edu/academic/philosophy/students/undergraduate/majors/artificial-intelligence/index.html",
+      "public_site": null,
+      "syllabus": "https://www.cs.purdue.edu/academic-programs/courses/canonical/cs182.html"
+    },
+    {
+      "id": "purdue-cs-24300",
+      "code": "CS 24300",
+      "name": "AI Basics",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "purdue-ai-ba-department",
+      "url": "https://www.cla.purdue.edu/academic/philosophy/students/undergraduate/majors/artificial-intelligence/index.html",
+      "public_site": null,
+      "syllabus": null
+    }
+  ],
+  "requirements": [
+    {
+      "id": "purdue-ai-ba-philosophy",
+      "parent_id": null,
+      "title": "Philosophy coursework",
+      "kind": "choose_credits",
+      "count": null,
+      "credits": 24,
+      "credit_unit": "semester_hours",
+      "category": "human_context",
+      "source_id": "purdue-ai-ba-department",
+      "source_text": null,
+      "summary": "Philosophy options await full plan inspection.",
+      "course_ids": []
+    },
+    {
+      "id": "purdue-ai-ba-cs",
+      "parent_id": null,
+      "title": "Required computer science courses",
+      "kind": "all",
+      "count": null,
+      "credits": 15,
+      "credit_unit": "semester_hours",
+      "category": "foundations",
+      "source_id": "purdue-ai-ba-department",
+      "source_text": null,
+      "summary": "Complete the department's listed CS courses; individual credits are not stated here.",
+      "course_ids": [
+        "purdue-cs-10100",
+        "purdue-cs-17600",
+        "purdue-cs-18000",
+        "purdue-cs-18200",
+        "purdue-cs-24300"
+      ]
+    }
+  ],
   "links": [
     {
       "kind": "overview",
@@ -18,14 +124,24 @@
       "kind": "catalog",
       "url": "http://catalog.purdue.edu/preview_program.php?catoid=19&poid=35726",
       "label": "Official plan of study (access blocked during pilot)"
+    },
+    {
+      "kind": "study",
+      "url": "https://www.cla.purdue.edu/academic/philosophy/students/undergraduate/majors/artificial-intelligence/index.html",
+      "label": "Department BA plan summary"
     }
   ],
   "notes": [
-    "Identity and BA award verified from admissions Quick Facts; course-level requirements await catalog access.",
-    "The current plan-of-study link returned HTTP 403 on 2026-10-10. Catalog year, total credits, required courses and launch date remain unknown.",
     "Official admissions h1 is Artificial Intelligence (Liberal Arts); its Quick Facts explicitly identifies the Bachelor of Arts award. Do not merge with the separate BS.",
     "Admissions includes potentially inconsistent marketing language about coding; do not interpret it as a waiver of technical coursework.",
-    "Pilot record; institution ranking/cohort membership is established separately. Null fields indicate unverified facts, not absence."
+    "Pilot record; institution ranking/cohort membership is established separately. Null fields indicate unverified facts, not absence.",
+    "The department plan summary establishes 24 philosophy credit hours and 15 CS credit hours. These are major components, not a verified degree total. Individual course credits are unstated.",
+    "The department summary lists CS 17600 as Introduction to Python and CS 24300 as AI Basics; the Fall 2026 CS directory instead uses Data Engineering In Python and Artificial Intelligence Basics. Source wording is preserved pending catalog reconciliation.",
+    "The full current catalog plan returned HTTP 403. Philosophy options, degree-wide requirements, grade/residency/overlap rules and catalog year remain unresolved.",
+    "CS 10100 content is summarized from registered source purdue-cs10100-canonical. Canonical outline, updated 2025-06-20; no current-term offering claim. Original course source supplies requirement identity/credits.",
+    "CS 18000 content is summarized from registered source purdue-cs180-canonical. Canonical outline, updated 2025-06-20; no current-term offering claim. Original course source supplies requirement identity/credits.",
+    "CS 18200 content and prerequisite is summarized from registered source purdue-cs182-canonical. Canonical outline, updated 2025-06-20; no current-term offering claim. Original course source supplies requirement identity/credits.",
+    "The CS 180 canonical outline uses the older heading Programming I; its source-linked directory course code matches CS 18000. CS 471 canonical material includes a 1998.08 date and was not used as current course evidence."
   ],
   "institution": {
     "id": "purdue-university",
@@ -61,6 +177,46 @@
       "catalog_year": "2026-2027",
       "locator": "2026 and 2027 fall/spring term dates; semester sequence also stated on department curriculum",
       "confidence": "high"
+    },
+    {
+      "id": "purdue-ai-ba-department",
+      "url": "https://www.cla.purdue.edu/academic/philosophy/students/undergraduate/majors/artificial-intelligence/index.html",
+      "title": "BA in Artificial Intelligence",
+      "locator": "Plan of Study; five listed required CS courses and subject credit totals",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "confidence": "high"
+    },
+    {
+      "id": "purdue-cs10100-canonical",
+      "url": "https://www.cs.purdue.edu/academic-programs/courses/canonical/cs10100.html",
+      "title": "Canonical syllabus: Digital Literacy",
+      "locator": "Course Description or Detailed Syllabus; course heading; prerequisite when stated",
+      "fetched_at": "2026-10-10",
+      "source_date": "2025-06-20",
+      "catalog_year": null,
+      "confidence": "high"
+    },
+    {
+      "id": "purdue-cs180-canonical",
+      "url": "https://www.cs.purdue.edu/academic-programs/courses/canonical/cs180.html",
+      "title": "Canonical syllabus: Programming I",
+      "locator": "Course Description or Detailed Syllabus; course heading; prerequisite when stated",
+      "fetched_at": "2026-10-10",
+      "source_date": "2025-06-20",
+      "catalog_year": null,
+      "confidence": "high"
+    },
+    {
+      "id": "purdue-cs182-canonical",
+      "url": "https://www.cs.purdue.edu/academic-programs/courses/canonical/cs182.html",
+      "title": "Canonical syllabus: Foundations of Computer Science",
+      "locator": "Course Description or Detailed Syllabus; course heading; prerequisite when stated",
+      "fetched_at": "2026-10-10",
+      "source_date": "2025-06-20",
+      "catalog_year": null,
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -77,5 +233,26 @@
       "locator": "Possible Careers"
     }
   ],
-  "overview": "A Bachelor of Arts exploring AI through philosophy, ethics, human experience, and technical study."
+  "overview": "A Bachelor of Arts exploring AI through philosophy, ethics, human experience, and technical study.",
+  "curriculum_audit": {
+    "scope": "degree",
+    "reviewed_at": "2026-10-10",
+    "source_ids": [
+      "purdue-ai-ba-department"
+    ],
+    "sections": [
+      "Department Plan of Study subject totals",
+      "Required CS course inventory"
+    ],
+    "unresolved_requirements": [
+      "Philosophy required and elective inventory",
+      "Degree-wide college and university requirements",
+      "Grade, residency and overlap policies"
+    ],
+    "metadata_gaps": [
+      "Individual CS credits unknown",
+      "CS 17600 and CS 24300 descriptions and prerequisites unknown",
+      "Launch date unverified"
+    ]
+  }
 }

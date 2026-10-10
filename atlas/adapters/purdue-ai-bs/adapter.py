@@ -7,7 +7,14 @@ from bs4 import BeautifulSoup
 
 PROGRAM_ID = "purdue-ai-bs"
 
-SOURCES = ("https://www.cs.purdue.edu/undergraduate/curriculum/bachelor-ai.html",)
+SOURCES = (
+    "https://www.cs.purdue.edu/undergraduate/curriculum/bachelor-ai.html",
+    "https://www.purdue.edu/science/Current_Students/curriculum_and_degree_requirements/college-of-science-core-requirements.html",
+    "https://www.cs.purdue.edu/academic-programs/courses/canonical/cs180.html",
+    "https://www.cs.purdue.edu/academic-programs/courses/canonical/cs182.html",
+    "https://www.cs.purdue.edu/academic-programs/courses/canonical/cs37300.html",
+)
+COLLEGE_SOURCE_ID = "purdue-science-core"
 SOURCE_ID = "purdue-ai-bs-curriculum"
 PREFIX = "purdue-ai-bs"
 
@@ -270,3 +277,51 @@ def parse(html: str) -> dict:
             "Core credits are a range; individual elective credits remain unknown unless directly stated. Categories are editorial classifications.",
         ],
     }
+
+
+def parse_college_core(html: str) -> dict:
+    soup = BeautifulSoup(html, "html.parser")
+    h1 = soup.find("h1")
+    if not h1 or text(h1) != "College of Science Core Curriculum Requirements":
+        raise ValueError("Expected College of Science core heading")
+    introduction = next(
+        (
+            p
+            for p in soup.find_all("p")
+            if "requires the completion of approved coursework" in text(p)
+        ),
+        None,
+    )
+    listing = introduction.find_next_sibling("ul") if introduction else None
+    if listing is None:
+        raise ValueError("College core areas missing")
+    requirements = [
+        requirement(
+            "college-core",
+            "College of Science core",
+            "all",
+            summary="Approved coursework and/or experiential learning across the college core areas; alternatives and overlap rules await review.",
+        )
+    ]
+    for li in listing.find_all("li", recursive=False):
+        anchor = li.find("a", href=True)
+        if anchor is None or not text(anchor):
+            raise ValueError("College core area link missing")
+        title = text(anchor)
+        requirements.append(
+            requirement(
+                "college-core-" + key(title),
+                title,
+                "note",
+                parent=PREFIX + "-college-core",
+                summary="Required college core area; linked options are not yet mapped. May overlap major requirements; do not add credits.",
+            )
+        )
+    if len(requirements) < 2:
+        raise ValueError("College core areas empty")
+    for row in requirements:
+        row["source_id"] = COLLEGE_SOURCE_ID
+    return {"id": PROGRAM_ID, "requirements": requirements, "curriculum_status": "partial"}
+
+
+SOURCE_PARSERS = {SOURCES[1]: parse_college_core}

@@ -38,7 +38,7 @@
       "id": "purdue-cs-18000",
       "code": "CS 18000",
       "name": "Problem Solving and Object-Oriented Programming",
-      "description": null,
+      "description": "Programming with data types, control flow, arrays, debugging, objects, exceptions, concurrency, input/output and data structures.",
       "prerequisites": null,
       "credits": 4.0,
       "credit_unit": "semester_hours",
@@ -46,21 +46,21 @@
       "source_id": "purdue-ai-bs-curriculum",
       "url": "https://selfservice.mypurdue.purdue.edu/prod/bwckctlg.p_disp_course_detail?cat_term_in=202710&subj_code_in=CS&crse_numb_in=18000",
       "public_site": null,
-      "syllabus": null
+      "syllabus": "https://www.cs.purdue.edu/academic-programs/courses/canonical/cs180.html"
     },
     {
       "id": "purdue-cs-18200",
       "code": "CS 18200",
       "name": "Foundations of Computer Science",
-      "description": null,
-      "prerequisites": null,
+      "description": "Discrete mathematics for computing: logic, proof, sets, counting, graphs, recursion, probability, automata and computability.",
+      "prerequisites": "CS 18000 (Problem Solving and Object-Oriented Programming)",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "foundations",
       "source_id": "purdue-ai-bs-curriculum",
       "url": "https://selfservice.mypurdue.purdue.edu/prod/bwckctlg.p_disp_course_detail?cat_term_in=202710&subj_code_in=CS&crse_numb_in=18200",
       "public_site": null,
-      "syllabus": null
+      "syllabus": "https://www.cs.purdue.edu/academic-programs/courses/canonical/cs182.html"
     },
     {
       "id": "purdue-psy-20000",
@@ -262,7 +262,7 @@
       "id": "purdue-cs-37300",
       "code": "CS 37300",
       "name": "Data Mining and Machine Learning",
-      "description": null,
+      "description": "Data preparation, exploratory analysis, predictive and descriptive modeling, model evaluation and pattern discovery.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
@@ -270,7 +270,7 @@
       "source_id": "purdue-ai-bs-curriculum",
       "url": "https://selfservice.mypurdue.purdue.edu/prod/bwckctlg.p_disp_course_detail?cat_term_in=202710&subj_code_in=CS&crse_numb_in=37300",
       "public_site": null,
-      "syllabus": null
+      "syllabus": "https://www.cs.purdue.edu/academic-programs/courses/canonical/cs37300.html"
     },
     {
       "id": "purdue-cs-38100",
@@ -888,6 +888,174 @@
       "source_text": null,
       "summary": "Pre-approved AI Forge project",
       "course_ids": []
+    },
+    {
+      "id": "purdue-ai-bs-college-core",
+      "parent_id": null,
+      "title": "College of Science core",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "purdue-science-core",
+      "source_text": null,
+      "summary": "Approved coursework and/or experiential learning across the college core areas; alternatives and overlap rules await review.",
+      "course_ids": []
+    },
+    {
+      "id": "purdue-ai-bs-college-core-written-communication",
+      "parent_id": "purdue-ai-bs-college-core",
+      "title": "Written Communication",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "purdue-science-core",
+      "source_text": null,
+      "summary": "Required college core area; linked options are not yet mapped. May overlap major requirements; do not add credits.",
+      "course_ids": []
+    },
+    {
+      "id": "purdue-ai-bs-college-core-technical-writing-and-technical-presentation",
+      "parent_id": "purdue-ai-bs-college-core",
+      "title": "Technical Writing and Technical Presentation",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "purdue-science-core",
+      "source_text": null,
+      "summary": "Required college core area; linked options are not yet mapped. May overlap major requirements; do not add credits.",
+      "course_ids": []
+    },
+    {
+      "id": "purdue-ai-bs-college-core-teaming-and-collaboration",
+      "parent_id": "purdue-ai-bs-college-core",
+      "title": "Teaming and Collaboration",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "purdue-science-core",
+      "source_text": null,
+      "summary": "Required college core area; linked options are not yet mapped. May overlap major requirements; do not add credits.",
+      "course_ids": []
+    },
+    {
+      "id": "purdue-ai-bs-college-core-language-and-culture",
+      "parent_id": "purdue-ai-bs-college-core",
+      "title": "Language and Culture",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "purdue-science-core",
+      "source_text": null,
+      "summary": "Required college core area; linked options are not yet mapped. May overlap major requirements; do not add credits.",
+      "course_ids": []
+    },
+    {
+      "id": "purdue-ai-bs-college-core-great-issues",
+      "parent_id": "purdue-ai-bs-college-core",
+      "title": "Great Issues",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "purdue-science-core",
+      "source_text": null,
+      "summary": "Required college core area; linked options are not yet mapped. May overlap major requirements; do not add credits.",
+      "course_ids": []
+    },
+    {
+      "id": "purdue-ai-bs-college-core-science-technology-and-society",
+      "parent_id": "purdue-ai-bs-college-core",
+      "title": "Science Technology and Society",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "purdue-science-core",
+      "source_text": null,
+      "summary": "Required college core area; linked options are not yet mapped. May overlap major requirements; do not add credits.",
+      "course_ids": []
+    },
+    {
+      "id": "purdue-ai-bs-college-core-laboratory-science",
+      "parent_id": "purdue-ai-bs-college-core",
+      "title": "Laboratory Science",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "purdue-science-core",
+      "source_text": null,
+      "summary": "Required college core area; linked options are not yet mapped. May overlap major requirements; do not add credits.",
+      "course_ids": []
+    },
+    {
+      "id": "purdue-ai-bs-college-core-mathematics",
+      "parent_id": "purdue-ai-bs-college-core",
+      "title": "Mathematics",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "purdue-science-core",
+      "source_text": null,
+      "summary": "Required college core area; linked options are not yet mapped. May overlap major requirements; do not add credits.",
+      "course_ids": []
+    },
+    {
+      "id": "purdue-ai-bs-college-core-statistics",
+      "parent_id": "purdue-ai-bs-college-core",
+      "title": "Statistics",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "purdue-science-core",
+      "source_text": null,
+      "summary": "Required college core area; linked options are not yet mapped. May overlap major requirements; do not add credits.",
+      "course_ids": []
+    },
+    {
+      "id": "purdue-ai-bs-college-core-computing",
+      "parent_id": "purdue-ai-bs-college-core",
+      "title": "Computing",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "purdue-science-core",
+      "source_text": null,
+      "summary": "Required college core area; linked options are not yet mapped. May overlap major requirements; do not add credits.",
+      "course_ids": []
+    },
+    {
+      "id": "purdue-ai-bs-college-core-general-education",
+      "parent_id": "purdue-ai-bs-college-core",
+      "title": "General Education",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "purdue-science-core",
+      "source_text": null,
+      "summary": "Required college core area; linked options are not yet mapped. May overlap major requirements; do not add credits.",
+      "course_ids": []
     }
   ],
   "notes": [
@@ -898,7 +1066,13 @@
     "Fall 2026 identifies this curriculum version, not the program launch. First offering date is unverified.",
     "Selective credits are group totals; individual course credits, descriptions and prerequisites remain null unless independently stated. Graduate selectives may have additional prerequisites.",
     "Source wording for CS 45800 is retained as published: Introductions to Robotics.",
-    "Pilot record; institution ranking/cohort membership is established separately. Null fields indicate unverified facts, not absence."
+    "Pilot record; institution ranking/cohort membership is established separately. Null fields indicate unverified facts, not absence.",
+    "Eleven College of Science core areas are now represented as policy nodes. Their approved choices, substitutions and overlap with major requirements remain unmapped. These nodes must not be summed as additional major credits.",
+    "The linked selfservice course-detail endpoint is robots-disallowed and was not bypassed. Public canonical syllabi provide limited course-content evidence separately.",
+    "CS 18000 content is summarized from registered source purdue-cs180-canonical. Canonical outline, updated 2025-06-20; no current-term offering claim. Original course source supplies requirement identity/credits.",
+    "CS 18200 content and prerequisite is summarized from registered source purdue-cs182-canonical. Canonical outline, updated 2025-06-20; no current-term offering claim. Original course source supplies requirement identity/credits.",
+    "CS 37300 content is summarized from registered source purdue-cs37300-canonical. Canonical outline, updated 2025-06-20; no current-term offering claim. Original course source supplies requirement identity/credits.",
+    "The CS 180 canonical outline uses the older heading Programming I; its source-linked directory course code matches CS 18000. CS 471 canonical material includes a 1998.08 date and was not used as current course evidence."
   ],
   "institution": {
     "id": "purdue-university",
@@ -935,6 +1109,46 @@
       "catalog_year": "2026-2027",
       "locator": "2026 and 2027 fall/spring term dates; semester sequence also stated on department curriculum",
       "confidence": "high"
+    },
+    {
+      "id": "purdue-science-core",
+      "url": "https://www.purdue.edu/science/Current_Students/curriculum_and_degree_requirements/college-of-science-core-requirements.html",
+      "title": "College of Science Core Curriculum Requirements",
+      "locator": "Fall 2007 onward applicability; 11 required scientific/professional development areas; approved experiential learning",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "confidence": "high"
+    },
+    {
+      "id": "purdue-cs180-canonical",
+      "url": "https://www.cs.purdue.edu/academic-programs/courses/canonical/cs180.html",
+      "title": "Canonical syllabus: Programming I",
+      "locator": "Course Description or Detailed Syllabus; course heading; prerequisite when stated",
+      "fetched_at": "2026-10-10",
+      "source_date": "2025-06-20",
+      "catalog_year": null,
+      "confidence": "high"
+    },
+    {
+      "id": "purdue-cs182-canonical",
+      "url": "https://www.cs.purdue.edu/academic-programs/courses/canonical/cs182.html",
+      "title": "Canonical syllabus: Foundations of Computer Science",
+      "locator": "Course Description or Detailed Syllabus; course heading; prerequisite when stated",
+      "fetched_at": "2026-10-10",
+      "source_date": "2025-06-20",
+      "catalog_year": null,
+      "confidence": "high"
+    },
+    {
+      "id": "purdue-cs37300-canonical",
+      "url": "https://www.cs.purdue.edu/academic-programs/courses/canonical/cs37300.html",
+      "title": "Canonical syllabus: Data Mining and Machine Learning",
+      "locator": "Course Description or Detailed Syllabus; course heading; prerequisite when stated",
+      "fetched_at": "2026-10-10",
+      "source_date": "2025-06-20",
+      "catalog_year": null,
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -963,5 +1177,29 @@
       "url": "https://catalog.purdue.edu/preview_program.php?catoid=19&poid=35981",
       "label": "University catalog (access blocked during pilot)"
     }
-  ]
+  ],
+  "curriculum_audit": {
+    "scope": "degree",
+    "reviewed_at": "2026-10-10",
+    "source_ids": [
+      "purdue-ai-bs-curriculum",
+      "purdue-science-core"
+    ],
+    "sections": [
+      "Fall 2026 major core and alternatives",
+      "Three selective groups",
+      "Four capstone routes",
+      "College core area inventory"
+    ],
+    "unresolved_requirements": [
+      "College core approved choices and substitution/overlap rules",
+      "Full university degree, residency and grade requirements",
+      "Full current catalog plan inaccessible"
+    ],
+    "metadata_gaps": [
+      "Most course descriptions and prerequisites unknown",
+      "Selective course individual credits unverified",
+      "Launch date and exact catalog edition unverified"
+    ]
+  }
 }

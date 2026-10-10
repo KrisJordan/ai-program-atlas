@@ -9,6 +9,9 @@ PROGRAM_ID = "penn-state-ai-engineering-minor"
 
 SOURCES = (
     "https://bulletins.psu.edu/undergraduate/colleges/engineering/artificial-intelligence-engineering-minor/",
+    "https://bulletins.psu.edu/university-course-descriptions/undergraduate/a-i/",
+    "https://bulletins.psu.edu/university-course-descriptions/undergraduate/cmpsc/",
+    "https://bulletins.psu.edu/university-course-descriptions/undergraduate/ee/",
 )
 PREFIX = "penn-state-ai-engineering-minor"
 SOURCE_ID = PREFIX + "-catalog"
@@ -170,3 +173,64 @@ def parse(html: str) -> dict:
             "Department-list elective options are not enumerated on the inspected bulletin page; course prerequisites may add preparation outside the minor total."
         ],
     }
+
+
+def parse_subject(html: str, subject: str, codes: set[str], url: str) -> dict:
+    """Observe metadata from permitted subject catalogs, without copying descriptions."""
+    soup = BeautifulSoup(html, "html.parser")
+    h1 = soup.find("h1")
+    if not h1 or text(h1) != subject:
+        raise ValueError("Expected subject catalog heading")
+    courses = []
+    for block in soup.find_all("div", class_="courseblock"):
+        code_node = block.find(class_="course_code")
+        if code_node is None or text(code_node) not in codes:
+            continue
+        code = text(code_node)
+        title = block.find(class_="course_codetitle")
+        credit = block.find(class_="course_credits")
+        if title is None or credit is None:
+            raise ValueError("Course title or credits missing")
+        amount = re.fullmatch(r"(\d+(?:\.\d+)?) Credits?", text(credit))
+        if amount is None:
+            raise ValueError("Unrecognized course credit format")
+        prerequisites = []
+        for extra in block.find_all(class_="courseblockextra"):
+            value = text(extra)
+            if value.startswith("Enforced Prerequisite at Enrollment:"):
+                prerequisites.append(value.split(":", 1)[1].strip())
+        source_id = "penn-state-" + url.rstrip("/").rsplit("/", 1)[-1] + "-subject"
+        courses.append(
+            {
+                "id": "penn-state-" + re.sub(r"[^a-z0-9]+", "-", code.lower()),
+                "code": code,
+                "name": re.sub(r"^" + re.escape(code) + r":\s*", "", text(title)),
+                "credits": float(amount.group(1)),
+                "credit_unit": "semester_hours",
+                "prerequisites": "; ".join(prerequisites) or None,
+                "description": None,
+                "category": "systems" if code == "A-I 410" else "ai_ml",
+                "source_id": source_id,
+                "url": url + "#cb-" + code.replace(" ", ""),
+                "public_site": None,
+                "syllabus": None,
+            }
+        )
+    if {c["code"] for c in courses} != codes or len(courses) != len(codes):
+        raise ValueError("Expected minor course blocks missing or duplicated")
+    return {"id": PROGRAM_ID, "courses": courses}
+
+
+def parse_ai(html: str) -> dict:
+    return parse_subject(html, "Artificial Intelligence (A-I)", {"A-I 305", "A-I 410"}, SOURCES[1])
+
+
+def parse_cmpsc(html: str) -> dict:
+    return parse_subject(html, "Computer Science (CMPSC)", {"CMPSC 445", "CMPSC 448"}, SOURCES[2])
+
+
+def parse_ee(html: str) -> dict:
+    return parse_subject(html, "Electrical Engineering (EE)", {"EE 456"}, SOURCES[3])
+
+
+SOURCE_PARSERS = {SOURCES[1]: parse_ai, SOURCES[2]: parse_cmpsc, SOURCES[3]: parse_ee}
