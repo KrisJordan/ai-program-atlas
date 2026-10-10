@@ -31,7 +31,7 @@ def test_reviewed_data_valid_and_remaining_gaps_explicit(pid,key,count):
  d=json.loads((ROOT/'data/programs'/(pid+'.json')).read_text());validate_program(d)
  assert d['curriculum_status']=='partial'
  assert d['curriculum_audit']['unresolved_requirements']
- assert len(d['courses'])==count
+ assert len(d['courses']) == (38 if key == 'nd' else count)
 
 
 def test_nd_dedup_preserves_distinct_codes_and_fractional_choices():
@@ -65,3 +65,15 @@ def test_rit_rejects_degree_heading_and_unrecognized_choice():
  a=load(CASES[3][0]);html=(ROOT/'tests/fixtures/business_society_minors/rit.html').read_text()
  with pytest.raises(ValueError):a.parse(html.replace('<h1>Artificial Intelligence Minor</h1>','<h1>Artificial Intelligence</h1>'))
  with pytest.raises(ValueError):a.parse(html.replace('Select five','Select an advisor-approved set'))
+
+
+def test_nd_current_linked_page_expansion_remains_observation_only():
+    a = load(CASES[0][0])
+    x = a.parse((ROOT/'tests/fixtures/business_society_minors/nd-current.html').read_text())
+    assert a.SOURCES[0].endswith('/ai-analytics-in-business-minor/')
+    assert len(x['courses']) == 36
+    assert len(x['requirements'][1]['course_ids']) == 34
+    assert 'curriculum_audit' not in x
+    assert all(c['credit_unit'] == 'unknown' for c in x['courses'])
+    # Credit normalization belongs to the separate academic-code review, not this HTML parser.
+    assert [c for c in x['courses'] if c['code'] == 'FIN 40262']

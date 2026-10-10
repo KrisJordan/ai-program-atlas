@@ -57,3 +57,28 @@ def test_ursinus_credit_exclusions_aliases_and_partial_policy_audit():
     assert any('overlap' in gap for gap in d['curriculum_audit']['unresolved_requirements'])
     assert d['outcomes'][0]['statement_type'] == 'program_aim'
     assert d['outcomes'][1]['kind'] == 'inferred_taxonomy'
+
+def test_nd_source_pools_credit_definition_and_unresolved_rules():
+    d = record('university-of-notre-dame-ai-analytics-in-business-minor-minor')
+    e = record('notre-dame-ai-essentials-business-minor')
+    assert len(d['courses']) == 38 and len(e['courses']) == 12
+    for data in (d, e):
+        assert data['curriculum_status'] == 'partial'
+        assert all(c['credit_unit'] == 'semester_hours' for c in data['courses'])
+        assert all(c['credits'] is not None for c in data['courses'])
+        assert data['curriculum_audit']['unresolved_requirements']
+        assert data['outcomes'][0]['statement_type'] == 'program_aim'
+        assert any('5.4.2' in s['locator'] for s in data['sources'])
+    req = {r['id'].removeprefix(d['id']+'-'):r for r in d['requirements']}
+    assert len(req['electives']['course_ids']) == 34
+    assert req['electives']['credits'] == 9
+    assert req['electives']['kind'] == 'choose_credits'
+    assert len(req['catalog-elective-conflict']['course_ids']) == 30
+    assert req['catalog-elective-conflict']['kind'] == 'note'
+    assert len(set(req['electives']['course_ids'])-set(req['catalog-elective-conflict']['course_ids'])) == 6
+    assert len(set(req['catalog-elective-conflict']['course_ids'])-set(req['electives']['course_ids'])) == 2
+    codes = {c['code']: c for c in d['courses']}
+    assert 'ITAO 50840' not in codes and 'ITAO 30530' not in codes
+    assert codes['MARK 30120']['name'] != codes['MARK 30130']['name']
+    assert 'recommended' in codes['ITAO 40530']['prerequisites']
+    assert 'Business Analytics' in codes['ITAO 50850']['prerequisites']

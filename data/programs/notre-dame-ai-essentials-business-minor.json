@@ -5,7 +5,7 @@
     "name": "University of Notre Dame",
     "aliases": [],
     "website": "https://www.nd.edu/",
-    "calendar": "unknown"
+    "calendar": "semester"
   },
   "title": "AI Essentials for Business",
   "award_level": "minor",
@@ -35,6 +35,26 @@
       "catalog_year": null,
       "locator": "Course Requirements; Course List; Electives; How to Apply; eligibility and overlap notes",
       "confidence": "high"
+    },
+    {
+      "id": "notre-dame-ai-essentials-business-minor-academic-code",
+      "url": "https://provost.nd.edu/assets/674712/undergraduate_academic_code_2026_final_1_.pdf",
+      "title": "Undergraduate Academic Code — July 1, 2026",
+      "locator": "§§1.2.2, 2.3, 3.3.11, 3.3.14, 5.4.2–5.4.5; semester hours, transfer, overlap, pass/fail and repeat rules",
+      "catalog_year": "2026-2027",
+      "source_date": "2026-07-01",
+      "fetched_at": "2026-10-10",
+      "confidence": "high"
+    },
+    {
+      "id": "notre-dame-ai-essentials-business-minor-college-policy",
+      "url": "https://catalog.nd.edu/undergraduate/business/",
+      "title": "Mendoza College of Business — 2026–2027 Bulletin",
+      "locator": "Curriculum for BBA; four-year completion of added credentials; Pass-Fail paragraph",
+      "catalog_year": "2026-2027",
+      "source_date": null,
+      "fetched_at": "2026-10-10",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -42,7 +62,8 @@
       "text": "Evaluate AI outputs and workplace applications with attention to verification, confidentiality, governance and ethical accountability.",
       "kind": "source_stated",
       "source_id": "notre-dame-ai-essentials-business-minor-curriculum",
-      "locator": "Overview"
+      "locator": "Introductory program preparation statement; not an explicit assessed-outcome list",
+      "statement_type": "program_aim"
     }
   ],
   "courses": [
@@ -53,7 +74,7 @@
       "description": "Evaluate AI systems and integrate them into accountable professional workflows.",
       "prerequisites": null,
       "credits": 3.0,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "ai_ml",
       "source_id": "notre-dame-ai-essentials-business-minor-curriculum",
       "url": "https://mendoza.nd.edu/undergraduate/ai-essentials-for-business-minor/",
@@ -67,7 +88,7 @@
       "description": "Study AI’s strategic, economic and regulatory effects on global business.",
       "prerequisites": null,
       "credits": 3.0,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "ai_ml",
       "source_id": "notre-dame-ai-essentials-business-minor-curriculum",
       "url": "https://mendoza.nd.edu/undergraduate/ai-essentials-for-business-minor/",
@@ -81,7 +102,7 @@
       "description": "Examine ethical questions in AI and data use.",
       "prerequisites": null,
       "credits": 1.5,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "human_context",
       "source_id": "notre-dame-ai-essentials-business-minor-curriculum",
       "url": "https://mendoza.nd.edu/undergraduate/ai-essentials-for-business-minor/",
@@ -95,7 +116,7 @@
       "description": "Explore AI applications and issues in accounting and finance.",
       "prerequisites": null,
       "credits": 1.5,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "ai_ml",
       "source_id": "notre-dame-ai-essentials-business-minor-curriculum",
       "url": "https://mendoza.nd.edu/undergraduate/ai-essentials-for-business-minor/",
@@ -109,7 +130,7 @@
       "description": "Apply Python to financial data and analytics.",
       "prerequisites": null,
       "credits": 3.0,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "ai_ml",
       "source_id": "notre-dame-ai-essentials-business-minor-curriculum",
       "url": "https://mendoza.nd.edu/undergraduate/ai-essentials-for-business-minor/",
@@ -123,7 +144,7 @@
       "description": "Use predictive methods to inform business decisions.",
       "prerequisites": null,
       "credits": 3.0,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "applications",
       "source_id": "notre-dame-ai-essentials-business-minor-curriculum",
       "url": "https://mendoza.nd.edu/undergraduate/ai-essentials-for-business-minor/",
@@ -137,7 +158,7 @@
       "description": "Plan projects and manage resources, implementation and schedules.",
       "prerequisites": null,
       "credits": 3.0,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "applications",
       "source_id": "notre-dame-ai-essentials-business-minor-curriculum",
       "url": "https://mendoza.nd.edu/undergraduate/ai-essentials-for-business-minor/",
@@ -151,7 +172,7 @@
       "description": "Analyze operations and supply chains within business strategy.",
       "prerequisites": null,
       "credits": 3.0,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "applications",
       "source_id": "notre-dame-ai-essentials-business-minor-curriculum",
       "url": "https://mendoza.nd.edu/undergraduate/ai-essentials-for-business-minor/",
@@ -165,7 +186,7 @@
       "description": "Use Python analytics, machine learning and AI agents for business problems.",
       "prerequisites": "ITAO 30220 is strongly recommended before enrollment; the page does not label it a mandatory prerequisite.",
       "credits": 1.5,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "foundations",
       "source_id": "notre-dame-ai-essentials-business-minor-curriculum",
       "url": "https://mendoza.nd.edu/undergraduate/ai-essentials-for-business-minor/",
@@ -179,7 +200,7 @@
       "description": "Assess AI risks through auditing concepts and case work.",
       "prerequisites": null,
       "credits": 3.0,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "human_context",
       "source_id": "notre-dame-ai-essentials-business-minor-curriculum",
       "url": "https://mendoza.nd.edu/undergraduate/ai-essentials-for-business-minor/",
@@ -193,7 +214,7 @@
       "description": "Analyze social networks and their effects on organizations.",
       "prerequisites": null,
       "credits": 1.5,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "applications",
       "source_id": "notre-dame-ai-essentials-business-minor-curriculum",
       "url": "https://mendoza.nd.edu/undergraduate/ai-essentials-for-business-minor/",
@@ -207,7 +228,7 @@
       "description": "Apply statistical and machine learning methods to urban data.",
       "prerequisites": null,
       "credits": 3.0,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "ai_ml",
       "source_id": "notre-dame-ai-essentials-business-minor-curriculum",
       "url": "https://mendoza.nd.edu/undergraduate/ai-essentials-for-business-minor/",
@@ -222,12 +243,12 @@
       "title": "Core courses",
       "kind": "all",
       "count": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "credits": 7.5,
+      "credit_unit": "semester_hours",
       "category": "other",
       "source_id": "notre-dame-ai-essentials-business-minor-curriculum",
       "source_text": null,
-      "summary": "Core courses",
+      "summary": "Complete all three core courses for 7.5 semester hours.",
       "course_ids": [
         "notre-dame-ai-essentials-business-minor-itao-30110",
         "notre-dame-ai-essentials-business-minor-itao-30320",
@@ -238,14 +259,14 @@
       "id": "notre-dame-ai-essentials-business-minor-electives",
       "parent_id": null,
       "title": "Approved electives",
-      "kind": "note",
+      "kind": "choose_credits",
       "count": null,
       "credits": 7.5,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "other",
       "source_id": "notre-dame-ai-essentials-business-minor-curriculum",
       "source_text": null,
-      "summary": "Choose at least 7.5 published credit hours from this pool; normalized credit unit is unverified.",
+      "summary": "Complete at least 7.5 semester hours from the published electives; the additional approved-electives section remains unresolved.",
       "course_ids": [
         "notre-dame-ai-essentials-business-minor-acct-40850",
         "notre-dame-ai-essentials-business-minor-fin-40260-40262",
@@ -265,7 +286,7 @@
       "kind": "note",
       "count": null,
       "credits": null,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "other",
       "source_id": "notre-dame-ai-essentials-business-minor-curriculum",
       "source_text": null,
@@ -279,7 +300,7 @@
       "kind": "note",
       "count": null,
       "credits": null,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "other",
       "source_id": "notre-dame-ai-essentials-business-minor-curriculum",
       "source_text": null,
@@ -293,37 +314,126 @@
       "kind": "note",
       "count": null,
       "credits": null,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "other",
       "source_id": "notre-dame-ai-essentials-business-minor-curriculum",
       "source_text": null,
-      "summary": "The official page contains an empty “Additional approved electives across Notre Dame” accordion. Its approved inventory has not been verified.",
+      "summary": "The additional approved electives across Notre Dame button shows no additional content after ordinary public-browser expansion on 2026-10-10; the full approved inventory remains unverified.",
+      "course_ids": []
+    },
+    {
+      "id": "notre-dame-ai-essentials-business-minor-total",
+      "parent_id": null,
+      "title": "Minor total",
+      "kind": "note",
+      "count": null,
+      "credits": 15,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "notre-dame-ai-essentials-business-minor-curriculum",
+      "source_text": null,
+      "summary": "Complete 15 semester hours in the core and eligible electives.",
+      "course_ids": []
+    },
+    {
+      "id": "notre-dame-ai-essentials-business-minor-pass-fail",
+      "parent_id": null,
+      "title": "University grading rule and college wording conflict",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "notre-dame-ai-essentials-business-minor-academic-code",
+      "source_text": null,
+      "summary": "University Code §3.3.11 excludes declared-program courses from the elective pass/fail option and bars pass/fail from satisfying program requirements. Mendoza’s BBA paragraph mentions an exception for the first course of a minor while also prohibiting business courses; applicability requires clarification.",
+      "course_ids": []
+    },
+    {
+      "id": "notre-dame-ai-essentials-business-minor-transfer",
+      "parent_id": null,
+      "title": "Outside-course approval",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "notre-dame-ai-essentials-business-minor-academic-code",
+      "source_text": null,
+      "summary": "Before enrollment elsewhere, obtain dean/designee approval. Transfer requires C or better (not C-minus), standard letter grading, applicable nonduplicative content, and institutional/delivery review. Online courses require an appropriate synchronous component; the dean determines application to the credential.",
+      "course_ids": []
+    },
+    {
+      "id": "notre-dame-ai-essentials-business-minor-cross-college-overlap",
+      "parent_id": null,
+      "title": "Cross-college double counting",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "notre-dame-ai-essentials-business-minor-academic-code",
+      "source_text": null,
+      "summary": "For credentials across colleges, overlap requires both deans’ approval. The program’s three-hour major-overlap cap still applies.",
+      "course_ids": []
+    },
+    {
+      "id": "notre-dame-ai-essentials-business-minor-repeat",
+      "parent_id": null,
+      "title": "Repeat limits",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "notre-dame-ai-essentials-business-minor-academic-code",
+      "source_text": null,
+      "summary": "Unless designated repeatable, only failed courses or approved D-grade courses may be repeated; credit counts once and both grades affect GPA. A D course may be repeated once, with two such repeats over the undergraduate career.",
+      "course_ids": []
+    },
+    {
+      "id": "notre-dame-ai-essentials-business-minor-completion-scope",
+      "parent_id": null,
+      "title": "College completion constraint",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "notre-dame-ai-essentials-business-minor-college-policy",
+      "source_text": null,
+      "summary": "Mendoza students must complete added minors within four years. The BBA’s degree-wide GPA/residency requirements are not relabeled as minor-specific limits.",
       "course_ids": []
     }
   ],
   "notes": [
     "Published total is 15 credit hours: 7.5 core plus at least 7.5 elective hours. FIN 40260 / 40262 is preserved as one grouped listing, not two separately required courses. The empty additional-electives section prevents complete inventory certification.",
-    "Course theme categories are editorial classifications; source-stated outcomes are labeled separately. Unknown prerequisite values do not mean there are no prerequisites."
+    "Course theme categories are editorial classifications; source-stated outcomes are labeled separately. Unknown prerequisite values do not mean there are no prerequisites.",
+    "Academic Code §5.4.2 explicitly identifies all course credits as semester hours; numeric amounts are unchanged. The public additional-electives button was expanded and remained empty, so no hidden approved list is guessed.",
+    "The university prohibits pass/fail coursework from satisfying program requirements; the college lists a first-minor-course exception in its BBA policy. Its applicability to this all-majors minor remains unresolved. No degree-wide residency percentage or GPA is imposed as a minor-specific rule."
   ],
   "curriculum_audit": {
     "scope": "minor",
     "reviewed_at": "2026-10-10",
     "source_ids": [
-      "notre-dame-ai-essentials-business-minor-curriculum"
+      "notre-dame-ai-essentials-business-minor-curriculum",
+      "notre-dame-ai-essentials-business-minor-academic-code",
+      "notre-dame-ai-essentials-business-minor-college-policy"
     ],
     "sections": [
       "Program eligibility and overview",
       "Core and elective inventory",
-      "Program-local overlap and completion notes"
+      "Program-local overlap and completion notes",
+      "2026 university academic code: credit definition, grading, transfer, repeats and cross-college overlap",
+      "Mendoza college credential-completion and pass/fail wording; host-degree scope distinguished"
     ],
     "unresolved_requirements": [
-      "Additional approved electives accordion is empty; full approved inventory is unresolved.",
-      "University and college minor grade, residency and transfer policies have not been fully reviewed."
+      "Additional approved electives section remained empty after public-browser expansion; the full finite approved list is unresolved.",
+      "College-specific minor completion/transfer and first-course pass/fail applicability for students from different home colleges require further review."
     ],
     "metadata_gaps": [
-      "Most course descriptions and prerequisites remain unverified.",
-      "Public course sites, syllabi and first-offered date remain unverified.",
-      "Published credit hours have not yet been normalized to semester hours using a credit-definition source."
+      "Most formal course prerequisites and some descriptions remain unverified.",
+      "Public course sites, syllabi and first-offered date remain unverified."
     ]
   }
 }
