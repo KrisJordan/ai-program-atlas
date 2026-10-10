@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 from atlas.adapters.business_society_minors import clean
 
 SPECS={
+ 'd015':('D01.5 University Writing Policy',['II. Writing Across the Curriculum Program Requirement for Undergraduate Programs']),
  'd011':('D01.1 Minors Policy',['I. Definition','II. Institutional parameters','III. Development / approval / administration processes']),
  'd020':('D02.0 Admission',['I. Undergraduate']),
  'd050':('D05.0 Grades',['II. Definitions','III. Pass / No Pass Option for Undergraduate Courses','VII. Repeating Courses to Raise Low Grades','VIII. Grade Point Average']),
@@ -32,7 +33,7 @@ def parse_policy(html, *, pid, code):
 
 
 def register(pid,sources,parsers, *, minor=False):
-    for code in (['d011','d020','d050','d120'] if minor else ['d020','d050','d120']):
+    for code in (['d011','d020','d050','d120'] if minor else ['d020','d050','d120','d015']):
         url='https://www.rit.edu/policies/'+code
         if url not in sources:sources.append(url)
         parsers[url]=lambda html,code=code:parse_policy(html,pid=pid,code=code)

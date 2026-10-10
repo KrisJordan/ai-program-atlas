@@ -39,11 +39,11 @@ def test_ursinus_credit_exclusions_aliases_and_partial_policy_audit():
     assert d['catalog_year'] == '2026-2027'
     courses = {c['code']: c for c in d['courses']}
     assert len(courses) == 22
-    assert sum(c['name'] is not None for c in courses.values()) == 21
+    assert sum(c['name'] is not None for c in courses.values()) == 22
     assert courses['STAT-142']['credits'] == 1
     assert courses['STAT-141']['credits'] == 4
-    assert courses['CS-372']['credits'] is None
-    assert courses['CS-372']['name'] is None
+    assert courses['CS-372']['credits'] == 4
+    assert courses['CS-372']['name'] == 'Digital Musical Audio Processing'
     assert courses['PHIL/CS-243']['name'] == 'Technology and Ethics'
     assert courses['STAT-244']['prerequisites'] == 'None (explicitly stated).'
     assert courses['PHIL-274']['prerequisites'] is None

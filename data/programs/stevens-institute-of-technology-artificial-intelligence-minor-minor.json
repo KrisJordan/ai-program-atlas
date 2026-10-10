@@ -14,7 +14,7 @@
   "status": "unknown",
   "first_offered": null,
   "overview": "AI minor with a six-course pathway for Computer Science, Cybersecurity and Quantitative Finance students and a seven-course pathway for other majors.",
-  "catalog_year": null,
+  "catalog_year": "2026-2027",
   "verification_status": "partial",
   "last_verified": "2026-10-10",
   "curriculum_status": "partial",
@@ -49,6 +49,36 @@
       "source_date": null,
       "catalog_year": null,
       "locator": "Rendered catalog: both major-dependent pathways; required courses, electives and overlap/grade rules",
+      "confidence": "high"
+    },
+    {
+      "id": "stevens-policy-course-options",
+      "url": "https://stevens.catalog.prod.coursedog.com/academic-policies-procedures/undergraduate-education/requirements-procedures#course-options",
+      "title": "Stevens undergraduate Course Options",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Selected, fully rendered public catalog tab; Course Options",
+      "confidence": "high"
+    },
+    {
+      "id": "stevens-policy-transfer-credits",
+      "url": "https://stevens.catalog.prod.coursedog.com/academic-policies-procedures/undergraduate-education/requirements-procedures#transfer-credits",
+      "title": "Stevens undergraduate Transfer Credits",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Selected, fully rendered public catalog tab; Transfer Credits",
+      "confidence": "high"
+    },
+    {
+      "id": "stevens-catalog-edition",
+      "url": "https://stevens.catalog.prod.coursedog.com/",
+      "title": "Stevens Academic Catalog 2026–2027",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Homepage Academic Catalog edition heading, explicitly 2026-2027",
       "confidence": "high"
     }
   ],
@@ -532,29 +562,62 @@
       "source_text": null,
       "summary": "Every minor course must be completed with grade C or better. Enrollment also requires meeting institute-wide minor requirements.",
       "course_ids": []
+    },
+    {
+      "id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-university-graduate-courses",
+      "parent_id": null,
+      "title": "Undergraduate access to graduate courses",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "stevens-policy-course-options",
+      "source_text": null,
+      "summary": "For 500-level courses, undergraduates need junior standing and the course prerequisites; enroll in an A-U section or request an eligibility override, subject to academic review and instructor/Graduate Academics approval. The separate rule for 600+ SES/SSB courses requires fifth-semester standing, GPA 3.25, permission and no more than two per semester. The latter explicitly names SES/SSB; its applicability to School of Computing is not assumed.",
+      "course_ids": []
+    },
+    {
+      "id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-university-transfer",
+      "parent_id": null,
+      "title": "External-course approval",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "stevens-policy-transfer-credits",
+      "source_text": null,
+      "summary": "While enrolled, request transfer approval before external registration and submit an official transcript; C or better is required. Outside grades do not affect Stevens GPA, even for previously attempted Stevens courses. Full-time Stevens students (12–18 credits) cannot simultaneously take external courses. At most two U.S. humanities courses may transfer while enrolled; upper-level humanities must come from four-year institutions.",
+      "course_ids": []
     }
   ],
   "notes": [
     "Both published major-dependent pathways were read in the ordinary rendered catalog on 2026-10-10. The server HTML supplies course IDs before rendering; IDs were not guessed or treated as course codes.",
     "CS 558 / CPE 558 is one published cross-listed choice, not two electives. CS 582 and the second-path CS 544 render as text rather than active course-detail buttons, but their visible codes and titles are preserved.",
     "The pathway mapping is complete locally. Institute-wide minor policies explicitly referenced by the catalog remain unresolved after reading general degree and graduation policy sections; therefore the record remains partial.",
-    "Credit amounts, normalized units and course prerequisites remain unverified. The footer copyright year was not treated as a catalog edition."
+    "Credit amounts, normalized units and course prerequisites remain unverified. The footer copyright year was not treated as a catalog edition.",
+    "Current catalog homepage explicitly identifies 2026–2027, resolving the previously unknown edition without relying on the footer. Public policy tabs were read in the ordinary browser. Their server HTML supplies the default tab; source parsers reject that incomplete content. Stevens Commons policy link redirected to Microsoft sign-in and was not accessed. Inventory remains partial."
   ],
   "curriculum_audit": {
     "scope": "minor",
     "reviewed_at": "2026-10-10",
     "source_ids": [
       "stevens-institute-of-technology-artificial-intelligence-minor-minor-official",
-      "stevens-ai-minor-curriculum"
+      "stevens-ai-minor-curriculum",
+      "stevens-policy-course-options",
+      "stevens-policy-transfer-credits",
+      "stevens-catalog-edition"
     ],
     "sections": [
       "Both major-dependent pathways and all 19 distinct published course choices",
       "One cross-listed computer vision choice; discrete mathematics alternative",
       "C minimum and distinct major overlap caps",
-      "General catalog degree and graduation sections inspected; referenced institute minor policy not resolved"
+      "General catalog degree and graduation sections inspected; referenced institute minor policy not resolved",
+      "Rendered current public undergraduate transfer and graduate-course enrollment policies"
     ],
     "unresolved_requirements": [
-      "The catalog explicitly incorporates institute-wide minor requirements; their full applicable policy has not been verified."
+      "The program incorporates institute-wide minor requirements; the current public catalog degree-program and procedure tabs did not resolve that complete rule. The university procedures landing page directs to authenticated Stevens Commons. No private policy was accessed."
     ],
     "metadata_gaps": [
       "Individual course credits, credit units, descriptions, prerequisites, course sites and syllabi are unverified."

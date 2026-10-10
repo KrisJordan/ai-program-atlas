@@ -234,3 +234,8 @@ def parse_rules(html):
 
 
 SOURCE_PARSERS = {SOURCES[0]: parse, PLAN: parse_plan, RULES: parse_rules}
+
+from atlas.adapters.stevens_public_policies import register
+SOURCES=list(SOURCES)
+SOURCE_PARSERS=globals().get("SOURCE_PARSERS", {})
+register(PROGRAM_ID,SOURCES,SOURCE_PARSERS,minor=False)

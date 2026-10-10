@@ -14,7 +14,7 @@
   "status": "active",
   "first_offered": null,
   "overview": "The 125-credit AI BS builds computing and mathematical foundations, AI methods and human-centered analysis, with technical electives and a two-semester senior design capstone.",
-  "catalog_year": null,
+  "catalog_year": "2026-2027",
   "verification_status": "confirmed",
   "last_verified": "2026-10-10",
   "curriculum_status": "partial",
@@ -79,6 +79,56 @@
       "source_date": null,
       "catalog_year": null,
       "locator": "Program description and objectives",
+      "confidence": "high"
+    },
+    {
+      "id": "stevens-policy-course-options",
+      "url": "https://stevens.catalog.prod.coursedog.com/academic-policies-procedures/undergraduate-education/requirements-procedures#course-options",
+      "title": "Stevens undergraduate Course Options",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Selected, fully rendered public catalog tab; Course Options",
+      "confidence": "high"
+    },
+    {
+      "id": "stevens-policy-transfer-credits",
+      "url": "https://stevens.catalog.prod.coursedog.com/academic-policies-procedures/undergraduate-education/requirements-procedures#transfer-credits",
+      "title": "Stevens undergraduate Transfer Credits",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Selected, fully rendered public catalog tab; Transfer Credits",
+      "confidence": "high"
+    },
+    {
+      "id": "stevens-policy-graduation-requirements",
+      "url": "https://stevens.catalog.prod.coursedog.com/academic-policies-procedures/undergraduate-education/requirements-procedures#graduation-requirements",
+      "title": "Stevens undergraduate Graduation Requirements",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Selected, fully rendered public catalog tab; Graduation Requirements",
+      "confidence": "high"
+    },
+    {
+      "id": "stevens-policy-humanities-requirements",
+      "url": "https://stevens.catalog.prod.coursedog.com/academic-policies-procedures/undergraduate-education/requirements-procedures#humanities-requirements",
+      "title": "Stevens undergraduate Humanities Requirements",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Selected, fully rendered public catalog tab; Humanities Requirements",
+      "confidence": "high"
+    },
+    {
+      "id": "stevens-catalog-edition",
+      "url": "https://stevens.catalog.prod.coursedog.com/",
+      "title": "Stevens Academic Catalog 2026–2027",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Homepage Academic Catalog edition heading, explicitly 2026-2027",
       "confidence": "high"
     }
   ],
@@ -1041,6 +1091,90 @@
       "source_text": null,
       "summary": "Complete three of PRV 201, PRV 202, PRV 203, PRV 204 or PRV 205. Individual titles and credits remain unverified.",
       "course_ids": []
+    },
+    {
+      "id": "stevens-institute-of-technology-artificial-intelligence-bs-degree-university-graduate-courses",
+      "parent_id": null,
+      "title": "Undergraduate access to graduate courses",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "stevens-policy-course-options",
+      "source_text": null,
+      "summary": "For 500-level courses, undergraduates need junior standing and the course prerequisites; enroll in an A-U section or request an eligibility override, subject to academic review and instructor/Graduate Academics approval. The separate rule for 600+ SES/SSB courses requires fifth-semester standing, GPA 3.25, permission and no more than two per semester. The latter explicitly names SES/SSB; its applicability to School of Computing is not assumed.",
+      "course_ids": []
+    },
+    {
+      "id": "stevens-institute-of-technology-artificial-intelligence-bs-degree-university-transfer",
+      "parent_id": null,
+      "title": "External-course approval",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "stevens-policy-transfer-credits",
+      "source_text": null,
+      "summary": "While enrolled, request transfer approval before external registration and submit an official transcript; C or better is required. Outside grades do not affect Stevens GPA, even for previously attempted Stevens courses. Full-time Stevens students (12–18 credits) cannot simultaneously take external courses. At most two U.S. humanities courses may transfer while enrolled; upper-level humanities must come from four-year institutions.",
+      "course_ids": []
+    },
+    {
+      "id": "stevens-institute-of-technology-artificial-intelligence-bs-degree-university-graduation",
+      "parent_id": null,
+      "title": "University graduation and residency",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "stevens-policy-graduation-requirements",
+      "source_text": null,
+      "summary": "Pass required major courses, earn cumulative GPA 2.00 and at least 1.75 across senior-year courses. At least 50 percent of required graduation credits must be completed at Stevens; the transfer policy separately caps transferred credit at 50 percent.",
+      "course_ids": []
+    },
+    {
+      "id": "stevens-institute-of-technology-artificial-intelligence-bs-degree-university-humanities",
+      "parent_id": null,
+      "title": "AI humanities distribution",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "stevens-policy-humanities-requirements",
+      "source_text": null,
+      "summary": "All undergraduates take HASS 103 and HASS 105. The School of Computing AI row then requires one humanities course, one social science or science-and-technology-studies course, one course from any of those groups, and one of HST 381/HSSC 371/HPL 455. This clarifies the existing plan slots rather than adding duplicate courses. HQSS 300 does not qualify; ECON 243/244 qualify only if not required in the major. The lower language/music/theater/art approval list is explicitly labeled SES/Business, so its applicability to Computing remains unresolved.",
+      "course_ids": []
+    },
+    {
+      "id": "stevens-institute-of-technology-artificial-intelligence-bs-degree-university-pass-fail",
+      "parent_id": null,
+      "title": "Elected pass/fail restrictions",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "stevens-policy-course-options",
+      "source_text": null,
+      "summary": "Pass/fail requires Dean’s List or cumulative GPA 3.50, advisor approval and an extra undergraduate course beyond degree requirements; at most one such course per semester. Graduate courses cannot use pass/fail. Audited courses earn no credit.",
+      "course_ids": []
+    },
+    {
+      "id": "stevens-institute-of-technology-artificial-intelligence-bs-degree-university-transfer-incoming",
+      "parent_id": null,
+      "title": "Incoming advanced/transfer credit",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "stevens-policy-transfer-credits",
+      "source_text": null,
+      "summary": "Incoming first-year students may receive up to 30 credits from approved AP/IB/A-Level exams or college courses in high school. Transfer students submit prior courses and syllabi for evaluation and construct an academic plan with their advisor; no more than 50 percent of graduation credits may transfer.",
+      "course_ids": []
     }
   ],
   "notes": [
@@ -1048,7 +1182,8 @@
     "Academic-plan course credits are explicit; credit-unit normalization remains unknown. Course placement is not treated as an offering or prerequisite guarantee.",
     "Technical/science/general/SUCCESS options and exclusions are preserved as rules with code lists, but their individual course metadata and open approved inventories remain incomplete. No course name was inferred from a code.",
     "The department overview identifies a two-semester capstone. Exact launch date and catalog edition remain unknown; no inference from copyright dates.",
-    "The curriculum adapter rejects unresolved catalog placeholders instead of overwriting reviewed facts. Refresh requires a rendered HTML capture for the plan/policy parsers; ordinary HTTP overview extraction remains available."
+    "The curriculum adapter rejects unresolved catalog placeholders instead of overwriting reviewed facts. Refresh requires a rendered HTML capture for the plan/policy parsers; ordinary HTTP overview extraction remains available.",
+    "Current catalog homepage explicitly identifies 2026–2027, resolving the previously unknown edition without relying on the footer. Public policy tabs were read in the ordinary browser. Their server HTML supplies the default tab; source parsers reject that incomplete content. Stevens Commons policy link redirected to Microsoft sign-in and was not accessed. Inventory remains partial."
   ],
   "curriculum_audit": {
     "scope": "degree",
@@ -1056,20 +1191,26 @@
     "source_ids": [
       "stevens-institute-of-technology-artificial-intelligence-bs-degree-plan",
       "stevens-institute-of-technology-artificial-intelligence-bs-degree-rules",
-      "stevens-institute-of-technology-artificial-intelligence-bs-degree-catalog"
+      "stevens-institute-of-technology-artificial-intelligence-bs-degree-catalog",
+      "stevens-policy-course-options",
+      "stevens-policy-transfer-credits",
+      "stevens-policy-graduation-requirements",
+      "stevens-policy-humanities-requirements",
+      "stevens-catalog-edition"
     ],
     "sections": [
       "Rendered 125-credit plan with eight semesters and human-context alternatives",
       "Six science sequence pathways",
       "Math/science, technical and general elective counts/approval rules",
       "General exclusions and nine prohibited overlap pairs",
-      "SUCCESS PRV101 and three-of-five choice"
+      "SUCCESS PRV101 and three-of-five choice",
+      "Rendered current public undergraduate transfer and graduate-course enrollment policies; AI-specific humanities distribution and graduation GPA/residency"
     ],
     "unresolved_requirements": [
-      "Linked university humanities distribution requirements",
       "Full open math/science/general elective inventory and detailed option eligibility",
-      "Individual technical/science/SUCCESS option metadata and graduate-course access",
-      "University graduation, GPA, residency, transfer and other overlap rules"
+      "Applicability of the language/music/theater/art humanities approval list to the School of Computing: its heading names SES and Business.",
+      "Individual technical/science/SUCCESS option metadata and access to School of Computing 600-level courses; current policy explicitly names SES/SSB.",
+      "Other program/college completion and overlap rules and normalized credit definition remain unverified."
     ],
     "metadata_gaps": [
       "Prerequisites and course descriptions; normalized credit units",

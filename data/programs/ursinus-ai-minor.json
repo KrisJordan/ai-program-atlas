@@ -105,6 +105,16 @@
       "source_date": null,
       "catalog_year": null,
       "confidence": "high"
+    },
+    {
+      "id": "ursinus-cs-mus-372",
+      "url": "https://www.ursinus.edu/academics/mathematics-computer-science-and-statistics/courses/",
+      "title": "Mathematics, Computer Science and Statistics Courses",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "CS/MUS-372 Digital Musical Audio Processing exact course block; also confirmed in 2026–2027 catalog CS/MUS-372 and reverse MUS/CS-372 entries",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -225,14 +235,14 @@
     {
       "id": "ursinus-cs-372",
       "code": "CS-372",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "name": "Digital Musical Audio Processing",
+      "description": "Uses computational techniques to synthesize, analyze, transform and retrieve musical audio, including Fourier methods and source separation.",
+      "prerequisites": "MATH-106 or 111 or higher and CS-174 (or CS-173 with permission of the instructor)",
+      "credits": 4,
+      "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "ursinus-ai-requirements",
-      "url": "https://www.ursinus.edu/academics/artificial-intelligence/courses-requirements/",
+      "source_id": "ursinus-cs-mus-372",
+      "url": "https://www.ursinus.edu/academics/mathematics-computer-science-and-statistics/courses/",
       "public_site": null,
       "syllabus": null
     },
@@ -619,9 +629,10 @@
   "notes": [
     "The 2026–2027 catalog and live program requirements agree on all five required codes and 17 named elective choices, plus coordinator-approved alternatives. The institutional semester-hour basis and each resolved course amount were checked in the catalog; no quarter/semester conversion is applied.",
     "Program-listed codes and stable IDs are retained. Catalog descriptions name STAT-141Q, STAT-242W and STAT-243W; DATA-150 is cross-listed DATA/STAT-150 and PHIL/CS-243 has the reverse CS/PHIL-243 entry. These aliases do not create extra courses.",
-    "Twenty-one course titles, descriptions and credit amounts are verified. CS-372 is listed as an AI elective but has no corresponding course description located in the current catalog; its metadata remains null. A missing prerequisite remains unverified, not evidence of no prerequisite.",
+    "All 22 course titles, descriptions and credit amounts are verified. The previously missed CS-372 appears as the cross-listed CS/MUS-372 in the department directory and current catalog; the program’s original code and stable ID are retained. A missing prerequisite remains unverified, not evidence of no prerequisite.",
     "Overlap rules remain unresolved, so the curriculum is partial despite the expanded catalog and policy review. No AI minor GPA or residency amount is inferred from another minor or the host degree.",
-    "The catalog program introduction describes aims, not an explicit assessed learning-outcome list. Source statement type and inferred topic taxonomy remain separate. First-offered date unknown."
+    "The catalog program introduction describes aims, not an explicit assessed learning-outcome list. Source statement type and inferred topic taxonomy remain separate. First-offered date unknown.",
+    "Follow-up review of the catalog Study in Depth/minor section, academic policies, registrar minor verification form and departmental overlap references still did not establish the general overlap limit applicable to AI. Two-course caps from business minors are not imported. Current CS/MUS-372 catalog inclusion resolves the missing-identity gap but does not promise a particular term offering."
   ],
   "curriculum_audit": {
     "scope": "minor",
@@ -633,21 +644,21 @@
       "ursinus-catalog-edition",
       "ursinus-academic-policies",
       "ursinus-transfer",
-      "ursinus-minor-verification"
+      "ursinus-minor-verification",
+      "ursinus-cs-mus-372"
     ],
     "sections": [
       "Five required courses and 17 elective choices; 24-hour total",
       "Coordinator-approved AI project/research options and dissemination",
       "Current catalog course descriptions, semester-hour amounts, alias codes and enrollment restrictions",
       "S/S-/U permission, repeat credit, transfer approval and minor verification",
-      "General Study in Depth and degree residency scope; conditional honors process"
+      "General Study in Depth and degree residency scope; conditional honors process",
+      "Cross-listed CS/MUS-372 identity, four semester hours, description and prerequisite"
     ],
     "unresolved_requirements": [
-      "Applicability and exact amount of the catalog’s referenced normal major/minor overlap limits to the AI minor remain unverified.",
-      "CS-372 remains an explicitly listed elective without a located current course description; current availability/equivalence is unresolved."
+      "Applicability and exact amount of the catalog’s referenced normal major/minor overlap limits to the AI minor remain unverified."
     ],
     "metadata_gaps": [
-      "CS-372 title, description, amount and prerequisites remain unknown.",
       "Some prerequisites are not explicitly stated; course sites and syllabi remain unverified.",
       "First-offered date remains unknown."
     ]

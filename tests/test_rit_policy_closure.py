@@ -23,7 +23,7 @@ def test_registered_sources_and_scoped_audits(pid):
     d=json.loads((ROOT/'data/programs'/f'{pid}.json').read_text())
     from atlas.db import validate_program
     validate_program(d)
-    for code in (SPECS if d['program_kind']=='minor' else ['d020','d050','d120']):
+    for code in (['d011','d020','d050','d120'] if d['program_kind']=='minor' else ['d020','d050','d120','d015']):
         url='https://www.rit.edu/policies/'+code
         assert url in adapter.SOURCES and url in adapter.SOURCE_PARSERS
     if d['program_kind']=='minor':

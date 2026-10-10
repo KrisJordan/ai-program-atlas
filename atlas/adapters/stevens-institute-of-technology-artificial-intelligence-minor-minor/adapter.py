@@ -17,3 +17,8 @@ def parse(html: str)->dict:
     if not re.search(r'grade of [“\"]C[”\"] or better',text):raise ValueError('Minor grade policy missing')
     req.append(requirement(PROGRAM_ID,'grade','Minor grade minimum',SOURCE_ID,[],kind='note',summary='Every minor course requires C or better. Institute-wide minor requirements also apply.'))
     return dict(id=PROGRAM_ID,title='Artificial Intelligence',award_level='minor',program_kind='minor',curriculum_status='partial',requirements=req)
+
+from atlas.adapters.stevens_public_policies import register
+SOURCES=list(SOURCES)
+SOURCE_PARSERS=globals().get("SOURCE_PARSERS", {})
+register(PROGRAM_ID,SOURCES,SOURCE_PARSERS,minor=True)
