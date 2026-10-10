@@ -340,6 +340,16 @@
       "catalog_year": "2026-2027",
       "locator": "Concentration Requirements tab: required courses, elective lists and local overlap/approval policies",
       "confidence": "high"
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-business-administration-bs-boston-bs-degree-participating-colleges-admissions",
+      "url": "https://admissions.northeastern.edu/academics/combined-majors/",
+      "title": "Combined Majors — Undergraduate Admissions",
+      "fetched_at": "2026-10-10T23:35:23+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Combined Majors introduction explaining associated colleges; Artificial Intelligence and Business Administration (Khoury/D'Amore-McKim) entry; college acronym key. The awarding college appears in individual Application Status Check.",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -9899,7 +9909,8 @@
     "Open subject/level ranges, explicit grade/overlap limits and advisor-approved substitutions are represented criteria, not missing invented finite course lists. Individual approvals and registration eligibility remain governed by those rules.",
     "NUpath is competency-based: approved attributes may be met through major or elective courses. This inventory does not fabricate all eligible class sections. BA-language, NYC-campus and nursing-specific general-education panels are not inherited by these Boston BS/BSEnvE degrees.",
     "Permitted home-college options and their additional progression/graduation rules have not been exhaustively verified for this combined degree. Catalog hosting context is not assumed to fix the student’s designated home college.",
-    "All 14 degree-linked business concentrations are represented conditionally. At least one of 13 primary options is required; International Business is second-only. No concentration course pool is a list of universally required courses. Additional-concentration overlap and conditional elective limits remain controlling. Home-college applicability remains unresolved; curriculum is partial."
+    "All 14 degree-linked business concentrations are represented conditionally. At least one of 13 primary options is required; International Business is second-only. No concentration course pool is a list of universally required courses. Additional-concentration overlap and conditional elective limits remain controlling. Home-college applicability remains unresolved; curriculum is partial.",
+    "Admissions explicitly lists Khoury College of Computer Sciences and D’Amore-McKim School of Business as participating colleges. Family hosting units record that participation, not permitted or mandatory home-college designations. The scalar hosting unit remains unassigned; individual degree-awarding college and all applicable college-policy conditions require separate confirmation."
   ],
   "curriculum_audit": {
     "scope": "degree",
@@ -9984,12 +9995,17 @@
       "northeastern-university-artificial-intelligence-and-business-administration-bs-boston-bs-degree-experiential-policy",
       "northeastern-university-artificial-intelligence-and-business-administration-bs-boston-bs-degree-graduation-policy",
       "northeastern-university-artificial-intelligence-and-business-administration-bs-boston-bs-degree-combined-policy",
-      "northeastern-university-artificial-intelligence-and-business-administration-bs-boston-bs-degree-progression-policy"
+      "northeastern-university-artificial-intelligence-and-business-administration-bs-boston-bs-degree-progression-policy",
+      "northeastern-university-artificial-intelligence-and-business-administration-bs-boston-bs-degree-participating-colleges-admissions"
     ],
     "hosting_units": [
       {
         "name": "Khoury College of Computer Sciences",
-        "source_id": "northeastern-university-artificial-intelligence-and-business-administration-bs-boston-bs-degree-catalog"
+        "source_id": "northeastern-university-artificial-intelligence-and-business-administration-bs-boston-bs-degree-participating-colleges-admissions"
+      },
+      {
+        "name": "D’Amore-McKim School of Business",
+        "source_id": "northeastern-university-artificial-intelligence-and-business-administration-bs-boston-bs-degree-participating-colleges-admissions"
       }
     ],
     "requirement_bindings": [

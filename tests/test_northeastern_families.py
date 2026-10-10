@@ -147,3 +147,39 @@ def test_shared_policy_scope_is_proven_and_distinct_from_original_ai_core():
         assert all(any(s['url']==url for s in p['sources']) for url in [
             'https://catalog.northeastern.edu/undergraduate/university-academics/university-wide-requirements/',
             'https://catalog.northeastern.edu/undergraduate/university-academics/general-education-requirements/'])
+
+
+@pytest.mark.parametrize(('partner','college','label'), [
+    ('business-administration','D’Amore-McKim School of Business','Business Administration'),
+    ('biology','College of Science','Biology'),
+    ('design','College of Arts, Media and Design','Design'),
+])
+def test_participating_colleges_have_explicit_evidence_without_home_college_assignment(partner,college,label,tmp_path):
+    p=program(f'northeastern-university-artificial-intelligence-and-{partner}-bs-boston-bs-degree')
+    sid=p['id']+'-participating-colleges-admissions'
+    source=next(s for s in p['sources'] if s['id']==sid)
+    assert source['url']=='https://admissions.northeastern.edu/academics/combined-majors/'
+    assert f'Artificial Intelligence and {label}' in source['locator']
+    assert 'associated colleges' in source['locator']
+    assert source['catalog_year'] is None  # Admissions is not a dated catalog edition.
+    assert sid in p['family']['source_ids']
+    assert p['family']['hosting_units']==[
+        {'name':'Khoury College of Computer Sciences','source_id':sid},
+        {'name':college,'source_id':sid},
+    ]
+    assert p['hosting_unit'] is None
+    assert p['curriculum_status']=='partial'
+    assert any('home-college' in gap for gap in p['curriculum_audit']['unresolved_requirements'])
+    assert any('not permitted or mandatory home-college' in note for note in p['notes'])
+    # A participating-college source supports context only, never a requirement
+    # or a new inherited college policy. Check the public persistence boundary too.
+    resolved=resolve_program(p,family())
+    assert not any(r['source_id']==sid for r in resolved['requirements'])
+    conn=db.connect(tmp_path/'atlas.sqlite');db.migrate(conn)
+    db.upsert_institution(conn,p['institution'])
+    assert ingest_family(conn,family(),program_updates={p['id']:p})
+    assert not db.ingest_program(conn,p)
+    exported=db.export_data(conn)['programs'][0]
+    assert exported['family']['hosting_units']==p['family']['hosting_units']
+    assert exported['hosting_unit'] is None and exported['curriculum_status']=='partial'
+    assert next(s for s in exported['sources'] if s['id']==sid)['locator']==source['locator']
