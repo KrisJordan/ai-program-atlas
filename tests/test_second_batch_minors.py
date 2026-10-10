@@ -98,7 +98,11 @@ def test_tulane_preserves_prerequisite_alternatives_and_unknown_elective_credit(
 def test_reviewed_batch_status_and_evidence():
     from atlas.db import validate_program
 
-    for slug, status in [(MSU, "complete"), (TULANE, "complete"), ("stanford-ai-track", "partial")]:
+    for slug, status in [
+        (MSU, "complete"),
+        (TULANE, "complete"),
+        ("stanford-ai-track", "complete"),
+    ]:
         data = json.loads((ROOT / "data/programs" / f"{slug}.json").read_text())
         validate_program(data)
         assert data["curriculum_status"] == status

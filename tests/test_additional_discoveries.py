@@ -99,8 +99,9 @@ def test_additional_survey_integrity():
     assert all(r["discoveries"] and r["checked_at"] and r["sources"] for r in confirmed.values())
     for pid in ["columbia-ai-minor", "stanford-ai-track"]:
         p = json.loads((ROOT / "data/programs" / (pid + ".json")).read_text())
-        assert p["curriculum_status"] == "partial"
-        assert p["curriculum_audit"]["unresolved_requirements"]
+        expected = "complete" if pid == "stanford-ai-track" else "partial"
+        assert p["curriculum_status"] == expected
+        assert bool(p["curriculum_audit"]["unresolved_requirements"]) == (expected == "partial")
         from atlas.db import validate_program
 
         validate_program(p)
