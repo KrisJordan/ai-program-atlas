@@ -180,3 +180,6 @@ def parse_university_ai(html):
 
 SOURCES += (AI_REQUIREMENT_URL,)
 SOURCE_PARSERS[AI_REQUIREMENT_URL] = parse_university_ai
+
+# Inspected term offerings do not identify the BA's required philosophy inventory.
+SOURCES += ("https://www.cla.purdue.edu/academic/philosophy/students/undergraduate/courses-new.html",)

@@ -563,3 +563,18 @@ SOURCES += (
     "https://www.purdue.edu/science/Current_Students/curriculum_and_degree_requirements/approved-sequences-in-laboratory-science.html",
     "https://www.purdue.edu/science/Current_Students/curriculum_and_degree_requirements/index.html",
 )
+
+from atlas.adapters import purdue_college_pools as college_pools
+
+SOURCES += (college_pools.CULTURE_URL, college_pools.EXPERIENCE_URL, college_pools.OVERLAP_URL)
+SOURCE_PARSERS.update(
+    {
+        college_pools.CULTURE_URL: college_pools.parse_culture,
+        college_pools.GENED_URL: college_pools.parse_gened,
+        college_pools.EXPERIENCE_URL: college_pools.parse_experience,
+        college_pools.OVERLAP_URL: college_pools.parse_overlap,
+    }
+)
+
+# Term offering directory supports reviewed metadata, not additional major requirements.
+SOURCES += ("https://www.cla.purdue.edu/academic/philosophy/students/undergraduate/courses-new.html",)
