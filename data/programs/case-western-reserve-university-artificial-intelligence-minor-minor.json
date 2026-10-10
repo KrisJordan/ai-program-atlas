@@ -65,6 +65,46 @@
       "catalog_year": "2026-2027",
       "locator": "Pass/No Pass section",
       "confidence": "high"
+    },
+    {
+      "id": "case-credit-definition",
+      "url": "https://bulletin.case.edu/about-university/university-registrar/",
+      "title": "University Registrar",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Definition of a Credit Hour: academic semester basis",
+      "confidence": "high"
+    },
+    {
+      "id": "case-courses-csds",
+      "url": "https://bulletin.case.edu/course-descriptions/csds/",
+      "title": "CSDS course descriptions — 2026–2027 General Bulletin",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Exact course blocks: CSDS 330, CSDS 340, CSDS 225, CSDS 102. Title, Units, description, prerequisites and enrollment restrictions.",
+      "confidence": "high"
+    },
+    {
+      "id": "case-courses-cogs",
+      "url": "https://bulletin.case.edu/course-descriptions/cogs/",
+      "title": "COGS course descriptions — 2026–2027 General Bulletin",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Exact course blocks: COGS/ENGL/HUMN/RLGN 250. Title, Units, description, prerequisites and enrollment restrictions.",
+      "confidence": "high"
+    },
+    {
+      "id": "case-courses-phil",
+      "url": "https://bulletin.case.edu/course-descriptions/phil/",
+      "title": "PHIL course descriptions — 2026–2027 General Bulletin",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Exact course blocks: PHIL 210, PHIL 393. Title, Units, description, prerequisites and enrollment restrictions.",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -116,13 +156,13 @@
       "id": "case-western-reserve-csds-330",
       "code": "CSDS 330",
       "name": "Introduction to Artificial Intelligence",
-      "description": null,
-      "prerequisites": null,
+      "description": "Introduces search, logic, uncertainty, machine learning, planning, reinforcement learning, and language processing for intelligent systems.",
+      "prerequisites": "Prereq: CSDS 233 . Prereq or Coreq: ( MATH 380 or OPRE 207 or STAT 301 or STAT 302 or STAT 312 or STAT 313 or STAT 332 or STAT 333 ).",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "ai_ml",
-      "source_id": "case-minor-catalog",
-      "url": "https://bulletin.case.edu/search/?P=CSDS%20330",
+      "source_id": "case-courses-csds",
+      "url": "https://bulletin.case.edu/course-descriptions/csds/",
       "public_site": null,
       "syllabus": null
     },
@@ -130,13 +170,13 @@
       "id": "case-western-reserve-csds-340",
       "code": "CSDS 340",
       "name": "Introduction to Machine Learning",
-      "description": null,
-      "prerequisites": null,
+      "description": "Develops and evaluates machine learning algorithms, including implementation, noisy data, scalability, and fairness.",
+      "prerequisites": "Prereq: ( CSDS 132 or CSDS 134 ) and ( MATH 122 or MATH 124 ) and ( MATH 201 or MATH 307 ) and ( MATH 380 or STAT 301 or STAT 312 or STAT 313 or STAT 332 ).",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "ai_ml",
-      "source_id": "case-minor-catalog",
-      "url": "https://bulletin.case.edu/search/?P=CSDS%20340",
+      "source_id": "case-courses-csds",
+      "url": "https://bulletin.case.edu/course-descriptions/csds/",
       "public_site": null,
       "syllabus": null
     },
@@ -144,13 +184,13 @@
       "id": "case-western-reserve-csds-225",
       "code": "CSDS 225",
       "name": "Current Issues in Artificial Intelligence, For Better or Worse",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Examines autonomous decisions, generative tools, technical failure modes, and policy responses through an interdisciplinary seminar.",
+      "prerequisites": "The class is open to all majors, but students should have a strong background in engineering, science, or computer technology.",
+      "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "case-minor-catalog",
-      "url": "https://bulletin.case.edu/search/?P=CSDS%20225",
+      "source_id": "case-courses-csds",
+      "url": "https://bulletin.case.edu/course-descriptions/csds/",
       "public_site": null,
       "syllabus": null
     },
@@ -158,13 +198,13 @@
       "id": "case-western-reserve-cogs-engl-humn-rlgn-250",
       "code": "COGS/ENGL/HUMN/RLGN 250",
       "name": "Responsible AI: Cultivating a Just and Sustainable Socio-technical Future through Data Citizenship",
-      "description": null,
+      "description": "Studies responsible AI through hands-on examination of data practices, collective responsibility, and a data citizenship project.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "case-minor-catalog",
-      "url": "https://bulletin.case.edu/search/?P=COGS%20250",
+      "source_id": "case-courses-cogs",
+      "url": "https://bulletin.case.edu/course-descriptions/cogs/",
       "public_site": null,
       "syllabus": null
     },
@@ -172,13 +212,13 @@
       "id": "case-western-reserve-phil-210",
       "code": "PHIL 210",
       "name": "The Politics of Artificial Intelligence",
-      "description": null,
+      "description": "Uses political philosophy and philosophy of technology to examine AI infrastructure, institutions, and political decisions.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "case-minor-catalog",
-      "url": "https://bulletin.case.edu/search/?P=PHIL%20210",
+      "source_id": "case-courses-phil",
+      "url": "https://bulletin.case.edu/course-descriptions/phil/",
       "public_site": null,
       "syllabus": null
     },
@@ -186,13 +226,13 @@
       "id": "case-western-reserve-phil-393",
       "code": "PHIL 393",
       "name": "Ethics of Artificial Intelligence and Emerging Technology",
-      "description": null,
+      "description": "Examines automation, bias, autonomy, accountability, and responsible AI design through ethical debate.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "case-minor-catalog",
-      "url": "https://bulletin.case.edu/search/?P=PHIL%20393",
+      "source_id": "case-courses-phil",
+      "url": "https://bulletin.case.edu/course-descriptions/phil/",
       "public_site": null,
       "syllabus": null
     },
@@ -200,13 +240,13 @@
       "id": "case-western-reserve-csds-102",
       "code": "CSDS 102",
       "name": "Artificial Intelligence for All Disciplines",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Introduces AI and machine learning through practical tools for disciplinary problems and discussion of social and ethical implications.",
+      "prerequisites": "Prereq: ( CSDS 101 or CSDS 132 or ECSE 132 or CSDS 134 or DESN 210 or ENGR 131 ) and no current or previous enrollment in a 300-level CSDS course.",
+      "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "ai_ml",
-      "source_id": "case-minor-catalog",
-      "url": "https://bulletin.case.edu/search/?P=CSDS%20102",
+      "source_id": "case-courses-csds",
+      "url": "https://bulletin.case.edu/course-descriptions/csds/",
       "public_site": null,
       "syllabus": null
     },
@@ -610,7 +650,9 @@
     "Complete local minor inventory, not a review of the whole parent degree. University-wide minor relationship and policy rules are included as separately sourced requirement notes.",
     "Course options and cross-listed alternatives are not all required. Repeated course membership is deduplicated by stable course ID; paired lectures/labs retain group credits without inventing individual amounts.",
     "Course descriptions and prerequisites remain null unless separately sourced; unknown values do not establish that no prerequisites exist.",
-    "Slash-listed variants such as CSDS 335/435 remain one source-listed course option. Elected pass/no-pass is barred for the minor, with the official pass/no-pass-only course exception preserved."
+    "Slash-listed variants such as CSDS 335/435 remain one source-listed course option. Elected pass/no-pass is barred for the minor, with the official pass/no-pass-only course exception preserved.",
+    "2026–2027 department catalogs separately verify metadata for CSDS 330/340, CSDS 102/225, the COGS/ENGL/HUMN/RLGN 250 option, and PHIL 210/393. Source-listed aliases remain one choice; no additional courses are added from cross-list descriptions.",
+    "Course-search endpoints were robots-disallowed on 2026-10-10. Independently linked public department directories were robots-permitted and fetched successfully. Catalog Units are normalized using the separately reviewed semester-based credit-hour definition. No term-specific syllabus or public class site was verified in this pass."
   ],
   "curriculum_audit": {
     "scope": "minor",
@@ -618,7 +660,11 @@
     "source_ids": [
       "case-minor-catalog",
       "case-policy-minor-policy",
-      "case-grades-minor-policy"
+      "case-grades-minor-policy",
+      "case-credit-definition",
+      "case-courses-csds",
+      "case-courses-cogs",
+      "case-courses-phil"
     ],
     "sections": [
       "Six-course/18-credit local structure; societal-impact and technical electives; maximum four-course major overlap",
@@ -627,8 +673,9 @@
     ],
     "unresolved_requirements": [],
     "metadata_gaps": [
-      "Individual course descriptions, prerequisites, public sites and syllabi not separately verified",
-      "Group credit totals are not assigned to individual choices or bundled lecture/lab components without an explicit course amount"
+      "Seven core/shared course records have reviewed descriptions and amounts; the other 19 course options still lack separately reviewed metadata.",
+      "Three reviewed societal-impact course blocks have no explicit prerequisite statement; null does not mean prerequisite-free.",
+      "Public course sites and term-specific syllabi remain unverified."
     ]
   }
 }

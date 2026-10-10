@@ -15,3 +15,7 @@ def parse_policy_1(html: str) -> dict:
     return policy_observation(html, PROGRAM_ID, 'case-grades-minor-policy', 'case-grades')
 
 SOURCE_PARSERS = {'https://bulletin.case.edu/undergraduate-academics/academic-policies-procedures/': parse_policy_0, 'https://bulletin.case.edu/undergraduate-academics/grades/': parse_policy_1}
+
+from atlas.adapters.case_minor_courses import register
+SOURCES = list(SOURCES)
+register(PROGRAM_ID, SOURCES, SOURCE_PARSERS)

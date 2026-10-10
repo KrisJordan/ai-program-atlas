@@ -35,3 +35,8 @@ def parse(html):
    cs.append(c);current['course_ids'].append(c['id'])
  if len(req)!=4 or not cs:raise ValueError('Applied minor group structure changed')
  return dict(id=PROGRAM_ID,title='Applied Artificial Intelligence',award_level='minor',program_kind='minor',curriculum_status='partial',courses=cs,requirements=req)
+
+from atlas.adapters.case_minor_courses import register
+SOURCES = list(SOURCES)
+SOURCE_PARSERS = {}
+register(PROGRAM_ID, SOURCES, SOURCE_PARSERS)
