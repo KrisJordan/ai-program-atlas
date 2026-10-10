@@ -1,5 +1,6 @@
 """Observe factual course metadata, without copying catalog descriptions or seed data."""
 
+import hashlib
 import re
 from bs4 import BeautifulSoup
 from atlas.adapters.cmu_bs.common import course, text
@@ -19,6 +20,7 @@ def parse_metadata(html, *, pid, codes):
     if not year:
         raise ValueError("CMU course directory edition missing")
     found = {}
+    description_digests = {}
     for block in soup.find_all("dl", class_="courseblock"):
         heading, body = block.find("dt"), block.find("dd")
         if not heading or not body:
@@ -52,6 +54,8 @@ def parse_metadata(html, *, pid, codes):
         if len(prerequisites) > 1:
             raise ValueError("Repeated prerequisite field: " + code)
         record["prerequisites"] = prerequisites[0] if prerequisites else None
+        description = " ".join(line for line in lines[1:] if not re.match(r"^(?:Prerequisites?|Corequisites?|Course Website):", line))
+        description_digests[code] = hashlib.sha256(description.encode()).hexdigest()
         found[code] = record
     if not found:
         raise ValueError("No requested CMU course metadata observed")
@@ -60,6 +64,7 @@ def parse_metadata(html, *, pid, codes):
         "catalog_year": year[0].split()[0],
         "curriculum_status": "partial",
         "courses": list(found.values()),
+        "observed_description_digests": description_digests,
         "requirements": [],
         "notes": [
             "Course metadata observation only. Missing prerequisites are unknown; catalog descriptions and unvisited course-site links are deliberately not copied. Program requirement inventory is a separate source."

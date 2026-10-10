@@ -339,3 +339,8 @@ for key in linked_policies.DATASETS:
     url = linked_policies.DATA_BASE + key
     SOURCES.append(url)
     SOURCE_PARSERS[url] = lambda raw, key=key: linked_policies.parse_options(raw, key)
+
+
+from atlas.adapters.cmu_bs.course_resources import register as register_course_resources
+
+register_course_resources(PROGRAM_ID, SOURCES, SOURCE_PARSERS)

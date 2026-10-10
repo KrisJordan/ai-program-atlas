@@ -38,3 +38,14 @@ Remaining course metadata gaps: Course descriptions and individual course prereq
 ## Course metadata — 2026-10-10
 
 Verified 37 matching course blocks in the official [SCS course directory](https://coursecatalog.web.cmu.edu/schools-colleges/schoolofcomputerscience/courses/). Separate `SOURCE_PARSERS` extraction observes title, explicit individual units and prerequisite Boolean expressions; it never imports seed values or marks curriculum complete. Range-valued credits and absent prerequisites remain null. Seven AI/CS core descriptions are selectively paraphrased across applicable programs; other descriptions remain unknown. Course source IDs now point to this directory, while requirement membership keeps program-catalog citations. Existing independently verified public sites/syllabi are preserved; links merely listed in the catalog were not promoted without a visit. Robots disallow the search popup route, so it was not fetched; the permitted canonical directory is used. Penn course catalog pages encountered a challenge and were not bypassed.
+
+
+## Core metadata and offering resources — 2026-10-10
+
+Rechecked 07-280, 07-380, 11-411 and 16-385 against the 2026–2027 SCS directory; explicit 12-unit values and catalog prerequisite Boolean expressions remain unchanged. Added paraphrases for NLP and vision, so all four selected AI core/choice courses now have descriptions, prerequisites and credit values. The directory observer now hashes description text to flag future changes without copying catalog paragraphs into candidate descriptions.
+
+Visited every promoted course resource: 07-280 and 07-380 identify Fall2026; official 11-411 gateway links a Spring2026 course site and public HTML syllabus; 16-385 catalog URL resolves to a Spring2020 site with a Syllabus and Schedule section. These older examples are explicitly dated, not presented as current enrollment rules. Reviewed the CMU HTTP-to-HTTPS upgrade against the same host’s available HTTPS robots policy. No private LMS or publisher materials were accessed.
+
+07-380’s Fall2026 site and catalog differ: the site omits catalog 21-122 and lists additional probability choices. Catalog prerequisites remain stored; source-specific notes document the discrepancy. The 11-411 gateway itself mixes a Fall2026 heading, S’26 site link and older syllabus/grading references, so the unambiguous linked Spring2026 offering is used as the example resource.
+
+For the BS and minor only, the existing source-stated outcomes were checked in actual source context: BS says skills expected upon graduation; minor has What You’ll Learn / Students who minor in AI will. They are explicitly tagged learning_outcome. Inferred themes remain unchanged; additional-major outcomes were not reclassified.

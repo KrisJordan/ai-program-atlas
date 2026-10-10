@@ -87,7 +87,7 @@
       "category": "ai_ml",
       "source_id": "cmu-additional-ai-course-directory",
       "url": "https://coursecatalog.web.cmu.edu/schools-colleges/schoolofcomputerscience/courses/",
-      "public_site": null,
+      "public_site": "https://www.cs.cmu.edu/~07280/",
       "syllabus": null
     },
     {
@@ -101,7 +101,7 @@
       "category": "ai_ml",
       "source_id": "cmu-additional-ai-course-directory",
       "url": "https://coursecatalog.web.cmu.edu/schools-colleges/schoolofcomputerscience/courses/",
-      "public_site": null,
+      "public_site": "https://www.cs.cmu.edu/~07380",
       "syllabus": null
     },
     {
@@ -360,15 +360,15 @@
       "id": "cmu-11-411",
       "code": "11-411",
       "name": "Natural Language Processing",
-      "description": null,
+      "description": "Covers computational representations of language, language models and machine-learning methods for NLP tasks such as translation, information extraction and question answering. Programming assignments and a project emphasize rapid prototyping.",
       "prerequisites": "15-122",
       "credits": 12.0,
       "credit_unit": "units",
       "category": "ai_ml",
       "source_id": "cmu-additional-ai-course-directory",
       "url": "https://coursecatalog.web.cmu.edu/schools-colleges/schoolofcomputerscience/courses/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://amirsoofi.github.io/11411-NLP-Spring2026/",
+      "syllabus": "https://amirsoofi.github.io/11411-NLP-Spring2026/syllabus"
     },
     {
       "id": "cmu-11-442",
@@ -430,15 +430,15 @@
       "id": "cmu-16-385",
       "code": "16-385",
       "name": "Computer Vision",
-      "description": null,
+      "description": "Introduces image processing, detection and recognition, geometric and physical models of vision, sensing and video analysis, with practical work on visual-computing problems. The catalog limits enrollment to undergraduates.",
       "prerequisites": "( 15-122 and 18-202 Min. grade C) or ( 15-122 and 21-259 Min. grade C and 21-241 ) or ( 15-122 and 21-241 and 21-256 Min. grade C) or ( 21-254 Min. grade C and 21-241 and 15-122 ) or ( 16-211 and 15-122 and 21-241 )",
       "credits": 12.0,
       "credit_unit": "units",
       "category": "ai_ml",
       "source_id": "cmu-additional-ai-course-directory",
       "url": "https://coursecatalog.web.cmu.edu/schools-colleges/schoolofcomputerscience/courses/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://www.cs.cmu.edu/~16385/",
+      "syllabus": "https://www.cs.cmu.edu/~16385/"
     },
     {
       "id": "cmu-05-317",
@@ -1373,7 +1373,10 @@
     "Public course resources checked 2026-10-10: 15-150 course site identifies Fall 2026 (cmu-15150-fall-2026-site); 15-213 course site and PDF syllabus identify Fall 2026 (cmu-15213-fall-2026-site and cmu-15213-fall-2026-syllabus). These offering-specific resources supplement catalog course evidence; course source_id remains the catalog. URLs may roll forward to later offerings. Other course sites/syllabi remain unverified.",
     "Inferred taxonomy labels summarize themes evidenced by the cited curriculum sections, including elective options where stated. They are analyst classifications, not institution-stated learning outcomes or guarantees that every student completes every theme. Source-stated outcomes are retained separately.",
     "The full local additional-major inventory is reviewed. This does not certify completion of a host degree. Course-description and prerequisite metadata are a separate incomplete layer. Mathematics contains six subject requirements; a probability sequence can require two actual courses.",
-    "Official SCS course directory verified titles, individual units where explicit, and prerequisite expressions for 40 course records. Seven selected core-course descriptions are concise reviewed summaries where those courses occur. Missing descriptions/prerequisites remain unknown. Curriculum membership is supported by program-catalog requirement citations."
+    "Official SCS course directory verified titles, individual units where explicit, and prerequisite expressions for 40 course records. Seven selected core-course descriptions are concise reviewed summaries where those courses occur. Missing descriptions/prerequisites remain unknown. Curriculum membership is supported by program-catalog requirement citations.",
+    "Core course resources verified 2026-10-10: 07-280 and 07-380 identify Fall 2026. The linked 11-411 site and HTML syllabus are Spring 2026 examples; the 16-385 site contains a Spring 2020 syllabus. These historical resources do not replace 2026–2027 catalog requirements.",
+    "07-380 prerequisite discrepancy: the Fall 2026 course site lists 07-280 and a broader probability choice list, without the catalog’s 21-122 condition. The stored prerequisite expression remains the catalog version; confirm current registration eligibility with the department.",
+    "NLP and vision descriptions are paraphrased from their 2026–2027 SCS course-directory blocks. Course credits/prerequisites retain that source; public site and example syllabus provenance has separate term-specific source records."
   ],
   "institution": {
     "id": "carnegie-mellon-university",
@@ -1456,6 +1459,66 @@
       "source_date": null,
       "catalog_year": "2026-2027",
       "locator": "Named course blocks for 15-112, 15-122, 15-150, 15-151, 15-210, 15-213, 15-251, 15-259, 15-386, 15-387, 15-463, 15-482, 15-494, 05-317, 05-318, 05-391, 11-411, 11-441, 11-442, 11-485, 11-492, 10-403, 10-405, 10-414, 10-417, 10-418, 10-422, 10-423, 10-424, 10-425, 16-161, 16-350, 16-362, 16-384, 16-385, 16-467, 16-735, 07-280, 07-380, 17-200",
+      "confidence": "high"
+    },
+    {
+      "id": "cmu-07280-fall-2026-site",
+      "url": "https://www.cs.cmu.edu/~07280/",
+      "title": "07-280 Artificial Intelligence and Machine Learning I — Fall 2026 course site",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Exact course identifier and offering term; overview, teaching staff, schedule and course policies.",
+      "confidence": "high"
+    },
+    {
+      "id": "cmu-07380-fall-2026-site",
+      "url": "https://www.cs.cmu.edu/~07380",
+      "title": "07-380 Artificial Intelligence and Machine Learning II — Fall 2026 course site",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Exact course identifier and offering term; overview, teaching staff, schedule and course policies.",
+      "confidence": "high"
+    },
+    {
+      "id": "cmu-11411-spring-2026-site",
+      "url": "https://amirsoofi.github.io/11411-NLP-Spring2026/",
+      "title": "11-411 Natural Language Processing — Spring 2026 course site",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Exact course identifier and offering term; public syllabus section. Historical offering resource, not current catalog requirements.",
+      "confidence": "high"
+    },
+    {
+      "id": "cmu-11411-spring-2026-syllabus",
+      "url": "https://amirsoofi.github.io/11411-NLP-Spring2026/syllabus",
+      "title": "11-411 Natural Language Processing — Spring 2026 example syllabus",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Exact course identifier and offering term; public syllabus section. Historical offering resource, not current catalog requirements.",
+      "confidence": "high"
+    },
+    {
+      "id": "cmu-16385-spring-2020-site",
+      "url": "https://www.cs.cmu.edu/~16385/",
+      "title": "16-385 Computer Vision — Spring 2020 example syllabus",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Exact course identifier and offering term; public syllabus section. Historical offering resource, not current catalog requirements.",
+      "confidence": "high"
+    },
+    {
+      "id": "cmu-11411-resource-directory",
+      "url": "https://www.cs.cmu.edu/~ehn/11-411/",
+      "title": "CMU 11-411 official resource gateway",
+      "fetched_at": "2026-10-10",
+      "source_date": "2026-03-19",
+      "catalog_year": null,
+      "locator": "Course Website for S’26 links the verified amirsoofi.github.io Spring 2026 offering; page heading says Fall 2026 while older sections have other terms.",
       "confidence": "high"
     }
   ],

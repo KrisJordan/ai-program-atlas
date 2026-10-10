@@ -267,3 +267,8 @@ SOURCES.append(COURSE_SOURCE)
 SOURCE_PARSERS = {
     COURSE_SOURCE: lambda html: parse_metadata(html, pid=PROGRAM_ID, codes=METADATA_CODES)
 }
+
+
+from atlas.adapters.cmu_bs.course_resources import register as register_course_resources
+
+register_course_resources(PROGRAM_ID, SOURCES, SOURCE_PARSERS)

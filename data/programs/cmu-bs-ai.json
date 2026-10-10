@@ -87,7 +87,7 @@
       "category": "ai_ml",
       "source_id": "cmu-bs-ai-course-directory",
       "url": "https://coursecatalog.web.cmu.edu/schools-colleges/schoolofcomputerscience/courses/",
-      "public_site": null,
+      "public_site": "https://www.cs.cmu.edu/~07280/",
       "syllabus": null
     },
     {
@@ -101,36 +101,36 @@
       "category": "ai_ml",
       "source_id": "cmu-bs-ai-course-directory",
       "url": "https://coursecatalog.web.cmu.edu/schools-colleges/schoolofcomputerscience/courses/",
-      "public_site": null,
+      "public_site": "https://www.cs.cmu.edu/~07380",
       "syllabus": null
     },
     {
       "id": "cmu-11-411",
       "code": "11-411",
       "name": "Natural Language Processing",
-      "description": null,
+      "description": "Covers computational representations of language, language models and machine-learning methods for NLP tasks such as translation, information extraction and question answering. Programming assignments and a project emphasize rapid prototyping.",
       "prerequisites": "15-122",
       "credits": 12.0,
       "credit_unit": "units",
       "category": "ai_ml",
       "source_id": "cmu-bs-ai-course-directory",
       "url": "https://coursecatalog.web.cmu.edu/schools-colleges/schoolofcomputerscience/courses/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://amirsoofi.github.io/11411-NLP-Spring2026/",
+      "syllabus": "https://amirsoofi.github.io/11411-NLP-Spring2026/syllabus"
     },
     {
       "id": "cmu-16-385",
       "code": "16-385",
       "name": "Computer Vision",
-      "description": null,
+      "description": "Introduces image processing, detection and recognition, geometric and physical models of vision, sensing and video analysis, with practical work on visual-computing problems. The catalog limits enrollment to undergraduates.",
       "prerequisites": "( 15-122 and 18-202 Min. grade C) or ( 15-122 and 21-259 Min. grade C and 21-241 ) or ( 15-122 and 21-241 and 21-256 Min. grade C) or ( 21-254 Min. grade C and 21-241 and 15-122 ) or ( 16-211 and 15-122 and 21-241 )",
       "credits": 12.0,
       "credit_unit": "units",
       "category": "ai_ml",
       "source_id": "cmu-bs-ai-course-directory",
       "url": "https://coursecatalog.web.cmu.edu/schools-colleges/schoolofcomputerscience/courses/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://www.cs.cmu.edu/~16385/",
+      "syllabus": "https://www.cs.cmu.edu/~16385/"
     },
     {
       "id": "cmu-15-386",
@@ -5069,7 +5069,10 @@
     "Complete reviewed requirement inventory for the 2026–2027 BS, with current approved general-education pools as of 2026-10-10. It is not a personalized graduation audit. Course-description coverage remains separate and incomplete.",
     "Source hierarchy is explicit: the general-education catalog describes its finite tables as approved in July 2026 and links separate up-to-date lists. Those current official lists govern the reconciled pools here. Exact current JSON feed URLs and inspection dates are registered. Catalog/current differences are documented in adapter NOTES; old removed options are not silently retained.",
     "Science/humanities general-education nodes expand the primary degree totals and do not add a second set of units. Category 1A replaces Category 1 for AI. Optional thesis and transfer conditions are note branches; excluded courses are named in policy notes, not shown as approved options.",
-    "School and university QPA policies are both represented, including the university first-year exception and any additional program rules. Advisers determine individual applicability; completeness here concerns the published inventory rather than certification of a particular student."
+    "School and university QPA policies are both represented, including the university first-year exception and any additional program rules. Advisers determine individual applicability; completeness here concerns the published inventory rather than certification of a particular student.",
+    "Core course resources verified 2026-10-10: 07-280 and 07-380 identify Fall 2026. The linked 11-411 site and HTML syllabus are Spring 2026 examples; the 16-385 site contains a Spring 2020 syllabus. These historical resources do not replace 2026–2027 catalog requirements.",
+    "07-380 prerequisite discrepancy: the Fall 2026 course site lists 07-280 and a broader probability choice list, without the catalog’s 21-122 condition. The stored prerequisite expression remains the catalog version; confirm current registration eligibility with the department.",
+    "NLP and vision descriptions are paraphrased from their 2026–2027 SCS course-directory blocks. Course credits/prerequisites retain that source; public site and example syllabus provenance has separate term-specific source records."
   ],
   "institution": {
     "id": "carnegie-mellon-university",
@@ -5303,6 +5306,66 @@
       "source_date": null,
       "catalog_year": "2026-2027",
       "confidence": "high"
+    },
+    {
+      "id": "cmu-07280-fall-2026-site",
+      "url": "https://www.cs.cmu.edu/~07280/",
+      "title": "07-280 Artificial Intelligence and Machine Learning I — Fall 2026 course site",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Exact course identifier and offering term; overview, teaching staff, schedule and course policies.",
+      "confidence": "high"
+    },
+    {
+      "id": "cmu-07380-fall-2026-site",
+      "url": "https://www.cs.cmu.edu/~07380",
+      "title": "07-380 Artificial Intelligence and Machine Learning II — Fall 2026 course site",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Exact course identifier and offering term; overview, teaching staff, schedule and course policies.",
+      "confidence": "high"
+    },
+    {
+      "id": "cmu-11411-spring-2026-site",
+      "url": "https://amirsoofi.github.io/11411-NLP-Spring2026/",
+      "title": "11-411 Natural Language Processing — Spring 2026 course site",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Exact course identifier and offering term; public syllabus section. Historical offering resource, not current catalog requirements.",
+      "confidence": "high"
+    },
+    {
+      "id": "cmu-11411-spring-2026-syllabus",
+      "url": "https://amirsoofi.github.io/11411-NLP-Spring2026/syllabus",
+      "title": "11-411 Natural Language Processing — Spring 2026 example syllabus",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Exact course identifier and offering term; public syllabus section. Historical offering resource, not current catalog requirements.",
+      "confidence": "high"
+    },
+    {
+      "id": "cmu-16385-spring-2020-site",
+      "url": "https://www.cs.cmu.edu/~16385/",
+      "title": "16-385 Computer Vision — Spring 2020 example syllabus",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Exact course identifier and offering term; public syllabus section. Historical offering resource, not current catalog requirements.",
+      "confidence": "high"
+    },
+    {
+      "id": "cmu-11411-resource-directory",
+      "url": "https://www.cs.cmu.edu/~ehn/11-411/",
+      "title": "CMU 11-411 official resource gateway",
+      "fetched_at": "2026-10-10",
+      "source_date": "2026-03-19",
+      "catalog_year": null,
+      "locator": "Course Website for S’26 links the verified amirsoofi.github.io Spring 2026 offering; page heading says Fall 2026 while older sections have other terms.",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -5310,31 +5373,36 @@
       "text": "Frame real-world challenges as AI problems involving models, reasoning, decisions and human interaction.",
       "kind": "source_stated",
       "source_id": "cmu-bs-ai-catalog",
-      "locator": "Overview: expected skills upon graduation"
+      "locator": "Overview: expected skills upon graduation",
+      "statement_type": "learning_outcome"
     },
     {
       "text": "Build and analyze AI and machine-learning methods for visual, language and uncertain data.",
       "kind": "source_stated",
       "source_id": "cmu-bs-ai-catalog",
-      "locator": "Overview: expected skills upon graduation"
+      "locator": "Overview: expected skills upon graduation",
+      "statement_type": "learning_outcome"
     },
     {
       "text": "Apply computer-science and mathematical foundations, including algorithms, probability and optimization.",
       "kind": "source_stated",
       "source_id": "cmu-bs-ai-catalog",
-      "locator": "Overview: expected skills upon graduation"
+      "locator": "Overview: expected skills upon graduation",
+      "statement_type": "learning_outcome"
     },
     {
       "text": "Develop substantial AI systems, communicate technical ideas and collaborate effectively.",
       "kind": "source_stated",
       "source_id": "cmu-bs-ai-catalog",
-      "locator": "Overview: expected skills upon graduation"
+      "locator": "Overview: expected skills upon graduation",
+      "statement_type": "learning_outcome"
     },
     {
       "text": "Assess ethical, legal, privacy and broader societal consequences of AI.",
       "kind": "source_stated",
       "source_id": "cmu-bs-ai-catalog",
-      "locator": "Overview: expected skills upon graduation"
+      "locator": "Overview: expected skills upon graduation",
+      "statement_type": "learning_outcome"
     },
     {
       "text": "AI methods",
