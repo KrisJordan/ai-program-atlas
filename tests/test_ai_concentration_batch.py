@@ -121,6 +121,7 @@ def test_concentration_complete_audits_and_unresolved_discoveries():
     from atlas.db import validate_program
 
     for slug in [
+        "indiana-cs-ai-specialization",
         "ohio-state-ai-specialization",
         "rochester-ai-concentration",
         "georgia-ai-emphasis",
@@ -131,7 +132,7 @@ def test_concentration_complete_audits_and_unresolved_discoveries():
         assert d["curriculum_audit"]["scope"] == "concentration"
         assert not d["curriculum_audit"]["unresolved_requirements"]
         assert d["curriculum_audit"]["metadata_gaps"]
-    for slug in ["indiana-cs-ai-specialization", "stony-brook-ai-data-science-specialization"]:
+    for slug in ["stony-brook-ai-data-science-specialization"]:
         d = json.loads((ROOT / "data/programs" / f"{slug}.json").read_text())
         validate_program(d)
         assert d["curriculum_status"] == "pending" and not d["courses"]

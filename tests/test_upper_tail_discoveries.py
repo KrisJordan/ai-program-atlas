@@ -4,6 +4,7 @@ from pathlib import Path
 
 import pytest
 from test_five_degree_curricula import delaware_fixture, drexel_fixture
+from test_indiana_ai_curriculum import fixture as indiana_fixture
 
 from atlas.db import validate_program
 
@@ -21,6 +22,7 @@ FIXTURES = {
 }
 
 
+FIXTURES["indiana-cs-ai-specialization"] = indiana_fixture()
 FIXTURES["drexel-ai-ml-bs"] = drexel_fixture()
 FIXTURES["delaware-ai-engineering-major"] = delaware_fixture()
 
@@ -45,6 +47,10 @@ def test_discovery_observes_identity_without_claiming_curriculum_or_freshness(pi
         assert observed["courses"] and observed["requirements"]
         assert "last_verified" not in observed and "curriculum_audit" not in observed
         assert seed["curriculum_status"] == "partial"
+    elif pid == "indiana-cs-ai-specialization":
+        assert observed["courses"] and observed["requirements"]
+        assert not {"curriculum_status", "curriculum_audit", "last_verified"} & observed.keys()
+        assert seed["curriculum_status"] == "complete"
     else:
         assert observed == {k: seed[k] for k in ("id", "title", "award_level", "program_kind")}
         assert seed["curriculum_status"] == "pending"
@@ -61,7 +67,7 @@ def test_discovery_observes_identity_without_claiming_curriculum_or_freshness(pi
             "Artificial Intelligence Emphasis",
             "Software Engineering Emphasis",
         ),
-        ("indiana-cs-ai-specialization", "Choose a CS specialization", "Student clubs"),
+        ("indiana-cs-ai-specialization", "Artificial Intelligence Specialization", "Student clubs"),
         (
             "wpi-ai-advanced-methods-concentration",
             "Choose one of the following concentrations",

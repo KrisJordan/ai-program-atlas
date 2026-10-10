@@ -11,6 +11,7 @@ PATTERN=r'(CSCI-[A-Z] \d{3}|MATH-M \d{3}|STAT-S \d{3})\s+(.+)'
 
 def parse(html):
     root=content(html,'Artificial Intelligence Specialization')
+    if root.find_parent(['nav','aside','footer']):raise ValueError('Navigation is not specialization evidence')
     section=root.find(id='image_hd_content')
     if not section or not section.find('h5',string='Artificial Intelligence Specialization'):raise ValueError('IU AI specialization heading missing')
     outer=section.find('ol');items=outer.find_all('li',recursive=False) if outer else []
