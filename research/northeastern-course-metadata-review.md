@@ -47,3 +47,13 @@ CHEM 1163 explicitly carries zero hours; this known value is preserved, while ab
 The four catalogs still have unreviewed disciplinary courses; this selected batch does not claim exhaustive subject coverage. The next accessible queue includes biology/neuroscience electives, upper-level chemistry, economics methods/policy electives, and psychology laboratories/seminars. Home-college applicability remains the distinct institutional-confirmation boundary documented in the companion review.
 
 Validation at the disciplinary checkpoint: **210 focused tests passed**. All 23 reviewed variants ingested and repeated idempotently in a temporary database; the 26 new source registrations succeeded twice, with zero second-run candidates or source changes. Export/build and integrity checks passed.
+
+## Data Science consistency follow-up — 2026-10-10
+
+The [official DS catalog](https://catalog.northeastern.edu/course-descriptions/ds/), safely fetched at 22:22:37 UTC for the 2026–2027 edition, already supported most later variants but not all initial variants or DS 1300 descriptions. Eight variants were reconciled against the same accessible current source. Three gain a program-local DS source; five extend an existing source locator/observation. Explicit selectors replace narrower DS observations with one fetch per URL, without adding any course to a degree.
+
+This adds **23 descriptions, 18 prerequisite statements and one fixed-credit value**. All **133 existing DS observations across 23 variants** now have independently stated four-semester-hour values and guarded concise descriptions. The 128 observations outside DS 1300 preserve explicit prerequisites; the five DS 1300 observations remain null for prerequisites because its block does not publish one. Its description concerns the ethical and epistemological effects of digital technology, not a claimed learning-outcome assessment. No program learning outcome or launch date is inferred.
+
+Combined additions through this follow-up: **365 descriptions, 128 prerequisite statements and 188 fixed-credit values**. These are added program-course fields, not distinct course counts or curriculum-completeness claims. All 23 programs remain partial at the established home-college applicability boundary.
+
+DS follow-up validation: **212 focused tests passed**; all-variant temporary ingest/repeat/export/build/integrity passed. All eight revised DS source registrations succeeded twice via the safe Fetcher/cache, with zero repeat candidates or source changes.

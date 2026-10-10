@@ -121,3 +121,34 @@ def test_concurrent_prerequisite_and_timing_advice_keep_their_source_meaning():
     assert any('timing advice' in n and 'sophomore' in n for n in result['notes'])
     changed=parser(html.replace('Should be taken before the end of the sophomore year.',''))
     assert not any('timing advice' in n for n in changed['notes'])
+
+
+def test_ds_ethics_description_is_guarded_without_inventing_prerequisites():
+    html=page('<div class="courseblock"><p class="courseblocktitle">DS 1300. Knowledge in a Digital World. (4 Hours)</p><p class="cb_desc">Studies normative frameworks from epistemology and ethics to evaluate technologies.</p></div>')
+    parser=register_subject_sources('test-program',{'DS':['DS 1300']})['https://catalog.northeastern.edu/course-descriptions/ds/']
+    result=parser(html)
+    assert result['courses'][0]['description'] and result['courses'][0]['prerequisites'] is None
+    assert parser(html.replace('normative frameworks from epistemology and ethics','different methods'))['courses'][0]['description'] is None
+
+
+def test_every_existing_ne_family_ds_course_has_its_own_catalog_metadata():
+    import json
+    from pathlib import Path
+    from atlas.scrape import adapters
+    root=Path(__file__).resolve().parents[1];available=adapters();variants=0;observations=0
+    for path in (root/'data/programs').glob('northeastern-*.json'):
+        p=json.loads(path.read_text())
+        if p.get('family',{}).get('id')!='northeastern-ai-combined-degrees':continue
+        variants+=1;url='https://catalog.northeastern.edu/course-descriptions/ds/'
+        assert list(available[p['id']].SOURCES).count(url)==1
+        assert url in available[p['id']].SOURCE_PARSERS
+        for c in p['courses']:
+            if not c['code'].startswith('DS '):continue
+            observations+=1
+            assert c['description'] and c['credits']==4 and c['credit_unit']=='semester_hours'
+            assert c['source_id']==p['id']+'-ds-courses'
+            assert any(s['id']==c['source_id'] and s['url']==url for s in p['sources'])
+            if c['code']=='DS 1300':assert c['prerequisites'] is None
+            else:assert c['prerequisites']
+        assert p['curriculum_status']=='partial' and p['curriculum_audit']['unresolved_requirements']
+    assert variants==23 and observations==133

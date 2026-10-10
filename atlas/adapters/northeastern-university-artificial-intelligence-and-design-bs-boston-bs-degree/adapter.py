@@ -33,3 +33,8 @@ SOURCE_PARSERS = {**globals().get('SOURCE_PARSERS', {}), **_FOUNDATION_METADATA}
 _DISCIPLINE_METADATA = register_subject_sources(PROGRAM_ID, {'ECON': ['ECON 2350']})
 SOURCES = tuple(SOURCES) + tuple(_DISCIPLINE_METADATA)
 SOURCE_PARSERS = {**SOURCE_PARSERS, **_DISCIPLINE_METADATA}
+
+# Complete the reviewed DS selections, preserving one fetch per source URL.
+_DS_COMPLETION_METADATA = register_subject_sources(PROGRAM_ID, {'DS': ['DS 3500', 'DS 3000', 'DS 4300', 'DS 4400', 'DS 4200', 'DS 1300']})
+SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + tuple(_DS_COMPLETION_METADATA)))
+SOURCE_PARSERS = {**SOURCE_PARSERS, **_DS_COMPLETION_METADATA}

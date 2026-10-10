@@ -77,6 +77,7 @@ SUMMARIES = {
     'GE 1501': ('engineering design process and algorithmic thinking', 'Introduces engineering design and programming through projects, laboratories and an original design solution.'),
     'GE 1502': ('quantitative tools and ethical topics', 'Continues project-based engineering design with analysis, programming, ethical reasoning and working prototypes.'),
 
+    'DS 1300': ('normative frameworks from epistemology and ethics', 'Examines how digital technologies shape knowledge and evaluates their effects through ethics and epistemology.'),
     'DS 3000': ('linear algebra and probability', 'Studies the mathematical basis of AI through linear algebra, probability and computational exercises.'),
     'DS 3500': ('data-centric pipelines', 'Develops robust software architectures and data pipelines using substantial datasets.'),
     'DS 4200': ('design and evaluation process of visualization', 'Studies how to design, implement and evaluate visual representations of data.'),
@@ -153,6 +154,7 @@ def parse_subject(html, *, program_id, subject, heading, codes, url):
 
 
 SUBJECT_HEADINGS = {
+    'DS': 'Data Science (DS)',
     'BIOL': 'Biology (BIOL)',
     'CHEM': 'Chemistry and Chemical Biology (CHEM)',
     'ECON': 'Economics (ECON)',
