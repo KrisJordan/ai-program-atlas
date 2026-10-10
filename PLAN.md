@@ -58,7 +58,7 @@ The next committed release candidate expands Northeastern to 23 variants (22 BS 
 
 ## Next release candidate — verification in progress
 
-Committed research through `a3948a3` has been ingested into the maintained database, with repeat ingest changing zero records and integrity checks passing. These counts are **local**, pending clean tests and remote publication verification:
+Committed research through `12d636e` has been ingested into the maintained database, with repeat ingest changing zero records and integrity checks passing. The first clean run passed all 17 browser checks but found one stale survey assertion (634 passed / 1 failed / 9 optional cache tests skipped); the assertion now verifies known evidence-backed institutions without capping future discoveries. This updated candidate incorporates that fix, Notre Dame and Northeastern Business. These counts are **local**, pending clean tests and remote publication verification:
 
 | Measure | Candidate count |
 | --- | ---: |
@@ -66,9 +66,9 @@ Committed research through `a3948a3` has been ingested into the maintained datab
 | Confirmed / inspected / inaccessible / pending / absence conclusions | 58 / 128 / 8 / 0 / 0 |
 | Programs / degrees / minors / concentrations / additional majors | 124 / 60 / 42 / 19 / 3 |
 | Complete / partial / pending curricula | 25 / 84 / 15 |
-| Program-course records / resolved requirement nodes | 4,811 / 5,519 |
+| Program-course records / resolved requirement nodes | 4,954 / 5,899 |
 | Families / concrete variants | 2 / 31 |
-| Descriptions / prerequisite statements / known credit amounts with units | 256 / 329 / 1,423 |
+| Descriptions / prerequisite statements / known credit amounts with units | 258 / 335 / 1,483 |
 | Public course sites / example syllabi | 22 / 18 |
 
 This candidate adds the full 23-variant Northeastern mapping and common university policies; canonical Penn handbook evidence; Purdue college rules; CMU/Penn core-course metadata and term-labelled course sites; complete scoped Lake Forest, Emory, Indiana and Case minor/concentration reviews; expanded Ursinus, Miami, RIT, Maryland/California/USF, Delaware/Drexel/Stevens and other curricula. Status/source discrepancies remain explicit. Separate source-statement types distinguish learning outcomes, program aims and career pathways from inferred taxonomy.
@@ -77,7 +77,7 @@ Nine newly verified identities at MIT, NC State, Villanova, UVA and Tufts still 
 
 ## Active continuation
 
-Northeastern Business concentration curricula and Notre Dame's two minor inventories are being reviewed. The newly accessible MIT/NC State/Villanova/UVA/Tufts records are next in the extraction queue. Research continues during fixed-snapshot tests. Working-tree edits are excluded from the release until committed, ingested and verified. Raw pages remain ignored.
+Northeastern Business now includes all 14 published concentration inventories with primary/secondary eligibility preserved; its home-college applicability remains unresolved. Notre Dame's two minors now preserve current-page/catalog differences and explicitly sourced semester-hour units. The newly accessible MIT/NC State/Villanova/UVA/Tufts records are being extracted; Stanford and Tulane policy/source gaps are also under review. A lightweight directory payload improvement is being tested separately. Research continues during fixed-snapshot tests. Working-tree edits are excluded from the release until committed, ingested and verified. Raw pages remain ignored.
 
 ## Remaining work and access blockers
 
