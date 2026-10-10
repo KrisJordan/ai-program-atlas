@@ -7,6 +7,8 @@ import json
 import re
 import sqlite3
 from datetime import datetime, timezone
+from contextlib import contextmanager
+from itertools import count
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -22,6 +24,23 @@ OVERRIDE_FIELDS = {
     "catalog_year",
     "notes",
 }
+
+
+_savepoint_ids = count()
+
+
+@contextmanager
+def atomic(conn):
+    """Nest safe writes so a family and all changed variants commit together."""
+    name = f"atlas_{next(_savepoint_ids)}"
+    conn.execute(f"SAVEPOINT {name}")
+    try:
+        yield
+        conn.execute(f"RELEASE SAVEPOINT {name}")
+    except Exception:
+        conn.execute(f"ROLLBACK TO SAVEPOINT {name}")
+        conn.execute(f"RELEASE SAVEPOINT {name}")
+        raise
 
 
 def now() -> str:
@@ -78,7 +97,7 @@ def upsert_institution(conn, inst):
 
 def ingest_cohort(conn, cohort):
     cohort_sources = {source["url"]: source for source in cohort.get("sources", [])}
-    with conn:
+    with atomic(conn):
         conn.execute(
             "INSERT OR REPLACE INTO metadata VALUES (?,?)",
             ("cohort", canonical({k: v for k, v in cohort.items() if k != "institutions"})),
@@ -114,7 +133,15 @@ def ingest_cohort(conn, cohort):
             )
 
 
-def validate_program(program):
+def validate_program(program, family=None):
+    if program.get("family"):
+        from .families import resolve_program
+
+        program = resolve_program(program, family)
+        if program.get("curriculum_status") == "complete" and program.get(
+            "curriculum_audit", {}
+        ).get("family_content_hash") != digest(family):
+            raise ValueError("Complete family variant needs a current family review hash")
     for key in (
         "id",
         "institution",
@@ -178,7 +205,10 @@ def validate_program(program):
 
 def ingest_program(conn, program, run_id=None):
     """Replace one complete reviewed record atomically; unchanged records are no-ops."""
-    validate_program(program)
+    from .family_store import load_family, ingest_membership
+
+    family = load_family(conn, program["family"]["id"]) if program.get("family") else None
+    validate_program(program, family)
     fingerprint = digest(program)
     existing = conn.execute(
         "SELECT content_hash FROM programs WHERE id=?", (program["id"],)
@@ -186,7 +216,7 @@ def ingest_program(conn, program, run_id=None):
     if existing and existing[0] == fingerprint:
         return False
     pid = program["id"]
-    with conn:
+    with atomic(conn):
         upsert_institution(conn, program["institution"])
         unit_id = None
         if program.get("hosting_unit"):
@@ -226,6 +256,7 @@ def ingest_program(conn, program, run_id=None):
         )
         # FK-safe replacement order; overrides and revisions are intentionally untouched.
         for table in (
+            "program_family_memberships",
             "curriculum_review_sources",
             "curriculum_reviews",
             "requirement_courses",
@@ -324,6 +355,7 @@ def ingest_program(conn, program, run_id=None):
                     outcome.get("locator"),
                 ),
             )
+        ingest_membership(conn, program)
         conn.execute(
             "INSERT OR IGNORE INTO program_revisions(program_id,content_hash,record_json,changed_at,scrape_run_id) VALUES (?,?,?,?,?)",
             (pid, fingerprint, canonical(program), now(), run_id),
@@ -336,7 +368,7 @@ def ingest_program(conn, program, run_id=None):
 
 
 def ingest_survey(conn, entries):
-    with conn:
+    with atomic(conn):
         for entry in entries:
             iid = entry["institution_id"]
             if not conn.execute("SELECT 1 FROM institutions WHERE id=?", (iid,)).fetchone():
@@ -388,10 +420,13 @@ def set_override(conn, program_id, field, value, reason, evidence_url):
         raise ValueError("Unknown program")
     candidate = json.loads(row[0])
     candidate[field] = value
-    validate_program(candidate)
+    from .family_store import load_family
+
+    family = load_family(conn, candidate["family"]["id"]) if candidate.get("family") else None
+    validate_program(candidate, family)
     if field == "status" and value not in {"active", "announced", "discontinued", "unknown"}:
         raise ValueError("Invalid program status")
-    with conn:
+    with atomic(conn):
         conn.execute(
             "INSERT OR REPLACE INTO manual_overrides VALUES (?,?,?,?,?,?)",
             (program_id, field, canonical(value), reason, evidence_url, now()),
@@ -409,7 +444,7 @@ def initialize_csrankings(conn):
         "source_url": "https://csrankings.org/faq",
         "status": "not_imported",
     }
-    with conn:
+    with atomic(conn):
         conn.execute(
             "INSERT OR REPLACE INTO csrankings_config VALUES (1,?,?,?,?,?,?,?,?)",
             (
@@ -431,7 +466,18 @@ def initialize_csrankings(conn):
                 )
 
 
+def resolve_stored_program(conn, record):
+    from .families import resolve_program
+    from .family_store import load_family
+
+    family = load_family(conn, record["family"]["id"]) if record.get("family") else None
+    return resolve_program(record, family)
+
+
 def export_data(conn):
+    from .family_store import export_families
+
+    families = export_families(conn)
     cohort_row = conn.execute("SELECT value_json FROM metadata WHERE key='cohort'").fetchone()
     cohort = (
         json.loads(cohort_row[0])
@@ -440,7 +486,7 @@ def export_data(conn):
     )
     programs = []
     for row in conn.execute("SELECT * FROM programs ORDER BY id"):
-        record = json.loads(row["record_json"])
+        record = resolve_stored_program(conn, json.loads(row["record_json"]))
         overrides = []
         for override in conn.execute(
             "SELECT * FROM manual_overrides WHERE program_id=? ORDER BY field", (row["id"],)
@@ -558,10 +604,16 @@ def export_data(conn):
             "cohort": cohort,
             "coverage_summary": summary,
             "curriculum_summary": curriculum,
+            "family_summary": {
+                "families": len(families),
+                "variants": sum(bool(p.get("family")) for p in programs),
+                "ungrouped_programs": sum(not p.get("family") for p in programs),
+            },
             "limitations": limitations,
         },
         "institutions": institutions,
         "programs": programs,
+        "families": families,
         "rankings": [
             dict(r)
             for r in conn.execute("SELECT * FROM rankings ORDER BY category,rank,institution_id")

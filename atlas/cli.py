@@ -11,20 +11,34 @@ from . import db
 
 
 def ingest_all(conn, data_dir):
-    changed = 0
-    cohort = data_dir / "cohort.json"
-    if cohort.exists():
-        db.ingest_cohort(conn, json.loads(cohort.read_text()))
-    # Validate each file before transactional replacement; failure never deletes older data.
-    for path in sorted((data_dir / "programs").glob("*.json")):
-        try:
-            changed += int(db.ingest_program(conn, json.loads(path.read_text())))
-        except Exception as exc:
-            raise ValueError(f"{path}: {exc}") from exc
-    for path in sorted((data_dir / "surveys").glob("*.json")):
-        content = json.loads(path.read_text())
-        db.ingest_survey(conn, content if isinstance(content, list) else content["institutions"])
-    db.initialize_csrankings(conn)
+    from .family_store import ingest_family
+
+    files = sorted((data_dir / "programs").glob("*.json"))
+    records = {path: json.loads(path.read_text()) for path in files}
+    updates = {record["id"]: record for record in records.values()}
+    if len(updates) != len(records):
+        raise ValueError("Duplicate program IDs in input files")
+    hashes = dict(conn.execute("SELECT id,content_hash FROM programs"))
+    changed = sum(hashes.get(p["id"]) != db.digest(p) for p in records.values())
+    with db.atomic(conn):
+        cohort = data_dir / "cohort.json"
+        if cohort.exists():
+            db.ingest_cohort(conn, json.loads(cohort.read_text()))
+        for record in records.values():
+            db.upsert_institution(conn, record["institution"])
+        for path in sorted((data_dir / "families").glob("*.json")):
+            ingest_family(conn, json.loads(path.read_text()), program_updates=updates)
+        for path, record in records.items():
+            try:
+                db.ingest_program(conn, record)
+            except Exception as exc:
+                raise ValueError(f"{path}: {exc}") from exc
+        for path in sorted((data_dir / "surveys").glob("*.json")):
+            content = json.loads(path.read_text())
+            db.ingest_survey(
+                conn, content if isinstance(content, list) else content["institutions"]
+            )
+        db.initialize_csrankings(conn)
     return changed
 
 
@@ -104,6 +118,7 @@ def main(argv=None):
                     "SELECT record_json FROM programs WHERE id=?", (row["program_id"],)
                 ).fetchone()[0]
             )
+            current = db.resolve_stored_program(conn, current)
             before = json.dumps(
                 {k: current.get(k) for k in observed}, indent=2, sort_keys=True
             ).splitlines()
@@ -127,7 +142,13 @@ def main(argv=None):
             problems = conn.execute("PRAGMA foreign_key_check").fetchall()
             result = conn.execute("PRAGMA integrity_check").fetchone()[0]
             for row in conn.execute("SELECT record_json FROM programs"):
-                db.validate_program(json.loads(row[0]))
+                program = json.loads(row[0])
+                from .family_store import load_family
+
+                family = (
+                    load_family(conn, program["family"]["id"]) if program.get("family") else None
+                )
+                db.validate_program(program, family)
             if problems or result != "ok":
                 raise ValueError(f"Integrity failure: {problems}, {result}")
             print("SQLite integrity, foreign keys and requirement trees: OK")
