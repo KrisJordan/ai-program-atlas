@@ -50,8 +50,11 @@ def summarize_rule(text):
     return re.sub(r'^Complete\s+', 'Required: ', text)
 
 
-def parse_catalog(html, *, program_id, title, url, required_sections, outcome_claims=(), pooled_subheaders=(), overview_rules=(), award_level="BS", continued_choice_sections=None, instruction_notes=None, conditional_tables=None):
-    if award_level not in {'BS', 'other'} or (', BS (' if award_level == 'BS' else ', BSEnvE (') not in title:
+def parse_catalog(html, *, program_id, title, url, required_sections, outcome_claims=(), pooled_subheaders=(), overview_rules=(), award_level="BS", continued_choice_sections=None, instruction_notes=None, conditional_tables=None, requirement_scope='degree'):
+    if requirement_scope not in {'degree', 'business_concentration'}:
+        raise ValueError('Unsupported requirement scope')
+    concentration = requirement_scope == 'business_concentration'
+    if not concentration and (award_level not in {'BS', 'other'} or (', BS (' if award_level == 'BS' else ', BSEnvE (') not in title):
         raise ValueError('Award profile must match the exact reviewed program title')
     continued_choice_sections = continued_choice_sections or {}
     instruction_notes = instruction_notes or {}
@@ -60,10 +63,12 @@ def parse_catalog(html, *, program_id, title, url, required_sections, outcome_cl
     heading = soup.find(id='site-title')
     h1 = heading.find('h1') if heading else None
     if not h1 or clean(h1) != title: raise ValueError('Expected program-specific catalog heading missing')
-    panel = soup.find(id='programrequirementstextcontainer')
+    panel = soup.find(id='concentrationrequirementstextcontainer' if concentration else 'programrequirementstextcontainer')
     if not panel: raise ValueError('Program requirements panel missing')
-    if 'semester hours' not in clean(panel) or 'quarter hours' in clean(panel):
+    if (not concentration and 'semester hours' not in clean(panel)) or 'quarter hours' in clean(panel):
         raise ValueError('Expected explicit semester-hour unit missing or changed')
+    if concentration and (not url.startswith('https://catalog.northeastern.edu/undergraduate/business/concentrations/') or not panel.find('th', class_='hourscol')):
+        raise ValueError('Expected Northeastern undergraduate concentration Hours table')
     for marker in panel.find_all('sup'):
         marker.decompose()
     headings = {clean(x) for x in panel.find_all('h2')}
@@ -175,7 +180,7 @@ def parse_catalog(html, *, program_id, title, url, required_sections, outcome_cl
                 unitmatch = re.search(r'(one|two|three|four|five|six|seven|eight|nine|ten|\d+) (?:semester hours|credits)\b', text, re.I)
                 numbers = dict(one=1,two=2,three=3,four=4,five=5,six=6,seven=7,eight=8,nine=9,ten=10)
                 amount = (numbers.get(unitmatch[1].lower(), int(unitmatch[1]) if unitmatch[1].isdigit() else None) if unitmatch else None)
-                if unitmatch and text.startswith('Complete'):
+                if unitmatch and re.match(r'Complete\s+(?:one|two|three|four|five|six|seven|eight|nine|ten|\d+)\s+(?:semester hours|credits)\b', text, re.I):
                     if credit is not None and credit != amount:
                         raise ValueError('Conflicting credit-choice amounts')
                     choice = rule(area['title'] + ' credit choice', parent['id'], 'choose_credits', credits=amount, summary=summarize_rule(text) + range_note)
@@ -210,7 +215,7 @@ def parse_catalog(html, *, program_id, title, url, required_sections, outcome_cl
             for index, code in enumerate(codes):
                 name = names[index] if len(codes) > 1 else clean(cells[1])
                 # Parenthetical concurrency instructions are rule evidence, not the course title.
-                qualifier = re.search(r'\s+\((?:concurrent with|with optional|Preferred)\b', name, re.I)
+                qualifier = re.search(r'\s+\((?:concurrent with|with optional|Preferred|if not)\b', name, re.I)
                 if qualifier:
                     base, annotation = name[:qualifier.start()], name[qualifier.start():].strip()[1:]
                     annotations.append((code, annotation.rstrip(')')))
@@ -259,6 +264,6 @@ def parse_catalog(html, *, program_id, title, url, required_sections, outcome_cl
             rule(label, root['id'], kind='note', summary=summary)
     outcomes = [dict(text=summary, kind='source_stated', source_id=sid, locator='Program overview')
                 for phrase, summary in outcome_claims if phrase in overview_text]
-    return dict(id=program_id, title=title, award_level=award_level, program_kind='degree',
+    return dict(id=program_id, title=title, award_level=award_level, program_kind='concentration' if concentration else 'degree',
                 catalog_year=catalog_year, curriculum_status='partial', courses=list(courses.values()),
                 requirements=rules, outcomes=outcomes)

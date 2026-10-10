@@ -37,13 +37,13 @@ The applicable home-college choices and all resulting college progression/gradua
 
 ## Distinguishing real gaps from represented criteria
 
-- **Known finite inventory still missing:** Business Administration requires a business concentration. Its linked published concentration curricula have not been expanded. The main degree's Marketing Analytics additional-general-elective condition is already represented, but it does not substitute for the concentration inventory.
+- **Finite Business inventory now reviewed:** The subsequent [concentration review](northeastern-business-concentrations.md) expands all 14 degree-linked options, preserves required/second-only eligibility and closes this finite-list gap. Home-college applicability remains unresolved.
 - **Published eligibility criteria, already represented:** Open CS/CY/DS or partner-subject number ranges, named exclusions, minimum/maximum selection counts, grade/GPA thresholds, non-reuse rules and choice distributions. Not listing every current course satisfying an open subject/range predicate is not the same as omitting a finite department-approved list.
 - **Published individual approval rules, already represented:** Adviser-approved research/directed study/graduate electives, placement substitutions, approved study-abroad equivalencies and similar alternatives. Their future individual approvals are not unpublished course facts. The notes preserve the conditions without promising approval or claiming automatic equivalence.
 - **Published source-specific conditions, retained:** Ecology distribution minima and prohibited program combinations; Economics lower-level limits; Biology concurrent research/capstone; Public Health alternative science paths; International Affairs same-region and experience rules; Journalism transfer residency and overlap; Engineering allocation/substitution rules; other major-specific grade policies. Notes may represent these without a separate automated degree-audit evaluator.
 - **Separate metadata gaps:** Course prerequisites/descriptions, public course websites and syllabi remain incomplete. A missing prerequisite field means unverified. These are not reclassified as program absence or invented prerequisites.
 
-The prior generic audit wording often listed approval-based options and explicit policy notes as if they were missing finite course inventories. That wording has been corrected. All 23 audits remain partial because the home-college scope gap remains; Business retains its additional finite-concentration gap. No record gains a completeness claim from adding shared university policy.
+The prior generic audit wording often listed approval-based options and explicit policy notes as if they were missing finite course inventories. That wording has been corrected. All 23 audits remain partial because the home-college scope gap remains; The later Business concentration follow-up closes its additional finite-list gap without closing the shared home-college applicability gap. No record gains a completeness claim from adding shared university policy.
 
 ## Implementation and verification
 

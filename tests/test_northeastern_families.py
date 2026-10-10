@@ -48,6 +48,18 @@ def program(pid):return json.loads((ROOT/'data/programs'/f'{pid}.json').read_tex
 def test_reviewed_variant_reconstruction_preserves_entire_original_graph(pid):
     p=program(pid);f=family();db.validate_program(p,f);resolved=resolve_program(p,f)
     rows=[{k:v for k,v in r.items() if k not in ANNOTATIONS} for r in resolved['requirements'] if not r.get('family_requirement_id','').startswith('policy-')]
+    if 'business-administration' in pid:
+        # The reviewed follow-up adds independent concentration-source subtrees
+        # and two main-page selection nodes; test those in the concentration suite.
+        # Preserve the original major graph hash. Only the two formerly unexpanded
+        # pointer notes intentionally change; assert their new text before projecting
+        # their old wording for this historical preservation check.
+        rows=[r for r in rows if r['source_id']==pid+'-catalog' and r['id'] not in {
+            pid+'-req-business-concentration-options',pid+'-req-business-concentration-second-only'}]
+        for r in rows:
+            if r['id'] in {pid+'-req-business-concentration-policy-2',pid+'-req-business-concentration-policy-4'}:
+                assert r['summary']=='The degree links the finite concentration options below; their current requirements are observed independently from each linked concentration page.'
+                r['summary']='Choose a business concentration from the linked catalog options; individual concentration curricula remain unexpanded.'
     digest=hashlib.sha256(json.dumps(sorted(rows,key=lambda r:r['id']),sort_keys=True,separators=(',',':')).encode()).hexdigest()
     assert digest==EXPECTED[pid]
     shared=[r for r in resolved['requirements'] if r['origin']=='family']
