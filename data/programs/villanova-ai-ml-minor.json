@@ -13,11 +13,11 @@
   "hosting_unit": "Villanova School of Business",
   "status": "active",
   "first_offered": null,
-  "overview": "Official source identifies this undergraduate minor. Curriculum extraction is pending.",
+  "overview": "Business AI minor with a reviewed local course inventory and published policy constraints.",
   "catalog_year": "2026-2027",
-  "verification_status": "partial",
+  "verification_status": "confirmed",
   "last_verified": "2026-10-10",
-  "curriculum_status": "pending",
+  "curriculum_status": "complete",
   "links": [
     {
       "kind": "catalog",
@@ -33,7 +33,7 @@
       "fetched_at": "2026-10-10",
       "source_date": null,
       "catalog_year": "2026-2027",
-      "locator": "Program heading and local award/parent-program section",
+      "locator": "Course Requirements; all course groups and subsequent Note/graduate-substitution paragraphs",
       "confidence": "high"
     },
     {
@@ -55,13 +55,229 @@
       "catalog_year": "2026-2027",
       "locator": "Official undergraduate directory or catalog context",
       "confidence": "high"
+    },
+    {
+      "id": "villanova-mis-3300-catalog",
+      "url": "https://live-villanova-catalog.cleancatalog.io/management-information-systems/mis-3300",
+      "title": "MIS 3300: AI, ML, GenAI & AI Agents",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Course description, credits and Prerequisites",
+      "confidence": "high"
+    },
+    {
+      "id": "villanova-mis-2020-catalog",
+      "url": "https://live-villanova-catalog.cleancatalog.io/management-information-systems/mis-2020",
+      "title": "MIS 2020: Prog for Adaptive Prob Solving",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Course description, credits and Prerequisites",
+      "confidence": "high"
+    },
+    {
+      "id": "villanova-mis-3080-catalog",
+      "url": "https://live-villanova-catalog.cleancatalog.io/management-information-systems/mis-3080",
+      "title": "MIS 3080: Applied Machine Learning",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Course description, credits and Prerequisites",
+      "confidence": "high"
     }
   ],
   "outcomes": [],
-  "courses": [],
-  "requirements": [],
+  "courses": [
+    {
+      "id": "villanova-mis-3300",
+      "code": "MIS 3300",
+      "name": "AI, ML, GenAI & AI Agents",
+      "description": "Builds applications using machine learning, generative AI and agent tools for business processes.",
+      "prerequisites": "VSB 2006",
+      "credits": 3.0,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "villanova-ai-ml-minor-identity",
+      "url": "https://live-villanova-catalog.cleancatalog.io/management-information-systems/mis-3300",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "villanova-mis-2020",
+      "code": "MIS 2020",
+      "name": "Prog for Adaptive Prob Solving",
+      "description": "Develops programming-based business solutions, from problem specification through implementation, debugging and documentation.",
+      "prerequisites": "VSB 2006 and (VSB 2020 :Y or SBI 3040) and (VSB 2009 :Y or SBI 3020)",
+      "credits": 3.0,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "villanova-ai-ml-minor-identity",
+      "url": "https://live-villanova-catalog.cleancatalog.io/management-information-systems/mis-2020",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "villanova-mis-3080",
+      "code": "MIS 3080",
+      "name": "Applied Machine Learning",
+      "description": "Applies machine-learning models to business decisions, including data preparation, implementation and ethical considerations.",
+      "prerequisites": "VSB 2006 and (MIS 2020 or CSC 1052)",
+      "credits": 3.0,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "villanova-ai-ml-minor-identity",
+      "url": "https://live-villanova-catalog.cleancatalog.io/management-information-systems/mis-3080",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "villanova-csc-1052",
+      "code": "CSC 1052",
+      "name": "Algorithms & Data Struc II",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "villanova-ai-ml-minor-identity",
+      "url": "https://live-villanova-catalog.cleancatalog.io/business/artificial-intelligence-and-machine-learning-minor",
+      "public_site": null,
+      "syllabus": null
+    }
+  ],
+  "requirements": [
+    {
+      "id": "villanova-ai-ml-minor-curriculum",
+      "parent_id": null,
+      "title": "Local program requirements",
+      "kind": "all",
+      "count": null,
+      "credits": 9,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "villanova-ai-ml-minor-identity",
+      "source_text": null,
+      "summary": "Complete the local curriculum and applicable policies below. Published amounts are credits; credit-system normalization remains unverified.",
+      "course_ids": []
+    },
+    {
+      "id": "villanova-ai-ml-minor-core",
+      "parent_id": "villanova-ai-ml-minor-curriculum",
+      "title": "Required courses",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "villanova-ai-ml-minor-identity",
+      "source_text": null,
+      "summary": "Required courses",
+      "course_ids": [
+        "villanova-mis-3300",
+        "villanova-mis-2020",
+        "villanova-mis-3080"
+      ]
+    },
+    {
+      "id": "villanova-ai-ml-minor-unique-courses",
+      "parent_id": "villanova-ai-ml-minor-curriculum",
+      "title": "Unique courses",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "villanova-ai-ml-minor-identity",
+      "source_text": null,
+      "summary": "Complete three unique MIS courses; an approved CSC substitution is subject to the separate restriction below.",
+      "course_ids": []
+    },
+    {
+      "id": "villanova-ai-ml-minor-eligibility",
+      "parent_id": "villanova-ai-ml-minor-curriculum",
+      "title": "Eligibility",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "villanova-ai-ml-minor-identity",
+      "source_text": null,
+      "summary": "Open to Villanova School of Business students.",
+      "course_ids": []
+    },
+    {
+      "id": "villanova-ai-ml-minor-free-electives",
+      "parent_id": "villanova-ai-ml-minor-curriculum",
+      "title": "Free electives",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "villanova-ai-ml-minor-identity",
+      "source_text": null,
+      "summary": "Minor courses may also satisfy free electives.",
+      "course_ids": []
+    },
+    {
+      "id": "villanova-ai-ml-minor-programming-substitution",
+      "parent_id": "villanova-ai-ml-minor-curriculum",
+      "title": "Programming substitution",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "villanova-ai-ml-minor-identity",
+      "source_text": null,
+      "summary": "CSC 1052 may replace MIS 2020 only when it is not also fulfilling the core Arts and Sciences requirement.",
+      "course_ids": [
+        "villanova-mis-2020",
+        "villanova-csc-1052"
+      ]
+    },
+    {
+      "id": "villanova-ai-ml-minor-excluded-concentration",
+      "parent_id": "villanova-ai-ml-minor-curriculum",
+      "title": "Excluded concentration",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "villanova-ai-ml-minor-identity",
+      "source_text": null,
+      "summary": "Students in the Applied Quantitative Finance concentration may not also complete this minor.",
+      "course_ids": []
+    }
+  ],
   "notes": [
-    "Official program identity verified; requirements, course metadata and outcomes remain unextracted. Identity refresh does not verify a curriculum inventory.",
-    "Catalog identifies a business minor with MIS coursework; eligibility and overlap constraints await structured extraction."
-  ]
+    "Catalog identifies a business minor with MIS coursework; eligibility and overlap constraints are represented in the reviewed local inventory.",
+    "Local program inventory only; does not certify the host BBA degree. Credits are source amounts; credit-unit normalization is unverified. Pool subtotals are not required totals.",
+    "Required-course descriptions are original summaries of separate course catalog entries; prerequisites preserve source notation (:Y is not interpreted). Their sources are registered separately while course source_id remains the program catalog.",
+    "Conditional graduate substitutes are not ordinary unrestricted electives. Unknown elective metadata and public syllabi remain null."
+  ],
+  "curriculum_audit": {
+    "scope": "minor",
+    "reviewed_at": "2026-10-10",
+    "source_ids": [
+      "villanova-ai-ml-minor-identity",
+      "villanova-mis-3300-catalog",
+      "villanova-mis-2020-catalog",
+      "villanova-mis-3080-catalog"
+    ],
+    "sections": [
+      "Local course total and required courses",
+      "Eligibility and excluded concentration",
+      "Unique-course/overlap policies",
+      "CSC replacement and free-elective policy"
+    ],
+    "unresolved_requirements": [],
+    "metadata_gaps": [
+      "Only required-course descriptions/prerequisites reviewed; elective metadata and public course sites/syllabi remain unverified.",
+      "Credit unit normalization remains unknown."
+    ]
+  }
 }

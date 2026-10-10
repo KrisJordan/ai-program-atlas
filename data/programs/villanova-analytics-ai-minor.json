@@ -13,11 +13,11 @@
   "hosting_unit": "Villanova School of Business",
   "status": "active",
   "first_offered": null,
-  "overview": "Official source identifies this undergraduate minor. Curriculum extraction is pending.",
+  "overview": "Business AI minor with a reviewed local course inventory and published policy constraints.",
   "catalog_year": "2026-2027",
-  "verification_status": "partial",
+  "verification_status": "confirmed",
   "last_verified": "2026-10-10",
-  "curriculum_status": "pending",
+  "curriculum_status": "complete",
   "links": [
     {
       "kind": "catalog",
@@ -33,7 +33,7 @@
       "fetched_at": "2026-10-10",
       "source_date": null,
       "catalog_year": "2026-2027",
-      "locator": "Program heading and local award/parent-program section",
+      "locator": "Course Requirements; all course groups and subsequent Note/graduate-substitution paragraphs",
       "confidence": "high"
     },
     {
@@ -55,13 +55,398 @@
       "catalog_year": "2026-2027",
       "locator": "Official undergraduate directory or catalog context",
       "confidence": "high"
+    },
+    {
+      "id": "villanova-mgt-3170-catalog",
+      "url": "https://live-villanova-catalog.cleancatalog.io/management/mgt-3170",
+      "title": "MGT 3170: Data Mining and AI",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Course description, credits and Prerequisites",
+      "confidence": "high"
+    },
+    {
+      "id": "villanova-mgt-4170-catalog",
+      "url": "https://live-villanova-catalog.cleancatalog.io/management/mgt-4170",
+      "title": "MGT 4170: Decision Analytics & AI",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Course description, credits and Prerequisites",
+      "confidence": "high"
     }
   ],
   "outcomes": [],
-  "courses": [],
-  "requirements": [],
+  "courses": [
+    {
+      "id": "villanova-mgt-3170",
+      "code": "MGT 3170",
+      "name": "Data Mining and AI",
+      "description": "Uses data mining and machine learning to identify patterns in business data and support managerial decisions.",
+      "prerequisites": "(VSB 2020 or SBI 3040) and VSB 2008 and (VSB 2009 :Y or SBI 3020)",
+      "credits": 3.0,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "villanova-analytics-ai-minor-identity",
+      "url": "https://live-villanova-catalog.cleancatalog.io/management/mgt-3170",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "villanova-mgt-4170",
+      "code": "MGT 4170",
+      "name": "Decision Analytics & AI",
+      "description": "Integrates data preparation, decision modeling, programming and generative AI to solve business problems.",
+      "prerequisites": "VSB 2008",
+      "credits": 3.0,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "villanova-analytics-ai-minor-identity",
+      "url": "https://live-villanova-catalog.cleancatalog.io/management/mgt-4170",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "villanova-eco-3137",
+      "code": "ECO 3137",
+      "name": "Intro to Econometrics",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3.0,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "villanova-analytics-ai-minor-identity",
+      "url": "https://live-villanova-catalog.cleancatalog.io/economics/eco-3137",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "villanova-fin-2360",
+      "code": "FIN 2360",
+      "name": "Applied Financial Statistics",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3.0,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "villanova-analytics-ai-minor-identity",
+      "url": "https://live-villanova-catalog.cleancatalog.io/finance/fin-2360",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "villanova-mgt-3180",
+      "code": "MGT 3180",
+      "name": "Advance Data Mining & AI",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3.0,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "villanova-analytics-ai-minor-identity",
+      "url": "https://live-villanova-catalog.cleancatalog.io/analytics-artificial-intelligence/mgt-3180",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "villanova-mgt-3600",
+      "code": "MGT 3600",
+      "name": "Sports Analytics",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3.0,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "villanova-analytics-ai-minor-identity",
+      "url": "https://live-villanova-catalog.cleancatalog.io/management/mgt-3600",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "villanova-mis-2030",
+      "code": "MIS 2030",
+      "name": "Database Management",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3.0,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "villanova-analytics-ai-minor-identity",
+      "url": "https://live-villanova-catalog.cleancatalog.io/management-information-systems/mis-2030",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "villanova-mis-3050",
+      "code": "MIS 3050",
+      "name": "CRM and Data Analytics",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3.0,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "villanova-analytics-ai-minor-identity",
+      "url": "https://live-villanova-catalog.cleancatalog.io/management-information-systems/mis-3050",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "villanova-mis-3060",
+      "code": "MIS 3060",
+      "name": "Business Intelligence with AI",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3.0,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "villanova-analytics-ai-minor-identity",
+      "url": "https://live-villanova-catalog.cleancatalog.io/management-information-systems/mis-3060",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "villanova-mkt-2240",
+      "code": "MKT 2240",
+      "name": "Marketing Analytics",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3.0,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "villanova-analytics-ai-minor-identity",
+      "url": "https://live-villanova-catalog.cleancatalog.io/marketing/mkt-2240",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "villanova-msa-8105",
+      "code": "MSA 8105",
+      "name": "Programming in R & Python",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "villanova-analytics-ai-minor-identity",
+      "url": "https://live-villanova-catalog.cleancatalog.io/analytics-artificial-intelligence/analytics-artificial-intelligence-minor",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "villanova-msa-8110",
+      "code": "MSA 8110",
+      "name": "Data Models & Struct Analysis",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "villanova-analytics-ai-minor-identity",
+      "url": "https://live-villanova-catalog.cleancatalog.io/analytics-artificial-intelligence/analytics-artificial-intelligence-minor",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "villanova-msa-8240",
+      "code": "MSA 8240",
+      "name": "Business Intelligence",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "villanova-analytics-ai-minor-identity",
+      "url": "https://live-villanova-catalog.cleancatalog.io/analytics-artificial-intelligence/analytics-artificial-intelligence-minor",
+      "public_site": null,
+      "syllabus": null
+    }
+  ],
+  "requirements": [
+    {
+      "id": "villanova-analytics-ai-minor-curriculum",
+      "parent_id": null,
+      "title": "Local program requirements",
+      "kind": "all",
+      "count": null,
+      "credits": 9,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "villanova-analytics-ai-minor-identity",
+      "source_text": null,
+      "summary": "Complete the local curriculum and applicable policies below. Published amounts are credits; credit-system normalization remains unverified.",
+      "course_ids": []
+    },
+    {
+      "id": "villanova-analytics-ai-minor-core",
+      "parent_id": "villanova-analytics-ai-minor-curriculum",
+      "title": "Required courses",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "villanova-analytics-ai-minor-identity",
+      "source_text": null,
+      "summary": "Required courses",
+      "course_ids": [
+        "villanova-mgt-3170",
+        "villanova-mgt-4170"
+      ]
+    },
+    {
+      "id": "villanova-analytics-ai-minor-electives",
+      "parent_id": "villanova-analytics-ai-minor-curriculum",
+      "title": "Analytics and AI electives",
+      "kind": "choose_courses",
+      "count": 1,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "villanova-analytics-ai-minor-identity",
+      "source_text": null,
+      "summary": "Choose the published number of electives, subject to the alternative and substitution policies below.",
+      "course_ids": [
+        "villanova-eco-3137",
+        "villanova-fin-2360",
+        "villanova-mgt-3180",
+        "villanova-mgt-3600",
+        "villanova-mis-2030",
+        "villanova-mis-3050",
+        "villanova-mis-3060",
+        "villanova-mkt-2240"
+      ]
+    },
+    {
+      "id": "villanova-analytics-ai-minor-unique-courses",
+      "parent_id": "villanova-analytics-ai-minor-curriculum",
+      "title": "Unique courses",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "villanova-analytics-ai-minor-identity",
+      "source_text": null,
+      "summary": "Complete three unique business courses for this minor.",
+      "course_ids": []
+    },
+    {
+      "id": "villanova-analytics-ai-minor-free-electives",
+      "parent_id": "villanova-analytics-ai-minor-curriculum",
+      "title": "Free electives",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "villanova-analytics-ai-minor-identity",
+      "source_text": null,
+      "summary": "Minor courses may also satisfy free electives.",
+      "course_ids": []
+    },
+    {
+      "id": "villanova-analytics-ai-minor-joint-program-eligibility",
+      "parent_id": "villanova-analytics-ai-minor-curriculum",
+      "title": "Joint program eligibility",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "villanova-analytics-ai-minor-identity",
+      "source_text": null,
+      "summary": "The following graduate-course options apply to students pursuing both Analytics and AI and the MSBAi program.",
+      "course_ids": []
+    },
+    {
+      "id": "villanova-analytics-ai-minor-graduate-elective",
+      "parent_id": "villanova-analytics-ai-minor-curriculum",
+      "title": "Graduate elective",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "villanova-analytics-ai-minor-identity",
+      "source_text": null,
+      "summary": "For eligible joint-program students, MSA 8105 may satisfy one Analytics and AI elective.",
+      "course_ids": [
+        "villanova-msa-8105"
+      ]
+    },
+    {
+      "id": "villanova-analytics-ai-minor-graduate-substitutions",
+      "parent_id": "villanova-analytics-ai-minor-curriculum",
+      "title": "Graduate substitutions",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "villanova-analytics-ai-minor-identity",
+      "source_text": null,
+      "summary": "For eligible joint-program students, one additional listed substitution may count: MSA 8110 for MIS 2030; only one of that pair may count. Alternatively, MSA 8240 may replace MIS 3060; only one of that pair may count.",
+      "course_ids": [
+        "villanova-msa-8110",
+        "villanova-msa-8240",
+        "villanova-mis-2030",
+        "villanova-mis-3060"
+      ]
+    },
+    {
+      "id": "villanova-analytics-ai-minor-excluded-course",
+      "parent_id": "villanova-analytics-ai-minor-curriculum",
+      "title": "Excluded course",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "villanova-analytics-ai-minor-identity",
+      "source_text": null,
+      "summary": "CSC 4480 is explicitly ineligible for this minor; the co-major has a different rule.",
+      "course_ids": []
+    },
+    {
+      "id": "villanova-analytics-ai-minor-graduate-permission",
+      "parent_id": "villanova-analytics-ai-minor-curriculum",
+      "title": "Graduate permission",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "villanova-analytics-ai-minor-identity",
+      "source_text": null,
+      "summary": "Undergraduates need department, graduate-program and undergraduate-program permission for up to nine graduate credits. Graduate-program application requires relevant approvals. Courses must be taken while undergraduate; they cannot be applied retroactively after degree conferral.",
+      "course_ids": []
+    }
+  ],
   "notes": [
-    "Official program identity verified; requirements, course metadata and outcomes remain unextracted. Identity refresh does not verify a curriculum inventory.",
-    "Official degree directory specifies this title for Class of 2029 and beyond, versus Business Analytics through Class of 2028. The class designation is not a launch date."
-  ]
+    "Official degree directory specifies this title for Class of 2029 and beyond, versus Business Analytics through Class of 2028. The class designation is not a launch date.",
+    "Local program inventory only; does not certify the host BBA degree. Credits are source amounts; credit-unit normalization is unverified. Pool subtotals are not required totals.",
+    "Required-course descriptions are original summaries of separate course catalog entries; prerequisites preserve source notation (:Y is not interpreted). Their sources are registered separately while course source_id remains the program catalog.",
+    "Conditional graduate substitutes are not ordinary unrestricted electives. Unknown elective metadata and public syllabi remain null."
+  ],
+  "curriculum_audit": {
+    "scope": "minor",
+    "reviewed_at": "2026-10-10",
+    "source_ids": [
+      "villanova-analytics-ai-minor-identity",
+      "villanova-mgt-3170-catalog",
+      "villanova-mgt-4170-catalog"
+    ],
+    "sections": [
+      "Local course total and required courses",
+      "Elective options and alternatives",
+      "Unique-course/overlap policies",
+      "Conditional course replacements and graduate permissions"
+    ],
+    "unresolved_requirements": [],
+    "metadata_gaps": [
+      "Only required-course descriptions/prerequisites reviewed; elective metadata and public course sites/syllabi remain unverified.",
+      "Credit unit normalization remains unknown."
+    ]
+  }
 }
