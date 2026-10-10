@@ -15,8 +15,8 @@ The 2027 edition changes categories using the updated Carnegie classifications, 
 | Category | Stored institutions | Enumeration status | Cutoff |
 | --- | ---: | --- | --- |
 | National Universities | 108 | Enumerated from a complete secondary table; authoritative confirmation pending | Nine institutions tied at 100 |
-| National Liberal Arts Colleges | 85 | Incomplete verified subset | Full rank-100 tie group unknown |
-| Combined inventory | 193 | Incomplete | Two separate categories |
+| National Liberal Arts Colleges | 86 | Incomplete verified subset | Full rank-100 tie group unknown |
+| Combined inventory | 194 | Incomplete | Two separate categories |
 
 The `complete` field is **false**: authoritative enumeration is pending for National Universities, and the liberal arts cohort is incomplete. The additive `category_coverage` field records the different enumeration states. National Universities has `enumeration_complete: true` and `verification_status: enumerated_secondary`, while `complete` remains false. Individual ranks distinguish `primary_verified` from `enumerated_secondary`. None of these numbers measures completion of the AI-program search.
 
@@ -68,3 +68,25 @@ The loaded LAC subset is now **85** institutions: 80 with explicit-edition numer
 Harvey Mudd 8, Auburn 100, Creighton 100, FIU 100, Saint Louis 100 and Iowa 100 received additional primary evidence upgrades. FIU and Iowa explicitly identify the 2027 edition and overall 100, contrasting public 46; their exact National Universities category label is corroborated by the existing secondary table and that distinction remains in the locator. USF’s [current article](https://www.usf.edu/news/2026/for-the-eighth-consecutive-year-us-news-ranks-usf-among-the-nations-top-50-public-universities.aspx) and Chapman’s [facts page](https://www.chapman.edu/about/facts-and-rankings/index.aspx) lack a usable explicit edition/date combination, so their existing rank evidence was not upgraded.
 
 The [Hobart and William Smith candidate article](https://www.hws.edu/news/2026/hws-climbs-13-spots.aspx) returned an internal access error; HWS was not added. Colorado Boulder’s [2027 report](https://www.colorado.edu/today/2026/09/22/cu-boulder-top-10-nationally-multiple-undergrad-programs-says-us-news-world-report) gives overall 109, and Willamette’s [2027 report](https://news.willamette.edu/library/2026/09/us-news-best-value.html) gives National Universities 208, so both are outside scope. The supplied Illinois Wesleyan article was inaccessible and supplies no usable fact here.
+
+
+## Bounded enumeration follow-up (2026-10-10)
+
+One additional institution was established: **Hobart and William Smith Colleges, rank 60**. The [official article](https://www.hws.edu/news/2026/hws-climbs-13-spots.aspx), previously unavailable to the reader, successfully opened through its normal [homepage](https://www.hws.edu/) news link in this pass. Its heading dates publication to September 22, 2026 and its opening identifies the overall National Liberal Arts Colleges rank. It does not explicitly name the 2027 edition, so the row uses `primary_edition_inferred`, with the release-date inference stated in its locator. Its rank is not inferred from neighboring ranks. The article does not certify a tie size. A bounded follow-up inspected its official directory and relevant catalog sections; the evidence-backed survey status is `inspected`, with no absence conclusion.
+
+The inventory is now **194 institutions: 108 National Universities and 86 National Liberal Arts Colleges**. The LAC subset comprises 80 edition-specific numerical ranks, three numerical ranks with qualified edition inference, and three explicit top-100 membership records with null exact ranks. Both category `complete` flags, the global `complete` flag and the LAC `enumeration_complete` flag remain false. The full LAC rank-100 tie count remains null.
+
+This bounded pass searched official evidence for Reed, Whitman, Dickinson, Agnes Scott, Gustavus Adolphus, Hobart and William Smith, Susquehanna, Knox, St. Mary's College of Maryland, Puget Sound, Wheaton (Massachusetts), St. John's College and Illinois Wesleyan. Search results and a limited set of official homepage/news/rankings links did not yield another usable 2027 overall rank or top-100 membership statement. This is an evidence gap, not evidence of exclusion. In particular:
+
+- [St. Mary's College of Maryland's rankings page](https://www.smcm.edu/about/college-rankings/) and its [October 5 official report](https://inside.smcm.edu/news/2026/10/highlighting-strength-st-marys-college) state the 2027 **public** liberal arts rank only. A nearby top-100 statement belongs to Niche; neither establishes this cohort's overall U.S. News rank.
+- [Agnes Scott's homepage](https://www.agnesscott.edu/) supplies 2027 subcategory accolades, without an overall rank. Its linked news site returned HTTP 403, where that branch stopped.
+- [Knox's official facts page](https://www.knox.edu/about-knox/fast-facts/what-experts-say) supplies an overall numerical rank without an edition or publication date; the nearby Princeton Review reference is to 2026 and cannot date the U.S. News statement.
+- [Reed's admissions page](https://www.reed.edu/admission-aid/how-to-apply/international.html) explains its nonparticipation in the U.S. News survey and supplies accolades from other publishers. Survey nonparticipation does not establish either inclusion or exclusion from U.S. News rankings.
+- The Whitman, Wheaton (Massachusetts) and Susquehanna homepages returned internal fetch errors. Illinois Wesleyan's accessible news index exposed older entries without the needed ranking evidence. No missing facts were filled from old editions, secondary predictions, search-result arithmetic or subcategory ranks.
+
+No publisher restriction or other access control was bypassed. The remaining exact boundary is unchanged: a permitted complete 2027 overall LAC table, authorized export, or enough individual official reports to certify every intervening group and cutoff tie is still required. The additional inferred-edition row improves the documented roster but cannot close enumeration. Validation checked unique IDs, the source registry, edition/rank bounds, category counts, all three null-rank membership bounds, and unchanged incompleteness flags.
+
+
+### HWS program reconnaissance
+
+The separate `data/surveys/hws.json` ledger records an October 10 inspection of the [official program directory](https://www.hws.edu/academics/academic-programs.aspx), [Computer Science catalog](https://www.hws.edu/catalogue/computer-science.aspx), and [Data Analytics catalog](https://www.hws.edu/catalogue/data-analytics.aspx). The sources identify generic CS BA/BS programs and a CS minor, a Data Analytics minor, and the AI course CPSC 444. No separate AI award was verified. AI course content alone does not meet the project's program-title rule. Status is `inspected`, not an institution-wide absence finding; other departments, individual-major rules, remaining catalog sections and announcements are outside this bounded check. The ledger is separate from the shared liberal survey to avoid overlapping agent edits. Normal survey ingestion persists its inspection date and sources; no maintained database was edited.
