@@ -3,6 +3,7 @@ import json
 from pathlib import Path
 
 import pytest
+from test_five_degree_curricula import drexel_fixture
 
 from atlas.db import validate_program
 
@@ -20,6 +21,9 @@ FIXTURES = {
 }
 
 
+FIXTURES["drexel-ai-ml-bs"] = drexel_fixture()
+
+
 def load(pid):
     spec = importlib.util.spec_from_file_location(pid, ROOT / "atlas/adapters" / pid / "adapter.py")
     mod = importlib.util.module_from_spec(spec)
@@ -35,9 +39,15 @@ def test_discovery_observes_identity_without_claiming_curriculum_or_freshness(pi
     observed = mod.parse("<main>" + FIXTURES[pid] + "</main>")
     seed = json.loads((ROOT / "data/programs" / (pid + ".json")).read_text())
     validate_program(seed)
-    assert observed == {k: seed[k] for k in ("id", "title", "award_level", "program_kind")}
-    assert seed["curriculum_status"] == "pending"
-    assert not seed["courses"]
+    if pid == "drexel-ai-ml-bs":
+        assert observed["curriculum_status"] == "partial"
+        assert observed["courses"] and observed["requirements"]
+        assert "last_verified" not in observed and "curriculum_audit" not in observed
+        assert seed["curriculum_status"] == "partial"
+    else:
+        assert observed == {k: seed[k] for k in ("id", "title", "award_level", "program_kind")}
+        assert seed["curriculum_status"] == "pending"
+        assert not seed["courses"]
     with pytest.raises(ValueError):
         mod.parse("<nav>" + FIXTURES[pid] + "</nav><main><h1>Unrelated</h1></main>")
 

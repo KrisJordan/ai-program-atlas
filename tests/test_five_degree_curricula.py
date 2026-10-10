@@ -99,3 +99,100 @@ def test_lehigh_group_credits_and_ambiguous_titles():
         )
     with pytest.raises(ValueError, match="range changed"):
         load(pid).parse(html.replace("130-131", "132"))
+
+
+def drexel_fixture():
+    def area(name):
+        return '<tr class="areaheader"><td>' + name + "</td></tr>"
+
+    def comment(label, credit=""):
+        return '<tr><td colspan="2">' + label + '</td><td class="hourscol">' + credit + "</td></tr>"
+
+    def course(codes, names, credit="", other=False):
+        return (
+            "<tr"
+            + (' class="orclass"' if other else "")
+            + '><td class="codecol">'
+            + "<br/> &amp; ".join(
+                '<a href="/search/?P=' + c.replace(" ", "%20") + '">' + c + "</a>" for c in codes
+            )
+            + "</td><td>"
+            + "<br/>and ".join(names)
+            + '</td><td class="hourscol">'
+            + credit
+            + "</td></tr>"
+        )
+
+    rows = (
+        area("Core Requirements")
+        + course(["CS 171"], ["Example Programming"], "3.0")
+        + course(["ENGR 131"], ["Example Alternative"], other=True)
+    )
+    rows += (
+        area("Elective Requirements")
+        + comment(
+            "Select 8 courses from the list below. For sequences, each course may count separately provided that it is not already used to satisfy another degree requirement.",
+            "24.0",
+        )
+        + course(["CS 281", "CS 283"], ["Example Architecture", "Example Systems"])
+        + course(["CS 417"], ["Example Learning"])
+        + course(["ECE 417"], ["Example Learning"], other=True)
+    )
+    rows += (
+        area("Project Requirements")
+        + comment("Select one of the following sequences:", "6.0")
+        + course(
+            ["CI 101", "CI 102", "CI 103"],
+            ["Example Design A", "Example Design B", "Example Design C"],
+        )
+    )
+    rows += (
+        area("Mathematics Requirements")
+        + comment("Select one of the following sequences:", "11.0-14.0")
+        + course(
+            ["MATH 121", "MATH 122", "MATH 200"],
+            ["Example Calculus A", "Example Calculus B", "Example Calculus C"],
+        )
+        + course(["MATH 201"], ["Example Algebra"], "3.0-4.0")
+        + course(["ECE 231"], ["Other Algebra"], other=True)
+    )
+    rows += (
+        area("Science Requirements")
+        + comment("Select from the following 100-400 level courses:", "20.0")
+        + comment("Any BIO (Bioscience)")
+    )
+    rows += (
+        area("Arts & Humanities Requirements")
+        + course(["PHIL 311"], ["Example Ethics"], "3.0")
+        + area("University Requirements")
+        + course(["CIVC 101"], ["Example Civic"], "1.0")
+        + area("Free Electives")
+        + comment("Select any unrestricted 099-499 courses", "46.0-50.0")
+        + comment("Total Credits", "180.0")
+    )
+    policies = "<p>Only one of the two High Performance Computing sequences may be selected. MATH 200 can use any other MATH course not used elsewhere. Pass three writing-intensive courses after their freshman year. Two writing-intensive courses must be in a student’s major. Transfer students need to meet with an academic advisor.</p>"
+    return (
+        '<h1>Artificial Intelligence &amp; Machine Learning</h1><p>Degree Awarded: Bachelor of Science (BS)</p><div id="degreerequirementstextcontainer"><table class="sc_courselist">'
+        + rows
+        + "</table>"
+        + policies
+        + "</div>"
+    )
+
+
+def test_drexel_nested_sequences_and_alternatives():
+    d = load("drexel-ai-ml-bs").parse(drexel_fixture())
+    pool = next(r for r in d["requirements"] if r["kind"] == "choose_courses")
+    assert pool["count"] == 8 and len(pool["course_ids"]) == 4
+    design = next(
+        r for r in d["requirements"] if r["title"] == "Project Requirements sequence choice"
+    )
+    sequence = next(r for r in d["requirements"] if r["parent_id"] == design["id"])
+    assert design["kind"] == "alternative" and sequence["kind"] == "all"
+    assert all(c["credits"] is None for c in d["courses"] if c["code"].startswith("CI "))
+    algebra = next(r for r in d["requirements"] if "drexel-math-201" in r["course_ids"])
+    assert "3.0-4.0" in algebra["summary"]
+    with pytest.raises(ValueError, match="policy changed"):
+        load("drexel-ai-ml-bs").parse(drexel_fixture().replace("not already used", "already used"))
+    with pytest.raises(ValueError, match="180-credit"):
+        load("drexel-ai-ml-bs").parse(drexel_fixture().replace("180.0", "181.0"))
