@@ -185,7 +185,8 @@ def requirement_tree(p):
         children = "".join(render(child, seen) for child in requirements if child.get("parent_id") == rid)
         selection = []
         if r.get("count") is not None:
-            selection.append(f'{r["count"]} course' + ('' if r['count'] == 1 else 's'))
+            noun = 'alternative' if r.get('kind') == 'alternative' else 'selection' if children else 'course'
+            selection.append(f'{r["count"]} {noun}' + ('' if r['count'] == 1 else 's'))
         if r.get("credits") is not None:
             selection.append(f'{r["credits"]} {human(r.get("credit_unit"))}')
         course_list = '<p class="course-list-label">Listed courses / options — follow the group rule</p><ul class="requirement-courses">' + courses + '</ul>' if courses else ''

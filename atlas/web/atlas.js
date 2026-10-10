@@ -19,6 +19,7 @@
   const urlSafe = u => /^https?:\/\//.test(u || '');
   const link = (url, label) => urlSafe(url) ? `<a href="${e(url)}" rel="noopener noreferrer">${e(label)} ↗</a>` : e(label);
   const rankLabel = r => r.rank != null ? `#${r.rank}` : r.rank_upper_bound != null ? `Top ${r.rank_upper_bound} · exact rank unverified` : 'Exact rank unverified';
+  const requirementCount = (r, p) => { const noun = r.kind === 'alternative' ? 'alternative' : (p.requirements || []).some(child => child.parent_id === r.id) ? 'selection' : 'course'; return `${r.count} ${noun}${r.count === 1 ? '' : 's'}`; };
   const announce = text => { document.getElementById('compare-status').textContent = text; };
   const requirementScope = p => {
     const scope = {concentration: 'Concentration requirements only; not the whole parent degree.', minor: 'Minor requirements only; not the whole degree.', additional_major: 'Additional-major requirements only; not the primary degree.', degree: 'Represented degree program at its recorded catalog year.'}[p.program_kind] || 'Represented program only.';
@@ -93,7 +94,7 @@
       ['Course metadata availability', metadataCounts],
       ['Course records', p => `${courses(p).length} unique records<small>${courses(p).filter(c => c.credits == null).length} with unknown credits; not a degree total</small>`],
       ['Credit units', p => { const units = [...new Set(courses(p).map(c => pretty(c.credit_unit)))]; return e(units.join(', ') || 'Unknown') + '<small>No cross-calendar conversion</small>'; }],
-      ['Requirement structure', p => { const roots = (p.requirements || []).filter(r => !r.parent_id); return roots.length ? '<ul>' + roots.map(r => `<li>${e(r.title)}<small>${e(pretty(r.kind))}${r.count != null ? ' · ' + e(r.count) + ' courses' : ''}${r.credits != null ? ' · ' + e(r.credits) + ' ' + e(pretty(r.credit_unit)) : ''}</small></li>`).join('') + '</ul><small>Nested choices and full evidence on program page.</small>' : 'Not yet extracted'; }],
+      ['Requirement structure', p => { const roots = (p.requirements || []).filter(r => !r.parent_id); return roots.length ? '<ul>' + roots.map(r => `<li>${e(r.title)}<small>${e(pretty(r.kind))}${r.count != null ? ' · ' + e(requirementCount(r, p)) : ''}${r.credits != null ? ' · ' + e(r.credits) + ' ' + e(pretty(r.credit_unit)) : ''}</small></li>`).join('') + '</ul><small>Nested choices and full evidence on program page.</small>' : 'Not yet extracted'; }],
       ['Course categories', p => courses(p).length ? '<dl class="mini-counts">' + Object.entries(categories).map(([key, label]) => `<dt>${e(label)}</dt><dd>${courses(p).filter(c => (categories[c.category] ? c.category : 'other') === key).length}</dd>`).join('') + '</dl><small>Observed course counts; incomplete curricula may omit categories.</small>' : 'Not yet extracted'],
       ['Source-stated outcomes', p => outcomeList(p, 'source_stated')],
       ['Inferred taxonomy', p => outcomeList(p, 'inferred_taxonomy') + '<small>Editorial interpretation</small>'],
