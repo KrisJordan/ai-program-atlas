@@ -54,7 +54,11 @@ def test_new_records_validate_and_reject_unrelated_refresh(pid):
         assert not program['courses'] and not program['requirements']
     else:
         assert program['requirements'] and program['curriculum_audit']
-    assert program['first_offered'] is None
+    if program['first_offered'] is not None:
+        first = program['first_offered']
+        assert first['value'] and first['precision']
+        assert first['evidence_url'].startswith(('https://', 'http://'))
+        assert first['evidence_url'] in {source['url'] for source in program['sources']}
     assert program['institution']['calendar'] in {'unknown','semester','quarter','other'}
     for html in ('<main><h1>Unrelated catalog</h1></main>',
                  '<main><h1>Sign in</h1><input type="password"></main>'):

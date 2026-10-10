@@ -5,24 +5,29 @@
     "name": "University of Rochester",
     "aliases": [],
     "calendar": "unknown",
-    "website": null
+    "website": "https://www.rochester.edu/"
   },
   "title": "Artificial Intelligence",
   "award_level": "concentration",
   "program_kind": "concentration",
-  "hosting_unit": null,
-  "status": "unknown",
+  "hosting_unit": "Department of Computer Science",
+  "status": "active",
   "first_offered": null,
-  "overview": "Official university content confirms this undergraduate concentration identity. Detailed curriculum evidence remains pending.",
+  "overview": "An optional AI concentration within the Computer Science BS: five advanced four-credit courses, with at least three from the approved AI area.",
   "catalog_year": null,
   "verification_status": "partial",
   "last_verified": "2026-10-10",
-  "curriculum_status": "pending",
+  "curriculum_status": "complete",
   "links": [
     {
       "kind": "overview",
       "url": "https://www.cs.rochester.edu/undergraduate/bs-requirements.html",
       "label": "Official program identity source"
+    },
+    {
+      "kind": "study",
+      "url": "https://www.cs.rochester.edu/undergraduate/bs-requirements.html",
+      "label": "Reviewed concentration requirements"
     }
   ],
   "sources": [
@@ -35,13 +40,325 @@
       "catalog_year": null,
       "locator": "BS in Computer Science; Artificial Intelligence program entry",
       "confidence": "high"
+    },
+    {
+      "id": "rochester-ai-concentration-official",
+      "url": "https://www.cs.rochester.edu/undergraduate/bs-requirements.html",
+      "title": "AI concentration requirements",
+      "locator": "AI-specific requirement groups and local policies",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "confidence": "high"
+    },
+    {
+      "id": "rochester-ai-concentration-advising",
+      "url": "https://www.cs.rochester.edu/undergraduate/advising.html",
+      "title": "Undergraduate advising",
+      "locator": "Transfer Course Credit; changes to official course plan",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "confidence": "high"
     }
   ],
   "outcomes": [],
-  "courses": [],
-  "requirements": [],
+  "courses": [
+    {
+      "id": "rochester-csc-239",
+      "code": "CSC 239",
+      "name": "Theoretical Machine Learning",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rochester-ai-concentration-official",
+      "url": "https://www.cs.rochester.edu/undergraduate/bs-requirements.html#artificial-intelligence",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-csc-240",
+      "code": "CSC 240",
+      "name": "Data Mining",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rochester-ai-concentration-official",
+      "url": "https://www.cs.rochester.edu/undergraduate/bs-requirements.html#artificial-intelligence",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-csc-244",
+      "code": "CSC 244",
+      "name": "Machine Reasoning",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rochester-ai-concentration-official",
+      "url": "https://www.cs.rochester.edu/undergraduate/bs-requirements.html#artificial-intelligence",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-csc-245",
+      "code": "CSC 245",
+      "name": "Deep Learning",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rochester-ai-concentration-official",
+      "url": "https://www.cs.rochester.edu/undergraduate/bs-requirements.html#artificial-intelligence",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-csc-246",
+      "code": "CSC 246",
+      "name": "Machine Learning",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rochester-ai-concentration-official",
+      "url": "https://www.cs.rochester.edu/undergraduate/bs-requirements.html#artificial-intelligence",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-csc-247",
+      "code": "CSC 247",
+      "name": "Natural Language Processing",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rochester-ai-concentration-official",
+      "url": "https://www.cs.rochester.edu/undergraduate/bs-requirements.html#artificial-intelligence",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-csc-249",
+      "code": "CSC 249",
+      "name": "Machine Vision",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rochester-ai-concentration-official",
+      "url": "https://www.cs.rochester.edu/undergraduate/bs-requirements.html#artificial-intelligence",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-csc-266",
+      "code": "CSC 266",
+      "name": "Frontiers in Deep Learning",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rochester-ai-concentration-official",
+      "url": "https://www.cs.rochester.edu/undergraduate/bs-requirements.html#artificial-intelligence",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-csc-277",
+      "code": "CSC 277",
+      "name": "End-to-End Deep Learning",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rochester-ai-concentration-official",
+      "url": "https://www.cs.rochester.edu/undergraduate/bs-requirements.html#artificial-intelligence",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-csc-290",
+      "code": "CSC 290",
+      "name": "Machine Learning Systems for Efficient AI",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rochester-ai-concentration-official",
+      "url": "https://www.cs.rochester.edu/undergraduate/bs-requirements.html#artificial-intelligence",
+      "public_site": null,
+      "syllabus": null
+    }
+  ],
+  "requirements": [
+    {
+      "id": "rochester-ai-concentration-total",
+      "parent_id": null,
+      "title": "Five advanced courses for the concentration",
+      "kind": "all",
+      "count": 5,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rochester-ai-concentration-official",
+      "source_text": null,
+      "summary": "Five distinct four-credit advanced CS courses numbered 200 or higher; one more course than the base BS requires.",
+      "course_ids": []
+    },
+    {
+      "id": "rochester-ai-concentration-ai-minimum",
+      "parent_id": "rochester-ai-concentration-total",
+      "title": "At least three AI-area courses",
+      "kind": "choose_courses",
+      "count": 3,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rochester-ai-concentration-official",
+      "source_text": null,
+      "summary": "At least three of the five courses must be in the approved AI area. Additional unused AI-area courses may fill the remaining two positions.",
+      "course_ids": [
+        "rochester-csc-239",
+        "rochester-csc-240",
+        "rochester-csc-244",
+        "rochester-csc-245",
+        "rochester-csc-246",
+        "rochester-csc-247",
+        "rochester-csc-249",
+        "rochester-csc-266",
+        "rochester-csc-277",
+        "rochester-csc-290"
+      ]
+    },
+    {
+      "id": "rochester-ai-concentration-remaining",
+      "parent_id": "rochester-ai-concentration-total",
+      "title": "Two remaining advanced-course positions",
+      "kind": "choose_courses",
+      "count": 2,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rochester-ai-concentration-official",
+      "source_text": null,
+      "summary": "Two additional eligible four-credit advanced CS courses numbered 200 or higher, including unused AI-area choices. This is an open course-number rule, not a missing finite approved list.",
+      "course_ids": []
+    },
+    {
+      "id": "rochester-ai-concentration-exclusions",
+      "parent_id": "rochester-ai-concentration-total",
+      "title": "Core and math exclusions",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rochester-ai-concentration-official",
+      "source_text": null,
+      "summary": "Advanced-course choices exclude the parent program core and additional math courses listed on the same source page.",
+      "course_ids": []
+    },
+    {
+      "id": "rochester-ai-concentration-relationship",
+      "parent_id": "rochester-ai-concentration-total",
+      "title": "Optional concentration within CS BS",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rochester-ai-concentration-official",
+      "source_text": null,
+      "summary": "This is an optional concentration for BS Computer Science students; it does not constitute a standalone AI degree.",
+      "course_ids": []
+    },
+    {
+      "id": "rochester-ai-concentration-transfer-limit",
+      "parent_id": "rochester-ai-concentration-total",
+      "title": "Limit on outside core/major electives",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rochester-ai-concentration-official",
+      "source_text": null,
+      "summary": "No more than two core or major electives may be completed at other institutions, except through the University's education-abroad program.",
+      "course_ids": []
+    },
+    {
+      "id": "rochester-ai-concentration-transfer-approval",
+      "parent_id": null,
+      "title": "Approval of transfer coursework",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rochester-ai-concentration-advising",
+      "source_text": null,
+      "summary": "Transfer courses used for CS major requirements require approval from the corresponding department; submit course approval materials and syllabi for CS evaluation.",
+      "course_ids": []
+    },
+    {
+      "id": "rochester-ai-concentration-plan-changes",
+      "parent_id": null,
+      "title": "Changes to the CS course plan",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rochester-ai-concentration-advising",
+      "source_text": null,
+      "summary": "Discuss changes to the official CS course plan with the CS undergraduate coordinator.",
+      "course_ids": []
+    }
+  ],
   "notes": [
-    "Official program identity verified; curriculum pending.",
-    "Official CS BS requirements define Artificial Intelligence concentration and list its approved advanced courses. Distinct from a standalone AI degree. Curriculum extraction and full institutional inventory pending."
-  ]
+    "Complete designation covers the local concentration inventory, not the full CS BS. At least three of five courses must be approved AI courses; the other two may include unused AI courses or other eligible advanced CS courses.",
+    "The general advanced-course rule is open: course number 200 or higher, four credits, excluding core/additional math courses listed by the parent degree. It is not an unavailable finite elective list.",
+    "Five courses, each four credits, is a requirement constraint. Individual catalog credits were not independently verified, so each course record keeps credits null rather than asserting catalog metadata.",
+    "Transfer limit is two outside core/major electives, with the published education-abroad exception; departmental approval remains necessary. Changes to the official course plan go through the CS undergraduate coordinator.",
+    "Course descriptions/prerequisites, unit/calendar normalization, catalog edition, launch date and public course resources remain unverified. Primary source was read from permitted cache fetched 2026-10-10T21:59:27+00:00; advising source was fetched in this review."
+  ],
+  "curriculum_audit": {
+    "scope": "concentration",
+    "reviewed_at": "2026-10-10",
+    "source_ids": [
+      "rochester-ai-concentration-identity",
+      "rochester-ai-concentration-official",
+      "rochester-ai-concentration-advising"
+    ],
+    "sections": [
+      "Five advanced four-credit courses numbered 200+",
+      "At least three of ten AI-area options",
+      "Two remaining advanced-course positions with overlap prevention",
+      "Exclusion of parent core/math courses",
+      "Optional CS BS relationship",
+      "Two-course outside-institution limit and education-abroad exception",
+      "Department transfer approval and course-plan changes"
+    ],
+    "unresolved_requirements": [],
+    "metadata_gaps": [
+      "Unverified course metadata remains null as described in notes",
+      "Catalog edition and credit/calendar normalization unverified",
+      "Public course sites and syllabi unverified"
+    ]
+  }
 }

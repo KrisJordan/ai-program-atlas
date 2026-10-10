@@ -5,24 +5,34 @@
     "name": "University of Georgia",
     "aliases": [],
     "calendar": "unknown",
-    "website": null
+    "website": "https://www.uga.edu/"
   },
   "title": "Artificial Intelligence",
   "award_level": "concentration",
   "program_kind": "concentration",
-  "hosting_unit": null,
-  "status": "unknown",
-  "first_offered": null,
-  "overview": "Official university content confirms this undergraduate concentration identity. Detailed curriculum evidence remains pending.",
+  "hosting_unit": "School of Computing",
+  "status": "active",
+  "first_offered": {
+    "value": "Fall 2026",
+    "precision": "term",
+    "evidence_url": "https://cs.uga.edu/artificial-intelligence-area-emphasis",
+    "uncertainty": "Official page states available starting Fall 2026; actual first enrollment was not independently verified."
+  },
+  "overview": "An AI area of emphasis within the Computer Science bachelor degree, with three required AI courses, at least two AI electives and explicit parent-plan modifications.",
   "catalog_year": null,
   "verification_status": "partial",
   "last_verified": "2026-10-10",
-  "curriculum_status": "pending",
+  "curriculum_status": "complete",
   "links": [
     {
       "kind": "overview",
       "url": "https://cs.uga.edu/news/stories/2025/area-emphasis-artificial-intelligence-ai-provides-preparation-similar-emerging-ai",
       "label": "Official program identity source"
+    },
+    {
+      "kind": "study",
+      "url": "https://cs.uga.edu/artificial-intelligence-area-emphasis",
+      "label": "Reviewed concentration requirements"
     }
   ],
   "sources": [
@@ -35,13 +45,344 @@
       "catalog_year": null,
       "locator": "Area of Emphasis in Artificial Intelligence; Artificial Intelligence program entry",
       "confidence": "high"
+    },
+    {
+      "id": "georgia-ai-emphasis-requirements",
+      "url": "https://cs.uga.edu/artificial-intelligence-area-emphasis",
+      "title": "AI concentration requirements",
+      "locator": "AI-specific requirement groups and local policies",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "confidence": "high"
+    },
+    {
+      "id": "georgia-ai-emphasis-degree-policy",
+      "url": "https://www.cs.uga.edu/bachelor-science-computer-science",
+      "title": "Bachelor of Science in Computer Science",
+      "locator": "Fall 2026 AI emphasis availability; grade minimum for major-related coursework",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "confidence": "high"
     }
   ],
   "outcomes": [],
-  "courses": [],
-  "requirements": [],
+  "courses": [
+    {
+      "id": "georgia-csci-3360",
+      "code": "CSCI 3360",
+      "name": "Data Science and Applied Machine Learning I",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "georgia-ai-emphasis-requirements",
+      "url": "https://bulletin.uga.edu/Course/Details/32623",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "georgia-csci-4360-6360",
+      "code": "CSCI 4360/6360",
+      "name": "Data Science and Applied Machine Learning II",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "georgia-ai-emphasis-requirements",
+      "url": "https://bulletin.uga.edu/Course/Details/32634",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "georgia-csci-phil-4550-6550",
+      "code": "CSCI(PHIL) 4550/6550",
+      "name": "Artificial Intelligence",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "georgia-ai-emphasis-requirements",
+      "url": "https://bulletin.uga.edu/Course/Details/4947",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "georgia-csci-4170-6170",
+      "code": "CSCI 4170/6170",
+      "name": "Introduction to Computational Investing",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "georgia-ai-emphasis-requirements",
+      "url": "https://bulletin.uga.edu/Course/Details/38217",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "georgia-csci-4380-6380",
+      "code": "CSCI 4380/6380",
+      "name": "Data Mining",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "georgia-ai-emphasis-requirements",
+      "url": "https://bulletin.uga.edu/Course/Details/31068",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "georgia-csci-arti-4530-6530",
+      "code": "CSCI(ARTI) 4530/6530",
+      "name": "Introduction to Robotics",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "georgia-ai-emphasis-requirements",
+      "url": "https://bulletin.uga.edu/Course/Details/14113",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "georgia-csci-4560-6560",
+      "code": "CSCI 4560/6560",
+      "name": "Evolutionary Computation and Its Applications",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "georgia-ai-emphasis-requirements",
+      "url": "https://bulletin.uga.edu/Course/Details/13144",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "georgia-csci-arti-4600-6600",
+      "code": "CSCI(ARTI) 4600/6600",
+      "name": "Reinforcement Learning",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "georgia-ai-emphasis-requirements",
+      "url": "https://bulletin.uga.edu/Course/Details/44048",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "georgia-csci-4850-6850",
+      "code": "CSCI 4850/6850",
+      "name": "Biomedical Image Analysis",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "georgia-ai-emphasis-requirements",
+      "url": "https://bulletin.uga.edu/Course/Details/22798",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "georgia-csci-4860-6860",
+      "code": "CSCI 4860/6860",
+      "name": "Computational Neuroscience",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "georgia-ai-emphasis-requirements",
+      "url": "https://bulletin.uga.edu/Course/Details/45617",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "georgia-csci-4900-6900",
+      "code": "CSCI 4900/6900",
+      "name": "Special Topics in Computer Science",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "georgia-ai-emphasis-requirements",
+      "url": "https://bulletin.uga.edu/Course/Details/4687",
+      "public_site": null,
+      "syllabus": null
+    }
+  ],
+  "requirements": [
+    {
+      "id": "georgia-ai-emphasis-total",
+      "parent_id": null,
+      "title": "AI emphasis requirements",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "georgia-ai-emphasis-requirements",
+      "source_text": null,
+      "summary": "Complete the listed required courses and at least the specified number of AI options.",
+      "course_ids": []
+    },
+    {
+      "id": "georgia-ai-emphasis-required",
+      "parent_id": "georgia-ai-emphasis-total",
+      "title": "Required AI courses",
+      "kind": "all",
+      "count": 3,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "georgia-ai-emphasis-requirements",
+      "source_text": null,
+      "summary": "",
+      "course_ids": [
+        "georgia-csci-3360",
+        "georgia-csci-4360-6360",
+        "georgia-csci-phil-4550-6550"
+      ]
+    },
+    {
+      "id": "georgia-ai-emphasis-electives",
+      "parent_id": "georgia-ai-emphasis-total",
+      "title": "At least 2 AI electives",
+      "kind": "choose_courses",
+      "count": 2,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "georgia-ai-emphasis-requirements",
+      "source_text": null,
+      "summary": "This is a minimum selection; further qualifying electives may count toward the parent degree.",
+      "course_ids": [
+        "georgia-csci-4170-6170",
+        "georgia-csci-4380-6380",
+        "georgia-csci-arti-4530-6530",
+        "georgia-csci-4560-6560",
+        "georgia-csci-arti-4600-6600",
+        "georgia-csci-4850-6850",
+        "georgia-csci-4860-6860",
+        "georgia-csci-4900-6900"
+      ]
+    },
+    {
+      "id": "georgia-ai-emphasis-topic-approval",
+      "parent_id": "georgia-ai-emphasis-total",
+      "title": "Special topics approval",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "georgia-ai-emphasis-requirements",
+      "source_text": null,
+      "summary": "CSCI 4900/6900 requires prior approval and an artificial-intelligence-related topic.",
+      "course_ids": []
+    },
+    {
+      "id": "georgia-ai-emphasis-waivers",
+      "parent_id": "georgia-ai-emphasis-total",
+      "title": "Conditional parent-degree exceptions",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "georgia-ai-emphasis-requirements",
+      "source_text": null,
+      "summary": "After all AI emphasis requirements are fulfilled, these parent-degree requirements are waived: CSCI 4720: Computer Architecture and Organization; CSCI 4050/4370: Application Design; CSCI 4730/4760: System Design. All other major requirements remain in force.",
+      "course_ids": []
+    },
+    {
+      "id": "georgia-ai-emphasis-elective-overlap",
+      "parent_id": "georgia-ai-emphasis-total",
+      "title": "Parent major-elective counting",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "georgia-ai-emphasis-requirements",
+      "source_text": null,
+      "summary": "AI emphasis electives count toward the parent's 12-hour major-elective requirement; do not add them as a second credit total.",
+      "course_ids": []
+    },
+    {
+      "id": "georgia-ai-emphasis-relationship",
+      "parent_id": "georgia-ai-emphasis-total",
+      "title": "CS bachelor degree and accreditation distinction",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "georgia-ai-emphasis-requirements",
+      "source_text": null,
+      "summary": "This emphasis accompanies a Computer Science bachelor degree. The department states that the modified AI track does not meet ABET accreditation requirements; the regular CS degree is separately described as accredited.",
+      "course_ids": []
+    },
+    {
+      "id": "georgia-ai-emphasis-grade-policy",
+      "parent_id": null,
+      "title": "Grade minimum for major-related coursework",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "georgia-ai-emphasis-degree-policy",
+      "source_text": null,
+      "summary": "Major-related coursework and associated prerequisites require C (2.0) or higher. This includes the AI emphasis within the CS degree.",
+      "course_ids": []
+    }
+  ],
   "notes": [
-    "Official program identity verified; curriculum pending.",
-    "School of Computing confirms approved AI Area of Emphasis within Computer Science with transcript recognition. Classified as concentration; separate AI certificates and graduate AI degrees excluded. The source notes this track does not meet requirements of an ABET-accredited CS degree. Curriculum pending."
-  ]
+    "Complete designation covers local emphasis requirements and its explicit modifications to the parent CS bachelor plan, not every parent degree requirement.",
+    "Published paired undergraduate/graduate numbers and cross-list prefixes are retained as one source-listed course option. This does not establish unrestricted undergraduate access to graduate-numbered sections.",
+    "At least two of eight AI electives are required after three fixed courses. CSCI 4900/6900 requires prior approval and an AI topic.",
+    "After full emphasis completion, CSCI 4720 and the CSCI 4050/4370 and CSCI 4730/4760 requirement groups are waived. Every other parent major requirement remains in force; emphasis electives also count toward 12 hours of major electives.",
+    "The department states that this modified AI track does not meet ABET accreditation requirements. This distinction is separate from the regular CS degree accreditation and is preserved without a quality judgment.",
+    "All major-related coursework and prerequisites require C (2.0) or higher. Course credits, descriptions, prerequisites, public resources, calendar/unit normalization and catalog edition remain unverified.",
+    "Both current department pages explicitly date availability to Fall 2026. This supports the source-stated start term; it is not inferred from the older news URL."
+  ],
+  "curriculum_audit": {
+    "scope": "concentration",
+    "reviewed_at": "2026-10-10",
+    "source_ids": [
+      "georgia-ai-emphasis-identity",
+      "georgia-ai-emphasis-requirements",
+      "georgia-ai-emphasis-degree-policy"
+    ],
+    "sections": [
+      "Three required courses",
+      "At least two of eight AI options",
+      "AI special-topic prior approval",
+      "Three conditional parent-degree waivers",
+      "Remaining-parent-requirements condition",
+      "Major-elective overlap",
+      "CS degree and accreditation distinction",
+      "C/2.0 grade rule"
+    ],
+    "unresolved_requirements": [],
+    "metadata_gaps": [
+      "Unverified course metadata remains null as described in notes",
+      "Catalog edition and credit/calendar normalization unverified",
+      "Public course sites and syllabi unverified"
+    ]
+  }
 }
