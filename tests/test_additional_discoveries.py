@@ -16,16 +16,61 @@ def load(slug):
     return mod
 
 
-def test_columbia_minor_requires_local_minor_context():
+def columbia_fixture():
+    def row(code, title, alternative=False):
+        return f'<tr class="{"orclass" if alternative else "regular"}"><td class="codecol">{code}</td><td>{title}</td><td class="hourscol"></td></tr>'
+
+    def table(rows):
+        return "<table>" + "".join(rows) + "</table>"
+
+    choice = "<tr><td>Choose one:</td></tr>"
+    return (
+        "<h3>\u200bMinor in Artificial Intelligence</h3><p>The minor consists of 6 courses.</p>"
+        + table(
+            [
+                row("MATH UN2015", "Example Math"),
+                row("COMS W2132", "Example Coding"),
+                row("IEOR E2000", "Example Data", True),
+                row("IEOR E2000", "Example Data"),
+            ]
+        )
+        + "<h4>AI Requirement:</h4>"
+        + table([row("COMS W4701", "Example AI")])
+        + "<h4>Ethics Requirement:</h4>"
+        + table([choice, row("COMS W4710", "Example Ethics")])
+        + "<h4>AI Elective:</h4>"
+        + table(
+            [
+                choice,
+                "<tr><td>Any COMS 47XX course</td></tr>",
+                "<tr><td>Relevant COMS 4995/6998 course</td></tr>",
+                row("STAT GU4243", ""),
+            ]
+        )
+        + "<p>MATH UN2015 allows a separate linear algebra course and a separate probability course.</p>"
+        + "<p>Students in majors offered solely or jointly by CS are not eligible.</p>"
+    )
+
+
+def test_columbia_preserves_duplicate_ambiguity_and_blank_points():
     parse = load("columbia-ai-minor").parse
+    data = parse(columbia_fixture())
+    assert data["program_kind"] == "minor" and data["curriculum_status"] == "partial"
+    assert len([c for c in data["courses"] if c["code"] == "IEOR E2000"]) == 1
+    assert all(c["credits"] is None for c in data["courses"])
+    assert next(c for c in data["courses"] if c["code"] == "STAT GU4243")["name"].endswith(
+        "(title not supplied)"
+    )
+    assert any(r["id"].endswith("duplicate-source-row") for r in data["requirements"])
+    assert any(r["id"].endswith("broad-electives") for r in data["requirements"])
+    assert "curriculum_audit" not in data and "last_verified" not in data
     assert (
-        parse("<main><h2>Minor in Artificial Intelligence</h2><p>Six courses.</p></main>")[
-            "program_kind"
-        ]
-        == "minor"
+        parse(columbia_fixture().replace("6 courses", "7 courses"))["requirements"][0]["count"] == 7
     )
     with pytest.raises(ValueError):
-        parse("<main><h2>Artificial Intelligence</h2><p>Research only.</p></main>")
+        parse("<h3>Minor in Artificial Intelligence</h3><p>Six courses.</p>")
+    with pytest.raises(ValueError, match="Broad elective"):
+        parse(columbia_fixture().replace("47XX", "48XX"))
 
 
 def test_stanford_formal_concentration_not_standalone_bs():
@@ -49,5 +94,12 @@ def test_additional_survey_integrity():
     assert sum(r["status"] == "confirmed" for r in rows) == 2
     for pid in ["columbia-ai-minor", "stanford-ai-track"]:
         p = json.loads((ROOT / "data/programs" / (pid + ".json")).read_text())
-        assert p["curriculum_status"] == "pending"
-        assert not p["courses"] and not p["requirements"]
+        if pid == "stanford-ai-track":
+            assert p["curriculum_status"] == "pending"
+            assert not p["courses"] and not p["requirements"]
+        else:
+            assert p["curriculum_status"] == "partial"
+            assert p["curriculum_audit"]["unresolved_requirements"]
+            from atlas.db import validate_program
+
+            validate_program(p)
