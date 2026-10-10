@@ -7,6 +7,7 @@ from atlas.db import validate_program
 ROOT=Path(__file__).resolve().parents[1]
 FIXTURES=ROOT/'tests/fixtures/national_minors'
 IDS={'gatech':'georgia-institute-of-technology-computing-and-artificial-intelligence-minor-minor','cornell':'cornell-university-artificial-intelligence-minor-minor','northwestern':'northwestern-university-artificial-intelligence-minor-minor-minor','emory':'emory-university-artificial-intelligence-minor-minor'}
+IDS.update({'tamu':'texas-am-ai-business-minor','scu':'santa-clara-responsible-ai-minor','gatech-apps':'georgia-institute-of-technology-applications-of-artificial-intelligence-and-machine-learning-minor-minor'})
 def adapter(key):return importlib.import_module('atlas.adapters.'+IDS[key]+'.adapter')
 def fixture(key):return (FIXTURES/(key+'.html')).read_text()
 
@@ -58,5 +59,36 @@ def test_curated_records_have_explicit_audits_and_registered_sources(key):
     audit=d['curriculum_audit']
     assert audit['scope']=='minor' and audit['sections'] and audit['source_ids']
     assert bool(audit['unresolved_requirements'])==(d['curriculum_status']=='partial')
-    if key in ('northwestern','emory'):assert d['curriculum_status']=='complete'
+    if key in ('northwestern','emory','tamu','scu'):assert d['curriculum_status']=='complete'
     else:assert d['curriculum_status']=='partial'
+
+
+def test_santa_clara_whole_foundations_and_credit_electives():
+    d=adapter('scu').parse(fixture('scu'))
+    assert len(d['courses'])==46
+    foundation=next(g for g in d['requirements'] if g['id']=='scu-foundation')
+    assert foundation['kind']=='alternative'
+    assert len([g for g in d['requirements'] if g['parent_id']==foundation['id']])==3
+    math=next(g for g in d['requirements'] if g['course_ids']==['scu-amath-108','scu-math-122'])
+    assert math['parent_id']=='scu-option-a' and math['count']==1
+    electives=next(g for g in d['requirements'] if g['id']=='scu-electives')
+    assert electives['kind']=='choose_credits' and electives['credits']==4 and len(electives['course_ids'])==28
+    assert next(c for c in d['courses'] if c['code']=='CSCI 62')['credits'] is None
+    with pytest.raises(ValueError):adapter('scu').parse(fixture('scu').replace('Option C:','Unknown option:'))
+
+
+def test_tamu_observes_course_rows_and_policies():
+    d=adapter('tamu').parse(fixture('tamu'))
+    assert len(d['courses'])==5 and sum(c['credits'] for c in d['courses'])==15
+    assert all(c['name'].startswith('Synthetic course') for c in d['courses'])
+    with pytest.raises(ValueError):adapter('tamu').parse(fixture('tamu').replace('overall GPA of 3.00','overall GPA of 2.50'))
+
+
+def test_applications_minor_requires_four_whole_tracks_and_named_topics():
+    d=adapter('gatech-apps').parse(fixture('gatech-apps'))
+    tracks=[g for g in d['requirements'] if g['parent_id']=='gt-apps-tracks']
+    assert len(tracks)==4 and all(g['credits']==15 for g in tracks)
+    assert len([g for g in d['requirements'] if g['id'].endswith('-electives')])==4
+    assert len([c for c in d['courses'] if c['code']=='MGT 4803'])==3
+    assert not any('XXXX' in c['code'] for c in d['courses'])
+    assert all(g['count']==2 for g in d['requirements'] if g['id'].endswith('-electives'))

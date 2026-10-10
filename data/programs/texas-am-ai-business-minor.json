@@ -4,23 +4,23 @@
     "id": "texas-am-university",
     "name": "Texas A&M University",
     "aliases": [],
-    "calendar": "unknown",
+    "calendar": "semester",
     "website": null
   },
   "title": "Artificial Intelligence in Business",
   "award_level": "minor",
   "program_kind": "minor",
-  "hosting_unit": null,
+  "hosting_unit": "Mays Business School",
   "status": "unknown",
   "first_offered": null,
-  "overview": "Official university content confirms this undergraduate minor identity. Detailed curriculum evidence remains pending.",
+  "overview": "Published minor requirements and program-specific policies are mapped, including nested alternatives and elective choices.",
   "catalog_year": "2026-2027",
-  "verification_status": "partial",
+  "verification_status": "confirmed",
   "last_verified": "2026-10-10",
-  "curriculum_status": "pending",
+  "curriculum_status": "complete",
   "links": [
     {
-      "kind": "overview",
+      "kind": "catalog",
       "url": "https://catalog.tamu.edu/undergraduate/business/artificial-intelligence-business-minor/",
       "label": "Official program identity source"
     }
@@ -33,15 +33,203 @@
       "fetched_at": "2026-10-10",
       "source_date": null,
       "catalog_year": "2026-2027",
-      "locator": "Artificial Intelligence in Business; Artificial Intelligence in Business program entry",
+      "locator": "Minor-specific requirement groups, course choices, eligibility and policy text",
       "confidence": "high"
     }
   ],
-  "outcomes": [],
-  "courses": [],
-  "requirements": [],
+  "outcomes": [
+    {
+      "text": "Apply AI and machine learning in business work.",
+      "kind": "source_stated",
+      "source_id": "texas-am-ai-business-minor-identity",
+      "locator": "Program overview"
+    }
+  ],
+  "courses": [
+    {
+      "id": "tamu-busn-250",
+      "code": "BUSN 250",
+      "name": "Business Transformation with Generative Artificial Intelligence",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "texas-am-ai-business-minor-identity",
+      "url": "https://catalog.tamu.edu/search/?P=BUSN%20250",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "tamu-busn-255",
+      "code": "BUSN 255",
+      "name": "Business Storytelling with AI",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "texas-am-ai-business-minor-identity",
+      "url": "https://catalog.tamu.edu/search/?P=BUSN%20255",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "tamu-busn-460",
+      "code": "BUSN 460",
+      "name": "Machine Learning and Predictive Modeling for Business Applications",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "texas-am-ai-business-minor-identity",
+      "url": "https://catalog.tamu.edu/search/?P=BUSN%20460",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "tamu-busn-465",
+      "code": "BUSN 465",
+      "name": "Agentic AI in Business",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "texas-am-ai-business-minor-identity",
+      "url": "https://catalog.tamu.edu/search/?P=BUSN%20465",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "tamu-busn-470",
+      "code": "BUSN 470",
+      "name": "Business Cases for Textual Generative and Agentic AI",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "texas-am-ai-business-minor-identity",
+      "url": "https://catalog.tamu.edu/search/?P=BUSN%20470",
+      "public_site": null,
+      "syllabus": null
+    }
+  ],
+  "requirements": [
+    {
+      "id": "tamu-business-ai-core",
+      "parent_id": null,
+      "title": "Required courses",
+      "kind": "all",
+      "count": null,
+      "credits": 15,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "texas-am-ai-business-minor-identity",
+      "source_text": null,
+      "summary": "Complete all listed courses, totaling the published15semester credit hours.",
+      "course_ids": [
+        "tamu-busn-250",
+        "tamu-busn-255",
+        "tamu-busn-460",
+        "tamu-busn-465",
+        "tamu-busn-470"
+      ]
+    },
+    {
+      "id": "tamu-completion",
+      "parent_id": null,
+      "title": "Completion GPA",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "texas-am-ai-business-minor-identity",
+      "source_text": null,
+      "summary": "Earn an overall GPA of at least2.0 in the minor courses.",
+      "course_ids": []
+    },
+    {
+      "id": "tamu-eligibility",
+      "parent_id": null,
+      "title": "Enrollment eligibility",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "texas-am-ai-business-minor-identity",
+      "source_text": null,
+      "summary": "Overall GPA must be at least3.00; complete24credit hours, including at least12at Texas A&M.",
+      "course_ids": []
+    },
+    {
+      "id": "tamu-declaration",
+      "parent_id": null,
+      "title": "Declaration",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "texas-am-ai-business-minor-identity",
+      "source_text": null,
+      "summary": "Declare through the major college or department; students are encouraged to begin courses once declared.",
+      "course_ids": []
+    },
+    {
+      "id": "tamu-award",
+      "parent_id": null,
+      "title": "Graduation and recognition",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "texas-am-ai-business-minor-identity",
+      "source_text": null,
+      "summary": "A declared minor becomes a graduation requirement. It is recorded on the transcript after graduation, not on the diploma.",
+      "course_ids": []
+    },
+    {
+      "id": "tamu-level",
+      "parent_id": null,
+      "title": "Upper-level minimum",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "texas-am-ai-business-minor-identity",
+      "source_text": null,
+      "summary": "At least6hours must be at the300\u2013400level.",
+      "course_ids": []
+    }
+  ],
   "notes": [
-    "Official program identity verified; curriculum pending.",
-    "2026\u201327 official catalog confirms Artificial Intelligence in Business minor; Mays program page also inspected. Catalog and department differ in some course labels and eligibility wording; catalog retained as primary. Full curriculum extraction pending."
-  ]
+    "Complete refers to the published minor requirements and policies. Catalog eligibility controls this record:24completed hours including12at Texas A&M. This differs from the simpler threshold on an earlier department page."
+  ],
+  "curriculum_audit": {
+    "scope": "minor",
+    "reviewed_at": "2026-10-10",
+    "source_ids": [
+      "texas-am-ai-business-minor-identity"
+    ],
+    "sections": [
+      "Five required courses and15semester-credit total",
+      "Six upper-level hours",
+      "3.0admission GPA and24credits including12institutional",
+      "2.0minor completion GPA",
+      "Major-unit declaration",
+      "Graduation requirement and transcript recognition"
+    ],
+    "unresolved_requirements": [],
+    "metadata_gaps": [
+      "Course descriptions and individual prerequisites not yet extracted.",
+      "Public course sites and syllabi unverified."
+    ]
+  }
 }

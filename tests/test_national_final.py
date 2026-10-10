@@ -49,11 +49,13 @@ def test_new_records_validate_and_reject_unrelated_refresh(pid):
     adapter = importlib.import_module(f'atlas.adapters.{pid}.adapter')
     assert adapter.PROGRAM_ID == pid
     assert adapter.SOURCES == (program['sources'][0]['url'],)
-    assert program['curriculum_status'] == 'pending'
-    assert program['verification_status'] == 'partial'
-    assert not program['courses'] and not program['requirements']
+    if program['curriculum_status'] == 'pending':
+        assert program['verification_status'] == 'partial'
+        assert not program['courses'] and not program['requirements']
+    else:
+        assert program['requirements'] and program['curriculum_audit']
     assert program['first_offered'] is None
-    assert program['institution']['calendar'] == 'unknown'
+    assert program['institution']['calendar'] in {'unknown','semester','quarter','other'}
     for html in ('<main><h1>Unrelated catalog</h1></main>',
                  '<main><h1>Sign in</h1><input type="password"></main>'):
         with pytest.raises(ValueError):

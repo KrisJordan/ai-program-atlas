@@ -1,9 +1,13 @@
-# Artificial Intelligence in Business
+# Artificial Intelligence in Business — curriculum review
 
-Source: https://catalog.tamu.edu/undergraduate/business/artificial-intelligence-business-minor/
+Reviewed 2026-10-10. Status: **complete**. 5 course/bundle/topic entries and 6 requirement/policy groups.
 
-Official program identity verified; curriculum pending.
+- Artificial Intelligence in Business: https://catalog.tamu.edu/undergraduate/business/artificial-intelligence-business-minor/
 
-2026–27 official catalog confirms Artificial Intelligence in Business minor; Mays program page also inspected. Catalog and department differ in some course labels and eligibility wording; catalog retained as primary. Full curriculum extraction pending.
+The parser extracts source course entries, preserves nested alternatives, and validates policy anchors. It emits no completeness audit, review date, or seed metadata. Each primary parser passed permitted cached live HTML; synthetic source-shaped fixtures exercise changed data and missing-policy rejection.
 
-The adapter requires a source-specific content heading and explicit program identity/classification claims after navigation is removed. It returns identity fields only. It does not replay curated records or mint verification dates. Source-specific synthetic regression tests reject missing evidence and access pages. All live-refresh and detailed curriculum parsing remain follow-up work.
+Complete refers to the published minor requirements and policies. Catalog eligibility controls this record:24completed hours including12at Texas A&M. This differs from the simpler threshold on an earlier department page.
+
+Unresolved requirements: None within the published minor-specific scope.
+
+Metadata gaps: Course descriptions and individual prerequisites not yet extracted. Public course sites and syllabi unverified.
