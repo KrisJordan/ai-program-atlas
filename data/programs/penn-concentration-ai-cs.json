@@ -4,7 +4,7 @@
   "award_level": "concentration",
   "program_kind": "concentration",
   "catalog_year": null,
-  "curriculum_status": "partial",
+  "curriculum_status": "complete",
   "courses": [
     {
       "id": "penn-cis-4210",
@@ -246,14 +246,27 @@
         "penn-cis-5810",
         "penn-nets-2130"
       ]
+    },
+    {
+      "id": "penn-concentration-ai-cs-eligibility",
+      "parent_id": null,
+      "title": "Parent-degree eligibility and concentration limit",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "course_units",
+      "category": "other",
+      "source_id": "penn-concentration-ai-cs-curriculum",
+      "source_text": null,
+      "summary": "Available only to students pursuing a CSCI degree. Optional; at most one concentration per degree. Declare through the university field-of-study form.",
+      "course_ids": []
     }
   ],
   "notes": [
-    "Partial curriculum extraction; this record is not a graduation audit. Individual course descriptions, prerequisites, public course sites and syllabi have not been verified.",
     "At most one concentration per CSCI degree. This is separate from the AI BSE degree and Wharton AI for Business concentration.",
     "Official source contains course codes without titles. Titles, course descriptions, individual course credits and prerequisites are null; no title was guessed.",
-    "First offering date is unknown. Requirements are extracted, but course-level facts remain partial.",
-    "Inferred taxonomy labels summarize themes evidenced by the cited curriculum sections, including elective options where stated. They are analyst classifications, not institution-stated learning outcomes or guarantees that every student completes every theme. Source-stated outcomes are retained separately."
+    "Inferred taxonomy labels summarize themes evidenced by the cited curriculum sections, including elective options where stated. They are analyst classifications, not institution-stated learning outcomes or guarantees that every student completes every theme. Source-stated outcomes are retained separately.",
+    "Human-reviewed complete local concentration requirement inventory as of 2026-10-10, including published eligibility and counting rules. This status does not certify the host degree or complete course-description/prerequisite metadata. Automated observations remain partial until separately audited."
   ],
   "institution": {
     "id": "university-of-pennsylvania",
@@ -313,5 +326,26 @@
       "source_id": "penn-concentration-ai-cs-curriculum",
       "locator": "Remaining AI electives include vision, natural language processing and robotics"
     }
-  ]
+  ],
+  "curriculum_audit": {
+    "scope": "concentration",
+    "reviewed_at": "2026-10-10",
+    "source_ids": [
+      "penn-concentration-ai-cs-curriculum"
+    ],
+    "sections": [
+      "AI concentration",
+      "Required core option 1",
+      "Required core option 2",
+      "Remaining AI electives",
+      "Parent-degree eligibility and concentration limit"
+    ],
+    "unresolved_requirements": [],
+    "metadata_gaps": [
+      "Course descriptions and individual course prerequisites remain unextracted.",
+      "Some individual course credits are unknown; requirement totals are represented.",
+      "Public course resources are not comprehensively inventoried.",
+      "Concentration source provides codes only; course titles remain unverified. Penn course catalog returned a robot-verification challenge on 2026-10-10."
+    ]
+  }
 }

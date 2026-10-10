@@ -4,7 +4,7 @@
   "award_level": "concentration",
   "program_kind": "concentration",
   "catalog_year": null,
-  "curriculum_status": "partial",
+  "curriculum_status": "complete",
   "courses": [
     {
       "id": "penn-stat-4230",
@@ -501,15 +501,57 @@
         "penn-mgmt-oidd-3130",
         "penn-oidd-2550"
       ]
+    },
+    {
+      "id": "penn-concentration-ai-business-grading",
+      "parent_id": "penn-concentration-ai-business-concentration",
+      "title": "Letter-grade policy",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "course_units",
+      "category": "other",
+      "source_id": "penn-concentration-ai-business-curriculum",
+      "source_text": null,
+      "summary": "Pass/fail courses cannot count toward the concentration.",
+      "course_ids": []
+    },
+    {
+      "id": "penn-concentration-ai-business-independent-study",
+      "parent_id": "penn-concentration-ai-business-concentration",
+      "title": "Independent-study allowance",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "course_units",
+      "category": "other",
+      "source_id": "penn-concentration-ai-business-curriculum",
+      "source_text": null,
+      "summary": "At most 1 CU may count with faculty advisor approval. Applies to an Independent Study Project.",
+      "course_ids": []
+    },
+    {
+      "id": "penn-concentration-ai-business-outside-wharton",
+      "parent_id": "penn-concentration-ai-business-concentration",
+      "title": "Outside-Wharton allowance",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "course_units",
+      "category": "other",
+      "source_id": "penn-concentration-ai-business-curriculum",
+      "source_text": null,
+      "summary": "At most 1 CU may count with faculty advisor approval. Applies to Penn courses outside Wharton.",
+      "course_ids": []
     }
   ],
   "notes": [
-    "Partial curriculum extraction; this record is not a graduation audit. Individual course descriptions, prerequisites, public course sites and syllabi have not been verified.",
     "This is an undergraduate concentration, not a standalone BS in Artificial Intelligence. The same announcement also introduces an MBA major; that graduate credential is excluded.",
     "Four course units: STAT 4230 (1 CU), LGST 2420 (0.5 CU), another 1 CU from pillar F and another 1.5 CU from pillar I.",
     "No pass/fail courses; at most 1 CU of independent study and at most 1 CU outside Wharton may count with faculty approval. Course prerequisites and elective individual credit values remain unknown.",
     "MGMT/OIDD 3130 is one cross-listed option, represented as a single record to avoid double counting.",
-    "Inferred taxonomy labels summarize themes evidenced by the cited curriculum sections, including elective options where stated. They are analyst classifications, not institution-stated learning outcomes or guarantees that every student completes every theme. Source-stated outcomes are retained separately."
+    "Inferred taxonomy labels summarize themes evidenced by the cited curriculum sections, including elective options where stated. They are analyst classifications, not institution-stated learning outcomes or guarantees that every student completes every theme. Source-stated outcomes are retained separately.",
+    "Human-reviewed complete local concentration requirement inventory as of 2026-10-10, including published eligibility and counting rules. This status does not certify the host degree or complete course-description/prerequisite metadata. Automated observations remain partial until separately audited."
   ],
   "institution": {
     "id": "university-of-pennsylvania",
@@ -611,5 +653,26 @@
       "source_id": "penn-concentration-ai-business-curriculum",
       "locator": "Concentration overview: AI methods for business problems"
     }
-  ]
+  ],
+  "curriculum_audit": {
+    "scope": "concentration",
+    "reviewed_at": "2026-10-10",
+    "source_ids": [
+      "penn-concentration-ai-business-curriculum"
+    ],
+    "sections": [
+      "Concentration requirements",
+      "Pillar F",
+      "Pillar I",
+      "Letter-grade policy",
+      "Independent-study allowance",
+      "Outside-Wharton allowance"
+    ],
+    "unresolved_requirements": [],
+    "metadata_gaps": [
+      "Course descriptions and individual course prerequisites remain unextracted.",
+      "Some individual course credits are unknown; requirement totals are represented.",
+      "Public course resources are not comprehensively inventoried."
+    ]
+  }
 }

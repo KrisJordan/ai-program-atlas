@@ -6,7 +6,7 @@ Reviewed 2026-10-10 against official university sources. Raw source HTML was fet
 
 The parser scopes strictly to the Artificial Intelligence accordion, expands slash alternatives and extracts two required core choices plus 2 CU electives. It does not ingest courses from other concentrations. The source lists codes only: titles, individual credits, prerequisites and descriptions remain null. First offering unknown. Concentration optional for CSCI students, maximum one concentration per degree.
 
-Seed record: `data/programs/penn-concentration-ai-cs.json`. 12 observed course records; option pools are not course requirements to sum. All curriculum records remain explicitly partial. Public course sites and syllabi have not been verified and are null.
+Seed record: `data/programs/penn-concentration-ai-cs.json`. 12 observed course records; option pools are not course requirements to sum. The local requirement inventory is now complete after the review below; course metadata remain partial. Public course sites and syllabi have not been verified and are null.
 
 ## Parser behavior
 
@@ -24,3 +24,13 @@ Seed record: `data/programs/penn-concentration-ai-cs.json`. 12 observed course r
 ## Inferred comparison themes
 
 Added explicitly `inferred_taxonomy` labels from the existing cited curriculum: AI methods, Applied AI. Locators name the supporting core, requirement, overview or elective-pool section. These are analyst classifications for comparison, not university-stated outcomes, and elective-pool themes do not imply every student takes every option. Existing source-stated outcomes are unchanged.
+
+## Full local requirement review (2026-10-10)
+
+All current local requirements were compared against the official page and safe-fetch cache. The seed now carries `curriculum_status: complete` plus an explicit `curriculum_audit`; parsers continue returning partial observations without an audit or verification timestamp. Completeness concerns this minor/concentration, not the host degree.
+
+Reviewed sections: AI concentration, Required core option 1, Required core option 2, Remaining AI electives, Parent-degree eligibility and concentration limit.
+
+Added every local policy and eligibility constraint to the requirement inventory. Advisor exceptions are maxima/conditions represented as notes rather than minimum required credits.
+
+Remaining course metadata gaps: Course descriptions and individual course prerequisites remain unextracted. Some individual course credits are unknown; requirement totals are represented. Public course resources are not comprehensively inventoried. Concentration source provides codes only; course titles remain unverified. Penn course catalog returned a robot-verification challenge on 2026-10-10.

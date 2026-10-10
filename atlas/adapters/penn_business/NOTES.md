@@ -4,9 +4,9 @@ Reviewed 2026-10-10 against official university sources. Raw source HTML was fet
 
 ## Coverage and limits
 
-The parser extracts the two required pillar courses, 1 CU foundation electives and 1.5 CU impact electives. This is a concentration within BS Economics, not a standalone AI degree, despite the catalog URL ending in -bs. The official undergraduate department page establishes the credential. Crosslisted MGMT/OIDD 3130 is one course record. Elective credits are null; required course credits must be present or the parser fails. Advisor-approved substitutions and degree-wide requirements remain partial.
+The parser extracts the two required pillar courses, 1 CU foundation electives and 1.5 CU impact electives. This is a concentration within BS Economics, not a standalone AI degree, despite the catalog URL ending in -bs. The official undergraduate department page establishes the credential. Crosslisted MGMT/OIDD 3130 is one course record. Elective credits are null; required course credits must be present or the parser fails. The three published pass/fail and advisor-approved allowance policies are mapped. Host-degree requirements are outside this concentration audit.
 
-Seed record: `data/programs/penn-concentration-ai-business.json`. 28 observed course records; option pools are not course requirements to sum. All curriculum records remain explicitly partial. Public course sites and syllabi have not been verified and are null.
+Seed record: `data/programs/penn-concentration-ai-business.json`. 28 observed course records; option pools are not course requirements to sum. The local requirement inventory is now complete after the review below; course metadata remain partial. Public course sites and syllabi have not been verified and are null.
 
 ## Parser behavior
 
@@ -26,3 +26,13 @@ Seed record: `data/programs/penn-concentration-ai-business.json`. 28 observed co
 ## Inferred comparison themes
 
 Added explicitly `inferred_taxonomy` labels from the existing cited curriculum: AI methods, Responsible AI and society, Applied AI. Locators name the supporting core, requirement, overview or elective-pool section. These are analyst classifications for comparison, not university-stated outcomes, and elective-pool themes do not imply every student takes every option. Existing source-stated outcomes are unchanged.
+
+## Full local requirement review (2026-10-10)
+
+All current local requirements were compared against the official page and safe-fetch cache. The seed now carries `curriculum_status: complete` plus an explicit `curriculum_audit`; parsers continue returning partial observations without an audit or verification timestamp. Completeness concerns this minor/concentration, not the host degree.
+
+Reviewed sections: Concentration requirements, Pillar F, Pillar I, Letter-grade policy, Independent-study allowance, Outside-Wharton allowance.
+
+Added every local policy and eligibility constraint to the requirement inventory. Advisor exceptions are maxima/conditions represented as notes rather than minimum required credits.
+
+Remaining course metadata gaps: Course descriptions and individual course prerequisites remain unextracted. Some individual course credits are unknown; requirement totals are represented. Public course resources are not comprehensively inventoried.

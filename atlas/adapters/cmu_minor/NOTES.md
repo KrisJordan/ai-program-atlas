@@ -4,9 +4,9 @@ Reviewed 2026-10-10 against official university sources. Raw source HTML was fet
 
 ## Coverage and limits
 
-The parser extracts AI core, probability alternatives, three technical pools and two societal pools. The six-course minor and four prerequisite areas are source-stated. Technical choices must come from two distinct clusters; the societal choice comes from either cluster. Those cross-cluster rules are represented as notes, not falsely as required courses from every cluster. No launch date verified. Admission and prerequisite alternatives remain partial.
+The parser extracts AI core, probability alternatives, three technical pools and two societal pools. The six-course minor and four prerequisite areas are source-stated. Technical choices must come from two distinct clusters; the societal choice comes from either cluster. Cross-cluster rules are nested choices with explicit summaries, rather than requiring every cluster. Admission, prerequisite alternatives, overlap and mini-course rules are now mapped. No launch date verified.
 
-Seed record: `data/programs/cmu-minor-ai.json`. 53 observed course records; option pools are not course requirements to sum. All curriculum records remain explicitly partial. Public course sites and syllabi have not been verified and are null.
+Seed record: `data/programs/cmu-minor-ai.json`. 63 observed course records; option pools are not course requirements to sum. The local requirement inventory is now complete after the review below; course metadata remain partial. Public course sites and syllabi have not been verified and are null.
 
 ## Parser behavior
 
@@ -24,3 +24,13 @@ Seed record: `data/programs/cmu-minor-ai.json`. 53 observed course records; opti
 ## Inferred comparison themes
 
 Added explicitly `inferred_taxonomy` labels from the existing cited curriculum: AI methods, Mathematical foundations, Responsible AI and society, Applied AI. Locators name the supporting core, requirement, overview or elective-pool section. These are analyst classifications for comparison, not university-stated outcomes, and elective-pool themes do not imply every student takes every option. Existing source-stated outcomes are unchanged.
+
+## Full local requirement review (2026-10-10)
+
+All current local requirements were compared against the official page and safe-fetch cache. The seed now carries `curriculum_status: complete` plus an explicit `curriculum_audit`; parsers continue returning partial observations without an audit or verification timestamp. Completeness concerns this minor/concentration, not the host degree.
+
+Reviewed sections: Six-course AI minor, Prerequisites, Required Core Courses, Technical Electives, Societal Aspects of AI, Eligibility and admission, Mini-course combination, Double-counting limit.
+
+Added all four prerequisite groups, six-course structure, distinct technical-cluster choices, societal cluster selection, mini-course exception, non-SCS eligibility, admission C-average/deadline and two-course aggregate overlap cap. All 63 named course records are inventoried, including prerequisites and alternative/elective pools; this is not a 63-course workload.
+
+Remaining course metadata gaps: Course descriptions and individual course prerequisites remain unextracted. Some individual course credits are unknown; requirement totals are represented. Public course resources are not comprehensively inventoried.

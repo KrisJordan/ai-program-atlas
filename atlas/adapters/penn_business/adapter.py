@@ -92,6 +92,49 @@ def parse(html: str) -> dict:
         )
     if sum(r["credits"] for r in requirements[1:]) != 4:
         raise ValueError("Wharton pillar credits disagree with total")
+    policies = [text(li) for li in section.find_all("li")]
+    if len(policies) != 3:
+        raise ValueError("Wharton concentration policy inventory changed")
+    if not any("pass/fail" in p and "cannot be counted" in p for p in policies):
+        raise ValueError("Wharton grading policy missing")
+    requirements.append(
+        req(
+            PID,
+            "grading",
+            "Letter-grade policy",
+            source,
+            kind="note",
+            parent=root["id"],
+            category="other",
+            summary="Pass/fail courses cannot count toward the concentration.",
+        )
+    )
+    for key, phrase, label in [
+        ("independent-study", "Independent Study Project", "Independent-study allowance"),
+        ("outside-wharton", "outside of Wharton", "Outside-Wharton allowance"),
+    ]:
+        policy = next((p for p in policies if phrase in p), "")
+        match = re.search(r"maximum of (\d+(?:\.\d+)?) CU", policy)
+        if not match or "faculty advisor approval" not in policy:
+            raise ValueError("Wharton approval/cap policy missing: " + key)
+        cap = float(match.group(1))
+        requirements.append(
+            req(
+                PID,
+                key,
+                label,
+                source,
+                kind="note",
+                parent=root["id"],
+                category="other",
+                summary=f"At most {cap:g} CU may count with faculty advisor approval. "
+                + (
+                    "Applies to an Independent Study Project."
+                    if key == "independent-study"
+                    else "Applies to Penn courses outside Wharton."
+                ),
+            )
+        )
     return {
         "id": PID,
         "title": "Artificial Intelligence for Business",
@@ -102,7 +145,7 @@ def parse(html: str) -> dict:
         "courses": list(courses.values()),
         "requirements": requirements,
         "notes": [
-            "Concentration within Wharton BS in Economics. Four-course-unit pillar structure extracted; advisor-approved substitutions, pass/fail policy and degree-wide requirements need separate review."
+            "Observed complete local four-CU pillar inventory and all three published policies. Completeness requires a separate review audit. This concentration does not certify completion of the host Wharton BS in Economics; course metadata remain separately incomplete."
         ],
     }
 

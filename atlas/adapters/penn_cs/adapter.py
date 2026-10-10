@@ -22,6 +22,20 @@ def parse(html: str) -> dict:
     h1 = soup.find("h1")
     if not h1 or "Concentrations" not in text(h1):
         raise ValueError("Penn CSCI concentration page heading missing")
+    intro = []
+    for node in h1.find_all_next():
+        if node.name == "h2":
+            break
+        if node.name == "p":
+            intro.append(text(node))
+    intro_text = " ".join(intro)
+    for phrase in (
+        "only for students pursuing a CSCI degree",
+        "concentrations are optional",
+        "one concentration per degree",
+    ):
+        if phrase not in intro_text:
+            raise ValueError("Penn concentration eligibility policy missing: " + phrase)
     block = None
     for item in soup.select(".accordion-item"):
         heading = item.find("h2")
@@ -89,6 +103,17 @@ def parse(html: str) -> dict:
             course_ids=ids,
         )
     )
+    requirements.append(
+        req(
+            PID,
+            "eligibility",
+            "Parent-degree eligibility and concentration limit",
+            source,
+            kind="note",
+            category="other",
+            summary="Available only to students pursuing a CSCI degree. Optional; at most one concentration per degree. Declare through the university field-of-study form.",
+        )
+    )
     return {
         "id": PID,
         "title": "Artificial Intelligence",
@@ -99,7 +124,7 @@ def parse(html: str) -> dict:
         "courses": list(courses.values()),
         "requirements": requirements,
         "notes": [
-            "Optional concentration for CSCI students, with at most one concentration per degree. Source lists codes only: course titles, individual credits and prerequisites remain null."
+            "All published local AI concentration options, four-CU rule and CSCI eligibility/one-concentration limit observed. Separate review audit determines completeness; this does not certify the parent degree. The source lists codes only, so course titles, individual credits and prerequisites remain separate metadata gaps."
         ],
     }
 
