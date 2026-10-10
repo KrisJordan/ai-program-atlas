@@ -1,9 +1,7 @@
-# CS BS, AI Concentration
+# Emory CS BS AI concentration
 
-Official identity source: https://computerscience.emory.edu/undergraduate/degrees-and-requirements/cs-bs-ai-concentration.html
+Reviewed 2026-10-10 against the official concentration table and CS FAQ. Complete is scoped to this concentration, not Emory College GERs or the whole degree. Fourteen required courses plus one 300-level classroom elective (four explicit Math alternatives), two of four advanced AI courses, and one 400-level classroom elective are represented. Open level-based classroom categories are source-defined eligible scopes, not missing finite lists. Both elective levels exclude courses already counted above.
 
-Directory/identity verified; curriculum pending. No courses, requirements or outcomes have yet been extracted.
+The review includes letter grades, 2.0 GPA, repeat-grade rule, prerequisite enforcement, CS/AI combination exclusion, different-topic CS485 reuse, CS323 exclusion, declaration timing/review, S-grade prerequisites, conditional three-credit CS497R substitution, restricted graduate enrollment/substitution, and cross-department double counting. Research substitution requires completion and a Degree Tracker amendment; it is not a required course or automatically a replacement for a particular AI elective. No course credit values are inferred.
 
-Official undergraduate program source inspected; qualifying title confirmed. Institution-wide inventory and curriculum extraction remain incomplete.
-
-The adapter validates a title in visible content headings or links and the award/kind in its local card or heading section. It returns only observed identity fields and never replays seed metadata, curriculum, or dates. A failure means review is required; it does not mean the program is absent. Tests use synthetic HTML to verify rejection behavior; live refresh is not claimed.
+Adapter parses the live table, choice counts, named alternatives and program policy paragraphs; FAQ dispatch validates the selected policy questions and captures changed answers. Candidates remain partial and never emit an audit or verification date. Tests use short synthetic markup and changed-rule fixtures; raw pages stay ignored.
