@@ -1,15 +1,14 @@
-# Artificial Intelligence
+# Artificial Intelligence — curriculum review
 
-Official identity source: https://bowers.cornell.edu/programs/artificial-intelligence-minor
+Reviewed2026-10-10. Status: **partial**. 0 course/approved-topic entries; 6 requirement and policy groups.
 
-Directory/identity verified; curriculum pending. No courses, requirements or outcomes have yet been extracted.
+- Artificial Intelligence: https://bowers.cornell.edu/programs/artificial-intelligence-minor
 
-Official undergraduate program source inspected; qualifying title confirmed. Institution-wide inventory and curriculum extraction remain incomplete.
+The source-specific adapter extracts observed table rows and course-choice structure, validates policy anchors, and emits no review date, audit, or completeness assertion. No seed records are replayed. SOURCE_PARSERS produces independent review candidates where multiple HTML sources are needed. Tests use synthetic source-shaped fixtures; each primary parser was also run on permitted cached live HTML.
 
-The adapter validates a title in visible content headings or links and the award/kind in its local card or heading section. It returns only observed identity fields and never replays seed metadata, curriculum, or dates. A failure means review is required; it does not mean the program is absent. Tests use synthetic HTML to verify rejection behavior; live refresh is not claimed.
+Detailed linked catalog returned a JavaScript robot challenge. No bypass attempted. Only accessible department requirements observed; curriculum remains partial.
+No course names or credits inferred from the two bare approved-course codes on the overview.
 
-## Cached layout verification — 2026-10-10
+Unresolved requirements: Detailed catalog foundation distribution, approved course pools, forbidden overlaps and any further policies remain inaccessible behind a JavaScript robot challenge.
 
-The program-specific hero appears before main. The reviewed .hero-banner--program-detail / .hero-banner-content block includes the Artificial Intelligence H1 and the Minor eyebrow. Both facts must be present in that block.
-
-Validation used previously fetched, ignored local HTML. This adapter refreshes identity only; full curriculum extraction remains pending. No reviewed seed content or verification timestamp is replayed by the parser.
+Metadata gaps: Course descriptions and individual prerequisites are not fully mapped. Credits remain unknown wherever the source does not specify an individual course value. Public course sites and syllabi remain unverified.

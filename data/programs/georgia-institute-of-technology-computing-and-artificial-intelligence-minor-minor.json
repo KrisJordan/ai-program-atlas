@@ -5,24 +5,39 @@
     "name": "Georgia Institute of Technology",
     "aliases": [],
     "website": null,
-    "calendar": "unknown"
+    "calendar": "semester"
   },
   "title": "Computing and Artificial Intelligence",
   "award_level": "minor",
   "program_kind": "minor",
-  "hosting_unit": null,
+  "hosting_unit": "College of Computing",
   "status": "unknown",
   "first_offered": null,
-  "overview": "Official university content identifies this undergraduate minor. Curriculum details and complete institutional coverage remain pending.",
-  "catalog_year": null,
+  "overview": "Published minor requirements are partially mapped; explicit unresolved items remain in the curriculum audit.",
+  "catalog_year": "2026-2027",
   "verification_status": "partial",
   "last_verified": "2026-10-10",
-  "curriculum_status": "pending",
+  "curriculum_status": "partial",
   "links": [
     {
-      "kind": "overview",
+      "kind": "catalog",
       "url": "https://catalog.gatech.edu/programs/minor-computing-artificial-intelligence/",
       "label": "Official program identity source"
+    },
+    {
+      "kind": "catalog",
+      "url": "https://www.cc.gatech.edu/academics/threads/intelligence",
+      "label": "Artificial Intelligence thread"
+    },
+    {
+      "kind": "catalog",
+      "url": "https://catalog.gatech.edu/academics/minors/",
+      "label": "Undergraduate Minor Guidelines"
+    },
+    {
+      "kind": "catalog",
+      "url": "https://catalog.gatech.edu/courses-undergrad/cs/",
+      "label": "Course metadata source"
     }
   ],
   "sources": [
@@ -32,16 +47,578 @@
       "title": "Computing and Artificial Intelligence",
       "fetched_at": "2026-10-10",
       "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Program requirements, course tables, eligibility and policy text",
+      "confidence": "high"
+    },
+    {
+      "id": "gatech-ai-thread-pools",
+      "url": "https://www.cc.gatech.edu/academics/threads/intelligence",
+      "title": "Artificial Intelligence thread",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
       "catalog_year": null,
-      "locator": "Named undergraduate program entry: Computing and Artificial Intelligence; award/type: minor / minor",
+      "locator": "Named elective categories",
+      "confidence": "high"
+    },
+    {
+      "id": "gatech-minor-guidelines",
+      "url": "https://catalog.gatech.edu/academics/minors/",
+      "title": "Undergraduate Minor Guidelines",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Requirements for the Program of Study; Other Guidelines",
+      "confidence": "high"
+    },
+    {
+      "id": "gatech-cs-course-catalog",
+      "url": "https://catalog.gatech.edu/courses-undergrad/cs/",
+      "title": "Computer Science course catalog",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Individual course blocks for listed CS course codes; credits and selected descriptions/prerequisites",
       "confidence": "high"
     }
   ],
-  "outcomes": [],
-  "courses": [],
-  "requirements": [],
+  "outcomes": [
+    {
+      "text": "AI and machine learning",
+      "kind": "inferred_taxonomy",
+      "source_id": "georgia-institute-of-technology-computing-and-artificial-intelligence-minor-minor-official",
+      "locator": "CS3600 and AI thread course choices; editorial theme inferred from published curriculum, not a claimed graduate competency"
+    },
+    {
+      "text": "Robotics and embodied intelligence",
+      "kind": "inferred_taxonomy",
+      "source_id": "gatech-ai-thread-pools",
+      "locator": "Embodied Intelligence choice; editorial theme inferred from published curriculum, not a claimed graduate competency"
+    },
+    {
+      "text": "Knowledge representation and reasoning",
+      "kind": "inferred_taxonomy",
+      "source_id": "gatech-ai-thread-pools",
+      "locator": "Approaches to Intelligence choice; editorial theme inferred from published curriculum, not a claimed graduate competency"
+    }
+  ],
+  "courses": [
+    {
+      "id": "gt-cs-1331",
+      "code": "CS 1331",
+      "name": "Introduction to Object Oriented Programming",
+      "description": "Develops object-oriented programs using inheritance, encapsulation and polymorphism.",
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "semester_hours",
+      "category": "foundations",
+      "source_id": "georgia-institute-of-technology-computing-and-artificial-intelligence-minor-minor-official",
+      "url": "https://catalog.gatech.edu/search/?P=CS%201331",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "gt-cs-1332",
+      "code": "CS 1332",
+      "name": "Data Structures and Algorithms for Applications",
+      "description": "Applies data structures and algorithms to object-oriented software development.",
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "semester_hours",
+      "category": "foundations",
+      "source_id": "georgia-institute-of-technology-computing-and-artificial-intelligence-minor-minor-official",
+      "url": "https://catalog.gatech.edu/search/?P=CS%201332",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "gt-cs-2110",
+      "code": "CS 2110",
+      "name": "Computer Organization and Programming",
+      "description": "Introduces computer hardware and programming in machine, assembly and C languages.",
+      "prerequisites": null,
+      "credits": 4,
+      "credit_unit": "semester_hours",
+      "category": "systems",
+      "source_id": "georgia-institute-of-technology-computing-and-artificial-intelligence-minor-minor-official",
+      "url": "https://catalog.gatech.edu/search/?P=CS%202110",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "gt-cs-3600",
+      "code": "CS 3600",
+      "name": "Introduction to Artificial Intelligence",
+      "description": "Covers AI system design, problem-solving search and supervised and reinforcement learning.",
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "georgia-institute-of-technology-computing-and-artificial-intelligence-minor-minor-official",
+      "url": "https://catalog.gatech.edu/search/?P=CS%203600",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "gt-cs-3630",
+      "code": "CS 3630",
+      "name": "Robotics and Perception",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "gatech-ai-thread-pools",
+      "url": "https://www.cc.gatech.edu/academics/threads/intelligence",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "gt-cs-3790",
+      "code": "CS 3790",
+      "name": "Introduction to Cognitive Science",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "gatech-ai-thread-pools",
+      "url": "https://www.cc.gatech.edu/academics/threads/intelligence",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "gt-cs-4476",
+      "code": "CS 4476",
+      "name": "Intro Computer Vision",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "gatech-ai-thread-pools",
+      "url": "https://www.cc.gatech.edu/academics/threads/intelligence",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "gt-cs-4510",
+      "code": "CS 4510",
+      "name": "Automata and Complexity Theory",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "gatech-ai-thread-pools",
+      "url": "https://www.cc.gatech.edu/academics/threads/intelligence",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "gt-cs-4635",
+      "code": "CS 4635",
+      "name": "Knowledge-based AI",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "gatech-ai-thread-pools",
+      "url": "https://www.cc.gatech.edu/academics/threads/intelligence",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "gt-cs-4641",
+      "code": "CS 4641",
+      "name": "Machine Learning",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "gatech-ai-thread-pools",
+      "url": "https://www.cc.gatech.edu/academics/threads/intelligence",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "gt-cs-4644",
+      "code": "CS 4644",
+      "name": "Deep Learning",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "gatech-ai-thread-pools",
+      "url": "https://www.cc.gatech.edu/academics/threads/intelligence",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "gt-cs-4646",
+      "code": "CS 4646",
+      "name": "Machine Learning for Trading",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "gatech-ai-thread-pools",
+      "url": "https://www.cc.gatech.edu/academics/threads/intelligence",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "gt-cs-4649",
+      "code": "CS 4649",
+      "name": "Robot Intelligence",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "gatech-ai-thread-pools",
+      "url": "https://www.cc.gatech.edu/academics/threads/intelligence",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "gt-cs-4650",
+      "code": "CS 4650",
+      "name": "Natural Language and Processing",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "gatech-ai-thread-pools",
+      "url": "https://www.cc.gatech.edu/academics/threads/intelligence",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "gt-cs-4731",
+      "code": "CS 4731",
+      "name": "Game AI",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "gatech-ai-thread-pools",
+      "url": "https://www.cc.gatech.edu/academics/threads/intelligence",
+      "public_site": null,
+      "syllabus": null
+    }
+  ],
+  "requirements": [
+    {
+      "id": "gt-minimum",
+      "parent_id": null,
+      "title": "Minor minimum and level requirement",
+      "kind": "note",
+      "count": null,
+      "credits": 16,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "georgia-institute-of-technology-computing-and-artificial-intelligence-minor-minor-official",
+      "source_text": null,
+      "summary": "At least16semester hours of CS coursework, including at least9hours at3000level or higher. An ECE substitution exception may reduce the total to15hours; see its unresolved source wording.",
+      "course_ids": []
+    },
+    {
+      "id": "gt-cs-1331",
+      "parent_id": null,
+      "title": "Prerequisite: Introduction to Object Oriented Programming",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "georgia-institute-of-technology-computing-and-artificial-intelligence-minor-minor-official",
+      "source_text": null,
+      "summary": "Prerequisite; excluded from the16minor hours.",
+      "course_ids": [
+        "gt-cs-1331"
+      ]
+    },
+    {
+      "id": "gt-cs-1332",
+      "parent_id": null,
+      "title": "Required Courses: Data Structures and Algorithms for Applications",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "georgia-institute-of-technology-computing-and-artificial-intelligence-minor-minor-official",
+      "source_text": null,
+      "summary": "Required minor course; CS2110 has an ECE substitution policy.",
+      "course_ids": [
+        "gt-cs-1332"
+      ]
+    },
+    {
+      "id": "gt-cs-2110",
+      "parent_id": null,
+      "title": "Required Courses: Computer Organization and Programming",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "georgia-institute-of-technology-computing-and-artificial-intelligence-minor-minor-official",
+      "source_text": null,
+      "summary": "Required minor course; CS2110 has an ECE substitution policy.",
+      "course_ids": [
+        "gt-cs-2110"
+      ]
+    },
+    {
+      "id": "gt-cs-3600",
+      "parent_id": null,
+      "title": "Required Courses: Introduction to Artificial Intelligence",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "georgia-institute-of-technology-computing-and-artificial-intelligence-minor-minor-official",
+      "source_text": null,
+      "summary": "Required minor course; CS2110 has an ECE substitution policy.",
+      "course_ids": [
+        "gt-cs-3600"
+      ]
+    },
+    {
+      "id": "gt-embodied-intelligence",
+      "parent_id": null,
+      "title": "Embodied Intelligence",
+      "kind": "choose_courses",
+      "count": 1,
+      "credits": 3,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "gatech-ai-thread-pools",
+      "source_text": null,
+      "summary": "The minor chooses one CS course from this published thread category; the full CS major thread has a different selection count. Non-CS entries are excluded.",
+      "course_ids": [
+        "gt-cs-3630",
+        "gt-cs-3790"
+      ]
+    },
+    {
+      "id": "gt-approaches-to-intelligence",
+      "parent_id": null,
+      "title": "Approaches to Intelligence",
+      "kind": "choose_courses",
+      "count": 1,
+      "credits": 3,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "gatech-ai-thread-pools",
+      "source_text": null,
+      "summary": "The minor chooses one CS course from this published thread category; the full CS major thread has a different selection count. Non-CS entries are excluded.",
+      "course_ids": [
+        "gt-cs-4476",
+        "gt-cs-4510",
+        "gt-cs-4635",
+        "gt-cs-4641",
+        "gt-cs-4644",
+        "gt-cs-4646",
+        "gt-cs-4649",
+        "gt-cs-4650",
+        "gt-cs-4731"
+      ]
+    },
+    {
+      "id": "gt-eligibility",
+      "parent_id": null,
+      "title": "Eligibility",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "georgia-institute-of-technology-computing-and-artificial-intelligence-minor-minor-official",
+      "source_text": null,
+      "summary": "Intended for majors outside computer science.",
+      "course_ids": []
+    },
+    {
+      "id": "gt-application",
+      "parent_id": null,
+      "title": "Application",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "georgia-institute-of-technology-computing-and-artificial-intelligence-minor-minor-official",
+      "source_text": null,
+      "summary": "A CS minor application is required.",
+      "course_ids": []
+    },
+    {
+      "id": "gt-ece",
+      "parent_id": null,
+      "title": "ECE substitution caveat",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "georgia-institute-of-technology-computing-and-artificial-intelligence-minor-minor-official",
+      "source_text": null,
+      "summary": "The source permits qualifying ECE students to replace CS2110 with a3000/4000level Intelligence Thread CS course and complete15hours. Its eligibility wording says ECE2035 and either ECE2020 without a complete alternative; advisor clarification remains necessary.",
+      "course_ids": []
+    },
+    {
+      "id": "gt-exclusions",
+      "parent_id": null,
+      "title": "Excluded coursework",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "georgia-institute-of-technology-computing-and-artificial-intelligence-minor-minor-official",
+      "source_text": null,
+      "summary": "Special Problems and internship coursework cannot satisfy the CS minor.",
+      "course_ids": []
+    },
+    {
+      "id": "gt-grades",
+      "parent_id": null,
+      "title": "Grades",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "georgia-institute-of-technology-computing-and-artificial-intelligence-minor-minor-official",
+      "source_text": null,
+      "summary": "CS1301/CS1315/CS1371 and CS1331 require A or B. Other minor courses require C or better.",
+      "course_ids": []
+    },
+    {
+      "id": "gt-cs-only",
+      "parent_id": null,
+      "title": "CS-only rule",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "georgia-institute-of-technology-computing-and-artificial-intelligence-minor-minor-official",
+      "source_text": null,
+      "summary": "Only CS courses count toward the minor.",
+      "course_ids": []
+    },
+    {
+      "id": "gt-transfer",
+      "parent_id": null,
+      "title": "Transfer limit",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "georgia-institute-of-technology-computing-and-artificial-intelligence-minor-minor-official",
+      "source_text": null,
+      "summary": "At most3semester hours of transfer credit may count, including accepted AP or IB credit.",
+      "course_ids": []
+    },
+    {
+      "id": "gt-policy-major-overlap",
+      "parent_id": null,
+      "title": "Major overlap and core restriction",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "gatech-minor-guidelines",
+      "source_text": null,
+      "summary": "Major/minor overlap is allowed by default unless the specific minor imposes breadth restrictions; Core IMPACTS courses cannot count.",
+      "course_ids": []
+    },
+    {
+      "id": "gt-policy-minor-overlap",
+      "parent_id": null,
+      "title": "Other minor overlap",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "gatech-minor-guidelines",
+      "source_text": null,
+      "summary": "At most3credit hours may be shared with another minor.",
+      "course_ids": []
+    },
+    {
+      "id": "gt-policy-letter",
+      "parent_id": null,
+      "title": "Letter grading",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "gatech-minor-guidelines",
+      "source_text": null,
+      "summary": "All minor courses require letter grades and C or better; the specific CS prerequisite rules are stricter.",
+      "course_ids": []
+    },
+    {
+      "id": "gt-policy-declare",
+      "parent_id": null,
+      "title": "Declaration and award",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "gatech-minor-guidelines",
+      "source_text": null,
+      "summary": "Declare no later than applying for graduation. Minor and major are conferred together and recorded on the transcript; the minor is not on the diploma and cannot be awarded retroactively.",
+      "course_ids": []
+    }
+  ],
   "notes": [
-    "Directory/identity verified; curriculum pending. No courses, requirements or outcomes have yet been extracted.",
-    "Official undergraduate program source inspected; qualifying title confirmed. Institution-wide inventory and curriculum extraction remain incomplete."
-  ]
+    "The catalog supplies minor choice counts; the separate thread page supplies category membership. Only CS entries were included. Source wording for the ECE exception is incomplete, so requirements remain partial.",
+    "Individual CS credits and selected core-course descriptions/prerequisites were checked against https://catalog.gatech.edu/courses-undergrad/cs/ (gatech-cs-course-catalog). Course source IDs retain the minor/thread eligibility provenance. No credits inferred by dividing program totals; variable-credit topics remain unknown when not explicitly fixed."
+  ],
+  "curriculum_audit": {
+    "scope": "minor",
+    "reviewed_at": "2026-10-10",
+    "source_ids": [
+      "georgia-institute-of-technology-computing-and-artificial-intelligence-minor-minor-official",
+      "gatech-ai-thread-pools",
+      "gatech-minor-guidelines",
+      "gatech-cs-course-catalog"
+    ],
+    "sections": [
+      "Prerequisite excluded from minor hours",
+      "Required CS courses",
+      "One CS course in each of two thread categories",
+      "16hours and9upper-level hours",
+      "Eligibility and application",
+      "Grades, transfer, excluded coursework",
+      "ECE substitution",
+      "Institute letter-grade, double-counting and conferral policies"
+    ],
+    "unresolved_requirements": [
+      "Catalog ECE substitution eligibility contains incomplete wording (ECE2035 and either ECE2020 with no completed alternative). Confirm with advisor before applying the15-hour exception."
+    ],
+    "metadata_gaps": [
+      "Course descriptions and individual prerequisites are not fully mapped.",
+      "Credits remain unknown wherever the source does not specify an individual course value.",
+      "Public course sites and syllabi remain unverified."
+    ]
+  }
 }

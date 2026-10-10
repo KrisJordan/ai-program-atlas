@@ -10,14 +10,14 @@
   "title": "Artificial Intelligence",
   "award_level": "minor",
   "program_kind": "minor",
-  "hosting_unit": null,
+  "hosting_unit": "Cornell Bowers",
   "status": "unknown",
   "first_offered": null,
-  "overview": "Official university content identifies this undergraduate minor. Curriculum details and complete institutional coverage remain pending.",
+  "overview": "Published minor requirements are partially mapped; explicit unresolved items remain in the curriculum audit.",
   "catalog_year": null,
   "verification_status": "partial",
   "last_verified": "2026-10-10",
-  "curriculum_status": "pending",
+  "curriculum_status": "partial",
   "links": [
     {
       "kind": "overview",
@@ -33,15 +33,135 @@
       "fetched_at": "2026-10-10",
       "source_date": null,
       "catalog_year": null,
-      "locator": "Named undergraduate program entry: Artificial Intelligence; award/type: minor / minor",
+      "locator": "Program requirements, course tables, eligibility and policy text",
       "confidence": "high"
     }
   ],
-  "outcomes": [],
+  "outcomes": [
+    {
+      "text": "Build programming and AI knowledge while considering societal effects and ethical questions.",
+      "kind": "source_stated",
+      "source_id": "cornell-university-artificial-intelligence-minor-minor-official",
+      "locator": "Overview paragraph"
+    },
+    {
+      "text": "Apply and assess AI in the student\u2019s chosen field.",
+      "kind": "source_stated",
+      "source_id": "cornell-university-artificial-intelligence-minor-minor-official",
+      "locator": "Overview paragraph"
+    }
+  ],
   "courses": [],
-  "requirements": [],
+  "requirements": [
+    {
+      "id": "cornell-minimum",
+      "parent_id": null,
+      "title": "Minimum coursework",
+      "kind": "note",
+      "count": null,
+      "credits": 18,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "cornell-university-artificial-intelligence-minor-minor-official",
+      "source_text": null,
+      "summary": "At least six courses and 18 credits. Full foundation and elective distribution remains unextracted; this is not an unrestricted choose-six pool.",
+      "course_ids": []
+    },
+    {
+      "id": "cornell-grades",
+      "parent_id": null,
+      "title": "Grade requirement",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "cornell-university-artificial-intelligence-minor-minor-official",
+      "source_text": null,
+      "summary": "Every course must receive a letter grade of C or better.",
+      "course_ids": []
+    },
+    {
+      "id": "cornell-eligibility",
+      "parent_id": null,
+      "title": "Eligibility",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "cornell-university-artificial-intelligence-minor-minor-official",
+      "source_text": null,
+      "summary": "Open to all undergraduate students.",
+      "course_ids": []
+    },
+    {
+      "id": "cornell-updates",
+      "parent_id": null,
+      "title": "Published course approvals",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "cornell-university-artificial-intelligence-minor-minor-official",
+      "source_text": null,
+      "summary": "MAE 3200 also satisfies the Machine Learning foundation category; INFO 3170 is an approved elective. Course metadata and the full pool remain unverified.",
+      "course_ids": []
+    },
+    {
+      "id": "cornell-reuse",
+      "parent_id": null,
+      "title": "Foundation/elective reuse",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "cornell-university-artificial-intelligence-minor-minor-official",
+      "source_text": null,
+      "summary": "Human-AI Interaction and Ethics, Governance & Policy foundation courses may serve as electives only when not used for a foundation requirement; forbidden overlap rules also apply and require catalog review.",
+      "course_ids": []
+    },
+    {
+      "id": "cornell-application",
+      "parent_id": null,
+      "title": "Application timing",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "cornell-university-artificial-intelligence-minor-minor-official",
+      "source_text": null,
+      "summary": "Apply after completing all required courses at C or better, or in the final undergraduate semester while enrolled in the remaining courses.",
+      "course_ids": []
+    }
+  ],
   "notes": [
-    "Directory/identity verified; curriculum pending. No courses, requirements or outcomes have yet been extracted.",
-    "Official undergraduate program source inspected; qualifying title confirmed. Institution-wide inventory and curriculum extraction remain incomplete."
-  ]
+    "Detailed linked catalog returned a JavaScript robot challenge. No bypass attempted. Only accessible department requirements observed; curriculum remains partial.",
+    "No course names or credits inferred from the two bare approved-course codes on the overview."
+  ],
+  "curriculum_audit": {
+    "scope": "minor",
+    "reviewed_at": "2026-10-10",
+    "source_ids": [
+      "cornell-university-artificial-intelligence-minor-minor-official"
+    ],
+    "sections": [
+      "Six courses /18-credit minimum",
+      "Grade and undergraduate eligibility",
+      "Published supplemental approvals",
+      "Foundation/elective reuse caution",
+      "Application timing"
+    ],
+    "unresolved_requirements": [
+      "Detailed catalog foundation distribution, approved course pools, forbidden overlaps and any further policies remain inaccessible behind a JavaScript robot challenge."
+    ],
+    "metadata_gaps": [
+      "Course descriptions and individual prerequisites are not fully mapped.",
+      "Credits remain unknown wherever the source does not specify an individual course value.",
+      "Public course sites and syllabi remain unverified."
+    ]
+  }
 }
