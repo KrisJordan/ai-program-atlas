@@ -1,15 +1,11 @@
 # Artificial Intelligence and Philosophy, BS (Boston)
 
-Official identity source: https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/
+Official source: https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-philosophy-bs-bos/
 
-Directory/identity verified; curriculum pending. No courses, requirements or outcomes have yet been extracted.
+Reviewed 2026-10-10; catalog 2026-2027. The adapter now fetches the direct named curriculum page, not the combined-major directory. It validates the scoped title and expected requirement sections, parses all course tables and policies, and emits current observations without reading seeds or claiming a fresh review timestamp.
 
-Official catalog combined-major directory confirms 22 named AI combined BS programs; separate environmental engineering combined degree and two AI minor pages also inspected. Directory confirmation does not establish full curriculum extraction or complete campus inventory.
+50 distinct program-course records; 97 nested requirement nodes. Course bundles, explicit alternatives and course/credit choices retain their hierarchy. Course credits are not copied from bundle totals or inferred from blank alternative rows. Course descriptions, prerequisites, public sites and syllabi remain unknown. Categories are editorial; outcome statements paraphrase the overview.
 
-The adapter validates a title in visible content headings or links and the award/kind in its local card or heading section. It returns only observed identity fields and never replays seed metadata, curriculum, or dates. A failure means review is required; it does not mean the program is absent. Tests use synthetic HTML to verify rejection behavior; live refresh is not claimed.
+Curriculum remains **partial**: Universitywide and NUpath policies are linked but not fully expanded. Open elective ranges and advisor-approved substitutions are not enumerated; placement substitution needs individual review. Policies appear as notes where they are not executable choice logic. No full-degree completeness claim is made. Raw source HTML remains only in the ignored HTTP cache.
 
-## Cached layout verification — 2026-10-10
-
-The main catalog directory omits the BS abbreviation from each visible entry. The adapter matches the explicit Boston title spelling and requires the immediately preceding list-section heading to state Bachelor of Science. It does not use sidebar navigation or infer the award from the target URL.
-
-Validation used previously fetched, ignored local HTML. This adapter refreshes identity only; full curriculum extraction remains pending. No reviewed seed content or verification timestamp is replayed by the parser.
+Verification: production robots-aware Fetcher obtained HTTP 200 on 2026-10-10. Tests use small synthetic layouts to exercise changes, wrong sources, bundles, alternatives, open ranges and missing sections.
