@@ -1,7 +1,7 @@
-# Business Analytics & Applied AI
+# Official evidence — 2026-10-10
 
-Inspected 2026-10-10: [Bachelor’s Degree in Business Analytics & Applied AI](https://www.wpi.edu/academics/study/business-analytics-applied-ai-bs).
+Current 2026–2027 Clean Catalog program page supplies 47 named course options and 31 requirement nodes: mathematics with recommended equivalents, computing, basic science, five business slots, four technical/AI slots, four analytics slots, six electives (at least three applications; at most three computing/math; at most two business/entrepreneurship), MQP, no slot sharing / Marketing Analytics double major, graduate-course and transfer restrictions.
 
-Identity-only official-source discovery; requirements, courses, prerequisites, credit totals, outcomes and public syllabi remain unextracted. No verified curriculum is implied by identity refresh.
+Standalone degree remains **partial**. University-wide BS requirements and the referenced limit on graduate courses are unresolved. Basic Science lists BB/CH/GE/PH prefixes but no quantity; credits remain null. Rendered elective “Minimum Units” subtotals (12/3 etc.) sum options and contradict selection rules; they are deliberately not interpreted as required credit minima. Recommended mathematics courses are not mandatory individual courses. Credits are WPI units, normally 1/3 per course.
 
-Parser returns observed identity only. It does not return dates, courses, curriculum status, or seed data. Missing identity/award/specialization context raises ValueError so a source change requires review. Raw source documents are not committed.
+Five actual course pages (CS2119, CS4341, CS4342, MIS3730, MIS3787) provide official titles/units, brief reviewed descriptions and advisory background where published. MIS3730’s course page uses singular “Business Application”, unlike the program table’s plural; the enriched row follows the course page. Neither absence of a recommended-background field nor a public syllabus means no prerequisite exists. Parsers return partial candidates without audit/timestamp; new rows are observed, not seed replay. Raw sources remain ignored.

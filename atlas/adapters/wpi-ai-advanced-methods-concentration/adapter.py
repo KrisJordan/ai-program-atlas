@@ -177,3 +177,6 @@ def parse_parent(html):
 
 
 SOURCE_PARSERS[SOURCES[2]] = parse_parent
+
+metadata = importlib.import_module("atlas.adapters.wpi-ai-bs.course_metadata")
+metadata.attach(globals(), ["CS 4341", "CS 4342"])

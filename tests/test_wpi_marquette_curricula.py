@@ -141,3 +141,169 @@ def test_reviewed_local_inventory_scope(pid):
         d["curriculum_status"] == "complete" and d["curriculum_audit"]["scope"] == d["program_kind"]
     )
     assert not d["curriculum_audit"]["unresolved_requirements"]
+
+
+def group(label, codes, credit="1/3"):
+    return (
+        '<article class="node--type-elective-group"><button><span>'
+        + label
+        + '</span></button><span class="field--name-field-elective-credits">'
+        + credit
+        + "</span>"
+        + "".join(row(code, "Course " + code) for code in codes)
+        + "</article>"
+    )
+
+
+def ai_degree_fixture():
+    parts = [
+        section(
+            "<h3>Degree Distribution Requirements for the Artificial Intelligence Major</h3>one and only one concentration; at least 4/3 units"
+        ),
+        section(
+            "<h4>Computer Science Foundation</h4>no more than 1/3 unit at the 1000 level",
+            row("CS 2223", "Algorithms")
+            + section("CS 1004 or CS 1005", row("CS 1004", "Intro"))
+            + section("CS 1101 or CS 1102", row("CS 1101", "Intro"))
+            + section("CS 2102, CS 2103, or CS 2119", row("CS 2119", "Apps")),
+        ),
+        section(
+            "<h4>Mathematical Sciences Foundation</h4>",
+            group("Both MA 2611 and MA 2612", ["MA 2611", "MA 2612"], "2/3")
+            + group("One linear algebra", ["MA 2071"])
+            + group("Calculus", [], "2/3").replace(
+                "</article>",
+                section("MA 1020 or MA 1021", row("MA 1021", "Calc1"))
+                + section("MA 1022 or MA 1120", row("MA 1022", "Calc2"))
+                + "</article>",
+            ),
+        ),
+        section(
+            "<h4>AI Core Courses</h4>Choose 8/3 units; at least 2/3 units at the 4000-level",
+            group("AI Foundations: Three of", ["DS 1010", "DS 2010", "DS 3010"])
+            + group("AI Overview: One of", ["CS 4341"])
+            + group("Machine Learning: At least one", ["CS 4342"])
+            + group("Interaction and Reasoning: At least one", ["CS 3041"]),
+        ),
+        section("<h4>AI Ethics and Social Implications</h4>", row("CS 3043", "Ethics")),
+        section("<h4>Natural or Engineering Science</h4>10 units program requirements"),
+        section("<h4>Concentration</h4>6 distinct courses"),
+        section("<h4>Disciplinary AI Electives</h4>"),
+        section("<h4>Major Qualifying Project (MQP)</h4>"),
+    ]
+    return (
+        '<main><h1>Artificial Intelligence Major</h1><div class="degree-class-details">'
+        + "".join(parts)
+        + "</div></main>"
+    )
+
+
+def test_wpi_ai_keeps_calculus_pairs_and_core_choice_bins():
+    m = load("wpi-ai-bs")
+    r = m.parse(ai_degree_fixture())
+    rules = {x["id"]: x for x in r["requirements"]}
+    assert rules["wpi-ai-bs-intro"]["count"] == 2
+    calc = [x for x in r["requirements"] if x["parent_id"] == "wpi-ai-bs-math-3"]
+    assert len(calc) == 2 and all(x["count"] == 1 for x in calc)
+    assert rules["wpi-ai-bs-core"]["credits"] == pytest.approx(8 / 3)
+    assert m.parse(ai_degree_fixture().replace("CS 4342", "CS 4349"))["courses"] != r["courses"]
+    with pytest.raises(ValueError):
+        m.parse(ai_degree_fixture().replace("AI Core Courses", "Research Core"))
+
+
+def business_fixture():
+    parts = [
+        section(
+            "<h3>Mathematics and Science Requirements</h3>",
+            group("Recommended: Calculus (2/3) - equivalents", ["MA 1021"], "2/3")
+            + group("Recommended: Statistics (2/3) - equivalents", ["MA 2611"], "2/3")
+            + group("Recommended: Linear Algebra (1/3) - equivalents", ["MA 2071"]),
+        ),
+        section("<h4>Computer Science</h4>", group("CS1004 or equivalent", ["CS 1004"])),
+        section("<h4>Basic Science</h4>BB, CH, GE, PH"),
+    ]
+    for heading, count in [
+        ("Business Foundation", 5),
+        ("Technical and AI Foundation", 4),
+        ("Analytics Foundation", 4),
+    ]:
+        parts.append(
+            section(
+                "<h4>" + heading + "</h4>",
+                "".join(
+                    group(str(i + 1) + ". Choose course", ["BUS " + str(1000 + i)])
+                    for i in range(count)
+                ),
+            )
+        )
+    parts.extend(
+        [
+            section(
+                "<h4>Business Analytics and Applied AI Electives</h4>Select a total of six electives"
+            ),
+            section(
+                "Business Analytics Applications (Select at least 3)",
+                row("FIN 3330", "Finance") + "<div>Minimum Units 12/3</div>",
+            ),
+            section(
+                "Computing Technologies, Data and Mathematical Sciences (Maximum 3)",
+                row("CS 2119", "Apps"),
+            ),
+            section("Business and Entrepreneurship (Maximum 2):", row("ETR 1100", "Enterprise")),
+            section("<h4>MQP</h4>"),
+            section(
+                "<h4>Additional Notes:</h4>Each course may only count in one slot; may not double major in Marketing Analytics"
+            ),
+            section(
+                "<h3>BS/MS Rules for Graduate Business Degree</h3>accepted into a graduate business program"
+            ),
+            section("<h3>Transfer Students and Transfer Credit</h3>prior written permission"),
+        ]
+    )
+    return (
+        '<main><h1>Business Analytics and Applied AI Major</h1><div class="degree-class-details">'
+        + "".join(parts)
+        + "</div></main>"
+    )
+
+
+def test_business_does_not_use_pool_sum_as_required_credit():
+    m = load("wpi-business-analytics-applied-ai-bs")
+    r = m.parse(business_fixture())
+    rules = {x["id"]: x for x in r["requirements"]}
+    assert rules[m.PROGRAM_ID + "-electives"]["count"] == 6
+    apps = rules[m.PROGRAM_ID + "-electives-applications"]
+    assert apps["count"] == 3 and apps["credits"] is None
+    assert rules[m.PROGRAM_ID + "-electives-computing"]["kind"] == "note"
+    assert rules[m.PROGRAM_ID + "-science"]["credits"] is None
+    assert rules[m.PROGRAM_ID + "-math-0"]["kind"] == "choose_credits"
+    with pytest.raises(ValueError):
+        m.parse(business_fixture().replace("Select a total of six electives", "Select electives"))
+
+
+def test_course_page_observes_advisory_background_and_unknown_credits():
+    m = importlib.import_module("atlas.adapters.wpi-ai-bs.course_metadata")
+    html = '<main><h1>CS 4342: Machine Learning</h1><span class="field--name-field-credits"><span class="field__item">1/3</span></span><div class="field--name-field-recommended"><div class="field__item">CS 2223</div></div></main>'
+    r = m.parse_course(html, "wpi-ai-bs", "CS 4342", "Artificial Intelligence", "BS", "degree")
+    c = r["courses"][0]
+    assert "not a mandatory prerequisite" in c["prerequisites"] and c["description"] is None
+    assert (
+        m.parse_course(
+            html.replace("1/3", "Variable"),
+            "wpi-ai-bs",
+            "CS 4342",
+            "Artificial Intelligence",
+            "BS",
+            "degree",
+        )["courses"][0]["credits"]
+        is None
+    )
+    with pytest.raises(ValueError):
+        m.parse_course(html, "wpi-ai-bs", "CS 4341", "Artificial Intelligence", "BS", "degree")
+
+
+@pytest.mark.parametrize("pid", ["wpi-ai-bs", "wpi-business-analytics-applied-ai-bs"])
+def test_wpi_degrees_keep_linked_requirements_unresolved(pid):
+    d = json.loads((ROOT / "data/programs" / f"{pid}.json").read_text())
+    validate_program(d)
+    assert d["curriculum_status"] == "partial" and d["curriculum_audit"]["unresolved_requirements"]

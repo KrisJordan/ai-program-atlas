@@ -1,7 +1,7 @@
-# Artificial Intelligence
+# Official evidence — 2026-10-10
 
-Inspected 2026-10-10: [Bachelor’s Degree in Artificial Intelligence](https://www.wpi.edu/academics/study/artificial-intelligence-bs).
+The WPI academic-catalog directory routes to the current 2026–2027 Clean Catalog. Program-specific AI degree distribution is mapped from its complete page: ten program units, 4/3 advanced units, CS foundation (two of three introductory groups, 1000-level ceiling, algorithms, petition substitutions), mathematics (including separate calculus I/II pairs), 8/3 AI core with four bins and 4000-level floor, ethics, natural/engineering science, exactly one six-course concentration, disciplinary electives and MQP adviser/context rules.
 
-Identity-only official-source discovery; requirements, courses, prerequisites, credit totals, outcomes and public syllabi remain unextracted. No verified curriculum is implied by identity refresh.
+40 observed undergraduate course records; fractional WPI units preserved. This standalone degree remains **partial**: university-wide BS policies and ten other concentration inventories / all concentration elective options are not yet mapped. Advanced AI concentration has its own complete local record; that cannot certify this degree. Named pools are options, not a count of mandatory courses. Parser rejects missing required sections/core structure and produces only source observations.
 
-Parser returns observed identity only. It does not return dates, courses, curriculum status, or seed data. Missing identity/award/specialization context raises ValueError so a source change requires review. Raw source documents are not committed.
+Five official course pages were also reviewed across the WPI programs. This degree uses CS2119, CS4341 and CS4342. Page-specific parsers observe title, units and advisory Recommended Background; concise descriptions are reviewed editorial summaries, not static scraper replay. Course-page provenance replaces the row source only for enriched metadata; requirement nodes retain program catalog provenance. CS4341/CS534 and CS4342/CS539 credit exclusions are retained. Remaining metadata/public syllabi are unknown. All raw HTML is uncommitted.
