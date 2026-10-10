@@ -46,7 +46,9 @@ def test_award_must_be_in_same_directory_entry():
 @pytest.mark.parametrize('pid', MANIFEST)
 def test_discovery_records_and_adapter_registration(pid):
     program = json.loads((ROOT / 'data/programs' / f'{pid}.json').read_text())
-    validate_program(program)
+    family = (json.loads((ROOT / 'data/families' / (program['family']['id'] + '.json')).read_text())
+              if program.get('family') else None)
+    validate_program(program, family)
     adapter = importlib.import_module(f'atlas.adapters.{pid}.adapter')
     assert adapter.PROGRAM_ID == pid
     source_urls = {source['url'] for source in program['sources']}

@@ -1,0 +1,204 @@
+{
+  "id": "northeastern-ai-combined-degrees",
+  "institution_id": "northeastern-university",
+  "name": "Northeastern AI combined degrees",
+  "description": "Evidence-backed comparison family for reviewed Boston combined BS programs with an explicit AI component and a partner discipline. Initial membership is limited to Philosophy, Business Administration and Biology; this is not an additional university award.",
+  "classification_kind": "analyst_classified",
+  "sources": [
+    {
+      "id": "northeastern-ai-combined-degrees-directory",
+      "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/",
+      "title": "Khoury Combined Majors",
+      "fetched_at": "2026-10-10T21:54:23+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Overview; Programs tab, Bachelor of Science (BS)",
+      "confidence": "high"
+    },
+    {
+      "id": "northeastern-ai-combined-degrees-philosophy-catalog",
+      "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-philosophy-bs-bos/",
+      "title": "Artificial Intelligence and Philosophy, BS (Boston)",
+      "fetched_at": "2026-10-10T22:12:57+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Breadcrumbs; AI requirements, partner-discipline requirements and integrative requirements in Program Requirements tab",
+      "confidence": "high"
+    },
+    {
+      "id": "northeastern-ai-combined-degrees-business-administration-catalog",
+      "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-business-admnistration-bs-bos/",
+      "title": "Artificial Intelligence and Business Administration, BS (Boston)",
+      "fetched_at": "2026-10-10T22:12:59+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Breadcrumbs; AI requirements, partner-discipline requirements and integrative requirements in Program Requirements tab",
+      "confidence": "high"
+    },
+    {
+      "id": "northeastern-ai-combined-degrees-biology-catalog",
+      "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-biology-bs-bos/",
+      "title": "Artificial Intelligence and Biology, BS (Boston)",
+      "fetched_at": "2026-10-10T22:13:00+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Breadcrumbs; AI requirements, partner-discipline requirements and integrative requirements in Program Requirements tab",
+      "confidence": "high"
+    }
+  ],
+  "shared_requirements": [
+    {
+      "id": "programming-introduction",
+      "parent_id": null,
+      "title": "CS 2000 + CS 2001",
+      "kind": "all",
+      "count": null,
+      "credits": 5.0,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "northeastern-ai-combined-degrees-philosophy-catalog",
+      "source_text": null,
+      "summary": "Take this course bundle together.",
+      "course_codes": [
+        "CS 2000",
+        "CS 2001"
+      ],
+      "component": "ai_core"
+    },
+    {
+      "id": "programming-implementation",
+      "parent_id": null,
+      "title": "CS 2100 + CS 2101",
+      "kind": "all",
+      "count": null,
+      "credits": 5.0,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "northeastern-ai-combined-degrees-philosophy-catalog",
+      "source_text": null,
+      "summary": "Take this course bundle together.",
+      "course_codes": [
+        "CS 2100",
+        "CS 2101"
+      ],
+      "component": "ai_core"
+    },
+    {
+      "id": "databases",
+      "parent_id": null,
+      "title": "CS 3200",
+      "kind": "all",
+      "count": null,
+      "credits": 4.0,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "northeastern-ai-combined-degrees-philosophy-catalog",
+      "source_text": null,
+      "summary": "Listed course.",
+      "course_codes": [
+        "CS 3200"
+      ],
+      "component": "ai_core"
+    },
+    {
+      "id": "advanced-data-programming",
+      "parent_id": null,
+      "title": "DS 3500",
+      "kind": "all",
+      "count": null,
+      "credits": 4.0,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "northeastern-ai-combined-degrees-philosophy-catalog",
+      "source_text": null,
+      "summary": "Listed course.",
+      "course_codes": [
+        "DS 3500"
+      ],
+      "component": "ai_core"
+    },
+    {
+      "id": "mathematical-ai-foundations",
+      "parent_id": null,
+      "title": "DS 3000",
+      "kind": "all",
+      "count": null,
+      "credits": 4.0,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "northeastern-ai-combined-degrees-philosophy-catalog",
+      "source_text": null,
+      "summary": "Listed course.",
+      "course_codes": [
+        "DS 3000"
+      ],
+      "component": "ai_core"
+    },
+    {
+      "id": "data-visualization",
+      "parent_id": null,
+      "title": "DS 4200",
+      "kind": "all",
+      "count": null,
+      "credits": 4.0,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "northeastern-ai-combined-degrees-philosophy-catalog",
+      "source_text": null,
+      "summary": "Listed course.",
+      "course_codes": [
+        "DS 4200"
+      ],
+      "component": "ai_core"
+    },
+    {
+      "id": "large-scale-storage-retrieval",
+      "parent_id": null,
+      "title": "DS 4300",
+      "kind": "all",
+      "count": null,
+      "credits": 4.0,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "northeastern-ai-combined-degrees-philosophy-catalog",
+      "source_text": null,
+      "summary": "Listed course.",
+      "course_codes": [
+        "DS 4300"
+      ],
+      "component": "ai_core"
+    },
+    {
+      "id": "machine-learning",
+      "parent_id": null,
+      "title": "DS 4400",
+      "kind": "all",
+      "count": null,
+      "credits": 4.0,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "northeastern-ai-combined-degrees-philosophy-catalog",
+      "source_text": null,
+      "summary": "Listed course.",
+      "course_codes": [
+        "DS 4400"
+      ],
+      "component": "ai_core"
+    },
+    {
+      "id": "placement-substitution",
+      "parent_id": null,
+      "title": "Fundamental Courses rule",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "northeastern-ai-combined-degrees-philosophy-catalog",
+      "source_text": null,
+      "summary": "Placement may replace CS 2000/2001 with 4-5 semester hours of otherwise unused CS/CY/DS courses at level 3000 or above.",
+      "course_codes": [],
+      "component": "ai_core"
+    }
+  ]
+}
