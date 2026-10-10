@@ -266,3 +266,306 @@ def test_family_update_with_different_course_scope_invalidates_dependent_binding
 def test_resolution_is_idempotent_for_program_without_family():
     variant=synthetic_variant();variant.pop('family')
     assert resolve_program(resolve_program(variant))==variant
+
+
+def test_local_requirements_cannot_spoof_family_origin_or_unreviewed_component():
+    variant=synthetic_variant();variant['family']['components']=[]
+    variant['requirements'][0].update(origin='family',family_requirement_id='invented-shared',
+        family_source_id='invented-source',component='ai_core',component_classification='source_stated')
+    node=nodes(resolve_program(variant,synthetic_family()))['ai-biology-domain']
+    assert node['origin']=='variant'
+    assert node.get('component','other')=='other'
+    assert 'family_requirement_id' not in node and 'family_source_id' not in node
+    assert node.get('component_classification','unknown')!='source_stated'
+
+
+@pytest.fixture
+def family_database(tmp_path):
+    from atlas import db
+    from atlas.family_store import ingest_family
+    conn=db.connect(tmp_path/'families.sqlite');db.migrate(conn)
+    family=synthetic_family();variant=synthetic_variant()
+    with conn:db.upsert_institution(conn,variant['institution'])
+    ingest_family(conn,family)
+    yield conn,family
+    conn.close()
+
+
+def test_family_database_stores_shared_facts_once_and_exports_concrete_variants(family_database):
+    import json
+    from atlas import db
+    from atlas.family_store import load_family
+    conn,family=family_database
+    for variant in [synthetic_variant(),synthetic_variant('philosophy','BA')]:db.ingest_program(conn,variant)
+    loaded=load_family(conn,family['id'])
+    assert loaded['shared_requirements'][0]['course_codes']==['AI 101','CS 102']
+    assert conn.execute('SELECT count(*) FROM family_requirement_groups').fetchone()[0]==1
+    assert conn.execute('SELECT count(*) FROM requirement_groups').fetchone()[0]==2
+    assert conn.execute('SELECT count(*) FROM family_requirement_bindings').fetchone()[0]==2
+    assert conn.execute('PRAGMA foreign_key_check').fetchall()==[]
+    for row in conn.execute('SELECT record_json FROM programs'):
+        raw=json.loads(row[0]);assert len(raw['requirements'])==1
+        assert all(n['id'].endswith('-domain') for n in raw['requirements'])
+    data=db.export_data(conn)
+    assert len(data['families'])==1 and len(data['programs'])==2
+    assert data['meta']['coverage_summary']['programs']==2
+    assert {p['award_level'] for p in data['programs']}=={'BS','BA'}
+    for p in data['programs']:
+        assert len(p['requirements'])==2
+        assert nodes(p)[p['id']+'-foundations']['source_id']==p['id']+'-catalog'
+        assert p['curriculum_status']=='partial'
+
+
+def test_family_migration_keeps_old_full_program_revision(family_database):
+    import json
+    from atlas import db
+    conn,family=family_database
+    variant=synthetic_variant();old=deepcopy(variant);old.pop('family')
+    old['requirements'].append(requirement('ai-biology-foundations','ai-biology-catalog',
+        courses=['ai-biology-ai','ai-biology-cs']))
+    db.ingest_program(conn,old);db.ingest_program(conn,variant)
+    revisions=[json.loads(row[0]) for row in conn.execute('SELECT record_json FROM program_revisions ORDER BY id')]
+    assert len(revisions)==2 and revisions[0]==old and revisions[1]==variant
+    assert conn.execute('SELECT count(*) FROM requirement_groups').fetchone()[0]==1
+    assert len(db.export_data(conn)['programs'][0]['requirements'])==2
+
+
+def test_invalid_family_revision_rolls_back_all_shared_rows(family_database):
+    from atlas import db
+    from atlas.family_store import ingest_family,load_family
+    conn,family=family_database;db.ingest_program(conn,synthetic_variant())
+    before=load_family(conn,family['id']);revisions=conn.execute('SELECT count(*) FROM family_revisions').fetchone()[0]
+    changed=deepcopy(family);changed['shared_requirements'][0]['course_codes'].append('AI 299')
+    with pytest.raises(ValueError):ingest_family(conn,changed)
+    assert load_family(conn,family['id'])==before
+    assert conn.execute('SELECT count(*) FROM family_revisions').fetchone()[0]==revisions
+    assert conn.execute('PRAGMA foreign_key_check').fetchall()==[]
+
+
+def complete_variant(family):
+    from atlas import db
+    variant=synthetic_variant();variant['curriculum_status']='complete'
+    variant['curriculum_audit']=dict(scope='degree',reviewed_at='2026-10-10',
+        source_ids=['ai-biology-catalog'],sections=['Synthetic complete test scope'],
+        unresolved_requirements=[],metadata_gaps=['Synthetic course descriptions are unknown.'],
+        family_content_hash=db.digest(family))
+    return variant
+
+
+def test_complete_family_record_requires_current_family_review_hash(family_database):
+    from atlas import db
+    conn,family=family_database;variant=complete_variant(family)
+    stale=deepcopy(variant);stale['curriculum_audit']['family_content_hash']='old-review'
+    with pytest.raises(ValueError):db.ingest_program(conn,stale)
+    missing=deepcopy(variant);missing['curriculum_audit'].pop('family_content_hash')
+    with pytest.raises(ValueError):db.ingest_program(conn,missing)
+    assert conn.execute('SELECT count(*) FROM programs').fetchone()[0]==0
+    db.ingest_program(conn,variant)
+    assert db.export_data(conn)['programs'][0]['curriculum_status']=='complete'
+
+
+def test_material_family_edit_needs_reaudited_dependent_and_updates_atomically(family_database):
+    from atlas import db
+    from atlas.family_store import ingest_family,load_family
+    conn,family=family_database;variant=complete_variant(family);db.ingest_program(conn,variant)
+    changed=deepcopy(family);changed['shared_requirements'][0]['summary']='A reviewed change in the shared requirement.'
+    with pytest.raises(ValueError):ingest_family(conn,changed)
+    assert load_family(conn,family['id'])['shared_requirements'][0]['summary']!=changed['shared_requirements'][0]['summary']
+    reviewed=deepcopy(variant);reviewed['curriculum_audit']['family_content_hash']=db.digest(changed)
+    ingest_family(conn,changed,program_updates={reviewed['id']:reviewed})
+    exported=db.export_data(conn)['programs'][0]
+    assert exported['curriculum_audit']['family_content_hash']==db.digest(changed)
+    assert nodes(exported)['ai-biology-foundations']['summary']==changed['shared_requirements'][0]['summary']
+    assert exported['curriculum_status']=='complete'
+    assert conn.execute('PRAGMA foreign_key_check').fetchall()==[]
+
+
+def test_bad_dependent_update_cannot_partially_replace_family(family_database):
+    from atlas import db
+    from atlas.family_store import ingest_family,load_family
+    conn,family=family_database;variant=synthetic_variant();db.ingest_program(conn,variant)
+    original=load_family(conn,family['id']);changed=deepcopy(family);changed['name']='Changed synthetic family'
+    bad=deepcopy(variant);bad['family']['requirement_bindings'][0]['course_ids']=['not-a-course']
+    with pytest.raises(ValueError):ingest_family(conn,changed,program_updates={bad['id']:bad})
+    assert load_family(conn,family['id'])==original
+    assert db.export_data(conn)['programs'][0]['title']==variant['title']
+
+
+def test_ingest_all_rolls_back_family_and_programs_if_later_program_fails(tmp_path):
+    import json
+    from atlas import db
+    from atlas.cli import ingest_all
+    conn=db.connect(tmp_path/'rollback.sqlite');db.migrate(conn)
+    family=synthetic_family();variant=synthetic_variant()
+    with conn:db.upsert_institution(conn,variant['institution'])
+    data=tmp_path/'input';(data/'families').mkdir(parents=True);(data/'programs').mkdir()
+    (data/'families'/'family.json').write_text(json.dumps(family))
+    (data/'programs'/'a-valid.json').write_text(json.dumps(variant))
+    bad=synthetic_variant('philosophy');bad['requirements'][0]['source_id']='missing-source'
+    (data/'programs'/'z-invalid.json').write_text(json.dumps(bad))
+    with pytest.raises(ValueError,match="Unknown source missing-source"):ingest_all(conn,data)
+    assert conn.execute('SELECT count(*) FROM program_families').fetchone()[0]==0
+    assert conn.execute('SELECT count(*) FROM programs').fetchone()[0]==0
+    assert conn.execute('SELECT count(*) FROM program_revisions').fetchone()[0]==0
+    assert conn.execute('SELECT count(*) FROM family_revisions').fetchone()[0]==0
+    assert conn.execute('PRAGMA foreign_key_check').fetchall()==[]
+    conn.close()
+
+
+def test_unknown_family_load_fails_and_repeat_ingestion_is_idempotent(family_database):
+    from atlas import db
+    from atlas.family_store import ingest_family,load_family
+    conn,family=family_database;variant=synthetic_variant()
+    with pytest.raises(ValueError,match='Unknown program family'):load_family(conn,'missing-family')
+    db.ingest_program(conn,variant)
+    ingest_family(conn,family);db.ingest_program(conn,variant)
+    assert conn.execute('SELECT count(*) FROM family_revisions').fetchone()[0]==1
+    assert conn.execute('SELECT count(*) FROM program_revisions').fetchone()[0]==1
+    assert conn.execute('SELECT count(*) FROM family_binding_courses').fetchone()[0]==2
+
+
+def test_ingest_all_existing_family_and_variants_roll_back_on_later_failure(family_database,tmp_path):
+    import json
+    from atlas import db
+    from atlas.cli import ingest_all
+    from atlas.family_store import load_family
+    conn,family=family_database;variant=synthetic_variant();db.ingest_program(conn,variant)
+    family_before=load_family(conn,family['id'])
+    raw_before=conn.execute('SELECT record_json FROM programs WHERE id=?',(variant['id'],)).fetchone()[0]
+    data=tmp_path/'existing-input';(data/'families').mkdir(parents=True);(data/'programs').mkdir()
+    changed=deepcopy(family);changed['name']='A new reviewed family label'
+    (data/'families'/'family.json').write_text(json.dumps(changed))
+    updated=deepcopy(variant);updated['overview']='A changed program description'
+    (data/'programs'/'a-updated.json').write_text(json.dumps(updated))
+    bad=synthetic_variant('philosophy');bad['requirements'][0]['source_id']='missing-source'
+    (data/'programs'/'z-invalid.json').write_text(json.dumps(bad))
+    with pytest.raises(ValueError,match='Unknown source missing-source'):ingest_all(conn,data)
+    assert load_family(conn,family['id'])==family_before
+    assert conn.execute('SELECT record_json FROM programs WHERE id=?',(variant['id'],)).fetchone()[0]==raw_before
+    assert conn.execute('SELECT count(*) FROM family_revisions').fetchone()[0]==1
+    assert conn.execute('SELECT count(*) FROM program_revisions').fetchone()[0]==1
+
+
+def test_candidate_review_compares_against_resolved_shared_requirements(family_database,capsys):
+    from types import SimpleNamespace
+    from atlas import db
+    from atlas.cli import main
+    from atlas.scrape import scrape_one
+    from atlas.http import FetchResult
+    conn,family=family_database;variant=synthetic_variant();db.ingest_program(conn,variant)
+    resolved=resolve_program(variant,family)
+    payload=dict(id=variant['id'],requirements=resolved['requirements'],courses=variant['courses'])
+    nodes(payload)['ai-biology-foundations']['summary']='A newly observed shared rule.'
+    module=SimpleNamespace(SOURCES=['https://example.edu/observed'],parse=lambda html:payload)
+    class Fetch:
+        def fetch(self,url,**kwargs):return FetchResult(url,'synthetic body','body-hash','2026-10-10',200,False)
+    result=scrape_one(conn,variant['id'],module,Fetch())
+    assert result['status']=='success' and result['new_candidates']==1
+    cid=conn.execute('SELECT id FROM extraction_candidates').fetchone()[0]
+    path=conn.execute('PRAGMA database_list').fetchone()[2]
+    assert main(['--db',path,'review',str(cid)])==0
+    output=capsys.readouterr().out
+    assert any(line.startswith('-') and 'An invented requirement for testing.' in line for line in output.splitlines())
+    assert any(line.startswith('+') and 'A newly observed shared rule.' in line for line in output.splitlines())
+    assert 'No data was changed' in output
+    assert db.export_data(conn)['programs'][0]['curriculum_status']=='partial'
+
+
+def test_family_update_mapping_cannot_substitute_another_dependent_identity(family_database):
+    from atlas import db
+    from atlas.family_store import ingest_family,load_family
+    conn,family=family_database;variant=complete_variant(family);db.ingest_program(conn,variant)
+    changed=deepcopy(family);changed['name']='Changed family awaiting review'
+    impostor=synthetic_variant('philosophy','BA')
+    before=load_family(conn,family['id'])
+    with pytest.raises(ValueError):
+        ingest_family(conn,changed,program_updates={variant['id']:impostor})
+    assert load_family(conn,family['id'])==before
+    assert conn.execute('SELECT count(*) FROM programs').fetchone()[0]==1
+
+
+def test_program_updates_are_applied_even_when_family_definition_is_unchanged(family_database):
+    from atlas import db
+    from atlas.family_store import ingest_family
+    conn,family=family_database;variant=synthetic_variant();db.ingest_program(conn,variant)
+    updated=deepcopy(variant);updated['overview']='Newly reviewed variant description.'
+    ingest_family(conn,family,program_updates={updated['id']:updated})
+    assert db.export_data(conn)['programs'][0]['overview']==updated['overview']
+    assert conn.execute('SELECT count(*) FROM family_revisions').fetchone()[0]==1
+    assert conn.execute('SELECT count(*) FROM program_revisions').fetchone()[0]==2
+
+
+def test_family_schema_upgrade_preserves_existing_requirement_rows(tmp_path):
+    from pathlib import Path
+    from atlas import db
+    conn=db.connect(tmp_path/'pre-family.sqlite')
+    conn.execute('CREATE TABLE schema_migrations(version INTEGER PRIMARY KEY, applied_at TEXT NOT NULL)')
+    migrations=Path(db.__file__).parent/'migrations'
+    for path in sorted(migrations.glob('*.sql')):
+        version=int(path.name.split('_')[0])
+        if version>=5:continue
+        conn.executescript(path.read_text())
+        conn.execute('INSERT INTO schema_migrations VALUES (?,?)',(version,'2026-10-10'))
+        conn.commit()
+    program=synthetic_variant();program.pop('family');pid=program['id'];sid=pid+'-catalog'
+    with conn:
+        db.upsert_institution(conn,program['institution'])
+        conn.execute('''INSERT INTO programs(id,institution_id,title,award_level,program_kind,status,
+            overview,catalog_year,verification_status,curriculum_status,last_verified,content_hash,record_json)
+            VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)''',(pid,'synthetic-university',program['title'],'BS','degree',
+            'unknown',program['overview'],'2026–2027','partial','partial','2026-10-10',db.digest(program),db.canonical(program)))
+        conn.execute('INSERT INTO sources VALUES (?,?,?,?,?,?,?,?,?)',(pid,sid,'https://example.edu/catalog','Synthetic',None,None,None,None,'high'))
+        conn.execute('INSERT INTO courses VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)',(pid,pid+'-domain','BIOLOGY 201','Synthetic',None,None,None,'unknown','other',sid,None,None,None))
+        conn.execute('INSERT INTO requirement_groups VALUES (?,?,?,?,?,?,?,?,?,?,?,?)',(pid,pid+'-domain',None,'Local domain','all',None,None,'unknown','other',sid,None,'Local requirement.'))
+        conn.execute('INSERT INTO requirement_courses VALUES (?,?,?)',(pid,pid+'-domain',pid+'-domain'))
+    before=[tuple(row) for row in conn.execute('SELECT * FROM requirement_groups')]
+    membership=[tuple(row) for row in conn.execute('SELECT * FROM requirement_courses')]
+    db.migrate(conn)
+    assert [tuple(row) for row in conn.execute('SELECT * FROM requirement_groups')]==before
+    assert [tuple(row) for row in conn.execute('SELECT * FROM requirement_courses')]==membership
+    assert conn.execute('SELECT record_json FROM programs').fetchone()[0]==db.canonical(program)
+    assert conn.execute('PRAGMA foreign_key_check').fetchall()==[]
+    conn.close()
+
+
+def test_reviewed_shared_id_and_course_scope_change_updates_two_variants_atomically(family_database):
+    from atlas import db
+    from atlas.family_store import ingest_family,load_family
+    conn,family=family_database;variants=[synthetic_variant(),synthetic_variant('philosophy','BA')]
+    for variant in variants:db.ingest_program(conn,variant)
+    changed=deepcopy(family);shared=changed['shared_requirements'][0]
+    shared['id']='shared-expanded-core';shared['course_codes'].append('AI 299')
+    updates={}
+    for variant in variants:
+        updated=deepcopy(variant);pid=updated['id'];course=deepcopy(updated['courses'][0])
+        course.update(id=pid+'-advanced',code='AI 299',name='Synthetic advanced AI')
+        updated['courses'].append(course)
+        binding=updated['family']['requirement_bindings'][0]
+        binding['shared_id']='shared-expanded-core';binding['course_ids'].append(course['id'])
+        updates[pid]=updated
+    ingest_family(conn,changed,program_updates=updates)
+    assert load_family(conn,family['id'])==changed
+    for program in db.export_data(conn)['programs']:
+        inherited=nodes(program)[program['id']+'-foundations']
+        assert inherited['family_requirement_id']=='shared-expanded-core'
+        assert len(inherited['course_ids'])==3
+    assert conn.execute('SELECT count(*) FROM family_requirement_groups').fetchone()[0]==1
+    assert conn.execute('SELECT count(*) FROM family_revisions').fetchone()[0]==2
+    assert conn.execute('PRAGMA foreign_key_check').fetchall()==[]
+
+
+def test_optional_family_shape_and_annotations_round_trip_without_hash_drift(tmp_path):
+    from atlas import db
+    from atlas.family_store import ingest_family,load_family
+    conn=db.connect(tmp_path/'shape.sqlite');db.migrate(conn)
+    family=synthetic_family();shared=family['shared_requirements'][0]
+    shared.pop('source_text');shared.pop('component')
+    shared['review_note']='An explicit synthetic reviewer annotation.'
+    family['sources'][0].pop('source_date')
+    with conn:db.upsert_institution(conn,synthetic_variant()['institution'])
+    ingest_family(conn,family)
+    loaded=load_family(conn,family['id'])
+    assert loaded==family and db.digest(loaded)==db.digest(family)
+    db.ingest_program(conn,complete_variant(family))
+    assert db.export_data(conn)['programs'][0]['curriculum_status']=='complete'
+    conn.close()
