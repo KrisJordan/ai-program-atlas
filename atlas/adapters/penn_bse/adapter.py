@@ -8,6 +8,7 @@ from atlas.adapters.cmu_bs.common import slug
 
 from .common import list_courses, req, text
 from .requirements import enrich_requirements
+from .linked_policies import HANDBOOK, INVENTORY, faq_requirements, parse_technical_policy, parse_technical_inventory
 
 SOURCES = ["https://ai.engineering.upenn.edu/academics/undergraduate/"]
 PID = "penn-bse-ai"
@@ -89,7 +90,12 @@ def parse(html: str) -> dict:
         ],
     }
 
-    return enrich_requirements(blocks, observed, source, SOURCES[0])
+    result = enrich_requirements(blocks, observed, source, SOURCES[0])
+    result["requirements"].extend(faq_requirements(soup))
+    return result
 
 
 PROGRAM_ID = "penn-bse-ai"
+
+SOURCES.extend([HANDBOOK, INVENTORY])
+SOURCE_PARSERS = {HANDBOOK: parse_technical_policy, INVENTORY: parse_technical_inventory}

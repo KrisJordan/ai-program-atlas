@@ -64,6 +64,7 @@ def block(title, body):
 def penn_bse_fixture():
     return (
         "<h1>B.S.E. in AI Curriculum</h1>"
+        + "<p>Current Penn Engineering students, including current first- and second-year M&amp;T students; Submit a 4-year academic plan; Declare/Update Field of Study form; with the exception of CSCI, NETS and SSE; within 8 semesters in total (or 10 semesters for M&amp;T students); first day of their first-year Fall Semester.</p>"
         + block("Computing (5 CUs)", "<ul><li>CIS 1200: Synthetic computing</li></ul>")
         + block(
             "AI Core (6 CUs)",
