@@ -1,9 +1,20 @@
-# Artificial Intelligence
+# UCSB AI curriculum
 
-Source: https://ai.cs.ucsb.edu/
+Reviewed 2026-10-10. The parser re-extracts actual HTML course rows and core-area labels, rejecting missing headings. It excludes the sample plan and never replays worksheet additions or manual audits. Worksheet PDF was inspected through the web PDF reader, not redistributed; PDF refresh requires human review until binary extraction is supported.
 
-Official program identity verified; curriculum pending.
+Only explicit curriculum tables/core areas were parsed; illustrative four-year schedules were excluded. Webpage and 2026–27 worksheet conflict on CMPSC 41 units and upper-division totals. Science approved lists and capstone details remain unresolved.
 
-Official admissions directory and dedicated department AI site confirm Bachelor of Science in Artificial Intelligence. Detailed curriculum page also inspected but not extracted. Initial general CS page inaccessible; alternate official source supplied identity. Activity/start date not independently established.
+CMPSC 41: webpage four units versus worksheet five; worksheet sample plan returns to four.
 
-The adapter requires a source-specific content heading and explicit program identity/classification claims after navigation is removed. It returns identity fields only. It does not replay curated records or mint verification dates. Source-specific synthetic regression tests reject missing evidence and access pages. All live-refresh and detailed curriculum parsing remain follow-up work.
+Upper-division subtotal 81 on worksheet does not reconcile with listed rows or webpage 36 core + 36 electives.
+
+Science List A/B approved lists unavailable on inspected pages; worksheet List B allocation blank.
+
+Capstone course, full college policies and ambiguous worksheet department wording need clarification.
+
+Launch is recorded as announced because the source schedules the inaugural class rather than confirms enrollment.
+
+https://ai.cs.ucsb.edu/curriculum
+https://ai.cs.ucsb.edu/
+https://ai.cs.ucsb.edu/sites/default/files/2026-04/AI%20major%20rqmnts_4.10%20(1).pdf
+https://www.cs.ucsb.edu/index.php/happenings/announcement/ucsb-launches-dedicated-website-new-bs-artificial-intelligence-inaugural

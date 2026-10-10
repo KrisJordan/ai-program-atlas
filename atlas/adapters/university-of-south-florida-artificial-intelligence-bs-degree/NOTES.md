@@ -1,9 +1,11 @@
-# Artificial Intelligence
+# USF BSAI evidence
 
-Official identity source: https://www.usf.edu/ai-cybersecurity-computing/academics/undergraduate/bsai.aspx
+Reviewed 2026-10-10. The overview parser observes identity only. The curated brochure requirement inventory is deliberately separate; HTML identity success cannot mark it fresh or complete.
 
-Directory/identity verified; curriculum pending. No courses, requirements or outcomes have yet been extracted.
+The September 2026 brochure identifies a current AI student, supporting active status. First offering term remains unknown. Its BSAI Four Year Plan supports the BSAI award abbreviation.
 
-Official undergraduate program source inspected; qualifying title confirmed. Institution-wide inventory and curriculum extraction remain incomplete.
+Catalog fetch through https://usf.to/BS-Artificial-Intelligence-catalogue was deferred: catalog.usf.edu robots requires 120-second crawl delay, exceeding current fetcher scheduling support. No access restriction was bypassed.
 
-The adapter validates a title in visible content headings or links and the award/kind in its local card or heading section. It returns only observed identity fields and never replays seed metadata, curriculum, or dates. A failure means review is required; it does not mean the program is absent. Tests use synthetic HTML to verify rejection behavior; live refresh is not claimed.
+PDF inspected via public web reader; no PDF content committed. Primary overview adapter remains identity-only and never represents brochure curriculum as freshly verified. PDF curriculum observations require human review on refresh.
+
+https://www.usf.edu/ai-cybersecurity-computing/documents/brochures/bellini-ug-bsai.pdf

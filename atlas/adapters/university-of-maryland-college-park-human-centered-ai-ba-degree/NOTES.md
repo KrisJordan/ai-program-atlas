@@ -1,15 +1,11 @@
-# Human-Centered AI
+# Maryland AI curriculum research
 
-Official identity source: https://ai.umd.edu/
+Reviewed 2026-10-10. Official catalog fetched through the robots-aware fetcher; raw HTML remains outside the repository. Parser validates title and table inventory, extracts actual rows, nested choices and approval footnotes, and emits only partial observations. It never refreshes the curated audit or launch evidence.
 
-Directory/identity verified; curriculum pending. No courses, requirements or outcomes have yet been extracted.
+Six-course specialization pools preserve the extra GVPT170 requirement and course-content approval footnotes.
 
-Official AI hub confirms BA Human-Centered AI for fall 2026 and BSAI Computational Structures for AI Systems for fall 2027. BSAI must be marked announced, not active, in program records. BSAI catalog inspected; BA detail curriculum remains pending.
+University-wide graduation/general education and linked college requirements remain unreviewed.
 
-The adapter validates a title in visible content headings or links and the award/kind in its local card or heading section. It returns only observed identity fields and never replays seed metadata, curriculum, or dates. A failure means review is required; it does not mean the program is absent. Tests use synthetic HTML to verify rejection behavior; live refresh is not claimed.
+Launch evidence: https://today.umd.edu/umd-to-launch-2-bachelors-degrees-to-explore-technical-human-dimensions-of-ai
 
-## Cached layout verification — 2026-10-10
-
-The landing page describes the degree in a paragraph within the text slot of a umd-element-pathway element. The parser requires the Human-Centered AI identity and Bachelor of Arts in the same sentence. Other degrees in adjacent sentences cannot supply the award.
-
-Validation used previously fetched, ignored local HTML. This adapter refreshes identity only; full curriculum extraction remains pending. No reviewed seed content or verification timestamp is replayed by the parser.
+Catalog: https://academiccatalog.umd.edu/undergraduate/colleges-schools/arts-humanities/philosophy/human-centered-artificial-intelligence-major/
