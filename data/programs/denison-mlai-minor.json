@@ -1,0 +1,229 @@
+{
+  "id": "denison-mlai-minor",
+  "institution": {
+    "id": "denison-university",
+    "name": "Denison University",
+    "aliases": [],
+    "calendar": "unknown",
+    "website": "https://denison.edu"
+  },
+  "title": "Machine Learning and Artificial Intelligence",
+  "award_level": "minor",
+  "program_kind": "minor",
+  "hosting_unit": "Machine Learning & Artificial Intelligence",
+  "status": "active",
+  "first_offered": null,
+  "overview": "A technical minor combining mathematical foundations, programming and machine learning. It is open to any Denison student and particularly complements computer science, mathematics and data analytics.",
+  "catalog_year": "2026-2027",
+  "verification_status": "confirmed",
+  "last_verified": "2026-10-10",
+  "curriculum_status": "partial",
+  "links": [
+    {
+      "kind": "overview",
+      "url": "https://denison.edu/academics/machine-learning-and-artificial-intelligence/about",
+      "label": "Program overview"
+    },
+    {
+      "kind": "study",
+      "url": "https://denison.edu/academics/machine-learning-and-artificial-intelligence/degree-requirements",
+      "label": "Official minor requirements"
+    },
+    {
+      "kind": "catalog",
+      "url": "https://denison.edu/academics/machine-learning-and-artificial-intelligence/courses",
+      "label": "2026\u20132027 course descriptions"
+    }
+  ],
+  "sources": [
+    {
+      "id": "denison-mlai-requirements",
+      "url": "https://denison.edu/academics/machine-learning-and-artificial-intelligence/degree-requirements",
+      "title": "Degree Requirements | Machine Learning & Artificial Intelligence",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Program Requirements and Description; required-course table",
+      "confidence": "high"
+    },
+    {
+      "id": "denison-mlai-courses",
+      "url": "https://denison.edu/academics/machine-learning-and-artificial-intelligence/courses",
+      "title": "Courses | Machine Learning & Artificial Intelligence",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "2026 - 2027; ML 221 through ML 400",
+      "confidence": "high"
+    },
+    {
+      "id": "denison-mlai-about",
+      "url": "https://denison.edu/academics/machine-learning-and-artificial-intelligence/about",
+      "title": "About | Machine Learning & Artificial Intelligence",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Departmental Guidelines & Mission Statement",
+      "confidence": "high"
+    }
+  ],
+  "outcomes": [
+    {
+      "text": "Understand and implement machine learning algorithms to solve practical problems.",
+      "kind": "source_stated",
+      "source_id": "denison-mlai-about",
+      "locator": "Departmental Guidelines & Mission Statement"
+    },
+    {
+      "text": "Build mathematical and computational foundations for machine learning.",
+      "kind": "inferred_taxonomy",
+      "source_id": "denison-mlai-requirements",
+      "locator": "Required-course table"
+    }
+  ],
+  "courses": [
+    {
+      "id": "denison-math-145",
+      "code": "MATH 145",
+      "name": "Multivariable Calculus",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "mathematics",
+      "source_id": "denison-mlai-requirements",
+      "url": "https://denison.edu/academics/machine-learning-and-artificial-intelligence/degree-requirements",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "denison-math-213",
+      "code": "MATH 213",
+      "name": "Linear Algebra and Differential Equations",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "mathematics",
+      "source_id": "denison-mlai-requirements",
+      "url": "https://denison.edu/academics/machine-learning-and-artificial-intelligence/degree-requirements",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "denison-cs-145",
+      "code": "CS 145",
+      "name": "Introduction to Algorithm Design",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "foundations",
+      "source_id": "denison-mlai-requirements",
+      "url": "https://denison.edu/academics/machine-learning-and-artificial-intelligence/degree-requirements",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "denison-ml-math-221",
+      "code": "ML/MATH 221",
+      "name": "Applied Probability",
+      "description": "Probability through empirical investigation and programming.",
+      "prerequisites": "MATH 145 and CS 145, or a course in CS 109\u2013CS 114; consult source for exact grouping.",
+      "credits": 4,
+      "credit_unit": "unknown",
+      "category": "mathematics",
+      "source_id": "denison-mlai-courses",
+      "url": "https://denison.edu/academics/machine-learning-and-artificial-intelligence/courses",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "denison-ml-222",
+      "code": "ML 222",
+      "name": "Applied Probability Seminar",
+      "description": "Empirical probability experiments and programming practice.",
+      "prerequisites": "ML 221 or MATH 221 as corequisite.",
+      "credits": 1,
+      "credit_unit": "unknown",
+      "category": "mathematics",
+      "source_id": "denison-mlai-courses",
+      "url": "https://denison.edu/academics/machine-learning-and-artificial-intelligence/courses",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "denison-ml-cs-240",
+      "code": "ML/CS 240",
+      "name": "Introduction to Machine Learning",
+      "description": "Foundational machine learning concepts and applied algorithms.",
+      "prerequisites": null,
+      "credits": 4,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "denison-mlai-courses",
+      "url": "https://denison.edu/academics/machine-learning-and-artificial-intelligence/courses",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "denison-ml-310-math-428",
+      "code": "ML 310/MATH 428",
+      "name": "Intermediate Machine Learning",
+      "description": "Mathematical analysis and implementation of modern machine learning.",
+      "prerequisites": null,
+      "credits": 4,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "denison-mlai-courses",
+      "url": "https://denison.edu/academics/machine-learning-and-artificial-intelligence/courses",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "denison-ml-400",
+      "code": "ML 400",
+      "name": "Advanced Machine Learning",
+      "description": "Deep learning, convolutional models and transformers.",
+      "prerequisites": null,
+      "credits": 4,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "denison-mlai-courses",
+      "url": "https://denison.edu/academics/machine-learning-and-artificial-intelligence/courses",
+      "public_site": null,
+      "syllabus": null
+    }
+  ],
+  "requirements": [
+    {
+      "id": "denison-mlai-minor-required",
+      "parent_id": null,
+      "title": "Required courses",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "denison-mlai-requirements",
+      "source_text": null,
+      "summary": "Complete all eight listed courses. Cross-listed codes identify the same course, not additional requirements.",
+      "course_ids": [
+        "denison-math-145",
+        "denison-math-213",
+        "denison-cs-145",
+        "denison-ml-math-221",
+        "denison-ml-222",
+        "denison-ml-cs-240",
+        "denison-ml-310-math-428",
+        "denison-ml-400"
+      ]
+    }
+  ],
+  "notes": [
+    "All eight required courses are enumerated; three cognate credits and several prerequisite expressions remain unverified. Curriculum is therefore partial.",
+    "The five ML courses publish Credit Hours; semester/quarter normalization has not been verified, so credit_unit is unknown.",
+    "Course codes preserve cross-listings. Course categories are editorial classifications.",
+    "First-offered date is unknown. No launch date inferred from the approval announcement."
+  ]
+}
