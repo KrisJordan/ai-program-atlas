@@ -125,7 +125,7 @@ def test_long_robots_delay_stays_blocked_on_repeated_request(tmp_path):
     def handler(request):
         requests.append(str(request.url))
         text = (
-            "User-agent: *\nCrawl-delay: 120\nAllow: /"
+            "User-agent: *\nCrawl-delay: 3600\nAllow: /"
             if request.url.path == "/robots.txt"
             else "secret target"
         )

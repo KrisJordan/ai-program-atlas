@@ -235,3 +235,31 @@ def test_publication_copy_preserves_manual_corrections_during_seed_refresh(tmp_p
     assert untouched.execute("SELECT count(*) FROM program_revisions").fetchone()[0] == 1
     untouched.close()
     publication.close()
+
+
+def test_two_minute_robots_interval_is_honored_in_bounded_waits(tmp_path):
+    clock = [1000.0]
+    sleeps, requests = [], []
+
+    def sleep(duration):
+        sleeps.append(duration)
+        clock[0] += duration
+
+    def handler(request):
+        requests.append((request.url.path, clock[0]))
+        body = (
+            "User-agent: *\nCrawl-delay: 120\nDisallow: /private"
+            if request.url.path == "/robots.txt"
+            else "<h1>AI catalog</h1>"
+        )
+        return httpx.Response(200, text=body)
+
+    with httpx.Client(transport=httpx.MockTransport(handler)) as client:
+        fetcher = Fetcher(tmp_path, client=client, clock=lambda: clock[0], sleep=sleep)
+        fetcher.fetch("https://catalog.example.edu/one")
+        fetcher.fetch("https://catalog.example.edu/two")
+        assert requests == [("/robots.txt", 1000.0), ("/one", 1120.0), ("/two", 1240.0)]
+        assert sleeps == [30] * 8
+        with pytest.raises(FetchError, match="Robots disallows"):
+            fetcher.fetch("https://catalog.example.edu/private")
+        assert len(requests) == 3

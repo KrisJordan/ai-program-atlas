@@ -65,6 +65,7 @@ class Fetcher:
         delay=1.5,
         retries=2,
         max_bytes=5_000_000,
+        max_crawl_delay=300,
         client=None,
         sleep=time.sleep,
         clock=time.time,
@@ -73,6 +74,7 @@ class Fetcher:
         self.cache_dir.mkdir(parents=True, exist_ok=True)
         self.ttl, self.delay, self.retries = ttl, max(0, delay), min(3, max(0, retries))
         self.max_bytes, self.sleep, self.clock = max_bytes, sleep, clock
+        self.max_crawl_delay = min(300, max(0, max_crawl_delay))
         self.client = client or httpx.Client(
             headers={"User-Agent": USER_AGENT}, timeout=25, follow_redirects=False
         )
@@ -85,6 +87,15 @@ class Fetcher:
         if self.owns_client:
             self.client.close()
 
+    def _pause(self, duration):
+        # Keep each wait bounded while honoring the entire requested interval.
+        # CLI jobs may run asynchronously; a long host delay is never truncated.
+        remaining = duration
+        while remaining > 0:
+            chunk = min(30, remaining)
+            self.sleep(chunk)
+            remaining -= chunk
+
     def _get(self, url):
         validate_public_url(url)
         host = urlparse(url).netloc
@@ -93,7 +104,7 @@ class Fetcher:
                 self.clock() - self.last_request.get(host, float("-inf"))
             )
             if wait > 0:
-                self.sleep(wait)
+                self._pause(wait)
             self.last_request[host] = self.clock()
             try:
                 with self.client.stream("GET", url) as response:
@@ -164,7 +175,7 @@ class Fetcher:
             else:
                 raise FetchError(f"Robots unavailable ({response.status_code}); not fetching {url}")
             crawl_delay = robot.crawl_delay(USER_AGENT) or robot.crawl_delay("*") or 0
-            if crawl_delay > 60:
+            if crawl_delay > self.max_crawl_delay:
                 raise FetchError(
                     f"Robots crawl delay {crawl_delay}s requires separate scheduling: {origin}"
                 )

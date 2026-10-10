@@ -41,7 +41,7 @@ uv run atlas review 1                     # Compare an observed subset to review
 uv run atlas status
 ```
 
-Refreshes respect robots, bounded retries, Retry-After, per-host pacing, content limits and cache TTL. No 401/403/paywall bypass is attempted. A source may be manually inspectable while rejecting the unattended fetcher; record this limitation. Raw HTML stays in ignored `.cache/`, outside Git and the public build. Nonzero refresh exit status means at least one source needs review; successful observations are retained.
+Refreshes respect robots, bounded retries, Retry-After, per-host pacing, content limits and cache TTL. Crawl intervals up to five minutes are honored in waits of at most30 seconds each; longer intervals are deferred. A120-second policy therefore slows retrieval instead of being treated as a denial. No 401/403/paywall bypass is attempted. A source may be manually inspectable while rejecting the unattended fetcher; record this limitation. Raw HTML stays in ignored `.cache/`, outside Git and the public build. Nonzero refresh exit status means at least one source needs review; successful observations are retained.
 
 A successful parse creates a candidate, not permission to erase researched fields. Review the official source and adapter `NOTES.md`, update the curated JSON, then ingest. Failed or partial runs never delete existing facts. Repeated identical observations do not duplicate candidates. Source-body changes are recorded even when extracted identity fields are unchanged.
 
