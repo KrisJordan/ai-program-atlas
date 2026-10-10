@@ -11,18 +11,23 @@
   "award_level": "other",
   "program_kind": "additional_major",
   "hosting_unit": "College of Business Administration",
-  "status": "unknown",
+  "status": "active",
   "first_offered": null,
-  "overview": "Official source identifies this undergraduate additional major. Curriculum extraction is pending.",
-  "catalog_year": null,
-  "verification_status": "partial",
+  "overview": "Additional business major combining applied AI, responsible use, two business electives and a choice of Disruptive Tech or Machine Learning focus. The 33-credit inventory includes 15 credits in the required primary business major.",
+  "catalog_year": "2026-2027",
+  "verification_status": "confirmed",
   "last_verified": "2026-10-10",
-  "curriculum_status": "pending",
+  "curriculum_status": "complete",
   "links": [
     {
       "kind": "overview",
       "url": "https://www.marquette.edu/academics/majors/applied-artificial-intelligence-in-business.php",
       "label": "Applied Artificial Intelligence in Business Major"
+    },
+    {
+      "kind": "catalog",
+      "url": "https://bulletin.marquette.edu/business-administration/applied-artificial-intelligence/",
+      "label": "Current catalog requirements"
     }
   ],
   "sources": [
@@ -35,14 +40,492 @@
       "catalog_year": null,
       "locator": "Program heading and local award or specialization section",
       "confidence": "high"
+    },
+    {
+      "id": "marquette-applied-ai-business-major-catalog",
+      "url": "https://bulletin.marquette.edu/business-administration/applied-artificial-intelligence/",
+      "title": "Applied Artificial Intelligence in Business, Major",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Full local program requirements",
+      "confidence": "high"
+    },
+    {
+      "id": "marquette-applied-ai-business-major-grades",
+      "url": "https://bulletin.marquette.edu/business-administration/policies/grade-minimums/",
+      "title": "Grade Minimums",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Undergraduate major applicability",
+      "confidence": "high"
+    },
+    {
+      "id": "marquette-applied-ai-business-major-declare",
+      "url": "https://bulletin.marquette.edu/business-administration/policies/declaration-major/",
+      "title": "Declaration of Major",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Undergraduate major applicability",
+      "confidence": "high"
+    },
+    {
+      "id": "marquette-applied-ai-business-major-graduation",
+      "url": "https://bulletin.marquette.edu/policies/graduation/undergraduate/",
+      "title": "Graduation - Undergraduate",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Undergraduate major applicability",
+      "confidence": "high"
+    },
+    {
+      "id": "marquette-applied-ai-business-major-uni-declare",
+      "url": "https://bulletin.marquette.edu/policies/major-declaration/",
+      "title": "Major and Minor Declaration - Undergraduate",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Undergraduate major applicability",
+      "confidence": "high"
+    },
+    {
+      "id": "marquette-applied-ai-business-major-crnc",
+      "url": "https://bulletin.marquette.edu/business-administration/policies/crnc-option/",
+      "title": "CR/NC Option",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Undergraduate major applicability",
+      "confidence": "high"
     }
   ],
   "outcomes": [],
-  "courses": [],
-  "requirements": [],
+  "courses": [
+    {
+      "id": "marquette-buad-2001",
+      "code": "BUAD 2001",
+      "name": "Introduction to Applied Artificial Intelligence",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "marquette-applied-ai-business-major-catalog",
+      "url": "https://bulletin.marquette.edu/search/?P=BUAD%202001",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "marquette-fina-4031",
+      "code": "FINA 4031",
+      "name": "Application of AI/ML in Finance and Beyond",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "marquette-applied-ai-business-major-catalog",
+      "url": "https://bulletin.marquette.edu/search/?P=FINA%204031",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "marquette-mark-4065",
+      "code": "MARK 4065",
+      "name": "Data-Driven Marketing: Analytics, Insights and Applied AI",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "marquette-applied-ai-business-major-catalog",
+      "url": "https://bulletin.marquette.edu/search/?P=MARK%204065",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "marquette-oscm-4065",
+      "code": "OSCM 4065",
+      "name": "Artificial Intelligence in Supply Chain",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "marquette-applied-ai-business-major-catalog",
+      "url": "https://bulletin.marquette.edu/search/?P=OSCM%204065",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "marquette-insy-4180",
+      "code": "INSY 4180",
+      "name": "Ethics, Governance, and Responsible Use in AI",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "marquette-applied-ai-business-major-catalog",
+      "url": "https://bulletin.marquette.edu/search/?P=INSY%204180",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "marquette-fina-4075",
+      "code": "FINA 4075",
+      "name": "FinTech Foundations and Applications",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "marquette-applied-ai-business-major-catalog",
+      "url": "https://bulletin.marquette.edu/search/?P=FINA%204075",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "marquette-aim-4410",
+      "code": "AIM 4410",
+      "name": "Identifying, Building, Creating and Communicating FinTech Opportunities",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "marquette-applied-ai-business-major-catalog",
+      "url": "https://bulletin.marquette.edu/search/?P=AIM%204410",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "marquette-buan-3065",
+      "code": "BUAN 3065",
+      "name": "Leveraging AI with Predictive Analytics",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "marquette-applied-ai-business-major-catalog",
+      "url": "https://bulletin.marquette.edu/search/?P=BUAN%203065",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "marquette-buan-3066",
+      "code": "BUAN 3066",
+      "name": "Harnessing the Decision-Making Power of AI with Prescriptive Analytics",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "marquette-applied-ai-business-major-catalog",
+      "url": "https://bulletin.marquette.edu/search/?P=BUAN%203066",
+      "public_site": null,
+      "syllabus": null
+    }
+  ],
+  "requirements": [
+    {
+      "id": "marquette-applied-ai-business-major-total",
+      "parent_id": null,
+      "title": "Additional major including shared primary-major credit",
+      "kind": "all",
+      "count": null,
+      "credits": 33.0,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "marquette-applied-ai-business-major-catalog",
+      "source_text": null,
+      "summary": "Additional major including shared primary-major credit",
+      "course_ids": []
+    },
+    {
+      "id": "marquette-applied-ai-business-major-primary-shared",
+      "parent_id": "marquette-applied-ai-business-major-total",
+      "title": "Shared upper-division primary-major credit",
+      "kind": "choose_credits",
+      "count": null,
+      "credits": 15.0,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "marquette-applied-ai-business-major-catalog",
+      "source_text": null,
+      "summary": "Completed in the required primary business major; this credit is included in the additional-major total.",
+      "course_ids": []
+    },
+    {
+      "id": "marquette-applied-ai-business-major-required-buad-2001",
+      "parent_id": "marquette-applied-ai-business-major-total",
+      "title": "Introduction to Applied Artificial Intelligence",
+      "kind": "all",
+      "count": null,
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "marquette-applied-ai-business-major-catalog",
+      "source_text": null,
+      "summary": "Introduction to Applied Artificial Intelligence",
+      "course_ids": [
+        "marquette-buad-2001"
+      ]
+    },
+    {
+      "id": "marquette-applied-ai-business-major-focus",
+      "parent_id": "marquette-applied-ai-business-major-total",
+      "title": "Choose one focus",
+      "kind": "alternative",
+      "count": 1,
+      "credits": 6.0,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "marquette-applied-ai-business-major-catalog",
+      "source_text": null,
+      "summary": "Choose one focus",
+      "course_ids": []
+    },
+    {
+      "id": "marquette-applied-ai-business-major-electives",
+      "parent_id": "marquette-applied-ai-business-major-total",
+      "title": "Choose two business AI electives",
+      "kind": "choose_courses",
+      "count": 2,
+      "credits": 6.0,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "marquette-applied-ai-business-major-catalog",
+      "source_text": null,
+      "summary": "Choose two business AI electives",
+      "course_ids": [
+        "marquette-fina-4031",
+        "marquette-mark-4065",
+        "marquette-oscm-4065"
+      ]
+    },
+    {
+      "id": "marquette-applied-ai-business-major-required-insy-4180",
+      "parent_id": "marquette-applied-ai-business-major-total",
+      "title": "Ethics, Governance, and Responsible Use in AI",
+      "kind": "all",
+      "count": null,
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "marquette-applied-ai-business-major-catalog",
+      "source_text": null,
+      "summary": "Ethics, Governance, and Responsible Use in AI",
+      "course_ids": [
+        "marquette-insy-4180"
+      ]
+    },
+    {
+      "id": "marquette-applied-ai-business-major-focus-disruptive-tech",
+      "parent_id": "marquette-applied-ai-business-major-focus",
+      "title": "Disruptive Tech",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "marquette-applied-ai-business-major-catalog",
+      "source_text": null,
+      "summary": "Disruptive Tech",
+      "course_ids": [
+        "marquette-fina-4075",
+        "marquette-aim-4410"
+      ]
+    },
+    {
+      "id": "marquette-applied-ai-business-major-focus-machine-learning",
+      "parent_id": "marquette-applied-ai-business-major-focus",
+      "title": "Machine Learning",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "marquette-applied-ai-business-major-catalog",
+      "source_text": null,
+      "summary": "Machine Learning",
+      "course_ids": [
+        "marquette-buan-3065",
+        "marquette-buan-3066"
+      ]
+    },
+    {
+      "id": "marquette-applied-ai-business-major-eligibility",
+      "parent_id": null,
+      "title": "Primary business major required",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "marquette-applied-ai-business-major-catalog",
+      "source_text": null,
+      "summary": "This is an additional major paired with an eligible primary major in the College of Business Administration.",
+      "course_ids": []
+    },
+    {
+      "id": "marquette-applied-ai-business-major-minimum-grade",
+      "parent_id": null,
+      "title": "Major course grades",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "marquette-applied-ai-business-major-grades",
+      "source_text": null,
+      "summary": "All major requirements and electives, including introductory core courses, require C or higher. Credit is not awarded twice for a repeated course except distinct variable-topic sections.",
+      "course_ids": []
+    },
+    {
+      "id": "marquette-applied-ai-business-major-eligible-primary",
+      "parent_id": null,
+      "title": "Eligible primary majors",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "marquette-applied-ai-business-major-declare",
+      "source_text": null,
+      "summary": "Pair with accounting, business economics, finance, human resources, information systems, marketing, operations and supply chain management, or real estate. Business administration does not permit a second business major.",
+      "course_ids": []
+    },
+    {
+      "id": "marquette-applied-ai-business-major-sharing",
+      "parent_id": null,
+      "title": "Credit sharing across business majors",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "marquette-applied-ai-business-major-declare",
+      "source_text": null,
+      "summary": "Requirements and upper-division electives may be shared across majors, with at least 30 upper-division credits for two majors. Sharing never reduces degree credit totals.",
+      "course_ids": []
+    },
+    {
+      "id": "marquette-applied-ai-business-major-international",
+      "parent_id": null,
+      "title": "International business content",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "marquette-applied-ai-business-major-declare",
+      "source_text": null,
+      "summary": "At least one course with international business content is required, within or outside the declared business majors.",
+      "course_ids": []
+    },
+    {
+      "id": "marquette-applied-ai-business-major-declaration",
+      "parent_id": null,
+      "title": "Declaration and major limit",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "marquette-applied-ai-business-major-declare",
+      "source_text": null,
+      "summary": "Students should declare before senior-year advising and registration; a maximum of three business majors is permitted.",
+      "course_ids": []
+    },
+    {
+      "id": "marquette-applied-ai-business-major-major-gpa",
+      "parent_id": null,
+      "title": "Major GPA",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "marquette-applied-ai-business-major-graduation",
+      "source_text": null,
+      "summary": "The major requires a GPA of at least 2.000.",
+      "course_ids": []
+    },
+    {
+      "id": "marquette-applied-ai-business-major-major-residence",
+      "parent_id": null,
+      "title": "Major residence",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "marquette-applied-ai-business-major-graduation",
+      "source_text": null,
+      "summary": "At least half of major credits must be completed at Marquette; degree-wide residency rules also apply.",
+      "course_ids": []
+    },
+    {
+      "id": "marquette-applied-ai-business-major-university-declaration",
+      "parent_id": null,
+      "title": "University major declaration and residence",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "marquette-applied-ai-business-major-uni-declare",
+      "source_text": null,
+      "summary": "Only degree-seeking students may declare; Business students must declare before junior year. The current curriculum at declaration normally applies. At least 15 major credits must be completed at Marquette.",
+      "course_ids": []
+    },
+    {
+      "id": "marquette-applied-ai-business-major-letter-grading",
+      "parent_id": null,
+      "title": "Major courses cannot use CR/NC",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "marquette-applied-ai-business-major-crnc",
+      "source_text": null,
+      "summary": "CR/NC is restricted to general electives; it cannot satisfy major requirements.",
+      "course_ids": []
+    }
+  ],
   "notes": [
-    "Identity-only official-source discovery; requirements, courses, prerequisites, credit totals, outcomes and public syllabi remain unextracted. No verified curriculum is implied by identity refresh.",
-    "Exact bachelor award and operational status unverified; award other and status unknown preserve this uncertainty.",
-    "Requires an additional primary major in the College of Business Administration; classified as additional_major."
-  ]
+    "Additional major; the primary business major determines the bachelor degree. The 33 credits are not 33 additional credits on top of the primary major.",
+    "Local major completeness does not certify the primary major or entire university degree. Three elective course credit amounts are absent from the program table and remain null.",
+    "University policy requires declaration before junior year; college guidance encourages early declaration and recommends all declarations before senior-year advising. Both source statements are retained."
+  ],
+  "curriculum_audit": {
+    "scope": "additional_major",
+    "reviewed_at": "2026-10-10",
+    "source_ids": [
+      "marquette-applied-ai-business-major-catalog",
+      "marquette-applied-ai-business-major-grades",
+      "marquette-applied-ai-business-major-declare",
+      "marquette-applied-ai-business-major-graduation",
+      "marquette-applied-ai-business-major-uni-declare",
+      "marquette-applied-ai-business-major-crnc"
+    ],
+    "sections": [
+      "Primary-major eligibility and shared 15 credits",
+      "Required courses and choose-two elective pool",
+      "Disruptive Tech / Machine Learning alternative",
+      "Grades, CR/NC, declaration, international content and maximum majors",
+      "Major GPA and university/major residency"
+    ],
+    "unresolved_requirements": [],
+    "metadata_gaps": [
+      "Course descriptions and prerequisites are not yet extracted. Public course sites and syllabi are unverified.",
+      "Three business elective credit values remain unknown."
+    ]
+  }
 }
