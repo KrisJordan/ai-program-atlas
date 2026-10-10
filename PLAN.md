@@ -7,7 +7,7 @@ Updated 2026-10-10. This is a published, working research release, **not a compl
 - Dedicated repository: https://github.com/KrisJordan/ai-program-atlas
 - Static site: https://krisjordan.github.io/ai-program-atlas/
 - Local workspace: `ai-program-atlas/` in the dedicated Codex task directory.
-- Initial GitHub Actions build and Pages deployment succeeded; the expanded research snapshot is being verified for the next deployment.
+- Expanded GitHub Actions build and Pages deployment succeeded: [run 38089992250](https://github.com/KrisJordan/ai-program-atlas/actions/runs/38089992250), research commit `d0733e1`. The public JSON was independently fetched and verified at 106 programs / 174 institutions.
 - Existing personal website and unrelated repositories were not modified. Work was implemented with independent Astra high research/implementation agents and coordinated schema ownership.
 
 ## Scope and cohort evidence
@@ -54,7 +54,7 @@ Course records overlap across related programs and include elective pools. These
 - [x] Verify public resources for three pilot courses and two example syllabi; retain term/historical labels and link rather than redistribute.
 - [x] Test extraction, nested choices, constraints, rollback, idempotence, manual overrides, source changes/failures, deterministic reconstruction and browser behavior.
 - [x] Build a committed snapshot from a clean temporary checkout and verify the initial remote CI and Pages URL (HTTP 200).
-- [ ] Verify the expanded snapshot in remote CI and GitHub Pages (final adapter replay complete).
+- [x] Verify the expanded snapshot in remote CI and GitHub Pages; public JSON confirms current counts and explicit cohort incompleteness.
 
 ## Detailed pilot boundaries
 
@@ -66,7 +66,7 @@ All remaining records are title-level discoveries with current activity, catalog
 
 ## Verification checkpoint
 
-- **200 tests passed**, comprising 193 unit/integration checks and seven required Chromium browser checks. No browser tests skipped in the final run.
+- **200 tests passed**, comprising 193 unit/integration checks and seven required Chromium browser checks. The same 200 passed from a fresh checkout of the final research commit. No browser tests skipped; remote CI and deployment also passed.
 - All 11 initial program adapters succeeded with the production fetcher. Repeated observations added no duplicate candidates.
 - The first 94-adapter full run exposed DOM layout mismatches; source-specific repairs fixed 46 of 47 original parse failures using cached permitted HTML. No source body was committed.
 - Expanded replay has **102 successful latest adapter runs and four access-restricted failures** across all 106 registered programs. No unresolved parser failures remain. NJIT's BS award is corroborated in a second official source; William & Mary's title layouts have dedicated guarded parsers.
