@@ -1,6 +1,6 @@
 # Bounded inaccessible-source review
 
-Reviewed 2026-10-10. This batch revisited the 17 institutions whose latest survey status was inaccessible. It confirms nine additional program identities across five institutions, moves four other institutions to **inspected**, and leaves eight inaccessible rows unchanged. None of these observations establishes institution-wide absence. All nine program inventories remain **pending**: the source pages were actually inspected, but the complete requirements and course metadata have not been mapped. The rerunnable identity adapters do not emit curriculum data or verification timestamps.
+Reviewed 2026-10-10. This initial batch revisited the 17 institutions whose latest survey status was inaccessible. It confirmed nine additional program identities across five institutions, moved four other institutions to **inspected**, and left eight inaccessible rows unchanged. None of these observations establishes institution-wide absence. All nine program inventories were initially **pending**; the curriculum follow-up below supersedes that initial extraction status. Adapters never emit manual completeness audits or verification timestamps.
 
 The exact program URLs and parent-degree distinctions are recorded in [the discovery manifest](access-review-discoveries.json), program source metadata and adjacent adapter notes. Local official-source replay passed for all nine adapters. Raw HTML stays in ignored cache or `/tmp`; synthetic fixtures are committed.
 
@@ -33,4 +33,10 @@ These rows remain inaccessible; older evidence is preserved. Restrictions were n
 | U.S. Military Academy | `https://www.westpoint.edu/academics/majors-and-minors`: web reader HTTP 403. |
 | Colby | `https://www.colby.edu/academics/`: robots preflight HTTP 403. |
 
-Remaining work: map each newly identified program's requirements and policy constraints, add course metadata separately, complete the partially inspected institution inventories, and revisit access failures only through permitted official channels. This batch does not resolve the larger roster's incomplete primary ranking enumeration.
+## Curriculum follow-up
+
+The nine identities now have mapped course and requirement inventories. Villanova's AI/ML and Analytics & AI minors and Tufts' Application of AI minor have complete reviewed local scopes. MIT, NC State, Villanova's co-major, both UVA concentrations and Tufts' Development minor remain partial. These are research statuses, not judgments of program quality or individual degree clearance.
+
+The concrete remaining gaps are version-specific MIT requirements and policy exceptions, NC State grade/eligibility wording, Villanova's additional approved elective process, UVA's linked registrar evidence and Tufts' conflicting CS 135 versus EE 140/CS 128 alternatives. Tufts' ordinary public checklist viewers are now readable; an RFC 9309 robots precedence correction resolved the local fetcher's earlier interpretation error. The viewers' undated evidence is not assigned an invented catalog year. Each adapter's adjacent `NOTES.md` records the current source boundary and the earlier observations.
+
+Remaining work: resolve these specific policy/source gaps, add course metadata separately, complete the partially inspected institution inventories, and revisit access failures only through permitted official channels. This batch does not resolve the larger roster's incomplete primary ranking enumeration.
