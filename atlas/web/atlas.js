@@ -79,7 +79,13 @@
   function outcomeList(p, kind) {
     const items = (p.outcomes || []).filter(o => o.kind === kind);
     const sources = new Map((p.sources || []).map(s => [s.id, s]));
-    return items.length ? '<ul>' + items.map(o => `<li>${e(o.text)}<small>${link(sources.get(o.source_id)?.url, 'Source')}</small></li>`).join('') + '</ul>' : '<span class="muted">Not recorded</span>';
+    const statementTypes = {learning_outcome: 'Learning outcome', program_aim: 'Program aim', career_pathway: 'Career pathway'};
+    return items.length ? '<ul>' + items.map(o => {
+      const labels = statementTypes[o.statement_type] ? [statementTypes[o.statement_type]] : [];
+      if (kind === 'inferred_taxonomy') labels.push('Documented inference');
+      else if (!labels.length) labels.push('Source statement');
+      return `<li><span class="badge statement-type">${e(labels.join(' · '))}</span><p class="statement-text">${e(o.text)}</p><small>${link(sources.get(o.source_id)?.url, 'Source')}</small></li>`;
+    }).join('') + '</ul>' : '<span class="muted">Not recorded</span>';
   }
 
   function renderComparison() {
@@ -125,7 +131,7 @@
       ['Credit units', p => { const units = [...new Set(courses(p).map(c => pretty(c.credit_unit)))]; return e(units.join(', ') || 'Unknown') + '<small>No cross-calendar conversion</small>'; }],
       ['Requirement structure', p => { const roots = (p.requirements || []).filter(r => !r.parent_id); return roots.length ? '<ul>' + roots.map(r => `<li>${e(r.title)}<small>${e(pretty(r.kind))}${r.count != null ? ' · ' + e(requirementCount(r, p)) : ''}${r.credits != null ? ' · ' + e(r.credits) + ' ' + e(pretty(r.credit_unit)) : ''}</small></li>`).join('') + '</ul><small>Nested choices and full evidence on program page.</small>' : 'Not yet extracted'; }],
       ['Course categories', p => courses(p).length ? '<dl class="mini-counts">' + Object.entries(categories).map(([key, label]) => `<dt>${e(label)}</dt><dd>${courses(p).filter(c => (categories[c.category] ? c.category : 'other') === key).length}</dd>`).join('') + '</dl><small>Observed course counts; incomplete curricula may omit categories.</small>' : 'Not yet extracted'],
-      ['Source-stated outcomes', p => outcomeList(p, 'source_stated')],
+      ['Program aims &amp; outcomes', p => outcomeList(p, 'source_stated')],
       ['Inferred taxonomy', p => outcomeList(p, 'inferred_taxonomy') + '<small>Editorial interpretation</small>'],
       ['Official evidence', p => (p.links || []).map(l => link(l.url, l.label || pretty(l.kind))).join('<br>') || 'Not recorded'],
     ];
@@ -137,7 +143,7 @@
       const sources = new Map((p.sources || []).map(s => [s.id, s]));
       return '<span class="badge">Documented inference</span>' + matches.map(o => '<small>' + link(sources.get(o.source_id)?.url, 'Supporting source') + '</small>').join('');
     };
-    const themeMatrix = `<section class="theme-comparison" aria-labelledby="theme-title"><h3 id="theme-title">Recorded outcome themes</h3><p class="section-note">These are the exact inferred taxonomy labels stored in the records, shown as editorial interpretations with supporting sources. “Not recorded” is missing evidence, not an absent learning outcome. Source-stated outcomes remain separate below.</p>${themes.length ? `<div class="table-scroll" role="region" aria-label="Recorded outcome theme matrix" tabindex="0"><table class="theme-table"><caption class="sr-only">Recorded inferred outcome themes by program</caption><thead><tr><th scope="col">Theme</th>${items.map(p => `<th scope="col">${e(p.institution?.name)}<small>${e(p.title)}</small></th>`).join('')}</tr></thead><tbody>${themes.map(theme => `<tr><th scope="row">${e(theme)}</th>${items.map(p => '<td>' + themeCell(p, theme) + '</td>').join('')}</tr>`).join('')}</tbody></table></div>` : '<p class="notice">No inferred outcome themes have been recorded for the selected programs.</p>'}</section>`;
+    const themeMatrix = `<section class="theme-comparison" aria-labelledby="theme-title"><h3 id="theme-title">Recorded inferred themes</h3><p class="section-note">These are the exact inferred taxonomy labels stored in the records, shown as editorial interpretations with supporting sources. “Not recorded” is missing evidence, not proof that a program lacks a theme. Source statements about program aims and outcomes remain separate below.</p>${themes.length ? `<div class="table-scroll" role="region" aria-label="Recorded inferred theme matrix" tabindex="0"><table class="theme-table"><caption class="sr-only">Recorded inferred themes by program</caption><thead><tr><th scope="col">Theme</th>${items.map(p => `<th scope="col">${e(p.institution?.name)}<small>${e(p.title)}</small></th>`).join('')}</tr></thead><tbody>${themes.map(theme => `<tr><th scope="row">${e(theme)}</th>${items.map(p => '<td>' + themeCell(p, theme) + '</td>').join('')}</tr>`).join('')}</tbody></table></div>` : '<p class="notice">No inferred themes have been recorded for the selected programs.</p>'}</section>`;
     target.innerHTML = themeMatrix + `<div class="table-scroll" role="region" aria-label="Program comparison" tabindex="0"><table class="compare-table"><caption class="sr-only">Comparison of ${items.length} selected programs. Credit units remain distinct and unknown values are not zero.</caption><thead><tr><th scope="col">Program context</th>${items.map(p => `<th scope="col"><small>${e(p.institution?.name)}</small><a href="${base}programs/${e(p.id)}/">${e(p.title)}</a><button type="button" class="text-button remove" data-remove="${e(p.id)}" aria-label="Remove ${e(p.title)} at ${e(p.institution?.name)}">Remove</button></th>`).join('')}</tr></thead><tbody>${rows.map(([title, content]) => `<tr><th scope="row">${title}</th>${items.map(p => '<td>' + content(p) + '</td>').join('')}</tr>`).join('')}</tbody></table></div>`;
     target.querySelectorAll('[data-remove]').forEach(button => button.addEventListener('click', () => {
       selected = selected.filter(id => id !== button.dataset.remove);

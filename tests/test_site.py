@@ -24,6 +24,7 @@ def site_data():
     for index, theme in [(0, 'AI methods'), (1, 'Responsible AI and society')]:
         programs[index]['sources'] = [{'id': 'outcome-source', 'url': 'https://example.edu/outcome', 'title': 'Official evidence'}]
         programs[index]['outcomes'] = [{'text': theme, 'kind': 'inferred_taxonomy', 'source_id': 'outcome-source'}, {'text': 'Learn a documented skill.', 'kind': 'source_stated', 'source_id': 'outcome-source'}]
+    programs[0]['outcomes'] += [dict(text=text, kind='source_stated', statement_type=kind, source_id='outcome-source') for kind, text in [('learning_outcome', 'Evaluate a model.'), ('program_aim', 'Connect computing and society.'), ('career_pathway', 'Careers in research and industry.')]]
     return {"meta": {"limitations": ["Test coverage is incomplete."]}, "programs": programs, "institutions": institutions, "csrankings": {"status": "not_imported"}}
 
 
@@ -88,3 +89,31 @@ def test_empty_curriculum_profile_and_rank_provenance(tmp_path, site_data):
     assert 'U.S. News 2027 · National Universities · #20' in documented
     assert 'href="https://example.edu/ranking"' in documented
     assert 'not a measure of this program or undergraduate teaching quality' in documented
+
+
+def test_program_statements_use_explicit_types_only(tmp_path, site_data):
+    from bs4 import BeautifulSoup
+    program = site_data['programs'][0]
+    program['outcomes'].append(dict(text='Graduates will learn another skill.', kind='source_stated', statement_type='unspecified', source_id='outcome-source'))
+    build(site_data, tmp_path)
+    soup = BeautifulSoup((tmp_path / 'programs/test-ai-0/index.html').read_text(), 'html.parser')
+    section = soup.find(id='outcomes')
+    assert section.find('h2').get_text() == 'Program aims & outcomes'
+    source_items = section.find(class_='outcomes').find_all('li')
+    labels = {item.find(class_='statement-text').get_text(): item.find(class_='statement-type').get_text() for item in source_items}
+    assert labels['Learn a documented skill.'] == 'Source statement'
+    assert labels['Graduates will learn another skill.'] == 'Source statement'
+    assert labels['Evaluate a model.'] == 'Learning outcome'
+    assert labels['Connect computing and society.'] == 'Program aim'
+    assert labels['Careers in research and industry.'] == 'Career pathway'
+    inference = section.find_all(class_='outcomes')[1]
+    assert inference.find(class_='statement-type').get_text() == 'Documented inference'
+    assert inference.find('a')['href'] == 'https://example.edu/outcome'
+    assert '03 / LEARNING OUTCOMES' not in str(section)
+
+
+def test_statement_type_does_not_change_inference_provenance():
+    from atlas.site import outcomes
+    html = outcomes({'outcomes': [{'text': 'A recorded editorial interpretation.', 'kind': 'inferred_taxonomy', 'statement_type': 'program_aim'}]}, 'inferred_taxonomy')
+    assert 'Program aim · Documented inference' in html
+    assert 'Source statement' not in html

@@ -300,3 +300,30 @@ def test_explicit_family_exclusion_is_visible_in_compare_and_detail(page,site,tm
     page.goto(site+'programs/test-ai-1/')
     expect(page.locator('.family-changes')).to_contain_text('Exclude: Shared AI core')
     expect(page.locator('.family-changes a')).to_have_attribute('href','https://example.edu/family')
+
+
+@pytest.mark.parametrize('width', [1440, 390])
+def test_statement_types_stay_separate_from_inferred_themes(page, site, width):
+    from playwright.sync_api import expect
+    errors = []
+    page.on('pageerror', lambda error: errors.append(str(error)))
+    page.set_viewport_size({'width': width, 'height': 900})
+    page.goto(site + '?compare=test-ai-0,test-ai-1')
+    row = page.locator('.compare-table tr').filter(has=page.get_by_role('rowheader', name='Program aims & outcomes', exact=True))
+    first = row.locator('td').nth(0)
+    for text, label in [('Learn a documented skill.', 'Source statement'), ('Evaluate a model.', 'Learning outcome'), ('Connect computing and society.', 'Program aim'), ('Careers in research and industry.', 'Career pathway')]:
+        item = first.locator('li').filter(has=page.get_by_text(text, exact=True))
+        expect(item.locator('.statement-type')).to_have_text(label)
+        expect(item.locator('a')).to_have_attribute('href', 'https://example.edu/outcome')
+    expect(page.locator('.theme-table tbody tr')).to_have_count(2)
+    expect(page.locator('.theme-table')).not_to_contain_text('Careers in research and industry.')
+    page.reload()
+    expect(first.locator('.statement-type')).to_have_count(4)
+    assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
+    page.goto(site + 'programs/test-ai-0/')
+    section = page.locator('#outcomes')
+    expect(section.get_by_role('heading', name='Program aims & outcomes', exact=True)).to_be_visible()
+    expect(section.locator('.outcomes').nth(0).locator('.statement-type')).to_have_text(['Source statement', 'Learning outcome', 'Program aim', 'Career pathway'])
+    expect(section.locator('.outcomes').nth(1).locator('.statement-type')).to_have_text('Documented inference')
+    assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
+    assert not errors
