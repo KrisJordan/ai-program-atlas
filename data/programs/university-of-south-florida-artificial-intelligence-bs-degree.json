@@ -28,6 +28,11 @@
       "kind": "study",
       "url": "https://www.usf.edu/ai-cybersecurity-computing/documents/brochures/bellini-ug-bsai.pdf",
       "label": "Official September 2026 BSAI brochure"
+    },
+    {
+      "kind": "catalog",
+      "url": "https://catalog.usf.edu/preview_program.php?catoid=25&poid=13990",
+      "label": "Official catalog target (HTTP 202 on compliant fetch)"
     }
   ],
   "sources": [
@@ -581,7 +586,7 @@
   ],
   "notes": [
     "The September 2026 brochure identifies a current AI student, supporting active status. First offering term remains unknown. Its BSAI Four Year Plan supports the BSAI award abbreviation.",
-    "Catalog fetch through https://usf.to/BS-Artificial-Intelligence-catalogue was deferred: catalog.usf.edu robots requires 120-second crawl delay, exceeding current fetcher scheduling support. No access restriction was bypassed.",
+    "Retried on 2026-10-10 with the updated default Fetcher, honoring the full 120-second robots crawl interval. The official redirect resolved to https://catalog.usf.edu/preview_program.php?catoid=25&poid=13990 and returned HTTP 202, not a readable catalog page. The local scheduling limitation is resolved; catalog retrieval remains blocked by the server response. No access restriction was bypassed.",
     "PDF inspected via public web reader; no PDF content committed. Primary overview adapter remains identity-only and never represents brochure curriculum as freshly verified. PDF curriculum observations require human review on refresh."
   ],
   "curriculum_audit": {
@@ -595,7 +600,7 @@
       "Brochure elective/general education placeholders and optional experience labels"
     ],
     "unresolved_requirements": [
-      "Definitive catalog requires separately scheduled crawl-delay compliant fetch.",
+      "Definitive catalog retried with compliant 120-second pacing but returned HTTP 202; full curriculum remains unavailable through the fetcher.",
       "Major elective pool, credit requirements, GE/college/university policies and course prerequisites unreviewed."
     ],
     "metadata_gaps": [

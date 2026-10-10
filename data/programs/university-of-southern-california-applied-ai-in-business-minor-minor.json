@@ -42,7 +42,7 @@
     {
       "kind": "catalog",
       "url": "https://catalogue.usc.edu/preview_program.php?catoid=22&poid=32945&returnto=9453",
-      "label": "Linked 2026\u20132027 catalog requirements (fetch deferred by crawl policy)"
+      "label": "Linked 2026\u20132027 catalog requirements (HTTP 202 on compliant fetch)"
     }
   ],
   "sources": [
@@ -173,7 +173,7 @@
     }
   ],
   "notes": [
-    "The official advising page links this minor under 2026\u20132027 requirements. The program catalog could not be fetched: its robots policy requests a 120-second crawl interval, beyond the fetcher\u2019s supported scheduling window. No restriction was bypassed.",
+    "The advising page links 2026\u20132027 requirements. A 2026-10-10 retry with the updated default Fetcher honored the full 120-second robots interval but the linked catalog returned HTTP 202. The former local scheduling limit is resolved; no readable catalog content was obtained. The web reader also could not open the same URL. No access restriction was bypassed.",
     "The announcement broadly welcomes students from all majors. The detailed eligibility matrix flags overlap restrictions for many Marshall majors/emphases, and does not list AAIB under the AI for Business major. Eligibility and overlap must therefore be checked against the student\u2019s specific program; no universal eligibility claim is made here.",
     "The three-page eligibility matrix was visually reviewed. Detailed overlap limits are not enumerated in the matrix, and the minor\u2019s course list, total units, prerequisites and completion rules remain unverified.",
     "The 16 unique-unit rule is common to Marshall minors and is not treated as the total units for Applied AI in Business."
@@ -193,7 +193,7 @@
       "Visual review of the Marshall eligibility and overlap matrix"
     ],
     "unresolved_requirements": [
-      "Program-specific required/elective course inventory, total units and completion policies remain inaccessible.",
+      "Program-specific course inventory, total units and completion policies remain unverified: the linked catalog returned HTTP 202 after compliant 120-second pacing.",
       "Detailed major/emphasis overlap limits and eligibility exceptions need catalog or advisor-policy confirmation."
     ],
     "metadata_gaps": [
