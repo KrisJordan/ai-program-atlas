@@ -4,44 +4,1390 @@
     "id": "rochester-institute-of-technology",
     "name": "Rochester Institute of Technology",
     "aliases": [],
-    "website": null,
+    "website": "https://www.rit.edu/",
     "calendar": "unknown"
   },
   "title": "Artificial Intelligence",
   "award_level": "BS",
   "program_kind": "degree",
-  "hosting_unit": null,
+  "hosting_unit": "School of Information, Golisano College of Computing and Information Sciences",
   "status": "unknown",
   "first_offered": null,
-  "overview": "Official university content identifies this undergraduate degree. Curriculum details and complete institutional coverage remain pending.",
-  "catalog_year": null,
-  "verification_status": "partial",
+  "overview": "An interdisciplinary AI degree combining computing, mathematics, machine learning, language technology, human-centered computing, software engineering and security. The 2026–2027 catalog publishes a 122-hour typical sequence and two co-op experiences.",
+  "catalog_year": "2026-2027",
+  "verification_status": "confirmed",
   "last_verified": "2026-10-10",
-  "curriculum_status": "pending",
+  "curriculum_status": "partial",
   "links": [
     {
       "kind": "overview",
       "url": "https://www.rit.edu/study/artificial-intelligence-bs",
       "label": "Official program identity source"
+    },
+    {
+      "kind": "catalog",
+      "url": "https://academiccatalog.rit.edu/programs/artificial-intelligence-bs/",
+      "label": "2026–2027 curriculum"
     }
   ],
   "sources": [
     {
       "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-official",
       "url": "https://www.rit.edu/study/artificial-intelligence-bs",
-      "title": "Artificial Intelligence",
+      "title": "Artificial Intelligence Bachelor of Science Degree",
       "fetched_at": "2026-10-10",
       "source_date": null,
       "catalog_year": null,
-      "locator": "Named undergraduate program entry: Artificial Intelligence; award/type: BS / degree",
+      "locator": "Degree overview, required co-op blocks, first-year and transfer admissions",
+      "confidence": "high"
+    },
+    {
+      "id": "rit-ai-bs-catalog",
+      "url": "https://academiccatalog.rit.edu/programs/artificial-intelligence-bs/",
+      "title": "Artificial Intelligence BS",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Curriculum tab: typical sequence, total hours, wellness note and AI electives; read in ordinary browser",
       "confidence": "high"
     }
   ],
-  "outcomes": [],
-  "courses": [],
-  "requirements": [],
+  "outcomes": [
+    {
+      "text": "Develop AI systems and models for applications while considering ethical implications.",
+      "kind": "source_stated",
+      "source_id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-official",
+      "locator": "Program overview"
+    }
+  ],
+  "courses": [
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-gcis-123",
+      "code": "GCIS-123",
+      "name": "Software Development and Problem Solving I",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "foundations",
+      "source_id": "rit-ai-bs-catalog",
+      "url": "https://academiccatalog.rit.edu/search/?P=GCIS-123",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-141",
+      "code": "CSCI-141",
+      "name": "Computer Science I",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "foundations",
+      "source_id": "rit-ai-bs-catalog",
+      "url": "https://academiccatalog.rit.edu/search/?P=CSCI-141",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-idai-101",
+      "code": "IDAI-101",
+      "name": "AI Explorations",
+      "description": null,
+      "prerequisites": null,
+      "credits": 1,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rit-ai-bs-catalog",
+      "url": "https://academiccatalog.rit.edu/search/?P=IDAI-101",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-math-181",
+      "code": "MATH-181",
+      "name": "Calculus I",
+      "description": null,
+      "prerequisites": null,
+      "credits": 4,
+      "credit_unit": "unknown",
+      "category": "mathematics",
+      "source_id": "rit-ai-bs-catalog",
+      "url": "https://academiccatalog.rit.edu/search/?P=MATH-181",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-uwrt-150",
+      "code": "UWRT-150",
+      "name": "FYW: Writing Seminar",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "human_context",
+      "source_id": "rit-ai-bs-catalog",
+      "url": "https://academiccatalog.rit.edu/search/?P=UWRT-150",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-yops-10",
+      "code": "YOPS-10",
+      "name": "RIT 365: RIT Connections",
+      "description": null,
+      "prerequisites": null,
+      "credits": 0,
+      "credit_unit": "unknown",
+      "category": "foundations",
+      "source_id": "rit-ai-bs-catalog",
+      "url": "https://academiccatalog.rit.edu/search/?P=YOPS-10",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-gcis-124",
+      "code": "GCIS-124",
+      "name": "Software Development and Problem Solving II",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "foundations",
+      "source_id": "rit-ai-bs-catalog",
+      "url": "https://academiccatalog.rit.edu/search/?P=GCIS-124",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-142",
+      "code": "CSCI-142",
+      "name": "Computer Science II",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "foundations",
+      "source_id": "rit-ai-bs-catalog",
+      "url": "https://academiccatalog.rit.edu/search/?P=CSCI-142",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-idai-110",
+      "code": "IDAI-110",
+      "name": "AI Tools and Techniques",
+      "description": null,
+      "prerequisites": null,
+      "credits": 1,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rit-ai-bs-catalog",
+      "url": "https://academiccatalog.rit.edu/search/?P=IDAI-110",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-math-182",
+      "code": "MATH-182",
+      "name": "Calculus II",
+      "description": null,
+      "prerequisites": null,
+      "credits": 4,
+      "credit_unit": "unknown",
+      "category": "mathematics",
+      "source_id": "rit-ai-bs-catalog",
+      "url": "https://academiccatalog.rit.edu/search/?P=MATH-182",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-math-190",
+      "code": "MATH-190",
+      "name": "Discrete Mathematics for Computing",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "mathematics",
+      "source_id": "rit-ai-bs-catalog",
+      "url": "https://academiccatalog.rit.edu/search/?P=MATH-190",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-math-200",
+      "code": "MATH-200",
+      "name": "Discrete Mathematics and Introduction to Proofs",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "mathematics",
+      "source_id": "rit-ai-bs-catalog",
+      "url": "https://academiccatalog.rit.edu/search/?P=MATH-200",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-psyc-101",
+      "code": "PSYC-101",
+      "name": "Introduction to Psychology",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "human_context",
+      "source_id": "rit-ai-bs-catalog",
+      "url": "https://academiccatalog.rit.edu/search/?P=PSYC-101",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-idai-202",
+      "code": "IDAI-202",
+      "name": "Problem Solving in Artificial Intelligence",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rit-ai-bs-catalog",
+      "url": "https://academiccatalog.rit.edu/search/?P=IDAI-202",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-math-251",
+      "code": "MATH-251",
+      "name": "Probability and Statistics",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "mathematics",
+      "source_id": "rit-ai-bs-catalog",
+      "url": "https://academiccatalog.rit.edu/search/?P=MATH-251",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-psyc-223",
+      "code": "PSYC-223",
+      "name": "Cognitive Psychology",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "human_context",
+      "source_id": "rit-ai-bs-catalog",
+      "url": "https://academiccatalog.rit.edu/search/?P=PSYC-223",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-swen-261",
+      "code": "SWEN-261",
+      "name": "Introduction to Software Engineering",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "systems",
+      "source_id": "rit-ai-bs-catalog",
+      "url": "https://academiccatalog.rit.edu/search/?P=SWEN-261",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-comm-142",
+      "code": "COMM-142",
+      "name": "Introduction to Technical Communication",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "human_context",
+      "source_id": "rit-ai-bs-catalog",
+      "url": "https://academiccatalog.rit.edu/search/?P=COMM-142",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-comm-201",
+      "code": "COMM-201",
+      "name": "Public Speaking",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "human_context",
+      "source_id": "rit-ai-bs-catalog",
+      "url": "https://academiccatalog.rit.edu/search/?P=COMM-201",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-331",
+      "code": "CSCI-331",
+      "name": "Introduction to Artificial Intelligence",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rit-ai-bs-catalog",
+      "url": "https://academiccatalog.rit.edu/search/?P=CSCI-331",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-gcis-350",
+      "code": "GCIS-350",
+      "name": "Artificial Intelligence and Law",
+      "description": null,
+      "prerequisites": null,
+      "credits": 1,
+      "credit_unit": "unknown",
+      "category": "human_context",
+      "source_id": "rit-ai-bs-catalog",
+      "url": "https://academiccatalog.rit.edu/search/?P=GCIS-350",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-iste-262",
+      "code": "ISTE-262",
+      "name": "Foundations of Human Centered Computing",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "foundations",
+      "source_id": "rit-ai-bs-catalog",
+      "url": "https://academiccatalog.rit.edu/search/?P=ISTE-262",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-math-241",
+      "code": "MATH-241",
+      "name": "Linear Algebra",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "mathematics",
+      "source_id": "rit-ai-bs-catalog",
+      "url": "https://academiccatalog.rit.edu/search/?P=MATH-241",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-idai-499",
+      "code": "IDAI-499",
+      "name": "Cooperative Education in Artificial Intelligence",
+      "description": null,
+      "prerequisites": null,
+      "credits": 0,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rit-ai-bs-catalog",
+      "url": "https://academiccatalog.rit.edu/search/?P=IDAI-499",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-335",
+      "code": "CSCI-335",
+      "name": "Machine Learning",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rit-ai-bs-catalog",
+      "url": "https://academiccatalog.rit.edu/search/?P=CSCI-335",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-idai-360",
+      "code": "IDAI-360",
+      "name": "Optimization Algorithms",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rit-ai-bs-catalog",
+      "url": "https://academiccatalog.rit.edu/search/?P=IDAI-360",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-iste-476",
+      "code": "ISTE-476",
+      "name": "Visual Analytics",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "foundations",
+      "source_id": "rit-ai-bs-catalog",
+      "url": "https://academiccatalog.rit.edu/search/?P=ISTE-476",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-idai-444",
+      "code": "IDAI-444",
+      "name": "Interactive Machine Learning and Reinforcement Learning",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rit-ai-bs-catalog",
+      "url": "https://academiccatalog.rit.edu/search/?P=IDAI-444",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-iste-230",
+      "code": "ISTE-230",
+      "name": "Introduction to Database and Data Modeling",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "foundations",
+      "source_id": "rit-ai-bs-catalog",
+      "url": "https://academiccatalog.rit.edu/search/?P=ISTE-230",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-swen-344",
+      "code": "SWEN-344",
+      "name": "Engineering of Web Based Software Systems",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "systems",
+      "source_id": "rit-ai-bs-catalog",
+      "url": "https://academiccatalog.rit.edu/search/?P=SWEN-344",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-ling-351",
+      "code": "LING-351",
+      "name": "Language Technology and Large Language Models",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rit-ai-bs-catalog",
+      "url": "https://academiccatalog.rit.edu/search/?P=LING-351",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-ling-581",
+      "code": "LING-581",
+      "name": "Natural Language Processing I",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rit-ai-bs-catalog",
+      "url": "https://academiccatalog.rit.edu/search/?P=LING-581",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-csec-521",
+      "code": "CSEC-521",
+      "name": "Security of AI",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "systems",
+      "source_id": "rit-ai-bs-catalog",
+      "url": "https://academiccatalog.rit.edu/search/?P=CSEC-521",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-idai-485",
+      "code": "IDAI-485",
+      "name": "Concurrent and Distributed Artificial Intelligence",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rit-ai-bs-catalog",
+      "url": "https://academiccatalog.rit.edu/search/?P=IDAI-485",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-idai-490",
+      "code": "IDAI-490",
+      "name": "AI Team Capstone",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rit-ai-bs-catalog",
+      "url": "https://academiccatalog.rit.edu/search/?P=IDAI-490",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-431",
+      "code": "CSCI-431",
+      "name": "Introduction to Computer Vision",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rit-ai-bs-catalog",
+      "url": "https://academiccatalog.rit.edu/search/?P=CSCI-431",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-eeee-485",
+      "code": "EEEE-485",
+      "name": "Robotic Systems",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rit-ai-bs-catalog",
+      "url": "https://academiccatalog.rit.edu/search/?P=EEEE-485",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-634",
+      "code": "CSCI-634",
+      "name": "Mobile Robot Programming",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rit-ai-bs-catalog",
+      "url": "https://academiccatalog.rit.edu/search/?P=CSCI-634",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-swen-566",
+      "code": "SWEN-566",
+      "name": "AI Centric Software",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "rit-ai-bs-catalog",
+      "url": "https://academiccatalog.rit.edu/search/?P=SWEN-566",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-publ-550",
+      "code": "PUBL-550",
+      "name": "AI, Policy and Law",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "human_context",
+      "source_id": "rit-ai-bs-catalog",
+      "url": "https://academiccatalog.rit.edu/search/?P=PUBL-550",
+      "public_site": null,
+      "syllabus": null
+    }
+  ],
+  "requirements": [
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-sequence-0",
+      "parent_id": null,
+      "title": "Course alternative in published sequence",
+      "kind": "choose_courses",
+      "count": 1,
+      "credits": 4,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-catalog",
+      "source_text": null,
+      "summary": "Complete one listed alternative; the row publishes 4 hours.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-gcis-123",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-141"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-sequence-1",
+      "parent_id": null,
+      "title": "AI Explorations",
+      "kind": "all",
+      "count": null,
+      "credits": 1,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-catalog",
+      "source_text": null,
+      "summary": "Listed in the typical curriculum sequence; original published amount 1 hours.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-idai-101"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-sequence-2",
+      "parent_id": null,
+      "title": "Calculus I",
+      "kind": "all",
+      "count": null,
+      "credits": 4,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-catalog",
+      "source_text": null,
+      "summary": "Listed in the typical curriculum sequence; original published amount 4 hours.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-math-181"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-sequence-3",
+      "parent_id": null,
+      "title": "FYW: Writing Seminar",
+      "kind": "all",
+      "count": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-catalog",
+      "source_text": null,
+      "summary": "Listed in the typical curriculum sequence; original published amount 3 hours.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-uwrt-150"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-sequence-4",
+      "parent_id": null,
+      "title": "RIT 365: RIT Connections",
+      "kind": "all",
+      "count": null,
+      "credits": 0,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-catalog",
+      "source_text": null,
+      "summary": "Listed in the typical curriculum sequence; original published amount 0 hours.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-yops-10"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-sequence-5",
+      "parent_id": null,
+      "title": "Course alternative in published sequence",
+      "kind": "choose_courses",
+      "count": 1,
+      "credits": 4,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-catalog",
+      "source_text": null,
+      "summary": "Complete one listed alternative; the row publishes 4 hours.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-gcis-124",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-142"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-sequence-6",
+      "parent_id": null,
+      "title": "AI Tools and Techniques",
+      "kind": "all",
+      "count": null,
+      "credits": 1,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-catalog",
+      "source_text": null,
+      "summary": "Listed in the typical curriculum sequence; original published amount 1 hours.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-idai-110"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-sequence-7",
+      "parent_id": null,
+      "title": "Calculus II",
+      "kind": "all",
+      "count": null,
+      "credits": 4,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-catalog",
+      "source_text": null,
+      "summary": "Listed in the typical curriculum sequence; original published amount 4 hours.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-math-182"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-sequence-8",
+      "parent_id": null,
+      "title": "Course alternative in published sequence",
+      "kind": "choose_courses",
+      "count": 1,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-catalog",
+      "source_text": null,
+      "summary": "Complete one listed alternative; the row publishes 3 hours.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-math-190",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-math-200"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-sequence-9",
+      "parent_id": null,
+      "title": "Introduction to Psychology",
+      "kind": "all",
+      "count": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-catalog",
+      "source_text": null,
+      "summary": "Listed in the typical curriculum sequence; original published amount 3 hours.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-psyc-101"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-sequence-10",
+      "parent_id": null,
+      "title": "Problem Solving in Artificial Intelligence",
+      "kind": "all",
+      "count": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-catalog",
+      "source_text": null,
+      "summary": "Listed in the typical curriculum sequence; original published amount 3 hours.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-idai-202"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-sequence-11",
+      "parent_id": null,
+      "title": "Probability and Statistics",
+      "kind": "all",
+      "count": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-catalog",
+      "source_text": null,
+      "summary": "Listed in the typical curriculum sequence; original published amount 3 hours.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-math-251"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-sequence-12",
+      "parent_id": null,
+      "title": "Cognitive Psychology",
+      "kind": "all",
+      "count": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-catalog",
+      "source_text": null,
+      "summary": "Listed in the typical curriculum sequence; original published amount 3 hours.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-psyc-223"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-sequence-13",
+      "parent_id": null,
+      "title": "Introduction to Software Engineering",
+      "kind": "all",
+      "count": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-catalog",
+      "source_text": null,
+      "summary": "Listed in the typical curriculum sequence; original published amount 3 hours.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-swen-261"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-sequence-14",
+      "parent_id": null,
+      "title": "Course alternative in published sequence",
+      "kind": "choose_courses",
+      "count": 1,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-catalog",
+      "source_text": null,
+      "summary": "Complete one listed alternative; the row publishes 3 hours.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-comm-142",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-comm-201"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-sequence-15",
+      "parent_id": null,
+      "title": "Introduction to Artificial Intelligence",
+      "kind": "all",
+      "count": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-catalog",
+      "source_text": null,
+      "summary": "Listed in the typical curriculum sequence; original published amount 3 hours.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-331"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-sequence-16",
+      "parent_id": null,
+      "title": "Artificial Intelligence and Law",
+      "kind": "all",
+      "count": null,
+      "credits": 1,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-catalog",
+      "source_text": null,
+      "summary": "Listed in the typical curriculum sequence; original published amount 1 hours.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-gcis-350"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-sequence-17",
+      "parent_id": null,
+      "title": "Foundations of Human Centered Computing",
+      "kind": "all",
+      "count": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-catalog",
+      "source_text": null,
+      "summary": "Listed in the typical curriculum sequence; original published amount 3 hours.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-iste-262"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-sequence-18",
+      "parent_id": null,
+      "title": "Linear Algebra",
+      "kind": "all",
+      "count": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-catalog",
+      "source_text": null,
+      "summary": "Listed in the typical curriculum sequence; original published amount 3 hours.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-math-241"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-sequence-19",
+      "parent_id": null,
+      "title": "Cooperative Education in Artificial Intelligence",
+      "kind": "all",
+      "count": null,
+      "credits": 0,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-catalog",
+      "source_text": null,
+      "summary": "Listed in the typical curriculum sequence; original published amount 0 hours.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-idai-499"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-sequence-20",
+      "parent_id": null,
+      "title": "Machine Learning",
+      "kind": "all",
+      "count": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-catalog",
+      "source_text": null,
+      "summary": "Listed in the typical curriculum sequence; original published amount 3 hours.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-335"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-sequence-21",
+      "parent_id": null,
+      "title": "Optimization Algorithms",
+      "kind": "all",
+      "count": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-catalog",
+      "source_text": null,
+      "summary": "Listed in the typical curriculum sequence; original published amount 3 hours.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-idai-360"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-sequence-22",
+      "parent_id": null,
+      "title": "Visual Analytics",
+      "kind": "all",
+      "count": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-catalog",
+      "source_text": null,
+      "summary": "Listed in the typical curriculum sequence; original published amount 3 hours.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-iste-476"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-sequence-23",
+      "parent_id": null,
+      "title": "Interactive Machine Learning and Reinforcement Learning",
+      "kind": "all",
+      "count": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-catalog",
+      "source_text": null,
+      "summary": "Listed in the typical curriculum sequence; original published amount 3 hours.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-idai-444"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-sequence-24",
+      "parent_id": null,
+      "title": "Course alternative in published sequence",
+      "kind": "choose_courses",
+      "count": 1,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-catalog",
+      "source_text": null,
+      "summary": "Complete one listed alternative; the row publishes 3 hours.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-iste-230",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-swen-344"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-sequence-25",
+      "parent_id": null,
+      "title": "Course alternative in published sequence",
+      "kind": "choose_courses",
+      "count": 1,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-catalog",
+      "source_text": null,
+      "summary": "Complete one listed alternative; the row publishes 3 hours.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-ling-351",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-ling-581"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-sequence-26",
+      "parent_id": null,
+      "title": "Security of AI",
+      "kind": "all",
+      "count": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-catalog",
+      "source_text": null,
+      "summary": "Listed in the typical curriculum sequence; original published amount 3 hours.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-csec-521"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-sequence-27",
+      "parent_id": null,
+      "title": "Concurrent and Distributed Artificial Intelligence",
+      "kind": "all",
+      "count": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-catalog",
+      "source_text": null,
+      "summary": "Listed in the typical curriculum sequence; original published amount 3 hours.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-idai-485"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-sequence-28",
+      "parent_id": null,
+      "title": "AI Team Capstone",
+      "kind": "all",
+      "count": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-catalog",
+      "source_text": null,
+      "summary": "Listed in the typical curriculum sequence; original published amount 3 hours.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-idai-490"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-coop",
+      "parent_id": null,
+      "title": "Two cooperative education blocks",
+      "kind": "note",
+      "count": null,
+      "credits": 0,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-official",
+      "source_text": null,
+      "summary": "Complete two cooperative education blocks. IDAI-499 appears twice in the catalog sequence; its course identity is stored once.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-idai-499"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-global",
+      "parent_id": null,
+      "title": "Global Perspective",
+      "kind": "note",
+      "count": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-catalog",
+      "source_text": null,
+      "summary": "Published general-education slot; approved attribute list and fulfillment policies remain unreviewed.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-431",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-swen-566",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-publ-550"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-natural",
+      "parent_id": null,
+      "title": "Natural Science Inquiry Perspective",
+      "kind": "note",
+      "count": null,
+      "credits": 4,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-catalog",
+      "source_text": null,
+      "summary": "Published general-education slot; approved attribute list and fulfillment policies remain unreviewed.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-431",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-swen-566",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-publ-550"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-scientific",
+      "parent_id": null,
+      "title": "Scientific Principles Perspective",
+      "kind": "note",
+      "count": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-catalog",
+      "source_text": null,
+      "summary": "Published general-education slot; approved attribute list and fulfillment policies remain unreviewed.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-431",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-swen-566",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-publ-550"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-ethical",
+      "parent_id": null,
+      "title": "Ethical Perspective",
+      "kind": "note",
+      "count": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-catalog",
+      "source_text": null,
+      "summary": "Published general-education slot; approved attribute list and fulfillment policies remain unreviewed.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-431",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-swen-566",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-publ-550"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-artistic",
+      "parent_id": null,
+      "title": "Artistic Perspective",
+      "kind": "note",
+      "count": null,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-catalog",
+      "source_text": null,
+      "summary": "Published general-education slot; approved attribute list and fulfillment policies remain unreviewed.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-431",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-swen-566",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-publ-550"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-immersion",
+      "parent_id": null,
+      "title": "Three immersion slots",
+      "kind": "note",
+      "count": null,
+      "credits": 9,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-catalog",
+      "source_text": null,
+      "summary": "The sequence lists Immersion 1, 2 and 3 at three hours each. The MATH-190 alternative row is also annotated Immersion 3; overlap and immersion policy require clarification.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-431",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-swen-566",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-publ-550"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-open",
+      "parent_id": null,
+      "title": "Open electives",
+      "kind": "note",
+      "count": null,
+      "credits": 12,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-catalog",
+      "source_text": null,
+      "summary": "Four open-elective slots at three published hours each.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-431",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-swen-566",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-publ-550"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-prep",
+      "parent_id": null,
+      "title": "Co-op preparation seminar",
+      "kind": "note",
+      "count": null,
+      "credits": 0,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-catalog",
+      "source_text": null,
+      "summary": "Uncoded zero-hour seminar in the second-year sequence.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-431",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-swen-566",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-publ-550"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-wellness",
+      "parent_id": null,
+      "title": "Two different wellness courses",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-catalog",
+      "source_text": null,
+      "summary": "All bachelor students must complete two different wellness courses.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-431",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-swen-566",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-publ-550"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-total",
+      "parent_id": null,
+      "title": "Published curriculum total",
+      "kind": "note",
+      "count": null,
+      "credits": 122,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-catalog",
+      "source_text": null,
+      "summary": "The typical sequence publishes 122 total hours. Credit normalization and degree-wide policies remain under review.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-431",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-swen-566",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-publ-550"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-ai-electives",
+      "parent_id": null,
+      "title": "AI electives",
+      "kind": "choose_courses",
+      "count": 2,
+      "credits": 6,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-catalog",
+      "source_text": null,
+      "summary": "Choose two course options from the listed AI electives. The curriculum slot is six hours; the robotics row is an either/or choice.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-431",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-swen-566",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-publ-550"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-robotics-option",
+      "parent_id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-ai-electives",
+      "title": "Robotics alternatives",
+      "kind": "alternative",
+      "count": 1,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-catalog",
+      "source_text": null,
+      "summary": "The source lists EEEE-485 or CSCI-634 as one elective option.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-eeee-485",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-634"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-first-year-admission",
+      "parent_id": null,
+      "title": "First-year preparation",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-official",
+      "source_text": null,
+      "summary": "Four years of English, three of social studies, four of mathematics including algebra, geometry, trigonometry and precalculus; calculus preferred. Two to three years of science including chemistry or physics, both preferred. Computing is preferred.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-431",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-swen-566",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-publ-550"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-transfer-admission",
+      "parent_id": null,
+      "title": "Transfer preparation",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-official",
+      "source_text": null,
+      "summary": "At least precalculus and chemistry or physics; computing courses are preferred. Internal transfers are accepted; students beyond the first two years should consult an advisor about remaining time.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-431",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-swen-566",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-publ-550"
+      ]
+    }
+  ],
   "notes": [
-    "Directory/identity verified; curriculum pending. No courses, requirements or outcomes have yet been extracted.",
-    "Official undergraduate program source inspected; qualifying title confirmed. Institution-wide inventory and curriculum extraction remain incomplete."
-  ]
+    "The catalog curriculum was read through the ordinary browser. Automated catalog access returned a JavaScript/bot-access shell; no access controls were bypassed. The adapter observes the accessible study-page identity and co-op requirement only.",
+    "The catalog calls its table a typical course sequence. This record preserves its inventory and alternatives without claiming a mandatory semester order.",
+    "Original numeric hours are preserved; normalized credit units and individual alternative-course amounts remain unverified. A repeated zero-hour co-op course is one identity plus a two-block rule.",
+    "Fall 2026 admission availability is not treated as evidence of actual first instruction. Activity and first-offered date remain unknown.",
+    "The MATH-190 row has an Immersion 3 annotation while a separate fourth-year Immersion 3 slot appears. No double-counting or waiver is inferred."
+  ],
+  "curriculum_audit": {
+    "scope": "degree",
+    "reviewed_at": "2026-10-10",
+    "source_ids": [
+      "rit-ai-bs-catalog",
+      "rochester-institute-of-technology-artificial-intelligence-bs-degree-official"
+    ],
+    "sections": [
+      "All coded rows, alternative pairs and uncoded slots in typical sequence",
+      "Five AI elective entries across four options",
+      "Two co-op blocks and two distinct wellness courses",
+      "First-year and transfer preparation"
+    ],
+    "unresolved_requirements": [
+      "Full university/college degree-wide graduation, residence, transfer, GPA and general-education policies remain unreviewed.",
+      "Approved general-education and immersion inventories and the duplicate Immersion 3 annotation need review.",
+      "Normalized credit unit is unverified; sequence alone does not certify the full mandatory degree inventory."
+    ],
+    "metadata_gaps": [
+      "Course descriptions, prerequisites, alternative credit amounts, public sites and syllabi remain unverified."
+    ]
+  }
 }

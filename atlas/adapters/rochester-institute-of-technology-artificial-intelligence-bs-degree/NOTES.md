@@ -1,9 +1,7 @@
-# Artificial Intelligence
+# Artificial Intelligence BS
 
-Official identity source: https://www.rit.edu/study/artificial-intelligence-bs
+Reviewed 2026-10-10. The ordinary browser displayed the full 2026–2027 catalog curriculum, a typical sequence totaling 122 published hours: 35 distinct core/alternative course entries plus five AI elective entries. IDAI-499 occurs twice but is stored once, with a separate two-block completion note confirmed by the study page. Six core alternative pairs and the robotics elective alternative remain disjunctions. Uncoded general-education, immersion, open elective, co-op preparation and two distinct wellness requirements are represented.
 
-Directory/identity verified; curriculum pending. No courses, requirements or outcomes have yet been extracted.
+The degree remains partial. The table is explicitly a typical sequence; university/college graduation, residency, transfer, GPA and full general-education policies remain unreviewed. MATH-190's Immersion 3 annotation appears alongside another Immersion 3 slot; overlap cannot be inferred. Original numerical hours are retained with unknown normalized units; amounts on alternative rows are group amounts, not independently verified amounts for both courses. Descriptions, prerequisites, public sites and syllabi remain metadata gaps.
 
-Official undergraduate program source inspected; qualifying title confirmed. Institution-wide inventory and curriculum extraction remain incomplete.
-
-The adapter validates a title in visible content headings or links and the award/kind in its local card or heading section. It returns only observed identity fields and never replays seed metadata, curriculum, or dates. A failure means review is required; it does not mean the program is absent. Tests use synthetic HTML to verify rejection behavior; live refresh is not claimed.
+The catalog displayed through ordinary browsing, while automated catalog retrieval yielded a JavaScript/bot-access shell. No challenge or access restriction was bypassed. The source-specific adapter therefore observes only the accessible study-page degree heading and co-op rule; it does not replay curated catalog courses or claim automated catalog coverage. Admission preparation comes from that same study page. Fall 2026 admission availability is not a first-instruction date; activity remains unknown.
