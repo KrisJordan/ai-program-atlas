@@ -46,13 +46,87 @@ def unique_courses(program):
     return list({c["id"]: c for c in program.get("courses", []) if c.get("id")}.values())
 
 
+def course_profile(program):
+    """Directory counts share the detail page's unique-course/source semantics."""
+    courses = unique_courses(program)
+    sources = {s.get('id'): s for s in program.get('sources', [])}
+    metadata = {}
+    for key in ('description', 'prerequisites', 'credits', 'credit_unit'):
+        metadata[key] = sum(
+            bool(safe_url(c.get('url')) or safe_url(sources.get(c.get('source_id'), {}).get('url')))
+            and c.get(key) is not None and c.get(key) != ''
+            and (key != 'credit_unit' or c.get(key) != 'unknown')
+            for c in courses
+        )
+    return {
+        'count': len(courses),
+        'unknown_credits': sum(c.get('credits') is None for c in courses),
+        'credit_units': list(dict.fromkeys(c.get('credit_unit') or 'unknown' for c in courses)),
+        'categories': {key: sum((c.get('category') if c.get('category') in CATEGORIES else 'other') == key for c in courses) for key in CATEGORIES},
+        'metadata': metadata,
+    }
+
+
+def directory_payload(data, base):
+    """Project only directory/search/comparison fields; full evidence stays in data.json.
+
+    This is a build-time view, not a second public data contract. Never mutate the
+    SQLite export: detail pages still consume the complete requirement/course graph.
+    """
+    def fields(record, names):
+        return {key: record[key] for key in names.split() if key in record}
+
+    def ranking_fields(institution):
+        return [fields(r, 'publisher edition category rank rank_upper_bound source_url verification_status') for r in institution.get('rankings', [])]
+
+    family_map = {f['id']: f for f in data.get('families', [])}
+    programs = []
+    for original in data.get('programs', []):
+        p = fields(original, 'id title program_kind award_level catalog_year last_verified verification_status curriculum_status')
+        institution = original.get('institution', {})
+        p['institution'] = fields(institution, 'id name calendar')
+        if institution.get('rankings'):
+            p['institution']['rankings'] = ranking_fields(institution)
+        membership = original.get('family') or {}
+        if membership:
+            p['family'] = fields(membership, 'id variant_label disciplines relationship classification_kind')
+            p['family']['requirement_overrides'] = [fields(change, 'shared_id operation reason source_id') for change in membership.get('requirement_overrides', [])]
+        search_values = [original.get('title'), original.get('overview'), original.get('hosting_unit'), institution.get('name'), membership.get('variant_label'), family_map.get(membership.get('id'), {}).get('name'), *membership.get('disciplines', []), *institution.get('aliases', [])]
+        search_values += [value for c in unique_courses(original) for value in (c.get('name'), c.get('code'))]
+        p['search_text'] = ' '.join(str(value) if value is not None else '' for value in search_values)
+        p['course_profile'] = course_profile(original)
+        requirements = original.get('requirements', [])
+        parents = {r.get('parent_id') for r in requirements if r.get('parent_id')}
+        # Comparison shows roots plus all local/replacement summaries for families.
+        p['requirements'] = [dict(fields(r, 'id parent_id title kind count credits credit_unit origin component summary source_id'), has_children=r.get('id') in parents) for r in requirements if not r.get('parent_id') or (membership and r.get('origin') in ('variant', 'replacement'))]
+        p['outcomes'] = [fields(o, 'text kind statement_type source_id') for o in original.get('outcomes', [])]
+        p['links'] = [fields(link, 'url label kind') for link in original.get('links', [])]
+        source_ids = {r.get('source_id') for r in p['requirements']} | {o.get('source_id') for o in p['outcomes']} | {c.get('source_id') for c in membership.get('requirement_overrides', [])}
+        source_ids |= {r.get('source_id') for r in family_map.get(membership.get('id'), {}).get('shared_requirements', [])}
+        p['sources'] = [fields(source, 'id url') for source in original.get('sources', []) if source.get('id') in source_ids]
+        programs.append(p)
+    institutions = []
+    for original in data.get('institutions', []):
+        institution = fields(original, 'id')
+        institution['rankings'] = ranking_fields(original)
+        institutions.append(institution)
+    families = []
+    for original in family_map.values():
+        family = fields(original, 'id name classification_kind')
+        family['shared_requirements'] = [fields(r, 'id title summary source_id') for r in original.get('shared_requirements', [])]
+        ids = {r.get('source_id') for r in family['shared_requirements']}
+        family['sources'] = [fields(s, 'id url') for s in original.get('sources', []) if s.get('id') in ids]
+        families.append(family)
+    return {'programs': programs, 'institutions': institutions, 'families': families, 'base_path': base, 'categories': CATEGORIES}
+
+
 def shell(title, body, base, current="", payload=None):
     current_attr = 'aria-current="page"'
     nav = "".join(f'<a {current_attr if current == key else ""} href="{base}{path}">{label}</a>' for key, path, label in [
         ("atlas", "", "Explore programs"), ("coverage", "coverage/", "Coverage"), ("methodology", "methodology/", "Methodology")])
     script = ""
     if payload is not None:
-        serialized = json.dumps(payload, ensure_ascii=False).replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026")
+        serialized = json.dumps(payload, ensure_ascii=False, separators=(',', ':')).replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026")
         script = f'<script id="atlas-data" type="application/json">{serialized}</script><script src="{base}assets/atlas.js" defer></script>'
     return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
@@ -95,11 +169,9 @@ def curriculum_scope(p):
 
 def metadata_availability(p):
     courses = unique_courses(p)
-    sources = {s.get('id'): s for s in p.get('sources', [])}
-    def sourced(course):
-        return bool(safe_url(course.get('url')) or safe_url(sources.get(course.get('source_id'), {}).get('url')))
     fields = [('description', 'Descriptions'), ('prerequisites', 'Prerequisite statements'), ('credits', 'Credit amounts'), ('credit_unit', 'Known credit units')]
-    counts = [(label, sum(sourced(c) and c.get(key) is not None and c.get(key) != '' and (key != 'credit_unit' or c.get(key) != 'unknown') for c in courses)) for key, label in fields]
+    profile = course_profile(p)
+    counts = [(label, profile['metadata'][key]) for key, label in fields]
     return '<section class="metadata-availability" aria-labelledby="metadata-title"><h3 id="metadata-title">Course metadata availability</h3><p class="section-note">Counts below show populated fields with a recorded course or source URL, across ' + str(len(courses)) + ' unique course records. They describe evidence availability, not requirement completeness. A missing prerequisite statement does not mean “no prerequisites”; an unknown credit unit cannot be converted or totaled.</p><dl class="metadata-counts">' + ''.join(f'<div><dt>{esc(label)}</dt><dd><strong>{count}</strong> of {len(courses)} sourced</dd></div>' for label, count in counts) + '</dl></section>'
 
 
@@ -200,7 +272,7 @@ def root_page(data, base):
 <div id="empty-state" class="empty-state" hidden><span class="eyebrow">NO MATCHES</span><h3>No programs match your filters.</h3><p>No documented program matches these filters. This does not establish that such a program does not exist.</p><button type="button" id="empty-reset">Clear filters</button></div></section>
 <div id="compare-tray" class="compare-tray" hidden><span id="tray-count">0 of 4 selected</span><a href="#comparison">Compare programs ↓</a></div><section id="comparison" class="comparison js-only" aria-labelledby="compare-title"><div class="section-heading"><div><span class="eyebrow">PROGRAM COMPARISON</span><h2 id="compare-title">Compare programs</h2></div><button type="button" id="clear-comparison" class="text-button">Clear selection</button></div><p class="comparison-intro">Choose up to four programs. Credit units and incomplete curricula stay visible; course counts are not measures of program quality.</p><div id="compare-status" role="status" aria-live="polite"></div><div id="comparison-content"><p class="comparison-placeholder">Select “Compare” on a program to begin.</p></div></section>
 <section class="method-callout"><span class="eyebrow">SOURCES & METHODS</span><h2>Check the evidence behind each record.</h2><p>Official sources, verification dates, requirement structure, and unknowns travel with the data. Source statements about program aims and outcomes are kept separate from editorial classifications.</p><a href="{base}methodology/">How to read this atlas →</a></section>'''
-    return shell("Explore undergraduate AI programs", body, base, "atlas", {"programs": programs, "institutions": institutions, "base_path": base, "categories": CATEGORIES, "families": families})
+    return shell("Explore undergraduate AI programs", body, base, "atlas", directory_payload(data, base))
 
 
 def category_chart(p):

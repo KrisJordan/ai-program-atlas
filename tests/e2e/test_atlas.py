@@ -100,6 +100,9 @@ def test_comparison_url_reload_history_and_limit(page, site):
 
 def test_search_history_mobile_and_no_document_overflow(page, site):
     from playwright.sync_api import expect
+    requests = []
+    page.on('request', lambda request: requests.append(request.url))
+    page.route('**/data.json', lambda route: route.abort())
     page.set_viewport_size({"width": 390, "height": 844})
     page.goto(site)
     page.locator("#search").fill("Institution 4")
@@ -113,6 +116,16 @@ def test_search_history_mobile_and_no_document_overflow(page, site):
     expect(page.locator(".program-card:visible")).to_have_count(5)
     page.go_back()
     expect(page.locator("#search")).to_have_value("Institution 4")
+    page.locator('#search').fill('AI 001')
+    expect(page.locator('.program-card:visible')).to_have_count(1)
+    expect(page.locator('.program-card:visible')).to_have_attribute('data-program-id', 'test-ai-0')
+    page.locator('#search').fill('machine LEARNING')
+    expect(page.locator('.program-card:visible')).to_have_count(3)
+    page.locator('#filter-category').select_option('ai_ml')
+    expect(page.locator('.program-card:visible')).to_have_count(3)
+    page.locator('#filter-category').select_option('other')
+    expect(page.locator('#empty-state')).to_be_visible()
+    assert not any('/data.json' in url for url in requests)
 
 
 def test_no_javascript_baseline(browser, site):
@@ -208,6 +221,11 @@ def test_complete_concentration_scope_metadata_and_nested_choices(page, site, tm
     expect(scope).to_contain_text('Concentration requirements only; not the whole parent degree')
     counts = page.locator('.compare-table tr').filter(has=page.get_by_role('rowheader', name='Course metadata availability', exact=True))
     expect(counts.locator('td').first).to_contain_text('Prerequisite statements0 of 2')
+    for label in ['Descriptions', 'Credit amounts', 'Known credit units']:
+        expect(counts.locator('td').first).to_contain_text(label + '1 of 2')
+    records = page.locator('.compare-table tr').filter(has=page.get_by_role('rowheader', name='Course records', exact=True))
+    expect(records.locator('td').first).to_contain_text('2 unique records')
+    expect(records.locator('td').first).to_contain_text('1 with unknown credits')
     assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
 
 
