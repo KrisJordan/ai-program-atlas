@@ -22,6 +22,8 @@ def table(rows, label="All of the following:"):
 
 
 def cmu_fixture(name):
+    if name == "cmu_bs":
+        return bs_fixture()
     if name == "cmu_minor":
         return minor_fixture()
     if name == "cmu_additional":
@@ -221,6 +223,57 @@ def additional_fixture():
     )
 
 
+def bs_fixture():
+    from bs4 import BeautifulSoup
+
+    math = (
+        BeautifulSoup(additional_fixture(), "html.parser")
+        .find("h4", string="Math and Statistics Core")
+        .find_next("table")
+    )
+    prob = str(math).split(
+        '<span class="courselistcomment">Probability and Statistics (one of)</span>'
+    )[1]
+    math_rows = (
+        row("15-151", "Synthetic foundation<br/>(if not offered, substitute <a>21-127</a>)")
+        + row("21-120")
+        + row("21-122")
+        + row("21-241")
+        + row(
+            "21-259",
+            "Synthetic multivariate<br/>or <a>21-266</a>, or <a>21-268</a>, or <a>21-269</a>",
+        )
+    )
+    math_html = table(
+        math_rows
+        + '<tr><td><span class="courselistcomment">Probability and Statistics (one of the following options):</span>'
+        + prob.split("</tbody>")[0].replace("Modern Regression Course", "plus Modern Regression:")
+    )
+    return (
+        "<div>2030-2031 Catalog</div><main><h1>Artificial Intelligence, B.S.</h1><section><h3>Curriculum</h3>"
+        + "<h4>Math and Statistics</h4>"
+        + math_html
+        + "<h4>Computer Science</h4>"
+        + table(row())
+        + "<p>Students without credit or a waiver must take 15-112 before 15-122.</p>"
+        + "<h4>Artificial Intelligence</h4>"
+        + table(row())
+        + "<p>others as designated by the AI Undergraduate Program</p>"
+        + "<h4>School of Computer Science Electives</h4><p>Two general computer science electives, 200-level or above, at least 9 units each. During their first year students may combine these two mini-courses. The following courses do NOT count as SCS electives: 17-200. Some IDEATE courses are excluded. Always consult with an AI undergraduate advisor.</p>"
+        + "<h4>Ethics Course</h4>"
+        + table(row("16-161"))
+        + "<h4>SCIENCE AND ENGINEERING</h4><p>minimum of 36 units, General Education Requirements</p>"
+        + "<h4>Humanities and Arts</h4><p>minimum of 63 units, General Education Requirements</p>"
+        + table(row("85-110", "Synthetic cognition", "9"))
+        + "<h4>SCS First year seminar</h4>"
+        + table(row("07-128", "Synthetic seminar", "3"))
+        + "<h4>CoRE@CMU</h4>"
+        + table(row("99-101", "Synthetic core", "3"))
+        + "<h4>Free Electives</h4><p>any Carnegie Mellon course; maximum of nine (9) units Physical Education, Military Science, Student-Led. 360 total, 22 free.</p>"
+        + "<h4>Undergraduate Research Thesis</h4><p>36 units; 18 units per semester; Up to 18 units toward electives, 9 per semester for 2 semesters maximum. 07-300 and practicum.</p></section></main>"
+    ).replace("During their first year", "during their first year")
+
+
 def cs_fixture():
     return (
         "<h1>Degree Concentrations for CSCI Students</h1>"
@@ -272,7 +325,7 @@ def test_cmu_core_choice_is_nested_not_all_required():
 
 def test_cmu_unknown_credit_range_is_null():
     p = adapter("cmu_bs").parse(cmu_fixture("cmu_bs").replace(">12<", ">9-12<"))
-    assert all(c["credits"] is None for c in p["courses"])
+    assert next(c for c in p["courses"] if c["code"] == "07-280")["credits"] is None
 
 
 def test_cmu_missing_section_fails():
@@ -520,3 +573,89 @@ def test_penn_full_page_keeps_probability_or_choice_and_optional_concentration_s
 def test_penn_new_degree_component_policy_changes_require_review(old, new):
     with pytest.raises(ValueError):
         adapter("penn_bse").parse(penn_bse_fixture().replace(old, new))
+
+
+def gened_fixture():
+    tables = [
+        table(row(code, "Synthetic option", units))
+        for code, units in [("02-261", "9"), ("03-511", "9"), ("85-170", "9")]
+    ]
+    tables.append(
+        table(
+            row("76-101", "Synthetic writing", "9")
+            + row("76-102", "Synthetic writing invitation", "9")
+            + row("76-106", "Synthetic mini", "4.5")
+            + row("76-107", "Synthetic mini", "4.5")
+            + row("76-108", "Synthetic mini", "4.5")
+        )
+    )
+    for label, code in [
+        ("Category 1 (other majors)", "85-100"),
+        ("Category 1A (AI)", "85-110"),
+        ("Category 2 (all)", "79-101"),
+        ("Category 3 (all)", "79-104"),
+    ]:
+        tables.append(table(row(code), label))
+    tables.extend([table(row("80-210")), table(row("70-352", "Synthetic approved addition", "3"))])
+    return (
+        '<h1>SCS General Education</h1><div id="textcontainer"><p>minimum of 36 units; at least four undergraduate courses; 9 units or more for each course; at least one course must have a laboratory component; at least two courses must be from the same department; minimum of 63 units. Complete three courses, one each. Complete 3 non-technical undergraduate courses. advisor approval and SCS General Education Committee.</p>'
+        + "".join(tables)
+        + "</div>"
+    )
+
+
+def test_cmu_gened_ai_replacement_exclusions_and_writing_choice():
+    from atlas.adapters.cmu_bs.general_education import parse
+
+    p = parse(gened_fixture())
+    codes = {c["code"] for c in p["courses"]}
+    assert "85-110" in codes and "85-100" not in codes
+    assert "03-511" not in codes and "80-210" not in codes
+    mini = next(r for r in p["requirements"] if r["id"].endswith("writing-minis"))
+    assert mini["count"] == 2 and mini["credits"] == 9 and len(mini["course_ids"]) == 3
+    parent = next(r for r in p["requirements"] if r["id"] == mini["parent_id"])
+    assert parent["kind"] == "alternative" and parent["count"] == 1
+    with pytest.raises(ValueError, match="distribution changed"):
+        parse(
+            gened_fixture().replace(
+                "at least two courses must be from the same department",
+                "courses may be from any departments",
+            )
+        )
+
+
+def test_current_cmu_json_feed_uses_fresh_rows_and_retains_wildcard_exclusions():
+    from atlas.adapters.cmu_bs.linked_policies import parse_options
+
+    data = {
+        "success": "true",
+        "more": "0",
+        "cols": [{"n": n} for n in ["course-number", "title", "units"]],
+        "data": [["79-177", "Synthetic new current option", "9"]],
+    }
+    p = parse_options(json.dumps(data), "cat2")
+    assert p["courses"][0]["code"] == "79-177" and p["courses"][0]["credits"] == 9
+    assert p["curriculum_status"] == "partial" and "curriculum_audit" not in p
+    data["data"] = [["36-xxx", "ALL STATISTICS EXCEPT 36-303", ""]]
+    p = parse_options(json.dumps(data), "arts-deletions")
+    assert p["courses"] == [] and "36-303" in p["requirements"][0]["summary"]
+    data["more"] = "1"
+    with pytest.raises(ValueError, match="incomplete"):
+        parse_options(json.dumps(data), "arts-deletions")
+
+
+def test_cmu_bs_math_conditions_and_full_primary_scope():
+    p = adapter("cmu_bs").parse(bs_fixture())
+    math = next(r for r in p["requirements"] if r["id"].endswith("math-subject-1"))
+    assert "only if" in math["summary"] and math["course_ids"] == ["cmu-15-151", "cmu-21-127"]
+    assert next(c for c in p["courses"] if c["code"] == "21-127")["name"] is None
+    probability = next(r for r in p["requirements"] if r["id"].endswith("math-probability"))
+    assert len([r for r in p["requirements"] if r["parent_id"] == probability["id"]]) == 6
+    assert any(
+        r["title"] == "Optional research thesis credit treatment" and r["kind"] == "note"
+        for r in p["requirements"]
+    )
+    with pytest.raises(ValueError, match="rule changed"):
+        adapter("cmu_bs").parse(
+            bs_fixture().replace("maximum of nine (9) units", "maximum of twelve (12) units")
+        )

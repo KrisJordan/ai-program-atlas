@@ -41,3 +41,22 @@ Verified 38 matching course blocks in the official [SCS course directory](https:
 ## Explicit remaining degree audit — 2026-10-10
 
 The standalone BS remains **partial**. `curriculum_audit` now names the unresolved math/statistics alternatives, SCS elective/science distributions, humanities and linked general education, first-year seminar, CoRE@CMU, free electives, optional research-thesis conditions, and linked degree/grading policies. Course metadata enrichment does not alter this requirement-inventory judgment. The 38 matched SCS records include 29 stated prerequisite expressions and seven reviewed core-course summaries; missing fields remain unknown.
+
+## Full degree and linked-policy review — 2026-10-10
+
+The 2026–2027 BS requirement inventory is reviewed complete: 273 positive course-option records and 65 requirement/policy nodes. This supersedes the earlier partial-audit entries above. It maps the primary curriculum, mathematics conditional substitutions and probability AND/OR paths, programming prerequisite, cluster minima/designated options, SCS elective exclusions/mini exception, degree-wide science/humanities distributions, seminar/Core, published 22 free-elective units, 360 total units and PE/ROTC/StuCo cap. Linked school policies cover graduation/residence, academic standing and AI progress, and conditional transfer rules. University policies cover credit/grading, repeats, transfer/examination approvals, the first-year QPA exception, applicable catalog, certification and eight-year unit limit. Optional thesis application and deliverables remain conditional note branches. Adviser/dean approval pathways are represented as published rules; this is not an individual graduation audit.
+
+### Catalog/current source reconciliation
+
+The catalog explicitly dates its general-education tables to July 2026 and directs readers to separate **up-to-date** science and humanities lists. We inspected those public pages and the exact JSON feed URLs embedded in their JavaScript, through the robots-aware fetcher. All feeds returned complete responses (`success=true`, `more=0`) on 2026-10-10; no private sheet, login or restricted syllabus was accessed. The current feeds govern the reconciled finite pools; catalog prose still supplies complementary distribution rules. Each feed, current page, catalog and policy page has a distinct registered source ID. Current pages also supply approval rules for combined minis and ECE graduate exclusions. Source parsers collect separate partial candidates; only this explicit review assigned completeness.
+
+Observed code differences from the July catalog:
+
+- Science additions omit 85-314. Lab membership is unchanged.
+- Science exclusions add 18-090, 18-411 and 49-101.
+- Category 2 adds 79-177, 79-244 and 82-208; removes 79-246.
+- Category 3 adds 48-321, 79-145, 79-156 and 79-286.
+- Humanities elective additions omit 73-369; it remains independently listed in Category 2.
+- Humanities exclusions add department-wide 36-xxx, 67-xxx and 73-xxx rules with explicit exceptions, plus 80-405 and 85-370; remove 85-314 and 85-414.
+
+No general Category 1 pool is imported for AI, which uses Category 1A. Excluded codes appear in policy notes, not as approved course options. Current-source titles/units are used for current positive pools; school course-directory facts enrich 51 matching records. Null descriptions, prerequisite omissions, unnamed inline math substitutes, variable units and sparse public syllabi remain metadata gaps separate from requirement completeness. The large course count includes alternatives and general-education options, not 273 required courses. Source pages remain only in ignored cache or `/tmp`.
