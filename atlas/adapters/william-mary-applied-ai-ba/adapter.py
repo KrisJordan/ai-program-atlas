@@ -1,9 +1,13 @@
-"""Source-specific identity observation; curriculum extraction pending."""
-from atlas.adapters.final_discovery_common import parse_claims
+"""Extract department curriculum observations; catalog review remains partial."""
+from atlas.adapters.william_mary_curricula import ba_overview, declaration
 
 PROGRAM_ID = 'william-mary-applied-ai-ba'
-SOURCES = ('https://cdsp.wm.edu/data-science/degrees/ba_appliedai/',)
-IDENTITY = {'program_id': 'william-mary-applied-ai-ba', 'title': 'Applied Artificial Intelligence', 'award': 'BA', 'kind': 'degree', 'heading': 'Major in Applied AI', 'content_header_class': 'm-title', 'claims': ['BA in Interdisciplinary Studies', 'Major in Applied Artificial Intelligence']}
+SOURCES = ('https://cdsp.wm.edu/data-science/degrees/ba_appliedai/', 'https://cdsp.wm.edu/data-science/degrees/ba_appliedai/declare-ba-aai/')
 
-def parse(html: str) -> dict:
-    return parse_claims(html, **IDENTITY)
+def parse(html):
+    return ba_overview(html)
+
+def parse_declaration(html):
+    return declaration(html, PROGRAM_ID, applied=True)
+
+SOURCE_PARSERS = {SOURCES[0]: parse, SOURCES[1]: parse_declaration}

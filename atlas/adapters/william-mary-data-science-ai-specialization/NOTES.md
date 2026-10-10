@@ -1,11 +1,25 @@
-# Artificial Intelligence
+# Artificial Intelligence — curriculum review
 
-Source: https://cdsp.wm.edu/data-science/degrees/bs_minor/
+Reviewed 2026-10-10. Status: **partial**.
 
-Official program identity verified; curriculum pending.
+The AI specialization in the Data Science BS has a published three-course elective choice among six options. Department policies are mapped; catalog-specific restrictions remain to be checked.
 
-Official department pages confirm AI minor, mandatory CS BS AI/ML concentration option, Data Science BS AI specialization option, and Applied AI major awarding a BA in Interdisciplinary Studies. Two concentrations have different parent majors and remain separate records. Catalog detail links showed access challenges; no bypass attempted. Curricula pending.
+The adapter parses the current department HTML and refuses missing identities, material policy changes, access pages and unrelated concentration rows. It never emits a completeness audit or verification date.
 
-The adapter requires a source-specific content heading and explicit program identity/classification claims after navigation is removed. It returns identity fields only. It does not replay curated records or mint verification dates. Source-specific synthetic regression tests reject missing evidence and access pages. All live-refresh and detailed curriculum parsing remain follow-up work.
+Reviewed sections:
 
-Live cached HTML verification (2026-10-10): this page uses header.m-title inside main for the program heading. The adapter preserves only that configured in-content title header; outer site navigation/header remains excluded. Heading and formal identity claims are still required.
+- Three-course AI specialization choice among six named options
+- Major declaration, advising and Registrar submission
+- Department substitution, independent research and study-abroad policies
+- Host-major scope and residency context
+
+Outstanding requirements:
+
+- Confirm catalog-specific specialization restrictions, including eligible DATA 440 topics; the department declaration table does not specify them.
+
+Curriculum evidence reviewed on 2026-10-10. The official catalog returned a JavaScript/robot challenge; no access restriction was bypassed. Department sources support the observations below, but a full catalog audit remains outstanding. Course metadata remains unverified; unknown credits and calendar are not inferred.
+
+Sources:
+
+- https://cdsp.wm.edu/data-science/degrees/bs_minor/
+- https://cdsp.wm.edu/data-science/degrees/bs_minor/declare-bsdsci/

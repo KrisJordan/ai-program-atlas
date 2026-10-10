@@ -1,9 +1,8 @@
-"""Source-specific identity observation; curriculum extraction pending."""
-from atlas.adapters.final_discovery_common import parse_claims
+"""Extract department curriculum observations; catalog review remains partial."""
+from atlas.adapters.william_mary_curricula import ai_minor, declaration
 
 PROGRAM_ID = 'william-mary-ai-minor'
 SOURCES = ('https://cdsp.wm.edu/academics/undergraduate/ai-minor/',)
-IDENTITY = {'program_id': 'william-mary-ai-minor', 'title': 'Artificial Intelligence', 'award': 'minor', 'kind': 'minor', 'heading': 'Minoring in Artificial Intelligence', 'content_header_class': 'm-title', 'claims': ['minor in Artificial Intelligence', 'all majors']}
 
-def parse(html: str) -> dict:
-    return parse_claims(html, **IDENTITY)
+def parse(html):
+    return ai_minor(html)

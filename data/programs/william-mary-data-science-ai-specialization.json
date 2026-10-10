@@ -13,16 +13,21 @@
   "hosting_unit": "Data Science BS",
   "status": "unknown",
   "first_offered": null,
-  "overview": "Official university content confirms this undergraduate concentration identity. Detailed curriculum evidence remains pending.",
+  "overview": "The AI specialization in the Data Science BS has a published three-course elective choice among six options. Department policies are mapped; catalog-specific restrictions remain to be checked.",
   "catalog_year": null,
-  "verification_status": "partial",
+  "verification_status": "confirmed",
   "last_verified": "2026-10-10",
-  "curriculum_status": "pending",
+  "curriculum_status": "partial",
   "links": [
     {
       "kind": "overview",
       "url": "https://cdsp.wm.edu/data-science/degrees/bs_minor/",
       "label": "Official program identity source"
+    },
+    {
+      "kind": "study",
+      "url": "https://cdsp.wm.edu/data-science/degrees/bs_minor/declare-bsdsci/",
+      "label": "Official declaration and specialization requirements"
     }
   ],
   "sources": [
@@ -35,13 +40,255 @@
       "catalog_year": null,
       "locator": "Bachelors of Science & Minor in Data Science; Artificial Intelligence program entry",
       "confidence": "high"
+    },
+    {
+      "id": "william-mary-data-science-ai-specialization-declaration",
+      "url": "https://cdsp.wm.edu/data-science/degrees/bs_minor/declare-bsdsci/",
+      "title": "Declaring a Major in Data Science",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Declaration steps; Artificial Intelligence specialization row",
+      "confidence": "high"
     }
   ],
-  "outcomes": [],
-  "courses": [],
-  "requirements": [],
+  "outcomes": [
+    {
+      "text": "Develop or apply AI algorithms to large data sets.",
+      "kind": "source_stated",
+      "source_id": "william-mary-data-science-ai-specialization-declaration",
+      "locator": "Artificial Intelligence specialization row"
+    }
+  ],
+  "courses": [
+    {
+      "id": "wm-ds-ai-data-440",
+      "code": "DATA 440",
+      "name": "Special Topics",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "william-mary-data-science-ai-specialization-declaration",
+      "url": "https://cdsp.wm.edu/data-science/degrees/bs_minor/declare-bsdsci/",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "wm-ds-ai-data-441",
+      "code": "DATA 441",
+      "name": "Advanced Applications of AI",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "william-mary-data-science-ai-specialization-declaration",
+      "url": "https://cdsp.wm.edu/data-science/degrees/bs_minor/declare-bsdsci/",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "wm-ds-ai-data-442",
+      "code": "DATA 442",
+      "name": "Neural Networks & Deep Learning",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "william-mary-data-science-ai-specialization-declaration",
+      "url": "https://cdsp.wm.edu/data-science/degrees/bs_minor/declare-bsdsci/",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "wm-ds-ai-data-446",
+      "code": "DATA 446",
+      "name": "Generative AI",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "william-mary-data-science-ai-specialization-declaration",
+      "url": "https://cdsp.wm.edu/data-science/degrees/bs_minor/declare-bsdsci/",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "wm-ds-ai-data-447",
+      "code": "DATA 447",
+      "name": "Bayesian Reasoning",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "william-mary-data-science-ai-specialization-declaration",
+      "url": "https://cdsp.wm.edu/data-science/degrees/bs_minor/declare-bsdsci/",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "wm-ds-ai-data-448",
+      "code": "DATA 448",
+      "name": "Reinforcement Learning",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "william-mary-data-science-ai-specialization-declaration",
+      "url": "https://cdsp.wm.edu/data-science/degrees/bs_minor/declare-bsdsci/",
+      "public_site": null,
+      "syllabus": null
+    }
+  ],
+  "requirements": [
+    {
+      "id": "william-mary-data-science-ai-specialization-substitution",
+      "parent_id": null,
+      "title": "Transfer, AP and cross-department substitutions",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "william-mary-data-science-ai-specialization-identity",
+      "source_text": null,
+      "summary": "Substitutions require departmental review of the prior course and syllabus; curriculum committee approval may be required.",
+      "course_ids": []
+    },
+    {
+      "id": "william-mary-data-science-ai-specialization-research",
+      "parent_id": null,
+      "title": "External-faculty independent research",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "william-mary-data-science-ai-specialization-identity",
+      "source_text": null,
+      "summary": "For DATA 490 with a faculty member outside Data Science, the faculty member submits a proposal of no more than one page describing goals, data, methods and the desired 3 or 4 credits. Curriculum committee approval is required.",
+      "course_ids": []
+    },
+    {
+      "id": "william-mary-data-science-ai-specialization-abroad",
+      "parent_id": null,
+      "title": "Study abroad and residency",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "william-mary-data-science-ai-specialization-identity",
+      "source_text": null,
+      "summary": "Study-abroad credit requires departmental preapproval. The listed core courses should be taken at W&M, with rare exceptions requiring curriculum committee consent; the capstone must be completed at W&M.",
+      "course_ids": []
+    },
+    {
+      "id": "william-mary-data-science-ai-specialization-equivalency",
+      "parent_id": null,
+      "title": "Study-abroad equivalency",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "william-mary-data-science-ai-specialization-identity",
+      "source_text": null,
+      "summary": "Equivalent approved courses transfer under the corresponding W&M course number after faculty review. Relevant courses without a W&M equivalent may transfer as DATA 340 after faculty and curriculum committee review.",
+      "course_ids": []
+    },
+    {
+      "id": "william-mary-data-science-ai-specialization-eligibility",
+      "parent_id": null,
+      "title": "Arts & Sciences declaration",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "william-mary-data-science-ai-specialization-identity",
+      "source_text": null,
+      "summary": "Students already in Arts & Sciences may declare directly without a separate application to the School of Computing, Data Sciences & Physics.",
+      "course_ids": []
+    },
+    {
+      "id": "william-mary-data-science-ai-specialization-host-scope",
+      "parent_id": null,
+      "title": "Host major context",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "william-mary-data-science-ai-specialization-identity",
+      "source_text": null,
+      "summary": "This is one specialization in the 36-credit Data Science BS. Shared major core and university degree requirements are outside the local specialization inventory. The department identifies DATA 201, 202, 301, 302 and 303 as core courses normally taken at W&M.",
+      "course_ids": []
+    },
+    {
+      "id": "william-mary-data-science-ai-specialization-electives",
+      "parent_id": null,
+      "title": "Choose three AI specialization courses",
+      "kind": "choose_courses",
+      "count": 3,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "william-mary-data-science-ai-specialization-declaration",
+      "source_text": null,
+      "summary": "Choose three elective courses from the Artificial Intelligence specialization row. DATA 440 is listed as Special Topics; this department page does not specify eligible topics.",
+      "course_ids": [
+        "wm-ds-ai-data-440",
+        "wm-ds-ai-data-441",
+        "wm-ds-ai-data-442",
+        "wm-ds-ai-data-446",
+        "wm-ds-ai-data-447",
+        "wm-ds-ai-data-448"
+      ]
+    },
+    {
+      "id": "william-mary-data-science-ai-specialization-declare",
+      "parent_id": null,
+      "title": "Major declaration and advising",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "william-mary-data-science-ai-specialization-declaration",
+      "source_text": null,
+      "summary": "Declare after 39\u201354 earned credit hours, including AP, IB and transfer credit. Request an advisor, review the major declaration with the advisor, and submit the signed form to the Registrar. Annual advisor check-ins are recommended.",
+      "course_ids": []
+    }
+  ],
   "notes": [
-    "Official program identity verified; curriculum pending.",
-    "Official department pages confirm AI minor, mandatory CS BS AI/ML concentration option, Data Science BS AI specialization option, and Applied AI major awarding a BA in Interdisciplinary Studies. Two concentrations have different parent majors and remain separate records. Catalog detail links showed access challenges; no bypass attempted. Curricula pending."
-  ]
+    "Curriculum evidence reviewed on 2026-10-10. The official catalog returned a JavaScript/robot challenge; no access restriction was bypassed. Department sources support the observations below, but a full catalog audit remains outstanding.",
+    "Published credits remain in source units (unknown normalized unit). Course credit values, descriptions, prerequisites, syllabi and calendar have not been inferred."
+  ],
+  "curriculum_audit": {
+    "scope": "concentration",
+    "reviewed_at": "2026-10-10",
+    "source_ids": [
+      "william-mary-data-science-ai-specialization-identity",
+      "william-mary-data-science-ai-specialization-declaration"
+    ],
+    "sections": [
+      "Three-course AI specialization choice among six named options",
+      "Major declaration, advising and Registrar submission",
+      "Department substitution, independent research and study-abroad policies",
+      "Host-major scope and residency context"
+    ],
+    "unresolved_requirements": [
+      "Confirm catalog-specific specialization restrictions, including eligible DATA 440 topics; the department declaration table does not specify them."
+    ],
+    "metadata_gaps": [
+      "Individual course credits, descriptions, prerequisites, public course sites and syllabi are unverified."
+    ]
+  }
 }

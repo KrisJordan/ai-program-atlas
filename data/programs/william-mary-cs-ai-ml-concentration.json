@@ -13,11 +13,11 @@
   "hosting_unit": "Computer Science BS",
   "status": "unknown",
   "first_offered": null,
-  "overview": "Official university content confirms this undergraduate concentration identity. Detailed curriculum evidence remains pending.",
+  "overview": "A formally declared AI/Machine Learning concentration within the CS BS. Local course requirements remain behind an inaccessible catalog.",
   "catalog_year": null,
-  "verification_status": "partial",
+  "verification_status": "confirmed",
   "last_verified": "2026-10-10",
-  "curriculum_status": "pending",
+  "curriculum_status": "partial",
   "links": [
     {
       "kind": "overview",
@@ -39,9 +39,40 @@
   ],
   "outcomes": [],
   "courses": [],
-  "requirements": [],
+  "requirements": [
+    {
+      "id": "william-mary-cs-ai-ml-concentration-declaration",
+      "parent_id": null,
+      "title": "Choose the concentration when declaring the major",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "william-mary-cs-ai-ml-concentration-identity",
+      "source_text": null,
+      "summary": "CS BS students select a concentration when declaring the major. AI/Machine Learning has its own required and elective courses; those courses are not enumerated on this department page.",
+      "course_ids": []
+    }
+  ],
   "notes": [
-    "Official program identity verified; curriculum pending.",
-    "Official department pages confirm AI minor, mandatory CS BS AI/ML concentration option, Data Science BS AI specialization option, and Applied AI major awarding a BA in Interdisciplinary Studies. Two concentrations have different parent majors and remain separate records. Catalog detail links showed access challenges; no bypass attempted. Curricula pending."
-  ]
+    "Curriculum evidence reviewed on 2026-10-10. The official catalog returned a JavaScript/robot challenge; no access restriction was bypassed. Department sources support the observations below, but a full catalog audit remains outstanding.",
+    "Published credits remain in source units (unknown normalized unit). Course credit values, descriptions, prerequisites, syllabi and calendar have not been inferred."
+  ],
+  "curriculum_audit": {
+    "scope": "concentration",
+    "reviewed_at": "2026-10-10",
+    "source_ids": [
+      "william-mary-cs-ai-ml-concentration-identity"
+    ],
+    "sections": [
+      "Concentration selection at CS major declaration"
+    ],
+    "unresolved_requirements": [
+      "AI/ML-specific required and elective courses, choice rules and concentration completion policies remain inaccessible."
+    ],
+    "metadata_gaps": [
+      "No individual course metadata is available from the inspected source."
+    ]
+  }
 }

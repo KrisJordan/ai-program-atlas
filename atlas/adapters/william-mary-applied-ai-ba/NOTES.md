@@ -1,13 +1,29 @@
-# Applied Artificial Intelligence
+# Applied Artificial Intelligence — curriculum review
 
-Source: https://cdsp.wm.edu/data-science/degrees/ba_appliedai/
+Reviewed 2026-10-10. Status: **partial**.
 
-Official program identity verified; curriculum pending.
+A 30-credit Applied Artificial Intelligence major awarding a BA in Interdisciplinary Studies. The department emphasizes responsible AI workflows and professional project work. Major and full-degree requirements remain partially mapped.
 
-Official department pages confirm AI minor, mandatory CS BS AI/ML concentration option, Data Science BS AI specialization option, and Applied AI major awarding a BA in Interdisciplinary Studies. Two concentrations have different parent majors and remain separate records. Catalog detail links showed access challenges; no bypass attempted. Curricula pending.
+The adapter parses the current department HTML and refuses missing identities, material policy changes, access pages and unrelated concentration rows. It never emits a completeness audit or verification date.
 
-Award is BA in Interdisciplinary Studies, with a major in Applied Artificial Intelligence.
+Reviewed sections:
 
-The adapter requires a source-specific content heading and explicit program identity/classification claims after navigation is removed. It returns identity fields only. It does not replay curated records or mint verification dates. Source-specific synthetic regression tests reject missing evidence and access pages. All live-refresh and detailed curriculum parsing remain follow-up work.
+- 30-credit major total and BA award
+- Three core courses named in the FAQ residency policy
+- Department substitution, independent research and study-abroad policies
+- Major declaration, advising and Registrar submission
+- Visual review of the linked example pathway; unresolved code conflict and illustrative electives
 
-Live cached HTML verification (2026-10-10): this page uses header.m-title inside main for the program heading. The adapter preserves only that configured in-content title header; outer site navigation/header remains excluded. Heading and formal identity claims are still required.
+Outstanding requirements:
+
+- Resolve DATA 305 (FAQ) versus AAI 301 (example pathway) for Designing AI Agents.
+- Map the full major including the two elective slots, methods and ethics alternatives; the example pathway names illustrative options rather than an exhaustive approved pool.
+- Map all university and school BA degree requirements and confirm the complete capstone requirement.
+
+Curriculum evidence reviewed on 2026-10-10. The official catalog returned a JavaScript/robot challenge; no access restriction was bypassed. Department sources support the observations below, but a full catalog audit remains outstanding. Course metadata remains unverified; unknown credits and calendar are not inferred.
+
+Sources:
+
+- https://cdsp.wm.edu/data-science/degrees/ba_appliedai/
+- https://cdsp.wm.edu/data-science/degrees/ba_appliedai/declare-ba-aai/
+- https://cdsp.wm.edu/data-science/degrees/ba_appliedai/ba_ai_coursework.png

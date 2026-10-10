@@ -13,16 +13,26 @@
   "hosting_unit": null,
   "status": "unknown",
   "first_offered": null,
-  "overview": "Official university content confirms this undergraduate degree identity. Detailed curriculum evidence remains pending.",
+  "overview": "A 30-credit Applied Artificial Intelligence major awarding a BA in Interdisciplinary Studies. The department emphasizes responsible AI workflows and professional project work. Major and full-degree requirements remain partially mapped.",
   "catalog_year": null,
-  "verification_status": "partial",
+  "verification_status": "confirmed",
   "last_verified": "2026-10-10",
-  "curriculum_status": "pending",
+  "curriculum_status": "partial",
   "links": [
     {
       "kind": "overview",
       "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/",
       "label": "Official program identity source"
+    },
+    {
+      "kind": "study",
+      "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/declare-ba-aai/",
+      "label": "Official declaration and specialization requirements"
+    },
+    {
+      "kind": "study",
+      "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/ba_ai_coursework.png",
+      "label": "Illustrative Applied AI pathway"
     }
   ],
   "sources": [
@@ -35,14 +45,226 @@
       "catalog_year": null,
       "locator": "Major in Applied AI; Applied Artificial Intelligence program entry",
       "confidence": "high"
+    },
+    {
+      "id": "william-mary-applied-ai-ba-declaration",
+      "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/declare-ba-aai/",
+      "title": "Declaring a Major in Applied AI",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Declaration steps",
+      "confidence": "high"
+    },
+    {
+      "id": "william-mary-applied-ai-ba-example-pathway",
+      "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/ba_ai_coursework.png",
+      "title": "Coursework Sequence \u2014 Major in Applied AI",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Department-linked example pathway image, visually inspected",
+      "confidence": "high"
     }
   ],
-  "outcomes": [],
-  "courses": [],
-  "requirements": [],
+  "outcomes": [
+    {
+      "text": "Frame open-ended problems, select AI tools, evaluate outputs, coordinate AI agents and communicate results. Build a portfolio demonstrating responsible professional AI use.",
+      "kind": "source_stated",
+      "source_id": "william-mary-applied-ai-ba-identity",
+      "locator": "What You'll Gain"
+    }
+  ],
+  "courses": [
+    {
+      "id": "wm-applied-ai-data-201",
+      "code": "DATA 201",
+      "name": "Intro to Data Science",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "william-mary-applied-ai-ba-identity",
+      "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "wm-applied-ai-data-202",
+      "code": "DATA 202",
+      "name": "Ethics in Data Science",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "human_context",
+      "source_id": "william-mary-applied-ai-ba-identity",
+      "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "wm-applied-ai-data-305",
+      "code": "DATA 305",
+      "name": "Designing AI Agents",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "william-mary-applied-ai-ba-identity",
+      "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/",
+      "public_site": null,
+      "syllabus": null
+    }
+  ],
+  "requirements": [
+    {
+      "id": "william-mary-applied-ai-ba-major-credits",
+      "parent_id": null,
+      "title": "Major credit minimum",
+      "kind": "note",
+      "count": null,
+      "credits": 30,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "william-mary-applied-ai-ba-identity",
+      "source_text": null,
+      "summary": "The department describes a 30-credit undergraduate major. This is the major total, not the complete BA degree total.",
+      "course_ids": []
+    },
+    {
+      "id": "william-mary-applied-ai-ba-observed-core",
+      "parent_id": null,
+      "title": "Core courses named in residency policy",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "william-mary-applied-ai-ba-identity",
+      "source_text": null,
+      "summary": "The FAQ explicitly names these core courses. This is an incomplete inventory; DATA 305 conflicts with AAI 301 in the linked example pathway.",
+      "course_ids": [
+        "wm-applied-ai-data-201",
+        "wm-applied-ai-data-202",
+        "wm-applied-ai-data-305"
+      ]
+    },
+    {
+      "id": "william-mary-applied-ai-ba-substitution",
+      "parent_id": null,
+      "title": "Transfer, AP and cross-department substitutions",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "william-mary-applied-ai-ba-identity",
+      "source_text": null,
+      "summary": "Substitutions require departmental review of the prior course and syllabus; curriculum committee approval may be required.",
+      "course_ids": []
+    },
+    {
+      "id": "william-mary-applied-ai-ba-research",
+      "parent_id": null,
+      "title": "External-faculty independent research",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "william-mary-applied-ai-ba-identity",
+      "source_text": null,
+      "summary": "For DATA 490 with a faculty member outside Data Science, the faculty member submits a proposal of no more than one page describing goals, data, methods and the desired 3 or 4 credits. Curriculum committee approval is required.",
+      "course_ids": []
+    },
+    {
+      "id": "william-mary-applied-ai-ba-abroad",
+      "parent_id": null,
+      "title": "Study abroad and residency",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "william-mary-applied-ai-ba-identity",
+      "source_text": null,
+      "summary": "Study-abroad credit requires departmental preapproval. The listed core courses should be taken at W&M, with rare exceptions requiring curriculum committee consent; the capstone must be completed at W&M.",
+      "course_ids": []
+    },
+    {
+      "id": "william-mary-applied-ai-ba-equivalency",
+      "parent_id": null,
+      "title": "Study-abroad equivalency",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "william-mary-applied-ai-ba-identity",
+      "source_text": null,
+      "summary": "Equivalent approved courses transfer under the corresponding W&M course number after faculty review. Relevant courses without a W&M equivalent may transfer as DATA 340 after faculty and curriculum committee review.",
+      "course_ids": []
+    },
+    {
+      "id": "william-mary-applied-ai-ba-eligibility",
+      "parent_id": null,
+      "title": "Arts & Sciences declaration",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "william-mary-applied-ai-ba-identity",
+      "source_text": null,
+      "summary": "Students already in Arts & Sciences may declare directly without a separate application to the School of Computing, Data Sciences & Physics.",
+      "course_ids": []
+    },
+    {
+      "id": "william-mary-applied-ai-ba-declare",
+      "parent_id": null,
+      "title": "Major declaration and advising",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "william-mary-applied-ai-ba-declaration",
+      "source_text": null,
+      "summary": "Declare after 39\u201354 earned credit hours, including AP, IB and transfer credit. Request an advisor, review the major declaration with the advisor, and submit the signed form to the Registrar. Annual advisor check-ins are recommended.",
+      "course_ids": []
+    }
+  ],
   "notes": [
-    "Official program identity verified; curriculum pending.",
-    "Official department pages confirm AI minor, mandatory CS BS AI/ML concentration option, Data Science BS AI specialization option, and Applied AI major awarding a BA in Interdisciplinary Studies. Two concentrations have different parent majors and remain separate records. Catalog detail links showed access challenges; no bypass attempted. Curricula pending.",
-    "Award is BA in Interdisciplinary Studies, with a major in Applied Artificial Intelligence."
-  ]
+    "Curriculum evidence reviewed on 2026-10-10. The official catalog returned a JavaScript/robot challenge; no access restriction was bypassed. Department sources support the observations below, but a full catalog audit remains outstanding.",
+    "Published credits remain in source units (unknown normalized unit). Course credit values, descriptions, prerequisites, syllabi and calendar have not been inferred.",
+    "The linked example pathway names AAI 101, AAI 301, AAI 302, DATA 201, DATA 405 and DATA 303, plus ethics and methods alternatives and two elective slots. These have not been promoted into a complete required-course inventory because the pathway is illustrative and conflicts with the FAQ on Designing AI Agents.",
+    "The example pathway lists DATA 202 or PHIL 150 for ethics; its methods and elective options are explicitly examples, so they are not treated as exhaustive approved pools."
+  ],
+  "curriculum_audit": {
+    "scope": "degree",
+    "reviewed_at": "2026-10-10",
+    "source_ids": [
+      "william-mary-applied-ai-ba-identity",
+      "william-mary-applied-ai-ba-declaration",
+      "william-mary-applied-ai-ba-example-pathway"
+    ],
+    "sections": [
+      "30-credit major total and BA award",
+      "Three core courses named in the FAQ residency policy",
+      "Department substitution, independent research and study-abroad policies",
+      "Major declaration, advising and Registrar submission",
+      "Visual review of the linked example pathway; unresolved code conflict and illustrative electives"
+    ],
+    "unresolved_requirements": [
+      "Resolve DATA 305 (FAQ) versus AAI 301 (example pathway) for Designing AI Agents.",
+      "Map the full major including the two elective slots, methods and ethics alternatives; the example pathway names illustrative options rather than an exhaustive approved pool.",
+      "Map all university and school BA degree requirements and confirm the complete capstone requirement."
+    ],
+    "metadata_gaps": [
+      "Individual course credits, descriptions, prerequisites, public course sites and syllabi are unverified."
+    ]
+  }
 }

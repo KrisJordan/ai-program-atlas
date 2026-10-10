@@ -48,7 +48,7 @@ def test_new_records_validate_and_reject_unrelated_refresh(pid):
     validate_program(program)
     adapter = importlib.import_module(f'atlas.adapters.{pid}.adapter')
     assert adapter.PROGRAM_ID == pid
-    assert adapter.SOURCES == (program['sources'][0]['url'],)
+    assert set(adapter.SOURCES) <= {s['url'] for s in program['sources']}
     if program['curriculum_status'] == 'pending':
         assert program['verification_status'] == 'partial'
         assert not program['courses'] and not program['requirements']

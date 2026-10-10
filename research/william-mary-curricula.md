@@ -1,0 +1,12 @@
+# William & Mary curriculum pass
+
+Reviewed 2026-10-10. Four existing records moved from pending to **partial**, with 9 course records and 19 requirement/policy nodes. No record was promoted to complete.
+
+- **AI minor:** the department verifies a 19-credit total and eligibility for all majors. Its linked catalog inventory returned a JavaScript/robot challenge, so required courses, alternatives and completion policies remain unresolved.
+- **CS BS AI/Machine Learning concentration:** selecting a concentration at major declaration is mandatory. The department states that each concentration has distinct required and elective courses but does not enumerate them. The linked catalog remains inaccessible.
+- **Data Science BS AI specialization:** the official declaration table lists DATA 440, 441, 442, 446, 447 and 448 as options for three elective courses. Only that table row is parsed; adjacent algorithms and spatial courses are excluded. Declaration, advising, substitution, research and study-abroad policies are represented. Catalog restrictions, particularly eligible DATA 440 topics, still need confirmation, so even this local specialization remains partial. The shared 36-credit host major is not presented as the specialization total or mapped as a complete degree.
+- **Applied AI BA:** the department verifies the BA in Interdisciplinary Studies and a 30-credit major. The FAQ names three core courses subject to residency rules. A linked example pathway was visually inspected, but its AAI 301 code conflicts with the FAQ's DATA 305 for Designing AI Agents. The diagram's methods and elective suggestions are explicitly illustrative, not an exhaustive approved pool. Full university/school degree requirements and a complete major inventory remain unresolved.
+
+The four program JSON records register exact source URLs and manual audits. Six source-specific parsers operate on current HTML and never emit review/completeness state. Tests check changes in observed courses and credits, material policy drift, source boundaries, login pages, and existing cached live pages when available. Fixtures are synthetic reductions rather than saved websites.
+
+Individual credits, descriptions, prerequisites, syllabi and course sites remain unknown. Published totals retain an unknown normalized credit unit; they are informational notes, not computable credit-choice nodes. No access restriction was bypassed, and no catalog search snippet was used as a complete curriculum source.

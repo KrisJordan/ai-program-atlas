@@ -13,11 +13,11 @@
   "hosting_unit": null,
   "status": "unknown",
   "first_offered": null,
-  "overview": "Official university content confirms this undergraduate minor identity. Detailed curriculum evidence remains pending.",
+  "overview": "An interdisciplinary AI minor open to all majors, with a published 19-credit minimum. The detailed catalog inventory remains inaccessible.",
   "catalog_year": null,
-  "verification_status": "partial",
+  "verification_status": "confirmed",
   "last_verified": "2026-10-10",
-  "curriculum_status": "pending",
+  "curriculum_status": "partial",
   "links": [
     {
       "kind": "overview",
@@ -37,11 +37,65 @@
       "confidence": "high"
     }
   ],
-  "outcomes": [],
+  "outcomes": [
+    {
+      "text": "Combine machine learning, data analysis and responsible AI with attention to ethics, societal effects and interdisciplinary applications.",
+      "kind": "source_stated",
+      "source_id": "william-mary-ai-minor-identity",
+      "locator": "Program overview"
+    }
+  ],
   "courses": [],
-  "requirements": [],
+  "requirements": [
+    {
+      "id": "william-mary-ai-minor-credits",
+      "parent_id": null,
+      "title": "Minor credit minimum",
+      "kind": "note",
+      "count": null,
+      "credits": 19,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "william-mary-ai-minor-identity",
+      "source_text": null,
+      "summary": "The department publishes this credit minimum; the detailed catalog course list is not accessible.",
+      "course_ids": []
+    },
+    {
+      "id": "william-mary-ai-minor-eligibility",
+      "parent_id": null,
+      "title": "Open to all majors",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "william-mary-ai-minor-identity",
+      "source_text": null,
+      "summary": "Students in any major may pursue the AI minor.",
+      "course_ids": []
+    }
+  ],
   "notes": [
-    "Official program identity verified; curriculum pending.",
-    "Official department pages confirm AI minor, mandatory CS BS AI/ML concentration option, Data Science BS AI specialization option, and Applied AI major awarding a BA in Interdisciplinary Studies. Two concentrations have different parent majors and remain separate records. Catalog detail links showed access challenges; no bypass attempted. Curricula pending."
-  ]
+    "Curriculum evidence reviewed on 2026-10-10. The official catalog returned a JavaScript/robot challenge; no access restriction was bypassed. Department sources support the observations below, but a full catalog audit remains outstanding.",
+    "Published credits remain in source units (unknown normalized unit). Course credit values, descriptions, prerequisites, syllabi and calendar have not been inferred."
+  ],
+  "curriculum_audit": {
+    "scope": "minor",
+    "reviewed_at": "2026-10-10",
+    "source_ids": [
+      "william-mary-ai-minor-identity"
+    ],
+    "sections": [
+      "19-credit minor total",
+      "Eligibility for students in all majors",
+      "Source-stated learning aims"
+    ],
+    "unresolved_requirements": [
+      "Detailed required and elective course inventory, choice rules and minor completion policies remain inaccessible."
+    ],
+    "metadata_gaps": [
+      "No individual course metadata is available from the inspected source."
+    ]
+  }
 }
