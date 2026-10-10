@@ -18,6 +18,7 @@
   let timer;
   const courses = p => [...new Map((p.courses || []).map(c => [c.id, c])).values()];
   const pretty = x => String(x || 'unknown').replaceAll('_', ' ').replace(/^./, c => c.toUpperCase());
+  const relationshipLabel = p => ({ai_plus_x: 'AI + another discipline', x_plus_ai: 'Another discipline + AI', integrated: 'Integrated program'}[p.family?.relationship] || 'Not recorded');
   const e = x => String(x ?? 'Unknown').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const urlSafe = u => /^https?:\/\//.test(u || '');
   const link = (url, label) => urlSafe(url) ? `<a href="${e(url)}" rel="noopener noreferrer">${e(label)} ↗</a>` : e(label);
@@ -97,7 +98,7 @@
       const requirements = family.shared_requirements || [];
       const sources = new Map([...(family.sources || []), ...(p.sources || [])].map(source => [source.id, source]));
       const changes = new Map((p.family?.requirement_overrides || []).map(change => [change.shared_id, change]));
-      return requirements.length ? '<ul>' + requirements.map(r => `<li>${e(r.title)}${changes.has(r.id) ? '<small><strong>' + (changes.get(r.id).operation === 'exclude' ? 'Excluded for this variant' : 'Replaced for this variant') + '</strong></small>' : ''}<small>${r.summary ? e(r.summary) + ' · ' : ''}${link(sources.get(r.source_id)?.url, 'Requirement source')}</small></li>`).join('') + '</ul><small>Shared requirement groups include containers and choices; not a course total. Follow variant changes below.</small>' : 'Shared requirement structure not recorded';
+      return requirements.length ? '<details class="compare-requirements"><summary>' + requirements.length + ' shared requirement groups</summary><ul>' + requirements.map(r => `<li>${e(r.title)}${changes.has(r.id) ? '<small><strong>' + (changes.get(r.id).operation === 'exclude' ? 'Excluded for this variant' : 'Replaced for this variant') + '</strong></small>' : ''}<small>${r.summary ? e(r.summary) + ' · ' : ''}${link(sources.get(r.source_id)?.url, 'Requirement source')}</small></li>`).join('') + '</ul></details><small>Groups include containers and choices, not a course total.' + (changes.size ? ' Explicit variant changes are recorded below.' : '') + '</small>' : 'Shared requirement structure not recorded';
     };
     const variantRequirementList = p => {
       if (!p.family) return 'No family relationship recorded';
@@ -105,13 +106,13 @@
       const sources = new Map((p.sources || []).map(source => [source.id, source]));
       const shared = new Map((familyMap.get(p.family.id)?.shared_requirements || []).map(r => [r.id, r]));
       const changes = (p.family.requirement_overrides || []).map(change => `<li><strong>${e(pretty(change.operation))}: ${e(shared.get(change.shared_id)?.title || change.shared_id)}</strong><small>${e(change.reason || 'Reason not recorded')}</small><small>${link(sources.get(change.source_id)?.url, 'Change source')}</small></li>`).join('');
-      return requirements.length || changes ? '<ul>' + changes + requirements.map(r => `<li>${e(r.title)}<small>${r.origin === 'replacement' ? 'Replaces a shared requirement' : 'Variant-specific'}${r.component && r.component !== 'other' ? ' · ' + e(pretty(r.component)) : ''}${r.summary ? ' · ' + e(r.summary) : ''}</small><small>${link(sources.get(r.source_id)?.url, 'Requirement source')}</small></li>`).join('') + '</ul>' : 'Variant differences not yet recorded';
+      return requirements.length || changes ? (changes ? '<ul>' + changes + '</ul>' : '') + '<details class="compare-requirements"><summary>' + requirements.length + ' local requirement groups</summary><ul>' + requirements.map(r => `<li>${e(r.title)}<small>${r.origin === 'replacement' ? 'Replaces a shared requirement' : 'Local variant requirement'}${r.component && r.component !== 'other' ? ' · ' + e(pretty(r.component)) : ''}${r.summary ? ' · ' + e(r.summary) : ''}</small><small>${link(sources.get(r.source_id)?.url, 'Requirement source')}</small></li>`).join('') + '</ul></details><small>Local requirements outside the recorded shared set; not every item necessarily differs from other variants.</small>' : 'Variant differences not yet recorded';
     };
     const rows = [
-      ['Program family', p => p.family ? e(familyMap.get(p.family.id)?.name || p.family.id) + '<small>' + e(pretty(p.family.classification_kind)) + '</small>' : 'No family relationship recorded'],
-      ['Concrete variant / disciplines', p => p.family ? e(p.family.variant_label || p.title) + '<small>' + e((p.family.disciplines || []).join(', ') || 'Disciplines not recorded') + '</small>' : e(p.title)],
+      ['Program family', p => p.family ? e(familyMap.get(p.family.id)?.name || p.family.id) + '<small>' + e(pretty(familyMap.get(p.family.id)?.classification_kind)) + '</small>' : 'No family relationship recorded'],
+      ['Concrete variant / disciplines', p => p.family ? e(p.family.variant_label || p.title) + '<small>' + e((p.family.disciplines || []).join(', ') || 'Disciplines not recorded') + '</small><small>Relationship: ' + e(relationshipLabel(p)) + '</small><small>Membership evidence: ' + e(pretty(p.family.classification_kind)) + '</small>' : e(p.title)],
       ['Shared family requirements', familyRequirementList],
-      ['Variant-specific requirements', variantRequirementList],
+      ['Variant requirements / changes', variantRequirementList],
       ['Award / type', p => e(p.award_level) + '<small>' + e(pretty(p.program_kind)) + '</small>'],
       ['U.S. News cohort context', p => { const ranks = institutionMap.get(p.institution?.id)?.rankings || p.institution?.rankings || []; return ranks.length ? ranks.map(r => link(r.source_url, `${r.publisher || 'U.S. News'} ${r.edition || 'Edition unknown'} · ${r.category || 'Category unknown'} · ${rankLabel(r)}`) + '<small>Membership evidence: ' + e(pretty(r.verification_status)) + '</small>').join('<br>') + '<small>Institution context, not teaching quality. Different categories are not comparable.</small>' : 'Ranking provenance not recorded'; }],
       ['Calendar', p => e(pretty(p.institution?.calendar))],

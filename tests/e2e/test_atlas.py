@@ -265,7 +265,7 @@ def test_family_expand_discipline_compare_history_and_detail(page,site,tmp_path,
     page.goto(site+'programs/test-ai-1/')
     expect(page.locator('.family-context')).to_contain_text('AI and Physics')
     expect(page.locator('.requirements')).to_contain_text('Shared family requirement')
-    expect(page.locator('.requirements')).to_contain_text('Variant-specific requirement')
+    expect(page.locator('.requirements')).to_contain_text('Local variant requirement')
     page.locator('.family-context summary').click()
     expect(page.locator('.family-context a[href$="/programs/test-ai-0/"]')).to_be_visible()
     page.reload()
