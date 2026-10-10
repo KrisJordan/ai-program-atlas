@@ -1,15 +1,9 @@
-# Interdisciplinary Artificial Intelligence
+# Northeastern interdisciplinary AI minor — complete local review
 
-Official identity source: https://catalog.northeastern.edu/undergraduate/business/interdisciplinary-minors/interdisciplinary-artificial-intelligence-minor/
+Reviewed 2026-10-10 against the official 2026–2027 Overview/Minor Requirements and linked Degrees, Majors, and Minors policy. `SOURCES` and `SOURCE_PARSERS` cover both; no raw pages are committed.
 
-Directory/identity verified; curriculum pending. No courses, requirements or outcomes have yet been extracted.
+The complete local inventory represents one Technology and Ethics course (four hours), one experiential/project/applied course (four hours), and two additional electives (eight hours) that cannot be reused from another requirement in this minor. The minor GPA is at least 2.000, and specified prerequisites/corequisites remain obligations. University policy adds junior-year declaration, concurrent completion without extending the parent degree, same-program/subset exclusion and a combined maximum 50% overlap from major, transfer or advanced-standing credits.
 
-Official catalog combined-major directory confirms 22 named AI combined BS programs; separate environmental engineering combined degree and two AI minor pages also inspected. Directory confirmation does not establish full curriculum extraction or complete campus inventory.
+Nineteen unique course identities are preserved across repeated memberships. PHIL 1300 / DS 1300 and INTL 2600 / POLS 2600 are source-listed alternative codes and deduplicated records. Crucially, the tree includes a code-eligibility note: DS 1300 is explicitly permitted in Technology and Ethics, but the elective list explicitly names PHIL 1300; merging identity does not authorize the DS code for every group. The catalog's 4/4/8 values apply to groups; no individual elective amounts are inferred. Descriptions/prerequisites/sites/syllabi remain unverified metadata, not an unresolved requirement inventory.
 
-The adapter validates a title in visible content headings or links and the award/kind in its local card or heading section. It returns only observed identity fields and never replays seed metadata, curriculum, or dates. A failure means review is required; it does not mean the program is absent. Tests use synthetic HTML to verify rejection behavior; live refresh is not claimed.
-
-## Cached layout verification — 2026-10-10
-
-The Courseleaf program title is the H1 inside #site-title outside main. This reviewed identity scope retains that specific title, while stripping navigation and sidebars. The title must itself provide the expected award or minor evidence.
-
-Validation used previously fetched, ignored local HTML. This adapter refreshes identity only; full curriculum extraction remains pending. No reviewed seed content or verification timestamp is replayed by the parser.
+The observer reads supplied HTML, group count/credit instructions, course membership and alias alternatives, local GPA and prerequisite/reuse policy signatures. It never manufactures a complete audit. Synthetic changed-rule tests verify two-to-three elective changes, repeated-course/alias deduplication, missing individual credits, university policy changes and curated source-scoped audit consistency. The source-stated purpose and inferred editorial themes are distinct.

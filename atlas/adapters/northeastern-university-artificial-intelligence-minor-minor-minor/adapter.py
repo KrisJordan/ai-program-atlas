@@ -1,8 +1,14 @@
-"""Identity-only observation; full curriculum extraction is pending."""
-from atlas.adapters.discovery_common import parse_identity
+"""Actual course/policy observations; completeness requires separate review."""
+from atlas.adapters.reviewed_minors_2026 import parse_neu_ai, policy_observation
 
 PROGRAM_ID = 'northeastern-university-artificial-intelligence-minor-minor-minor'
-SOURCES = ('https://catalog.northeastern.edu/undergraduate/computer-information-science/data-science/artificial-intelligence-minor/',)
+SOURCE_ID = 'neu-ai-minor-catalog'
+SOURCES = ('https://catalog.northeastern.edu/undergraduate/computer-information-science/data-science/artificial-intelligence-minor/', 'https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/degrees-majors-minors/')
 
 def parse(html: str) -> dict:
-    return parse_identity(html, program_id=PROGRAM_ID, title='Artificial Intelligence, Minor', award='minor', kind='minor', aliases=('Artificial Intelligence',), award_terms=(), identity_scopes=('courseleaf-title',))
+    return parse_neu_ai(html, PROGRAM_ID, SOURCE_ID, SOURCES[0])
+
+def parse_policy_0(html: str) -> dict:
+    return policy_observation(html, PROGRAM_ID, 'neu-minor-policy', 'neu')
+
+SOURCE_PARSERS = {'https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/degrees-majors-minors/': parse_policy_0}

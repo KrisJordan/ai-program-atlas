@@ -1,9 +1,9 @@
-# Artificial Intelligence
+# Case Western Reserve AI minor — complete local review
 
-Official identity source: https://bulletin.case.edu/engineering/computer-data-sciences/artificial-intelligence-minor/
+Reviewed 2026-10-10 from the official 2026–2027 bulletin's overview, learning outcomes and program-requirements tabs, plus its linked Undergraduate Academic Policies and Grades pages. All URLs are in `SOURCES`; each secondary source has its own observation parser. Raw responses are only in ignored local caches.
 
-Directory/identity verified; curriculum pending. No courses, requirements or outcomes have yet been extracted.
+Complete scope is the local six-course/18-credit minor and its relationship to the parent degree, not the whole degree. The tree preserves two required courses, one societal-impact choice, three technical electives, at most four courses overlapping the major, and the assumed prior CS/mathematics background. University notes preserve declaration/catalog-term rules, advance approval and C-or-better for outside coursework, and regular evaluative grading with the official pass/no-pass-only exception and later-declared-minor grade-reveal process.
 
-Official AI education directory describes new BA and BS pathways and an existing AI minor. Applied AI minor is explicitly in approval and excluded from confirmed discoveries. Full catalog title, launch timing, and curricula of new degree pathways require verification.
+Twenty-six unique source-listed options are recorded. Cross-listed codes (including graduate/undergraduate slash variants) remain one listed option. Only the two required course rows supply individual three-credit amounts; group totals are not copied onto elective records. Descriptions, prerequisites, public sites and syllabi remain unverified. Four learning-outcome summaries are source-stated; the separate theme labels are editorial classifications.
 
-The adapter validates a title in visible content headings or links and the award/kind in its local card or heading section. It returns only observed identity fields and never replays seed metadata, curriculum, or dates. A failure means review is required; it does not mean the program is absent. Tests use synthetic HTML to verify rejection behavior; live refresh is not claimed.
+The observer dynamically extracts headings, membership, numeric choices, the six-course/18-credit rule, and overlap maximum. It never emits a review audit or `complete`; a separately reviewed curated record does. Changed-rule fixtures cover altered elective counts and overlap limits, course metadata nulls, secondary-source registration and reviewed-audit validity. All applicable minor-specific rules found in the three cited pages are represented; no finite approved list remains unavailable.

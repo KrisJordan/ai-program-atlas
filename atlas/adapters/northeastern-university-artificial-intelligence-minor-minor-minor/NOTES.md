@@ -1,15 +1,9 @@
-# Artificial Intelligence, Minor
+# Northeastern Khoury AI minor — complete local review
 
-Official identity source: https://catalog.northeastern.edu/undergraduate/computer-information-science/data-science/artificial-intelligence-minor/
+Reviewed 2026-10-10, official 2026–2027 catalog Overview and Minor Requirements, and Degrees, Majors, and Minors policy. Both URLs are in `SOURCES` and have source-specific observers. Raw HTML remains ignored.
 
-Directory/identity verified; curriculum pending. No courses, requirements or outcomes have yet been extracted.
+The local minor inventory covers CS 2000/2001 and CS 2100/2101 lecture/lab bundles, DS 3000 and DS 4400, the four-hour elective alternatives (CS 3200, DS 2010–4989, or the full Meaningful Minor list), and all 41 finite cross-college Meaningful Minor options. The initial pair may be replaced after successful self-assessment with 4–5 hours of CS/CY/DS at 3000+ not otherwise required for the degree. The DS numeric range and placement course range are source-defined open rules, not unavailable finite lists, and are not expanded into invented course records. The source gives bundle totals of five hours, so individual lecture/lab credit amounts remain null. No single total is inferred across the placement alternative.
 
-Official catalog combined-major directory confirms 22 named AI combined BS programs; separate environmental engineering combined degree and two AI minor pages also inspected. Directory confirmation does not establish full curriculum extraction or complete campus inventory.
+Eligibility excludes Khoury-only and Khoury combined majors and allows at most one Khoury minor. Required corequisites are noted. The university rule adds declaration by junior-year end, concurrent major/minor completion without extending study, the same-program/subset exclusion, and the maximum 50% minor credits counted from major, transfer or advanced standing (stricter local limits prevail). These policies are part of the reviewed complete local inventory, not claims about the whole parent degree.
 
-The adapter validates a title in visible content headings or links and the award/kind in its local card or heading section. It returns only observed identity fields and never replays seed metadata, curriculum, or dates. A failure means review is required; it does not mean the program is absent. Tests use synthetic HTML to verify rejection behavior; live refresh is not claimed.
-
-## Cached layout verification — 2026-10-10
-
-The Courseleaf program title is the H1 inside #site-title outside main. This reviewed identity scope retains that specific title, while stripping navigation and sidebars. The title must itself provide the expected award or minor evidence.
-
-Validation used previously fetched, ignored local HTML. This adapter refreshes identity only; full curriculum extraction remains pending. No reviewed seed content or verification timestamp is replayed by the parser.
+There are 48 unique course records and 19 requirement nodes; only DS 3000 and DS 4400 have individual source-stated amounts. Metadata descriptions/prerequisites/sites/syllabi remain missing. Source-stated overview purpose and editorial themes remain separate. Dynamic parsing observes actual HTML and emits only `partial` candidates; completeness is a manual audit. Synthetic tests preserve bundles, the open ranges, null individual amounts, policy-cap changes, and rejection of a changed elective-selection structure.
