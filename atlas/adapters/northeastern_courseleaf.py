@@ -1,4 +1,4 @@
-"""Scoped CourseLeaf requirement observations for reviewed Northeastern BS pages.
+"""Scoped CourseLeaf requirement observations for reviewed Northeastern combined-degree pages.
 
 No seed files are read. Major tables are observed; external graduation policies,
 open course ranges and conditional substitutions remain explicitly partial.

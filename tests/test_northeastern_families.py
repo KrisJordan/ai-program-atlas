@@ -29,6 +29,13 @@ EXPECTED={
 'northeastern-university-artificial-intelligence-and-physics-bs-boston-bs-degree':'ed987ff2ebced3c5d6a9ada366e61f393bdf62b3786f93480ee2d7c192b79571',
 'northeastern-university-artificial-intelligence-and-psychology-bs-boston-bs-degree':'8a773598e253866f152109839ed8a78fa89781d19639d2e7fdf17c0abef22b90',
 'northeastern-university-artificial-intelligence-and-public-health-bs-boston-bs-degree':'917f2270c49b948541e492007d021027611848ddc9fb43d4589d2ed18cc28133',
+'northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree':'3e821be086a0e85989e93f4f210ff1dff0ea9c29fa959dfb495482b501e43aee',
+'northeastern-university-artificial-intelligence-and-communication-studies-bs-boston-bs-degree':'e5f1da07c7bb7b08046335d95017da4f2ecd9ed21049a39237e685b0f82ace7f',
+'northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree':'39384f58e1b6a0405104375f2ec5febad6419603b68dc156fc8ee6e19e56989f',
+'northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree':'a3a9b40d873309214085b6b8f2a5b468437bdd605b660897bf5172fba204ac34',
+'northeastern-university-environmental-engineering-and-artificial-intelligence-bsenve-boston-other-degree':'12763791974097de6bdddd9656a53b5a858d73b3a73efec67cc9acdd1be0dfef',
+'northeastern-university-artificial-intelligence-and-international-affairs-bs-boston-bs-degree':'67acf02f9b46f44bb0ae0171d0b7002471575cef9e7ec0d38d04bb185043b796',
+'northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree':'a5e24a0978049f466d59b63493edecffcfed3fc4bf0506fcf50883a61b32fc20',
 }
 ANNOTATIONS={'origin','component','component_classification','family_requirement_id','family_source_id'}
 
@@ -46,7 +53,7 @@ def test_reviewed_variant_reconstruction_preserves_entire_original_graph(pid):
     shared=[r for r in resolved['requirements'] if r['origin']=='family']
     assert len(shared)==9
     assert not {r['id'] for r in p['requirements']} & {r['id'] for r in shared}
-    assert p['award_level']=='BS' and p['curriculum_status']=='partial'
+    assert p['award_level']==('other' if 'bsenve' in pid else 'BS') and p['curriculum_status']=='partial'
     assert p['curriculum_audit']['unresolved_requirements']
     assert p['family']['relationship']=='integrated'
     assert p['family']['classification_kind']=='source_stated'
@@ -95,3 +102,22 @@ def test_pending_northeastern_variants_have_no_unreviewed_inheritance():
     for path in (ROOT/'data/programs').glob('northeastern-*.json'):
         p=json.loads(path.read_text())
         if p['curriculum_status']=='pending':assert not p.get('family')
+
+
+
+def test_engineering_variant_keeps_distinct_award_and_verified_hosting_units():
+    p=program('northeastern-university-environmental-engineering-and-artificial-intelligence-bsenve-boston-other-degree')
+    r=resolve_program(p,family())
+    assert r['award_level']=='other' and ', BSEnvE (Boston)' in r['title']
+    assert {h['name'] for h in p['family']['hosting_units']}=={'College of Engineering','Civil and Environmental Engineering'}
+    assert p['family']['disciplines']==['Environmental Engineering','Artificial Intelligence']
+    assert p['family']['relationship']=='integrated'
+    assert len([q for q in r['requirements'] if q['origin']=='family'])==9
+    assert len(EXPECTED)==23
+
+
+
+def test_communication_variant_uses_its_own_verified_college_context():
+    p=program('northeastern-university-artificial-intelligence-and-communication-studies-bs-boston-bs-degree')
+    assert {h['name'] for h in p['family']['hosting_units']}=={'College of Arts, Media and Design','Communication Studies'}
+    assert all(h['source_id']==p['id']+'-catalog' for h in p['family']['hosting_units'])
