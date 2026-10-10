@@ -194,3 +194,44 @@ def test_long_retry_after_is_deferred_not_truncated(tmp_path):
         with pytest.raises(FetchError, match="later run"):
             fetcher.fetch("https://catalog.example.edu/ai")
     assert requests.count("/ai") == 1
+
+
+def test_publication_copy_preserves_manual_corrections_during_seed_refresh(tmp_path):
+    """Mirror CI's maintained-copy publication path alongside clean reconstruction."""
+    import json
+    import shutil
+
+    maintained_path = tmp_path / "maintained.sqlite"
+    maintained = db.connect(maintained_path)
+    db.migrate(maintained)
+    record = program()
+    db.ingest_program(maintained, record)
+    db.set_override(
+        maintained,
+        record["id"],
+        "overview",
+        "Reviewed correction",
+        "Official clarification",
+        "https://example.edu/clarification",
+    )
+    maintained.close()
+    publication_path = tmp_path / "publication.sqlite"
+    shutil.copyfile(maintained_path, publication_path)
+    inputs = tmp_path / "inputs" / "programs"
+    inputs.mkdir(parents=True)
+    record["overview"] = "New source summary awaiting correction review"
+    (inputs / "record.json").write_text(json.dumps(record))
+    publication = db.connect(publication_path)
+    assert ingest_all(publication, inputs.parent) == 1
+    data = db.export_data(publication)
+    assert data["programs"][0]["overview"] == "Reviewed correction"
+    assert (
+        data["programs"][0]["manual_overrides"][0]["evidence_url"]
+        == "https://example.edu/clarification"
+    )
+    assert publication.execute("SELECT count(*) FROM program_revisions").fetchone()[0] == 2
+    assert ingest_all(publication, inputs.parent) == 0
+    untouched = db.connect(maintained_path)
+    assert untouched.execute("SELECT count(*) FROM program_revisions").fetchone()[0] == 1
+    untouched.close()
+    publication.close()

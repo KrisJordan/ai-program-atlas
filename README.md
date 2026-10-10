@@ -56,6 +56,6 @@ Structural curriculum corrections belong in reviewed JSON; scraping does not ove
 
 ## Publication and data rights
 
-GitHub Actions reconstructs the database, runs unit/integration and required Chromium browser tests, builds static files and deploys GitHub Pages. Public artifacts contain factual metadata, original summaries and citations. They exclude raw catalogs, credentials and private user context. Public course sites and syllabus examples are links with term notes, not redistributed documents.
+GitHub Actions validates a fresh database reconstruction, runs unit/integration and required Chromium browser tests, then ingests current reviewed inputs into a copy of the maintained database before building and deploying GitHub Pages. This publication copy preserves evidence-backed manual corrections and research history; CI never overwrites the committed database. Public artifacts contain factual metadata, original summaries and citations. They exclude raw catalogs, credentials and private user context. Public course sites and syllabus examples are links with term notes, not redistributed documents.
 
 CSRankings numeric values are **not imported** pending reuse permission. The project records field membership, proposed year window, U.S. filter, snapshot and computation method; links lead to the original source. Missing values do not indicate quality. Publication measures and U.S. News cohort ranks are not undergraduate teaching-quality scores. See [CSRankings research note](research/csrankings.md).

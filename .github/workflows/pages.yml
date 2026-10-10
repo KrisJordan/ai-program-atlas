@@ -23,12 +23,15 @@ jobs:
       - run: uv run pytest -q
         env:
           ATLAS_REQUIRE_BROWSER: '1'
-      - name: Reconstruct curated database from committed evidence
+      - name: Validate clean reconstruction and preserve maintained corrections
         run: |
           uv run atlas --db /tmp/atlas.sqlite init
           uv run atlas --db /tmp/atlas.sqlite ingest
           uv run atlas --db /tmp/atlas.sqlite check
-          uv run atlas --db /tmp/atlas.sqlite build --base-path /ai-program-atlas/
+          cp data/atlas.sqlite /tmp/publication.sqlite
+          uv run atlas --db /tmp/publication.sqlite ingest
+          uv run atlas --db /tmp/publication.sqlite check
+          uv run atlas --db /tmp/publication.sqlite build --base-path /ai-program-atlas/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
