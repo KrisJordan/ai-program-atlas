@@ -196,3 +196,35 @@ def test_drexel_nested_sequences_and_alternatives():
         load("drexel-ai-ml-bs").parse(drexel_fixture().replace("not already used", "already used"))
     with pytest.raises(ValueError, match="180-credit"):
         load("drexel-ai-ml-bs").parse(drexel_fixture().replace("180.0", "181.0"))
+
+
+def delaware_fixture():
+    html = "<h1>Artificial Intelligence Engineering BS</h1><h2>Sample Plan of Study</h2>"
+    rows = [
+        "CISC 106 – Example Computing",
+        "PHYS 207 & 227 – Example Physics &amp; Lab",
+        "ELEG 405 or 625 – Example Learning or Example Data",
+        "ELEG 499 – Example Design",
+    ]
+    for year, row in zip(["First Year", "Second Year", "Third Year", "Fourth Year"], rows):
+        html += (
+            '<div class="et_pb_toggle"><h5>'
+            + year
+            + "</h5><ul><li>"
+            + row
+            + "</li><li>Example Elective</li></ul></div>"
+        )
+    return html
+
+
+def test_delaware_sample_is_not_full_degree_inventory():
+    d = load("delaware-ai-engineering-major").parse(delaware_fixture())
+    assert d["award_level"] == "BS" and d["curriculum_status"] == "partial"
+    assert len(d["courses"]) == 4
+    assert all(c["credits"] is None for c in d["courses"])
+    assert any(r["kind"] == "alternative" for r in d["requirements"])
+    assert "sample" in d["requirements"][0]["title"]
+    with pytest.raises(ValueError, match="BS heading"):
+        load("delaware-ai-engineering-major").parse(
+            delaware_fixture().replace("Engineering BS", "Engineering MS")
+        )

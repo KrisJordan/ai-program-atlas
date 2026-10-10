@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 
 import pytest
-from test_five_degree_curricula import drexel_fixture
+from test_five_degree_curricula import delaware_fixture, drexel_fixture
 
 from atlas.db import validate_program
 
@@ -22,6 +22,7 @@ FIXTURES = {
 
 
 FIXTURES["drexel-ai-ml-bs"] = drexel_fixture()
+FIXTURES["delaware-ai-engineering-major"] = delaware_fixture()
 
 
 def load(pid):
@@ -39,7 +40,7 @@ def test_discovery_observes_identity_without_claiming_curriculum_or_freshness(pi
     observed = mod.parse("<main>" + FIXTURES[pid] + "</main>")
     seed = json.loads((ROOT / "data/programs" / (pid + ".json")).read_text())
     validate_program(seed)
-    if pid == "drexel-ai-ml-bs":
+    if pid in {"drexel-ai-ml-bs", "delaware-ai-engineering-major"}:
         assert observed["curriculum_status"] == "partial"
         assert observed["courses"] and observed["requirements"]
         assert "last_verified" not in observed and "curriculum_audit" not in observed
@@ -67,7 +68,7 @@ def test_discovery_observes_identity_without_claiming_curriculum_or_freshness(pi
             "Related careers",
         ),
         ("marquette-applied-ai-business-major", "additional primary major", "research project"),
-        ("delaware-ai-engineering-major", "Explore 150+ majors", "Graduate degrees"),
+        ("delaware-ai-engineering-major", "Artificial Intelligence Engineering BS", "Artificial Intelligence Engineering MS"),
         ("drexel-ai-ml-bs", "Bachelor of Science (BS)", "Master of Science"),
     ],
 )
