@@ -1,0 +1,507 @@
+"""Transactional curated data store. Network observations never replace reviewed facts."""
+
+from __future__ import annotations
+
+import hashlib
+import json
+import re
+import sqlite3
+from datetime import datetime, timezone
+from pathlib import Path
+from urllib.parse import urlparse
+
+from .requirements import validate_requirements
+
+STATES = {"pending", "inspected", "confirmed", "no_qualifying_program_found", "inaccessible"}
+OVERRIDE_FIELDS = {
+    "title",
+    "overview",
+    "hosting_unit",
+    "status",
+    "first_offered",
+    "catalog_year",
+    "notes",
+}
+
+
+def now() -> str:
+    return datetime.now(timezone.utc).isoformat(timespec="seconds")
+
+
+def canonical(value) -> str:
+    return json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+
+
+def digest(value) -> str:
+    return hashlib.sha256(canonical(value).encode()).hexdigest()
+
+
+def connect(path: str | Path) -> sqlite3.Connection:
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    conn = sqlite3.connect(path)
+    conn.row_factory = sqlite3.Row
+    conn.execute("PRAGMA foreign_keys=ON")
+    conn.execute("PRAGMA busy_timeout=5000")
+    return conn
+
+
+def migrate(conn: sqlite3.Connection) -> None:
+    conn.execute(
+        "CREATE TABLE IF NOT EXISTS schema_migrations(version INTEGER PRIMARY KEY, applied_at TEXT NOT NULL)"
+    )
+    conn.commit()
+    for file in sorted((Path(__file__).parent / "migrations").glob("*.sql")):
+        version = int(file.name.split("_")[0])
+        if conn.execute("SELECT 1 FROM schema_migrations WHERE version=?", (version,)).fetchone():
+            continue
+        try:
+            conn.executescript("BEGIN IMMEDIATE;\n" + file.read_text())
+            conn.execute("INSERT INTO schema_migrations VALUES (?,?)", (version, now()))
+            conn.commit()
+        except Exception:
+            conn.rollback()
+            raise
+
+
+def upsert_institution(conn, inst):
+    conn.execute(
+        """INSERT INTO institutions(id,name,calendar,website) VALUES (?,?,?,?)
+        ON CONFLICT(id) DO UPDATE SET name=excluded.name,
+        calendar=CASE WHEN excluded.calendar='unknown' THEN institutions.calendar ELSE excluded.calendar END,
+        website=COALESCE(excluded.website,institutions.website)""",
+        (inst["id"], inst["name"], inst.get("calendar", "unknown"), inst.get("website")),
+    )
+    for alias in inst.get("aliases", []):
+        conn.execute("INSERT OR IGNORE INTO institution_aliases VALUES (?,?)", (inst["id"], alias))
+
+
+def ingest_cohort(conn, cohort):
+    with conn:
+        conn.execute(
+            "INSERT OR REPLACE INTO metadata VALUES (?,?)",
+            ("cohort", canonical({k: v for k, v in cohort.items() if k != "institutions"})),
+        )
+        for inst in cohort["institutions"]:
+            upsert_institution(conn, inst)
+            for rank in inst.get("rankings", []):
+                conn.execute(
+                    """INSERT INTO rankings(institution_id,publisher,edition,category,rank,source_url,verification_status)
+                    VALUES (?,?,?,?,?,?,?) ON CONFLICT(institution_id,publisher,edition,category) DO UPDATE SET
+                    rank=excluded.rank,source_url=excluded.source_url,verification_status=excluded.verification_status""",
+                    (
+                        inst["id"],
+                        rank.get("publisher", "U.S. News"),
+                        str(rank["edition"]),
+                        rank["category"],
+                        rank["rank"],
+                        rank["source_url"],
+                        rank.get("verification_status", "secondary_reported"),
+                    ),
+                )
+            # A cohort reimport must not reset completed inspection work.
+            conn.execute(
+                "UPDATE institutions SET coverage_note=? WHERE id=? AND coverage_status='pending'",
+                (inst.get("coverage_note", ""), inst["id"]),
+            )
+
+
+def validate_program(program):
+    for key in (
+        "id",
+        "institution",
+        "title",
+        "award_level",
+        "program_kind",
+        "sources",
+        "last_verified",
+    ):
+        if not program.get(key):
+            raise ValueError(f"Missing required field: {key}")
+    for field in ("id", "title", "award_level", "program_kind", "last_verified"):
+        if not isinstance(program[field], str):
+            raise ValueError(f"{field} must be a string")
+    if not isinstance(program.get("overview", ""), str):
+        raise ValueError("overview must be a string")
+    if not isinstance(program.get("notes", []), list) or any(
+        not isinstance(note, str) for note in program.get("notes", [])
+    ):
+        raise ValueError("notes must be a list of strings")
+    first = program.get("first_offered")
+    if first is not None:
+        if not isinstance(first, dict) or not all(
+            first.get(key) for key in ("value", "precision", "evidence_url")
+        ):
+            raise ValueError(
+                "first_offered must be null or an object with value, precision and evidence_url"
+            )
+        if urlparse(first["evidence_url"]).scheme not in {"http", "https"}:
+            raise ValueError("first_offered requires an HTTP(S) evidence URL")
+    if not re.fullmatch(r"[a-z0-9][a-z0-9-]*", program["id"]):
+        raise ValueError("Program ID must be a safe slug")
+    if not re.search(r"artificial intelligence|\bAI\b", program["title"], re.I):
+        raise ValueError("Official title must explicitly contain AI or Artificial Intelligence")
+    source_ids = {s["id"] for s in program["sources"]}
+    if len(source_ids) != len(program["sources"]):
+        raise ValueError("Duplicate source IDs")
+    for source in program["sources"]:
+        if urlparse(source["url"]).scheme not in {"http", "https"}:
+            raise ValueError("Source URL must be HTTP(S)")
+    courses = program.get("courses", [])
+    if len({c["id"] for c in courses}) != len(courses):
+        raise ValueError("Duplicate course IDs")
+    for item in courses + program.get("requirements", []):
+        if not item.get("source_id"):
+            raise ValueError("Curated course and requirement facts need source evidence")
+    for item in courses + program.get("requirements", []) + program.get("outcomes", []):
+        if item.get("source_id") and item["source_id"] not in source_ids:
+            raise ValueError(f"Unknown source {item['source_id']}")
+    for course in courses:
+        if course.get("credits") is not None and (
+            not isinstance(course["credits"], (int, float)) or course["credits"] < 0
+        ):
+            raise ValueError("Course credits must be a nonnegative number or null")
+    for outcome in program.get("outcomes", []):
+        if outcome["kind"] == "source_stated" and not outcome.get("source_id"):
+            raise ValueError("Source-stated outcome needs source evidence")
+    validate_requirements(program)
+
+
+def ingest_program(conn, program, run_id=None):
+    """Replace one complete reviewed record atomically; unchanged records are no-ops."""
+    validate_program(program)
+    fingerprint = digest(program)
+    existing = conn.execute(
+        "SELECT content_hash FROM programs WHERE id=?", (program["id"],)
+    ).fetchone()
+    if existing and existing[0] == fingerprint:
+        return False
+    pid = program["id"]
+    with conn:
+        upsert_institution(conn, program["institution"])
+        unit_id = None
+        if program.get("hosting_unit"):
+            conn.execute(
+                "INSERT OR IGNORE INTO hosting_units(institution_id,name) VALUES (?,?)",
+                (program["institution"]["id"], program["hosting_unit"]),
+            )
+            unit_id = conn.execute(
+                "SELECT id FROM hosting_units WHERE institution_id=? AND name=?",
+                (program["institution"]["id"], program["hosting_unit"]),
+            ).fetchone()[0]
+        values = (
+            pid,
+            program["institution"]["id"],
+            unit_id,
+            program["title"],
+            program["award_level"],
+            program["program_kind"],
+            program.get("status", "unknown"),
+            canonical(program["first_offered"]) if program.get("first_offered") else None,
+            program.get("overview", ""),
+            program.get("catalog_year"),
+            program.get("verification_status", "partial"),
+            program.get("curriculum_status", "pending"),
+            program["last_verified"],
+            fingerprint,
+            canonical(program),
+        )
+        conn.execute(
+            """INSERT INTO programs VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT(id) DO UPDATE SET
+            institution_id=excluded.institution_id,hosting_unit_id=excluded.hosting_unit_id,title=excluded.title,
+            award_level=excluded.award_level,program_kind=excluded.program_kind,status=excluded.status,
+            first_offered_json=excluded.first_offered_json,overview=excluded.overview,catalog_year=excluded.catalog_year,
+            verification_status=excluded.verification_status,curriculum_status=excluded.curriculum_status,
+            last_verified=excluded.last_verified,content_hash=excluded.content_hash,record_json=excluded.record_json""",
+            values,
+        )
+        # FK-safe replacement order; overrides and revisions are intentionally untouched.
+        for table in (
+            "requirement_courses",
+            "requirement_groups",
+            "courses",
+            "outcomes",
+            "program_links",
+            "sources",
+        ):
+            conn.execute(f"DELETE FROM {table} WHERE program_id=?", (pid,))
+        for s in program["sources"]:
+            conn.execute(
+                "INSERT INTO sources VALUES (?,?,?,?,?,?,?,?,?)",
+                (
+                    pid,
+                    s["id"],
+                    s["url"],
+                    s.get("title", s["url"]),
+                    s.get("fetched_at"),
+                    s.get("source_date"),
+                    s.get("catalog_year"),
+                    s.get("locator"),
+                    s.get("confidence", "medium"),
+                ),
+            )
+        for link in program.get("links", []):
+            conn.execute(
+                "INSERT INTO program_links VALUES (?,?,?,?)",
+                (pid, link["kind"], link["url"], link.get("label")),
+            )
+        for c in program.get("courses", []):
+            conn.execute(
+                "INSERT INTO courses VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)",
+                (
+                    pid,
+                    c["id"],
+                    c["code"],
+                    c["name"],
+                    c.get("description"),
+                    c.get("prerequisites"),
+                    c.get("credits"),
+                    c.get("credit_unit", "unknown"),
+                    c.get("category", "other"),
+                    c.get("source_id"),
+                    c.get("url"),
+                    c.get("public_site"),
+                    c.get("syllabus"),
+                ),
+            )
+        for g in program.get("requirements", []):
+            conn.execute(
+                "INSERT INTO requirement_groups VALUES (?,?,?,?,?,?,?,?,?,?,?,?)",
+                (
+                    pid,
+                    g["id"],
+                    g.get("parent_id"),
+                    g["title"],
+                    g["kind"],
+                    g.get("count"),
+                    g.get("credits"),
+                    g.get("credit_unit", "unknown"),
+                    g.get("category", "other"),
+                    g.get("source_id"),
+                    g.get("source_text"),
+                    g.get("summary"),
+                ),
+            )
+            for cid in g.get("course_ids", []):
+                conn.execute("INSERT INTO requirement_courses VALUES (?,?,?)", (pid, g["id"], cid))
+        for n, outcome in enumerate(program.get("outcomes", [])):
+            conn.execute(
+                "INSERT INTO outcomes VALUES (?,?,?,?,?,?)",
+                (
+                    pid,
+                    n,
+                    outcome["text"],
+                    outcome["kind"],
+                    outcome.get("source_id"),
+                    outcome.get("locator"),
+                ),
+            )
+        conn.execute(
+            "INSERT OR IGNORE INTO program_revisions(program_id,content_hash,record_json,changed_at,scrape_run_id) VALUES (?,?,?,?,?)",
+            (pid, fingerprint, canonical(program), now(), run_id),
+        )
+        conn.execute(
+            "UPDATE institutions SET coverage_status='confirmed',last_inspected=? WHERE id=?",
+            (program["last_verified"], program["institution"]["id"]),
+        )
+    return True
+
+
+def ingest_survey(conn, entries):
+    with conn:
+        for entry in entries:
+            iid = entry["institution_id"]
+            if not conn.execute("SELECT 1 FROM institutions WHERE id=?", (iid,)).fetchone():
+                raise ValueError(f"Survey institution not in database: {iid}")
+            status = entry["status"]
+            if status not in STATES:
+                raise ValueError(f"Invalid coverage state {status}")
+            if status == "pending":
+                continue
+            sources = entry.get("sources", [])
+            if not sources:
+                raise ValueError(f"{iid}: inspection must cite a source")
+            conn.execute(
+                "INSERT OR IGNORE INTO coverage_events(institution_id,status,checked_at,note,sources_json,fingerprint) VALUES (?,?,?,?,?,?)",
+                (
+                    iid,
+                    status,
+                    entry["checked_at"],
+                    entry["note"],
+                    canonical(sources),
+                    digest(entry),
+                ),
+            )
+            # A partial survey cannot downgrade a confirmed existing program.
+            has_program = conn.execute(
+                "SELECT 1 FROM programs WHERE institution_id=?", (iid,)
+            ).fetchone()
+            effective = "confirmed" if has_program else status
+            conn.execute(
+                "UPDATE institutions SET coverage_status=?,coverage_note=?,last_inspected=? WHERE id=?",
+                (effective, entry["note"], entry["checked_at"], iid),
+            )
+            for d in entry.get("discoveries", []):
+                conn.execute(
+                    "INSERT OR IGNORE INTO discoveries(institution_id,title,kind,award_level,url) VALUES (?,?,?,?,?)",
+                    (iid, d["title"], d.get("kind"), d.get("award_level"), d["url"]),
+                )
+
+
+def set_override(conn, program_id, field, value, reason, evidence_url):
+    if field not in OVERRIDE_FIELDS:
+        raise ValueError(
+            f"Override field must be one of {sorted(OVERRIDE_FIELDS)}; edit and review JSON for structural changes"
+        )
+    if not reason.strip() or urlparse(evidence_url).scheme not in {"http", "https"}:
+        raise ValueError("Overrides require a reason and HTTP(S) evidence link")
+    row = conn.execute("SELECT record_json FROM programs WHERE id=?", (program_id,)).fetchone()
+    if not row:
+        raise ValueError("Unknown program")
+    candidate = json.loads(row[0])
+    candidate[field] = value
+    validate_program(candidate)
+    if field == "status" and value not in {"active", "announced", "discontinued", "unknown"}:
+        raise ValueError("Invalid program status")
+    with conn:
+        conn.execute(
+            "INSERT OR REPLACE INTO manual_overrides VALUES (?,?,?,?,?,?)",
+            (program_id, field, canonical(value), reason, evidence_url, now()),
+        )
+
+
+def initialize_csrankings(conn):
+    config = {
+        "fields": ["ai", "vision", "mlmining", "nlp", "inforet"],
+        "year_start": 2016,
+        "year_end": 2025,
+        "geographic_filter": "us",
+        "method": "Author-adjusted counts per field; geometric mean of (field count + 1), no subtraction; one-decimal rounding before competition ranks. National ranks would be computed before cohort filtering. No values computed or redistributed.",
+        "source_snapshot": "5e8a27d68310c728a182b8bb3b6437c39bce0cad",
+        "source_url": "https://csrankings.org/faq",
+        "status": "not_imported",
+    }
+    with conn:
+        conn.execute(
+            "INSERT OR REPLACE INTO csrankings_config VALUES (1,?,?,?,?,?,?,?,?)",
+            (
+                canonical(config["fields"]),
+                config["year_start"],
+                config["year_end"],
+                config["geographic_filter"],
+                config["method"],
+                config["source_snapshot"],
+                config["source_url"],
+                config["status"],
+            ),
+        )
+        for row in conn.execute("SELECT id FROM institutions").fetchall():
+            for field in config["fields"] + ["aggregate"]:
+                conn.execute(
+                    "INSERT OR IGNORE INTO csrankings_observations VALUES (?,?,NULL,NULL,?,1)",
+                    (row["id"], field, "permission_required"),
+                )
+
+
+def export_data(conn):
+    cohort_row = conn.execute("SELECT value_json FROM metadata WHERE key='cohort'").fetchone()
+    cohort = (
+        json.loads(cohort_row[0])
+        if cohort_row
+        else {"complete": False, "definition": "Cohort not imported"}
+    )
+    programs = []
+    for row in conn.execute("SELECT * FROM programs ORDER BY id"):
+        record = json.loads(row["record_json"])
+        overrides = []
+        for override in conn.execute(
+            "SELECT * FROM manual_overrides WHERE program_id=? ORDER BY field", (row["id"],)
+        ):
+            record[override["field"]] = json.loads(override["value_json"])
+            overrides.append(
+                {k: override[k] for k in ("field", "reason", "evidence_url", "updated_at")}
+            )
+        record["manual_overrides"] = overrides
+        programs.append(record)
+    institutions = []
+    summary = {status: 0 for status in sorted(STATES)}
+    for row in conn.execute("SELECT * FROM institutions ORDER BY name"):
+        inst = dict(row)
+        iid = inst["id"]
+        inst["aliases"] = [
+            a[0]
+            for a in conn.execute(
+                "SELECT alias FROM institution_aliases WHERE institution_id=? ORDER BY alias",
+                (iid,),
+            )
+        ]
+        inst["rankings"] = [
+            dict(r)
+            for r in conn.execute(
+                "SELECT publisher,edition,category,rank,source_url,verification_status FROM rankings WHERE institution_id=? ORDER BY category",
+                (iid,),
+            )
+        ]
+        inst["program_ids"] = [p["id"] for p in programs if p["institution"]["id"] == iid]
+        inst["discoveries"] = [
+            dict(d)
+            for d in conn.execute(
+                "SELECT title,kind,award_level,url FROM discoveries WHERE institution_id=? ORDER BY title",
+                (iid,),
+            )
+        ]
+        inst["coverage_sources"] = []
+        for event in conn.execute(
+            "SELECT sources_json FROM coverage_events WHERE institution_id=? ORDER BY checked_at,id",
+            (iid,),
+        ):
+            inst["coverage_sources"].extend(json.loads(event[0]))
+        summary[inst["coverage_status"]] += 1
+        institutions.append(inst)
+    config_row = conn.execute("SELECT * FROM csrankings_config").fetchone()
+    config = dict(config_row) if config_row else {"status": "not_imported"}
+    if "fields_json" in config:
+        config["fields"] = json.loads(config.pop("fields_json"))
+    # Stable build date is derived from evidence, never wall clock, so reruns match byte-for-byte.
+    dates = [p["last_verified"] for p in programs] + [
+        i["last_inspected"] for i in institutions if i["last_inspected"]
+    ]
+    generated = max(dates, default="Not yet verified")
+    summary.update(
+        {
+            "institutions": len(institutions),
+            "programs": len(programs),
+            "cohort_complete": cohort.get("complete", False),
+            "inspected_total": len(institutions) - summary["pending"],
+        }
+    )
+    limitations = [
+        "Cohort enumeration and institution searches remain incomplete. Counts describe the loaded research inventory, not the full target cohort.",
+        "Confirmed means at least one official qualifying program found; it does not certify a complete institution inventory.",
+        "Curriculum records may be partial. Missing courses, dates, prerequisites, outcomes and syllabi are unknown, not absent.",
+        "Credit systems and degree structures differ. Course counts are observed records, not degree percentages or quality scores.",
+        "CSRankings values are not imported pending reuse permission. Publication rankings do not measure undergraduate teaching quality.",
+    ]
+    return {
+        "meta": {
+            "generated_at": generated,
+            "cohort": cohort,
+            "coverage_summary": summary,
+            "limitations": limitations,
+        },
+        "institutions": institutions,
+        "programs": programs,
+        "rankings": [
+            dict(r)
+            for r in conn.execute("SELECT * FROM rankings ORDER BY category,rank,institution_id")
+        ],
+        "csrankings": {
+            "methodology": config,
+            "observations": [
+                dict(r)
+                for r in conn.execute(
+                    "SELECT * FROM csrankings_observations ORDER BY institution_id,field"
+                )
+            ],
+        },
+    }

@@ -1,0 +1,48 @@
+name: Test and publish atlas
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: '0.13.0'
+          enable-cache: true
+      - run: uv sync --frozen
+      - run: uv run playwright install --with-deps chromium
+      - run: uv run pytest -q
+        env:
+          ATLAS_REQUIRE_BROWSER: '1'
+      - name: Reconstruct curated database from committed evidence
+        run: |
+          uv run atlas --db /tmp/atlas.sqlite init
+          uv run atlas --db /tmp/atlas.sqlite ingest
+          uv run atlas --db /tmp/atlas.sqlite check
+          uv run atlas --db /tmp/atlas.sqlite build --base-path /ai-program-atlas/
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
