@@ -1,0 +1,351 @@
+[
+  {
+    "institution_id": "brandeis-university",
+    "status": "inaccessible",
+    "note": "Attempts to read 2026\u201327 undergraduate requirements, CS undergraduate page and general undergraduate academics page all returned web-tool access errors. No absence conclusion.",
+    "checked_at": "2026-10-10",
+    "sources": [
+      {
+        "url": "https://www.brandeis.edu/registrar/bulletin/2026-2027/arts-sciences/req-ugrd-beginning-fall-2026/index.html",
+        "title": "Introduction to Degree Requirements"
+      },
+      {
+        "url": "https://www.brandeis.edu/computer-science/undergraduate/index.html",
+        "title": "CS undergraduate page attempted"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "florida-state-university",
+    "status": "inspected",
+    "note": "Official university minors directory inspected, including CS and data analytics entries. No qualifying minor identified in that directory. Major and concentration catalogs remain incomplete; no institution-wide absence conclusion.",
+    "checked_at": "2026-10-10",
+    "sources": [
+      {
+        "url": "https://academic-guide.fsu.edu/minors",
+        "title": "Minors | Academic Program Guide"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "george-washington-university",
+    "status": "inspected",
+    "note": "Official CS bulletin program listing inspected. AI and Machine Learning appears as an MS; Trustworthy AI as a graduate certificate, both excluded. Undergraduate CS BA/BS and minor listing does not establish a qualifying AI title. Full institutional catalog/concentration review remains incomplete.",
+    "checked_at": "2026-10-10",
+    "sources": [
+      {
+        "url": "https://bulletin.gwu.edu/engineering-applied-science/computer-science/",
+        "title": "Computer Science | GW Bulletin"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "rutgers-university-new-brunswick",
+    "status": "inspected",
+    "note": "Official undergraduate CS tracks page names Artificial Intelligence and Cognitive Science with recommended/required elective choices, but describes tracks as guidance for coherent elective selection. Formal credential or transcript recognition not established; held as a lead rather than promoted. No institution-wide absence conclusion.",
+    "checked_at": "2026-10-10",
+    "sources": [
+      {
+        "url": "https://www.cs.rutgers.edu/academics/undergraduate",
+        "title": "Why Computer Science"
+      },
+      {
+        "url": "https://www.cs.rutgers.edu/academics/undergraduate/computer-science-undergraduate-program-tracks",
+        "title": "Computer Science Undergraduate Program Tracks"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "santa-clara-university",
+    "status": "confirmed",
+    "note": "2026\u201327 engineering bulletin explicitly lists Responsible Artificial Intelligence minor and undergraduate eligibility. Curriculum extraction and full institutional inventory remain pending.",
+    "checked_at": "2026-10-10",
+    "sources": [
+      {
+        "url": "https://www.scu.edu/bulletin/undergraduate/chapter-5-school-of-engineering/computer-science-and-engineering.html",
+        "title": "Undergraduate Bulletin 2026\u201327: Computer Science and Engineering"
+      }
+    ],
+    "discoveries": [
+      {
+        "title": "Responsible Artificial Intelligence",
+        "kind": "minor",
+        "url": "https://www.scu.edu/bulletin/undergraduate/chapter-5-school-of-engineering/computer-science-and-engineering.html",
+        "award_level": "minor"
+      }
+    ]
+  },
+  {
+    "institution_id": "stony-brook-university-suny",
+    "status": "confirmed",
+    "note": "Official current admissions directory lists AI and Data Science within CS BS; readable Fall 2024 bulletin establishes declarable specialization and requirements. Current catalog URLs failed to return content. Concentration identity confirmed; current detailed curriculum remains unverified. Do not present 2024 rules as current.",
+    "checked_at": "2026-10-10",
+    "sources": [
+      {
+        "url": "https://www.stonybrook.edu/sb/bulletin/current-fall24/academicprograms/cse/degreesandrequirements.php",
+        "title": "Fall 2024 Computer Science degrees and requirements"
+      },
+      {
+        "url": "https://www.stonybrook.edu/undergraduate-admissions/programs/index.php",
+        "title": "Majors, Minors & Degrees"
+      }
+    ],
+    "discoveries": [
+      {
+        "title": "Artificial Intelligence and Data Science",
+        "kind": "concentration",
+        "url": "https://www.stonybrook.edu/sb/bulletin/current-fall24/academicprograms/cse/degreesandrequirements.php",
+        "award_level": "concentration"
+      }
+    ]
+  },
+  {
+    "institution_id": "texas-am-university",
+    "status": "confirmed",
+    "note": "2026\u201327 official catalog confirms Artificial Intelligence in Business minor; Mays program page also inspected. Catalog and department differ in some course labels and eligibility wording; catalog retained as primary. Full curriculum extraction pending.",
+    "checked_at": "2026-10-10",
+    "sources": [
+      {
+        "url": "https://catalog.tamu.edu/undergraduate/business/artificial-intelligence-business-minor/",
+        "title": "Artificial Intelligence in Business - Minor"
+      },
+      {
+        "url": "https://mays.tamu.edu/ai/ai-minor/",
+        "title": "AI in Business Minor"
+      }
+    ],
+    "discoveries": [
+      {
+        "title": "Artificial Intelligence in Business",
+        "kind": "minor",
+        "url": "https://catalog.tamu.edu/undergraduate/business/artificial-intelligence-business-minor/",
+        "award_level": "minor"
+      }
+    ]
+  },
+  {
+    "institution_id": "ohio-state-university",
+    "status": "confirmed",
+    "note": "Official program page establishes required specializations for both BSCSE and BSCIS and names Artificial Intelligence with predefined requirements. Represented as one shared specialization identity under concentration, not as an independent AI degree. Curriculum and full institutional inventory pending.",
+    "checked_at": "2026-10-10",
+    "sources": [
+      {
+        "url": "https://cse.osu.edu/bscse-and-bscis-specializations",
+        "title": "BSCSE and BSCIS Specializations"
+      },
+      {
+        "url": "https://cse.osu.edu/prospective-students/undergrad/majors/bs-cse-program-information",
+        "title": "BS CSE Program Information"
+      }
+    ],
+    "discoveries": [
+      {
+        "title": "Artificial Intelligence",
+        "kind": "concentration",
+        "url": "https://cse.osu.edu/bscse-and-bscis-specializations",
+        "award_level": "concentration"
+      }
+    ]
+  },
+  {
+    "institution_id": "university-of-california-santa-barbara",
+    "status": "confirmed",
+    "note": "Official admissions directory and dedicated department AI site confirm Bachelor of Science in Artificial Intelligence. Detailed curriculum page also inspected but not extracted. Initial general CS page inaccessible; alternate official source supplied identity. Activity/start date not independently established.",
+    "checked_at": "2026-10-10",
+    "sources": [
+      {
+        "url": "https://ai.cs.ucsb.edu/",
+        "title": "Artificial Intelligence - Computer Science"
+      },
+      {
+        "url": "https://admissions.sa.ucsb.edu/majors",
+        "title": "Majors | Undergraduate Admissions"
+      },
+      {
+        "url": "https://ai.cs.ucsb.edu/curriculum",
+        "title": "AI Curriculum"
+      }
+    ],
+    "discoveries": [
+      {
+        "title": "Artificial Intelligence",
+        "kind": "degree",
+        "url": "https://ai.cs.ucsb.edu/",
+        "award_level": "BS"
+      }
+    ]
+  },
+  {
+    "institution_id": "university-of-georgia",
+    "status": "confirmed",
+    "note": "School of Computing confirms approved AI Area of Emphasis within Computer Science with transcript recognition. Classified as concentration; separate AI certificates and graduate AI degrees excluded. The source notes this track does not meet requirements of an ABET-accredited CS degree. Curriculum pending.",
+    "checked_at": "2026-10-10",
+    "sources": [
+      {
+        "url": "https://cs.uga.edu/news/stories/2025/area-emphasis-artificial-intelligence-ai-provides-preparation-similar-emerging-ai",
+        "title": "Area of Emphasis in Artificial Intelligence (AI)"
+      },
+      {
+        "url": "https://cs.uga.edu/artificial-intelligence-opportunities-school-computing",
+        "title": "Artificial Intelligence Opportunities in School of Computing"
+      }
+    ],
+    "discoveries": [
+      {
+        "title": "Artificial Intelligence",
+        "kind": "concentration",
+        "url": "https://cs.uga.edu/news/stories/2025/area-emphasis-artificial-intelligence-ai-provides-preparation-similar-emerging-ai",
+        "award_level": "concentration"
+      }
+    ]
+  },
+  {
+    "institution_id": "university-of-massachusetts-amherst",
+    "status": "inspected",
+    "note": "Official CICS undergraduate directory inspected: CS BS/BA, Informatics BS and CS minor listed. AI appears as a study topic, not a qualifying program in the inspected list. Full campus and concentration review remains incomplete; no absence conclusion.",
+    "checked_at": "2026-10-10",
+    "sources": [
+      {
+        "url": "https://www.cics.umass.edu/academics/undergraduate",
+        "title": "Undergraduate Programs | Manning CICS"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "university-of-minnesota-twin-cities",
+    "status": "confirmed",
+    "note": "Official minor page says Board of Regents approval received and enrollment planned for 2027; declaration form available January 2027. Older February 2026 news gives fall 2027 target. Mark announced and retain timing discrepancy; no inferred first instruction date. Curriculum pending.",
+    "checked_at": "2026-10-10",
+    "sources": [
+      {
+        "url": "https://cse.umn.edu/cs/artificial-intelligence-and-machine-learning-ai-ml-minor",
+        "title": "Artificial Intelligence and Machine Learning (AI & ML) Minor"
+      },
+      {
+        "url": "https://cse.umn.edu/cs/news/cse-prepares-umn-students-ai-powered-workplace",
+        "title": "CS&E Prepares UMN Students for the AI-powered Workplace"
+      }
+    ],
+    "discoveries": [
+      {
+        "title": "Artificial Intelligence and Machine Learning",
+        "kind": "minor",
+        "url": "https://cse.umn.edu/cs/artificial-intelligence-and-machine-learning-ai-ml-minor",
+        "award_level": "minor"
+      }
+    ]
+  },
+  {
+    "institution_id": "university-of-pittsburgh",
+    "status": "inaccessible",
+    "note": "SCI undergraduate directory candidates and school homepage all returned web-tool access errors. No program identity or absence conclusion inferred.",
+    "checked_at": "2026-10-10",
+    "sources": [
+      {
+        "url": "https://www.sci.pitt.edu/academics/undergraduate",
+        "title": "SCI undergraduate directory attempted"
+      },
+      {
+        "url": "https://www.sci.pitt.edu/academics/undergraduate-programs",
+        "title": "SCI undergraduate programs attempted"
+      },
+      {
+        "url": "https://www.sci.pitt.edu/",
+        "title": "SCI homepage attempted"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "university-of-rochester",
+    "status": "confirmed",
+    "note": "Official CS BS requirements define Artificial Intelligence concentration and list its approved advanced courses. Distinct from a standalone AI degree. Curriculum extraction and full institutional inventory pending.",
+    "checked_at": "2026-10-10",
+    "sources": [
+      {
+        "url": "https://www.cs.rochester.edu/undergraduate/bs-requirements.html",
+        "title": "BS in Computer Science: Concentrations"
+      }
+    ],
+    "discoveries": [
+      {
+        "title": "Artificial Intelligence",
+        "kind": "concentration",
+        "url": "https://www.cs.rochester.edu/undergraduate/bs-requirements.html",
+        "award_level": "concentration"
+      }
+    ]
+  },
+  {
+    "institution_id": "university-of-washington",
+    "status": "inspected",
+    "note": "Official Allen School undergraduate page includes a news summary of an interdisciplinary AI minor planned for Spring 2027. Formal exact title and approved program page were not established in the inspected content; retained as an announced lead, not promoted. Non-major-options page also inspected. No absence conclusion.",
+    "checked_at": "2026-10-10",
+    "sources": [
+      {
+        "url": "https://www.cs.washington.edu/academics/undergraduate/",
+        "title": "Undergraduate Education | Allen School"
+      },
+      {
+        "url": "https://www.cs.washington.edu/academics/undergraduate/non-major-options/",
+        "title": "Non-Major Options | Allen School"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "william-and-mary",
+    "status": "confirmed",
+    "note": "Official department pages confirm AI minor, mandatory CS BS AI/ML concentration option, Data Science BS AI specialization option, and Applied AI major awarding a BA in Interdisciplinary Studies. Two concentrations have different parent majors and remain separate records. Catalog detail links showed access challenges; no bypass attempted. Curricula pending.",
+    "checked_at": "2026-10-10",
+    "sources": [
+      {
+        "url": "https://cdsp.wm.edu/academics/undergraduate/ai-minor/",
+        "title": "Artificial Intelligence"
+      },
+      {
+        "url": "https://cdsp.wm.edu/computerscience/undergraduate/bachelor-of-science-b.s-in-computer-science.php?mapstat=1",
+        "title": "Artificial Intelligence/Machine Learning"
+      },
+      {
+        "url": "https://cdsp.wm.edu/data-science/degrees/bs_minor/",
+        "title": "Artificial Intelligence"
+      },
+      {
+        "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/",
+        "title": "Applied Artificial Intelligence"
+      }
+    ],
+    "discoveries": [
+      {
+        "title": "Artificial Intelligence",
+        "kind": "minor",
+        "url": "https://cdsp.wm.edu/academics/undergraduate/ai-minor/",
+        "award_level": "minor"
+      },
+      {
+        "title": "Artificial Intelligence/Machine Learning",
+        "kind": "concentration",
+        "url": "https://cdsp.wm.edu/computerscience/undergraduate/bachelor-of-science-b.s-in-computer-science.php?mapstat=1",
+        "award_level": "concentration"
+      },
+      {
+        "title": "Artificial Intelligence",
+        "kind": "concentration",
+        "url": "https://cdsp.wm.edu/data-science/degrees/bs_minor/",
+        "award_level": "concentration"
+      },
+      {
+        "title": "Applied Artificial Intelligence",
+        "kind": "degree",
+        "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/",
+        "award_level": "BA"
+      }
+    ]
+  }
+]
