@@ -1,3 +1,5 @@
 # AI Program Atlas
 
 Read PLAN.md and docs/CONTRACT.md before edits. Preserve existing work. The coordinator owns SQLite schema, migrations and shared persistence; research agents own assigned adapters and evidence. Use stable IDs and source-backed facts. Unknown is null, never zero. Never infer absence from partial search or launch date from the oldest search hit. Keep raw fetched pages, credentials and private notes out of commits. Respect robots and HTTP access restrictions; do not bypass 401/403/paywalls. Run uv run pytest and uv run atlas build after changes. Browser checks must cover base-path and History API behavior. Update adapter NOTES.md and PLAN.md with exact coverage/remaining work. Commit incremental coherent changes. No changes to unrelated repositories.
+
+For related AI + discipline programs, read docs/PROGRAM_FAMILIES.md. A similar title is not enough to establish membership or shared requirements. Preserve concrete IDs and verify each inherited rule against its own source; explicit replacements/exclusions need evidence. Complete inherited audits pin the family content hash. Coordinate shared-family edits with all affected variant owners.

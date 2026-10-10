@@ -2,7 +2,7 @@
 
 [Explore the published atlas](https://krisjordan.github.io/ai-program-atlas/) · [Coverage](https://krisjordan.github.io/ai-program-atlas/coverage/) · [Methodology](https://krisjordan.github.io/ai-program-atlas/methodology/)
 
-A maintained relational SQLite research database and static comparison site for undergraduate programs with **AI** or **Artificial Intelligence** in their official title. Degrees, additional majors, minors and formal concentrations/tracks are distinct. The site has filters, direct program pages, query-string comparison permalinks, course profiles, inferred outcome-theme comparisons and source provenance.
+A maintained relational SQLite research database and static comparison site for undergraduate programs with **AI** or **Artificial Intelligence** in their official title. Degrees, additional majors, minors and formal concentrations/tracks are distinct. The site has accessible Carolina-blue/navy navigation, filters, direct program pages, query-string comparison permalinks, course profiles, inferred outcome-theme comparisons and source provenance. Evidence-backed program families group related AI + discipline degrees while preserving every concrete award and its own comparison URL.
 
 **Research coverage is incomplete.** The target is the 2027 U.S. News top 100 National Universities and top 100 National Liberal Arts Colleges, separately, including ties. The current roster includes secondary-sourced ranks and an incomplete liberal arts enumeration. An unlisted program is never treated as absent. Identity verification, curriculum extraction and institutional search completeness are separate facts. See [PLAN.md](PLAN.md) for the current research checkpoint and remaining work.
 
@@ -20,7 +20,7 @@ uv run playwright install chromium
 ATLAS_REQUIRE_BROWSER=1 uv run pytest -q
 ```
 
-`data/atlas.sqlite` is the maintained research database. Migrations live in `atlas/migrations/`; reviewed factual inputs in `data/programs/`, `data/cohort.json` and `data/surveys/` reconstruct the public snapshot. The database also preserves revisions, refresh runs, source hashes, extraction candidates and manual overrides. Use `--db /tmp/atlas.sqlite` before a subcommand to test a fresh database without altering the maintained copy. Builds read SQLite and make no network requests.
+`data/atlas.sqlite` is the maintained research database. Migrations live in `atlas/migrations/`; reviewed factual inputs in `data/programs/`, `data/families/`, `data/cohort.json` and `data/surveys/` reconstruct the public snapshot. The database also preserves revisions, refresh runs, source hashes, extraction candidates and manual overrides. Use `--db /tmp/atlas.sqlite` before a subcommand to test a fresh database without altering the maintained copy. Builds read SQLite and make no network requests.
 
 For a local preview:
 
@@ -52,7 +52,7 @@ uv run atlas override PROGRAM_ID overview '"Reviewed summary"' \
   --reason 'Verified correction' --evidence-url 'https://official.example.edu/program'
 ```
 
-Structural curriculum corrections belong in reviewed JSON; scraping does not overwrite it. See [data contract](docs/CONTRACT.md), [architecture](docs/ARCHITECTURE.md), [research skill](.agents/skills/atlas-research/SKILL.md), and [refresh skill](.agents/skills/atlas-refresh/SKILL.md).
+Structural curriculum corrections belong in reviewed JSON; scraping does not overwrite it. Shared family requirements are stored once and resolved through reviewed variant bindings. Explicit additions, replacements and exclusions preserve differences; see [program families](docs/PROGRAM_FAMILIES.md). See [data contract](docs/CONTRACT.md), [architecture](docs/ARCHITECTURE.md), [research skill](.agents/skills/atlas-research/SKILL.md), and [refresh skill](.agents/skills/atlas-refresh/SKILL.md).
 
 ## Publication and data rights
 
