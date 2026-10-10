@@ -11,3 +11,9 @@ The adapter requires a source-specific content heading and explicit program iden
 ## Historical-source boundary check — 2026-10-10
 
 The cached source explicitly labels itself **Fall 2024**. The four-course/two-core specialization inventory there was inspected, but is not promoted as current. The current bulletin entry point `https://www.stonybrook.edu/sb/bulletin/` led to a cross-origin robots redirect requiring review; the safe client stopped. Existing current-admissions identity evidence is preserved separately. Current activity remains unknown and detailed curriculum pending. No alternate-host/path workaround was attempted to bypass the policy check. Next: an independently accessible current official catalog or department requirement page.
+
+## Bounded follow-up — 2026-10-10
+
+Current official search results identify `https://www.stonybrook.edu/catalog/undergraduate/program/computer-science-bs/`, but this is on the host with the documented cross-origin robots stop. It was not fetched through an alternative route, and no indexed excerpt was promoted as current curriculum evidence. Department-specific searches did not yield an independently inspected current requirements page. The historical/current distinction remains unresolved; the record stays pending.
+
+Separate unresolved research lead: the indexed official business page `https://www.stonybrook.edu/business/undergraduate/specializations.html` names **AI for Business Innovation** and states that students planning to graduate by May 2027 cannot declare it. This is a search-discovered lead, not an inspected source or confirmed promoted record. Verify the full official page and effective student cohorts when access is available.

@@ -1,13 +1,9 @@
-# Computer Science — Artificial Intelligence specialization
+# Indiana CS Artificial Intelligence specialization
 
-Inspected 2026-10-10: [Bachelor of Science in Computer Science](https://luddy.iu.edu/academics/undergraduate/bs-computer-science.html).
+Reviewed the official 2026–2027 catalog on 2026-10-10. The earlier mismatch was caused by an incomplete sidebar: the [specialization index](https://bulletins.iu.edu/iub/sice/2026-2027/undergraduate/degree-programs/bs-computer-science/specializations.shtml) explicitly includes AI in its main content and links the [AI specialization requirements](https://bulletins.iu.edu/iub/sice/2026-2027/undergraduate/degree-programs/bs-computer-science/artificial-intelligence.shtml). Current AI activity is supported; no discontinuation was inferred.
 
-Identity-only official-source discovery; requirements, courses, prerequisites, credit totals, outcomes and public syllabi remain unextracted. No verified curriculum is implied by identity refresh.
+Complete **local concentration** requirement inventory: five selections across three groups, including no reuse between the first two groups, the nested mathematics/statistics alternative, and the approved Generative AI and Applications topic. Four policy notes retain honors equivalence, C-minus, SAMS declaration, advising before junior year, and the host mathematics/natural-science overlap restrictions. The host CS degree is outside this concentration audit scope.
 
-Source labels this a Computer Science BS specialization. Normalized as concentration; not a separate degree.
+The [major-requirements page](https://bulletins.iu.edu/iub/sice/2026-2027/undergraduate/degree-programs/bs-computer-science/luddy-degree-major-req.shtml) supplies applicable overlap/advising rules. The [CS course catalog](https://bulletins.iu.edu/iub/sice/2026-2027/undergraduate/courses/computer-science.shtml) supplies credits for eleven courses and stated prerequisites where explicitly marked. CSCI-B 490 has variable 1–4 credits; the topic's exact credits are unknown. Math/statistics metadata, descriptions, calendar and credit-unit normalization remain unknown. No concentration-specific outcomes were published in the inspected requirement sections.
 
-Parser returns observed identity only. It does not return dates, courses, curriculum status, or seed data. Missing identity/award/specialization context raises ValueError so a source change requires review. Raw source documents are not committed.
-
-## Unresolved current-catalog check — 2026-10-10
-
-Followed the marketing page's direct [2026–27 major-requirements link](https://bulletins.iu.edu/iub/sice/2026-2027/undergraduate/degree-programs/bs-computer-science/luddy-degree-major-req.shtml) through the safe fetcher. It states approved specialization/C-minus requirements, but navigation lists Software Engineering, Data Science and Security, while the marketing page still names AI. This inspection does not establish discontinuation or absence, and cannot supply an AI-specific course inventory. The source is registered with edition and locator; curriculum remains pending. Resolve the mismatch through further accessible official catalog/advising evidence before expanding the seed. No generic CS courses were mislabeled as AI-specialization requirements.
+The parser observes current list structure and course text, rejects changed policy markers and access pages, and never returns audit, verification date or curriculum completeness. Synthetic regression fixtures contain invented course titles. Raw source pages remain in the ignored cache.
