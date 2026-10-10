@@ -52,15 +52,15 @@ National Universities enumeration has 108 members from a cited secondary table, 
 
 ## Program-family evidence
 
-The published Northeastern comparison family has 16 independently verified combined BS variants sharing nine definitions, with 144 provenance bindings. Program-specific integration roles and parents remain intact. This grouping is explicitly analyst-classified; combined-major relationships are source-stated. Buffalo's seven BS variants share five university-described AI+X framework notes, not an asserted identical course inventory. Detailed Buffalo catalog requirements remain unverified. Together these families organize23 concrete degrees while retaining individual titles, awards, hosts, local additions and comparisons.
+The published Northeastern comparison family has 16 independently verified combined BS variants sharing nine definitions, with 144 provenance bindings. Program-specific integration roles and parents remain intact. This grouping is explicitly analyst-classified; combined-major relationships are source-stated. Buffalo's seven BS variants share five university-described AI+X framework notes, not an asserted identical course inventory. Detailed Buffalo catalog requirements remain unverified. Together these families organize 23 concrete degrees while retaining individual titles, awards, hosts, local additions and comparisons.
 
-Newer committed local research expands Northeastern to23 variants, preserving22 BS plus one BSEnvE and the distinct Communication Studies/Engineering hosting units. This brings the local two-family model to30 variants, pending the next verified release. See [family contract](docs/PROGRAM_FAMILIES.md), [Northeastern evidence](research/program-families.md) and [Buffalo evidence](research/families/buffalo-ai-plus-x.md).
+Newer committed local research expands Northeastern to 23 variants, preserving 22 BS plus one BSEnvE and the distinct Communication Studies/Engineering hosting units. This brings the local two-family model to 30 variants, pending the next verified release. See [family contract](docs/PROGRAM_FAMILIES.md), [Northeastern evidence](research/program-families.md) and [Buffalo evidence](research/families/buffalo-ai-plus-x.md).
 
 ## Active continuation — beyond the published checkpoint
 
 Newer work is committed or being reviewed locally and is not represented by the published counts above:
 
-- All23 documented Northeastern combined-degree curricula are mapped as partial; common university/college degree policies and competency-based NUpath requirements are being checked.
+- All 23 documented Northeastern combined-degree curricula are mapped as partial; common university/college degree policies and competency-based NUpath requirements are being checked.
 - BC/Duke/Emory and Indiana concentration requirements, Case Applied AI minor, Maryland/California/USF degrees, Delaware/Drexel/Stevens, Miami degree variants and RIT are being researched or integrated. New identities preserve source/status conflicts rather than implying launch dates.
 - Source statement types now distinguish learning outcomes, program aims, career pathways and unclassified statements independently of source/inferred provenance. Buffalo career lists are explicitly tagged; associated UI verification is underway.
 - Penn BSE remaining FAQ/elective/policy gaps are under review. Already-partial degree records remain partial until published requirements and interpretations are accounted for.
@@ -70,9 +70,9 @@ Each adapter's NOTES.md records the exact evidence, interpretations, unresolved 
 ## Remaining work and access blockers
 
 1. **Cohort:** obtain a permitted authoritative 2027 roster for both categories and full cutoff ties. Complete missing liberal-arts enumeration and catalog searches; preserve secondary/inferred/membership-only labels until resolved.
-2. **CSRankings numeric data:** import remains held pending permission or qualified reuse review. Published methodology records ai, vision, mlmining, nlp and inforet, proposed2016–2025 window, U.S. filter, pinned snapshot and computation method. Values remain null with explicit missingness. Publication output is not a measure of undergraduate teaching quality. See [research note](research/csrankings.md).
+2. **CSRankings numeric data:** import remains held pending permission or qualified reuse review. Published methodology records ai, vision, mlmining, nlp and inforet, proposed 2016–2025 window, U.S. filter, pinned snapshot and computation method. Values remain null with explicit missingness. Publication output is not a measure of undergraduate teaching quality. See [research note](research/csrankings.md).
 3. **Institution/program access:** robots restrictions, 403s, password gates and unavailable catalog transport remain explicit, including Furman curriculum, Buffalo catalog and documented Michigan/UC Merced/Gonzaga refresh limits. No alternate-path circumvention. Public official summaries may support partial records but do not substitute invented course lists.
-4. **Curricula:**26 published identities still await extraction and62 published inventories remain partial. Local batches reduce this queue; the target is not complete. Verify university/college policies, finite approved pools, alternatives, nesting and all source conflicts before upgrading audit status.
+4. **Curricula:** 26 published identities still await extraction and 62 published inventories remain partial. Local batches reduce this queue; the target is not complete. Verify university/college policies, finite approved pools, alternatives, nesting and all source conflicts before upgrading audit status.
 5. **Metadata:** many prerequisites, descriptions, course sites and example syllabi remain unknown. Verify course identity and term; retain historical labels and link rather than redistribute.
 6. **Institution depth:** initial directory searches do not establish absence. Continue bounded catalog/minor/concentration searches and documented leads; do not change partial inspection to no qualifying program without evidence.
 

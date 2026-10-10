@@ -10,6 +10,7 @@ from atlas.family_store import ingest_family
 ROOT = Path(__file__).resolve().parents[1]
 FID = "buffalo-ai-plus-x-degrees"
 EXPECTED = {
+    "university-at-buffalo-suny-ai-and-philosophy-politics-economics-bs-degree": "cd4281f19f4df28873efb40d4116110a476716ce284b601db4d91aa4b98e7ba3",
     "university-at-buffalo-suny-ai-and-geospatial-analytics-bs-degree": "fa05e54839152c1d58cf308485c989bd47848122cc9b055fcd7b96807b97a5a5",
     "university-at-buffalo-suny-ai-and-language-and-intercultural-competence-bs-degree": "38a6fd5f700ec0d6e70ade70ca4a4a68dfabd7f27ef2d28d98aed3ec305b06c2",
     "university-at-buffalo-suny-ai-and-language-technology-bs-degree": "c714f05636c3c31f0f01fe52b4269e5d1514e01a61de5de894d920708b47bdc4",
@@ -56,9 +57,11 @@ def test_buffalo_family_stores_only_five_framework_definitions(tmp_path):
     assert ingest_family(conn, family, program_updates=programs)
     assert not ingest_family(conn, family, program_updates=programs)
     assert conn.execute("SELECT count(*) FROM family_requirement_groups").fetchone()[0] == 5
-    assert conn.execute("SELECT count(*) FROM family_requirement_bindings").fetchone()[0] == 35
+    assert conn.execute("SELECT count(*) FROM family_requirement_bindings").fetchone()[
+        0
+    ] == 5 * len(EXPECTED)
     data = db.export_data(conn)
-    assert len(data["programs"]) == 7
+    assert len(data["programs"]) == len(EXPECTED)
     assert data["families"][0]["shared_course_codes"] == []
     assert data["meta"]["curriculum_summary"]["pending"] == 0
     assert data["meta"]["curriculum_summary"]["complete"] == 0

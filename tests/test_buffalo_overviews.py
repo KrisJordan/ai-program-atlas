@@ -76,7 +76,7 @@ def test_reviewed_buffalo_records_preserve_gaps():
         spec.loader.exec_module(module)
         assert module.PROGRAM_ID == d["id"]
         if d["program_kind"] == "degree":
-            assert len(module.SOURCE_PARSERS) == 2
+            assert len(module.SOURCE_PARSERS) >= 2
 
 
 def test_program_specific_language_and_internship_rules():
@@ -105,3 +105,19 @@ def test_program_specific_language_and_internship_rules():
     )
     with pytest.raises(ValueError, match="Internship"):
         parse_degree(html.replace("internship", "project"), "logic", title, "unused")
+
+
+def test_ppe_award_requires_explicit_full_degree_identity():
+    module = __import__(
+        "atlas.adapters.university-at-buffalo-suny-ai-and-philosophy-politics-economics-bs-degree.adapter",
+        fromlist=["parse_award"],
+    )
+    html = "<h1>BS in AI and PPE</h1><p>BS in AI and Philosophy, Politics and Economics (PPE)</p>"
+    observed = module.parse_award(html)
+    assert observed["award_level"] == "BS"
+    assert "first_offered" not in observed
+    assert "curriculum_audit" not in observed
+    with pytest.raises(ValueError, match="heading"):
+        module.parse_award(html.replace("<h1>BS", "<h1>BA"))
+    with pytest.raises(ValueError, match="Full"):
+        module.parse_award(html.replace("BS in AI and Philosophy", "BA in AI and Philosophy"))
