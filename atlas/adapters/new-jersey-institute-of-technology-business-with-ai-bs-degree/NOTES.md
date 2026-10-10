@@ -1,9 +1,19 @@
-# Business with AI
+# NJIT Business with AI BS
 
-Official identity and explicit award source: https://management.njit.edu/bachelors-science-business-ai
+Reviewed 2026-10-10. Current 2026–27 catalog: https://catalog.njit.edu/undergraduate/management/management/business-with-ai-bs/
 
-The opening paragraph explicitly identifies the Bachelor of Science award. The catalog https://catalog.njit.edu/undergraduate/management/management/business-with-ai-bs/ establishes the title and plan of study but its URL suffix alone is not sufficient BS award evidence. Both sources are retained with separate provenance.
+Partial: 32 named course rows from the 120-credit eight-semester plan, nine open GER/free-elective slots, and four linked GER directory policy notes. FYS SEM has an explicit zero-credit value. Plan rows are not inferred prerequisites or recurring offerings. Credit amounts are preserved but normalization remains unknown.
 
-The adapter requires the visible "What is Business with AI" heading and the explicit program-and-award phrase in main content, rejects access pages, and returns only observed identity fields. It never infers an award from a URL or replays seed metadata/curriculum/dates. Curriculum extraction remains pending.
+## Further source inspection
 
-Validated the adapter against a fresh HTTP200 page obtained with the robots-aware Fetcher on2026-10-10. Raw HTML retained only in temporary cache.
+History/Humanities 200 and 300+, Scientific Literacy, and HSS Senior Seminar lists are accessible and registered. Their large approved pools are not fully extracted; wildcard categories and Rutgers options prevent a simplistic finite inventory. PHIL 310 appears in the advanced GER list and as a named degree course, so overlap policy needs review. HSS 404/407 are stated capstone options.
+
+MGMT 416, MGMT 432 and DS 110 course-search URLs were robots-disallowed; no bypass attempted. Descriptions/prerequisites remain null. No public syllabi verified.
+
+## Next checks
+
+Complete GER pools and constraints; verify school/university GPA, grades, residency, transfer, double-counting and substitutions. Verify credit-unit definition independently. The department supplies curriculum/schedule PDFs, but these were not inspected in this pass. No launch date inferred.
+
+## Adapter
+
+Reads actual course rows, credits, suggested terms and generic requirement slots from the catalog plan. Rejects changed/missing identities, missing totals, unexpected rows and duplicate named courses. Does not emit reviewer audit or complete status.
