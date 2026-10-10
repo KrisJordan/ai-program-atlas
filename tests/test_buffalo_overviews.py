@@ -32,6 +32,7 @@ def test_program_observes_roles_and_capstone():
     html = "<h1>AI and Example</h1><h2>What will I learn?</h2><p>Complete an applied capstone.</p><h2>What can I do with an AI and Example degree?</h2><ul><li>Example analyst.</li><li>Example developer.</li></ul><h2>Another section</h2><ul><li>Not a career.</li></ul>"
     d = parse_degree(html, "example", "AI and Example", "https://www.buffalo.edu/example")
     assert [o["text"] for o in d["outcomes"]] == ["Example analyst", "Example developer"]
+    assert all(o["statement_type"] == "career_pathway" for o in d["outcomes"])
     assert len(d["requirements"]) == 1
     assert "courses" not in d
     with pytest.raises(ValueError, match="heading"):

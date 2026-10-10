@@ -197,6 +197,13 @@ def validate_program(program, family=None):
         ):
             raise ValueError("Course credits must be a nonnegative number or null")
     for outcome in program.get("outcomes", []):
+        if outcome.get("statement_type", "unspecified") not in {
+            "learning_outcome",
+            "program_aim",
+            "career_pathway",
+            "unspecified",
+        }:
+            raise ValueError("Unknown outcome statement type")
         if outcome["kind"] == "source_stated" and not outcome.get("source_id"):
             raise ValueError("Source-stated outcome needs source evidence")
     validate_requirements(program)
@@ -345,7 +352,7 @@ def ingest_program(conn, program, run_id=None):
                 conn.execute("INSERT INTO requirement_courses VALUES (?,?,?)", (pid, g["id"], cid))
         for n, outcome in enumerate(program.get("outcomes", [])):
             conn.execute(
-                "INSERT INTO outcomes VALUES (?,?,?,?,?,?)",
+                "INSERT INTO outcomes(program_id,ordinal,text,kind,source_id,locator,statement_type) VALUES (?,?,?,?,?,?,?)",
                 (
                     pid,
                     n,
@@ -353,6 +360,7 @@ def ingest_program(conn, program, run_id=None):
                     outcome["kind"],
                     outcome.get("source_id"),
                     outcome.get("locator"),
+                    outcome.get("statement_type", "unspecified"),
                 ),
             )
         ingest_membership(conn, program)

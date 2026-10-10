@@ -68,6 +68,7 @@ def parse_degree(html, pid, title, url):
             {
                 "text": r,
                 "kind": "source_stated",
+                "statement_type": "career_pathway",
                 "source_id": pid + "-program",
                 "locator": "What can I do with an " + title + " degree?",
             }
