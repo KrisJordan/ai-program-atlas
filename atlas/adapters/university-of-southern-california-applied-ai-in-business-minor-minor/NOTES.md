@@ -1,9 +1,16 @@
-# Applied AI in Business
+# USC Applied AI in Business minor
 
-Official identity source: https://www.marshall.usc.edu/news/usc-marshall-launches-applied-ai-and-business-minor
+Reviewed 2026-10-10. Curriculum status: **partial**. The August 5, 2026 announcement explicitly gives a Fall 2026 launch; this is recorded as an announced term, without claiming actual first enrollment.
 
-Directory/identity verified; curriculum pending. No courses, requirements or outcomes have yet been extracted.
+The advising source explicitly lists this minor and provides common Marshall admission, pre-admission course, prerequisite, unique-unit and catalog-year rules. Six policy nodes and source-stated program aims are represented. The parser scopes applicability to the named minor link and rejects missing material policy conditions, unrelated pages and access pages. It never emits completeness or reviewer audit state.
 
-Official Marshall announcement confirms Fall 2026 minor. USC catalog program pages returned tool access errors; AI BS, AI minor, AI Applications minor and Law and Regulation of AI minor remain leads needing direct verification. CS department undergraduate page is last updated 2024 and omits newer offerings.
+The official linked catalog URL requests a 120-second crawl interval in robots.txt, exceeding the safe fetcher's scheduling window. Its course inventory and program-specific completion policies remain unresolved. The common 16 unique-unit minimum is not used as the minor's total units. No restricted access was bypassed.
 
-The adapter validates a title in visible content headings or links and the award/kind in its local card or heading section. It returns only observed identity fields and never replays seed metadata, curriculum, or dates. A failure means review is required; it does not mean the program is absent. Tests use synthetic HTML to verify rejection behavior; live refresh is not claimed.
+The linked three-page eligibility PDF was read as text and visually inspected. It flags overlap restrictions for many Marshall majors and emphases. AAIB is not listed under the AI for Business major. Consequently the announcement's broad welcome to all majors is not treated as an unconditional eligibility guarantee. The matrix does not specify the detailed overlap rules; these remain an explicit audit gap.
+
+Sources:
+
+- https://www.marshall.usc.edu/news/usc-marshall-launches-applied-ai-and-business-minor
+- https://students.marshall.usc.edu/current-students/applying-marshall-current-usc-students/marshall-minors
+- https://students.marshall.usc.edu/sites/default/files/2026-07/Marshall%20Minors%20List.pdf
+- https://catalogue.usc.edu/preview_program.php?catoid=22&poid=32945&returnto=9453 (crawl interval requires separate scheduling; not parsed)
