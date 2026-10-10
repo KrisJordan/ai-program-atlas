@@ -52,3 +52,15 @@ The department says students could declare 6-4 from Fall 2022. This is explicit 
 4. Review first-year/flexible P/NR, transfer/AP/advanced-standing and repeat rules, plus applicable cohort transitions and degree-specific exceptions.
 
 The record remains **partial**. These are concrete requirement/source gaps; missing course descriptions, most prerequisites and syllabi remain a separate metadata limitation. The new policy parsers have synthetic tests for version boundaries, old-number exclusion, unknown titles/units, transfer PE, open eligibility criteria and academic-standing versus graduation distinctions.
+
+## Full public departmental version inventory — 2026-10-10
+
+The `6-4_2025` view now maps the complete published departmental option structure: one programming route (including two-subject bundles), three math slots, both foundations, five Center options, and three separate elective slots. The advanced and additional electives preserve their distinct undergraduate/graduate lists; the Course 18 route stays an open eligibility rule. All seven designation constraints remain overlays across completed subjects. Module pairs remain indivisible options, including within designation lists. Every subject may fill only one required slot, while multiple designation overlays may apply.
+
+The source-specific parser extracts **261 distinct course observations and 525 requirement nodes**, including **248 prerequisite statements**. Course descriptions are not bulk copied. Unit triplets, variable amounts and arranged units remain unconverted; both source contexts keep 6.4300 credits null. The full seed now has **344 course observations and 608 requirement nodes**. These counts include separate observations of the same code across versions and all elective alternatives, not required courses or additive degree totals.
+
+The unversioned chart now sits beneath a clearly labeled reference root. The explicit cohort version has a separate root and separate course IDs. The two trees are **not cumulative degree requirements**; neither silently overwrites the other. The general CI-M reference remains attached to the chart context, while the full version includes its exact CIM2 list and bundles.
+
+The version source labels lists as of Fall 2026 but includes special-subject codes with `@2027FA` suffixes. Those exact identities are retained. The inconsistent date labels require clarification; they are not silently normalized to current offerings or turned into catalog/launch dates. Courses displayed in grey remain published eligibility observations, not claims they are offered this academic year.
+
+The prior gap concerning unmapped departmental pools is closed. Remaining requirement boundaries are official version/date reconciliation, the 6.4300 credit conflict, linked HASS/CI exceptions and institute transfer/AP/first-year/repeat rules. The program remains partial. Synthetic tests cover separate IDs, nested bundles, graduate versus open-math routes, overlays and rejection of changed section/count/list structure.

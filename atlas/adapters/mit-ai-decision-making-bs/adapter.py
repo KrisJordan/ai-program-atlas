@@ -124,6 +124,7 @@ SOURCE_PARSERS = {SOURCES[2]: parse_cim_reference}
 from importlib import import_module
 
 policies = import_module('atlas.adapters.mit-ai-decision-making-bs.policies')
+versioned = import_module('atlas.adapters.mit-ai-decision-making-bs.versioned')
 
 SOURCES.extend([policies.GIR, policies.GRADES, policies.GRADUATION,
                 policies.DEPARTMENT, policies.PETITIONS, policies.EMBEDDED])
@@ -133,5 +134,5 @@ SOURCE_PARSERS.update({
     policies.GRADUATION: policies.parse_graduation,
     policies.DEPARTMENT: policies.parse_department,
     policies.PETITIONS: policies.parse_petitions,
-    policies.EMBEDDED: policies.parse_versioned,
+    policies.EMBEDDED: versioned.parse,
 })
