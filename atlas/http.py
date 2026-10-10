@@ -10,9 +10,9 @@ from dataclasses import dataclass
 from email.utils import parsedate_to_datetime
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
-from urllib.robotparser import RobotFileParser
 
 import httpx
+from protego import Protego
 
 USER_AGENT = "AIProgramAtlas/0.1 (+https://github.com/KrisJordan/ai-program-atlas)"
 
@@ -165,23 +165,31 @@ class Fetcher:
                     raise FetchError(f"Cross-origin robots redirect requires review: {robots_url}")
                 robots_url = target
                 response = self._get(robots_url)
-            robot = RobotFileParser(origin + "/robots.txt")
             if response.status_code == 404:
-                robot.parse(["User-agent: *", "Allow: /"])
+                robot = Protego.parse("User-agent: *\nAllow: /\n")
             elif response.status_code == 200:
                 if "<html" in response.text[:500].lower():
                     raise FetchError(f"Robots response is HTML; policy unavailable: {origin}")
-                robot.parse(response.text.splitlines())
+                robot = Protego.parse(response.text)
             else:
                 raise FetchError(f"Robots unavailable ({response.status_code}); not fetching {url}")
-            crawl_delay = robot.crawl_delay(USER_AGENT) or robot.crawl_delay("*") or 0
+            # The parser handles RFC 9309 longest-match precedence, merged groups,
+            # wildcard/end anchors and encoded paths. Fetch policy remains ours.
+            crawl_delay = robot.crawl_delay(USER_AGENT) or 0
+            request_rate = robot.request_rate(USER_AGENT)
+            if robot.visit_time(USER_AGENT) or (
+                request_rate and (request_rate.start_time or request_rate.end_time)
+            ):
+                raise FetchError(f"Robots visit window requires separate scheduling: {origin}")
+            if request_rate:
+                crawl_delay = max(crawl_delay, request_rate.seconds / request_rate.requests)
             if crawl_delay > self.max_crawl_delay:
                 raise FetchError(
                     f"Robots crawl delay {crawl_delay}s requires separate scheduling: {origin}"
                 )
             self.robots[origin] = robot
             self.crawl_delays[parsed.netloc] = crawl_delay
-        if not self.robots[origin].can_fetch(USER_AGENT, url):
+        if not self.robots[origin].can_fetch(url, USER_AGENT):
             raise FetchError(f"Robots disallows fetch: {url}")
 
     def fetch(self, url, *, force=False):

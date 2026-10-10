@@ -4,7 +4,11 @@ version = "0.1.0"
 description = "A source-backed atlas of undergraduate artificial intelligence programs"
 readme = "README.md"
 requires-python = ">=3.11"
-dependencies = ["beautifulsoup4>=4.12,<5", "httpx>=0.28,<1"]
+dependencies = [
+    "beautifulsoup4>=4.12,<5",
+    "httpx>=0.28,<1",
+    "protego>=0.7,<0.8",
+]
 
 [project.scripts]
 atlas = "atlas.cli:main"
