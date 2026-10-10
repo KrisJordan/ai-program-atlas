@@ -180,3 +180,22 @@ SOURCE_PARSERS[SOURCES[2]] = parse_parent
 
 metadata = importlib.import_module("atlas.adapters.wpi-ai-bs.course_metadata")
 metadata.attach(globals(), ["CS 4341", "CS 4342"])
+
+policies = importlib.import_module("atlas.adapters.wpi-ai-bs.degree_policies")
+
+
+def parse_concentration_policy(html, key):
+    r = policies.parse(html, PROGRAM_ID, TITLE, key)
+    r["award_level"] = "concentration"
+    r["program_kind"] = "concentration"
+    if key == "options":
+        r["requirements"] = [
+            x for x in r["requirements"] if x["id"].endswith(("-concentration", "-overlap"))
+        ]
+    return r
+
+
+for policy_key in ["options", "graduate"]:
+    policy_url = policies.BASE + policies.POLICIES[policy_key][0]
+    SOURCES.append(policy_url)
+    SOURCE_PARSERS[policy_url] = lambda html, key=policy_key: parse_concentration_policy(html, key)

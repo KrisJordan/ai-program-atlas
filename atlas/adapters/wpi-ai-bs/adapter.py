@@ -206,11 +206,11 @@ def parse(html):
         req(
             "concentration",
             "Exactly one concentration",
-            kind="choose_courses",
-            count=6,
+            kind="alternative",
+            count=1,
             credits=2,
             parent=root["id"],
-            summary="Six distinct courses in exactly one published AI concentration. The complete set of concentration alternatives is not yet expanded here.",
+            summary="Six distinct courses in exactly one published AI concentration. Each child inventory specifies its own course choices and restrictions.",
         )
     )
     requirements.append(
@@ -251,3 +251,12 @@ def parse(html):
 
 metadata = importlib.import_module("atlas.adapters.wpi-ai-bs.course_metadata")
 metadata.attach(globals(), ["CS 2119", "CS 4341", "CS 4342"])
+
+concentrations = importlib.import_module("atlas.adapters.wpi-ai-bs.concentrations")
+concentrations.attach(globals())
+
+policies = importlib.import_module("atlas.adapters.wpi-ai-bs.degree_policies")
+policies.attach(globals())
+
+# Clarification source: directs transfer decisions to the HUA coordinator/catalog.
+SOURCES.append("https://www.wpi.edu/academics/departments/humanities-arts/resources")

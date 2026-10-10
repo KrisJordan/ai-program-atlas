@@ -196,3 +196,8 @@ def parse(html):
 
 metadata = importlib.import_module("atlas.adapters.wpi-ai-bs.course_metadata")
 metadata.attach(globals(), ["CS 2119", "CS 4341", "CS 4342", "MIS 3730", "MIS 3787"])
+
+policies = importlib.import_module("atlas.adapters.wpi-ai-bs.degree_policies")
+policies.attach(globals())
+
+SOURCES.append("https://www.wpi.edu/academics/departments/humanities-arts/resources")

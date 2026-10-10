@@ -90,6 +90,26 @@
       "catalog_year": "2026-2027",
       "locator": "Course heading, Units, description and Recommended Background when present",
       "confidence": "high"
+    },
+    {
+      "id": "wpi-ai-advanced-methods-concentration-policy-options",
+      "url": "https://wpi.cleancatalog.net/degree-options",
+      "title": "Degree Options",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Concentration declaration/overlap and graduate-course rules",
+      "confidence": "high"
+    },
+    {
+      "id": "wpi-ai-advanced-methods-concentration-policy-graduate",
+      "url": "https://wpi.cleancatalog.net/graduate-courses",
+      "title": "Graduate Courses",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Concentration declaration/overlap and graduate-course rules",
+      "confidence": "high"
     }
   ],
   "outcomes": [],
@@ -781,13 +801,56 @@
       "source_text": null,
       "summary": "The AI BS requires exactly one concentration of six distinct courses, and its MQP must apply AI within that concentration. Completeness of this local concentration does not certify the host BS degree.",
       "course_ids": []
+    },
+    {
+      "id": "wpi-ai-advanced-methods-concentration-policy-options-concentration",
+      "parent_id": null,
+      "title": "Concentration declaration and scope",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "other",
+      "source_id": "wpi-ai-advanced-methods-concentration-policy-options",
+      "source_text": null,
+      "summary": "A concentration requires two integrated-study units and a related MQP. Plan with the adviser and apply to the program review committee by its deadlines; concentration requirements cannot prevent completion of the major.",
+      "course_ids": []
+    },
+    {
+      "id": "wpi-ai-advanced-methods-concentration-policy-options-overlap",
+      "parent_id": null,
+      "title": "Additional-designation overlap ceiling",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "other",
+      "source_id": "wpi-ai-advanced-methods-concentration-policy-options",
+      "source_text": null,
+      "summary": "Concentrations/minors may overlap another additional designation by at most one unit. No credit-bearing activity may be triple-counted across degree requirements or designations.",
+      "course_ids": []
+    },
+    {
+      "id": "wpi-ai-advanced-methods-concentration-policy-graduate-conversion",
+      "parent_id": null,
+      "title": "Graduate-course use and conversion",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "other",
+      "source_id": "wpi-ai-advanced-methods-concentration-policy-graduate",
+      "source_text": null,
+      "summary": "Graduate enrollment ordinarily does not require graduate admission; Business School courses require admission to a dual BS/MS program. The published conversion is one graduate credit to 1/6 undergraduate unit, processed by the Registrar.",
+      "course_ids": []
     }
   ],
   "notes": [
     "Complete local concentration inventory only; the parent BS degree is not certified by this audit.",
-    "WPI undergraduate course amounts are units: 1/3 per listed course. The allowed graduate pool uses graduate credit hours (normalization unknown) (3 per listed course); no undergraduate conversion is inferred.",
+    "WPI undergraduate course amounts are units: 1/3 per listed course. The allowed graduate pool uses graduate credit hours (normalization unknown) (3 per listed course); the published graduate-course conversion is sourced separately.",
     "Cross-listed course codes identify one course record; a course may not count twice. Graduate options are restricted to advanced undergraduates and CS/DS courses in MS-AI core bins.",
-    "Selected official course pages supply concise editorial descriptions and explicitly advisory Recommended Background; credit exclusions are preserved. Other course metadata remains unknown."
+    "Selected official course pages supply concise editorial descriptions and explicitly advisory Recommended Background; credit exclusions are preserved. Other course metadata remains unknown.",
+    "The general degree-options policy requires adviser planning and concentration declaration to the program review committee, limits overlap with another additional designation to one unit, and prohibits triple-counting. Graduate course conversion: one graduate credit equals 1/6 undergraduate unit; course records retain source values."
   ],
   "curriculum_audit": {
     "scope": "concentration",
@@ -795,14 +858,18 @@
     "source_ids": [
       "wpi-ai-advanced-methods-concentration-catalog",
       "wpi-ai-advanced-methods-concentration-graduate-core",
-      "wpi-ai-advanced-methods-concentration-parent"
+      "wpi-ai-advanced-methods-concentration-parent",
+      "wpi-ai-advanced-methods-concentration-policy-options",
+      "wpi-ai-advanced-methods-concentration-policy-graduate"
     ],
     "sections": [
       "Six courses beyond AI core",
       "At-least-three advanced pool and remaining undergraduate pool",
       "Graduate CS/DS core-bin alternative",
       "CS2301/2303 exclusion",
-      "Exactly one parent concentration and concentration-related MQP"
+      "Exactly one parent concentration and concentration-related MQP",
+      "General concentration declaration and designation-overlap rules",
+      "Graduate credit conversion and Business School enrollment exception"
     ],
     "unresolved_requirements": [],
     "metadata_gaps": [
