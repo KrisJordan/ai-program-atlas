@@ -59,7 +59,12 @@ def test_reviewed_buffalo_records_preserve_gaps():
         d = json.loads(path.read_text())
         if not d.get("curriculum_audit"):
             continue
-        validate_program(d)
+        family = (
+            json.loads((ROOT / "data/families" / (d["family"]["id"] + ".json")).read_text())
+            if d.get("family")
+            else None
+        )
+        validate_program(d, family)
         assert d["curriculum_status"] == "partial"
         assert d["courses"] == []
         assert d["curriculum_audit"]["unresolved_requirements"]

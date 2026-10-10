@@ -17,3 +17,7 @@ Read the current official catalog curriculum and every linked selection/policy r
 ## Adapter behavior
 
 The parser checks this named program and actual source sections, and extracts observed credit/declaration/career facts. The second source parser validates all five AI+X components and its published credit language; it rejects changed rules for review. It does not emit a review audit, verification date or complete status. Synthetic fixtures exercise missing and changed statements.
+
+## Shared AI+X framework
+
+Grouped in the university-described AI+X degree family using its five shared framework notes; exact course pools remain unverified. Family membership does not certify identical courses, prerequisite sequences, or degree completion requirements. The program-specific capstone, language and internship observations remain local. Source adapters continue returning the full observed framework for candidate review; they do not create family memberships or certify detailed curricula.

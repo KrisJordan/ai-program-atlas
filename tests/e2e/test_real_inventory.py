@@ -81,7 +81,7 @@ def test_real_family_variants_from_fresh_cli_database(browser,tmp_path,width):
     assert main(['--db',str(database),'build','--output',str(tmp_path/'ai-program-atlas')]) in (0,None)
     data=json.loads((tmp_path/'ai-program-atlas/data.json').read_text())
     assert data.get('families'), 'The release must contain its reviewed program family.'
-    family=data['families'][0]
+    family=next(f for f in data['families'] if f['id']=='northeastern-ai-combined-degrees')
     assert len(family['variant_ids'])>=3
     programs={p['id']:p for p in data['programs']}
     members=[programs[pid] for pid in family['variant_ids']]

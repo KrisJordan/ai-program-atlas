@@ -132,83 +132,14 @@
       "source_text": null,
       "summary": "The program overview identifies a capstone applying program learning to a practical problem; course code and credits are not stated.",
       "course_ids": []
-    },
-    {
-      "id": "university-at-buffalo-suny-ai-and-responsible-communication-bs-degree-family-1",
-      "parent_id": null,
-      "title": "Mathematical prerequisites",
-      "kind": "note",
-      "count": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "other",
-      "source_id": "university-at-buffalo-suny-ai-and-responsible-communication-bs-degree-family",
-      "source_text": null,
-      "summary": "Mathematical preparation depends on the individual AI+X degree.",
-      "course_ids": []
-    },
-    {
-      "id": "university-at-buffalo-suny-ai-and-responsible-communication-bs-degree-family-2",
-      "parent_id": null,
-      "title": "Society Core",
-      "kind": "note",
-      "count": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "other",
-      "source_id": "university-at-buffalo-suny-ai-and-responsible-communication-bs-degree-family",
-      "source_text": null,
-      "summary": "Choose five three-credit society courses. Approved options and degree-specific selection rules remain unverified.",
-      "course_ids": []
-    },
-    {
-      "id": "university-at-buffalo-suny-ai-and-responsible-communication-bs-degree-family-3",
-      "parent_id": null,
-      "title": "Technology Component",
-      "kind": "note",
-      "count": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "other",
-      "source_id": "university-at-buffalo-suny-ai-and-responsible-communication-bs-degree-family",
-      "source_text": null,
-      "summary": "The technology component draws from four-credit mathematics, probability/statistics, computing and data-science courses, combined for the particular degree.",
-      "course_ids": []
-    },
-    {
-      "id": "university-at-buffalo-suny-ai-and-responsible-communication-bs-degree-family-4",
-      "parent_id": null,
-      "title": "Integrative Courses",
-      "kind": "note",
-      "count": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "other",
-      "source_id": "university-at-buffalo-suny-ai-and-responsible-communication-bs-degree-family",
-      "source_text": null,
-      "summary": "Integrative coursework applies AI or relevant computational and mathematical methods within the partner discipline.",
-      "course_ids": []
-    },
-    {
-      "id": "university-at-buffalo-suny-ai-and-responsible-communication-bs-degree-family-5",
-      "parent_id": null,
-      "title": "Capstone Experience",
-      "kind": "note",
-      "count": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "other",
-      "source_id": "university-at-buffalo-suny-ai-and-responsible-communication-bs-degree-family",
-      "source_text": null,
-      "summary": "The experiential capstone brings students from AI+X and general AI degrees together on AI-and-society problems.",
-      "course_ids": []
     }
   ],
   "notes": [
     "Official current program overview inspected; course-level requirements and complete academic policies remain unverified.",
     "Catalog host robots.txt retrieval failed with ConnectError on 2026-10-10; no restriction bypass was attempted. An indexed Language Technology catalog page also failed to open through web retrieval. Overview pages are not a substitute for catalog requirements.",
     "No course credits, credit-unit normalization, calendar or launch date inferred from the overview.",
-    "The department explicitly includes this bachelor in its AI+X family. The five-component framework does not establish an identical course set or imply the two minors share that framework."
+    "The department explicitly includes this bachelor in its AI+X family. The five-component framework does not establish an identical course set or imply the two minors share that framework.",
+    "Grouped in the university-described AI+X degree family using its five shared framework notes; exact course pools remain unverified. Family membership does not certify identical courses, prerequisite sequences, or degree completion requirements."
   ],
   "curriculum_audit": {
     "scope": "degree",
@@ -233,5 +164,65 @@
       "Course titles, codes, credits, descriptions and prerequisites",
       "Verified public course sites and syllabi"
     ]
+  },
+  "family": {
+    "id": "buffalo-ai-plus-x-degrees",
+    "variant_label": "AI + Responsible Communication",
+    "disciplines": [
+      "Artificial Intelligence",
+      "Responsible Communication",
+      "Communication"
+    ],
+    "relationship": "ai_plus_x",
+    "classification_kind": "source_stated",
+    "source_ids": [
+      "university-at-buffalo-suny-ai-and-responsible-communication-bs-degree-family",
+      "university-at-buffalo-suny-ai-and-responsible-communication-bs-degree-program"
+    ],
+    "hosting_units": [
+      {
+        "name": "Department of AI and Society",
+        "source_id": "university-at-buffalo-suny-ai-and-responsible-communication-bs-degree-family"
+      }
+    ],
+    "requirement_bindings": [
+      {
+        "shared_id": "framework-1",
+        "id": "university-at-buffalo-suny-ai-and-responsible-communication-bs-degree-family-1",
+        "parent_id": null,
+        "source_id": "university-at-buffalo-suny-ai-and-responsible-communication-bs-degree-family",
+        "course_ids": []
+      },
+      {
+        "shared_id": "framework-2",
+        "id": "university-at-buffalo-suny-ai-and-responsible-communication-bs-degree-family-2",
+        "parent_id": null,
+        "source_id": "university-at-buffalo-suny-ai-and-responsible-communication-bs-degree-family",
+        "course_ids": []
+      },
+      {
+        "shared_id": "framework-3",
+        "id": "university-at-buffalo-suny-ai-and-responsible-communication-bs-degree-family-3",
+        "parent_id": null,
+        "source_id": "university-at-buffalo-suny-ai-and-responsible-communication-bs-degree-family",
+        "course_ids": []
+      },
+      {
+        "shared_id": "framework-4",
+        "id": "university-at-buffalo-suny-ai-and-responsible-communication-bs-degree-family-4",
+        "parent_id": null,
+        "source_id": "university-at-buffalo-suny-ai-and-responsible-communication-bs-degree-family",
+        "course_ids": []
+      },
+      {
+        "shared_id": "framework-5",
+        "id": "university-at-buffalo-suny-ai-and-responsible-communication-bs-degree-family-5",
+        "parent_id": null,
+        "source_id": "university-at-buffalo-suny-ai-and-responsible-communication-bs-degree-family",
+        "course_ids": []
+      }
+    ],
+    "requirement_overrides": [],
+    "components": []
   }
 }
