@@ -91,7 +91,12 @@ def test_additional_survey_integrity():
     assert len(rows) == len({r["institution_id"] for r in rows}) == 25
     assert all(r["institution_id"] in cohort and r["sources"] for r in rows)
     assert all(r["status"] != "no_qualifying_program_found" for r in rows)
-    assert sum(r["status"] == "confirmed" for r in rows) == 2
+    confirmed = {r["institution_id"]: r for r in rows if r["status"] == "confirmed"}
+    assert set(confirmed) == {
+        "stanford-university", "columbia-university",
+        "university-of-virginia", "villanova-university",
+    }
+    assert all(r["discoveries"] and r["checked_at"] for r in confirmed.values())
     for pid in ["columbia-ai-minor", "stanford-ai-track"]:
         p = json.loads((ROOT / "data/programs" / (pid + ".json")).read_text())
         assert p["curriculum_status"] == "partial"
