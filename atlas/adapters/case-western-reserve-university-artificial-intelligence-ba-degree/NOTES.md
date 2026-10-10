@@ -1,9 +1,12 @@
-# Artificial Intelligence
+# Case AI BA curriculum
 
-Official identity source: https://case.edu/ai/education/degree-programs-certificates
+The official Program Requirements tab supplies the mapped major tables. Sample plans are excluded. Course alternatives retain whole bundles, and finite choice pools are distinct from required courses.
 
-Directory/identity verified; curriculum pending. No courses, requirements or outcomes have yet been extracted.
+The application rule retains one 3–4 credit course or two 1.5 credit courses; missing individual credits are not inferred.
 
-Official AI education directory describes new BA and BS pathways and an existing AI minor. Applied AI minor is explicitly in approval and excluded from confirmed discoveries. Full catalog title, launch timing, and curricula of new degree pathways require verification.
+Partial degree coverage: university general degree rules and the Unified General Education Requirements approved course lists remain to be fully mapped. Course metadata and structured outcomes also remain incomplete.
 
-The adapter validates a title in visible content headings or links and the award/kind in its local card or heading section. It returns only observed identity fields and never replays seed metadata, curriculum, or dates. A failure means review is required; it does not mean the program is absent. Tests use synthetic HTML to verify rejection behavior; live refresh is not claimed.
+Sources inspected on 2026-10-10:
+- https://bulletin.case.edu/engineering/computer-data-sciences/artificial-intelligence-ba/
+- https://bulletin.case.edu/undergraduate-academics/bachelors-degree-requirements/
+- https://bulletin.case.edu/undergraduate-academics/unified-general-education-requirements/
