@@ -16,6 +16,9 @@ def site_data():
         institutions.append({**institution, "coverage_status": "pending", "rankings": [{"category": "National Liberal Arts Colleges" if index else "National Universities"}], "program_ids": [f"test-ai-{index}"]})
         course = {"id": f"course-{index}", "code": f"AI {index}01", "name": "Machine Learning", "category": "ai_ml", "credits": None, "credit_unit": "quarter_hours" if index else "semester_hours", "prerequisites": None, "url": "https://example.edu/course"}
         programs.append({"id": f"test-ai-{index}", "institution": institution, "title": f"Artificial Intelligence {index}", "award_level": "minor" if index else "BS", "program_kind": "minor" if index else "degree", "overview": "A test-only curriculum record.", "status": "active", "verification_status": "partial", "curriculum_status": "partial", "last_verified": "2026-10-10", "catalog_year": None, "courses": [course, deepcopy(course)], "requirements": [], "sources": [], "outcomes": [], "links": [{"kind": "catalog", "url": "https://example.edu/catalog", "label": "Catalog"}], "notes": []})
+    programs[1]['curriculum_status'] = 'complete'
+    programs[2].update(program_kind='additional_major', curriculum_status='pending', courses=[])
+    programs[3].update(program_kind='concentration', curriculum_status='pending', courses=[])
     return {"meta": {"limitations": ["Test coverage is incomplete."]}, "programs": programs, "institutions": institutions, "csrankings": {"status": "not_imported"}}
 
 
@@ -55,3 +58,17 @@ def test_invalid_program_path(tmp_path, site_data):
     site_data["programs"][0]["id"] = "../outside"
     with pytest.raises(ValueError):
         build(site_data, tmp_path)
+
+
+def test_identity_counts_and_research_configuration(tmp_path, site_data):
+    site_data['csrankings'] = {'methodology': {'year_start': 2016, 'year_end': 2025, 'fields': ['ai', 'vision'], 'geographic_filter': 'us', 'source_snapshot': 'pinned-test-snapshot', 'source_url': 'https://csrankings.org/faq', 'status': 'not_imported', 'method': 'A configured method with no computed values.'}, 'observations': [{'value': None, 'rank': None, 'missingness': 'permission_required'}]}
+    build(site_data, tmp_path)
+    coverage = (tmp_path / 'coverage/index.html').read_text()
+    assert '2 records are identity-only' in coverage
+    assert 'Counts include all documented records' in coverage
+    methodology = (tmp_path / 'methodology/index.html').read_text()
+    for text in ['2016–2025', 'Artificial intelligence (ai)', 'Computer vision (vision)', 'pinned-test-snapshot', 'permission_required', 'A configured method with no computed values.', 'additional majors']:
+        assert text in methodology
+    assert 'https://csrankings.org/faq.html' not in methodology
+    index = (tmp_path / 'index.html').read_text()
+    assert 'Additional major</span>' in index

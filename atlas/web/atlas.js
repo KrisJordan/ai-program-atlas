@@ -5,7 +5,7 @@
   if (!node) return;
   const {programs, institutions, base_path: base, categories} = JSON.parse(node.textContent);
   document.documentElement.classList.add('js');
-  const keys = ['q', 'award', 'calendar', 'institution', 'cohort', 'category'];
+  const keys = ['q', 'type', 'award', 'evidence', 'calendar', 'institution', 'cohort', 'category'];
   const institutionMap = new Map(institutions.map(i => [i.id, i]));
   const form = document.getElementById('filters');
   const controls = Object.fromEntries(keys.map(k => [k, form.elements.namedItem(k)]));
@@ -44,6 +44,8 @@
     const allCourses = courses(p);
     const searchable = [p.title, p.overview, p.hosting_unit, p.institution?.name, ...(p.institution?.aliases || []), ...allCourses.flatMap(c => [c.name, c.code])].join(' ').toLocaleLowerCase();
     return (!query || query.split(/\s+/).every(term => searchable.includes(term))) &&
+      (!controls.type.value || p.program_kind === controls.type.value) &&
+      (!controls.evidence.value || p.curriculum_status === controls.evidence.value) &&
       (!controls.award.value || p.award_level === controls.award.value) &&
       (!controls.calendar.value || (p.institution?.calendar || 'unknown') === controls.calendar.value) &&
       (!controls.institution.value || p.institution?.id === controls.institution.value) &&

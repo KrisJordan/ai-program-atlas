@@ -64,14 +64,18 @@ def date_value(p):
     return p.get("last_verified") or "Not recorded"
 
 
+def evidence_label(p):
+    return 'Pending — identity only' if p.get('curriculum_status') == 'pending' else human(p.get('curriculum_status'))
+
+
 def program_card(p, base):
     institution = p.get("institution", {})
     courses = unique_courses(p)
     return f'''<article class="program-card" data-program-id="{esc(p['id'])}">
-<div class="card-top"><span class="eyebrow">{esc(institution.get('name'))}</span>{badge(p.get('award_level', 'Unknown'))}</div>
+<div class="card-top"><span class="eyebrow">{esc(institution.get('name'))}</span><span class="card-badges">{badge(human(p.get('program_kind')))}{badge(p.get('award_level')) if p.get('award_level') not in ('other', 'minor', 'concentration', None) else ''}</span></div>
 <h3><a href="{base}programs/{esc(p['id'])}/">{esc(p.get('title'))}<span aria-hidden="true">↗</span></a></h3>
 <p class="card-description">{esc(p.get('overview') or 'Program overview has not yet been recorded.')}</p>
-<dl class="card-facts"><div><dt>Academic calendar</dt><dd>{esc(human(institution.get('calendar')))}</dd></div><div><dt>Curriculum evidence</dt><dd>{esc(human(p.get('curriculum_status')))}</dd></div></dl>
+<dl class="card-facts"><div><dt>Academic calendar</dt><dd>{esc(human(institution.get('calendar')))}</dd></div><div><dt>Curriculum evidence</dt><dd>{esc(evidence_label(p))}</dd></div></dl>
 <div class="card-evidence"><span>{len(courses)} course records</span><span>Verified {esc(date_value(p))}</span></div>
 <div class="card-bottom"><a href="{base}programs/{esc(p['id'])}/">View program <span aria-hidden="true">→</span></a><label class="compare-choice js-only"><input type="checkbox" data-compare="{esc(p['id'])}"> Compare<span class="sr-only"> {esc(p.get('title'))} at {esc(institution.get('name'))}</span></label></div></article>'''
 
@@ -94,9 +98,12 @@ def root_page(data, base):
     cohort = meta.get("cohort")
     cohort_label = cohort if isinstance(cohort, str) else f"U.S. News {cohort.get('edition', 'edition unverified')} target cohorts · incomplete inventory" if isinstance(cohort, dict) else "U.S. undergraduate programs · source-backed pilot"
     summary = meta.get("coverage_summary")
-    summary = summary if isinstance(summary, str) else "A growing evidence base. Coverage is incomplete; an unlisted program is not evidence of absence."
+    identity_only = sum(p.get('curriculum_status') == 'pending' for p in programs)
+    summary = summary if isinstance(summary, str) else f"{len(programs)} documented programs; {identity_only} identity-only records await curriculum extraction. Institution and cohort coverage remain incomplete. An unlisted program is not evidence of absence."
     filters = [
+        ("type", "Program type", [("degree", "Degree"), ("additional_major", "Additional major"), ("minor", "Minor"), ("concentration", "Concentration")]),
         ("award", "Award", sorted({(p.get("award_level", "other"), p.get("award_level", "Other")) for p in programs})),
+        ("evidence", "Curriculum evidence", [("pending", "Pending — identity only"), ("partial", "Partial extraction"), ("complete", "Complete extraction")]),
         ("calendar", "Calendar", sorted({(p.get("institution", {}).get("calendar") or "unknown", human(p.get("institution", {}).get("calendar"))) for p in programs})),
         ("institution", "Institution", sorted({(p.get("institution", {}).get("id", ""), p.get("institution", {}).get("name", "Unknown")) for p in programs}, key=lambda v: v[1])),
         ("cohort", "Institution category", [("National Universities", "National Universities"), ("National Liberal Arts Colleges", "National Liberal Arts Colleges")]),
@@ -184,6 +191,7 @@ def coverage_page(data, base):
     meta = data.get('meta', {})
     institutions = data.get('institutions', [])
     statuses = Counter(i.get('coverage_status') or 'pending' for i in institutions)
+    identity_only = sum(p.get('curriculum_status') == 'pending' for p in data.get('programs', []))
     def coverage_evidence(i):
         links = [external(s.get('url'), s.get('title') or 'Inspection source') for s in i.get('coverage_sources', []) if isinstance(s, dict)]
         discoveries = [external(s.get('url'), s.get('title') or 'Program discovery') for s in i.get('discoveries', [])]
@@ -198,7 +206,7 @@ def coverage_page(data, base):
     summary = meta.get('coverage_summary')
     summary = summary if isinstance(summary, str) else 'This atlas is a documented pilot. The listed institutions are not a complete ranking cohort.'
     body = f'''<section class="page-hero"><span class="eyebrow">THE BOUNDARIES OF THE EVIDENCE</span><h1>Coverage is part<br><em>of the finding.</em></h1><p class="lede">An absent record is not an absent program. This ledger makes the state of the research visible.</p></section><div class="notice"><strong>{esc(summary)}</strong><ul>{limitations(meta)}</ul></div>
-<section class="detail-section"><h2>Recorded institutions</h2><p class="section-note">{len(institutions)} institution records · {len(data.get('programs', []))} documented programs. These are inventory counts, not a percentage of the intended cohort. Program counts include detailed records only; discovery links can identify additional programs awaiting extraction.</p>{'<ul class="section-note">' + cohort_notes + '</ul>' if cohort_notes else ''}<div class="status-grid">{''.join('<div><strong>' + str(v) + '</strong><span>' + esc(human(k)) + '</span></div>' for k, v in sorted(statuses.items()))}</div><div class="table-scroll" role="region" aria-label="Institution coverage" tabindex="0"><table class="coverage-table"><thead><tr><th>Institution</th><th>Cohort membership</th><th>Research status</th><th>Evidence / remaining work</th><th>Detailed programs</th></tr></thead><tbody>{rows}</tbody></table></div></section>
+<section class="detail-section"><h2>Recorded institutions</h2><p class="section-note">{len(institutions)} institution records · {len(data.get('programs', []))} documented programs. These are inventory counts, not a percentage of the intended cohort. {identity_only} records are identity-only with curriculum extraction pending; {len(data.get("programs", [])) - identity_only} have curriculum extraction in progress or complete. Counts include all documented records. Discovery links can identify additional programs awaiting a record.</p>{'<ul class="section-note">' + cohort_notes + '</ul>' if cohort_notes else ''}<div class="status-grid">{''.join('<div><strong>' + str(v) + '</strong><span>' + esc(human(k)) + '</span></div>' for k, v in sorted(statuses.items()))}</div><div class="table-scroll" role="region" aria-label="Institution coverage" tabindex="0"><table class="coverage-table"><thead><tr><th>Institution</th><th>Cohort membership</th><th>Research status</th><th>Evidence / remaining work</th><th>Documented records</th></tr></thead><tbody>{rows}</tbody></table></div></section>
 <section class="detail-section prose"><h2>How to read a status</h2><dl class="definitions"><dt>Confirmed</dt><dd>An official source identifies a qualifying program. Curriculum extraction may still be partial.</dd><dt>No qualifying program found</dt><dd>A documented inspection of official catalogs and program directories found no qualifying title. This is a bounded search result, not proof of absence.</dd><dt>Inspected</dt><dd>Research has begun or sources have been inspected; use the evidence note for the precise conclusion.</dd><dt>Inaccessible</dt><dd>Required evidence could not be accessed. No conclusion about program existence follows.</dd><dt>Pending</dt><dd>Not yet inspected or no sufficient evidence recorded.</dd></dl><h2>The intended scope</h2><p>Two independent U.S. News cohorts: National Universities and National Liberal Arts Colleges ranked 100 or better, including ties. The latest edition and complete membership require source verification; a verified edition does not establish a complete institution roster. Program inclusion requires AI or Artificial Intelligence in the official undergraduate title.</p><p>Research generation: {esc(meta.get('generated_at') or 'Not recorded')}.</p><a href="{base}methodology/">Read the full methodology →</a></section>'''
     return shell('Coverage & limitations', body, base, 'coverage')
 
@@ -207,12 +215,34 @@ def methodology_page(data, base):
     meta = data.get('meta', {})
     cs = data.get('csrankings') or {}
     method = cs.get('methodology')
-    method = method if isinstance(method, str) else 'CSRankings is a publication-based view of computer science research activity. Research context is distinct from undergraduate program quality.'
+    research_config = ''
+    if isinstance(method, dict):
+        field_names = {'ai': 'Artificial intelligence', 'vision': 'Computer vision', 'mlmining': 'Machine learning & data mining', 'nlp': 'Natural language processing', 'inforet': 'Information retrieval'}
+        fields = ', '.join(f'{field_names.get(field, field)} ({field})' for field in method.get('fields', [])) or 'Not configured'
+        missingness = sorted({o.get('missingness') for o in cs.get('observations', []) if o.get('missingness')})
+        settings = [
+            ('Publication window', f"{method.get('year_start', 'Unknown')}–{method.get('year_end', 'Unknown')}"),
+            ('Geographic filter', method.get('geographic_filter') or 'Not configured'),
+            ('Research fields', fields),
+            ('Pinned source snapshot', method.get('source_snapshot') or 'Not recorded'),
+            ('Import status', method.get('status') or 'not_imported'),
+            ('Recorded missingness', ', '.join(missingness) or 'No observation status recorded'),
+        ]
+        research_config = '<p>The following configuration is recorded for reproducibility. It has not been used to publish research values or ranks.</p><dl class="research-config">' + ''.join(f'<div><dt>{esc(label)}</dt><dd>{esc(value)}</dd></div>' for label, value in settings) + '</dl>'
+        research_config += '<p>Null values and ranks remain unknown. The status “permission_required” means reuse permission is unresolved; it does not mean zero publications, no AI research, or an unranked institution.</p>'
+        if method.get('source_url'):
+            research_config += '<p>' + external(method['source_url'], 'Configured methodology source') + '</p>'
+        for key in ('license_explanation', 'license_notes', 'missingness_explanation'):
+            if method.get(key):
+                research_config += f'<p>{esc(method[key])}</p>'
+        method = method.get('method') or 'Publication-based research context; no values have been computed or redistributed.'
+    elif not isinstance(method, str):
+        method = 'CSRankings is a publication-based view of computer science research activity. Research context is distinct from undergraduate program quality.'
     body = f'''<section class="page-hero"><span class="eyebrow">HOW TO READ THE ATLAS</span><h1>Evidence before<br><em>inference.</em></h1><p class="lede">An inspectable research index. No composite scores, hidden rankings, or claims that a curriculum count measures quality.</p></section>
-<div class="method-layout"><nav class="method-nav" aria-label="Methodology sections"><a href="#scope">01 · Scope</a><a href="#evidence">02 · Evidence</a><a href="#curriculum-method">03 · Curriculum</a><a href="#research">04 · Research context</a><a href="#unknowns">05 · Limitations</a></nav><div class="prose"><section id="scope"><h2>01 / A precise inclusion rule</h2><p>Programs qualify when their official undergraduate title includes AI or Artificial Intelligence. Degrees, minors, and concentrations remain separate award types. A general computer science program with AI electives does not qualify on that basis alone.</p><p>The intended institution scope comprises two independent U.S. News top-100 cohorts, inclusive of ties: National Universities and National Liberal Arts Colleges. Until complete membership is source-verified and recorded, the atlas is a pilot inventory. Consult the coverage ledger for what has actually been inspected.</p></section>
+<div class="method-layout"><nav class="method-nav" aria-label="Methodology sections"><a href="#scope">01 · Scope</a><a href="#evidence">02 · Evidence</a><a href="#curriculum-method">03 · Curriculum</a><a href="#research">04 · Research context</a><a href="#unknowns">05 · Limitations</a></nav><div class="prose"><section id="scope"><h2>01 / A precise inclusion rule</h2><p>Programs qualify when their official undergraduate title includes AI or Artificial Intelligence. Degrees, additional majors, minors, and concentrations remain separate program types. A general computer science program with AI electives does not qualify on that basis alone.</p><p>The intended institution scope comprises two independent U.S. News top-100 cohorts, inclusive of ties: National Universities and National Liberal Arts Colleges. Until complete membership is source-verified and recorded, the atlas is a pilot inventory. Consult the coverage ledger for what has actually been inspected.</p></section>
 <section id="evidence"><h2>02 / Follow the source</h2><p>Official university catalogs, program pages, and announcements support program records. Sources retain their URLs, retrieval dates, catalog years, locators, and confidence. The last verification date describes the research record, not a guarantee that the source has remained unchanged.</p><p>Launch dates are recorded only when evidence supports the date and its precision. The oldest search result is not treated as a program’s first offering. Source-stated learning outcomes and inferred editorial taxonomy appear in separate sections.</p></section>
 <section id="curriculum-method"><h2>03 / Compare structure with care</h2><p>Requirements preserve all-of groups, course-count choices, credit-count choices, and nested alternatives. A course can belong to multiple requirements. The curriculum chart deduplicates courses by stable course ID and assigns each documented course to a single editorial category.</p><p>Charts count observed course records. They do not measure required credit shares, course depth, teaching quality, or the student experience. Partial catalogs, elective pools, and different program sizes make these counts unsuitable for ranking programs.</p><p>Quarter hours, semester hours, course units, and other units retain their original labels. No conversion or normalized total is inferred. Unknown credits are null, never zero. Missing prerequisites, descriptions, course sites, or syllabi remain explicitly unrecorded.</p></section>
-<section id="research"><h2>04 / Research is context</h2>{badge('CSRankings · not imported')}<p>{esc(method)}</p><p>CSRankings data and code have not been imported or redistributed because redistribution licensing remains unresolved for this project. No research score is attached to a program. Consult the original resource and its methodology directly.</p><p>{external('https://csrankings.org/', 'Visit CSRankings')} · {external('https://csrankings.org/faq.html', 'Read the CSRankings FAQ')}</p></section>
+<section id="research"><h2>04 / Research is context</h2>{badge('CSRankings · not imported')}<p>{esc(method)}</p>{research_config}<p>CSRankings data and code have not been imported or redistributed because redistribution licensing remains unresolved for this project. No research score is attached to a program. Publication activity does not measure undergraduate teaching quality. Consult the original resource and its methodology directly.</p><p>{external('https://csrankings.org/', 'Visit CSRankings')} · {external('https://csrankings.org/faq', 'Read the CSRankings FAQ')}</p></section>
 <section id="unknowns"><h2>05 / What remains unknown</h2><p>Coverage is incomplete. A missing institution or program does not establish absence. A “no qualifying program found” conclusion requires a documented search of official sources. Inaccessible pages remain inaccessible; pending institutions remain pending.</p><ul>{limitations(meta)}</ul><p>Use this atlas to frame questions, then confirm current admission and graduation requirements with the institution.</p><a href="{base}coverage/">Inspect the coverage ledger →</a></section></div></div>'''
     return shell('Methodology', body, base, 'methodology')
 

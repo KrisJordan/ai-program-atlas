@@ -2,6 +2,7 @@
 from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from threading import Thread
+import os
 
 import pytest
 
@@ -13,11 +14,19 @@ pytestmark = pytest.mark.e2e
 
 @pytest.fixture(scope="module")
 def browser():
-    playwright = pytest.importorskip("playwright.sync_api")
+    required = os.environ.get("ATLAS_REQUIRE_BROWSER") == "1"
+    try:
+        from playwright import sync_api as playwright
+    except ImportError:
+        if required:
+            pytest.fail("ATLAS_REQUIRE_BROWSER=1 requires the Playwright Python package")
+        pytest.skip("Playwright is not installed")
     with playwright.sync_playwright() as p:
         try:
             instance = p.chromium.launch()
         except playwright.Error as error:
+            if required:
+                pytest.fail(f"ATLAS_REQUIRE_BROWSER=1: Chromium launch failed: {error}")
             pytest.skip(f"Chromium unavailable: {error}")
         yield instance
         instance.close()
@@ -116,3 +125,24 @@ def test_no_javascript_baseline(browser, site):
     page.get_by_role("link", name="View program").first.click()
     expect(page.locator("h1")).to_have_text("Artificial Intelligence 0")
     context.close()
+
+
+def test_program_type_and_evidence_filters_preserve_history(page, site):
+    from playwright.sync_api import expect
+    page.goto(site)
+    page.locator('#filter-evidence').select_option('pending')
+    expect(page.locator('.program-card:visible')).to_have_count(2)
+    page.locator('#filter-type').select_option('additional_major')
+    expect(page.locator('.program-card:visible')).to_have_count(1)
+    expect(page.locator('.program-card:visible .card-badges')).to_contain_text('Additional major')
+    assert 'type=additional_major' in page.url and 'evidence=pending' in page.url
+    page.reload()
+    expect(page.locator('#filter-type')).to_have_value('additional_major')
+    expect(page.locator('#filter-evidence')).to_have_value('pending')
+    page.locator('#filter-evidence').select_option('complete')
+    expect(page.locator('#empty-state')).to_be_visible()
+    page.go_back()
+    expect(page.locator('.program-card:visible')).to_have_count(1)
+    expect(page.locator('#filter-evidence')).to_have_value('pending')
+    page.go_forward()
+    expect(page.locator('#empty-state')).to_be_visible()
