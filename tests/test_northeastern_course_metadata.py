@@ -99,3 +99,25 @@ def test_registered_subjects_keep_distinct_selectors_and_reject_wrong_catalog():
     assert parsers['https://catalog.northeastern.edu/course-descriptions/cs/'](cs)['courses'][0]['code']=='CS 3200'
     assert parsers['https://catalog.northeastern.edu/course-descriptions/math/'](math)['courses'][0]['code']=='MATH 1341'
     with pytest.raises(ValueError):parsers['https://catalog.northeastern.edu/course-descriptions/cs/'](math)
+
+
+def test_zero_hour_recitation_is_known_and_corequisite_remains_concurrent():
+    html=page('<div class="courseblock"><p class="courseblocktitle">CHEM 1163. Recitation for CHEM 1161. (0 Hours)</p><p class="cb_desc">Students work interactively with instructors.</p><p class="courseblockextra">Corequisite(s): CHEM 1161, CHEM 1162</p></div>',heading='Chemistry and Chemical Biology (CHEM)')
+    parser=register_subject_sources('test-program',{'CHEM':['CHEM 1163']})['https://catalog.northeastern.edu/course-descriptions/chem/']
+    result=parser(html)
+    assert result['courses'][0]['credits']==0
+    assert result['courses'][0]['prerequisites'] is None
+    assert any('CHEM 1161, CHEM 1162' in n for n in result['notes'])
+    assert parser(html.replace('(0 Hours)','(1 Hour)'))['courses'][0]['credits']==1
+
+
+def test_concurrent_prerequisite_and_timing_advice_keep_their_source_meaning():
+    html=page('<div class="courseblock"><p class="courseblocktitle">PSYC 2320. Statistics in Psychological Research. (4 Hours)</p><p class="cb_desc">Covers descriptive and inferential statistics. Should be taken before the end of the sophomore year.</p><p class="courseblockextra">Prerequisite(s): PSYC 1101 (may be taken concurrently) with a minimum grade of D- or (PSYC 101M with a minimum grade of D-; PSYC 102M with a minimum grade of D-)</p></div>',heading='Psychology (PSYC)')
+    parser=register_subject_sources('test-program',{'PSYC':['PSYC 2320']})['https://catalog.northeastern.edu/course-descriptions/psyc/']
+    result=parser(html);course=result['courses'][0]
+    assert '(may be taken concurrently)' in course['prerequisites']
+    assert 'or (PSYC 101M' in course['prerequisites']
+    assert 'sophomore' not in course['prerequisites']
+    assert any('timing advice' in n and 'sophomore' in n for n in result['notes'])
+    changed=parser(html.replace('Should be taken before the end of the sophomore year.',''))
+    assert not any('timing advice' in n for n in changed['notes'])

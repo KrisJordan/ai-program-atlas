@@ -28,3 +28,8 @@ from atlas.adapters.northeastern_course_metadata import register_subject_sources
 _FOUNDATION_METADATA = register_subject_sources(PROGRAM_ID, {'MATH': ['MATH 1365', 'MATH 1465', 'MATH 1341'], 'CS': ['CS 1200', 'CS 1210', 'CS 2000', 'CS 2001', 'CS 2100', 'CS 2101', 'CS 3200', 'CS 2484']})
 SOURCES = tuple(SOURCES) + tuple(_FOUNDATION_METADATA)
 SOURCE_PARSERS = {**globals().get('SOURCE_PARSERS', {}), **_FOUNDATION_METADATA}
+
+# Independently reviewed disciplinary subject-catalog observations.
+_DISCIPLINE_METADATA = register_subject_sources(PROGRAM_ID, {'PSYC': ['PSYC 1101', 'PSYC 2320', 'PSYC 3450', 'PSYC 3466', 'PSYC 4540']})
+SOURCES = tuple(SOURCES) + tuple(_DISCIPLINE_METADATA)
+SOURCE_PARSERS = {**SOURCE_PARSERS, **_DISCIPLINE_METADATA}

@@ -180,6 +180,16 @@
       "catalog_year": "2026-2027",
       "locator": "Selected course blocks: CS 1200, CS 1210, CS 2000, CS 2001, CS 2100, CS 2101, CS 3200, CS 4120. Titles, catalog hours, descriptions, prerequisite/corequisite labels and explicit prose conditions.",
       "confidence": "high"
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-linguistics-bs-boston-bs-degree-psyc-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/psyc/",
+      "title": "Psychology (PSYC)",
+      "fetched_at": "2026-10-10T23:54:02+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Selected course blocks: PSYC 1101, PSYC 2320. Titles, hours, descriptions, prerequisite/corequisite conditions and preparation advice.",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -719,13 +729,13 @@
       "id": "northeastern-university-artificial-intelligence-and-linguistics-bs-boston-bs-degree-psyc-1101",
       "code": "PSYC 1101",
       "name": "Foundations of Psychology",
-      "description": null,
+      "description": "Surveys psychological research methods and major areas of behavioral science.",
       "prerequisites": null,
       "credits": 4.0,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "northeastern-university-artificial-intelligence-and-linguistics-bs-boston-bs-degree-catalog",
-      "url": "https://catalog.northeastern.edu/search/?P=PSYC%201101",
+      "source_id": "northeastern-university-artificial-intelligence-and-linguistics-bs-boston-bs-degree-psyc-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/psyc/",
       "public_site": null,
       "syllabus": null
     },
@@ -733,13 +743,13 @@
       "id": "northeastern-university-artificial-intelligence-and-linguistics-bs-boston-bs-degree-psyc-2320",
       "code": "PSYC 2320",
       "name": "Statistics in Psychological Research",
-      "description": null,
-      "prerequisites": null,
+      "description": "Develops statistical analysis and inference for psychological research.",
+      "prerequisites": "PSYC 1101 with a minimum grade of D- or (PSYC 101M with a minimum grade of D- ; PSYC 102M with a minimum grade of D- )",
       "credits": 4.0,
       "credit_unit": "semester_hours",
       "category": "mathematics",
-      "source_id": "northeastern-university-artificial-intelligence-and-linguistics-bs-boston-bs-degree-catalog",
-      "url": "https://catalog.northeastern.edu/search/?P=PSYC%202320",
+      "source_id": "northeastern-university-artificial-intelligence-and-linguistics-bs-boston-bs-degree-psyc-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/psyc/",
       "public_site": null,
       "syllabus": null
     },
@@ -2088,7 +2098,9 @@
     "CS 2001 subject catalog corequisite(s): CS 2000. These are concurrent conditions, not prerequisites.",
     "CS 2100 subject catalog corequisite(s): CS 2101. These are concurrent conditions, not prerequisites.",
     "CS 2101 subject catalog corequisite(s): CS 2100. These are concurrent conditions, not prerequisites.",
-    "2026–2027 CS/MATH/CY subject-catalog review enriches 11 existing course observations with descriptions, registration conditions and independently stated credit amounts. Prerequisites retain the published alternatives and grade thresholds; corequisites and recommended preparation are separately labelled in these notes. Missing prerequisite fields are unknown, not a claim of no prerequisite."
+    "2026–2027 CS/MATH/CY subject-catalog review enriches 11 existing course observations with descriptions, registration conditions and independently stated credit amounts. Prerequisites retain the published alternatives and grade thresholds; corequisites and recommended preparation are separately labelled in these notes. Missing prerequisite fields are unknown, not a claim of no prerequisite.",
+    "PSYC 2320 subject catalog timing advice: complete before the end of the sophomore year. This advice is separate from prerequisite eligibility.",
+    "2026–2027 disciplinary subject-catalog review enriches 2 existing BIOL/CHEM/ECON/PSYC course observations. Concurrent-enrollment alternatives stay inside their published prerequisite conditions; separately labelled corequisites and timing advice remain notes. Explicit zero-hour recitations are verified zero, not unknown."
   ],
   "curriculum_audit": {
     "scope": "degree",
