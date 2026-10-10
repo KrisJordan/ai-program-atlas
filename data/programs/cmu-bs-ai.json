@@ -842,9 +842,9 @@
     }
   ],
   "notes": [
-    "Partial curriculum extraction; this record is not a graduation audit. Individual course descriptions and prerequisites remain unverified; selected public course resources are documented separately below.",
+    "Partial curriculum extraction; this record is not a graduation audit. Course metadata are partly enriched from the SCS directory; remaining gaps are recorded in the curriculum audit.",
     "2026–2027 catalog. Math/probability alternatives, general education, seminars and free electives remain incompletely modeled. The 360-unit minimum is not the sum of course option pools.",
-    "Public course resources checked 2026-10-10: 15-150 course site identifies Fall 2026 (cmu-15150-fall-2026-site); 15-213 course site and PDF syllabus identify Fall 2026 (cmu-15213-fall-2026-site and cmu-15213-fall-2026-syllabus). These offering-specific resources supplement catalog course evidence; course source_id remains the catalog. URLs may roll forward to later offerings. Other course sites/syllabi remain unverified.",
+    "Public course resources checked 2026-10-10: 15-150 course site identifies Fall 2026 (cmu-15150-fall-2026-site); 15-213 course site and PDF syllabus identify Fall 2026 (cmu-15213-fall-2026-site and cmu-15213-fall-2026-syllabus). These offering-specific resources supplement catalog course evidence; course source_id identifies its factual catalog source. URLs may roll forward to later offerings. Other course sites/syllabi remain unverified.",
     "Inferred taxonomy labels summarize themes evidenced by the cited curriculum sections, including elective options where stated. They are analyst classifications, not institution-stated learning outcomes or guarantees that every student completes every theme. Source-stated outcomes are retained separately.",
     "Official SCS course directory verified titles, individual units where explicit, and prerequisite expressions for 38 course records. Seven selected core-course descriptions are concise reviewed summaries where those courses occur. Missing descriptions/prerequisites remain unknown. Curriculum membership is supported by program-catalog requirement citations."
   ],
@@ -1013,5 +1013,30 @@
       "source_id": "cmu-bs-ai-catalog",
       "locator": "Decision Making and Robotics; Perception and Language elective pools"
     }
-  ]
+  ],
+  "curriculum_audit": {
+    "scope": "degree",
+    "reviewed_at": "2026-10-10",
+    "source_ids": [
+      "cmu-bs-ai-catalog"
+    ],
+    "sections": [
+      "Computer Science core",
+      "Artificial Intelligence core alternatives and four elective clusters",
+      "Ethics course options",
+      "Published degree minimum and high-level distribution totals"
+    ],
+    "unresolved_requirements": [
+      "Math/statistics alternatives remain summarized rather than fully structured.",
+      "SCS elective exclusions and science/engineering distribution rules need complete mapping.",
+      "Humanities/arts categories and linked general-education policies need full review.",
+      "First-year seminar, CoRE@CMU, free-elective and optional research-thesis conditions remain unmapped.",
+      "All applicable linked SCS/university degree-completion and grading requirements have not been fully audited."
+    ],
+    "metadata_gaps": [
+      "38 SCS course records have observed titles/units and 29 have stated prerequisites; absent prerequisite values remain unknown.",
+      "Descriptions are concise reviewed summaries for seven core courses only.",
+      "Non-SCS course metadata and most public course sites/syllabi remain unverified."
+    ]
+  }
 }

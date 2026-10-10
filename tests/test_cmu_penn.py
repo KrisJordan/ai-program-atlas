@@ -72,6 +72,39 @@ def penn_bse_fixture():
             ),
         )
         + block("AI Electives (6 CUs)", "<ul><li>ESE 5000: Synthetic elective</li></ul>")
+        + block(
+            "Mathematics and Natural Science (7 CUs)",
+            "<ul>"
+            + "".join(
+                "<li>" + line + "</li>"
+                for line in [
+                    "MATH 1400: First calculus",
+                    "MATH 1410: Second calculus",
+                    "CIS 1600: Discrete math",
+                    "ESE 2030: Linear algebra",
+                    "ESE 3010: Probability or STAT 4300",
+                    "ESE 4020: Statistics",
+                    "Natural science [1 CU, no lab requirement]",
+                ]
+            )
+            + "</ul>",
+        )
+        + block(
+            "AI Concentrations",
+            "<p>Concentrations are optional and consist of four courses. Only courses used in the AI Elective category may count.</p><ul><li>Robotics:<ul><li>MEAM 5200: Synthetic robotics</li></ul></li></ul>",
+        )
+        + block(
+            "Senior Design (2 CU)",
+            "<p>Use ESE, CIS or other Penn Engineering senior design courses.</p>",
+        )
+        + block(
+            "Technical Electives (3 CU)",
+            '<p>Three course units from Engineering, Math, Natural Science or <a href="https://example.edu/approved">this list</a>.</p>',
+        )
+        + block(
+            "General Electives (8 CUs)",
+            "<h5>AI Ethics: Choose at least one of the following</h5><ul><li>CIS 4230: Synthetic ethics</li></ul><h5>Cognitive Science Elective: Choose at least one of the following</h5><ul><li>COGS 1001: Synthetic cognition</li></ul><p>Five course units, including a writing course. Three of these courses must be Social Science or Humanities; 2 can be Social Science, Humanities, or Technology in Business &amp; Society. One course unit from free electives.</p>",
+        )
     )
 
 
@@ -259,7 +292,7 @@ def test_minor_probability_is_single_choice_and_missing_titles_not_injected():
 
 def test_penn_bse_requires_six_core_areas_and_observes_changes():
     parsed = adapter("penn_bse").parse(penn_bse_fixture())
-    children = [r for r in parsed["requirements"] if r["parent_id"]]
+    children = [r for r in parsed["requirements"] if r["parent_id"] == "penn-bse-ai-ai-core-6-cus"]
     assert len(children) == 6 and all(r["credits"] == 1 for r in children)
     assert all(c["credits"] is None for c in parsed["courses"])
     assert parsed["catalog_year"] is None and "last_verified" not in parsed
@@ -453,3 +486,37 @@ def test_cmu_metadata_unknown_units_and_missing_prerequisites_stay_null():
             pid="cmu-bs-ai",
             codes=("07-280",),
         )
+
+
+def test_penn_full_page_keeps_probability_or_choice_and_optional_concentration_separate():
+    p = adapter("penn_bse").parse(penn_bse_fixture())
+    courses = {c["code"]: c for c in p["courses"]}
+    assert courses["ESE 3010"]["name"] == "Probability"
+    assert courses["STAT 4300"]["name"] is None
+    probability = next(r for r in p["requirements"] if r["title"] == "Probability alternative")
+    assert probability["count"] == 1 and len(probability["course_ids"]) == 2
+    optional = next(r for r in p["requirements"] if r["title"] == "Optional AI concentration")
+    assert optional["kind"] == "note" and optional["credits"] is None
+    robotics = next(r for r in p["requirements"] if r["parent_id"] == optional["id"])
+    assert robotics["count"] == 4 and "not an additional" in robotics["summary"]
+    writing = next(
+        r for r in p["requirements"] if r["title"] == "Writing course within the distribution"
+    )
+    assert writing["kind"] == "note" and writing["credits"] is None
+    assert p["curriculum_status"] == "partial" and "curriculum_audit" not in p
+
+
+@pytest.mark.parametrize(
+    "old,new",
+    [
+        ("Concentrations are optional", "Concentrations are required"),
+        (
+            "Five course units, including a writing course",
+            "Five course units with optional writing",
+        ),
+        ("Natural science [1 CU, no lab requirement]", "Natural science [2 CU]"),
+    ],
+)
+def test_penn_new_degree_component_policy_changes_require_review(old, new):
+    with pytest.raises(ValueError):
+        adapter("penn_bse").parse(penn_bse_fixture().replace(old, new))

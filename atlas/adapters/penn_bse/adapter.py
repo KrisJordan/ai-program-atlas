@@ -7,6 +7,7 @@ from bs4 import BeautifulSoup
 from atlas.adapters.cmu_bs.common import slug
 
 from .common import list_courses, req, text
+from .requirements import enrich_requirements
 
 SOURCES = ["https://ai.engineering.upenn.edu/academics/undergraduate/"]
 PID = "penn-bse-ai"
@@ -74,7 +75,7 @@ def parse(html: str) -> dict:
                 )
         else:
             parent["course_ids"] = [c["id"] for c in items]
-    return {
+    observed = {
         "id": PID,
         "title": "Artificial Intelligence, BSE",
         "award_level": "BSE",
@@ -87,6 +88,8 @@ def parse(html: str) -> dict:
             "Live program page does not state a catalog edition. Extracted computing, all six AI core areas and AI elective options; other degree components and optional concentrations require review. Course unit values are not inferred for individual courses."
         ],
     }
+
+    return enrich_requirements(blocks, observed, source, SOURCES[0])
 
 
 PROGRAM_ID = "penn-bse-ai"
