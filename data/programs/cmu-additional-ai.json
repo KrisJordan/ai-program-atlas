@@ -31,7 +31,7 @@
       "category": "foundations",
       "source_id": "cmu-additional-ai-catalog",
       "url": "https://coursecatalog.web.cmu.edu/search/?P=15-150",
-      "public_site": null,
+      "public_site": "https://www.cs.cmu.edu/~15150/",
       "syllabus": null
     },
     {
@@ -59,8 +59,8 @@
       "category": "foundations",
       "source_id": "cmu-additional-ai-catalog",
       "url": "https://coursecatalog.web.cmu.edu/search/?P=15-213",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://www.cs.cmu.edu/~213/",
+      "syllabus": "https://www.cs.cmu.edu/~213/syllabus/syllabus.pdf"
     },
     {
       "id": "cmu-15-251",
@@ -860,10 +860,12 @@
     }
   ],
   "notes": [
-    "Partial curriculum extraction; this record is not a graduation audit. Individual course descriptions, prerequisites, public course sites and syllabi have not been verified.",
+    "Partial curriculum extraction; this record is not a graduation audit. Individual course descriptions and prerequisites remain unverified; selected public course resources are documented separately below.",
     "Admission prerequisites and B-average rule are in the catalog. First offering date remains unknown.",
     "At most five courses from CS core, AI core and AI clusters may overlap other majors/minors; mathematical, ethics and cognition overlap exceptions need advisor review.",
-    "Award level other identifies an additional major, not an independently awarded bachelors degree."
+    "Award level other identifies an additional major, not an independently awarded bachelors degree.",
+    "Public course resources checked 2026-10-10: 15-150 course site identifies Fall 2026 (cmu-15150-fall-2026-site); 15-213 course site and PDF syllabus identify Fall 2026 (cmu-15213-fall-2026-site and cmu-15213-fall-2026-syllabus). These offering-specific resources supplement catalog course evidence; course source_id remains the catalog. URLs may roll forward to later offerings. Other course sites/syllabi remain unverified.",
+    "Inferred taxonomy labels summarize themes evidenced by the cited curriculum sections, including elective options where stated. They are analyst classifications, not institution-stated learning outcomes or guarantees that every student completes every theme. Source-stated outcomes are retained separately."
   ],
   "institution": {
     "id": "carnegie-mellon-university",
@@ -907,7 +909,68 @@
       "catalog_year": null,
       "locator": "Fall and spring academic terms",
       "confidence": "high"
+    },
+    {
+      "id": "cmu-15150-fall-2026-site",
+      "url": "https://www.cs.cmu.edu/~15150/",
+      "title": "15-150: Functional Programming, Fall 2026",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Heading, overview and learning outcomes",
+      "confidence": "high"
+    },
+    {
+      "id": "cmu-15213-fall-2026-site",
+      "url": "https://www.cs.cmu.edu/~213/",
+      "title": "15-213/15-513/14-513 Introduction to Computer Systems (ICS), Fall 2026",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Course identity and Course Syllabus link",
+      "confidence": "high"
+    },
+    {
+      "id": "cmu-15213-fall-2026-syllabus",
+      "url": "https://www.cs.cmu.edu/~213/syllabus/syllabus.pdf",
+      "title": "15-213 / 15-513 / 14-513: Introduction to Computer Systems — Fall 2026 syllabus",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "PDF page 1: course codes, university and Fall 2026",
+      "confidence": "high"
     }
   ],
-  "outcomes": []
+  "outcomes": [
+    {
+      "text": "AI methods",
+      "kind": "inferred_taxonomy",
+      "source_id": "cmu-additional-ai-catalog",
+      "locator": "Artificial Intelligence Core and Machine Learning Cluster"
+    },
+    {
+      "text": "Mathematical foundations",
+      "kind": "inferred_taxonomy",
+      "source_id": "cmu-additional-ai-catalog",
+      "locator": "Mathematics and statistics core"
+    },
+    {
+      "text": "Responsible AI and society",
+      "kind": "inferred_taxonomy",
+      "source_id": "cmu-additional-ai-catalog",
+      "locator": "Ethics and Human Cognition requirements"
+    },
+    {
+      "text": "Software and systems",
+      "kind": "inferred_taxonomy",
+      "source_id": "cmu-additional-ai-catalog",
+      "locator": "Computer Science Core including 15-150 and 15-213"
+    },
+    {
+      "text": "Applied AI",
+      "kind": "inferred_taxonomy",
+      "source_id": "cmu-additional-ai-catalog",
+      "locator": "Cognition and Action; Perception and Language elective clusters"
+    }
+  ]
 }

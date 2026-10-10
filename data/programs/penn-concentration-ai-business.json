@@ -508,7 +508,8 @@
     "This is an undergraduate concentration, not a standalone BS in Artificial Intelligence. The same announcement also introduces an MBA major; that graduate credential is excluded.",
     "Four course units: STAT 4230 (1 CU), LGST 2420 (0.5 CU), another 1 CU from pillar F and another 1.5 CU from pillar I.",
     "No pass/fail courses; at most 1 CU of independent study and at most 1 CU outside Wharton may count with faculty approval. Course prerequisites and elective individual credit values remain unknown.",
-    "MGMT/OIDD 3130 is one cross-listed option, represented as a single record to avoid double counting."
+    "MGMT/OIDD 3130 is one cross-listed option, represented as a single record to avoid double counting.",
+    "Inferred taxonomy labels summarize themes evidenced by the cited curriculum sections, including elective options where stated. They are analyst classifications, not institution-stated learning outcomes or guarantees that every student completes every theme. Source-stated outcomes are retained separately."
   ],
   "institution": {
     "id": "university-of-pennsylvania",
@@ -591,6 +592,24 @@
       "kind": "source_stated",
       "source_id": "penn-concentration-ai-business-curriculum",
       "locator": "Concentration overview and two pillars"
+    },
+    {
+      "text": "AI methods",
+      "kind": "inferred_taxonomy",
+      "source_id": "penn-concentration-ai-business-curriculum",
+      "locator": "Pillar F: technical foundations"
+    },
+    {
+      "text": "Responsible AI and society",
+      "kind": "inferred_taxonomy",
+      "source_id": "penn-concentration-ai-business-curriculum",
+      "locator": "Pillar I: economic, social and ethical implications"
+    },
+    {
+      "text": "Applied AI",
+      "kind": "inferred_taxonomy",
+      "source_id": "penn-concentration-ai-business-curriculum",
+      "locator": "Concentration overview: AI methods for business problems"
     }
   ]
 }

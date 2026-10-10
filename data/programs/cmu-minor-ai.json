@@ -969,7 +969,8 @@
     "Partial curriculum extraction; this record is not a graduation audit. Individual course descriptions, prerequisites, public course sites and syllabi have not been verified.",
     "Minor unavailable to SCS students. Core contains probability plus 07-280 and 07-380; choose technical courses from two distinct clusters and one societal-aspects course from either cluster.",
     "First offering date is unknown; the BS launch date must not be reused for this minor.",
-    "Technical and societal cluster structures are notes, not fully executable degree-audit logic."
+    "Technical and societal cluster structures are notes, not fully executable degree-audit logic.",
+    "Inferred taxonomy labels summarize themes evidenced by the cited curriculum sections, including elective options where stated. They are analyst classifications, not institution-stated learning outcomes or guarantees that every student completes every theme. Source-stated outcomes are retained separately."
   ],
   "institution": {
     "id": "carnegie-mellon-university",
@@ -1033,6 +1034,30 @@
       "kind": "source_stated",
       "source_id": "cmu-minor-ai-catalog",
       "locator": "What You'll Learn"
+    },
+    {
+      "text": "AI methods",
+      "kind": "inferred_taxonomy",
+      "source_id": "cmu-minor-ai-catalog",
+      "locator": "Required Core Courses and Machine Learning Cluster"
+    },
+    {
+      "text": "Mathematical foundations",
+      "kind": "inferred_taxonomy",
+      "source_id": "cmu-minor-ai-catalog",
+      "locator": "Probability requirement"
+    },
+    {
+      "text": "Responsible AI and society",
+      "kind": "inferred_taxonomy",
+      "source_id": "cmu-minor-ai-catalog",
+      "locator": "Societal Aspects of AI requirement and AI and Humanity Cluster"
+    },
+    {
+      "text": "Applied AI",
+      "kind": "inferred_taxonomy",
+      "source_id": "cmu-minor-ai-catalog",
+      "locator": "Cognition and Action; Perception and Language technical-elective pools"
     }
   ]
 }

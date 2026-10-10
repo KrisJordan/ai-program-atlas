@@ -22,3 +22,7 @@ Seed record: `data/programs/penn-concentration-ai-business.json`. 28 observed co
 ## Validation
 
 `tests/test_cmu_penn.py` uses synthetic HTML, not copied catalog fixtures, and checks section failure, actual changed-course extraction, nested options, unknown credits, credential distinctions, and record references. Live official HTML was also parsed locally for this review.
+
+## Inferred comparison themes
+
+Added explicitly `inferred_taxonomy` labels from the existing cited curriculum: AI methods, Responsible AI and society, Applied AI. Locators name the supporting core, requirement, overview or elective-pool section. These are analyst classifications for comparison, not university-stated outcomes, and elective-pool themes do not imply every student takes every option. Existing source-stated outcomes are unchanged.

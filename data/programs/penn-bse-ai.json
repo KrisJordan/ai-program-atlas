@@ -59,8 +59,8 @@
       "category": "foundations",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://www.engineering.upenn.edu/~cis3200/",
+      "syllabus": "https://www.engineering.upenn.edu/~cis3200/21fa/"
     },
     {
       "id": "penn-cis-2450",
@@ -1013,10 +1013,12 @@
     }
   ],
   "notes": [
-    "Partial curriculum extraction; this record is not a graduation audit. Individual course descriptions, prerequisites, public course sites and syllabi have not been verified.",
+    "Partial curriculum extraction; this record is not a graduation audit. Individual course descriptions and prerequisites remain unverified; selected public course resources are documented separately below.",
     "The program webpage is undated and is not assigned a catalog year. The catalog URL returned an empty response; program-page evidence supports the record.",
     "The overview says students choose a concentration, but the explicit AI Concentrations section says concentrations are optional and use four of the six AI elective courses. This inconsistency is unresolved.",
-    "Course options may appear in several categories. Listed pools must not be summed; this record does not assert double-counting permission."
+    "Course options may appear in several categories. Listed pools must not be summed; this record does not assert double-counting permission.",
+    "CIS 3200 public archive and Fall 2021 HTML course outline verified 2026-10-10 (penn-cis3200-archive; penn-cis3200-fall-2021-outline). The official CIS 3200 archive links this older CIS 320-numbered offering. Syllabus URL is an example HTML outline with topics, prerequisites and grading, not a PDF or evidence of current offering/requirements. Current curriculum source_id is unchanged.",
+    "Inferred taxonomy labels summarize themes evidenced by the cited curriculum sections, including elective options where stated. They are analyst classifications, not institution-stated learning outcomes or guarantees that every student completes every theme. Source-stated outcomes are retained separately."
   ],
   "institution": {
     "id": "university-of-pennsylvania",
@@ -1086,6 +1088,26 @@
       "catalog_year": null,
       "locator": "Penn Engineering Announces First Ivy League Undergraduate Degree in Artificial Intelligence; final paragraph",
       "confidence": "high"
+    },
+    {
+      "id": "penn-cis3200-archive",
+      "url": "https://www.engineering.upenn.edu/~cis3200/",
+      "title": "CIS 3200: Intro to Algorithms — past offerings",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Archive identifies CIS 3200 and links Fall 2021",
+      "confidence": "high"
+    },
+    {
+      "id": "penn-cis3200-fall-2021-outline",
+      "url": "https://www.engineering.upenn.edu/~cis3200/21fa/",
+      "title": "Introduction to Algorithms — Fall 2021",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Heading, term, prerequisites, grading and Topics Covered; historical CIS 320 numbering",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -1094,6 +1116,36 @@
       "kind": "source_stated",
       "source_id": "penn-bse-ai-curriculum",
       "locator": "Curriculum > Overview"
+    },
+    {
+      "text": "AI methods",
+      "kind": "inferred_taxonomy",
+      "source_id": "penn-bse-ai-curriculum",
+      "locator": "AI Core: Introduction to AI and Machine Learning"
+    },
+    {
+      "text": "Mathematical foundations",
+      "kind": "inferred_taxonomy",
+      "source_id": "penn-bse-ai-curriculum",
+      "locator": "Mathematics requirements and Optimization & Control"
+    },
+    {
+      "text": "Responsible AI and society",
+      "kind": "inferred_taxonomy",
+      "source_id": "penn-bse-ai-curriculum",
+      "locator": "Curriculum overview: responsible development for societal benefit"
+    },
+    {
+      "text": "Software and systems",
+      "kind": "inferred_taxonomy",
+      "source_id": "penn-bse-ai-curriculum",
+      "locator": "Computing requirement: programming, data structures and algorithms"
+    },
+    {
+      "text": "Applied AI",
+      "kind": "inferred_taxonomy",
+      "source_id": "penn-bse-ai-curriculum",
+      "locator": "AI Project and Senior design requirements"
     }
   ]
 }

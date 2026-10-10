@@ -252,7 +252,8 @@
     "Partial curriculum extraction; this record is not a graduation audit. Individual course descriptions, prerequisites, public course sites and syllabi have not been verified.",
     "At most one concentration per CSCI degree. This is separate from the AI BSE degree and Wharton AI for Business concentration.",
     "Official source contains course codes without titles. Titles, course descriptions, individual course credits and prerequisites are null; no title was guessed.",
-    "First offering date is unknown. Requirements are extracted, but course-level facts remain partial."
+    "First offering date is unknown. Requirements are extracted, but course-level facts remain partial.",
+    "Inferred taxonomy labels summarize themes evidenced by the cited curriculum sections, including elective options where stated. They are analyst classifications, not institution-stated learning outcomes or guarantees that every student completes every theme. Source-stated outcomes are retained separately."
   ],
   "institution": {
     "id": "university-of-pennsylvania",
@@ -299,5 +300,18 @@
       "confidence": "high"
     }
   ],
-  "outcomes": []
+  "outcomes": [
+    {
+      "text": "AI methods",
+      "kind": "inferred_taxonomy",
+      "source_id": "penn-concentration-ai-cs-curriculum",
+      "locator": "Required AI or Machine Learning core options"
+    },
+    {
+      "text": "Applied AI",
+      "kind": "inferred_taxonomy",
+      "source_id": "penn-concentration-ai-cs-curriculum",
+      "locator": "Remaining AI electives include vision, natural language processing and robotics"
+    }
+  ]
 }
