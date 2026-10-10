@@ -68,6 +68,8 @@ def scrape_one(conn, pid, module, fetcher, *, force=False):
                 raise ValueError(
                     "Adapter observations must not replay a curated verification timestamp"
                 )
+            if "curriculum_audit" in observed or observed.get("curriculum_status") == "complete":
+                raise ValueError("Scrapers cannot certify reviewed curriculum completeness")
             validate_requirements(observed)
             fingerprint = digest(observed)
             with conn:

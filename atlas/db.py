@@ -10,7 +10,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlparse
 
-from .requirements import validate_requirements
+from .requirements import validate_curriculum_audit, validate_requirements
 
 STATES = {"pending", "inspected", "confirmed", "no_qualifying_program_found", "inaccessible"}
 OVERRIDE_FIELDS = {
@@ -77,6 +77,7 @@ def upsert_institution(conn, inst):
 
 
 def ingest_cohort(conn, cohort):
+    cohort_sources = {source["url"]: source for source in cohort.get("sources", [])}
     with conn:
         conn.execute(
             "INSERT OR REPLACE INTO metadata VALUES (?,?)",
@@ -85,10 +86,12 @@ def ingest_cohort(conn, cohort):
         for inst in cohort["institutions"]:
             upsert_institution(conn, inst)
             for rank in inst.get("rankings", []):
+                source = cohort_sources.get(rank["source_url"], {})
                 conn.execute(
-                    """INSERT INTO rankings(institution_id,publisher,edition,category,rank,source_url,verification_status)
-                    VALUES (?,?,?,?,?,?,?) ON CONFLICT(institution_id,publisher,edition,category) DO UPDATE SET
-                    rank=excluded.rank,source_url=excluded.source_url,verification_status=excluded.verification_status""",
+                    """INSERT INTO rankings(institution_id,publisher,edition,category,rank,source_url,verification_status,source_date,fetched_at,locator)
+                    VALUES (?,?,?,?,?,?,?,?,?,?) ON CONFLICT(institution_id,publisher,edition,category) DO UPDATE SET
+                    rank=excluded.rank,source_url=excluded.source_url,verification_status=excluded.verification_status,
+                    source_date=excluded.source_date,fetched_at=excluded.fetched_at,locator=excluded.locator""",
                     (
                         inst["id"],
                         rank.get("publisher", "U.S. News"),
@@ -97,6 +100,9 @@ def ingest_cohort(conn, cohort):
                         rank["rank"],
                         rank["source_url"],
                         rank.get("verification_status", "secondary_reported"),
+                        rank.get("source_date", source.get("source_date")),
+                        rank.get("fetched_at", source.get("fetched_at")),
+                        rank.get("locator"),
                     ),
                 )
             # A cohort reimport must not reset completed inspection work.
@@ -165,6 +171,7 @@ def validate_program(program):
         if outcome["kind"] == "source_stated" and not outcome.get("source_id"):
             raise ValueError("Source-stated outcome needs source evidence")
     validate_requirements(program)
+    validate_curriculum_audit(program)
 
 
 def ingest_program(conn, program, run_id=None):
@@ -217,6 +224,8 @@ def ingest_program(conn, program, run_id=None):
         )
         # FK-safe replacement order; overrides and revisions are intentionally untouched.
         for table in (
+            "curriculum_review_sources",
+            "curriculum_reviews",
             "requirement_courses",
             "requirement_groups",
             "courses",
@@ -244,6 +253,17 @@ def ingest_program(conn, program, run_id=None):
             conn.execute(
                 "INSERT INTO program_links VALUES (?,?,?,?)",
                 (pid, link["kind"], link["url"], link.get("label")),
+            )
+        audit = program.get("curriculum_audit")
+        if audit:
+            conn.execute(
+                "INSERT INTO curriculum_reviews VALUES (?,?,?,?,?,?)",
+                (pid, audit["scope"], audit["reviewed_at"], canonical(audit["sections"]),
+                 canonical(audit["unresolved_requirements"]), canonical(audit["metadata_gaps"])),
+            )
+            conn.executemany(
+                "INSERT INTO curriculum_review_sources VALUES (?,?)",
+                [(pid, source_id) for source_id in audit["source_ids"]],
             )
         for c in program.get("courses", []):
             conn.execute(
@@ -425,7 +445,7 @@ def export_data(conn):
         record["institution"]["rankings"] = [
             dict(rank)
             for rank in conn.execute(
-                "SELECT publisher,edition,category,rank,source_url,verification_status FROM rankings WHERE institution_id=? ORDER BY category",
+                "SELECT publisher,edition,category,rank,source_url,verification_status,source_date,fetched_at,locator FROM rankings WHERE institution_id=? ORDER BY category",
                 (row["institution_id"],),
             )
         ]
@@ -445,7 +465,7 @@ def export_data(conn):
         inst["rankings"] = [
             dict(r)
             for r in conn.execute(
-                "SELECT publisher,edition,category,rank,source_url,verification_status FROM rankings WHERE institution_id=? ORDER BY category",
+                "SELECT publisher,edition,category,rank,source_url,verification_status,source_date,fetched_at,locator FROM rankings WHERE institution_id=? ORDER BY category",
                 (iid,),
             )
         ]

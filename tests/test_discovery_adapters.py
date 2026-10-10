@@ -49,11 +49,13 @@ def test_discovery_records_and_adapter_registration(pid):
     validate_program(program)
     adapter = importlib.import_module(f'atlas.adapters.{pid}.adapter')
     assert adapter.PROGRAM_ID == pid
-    assert adapter.SOURCES == (program['sources'][0]['url'],)
-    assert program['curriculum_status'] == 'pending'
-    assert not program['courses'] and not program['requirements']
-    assert program['first_offered'] is None
-    assert program['institution']['calendar'] == 'unknown'
+    source_urls = {source['url'] for source in program['sources']}
+    assert adapter.SOURCES
+    assert set(adapter.SOURCES) <= source_urls
+    if program['curriculum_status'] == 'pending':
+        assert not program['courses'] and not program['requirements']
+    else:
+        assert program['requirements']
     with pytest.raises(ValueError):
         adapter.parse('<main><h1>Unrelated course catalog</h1></main>')
     with pytest.raises(ValueError):
