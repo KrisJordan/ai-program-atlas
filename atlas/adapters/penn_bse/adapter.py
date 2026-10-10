@@ -99,3 +99,7 @@ PROGRAM_ID = "penn-bse-ai"
 
 SOURCES.extend([HANDBOOK, INVENTORY])
 SOURCE_PARSERS = {HANDBOOK: parse_technical_policy, INVENTORY: parse_technical_inventory}
+
+from .canonical_handbook import URL as HANDBOOK_URL, parse as parse_canonical_handbook
+SOURCES.append(HANDBOOK_URL)
+SOURCE_PARSERS[HANDBOOK_URL] = parse_canonical_handbook

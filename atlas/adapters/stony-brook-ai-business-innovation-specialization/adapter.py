@@ -1,0 +1,12 @@
+"""Observe Stony Brook's distinct Business Management AI specialization and local policies."""
+from atlas.adapters.national_curriculum_common import content,require_phrases,rule
+PROGRAM_ID='stony-brook-ai-business-innovation-specialization'
+SOURCES=('https://www.stonybrook.edu/business/undergraduate/specializations.html',)
+SID=PROGRAM_ID+'-official'
+
+
+def parse(html):
+    root=content(html,'AI for Business Innovation')
+    require_phrases(root,['Bachelors of Science in Business Management Specializations','Students planning to graduate by May 2027 are not eligible to declare this specialization','Business Major Specialization Declaration Form','a course cannot be used to fulfill two areas of specialization','no more than 6 transfer credits','approval of the Director of Undergraduate Studies','transcript after graduation, but not on your degree','complete a new declaration form','after you have taken all of your fundamental classes','not all specialization courses are offered every academic year'])
+    observations=[('cohort','Graduation-cohort restriction','Students planning to graduate by May 2027 cannot declare this AI specialization, although they may take its courses. This restriction does not establish a first-offered date.'),('declare','Declaration procedure','Declare with the Business Major Specialization Declaration Form; submit a new form to change the specialization.'),('planning','Recommended declaration planning','The college suggests declaring after the fundamental marketing, finance, accounting and operations classes, while checking course sequences with an advisor. A senior-year change is discouraged because required courses may not run every academic year.'),('overlap','Multiple specializations','Two specializations are allowed if all requirements can be completed, but a course cannot satisfy two specialization areas.'),('transfer','Transfer-credit approval and limit','The Director of Undergraduate Studies must approve transfer courses. At most six transfer credits may count toward the specialization.'),('recognition','Transcript recognition','Specializations are recorded on the transcript after graduation, rather than on the degree.')]
+    return dict(id=PROGRAM_ID,title='AI for Business Innovation',award_level='concentration',program_kind='concentration',requirements=[rule(PROGRAM_ID+'-'+key,title,SID,kind='note',summary=summary) for key,title,summary in observations])
