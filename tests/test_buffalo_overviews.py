@@ -71,3 +71,31 @@ def test_reviewed_buffalo_records_preserve_gaps():
         assert module.PROGRAM_ID == d["id"]
         if d["program_kind"] == "degree":
             assert len(module.SOURCE_PARSERS) == 2
+
+
+def test_program_specific_language_and_internship_rules():
+    title = "AI and Language and Intercultural Competence"
+    html = (
+        "<h1>"
+        + title
+        + "</h1><h2>What will I learn?</h2><p>A capstone. You can choose from Example Language, Other Language—as you take advanced courses.</p><h2>What can I do with an "
+        + title
+        + " degree?</h2><p>Several paths.</p>"
+    )
+    d = parse_degree(html, "language", title, "unused")
+    assert "Example Language, Other Language" in d["requirements"][-1]["summary"]
+    with pytest.raises(ValueError, match="options"):
+        parse_degree(html.replace("choose from", "consider"), "language", title, "unused")
+    title = "AI and Logic and Ontology"
+    html = (
+        "<h1>"
+        + title
+        + "</h1><h2>What will I learn?</h2><p>An internship and capstone.</p><h2>What can I do with an "
+        + title
+        + " degree?</h2><p>Several paths.</p>"
+    )
+    assert (
+        parse_degree(html, "logic", title, "unused")["requirements"][-1]["id"] == "logic-internship"
+    )
+    with pytest.raises(ValueError, match="Internship"):
+        parse_degree(html.replace("internship", "project"), "logic", title, "unused")

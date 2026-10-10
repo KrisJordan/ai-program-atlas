@@ -1,9 +1,19 @@
 # AI and Logic and Ontology
 
-Official identity source: https://arts-sciences.buffalo.edu/college/departments-and-programs/social-sciences/ai-society.html
+Reviewed 2026-10-10. Official source: https://www.buffalo.edu/undergrad-programs/ai-and-logic-and-ontology.html
 
-Directory/identity verified; curriculum pending. No courses, requirements or outcomes have yet been extracted.
+The degree connects AI with formal logic, symbolic reasoning, epistemology and computational ontology, culminating in an internship and capstone.
 
-Official department directory confirms seven explicitly BS-labeled AI degrees and two minors. An additional AI and Philosophy, Politics and Economics entry lacks award type in inspected directory and requires follow-up. Curriculum and full campus inventory pending.
+Status is **partial**. The official department explicitly identifies this BS as an AI+X degree and describes five framework components; approved course sets remain unknown. Source: https://engineering.buffalo.edu/ai-society/academics.html
 
-The adapter validates a title in visible content headings or links and the award/kind in its local card or heading section. It returns only observed identity fields and never replays seed metadata, curriculum, or dates. A failure means review is required; it does not mean the program is absent. Tests use synthetic HTML to verify rejection behavior; live refresh is not claimed.
+## Source boundary
+
+The catalog host failed during robots.txt retrieval (ConnectError); the indexed Language Technology catalog page could not be opened by web retrieval either. No course list was fabricated from marketing topics. Program-specific career roles are observed only where explicitly listed. Raw pages remain in the private HTTP cache and are not committed.
+
+## Next checks
+
+Read the current official catalog curriculum and every linked selection/policy rule. Resolve course inventory, credits/units, prerequisites, grades, residency and overlap policies and university/college degreewide rules. Verify academic calendar and launch evidence separately. Public course sites and syllabi are unknown.
+
+## Adapter behavior
+
+The parser checks this named program and actual source sections, and extracts observed credit/declaration/career facts. The second source parser validates all five AI+X components and its published credit language; it rejects changed rules for review. It does not emit a review audit, verification date or complete status. Synthetic fixtures exercise missing and changed statements.

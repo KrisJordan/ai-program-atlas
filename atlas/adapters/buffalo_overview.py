@@ -49,7 +49,7 @@ def parse_degree(html, pid, title, url):
     careers = section(soup, "What can I do with an " + title + " degree?")
     if not learning or not careers:
         raise ValueError("Missing program learning or career content")
-    # Career lists contain concise factual role names, not copied marketing paragraphs.
+    # Extract explicitly listed opportunities, which can include roles, settings or activities.
     heading = soup.find(
         lambda n: (
             n.name in ["h2", "h3"] and text(n) == "What can I do with an " + title + " degree?"
@@ -85,6 +85,34 @@ def parse_degree(html, pid, title, url):
             )
         ]
         result["curriculum_status"] = "partial"
+    learning_text = " ".join(learning)
+    if title == "AI and Language and Intercultural Competence":
+        match = re.search(r"choose from (.+?)—as you take advanced", learning_text)
+        if not match:
+            raise ValueError("Language specialization options changed or missing")
+        result.setdefault("requirements", []).append(
+            requirement(
+                pid,
+                "language-choice",
+                "Language specialization",
+                "Choose a language specialization from: "
+                + match[1]
+                + ". Exact language sequences remain unverified.",
+                pid + "-program",
+            )
+        )
+    if title == "AI and Logic and Ontology":
+        if "internship" not in learning_text:
+            raise ValueError("Internship component changed or missing")
+        result.setdefault("requirements", []).append(
+            requirement(
+                pid,
+                "internship",
+                "Internship component",
+                "The overview identifies an internship in addition to the capstone. Course code, credits and detailed approval rules remain unverified.",
+                pid + "-program",
+            )
+        )
     return result
 
 
