@@ -458,13 +458,17 @@
   },
   {
     "institution_id": "franklin-and-marshall-college",
-    "status": "pending",
-    "note": "Attempted academics URL returned 404; replacement program directory has not been located and reviewed.",
+    "status": "inspected",
+    "note": "Official Fields of Study directory read via homepage navigation. Artificial Intelligence and the Liberal Arts is explicitly a certificate, outside degree/minor/concentration scope. Full concentration-level catalog review remains unfinished; no absence claim.",
     "checked_at": "2026-10-10",
     "sources": [
       {
         "url": "https://www.fandm.edu/academics/",
         "title": "Franklin & Marshall College official academics/program directory"
+      },
+      {
+        "url": "https://www.fandm.edu/fields-of-study/",
+        "title": "Fields of Study"
       }
     ],
     "discoveries": []
@@ -588,13 +592,17 @@
   },
   {
     "institution_id": "union-college",
-    "status": "pending",
-    "note": "Attempted academics and academic-programs URLs were not accessible via web tool; correct public directory remains to be located.",
+    "status": "inspected",
+    "note": "Official majors/minors directory opened through homepage navigation and checked for AI titles. Full catalog/concentration review remains unfinished; no absence claim.",
     "checked_at": "2026-10-10",
     "sources": [
       {
         "url": "https://www.union.edu/academics",
         "title": "Union College official academics/program directory"
+      },
+      {
+        "url": "https://www.union.edu/academic/majors-minors",
+        "title": "Academic Programs"
       }
     ],
     "discoveries": []
@@ -614,13 +622,17 @@
   },
   {
     "institution_id": "connecticut-college",
-    "status": "pending",
-    "note": "Attempted directory URL was not accessible via web tool; correct public directory remains to be located.",
+    "status": "inspected",
+    "note": "Official academics page and linked majors/minors page opened. The latter exposes a dynamic search field without its program list in readable page text. Preliminary inspection only; catalog/concentration review remains unfinished and no absence claim is made.",
     "checked_at": "2026-10-10",
     "sources": [
       {
         "url": "https://www.conncoll.edu/academics/majors-departments-programs/",
         "title": "Connecticut College official academics/program directory"
+      },
+      {
+        "url": "https://www.conncoll.edu/academics/majors-departments-programs/majors-and-minors/",
+        "title": "Majors and Minors"
       }
     ],
     "discoveries": []
@@ -705,13 +717,17 @@
   },
   {
     "institution_id": "centre-college",
-    "status": "pending",
-    "note": "Attempted directory URL was not accessible via web tool; correct public directory remains to be located.",
+    "status": "inspected",
+    "note": "Official program directory opened through homepage navigation and checked for AI titles. Full catalog/concentration review remains unfinished; no absence claim.",
     "checked_at": "2026-10-10",
     "sources": [
       {
         "url": "https://www.centre.edu/academics/majors-minors",
         "title": "Centre College official academics/program directory"
+      },
+      {
+        "url": "https://www.centre.edu/academics/majors-minors-programs",
+        "title": "Majors, Minors, and Programs"
       }
     ],
     "discoveries": []
@@ -790,13 +806,21 @@
   },
   {
     "institution_id": "saint-anselm-college",
-    "status": "pending",
-    "note": "Attempted directory URL was not accessible via web tool; correct public directory remains to be located.",
+    "status": "inspected",
+    "note": "Official Areas of Study directory read and Applied Artificial Intelligence detail page inspected. The program is explicitly a certificate, outside degree/minor/concentration scope. Full catalog/concentration review remains unfinished; no absence claim.",
     "checked_at": "2026-10-10",
     "sources": [
       {
         "url": "https://www.anselm.edu/academics/majors-minors",
         "title": "Saint Anselm College official academics/program directory"
+      },
+      {
+        "url": "https://www.anselm.edu/academics/areas-study",
+        "title": "Areas of Study"
+      },
+      {
+        "url": "https://www.anselm.edu/academics/majors-minors/applied-artificial-intelligence",
+        "title": "Applied Artificial Intelligence \u2014 Offered as a certificate"
       }
     ],
     "discoveries": []
@@ -842,13 +866,17 @@
   },
   {
     "institution_id": "whittier-college",
-    "status": "pending",
-    "note": "Attempted directory URL was not accessible via web tool; correct public directory remains to be located.",
+    "status": "inspected",
+    "note": "Official program directory opened through homepage navigation and checked for AI titles. Full catalog/concentration review remains unfinished; no absence claim.",
     "checked_at": "2026-10-10",
     "sources": [
       {
         "url": "https://www.whittier.edu/academics/majors",
         "title": "Whittier College official academics/program directory"
+      },
+      {
+        "url": "https://www.whittier.edu/academics/programs",
+        "title": "Majors and Programs"
       }
     ],
     "discoveries": []

@@ -4,7 +4,7 @@
     "id": "denison-university",
     "name": "Denison University",
     "aliases": [],
-    "calendar": "unknown",
+    "calendar": "semester",
     "website": "https://denison.edu"
   },
   "title": "Machine Learning and Artificial Intelligence",
@@ -33,6 +33,11 @@
       "kind": "catalog",
       "url": "https://denison.edu/academics/machine-learning-and-artificial-intelligence/courses",
       "label": "2026\u20132027 course descriptions"
+    },
+    {
+      "kind": "catalog",
+      "url": "https://catalog.denison.edu/catalog/courses-of-study/machine-learning/",
+      "label": "2026\u20132027 official catalog"
     }
   ],
   "sources": [
@@ -65,6 +70,56 @@
       "catalog_year": null,
       "locator": "Departmental Guidelines & Mission Statement",
       "confidence": "high"
+    },
+    {
+      "id": "denison-academic-credit-policy",
+      "url": "https://catalog.denison.edu/catalog/academic-program/academic-credit-policy/",
+      "title": "Academic Credit Policy",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Minimum standards; regular semester of 14 instructional weeks plus one exam week",
+      "confidence": "high"
+    },
+    {
+      "id": "denison-mlai-catalog",
+      "url": "https://catalog.denison.edu/catalog/courses-of-study/machine-learning/",
+      "title": "Machine Learning & AI (ML)",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "2026\u20132027 Requirements and Courses; full minor title in mission statement",
+      "confidence": "high"
+    },
+    {
+      "id": "denison-catalog-math-145",
+      "url": "https://catalog.denison.edu/search/?P=MATH+145",
+      "title": "MATH 145 \u2014 Multivariable Calculus",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "MATH 145 course heading and prerequisite statement",
+      "confidence": "high"
+    },
+    {
+      "id": "denison-catalog-math-213",
+      "url": "https://catalog.denison.edu/search/?P=MATH+213",
+      "title": "MATH 213 \u2014 Linear Algebra and Differential Equations",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "MATH 213 course heading and prerequisite statement",
+      "confidence": "high"
+    },
+    {
+      "id": "denison-catalog-cs-145",
+      "url": "https://catalog.denison.edu/search/?P=CS+145",
+      "title": "CS 145 \u2014 Introduction to Algorithm Design",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "CS 145 course heading and prerequisite statement",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -86,13 +141,13 @@
       "id": "denison-math-145",
       "code": "MATH 145",
       "name": "Multivariable Calculus",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "description": "Multivariable calculus with introductory linear algebra.",
+      "prerequisites": "Placement or MATH 135.",
+      "credits": 4,
+      "credit_unit": "semester_hours",
       "category": "mathematics",
-      "source_id": "denison-mlai-requirements",
-      "url": "https://denison.edu/academics/machine-learning-and-artificial-intelligence/degree-requirements",
+      "source_id": "denison-catalog-math-145",
+      "url": "https://catalog.denison.edu/search/?P=MATH+145",
       "public_site": null,
       "syllabus": null
     },
@@ -100,13 +155,13 @@
       "id": "denison-math-213",
       "code": "MATH 213",
       "name": "Linear Algebra and Differential Equations",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "description": "Linear algebra and its applications to differential equations.",
+      "prerequisites": "MATH 145.",
+      "credits": 4,
+      "credit_unit": "semester_hours",
       "category": "mathematics",
-      "source_id": "denison-mlai-requirements",
-      "url": "https://denison.edu/academics/machine-learning-and-artificial-intelligence/degree-requirements",
+      "source_id": "denison-catalog-math-213",
+      "url": "https://catalog.denison.edu/search/?P=MATH+213",
       "public_site": null,
       "syllabus": null
     },
@@ -114,13 +169,13 @@
       "id": "denison-cs-145",
       "code": "CS 145",
       "name": "Introduction to Algorithm Design",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "description": "Algorithmic problem solving and Python programming.",
+      "prerequisites": "CS 105 or placement waiver.",
+      "credits": 4,
+      "credit_unit": "semester_hours",
       "category": "foundations",
-      "source_id": "denison-mlai-requirements",
-      "url": "https://denison.edu/academics/machine-learning-and-artificial-intelligence/degree-requirements",
+      "source_id": "denison-catalog-cs-145",
+      "url": "https://catalog.denison.edu/search/?P=CS+145",
       "public_site": null,
       "syllabus": null
     },
@@ -131,7 +186,7 @@
       "description": "Probability through empirical investigation and programming.",
       "prerequisites": "MATH 145 and CS 145, or a course in CS 109\u2013CS 114; consult source for exact grouping.",
       "credits": 4,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "mathematics",
       "source_id": "denison-mlai-courses",
       "url": "https://denison.edu/academics/machine-learning-and-artificial-intelligence/courses",
@@ -145,7 +200,7 @@
       "description": "Empirical probability experiments and programming practice.",
       "prerequisites": "ML 221 or MATH 221 as corequisite.",
       "credits": 1,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "mathematics",
       "source_id": "denison-mlai-courses",
       "url": "https://denison.edu/academics/machine-learning-and-artificial-intelligence/courses",
@@ -159,7 +214,7 @@
       "description": "Foundational machine learning concepts and applied algorithms.",
       "prerequisites": null,
       "credits": 4,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "ai_ml",
       "source_id": "denison-mlai-courses",
       "url": "https://denison.edu/academics/machine-learning-and-artificial-intelligence/courses",
@@ -173,7 +228,7 @@
       "description": "Mathematical analysis and implementation of modern machine learning.",
       "prerequisites": null,
       "credits": 4,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "ai_ml",
       "source_id": "denison-mlai-courses",
       "url": "https://denison.edu/academics/machine-learning-and-artificial-intelligence/courses",
@@ -187,7 +242,7 @@
       "description": "Deep learning, convolutional models and transformers.",
       "prerequisites": null,
       "credits": 4,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "ai_ml",
       "source_id": "denison-mlai-courses",
       "url": "https://denison.edu/academics/machine-learning-and-artificial-intelligence/courses",
@@ -203,7 +258,7 @@
       "kind": "all",
       "count": null,
       "credits": null,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "other",
       "source_id": "denison-mlai-requirements",
       "source_text": null,
@@ -221,9 +276,10 @@
     }
   ],
   "notes": [
-    "All eight required courses are enumerated; three cognate credits and several prerequisite expressions remain unverified. Curriculum is therefore partial.",
-    "The five ML courses publish Credit Hours; semester/quarter normalization has not been verified, so credit_unit is unknown.",
+    "All eight required courses and individual credits are documented. Institutional minor policies and several complex prerequisite expressions remain unextracted, so curriculum status remains partial.",
+    "Semester credit-hour normalization is supported by the 2026\u20132027 Academic Credit Policy, which defines course credits over the regular semester.",
     "Course codes preserve cross-listings. Course categories are editorial classifications.",
-    "First-offered date is unknown. No launch date inferred from the approval announcement."
+    "First-offered date is unknown. No launch date inferred from the approval announcement.",
+    "The official department requirements page uses the full title Machine Learning and Artificial Intelligence; the catalog heading abbreviates it as Machine Learning & AI (ML) and spells it out in the mission statement."
   ]
 }
