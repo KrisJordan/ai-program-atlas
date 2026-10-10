@@ -120,3 +120,18 @@ def parse_cim_reference(html):
 
 
 SOURCE_PARSERS = {SOURCES[2]: parse_cim_reference}
+
+from importlib import import_module
+
+policies = import_module('atlas.adapters.mit-ai-decision-making-bs.policies')
+
+SOURCES.extend([policies.GIR, policies.GRADES, policies.GRADUATION,
+                policies.DEPARTMENT, policies.PETITIONS, policies.EMBEDDED])
+SOURCE_PARSERS.update({
+    policies.GIR: policies.parse_gir,
+    policies.GRADES: policies.parse_grades,
+    policies.GRADUATION: policies.parse_graduation,
+    policies.DEPARTMENT: policies.parse_department,
+    policies.PETITIONS: policies.parse_petitions,
+    policies.EMBEDDED: policies.parse_versioned,
+})
