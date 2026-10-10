@@ -1,9 +1,7 @@
-# Artificial Intelligence Concentration
+# Boston College AI concentration
 
-Official identity source: https://www.bc.edu/bc-web/schools/morrissey/departments/computer-science/academics/programs.html
+Reviewed 2026-10-10. The Programs page AI accordion is isolated from BA/BS/minor/Software Engineering sections. Local structure is six courses: Machine Learning and Deep Learning; two CS3000-level AI Applications/Embodied AI choices; one CS3000-level AI ethics course; senior spring capstone (four credits). CS major overlap has no limit. The source recommends mathematics preparation and departmental advising.
 
-Directory/identity verified; curriculum pending. No courses, requirements or outcomes have yet been extracted.
+Partial: application and ethics eligibility pools are not enumerated, Deep Learning/capstone codes are unknown, and any additional local completion policy remains unverified. Do not import unrelated major prerequisites or treat AI-titled courses as automatically eligible.
 
-Official undergraduate program source inspected; qualifying title confirmed. Institution-wide inventory and curriculum extraction remain incomplete.
-
-The adapter validates a title in visible content headings or links and the award/kind in its local card or heading section. It returns only observed identity fields and never replays seed metadata, curriculum, or dates. A failure means review is required; it does not mean the program is absent. Tests use synthetic HTML to verify rejection behavior; live refresh is not claimed.
+The official Courses page publishes bcweb.bc.edu/aem/coursesfall.json and coursessprg.json in its script. Both robots-allowed feeds were fetched with a bounded 30 MB limit (actual roughly 5 MB). The Fall2026 feed exact title Machine Learning maps CSCI3345 and supplies description, prerequisite string and three credits; credit unit stays unknown. The Spring2027 feed lacked an exact Deep Learning title; this is not an absence claim. Only the used Fall feed is cited in this record. The parser scopes exact named core titles and deduplicates sections by course code. Raw HTML/JSON remains ignored. Description is paraphrased. Tests cover changed total and changed metadata while rejecting unrelated AI titles.

@@ -48,3 +48,53 @@ def test_bc_section_scope_and_changed_count():
  assert p['observed_policy_digest']!=q['observed_policy_digest']
  assert next(r for r in p['requirements'] if r['id']=='bc-ai-group-3')['credits']==4
  assert all('9999' not in r['summary'] for r in p['requirements'])
+
+
+def test_bc_metadata_exact_membership_deduplicates_sections():
+ from atlas.adapters.concentrations_2026 import parse_bc_courses
+ rows=[dict(dept_code='CSCI',title='Machine Learning',crs_number='3345',crs_desc='Learning methods.',prereq='CSCI1102',credits='3'),dict(dept_code='CSCI',title='Unapproved AI Topic',crs_number='9999',credits='3')]
+ raw=json.dumps(dict(msg='OK',payload=rows+[rows[0]]));p=parse_bc_courses(raw,'p','s','u')
+ assert len(p['courses'])==1 and p['courses'][0]['code']=='CSCI 3345'
+ assert p['courses'][0]['prerequisites']=='CSCI1102' and p['courses'][0]['credits']==3
+ assert p['courses'][0]['credit_unit']=='unknown'
+ q=parse_bc_courses(raw.replace('CSCI1102','CSCI1103'),'p','s','u')
+ assert q['courses'][0]['prerequisites']=='CSCI1103' and q['observed_policy_digest']!=p['observed_policy_digest']
+
+
+def duke_fixture(n=3):
+ def section(i,text):return f'<div id="collapse-accordion-1385-{i}">{text}</div>'
+ return '<main><h1>BS Concentration in AI and Machine Learning</h1><p>Fall 2026. At least 15 required units.</p>'+section(1,'<p>Prerequisites (4 units)</p><ol><li>COMPSCI 101L OR COMPSCI 102L OR equivalent</li><li>MATH 111L &amp; MATH 112L OR MATH 21 &amp; MATH 22</li><li>Statistics<ul><li>STA231/MATH 340</li><li>STA 240L</li></ul></li></ol>')+section(2,'<p>Core (5 units)</p><ol><li>COMPSCI 201</li><li>COMPSCI 230 OR COMPSCI 231D</li><li>COMPSCI 210D OR COMPSCI 250D</li><li>COMPSCI 270 OR two courses:<ul><li>one of MATH 202, MATH 212</li><li>AND one of MATH 216, MATH 218</li></ul></li><li>COMPSCI 330</li></ol>')+section(3,'<p>Systems (1 unit)</p><ul><li>COMPSCI 310 OR COMPSCI 510</li></ul>')+section(4,'<p>AI (1 unit)</p><ul><li>COMPSCI 370</li><li>COMPSCI 570</li></ul>')+section(5,'<p>ML (1 unit)</p><ul><li>COMPSCI 571 (cross STA 561, ECE 682)</li></ul>')+section(6,f'<p>Concentration Electives ({n} units)</p><p>{n} COMPSCI courses 200-level.</p><ul><li>COMPSCI 590 Topics<ul><li>Robot Learning</li><li>Deep Learning</li></ul></li><li>COMPSCI 575 - NLP, renumbered from COMPSCI 572 in Fall 2026</li><li>STA 332 - Inference (cross MATH 343), renumbered from STA 432 in Fall 2025 OR ECE 480 - Probability</li><li>one independent study</li></ul><p>Stellic</p>')+section(7,'Academic Plan Change')+section(8,'DUS approval')+'</main>'
+
+
+def test_duke_nested_alternative_crosslists_topics_and_changed_rule():
+ from atlas.adapters.concentrations_2026 import parse_duke_concentration
+ p=parse_duke_concentration(duke_fixture(),'p','s','u');validate_requirements(p)
+ assert next(r for r in p['requirements'] if r['id']=='duke-ai-core-3')['kind']=='alternative'
+ pair=next(r for r in p['requirements'] if r['id']=='duke-ai-core-3-pair')
+ assert pair['kind']=='all' and len([r for r in p['requirements'] if r['parent_id']==pair['id']])==2
+ assert len([c for c in p['courses'] if c['code']=='COMPSCI 590'])==2
+ assert sum(c['code']=='COMPSCI 571 / STA 561 / ECE 682' for c in p['courses'])==1
+ assert not any(c['code'] in ['COMPSCI 572','STA 432','ECE 480'] for c in p['courses'])
+ elective=next(r for r in p['requirements'] if r['id']=='duke-ai-group-6')
+ ml=next(c for c in p['courses'] if c['code'].startswith('COMPSCI 571'))
+ assert ml['id'] in elective['course_ids'] and elective['count']==3
+ q=parse_duke_concentration(duke_fixture(4),'p','s','u')
+ assert next(r for r in q['requirements'] if r['id']=='duke-ai-group-6')['count']==4
+ assert q['observed_policy_digest']!=p['observed_policy_digest'] and 'curriculum_audit' not in q
+ with pytest.raises(ValueError):parse_duke_concentration(duke_fixture().replace('collapse-accordion-1385-8','missing'),'p','s','u')
+
+
+@pytest.mark.parametrize('pid,count',[
+ ('boston-college-artificial-intelligence-concentration-concentration-concentration',1),
+ ('duke-university-ai-and-machine-learning-concentration-concentration',87),
+])
+def test_partial_concentrations_keep_inventory_gaps_separate_from_metadata(pid,count):
+ import importlib
+ p=json.loads((Path(__file__).parents[1]/'data/programs'/f'{pid}.json').read_text());validate_requirements(p);validate_curriculum_audit(p)
+ assert p['curriculum_status']=='partial' and p['curriculum_audit']['unresolved_requirements']
+ assert len(p['courses'])==count and p['first_offered'] is None
+ adapter=importlib.import_module('atlas.adapters.'+pid+'.adapter')
+ assert set(adapter.SOURCE_PARSERS)==set(adapter.SOURCES[1:])
+ if pid.startswith('duke'):
+  assert all(c['credits'] is None and c['prerequisites'] is None for c in p['courses'])
+  assert 'Stellic' in ' '.join(p['curriculum_audit']['unresolved_requirements'])

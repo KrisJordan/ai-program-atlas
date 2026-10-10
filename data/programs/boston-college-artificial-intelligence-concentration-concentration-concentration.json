@@ -10,14 +10,14 @@
   "title": "Artificial Intelligence Concentration",
   "award_level": "concentration",
   "program_kind": "concentration",
-  "hosting_unit": null,
-  "status": "unknown",
+  "hosting_unit": "Department of Computer Science, Morrissey College of Arts and Sciences",
+  "status": "active",
   "first_offered": null,
-  "overview": "Official university content identifies this undergraduate concentration. Curriculum details and complete institutional coverage remain pending.",
+  "overview": "Six-course AI concentration for CS students, combining machine learning, deep learning, applications, ethics and a senior capstone.",
   "catalog_year": null,
-  "verification_status": "partial",
+  "verification_status": "confirmed",
   "last_verified": "2026-10-10",
-  "curriculum_status": "pending",
+  "curriculum_status": "partial",
   "links": [
     {
       "kind": "overview",
@@ -33,15 +33,194 @@
       "fetched_at": "2026-10-10",
       "source_date": null,
       "catalog_year": null,
-      "locator": "Named undergraduate program entry: Artificial Intelligence Concentration; award/type: concentration / concentration",
+      "locator": "Artificial Intelligence Concentration accordion; six-course structure, overlap and preparation paragraphs",
+      "confidence": "high"
+    },
+    {
+      "id": "bc-fall-2026-course-feed",
+      "url": "https://bcweb.bc.edu/aem/coursesfall.json",
+      "title": "Official Boston College Fall 2026 course feed",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "CSCI3345, title Machine Learning, 2026FALL; course feed published in official departmental Courses page script",
       "confidence": "high"
     }
   ],
-  "outcomes": [],
-  "courses": [],
-  "requirements": [],
+  "outcomes": [
+    {
+      "text": "Offers advanced study of AI principles, applications and responsible design, with opportunities to apply methods to real-world domains.",
+      "kind": "source_stated",
+      "source_id": "boston-college-artificial-intelligence-concentration-concentration-concentration-official",
+      "locator": "AI concentration introduction and final paragraph"
+    },
+    {
+      "text": "AI methods",
+      "kind": "inferred_taxonomy",
+      "source_id": "boston-college-artificial-intelligence-concentration-concentration-concentration-official",
+      "locator": "Machine Learning and Deep Learning core; analyst theme, not an institution-stated graduate competency"
+    },
+    {
+      "text": "Responsible AI and society",
+      "kind": "inferred_taxonomy",
+      "source_id": "boston-college-artificial-intelligence-concentration-concentration-concentration-official",
+      "locator": "AI ethics requirement; analyst theme, not an institution-stated graduate competency"
+    },
+    {
+      "text": "Applied AI",
+      "kind": "inferred_taxonomy",
+      "source_id": "boston-college-artificial-intelligence-concentration-concentration-concentration-official",
+      "locator": "Applications / Embodied AI cluster; analyst theme, not an institution-stated graduate competency"
+    }
+  ],
+  "courses": [
+    {
+      "id": "bc-csci-3345",
+      "code": "CSCI 3345",
+      "name": "Machine Learning",
+      "description": "Introduces supervised and unsupervised learning, model generalization and tradeoffs, with methods including trees, neural networks, probabilistic models and instance-based learning. Applications include vision, interaction and computational science.",
+      "prerequisites": "CSCI2244 or MATH4426 and CSCI1102",
+      "credits": 3.0,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "bc-fall-2026-course-feed",
+      "url": "https://bcweb.bc.edu/aem/coursesfall.json",
+      "public_site": null,
+      "syllabus": null
+    }
+  ],
+  "requirements": [
+    {
+      "id": "bc-ai",
+      "parent_id": null,
+      "title": "AI concentration local requirements",
+      "kind": "all",
+      "count": 6,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "boston-college-artificial-intelligence-concentration-concentration-concentration-official",
+      "source_text": null,
+      "summary": "",
+      "course_ids": []
+    },
+    {
+      "id": "bc-ai-group-0",
+      "parent_id": "bc-ai",
+      "title": "AI core",
+      "kind": "note",
+      "count": 2,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "boston-college-artificial-intelligence-concentration-concentration-concentration-official",
+      "source_text": null,
+      "summary": "Take Machine Learning and Deep Learning. Only Machine Learning has a verified course-code match in the inspected public schedule.",
+      "course_ids": [
+        "bc-csci-3345"
+      ]
+    },
+    {
+      "id": "bc-ai-group-1",
+      "parent_id": "bc-ai",
+      "title": "AI applications / embodied AI",
+      "kind": "note",
+      "count": 2,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "boston-college-artificial-intelligence-concentration-concentration-concentration-official",
+      "source_text": null,
+      "summary": "Select two CS courses at the 3000 level from the AI Applications / Embodied AI cluster; the eligible pool is not enumerated in this source.",
+      "course_ids": []
+    },
+    {
+      "id": "bc-ai-group-2",
+      "parent_id": "bc-ai",
+      "title": "AI ethics",
+      "kind": "note",
+      "count": 1,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "boston-college-artificial-intelligence-concentration-concentration-concentration-official",
+      "source_text": null,
+      "summary": "Take one AI ethics CS course at the 3000 level; it may also satisfy the BS Social Ethics cluster.",
+      "course_ids": []
+    },
+    {
+      "id": "bc-ai-group-3",
+      "parent_id": "bc-ai",
+      "title": "Senior capstone",
+      "kind": "note",
+      "count": null,
+      "credits": 4,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "boston-college-artificial-intelligence-concentration-concentration-concentration-official",
+      "source_text": null,
+      "summary": "Complete the four-credit capstone, available to seniors in spring. Its course code and credit-unit convention are not verified.",
+      "course_ids": []
+    },
+    {
+      "id": "bc-ai-overlap",
+      "parent_id": "bc-ai",
+      "title": "CS major overlap",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "boston-college-artificial-intelligence-concentration-concentration-concentration-official",
+      "source_text": null,
+      "summary": "The concentration is for CS students. Courses may count for both the CS major and concentration without a stated double-count limit.",
+      "course_ids": []
+    },
+    {
+      "id": "bc-ai-preparation",
+      "parent_id": "bc-ai",
+      "title": "Mathematics preparation and advising",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "boston-college-artificial-intelligence-concentration-concentration-concentration-official",
+      "source_text": null,
+      "summary": "Some courses may need linear algebra or multivariable calculus. Consult the CS department for current offerings and individual prerequisites.",
+      "course_ids": []
+    }
+  ],
   "notes": [
-    "Directory/identity verified; curriculum pending. No courses, requirements or outcomes have yet been extracted.",
-    "Official undergraduate program source inspected; qualifying title confirmed. Institution-wide inventory and curriculum extraction remain incomplete."
-  ]
+    "The requirement outline is mapped, but approved application and ethics course pools and the capstone code remain unverified. This is partial curriculum evidence, not a graduation audit.",
+    "The public Fall 2026 feed confirms the exact Machine Learning title/code match. Other AI-related course titles are not assumed to belong to the approved cluster. The Spring 2027 feed was also inspected; no exact Deep Learning match was found, which does not establish that the course is absent.",
+    "Published credit numbers are retained with unknown unit; no semester-hour conversion is inferred. Individual prerequisite strings remain unknown where not sourced."
+  ],
+  "curriculum_audit": {
+    "scope": "concentration",
+    "reviewed_at": "2026-10-10",
+    "source_ids": [
+      "boston-college-artificial-intelligence-concentration-concentration-concentration-official",
+      "bc-fall-2026-course-feed"
+    ],
+    "sections": [
+      "Six-course local structure",
+      "Two named AI core courses",
+      "Two application/embodied-AI slots",
+      "AI ethics and BS Social Ethics overlap",
+      "Senior spring capstone, four credits",
+      "Unlimited CS major overlap and mathematics preparation",
+      "Exact Machine Learning course metadata from Fall 2026 feed"
+    ],
+    "unresolved_requirements": [
+      "Finite approved application and ethics course pools are not enumerated.",
+      "Deep Learning and capstone course-code matches are unverified.",
+      "Any additional concentration-specific completion/declaration policies require department clarification."
+    ],
+    "metadata_gaps": [
+      "Only Machine Learning has verified individual metadata.",
+      "Credit-unit normalization, public course sites and syllabi unverified.",
+      "Catalog year and first-offered date not stated."
+    ]
+  }
 }

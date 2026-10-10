@@ -1,9 +1,9 @@
-# AI and Machine Learning
+# Duke CS BS AI and Machine Learning concentration
 
-Official identity source: https://cs.duke.edu/undergraduate/degrees/BS/concentrations/ai-ml
+Reviewed 2026-10-10. Source-specific parser isolates eight curriculum/policy accordions, reads group units and choice counts, preserves calculus pairs and the two-group substitute for COMPSCI270, and extracts public elective/topic rows. Cross-listings stay one record; special-topic names distinguish different offerings. Renumbered historical codes are not additional choices. Only STA332/MATH343 is BS-eligible in its ECE480 alternative; ECE480 is excluded from the candidate pool. The elective pool includes the ML core list but a course cannot be reused for two requirements.
 
-Directory/identity verified; curriculum pending. No courses, requirements or outcomes have yet been extracted.
+Current scope is first-year Fall2026 matriculants. Source explicitly states 15 major units and 34 BS units. This is a concentration inventory, not the entire Trinity/Pratt general-education or host-degree curriculum. The earlier-cohort link is not merged. Fall2026 is a curriculum applicability date, not launch date.
 
-Official undergraduate program source inspected; qualifying title confirmed. Institution-wide inventory and curriculum extraction remain incomplete.
+Partial audit: source says two of three electives must be COMPSCI near the introduction but three COMPSCI courses in the elective accordion; its comprehensive pool is student-only Stellic. The linked substitutions guide differs on COMPSCI270 versus270L and MATH222, and its generic elective guide has an older five-elective structure. Some conditional substitution combinations remain unmapped. Reviewed cross-program policies retain DUS approval, record amendment, no online substitutions, no reuse, no COMPSCI201 substitution, Pratt ECE architecture requirement, and230-specific restrictions. No unsupported source-stated learning outcomes are manufactured; themes are documented inference.
 
-The adapter validates a title in visible content headings or links and the award/kind in its local card or heading section. It returns only observed identity fields and never replays seed metadata, curriculum, or dates. A failure means review is required; it does not mean the program is absent. Tests use synthetic HTML to verify rejection behavior; live refresh is not claimed.
+Adapters emit partial observations without audits/verification dates. Synthetic tests cover changed selection count, nested conjunction/alternatives, topic identity, cross-listings, historical-code exclusion and missing sections. Raw HTML remains ignored.
