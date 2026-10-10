@@ -82,3 +82,11 @@ All remaining records are title-level discoveries with current activity, catalog
 6. **Institution depth:** complete catalog, minor and concentration searches after first-pass directories. Resolve documented leads such as informal Rutgers guidance, UW's upcoming minor and abbreviations outside the exact title rule. Do not change partial inspection into absence without a documented bounded search.
 
 Use `uv run atlas status`, `uv run atlas candidates`, the adapter notes and the task-specific skills for the next batch. Refreshes collect review candidates; they do not silently replace curated research.
+
+## Active curriculum and cohort continuation
+
+The next sourcing batches are underway (2026-10-10). Complete status now requires a cited, scoped review audit, persisted relationally; scrapers cannot issue this certification. Minor/concentration completeness covers that program's local requirements and policies, while host-degree requirements remain outside scope. Course metadata availability is reported separately.
+
+The first reviewed completions are CMU AI minor, Penn AI business concentration, Penn CS AI concentration, Denison ML/AI minor, and Iowa AI minor. Purdue BA now has a partial requirement inventory; accessible catalog batches at Northwestern, Emory, Georgia Tech, Northeastern and Case Western continue. Counts above describe the preceding published snapshot and will be replaced after integration and verified deployment.
+
+Fourteen additional liberal-arts members have been independently sourced and screened; 188 institutions are currently loaded. Further primary-source ranking upgrades and membership-only top-100 evidence are being checked. The database now supports an unknown exact rank with an evidenced upper bound, and the site explicitly labels it rather than inventing a rank. VMI's supplied page is HTTP 403; the Richmond supplied article also remains inaccessible to this research pass. Neither cohort is complete.

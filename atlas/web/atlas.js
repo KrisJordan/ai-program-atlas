@@ -18,6 +18,7 @@
   const e = x => String(x ?? 'Unknown').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const urlSafe = u => /^https?:\/\//.test(u || '');
   const link = (url, label) => urlSafe(url) ? `<a href="${e(url)}" rel="noopener noreferrer">${e(label)} ↗</a>` : e(label);
+  const rankLabel = r => r.rank != null ? `#${r.rank}` : r.rank_upper_bound != null ? `Top ${r.rank_upper_bound} · exact rank unverified` : 'Exact rank unverified';
   const announce = text => { document.getElementById('compare-status').textContent = text; };
   const requirementScope = p => {
     const scope = {concentration: 'Concentration requirements only; not the whole parent degree.', minor: 'Minor requirements only; not the whole degree.', additional_major: 'Additional-major requirements only; not the primary degree.', degree: 'Represented degree program at its recorded catalog year.'}[p.program_kind] || 'Represented program only.';
@@ -83,7 +84,7 @@
     const items = selected.map(id => byId.get(id));
     const rows = [
       ['Award / type', p => e(p.award_level) + '<small>' + e(pretty(p.program_kind)) + '</small>'],
-      ['U.S. News cohort context', p => { const ranks = institutionMap.get(p.institution?.id)?.rankings || p.institution?.rankings || []; return ranks.length ? ranks.map(r => link(r.source_url, `${r.publisher || 'U.S. News'} ${r.edition || 'Edition unknown'} · ${r.category || 'Category unknown'} · #${r.rank ?? 'Unknown'}`) + '<small>Membership evidence: ' + e(pretty(r.verification_status)) + '</small>').join('<br>') + '<small>Institution context, not teaching quality. Different categories are not comparable.</small>' : 'Ranking provenance not recorded'; }],
+      ['U.S. News cohort context', p => { const ranks = institutionMap.get(p.institution?.id)?.rankings || p.institution?.rankings || []; return ranks.length ? ranks.map(r => link(r.source_url, `${r.publisher || 'U.S. News'} ${r.edition || 'Edition unknown'} · ${r.category || 'Category unknown'} · ${rankLabel(r)}`) + '<small>Membership evidence: ' + e(pretty(r.verification_status)) + '</small>').join('<br>') + '<small>Institution context, not teaching quality. Different categories are not comparable.</small>' : 'Ranking provenance not recorded'; }],
       ['Calendar', p => e(pretty(p.institution?.calendar))],
       ['Catalog year', p => e(p.catalog_year)],
       ['Last verified', p => e(p.last_verified || 'Not recorded')],

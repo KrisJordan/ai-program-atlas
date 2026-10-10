@@ -24,6 +24,14 @@ def human(value):
     return str(value or "unknown").replace("_", " ").capitalize()
 
 
+def ranking_label(rank):
+    if rank.get("rank") is not None:
+        return f"#{rank['rank']}"
+    if rank.get("rank_upper_bound") is not None:
+        return f"Top {rank['rank_upper_bound']} · exact rank unverified"
+    return "Exact rank unverified"
+
+
 def safe_url(value):
     value = str(value or "")
     return value if value.startswith(("https://", "http://")) else ""
@@ -225,7 +233,7 @@ def program_page(p, base):
     if rankings:
         ranking_context += '<ul>'
         for rank in rankings:
-            label = f"{rank.get('publisher', 'U.S. News')} {rank.get('edition', 'edition unknown')} · {rank.get('category', 'Category unknown')} · #{rank.get('rank', 'unknown')}"
+            label = f"{rank.get('publisher', 'U.S. News')} {rank.get('edition', 'edition unknown')} · {rank.get('category', 'Category unknown')} · {ranking_label(rank)}"
             ranking_context += f'<li>{external(rank.get("source_url"), label)}<small>Membership evidence: {esc(human(rank.get("verification_status")))}</small></li>'
         ranking_context += '</ul>'
     else:
@@ -254,7 +262,7 @@ def coverage_page(data, base):
         return '<small>' + '<br>'.join(dict.fromkeys(links + discoveries)) + '</small>' if links or discoveries else ''
 
     def ranking_evidence(i):
-        return '<br>'.join(external(r.get('source_url'), f"{r.get('category', 'Category unknown')} · #{r.get('rank', '?')} ({r.get('edition', '?')})") + '<small>' + esc(human(r.get('verification_status'))) + '</small>' for r in i.get('rankings', [])) or 'Not recorded'
+        return '<br>'.join(external(r.get('source_url'), f"{r.get('category', 'Category unknown')} · {ranking_label(r)} ({r.get('edition', '?')})") + '<small>' + esc(human(r.get('verification_status'))) + '</small>' for r in i.get('rankings', [])) or 'Not recorded'
 
     rows = ''.join(f'<tr><th scope="row">{external(i.get("website"), i.get("name"))}</th><td>{ranking_evidence(i)}</td><td>{badge(human(i.get("coverage_status") or "pending"))}</td><td>{esc(i.get("coverage_note") or "Inspection evidence not yet recorded.")}{coverage_evidence(i)}</td><td>{len(i.get("program_ids") or [])}</td></tr>' for i in sorted(institutions, key=lambda i: i.get('name', '')))
     cohort = meta.get('cohort') if isinstance(meta.get('cohort'), dict) else {}

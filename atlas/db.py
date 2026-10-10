@@ -88,10 +88,11 @@ def ingest_cohort(conn, cohort):
             for rank in inst.get("rankings", []):
                 source = cohort_sources.get(rank["source_url"], {})
                 conn.execute(
-                    """INSERT INTO rankings(institution_id,publisher,edition,category,rank,source_url,verification_status,source_date,fetched_at,locator)
-                    VALUES (?,?,?,?,?,?,?,?,?,?) ON CONFLICT(institution_id,publisher,edition,category) DO UPDATE SET
+                    """INSERT INTO rankings(institution_id,publisher,edition,category,rank,source_url,verification_status,source_date,fetched_at,locator,rank_upper_bound)
+                    VALUES (?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT(institution_id,publisher,edition,category) DO UPDATE SET
                     rank=excluded.rank,source_url=excluded.source_url,verification_status=excluded.verification_status,
-                    source_date=excluded.source_date,fetched_at=excluded.fetched_at,locator=excluded.locator""",
+                    source_date=excluded.source_date,fetched_at=excluded.fetched_at,locator=excluded.locator,
+                    rank_upper_bound=excluded.rank_upper_bound""",
                     (
                         inst["id"],
                         rank.get("publisher", "U.S. News"),
@@ -103,6 +104,7 @@ def ingest_cohort(conn, cohort):
                         rank.get("source_date", source.get("source_date")),
                         rank.get("fetched_at", source.get("fetched_at")),
                         rank.get("locator"),
+                        rank.get("rank_upper_bound"),
                     ),
                 )
             # A cohort reimport must not reset completed inspection work.
@@ -258,8 +260,14 @@ def ingest_program(conn, program, run_id=None):
         if audit:
             conn.execute(
                 "INSERT INTO curriculum_reviews VALUES (?,?,?,?,?,?)",
-                (pid, audit["scope"], audit["reviewed_at"], canonical(audit["sections"]),
-                 canonical(audit["unresolved_requirements"]), canonical(audit["metadata_gaps"])),
+                (
+                    pid,
+                    audit["scope"],
+                    audit["reviewed_at"],
+                    canonical(audit["sections"]),
+                    canonical(audit["unresolved_requirements"]),
+                    canonical(audit["metadata_gaps"]),
+                ),
             )
             conn.executemany(
                 "INSERT INTO curriculum_review_sources VALUES (?,?)",
@@ -445,7 +453,7 @@ def export_data(conn):
         record["institution"]["rankings"] = [
             dict(rank)
             for rank in conn.execute(
-                "SELECT publisher,edition,category,rank,source_url,verification_status,source_date,fetched_at,locator FROM rankings WHERE institution_id=? ORDER BY category",
+                "SELECT publisher,edition,category,rank,source_url,verification_status,source_date,fetched_at,locator,rank_upper_bound FROM rankings WHERE institution_id=? ORDER BY category",
                 (row["institution_id"],),
             )
         ]
@@ -465,7 +473,7 @@ def export_data(conn):
         inst["rankings"] = [
             dict(r)
             for r in conn.execute(
-                "SELECT publisher,edition,category,rank,source_url,verification_status,source_date,fetched_at,locator FROM rankings WHERE institution_id=? ORDER BY category",
+                "SELECT publisher,edition,category,rank,source_url,verification_status,source_date,fetched_at,locator,rank_upper_bound FROM rankings WHERE institution_id=? ORDER BY category",
                 (iid,),
             )
         ]
@@ -512,11 +520,44 @@ def export_data(conn):
         "Credit systems and degree structures differ. Course counts are observed records, not degree percentages or quality scores.",
         "CSRankings values are not imported pending reuse permission. Publication rankings do not measure undergraduate teaching quality.",
     ]
+    curriculum = {
+        status: sum(p.get("curriculum_status", "pending") == status for p in programs)
+        for status in ("complete", "partial", "pending")
+    }
+    course_rows = [course for program in programs for course in program.get("courses", [])]
+    curriculum.update(
+        {
+            "program_course_records": len(course_rows),
+            "requirement_nodes": sum(len(p.get("requirements", [])) for p in programs),
+            "review_audits": sum(bool(p.get("curriculum_audit")) for p in programs),
+            "course_metadata": {
+                field: sum(
+                    course.get(field) is not None and course.get(field) != ""
+                    for course in course_rows
+                )
+                for field in (
+                    "name",
+                    "description",
+                    "prerequisites",
+                    "credits",
+                    "public_site",
+                    "syllabus",
+                )
+            },
+            "credit_amount_and_unit": sum(
+                course.get("credits") is not None
+                and course.get("credit_unit", "unknown") != "unknown"
+                for course in course_rows
+            ),
+            "counting_note": "Program-course records include elective pools and repeats across sibling programs. Requirement completeness and course metadata availability are separate; unknown prerequisites do not mean no prerequisites.",
+        }
+    )
     return {
         "meta": {
             "generated_at": generated,
             "cohort": cohort,
             "coverage_summary": summary,
+            "curriculum_summary": curriculum,
             "limitations": limitations,
         },
         "institutions": institutions,
