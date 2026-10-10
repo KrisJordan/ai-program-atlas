@@ -83,14 +83,14 @@
       "id": "purdue-ai-ba-philosophy",
       "parent_id": null,
       "title": "Philosophy coursework",
-      "kind": "choose_credits",
-      "count": null,
+      "kind": "choose_courses",
+      "count": 8,
       "credits": 24,
       "credit_unit": "semester_hours",
       "category": "human_context",
       "source_id": "purdue-ai-ba-department",
       "source_text": null,
-      "summary": "Philosophy options await full plan inspection.",
+      "summary": "Department overview states eight specialized philosophy courses totaling 24 hours. Required courses, subject-area choices and approved elective titles await the full catalog; this is not an unrestricted elective pool.",
       "course_ids": []
     },
     {
@@ -112,6 +112,20 @@
         "purdue-cs-18200",
         "purdue-cs-24300"
       ]
+    },
+    {
+      "id": "purdue-ai-ba-university-ai-competency",
+      "parent_id": null,
+      "title": "University AI working competency",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "purdue-university-ai-competency",
+      "source_text": null,
+      "summary": "Incoming Fall 2026 students must complete approved AI-focused coursework as a university core graduation requirement. Approved courses span one to four hours; the specific AI major course that fulfills this competency is not verified, so no additional credits are inferred.",
+      "course_ids": []
     }
   ],
   "links": [
@@ -141,7 +155,8 @@
     "CS 10100 content is summarized from registered source purdue-cs10100-canonical. Canonical outline, updated 2025-06-20; no current-term offering claim. Original course source supplies requirement identity/credits.",
     "CS 18000 content is summarized from registered source purdue-cs180-canonical. Canonical outline, updated 2025-06-20; no current-term offering claim. Original course source supplies requirement identity/credits.",
     "CS 18200 content and prerequisite is summarized from registered source purdue-cs182-canonical. Canonical outline, updated 2025-06-20; no current-term offering claim. Original course source supplies requirement identity/credits.",
-    "The CS 180 canonical outline uses the older heading Programming I; its source-linked directory course code matches CS 18000. CS 471 canonical material includes a 1998.08 date and was not used as current course evidence."
+    "The CS 180 canonical outline uses the older heading Programming I; its source-linked directory course code matches CS 18000. CS 471 canonical material includes a 1998.08 date and was not used as current course evidence.",
+    "2026-10-10 continuation: department confirms eight philosophy courses but does not enumerate them. Advising and faculty plan pages contain no replacement AI plan. Linked CLA Core 21 PDF is a revised 2019 proposal and is not asserted as current Fall-2026 degree policy. Catalog access restriction remains unresolved."
   ],
   "institution": {
     "id": "purdue-university",
@@ -217,6 +232,16 @@
       "source_date": "2025-06-20",
       "catalog_year": null,
       "confidence": "high"
+    },
+    {
+      "id": "purdue-university-ai-competency",
+      "url": "https://www.purdue.edu/newsroom/2026/Q3/purdues-ai-competency-graduation-requirement-begins-in-every-undergraduate-degree-program/",
+      "title": "AI competency graduation requirement begins in every undergraduate degree program",
+      "fetched_at": "2026-10-10",
+      "source_date": "2026-08-19",
+      "catalog_year": null,
+      "locator": "Incoming Fall 2026 class; university core requirement; approved course credit range",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -224,13 +249,15 @@
       "text": "Examine privacy, bias and responsible technology alongside programming and data skills.",
       "kind": "source_stated",
       "source_id": "purdue-ai-ba-admissions",
-      "locator": "Program Summary"
+      "locator": "Program Summary",
+      "statement_type": "program_aim"
     },
     {
       "text": "Career examples include policy analysis, user experience design and project management; these are prospective paths, not placement statistics.",
       "kind": "source_stated",
       "source_id": "purdue-ai-ba-admissions",
-      "locator": "Possible Careers"
+      "locator": "Possible Careers",
+      "statement_type": "career_pathway"
     }
   ],
   "overview": "A Bachelor of Arts exploring AI through philosophy, ethics, human experience, and technical study.",
@@ -238,16 +265,20 @@
     "scope": "degree",
     "reviewed_at": "2026-10-10",
     "source_ids": [
-      "purdue-ai-ba-department"
+      "purdue-ai-ba-department",
+      "purdue-university-ai-competency"
     ],
     "sections": [
       "Department Plan of Study subject totals",
-      "Required CS course inventory"
+      "Required CS course inventory",
+      "Department overview eight-course philosophy total",
+      "Fall 2026 university AI competency applicability"
     ],
     "unresolved_requirements": [
       "Philosophy required and elective inventory",
       "Degree-wide college and university requirements",
-      "Grade, residency and overlap policies"
+      "Grade, residency and overlap policies",
+      "AI major fulfillment of the new university AI competency is not identified"
     ],
     "metadata_gaps": [
       "Individual CS credits unknown",

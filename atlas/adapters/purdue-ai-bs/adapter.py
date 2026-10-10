@@ -325,3 +325,241 @@ def parse_college_core(html: str) -> dict:
 
 
 SOURCE_PARSERS = {SOURCES[1]: parse_college_core}
+
+# College detail observations are candidates; the reviewer retains the policy audit.
+SCIENCE_BASE = "https://www.purdue.edu/science/Current_Students/curriculum_and_degree_requirements/"
+DETAIL_URLS = {
+    "writing": SCIENCE_BASE + "approved-courses-in-technical-writing.html",
+    "great-issues": SCIENCE_BASE + "Great%20Issues%20Courses.php",
+    "language": SCIENCE_BASE + "current-students-page1.html",
+    "general-education": SCIENCE_BASE + "general-education.html",
+}
+
+
+def detail_page(html, expected):
+    soup = BeautifulSoup(html, "html.parser")
+    h1 = soup.find("h1")
+    if h1 is None or text(h1) != expected:
+        raise ValueError("Unexpected Purdue college detail heading")
+    return h1.parent
+
+
+def parse_writing_courses(html):
+    page = detail_page(html, "Approved courses in Technical Writing and Presenting")
+    pools = {"writing": [], "presentation": [], "combined": []}
+    courses = {}
+    section = None
+    for p in page.find_all("p", recursive=False):
+        value = text(p)
+        if value.startswith("Approved courses in Technical"):
+            section = (
+                "combined"
+                if "Writing and Technical Presentation" in value
+                else ("writing" if "Writing:" in value else "presentation")
+            )
+            continue
+        if not section:
+            continue
+        expiry = re.search(
+            r"(?:approval effective through(?: Spring,)?|approved Fall, \d{4} - Spring,) (\d{4})",
+            value,
+        )
+        if expiry and int(expiry[1]) < 2026:
+            continue
+        item = re.fullmatch(r"([A-Z]+ \d{5})\s*:?[ ]+(.+)", value)
+        if item is None:
+            continue
+        code, title = item.groups()
+        title = re.sub(r"\s*\((?:formerly |approval effective through).+\)$", "", title)
+        c = course(code, title, None, DETAIL_URLS["writing"])
+        c["source_id"] = "purdue-science-writing"
+        c["category"] = "human_context"
+        # Two ENGL 42400 titles are printed. Retain both source observations as aliases.
+        if c["id"] in courses and courses[c["id"]]["name"] != title:
+            courses[c["id"]]["name"] += " / " + title
+        else:
+            courses[c["id"]] = c
+        if c["id"] not in pools[section]:
+            pools[section].append(c["id"])
+    if any(not pool for pool in pools.values()):
+        raise ValueError("Writing/presentation course pools incomplete")
+    reqs = []
+    for section, ids in pools.items():
+        row = requirement(
+            "writing-detail-" + section,
+            "Approved " + section + " courses",
+            "note",
+            ids,
+            parent=PREFIX + "-college-core-technical-writing-and-technical-presentation",
+            summary="Source course pool. Combined courses satisfy both components; separate writing and presentation choices or approved experience are alternatives. University oral communication approvals also satisfy presentation.",
+            cat="human_context",
+        )
+        row["source_id"] = "purdue-science-writing"
+        reqs.append(row)
+    return {
+        "id": PROGRAM_ID,
+        "courses": list(courses.values()),
+        "requirements": reqs,
+        "curriculum_status": "partial",
+    }
+
+
+def parse_great_issues(html):
+    page = detail_page(html, "Great Issues in Science")
+    table = page.find("table", id="example")
+    if table is None or [text(t) for t in table.find("thead").find_all("th")] != [
+        "Subject",
+        "Number",
+        "Keyword/Title",
+        "UCORE",
+        "Semester",
+        "Level",
+    ]:
+        raise ValueError("Great Issues approved-course table changed")
+    courses = []
+    for tr in table.find("tbody").find_all("tr"):
+        cells = [text(td) for td in tr.find_all("td", recursive=False)]
+        if len(cells) != 6 or not re.fullmatch(r"\d{5}[A-Z]*", cells[1]):
+            raise ValueError("Unexpected Great Issues course row")
+        code = cells[0].split(" - ")[0] + " " + cells[1]
+        name = cells[2].rstrip("*").strip()
+        if not name:
+            raise ValueError("Great Issues title missing")
+        c = course(code, name, None, DETAIL_URLS["great-issues"])
+        # Variable-title approvals are distinct; code alone must not merge them.
+        c["id"] += "-" + key(name)
+        c["source_id"] = "purdue-science-great-issues"
+        c["category"] = "human_context"
+        courses.append(c)
+    if not courses:
+        raise ValueError("Great Issues course table empty")
+    row = requirement(
+        "great-issues-detail-pool",
+        "Approved Great Issues titles",
+        "note",
+        [c["id"] for c in courses],
+        parent=PREFIX + "-college-core-great-issues",
+        summary="Only the listed titles are approved, including variable-title courses. The Level column is a course level, not credits; listed semesters are not approval expiry dates.",
+        cat="human_context",
+    )
+    row["source_id"] = "purdue-science-great-issues"
+    return {
+        "id": PROGRAM_ID,
+        "courses": courses,
+        "requirements": [row],
+        "curriculum_status": "partial",
+    }
+
+
+def parse_language_options(html):
+    page = detail_page(html, "Fall 2023 and Forward Language and Culture Options")
+    headings = [
+        p for p in page.find_all("p", recursive=False) if re.fullmatch(r"Option \d+:", text(p))
+    ]
+    if [text(p) for p in headings] != [f"Option {i}:" for i in range(1, 6)]:
+        raise ValueError("Language/culture routes changed")
+    rows = []
+    for p in headings:
+        option = int(re.search(r"\d+", text(p))[0])
+        chunks = []
+        for sibling in p.find_next_siblings():
+            if sibling.name == "p" and text(sibling):
+                break
+            if sibling.name == "ul":
+                chunks.append(text(sibling))
+        value = " ".join(chunks)
+        # Extract actual numeric course/experience facts without replaying the seed policy.
+        amounts = re.findall(r"\((\d+)\)|minimum (\d+)-credit|minimum (\d+)-credit hour", value)
+        observed = [int(next(x for x in groups if x)) for groups in amounts]
+        if not value or not observed:
+            raise ValueError("Language route conditions missing")
+        row = requirement(
+            "language-detail-option-" + str(option),
+            "Language and culture option " + str(option),
+            "note",
+            parent=PREFIX + "-college-core-language-and-culture",
+            summary=f"Published option {option}; explicitly stated numeric course/experience values: {', '.join(map(str, observed))}. Review the cited option's course, waiver and eligibility conditions before updating the curated rule.",
+            cat="human_context",
+        )
+        row["source_id"] = "purdue-science-language"
+        rows.append(row)
+    return {"id": PROGRAM_ID, "requirements": rows, "curriculum_status": "partial"}
+
+
+def parse_general_education(html):
+    page = detail_page(html, "General Education Requirement")
+    value = text(page)
+    found = re.search(r"completing (\w+) courses \((\d+) credits\)", value)
+    if not found or found[1] not in {"three", "four", "five"}:
+        raise ValueError("General education selection rule missing")
+    row = requirement(
+        "college-core-general-education",
+        "General Education",
+        "choose_courses",
+        count={"three": 3, "four": 4, "five": 5}[found[1]],
+        credits=int(found[2]),
+        parent=PREFIX + "-college-core",
+        summary="Select from the college-approved general education list; subject limits, prohibited overlaps and excluded courses require review.",
+        cat="human_context",
+    )
+    row["source_id"] = "purdue-science-general-education"
+    return {"id": PROGRAM_ID, "requirements": [row], "curriculum_status": "partial"}
+
+
+SOURCES += tuple(DETAIL_URLS.values())
+SOURCE_PARSERS.update(
+    {
+        DETAIL_URLS["writing"]: parse_writing_courses,
+        DETAIL_URLS["great-issues"]: parse_great_issues,
+        DETAIL_URLS["language"]: parse_language_options,
+        DETAIL_URLS["general-education"]: parse_general_education,
+    }
+)
+
+AI_REQUIREMENT_URL = "https://www.purdue.edu/newsroom/2026/Q3/purdues-ai-competency-graduation-requirement-begins-in-every-undergraduate-degree-program/"
+
+
+def parse_university_ai(html):
+    soup = BeautifulSoup(html, "html.parser")
+    h1 = soup.find("h1")
+    value = " ".join(soup.get_text(" ", strip=True).split())
+    if h1 is None or "AI competency graduation requirement begins" not in h1.get_text(
+        " ", strip=True
+    ):
+        raise ValueError("University AI requirement heading missing")
+    date = re.search(r"August 19, (\d{4})", value)
+    span = re.search(r"Courses range from (one|two|three) to (four|five) credit hours each", value)
+    if not date or not span or "Beginning with this fall’s incoming class" not in value:
+        raise ValueError("University AI requirement cohort/credit evidence missing")
+    row = {
+        "id": PROGRAM_ID + "-university-ai-competency",
+        "parent_id": None,
+        "title": "University AI working competency",
+        "kind": "note",
+        "count": None,
+        "credits": None,
+        "credit_unit": "semester_hours",
+        "category": "ai_ml",
+        "source_id": "purdue-university-ai-competency",
+        "source_text": None,
+        "summary": f"Required AI-focused coursework applies to the incoming Fall {date[1]} cohort. Approved courses span {span[1]} to {span[2]} credit hours; the specific course fulfilling this major's competency is not verified. Do not add this range to major credits.",
+        "course_ids": [],
+    }
+    return {"id": PROGRAM_ID, "requirements": [row], "curriculum_status": "partial"}
+
+
+SOURCES += (AI_REQUIREMENT_URL,)
+SOURCE_PARSERS[AI_REQUIREMENT_URL] = parse_university_ai
+
+# Policy-only sources remain available for provenance/change detection.
+SOURCES += (
+    "https://www.purdue.edu/science/Current_Students/curriculum_and_degree_requirements/Freshmen%20Composition%20Requirement.html",
+    "https://www.purdue.edu/science/Current_Students/curriculum_and_degree_requirements/TWTP%20Requirement.html",
+    "https://www.purdue.edu/science/Current_Students/curriculum_and_degree_requirements/approved-courses-in-teambuilding-and-collaboration.html",
+    "https://www.purdue.edu/science/Current_Students/curriculum_and_degree_requirements/earning-requirements-through-experience.html",
+    "https://www.purdue.edu/science/Current_Students/general_education_elective_list.php",
+    "https://www.purdue.edu/science/Current_Students/curriculum_and_degree_requirements/multidisciplinary-experience.html",
+    "https://www.purdue.edu/science/Current_Students/curriculum_and_degree_requirements/laboratory-science.html",
+    "https://www.purdue.edu/science/Current_Students/curriculum_and_degree_requirements/approved-sequences-in-laboratory-science.html",
+    "https://www.purdue.edu/science/Current_Students/curriculum_and_degree_requirements/index.html",
+)

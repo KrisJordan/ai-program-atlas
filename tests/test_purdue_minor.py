@@ -206,3 +206,104 @@ def test_reviewed_partial_audits_preserve_exact_gaps():
         assert data["curriculum_status"] == "partial"
         assert data["curriculum_audit"]["unresolved_requirements"]
         assert data["curriculum_audit"]["scope"] == data["program_kind"]
+
+
+def test_purdue_writing_pool_excludes_expired_titles_and_keeps_alias():
+    html = """<div><h1>Approved courses in Technical Writing and Presenting</h1>
+    <p>Approved courses in Technical Writing:</p>
+    <p>ENGL 42400: Example Technical Title</p><p>ENGL 42400: Alternate Printed Title</p>
+    <p>ENGL 42000: Expired Choice (approval effective through 2024 catalog terms ONLY)</p>
+    <p>Approved courses in Technical Presentation:</p><p>PHYS 32300 Example Presentation</p>
+    <p>Approved courses in Technical Writing and Technical Presentation:</p>
+    <p>COM 21700: Example Combined (formerly COM 49100)</p>
+    <p>BIOL 28900: Expired Choice (formerly BIOL 28700, approved Fall, 2007 - Spring, 2017)</p></div>"""
+    m = adapter("purdue-ai-bs")
+    result = m.parse_writing_courses(html)
+    courses = {c["code"]: c for c in result["courses"]}
+    assert set(courses) == {"ENGL 42400", "PHYS 32300", "COM 21700"}
+    assert courses["ENGL 42400"]["name"] == "Example Technical Title / Alternate Printed Title"
+    assert all(c["credits"] is None for c in courses.values())
+    assert "ENGL 42000" in {
+        c["code"]
+        for c in m.parse_writing_courses(html.replace("through 2024", "through 2027"))["courses"]
+    }
+    assert "Changed Combined" in str(
+        m.parse_writing_courses(html.replace("Example Combined", "Changed Combined"))
+    )
+    with pytest.raises(ValueError, match="pools incomplete"):
+        m.parse_writing_courses(
+            html.replace("PHYS 32300 Example Presentation", "No approved presentation")
+        )
+
+
+def test_great_issues_title_specific_pool_never_uses_level_as_credit():
+    html = """<div><h1>Great Issues in Science</h1><table id="example"><thead><tr>
+    <th>Subject</th><th>Number</th><th>Keyword/Title</th><th>UCORE</th><th>Semester</th><th>Level</th>
+    </tr></thead><tbody><tr><td>HONR - Honors</td><td>39900</td><td>Example A*</td><td></td><td>Fall 2026</td><td>3</td></tr>
+    <tr><td>HONR - Honors</td><td>39900</td><td>Example B*</td><td></td><td></td><td>3</td></tr></tbody></table></div>"""
+    m = adapter("purdue-ai-bs")
+    data = m.parse_great_issues(html)
+    assert len({c["id"] for c in data["courses"]}) == 2
+    assert {c["code"] for c in data["courses"]} == {"HONR 39900"}
+    assert all(c["credits"] is None for c in data["courses"])
+    assert (
+        m.parse_great_issues(html.replace("Example B*", "Changed Topic*"))["courses"][1]["name"]
+        == "Changed Topic"
+    )
+    with pytest.raises(ValueError, match="table changed"):
+        m.parse_great_issues(html.replace("<th>Level</th>", "<th>Credits</th>"))
+
+
+def test_general_education_actual_count_and_credit_change():
+    html = "<div><h1>General Education Requirement</h1><p>Complete by completing three courses (9 credits) from the approved list.</p></div>"
+    m = adapter("purdue-ai-bs")
+    row = m.parse_general_education(html)["requirements"][0]
+    assert (row["count"], row["credits"]) == (3, 9)
+    row = m.parse_general_education(html.replace("three courses (9", "four courses (12"))[
+        "requirements"
+    ][0]
+    assert (row["count"], row["credits"]) == (4, 12)
+
+
+def test_language_options_fail_closed_on_removed_route():
+    html = (
+        "<div><h1>Fall 2023 and Forward Language and Culture Options</h1>"
+        + "".join(
+            f"<p><strong>Option {i}:</strong></p><ul><li>Example ({i}) course requirement.</li></ul>"
+            for i in range(1, 6)
+        )
+        + "</div>"
+    )
+    m = adapter("purdue-ai-bs")
+    result = m.parse_language_options(html)
+    assert len(result["requirements"]) == 5
+    assert "5" in result["requirements"][-1]["summary"]
+    assert "curriculum_audit" not in result
+    with pytest.raises(ValueError, match="routes changed"):
+        m.parse_language_options(html.replace("Option 5:", "Option 6:"))
+
+
+@pytest.mark.parametrize("slug", ["purdue-ai-ba", "purdue-ai-bs"])
+def test_purdue_new_university_competency_is_cohort_rule_not_major_launch(slug):
+    html = "<h1>Purdue’s AI competency graduation requirement begins in every undergraduate degree program</h1><p>August 19, 2026</p><p>Beginning with this fall’s incoming class</p><p>Courses range from one to four credit hours each.</p>"
+    m = adapter(slug)
+    result = m.parse_university_ai(html)
+    assert "Fall 2026" in result["requirements"][0]["summary"]
+    assert result["requirements"][0]["credits"] is None
+    assert "first_offered" not in result
+    with pytest.raises(ValueError, match="cohort/credit"):
+        m.parse_university_ai(html.replace("Beginning with this fall’s incoming class", "Students"))
+
+
+def test_purdue_reviewed_college_policies_and_partial_limits():
+    bs = json.loads((ROOT / "data/programs/purdue-ai-bs.json").read_text())
+    reqs = {r["id"]: r for r in bs["requirements"]}
+    assert reqs["purdue-ai-bs-college-core-general-education"]["count"] == 3
+    assert "one semester" in reqs["purdue-ai-bs-college-experience-approval"]["summary"]
+    assert "not AI" in reqs["purdue-ai-bs-lab-sequence-chemistry"]["summary"]
+    assert len(bs["courses"]) >= 96
+    assert bs["curriculum_status"] == "partial"
+    ba = json.loads((ROOT / "data/programs/purdue-ai-ba.json").read_text())
+    assert ba["requirements"][0]["count"] == 8
+    assert len(ba["courses"]) == 5  # no fabricated philosophy pool
+    assert ba["outcomes"][1]["statement_type"] == "career_pathway"
