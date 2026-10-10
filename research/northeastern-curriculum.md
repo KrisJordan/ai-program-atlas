@@ -42,3 +42,25 @@ A separate `northeastern_course_metadata.py` parses scoped official course block
 Remaining boundaries include universitywide/NUpath requirements, open elective course ranges, adviser-approved substitutions, major-specific GPA/grade policies and conditional course reuse. Design recommendations and optional seminars remain notes, not mandatory courses. Economics' lower-level elective limit, Linguistics' non-reuse rule, Psychology's transfer restriction and separately stated major-credit requirement, and Health Science's grade conditions are preserved for review. Most courses still lack descriptions/prerequisites; public course websites and syllabi remain unresearched. None of these records claims a complete degree curriculum.
 
 Second-batch verification: 27 focused parser tests passed. All 13 registered source parsers succeeded with the production fetcher’s current cache, and a repeated run added zero duplicate candidates. A separate temporary database passed ingest, export, static build and SQLite integrity checks. A contemporaneous shared discovery-test failure concerned the RIT adapter/source registration being updated by another agent; no Northeastern test failed.
+
+## Third batch: seven science-focused combined majors
+
+Seven additional 2026–2027 catalogs were obtained through the robots-aware Fetcher on 2026-10-10. Every record remains partial and carries a source-backed audit.
+
+| Combined BS (Boston) | Courses | Requirement nodes |
+| --- | ---: | ---: |
+| [AI and Behavioral Neuroscience](https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-behavioral-neuroscience-bs-bos/) | 71 | 115 |
+| [AI and Biochemistry](https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-biochemistry-bs-bos/) | 52 | 97 |
+| [AI and Chemistry](https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-chemistry-bs-bos/) | 51 | 86 |
+| [AI and Physics](https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-physics-bs-bos/) | 49 | 91 |
+| [AI and Ecology and Evolutionary Biology](https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-ecology-evolutionary-biology-bs-bos/) | 71 | 113 |
+| [AI and Environmental and Sustainability Sciences](https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-environmental-sustainability-sciences-bs-bos/) | 82 | 122 |
+| [AI and Public Health](https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-public-health-bs-bos/) | 97 | 151 |
+
+The batch contributes 473 program-course records, 775 requirement nodes, eleven source-stated educational aims and 38 DS course-metadata observations. All 38 DS records have short supported descriptions and formal prerequisite text. Counts include repeated courses across programs and elective pools.
+
+New source-specific cases include Public Health's two multi-course biology options, a separate required psychology subsection, and independent introductory/upper-level social-science choices. Physics 2 is required independently of the Physics 1 alternative. Ecology's topical choice preserves 16 semester hours and a minimum of one course from each of three lists; summaries explicitly describe the minimum, while individual distribution/overlap checks remain unresolved. Environmental and Sustainability Sciences uses one four-course pool spanning multiple subject headings. Only its reviewed profile pools those unindented subheadings; unrelated subsection boundaries end a choice. Course-title parentheses are retained unless they introduce an explicit requirement annotation. The ecology overview's restrictions on combining majors/minors are preserved as source-guarded policy evidence.
+
+Universitywide/NUpath requirements, eligible courses within open ranges, placement substitutions, corequisite/grade rules and individual course overlap remain documented review gaps. The university's published degree totals are preserved as source notes without summing course pools. Course metadata outside selected DS blocks and public course sites/syllabi remain unresearched. The updated focused suite has 35 passing tests, including the new distribution, sequence-boundary, option-path and overview-policy cases.
+
+Third-batch integration: a temporary database ingested every currently enriched Northeastern record, then passed 34 cached production source parses across 18 programs (including concurrently enriched minors), repeat candidate deduplication, static export/build and SQLite integrity checks. Shared production data/schema were not modified.

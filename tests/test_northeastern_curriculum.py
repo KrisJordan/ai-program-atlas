@@ -165,3 +165,62 @@ def test_unhandled_number_word_does_not_turn_choices_into_required_courses():
     rows='<tr><td>Complete fourteen courses from the following:</td><td class="hourscol">56</td></tr>'+row('LING 3000','Linguistics')
     with pytest.raises(ValueError,match='Unsupported choice count'):
         parse(document(rows))
+
+
+def test_next_unindented_subsection_ends_previous_choice():
+    rows='<tr class="areaheader"><td>Physics</td></tr><tr class="areasubheader"><td>Physics 1</td></tr><tr><td>Complete one of the following:</td><td class="hourscol">5</td></tr>'+row('PHYS 1000','First Physics','',bundle=('PHYS 1001','Lab'))+'<tr class="areasubheader"><td>Physics 2</td></tr>'+row('PHYS 2000','Second Physics','5')
+    result=parse(document(rows));second=next(r for r in result['requirements'] if r['title']=='PHYS 2000')
+    assert next(r for r in result['requirements'] if r['id']==second['parent_id'])['title']=='Physics 2'
+
+
+def test_named_options_group_whole_sequences_and_then_end():
+    rows='<tr class="areaheader"><td>Science</td></tr><tr class="areasubheader"><td>Biology</td></tr><tr><td>Complete one of the following options:</td><td class="hourscol">8-10</td></tr><tr><td>Option 1</td></tr>'+row('BIOL 1000','Biology')+row('BIOL 2000','More Biology')+'<tr><td>Option 2</td></tr>'+row('BIOL 1100','Biology With Lab','',bundle=('BIOL 1101','Lab'))+'<tr class="areasubheader"><td>Psychology</td></tr>'+row('PSYC 1101','Psychology','4')
+    result=parse(document(rows));option=next(r for r in result['requirements'] if r['kind']=='alternative')
+    assert {r['title'] for r in result['requirements'] if r['parent_id']==option['id']}=={'Option 1','Option 2'}
+    psych=next(r for r in result['requirements'] if r['title']=='PSYC 1101')
+    assert next(r for r in result['requirements'] if r['id']==psych['parent_id'])['title']=='Psychology'
+
+
+def test_distribution_credit_minimum_and_each_list_are_retained():
+    rows='<tr><td>Complete 16 semester hours of the following (at least one course must be taken from each list):</td><td class="hourscol">16</td></tr>'
+    for title,code in [('Ecology','EEMB 1000'),('Evolution','EEMB 2000'),('Analysis','EEMB 3000')]:
+        rows+=f'<tr class="areaheader"><td>{title}</td></tr>'+row(code,title)
+    result=parse(document(rows));credits=next(r for r in result['requirements'] if r['kind']=='choose_credits')
+    groups=[r for r in result['requirements'] if r['parent_id']==credits['id']]
+    assert len(groups)==3 and all(r['count']==1 for r in groups)
+    assert all('At least one' in r['summary'] for r in groups)
+
+
+def test_course_title_parentheses_are_not_requirement_annotations():
+    result=parse(document(row('HLTH 5280','The (in)Visibility of (dis)Ability in Society')))
+    assert result['courses'][0]['name']=='The (in)Visibility of (dis)Ability in Society'
+
+
+def test_course_options_do_not_capture_the_next_area():
+    rows='<tr class="areaheader"><td>Chemistry elective</td></tr><tr><td>Complete one course from the following options:</td><td class="hourscol">4</td></tr>'+row('CHEM 3000','Chemistry')+'<tr class="areaheader"><td>Math</td></tr>'+row('MATH 1000','Calculus')
+    result=parse(document(rows));math=next(r for r in result['requirements'] if r['title']=='Math')
+    parent=next(r for r in result['requirements'] if r['id']==math['parent_id'])
+    assert parent['title']=='Biology Requirements'
+
+
+def test_distribution_minimum_survives_course_lab_options():
+    rows='<tr><td>Complete 16 semester hours of the following (at least one course must be taken from each list):</td><td class="hourscol">16</td></tr><tr class="areaheader"><td>Ecology</td></tr>'+row('EEMB 1000','Ecology','',bundle=('EEMB 1001','Lab'))+row('EEMB 2000','Evolution')
+    result=parse(document(rows));group=next(r for r in result['requirements'] if r['title']=='Ecology')
+    assert group['kind']=='choose_courses' and group['count']==1 and 'At least one' in group['summary']
+
+
+def test_reviewed_pooled_subheaders_keep_one_selection_pool():
+    rows='<tr class="areaheader"><td>Environmental Electives</td></tr><tr><td>Complete any 4 courses from this list:</td><td class="hourscol">16-19</td></tr><tr class="areasubheader"><td>Earth</td></tr>'+row('ENVR 1000','Earth')+'<tr class="areasubheader"><td>Society</td></tr>'+row('ENVR 2000','Environment')
+    result=parse_catalog(document(rows),program_id='test-program',title=TITLE,url=URL,required_sections=['Biology Requirements'],pooled_subheaders=['Environmental Electives'])
+    choice=next(r for r in result['requirements'] if r['kind']=='choose_courses')
+    assert choice['count']==4
+    assert all(r['parent_id']==choice['id'] for r in result['requirements'] if r['course_ids'])
+
+
+def test_overview_combination_restriction_is_source_guarded():
+    html=document(row('EEMB 1000','Ecology'),overview='Students cannot combine majors in biology.')
+    args=dict(program_id='test-program',title=TITLE,url=URL,required_sections=['Biology Requirements'],overview_rules=[('cannot combine majors in biology','Combination restriction','Biology major combination is not permitted.')])
+    result=parse_catalog(html,**args)
+    assert any(r['title']=='Combination restriction' for r in result['requirements'])
+    changed=parse_catalog(html.replace('cannot combine majors in biology','different policy'),**args)
+    assert not any(r['title']=='Combination restriction' for r in changed['requirements'])

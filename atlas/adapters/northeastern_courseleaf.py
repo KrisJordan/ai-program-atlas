@@ -50,7 +50,7 @@ def summarize_rule(text):
     return re.sub(r'^Complete\s+', 'Required: ', text)
 
 
-def parse_catalog(html, *, program_id, title, url, required_sections, outcome_claims=()):
+def parse_catalog(html, *, program_id, title, url, required_sections, outcome_claims=(), pooled_subheaders=(), overview_rules=()):
     soup = BeautifulSoup(html, 'html.parser')
     heading = soup.find(id='site-title')
     h1 = heading.find('h1') if heading else None
@@ -98,6 +98,7 @@ def parse_catalog(html, *, program_id, title, url, required_sections, outcome_cl
         if 'sc_courselist' not in element.get('class', []): continue
         area, parent, previous, choice = section, section, None, None
         option_choice = None
+        distribution_choice = None
         for row in element.find_all('tr'):
             cells = row.find_all('td', recursive=False)
             if not cells: continue
@@ -114,14 +115,23 @@ def parse_catalog(html, *, program_id, title, url, required_sections, outcome_cl
                      summary='Published section subtotal; overlapping courses and choices are not summed by this parser.')
                 continue
             if 'areaheader' in classes:
-                area = rule(text, (option_choice or section)['id']); parent, previous, choice = area, None, None; continue
+                if distribution_choice:
+                    area = rule(text, distribution_choice['id'], 'choose_courses', count=1, summary='At least one course from this list; additional selections may contribute toward the overall credit requirement.')
+                    parent, previous, choice = area, None, area
+                else:
+                    area = rule(text, (option_choice or section)['id']); parent, previous, choice = area, None, None
+                continue
             if 'areasubheader' in classes:
-                if choice:
+                if choice and (row.find(class_='blockindent') or area['title'] in pooled_subheaders):
                     rule(text, choice['id'], kind='note', summary='Subgroup within the preceding elective choice.'); continue
-                parent = rule(text, area['id']); previous = None; continue
+                parent = rule(text, area['id']); previous, choice, option_choice = None, None, None; continue
             codecell = row.find('td', class_='codecol')
             if codecell is None:
-                number = re.search(r'(?:Complete|Choose)\s+(?:at least\s+)?(one|two|three|four|five|six|seven|eight|nine|ten|\d+)\b', text, re.I)
+                if re.fullmatch(r'Option \d+', text) and option_choice:
+                    parent = rule(text, option_choice['id'], summary='Take every required course in this option.')
+                    previous, choice = None, None
+                    continue
+                number = re.search(r'(?:Complete|Choose)\s+(?:(?:at least|any)\s+)?(one|two|three|four|five|six|seven|eight|nine|ten|\d+)\b', text, re.I)
                 unitmatch = re.search(r'(one|two|three|four|five|six|seven|eight|nine|ten|\d+) semester hours', text, re.I)
                 numbers = dict(one=1,two=2,three=3,four=4,five=5,six=6,seven=7,eight=8,nine=9,ten=10)
                 amount = (numbers.get(unitmatch[1].lower(), int(unitmatch[1]) if unitmatch[1].isdigit() else None) if unitmatch else None)
@@ -129,12 +139,15 @@ def parse_catalog(html, *, program_id, title, url, required_sections, outcome_cl
                     if credit is not None and credit != amount:
                         raise ValueError('Conflicting credit-choice amounts')
                     choice = rule(area['title'] + ' credit choice', parent['id'], 'choose_credits', credits=amount, summary=summarize_rule(text) + range_note)
+                    if 'each list' in text:
+                        if 'at least one course' not in text: raise ValueError('Changed distribution minimum requires review')
+                        distribution_choice = choice
                 elif number:
                     word = number[1].lower(); count = numbers.get(word, int(word) if word.isdigit() else None)
                     # A course+lab combination is one alternative, not two independently selectable courses.
                     bundled = 'corresponding lab' in text or 'following options' in text and count == 1
                     choice = rule(area['title'] + ' course choice', parent['id'], 'alternative' if bundled else 'choose_courses', credits=credit, count=None if bundled else count, summary=summarize_rule(text) + range_note)
-                    if 'following options' in text and count == 1:
+                    if re.search(r'(?:one|1) of the following options', text):
                         option_choice = choice
                 else:
                     if text.startswith(('Complete', 'Choose')) and any(word in text for word in ('following', 'courses', 'semester hours')) and 'home college' not in text:
@@ -144,7 +157,7 @@ def parse_catalog(html, *, program_id, title, url, required_sections, outcome_cl
             links = codecell.find_all('a', class_='code')
             if not links or len(cells) < 2: raise ValueError('Unrecognized course row')
             codes = [clean(a) for a in links]
-            if choice and choice['kind'] == 'choose_courses' and choice['count'] == 1 and len(codes) > 1:
+            if choice and choice['kind'] == 'choose_courses' and choice['count'] == 1 and len(codes) > 1 and not (distribution_choice and choice is area):
                 choice['kind'], choice['count'] = 'alternative', None
             if any(not re.fullmatch(r'[A-Z]+ \d+[A-Z]?', x) for x in codes): raise ValueError('Unrecognized course code')
             titlecell = BeautifulSoup(str(cells[1]), 'html.parser')
@@ -157,8 +170,9 @@ def parse_catalog(html, *, program_id, title, url, required_sections, outcome_cl
             for index, code in enumerate(codes):
                 name = names[index] if len(codes) > 1 else clean(cells[1])
                 # Parenthetical concurrency instructions are rule evidence, not the course title.
-                if '(' in name:
-                    base, annotation = name.split('(', 1)
+                qualifier = re.search(r'\s+\((?:concurrent with|with optional|Preferred)\b', name, re.I)
+                if qualifier:
+                    base, annotation = name[:qualifier.start()], name[qualifier.start():].strip()[1:]
                     annotations.append((code, annotation.rstrip(')')))
                     name = base.strip()
                 cid = program_id + '-' + slug(code)
@@ -194,6 +208,9 @@ def parse_catalog(html, *, program_id, title, url, required_sections, outcome_cl
     if not courses: raise ValueError('No scoped curriculum courses found')
     overview = soup.find(id='textcontainer')
     overview_text = clean(overview) if overview else ''
+    for phrase, label, summary in overview_rules:
+        if phrase in overview_text:
+            rule(label, root['id'], kind='note', summary=summary)
     outcomes = [dict(text=summary, kind='source_stated', source_id=sid, locator='Program overview')
                 for phrase, summary in outcome_claims if phrase in overview_text]
     return dict(id=program_id, title=title, award_level='BS', program_kind='degree',

@@ -1,15 +1,13 @@
 # Artificial Intelligence and Behavioral Neuroscience, BS (Boston)
 
-Official identity source: https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/
+Official source: https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-behavioral-neuroscience-bs-bos/
 
-Directory/identity verified; curriculum pending. No courses, requirements or outcomes have yet been extracted.
+Reviewed 2026-10-10; catalog 2026-2027. Direct curriculum page fetched through the robots-aware production Fetcher (HTTP 200). The adapter validates the exact program title and reviewed section inventory, observes all requirement tables and footnotes, and never reads seed data or emits a fresh review timestamp.
 
-Official catalog combined-major directory confirms 22 named AI combined BS programs; separate environmental engineering combined degree and two AI minor pages also inspected. Directory confirmation does not establish full curriculum extraction or complete campus inventory.
+71 program-course records; 115 nested requirement nodes. Credit/course choices, course bundles and alternatives are represented. Bundle totals are not assigned to each course; blank credit cells remain unknown. Sources explicitly state semester hours. Course categories are editorial, and outcomes paraphrase the program overview. Selected DS descriptions and prerequisites are documented in the metadata extension; other descriptions/prerequisites and public course websites/syllabi remain unresearched.
 
-The adapter validates a title in visible content headings or links and the award/kind in its local card or heading section. It returns only observed identity fields and never replays seed metadata, curriculum, or dates. A failure means review is required; it does not mean the program is absent. Tests use synthetic HTML to verify rejection behavior; live refresh is not claimed.
+Curriculum remains **partial**. Universitywide and NUpath policies are linked but not fully expanded. Open elective ranges and conditional placement substitutions require individual review. Advanced neuroscience courses cannot repeat courses used for earlier requirements. Upper-division electives include open ranges across several subjects; eligible offerings remain unexpanded. Policies that need individual review appear as notes rather than invented executable rules. Degree totals are reported as source rules, not calculated from the course inventory. The source-specific curriculum audit documents all unresolved areas.
 
-## Cached layout verification — 2026-10-10
+Tests: synthetic CourseLeaf structures exercise choices, nested design paths, bundle credits, footnotes, changing source facts and source identity guards. Raw HTML is retained only in the ignored cache.
 
-The main catalog directory omits the BS abbreviation from each visible entry. The adapter matches the explicit Boston title spelling and requires the immediately preceding list-section heading to state Bachelor of Science. It does not use sidebar navigation or infer the award from the target URL.
-
-Validation used previously fetched, ignored local HTML. This adapter refreshes identity only; full curriculum extraction remains pending. No reviewed seed content or verification timestamp is replayed by the parser.
+Metadata extension: 5 course records enriched from the official Data Science subject catalogs. Each source has its own registered parser and provenance. Subject parsers emit metadata-only review candidates and never replace a complete curriculum automatically. Missing prerequisite fields stay null. Other course descriptions/prerequisites remain unresearched.
