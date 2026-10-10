@@ -136,3 +136,9 @@ SOURCE_PARSERS.update({
     policies.PETITIONS: policies.parse_petitions,
     policies.EMBEDDED: versioned.parse,
 })
+
+registrar = import_module('atlas.adapters.mit-ai-decision-making-bs.registrar')
+supplement = import_module('atlas.adapters.mit-ai-decision-making-bs.supplement')
+for module in (registrar, supplement):
+    SOURCES.extend(module.SOURCE_PARSERS)
+    SOURCE_PARSERS.update(module.SOURCE_PARSERS)
