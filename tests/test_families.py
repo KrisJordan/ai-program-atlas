@@ -569,3 +569,24 @@ def test_optional_family_shape_and_annotations_round_trip_without_hash_drift(tmp
     db.ingest_program(conn,complete_variant(family))
     assert db.export_data(conn)['programs'][0]['curriculum_status']=='complete'
     conn.close()
+
+
+def test_standalone_family_import_without_cohort_creates_institution_first(tmp_path):
+    import json
+    from atlas import db
+    from atlas.cli import ingest_all
+    conn=db.connect(tmp_path/'standalone.sqlite');db.migrate(conn)
+    data=tmp_path/'standalone-input';(data/'families').mkdir(parents=True);(data/'programs').mkdir()
+    (data/'families'/'family.json').write_text(json.dumps(synthetic_family()))
+    for variant in [synthetic_variant(),synthetic_variant('philosophy','BA')]:
+        (data/'programs'/(variant['id']+'.json')).write_text(json.dumps(variant))
+    assert ingest_all(conn,data)==2
+    exported=db.export_data(conn)
+    assert len(exported['families'])==1 and len(exported['programs'])==2
+    assert len(exported['institutions'])==1
+    assert exported['institutions'][0]['id']=='synthetic-university'
+    assert ingest_all(conn,data)==0
+    assert conn.execute('SELECT count(*) FROM family_revisions').fetchone()[0]==1
+    assert conn.execute('SELECT count(*) FROM program_revisions').fetchone()[0]==2
+    assert conn.execute('PRAGMA foreign_key_check').fetchall()==[]
+    conn.close()
