@@ -228,3 +228,51 @@ def test_delaware_sample_is_not_full_degree_inventory():
         load("delaware-ai-engineering-major").parse(
             delaware_fixture().replace("Engineering BS", "Engineering MS")
         )
+
+
+def test_stevens_hydrated_plan_rejects_placeholder_total():
+    pid = "stevens-institute-of-technology-artificial-intelligence-bs-degree"
+    mod = load(pid)
+
+    def fixture(total=125, placeholder=False):
+        html = "<h1>Bachelor of Science in Artificial Intelligence</h1>"
+        for i in range(1, 9):
+            item = (
+                "<li>-</li>"
+                if placeholder
+                else '<li><a href="/courses/example'
+                + str(i)
+                + '">CS '
+                + str(100 + i)
+                + "</a> - Example Topic "
+                + str(i)
+                + " (3 cr)</li>"
+            )
+            html += (
+                '<div id="Semester '
+                + str(i)
+                + '-panel"><label>Total Degree Credits</label><div>'
+                + str(total)
+                + "</div><ul>"
+                + item
+                + "</ul></div>"
+            )
+        return html
+
+    observed = mod.parse_plan(fixture())
+    assert len(observed["courses"]) == 8
+    assert observed["requirements"][0]["credits"] == 125
+    assert all(c["credits"] == 3 for c in observed["courses"])
+    with pytest.raises(ValueError, match="unhydrated"):
+        mod.parse_plan(fixture(58))
+    with pytest.raises(ValueError, match="placeholder"):
+        mod.parse_plan(fixture(58, True))
+    with pytest.raises(ValueError, match="rendering required"):
+        mod.parse_rules(
+            '<h1>Bachelor of Science in Artificial Intelligence</h1><a data-course-id="x">course</a>'
+        )
+    d = mod.parse(
+        "<h1>Bachelor's Degree in Artificial Intelligence</h1><p>Bachelor of Science in Artificial Intelligence; two-semester senior design capstone.</p>"
+    )
+    assert d["requirements"][0]["source_id"] == pid + "-official"
+    assert "curriculum_audit" not in d

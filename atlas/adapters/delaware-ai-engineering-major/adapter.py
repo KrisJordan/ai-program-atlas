@@ -51,7 +51,7 @@ def parse(html):
         summary="Illustrative department study plan, not a fully verified graduation requirement inventory. The source directs students to the current catalog and states courses may change.",
     )
     for year in ["First Year", "Second Year", "Third Year", "Fourth Year"]:
-        h = soup.find(lambda n: n.name == "h5" and text(n) == year)
+        h = soup.find(lambda n, year=year: n.name == "h5" and text(n) == year)
         if h is None:
             raise ValueError("Sample year section missing")
         box = h.find_parent(class_="et_pb_toggle")
