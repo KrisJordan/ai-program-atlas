@@ -32,3 +32,28 @@ def test_lake_forest_track_choice_and_nonduplicated_course_inventory():
     assert capstone['prerequisites'] == 'MATH 150 or permission of instructor.'
     assert all(c['credits'] is None for c in courses.values())
     assert all(o['statement_type'] == 'learning_outcome' for o in d['outcomes'])
+
+def test_ursinus_credit_exclusions_aliases_and_partial_policy_audit():
+    d = record('ursinus-ai-minor')
+    assert d['curriculum_status'] == 'partial'
+    assert d['catalog_year'] == '2026-2027'
+    courses = {c['code']: c for c in d['courses']}
+    assert len(courses) == 22
+    assert sum(c['name'] is not None for c in courses.values()) == 21
+    assert courses['STAT-142']['credits'] == 1
+    assert courses['STAT-141']['credits'] == 4
+    assert courses['CS-372']['credits'] is None
+    assert courses['CS-372']['name'] is None
+    assert courses['PHIL/CS-243']['name'] == 'Technology and Ethics'
+    assert courses['STAT-244']['prerequisites'] == 'None (explicitly stated).'
+    assert courses['PHIL-274']['prerequisites'] is None
+    req = {r['id'].removeprefix('ursinus-ai-minor-'): r for r in d['requirements']}
+    assert req['total']['credits'] == 24
+    assert req['total']['credit_unit'] == 'semester_hours'
+    assert len(req['required']['course_ids']) == 5
+    assert len(req['electives']['course_ids']) == 17
+    assert 'both STAT-242W and STAT-243W' in req['statistics-credit']['summary']
+    assert 'director' in req['grading']['summary']
+    assert any('overlap' in gap for gap in d['curriculum_audit']['unresolved_requirements'])
+    assert d['outcomes'][0]['statement_type'] == 'program_aim'
+    assert d['outcomes'][1]['kind'] == 'inferred_taxonomy'
