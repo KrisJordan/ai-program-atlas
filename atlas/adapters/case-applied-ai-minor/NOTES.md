@@ -1,0 +1,7 @@
+# Applied Artificial Intelligence minor
+
+Reviewed 2026-10-10 against the 2026–2027 bulletin. This is distinct from Case's technical Artificial Intelligence minor. The inventory covers two required courses, four societal-impact choices (choose one), nineteen application choices (at least two courses and six credits), the sixteen-credit total and eligibility without prior computing. Cross-listed or combined undergraduate/graduate labels remain one published choice; their individual credits are unknown.
+
+The complete audit covers this minor's published requirements, university declaration/catalog-term/transfer/grading rules, and the required CSDS 101/102 enrollment restrictions. It does not certify the host degree. CSDS 101 bars previous 300-level CSDS enrollment; CSDS 102 bars current or previous such enrollment and has a prerequisite disjunction. Those prerequisite alternatives do not waive CSDS 101 from this minor. Elective prerequisites and descriptions, public sites, syllabi and most individual credits remain metadata gaps. The independently read university credit-hour definition establishes semester-based units.
+
+Activity remains unknown: the catalog publishes the minor but the university AI hub still marks Applied AI as NEW, In Approval. Both sources are registered; no first-instruction date is inferred. The source-specific parser observes the three course groups and numeric requirements, emits partial candidates only, and never copies the curated audit or status conflict into purported fresh observations.
