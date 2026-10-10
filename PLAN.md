@@ -58,26 +58,28 @@ The next committed release candidate expands Northeastern to 23 variants (22 BS 
 
 ## Next release candidate — verification in progress
 
-Committed research through `12d636e` has been ingested into the maintained database, with repeat ingest changing zero records and integrity checks passing. The first clean run passed all 17 browser checks but found one stale survey assertion (634 passed / 1 failed / 9 optional cache tests skipped); the assertion now verifies known evidence-backed institutions without capping future discoveries. This updated candidate incorporates that fix, Notre Dame and Northeastern Business. These counts are **local**, pending clean tests and remote publication verification:
+Committed research through `469c338` has been ingested into the maintained database, with repeat ingest changing zero program records and integrity checks passing. The clean test sequence found and corrected a stale survey assertion, then revealed an older discovery classification that failed to refresh; the latter now updates reviewed classification fields while preserving evidence history and manual program corrections. These counts are **local**, pending the final clean tests and remote deployment:
 
 | Measure | Candidate count |
 | --- | ---: |
 | Institutions / National Universities / Liberal Arts Colleges | 194 / 108 / 86 |
 | Confirmed / inspected / inaccessible / pending / absence conclusions | 58 / 128 / 8 / 0 / 0 |
 | Programs / degrees / minors / concentrations / additional majors | 124 / 60 / 42 / 19 / 3 |
-| Complete / partial / pending curricula | 25 / 84 / 15 |
-| Program-course records / resolved requirement nodes | 4,954 / 5,899 |
+| Complete / partial / pending curricula | 27 / 85 / 12 |
+| Program-course records / resolved requirement nodes | 4,985 / 5,927 |
 | Families / concrete variants | 2 / 31 |
-| Descriptions / prerequisite statements / known credit amounts with units | 258 / 335 / 1,483 |
+| Descriptions / prerequisite statements / known credit amounts with units | 265 / 342 / 1,483 |
 | Public course sites / example syllabi | 22 / 18 |
 
-This candidate adds the full 23-variant Northeastern mapping and common university policies; canonical Penn handbook evidence; Purdue college rules; CMU/Penn core-course metadata and term-labelled course sites; complete scoped Lake Forest, Emory, Indiana and Case minor/concentration reviews; expanded Ursinus, Miami, RIT, Maryland/California/USF, Delaware/Drexel/Stevens and other curricula. Status/source discrepancies remain explicit. Separate source-statement types distinguish learning outcomes, program aims and career pathways from inferred taxonomy.
+This candidate adds the full 23-variant Northeastern mapping, common university policies and Business concentration inventories; canonical Penn handbook evidence; Purdue college rules; CMU/Penn core-course metadata and term-labelled course sites; complete scoped Lake Forest, Emory, Indiana, Case and Villanova minor/concentration reviews; expanded Ursinus, Notre Dame, Miami, RIT, Maryland/California/USF, Delaware/Drexel/Stevens and other curricula. Status/source discrepancies remain explicit. Separate source-statement types distinguish learning outcomes, program aims and career pathways from inferred taxonomy.
 
-Nine newly verified identities at MIT, NC State, Villanova, UVA and Tufts still need curriculum review. Six older pending inventories have documented access barriers. HWS adds one qualified inferred-edition ranking row and an inspected program-directory/catalog ledger; no absence conclusion. See [access review](research/access-review.md), [pending curriculum barriers](research/pending-curriculum-barriers.md) and each adapter's NOTES.md.
+The directory embeds a compact comparison/search projection (about 69% smaller raw and 64% smaller gzipped in a controlled comparison); full static detail pages and data.json remain intact. No runtime fetch or server was added.
+
+Nine new identities were verified at MIT, NC State, Villanova, UVA and Tufts; three Villanova inventories are now mapped. Six older pending inventories have documented access barriers. HWS adds one qualified inferred-edition ranking row and an inspected program-directory/catalog ledger; no absence conclusion. See [access review](research/access-review.md), [pending curriculum barriers](research/pending-curriculum-barriers.md) and each adapter's NOTES.md.
 
 ## Active continuation
 
-Northeastern Business now includes all 14 published concentration inventories with primary/secondary eligibility preserved; its home-college applicability remains unresolved. Notre Dame's two minors now preserve current-page/catalog differences and explicitly sourced semester-hour units. The newly accessible MIT/NC State/Villanova/UVA/Tufts records are being extracted; Stanford and Tulane policy/source gaps are also under review. A lightweight directory payload improvement is being tested separately. Research continues during fixed-snapshot tests. Working-tree edits are excluded from the release until committed, ingested and verified. Raw pages remain ignored.
+Northeastern Business now includes all 14 published concentration inventories with primary/secondary eligibility preserved; its home-college applicability remains unresolved. Notre Dame's two minors now preserve current-page/catalog differences and explicitly sourced semester-hour units. The newly accessible MIT/NC State/Villanova/UVA/Tufts records are being extracted; Stanford and Tulane policy/source gaps are also under review. The compact directory payload is included in this candidate; full static data remain available. Research continues during fixed-snapshot tests. Working-tree edits are excluded from the release until committed, ingested and verified. Raw pages remain ignored.
 
 ## Remaining work and access blockers
 
