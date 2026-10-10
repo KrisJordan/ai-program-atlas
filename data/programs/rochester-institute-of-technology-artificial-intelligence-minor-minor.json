@@ -4,25 +4,30 @@
     "id": "rochester-institute-of-technology",
     "name": "Rochester Institute of Technology",
     "aliases": [],
-    "website": null,
-    "calendar": "unknown"
+    "website": "https://www.rit.edu/",
+    "calendar": "semester"
   },
   "title": "Artificial Intelligence",
   "award_level": "minor",
   "program_kind": "minor",
-  "hosting_unit": null,
-  "status": "unknown",
+  "hosting_unit": "Golisano College of Computing and Information Sciences",
+  "status": "active",
   "first_offered": null,
-  "overview": "Official university content identifies this undergraduate minor. Curriculum details and complete institutional coverage remain pending.",
-  "catalog_year": null,
-  "verification_status": "partial",
+  "overview": "Technical AI minor with a one-credit foundation choice and five electives (15 hours).",
+  "catalog_year": "2026-2027",
+  "verification_status": "confirmed",
   "last_verified": "2026-10-10",
-  "curriculum_status": "pending",
+  "curriculum_status": "partial",
   "links": [
     {
       "kind": "overview",
       "url": "https://www.rit.edu/study/artificial-intelligence-minor",
       "label": "Official program identity source"
+    },
+    {
+      "kind": "catalog",
+      "url": "https://academiccatalog.rit.edu/programs/artificial-intelligence-minor/",
+      "label": "Official requirements"
     }
   ],
   "sources": [
@@ -35,13 +40,404 @@
       "catalog_year": null,
       "locator": "Named undergraduate program entry: Artificial Intelligence; award/type: minor / minor",
       "confidence": "high"
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-curriculum",
+      "url": "https://academiccatalog.rit.edu/programs/artificial-intelligence-minor/",
+      "title": "Artificial Intelligence — curriculum",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Program overview, course requirement table, elective lists and program policy notes; reviewed in ordinary browser UI",
+      "confidence": "high"
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-gcis505",
+      "url": "https://academiccatalog.rit.edu/search/?P=GCIS-505",
+      "title": "GCIS-505 AI for Programmers",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "GCIS-505 course popup opened from minor curriculum: description, 1 credit and prerequisites",
+      "confidence": "high"
     }
   ],
-  "outcomes": [],
-  "courses": [],
-  "requirements": [],
+  "outcomes": [
+    {
+      "text": "Apply computational AI methods, including supervised and unsupervised learning, to domain-specific problems.",
+      "kind": "source_stated",
+      "source_id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-curriculum",
+      "locator": "Program Overview"
+    }
+  ],
+  "courses": [
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-gcis-505",
+      "code": "GCIS-505",
+      "name": "AI for Programmers",
+      "description": "A programming-focused introduction to practical AI applications and its role in software development.",
+      "prerequisites": "Restricted to GCCIS students with at least second-year standing and GCIS-124, CSCI-142, GCIS-127, CSCI-140, IGME-106, CSCI-242, or an equivalent course. Python, database and network API experience is expected.",
+      "credits": 1,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-gcis505",
+      "url": "https://academiccatalog.rit.edu/search/?P=GCIS-505",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-gcis-350",
+      "code": "GCIS-350",
+      "name": "Artificial Intelligence and Law",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "human_context",
+      "source_id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-curriculum",
+      "url": "https://academiccatalog.rit.edu/search/?P=GCIS-350",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-csci-231",
+      "code": "CSCI-231",
+      "name": "Concepts of AI: A Problem-based Approach",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-curriculum",
+      "url": "https://academiccatalog.rit.edu/search/?P=CSCI-231",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-iste-470",
+      "code": "ISTE-470",
+      "name": "Data Mining And Exploration",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-curriculum",
+      "url": "https://academiccatalog.rit.edu/search/?P=ISTE-470",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-iste-472",
+      "code": "ISTE-472",
+      "name": "Text Analytics",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-curriculum",
+      "url": "https://academiccatalog.rit.edu/search/?P=ISTE-472",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-iste-476",
+      "code": "ISTE-476",
+      "name": "Visual Analytics",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-curriculum",
+      "url": "https://academiccatalog.rit.edu/search/?P=ISTE-476",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-ling-581",
+      "code": "LING-581",
+      "name": "Natural Language Processing I",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-curriculum",
+      "url": "https://academiccatalog.rit.edu/search/?P=LING-581",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-swen-566",
+      "code": "SWEN-566",
+      "name": "AI Centric Software",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-curriculum",
+      "url": "https://academiccatalog.rit.edu/search/?P=SWEN-566",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-igme-489",
+      "code": "IGME-489",
+      "name": "Geospatial Artificial Intelligence",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-curriculum",
+      "url": "https://academiccatalog.rit.edu/search/?P=IGME-489",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-igme-560",
+      "code": "IGME-560",
+      "name": "Artificial Intelligence for Game Environments",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-curriculum",
+      "url": "https://academiccatalog.rit.edu/search/?P=IGME-560",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-csec-520",
+      "code": "CSEC-520",
+      "name": "Cyber Analytics and Machine Learning",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-curriculum",
+      "url": "https://academiccatalog.rit.edu/search/?P=CSEC-520",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-csci-331",
+      "code": "CSCI-331",
+      "name": "Introduction to Artificial Intelligence",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-curriculum",
+      "url": "https://academiccatalog.rit.edu/search/?P=CSCI-331",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-csci-335",
+      "code": "CSCI-335",
+      "name": "Machine Learning",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-curriculum",
+      "url": "https://academiccatalog.rit.edu/search/?P=CSCI-335",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-idai-202",
+      "code": "IDAI-202",
+      "name": "Problem Solving in Artificial Intelligence",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-curriculum",
+      "url": "https://academiccatalog.rit.edu/search/?P=IDAI-202",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-csci-431",
+      "code": "CSCI-431",
+      "name": "Introduction to Computer Vision",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-curriculum",
+      "url": "https://academiccatalog.rit.edu/search/?P=CSCI-431",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-csci-534",
+      "code": "CSCI-534",
+      "name": "Mobile Robot Programming",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "foundations",
+      "source_id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-curriculum",
+      "url": "https://academiccatalog.rit.edu/search/?P=CSCI-534",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-csci-536",
+      "code": "CSCI-536",
+      "name": "Information Retrieval",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-curriculum",
+      "url": "https://academiccatalog.rit.edu/search/?P=CSCI-536",
+      "public_site": null,
+      "syllabus": null
+    }
+  ],
+  "requirements": [
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-choice-1",
+      "parent_id": null,
+      "title": "Select one of the following:",
+      "kind": "choose_courses",
+      "count": 1,
+      "credits": 1.0,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-curriculum",
+      "source_text": null,
+      "summary": "Select one of the following:",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-minor-minor-gcis-505",
+        "rochester-institute-of-technology-artificial-intelligence-minor-minor-gcis-350"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-choice-2",
+      "parent_id": null,
+      "title": "Select five of the following:",
+      "kind": "choose_courses",
+      "count": 5,
+      "credits": 15.0,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-curriculum",
+      "source_text": null,
+      "summary": "Select five of the following:",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-minor-minor-csci-231",
+        "rochester-institute-of-technology-artificial-intelligence-minor-minor-iste-470",
+        "rochester-institute-of-technology-artificial-intelligence-minor-minor-iste-472",
+        "rochester-institute-of-technology-artificial-intelligence-minor-minor-iste-476",
+        "rochester-institute-of-technology-artificial-intelligence-minor-minor-ling-581",
+        "rochester-institute-of-technology-artificial-intelligence-minor-minor-swen-566",
+        "rochester-institute-of-technology-artificial-intelligence-minor-minor-igme-489",
+        "rochester-institute-of-technology-artificial-intelligence-minor-minor-igme-560",
+        "rochester-institute-of-technology-artificial-intelligence-minor-minor-csec-520",
+        "rochester-institute-of-technology-artificial-intelligence-minor-minor-csci-331",
+        "rochester-institute-of-technology-artificial-intelligence-minor-minor-csci-335",
+        "rochester-institute-of-technology-artificial-intelligence-minor-minor-idai-202",
+        "rochester-institute-of-technology-artificial-intelligence-minor-minor-csci-431",
+        "rochester-institute-of-technology-artificial-intelligence-minor-minor-csci-534",
+        "rochester-institute-of-technology-artificial-intelligence-minor-minor-csci-536"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-eligibility",
+      "parent_id": null,
+      "title": "Major exclusion",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-curriculum",
+      "source_text": null,
+      "summary": "Students majoring in artificial intelligence may not take this minor.",
+      "course_ids": []
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-grades",
+      "parent_id": null,
+      "title": "Minor GPA",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-curriculum",
+      "source_text": null,
+      "summary": "A minimum minor GPA of 2.0 is required for transcript posting.",
+      "course_ids": []
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-overlap",
+      "parent_id": null,
+      "title": "Distinct coursework",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-curriculum",
+      "source_text": null,
+      "summary": "At least nine semester credit hours must be in specific courses not required by the student’s degree program.",
+      "course_ids": []
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-total",
+      "parent_id": null,
+      "title": "Published total",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rochester-institute-of-technology-artificial-intelligence-minor-minor-curriculum",
+      "source_text": null,
+      "summary": "The curriculum table specifies 16 total hours. Individual elective credits require separate course-page review.",
+      "course_ids": []
+    }
+  ],
   "notes": [
-    "Directory/identity verified; curriculum pending. No courses, requirements or outcomes have yet been extracted.",
-    "Official undergraduate program source inspected; qualifying title confirmed. Institution-wide inventory and curriculum extraction remain incomplete."
-  ]
+    "The 2026–27 catalog overview and curriculum tabs were read through ordinary Chrome UI. Automated fetching stopped because robots.txt returned HTTP 202; no restriction was bypassed. Parser supports the observed public table structure but automated refresh remains blocked until robots policy is available. Individual course credits are not inferred from group totals.",
+    "Course theme categories are editorial classifications; source-stated outcomes are labeled separately. Unknown prerequisite values do not mean there are no prerequisites."
+  ],
+  "curriculum_audit": {
+    "scope": "minor",
+    "reviewed_at": "2026-10-10",
+    "source_ids": [
+      "rochester-institute-of-technology-artificial-intelligence-minor-minor-official",
+      "rochester-institute-of-technology-artificial-intelligence-minor-minor-curriculum",
+      "rochester-institute-of-technology-artificial-intelligence-minor-minor-gcis505"
+    ],
+    "sections": [
+      "Program eligibility and overview",
+      "Core and elective inventory",
+      "Program-local overlap and completion notes"
+    ],
+    "unresolved_requirements": [
+      "General university minor residence, transfer and grading policies have not been fully reviewed."
+    ],
+    "metadata_gaps": [
+      "Most course descriptions and prerequisites remain unverified.",
+      "Public course sites, syllabi and first-offered date remain unverified."
+    ]
+  }
 }

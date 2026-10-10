@@ -1,8 +1,7 @@
-"""Identity-only observation; full curriculum extraction is pending."""
-from atlas.adapters.discovery_common import parse_identity
-
+"""Observe published course choices; no automatic completeness certification."""
+from atlas.adapters.business_society_minors import observe
 PROGRAM_ID = 'rochester-institute-of-technology-artificial-intelligence-minor-minor'
-SOURCES = ('https://www.rit.edu/study/artificial-intelligence-minor',)
-
+SOURCES = ('https://academiccatalog.rit.edu/programs/artificial-intelligence-minor/',)
+SOURCE_ID = 'rochester-institute-of-technology-artificial-intelligence-minor-minor-curriculum'
 def parse(html: str) -> dict:
-    return parse_identity(html, program_id=PROGRAM_ID, title='Artificial Intelligence', award='minor', kind='minor', aliases=(), award_terms=())
+    return observe(html, PROGRAM_ID, 'Artificial Intelligence', SOURCE_ID, SOURCES[0], 'rit')

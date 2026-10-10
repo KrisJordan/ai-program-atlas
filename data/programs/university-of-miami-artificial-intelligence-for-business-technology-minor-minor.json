@@ -4,25 +4,30 @@
     "id": "university-of-miami",
     "name": "University of Miami",
     "aliases": [],
-    "website": null,
+    "website": "https://www.miami.edu/",
     "calendar": "unknown"
   },
   "title": "Artificial Intelligence for Business Technology",
   "award_level": "minor",
   "program_kind": "minor",
-  "hosting_unit": null,
-  "status": "unknown",
+  "hosting_unit": "Miami Herbert Business School, Department of Business Technology",
+  "status": "active",
   "first_offered": null,
-  "overview": "Official university content identifies this undergraduate minor. Curriculum details and complete institutional coverage remain pending.",
+  "overview": "A 12-credit-hour minor for Miami Herbert Business students, with a separate Python prerequisite, AI programming, two Business Technology options and one business-discipline option.",
   "catalog_year": null,
-  "verification_status": "partial",
+  "verification_status": "confirmed",
   "last_verified": "2026-10-10",
-  "curriculum_status": "pending",
+  "curriculum_status": "partial",
   "links": [
     {
       "kind": "overview",
       "url": "https://bulletin.miami.edu/undergraduate-academic-programs/business/business-technology/ai-for-business-technology-minor/",
       "label": "Official program identity source"
+    },
+    {
+      "kind": "catalog",
+      "url": "https://bulletin.miami.edu/undergraduate-academic-programs/business/business-technology/ai-for-business-technology-minor/",
+      "label": "Official requirements"
     }
   ],
   "sources": [
@@ -35,13 +40,447 @@
       "catalog_year": null,
       "locator": "Named undergraduate program entry: Artificial Intelligence for Business Technology; award/type: minor / minor",
       "confidence": "high"
+    },
+    {
+      "id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-curriculum",
+      "url": "https://bulletin.miami.edu/undergraduate-academic-programs/business/business-technology/ai-for-business-technology-minor/",
+      "title": "Artificial Intelligence for Business Technology — curriculum",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Course Requirements; Course List; Electives; How to Apply; eligibility and overlap notes",
+      "confidence": "high"
+    },
+    {
+      "id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-business-policies",
+      "url": "https://bulletin.miami.edu/undergraduate-academic-programs/business/",
+      "title": "Miami Business academic policies",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "External Transfer Admission; Repeat Rules; Residency and Graduation Requirements; Major and Minor Areas of Specialization",
+      "confidence": "high"
     }
   ],
-  "outcomes": [],
-  "courses": [],
-  "requirements": [],
+  "outcomes": [
+    {
+      "text": "Understand applications of generative AI, AI programming and machine learning to business problems.",
+      "kind": "source_stated",
+      "source_id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-curriculum",
+      "locator": "Overview"
+    }
+  ],
+  "courses": [
+    {
+      "id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-bte-320",
+      "code": "BTE 320",
+      "name": "Python Programming: Fundamentals and Algorithms",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "foundations",
+      "source_id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-curriculum",
+      "url": "https://bulletin.miami.edu/search/?P=BTE%20320",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-bte-420",
+      "code": "BTE 420",
+      "name": "Python Programming for Fintech",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "foundations",
+      "source_id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-curriculum",
+      "url": "https://bulletin.miami.edu/search/?P=BTE%20420",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-bte-471",
+      "code": "BTE 471",
+      "name": "AI Programming for Business Management",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-curriculum",
+      "url": "https://bulletin.miami.edu/search/?P=BTE%20471",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-bte-271",
+      "code": "BTE 271",
+      "name": "Generative AI for Business Technology",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-curriculum",
+      "url": "https://bulletin.miami.edu/search/?P=BTE%20271",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-bte-371",
+      "code": "BTE 371",
+      "name": "Foundations of AI for Business Technology",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-curriculum",
+      "url": "https://bulletin.miami.edu/search/?P=BTE%20371",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-bte-401",
+      "code": "BTE 401",
+      "name": "Artificial Intelligence in an Interconnected Society",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "human_context",
+      "source_id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-curriculum",
+      "url": "https://bulletin.miami.edu/search/?P=BTE%20401",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-bte-403",
+      "code": "BTE 403",
+      "name": "AI Cloud Computing",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-curriculum",
+      "url": "https://bulletin.miami.edu/search/?P=BTE%20403",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-bte-413",
+      "code": "BTE 413",
+      "name": "Introduction to Machine Learning in Business Technology",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-curriculum",
+      "url": "https://bulletin.miami.edu/search/?P=BTE%20413",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-bte-416",
+      "code": "BTE 416",
+      "name": "AI Agents for Business Technology",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-curriculum",
+      "url": "https://bulletin.miami.edu/search/?P=BTE%20416",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-bte-440",
+      "code": "BTE 440",
+      "name": "Advanced Programming with Generative AI",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-curriculum",
+      "url": "https://bulletin.miami.edu/search/?P=BTE%20440",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-bte-499",
+      "code": "BTE 499",
+      "name": "Special Topics in Business Technology (AI-related topics )",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "applications",
+      "source_id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-curriculum",
+      "url": "https://bulletin.miami.edu/search/?P=BTE%20499",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-bsl-444",
+      "code": "BSL 444",
+      "name": "Legal Ethical Implications of AI",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "human_context",
+      "source_id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-curriculum",
+      "url": "https://bulletin.miami.edu/search/?P=BSL%20444",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-fin-460",
+      "code": "FIN 460",
+      "name": "Financial Decisions using Artificial Intelligence and Machine Learning",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-curriculum",
+      "url": "https://bulletin.miami.edu/search/?P=FIN%20460",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-mas-548",
+      "code": "MAS 548",
+      "name": "Machine Learning for Analytics",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-curriculum",
+      "url": "https://bulletin.miami.edu/search/?P=MAS%20548",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-mkt-371",
+      "code": "MKT 371",
+      "name": "Application of Artificial Intelligence in Marketing",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-curriculum",
+      "url": "https://bulletin.miami.edu/search/?P=MKT%20371",
+      "public_site": null,
+      "syllabus": null
+    }
+  ],
+  "requirements": [
+    {
+      "id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-prerequisite",
+      "parent_id": null,
+      "title": "Prerequisite course",
+      "kind": "choose_courses",
+      "count": 1,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-curriculum",
+      "source_text": null,
+      "summary": "Prerequisite course",
+      "course_ids": [
+        "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-bte-320",
+        "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-bte-420"
+      ]
+    },
+    {
+      "id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-core",
+      "parent_id": null,
+      "title": "Required Course 1",
+      "kind": "all",
+      "count": null,
+      "credits": 3.0,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-curriculum",
+      "source_text": null,
+      "summary": "Required Course 1",
+      "course_ids": [
+        "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-bte-471"
+      ]
+    },
+    {
+      "id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-choice-2",
+      "parent_id": null,
+      "title": "Select two courses (6 credit hours) from the following BTE options",
+      "kind": "choose_courses",
+      "count": 2,
+      "credits": 6.0,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-curriculum",
+      "source_text": null,
+      "summary": "Select two courses (6 credit hours) from the following BTE options",
+      "course_ids": [
+        "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-bte-271",
+        "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-bte-371",
+        "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-bte-401",
+        "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-bte-403",
+        "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-bte-413",
+        "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-bte-416",
+        "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-bte-440",
+        "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-bte-499"
+      ]
+    },
+    {
+      "id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-choice-3",
+      "parent_id": null,
+      "title": "Select one course (3 credit hours) from the following options: 3",
+      "kind": "choose_courses",
+      "count": 1,
+      "credits": 3.0,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-curriculum",
+      "source_text": null,
+      "summary": "Select one course (3 credit hours) from the following options: 3",
+      "course_ids": [
+        "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-bsl-444",
+        "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-fin-460",
+        "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-mas-548",
+        "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-mkt-371"
+      ]
+    },
+    {
+      "id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-eligibility",
+      "parent_id": null,
+      "title": "Eligibility",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-curriculum",
+      "source_text": null,
+      "summary": "For Miami Herbert Business students.",
+      "course_ids": []
+    },
+    {
+      "id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-grades",
+      "parent_id": null,
+      "title": "Grades and GPA",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-curriculum",
+      "source_text": null,
+      "summary": "All specific minor coursework requires a C− or better and a cumulative minor GPA of at least 2.5.",
+      "course_ids": []
+    },
+    {
+      "id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-rules",
+      "parent_id": null,
+      "title": "Prerequisites and overlap",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-curriculum",
+      "source_text": null,
+      "summary": "Courses must meet the current prerequisite structure. A course may satisfy only one major or minor specialization; no double counting.",
+      "course_ids": []
+    },
+    {
+      "id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-approvals",
+      "parent_id": null,
+      "title": "Special topics and substitutions",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-curriculum",
+      "source_text": null,
+      "summary": "BTE 499 must be an AI-related topic approved by the Business Technology chair. After Vice Dean review, another three-credit AI-related course from a different Miami Herbert business discipline may substitute for a topic choice.",
+      "course_ids": []
+    },
+    {
+      "id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-total",
+      "parent_id": null,
+      "title": "Minor total excludes preparatory choice",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-curriculum",
+      "source_text": null,
+      "summary": "Complete the 12-credit minor curriculum in addition to the listed BTE 320 or BTE 420 prerequisite. Prerequisite credit is not added to the published minor total.",
+      "course_ids": []
+    },
+    {
+      "id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-residency",
+      "parent_id": null,
+      "title": "Residency and transfer",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-business-policies",
+      "source_text": null,
+      "summary": "Transfer students must take at least half of their minor courses at Miami. After admission, business coursework must be taken in residence unless a written appeal is approved. UM-sponsored study abroad counts as residence; at most one international business course taken abroad may count toward a major or minor, subject to the published approval conditions.",
+      "course_ids": []
+    },
+    {
+      "id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-letter-grades",
+      "parent_id": null,
+      "title": "Letter grades and repeats",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-business-policies",
+      "source_text": null,
+      "summary": "Minor coursework must be taken for a letter grade. Business courses may be completed no more than twice, including equivalent courses, and repeats cannot use CR/NC grading. Further university repeat/GPA treatment rules remain to be reviewed.",
+      "course_ids": []
+    }
+  ],
   "notes": [
-    "Directory/identity verified; curriculum pending. No courses, requirements or outcomes have yet been extracted.",
-    "Official catalog confirms BA, BBA and minor named in discoveries. BBA award stored as other under contract enum; preserve BBA in full program record. Catalog navigation additionally lists BSBA variant, which needs its own page review. More offerings may exist."
-  ]
+    "Course table publishes grouped credit amounts, not individual amounts for each option; individual values remain null until separately verified. Page footer links both 2025–26 and 2026–27 catalog PDFs, so the applicable edition remains null. Program-specific no-double-counting wording is retained without weakening it using broader school exceptions.",
+    "Course theme categories are editorial classifications; source-stated outcomes are labeled separately. Unknown prerequisite values do not mean there are no prerequisites."
+  ],
+  "curriculum_audit": {
+    "scope": "minor",
+    "reviewed_at": "2026-10-10",
+    "source_ids": [
+      "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-official",
+      "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-curriculum",
+      "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-business-policies"
+    ],
+    "sections": [
+      "Program eligibility and overview",
+      "Core and elective inventory",
+      "Program-local overlap and completion notes"
+    ],
+    "unresolved_requirements": [
+      "Full linked university residency/transfer and repeat/GPA policies remain unreviewed.",
+      "Current course prerequisite structure has not been fully extracted."
+    ],
+    "metadata_gaps": [
+      "Most course descriptions and prerequisites remain unverified.",
+      "Public course sites, syllabi and first-offered date remain unverified."
+    ]
+  }
 }

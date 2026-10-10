@@ -1,0 +1,11 @@
+# Business and society minor curriculum review — 2026-10-10
+
+Five official undergraduate minors now have source-backed partial inventories: Notre Dame AI Analytics in Business (22 course entries), Notre Dame AI Essentials for Business (12), Miami Artificial Intelligence for Business Technology (15), RIT Artificial Intelligence (17), and RIT AI in Society (16). The two Essentials/Society titles are newly added identities. Counts include elective pools and prerequisite choices; they are not required-course totals.
+
+The records contain 82 program-course entries and 32 requirement/policy nodes. Each has an explicit partial review audit. Degree-wide graduation requirements remain outside the minor scope, but general minor policies remain unresolved. ND Essentials additionally exposes an empty additional-approved-electives section. ND published credit hours remain unnormalized, so credit choices are explicit source-rule notes with pools and amounts rather than guessed semester credits.
+
+RIT’s 2026–27 catalog overview and curriculum tabs were read through ordinary Chrome navigation from its official program directory. Automated catalog fetch stopped when robots.txt returned HTTP 202. No restriction was bypassed. Its adapters can parse the observed HTML structure but cannot refresh automatically until the robots policy is available. The RIT structural fixtures are hand-transcribed from visible tables; Notre Dame and Miami fixtures are reduced headings/tables without full narrative page content.
+
+Validation: 14 focused adapter/review tests pass. Isolated CLI init, ingest, build and integrity checks succeeded for the shared snapshot of 110 programs / 193 institutions. The full shared test run at this checkpoint had 297 passes, nine skipped browser cases and four failures in concurrently edited Stanford/CMU fixtures, reported to the coordinator. No shared database, schema, frontend or PLAN edits were made by this batch. Browser behavior for this batch is not newly certified by these data/parser checks.
+
+See the five adapter NOTES.md files and registered program source locators for exact evidence and remaining requirements. This adds depth and two title discoveries; it does not certify institutional search coverage or cohort enumeration.

@@ -1,15 +1,25 @@
-# Artificial Intelligence for Business Technology
+# Artificial Intelligence for Business Technology minor
 
-Official identity source: https://bulletin.miami.edu/undergraduate-academic-programs/business/business-technology/ai-for-business-technology-minor/
+Reviewed 2026-10-10. Curriculum status: **partial**.
 
-Directory/identity verified; curriculum pending. No courses, requirements or outcomes have yet been extracted.
+## Evidence
 
-Official catalog confirms BA, BBA and minor named in discoveries. BBA award stored as other under contract enum; preserve BBA in full program record. Catalog navigation additionally lists BSBA variant, which needs its own page review. More offerings may exist.
+- [Artificial Intelligence for Business Technology](https://bulletin.miami.edu/undergraduate-academic-programs/business/business-technology/ai-for-business-technology-minor/): Named undergraduate program entry: Artificial Intelligence for Business Technology; award/type: minor / minor.
+- [Artificial Intelligence for Business Technology — curriculum](https://bulletin.miami.edu/undergraduate-academic-programs/business/business-technology/ai-for-business-technology-minor/): Course Requirements; Course List; Electives; How to Apply; eligibility and overlap notes.
+- [Miami Business academic policies](https://bulletin.miami.edu/undergraduate-academic-programs/business/): External Transfer Admission; Repeat Rules; Residency and Graduation Requirements; Major and Minor Areas of Specialization.
 
-The adapter validates a title in visible content headings or links and the award/kind in its local card or heading section. It returns only observed identity fields and never replays seed metadata, curriculum, or dates. A failure means review is required; it does not mean the program is absent. Tests use synthetic HTML to verify rejection behavior; live refresh is not claimed.
+## Mapped scope
 
-## Cached layout verification — 2026-10-10
+15 course entries and 11 requirement/policy nodes. A 12-credit-hour minor for Miami Herbert Business students, with a separate Python prerequisite, AI programming, two Business Technology options and one business-discipline option.
 
-The Courseleaf program H1 is inside #content-container but outside #content. The reviewed title scope includes this H1. Punctuated degree abbreviations such as B.A. and B.B.A. normalize to BA and BBA; the award must be explicitly visible.
+Course table publishes grouped credit amounts, not individual amounts for each option; individual values remain null until separately verified. Page footer links both 2025–26 and 2026–27 catalog PDFs, so the applicable edition remains null. Program-specific no-double-counting wording is retained without weakening it using broader school exceptions.
+Course theme categories are editorial classifications; source-stated outcomes are labeled separately. Unknown prerequisite values do not mean there are no prerequisites.
 
-Validation used previously fetched, ignored local HTML. This adapter refreshes identity only; full curriculum extraction remains pending. No reviewed seed content or verification timestamp is replayed by the parser.
+## Remaining requirements
+
+- Full linked university residency/transfer and repeat/GPA policies remain unreviewed.
+- Current course prerequisite structure has not been fully extracted.
+
+## Adapter and metadata
+
+The adapter extracts observed headings, course entries, credit amounts and requirement groups. It returns partial candidates only, without review timestamps or completeness audits. Curated policy, outcome and metadata review is separate; changed source candidates require review. Fixtures are reduced structural examples, not full raw pages. Missing course fields, first-offered date and syllabus links remain unknown.
