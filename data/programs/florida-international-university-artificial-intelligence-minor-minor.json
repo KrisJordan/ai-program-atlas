@@ -10,19 +10,29 @@
   "title": "Artificial Intelligence",
   "award_level": "minor",
   "program_kind": "minor",
-  "hosting_unit": null,
+  "hosting_unit": "College of Engineering and Computing",
   "status": "unknown",
   "first_offered": null,
-  "overview": "Official university content identifies this undergraduate minor. Curriculum details and complete institutional coverage remain pending.",
-  "catalog_year": null,
+  "overview": "Twelve-credit minor for engineering and computing students, with machine learning, deep learning, generative AI and a disciplinary elective. Published catalog and department requirements disagree on one machine-learning option.",
+  "catalog_year": "2026-2027",
   "verification_status": "partial",
   "last_verified": "2026-10-10",
-  "curriculum_status": "pending",
+  "curriculum_status": "partial",
   "links": [
     {
       "kind": "overview",
       "url": "https://cec.fiu.edu/news-events/news/2026/new-artificial-intelligence-ai-minor-prepares-fiu-engineering-computing-students-for-an-ai-driven-future.html",
       "label": "Official program identity source"
+    },
+    {
+      "kind": "catalog",
+      "url": "https://catalog.fiu.edu/programs/XAI%3AMN/requirements-uz47h",
+      "label": "Catalog requirements"
+    },
+    {
+      "kind": "overview",
+      "url": "https://cec.fiu.edu/degrees-programs/undergraduate/minor-in-artificial-intelligence/",
+      "label": "Department minor requirements"
     }
   ],
   "sources": [
@@ -35,13 +45,440 @@
       "catalog_year": null,
       "locator": "Named undergraduate program entry: Artificial Intelligence; award/type: minor / minor",
       "confidence": "high"
+    },
+    {
+      "id": "fiu-ai-minor-department",
+      "url": "https://cec.fiu.edu/degrees-programs/undergraduate/minor-in-artificial-intelligence/",
+      "title": "Minor in Artificial Intelligence",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Program at a Glance; four course areas; Prerequisites; admission request",
+      "confidence": "high"
+    },
+    {
+      "id": "fiu-ai-minor-catalog",
+      "url": "https://catalog.fiu.edu/programs/XAI%3AMN/requirements-uz47h",
+      "title": "XAI:MN Artificial Intelligence Minor — Requirements",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "2026–2027 catalog, rendered admission and core requirements; CNT 4153 course popup",
+      "confidence": "high"
+    },
+    {
+      "id": "fiu-ai-minor-overview",
+      "url": "https://catalog.fiu.edu/programs/XAI%3AMN/overview-aoYks",
+      "title": "XAI:MN Artificial Intelligence Minor — Overview",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Twelve total credits; program overview",
+      "confidence": "high"
     }
   ],
-  "outcomes": [],
-  "courses": [],
-  "requirements": [],
+  "outcomes": [
+    {
+      "text": "Apply AI methods to problems in engineering and computing disciplines.",
+      "kind": "source_stated",
+      "source_id": "fiu-ai-minor-overview",
+      "locator": "Program overview"
+    }
+  ],
+  "courses": [
+    {
+      "id": "florida-international-university-artificial-intelligence-minor-minor-cnt-4153",
+      "code": "CNT 4153",
+      "name": "Machine Learning in ECE",
+      "description": "Applies traditional machine-learning methods and common frameworks to large datasets, including building models.",
+      "prerequisites": "EEL 2880, COP 2210 or COP 2250, or an equivalent course or instructor permission.",
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "fiu-ai-minor-catalog",
+      "url": "https://catalog.fiu.edu/programs/XAI%3AMN/requirements-uz47h",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "florida-international-university-artificial-intelligence-minor-minor-cap-4612",
+      "code": "CAP 4612",
+      "name": "Introduction to Machine Learning",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "fiu-ai-minor-department",
+      "url": "https://cec.fiu.edu/degrees-programs/undergraduate/minor-in-artificial-intelligence/",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "florida-international-university-artificial-intelligence-minor-minor-cnt-4149",
+      "code": "CNT 4149",
+      "name": "Deep Learning in ECE",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "fiu-ai-minor-department",
+      "url": "https://cec.fiu.edu/degrees-programs/undergraduate/minor-in-artificial-intelligence/",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "florida-international-university-artificial-intelligence-minor-minor-cai-4203",
+      "code": "CAI 4203",
+      "name": "Introduction to Deep Learning",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "fiu-ai-minor-department",
+      "url": "https://cec.fiu.edu/degrees-programs/undergraduate/minor-in-artificial-intelligence/",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "florida-international-university-artificial-intelligence-minor-minor-cai-4863",
+      "code": "CAI 4863",
+      "name": "Generative AI Fundamentals in ECE",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "fiu-ai-minor-department",
+      "url": "https://cec.fiu.edu/degrees-programs/undergraduate/minor-in-artificial-intelligence/",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "florida-international-university-artificial-intelligence-minor-minor-cai-3864",
+      "code": "CAI 3864",
+      "name": "Data Engineering in ECE",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "foundations",
+      "source_id": "fiu-ai-minor-department",
+      "url": "https://cec.fiu.edu/degrees-programs/undergraduate/minor-in-artificial-intelligence/",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "florida-international-university-artificial-intelligence-minor-minor-cai-4105",
+      "code": "CAI 4105",
+      "name": "Introduction to Machine Learning",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "fiu-ai-minor-catalog",
+      "url": "https://catalog.fiu.edu/programs/XAI%3AMN/requirements-uz47h",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "florida-international-university-artificial-intelligence-minor-minor-idc-2002",
+      "code": "IDC 2002",
+      "name": "AI for all",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "fiu-ai-minor-catalog",
+      "url": "https://catalog.fiu.edu/programs/XAI%3AMN/requirements-uz47h",
+      "public_site": null,
+      "syllabus": null
+    }
+  ],
+  "requirements": [
+    {
+      "id": "florida-international-university-artificial-intelligence-minor-minor-ml",
+      "parent_id": null,
+      "title": "Machine learning area",
+      "kind": "alternative",
+      "count": 1,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "fiu-ai-minor-catalog",
+      "source_text": null,
+      "summary": "Complete one listed course or an approved course for this area; three published credits.",
+      "course_ids": []
+    },
+    {
+      "id": "florida-international-university-artificial-intelligence-minor-minor-ml-listed",
+      "parent_id": "florida-international-university-artificial-intelligence-minor-minor-ml",
+      "title": "Listed course choice",
+      "kind": "choose_courses",
+      "count": 1,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "fiu-ai-minor-catalog",
+      "source_text": null,
+      "summary": "Listed course choice",
+      "course_ids": [
+        "florida-international-university-artificial-intelligence-minor-minor-cnt-4153",
+        "florida-international-university-artificial-intelligence-minor-minor-cai-4105"
+      ]
+    },
+    {
+      "id": "florida-international-university-artificial-intelligence-minor-minor-ml-approved",
+      "parent_id": "florida-international-university-artificial-intelligence-minor-minor-ml",
+      "title": "Approved course alternative",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "fiu-ai-minor-catalog",
+      "source_text": null,
+      "summary": "The catalog allows approved courses as alternatives for this area; approval must be verified rather than inferred.",
+      "course_ids": []
+    },
+    {
+      "id": "florida-international-university-artificial-intelligence-minor-minor-dl",
+      "parent_id": null,
+      "title": "Deep learning area",
+      "kind": "alternative",
+      "count": 1,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "fiu-ai-minor-catalog",
+      "source_text": null,
+      "summary": "Complete one listed course or an approved course for this area; three published credits.",
+      "course_ids": []
+    },
+    {
+      "id": "florida-international-university-artificial-intelligence-minor-minor-dl-listed",
+      "parent_id": "florida-international-university-artificial-intelligence-minor-minor-dl",
+      "title": "Listed course choice",
+      "kind": "choose_courses",
+      "count": 1,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "fiu-ai-minor-catalog",
+      "source_text": null,
+      "summary": "Listed course choice",
+      "course_ids": [
+        "florida-international-university-artificial-intelligence-minor-minor-cnt-4149",
+        "florida-international-university-artificial-intelligence-minor-minor-cai-4203"
+      ]
+    },
+    {
+      "id": "florida-international-university-artificial-intelligence-minor-minor-dl-approved",
+      "parent_id": "florida-international-university-artificial-intelligence-minor-minor-dl",
+      "title": "Approved course alternative",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "fiu-ai-minor-catalog",
+      "source_text": null,
+      "summary": "The catalog allows approved courses as alternatives for this area; approval must be verified rather than inferred.",
+      "course_ids": []
+    },
+    {
+      "id": "florida-international-university-artificial-intelligence-minor-minor-gen",
+      "parent_id": null,
+      "title": "Generative AI area",
+      "kind": "alternative",
+      "count": 1,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "fiu-ai-minor-catalog",
+      "source_text": null,
+      "summary": "Complete one listed course or an approved course for this area; three published credits.",
+      "course_ids": []
+    },
+    {
+      "id": "florida-international-university-artificial-intelligence-minor-minor-gen-listed",
+      "parent_id": "florida-international-university-artificial-intelligence-minor-minor-gen",
+      "title": "Listed course choice",
+      "kind": "choose_courses",
+      "count": 1,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "fiu-ai-minor-catalog",
+      "source_text": null,
+      "summary": "Listed course choice",
+      "course_ids": [
+        "florida-international-university-artificial-intelligence-minor-minor-cai-4863"
+      ]
+    },
+    {
+      "id": "florida-international-university-artificial-intelligence-minor-minor-gen-approved",
+      "parent_id": "florida-international-university-artificial-intelligence-minor-minor-gen",
+      "title": "Approved course alternative",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "fiu-ai-minor-catalog",
+      "source_text": null,
+      "summary": "The catalog allows approved courses as alternatives for this area; approval must be verified rather than inferred.",
+      "course_ids": []
+    },
+    {
+      "id": "florida-international-university-artificial-intelligence-minor-minor-elective",
+      "parent_id": null,
+      "title": "Disciplinary elective",
+      "kind": "alternative",
+      "count": 1,
+      "credits": 3,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "fiu-ai-minor-department",
+      "source_text": null,
+      "summary": "Complete one three-credit departmental elective or a pre-approved applied AI project course.",
+      "course_ids": []
+    },
+    {
+      "id": "florida-international-university-artificial-intelligence-minor-minor-elective-listed",
+      "parent_id": "florida-international-university-artificial-intelligence-minor-minor-elective",
+      "title": "Named elective",
+      "kind": "choose_courses",
+      "count": 1,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "fiu-ai-minor-department",
+      "source_text": null,
+      "summary": "Named elective",
+      "course_ids": [
+        "florida-international-university-artificial-intelligence-minor-minor-cai-3864"
+      ]
+    },
+    {
+      "id": "florida-international-university-artificial-intelligence-minor-minor-elective-open",
+      "parent_id": "florida-international-university-artificial-intelligence-minor-minor-elective",
+      "title": "Disciplinary or project alternative",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "fiu-ai-minor-department",
+      "source_text": null,
+      "summary": "The department lists AI applications in civil, biomedical, mechanical, electrical/computer engineering and construction management without specific course codes. A hands-on AI project course requires prior AI Minor Committee approval.",
+      "course_ids": []
+    },
+    {
+      "id": "florida-international-university-artificial-intelligence-minor-minor-admission-course",
+      "parent_id": null,
+      "title": "Catalog admission course",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "fiu-ai-minor-catalog",
+      "source_text": null,
+      "summary": "The catalog requires prior completion of IDC 2002 (AI for all).",
+      "course_ids": [
+        "florida-international-university-artificial-intelligence-minor-minor-idc-2002"
+      ]
+    },
+    {
+      "id": "florida-international-university-artificial-intelligence-minor-minor-python",
+      "parent_id": null,
+      "title": "Catalog programming prerequisite",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "fiu-ai-minor-catalog",
+      "source_text": null,
+      "summary": "Complete a Python programming course offered by ECE or the Knight Foundation School of Computing and Information Sciences; no course code is specified.",
+      "course_ids": []
+    },
+    {
+      "id": "florida-international-university-artificial-intelligence-minor-minor-eligibility",
+      "parent_id": null,
+      "title": "Department admission conditions",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "fiu-ai-minor-department",
+      "source_text": null,
+      "summary": "The department lists minimum GPA 3.0, availability to all engineering and computing students in spring and fall, Python programming and math/statistics knowledge. Work with the current advisor to request admission.",
+      "course_ids": []
+    },
+    {
+      "id": "florida-international-university-artificial-intelligence-minor-minor-minimum",
+      "parent_id": null,
+      "title": "Twelve-credit minor",
+      "kind": "note",
+      "count": null,
+      "credits": 12,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "fiu-ai-minor-catalog",
+      "source_text": null,
+      "summary": "The minor comprises nine core credits and one three-credit elective. Admission/preparation courses are separate conditions; they are not silently included in the twelve credits.",
+      "course_ids": []
+    },
+    {
+      "id": "florida-international-university-artificial-intelligence-minor-minor-ml-disagreement",
+      "parent_id": null,
+      "title": "Unresolved machine-learning option",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "fiu-ai-minor-department",
+      "source_text": null,
+      "summary": "The catalog lists CAI 4105; the current department page instead lists CAP 4612. Their equivalence or substitution authority has not been verified. This record uses the catalog choice and preserves CAP 4612 as a conflicting department observation, not an additional approved option.",
+      "course_ids": [
+        "florida-international-university-artificial-intelligence-minor-minor-cap-4612"
+      ]
+    }
+  ],
   "notes": [
-    "Directory/identity verified; curriculum pending. No courses, requirements or outcomes have yet been extracted.",
-    "Official undergraduate program source inspected; qualifying title confirmed. Institution-wide inventory and curriculum extraction remain incomplete."
-  ]
+    "Credit amounts are published as credits, with normalized unit unverified.",
+    "A cached older department view lists CAI 4105 while the current HTTPS page lists CAP 4612. The rendered 2026–2027 catalog still lists CAI 4105. Do not infer equivalence.",
+    "The catalog lists IDC 2002 as an admission condition; the department summary does not mention it. Both are preserved."
+  ],
+  "curriculum_audit": {
+    "scope": "minor",
+    "reviewed_at": "2026-10-10",
+    "source_ids": [
+      "florida-international-university-artificial-intelligence-minor-minor-official",
+      "fiu-ai-minor-department",
+      "fiu-ai-minor-catalog",
+      "fiu-ai-minor-overview"
+    ],
+    "sections": [
+      "Rendered 2026–2027 catalog admissions, programming preparation and three core areas",
+      "Department GPA, eligibility, four-area structure and open/project electives",
+      "CNT 4153 course description, prerequisites and credit amount"
+    ],
+    "unresolved_requirements": [
+      "Resolve CAI 4105 versus CAP 4612 disagreement between catalog and department.",
+      "Institution-wide minor grade, overlap and residency rules remain unreviewed.",
+      "Normalized credit unit remains unverified."
+    ],
+    "metadata_gaps": [
+      "Other course descriptions, prerequisites, credits, sites and syllabi remain unverified."
+    ]
+  }
 }

@@ -1,9 +1,3 @@
-# Artificial Intelligence
+# Clemson AI minor
 
-Official identity source: https://www.clemson.edu/cecas/departments/computing/academics/undergrad/degrees/
-
-Directory/identity verified; curriculum pending. No courses, requirements or outcomes have yet been extracted.
-
-Official undergraduate program source inspected; qualifying title confirmed. Institution-wide inventory and curriculum extraction remain incomplete.
-
-The adapter validates a title in visible content headings or links and the award/kind in its local card or heading section. It returns only observed identity fields and never replays seed metadata, curriculum, or dates. A failure means review is required; it does not mean the program is absent. Tests use synthetic HTML to verify rejection behavior; live refresh is not claimed.
+Reviewed 2026-10-10. The department confirms minimum 24 credits and programming/statistical foundations. Curriculum is partial, with no guessed course list or normalized credit unit. Its linked catalog returned HTTP 403; the restriction was not bypassed. Required courses, choices, admission and completion rules remain unresolved. The adapter extracts the actual published minimum and fails if the minor wording disappears; it does not emit a reviewer audit.

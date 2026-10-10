@@ -10,19 +10,24 @@
   "title": "Artificial Intelligence",
   "award_level": "minor",
   "program_kind": "minor",
-  "hosting_unit": null,
+  "hosting_unit": "School of Computing, College of Engineering, Computing and Applied Sciences",
   "status": "unknown",
   "first_offered": null,
-  "overview": "Official university content identifies this undergraduate minor. Curriculum details and complete institutional coverage remain pending.",
+  "overview": "AI minor spanning programming and statistics foundations with AI, data science and machine learning coursework. The department publishes a minimum of 24 credits.",
   "catalog_year": null,
   "verification_status": "partial",
   "last_verified": "2026-10-10",
-  "curriculum_status": "pending",
+  "curriculum_status": "partial",
   "links": [
     {
       "kind": "overview",
       "url": "https://www.clemson.edu/cecas/departments/computing/academics/undergrad/degrees/",
       "label": "Official program identity source"
+    },
+    {
+      "kind": "catalog",
+      "url": "https://catalog.clemson.edu/preview_program.php?catoid=43&poid=11998",
+      "label": "Official catalog (403 during review)"
     }
   ],
   "sources": [
@@ -35,13 +40,56 @@
       "catalog_year": null,
       "locator": "Named undergraduate program entry: Artificial Intelligence; award/type: minor / minor",
       "confidence": "high"
+    },
+    {
+      "id": "clemson-ai-minor-department",
+      "url": "https://www.clemson.edu/cecas/departments/computing/academics/undergrad/degrees/",
+      "title": "School of Computing: Undergraduate Degrees",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Academic minors: Artificial Intelligence",
+      "confidence": "high"
     }
   ],
   "outcomes": [],
   "courses": [],
-  "requirements": [],
+  "requirements": [
+    {
+      "id": "clemson-university-artificial-intelligence-minor-minor-minimum",
+      "parent_id": null,
+      "title": "Published credit minimum",
+      "kind": "note",
+      "count": null,
+      "credits": 24,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "clemson-ai-minor-department",
+      "source_text": null,
+      "summary": "Minimum 24 published credits, including programming fundamentals and statistical foundations; individual courses and normalized credit unit remain unverified.",
+      "course_ids": []
+    }
+  ],
   "notes": [
-    "Directory/identity verified; curriculum pending. No courses, requirements or outcomes have yet been extracted.",
-    "Official undergraduate program source inspected; qualifying title confirmed. Institution-wide inventory and curriculum extraction remain incomplete."
-  ]
+    "The department publishes a minimum of 24 credits. Normalized credit unit has not been verified.",
+    "The linked official catalog https://catalog.clemson.edu/preview_program.php?catoid=43&poid=11998 returned HTTP 403 on 2026-10-10. No bypass was attempted. Course inventory, selection rules and minor policies remain unverified."
+  ],
+  "curriculum_audit": {
+    "scope": "minor",
+    "reviewed_at": "2026-10-10",
+    "source_ids": [
+      "clemson-university-artificial-intelligence-minor-minor-official",
+      "clemson-ai-minor-department"
+    ],
+    "sections": [
+      "Department minor description and minimum credit amount"
+    ],
+    "unresolved_requirements": [
+      "Catalog returned HTTP 403: required courses, choice rules, eligibility and completion policies remain unresolved.",
+      "Published credit amount cannot yet be normalized."
+    ],
+    "metadata_gaps": [
+      "All course-level metadata remain unverified."
+    ]
+  }
 }

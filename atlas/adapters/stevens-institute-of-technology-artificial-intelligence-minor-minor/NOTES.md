@@ -1,9 +1,7 @@
-# Artificial Intelligence
+# Stevens AI minor
 
-Official identity source: https://stevens.catalog.prod.coursedog.com/programs/9a968dad026510010633ba4bf9db0000
+Reviewed 2026-10-10 through the ordinary rendered catalog. Both pathways are mapped: CS/Cybersecurity/Quantitative Finance = four required plus two of ten electives; other majors = five required, one of two discrete-mathematics options, and one of twelve electives. Nineteen distinct published course entries, including the single CS 558 / CPE 558 cross-listed option. The C minimum and overlap caps (four of six versus five of seven) are preserved under their own pathways. Course names were resolved visibly, not guessed from opaque IDs.
 
-Directory/identity verified; curriculum pending. No courses, requirements or outcomes have yet been extracted.
+Partial: the program explicitly incorporates institute-wide minor rules. Degree Programs, Special Degree Programs and Graduation Requirements were inspected but did not resolve the applicable minor-wide policy. No complete certification is claimed. Course metadata are separately unverified; no credits or catalog edition are inferred.
 
-Official undergraduate program source inspected; qualifying title confirmed. Institution-wide inventory and curriculum extraction remain incomplete.
-
-The adapter validates a title in visible content headings or links and the award/kind in its local card or heading section. It returns only observed identity fields and never replays seed metadata, curriculum, or dates. A failure means review is required; it does not mean the program is absent. Tests use synthetic HTML to verify rejection behavior; live refresh is not claimed.
+Raw server HTML has unresolved course IDs. The adapter deliberately observes the pathway course-count/overlap and grade policy only; it does not replace reviewed course names with IDs or replay the seed. Browser-reviewed curriculum stays curated. Policy changes are extracted or cause guarded failure; no audit or review date is generated.

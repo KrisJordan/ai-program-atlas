@@ -10,19 +10,24 @@
   "title": "Artificial Intelligence",
   "award_level": "minor",
   "program_kind": "minor",
-  "hosting_unit": null,
+  "hosting_unit": "Computer Science, School of Computing",
   "status": "unknown",
   "first_offered": null,
-  "overview": "Official university content identifies this undergraduate minor. Curriculum details and complete institutional coverage remain pending.",
+  "overview": "AI minor with a six-course pathway for Computer Science, Cybersecurity and Quantitative Finance students and a seven-course pathway for other majors.",
   "catalog_year": null,
   "verification_status": "partial",
   "last_verified": "2026-10-10",
-  "curriculum_status": "pending",
+  "curriculum_status": "partial",
   "links": [
     {
       "kind": "overview",
       "url": "https://stevens.catalog.prod.coursedog.com/programs/9a968dad026510010633ba4bf9db0000",
       "label": "Official program identity source"
+    },
+    {
+      "kind": "catalog",
+      "url": "https://stevens.catalog.prod.coursedog.com/programs/9a968dad026510010633ba4bf9db0000/requirements-and-concentrations-n90Np",
+      "label": "Both minor pathways"
     }
   ],
   "sources": [
@@ -35,13 +40,524 @@
       "catalog_year": null,
       "locator": "Named undergraduate program entry: Artificial Intelligence; award/type: minor / minor",
       "confidence": "high"
+    },
+    {
+      "id": "stevens-ai-minor-curriculum",
+      "url": "https://stevens.catalog.prod.coursedog.com/programs/9a968dad026510010633ba4bf9db0000/requirements-and-concentrations-n90Np",
+      "title": "Minor in Artificial Intelligence — Requirements and Concentrations",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Rendered catalog: both major-dependent pathways; required courses, electives and overlap/grade rules",
+      "confidence": "high"
     }
   ],
-  "outcomes": [],
-  "courses": [],
-  "requirements": [],
+  "outcomes": [
+    {
+      "text": "Continue learning independently as AI methods evolve.",
+      "kind": "source_stated",
+      "source_id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-official",
+      "locator": "General: program learning outcomes"
+    },
+    {
+      "text": "Design secure AI solutions to complex problems.",
+      "kind": "source_stated",
+      "source_id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-official",
+      "locator": "General: program learning outcomes"
+    },
+    {
+      "text": "Work effectively as a team member or leader.",
+      "kind": "source_stated",
+      "source_id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-official",
+      "locator": "General: program learning outcomes"
+    }
+  ],
+  "courses": [
+    {
+      "id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-367",
+      "code": "CS 367",
+      "name": "Introduction to Artificial Intelligence",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "stevens-ai-minor-curriculum",
+      "url": "https://stevens.catalog.prod.coursedog.com/programs/9a968dad026510010633ba4bf9db0000/requirements-and-concentrations-n90Np",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-368",
+      "code": "CS 368",
+      "name": "Data Management and Privacy in AI",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "human_context",
+      "source_id": "stevens-ai-minor-curriculum",
+      "url": "https://stevens.catalog.prod.coursedog.com/programs/9a968dad026510010633ba4bf9db0000/requirements-and-concentrations-n90Np",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-508",
+      "code": "CS 508",
+      "name": "Human-Centered AI",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "human_context",
+      "source_id": "stevens-ai-minor-curriculum",
+      "url": "https://stevens.catalog.prod.coursedog.com/programs/9a968dad026510010633ba4bf9db0000/requirements-and-concentrations-n90Np",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-456",
+      "code": "CS 456",
+      "name": "Mathematical Foundations of Machine Learning",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "mathematics",
+      "source_id": "stevens-ai-minor-curriculum",
+      "url": "https://stevens.catalog.prod.coursedog.com/programs/9a968dad026510010633ba4bf9db0000/requirements-and-concentrations-n90Np",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-559",
+      "code": "CS 559",
+      "name": "Machine Learning: Fundamentals and Applications",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "stevens-ai-minor-curriculum",
+      "url": "https://stevens.catalog.prod.coursedog.com/programs/9a968dad026510010633ba4bf9db0000/requirements-and-concentrations-n90Np",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-583",
+      "code": "CS 583",
+      "name": "Deep Learning",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "stevens-ai-minor-curriculum",
+      "url": "https://stevens.catalog.prod.coursedog.com/programs/9a968dad026510010633ba4bf9db0000/requirements-and-concentrations-n90Np",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-544",
+      "code": "CS 544",
+      "name": "Health Informatics",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "stevens-ai-minor-curriculum",
+      "url": "https://stevens.catalog.prod.coursedog.com/programs/9a968dad026510010633ba4bf9db0000/requirements-and-concentrations-n90Np",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-558-cpe-558",
+      "code": "CS 558 / CPE 558",
+      "name": "Computer Vision",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "stevens-ai-minor-curriculum",
+      "url": "https://stevens.catalog.prod.coursedog.com/programs/9a968dad026510010633ba4bf9db0000/requirements-and-concentrations-n90Np",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-560",
+      "code": "CS 560",
+      "name": "Statistical Machine Learning",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "stevens-ai-minor-curriculum",
+      "url": "https://stevens.catalog.prod.coursedog.com/programs/9a968dad026510010633ba4bf9db0000/requirements-and-concentrations-n90Np",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-582",
+      "code": "CS 582",
+      "name": "Causal Inference",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "stevens-ai-minor-curriculum",
+      "url": "https://stevens.catalog.prod.coursedog.com/programs/9a968dad026510010633ba4bf9db0000/requirements-and-concentrations-n90Np",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-584",
+      "code": "CS 584",
+      "name": "Natural Language Processing",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "stevens-ai-minor-curriculum",
+      "url": "https://stevens.catalog.prod.coursedog.com/programs/9a968dad026510010633ba4bf9db0000/requirements-and-concentrations-n90Np",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-589",
+      "code": "CS 589",
+      "name": "Text Mining and Information Retrieval",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "stevens-ai-minor-curriculum",
+      "url": "https://stevens.catalog.prod.coursedog.com/programs/9a968dad026510010633ba4bf9db0000/requirements-and-concentrations-n90Np",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-ma-661",
+      "code": "MA 661",
+      "name": "Dynamic Programming and Reinforcement Learning",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "stevens-ai-minor-curriculum",
+      "url": "https://stevens.catalog.prod.coursedog.com/programs/9a968dad026510010633ba4bf9db0000/requirements-and-concentrations-n90Np",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-bia-665",
+      "code": "BIA 665",
+      "name": "Applied Reinforcement Learning",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "stevens-ai-minor-curriculum",
+      "url": "https://stevens.catalog.prod.coursedog.com/programs/9a968dad026510010633ba4bf9db0000/requirements-and-concentrations-n90Np",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-115",
+      "code": "CS 115",
+      "name": "Introduction to Computer Science",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "foundations",
+      "source_id": "stevens-ai-minor-curriculum",
+      "url": "https://stevens.catalog.prod.coursedog.com/programs/9a968dad026510010633ba4bf9db0000/requirements-and-concentrations-n90Np",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-284",
+      "code": "CS 284",
+      "name": "Data Structures",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "foundations",
+      "source_id": "stevens-ai-minor-curriculum",
+      "url": "https://stevens.catalog.prod.coursedog.com/programs/9a968dad026510010633ba4bf9db0000/requirements-and-concentrations-n90Np",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-385",
+      "code": "CS 385",
+      "name": "Algorithms",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "foundations",
+      "source_id": "stevens-ai-minor-curriculum",
+      "url": "https://stevens.catalog.prod.coursedog.com/programs/9a968dad026510010633ba4bf9db0000/requirements-and-concentrations-n90Np",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-135",
+      "code": "CS 135",
+      "name": "Discrete Structures",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "mathematics",
+      "source_id": "stevens-ai-minor-curriculum",
+      "url": "https://stevens.catalog.prod.coursedog.com/programs/9a968dad026510010633ba4bf9db0000/requirements-and-concentrations-n90Np",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-ma-134",
+      "code": "MA 134",
+      "name": "Discrete Mathematics",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "mathematics",
+      "source_id": "stevens-ai-minor-curriculum",
+      "url": "https://stevens.catalog.prod.coursedog.com/programs/9a968dad026510010633ba4bf9db0000/requirements-and-concentrations-n90Np",
+      "public_site": null,
+      "syllabus": null
+    }
+  ],
+  "requirements": [
+    {
+      "id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-pathways",
+      "parent_id": null,
+      "title": "Choose the pathway for the declared major",
+      "kind": "alternative",
+      "count": 1,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "stevens-ai-minor-curriculum",
+      "source_text": null,
+      "summary": "Choose the pathway for the declared major",
+      "course_ids": []
+    },
+    {
+      "id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs",
+      "parent_id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-pathways",
+      "title": "Computer Science, Cybersecurity or Quantitative Finance",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "stevens-ai-minor-curriculum",
+      "source_text": null,
+      "summary": "Computer Science, Cybersecurity or Quantitative Finance",
+      "course_ids": []
+    },
+    {
+      "id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-core",
+      "parent_id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs",
+      "title": "Required courses",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "stevens-ai-minor-curriculum",
+      "source_text": null,
+      "summary": "Required courses",
+      "course_ids": [
+        "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-367",
+        "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-368",
+        "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-508",
+        "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-456"
+      ]
+    },
+    {
+      "id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-electives",
+      "parent_id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs",
+      "title": "Electives",
+      "kind": "choose_courses",
+      "count": 2,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "stevens-ai-minor-curriculum",
+      "source_text": null,
+      "summary": "Electives",
+      "course_ids": [
+        "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-559",
+        "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-583",
+        "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-544",
+        "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-558-cpe-558",
+        "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-560",
+        "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-582",
+        "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-584",
+        "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-589",
+        "stevens-institute-of-technology-artificial-intelligence-minor-minor-ma-661",
+        "stevens-institute-of-technology-artificial-intelligence-minor-minor-bia-665"
+      ]
+    },
+    {
+      "id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-policy",
+      "parent_id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs",
+      "title": "Course total and major overlap",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "stevens-ai-minor-curriculum",
+      "source_text": null,
+      "summary": "Six courses; at most four may also satisfy the major, only if the major accepts them.",
+      "course_ids": []
+    },
+    {
+      "id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-other",
+      "parent_id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-pathways",
+      "title": "Other majors",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "stevens-ai-minor-curriculum",
+      "source_text": null,
+      "summary": "Other majors",
+      "course_ids": []
+    },
+    {
+      "id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-other-core",
+      "parent_id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-other",
+      "title": "Required courses",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "stevens-ai-minor-curriculum",
+      "source_text": null,
+      "summary": "Required courses",
+      "course_ids": [
+        "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-115",
+        "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-284",
+        "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-385",
+        "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-367",
+        "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-456"
+      ]
+    },
+    {
+      "id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-other-discrete",
+      "parent_id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-other",
+      "title": "Discrete mathematics alternative",
+      "kind": "choose_courses",
+      "count": 1,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "stevens-ai-minor-curriculum",
+      "source_text": null,
+      "summary": "Discrete mathematics alternative",
+      "course_ids": [
+        "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-135",
+        "stevens-institute-of-technology-artificial-intelligence-minor-minor-ma-134"
+      ]
+    },
+    {
+      "id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-other-electives",
+      "parent_id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-other",
+      "title": "Electives",
+      "kind": "choose_courses",
+      "count": 1,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "stevens-ai-minor-curriculum",
+      "source_text": null,
+      "summary": "Electives",
+      "course_ids": [
+        "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-368",
+        "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-508",
+        "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-559",
+        "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-583",
+        "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-544",
+        "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-558-cpe-558",
+        "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-560",
+        "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-582",
+        "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-584",
+        "stevens-institute-of-technology-artificial-intelligence-minor-minor-cs-589",
+        "stevens-institute-of-technology-artificial-intelligence-minor-minor-ma-661",
+        "stevens-institute-of-technology-artificial-intelligence-minor-minor-bia-665"
+      ]
+    },
+    {
+      "id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-other-policy",
+      "parent_id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-other",
+      "title": "Course total and major overlap",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "stevens-ai-minor-curriculum",
+      "source_text": null,
+      "summary": "Seven courses; at most five may also satisfy the major, only if the major accepts them.",
+      "course_ids": []
+    },
+    {
+      "id": "stevens-institute-of-technology-artificial-intelligence-minor-minor-grade",
+      "parent_id": null,
+      "title": "Minor grade minimum",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "stevens-ai-minor-curriculum",
+      "source_text": null,
+      "summary": "Every minor course must be completed with grade C or better. Enrollment also requires meeting institute-wide minor requirements.",
+      "course_ids": []
+    }
+  ],
   "notes": [
-    "Directory/identity verified; curriculum pending. No courses, requirements or outcomes have yet been extracted.",
-    "Official undergraduate program source inspected; qualifying title confirmed. Institution-wide inventory and curriculum extraction remain incomplete."
-  ]
+    "Both published major-dependent pathways were read in the ordinary rendered catalog on 2026-10-10. The server HTML supplies course IDs before rendering; IDs were not guessed or treated as course codes.",
+    "CS 558 / CPE 558 is one published cross-listed choice, not two electives. CS 582 and the second-path CS 544 render as text rather than active course-detail buttons, but their visible codes and titles are preserved.",
+    "The pathway mapping is complete locally. Institute-wide minor policies explicitly referenced by the catalog remain unresolved after reading general degree and graduation policy sections; therefore the record remains partial.",
+    "Credit amounts, normalized units and course prerequisites remain unverified. The footer copyright year was not treated as a catalog edition."
+  ],
+  "curriculum_audit": {
+    "scope": "minor",
+    "reviewed_at": "2026-10-10",
+    "source_ids": [
+      "stevens-institute-of-technology-artificial-intelligence-minor-minor-official",
+      "stevens-ai-minor-curriculum"
+    ],
+    "sections": [
+      "Both major-dependent pathways and all 19 distinct published course choices",
+      "One cross-listed computer vision choice; discrete mathematics alternative",
+      "C minimum and distinct major overlap caps",
+      "General catalog degree and graduation sections inspected; referenced institute minor policy not resolved"
+    ],
+    "unresolved_requirements": [
+      "The catalog explicitly incorporates institute-wide minor requirements; their full applicable policy has not been verified."
+    ],
+    "metadata_gaps": [
+      "Individual course credits, credit units, descriptions, prerequisites, course sites and syllabi are unverified."
+    ]
+  }
 }

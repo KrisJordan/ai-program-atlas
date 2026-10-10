@@ -1,9 +1,7 @@
-# Artificial Intelligence and Machine Learning
+# Minnesota AI & ML minor
 
-Source: https://cse.umn.edu/cs/artificial-intelligence-and-machine-learning-ai-ml-minor
+Reviewed 2026-10-10. Curriculum complete within minor scope; announced status retained. All seven required course slots, 49 published course options, honors/advanced choices, department-approved disciplinary elective, A–F/C-minus policy, three-credit Twin Cities upper-division residency, declaration timing, declared-major condition and Computer Science BS exclusion are represented. The university degree-requirement, transfer and timely-graduation policies were reviewed for applicable minor conditions. Semester normalization is supported by the University expected-work-per-credit policy, not inferred from a calendar guess.
 
-Official program identity verified; curriculum pending.
+Sources and precise section locators are registered in the seed. The closed published list has 29 electives; an explicit open approved option is represented separately. All requirements in this scope are mapped; missing course descriptions/prerequisites/sites/syllabi are metadata gaps. No host degree audit is claimed. Enrollment/declaration planned for 2027 is not a verified first instruction date.
 
-Official minor page says Board of Regents approval received and enrollment planned for 2027; declaration form available January 2027. Older February 2026 news gives fall 2027 target. Mark announced and retain timing discrepancy; no inferred first instruction date. Curriculum pending.
-
-The adapter requires a source-specific content heading and explicit program identity/classification claims after navigation is removed. It returns identity fields only. It does not replay curated records or mint verification dates. Source-specific synthetic regression tests reject missing evidence and access pages. All live-refresh and detailed curriculum parsing remain follow-up work.
+The adapter observes the three published course lists and changing course names/credits. It returns partial observations with unknown credit units; the independent policy-backed normalization and reviewer audit exist only in the curated seed. Changed sections or course formats fail visibly. Fixture contains only reduced course-list facts.
