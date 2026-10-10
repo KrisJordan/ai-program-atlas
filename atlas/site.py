@@ -125,6 +125,8 @@ def root_page(data, base):
 
 def category_chart(p):
     courses = unique_courses(p)
+    if not courses:
+        return '<div class="notice"><strong>Curriculum profile not yet extracted.</strong><p>No course records are available for this program. Category coverage is unknown; missing records do not mean the curriculum contains zero courses in a category.</p></div>'
     counts = Counter(c.get("category") if c.get("category") in CATEGORIES else "other" for c in courses)
     maximum = max(counts.values(), default=1)
     return f'<p class="section-note">{len(courses)} unique documented course records. Each course appears in one editorial category. These are observed counts, not credit totals or proportions of a degree; electives and partial extraction affect the picture.</p><div class="category-chart">' + "".join(f'<div class="category-row"><span>{label}</span><div class="bar-track"><span class="bar" style="width:{counts[key] / maximum * 100:.2f}%"></span></div><strong>{counts[key]}</strong></div>' for key, label in CATEGORIES.items()) + '</div>'
@@ -175,9 +177,20 @@ def program_page(p, base):
     rows = ''.join(f'''<tr><th scope="row">{esc(c.get('code') or 'Unknown')}<span>{esc(c.get('name') or 'Course name not verified')}</span><p class="course-description">{esc(c.get('description') or 'Description not recorded.')}</p></th><td>{esc(CATEGORIES.get(c.get('category'), CATEGORIES['other']))}</td><td>{esc(c.get('credits'))}<small>{esc(human(c.get('credit_unit')))}</small></td><td>{esc(c.get('prerequisites') or 'Not recorded')}</td><td>{external(c.get('url'), 'Catalog')}{'<br>' + external(c.get('public_site'), 'Course site') if c.get('public_site') else ''}{'<br>' + external(c.get('syllabus'), 'Syllabus') if c.get('syllabus') else ''}</td></tr>''' for c in courses)
     sources = ''.join(f'''<li id="source-{esc(s.get('id'))}"><h3>{external(s.get('url'), s.get('title') or 'Official source')}</h3><p>{esc(s.get('locator') or 'Locator not recorded')}</p><dl class="source-meta"><div><dt>Retrieved</dt><dd>{esc(s.get('fetched_at') or 'Not recorded')}</dd></div><div><dt>Source date</dt><dd>{esc(s.get('source_date'))}</dd></div><div><dt>Catalog year</dt><dd>{esc(s.get('catalog_year'))}</dd></div><div><dt>Confidence</dt><dd>{esc(human(s.get('confidence')))}</dd></div></dl></li>''' for s in p.get('sources', []))
     notes = ''.join(f'<li>{esc(n)}</li>' for n in p.get('notes', []))
+    rankings = institution.get('rankings') or []
+    ranking_context = '<section class="cohort-context" aria-label="Institution ranking context"><h2>Cohort context</h2><p>Institution-level U.S. News category membership, not a measure of this program or undergraduate teaching quality. Ranks from different categories are not comparable.</p>'
+    if rankings:
+        ranking_context += '<ul>'
+        for rank in rankings:
+            label = f"{rank.get('publisher', 'U.S. News')} {rank.get('edition', 'edition unknown')} · {rank.get('category', 'Category unknown')} · #{rank.get('rank', 'unknown')}"
+            ranking_context += f'<li>{external(rank.get("source_url"), label)}<small>Membership evidence: {esc(human(rank.get("verification_status")))}</small></li>'
+        ranking_context += '</ul>'
+    else:
+        ranking_context += '<p>Ranking provenance is not recorded for this institution.</p>'
+    ranking_context += '</section>'
     body = f'''<div class="breadcrumb"><a href="{base}">Program index</a><span>/</span>{esc(institution.get('name'))}</div><section class="detail-hero"><div class="eyebrow">{esc(institution.get('name'))} / {esc(p.get('hosting_unit') or 'Hosting unit unknown')}</div><h1>{esc(p.get('title'))}</h1><p class="lede">{esc(p.get('overview') or 'Overview not yet recorded.')}</p><div class="detail-badges">{badge(p.get('award_level'))}{badge(human(p.get('program_kind')))}{badge(human(p.get('status')))}</div><div class="official-links">{links}</div></section>
 <dl class="fact-grid"><div><dt>Calendar</dt><dd>{esc(human(institution.get('calendar')))}</dd></div><div><dt>Catalog year</dt><dd>{esc(p.get('catalog_year'))}</dd></div><div><dt>Last verified</dt><dd>{esc(date_value(p))}</dd></div><div><dt>Curriculum extraction</dt><dd>{esc(human(p.get('curriculum_status')))}</dd></div></dl>
-<div class="notice evidence-notice"><strong>Read the evidence in context.</strong><p>Verification: {esc(human(p.get('verification_status')))}. {missing_credits} of {len(courses)} course records have unknown credits. Unknown values are not zero. Recorded course credits must not be added to estimate degree requirements.</p><p>First offered: {first_text}</p>{'<ul>' + notes + '</ul>' if notes else ''}</div>
+<div class="notice evidence-notice"><strong>Read the evidence in context.</strong><p>Verification: {esc(human(p.get('verification_status')))}. {missing_credits} of {len(courses)} course records have unknown credits. Unknown values are not zero. Recorded course credits must not be added to estimate degree requirements.</p><p>First offered: {first_text}</p>{'<ul>' + notes + '</ul>' if notes else ''}</div>{ranking_context}
 <nav class="section-nav" aria-label="Program sections"><a href="#curriculum">Curriculum</a><a href="#requirements">Requirements</a><a href="#outcomes">Outcomes</a><a href="#courses">Course records</a><a href="#sources">Sources</a></nav>
 <section id="curriculum" class="detail-section"><span class="eyebrow">01 / CURRICULUM PROFILE</span><h2>What the documented courses cover</h2>{category_chart(p)}</section>
 <section id="requirements" class="detail-section"><span class="eyebrow">02 / PROGRAM STRUCTURE</span><h2>Requirements & choices</h2><p class="section-note">Nested groups preserve course choices and alternatives. A course listed in more than one group is counted once in the curriculum profile.</p>{requirement_tree(p)}</section>

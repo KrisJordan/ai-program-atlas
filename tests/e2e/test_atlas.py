@@ -146,3 +146,22 @@ def test_program_type_and_evidence_filters_preserve_history(page, site):
     expect(page.locator('#filter-evidence')).to_have_value('pending')
     page.go_forward()
     expect(page.locator('#empty-state')).to_be_visible()
+
+
+def test_cohort_context_theme_matrix_and_unknown_categories(page, site):
+    from playwright.sync_api import expect
+    page.goto(site + '?compare=test-ai-0,test-ai-1,test-ai-2')
+    ranks = page.locator('.compare-table tr').filter(has=page.get_by_role('rowheader', name='U.S. News cohort context', exact=True))
+    expect(ranks).to_contain_text('U.S. News 2027 · National Universities · #20')
+    expect(ranks.locator('a').first).to_have_attribute('href', 'https://example.edu/ranking')
+    themes = page.locator('.theme-table tbody tr')
+    expect(themes).to_have_count(2)
+    ai = themes.filter(has=page.get_by_role('rowheader', name='AI methods', exact=True))
+    expect(ai.locator('td').nth(0)).to_contain_text('Documented inference')
+    expect(ai.locator('td').nth(0).locator('a')).to_have_attribute('href', 'https://example.edu/outcome')
+    expect(ai.locator('td').nth(1)).to_have_text('Not recorded')
+    expect(ai.locator('td').nth(2)).to_have_text('Not recorded')
+    category = page.locator('.compare-table tr').filter(has=page.get_by_role('rowheader', name='Course categories', exact=True))
+    expect(category.locator('td').nth(2)).to_have_text('Not yet extracted')
+    page.reload()
+    expect(page.locator('.theme-table tbody tr')).to_have_count(2)

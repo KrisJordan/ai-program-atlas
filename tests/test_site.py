@@ -19,6 +19,11 @@ def site_data():
     programs[1]['curriculum_status'] = 'complete'
     programs[2].update(program_kind='additional_major', curriculum_status='pending', courses=[])
     programs[3].update(program_kind='concentration', curriculum_status='pending', courses=[])
+    institutions[0]['rankings'][0].update(publisher='U.S. News', edition='2027', rank=20, source_url='https://example.edu/ranking', verification_status='primary_verified')
+    programs[0]['institution']['rankings'] = institutions[0]['rankings']
+    for index, theme in [(0, 'AI methods'), (1, 'Responsible AI and society')]:
+        programs[index]['sources'] = [{'id': 'outcome-source', 'url': 'https://example.edu/outcome', 'title': 'Official evidence'}]
+        programs[index]['outcomes'] = [{'text': theme, 'kind': 'inferred_taxonomy', 'source_id': 'outcome-source'}, {'text': 'Learn a documented skill.', 'kind': 'source_stated', 'source_id': 'outcome-source'}]
     return {"meta": {"limitations": ["Test coverage is incomplete."]}, "programs": programs, "institutions": institutions, "csrankings": {"status": "not_imported"}}
 
 
@@ -72,3 +77,14 @@ def test_identity_counts_and_research_configuration(tmp_path, site_data):
     assert 'https://csrankings.org/faq.html' not in methodology
     index = (tmp_path / 'index.html').read_text()
     assert 'Additional major</span>' in index
+
+
+def test_empty_curriculum_profile_and_rank_provenance(tmp_path, site_data):
+    build(site_data, tmp_path)
+    pending = (tmp_path / 'programs/test-ai-2/index.html').read_text()
+    assert 'Curriculum profile not yet extracted' in pending
+    assert 'class="category-row"' not in pending
+    documented = (tmp_path / 'programs/test-ai-0/index.html').read_text()
+    assert 'U.S. News 2027 · National Universities · #20' in documented
+    assert 'href="https://example.edu/ranking"' in documented
+    assert 'not a measure of this program or undergraduate teaching quality' in documented
