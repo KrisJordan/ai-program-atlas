@@ -36,6 +36,9 @@ def test_real_database_pages_comparison_and_mobile(browser, tmp_path):
     base = f"http://127.0.0.1:{server.server_port}/ai-program-atlas/"
     try:
         page.goto(base)
+        expect(page.locator(".program-card")).to_have_count(len(data["programs"]))
+        for summary in page.locator(".program-family > summary").all():
+            summary.click()
         expect(page.locator(".program-card:visible")).to_have_count(len(data["programs"]))
         page.locator('[data-compare="purdue-ai-bs"]').check()
         page.locator('[data-compare="penn-bse-ai"]').check()

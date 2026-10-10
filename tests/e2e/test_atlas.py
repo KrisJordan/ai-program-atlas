@@ -197,7 +197,7 @@ def test_complete_concentration_scope_metadata_and_nested_choices(page, site, tm
     expect(page.get_by_role('heading', name='Advisor approval', exact=True)).to_be_visible()
     expect(page.get_by_role('heading', name='Credit minimum', exact=True)).to_be_visible()
     expect(page.locator('.requirements')).to_contain_text('Choose an alternative')
-    expect(page.locator('.requirements')).to_contain_text('1 course')
+    expect(page.locator('.requirements')).to_contain_text('1 selection')
     expect(page.locator('.requirements')).to_contain_text('3 Semester hours')
     page.locator('.source-wording summary').click()
     expect(page.get_by_text('Approval is required for a substitution.', exact=True)).to_be_visible()
@@ -209,3 +209,79 @@ def test_complete_concentration_scope_metadata_and_nested_choices(page, site, tm
     counts = page.locator('.compare-table tr').filter(has=page.get_by_role('rowheader', name='Course metadata availability', exact=True))
     expect(counts.locator('td').first).to_contain_text('Prerequisite statements0 of 2')
     assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
+
+
+def family_fixture(data):
+    """Synthetic evidence-backed family, never part of shipped inventory."""
+    source={'id':'family-source','url':'https://example.edu/family','title':'Official family page'}
+    shared={'id':'shared-core','parent_id':None,'title':'Shared AI core','kind':'all','source_id':'family-source','summary':'A documented common foundation.','course_ids':[]}
+    data['families']=[{'id':'test-family','institution_id':'test-0','name':'AI combined programs','description':'Explicitly related test-only variants.','classification_kind':'source_stated','variant_ids':['test-ai-0','test-ai-1'],'disciplines':['Economics','Physics'],'sources':[source],'shared_requirements':[shared],'shared_course_codes':['AI 101']}]
+    for i,discipline in enumerate(['Economics','Physics']):
+        p=data['programs'][i]
+        p['institution']=dict(data['programs'][0]['institution'])
+        p['family']={'id':'test-family','variant_label':'AI and '+discipline,'disciplines':[discipline],'relationship':'ai_plus_x','classification_kind':'source_stated','source_ids':['family-source']}
+        p['sources'].append(source)
+        p['requirements']=[dict(shared,origin='family',component='ai_core',family_requirement_id='shared-core'),{'id':'variant-'+str(i),'parent_id':None,'title':discipline+' integration','kind':'note','origin':'variant','component':'integration','source_id':'family-source','summary':'A documented variant requirement.','course_ids':[]}]
+    return data
+
+
+@pytest.mark.parametrize('width',[1440,390])
+def test_family_expand_discipline_compare_history_and_detail(page,site,tmp_path,site_data,width):
+    from playwright.sync_api import expect
+    build(family_fixture(site_data),tmp_path/'ai-program-atlas')
+    page.set_viewport_size({'width':width,'height':950})
+    errors=[]
+    page.on('pageerror',lambda error:errors.append(str(error)))
+    page.goto(site)
+    expect(page.locator('.program-family')).to_have_count(1)
+    expect(page.locator('.program-card:visible')).to_have_count(3)
+    family=page.locator('[data-family-id="test-family"]')
+    family.locator(':scope > summary').click()
+    expect(page.locator('.program-card:visible')).to_have_count(5)
+    assert 'expand=test-family' in page.url
+    page.reload()
+    expect(family).to_have_attribute('open','')
+    page.locator('#filter-discipline').select_option('Physics')
+    expect(page.locator('.program-card:visible')).to_have_count(1)
+    expect(family.locator('.family-match-count')).to_have_text('1 matching variant')
+    page.locator('[data-compare="test-ai-1"]').check()
+    page.locator('#filter-discipline').select_option('Economics')
+    page.locator('[data-compare="test-ai-0"]').check()
+    expect(page.locator('.compare-table thead th')).to_have_count(3)
+    expect(page.locator('.compare-table')).to_contain_text('AI and Physics')
+    expect(page.locator('.compare-table')).to_contain_text('Shared AI core')
+    expect(page.locator('.compare-table')).to_contain_text('Physics integration')
+    expect(page.locator('.compare-table')).to_contain_text('Economics integration')
+    assert 'compare=test-ai-1%2Ctest-ai-0' in page.url
+    page.reload()
+    expect(page.locator('#filter-discipline')).to_have_value('Economics')
+    expect(page.locator('.compare-table thead th')).to_have_count(3)
+    page.locator('#filter-discipline').select_option('Physics')
+    page.go_back()
+    expect(page.locator('#filter-discipline')).to_have_value('Economics')
+    page.go_forward()
+    expect(page.locator('#filter-discipline')).to_have_value('Physics')
+    assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
+    page.goto(site+'programs/test-ai-1/')
+    expect(page.locator('.family-context')).to_contain_text('AI and Physics')
+    expect(page.locator('.requirements')).to_contain_text('Shared family requirement')
+    expect(page.locator('.requirements')).to_contain_text('Variant-specific requirement')
+    page.locator('.family-context summary').click()
+    expect(page.locator('.family-context a[href$="/programs/test-ai-0/"]')).to_be_visible()
+    page.reload()
+    expect(page.locator('.family-context')).to_be_visible()
+    assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
+    assert not errors
+
+
+def test_family_native_disclosure_works_without_javascript(browser,site,tmp_path,site_data):
+    from playwright.sync_api import expect
+    build(family_fixture(site_data),tmp_path/'ai-program-atlas')
+    context=browser.new_context(java_script_enabled=False)
+    page=context.new_page()
+    page.goto(site)
+    page.locator('.program-family > summary').click()
+    expect(page.locator('.family-variants .program-card:visible')).to_have_count(2)
+    page.locator('.family-variants').get_by_role('link',name='View program').first.click()
+    expect(page.locator('.family-context')).to_be_visible()
+    context.close()

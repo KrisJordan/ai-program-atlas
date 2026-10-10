@@ -3,9 +3,12 @@
   'use strict';
   const node = document.getElementById('atlas-data');
   if (!node) return;
-  const {programs, institutions, base_path: base, categories} = JSON.parse(node.textContent);
+  const {programs, institutions, families = [], base_path: base, categories} = JSON.parse(node.textContent);
   document.documentElement.classList.add('js');
-  const keys = ['q', 'type', 'award', 'evidence', 'calendar', 'institution', 'cohort', 'category'];
+  const keys = ['q', 'type', 'award', 'evidence', 'calendar', 'institution', 'cohort', 'category', 'discipline'];
+  const familyMap = new Map(families.map(f => [f.id, f]));
+  const familyPanels = [...document.querySelectorAll('[data-family-id]')];
+  let expanded = [];
   const institutionMap = new Map(institutions.map(i => [i.id, i]));
   const form = document.getElementById('filters');
   const controls = Object.fromEntries(keys.map(k => [k, form.elements.namedItem(k)]));
@@ -42,12 +45,16 @@
       if (key !== 'q' && ![...controls[key].options].some(o => o.value === value)) controls[key].value = '';
     });
     selected = [...new Set((params.get('compare') || '').split(','))].filter(id => byId.has(id)).slice(0, 4);
+    expanded = [...new Set((params.get('expand') || '').split(','))].filter(id => familyMap.has(id));
+    if (!params.has('expand') && controls.discipline.value) programs.filter(p => (p.family?.disciplines || []).includes(controls.discipline.value)).forEach(p => { if (!expanded.includes(p.family.id)) expanded.push(p.family.id); });
+    if (!params.has('expand')) selected.forEach(id => { const family = byId.get(id)?.family?.id; if (family && !expanded.includes(family)) expanded.push(family); });
   }
 
   function writeState() {
     const params = new URLSearchParams();
     keys.forEach(key => { if (controls[key].value) params.set(key, controls[key].value); });
     if (selected.length) params.set('compare', selected.join(','));
+    if (expanded.length) params.set('expand', expanded.join(','));
     const next = base + (params.size ? '?' + params.toString() : '') + location.hash;
     if (next !== location.pathname + location.search + location.hash) history.pushState(null, '', next);
     render();
@@ -56,7 +63,7 @@
   function matches(p) {
     const query = controls.q.value.trim().toLocaleLowerCase();
     const allCourses = courses(p);
-    const searchable = [p.title, p.overview, p.hosting_unit, p.institution?.name, ...(p.institution?.aliases || []), ...allCourses.flatMap(c => [c.name, c.code])].join(' ').toLocaleLowerCase();
+    const searchable = [p.title, p.overview, p.hosting_unit, p.institution?.name, p.family?.variant_label, familyMap.get(p.family?.id)?.name, ...(p.family?.disciplines || []), ...(p.institution?.aliases || []), ...allCourses.flatMap(c => [c.name, c.code])].join(' ').toLocaleLowerCase();
     return (!query || query.split(/\s+/).every(term => searchable.includes(term))) &&
       (!controls.type.value || p.program_kind === controls.type.value) &&
       (!controls.evidence.value || p.curriculum_status === controls.evidence.value) &&
@@ -64,7 +71,8 @@
       (!controls.calendar.value || (p.institution?.calendar || 'unknown') === controls.calendar.value) &&
       (!controls.institution.value || p.institution?.id === controls.institution.value) &&
       (!controls.cohort.value || (institutionMap.get(p.institution?.id)?.rankings || []).some(r => r.category === controls.cohort.value)) &&
-      (!controls.category.value || allCourses.some(c => (categories[c.category] ? c.category : 'other') === controls.category.value));
+      (!controls.category.value || allCourses.some(c => (categories[c.category] ? c.category : 'other') === controls.category.value)) &&
+      (!controls.discipline.value || (p.family?.disciplines || []).includes(controls.discipline.value));
   }
 
   function outcomeList(p, kind) {
@@ -83,7 +91,24 @@
       return;
     }
     const items = selected.map(id => byId.get(id));
+    const familyRequirementList = p => {
+      const family = familyMap.get(p.family?.id);
+      if (!family) return 'No family relationship recorded';
+      const requirements = family.shared_requirements || [];
+      const sources = new Map([...(family.sources || []), ...(p.sources || [])].map(source => [source.id, source]));
+      return requirements.length ? '<ul>' + requirements.map(r => `<li>${e(r.title)}<small>${r.summary ? e(r.summary) + ' · ' : ''}${link(sources.get(r.source_id)?.url, 'Requirement source')}</small></li>`).join('') + '</ul><small>Shared requirement groups include containers and choices; not a course total. Follow variant replacements below.</small>' : 'Shared requirement structure not recorded';
+    };
+    const variantRequirementList = p => {
+      if (!p.family) return 'No family relationship recorded';
+      const requirements = (p.requirements || []).filter(r => ['variant', 'replacement'].includes(r.origin));
+      const sources = new Map((p.sources || []).map(source => [source.id, source]));
+      return requirements.length ? '<ul>' + requirements.map(r => `<li>${e(r.title)}<small>${r.origin === 'replacement' ? 'Replaces a shared requirement' : 'Variant-specific'}${r.component && r.component !== 'other' ? ' · ' + e(pretty(r.component)) : ''}${r.summary ? ' · ' + e(r.summary) : ''}</small><small>${link(sources.get(r.source_id)?.url, 'Requirement source')}</small></li>`).join('') + '</ul>' : 'Variant differences not yet recorded';
+    };
     const rows = [
+      ['Program family', p => p.family ? e(familyMap.get(p.family.id)?.name || p.family.id) + '<small>' + e(pretty(p.family.classification_kind)) + '</small>' : 'No family relationship recorded'],
+      ['Concrete variant / disciplines', p => p.family ? e(p.family.variant_label || p.title) + '<small>' + e((p.family.disciplines || []).join(', ') || 'Disciplines not recorded') + '</small>' : e(p.title)],
+      ['Shared family requirements', familyRequirementList],
+      ['Variant-specific requirements', variantRequirementList],
       ['Award / type', p => e(p.award_level) + '<small>' + e(pretty(p.program_kind)) + '</small>'],
       ['U.S. News cohort context', p => { const ranks = institutionMap.get(p.institution?.id)?.rankings || p.institution?.rankings || []; return ranks.length ? ranks.map(r => link(r.source_url, `${r.publisher || 'U.S. News'} ${r.edition || 'Edition unknown'} · ${r.category || 'Category unknown'} · ${rankLabel(r)}`) + '<small>Membership evidence: ' + e(pretty(r.verification_status)) + '</small>').join('<br>') + '<small>Institution context, not teaching quality. Different categories are not comparable.</small>' : 'Ranking provenance not recorded'; }],
       ['Calendar', p => e(pretty(p.institution?.calendar))],
@@ -100,6 +125,7 @@
       ['Inferred taxonomy', p => outcomeList(p, 'inferred_taxonomy') + '<small>Editorial interpretation</small>'],
       ['Official evidence', p => (p.links || []).map(l => link(l.url, l.label || pretty(l.kind))).join('<br>') || 'Not recorded'],
     ];
+    if (!items.some(p => p.family)) rows.splice(0, 4);
     const themes = [...new Set(items.flatMap(p => (p.outcomes || []).filter(o => o.kind === 'inferred_taxonomy').map(o => o.text)))].sort((a, b) => a.localeCompare(b));
     const themeCell = (p, theme) => {
       const matches = (p.outcomes || []).filter(o => o.kind === 'inferred_taxonomy' && o.text === theme);
@@ -125,15 +151,31 @@
       card.hidden = !show;
       if (show) count++;
     });
-    document.getElementById('result-count').textContent = `${count} ${count === 1 ? 'program' : 'programs'}${count !== programs.length ? ' of ' + programs.length : ''}`;
+    let visibleFamilies = 0;
+    familyPanels.forEach(panel => {
+      const visible = [...panel.querySelectorAll('[data-program-id]')].filter(card => !card.hidden).length;
+      panel.hidden = visible === 0;
+      panel.open = expanded.includes(panel.dataset.familyId);
+      if (visible) visibleFamilies++;
+      panel.querySelector('.family-match-count').textContent = `${visible} matching ${visible === 1 ? 'variant' : 'variants'}`;
+      panel.querySelector('.family-toggle').textContent = panel.open ? 'Hide variants' : 'View variants';
+    });
+    document.getElementById('result-count').textContent = `${count} ${count === 1 ? 'program' : 'programs'}${count !== programs.length ? ' of ' + programs.length : ''}${visibleFamilies ? ' · ' + visibleFamilies + ' program ' + (visibleFamilies === 1 ? 'family' : 'families') : ''}`;
     document.getElementById('empty-state').hidden = count > 0;
     document.querySelectorAll('[data-compare]').forEach(input => { input.checked = selected.includes(input.dataset.compare); });
     renderComparison();
   }
 
+  familyPanels.forEach(panel => panel.querySelector(':scope > summary').addEventListener('click', event => {
+    event.preventDefault();
+    const id = panel.dataset.familyId;
+    expanded = expanded.includes(id) ? expanded.filter(value => value !== id) : [...expanded, id];
+    clearTimeout(timer);
+    writeState();
+  }));
   form.addEventListener('submit', event => { event.preventDefault(); clearTimeout(timer); writeState(); });
   controls.q.addEventListener('input', () => { clearTimeout(timer); timer = setTimeout(writeState, 220); });
-  keys.filter(k => k !== 'q').forEach(key => controls[key].addEventListener('change', () => { clearTimeout(timer); writeState(); }));
+  keys.filter(k => k !== 'q').forEach(key => controls[key].addEventListener('change', () => { clearTimeout(timer); if (key === 'discipline' && controls.discipline.value) programs.filter(p => (p.family?.disciplines || []).includes(controls.discipline.value)).forEach(p => { if (!expanded.includes(p.family.id)) expanded.push(p.family.id); }); writeState(); }));
   const reset = () => { clearTimeout(timer); keys.forEach(key => { controls[key].value = ''; }); writeState(); };
   document.getElementById('reset-filters').addEventListener('click', reset);
   document.getElementById('empty-reset').addEventListener('click', () => { reset(); controls.q.focus(); });
@@ -142,6 +184,8 @@
     const id = input.dataset.compare;
     if (input.checked && selected.length === 4) { input.checked = false; announce('Choose up to four programs. Remove a selection to add another.'); return; }
     selected = input.checked ? [...selected, id] : selected.filter(value => value !== id);
+    const family = byId.get(id)?.family?.id;
+    if (input.checked && family && !expanded.includes(family)) expanded.push(family);
     clearTimeout(timer);
     writeState();
     announce(`${selected.length} of 4 programs selected. Comparison updated below.`);
