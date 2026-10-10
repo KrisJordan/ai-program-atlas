@@ -1,0 +1,7 @@
+# Stanford AI track — identity-only discovery
+
+On 2026-10-10, directly inspected the official [Bachelor’s Program overview](https://www.cs.stanford.edu/academics-overview/academics-bachelors-program). It lists **Artificial Intelligence** under CS tracks and calls its subject an **AI concentration**. The surrounding track overview explains declaration in Axess and the requirement to fulfill one track before graduation. This is a formal track within **Computer Science BS**, represented by the atlas concentration type; it is not a standalone Artificial Intelligence BS.
+
+The displayed title adds `(CS BS track)` solely to make the credential structure explicit. Identity is confirmed; catalog edition, curriculum, credit units, calendar, launch date, outcomes, course prerequisites and syllabi remain unextracted. The parser uses the shared conservative identity helper: actual AI heading plus local concentration wording is required. It never returns a static seed or advances verification dates. Actual public HTML was parsed from `/tmp`; no raw source is committed.
+
+Next: inspect official current track requirement sheets and the university bulletin, extract core/track alternatives and degree-level scope, and verify quarter units from source rather than assumed institutional familiarity. If a future source uses only a general interest label or drops the formal track, require manual review. This is not an exhaustive Stanford program inventory.

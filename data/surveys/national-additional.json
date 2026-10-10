@@ -1,0 +1,393 @@
+[
+  {
+    "institution_id": "princeton-university",
+    "status": "inaccessible",
+    "note": "Official CS undergraduate URL returned HTTP 403 through web retrieval. No attempt to bypass access restrictions; program inventory unverified.",
+    "checked_at": "2026-10-10",
+    "sources": [
+      {
+        "url": "https://www.cs.princeton.edu/ugrad",
+        "title": "Computer Science undergraduate page (blocked)"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "harvard-university",
+    "status": "inspected",
+    "note": "CS advising degree-program page inspected: Basic and Honors AB, joint concentration and Mind, Brain, and Behavior routes. No qualifying AI credential established in this targeted review. Partial review; no institution-wide absence claim.",
+    "checked_at": "2026-10-10",
+    "sources": [
+      {
+        "url": "https://csadvising.seas.harvard.edu/concentration/",
+        "title": "Concentration :: Harvard CS Concentration"
+      },
+      {
+        "url": "https://csadvising.seas.harvard.edu/concentration/degrees/",
+        "title": "Degree programs :: Harvard CS Concentration"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "yale-university",
+    "status": "inspected",
+    "note": "2026–27 Yale College CS catalog inspected: CS BA/BS and four combined majors are identified; AI is described as elective subject matter. No institution-wide absence conclusion.",
+    "checked_at": "2026-10-10",
+    "sources": [
+      {
+        "url": "https://catalog.yale.edu/ycps/subjects-of-instruction/computer-science/",
+        "title": "Computer Science — Yale College Programs of Study 2026–2027"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "california-institute-of-technology",
+    "status": "inspected",
+    "note": "2026–27 CS Option and Minor requirements and catalog contents inspected. These are titled Computer Science; AI coursework does not establish a separate credential. Partial review; no institution-wide absence claim.",
+    "checked_at": "2026-10-10",
+    "sources": [
+      {
+        "url": "https://catalog.caltech.edu/current/",
+        "title": "2026-2027 Catalog | Caltech Academic Catalog"
+      },
+      {
+        "url": "https://catalog.caltech.edu/current/information-for-undergraduate-students/graduation-requirements-all-options/computer-science-option-and-minor-cs/",
+        "title": "Computer Science Option and Minor (CS) | Caltech Academic Catalog"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "stanford-university",
+    "status": "confirmed",
+    "note": "Official bachelors overview confirms Artificial Intelligence as a formally declared CS track; the same section calls it an AI concentration. Classify as concentration within CS BS, never as a standalone AI degree.",
+    "checked_at": "2026-10-10",
+    "sources": [
+      {
+        "url": "https://www.cs.stanford.edu/",
+        "title": "Computer Science"
+      },
+      {
+        "url": "https://www.cs.stanford.edu/academics-overview/academics-bachelors-program",
+        "title": "Academics | Bachelor's Program | Computer Science"
+      }
+    ],
+    "discoveries": [
+      {
+        "title": "Artificial Intelligence (CS BS track)",
+        "kind": "concentration",
+        "award_level": "concentration",
+        "url": "https://www.cs.stanford.edu/academics-overview/academics-bachelors-program"
+      }
+    ]
+  },
+  {
+    "institution_id": "johns-hopkins-university",
+    "status": "inspected",
+    "note": "Official CS catalogue inspected. Its AI track is explicitly described under the MSE graduate program, so that lead is excluded from this undergraduate inventory. Partial review; no institution-wide absence claim.",
+    "checked_at": "2026-10-10",
+    "sources": [
+      {
+        "url": "https://e-catalogue.jhu.edu/engineering/full-time-residential-programs/degree-programs/computer-science/",
+        "title": "Computer Science | Johns Hopkins University Academic Catalogue"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "university-of-chicago",
+    "status": "inaccessible",
+    "note": "Official CS college-catalog retrieval failed; web tool returned HTTP 502 and direct retrieval also failed. No program conclusion.",
+    "checked_at": "2026-10-10",
+    "sources": [
+      {
+        "url": "https://collegecatalog.uchicago.edu/thecollege/computerscience/",
+        "title": "Official program source — access not established"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "columbia-university",
+    "status": "confirmed",
+    "note": "Current Columbia College bulletin explicitly lists a six-course Minor in Artificial Intelligence. Other CS-department majors/minors are excluded from eligibility by the source. Institution-wide inventory remains incomplete.",
+    "checked_at": "2026-10-10",
+    "sources": [
+      {
+        "url": "https://bulletin.columbia.edu/columbia-college/departments-instruction/computer-science/",
+        "title": "Computer Science < Columbia College | Columbia University"
+      }
+    ],
+    "discoveries": [
+      {
+        "title": "Artificial Intelligence",
+        "kind": "minor",
+        "award_level": "minor",
+        "url": "https://bulletin.columbia.edu/columbia-college/departments-instruction/computer-science/"
+      }
+    ]
+  },
+  {
+    "institution_id": "dartmouth-college",
+    "status": "inspected",
+    "note": "Resolved official Undergraduate Programs page inspected; it links CS major, modified major, CS minor and Digital Arts routes. Concentration details and other departments remain unreviewed. Partial review; no institution-wide absence claim.",
+    "checked_at": "2026-10-10",
+    "sources": [
+      {
+        "url": "https://web.cs.dartmouth.edu/",
+        "title": "Department of Computer Science"
+      },
+      {
+        "url": "https://web.cs.dartmouth.edu/undergraduate/undergraduate-programs",
+        "title": "Undergraduate Programs | Department of Computer Science"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "brown-university",
+    "status": "inspected",
+    "note": "Current official CS concentration overview inspected. It says 2024 requirements eliminated pathways and added AI foundations; an old pathway must not be promoted as a current credential. Partial review; no institution-wide absence claim.",
+    "checked_at": "2026-10-10",
+    "sources": [
+      {
+        "url": "https://cs.brown.edu/degrees/undergrad/concentrating-in-cs/",
+        "title": "Brown CS: Concentrating In Computer Science"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "washington-university-in-st-louis",
+    "status": "inspected",
+    "note": "Current engineering bulletin degree-program and minor overview inspected; contains CS-related degrees. Individual concentration pages and non-engineering programs remain unreviewed. Partial review; no institution-wide absence claim.",
+    "checked_at": "2026-10-10",
+    "sources": [
+      {
+        "url": "https://bulletin.wustl.edu/undergrad/engineering/",
+        "title": "McKelvey School of Engineering | Washington University Bulletin"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "university-of-california-berkeley",
+    "status": "inspected",
+    "note": "Registrar confirms new undergraduate catalog location; catalog Programs page opened, but fetched HTML exposed a directory shell without usable program listings. This is a navigation inspection, not a complete program review. Partial review; no institution-wide absence claim.",
+    "checked_at": "2026-10-10",
+    "sources": [
+      {
+        "url": "https://registrar.berkeley.edu/catalog/",
+        "title": "Catalog - Office of the Registrar"
+      },
+      {
+        "url": "https://undergraduate.catalog.berkeley.edu/",
+        "title": "UC Berkeley Catalog"
+      },
+      {
+        "url": "https://undergraduate.catalog.berkeley.edu/programs",
+        "title": "Programs | UC Berkeley Catalog"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "university-of-california-los-angeles",
+    "status": "inspected",
+    "note": "Official undergraduate admission major directory inspected. This list alone cannot establish minor or concentration coverage. Partial review; no institution-wide absence claim.",
+    "checked_at": "2026-10-10",
+    "sources": [
+      {
+        "url": "https://admission.ucla.edu/apply/majors",
+        "title": "Majors | UCLA Undergraduate Admission"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "georgetown-university",
+    "status": "inspected",
+    "note": "Current bulletin program directory and Artificial Intelligence undergraduate certificate inspected. The certificate is explicitly outside the degrees/minors/concentrations scope; graduate AI offerings also excluded. Partial review; no institution-wide absence claim.",
+    "checked_at": "2026-10-10",
+    "sources": [
+      {
+        "url": "https://bulletin.georgetown.edu/",
+        "title": "Georgetown University | Georgetown University Bulletin"
+      },
+      {
+        "url": "https://bulletin.georgetown.edu/programs/",
+        "title": "Programs | Georgetown University Bulletin"
+      },
+      {
+        "url": "https://bulletin.georgetown.edu/programs/artificial-intelligence-undergraduate-certificate/",
+        "title": "Artificial Intelligence, Undergraduate Certificate | Georgetown University Bulletin"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "university-of-virginia",
+    "status": "inaccessible",
+    "note": "Engineering department source was not fetched because robots.txt preflight returned an access-blocked response. Official-program inspection remains blocked; no absence inference.",
+    "checked_at": "2026-10-10",
+    "sources": [
+      {
+        "url": "https://engineering.virginia.edu/department/computer-science/academics/undergraduate-programs",
+        "title": "Official program source — access not established"
+      },
+      {
+        "url": "https://engineering.virginia.edu/robots.txt",
+        "title": "Robots preflight returned an access block"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "university-of-north-carolina-chapel-hill",
+    "status": "inspected",
+    "note": "Official department catalog inspected; lists CS BA, CS BS and CS minor. Course-level AI references do not prove a qualifying program title; other departments remain unreviewed. Partial review; no institution-wide absence claim.",
+    "checked_at": "2026-10-10",
+    "sources": [
+      {
+        "url": "https://catalog.unc.edu/undergraduate/departments/computer-science/",
+        "title": "Department of Computer Science < University of North Carolina at Chapel Hill"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "new-york-university",
+    "status": "inspected",
+    "note": "Tandon Computer Science BS bulletin inspected. This targeted degree review does not cover NYU Arts and Science or every minor/concentration. Partial review; no institution-wide absence claim.",
+    "checked_at": "2026-10-10",
+    "sources": [
+      {
+        "url": "https://bulletins.nyu.edu/undergraduate/engineering/programs/computer-science-bs/",
+        "title": "Computer Science (BS) | NYU Bulletins"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "boston-university",
+    "status": "inspected",
+    "note": "Official CAS Computer Science bulletin directory inspected. Separate schools and individual concentration policies remain unreviewed. Partial review; no institution-wide absence claim.",
+    "checked_at": "2026-10-10",
+    "sources": [
+      {
+        "url": "https://www.bu.edu/academics/cas/programs/computer-science/",
+        "title": "Computer Science » Academics | Boston University"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "university-of-california-davis",
+    "status": "inspected",
+    "note": "Current broad department/program/degree directory and CS department catalog inspected. AI appears as course material in the inspected CS page; no separate AI credential inferred. Partial review; no institution-wide absence claim.",
+    "checked_at": "2026-10-10",
+    "sources": [
+      {
+        "url": "https://catalog.ucdavis.edu/departments-programs-degrees/",
+        "title": "General Catalog - Departments, Programs, & Degrees"
+      },
+      {
+        "url": "https://catalog.ucdavis.edu/departments-programs-degrees/computer-science-engineering/",
+        "title": "General Catalog - Computer Science"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "university-of-california-irvine",
+    "status": "inspected",
+    "note": "Current CS BS catalog explicitly calls Artificial Intelligence and Machine Learning an area of interest for tailoring electives. No formal concentration inferred from that wording. Partial review; no institution-wide absence claim.",
+    "checked_at": "2026-10-10",
+    "sources": [
+      {
+        "url": "https://catalogue.uci.edu/donaldbrenschoolofinformationandcomputersciences/departmentofcomputerscience/",
+        "title": "Department of Computer Science < University of California Irvine"
+      },
+      {
+        "url": "https://catalogue.uci.edu/donaldbrenschoolofinformationandcomputersciences/departmentofcomputerscience/computerscience_bs/",
+        "title": "Computer Science, B.S. < University of California Irvine"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "university-of-illinois-urbana-champaign",
+    "status": "inspected",
+    "note": "2026–27 Computer Science BS catalog inspected. This targeted program review does not establish all CS+X, minor or other-college offerings. Partial review; no institution-wide absence claim.",
+    "checked_at": "2026-10-10",
+    "sources": [
+      {
+        "url": "https://catalog.illinois.edu/undergraduate/engineering/computer-science-bs/",
+        "title": "Computer Science, BS | 2026-2027 Course Catalog | University of Illinois Urbana-Champaign"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "university-of-texas-austin",
+    "status": "inspected",
+    "note": "2026–28 undergraduate A–Z program directory inspected after resolving moved URLs. Geospatial Artificial Intelligence is explicitly a certificate and excluded from scope; other concentration details remain unreviewed. Partial review; no institution-wide absence claim.",
+    "checked_at": "2026-10-10",
+    "sources": [
+      {
+        "url": "https://catalog.utexas.edu/undergraduate/",
+        "title": "Undergraduate, 2026-2028 < The University of Texas at Austin"
+      },
+      {
+        "url": "https://catalog.utexas.edu/undergraduate/programs/",
+        "title": "A-Z Explore Undergraduate Programs < The University of Texas at Austin"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "university-of-wisconsin-madison",
+    "status": "inspected",
+    "note": "Official Computer Sciences Guide department directory inspected; identifies BA, BS and certificate. A certificate is not a minor; university-wide concentration search remains incomplete. Partial review; no institution-wide absence claim.",
+    "checked_at": "2026-10-10",
+    "sources": [
+      {
+        "url": "https://guide.wisc.edu/undergraduate/letters-science/computer-sciences/",
+        "title": "Computer Sciences < University of Wisconsin-Madison"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "wake-forest-university",
+    "status": "inspected",
+    "note": "Official Computer Science bulletin department page inspected. AI appears in individual course titles; this does not by itself establish an AI degree/minor/concentration. Partial review; no institution-wide absence claim.",
+    "checked_at": "2026-10-10",
+    "sources": [
+      {
+        "url": "https://bulletin.wfu.edu/undergraduate/departments-programs/computer-science/",
+        "title": "Computer Science (CSC) | Wake Forest University Academic Bulletin"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "villanova-university",
+    "status": "inaccessible",
+    "note": "Computing Sciences source was not fetched because robots.txt preflight returned an access-blocked response. No program or absence conclusion.",
+    "checked_at": "2026-10-10",
+    "sources": [
+      {
+        "url": "https://www1.villanova.edu/university/liberal-arts-sciences/programs/computing-sciences.html",
+        "title": "Official program source — access not established"
+      },
+      {
+        "url": "https://www1.villanova.edu/robots.txt",
+        "title": "Robots preflight returned an access block"
+      }
+    ],
+    "discoveries": []
+  }
+]
