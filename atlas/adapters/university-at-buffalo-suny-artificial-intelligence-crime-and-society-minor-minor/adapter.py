@@ -1,8 +1,14 @@
-"""Identity-only observation; full curriculum extraction is pending."""
-from atlas.adapters.discovery_common import parse_identity
+"""Observe program overview facts; catalog inventory remains unresolved."""
 
-PROGRAM_ID = 'university-at-buffalo-suny-artificial-intelligence-crime-and-society-minor-minor'
-SOURCES = ('https://arts-sciences.buffalo.edu/college/departments-and-programs/social-sciences/ai-society.html',)
+from atlas.adapters.buffalo_overview import parse_minor
+
+PROGRAM_ID = "university-at-buffalo-suny-artificial-intelligence-crime-and-society-minor-minor"
+TITLE = "Artificial Intelligence, Crime and Society"
+SOURCES = (
+    "https://arts-sciences.buffalo.edu/sociology-criminology/undergraduate/ai-crime-society.html",
+    "https://arts-sciences.buffalo.edu/college/departments-and-programs/social-sciences/ai-society.html",
+)
+
 
 def parse(html: str) -> dict:
-    return parse_identity(html, program_id=PROGRAM_ID, title='Artificial Intelligence, Crime and Society', award='minor', kind='minor', aliases=(), award_terms=())
+    return parse_minor(html, PROGRAM_ID, TITLE)

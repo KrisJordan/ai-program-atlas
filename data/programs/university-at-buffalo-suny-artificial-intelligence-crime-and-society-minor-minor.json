@@ -2,7 +2,7 @@
   "id": "university-at-buffalo-suny-artificial-intelligence-crime-and-society-minor-minor",
   "institution": {
     "id": "university-at-buffalo-suny",
-    "name": "University at Buffalo\u2013SUNY",
+    "name": "University at Buffalo–SUNY",
     "aliases": [],
     "website": null,
     "calendar": "unknown"
@@ -10,38 +10,90 @@
   "title": "Artificial Intelligence, Crime and Society",
   "award_level": "minor",
   "program_kind": "minor",
-  "hosting_unit": null,
-  "status": "unknown",
+  "hosting_unit": "Department of Sociology and Criminology",
+  "status": "active",
   "first_offered": null,
-  "overview": "Official university content identifies this undergraduate minor. Curriculum details and complete institutional coverage remain pending.",
+  "overview": "The minor examines AI in relation to social institutions, inequality, criminal justice and public policy.",
   "catalog_year": null,
-  "verification_status": "partial",
+  "verification_status": "confirmed",
   "last_verified": "2026-10-10",
-  "curriculum_status": "pending",
+  "curriculum_status": "partial",
   "links": [
     {
       "kind": "overview",
       "url": "https://arts-sciences.buffalo.edu/college/departments-and-programs/social-sciences/ai-society.html",
       "label": "Official program identity source"
+    },
+    {
+      "kind": "study",
+      "url": "https://arts-sciences.buffalo.edu/sociology-criminology/undergraduate/ai-crime-society.html",
+      "label": "Official program overview and curriculum summary"
     }
   ],
   "sources": [
     {
       "id": "university-at-buffalo-suny-artificial-intelligence-crime-and-society-minor-minor-official",
       "url": "https://arts-sciences.buffalo.edu/college/departments-and-programs/social-sciences/ai-society.html",
-      "title": "AI and Policy Analysis",
+      "title": "AI and Society — College of Arts and Sciences",
       "fetched_at": "2026-10-10",
       "source_date": null,
       "catalog_year": null,
       "locator": "Named undergraduate program entry: Artificial Intelligence, Crime and Society; award/type: minor / minor",
       "confidence": "high"
+    },
+    {
+      "id": "university-at-buffalo-suny-artificial-intelligence-crime-and-society-minor-minor-program",
+      "url": "https://arts-sciences.buffalo.edu/sociology-criminology/undergraduate/ai-crime-society.html",
+      "title": "Minor in Artificial Intelligence, Crime and Society",
+      "fetched_at": "2026-10-10T22:40:06+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Program overview; curriculum summary; learning and career sections",
+      "confidence": "high"
     }
   ],
   "outcomes": [],
   "courses": [],
-  "requirements": [],
+  "requirements": [
+    {
+      "id": "university-at-buffalo-suny-artificial-intelligence-crime-and-society-minor-minor-declaration",
+      "parent_id": null,
+      "title": "Current-student declaration route",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "university-at-buffalo-suny-artificial-intelligence-crime-and-society-minor-minor-program",
+      "source_text": null,
+      "summary": "Current UB students add this minor using the CAS Major/Minor Change Request. Eligibility, course inventory and overlap policies remain unverified.",
+      "course_ids": []
+    }
+  ],
   "notes": [
-    "Directory/identity verified; curriculum pending. No courses, requirements or outcomes have yet been extracted.",
-    "Official department directory confirms seven explicitly BS-labeled AI degrees and two minors. An additional AI and Philosophy, Politics and Economics entry lacks award type in inspected directory and requires follow-up. Curriculum and full campus inventory pending."
-  ]
+    "Official current program overview inspected; course-level requirements and complete academic policies remain unverified.",
+    "Catalog host robots.txt retrieval failed with ConnectError on 2026-10-10; no restriction bypass was attempted. An indexed Language Technology catalog page also failed to open through web retrieval. Overview pages are not a substitute for catalog requirements.",
+    "No course credits, credit-unit normalization, calendar or launch date inferred from the overview."
+  ],
+  "curriculum_audit": {
+    "scope": "minor",
+    "reviewed_at": "2026-10-10",
+    "source_ids": [
+      "university-at-buffalo-suny-artificial-intelligence-crime-and-society-minor-minor-official",
+      "university-at-buffalo-suny-artificial-intelligence-crime-and-society-minor-minor-program"
+    ],
+    "sections": [
+      "Official identity",
+      "Program-specific curriculum overview"
+    ],
+    "unresolved_requirements": [
+      "Exact course inventory and approved choice pools",
+      "Credit total and degree-specific selection rules",
+      "Prerequisites, admission, grade, residency and overlap policies"
+    ],
+    "metadata_gaps": [
+      "Course titles, codes, credits, descriptions and prerequisites",
+      "Verified public course sites and syllabi"
+    ]
+  }
 }

@@ -2,7 +2,7 @@
   "id": "university-at-buffalo-suny-ai-ethics-minor-minor",
   "institution": {
     "id": "university-at-buffalo-suny",
-    "name": "University at Buffalo\u2013SUNY",
+    "name": "University at Buffalo–SUNY",
     "aliases": [],
     "website": null,
     "calendar": "unknown"
@@ -10,38 +10,90 @@
   "title": "AI Ethics",
   "award_level": "minor",
   "program_kind": "minor",
-  "hosting_unit": null,
-  "status": "unknown",
+  "hosting_unit": "Department of Philosophy",
+  "status": "active",
   "first_offered": null,
-  "overview": "Official university content identifies this undergraduate minor. Curriculum details and complete institutional coverage remain pending.",
+  "overview": "The minor develops ethical, political and philosophical analysis of AI governance, responsibility and artificial minds.",
   "catalog_year": null,
-  "verification_status": "partial",
+  "verification_status": "confirmed",
   "last_verified": "2026-10-10",
-  "curriculum_status": "pending",
+  "curriculum_status": "partial",
   "links": [
     {
       "kind": "overview",
       "url": "https://arts-sciences.buffalo.edu/college/departments-and-programs/social-sciences/ai-society.html",
       "label": "Official program identity source"
+    },
+    {
+      "kind": "study",
+      "url": "https://www.buffalo.edu/cas/philosophy/undergraduate/minor-ai-ethics.html",
+      "label": "Official program overview and curriculum summary"
     }
   ],
   "sources": [
     {
       "id": "university-at-buffalo-suny-ai-ethics-minor-minor-official",
       "url": "https://arts-sciences.buffalo.edu/college/departments-and-programs/social-sciences/ai-society.html",
-      "title": "AI and Policy Analysis",
+      "title": "AI and Society — College of Arts and Sciences",
       "fetched_at": "2026-10-10",
       "source_date": null,
       "catalog_year": null,
       "locator": "Named undergraduate program entry: AI Ethics; award/type: minor / minor",
       "confidence": "high"
+    },
+    {
+      "id": "university-at-buffalo-suny-ai-ethics-minor-minor-program",
+      "url": "https://www.buffalo.edu/cas/philosophy/undergraduate/minor-ai-ethics.html",
+      "title": "Minor in AI Ethics",
+      "fetched_at": "2026-10-10T22:40:04+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Program overview; curriculum summary; learning and career sections",
+      "confidence": "high"
     }
   ],
   "outcomes": [],
   "courses": [],
-  "requirements": [],
+  "requirements": [
+    {
+      "id": "university-at-buffalo-suny-ai-ethics-minor-minor-approximate-credits",
+      "parent_id": null,
+      "title": "Approximate minor size",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "university-at-buffalo-suny-ai-ethics-minor-minor-program",
+      "source_text": null,
+      "summary": "The department overview describes approximately 21 credits. This is not an exact catalog total or a verified requirement inventory.",
+      "course_ids": []
+    }
+  ],
   "notes": [
-    "Directory/identity verified; curriculum pending. No courses, requirements or outcomes have yet been extracted.",
-    "Official department directory confirms seven explicitly BS-labeled AI degrees and two minors. An additional AI and Philosophy, Politics and Economics entry lacks award type in inspected directory and requires follow-up. Curriculum and full campus inventory pending."
-  ]
+    "Official current program overview inspected; course-level requirements and complete academic policies remain unverified.",
+    "Catalog host robots.txt retrieval failed with ConnectError on 2026-10-10; no restriction bypass was attempted. An indexed Language Technology catalog page also failed to open through web retrieval. Overview pages are not a substitute for catalog requirements.",
+    "No course credits, credit-unit normalization, calendar or launch date inferred from the overview."
+  ],
+  "curriculum_audit": {
+    "scope": "minor",
+    "reviewed_at": "2026-10-10",
+    "source_ids": [
+      "university-at-buffalo-suny-ai-ethics-minor-minor-official",
+      "university-at-buffalo-suny-ai-ethics-minor-minor-program"
+    ],
+    "sections": [
+      "Official identity",
+      "Program-specific curriculum overview"
+    ],
+    "unresolved_requirements": [
+      "Exact course inventory and approved choice pools",
+      "Credit total and degree-specific selection rules",
+      "Prerequisites, admission, grade, residency and overlap policies"
+    ],
+    "metadata_gaps": [
+      "Course titles, codes, credits, descriptions and prerequisites",
+      "Verified public course sites and syllabi"
+    ]
+  }
 }
