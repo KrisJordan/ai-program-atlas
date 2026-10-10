@@ -20,3 +20,9 @@ SOURCE_PARSERS = {**globals().get('SOURCE_PARSERS', {}), **_POLICY_PARSERS}
 
 SOURCES = tuple(SOURCES) + tuple(CONCENTRATION_PARSERS)
 SOURCE_PARSERS = {**SOURCE_PARSERS, **CONCENTRATION_PARSERS}
+
+# Independently reviewed CS/MATH/CY subject-catalog observations.
+from atlas.adapters.northeastern_course_metadata import register_subject_sources
+_FOUNDATION_METADATA = register_subject_sources(PROGRAM_ID, {'MATH': ['MATH 1341', 'MATH 1231', 'MATH 1241', 'MATH 1245', 'MATH 1340'], 'CS': ['CS 1200', 'CS 1210', 'CS 1800', 'CS 2000', 'CS 2001', 'CS 2100', 'CS 2101', 'CS 3200', 'CS 4520']})
+SOURCES = tuple(SOURCES) + tuple(_FOUNDATION_METADATA)
+SOURCE_PARSERS = {**globals().get('SOURCE_PARSERS', {}), **_FOUNDATION_METADATA}

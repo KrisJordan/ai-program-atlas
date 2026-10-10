@@ -1,6 +1,6 @@
 """Course metadata comes from live subject blocks, with no reviewed seed replay."""
 import pytest
-from atlas.adapters.northeastern_course_metadata import parse_subject
+from atlas.adapters.northeastern_course_metadata import parse_subject, register_subject_sources
 
 
 def page(block='', heading='Data Science (DS)'):
@@ -62,3 +62,40 @@ def test_partner_catalog_variable_credit_and_changed_description_remain_observat
     assert course['credits'] is None and course['description'] and course['prerequisites'] is None
     assert run(html.replace('(3-4 Hours)','(4 Hours)'))['credits']==4
     assert run(html.replace('functional analysis of behavior','a different topic'))['description'] is None
+
+
+def test_discrete_credit_options_and_corequisites_are_not_added_or_relabelled():
+    html=page('''<div class="courseblock"><p class="courseblocktitle">CS 4991. Research. (4,8 Hours)</p><p class="cb_desc">Offers students an opportunity to conduct research under faculty supervision.</p><p class="courseblockextra">Prerequisite(s): (CS 3100 with a minimum grade of D- or CIS 310M with a minimum grade of D-); CS 3800 with a minimum grade of D-</p><p class="courseblockextra">Corequisite(s): CS 4992</p></div>''',heading='Computer Science (CS)')
+    parser=register_subject_sources('test-program',{'CS':['CS 4991']})['https://catalog.northeastern.edu/course-descriptions/cs/']
+    result=parser(html);course=result['courses'][0]
+    assert course['credits'] is None and course['credit_unit']=='semester_hours'
+    assert '(CS 3100' in course['prerequisites'] and '); CS 3800' in course['prerequisites']
+    assert '4992' not in course['prerequisites']
+    assert any('4,8 semester hours' in n for n in result['notes'])
+    assert any('corequisite(s): CS 4992' in n for n in result['notes'])
+    changed=parser(html.replace('(4,8 Hours)','(6 Hours)').replace('CS 4992','CS 4993'))
+    assert changed['courses'][0]['credits']==6
+    assert any('CS 4993' in n for n in changed['notes'])
+    assert not any('4,8' in n or '4992' in n for n in changed['notes'])
+
+
+def test_required_prose_and_recommended_preparation_remain_distinct():
+    required='Requires prior completion of MATH 1341 or permission of head mathematics advisor.'
+    recommendation='Prior completion of Calculus 2 is strongly recommended.'
+    html=page(f'''<div class="courseblock"><p class="courseblocktitle">MATH 1342. Calculus 2. (4 Hours)</p><p class="cb_desc">Studies convergence of sequences and series. {required}</p></div><div class="courseblock"><p class="courseblocktitle">MATH 2321. Calculus 3. (4 Hours)</p><p class="cb_desc">Develops vector calculus in two and three dimensions. {recommendation}</p></div>''',heading='Mathematics (MATH)')
+    parser=register_subject_sources('test-program',{'MATH':['MATH 1342','MATH 2321']})['https://catalog.northeastern.edu/course-descriptions/math/']
+    result=parser(html)
+    assert 'or permission of head mathematics advisor' in result['courses'][0]['prerequisites']
+    assert result['courses'][1]['prerequisites'] is None
+    assert any('MATH 2321' in n and 'not a prerequisite' in n for n in result['notes'])
+    changed=parser(html.replace(required,'No statement of required preparation.'))
+    assert changed['courses'][0]['prerequisites'] is None
+
+
+def test_registered_subjects_keep_distinct_selectors_and_reject_wrong_catalog():
+    parsers=register_subject_sources('test-program',{'CS':['CS 3200'],'MATH':['MATH 1341']})
+    cs=page('<div class="courseblock"><p class="courseblocktitle">CS 3200. Databases. (4 Hours)</p><p class="cb_desc">Includes fundamentals of concurrency and recovery.</p></div>',heading='Computer Science (CS)')
+    math=page('<div class="courseblock"><p class="courseblocktitle">MATH 1341. Calculus 1. (4 Hours)</p><p class="cb_desc">Introduces the derivative as a limit.</p></div>',heading='Mathematics (MATH)')
+    assert parsers['https://catalog.northeastern.edu/course-descriptions/cs/'](cs)['courses'][0]['code']=='CS 3200'
+    assert parsers['https://catalog.northeastern.edu/course-descriptions/math/'](math)['courses'][0]['code']=='MATH 1341'
+    with pytest.raises(ValueError):parsers['https://catalog.northeastern.edu/course-descriptions/cs/'](math)

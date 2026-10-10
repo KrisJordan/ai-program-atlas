@@ -6,6 +6,35 @@ from atlas.adapters.northeastern_courseleaf import clean, slug, numeric, categor
 # Short editorial summaries of the linked official descriptions. Each has a
 # source phrase guard; changed prose cannot silently replay an unsupported summary.
 SUMMARIES = {
+    'MATH 1231': ('realistic business and economics problems', 'Applies differential and integral calculus to business modeling and economic decisions.'),
+    'MATH 1241': ('self-contained one-semester course', 'Introduces differentiation, integration and applications involving change and accumulation.'),
+    'MATH 1245': ('differential equation and compares the solution with experiment', 'Applies calculus and differential equations to scientific models and a group investigation.'),
+    'MATH 1340': ('strengthening of precalculus skills', 'Combines precalculus preparation with introductory differential and integral calculus.'),
+    'MATH 1341': ('the derivative as a limit', 'Develops differentiation, its scientific applications, and introductory integration.'),
+    'MATH 1342': ('convergence of sequences and series', 'Continues integration methods, series, and introductory vectors and spatial motion.'),
+    'MATH 1365': ('logically sound mathematical arguments', 'Develops proof writing and mathematical reasoning using sets, relations and functions.'),
+    'MATH 1465': ('countable and uncountable sets', 'Intensively develops proofs, mathematical structures, cardinality and introductory algebra.'),
+    'MATH 2321': ('vector calculus in two and three dimensions', 'Develops multivariable differentiation, multiple integrals and vector calculus.'),
+    'MATH 2331': ('Gauss-Jordan elimination algorithm', 'Studies linear transformations, matrix methods, orthogonality and spectral decompositions.'),
+    'MATH 2341': ('Laplace transforms, and linear algebra', 'Combines differential-equation methods and linear algebra for engineering applications.'),
+    'MATH 3081': ('confidence intervals, and hypothesis testing', 'Develops probability distributions and limit theory, then introduces statistical inference.'),
+    'MATH 3175': ('structural properties of groups', 'Studies abstract groups, their structure, homomorphisms and applications.'),
+    'MATH 3527': ('RSA encryption system', 'Studies integers, congruences and number-theoretic methods, including cryptographic applications.'),
+    'CS 1200': ('academic and personal goal setting', 'Supports university transition, community connections and student planning.'),
+    'CS 1210': ('professional behavior and ethical issues', 'Prepares students for co-op applications, interviews and workplace expectations.'),
+    'CS 1800': ('inductive and recursive definitions', 'Develops discrete structures, logic, proofs and counting methods for computing.'),
+    'CS 2000': ('no prior programming experience', 'Introduces programming, dataset analysis and ethical issues in software design.'),
+    'CS 2001': ('Accompanies CS 2000', 'Provides experiments supporting introductory programming coursework.'),
+    'CS 2100': ('abstraction, encapsulation, inheritance, and interfaces', 'Develops program design, object-oriented abstractions and software engineering practices.'),
+    'CS 2101': ('Accompanies CS 2100', 'Provides experiments supporting program design coursework.'),
+    'CS 2484': ('usability and accessibility', 'Introduces human-centered interface design, prototyping and usability evaluation.'),
+    'CS 3200': ('fundamentals of concurrency and recovery', 'Develops relational database design, SQL and introductory database-system techniques.'),
+    'CS 4100': ('heuristic search, decision making under uncertainty', 'Surveys AI representations, search, uncertainty and machine learning through programming.'),
+    'CS 4120': ('computational modeling of human language', 'Studies computational language models and builds natural-language analysis programs.'),
+    'CS 4520': ('professional-quality mobile application', 'Develops mobile applications with interfaces, data storage, networking and device features.'),
+    'CS 4991': ('conduct research under faculty supervision', 'Provides faculty-supervised research.'),
+    'CY 4170': ('automation, and intellectual property', 'Examines legal and ethical rules governing digital data, privacy and automated systems.'),
+    'CY 5240': ('emerging technologies for management of digital rights', 'Examines cybersecurity law, privacy, digital rights and information-security ethics.'),
     'SLPA 1101': ('assessment and treatment of disorders', 'Introduces speech, language and hearing disorders, their assessment and treatment, and clinical observation.'),
     'SLPA 4500': ('children and adults with frequently referred language disorders', 'Studies language disorders across ages, their neurological bases and approaches to assessment and intervention.'),
     'SLPA 5107': ('functional analysis of behavior', 'Applies behavioral analysis and experimental methods to clinical assessment and communication-disorder treatment.'),
@@ -60,10 +89,11 @@ def parse_subject(html, *, program_id, subject, heading, codes, url):
     if any(not code.startswith(subject + ' ') for code in wanted):
         raise ValueError('Course selector does not belong to subject')
     courses = {}
+    metadata_notes = []
     for block in content.find_all('div', class_='courseblock'):
         header = block.find(class_='courseblocktitle')
         if not header: continue
-        match = re.fullmatch(r'([A-Z]+ \d+[A-Z]?)\.\s+(.+?)\.\s+\((\d+(?:-\d+)?) Hours?\)', clean(header))
+        match = re.fullmatch(r'([A-Z]+ \d+[A-Z]?)\.\s+(.+?)\.\s+\((\d+(?:\s*[-,]\s*\d+)*) Hours?\)', clean(header))
         if not match or match[1] not in wanted: continue
         code, name, hours = match.groups()
         if code in courses: raise ValueError('Duplicate selected course block')
@@ -76,10 +106,18 @@ def parse_subject(html, *, program_id, subject, heading, codes, url):
             text = clean(extra)
             if text.startswith('Prerequisite(s):'):
                 prerequisites = text.removeprefix('Prerequisite(s):').strip() or None
+            elif text.startswith('Corequisite(s):'):
+                condition = text.removeprefix('Corequisite(s):').strip()
+                if condition:
+                    metadata_notes.append(f'{code} subject catalog corequisite(s): {condition}. These are concurrent conditions, not prerequisites.')
         additional = re.search(r'Requires prior completion of ([^.]+)\.', prose)
         if additional:
             condition = 'Additional course-description condition: ' + additional[1] + '.'
             prerequisites = (prerequisites + '; ' if prerequisites else '') + condition
+        for recommendation in re.findall(r'[^.]*\b(?:recommended|recommended preparation)\b[^.]*\.', prose, re.I):
+            metadata_notes.append(f'{code} subject catalog recommended preparation (not a prerequisite): {recommendation.strip()}')
+        if numeric(hours) is None:
+            metadata_notes.append(f'{code} subject catalog credit options: {hours} semester hours. The scalar credit amount remains unknown; alternatives are not added together.')
         cid = program_id + '-' + slug(code)
         courses[code] = dict(id=cid, code=code, name=name, description=description, prerequisites=prerequisites,
             credits=numeric(hours), credit_unit='semester_hours', category=category(code,name),
@@ -87,4 +125,24 @@ def parse_subject(html, *, program_id, subject, heading, codes, url):
     missing = wanted - courses.keys()
     if missing: raise ValueError('Selected courses missing from official catalog: ' + ', '.join(sorted(missing)))
     return dict(id=program_id, courses=[courses[code] for code in codes], requirements=[],
-                curriculum_status='partial', notes=['Subject-catalog metadata observation only; merge with program requirements after review. Credits are hours in the same semester catalog as the program. Missing prerequisite fields remain unknown.'])
+                curriculum_status='partial', notes=['Subject-catalog metadata observation only; merge with program requirements after review. Credits are hours in the same semester catalog as the program. Missing prerequisite fields remain unknown.', *metadata_notes])
+
+
+SUBJECT_HEADINGS = {
+    'MATH': 'Mathematics (MATH)',
+    'CS': 'Computer Science (CS)',
+    'CY': 'Cybersecurity (CY)',
+}
+
+
+def register_subject_sources(program_id, selections):
+    """Bind explicitly reviewed code selections, without reading curated seeds."""
+    parsers = {}
+    for subject, codes in selections.items():
+        heading = SUBJECT_HEADINGS[subject]
+        url = f'https://catalog.northeastern.edu/course-descriptions/{subject.lower()}/'
+        def observe(html, subject=subject, heading=heading, codes=tuple(codes), url=url):
+            return parse_subject(html, program_id=program_id, subject=subject,
+                                 heading=heading, codes=codes, url=url)
+        parsers[url] = observe
+    return parsers
