@@ -65,7 +65,34 @@ def date_value(p):
 
 
 def evidence_label(p):
-    return 'Pending — identity only' if p.get('curriculum_status') == 'pending' else human(p.get('curriculum_status'))
+    labels = {'pending': 'Pending — identity only', 'complete': 'Complete requirement inventory', 'partial': 'Partial requirement inventory'}
+    return labels.get(p.get('curriculum_status'), 'Unknown')
+
+
+def curriculum_scope(p):
+    kind = p.get('program_kind')
+    scope = {
+        'concentration': 'This inventory covers the concentration’s local requirements, not the whole parent degree.',
+        'minor': 'This inventory covers the minor’s requirements, not the student’s whole degree.',
+        'additional_major': 'This inventory covers the additional major’s requirements, not the primary degree or every graduation requirement.',
+        'degree': 'This inventory covers the represented degree program at the recorded catalog year.',
+    }.get(kind, 'This inventory covers only the represented award or program.')
+    state = {
+        'complete': 'Complete means the requirement inventory for this represented award has been extracted from the recorded sources.',
+        'partial': 'Partial means some of this program’s requirement inventory remains unextracted.',
+        'pending': 'Pending means program identity is documented; its requirement inventory has not yet been extracted.',
+    }.get(p.get('curriculum_status'), 'Requirement inventory completeness has not been established.')
+    return state + ' ' + scope + ' Course metadata completeness is assessed separately below. Listed electives and alternatives are options; every listed course is not necessarily required.'
+
+
+def metadata_availability(p):
+    courses = unique_courses(p)
+    sources = {s.get('id'): s for s in p.get('sources', [])}
+    def sourced(course):
+        return bool(safe_url(course.get('url')) or safe_url(sources.get(course.get('source_id'), {}).get('url')))
+    fields = [('description', 'Descriptions'), ('prerequisites', 'Prerequisite statements'), ('credits', 'Credit amounts'), ('credit_unit', 'Known credit units')]
+    counts = [(label, sum(sourced(c) and c.get(key) is not None and c.get(key) != '' and (key != 'credit_unit' or c.get(key) != 'unknown') for c in courses)) for key, label in fields]
+    return '<section class="metadata-availability" aria-labelledby="metadata-title"><h3 id="metadata-title">Course metadata availability</h3><p class="section-note">Counts below show populated fields with a recorded course or source URL, across ' + str(len(courses)) + ' unique course records. They describe evidence availability, not requirement completeness. A missing prerequisite statement does not mean “no prerequisites”; an unknown credit unit cannot be converted or totaled.</p><dl class="metadata-counts">' + ''.join(f'<div><dt>{esc(label)}</dt><dd><strong>{count}</strong> of {len(courses)} sourced</dd></div>' for label, count in counts) + '</dl></section>'
 
 
 def program_card(p, base):
@@ -103,7 +130,7 @@ def root_page(data, base):
     filters = [
         ("type", "Program type", [("degree", "Degree"), ("additional_major", "Additional major"), ("minor", "Minor"), ("concentration", "Concentration")]),
         ("award", "Award", sorted({(p.get("award_level", "other"), p.get("award_level", "Other")) for p in programs})),
-        ("evidence", "Curriculum evidence", [("pending", "Pending — identity only"), ("partial", "Partial extraction"), ("complete", "Complete extraction")]),
+        ("evidence", "Curriculum evidence", [("pending", "Pending — identity only"), ("partial", "Partial requirements"), ("complete", "Complete requirements")]),
         ("calendar", "Calendar", sorted({(p.get("institution", {}).get("calendar") or "unknown", human(p.get("institution", {}).get("calendar"))) for p in programs})),
         ("institution", "Institution", sorted({(p.get("institution", {}).get("id", ""), p.get("institution", {}).get("name", "Unknown")) for p in programs}, key=lambda v: v[1])),
         ("cohort", "Institution category", [("National Universities", "National Universities"), ("National Liberal Arts Colleges", "National Liberal Arts Colleges")]),
@@ -136,25 +163,41 @@ def requirement_tree(p):
     requirements = p.get("requirements", [])
     course_map = {c["id"]: c for c in unique_courses(p)}
     ids = {r.get("id") for r in requirements}
+    sources = {s.get('id'): s for s in p.get('sources', [])}
+    rendered = set()
 
     def render(r, seen):
         rid = r.get("id")
         if rid in seen:
             return ""
         seen = seen | {rid}
+        rendered.add(rid)
         requirement_courses = [course_map[cid] for cid in dict.fromkeys(r.get("course_ids") or []) if cid in course_map]
-        courses = "".join(f'<li>{esc(c.get("code") or "Code unknown")} · {esc(c.get("name"))}</li>' for c in requirement_courses)
+        courses = "".join(f'<li><a href="#course-{esc(c["id"])}">{esc(c.get("code") or "Code unknown")} · {esc(c.get("name") or "Course name not verified")}</a></li>' for c in requirement_courses)
         children = "".join(render(child, seen) for child in requirements if child.get("parent_id") == rid)
         selection = []
         if r.get("count") is not None:
-            selection.append(f'{r["count"]} courses')
+            selection.append(f'{r["count"]} course' + ('' if r['count'] == 1 else 's'))
         if r.get("credits") is not None:
             selection.append(f'{r["credits"]} {human(r.get("credit_unit"))}')
-        course_list = '<ul class="requirement-courses">' + courses + '</ul>' if courses else ''
-        return f'<li class="requirement"><div>{badge(human(r.get("kind")))}<h3>{esc(r.get("title"))}</h3></div>{"<p>" + esc(" · ".join(selection)) + "</p>" if selection else ""}<p>{esc(r.get("summary") or "Requirement detail has not been extracted.")}</p>{course_list}{"<ul>" + children + "</ul>" if children else ""}</li>'
+        course_list = '<p class="course-list-label">Listed courses / options — follow the group rule</p><ul class="requirement-courses">' + courses + '</ul>' if courses else ''
+        operator = {'all': 'Complete all items in this group', 'choose_courses': 'Choose courses', 'choose_credits': 'Choose by credit amount', 'alternative': 'Choose an alternative', 'note': 'Requirement note'}.get(r.get('kind'), human(r.get('kind')))
+        source = sources.get(r.get('source_id'), {})
+        evidence = '<p class="requirement-evidence">' + external(source.get('url'), 'Requirement source') + '</p>' if source else '<p class="requirement-evidence">Requirement source not recorded.</p>'
+        source_wording = '<details class="source-wording"><summary>Source wording</summary><blockquote>' + esc(r['source_text']) + '</blockquote></details>' if r.get('source_text') else ''
+        return f'<li class="requirement"><div>{badge(operator)}<h3>{esc(r.get("title"))}</h3></div>{"<p>" + esc(" · ".join(selection)) + "</p>" if selection else ""}<p>{esc(r.get("summary") or "Requirement detail has not been extracted.")}</p>{source_wording}{course_list}{"<ul>" + children + "</ul>" if children else ""}{evidence}</li>'
 
     roots = [r for r in requirements if not r.get("parent_id") or r.get("parent_id") not in ids]
-    return '<ul class="requirements">' + ''.join(render(r, set()) for r in roots) + '</ul>' if roots else '<p class="notice">Requirement structure has not yet been extracted. Consult the official catalog.</p>'
+    if not requirements:
+        return '<p class="notice">Requirement structure has not yet been extracted. Consult the official catalog.</p>'
+    content = ''.join(render(r, set()) for r in roots)
+    remaining = [r for r in requirements if r.get('id') not in rendered]
+    if remaining:
+        content += '<li class="notice">Some recorded groups have unresolved parent relationships. Their recorded rules are shown below; consult the source for their placement.</li>'
+        for r in remaining:
+            if r.get('id') not in rendered:
+                content += render(r, set())
+    return '<ul class="requirements">' + content + '</ul>'
 
 
 def outcomes(p, kind):
@@ -174,7 +217,7 @@ def program_page(p, base):
         first_text = external(first.get("evidence_url"), first.get("value")) + ' <small>' + esc(first.get("uncertainty") or first.get("precision") or "") + '</small>'
     links = ' <span aria-hidden="true">/</span> '.join(external(link.get("url"), link.get("label") or human(link.get("kind"))) for link in p.get("links", []))
     missing_credits = sum(c.get("credits") is None for c in courses)
-    rows = ''.join(f'''<tr><th scope="row">{esc(c.get('code') or 'Unknown')}<span>{esc(c.get('name') or 'Course name not verified')}</span><p class="course-description">{esc(c.get('description') or 'Description not recorded.')}</p></th><td>{esc(CATEGORIES.get(c.get('category'), CATEGORIES['other']))}</td><td>{esc(c.get('credits'))}<small>{esc(human(c.get('credit_unit')))}</small></td><td>{esc(c.get('prerequisites') or 'Not recorded')}</td><td>{external(c.get('url'), 'Catalog')}{'<br>' + external(c.get('public_site'), 'Course site') if c.get('public_site') else ''}{'<br>' + external(c.get('syllabus'), 'Syllabus') if c.get('syllabus') else ''}</td></tr>''' for c in courses)
+    rows = ''.join(f'''<tr><th scope="row" id="course-{esc(c['id'])}">{esc(c.get('code') or 'Unknown')}<span>{esc(c.get('name') or 'Course name not verified')}</span><p class="course-description">{esc(c.get('description') or 'Description not recorded.')}</p></th><td>{esc(CATEGORIES.get(c.get('category'), CATEGORIES['other']))}</td><td>{esc(c.get('credits'))}<small>{esc(human(c.get('credit_unit')))}</small></td><td>{esc(c.get('prerequisites') or 'Not recorded')}</td><td>{external(c.get('url'), 'Catalog')}{'<br>' + external(c.get('public_site'), 'Course site') if c.get('public_site') else ''}{'<br>' + external(c.get('syllabus'), 'Syllabus') if c.get('syllabus') else ''}</td></tr>''' for c in courses)
     sources = ''.join(f'''<li id="source-{esc(s.get('id'))}"><h3>{external(s.get('url'), s.get('title') or 'Official source')}</h3><p>{esc(s.get('locator') or 'Locator not recorded')}</p><dl class="source-meta"><div><dt>Retrieved</dt><dd>{esc(s.get('fetched_at') or 'Not recorded')}</dd></div><div><dt>Source date</dt><dd>{esc(s.get('source_date'))}</dd></div><div><dt>Catalog year</dt><dd>{esc(s.get('catalog_year'))}</dd></div><div><dt>Confidence</dt><dd>{esc(human(s.get('confidence')))}</dd></div></dl></li>''' for s in p.get('sources', []))
     notes = ''.join(f'<li>{esc(n)}</li>' for n in p.get('notes', []))
     rankings = institution.get('rankings') or []
@@ -189,13 +232,13 @@ def program_page(p, base):
         ranking_context += '<p>Ranking provenance is not recorded for this institution.</p>'
     ranking_context += '</section>'
     body = f'''<div class="breadcrumb"><a href="{base}">Program index</a><span>/</span>{esc(institution.get('name'))}</div><section class="detail-hero"><div class="eyebrow">{esc(institution.get('name'))} / {esc(p.get('hosting_unit') or 'Hosting unit unknown')}</div><h1>{esc(p.get('title'))}</h1><p class="lede">{esc(p.get('overview') or 'Overview not yet recorded.')}</p><div class="detail-badges">{badge(p.get('award_level'))}{badge(human(p.get('program_kind')))}{badge(human(p.get('status')))}</div><div class="official-links">{links}</div></section>
-<dl class="fact-grid"><div><dt>Calendar</dt><dd>{esc(human(institution.get('calendar')))}</dd></div><div><dt>Catalog year</dt><dd>{esc(p.get('catalog_year'))}</dd></div><div><dt>Last verified</dt><dd>{esc(date_value(p))}</dd></div><div><dt>Curriculum extraction</dt><dd>{esc(human(p.get('curriculum_status')))}</dd></div></dl>
-<div class="notice evidence-notice"><strong>Read the evidence in context.</strong><p>Verification: {esc(human(p.get('verification_status')))}. {missing_credits} of {len(courses)} course records have unknown credits. Unknown values are not zero. Recorded course credits must not be added to estimate degree requirements.</p><p>First offered: {first_text}</p>{'<ul>' + notes + '</ul>' if notes else ''}</div>{ranking_context}
+<dl class="fact-grid"><div><dt>Calendar</dt><dd>{esc(human(institution.get('calendar')))}</dd></div><div><dt>Catalog year</dt><dd>{esc(p.get('catalog_year'))}</dd></div><div><dt>Last verified</dt><dd>{esc(date_value(p))}</dd></div><div><dt>Requirement inventory</dt><dd>{esc(evidence_label(p))}</dd></div></dl>
+<div class="notice evidence-notice"><strong>Read the evidence in context.</strong><p>Verification: {esc(human(p.get('verification_status')))}. {missing_credits} of {len(courses)} course records have unknown credits. Unknown values are not zero. Recorded course credits must not be added to estimate degree requirements.</p><p class="curriculum-scope">{esc(curriculum_scope(p))}</p><p>First offered: {first_text}</p>{'<ul>' + notes + '</ul>' if notes else ''}</div>{ranking_context}
 <nav class="section-nav" aria-label="Program sections"><a href="#curriculum">Curriculum</a><a href="#requirements">Requirements</a><a href="#outcomes">Outcomes</a><a href="#courses">Course records</a><a href="#sources">Sources</a></nav>
 <section id="curriculum" class="detail-section"><span class="eyebrow">01 / CURRICULUM PROFILE</span><h2>What the documented courses cover</h2>{category_chart(p)}</section>
-<section id="requirements" class="detail-section"><span class="eyebrow">02 / PROGRAM STRUCTURE</span><h2>Requirements & choices</h2><p class="section-note">Nested groups preserve course choices and alternatives. A course listed in more than one group is counted once in the curriculum profile.</p>{requirement_tree(p)}</section>
+<section id="requirements" class="detail-section"><span class="eyebrow">02 / PROGRAM STRUCTURE</span><h2>Requirements & choices</h2><p class="section-note">Nested groups preserve course choices and alternatives. A course listed in more than one group is counted once in the curriculum profile. Follow each group’s rule: elective pools and alternative paths do not make every listed course compulsory.</p>{requirement_tree(p)}</section>
 <section id="outcomes" class="detail-section"><span class="eyebrow">03 / LEARNING OUTCOMES</span><h2>Intent, with attribution</h2><div class="outcome-grid"><div><h3>Source-stated outcomes</h3><p class="section-note">Statements attributed to the institution, summarized from official evidence.</p>{outcomes(p, 'source_stated')}</div><div><h3>Inferred taxonomy</h3><p class="section-note">Editorial classifications. These are interpretations, not claims made by the institution.</p>{outcomes(p, 'inferred_taxonomy')}</div></div></section>
-<section id="courses" class="detail-section"><span class="eyebrow">04 / COURSE RECORDS</span><h2>Inspect the building blocks</h2><p class="section-note">Credits retain their original units. “Not recorded” means the atlas lacks evidence; it does not mean a course has no prerequisites.</p><div class="table-scroll" role="region" aria-label="Course records" tabindex="0"><table class="course-table"><thead><tr><th scope="col">Course</th><th scope="col">Category</th><th scope="col">Credits</th><th scope="col">Prerequisites</th><th scope="col">Evidence</th></tr></thead><tbody>{rows}</tbody></table></div>{'<p class="notice">No course records extracted yet.</p>' if not courses else ''}</section>
+<section id="courses" class="detail-section"><span class="eyebrow">04 / COURSE RECORDS</span><h2>Inspect the building blocks</h2>{metadata_availability(p)}<p class="section-note">Credits retain their original units. “Not recorded” means the atlas lacks evidence; it does not mean a course has no prerequisites.</p><div class="table-scroll" role="region" aria-label="Course records" tabindex="0"><table class="course-table"><thead><tr><th scope="col">Course</th><th scope="col">Category</th><th scope="col">Credits</th><th scope="col">Prerequisites</th><th scope="col">Evidence</th></tr></thead><tbody>{rows}</tbody></table></div>{'<p class="notice">No course records extracted yet.</p>' if not courses else ''}</section>
 <section id="sources" class="detail-section"><span class="eyebrow">05 / THE PAPER TRAIL</span><h2>Sources & provenance</h2><ol class="sources">{sources}</ol></section>'''
     return shell(p.get("title", "Program"), body, base)
 
@@ -254,7 +297,7 @@ def methodology_page(data, base):
     body = f'''<section class="page-hero"><span class="eyebrow">HOW TO READ THE ATLAS</span><h1>Evidence before<br><em>inference.</em></h1><p class="lede">An inspectable research index. No composite scores, hidden rankings, or claims that a curriculum count measures quality.</p></section>
 <div class="method-layout"><nav class="method-nav" aria-label="Methodology sections"><a href="#scope">01 · Scope</a><a href="#evidence">02 · Evidence</a><a href="#curriculum-method">03 · Curriculum</a><a href="#research">04 · Research context</a><a href="#unknowns">05 · Limitations</a></nav><div class="prose"><section id="scope"><h2>01 / A precise inclusion rule</h2><p>Programs qualify when their official undergraduate title includes AI or Artificial Intelligence. Degrees, additional majors, minors, and concentrations remain separate program types. A general computer science program with AI electives does not qualify on that basis alone.</p><p>The intended institution scope comprises two independent U.S. News top-100 cohorts, inclusive of ties: National Universities and National Liberal Arts Colleges. Until complete membership is source-verified and recorded, the atlas is a pilot inventory. Consult the coverage ledger for what has actually been inspected.</p></section>
 <section id="evidence"><h2>02 / Follow the source</h2><p>Official university catalogs, program pages, and announcements support program records. Sources retain their URLs, retrieval dates, catalog years, locators, and confidence. The last verification date describes the research record, not a guarantee that the source has remained unchanged.</p><p>Launch dates are recorded only when evidence supports the date and its precision. The oldest search result is not treated as a program’s first offering. Source-stated learning outcomes and inferred editorial taxonomy appear in separate sections.</p></section>
-<section id="curriculum-method"><h2>03 / Compare structure with care</h2><p>Requirements preserve all-of groups, course-count choices, credit-count choices, and nested alternatives. A course can belong to multiple requirements. The curriculum chart deduplicates courses by stable course ID and assigns each documented course to a single editorial category.</p><p>Charts count observed course records. They do not measure required credit shares, course depth, teaching quality, or the student experience. Partial catalogs, elective pools, and different program sizes make these counts unsuitable for ranking programs.</p><p>Quarter hours, semester hours, course units, and other units retain their original labels. No conversion or normalized total is inferred. Unknown credits are null, never zero. Missing prerequisites, descriptions, course sites, or syllabi remain explicitly unrecorded.</p></section>
+<section id="curriculum-method"><h2>03 / Compare structure with care</h2><p>Requirements preserve all-of groups, course-count choices, credit-count choices, and nested alternatives. A course can belong to multiple requirements. The curriculum chart deduplicates courses by stable course ID and assigns each documented course to a single editorial category.</p><p>“Complete” describes the requirement inventory for the represented award at its recorded catalog year. A complete minor or concentration inventory does not cover the whole parent degree. Course descriptions, prerequisite statements, credit amounts, and known credit units have separate availability counts; a complete requirement inventory may still have missing course metadata.</p><p>Charts count observed course records. They do not measure required credit shares, course depth, teaching quality, or the student experience. Partial catalogs, elective pools, and different program sizes make these counts unsuitable for ranking programs.</p><p>Quarter hours, semester hours, course units, and other units retain their original labels. No conversion or normalized total is inferred. Unknown credits are null, never zero. Missing prerequisites, descriptions, course sites, or syllabi remain explicitly unrecorded.</p></section>
 <section id="research"><h2>04 / Research is context</h2>{badge('CSRankings · not imported')}<p>{esc(method)}</p>{research_config}<p>CSRankings data and code have not been imported or redistributed because redistribution licensing remains unresolved for this project. No research score is attached to a program. Publication activity does not measure undergraduate teaching quality. Consult the original resource and its methodology directly.</p><p>{external('https://csrankings.org/', 'Visit CSRankings')} · {external('https://csrankings.org/faq', 'Read the CSRankings FAQ')}</p></section>
 <section id="unknowns"><h2>05 / What remains unknown</h2><p>Coverage is incomplete. A missing institution or program does not establish absence. A “no qualifying program found” conclusion requires a documented search of official sources. Inaccessible pages remain inaccessible; pending institutions remain pending.</p><ul>{limitations(meta)}</ul><p>Use this atlas to frame questions, then confirm current admission and graduation requirements with the institution.</p><a href="{base}coverage/">Inspect the coverage ledger →</a></section></div></div>'''
     return shell('Methodology', body, base, 'methodology')

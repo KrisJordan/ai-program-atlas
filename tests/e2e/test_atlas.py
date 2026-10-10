@@ -165,3 +165,47 @@ def test_cohort_context_theme_matrix_and_unknown_categories(page, site):
     expect(category.locator('td').nth(2)).to_have_text('Not yet extracted')
     page.reload()
     expect(page.locator('.theme-table tbody tr')).to_have_count(2)
+
+
+@pytest.mark.parametrize('width', [1440, 390])
+def test_complete_concentration_scope_metadata_and_nested_choices(page, site, tmp_path, site_data, width):
+    from playwright.sync_api import expect
+    program = site_data['programs'][0]
+    program.update(program_kind='concentration', curriculum_status='complete')
+    course = dict(program['courses'][0], description='A sourced description.', prerequisites=None, credits=0)
+    unsourced = dict(course, id='course-unsourced', code='AI 999', name='An elective option', description='Unverified text', credits=None, credit_unit='unknown', url=None, source_id=None)
+    program['courses'] = [course, unsourced, dict(course)]
+    def group(id, parent, title, kind, **extra):
+        return dict(id=id, parent_id=parent, title=title, kind=kind, source_id='outcome-source', summary='Follow this recorded group rule.', course_ids=[], **extra)
+    program['requirements'] = [
+        group('root', None, 'Select one pathway', 'alternative'),
+        {**group('branch', 'root', 'Foundations pathway', 'all'), 'course_ids': [course['id']]},
+        {**group('choice', 'root', 'Elective pathway', 'choose_courses', count=1), 'course_ids': [course['id'], unsourced['id']]},
+        group('note', 'branch', 'Advisor approval', 'note', source_text='Approval is required for a substitution.'),
+        group('credits', 'choice', 'Credit minimum', 'choose_credits', credits=3, credit_unit='semester_hours'),
+    ]
+    build(site_data, tmp_path / 'ai-program-atlas')
+    page.set_viewport_size({'width': width, 'height': 950})
+    page.goto(site + 'programs/test-ai-0/')
+    expect(page.locator('.curriculum-scope')).to_contain_text('Complete means the requirement inventory')
+    expect(page.locator('.curriculum-scope')).to_contain_text('concentration’s local requirements, not the whole parent degree')
+    expect(page.locator('.metadata-counts > div').filter(has=page.locator('dt', has_text='Descriptions'))).to_contain_text('1 of 2 sourced')
+    expect(page.locator('.metadata-counts > div').filter(has=page.locator('dt', has_text='Prerequisite statements'))).to_contain_text('0 of 2 sourced')
+    expect(page.locator('.metadata-counts > div').filter(has=page.locator('dt', has_text='Credit amounts'))).to_contain_text('1 of 2 sourced')
+    expect(page.locator('.metadata-counts > div').filter(has=page.locator('dt', has_text='Known credit units'))).to_contain_text('1 of 2 sourced')
+    expect(page.locator('.requirements .requirement')).to_have_count(5)
+    expect(page.get_by_role('heading', name='Advisor approval', exact=True)).to_be_visible()
+    expect(page.get_by_role('heading', name='Credit minimum', exact=True)).to_be_visible()
+    expect(page.locator('.requirements')).to_contain_text('Choose an alternative')
+    expect(page.locator('.requirements')).to_contain_text('1 course')
+    expect(page.locator('.requirements')).to_contain_text('3 Semester hours')
+    page.locator('.source-wording summary').click()
+    expect(page.get_by_text('Approval is required for a substitution.', exact=True)).to_be_visible()
+    expect(page.locator('.requirement-evidence a').first).to_have_attribute('href', 'https://example.edu/outcome')
+    assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
+    page.goto(site + '?compare=test-ai-0,test-ai-1')
+    scope = page.locator('.compare-table tr').filter(has=page.get_by_role('rowheader', name='Requirement coverage', exact=True))
+    expect(scope).to_contain_text('Concentration requirements only; not the whole parent degree')
+    counts = page.locator('.compare-table tr').filter(has=page.get_by_role('rowheader', name='Course metadata availability', exact=True))
+    expect(counts.locator('td').first).to_contain_text('Prerequisite statements0 of 2')
+    assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')

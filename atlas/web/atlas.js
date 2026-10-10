@@ -19,6 +19,18 @@
   const urlSafe = u => /^https?:\/\//.test(u || '');
   const link = (url, label) => urlSafe(url) ? `<a href="${e(url)}" rel="noopener noreferrer">${e(label)} ↗</a>` : e(label);
   const announce = text => { document.getElementById('compare-status').textContent = text; };
+  const requirementScope = p => {
+    const scope = {concentration: 'Concentration requirements only; not the whole parent degree.', minor: 'Minor requirements only; not the whole degree.', additional_major: 'Additional-major requirements only; not the primary degree.', degree: 'Represented degree program at its recorded catalog year.'}[p.program_kind] || 'Represented program only.';
+    const status = p.curriculum_status === 'complete' ? 'Complete requirement inventory. ' : p.curriculum_status === 'partial' ? 'Partial requirement inventory. ' : 'Requirement inventory not yet extracted. ';
+    return e(status + scope) + '<small>Course metadata completeness is separate. Listed electives and alternatives are not all required.</small>';
+  };
+  const metadataCounts = p => {
+    const items = courses(p), sources = new Map((p.sources || []).map(s => [s.id, s]));
+    return '<dl class="mini-counts">' + [['description', 'Descriptions'], ['prerequisites', 'Prerequisite statements'], ['credits', 'Credit amounts'], ['credit_unit', 'Known credit units']].map(([key, label]) => {
+      const count = items.filter(c => (urlSafe(c.url) || urlSafe(sources.get(c.source_id)?.url)) && c[key] != null && c[key] !== '' && (key !== 'credit_unit' || c[key] !== 'unknown')).length;
+      return `<dt>${label}</dt><dd>${count} of ${items.length}</dd>`;
+    }).join('') + '</dl><small>Populated fields with recorded source URLs. Missing prerequisites do not mean none.</small>';
+  };
 
   function readState() {
     const params = new URLSearchParams(location.search);
@@ -76,6 +88,8 @@
       ['Catalog year', p => e(p.catalog_year)],
       ['Last verified', p => e(p.last_verified || 'Not recorded')],
       ['Evidence status', p => e(pretty(p.verification_status)) + '<small>Curriculum: ' + e(pretty(p.curriculum_status)) + '</small>'],
+      ['Requirement coverage', requirementScope],
+      ['Course metadata availability', metadataCounts],
       ['Course records', p => `${courses(p).length} unique records<small>${courses(p).filter(c => c.credits == null).length} with unknown credits; not a degree total</small>`],
       ['Credit units', p => { const units = [...new Set(courses(p).map(c => pretty(c.credit_unit)))]; return e(units.join(', ') || 'Unknown') + '<small>No cross-calendar conversion</small>'; }],
       ['Requirement structure', p => { const roots = (p.requirements || []).filter(r => !r.parent_id); return roots.length ? '<ul>' + roots.map(r => `<li>${e(r.title)}<small>${e(pretty(r.kind))}${r.count != null ? ' · ' + e(r.count) + ' courses' : ''}${r.credits != null ? ' · ' + e(r.credits) + ' ' + e(pretty(r.credit_unit)) : ''}</small></li>`).join('') + '</ul><small>Nested choices and full evidence on program page.</small>' : 'Not yet extracted'; }],
