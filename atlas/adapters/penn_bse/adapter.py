@@ -8,7 +8,13 @@ from atlas.adapters.cmu_bs.common import slug
 
 from .common import list_courses, req, text
 from .requirements import enrich_requirements
-from .linked_policies import HANDBOOK, INVENTORY, faq_requirements, parse_technical_policy, parse_technical_inventory
+from .linked_policies import (
+    HANDBOOK,
+    INVENTORY,
+    faq_requirements,
+    parse_technical_policy,
+    parse_technical_inventory,
+)
 
 SOURCES = ["https://ai.engineering.upenn.edu/academics/undergraduate/"]
 PID = "penn-bse-ai"
@@ -100,6 +106,11 @@ PROGRAM_ID = "penn-bse-ai"
 SOURCES.extend([HANDBOOK, INVENTORY])
 SOURCE_PARSERS = {HANDBOOK: parse_technical_policy, INVENTORY: parse_technical_inventory}
 
-from .canonical_handbook import URL as HANDBOOK_URL, parse as parse_canonical_handbook
+from .canonical_handbook import URL as HANDBOOK_URL
+from .distributions import parse_handbook as parse_canonical_handbook, ABROAD, parse_abroad
+
 SOURCES.append(HANDBOOK_URL)
 SOURCE_PARSERS[HANDBOOK_URL] = parse_canonical_handbook
+
+SOURCES.append(ABROAD)
+SOURCE_PARSERS[ABROAD] = parse_abroad
