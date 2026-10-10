@@ -52,3 +52,13 @@ def test_additional_description_prerequisite_preserved():
     result=parse_subject(html,program_id='test-program',subject='LING',heading='Linguistics (LING)',codes=['LING 4654'],url='https://catalog.northeastern.edu/course-descriptions/ling/')
     prerequisites=result['courses'][0]['prerequisites']
     assert 'LING 2350' in prerequisites and 'two 3000-level LING courses' in prerequisites and 'permission of instructor' in prerequisites
+
+
+def test_partner_catalog_variable_credit_and_changed_description_remain_observations():
+    title='Speech-Language Pathology and Audiology (SLPA)'
+    html=page('<div class="courseblock"><p class="courseblocktitle">SLPA 5107. Clinical Procedures. (3-4 Hours)</p><p class="cb_desc">Studies functional analysis of behavior in assessment.</p></div>',heading=title)
+    def run(text):return parse_subject(text,program_id='test-program',subject='SLPA',heading=title,codes=['SLPA 5107'],url='https://catalog.northeastern.edu/course-descriptions/slpa/')['courses'][0]
+    course=run(html)
+    assert course['credits'] is None and course['description'] and course['prerequisites'] is None
+    assert run(html.replace('(3-4 Hours)','(4 Hours)'))['credits']==4
+    assert run(html.replace('functional analysis of behavior','a different topic'))['description'] is None

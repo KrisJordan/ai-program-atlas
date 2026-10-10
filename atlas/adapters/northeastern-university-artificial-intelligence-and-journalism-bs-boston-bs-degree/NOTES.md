@@ -1,15 +1,13 @@
 # Artificial Intelligence and Journalism, BS (Boston)
 
-Official identity source: https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/
+Official source: https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-journalism-bs-bos/
 
-Directory/identity verified; curriculum pending. No courses, requirements or outcomes have yet been extracted.
+Reviewed 2026-10-10, catalog 2026-2027. Fetched through the robots-aware, rate-limited Fetcher (HTTP 200). The adapter observes the exact heading, explicit semester units and all reviewed local sections. It never reads seed facts or emits review dates/audits. Published award identity remains BS (Boston).
 
-Official catalog combined-major directory confirms 22 named AI combined BS programs; separate environmental engineering combined degree and two AI minor pages also inspected. Directory confirmation does not establish full curriculum extraction or complete campus inventory.
+45 course records and 92 nested requirements. Course bundles, alternatives and local choice pools are retained; source blank credits stay null. Source-specific two-table pools and conditional transfer tables have guarded profiles where present. Generic descriptions of policy remain notes, not invented executable requirements.
 
-The adapter validates a title in visible content headings or links and the award/kind in its local card or heading section. It returns only observed identity fields and never replays seed metadata, curriculum, or dates. A failure means review is required; it does not mean the program is absent. Tests use synthetic HTML to verify rejection behavior; live refresh is not claimed.
+Curriculum remains **partial**: Universitywide and NUpath requirements are referenced but not fully expanded. Placement substitutions, open elective ranges, grade policies and reuse restrictions require individual review. Transfer students must complete at least five four-semester-hour JRNL courses at Northeastern, including JRNL 2201, JRNL 2301 and JRNL 4650. This residency condition is a note, not an additional unconditional course set. Three JRNL elective courses form an open pool; C-or-higher thresholds apply to specified core courses and a 2.000 GPA to all JRNL courses. JRNL 2301 also fulfills advanced writing; CY 4170 and integrative choices can overlap other lists. Individual double-counting and eligibility require review.
 
-## Cached layout verification — 2026-10-10
+Tests exercise source identity, changed counts, one-region alternatives, continued thematic pools, conditional transfer evidence, award identity and explicit unit context. Raw source HTML is only in the ignored cache.
 
-The main catalog directory omits the BS abbreviation from each visible entry. The adapter matches the explicit Boston title spelling and requires the immediately preceding list-section heading to state Bachelor of Science. It does not use sidebar navigation or infer the award from the target URL.
-
-Validation used previously fetched, ignored local HTML. This adapter refreshes identity only; full curriculum extraction remains pending. No reviewed seed content or verification timestamp is replayed by the parser.
+Course metadata: 18 records observed from official DS and partner-subject catalogs with separate source parsers. Selected descriptions are guarded paraphrases; missing prerequisites stay unknown. Subject-catalog variable credits remain null in the scalar course field and program-required credits remain on the program requirement. Missing catalog blocks, if any, are explicitly listed in the curriculum audit.

@@ -224,3 +224,61 @@ def test_overview_combination_restriction_is_source_guarded():
     assert any(r['title']=='Combination restriction' for r in result['requirements'])
     changed=parse_catalog(html.replace('cannot combine majors in biology','different policy'),**args)
     assert not any(r['title']=='Combination restriction' for r in changed['requirements'])
+
+
+def continued_document(instruction, rows):
+    return document('').replace('<tbody></tbody>', '<tbody><tr><td>'+instruction+'</td><td class="hourscol">8</td></tr></tbody>').replace('</table>', '</table><table class="sc_courselist"><tbody>'+rows+'</tbody></table>', 1)
+
+
+@pytest.mark.parametrize('heading_class',['areaheader','areasubheader'])
+def test_two_table_thematic_pool_remains_one_choice_and_observes_count_change(heading_class):
+    rows='<tr class="areaheader"><td>Environment</td></tr>'+row('INTL 2000','Environment')+'<tr class="areaheader"><td>Politics</td></tr>'+row('INTL 3000','Politics')
+    def run(html):
+        return parse_catalog(html,program_id='test-program',title=TITLE,url=URL,required_sections=['Biology Requirements'],continued_choice_sections={'Biology Requirements':('pooled','with one course numbered 2000 or above')})
+    html=continued_document('Complete two of the following with one course numbered 2000 or above:',rows.replace('areaheader',heading_class))
+    p=run(html);validate_requirements(p)
+    with pytest.raises(ValueError,match='standalone choice'):run(html.replace('with one course numbered 2000 or above','from exactly one group'))
+    choice=next(r for r in p['requirements'] if r['kind']=='choose_courses')
+    assert choice['count']==2
+    assert {r['parent_id'] for r in p['requirements'] if r['course_ids']}=={choice['id']}
+    assert next(r for r in run(html.replace('Complete two','Complete three'))['requirements'] if r['kind']=='choose_courses')['count']==3
+
+
+@pytest.mark.parametrize('heading_class',['areaheader','areasubheader'])
+def test_two_table_regional_choice_keeps_two_courses_in_one_region(heading_class):
+    rows='<tr class="areaheader"><td>Asia</td></tr>'+row('INTL 2000','Asia A')+row('INTL 2001','Asia B')+'<tr class="areaheader"><td>Europe</td></tr>'+row('INTL 3000','Europe A')+row('INTL 3001','Europe B')
+    p=parse_catalog(continued_document('Complete two of the following, both of which must be in one region:',rows.replace('areaheader',heading_class)),program_id='test-program',title=TITLE,url=URL,required_sections=['Biology Requirements'],continued_choice_sections={'Biology Requirements':('one_group','both of which must be in one region')})
+    validate_requirements(p)
+    alt=next(r for r in p['requirements'] if r['kind']=='alternative')
+    groups=[r for r in p['requirements'] if r['parent_id']==alt['id']]
+    assert {r['title'] for r in groups}=={'Asia','Europe'}
+    assert all(r['kind']=='choose_courses' and r['count']==2 for r in groups)
+    assert all(r['parent_id'] in {g['id'] for g in groups} for r in p['requirements'] if r['course_ids'])
+
+
+def test_conditional_transfer_table_is_policy_not_unconditional_duplicate():
+    first=row('JRNL 2000','Reporting')
+    html=document(first+row('JRNL 3000','Ethics')).replace('<table','<p>Students transferring from outside institutions must complete these locally:</p><table',1)
+    html=html.replace('</table>','</table><table class="sc_courselist"><tbody>'+first+row('JRNL 3000','Ethics')+'</tbody></table>',1)
+    config={('Biology Requirements',1):('Students transferring from outside institutions',('JRNL 2000','JRNL 3000'),'Transfer students must complete local journalism coursework including JRNL 2000 and JRNL 3000.')}
+    def run(text):return parse_catalog(text,program_id='test-program',title=TITLE,url=URL,required_sections=['Biology Requirements'],conditional_tables=config)
+    p=run(html);assert len([r for r in p['requirements'] if r['course_ids']])==2
+    assert any('Transfer students' in r['summary'] for r in p['requirements'] if r['kind']=='note')
+    with pytest.raises(ValueError,match='Conditional table evidence'):run(html.replace('JRNL 2000','JRNL 2999'))
+
+
+def test_engineering_award_and_units_are_explicit_not_inferred_as_bs():
+    title='Environmental Engineering and Artificial Intelligence, BSEnvE (Boston)'
+    html=document(row('CIVE 4765','Senior Design Project','5'),title=title)
+    with pytest.raises(ValueError,match='Award profile'):parse_catalog(html,program_id='test-program',title=title,url=URL,required_sections=['Biology Requirements'])
+    p=parse_catalog(html,program_id='test-program',title=title,url=URL,required_sections=['Biology Requirements'],award_level='other')
+    assert p['award_level']=='other' and 'BSEnvE' in p['title']
+    with pytest.raises(ValueError,match='heading'):parse_catalog(html.replace(title,'Unrelated Degree'),program_id='test-program',title=title,url=URL,required_sections=['Biology Requirements'],award_level='other')
+
+
+def test_journalism_credit_aliases_require_program_semester_context():
+    instruction='<tr><td>All students can take a self-assessment to place out of CS 2000 and CS 2001 and substitute 4-5 SH of CS, CY, or DS coursework at the 3000 level or higher not otherwise required.</td></tr><tr><td>Complete 4 credits from the following:</td><td class="hourscol">4</td></tr>'
+    html=document(instruction+row('CS 2400','Programming'))
+    p=parse(html);assert next(r for r in p['requirements'] if r['kind']=='choose_credits')['credits']==4
+    assert any('4-5 semester hours' in r['summary'] for r in p['requirements'])
+    with pytest.raises(ValueError,match='semester-hour'):parse(html.replace('128 total semester hours required','128 total units required'))

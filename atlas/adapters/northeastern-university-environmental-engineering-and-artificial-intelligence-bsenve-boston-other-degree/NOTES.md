@@ -1,15 +1,13 @@
 # Environmental Engineering and Artificial Intelligence, BSEnvE (Boston)
 
-Official identity source: https://catalog.northeastern.edu/undergraduate/engineering/civil-environmental/environmental-engineering-artificial-intelligence-bsenve/
+Official source: https://catalog.northeastern.edu/undergraduate/engineering/civil-environmental/environmental-engineering-artificial-intelligence-bsenve/
 
-Directory/identity verified; curriculum pending. No courses, requirements or outcomes have yet been extracted.
+Reviewed 2026-10-10, catalog 2026-2027. Fetched through the robots-aware, rate-limited Fetcher (HTTP 200). The adapter observes the exact heading, explicit semester units and all reviewed local sections. It never reads seed facts or emits review dates/audits. Published award identity remains BSEnvE (Boston).
 
-Official catalog combined-major directory confirms 22 named AI combined BS programs; separate environmental engineering combined degree and two AI minor pages also inspected. Directory confirmation does not establish full curriculum extraction or complete campus inventory.
+68 course records and 112 nested requirements. Course bundles, alternatives and local choice pools are retained; source blank credits stay null. Source-specific two-table pools and conditional transfer tables have guarded profiles where present. Generic descriptions of policy remain notes, not invented executable requirements.
 
-The adapter validates a title in visible content headings or links and the award/kind in its local card or heading section. It returns only observed identity fields and never replays seed metadata, curriculum, or dates. A failure means review is required; it does not mean the program is absent. Tests use synthetic HTML to verify rejection behavior; live refresh is not claimed.
+Curriculum remains **partial**: Universitywide and NUpath requirements are referenced but not fully expanded. Placement substitutions, open elective ranges, grade policies and reuse restrictions require individual review. Engineering, mathematics/science and professional-development categories allocate portions of the same GE/CIVE/EEMB coursework. Those allocations are policy facts, not extra course credits; totals must not be summed from the inventory. The GE 1110 plus GE 1111 substitution for GE 1501 plus GE 1502 is retained as a conditional footnote, not an automatically equivalent executable pathway. Engineering requires CIVE GPA 2.000; named math/science courses require C-minus and writing courses C or higher. NUpath gaps and minimum 30 math/science semester hours require individual review.
 
-## Cached layout verification — 2026-10-10
+Tests exercise source identity, changed counts, one-region alternatives, continued thematic pools, conditional transfer evidence, award identity and explicit unit context. Raw source HTML is only in the ignored cache.
 
-The Courseleaf program title is the H1 inside #site-title outside main. This reviewed identity scope retains that specific title, while stripping navigation and sidebars. The title must itself provide the expected award or minor evidence.
-
-Validation used previously fetched, ignored local HTML. This adapter refreshes identity only; full curriculum extraction remains pending. No reviewed seed content or verification timestamp is replayed by the parser.
+Course metadata: 40 records observed from official DS and partner-subject catalogs with separate source parsers. Selected descriptions are guarded paraphrases; missing prerequisites stay unknown. Subject-catalog variable credits remain null in the scalar course field and program-required credits remain on the program requirement. Missing catalog blocks, if any, are explicitly listed in the curriculum audit.

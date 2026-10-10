@@ -6,6 +6,26 @@ from atlas.adapters.northeastern_courseleaf import clean, slug, numeric, categor
 # Short editorial summaries of the linked official descriptions. Each has a
 # source phrase guard; changed prose cannot silently replay an unsupported summary.
 SUMMARIES = {
+    'SLPA 1101': ('assessment and treatment of disorders', 'Introduces speech, language and hearing disorders, their assessment and treatment, and clinical observation.'),
+    'SLPA 4500': ('children and adults with frequently referred language disorders', 'Studies language disorders across ages, their neurological bases and approaches to assessment and intervention.'),
+    'SLPA 5107': ('functional analysis of behavior', 'Applies behavioral analysis and experimental methods to clinical assessment and communication-disorder treatment.'),
+    'COMM 1101': ('major theories and methodological approaches', 'Introduces communication research, theoretical approaches and ethical questions in social contexts.'),
+    'COMM 2625': ('design, use, and critical study of communication technologies', 'Examines communication technology through its design, history and relationships with social institutions.'),
+    'COMM 4608': ('research and writing capstone project', 'Develops a sustained strategic-communication research project integrating theory, methods and professional writing.'),
+    'JRNL 1101': ('fundamental reporting skills', 'Introduces news reporting and writing through interviews, observation, research and critical analysis.'),
+    'JRNL 3700': ('data-driven storytelling projects', 'Develops data-journalism projects using analysis, visualization and tools for communicating quantitative evidence.'),
+    'JRNL 5500': ('data-driven, multimodal, web-based storytelling', 'Develops coding skills for web and data storytelling through collaborative projects and analysis of published examples.'),
+    'SOCL 3300': ('classical and contemporary sociology', 'Connects classical traditions of social thought with contemporary sociological theory.'),
+    'SOCL 4600': ('conducting original research', 'Integrates sociology study through an original research paper and collaborative seminar feedback.'),
+    'CRIM 3600': ('research design', 'Develops and critiques research questions, methods and designs in criminology and criminal justice.'),
+    'CRIM 3700': ('computational social science techniques', 'Applies statistical and computational methods, existing datasets and visualization to crime and justice questions.'),
+    'CRIM 4949': ('propose a policy solution', 'Investigates a crime or justice-system problem and develops a policy proposal in a capstone project.'),
+    'INTL 2600': ('impact world politics', 'Examines AI in international relations, state policy, humanitarian activity, security and ethical/legal debates.'),
+    'INTL 4700': ('final paper and presentation', 'Integrates international-affairs coursework and experience through research, reflection, writing and a final presentation.'),
+    'CIVE 4765': ('design a civil engineering project', 'Develops an environmental engineering design in teams with faculty/practitioner guidance and presentations to stakeholders.'),
+    'GE 1501': ('engineering design process and algorithmic thinking', 'Introduces engineering design and programming through projects, laboratories and an original design solution.'),
+    'GE 1502': ('quantitative tools and ethical topics', 'Continues project-based engineering design with analysis, programming, ethical reasoning and working prototypes.'),
+
     'DS 3000': ('linear algebra and probability', 'Studies the mathematical basis of AI through linear algebra, probability and computational exercises.'),
     'DS 3500': ('data-centric pipelines', 'Develops robust software architectures and data pipelines using substantial datasets.'),
     'DS 4200': ('design and evaluation process of visualization', 'Studies how to design, implement and evaluate visual representations of data.'),

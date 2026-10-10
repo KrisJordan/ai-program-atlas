@@ -1,8 +1,21 @@
-"""Identity-only observation; full curriculum extraction is pending."""
-from atlas.adapters.discovery_common import parse_identity
-
+"""Observe the exact combined-degree catalog, preserving award and local rules."""
+from atlas.adapters.northeastern_courseleaf import parse_catalog
 PROGRAM_ID = 'northeastern-university-artificial-intelligence-and-international-affairs-bs-boston-bs-degree'
-SOURCES = ('https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/',)
+SOURCES = ('https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-international-affairs-bs-bos/',)
 
 def parse(html: str) -> dict:
-    return parse_identity(html, program_id=PROGRAM_ID, title='Artificial Intelligence and International Affairs, BS (Boston)', award='BS', kind='degree', aliases=('Artificial Intelligence and International Affairs (Boston)', 'Artificial Intelligence and International Affairs, BS',), award_terms=(), inherit_section_award=True)
+    return parse_catalog(html, program_id=PROGRAM_ID, title='Artificial Intelligence and International Affairs, BS (Boston)', url=SOURCES[0],
+        required_sections=['Universitywide Requirements', 'NUpath Requirements', 'Artificial Intelligence Courses', 'International Affairs Requirements', 'Global Dynamics Requirement', 'Regional Analysis Requirement', 'International Affairs Elective', 'English Requirement', 'Supporting Courses', 'Integrative Requirements', 'Required General Electives', 'Program Requirement'], outcome_claims=[('work across national cultures', 'The degree aims to prepare graduates to apply AI to regional and international issues across national cultures.')], **{'continued_choice_sections': {'Global Dynamics Requirement': ('pooled', 'have no bearing on major requirements'), 'Regional Analysis Requirement': ('one_group', 'both of which must be in one region'), 'International Affairs Elective': ('pooled', 'Complete one of the following:')}, 'instruction_notes': {'Complete at least one international semester via study abroad, international internship, international co-op, or two short-term programs.': 'Complete one international semester through study abroad, internship or co-op, or complete two short-term programs.', 'Complete the following with a thesis or project that integrates both international affairs and artificial intelligence:': 'The capstone thesis or project must integrate international affairs and AI.'}})
+
+
+def parse_ds_metadata(html: str) -> dict:
+    from atlas.adapters.northeastern_course_metadata import parse_subject
+    return parse_subject(html, program_id=PROGRAM_ID, subject='DS', heading='Data Science (DS)', codes=['DS 3500', 'DS 3000', 'DS 4200', 'DS 4300', 'DS 4400'], url='https://catalog.northeastern.edu/course-descriptions/ds/')
+
+
+def parse_intl_metadata(html: str) -> dict:
+    from atlas.adapters.northeastern_course_metadata import parse_subject
+    return parse_subject(html, program_id=PROGRAM_ID, subject='INTL', heading='International Affairs (INTL)', codes=['INTL 1000', 'INTL 1101', 'INTL 2718', 'INTL 3400', 'INTL 5100', 'INTL 5268', 'INTL 2480', 'INTL 2600', 'INTL 3520', 'INTL 5010', 'INTL 3430', 'INTL 3450', 'INTL 3300', 'INTL 3200', 'INTL 2500', 'INTL 4100', 'INTL 3150', 'INTL 3255', 'INTL 3455', 'INTL 4500', 'INTL 1160', 'INTL 2100', 'INTL 2200', 'INTL 3470', 'INTL 3350', 'INTL 3406', 'INTL 4700'], url='https://catalog.northeastern.edu/course-descriptions/intl/')
+
+SOURCES = ('https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-international-affairs-bs-bos/', 'https://catalog.northeastern.edu/course-descriptions/ds/', 'https://catalog.northeastern.edu/course-descriptions/intl/')
+SOURCE_PARSERS = {'https://catalog.northeastern.edu/course-descriptions/ds/': parse_ds_metadata, 'https://catalog.northeastern.edu/course-descriptions/intl/': parse_intl_metadata}

@@ -37,7 +37,7 @@ def numeric(text):
 def summarize_rule(text):
     """Keep concise rule facts; do not reproduce explanatory catalog paragraphs."""
     if 'self-assessment' in text:
-        match = re.search(r'(\d+\s*-\s*\d+) semester hours?', text)
+        match = re.search(r'(\d+\s*-\s*\d+) (?:semester hours?|SH)', text)
         if not match or '3000' not in text: raise ValueError('Changed placement substitution requires review')
         return f'Placement may replace CS 2000/2001 with {match[1]} semester hours of otherwise unused CS/CY/DS courses at level 3000 or above.'
     if text.startswith('With advisor approval'):
@@ -50,7 +50,12 @@ def summarize_rule(text):
     return re.sub(r'^Complete\s+', 'Required: ', text)
 
 
-def parse_catalog(html, *, program_id, title, url, required_sections, outcome_claims=(), pooled_subheaders=(), overview_rules=()):
+def parse_catalog(html, *, program_id, title, url, required_sections, outcome_claims=(), pooled_subheaders=(), overview_rules=(), award_level="BS", continued_choice_sections=None, instruction_notes=None, conditional_tables=None):
+    if award_level not in {'BS', 'other'} or (', BS (' if award_level == 'BS' else ', BSEnvE (') not in title:
+        raise ValueError('Award profile must match the exact reviewed program title')
+    continued_choice_sections = continued_choice_sections or {}
+    instruction_notes = instruction_notes or {}
+    conditional_tables = conditional_tables or {}
     soup = BeautifulSoup(html, 'html.parser')
     heading = soup.find(id='site-title')
     h1 = heading.find('h1') if heading else None
@@ -82,9 +87,11 @@ def parse_catalog(html, *, program_id, title, url, required_sections, outcome_cl
 
     root = rule('Published program requirements', summary='Major-page requirements; external policies and open elective inventories remain partial.')
     section = root
+    carry_choice = None
+    section_table_index = 0
     for element in panel.find_all(['h2', 'table', 'p', 'ul', 'dl'], recursive=False):
         if element.name == 'h2':
-            section = rule(clean(element), root['id']); continue
+            section = rule(clean(element), root['id']); carry_choice = None; section_table_index = 0; continue
         if element.name in {'p', 'ul', 'dl'}:
             text = clean(element)
             if text:
@@ -96,7 +103,28 @@ def parse_catalog(html, *, program_id, title, url, required_sections, outcome_cl
                 rule(section['title'] + ' policy', section['id'], kind='note', summary=summary)
             continue
         if 'sc_courselist' not in element.get('class', []): continue
-        area, parent, previous, choice = section, section, None, None
+        section_table_index += 1
+        conditional = conditional_tables.get((section['title'], section_table_index))
+        if conditional:
+            phrase, expected_codes, summary = conditional
+            preceding = element.find_previous_sibling('p')
+            observed_codes = [clean(a) for td in element.find_all('td', class_='codecol') for a in td.find_all('a', class_='code')]
+            if not preceding or phrase not in clean(preceding) or observed_codes != list(expected_codes):
+                raise ValueError('Conditional table evidence changed')
+            rule(section['title'] + ' conditional transfer policy', section['id'], kind='note', summary=summary)
+            continue
+        area, parent, previous, choice = section, section, None, carry_choice
+        profile = continued_choice_sections.get(section['title'])
+        mode, continuation_guard = profile if profile else (None, None)
+        if profile and (mode not in {'pooled', 'one_group'} or not continuation_guard):
+            raise ValueError('Invalid continued choice profile')
+        group_choice = None
+        if carry_choice and mode == 'one_group':
+            group_choice = carry_choice
+            group_count = group_choice['count']
+            group_choice['kind'], group_choice['count'] = 'alternative', None
+        elif carry_choice and mode != 'pooled':
+            raise ValueError('Unknown continued choice profile')
         option_choice = None
         distribution_choice = None
         for row in element.find_all('tr'):
@@ -114,7 +142,15 @@ def parse_catalog(html, *, program_id, title, url, required_sections, outcome_cl
                 rule(section['title'] + ' published subtotal', section['id'], kind='note', credits=credit,
                      summary='Published section subtotal; overlapping courses and choices are not summed by this parser.')
                 continue
-            if 'areaheader' in classes:
+            if 'areaheader' in classes or carry_choice and 'areasubheader' in classes:
+                if carry_choice and mode == 'pooled':
+                    rule(text, carry_choice['id'], kind='note', summary='Thematic label within the same elective pool; no additional selection requirement.')
+                    parent, previous, choice = section, None, carry_choice
+                    continue
+                if group_choice:
+                    area = rule(text, group_choice['id'], 'choose_courses', count=group_count, summary='Select the required number of courses from this single region.')
+                    parent, previous, choice = area, None, area
+                    continue
                 if distribution_choice:
                     area = rule(text, distribution_choice['id'], 'choose_courses', count=1, summary='At least one course from this list; additional selections may contribute toward the overall credit requirement.')
                     parent, previous, choice = area, None, area
@@ -127,12 +163,16 @@ def parse_catalog(html, *, program_id, title, url, required_sections, outcome_cl
                 parent = rule(text, area['id']); previous, choice, option_choice = None, None, None; continue
             codecell = row.find('td', class_='codecol')
             if codecell is None:
+                if text in instruction_notes:
+                    rule(area['title'] + ' policy', parent['id'], kind='note', summary=instruction_notes[text])
+                    previous = None
+                    continue
                 if re.fullmatch(r'Option \d+', text) and option_choice:
                     parent = rule(text, option_choice['id'], summary='Take every required course in this option.')
                     previous, choice = None, None
                     continue
                 number = re.search(r'(?:Complete|Choose)\s+(?:(?:at least|any)\s+)?(one|two|three|four|five|six|seven|eight|nine|ten|\d+)\b', text, re.I)
-                unitmatch = re.search(r'(one|two|three|four|five|six|seven|eight|nine|ten|\d+) semester hours', text, re.I)
+                unitmatch = re.search(r'(one|two|three|four|five|six|seven|eight|nine|ten|\d+) (?:semester hours|credits)\b', text, re.I)
                 numbers = dict(one=1,two=2,three=3,four=4,five=5,six=6,seven=7,eight=8,nine=9,ten=10)
                 amount = (numbers.get(unitmatch[1].lower(), int(unitmatch[1]) if unitmatch[1].isdigit() else None) if unitmatch else None)
                 if unitmatch and text.startswith('Complete'):
@@ -205,6 +245,12 @@ def parse_catalog(html, *, program_id, title, url, required_sections, outcome_cl
                         for cid in related:
                             rule(code + ' concurrent ' + courses[cid]['code'], alternative['id'], course_ids=[cid], summary='Concurrent research option.')
             if 'orclass' not in classes: previous = item
+        if mode and section_table_index == 1:
+            if not choice or element.find('td', class_='codecol') or continuation_guard not in clean(element):
+                raise ValueError('Expected standalone choice instruction table')
+            carry_choice = choice
+        elif carry_choice:
+            carry_choice = None
     if not courses: raise ValueError('No scoped curriculum courses found')
     overview = soup.find(id='textcontainer')
     overview_text = clean(overview) if overview else ''
@@ -213,6 +259,6 @@ def parse_catalog(html, *, program_id, title, url, required_sections, outcome_cl
             rule(label, root['id'], kind='note', summary=summary)
     outcomes = [dict(text=summary, kind='source_stated', source_id=sid, locator='Program overview')
                 for phrase, summary in outcome_claims if phrase in overview_text]
-    return dict(id=program_id, title=title, award_level='BS', program_kind='degree',
+    return dict(id=program_id, title=title, award_level=award_level, program_kind='degree',
                 catalog_year=catalog_year, curriculum_status='partial', courses=list(courses.values()),
                 requirements=rules, outcomes=outcomes)
