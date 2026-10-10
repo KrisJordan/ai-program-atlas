@@ -4,7 +4,7 @@
     "id": "stanford-university",
     "name": "Stanford University",
     "aliases": [],
-    "calendar": "unknown",
+    "calendar": "quarter",
     "website": "https://www.stanford.edu/"
   },
   "title": "Artificial Intelligence (CS BS track)",
@@ -17,12 +17,17 @@
   "catalog_year": null,
   "verification_status": "partial",
   "last_verified": "2026-10-10",
-  "curriculum_status": "pending",
+  "curriculum_status": "partial",
   "links": [
     {
       "kind": "overview",
       "url": "https://www.cs.stanford.edu/academics-overview/academics-bachelors-program",
       "label": "Official undergraduate program source"
+    },
+    {
+      "kind": "study",
+      "url": "https://www.cs.stanford.edu/bs-program-sheets",
+      "label": "Official program-sheet directory and policies"
     }
   ],
   "sources": [
@@ -35,14 +40,178 @@
       "catalog_year": null,
       "locator": "CS Track Overview; Artificial Intelligence subsection",
       "confidence": "high"
+    },
+    {
+      "id": "stanford-ai-track-program-sheets",
+      "url": "https://www.cs.stanford.edu/bs-program-sheets",
+      "title": "BS Program Sheets",
+      "locator": "Overview; Important Note; Artificial Intelligence (AI), 2026–27 links",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "confidence": "high"
+    },
+    {
+      "id": "stanford-ai-track-degree-policies",
+      "url": "https://www.cs.stanford.edu/bs-degree-requirements",
+      "title": "BS Degree Requirements",
+      "locator": "Computer Science Department Requirements: course/unit minima, combined GPA and one-category rule",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "confidence": "high"
     }
   ],
   "outcomes": [],
   "courses": [],
-  "requirements": [],
+  "requirements": [
+    {
+      "id": "stanford-ai-track-sheet-year",
+      "parent_id": null,
+      "title": "Program-sheet year selection",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "other",
+      "source_id": "stanford-ai-track-program-sheets",
+      "source_text": null,
+      "summary": "Use a program sheet from the matriculation year or later; requirements from different sheets cannot be mixed.",
+      "course_ids": []
+    },
+    {
+      "id": "stanford-ai-track-letter-grades",
+      "parent_id": null,
+      "title": "Letter-grade requirement and historical exceptions",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "other",
+      "source_id": "stanford-ai-track-program-sheets",
+      "source_text": null,
+      "summary": "Program-sheet courses require letter grades except Spring 2019–20 and Autumn 2020–21 through Summer 2020–21.",
+      "course_ids": []
+    },
+    {
+      "id": "stanford-ai-track-category-overlap",
+      "parent_id": null,
+      "title": "No category double-counting",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "other",
+      "source_id": "stanford-ai-track-program-sheets",
+      "source_text": null,
+      "summary": "A program-sheet course may count under only one category; separate CS degree rules identify Writing in the Major exceptions unrelated to AI depth.",
+      "course_ids": []
+    },
+    {
+      "id": "stanford-ai-track-approval",
+      "parent_id": null,
+      "title": "Program-sheet approval",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "other",
+      "source_id": "stanford-ai-track-program-sheets",
+      "source_text": null,
+      "summary": "Submit planned/completed courses with units for approval at least one quarter before expected graduation. Only approved sheets proceed to Engineering graduation review; special registration status also requires an approved sheet.",
+      "course_ids": []
+    },
+    {
+      "id": "stanford-ai-track-track-change",
+      "parent_id": null,
+      "title": "Track completion and changes",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "other",
+      "source_id": "stanford-ai-track-program-sheets",
+      "source_text": null,
+      "summary": "The AI track belongs to the CS BS. Track changes are allowed, but one full CS track must be satisfied before applying to graduate; notify CS through its track-change form after the Axess request.",
+      "course_ids": []
+    },
+    {
+      "id": "stanford-ai-track-petitions",
+      "parent_id": null,
+      "title": "Exceptions and deviations",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "other",
+      "source_id": "stanford-ai-track-program-sheets",
+      "source_text": null,
+      "summary": "Departures from the published program sheet require a petition for exceptions or deviations; approval is not assumed.",
+      "course_ids": []
+    },
+    {
+      "id": "stanford-ai-track-gpa",
+      "parent_id": null,
+      "title": "Combined CS program GPA",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "other",
+      "source_id": "stanford-ai-track-degree-policies",
+      "source_text": null,
+      "summary": "The parent CS program requires at least 2.0 GPA across Engineering Fundamentals, CS Core, Depth and Senior Project combined; this is not a separately stated AI-track GPA.",
+      "course_ids": []
+    },
+    {
+      "id": "stanford-ai-track-depth-minima",
+      "parent_id": null,
+      "title": "Depth course and unit minima",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "other",
+      "source_id": "stanford-ai-track-degree-policies",
+      "source_text": null,
+      "summary": "Both the depth course-count minimum and unit minimum must be met. The AI sheet's actual minima and choices remain unreviewed.",
+      "course_ids": []
+    }
+  ],
   "notes": [
     "Official bachelors overview confirms Artificial Intelligence as a formally declared CS track; the same section calls it an AI concentration. Classify as concentration within CS BS, never as a standalone AI degree.",
-    "Identity-only discovery record: curriculum, credit totals, prerequisites, academic calendar and launch date are not yet extracted. Unknown is not absence.",
-    "No public syllabus or course-site verification was performed for this discovery."
-  ]
+    "No public syllabus or course-site verification was performed for this discovery.",
+    "General track/parent-relationship policies are now mapped. Local AI depth courses, alternatives, counts, units and footnotes remain unavailable; this policy-only requirement inventory is partial.",
+    "The official 2026–27 AI PDF viewer is public (https://drive.google.com/file/d/1sVHp_i3gvWEo6qKm0GM8NLMWhgwAJyIb/view). Its exact embedded download URL is robots-disallowed. No alternate download or content bypass was attempted; the PDF contents were not inspected.",
+    "The 2026–27 Engineering handbook CS page supplies degree overview and suggested research preparation, not the complete AI track inventory. Suggested research courses were not mislabeled as track requirements.",
+    "Quarter calendar is evidenced by the program-sheet page explicitly describing academic quarter exceptions and graduation timing. No conversion of source units into semester credits is made.",
+    "Complete concentration scope would include the AI depth inventory and governing track policies, not a reconstruction of all bachelor general education requirements."
+  ],
+  "curriculum_audit": {
+    "scope": "concentration",
+    "reviewed_at": "2026-10-10",
+    "source_ids": [
+      "stanford-ai-track-identity",
+      "stanford-ai-track-program-sheets",
+      "stanford-ai-track-degree-policies"
+    ],
+    "sections": [
+      "Formal track within CS BS",
+      "Program sheet year and approval",
+      "Letter grading with historic exceptions",
+      "Category overlap",
+      "Track changes and petitions",
+      "Combined CS program GPA",
+      "Depth count/unit policy"
+    ],
+    "unresolved_requirements": [
+      "Current AI track local course inventory, choices, count/unit minima and footnotes",
+      "Any track-specific prerequisite/eligibility restrictions within inaccessible sheet"
+    ],
+    "metadata_gaps": [
+      "All local track course metadata unverified",
+      "Catalog edition and launch date unverified",
+      "Public course sites and syllabi unverified"
+    ]
+  }
 }
