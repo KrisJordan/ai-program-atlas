@@ -1,6 +1,6 @@
 """Observe Emory's AI-only requirements and separately parse its elective PDF text."""
 import re
-from atlas.adapters.national_curriculum_common import content,clean,course,rule,policy
+from atlas.adapters.national_curriculum_common import require_phrases,content,clean,course,rule,policy
 PROGRAM_ID='emory-university-artificial-intelligence-minor-minor'
 SOURCES=('https://computerscience.emory.edu/undergraduate/degrees-and-requirements/minors.html',)
 SOURCE_ID=PROGRAM_ID+'-official'
@@ -9,6 +9,7 @@ ELECTIVE_ID='emory-ai-minor-electives'
 
 def parse(html):
     root=content(html,'Minor in Artificial Intelligence')
+    require_phrases(root, ['minimum GPA requirement of 2.0', 'better of the grades', 'as long as the subjects differ', 'cannot be used as an elective for the CS minors'])
     heading=next((n for n in root.find_all(['h2','h3','h4']) if clean(n.get_text(' ',strip=True))=='AI Minor'),None)
     if not heading:raise ValueError('AI-specific section missing')
     table=heading.find_next('table');courses=[];groups=[]

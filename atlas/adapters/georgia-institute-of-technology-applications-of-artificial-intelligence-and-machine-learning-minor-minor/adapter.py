@@ -2,13 +2,14 @@
 import importlib
 import re
 from urllib.parse import urljoin
-from atlas.adapters.national_curriculum_common import content,clean,course,rule,policy
+from atlas.adapters.national_curriculum_common import require_phrases,content,clean,course,rule,policy
 PROGRAM_ID='georgia-institute-of-technology-applications-of-artificial-intelligence-and-machine-learning-minor-minor'
 SOURCES=('https://catalog.gatech.edu/programs/minor-artificial-intelligence-machine-learning/','https://catalog.gatech.edu/academics/minors/')
 SOURCE_ID=PROGRAM_ID+'-official'
 
 def parse(html):
     root=content(html,'Minor in Applications of Artificial Intelligence and Machine Learning')
+    require_phrases(root, ['A minimum of 9 credits must be at the 3000-level or above', 'Courses must be taken from two or more schools', 'MATH 1712 and CS 1315 or CS 1301', 'can be used for any other undergraduate minor or certificate'])
     tables=root.find_all('table',class_='sc_courselist')
     if len(tables)!=4:raise ValueError('Expected four catalog tracks')
     courses={};groups=[rule('gt-apps-tracks','Select one complete track',SOURCE_ID,kind='alternative',summary='Choose one whole track. Mixing requirements across tracks is prohibited; any admitted student may choose a track regardless of home college, subject to prerequisites.')]

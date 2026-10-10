@@ -1,12 +1,13 @@
 """Extract only the requirements visible on Cornell's accessible department page."""
 import re
-from atlas.adapters.national_curriculum_common import content,clean,rule,policy
+from atlas.adapters.national_curriculum_common import require_phrases,content,clean,rule,policy
 PROGRAM_ID='cornell-university-artificial-intelligence-minor-minor'
 SOURCES=('https://bowers.cornell.edu/programs/artificial-intelligence-minor',)
 SOURCE_ID=PROGRAM_ID+'-official'
 
 def parse(html):
     r=content(html,'AI minor');text=clean(r.get_text(' ',strip=True))
+    require_phrases(r, ['INFO 3170', 'Human-AI Interaction', 'Ethics, Governance & Policy', 'forbidden overlaps'])
     m=re.search(r'at least (\w+) courses \((\d+) credits minimum\)',text)
     if not m or m[1]!='six':raise ValueError('Reviewed six-course minimum changed')
     groups=[rule('cornell-minimum','Minimum coursework',SOURCE_ID,kind='note',credits=int(m[2]),summary='At least six courses and 18 credits. Full foundation and elective distribution remains unextracted; this is not an unrestricted choose-six pool.')]

@@ -1,13 +1,14 @@
 """Parse the AI minor course tables, row alternatives, and explicit policies."""
 import re
 from urllib.parse import urljoin
-from atlas.adapters.national_curriculum_common import clean,content,course,rule,policy
+from atlas.adapters.national_curriculum_common import require_phrases,clean,content,course,rule,policy
 PROGRAM_ID='northwestern-university-artificial-intelligence-minor-minor-minor'
 SOURCES=('https://catalogs.northwestern.edu/undergraduate/engineering-applied-science/artificial-intelligence/artificial-intelligence-minor/',)
 SOURCE_ID=PROGRAM_ID+'-official'
 
 def parse(html):
     root=content(html,'Artificial Intelligence Minor')
+    require_phrases(root, ['WCAS Computer Science major', 'major in Artificial Intelligence are not eligible', 'by the end of their junior year', 'any other minor or certificate program', 'major requirements of any degree program'])
     tables=root.find_all('table',class_='sc_courselist')
     if len(tables)!=2: raise ValueError('Expected requirements and elective tables')
     courses={};groups=[]; section=None; entries=[]; last=None

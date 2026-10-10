@@ -92,3 +92,8 @@ def test_applications_minor_requires_four_whole_tracks_and_named_topics():
     assert len([c for c in d['courses'] if c['code']=='MGT 4803'])==3
     assert not any('XXXX' in c['code'] for c in d['courses'])
     assert all(g['count']==2 for g in d['requirements'] if g['id'].endswith('-electives'))
+
+
+def test_tamu_rejects_changed_credit_eligibility_even_when_gpa_is_unchanged():
+    with pytest.raises(ValueError):
+        adapter('tamu').parse(fixture('tamu').replace('completed 24 credit hours','completed 30 credit hours'))

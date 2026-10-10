@@ -1,7 +1,7 @@
 """Observe the catalog minor, separate thread pools, and institute minor policies."""
 import re
 from urllib.parse import urljoin
-from atlas.adapters.national_curriculum_common import clean,content,course,rule,policy
+from atlas.adapters.national_curriculum_common import require_phrases,clean,content,course,rule,policy
 PROGRAM_ID='georgia-institute-of-technology-computing-and-artificial-intelligence-minor-minor'
 SOURCES=('https://catalog.gatech.edu/programs/minor-computing-artificial-intelligence/', 'https://www.cc.gatech.edu/academics/threads/intelligence', 'https://catalog.gatech.edu/academics/minors/')
 SOURCE_ID=PROGRAM_ID+'-official'
@@ -10,6 +10,7 @@ POLICY_ID='gatech-minor-guidelines'
 
 def parse(html):
     root=content(html,'Minor in Computing and Artificial Intelligence');text=clean(root.get_text(' ',strip=True))
+    require_phrases(root, ['complete the minor with 15 hours instead of 16', 'All other minor courses must be completed with a grade of C or higher', 'This includes courses taken at another institution or credit earned through the AP or IB program'])
     if not re.search(r'at least 16 semester hours.*at least 9 hours',text):raise ValueError('Minor minimum changed')
     table=root.find('table',class_='sc_courselist')
     if not table:raise ValueError('Course table missing')

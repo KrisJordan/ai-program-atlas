@@ -38,3 +38,11 @@ def policy(root, marker, gid, title, summary, sid):
     if marker.casefold() not in clean(root.get_text(' ',strip=True)).casefold():
         raise ValueError('Reviewed policy changed: '+marker)
     return rule(gid,title,sid,kind='note',summary=summary)
+
+
+def require_phrases(root, phrases):
+    """Reject a policy observation when any reviewed material condition disappears."""
+    text=clean(root.get_text(' ',strip=True)).casefold()
+    for phrase in phrases:
+        if clean(phrase).casefold() not in text:
+            raise ValueError('Reviewed material condition changed: '+phrase)

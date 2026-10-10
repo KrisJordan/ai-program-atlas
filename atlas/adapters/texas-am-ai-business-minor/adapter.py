@@ -1,12 +1,13 @@
 """Extract the five required business AI courses and all minor-specific policies."""
 from urllib.parse import urljoin
-from atlas.adapters.national_curriculum_common import content,clean,course,rule,policy
+from atlas.adapters.national_curriculum_common import require_phrases,content,clean,course,rule,policy
 PROGRAM_ID='texas-am-ai-business-minor'
 SOURCES=('https://catalog.tamu.edu/undergraduate/business/artificial-intelligence-business-minor/',)
 SOURCE_ID=PROGRAM_ID+'-identity'
 
 def parse(html):
     root=content(html,'Artificial Intelligence in Business - Minor')
+    require_phrases(root, ['completed 24 credit hours', 'at least 12 credit hours completed at Texas A&M University', 'not on the diploma'])
     table=root.find('table',class_='sc_courselist')
     if not table:raise ValueError('Minor course table absent')
     courses=[];total=None
