@@ -15,8 +15,8 @@ The 2027 edition changes categories using the updated Carnegie classifications, 
 | Category | Stored institutions | Enumeration status | Cutoff |
 | --- | ---: | --- | --- |
 | National Universities | 108 | Enumerated from a complete secondary table; authoritative confirmation pending | Nine institutions tied at 100 |
-| National Liberal Arts Colleges | 80 | Incomplete verified subset | Full rank-100 tie group unknown |
-| Combined inventory | 188 | Incomplete | Two separate categories |
+| National Liberal Arts Colleges | 85 | Incomplete verified subset | Full rank-100 tie group unknown |
+| Combined inventory | 193 | Incomplete | Two separate categories |
 
 The `complete` field is **false**: authoritative enumeration is pending for National Universities, and the liberal arts cohort is incomplete. The additive `category_coverage` field records the different enumeration states. National Universities has `enumeration_complete: true` and `verification_status: enumerated_secondary`, while `complete` remains false. Individual ranks distinguish `primary_verified` from `enumerated_secondary`. None of these numbers measures completion of the AI-program search.
 
@@ -47,7 +47,7 @@ These lower-ranked facts do **not** establish complete intervening rank groups o
 
 Names are retained as published, with stable lowercase-hyphen IDs. Purdue and Penn State use the coordinated IDs `purdue-university` and `pennsylvania-state-university`; their ranked campus labels are preserved as aliases. Wheaton is explicitly identified as Illinois. No calendar or institutional website was inferred from a name or ranking.
 
-Validation checks: JSON parses; 174 unique IDs; 108 National Universities and 66 National Liberal Arts Colleges; every rank is an integer between 1 and 100; every row is 2027; every source URL occurs in the source registry; 9 National Universities at rank 100; National University rank progression is internally complete. Repository-wide tests/build are the coordinator's integration check because this task owns only the cohort JSON and this note.
+Initial inventory checks (before the dated expansions below): JSON parses; 174 unique IDs; 108 National Universities and 66 National Liberal Arts Colleges; every rank is an integer between 1 and 100; every row is 2027; every source URL occurs in the source registry; 9 National Universities at rank 100; National University rank progression is internally complete. Repository-wide tests/build are the coordinator's integration check because this task owns only the cohort JSON and this note.
 
 
 ## Additional primary verification (2026-10-10)
@@ -59,3 +59,12 @@ Fifteen existing ranks were upgraded to primary verification: eight UC campuses 
 VMI’s supplied official 2027 candidate URL (`https://www.vmi.edu/vmi-maintains-strong-rankings-in-u-s-news-best-colleges-list-2/`) returned HTTP 403 and was not used to establish a new row. Richmond’s supplied official article (`https://news.richmond.edu/releases/article/-/28647/university-of-richmond-named-a-top-25-national-liberal-arts-college-for-10th-consecutive-year-by-u.s.-news--world-report.html`) produced an internal fetch error, so its existing verification was not upgraded. Neither restriction was bypassed.
 
 Updated inventory checks: 188 unique institution IDs; 108 National Universities and 80 National Liberal Arts Colleges. The latter is still an incomplete subset; both category complete flags remain false, the LAC enumeration_complete flag remains false, and its cutoff_tie_count remains null.
+
+
+## Final evidence batch (2026-10-10)
+
+The loaded LAC subset is now **85** institutions: 80 with explicit-edition numerical evidence, two additional numerical ranks whose edition is inferred from explicit September 22, 2026 release dates (Lake Forest 62 and Ursinus 91 tied), and three with explicit 2027 top-100 membership but unknown exact ranks (Stonehill, College of Wooster, Washington College). The last three use `rank: null`, `rank_upper_bound: 100`, and `primary_membership_verified`; no ordinal rank is invented. The two inferred-edition rows use `primary_edition_inferred`. Sources, dates and locators are in `data/cohort.json`. These additions preserve all incompleteness flags and do not establish a full tie group.
+
+Harvey Mudd 8, Auburn 100, Creighton 100, FIU 100, Saint Louis 100 and Iowa 100 received additional primary evidence upgrades. FIU and Iowa explicitly identify the 2027 edition and overall 100, contrasting public 46; their exact National Universities category label is corroborated by the existing secondary table and that distinction remains in the locator. USF’s [current article](https://www.usf.edu/news/2026/for-the-eighth-consecutive-year-us-news-ranks-usf-among-the-nations-top-50-public-universities.aspx) and Chapman’s [facts page](https://www.chapman.edu/about/facts-and-rankings/index.aspx) lack a usable explicit edition/date combination, so their existing rank evidence was not upgraded.
+
+The [Hobart and William Smith candidate article](https://www.hws.edu/news/2026/hws-climbs-13-spots.aspx) returned an internal access error; HWS was not added. Colorado Boulder’s [2027 report](https://www.colorado.edu/today/2026/09/22/cu-boulder-top-10-nationally-multiple-undergrad-programs-says-us-news-world-report) gives overall 109, and Willamette’s [2027 report](https://news.willamette.edu/library/2026/09/us-news-best-value.html) gives National Universities 208, so both are outside scope. The supplied Illinois Wesleyan article was inaccessible and supplies no usable fact here.

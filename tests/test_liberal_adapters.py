@@ -38,3 +38,28 @@ def test_furman_rejects_missing_award_and_password_page():
         adapter.parse(html.replace("Bachelor of Science", "Master of Science"))
     with pytest.raises(ValueError):
         adapter.parse("<p>This content is password-protected.</p>")
+
+
+def test_lake_forest_track_change_requires_review():
+    adapter = load('lake-forest-ai-minor')
+    html = '<h1>Artificial Intelligence</h1><p>Our interdisciplinary minor</p><h3>AI Studies</h3><h3>AI Governance</h3>'
+    result = adapter.parse(html)
+    assert result['award_level'] == 'minor'
+    assert 'AI Governance' in result['requirements'][0]['summary']
+    assert 'curriculum_audit' not in result
+    with pytest.raises(ValueError):
+        adapter.parse(html.replace('AI Governance', 'AI Engineering'))
+    with pytest.raises(ValueError):
+        adapter.parse(html.replace('interdisciplinary minor', 'graduate degree'))
+
+
+def test_ursinus_changed_required_codes_are_observed():
+    adapter = load('ursinus-ai-minor')
+    html = '<h3>Requirements for Artificial Intelligence Minor</h3><p>A minor in artificial intelligence consists of 28 credits.</p><ul><li>STAT-141</li><li>CS-499</li></ul>'
+    result = adapter.parse(html)
+    assert [c['code'] for c in result['courses']] == ['STAT-141', 'CS-499']
+    assert '28 credits' in result['requirements'][0]['summary']
+    assert all(c['name'] is None for c in result['courses'])
+    assert 'last_verified' not in result
+    with pytest.raises(ValueError):
+        adapter.parse(html.replace('CS-499', 'Course to be determined'))

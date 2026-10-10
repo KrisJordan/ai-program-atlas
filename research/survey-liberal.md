@@ -1,15 +1,18 @@
 # National Liberal Arts Colleges: preliminary official-source survey
 
-Checked 2026-10-10. This report covers the **80 verified cohort rows currently available in `data/cohort.json`**, not the full intended rank-at-most-100 population. Ranking membership remains incomplete; these counts are not a complete-population denominator.
+Checked 2026-10-10. This report covers the **85 documented cohort rows currently available in `data/cohort.json`**, not the full intended rank-at-most-100 population. Ranking membership remains incomplete; these counts are not a complete-population denominator.
 
 ## Findings
 
-Two qualifying official undergraduate titles were found:
+Four qualifying official undergraduate titles were found:
 
 | Institution | Official title | Award | Evidence and limits |
 |---|---|---|---|
 | Denison University | Machine Learning and Artificial Intelligence | Minor | [Official requirements](https://denison.edu/academics/machine-learning-and-artificial-intelligence/degree-requirements) and [2026–2027 courses](https://denison.edu/academics/machine-learning-and-artificial-intelligence/courses) read. Eight required courses; five ML course credits documented. All eight courses and semester units, eligibility, overlap, preparatory conditions and institutional minor policies are mapped. Minor curriculum complete; exact grouped course prerequisite expressions remain unverified metadata. First-offered date unknown. |
 | Furman University | Artificial Intelligence | BS major | [Public official directory](https://www.furman.edu/academics/majors-minors-programs/) explicitly lists the title, BS award and undergraduate level. The linked [detail page](https://www.furman.edu/academics/majors-minors-programs/artificial-intelligence-major/) is password protected. Availability, launch date and curriculum unknown; overall record is partial. |
+
+| Lake Forest College | Artificial Intelligence | Minor | [Overview](https://www.lakeforest.edu/academics/majors-and-minors/artificial-intelligence) confirms two tracks. Partial catalog rules mapped; opaque course IDs prevent full finite-pool extraction. Ranking edition inferred from release date. |
+| Ursinus College | Artificial Intelligence | Minor | [Requirements](https://www.ursinus.edu/academics/artificial-intelligence/courses-requirements/) specify 24 credits, five required courses and elective/approval rules. Institutional policies unfinished. Ranking edition inferred from release date. |
 
 The directory listing is sufficient to confirm Furman's title, but is **not** evidence that students can presently enroll. Its program activity status is deliberately `unknown`.
 
@@ -17,8 +20,8 @@ The directory listing is sufficient to confirm Furman's title, but is **not** ev
 
 `data/surveys/liberal.json` records one row per currently verified LAC cohort institution, each with the attempted official URL, date and scope note:
 
-- 2 `confirmed`: official qualifying title read.
-- 73 `inspected`: an official academic overview or directory was opened for preliminary reconnaissance. These are **unfinished** catalog reviews, not no-program determinations.
+- 4 `confirmed`: official qualifying title read.
+- 76 `inspected`: an official academic overview or directory was opened for preliminary reconnaissance. These are **unfinished** catalog reviews, not no-program determinations.
 - 5 `inaccessible`: robot verification (Swarthmore), HTTP 403 (Naval and Military academies), inaccessible consent redirect (Richmond), or zero readable academic-page content (Colby).
 - 0 `pending`: the six initially unresolved paths were located through official homepages. Connecticut’s dynamic major-search page exposes no readable listing, so its inspection remains especially limited.
 - 0 `no_qualifying_program_found`: no institution has been given an absence conclusion from keyword searches or incomplete department review.
@@ -36,7 +39,7 @@ General academics pages are explicitly only preliminary evidence. Degree/minor l
 
 Reviewed program records are in `data/programs/denison-mlai-minor.json` and `data/programs/furman-ai-bs.json`. Each has an independent adapter under `atlas/adapters/` that reads the supplied HTML and rejects missing identity or required structural evidence. Neither replays a seed nor assigns a fresh verification timestamp. Adapter tests check changed observed courses, a missing degree type, and password-page rejection.
 
-Remaining work: complete ranking membership; revisit the five access failures without bypassing restrictions; conduct full current-catalog and concentration-level review of the 73 preliminary rows; obtain public Furman curriculum and availability evidence; resolve Denison grouped course prerequisite expressions, course resources and launch provenance. No raw fetched catalog pages are committed.
+Remaining work: complete ranking membership; revisit the five access failures without bypassing restrictions; conduct full current-catalog and concentration-level review of the 76 preliminary rows; obtain public Furman curriculum and availability evidence; resolve Denison grouped course prerequisite expressions, course resources and launch provenance. No raw fetched catalog pages are committed.
 
 ## Follow-up verification
 
@@ -53,3 +56,10 @@ Fourteen newly verified cohort institutions were screened through their official
 ## Denison minor-scope curriculum audit
 
 The 2026–2027 catalog review now maps all eight fixed courses, cross-list equivalences, eligibility, cognate overlap, explicit preparatory/placement conditions, half-credit residency rule, grading/repeat policies and external-credit approval. An explicit `curriculum_audit` records the sources and reviewed sections; the minor curriculum is complete within that scope. Ambiguous grouped prerequisite expressions, first instruction date, public course sites and syllabi remain visible metadata gaps. The record does not claim to map the host bachelor degree’s general education or major requirements.
+
+
+## Final expanded subset
+
+All 85 loaded LAC rows have an actual official-source inspection record: four confirmed titles, 76 preliminary inspections and five access failures. The roster includes three verified top-100 members with unknown exact rank and two release-date-inferred edition records, explicitly labeled in ranking provenance. It remains incomplete. Lake Forest and Ursinus add real observation adapters and focused changed-source tests. Their curricula remain partial; no complete-population denominator or no-program conclusion is claimed.
+
+Final verification after the two additional minors: 251 tests passed, 9 browser tests skipped by the default sandbox. An approved local Chromium run separately rendered Denison, Lake Forest and Ursinus at 1440px and 390px; base-path loading, reload, document overflow and browser error checks passed. The new program screenshots were visually inspected. The isolated build contains 108 program pages and 193 institutions; SQLite integrity, foreign keys and requirement-tree checks pass. The generic UI currently labels a one-track alternative as “1 course”; this presentation issue was reported to the coordinator.

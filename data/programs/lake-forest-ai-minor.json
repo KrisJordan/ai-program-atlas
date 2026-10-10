@@ -1,0 +1,148 @@
+{
+  "id": "lake-forest-ai-minor",
+  "institution": {
+    "id": "lake-forest-college",
+    "name": "Lake Forest College",
+    "aliases": [],
+    "calendar": "unknown",
+    "website": "https://www.lakeforest.edu"
+  },
+  "title": "Artificial Intelligence",
+  "award_level": "minor",
+  "program_kind": "minor",
+  "hosting_unit": null,
+  "status": "active",
+  "first_offered": null,
+  "overview": "An interdisciplinary minor examining AI through humanities and governance, with AI Studies and AI Governance tracks.",
+  "catalog_year": null,
+  "verification_status": "confirmed",
+  "last_verified": "2026-10-10",
+  "curriculum_status": "partial",
+  "links": [
+    {
+      "kind": "overview",
+      "url": "https://www.lakeforest.edu/academics/majors-and-minors/artificial-intelligence",
+      "label": "Official program overview"
+    },
+    {
+      "kind": "study",
+      "url": "https://catalog.lakeforest.edu/programs/EmHigvD4PZhz1eeHcHkk",
+      "label": "Official requirements"
+    }
+  ],
+  "sources": [
+    {
+      "id": "lake-forest-ai-overview",
+      "url": "https://www.lakeforest.edu/academics/majors-and-minors/artificial-intelligence",
+      "title": "Artificial Intelligence",
+      "locator": "Interdisciplinary minor; two tracks of study",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "confidence": "high"
+    },
+    {
+      "id": "lake-forest-ai-catalog",
+      "url": "https://catalog.lakeforest.edu/programs/EmHigvD4PZhz1eeHcHkk",
+      "title": "AISG - AI Studies & Governance",
+      "locator": "Minor Requirements; Ethics; Track Requirement/Electives",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "confidence": "high"
+    }
+  ],
+  "outcomes": [
+    {
+      "text": "Evaluate AI’s social and ethical effects and develop approaches for responsible governance.",
+      "kind": "source_stated",
+      "source_id": "lake-forest-ai-overview",
+      "locator": "Gain essential AI-relevant skills"
+    },
+    {
+      "text": "Responsible AI and society",
+      "kind": "inferred_taxonomy",
+      "source_id": "lake-forest-ai-overview",
+      "locator": "Two tracks of study"
+    }
+  ],
+  "courses": [],
+  "requirements": [
+    {
+      "id": "lake-forest-ai-minor-core",
+      "parent_id": null,
+      "title": "Core and ethics",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "lake-forest-ai-catalog",
+      "source_text": null,
+      "summary": "A core course and one ethics course are required. The fetched catalog renders their references as opaque IDs, so the finite course choices remain unresolved.",
+      "course_ids": []
+    },
+    {
+      "id": "lake-forest-ai-minor-track",
+      "parent_id": null,
+      "title": "Choose one track",
+      "kind": "alternative",
+      "count": 1,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "lake-forest-ai-catalog",
+      "source_text": null,
+      "summary": "Choose AI Studies or AI Governance.",
+      "course_ids": []
+    },
+    {
+      "id": "lake-forest-ai-minor-studies",
+      "parent_id": "lake-forest-ai-minor-track",
+      "title": "AI Studies",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "lake-forest-ai-catalog",
+      "source_text": null,
+      "summary": "Two approved humanities AI electives, an AI-related internship and the Krebs Humanities Scholar Experience.",
+      "course_ids": []
+    },
+    {
+      "id": "lake-forest-ai-minor-governance",
+      "parent_id": "lake-forest-ai-minor-track",
+      "title": "AI Governance",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "lake-forest-ai-catalog",
+      "source_text": null,
+      "summary": "One approved statistics course; one humanities AI elective; a second elective from the humanities AI pool or the approved technical pool; and the capstone. PSYC 222 requires PSYC 221.",
+      "course_ids": []
+    },
+    {
+      "id": "lake-forest-ai-minor-overlap",
+      "parent_id": null,
+      "title": "Elective overlap",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "lake-forest-ai-catalog",
+      "source_text": null,
+      "summary": "PHIL 222 and PHIL 283 can count as electives only when not used for ethics.",
+      "course_ids": []
+    }
+  ],
+  "notes": [
+    "The official overview and requirement body establish a minor. The catalog template also displays Bachelor’s Degree/Bachelor of Arts; that inconsistent template label is not promoted to a separate degree.",
+    "Catalog course references render as opaque IDs rather than resolved course codes. Finite core, ethics, statistics and elective lists remain unresolved; curriculum partial.",
+    "Catalog year, institutional minor policies, individual course metadata and launch date are unverified.",
+    "Cohort edition is inferred from the ranking report’s explicit September 22, 2026 release date, not an explicit 2027 label."
+  ]
+}
