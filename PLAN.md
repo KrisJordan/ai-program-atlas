@@ -1,93 +1,82 @@
 # AI Program Atlas — research and publication plan
 
-Updated 2026-10-10. A working, published research project; **the full target cohort and catalog inventory remain incomplete**.
+Updated 2026-10-10. A published research project; **the full target cohort and catalog inventory remain incomplete**.
 
 ## Verified publication
 
 - Repository: https://github.com/KrisJordan/ai-program-atlas
 - Site: https://krisjordan.github.io/ai-program-atlas/
-- Latest verified release: `1bf0963abcb4270e8f4cab9e516b64bc45a05872`, [successful build and Pages deployment](https://github.com/KrisJordan/ai-program-atlas/actions/runs/38093333711).
-- Clean committed checkout: **514 tests passed**, including all **15 required Chromium tests**. Four optional local source-cache replay cases were skipped; no browser tests were skipped. Clean reconstruction and the maintained publication copy passed integrity/build checks; repeat ingest changed zero records.
-- Live public JSON verified all counts below. Live keyboard family expansion, concrete comparison permalink/reload, discipline filter back/forward, direct program details and 390px mobile layout passed with no JavaScript errors or document overflow.
-- Local project: dedicated `ai-program-atlas/` repository in this task. Existing personal website and unrelated repositories remain untouched. Astra high research/implementation agents coordinate explicit ownership and incremental commits.
+- Verified release: `44683b366db561fc05f5fbd5e9b55ae5b5102f96`, [successful CI and Pages deployment](https://github.com/KrisJordan/ai-program-atlas/actions/runs/38095099660).
+- Fresh locked uv environment and clean committed source: **660 tests passed**, including all **17 required Chromium tests**. The 23 skipped cases require optional ignored source caches; no browser tests were skipped.
+- Fresh reconstruction and maintained publication copy passed integrity checks and agreed on current facts; additional historical coverage sources were preserved. Repeat ingest changed zero programs. Repeated static builds were byte-identical.
+- Live public JSON matched these counts. Live checks passed keyboard family expansion, concrete comparison reload, discipline back/forward, direct program pages, learning/career statement distinctions and 390px mobile layout, with no JavaScript errors or horizontal overflow.
+- Dedicated local repository: `ai-program-atlas/` in this Mac Studio task. No existing personal website or unrelated repository was changed. Coordinated Astra high research and implementation use explicit ownership and incremental commits.
 
-## Published coverage checkpoint
+## Published coverage
 
-| Measure | Published count |
+| Measure | Verified count |
 | --- | ---: |
-| Institutions in loaded roster | 193 |
-| National Universities / National Liberal Arts Colleges | 108 / 85 |
-| Confirmed qualifying title / partially inspected / inaccessible | 53 / 123 / 17 |
+| Institutions in loaded roster | 194 |
+| National Universities / National Liberal Arts Colleges | 108 / 86 |
+| Confirmed qualifying title / partially inspected / inaccessible | 58 / 128 / 8 |
 | Loaded institutions pending / absence conclusions | 0 / 0 |
-| Concrete program records | 110 |
-| Degrees / minors / concentrations / additional majors | 56 / 37 / 15 / 2 |
-| Complete / partial / pending requirement inventories | 22 / 62 / 26 |
-| Program-course records / resolved requirement nodes | 3,025 / 3,034 |
-| Program families / concrete family variants | 2 / 23 |
-| Descriptions / prerequisite statements | 155 / 205 |
-| Credit amounts with known units | 1,094 |
-| Public course-site links / syllabus links | 5 / 9 |
+| Concrete programs | 124 |
+| Degrees / minors / concentrations / additional majors | 60 / 42 / 19 / 3 |
+| Complete / partial / pending requirement inventories | 27 / 85 / 12 |
+| Program-course records / resolved requirement nodes | 4,985 / 5,927 |
+| Program families / concrete family variants | 2 / 31 |
+| Descriptions / prerequisite statements | 265 / 342 |
+| Credit amounts with verified units | 1,483 |
+| Public course sites / example syllabi | 22 / 18 |
 
-Counts include repeated course observations across sibling programs and elective pools. They are not unique institution-wide courses, required-course totals, completion percentages or quality scores. Complete refers to the explicitly reviewed program scope: a complete minor/concentration/additional major does not certify the host degree. Course metadata availability is separate. Zero pending in the loaded roster is not full target-cohort coverage; unlisted institutions remain outside that denominator.
+Course counts include elective pools and repeated observations across sibling programs. They are not unique institution-wide courses, required-course totals, completion percentages or quality scores. Complete refers to an explicitly reviewed scope: a complete minor/concentration/additional major does not certify the host degree. Metadata availability is separate. Zero pending in the loaded roster is not full target-cohort coverage; missing institutions remain outside that denominator.
 
-## Cohort definition and unresolved boundaries
+## Cohort definition and boundaries
 
-Qualifying official undergraduate titles contain AI or Artificial Intelligence. Degrees, additional majors, minors and formal concentrations/tracks/emphases are distinguished. Ordinary electives, research centers, informal interest areas, graduate credentials and surveyed certificates are excluded or retained as leads.
+Qualifying official undergraduate titles contain AI or Artificial Intelligence. Degrees, additional majors, minors and formal concentrations/tracks/emphases are distinct. Ordinary electives, research centers, informal interest areas, graduate credentials and surveyed certificates are excluded or retained as leads.
 
 The target is **2027 U.S. News Best Colleges**, separately covering every institution ranked 100 or better in **National Universities** and **National Liberal Arts Colleges**, including all cutoff ties. The edition was released September 22, 2026. Category ranks are never combined.
 
-National Universities enumeration has 108 members from a cited secondary table, including nine tied at 100; authoritative primary enumeration remains unverified. Current local liberal arts coverage contains 86 cited members but is incomplete: 80 have edition-specific numeric evidence, three have explicitly qualified inferred editions and three have verified top-100 membership with unknown exact ranks. Exact rank null never becomes rank 100. Both category completeness flags remain false. Publisher restrictions were not bypassed. See [cohort research](research/cohort.md).
+National Universities has 108 cited secondary-table members, including nine tied at 100; authoritative primary enumeration remains unverified. Liberal arts has 86 documented members: 80 with edition-specific numeric evidence, three with explicitly qualified inferred editions, and three with verified top 100 membership but unknown exact ranks. Exact rank null never becomes 100. Both completeness flags remain false. Publisher restrictions were not bypassed. See [cohort research](research/cohort.md).
 
-## Delivered engineering and product
+## Delivered architecture and product
 
-- [x] Dedicated uv Python project, locked dependencies, architecture/data contracts, agent ownership, research/refresh skills, incremental commits.
-- [x] Maintained SQLite database with migrations, integrity constraints, requirement trees, source provenance, revisions, fetched dates/catalog years, scrape runs, changed-source detection and evidence-backed manual overrides.
-- [x] Robots-aware bounded fetching, per-host pacing, cache, redirect validation, content limits, bounded retries and Retry-After deferral. Raw catalogs remain ignored and unpublished.
-- [x] Program-specific rerunnable source adapters and adjacent Markdown notes. Failed or partial source observations cannot erase curated research; repeated observations do not duplicate candidates.
-- [x] Reviewer-only curriculum completeness audits. Complete inherited inventories pin a reviewed family hash; shared revisions and dependent variants commit atomically or roll back together.
-- [x] Carolina-blue/navy, modern sans-serif responsive interface, clear hierarchy, keyboard navigation, filters, coverage ledger, detail pages and ranking methodology. No UNC marks or sponsorship claims.
-- [x] Explicit families, expandable variants, discipline filtering, concrete comparison URLs, common/local requirement views, provenance and missingness. Existing IDs and URLs preserved; base-path reload/back/forward work on GitHub Pages.
-- [x] Course-category and inferred-theme comparisons retain exact units and separate source statements from analyst taxonomy. No opaque quality score.
-- [x] CI validates a fresh reconstruction, then publishes from an updated copy of the maintained database so manual corrections survive. Public HTML/JSON contain curated factual metadata, original summaries and links, not raw copyrighted documents or private context.
+- [x] Dedicated uv Python project, locked dependencies, architecture/contracts, agent ownership, research/refresh skills and incremental commits.
+- [x] Maintained SQLite with migrations, integrity constraints, nested requirements, source provenance, catalog/fetch dates, revisions, scrape runs, changed-source detection and evidence-backed manual overrides.
+- [x] Bounded robots-aware HTTP fetching, per-host pacing, cache, redirect validation, content limits and retries. Long crawl intervals are honored in bounded waits; Retry-After defers excessive waits. Raw sources stay ignored and unpublished.
+- [x] Program-specific source adapters and adjacent Markdown notes. Partial/failed observations queue evidence without erasing reviewed facts; repeat observations do not duplicate candidates.
+- [x] Reviewer-only completeness audits. Complete inherited inventories pin family content hashes; shared revisions and dependent variants transact atomically.
+- [x] Carolina-blue/navy responsive sans-serif interface, keyboard navigation, filters, coverage ledger, detail pages and ranking methodology. No UNC marks or sponsorship claims.
+- [x] Explicit families, expandable variants, discipline filtering, concrete comparison URLs, common/local requirements, provenance and missingness. Stable IDs and base-path reload/back/forward work on GitHub Pages.
+- [x] Course-category and inferred-theme comparisons preserve credit units and separate source-stated learning outcomes, program aims and career pathways from editorial taxonomy. No opaque quality score.
+- [x] Compact directory projection reduced root HTML about 69% raw and 64% gzipped in a controlled same-data comparison. Live root HTML is 2,726,569 bytes; full static detail pages and data.json remain intact. No runtime fetch/server added.
+- [x] CI tests fresh reconstruction and publishes an updated copy of the maintained DB. Reviewed discovery classification corrections refresh correctly; manual program corrections and evidence history survive.
 
-## Program-family evidence
+## Program families and current evidence
 
-The published Northeastern comparison family has 16 independently verified combined BS variants sharing nine definitions, with 144 provenance bindings. Program-specific integration roles and parents remain intact. This grouping is explicitly analyst-classified; combined-major relationships are source-stated. Buffalo's seven BS variants share five university-described AI+X framework notes, not an asserted identical course inventory. Detailed Buffalo catalog requirements remain unverified. Together these families organize 23 concrete degrees while retaining individual titles, awards, hosts, local additions and comparisons.
+Northeastern's analyst-defined comparison family contains 23 independently verified combined degrees: 22 BS and one BSEnvE. Nine shared AI/core definitions plus 43 universal policy definitions are bound with program-specific provenance. All 14 Business concentration inventories are mapped with first/second concentration eligibility and conditional selection rules. Exact allowed home-college options and applicable college rules remain a scope gap; all 23 degrees remain partial.
 
-The next committed release candidate expands Northeastern to 23 variants (22 BS and one BSEnvE), preserves their hosting distinctions, and adds 43 university policy definitions beside the nine shared AI/core definitions. College-specific applicability remains conditional. Buffalo now has eight independently verified BS variants; PPE's award is verified directly from its department. Together the two families organize 31 concrete degrees. See [family contract](docs/PROGRAM_FAMILIES.md), [Northeastern evidence](research/program-families.md) and [Buffalo evidence](research/families/buffalo-ai-plus-x.md).
+Buffalo's university-described AI+X family contains eight independently verified BS degrees sharing five framework notes. PPE's award is verified directly from its department. No identical course inventory is implied, and the two minors are outside this degree framework. Detailed catalog courses remain unverified.
 
-## Next release candidate — verification in progress
+See [family contract](docs/PROGRAM_FAMILIES.md), [Northeastern evidence](research/program-families.md), [college applicability review](research/northeastern-policy-review.md) and [Buffalo evidence](research/families/buffalo-ai-plus-x.md).
 
-Committed research through `469c338` has been ingested into the maintained database, with repeat ingest changing zero program records and integrity checks passing. The clean test sequence found and corrected a stale survey assertion, then revealed an older discovery classification that failed to refresh; the latter now updates reviewed classification fields while preserving evidence history and manual program corrections. These counts are **local**, pending the final clean tests and remote deployment:
+## Active continuation beyond the published release
 
-| Measure | Candidate count |
-| --- | ---: |
-| Institutions / National Universities / Liberal Arts Colleges | 194 / 108 / 86 |
-| Confirmed / inspected / inaccessible / pending / absence conclusions | 58 / 128 / 8 / 0 / 0 |
-| Programs / degrees / minors / concentrations / additional majors | 124 / 60 / 42 / 19 / 3 |
-| Complete / partial / pending curricula | 27 / 85 / 12 |
-| Program-course records / resolved requirement nodes | 4,985 / 5,927 |
-| Families / concrete variants | 2 / 31 |
-| Descriptions / prerequisite statements / known credit amounts with units | 265 / 342 / 1,483 |
-| Public course sites / example syllabi | 22 / 18 |
+- MIT and NC State curricula are now committed locally as partial (`6193ce3`), with exact CI-M/credit and grade-footnote conflicts retained. MIT degreewide rules are under further review.
+- UVA's two concentrations and Tufts's two minors are committed locally as partial (`3a1d76d`). Visible pools and policies are mapped; linked registrar/checklist evidence remains under access review.
+- Northeastern home-college applicability is being checked for representative Business, Biology and Design variants.
+- Stanford's currently linked AI track sheet and Bulletin, Tulane's existing technical AI minor, and a newly verified distinct AI Literacy minor are being reviewed.
+- Access failures are classified by actual evidence, distinguishing publisher denial/authentication from local transport/parser limitations. Any core correction receives regression tests before it is used for new source requests.
 
-This candidate adds the full 23-variant Northeastern mapping, common university policies and Business concentration inventories; canonical Penn handbook evidence; Purdue college rules; CMU/Penn core-course metadata and term-labelled course sites; complete scoped Lake Forest, Emory, Indiana, Case and Villanova minor/concentration reviews; expanded Ursinus, Notre Dame, Miami, RIT, Maryland/California/USF, Delaware/Drexel/Stevens and other curricula. Status/source discrepancies remain explicit. Separate source-statement types distinguish learning outcomes, program aims and career pathways from inferred taxonomy.
+Research continues during fixed-snapshot tests. Working-tree changes are excluded from release until committed, ingested and verified. Each adapter's NOTES.md states evidence, interpretations, exact conflicts, metadata gaps and next checks.
 
-The directory embeds a compact comparison/search projection (about 69% smaller raw and 64% smaller gzipped in a controlled comparison); full static detail pages and data.json remain intact. No runtime fetch or server was added.
+## Remaining work and blockers
 
-Nine new identities were verified at MIT, NC State, Villanova, UVA and Tufts; three Villanova inventories are now mapped. Six older pending inventories have documented access barriers. HWS adds one qualified inferred-edition ranking row and an inspected program-directory/catalog ledger; no absence conclusion. See [access review](research/access-review.md), [pending curriculum barriers](research/pending-curriculum-barriers.md) and each adapter's NOTES.md.
+1. **Cohort:** obtain a permitted authoritative 2027 roster for both categories and all cutoff ties; complete missing liberal-arts enumeration. Preserve secondary/inferred/membership-only labels until resolved.
+2. **CSRankings:** numerical import remains held pending permission or qualified reuse review. Methodology records ai,vision,mlmining,nlp,inforet, proposed 2016–2025 window, U.S. filter, pinned source snapshot and computation method. Values remain null, not zero quality. Publication research does not measure undergraduate teaching quality. See [research note](research/csrankings.md).
+3. **Access:** eight loaded institutions remain inaccessible. Six older pending curricula have documented barriers; additional program-specific links remain blocked or unread. See [access review](research/access-review.md), [pending curriculum barriers](research/pending-curriculum-barriers.md) and adapter notes. No bypass of robots/auth/403/password gates.
+4. **Curricula:** 12 published inventories remain pending and 85 partial; newer local batches reduce the queue but are not yet published. Verify finite pools, nested alternatives, policy applicability and source conflicts before promoting completeness.
+5. **Metadata:** many descriptions, prerequisites, public course sites and example syllabi remain unknown. Verify exact course identity and term; preserve historical labels and link rather than redistribute.
+6. **Institution depth:** directory searches alone do not establish absence. Continue bounded catalog/minor/concentration searches and documented leads. No absence conclusion has been asserted.
 
-## Active continuation
-
-Northeastern Business now includes all 14 published concentration inventories with primary/secondary eligibility preserved; its home-college applicability remains unresolved. Notre Dame's two minors now preserve current-page/catalog differences and explicitly sourced semester-hour units. The newly accessible MIT/NC State/Villanova/UVA/Tufts records are being extracted; Stanford and Tulane policy/source gaps are also under review. The compact directory payload is included in this candidate; full static data remain available. Research continues during fixed-snapshot tests. Working-tree edits are excluded from the release until committed, ingested and verified. Raw pages remain ignored.
-
-## Remaining work and access blockers
-
-1. **Cohort:** obtain a permitted authoritative 2027 roster for both categories and full cutoff ties. Complete missing liberal-arts enumeration and catalog searches; preserve secondary/inferred/membership-only labels until resolved.
-2. **CSRankings numeric data:** import remains held pending permission or qualified reuse review. Published methodology records ai, vision, mlmining, nlp and inforet, proposed 2016–2025 window, U.S. filter, pinned snapshot and computation method. Values remain null with explicit missingness. Publication output is not a measure of undergraduate teaching quality. See [research note](research/csrankings.md).
-3. **Institution/program access:** robots restrictions, 403s, password gates and unavailable catalog transport remain explicit, including Furman curriculum, Buffalo catalog and documented Michigan/UC Merced/Gonzaga refresh limits. No alternate-path circumvention. Public official summaries may support partial records but do not substitute invented course lists.
-4. **Curricula:** 26 published identities still await extraction and 62 published inventories remain partial. Local batches reduce this queue; the target is not complete. Verify university/college policies, finite approved pools, alternatives, nesting and all source conflicts before upgrading audit status.
-5. **Metadata:** many prerequisites, descriptions, course sites and example syllabi remain unknown. Verify course identity and term; retain historical labels and link rather than redistribute.
-6. **Institution depth:** initial directory searches do not establish absence. Continue bounded catalog/minor/concentration searches and documented leads; do not change partial inspection to no qualifying program without evidence.
-
-Use `uv run atlas status`, `uv run atlas candidates`, the adapter notes and task-specific skills. Refreshes queue observations for review; they never silently replace the research database.
+Use `uv run atlas status`, `uv run atlas candidates`, adapter notes and task-specific skills. Refreshes queue observations for review; they never silently replace the research database.
