@@ -422,6 +422,13 @@ def export_data(conn):
                 {k: override[k] for k in ("field", "reason", "evidence_url", "updated_at")}
             )
         record["manual_overrides"] = overrides
+        record["institution"]["rankings"] = [
+            dict(rank)
+            for rank in conn.execute(
+                "SELECT publisher,edition,category,rank,source_url,verification_status FROM rankings WHERE institution_id=? ORDER BY category",
+                (row["institution_id"],),
+            )
+        ]
         programs.append(record)
     institutions = []
     summary = {status: 0 for status in sorted(STATES)}
@@ -472,7 +479,10 @@ def export_data(conn):
             "institutions": len(institutions),
             "programs": len(programs),
             "cohort_complete": cohort.get("complete", False),
-            "inspected_total": len(institutions) - summary["pending"],
+            "attempted_total": len(institutions) - summary["pending"],
+            "inspected_total": summary["confirmed"]
+            + summary["inspected"]
+            + summary["no_qualifying_program_found"],
         }
     )
     limitations = [

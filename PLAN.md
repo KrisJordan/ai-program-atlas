@@ -1,47 +1,84 @@
-# AI Program Atlas implementation and coverage plan
+# AI Program Atlas — current plan and coverage
 
-## Scope and truthfulness
-Dedicated repository, provisionally KrisJordan/ai-program-atlas. Two independent U.S. News cohorts: National Universities and National Liberal Arts Colleges, rank <=100 inclusive of ties. Edition and complete membership require actual source verification. Pilot records do not establish full cohort coverage. Only programs with AI / Artificial Intelligence in official undergraduate title qualify; distinguish degrees, minors and concentrations.
+Updated 2026-10-10. This is a published, working research release, **not a completed survey of the full target cohort**.
 
-## Milestones
-- [x] Inspect empty workspace; preserve unrelated repositories.
-- [ ] Verify account/repository collision, ranking edition and cohort source.
-- [ ] Document architecture, schema, provenance and adapter contracts.
-- [ ] Pilot CMU, Penn, Purdue and a minor/applied program from official sources.
-- [ ] SQLite migrations, safe fetching, idempotent ingest, revisions and manual overrides.
-- [ ] Full cohort inventory with explicit inspected/confirmed/no-find/inaccessible/pending states.
-- [ ] Course and nested requirement extraction; outcomes and CSRankings evidence.
-- [ ] Editorial static site with coverage, detail, comparison and methodology.
-- [ ] Unit/integration/e2e checks, clean build, incremental commits.
-- [ ] Create dedicated GitHub repository and verify Pages deployment.
+## Project and publication
 
-## Current status
-2026-10-10: Initial implementation. No full-coverage claim. GitHub connector confirms KrisJordan personal account; CLI authentication needs verification outside network sandbox. No raw copyrighted source documents will be committed.
+- Dedicated repository: https://github.com/KrisJordan/ai-program-atlas
+- Static site: https://krisjordan.github.io/ai-program-atlas/
+- Local workspace: `ai-program-atlas/` in the dedicated Codex task directory.
+- Initial GitHub Actions build and Pages deployment succeeded; the expanded research snapshot is being verified for the next deployment.
+- Existing personal website and unrelated repositories were not modified. Work was implemented with independent Astra high research/implementation agents and coordinated schema ownership.
 
-## Coverage log
-To be generated from the database. Pending is the default for uninspected cohort members; no qualifying program found requires a documented search of official catalogs and program directories.
+## Scope and cohort evidence
 
-2026-10-10 pilot research: Added separate Purdue AI BS and Liberal Arts BA, plus Penn State Artificial Intelligence Engineering minor. BS department curriculum has 42 courses / 17 requirement nodes; Purdue catalog 403 leaves college-level coverage partial and BA curriculum pending. Penn State current 2026–27 bulletin yields 5 courses / 6 nodes; approved department elective list remains unexpanded. All first-offering dates are null. Three real HTML parsers, synthetic regression tests and adapter NOTES document exact evidence/next checks.
+Official undergraduate titles containing AI or Artificial Intelligence qualify. Degrees, additional majors, minors, and formally named concentrations/tracks/emphases remain distinct. Ordinary electives, research centers, informal interest areas, graduate credentials and the surveyed certificates are excluded or documented as leads.
 
-2026-10-10 liberal arts survey: Added 66 currently verified cohort rows in data/surveys/liberal.json: 2 title-confirmed, 53 preliminary official-page inspections, 5 inaccessible and 6 pending directory resolution; no absence conclusions. Added Denison MLAI minor (eight required courses, partial credits/prerequisites) and Furman AI BS directory record (activity unknown, curriculum pending; detail page password protected). Both adapters validate observed HTML and do not replay seeds. Full catalog/concentration review and complete ranking membership remain outstanding. Verification at this checkpoint: 36 tests passed, 4 browser tests skipped; atlas build blocked because atlas.cli was still being implemented by coordinator.
+The confirmed target is **both** 2027 U.S. News categories, independently: every institution ranked 100 or better, including all cutoff ties. The 2027 edition was released September 22, 2026; older categories must not be silently reused.
 
-## CMU and Penn pilot coverage (2026-10-10)
+| Cohort | Loaded membership | Evidence and remaining limit |
+| --- | ---: | --- |
+| National Universities | 108 | Secondary table enumeration through rank 100, including nine tied at 100; authoritative primary enumeration remains unverified |
+| National Liberal Arts Colleges | 66 | Cited primary/secondary members; the full lower half and cutoff tie remain incomplete |
 
-- Confirmed six distinct undergraduate credentials from official sources: CMU AI BS, minor and additional major; Penn AI BSE, CSCI AI concentration, and Wharton AI for Business concentration within BS Economics.
-- Added program-specific parsers and researched seeds with 231 program-course records (option pools, with cross-program overlap), source metadata, nested choices and explicit partial coverage. CMU uses 2026–2027 catalog; Penn department pages have no assigned catalog year.
-- Launch evidence: CMU BS Fall 2018; Penn BSE Fall 2024 (existing students, external applicants Fall 2025); Wharton concentration Fall 2025. Other launch dates remain null.
-- Verified parser behavior with 19 synthetic tests and a live-HTML development pass for all six sources. Raw pages kept only in /tmp.
-- Remaining: CMU full math/probability and general-education logic; all prerequisite/course description and syllabus validation; Penn catalog retrieval, curriculum policy exceptions and conflicting concentration language. No full graduation-audit or full-institution-discovery claim.
+Every ranking row records category, edition, rank, source and verification status. Both cohort completeness flags remain false. Primary U.S. News category pages are access-restricted to the research tools; no restriction was bypassed. See `research/cohort.md`.
 
-## Frontend delivery (2026-10-10)
-Static editorial index, program details, coverage ledger and methodology implemented in atlas/site.py + atlas/web. Filters cover award, calendar, institution, U.S. News category and observed course category. Comparison supports four programs, deep URLs, reload/back/forward, preserved Pages base path, distinct credit units, nested requirement summaries, source outcomes and editorial taxonomy. Charts deduplicate stable course IDs; missingness stays explicit. Coverage links ranking evidence and inspection/discovery evidence with separate cohort caveats. CSRankings stays not_imported with external links only. Test-only synthetic records are confined to tests. Six site tests and four Chromium e2e tests passed; real-data desktop/mobile screenshots inspected (390px mobile, no document overflow), no-JS direct pages verified. Integration build passed; current database snapshot contained three programs and 174 institutions, pending coordinator reload of the latest program files. Remaining: integration with final research snapshot and deployed Pages check.
+## Current inventory
 
-2026-10-10 liberal arts follow-up: Located all six pending paths through official homepages; loaded 66-member LAC subset now has 59 preliminary inspections, 2 title confirmations and 5 access failures. F&M and Saint Anselm AI certificates documented as exclusions. Denison official catalog now supplies all eight course credits and semester policy; full title is verified, curriculum remains partial. Isolated CLI init/ingest/build/integrity checks passed; latest build included 83 programs/174 institutions. Both LAC program pages passed local Chromium desktop/mobile checks and desktop screenshot inspection.
+| Measure | Count |
+| --- | ---: |
+| Loaded institutions with an attempted first pass | 174 |
+| At least one qualifying title confirmed | 51 |
+| Partially inspected without an exhaustive conclusion | 106 |
+| Institution-level access limitation | 17 |
+| Pending among the loaded roster | 0 |
+| No-qualifying-program conclusions | 0 |
+| Documented program identities | 106 |
+| Degrees / minors / concentrations / additional majors | 56 / 33 / 15 / 2 |
+| Partial curriculum records / curriculum pending | 9 / 97 |
+| Program-course records / requirement nodes | 286 / 86 |
 
-## National-university discovery contribution (2026-10-10)
+Course records overlap across related programs and include elective pools. These counts are not unique institution-wide courses, required-course totals, degree completion percentages or quality scores. First-pass inspection does not mean full catalog/concentration coverage. The unknown missing liberal arts membership is outside the loaded denominator, so zero pending does **not** mean the target cohort is complete.
 
-Added national.json ledger for all 108 cohort members: 28 confirmed, 3 inspected, 5 inaccessible, 72 pending, no absence conclusions. Promoted 72 official-source identities (44 degrees, 25 minors, 3 concentrations) to separate curriculum-pending program records and identity-only adapters, manifest in research/national-discovery-manifest.json. Unknown calendars, first-offering dates and courses remain unknown. UMD BSAI is announced for fall 2027; GeoAI/GenAI held for title-scope review. National survey report documents directory-level evidence, catalog-access failures and follow-up leads. Full existing-venv suite: 129 passed, 4 skipped; atlas build: 83 programs/174 institutions. uv was unavailable on this shell PATH. Remaining: merge parallel surveys, complete institutional inventories, verify current activity and catalog years, extract curricula and test all adapters against permitted live sources.
+## Delivered
 
-2026-10-10 frontend integration: final 83-program snapshot rendered. Added program-type and curriculum-evidence facets, explicit additional-major badges, identity-only counts/labels, and corrected coverage terminology to documented records. Methodology renders CSRankings configured fields, 2016–2025 window, US filter, pinned snapshot, method, missingness and unresolved reuse status; additional majors are explicit in scope. ATLAS_REQUIRE_BROWSER=1 now makes missing Playwright/Chromium a test failure. Seven publishing tests and five required Chromium tests pass; complete current non-browser suite 136 passed. Final real-data screenshots /tmp/atlas-83-desktop.png, /tmp/atlas-83-mobile.png, /tmp/atlas-83-mobile-filters.png, /tmp/atlas-83-methodology.png. No JavaScript errors; 390px overflow false on index, coverage, methodology and CMU additional-major detail. Final deployment verification remains with coordinator.
+- [x] Document architecture, relational schema, data exchange, research/refresh skills and agent ownership.
+- [x] Create isolated uv project with locked dependencies and incremental commits.
+- [x] Implement versioned SQLite migrations, foreign keys, requirement-tree checks, evidence, revisions, source hashes, run history, candidate review and evidence-backed manual overrides.
+- [x] Implement bounded robots-aware HTTP, per-host pacing, cache, redirect validation, compression handling, Retry-After deferral and failure preservation.
+- [x] Research varied CMU, Penn, Purdue, Penn State, Denison and Furman pilots, including BA, BS/BSE, minors, concentrations and additional majors.
+- [x] Expand to 106 official-source program identities and registered program-specific adapters, with Markdown notes beside every adapter.
+- [x] Attempt a first official-source pass for every loaded institution, without inferring absence from partial searches.
+- [x] Build editorial static index, eight search/filter controls, detail pages, coverage ledger and methodology.
+- [x] Implement four-program comparison URLs with reload/back/forward and Pages base paths, separate rank-category provenance, exact credit units, course-category profiles and source-linked inferred outcome themes.
+- [x] Verify public resources for three pilot courses and two example syllabi; retain term/historical labels and link rather than redistribute.
+- [x] Test extraction, nested choices, constraints, rollback, idempotence, manual overrides, source changes/failures, deterministic reconstruction and browser behavior.
+- [x] Build a committed snapshot from a clean temporary checkout and verify the initial remote CI and Pages URL (HTTP 200).
+- [ ] Verify the expanded snapshot in remote CI and GitHub Pages (final adapter replay complete).
 
-2026-10-10 additional National University survey: Added data/surveys/national-additional.json with 25 previously pending rank≤60 institutions: 2 confirmed, 19 inspected and 4 inaccessible. Confirmed Columbia AI minor and Stanford AI concentration/formal CS BS track; both promoted to identity-only program records with pending curricula and conservative discovery adapters. Georgetown/UT AI certificates, UCI elective area, JHU graduate track and Brown discontinued pathway structure are not silently counted as qualifying undergraduate credentials. No absence conclusions. Research notes preserve official links and exact remaining coverage.
+## Detailed pilot boundaries
+
+CMU and Penn contribute 231 program-course records across six credentials, with nested choices and explicit partial coverage. CMU uses the 2026–27 catalog; Penn department pages do not state a catalog edition. Documented launch evidence covers CMU BS Fall 2018, Penn BSE Fall 2024 for existing students (external applicants Fall 2025), and Wharton concentration Fall 2025. Other unverified dates remain null.
+
+Purdue BS contributes 42 courses and 17 requirement nodes; college/general-education logic remains incomplete. The Purdue catalog returns 403, so the separate BA has verified identity and pending curriculum. Penn State's 2026–27 AI Engineering minor has five course records and six nodes; its approved elective list is not expanded. Denison's eight required courses and semester credits are documented; detailed completion policies remain partial. Furman's official directory lists an AI BS, but its detail page is password-protected, so activity is unknown and curriculum pending.
+
+All remaining records are title-level discoveries with current activity, catalog year, launch date, requirements and courses unknown unless separately evidenced. Announced offerings are distinguished, including UMD and Minnesota. Drexel's quarter system is explicitly sourced. See each adapter's `NOTES.md` and the survey reports for interpretations and next checks.
+
+## Verification checkpoint
+
+- **200 tests passed**, comprising 193 unit/integration checks and seven required Chromium browser checks. No browser tests skipped in the final run.
+- All 11 initial program adapters succeeded with the production fetcher. Repeated observations added no duplicate candidates.
+- The first 94-adapter full run exposed DOM layout mismatches; source-specific repairs fixed 46 of 47 original parse failures using cached permitted HTML. No source body was committed.
+- Expanded replay has **102 successful latest adapter runs and four access-restricted failures** across all 106 registered programs. No unresolved parser failures remain. NJIT's BS award is corroborated in a second official source; William & Mary's title layouts have dedicated guarded parsers.
+- Source failures and changed layouts preserved all reviewed data. The SQLite integrity check is clean.
+
+## Remaining work and blockers
+
+1. **Cohort completeness blocker:** obtain a permitted authoritative 2027 ranking roster that includes both full cutoff tie groups. Preserve the existing secondary verification labels until resolved; complete missing liberal arts membership and its first-pass research.
+2. **CSRankings publication-data blocker:** public numeric import remains held pending permission or qualified reuse review. The site publishes original methodology, source links, explicit missingness, five AI fields, proposed 2016–2025 window, `us` filter and pinned snapshot. No dataset or copied implementation is included. See `research/csrankings.md`.
+3. **University access limits:** retain blocked-source states and citations; do not bypass robots, 403s, paywalls or passwords. Four current program-adapter fetches are blocked at Gonzaga, UC Merced (two) and Michigan. Separate institutional survey limitations are documented in the ledger.
+4. **Curriculum expansion:** 97 programs still need requirements, courses, credit rules and outcomes extracted; all nine richer pilot curricula still have documented gaps. This is remaining research work, not a completed deliverable. Expand in evidence-reviewed batches, preserving alternatives and nested rules.
+5. **Course detail expansion:** most prerequisites, descriptions, public course sites and example syllabi remain unverified. Keep nulls and explicit historical term labels; verify actual course identity before linking.
+6. **Institution depth:** complete catalog, minor and concentration searches after first-pass directories. Resolve documented leads such as informal Rutgers guidance, UW's upcoming minor and abbreviations outside the exact title rule. Do not change partial inspection into absence without a documented bounded search.
+
+Use `uv run atlas status`, `uv run atlas candidates`, the adapter notes and the task-specific skills for the next batch. Refreshes collect review candidates; they do not silently replace curated research.
