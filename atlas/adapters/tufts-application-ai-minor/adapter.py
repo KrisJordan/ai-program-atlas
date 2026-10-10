@@ -16,3 +16,12 @@ def parse(html: str) -> dict:
 
 
 SOURCES.append("https://engineering.tufts.edu/cs/current-students/undergraduate/student-forms")
+
+
+from atlas.adapters.tufts_minor_paperwork import parse_paperwork, URL as PAPERWORK_URL
+
+SOURCES.extend(["https://tufts.box.com/v/cs-minor-appai-checklist", PAPERWORK_URL])
+SOURCE_PARSERS = {
+    SOURCES[0]: parse,
+    PAPERWORK_URL: lambda html: parse_paperwork(html, pid=PROGRAM_ID),
+}

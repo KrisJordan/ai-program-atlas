@@ -215,7 +215,7 @@ def parse_minor(html, *, pid, title, url, development):
         requirements=rules,
         curriculum_status="partial",
         notes=[
-            "Observed program page and all local accordion course rows. Linked checklist forms remain unreviewed; no automatic completeness or host-degree certification. Slash codes represent one cross-listed course observation, not multiple elective slots."
+            "Observed program page and all local accordion course rows. Separate checklist and submission sources require their own review; this page-only observation does not certify completeness or the host degree. Slash codes represent one cross-listed course observation, not multiple elective slots."
         ],
     )
     return identity

@@ -18,7 +18,7 @@
     "evidence_url": "https://engineering.tufts.edu/cs/current-students/undergraduate/minor-ai-development",
     "uncertainty": "Source states effective/available beginning Fall 2026; first actual enrollment is not independently verified."
   },
-  "overview": "Reviewed visible AI minor curriculum with separate course choices and local policies; linked checklist constraints remain unverified.",
+  "overview": "Reviewed AI minor course inventory, public checklist policies and graduation procedures; explicit source discrepancies remain unresolved.",
   "catalog_year": null,
   "verification_status": "partial",
   "last_verified": "2026-10-10",
@@ -32,7 +32,12 @@
     {
       "kind": "study",
       "url": "https://tufts.box.com/v/cs-minor-aidev-checklist",
-      "label": "Officially linked checklist form (unread during review)"
+      "label": "Public official checklist form (reviewed page 1)"
+    },
+    {
+      "kind": "study",
+      "url": "https://engineering.tufts.edu/cs/current-students/undergraduate/instructions-graduation-paperwork",
+      "label": "Official minor graduation-paperwork instructions"
     }
   ],
   "sources": [
@@ -64,6 +69,26 @@
       "source_date": null,
       "catalog_year": null,
       "locator": "Minor in the Application of AI and Minor in AI Development checklist links",
+      "confidence": "high"
+    },
+    {
+      "id": "tufts-ai-development-minor-checklist",
+      "url": "https://tufts.box.com/v/cs-minor-aidev-checklist",
+      "title": "Minor in AI Development Checklist Form (cs-minor-aidev-checklist.pdf)",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Public Box viewer, page 1: requirements, policies/restrictions and checklist instructions; no printed term/date observed",
+      "confidence": "high"
+    },
+    {
+      "id": "tufts-ai-development-minor-graduation-instructions",
+      "url": "https://engineering.tufts.edu/cs/current-students/undergraduate/instructions-graduation-paperwork",
+      "title": "Instructions for Graduation Paperwork",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Introductory submission timing and All Minors (SoE and A&S)",
       "confidence": "high"
     }
   ],
@@ -790,14 +815,101 @@
         "tufts-ee-157",
         "tufts-math-123"
       ]
+    },
+    {
+      "id": "tufts-ai-development-minor-checklist-math-exclusivity",
+      "parent_id": null,
+      "title": "Discrete mathematics alternatives count once",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "tufts-ai-development-minor-checklist",
+      "source_text": null,
+      "summary": "The checklist allows only one of CS/MATH 61 or MATH 65 to count toward the minor. The program page labels the first option CS 61; the checklist supplies the cross-listing notation.",
+      "course_ids": []
+    },
+    {
+      "id": "tufts-ai-development-minor-checklist-ml-discrepancy",
+      "parent_id": null,
+      "title": "Unresolved machine-learning core discrepancy",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "tufts-ai-development-minor-checklist",
+      "source_text": null,
+      "summary": "The undated checklist names CS 135 as required and does not show EE 140/CS 128. The current department program page explicitly permits CS 135 or EE 140/CS 128. The alternative remains represented from that page, but its acceptance on the checklist is unverified.",
+      "course_ids": []
+    },
+    {
+      "id": "tufts-ai-development-minor-checklist-overlap",
+      "parent_id": null,
+      "title": "Arts and Sciences overlap limit",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "tufts-ai-development-minor-checklist",
+      "source_text": null,
+      "summary": "For Arts and Sciences students, no more than two minor courses, regardless of their credits, may also be used toward a major, another minor, or foundation/distribution requirements. The checklist does not state this limit for Engineering students.",
+      "course_ids": []
+    },
+    {
+      "id": "tufts-ai-development-minor-checklist-submission",
+      "parent_id": null,
+      "title": "Signed graduation checklist",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "tufts-ai-development-minor-checklist",
+      "source_text": null,
+      "summary": "List the five proposed courses with semester/year and grades, using IP for in-progress work and leaving future grades blank according to the PDF. Obtain student signature and department approval. Submit for departmental review at least one business week before the relevant graduation-packet deadline; include the signed checklist in the graduation packet.",
+      "course_ids": []
+    },
+    {
+      "id": "tufts-ai-development-minor-minor-paperwork-procedure",
+      "parent_id": null,
+      "title": "Minor checklist processing",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "tufts-ai-development-minor-graduation-instructions",
+      "source_text": null,
+      "summary": "Sign the minor checklist, mark in-progress work IP and next-semester work TBD, and name the file Lastname Firstname CS minor checklist. Submit through the linked CS minor Box folder. The department reviews/signs and returns it by email for inclusion in the graduation packet. The PDF form instead instructs future-course grade cells to remain blank; that discrepancy is recorded separately.",
+      "course_ids": []
+    },
+    {
+      "id": "tufts-ai-development-minor-future-grade-discrepancy",
+      "parent_id": null,
+      "title": "Future-grade field instructions differ",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "tufts-ai-development-minor-checklist",
+      "source_text": null,
+      "summary": "The PDF checklist says to leave future-course grades blank, while the linked department graduation instructions say to enter TBD for next-semester courses. Both sources use IP for in-progress courses. This administrative discrepancy remains explicit; no source-precedence rule was found.",
+      "course_ids": []
     }
   ],
   "notes": [
-    "All visible program-page core slots, electives and stated eligibility/preparation rules mapped. Linked checklist forms are not yet reviewed; the inventory remains partial.",
+    "Program page, public one-page checklist and linked departmental minor graduation procedures reviewed. The checklist is publicly readable without login; previous unread/access wording is superseded.",
     "Five-course minimum and at least 15 source credits are separate constraints. Elective individual credits are not stated on this page and remain null; credit-unit normalization is unverified.",
     "Slash codes are retained as one published combined course option; they must not be counted as multiple elective slots. Distinct CS 150 topics retain separate course observations. Source prerequisite punctuation is retained; recommended background is not promoted to a requirement.",
     "Available beginning Fall 2026 is source-stated. Announced status is retained because actual enrollment has not been independently verified.",
-    "Inferred taxonomy summarizes available curriculum themes, including optional electives, rather than claiming institution-stated learning outcomes."
+    "Inferred taxonomy summarizes available curriculum themes, including optional electives, rather than claiming institution-stated learning outcomes.",
+    "Checklist file identity: cs-minor-aidev-checklist.pdf, visible in the public Box viewer on 2026-10-10 at https://tufts.app.box.com/v/cs-minor-aidev-checklist. No printed edition/date was observed, so source date/catalog year remain null. Login/signup buttons were optional; no authentication, hidden endpoints or download bypass was used.",
+    "The local fetcher initially reported robots denial because its first-match parser ignored the more-specific Allow: /v/ alongside Disallow: /. This was a transport interpretation issue, not evidence that the document requires permission. Ordinary browser inspection followed the explicitly allowed shared-link path.",
+    "The blank-versus-TBD grade placeholder is an administrative annotation ambiguity, not a change to course, credit, grade or overlap eligibility. It remains documented but does not itself make the academic requirement inventory incomplete; no individual graduation clearance is implied."
   ],
   "curriculum_audit": {
     "scope": "minor",
@@ -805,7 +917,9 @@
     "source_ids": [
       "tufts-ai-development-minor-identity",
       "tufts-ai-development-minor-context-1",
-      "tufts-ai-development-minor-forms-directory"
+      "tufts-ai-development-minor-forms-directory",
+      "tufts-ai-development-minor-checklist",
+      "tufts-ai-development-minor-graduation-instructions"
     ],
     "sections": [
       "Program eligibility",
@@ -813,10 +927,13 @@
       "Core slots and within-slot alternatives",
       "Explicit required/recommended preparation",
       "Complete visible elective list and named topics",
-      "Minimum grade"
+      "Minimum grade",
+      "Public checklist: grade, overlap and signatures",
+      "Minor graduation-paperwork submission procedure",
+      "Checklist/program-page and checklist/instructions agreement review"
     ],
     "unresolved_requirements": [
-      "Officially linked checklist form was inaccessible; checklist-specific completion, signature or overlap constraints remain unverified."
+      "Checklist requires CS 135 without the EE 140/CS 128 alternative permitted by the current program page; source precedence/acceptance remains unresolved."
     ],
     "metadata_gaps": [
       "Course descriptions, most prerequisites and public teaching resources remain unverified.",

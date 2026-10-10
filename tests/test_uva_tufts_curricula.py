@@ -138,10 +138,12 @@ def test_real_structure_and_manual_partial_audit(pid):
     assert not {"curriculum_audit", "last_verified"} & result.keys()
     seed = json.loads((ROOT / "data/programs" / (pid + ".json")).read_text())
     validate_program(seed)
-    assert (
-        seed["curriculum_status"] == "partial"
-        and seed["curriculum_audit"]["unresolved_requirements"]
-    )
+    if pid == "tufts-application-ai-minor":
+        assert seed["curriculum_status"] == "complete"
+        assert not seed["curriculum_audit"]["unresolved_requirements"]
+    else:
+        assert seed["curriculum_status"] == "partial"
+        assert seed["curriculum_audit"]["unresolved_requirements"]
     with pytest.raises(ValueError):
         mod.parse("<main><h1>Unrelated curriculum</h1></main>")
 
