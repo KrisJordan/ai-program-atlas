@@ -413,3 +413,43 @@ def test_additional_probability_sequences_are_and_options_with_combined_units():
 def test_additional_policy_changes_require_review(old, new):
     with pytest.raises(ValueError):
         adapter("cmu_additional").parse(additional_fixture().replace(old, new))
+
+
+def metadata_fixture(units="12"):
+    return (
+        "<h1>School of Computer Science Courses</h1><h2>2030-2031 Catalog</h2>"
+        '<dl class="courseblock"><dt>07-280 Synthetic AI methods</dt><dd>Fall: '
+        + units
+        + ' units<br/>Synthetic descriptive paragraph.<br/>Prerequisites: (<a>15-122</a> or <a>15-121</a>) and <a>21-241</a><br/>Course Website: <a href="https://example.edu">Unvisited link</a></dd></dl>'
+        '<dl class="courseblock"><dt>99-999 Other course</dt><dd>Spring: 6 units<br/>Other description.</dd></dl>'
+    )
+
+
+def test_cmu_metadata_observes_facts_preserves_boolean_prerequisites_and_scope():
+    from atlas.adapters.cmu_bs.course_metadata import parse_metadata
+
+    p = parse_metadata(metadata_fixture(), pid="cmu-bs-ai", codes=("07-280",))
+    assert len(p["courses"]) == 1
+    c = p["courses"][0]
+    assert c["credits"] == 12 and c["name"] == "Synthetic AI methods"
+    assert c["prerequisites"] == "( 15-122 or 15-121 ) and 21-241"
+    assert c["description"] is None and c["public_site"] is None
+    assert "curriculum_audit" not in p and p["requirements"] == []
+    changed = parse_metadata(
+        metadata_fixture().replace("21-241", "21-240"), pid="cmu-bs-ai", codes=("07-280",)
+    )
+    assert "21-240" in changed["courses"][0]["prerequisites"]
+
+
+def test_cmu_metadata_unknown_units_and_missing_prerequisites_stay_null():
+    from atlas.adapters.cmu_bs.course_metadata import parse_metadata
+
+    html = metadata_fixture("9-12").replace("Prerequisites:", "Recommended preparation:")
+    c = parse_metadata(html, pid="cmu-bs-ai", codes=("07-280",))["courses"][0]
+    assert c["credits"] is None and c["prerequisites"] is None
+    with pytest.raises(ValueError, match="heading"):
+        parse_metadata(
+            html.replace("School of Computer Science Courses", "Other directory"),
+            pid="cmu-bs-ai",
+            codes=("07-280",),
+        )
