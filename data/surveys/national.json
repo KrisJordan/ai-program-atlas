@@ -1,16 +1,27 @@
 [
   {
     "institution_id": "massachusetts-institute-of-technology",
-    "status": "inaccessible",
-    "note": "Catalog URL inaccessible via web tool. Do not treat known-name lead as verified program in this survey.",
+    "status": "confirmed",
+    "note": "The official degree-chart directory links a readable canonical AI and Decision Making BS page (artifical spelling in its path). Identity confirmed; curriculum inventory pending.",
     "checked_at": "2026-10-10",
     "sources": [
       {
-        "url": "https://catalog.mit.edu/degree-charts/artificial-intelligence-decision-making-course-6-4/",
-        "title": "Artificial Intelligence and Decision Making degree-chart candidate"
+        "url": "https://catalog.mit.edu/degree-charts/artifical-intelligence-decision-making-course-6-4/",
+        "title": "Artificial Intelligence and Decision Making (Course 6-4)"
+      },
+      {
+        "url": "https://catalog.mit.edu/degree-charts/",
+        "title": "Degree Charts"
       }
     ],
-    "discoveries": []
+    "discoveries": [
+      {
+        "title": "Artificial Intelligence and Decision Making",
+        "kind": "degree",
+        "award_level": "BS",
+        "url": "https://catalog.mit.edu/degree-charts/artifical-intelligence-decision-making-course-6-4/"
+      }
+    ]
   },
   {
     "institution_id": "princeton-university",
@@ -449,16 +460,37 @@
   },
   {
     "institution_id": "tufts-university",
-    "status": "inaccessible",
-    "note": "Official search results list AI Development and Application of AI minors for Fall 2026. Opening careers page returned HTTP 429; engineering news page returned an internal fetch error. Discovery confirmation withheld pending successful source inspection.",
+    "status": "confirmed",
+    "note": "Official AI institute undergraduate directory and two computer science program pages confirm the Application of AI and AI Development minors, stated available beginning Fall 2026. Old career-article access failure is not an institution-wide access conclusion.",
     "checked_at": "2026-10-10",
     "sources": [
       {
-        "url": "https://careers.tufts.edu/blog/2026/06/29/tufts-university-expanding-ai-talent-for-employers/",
-        "title": "New AI minors candidate"
+        "url": "https://engineering.tufts.edu/cs/current-students/undergraduate/minor-application-ai",
+        "title": "Minor in the Application of AI"
+      },
+      {
+        "url": "https://ai.tufts.edu/ai-tufts/programs-and-courses",
+        "title": "Programs and Courses — Undergraduate Programs"
+      },
+      {
+        "url": "https://engineering.tufts.edu/cs/current-students/undergraduate/minor-ai-development",
+        "title": "Minor in AI Development"
       }
     ],
-    "discoveries": []
+    "discoveries": [
+      {
+        "title": "Application of AI",
+        "kind": "minor",
+        "award_level": "minor",
+        "url": "https://engineering.tufts.edu/cs/current-students/undergraduate/minor-application-ai"
+      },
+      {
+        "title": "AI Development",
+        "kind": "minor",
+        "award_level": "minor",
+        "url": "https://engineering.tufts.edu/cs/current-students/undergraduate/minor-ai-development"
+      }
+    ]
   },
   {
     "institution_id": "boston-university",
@@ -1132,16 +1164,23 @@
   },
   {
     "institution_id": "north-carolina-state-university",
-    "status": "inaccessible",
-    "note": "Candidate catalog page returned a tool access error. No program identity confirmed from this attempted access.",
+    "status": "confirmed",
+    "note": "Readable current 2026-2027 catalog confirms the Artificial Intelligence concentration within Computer Science BS. Correct canonical route replaces the failed candidate path; curriculum inventory pending.",
     "checked_at": "2026-10-10",
     "sources": [
       {
-        "url": "https://catalog.ncsu.edu/undergraduate/engineering/computer-science/computer-science-bs-artificial-intelligence-concentration/",
-        "title": "Artificial Intelligence concentration candidate"
+        "url": "https://catalog.ncsu.edu/undergraduate/engineering/computer-science/artificial-intelligence-concentration/",
+        "title": "Computer Science (BS): Artificial Intelligence Concentration"
       }
     ],
-    "discoveries": []
+    "discoveries": [
+      {
+        "title": "Artificial Intelligence",
+        "kind": "concentration",
+        "award_level": "concentration",
+        "url": "https://catalog.ncsu.edu/undergraduate/engineering/computer-science/artificial-intelligence-concentration/"
+      }
+    ]
   },
   {
     "institution_id": "rutgers-university-newark",

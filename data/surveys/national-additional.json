@@ -1,13 +1,13 @@
 [
   {
     "institution_id": "princeton-university",
-    "status": "inaccessible",
-    "note": "Official CS undergraduate URL returned HTTP 403 through web retrieval. No attempt to bypass access restrictions; program inventory unverified.",
+    "status": "inspected",
+    "note": "Official 2026-2027 undergraduate Computer Science bulletin was readable through the web reader; local fetch still returns 403. It covers AB/BSE/CS minor with AI/ML courses. Partial departmental inspection does not establish institution-wide absence of AI-titled credentials.",
     "checked_at": "2026-10-10",
     "sources": [
       {
-        "url": "https://www.cs.princeton.edu/ugrad",
-        "title": "Computer Science undergraduate page (blocked)"
+        "url": "https://ua.princeton.edu/fields-study/departmental-majors-degree-bachelor-arts/computer-science",
+        "title": "Computer Science — Undergraduate Announcement 2026-2027"
       }
     ],
     "discoveries": []
@@ -229,20 +229,37 @@
   },
   {
     "institution_id": "university-of-virginia",
-    "status": "inaccessible",
-    "note": "Engineering department source was not fetched because robots.txt preflight returned an access-blocked response. Official-program inspection remains blocked; no absence inference.",
+    "status": "confirmed",
+    "note": "Official engineering page links the readable CS advising site, which specifies separate BSCS and BACS AI concentrations effective Fall 2026. These are formal transcript concentrations, not the older informal focal path. Curricula pending.",
     "checked_at": "2026-10-10",
     "sources": [
       {
-        "url": "https://engineering.virginia.edu/department/computer-science/academics/undergraduate-programs",
-        "title": "Official program source — access not established"
+        "url": "https://uvacsadvising.org/ai-concentration.html",
+        "title": "Artificial Intelligence Concentration — BSCS AI Concentration"
       },
       {
-        "url": "https://engineering.virginia.edu/robots.txt",
-        "title": "Robots preflight returned an access block"
+        "url": "https://engineering.virginia.edu/department/computer-science/academics/undergraduate-programs/bs-computer-science",
+        "title": "BS in Computer Science — official advising-site link"
+      },
+      {
+        "url": "https://uvacsadvising.org/ai-concentration.html",
+        "title": "Artificial Intelligence Concentration — BACS AI Concentration"
       }
     ],
-    "discoveries": []
+    "discoveries": [
+      {
+        "title": "Artificial Intelligence",
+        "kind": "concentration",
+        "award_level": "concentration",
+        "url": "https://uvacsadvising.org/ai-concentration.html"
+      },
+      {
+        "title": "Artificial Intelligence",
+        "kind": "concentration",
+        "award_level": "concentration",
+        "url": "https://uvacsadvising.org/ai-concentration.html"
+      }
+    ]
   },
   {
     "institution_id": "university-of-north-carolina-chapel-hill",
@@ -375,19 +392,50 @@
   },
   {
     "institution_id": "villanova-university",
-    "status": "inaccessible",
-    "note": "Computing Sciences source was not fetched because robots.txt preflight returned an access-blocked response. No program or absence conclusion.",
+    "status": "confirmed",
+    "note": "Official VSB degree directory and linked production catalog confirm Analytics & Artificial Intelligence minor/co-major and Artificial Intelligence and Machine Learning minor. Co-major remains distinct from a standalone degree; Analytics title applies to Class of 2029 and beyond. Curricula pending.",
     "checked_at": "2026-10-10",
     "sources": [
       {
-        "url": "https://www1.villanova.edu/university/liberal-arts-sciences/programs/computing-sciences.html",
-        "title": "Official program source — access not established"
+        "url": "https://live-villanova-catalog.cleancatalog.io/analytics-artificial-intelligence/analytics-artificial-intelligence-minor",
+        "title": "Analytics & Artificial Intelligence Minor"
       },
       {
-        "url": "https://www1.villanova.edu/robots.txt",
-        "title": "Robots preflight returned an access block"
+        "url": "https://www.villanova.edu/university/business/academics/undergraduate-programs/degrees.html",
+        "title": "Majors and Minors"
+      },
+      {
+        "url": "https://live-villanova-catalog.cleancatalog.io/",
+        "title": "Undergraduate Catalog 2026-2027"
+      },
+      {
+        "url": "https://live-villanova-catalog.cleancatalog.io/analytics-artificial-intelligence/analytics-artificial-intelligence-comajor",
+        "title": "Analytics & Artificial Intelligence Co-Major"
+      },
+      {
+        "url": "https://live-villanova-catalog.cleancatalog.io/business/artificial-intelligence-and-machine-learning-minor",
+        "title": "Artificial Intelligence and Machine Learning Minor"
       }
     ],
-    "discoveries": []
+    "discoveries": [
+      {
+        "title": "Analytics & Artificial Intelligence",
+        "kind": "minor",
+        "award_level": "minor",
+        "url": "https://live-villanova-catalog.cleancatalog.io/analytics-artificial-intelligence/analytics-artificial-intelligence-minor"
+      },
+      {
+        "title": "Analytics & Artificial Intelligence",
+        "kind": "additional_major",
+        "award_level": "other",
+        "url": "https://live-villanova-catalog.cleancatalog.io/analytics-artificial-intelligence/analytics-artificial-intelligence-comajor"
+      },
+      {
+        "title": "Artificial Intelligence and Machine Learning",
+        "kind": "minor",
+        "award_level": "minor",
+        "url": "https://live-villanova-catalog.cleancatalog.io/business/artificial-intelligence-and-machine-learning-minor"
+      }
+    ]
   }
 ]

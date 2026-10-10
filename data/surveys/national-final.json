@@ -2,7 +2,7 @@
   {
     "institution_id": "brandeis-university",
     "status": "inaccessible",
-    "note": "Attempts to read 2026\u201327 undergraduate requirements, CS undergraduate page and general undergraduate academics page all returned web-tool access errors. No absence conclusion.",
+    "note": "Attempts to read 2026–27 undergraduate requirements, CS undergraduate page and general undergraduate academics page all returned web-tool access errors. No absence conclusion.",
     "checked_at": "2026-10-10",
     "sources": [
       {
@@ -62,12 +62,12 @@
   {
     "institution_id": "santa-clara-university",
     "status": "confirmed",
-    "note": "2026\u201327 engineering bulletin explicitly lists Responsible Artificial Intelligence minor and undergraduate eligibility. Curriculum extraction and full institutional inventory remain pending.",
+    "note": "2026–27 engineering bulletin explicitly lists Responsible Artificial Intelligence minor and undergraduate eligibility. Curriculum extraction and full institutional inventory remain pending.",
     "checked_at": "2026-10-10",
     "sources": [
       {
         "url": "https://www.scu.edu/bulletin/undergraduate/chapter-5-school-of-engineering/computer-science-and-engineering.html",
-        "title": "Undergraduate Bulletin 2026\u201327: Computer Science and Engineering"
+        "title": "Undergraduate Bulletin 2026–27: Computer Science and Engineering"
       }
     ],
     "discoveries": [
@@ -106,7 +106,7 @@
   {
     "institution_id": "texas-am-university",
     "status": "confirmed",
-    "note": "2026\u201327 official catalog confirms Artificial Intelligence in Business minor; Mays program page also inspected. Catalog and department differ in some course labels and eligibility wording; catalog retained as primary. Full curriculum extraction pending.",
+    "note": "2026–27 official catalog confirms Artificial Intelligence in Business minor; Mays program page also inspected. Catalog and department differ in some course labels and eligibility wording; catalog retained as primary. Full curriculum extraction pending.",
     "checked_at": "2026-10-10",
     "sources": [
       {
@@ -242,21 +242,17 @@
   },
   {
     "institution_id": "university-of-pittsburgh",
-    "status": "inaccessible",
-    "note": "SCI undergraduate directory candidates and school homepage all returned web-tool access errors. No program identity or absence conclusion inferred.",
+    "status": "inspected",
+    "note": "SCI undergraduate overview and university degree finder are readable. The inspected directory page is paginated and not a full credential inventory; no absence conclusion.",
     "checked_at": "2026-10-10",
     "sources": [
       {
         "url": "https://www.sci.pitt.edu/academics/undergraduate",
-        "title": "SCI undergraduate directory attempted"
+        "title": "Undergraduate"
       },
       {
-        "url": "https://www.sci.pitt.edu/academics/undergraduate-programs",
-        "title": "SCI undergraduate programs attempted"
-      },
-      {
-        "url": "https://www.sci.pitt.edu/",
-        "title": "SCI homepage attempted"
+        "url": "https://www.academics.pitt.edu/degree-finder-view",
+        "title": "Degree Finder"
       }
     ],
     "discoveries": []
