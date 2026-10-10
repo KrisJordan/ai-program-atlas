@@ -15,8 +15,8 @@ The 2027 edition changes categories using the updated Carnegie classifications, 
 | Category | Stored institutions | Enumeration status | Cutoff |
 | --- | ---: | --- | --- |
 | National Universities | 108 | Enumerated from a complete secondary table; authoritative confirmation pending | Nine institutions tied at 100 |
-| National Liberal Arts Colleges | 66 | Incomplete verified subset | Full rank-100 tie group unknown |
-| Combined inventory | 174 | Incomplete | Two separate categories |
+| National Liberal Arts Colleges | 80 | Incomplete verified subset | Full rank-100 tie group unknown |
+| Combined inventory | 188 | Incomplete | Two separate categories |
 
 The `complete` field is **false**: authoritative enumeration is pending for National Universities, and the liberal arts cohort is incomplete. The additive `category_coverage` field records the different enumeration states. National Universities has `enumeration_complete: true` and `verification_status: enumerated_secondary`, while `complete` remains false. Individual ranks distinguish `primary_verified` from `enumerated_secondary`. None of these numbers measures completion of the AI-program search.
 
@@ -48,3 +48,14 @@ These lower-ranked facts do **not** establish complete intervening rank groups o
 Names are retained as published, with stable lowercase-hyphen IDs. Purdue and Penn State use the coordinated IDs `purdue-university` and `pennsylvania-state-university`; their ranked campus labels are preserved as aliases. Wheaton is explicitly identified as Illinois. No calendar or institutional website was inferred from a name or ranking.
 
 Validation checks: JSON parses; 174 unique IDs; 108 National Universities and 66 National Liberal Arts Colleges; every rank is an integer between 1 and 100; every row is 2027; every source URL occurs in the source registry; 9 National Universities at rank 100; National University rank progression is internally complete. Repository-wide tests/build are the coordinator's integration check because this task owns only the cohort JSON and this note.
+
+
+## Additional primary verification (2026-10-10)
+
+Fourteen additional LAC institutions were independently read in official 2027 ranking reports and added, each with the exact source URL, publication date when available, and ranking locator in the JSON: Muhlenberg and Berea (62); College of Saint Benedict (68); Saint John’s University, Minnesota, and Kalamazoo (74); Hope and Saint Mary’s College, Indiana (78); Morehouse (83); Allegheny and Randolph-Macon (85); Augustana College, Illinois, Juniata and Southwestern (91); Lycoming (100). Hope, CSB/SJU and Augustana pages did not establish a publication date; those values remain null. Kalamazoo’s page was published September 22 and updated September 25. Randolph-Macon and Augustana explicitly report ties. No whole tie group is certified by these isolated reports.
+
+Fifteen existing ranks were upgraded to primary verification: eight UC campuses using the official table’s **National** column (Santa Cruz at 109 was excluded), three Rutgers campuses using the overall National Universities paragraph, Trinity University and Occidental using Trinity’s explicit three-way 38 tie statement, Scripps using its own September 29 report, and Spelman using its overall National Liberal Arts Colleges 34 listing. Secondary sources remain registered as corroboration. These upgrades do not certify complete authoritative enumeration.
+
+VMI’s supplied official 2027 candidate URL (`https://www.vmi.edu/vmi-maintains-strong-rankings-in-u-s-news-best-colleges-list-2/`) returned HTTP 403 and was not used to establish a new row. Richmond’s supplied official article (`https://news.richmond.edu/releases/article/-/28647/university-of-richmond-named-a-top-25-national-liberal-arts-college-for-10th-consecutive-year-by-u.s.-news--world-report.html`) produced an internal fetch error, so its existing verification was not upgraded. Neither restriction was bypassed.
+
+Updated inventory checks: 188 unique institution IDs; 108 National Universities and 80 National Liberal Arts Colleges. The latter is still an incomplete subset; both category complete flags remain false, the LAC enumeration_complete flag remains false, and its cutoff_tie_count remains null.
