@@ -17,7 +17,7 @@
   "catalog_year": "2026-2027",
   "verification_status": "confirmed",
   "last_verified": "2026-10-10",
-  "curriculum_status": "partial",
+  "curriculum_status": "complete",
   "links": [
     {
       "kind": "overview",
@@ -32,12 +32,12 @@
     {
       "kind": "catalog",
       "url": "https://denison.edu/academics/machine-learning-and-artificial-intelligence/courses",
-      "label": "2026\u20132027 course descriptions"
+      "label": "2026–2027 course descriptions"
     },
     {
       "kind": "catalog",
       "url": "https://catalog.denison.edu/catalog/courses-of-study/machine-learning/",
-      "label": "2026\u20132027 official catalog"
+      "label": "2026–2027 official catalog"
     }
   ],
   "sources": [
@@ -88,13 +88,13 @@
       "fetched_at": "2026-10-10",
       "source_date": null,
       "catalog_year": "2026-2027",
-      "locator": "2026\u20132027 Requirements and Courses; full minor title in mission statement",
+      "locator": "2026–2027 Requirements and Courses; full minor title in mission statement",
       "confidence": "high"
     },
     {
       "id": "denison-catalog-math-145",
       "url": "https://catalog.denison.edu/search/?P=MATH+145",
-      "title": "MATH 145 \u2014 Multivariable Calculus",
+      "title": "MATH 145 — Multivariable Calculus",
       "fetched_at": "2026-10-10",
       "source_date": null,
       "catalog_year": "2026-2027",
@@ -104,7 +104,7 @@
     {
       "id": "denison-catalog-math-213",
       "url": "https://catalog.denison.edu/search/?P=MATH+213",
-      "title": "MATH 213 \u2014 Linear Algebra and Differential Equations",
+      "title": "MATH 213 — Linear Algebra and Differential Equations",
       "fetched_at": "2026-10-10",
       "source_date": null,
       "catalog_year": "2026-2027",
@@ -114,11 +114,51 @@
     {
       "id": "denison-catalog-cs-145",
       "url": "https://catalog.denison.edu/search/?P=CS+145",
-      "title": "CS 145 \u2014 Introduction to Algorithm Design",
+      "title": "CS 145 — Introduction to Algorithm Design",
       "fetched_at": "2026-10-10",
       "source_date": null,
       "catalog_year": "2026-2027",
       "locator": "CS 145 course heading and prerequisite statement",
+      "confidence": "high"
+    },
+    {
+      "id": "denison-minors-policy",
+      "url": "https://catalog.denison.edu/catalog/academic-program/academic-minors-concentrations-electives/",
+      "title": "Academic Minors and Electives",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Academic Minor; Electives",
+      "confidence": "high"
+    },
+    {
+      "id": "denison-graduation-policy",
+      "url": "https://catalog.denison.edu/catalog/academic-program/degrees-offered-graduation-requirements/",
+      "title": "Degrees Offered and Graduation Requirements",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Minor residence requirement; calculation of minor GPA",
+      "confidence": "high"
+    },
+    {
+      "id": "denison-grading-policy",
+      "url": "https://catalog.denison.edu/catalog/academic-program/grading-system-evaluation/",
+      "title": "Grading System and Evaluation",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Satisfactory (S/Grade) Evaluation; Repeating Courses",
+      "confidence": "high"
+    },
+    {
+      "id": "denison-transfer-policy",
+      "url": "https://catalog.denison.edu/catalog/academic-program/academic-policies/",
+      "title": "Academic Policies",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Credit Earned by Advanced Placement Testing; Transfer Credit I.1-15 and II.D.2; Statement of Petition Policy",
       "confidence": "high"
     }
   ],
@@ -184,7 +224,7 @@
       "code": "ML/MATH 221",
       "name": "Applied Probability",
       "description": "Probability through empirical investigation and programming.",
-      "prerequisites": "MATH 145 and CS 145, or a course in CS 109\u2013CS 114; consult source for exact grouping.",
+      "prerequisites": "MATH 145 and CS 145, or a course in CS 109–CS 114; consult source for exact grouping.",
       "credits": 4,
       "credit_unit": "semester_hours",
       "category": "mathematics",
@@ -273,13 +313,112 @@
         "denison-ml-310-math-428",
         "denison-ml-400"
       ]
+    },
+    {
+      "id": "denison-mlai-eligibility",
+      "parent_id": null,
+      "title": "Eligibility, overlap and preparation",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "denison-mlai-catalog",
+      "source_text": null,
+      "summary": "Any Denison student may pursue the minor. Cognates can overlap with computer science, data analytics and mathematics majors. MATH 145 requires MATH 135 (and potentially preparatory MATH 130), unless placement permits direct entry. CS 145 requires CS 105 or placement. No additional elective choice is listed: all eight named courses are required.",
+      "course_ids": []
+    },
+    {
+      "id": "denison-mlai-residence",
+      "parent_id": null,
+      "title": "Minor residence requirement",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "denison-graduation-policy",
+      "source_text": null,
+      "summary": "At least half of the credits applied to the minor must be completed in residence at Denison. The cited graduation policy defines residence through courses scheduled by the registrar, taught on campus by Denison faculty.",
+      "course_ids": []
+    },
+    {
+      "id": "denison-mlai-grading",
+      "parent_id": null,
+      "title": "Grading and repeated courses",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "denison-grading-policy",
+      "source_text": null,
+      "summary": "Students cannot elect S/Grade evaluation for minor courses or required cognates; courses universally offered with satisfactory grading are treated separately. Repeated courses count once for credit, while both grades affect GPA. Repeating a previously passed course requires departmental chair and instructor permission. F and U grades earn no credit.",
+      "course_ids": []
+    },
+    {
+      "id": "denison-mlai-gpa",
+      "parent_id": null,
+      "title": "Minor GPA calculation",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "denison-graduation-policy",
+      "source_text": null,
+      "summary": "The minor GPA normally includes every course eligible for the minor, including extra courses beyond its minimum. The cited graduation paragraph explicitly gives a 2.0 threshold for the major; it does not separately specify a minor threshold, so none is inferred.",
+      "course_ids": []
+    },
+    {
+      "id": "denison-mlai-external-credit",
+      "parent_id": null,
+      "title": "External credit and exceptions",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "denison-transfer-policy",
+      "source_text": null,
+      "summary": "The program director or department chair determines transfer credit and course equivalence for the minor. Transfer coursework must meet institutional standards, including accreditation, disciplinary fit and at least a C grade; awarded credit cannot exceed the originating credit. Post-matriculation coursework requires advance approval. Off-campus minor credit likewise requires advance program approval. AP, IB and A-level application to a minor is subject to departmental review. The Academic Standing Board considers policy-exception petitions submitted early enough to address a denial. Consult the cited transfer rules for institution-wide credit caps and documentation.",
+      "course_ids": []
     }
   ],
   "notes": [
-    "All eight required courses and individual credits are documented. Institutional minor policies and several complex prerequisite expressions remain unextracted, so curriculum status remains partial.",
-    "Semester credit-hour normalization is supported by the 2026\u20132027 Academic Credit Policy, which defines course credits over the regular semester.",
+    "All eight required courses, cross-list equivalences, placement/cognate conditions, eligibility, overlap, residence, grading and external-credit rules are mapped for the minor. Host bachelor degree-wide requirements are outside this credential scope.",
+    "Semester credit-hour normalization is supported by the 2026–2027 Academic Credit Policy, which defines course credits over the regular semester.",
     "Course codes preserve cross-listings. Course categories are editorial classifications.",
     "First-offered date is unknown. No launch date inferred from the approval announcement.",
-    "The official department requirements page uses the full title Machine Learning and Artificial Intelligence; the catalog heading abbreviates it as Machine Learning & AI (ML) and spells it out in the mission statement."
-  ]
+    "The official department requirements page uses the full title Machine Learning and Artificial Intelligence; the catalog heading abbreviates it as Machine Learning & AI (ML) and spells it out in the mission statement.",
+    "The individual course prerequisite expressions for ML 240, ML 310 and ML 400 remain null because the catalog combines and/or without explicit grouping. ML 221 wording is retained with a grouping caveat. This is a course metadata gap; the minor requires all eight listed courses and separately maps its explicit preparatory conditions."
+  ],
+  "curriculum_audit": {
+    "scope": "minor",
+    "reviewed_at": "2026-10-10",
+    "source_ids": [
+      "denison-mlai-catalog",
+      "denison-mlai-requirements",
+      "denison-academic-credit-policy",
+      "denison-minors-policy",
+      "denison-graduation-policy",
+      "denison-grading-policy",
+      "denison-transfer-policy"
+    ],
+    "sections": [
+      "Eight required courses and cross-list equivalences",
+      "Eligibility for any Denison student; overlap with cognate majors",
+      "MATH 145 and CS 145 placement/prerequisite preparation",
+      "Academic Minor and Electives policy",
+      "Minor residence and GPA calculation",
+      "S/Grade restrictions and repeated-course rules",
+      "External credit approval and policy exceptions"
+    ],
+    "unresolved_requirements": [],
+    "metadata_gaps": [
+      "Exact grouped prerequisite logic for ML 221, ML 240, ML 310 and ML 400 is unverified; catalog conjunctions are ambiguous.",
+      "First-offered date remains unknown.",
+      "Public course websites and sample syllabi are not yet verified."
+    ]
+  }
 }
