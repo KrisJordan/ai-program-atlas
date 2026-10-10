@@ -225,3 +225,49 @@ def test_redirect_cannot_fetch_loopback_service(tmp_path):
         with pytest.raises(FetchError, match="public|local|private|Unsafe"):
             fetcher.fetch("https://catalog.example.edu/start")
     assert all(request.url.host != "127.0.0.1" for request in requests)
+
+
+def test_reviewed_discovery_classification_updates_and_preserves_history(conn):
+    record = program()
+    db.ingest_program(conn, record)
+    db.set_override(
+        conn,
+        record["id"],
+        "overview",
+        "Reviewed correction",
+        "Official evidence",
+        "https://catalog.example.edu/correction",
+    )
+    survey = {
+        "institution_id": "review-university",
+        "status": "confirmed",
+        "checked_at": "2026-10-10",
+        "note": "Initial directory observation",
+        "sources": [{"url": "https://catalog.example.edu/program"}],
+        "discoveries": [
+            {
+                "title": "Artificial Intelligence",
+                "kind": "degree",
+                "award_level": "BS",
+                "url": "https://catalog.example.edu/program",
+            }
+        ],
+    }
+    db.ingest_survey(conn, [survey])
+    corrected = deepcopy(survey)
+    corrected["note"] = "Catalog review verifies an additional major, not a standalone award"
+    corrected["discoveries"][0].update(kind="additional_major", award_level="other")
+    db.ingest_survey(conn, [corrected])
+    db.ingest_survey(conn, [corrected])
+    discoveries = [dict(r) for r in conn.execute("SELECT kind,award_level FROM discoveries")]
+    assert discoveries == [{"kind": "additional_major", "award_level": "other"}]
+    assert conn.execute("SELECT count(*) FROM coverage_events").fetchone()[0] == 2
+    assert db.export_data(conn)["programs"][0]["overview"] == "Reviewed correction"
+    # An identity-only later observation cannot erase reviewed classifications.
+    partial = deepcopy(corrected)
+    partial["discoveries"][0].pop("kind")
+    partial["discoveries"][0].pop("award_level")
+    db.ingest_survey(conn, [partial])
+    assert [
+        dict(r) for r in conn.execute("SELECT kind,award_level FROM discoveries")
+    ] == discoveries

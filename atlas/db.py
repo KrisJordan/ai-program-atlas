@@ -411,7 +411,10 @@ def ingest_survey(conn, entries):
             )
             for d in entry.get("discoveries", []):
                 conn.execute(
-                    "INSERT OR IGNORE INTO discoveries(institution_id,title,kind,award_level,url) VALUES (?,?,?,?,?)",
+                    """INSERT INTO discoveries(institution_id,title,kind,award_level,url) VALUES (?,?,?,?,?)
+                    ON CONFLICT(institution_id,title,url) DO UPDATE SET
+                    kind=COALESCE(excluded.kind,discoveries.kind),
+                    award_level=COALESCE(excluded.award_level,discoveries.award_level)""",
                     (iid, d["title"], d.get("kind"), d.get("award_level"), d["url"]),
                 )
 
