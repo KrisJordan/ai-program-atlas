@@ -5,4 +5,4 @@ PROGRAM_ID = 'northeastern-university-environmental-engineering-and-artificial-i
 SOURCES = ('https://catalog.northeastern.edu/undergraduate/engineering/civil-environmental/environmental-engineering-artificial-intelligence-bsenve/',)
 
 def parse(html: str) -> dict:
-    return parse_identity(html, program_id=PROGRAM_ID, title='Environmental Engineering and Artificial Intelligence, BSEnvE (Boston)', award='other', kind='degree', aliases=('Environmental Engineering and Artificial Intelligence, BSEnvE',), award_terms=('BSEnvE',))
+    return parse_identity(html, program_id=PROGRAM_ID, title='Environmental Engineering and Artificial Intelligence, BSEnvE (Boston)', award='other', kind='degree', aliases=('Environmental Engineering and Artificial Intelligence, BSEnvE',), award_terms=('BSEnvE',), identity_scopes=('courseleaf-title',))

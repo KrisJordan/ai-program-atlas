@@ -5,4 +5,4 @@ PROGRAM_ID = 'stevens-institute-of-technology-artificial-intelligence-bs-degree'
 SOURCES = ('https://www.stevens.edu/program/bachelors-degree-in-artificial-intelligence',)
 
 def parse(html: str) -> dict:
-    return parse_identity(html, program_id=PROGRAM_ID, title='Artificial Intelligence', award='BS', kind='degree', aliases=(), award_terms=())
+    return parse_identity(html, program_id=PROGRAM_ID, title='Artificial Intelligence', award='BS', kind='degree', aliases=(), award_terms=(), identity_scopes=('stevens-program-hero',))

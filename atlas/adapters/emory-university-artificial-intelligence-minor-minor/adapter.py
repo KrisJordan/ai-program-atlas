@@ -5,4 +5,4 @@ PROGRAM_ID = 'emory-university-artificial-intelligence-minor-minor'
 SOURCES = ('https://computerscience.emory.edu/undergraduate/degrees-and-requirements/minors.html',)
 
 def parse(html: str) -> dict:
-    return parse_identity(html, program_id=PROGRAM_ID, title='Artificial Intelligence', award='minor', kind='minor', aliases=(), award_terms=())
+    return parse_identity(html, program_id=PROGRAM_ID, title='Artificial Intelligence', award='minor', kind='minor', aliases=('AI Minor',), award_terms=())

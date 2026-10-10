@@ -7,3 +7,9 @@ Directory/identity verified; curriculum pending. No courses, requirements or out
 Official undergraduate program source inspected; qualifying title confirmed. Institution-wide inventory and curriculum extraction remain incomplete.
 
 The adapter validates a title in visible content headings or links and the award/kind in its local card or heading section. It returns only observed identity fields and never replays seed metadata, curriculum, or dates. A failure means review is required; it does not mean the program is absent. Tests use synthetic HTML to verify rejection behavior; live refresh is not claimed.
+
+## Cached layout verification — 2026-10-10
+
+The program-specific hero appears before main. The reviewed .hero-banner--program-detail / .hero-banner-content block includes the Artificial Intelligence H1 and the Minor eyebrow. Both facts must be present in that block.
+
+Validation used previously fetched, ignored local HTML. This adapter refreshes identity only; full curriculum extraction remains pending. No reviewed seed content or verification timestamp is replayed by the parser.
