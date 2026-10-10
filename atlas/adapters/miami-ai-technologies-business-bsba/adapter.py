@@ -1,0 +1,7 @@
+"""Observe this concrete Miami degree curriculum without certifying completeness."""
+from atlas.adapters.miami_degree_curricula import observe
+PROGRAM_ID='miami-ai-technologies-business-bsba'
+SOURCES=('https://bulletin.miami.edu/undergraduate-academic-programs/business/business-technology/ai-tech-for-business-bsba/',)
+SOURCE_ID='miami-ai-technologies-business-bsba-catalog'
+def parse(html):
+ return observe(html,PROGRAM_ID,'Artificial Intelligence Technologies for Business','other','B.S.B.A. in Artificial Intelligence Technologies for Business',SOURCE_ID,SOURCES[0])

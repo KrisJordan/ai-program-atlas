@@ -1,15 +1,13 @@
-# Data Science and Artificial Intelligence
+# B.A. Data Science and Artificial Intelligence
 
-Official identity source: https://bulletin.miami.edu/undergraduate-academic-programs/arts-sciences/computer-science/data-science-and-ai-ba/
+Reviewed 2026-10-10. Full program curriculum table mapped with course alternatives, choice pools, uncoded degree requirements and all local table footnotes. The program remains partial because linked university and college degree-wide policies have not been exhaustively audited. Course amounts remain in original published units (normalization unknown); ranges are retained in notes. A sample plan is not an authoritative substitute for requirements, and additional-major rules stay separate.
 
-Directory/identity verified; curriculum pending. No courses, requirements or outcomes have yet been extracted.
+Degree curriculum is taken from the Curriculum tab, not the sample semester plan or the Additional Major tab. Sample-plan totals and courses may differ from the requirements table.
 
-Official catalog confirms BA, BBA and minor named in discoveries. BBA award stored as other under contract enum; preserve BBA in full program record. Catalog navigation additionally lists BSBA variant, which needs its own page review. More offerings may exist.
+Published ranges remain in notes; they are not converted into invented scalar course credits. Credit unit normalization is unresolved.
 
-The adapter validates a title in visible content headings or links and the award/kind in its local card or heading section. It returns only observed identity fields and never replays seed metadata, curriculum, or dates. A failure means review is required; it does not mean the program is absent. Tests use synthetic HTML to verify rejection behavior; live refresh is not claimed.
+The elective pools are represented as choices by published credit amount, not as all required courses. EPS 351 / PSY 292 is retained as an alternative where the BA table presents it.
 
-## Cached layout verification — 2026-10-10
+A non-STEM minor/second major applies to the BA only; BS quantitative coursework and degree total are separately sourced.
 
-The Courseleaf program H1 is inside #content-container but outside #content. The reviewed title scope includes this H1. Punctuated degree abbreviations such as B.A. and B.B.A. normalize to BA and BBA; the award must be explicitly visible.
-
-Validation used previously fetched, ignored local HTML. This adapter refreshes identity only; full curriculum extraction remains pending. No reviewed seed content or verification timestamp is replayed by the parser.
+The source-specific adapter observes the Curriculum table and validates the full award/title heading. It never emits a review date or audit. Observed alternative rows become one-course choices; unrecognized or missing headings fail. Curated policy notes and editorial course themes remain independent of scraping.

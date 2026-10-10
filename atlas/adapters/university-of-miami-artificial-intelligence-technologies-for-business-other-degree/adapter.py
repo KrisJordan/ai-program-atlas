@@ -1,8 +1,7 @@
-"""Identity-only observation; full curriculum extraction is pending."""
-from atlas.adapters.discovery_common import parse_identity
-
-PROGRAM_ID = 'university-of-miami-artificial-intelligence-technologies-for-business-other-degree'
-SOURCES = ('https://bulletin.miami.edu/undergraduate-academic-programs/business/business-technology/ai-tech-for-business-bba/',)
-
-def parse(html: str) -> dict:
-    return parse_identity(html, program_id=PROGRAM_ID, title='Artificial Intelligence Technologies for Business', award='other', kind='degree', aliases=(), award_terms=('Bachelor of Business Administration', 'BBA'), identity_scopes=('miami-title',))
+"""Observe this concrete Miami degree curriculum without certifying completeness."""
+from atlas.adapters.miami_degree_curricula import observe
+PROGRAM_ID='university-of-miami-artificial-intelligence-technologies-for-business-other-degree'
+SOURCES=('https://bulletin.miami.edu/undergraduate-academic-programs/business/business-technology/ai-tech-for-business-bba/',)
+SOURCE_ID='university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog'
+def parse(html):
+ return observe(html,PROGRAM_ID,'Artificial Intelligence Technologies for Business','other','B.B.A. in Artificial Intelligence Technologies for Business',SOURCE_ID,SOURCES[0])
