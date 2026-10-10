@@ -140,3 +140,20 @@ def parse(html):
         "courses": courses,
         "requirements": requirements,
     }
+
+
+def parse_award(html):
+    from atlas.adapters.final_discovery_common import parse_claims
+
+    return parse_claims(
+        html,
+        program_id=PROGRAM_ID,
+        title="Business with AI",
+        award="BS",
+        kind="degree",
+        heading="What is Business with AI",
+        claims=["Bachelor of Science in Business with AI"],
+    )
+
+
+SOURCE_PARSERS = {SOURCES[0]: parse, SOURCES[1]: parse_award}

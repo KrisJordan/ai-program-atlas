@@ -93,6 +93,12 @@ def test_scoped_content_title_header_is_preserved_but_outer_header_is_rejected()
 def test_njit_requires_explicit_award_in_content():
     adapter = importlib.import_module('atlas.adapters.new-jersey-institute-of-technology-business-with-ai-bs-degree.adapter')
     heading = '<main><h3>What is Business with AI?</h3>'
-    assert adapter.parse(heading + '<p>Bachelor of Science in Business with AI</p></main>')['award_level'] == 'BS'
+    assert adapter.parse_award(heading + '<p>Bachelor of Science in Business with AI</p></main>')['award_level'] == 'BS'
     with pytest.raises(ValueError):
-        adapter.parse(heading + '<a href="business-with-ai-bs/">Business with AI</a></main>')
+        adapter.parse_award(heading + '<a href="business-with-ai-bs/">Business with AI</a></main>')
+    # The catalog observes the named plan but does not infer the award from its URL.
+    plan = '<h1>Business with AI</h1><p>(120 credit minimum)</p><table class="sc_plangrid"><tr class="plangridyear"><th>First Year</th></tr><tr class="plangridterm"><th>1st Semester</th></tr><tr><td class="codecol"><a class="code" href="/search/?P=DS%20110">DS 110</a></td><td class="titlecol">Example AI Foundations</td><td class="hourscol">3</td></tr></table>'
+    observed = adapter.parse(plan)
+    assert observed['courses'][0]['code'] == 'DS 110'
+    assert 'award_level' not in observed
+    assert adapter.SOURCE_PARSERS[adapter.SOURCES[1]] is adapter.parse_award
