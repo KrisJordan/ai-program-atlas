@@ -14,3 +14,8 @@ def parse(html):
  if not m or m[1] not in numbers:raise ValueError('Co-op block requirement missing or changed')
  r=requirement(PROGRAM_ID,'coop','Cooperative education blocks',SOURCE_ID,[],kind='note',summary='Complete '+str(numbers[m[1]])+' cooperative education blocks.')
  return dict(id=PROGRAM_ID,title='Artificial Intelligence',award_level='BS',program_kind='degree',curriculum_status='partial',requirements=[r])
+
+from atlas.adapters.rit_policies import register
+SOURCES = list(SOURCES)
+SOURCE_PARSERS = globals().get("SOURCE_PARSERS", {})
+register(PROGRAM_ID, SOURCES, SOURCE_PARSERS, minor=False)

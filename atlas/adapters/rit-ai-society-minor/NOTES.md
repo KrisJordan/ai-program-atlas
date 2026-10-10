@@ -20,3 +20,8 @@ Course theme categories are editorial classifications; source-stated outcomes ar
 ## Adapter and metadata
 
 The adapter extracts observed headings, course entries, credit amounts and requirement groups. It returns partial candidates only, without review timestamps or completeness audits. Curated policy, outcome and metadata review is separate; changed source candidates require review. Fixtures are reduced structural examples, not full raw pages. Missing course fields, first-offered date and syllabus links remain unknown.
+
+
+## Public university policy review — 2026-10-10
+
+Robots-permitted public RIT policies d011, d020, d050, d120 returned HTTP 200. Source-specific parsers validate exact policy/section identities and hash actual section text; changed text queues review without emitting a curated audit. Undergraduate rules only were applied. The local minor inventory is now complete: nine-hour RIT residency excluding X grades, unique credit across degree/minors, minor GPA, matriculation/recording, unit-authorized transfer/substitution, C-minimum/prior approval for external credit, elected Pass/No Pass exclusion, repeat rules and catalog applicability are represented. This does not certify the host degree. The “in most cases” upper-division design guidance is not an unconditional added requirement. Catalog robot/JavaScript access limitations and missing course metadata remain visible; public policy access does not imply automated catalog access.

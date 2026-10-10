@@ -5,3 +5,8 @@ SOURCES = ('https://academiccatalog.rit.edu/programs/ai-society-minor/',)
 SOURCE_ID = 'rit-ai-society-minor-curriculum'
 def parse(html: str) -> dict:
     return observe(html, PROGRAM_ID, 'AI in Society', SOURCE_ID, SOURCES[0], 'rit')
+
+from atlas.adapters.rit_policies import register
+SOURCES = list(SOURCES)
+SOURCE_PARSERS = globals().get("SOURCE_PARSERS", {})
+register(PROGRAM_ID, SOURCES, SOURCE_PARSERS, minor=True)

@@ -29,8 +29,8 @@ def test_extracts_source_courses_without_certifying(pid,key,count):
 @pytest.mark.parametrize('pid,key,count',CASES)
 def test_reviewed_data_valid_and_remaining_gaps_explicit(pid,key,count):
  d=json.loads((ROOT/'data/programs'/(pid+'.json')).read_text());validate_program(d)
- assert d['curriculum_status']=='partial'
- assert d['curriculum_audit']['unresolved_requirements']
+ assert d['curriculum_status']==('complete' if key.startswith('rit') else 'partial')
+ assert bool(d['curriculum_audit']['unresolved_requirements']) == (not key.startswith('rit'))
  assert len(d['courses']) == (38 if key == 'nd' else count)
 
 

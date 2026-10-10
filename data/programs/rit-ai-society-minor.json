@@ -17,7 +17,7 @@
   "catalog_year": "2026-2027",
   "verification_status": "confirmed",
   "last_verified": "2026-10-10",
-  "curriculum_status": "partial",
+  "curriculum_status": "complete",
   "links": [
     {
       "kind": "catalog",
@@ -34,6 +34,46 @@
       "source_date": null,
       "catalog_year": "2026-2027",
       "locator": "Program overview, course requirement table, elective lists and program policy notes; reviewed in ordinary browser UI",
+      "confidence": "high"
+    },
+    {
+      "id": "rit-policy-d011",
+      "url": "https://www.rit.edu/policies/d011",
+      "title": "D01.1 Minors Policy",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "I. Definition; II. Institutional parameters; III. Development / approval / administration processes. Undergraduate provisions only; graduate rules are not applied.",
+      "confidence": "high"
+    },
+    {
+      "id": "rit-policy-d020",
+      "url": "https://www.rit.edu/policies/d020",
+      "title": "D02.0 Admission",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "I. Undergraduate. Undergraduate provisions only; graduate rules are not applied.",
+      "confidence": "high"
+    },
+    {
+      "id": "rit-policy-d050",
+      "url": "https://www.rit.edu/policies/d050",
+      "title": "D05.0 Grades",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "II. Definitions; III. Pass / No Pass Option for Undergraduate Courses; VII. Repeating Courses to Raise Low Grades; VIII. Grade Point Average. Undergraduate provisions only; graduate rules are not applied.",
+      "confidence": "high"
+    },
+    {
+      "id": "rit-policy-d120",
+      "url": "https://www.rit.edu/policies/d120",
+      "title": "D12.0 Graduation Requirements",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "II. Associate and Baccalaureate Degrees; III. Catalog Requirements Under Which an Undergraduate Student Graduates. Undergraduate provisions only; graduate rules are not applied.",
       "confidence": "high"
     }
   ],
@@ -327,7 +367,7 @@
       "credits": null,
       "credit_unit": "unknown",
       "category": "other",
-      "source_id": "rit-ai-society-minor-curriculum",
+      "source_id": "rit-policy-d011",
       "source_text": null,
       "summary": "A minimum minor GPA of 2.0 is required for transcript posting.",
       "course_ids": []
@@ -341,9 +381,9 @@
       "credits": null,
       "credit_unit": "unknown",
       "category": "other",
-      "source_id": "rit-ai-society-minor-curriculum",
+      "source_id": "rit-policy-d011",
       "source_text": null,
-      "summary": "At least nine semester credit hours must be in specific courses not required by the student’s degree program.",
+      "summary": "At least nine semester credit hours must be specific courses not required by the degree program. Free electives, immersion/general-education electives, and courses within options/tracks are not considered required courses for this rule.",
       "course_ids": []
     },
     {
@@ -359,26 +399,142 @@
       "source_text": null,
       "summary": "The curriculum table specifies 15 total hours. Individual elective credits require separate course-page review.",
       "course_ids": []
+    },
+    {
+      "id": "rit-ai-society-minor-policy-transfer",
+      "parent_id": null,
+      "title": "Undergraduate transfer approval",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-policy-d020",
+      "source_text": null,
+      "summary": "Transfer courses require institutional approval and a C or better. Previously evaluated credit applies only where it fits the chosen program. Enrolled degree students need prior written approval from the home dean/director or designee for outside coursework; applicable residency limits still apply.",
+      "course_ids": []
+    },
+    {
+      "id": "rit-ai-society-minor-policy-grading",
+      "parent_id": null,
+      "title": "Minor/major grading and noncredit limits",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-policy-d050",
+      "source_text": null,
+      "summary": "Elected Pass/No Pass is limited to open electives and cannot satisfy a major, minor, general education or immersion requirement. X grades carry earned credit but no GPA or residency credit; audit and failed courses do not satisfy undergraduate residency. S-graded study abroad may carry residency and earned credit but no GPA; other undergraduate S categories do not carry credit or residency.",
+      "course_ids": []
+    },
+    {
+      "id": "rit-ai-society-minor-policy-repeat",
+      "parent_id": null,
+      "title": "Repeated undergraduate courses",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-policy-d050",
+      "source_text": null,
+      "summary": "The last grade earned in a repeated undergraduate course is final, even when lower. Outside courses and examination/experience credit cannot repeat prior coursework. Repeated or excluded coursework is annotated and excluded from the applicable prior GPA calculation.",
+      "course_ids": []
+    },
+    {
+      "id": "rit-ai-society-minor-policy-catalog",
+      "parent_id": null,
+      "title": "Applicable undergraduate catalog",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-policy-d120",
+      "source_text": null,
+      "summary": "Requirements normally follow the bulletin at program matriculation; a later advantageous bulletin may be chosen. The graduation bulletin cannot be more than seven calendar years old. Discontinued courses are not guaranteed; individual adjustments require the primary department head’s approval.",
+      "course_ids": []
+    },
+    {
+      "id": "rit-ai-society-minor-policy-residency",
+      "parent_id": null,
+      "title": "Minor residency",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-policy-d011",
+      "source_text": null,
+      "summary": "At least nine semester credit hours must be successfully completed as RIT courses, excluding X-graded courses.",
+      "course_ids": []
+    },
+    {
+      "id": "rit-ai-society-minor-policy-multiple-minors",
+      "parent_id": null,
+      "title": "Multiple-minor distinct credit",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-policy-d011",
+      "source_text": null,
+      "summary": "Each minor needs at least nine designated semester credit hours that are not counted toward another minor.",
+      "course_ids": []
+    },
+    {
+      "id": "rit-ai-society-minor-policy-matriculation",
+      "parent_id": null,
+      "title": "Minor enrollment and recording",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-policy-d011",
+      "source_text": null,
+      "summary": "Only matriculated students may enroll. The offering academic unit enrolls students as space permits and authorizes completion; a minor cannot be added after the bachelor’s degree is granted.",
+      "course_ids": []
+    },
+    {
+      "id": "rit-ai-society-minor-policy-approval",
+      "parent_id": null,
+      "title": "Minor substitutions and external credit",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-policy-d011",
+      "source_text": null,
+      "summary": "The offering academic unit grants minor transfer credit, examination/experience credit, advanced placement and course substitutions. Such approval does not waive the separate residency or unique-credit rules.",
+      "course_ids": []
     }
   ],
   "notes": [
     "The 2026–27 catalog overview and curriculum tabs were read through ordinary Chrome UI. Automated fetching stopped because robots.txt returned HTTP 202; no restriction was bypassed. Parser supports the observed public table structure but automated refresh remains blocked until robots policy is available. Individual course credits are not inferred from group totals.",
-    "Course theme categories are editorial classifications; source-stated outcomes are labeled separately. Unknown prerequisite values do not mean there are no prerequisites."
+    "Course theme categories are editorial classifications; source-stated outcomes are labeled separately. Unknown prerequisite values do not mean there are no prerequisites.",
+    "The local minor inventory is complete after review of public policies D01.1, D02.0, D05.0 and the applicable undergraduate catalog rule in D12.0. This covers minor requirements and eligibility/relationship to the degree, not the complete host degree. General minor design guidance says usually two upper-division courses; it is not converted into an unconditional extra rule for these approved catalogs. Metadata and catalog automation gaps remain separate."
   ],
   "curriculum_audit": {
     "scope": "minor",
     "reviewed_at": "2026-10-10",
     "source_ids": [
-      "rit-ai-society-minor-curriculum"
+      "rit-ai-society-minor-curriculum",
+      "rit-policy-d011",
+      "rit-policy-d020",
+      "rit-policy-d050",
+      "rit-policy-d120"
     ],
     "sections": [
       "Program eligibility and overview",
       "Core and elective inventory",
-      "Program-local overlap and completion notes"
+      "Program-local overlap and completion notes",
+      "University minor/undergraduate residency, transfer approval, grading, repeated-course and catalog applicability policies"
     ],
-    "unresolved_requirements": [
-      "General university minor residence, transfer and grading policies have not been fully reviewed."
-    ],
+    "unresolved_requirements": [],
     "metadata_gaps": [
       "Most course descriptions and prerequisites remain unverified.",
       "Public course sites, syllabi and first-offered date remain unverified."
