@@ -130,3 +130,9 @@ def parse(html: str) -> dict:
 
 
 PROGRAM_ID = "penn-concentration-ai-cs"
+
+
+from atlas.adapters.penn_cs.course_metadata import register_resources
+
+SOURCE_PARSERS = {}
+register_resources('penn-concentration-ai-cs', SOURCES, SOURCE_PARSERS)

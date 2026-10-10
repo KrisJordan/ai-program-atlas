@@ -36,3 +36,12 @@ Reviewed sections: Concentration requirements, Pillar F, Pillar I, Letter-grade 
 Added every local policy and eligibility constraint to the requirement inventory. Advisor exceptions are maxima/conditions represented as notes rather than minimum required credits.
 
 Remaining course metadata gaps: Course descriptions and individual course prerequisites remain unextracted. Some individual course credits are unknown; requirement totals are represented. Public course resources are not comprehensively inventoried.
+
+
+## Required-core metadata — 2026-10-10
+
+Visited the official Statistics and Legal Studies undergraduate Course Descriptions pages. Exact STAT4230 and LGST2420 blocks support new paraphrased descriptions. STAT4230 explicitly requires STAT1020 OR STAT1120 OR STAT4310 and allows concurrent enrollment with instructor permission; both the alternatives and qualification are preserved. LGST2420 has no published prerequisite field, so null remains unknown, not none required. Existing formal titles and 1/0.5-CU values remain supported by the concentration curriculum source; department metadata sources have separate IDs.
+
+The LGST faculty page corroborates Fall2026 teaching and links a term-specific syllabus, but apps.wharton.upenn.edu/robots.txt redirects to https://www.wharton.upenn.edu:443/404. The safe-fetch guard stopped there. The linked syllabus contents were not verified, and public_site/syllabus stay null. We did not bypass the course-catalog challenge or access authenticated systems.
+
+Course-block parsers select only the requested identity, detect changed prerequisites/description digests, keep absent credits and prerequisites null, and do not promote unvisited syllabus links. Completeness of the reviewed local requirement inventory is unchanged.

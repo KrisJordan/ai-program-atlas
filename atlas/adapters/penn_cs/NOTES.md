@@ -34,3 +34,12 @@ Reviewed sections: AI concentration, Required core option 1, Required core optio
 Added every local policy and eligibility constraint to the requirement inventory. Advisor exceptions are maxima/conditions represented as notes rather than minimum required credits.
 
 Remaining course metadata gaps: Course descriptions and individual course prerequisites remain unextracted. Some individual course credits are unknown; requirement totals are represented. Public course resources are not comprehensively inventoried. Concentration source provides codes only; course titles remain unverified. Penn course catalog returned a robot-verification challenge on 2026-10-10.
+
+
+## Required-core metadata — 2026-10-10
+
+The two required option groups now have names and paraphrased descriptions for CIS4210,5210,4190,5190,5200. Fall2026 CIS4190/5190 public syllabus identifies both numbers and distinguishes their assessments; its prerequisites are recorded with the term. Summer2026 CIS5210 home and linked HTML syllabus verify identity, prerequisites and assignment-topic context. Individual credits remain null: selection slots and four-CU concentration totals do not prove each course’s credit amount.
+
+The official CIS Course Site Directory links machine-learning-upenn.github.io, whose actual page is Spring2023; that is an explicitly historical CIS5200 example. The public artificial-intelligence-class.org archive identifies Penn and Chris Callison-Burch, and his official faculty Teaching page independently confirms CIS4210/5210 identity. Its class dates are Fall2022 despite a January2026 update stamp. Only historical description/resource evidence is used for CIS4210; its current prerequisites remain null. No claim that these older resources are the current syllabus.
+
+All resources were visited through the robots-aware fetcher. The protected catalog was not bypassed, and no LMS login was used. Resource parsers validate exact course identities and offering markers, extract source prerequisite fields where contemporary, and hash source contents for review. They never assign completeness or verification timestamps. Descriptions are manually reviewed paraphrases; unknown course credits stay null. BSE seed and requirements remain owned by the national researcher.

@@ -10,13 +10,13 @@
       "id": "penn-stat-4230",
       "code": "STAT 4230",
       "name": "Applied Machine Learning in Business",
-      "description": null,
-      "prerequisites": null,
+      "description": "Introduces business applications of machine learning, including model selection and validation, regularization, classification, ensembles, neural networks and unsupervised methods. Assignments and competitions apply the methods to settings such as marketing and finance.",
+      "prerequisites": "STAT 1020 OR STAT 1120 OR STAT 4310; may be taken concurrently with instructor permission.",
       "credits": 1.0,
       "credit_unit": "course_units",
       "category": "ai_ml",
-      "source_id": "penn-concentration-ai-business-curriculum",
-      "url": "https://oid.wharton.upenn.edu/artificial-intelligence-joint-concentration/",
+      "source_id": "penn-stat4230-department-description",
+      "url": "https://statistics.wharton.upenn.edu/programs/undergraduate/course-descriptions/",
       "public_site": null,
       "syllabus": null
     },
@@ -24,13 +24,13 @@
       "id": "penn-lgst-2420",
       "code": "LGST 2420",
       "name": "Big Data, Big Responsibilities: Toward Accountable Artificial Intelligence",
-      "description": null,
+      "description": "Examines organizational accountability for AI, including accuracy, liability, transparency, bias, privacy, labor effects, misinformation and intellectual property, and the operational, legal, ethical and technical responses available to businesses.",
       "prerequisites": null,
       "credits": 0.5,
       "credit_unit": "course_units",
       "category": "human_context",
-      "source_id": "penn-concentration-ai-business-curriculum",
-      "url": "https://oid.wharton.upenn.edu/artificial-intelligence-joint-concentration/",
+      "source_id": "penn-lgst2420-department-description",
+      "url": "https://lgst.wharton.upenn.edu/programs/undergraduate/course-descriptions/",
       "public_site": null,
       "syllabus": null
     },
@@ -551,7 +551,10 @@
     "No pass/fail courses; at most 1 CU of independent study and at most 1 CU outside Wharton may count with faculty approval. Course prerequisites and elective individual credit values remain unknown.",
     "MGMT/OIDD 3130 is one cross-listed option, represented as a single record to avoid double counting.",
     "Inferred taxonomy labels summarize themes evidenced by the cited curriculum sections, including elective options where stated. They are analyst classifications, not institution-stated learning outcomes or guarantees that every student completes every theme. Source-stated outcomes are retained separately.",
-    "Human-reviewed complete local concentration requirement inventory as of 2026-10-10, including published eligibility and counting rules. This status does not certify the host degree or complete course-description/prerequisite metadata. Automated observations remain partial until separately audited."
+    "Human-reviewed complete local concentration requirement inventory as of 2026-10-10, including published eligibility and counting rules. This status does not certify the host degree or complete course-description/prerequisite metadata. Automated observations remain partial until separately audited.",
+    "Required-course descriptions verified from Wharton department course-description pages on 2026-10-10. STAT4230 permits STAT1020 OR STAT1120 OR STAT4310; concurrent enrollment requires instructor permission. No LGST2420 prerequisite field is published, so its value remains unknown.",
+    "STAT4230 one CU and LGST2420 half CU remain sourced to the concentration requirements; their new course source records support descriptions/prerequisites. No individual course credits were newly inferred.",
+    "Wharton directory and faculty pages link syllabi, but the safe fetcher stopped at a cross-origin robots redirect to the university 404 page. Syllabus contents were not verified and syllabus/public-site fields remain null."
   ],
   "institution": {
     "id": "university-of-pennsylvania",
@@ -626,6 +629,26 @@
       "catalog_year": null,
       "locator": "BS in Economics statement and AI concentration listing",
       "confidence": "high"
+    },
+    {
+      "id": "penn-stat4230-department-description",
+      "url": "https://statistics.wharton.upenn.edu/programs/undergraduate/course-descriptions/",
+      "title": "STAT 4230 undergraduate department course description",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Exact STAT 4230 course block; description and prerequisite alternatives / concurrent-enrollment permission",
+      "confidence": "high"
+    },
+    {
+      "id": "penn-lgst2420-department-description",
+      "url": "https://lgst.wharton.upenn.edu/programs/undergraduate/course-descriptions/",
+      "title": "LGST 2420 undergraduate department course description",
+      "fetched_at": "2026-10-10",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Exact LGST 2420 course block; description; no prerequisite field published",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -670,9 +693,9 @@
     ],
     "unresolved_requirements": [],
     "metadata_gaps": [
-      "Course descriptions and individual course prerequisites remain unextracted.",
-      "Some individual course credits are unknown; requirement totals are represented.",
-      "Public course resources are not comprehensively inventoried."
+      "STAT4230 and LGST2420 descriptions are paraphrased from department sources; STAT4230 prerequisite alternatives and concurrent-enrollment permission are verified. Other descriptions and prerequisites remain unknown.",
+      "Core credits remain sourced to concentration requirements. Additional individual credit values and public course resources are not comprehensively verified.",
+      "Wharton syllabus contents could not be accessed through the safe fetcher; no syllabus links are promoted from unvisited contents."
     ]
   }
 }
