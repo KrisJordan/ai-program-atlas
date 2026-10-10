@@ -43,7 +43,9 @@ The applicable home-college choices and all resulting college progression/gradua
 - **Published source-specific conditions, retained:** Ecology distribution minima and prohibited program combinations; Economics lower-level limits; Biology concurrent research/capstone; Public Health alternative science paths; International Affairs same-region and experience rules; Journalism transfer residency and overlap; Engineering allocation/substitution rules; other major-specific grade policies. Notes may represent these without a separate automated degree-audit evaluator.
 - **Separate metadata gaps:** Course prerequisites/descriptions, public course websites and syllabi remain incomplete. A missing prerequisite field means unverified. These are not reclassified as program absence or invented prerequisites.
 
-The prior generic audit wording often listed approval-based options and explicit policy notes as if they were missing finite course inventories. That wording has been corrected. All 23 audits remain partial because the home-college scope gap remains; The later Business concentration follow-up closes its additional finite-list gap without closing the shared home-college applicability gap. No record gains a completeness claim from adding shared university policy.
+The prior generic audit wording often listed approval-based options and explicit policy notes as if they were missing finite course inventories. That wording has been corrected. All 23 audits remain partial because the home-college scope gap remains. The later Business concentration follow-up closes its additional finite-list gap without closing the shared home-college applicability gap. No record gains a completeness claim from adding shared university policy.
+
+The subsequent [Business, Biology and Design home-college review](northeastern-home-college-review.md) verifies the colleges' participation explicitly from Admissions, adds the published Business and Science policy differences, and documents the exact designation/applicability evidence still needed. It does not treat the participating-college list as a choice menu or an assignment.
 
 ## Implementation and verification
 
