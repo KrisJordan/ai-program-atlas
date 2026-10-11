@@ -768,3 +768,25 @@ def observe_common_ground_subject(html):
     return [dict(code=fields['Offered under'], name=heading[1], term=None,
                  availability=fields.get('Term(s)'), description=description,
                  prerequisites=fields.get('Prerequisite'), units=fields['Units'], source_fields=fields)]
+
+
+def observe_political_methods_syllabus(text):
+    """Observe actual dated faculty syllabus text; never borrow preparation from HTML."""
+    text = clean(text)
+    identity = re.match(r'(17\.835): (Machine Learning and Data Science in Politics) (Fall \d{4}) Instructor: Professor In Song Kim', text)
+    if identity is None:
+        raise ValueError('Political methods syllabus identity or dated instructor missing')
+    def section(start, end):
+        match = re.search(re.escape(start) + r' (.*?) ' + re.escape(end), text)
+        if match is None:
+            raise ValueError('Political methods syllabus section changed: ' + start)
+        return match[1]
+    description = section('3 Course Description', '4 Prerequisites')
+    preparation = section('4 Prerequisites', '5 Notes on Computing')
+    computing = section('5 Notes on Computing', '6 Policy on the Use of Generative AI')
+    outline = text.split('11 Tentative Course Outline ', 1)
+    if len(description) < 100 or len(outline) != 2 or '6.100A' not in preparation:
+        raise ValueError('Political methods description, preparation or outline missing')
+    return [dict(code=identity[1], name=identity[2], term=identity[3], units=None,
+                 description=description, prerequisites=preparation, computing=computing,
+                 outline=outline[1], syllabus_digest=digest(text))]

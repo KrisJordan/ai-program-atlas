@@ -25689,11 +25689,43 @@
           "restrictions": [],
           "approved_for_integration": true,
           "identity_note": "Literal dated source identity retained; no code-prefix or companion-course identity merge."
+        },
+        {
+          "observed_code": "17.835",
+          "observed_name": "Machine Learning and Data Science in Politics",
+          "evidence_basis": "official_description",
+          "description_summary": "Introduces machine learning and quantitative political research using political, lobbying, trade and social-media data. Students implement analyses in R and complete a research project. The syllabus covers causal inference, regression, supervised and unsupervised learning, mixture models, text analysis, word embeddings and networks.",
+          "description_digest": "e7ecfbdf4efd8d001ac899b6bfc93963279651dd79bd4cf2c232796238689cd2",
+          "observation_digest": "c127e36c747e1560cbace5834d7a7b8a5394991122071bbd5eaf342a55fd2464",
+          "source_id": "mit-ai-hass-review-political-methods-fall2023",
+          "source_url": "https://web.mit.edu/insong/www/pdf/syl-poldata.pdf",
+          "catalog_year": "Fall 2023",
+          "locator": "Fall 2023 syllabus pp.1–2 sections3–5; pp.5–10 complete tentative outline",
+          "prerequisites": "This class will assume that you do not have any prior exposure to political science and machine learning. One prerequisite for this course is basic programming skills in at least one language (e.g., Python). Students who have taken 6.100A: Introduction to Computer Science and Programming in Python or the equivalent are ready to take this course. If you have any questions about whether you are prepared for this course, please talk to the instructor.",
+          "units_text": null,
+          "credits": null,
+          "credit_unit": null,
+          "category": "other",
+          "status": "mixed",
+          "rationale": "Actual syllabus devotes substantial instruction to statistical causal inference/regression and supervised/unsupervised machine learning and NLP. Preserve mathematics and AI methods; political examples do not by themselves make this a normative social-analysis course. R is the implementation tool, not a separate computing-foundations classification.",
+          "candidate_categories": [
+            "mathematics",
+            "ai_ml"
+          ],
+          "restrictions": [
+            "Historical Fall 2023 syllabus; no claim that its policies are the current offering or that the retained HASS list shares this edition.",
+            "Basic programming in at least one language is required; 6.100A or equivalent is sufficient preparation, not an all-of pair. No prior political science or machine learning exposure is assumed.",
+            "R is introduced in class; prior R knowledge is not required. Another statistical package is permitted without instructional support.",
+            "No unit amount is printed. Lecture/recitation meeting hours and assessment percentages are not course credits.",
+            "The tentative outline and classroom AI-use, attendance and assessment rules are dated source context. No Canvas, Piazza or Stellar access was attempted."
+          ],
+          "approved_for_integration": true,
+          "identity_note": "Exact 17.835 code and title printed in the faculty-linked syllabus; original HASS role is unchanged. The public PDF is an actual dated syllabus, not a generic catalog link."
         }
       ],
       "missingness": [
-        "Limited official-title review; no course description or prerequisite observed.",
-        "Dated reference does not certify current offering or enrollment eligibility."
+        "No course units printed in Fall 2023 syllabus.",
+        "Applicability of historical offering policies to current students is not established."
       ]
     },
     "mit-ai-hass-political-subfields-17-c08j": {
@@ -28444,10 +28476,13 @@
           "credits": 12,
           "credit_unit": "units",
           "unit_rule_source_url": "https://catalog.mit.edu/subjects/",
-          "category": "human_context",
-          "status": "reviewed",
-          "rationale": "Actual description teaches rhetorical communication and public engagement rather than scientific methods or computing implementation.",
-          "candidate_categories": [],
+          "category": "other",
+          "status": "mixed",
+          "rationale": "The Spring 2025 source explicitly combines practical media experimentation and a final Museum communication project with analysis of public engagement, polarized audiences and exclusion. These substantial production and social-analysis components support a mixed judgment; the earlier dated observation remains unchanged.",
+          "candidate_categories": [
+            "applications",
+            "human_context"
+          ],
           "restrictions": [
             "Dated Spring 2025course evidence, not a guarantee of future availability. Formal prerequisites are not printed.",
             "Enrollment limited; no numeric cap is printed. Final science-communication project is presented at the MIT Museum. AI is listed as one possible communication medium, not evidence of AI-method instruction."
@@ -40037,6 +40072,16 @@
       "fetched_at": "2026-10-11T08:11:16+00:00",
       "body_sha256": "7d1cb2b7cb4c3f428058d5d81369c2c2975d2e7c27fbb03471656fd45bc9d586",
       "capture_method": "robots_aware_public_http"
+    },
+    "mit-ai-hass-review-political-methods-fall2023": {
+      "url": "https://web.mit.edu/insong/www/pdf/syl-poldata.pdf",
+      "title": "MIT 17.835 / Fall 2023 faculty syllabus",
+      "catalog_year": "Fall 2023",
+      "parser": "political_methods_syllabus",
+      "fetched_at": "2026-10-11T08:20:59.738252+00:00",
+      "body_sha256": "3be86898bb4a8d6c2b140a7cad4b1cd09eb6246f226a0f72ee7985732ac33044",
+      "capture_method": "robots_aware_public_pdf_then_PDFKit_text",
+      "text_sha256": "6d6f7eecfd2fd16566ac1a03ef26ff4fe2fb2cabdd230d1f270b2959e2859f36"
     }
   },
   "source_checks": [
@@ -40988,8 +41033,8 @@
     "pending": 58
   },
   "evidence_counts": {
-    "description_reviewed_records": 424,
-    "title_only_reviewed_records": 338,
+    "description_reviewed_records": 425,
+    "title_only_reviewed_records": 337,
     "code_only_unknown_records": 3
   },
   "scope_notes": [
@@ -42314,5 +42359,45 @@
     "inspection": "BothPDFKittextandrenderedpagecontainonlydepartmentheadingandfooter.Noactualsubjectentries.",
     "description_observations": 0,
     "access_denied": false
+  },
+  "political_faculty_followup": {
+    "upgraded_record_ids": [
+      "mit-ai-hass-political-subfields-17-835"
+    ],
+    "source_ids": [
+      "mit-ai-hass-review-political-methods-fall2023"
+    ],
+    "teaching_pages_read": [
+      {
+        "key": "zacka",
+        "url": "https://bernardozacka.com/Teaching",
+        "fetched_at": "2026-10-11T08:20:09+00:00",
+        "sha256": "040ae576694dd0768ec0b8ea465c7536f25f8ad92d0bdb9bb3aa056668a5a48b",
+        "status": "read"
+      },
+      {
+        "key": "kim",
+        "url": "https://web.mit.edu/insong/www/teaching/teaching.html",
+        "fetched_at": "2026-10-11T08:20:12+00:00",
+        "sha256": "efb02209ca77ec03de84d7b506a584addedd54f110f27e57997235e107cdc3f1",
+        "status": "read"
+      }
+    ],
+    "syllabus_pages_read": 10,
+    "visually_checked_pages": [
+      1,
+      2,
+      7,
+      8
+    ],
+    "http_https_review": "Original HTTP robots endpoint explicitly redirects to identical host/path HTTPS; HTTPS robots checked independently.",
+    "held_description": {
+      "title": "Just Code: The Ethical Lifecycle of Machine Learning",
+      "faculty_url": "https://bernardozacka.com/Teaching",
+      "reason": "Actual faculty description read but no course code printed; exact identity not bound to the three retained 17.055 records.",
+      "syllabus_url": "https://files.cargocollective.com/c489217/Just-Code_Syllabus.pdf",
+      "access_outcome": "Robots disallows fetch; stopped without alternate path or retry."
+    },
+    "remaining_action": "Independent exact-code public sources remain open for other Political Science records; no general departmental denial or completed description inventory is inferred."
   }
 }

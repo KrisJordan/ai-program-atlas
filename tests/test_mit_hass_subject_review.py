@@ -215,7 +215,7 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']['description_reviewed_records']==424
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==425
     assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
         o=next(o for o in entry(code)['observations'] if o.get('evidence_basis')=='official_title_only')
@@ -990,7 +990,8 @@ def test_sts_actual_description_review_preserves_reused_numbers_and_subject_focu
     assert report['public_course_pages_read']==11 and report['public_syllabi_read']==10
     assert len(report['upgraded_record_ids'])==14
     for code in ['STS.002','STS.034','STS.042J','STS.081J']:
-        assert entry(code)['observations'][-1]['category']=='human_context'
+        observed=next(e for e in entry(code)['observations'] if e['source_id'].startswith('mit-ai-hass-review-ocw-sts-'))
+        assert observed['category']=='human_context'
     evolution=entry('STS.009')['observations'][-1]
     assert evolution['category']=='other' and evolution['status']=='mixed'
     assert evolution['candidate_categories']==['applications','human_context']
@@ -1461,6 +1462,7 @@ def test_sts_department_description_does_not_certify_canceled_special_subject():
     assert any('canceled' in n and 'No identity equivalence' in n for n in e['restrictions'])
     e=entry('STS.034')['observations'][-1]
     assert e['catalog_year']=='Spring 2025' and e['credits']==12
+    assert e['status']=='mixed' and e['candidate_categories']==['applications','human_context']
     assert any('no numeric cap' in n for n in e['restrictions'])
 
 
@@ -1544,3 +1546,33 @@ def test_common_ground_actual_sources_pin_special_topic_and_eligibility():
         assert review.matched_review(course,o,e['source_url'],MANIFEST)==e
         for wrong in [{**o,'name':'Different special subject'},{**o,'prerequisites':'Permission required'},{**o,'term':'Fall 2026'}]:
             assert review.matched_review(course,wrong,e['source_url'],MANIFEST) is None
+
+
+def test_political_methods_dated_syllabus_preserves_preparation_and_unknown_units():
+    e=entry('17.835')['observations'][-1]
+    assert e['catalog_year']=='Fall 2023' and e['credits'] is None
+    assert e['status']=='mixed' and e['candidate_categories']==['mathematics','ai_ml']
+    assert '6.100A' in e['prerequisites'] and 'or the equivalent' in e['prerequisites']
+    assert any('prior R knowledge is not required' in n for n in e['restrictions'])
+    assert any('not course credits' in n for n in e['restrictions'])
+    report=MANIFEST['political_faculty_followup']
+    assert report['syllabus_pages_read']==10
+    assert 'no course code printed' in report['held_description']['reason']
+    assert report['held_description']['access_outcome'].startswith('Robots disallows')
+    for row in MANIFEST['courses'].values():
+        if row['listed_code']=='17.055':
+            assert row['observations'][-1]['evidence_basis']=='official_title_only'
+    with pytest.raises(ValueError):review.observe_political_methods_syllabus('17.835 Machine Learning')
+
+
+def test_political_methods_syllabus_replay_pins_term_identity_and_complete_outline():
+    path=Path('/tmp/mit-hass-subjects/politics-ml.txt')
+    if not path.exists():pytest.skip('Optional public faculty syllabus PDF text')
+    cid=MANIFEST['political_faculty_followup']['upgraded_record_ids'][0]
+    row=MANIFEST['courses'][cid];e=row['observations'][-1]
+    o=review.observe_political_methods_syllabus(path.read_text())[0]
+    course=dict(id=cid,code=row['listed_code'],name=row['listed_name'],source_id=row['listed_source_id'])
+    assert review.matched_review(course,o,e['source_url'],MANIFEST)==e
+    for wrong in [{**o,'term':'Fall 2026'},{**o,'prerequisites':'None'},{**o,'units':'12'},{**o,'outline':o['outline']+' New topic.'}]:
+        assert review.matched_review(course,wrong,e['source_url'],MANIFEST) is None
+    with pytest.raises(ValueError):review.observe_political_methods_syllabus(path.read_text().replace('4 Prerequisites','4 Recommended preparation'))
