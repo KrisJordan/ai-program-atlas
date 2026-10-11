@@ -309,7 +309,7 @@ def test_usf_review_does_not_recertify_brochure_or_infer_units():
  courses={c['code']:c for c in p['courses']}
  assert courses['CAI 4624']['category']=='systems'
  assert courses['CAI 4024']['category']=='human_context'
- assert sum('category_review' in c for c in p['courses'])==8
+ assert sum('category_review' in c for c in p['courses'])==29
  assert all(c['credit_unit']=='unknown' for c in p['courses'])
  assert all(r['credit_unit']=='unknown' for r in p['requirements'])
  assert p['curriculum_status']=='partial'

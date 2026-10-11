@@ -3442,15 +3442,36 @@
           "locator": "Entire public COLL400 explanation and approved-designation criteria",
           "checked_at": "2026-10-11",
           "access_status": "read"
+        },
+        {
+          "url": "https://registration.wm.edu/?details&srcdb=202710&crn=12601",
+          "catalog_year": "Fall 2026",
+          "locator": "Section 01, CRN 12601 actual public rendered description and restrictions",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://registration.wm.edu/?details&srcdb=202710&crn=12361",
+          "catalog_year": "Fall 2026",
+          "locator": "Section 01, CRN 12361 actual public rendered description and restrictions",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://registration.wm.edu/?details&srcdb=202710&crn=13505",
+          "catalog_year": "Fall 2026",
+          "locator": "Section 01, CRN 13505 actual public rendered description and restrictions",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
         }
       ],
       "checks": {
         "degree_identity": "Explicit BA in Interdisciplinary Studies with Applied Artificial Intelligence major. 30 credits describe the major only, not the whole BA.",
         "required_and_choices": "FAQ names DATA201/202/305 as core taken at W&M. Linked example pathway labels Designing AI Agents AAI301 instead of DATA305 and offers DATA202/PHIL150 ethics alternatives. No equivalence, supersession or effective year is stated; preserve conflict rather than silently reconciling.",
         "elective_pools": "The linked graphic explicitly labels methods/elective examples and two elective slots. It is not an exhaustive approved list; named illustrative courses are not promoted into certified degree inventory.",
-        "prerequisites": "Pathway arrows are illustrative sequencing, not verified prerequisite clauses. No prior coding/statistics/advanced math expected at major entry; course-level enrollment conditions remain unknown.",
-        "credits_and_units": "30-credit major total only; individual credits and normalized unit unknown. No per-course allocation inferred from graphic or four-to-five-semester timeline.",
-        "classification": "DATA202 exact ethics title supports a limited human-context review. DATA201 and DATA305 now unclassified because short titles do not establish primary content and the agent-design code conflicts. No data-science-to-AI classification inference.",
+        "prerequisites": "Fall 2026 section-specific restrictions preserved verbatim. DATA201 lists CSCI140/141, equivalent-test score 1, DATA141/101 or AAI101 with D− minimum and undergraduate-level restrictions. Source comma/OR wording is not silently repaired. DATA305 requires DATA201 at D− or better. DATA202 has only level restriction in the inspected panel; no absence-of-prerequisite inference beyond that observation.",
+        "credits_and_units": "All three actual Fall 2026 section panels explicitly show 3 Credit Hours; normalized unit remains unknown. Their printed update timestamp is not a program launch or first-offering date. The independently reviewed public COLL page supplies 120-credit graduation overview; no totals computed from option breadth.",
+        "classification": "All three observed FAQ-code courses now have actual Fall 2026 PATH descriptions: DATA201 major AI approaches/model evaluation and DATA305 generative agent workflows are ai_ml; DATA202 ethics/social/historical analysis is human_context. Not a subject assignment from short titles or program association. Current section labels retained with historical FAQ labels noted; no AAI301 equivalence inferred.",
         "family_composition": "Standalone BA major; its stated ability to pair with another major does not establish a family or remove university-degree scope.",
         "degree_wide_requirements": "Current public registrar and Reves policies reviewed: explicit CDSP elective pass/fail eligibility and major/COLL/proficiency exclusions, post-matriculation transfer approval, Fall 2025 repeat examples, graduation application, university-wide CAE petitions and abroad credit/grade/residence/approval conditions. Study-abroad source states at least 60 W&M credits; no whole-degree 120 minimum inferred from its transfer-allocation wording. Full core, BA distributions/proficiencies, normalized credit unit and applicable grade/overlap rules remain unresolved at current catalog robots HTTP 202 and further public source review. Public COLL overview expressly applies to all undergraduate schools. Guide/other/transfer pages establish the 120-credit graduation overview, first-year C− minimums, separate domain/COLL distributions, language/math/arts alternatives, permitted proficiency overlap, prohibited COLL/domain duplication, and distinct incoming-transfer waivers. Credit units stay unknown; detailed ten-semester/residence/GPA and exact language shorthand applicability remain unresolved."
       },
@@ -3458,8 +3479,8 @@
         "required": {
           "count": 3,
           "categories": {
-            "human_context": 1,
-            "other": 2
+            "ai_ml": 2,
+            "human_context": 1
           }
         },
         "options": {
@@ -3526,7 +3547,7 @@
           ]
         }
       ],
-      "correction_status": "Six public registrar/Reves sources plus four COLL sources now supply 24 conditional/open-criteria notes. All six individual COLL explanations also read. Current catalog robots HTTP 202, three named FAQ observations and DATA305/AAI301 conflict remain; status in_progress while specific remaining public GPA/residence/ten-semester/metadata branches are reviewed.",
+      "correction_status": "Six public registrar/Reves sources plus four COLL sources now supply 24 conditional/open-criteria notes. All six individual COLL explanations also read. Current catalog robots HTTP 202, three named FAQ observations and DATA305/AAI301 conflict remain; status in_progress while specific remaining public GPA/residence/ten-semester/metadata branches are reviewed. The three represented FAQ-code descriptions are now individually reviewed from current public PATH panels, with explicit amounts and section restrictions; this does not complete the unknown major inventory.",
       "second_pass_status": "pending"
     },
     {
@@ -3975,15 +3996,162 @@
           "locator": "Exact CAI Course Details description and prerequisite/restriction fields",
           "checked_at": "2026-10-11",
           "access_status": "cached_source_read"
+        },
+        {
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/CIS/code/1930",
+          "catalog_year": "2026–2027",
+          "locator": "CIS 1930 full Course Details description, credits, requisites/restrictions and other information; discovered through ordinary visible prefix search",
+          "checked_at": "2026-10-11T05:16:26+00:00",
+          "access_status": "read"
+        },
+        {
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/COP/code/2510",
+          "catalog_year": "2026–2027",
+          "locator": "COP 2510 full Course Details description, credits, requisites/restrictions and other information; discovered through ordinary visible prefix search",
+          "checked_at": "2026-10-11T05:16:27+00:00",
+          "access_status": "read"
+        },
+        {
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/COP/code/3514",
+          "catalog_year": "2026–2027",
+          "locator": "COP 3514 full Course Details description, credits, requisites/restrictions and other information; discovered through ordinary visible prefix search",
+          "checked_at": "2026-10-11T05:16:29+00:00",
+          "access_status": "read"
+        },
+        {
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/COP/code/4530",
+          "catalog_year": "2026–2027",
+          "locator": "COP 4530 full Course Details description, credits, requisites/restrictions and other information; discovered through ordinary visible prefix search",
+          "checked_at": "2026-10-11T05:16:30+00:00",
+          "access_status": "read"
+        },
+        {
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/ENC/code/1101",
+          "catalog_year": "2026–2027",
+          "locator": "ENC 1101 full Course Details description, credits, requisites/restrictions and other information; discovered through ordinary visible prefix search",
+          "checked_at": "2026-10-11T05:19:30+00:00",
+          "access_status": "read"
+        },
+        {
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/ENC/code/1102",
+          "catalog_year": "2026–2027",
+          "locator": "ENC 1102 full Course Details description, credits, requisites/restrictions and other information; discovered through ordinary visible prefix search",
+          "checked_at": "2026-10-11T05:19:32+00:00",
+          "access_status": "read"
+        },
+        {
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/MAC/code/2311",
+          "catalog_year": "2026–2027",
+          "locator": "MAC 2311 full Course Details description, credits, requisites/restrictions and other information; discovered through ordinary visible prefix search",
+          "checked_at": "2026-10-11T05:19:33+00:00",
+          "access_status": "read"
+        },
+        {
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/MAC/code/2312",
+          "catalog_year": "2026–2027",
+          "locator": "MAC 2312 full Course Details description, credits, requisites/restrictions and other information; discovered through ordinary visible prefix search",
+          "checked_at": "2026-10-11T05:19:35+00:00",
+          "access_status": "read"
+        },
+        {
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/PHY/code/2048",
+          "catalog_year": "2026–2027",
+          "locator": "PHY 2048 full Course Details description, credits, requisites/restrictions and other information; discovered through ordinary visible prefix search",
+          "checked_at": "2026-10-11T05:19:36+00:00",
+          "access_status": "read"
+        },
+        {
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/PHY/code/2048L",
+          "catalog_year": "2026–2027",
+          "locator": "PHY 2048L full Course Details description, credits, requisites/restrictions and other information; discovered through ordinary visible prefix search",
+          "checked_at": "2026-10-11T05:19:38+00:00",
+          "access_status": "read"
+        },
+        {
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/CDA/code/3103",
+          "catalog_year": "2026–2027",
+          "locator": "CDA 3103 full Course Details description, credits, requisites/restrictions and other information; discovered through ordinary visible prefix search",
+          "checked_at": "2026-10-11T05:20:15+00:00",
+          "access_status": "read"
+        },
+        {
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/COT/code/3100",
+          "catalog_year": "2026–2027",
+          "locator": "COT 3100 full Course Details description, credits, requisites/restrictions and other information; discovered through ordinary visible prefix search",
+          "checked_at": "2026-10-11T05:20:16+00:00",
+          "access_status": "read"
+        },
+        {
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/COT/code/4400",
+          "catalog_year": "2026–2027",
+          "locator": "COT 4400 full Course Details description, credits, requisites/restrictions and other information; discovered through ordinary visible prefix search",
+          "checked_at": "2026-10-11T05:20:18+00:00",
+          "access_status": "read"
+        },
+        {
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/EGN/code/2440",
+          "catalog_year": "2026–2027",
+          "locator": "EGN 2440 full Course Details description, credits, requisites/restrictions and other information; discovered through ordinary visible prefix search",
+          "checked_at": "2026-10-11T05:21:42+00:00",
+          "access_status": "read"
+        },
+        {
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/EGN/code/4450",
+          "catalog_year": "2026–2027",
+          "locator": "EGN 4450 full Course Details description, credits, requisites/restrictions and other information; discovered through ordinary visible prefix search",
+          "checked_at": "2026-10-11T05:21:44+00:00",
+          "access_status": "read"
+        },
+        {
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/PSY/code/2012",
+          "catalog_year": "2026–2027",
+          "locator": "PSY 2012 full Course Details description, credits, requisites/restrictions and other information; discovered through ordinary visible prefix search",
+          "checked_at": "2026-10-11T05:21:45+00:00",
+          "access_status": "read"
+        },
+        {
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAP/code/4641",
+          "catalog_year": "2026–2027",
+          "locator": "CAP 4641 full Course Details description, credits, requisites/restrictions and other information; discovered through ordinary visible prefix search",
+          "checked_at": "2026-10-11T05:21:47+00:00",
+          "access_status": "read"
+        },
+        {
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/STA/code/2023",
+          "catalog_year": "2026–2027",
+          "locator": "STA 2023 full Course Details description, credits, requisites/restrictions and other information; discovered through ordinary visible prefix search",
+          "checked_at": "2026-10-11T05:23:19+00:00",
+          "access_status": "read"
+        },
+        {
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/POS/code/2041",
+          "catalog_year": "2026–2027",
+          "locator": "POS 2041 full Course Details description, credits, requisites/restrictions and other information; discovered through ordinary visible prefix search",
+          "checked_at": "2026-10-11T05:23:20+00:00",
+          "access_status": "read"
+        },
+        {
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/AMH/code/2010",
+          "catalog_year": "2026–2027",
+          "locator": "AMH 2010 full Course Details description, credits, requisites/restrictions and other information; discovered through ordinary visible prefix search",
+          "checked_at": "2026-10-11T05:23:22+00:00",
+          "access_status": "read"
+        },
+        {
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/AMH/code/2020",
+          "catalog_year": "2026–2027",
+          "locator": "AMH 2020 full Course Details description, credits, requisites/restrictions and other information; discovered through ordinary visible prefix search",
+          "checked_at": "2026-10-11T05:23:23+00:00",
+          "access_status": "read"
         }
       ],
       "checks": {
         "degree_identity": "Official current h1 confirms Bachelor of Science in Artificial Intelligence. Preserve BSAI exact award abbreviation and independently supported BS mapping.",
         "required_and_choices": "Older brochure inventory remains 24 named prescribed records plus five civic/statistics choices. It is not freshly certified: current brochure robots policy prevents reread and definitive program catalog remains unreadable. No new mandatory course is inferred from course search results.",
         "elective_pools": "Full AI-major elective eligibility list remains unavailable in the reviewed authoritative sources. Public course inventory establishes course identity/content, not automatic major eligibility. Existing GE eligibility predicates remain open rather than fictitious finite pools.",
-        "prerequisites": "Six of eight reviewed CAI blocks provide exact grade/Boolean/restriction conditions, including CAI4002 co-prerequisite COP4530 and Majors Only. Blank fields remain unknown; no extra fixed-degree obligation is inferred.",
-        "credits_and_units": "All eight CAI pages explicitly print 3 credit hours. None of the inspected sources establishes the normalized unit, so inherited semester_hours labels on brochure rows are removed. Group allocations and variable/missing individual amounts are not divided or invented.",
-        "classification": "Eight CAI descriptions independently reviewed. CAI4624 infrastructure corrected to systems; CAI4024 ethics human_context; six other explicit AI-method/introduction descriptions support ai_ml. Other 21 course subjects remain unreviewed.",
+        "prerequisites": "All 29 full detail records read. Exact source Boolean, minimum-grade, placement, permission and major restrictions retained. EGN4450 prints MAC2282 AND MAC2312 or AP Calculus BC; that unusually conjunctive wording is not silently repaired. Physics lecture/lab concurrent enrollment and simultaneous-drop conditions preserved. Blank fields remain unknown; permission paths do not grant approval or add fixed degree obligations.",
+        "credits_and_units": "All 29 exact course pages provide numeric credit-hour amounts, now recorded individually. All normalized units remain unknown; no comparison/conversion inferred. Brochure requirement roles are not freshly recertified by course metadata.",
+        "classification": "All 29 represented course descriptions individually read: 28 classified and CIS1930 orientation explicitly unclassified. Discrete structures/linear systems are mathematics from their actual descriptions; four programming/algorithm records foundations; hardware architecture systems; physics domain applications. See source-specific rationales and manual content review note. No prefix or AI-degree membership classifier used.",
         "family_composition": "Standalone concrete degree; no family inheritance.",
         "degree_wide_requirements": "Current independently public registrar/GE/civic supplements remain mapped from prior evidence, but the inaccessible definitive catalog prevents certification of major totals/electives and detailed college/degree exceptions. Prior policy observations are not represented as a completed full-degree audit."
       },
@@ -4010,6 +4178,34 @@
             "https://www.usf.edu/ai-cybersecurity-computing/academics/undergraduate/bsai.aspx",
             "https://www.usf.edu/ai-cybersecurity-computing/documents/brochures/bellini-ug-bsai.pdf"
           ]
+        },
+        {
+          "issue": "Legacy course subjects were not individually supported, including orientation as computing foundations.",
+          "correction": "Read all 21 remaining actual descriptions; classify from content with rationale, leave CIS1930 unclassified. Preserve degree-role uncertainty separately.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://cloud.usf.edu/academic-programs/details/prefix/CIS/code/1930",
+            "https://cloud.usf.edu/academic-programs/details/prefix/COP/code/2510",
+            "https://cloud.usf.edu/academic-programs/details/prefix/COP/code/3514",
+            "https://cloud.usf.edu/academic-programs/details/prefix/COP/code/4530",
+            "https://cloud.usf.edu/academic-programs/details/prefix/ENC/code/1101",
+            "https://cloud.usf.edu/academic-programs/details/prefix/ENC/code/1102",
+            "https://cloud.usf.edu/academic-programs/details/prefix/MAC/code/2311",
+            "https://cloud.usf.edu/academic-programs/details/prefix/MAC/code/2312",
+            "https://cloud.usf.edu/academic-programs/details/prefix/PHY/code/2048",
+            "https://cloud.usf.edu/academic-programs/details/prefix/PHY/code/2048L",
+            "https://cloud.usf.edu/academic-programs/details/prefix/CDA/code/3103",
+            "https://cloud.usf.edu/academic-programs/details/prefix/COT/code/3100",
+            "https://cloud.usf.edu/academic-programs/details/prefix/COT/code/4400",
+            "https://cloud.usf.edu/academic-programs/details/prefix/EGN/code/2440",
+            "https://cloud.usf.edu/academic-programs/details/prefix/EGN/code/4450",
+            "https://cloud.usf.edu/academic-programs/details/prefix/PSY/code/2012",
+            "https://cloud.usf.edu/academic-programs/details/prefix/CAP/code/4641",
+            "https://cloud.usf.edu/academic-programs/details/prefix/STA/code/2023",
+            "https://cloud.usf.edu/academic-programs/details/prefix/POS/code/2041",
+            "https://cloud.usf.edu/academic-programs/details/prefix/AMH/code/2010",
+            "https://cloud.usf.edu/academic-programs/details/prefix/AMH/code/2020"
+          ]
         }
       ],
       "blockers": [
@@ -4022,7 +4218,7 @@
           "url": "https://www.usf.edu/ai-cybersecurity-computing/documents/brochures/bellini-ug-bsai.pdf"
         }
       ],
-      "correction_status": "Eight CAI subject reviews and conservative unit correction complete. Other named-course metadata remain accessible through the public course inventory and are not yet reviewed; full audit remains in progress while exact catalog and brochure boundaries are retained.",
+      "correction_status": "All 29 represented course descriptions reviewed; 21 new guarded content observations and exact prerequisites/amounts integrated. Primary stays in_progress while remaining independently public university/college policy branches are reviewed. Known catalog HTTP202 and brochure robots limits remain exact.",
       "second_pass_status": "pending"
     },
     {

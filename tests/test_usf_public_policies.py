@@ -67,8 +67,8 @@ def test_civic_cohort_and_metadata_findings_in_reviewed_seed():
     assert 'additional-degree students are not categorically exempt' in rules['usf-ai-civic-cohorts']['summary']
     assert 'Course only' in rules['usf-ai-civic-acceleration']['summary']
     assert 'Fall 2024 onward' in rules['usf-ai-civic-routes']['summary']
-    assert len([c for c in p['courses'] if c['description']])==8
-    assert len([c for c in p['courses'] if c['prerequisites']])==6
+    assert len([c for c in p['courses'] if c['description']])==29
+    assert len([c for c in p['courses'] if c['prerequisites']])==21
     assert p['curriculum_status']=='partial' and p['curriculum_audit']['unresolved_requirements']
 
 

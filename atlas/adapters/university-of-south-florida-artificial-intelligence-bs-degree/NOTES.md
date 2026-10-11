@@ -67,3 +67,12 @@ remain. Whole-degree correctness is blocked by these requirement-source limits.
 ### Audit status correction — 2026-10-11
 
 Eight CAI subject reviews and conservative unit correction complete. Other named-course metadata remain accessible through the public course inventory and are not yet reviewed; full audit remains in progress while exact catalog and brochure boundaries are retained. A source barrier does not convert still-accessible unfinished work into a completed blocked audit.
+
+
+### All represented course descriptions — 2026-10-11
+
+Read the21 remaining exact course details through ordinary public prefix-search links; all29 represented descriptions now have manual content dispositions (28 classified, CIS1930 orientation explicitly unclassified). Current exact names, numeric credit amounts and all prerequisite/restriction/other-information fields are integrated. The new `remaining_courses.py` guards each reviewed heading and full field bundle; source changes fail for review, and parsers never emit manual category certification or degree eligibility.
+
+COT3100 and EGN4450 are mathematics based on their actual descriptions; computing orientation is not programming. PHY lecture/lab concurrent/drop conditions and credit exclusions remain distinct. EGN4450's printed calculus conjunction is preserved; permissions and minimum grades are not waived. All normalized credit units remain unknown. Source summaries/hashes and21 tests with actual permitted caches accompany the helper; raw copyrighted pages remain ignored. See [course review](../../../research/degree-audit/usf-course-content-review.md).
+
+This closes accessible represented course content, not definitive degree roles or elective eligibility. Primary remains in progress during the remaining independently public college/university policy review. Exact catalog HTTP202 and brochure robots-disallow boundaries remain unchanged; no restricted route was retried.
