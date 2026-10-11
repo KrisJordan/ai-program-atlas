@@ -16,7 +16,7 @@
   "overview": "Twelve-credit minor for engineering and computing students, with machine learning, deep learning, generative AI and a disciplinary elective. Published catalog and department requirements disagree on one machine-learning option.",
   "catalog_year": "2026-2027",
   "verification_status": "partial",
-  "last_verified": "2026-10-10",
+  "last_verified": "2026-10-11",
   "curriculum_status": "partial",
   "links": [
     {
@@ -59,21 +59,41 @@
     {
       "id": "fiu-ai-minor-catalog",
       "url": "https://catalog.fiu.edu/programs/XAI%3AMN/requirements-uz47h",
-      "title": "XAI:MN Artificial Intelligence Minor — Requirements",
+      "title": "XAI:MN Artificial Intelligence Minor \u2014 Requirements",
       "fetched_at": "2026-10-10",
       "source_date": null,
       "catalog_year": "2026-2027",
-      "locator": "2026–2027 catalog, rendered admission and core requirements; CNT 4153 course popup",
+      "locator": "2026\u20132027 catalog, rendered admission and core requirements; CNT 4153 course popup",
       "confidence": "high"
     },
     {
       "id": "fiu-ai-minor-overview",
       "url": "https://catalog.fiu.edu/programs/XAI%3AMN/overview-aoYks",
-      "title": "XAI:MN Artificial Intelligence Minor — Overview",
+      "title": "XAI:MN Artificial Intelligence Minor \u2014 Overview",
       "fetched_at": "2026-10-10",
       "source_date": null,
       "catalog_year": null,
       "locator": "Twelve total credits; program overview",
+      "confidence": "high"
+    },
+    {
+      "id": "fiu-ai-minor-university-policy",
+      "url": "https://catalog.fiu.edu/policiesandprocesses/program-graduation/degree-program/undergraduate/minor-certificate",
+      "title": "Minor and Certificate Programs",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Minor declaration; 90-hour change approval; Minor Program award",
+      "confidence": "high"
+    },
+    {
+      "id": "fiu-ai-minor-cai4105",
+      "url": "https://catalog.fiu.edu/courses/0364401/overview-aoYks",
+      "title": "CAI 4105 Introduction to Machine Learning",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Overview: course description, prerequisites and credit minimum/maximum",
       "confidence": "high"
     }
   ],
@@ -174,13 +194,13 @@
       "id": "florida-international-university-artificial-intelligence-minor-minor-cai-4105",
       "code": "CAI 4105",
       "name": "Introduction to Machine Learning",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Introduces machine-learning concepts and approaches for classification, clustering, structured models and recommendation systems.",
+      "prerequisites": "STA 3033 or STA 2122 or STA 3145 or STA 3193 or STA 3163 or STA 3111 or STA 2023 or STA 4322.",
+      "credits": 3,
       "credit_unit": "unknown",
       "category": "ai_ml",
-      "source_id": "fiu-ai-minor-catalog",
-      "url": "https://catalog.fiu.edu/programs/XAI%3AMN/requirements-uz47h",
+      "source_id": "fiu-ai-minor-cai4105",
+      "url": "https://catalog.fiu.edu/courses/0364401/overview-aoYks",
       "public_site": null,
       "syllabus": null
     },
@@ -451,30 +471,77 @@
       "course_ids": [
         "florida-international-university-artificial-intelligence-minor-minor-cap-4612"
       ]
+    },
+    {
+      "id": "florida-international-university-artificial-intelligence-minor-minor-policy-declaration",
+      "parent_id": null,
+      "title": "Minor declaration and approval",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "fiu-ai-minor-university-policy",
+      "source_text": null,
+      "summary": "An academic advisor must initiate declaration through the electronic Change of Program Plan process; the appropriate academic unit must approve it. Plan with the advisor to avoid extending graduation.",
+      "course_ids": []
+    },
+    {
+      "id": "florida-international-university-artificial-intelligence-minor-minor-policy-late-change",
+      "parent_id": null,
+      "title": "Changes after 90 credit hours",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "fiu-ai-minor-university-policy",
+      "source_text": null,
+      "summary": "After 90 earned credit hours, adding/changing a minor requires College Dean approval when it extends degree completion or results in excess credit hours.",
+      "course_ids": []
+    },
+    {
+      "id": "florida-international-university-artificial-intelligence-minor-minor-policy-award",
+      "parent_id": null,
+      "title": "Minor awarded with bachelor\u2019s degree",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "fiu-ai-minor-university-policy",
+      "source_text": null,
+      "summary": "The minor is awarded upon completion of the bachelor\u2019s degree and recorded in the transcript degree comment; this does not establish permission to complete it as a standalone post-degree credential.",
+      "course_ids": []
     }
   ],
   "notes": [
     "Credit amounts are published as credits, with normalized unit unverified.",
-    "A cached older department view lists CAI 4105 while the current HTTPS page lists CAP 4612. The rendered 2026–2027 catalog still lists CAI 4105. Do not infer equivalence.",
-    "The catalog lists IDC 2002 as an admission condition; the department summary does not mention it. Both are preserved."
+    "A cached older department view lists CAI 4105 while the current HTTPS page lists CAP 4612. The rendered 2026\u20132027 catalog still lists CAI 4105. Do not infer equivalence.",
+    "The catalog lists IDC 2002 as an admission condition; the department summary does not mention it. Both are preserved.",
+    "Rechecked 2026-10-11: catalog CAI 4105 course identity and its three credits are independently verified, but no CAP 4612 equivalence or substitution authorization is stated. Current department still states minimum GPA 3.0."
   ],
   "curriculum_audit": {
     "scope": "minor",
-    "reviewed_at": "2026-10-10",
+    "reviewed_at": "2026-10-11",
     "source_ids": [
       "florida-international-university-artificial-intelligence-minor-minor-official",
       "fiu-ai-minor-department",
       "fiu-ai-minor-catalog",
-      "fiu-ai-minor-overview"
+      "fiu-ai-minor-overview",
+      "fiu-ai-minor-university-policy",
+      "fiu-ai-minor-cai4105"
     ],
     "sections": [
-      "Rendered 2026–2027 catalog admissions, programming preparation and three core areas",
+      "Rendered 2026\u20132027 catalog admissions, programming preparation and three core areas",
       "Department GPA, eligibility, four-area structure and open/project electives",
-      "CNT 4153 course description, prerequisites and credit amount"
+      "CNT 4153 course description, prerequisites and credit amount",
+      "Minor declaration; 90-hour change approval; Minor Program award",
+      "Overview: course description, prerequisites and credit minimum/maximum"
     ],
     "unresolved_requirements": [
       "Resolve CAI 4105 versus CAP 4612 disagreement between catalog and department.",
-      "Institution-wide minor grade, overlap and residency rules remain unreviewed.",
+      "Public university minor policy reviewed: declaration, 90-hour changes and award timing mapped. It does not settle minor-specific minimum grades, course overlap or residency; applicable additional rules remain unverified.",
       "Normalized credit unit remains unverified."
     ],
     "metadata_gaps": [

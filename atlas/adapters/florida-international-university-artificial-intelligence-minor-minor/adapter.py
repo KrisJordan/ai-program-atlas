@@ -19,3 +19,7 @@ def parse(html: str)->dict:
         requirements.append(requirement(PROGRAM_ID,'observed-area-'+str(i),title,SOURCE_ID,cs,'choose_courses',1,amount,summary='Choose one course in this published area. Additional approved options and discrepancies require independent catalog review.'))
     if len(requirements)!=4:raise ValueError('Four-area curriculum structure changed')
     return dict(id=PROGRAM_ID,title='Artificial Intelligence',award_level='minor',program_kind='minor',curriculum_status='partial',courses=courses,requirements=requirements)
+
+from atlas.adapters.fiu_minor_policies import SOURCE_PARSERS as POLICY_PARSERS
+SOURCE_PARSERS={SOURCES[0]:parse,**POLICY_PARSERS}
+SOURCES=tuple(SOURCE_PARSERS)
