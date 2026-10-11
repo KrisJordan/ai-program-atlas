@@ -1,6 +1,6 @@
 # AI Program Atlas — research and publication plan
 
-Updated 2026-10-10. A published research project; **the full target cohort and catalog inventory remain incomplete**.
+Updated 2026-10-11. A published research project; **the full target cohort and catalog inventory remain incomplete**.
 
 ## Verified publication
 
@@ -68,7 +68,7 @@ This status does **not** mean complete program evidence. Course descriptions, in
 
 ## Continued sourcing after this release
 
-The 90 partial and six pending inventories are being triaged individually by their exact missing evidence and next action. Accessible work is proceeding independently of the cohort and CSRankings issues. Current parallel batches cover Northeastern shared course evidence; MIT/Rice/Maryland major policies; Penn/Columbia/Duke requirements; Purdue/Case degrees; RIT/Stevens/Ursinus/Miami policies; and a complete gap ledger. The coordinator is reviewing pending-program transport boundaries and Buffalo's shared-family source gaps. Publications are checkpoints, not a stopping condition for accessible research.
+The initial90 partial and six pending inventories now have a pinned, itemized [gap ledger](research/curriculum-gap-triage.md), with accessible work distinguished from access and policy conflicts. Accessible work is proceeding independently of the cohort and CSRankings issues. Current parallel batches cover Northeastern shared course evidence; MIT/Rice/Maryland major policies; Penn/Columbia/Duke requirements; Purdue/Case degrees; RIT/Stevens/Ursinus/Miami policies; and NJIT/Drexel/Lehigh degree policies. The coordinator is reviewing pending-program transport boundaries and Buffalo's shared-family source gaps. Publications are checkpoints, not a stopping condition for accessible research.
 
 ## Latest research and verification
 
@@ -91,3 +91,7 @@ Each adapter's NOTES.md states evidence, interpretations, exact conflicts, metad
 6. **Institution depth:** directory searches alone do not establish absence. Continue bounded catalog/minor/concentration searches and documented leads. No absence conclusion has been asserted.
 
 Use `uv run atlas status`, `uv run atlas candidates`, adapter notes and task-specific skills. Refreshes queue observations for review; they never silently replace the research database.
+
+## Candidate research integration — 2026-10-11
+
+Committed evidence through `351170d0` is ingested in the maintained database. This is a candidate checkpoint, not yet a verified published release: 31 complete / 89 partial / 5 pending; 7838 course observations and 6922 requirement nodes. Michigan HCAI now has a public-handbook inventory; RIT’s two minors have complete scoped policy audits. Source-version conflicts at MIT/Penn/Purdue and home-college applicability at Northeastern remain explicit. Clean-checkout/browser verification and publication are next while accessible research continues.

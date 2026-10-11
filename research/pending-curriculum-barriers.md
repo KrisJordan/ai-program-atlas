@@ -12,3 +12,7 @@ Bounded pass on 2026-10-10 inspected the six program seeds still marked `curricu
 | Furman — Artificial Intelligence BS | `https://www.furman.edu/academics/majors-minors-programs/artificial-intelligence-major/` was password protected in the previous source inspection. | Existing gate retained; not retried. Public directory confirms identity only. |
 
 No protected source was accessed through another route, TLS verification was not disabled, and no access restriction was interpreted as a negative program finding. Future improvements require newly accessible or independently authoritative public requirements, or an explicitly reviewed change in the recorded access condition.
+
+## Public evidence found after the bounded pass
+
+On2026-10-10, Michigan’s independently public, officially linked UMSI handbook and published course spreadsheet were read without authentication or permission changes. The handbook was exported read-only from its anyone-with-link document; the visible course-table iframe fetched successfully through the robots-aware transport. Michigan now has25 courses,18 requirement/policy nodes and a partial inventory, with exact remaining local-policy/registration gaps in its adapter notes. The main-page default HTTP403 persists. The five other pending inventories are unchanged by this update. The table above is the historical bounded-pass record, not the current status for Michigan.
