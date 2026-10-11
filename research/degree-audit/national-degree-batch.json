@@ -251,7 +251,7 @@
     {
       "program_id": "penn-state-ai-engineering-bs",
       "institution_id": "pennsylvania-state-university",
-      "status": "in_progress",
+      "status": "blocked",
       "sources": [
         {
           "url": "https://bulletins.psu.edu/undergraduate/colleges/engineering/artificial-intelligence-engineering-bs/",
@@ -378,17 +378,24 @@
           "locator": "Major-specific department/college guidance",
           "checked_at": "2026-10-11",
           "access_status": "read"
+        },
+        {
+          "url": "https://www.eecs.psu.edu/students/undergraduate/advising/faqs.aspx",
+          "catalog_year": null,
+          "locator": "Full public advising/graduation conditions and linked AIE handbook target where applicable",
+          "checked_at": "2026-10-11",
+          "access_status": "read; ordinary permitted HTTP 200 capture"
         }
       ],
       "checks": {
         "degree_identity": "Current 2026\u201327 University Park degree, explicit B.S.; AIE_BS engineering and AIMA_BS IST are distinct plans. The separate Harrisburg plan is not imported.",
         "required_and_choices": "17 prescribed identities and 13 named alternatives; an OR-with-AND programming route retains its two-course branch.",
-        "elective_pools": "27-hour technical and three-hour nontechnical approved pools remain unspecified in inspected department/catalog pages; no broad prefix pool is substituted. Current official department degree page was also read and confirms the 27/3 allocations without publishing or linking the approved lists. Its condensed additional-course summary does not override the Bulletin\u2019s separate alternatives.",
+        "elective_pools": "The 27-credit technical pool (at least 15 credits at 400 level) and three-credit nontechnical pool are explicit, but their approved memberships remain unavailable. The department page confirms the allocations; the FAQ AIE handbook link loops back to that page. Neither another major\u2019s handbook nor a broad course-prefix list is substituted.",
         "prerequisites": "All named core/immediate-alternative descriptions read. Exact enforced prerequisites/corequisites are additional enrollment conditions and may require preparation outside the displayed major. Their absence from the major core is not a contradiction or a reason to invent a waiver; prerequisite-only identities are not added to the fixed-degree count.",
         "credits_and_units": "Senate 42-00 explicitly defines semester hours. Group amounts remain on choices; individual amounts come from course descriptions. Variable A-I494 research remains null rather than six credits. GE overlap and cultures/writing overlays are not additive course counts.",
         "classification": "29 primary subjects reviewed and one mixed course.",
         "family_composition": "Standalone degree; no inheritance or merged campus family.",
-        "degree_wide_requirements": "Program entrance, grading, GE and overlay rules are mapped. Current Senate83-80 displays its rules and a pending implementation notice. Accessible effective-date/college-policy checks remain unfinished; that research status is not an access denial. Public L-13 clarifies mandatory disclosure and appeal of local-major residence rules; L-4 specifies advance transfer review, syllabus evaluation and official-document deadline. GE142/143 explicitly restrict major-department/cross-listed breadth and exploration use. The Senate-linked pending-revision legislation is robots-disallowed; no revised effective rule is invented. Remaining college-specific applicability is unfinished accessible research."
+        "degree_wide_requirements": "Current Senate 82/83 text, L-13, L-4 and GE 142/143 were read. The displayed residence, GPA and exception rules remain recorded with their pending-implementation notices; no unverified replacement or effective date is inferred. Admission-cohort applicability, program-change resolution, local-residence disclosure, grade/overlap rules and the conditional Schreyer communication route are explicit. Public college advising or graduation procedures were checked. No additional local-residence requirement was found in the inspected program, plan and college sources; the absence is bounded to those pages."
       },
       "expected_profile": {
         "required": {
@@ -472,14 +479,23 @@
           ]
         }
       ],
-      "blockers": [],
-      "correction_status": "Inventory and core metadata corrections applied. Whole-degree audit remains in progress while accessible college/policy and supporting metadata checks continue; no inaccessible source is claimed.",
-      "second_pass_status": "pending"
+      "blockers": [
+        {
+          "issue": "The current degree and department pages require 27 technical-elective credits (15 at 400 level) and three approved nontechnical credits, but do not provide the approved lists. The public EECS FAQ refers readers to an AIE handbook link that returns to the same degree page. Exact eligible finite pools remain unavailable in these inspected public sources.",
+          "url": "https://www.eecs.psu.edu/students/undergraduate/advising/faqs.aspx"
+        },
+        {
+          "issue": "The authoritative current Bulletin refers to the same approved lists without enumerating eligible courses.",
+          "url": "https://bulletins.psu.edu/undergraduate/colleges/engineering/artificial-intelligence-engineering-bs/"
+        }
+      ],
+      "correction_status": "Available named-course, structural and public degree-policy checks completed. Status is blocked only at the specific current-source gaps listed here; missing future-policy details are retained as notices, not invented current requirements.",
+      "second_pass_status": "partial"
     },
     {
       "program_id": "penn-state-ai-methods-applications-ist-bs",
       "institution_id": "pennsylvania-state-university",
-      "status": "in_progress",
+      "status": "blocked",
       "sources": [
         {
           "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
@@ -739,17 +755,24 @@
           "locator": "Major-specific department/college guidance",
           "checked_at": "2026-10-11",
           "access_status": "read"
+        },
+        {
+          "url": "https://ist.psu.edu/current-students/preparing-for-graduation",
+          "catalog_year": null,
+          "locator": "Full public advising/graduation conditions and linked AIE handbook target where applicable",
+          "checked_at": "2026-10-11",
+          "access_status": "read; ordinary permitted HTTP 200 capture"
         }
       ],
       "checks": {
         "degree_identity": "Current 2026\u201327 University Park degree, explicit B.S.; AIE_BS engineering and AIMA_BS IST are distinct plans. The separate Harrisburg plan is not imported.",
-        "required_and_choices": "9 prescribed identities and 160 named options. The six-hour capstone permits a paired AIMA430/440 route or variable research; mixed route interpretation remains unresolved.",
+        "required_and_choices": "Nine prescribed identities and 160 option source records, resolving to 156 canonical options after four verified cross-list groups. The six-credit capstone requires the paired AIMA 430/440 route or A-I 494 research. The illustrative semester plan is not permission for a mixed route or double reuse of research credit.",
         "elective_pools": "All printed technical and application-focus identities captured, including 11 unlinked printed codes. One application focus required; University Park and Commonwealth business routes distinguished. Open CYBER and ROTC conditions are not finite inventories. The 160 option code records map to 156 reviewed canonical identities after four reciprocal cross-list groups; IST301/ETI301 and IST302/ETI302 remain unmerged because their reviewed descriptions do not establish equivalence.",
-        "prerequisites": "All named core/immediate-alternative descriptions read. Exact enforced prerequisites/corequisites are additional enrollment conditions and may require preparation outside the displayed major. Their absence from the major core is not a contradiction or a reason to invent a waiver; prerequisite-only identities are not added to the fixed-degree count. Additional 36 descriptions retain exact enrollment Boolean clauses, concurrent courses, recommended preparation and grade minima. A-I285 and DS402 have three credits per enrollment despite repeatability maximum labels; A-I495 remains variable-credit and subject-unknown. Additional 51 descriptions retain exact enrollment Boolean clauses, concurrent courses, recommended preparation and grade minima. A-I285 and DS402 have three credits per enrollment despite repeatability maximum labels; A-I495 remains variable-credit and subject-unknown. Remaining 76 available descriptions preserve enrollment clauses and relevant explicit credit exclusions. BA301/302/303/304 exclusions do not create cross-list aliases. BLAW243 is unavailable after BA243 and is excluded from Smeal requirements; this degree belongs to IST, so that Smeal exclusion is not generalized to every student. HDFS129/SOC30 GE-credit exclusivity is not a global course identity claim. NUTR119 is non-nutrition-major-only; PLSC449 does not count toward Psychology programs.",
+        "prerequisites": "All 158 available exact source-code descriptions were read. Enrollment Boolean clauses, concurrency, grade minima, recommended preparation and explicit credit exclusions are preserved. Variable research/internship credit is not a fixed maximum. Missing prerequisites are unknown. Eleven absent current descriptions remain unresolved. Course exclusions do not establish cross-list identity, and restrictions for another college or major are not generalized to IST.",
         "credits_and_units": "Senate 42-00 explicitly defines semester hours. Group amounts remain on choices; individual amounts come from course descriptions. Variable A-I494 research remains null rather than six credits. GE overlap and cultures/writing overlays are not additive course counts.",
         "classification": "All 158 available source-code descriptions individually read: 145 primary subjects, 9 mixed and 4 source-inspected unknowns. Eleven degree-list records lack current subject-catalog entries and remain unreviewed. Four source-proved cross-list aliases remain, so canonical identity count is 165 and option count is 156. Classification follows specific descriptions rather than department or focus labels; clinical science, professional business and empirical psychology are substantive application domains, while explicit ethical/political/social analysis is human context.",
         "family_composition": "Standalone degree; no inheritance or merged campus family.",
-        "degree_wide_requirements": "Program entrance, grading, GE and overlay rules are mapped. Current Senate83-80 displays its rules and a pending implementation notice. Accessible effective-date/college-policy checks remain unfinished; that research status is not an access denial. Public L-13 clarifies mandatory disclosure and appeal of local-major residence rules; L-4 specifies advance transfer review, syllabus evaluation and official-document deadline. GE142/143 explicitly restrict major-department/cross-listed breadth and exploration use. The Senate-linked pending-revision legislation is robots-disallowed; no revised effective rule is invented. Remaining college-specific applicability is unfinished accessible research. College AIMA guidance confirms major entrance and Bulletin focus lists. The college FAQ explicitly exempts AIMA from the usual internship graduation requirement; no IST495 obligation is added. Its external-transfer admission restriction is distinguished from enrolled-student outside-credit review."
+        "degree_wide_requirements": "Current Senate 82/83 text, L-13, L-4 and GE 142/143 were read. The displayed residence, GPA and exception rules remain recorded with their pending-implementation notices; no unverified replacement or effective date is inferred. Admission-cohort applicability, program-change resolution, local-residence disclosure, grade/overlap rules and the conditional Schreyer communication route are explicit. Public college advising or graduation procedures were checked. No additional local-residence requirement was found in the inspected program, plan and college sources; the absence is bounded to those pages. The AIMA-specific internship exception controls over generic IST guidance; external-transfer admission is distinct from an enrolled student\u2019s outside-credit review."
       },
       "expected_profile": {
         "required": {
@@ -992,9 +1015,22 @@
           ]
         }
       ],
-      "blockers": [],
-      "correction_status": "Inventory and core metadata corrections applied. Whole-degree audit remains in progress while accessible college/policy and supporting metadata checks continue; no inaccessible source is claimed.",
-      "second_pass_status": "pending"
+      "blockers": [
+        {
+          "issue": "Nine published option codes have no current IST description entry: 301, 302, 311, 331, 411, 413, 451, 454 and 456. Exact metadata and any replacement identities remain unverified.",
+          "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/ist/"
+        },
+        {
+          "issue": "Published option SRA 221 has no current subject-directory entry.",
+          "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/sra/"
+        },
+        {
+          "issue": "Published option PHIL 433 has no current subject-directory entry.",
+          "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/phil/"
+        }
+      ],
+      "correction_status": "Available named-course, structural and public degree-policy checks completed. Status is blocked only at the specific current-source gaps listed here; missing future-policy details are retained as notices, not invented current requirements.",
+      "second_pass_status": "partial"
     },
     {
       "program_id": "miami-ai-technologies-business-bsba",
@@ -1014,15 +1050,78 @@
           "locator": "Twelve degree-listed BTE blocks: descriptions, credits and prerequisite/requisite clauses",
           "checked_at": "2026-10-11",
           "access_status": "read"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/bsl/",
+          "catalog_year": null,
+          "locator": "Individually reviewed fixed-course blocks; see seed source locator for exact code subset",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/bus/",
+          "catalog_year": null,
+          "locator": "Individually reviewed fixed-course blocks; see seed source locator for exact code subset",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/eco/",
+          "catalog_year": null,
+          "locator": "Individually reviewed fixed-course blocks; see seed source locator for exact code subset",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/fin/",
+          "catalog_year": null,
+          "locator": "Individually reviewed fixed-course blocks; see seed source locator for exact code subset",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/mas/",
+          "catalog_year": null,
+          "locator": "Individually reviewed fixed-course blocks; see seed source locator for exact code subset",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/mgt/",
+          "catalog_year": null,
+          "locator": "Individually reviewed fixed-course blocks; see seed source locator for exact code subset",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/mth/",
+          "catalog_year": null,
+          "locator": "Individually reviewed fixed-course blocks; see seed source locator for exact code subset",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/umx/",
+          "catalog_year": null,
+          "locator": "Individually reviewed fixed-course blocks; see seed source locator for exact code subset",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/wrs/",
+          "catalog_year": null,
+          "locator": "Individually reviewed fixed-course blocks; see seed source locator for exact code subset",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
         }
       ],
       "checks": {
         "degree_identity": "Current official degree identity and primary requirements reread; exact award and host-college distinction preserved.",
         "required_and_choices": "Read current degree curriculum table, fixed rows, explicit OR choices, major credit pools and writing overlay. Source ranges and open free-elective predicates remain unsummed.",
         "elective_pools": "Numeric elective pools are published credit choices, not contextual notes. The named one-of component inside the four-W writing overlay is required, while overlap with major courses remains permitted. Main-table mapped roles are 21 fixed / 33 named options. The much larger university cognate inventory remains contextual, not a degree workload. No subject labels were inferred from elective or cognate membership.",
-        "prerequisites": "Program-specific approval and specialization conditions retained. Independent full course-description and prerequisite review remains in progress; prerequisite identities are not silently added as fixed obligations.",
+        "prerequisites": "Program-specific approval and specialization conditions retained. Independent full course-description and prerequisite review remains in progress; prerequisite identities are not silently added as fixed obligations. Fixed-course source expressions now include all explicit AND/OR and concurrent conditions, plus visibly unlabeled eligibility lines. Finance-major-specific grades are not applied to AI degrees.",
         "credits_and_units": "Published row/group amounts remain distinct from per-course credits; semester-hour definition is registered in existing university policy evidence. No range or grouped amount is divided between courses.",
-        "classification": "Twelve current BTE blocks independently read: eight reviewed primary subjects, two mixed (210/271), two unclassified variable/special topics (497/499). Corrected programming320/440 to foundations, cloud403 to systems, societal401 to human_context. Other department courses and contextual cognate inventory remain unreviewed.",
+        "classification": "Twelve current BTE blocks independently read: eight reviewed primary subjects, two mixed (210/271), two unclassified variable/special topics (497/499). Corrected programming320/440 to foundations, cloud403 to systems, societal401 to human_context. Other department courses and contextual cognate inventory remain unreviewed. Read 16 additional fixed-course descriptions and their published eligibility clauses; manual content classifications and exact credit amounts are preserved. New dispositions: 14 reviewed, 1 mixed, 1 unclassified. Contextual cognate records are not covered by these reviews.",
         "family_composition": "Standalone concrete degree; no family inheritance or degree variant collapse.",
         "degree_wide_requirements": "Existing college/university policy evidence and unresolved questions remain in the seed audit. Independent rereading of all applicable degree-wide rules is unfinished; the role correction does not establish degree completeness."
       },
@@ -1048,10 +1147,26 @@
           "evidence_urls": [
             "https://bulletin.miami.edu/courses-az/bte/"
           ]
+        },
+        {
+          "issue": "Fixed-course metadata and subject labels had not been independently checked against complete current descriptions.",
+          "correction": "Read 16 additional fixed-course descriptions and their published eligibility clauses; manual content classifications and exact credit amounts are preserved.",
+          "status": "corrected_for_fixed_subset",
+          "evidence_urls": [
+            "https://bulletin.miami.edu/courses-az/bsl/",
+            "https://bulletin.miami.edu/courses-az/bus/",
+            "https://bulletin.miami.edu/courses-az/eco/",
+            "https://bulletin.miami.edu/courses-az/fin/",
+            "https://bulletin.miami.edu/courses-az/mas/",
+            "https://bulletin.miami.edu/courses-az/mgt/",
+            "https://bulletin.miami.edu/courses-az/mth/",
+            "https://bulletin.miami.edu/courses-az/umx/",
+            "https://bulletin.miami.edu/courses-az/wrs/"
+          ]
         }
       ],
       "blockers": [],
-      "correction_status": "Source-backed role correction tested; comprehensive correctness audit remains in progress.",
+      "correction_status": "Primary-table roles and fixed-course metadata corrected; remaining named options, cognate content and policy scope remain under audit.",
       "second_pass_status": "pending"
     },
     {
@@ -1065,15 +1180,36 @@
           "locator": "Current degree requirements table and surrounding applicability/alternative prose",
           "checked_at": "2026-10-11",
           "access_status": "read"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/csc/",
+          "catalog_year": null,
+          "locator": "Individually reviewed fixed-course blocks; see seed source locator for exact code subset",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/mth/",
+          "catalog_year": null,
+          "locator": "Individually reviewed fixed-course blocks; see seed source locator for exact code subset",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/wrs/",
+          "catalog_year": null,
+          "locator": "Individually reviewed fixed-course blocks; see seed source locator for exact code subset",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
         }
       ],
       "checks": {
         "degree_identity": "Current official degree identity and primary requirements reread; exact award and host-college distinction preserved.",
         "required_and_choices": "Read current degree curriculum table, fixed rows, explicit OR choices, major credit pools and writing overlay. Source ranges and open free-elective predicates remain unsummed.",
         "elective_pools": "Numeric elective pools are published credit choices, not contextual notes. The named one-of component inside the four-W writing overlay is required, while overlap with major courses remains permitted. Main-table mapped roles are 13 fixed / 44 named options. The much larger university cognate inventory remains contextual, not a degree workload. No subject labels were inferred from elective or cognate membership.",
-        "prerequisites": "Program-specific approval and specialization conditions retained. Independent full course-description and prerequisite review remains in progress; prerequisite identities are not silently added as fixed obligations.",
+        "prerequisites": "Program-specific approval and specialization conditions retained. Independent full course-description and prerequisite review remains in progress; prerequisite identities are not silently added as fixed obligations. Fixed-course source expressions now include all explicit AND/OR and concurrent conditions, plus visibly unlabeled eligibility lines. Finance-major-specific grades are not applied to AI degrees.",
         "credits_and_units": "Published row/group amounts remain distinct from per-course credits; semester-hour definition is registered in existing university policy evidence. No range or grouped amount is divided between courses.",
-        "classification": "No new classification review claimed in this bounded role correction. Source-backed individual subject audit remains in progress.",
+        "classification": "No new classification review claimed in this bounded role correction. Source-backed individual subject audit remains in progress. Read 13 additional fixed-course descriptions and their published eligibility clauses; manual content classifications and exact credit amounts are preserved. New dispositions: 1 mixed, 12 reviewed. Contextual cognate records are not covered by these reviews.",
         "family_composition": "Standalone concrete degree; no family inheritance or degree variant collapse.",
         "degree_wide_requirements": "Existing college/university policy evidence and unresolved questions remain in the seed audit. Independent rereading of all applicable degree-wide rules is unfinished; the role correction does not establish degree completeness."
       },
@@ -1091,10 +1227,20 @@
           "evidence_urls": [
             "https://bulletin.miami.edu/undergraduate-academic-programs/arts-sciences/computer-science/data-science-and-ai-bs/"
           ]
+        },
+        {
+          "issue": "Fixed-course metadata and subject labels had not been independently checked against complete current descriptions.",
+          "correction": "Read 13 additional fixed-course descriptions and their published eligibility clauses; manual content classifications and exact credit amounts are preserved.",
+          "status": "corrected_for_fixed_subset",
+          "evidence_urls": [
+            "https://bulletin.miami.edu/courses-az/csc/",
+            "https://bulletin.miami.edu/courses-az/mth/",
+            "https://bulletin.miami.edu/courses-az/wrs/"
+          ]
         }
       ],
       "blockers": [],
-      "correction_status": "Source-backed role correction tested; comprehensive correctness audit remains in progress.",
+      "correction_status": "Primary-table roles and fixed-course metadata corrected; remaining named options, cognate content and policy scope remain under audit.",
       "second_pass_status": "pending"
     },
     {
@@ -1115,15 +1261,78 @@
           "locator": "Twelve degree-listed BTE blocks: descriptions, credits and prerequisite/requisite clauses",
           "checked_at": "2026-10-11",
           "access_status": "read"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/acc/",
+          "catalog_year": null,
+          "locator": "Individually reviewed fixed-course blocks; see seed source locator for exact code subset",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/bsl/",
+          "catalog_year": null,
+          "locator": "Individually reviewed fixed-course blocks; see seed source locator for exact code subset",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/bus/",
+          "catalog_year": null,
+          "locator": "Individually reviewed fixed-course blocks; see seed source locator for exact code subset",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/eco/",
+          "catalog_year": null,
+          "locator": "Individually reviewed fixed-course blocks; see seed source locator for exact code subset",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/fin/",
+          "catalog_year": null,
+          "locator": "Individually reviewed fixed-course blocks; see seed source locator for exact code subset",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/mas/",
+          "catalog_year": null,
+          "locator": "Individually reviewed fixed-course blocks; see seed source locator for exact code subset",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/mgt/",
+          "catalog_year": null,
+          "locator": "Individually reviewed fixed-course blocks; see seed source locator for exact code subset",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/umx/",
+          "catalog_year": null,
+          "locator": "Individually reviewed fixed-course blocks; see seed source locator for exact code subset",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/wrs/",
+          "catalog_year": null,
+          "locator": "Individually reviewed fixed-course blocks; see seed source locator for exact code subset",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
         }
       ],
       "checks": {
         "degree_identity": "Current official degree identity and primary requirements reread; exact award and host-college distinction preserved.",
         "required_and_choices": "Read current degree curriculum table, fixed rows, explicit OR choices, major credit pools and writing overlay. Source ranges and open free-elective predicates remain unsummed.",
         "elective_pools": "Numeric elective pools are published credit choices, not contextual notes. The named one-of component inside the four-W writing overlay is required, while overlap with major courses remains permitted. Main-table mapped roles are 22 fixed / 21 named options. The much larger university cognate inventory remains contextual, not a degree workload. No subject labels were inferred from elective or cognate membership.",
-        "prerequisites": "Program-specific approval and specialization conditions retained. Independent full course-description and prerequisite review remains in progress; prerequisite identities are not silently added as fixed obligations.",
+        "prerequisites": "Program-specific approval and specialization conditions retained. Independent full course-description and prerequisite review remains in progress; prerequisite identities are not silently added as fixed obligations. Fixed-course source expressions now include all explicit AND/OR and concurrent conditions, plus visibly unlabeled eligibility lines. Finance-major-specific grades are not applied to AI degrees.",
         "credits_and_units": "Published row/group amounts remain distinct from per-course credits; semester-hour definition is registered in existing university policy evidence. No range or grouped amount is divided between courses.",
-        "classification": "Twelve current BTE blocks independently read: eight reviewed primary subjects, two mixed (210/271), two unclassified variable/special topics (497/499). Corrected programming320/440 to foundations, cloud403 to systems, societal401 to human_context. Other department courses and contextual cognate inventory remain unreviewed.",
+        "classification": "Twelve current BTE blocks independently read: eight reviewed primary subjects, two mixed (210/271), two unclassified variable/special topics (497/499). Corrected programming320/440 to foundations, cloud403 to systems, societal401 to human_context. Other department courses and contextual cognate inventory remain unreviewed. Read 16 additional fixed-course descriptions and their published eligibility clauses; manual content classifications and exact credit amounts are preserved. New dispositions: 14 reviewed, 1 mixed, 1 unclassified. Contextual cognate records are not covered by these reviews.",
         "family_composition": "Standalone concrete degree; no family inheritance or degree variant collapse.",
         "degree_wide_requirements": "Existing college/university policy evidence and unresolved questions remain in the seed audit. Independent rereading of all applicable degree-wide rules is unfinished; the role correction does not establish degree completeness."
       },
@@ -1149,10 +1358,26 @@
           "evidence_urls": [
             "https://bulletin.miami.edu/courses-az/bte/"
           ]
+        },
+        {
+          "issue": "Fixed-course metadata and subject labels had not been independently checked against complete current descriptions.",
+          "correction": "Read 16 additional fixed-course descriptions and their published eligibility clauses; manual content classifications and exact credit amounts are preserved.",
+          "status": "corrected_for_fixed_subset",
+          "evidence_urls": [
+            "https://bulletin.miami.edu/courses-az/acc/",
+            "https://bulletin.miami.edu/courses-az/bsl/",
+            "https://bulletin.miami.edu/courses-az/bus/",
+            "https://bulletin.miami.edu/courses-az/eco/",
+            "https://bulletin.miami.edu/courses-az/fin/",
+            "https://bulletin.miami.edu/courses-az/mas/",
+            "https://bulletin.miami.edu/courses-az/mgt/",
+            "https://bulletin.miami.edu/courses-az/umx/",
+            "https://bulletin.miami.edu/courses-az/wrs/"
+          ]
         }
       ],
       "blockers": [],
-      "correction_status": "Source-backed role correction tested; comprehensive correctness audit remains in progress.",
+      "correction_status": "Primary-table roles and fixed-course metadata corrected; remaining named options, cognate content and policy scope remain under audit.",
       "second_pass_status": "pending"
     },
     {
@@ -1166,15 +1391,43 @@
           "locator": "Current degree requirements table and surrounding applicability/alternative prose",
           "checked_at": "2026-10-11",
           "access_status": "read"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/csc/",
+          "catalog_year": null,
+          "locator": "Individually reviewed fixed-course blocks; see seed source locator for exact code subset",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/dsc/",
+          "catalog_year": null,
+          "locator": "Individually reviewed fixed-course blocks; see seed source locator for exact code subset",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/mth/",
+          "catalog_year": null,
+          "locator": "Individually reviewed fixed-course blocks; see seed source locator for exact code subset",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/wrs/",
+          "catalog_year": null,
+          "locator": "Individually reviewed fixed-course blocks; see seed source locator for exact code subset",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
         }
       ],
       "checks": {
         "degree_identity": "Current official degree identity and primary requirements reread; exact award and host-college distinction preserved.",
         "required_and_choices": "Read current degree curriculum table, fixed rows, explicit OR choices, major credit pools and writing overlay. Source ranges and open free-elective predicates remain unsummed.",
         "elective_pools": "Numeric elective pools are published credit choices, not contextual notes. The named one-of component inside the four-W writing overlay is required, while overlap with major courses remains permitted. Main-table mapped roles are 7 fixed / 39 named options. The much larger university cognate inventory remains contextual, not a degree workload. No subject labels were inferred from elective or cognate membership.",
-        "prerequisites": "Program-specific approval and specialization conditions retained. Independent full course-description and prerequisite review remains in progress; prerequisite identities are not silently added as fixed obligations.",
+        "prerequisites": "Program-specific approval and specialization conditions retained. Independent full course-description and prerequisite review remains in progress; prerequisite identities are not silently added as fixed obligations. Fixed-course source expressions now include all explicit AND/OR and concurrent conditions, plus visibly unlabeled eligibility lines. Finance-major-specific grades are not applied to AI degrees.",
         "credits_and_units": "Published row/group amounts remain distinct from per-course credits; semester-hour definition is registered in existing university policy evidence. No range or grouped amount is divided between courses.",
-        "classification": "No new classification review claimed in this bounded role correction. Source-backed individual subject audit remains in progress.",
+        "classification": "No new classification review claimed in this bounded role correction. Source-backed individual subject audit remains in progress. Read 7 additional fixed-course descriptions and their published eligibility clauses; manual content classifications and exact credit amounts are preserved. New dispositions: 1 mixed, 6 reviewed. Contextual cognate records are not covered by these reviews.",
         "family_composition": "Standalone concrete degree; no family inheritance or degree variant collapse.",
         "degree_wide_requirements": "Existing college/university policy evidence and unresolved questions remain in the seed audit. Independent rereading of all applicable degree-wide rules is unfinished; the role correction does not establish degree completeness."
       },
@@ -1192,10 +1445,21 @@
           "evidence_urls": [
             "https://bulletin.miami.edu/undergraduate-academic-programs/arts-sciences/computer-science/data-science-and-ai-ba/"
           ]
+        },
+        {
+          "issue": "Fixed-course metadata and subject labels had not been independently checked against complete current descriptions.",
+          "correction": "Read 7 additional fixed-course descriptions and their published eligibility clauses; manual content classifications and exact credit amounts are preserved.",
+          "status": "corrected_for_fixed_subset",
+          "evidence_urls": [
+            "https://bulletin.miami.edu/courses-az/csc/",
+            "https://bulletin.miami.edu/courses-az/dsc/",
+            "https://bulletin.miami.edu/courses-az/mth/",
+            "https://bulletin.miami.edu/courses-az/wrs/"
+          ]
         }
       ],
       "blockers": [],
-      "correction_status": "Source-backed role correction tested; comprehensive correctness audit remains in progress.",
+      "correction_status": "Primary-table roles and fixed-course metadata corrected; remaining named options, cognate content and policy scope remain under audit.",
       "second_pass_status": "pending"
     },
     {

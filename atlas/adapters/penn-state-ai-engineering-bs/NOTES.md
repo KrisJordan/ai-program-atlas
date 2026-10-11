@@ -1,66 +1,69 @@
 # Artificial Intelligence Engineering, B.S.
 
-[2026–27 official catalog](https://bulletins.psu.edu/undergraduate/colleges/engineering/artificial-intelligence-engineering-bs/) reviewed2026-10-11, HTTP200. University Park / College of Engineering, University Park; planAIE_BS. Explicit BS award and numeric degree minimum parsed from requirement body, not an unrelated directory title.
+[Official catalog](https://bulletins.psu.edu/undergraduate/colleges/engineering/artificial-intelligence-engineering-bs/),
+University Park, College of Engineering, plan AIE_BS. Degree minimum: 126 semester
+hours. Primary correctness audit: **blocked**; full inventory remains partial.
 
-Partial: this discovery pass does not structure the accessible major curriculum or GE/overlap/degreewide policy branches. Next: full published requirement tables, cohort-specific entrance rules and degreewide audit. Keep Harrisburg Capital college separately scoped and excluded from University Park roster. No launch date inferred.
+The source-derived named graph contains **17 fixed identities and 13 options**.
+All 30 current descriptions have reviewed dispositions: 29 primary subjects and
+one mixed course. Programming, speech and composition alternatives preserve
+whole sequences. The 102–103-hour major includes 21 overlapping general education
+hours; the remaining 24 general education hours must be distinct.
 
-## Degree correctness pass — 2026-10-11
+## Evidence and interpretation — 2026-10-11
 
-The 2026–27 program table and current course-description pages were read, not
-merely fetched or replayed. The earlier empty graph is replaced by prescribed
-rows, OR alternatives, whole AND sequences, source credit amounts and actual
-selection rules. Major entrance preparation remains an enrollment condition;
-it is not another required-course list. General education overlap and culture/
-writing overlays are not summed as additional credits. Senate 42-00 explicitly
-defines semester hours. Parsers never emit a manual audit or category review.
+The current 2026–27 Bulletin major table, entrance conditions, suggested plan,
+current available named-course descriptions and public degree policies were
+read. The major table controls whole course sequences and alternatives. An
+illustrative semester plan does not authorize mixed capstone routes, extra
+research-credit reuse or blanket prerequisite waivers. Prerequisite-only
+preparation is not added to fixed degree requirements. General education,
+cultures, writing and major overlap are represented without double summation.
+Semester hours are explicitly supported by Senate 42-00; no conversion is inferred.
+Harrisburg/Capital College offerings are outside these University Park records.
 
-The named core/immediate alternatives have independent subject reviews based on
-current descriptions. A-I 305 is algorithmic foundations; A-I 410 is deployment
-systems; AIE 355 and MATH 225 are mathematical methods, despite AI/ML titles.
-AIE 489W and DS 200 retain mixed classifications; individually defined A-I 494
-research stays unclassified. Exact current prerequisite/corequisite clauses are
-retained, including conditions absent from the displayed major core. No blanket
-waiver and no extra universal degree course is invented.
+[Senate 82/83](https://senate.psu.edu/students/policies-and-rules-for-undergraduate-students/82-00-and-83-00-degree-requirements/)
+is recorded as currently displayed, including the pending-implementation notices.
+The displayed admission-cohort rule, 2.00 GPA, designated C minima, exception
+procedures and 36-of-final-60/five-year residence rules are explicit. The June 23
+and March 31 revisions are not silently treated as effective replacements.
+The linked legislation is robots-disallowed and was not accessed. Missing future
+implementation detail is not a claim that the displayed current rule is unknown.
+[L-13](https://aappm.psu.edu/policy/l-13-limitations-on-source-and-time-for-credit-acquisition),
+[L-4](https://aappm.psu.edu/policy/l-4-completion-of-degree-requirements-at-other-institutions)
+and GE 142/143 provide the recorded disclosure, transfer-completion and general
+education procedures. No additional local-residence requirement was found in the
+inspected program, plan and college sources; that finding is bounded to these pages.
 
-Engineering has **17 fixed identities and 13 named options**. Its required
-A-I 370 course currently enforces CMPSC 132 and STAT 200/DS 200, plus concurrent
-DS 305/CMPSC 465/CMPSC 462; the major instead permits CMPSC 122 and lists A-I 305.
-Other required/optional courses have additional non-core prerequisites. This is
-a substantive program/course-policy reconciliation question. The degree and
-department pages refer to technical/nontechnical approved lists without exposing
-those lists. They remain an incomplete finite pool, not all CSE courses.
+The plan explicitly gives incoming University Park Schreyer first-year students
+the ENGL/CAS 137H and 138T communication sequence. It remains a conditional
+course-free policy note, not universal extra fixed courses or an unproved identity
+merge. Enrollment permissions, exceptions and appeals are conditional, not granted.
 
-Senate 83-80 currently announces June 23, 2026 revisions with implementation
-pending, while displaying residence/time rules. Effective cohort applicability
-and stricter college conditions remain unresolved. These source questions remain an in-progress policy review; non-core
-prerequisites alone are not contradictory degree obligations. Public course sites/syllabi remain separate metadata work.
+## Rerun and verification
 
-### Audit status clarification
+Source-specific parsers retain changed/missing-source guards and do not emit
+manual audit/category certifications. The policy manifest binds summaries to
+reviewed source-text hashes. Raw captured pages remain outside public commits.
+Closure validation: 31 focused tests; all 53 registered observations replayed
+against actual captures across both programs; isolated two-program SQLite ingest,
+repeat ingest with zero changes, integrity/foreign-key checks and static build.
+The two primary audits are **blocked only at the explicit gaps below**. The
+independent second pass remains partial; no full independent certification is made.
+Public course sites/syllabi and first offering remain separate unverified metadata.
 
-The whole-degree correctness review is **in progress**, not access-blocked.
-Non-core prerequisites are known conditional preparation, not contradictory
-degree rules; they do not independently prevent verification. The authoritative
-program table controls capstone grouping, and the illustrative semester plan does
-not grant additional mixed-route permission. College/policy applicability and
-supporting-course descriptive evidence remain accessible work to finish.
+## Exact remaining gap and next check
 
-### Public university procedures — 2026-10-11
+The [department degree page](https://www.eecs.psu.edu/students/undergraduate/artificial-intelligence-engineering-bs.aspx)
+and Bulletin require 27 approved technical-elective credits (at least 15 at
+400 level) and three approved nontechnical credits without enumerating the lists.
+The [EECS FAQ](https://www.eecs.psu.edu/students/undergraduate/advising/faqs.aspx)
+AIE handbook link returns to that same degree page. The FAQ's common substitution,
+entrance-petition and prerequisite-override procedures are recorded, as is its
+STAT 480–483 restriction; rules explicitly naming other majors are not extended.
 
-Read the official L-13 residence disclosure procedure, L-4 external-credit
-completion procedure and GE142/143 rules. Source-guarded notes preserve local
-major-credit disclosure and appeal, advance transfer evaluation and the
-30-days-before-last-class official-document deadline, and GE breadth/exploration
-restrictions involving the major department and cross-listed courses. The exact
-Senate83-80 pending-revision legislation is robots-disallowed; no revised rule or
-effective date is inferred. The displayed policy remains distinguished from the
-pending revision. College-specific applicability remains unfinished.
-
-### Department list check — 2026-10-11
-
-Read the official EECS AI Engineering degree page. It repeats the 27 approved
-technical-elective credits (15 at the 400 level) and three approved nontechnical
-credits, but publishes no finite approved list or list link. No courses are
-borrowed from another engineering major's elective inventory. Its condensed
-additional-course summary does not replace the more explicit Bulletin
-programming sequences and speech alternatives. The exact list boundary remains
-unfinished/unresolved, not evidence that there are no approved electives.
+Next: revisit an actual public AIE handbook or approved-list publication when
+available. Do not substitute another engineering major's list or treat every
+course prefix as eligible. Missing list members cannot yet receive course-level
+metadata, role or subject certification. Additional preparation for individual
+courses is a conditional enrollment route, not by itself a contradictory degree rule.

@@ -128,7 +128,7 @@ def test_psu_sequence_alternative_parser_synthetic():
  <tr class="orclass"><td><a class="code">CMPSC 121</a> &amp; <a class="code">DS 120</a></td><td>Example sequence I<br>and Example sequence II</td></tr>
  </tbody></table>
  2.00 grade-point average; 6 credits are required and may satisfy other requirements; 3 credits required from the college of graduation; up to 24 credits of course work in the major; Foundations (grade of C or better is required; Inter-Domain Courses (Inter-Domain): 6 credits; 102-103; 21 of the 45 credits; remaining 24 General Education credits must be distinct
- </div>'''
+ </div><div id="suggestedacademicplantextcontainer">All incoming Schreyer Honors College first-year students at University Park; ENGL 137H; ENGL 138T; Each course is 3 credits</div>'''
  result=parse_degree(html,pid)
  alt=next(r for r in result['requirements'] if r['kind']=='alternative')
  branches=[r for r in result['requirements'] if r['parent_id']==alt['id']]
@@ -138,6 +138,8 @@ def test_psu_sequence_alternative_parser_synthetic():
  assert 'curriculum_audit' not in result
  with pytest.raises(ValueError,match='course table missing'):
   parse_degree(html.replace('sc_courselist','other'),pid)
+ with pytest.raises(ValueError,match='academic plan policy section missing'):
+  parse_degree(html.replace('suggestedacademicplantextcontainer','missing-policy-panel'),pid)
 
 
 def test_psu_real_identity_export_preserves_unproved_slash_pairs(tmp_path):

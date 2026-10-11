@@ -1,128 +1,81 @@
-# Artificial Intelligence Methods and Applications, B.S. (Information Sciences and Technology)
+# Artificial Intelligence Methods and Applications, B.S. (IST)
 
-[2026–27 official catalog](https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/) reviewed 2026-10-11, HTTP 200. University Park / College of Information Sciences and Technology, University Park; plan AIMA_BS. Explicit BS award and numeric degree minimum parsed from requirement body, not an unrelated directory title.
+[Official catalog](https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/),
+University Park, College of Information Sciences and Technology, plan AIMA_BS.
+Degree minimum: 120 semester hours. Primary correctness audit: **blocked**;
+full inventory remains partial.
 
-Partial: the major tables, named supporting options and public university procedures are mapped. Remaining college-specific policy applicability and course-description gaps prevent a full degree audit. Harrisburg Capital College remains separately scoped and excluded from the University Park roster. No launch date is inferred.
+The graph has **9 fixed identities and 156 canonical options** from 169 source
+records. Four explicit reciprocal groups remove four aliases: DS 410/CMPSC 410,
+DS 442/CMPSC 442, MATH 318/STAT 318 and MATH 414/STAT 414. Unproved IST/ETI slash
+pairs, credit exclusions and similar titles do not establish identity.
+All 158 available exact-code descriptions were read: 145 primary subjects,
+nine mixed and four reviewed unclassified; eleven current entries are missing.
 
-## Degree correctness pass — 2026-10-11
+The nine-hour technical pool retains its three-at-400-level minimum. Application
+support requires one nine-hour focus sequence, its level minimum and six-hour
+ROTC cap. The Commonwealth-campus business list is excluded. Open CYBER and ROTC
+predicates add no invented finite list. The six-hour capstone permits the paired
+AIMA 430/440 route or A-I 494 research, not an inferred mixed route. Variable
+research/internship credit has no invented scalar maximum. The 67-hour major
+includes six overlapping GQ hours, with 45 GE and 14 free-elective hours overall.
 
-The 2026–27 program table and current course-description pages were read, not
-merely fetched or replayed. The earlier empty graph is replaced by prescribed
-rows, OR alternatives, whole AND sequences, source credit amounts and actual
-selection rules. Major entrance preparation remains an enrollment condition;
-it is not another required-course list. General education overlap and culture/
-writing overlays are not summed as additional credits. Senate 42-00 explicitly
-defines semester hours. Parsers never emit a manual audit or category review.
+## Evidence and interpretation — 2026-10-11
 
-The named core/immediate alternatives have independent subject reviews based on
-current descriptions. A-I 305 is algorithmic foundations; A-I 410 is deployment
-systems; AIE 355 and MATH 225 are mathematical methods, despite AI/ML titles.
-AIE 489W and DS 200 retain mixed classifications; individually defined A-I 494
-research stays unclassified. Exact current prerequisite/corequisite clauses are
-retained, including conditions absent from the displayed major core. No blanket
-waiver and no extra universal degree course is invented.
+The current 2026–27 Bulletin major table, entrance conditions, suggested plan,
+current available named-course descriptions and public degree policies were
+read. The major table controls whole course sequences and alternatives. An
+illustrative semester plan does not authorize mixed capstone routes, extra
+research-credit reuse or blanket prerequisite waivers. Prerequisite-only
+preparation is not added to fixed degree requirements. General education,
+cultures, writing and major overlap are represented without double summation.
+Semester hours are explicitly supported by Senate 42-00; no conversion is inferred.
+Harrisburg/Capital College offerings are outside these University Park records.
 
-IST has **9 fixed identities and 160 named options**, after deduplication of
-identities reused in multiple pools. The full technical and application lists
-are printed below the suggested academic plan. Eleven entries have visible
-codes but no catalog link; they remain eligible-list observations with unknown
-metadata. University Park business choices are included; the differently scoped
-Commonwealth business choices are not silently imported. The open CYBER 300/400
-rule and ROTC prefix rules remain predicates, not invented course inventories.
-Application options require choosing one focus and a nine-hour sequence, with
-the stated level minimum and ROTC cap. Cross-listed alternatives do not create
-permission to earn duplicate credit. Code-only subjects remain unreviewed until their individual descriptions are read.
+[Senate 82/83](https://senate.psu.edu/students/policies-and-rules-for-undergraduate-students/82-00-and-83-00-degree-requirements/)
+is recorded as currently displayed, including the pending-implementation notices.
+The displayed admission-cohort rule, 2.00 GPA, designated C minima, exception
+procedures and 36-of-final-60/five-year residence rules are explicit. The June 23
+and March 31 revisions are not silently treated as effective replacements.
+The linked legislation is robots-disallowed and was not accessed. Missing future
+implementation detail is not a claim that the displayed current rule is unknown.
+[L-13](https://aappm.psu.edu/policy/l-13-limitations-on-source-and-time-for-credit-acquisition),
+[L-4](https://aappm.psu.edu/policy/l-4-completion-of-degree-requirements-at-other-institutions)
+and GE 142/143 provide the recorded disclosure, transfer-completion and general
+education procedures. No additional local-residence requirement was found in the
+inspected program, plan and college sources; that finding is bounded to these pages.
 
-The capstone table groups AIMA 430/440 together for six hours; the illustrative
-plan presents research as an alternative in each semester. The primary table controls the whole capstone route; the sample plan does not
-authorize freely mixed combinations or double use of A-I 494 credit.
+The plan explicitly gives incoming University Park Schreyer first-year students
+the ENGL/CAS 137H and 138T communication sequence. It remains a conditional
+course-free policy note, not universal extra fixed courses or an unproved identity
+merge. Enrollment permissions, exceptions and appeals are conditional, not granted.
 
-Senate 83-80 currently announces June 23, 2026 revisions with implementation
-pending, while displaying residence/time rules. Effective cohort applicability
-and stricter college conditions remain unresolved. These source questions remain an in-progress policy review; non-core
-prerequisites alone are not contradictory degree obligations. Public course sites/syllabi remain separate metadata work.
+## Rerun and verification
 
-### Audit status clarification
+Source-specific parsers retain changed/missing-source guards and do not emit
+manual audit/category certifications. The policy manifest binds summaries to
+reviewed source-text hashes. Raw captured pages remain outside public commits.
+Closure validation: 31 focused tests; all 53 registered observations replayed
+against actual captures across both programs; isolated two-program SQLite ingest,
+repeat ingest with zero changes, integrity/foreign-key checks and static build.
+The two primary audits are **blocked only at the explicit gaps below**. The
+independent second pass remains partial; no full independent certification is made.
+Public course sites/syllabi and first offering remain separate unverified metadata.
 
-The whole-degree correctness review is **in progress**, not access-blocked.
-Non-core prerequisites are known conditional preparation, not contradictory
-degree rules; they do not independently prevent verification. The authoritative
-program table controls capstone grouping, and the illustrative semester plan does
-not grant additional mixed-route permission. College/policy applicability and
-supporting-course descriptive evidence remain accessible work to finish.
+## Exact remaining gaps and next checks
 
-### Explicit code aliases
+Published options IST 301/302/311/331/411/413/451/454/456, SRA 221 and PHIL 433 lack
+current entries in the official [IST](https://bulletins.psu.edu/university-course-descriptions/undergraduate/ist/),
+[SRA](https://bulletins.psu.edu/university-course-descriptions/undergraduate/sra/)
+and [PHIL](https://bulletins.psu.edu/university-course-descriptions/undergraduate/phil/)
+directories. List membership is preserved; current descriptions, prerequisites,
+replacements and unsupported cross-list identities remain unknown. Next: revisit
+an exact current listing or documented catalog correction, without substituting
+similarly named ETI courses.
 
-The 160 option **code** identities are not 160 distinct offerings. Current course
-blocks reciprocally confirm four cross-listed pairs: DS410/CMPSC410,
-DS442/CMPSC442, MATH318/STAT318, and MATH414/STAT414. All eight records remain,
-with four manually reviewed identity groups; the known canonical option count
-is **156**. This is still a named inventory, not a student course load.
-
-IST301/ETI301 and IST302/ETI302 are only slash-paired in the degree table. The
-current ETI descriptions do not assert cross-listing, and the current IST
-listing lacks the old codes. They remain separate until an authoritative
-equivalence statement is found; they must not be merged from matching titles.
-
-### Review-state correction
-
-The earlier correction removed category_review from 138 unread supporting
-identities. The continuation below records actual subsequent description reviews. Degree-list inspection
-is not a completed subject review. A-I494 retains source-inspected unclassified
-status because its actual description leaves the research subject individually
-determined. Four cross-list groups and all mapped role counts are unchanged.
-
-### Supporting descriptions and public policy continuation — 2026-10-11
-
-Fifty-one additional course descriptions were individually read. The source-code
-inventory now has 72 primary-subject reviews, seven mixed reviews, three
-source-inspected unknowns and 87 genuinely unreviewed records. These totals
-include the four retained cross-listed alias records; the profile still counts
-nine fixed and 156 canonical option identities. The new descriptions distinguish
-human/animal learning from machine learning, physical robotics practice from AI
-methods, database infrastructure from data analysis, and professional project
-management from software construction. Variable internships and selected
-emerging topics do not receive a fabricated stable subject. Per-enrollment
-three-credit amounts are separate from repeatability maxima.
-
-Nine degree-listed IST codes (301, 302, 311, 331, 411, 413, 451, 454 and 456) and
-SRA221 have no descriptions in their current official subject listings. They
-remain degree-list identities without inferred replacements or aliases. PSYCH455
-explicitly lists PSYCH260A in an eligibility alternative; that exact source code
-is preserved, not silently changed to the separately listed PSYCH260.
-
-Public L-13, L-4 and GE142/143 policies now supply source-guarded residence
-disclosure, transfer review/deadline, distribution and major-department overlap
-rules. The exact legislation linked from Senate83-80 is robots-disallowed.
-The displayed existing residence rules and the pending-implementation notice
-are both retained; no revised effective policy is guessed. College-specific
-implementation and remaining course descriptions remain unfinished. The whole
-degree audit stays in progress.
-
-### Named-option description pass closed — 2026-10-11
-
-The remaining 76 available descriptions were read individually. Current raw
-coverage is **145 primary subject reviews, nine mixed reviews, four inspected
-unknowns and eleven unreviewed identities whose current subject-catalog entries
-are missing**. Thus 158 of 169 source-code records have description-based
-reviews. The eleven are the nine IST codes above, SRA221 and PHIL433. Missing
-entries do not authorize substitutions, removal from the published option pool,
-or invented aliases. The four proved cross-list groups still yield 165 mapped
-identities overall and 156 option identities.
-
-Accounting, finance, health practice, nutrition and biological-science methods
-are classified by their actual domain content. Ethical, political and explicit
-social analysis are human context; HDFS200's quantitative/statistical procedures
-are mathematics. HPA470 and NUTR291N remain mixed; the very short HDFS216
-skill-enhancement description is insufficient to select a primary subject.
-Credit exclusions, non-major restrictions and actual Boolean prerequisites are
-retained. A credit exclusion is never treated as cross-list evidence.
-
-The official college major page confirms the entrance requirements and directs
-focus-area course selection back to the Bulletin. Its FAQ explicitly exempts
-AIMA from the general IST internship graduation requirement. The current
-University Park external-transfer admissions restriction is distinct from
-transfer-credit review for students already enrolled. The FAQ's general
-custom-focus advice is not used to override the AIMA-specific published list.
-Remaining scope questions concern policy/cohort implementation; current
-course descriptions available for the named inventory have now been read.
+The college's explicit AIMA internship exception prevents imposition of generic
+IST 495. [Graduation procedures](https://ist.psu.edu/current-students/preparing-for-graduation)
+record academic-record/minor review and the application window. Commencement is
+separate from degree conferral; a requested survey is not an invented academic
+course obligation. Non-core prerequisites and external-transfer admission rules
+do not create extra universal requirements.
