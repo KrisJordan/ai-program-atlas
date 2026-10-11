@@ -29,6 +29,18 @@ Rice received a fresh independent 14-source review of all 43 represented course 
 - Live public JSON matched these counts, and every projected curriculum profile and award bucket matched the source data. Live checks passed cohort tabs, BS/BSE/BA/Other filters, keyboard navigation, hidden comparison selection, profile toggling, reload/back/forward, comparison-clear focus, direct new and existing pages and 390px mobile layout. Screenshots were visually checked; no JavaScript errors or document overflow occurred. Family, empty-state, no-JS and multi-award cases also passed the required browser suite.
 - Dedicated local repository: `ai-program-atlas/` in this Mac Studio task. No existing personal website or unrelated repository was changed. Coordinated Astra high research and implementation use explicit ownership and incremental commits.
 
+## Bounded independent core review — 2026-10-11
+
+The follow-up covers all **63 primary degree records** with separate fixed-requirement, choice-rule and chart-classification judgments. It does not replace whole-degree policy certification. Fixed requirements are **47 verified within stated scope, three partial and 13 not verified from available evidence**. Choice rules are one verified, 59 partial and three unverified; classification is two verified, 59 partial and two unverified. Partial dimensions name the checked fixed/core scope separately from broader option/context evidence. The two audited/61 blocked primary whole-degree statuses remain unchanged.
+
+Actual source rereads produced six subject corrections: NJIT MGMT 422; USF PSY 2012; Northeastern CRIM 3600 and INTL 2718; UCSB CMPSC 25 and CMPSC 183. Their recorded fixed memberships are unchanged. UCSD SIO 109/POLI 117 now has a reciprocal source-verified identity and reconciled mixed classification: eight fixed and 119 option identities remain, while contextual identities change 2,241→2,240 from the same 2,241 source records. The separate online pair is not merged with the in-person pair. CHEM 174/SIO 141 reconciliation is completed to the available-source boundary; the missing current SIO 141 body/version prevents a verified merge and remains explicit. No denied source, including MIT Stellar, was retried.
+
+Rice retains its source-backed 13 fixed/26 option identities and three computing-foundations courses. Its three bounded dimensions are verified; the unrelated residence-policy conflict remains a whole-degree blocker. WPI’s explicitly exhaustive three-of-three DS foundation sequence was independently checked and retained as fixed under a narrow manual source judgment, with guards rejecting changes to its exact heading or membership. No generic choice-pool promotion was introduced.
+
+Each new `independent-core-*.json` ledger records actual source locators, bounded conclusions, exact checked course sets/counts or null for unchecked totals, and a pinned digest of resolved facts. Compiler/export checks reject stale identities, changed quantities and duplicate ownership. Degree pages expose those dimensions alongside whole-degree status. Missing review and attempted-but-unverified evidence have distinct labels. Broad GE re-extraction was outside this bounded task; existing policy, identity/version and access gaps are preserved, not replaced by claims of complete curriculum or full target-cohort coverage.
+
+Validation/publication of this follow-up is in progress; the previously verified public checkpoint below remains c90c128e until the new clean-build and live checks pass.
+
 ## Published coverage
 
 | Measure | Verified count |
