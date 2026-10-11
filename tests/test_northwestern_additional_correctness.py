@@ -52,6 +52,7 @@ def test_open_choices_bundles_and_exact_policy_conflicts():
     advanced=next(r for r in mc['requirements']if r['title']=='Four advanced electives')
     assert advanced['kind']=='choose_courses' and advanced['count']==4 and len(advanced['course_ids'])==14
     assert any(len(r['course_ids'])==3 and r['kind']=='all' for r in non['requirements'])
+    assert all('only one of' in c['prerequisites']for c in non['courses']if c['code']in ['COMP_SCI 150-0','GEN_ENG 150-0'])
     assert any('MATH 230-2' in x and 'excludes' in x for x in mc['curriculum_audit']['unresolved_requirements'])
     assert any('MATH 228-1' in x and 'McCormick students only' in x for x in non['curriculum_audit']['unresolved_requirements'])
     primary=next(r for r in mc['requirements']if r['title']=='Primary McCormick major uniqueness')

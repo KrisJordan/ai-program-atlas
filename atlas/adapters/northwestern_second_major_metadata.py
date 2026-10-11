@@ -7,6 +7,14 @@ from bs4 import BeautifulSoup
 from atlas.adapters.national_curriculum_common import clean, course
 from atlas.adapters.northwestern_degree_metadata import eligibility
 
+def course_conditions(body):
+    existing=eligibility(body)
+    extra=re.search(r'Students may receive credit for only one.*',body)
+    if extra and (existing is None or body.index(extra[0])<body.index(existing)):
+        return extra[0]
+    return existing
+
+
 MANIFEST=json.loads(Path(__file__).with_name('northwestern_second_major_course_reviews.json').read_text())
 
 
@@ -27,7 +35,7 @@ def parse_descriptions(html, *, pid, department):
         desc=block.select_one('.courseblockdesc');body=clean(desc.get_text(' ',strip=True))if desc else ''
         digest=hashlib.sha256(body.encode()).hexdigest()
         c=course(pid,code,review['program_title'] if review['topic_specific']else match[1],pid+'-courses-'+department,review['url'],credits=float(match[2]),unit='units')
-        c['id']=pid+'-'+suffix;c['prerequisites']=eligibility(body)
+        c['id']=pid+'-'+suffix;c['prerequisites']=course_conditions(body)
         if digest==review['description_sha256'] and not review['topic_specific']:
             c['description']=review['description'];c['category']=review['category']
         elif digest!=review['description_sha256']:changed.append(code)
