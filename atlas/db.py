@@ -6,6 +6,7 @@ import hashlib
 import json
 import re
 import sqlite3
+import zlib
 from datetime import datetime, timezone
 from contextlib import contextmanager
 from itertools import count
@@ -55,6 +56,22 @@ def digest(value) -> str:
     return hashlib.sha256(canonical(value).encode()).hexdigest()
 
 
+def _compress_revision(text: str, content_hash: str) -> bytes:
+    raw = text.encode("utf-8")
+    json.loads(text)
+    if hashlib.sha256(raw).hexdigest() != content_hash:
+        raise ValueError("Revision content hash mismatch")
+    return zlib.compress(raw, level=9)
+
+
+def revision_record(row) -> dict:
+    """Decode a revision row and verify its original canonical-content hash."""
+    raw = zlib.decompress(row["record_zlib"])
+    if hashlib.sha256(raw).hexdigest() != row["content_hash"]:
+        raise ValueError("Revision content hash mismatch")
+    return json.loads(raw)
+
+
 def connect(path: str | Path) -> sqlite3.Connection:
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -66,6 +83,9 @@ def connect(path: str | Path) -> sqlite3.Connection:
 
 
 def migrate(conn: sqlite3.Connection) -> None:
+    # Used only by the transactional history-storage migration. The resulting
+    # database needs no SQLite extension or custom function for ordinary reads.
+    conn.create_function("atlas_compress_revision", 2, _compress_revision)
     conn.execute(
         "CREATE TABLE IF NOT EXISTS schema_migrations(version INTEGER PRIMARY KEY, applied_at TEXT NOT NULL)"
     )
@@ -365,8 +385,8 @@ def ingest_program(conn, program, run_id=None):
             )
         ingest_membership(conn, program)
         conn.execute(
-            "INSERT OR IGNORE INTO program_revisions(program_id,content_hash,record_json,changed_at,scrape_run_id) VALUES (?,?,?,?,?)",
-            (pid, fingerprint, canonical(program), now(), run_id),
+            "INSERT OR IGNORE INTO program_revisions(program_id,content_hash,record_zlib,changed_at,scrape_run_id) VALUES (?,?,?,?,?)",
+            (pid, fingerprint, _compress_revision(canonical(program), fingerprint), now(), run_id),
         )
         conn.execute(
             "UPDATE institutions SET coverage_status='confirmed',last_inspected=? WHERE id=?",

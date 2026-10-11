@@ -324,7 +324,7 @@ def test_family_migration_keeps_old_full_program_revision(family_database):
     old['requirements'].append(requirement('ai-biology-foundations','ai-biology-catalog',
         courses=['ai-biology-ai','ai-biology-cs']))
     db.ingest_program(conn,old);db.ingest_program(conn,variant)
-    revisions=[json.loads(row[0]) for row in conn.execute('SELECT record_json FROM program_revisions ORDER BY id')]
+    revisions=[db.revision_record(row) for row in conn.execute('SELECT * FROM program_revisions ORDER BY id')]
     assert len(revisions)==2 and revisions[0]==old and revisions[1]==variant
     assert conn.execute('SELECT count(*) FROM requirement_groups').fetchone()[0]==1
     assert len(db.export_data(conn)['programs'][0]['requirements'])==2
