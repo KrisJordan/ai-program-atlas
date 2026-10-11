@@ -560,7 +560,7 @@ def test_actual_literature_fall2025_upgrade_and_public_heading_only_boundary():
     saved=[o for r in MANIFEST['courses'].values() for o in r['observations'] if o['source_id']=='mit-ai-hass-review-literature-fall2025']
     assert len(saved)==6 and all(o['observation_digest'] in hashes for o in saved)
     checks=[r for r in MANIFEST['source_checks'] if r.get('status')=='public_heading_only']
-    assert {r['url'] for r in checks}=={'https://canvas.mit.edu/courses/39868','https://canvas.mit.edu/courses/39662','https://canvas.mit.edu/courses/39654'}
+    assert {r['url'] for r in checks}>={'https://canvas.mit.edu/courses/39868','https://canvas.mit.edu/courses/39662','https://canvas.mit.edu/courses/39654'}
     assert all('not proof of authentication-only' in r['reason'] for r in checks)
 
 
@@ -671,3 +671,17 @@ def test_actual_hamilton_literature_description_withdraws_if_alias_clause_change
         assert e['category']=='human_context' and e['credits']==12 and e['prerequisites']=='none'
         assert review.matched_review(course,o,e['source_url'],MANIFEST)==e
         assert review.matched_review(course,{**o,'same_subject_as':'CMS.999[J]'},e['source_url'],MANIFEST) is None
+
+
+def test_department_followup_distinguishes_login_heading_and_approval_barriers():
+    checks=MANIFEST['source_checks']
+    report=MANIFEST['department_followup_review']
+    assert len(report['canvas_links'])==19
+    assert report['public_heading_only_links']==16 and report['login_required_links']==3
+    assert report['description_upgrades']==0
+    login={r['url'] for r in checks if r.get('status')=='login_required'}
+    assert login=={'https://canvas.mit.edu/courses/39652','https://canvas.mit.edu/courses/39685','https://canvas.mit.edu/courses/36626'}
+    rejected=[r for r in checks if r.get('status')=='automatic_approval_review_rejected']
+    assert len(rejected)==1 and rejected[0]['url']=='https://stellar.mit.edu/S/course/24/sp19/24.903'
+    assert 'not a publisher denial' in rejected[0]['reason']
+    assert 'independent public' in report['remaining_action']
