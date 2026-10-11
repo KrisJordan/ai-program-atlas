@@ -1,0 +1,233 @@
+{
+  "id": "american-cs-bs-ai-concentration",
+  "institution": {
+    "id": "american-university",
+    "name": "American University",
+    "aliases": [],
+    "website": "https://www.american.edu/",
+    "calendar": "unknown"
+  },
+  "title": "Artificial Intelligence concentration (Computer Science BS)",
+  "award_level": "concentration",
+  "program_kind": "concentration",
+  "hosting_unit": "Department of Computer Science, College of Arts and Sciences",
+  "status": "active",
+  "first_offered": null,
+  "overview": "A named concentration within the host computer science degree. Local course selections and overlap rules are represented; remaining policy review is explicit.",
+  "catalog_year": null,
+  "verification_status": "confirmed",
+  "last_verified": "2026-10-11",
+  "curriculum_status": "partial",
+  "links": [
+    {
+      "kind": "catalog",
+      "url": "https://www.american.edu/cas/cs/bs-comp.cfm",
+      "label": "Official concentration requirements"
+    }
+  ],
+  "sources": [
+    {
+      "id": "american-cs-bs-ai-concentration-catalog",
+      "url": "https://www.american.edu/cas/cs/bs-comp.cfm",
+      "title": "Computer Science (BS)",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Rendered embedded catalog: Concentration > Artificial Intelligence; Admission to the Program; Major Requirements",
+      "confidence": "high"
+    }
+  ],
+  "courses": [
+    {
+      "id": "american-csc-468",
+      "code": "CSC-468",
+      "name": "Artificial Intelligence",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3.0,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "american-cs-bs-ai-concentration-catalog",
+      "url": "https://catalog.american.edu/preview_course_nopop.php?catoid=23&coid=117444",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "american-csc-476",
+      "code": "CSC-476",
+      "name": "Computer Vision",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3.0,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "american-cs-bs-ai-concentration-catalog",
+      "url": "https://catalog.american.edu/preview_course_nopop.php?catoid=23&coid=120245",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "american-csc-480",
+      "code": "CSC-480",
+      "name": "Introduction to Data Mining",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3.0,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "american-cs-bs-ai-concentration-catalog",
+      "url": "https://catalog.american.edu/preview_course_nopop.php?catoid=23&coid=120244",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "american-csc-481",
+      "code": "CSC-481",
+      "name": "Machine Learning for Cybersecurity",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3.0,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "american-cs-bs-ai-concentration-catalog",
+      "url": "https://catalog.american.edu/preview_course_nopop.php?catoid=23&coid=120446",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "american-csc-483",
+      "code": "CSC-483",
+      "name": "Cloud Computing and Machine Learning",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3.0,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "american-cs-bs-ai-concentration-catalog",
+      "url": "https://catalog.american.edu/preview_course_nopop.php?catoid=23&coid=120972",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "american-csc-486",
+      "code": "CSC-486",
+      "name": "Deep Learning in Vision",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3.0,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "american-cs-bs-ai-concentration-catalog",
+      "url": "https://catalog.american.edu/preview_course_nopop.php?catoid=23&coid=121270",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "american-csc-487",
+      "code": "CSC-487",
+      "name": "Natural Language Processing and Text as Data",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3.0,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "american-cs-bs-ai-concentration-catalog",
+      "url": "https://catalog.american.edu/preview_course_nopop.php?catoid=23&coid=121451",
+      "public_site": null,
+      "syllabus": null
+    }
+  ],
+  "requirements": [
+    {
+      "id": "american-ai-local",
+      "parent_id": null,
+      "title": "Artificial Intelligence concentration within Computer Science BS",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "american-cs-bs-ai-concentration-catalog",
+      "source_text": null,
+      "summary": "",
+      "course_ids": []
+    },
+    {
+      "id": "american-ai-choice",
+      "parent_id": "american-ai-local",
+      "title": "Concentration selections; no Breadth of Knowledge reuse",
+      "kind": "note",
+      "count": null,
+      "credits": 12,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "american-cs-bs-ai-concentration-catalog",
+      "source_text": null,
+      "summary": "Complete 12 credit hours from the following if not taken to fulfill Breadth of Knowledge:",
+      "course_ids": [
+        "american-csc-468",
+        "american-csc-476",
+        "american-csc-480",
+        "american-csc-481",
+        "american-csc-483",
+        "american-csc-486",
+        "american-csc-487"
+      ]
+    },
+    {
+      "id": "american-ai-admission",
+      "parent_id": "american-ai-local",
+      "title": "Admission to the Program (host major context)",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "american-cs-bs-ai-concentration-catalog",
+      "source_text": null,
+      "summary": "Formal admission to the major requires a cumulative grade point average of 2.00 (on a 4.00 scale) and departmental approval.",
+      "course_ids": []
+    },
+    {
+      "id": "american-ai-major-context",
+      "parent_id": "american-ai-local",
+      "title": "Major Requirements (host major context)",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "american-cs-bs-ai-concentration-catalog",
+      "source_text": null,
+      "summary": "62 credit hours with grades of C or better, including at least 40 credit hours at or above 300-level Maximum 6 credit hours of CSC coursework may be substituted for relevant non-CSC coursework with the approval of the program director",
+      "course_ids": []
+    }
+  ],
+  "outcomes": [],
+  "notes": [
+    "Local concentration scope only: the full host Computer Science BS degree curriculum is not represented.",
+    "Verified through ordinary public Chrome-rendered catalog content on 2026-10-11; adapter requires visible HTML and rejects an unrendered shell.",
+    "No launch date, public syllabus, or assessed concentration learning outcomes were verified.",
+    "Source publishes credit hours; unit normalization remains unknown.",
+    "Automated HTTP received 403 on the department page and 202 on a linked catalog policy page; ordinary Chrome displayed the embedded curriculum. No challenge was solved or access restriction bypassed.",
+    "Concentration selections cannot reuse courses used for Breadth of Knowledge. The major-context node records host admission/grade/substitution rules, not additional concentration credit totals."
+  ],
+  "curriculum_audit": {
+    "scope": "concentration",
+    "reviewed_at": "2026-10-11",
+    "source_ids": [
+      "american-cs-bs-ai-concentration-catalog"
+    ],
+    "sections": [
+      "Local concentration course pool and selection rule",
+      "Host-degree overlap and eligibility context"
+    ],
+    "unresolved_requirements": [
+      "Applicable university concentration completion, residence and transfer policies have not yet been reviewed; the embedded catalog edition is not stated on the observed page."
+    ],
+    "metadata_gaps": [
+      "Course descriptions, prerequisites and public course sites/syllabi not reviewed.",
+      "Concentration-specific learning outcomes and first offered date not verified."
+    ]
+  }
+}

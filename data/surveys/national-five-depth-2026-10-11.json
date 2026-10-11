@@ -1,0 +1,407 @@
+[
+  {
+    "institution_id": "american-university",
+    "status": "inspected",
+    "checked_at": "2026-10-11",
+    "note": "The undergraduate finder led to the Computer Science BS embedded catalog, which explicitly names an Artificial Intelligence concentration. The BA page instead labels Artificial Intelligence and Information Science an elective category; this review does not promote that category to a credential.",
+    "sources": [
+      {
+        "url": "https://www.american.edu/programs/",
+        "title": "American University program finder",
+        "locator": "Search artificial intelligence; Undergraduate (Bachelor’s) filter; first results page (28 undergraduate matches, pagination not exhausted)",
+        "access_method": "ordinary public Chrome UI",
+        "checked_at": "2026-10-11",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://www.american.edu/cas/cs/bs-comp.cfm",
+        "title": "Computer Science (BS)",
+        "locator": "Embedded catalog > Concentration (12 credit hours) > Artificial Intelligence; Admission to the Program; Major Requirements",
+        "access_method": "ordinary public Chrome UI",
+        "checked_at": "2026-10-11",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://www.american.edu/cas/cs/ba-cs.cfm",
+        "title": "Computer Science (BA)",
+        "locator": "Embedded catalog > Electives (12 credit hours) > Artificial Intelligence and Information Science",
+        "access_method": "ordinary public Chrome UI",
+        "checked_at": "2026-10-11",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      }
+    ],
+    "discoveries": [
+      {
+        "program_id": "american-cs-bs-ai-concentration",
+        "title": "Artificial Intelligence concentration (Computer Science BS)",
+        "kind": "concentration",
+        "award_level": "concentration",
+        "url": "https://www.american.edu/cas/cs/bs-comp.cfm"
+      }
+    ],
+    "inspection_scope": [
+      "Interactive program search with undergraduate filter",
+      "BS concentration identity, seven-course pool and overlap rule",
+      "BA elective-category boundary and CS navigation minor titles"
+    ],
+    "remaining_work": [
+      "Review applicable concentration residence/transfer/completion policies and identify the embedded catalog edition.",
+      "Finish remaining undergraduate finder pages and separate minor/department catalog searches; broader absence is not established."
+    ],
+    "access_issues": [
+      "Automated robots-aware HTTP returned 403 for program finder and BA/BS pages. Ordinary Chrome displayed the public pages after its passive check resolved; no CAPTCHA or authentication was completed.",
+      "The linked catalog policy URL https://catalog.american.edu/content.php?catoid=23&navoid=4040 returned HTTP 202 and was not treated as policy evidence."
+    ],
+    "nonqualifying_observations": [
+      "Graduate AI: Ethics and Society certificate and Computational Science and AI PhD are outside undergraduate scope.",
+      "The BA Artificial Intelligence and Information Science elective category is not explicitly called a concentration on the inspected source."
+    ],
+    "absence_claim": false
+  },
+  {
+    "institution_id": "university-of-san-diego",
+    "status": "inspected",
+    "checked_at": "2026-10-11",
+    "note": "Both BA and BS Computer Science requirement tabs explicitly publish a Data Science and Artificial Intelligence concentration. Each award was read independently. The broad program search alone did not reveal these concentrations.",
+    "sources": [
+      {
+        "url": "https://undergraduate.catalog.sandiego.edu/programs",
+        "title": "Undergraduate program finder",
+        "locator": "Artificial intelligence search: Technologies and Society minor; computer search: separate CS BA, BS, minor records",
+        "access_method": "ordinary public Chrome UI",
+        "checked_at": "2026-10-11",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://undergraduate.catalog.sandiego.edu/programs/major-BAEN-UG-M-EN-BA-COMP/program-requirements-ZEsvA",
+        "title": "Computer Science BA requirements",
+        "locator": "Concentrations in Computer Science > Data Science and Artificial Intelligence table",
+        "access_method": "ordinary public Chrome UI",
+        "checked_at": "2026-10-11",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://undergraduate.catalog.sandiego.edu/programs/major-BS_ENGR-UG-M-EN-BS-COMS/program-requirements-ZEsvA",
+        "title": "Computer Science BS requirements",
+        "locator": "Concentrations in Computer Science > Data Science and Artificial Intelligence table",
+        "access_method": "ordinary public Chrome UI",
+        "checked_at": "2026-10-11",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://undergraduate.catalog.sandiego.edu/programs/major-BAEN-UG-M-EN-BA-COMP/program-overview-aoYks",
+        "title": "Computer Science BA overview",
+        "locator": "Undergraduate Bachelor of Arts; effective Fall 2026; Shiley-Marcos School of Engr",
+        "access_method": "ordinary public Chrome UI",
+        "checked_at": "2026-10-11",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://undergraduate.catalog.sandiego.edu/programs/major-BS_ENGR-UG-M-EN-BS-COMS/program-overview-aoYks",
+        "title": "Computer Science BS overview",
+        "locator": "Undergraduate Bachelor of Science; effective Fall 2026; Shiley-Marcos School of Engr",
+        "access_method": "ordinary public Chrome UI",
+        "checked_at": "2026-10-11",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://undergraduate.catalog.sandiego.edu/programs/JcEbyyabDALhQAwL67Nq/program-overview-aoYks",
+        "title": "Technologies and Society minor",
+        "locator": "Program title and descriptive mention of AI",
+        "access_method": "ordinary public Chrome UI",
+        "checked_at": "2026-10-11",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      }
+    ],
+    "discoveries": [
+      {
+        "program_id": "san-diego-cs-ba-data-science-ai-concentration",
+        "title": "Data Science and Artificial Intelligence concentration (Computer Science BA)",
+        "kind": "concentration",
+        "award_level": "concentration",
+        "url": "https://undergraduate.catalog.sandiego.edu/programs/major-BAEN-UG-M-EN-BA-COMP/program-requirements-ZEsvA"
+      },
+      {
+        "program_id": "san-diego-cs-bs-data-science-ai-concentration",
+        "title": "Data Science and Artificial Intelligence concentration (Computer Science BS)",
+        "kind": "concentration",
+        "award_level": "concentration",
+        "url": "https://undergraduate.catalog.sandiego.edu/programs/major-BS_ENGR-UG-M-EN-BS-COMS/program-requirements-ZEsvA"
+      }
+    ],
+    "inspection_scope": [
+      "Rendered program finder",
+      "Both concrete CS concentration tables and optional/overlap rule",
+      "Effective host curriculum terms distinguished from launch date"
+    ],
+    "remaining_work": [
+      "Resolve GENG 430 in the concentration versus COMP 430 in the major elective list.",
+      "Review applicable university concentration grade, residence and transfer policies.",
+      "Other departments, announcements and all minor detail pages remain unexhausted."
+    ],
+    "access_issues": [
+      "Static public catalog HTML is a dynamic shell; visible requirement tabs were read in ordinary Chrome. This is not an access barrier."
+    ],
+    "nonqualifying_observations": [
+      "Technologies and Society mentions AI but its credential title does not meet the atlas title scope.",
+      "Cyber Security approval clauses are not generalized to the AI concentration."
+    ],
+    "absence_claim": false
+  },
+  {
+    "institution_id": "creighton-university",
+    "status": "inspected",
+    "checked_at": "2026-10-11",
+    "note": "The interactive finder, 2026–27 catalog AI search, CS BS/minor requirements and Kingfisher concentration lists were inspected. The named AI concentration found in catalog search belongs to the MBA; no qualifying undergraduate title was verified in this bounded review.",
+    "sources": [
+      {
+        "url": "https://www.creighton.edu/academics/degrees-programs",
+        "title": "Degrees and programs finder",
+        "locator": "Artificial intelligence query: no results in finder; computer query: associate, certificate and undergraduate CS results",
+        "access_method": "ordinary public Chrome UI",
+        "checked_at": "2026-10-11",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://www.creighton.edu/academics/programs/computer-science",
+        "title": "Computer Science bachelor’s degree",
+        "locator": "Official curriculum link",
+        "access_method": "ordinary public Chrome UI",
+        "checked_at": "2026-10-11",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://catalog.creighton.edu/undergraduate/arts-sciences/csdj/computer-science/computer-science-bs/index.html",
+        "title": "2026–27 Computer Science BS",
+        "locator": "45-credit curriculum and upper-level electives",
+        "access_method": "ordinary public Chrome UI",
+        "checked_at": "2026-10-11",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://catalog.creighton.edu/undergraduate/arts-sciences/csdj/computer-science-minor/",
+        "title": "Computer Science minor",
+        "locator": "18-credit minor; CSC221/222 plus four upper-level electives",
+        "access_method": "ordinary public Chrome UI",
+        "checked_at": "2026-10-11",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://catalog.creighton.edu/search/?search=artificial+intelligence",
+        "title": "Catalog search: artificial intelligence",
+        "locator": "MBA AI concentration; undergraduate BIA485/CSC550/PHL433 course results",
+        "access_method": "ordinary public Chrome UI",
+        "checked_at": "2026-10-11",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://catalog.creighton.edu/undergraduate/business/kingfisher/",
+        "title": "Heider Kingfisher concentrations",
+        "locator": "Business-offered options; link to Arts and Sciences choices",
+        "access_method": "ordinary public Chrome UI",
+        "checked_at": "2026-10-11",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://catalog.creighton.edu/undergraduate/arts-sciences/kingfisher-concentration/",
+        "title": "Arts and Sciences Kingfisher concentrations for BSBA students",
+        "locator": "Full named list, including Computer Science and Data Science",
+        "access_method": "ordinary public Chrome UI",
+        "checked_at": "2026-10-11",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      }
+    ],
+    "discoveries": [],
+    "inspection_scope": [
+      "Dynamic keyword finder",
+      "Current catalog search across credential levels",
+      "CS major/minor curricula",
+      "Both published Kingfisher concentration option lists"
+    ],
+    "remaining_work": [
+      "Business Intelligence and Analytics major/minor detail and every other departmental minor remain unreviewed.",
+      "Separate announcements and changes not indexed in the current catalog search remain unreviewed."
+    ],
+    "access_issues": [],
+    "nonqualifying_observations": [
+      "MBA Artificial Intelligence concentration is graduate.",
+      "BIA485 Applications of Artificial Intelligence in Business and CSC550 Introduction to Artificial Intelligence are courses, not an AI-titled undergraduate award.",
+      "Computer Science and Data Science Kingfisher concentration titles are broader than AI."
+    ],
+    "absence_claim": false
+  },
+  {
+    "institution_id": "fordham-university",
+    "status": "inspected",
+    "checked_at": "2026-10-11",
+    "note": "The finder’s Artificial Intelligence interest filter returns broader programs. Current undergraduate CS and Business Administration requirements and the all-level catalog index/search were then inspected; the AI-titled catalog credentials found are graduate.",
+    "sources": [
+      {
+        "url": "https://www.fordham.edu/undergraduate-admission/majors-and-minors/?courseArea=Artificial%20Intelligence%20(AI)&keywords=",
+        "title": "Undergraduate majors and minors finder",
+        "locator": "AI interest filter: Bioinformatics, Business Administration, Computer Science, Design and Technology, Digital Technologies and Emerging Media",
+        "access_method": "ordinary public Chrome UI",
+        "checked_at": "2026-10-11",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://www.fordham.edu/academics/departments/computer-and-information-science/academic-programs/undergraduate-programs/computer-science-degree/",
+        "title": "Computer Science Degree",
+        "locator": "BA/BS and minor descriptions; links to current bulletin",
+        "access_method": "ordinary public Chrome UI",
+        "checked_at": "2026-10-11",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://bulletin.fordham.edu/undergraduate/computer-information-sciences/computer-science-major/",
+        "title": "2026–27 Computer Science major",
+        "locator": "BA/BS core and elective rules; department minor navigation",
+        "access_method": "ordinary public Chrome UI",
+        "checked_at": "2026-10-11",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://bulletin.fordham.edu/programs/",
+        "title": "A–Z Academic Program Index",
+        "locator": "AI-titled links point to graduate credentials",
+        "access_method": "ordinary public Chrome UI",
+        "checked_at": "2026-10-11",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://bulletin.fordham.edu/search/?search=artificial+intelligence",
+        "title": "Bulletin AI search",
+        "locator": "Graduate AI credentials; Bioinformatics minor course mention; undergraduate integrity policy",
+        "access_method": "ordinary public Chrome UI",
+        "checked_at": "2026-10-11",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://bulletin.fordham.edu/undergraduate/business-administration/business-administration-major/",
+        "title": "Business Administration major",
+        "locator": "Requirements tab: nine primary and 24 secondary concentration names",
+        "access_method": "ordinary public Chrome UI",
+        "checked_at": "2026-10-11",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      }
+    ],
+    "discoveries": [],
+    "inspection_scope": [
+      "Rendered AI finder results",
+      "CS BA/BS and minor identity/curriculum context",
+      "Current all-level program index and AI catalog search",
+      "Undergraduate business primary/secondary concentration list"
+    ],
+    "remaining_work": [
+      "Design and Technology, Digital Technologies and Emerging Media and every other department’s detailed minor/concentration pages remain unreviewed.",
+      "Separate announcements and newly approved awards not yet in the bulletin remain unreviewed."
+    ],
+    "access_issues": [],
+    "nonqualifying_observations": [
+      "AI is an interest filter, not a credential.",
+      "Artificial Intelligence Secondary Concentration is under graduate MBA; Artificial Intelligence in Business is MS; Artificial Intelligence for Cybersecurity is an advanced graduate certificate.",
+      "Undergraduate CISC4597 Artificial Intelligence and related electives do not establish a named concentration."
+    ],
+    "absence_claim": false
+  },
+  {
+    "institution_id": "rutgers-university-camden",
+    "status": "inspected",
+    "checked_at": "2026-10-11",
+    "note": "The dynamic campus finder was searched beyond its initial alphabetical page, then CS departmental undergraduate major/minor pages were read. A public undergraduate AI-ML certificate is confirmed but excluded from the atlas’s degree/minor/concentration scope.",
+    "sources": [
+      {
+        "url": "https://camden.rutgers.edu/academics/programs",
+        "title": "Rutgers–Camden program finder",
+        "locator": "Any-type artificial intelligence query gave graduate CS/FinTech; computer query Load More revealed CS BA/BS",
+        "access_method": "ordinary public Chrome UI",
+        "checked_at": "2026-10-11",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://camden.rutgers.edu/academics/undergraduate/programs/computer-science-ba-bs",
+        "title": "Computer Science BA or BS",
+        "locator": "Official degree identity and department link",
+        "access_method": "ordinary public Chrome UI",
+        "checked_at": "2026-10-11",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://cs.camden.rutgers.edu/undergraduate/",
+        "title": "CS undergraduate programs",
+        "locator": "Major/minor/accelerated degree/certificate navigation",
+        "access_method": "ordinary public Chrome UI",
+        "checked_at": "2026-10-11",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://cs.camden.rutgers.edu/undergraduate/major-requirements/",
+        "title": "CS major requirements",
+        "locator": "Separate BS and BA requirements with 15-credit computing electives",
+        "access_method": "ordinary public Chrome UI",
+        "checked_at": "2026-10-11",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://cs.camden.rutgers.edu/undergraduate/minor-program-requirements/",
+        "title": "CS minor requirements",
+        "locator": "Named general CS minor and course choices",
+        "access_method": "ordinary public Chrome UI",
+        "checked_at": "2026-10-11",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://cs.camden.rutgers.edu/undergraduate/artificial-intelligence-and-machine-learning-ai-ml-certificate/",
+        "title": "Artificial Intelligence and Machine Learning (AI-ML) Certificate",
+        "locator": "Undergraduate credential; any four of six courses with C or better; non-CS majors complete prerequisites; transcript designation and completion form",
+        "access_method": "ordinary public Chrome UI",
+        "checked_at": "2026-10-11",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      }
+    ],
+    "discoveries": [],
+    "inspection_scope": [
+      "Interactive campus keyword search with pagination beyond first ten",
+      "CS BA/BS and minor curricula",
+      "Explicit undergraduate AI certificate title, scope and completion conditions"
+    ],
+    "remaining_work": [
+      "Other Camden departments, business concentrations and the full campus catalog remain unreviewed.",
+      "Separate announcements and all remaining finder result pages remain unreviewed; New Brunswick/Newark evidence cannot establish Camden programs."
+    ],
+    "access_issues": [],
+    "nonqualifying_observations": [
+      "The AI-ML certificate is a real undergraduate transcript credential, but certificates are outside current scope; it is not relabeled a minor or concentration.",
+      "AI/ML Engineer in a CS career list is not a program title."
+    ],
+    "absence_claim": false
+  }
+]
