@@ -415,6 +415,46 @@
       "catalog_year": "2026–2027",
       "locator": "Exact public course detail linked from visible prefix search; full description, credit, requisite/restriction and other-information fields; SHA256 dcb2006b4228f05f8fa69ff81d15287f8d2ff65479aee4aa5b2a0eb5622ac4db",
       "confidence": "high"
+    },
+    {
+      "id": "usf-ai-bellini-entry",
+      "url": "https://www.usf.edu/ai-cybersecurity-computing/academics/undergraduate/prospective_students.aspx",
+      "title": "Bellini prospective students: AI entry and transfer requirements",
+      "fetched_at": "2026-10-11T05:23:14+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Public page fully read; normalized content SHA256 6de909eec28654f48cacfc4695d0c7553dfd6db6355747d2be7c0fa44241e1b6; AI-specific entry/allocation scope, excluding neighboring majors",
+      "confidence": "high"
+    },
+    {
+      "id": "usf-ai-transfer-allocation",
+      "url": "https://www.usf.edu/undergrad/transfer-student-success/transfer-resources/transfer-credit-new.aspx",
+      "title": "Transfer resources and credit review",
+      "fetched_at": "2026-10-11T05:23:15+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Public page fully read; normalized content SHA256 81f85cefe487a2524ac78b2322d97e78b768182731e5dea13b0594e2132953cc; AI-specific entry/allocation scope, excluding neighboring majors",
+      "confidence": "high"
+    },
+    {
+      "id": "usf-ai-advising-boundary",
+      "url": "https://www.usf.edu/ai-cybersecurity-computing/academics/undergraduate/advising-support.aspx",
+      "title": "Bellini advising and support",
+      "fetched_at": "2026-10-11T05:23:12+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Public page fully read; normalized content SHA256 5ea0247ddf06d3b5ef0f75744d8deb21156c6267a68f347f2a3dfe9415172c59; AI-specific entry/allocation scope, excluding neighboring majors",
+      "confidence": "high"
+    },
+    {
+      "id": "usf-ai-policy-10-505",
+      "url": "https://usf.app.box.com/v/usfpolicy10-505",
+      "title": "Degree Progression and Completion Deadlines for Undergraduate Students — Policy 10-505",
+      "fetched_at": "2026-10-11",
+      "source_date": "2025-05-21",
+      "catalog_year": null,
+      "locator": "All three public policy pages manually read by delegated policy reviewer; header last amended/reviewed May 21, 2025. No automated PDF refresh or raw-file hash claimed.",
+      "confidence": "high"
     }
   ],
   "outcomes": [],
@@ -1569,6 +1609,216 @@
       "source_text": null,
       "summary": "Individual review applies to unoffered or unaccredited/pre-transfer-date courses; 900–999 special work; adult applied academics; graduate courses; internships, apprenticeships, practica, clinical or abroad experiences; and performing-art/Criminal Justice skill courses. These exceptions do not establish approval for an AI requirement.",
       "course_ids": []
+    },
+    {
+      "id": "usf-ai-bellini-entry-first-year",
+      "parent_id": null,
+      "title": "First-year entry and preparation",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "usf-ai-bellini-entry",
+      "source_text": null,
+      "summary": "Bellini first-year entry is in fall or spring. AI applicants need a strong record including four years of advanced mathematics and science including chemistry and physics; additional preparatory coursework may be necessary. University admission does not remove program-specific catalog conditions.",
+      "course_ids": []
+    },
+    {
+      "id": "usf-ai-bellini-entry-placement",
+      "parent_id": null,
+      "title": "Math placement and prior calculus credit",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "usf-ai-bellini-entry",
+      "source_text": null,
+      "summary": "New first-year students must pass basic and college algebra placement; prior high-school precalculus/calculus adds the precalculus/trigonometry exam. Each passing score is 12 of 15. Passing all three supports starting Calculus I in fall; existing Calculus I credit is exempt. The page’s reference to students unable to complete “the course” does not identify a blanket placement-failure dismissal rule.",
+      "course_ids": []
+    },
+    {
+      "id": "usf-ai-bellini-entry-transfer-level",
+      "parent_id": null,
+      "title": "Transfer admission level",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "usf-ai-bellini-entry",
+      "source_text": null,
+      "summary": "Lower-level transfer means 12–29 prior postsecondary credit hours, mid-level 30–59, and upper-level at least 60. These are admission cohorts, not undergraduate course levels.",
+      "course_ids": []
+    },
+    {
+      "id": "usf-ai-bellini-entry-lower-transfer",
+      "parent_id": null,
+      "title": "AI lower-level transfer admission",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "usf-ai-bellini-entry",
+      "source_text": null,
+      "summary": "Require (SAT mathematics at least 570 OR ACT mathematics at least 24) AND high-school GPA at least 4.00 as calculated by Admissions. This is the explicitly shared Computer Science and Artificial Intelligence entry rule.",
+      "course_ids": []
+    },
+    {
+      "id": "usf-ai-bellini-entry-programming-transfer",
+      "parent_id": null,
+      "title": "AI mid/upper-level programming admission prerequisite",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "usf-ai-bellini-entry",
+      "source_text": null,
+      "summary": "Complete Programming Concepts via COP 1220, COP 2030, COP 2224, COP 2360, COP 2510 or COP 2800 with at least C within at most two attempts. Transfer alternatives are not asserted to be six current USF offerings or six degree requirements.",
+      "course_ids": []
+    },
+    {
+      "id": "usf-ai-bellini-entry-math-physics-transfer",
+      "parent_id": null,
+      "title": "AI mid/upper-level mathematics and physics entry prerequisites",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "usf-ai-bellini-entry",
+      "source_text": null,
+      "summary": "Complete Calculus I (MAC x281 or MAC x311), Calculus II (MAC x282 or MAC x312), and calculus-based Physics I with lab (PHY x048/PHY x048L or PHY x045/PHY x045L), each with at least C within at most two attempts. Wildcard codes remain as printed. The following Computer Engineering chemistry requirement and Cybersecurity/IT database, statistics and discrete-mathematics requirements do not apply through this AI section.",
+      "course_ids": []
+    },
+    {
+      "id": "usf-ai-bellini-entry-acceleration-entry",
+      "parent_id": null,
+      "title": "Accelerated credit documentation",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "usf-ai-bellini-entry",
+      "source_text": null,
+      "summary": "AP, IB, AICE, CAPE and dual-enrollment credit require official documents submitted to Admissions. Consult advising before retaking previously credited coursework; acceptance does not by itself establish AI requirement allocation.",
+      "course_ids": []
+    },
+    {
+      "id": "usf-ai-transfer-allocation-acceptance",
+      "parent_id": null,
+      "title": "Transfer acceptance versus degree allocation",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "usf-ai-transfer-allocation",
+      "source_text": null,
+      "summary": "Admissions assesses transfer acceptance and recalculates GPA using all submitted transcripts. A transfer-credit summary does not establish allocation to degree requirements and excludes coursework still in progress when the transcript arrived.",
+      "course_ids": []
+    },
+    {
+      "id": "usf-ai-transfer-allocation-allocation",
+      "parent_id": null,
+      "title": "College and department allocation of transferred work",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "usf-ai-transfer-allocation",
+      "source_text": null,
+      "summary": "Out-of-state/private-institution courses are not guaranteed to satisfy either general education or major requirements. Departments review them individually; colleges determine degree applicability. Retain official course descriptions and syllabi. Degree Works allocation remains provisional until reviewed by advising or college personnel. This is a conditional approval procedure, not evidence that every proposed substitution is permitted.",
+      "course_ids": []
+    },
+    {
+      "id": "usf-ai-advising-boundary-public-advising",
+      "parent_id": null,
+      "title": "Public advising and authenticated forms",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "usf-ai-advising-boundary",
+      "source_text": null,
+      "summary": "The public page directs students to Archivum for appointments and Canvas for advising schedules, mentoring, coaching, forms and applications. It does not publish the AI major’s detailed grade/progression standards. No authenticated student portal was accessed.",
+      "course_ids": []
+    },
+    {
+      "id": "usf-ai-policy-10-505-completion",
+      "parent_id": null,
+      "title": "Completion and university-initiated graduation",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "usf-ai-policy-10-505",
+      "source_text": null,
+      "summary": "Once degree requirements are complete, graduation occurs within the university’s four-year progression framework; the university may initiate graduation certification without a student application.",
+      "course_ids": []
+    },
+    {
+      "id": "usf-ai-policy-10-505-additional-work",
+      "parent_id": null,
+      "title": "Added work and primary-major completion term",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "usf-ai-policy-10-505",
+      "source_text": null,
+      "summary": "Additional curricular and co-curricular work must finish by the primary-major completion term, normally eight semesters excluding summer and alternative terms. Transfer progression counting includes prior postsecondary enrollment; this is not a promise of eight additional USF semesters.",
+      "course_ids": []
+    },
+    {
+      "id": "usf-ai-policy-10-505-six-terms",
+      "parent_id": null,
+      "title": "Enrollment after six active postsecondary terms",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "usf-ai-policy-10-505",
+      "source_text": null,
+      "summary": "After six active postsecondary terms, enrollment is restricted to courses needed for the primary declared major. Student-specific exceptions require the documented policy process.",
+      "course_ids": []
+    },
+    {
+      "id": "usf-ai-policy-10-505-major-change",
+      "parent_id": null,
+      "title": "Major change and academic progression",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "usf-ai-policy-10-505",
+      "source_text": null,
+      "summary": "Receiving-college approval and progression/excess-credit review apply to major changes; changes after drop/add take effect the next term. Colleges may reselect students who fail progression. Specific major standards remain in the catalog.",
+      "course_ids": []
+    },
+    {
+      "id": "usf-ai-policy-10-505-exceptions",
+      "parent_id": null,
+      "title": "Documented progression exceptions",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "usf-ai-policy-10-505",
+      "source_text": null,
+      "summary": "Submit written exception documentation to the Dean of Undergraduate Studies before applying to graduate. Extensions are not granted to retake already satisfactory graduation courses or prepare for graduate admission.",
+      "course_ids": []
     }
   ],
   "notes": [
@@ -1577,7 +1827,8 @@
     "PDF inspected via public web reader; no PDF content committed. Primary overview adapter remains identity-only and never represents brochure curriculum as freshly verified. PDF curriculum observations require human review on refresh.",
     "Course inventory prerequisites preserve source Boolean choices, minimum grades, co-prerequisites and restrictions. Empty requisite fields stay unknown; they are not proof of no prerequisites. Published credit amounts have no verified normalized unit.",
     "Current official navigation independently exposes the public Course Inventory; it does not remove the older catalog.usf.edu HTTP 202 restriction. The separately linked cloud catalog policy URL leads back toward that restricted catalog host and was not used to bypass it.",
-    "All 29 represented course descriptions have been individually read from the public 2026–2027 Course Inventory. Named course metadata do not recertify the older brochure requirement roles or establish elective eligibility. CIS1930 is orientation, not verified computing foundations. EGN4450 retains its printed MAC2282 AND MAC2312 alternative to AP Calculus BC; no unverified OR correction is made. Physics concurrent-enrollment/drop and credit-exclusion conditions remain course-specific. Published amounts retain unknown normalized units."
+    "All 29 represented course descriptions have been individually read from the public 2026–2027 Course Inventory. Named course metadata do not recertify the older brochure requirement roles or establish elective eligibility. CIS1930 is orientation, not verified computing foundations. EGN4450 retains its printed MAC2282 AND MAC2312 alternative to AP Calculus BC; no unverified OR correction is made. Physics concurrent-enrollment/drop and credit-exclusion conditions remain course-specific. Published amounts retain unknown normalized units.",
+    "Public Bellini entry, transfer allocation and Policy 10-505 progression conditions were reviewed on 2026-10-11. Admission minimum grades and attempt limits are not universal AI graduation grades; neighboring Computer Engineering/Cybersecurity/IT requirements are excluded. Degree-policy source restrictions and remaining general-education pool review are separate gaps."
   ],
   "curriculum_audit": {
     "scope": "degree",
@@ -1598,7 +1849,11 @@
       "usf-ai-cai4203",
       "usf-ai-cai4624",
       "usf-ai-cai4841",
-      "usf-ai-course-inventory-year"
+      "usf-ai-course-inventory-year",
+      "usf-ai-bellini-entry",
+      "usf-ai-transfer-allocation",
+      "usf-ai-advising-boundary",
+      "usf-ai-policy-10-505"
     ],
     "sections": [
       "September 2026 brochure named courses and explicit alternatives",
@@ -1617,15 +1872,16 @@
       "CAI 4203 — public course inventory: Named course detail: description, credit amount and all requisite/restriction fields",
       "CAI 4624 — public course inventory: Named course detail: description, credit amount and all requisite/restriction fields",
       "CAI 4841 — public course inventory: Named course detail: description, credit amount and all requisite/restriction fields",
-      "Degree correctness review: eight CAI subject descriptions; unsupported legacy semester-unit normalization removed"
+      "Degree correctness review: eight CAI subject descriptions; unsupported legacy semester-unit normalization removed",
+      "Bellini AI-specific entry and transfer admission; conditional transfer allocation; three-page Policy 10-505 progression and exceptions"
     ],
     "unresolved_requirements": [
-      "Definitive catalog retried with compliant 120-second pacing but returned HTTP 202; full curriculum remains unavailable through the fetcher.",
-      "Major elective pool, exact program credit requirements, college policies, program-wide grade rules and detailed applicability/exceptions to university minimums remain unreviewed. General-education distribution/current-designation criteria, civic-literacy cohorts, SCNS transfer framework and eight CAI course prerequisites are now mapped. Full catalog degree policies remain unresolved."
+      "Current major catalog remained unreadable (HTTP 202), and a current brochure refresh is robots-disallowed; prior brochure requirement roles remain uncertified by this current correctness audit.",
+      "Accessible public general-education Course Inventory attribute pools and final independent degree-wide/manual aggregate review remain in progress. Exact major elective eligibility, program completion grades and program-wide credit scope require authoritative evidence not supplied by admission rules or individual course descriptions."
     ],
     "metadata_gaps": [
-      "Eight CAI courses have independently reviewed descriptions and published credit amounts; six contain prerequisite/restriction statements. Blank fields remain unknown. Three civic-course names are now verified. Other course descriptions, credits and prerequisites remain incomplete.",
-      "Credit-unit normalization, public course sites and syllabi remain unverified."
+      "All 29 represented current course descriptions read; 21 prerequisite statements recorded, eight blank fields remain unknown.",
+      "Normalized credit units, public teaching sites and syllabi remain unverified; title/evidence versions and prior brochure roles are retained separately."
     ]
   },
   "award_options": [

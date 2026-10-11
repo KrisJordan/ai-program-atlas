@@ -57,3 +57,7 @@ SOURCES += tuple(_university.PARSERS) + tuple(_metadata.PARSERS)
 _remaining = import_module('atlas.adapters.university-of-south-florida-artificial-intelligence-bs-degree.remaining_courses')
 SOURCE_PARSERS.update(_remaining.PARSERS)
 SOURCES += tuple(_remaining.PARSERS)
+
+_entry = import_module('atlas.adapters.university-of-south-florida-artificial-intelligence-bs-degree.entry_progression_policies')
+SOURCE_PARSERS.update(_entry.PARSERS)
+SOURCES += tuple(_entry.PARSERS)
