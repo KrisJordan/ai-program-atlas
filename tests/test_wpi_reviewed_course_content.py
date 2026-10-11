@@ -81,3 +81,23 @@ def test_complete_content_guard_covers_suggested_background(monkeypatch):
     m.parse(html,program_id='wpi-business-analytics-applied-ai-bs',code='OIE 4430')
     with pytest.raises(ValueError):
         m.parse(html.replace('Synthetic suggested condition','Different condition'),program_id='wpi-business-analytics-applied-ai-bs',code='OIE 4430')
+
+
+def test_ai_computing_mathematics_source_rules_preserve_option_scope():
+    p=json.loads(Path('data/programs/wpi-ai-bs.json').read_text())
+    courses={c['code']:c for c in p['courses']}
+    assert courses['MA 1020']['credits']==pytest.approx(1/3)
+    assert courses['MA 1120']['credits']==pytest.approx(1/3)
+    assert courses['CS 2022/MA 2201']['category']=='mathematics'
+    assert courses['CS 4032/MA 3257']['category']=='mathematics'
+    assert courses['CS 2301']['category']=='systems'
+    assert courses['CS 4344/DS 4344']['category']=='ai_ml'
+    assert courses['CS 4445']['category_review']['status']=='mixed'
+    assert courses['CS 4804']['category_review']['status']=='mixed'
+    assert 'subsequently' in m.SPEC['CS 2301']['credit_restriction']
+    assert 'Cannot satisfy' in m.SPEC['CS 3043/SS 3043']['eligibility_note']
+    assert 'Suggested background (advisory)' in courses['MA 2210']['prerequisites']
+    profile=requirement_profile(p)
+    assert [profile[x]['count'] for x in ['required','options','unresolved']]==[6,211,2]
+    assert sum('wpi-ai-bs' in e['program_ids'] for e in m.SPEC.values())==77
+    assert not p.get('course_identity_groups')
