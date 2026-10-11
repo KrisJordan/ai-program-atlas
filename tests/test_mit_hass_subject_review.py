@@ -101,3 +101,50 @@ def test_actual_source_cache_reviews_reproduce_when_cache_available(key, parser)
                 if hit:matched.append(hit)
     assert matched
     assert all(hit['approved_for_integration'] for hit in matched)
+
+
+def test_cmsw_visible_term_parser_keeps_alias_and_meeting_distinct():
+    html = '''<section id="mit-subject-list"><h2>Fall 2026</h2>
+    <li class="academic_term_tier__subject">
+    <a class="academic_term_tier__subject-course-number">CMS.611[J]</a>
+    <span class="academic_term_tier__subject-course-title">Creating Video Games</span>
+    <div class="academic-term-tier__subject-description"><ul>
+    <li><strong>Same subject as:</strong> 6.4570[J]</li>
+    <li><strong>Meets with:</strong> CMS.900</li><li><strong>Units:</strong> 3-3-6</li>
+    </ul><p>Teams combine game programming and art production.</p></div></li></section>'''
+    row = review.observe_cmsw(html)[0]
+    assert row['term'] == 'Fall 2026'
+    assert row['same_subject_as'] == '6.4570[J]'
+    assert row['meets_with'] == 'CMS.900'
+    assert row['prerequisites'] is None
+    assert row['description'] == 'Teams combine game programming and art production.'
+    with pytest.raises(ValueError, match='term label'):
+        review.observe_cmsw(html.replace('Fall 2026', 'Unknown'))
+    with pytest.raises(ValueError, match='paired'):
+        review.observe_cmsw(html.replace('academic-term-tier__subject-description', 'changed'))
+
+
+def test_cmsw_manual_subject_and_identity_judgments():
+    observations = [o for r in MANIFEST['courses'].values() for o in r['observations']
+                    if o['source_id'] == 'mit-ai-hass-review-cmsw-fall2026']
+    by_code = {o['observed_code']: o for o in observations}
+    assert by_code['CMS.401']['category'] == 'human_context'
+    assert by_code['CMS.611[J]']['status'] == 'mixed'
+    assert by_code['CMS.611[J]']['candidate_categories'] == ['foundations', 'applications']
+    assert by_code['CMS.591[J]']['prerequisites'] == 'Permission of instructor. Coreq: CMS.586'
+    assert by_code['CMS.357[J]']['prerequisites'] is None
+    assert by_code['CMS.357[J]']['credits'] == 12
+    malformed = [r for r in MANIFEST['courses'].values() if '.WGS.' in r['listed_code']]
+    assert malformed and all(r['review_status'] == 'identity_review_needed' for r in malformed)
+
+
+def test_cmsw_actual_visible_capture_replays_approved_observations():
+    path = Path('/tmp/mit-hass-subjects/cmsw-visible.html')
+    if not path.exists():
+        pytest.skip('Optional ignored public visible-DOM capture')
+    rows = review.observe_cmsw(path.read_text())
+    hashes = {review.observation_digest(row) for row in rows}
+    observations = [o for r in MANIFEST['courses'].values() for o in r['observations']
+                    if o['source_id'] == 'mit-ai-hass-review-cmsw-fall2026']
+    assert len(observations) == 33
+    assert all(o['observation_digest'] in hashes for o in observations)

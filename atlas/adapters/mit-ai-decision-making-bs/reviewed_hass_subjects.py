@@ -180,3 +180,35 @@ def observe_wgs_detail(html):
     return dict(code=match[1], name=match[2], description=paragraphs[1],
                 units=units[1] if units else None, source_metadata=paragraphs[0],
                 prerequisites=None, term='Fall 2026-2027')
+
+
+def observe_cmsw(html):
+    """Observe the public expanded term directory, including explicit alias labels."""
+    soup = BeautifulSoup(html, 'html.parser')
+    panel = soup.find('section', id='mit-subject-list')
+    if panel is None or panel.find('h2') is None:
+        raise ValueError('CMS/W public term directory missing')
+    term = clean(panel.find('h2'))
+    if not re.fullmatch(r'(Fall|Spring|IAP) \d{4}', term):
+        raise ValueError('CMS/W term label changed')
+    rows = []
+    for node in panel.select('.academic_term_tier__subject'):
+        code = clean(node.select_one('.academic_term_tier__subject-course-number'))
+        title = clean(node.select_one('.academic_term_tier__subject-course-title'))
+        body = node.select_one('.academic-term-tier__subject-description')
+        if not code or not title or body is None:
+            raise ValueError('CMS/W subject lost paired identity/description')
+        metadata = {}
+        for field in body.select('li'):
+            label = field.find('strong')
+            if label is not None:
+                key = clean(label).rstrip(':')
+                metadata[key] = clean(field)[len(clean(label)):].strip()
+        description = clean(' '.join(clean(p) for p in body.find_all('p', recursive=False))) or None
+        rows.append(dict(code=code, name=title, description=description,
+                         prerequisites=metadata.get('Prereq'), units=metadata.get('Units'),
+                         term=term, same_subject_as=metadata.get('Same subject as'),
+                         meets_with=metadata.get('Meets with'), designation=metadata.get('Designation')))
+    if not rows:
+        raise ValueError('CMS/W public subject rows missing')
+    return rows
