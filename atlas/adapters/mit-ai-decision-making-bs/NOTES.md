@@ -263,3 +263,10 @@ The code-only GIR table observer previously assigned all non-math science codes 
 An additional69 approved subject records were integrated from the public CMS/W subject directory across explicitly selected Fall2026, Spring2026, Fall2025 and Spring2025 panels. The contributions b0badc6/f15397e/0520b3e were replayed against visible ordinary-browser captures. Each term shares a URL but has distinct observation hashes and source IDs; fetching the current page cannot silently refresh an archived record. No hidden endpoint or disabled certificate check was used.
 
 The primary seed now includes139 HASS actual-description records;10 identity/version holds, two conflicting records and694 pending records remain. Cultural analysis of technology is human context; game design and data visualization may be mixed methods/domain subjects. Same-subject, meets-with and additional graduate work are not interchangeable identities. These additions change metadata, not fixed requirement roles or full-degree audit status.
+
+
+## Limited language-title evidence — 2026-10-11
+
+Contribution1809380 adds45 manual dispositions from seven actual semester-labeled language directories.139 HASS descriptions remain unchanged; the new records have no invented descriptions, credits or formal prerequisites. Unambiguous language instruction and literary/cultural/historical titles support limited classifications. Three broad public-health, calligraphy and environmental titles remain unclassified. Printed code/link differences and regular/hybrid variants are not repaired or merged.
+
+When a directory also supplies concentration requirements, the registered observer now composes eligibility parsing with metadata parsing; it does not overwrite the existing field rules. The seed has528 total manual dispositions, including184 HASS rows (139 actual descriptions plus45 title-only).645 HASS rows remain active,14 have identity/version holds and two have conflicting descriptions. Contextual HASS plan handling remains conservative pending precise applicability review.

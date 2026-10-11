@@ -184,8 +184,12 @@ SOURCES.extend(gir_subjects.SOURCE_PARSERS)
 SOURCE_PARSERS.update(gir_subjects.SOURCE_PARSERS)
 
 hass_metadata = import_module('atlas.adapters.mit-ai-decision-making-bs.hass_metadata')
-SOURCES.extend(hass_metadata.SOURCE_PARSERS)
-SOURCE_PARSERS.update(hass_metadata.SOURCE_PARSERS)
+for url, metadata_parser in hass_metadata.SOURCE_PARSERS.items():
+    if url in SOURCE_PARSERS:
+        SOURCE_PARSERS[url] = hass_metadata.with_metadata(SOURCE_PARSERS[url], metadata_parser)
+    else:
+        SOURCES.append(url)
+        SOURCE_PARSERS[url] = metadata_parser
 
 gir_advising = import_module('atlas.adapters.mit-ai-decision-making-bs.gir_advising')
 SOURCES.extend(gir_advising.SOURCE_PARSERS)

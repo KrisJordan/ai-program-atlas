@@ -54,6 +54,7 @@ def test_observations_have_distinct_ids_and_published_units_without_review():
     ('href="#grad_AUS2"', 'href="#new_pool"'),
     ('At least two of', 'At least three of'),
     (' &amp; ', ' or '),
+    ('Three <b>math</b> subjects:<br><div>', 'Three <b>math</b> subjects:<br><div>One of '),
 ])
 def test_material_rule_changes_fail_closed(old, new):
     with pytest.raises(ValueError):

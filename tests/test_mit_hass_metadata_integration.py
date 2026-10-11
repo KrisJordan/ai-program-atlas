@@ -39,7 +39,12 @@ def test_integrated_evidence_preserves_term_rules_and_withholds_conflicts():
     by = {c['id']: c for c in p['courses']}
     integrated = [by[cid] for cid in m.INTEGRATED['course_ids']]
     assert len(integrated) >= 70
-    assert all(c.get('description') and c.get('category_review') for c in integrated)
+    assert all(c.get('category_review') for c in integrated)
+    assert sum(bool(c.get('description')) for c in integrated) >= 139
+    limited = [c for c in integrated if any(o.get('evidence_basis') == 'official_title_only'
+               and o['approved_for_integration'] for o in m.MANIFEST['courses'][c['id']]['observations'])]
+    assert limited and all(c['description'] is None for c in limited)
+    assert all('Limited official-title-only' in c['category_review']['rationale'] for c in limited)
     assert {s['url'] for s in m.SPECS.values()} <= {s['url'] for s in p['sources']}
     greek = [c for c in integrated if c['code'] in {'21L.607', '21L.608'}]
     assert greek and all(c['credits'] == 6 for c in greek)
@@ -53,8 +58,9 @@ def test_integrated_evidence_preserves_term_rules_and_withholds_conflicts():
 
 
 def test_actual_integrated_source_replay_has_exact_approved_identity_scope():
-    paths = {sid: Path('/tmp/mit-hass-subjects') / m.INTEGRATED.get('cache_names', {}).get(
-                sid, sid.removeprefix('mit-ai-hass-review-') + '.html')
+    paths = {sid: Path(m.INTEGRATED.get('cache_paths', {}).get(sid,
+                str(Path('/tmp/mit-hass-subjects') / m.INTEGRATED.get('cache_names', {}).get(
+                sid, sid.removeprefix('mit-ai-hass-review-') + '.html'))))
              for sid in m.SPECS}
     if not all(p.exists() for p in paths.values()):
         pytest.skip('Optional ignored official source captures absent')
@@ -76,3 +82,29 @@ def test_current_cmsw_capture_does_not_certify_archived_term_records():
                 if any(o['approved_for_integration'] and o['source_id'].endswith('cmsw-fall2025')
                        for o in m.MANIFEST['courses'][cid]['observations'])}
     assert archived and archived.isdisjoint({c['id'] for c in rows})
+
+
+def test_same_source_metadata_composition_preserves_eligibility_and_known_units():
+    original = lambda _: {'id': 'program', 'courses': [dict(id='c', credits=12, notes=['eligibility'])],
+                          'requirements': [dict(id='field-plan', kind='choose_courses', count=3)]}
+    metadata = lambda _: {'id': 'program', 'courses': [dict(id='c', credits=None, category='other', notes=['title only'])],
+                          'requirements': [], 'observed_hass_description_digests': {'c': 'guard'}}
+    out = m.with_metadata(original, metadata)('source')
+    assert out['requirements'] == original('source')['requirements']
+    assert len(out['courses']) == 1 and out['courses'][0]['credits'] == 12
+    assert out['courses'][0]['category'] == 'other'
+    assert out['courses'][0]['notes'] == ['eligibility', 'title only']
+
+
+def test_actual_language_registration_keeps_preexisting_field_rules():
+    path = Path('/tmp/atlas-mit-hass-rest-chinese.html')
+    if not path.exists():
+        pytest.skip('Optional ignored official source capture absent')
+    adapter = importlib.import_module('atlas.adapters.mit-ai-decision-making-bs.adapter')
+    fields = importlib.import_module('atlas.adapters.mit-ai-decision-making-bs.hass_languages')
+    url = 'https://languages.mit.edu/areas-of-study/chinese-studies/'
+    before = fields.SOURCE_PARSERS[url](path.read_text())
+    after = adapter.SOURCE_PARSERS[url](path.read_text())
+    assert before['requirements'] == after['requirements']
+    assert after['observed_hass_description_digests']
+    assert len(adapter.SOURCES) == len(set(adapter.SOURCES))
