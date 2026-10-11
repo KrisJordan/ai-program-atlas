@@ -362,7 +362,7 @@
         "Main-table ECO001/WRT titles are inconsistent with course catalogs; canonical descriptions distinguish economics and writing rather than propagating obvious copied labels."
       ],
       "remaining": [
-        "130\u2013131 table minimum versus130highlight/sample and11free credits versus sample4+6 remain source conflicts.",
+        "130–131 table minimum versus130highlight/sample and11free credits versus sample4+6 remain source conflicts.",
         "Reuse of prescribed/depth courses in open electives remains unclear.",
         "Not every course-description classification or degree-wide policy independently reread in this bounded pass."
       ],
@@ -371,11 +371,11 @@
     {
       "program_id": "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree",
       "institution_id": "northwestern-university",
-      "reviewed_commit": "1cf26ad",
+      "reviewed_commit": "78a4082",
       "primary_audit": "research/degree-audit/northwestern.json",
       "second_pass_status": "partial",
       "full_degree_verified": false,
-      "verified_scope": "All fixed course identities and subject categories; seven oral/innovation alternatives and four introductory programming alternatives; not all elective identities or college policies.",
+      "verified_scope": "All fixed course identities and subject categories; seven oral/innovation alternatives and four introductory programming alternatives; independently reread college honors-calculus substitution and two ES_APPM descriptions. Not all elective identities or college policies.",
       "sources": [
         {
           "url": "https://catalogs.northwestern.edu/undergraduate/engineering-applied-science/artificial-intelligence/artificial-intelligence-major/",
@@ -418,13 +418,19 @@
           "locator": "Exact core course-description blocks",
           "checked_at": "2026-10-11",
           "access_status": "HTTP 200; independently fetched using robots-aware transport"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/es_appm/",
+          "catalog_year": "2026-2027",
+          "locator": "ES_APPM 252-1 and 252-2 descriptions; read alongside college Mathematics footnotes 1 and 2",
+          "checked_at": "2026-10-11",
+          "access_status": "Independently read actual cached official HTML; /tmp/nw-full-audit/es_appm.html, provenance fetch-index.json"
         }
       ],
       "expected_course_ids": {
         "required": [
           "nw-bse-math-220-1",
           "nw-bse-math-220-2",
-          "nw-bse-math-228-1",
           "nw-bse-comp-sci-212-0",
           "nw-bse-comp-sci-208-0",
           "nw-bse-comp-sci-211-0",
@@ -447,14 +453,16 @@
         "nw-bse-perf-st-103-0",
         "nw-bse-perf-st-203-0",
         "nw-bse-prdv-335-0",
-        "nw-bse-bmd-eng-390-2"
+        "nw-bse-bmd-eng-390-2",
+        "nw-bse-math-228-1",
+        "nw-bse-es-appm-252-1"
       ],
       "expected_profile": {
         "required": {
-          "count": 14,
+          "count": 13,
           "categories": {
             "foundations": 2,
-            "mathematics": 6,
+            "mathematics": 5,
             "ai_ml": 2,
             "human_context": 2,
             "other": 2
@@ -466,13 +474,17 @@
       "findings": [
         "The college Select one heading governs seven unindented oral/innovation rows; these are options, not seven fixed courses. BMD_ENG 390-2 is mandatory only for biomedical engineering in the footnote.",
         "Four half-unit writing/design records represent two units, while the profile correctly counts four distinct course records.",
-        "COMP_SCI 208/211 concern data structures and software construction; GEN_ENG 231/241 and COMP_SCI 212 concern mathematical methods. Mixed design records remain other."
+        "COMP_SCI 208/211 concern data structures and software construction; GEN_ENG 231/241 and COMP_SCI 212 concern mathematical methods. Mixed design records remain other.",
+        "Follow-up supersedes the earlier 14-fixed expectation: college Mathematics footnote 1 permits ES_APPM 252-1/252-2 in place of MATH 228-1/228-2, corroborated by the two actual honors descriptions. MATH 228-1 and ES_APPM 252-1 are alternative-path records, not fixed. Footnote 2 separately requires AI COMP_SCI 212 instead of MATH 228-2; it remains fixed. ES_APPM 252-2 remains general-sequence context, not an added fixed AI requirement."
       ],
       "remaining": [
         "COMP_SCI 212 preparation names 110/111 while the major slot permits 180/111. Additional preparation or placement may apply; this difference alone does not prove a degree contradiction.",
         "Full elective identity, classification and college-policy second pass remains unfinished."
       ],
-      "result": "Source-backed fixed aggregate and choice correction independently verified; full-degree second pass partial."
+      "result": "Source-backed 13-course fixed aggregate and bounded alternative/context roles independently verified; prior 14-course aggregate superseded. Full-degree second pass partial.",
+      "verified_context_subset": [
+        "nw-bse-es-appm-252-2"
+      ]
     },
     {
       "program_id": "rice-university-artificial-intelligence-bs-degree",
@@ -1337,63 +1349,63 @@
         },
         {
           "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/a-i/",
-          "catalog_year": "2026\u20132027",
+          "catalog_year": "2026–2027",
           "locator": "A-I 100 and other degree-listed course blocks",
           "checked_at": "2026-10-11",
           "access_status": "HTTP 200; independent robots-aware fetch; fixed-course descriptions and stated table/policy clauses reread"
         },
         {
           "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/aie/",
-          "catalog_year": "2026\u20132027",
+          "catalog_year": "2026–2027",
           "locator": "AIE 489W and other degree-listed course blocks",
           "checked_at": "2026-10-11",
           "access_status": "HTTP 200; independent robots-aware fetch; fixed-course descriptions and stated table/policy clauses reread"
         },
         {
           "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/cmpsc/",
-          "catalog_year": "2026\u20132027",
+          "catalog_year": "2026–2027",
           "locator": "CMPSC 360 and other degree-listed course blocks",
           "checked_at": "2026-10-11",
           "access_status": "HTTP 200; independent robots-aware fetch; fixed-course descriptions and stated table/policy clauses reread"
         },
         {
           "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/ee/",
-          "catalog_year": "2026\u20132027",
+          "catalog_year": "2026–2027",
           "locator": "EE 456 and other degree-listed course blocks",
           "checked_at": "2026-10-11",
           "access_status": "HTTP 200; independent robots-aware fetch; fixed-course descriptions and stated table/policy clauses reread"
         },
         {
           "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/engl/",
-          "catalog_year": "2026\u20132027",
+          "catalog_year": "2026–2027",
           "locator": "ENGL 202C and other degree-listed course blocks",
           "checked_at": "2026-10-11",
           "access_status": "HTTP 200; independent robots-aware fetch; fixed-course descriptions and stated table/policy clauses reread"
         },
         {
           "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/math/",
-          "catalog_year": "2026\u20132027",
+          "catalog_year": "2026–2027",
           "locator": "MATH 140 and other degree-listed course blocks",
           "checked_at": "2026-10-11",
           "access_status": "HTTP 200; independent robots-aware fetch; fixed-course descriptions and stated table/policy clauses reread"
         },
         {
           "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/phys/",
-          "catalog_year": "2026\u20132027",
+          "catalog_year": "2026–2027",
           "locator": "PHYS 211 and other degree-listed course blocks",
           "checked_at": "2026-10-11",
           "access_status": "HTTP 200; independent robots-aware fetch; fixed-course descriptions and stated table/policy clauses reread"
         },
         {
           "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/stat/",
-          "catalog_year": "2026\u20132027",
+          "catalog_year": "2026–2027",
           "locator": "STAT 401 and other degree-listed course blocks",
           "checked_at": "2026-10-11",
           "access_status": "HTTP 200; independent robots-aware fetch; fixed-course descriptions and stated table/policy clauses reread"
         },
         {
           "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/ds/",
-          "catalog_year": "2026\u20132027",
+          "catalog_year": "2026–2027",
           "locator": "DS 120 and other degree-listed course blocks",
           "checked_at": "2026-10-11",
           "access_status": "HTTP 200; independent robots-aware fetch; fixed-course descriptions and stated table/policy clauses reread"
@@ -1501,42 +1513,42 @@
         },
         {
           "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/a-i/",
-          "catalog_year": "2026\u20132027",
+          "catalog_year": "2026–2027",
           "locator": "A-I 100 and other degree-listed course blocks",
           "checked_at": "2026-10-11",
           "access_status": "HTTP 200; independent robots-aware fetch; fixed-course descriptions and stated table/policy clauses reread"
         },
         {
           "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/cmpsc/",
-          "catalog_year": "2026\u20132027",
+          "catalog_year": "2026–2027",
           "locator": "CMPSC 131 and other degree-listed course blocks",
           "checked_at": "2026-10-11",
           "access_status": "HTTP 200; independent robots-aware fetch; fixed-course descriptions and stated table/policy clauses reread"
         },
         {
           "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/math/",
-          "catalog_year": "2026\u20132027",
+          "catalog_year": "2026–2027",
           "locator": "MATH 140 and other degree-listed course blocks",
           "checked_at": "2026-10-11",
           "access_status": "HTTP 200; independent robots-aware fetch; fixed-course descriptions and stated table/policy clauses reread"
         },
         {
           "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/stat/",
-          "catalog_year": "2026\u20132027",
+          "catalog_year": "2026–2027",
           "locator": "STAT 401 and other degree-listed course blocks",
           "checked_at": "2026-10-11",
           "access_status": "HTTP 200; independent robots-aware fetch; fixed-course descriptions and stated table/policy clauses reread"
         },
         {
           "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/ds/",
-          "catalog_year": "2026\u20132027",
+          "catalog_year": "2026–2027",
           "locator": "DS 200 and other degree-listed course blocks",
           "checked_at": "2026-10-11",
           "access_status": "HTTP 200; independent robots-aware fetch; fixed-course descriptions and stated table/policy clauses reread"
         },
         {
           "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/ee/",
-          "catalog_year": "2026\u20132027",
+          "catalog_year": "2026–2027",
           "locator": "EE 456 and other degree-listed course blocks",
           "checked_at": "2026-10-11",
           "access_status": "HTTP 200; independent robots-aware fetch; fixed-course descriptions and stated table/policy clauses reread"
@@ -4068,7 +4080,7 @@
         "Five calculus alternatives remain options, including MATH1341 that is fixed in other family variants. MATH1340 has six actual course hours; the four-hour requirement row is not a conversion of that course amount.",
         "ECON2350 statistics and ECON2560 econometrics are mathematics; four macro/micro principles/theory courses analyze social institutions and policy, not mathematics merely because calculus is used. Open-topic ECON4692/4997 capstones remain source-read unclassified, not unread or guessed AI.",
         "ECON2315/2316/2350/2560 appear both as fixed courses and in a four-course average-C/2.000 GPA overlay; each identity counts once. The rule is not a minimum C in every course. ECON2560 is the local integrative course.",
-        "The five/20-hour ECON elective rule preserves its five disjoint subject-number ranges, maximum two 1200\u20131999 courses and required-core exclusion. Range endpoint links are not named required courses or an exhaustive finite pool. Khoury four-hour range and permitted advisor approvals remain separately conditional.",
+        "The five/20-hour ECON elective rule preserves its five disjoint subject-number ranges, maximum two 1200–1999 courses and required-core exclusion. Range endpoint links are not named required courses or an exhaustive finite pool. Khoury four-hour range and permitted advisor approvals remain separately conditional.",
         "Read university minimum 128 hours, overall 2.000, 64 Northeastern hours, NUpath overlap/transfer/writing, qualifying experiential alternatives, graduation clearance/petition, progression and combined-major definitions against 43 inherited policy nodes. NYC/BA/nursing-only provisions are inapplicable to this Boston BS; CSSH ELA applies only to majors entirely within CSSH, so no extra ELA pool is imposed.",
         "College catalog and current advising pages do not establish every student home/cohort. Current Khoury later-term major-GPA rules supplement rather than demonstrably contradict catalog silence. Student-specific home assignment is not inferred from the catalog host."
       ],
@@ -8489,7 +8501,7 @@
       "source_block_sha256": "cbb83335bcff1cca05f04a1119ff33c6fa51eecce34d5e330692f113adc91688"
     },
     "JRNL 1102": {
-      "title": "Journalist\u2019s Toolbox",
+      "title": "Journalist’s Toolbox",
       "category": "human_context",
       "status": "reviewed",
       "hours": "1",
@@ -8498,7 +8510,7 @@
       "source_block_sha256": "8c1b1b82d458ec0dd32c11f83777d46df3c8c87c2a7b73fa2d5bce817fe14cf9"
     },
     "JRNL 1150": {
-      "title": "Understanding Today\u2019s News",
+      "title": "Understanding Today’s News",
       "category": "human_context",
       "status": "reviewed",
       "hours": "4",

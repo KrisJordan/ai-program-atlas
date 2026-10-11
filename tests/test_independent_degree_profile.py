@@ -102,12 +102,12 @@ def test_lehigh_explicit_fixed_and_options_match_independent_source_enumeration(
     assert subjects['ECE 303']=='other'
 
 
-def test_northwestern_manual_fixed_set_excludes_oral_choice_menu():
+def test_northwestern_manual_fixed_set_excludes_oral_and_honors_choices():
     ledger=json.loads((ROOT/'research/degree-audit/independent-review.json').read_text())
     entry=next(e for e in ledger['programs'] if e['institution_id']=='northwestern-university')
     p=load(entry['program_id']);profile=requirement_profile(p)
     fixed=entry['expected_course_ids']['required']
-    assert profile['required']['count']==14==len(fixed)
+    assert profile['required']['count']==13==len(fixed)
     expected=entry['expected_profile']['required']['categories']
     assert profile['required']['categories']=={k:expected.get(k,0) for k in profile['required']['categories']}
     for cid in fixed:
@@ -115,6 +115,13 @@ def test_northwestern_manual_fixed_set_excludes_oral_choice_menu():
     for cid in entry['verified_option_subset']:
         role=requirement_profile(only_course(p,cid))
         assert role['required']['count']==0 and role['options']['count']==1
+    # College footnotes distinguish the honors substitute from AI's discrete math.
+    assert 'nw-bse-comp-sci-212-0' in fixed
+    assert {'nw-bse-math-228-1','nw-bse-es-appm-252-1'} <= set(entry['verified_option_subset'])
+    for cid in entry['verified_context_subset']:
+        role=requirement_profile(only_course(p,cid))
+        assert role['required']['count']==role['options']['count']==0
+        assert role['unresolved']['count']==1
     half_units=[c for c in p['courses'] if c['id'] in fixed and c['code'].startswith(('DSGN','ENGLISH'))]
     assert len(half_units)==4 and sum(c['credits'] for c in half_units)==2
 
