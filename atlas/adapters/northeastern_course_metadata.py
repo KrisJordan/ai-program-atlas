@@ -6,6 +6,18 @@ from atlas.adapters.northeastern_courseleaf import clean, slug, numeric, categor
 # Short editorial summaries of the linked official descriptions. Each has a
 # source phrase guard; changed prose cannot silently replay an unsupported summary.
 SUMMARIES = {
+    'EECE 2160': ('controlling physical devices via software', 'Combines digital design, programming and embedded systems to control robotic devices.'),
+    'EECE 2322': ('construction of a simple processor', 'Develops digital logic, computer architecture and hardware models for a simple processor.'),
+    'EECE 2323': ('computer system on field-programmable logic', 'Designs, simulates and tests a computer system using programmable logic.'),
+    'EECE 2560': ('algorithm complexity analysis', 'Develops data structures, algorithms and complexity analysis for engineering problems.'),
+    'ENVR 1110': ('mitigation and adaptation options', 'Examines past and projected climate change, its impacts, mitigation and adaptation.'),
+    'ENVR 1200': ('guiding paradigm in geology', 'Studies Earth materials, geological processes and landscapes through plate tectonics.'),
+    'PHTH 1260': ('managing costs, increasing quality', 'Examines healthcare organization, financing, access, equity and reform in the United States.'),
+    'PHTH 2300': ('communicating as a leader', 'Develops interpersonal communication and presentation skills for health professions.'),
+    'EEMB 1101': ('designing and implementing independent field research', 'Introduces ecology and evolution through lectures, field investigation and independent research.'),
+    'EEMB 2302': ('distribution and abundance of species', 'Studies ecological processes through research, experimentation and scientific communication.'),
+    'INPR 1000': ('apply design and systems thinking practices', 'Explores global citizenship, university resources and interdisciplinary problem solving.'),
+    'INSC 1000': ('Introduces first-year students with majors in the College of Science', 'Introduces science students to university study, academic skills and their college community.'),
     'ENGW 1102': ('concerns of multilingual writers', 'Develops research, revision and writing practices with attention to multilingual writers.'),
     'ENGW 1111': ('writing in a workshop setting', 'Develops research and writing across audiences and genres through workshop practice.'),
     'ENGW 1114': ('writing projects meet specific community needs', 'Develops writing and research through community service projects.'),
@@ -181,6 +193,14 @@ def parse_subject(html, *, program_id, subject, heading, codes, url):
             metadata_notes.append(f'{code} subject catalog recommended preparation (not a prerequisite): {recommendation.strip()}')
         if code == 'PSYC 2320' and 'Should be taken before the end of the sophomore year.' in prose:
             metadata_notes.append('PSYC 2320 subject catalog timing advice: complete before the end of the sophomore year. This advice is separate from prerequisite eligibility.')
+        scoped_conditions = {
+            'ENVR 3300': ('Students who do not meet course prerequisites may seek permission of instructor.', 'Students who do not meet the prerequisites may seek instructor permission; permission is not guaranteed.'),
+            'PHTH 5222': ('Requires permission of instructor for students outside designated programs.', 'Instructor permission is required outside designated programs. The description does not enumerate those programs; applicability remains conditional.'),
+            'JRNL 5360': ('International students wishing to register need to speak to the International Student and Scholar Institute prior to registration.', 'International students must speak to the International Student and Scholar Institute before registering.'),
+        }
+        scoped = scoped_conditions.get(code)
+        if scoped and scoped[0] in prose:
+            metadata_notes.append(f'{code} source-stated registration condition: {scoped[1]}')
         if numeric(hours) is None:
             metadata_notes.append(f'{code} subject catalog credit options: {hours} semester hours. The scalar credit amount remains unknown; alternatives are not added together.')
         cid = program_id + '-' + slug(code)
@@ -194,6 +214,17 @@ def parse_subject(html, *, program_id, subject, heading, codes, url):
 
 
 SUBJECT_HEADINGS = {
+    'EECE': 'Electrical and Computer Engineering (EECE)',
+    'ENVR': 'Earth and Environmental Sciences (ENVR)',
+    'PHTH': 'Public Health (PHTH)',
+    'EEMB': 'Ecology, Evolution, and Marine Biology (EEMB)',
+    'INPR': 'Interdisciplinary Studies - Office of the Provost (INPR)',
+    'INSC': 'Interdisciplinary Studies in Science (INSC)',
+    'SOCL': 'Sociology (SOCL)',
+    'JRNL': 'Journalism (JRNL)',
+    'COMM': 'Communication Studies (COMM)',
+    'CRIM': 'Criminal Justice (CRIM)',
+    'INTL': 'International Affairs (INTL)',
     'ENGW': 'English Writing (ENGW)',
     'PHYS': 'Physics (PHYS)',
     'PHIL': 'Philosophy (PHIL)',

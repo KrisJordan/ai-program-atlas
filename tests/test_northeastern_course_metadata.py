@@ -205,3 +205,30 @@ def test_listed_disciplinary_courses_have_catalog_facts_without_forcing_descript
             assert any(s['id']==c['source_id'] and c['code'] in s['locator'] for s in p['sources'])
         assert p['curriculum_status']=='partial'
     assert observations>250 and unknown_descriptions>100
+
+
+@pytest.mark.parametrize(('subject','heading','code','prose','note'),[
+    ('ENVR','Earth and Environmental Sciences (ENVR)','ENVR 3300','Students who do not meet course prerequisites may seek permission of instructor.','permission is not guaranteed'),
+    ('PHTH','Public Health (PHTH)','PHTH 5222','Requires permission of instructor for students outside designated programs.','does not enumerate those programs'),
+    ('JRNL','Journalism (JRNL)','JRNL 5360','International students wishing to register need to speak to the International Student and Scholar Institute prior to registration.','before registering'),
+])
+def test_scoped_registration_conditions_keep_eligibility_uncertainty(subject,heading,code,prose,note):
+    html=page(f'<div class="courseblock"><p class="courseblocktitle">{code}. Sample course. (4 Hours)</p><p class="cb_desc">{prose}</p></div>',heading=heading)
+    parser=register_subject_sources('test-program',{subject:[code]})[f'https://catalog.northeastern.edu/course-descriptions/{subject.lower()}/']
+    observed=parser(html)
+    assert any(note in n for n in observed['notes'])
+    assert observed['courses'][0]['prerequisites'] is None
+    changed=parser(html.replace(prose,'The description no longer states that condition.'))
+    assert not any(note in n for n in changed['notes'])
+    with pytest.raises(ValueError):parser(html.replace(heading,'A different subject'))
+
+
+def test_first_year_science_audience_does_not_assign_home_college_or_required_course():
+    html=page('<div class="courseblock"><p class="courseblocktitle">INSC 1000. Science at Northeastern. (1 Hour)</p><p class="cb_desc">Introduces first-year students with majors in the College of Science to the liberal arts in general.</p></div>',heading='Interdisciplinary Studies in Science (INSC)')
+    parser=register_subject_sources('test-program',{'INSC':['INSC 1000']})['https://catalog.northeastern.edu/course-descriptions/insc/']
+    observed=parser(html)
+    assert observed['courses'][0]['description'] and observed['courses'][0]['credits']==1
+    assert observed['requirements']==[]
+    assert 'family' not in observed and 'hosting_unit' not in observed
+    assert 'curriculum_audit' not in observed and 'last_verified' not in observed
+    assert parser(html.replace('(1 Hour)','(2 Hours)'))['courses'][0]['credits']==2
