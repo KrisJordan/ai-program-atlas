@@ -1,0 +1,222 @@
+[
+  {
+    "institution_id": "princeton-university",
+    "status": "inspected",
+    "checked_at": "2026-10-11",
+    "note": "The September 1, 2026 DaIS announcement and academic directory identify an undergraduate Statistics and Machine Learning minor, not an AI-titled award. The new AI research unit does not itself establish a credential. Prior CS catalog review identified AB/BSE/CS minor; other department concentrations remain unreviewed. Ordinary direct fetch of DaIS returned HTTP403 after the public web reader had exposed its academic directory; no denied path retried. No institution-wide absence conclusion.",
+    "sources": [
+      {
+        "url": "https://research.princeton.edu/news/princeton-strengthens-its-support-ai-and-data-science-scholarship-through-data-and-0",
+        "title": "Princeton establishes Data and Intelligent Systems",
+        "locator": "September 1, 2026 announcement: research unit and existing SML minor",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://dais.princeton.edu/academics",
+        "title": "DaIS Academics",
+        "locator": "Visible SML undergraduate minor, SML graduate certificate and CSE graduate certificate; direct fetch403",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "georgetown-university",
+    "status": "inspected",
+    "checked_at": "2026-10-11",
+    "note": "Deepened the current program-directory review with the CS BS/AB/CS Ethics and Society relationships and Technology, Ethics and Society concentration, plus STIA concentration names. These titles do not qualify; the separately listed undergraduate AI certificate remains excluded. A February student-news report describes a planned cross-major ethics/AI concentration, but no approved exact current title or curriculum was independently established; retain as a follow-up lead, not an active program or absence conclusion.",
+    "sources": [
+      {
+        "url": "https://bulletin.georgetown.edu/programs/",
+        "title": "Georgetown 2026\u201327 program directory",
+        "locator": "Undergraduate program titles; certificate versus degree distinctions",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://bulletin.georgetown.edu/programs/computer-science-bs/",
+        "title": "Computer Science BS",
+        "locator": "Overview and Concentration in Technology, Ethics and Society; BS/AB/CSES relationships",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://bulletin.georgetown.edu/programs/science-technology-international-affairs-bsfs/",
+        "title": "Science, Technology and International Affairs BSFS",
+        "locator": "Named concentration areas and individual-proposal route",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://bulletin.georgetown.edu/programs/artificial-intelligence-undergraduate-certificate/",
+        "title": "Artificial Intelligence Undergraduate Certificate",
+        "locator": "Excluded credential type",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://thehoya.com/news/news-top/gu-to-integrate-generative-ai-into-curricula-university-programs/",
+        "title": "Student newspaper: planned cross-major AI concentration",
+        "locator": "Secondary February23,2026 announcement lead; not verified program identity",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "university-of-texas-austin",
+    "status": "confirmed",
+    "checked_at": "2026-10-11",
+    "note": "Confirmed the department Machine Learning and Artificial Intelligence concentration through the current Texas AI undergraduate directory and CS concentration navigation. Department HTML and the currently linked December17,2025 course-list PDF disagree on foundation identity, NLP numbering and a capstone option. A separate partial concentration record preserves the disagreement; no standalone AI degree or launch date is inferred. Geospatial Artificial Intelligence remains a certificate outside scope; the earlier A\u2013Z directory search alone had missed this concentration.",
+    "sources": [
+      {
+        "url": "https://ai.utexas.edu/academics",
+        "title": "Texas AI Academics",
+        "locator": "Undergraduate Concentration in Machine Learning / AI",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://www.cs.utexas.edu/undergraduate/concentrations",
+        "title": "Undergraduate concentrations",
+        "locator": "ML & AI named pathway and current concentration-course PDF link",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://www.cs.utexas.edu/concentrations/mlai",
+        "title": "Machine Learning & Artificial Intelligence Concentration",
+        "locator": "12-hour overview; choose-one foundation and three electives",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://www.cs.utexas.edu/sites/default/files/2025-12/UTCS_Concentrations_Course_Listings_12172025.pdf",
+        "title": "Concentrations Course Listings, December17,2025",
+        "locator": "AI section pages2\u20133 differs from older HTML; separate adapter review",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://catalog.utexas.edu/undergraduate/programs/",
+        "title": "2026\u201328 A\u2013Z undergraduate programs",
+        "locator": "Geospatial Artificial Intelligence explicitly certificate",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      }
+    ],
+    "discoveries": [
+      {
+        "title": "Machine Learning & Artificial Intelligence",
+        "kind": "concentration",
+        "award_level": "concentration",
+        "url": "https://www.cs.utexas.edu/concentrations/mlai"
+      }
+    ]
+  },
+  {
+    "institution_id": "university-of-wisconsin-madison",
+    "status": "inspected",
+    "checked_at": "2026-10-11",
+    "note": "Reviewed the full 2026\u201327 undergraduate directory, both AI-titled certificates, and the new College of Computing & Artificial Intelligence academic-program directory/transition FAQ. The two AI credentials are certificates and excluded; current undergraduate majors listed by the college are Computer Sciences, Data Science, Information Science and Statistics. The college name does not establish an AI-titled award. The FAQ says academic programs move in2027\u201328 and future requirements are not finalized. Other departmental concentration rules remain incompletely inspected; no absence conclusion.",
+    "sources": [
+      {
+        "url": "https://guide.wisc.edu/undergraduate/",
+        "title": "2026\u201327 Undergraduate Guide",
+        "locator": "All degree/certificate titles; two AI certificate links",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://guide.wisc.edu/undergraduate/engineering/college-wide/applications-artificial-intelligence-engineering-certificate/",
+        "title": "Applications of Artificial Intelligence in Engineering Certificate",
+        "locator": "Explicit undergraduate certificate type",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://guide.wisc.edu/undergraduate/letters-science/philosophy/ethics-data-artificial-intelligence-certificate/",
+        "title": "Ethics of Data and Artificial Intelligence Certificate",
+        "locator": "Explicit certificate type",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://cai.wisc.edu/education/academic-programs/",
+        "title": "CAI Academic Programs",
+        "locator": "Undergraduate versus graduate and professional headings",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://cai.wisc.edu/education/",
+        "title": "CAI Education",
+        "locator": "FAQ: college launched2026, academic programs remain L&S until2027\u201328; changes undecided",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "wake-forest-university",
+    "status": "inspected",
+    "checked_at": "2026-10-11",
+    "note": "Reviewed the current admissions major/minor directory, CS bulletin, engineering concentrations, Decision Analytics and Business & Enterprise Management options, and AI-in-business initiative. AI coursework and integrated teaching are not AI-titled credentials. Engineering names biomedical/civil-environmental/electrical/materials-chemical/mechanical directions; BEM names marketing/international business/new business development/management consulting or individualized plans. Individualized plans do not establish an approved AI-titled program. Other catalog areas remain unreviewed; no absence conclusion.",
+    "sources": [
+      {
+        "url": "https://admissions.wfu.edu/academics/majors-minors/",
+        "title": "Wake Forest Majors & Minors",
+        "locator": "Complete displayed A\u2013Z admissions list including concentrations",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://bulletin.wfu.edu/undergraduate/departments-programs/computer-science/",
+        "title": "Computer Science bulletin",
+        "locator": "Programs/course list; AI is a course topic",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://admissions.wfu.edu/academics/majors-minors/engineering/",
+        "title": "Engineering major and minor",
+        "locator": "Five named engineering concentration directions",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://bulletin.wfu.edu/undergraduate/departments-programs/engineering/",
+        "title": "Engineering bulletin",
+        "locator": "Degree/minor and undergraduate engineering courses",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://business.wfu.edu/undergraduate-programs/mathematical-business/",
+        "title": "Decision Analytics BS",
+        "locator": "Current named award under legacy mathematical-business URL",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://business.wfu.edu/undergraduate-programs/business-enterprise-management/",
+        "title": "Business & Enterprise Management BS",
+        "locator": "Four named concentrations plus individualized option",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://business.wfu.edu/ai-in-business-education/",
+        "title": "AI in Business Education",
+        "locator": "School-wide teaching initiative rather than a titled award",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      }
+    ],
+    "discoveries": []
+  }
+]
