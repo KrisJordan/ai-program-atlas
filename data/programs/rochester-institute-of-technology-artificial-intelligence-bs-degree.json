@@ -540,6 +540,56 @@
       "locator": "Current curriculum table and complete settled public course popups",
       "source_date": null,
       "confidence": "high"
+    },
+    {
+      "id": "rit-gender-sts-environment-cards-2026-2027",
+      "url": "https://www.rit.edu/study/environmental-studies-immersion",
+      "title": "Environmental Studies Immersion — selected complete public course cards",
+      "fetched_at": null,
+      "catalog_year": "2026-2027",
+      "locator": "Rendered 2026–2027 curriculum table and exact settled public course popup; direct visible-browser read.",
+      "source_date": null,
+      "confidence": "high"
+    },
+    {
+      "id": "rit-american-indian-and-indigenous-studies-immersion-rules-2026-2027",
+      "url": "https://www.rit.edu/study/american-indian-and-indigenous-studies-immersion",
+      "title": "American Indian and Indigenous Studies Immersion — reviewed current route rules",
+      "catalog_year": "2026-2027",
+      "fetched_at": null,
+      "source_date": null,
+      "confidence": "high",
+      "locator": "Current complete overview, curriculum and local conditions from the reviewed 77-route inventory; Global Experience prose independently reread on 2026-10-11."
+    },
+    {
+      "id": "rit-latino-latina-latin-american-studies-immersion-rules-2026-2027",
+      "url": "https://www.rit.edu/study/latino-latina-latin-american-studies-immersion",
+      "title": "Latino/Latina/Latin American Studies Immersion — reviewed current route rules",
+      "catalog_year": "2026-2027",
+      "fetched_at": null,
+      "source_date": null,
+      "confidence": "high",
+      "locator": "Current complete overview, curriculum and local conditions from the reviewed 77-route inventory; Global Experience prose independently reread on 2026-10-11."
+    },
+    {
+      "id": "rit-global-experience-immersion-rules-2026-2027",
+      "url": "https://www.rit.edu/study/global-experience-immersion",
+      "title": "Global Experience Immersion — reviewed current route rules",
+      "catalog_year": "2026-2027",
+      "fetched_at": null,
+      "source_date": null,
+      "confidence": "high",
+      "locator": "Current complete overview, curriculum and local conditions from the reviewed 77-route inventory; Global Experience prose independently reread on 2026-10-11."
+    },
+    {
+      "id": "rit-urban-studies-immersion-rules-2026-2027",
+      "url": "https://www.rit.edu/study/urban-studies-immersion",
+      "title": "Urban Studies Immersion — reviewed current route rules",
+      "catalog_year": "2026-2027",
+      "fetched_at": null,
+      "source_date": null,
+      "confidence": "high",
+      "locator": "Current complete overview, curriculum and local conditions from the reviewed 77-route inventory; Global Experience prose independently reread on 2026-10-11."
     }
   ],
   "outcomes": [
@@ -12588,6 +12638,35 @@
       "notes": [
         "No separate prerequisite field was displayed; this does not establish unrestricted enrollment."
       ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-stso-550",
+      "code": "STSO-550",
+      "name": "Sustainable Communities",
+      "description": "Examines environmental, economic and social sustainability and works with local organizations to explore applying theoretical concepts.",
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "rit-gender-sts-environment-cards-2026-2027",
+      "url": "https://www.rit.edu/study/environmental-studies-immersion",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rit-gender-sts-environment-cards-2026-2027"
+        ],
+        "locator": "STSO-550 complete public popup under2026–2027 curriculum",
+        "rationale": "The description combines substantive interpretive/social inquiry with domain practice: Examines environmental, economic and social sustainability and works with local organizations to explore applying theoretical concepts.",
+        "candidate_categories": [
+          "applications",
+          "human_context"
+        ]
+      },
+      "notes": []
     }
   ],
   "requirements": [
@@ -13679,7 +13758,7 @@
       "category": "other",
       "source_id": "rit-mathematics-immersion-2026-2027",
       "source_text": null,
-      "summary": "Choose and declare an approved immersion under university policy. All 77 published route rules reviewed; 28 branches currently have represented course records. Other named-course content remains accessible work; Global Experience is approval-based rather than a finite menu. No default, automatic singleton promotion or full inventory claim is intended.",
+      "summary": "Choose and declare an approved immersion under university policy. All 77 published route rules are reviewed; 32 paths are represented here, including 31 with finite course records and Global Experience as an open approved-credit criterion. Other named-course content remains accessible work. No default, singleton promotion or full inventory claim is intended.",
       "course_ids": []
     },
     {
@@ -15703,6 +15782,135 @@
         "rochester-institute-of-technology-artificial-intelligence-bs-degree-phil-409",
         "rochester-institute-of-technology-artificial-intelligence-bs-degree-phil-449"
       ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-american-indian-and-indigenous-studies-immersion",
+      "parent_id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-immersion-observed-routes",
+      "title": "American Indian and Indigenous Studies Immersion",
+      "kind": "all",
+      "count": null,
+      "credits": 9,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "rit-american-indian-and-indigenous-studies-immersion-rules-2026-2027",
+      "source_text": null,
+      "summary": "Native North Americans plus two electives; nine hours. University immersion no-program-overlap rule applies. Closed to global futures majors. ANTH-255 qualifies only for a Mesoamerica or North America topic. ANTH-489 qualifies only for an American Indian/Indigenous Studies-relevant topic. ",
+      "course_ids": []
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-american-indian-and-indigenous-studies-immersion-required",
+      "parent_id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-american-indian-and-indigenous-studies-immersion",
+      "title": "Native North Americans within chosen route",
+      "kind": "all",
+      "count": null,
+      "credits": 3,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "rit-american-indian-and-indigenous-studies-immersion-rules-2026-2027",
+      "source_text": null,
+      "summary": "Locally required in this optional immersion, not fixed AI core.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-anth-260"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-american-indian-and-indigenous-studies-immersion-electives",
+      "parent_id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-american-indian-and-indigenous-studies-immersion",
+      "title": "Two qualifying Indigenous Studies electives",
+      "kind": "choose_courses",
+      "count": 2,
+      "credits": 6,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "rit-american-indian-and-indigenous-studies-immersion-rules-2026-2027",
+      "source_text": null,
+      "summary": "Choose two. ANTH-255 requires Mesoamerica or North America; ANTH-489 requires a relevant Indigenous Studies topic. No topic approval is presumed.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-anth-210",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-anth-255",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-anth-265",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-anth-312",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-anth-335",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-anth-345",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-anth-361",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-anth-375",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-anth-385",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-anth-430",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-anth-489",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-soci-361",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-soci-395"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-latino-latina-latin-american-studies-immersion",
+      "parent_id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-immersion-observed-routes",
+      "title": "Latino/Latina/Latin American Studies Immersion",
+      "kind": "choose_courses",
+      "count": 3,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-latino-latina-latin-american-studies-immersion-rules-2026-2027",
+      "source_text": null,
+      "summary": "Three culture courses, with an optional substitution of one Spanish-language course; nine hours, with at least one course at 300 level or above. The published table combines culture and language options. University immersion no-program-overlap rule applies. Closed to native Spanish speakers and applied modern language and culture majors in the Spanish track. At least one course must be at the 300 level or above. Three culture courses are required; one Spanish-language course may substitute for one of them. Prior Spanish study requires a modern-languages department placement exam to determine the appropriate language-course level. ANTH-255 qualifies only when the topic concerns Mesoamerica or Latin America. The table combines culture and Spanish-language rows without marking each row as one or the other. The culture-plus-optional-language constraint is preserved; no automatic partition by prefix or title is certified. Actual beginning Spanish cards give four credits; preserve source nominal nine-hour total without inventing a cap or inferring which untagged table rows qualify as language substitution.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-anth-235",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-anth-255",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-anth-335",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-arth-137",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-arth-138",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-hist-130",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-hist-135",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-mlsp-201",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-mlsp-202",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-mlsp-251",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-mlsp-301",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-mlsp-302",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-mlsp-305",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-mlsp-310",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-mlsp-315",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-mlsp-401",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-mlsp-402",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-soci-395"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-global-experience-immersion",
+      "parent_id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-immersion-observed-routes",
+      "title": "Global Experience Immersion",
+      "kind": "choose_credits",
+      "count": null,
+      "credits": 9,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "rit-global-experience-immersion-rules-2026-2027",
+      "source_text": null,
+      "summary": "Nine approved general-education credits, each containing a substantial global or study-away experience. Coursework is individually selected; no finite named course menu is published. University immersion no-program-overlap rule applies. All nine credits must have substantial global or study-away experience approved by RIT Global. Global Experience immersions require approval by RIT Global and the RIT General Education Committee. Work with the advisor and RIT Global to select qualifying courses. Curriculum text allows GE Electives or Perspectives; overview describes GE elective credit. Preserve both descriptions of eligibility. The route is an approval-based credit path with no enumerated course-code list. Zero named rows does not mean no courses or no work is required. The overview says general-education elective credit, while the curriculum text explicitly allows GE Electives or Perspectives. No narrower resolution is inferred. Empty course IDs mean an open eligibility criterion, not zero work or an inaccessible finite pool.",
+      "course_ids": []
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-urban-studies-immersion",
+      "parent_id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-immersion-observed-routes",
+      "title": "Urban Studies Immersion",
+      "kind": "choose_courses",
+      "count": 3,
+      "credits": 9,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "rit-urban-studies-immersion-rules-2026-2027",
+      "source_text": null,
+      "summary": "Choose three listed electives for nine hours, with topic and campus restrictions. The three related general-education courses must be outside the major and may not overlap program requirements. ANTH-489 counts only with an Urban Studies-relevant topic. SOCI-235 is exclusively offered at and through RIT global campuses. No 300-level minimum is stated in this route overview or table. ",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-anth-312",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-anth-410",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-anth-489",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-envs-305",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-soci-220",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-soci-235",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-soci-330",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-soci-345",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-stso-550"
+      ]
     }
   ],
   "notes": [
@@ -15770,7 +15978,12 @@
       "rit-philosophy-philosophy-cards-2026-2027",
       "rit-philosophy-ethics-cards-2026-2027",
       "rit-economics-actual-cards-2026-2027",
-      "rit-history-actual-cards-2026-2027"
+      "rit-history-actual-cards-2026-2027",
+      "rit-gender-sts-environment-cards-2026-2027",
+      "rit-american-indian-and-indigenous-studies-immersion-rules-2026-2027",
+      "rit-latino-latina-latin-american-studies-immersion-rules-2026-2027",
+      "rit-global-experience-immersion-rules-2026-2027",
+      "rit-urban-studies-immersion-rules-2026-2027"
     ],
     "sections": [
       "All coded rows, alternative pairs and uncoded slots in typical sequence",
@@ -15793,7 +16006,8 @@
       "Cellular Biology, Physics, Astronomy and Chemistry local route groups, exclusions, preparation alternatives and 35 represented actual course cards; six additional natural-science cards retained separately for not-yet-mapped routes.",
       "Eight language routes and Archaeology/Cultural Anthropology/Sociology local choices, placement, topic/campus restrictions and 164 actual complete course-card descriptions.",
       "Ecology/Evolution plus five gender-study route requirement groups, exact choice/overlap/topic limits and 51 additional actual course-card records.",
-      "Philosophy, Ethics, History and Economics complete local choice rules with 99 additional actual course-card descriptions and separate ECON-101 preparation."
+      "Philosophy, Ethics, History and Economics complete local choice rules with 99 additional actual course-card descriptions and separate ECON-101 preparation.",
+      "Indigenous Studies, Latino/Latina/Latin American Studies, Urban Studies and open Global Experience eligibility; no arbitrary course-universe expansion."
     ],
     "unresolved_requirements": [
       "IDAI-490 program WI is verified. The public Writing Committee identifies SIS WRTG as the current additional-WI inventory, but its dated-list reference has no link; the official SIS landing page requires RIT Login. Applicable college-specific completion conditions and immersion course content remains under review.",
@@ -15802,7 +16016,8 @@
       "The 2026–27 advising PDF lists CSCI-632 and LING-582/584, whereas the captured catalog uses CSCI-634 and omits those linguistics electives; authoritative reconciliation is required.",
       "The CSCI-431 credit exclusion contains an apparent self-reference (CSCI-431 and CSCI-631). Its intended scope remains unclarified.",
       "The UWP FYW FAQ names ISTE150 for selected online students, whereas its own prize section and university graduation page name ISTE110. The AI sequence’s UWRT150 identity is retained; no equivalence or new alternative is inferred.",
-      "Language source boundaries: Spanish HIST-130/135 are printed in both language and culture groups although their descriptions are historical analysis; applicability to consecutive-language progression is unconfirmed. MLSP-301 prose names 201 while its formal prerequisite names 202/202T or placement. Preserve actual four-credit beginning courses alongside nominal nine-credit route totals; no cap or corrected prerequisite is inferred."
+      "Language source boundaries: Spanish HIST-130/135 are printed in both language and culture groups although their descriptions are historical analysis; applicability to consecutive-language progression is unconfirmed. MLSP-301 prose names 201 while its formal prerequisite names 202/202T or placement. Preserve actual four-credit beginning courses alongside nominal nine-credit route totals; no cap or corrected prerequisite is inferred.",
+      "Latino/Latina/Latin American Studies combines culture/language rows without explicit per-row allocation; preserve three-culture/optional-one-language condition without automatic partition. Global Experience overview says GE elective while current curriculum says GE Electives or Perspectives; both are subject to institutional approval."
     ],
     "metadata_gaps": [
       "Descriptions/prerequisites for three advising-only elective identities remain unknown. Twelve current prerequisite values remain null; thirteen cards had no separate prerequisite field, with LING581 expectations instead preserved from its description. Null is unknown, not no prerequisites. UWRT150 now has a verified public UWP page and explicitly undated sample syllabus; other public course sites and syllabi remain unverified.",

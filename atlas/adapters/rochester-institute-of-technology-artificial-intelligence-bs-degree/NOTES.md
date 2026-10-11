@@ -2,7 +2,7 @@
 
 Reviewed 2026-10-11. The primary degree audit is **in progress**, not complete or
 wholly inaccessible. The current reviewed graph has 23 fixed course identities,
-411 options and 14 unresolved/context identities (three advising-only and eleven preparation-only). The 2026–2027 public
+412 options and 14 unresolved/context identities (three advising-only and eleven preparation-only). The 2026–2027 public
 study curriculum states 122 semester hours, six core alternative pairs and two AI
 electives across four options (five course codes, including a robotics pair).
 Two zero-credit co-op placements reuse one course identity. Uncoded GE,
@@ -11,7 +11,7 @@ requirements are represented without fabricated course membership.
 
 All 40 current public course popups were read. Their credits and 28 prerequisite
 or expectation statements are mapped; absent prerequisite fields stay unknown.
-The 28 represented immersion branches supply 405 additional actual-description records. Every represented course has a source-specific taxonomy review, including three
+The 31 represented finite immersion branches supply 406 additional actual-description records. Every represented course has a source-specific taxonomy review, including three
 advising-only identities for which current descriptions are unavailable. Exact
 profile sets and role corrections are in the RIT row of
 `research/degree-audit/buffalo-delaware-rit.json`.
@@ -49,8 +49,8 @@ current section syllabus or a program outcome. See the separate source review
   retried. The linked science list explicitly dates to March 2013 and is not used
   as a current pool.
 - Public immersion curricula do render in an ordinary browser. The directory
-  has 77 immersion links; all local route rules are now reviewed. Twenty-eight branches
-  have represented course records; the full named queue still has 338 unread
+  has 77 immersion links; all local route rules are now reviewed. Thirty-one branches
+  have represented course records, plus an open Global Experience rule; the full named queue still has 338 unread
   identifiers. No blanket catalog-access claim or full GE closure is justified.
 - The current AI sequence annotates MATH190 as Immersion3 and separately lists
   another Immersion3 slot. The advising chart instead shows three separate
@@ -157,8 +157,15 @@ Ecology/Evolution preserves BIOL-265 OR BIOL-240 plus two further electives; tho
 
 ## Philosophy, Ethics, History and Economics — 2026-10-11
 
-The current graph is 448 identities: 23 fixed, 411 options and 14 preparation/context records; 445 have actual reviewed descriptions. Twenty-eight branches are represented. The named queue has 419 integrated descriptions, 27 completed contributions awaiting integration, three historical references and 338 unread identifiers.
+The current graph is 448 identities: 23 fixed, 412 options and 14 preparation/context records; 445 have actual reviewed descriptions. Twenty-eight branches are represented. The named queue has 419 integrated descriptions, 27 completed contributions awaiting integration, three historical references and 338 unread identifiers.
 
 Philosophy and History each select three listed courses with at least one upper-level course. Ethics retains the full one-foundation-plus-two OR both-foundations-plus-one bundles, requires two upper-level courses and limits PHIL-449 to ethical topics. Economics selects three of 22 electives; ECON-101 is separate three-credit preparation, not a fourth immersion selection or universal AI core. PHIL-401's prose permission alternative and formal prerequisite are both preserved; advanced course eligibility is not inferred from placement or code numbers.
 
 Actual rereads of ECON-408, ECON-411 and HIST-326 confirmed purpose-based taxonomy: economic methods remain applications when law or programming is the domain/tool, while historical inquiry and communication remain human context despite digital tools. PHIL-205 is formal mathematics; AI Ethics is human context. Unspecified PHIL-416/449 topics remain source-inspected unclassified. These scoped reviews do not close remaining GE/WI access boundaries or the unread accessible queue.
+
+
+## Open and shared-content routes — 2026-10-11
+
+Indigenous Studies, Latino/Latina/Latin American Studies and Urban Studies are represented from their exact local rules and already reviewed course records, adding one actual STSO-550 record. Global Experience is an explicit open nine-credit eligibility criterion with RIT Global and General Education Committee approval, substantial global/study-away experience in every course and no invented finite menu. Its settled public prose was independently reread; a curriculum-table-only observer would miss this route. The source overview says GE elective credits, while curriculum prose includes GE Electives or Perspectives; both remain visible.
+
+The current graph has 449 identities (23 fixed / 412 options / 14 context), 446 actual descriptions and 32 represented paths (31 finite menus plus the open criterion). The named queue has 420 integrated descriptions, 26 reviewed contributions awaiting integration, three historical references and 338 unread identifiers. Indigenous topic restrictions, Urban Studies campus limits and the untagged culture/language partition in the Latino route remain explicit. No prefix-based course allocation is certified.

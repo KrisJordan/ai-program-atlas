@@ -70,3 +70,6 @@ for slug, observer in [('philosophy-immersion', parse_philosophy_cards), ('ethic
     if url not in SOURCES:
         SOURCES.append(url)
     SOURCE_PARSERS[url] = partial(observer, url=url)
+
+from atlas.adapters.rit_open_related_immersions import register as register_open_related
+register_open_related(SOURCES,SOURCE_PARSERS)
