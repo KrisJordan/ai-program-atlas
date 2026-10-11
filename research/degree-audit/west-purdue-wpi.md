@@ -414,3 +414,7 @@ All identified cached source branches now have dispositions. Whole-degree status
 ### UCSD Urban Studies current-source batch — 2026-10-11
 
 All 53 exact USP blocks were read in full; four absent headings remain explicit. Manual subjects distinguish 33 human-context, 11 applied-domain, three mixed and six unspecified-topic observations. Exact major/application restrictions, variable offering conditions, same-course statements and separate internship amounts are retained without admission waivers or automatic aliases. The independently enumerated role sets remain 8/119/2,241; only content classifications within those sets change. Other identified accessible chapters remain in progress.
+
+### UCSD Communication integration — 2026-10-11
+
+Delegated review read all 41 exact current course blocks; primary checked seven boundary examples before integrating 39 approved observations. Four absent headings and two title/version holds remain explicit. The 31 human-context/four applied/one mixed/three unknown judgments preserve research-topic limits and distinguish production methods from media themes. Existing role-ID sets and counts are unchanged; current contextual subjects are1611other/543human/55applications/7foundations/23systems/2math. ANAR36 is under delegated review; additional identified chapters remain active.

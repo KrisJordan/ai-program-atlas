@@ -18,7 +18,7 @@ def test_guarded_observer_does_not_certify_manual_review_or_degree_obligation(mo
     assert c['prerequisites']=='prior course and senior standing; department approval.'
     assert not {'requirements','category_review','curriculum_audit','course_identity_groups'} & r.keys()
     assert 'category_review'not in c
-    for changed in [h.replace('department approval','automatic admission'),h.replace('2026–27','2027–28'),h.replace('USP 185A.','USP 185B.'),h+h]:
+    for changed in [h.replace('department approval','automatic admission'),h.replace('2026–27','2027–28'),h.replace('USP 185A.','USP 185B.'),h+'<p>New admission rule.</p>',h+'<input type="password">',h+h]:
         with pytest.raises(ValueError):m.parse_observations(changed)
 
 

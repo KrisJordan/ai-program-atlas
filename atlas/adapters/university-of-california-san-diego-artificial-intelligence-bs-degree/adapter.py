@@ -269,3 +269,10 @@ for _review_url, _review_parser in usp_reviews.SOURCE_PARSERS.items():
         raise ValueError('UCSD USP source needs explicit parser composition')
     SOURCES += (_review_url,)
     SOURCE_PARSERS[_review_url] = _review_parser
+
+from atlas.adapters import ucsd_comm_reviews as comm_reviews
+for _review_url, _review_parser in comm_reviews.SOURCE_PARSERS.items():
+    if _review_url in SOURCE_PARSERS:
+        raise ValueError('UCSD COMM source needs explicit parser composition')
+    SOURCES += (_review_url,)
+    SOURCE_PARSERS[_review_url] = _review_parser

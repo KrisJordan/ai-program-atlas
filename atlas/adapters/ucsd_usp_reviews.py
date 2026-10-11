@@ -9,7 +9,7 @@ import json
 import re
 from functools import partial
 from pathlib import Path
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, Comment, NavigableString
 
 SPEC=json.loads(Path(__file__).with_suffix('.json').read_text())
 
@@ -21,6 +21,7 @@ def clean(value):
 def source_blocks(html, subject):
     source=SPEC['sources'][subject]
     soup=BeautifulSoup(html,'html.parser')
+    if soup.find('input',attrs={'type':'password'}):raise ValueError('Access page is not course evidence')
     if source['heading'] not in [clean(h.get_text(' ',strip=True)) for h in soup.find_all('h1')]:
         raise ValueError('UCSD course chapter identity changed')
     disclaimer=soup.select_one('.course-disclaimer')
@@ -36,7 +37,9 @@ def source_blocks(html, subject):
         for sibling in heading.next_siblings:
             classes=getattr(sibling,'attrs',{}).get('class',[])
             if getattr(sibling,'name',None) in ['h1','h2','h3'] or 'course-name' in classes:break
-            if 'course-descriptions' in classes:parts.append(clean(sibling.get_text(' ',strip=True)))
+            if isinstance(sibling, Comment) or getattr(sibling,'name',None) in ['script','style']:continue
+            value=clean(str(sibling)) if isinstance(sibling,NavigableString) else clean(sibling.get_text(' ',strip=True))
+            if value:parts.append(value)
         for code in codes:
             if code in blocks:raise ValueError('Duplicate UCSD course heading: '+code)
             blocks[code]=(title,clean(' '.join(parts)))
