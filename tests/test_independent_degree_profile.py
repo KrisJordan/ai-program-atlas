@@ -321,6 +321,8 @@ def test_northeastern_role_overlays_corequisites_and_variable_hours_do_not_infla
 @pytest.mark.parametrize(('pid','record_count'), [
     ('northeastern-university-artificial-intelligence-and-economics-bs-boston-bs-degree',50),
     ('northeastern-chemical-engineering-ai-bsche',46),
+    ('northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree',56),
+    ('northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree',54),
 ])
 def test_northeastern_additional_full_manual_inventory_and_rendered_profile(pid,record_count):
     import hashlib
@@ -411,3 +413,42 @@ def test_northeastern_chemical_engineering_preserves_pairs_zero_hours_and_entry_
     assert 'ENGW 3302' in lab and 'ENGW 3315' in lab and 'ENGW 3307' not in lab
     assert 'MATH 1341 or permission' in courses['MATH 1342']['prerequisites']
     assert not any('Khoury Approved Electives' in r['title'] for r in nodes.values())
+
+
+@pytest.mark.parametrize('slug',['chemistry','biochemistry'])
+def test_northeastern_chemistry_pair_preserves_elective_corequisite_ancestry(slug):
+    p = load(f'northeastern-university-artificial-intelligence-and-{slug}-bs-boston-bs-degree')
+    courses = {c['code']:c for c in p['courses']}
+    nodes = {r['id']:r for r in p['requirements']}
+    assert not {'CS 1800','CS 1802'} & set(courses)
+    for code in ['MATH 1365','MATH 1465','EECE 2322','EECE 2323']:
+        profile = requirement_profile(only_course(p,courses[code]['id']))
+        assert profile['required']['count']==0 and profile['options']['count']==1
+    lab = next(r for r in nodes.values() if courses['EECE 2323']['id'] in r.get('course_ids',[]))
+    lecture = nodes[lab['parent_id']]
+    choice = nodes[lecture['parent_id']]
+    assert lab['kind']==lecture['kind']=='all'
+    assert lecture['course_ids']==[courses['EECE 2322']['id']]
+    assert choice['kind']=='choose_credits' and choice['credits']==4
+    assert courses['EECE 2323']['credits']==1
+    for code in ['ENVR 2500','ENVR 2501']:
+        assert courses[code]['category']=='mathematics'  # R implements the statistical lab subject.
+        role = 'required' if slug=='chemistry' else 'options'
+        assert requirement_profile(only_course(p,courses[code]['id']))[role]['count']==1
+    for code in ['CHEM 1163'] + (['CHEM 2163','CHEM 2323'] if slug=='chemistry' else []):
+        assert courses[code]['credits']==0
+        assert requirement_profile(only_course(p,courses[code]['id']))['required']['count']==1
+    if slug=='chemistry':
+        for code in ['CHEM 2324','CHEM 2325']:
+            assert courses[code]['credits']==0
+            assert requirement_profile(only_course(p,courses[code]['id']))['options']['count']==1
+        assert courses['CHEM 2316']['credits']==courses['CHEM 2318']['credits']==2
+        assert requirement_profile(only_course(p,courses['CHEM 4750']['id']))['required']['count']==1
+    else:
+        for code in ['MATH 3081','CHEM 3331','CHEM 3332','CHEM 5620','BINF 6310','BIOL 5591','BIOL 4701','CHEM 4750']:
+            assert requirement_profile(only_course(p,courses[code]['id']))['options']['count']==1
+        assert courses['CHEM 5620']['credits']==3
+        assert courses['BINF 6310']['category_review']['status']=='mixed'
+        assert 'BINF 6200 (may be taken concurrently)' in courses['BINF 6310']['prerequisites']
+        assert 'DS 2500' in courses['BINF 6310']['prerequisites']
+        assert 'BINF 6200' not in courses  # Conditional enrollment preparation is not fabricated degree workload.
