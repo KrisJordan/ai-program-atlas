@@ -85,6 +85,21 @@ def test_reviewed_variant_reconstruction_preserves_entire_original_graph(pid):
         assert len(camd_policy)==1 and camd_policy[0]['id']==pid+'-conditional-camd-clearance'
         assert camd_policy[0]['kind']=='note' and not camd_policy[0]['course_ids']
         rows=[r for r in rows if r not in camd_policy]
+    if pid=='northeastern-university-environmental-engineering-and-artificial-intelligence-bsenve-boston-other-degree':
+        # Footnote 1 permits two complete introductory-engineering routes.
+        # Verify the deliberate role correction, then project the five original
+        # allocation rows solely for their historical preservation fingerprint.
+        choice=pid+'-req-introductory-engineering-bundle'
+        bundles=[r for r in rows if r['id']==choice or r.get('parent_id')==choice]
+        assert len(bundles)==3
+        assert {tuple(r['course_ids']) for r in bundles if r['kind']=='all'}=={
+            (pid+'-ge-1501',pid+'-ge-1502'),(pid+'-ge-1110',pid+'-ge-1111')}
+        rows=[r for r in rows if r not in bundles]
+        allocations=[r for r in rows if r['id'] in {pid+'-req-'+key for key in ['ge-1501','ge-1502','ge-1501-2','ge-1501-3','ge-1502-2']}]
+        assert len(allocations)==5
+        for r in allocations:
+            assert r['kind']=='note' and 'complete GE 1110/1111 substitute bundle' in r['summary']
+            r['kind']='all';r['summary']='Listed course.'
     if 'business-administration' in pid:
         # The reviewed follow-up adds independent concentration-source subtrees
         # and two main-page selection nodes; test those in the concentration suite.

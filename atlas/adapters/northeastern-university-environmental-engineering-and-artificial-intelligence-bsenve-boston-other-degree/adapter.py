@@ -81,3 +81,11 @@ SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + tuple(SOURCE_PARSERS)))
 from atlas.adapters.northeastern_college_policies import ENGINEERING_URL, parse_engineering_policy
 SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + (ENGINEERING_URL,)))
 SOURCE_PARSERS = {**SOURCE_PARSERS, ENGINEERING_URL: lambda html: parse_engineering_policy(html, program_id=PROGRAM_ID)}
+
+# Source-verified complete introductory engineering alternatives and CIVE content.
+from atlas.adapters.northeastern_civil_course_reviews import apply_degree_correction, attach_reviewed_sources
+_civil_base_parse = parse
+def parse(html):
+    return apply_degree_correction(_civil_base_parse(html), html)
+SOURCE_PARSERS = attach_reviewed_sources(PROGRAM_ID, SOURCE_PARSERS)
+SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + tuple(SOURCE_PARSERS)))
