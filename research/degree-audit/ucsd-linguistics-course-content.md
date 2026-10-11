@@ -1,0 +1,11 @@
+# UCSD Linguistics and language content — 2026-10-11
+
+The normal official course-index link led to the [2026–27 Linguistics chapter](https://catalog.ucsd.edu/courses/LING.html), fetched HTTP200. All25 exact target blocks were read, including headings that spell out `Linguistics/Language (CODE)` rather than beginning with the abbreviated code. The39-target batch also contains14 unmatched exact identifiers:13 unsuffixed heritage-language records and LISP15.
+
+All39 related F/W/P variant descriptions for those13 unsuffixed heritage codes were separately read and guarded. Their distinct domestic, media/arts and entertainment themes, any-order permission and occasional old-code credit exclusions do not establish an automatic replacement or expanded option pool. LIHL118 explicitly exists alongside its variants and is mapped; no broad suffix-stripping rule is used. No unavailable language branch or course disappearance is inferred.
+
+The25 approvals support19 human communication/cultural courses and six applied formal-linguistics, acquisition, evolution or neuroscience courses. LIGN143's structural phonology/syntax is a disciplinary application, whereas175/178 emphasize social variation. LIGN179/180/181 explicitly teach cognitive/neural mechanisms; computational models in155 do not imply AI methods. Heritage and ordinary language practice remain human-context, including professional-language settings.
+
+Fifteen exact headings state4units; ten Spanish/Portuguese conversation or analysis components state2.5each. Required companion enrollment stays a separate source condition, with C– conversation and D analysis thresholds or equivalents preserved. No pair total is assigned to either component.1D+1DX college-proficiency claims remain source-scoped. Formal prerequisite omissions remain null;152/174 only recommend preparation. Explicit “none” for7/8 is distinct from omission. Reading/spoken heritage proficiency, Global Seminar acceptance, fees and credit exclusions are retained without converting recommendations into mandatory study.
+
+Full-body, expanded-heading, edition and supplementary-variant guards emit metadata only; manual subject reviews are deliberately integrated separately. Existing whole-degree policy conflicts and other accessible course chapters remain open.

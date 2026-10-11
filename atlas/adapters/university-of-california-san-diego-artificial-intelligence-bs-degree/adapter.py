@@ -394,3 +394,12 @@ def parse_all_reviewed_history(html):
             'source_dispositions': [item for result in outputs for item in result['source_dispositions']]}
 
 SOURCE_PARSERS[_HISTORY_URL] = parse_all_reviewed_history
+
+from atlas.adapters import ucsd_linguistics_reviews as linguistics_reviews
+from atlas.adapters import ucsd_physics_astronomy_reviews as physics_astronomy_reviews
+for _review_module in (linguistics_reviews, physics_astronomy_reviews):
+    for _review_url, _review_parser in _review_module.SOURCE_PARSERS.items():
+        if _review_url in SOURCE_PARSERS:
+            raise ValueError('UCSD Linguistics/Physics/Astronomy source needs explicit parser composition')
+        SOURCES += (_review_url,)
+        SOURCE_PARSERS[_review_url] = _review_parser

@@ -451,3 +451,7 @@ PSYC14 current observations integrated with139missing/162title hold; two CSE opt
 ### UCSD remaining History subjects, 2026-10-11
 
 Seventy-eight source observations integrated from the remaining85-target History contribution; primary checked exact title/field conflicts, variable units and all region-specific approval scopes. All represented History targets now have bounded dispositions. Current shared History observer265approved/20held-or-missing. HITO193six-unit joint heading conflicts with separate POLI194/USP194four-unit headings; internship remains separate and aliases unmerged. Context subjects1207other/859human/142applications/7foundations/23systems/3math, roles unchanged8/119/2241. Remaining accessible disciplines keep the whole audit in progress.
+
+### UCSD Linguistics and Physics/Astronomy, 2026-10-11
+
+Forty-nine approved descriptions integrated across65 targets. Primary read25 exact Linguistics/language blocks plus39 related seasonal variants; contributor read25 Physics/Astronomy matches with primary nine-block and policy checks. Fourteen Linguistics unmatched exact codes and two Physics/Astronomy missing/title holds remain. Paired2.5-unit language components and separate-term physics-lab permission are preserved. Context categories1159other/879human/170applications/7foundations/23systems/3math; roles unchanged8/119/2241. Other accessible chapters remain active.

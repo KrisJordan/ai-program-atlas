@@ -2,7 +2,7 @@ import importlib
 import json
 from pathlib import Path
 import pytest
-from atlas.adapters import ucsd_hila_reviews as hila, ucsd_sio_reviews as sio, ucsd_eds_reviews as eds, ucsd_cgs_reviews as cgs, ucsd_mus_reviews as mus, ucsd_biology_reviews as bio, ucsd_glbh_reviews as glbh, ucsd_psyc_reviews as psyc
+from atlas.adapters import ucsd_hila_reviews as hila, ucsd_sio_reviews as sio, ucsd_eds_reviews as eds, ucsd_cgs_reviews as cgs, ucsd_mus_reviews as mus, ucsd_biology_reviews as bio, ucsd_glbh_reviews as glbh, ucsd_psyc_reviews as psyc, ucsd_linguistics_reviews as ling, ucsd_physics_astronomy_reviews as physics
 from atlas.curriculum_profile import requirement_profile
 
 PID=hila.SPEC['program_id']
@@ -25,7 +25,7 @@ def test_history_sio_integration_preserves_held_identity_and_roles():
     assert cs['POLI 117']['category_review']['status']=='unclassified'
     assert [requirement_profile(d)[k]['count']for k in ['required','options','unresolved']]==[8,119,2241]
 
-@pytest.mark.parametrize('module,subject,count,dispositions',[(hila,'HILA',265,20),(sio,'SIO',35,6),(eds,'EDS',31,1),(cgs,'CGS',24,0),(mus,'MUS',27,6),(bio,'BIOL',34,3),(glbh,'GLBH',24,2),(psyc,'PSYC',14,2)])
+@pytest.mark.parametrize('module,subject,count,dispositions',[(hila,'HILA',265,20),(sio,'SIO',35,6),(eds,'EDS',31,1),(cgs,'CGS',24,0),(mus,'MUS',27,6),(bio,'BIOL',34,3),(glbh,'GLBH',24,2),(psyc,'PSYC',14,2),(ling,'LING',25,14),(physics,'PHYS',14,1),(physics,'ASTR',10,1)])
 def test_composed_source_replays_approved_metadata_only(module,subject,count,dispositions):
     s=module.SPEC['sources'][subject];p=Path(s['cache_path'])
     if not p.exists():pytest.skip('Optional ignored official chapter capture')
@@ -78,3 +78,18 @@ def test_history_source_conflicts_keep_individual_amounts_and_held_subjects():
     assert cs['HISC 144']['category_review']['status']=='unclassified'
     assert 'South Asian' in cs['HISC 144']['category_review']['rationale']
     assert cs['HINE 116']['category_review']['status']=='unclassified'
+
+
+def test_language_half_units_and_physics_scope_are_preserved():
+    d=json.loads(Path('data/programs',PID+'.json').read_text());cs={c['code']:c for c in d['courses']}
+    assert cs['LISP 1A']['credits']==cs['LISP 1AX']['credits']==2.5
+    assert any('LISP 1AX' in n for n in cs['LISP 1A']['notes'])
+    assert cs['LIHL 112']['category_review']['status']=='unclassified'
+    assert any('112F' in n for n in cs['LIHL 112']['notes'])
+    assert cs['LIHL 118']['category_review']['status']=='reviewed'
+    assert cs['PHYS 1A']['credits']==3
+    assert any('separate terms' in n for n in cs['PHYS 1A']['notes'])
+    assert 'Corequisites: MATH 10B or 20B.' in cs['PHYS 11']['prerequisites']
+    assert cs['ASTR 150']['category_review']['status']=='unclassified'
+    assert cs['ASTR 154']['credits']==5
+    assert set(cs['ASTR 154']['category_review']['candidate_categories'])=={'mathematics','ai_ml'}
