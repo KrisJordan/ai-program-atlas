@@ -318,5 +318,8 @@ def test_current_cs_options_keep_permission_alternatives_and_source_barrier():
     assert not c['CMPSC 177']['source_id'].endswith('-catalog-2026')
     ledger=json.loads(Path('research/degree-audit/west-purdue-wpi.json').read_text())
     audit=next(r for r in ledger['programs']if r['program_id']=='ucsb-ai-bs')
-    assert audit['status']=='in_progress' and 'downloaded856' in audit['accessible_work_remaining']
+    assert audit['status']=='blocked'
+    assert 'No identified unread cached branch remains' in audit['accessible_work_remaining']
+    assert '856-row D/E/F/G export' in audit['accessible_work_remaining']
+    assert 'Remaining exact prerequisites' in audit['correction_status']
     assert any(s['access_status']=='human_verification_challenge_not_bypassed'for s in audit['sources'])
