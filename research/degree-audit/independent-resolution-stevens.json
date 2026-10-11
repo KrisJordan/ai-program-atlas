@@ -1,0 +1,138 @@
+{
+  "audit_date": "2026-10-11",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "medium",
+  "programs": [
+    {
+      "program_id": "stevens-institute-of-technology-artificial-intelligence-bs-degree",
+      "reviewed_at": "2026-10-11",
+      "reviewer": "sol-medium-independent-resolution-stevens",
+      "reviewed_content_hash": "a238f2e2e7a9c8d9afeca74a887e7e8f278526149568c2dd7ffecdffc6803606",
+      "dimensions": {
+        "fixed_requirements": {
+          "status": "unverified",
+          "summary": "The permitted degree overview establishes AI BS identity and a two-semester capstone, but links curriculum readers back to the held catalog host. The actual saved Academic Plan still has unresolved course labels and a provisional 58-credit total; no complete rendered plan capture establishes all 24 represented fixed identities independently.",
+          "evidence": [
+            {
+              "url": "https://stevens.catalog.prod.coursedog.com/programs/qT6Ld1CzBAhQsVKYFNVv/academic-plan-JKlwr",
+              "locator": "Actual saved Academic Plan: all eight semester panels; unresolved labels and repeated incomplete 58-credit degree total"
+            },
+            {
+              "url": "https://www.stevens.edu/program/bachelors-degree-in-artificial-intelligence",
+              "locator": "AI BS overview: two-semester senior design capstone and Academic Catalog curriculum link; no complete mandatory named-course inventory"
+            }
+          ],
+          "limitations": [
+            "The catalog host presented a human-verification challenge at ENGR 116 on 2026-10-11; it was not retried through HTTP, browser or search-reader routes. A complete already-permitted saved plan was not located.",
+            "Primary observed 125-credit degree total and 24 fixed identities are retained as primary facts, not independently certified or replaced with placeholder 58. Manually reconstructed labels are not treated as an actual source capture."
+          ]
+        },
+        "choice_rules": {
+          "status": "partial",
+          "summary": "The saved rendered requirement text verifies six complete science routes, including the nested CH117/BIO182 lab alternative; two approved math/science electives, six technical electives, four general electives and three of five SUCCESS courses. The 27 directly named option identities in these rules are recorded as a subset only.",
+          "evidence": [
+            {
+              "url": "https://stevens.catalog.prod.coursedog.com/programs/qT6Ld1CzBAhQsVKYFNVv/requirements-and-concentrations-n90Np",
+              "locator": "Actual requirement tables, alternative rows, branch footnotes and uncoded choice slots"
+            }
+          ],
+          "limitations": [
+            "This independent pass does not certify university-wide policies, general-education inventories, individual waivers, or total degree completion.",
+            "Only incomplete plan HTML and primary-review transcriptions were available; the primary 125-credit browser observation is not replaced with 58."
+          ]
+        },
+        "classification": {
+          "status": "partial",
+          "summary": "All 24 represented fixed-course descriptions were independently read from actual earlier permitted captures: six foundations, six mathematics, three AI, two human context, one systems, one entrepreneurship application and five other (four mixed, one unclassified seminar). This validates the subjects of those represented records; missing complete plan evidence prevents independent certification of their fixed membership, and broader option/context classifications remain outside this check.",
+          "evidence": [
+            {
+              "url": "https://stevens.catalog.prod.coursedog.com/courses/056460e31383014015da07255234c549/course-information-aoYks",
+              "locator": "CS423/CS424 actual saved descriptions: general software design and continuation, not automatically AI methods"
+            },
+            {
+              "url": "https://stevens.catalog.prod.coursedog.com/courses/82d152525dc410019fc9857176880000",
+              "locator": "CS368 saved Course Description: Python data processing, relational database connectivity and privacy/access control; infrastructure supports systems classification"
+            },
+            {
+              "url": "https://stevens.catalog.prod.coursedog.com/courses/adfec19493d510020d3e9cbf6bff0000",
+              "locator": "CS456 saved Course Description: mathematical foundations plus implemented learning algorithms; mixed mathematics/AI retained"
+            }
+          ],
+          "limitations": [
+            "Twenty-four actual descriptions support bounded subject judgments, but do not establish mandatory degree membership. Broader option/context classification and source-year/version limits remain."
+          ]
+        }
+      },
+      "expected_course_ids": {
+        "required": null,
+        "options": null,
+        "unresolved": null
+      },
+      "expected_profile": {
+        "required": null,
+        "options": null,
+        "unresolved": null
+      },
+      "source_captures": [
+        {
+          "path": "/tmp/atlas-stevens-reviewed-labels.html",
+          "sha256": "b29060e35eeb704100fdea3ec340689ae5a3eaf7820b6c5de27cd5ab2ec131ff"
+        },
+        {
+          "path": "/tmp/stevens-fixed-course-captures.json",
+          "sha256": "7286caf17e6a9110ee3f7cb9367b4a9ad3ad133e18c724a7b0483c0093e27b5c"
+        },
+        {
+          "path": "/tmp/stevens-degree-plan.html",
+          "sha256": "029a6a2a80f519c6932d50223ed43216e692fd7c1e099524578170889da9fd38"
+        },
+        {
+          "path": "/tmp/atlas-national-degree-audit/stevens-cs135.html",
+          "sha256": "830191c5f81c64b0816a7d21b38e25bb565d55d01b98089e5cae299b344d0c00"
+        },
+        {
+          "path": "/tmp/atlas-national-degree-audit/stevens-cs368.html",
+          "sha256": "31c705cf53577a31ad70d7b6c87a4c73624039a4d07d8660af19233ba010bd4c"
+        },
+        {
+          "path": "/tmp/atlas-national-degree-audit/stevens-cs456.html",
+          "sha256": "afd6cc485c1889e39e34e5556dc39cdb5b09479e625485fd78cb2eaf02e44417"
+        },
+        {
+          "path": "/tmp/atlas-national-degree-audit/stevens-cs508.html",
+          "sha256": "9147a44c03b3df83f4db3cb10291519365514724e5422dcc7534fc7df9eaf904"
+        }
+      ],
+      "reviewed_option_subset": [
+        "stevens-bia-665",
+        "stevens-bio-181",
+        "stevens-bio-182",
+        "stevens-ce-240",
+        "stevens-ch-115",
+        "stevens-ch-116",
+        "stevens-ch-117",
+        "stevens-cs-532",
+        "stevens-cs-544",
+        "stevens-cs-545",
+        "stevens-cs-558-cpe-558",
+        "stevens-cs-560",
+        "stevens-cs-582",
+        "stevens-cs-584",
+        "stevens-cs-589",
+        "stevens-en-250",
+        "stevens-ma-661",
+        "stevens-me-598",
+        "stevens-nano-200",
+        "stevens-pep-111",
+        "stevens-pep-112",
+        "stevens-pep-221",
+        "stevens-prv-201",
+        "stevens-prv-202",
+        "stevens-prv-203",
+        "stevens-prv-204",
+        "stevens-prv-205"
+      ],
+      "full_degree_verified": false
+    }
+  ]
+}
