@@ -11,3 +11,9 @@ def parse_policy(html: str) -> dict:
     return parse_bc_courses(html, PROGRAM_ID, 'bc-fall-2026-course-feed', SOURCES[1])
 
 SOURCE_PARSERS = {SOURCES[1]: parse_policy}
+
+SPRING_SOURCE='https://bcweb.bc.edu/aem/coursessprg.json'
+SOURCES=(*SOURCES,SPRING_SOURCE)
+def parse_spring_courses(raw):
+    return parse_bc_courses(raw,PROGRAM_ID,'bc-spring-2027-course-feed',SPRING_SOURCE)
+SOURCE_PARSERS[SPRING_SOURCE]=parse_spring_courses

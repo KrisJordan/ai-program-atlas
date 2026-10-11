@@ -16,7 +16,7 @@
   "overview": "Six-course AI concentration for CS students, combining machine learning, deep learning, applications, ethics and a senior capstone.",
   "catalog_year": null,
   "verification_status": "confirmed",
-  "last_verified": "2026-10-10",
+  "last_verified": "2026-10-11",
   "curriculum_status": "partial",
   "links": [
     {
@@ -44,6 +44,16 @@
       "source_date": null,
       "catalog_year": null,
       "locator": "CSCI3345, title Machine Learning, 2026FALL; course feed published in official departmental Courses page script",
+      "confidence": "high"
+    },
+    {
+      "id": "bc-spring-2027-course-feed",
+      "url": "https://bcweb.bc.edu/aem/coursessprg.json",
+      "title": "Boston College Spring 2027 course feed",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "CSCI rows; Machine Learning exact identity; no concentration-cluster eligibility attributes",
       "confidence": "high"
     }
   ],
@@ -194,14 +204,16 @@
   "notes": [
     "The requirement outline is mapped, but approved application and ethics course pools and the capstone code remain unverified. This is partial curriculum evidence, not a graduation audit.",
     "The public Fall 2026 feed confirms the exact Machine Learning title/code match. Other AI-related course titles are not assumed to belong to the approved cluster. The Spring 2027 feed was also inspected; no exact Deep Learning match was found, which does not establish that the course is absent.",
-    "Published credit numbers are retained with unknown unit; no semester-hour conversion is inferred. Individual prerequisite strings remain unknown where not sourced."
+    "Published credit numbers are retained with unknown unit; no semester-hour conversion is inferred. Individual prerequisite strings remain unknown where not sourced.",
+    "2026-10-11: Re-read the AI accordion, department Courses/FAQ and official Fall 2026/Spring 2027 course feeds. The AI section supplies no linked finite cluster list. Spring CSCI 3334 AI and Ethics and other AI-related titles are candidates only: course titles do not establish the approved concentration pool. Exact Deep Learning and four-credit AI capstone identity were not found in the two inspected term feeds; this is not a course-absence claim. Department confirmation remains necessary."
   ],
   "curriculum_audit": {
     "scope": "concentration",
-    "reviewed_at": "2026-10-10",
+    "reviewed_at": "2026-10-11",
     "source_ids": [
       "boston-college-artificial-intelligence-concentration-concentration-concentration-official",
-      "bc-fall-2026-course-feed"
+      "bc-fall-2026-course-feed",
+      "bc-spring-2027-course-feed"
     ],
     "sections": [
       "Six-course local structure",
@@ -210,7 +222,8 @@
       "AI ethics and BS Social Ethics overlap",
       "Senior spring capstone, four credits",
       "Unlimited CS major overlap and mathematics preparation",
-      "Exact Machine Learning course metadata from Fall 2026 feed"
+      "Exact Machine Learning course metadata from Fall 2026 feed",
+      "Bounded Fall 2026/Spring 2027 course identity and cluster-attribute review; no approved-pool inference"
     ],
     "unresolved_requirements": [
       "Finite approved application and ethics course pools are not enumerated.",
