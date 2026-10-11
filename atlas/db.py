@@ -15,6 +15,7 @@ from urllib.parse import urlparse
 
 from .awards import validate_award_options
 from .requirements import validate_curriculum_audit, validate_requirements
+from .taxonomy import validate_category_reviews
 
 STATES = {"pending", "inspected", "confirmed", "no_qualifying_program_found", "inaccessible"}
 OVERRIDE_FIELDS = {
@@ -230,6 +231,7 @@ def validate_program(program, family=None):
     validate_requirements(program)
     validate_curriculum_audit(program)
     validate_award_options(program)
+    validate_category_reviews(program)
 
 
 def ingest_program(conn, program, run_id=None):
@@ -362,6 +364,18 @@ def ingest_program(conn, program, run_id=None):
                     c.get("syllabus"),
                 ),
             )
+        for course in program.get("courses", []):
+            review = course.get("category_review")
+            if not review:
+                continue
+            conn.execute("INSERT INTO course_category_reviews VALUES (?,?,?,?,?,?,?,?)", (
+                pid, course["id"], review["status"], review["taxonomy_version"],
+                review["reviewed_at"], review["locator"], review["rationale"],
+                canonical(review.get("candidate_categories", [])),
+            ))
+            conn.executemany("INSERT INTO course_category_review_sources VALUES (?,?,?)", [
+                (pid, course["id"], sid) for sid in review["source_ids"]
+            ])
         for g in program.get("requirements", []):
             conn.execute(
                 "INSERT INTO requirement_groups VALUES (?,?,?,?,?,?,?,?,?,?,?,?)",
@@ -672,12 +686,20 @@ def export_data(conn):
             "counting_note": "Program-course records include elective pools and repeats across sibling programs. Requirement completeness and course metadata availability are separate; unknown prerequisites do not mean no prerequisites.",
         }
     )
+    from .degree_audit import audit_summary
+    audit_row = conn.execute("SELECT value_json FROM metadata WHERE key='degree_audit'").fetchone()
+    audit = audit_summary(json.loads(audit_row[0]) if audit_row else {}, programs)
+    audit_lookup = {e["program_id"]: e for e in audit["programs"]}
+    for program in programs:
+        if program["id"] in audit_lookup:
+            program["degree_audit"] = audit_lookup[program["id"]]
     return {
         "meta": {
             "generated_at": generated,
             "cohort": cohort,
             "coverage_summary": summary,
             "curriculum_summary": curriculum,
+            "degree_audit": audit,
             "family_summary": {
                 "families": len(families),
                 "variants": sum(bool(p.get("family")) for p in programs),

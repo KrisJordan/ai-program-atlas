@@ -40,6 +40,13 @@ def ingest_all(conn, data_dir):
             )
         db.initialize_csrankings(conn)
         db.refresh_inspection_dates(conn)
+        audit_path = data_dir / "degree-audit.json"
+        if audit_path.exists():
+            from .degree_audit import validate_ledger
+            audit = json.loads(audit_path.read_text())
+            validate_ledger(audit.get("programs", []), list(records.values()))
+            conn.execute("INSERT OR REPLACE INTO metadata VALUES (?,?)",
+                         ("degree_audit", db.canonical(audit)))
     return changed
 
 
@@ -63,6 +70,7 @@ def main(argv=None):
         help="Refresh expired or current cache within robots/rate limits",
     )
     sub.add_parser("status")
+    sub.add_parser("audit-report", help="Compile explicit research degree ledgers into reviewed data")
     sub.add_parser("compact", help="Reclaim unused SQLite pages without removing facts or history")
     sub.add_parser("candidates")
     review = sub.add_parser(
@@ -103,6 +111,12 @@ def main(argv=None):
             return 1 if any(r["status"] != "success" for r in results) else 0
         elif args.command == "status":
             print(json.dumps(db.export_data(conn)["meta"], indent=2))
+        elif args.command == "audit-report":
+            from .degree_audit import collect_ledgers
+            records = [json.loads(p.read_text()) for p in Path("data/programs").glob("*.json")]
+            ledger = collect_ledgers(Path("research/degree-audit"), records)
+            Path("data/degree-audit.json").write_text(json.dumps(ledger, indent=2) + "\n")
+            print(f"Compiled {len(ledger['programs'])} explicit degree audit entries")
         elif args.command == "compact":
             before = args.db.stat().st_size
             conn.execute("VACUUM")

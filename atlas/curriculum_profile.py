@@ -6,11 +6,7 @@ open pools and alternative bundles prevent inferring a student's selected path.
 """
 
 from collections import Counter
-
-CATEGORIES = (
-    "foundations", "mathematics", "ai_ml", "systems", "human_context",
-    "applications", "electives", "other",
-)
+from .taxonomy import CATEGORIES, classification_status
 CHOICES = {"choose_courses", "choose_credits", "alternative"}
 
 
@@ -80,10 +76,12 @@ def requirement_profile(program: dict) -> dict:
 
     def profile(ids):
         categories = dict.fromkeys(CATEGORIES, 0)
+        classification = dict.fromkeys(("reviewed", "mixed", "unclassified", "unreviewed"), 0)
         for cid in ids:
             category = courses[cid].get("category")
             categories[category if category in categories else "other"] += 1
-        return {"count": len(ids), "categories": categories}
+            classification[classification_status(courses[cid])] += 1
+        return {"count": len(ids), "categories": categories, "classification": classification}
 
     return {
         "required": profile(fixed),
