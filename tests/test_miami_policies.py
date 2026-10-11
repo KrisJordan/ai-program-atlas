@@ -37,7 +37,7 @@ def test_scoped_sources_units_and_conflicts(pid):
     if d['program_kind']=='minor':
         assert not any(r['title']=='University graduation minimum and residence' for r in d['requirements'])
     if pid=='miami-data-science-ai-bs':
-        assert any('nine-credit' in x for x in d['curriculum_audit']['unresolved_requirements'])
+        assert next(r for r in d['requirements'] if r['title']=='Language course 200-level or higher')['credits']==9
         assert d['status']=='unknown'
 
 @pytest.mark.parametrize('code',SPECS)

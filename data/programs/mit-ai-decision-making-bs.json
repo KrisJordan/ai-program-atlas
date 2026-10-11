@@ -1665,6 +1665,16 @@
       "catalog_year": null,
       "locator": "Exact6.8300/6.8301 Spring2024 teaching/source identity",
       "confidence": "high"
+    },
+    {
+      "id": "mit-ai-strobe-instructor",
+      "url": "https://edgerton.mit.edu/about/staff/james-w-bales",
+      "title": "James W. Bales \u2014 MIT Edgerton instructor and explicit6.9030 identification",
+      "fetched_at": "2026-10-11T06:07:09+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Linked6.9030 Strobe Project Lab in instructor biography",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -3531,26 +3541,31 @@
       "id": "mit-ai-6-9030",
       "code": "6.9030",
       "name": "Strobe Project Laboratory",
-      "description": null,
+      "description": "The official instructor profile identifies 6.9030 as a photography course. Detailed course content was not available from the linked course page.",
       "prerequisites": null,
       "credits": 12.0,
       "credit_unit": "units",
-      "category": "other",
+      "category": "applications",
       "source_id": "mit-ai-decision-making-bs-cim-reference",
       "url": "https://catalog.mit.edu/search/?P=6.9030",
       "public_site": null,
       "syllabus": null,
       "category_review": {
-        "status": "unclassified",
+        "status": "reviewed",
         "taxonomy_version": "1",
         "reviewed_at": "2026-10-11",
         "source_ids": [
-          "mit-ai-decision-making-bs-cim-reference"
+          "mit-ai-decision-making-bs-cim-reference",
+          "mit-ai-strobe-instructor"
         ],
-        "locator": "6.9030 exact printed chart/CI-M title",
-        "rationale": "Limited official-title review only. The printed title alone does not establish a defensible primary taxonomy subject; no matching unversioned description was available from the inspected current catalog. The separate versioned annotation is not inherited as this record\u2019s description or prerequisite evidence.",
+        "locator": "James W. Bales biography: explicit6.9030 linked course identification as photography",
+        "rationale": "The official instructor explicitly identifies this code as a photography course, supporting the domain-practice category. This bounded content statement is not a full course-description review; no computing, credit, prerequisite or term facts are inferred from the instructor\u2019s other activities.",
         "candidate_categories": []
-      }
+      },
+      "notes": [
+        "This is a brief authoritative instructor identification, not a full course-description or syllabus review. The profile calls the subject6.9030 Strobe Project Lab and links the Strobe Project Laboratory page. No term or current offering is established.",
+        "The linked official course page returned HTTP404 through the normal Fetcher on2026-10-11. Detailed topics and formal prerequisites remain unknown. The original catalog reference supplies12MITunits; the instructor profile supplies no credit amount."
+      ]
     },
     {
       "id": "mit-ai-6-uar-j",
@@ -53057,7 +53072,8 @@
       "Additional HASS field listings generally omit subject units, prerequisites and descriptions; only explicitly stated six-unit subjects receive credits. Printed cross-list codes and dated/historical titles are preserved as source observations, not verified current offerings or repaired catalog identities.",
       "All20 represented GIR records have a manual disposition:19 have some actual departmental/advising content, including the brief18.01L public welcome;8.021 remains unclassified. Full formal prerequisites and detailed descriptions remain unknown where the inspected sources omit them.",
       "Urban11.074 suggested-pool asterisk is unexplained; preserved without inferring an additional academic condition. Public clinic descriptions give participation and within-course field-assignment rules, but no formal prerequisite subjects or units.",
-      "61 of63 original chart/general-CI-M references have supplemental exact-code/title annotation metadata from 6-4_2025 (lists as of Fall2026), without changing their unversioned roles or merging identities. References6.8301 and6.9030 lack matching titled departmental annotation evidence;6.8301 separately has instructor-linked Spring2024course-site content.6.4300 units remain unknown because chart and general-CI-M amounts disagree."
+      "61 of63 original chart/general-CI-M references have supplemental exact-code/title annotation metadata from 6-4_2025 (lists as of Fall2026), without changing their unversioned roles or merging identities. References6.8301 and6.9030 lack matching titled departmental annotation evidence;6.8301 separately has instructor-linked Spring2024course-site content.6.4300 units remain unknown because chart and general-CI-M amounts disagree.",
+      "6.9030 has only a brief official instructor identification as photography; the linked detailed course page returns404. No formal prerequisite or term is verified, and the separate versioned occurrence remains untitled. Its12unit original-reference amount is retained from the catalog."
     ]
   },
   "course_identity_groups": [

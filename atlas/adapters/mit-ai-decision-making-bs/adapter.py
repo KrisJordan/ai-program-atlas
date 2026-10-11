@@ -218,3 +218,7 @@ archived_vision = import_module('atlas.adapters.mit-ai-decision-making-bs.archiv
 SOURCES.extend(archived_vision.SOURCE_PARSERS)
 SOURCE_PARSERS.update(archived_vision.SOURCE_PARSERS)
 SOURCES.append('https://people.csail.mit.edu/kaiming/')
+
+strobe_review = import_module('atlas.adapters.mit-ai-decision-making-bs.strobe_review')
+SOURCES.extend(strobe_review.SOURCE_PARSERS)
+SOURCE_PARSERS.update(strobe_review.SOURCE_PARSERS)

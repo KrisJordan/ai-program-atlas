@@ -58,9 +58,12 @@ def test_unreviewed_thematic_applicability_requires_review(before,after):
 def test_curated_optional_routes_and_known_conflicts_preserved(pid):
     d=json.loads((ROOT/'data/programs'/f'{pid}.json').read_text());validate_program(d)
     assert d['curriculum_status']=='partial'
-    assert any('summer' in s for s in d['curriculum_audit']['unresolved_requirements'])
+    assert not any('summer' in s for s in d['curriculum_audit']['unresolved_requirements'])
+    summer=next(r for r in d['requirements'] if r['id']==pid+'-policy-summer-transfer-conflict')
+    assert 'Session A' in summer['summary'] and 'Session B' in summer['summary']
+    assert 'credit' in summer['summary'] and summer['kind']=='note'
     assert any('50 pages, 2,075 identities' in s and '215 active' in s for s in d['curriculum_audit']['unresolved_requirements'])
-    if pid=='miami-data-science-ai-bs':assert any('nine-credit' in s and 'three-credit' in s for s in d['curriculum_audit']['unresolved_requirements'])
+    if pid=='miami-data-science-ai-bs':assert next(r for r in d['requirements'] if r['title']=='Language course 200-level or higher')['credits']==9
     rules={r['id']:r for r in d['requirements']}
     assert rules[pid+'-cognate-directory-sample']['parent_id']==pid+'-supplement-individualized-overlap'
     assert rules[pid+'-thematic-ps_0031']['parent_id']==pid+'-policy-cognate-rules'

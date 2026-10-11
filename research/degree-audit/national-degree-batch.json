@@ -1462,7 +1462,7 @@
         "required_and_choices": "Read current degree curriculum table, fixed rows, explicit OR choices, major credit pools and writing overlay. Source ranges and open free-elective predicates remain unsummed.",
         "elective_pools": "Numeric elective pools are published credit choices, not contextual notes. The named one-of component inside the four-W writing overlay is required, while overlap with major courses remains permitted. Main-table mapped roles are 13 fixed / 44 named options. The much larger university cognate inventory remains contextual, not a degree workload. No subject labels were inferred from elective or cognate membership.",
         "prerequisites": "Actual named-course prerequisites, pre/corequisites, standing restrictions and exclusions are recorded literally. Unlabeled eligibility lines stay qualified. Degree-table row evidence separately preserves approved-project, course-order and overlap conditions when the catalog supplies a normalized course title. Preparatory courses are not added as extra fixed obligations. A finance-major grade rule is not extended to these AI degrees.",
-        "credits_and_units": "Published row/group amounts remain distinct from per-course credits; semester-hour definition is registered in existing university policy evidence. No range or grouped amount is divided between courses. Every primary-table named course now has the current catalog amount; variable project ranges are retained with null scalar credits. UMX100 is explicitly zero; CSC405 and professional-development alternatives are explicitly one credit. Degree/area totals remain independent constraints rather than sums over options.",
+        "credits_and_units": "Published row/group amounts remain distinct from per-course credits; semester-hour definition is registered in existing university policy evidence. No range or grouped amount is divided between courses. Every primary-table named course now has the current catalog amount; variable project ranges are retained with null scalar credits. UMX100 is explicitly zero; CSC405 and professional-development alternatives are explicitly one credit. Degree/area totals remain independent constraints rather than sums over options. The program nine-credit language row and 121 total are compatible with the college three-credit minimum and university 120-credit minimum; the sample plan does not control. Exact waiver extension to program-specific credits is not assumed.",
         "classification": "Every named primary-table fixed/option course has been read. Current full represented inventory: 1933 code records; 12 mixed, 143 reviewed, 10 unclassified, 1768 unreviewed. Actual contextual-course descriptions are being reviewed in the finite queue research/miami-description-review-remaining.json. No category is inferred from cognate membership; newly reviewed contextual records retain their original role.",
         "family_composition": "Standalone concrete degree; no family inheritance or degree variant collapse.",
         "degree_wide_requirements": "Existing college/university policy evidence and unresolved questions remain in the seed audit. Independent rereading of all applicable degree-wide rules is unfinished; the role correction does not establish degree completeness. Complete current transfer-policy reread distinguishes enrollment, credit acceptance and aid restrictions: summer exclusion from one enrollment rule does not grant transfer credit. The prior categorical contradiction is corrected, with the summer-session credit exclusion and MATES preapproval discretion preserved. Remaining public policy and course-content review continues; this correction does not certify the whole degree."
@@ -1506,6 +1506,15 @@
           "status": "corrected",
           "evidence_urls": [
             "https://bulletin.miami.edu/general-university-information/undergraduate-policies-and-procedures/undergraduate-transfer-credit-policy/"
+          ]
+        },
+        {
+          "issue": "Earlier notes labeled higher program language credits as a conflict with a lower college minimum.",
+          "correction": "Preserve nine program language credits and 121 total; remove false contradiction and retain only the narrowly unconfirmed waiver scope.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://bulletin.miami.edu/undergraduate-academic-programs/arts-sciences/computer-science/data-science-and-ai-bs/",
+            "https://bulletin.miami.edu/undergraduate-academic-programs/arts-sciences/"
           ]
         }
       ],

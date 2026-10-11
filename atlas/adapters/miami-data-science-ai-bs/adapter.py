@@ -31,3 +31,9 @@ register_context_courses(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
 
 from atlas.adapters.miami_transfer_scope import register as register_transfer_scope
 register_transfer_scope(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
+
+from atlas.adapters.miami_bs_policy_scope import apply as apply_bs_requirement_scope
+_parse_bs_table=parse
+def parse(html):
+    return apply_bs_requirement_scope(_parse_bs_table(html))
+SOURCE_PARSERS[SOURCES[0]]=parse
