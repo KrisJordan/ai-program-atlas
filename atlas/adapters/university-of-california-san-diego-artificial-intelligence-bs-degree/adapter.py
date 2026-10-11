@@ -381,3 +381,16 @@ for _review_url, _review_parser in psyc_reviews.SOURCE_PARSERS.items():
         raise ValueError('UCSD Psychology source needs explicit parser composition')
     SOURCES += (_review_url,)
     SOURCE_PARSERS[_review_url] = _review_parser
+
+from atlas.adapters import ucsd_history_remaining_reviews as history_remaining_reviews
+_PREVIOUS_HISTORY_PARSER = SOURCE_PARSERS[_HISTORY_URL]
+
+def parse_all_reviewed_history(html):
+    outputs = [_PREVIOUS_HISTORY_PARSER(html), history_remaining_reviews.parse_observations(html)]
+    courses = [course for result in outputs for course in result['courses']]
+    if len({course['id'] for course in courses}) != len(courses):
+        raise ValueError('Duplicate complete History course ID')
+    return {'id': PROGRAM_ID, 'courses': courses,
+            'source_dispositions': [item for result in outputs for item in result['source_dispositions']]}
+
+SOURCE_PARSERS[_HISTORY_URL] = parse_all_reviewed_history

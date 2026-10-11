@@ -25,7 +25,7 @@ def test_hieu_registered_bounded_history_observer_matches_curated_observations()
     s=m.SPEC['sources']['HIEU'];p=Path(s['cache_path'])
     if not p.exists():pytest.skip('Optional official current history chapter')
     a=importlib.import_module('atlas.adapters.'+PID+'.adapter');r=a.SOURCE_PARSERS[s['url']](p.read_text())
-    assert len(r['courses'])==187 and len(r['source_dispositions'])==13
+    assert len(r['courses'])==265 and len(r['source_dispositions'])==20
     saved={c['id']:c for c in json.loads(Path('data/programs',PID+'.json').read_text())['courses']}
     for c in r['courses']:
         assert 'category_review'not in c

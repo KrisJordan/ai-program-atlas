@@ -25,7 +25,7 @@ def test_history_sio_integration_preserves_held_identity_and_roles():
     assert cs['POLI 117']['category_review']['status']=='unclassified'
     assert [requirement_profile(d)[k]['count']for k in ['required','options','unresolved']]==[8,119,2241]
 
-@pytest.mark.parametrize('module,subject,count,dispositions',[(hila,'HILA',187,13),(sio,'SIO',35,6),(eds,'EDS',31,1),(cgs,'CGS',24,0),(mus,'MUS',27,6),(bio,'BIOL',34,3),(glbh,'GLBH',24,2),(psyc,'PSYC',14,2)])
+@pytest.mark.parametrize('module,subject,count,dispositions',[(hila,'HILA',265,20),(sio,'SIO',35,6),(eds,'EDS',31,1),(cgs,'CGS',24,0),(mus,'MUS',27,6),(bio,'BIOL',34,3),(glbh,'GLBH',24,2),(psyc,'PSYC',14,2)])
 def test_composed_source_replays_approved_metadata_only(module,subject,count,dispositions):
     s=module.SPEC['sources'][subject];p=Path(s['cache_path'])
     if not p.exists():pytest.skip('Optional ignored official chapter capture')
@@ -65,3 +65,16 @@ def test_biology_global_health_eligibility_and_identity_limits():
     assert cs['GLBH 150B']['prerequisites']=='GLBH 150A; department approval required.'
     assert any('strictly enforces' in n for n in cs['BILD 10']['notes'])
     assert not any('lab-specific' in n for n in cs['BILD 10']['notes'])
+
+
+def test_history_source_conflicts_keep_individual_amounts_and_held_subjects():
+    d=json.loads(Path('data/programs',PID+'.json').read_text());cs={c['code']:c for c in d['courses']}
+    assert cs['HITO 193']['credits']==6
+    assert cs['POLI 194']['credits']==cs['USP 194']['credits']==4
+    for code in ['HITO 193','POLI 194','USP 194']:
+        assert any('Cross-source credit conflict' in n for n in cs[code]['notes'])
+    assert cs['HISA 199']['credits']is None
+    assert any('pool' in n.lower() and '4units' in n for n in cs['HISA 199']['notes'])
+    assert cs['HISC 144']['category_review']['status']=='unclassified'
+    assert 'South Asian' in cs['HISC 144']['category_review']['rationale']
+    assert cs['HINE 116']['category_review']['status']=='unclassified'

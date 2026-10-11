@@ -447,3 +447,7 @@ Thirty-four Biology descriptions and introductory policies were primary-read;24 
 ### UCSD Psychology and legacy CSE omissions, 2026-10-11
 
 PSYC14 current observations integrated with139missing/162title hold; two CSE option review omissions now have actual full-source systems/AI decisions. Four completed COMM missing-code dispositions explicitly labeled unclassified. Roles remain8/119/2241; option counts change only subjects (95other,2systems,6foundations,4math,10AI,1human,1applications). Context categories1275other/791human/142applications/7foundations/23systems/3math. The accessible source queue remains active.
+
+### UCSD remaining History subjects, 2026-10-11
+
+Seventy-eight source observations integrated from the remaining85-target History contribution; primary checked exact title/field conflicts, variable units and all region-specific approval scopes. All represented History targets now have bounded dispositions. Current shared History observer265approved/20held-or-missing. HITO193six-unit joint heading conflicts with separate POLI194/USP194four-unit headings; internship remains separate and aliases unmerged. Context subjects1207other/859human/142applications/7foundations/23systems/3math, roles unchanged8/119/2241. Remaining accessible disciplines keep the whole audit in progress.
