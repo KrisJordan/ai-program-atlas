@@ -388,3 +388,9 @@ Contribution6ea2d89 adds five actual archived descriptions: Arthurian literature
 ### Hamilton explicit subject alias — 2026-10-11
 
 Contributionccc3b36 provides two CMS427 description upgrades from the actual Spring2026 Literature21L500 panel's explicit same-subject clause. The description concerns theatrical, literary and historical analysis, supporting human_context rather than coding inferred from the CMS prefix. A dedicated observer hashes the same-subject and meets-with fields; changed alias semantics withhold the supplement. No identity group is created. HASS now has182description-supported occurrences,660limited-title dispositions and three code-onlyunknowns.
+
+### Archived computer-vision evidence and Strobe boundary — 2026-10-11
+
+The official [MIT CSAIL instructor page](https://people.csail.mit.edu/kaiming/) links the public [Spring2024 6.8300/6.8301 site](https://advances-in-vision.github.io/). Both returned HTTP200 through the normal robots-aware Fetcher. Actual overview, announcements and grading clauses supply6.8301 computer-vision/ML content,15MITunits, math preparation and mandatory undergraduate CI-M participation. The graduate12unit amount is explicitly excluded. Metadata is dated Spring2024 and does not renumber the unversioned reference or claim current availability. Full visible-content digest and term/title guards prevent stale reruns; original source/role remains separate.
+
+The alternate6.869.csail.mit.edu archive failed local transport at robots.txt; no publisher denial is inferred. Edgerton's ordinary public subject directory and both pagination links returned HTTP200; all47 entries lacked a detailed6.9030 Strobe entry in this bounded inspection. This does not establish discontinuation or universal absence. Its missing departmental annotation remains explicit, with original12unit reference preserved. Known student.mit.edu robots restrictions were respected; search snippets were not used as course evidence.

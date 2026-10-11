@@ -213,3 +213,8 @@ for url in hass_hold_dispositions.URLS:
 
 reference_annotations = import_module('atlas.adapters.mit-ai-decision-making-bs.reference_annotations')
 SOURCE_PARSERS[policies.EMBEDDED] = reference_annotations.with_annotations(SOURCE_PARSERS[policies.EMBEDDED])
+
+archived_vision = import_module('atlas.adapters.mit-ai-decision-making-bs.archived_vision')
+SOURCES.extend(archived_vision.SOURCE_PARSERS)
+SOURCE_PARSERS.update(archived_vision.SOURCE_PARSERS)
+SOURCES.append('https://people.csail.mit.edu/kaiming/')

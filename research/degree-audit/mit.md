@@ -215,3 +215,7 @@ Contribution6ea2d89 adds five actual archived descriptions: Arthurian literature
 ### Hamilton explicit subject alias — 2026-10-11
 
 Contributionccc3b36 provides two CMS427 description upgrades from the actual Spring2026 Literature21L500 panel's explicit same-subject clause. The description concerns theatrical, literary and historical analysis, supporting human_context rather than coding inferred from the CMS prefix. A dedicated observer hashes the same-subject and meets-with fields; changed alias semantics withhold the supplement. No identity group is created. HASS now has182description-supported occurrences,660limited-title dispositions and three code-onlyunknowns.
+
+### One more exact reference with actual content
+
+6.8301 now has separately dated Spring2024 instructor-linked course content. Its15undergraduate units, explicit math prerequisite alternatives and CI-M passing condition are source observed;6.8300graduate12units do not transfer. Original unversioned role and ID remain separate. Of63 references,61 use guarded dated departmental annotations, one uses this guarded archived course site, and6.9030 remains title-only after the bounded47-entry Edgerton directory inspection. All profile membership and category totals remain unchanged by this last upgrade.
