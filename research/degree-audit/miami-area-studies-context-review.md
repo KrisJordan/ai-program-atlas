@@ -1,0 +1,17 @@
+# Miami area-studies contextual review — 2026-10-11
+
+Read all 45 present assigned blocks across [Africana Studies](https://bulletin.miami.edu/courses-az/aas/) (8), [American Studies](https://bulletin.miami.edu/courses-az/ams/) (24), [Arts and Sciences General](https://bulletin.miami.edu/courses-az/asg/) (2), [Cuban Studies](https://bulletin.miami.edu/courses-az/cub/) (1) and [Global Health Studies](https://bulletin.miami.edu/courses-az/ghs/) (10). GHS 370 is the sole missing exact block in this 46-code assignment and receives no review, replacement or discontinuation inference. Source timestamps, full-capture hashes and chapter-code inventory hashes are recorded per chapter in the standalone manifest. Raw captures remain ignored; current edition remains null rather than inferred from mixed download navigation.
+
+## Content boundaries
+
+Manual dispositions are **36 human-context, four mixed and five unclassified**. A selected-topic label does not automatically make content unknowable: AMS 321–330, 332–337 and 339 explicitly describe historical, literary, cultural, legal, educational or social analysis, even though examples vary. AAS 370 specifies historical inquiry and AAS 390 literary/cultural inquiry. These receive bounded human-context reviews. Conversely AAS 290 and AMS 301/401 supply no selected content. AMS 331/338 identify broad spatial/global fields without enough actual content to distinguish social, physical or technical subject matter; those five remain unclassified.
+
+ASG 150/401 combine substantial design/making with accessibility law, ethics and rhetoric, so they remain mixed applications/human-context. No programming or AI methods are inferred from emerging technology. GHS 312 combines disease processes and social contexts, consistent with the separately reviewed GEG 312; GHS 337 combines biological health and rights/social conditions. Both remain mixed. Other reviewed GHS descriptions explicitly center health policy, social determinants, cultural interpretation or historical analysis rather than clinical practice. Similar descriptions across departments do not establish cross-list identity.
+
+AAS 350 requires three AAS credits, preserved as an open preparation condition. GHS 440 requires GHS 310 or GHS 312; the OR is retained literally. AMS 301 publishes **0–3 credit hours**, represented as a range with scalar null rather than zero or three. Other present entries publish three. The registered Miami Course Information policy independently supports semester-hour terminology; no credit allocation or waiver is inferred.
+
+## Deliverables and checks
+
+The standalone `miami_area_studies_context_reviews.py/.json` handles exact five-chapter/program scopes, preserving existing parser responses. It checks chapter identity, code inventory and full normalized selected blocks, including prerequisites and amounts. Newly appearing GHS 370 or another inventory change requires review. Runtime output emits observations, not manual category reviews, requirement roles, identities, completeness or freshness.
+
+Fourteen scoped tests cover all twenty actual chapter/program replays, altered sources, variable credits, missing-code appearance and idempotent composition. The Miami owner retains shared helpers, seeds, queues and degree-ledger integration. No access restriction occurred; remaining missingness concerns the exact absent code, unspecified content and edition. Contextual membership does not establish a student's cognate approval.
