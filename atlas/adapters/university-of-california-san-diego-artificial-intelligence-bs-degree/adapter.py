@@ -139,3 +139,9 @@ SOURCE_PARSERS.update({sixth.TRANSFER_URL: sixth.parse_transfer, sixth.ELR_URL: 
                       sixth.PROPOSAL_URL: sixth.parse_proposal, sixth.CAT90_URL: sixth.parse_cat90,
                       sixth.CAT125_URL: sixth.parse_cat125})
 SOURCE_PARSERS.update({sixth.TRACK_BASE + key + '.html': (lambda html, key=key: sixth.parse_track(html, key)) for key in sixth.TRACKS})
+
+from atlas.adapters import ucsd_roosevelt_pools as roosevelt
+SOURCES += (roosevelt.GE_URL, roosevelt.GRAD_URL, roosevelt.WRITING_URL) + tuple(roosevelt.REGION_URLS.values())
+SOURCE_PARSERS.update({roosevelt.GE_URL: roosevelt.parse_ge, roosevelt.GRAD_URL: roosevelt.parse_graduation,
+                      roosevelt.WRITING_URL: roosevelt.parse_writing})
+SOURCE_PARSERS.update({url: (lambda html, key=key: roosevelt.parse_region(html, key)) for key, url in roosevelt.REGION_URLS.items()})
