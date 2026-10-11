@@ -73,3 +73,6 @@ for slug, observer in [('philosophy-immersion', parse_philosophy_cards), ('ethic
 
 from atlas.adapters.rit_open_related_immersions import register as register_open_related
 register_open_related(SOURCES,SOURCE_PARSERS)
+
+from atlas.adapters.rit_policy_political_immersion_integration import register as register_policy_politics
+register_policy_politics(SOURCES,SOURCE_PARSERS)

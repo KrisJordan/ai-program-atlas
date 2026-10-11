@@ -50,5 +50,5 @@ def test_integrated_statistics_branch_has_exact_conditional_role_and_manual_coun
     c={x['code']:x for x in d['courses']}
     assert c['STAT-330']['category']=='applications' and 'STAT-145' in c['STAT-205']['prerequisites']
     profile=requirement_profile(d)
-    assert [profile[k]['count'] for k in ['required','options','unresolved']]==[23,412,14]
+    assert [profile[k]['count'] for k in ['required','options','unresolved']]==[23,476,14]
     assert d['curriculum_status']=='partial'
