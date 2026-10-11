@@ -108,3 +108,9 @@ DS100 explicitly states no prerequisites; blank statements elsewhere remain
 unknown. The PHIL310 course description confirms GER eligibility but does not
 resolve double use in the plan's separate allocations. Full audit remains in
 progress; large GER option descriptions and existing policy questions remain.
+
+### GER science content review — 2026-10-11
+
+Individually reread 22 actual NJIT science option descriptions: 13 physics, seven chemistry/environmental-science and two biology courses. Twenty concern physical/environmental-science domain knowledge and practical experiments (applications under this taxonomy); BIOL 115 combines biology with critical gender/social interpretation and BIOL 150 combines variability/statistics with natural-science applications, so both are mixed. Lab-only descriptions are interpreted using their explicit named lecture association, not assumed from course numbering. Existing nine conditional laboratory relationship nodes remain unchanged.
+
+Current NJIT R120 101/102/207/208/237 entries provide only headings/contact hours, not explanatory descriptions. They remain unreviewed while independently public Rutgers evidence is still to be pursued. A blank course block is not a publisher denial or proof that no fuller source exists. Nothing changes the R216 206 three-credit observation or the unresolved Rutgers pairing question. No physical-science code prefix, elective role or AI program association supplies a subject label.

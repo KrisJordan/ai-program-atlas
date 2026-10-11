@@ -1771,9 +1771,9 @@
         "degree_identity": "Current Business with AI degree plan reread; 120-credit BS identity is separately supported by the official management school degree page.",
         "required_and_choices": "The plan supplies 32 prescribed named records. Generic GER/free-elective slots are not fabricated courses; suggested term placement is not a prerequisite or offering guarantee.",
         "elective_pools": "Four approved GER lists contain 64/248/36/2 printed code records, 350 total. Fixed PHIL310 also occurs in GER300, so the present mapped profile has 32 fixed and 349 options. This is pool eligibility, not permission to reuse the course across allocations. Wildcards remain open predicates.",
-        "prerequisites": "Nine explicitly published laboratory relationships remain conditional on selecting those science options. No arbitrary lecture/lab interchangeability or additional universal prerequisite obligation is inferred. Other individual course prerequisite review remains in progress. All 31 available fixed-course descriptions preserve actual prerequisites, pre/corequisite alternatives, standing and MTSM permission restrictions. FIN218/310 and IS392\u2019s database preparation are conditional eligibility, not inferred additional fixed obligations. PHIL335 explicitly allows ENGL102 concurrently; DS100 expressly has no prerequisite, unlike null unknown fields elsewhere.",
+        "prerequisites": "Nine explicitly published laboratory relationships remain conditional on selecting those science options. No arbitrary lecture/lab interchangeability or additional universal prerequisite obligation is inferred. Other individual course prerequisite review remains in progress. All 31 available fixed-course descriptions preserve actual prerequisites, pre/corequisite alternatives, standing and MTSM permission restrictions. FIN218/310 and IS392\u2019s database preparation are conditional eligibility, not inferred additional fixed obligations. PHIL335 explicitly allows ENGL102 concurrently; DS100 expressly has no prerequisite, unlike null unknown fields elsewhere. Science content enrichment preserves all 9 existing lab relationships, explicit no-prerequisite statement for PHYS 203 and actual prerequisites; it does not authorize arbitrary lecture/lab pairings.",
         "credits_and_units": "Faculty Senate Definition of Course Credit by Hours explicitly defines semester credit hour and applies credits across all NJIT schools and colleges. Unit normalized from that evidence, not calendar. Publication/effective date remains unknown; cited regulation date is not used. Variable and missing course amounts remain unchanged.",
-        "classification": "Thirty-one fixed-course descriptions individually read: 24 primary subject classifications and seven mixed subjects. MGMT116/216 and OM375 are mathematical methods; MIS385 is database systems; FIN410/MGMT435 and IS392/DS110 teach AI methods; MGMT422 centers communication. The AI-titled manager-use course MGMT416 is a business application. FYS SEM remains unknown/unreviewed; GER option descriptions are separate unfinished work. No prefix/title-keyword classification is used in the primary parser.",
+        "classification": "Thirty-one fixed-course descriptions individually read: 24 primary subject classifications and seven mixed subjects. MGMT116/216 and OM375 are mathematical methods; MIS385 is database systems; FIN410/MGMT435 and IS392/DS110 teach AI methods; MGMT422 centers communication. The AI-titled manager-use course MGMT416 is a business application. FYS SEM remains unknown/unreviewed; GER option descriptions are separate unfinished work. No prefix/title-keyword classification is used in the primary parser. Twenty-two GER science blocks now independently read: 20primary physical/environmental-science applications and 2mixed biology courses. The listed Rutgers R120 entries contain no description in the inspected NJIT chapter and remain unreviewed pending independent evidence.",
         "family_composition": "Standalone concrete degree; no family inheritance.",
         "degree_wide_requirements": "Existing graduation, transfer, residence and repeat rules remain preserved. PHIL310 overlap permission, Rutgers science relationships/credit value and any additional MTSM conditions remain separate applicability questions; full independent review is unfinished."
       },
@@ -1802,6 +1802,16 @@
             "https://catalog.njit.edu/undergraduate/computing-sciences/information-systems/",
             "https://catalog.njit.edu/undergraduate/science-liberal-arts/humanities-and-social-sciences/",
             "https://catalog.njit.edu/undergraduate/science-liberal-arts/mathematical-sciences/"
+          ]
+        },
+        {
+          "issue": "GER science subjects lacked individual description reviews.",
+          "correction": "Review 22 actual course blocks and guard their metadata; retain 2 mixed subjects and leave Rutgers title-only entries unreviewed.",
+          "status": "corrected_science_subset",
+          "evidence_urls": [
+            "https://catalog.njit.edu/undergraduate/science-liberal-arts/biology/",
+            "https://catalog.njit.edu/undergraduate/science-liberal-arts/chemistry-environmental-science/",
+            "https://catalog.njit.edu/undergraduate/science-liberal-arts/physics/"
           ]
         }
       ],

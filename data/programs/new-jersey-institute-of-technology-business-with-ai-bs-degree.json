@@ -220,6 +220,36 @@
       "catalog_year": "2026\u20132027",
       "locator": "Individually read required-course blocks, credits and enrollment conditions",
       "confidence": "high"
+    },
+    {
+      "id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-biology",
+      "url": "https://catalog.njit.edu/undergraduate/science-liberal-arts/biology/",
+      "title": "NJIT biology science course descriptions",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": "2026\u20132027",
+      "locator": "Individually read GER-listed course blocks: BIOL 115, BIOL 150",
+      "confidence": "high"
+    },
+    {
+      "id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-chemistry-environmental-science",
+      "url": "https://catalog.njit.edu/undergraduate/science-liberal-arts/chemistry-environmental-science/",
+      "title": "NJIT chemistry-environmental-science science course descriptions",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": "2026\u20132027",
+      "locator": "Individually read GER-listed course blocks: CHEM 121, CHEM 122, CHEM 125, CHEM 125A, CHEM 126, CHEM 126A, EVSC 125",
+      "confidence": "high"
+    },
+    {
+      "id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-physics",
+      "url": "https://catalog.njit.edu/undergraduate/science-liberal-arts/physics/",
+      "title": "NJIT physics science course descriptions",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": "2026\u20132027",
+      "locator": "Individually read GER-listed course blocks: PHYS 102, PHYS 102A, PHYS 103, PHYS 103A, PHYS 111, PHYS 111A, PHYS 121, PHYS 121A, PHYS 202, PHYS 202A, PHYS 203, PHYS 203A, PHYS 204",
+      "confidence": "high"
     }
   ],
   "outcomes": [],
@@ -5397,29 +5427,57 @@
       "id": "njit-biol-115",
       "code": "BIOL 115",
       "name": "Evolution and Biology of Sex",
-      "description": null,
+      "description": "Biological explanations of sex and selection are combined with critical analysis of gender assumptions and human interpretation.",
       "prerequisites": null,
       "credits": 3,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-njit-natural",
-      "url": "https://catalog.njit.edu/undergraduate/academic-policies-procedures/general-education-requirements/natural-science-ger/",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-biology",
+      "url": "https://catalog.njit.edu/undergraduate/science-liberal-arts/biology/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-biology"
+        ],
+        "locator": "BIOL 115 complete source block (and explicitly linked lecture topic for lab-only blocks)",
+        "rationale": "Biological explanations of sex and selection are combined with critical analysis of gender assumptions and human interpretation.",
+        "candidate_categories": [
+          "applications",
+          "human_context"
+        ]
+      }
     },
     {
       "id": "njit-biol-150",
       "code": "BIOL 150",
       "name": "Living in a Variable Universe",
-      "description": null,
+      "description": "The variability-focused laboratory combines natural-science cases, statistical concepts and societal interpretation across several domains.",
       "prerequisites": null,
       "credits": 4,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-biology",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-biology",
       "url": "https://catalog.njit.edu/undergraduate/science-liberal-arts/biology/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-biology"
+        ],
+        "locator": "BIOL 150 complete source block (and explicitly linked lecture topic for lab-only blocks)",
+        "rationale": "The variability-focused laboratory combines natural-science cases, statistical concepts and societal interpretation across several domains.",
+        "candidate_categories": [
+          "applications",
+          "mathematics"
+        ]
+      }
     },
     {
       "id": "njit-r120-101",
@@ -5551,99 +5609,176 @@
       "id": "njit-chem-121",
       "code": "CHEM 121",
       "name": "Fundamentals of Chemical Principles I",
-      "description": null,
+      "description": "Chemical reactions, bonding, molecular structure and thermochemistry establish chemistry domain knowledge.",
       "prerequisites": null,
       "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-chemistry",
+      "category": "applications",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-chemistry-environmental-science",
       "url": "https://catalog.njit.edu/undergraduate/science-liberal-arts/chemistry-environmental-science/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-chemistry-environmental-science"
+        ],
+        "locator": "CHEM 121 complete source block (and explicitly linked lecture topic for lab-only blocks)",
+        "rationale": "Chemical reactions, bonding, molecular structure and thermochemistry establish chemistry domain knowledge.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-chem-122",
       "code": "CHEM 122",
       "name": "Fundamentals of Chemical Principles II",
-      "description": null,
+      "description": "Chemical equilibrium, kinetics, thermodynamics and electrochemistry continue chemistry study.",
       "prerequisites": "Prerequisite: CHEM 121 with a grade C or better",
       "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-chemistry",
+      "category": "applications",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-chemistry-environmental-science",
       "url": "https://catalog.njit.edu/undergraduate/science-liberal-arts/chemistry-environmental-science/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-chemistry-environmental-science"
+        ],
+        "locator": "CHEM 122 complete source block (and explicitly linked lecture topic for lab-only blocks)",
+        "rationale": "Chemical equilibrium, kinetics, thermodynamics and electrochemistry continue chemistry study.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-chem-125",
       "code": "CHEM 125",
       "name": "General Chemistry I",
-      "description": null,
+      "description": "General chemistry studies reactions, bonding, molecular structure, gases and thermochemistry.",
       "prerequisites": "Co-requisite: MATH 110 or higher",
       "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-chemistry",
+      "category": "applications",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-chemistry-environmental-science",
       "url": "https://catalog.njit.edu/undergraduate/science-liberal-arts/chemistry-environmental-science/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-chemistry-environmental-science"
+        ],
+        "locator": "CHEM 125 complete source block (and explicitly linked lecture topic for lab-only blocks)",
+        "rationale": "General chemistry studies reactions, bonding, molecular structure, gases and thermochemistry.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-chem-125a",
       "code": "CHEM 125A",
       "name": "General Chemistry Lab I",
-      "description": null,
+      "description": "Experiments and laboratory techniques develop practical chemistry knowledge.",
       "prerequisites": "Corequisites: CHEM 125 or CHEM 121",
       "credits": 1,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-chemistry",
+      "category": "applications",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-chemistry-environmental-science",
       "url": "https://catalog.njit.edu/undergraduate/science-liberal-arts/chemistry-environmental-science/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-chemistry-environmental-science"
+        ],
+        "locator": "CHEM 125A complete source block (and explicitly linked lecture topic for lab-only blocks)",
+        "rationale": "Experiments and laboratory techniques develop practical chemistry knowledge.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-chem-126",
       "code": "CHEM 126",
       "name": "General Chemistry II",
-      "description": null,
+      "description": "Chemistry content centers equilibrium, kinetics, thermodynamics and electrochemistry.",
       "prerequisites": "Prerequisites: MATH 110 or higher and CHEM 125 or CHEM 121 with a C or better",
       "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-chemistry",
+      "category": "applications",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-chemistry-environmental-science",
       "url": "https://catalog.njit.edu/undergraduate/science-liberal-arts/chemistry-environmental-science/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-chemistry-environmental-science"
+        ],
+        "locator": "CHEM 126 complete source block (and explicitly linked lecture topic for lab-only blocks)",
+        "rationale": "Chemistry content centers equilibrium, kinetics, thermodynamics and electrochemistry.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-chem-126a",
       "code": "CHEM 126A",
       "name": "Gen Chemistry Lab II",
-      "description": null,
+      "description": "Chemistry experiments and laboratory techniques reinforce the associated lecture concepts.",
       "prerequisites": "Prerequisites: CHEM 125A with a grade of C or better; Corequisites: CHEM 126 or CHEM 122",
       "credits": 1,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-chemistry",
+      "category": "applications",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-chemistry-environmental-science",
       "url": "https://catalog.njit.edu/undergraduate/science-liberal-arts/chemistry-environmental-science/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-chemistry-environmental-science"
+        ],
+        "locator": "CHEM 126A complete source block (and explicitly linked lecture topic for lab-only blocks)",
+        "rationale": "Chemistry experiments and laboratory techniques reinforce the associated lecture concepts.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-evsc-125",
       "code": "EVSC 125",
       "name": "Fundamentals of Environmental Sciences",
-      "description": null,
+      "description": "Environmental-science domain knowledge spans ecosystems, resources, water, atmosphere and radiation.",
       "prerequisites": null,
       "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-njit-natural",
-      "url": "https://catalog.njit.edu/undergraduate/academic-policies-procedures/general-education-requirements/natural-science-ger/",
+      "category": "applications",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-chemistry-environmental-science",
+      "url": "https://catalog.njit.edu/undergraduate/science-liberal-arts/chemistry-environmental-science/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-chemistry-environmental-science"
+        ],
+        "locator": "EVSC 125 complete source block (and explicitly linked lecture topic for lab-only blocks)",
+        "rationale": "Environmental-science domain knowledge spans ecosystems, resources, water, atmosphere and radiation.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-r460-101",
@@ -5719,183 +5854,326 @@
       "id": "njit-phys-102",
       "code": "PHYS 102",
       "name": "General Physics I",
-      "description": null,
+      "description": "Introductory mechanics covers motion, forces, energy, momentum and properties of matter as physical-science knowledge.",
       "prerequisites": "Corequisite: PHYS 102A",
       "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-physics",
+      "category": "applications",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-physics",
       "url": "https://catalog.njit.edu/undergraduate/science-liberal-arts/physics/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-physics"
+        ],
+        "locator": "PHYS 102 complete source block (and explicitly linked lecture topic for lab-only blocks)",
+        "rationale": "Introductory mechanics covers motion, forces, energy, momentum and properties of matter as physical-science knowledge.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-phys-102a",
       "code": "PHYS 102A",
       "name": "General Physics I Lab",
-      "description": null,
+      "description": "The explicitly identified laboratory component of mechanics applies the linked PHYS 102 physical-science content.",
       "prerequisites": "Corequisite: PHYS 102",
       "credits": 1,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-physics",
+      "category": "applications",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-physics",
       "url": "https://catalog.njit.edu/undergraduate/science-liberal-arts/physics/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-physics"
+        ],
+        "locator": "PHYS 102A complete source block (and explicitly linked lecture topic for lab-only blocks)",
+        "rationale": "The explicitly identified laboratory component of mechanics applies the linked PHYS 102 physical-science content.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-phys-103",
       "code": "PHYS 103",
       "name": "General Physics II",
-      "description": null,
+      "description": "Heat, thermodynamics, waves, sound and optics continue a physical-science sequence.",
       "prerequisites": "Prerequisites: PHYS 102 / PHYS 102A or PHYS 111 / PHYS 111A all with grade of C or better; Corequisite: PHYS 103A",
       "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-physics",
+      "category": "applications",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-physics",
       "url": "https://catalog.njit.edu/undergraduate/science-liberal-arts/physics/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-physics"
+        ],
+        "locator": "PHYS 103 complete source block (and explicitly linked lecture topic for lab-only blocks)",
+        "rationale": "Heat, thermodynamics, waves, sound and optics continue a physical-science sequence.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-phys-103a",
       "code": "PHYS 103A",
       "name": "General Physics II Lab",
-      "description": null,
+      "description": "The laboratory explicitly implements the physical-science content of PHYS 103.",
       "prerequisites": "Prerequisites: PHYS 102 / PHYS 102A or PHYS 111 / PHYS 111A all with grade of C or better; Corequisite: PHYS 103",
       "credits": 1,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-physics",
+      "category": "applications",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-physics",
       "url": "https://catalog.njit.edu/undergraduate/science-liberal-arts/physics/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-physics"
+        ],
+        "locator": "PHYS 103A complete source block (and explicitly linked lecture topic for lab-only blocks)",
+        "rationale": "The laboratory explicitly implements the physical-science content of PHYS 103.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-phys-111",
       "code": "PHYS 111",
       "name": "Physics I",
-      "description": null,
+      "description": "Mechanics and conservation laws are the substantive physics domain, rather than general mathematical theory.",
       "prerequisites": "Corequisites: PHYS 111A and MATH 111",
       "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-physics",
+      "category": "applications",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-physics",
       "url": "https://catalog.njit.edu/undergraduate/science-liberal-arts/physics/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-physics"
+        ],
+        "locator": "PHYS 111 complete source block (and explicitly linked lecture topic for lab-only blocks)",
+        "rationale": "Mechanics and conservation laws are the substantive physics domain, rather than general mathematical theory.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-phys-111a",
       "code": "PHYS 111A",
       "name": "Physics I Lab",
-      "description": null,
+      "description": "The linked mechanics laboratory applies physical-science concepts from PHYS 111.",
       "prerequisites": "Corequisite: PHYS 111",
       "credits": 1,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-physics",
+      "category": "applications",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-physics",
       "url": "https://catalog.njit.edu/undergraduate/science-liberal-arts/physics/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-physics"
+        ],
+        "locator": "PHYS 111A complete source block (and explicitly linked lecture topic for lab-only blocks)",
+        "rationale": "The linked mechanics laboratory applies physical-science concepts from PHYS 111.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-phys-121",
       "code": "PHYS 121",
       "name": "Physics II",
-      "description": null,
+      "description": "Electricity, magnetism and circuits establish physical-science domain content.",
       "prerequisites": "Prerequisites: PHYS 111 / PHYS 111A and MATH 111 all with a grade of C or better; Corequisites: PHYS 121A and MATH 112 with grade of C or better",
       "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-physics",
+      "category": "applications",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-physics",
       "url": "https://catalog.njit.edu/undergraduate/science-liberal-arts/physics/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-physics"
+        ],
+        "locator": "PHYS 121 complete source block (and explicitly linked lecture topic for lab-only blocks)",
+        "rationale": "Electricity, magnetism and circuits establish physical-science domain content.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-phys-121a",
       "code": "PHYS 121A",
       "name": "Physics II Lab",
-      "description": null,
+      "description": "The laboratory is expressly associated with the electricity and magnetism courses PHYS 121/122.",
       "prerequisites": "Prerequisites: PHYS 111 / PHYS 111A and MATH 111 all with grade of C or better; Corequisites: PHYS 121 or PHYS 122",
       "credits": 1,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-physics",
+      "category": "applications",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-physics",
       "url": "https://catalog.njit.edu/undergraduate/science-liberal-arts/physics/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-physics"
+        ],
+        "locator": "PHYS 121A complete source block (and explicitly linked lecture topic for lab-only blocks)",
+        "rationale": "The laboratory is expressly associated with the electricity and magnetism courses PHYS 121/122.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-phys-202",
       "code": "PHYS 202",
       "name": "Introductory Astronomy and Cosmology",
-      "description": null,
+      "description": "Astronomy and cosmology explain the origin, evolution and structure of celestial systems.",
       "prerequisites": null,
       "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-physics",
+      "category": "applications",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-physics",
       "url": "https://catalog.njit.edu/undergraduate/science-liberal-arts/physics/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-physics"
+        ],
+        "locator": "PHYS 202 complete source block (and explicitly linked lecture topic for lab-only blocks)",
+        "rationale": "Astronomy and cosmology explain the origin, evolution and structure of celestial systems.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-phys-202a",
       "code": "PHYS 202A",
       "name": "Astronomy and Cosmology Laboratory",
-      "description": null,
+      "description": "Astronomical observation and demonstrations apply physical principles to celestial phenomena.",
       "prerequisites": null,
       "credits": 1,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-physics",
+      "category": "applications",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-physics",
       "url": "https://catalog.njit.edu/undergraduate/science-liberal-arts/physics/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-physics"
+        ],
+        "locator": "PHYS 202A complete source block (and explicitly linked lecture topic for lab-only blocks)",
+        "rationale": "Astronomical observation and demonstrations apply physical principles to celestial phenomena.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-phys-203",
       "code": "PHYS 203",
       "name": "The Earth in Space",
-      "description": null,
+      "description": "Earth and planetary science examine geological processes and interacting environmental reservoirs.",
       "prerequisites": "Prerequisite: None",
       "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-physics",
+      "category": "applications",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-physics",
       "url": "https://catalog.njit.edu/undergraduate/science-liberal-arts/physics/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-physics"
+        ],
+        "locator": "PHYS 203 complete source block (and explicitly linked lecture topic for lab-only blocks)",
+        "rationale": "Earth and planetary science examine geological processes and interacting environmental reservoirs.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-phys-203a",
       "code": "PHYS 203A",
       "name": "The Earth in Space Lab",
-      "description": null,
+      "description": "The optional laboratory is expressly associated with the Earth and planetary science course.",
       "prerequisites": "Corequisite: PHYS 203",
       "credits": 1,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-physics",
+      "category": "applications",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-physics",
       "url": "https://catalog.njit.edu/undergraduate/science-liberal-arts/physics/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-physics"
+        ],
+        "locator": "PHYS 203A complete source block (and explicitly linked lecture topic for lab-only blocks)",
+        "rationale": "The optional laboratory is expressly associated with the Earth and planetary science course.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-phys-204",
       "code": "PHYS 204",
       "name": "Biophysics of Life",
-      "description": null,
+      "description": "Biophysics explains how living systems function using physics and biology, rather than computational AI methods.",
       "prerequisites": null,
       "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-njit-natural",
-      "url": "https://catalog.njit.edu/undergraduate/academic-policies-procedures/general-education-requirements/natural-science-ger/",
+      "category": "applications",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-physics",
+      "url": "https://catalog.njit.edu/undergraduate/science-liberal-arts/physics/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-physics"
+        ],
+        "locator": "PHYS 204 complete source block (and explicitly linked lecture topic for lab-only blocks)",
+        "rationale": "Biophysics explains how living systems function using physics and biology, rather than computational AI methods.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-hss-404",
@@ -7009,7 +7287,10 @@
       "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-computing",
       "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-information-systems",
       "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-humanities",
-      "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-mathematics"
+      "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-mathematics",
+      "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-biology",
+      "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-chemistry-environmental-science",
+      "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-physics"
     ],
     "sections": [
       "120-credit published plan",
@@ -7020,7 +7301,8 @@
       "University graduation GPA, transfer/residency, external study, repetition and expiration rules",
       "Conditional science-option lecture/lab relationships in the current Physics, Chemistry and Biological Sciences course descriptions; 19 approved entries, nine option notes",
       "Independent degree audit: university semester-credit definition and published GER choice roles; pool eligibility does not authorize course reuse",
-      "31 of 32 fixed-course descriptions individually read through public department catalog pages; published prerequisites, restrictions and exact credits retained without turning preparation into extra fixed requirements"
+      "31 of 32 fixed-course descriptions individually read through public department catalog pages; published prerequisites, restrictions and exact credits retained without turning preparation into extra fixed requirements",
+      "22 GER science option descriptions individually read: 20 physical/environmental-science domain subjects and 2 mixed biology courses; source-defined lab associations retained without inventing pairings."
     ],
     "unresolved_requirements": [
       "Degree-specific overlap/substitution rules remain unresolved: PHIL 310 appears both as a named degree requirement and in the GER 300+ approved pool; the reviewed pages do not explicitly authorize counting it in a second plan slot. Free-elective substitution limitations and any additional MTSM degree-wide graduation conditions need confirmation.",
@@ -7031,7 +7313,8 @@
       "Blocked management search popups were not retried. Independent public department catalog sections now supply 31 fixed-course descriptions and exact enrollment conditions; FYS SEM remains unknown.",
       "Public course sites and example syllabi remain unverified.",
       "Explicit prerequisite/corequisite clauses are observed for the 19 reviewed science options where stated; absent clauses remain null. Other course descriptions/prerequisites are not exhaustively mapped.",
-      "FYS SEM remains subject-unreviewed with its explicit zero-credit plan amount; no standalone description was verified. GER option descriptions remain a separate incomplete classification inventory."
+      "FYS SEM remains subject-unreviewed with its explicit zero-credit plan amount; no standalone description was verified. GER option descriptions remain a separate incomplete classification inventory.",
+      "Rutgers-prefixed biology entries in the NJIT chapter have headings/credits but no explanatory descriptions; these remain unreviewed rather than being classified by prefix. Other Rutgers and GER humanities descriptions remain available work to pursue, not a claimed access denial."
     ]
   }
 }

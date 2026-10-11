@@ -160,3 +160,6 @@ SOURCES = tuple(SOURCE_PARSERS)
 from atlas.adapters.njit_required_course_reviews import SOURCE_PARSERS as REQUIRED_PARSERS
 SOURCE_PARSERS.update(REQUIRED_PARSERS)
 SOURCES = tuple(SOURCE_PARSERS)
+
+from atlas.adapters.njit_science_subject_reviews import register as register_science_subjects
+register_science_subjects(SOURCE_PARSERS)
