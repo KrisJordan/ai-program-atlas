@@ -1,0 +1,1339 @@
+{
+  "programs": [
+    {
+      "program_id": "cmu-bs-ai",
+      "reviewed_at": "2026-10-11",
+      "reviewer": "cohort-independent-source-review",
+      "full_degree_verified": false,
+      "dimensions": {
+        "fixed_requirements": {
+          "status": "verified",
+          "summary": "Thirteen fixed mapped identities: five computer-science courses, two AI courses, four mathematics/statistics courses, First Year Seminar and Core@CMU. The mathematics-foundations substitution, multivariable calculus and six probability routes remain options. 15-112 remains a conditional preparation record.",
+          "evidence": [
+            {
+              "url": "https://coursecatalog.web.cmu.edu/schools-colleges/schoolofcomputerscience/artificialintelligence/artificial-intelligence-bs/",
+              "locator": "Complete main degree requirements table and its immediately associated choice language/footnotes; reviewed 2026-10-11"
+            }
+          ],
+          "limitations": [
+            "This pass does not reread the full SCS general-education/elective approval inventory or student-specific waivers. Named core verification is not whole-degree certification."
+          ]
+        },
+        "choice_rules": {
+          "status": "partial",
+          "summary": "Read all named major tables: the six probability pathways preserve their paired components; four separate AI elective areas preserve one-per-area counts and minimum units. Ethics is one of four. The first-year mini-course exception and optional thesis are not extra fixed work.",
+          "evidence": [
+            {
+              "url": "https://coursecatalog.web.cmu.edu/schools-colleges/schoolofcomputerscience/artificialintelligence/artificial-intelligence-bs/",
+              "locator": "Complete main degree requirements table and its immediately associated choice language/footnotes; reviewed 2026-10-11"
+            }
+          ],
+          "limitations": [
+            "This pass does not reread the full SCS general-education/elective approval inventory or student-specific waivers. Named core verification is not whole-degree certification."
+          ]
+        },
+        "classification": {
+          "status": "partial",
+          "summary": "All 13 fixed descriptions reread. Imperative/functional programming, algorithms and general theoretical computing are foundations; computer execution/storage/communication is systems; regression/calculus/linear algebra are mathematics. The two AI method courses remain AI; orientation stays other and Core@CMU communication/intercultural skills human context.",
+          "evidence": [
+            {
+              "url": "https://coursecatalog.web.cmu.edu/schools-colleges/schoolofcomputerscience/courses/",
+              "locator": "Complete exact course blocks: 15-122, 15-150, 15-210, 15-213, 15-251, 07-280, 07-380, 07-128"
+            },
+            {
+              "url": "https://coursecatalog.web.cmu.edu/schools-colleges/melloncollegeofscience/departmentofmathematicalsciences/courses/",
+              "locator": "Complete exact course blocks: 21-120, 21-122, 21-241"
+            },
+            {
+              "url": "https://coursecatalog.web.cmu.edu/schools-colleges/dietrichcollegeofhumanitiesandsocialsciences/departmentofstatistics/courses/",
+              "locator": "Complete exact course blocks: 36-401"
+            },
+            {
+              "url": "https://coursecatalog.web.cmu.edu/intercollegeprograms/courses/",
+              "locator": "Complete exact course blocks: 99-101"
+            }
+          ],
+          "limitations": [
+            "This pass does not reread the full SCS general-education/elective approval inventory or student-specific waivers. Named core verification is not whole-degree certification.",
+            "The broader options/contextual chart is not a full independent description review in this pass."
+          ]
+        }
+      },
+      "expected_course_ids": {
+        "required": [
+          "cmu-07-128",
+          "cmu-07-280",
+          "cmu-07-380",
+          "cmu-15-122",
+          "cmu-15-150",
+          "cmu-15-210",
+          "cmu-15-213",
+          "cmu-15-251",
+          "cmu-21-120",
+          "cmu-21-122",
+          "cmu-21-241",
+          "cmu-36-401",
+          "cmu-99-101"
+        ],
+        "options": null,
+        "unresolved": null
+      },
+      "expected_profile": {
+        "required": {
+          "count": 13,
+          "categories": {
+            "foundations": 4,
+            "systems": 1,
+            "mathematics": 4,
+            "ai_ml": 2,
+            "human_context": 1,
+            "other": 1
+          }
+        },
+        "options": null,
+        "unresolved": null
+      },
+      "manual_fixed_categories": {
+        "cmu-15-122": "foundations",
+        "cmu-15-150": "foundations",
+        "cmu-15-210": "foundations",
+        "cmu-15-251": "foundations",
+        "cmu-15-213": "systems",
+        "cmu-21-120": "mathematics",
+        "cmu-21-122": "mathematics",
+        "cmu-21-241": "mathematics",
+        "cmu-36-401": "mathematics",
+        "cmu-07-280": "ai_ml",
+        "cmu-07-380": "ai_ml",
+        "cmu-99-101": "human_context",
+        "cmu-07-128": "other"
+      },
+      "reviewed_content_hash": "390293a5c060f7d9a3aeb2cdcb73c85fdfd0cbacf9e2b0c75c5e7908db40fc18",
+      "family_resolution": "No family membership on this standalone record; checked the resolved concrete program. No shared-family rule inferred.",
+      "reviewed_option_subset": [
+        "cmu-11-411",
+        "cmu-15-151",
+        "cmu-15-259",
+        "cmu-16-161",
+        "cmu-16-385",
+        "cmu-16-735",
+        "cmu-17-200",
+        "cmu-21-127",
+        "cmu-21-259",
+        "cmu-21-266",
+        "cmu-21-268",
+        "cmu-21-269",
+        "cmu-21-325",
+        "cmu-21-425",
+        "cmu-36-218",
+        "cmu-36-225",
+        "cmu-36-226",
+        "cmu-36-235",
+        "cmu-36-236",
+        "cmu-80-249"
+      ]
+    },
+    {
+      "program_id": "penn-bse-ai",
+      "reviewed_at": "2026-10-11",
+      "reviewer": "cohort-independent-source-review",
+      "full_degree_verified": false,
+      "dimensions": {
+        "fixed_requirements": {
+          "status": "verified",
+          "summary": "Ten fixed mapped identities from the explicit five-course computing block and five named mathematics/statistics rows. Probability, all six AI-core category slots, senior design and optional concentrations are not converted into fixed individual courses.",
+          "evidence": [
+            {
+              "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
+              "locator": "Complete main degree requirements table and its immediately associated choice language/footnotes; reviewed 2026-10-11"
+            }
+          ],
+          "limitations": [
+            "The current catalog endpoints remain unavailable under the documented access boundary; current full course descriptions are not established for every fixed course. CIS 2450 evidence is Spring 2026, CIS 1100 has no stated term, and precise titles provide only limited evidence for five other fixed subjects.",
+            "Optional-concentration wording and broad approved electives require their own scope review; this pass does not certify every general-education, technical or contextual record."
+          ]
+        },
+        "choice_rules": {
+          "status": "partial",
+          "summary": "Read all six 1-CU AI-core slots, the 6-CU AI elective rule, project eligibility (AI development and 30% project grade), 2-CU senior design and 3-CU technical electives. The explicit optional concentration rule selects four courses within the AI elective category, rather than adding four courses.",
+          "evidence": [
+            {
+              "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
+              "locator": "Complete main degree requirements table and its immediately associated choice language/footnotes; reviewed 2026-10-11"
+            }
+          ],
+          "limitations": [
+            "The current catalog endpoints remain unavailable under the documented access boundary; current full course descriptions are not established for every fixed course. CIS 2450 evidence is Spring 2026, CIS 1100 has no stated term, and precise titles provide only limited evidence for five other fixed subjects.",
+            "Optional-concentration wording and broad approved electives require their own scope review; this pass does not certify every general-education, technical or contextual record."
+          ]
+        },
+        "classification": {
+          "status": "partial",
+          "summary": "Five actual public course offerings and the exact remaining fixed titles checked. CIS 1600 explicitly teaches discrete mathematics; CIS 2450 describes scalable processing/frameworks, supporting systems rather than AI by degree association. The five title-limited subjects remain explicitly limited evidence, not full-description reviews.",
+          "evidence": [
+            {
+              "url": "https://www.engineering.upenn.edu/~cis110/current/py/index.html",
+              "locator": "Actual public course overview/description and course identity; term/entry limits retained."
+            },
+            {
+              "url": "https://www.engineering.upenn.edu/~cis120/current/",
+              "locator": "Actual public course overview/description and course identity; term/entry limits retained."
+            },
+            {
+              "url": "https://www.engineering.upenn.edu/~cis120/current/syllabus/",
+              "locator": "Actual public course overview/description and course identity; term/entry limits retained."
+            },
+            {
+              "url": "https://www.engineering.upenn.edu/~cis1210/current/",
+              "locator": "Actual public course overview/description and course identity; term/entry limits retained."
+            },
+            {
+              "url": "https://www.cis.upenn.edu/~cis1600/current/",
+              "locator": "Actual public course overview/description and course identity; term/entry limits retained."
+            },
+            {
+              "url": "https://sites.google.com/seas.upenn.edu/cis-2450-spring-2026/home",
+              "locator": "Actual public course overview/description and course identity; term/entry limits retained."
+            },
+            {
+              "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
+              "locator": "Complete main degree requirements table and its immediately associated choice language/footnotes; reviewed 2026-10-11"
+            }
+          ],
+          "limitations": [
+            "The current catalog endpoints remain unavailable under the documented access boundary; current full course descriptions are not established for every fixed course. CIS 2450 evidence is Spring 2026, CIS 1100 has no stated term, and precise titles provide only limited evidence for five other fixed subjects.",
+            "Optional-concentration wording and broad approved electives require their own scope review; this pass does not certify every general-education, technical or contextual record.",
+            "The broader options/contextual chart is not a full independent description review in this pass."
+          ]
+        }
+      },
+      "expected_course_ids": {
+        "required": [
+          "penn-cis-1100",
+          "penn-cis-1200",
+          "penn-cis-1210",
+          "penn-cis-1600",
+          "penn-cis-2450",
+          "penn-cis-3200",
+          "penn-ese-2030",
+          "penn-ese-4020",
+          "penn-math-1400",
+          "penn-math-1410"
+        ],
+        "options": null,
+        "unresolved": null
+      },
+      "expected_profile": {
+        "required": {
+          "count": 10,
+          "categories": {
+            "foundations": 4,
+            "systems": 1,
+            "mathematics": 5
+          }
+        },
+        "options": null,
+        "unresolved": null
+      },
+      "manual_fixed_categories": {
+        "penn-cis-1100": "foundations",
+        "penn-cis-1200": "foundations",
+        "penn-cis-1210": "foundations",
+        "penn-cis-3200": "foundations",
+        "penn-cis-2450": "systems",
+        "penn-math-1400": "mathematics",
+        "penn-math-1410": "mathematics",
+        "penn-cis-1600": "mathematics",
+        "penn-ese-2030": "mathematics",
+        "penn-ese-4020": "mathematics"
+      },
+      "reviewed_content_hash": "f6b2e27112cb47b186f3958828017c8a0b9474668c9b75bf6f684f08ac41d11f",
+      "family_resolution": "No family membership on this standalone record; checked the resolved concrete program. No shared-family rule inferred.",
+      "reviewed_option_subset": [
+        "penn-cis-2210",
+        "penn-cis-3500",
+        "penn-cis-4190",
+        "penn-cis-4210",
+        "penn-cis-5200",
+        "penn-cis-5210",
+        "penn-cis-5300",
+        "penn-cis-5810",
+        "penn-ese-2000",
+        "penn-ese-2100",
+        "penn-ese-2240",
+        "penn-ese-3010",
+        "penn-ese-3040",
+        "penn-ese-3060",
+        "penn-ese-3600",
+        "penn-ese-4210",
+        "penn-nets-2120",
+        "penn-nets-2130",
+        "penn-stat-4300"
+      ]
+    },
+    {
+      "program_id": "rochester-institute-of-technology-artificial-intelligence-bs-degree",
+      "reviewed_at": "2026-10-11",
+      "reviewer": "cohort-independent-source-review",
+      "full_degree_verified": false,
+      "dimensions": {
+        "fixed_requirements": {
+          "status": "verified",
+          "summary": "Twenty-three distinct fixed identities in the freshly expanded 2026\u20132027 public four-year curriculum. The repeated zero-credit IDAI-499 co-op is one identity with two required experiences, not two different courses. Six either/or sequence rows remain alternatives.",
+          "evidence": [
+            {
+              "url": "https://www.rit.edu/study/artificial-intelligence-bs",
+              "locator": "2026\u20132027 Curriculum: all four year headers expanded in ordinary public Chrome; AI Electives table and Notes. Exact AI BS heading checked, not the unrelated AI-in-Society immersion capture."
+            }
+          ],
+          "limitations": [
+            "The public page calls its table a typical sequence; it is checked as the published mapped core, not as a student-specific graduation audit. Existing catalog/advising differences (CSCI-632/634, LING-582/584 and MATH-190 immersion allocation) remain unresolved.",
+            "Only the 40 distinct published core/choice cards are reread here. This does not independently recertify all 77 immersion routes, 770 option identities or the unavailable complete general-education/attribute inventory."
+          ]
+        },
+        "choice_rules": {
+          "status": "partial",
+          "summary": "Read all six either/or sequence rows and the choose-two/six-credit AI elective list, including the single robotics slot EEEE-485 or CSCI-634. Known CSCI-632 versus 634 and LING-582/584 advising differences are not reconciled by this bounded source read.",
+          "evidence": [
+            {
+              "url": "https://www.rit.edu/study/artificial-intelligence-bs",
+              "locator": "2026\u20132027 Curriculum: all four year headers expanded in ordinary public Chrome; AI Electives table and Notes. Exact AI BS heading checked, not the unrelated AI-in-Society immersion capture."
+            }
+          ],
+          "limitations": [
+            "The public page calls its table a typical sequence; it is checked as the published mapped core, not as a student-specific graduation audit. Existing catalog/advising differences (CSCI-632/634, LING-582/584 and MATH-190 immersion allocation) remain unresolved.",
+            "Only the 40 distinct published core/choice cards are reread here. This does not independently recertify all 77 immersion routes, 770 option identities or the unavailable complete general-education/attribute inventory."
+          ]
+        },
+        "classification": {
+          "status": "partial",
+          "summary": "All 40 distinct full published core/choice cards reread, including all 23 fixed records. Optimization remains mathematical methods; Security of AI and concurrent/distributed AI center security/infrastructure; the capstone explicitly emphasizes software construction. Psychology is domain knowledge, legal/HCI/writing content human context, and visual analytics mixed. Zero-credit orientation/co-op are not invented AI instruction.",
+          "evidence": [
+            {
+              "url": "https://www.rit.edu/study/artificial-intelligence-bs",
+              "locator": "All 40 distinct complete rendered course cards in /tmp/rit-degree-audit-course-captures.json, with identity/title/description/hours/entry fields checked."
+            }
+          ],
+          "limitations": [
+            "The public page calls its table a typical sequence; it is checked as the published mapped core, not as a student-specific graduation audit. Existing catalog/advising differences (CSCI-632/634, LING-582/584 and MATH-190 immersion allocation) remain unresolved.",
+            "Only the 40 distinct published core/choice cards are reread here. This does not independently recertify all 77 immersion routes, 770 option identities or the unavailable complete general-education/attribute inventory.",
+            "The broader options/contextual chart is not a full independent description review in this pass."
+          ]
+        }
+      },
+      "expected_course_ids": {
+        "required": [
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-331",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-335",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-csec-521",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-gcis-350",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-idai-101",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-idai-110",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-idai-202",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-idai-360",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-idai-444",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-idai-485",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-idai-490",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-idai-499",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-iste-262",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-iste-476",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-math-181",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-math-182",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-math-241",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-math-251",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-psyc-101",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-psyc-223",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-swen-261",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-uwrt-150",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-yops-10"
+        ],
+        "options": null,
+        "unresolved": null
+      },
+      "expected_profile": {
+        "required": {
+          "count": 23,
+          "categories": {
+            "foundations": 2,
+            "mathematics": 5,
+            "ai_ml": 6,
+            "human_context": 3,
+            "applications": 2,
+            "systems": 2,
+            "other": 3
+          }
+        },
+        "options": null,
+        "unresolved": null
+      },
+      "manual_fixed_categories": {
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-swen-261": "foundations",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-idai-490": "foundations",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-math-181": "mathematics",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-math-182": "mathematics",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-math-251": "mathematics",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-math-241": "mathematics",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-idai-360": "mathematics",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-idai-101": "ai_ml",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-idai-110": "ai_ml",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-idai-202": "ai_ml",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-331": "ai_ml",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-335": "ai_ml",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-idai-444": "ai_ml",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-uwrt-150": "human_context",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-gcis-350": "human_context",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-iste-262": "human_context",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-psyc-101": "applications",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-psyc-223": "applications",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-csec-521": "systems",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-idai-485": "systems",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-yops-10": "other",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-idai-499": "other",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-iste-476": "other"
+      },
+      "reviewed_content_hash": "aeab625127f8b695d54c67b874a486d3abc92a9c284d76d76d145bb2c7311e27",
+      "family_resolution": "No family membership on this standalone record; checked the resolved concrete program. No shared-family rule inferred.",
+      "reviewed_option_subset": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-comm-142",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-comm-201",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-141",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-142",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-431",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-634",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-eeee-485",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-gcis-123",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-gcis-124",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-iste-230",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-ling-351",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-ling-581",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-math-190",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-math-200",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-publ-550",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-swen-344",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-swen-566"
+      ]
+    },
+    {
+      "program_id": "rice-university-artificial-intelligence-bs-degree",
+      "reviewed_at": "2026-10-11",
+      "reviewer": "cohort-independent-source-review",
+      "full_degree_verified": false,
+      "dimensions": {
+        "fixed_requirements": {
+          "status": "verified",
+          "summary": "Thirteen fixed identities independently transcribed from Required Courses. Calculus substitutions, five linear-algebra options and three statistics pathways remain conditional choices; STAT 314 is not universal.",
+          "evidence": [
+            {
+              "url": "https://ga.rice.edu/programs-study/departments-programs/engineering/artificial-intelligence/artificial-intelligence-bs/",
+              "locator": "Complete main degree requirements table and its immediately associated choice language/footnotes; reviewed 2026-10-11"
+            }
+          ],
+          "limitations": [
+            "All 43 represented records are checked, not an expanded university distribution-course catalog. Existing unresolved summer versus fall/spring residency wording is outside this bounded content/role conclusion.",
+            "Course-specific registration exceptions are conditional permissions, not granted approval, automatic eligibility or additional fixed courses."
+          ]
+        },
+        "choice_rules": {
+          "status": "verified",
+          "summary": "Read every named major choice row and the five elective areas. Calculus alternatives, linear algebra and statistics bundles preserve complete paths. Three electives must represent three areas; cross-listed statistics, vision and robotics aliases count once without changing source selection quantities.",
+          "evidence": [
+            {
+              "url": "https://ga.rice.edu/programs-study/departments-programs/engineering/artificial-intelligence/artificial-intelligence-bs/",
+              "locator": "Complete main degree requirements table and its immediately associated choice language/footnotes; reviewed 2026-10-11"
+            }
+          ],
+          "limitations": [
+            "All 43 represented records are checked, not an expanded university distribution-course catalog. Existing unresolved summer versus fall/spring residency wording is outside this bounded content/role conclusion.",
+            "Course-specific registration exceptions are conditional permissions, not granted approval, automatic eligibility or additional fixed courses."
+          ]
+        },
+        "classification": {
+          "status": "verified",
+          "summary": "All 43 full descriptions reread, including reciprocal STAT315/DSCI301, COMP447/ELEC447 and COMP450/ELEC450/MECH450. The fixed chart is 3 foundations, 2 systems, 1 mathematics, 5 AI, 1 human context and 1 domain course. Options resolve to 26 identities; mixed retrieval/robotics content remains other rather than inferred AI from pool membership.",
+          "evidence": [
+            {
+              "url": "https://ga.rice.edu/programs-study/courses/math/",
+              "locator": "Complete exact course blocks: MATH 101, MATH 105, MATH 102, MATH 106, MATH 221, MATH 354, MATH 355"
+            },
+            {
+              "url": "https://ga.rice.edu/programs-study/courses/cmor/",
+              "locator": "Complete exact course blocks: CMOR 302, CMOR 303"
+            },
+            {
+              "url": "https://ga.rice.edu/programs-study/courses/stat/",
+              "locator": "Complete exact course blocks: STAT 310, STAT 314, STAT 311, STAT 315"
+            },
+            {
+              "url": "https://ga.rice.edu/programs-study/courses/dsci/",
+              "locator": "Complete exact course blocks: DSCI 301"
+            },
+            {
+              "url": "https://ga.rice.edu/programs-study/courses/comp/",
+              "locator": "Complete exact course blocks: COMP 140, COMP 182, COMP 215, COMP 222, COMP 282, COMP 329, COMP 345, COMP 346, COMP 348, COMP 456, COMP 457, COMP 409, COMP 414, COMP 480, COMP 585, COMP 459, COMP 631, COMP 447, COMP 484, COMP 442, COMP 450, COMP 462"
+            },
+            {
+              "url": "https://ga.rice.edu/programs-study/courses/phil/",
+              "locator": "Complete exact course blocks: PHIL 108"
+            },
+            {
+              "url": "https://ga.rice.edu/programs-study/courses/psyc/",
+              "locator": "Complete exact course blocks: PSYC 203, PSYC 430, PSYC 468"
+            },
+            {
+              "url": "https://ga.rice.edu/programs-study/courses/elec/",
+              "locator": "Complete exact course blocks: ELEC 447, ELEC 450"
+            },
+            {
+              "url": "https://ga.rice.edu/programs-study/courses/mech/",
+              "locator": "Complete exact course blocks: MECH 450"
+            }
+          ],
+          "limitations": [
+            "All 43 represented records are checked, not an expanded university distribution-course catalog. Existing unresolved summer versus fall/spring residency wording is outside this bounded content/role conclusion.",
+            "Course-specific registration exceptions are conditional permissions, not granted approval, automatic eligibility or additional fixed courses."
+          ]
+        }
+      },
+      "expected_course_ids": {
+        "required": [
+          "rice-ai-comp-140",
+          "rice-ai-comp-182",
+          "rice-ai-comp-215",
+          "rice-ai-comp-222",
+          "rice-ai-comp-282",
+          "rice-ai-comp-329",
+          "rice-ai-comp-345",
+          "rice-ai-comp-346",
+          "rice-ai-comp-348",
+          "rice-ai-comp-456",
+          "rice-ai-comp-457",
+          "rice-ai-phil-108",
+          "rice-ai-psyc-203"
+        ],
+        "options": [
+          "rice-ai-cmor-302",
+          "rice-ai-cmor-303",
+          "rice-ai-comp-409",
+          "rice-ai-comp-414",
+          "rice-ai-comp-442",
+          "rice-ai-comp-447",
+          "rice-ai-comp-450",
+          "rice-ai-comp-459",
+          "rice-ai-comp-462",
+          "rice-ai-comp-480",
+          "rice-ai-comp-484",
+          "rice-ai-comp-585",
+          "rice-ai-comp-631",
+          "rice-ai-math-101",
+          "rice-ai-math-102",
+          "rice-ai-math-105",
+          "rice-ai-math-106",
+          "rice-ai-math-221",
+          "rice-ai-math-354",
+          "rice-ai-math-355",
+          "rice-ai-psyc-430",
+          "rice-ai-psyc-468",
+          "rice-ai-stat-310",
+          "rice-ai-stat-311",
+          "rice-ai-stat-314",
+          "rice-ai-stat-315"
+        ],
+        "unresolved": []
+      },
+      "expected_profile": {
+        "required": {
+          "count": 13,
+          "categories": {
+            "foundations": 3,
+            "systems": 2,
+            "mathematics": 1,
+            "ai_ml": 5,
+            "human_context": 1,
+            "applications": 1
+          }
+        },
+        "options": {
+          "count": 26,
+          "categories": {
+            "mathematics": 14,
+            "foundations": 3,
+            "applications": 1,
+            "human_context": 1,
+            "ai_ml": 5,
+            "other": 2
+          }
+        },
+        "unresolved": {
+          "count": 0,
+          "categories": {}
+        }
+      },
+      "manual_fixed_categories": {
+        "rice-ai-comp-140": "foundations",
+        "rice-ai-comp-182": "foundations",
+        "rice-ai-comp-215": "foundations",
+        "rice-ai-comp-222": "systems",
+        "rice-ai-comp-329": "systems",
+        "rice-ai-comp-282": "mathematics",
+        "rice-ai-comp-345": "ai_ml",
+        "rice-ai-comp-346": "ai_ml",
+        "rice-ai-comp-348": "ai_ml",
+        "rice-ai-comp-456": "ai_ml",
+        "rice-ai-comp-457": "ai_ml",
+        "rice-ai-phil-108": "human_context",
+        "rice-ai-psyc-203": "applications"
+      },
+      "reviewed_content_hash": "dbbf45641f0f6346da968ca3892b4ba6c375605f6d2b8f05f031639afdf9975a",
+      "family_resolution": "No family membership on this standalone record; checked the resolved concrete program. No shared-family rule inferred.",
+      "manual_option_categories": {
+        "rice-ai-math-101": "mathematics",
+        "rice-ai-math-105": "mathematics",
+        "rice-ai-math-102": "mathematics",
+        "rice-ai-math-106": "mathematics",
+        "rice-ai-cmor-302": "mathematics",
+        "rice-ai-cmor-303": "mathematics",
+        "rice-ai-math-221": "mathematics",
+        "rice-ai-math-354": "mathematics",
+        "rice-ai-math-355": "mathematics",
+        "rice-ai-stat-310": "mathematics",
+        "rice-ai-stat-311": "mathematics",
+        "rice-ai-stat-314": "mathematics",
+        "rice-ai-stat-315": "mathematics",
+        "rice-ai-comp-414": "mathematics",
+        "rice-ai-comp-409": "foundations",
+        "rice-ai-comp-480": "foundations",
+        "rice-ai-comp-585": "foundations",
+        "rice-ai-psyc-430": "applications",
+        "rice-ai-psyc-468": "human_context",
+        "rice-ai-comp-459": "ai_ml",
+        "rice-ai-comp-447": "ai_ml",
+        "rice-ai-comp-484": "ai_ml",
+        "rice-ai-comp-442": "ai_ml",
+        "rice-ai-comp-450": "ai_ml",
+        "rice-ai-comp-631": "other",
+        "rice-ai-comp-462": "other"
+      }
+    },
+    {
+      "program_id": "mit-ai-decision-making-bs",
+      "reviewed_at": "2026-10-11",
+      "reviewer": "cohort-independent-source-review",
+      "full_degree_verified": false,
+      "dimensions": {
+        "fixed_requirements": {
+          "status": "verified",
+          "summary": "Three fixed identities in the actual 6-4_2025 departmental requirements: bare 6.1200 and both 6.1010/6.1210 foundation subjects. The five programming bundles, linear algebra and probability choices remain options. The unversioned catalog reference is not silently substituted for the cohort-specific graph.",
+          "evidence": [
+            {
+              "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
+              "locator": "6-4_2025 Required subjects, Additional constraints, Notes and Subject Lists; entry Fall 2025 or later, lists as of Fall 2026"
+            }
+          ],
+          "limitations": [
+            "Verification applies to the explicit Fall 2025-and-later 6-4_2025 framework with lists labeled Fall 2026, not every historical catalog or the unversioned reference graph.",
+            "The large HASS/GIR/contextual inventory and all advanced elective descriptions are not independently recertified here. Named joint listings and duplicate versions are not automatically merged."
+          ]
+        },
+        "choice_rules": {
+          "status": "partial",
+          "summary": "Read the full 6-4_2025 required-subject panel and all named constraint lists: five Center subject options, bundled 6.C01+6.C011 and 6.C51+6.C511, three distinct elective slots, two CI-M and five centric/SERC overlays. Each completed subject fills at most one required slot but may satisfy multiple additional constraints.",
+          "evidence": [
+            {
+              "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
+              "locator": "6-4_2025 Required subjects, Additional constraints, Notes and Subject Lists; entry Fall 2025 or later, lists as of Fall 2026"
+            },
+            {
+              "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
+              "locator": "Complete reciprocal Same subject as annotations: 16.C20/18.C20/9.C20 and 18.C06/6.C06; canonical option IDs retain separate published row records."
+            }
+          ],
+          "limitations": [
+            "Verification applies to the explicit Fall 2025-and-later 6-4_2025 framework with lists labeled Fall 2026, not every historical catalog or the unversioned reference graph.",
+            "The large HASS/GIR/contextual inventory and all advanced elective descriptions are not independently recertified here. Named joint listings and duplicate versions are not automatically merged."
+          ]
+        },
+        "classification": {
+          "status": "partial",
+          "summary": "All three fixed exact departmental annotations reread: 6.1010 teaches program construction, 6.1210 algorithms/data structures, and 6.1200 mathematical proof/discrete tools. Thus two foundations and one mathematics. No fixed AI count is inferred from the degree title; required AI selections remain options.",
+          "evidence": [
+            {
+              "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
+              "locator": "Exact complete annotation blocks for 6.1010, 6.1200 and 6.1210; units and entry fields."
+            }
+          ],
+          "limitations": [
+            "Verification applies to the explicit Fall 2025-and-later 6-4_2025 framework with lists labeled Fall 2026, not every historical catalog or the unversioned reference graph.",
+            "The large HASS/GIR/contextual inventory and all advanced elective descriptions are not independently recertified here. Named joint listings and duplicate versions are not automatically merged.",
+            "The broader options/contextual chart is not a full independent description review in this pass."
+          ]
+        }
+      },
+      "expected_course_ids": {
+        "required": [
+          "mit-ai-v2025-6-1010",
+          "mit-ai-v2025-6-1200",
+          "mit-ai-v2025-6-1210"
+        ],
+        "options": null,
+        "unresolved": null
+      },
+      "expected_profile": {
+        "required": {
+          "count": 3,
+          "categories": {
+            "foundations": 2,
+            "mathematics": 1
+          }
+        },
+        "options": null,
+        "unresolved": null
+      },
+      "manual_fixed_categories": {
+        "mit-ai-v2025-6-1010": "foundations",
+        "mit-ai-v2025-6-1210": "foundations",
+        "mit-ai-v2025-6-1200": "mathematics"
+      },
+      "reviewed_content_hash": "986bc7723a9010371b46825e47f21c5ce7c628d7164223b32eed56f1477df165",
+      "family_resolution": "No family membership on this standalone record; checked the resolved concrete program. No shared-family rule inferred.",
+      "reviewed_option_subset": [
+        "mit-ai-v2025-16-c20",
+        "mit-ai-v2025-18-05",
+        "mit-ai-v2025-18-06",
+        "mit-ai-v2025-18-c06",
+        "mit-ai-v2025-6-1000",
+        "mit-ai-v2025-6-100a",
+        "mit-ai-v2025-6-100b",
+        "mit-ai-v2025-6-1220",
+        "mit-ai-v2025-6-1400",
+        "mit-ai-v2025-6-3000",
+        "mit-ai-v2025-6-3100",
+        "mit-ai-v2025-6-3260",
+        "mit-ai-v2025-6-3700",
+        "mit-ai-v2025-6-3720",
+        "mit-ai-v2025-6-3800",
+        "mit-ai-v2025-6-3900",
+        "mit-ai-v2025-6-3950",
+        "mit-ai-v2025-6-4110",
+        "mit-ai-v2025-6-4120",
+        "mit-ai-v2025-6-4400",
+        "mit-ai-v2025-6-4420",
+        "mit-ai-v2025-6-4590",
+        "mit-ai-v2025-6-c01",
+        "mit-ai-v2025-6-c011",
+        "mit-ai-v2025-6-c35",
+        "mit-ai-v2025-6-c395",
+        "mit-ai-v2025-6-c51",
+        "mit-ai-v2025-6-c511",
+        "mit-ai-v2025-6-c571",
+        "mit-ai-v2025-9-660"
+      ]
+    },
+    {
+      "program_id": "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree",
+      "reviewed_at": "2026-10-11",
+      "reviewer": "cohort-independent-source-review",
+      "full_degree_verified": false,
+      "dimensions": {
+        "fixed_requirements": {
+          "status": "verified",
+          "summary": "Thirteen fixed identities after reading both major and McCormick requirements: seven listed major/math identities plus six school requirements. MATH 228-1 stays in a substitution route; COMP_SCI 212-0 replaces MATH 228-2 for AI. Physics and introductory programming alternatives remain options.",
+          "evidence": [
+            {
+              "url": "https://catalogs.northwestern.edu/undergraduate/engineering-applied-science/artificial-intelligence/artificial-intelligence-major/",
+              "locator": "Complete main degree requirements table and its immediately associated choice language/footnotes; reviewed 2026-10-11"
+            },
+            {
+              "url": "https://catalogs.northwestern.edu/undergraduate/engineering-applied-science/",
+              "locator": "Academic Requirements: mathematics footnotes, Engineering Foundations, Design/Communications and science lecture/lab table."
+            }
+          ],
+          "limitations": [
+            "The college explicitly calls its public theme list partial and refers the complete rules to the McCormick Advising System. This pass does not certify the full theme inventory or student-specific degree audit.",
+            "The broader technical/advanced option inventory and all option descriptions are not recertified here. Core substitutions preserve source eligibility rather than asserting automatic approval."
+          ]
+        },
+        "choice_rules": {
+          "status": "partial",
+          "summary": "Read the five-of-six breadth domains, their nested course alternatives and named special-topic contexts. School science lecture/lab bundles, honors-calculus substitution, physics substitution and 3-unit design/communication structure retain conditional ancestry. No five-of-six rule becomes all six. ES_APPM 252-2 is inspected context, not an AI option: its ordinary MATH 228-2 counterpart is replaced by AI-specific COMP_SCI 212.",
+          "evidence": [
+            {
+              "url": "https://catalogs.northwestern.edu/undergraduate/engineering-applied-science/artificial-intelligence/artificial-intelligence-major/",
+              "locator": "Complete main degree requirements table and its immediately associated choice language/footnotes; reviewed 2026-10-11"
+            },
+            {
+              "url": "https://catalogs.northwestern.edu/undergraduate/engineering-applied-science/",
+              "locator": "Academic Requirements: mathematics footnotes, Engineering Foundations, Design/Communications and science lecture/lab table."
+            }
+          ],
+          "limitations": [
+            "The college explicitly calls its public theme list partial and refers the complete rules to the McCormick Advising System. This pass does not certify the full theme inventory or student-specific degree audit.",
+            "The broader technical/advanced option inventory and all option descriptions are not recertified here. Core substitutions preserve source eligibility rather than asserting automatic approval."
+          ]
+        },
+        "classification": {
+          "status": "partial",
+          "summary": "All 13 fixed exact descriptions reread. COMP_SCI 212-0 is mathematics; 208/211 are software/data-structure foundations despite the systems-language title; 348/349 teach AI/ML. GEN_ENG231/241 are mathematical methods. Design/communication courses retain mixed other, separate writing records human context.",
+          "evidence": [
+            {
+              "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/math/",
+              "locator": "Complete exact course blocks: MATH 220-1, MATH 220-2"
+            },
+            {
+              "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/comp_sci/",
+              "locator": "Complete exact course blocks: COMP_SCI 212-0, COMP_SCI 208-0, COMP_SCI 211-0, COMP_SCI 348-0, COMP_SCI 349-0"
+            },
+            {
+              "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/gen_eng/",
+              "locator": "Complete exact course blocks: GEN_ENG 231-0, GEN_ENG 241-0"
+            },
+            {
+              "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/dsgn/",
+              "locator": "Complete exact course blocks: DSGN 106-1, DSGN 106-2"
+            },
+            {
+              "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/english/",
+              "locator": "Complete exact course blocks: ENGLISH 106-1, ENGLISH 106-2"
+            }
+          ],
+          "limitations": [
+            "The college explicitly calls its public theme list partial and refers the complete rules to the McCormick Advising System. This pass does not certify the full theme inventory or student-specific degree audit.",
+            "The broader technical/advanced option inventory and all option descriptions are not recertified here. Core substitutions preserve source eligibility rather than asserting automatic approval.",
+            "The broader options/contextual chart is not a full independent description review in this pass."
+          ]
+        }
+      },
+      "expected_course_ids": {
+        "required": [
+          "nw-bse-comp-sci-208-0",
+          "nw-bse-comp-sci-211-0",
+          "nw-bse-comp-sci-212-0",
+          "nw-bse-comp-sci-348-0",
+          "nw-bse-comp-sci-349-0",
+          "nw-bse-dsgn-106-1",
+          "nw-bse-dsgn-106-2",
+          "nw-bse-english-106-1",
+          "nw-bse-english-106-2",
+          "nw-bse-gen-eng-231-0",
+          "nw-bse-gen-eng-241-0",
+          "nw-bse-math-220-1",
+          "nw-bse-math-220-2"
+        ],
+        "options": null,
+        "unresolved": null
+      },
+      "expected_profile": {
+        "required": {
+          "count": 13,
+          "categories": {
+            "mathematics": 5,
+            "foundations": 2,
+            "ai_ml": 2,
+            "human_context": 2,
+            "other": 2
+          }
+        },
+        "options": null,
+        "unresolved": null
+      },
+      "manual_fixed_categories": {
+        "nw-bse-math-220-1": "mathematics",
+        "nw-bse-math-220-2": "mathematics",
+        "nw-bse-comp-sci-212-0": "mathematics",
+        "nw-bse-gen-eng-231-0": "mathematics",
+        "nw-bse-gen-eng-241-0": "mathematics",
+        "nw-bse-comp-sci-208-0": "foundations",
+        "nw-bse-comp-sci-211-0": "foundations",
+        "nw-bse-comp-sci-348-0": "ai_ml",
+        "nw-bse-comp-sci-349-0": "ai_ml",
+        "nw-bse-english-106-1": "human_context",
+        "nw-bse-english-106-2": "human_context",
+        "nw-bse-dsgn-106-1": "other",
+        "nw-bse-dsgn-106-2": "other"
+      },
+      "reviewed_content_hash": "7609e12e3b9065776cac9ad24243db0a16421bf81db7f045d58cce64e1e0347a",
+      "family_resolution": "No family membership on this standalone record; checked the resolved concrete program. No shared-family rule inferred.",
+      "reviewed_option_subset": [
+        "nw-bse-comp-sci-111-0",
+        "nw-bse-comp-sci-180-0",
+        "nw-bse-es-appm-252-1",
+        "nw-bse-gen-eng-150-0",
+        "nw-bse-gen-eng-151-0",
+        "nw-bse-gen-eng-212-0",
+        "nw-bse-math-228-1",
+        "nw-bse-physics-125-1",
+        "nw-bse-physics-135-1",
+        "nw-bse-physics-140-1"
+      ],
+      "reviewed_contextual_subset": [
+        "nw-bse-es-appm-252-2"
+      ]
+    },
+    {
+      "program_id": "case-western-reserve-university-artificial-intelligence-ba-degree",
+      "reviewed_at": "2026-10-11",
+      "reviewer": "cohort-independent-source-review",
+      "full_degree_verified": false,
+      "dimensions": {
+        "fixed_requirements": {
+          "status": "verified",
+          "summary": "Eight fixed BA identities: MATH 121/307 and CSDS 233/302/310/330/340/395A. Introductory Python is a choice against the complete Java-plus-Python pair, not three fixed courses. Calculus II and probability remain alternatives.",
+          "evidence": [
+            {
+              "url": "https://bulletin.case.edu/engineering/computer-data-sciences/artificial-intelligence-ba/",
+              "locator": "Complete main degree requirements table and its immediately associated choice language/footnotes; reviewed 2026-10-11"
+            }
+          ],
+          "limitations": [
+            "The complete unified general-education breadth/choice inventory and every elective description are outside this bounded second pass. Current source-backed primary audit status is not replaced."
+          ]
+        },
+        "choice_rules": {
+          "status": "partial",
+          "summary": "Read the whole BA major table, including one intro route, one societal-impact course, three technical electives and the 3\u20134-credit application route or two 1.5-credit courses. A shared course appearing in two pools does not add a second identity.",
+          "evidence": [
+            {
+              "url": "https://bulletin.case.edu/engineering/computer-data-sciences/artificial-intelligence-ba/",
+              "locator": "Complete main degree requirements table and its immediately associated choice language/footnotes; reviewed 2026-10-11"
+            }
+          ],
+          "limitations": [
+            "The complete unified general-education breadth/choice inventory and every elective description are outside this bounded second pass. Current source-backed primary audit status is not replaced."
+          ]
+        },
+        "classification": {
+          "status": "partial",
+          "summary": "All eight fixed exact descriptions reread: two data-structure/algorithm foundations, three mathematical methods and three AI courses. Capstone explicitly applies/develops AI models. Topic, pool and department names are not used as classification proxies.",
+          "evidence": [
+            {
+              "url": "https://bulletin.case.edu/course-descriptions/math/",
+              "locator": "Complete exact course blocks: MATH 121, MATH 307"
+            },
+            {
+              "url": "https://bulletin.case.edu/course-descriptions/csds/",
+              "locator": "Complete exact course blocks: CSDS 233, CSDS 302, CSDS 310, CSDS 330, CSDS 340, CSDS 395A"
+            }
+          ],
+          "limitations": [
+            "The complete unified general-education breadth/choice inventory and every elective description are outside this bounded second pass. Current source-backed primary audit status is not replaced.",
+            "The broader options/contextual chart is not a full independent description review in this pass."
+          ]
+        }
+      },
+      "expected_course_ids": {
+        "required": [
+          "case-ba-csds-233",
+          "case-ba-csds-302",
+          "case-ba-csds-310",
+          "case-ba-csds-330",
+          "case-ba-csds-340",
+          "case-ba-csds-395a",
+          "case-ba-math-121",
+          "case-ba-math-307"
+        ],
+        "options": null,
+        "unresolved": null
+      },
+      "expected_profile": {
+        "required": {
+          "count": 8,
+          "categories": {
+            "mathematics": 3,
+            "foundations": 2,
+            "ai_ml": 3
+          }
+        },
+        "options": null,
+        "unresolved": null
+      },
+      "manual_fixed_categories": {
+        "case-ba-math-121": "mathematics",
+        "case-ba-math-307": "mathematics",
+        "case-ba-csds-302": "mathematics",
+        "case-ba-csds-233": "foundations",
+        "case-ba-csds-310": "foundations",
+        "case-ba-csds-330": "ai_ml",
+        "case-ba-csds-340": "ai_ml",
+        "case-ba-csds-395a": "ai_ml"
+      },
+      "reviewed_content_hash": "8867799a7349f4fd5563f65faca9e0995e4436aff04de6fd253811f1bd98eede",
+      "family_resolution": "No family membership on this standalone record; checked the resolved concrete program. No shared-family rule inferred.",
+      "reviewed_option_subset": [
+        "case-ba-csds-132",
+        "case-ba-csds-134",
+        "case-ba-csds-237",
+        "case-ba-math-122",
+        "case-ba-math-124",
+        "case-ba-math-380",
+        "case-ba-stat-301"
+      ]
+    },
+    {
+      "program_id": "case-western-reserve-university-artificial-intelligence-bs-degree",
+      "reviewed_at": "2026-10-11",
+      "reviewer": "cohort-independent-source-review",
+      "full_degree_verified": false,
+      "dimensions": {
+        "fixed_requirements": {
+          "status": "verified",
+          "summary": "Nine fixed BS identities: the eight shared BA core identities plus ENGR 399. The science course route is conditional on its alternative science major/minor route; no physics course is promoted to universal fixed membership.",
+          "evidence": [
+            {
+              "url": "https://bulletin.case.edu/engineering/computer-data-sciences/artificial-intelligence-bs/",
+              "locator": "Complete main degree requirements table and its immediately associated choice language/footnotes; reviewed 2026-10-11"
+            }
+          ],
+          "limitations": [
+            "The complete unified general-education breadth/choice inventory and every elective description are outside this bounded second pass. A secondary-major exception does not erase requirements for this standalone BS."
+          ]
+        },
+        "choice_rules": {
+          "status": "partial",
+          "summary": "Read the whole BS major table: intro-programming bundle, science route alternatives, numerical-method choice, six breadth selections, impact/security choices, four technical electives and Group 2 maximum. Named prerequisites do not automatically become extra degree requirements.",
+          "evidence": [
+            {
+              "url": "https://bulletin.case.edu/engineering/computer-data-sciences/artificial-intelligence-bs/",
+              "locator": "Complete main degree requirements table and its immediately associated choice language/footnotes; reviewed 2026-10-11"
+            }
+          ],
+          "limitations": [
+            "The complete unified general-education breadth/choice inventory and every elective description are outside this bounded second pass. A secondary-major exception does not erase requirements for this standalone BS."
+          ]
+        },
+        "classification": {
+          "status": "partial",
+          "summary": "All nine fixed exact descriptions reread. The BA core subject judgments hold for the same exact blocks; ENGR399 adds human-context ethical/professional impacts, not technical systems or generic engineering applications.",
+          "evidence": [
+            {
+              "url": "https://bulletin.case.edu/course-descriptions/math/",
+              "locator": "Complete exact course blocks: MATH 121, MATH 307"
+            },
+            {
+              "url": "https://bulletin.case.edu/course-descriptions/engr/",
+              "locator": "Complete exact course blocks: ENGR 399"
+            },
+            {
+              "url": "https://bulletin.case.edu/course-descriptions/csds/",
+              "locator": "Complete exact course blocks: CSDS 233, CSDS 302, CSDS 310, CSDS 330, CSDS 340, CSDS 395A"
+            }
+          ],
+          "limitations": [
+            "The complete unified general-education breadth/choice inventory and every elective description are outside this bounded second pass. A secondary-major exception does not erase requirements for this standalone BS.",
+            "The broader options/contextual chart is not a full independent description review in this pass."
+          ]
+        }
+      },
+      "expected_course_ids": {
+        "required": [
+          "case-bs-csds-233",
+          "case-bs-csds-302",
+          "case-bs-csds-310",
+          "case-bs-csds-330",
+          "case-bs-csds-340",
+          "case-bs-csds-395a",
+          "case-bs-engr-399",
+          "case-bs-math-121",
+          "case-bs-math-307"
+        ],
+        "options": null,
+        "unresolved": null
+      },
+      "expected_profile": {
+        "required": {
+          "count": 9,
+          "categories": {
+            "mathematics": 3,
+            "foundations": 2,
+            "ai_ml": 3,
+            "human_context": 1
+          }
+        },
+        "options": null,
+        "unresolved": null
+      },
+      "manual_fixed_categories": {
+        "case-bs-math-121": "mathematics",
+        "case-bs-math-307": "mathematics",
+        "case-bs-csds-302": "mathematics",
+        "case-bs-csds-233": "foundations",
+        "case-bs-csds-310": "foundations",
+        "case-bs-csds-330": "ai_ml",
+        "case-bs-csds-340": "ai_ml",
+        "case-bs-csds-395a": "ai_ml",
+        "case-bs-engr-399": "human_context"
+      },
+      "reviewed_content_hash": "300d84129338c1ff5bc0a654cf0d1a2a567e62e1e9a781650813a8689a4bb761",
+      "family_resolution": "No family membership on this standalone record; checked the resolved concrete program. No shared-family rule inferred.",
+      "reviewed_option_subset": [
+        "case-bs-csds-132",
+        "case-bs-csds-134",
+        "case-bs-csds-237",
+        "case-bs-math-122",
+        "case-bs-math-124",
+        "case-bs-math-223",
+        "case-bs-math-227",
+        "case-bs-math-380",
+        "case-bs-phys-115",
+        "case-bs-phys-116",
+        "case-bs-phys-121",
+        "case-bs-phys-122",
+        "case-bs-phys-123",
+        "case-bs-phys-124",
+        "case-bs-stat-301"
+      ]
+    },
+    {
+      "program_id": "wpi-ai-bs",
+      "reviewed_at": "2026-10-11",
+      "reviewer": "cohort-independent-source-review",
+      "full_degree_verified": false,
+      "dimensions": {
+        "fixed_requirements": {
+          "status": "verified",
+          "summary": "Six fixed identities: CS 2223; both MA 2611/2612; and the complete, exhaustively named DS 1010/2010/3010 three-of-three foundation. This last judgment is a manual closed-source interpretation, not a general rule that an observed choice pool is complete.",
+          "evidence": [
+            {
+              "url": "https://wpi.cleancatalog.net/artificial-intelligence/artificial-intelligence-major",
+              "locator": "Complete main degree requirements table and its immediately associated choice language/footnotes; reviewed 2026-10-11"
+            }
+          ],
+          "limitations": [
+            "Eleven concentration pages and the broad natural-science, HUA and disciplinary inventories are not reread in this bounded pass. Their source conflicts and approval-dependent eligibility remain separate.",
+            "Recommended background is not recast as a mandatory prerequisite. The manually closed DS three-of-three judgment does not apply to incomplete/open observed pools."
+          ]
+        },
+        "choice_rules": {
+          "status": "partial",
+          "summary": "Read all common foundation/core requirements, eight-thirds AI core total, one-and-only-one six-course concentration, two disciplinary electives and MQP. The DS three-of-three is complete and explicit; AI overview, ML and interaction bins stay choices. The 8/3 total is inclusive, never an added elective load.",
+          "evidence": [
+            {
+              "url": "https://wpi.cleancatalog.net/artificial-intelligence/artificial-intelligence-major",
+              "locator": "Complete main degree requirements table and its immediately associated choice language/footnotes; reviewed 2026-10-11"
+            }
+          ],
+          "limitations": [
+            "Eleven concentration pages and the broad natural-science, HUA and disciplinary inventories are not reread in this bounded pass. Their source conflicts and approval-dependent eligibility remain separate.",
+            "Recommended background is not recast as a mandatory prerequisite. The manually closed DS three-of-three judgment does not apply to incomplete/open observed pools."
+          ]
+        },
+        "classification": {
+          "status": "partial",
+          "summary": "All six fixed descriptions reread: CS2223 algorithms; MA2611/2612 applied statistics; DS2010 explicit machine-learning methods; broad DS1010 and DS3010 retain mixed other. One-third WPI units are preserved without semester-hour conversion.",
+          "evidence": [
+            {
+              "url": "https://wpi.cleancatalog.net/computer-science/cs-2223",
+              "locator": "Complete exact course blocks: CS 2223"
+            },
+            {
+              "url": "https://wpi.cleancatalog.net/mathematical-sciences/ma-2611",
+              "locator": "Complete exact course blocks: MA 2611"
+            },
+            {
+              "url": "https://wpi.cleancatalog.net/mathematical-sciences/ma-2612",
+              "locator": "Complete exact course blocks: MA 2612"
+            },
+            {
+              "url": "https://wpi.cleancatalog.net/data-science/ds-1010",
+              "locator": "Complete exact course blocks: DS 1010"
+            },
+            {
+              "url": "https://wpi.cleancatalog.net/data-science/ds-2010",
+              "locator": "Complete exact course blocks: DS 2010"
+            },
+            {
+              "url": "https://wpi.cleancatalog.net/data-science/ds-3010",
+              "locator": "Complete exact course blocks: DS 3010"
+            }
+          ],
+          "limitations": [
+            "Eleven concentration pages and the broad natural-science, HUA and disciplinary inventories are not reread in this bounded pass. Their source conflicts and approval-dependent eligibility remain separate.",
+            "Recommended background is not recast as a mandatory prerequisite. The manually closed DS three-of-three judgment does not apply to incomplete/open observed pools.",
+            "The broader options/contextual chart is not a full independent description review in this pass."
+          ]
+        }
+      },
+      "expected_course_ids": {
+        "required": [
+          "wpi-cs-2223",
+          "wpi-ds-1010",
+          "wpi-ds-2010",
+          "wpi-ds-3010",
+          "wpi-ma-2611",
+          "wpi-ma-2612"
+        ],
+        "options": null,
+        "unresolved": null
+      },
+      "expected_profile": {
+        "required": {
+          "count": 6,
+          "categories": {
+            "foundations": 1,
+            "mathematics": 2,
+            "ai_ml": 1,
+            "other": 2
+          }
+        },
+        "options": null,
+        "unresolved": null
+      },
+      "manual_fixed_categories": {
+        "wpi-cs-2223": "foundations",
+        "wpi-ma-2611": "mathematics",
+        "wpi-ma-2612": "mathematics",
+        "wpi-ds-2010": "ai_ml",
+        "wpi-ds-1010": "other",
+        "wpi-ds-3010": "other"
+      },
+      "reviewed_content_hash": "f15f0d43d4707b1ff6fe0471d5364ba894dc3f80eaff0378c6740e4082af5bc8",
+      "family_resolution": "No family membership on this standalone record; checked the resolved concrete program. No shared-family rule inferred.",
+      "reviewed_option_subset": [
+        "wpi-cs-1004",
+        "wpi-cs-1005",
+        "wpi-cs-1101",
+        "wpi-cs-1102",
+        "wpi-cs-2102",
+        "wpi-cs-2103",
+        "wpi-cs-2119",
+        "wpi-cs-4341",
+        "wpi-ma-1020",
+        "wpi-ma-1021",
+        "wpi-ma-1022",
+        "wpi-ma-1120",
+        "wpi-ma-2071",
+        "wpi-ma-2072",
+        "wpi-rbe-4701"
+      ]
+    },
+    {
+      "program_id": "wpi-business-analytics-applied-ai-bs",
+      "reviewed_at": "2026-10-11",
+      "reviewer": "cohort-independent-source-review",
+      "full_degree_verified": false,
+      "dimensions": {
+        "fixed_requirements": {
+          "status": "verified",
+          "summary": "No uniquely fixed mapped course is established by this source: named recommendations, explicit alternatives and equivalent-course permissions remain choices. Zero fixed does not mean zero required study: all foundation areas, six electives and MQP obligations remain.",
+          "evidence": [
+            {
+              "url": "https://wpi.cleancatalog.net/business/business-analytics-and-applied-ai-major",
+              "locator": "Complete main degree requirements table and its immediately associated choice language/footnotes; reviewed 2026-10-11"
+            }
+          ],
+          "limitations": [
+            "Zero fixed is a supported role result, not a classification endorsement of the entire option chart. Only the explicitly listed representative course descriptions are reread here.",
+            "The source retains equivalent-course routes and ambiguous numerical subheadings/DS1010\u2013DS2010 wording. This pass does not choose an institutional interpretation or certify the whole degree."
+          ]
+        },
+        "choice_rules": {
+          "status": "partial",
+          "summary": "Read every published foundation slot and six-elective framework: at least three applications, at most three computing and at most two business/entrepreneurship. Recommendations and equivalent permissions remain conditional. The source DS1010/DS2010 wording is retained literally; no unproved alias or required pair is inferred.",
+          "evidence": [
+            {
+              "url": "https://wpi.cleancatalog.net/business/business-analytics-and-applied-ai-major",
+              "locator": "Complete main degree requirements table and its immediately associated choice language/footnotes; reviewed 2026-10-11"
+            }
+          ],
+          "limitations": [
+            "Zero fixed is a supported role result, not a classification endorsement of the entire option chart. Only the explicitly listed representative course descriptions are reread here.",
+            "The source retains equivalent-course routes and ambiguous numerical subheadings/DS1010\u2013DS2010 wording. This pass does not choose an institutional interpretation or certify the whole degree."
+          ]
+        },
+        "classification": {
+          "status": "partial",
+          "summary": "Actual ACC2060, FIN2070 and OIE2850 descriptions support business-domain practice; MIS3730 and CS4341 explicitly teach search/knowledge representation, and MIS3787/CS4342 teach machine learning. Shared DS1010/2010 and MA2611/2612 descriptions were also read. Titles and business host alone do not set categories.",
+          "evidence": [
+            {
+              "url": "https://wpi.cleancatalog.net/mathematical-sciences/ma-2611",
+              "locator": "Complete exact course blocks: MA 2611"
+            },
+            {
+              "url": "https://wpi.cleancatalog.net/mathematical-sciences/ma-2612",
+              "locator": "Complete exact course blocks: MA 2612"
+            },
+            {
+              "url": "https://wpi.cleancatalog.net/accounting/acc-2060",
+              "locator": "Complete exact course blocks: ACC 2060"
+            },
+            {
+              "url": "https://wpi.cleancatalog.net/finance/fin-2070",
+              "locator": "Complete exact course blocks: FIN 2070"
+            },
+            {
+              "url": "https://wpi.cleancatalog.net/operations-and-industrial-engineering/oie-2850",
+              "locator": "Complete exact course blocks: OIE 2850"
+            },
+            {
+              "url": "https://wpi.cleancatalog.net/data-science/ds-1010",
+              "locator": "Complete exact course blocks: DS 1010"
+            },
+            {
+              "url": "https://wpi.cleancatalog.net/data-science/ds-2010",
+              "locator": "Complete exact course blocks: DS 2010"
+            },
+            {
+              "url": "https://wpi.cleancatalog.net/computer-science/cs-4341",
+              "locator": "Complete exact course blocks: CS 4341"
+            },
+            {
+              "url": "https://wpi.cleancatalog.net/management-information-systems/mis-3730",
+              "locator": "Complete exact course blocks: MIS 3730"
+            },
+            {
+              "url": "https://wpi.cleancatalog.net/computer-science/cs-4342",
+              "locator": "Complete exact course blocks: CS 4342"
+            },
+            {
+              "url": "https://wpi.cleancatalog.net/management-information-systems/mis-3787",
+              "locator": "Complete exact course blocks: MIS 3787"
+            }
+          ],
+          "limitations": [
+            "Zero fixed is a supported role result, not a classification endorsement of the entire option chart. Only the explicitly listed representative course descriptions are reread here.",
+            "The source retains equivalent-course routes and ambiguous numerical subheadings/DS1010\u2013DS2010 wording. This pass does not choose an institutional interpretation or certify the whole degree.",
+            "The broader options/contextual chart is not a full independent description review in this pass."
+          ]
+        }
+      },
+      "expected_course_ids": {
+        "required": [],
+        "options": null,
+        "unresolved": null
+      },
+      "expected_profile": {
+        "required": {
+          "count": 0,
+          "categories": {}
+        },
+        "options": null,
+        "unresolved": null
+      },
+      "manual_fixed_categories": {},
+      "reviewed_content_hash": "09c58f74427d921d4ea394a942d036580104b7704d59cd2ad3fcfea2770698f7",
+      "family_resolution": "No family membership on this standalone record; checked the resolved concrete program. No shared-family rule inferred.",
+      "reviewed_option_subset": [
+        "wpi-acc-2060",
+        "wpi-cs-1004",
+        "wpi-cs-1101",
+        "wpi-cs-1102",
+        "wpi-cs-2119",
+        "wpi-cs-4341",
+        "wpi-cs-4342",
+        "wpi-ds-1010",
+        "wpi-ds-2010",
+        "wpi-fin-2070",
+        "wpi-ma-1021",
+        "wpi-ma-1022",
+        "wpi-ma-2071",
+        "wpi-ma-2072",
+        "wpi-ma-2073",
+        "wpi-ma-2611",
+        "wpi-ma-2612",
+        "wpi-mis-3730",
+        "wpi-mis-3787",
+        "wpi-mkt-4030",
+        "wpi-obc-1010",
+        "wpi-oie-2850"
+      ]
+    }
+  ]
+}
