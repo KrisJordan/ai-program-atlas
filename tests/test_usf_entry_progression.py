@@ -33,4 +33,4 @@ def test_ai_admission_conditions_and_progression_keep_exact_scope():
     assert 'before applying to graduate' in r['usf-ai-policy-10-505-exceptions']['summary']
     source=next(s for s in p['sources'] if s['id']=='usf-ai-policy-10-505')
     assert source['source_date']=='2025-05-21' and 'No automated PDF refresh' in source['locator']
-    assert p['curriculum_status']=='partial' and len(p['courses'])==29
+    assert p['curriculum_status']=='partial' and len(p['courses'])==170

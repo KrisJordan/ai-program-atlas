@@ -15,7 +15,6 @@ def test_manual_course_content_decisions_and_uncertainty():
     p = json.loads((Path('data/programs') / (PID + '.json')).read_text())
     validate_program(p)
     c = {row['code']: row for row in p['courses']}
-    assert len(c) == 29
     assert all(row['description'] and row.get('category_review') for row in c.values())
     expected = {
         'foundations': {'COP 2510', 'COP 3514', 'COP 4530', 'COT 4400'},
@@ -26,6 +25,10 @@ def test_manual_course_content_decisions_and_uncertainty():
         'ai_ml': {'CAI 1000', 'CAI 2001', 'CAI 4002', 'CAI 4105', 'CAI 4203', 'CAI 4841', 'CAP 4641'},
         'other': {'CIS 1930'},
     }
+    # This test owns the original 29 brochure/civic identities; GE additions have their own audit.
+    original = set().union(*expected.values())
+    c = {code: row for code, row in c.items() if code in original}
+    assert len(c) == 29
     assert {key: {code for code, row in c.items() if row['category'] == key}
             for key in expected} == expected
     assert c['CIS 1930']['category_review']['status'] == 'unclassified'

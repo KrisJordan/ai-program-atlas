@@ -61,3 +61,7 @@ SOURCES += tuple(_remaining.PARSERS)
 _entry = import_module('atlas.adapters.university-of-south-florida-artificial-intelligence-bs-degree.entry_progression_policies')
 SOURCE_PARSERS.update(_entry.PARSERS)
 SOURCES += tuple(_entry.PARSERS)
+
+_ge_courses = import_module('atlas.adapters.university-of-south-florida-artificial-intelligence-bs-degree.general_education_courses')
+SOURCE_PARSERS.update(_ge_courses.PARSERS)
+SOURCES = tuple(dict.fromkeys((*SOURCES, *_ge_courses.PARSERS)))

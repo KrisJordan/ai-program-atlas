@@ -309,13 +309,13 @@ def test_usf_review_does_not_recertify_brochure_or_infer_units():
  courses={c['code']:c for c in p['courses']}
  assert courses['CAI 4624']['category']=='systems'
  assert courses['CAI 4024']['category']=='human_context'
- assert sum('category_review' in c for c in p['courses'])==29
+ assert sum('category_review' in c for c in p['courses'])==170
  assert all(c['credit_unit']=='unknown' for c in p['courses'])
  assert all(r['credit_unit']=='unknown' for r in p['requirements'])
  assert p['curriculum_status']=='partial'
  ledger=json.loads(Path('research/degree-audit/national-degree-batch.json').read_text())
  entry=next(e for e in ledger['programs'] if e['program_id']==pid)
- assert entry['status']=='in_progress' and entry['expected_profile'] is None
+ assert entry['status']=='blocked' and entry['expected_profile'] is None
  assert any(s['access_status']=='robots_disallowed' for s in entry['sources'])
 
 
