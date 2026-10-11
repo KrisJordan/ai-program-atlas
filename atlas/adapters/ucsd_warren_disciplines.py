@@ -1,7 +1,8 @@
 """Finite discipline lists linked by Warren; no optional degree reconstructed."""
 import re
 from bs4 import BeautifulSoup
-from atlas.adapters.cmu_bs.common import course,requirement,text,slug
+from atlas.adapters.cmu_bs.common import course, text, slug
+from atlas.adapters.ucsd_college_context import requirement
 from atlas.adapters.ucsd_degree_policies import PID,guarded
 URLS={'aapi':'https://catalog.ucsd.edu/curric/AAPI.html','chinese':'https://catalog.ucsd.edu/curric/CHIN.html','latin-american':'https://catalog.ucsd.edu/curric/LATI-ug.html','japanese':'https://japan.ucsd.edu/courses/course-descriptions/non-language-courses.html','jewish':'https://jewishstudies.ucsd.edu/courses/course_listing.html'}
 

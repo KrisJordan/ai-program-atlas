@@ -1,7 +1,8 @@
 """Marshall current first-year/transfer pools and reviewed writing-list text."""
 import re
 from bs4 import BeautifulSoup
-from atlas.adapters.cmu_bs.common import course, requirement, slug, text
+from atlas.adapters.cmu_bs.common import course, slug, text
+from atlas.adapters.ucsd_college_context import requirement
 from atlas.adapters.ucsd_degree_policies import PID, guarded
 from atlas.adapters.ucsd_revelle_pools import normal
 FIRST_URL='https://marshall.ucsd.edu/academics/first-year-ge.html'

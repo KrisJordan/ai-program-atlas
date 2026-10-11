@@ -1,6 +1,7 @@
 """Sixth's dated GE sheet and current transfer/experiential policies."""
 import re
-from atlas.adapters.cmu_bs.common import course, requirement, slug, text
+from atlas.adapters.cmu_bs.common import course, slug, text
+from atlas.adapters.ucsd_college_context import requirement
 from atlas.adapters.ucsd_degree_policies import PID, guarded
 from atlas.adapters.ucsd_revelle_pools import normal, section
 PDF_URL='https://sixth.ucsd.edu/academics/requirements/GERequirements.pdf'

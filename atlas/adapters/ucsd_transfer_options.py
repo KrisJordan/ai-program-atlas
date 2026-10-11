@@ -1,5 +1,6 @@
 """Linked Revelle transfer inventory and Marshall service substitutions."""
-from atlas.adapters.cmu_bs.common import requirement,text
+from atlas.adapters.cmu_bs.common import text
+from atlas.adapters.ucsd_college_context import requirement
 from atlas.adapters.ucsd_degree_policies import PID,guarded
 from atlas.adapters.ucsd_revelle_pools import section
 HUM_URL='https://revelle.ucsd.edu/humanities/transfer-course-policy/index.html'

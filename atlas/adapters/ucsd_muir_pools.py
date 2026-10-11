@@ -3,7 +3,8 @@ import re
 from atlas.adapters.cmu_bs.common import slug, text
 from atlas.adapters.ucsd_degree_policies import PID, guarded
 from atlas.adapters.ucsd_revelle_pools import section, normal
-from atlas.adapters.cmu_bs.common import course, requirement
+from atlas.adapters.cmu_bs.common import course
+from atlas.adapters.ucsd_college_context import requirement
 URL='https://muir.ucsd.edu/academics/ge-information/ge-themes.html'
 POLICY_URL='https://muir.ucsd.edu/academics/degree.html'
 

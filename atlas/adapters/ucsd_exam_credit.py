@@ -1,6 +1,7 @@
 """Observed current exam-credit tables, conditional on score, subject and college."""
 import re
-from atlas.adapters.cmu_bs.common import requirement,text,slug
+from atlas.adapters.cmu_bs.common import text, slug
+from atlas.adapters.ucsd_college_context import requirement
 from atlas.adapters.ucsd_degree_policies import PID,guarded
 from atlas.adapters.ucsd_revelle_pools import section
 AP_URL='https://catalog.ucsd.edu/_files/advanced-placement-credit-chart-2026.pdf'

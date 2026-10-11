@@ -1,7 +1,8 @@
 """Revelle's current public component pages, conditional on college and admit cohort."""
 import re
 from bs4 import BeautifulSoup
-from atlas.adapters.cmu_bs.common import course, requirement, slug, text
+from atlas.adapters.cmu_bs.common import course, slug, text
+from atlas.adapters.ucsd_college_context import requirement
 from atlas.adapters.ucsd_degree_policies import PID, guarded
 BASE = 'https://revelle.ucsd.edu/academics/general-education/'
 PAGES = ('humanities', 'mathematics', 'nat-science', 'soc-science', 'fine-arts', 'language')

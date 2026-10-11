@@ -4,7 +4,8 @@ General UC guidance does not establish a particular college's waiver.
 """
 import re
 from bs4 import BeautifulSoup
-from atlas.adapters.cmu_bs.common import requirement, text
+from atlas.adapters.cmu_bs.common import text
+from atlas.adapters.ucsd_college_context import requirement
 from atlas.adapters.ucsd_degree_policies import PID, guarded
 
 PETITION_URL = 'https://cls.ucsd.edu/courses/petition.html'

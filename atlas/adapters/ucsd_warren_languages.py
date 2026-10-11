@@ -1,7 +1,8 @@
 """Remaining linked language inventories and current Chicanx/Latinx schedules."""
 import re
 from bs4 import BeautifulSoup
-from atlas.adapters.cmu_bs.common import course,requirement,text
+from atlas.adapters.cmu_bs.common import course, text
+from atlas.adapters.ucsd_college_context import requirement
 from atlas.adapters.ucsd_degree_policies import PID,guarded
 from atlas.adapters.ucsd_warren_disciplines import heading
 CHIN_URL='https://catalog.ucsd.edu/courses/CHIN.html'
