@@ -1,0 +1,233 @@
+[
+  {
+    "institution_id": "florida-state-university",
+    "status": "confirmed",
+    "note": "The current department page describes a formal AI concentration; the undergraduate directory places its link under the BS Computer Science major. The source lists required and alternative courses but uses CAP 4XXX and COP 4XXX placeholders. Exact course identities, eligibility, completion policies and full local inventory remain unmapped. The “New” label is not first-offered evidence.",
+    "checked_at": "2026-10-11",
+    "sources": [
+      {
+        "url": "https://www.cs.fsu.edu/academics/undergraduate-programs/artificial-intelligence-concentration/",
+        "title": "(New) Artificial Intelligence Concentration"
+      },
+      {
+        "url": "https://www.cs.fsu.edu/academics/undergraduate-programs/",
+        "title": "Undergraduate Programs: BS major concentration link"
+      }
+    ],
+    "discoveries": [
+      {
+        "title": "Artificial Intelligence",
+        "kind": "concentration",
+        "url": "https://www.cs.fsu.edu/academics/undergraduate-programs/artificial-intelligence-concentration/",
+        "award_level": "concentration"
+      }
+    ]
+  },
+  {
+    "institution_id": "george-washington-university",
+    "status": "inspected",
+    "note": "Reviewed current CS BS and business bulletin major, minor and concentration listings. No qualifying undergraduate AI title was identified in those inspected sections. AI for Business is an MS and the business AI certificate is graduate-level. Earlier CS electives guidance is limited to students entering Spring 2022 or earlier and does not establish a current formal AI concentration. Other colleges and interdisciplinary programs remain unreviewed; no university-wide absence conclusion.",
+    "checked_at": "2026-10-11",
+    "sources": [
+      {
+        "url": "https://cs.engineering.gwu.edu/bachelor-science-program",
+        "title": "Bachelor of Science Program"
+      },
+      {
+        "url": "https://bulletin.gwu.edu/engineering-applied-science/computer-science/bs/",
+        "title": "BS with a Major in Computer Science"
+      },
+      {
+        "url": "https://bulletin.gwu.edu/business/",
+        "title": "GW School of Business: undergraduate and graduate program lists"
+      },
+      {
+        "url": "https://cs.engineering.gwu.edu/bachelor-science-electives-students-enrolling-spring-2022-or-earlier",
+        "title": "BS Electives for Students Enrolling Spring 2022 or Earlier"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "university-of-massachusetts-amherst",
+    "status": "confirmed",
+    "note": "A formal concentration is available to students pursuing the BS in Computer Science. The source publishes three core courses, two electives with an upper-level condition, a qualified COMPSCI 589 substitution and advisory guidance. Sample pathways are explicitly examples, not separate credentials. Local policies, conditional substitution eligibility and course metadata remain to be mapped.",
+    "checked_at": "2026-10-11",
+    "sources": [
+      {
+        "url": "https://www.cics.umass.edu/academics/academic-policies/undergraduate-programs-policies/bs-ai-concentration-requirements",
+        "title": "BS Artificial Intelligence Concentration Requirements"
+      },
+      {
+        "url": "https://www.isenberg.umass.edu/programs/certificates/undergraduate/oncampus",
+        "title": "On-Campus Undergraduate Certificates: AI in Business certificate excluded"
+      }
+    ],
+    "discoveries": [
+      {
+        "title": "Artificial Intelligence",
+        "kind": "concentration",
+        "url": "https://www.cics.umass.edu/academics/academic-policies/undergraduate-programs-policies/bs-ai-concentration-requirements",
+        "award_level": "concentration"
+      }
+    ]
+  },
+  {
+    "institution_id": "university-of-pittsburgh",
+    "status": "inspected",
+    "note": "Reviewed engineering undergraduate data-analytics certificate announcement and AI hub announcement. The former is a certificate without AI in its credential title; the latter is a coordinating hub, not a credential. The CS catalog entity request returned HTTP 403 and was not retried through another route. Accessible announcements do not substitute for a complete undergraduate inventory; other programs and concentrations remain unresolved.",
+    "checked_at": "2026-10-11",
+    "sources": [
+      {
+        "url": "https://www.engineering.pitt.edu/news/2022/preparing-pitt-undergraduates-for-industry-4.0",
+        "title": "Preparing Pitt Undergraduates for Industry 4.0"
+      },
+      {
+        "url": "https://www.digital.pitt.edu/news/news/pitts-new-ai-hub-aims-make-artificial-intelligence-practical-students-and-their-careers",
+        "title": "Pitt’s New AI Hub Aims to Make Artificial Intelligence Practical for Students and Their Careers"
+      },
+      {
+        "url": "https://catalog.upp.pitt.edu/preview_entity.php?catoid=241&ent_oid=16973&returnto=27419",
+        "title": "CS catalog request: HTTP 403"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "rensselaer-polytechnic-institute",
+    "status": "confirmed",
+    "note": "The current department page identifies a minor combining cognitive science and artificial intelligence. The overview states a 16-credit minimum but supplies example course topics, not a complete coded requirement inventory. Credit-unit normalization, catalog requirements and completion policies remain unverified. A linked catalog request failed in the browser reader; no inaccessible content was reconstructed.",
+    "checked_at": "2026-10-11",
+    "sources": [
+      {
+        "url": "https://hass.rpi.edu/cognitive-science/cognitive-science-artificial-intelligence",
+        "title": "Cognitive Science of Artificial Intelligence, Minor"
+      }
+    ],
+    "discoveries": [
+      {
+        "title": "Cognitive Science of Artificial Intelligence",
+        "kind": "minor",
+        "url": "https://hass.rpi.edu/cognitive-science/cognitive-science-artificial-intelligence",
+        "award_level": "minor"
+      }
+    ]
+  },
+  {
+    "institution_id": "howard-university",
+    "status": "inspected",
+    "note": "Reviewed the current Fundamentals of AI undergraduate certificate page and January 2026 AI-initiative announcement. The announced pathway is a certificate, excluded from this degree/minor/concentration inventory; individual AI courses and partnerships are not qualifying programs. The catalogue homepage and attempted CS page could not be read through the browser tool. Formal current major/minor/concentration coverage remains incomplete.",
+    "checked_at": "2026-10-11",
+    "sources": [
+      {
+        "url": "https://howard.edu/ai/fundamentals-certificate",
+        "title": "Fundamentals of Artificial Intelligence Certificate"
+      },
+      {
+        "url": "https://thedig.howard.edu/all-stories/new-ai-courses-and-partnerships-signal-latest-push-howards-ai-initiative",
+        "title": "New AI Courses and Partnerships Signal Latest Push in Howard’s AI Initiative"
+      },
+      {
+        "url": "https://catalogue.howard.edu/",
+        "title": "Catalogue homepage: browser reader inaccessible"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "university-of-illinois-chicago",
+    "status": "confirmed",
+    "note": "An official April 1, 2026 announcement introduces a formal AI concentration for incoming computer science students, with a planned Fall 2026 availability. The announcement says four of six technical electives will be in AI. The inspected current BS Computer Science catalog does not identify the concentration or its approved pool. Implementation and full requirements remain unverified, so status remains announced even though the planned term has begun. Early AI Integration and Progressive AI Integration are curriculum initiatives, not additional credential records.",
+    "checked_at": "2026-10-11",
+    "sources": [
+      {
+        "url": "https://engineering.uic.edu/news-stories/uic-engineering-launches-ai-curriculum-initiatives/",
+        "title": "UIC Engineering Launches AI Curriculum Initiatives"
+      },
+      {
+        "url": "https://catalog.uic.edu/ucat/colleges-depts/engineering/cs/bs-cs/",
+        "title": "BS in Computer Science: current technical electives"
+      }
+    ],
+    "discoveries": [
+      {
+        "title": "AI",
+        "kind": "concentration",
+        "url": "https://engineering.uic.edu/news-stories/uic-engineering-launches-ai-curriculum-initiatives/",
+        "award_level": "concentration"
+      }
+    ]
+  },
+  {
+    "institution_id": "university-of-missouri",
+    "status": "inspected",
+    "note": "Reviewed 2026-27 Computer Science department and BS curriculum, plus program updates since publication. The inspected BS has general CS electives; AI research and individual courses do not establish a formal AI concentration. The previously inspected AI department page described graduate credentials. Other undergraduate programs and emphasis areas remain incompletely reviewed, so no absence conclusion is made.",
+    "checked_at": "2026-10-11",
+    "sources": [
+      {
+        "url": "https://catalog.missouri.edu/collegeofengineering/computerscience/",
+        "title": "Computer Science, 2026-27"
+      },
+      {
+        "url": "https://catalog.missouri.edu/collegeofengineering/computerscience/bs-computer-science/",
+        "title": "BS in Computer Science, 2026-27"
+      },
+      {
+        "url": "https://catalog.missouri.edu/programupdatessincepublication/",
+        "title": "Program Updates Since Publication"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "auburn-university",
+    "status": "inspected",
+    "note": "Reviewed the CS/software engineering undergraduate program directory and 2026-27 AI Engineering bulletin page. The department lists computing degrees, CS/IT minors and an AI Engineering undergraduate certificate. The AI credential is a certificate and excluded. Other colleges and interdisciplinary concentrations remain incompletely reviewed; no university-wide absence conclusion.",
+    "checked_at": "2026-10-11",
+    "sources": [
+      {
+        "url": "https://eng.auburn.edu/csse/academics/undergraduate/",
+        "title": "Computer Science and Software Engineering Undergraduate Programs"
+      },
+      {
+        "url": "https://bulletin.auburn.edu/undergraduate/samuelginncollegeofengineering/departmentofcomputerscienceandsoftwareengineering/artificialintelligence_engineering_ucrt/",
+        "title": "Artificial Intelligence Engineering Undergraduate Certificate, 2026-27"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "southern-methodist-university",
+    "status": "confirmed",
+    "note": "The official undergraduate FAQ separately identifies an AI/ML BA track and BS specialization. The current BA catalog independently lists CSBA-AIML as a Track, with no transcript/diploma printing. Catalog overview tabs alone omit the specialization content; the linked BA specialization tab was read. BS catalog content could not be reliably retrieved after an initial overview read. Both identities are confirmed; full local course pools and policies remain unmapped. Other schools and disciplines remain unreviewed.",
+    "checked_at": "2026-10-11",
+    "sources": [
+      {
+        "url": "https://www.smu.edu/lyle/undergraduate/bs-computer-science",
+        "title": "Computer science"
+      },
+      {
+        "url": "https://catalog.smu.edu/programs/CS-BA/specializations-concentrations-GTI0l",
+        "title": "CS-BA Specializations/Concentrations: CSBA-AIML Track"
+      },
+      {
+        "url": "https://catalog.smu.edu/programs/CS-BS/",
+        "title": "CS-BS overview; subsequent browser reader error"
+      }
+    ],
+    "discoveries": [
+      {
+        "title": "Artificial Intelligence and Machine Learning",
+        "kind": "concentration",
+        "url": "https://www.smu.edu/lyle/undergraduate/bs-computer-science",
+        "award_level": "concentration"
+      },
+      {
+        "title": "Artificial Intelligence and Machine Learning Specialization",
+        "kind": "concentration",
+        "url": "https://www.smu.edu/lyle/undergraduate/bs-computer-science",
+        "award_level": "concentration"
+      }
+    ]
+  }
+]
