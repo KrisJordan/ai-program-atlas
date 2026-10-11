@@ -2655,16 +2655,16 @@
         "required": {
           "count": 19,
           "categories": {
-            "human_context": 5,
+            "human_context": 4,
             "foundations": 5,
-            "other": 1,
+            "other": 2,
             "ai_ml": 1,
             "systems": 2,
             "mathematics": 5
           },
           "classification": {
-            "reviewed": 18,
-            "mixed": 1
+            "reviewed": 17,
+            "mixed": 2
           }
         },
         "options": {
@@ -8349,12 +8349,17 @@
     },
     "CRIM 3600": {
       "title": "Criminal Justice Research Methods",
-      "category": "human_context",
-      "status": "reviewed",
+      "category": "other",
+      "status": "mixed",
       "hours": "4",
       "source_url": "https://catalog.northeastern.edu/course-descriptions/crim/",
       "locator": "CRIM 3600 exact description and entry fields",
-      "source_block_sha256": "8e4ba0b5e8cd79b94bd9b68e5c2853ee89e7f9e7a6bf74b5db78c63d250b7263"
+      "source_block_sha256": "8e4ba0b5e8cd79b94bd9b68e5c2853ee89e7f9e7a6bf74b5db78c63d250b7263",
+      "candidate_categories": [
+        "applications",
+        "human_context"
+      ],
+      "correction_reference": "research/degree-audit/independent-core-east.md: bounded 2026-10-11 source reread supersedes the earlier human-context-only judgment"
     },
     "CRIM 4040": {
       "title": "Crime Prevention",
