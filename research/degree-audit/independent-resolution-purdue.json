@@ -1,0 +1,353 @@
+{
+  "review_date": "2026-10-11",
+  "scope": "Proposed replacement independent-core-central rows; coordinator must independently review and apply. No compiler ownership or whole-degree certification.",
+  "programs": [
+    {
+      "program_id": "purdue-ai-bs",
+      "reviewed_at": "2026-10-11",
+      "reviewer": "independent-resolution-purdue / resolve_purdue",
+      "reviewed_content_hash": "efeff72ece99c21a402ba002f96ef2edb96b91d2849340140ee1dac9a41a9edc",
+      "dimensions": {
+        "fixed_requirements": {
+          "status": "verified",
+          "summary": "The complete Fall 2026-to-present department major page enumerates nine fixed course identities and seven paired core alternatives. The nine fixed identities match the graph exactly; none of the paired choices or capstone alternatives is fixed.",
+          "evidence": [
+            {
+              "url": "https://www.cs.purdue.edu/undergraduate/curriculum/bachelor-ai.html",
+              "locator": "Fall 2026 to present: complete Core Requirements, Selectives I/II, Philosophy Selective and four capstone routes"
+            }
+          ],
+          "limitations": [
+            "Scope is the explicitly published department major, not every College of Science or university requirement. Known catalog denial remains and whole-degree status stays blocked.",
+            "50–51 core credits is a source range, not a scalar total. The chart counts mapped fixed identities, not every course a student must select."
+          ]
+        },
+        "choice_rules": {
+          "status": "partial",
+          "summary": "Complete department-major source branches reread: seven choose-one core pairs, choose two Selective I entries with CS 47700/57700 as one nested OR option, choose one Selective II, choose one Philosophy Selective, and one of four three-credit capstone routes. Thirty-three named department option identities match the graph. Non-course capstone routes require pre-approval.",
+          "evidence": [
+            {
+              "url": "https://www.cs.purdue.edu/undergraduate/curriculum/bachelor-ai.html",
+              "locator": "Fall 2026 to present: complete Core Requirements, Selectives I/II, Philosophy Selective and four capstone routes"
+            }
+          ],
+          "limitations": [
+            "Department-major branches verified; this replacement does not recertify the broad college/UCC pools or their descriptions. College lab/language applicability and university AI-competency mapping remain unresolved.",
+            "33 named department options are only a reviewed subset of 140 graph options. No whole option/category or contextual pool total is independently established in this pass."
+          ]
+        },
+        "classification": {
+          "status": "partial",
+          "summary": "Freshly reread eleven complete dated canonical outlines support the bounded existing content decisions: programming/algorithms/computation foundations, databases systems, explicit ML/NLP AI, security law/economics human context, and CS 10100/18200 mixed. Precise core titles support limited PSY 12000, CS 24300 and CS 25300 decisions; CS 17600 remains insufficiently described.",
+          "evidence": [
+            {
+              "url": "https://www.cs.purdue.edu/academic-programs/courses/canonical_syllabi.html",
+              "locator": "Canonical directory; proposed CS 48300 status"
+            },
+            {
+              "url": "https://www.cs.purdue.edu/academic-programs/courses/canonical/cs182.html",
+              "locator": "Full dated outline: substantial mathematical and computational content"
+            },
+            {
+              "url": "https://www.cs.purdue.edu/academic-programs/courses/canonical/cs471.html",
+              "locator": "Full AI outline with 1998.08 content date and 2025 update label"
+            },
+            {
+              "url": "https://www.cs.purdue.edu/academic-programs/courses/canonical/cs523.html",
+              "locator": "Full security law/economics/ethics outline"
+            }
+          ],
+          "limitations": [
+            "Canonical dates are not current-term equivalences; CS 48300 is proposed. This pass does not independently classify the broad GE/culture pool. Option/context category totals are deliberately unchecked.",
+            "The nine fixed records have four bounded canonical outlines, three precise-title decisions, one mixed canonical record and one insufficiently described record; descriptions/dated title equivalence are not complete.",
+            "CS 17600 remains other in the BS because Data Engineering in Python does not establish its dominant subject. No department-prefix category inference."
+          ]
+        }
+      },
+      "expected_course_ids": {
+        "required": [
+          "purdue-cs-17600",
+          "purdue-cs-18000",
+          "purdue-cs-18200",
+          "purdue-cs-24300",
+          "purdue-cs-25300",
+          "purdue-cs-37300",
+          "purdue-cs-38100",
+          "purdue-cs-47100",
+          "purdue-psy-12000"
+        ],
+        "options": null,
+        "unresolved": null
+      },
+      "expected_profile": {
+        "required": {
+          "count": 9,
+          "categories": {
+            "foundations": 3,
+            "ai_ml": 3,
+            "applications": 1,
+            "other": 2
+          }
+        },
+        "options": null,
+        "unresolved": null
+      },
+      "expected_profile_scope": "Only the manually transcribed nine fixed department identities and their subject counts are complete expected sets. Thirty-three named department options are checked as a subset; broad option/context counts and subjects remain unchecked.",
+      "full_degree_verified": false,
+      "manual_option_components": {
+        "core_psychology": [
+          "purdue-psy-20000",
+          "purdue-psy-22200"
+        ],
+        "core_multivariate": [
+          "purdue-ma-26100",
+          "purdue-ma-27101"
+        ],
+        "core_ethics": [
+          "purdue-phil-20700",
+          "purdue-phil-20800"
+        ],
+        "core_linear_algebra": [
+          "purdue-ma-26500",
+          "purdue-ma-35100"
+        ],
+        "core_probability": [
+          "purdue-ma-41600",
+          "purdue-stat-51600"
+        ],
+        "core_philosophy": [
+          "purdue-phil-22100",
+          "purdue-phil-32200"
+        ],
+        "core_statistics": [
+          "purdue-stat-35000",
+          "purdue-stat-51100"
+        ],
+        "selective_1": [
+          "purdue-cs-43900",
+          "purdue-cs-44000",
+          "purdue-cs-45800",
+          "purdue-cs-47300",
+          "purdue-cs-47500",
+          "purdue-cs-47700",
+          "purdue-cs-57700",
+          "purdue-cs-57800"
+        ],
+        "selective_2": [
+          "purdue-cs-34800",
+          "purdue-cs-44800",
+          "purdue-cs-48300",
+          "purdue-cs-52300",
+          "purdue-cs-52900"
+        ],
+        "philosophy_selective": [
+          "purdue-phil-25501",
+          "purdue-phil-25601",
+          "purdue-phil-25701",
+          "purdue-phil-30300",
+          "purdue-phil-43200"
+        ],
+        "capstone_named_route": [
+          "purdue-cs-47600"
+        ]
+      },
+      "classification_reviewed_codes": [
+        "CS 10100",
+        "CS 18000",
+        "CS 18200",
+        "CS 34800",
+        "CS 37300",
+        "CS 38100",
+        "CS 44800",
+        "CS 47100",
+        "CS 48300",
+        "CS 52300",
+        "CS 57700"
+      ],
+      "resolution_scope": "Department-major fixed membership, source choice branches and bounded content review; no whole-degree policy certification.",
+      "source_dispositions": [
+        {
+          "url": "https://www.cs.purdue.edu/undergraduate/curriculum/bachelor-ai.html",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; reread complete department page"
+        },
+        {
+          "url": "https://www.cs.purdue.edu/undergraduate/docs/ai-prereq-flowchart-2024.pdf",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; explicitly effective Fall 2024; not current Fall 2026 prerequisite authority"
+        },
+        {
+          "url": "https://www.purdue.edu/science/Current_Students/majors/index.html",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; AI row has distinct 2026 and 2025 progression guides"
+        },
+        {
+          "url": "https://purdue0-my.sharepoint.com/:w:/g/personal/edbrandt_purdue_edu/IQDOqCX9L5jeSa3JIc9g2UEGAYh5Kx2h3-J73jhoQ3wC5WU?e=MEJzyQ",
+          "checked_at": "2026-10-11",
+          "access_status": "2026 AI progression guide redirects to Microsoft sign-in; stopped; no authentication attempted"
+        },
+        {
+          "url": "https://selfservice.mypurdue.purdue.edu/",
+          "checked_at": "2026-10-11",
+          "access_status": "known robots-disallowed linked detail host; not retried"
+        },
+        {
+          "url": "https://catalog.purdue.edu/preview_program.php?catoid=19&poid=35981",
+          "checked_at": "2026-10-11",
+          "access_status": "known HTTP 403 catalog plan; not retried"
+        }
+      ],
+      "reviewed_option_subset": [
+        "purdue-cs-34800",
+        "purdue-cs-43900",
+        "purdue-cs-44000",
+        "purdue-cs-44800",
+        "purdue-cs-45800",
+        "purdue-cs-47300",
+        "purdue-cs-47500",
+        "purdue-cs-47600",
+        "purdue-cs-47700",
+        "purdue-cs-48300",
+        "purdue-cs-52300",
+        "purdue-cs-52900",
+        "purdue-cs-57700",
+        "purdue-cs-57800",
+        "purdue-ma-26100",
+        "purdue-ma-26500",
+        "purdue-ma-27101",
+        "purdue-ma-35100",
+        "purdue-ma-41600",
+        "purdue-phil-20700",
+        "purdue-phil-20800",
+        "purdue-phil-22100",
+        "purdue-phil-25501",
+        "purdue-phil-25601",
+        "purdue-phil-25701",
+        "purdue-phil-30300",
+        "purdue-phil-32200",
+        "purdue-phil-43200",
+        "purdue-psy-20000",
+        "purdue-psy-22200",
+        "purdue-stat-35000",
+        "purdue-stat-51100",
+        "purdue-stat-51600"
+      ],
+      "corrections": [
+        "No source-backed requirement or course-fact discrepancy found in the curated record. Parser-only correction guards malformed duplicate/truncated/conditional branches."
+      ]
+    },
+    {
+      "program_id": "purdue-ai-ba",
+      "reviewed_at": "2026-10-11",
+      "reviewer": "independent-resolution-purdue / resolve_purdue",
+      "reviewed_content_hash": "3977442614053507f6950f3ef5a6ce27d8261723a12b433d31beae209c4e0885",
+      "dimensions": {
+        "fixed_requirements": {
+          "status": "partial",
+          "summary": "Five fixed CS identities are individually enumerated by the department BA plan and match the graph. A complete fixed major inventory remains unestablished because the source gives eight philosophy courses/24 hours without naming their fixed/choice structure.",
+          "evidence": [
+            {
+              "url": "https://www.cla.purdue.edu/academic/philosophy/students/undergraduate/majors/artificial-intelligence/index.html",
+              "locator": "Plan of Study: five required CS codes; introductory paragraph eight specialized philosophy courses; 24 philosophy and 15 CS hours"
+            }
+          ],
+          "limitations": [
+            "Complete eight-course philosophy inventory and its required/optional divisions are not published on the accessible department plan. The linked denied catalog was not retried. Five fixed computing identities do not establish the complete fixed major set.",
+            "The department page was modified October 15, 2025; its source-specific CS 17600/24300 titles are older than the Fall 2026 directory. Course descriptions and title-version equivalence are unresolved. Individual BA course credits remain null; 15 CS hours cannot be divided equally or replaced with BS credits."
+          ]
+        },
+        "choice_rules": {
+          "status": "partial",
+          "summary": "Eight specialized philosophy courses/24 hours are preserved as an unresolved group with no invented menu. No current offering-directory course is promoted to a major requirement.",
+          "evidence": [
+            {
+              "url": "https://www.cla.purdue.edu/academic/philosophy/students/undergraduate/majors/artificial-intelligence/index.html",
+              "locator": "Plan of Study: five required CS codes; introductory paragraph eight specialized philosophy courses; 24 philosophy and 15 CS hours"
+            }
+          ],
+          "limitations": [
+            "The internal required/optional philosophy structure and approved options are not established by the overview.",
+            "Current philosophy offerings cannot identify degree requirements, and no BS philosophy choice pool is inherited into this independent BA."
+          ]
+        },
+        "classification": {
+          "status": "partial",
+          "summary": "Actual CS 10100/18000/18200 outlines support mixed/programming/mixed. CS 17600 and CS 24300 retain explicitly limited title evidence from the BA plan, while the Fall 2026 directory uses different printed titles.",
+          "evidence": [
+            {
+              "url": "https://www.cs.purdue.edu/academic-programs/courses/canonical/cs10100.html",
+              "locator": "Full digital-literacy outline"
+            },
+            {
+              "url": "https://www.cs.purdue.edu/academic-programs/courses/canonical/cs180.html",
+              "locator": "Full Programming I outline linked as CS 18000"
+            },
+            {
+              "url": "https://www.cs.purdue.edu/academic-programs/courses/canonical/cs182.html",
+              "locator": "Full Foundations outline"
+            },
+            {
+              "url": "https://www.cs.purdue.edu/academic-programs/courses/index.html",
+              "locator": "Fall 2026 West Lafayette CS 17600/24300 rows"
+            }
+          ],
+          "limitations": [
+            "Current CS 17600/24300 full descriptions and title-version reconciliation remain unverified; canonical outlines have dated scope. No philosophy course content was inferred."
+          ]
+        }
+      },
+      "expected_course_ids": {
+        "required": [
+          "purdue-cs-10100",
+          "purdue-cs-17600",
+          "purdue-cs-18000",
+          "purdue-cs-18200",
+          "purdue-cs-24300"
+        ],
+        "options": [],
+        "unresolved": []
+      },
+      "expected_profile": {
+        "required": {
+          "count": 5,
+          "categories": {
+            "foundations": 2,
+            "ai_ml": 1,
+            "other": 2
+          }
+        },
+        "options": {
+          "count": 0,
+          "categories": {}
+        },
+        "unresolved": {
+          "count": 0,
+          "categories": {}
+        }
+      },
+      "expected_profile_scope": "Only the five explicitly named department-plan CS records; empty other sets do not mean no philosophy or college requirements.",
+      "full_degree_verified": false,
+      "resolution_scope": "Department-major fixed membership, source choice branches and bounded content review; no whole-degree policy certification.",
+      "source_dispositions": [
+        {
+          "url": "https://www.cla.purdue.edu/academic/philosophy/students/undergraduate/majors/artificial-intelligence/index.html",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; reread complete department page"
+        },
+        {
+          "url": "https://selfservice.mypurdue.purdue.edu/",
+          "checked_at": "2026-10-11",
+          "access_status": "known robots-disallowed linked detail host; not retried"
+        },
+        {
+          "url": "http://catalog.purdue.edu/preview_program.php?catoid=19&poid=35726",
+          "checked_at": "2026-10-11",
+          "access_status": "known HTTP 403 catalog plan; not retried"
+        }
+      ],
+      "corrections": [
+        "No source-backed requirement or course-fact discrepancy found in the curated record. Parser-only correction guards malformed duplicate/truncated/conditional branches."
+      ]
+    }
+  ]
+}

@@ -106,6 +106,9 @@ def parse_department(html: str) -> dict:
         )
     if not courses:
         raise ValueError("BA course list empty")
+    codes = [c["code"] for c in courses]
+    if len(codes) != 5 or set(codes) != {"CS 10100", "CS 17600", "CS 18000", "CS 18200", "CS 24300"}:
+        raise ValueError("BA five-course computing inventory changed; manual review required")
     philosophy_count = re.search(r"includes (\d+) specialized philosophy courses", normalize(soup))
     requirements = []
     for subject, credits, category in [

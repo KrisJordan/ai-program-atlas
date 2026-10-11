@@ -101,6 +101,7 @@ def parse(html: str) -> dict:
     requirements = [requirement("core", "Core requirements", "all", summary=caption)]
     courses = {}
     required = []
+    core_codes = set()
     for row in table.find_all("tr"):
         cells = row.find_all("td", recursive=False)
         if len(cells) < 3:
@@ -112,6 +113,11 @@ def parse(html: str) -> dict:
         amounts = raw.split("/")
         if not codes or len(names) != len(codes):
             raise ValueError("Unrecognized core course alternatives")
+        if len(set(codes)) != len(codes) or core_codes.intersection(codes):
+            raise ValueError("Duplicate Purdue core course identity")
+        core_codes.update(codes)
+        if len(codes) > 1 and not re.search(r"\bor\b", text(cells[0]), re.IGNORECASE):
+            raise ValueError("Core alternatives require an explicit OR")
         ids = []
         for i, (code, name, anchor) in enumerate(zip(codes, names, links)):
             if not re.fullmatch(r"[A-Z]+ \d{5}", code):
@@ -163,11 +169,18 @@ def parse(html: str) -> dict:
         )
         rid = PREFIX + "-" + key(label)
         ids, nlp = [], []
+        selective_codes = set()
+        nlp_or = False
         for li in ul.find_all("li", recursive=False):
             anchor = li.find("a")
             if anchor is None:
                 raise ValueError("Selective without a course link")
             code = text(anchor)
+            if code in selective_codes:
+                raise ValueError("Duplicate Purdue selective course identity")
+            selective_codes.add(code)
+            if code == "CS 47700":
+                nlp_or = bool(re.search(r"\bOR\s*$", text(li), re.IGNORECASE))
             name = re.sub(r"^[*\s-]+", "", text(li).removeprefix(code))
             name = re.sub(r"\s+OR$", "", name, flags=re.IGNORECASE)
             item = course(code, name, None, anchor.get("href", ""))
@@ -186,6 +199,8 @@ def parse(html: str) -> dict:
             )
         )
         if nlp:
+            if len(nlp) != 2 or not nlp_or:
+                raise ValueError("NLP alternative requires both courses and explicit OR")
             requirements.append(
                 requirement(
                     "nlp-alternative",
@@ -216,7 +231,12 @@ def parse(html: str) -> dict:
             cat="applications",
         )
     )
-    for i, li in enumerate(cap.find_next("ul").find_all("li", recursive=False)):
+    cap_list = cap.find_next("ul")
+    cap_rows = cap_list.find_all("li", recursive=False) if cap_list else []
+    if len(cap_rows) != 4:
+        raise ValueError("Expected all four Purdue capstone routes")
+    cap_titles = set()
+    for i, li in enumerate(cap_rows):
         amount = re.search(r"(?:Credit Hours|Credits):\s*(\d+(?:\.\d+)?)", text(li))
         if not amount or float(amount.group(1)) != 3:
             raise ValueError("Capstone credits changed; manual review required")
@@ -224,6 +244,8 @@ def parse(html: str) -> dict:
         ids = []
         if anchor:
             code = text(anchor)
+            if code != "CS 47600":
+                raise ValueError("Purdue named capstone identity changed")
             name = re.split(r"Credit Hours:", text(li).removeprefix(code).strip(" -\u00a0"))[
                 0
             ].strip()
@@ -236,6 +258,8 @@ def parse(html: str) -> dict:
             title = name
         else:
             wording = text(li).lower()
+            if "pre-approved" not in wording:
+                raise ValueError("Purdue project capstone approval condition missing")
             title = next(
                 (
                     label
@@ -250,6 +274,10 @@ def parse(html: str) -> dict:
             )
             if title is None:
                 raise ValueError("Unrecognized capstone route; manual review required")
+        route_identity = code if anchor else title
+        if route_identity in cap_titles:
+            raise ValueError("Duplicate Purdue capstone route")
+        cap_titles.add(route_identity)
         requirements.append(
             requirement(
                 "capstone-route-" + str(i + 1),

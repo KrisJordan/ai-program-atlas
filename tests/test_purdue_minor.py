@@ -172,7 +172,9 @@ def test_subject_metadata_reads_changed_credit_and_prerequisite():
 def test_ba_department_extracts_totals_without_dividing_course_credits():
     html = """<h1>Artificial Intelligence</h1><h2>Plan of Study</h2>
     <p>The BA in AI degree requires 24 credit hours in philosophy, with an additional 15 credit hours in CS.</p>
-    <ul><li>CS 10100: Example Digital</li><li>CS 24300: Example AI</li></ul>"""
+    <ul><li>CS 10100: Example Digital</li><li>CS 17600: Example Python</li>
+    <li>CS 18000: Example Programming</li><li>CS 18200: Example Foundations</li>
+    <li>CS 24300: Example AI</li></ul>"""
     module = adapter("purdue-ai-ba")
     data = module.parse_department(html)
     assert data["curriculum_status"] == "partial"
