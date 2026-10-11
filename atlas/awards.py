@@ -30,10 +30,14 @@ def validate_award_options(program):
 def major_award_buckets(program):
     """Return one or more verified buckets; never infer from host or text prefixes.
 
-    Additional majors stay Other even if a parent's award is mentioned. Optional
+    Explicit second-major-only relationships have their own non-award bucket. Optional
     source-backed options support a genuinely combined degree record; separately
     cataloged BA/BS records retain their separate IDs and curricular inventories.
     """
+    if program.get("major_relationship", {}).get("kind") == "second_major_only":
+        from .program_relationships import validate_program_relationships
+        validate_program_relationships(program)
+        return ["second_major"]
     if program.get("program_kind") != "degree":
         return ["other"]
     if program.get("award_options"):

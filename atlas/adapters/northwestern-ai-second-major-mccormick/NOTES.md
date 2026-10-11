@@ -40,3 +40,6 @@ Metadata and launch dates remain separately unverified. Whole host-degree curric
 ## Refresh
 
 Source-specific HTML parsers observe the local catalog and policy evidence. They never emit reviewer audits, completeness, or verification timestamps.
+
+
+2026-10-11 second-major relationship review: reread the official program catalog and retained its exact additional-major/second-major/co-major terminology and mandatory companion-major eligibility in `major_relationship`. The award remains unchanged. This manual evidence-backed relationship is separate from scraper observations; optional double-major compatibility is not equivalent. See `research/second-majors.md`.

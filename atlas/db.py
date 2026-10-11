@@ -17,6 +17,7 @@ from .awards import validate_award_options
 from .requirements import validate_curriculum_audit, validate_requirements
 from .taxonomy import validate_category_reviews
 from .course_identity import validate_course_identities
+from .program_relationships import validate_program_relationships, ingest_relationships
 
 STATES = {"pending", "inspected", "confirmed", "no_qualifying_program_found", "inaccessible"}
 OVERRIDE_FIELDS = {
@@ -234,6 +235,7 @@ def validate_program(program, family=None):
     validate_award_options(program)
     validate_category_reviews(program)
     validate_course_identities(program)
+    validate_program_relationships(program)
 
 
 def ingest_program(conn, program, run_id=None):
@@ -293,6 +295,9 @@ def ingest_program(conn, program, run_id=None):
             conn.execute("DELETE FROM program_awards WHERE program_id=?", (pid,))
         if conn.execute("SELECT 1 FROM sqlite_master WHERE name='course_identity_groups'").fetchone():
             conn.execute("DELETE FROM course_identity_groups WHERE program_id=?", (pid,))
+        if conn.execute("SELECT 1 FROM sqlite_master WHERE name='program_parents'").fetchone():
+            for table in ("program_major_relationships", "program_parent_reviews", "program_parents"):
+                conn.execute(f"DELETE FROM {table} WHERE program_id=?", (pid,))
         # FK-safe replacement order; overrides and revisions are intentionally untouched.
         for table in (
             "program_family_memberships",
@@ -321,6 +326,7 @@ def ingest_program(conn, program, run_id=None):
                     s.get("confidence", "medium"),
                 ),
             )
+        ingest_relationships(conn, program)
         for ordinal, award in enumerate(program.get("award_options", [])):
             conn.execute(
                 "INSERT INTO program_awards VALUES (?,?,?,?,?,?)",
