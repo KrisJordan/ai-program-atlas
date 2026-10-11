@@ -21,7 +21,7 @@
   "overview": "Interdisciplinary minor in responsible, practical AI use, with two core courses and an approved elective-credit pool. A separate BSI route governs SI 310 overlap and additional electives.",
   "catalog_year": null,
   "verification_status": "confirmed",
-  "last_verified": "2026-10-10",
+  "last_verified": "2026-10-11",
   "curriculum_status": "partial",
   "links": [
     {
@@ -144,6 +144,16 @@
       "source_date": null,
       "catalog_year": null,
       "locator": "Approved home colleges; BSI exception for HCAI only",
+      "confidence": "high"
+    },
+    {
+      "id": "umich-hcai-current-topics",
+      "url": "https://docs.google.com/spreadsheets/u/0/d/e/2PACX-1vRc2MbMVeseCzlazMefnLy0ZNo8CHRbvlpuNP9TYBLTfBJ1w2ns75NNxmhP-DErYU--QR0GEoTYXmQv/pubhtml/sheet?headers=false&gid=919730351",
+      "title": "UMSI Current Special Topics",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Public Special Topics - Current tab; Winter SI311 section151 Generative AI & UX; separate SI511 row not used for undergraduate metadata",
       "confidence": "high"
     }
   ],
@@ -840,6 +850,20 @@
       "source_text": null,
       "summary": "The May 2025 launch announcement described three electives. The current handbook instead requires at least nine elective credits and includes 1.5-credit choices; the historical count is not applied to the current inventory.",
       "course_ids": []
+    },
+    {
+      "id": "umich-hcai-topic-311",
+      "parent_id": null,
+      "title": "Named SI311 elective topic",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "umich-hcai-current-topics",
+      "source_text": null,
+      "summary": "The current public topics table identifies SI311 section151 as Generative AI & UX for Winter, without an explicit year. Its undergraduate description, prerequisites and credits are blank; the handbook’s1.5-credit amount is retained. The separate graduate SI511 row does not supply undergraduate prerequisites or credits.",
+      "course_ids": []
     }
   ],
   "notes": [
@@ -851,11 +875,12 @@
     "PHIL340 and COMM349 remain variable-credit ranges with null scalar credit amounts. The 9/6-credit requirements are grounded in the handbook and UMSI/Provost semester credit-hour policies.",
     "Google Drive folder links in course-table syllabus cells were not yet inspected as individual syllabi and are not represented as verified syllabi. Blank prerequisite cells mean unverified, not no prerequisites.",
     "The handbook registration-guide link displayed file-does-not-exist in the public browser. General non-SI registration guidance is accessible; minor-specific course eligibility remains a gap.",
-    "Course categories are editorial mappings from reviewed titles/descriptions, separate from the five source-stated learning outcomes."
+    "Course categories are editorial mappings from reviewed titles/descriptions, separate from the five source-stated learning outcomes.",
+    "Current Special Topics tab corroborates SI311.151 Generative AI & UX in Winter without an explicit year. It has no undergraduate prerequisites, description or credits; separate SI511 graduate metadata is not transferred. The inspected table does not identify the SI411 History of Information choice."
   ],
   "curriculum_audit": {
     "scope": "minor",
-    "reviewed_at": "2026-10-10",
+    "reviewed_at": "2026-10-11",
     "source_ids": [
       "university-of-michigan-ann-arbor-human-centered-artificial-intelligence-minor-minor-official",
       "umich-hcai-handbook",
@@ -866,7 +891,8 @@
       "umich-hcai-launch-retrospective",
       "umich-hcai-course-directory",
       "umich-hcai-registration",
-      "umich-hcai-colleges"
+      "umich-hcai-colleges",
+      "umich-hcai-current-topics"
     ],
     "sections": [
       "Core and all 23 elective options",
@@ -875,12 +901,13 @@
       "Overlap and two-minor rules",
       "Five handbook learning outcomes",
       "Ten current SI course metadata rows",
-      "Credit-hour basis and explicit launch evidence"
+      "Credit-hour basis and explicit launch evidence",
+      "Current undergraduate SI311 section151 topic identity"
     ],
     "unresolved_requirements": [
       "Home-major and home-college overlap restrictions for the eleven approved colleges have not all been reviewed.",
       "The linked course-specific registration guide is unavailable; reconcile current enrollment and topic-specific restrictions before certifying the scoped inventory.",
-      "Resolve handbook/current-course-table title differences and verify the exact offered SI311 and SI411 topic identities and prerequisites."
+      "Resolve handbook/current-course-table title differences and verify SI411 History of Information topic and prerequisites. SI311 section151 identity is now corroborated, but undergraduate prerequisite/enrollment details remain blank."
     ],
     "metadata_gaps": [
       "Descriptions and prerequisite details remain unreviewed for the other15 course observations.",

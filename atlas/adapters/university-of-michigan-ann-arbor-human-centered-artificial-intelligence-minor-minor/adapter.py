@@ -10,3 +10,6 @@ def parse(html: str) -> dict:
 from atlas.adapters.umich_hcai import HANDBOOK, TABLE, parse_handbook, parse_table
 SOURCES = (*SOURCES, HANDBOOK, TABLE)
 SOURCE_PARSERS = {HANDBOOK: parse_handbook, TABLE: parse_table}
+from atlas.adapters.umich_hcai import TOPICS, parse_topics
+SOURCES = (*SOURCES, TOPICS)
+SOURCE_PARSERS[TOPICS] = parse_topics

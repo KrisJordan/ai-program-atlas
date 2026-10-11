@@ -57,9 +57,18 @@ def test_seed_has_explicit_remaining_gaps_and_sources():
     d=json.loads((ROOT/'data/programs'/f'{adapter.PROGRAM_ID}.json').read_text());validate_program(d)
     assert d['curriculum_status']=='partial' and d['curriculum_audit']['unresolved_requirements']
     assert d['first_offered']['value']=='Fall 2025'
-    assert len(d['courses'])==25 and len(d['requirements'])==18
+    assert len(d['courses'])==25 and len(d['requirements'])==19
     assert sum(bool(c['description']) for c in d['courses'])==10
     assert sum(bool(c['prerequisites']) for c in d['courses'])==4
     assert all(c['syllabus'] is None for c in d['courses'])
     mod=importlib.import_module('atlas.adapters.'+adapter.PROGRAM_ID+'.adapter')
     assert set(mod.SOURCES)<={s['url'] for s in d['sources']}
+
+
+def test_topics_do_not_transfer_graduate_metadata_to_undergraduate():
+    row=['Winter','SI','311','151','','12345','Generative AI & UX','','','','','']
+    html='<table><tr>'+''.join('<td>'+x+'</td>' for x in row)+'</tr></table>'
+    d=adapter.parse_topics(html)
+    assert 'courses' not in d and 'graduate' in d['requirements'][0]['summary']
+    with pytest.raises(ValueError):adapter.parse_topics(html.replace('>311<','>511<'))
+    with pytest.raises(ValueError):adapter.parse_topics(html.replace('>Winter<','>Fall<'))

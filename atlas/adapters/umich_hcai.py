@@ -78,3 +78,19 @@ def parse_table(html):
         c['prerequisites']=PREREQUISITES.get(code)
         courses.append(c)
     return dict(id=PROGRAM_ID,courses=courses)
+
+TOPICS='https://docs.google.com/spreadsheets/u/0/d/e/2PACX-1vRc2MbMVeseCzlazMefnLy0ZNo8CHRbvlpuNP9TYBLTfBJ1w2ns75NNxmhP-DErYU--QR0GEoTYXmQv/pubhtml/sheet?headers=false&gid=919730351'
+
+
+def parse_topics(html):
+    soup=BeautifulSoup(html,'html.parser')
+    matches=[]
+    for tr in soup.find_all('tr'):
+        cells=[clean(td.get_text(' ',strip=True)) for td in tr.find_all('td')]
+        if len(cells)>=12 and cells[1:4]==['SI','311','151']:
+            matches.append(cells)
+    if len(matches)!=1 or matches[0][0]!='Winter' or matches[0][6]!='Generative AI & UX':
+        raise ValueError('Reviewed undergraduate topic identity changed')
+    if any(matches[0][i] for i in (7,8,9)):
+        raise ValueError('New undergraduate topic metadata requires review')
+    return dict(id=PROGRAM_ID,requirements=[rule('umich-hcai-topic-311','Named SI311 elective topic','umich-hcai-current-topics',kind='note',summary='The current public topics table identifies SI311 section151 as Generative AI & UX for Winter, without an explicit year. Its undergraduate description, prerequisites and credits are blank; the handbook’s1.5-credit amount is retained. The separate graduate SI511 row does not supply undergraduate prerequisites or credits.')])
