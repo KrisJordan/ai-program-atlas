@@ -181,3 +181,12 @@ SOURCES += (policy_closure.PETITION_URL, policy_closure.LANGUAGE_URL, policy_clo
 SOURCE_PARSERS.update({policy_closure.PETITION_URL: policy_closure.parse_petition,
                       policy_closure.LANGUAGE_URL: policy_closure.parse_language,
                       policy_closure.CALGETC_URL: policy_closure.parse_calgetc})
+
+from .course_metadata import parse_math, MATH_URL
+SOURCES += (MATH_URL,)
+SOURCE_PARSERS[MATH_URL] = parse_math
+
+# Subject observations are independent of requirement/pool membership.
+from atlas.adapters.west_degree_subjects import observe as observe_subjects
+parse = observe_subjects(parse, PROGRAM_ID)
+SOURCE_PARSERS = {url: observe_subjects(parser, PROGRAM_ID) for url, parser in SOURCE_PARSERS.items()}

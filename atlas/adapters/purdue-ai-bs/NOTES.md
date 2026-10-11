@@ -49,3 +49,9 @@ The [overlap table](https://www.purdue.edu/science/Current_Students/curriculum_a
 The permitted [Fall 2026 philosophy directory](https://www.cla.purdue.edu/academic/philosophy/students/undergraduate/courses-new.html) supports two concise PHIL 20700/20800 descriptions, not a complete AI BA philosophy requirement map. Public registrar degree planning leads to authenticated individual audits rather than public graduation rules; no login was attempted.
 
 **Current exact gaps:** denied current catalog; university degree GPA/residency/civics conditions; approved language sequence details; University Written/Oral Communication and STS dashboard pools; malformed chemistry grouping and AI-specific laboratory approval; AI-specific not-recommended electives; mapping of major coursework to university AI competency. Chemistry ambiguity remains untouched. Most individual descriptions/prerequisites/credits remain unknown. Pool/policy adapters return source observations only, with synthetic tests and optional ignored-cache smoke checks.
+
+## Degree correctness audit — 2026-10-11
+
+See [eight-degree audit](../../../research/degree-audit/west-purdue-wpi.md) and its adjacent per-program JSON ledger. This program is blocked for whole-degree certification by the specific evidence gaps recorded there. Verified role/subject corrections are retained; parser success and prior local curriculum labels are not a completed degree audit. Remaining course-content review work is distinguished from actual source barriers. Independent second pass remains pending.
+
+Added three source-observed policies: C or better for major work and its prerequisites; timing/level restrictions on transfer credit; graduate-selective prerequisites. These are notes, not new prerequisite-course obligations. Broad culture/GE labels no longer imply human-context content. Current inventory remains1,727 courses, now71 nodes; partial.

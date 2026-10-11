@@ -15,3 +15,7 @@ The official degree overview remains readable through the ordinary web reader. T
 Independent engineering navigation led through Academic Departments to the CSE program page and its actual current catalog link, `https://catalog.ucmerced.edu/`, which returned403. This is the precise new failed locator; the earlier unspecified catalog denial is preserved. Default local safe fetching stopped when main/Engineering robots policies returned403. The metadata parser requires the actual public text markers and emits no courses, requirements, dates or completeness. No alternate transport was used to bypass a robots gate; the permitted reader observation is distinct from local scraper availability.
 
 Curriculum remains pending. Next: a publicly accessible current AI course-of-study and degreewide rules. Program aims cannot substitute for named requirements.
+
+## Degree correctness audit — 2026-10-11
+
+See [eight-degree audit](../../../research/degree-audit/west-purdue-wpi.md) and its adjacent per-program JSON ledger. This program is blocked for whole-degree certification by the specific evidence gaps recorded there. Verified role/subject corrections are retained; parser success and prior local curriculum labels are not a completed degree audit. Remaining course-content review work is distinguished from actual source barriers. Independent second pass remains pending.

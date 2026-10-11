@@ -57,3 +57,93 @@ def test_wpi_subjects_are_independent_of_ai_degree_membership():
     from atlas.adapters.wpi_degree_subjects import observe
     result=observe(lambda: {'courses':[{'code':'MA 1021','name':'Changed unidentified course','category':'ai_ml','category_review':{'stale':True}}]})()
     assert result['courses'][0]['category']=='other' and 'category_review'not in result['courses'][0]
+
+
+def test_corrected_degree_subjects_do_not_follow_required_or_option_role():
+    u = program('university-of-california-san-diego-artificial-intelligence-bs-degree')
+    courses = {c['code']: c for c in u['courses']}
+    assert courses['CSE 101']['category'] == 'foundations'
+    assert courses['CSE 30']['category'] == 'systems'
+    assert courses['CSE 12']['credits'] == courses['CSE 30']['credits'] == 4
+    assert courses['MATH 20A']['category'] == courses['MATH 20B']['category'] == 'mathematics'
+    assert all(c['category'] == 'other' for c in u['courses'] if c['name'] is None and c['description'] is None)
+    b = {c['code']: c for c in program('ucsb-ai-bs')['courses']}
+    assert b['CMPSC 130A']['category'] == b['CMPSC 130B']['category'] == 'foundations'
+    assert b['CMPSC 183']['category'] == 'human_context'
+    assert b['ECE 139']['category'] == 'mathematics'
+    assert b['CMPSC 41']['credits'] is None  # source conflict remains
+    p = program('purdue-ai-bs')
+    assert all(c['category'] == 'other' for c in p['courses'] if '-pool-' in c['id'])
+    ba = {c['code']: c for c in program('purdue-ai-ba')['courses']}
+    assert ba['CS 10100']['category_review']['status'] == 'mixed'
+    assert ba['CS 18200']['category_review']['status'] == 'mixed'
+    assert all(c['credits'] is None for c in ba.values())
+
+
+def test_source_observations_drop_stale_reviews_and_changed_titles():
+    from atlas.adapters.west_degree_subjects import observe
+    result = observe(lambda: {'courses': [{'code': 'CSE 101', 'name': 'Different subject',
+                      'category': 'ai_ml', 'category_review': {'stale': True}}]},
+                      'university-of-california-san-diego-artificial-intelligence-bs-degree')()
+    assert result['courses'][0]['category'] == 'other'
+    assert 'category_review' not in result['courses'][0]
+
+
+def test_purdue_source_grade_and_transfer_rules_do_not_add_prerequisite_courses():
+    import pytest
+    m = importlib.import_module('atlas.adapters.purdue-ai-bs.adapter')
+    html = '''<p>all major required courses; all major electives (selectives); their pre-requisites, regardless of department; grade of C or better.
+    100 and 200 level core courses before the student enters; 300 or 400 level CS coursework; pre-approved Study Abroad coursework.
+    Graduate courses: additional prerequisites that must be met to be eligible.</p>'''
+    result = m.parse_major_policies(html)
+    assert len(result['requirements']) == 3
+    assert all(r['kind'] == 'note' and not r['course_ids'] for r in result['requirements'])
+    with pytest.raises(ValueError):
+        m.parse_major_policies(html.replace('C or better', 'D or better'))
+
+
+def test_ucsd_noncourse_ahi_routes_and_transfer_climate_exemption_remain_contextual():
+    d = program('university-of-california-san-diego-artificial-intelligence-bs-degree')
+    nodes = {r['id']: r for r in d['requirements']}
+    assert nodes[d['id']+'-shared-ahi-pool']['parent_id'] == d['id']+'-policy-ahi'
+    assert nodes[d['id']+'-shared-climate-pool']['parent_id'] == d['id']+'-shared-climate-scope'
+    profile = requirement_profile(d)
+    assert profile['required']['count'] == 8
+    assert profile['options']['count'] == 119
+    assert profile['unresolved']['count'] == 2241
+    assert all(c['context'] == 'unresolved' for c in profile['choices']
+               if c['id'] in [d['id']+'-shared-ahi-pool', d['id']+'-shared-climate-pool'])
+
+
+def test_fixed_ucsd_calculus_parser_reads_actual_values_and_prerequisite_logic():
+    import pytest
+    m = importlib.import_module('atlas.adapters.university-of-california-san-diego-artificial-intelligence-bs-degree.course_metadata')
+    html = '<h1>Mathematics</h1>' + ''.join(
+        f'<p class="course-name">MATH 20{suffix}. Synthetic calculus (5)</p><p>Synthetic content.</p><p>Prerequisites: A or B with C–.</p>'
+        for suffix in ['A', 'B'])
+    result = m.parse_math(html)
+    assert {c['credits'] for c in result['courses']} == {5}
+    assert all(c['prerequisites'] == 'A or B with C–.' for c in result['courses'])
+    assert 'requirements' not in result
+    with pytest.raises(ValueError):
+        m.parse_math(html.replace('MATH 20B.', 'MATH 20C.'))
+
+
+def test_eight_degree_ledger_has_independent_partitions_and_honest_blockers():
+    ledger = json.loads(Path('research/degree-audit/west-purdue-wpi.json').read_text())
+    assert len(ledger['programs']) == 8
+    for audit in ledger['programs']:
+        assert audit['status'] == 'blocked' and audit['blockers']
+        assert audit['second_pass_status'] == 'pending'
+        assert set(audit['checks']) == {'degree_identity', 'required_and_choices', 'elective_pools',
+            'prerequisites', 'credits_and_units', 'classification', 'family_composition', 'degree_wide_requirements'}
+        if audit['expected_profile'] is None:
+            assert audit['program_id'] in ['uc-merced-ai-bs', 'furman-ai-bs']
+            continue
+        d = program(audit['program_id'])
+        ids = audit['expected_course_ids']
+        assert_partition(d, set(ids['required']), set(ids['options']), set(ids['unresolved']))
+        for role, course_ids in ids.items():
+            assert audit['expected_profile'][role]['count'] == len(course_ids)
+            expected = Counter(c['category'] for c in d['courses'] if c['id'] in course_ids)
+            assert audit['expected_profile'][role]['categories'] == dict(expected)

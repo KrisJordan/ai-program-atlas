@@ -62,3 +62,8 @@ SOURCE_PARSERS.update({progression.WRITING_URL: progression.parse_writing})
 from atlas.adapters import uc_policy_closure as policy_closure
 SOURCES += (policy_closure.CALGETC_URL,)
 SOURCE_PARSERS.update({policy_closure.CALGETC_URL: lambda html: policy_closure.parse_calgetc(html, PROGRAM_ID)})
+
+# Subject observations are independent of requirement/pool membership.
+from atlas.adapters.west_degree_subjects import observe as observe_subjects
+parse = observe_subjects(parse, PROGRAM_ID)
+SOURCE_PARSERS = {url: observe_subjects(parser, PROGRAM_ID) for url, parser in SOURCE_PARSERS.items()}

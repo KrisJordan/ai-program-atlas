@@ -262,6 +262,8 @@ def parse(html: str) -> dict:
                 cat="applications",
             )
         )
+    if "all major required courses" in text(soup):
+        requirements.extend(parse_major_policies(html)["requirements"])
     return {
         "id": PREFIX,
         "title": "Artificial Intelligence, BS",
@@ -578,3 +580,27 @@ SOURCE_PARSERS.update(
 
 # Term offering directory supports reviewed metadata, not additional major requirements.
 SOURCES += ("https://www.cla.purdue.edu/academic/philosophy/students/undergraduate/courses-new.html",)
+
+
+def parse_major_policies(html):
+    value = text(BeautifulSoup(html, "html.parser"))
+    clauses = ["all major required courses", "all major electives (selectives)",
+               "their pre-requisites, regardless of department", "grade of C or better",
+               "100 and 200 level core courses", "before the student enters",
+               "300 or 400 level CS coursework", "pre-approved Study Abroad coursework",
+               "additional prerequisites that must be met to be eligible"]
+    if any(clause not in value for clause in clauses):
+        raise ValueError("Purdue major grade/transfer/graduate policy changed")
+    specs = [
+        ("major-grades", "Major and prerequisite minimum grades",
+         "All major required courses, selectives, and their prerequisites, regardless of department, require C or better. This grade rule does not turn every prerequisite into a separately counted degree requirement."),
+        ("major-transfer", "Department transfer-credit restrictions",
+         "Transfer credit, including regional-campus credit, for 100/200-level core courses is possible only when taken before entry to Purdue West Lafayette Computer Science. No 300/400-level CS transfer coursework is accepted except pre-approved study abroad."),
+        ("graduate-selective-eligibility", "Graduate selective prerequisites",
+         "Graduate-level selective courses may require additional prerequisites for enrollment; these are not waived by appearance in the undergraduate selective pool.")]
+    return {"id": PROGRAM_ID, "requirements": [requirement(k, title, "note", summary=summary) for k, title, summary in specs]}
+
+# Subject observations are independent of requirement/pool membership.
+from atlas.adapters.west_degree_subjects import observe as observe_subjects
+parse = observe_subjects(parse, PROGRAM_ID)
+SOURCE_PARSERS = {url: observe_subjects(parser, PROGRAM_ID) for url, parser in SOURCE_PARSERS.items()}

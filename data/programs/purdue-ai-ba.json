@@ -15,11 +15,27 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "semester_hours",
-      "category": "foundations",
+      "category": "other",
       "source_id": "purdue-ai-ba-department",
       "url": "https://www.cla.purdue.edu/academic/philosophy/students/undergraduate/majors/artificial-intelligence/index.html",
       "public_site": null,
-      "syllabus": "https://www.cs.purdue.edu/academic-programs/courses/canonical/cs10100.html"
+      "syllabus": "https://www.cs.purdue.edu/academic-programs/courses/canonical/cs10100.html",
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "purdue-cs10100-canonical"
+        ],
+        "locator": "CS 10100 canonical syllabus",
+        "rationale": "The canonical description and week outline survey programming, digital media, computing infrastructure, AI, security and privacy without a single defensible primary category.",
+        "candidate_categories": [
+          "foundations",
+          "systems",
+          "ai_ml",
+          "human_context"
+        ]
+      }
     },
     {
       "id": "purdue-cs-17600",
@@ -33,7 +49,18 @@
       "source_id": "purdue-ai-ba-department",
       "url": "https://www.cla.purdue.edu/academic/philosophy/students/undergraduate/majors/artificial-intelligence/index.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "purdue-ai-ba-department"
+        ],
+        "locator": "CS 17600 Introduction to Python",
+        "rationale": "The precise title identifies programming, data structures, algorithm analysis or computation theory. Limited title-based review; the complete course description was not independently reviewed in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "purdue-cs-18000",
@@ -47,7 +74,18 @@
       "source_id": "purdue-ai-ba-department",
       "url": "https://www.cla.purdue.edu/academic/philosophy/students/undergraduate/majors/artificial-intelligence/index.html",
       "public_site": null,
-      "syllabus": "https://www.cs.purdue.edu/academic-programs/courses/canonical/cs180.html"
+      "syllabus": "https://www.cs.purdue.edu/academic-programs/courses/canonical/cs180.html",
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "purdue-ai-ba-department"
+        ],
+        "locator": "CS 18000 Problem Solving and Object-Oriented Programming",
+        "rationale": "The precise title identifies programming, data structures, algorithm analysis or computation theory. Limited title-based review; the complete course description was not independently reviewed in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "purdue-cs-18200",
@@ -57,11 +95,25 @@
       "prerequisites": "CS 18000 (Problem Solving and Object-Oriented Programming)",
       "credits": null,
       "credit_unit": "semester_hours",
-      "category": "foundations",
+      "category": "other",
       "source_id": "purdue-ai-ba-department",
       "url": "https://www.cla.purdue.edu/academic/philosophy/students/undergraduate/majors/artificial-intelligence/index.html",
       "public_site": null,
-      "syllabus": "https://www.cs.purdue.edu/academic-programs/courses/canonical/cs182.html"
+      "syllabus": "https://www.cs.purdue.edu/academic-programs/courses/canonical/cs182.html",
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "purdue-cs182-canonical"
+        ],
+        "locator": "CS 18200 canonical syllabus",
+        "rationale": "The canonical syllabus combines proof, discrete mathematics, probability, algorithms, recursion, automata and computability. No single primary subject was assigned across mathematical and computing foundations.",
+        "candidate_categories": [
+          "foundations",
+          "mathematics"
+        ]
+      }
     },
     {
       "id": "purdue-cs-24300",
@@ -75,7 +127,18 @@
       "source_id": "purdue-ai-ba-department",
       "url": "https://www.cla.purdue.edu/academic/philosophy/students/undergraduate/majors/artificial-intelligence/index.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "purdue-ai-ba-department"
+        ],
+        "locator": "CS 24300 AI Basics",
+        "rationale": "The precise title explicitly identifies artificial-intelligence or machine-learning methods. Limited title-based review; the complete course description was not independently reviewed in this pass.",
+        "candidate_categories": []
+      }
     }
   ],
   "requirements": [
@@ -157,14 +220,15 @@
     "CS 18200 content and prerequisite is summarized from registered source purdue-cs182-canonical. Canonical outline, updated 2025-06-20; no current-term offering claim. Original course source supplies requirement identity/credits.",
     "The CS 180 canonical outline uses the older heading Programming I; its source-linked directory course code matches CS 18000. CS 471 canonical material includes a 1998.08 date and was not used as current course evidence.",
     "2026-10-10 continuation: department confirms eight philosophy courses but does not enumerate them. Advising and faculty plan pages contain no replacement AI plan. Linked CLA Core 21 PDF is a revised 2019 proposal and is not asserted as current Fall-2026 degree policy. Catalog access restriction remains unresolved.",
-    "The Fall 2026 Philosophy course directory was inspected on 2026-10-10. It lists offerings (including AI-related philosophy) but does not map the eight required AI-major philosophy courses or choice groups. No general philosophy offering was promoted to an AI BA requirement; the current catalog access denial remains a blocker. The linked undergraduate overview likewise supplies no alternate AI requirement inventory."
+    "The Fall 2026 Philosophy course directory was inspected on 2026-10-10. It lists offerings (including AI-related philosophy) but does not map the eight required AI-major philosophy courses or choice groups. No general philosophy offering was promoted to an AI BA requirement; the current catalog access denial remains a blocker. The linked undergraduate overview likewise supplies no alternate AI requirement inventory.",
+    "2026-10-11 subject audit: unsupported classifications inferred from degree, department or elective/GE pool membership were reset to other. Only individually supported classifications carry a reviewed rationale; code-only records carry an evidence-insufficiency review. Remaining named but unreviewed courses are not certified."
   ],
   "institution": {
     "id": "purdue-university",
     "name": "Purdue University",
     "aliases": [
       "Purdue",
-      "Purdue University\u2014Main Campus"
+      "Purdue University—Main Campus"
     ],
     "calendar": "semester",
     "website": "https://www.purdue.edu/"
@@ -187,7 +251,7 @@
     {
       "id": "purdue-calendar-2026",
       "url": "https://www.purdue.edu/registrar/calendars/academic/",
-      "title": "2026\u201327 Academic Calendar",
+      "title": "2026–27 Academic Calendar",
       "fetched_at": "2026-10-10",
       "source_date": "2026-02-09",
       "catalog_year": "2026-2027",

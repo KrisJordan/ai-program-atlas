@@ -33,3 +33,7 @@ Source statement types now identify the admissions program summary as a program 
 ## Bounded philosophy inventory follow-up — 2026-10-10
 
 The independently linked [Fall 2026 philosophy directory](https://www.cla.purdue.edu/academic/philosophy/students/undergraduate/courses-new.html) and department undergraduate overview were accessible. They list actual offerings, including an AI-related philosophy seminar, but do not identify the eight courses / 24 philosophy credits required by this BA or any complete choice groups. No offering was inferred to be a degree requirement. The record remains **5 courses / 3 nodes, partial**. Current catalog denial was not retried or bypassed. The earlier CLA core PDF remains a 2019 proposal rather than current degree evidence. Full philosophy inventory, current CLA core and university GPA/residency/civics/AI-competency mapping remain blockers; the public registrar degree-planning page points to authenticated personal audits, not public rules.
+
+## Degree correctness audit — 2026-10-11
+
+See [eight-degree audit](../../../research/degree-audit/west-purdue-wpi.md) and its adjacent per-program JSON ledger. This program is blocked for whole-degree certification by the specific evidence gaps recorded there. Verified role/subject corrections are retained; parser success and prior local curriculum labels are not a completed degree audit. Remaining course-content review work is distinguished from actual source barriers. Independent second pass remains pending.

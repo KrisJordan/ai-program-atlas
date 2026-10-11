@@ -183,3 +183,8 @@ SOURCE_PARSERS[AI_REQUIREMENT_URL] = parse_university_ai
 
 # Inspected term offerings do not identify the BA's required philosophy inventory.
 SOURCES += ("https://www.cla.purdue.edu/academic/philosophy/students/undergraduate/courses-new.html",)
+
+# Subject observations are independent of requirement/pool membership.
+from atlas.adapters.west_degree_subjects import observe as observe_subjects
+parse = observe_subjects(parse, PROGRAM_ID)
+SOURCE_PARSERS = {url: observe_subjects(parser, PROGRAM_ID) for url, parser in SOURCE_PARSERS.items()}

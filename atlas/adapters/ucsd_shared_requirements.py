@@ -48,6 +48,7 @@ def parse_approval_rows(rows, kind):
     sid=kind+'-approved-pdf';url=DEI_PDF if kind=='dei'else CLIMATE_PDF
     root=req(kind+'-pool',kind.upper()+' approved options with date restrictions',sid,
              kind='choose_courses',count=1,credits=4 if kind=='dei'else None,
+             parent=PID+'-shared-climate-scope' if kind=='climate' else None,
              summary='Select one eligible approved option under its stated date, prerequisite and enrollment conditions. Historical expired and future approvals are retained for their stated periods, not asserted currently usable. Complex printed rows retain their unresolved internal notation.')
     courses={};nodes=[root];seen=set()
     for row in rows:
@@ -84,5 +85,5 @@ def parse_ahi(html):
             number,suffix,rest=mcode.groups();suffixes=[suffix]+(rest.split('-')if rest else[])
             for end in suffixes:
                 code=dept+' '+number+end;c=course(code,None,PID+'-degree-policies',DEGREE_URL,institution='ucsd',unit='quarter_hours',category='human_context');records[c['id']]=c
-    rows=[req('ahi-pool','American History and Institutions course options','degree-policies',kind='choose_courses',count=1,course_ids=list(records),summary='One listed course or a HIUS course other than a colloquium, at C− or P or better. The open HIUS predicate is source-stated; it does not require enumerating every changing HIUS offering. Other documented non-course routes remain alternatives.')]
+    rows=[req('ahi-pool','American History and Institutions course options','degree-policies',kind='choose_courses',count=1,parent=PID+'-policy-ahi',course_ids=list(records),summary='One listed course or a HIUS course other than a colloquium, at C− or P or better. The open HIUS predicate is source-stated; it does not require enumerating every changing HIUS offering. Other documented non-course routes remain alternatives.')]
     return {'id':PID,'curriculum_status':'partial','courses':list(records.values()),'requirements':rows}

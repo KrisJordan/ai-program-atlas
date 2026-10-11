@@ -7,3 +7,7 @@ The adapter extracts the AI card by its official link and validates title, degre
 ## Public-source follow-up — 2026-10-11
 
 The officially listed major detail URL https://www.furman.edu/academics/majors-minors-programs/artificial-intelligence-major/ remains password protected in the ordinary public reader. No password was entered. Independent public catalog searching did not produce an inspected AI BS requirements source; a Data Analytics/Decision Analytics result is not this credential and its catalog request returned403. No curriculum was transferred from that different program, and the AI curriculum stays pending.
+
+## Degree correctness audit — 2026-10-11
+
+See [eight-degree audit](../../../research/degree-audit/west-purdue-wpi.md) and its adjacent per-program JSON ledger. This program is blocked for whole-degree certification by the specific evidence gaps recorded there. Verified role/subject corrections are retained; parser success and prior local curriculum labels are not a completed degree audit. Remaining course-content review work is distinguished from actual source barriers. Independent second pass remains pending.
