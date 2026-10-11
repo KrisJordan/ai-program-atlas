@@ -656,8 +656,7 @@ def requirement_tree(p):
                 notes.append(r)
             else:
                 main.append(r)
-        if root:
-            main.sort(key=lambda r: r.get('kind') == 'note')
+        main.sort(key=lambda r: (general_education(r), r.get('kind') == 'note'))
         return ''.join(render(r, seen, depth) for r in main) + bundle('General education requirements', general, seen, depth, 'general-' + parent) + bundle('Optional concentrations & fields', options, seen, depth, 'optional-' + parent) + bundle('Requirement notes', notes, seen, depth, 'notes-' + parent) + bundle('Other requirements', other, seen, depth, 'other-' + parent)
 
     def render(r, seen, depth=0):
@@ -704,7 +703,7 @@ def requirement_tree(p):
             preview_label = 'Courses in this group' if r.get('kind') == 'all' else 'Options / branches include' if r.get('kind') != 'note' else 'Referenced courses / branches'
             preview = '<span class="requirement-preview"><span class="requirement-preview-label">' + preview_label + '</span><span class="requirement-preview-list" role="list">' + ''.join('<span class="requirement-preview-item" role="listitem">' + esc(title) + '</span>' for title in shown) + '</span>' + ('<span class="requirement-preview-more">+' + str(len(preview_titles) - len(shown)) + ' more · expand for the full list</span>' if len(preview_titles) > len(shown) else '') + '</span>'
         rule = esc(operator + (' · ' + ' · '.join(selection) if selection else ''))
-        opened = depth < 2 and has_courses(r) and not optional(r) and (r.get('kind') != 'note' or depth > 0)
+        opened = depth < 2 and has_courses(r) and not optional(r) and not general_education(r) and (r.get('kind') != 'note' or depth > 0)
         return f'''<li class="requirement" id="requirement-{esc(rid)}" data-requirement-depth="{depth}"><details class="requirement-disclosure" {"open" if opened else ""}><summary><h3 class="requirement-title">{esc(r.get('title'))}</h3><span class="requirement-rule">{rule}</span>{preview}</summary><div class="requirement-body">{'<div class="requirement-tags">' + provenance_badges + '</div>' if provenance_badges else ''}<p>{esc(r.get('summary') or 'Requirement detail has not been extracted.')}</p>{source_wording}{course_list}{'<ul>' + children + '</ul>' if children else ''}{evidence}</div></details></li>'''
 
     roots = [r for r in requirements if not r.get("parent_id") or r.get("parent_id") not in ids]

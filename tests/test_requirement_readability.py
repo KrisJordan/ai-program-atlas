@@ -99,3 +99,15 @@ def test_general_education_scope_uses_explicit_source_labels_not_course_subject(
     assert soup.select_one('.requirements > .requirement')['id']=='requirement-major'
     assert soup.select_one('#requirements-group-general-top #requirement-general')
     assert not soup.select_one('#requirements-group-general-top #requirement-major')
+
+
+
+def test_nested_general_education_follows_program_courses(site_data):
+    p=site_data['programs'][0]
+    p['sources']=[dict(id='general-source',title='General Education',url='https://example.edu/general/')]
+    p['requirements']=[rule('root',title='Degree curriculum'),dict(rule('general',parent='root',courses=[p['courses'][0]['id']],title='General education'),source_id='general-source'),rule('major',parent='root',courses=[p['courses'][0]['id']],title='Program core')]
+    soup=BeautifulSoup(requirement_tree(p),'html.parser')
+    children=soup.select('#requirement-root > details > .requirement-body > ul > .requirement')
+    assert [n['id'] for n in children]==['requirement-major','requirement-general']
+    assert soup.select_one('#requirement-major > details').has_attr('open')
+    assert not soup.select_one('#requirement-general > details').has_attr('open')

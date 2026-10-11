@@ -218,3 +218,5 @@ User requested aggregate CSRankings U.S. rank as the default homepage order. Imp
 - Compact requirement headings combine title/rule, remove duplicate operator badges and reduce padding. Outcome labels and statements share a line with natural wrapping. Preserve readable course previews, provenance, keyboard disclosure and fragment navigation. Actual-source unit/browser checks and visual review underway; combined UNC correction + context release publication pending.
 
 - User explicitly requested universal application: shared renderer rules apply to every program, using actual course descendants and explicit general-education source/title labels. Biological/science subject matter alone never establishes a general-education role. Validate branch preservation across all exported pages before publication.
+
+- Universal scope includes nested degree trees: explicitly labeled general-education branches follow program courses at every level and start closed, retaining their own original headings. Added a non-MIT regression case for both root and nested source-labeled scopes.
