@@ -200,3 +200,7 @@ def parse(html):
         "courses": list(courses.values()),
         "requirements": reqs,
     }
+
+from atlas.adapters.lehigh_degree_policies import SOURCE_PARSERS as POLICY_PARSERS
+SOURCE_PARSERS = {SOURCES[0]: parse, **POLICY_PARSERS}
+SOURCES = tuple(SOURCE_PARSERS)
