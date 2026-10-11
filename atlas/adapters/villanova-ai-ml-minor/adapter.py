@@ -57,3 +57,18 @@ SOURCE_PARSERS[
     code="MIS 3080",
     url="https://live-villanova-catalog.cleancatalog.io/management-information-systems/mis-3080",
 )
+
+from atlas.adapters import small_complete_metadata as metadata
+
+_parse_requirements = parse
+
+
+def parse(html):
+    result = _parse_requirements(html)
+    result.update(metadata.parse_villanova_aim(html))
+    return result
+
+
+SOURCES.append(metadata.VILLANOVA_CSC)
+SOURCE_PARSERS[SOURCES[0]] = parse
+SOURCE_PARSERS[metadata.VILLANOVA_CSC] = metadata.parse_villanova_csc

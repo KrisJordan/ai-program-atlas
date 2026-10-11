@@ -16,7 +16,7 @@
   "overview": "Published minor requirements and program-specific policies are mapped, including nested alternatives and elective choices.",
   "catalog_year": "2026-2027",
   "verification_status": "confirmed",
-  "last_verified": "2026-10-10",
+  "last_verified": "2026-10-11",
   "curriculum_status": "complete",
   "links": [
     {
@@ -35,12 +35,33 @@
       "catalog_year": "2026-2027",
       "locator": "Minor-specific requirement groups, course choices, eligibility and policy text",
       "confidence": "high"
+    },
+    {
+      "id": "tamu-busn-course-catalog",
+      "url": "https://catalog.tamu.edu/undergraduate/course-descriptions/busn/",
+      "title": "BUSN — Mays Business School course catalog",
+      "fetched_at": "2026-10-11T01:40:06+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "BUSN 250, 255, 460, 465 and 470 course blocks: descriptions and prerequisites",
+      "confidence": "high"
+    },
+    {
+      "id": "tamu-ai-minor-department",
+      "url": "https://mays.tamu.edu/ai/ai-minor/",
+      "title": "AI in Business Minor",
+      "fetched_at": "2026-10-11T01:40:59+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Program details and FAQ: no required course order; enrollment threshold differs from catalog",
+      "confidence": "high"
     }
   ],
   "outcomes": [
     {
       "text": "Apply AI and machine learning in business work.",
       "kind": "source_stated",
+      "statement_type": "program_aim",
       "source_id": "texas-am-ai-business-minor-identity",
       "locator": "Program overview"
     }
@@ -50,13 +71,13 @@
       "id": "tamu-busn-250",
       "code": "BUSN 250",
       "name": "Business Transformation with Generative Artificial Intelligence",
-      "description": null,
+      "description": "Uses generative AI across business functions, including practical tool building and ethical considerations.",
       "prerequisites": null,
       "credits": 3,
       "credit_unit": "semester_hours",
       "category": "applications",
-      "source_id": "texas-am-ai-business-minor-identity",
-      "url": "https://catalog.tamu.edu/search/?P=BUSN%20250",
+      "source_id": "tamu-busn-course-catalog",
+      "url": "https://catalog.tamu.edu/undergraduate/course-descriptions/busn/",
       "public_site": null,
       "syllabus": null
     },
@@ -64,13 +85,13 @@
       "id": "tamu-busn-255",
       "code": "BUSN 255",
       "name": "Business Storytelling with AI",
-      "description": null,
+      "description": "Uses visual analytics and varied datasets to communicate business findings through dashboards and Python.",
       "prerequisites": null,
       "credits": 3,
       "credit_unit": "semester_hours",
       "category": "applications",
-      "source_id": "texas-am-ai-business-minor-identity",
-      "url": "https://catalog.tamu.edu/search/?P=BUSN%20255",
+      "source_id": "tamu-busn-course-catalog",
+      "url": "https://catalog.tamu.edu/undergraduate/course-descriptions/busn/",
       "public_site": null,
       "syllabus": null
     },
@@ -78,13 +99,13 @@
       "id": "tamu-busn-460",
       "code": "BUSN 460",
       "name": "Machine Learning and Predictive Modeling for Business Applications",
-      "description": null,
-      "prerequisites": null,
+      "description": "Connects machine-learning concepts with business applications and project leadership.",
+      "prerequisites": "Artificial Intelligence in Business minor; junior or senior classification.",
       "credits": 3,
       "credit_unit": "semester_hours",
       "category": "applications",
-      "source_id": "texas-am-ai-business-minor-identity",
-      "url": "https://catalog.tamu.edu/search/?P=BUSN%20460",
+      "source_id": "tamu-busn-course-catalog",
+      "url": "https://catalog.tamu.edu/undergraduate/course-descriptions/busn/",
       "public_site": null,
       "syllabus": null
     },
@@ -92,13 +113,13 @@
       "id": "tamu-busn-465",
       "code": "BUSN 465",
       "name": "Agentic AI in Business",
-      "description": null,
-      "prerequisites": null,
+      "description": "Examines autonomous AI agent design, business applications and deployment risks.",
+      "prerequisites": "Artificial Intelligence in Business minor; junior or senior classification.",
       "credits": 3,
       "credit_unit": "semester_hours",
       "category": "applications",
-      "source_id": "texas-am-ai-business-minor-identity",
-      "url": "https://catalog.tamu.edu/search/?P=BUSN%20465",
+      "source_id": "tamu-busn-course-catalog",
+      "url": "https://catalog.tamu.edu/undergraduate/course-descriptions/busn/",
       "public_site": null,
       "syllabus": null
     },
@@ -106,13 +127,13 @@
       "id": "tamu-busn-470",
       "code": "BUSN 470",
       "name": "Business Cases for Textual Generative and Agentic AI",
-      "description": null,
-      "prerequisites": null,
+      "description": "Applies generative and agentic AI to business text through practical team-oriented work.",
+      "prerequisites": "Artificial Intelligence in Business minor; junior or senior classification.",
       "credits": 3,
       "credit_unit": "semester_hours",
       "category": "applications",
-      "source_id": "texas-am-ai-business-minor-identity",
-      "url": "https://catalog.tamu.edu/search/?P=BUSN%20470",
+      "source_id": "tamu-busn-course-catalog",
+      "url": "https://catalog.tamu.edu/undergraduate/course-descriptions/busn/",
       "public_site": null,
       "syllabus": null
     }
@@ -205,12 +226,13 @@
       "category": "other",
       "source_id": "texas-am-ai-business-minor-identity",
       "source_text": null,
-      "summary": "At least 6 hours must be at the 300\u2013400 level.",
+      "summary": "At least 6 hours must be at the 300–400 level.",
       "course_ids": []
     }
   ],
   "notes": [
-    "Complete refers to the published minor requirements and policies. Catalog eligibility controls this record: 24 completed hours including 12 at Texas A&M. This differs from the simpler threshold on an earlier department page."
+    "Complete refers to the published minor requirements and policies. Catalog eligibility controls this record: 24 completed hours including 12 at Texas A&M. This differs from the simpler threshold on the separately inspected department page.",
+    "2026-10-11 metadata review: all five course descriptions are summarized from the BUSN catalog. BUSN 460/465/470 explicitly require the AI in Business minor and junior or senior classification. BUSN 250/255 have no prerequisite statement on the inspected course page; null does not assert unrestricted access. Semester-hour labels remain supported by the minor requirement table. The overview is a program aim, not an assessed learning-outcome claim. Neither inspected program page establishes first offering; date remains unknown."
   ],
   "curriculum_audit": {
     "scope": "minor",
@@ -228,7 +250,7 @@
     ],
     "unresolved_requirements": [],
     "metadata_gaps": [
-      "Course descriptions and individual prerequisites not yet extracted.",
+      "BUSN 250 and BUSN 255 have no prerequisite statement in the inspected catalog; these remain null, not an assertion of none.",
       "Public course sites and syllabi unverified."
     ]
   }

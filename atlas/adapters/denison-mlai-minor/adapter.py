@@ -42,3 +42,12 @@ def parse(html: str) -> dict:
             summary="Complete each listed course; cross-listed codes denote the same course.",
             course_ids=[c["id"] for c in courses])],
         notes=["Observed required-course table only. Course credits and prerequisites require separate course-page review."])
+
+from atlas.adapters import small_complete_metadata as metadata
+
+SOURCES += (metadata.DENISON_ABOUT, metadata.DENISON_HOME, metadata.DENISON_CATALOG)
+SOURCE_PARSERS = {
+    metadata.DENISON_ABOUT: metadata.parse_denison_about,
+    metadata.DENISON_HOME: metadata.parse_denison_home,
+    metadata.DENISON_CATALOG: metadata.parse_denison_prerequisites,
+}

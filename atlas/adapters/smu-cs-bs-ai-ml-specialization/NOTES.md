@@ -30,3 +30,7 @@ Course descriptions, prerequisite statements and three semester-credit hours per
 - [CS-BS Specializations/Concentrations](https://catalog.smu.edu/programs/CS-BS/specializations-concentrations-GTI0l): CS-AIML-Specialization: Type Specialization; Print On Transcript Yes; Print On Diploma No
 
 The source-specific parsers validate published current tab identities and material policy clauses. Changed clauses require review; scrapers never issue completeness audits or verification dates. General education, optional departmental distinction and the rest of the host-degree course inventory are outside this concentration-scope audit.
+
+## 2026-10-11 bounded metadata, outcomes and date review
+
+Same bounded broad overview as BA; do not copy whole-degree or unrelated Cox business outcomes into this specialization. Already populated two required courses retained. See [dated review ledger](../../../research/complete-small-program-evidence-2026-10-11.md) for actual sources, missing-field counts and barriers. First-offered date remains null; no public course-site or term-identified syllabus was newly verified.

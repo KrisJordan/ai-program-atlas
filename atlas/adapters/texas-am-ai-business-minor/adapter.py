@@ -28,3 +28,17 @@ def parse(html):
       ('Minimum of 6 hours at the 300-400 level','level','Upper-level minimum','At least 6 hours must be at the 300–400 level.')]:
       groups.append(policy(root,marker,'tamu-'+gid,title,summary,SOURCE_ID))
     return dict(id=PROGRAM_ID,title='Artificial Intelligence in Business',award_level='minor',program_kind='minor',courses=courses,requirements=groups)
+
+from atlas.adapters import small_complete_metadata as metadata
+
+_parse_requirements = parse
+
+
+def parse(html):
+    result = _parse_requirements(html)
+    result.update(metadata.parse_tamu_aim(html))
+    return result
+
+
+SOURCES += (metadata.TAMU_URL,)
+SOURCE_PARSERS = {SOURCES[0]: parse, metadata.TAMU_URL: metadata.parse_tamu_courses}

@@ -178,3 +178,8 @@ def parse_cis(html: str) -> dict:
 
 
 SOURCE_PARSERS = {CSE_URL: parse_cse, CIS_URL: parse_cis}
+
+from atlas.adapters import small_complete_metadata as metadata
+
+SOURCES += (metadata.OSU_URL,)
+SOURCE_PARSERS[metadata.OSU_URL] = metadata.parse_osu_courses

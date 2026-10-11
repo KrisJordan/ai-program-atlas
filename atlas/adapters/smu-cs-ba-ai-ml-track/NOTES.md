@@ -30,3 +30,7 @@ Course descriptions, prerequisite statements and three semester-credit hours per
 - [Undergraduate Credit Policies](https://catalog.smu.edu/policies/undergraduate/ugcreditpolicies): Published Transfer Courses from Other Institutions tab; pre/post-matriculation, domestic/international approvals and transcript evaluation
 
 The source-specific parsers validate published current tab identities and material policy clauses. Changed clauses require review; scrapers never issue completeness audits or verification dates. General education, optional departmental distinction and the rest of the host-degree course inventory are outside this concentration-scope audit.
+
+## 2026-10-11 bounded metadata, outcomes and date review
+
+No new concentration-specific outcome or first-offered evidence in the inspected broad Lyle overview. Already populated two required courses retained. No new term-identified public course link verified. See [dated review ledger](../../../research/complete-small-program-evidence-2026-10-11.md) for actual sources, missing-field counts and barriers. First-offered date remains null; no public course-site or term-identified syllabus was newly verified.

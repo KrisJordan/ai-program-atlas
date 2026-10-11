@@ -1,0 +1,337 @@
+{
+  "reviewed_at": "2026-10-11",
+  "scope": "Exactly six complete minor/concentration records with smallest local course counts after active-owner exclusions. Bounded public-source metadata/outcome/date review, not a claim of exhaustive web search. No new public course site/syllabus verified.",
+  "selection_exclusions": [
+    "UNC",
+    "UT",
+    "Yeshiva",
+    "American",
+    "USD",
+    "MIT",
+    "UCSD",
+    "UCSB",
+    "active owner programs"
+  ],
+  "programs": [
+    {
+      "program_id": "smu-cs-ba-ai-ml-track",
+      "reviewed_at": "2026-10-11",
+      "course_count": 2,
+      "selection_status": "complete at selection",
+      "before_curriculum_status": "complete",
+      "after_curriculum_status": "complete",
+      "before_missing_fields": {
+        "description": 0,
+        "prerequisites": 0,
+        "credits": 0,
+        "credit_unit": 0,
+        "public_site": 2,
+        "syllabus": 2
+      },
+      "after_missing_fields": {
+        "description": 0,
+        "prerequisites": 0,
+        "credits": 0,
+        "credit_unit": 0,
+        "public_site": 2,
+        "syllabus": 2
+      },
+      "first_offered_before": null,
+      "first_offered_after": null,
+      "outcomes_before": 0,
+      "outcomes_after": 0,
+      "finding": "No new concentration-specific outcome or first-offered evidence in the inspected broad Lyle overview. Already populated two required courses retained. No new term-identified public course link verified.",
+      "sources": [
+        {
+          "key": "smu-overview",
+          "url": "https://www.smu.edu/lyle/undergraduate/bs-computer-science",
+          "fetched_at": "2026-10-11T00:51:30+00:00",
+          "status": 200,
+          "cached": true
+        }
+      ]
+    },
+    {
+      "program_id": "smu-cs-bs-ai-ml-specialization",
+      "reviewed_at": "2026-10-11",
+      "course_count": 2,
+      "selection_status": "complete at selection",
+      "before_curriculum_status": "complete",
+      "after_curriculum_status": "complete",
+      "before_missing_fields": {
+        "description": 0,
+        "prerequisites": 0,
+        "credits": 0,
+        "credit_unit": 0,
+        "public_site": 2,
+        "syllabus": 2
+      },
+      "after_missing_fields": {
+        "description": 0,
+        "prerequisites": 0,
+        "credits": 0,
+        "credit_unit": 0,
+        "public_site": 2,
+        "syllabus": 2
+      },
+      "first_offered_before": null,
+      "first_offered_after": null,
+      "outcomes_before": 0,
+      "outcomes_after": 0,
+      "finding": "Same bounded broad overview as BA; do not copy whole-degree or unrelated Cox business outcomes into this specialization. Already populated two required courses retained.",
+      "sources": [
+        {
+          "key": "smu-overview",
+          "url": "https://www.smu.edu/lyle/undergraduate/bs-computer-science",
+          "fetched_at": "2026-10-11T00:51:30+00:00",
+          "status": 200,
+          "cached": true
+        }
+      ]
+    },
+    {
+      "program_id": "villanova-ai-ml-minor",
+      "reviewed_at": "2026-10-11",
+      "course_count": 4,
+      "selection_status": "complete at selection",
+      "before_curriculum_status": "complete",
+      "after_curriculum_status": "complete",
+      "before_missing_fields": {
+        "description": 1,
+        "prerequisites": 1,
+        "credits": 1,
+        "credit_unit": 4,
+        "public_site": 4,
+        "syllabus": 4
+      },
+      "after_missing_fields": {
+        "description": 0,
+        "prerequisites": 0,
+        "credits": 0,
+        "credit_unit": 4,
+        "public_site": 4,
+        "syllabus": 4
+      },
+      "first_offered_before": null,
+      "first_offered_after": null,
+      "outcomes_before": 0,
+      "outcomes_after": 1,
+      "finding": "All four course records now have descriptions, prerequisite text and numeric credit observations. CSC1052 is four credits; its conditional substitution does not rewrite the published nine-credit minor. Source :C/:Y codes and normalized credit units remain unclassified. About context is a program aim, not a formal assessed outcome.",
+      "sources": [
+        {
+          "key": "villanova-minor",
+          "url": "https://live-villanova-catalog.cleancatalog.io/business/artificial-intelligence-and-machine-learning-minor",
+          "fetched_at": "2026-10-10T23:13:58+00:00",
+          "status": 200,
+          "cached": true
+        },
+        {
+          "key": "villanova-csc",
+          "url": "https://live-villanova-catalog.cleancatalog.io/computer-science/csc-1052",
+          "error": "HTTP 404: https://live-villanova-catalog.cleancatalog.io/computer-science/csc-1052; no access bypass attempted"
+        },
+        {
+          "key": "villanova-directory",
+          "url": "https://live-villanova-catalog.cleancatalog.io/classes?page=17",
+          "fetched_at": "2026-10-11T01:41:04+00:00",
+          "status": 200,
+          "cached": false
+        },
+        {
+          "key": "villanova-csc-search",
+          "url": "https://live-villanova-catalog.cleancatalog.io/classes?field_class_program_target_id=1491",
+          "fetched_at": "2026-10-11T01:41:45+00:00",
+          "status": 200,
+          "cached": false
+        },
+        {
+          "key": "villanova-csc-correct",
+          "url": "https://live-villanova-catalog.cleancatalog.io/computing-sciences/csc-1052",
+          "fetched_at": "2026-10-11T01:42:15+00:00",
+          "status": 200,
+          "cached": false
+        }
+      ]
+    },
+    {
+      "program_id": "texas-am-ai-business-minor",
+      "reviewed_at": "2026-10-11",
+      "course_count": 5,
+      "selection_status": "complete at selection",
+      "before_curriculum_status": "complete",
+      "after_curriculum_status": "complete",
+      "before_missing_fields": {
+        "description": 5,
+        "prerequisites": 5,
+        "credits": 0,
+        "credit_unit": 0,
+        "public_site": 5,
+        "syllabus": 5
+      },
+      "after_missing_fields": {
+        "description": 0,
+        "prerequisites": 2,
+        "credits": 0,
+        "credit_unit": 0,
+        "public_site": 5,
+        "syllabus": 5
+      },
+      "first_offered_before": null,
+      "first_offered_after": null,
+      "outcomes_before": 1,
+      "outcomes_after": 1,
+      "finding": "Five original course-description summaries and three explicit junior/senior/minor enrollment restrictions added. Two unlisted prerequisite fields remain null. Catalog and department eligibility threshold difference retained. Overview typed program_aim; no first-offered statement found in inspected sources.",
+      "sources": [
+        {
+          "key": "tamu-minor",
+          "url": "https://catalog.tamu.edu/undergraduate/business/artificial-intelligence-business-minor/",
+          "fetched_at": "2026-10-10T21:59:32+00:00",
+          "status": 200,
+          "cached": true
+        },
+        {
+          "key": "tamu-busn",
+          "url": "https://catalog.tamu.edu/undergraduate/course-descriptions/busn/",
+          "fetched_at": "2026-10-11T01:40:06+00:00",
+          "status": 200,
+          "cached": false
+        },
+        {
+          "key": "tamu-dept",
+          "url": "https://mays.tamu.edu/ai/ai-minor/",
+          "fetched_at": "2026-10-11T01:40:59+00:00",
+          "status": 200,
+          "cached": false
+        }
+      ]
+    },
+    {
+      "program_id": "ohio-state-ai-specialization",
+      "reviewed_at": "2026-10-11",
+      "course_count": 7,
+      "selection_status": "complete at selection",
+      "before_curriculum_status": "complete",
+      "after_curriculum_status": "partial",
+      "before_missing_fields": {
+        "description": 7,
+        "prerequisites": 0,
+        "credits": 0,
+        "credit_unit": 7,
+        "public_site": 7,
+        "syllabus": 7
+      },
+      "after_missing_fields": {
+        "description": 0,
+        "prerequisites": 0,
+        "credits": 0,
+        "credit_unit": 7,
+        "public_site": 7,
+        "syllabus": 7
+      },
+      "first_offered_before": null,
+      "first_offered_after": null,
+      "outcomes_before": 0,
+      "outcomes_after": 0,
+      "finding": "Downgraded complete to partial: 5221 versus 5331 prerequisite alternative for CSE3521, added GenEd1201/2601 for CSE5914, and other standing/duplicate-credit differences change potential eligibility. Both undated source observations preserved without precedence. All seven descriptions added; Units remain unknown normalization. Official syllabus directory403; stopped.",
+      "sources": [
+        {
+          "key": "osu-spec",
+          "url": "https://cse.osu.edu/bscse-and-bscis-specializations",
+          "fetched_at": "2026-10-10T21:59:25+00:00",
+          "status": 200,
+          "cached": true
+        },
+        {
+          "key": "osu-course",
+          "url": "https://cse.osu.edu/courses/cse-3521",
+          "error": "HTTP 404: https://cse.osu.edu/courses/cse-3521; no access bypass attempted"
+        },
+        {
+          "key": "osu-directory",
+          "url": "https://cse.osu.edu/current-students/undergraduate/courses",
+          "fetched_at": "2026-10-11T01:41:26+00:00",
+          "status": 200,
+          "cached": false
+        },
+        {
+          "key": "osu-courses",
+          "url": "https://cse.osu.edu/courses",
+          "fetched_at": "2026-10-11T01:41:55+00:00",
+          "status": 200,
+          "cached": false
+        },
+        {
+          "key": "osu-syllabi",
+          "url": "https://syllabi.engineering.osu.edu/?field_fiscal_unit_academic_org_target_id=6",
+          "error": "HTTP 403: https://syllabi.engineering.osu.edu/?field_fiscal_unit_academic_org_target_id=6; no access bypass attempted"
+        }
+      ]
+    },
+    {
+      "program_id": "denison-mlai-minor",
+      "reviewed_at": "2026-10-11",
+      "course_count": 8,
+      "selection_status": "complete at selection",
+      "before_curriculum_status": "complete",
+      "after_curriculum_status": "complete",
+      "before_missing_fields": {
+        "description": 0,
+        "prerequisites": 3,
+        "credits": 0,
+        "credit_unit": 0,
+        "public_site": 8,
+        "syllabus": 8
+      },
+      "after_missing_fields": {
+        "description": 0,
+        "prerequisites": 0,
+        "credits": 0,
+        "credit_unit": 0,
+        "public_site": 8,
+        "syllabus": 8
+      },
+      "first_offered_before": null,
+      "first_offered_after": null,
+      "outcomes_before": 2,
+      "outcomes_after": 4,
+      "finding": "Three previously null prerequisite strings recorded verbatim with explicit unresolved and/or grouping; no logical grouping inferred. Eight separately required minor courses already include these cognates, so this does not change the local inventory classification. Mission/communication statements typed aims and careers typed career_pathway. December2025 approval and early seven-course announcement are not current curriculum or first-offering evidence.",
+      "sources": [
+        {
+          "key": "denison-about",
+          "url": "https://denison.edu/academics/machine-learning-and-artificial-intelligence/about",
+          "fetched_at": "2026-10-11T01:40:09+00:00",
+          "status": 200,
+          "cached": false
+        },
+        {
+          "key": "denison-catalog",
+          "url": "https://catalog.denison.edu/catalog/courses-of-study/machine-learning/",
+          "fetched_at": "2026-10-11T01:40:11+00:00",
+          "status": 200,
+          "cached": false
+        },
+        {
+          "key": "denison-home",
+          "url": "https://denison.edu/academics/machine-learning-and-artificial-intelligence",
+          "fetched_at": "2026-10-11T01:41:01+00:00",
+          "status": 200,
+          "cached": false
+        },
+        {
+          "key": "denison-news",
+          "url": "https://denison.edu/news-events/featured/160899",
+          "fetched_at": "2026-10-11T01:41:03+00:00",
+          "status": 200,
+          "cached": false
+        }
+      ]
+    }
+  ],
+  "validation": {
+    "focused_tests_passed": 61,
+    "successful_live_source_parser_checks": 8,
+    "isolated_ingest_programs": 142,
+    "isolated_build_institutions": 194,
+    "maintained_database_changed": false
+  }
+}

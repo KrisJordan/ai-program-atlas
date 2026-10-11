@@ -16,7 +16,7 @@
   "overview": "A technical minor combining mathematical foundations, programming and machine learning. It is open to any Denison student and particularly complements computer science, mathematics and data analytics.",
   "catalog_year": "2026-2027",
   "verification_status": "confirmed",
-  "last_verified": "2026-10-10",
+  "last_verified": "2026-10-11",
   "curriculum_status": "complete",
   "links": [
     {
@@ -64,8 +64,8 @@
     {
       "id": "denison-mlai-about",
       "url": "https://denison.edu/academics/machine-learning-and-artificial-intelligence/about",
-      "title": "About | Machine Learning & Artificial Intelligence",
-      "fetched_at": "2026-10-10",
+      "title": "About Machine Learning & Artificial Intelligence",
+      "fetched_at": "2026-10-11T01:40:09+00:00",
       "source_date": null,
       "catalog_year": null,
       "locator": "Departmental Guidelines & Mission Statement",
@@ -85,10 +85,10 @@
       "id": "denison-mlai-catalog",
       "url": "https://catalog.denison.edu/catalog/courses-of-study/machine-learning/",
       "title": "Machine Learning & AI (ML)",
-      "fetched_at": "2026-10-10",
+      "fetched_at": "2026-10-11T01:40:11+00:00",
       "source_date": null,
       "catalog_year": "2026-2027",
-      "locator": "2026–2027 Requirements and Courses; full minor title in mission statement",
+      "locator": "ML 240, ML 310 and ML 400 prerequisite paragraphs",
       "confidence": "high"
     },
     {
@@ -160,12 +160,33 @@
       "catalog_year": "2026-2027",
       "locator": "Credit Earned by Advanced Placement Testing; Transfer Credit I.1-15 and II.D.2; Statement of Petition Policy",
       "confidence": "high"
+    },
+    {
+      "id": "denison-mlai-home",
+      "url": "https://denison.edu/academics/machine-learning-and-artificial-intelligence",
+      "title": "Machine Learning & Artificial Intelligence minor",
+      "fetched_at": "2026-10-11T01:41:01+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Communicate effectively; Jobs as a machine learning & artificial intelligence major",
+      "confidence": "high"
+    },
+    {
+      "id": "denison-mlai-approval-news",
+      "url": "https://denison.edu/news-events/featured/160899",
+      "title": "Academic innovation continues to accelerate at Denison",
+      "fetched_at": "2026-10-11T01:41:03+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "A new minor in machine learning and AI: December 2025 faculty approval, not a first-offering statement",
+      "confidence": "high"
     }
   ],
   "outcomes": [
     {
       "text": "Understand and implement machine learning algorithms to solve practical problems.",
       "kind": "source_stated",
+      "statement_type": "program_aim",
       "source_id": "denison-mlai-about",
       "locator": "Departmental Guidelines & Mission Statement"
     },
@@ -174,6 +195,20 @@
       "kind": "inferred_taxonomy",
       "source_id": "denison-mlai-requirements",
       "locator": "Required-course table"
+    },
+    {
+      "text": "Explain machine-learning methods and results to technical and nontechnical audiences.",
+      "kind": "source_stated",
+      "statement_type": "program_aim",
+      "source_id": "denison-mlai-home",
+      "locator": "Communicate effectively"
+    },
+    {
+      "text": "Prepare for work applying machine learning across industries and for graduate study in AI.",
+      "kind": "source_stated",
+      "statement_type": "career_pathway",
+      "source_id": "denison-mlai-home",
+      "locator": "Jobs as a machine learning & artificial intelligence major"
     }
   ],
   "courses": [
@@ -252,12 +287,12 @@
       "code": "ML/CS 240",
       "name": "Introduction to Machine Learning",
       "description": "Foundational machine learning concepts and applied algorithms.",
-      "prerequisites": null,
+      "prerequisites": "Published wording; and/or grouping unspecified: MATH 145 and CS 105 or CS 145 or one from the CS 109-CS 114 course range or CS 271 or CS 231 .",
       "credits": 4,
       "credit_unit": "semester_hours",
       "category": "ai_ml",
-      "source_id": "denison-mlai-courses",
-      "url": "https://denison.edu/academics/machine-learning-and-artificial-intelligence/courses",
+      "source_id": "denison-mlai-catalog",
+      "url": "https://catalog.denison.edu/catalog/courses-of-study/machine-learning/",
       "public_site": null,
       "syllabus": null
     },
@@ -266,12 +301,12 @@
       "code": "ML 310/MATH 428",
       "name": "Intermediate Machine Learning",
       "description": "Mathematical analysis and implementation of modern machine learning.",
-      "prerequisites": null,
+      "prerequisites": "Published wording; and/or grouping unspecified: MATH 213 and ML 221 or MATH 221 and ML 222 (coreq).",
       "credits": 4,
       "credit_unit": "semester_hours",
       "category": "ai_ml",
-      "source_id": "denison-mlai-courses",
-      "url": "https://denison.edu/academics/machine-learning-and-artificial-intelligence/courses",
+      "source_id": "denison-mlai-catalog",
+      "url": "https://catalog.denison.edu/catalog/courses-of-study/machine-learning/",
       "public_site": null,
       "syllabus": null
     },
@@ -280,12 +315,12 @@
       "code": "ML 400",
       "name": "Advanced Machine Learning",
       "description": "Deep learning, convolutional models and transformers.",
-      "prerequisites": null,
+      "prerequisites": "Published wording; and/or grouping unspecified: ML 240 or CS 240 and ML 310 or MATH 428 .",
       "credits": 4,
       "credit_unit": "semester_hours",
       "category": "ai_ml",
-      "source_id": "denison-mlai-courses",
-      "url": "https://denison.edu/academics/machine-learning-and-artificial-intelligence/courses",
+      "source_id": "denison-mlai-catalog",
+      "url": "https://catalog.denison.edu/catalog/courses-of-study/machine-learning/",
       "public_site": null,
       "syllabus": null
     }
@@ -391,7 +426,7 @@
     "Course codes preserve cross-listings. Course categories are editorial classifications.",
     "First-offered date is unknown. No launch date inferred from the approval announcement.",
     "The official department requirements page uses the full title Machine Learning and Artificial Intelligence; the catalog heading abbreviates it as Machine Learning & AI (ML) and spells it out in the mission statement.",
-    "The individual course prerequisite expressions for ML 240, ML 310 and ML 400 remain null because the catalog combines and/or without explicit grouping. ML 221 wording is retained with a grouping caveat. This is a course metadata gap; the minor requires all eight listed courses and separately maps its explicit preparatory conditions."
+    "2026-10-11 review retains the exact ML 240/310/400 prerequisite conjunctions with an explicit grouping caveat; their Boolean grouping remains unresolved. These are not converted into inferred enrollment rules. The minor independently requires all eight courses, including the listed cognates, so this metadata ambiguity does not change its local required-course inventory. Mission and communication statements are program aims, while the careers paragraph is a career pathway; no formal assessed learning outcomes are inferred. December 2025 faculty approval does not establish first offering, and the announcement’s early seven-course description does not replace the current eight-course catalog."
   ],
   "curriculum_audit": {
     "scope": "minor",

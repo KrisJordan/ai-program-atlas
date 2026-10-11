@@ -128,9 +128,9 @@ def test_concentration_complete_audits_and_unresolved_discoveries():
     ]:
         d = json.loads((ROOT / "data/programs" / f"{slug}.json").read_text())
         validate_program(d)
-        assert d["curriculum_status"] == "complete"
+        assert d["curriculum_status"] == ("partial" if slug == "ohio-state-ai-specialization" else "complete")
         assert d["curriculum_audit"]["scope"] == "concentration"
-        assert not d["curriculum_audit"]["unresolved_requirements"]
+        assert bool(d["curriculum_audit"]["unresolved_requirements"]) == (slug == "ohio-state-ai-specialization")
         assert d["curriculum_audit"]["metadata_gaps"]
     for slug in ["stony-brook-ai-data-science-specialization"]:
         d = json.loads((ROOT / "data/programs" / f"{slug}.json").read_text())

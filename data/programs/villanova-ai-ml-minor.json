@@ -16,7 +16,7 @@
   "overview": "Business AI minor with a reviewed local course inventory and published policy constraints.",
   "catalog_year": "2026-2027",
   "verification_status": "confirmed",
-  "last_verified": "2026-10-10",
+  "last_verified": "2026-10-11",
   "curriculum_status": "complete",
   "links": [
     {
@@ -85,9 +85,27 @@
       "catalog_year": "2026-2027",
       "locator": "Course description, credits and Prerequisites",
       "confidence": "high"
+    },
+    {
+      "id": "villanova-csc-1052-catalog",
+      "url": "https://live-villanova-catalog.cleancatalog.io/computing-sciences/csc-1052",
+      "title": "CSC 1052: Algorithms & Data Struc II",
+      "fetched_at": "2026-10-11T01:42:15+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Credits, description and Prerequisites; exact :C notation retained",
+      "confidence": "high"
     }
   ],
-  "outcomes": [],
+  "outcomes": [
+    {
+      "text": "Explore intelligent-system prototypes, language processing, expert systems, machine learning and robotics in a business-oriented minor.",
+      "kind": "source_stated",
+      "statement_type": "program_aim",
+      "source_id": "villanova-ai-ml-minor-identity",
+      "locator": "About: coursework overview"
+    }
+  ],
   "courses": [
     {
       "id": "villanova-mis-3300",
@@ -135,13 +153,13 @@
       "id": "villanova-csc-1052",
       "code": "CSC 1052",
       "name": "Algorithms & Data Struc II",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Develops object-oriented design, recursion and linked data structures, including stacks, queues, trees and maps.",
+      "prerequisites": "CSC 1051 :C or CSC 2014 :C",
+      "credits": 4.0,
       "credit_unit": "unknown",
       "category": "ai_ml",
-      "source_id": "villanova-ai-ml-minor-identity",
-      "url": "https://live-villanova-catalog.cleancatalog.io/business/artificial-intelligence-and-machine-learning-minor",
+      "source_id": "villanova-csc-1052-catalog",
+      "url": "https://live-villanova-catalog.cleancatalog.io/computing-sciences/csc-1052",
       "public_site": null,
       "syllabus": null
     }
@@ -257,7 +275,8 @@
     "Catalog identifies a business minor with MIS coursework; eligibility and overlap constraints are represented in the reviewed local inventory.",
     "Local program inventory only; does not certify the host BBA degree. Credits are source amounts; credit-unit normalization is unverified. Pool subtotals are not required totals.",
     "Required-course descriptions are original summaries of separate course catalog entries; prerequisites preserve source notation (:Y is not interpreted). Their sources are registered separately while course source_id remains the program catalog.",
-    "Conditional graduate substitutes are not ordinary unrestricted electives. Unknown elective metadata and public syllabi remain null."
+    "Conditional graduate substitutes are not ordinary unrestricted electives. Public syllabi remain unverified.",
+    "2026-10-11 review resolved the CSC 1052 substitution through the public Computing Sciences course directory. The course carries four source credits and prerequisites CSC 1051 :C or CSC 2014 :C; notation is not interpreted and the minor remains a nine-credit published curriculum with a conditional substitution. The course Last Offered list is not the minor launch date. Course credit units remain unnormalized. The About paragraph describes program aims, not separately documented learning outcomes."
   ],
   "curriculum_audit": {
     "scope": "minor",
@@ -276,8 +295,8 @@
     ],
     "unresolved_requirements": [],
     "metadata_gaps": [
-      "Only required-course descriptions/prerequisites reviewed; elective metadata and public course sites/syllabi remain unverified.",
-      "Credit unit normalization remains unknown."
+      "Public course sites and term-identified syllabi remain unverified.",
+      "Credit unit normalization remains unknown; source :C and :Y prerequisite notation is retained without interpretation."
     ]
   }
 }

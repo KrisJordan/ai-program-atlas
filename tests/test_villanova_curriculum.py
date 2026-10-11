@@ -50,7 +50,7 @@ def fixture(pid):
         else:
             s += "<p>three (3) unique business courses; may also fulfill the free elective requirements. CSC 4480 may not fulfill an Analytics &amp; Artificial Intelligence requirement.</p>"
     else:
-        s += "<p>three (3) unique MIS courses; open to all VSB students; may also fulfill the free elective requirements. CSC 1052 (Data Structures) may fulfill MIS 2020 only if not fulfilling the core Arts and Sciences requirement. Applied Quantitative Finance Concentration students may not also minor.</p>"
+        s += "<p>About: building prototype intelligent systems; supervised and unsupervised learning.</p><p>three (3) unique MIS courses; open to all VSB students; may also fulfill the free elective requirements. CSC 1052 (Data Structures) may fulfill MIS 2020 only if not fulfilling the core Arts and Sciences requirement. Applied Quantitative Finance Concentration students may not also minor.</p>"
     if co:
         s += '<div class="modal"><h5 class="modal-title">Other Approved Electives</h5><div class="modal-body"><span>Total Credits</span></div></div>'
     return s + "</main>"
