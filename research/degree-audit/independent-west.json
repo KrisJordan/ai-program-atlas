@@ -14,7 +14,7 @@
       "status": "blocked",
       "second_pass_status": "partial",
       "full_degree_verified": false,
-      "verified_scope": "Full mapped 23/17/3 role partition in the current public sequence; all 40 current course-card titles, credit amounts, descriptions and prerequisite fields. Three advising-only records remain outside the current approved-option union. Degree-wide policies not independently re-audited.",
+      "verified_scope": "The 43 course identities explicitly enumerated below at reviewed commits e1ff15a/ab9e959: 23 fixed, 17 options and three advising-only context records. All 40 then-current public course cards were independently read. Subsequent immersion branch additions are outside this independent content review; their primary review does not extend its certification. Degree-wide policies were not independently re-audited.",
       "sources": [
         {
           "url": "https://www.rit.edu/study/artificial-intelligence-bs#curriculum",
@@ -124,7 +124,7 @@
         }
       },
       "checks": {
-        "degree_identity": "The current public page identifies Artificial Intelligence BS and the displayed 2026\u201327 curriculum; this does not reconcile the separate advising version.",
+        "degree_identity": "The current public page identifies Artificial Intelligence BS and the displayed 2026–27 curriculum; this does not reconcile the separate advising version.",
         "required_and_choices": "23 fixed chart identities; six binary row menus contribute 12 option identities and the AI elective menu contributes five more. EEEE-485 OR CSCI-634 is one nested option. IDAI-499 appears twice as a placement requirement but one course identity.",
         "elective_pools": "Two choices across CSCI-431, the robotics either/or, SWEN-566 and PUBL-550. Do not import CSCI-632/LING-582/LING-584 from the conflicting advising list. GE/wellness/immersion/open slots have no artificial AI-elective memberships.",
         "prerequisites": "Read all 40 card fields. Preserve alternatives, equivalents, grade thresholds, standing and co-requisites. EEEE-346 is conditional preparation for optional EEEE-485, not an additional universal degree course. ISTE-476 eligibility omits the AI major and CSCI-431 has an anomalous self-referential exclusion. No displayed prerequisite remains null; LING-581 expectation in its description remains recorded.",
@@ -144,7 +144,9 @@
           "url": "https://www.rit.edu/study/artificial-intelligence-bs#curriculum"
         }
       ],
-      "correction_status": "No new seed correction required in reviewed scope; migration11 zero-credit behavior independently regression tested."
+      "correction_status": "No new seed correction required in reviewed scope; migration11 zero-credit behavior independently regression tested.",
+      "expected_inventory_scope": "explicit_reviewed_course_subset",
+      "scope_maintenance_note": "2026-10-11: Subsequent Mathematics and AI in Society immersion inventories expanded the program. Preserve the original independently transcribed sets and subject expectations as a bounded regression. New branch facts require their own independent source review; no whole-inventory or full-degree certification is implied."
     },
     {
       "program_id": "penn-state-ai-engineering-bs",
@@ -161,7 +163,7 @@
         {
           "url": "https://bulletins.psu.edu/undergraduate/colleges/engineering/artificial-intelligence-engineering-bs/",
           "catalog_year": "2026-2027",
-          "locator": "2026\u201327 identity, entrance, major tables, General Education, university requirements and suggested-plan limitation",
+          "locator": "2026–27 identity, entrance, major tables, General Education, university requirements and suggested-plan limitation",
           "checked_at": "2026-10-11",
           "access_status": "Independently reread official HTML preserved by robots-aware HTTP 200 capture on 2026-10-11T03:01:26+00:00"
         },
@@ -248,11 +250,11 @@
         }
       },
       "checks": {
-        "degree_identity": "AIE_BS, BS Artificial Intelligence Engineering, Engineering college; ends University Park. Minimum126 semester credits. 2026\u201327 rules do not replace pre-Summer2026 entry bulletins.",
+        "degree_identity": "AIE_BS, BS Artificial Intelligence Engineering, Engineering college; ends University Park. Minimum126 semester credits. 2026–27 rules do not replace pre-Summer2026 entry bulletins.",
         "required_and_choices": "17 prescribed fixed identities and 13 named alternatives. Introductory route is CMPSC131 OR (CMPSC121 AND DS120), not three separate substitutes. CMPSC132/122, CMPSC448/445 and two communication menus remain choices.",
         "elective_pools": "27 technical credits with at least15 at400-level; three nontechnical credits and first-year seminar remain source-defined open/approval obligations, not invented finite course lists.",
         "prerequisites": "A-I370 concurrent DS305/CMPSC465/CMPSC462 preparation and alternative statistics/discrete prerequisites do not manufacture additional fixed courses. MATH225 conditional programming preparation is retained. AIE355 malformed source parentheses are not silently corrected.",
-        "credits_and_units": "126degree minimum; major102\u2013103 and45GE include21overlap, not147\u2013148 distinct credits. Introductory programming route publishes3\u20134credits. No summing of mutually exclusive menus.",
+        "credits_and_units": "126degree minimum; major102–103 and45GE include21overlap, not147–148 distinct credits. Introductory programming route publishes3–4credits. No summing of mutually exclusive menus.",
         "classification": "Independently reread A-I305 algorithms/data structures ->foundations; A-I370 search/AI ->ai_ml; A-I410 deployment/lifecycle/infrastructure ->systems; AIE355 optimization andMATH225 calculus/linear algebra ->mathematics; AIE489W mixed project/engineering/communication ->other. Full30-course subject review not claimed.",
         "family_composition": "Distinct Engineering degree, not conflated with IST AIMA_BS or Harrisburg.",
         "degree_wide_requirements": "Read degree page GE domains/cultures/writing/GPA summary. Full approved GE/technical/nontechnical options and Senate application second pass not complete."
@@ -1115,7 +1117,7 @@
       ],
       "blockers": [
         {
-          "issue": "Four-semester residence wording remains inconsistent inside the 2026\u201327 GA.",
+          "issue": "Four-semester residence wording remains inconsistent inside the 2026–27 GA.",
           "url": "https://ga.rice.edu/undergraduate-students/academic-policies-procedures/graduation-requirements/",
           "related_urls": [
             "https://ga.rice.edu/undergraduate-students/academic-policies-procedures/transfer-credit/",
@@ -1279,7 +1281,7 @@
       "checks": {
         "degree_identity": "Official AI and Mathematics BS at Boston is a single combined major and award, not two independent degrees.",
         "required_and_choices": "Manual source transcription establishes 20 baseline fixed identities and 14 named options. Nine MATH courses and DS4400/4420 are fixed; CS1800/1802 are not degree rows. Placement and home-college conditions remain explicit, not new unconditional course obligations.",
-        "elective_pools": "Open MATH3001\u20134999 except4000 four-course/16-hour criterion and Khoury12-hour subject-range criterion remain open predicates; the four named Khoury course identities are observed examples of the published list, not its whole possible universe. Writing has separate two- and three-option selections.",
+        "elective_pools": "Open MATH3001–4999 except4000 four-course/16-hour criterion and Khoury12-hour subject-range criterion remain open predicates; the four named Khoury course identities are observed examples of the published list, not its whole possible universe. Writing has separate two- and three-option selections.",
         "prerequisites": "All34 source blocks reread. Corequisites accompany labs; MATH1342 allows head-adviser permission; MATH2321/2341 preparation is recommended, not compulsory. Alternative prerequisite codes such as CS1800 are not additional fixed degree requirements.",
         "credits_and_units": "Every represented course is 4 semester hours except CS2001/2101/1200/1210, INPR1000, INSC1000, EESC2000 and EECE2323 at 1. The page states 130 overall hours and 24 general-elective hours. No sum of overlapping rule amounts is treated as a student workload.",
         "classification": "Independent content partition: fixed 5 foundations, 10 mathematics, 2 AI, 2 systems and 1 mixed other; options 2 systems, 5 human context, 1 domain application and 6 other. DS4200 is mixed visual design/perception/programming; EECE2160 mixes embedded hardware and programming. Five orientation/career seminars remain source-inspected unclassified, not CS foundations.",
@@ -1738,7 +1740,7 @@
       "checks": {
         "degree_identity": "Official Artificial Intelligence and Physics, BS at Boston is one combined major/award; it is not a second Physics award stacked onto AI.",
         "required_and_choices": "Manual source transcription establishes 25 baseline fixed and 24 named option identities. Physics1 selects an entire lecture/lab/zero-hour recitation bundle; Physics2 is fixed. MATH1365/1465 and PHYS4115/5116 remain alternatives. PHYS5318 is fixed integrative capstone. The placement exception and home-college seminar choices are explicit conditional rules.",
-        "elective_pools": "Khoury4-hour subject ranges and Physics one-course/4-hour PHYS3000\u20135999 not-already-required predicate are open rules, not missing finite course lists. Named EECE/MKTG options are retained, with the EECE2322/2323 whole bundle. Adviser-approved research/graduate work is conditional; no invented exhaustive menu.",
+        "elective_pools": "Khoury4-hour subject ranges and Physics one-course/4-hour PHYS3000–5999 not-already-required predicate are open rules, not missing finite course lists. Named EECE/MKTG options are retained, with the EECE2322/2323 whole bundle. Adviser-approved research/graduate work is conditional; no invented exhaustive menu.",
         "prerequisites": "All49 represented blocks independently read (30 exact shared source blocks reused from Math review). Physics lectures/labs/recitations retain corequisites; prior and concurrent calculus routes remain distinct. PHYS5116 and5318 explicitly accept PHYS2303 with D- OR graduate admission, so neither is graduate-only merely from a 5000 number. Nondegree prerequisite alternatives do not become universally fixed courses.",
         "credits_and_units": "Each represented course is4 semester hours except 11 one-hour labs/seminars and three explicitly zero-hour PHYS recitations1163/1193/1167. Physics1 and Physics2 bundles each total5 using4+1+0. Source states132 total,16 general electives,4 Khoury electives and4 Physics elective hours; distinct constraints are not summed as an inferred schedule.",
         "classification": "Independent content partition: fixed5 foundations,6 mathematics,1 AI,2 systems,10 physics applications and1 mixed other; options3 mathematics,2 systems,5 human context,8 applications and6 other. PHYS5116 centers on graph/network analytical modeling across empirical domains and is mathematics, not computer infrastructure. PHYS5318 centers on experimental physics, not AI. MATH1465 is proof mathematics. Orientation/career seminars remain unclassified and DS4200/EECE2160 retain mixed content.",
@@ -2304,7 +2306,7 @@
       "checks": {
         "degree_identity": "Artificial Intelligence and Linguistics, BS at Boston is one combined major/award. Science linguistics GPA rules apply as explicitly stated; no separate Linguistics degree or automatic home college is inferred.",
         "required_and_choices": "Manual source sets contain18 baseline fixed and27 named option identities. Three LING foundations are fixed; four of five structure courses, one lab/research route, one seminar route and two nonreused electives are choices. CS4120 is fixed integration; DS4400/4420 are fixed AI. MATH1365/1465 are alternatives. Placement exemption remains a conditional substitution.",
-        "elective_pools": "Linguistics electives require two courses not used for other degree requirements from DEAF2700 or the LING3000\u20134999 range. This explicit nonreuse condition is preserved, not waived because some named options occur elsewhere. Khoury4-hour ranges and adviser-approved routes remain open criteria. No exhaustive finite LING list is inferred from the observed named records.",
+        "elective_pools": "Linguistics electives require two courses not used for other degree requirements from DEAF2700 or the LING3000–4999 range. This explicit nonreuse condition is preserved, not waived because some named options occur elsewhere. Khoury4-hour ranges and adviser-approved routes remain open criteria. No exhaustive finite LING list is inferred from the observed named records.",
         "prerequisites": "All represented source blocks reviewed. Optional PSYC4610/4658 require additional PSYC3464 or3466 preparation; DEAF2700 requires AMSL1102 with C alongside linguistics/writing preparation. These are conditional preparation, not additional universally fixed records. LING4654 has a description-level two-upper-level-courses OR one-plus-instructor-permission condition in addition to LING2350. Research4891/4991 requires prior faculty arrangements with instructor-defined content/requisites; null structured prerequisites do not establish unrestricted enrollment.",
         "credits_and_units": "All represented courses4 semester hours except CS2001/2101/1200/1210,INPR1000,INSC1000,EESC2000 andEECE2323 at1. Source states130 total,16 general electives,4 Khoury electives, four structure courses16 hours, lab/research4, seminar4 and linguistics electives8. These independently stated constraints are not an inferred student schedule.",
         "classification": "Fixed:5 foundations,3 mathematics,3 AI,2 systems,1 human context,3 linguistic/psychological applications,1 mixed other. Options:2 mathematics,2 systems,5 human context,9 applications,9 other. Scientific language structure is applications, cultural/social language analysis3412 is human context, PSYC2320 is statistical mathematics, and CS4120 is computational NLP AI. Generic chosen-topic research/seminar4891/4991/4654 remains unclassified rather than inferred from LING prefix.",
@@ -2693,7 +2695,7 @@
       "status": "blocked",
       "second_pass_status": "partial",
       "full_degree_verified": false,
-      "verified_scope": "Entire Health Science requirement panel; all52 represented courses (30 newly read blocks and22 exact blocks already independently inspected in earlier NE passes); role/identity/category/credit/prerequisite comparison; all applicable public Bouv\u00e9 policy paragraphs read, with conditional scope and pending primary mapping retained. Fresh isolated export/static render compared.",
+      "verified_scope": "Entire Health Science requirement panel; all52 represented courses (30 newly read blocks and22 exact blocks already independently inspected in earlier NE passes); role/identity/category/credit/prerequisite comparison; all applicable public Bouvé policy paragraphs read, with conditional scope and pending primary mapping retained. Fresh isolated export/static render compared.",
       "sources": [
         {
           "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-health-science-bs-bos/",
@@ -2845,14 +2847,14 @@
         {
           "url": "https://catalog.northeastern.edu/undergraduate/health-sciences/",
           "catalog_year": "2026-2027",
-          "locator": "Entire Bouv\u00e9 introduction and academic policy page, with cohort/clinical/professional scope distinctions",
+          "locator": "Entire Bouvé introduction and academic policy page, with cohort/clinical/professional scope distinctions",
           "checked_at": "2026-10-11",
           "access_status": "Public official cached home-17/home-18 HTML independently read; provenance in homecollege-index.json. No new retrieval claimed."
         },
         {
           "url": "https://catalog.northeastern.edu/undergraduate/health-sciences/academic-policies-procedures/",
           "catalog_year": "2026-2027",
-          "locator": "Entire Bouv\u00e9 introduction and academic policy page, with cohort/clinical/professional scope distinctions",
+          "locator": "Entire Bouvé introduction and academic policy page, with cohort/clinical/professional scope distinctions",
           "checked_at": "2026-10-11",
           "access_status": "Public official cached home-17/home-18 HTML independently read; provenance in homecollege-index.json. No new retrieval claimed."
         }
@@ -2865,7 +2867,7 @@
         "credits_and_units": "Courses are4 semester hours except twelve one-hour labs/seminars and two explicitly zero-hour recitations(CHEM1163 fixed,ENVR2502 optional). Biology and chemistry lecture bundles total5; the three-course ENVR route totals5. Source total135, general electives16 and upper electives4 remain separate published constraints.",
         "classification": "Fixed categories:5 foundations,3 mathematics,2 AI,2 systems,2 human context,11 applications and1 mixed other. Options:9 mathematics,10 human context,2 applications and5 unclassified other. CS2484 centers applied interface design; PHTH2515 institutional policy/finance and4120 discrimination are human context. Epidemiology4202 and intervention planning4540 are health-domain methods. Statistical courses are mathematics despite health/economics prefixes. Orientation/career seminars stay unclassified; DS4200 is mixed.",
         "family_composition": "All eight course-bearing family bindings match local rows. CS1800 is a local fixed mathematics row with exactly one inherited concurrent1802; neither is imported into variants that lack it. DS4420 is local fixed integration; no invented science/health course equivalents or duplicate identities.",
-        "degree_wide_requirements": "The degree limits C-or-higher to PHTH core, statistics, science and chosen HSCI1000/2000; it does not impose that rule on all computing courses. Shared university declaration/progression/NUpath/experiential/residence rules and conditional Khoury mapping have source evidence. Complete Bouv\u00e9 academic/petition/probation/dismissal/appeal/clinical-scope text was inspected; primary mapping and exact degree/cohort applicability remain incomplete. Named professional-conduct departments and clinical requirements are not automatically applied to every Health Science student."
+        "degree_wide_requirements": "The degree limits C-or-higher to PHTH core, statistics, science and chosen HSCI1000/2000; it does not impose that rule on all computing courses. Shared university declaration/progression/NUpath/experiential/residence rules and conditional Khoury mapping have source evidence. Complete Bouvé academic/petition/probation/dismissal/appeal/clinical-scope text was inspected; primary mapping and exact degree/cohort applicability remain incomplete. Named professional-conduct departments and clinical requirements are not automatically applied to every Health Science student."
       },
       "expected_profile": {
         "required": {
@@ -3251,14 +3253,14 @@
           ]
         }
       ],
-      "correction_status": "No mapped course role/category/credit correction needed. Public Bouv\u00e9 policy mapping remains accessible work; exact home/cohort applicability remains unresolved. Shared declaration/Khoury correction commits were verified present.",
+      "correction_status": "No mapped course role/category/credit correction needed. Public Bouvé policy mapping remains accessible work; exact home/cohort applicability remains unresolved. Shared declaration/Khoury correction commits were verified present.",
       "access_notes": [
         "Cached official course and policy pages were read with original fetch provenance retained. No fresh-source time was invented.",
         "No restricted college forms, student records or authentication was accessed. Clinical/employer-specific outcomes and individual approvals are not certified."
       ],
       "accessible_follow_up": [
         {
-          "issue": "Bouv\u00e9 full public policy has been independently read; conditional primary mapping remains pending. Includes major/cohort grade fallback, curriculum exception protocols, petitions and transfer preapproval, probation contracts/deadlines, twice-failed required-course dismissal, appeals and scoped clinical/professional rules.",
+          "issue": "Bouvé full public policy has been independently read; conditional primary mapping remains pending. Includes major/cohort grade fallback, curriculum exception protocols, petitions and transfer preapproval, probation contracts/deadlines, twice-failed required-course dismissal, appeals and scoped clinical/professional rules.",
           "source_urls": [
             "https://catalog.northeastern.edu/undergraduate/health-sciences/academic-policies-procedures/"
           ],

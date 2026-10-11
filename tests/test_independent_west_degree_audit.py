@@ -29,20 +29,33 @@ def entry(pid):
     return next(p for p in LEDGER['programs'] if p['program_id'] == pid)
 
 
+def reviewed_inventory(p, e):
+    """Apply only an explicitly declared historical review boundary."""
+    if e.get('expected_inventory_scope') != 'explicit_reviewed_course_subset':
+        return p
+    expected = set().union(*(set(ids) for ids in e['expected_course_ids'].values()))
+    mapped = identity_map(p)
+    assert expected <= set(mapped.values()), 'An independently reviewed course was removed'
+    return {**p, 'courses': [c for c in p['courses'] if mapped[c['id']] in expected],
+            'course_identity_groups': [g for g in p.get('course_identity_groups', [])
+                                      if g['canonical_course_id'] in expected]}
+
+
 @pytest.mark.parametrize('pid', [RIT, ENG, IST])
-def test_all_mapped_roles_match_independently_transcribed_source_sets(pid):
+def test_declared_review_scope_matches_independently_transcribed_source_sets(pid):
     p = load(pid)
     before = deepcopy(p)
     e = entry(pid)
-    mapped = identity_map(p)
-    result = requirement_profile(p)
+    scoped = reviewed_inventory(p, e)
+    mapped = identity_map(scoped)
+    result = requirement_profile(scoped)
     expected = e['expected_course_ids']
     assert set().union(*(set(ids) for ids in expected.values())) == set(mapped.values())
     for role, ids in expected.items():
         assert result[role]['count'] == len(ids) == e['expected_profile'][role]['count']
         # Keep all aliases of one identity together while isolating its role.
         for cid in ids:
-            isolated = {**p, 'courses': [c for c in p['courses'] if mapped[c['id']] == cid],
+            isolated = {**scoped, 'courses': [c for c in scoped['courses'] if mapped[c['id']] == cid],
                         'course_identity_groups': [g for g in p.get('course_identity_groups', [])
                                                    if g['canonical_course_id'] == cid]}
             single = requirement_profile(isolated)
@@ -53,9 +66,9 @@ def test_all_mapped_roles_match_independently_transcribed_source_sets(pid):
     assert e['second_pass_status'] == 'partial'
 
 
-def test_rit_full_card_subject_partition_and_mixed_semantics():
+def test_rit_original_independent_card_partition_and_mixed_semantics():
     p = load(RIT)
-    result = requirement_profile(p)
+    result = requirement_profile(reviewed_inventory(p, entry(RIT)))
     for role, expected in entry(RIT)['expected_profile'].items():
         assert result[role]['categories'] == expected['categories']
     courses = {c['code']: c for c in p['courses']}
@@ -409,3 +422,18 @@ def test_ne_health_fresh_export_and_render_match_manual_profile(conn, tmp_path):
             assert int(label.split()[0]) == count
     assert '/ai-program-atlas/assets/' in html
     assert not conn.execute('PRAGMA foreign_key_check').fetchall()
+
+
+def test_rit_later_immersion_additions_do_not_receive_independent_certification():
+    p = load(RIT); e = entry(RIT)
+    reviewed = reviewed_inventory(p,e)
+    old_ids = {c['id'] for c in reviewed['courses']}
+    new = [c for c in p['courses'] if c['id'] not in old_ids]
+    assert len(old_ids)==43 and new
+    assert e['second_pass_status']=='partial' and not e['full_degree_verified']
+    assert 'outside this independent content review' in e['verified_scope']
+    assert requirement_profile(p)['required']['count']==23
+    assert requirement_profile({**p,'courses':new,'course_identity_groups':[]})['required']['count']==0
+    missing = {**p,'courses':[c for c in p['courses'] if c['id'] != e['expected_course_ids']['required'][0]]}
+    with pytest.raises(AssertionError,match='independently reviewed course was removed'):
+        reviewed_inventory(missing,e)
