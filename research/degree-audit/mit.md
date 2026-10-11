@@ -192,3 +192,10 @@ HASS now has163description-supported occurrences,679limited-title dispositions a
 The actual public CMS panels explicitly say same subject as:Spring2026CMS524→STS024;Fall2026CMS406→21A505,STS065. They do not say meets with. Original represented CMS/education/STS/computing lists give matching joint labels and exact titles. This is direct identity evidence beyond a slash or similar title, though reciprocal independent departmental descriptions were not available. Two reviewedgroups map six source occurrences to two joint subjects. No title-held, historical, merely equivalent or graduate meets-with pair is merged.
 
 The original1189source rows remain. With the two priorEECSgroups, currentmappedidentities now total1182:3fixed+275options+904contextual. Fourcontextual duplicates were removed(twohumancontext,twoother/mixed); prescribed selection counts and fixedprofile2foundations+1math do not change. The independent expected-ID sets and category sums reflect that exact bounded change. This is not exhaustive cross-list resolution or degree completion.
+
+
+## Further archived Literature content — 2026-10-11
+
+Contributions11a026b andf900d7d add12 actual-description upgrades acrossFall2024,Fall2022 andSpring2023. Explicit cancellation of21L501 inFall2024 is preserved; an archived description never establishes current availability. TeachingSpanish does not override the formalnone prerequisite on637;638 separately requires intermediateSpanishorpermission. Source-term identities, restrictions and units remain individually cited.
+
+HASS description-supported occurrences now total175, with667limited-title dispositions and three code-onlyunknowns. Primaryidentityholds and degreepolicyquestions remain; fixed3 and other currentrolecounts are unchanged.
