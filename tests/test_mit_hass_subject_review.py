@@ -215,7 +215,7 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']['description_reviewed_records']==420
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==424
     assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
         o=next(o for o in entry(code)['observations'] if o.get('evidence_basis')=='official_title_only')
@@ -258,7 +258,7 @@ def test_political_pool_membership_does_not_classify_computing_or_methods():
     rows=[r for r in MANIFEST['courses'].values() if r['listed_source_id']=='mit-ai-decision-making-bs-hass-political-subfields']
     bycode={r['listed_code']:r for r in rows}
     for code in ['17.835','17.C08J','17.811','17.447J','17.803']:
-        o=bycode[code]['observations'][-1]
+        o=next(o for o in bycode[code]['observations'] if o['evidence_basis']=='official_title_only')
         assert o['category']=='other' and o['status']=='unclassified'
         assert o['evidence_basis']=='official_title_only'
         assert o['description_digest'] is None
@@ -1519,3 +1519,28 @@ def test_concourse_explicit_companion_numbers_support_separate_political_records
         course=dict(id=cid,code=row['listed_code'],name=row['listed_name'],source_id=row['listed_source_id'])
         assert review.matched_review(course,o,e['source_url'],MANIFEST)==e
         assert review.matched_review(course,{**o,'code':o['code'].split('/')[0]},e['source_url'],MANIFEST) is None
+
+
+def test_common_ground_explicit_metadata_and_substantive_subject_distinctions():
+    report=MANIFEST['common_ground_description_review'];assert len(report['upgraded_record_ids'])==4
+    ethics=entry('24.C40')['observations'][-1];ai=entry('24.S00')['observations'][-1];causal=entry('17.C08J')['observations'][-1]
+    assert ethics['prerequisites']=='None' and ethics['category']=='human_context'
+    assert ai['prerequisites'] is None and ai['status']=='mixed'
+    assert ai['candidate_categories']==['mathematics','ai_ml']
+    assert causal['category']=='mathematics' and causal['prerequisites'].endswith('or permission of instructor')
+    for e in [ethics,ai,causal]:
+        assert e['catalog_year'] is None and e['credits']==12
+        assert any('not a dated offering' in n for n in e['restrictions'])
+    with pytest.raises(ValueError):review.observe_common_ground_subject('<h1>C40 Ethics of Computing</h1>')
+
+
+def test_common_ground_actual_sources_pin_special_topic_and_eligibility():
+    for cid in MANIFEST['common_ground_description_review']['upgraded_record_ids']:
+        row=MANIFEST['courses'][cid];e=row['observations'][-1];key=e['source_id'].removeprefix('mit-ai-hass-review-')
+        path=Path('/tmp/mit-hass-subjects/urban-dept-'+key+'.html')
+        if not path.exists():pytest.skip('Optional public Common Ground captures')
+        o=review.observe_common_ground_subject(path.read_text())[0]
+        course=dict(id=cid,code=row['listed_code'],name=row['listed_name'],source_id=row['listed_source_id'])
+        assert review.matched_review(course,o,e['source_url'],MANIFEST)==e
+        for wrong in [{**o,'name':'Different special subject'},{**o,'prerequisites':'Permission required'},{**o,'term':'Fall 2026'}]:
+            assert review.matched_review(course,wrong,e['source_url'],MANIFEST) is None

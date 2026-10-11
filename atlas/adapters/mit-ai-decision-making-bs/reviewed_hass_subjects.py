@@ -736,3 +736,35 @@ def observe_urban_project_course(html):
     return [dict(code=match[1], name=title['data-typed-items'], term=match[2],
                  description=description, units=None, prerequisites=None,
                  topic=clean(soup.select_one('.title h2')))]
+
+
+def observe_common_ground_subject(html):
+    """Read published Common Ground descriptions and actual offered-under numbers."""
+    soup = BeautifulSoup(html, 'html.parser')
+    title = clean(soup.find('h1'))
+    heading = re.fullmatch(r'C\d+\s+(.+)', title)
+    metadata_node = next((n for n in soup.find_all(['li', 'p']) if clean(n).startswith('Offered under:')), None)
+    if heading is None or metadata_node is None:
+        raise ValueError('Common Ground subject title or identity fields missing')
+    container = metadata_node.find_parent('div', class_='col')
+    divider = container.find('hr', recursive=False) if container else None
+    if divider is None:
+        raise ValueError('Common Ground metadata/description divider missing')
+    metadata = clean(metadata_node.parent) if metadata_node.name == 'li' else clean(metadata_node)
+    fields = {}
+    for key in ['Offered under', 'Term(s)', 'Level', 'Units', 'Prerequisite', 'Instructors']:
+        match = re.search(re.escape(key)+r':\s*(.*?)(?=\s+(?:Offered under|Term\(s\)|Level|Units|Prerequisite|Instructors):|$)', metadata)
+        if match:
+            fields[key] = match[1].strip()
+    if not fields.get('Offered under') or not re.fullmatch(r'\d+', fields.get('Units', '')):
+        raise ValueError('Common Ground printed course numbers or units changed')
+    paragraphs = []
+    for sibling in divider.find_next_siblings():
+        if sibling.name == 'p':
+            paragraphs.append(clean(sibling))
+    description = ' '.join(paragraphs)
+    if len(description) < 100:
+        raise ValueError('Common Ground actual description missing')
+    return [dict(code=fields['Offered under'], name=heading[1], term=None,
+                 availability=fields.get('Term(s)'), description=description,
+                 prerequisites=fields.get('Prerequisite'), units=fields['Units'], source_fields=fields)]
