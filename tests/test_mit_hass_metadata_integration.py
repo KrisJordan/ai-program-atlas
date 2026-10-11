@@ -324,3 +324,14 @@ def test_wgs_historical_year_change_withdraws_saved_review():
     rows=m.parse(html,url)['courses']
     assert len(rows)==1 and rows[0]['source_id']==sid
     assert m.parse(html.replace('2025-2026','2026-2027'),url)['courses']==[]
+
+
+def test_dlab_current_page_does_not_make_historical_travel_a_current_requirement():
+    p=json.loads(Path('data/programs/mit-ai-decision-making-bs.json').read_text())
+    c=next(c for c in p['courses'] if c['id']=='mit-ai-hass-urban-11-025-j')
+    assert c['credits']==12 and c['prerequisites'].startswith('None.')
+    assert 'first class session' in c['prerequisites']
+    assert set(c['category_review']['candidate_categories'])=={'applications','human_context'}
+    assert c['category']=='other'
+    assert any('2022' in n and 'does not promise or require present travel' in n for n in c['notes'])
+    assert c['public_site'] is None and c['syllabus'] is None

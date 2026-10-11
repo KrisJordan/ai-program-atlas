@@ -3425,6 +3425,16 @@
       "catalog_year": "Spring 2025-2026",
       "locator": "Exact WGS course identity, visible historical season/year, full description and printed metadata",
       "confidence": "high"
+    },
+    {
+      "id": "mit-ai-hass-review-dlab-development",
+      "url": "https://d-lab.mit.edu/academics/classes/d-lab-development",
+      "title": "MIT D-Lab / D-Lab: Development",
+      "fetched_at": "2026-10-11T08:00:05+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "D-Lab exact title and printed 11.025 component; full description, units, prerequisites and dated travel context",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -31214,9 +31224,9 @@
       "id": "mit-ai-hass-urban-11-025-j",
       "code": "11.025[J]",
       "name": "D-Lab: Development",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Combines analysis of poverty and development with experiential projects adapting low-cost sustainable technologies. Teams work with community organizations on needs assessment, evaluation and long-term projects, while studying cultural, social, political, environmental and economic context.",
+      "prerequisites": "None. Please attend the first class session to participate. There is no application process for cross-registered students from Harvard and Wellesley; please attend the first class session to learn more. Contact lead instructor Libby Hsu with questions.",
+      "credits": 12,
       "credit_unit": "units",
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-urban",
@@ -31224,21 +31234,29 @@
       "public_site": null,
       "syllabus": null,
       "notes": [
-        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
         "Observed departmental source term/version: not stated. The original list identity is retained.",
-        "Exact original source title/code retained, including dated special-subject topics and compound labels. No alias group, current offering or enrollment permission inferred."
+        "Exact original source title/code retained, including dated special-subject topics and compound labels. No alias group, current offering or enrollment permission inferred.",
+        "Undated course page: Fall (Offered since2002) is an availability/history statement, not a catalog edition or a first-offered date for the AI degree.",
+        "The travel paragraph explicitly concerns2022\u201323and is conditional on COVID-19guidelines and funding; it does not promise or require present travel.",
+        "Prerequisites explicitly None, but attend the first class session to participate. Harvard and Wellesley cross-registered students have no application process and should attend that session to learn more.",
+        "Class size printed40students; listed grading A/B/C/D/F.",
+        "Printed undergraduate and graduate numbers are retained separately in source context; no identity group or equal-workload claim is created.",
+        "The exact D-Lab: Development title and explicit11.025component establish this bounded correspondence. Original11.025[J]label retained; no J suffix or companion-number identity is invented."
       ],
       "category_review": {
-        "status": "unclassified",
+        "status": "mixed",
         "taxonomy_version": "1",
         "reviewed_at": "2026-10-11",
         "source_ids": [
           "mit-ai-decision-making-bs-hass-urban",
-          "mit-ai-hass-review-list-titles-urban"
+          "mit-ai-hass-review-dlab-development"
         ],
-        "locator": "urban public source / exact 11.025[J] / D-Lab: Development",
-        "rationale": "Limited official-title-only review: subject balance or printed identity is insufficiently precise to select one category. Technical, methods, performance and variable-topic wording does not certify an underlying computing or other course.",
-        "candidate_categories": []
+        "locator": "Course description / Projects and Teams / Travel and Funding / Prerequisites / Course Information",
+        "rationale": "Actual course combines hands-on technological development and implementation with substantial social, political and cultural analysis of poverty and development. Preserve domain practice plus human context rather than deriving a single subject from the title.",
+        "candidate_categories": [
+          "applications",
+          "human_context"
+        ]
       }
     },
     {
@@ -55648,7 +55666,8 @@
     "2026-10-11: Five HASS occurrences gain explicitly dated OCW descriptions: four archaeology/materials records combine scientific or practical methods with cultural interpretation; exact Spring 2024 CMS.S61 STEAM Learning Architecture develops educational-design practice. Other CMS.S61 topics and the differently titled Human Evolution occurrence remain unchanged. Unknown units/prerequisites and all requirement roles are preserved.",
     "2026-10-11: Five HASS occurrences gain dated OCW content for CMS.360, CMS.361 in two source lists, CMS.621, and 21L.715. Exact descriptions support human-context media inquiry; CMS.621 explicitly prints no prerequisites. The differently titled CMS.633 source remains withheld, with no same-code topic propagation.",
     "2026-10-11: Five HASS occurrences gain actual public Concourse department descriptions. CC.110 has no prerequisites but CC.010-or-CC.A10 co-requisite and Concourse-only enrollment; CC.117 has no prerequisites, irregular offering and Concourse preference. Their numeric unit triplets total12; CC.111 and14.70 unit/prerequisite fields remain unknown. Companion identifiers are printed evidence, not a new canonical group. The changed-title CC.116 remains withheld.",
-    "2026-10-11: Nineteen HASS occurrences gain descriptions from twelve dated WGS detail pages. Visible season/year and topic govern; no historical offering is certified current. WGS243 combines digital-tool implementation and feminist inquiry; prior coding/GIS is helpful, not required. Printed same-subject components support bounded metadata without identity merging; the WGS231 Fall2026 content conflict remains held. Department metadata pages do not become public teaching sites or syllabi."
+    "2026-10-11: Nineteen HASS occurrences gain descriptions from twelve dated WGS detail pages. Visible season/year and topic govern; no historical offering is certified current. WGS243 combines digital-tool implementation and feminist inquiry; prior coding/GIS is helpful, not required. Printed same-subject components support bounded metadata without identity merging; the WGS231 Fall2026 content conflict remains held. Department metadata pages do not become public teaching sites or syllabi.",
+    "2026-10-11: Exact D-Lab: Development/11.025 evidence supports one additional HASS description,12MITunits and explicit None prerequisites with first-session participation and Harvard/Wellesley cross-registration guidance. Mixed practical development and social inquiry is preserved. The undated course page does not make its2022\u201323conditional travel paragraph current; companion graduate numbers do not imply equal workload or identity merging."
   ],
   "curriculum_audit": {
     "scope": "degree",

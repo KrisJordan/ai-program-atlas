@@ -8,7 +8,7 @@ PID='mit-ai-decision-making-bs'
 observer=import_module('atlas.adapters.mit-ai-decision-making-bs.reviewed_hass_subjects')
 public_resources=import_module('atlas.adapters.mit-ai-decision-making-bs.public_resources')
 MANIFEST=json.loads(Path(__file__).with_name('reviewed_hass_subjects.json').read_text())
-PARSERS={k:getattr(observer,'observe_'+k)for k in ['architecture','literature','history','wgs','wgs_detail','performing_arts','cmsw','language_titles','political_pdf_titles','sts_titles','anthropology_titles','economics_titles','shass_field_titles','remaining_list_titles','french_spotlights','literature_aliases','ocw_syllabus','minds_machines','ocw_course','ocw_language_syllabus','music_semester_capture','theater_semester_capture','concourse_subject','wgs_archive_detail']}
+PARSERS={k:getattr(observer,'observe_'+k)for k in ['architecture','literature','history','wgs','wgs_detail','performing_arts','cmsw','language_titles','political_pdf_titles','sts_titles','anthropology_titles','economics_titles','shass_field_titles','remaining_list_titles','french_spotlights','literature_aliases','ocw_syllabus','minds_machines','ocw_course','ocw_language_syllabus','music_semester_capture','theater_semester_capture','concourse_subject','wgs_archive_detail','dlab_course']}
 INTEGRATED=json.loads(Path(__file__).with_name('integrated_hass_scope.json').read_text())
 SPECS={sid:MANIFEST['source_specs'][sid]for sid in INTEGRATED['source_ids']}
 
