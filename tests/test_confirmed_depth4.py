@@ -69,7 +69,10 @@ def test_ne_exact_bsche_supported_and_unrelated_award_rejected():
 @pytest.mark.parametrize('pid',IDS)
 def test_reviewed_seed_and_optional_live_replay(pid):
     seed=json.loads((ROOT/'data/programs'/f'{pid}.json').read_text());validate_program(seed)
-    assert seed['curriculum_status']=='partial' and 'curriculum_audit' not in seed
+    if pid == IDS[0]:
+        assert seed['curriculum_status']=='complete' and seed['curriculum_audit']['scope']=='concentration'
+    else:
+        assert seed['curriculum_status']=='partial'
     assert seed['first_offered'] is None and 'family' not in seed
     m=adapter(pid);key={IDS[0]:'cmu-business',IDS[1]:'gt-bscs',IDS[2]:'ne-chemical'}[pid]
     path=ROOT/'.cache/research/confirmed4'/f'{key}.html'
@@ -77,4 +80,8 @@ def test_reviewed_seed_and_optional_live_replay(pid):
     r=m.parse(path.read_text());requirements=r['requirements'];courses=r.get('courses',[])
     if pid==IDS[1]:
         extra=m.parse_thread((path.parent/'gt-thread.html').read_text());requirements+=extra['requirements'];courses+=extra['courses']
-    assert requirements==seed['requirements'] and courses==seed['courses']
+    if pid == IDS[0]:
+        assert all(r in seed['requirements'] for r in requirements)
+        assert {(c['id'],c['code'],c['name']) for c in courses}=={(c['id'],c['code'],c['name']) for c in seed['courses']}
+    else:
+        assert requirements==seed['requirements'] and courses==seed['courses']

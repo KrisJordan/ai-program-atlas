@@ -46,3 +46,14 @@ def parse(html):
         rule('group-'+str(group),'Required course' if kind=='all' else 'Elective group '+str(group-1),kind,count,ids=ids,summary='Complete every listed course.' if kind=='all' else 'Select within this group independently of the other elective groups.')
     if group!=4 or len({c['id'] for c in courses})!=len(courses): raise ValueError('Changed group structure or duplicate course requires review')
     return dict(id=PROGRAM_ID,title='AI and Business',program_kind='concentration',award_level='concentration',curriculum_status='partial',courses=courses,requirements=requirements)
+
+from importlib import import_module
+policies=import_module('atlas.adapters.cmu-ai-business-concentration.policies')
+
+def parse_catalog_with_context(html):
+    result=parse(html)
+    result['requirements']+=policies.parse_host_context(html)['requirements']
+    return result
+
+SOURCE_PARSERS={SOURCES[0]:parse_catalog_with_context,**policies.SOURCE_PARSERS}
+SOURCES=(*SOURCES,*policies.SOURCE_PARSERS)
