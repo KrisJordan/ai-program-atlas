@@ -26,6 +26,8 @@ def test_repeated_ensemble_bundles_are_not_three_distinct_course_identities():
         assert c['PRFL-'+str(i)]['credits'] is None and 'zero-credit' in rule['summary']
     assert c['PRFL-220']['credits']==1
     assert r['theatre-arts-immersion-prfl-220-bundle']['credits']==3
+    assert 'one credit per enrollment' in r['theatre-arts-immersion-prfl-220-bundle']['summary']
+    assert '0–1' not in r['theatre-arts-immersion-prfl-220-bundle']['summary']
     assert r['theatre-arts-immersion-dance-entry']['kind']=='alternative' and r['theatre-arts-immersion-dance-entry']['count']==1
     assert len(r['theatre-arts-immersion-dance-entry']['course_ids'])==5
     assert r['dance-immersion-lower']['count']==r['dance-immersion-additional']['count']==1
