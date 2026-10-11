@@ -45,3 +45,22 @@ def test_business_domain_communication_and_restrictions_are_distinct():
         r=rules['cmu-bs-ai-department-entry-'+code+'-0'];assert r['kind']=='note'and not r['course_ids']
     spec=next(s for s in MANIFEST.values()if '70-100'in s['subjects'])
     assert 'Declared Tepper BA students' in spec['conditions']['70-100'][0]['marker']
+
+
+def test_complete_course_dispositions_preserve_missing_and_mixed_cases():
+    p=json.loads(Path('data/programs/cmu-bs-ai.json').read_text());validate_program(p);by={c['code']:c for c in p['courses']}
+    assert all(c.get('category_review')for c in by.values())
+    for code in ['84-387','84-405','80-249','76-107']:
+        assert by[code]['category']=='human_context'
+    assert by['27-100']['category']=='applications'and by['27-100']['credits']==12
+    assert by['82-119']['category_review']['status']=='mixed'
+    assert by['76-221']['category_review']['status']=='unclassified'
+    assert 'limited title-based' in by['76-230']['category_review']['rationale']
+    for code in ['48-321','79-156','79-177','79-244','79-286']:
+        assert by[code]['category_review']['status']=='unclassified'
+        assert by[code]['credits']==9  # published pool evidence is not erased by an absent description
+    assert by['76-107']['credits']==4.5
+    assert by['82-304']['prerequisites']=='82-204 or 82-202 Min. grade C'
+    rules={r['id']:r for r in p['requirements']}
+    assert 'three extra' in rules['cmu-bs-ai-department-entry-82-293-0']['summary']
+    assert 'special invitation' in rules['cmu-bs-ai-department-entry-76-102-0']['summary']
