@@ -29,3 +29,11 @@ The initial cross-program screen also flagged Northwestern’s large fixed `othe
 Detail and comparison profiles now show **0 mapped**, define it as no mapped classified records in the selected view, and state that it does not prove absence from the curriculum. Per-view reviewed/mixed/unclassified/unreviewed counts are separate from requirement completeness. Course rows disclose legacy/unreviewed classification or the source-backed rationale, locator and sources. Coverage/methodology and degree pages report the separate correctness audit.
 
 `tests/test_independent_degree_profile.py` encodes the manually established Case fixed identities and introductory alternatives, CMU/Penn source-specific examples, MIT source-version isolation and resolved-family checks. Browser regressions verify corrected Case foundations2 with its official classification link and zero/missingness wording on mobile detail/comparison, preserving rank sorting and history.
+
+## WPI bounded role correction (146700c)
+
+Independently fetched both current official WPI degree pages. The AI page’s AI Core Courses explicitly lists “Three of” DS1010, DS2010 and DS3010 with exactly those three identities and3/3 units. This is source-established closure, not a generic inference that any observed menu matching its count is complete. Together with CS2223 and MA2611/2612, the fixed mapped set is six. The8/3-unit AI core total includes this sequence; it is not an additional8/3-unit selection. The revised graph has6 fixed,211 options and2 contextual records.
+
+The Business Analytics and Applied AI source uses recommended/equivalent mathematics and course alternatives through the foundation blocks. Its six-elective load retains the Business Analytics Applications minimum3, Computing/Data/Math maximum3, and Business/Entrepreneurship maximum2. The revised graph’s0 fixed,47 options and2 contextual records is consistent with these choices; it does not imply no required curriculum.
+
+WPI DS1010/2010/3010 mixed/other classifications explicitly disclose title-only uncertainty. This pass verifies the source-defined role correction, not all course categories or degree-wide policies. Full-degree second-pass status remains partial.

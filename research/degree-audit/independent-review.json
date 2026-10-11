@@ -164,6 +164,89 @@
         "Full degree-wide policy second pass remains unfinished; earlier complete inventory is not full correctness verification."
       ],
       "result": "Fixed-core correction independently verified; full-degree second pass remains partial."
+    },
+    {
+      "program_id": "wpi-ai-bs",
+      "institution_id": "worcester-polytechnic-institute",
+      "reviewed_commit": "146700c",
+      "second_pass_status": "partial",
+      "full_degree_verified": false,
+      "verified_scope": "Source-defined fixed versus choice role correction; not all course subject reviews.",
+      "sources": [
+        {
+          "url": "https://wpi.cleancatalog.net/artificial-intelligence/artificial-intelligence-major",
+          "locator": "AI Core Courses and closed DS foundations clause",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; robots-aware fetch"
+        }
+      ],
+      "expected_course_ids": {
+        "required": [
+          "wpi-cs-2223",
+          "wpi-ma-2611",
+          "wpi-ma-2612",
+          "wpi-ds-1010",
+          "wpi-ds-2010",
+          "wpi-ds-3010"
+        ],
+        "options": null,
+        "unresolved": [
+          "wpi-hu-3900",
+          "wpi-hu-3910"
+        ]
+      },
+      "expected_profile": null,
+      "observed_profile_counts": {
+        "required": 6,
+        "options": 211,
+        "unresolved": 2
+      },
+      "findings": [
+        "AI degree explicitly requires three of exactly three DS identities; source-closed selection supports all three, without generally promoting count-equals-observed-pool cases. The8/3-unit core amount is inclusive, not additive.",
+        "Mixed/unclassified reviews remain visibly distinct from reviewed classifications. DS titles alone do not establish a primary subject; full course-description second pass remains unfinished."
+      ],
+      "remaining": [
+        "No independent verification of every WPI course classification or degree-wide policy in this bounded pass."
+      ],
+      "result": "Specific graph-role correction source-verified; full-degree second pass partial."
+    },
+    {
+      "program_id": "wpi-business-analytics-applied-ai-bs",
+      "institution_id": "worcester-polytechnic-institute",
+      "reviewed_commit": "146700c",
+      "second_pass_status": "partial",
+      "full_degree_verified": false,
+      "verified_scope": "Source-defined fixed versus choice role correction; not all course subject reviews.",
+      "sources": [
+        {
+          "url": "https://wpi.cleancatalog.net/business/business-analytics-and-applied-ai-major",
+          "locator": "Recommended/equivalent foundations and six-elective selection with category caps",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; robots-aware fetch"
+        }
+      ],
+      "expected_course_ids": {
+        "required": [],
+        "options": null,
+        "unresolved": [
+          "wpi-hu-3900",
+          "wpi-hu-3910"
+        ]
+      },
+      "expected_profile": null,
+      "observed_profile_counts": {
+        "required": 0,
+        "options": 47,
+        "unresolved": 2
+      },
+      "findings": [
+        "Foundation tables consistently permit alternatives/equivalents. Six elective courses retain category minimum/maximum constraints. Zero fixed mapped identities does not mean zero curriculum obligations.",
+        "Mixed/unclassified reviews remain visibly distinct from reviewed classifications. DS titles alone do not establish a primary subject; full course-description second pass remains unfinished."
+      ],
+      "remaining": [
+        "No independent verification of every WPI course classification or degree-wide policy in this bounded pass."
+      ],
+      "result": "Specific graph-role correction source-verified; full-degree second pass partial."
     }
   ],
   "cross_program_screen": [
