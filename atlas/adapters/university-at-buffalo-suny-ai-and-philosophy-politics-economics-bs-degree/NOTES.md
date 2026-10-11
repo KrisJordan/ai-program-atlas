@@ -22,3 +22,13 @@ Retrieve the actual catalog through permitted public access when readable. Verif
 ## Rerun and verification
 
 The three source parsers independently guard the specific program heading, explicit BS identity, and AI+X membership/framework. Scrapers only emit observed subsets and never replay reviewer audits or mark completeness. Synthetic tests reject changed award/title; family tests validate explicit bindings and unresolved inventory. Production cache replay twice confirms deterministic observations and no duplicate candidates on repeat.
+
+## Independent university policies — 2026-10-11
+
+Six public UB Curriculum/registrar pages fetched200 with the bounded robots-aware transport. These are independent public sources; they do not access the unavailable catalog. Mapped university minima, entry-semester seminar, foundations amounts/science lab relationship, Pathway structure, general-education capstone prerequisites/repeat rule, final grades and transfer-record conditions. The seminar page explicitly establishes semester terminology; credit amounts are not assumed to be semester hours without a definition.
+
+The public Pathways table has830 Winter2027/Spring2027 offering rows,308 distinct observed code/title pairs, grouped in134 term/pathway/list contexts. Open-seat counts are deliberately not persisted. These are dated planning candidates, not the entire approved list and not required AI-major courses. Repeated code/title observations are deduplicated, while differing topic titles remain distinct. No list-level choose-N rule was inferred. The separate dynamic all-course table contains only its header in fetched HTML; no hidden application state was queried.
+
+UBC399 is the university general-education capstone, not presumed equivalent to the AI+X major capstone. ENG105 is explicitly approved for CL1; its full catalog title is unknown. The overview's40-credit headline coexists with the transfer-specific one-credit seminar and is not treated as an exact additive degree total. University120-credit/30-campus minima are not proof of a particular major total.
+
+Inventory stays partial: AI+X major courses/requirements remain unavailable; complete general-education approved pools, Pathways area/list logic, transfer exceptions and remaining local policies still need review. The catalog root returned403 in the ordinary reader. Exact independent URLs are registered in the seed and source-specific rerunnable adapter; missing/changed material policies or malformed offering rows stop observation. No automatic freshness/audit certification. Raw sources remain outside git.

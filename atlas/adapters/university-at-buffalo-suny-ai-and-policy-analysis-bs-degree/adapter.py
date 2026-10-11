@@ -20,3 +20,8 @@ def parse_components(html: str) -> dict:
 
 
 SOURCE_PARSERS = {SOURCES[0]: parse, FAMILY_URL: parse_components}
+
+from atlas.adapters.buffalo_public_policies import register as register_public_policies
+SOURCES = list(SOURCES)
+SOURCE_PARSERS = globals().get("SOURCE_PARSERS", {})
+register_public_policies(PROGRAM_ID, SOURCES, SOURCE_PARSERS)

@@ -13,3 +13,11 @@ The earlier seven-record review could not retrieve the catalog host’s robots p
 The original seven degree pages' 71 entries under “What can I do with an … degree?” are explicitly classified as `career_pathway`. They describe possible roles, settings and activities; they are not assessed learning outcomes, employment rates or guarantees. The parser preserves that source-section distinction independently of the `source_stated` provenance label. Other outcome statements remain unclassified until their source context is reviewed.
 
 PPE adds eleven career titles and three original summaries of the department’s stated learning skills, classified independently. Its examples introduced as courses students “might take” are not treated as mandatory requirements or identified catalog courses. The eight degree records still leave unknown exact course pools and policies.
+
+## Independent degree-wide evidence — 2026-10-11
+
+Public UB Curriculum pages now supplement all eight degrees with university-level context while the catalog root still returns403 in the ordinary reader. The six independently accessible curriculum/registrar sources yielded the120-credit university minimum/30-campus residence, entry-semester seminar, foundation requirements, Pathway structure and UBC399 capstone/registration rules. These are local supplemental definitions; the five existing AI+X shared framework nodes remain unchanged.
+
+Each degree now includes310 general-education course observations: ENG105, UBC399 and308 distinct code/title pairs in the public Winter2027/Spring2027 Pathways offering table. The830 offering rows form134 dated term/pathway/list contexts. These are observed candidates, not all approved courses, additional AI major courses, or310 required courses. Open-seat counts were not retained. Missing credit units, unknown course descriptions/prerequisites and unreviewed full approved lists remain explicit. UBC399 is not equated to the AI+X capstone. All eight inventories remain partial.
+
+Verification:24 focused tests; unchanged original AI+X framework digests; all48 new registered observations replayed twice against actual locally cached public source bodies with zero second-run candidates or changes; temporary family ingestion, repeat ingestion, integrity and static build passed. Raw bodies remain ignored outside public commits.
