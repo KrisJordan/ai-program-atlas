@@ -1,5 +1,6 @@
 """Rice AI major table observations; external university rules remain a review gap."""
 from bs4 import BeautifulSoup
+from atlas.adapters.rice_degree_courses import classify_observed
 from atlas.adapters.national_curriculum_common import content,clean,require_phrases
 from atlas.adapters.degree_table_observations import Tables, reviewed_outcomes
 
@@ -32,4 +33,4 @@ def parse_rice(html,pid,url):
         (['Design and implement','algorithms and models'],'Build AI algorithms and models for complex computational tasks.'),
         (['performance and limitations','metrics and testing'],'Assess AI performance and limitations through suitable metrics and tests.'),
         (['ethical implications','responsible AI'],'Incorporate ethical analysis and responsible AI practices into development.')],pid+'-catalog')
-    return dict(outcomes=outcomes,id=pid,title='Artificial Intelligence',award_level='BS',program_kind='degree',courses=list(t.courses.values()),requirements=t.rules)
+    return dict(outcomes=outcomes,id=pid,title='Artificial Intelligence',award_level='BS',program_kind='degree',courses=classify_observed(list(t.courses.values())),requirements=t.rules)

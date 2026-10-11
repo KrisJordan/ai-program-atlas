@@ -80,6 +80,36 @@
       "catalog_year": "2026–2027",
       "locator": "Current General Announcements policy body",
       "confidence": "high"
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "url": "https://ga.rice.edu/programs-study/courses/comp/",
+      "title": "Computer Science (COMP)",
+      "fetched_at": "2026-10-11T02:50:37+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Exact reviewed fixed course blocks; COMP option restrictions independently checked",
+      "confidence": "high"
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-courses-phil",
+      "url": "https://ga.rice.edu/programs-study/courses/phil/",
+      "title": "Philosophy (PHIL)",
+      "fetched_at": "2026-10-11T02:50:40+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Exact reviewed fixed course blocks; COMP option restrictions independently checked",
+      "confidence": "high"
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-courses-psyc",
+      "url": "https://ga.rice.edu/programs-study/courses/psyc/",
+      "title": "Psychology (PSYC)",
+      "fetched_at": "2026-10-11T02:50:38+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Exact reviewed fixed course blocks; COMP option restrictions independently checked",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -309,161 +339,282 @@
       "id": "rice-ai-comp-140",
       "code": "COMP 140",
       "name": "COMPUTATIONAL THINKING",
-      "description": null,
+      "description": "Computational problem solving and implementation in Python establish computing foundations.",
       "prerequisites": null,
       "credits": 4.0,
       "credit_unit": "unknown",
-      "category": "other",
+      "category": "foundations",
       "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
       "url": "https://ga.rice.edu/search/?P=COMP%20140",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-comp"
+        ],
+        "locator": "COMP 140 course description",
+        "rationale": "Computational problem solving and implementation in Python establish computing foundations.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "rice-ai-comp-182",
       "code": "COMP 182",
       "name": "ALGORITHMIC THINKING",
-      "description": null,
-      "prerequisites": null,
+      "description": "Algorithmic techniques, correctness and efficiency establish computing foundations.",
+      "prerequisites": "Prerequisite(s): COMP 140",
       "credits": 4.0,
       "credit_unit": "unknown",
-      "category": "other",
+      "category": "foundations",
       "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
       "url": "https://ga.rice.edu/search/?P=COMP%20182",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-comp"
+        ],
+        "locator": "COMP 182 course description",
+        "rationale": "Algorithmic techniques, correctness and efficiency establish computing foundations.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "rice-ai-comp-215",
       "code": "COMP 215",
       "name": "INTRODUCTION TO PROGRAM DESIGN",
-      "description": null,
-      "prerequisites": null,
+      "description": "Programming, abstraction, encapsulation and test-driven software design establish computing foundations.",
+      "prerequisites": "Prerequisite(s): COMP 182",
       "credits": 4.0,
       "credit_unit": "unknown",
-      "category": "other",
+      "category": "foundations",
       "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
       "url": "https://ga.rice.edu/search/?P=COMP%20215",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-comp"
+        ],
+        "locator": "COMP 215 course description",
+        "rationale": "Programming, abstraction, encapsulation and test-driven software design establish computing foundations.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "rice-ai-comp-222",
       "code": "COMP 222",
       "name": "INTRODUCTION TO COMPUTER ORGANIZATION",
-      "description": null,
-      "prerequisites": null,
+      "description": "Instruction architecture, processor execution, memory, linking and caching establish computing systems rather than general programming.",
+      "prerequisites": "Prerequisite(s): COMP 140",
       "credits": 4.0,
       "credit_unit": "unknown",
-      "category": "other",
+      "category": "systems",
       "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
       "url": "https://ga.rice.edu/search/?P=COMP%20222",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-comp"
+        ],
+        "locator": "COMP 222 course description",
+        "rationale": "Instruction architecture, processor execution, memory, linking and caching establish computing systems rather than general programming.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "rice-ai-comp-282",
       "code": "COMP 282",
       "name": "COMPUTATIONAL OPTIMIZATION FOR AI",
-      "description": null,
-      "prerequisites": null,
+      "description": "The course centers computational linear algebra, multivariable calculus and optimization methods, with AI applications; its primary subject is mathematics.",
+      "prerequisites": "Prerequisite(s): ( MATH 102 or MATH 106 ) and COMP 182 and ( MATH 355 or MATH 354 or CMOR 302 or CMOR 303 or MATH 221 )",
       "credits": 3.0,
       "credit_unit": "unknown",
-      "category": "other",
+      "category": "mathematics",
       "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
       "url": "https://ga.rice.edu/search/?P=COMP%20282",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-comp"
+        ],
+        "locator": "COMP 282 course description",
+        "rationale": "The course centers computational linear algebra, multivariable calculus and optimization methods, with AI applications; its primary subject is mathematics.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "rice-ai-comp-329",
       "code": "COMP 329",
       "name": "SYSTEMS FOR ARTIFICAL INTELLIGENCE",
-      "description": null,
-      "prerequisites": null,
+      "description": "Data-management infrastructure, relational databases, accelerators and parallel AI computation establish systems; an AI application does not replace its infrastructure subject.",
+      "prerequisites": "Prerequisite(s): COMP 215 and COMP 222 and COMP 345",
       "credits": 3.0,
       "credit_unit": "unknown",
-      "category": "other",
+      "category": "systems",
       "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
       "url": "https://ga.rice.edu/search/?P=COMP%20329",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-comp"
+        ],
+        "locator": "COMP 329 course description",
+        "rationale": "Data-management infrastructure, relational databases, accelerators and parallel AI computation establish systems; an AI application does not replace its infrastructure subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "rice-ai-comp-345",
       "code": "COMP 345",
       "name": "FOUNDATIONS OF MACHINE LEARNING",
-      "description": null,
-      "prerequisites": null,
+      "description": "Supervised and unsupervised learning, generalization and model evaluation establish AI/ML methods.",
+      "prerequisites": "Prerequisite(s): COMP 282 and STAT 315",
       "credits": 3.0,
       "credit_unit": "unknown",
       "category": "ai_ml",
       "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
       "url": "https://ga.rice.edu/search/?P=COMP%20345",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-comp"
+        ],
+        "locator": "COMP 345 course description",
+        "rationale": "Supervised and unsupervised learning, generalization and model evaluation establish AI/ML methods.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "rice-ai-comp-346",
       "code": "COMP 346",
       "name": "INTRODUCTION TO ARTIFICAL INTELLIGENCE",
-      "description": null,
-      "prerequisites": null,
+      "description": "Designing, engineering and evaluating intelligent decision-making agents establishes AI methods despite the source title spelling ARTIFICAL.",
+      "prerequisites": "Prerequisite(s): COMP 215 and STAT 315 and COMP 282",
       "credits": 3.0,
       "credit_unit": "unknown",
-      "category": "other",
+      "category": "ai_ml",
       "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
       "url": "https://ga.rice.edu/search/?P=COMP%20346",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-comp"
+        ],
+        "locator": "COMP 346 course description",
+        "rationale": "Designing, engineering and evaluating intelligent decision-making agents establishes AI methods despite the source title spelling ARTIFICAL.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "rice-ai-comp-348",
       "code": "COMP 348",
       "name": "INTRODUCTION TO DEEP LEARNING",
-      "description": null,
-      "prerequisites": null,
+      "description": "Deep neural architectures, optimization and representation learning establish AI/ML methods.",
+      "prerequisites": "Prerequisite(s): COMP 345",
       "credits": 3.0,
       "credit_unit": "unknown",
       "category": "ai_ml",
       "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
       "url": "https://ga.rice.edu/search/?P=COMP%20348",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-comp"
+        ],
+        "locator": "COMP 348 course description",
+        "rationale": "Deep neural architectures, optimization and representation learning establish AI/ML methods.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "rice-ai-comp-456",
       "code": "COMP 456",
       "name": "AI SENIOR DESIGN I",
-      "description": null,
-      "prerequisites": null,
+      "description": "The first capstone develops a complex intelligent system with AI as a significant component; AI engineering is the central subject, with communication supporting that project.",
+      "prerequisites": "Prerequisite(s): COMP 346",
       "credits": 4.0,
       "credit_unit": "unknown",
-      "category": "other",
+      "category": "ai_ml",
       "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
       "url": "https://ga.rice.edu/search/?P=COMP%20456",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-comp"
+        ],
+        "locator": "COMP 456 course description",
+        "rationale": "The first capstone develops a complex intelligent system with AI as a significant component; AI engineering is the central subject, with communication supporting that project.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "rice-ai-comp-457",
       "code": "COMP 457",
       "name": "AI SENIOR DESIGN II",
-      "description": null,
-      "prerequisites": null,
+      "description": "The second capstone completes and evaluates the intelligent-system project; AI engineering is the central subject, with communication supporting that project.",
+      "prerequisites": "Prerequisite(s): COMP 456 and COMP 329 and COMP 348",
       "credits": 4.0,
       "credit_unit": "unknown",
-      "category": "other",
+      "category": "ai_ml",
       "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
       "url": "https://ga.rice.edu/search/?P=COMP%20457",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-comp"
+        ],
+        "locator": "COMP 457 course description",
+        "rationale": "The second capstone completes and evaluates the intelligent-system project; AI engineering is the central subject, with communication supporting that project.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "rice-ai-phil-108",
       "code": "PHIL 108",
       "name": "ETHICS OF ARTIFICIAL INTELLIGENCE",
-      "description": null,
+      "description": "Ethical effects of AI on fairness, privacy, democracy, labor and autonomy establish human context.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "unknown",
@@ -471,21 +622,43 @@
       "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
       "url": "https://ga.rice.edu/search/?P=PHIL%20108",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-phil"
+        ],
+        "locator": "PHIL 108 course description",
+        "rationale": "Ethical effects of AI on fairness, privacy, democracy, labor and autonomy establish human context.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "rice-ai-psyc-203",
       "code": "PSYC 203",
       "name": "INTRODUCTION TO COGNITIVE PSYCHOLOGY",
-      "description": null,
+      "description": "Perception, attention, language, memory and decision making are substantive cognitive-psychology domain knowledge; the course does not teach AI algorithms. Applications denotes this non-computing domain, not an invented AI application.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "unknown",
-      "category": "other",
+      "category": "applications",
       "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
       "url": "https://ga.rice.edu/search/?P=PSYC%20203",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-psyc"
+        ],
+        "locator": "PSYC 203 course description",
+        "rationale": "Perception, attention, language, memory and decision making are substantive cognitive-psychology domain knowledge; the course does not teach AI algorithms. Applications denotes this non-computing domain, not an invented AI application.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "rice-ai-comp-409",
@@ -1774,6 +1947,62 @@
       "source_text": null,
       "summary": "All attempts and grades remain on the transcript and in GPA. Repeating a passed nonrepeatable course earns credit only once, for the highest grade; repeating prior AP/transfer work removes that prior credit. Explicitly repeatable courses follow their designation. Cross-listed, equivalent and undergraduate/graduate equivalent courses cannot earn duplicate credit, concurrently or across terms unless repeatable.",
       "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-senior-design-sequence",
+      "parent_id": null,
+      "title": "AI senior design sequencing",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "source_text": null,
+      "summary": "COMP 456 and COMP 457 must be completed in sequence within the same academic year. This timing condition does not add another course to the two fixed senior-design requirements.",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-vision-conflict",
+      "parent_id": null,
+      "title": "Published vision elective applicability conflict",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "source_text": null,
+      "summary": "COMP 345 and COMP 447 contain reciprocal registration exclusions for credit in the other. The major requires COMP 345 and lists COMP 447 as an elective; no permission or waiver is presumed.",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-graduate-options",
+      "parent_id": null,
+      "title": "Graduate-only elective restrictions",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "source_text": null,
+      "summary": "COMP 585 and COMP 631 descriptions limit enrollment to Graduate level students. The undergraduate major lists these electives, but undergraduate permission has not been established.",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-statistics-route",
+      "parent_id": null,
+      "title": "Required-course statistics prerequisite question",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "source_text": null,
+      "summary": "COMP 345 and COMP 346 specifically list STAT 315 as a prerequisite. Applicability of the separately published degree statistics alternatives needs clarification; the description alone does not establish substitution permission.",
+      "course_ids": []
     }
   ],
   "notes": [
@@ -1783,7 +2012,11 @@
     "Program substitutions and transfer rules link to university policies that remain incompletely mapped.",
     "University degree rules are mapped from the 2026–2027 General Announcements: residence/credit/GPA/standing, FWIS and transfer limits, three distribution groups, Analyzing Diversity, LPAP, catalog-year selection and degree application. Term-dependent designation criteria remain rules rather than invented fixed pools.",
     "The graduation and transfer pages disagree on summer eligibility for the four-semester residency minimum. Both are GA pages; the GA precedence statement does not resolve this internal conflict. Curriculum remains partial pending clarification.",
-    "Transfer and registration rules preserve C- eligibility, no pass/fail transfers, the summer transfer cap and study-abroad exception, external-study approvals, repeat/AP/transfer/cross-list accounting and instructor approval for graduate-level enrollment."
+    "Transfer and registration rules preserve C- eligibility, no pass/fail transfers, the summer transfer cap and study-abroad exception, external-study approvals, repeat/AP/transfer/cross-list accounting and instructor approval for graduate-level enrollment.",
+    "2026-10-11 independent core correctness pass: official descriptions correct all13 fixed subject classifications (3 foundations,1 mathematics,5 AI/ML,2 systems,1 human context,1 applications). Exact ARTIFICAL source spellings are preserved. Capstone456/457 must be sequential in the same academic year. Full-degree correctness remains in progress; prerequisite/enrollment conflicts are explicitly retained.",
+    "The degree permits STAT310+314, STAT311+314, or STAT315/DSCI301, but required COMP345 and346 description prerequisites specifically name STAT315. Applicability of the alternative statistics routes needs explicit institutional clarification; no waiver is presumed.",
+    "Required COMP345 and listed elective COMP447 have reciprocal registration/credit exclusions in their descriptions. COMP447 remains a published option with an unresolved eligibility conflict, not a generally available alternative.",
+    "Listed electives COMP585 and COMP631 restrict enrollment to Graduate level students. Undergraduate permission for these named degree options has not been established."
   ],
   "curriculum_audit": {
     "scope": "degree",
@@ -1807,7 +2040,10 @@
     ],
     "unresolved_requirements": [
       "Residency wording conflict within the General Announcements: graduation permits up to one summer within four full-time semesters; the transfer page states four full fall/spring semesters. An authoritative clarification is required before claiming a fully reconciled degree audit.",
-      "Term-designated FWIS/distribution/AD/LPAP options are represented as published eligibility rules; individual student substitutions still require the relevant program/advisor approvals. No unapproved substitution equivalence is asserted."
+      "Term-designated FWIS/distribution/AD/LPAP options are represented as published eligibility rules; individual student substitutions still require the relevant program/advisor approvals. No unapproved substitution equivalence is asserted.",
+      "The degree permits STAT310+314, STAT311+314, or STAT315/DSCI301, but required COMP345 and346 description prerequisites specifically name STAT315. Applicability of the alternative statistics routes needs explicit institutional clarification; no waiver is presumed.",
+      "Required COMP345 and listed elective COMP447 have reciprocal registration/credit exclusions in their descriptions. COMP447 remains a published option with an unresolved eligibility conflict, not a generally available alternative.",
+      "Listed electives COMP585 and COMP631 restrict enrollment to Graduate level students. Undergraduate permission for these named degree options has not been established."
     ],
     "metadata_gaps": [
       "Course descriptions and prerequisites remain unextracted.",

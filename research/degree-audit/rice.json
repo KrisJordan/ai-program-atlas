@@ -1,0 +1,110 @@
+{
+  "audit_date": "2026-10-11",
+  "reviewer": "pilots_cmu_penn",
+  "programs": [
+    {
+      "program_id": "rice-university-artificial-intelligence-bs-degree",
+      "institution_id": "rice-university",
+      "status": "in_progress",
+      "sources": [
+        {
+          "url": "https://ga.rice.edu/programs-study/departments-programs/engineering/artificial-intelligence/artificial-intelligence-bs/",
+          "catalog_year": "2026-2027",
+          "locator": "Major table",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; ordinary robots-aware Fetcher"
+        },
+        {
+          "url": "https://ga.rice.edu/programs-study/courses/comp/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact course descriptions and enrollment restrictions",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; ordinary robots-aware Fetcher"
+        },
+        {
+          "url": "https://ga.rice.edu/programs-study/courses/psyc/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact course descriptions and enrollment restrictions",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; ordinary robots-aware Fetcher"
+        },
+        {
+          "url": "https://ga.rice.edu/programs-study/courses/phil/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact course descriptions and enrollment restrictions",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; ordinary robots-aware Fetcher"
+        }
+      ],
+      "checks": {
+        "degree_identity": "Exact BS Degree with a Major in Artificial Intelligence,2026-2027 General Announcements. Standalone degree, no inferred engineering-award equivalence.",
+        "required_and_choices": "Thirteen manually identified fixed records; calculus includes AP-credit alternatives, linear algebra selectsone, statistics permits three routes including whole two-course bundles. Choose three of five AI areas, one course in each. No optional pool is made fixed.",
+        "elective_pools": "All five area labels and displayed codes reread; COMP585/631 Graduate-only restriction and COMP447 credit exclusion are genuine applicability questions. Remaining domain descriptions and degree-wide pools still require full independent review.",
+        "prerequisites": "All13 fixed descriptions reviewed. Senior design456/457 must be sequential in one academic year. STAT315-specific prerequisite conflicts with published degree alternatives; no silent waiver/equivalence inferred. Metadata prereqs are not extra fixed nodes.",
+        "credits_and_units": "Official fixed-course credit amounts corroborate degree table. Credit Hours preserved; current unit normalization is not changed. Bundle totals are not distributed into guessed individual amounts.",
+        "classification": "Manual fixed subject arithmetic:3foundations,1math,5AI,2systems,1human,1applications. COMP329 infrastructure is systems despite AI in title; COMP282 mathematical optimization is math; cognitive psychology is substantive domain knowledge under applications. No department-prefix inference.",
+        "family_composition": "No family inheritance; ECE specialization is a separate program and does not contribute requirements.",
+        "degree_wide_requirements": "Existing partial university policy inventory retained. Full degree-wide correctness second pass remains accessible work, not an access blocker."
+      },
+      "expected_profile": null,
+      "expected_course_ids": {
+        "required": [
+          "rice-ai-comp-140",
+          "rice-ai-comp-182",
+          "rice-ai-comp-215",
+          "rice-ai-comp-222",
+          "rice-ai-comp-282",
+          "rice-ai-comp-329",
+          "rice-ai-comp-345",
+          "rice-ai-comp-346",
+          "rice-ai-comp-348",
+          "rice-ai-comp-456",
+          "rice-ai-comp-457",
+          "rice-ai-phil-108",
+          "rice-ai-psyc-203"
+        ],
+        "options": null,
+        "unresolved": null
+      },
+      "discrepancies": [
+        {
+          "issue": "Narrow generic title heuristic left foundations/systems/optimization and misspelled ARTIFICAL AI identities as other.",
+          "correction": "Exact identity and authoritative descriptions now support manual category reviews; parser verifies changed source subjects and never certifies reviews.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://ga.rice.edu/programs-study/courses/comp/",
+            "https://ga.rice.edu/programs-study/courses/phil/",
+            "https://ga.rice.edu/programs-study/courses/psyc/"
+          ]
+        },
+        {
+          "issue": "Capstone descriptions impose a sequence in one academic year not previously explicit in the graph.",
+          "correction": "Added a source-observed timing note without adding course obligations.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://ga.rice.edu/programs-study/courses/comp/"
+          ]
+        }
+      ],
+      "blockers": [
+        {
+          "issue": "The degree permits STAT310+314, STAT311+314, or STAT315/DSCI301, but required COMP345 and346 description prerequisites specifically name STAT315. Applicability of the alternative statistics routes needs explicit institutional clarification; no waiver is presumed.",
+          "url": "https://ga.rice.edu/programs-study/courses/comp/"
+        },
+        {
+          "issue": "Required COMP345 and listed elective COMP447 have reciprocal registration/credit exclusions in their descriptions. COMP447 remains a published option with an unresolved eligibility conflict, not a generally available alternative.",
+          "url": "https://ga.rice.edu/programs-study/courses/comp/"
+        },
+        {
+          "issue": "Listed electives COMP585 and COMP631 restrict enrollment to Graduate level students. Undergraduate permission for these named degree options has not been established.",
+          "url": "https://ga.rice.edu/programs-study/courses/comp/"
+        }
+      ],
+      "remaining_work": [
+        "Complete remaining major/elective course and university policy second pass; do not call unfinished accessible work a blocker."
+      ],
+      "correction_status": "Verified fixed-core subject and capstone timing corrections; audit continues",
+      "second_pass_status": "pending"
+    }
+  ]
+}
