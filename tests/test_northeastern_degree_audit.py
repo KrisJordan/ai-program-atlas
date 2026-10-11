@@ -473,3 +473,29 @@ def test_health_science_manual_roles_preserve_statistics_bundle_and_recommendati
     assert 'ENGW 3302' in cs['PHTH 4540']['prerequisites']
     assert any('recommended' in n and 'PHTH 2350' in n for n in p['notes'])
     assert 'EECE 2322' not in cs  # No elective pool copied from another variant.
+
+
+@pytest.mark.parametrize('code,expected', [('PSYC 3402','human_context'),('PSYC 4614','human_context'),('PSYC 4664','human_context'),('PSYC 4540','mathematics'),('PSYC 3450','applications'),('PSYC 3451','applications'),('PSYC 3458','applications'),('PSYC 3464','applications'),('PSYC 3466','applications'),('PSYC 4600','applications'),('PSYC 4674','applications'),('PSYC 4682','applications')])
+def test_psychological_learning_neural_and_modeling_terms_need_actual_subject(code,expected):
+    d=CATEGORY_DECISIONS[code]
+    assert category(code,d['name'],d['guard'])==expected
+    assert category(code,d['name'],'New unrelated descriptive content')=='other'
+    assert category(code,'Different identity',d['guard'])=='other'
+
+
+def test_psychology_nested_behavior_choice_and_nontransferable_lab_stay_separate():
+    from atlas.families import resolve_program
+    from atlas.curriculum_profile import requirement_profile
+    pid='northeastern-university-artificial-intelligence-and-psychology-bs-boston-bs-degree'
+    p=json.loads((ROOT/'data/programs'/f'{pid}.json').read_text());f=json.loads((ROOT/'data/families/northeastern-ai-combined-degrees.json').read_text());resolved=resolve_program(p,f);profile=requirement_profile(resolved)
+    assert profile['required']['count']==14 and profile['options']['count']==48 and profile['unresolved']['count']==0
+    nodes={r['id']:r for r in resolved['requirements']}
+    selection=nodes[pid+'-req-cognitive-biological-basis-of-behavior-course-choice']
+    assert selection['kind']=='choose_courses' and selection['count']==2
+    alt=nodes[pid+'-req-psyc-3450-alternatives']
+    assert alt['kind']=='alternative' and alt['parent_id']==selection['id']
+    children=[r for r in nodes.values() if r['parent_id']==alt['id']]
+    assert {c for r in children for c in r['course_ids']}=={pid+'-psyc-3450',pid+'-psyc-3451'}
+    lab=nodes[pid+'-req-psychology-laboratory-course-choice']
+    assert lab['count']==1 and 'may not be fulfilled via transfer credit' in lab['summary']
+    assert len(p['courses'])==62 and all('category_review' in c for c in p['courses'])
