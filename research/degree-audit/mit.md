@@ -97,3 +97,10 @@ The primary seed now includes139 HASS actual-description records;10 identity/ver
 Contribution1809380 adds45 manual dispositions from seven actual semester-labeled language directories.139 HASS descriptions remain unchanged; the new records have no invented descriptions, credits or formal prerequisites. Unambiguous language instruction and literary/cultural/historical titles support limited classifications. Three broad public-health, calligraphy and environmental titles remain unclassified. Printed code/link differences and regular/hybrid variants are not repaired or merged.
 
 When a directory also supplies concentration requirements, the registered observer now composes eligibility parsing with metadata parsing; it does not overwrite the existing field rules. The seed has528 total manual dispositions, including184 HASS rows (139 actual descriptions plus45 title-only).645 HASS rows remain active,14 have identity/version holds and two have conflicting descriptions. Contextual HASS plan handling remains conservative pending precise applicability review.
+
+
+## Political Science reference-title dispositions — 2026-10-11
+
+Contribution0abe398 read the actual three-page Classes in Subfields PDF and supplies65 further title-only dispositions. Thirteen methods/computing/broad titles, including machine learning, causal inference, game theory and cybersecurity examples, stay unclassified without actual descriptions. They are no longer automatically human context because the pool belongs to Political Science. The original17.57 identity hold remains.
+
+The explicit17.567 annotation supplies nine units and a MISTI Israel eligibility condition; these actual facts are retained even though the subject classification uses only its title. The dated reference does not establish a current offering. HASS now has139 actual-description and110 title-only dispositions, with580 active rows,14 identity/version holds and two source conflicts. The fixed set and conservative contextual field-plan roles do not change.

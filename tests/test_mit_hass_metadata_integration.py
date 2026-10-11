@@ -108,3 +108,15 @@ def test_actual_language_registration_keeps_preexisting_field_rules():
     assert before['requirements'] == after['requirements']
     assert after['observed_hass_description_digests']
     assert len(adapter.SOURCES) == len(set(adapter.SOURCES))
+
+
+def test_political_titles_do_not_inherit_pool_category_and_keep_explicit_credit():
+    p = json.loads(Path('data/programs/mit-ai-decision-making-bs.json').read_text())
+    rows = [c for c in p['courses'] if c['id'].startswith('mit-ai-hass-political-subfields-')]
+    by = {c['code']: c for c in rows}
+    for code in ['17.835', '17.C08J', '17.811', '17.447J']:
+        assert by[code]['category'] == 'other'
+        assert by[code]['category_review']['status'] == 'unclassified'
+        assert by[code]['description'] is None
+    assert by['17.567']['credits'] == 9
+    assert any('MISTI' in n for n in by['17.567']['notes'])
