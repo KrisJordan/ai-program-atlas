@@ -340,3 +340,12 @@ for _review_url, _review_parser in eds_reviews.SOURCE_PARSERS.items():
         raise ValueError('UCSD EDS source needs explicit parser composition')
     SOURCES += (_review_url,)
     SOURCE_PARSERS[_review_url] = _review_parser
+
+from atlas.adapters import ucsd_cgs_reviews as cgs_reviews
+from atlas.adapters import ucsd_mus_reviews as mus_reviews
+for _review_module in (cgs_reviews, mus_reviews):
+    for _review_url, _review_parser in _review_module.SOURCE_PARSERS.items():
+        if _review_url in SOURCE_PARSERS:
+            raise ValueError('UCSD CGS/MUS source needs explicit parser composition')
+        SOURCES += (_review_url,)
+        SOURCE_PARSERS[_review_url] = _review_parser

@@ -1020,6 +1020,26 @@
       "catalog_year": "2026–27",
       "locator": "All31 represented exact full blocks; chapter introduction and undergraduate/graduate section boundary inspected",
       "confidence": "high"
+    },
+    {
+      "id": "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses",
+      "url": "https://catalog.ucsd.edu/courses/CGS.html",
+      "title": "UC San Diego CGS course descriptions",
+      "fetched_at": "2026-10-11T08:45:44+00:00",
+      "source_date": null,
+      "catalog_year": "2026–27",
+      "locator": "All represented matching complete blocks; undergraduate/graduate scope inspected",
+      "confidence": "high"
+    },
+    {
+      "id": "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+      "url": "https://catalog.ucsd.edu/courses/MUS.html",
+      "title": "UC San Diego MUS course descriptions",
+      "fetched_at": "2026-10-11T08:41:05+00:00",
+      "source_date": null,
+      "catalog_year": "2026–27",
+      "locator": "All represented matching complete blocks; undergraduate/graduate scope inspected",
+      "confidence": "high"
     }
   ],
   "outcomes": [],
@@ -7998,29 +8018,53 @@
       "id": "ucsd-cgs-2a",
       "code": "CGS 2A",
       "name": "Introduction to Critical Gender Studies: Key Terms and Concepts",
-      "description": null,
-      "prerequisites": "None",
-      "credits": null,
+      "description": "Introduces central concepts and questions in gender and sexuality studies.",
+      "prerequisites": null,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-dei-approved-pdf",
-      "url": "https://senate.ucsd.edu/media/513521/dei-list-of-courses.pdf",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses",
+      "url": "https://catalog.ucsd.edu/courses/CGS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses"
+        ],
+        "locator": "CGS 2A. Introduction to Critical Gender Studies: Key Terms and Concepts (4)",
+        "rationale": "The named field and stated introductory concepts establish social and cultural inquiry, with no separate technical-method objective.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-cgs-105",
       "code": "CGS 105",
       "name": "Queer Theory",
-      "description": null,
-      "prerequisites": "Upper-division standing or consent of instructor",
-      "credits": null,
+      "description": "Examines queer-studies methodologies and disciplinary histories in relation to gender, race, class and nation.",
+      "prerequisites": "upper-division standing or consent of instructor.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-dei-approved-pdf",
-      "url": "https://senate.ucsd.edu/media/513521/dei-list-of-courses.pdf",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses",
+      "url": "https://catalog.ucsd.edu/courses/CGS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses"
+        ],
+        "locator": "CGS 105. Queer Theory (4)",
+        "rationale": "The course analyzes intellectual traditions and social relations.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-doc-1",
@@ -9322,15 +9366,30 @@
       "id": "ucsd-mus-8",
       "code": "MUS 8",
       "name": "American Music: Jazz Cultures",
-      "description": null,
-      "prerequisites": "None",
-      "credits": null,
+      "description": "Examines jazz through its diverse practitioners and multicultural and international contexts using thematic case studies.",
+      "prerequisites": "none. (Offered in selected years.)",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-dei-approved-pdf",
-      "url": "https://senate.ucsd.edu/media/513521/dei-list-of-courses.pdf",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+      "url": "https://catalog.ucsd.edu/courses/MUS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "No credit for both MUS 8 and MUS 8GS. Offered in selected years; no current 8GS heading is inferred from this exclusion."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-dei-approved-pdf"
+        ],
+        "locator": "MUS 8. American Music: Jazz Cultures (4)",
+        "rationale": "The description centers cultural contexts and musicians’ lives rather than instruction in performance or composition.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-mus-8gs",
@@ -9344,35 +9403,81 @@
       "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-dei-approved-pdf",
       "url": "https://senate.ucsd.edu/media/513521/dei-list-of-courses.pdf",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-dei-approved-pdf"
+        ],
+        "locator": "MUS 8GS; bounded current chapter heading inventory",
+        "rationale": "No exact heading for this represented identifier appears in the inspected Music chapter; similar suffixes or titles do not establish a substitute identity, and no discontinuation is inferred.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "No exact identifier is printed in the reviewed 2026–27 MUS chapter. An unsuffixed or otherwise similar course is not substituted; no cancellation or university-wide absence is inferred."
+      ]
     },
     {
       "id": "ucsd-mus-17",
       "code": "MUS 17",
-      "name": "Hip Hop",
-      "description": null,
-      "prerequisites": "None",
-      "credits": null,
+      "name": "Hip-Hop",
+      "description": "Traces hip-hop’s development, African American cultural roots and technological and legal context through intensive listening.",
+      "prerequisites": "none.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-dei-approved-pdf",
-      "url": "https://senate.ucsd.edu/media/513521/dei-list-of-courses.pdf",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+      "url": "https://catalog.ucsd.edu/courses/MUS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Listed title: Hip Hop. Current title: Hip-Hop. The difference is punctuation, number styling, a subtitle or an explanatory cross-list label; the specific subject remains aligned."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-dei-approved-pdf"
+        ],
+        "locator": "MUS 17. Hip-Hop (4)",
+        "rationale": "Historical and cultural interpretation is primary; recognizing production techniques through listening is not the same as practical production training.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-mus-150",
       "code": "MUS 150",
-      "name": "Jazz and the Music of the African Diaspora",
-      "description": null,
-      "prerequisites": "MUS 126 or MUS 127 or ETHN 178 or ETHN 179, or consent of instructor",
-      "credits": null,
+      "name": "Jazz and the Music of the African Diaspora: Special Topics Seminar",
+      "description": "Investigates a selected jazz or African-diaspora music-history topic through intensive listening and writing.",
+      "prerequisites": "MUS 126/ETHN 178, or MUS 127/ETHN 179, or consent of instructor.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-dei-approved-pdf",
-      "url": "https://senate.ucsd.edu/media/513521/dei-list-of-courses.pdf",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+      "url": "https://catalog.ucsd.edu/courses/MUS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Topics vary by year; may be taken for credit twice. The current title adds Special Topics Seminar. Printed MUS 126/ETHN 178 and MUS 127/ETHN 179 prerequisite notation is retained without certifying new identity groups.",
+        "Listed title: Jazz and the Music of the African Diaspora. Current title: Jazz and the Music of the African Diaspora: Special Topics Seminar. The difference is punctuation, number styling, a subtitle or an explanatory cross-list label; the specific subject remains aligned."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-dei-approved-pdf"
+        ],
+        "locator": "MUS 150. Jazz and the Music of the African Diaspora: Special Topics Seminar (4)",
+        "rationale": "The variable topic is explicitly bounded to music history, permitting historical-cultural classification without assigning an unstated performance practice.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-phil-35",
@@ -10861,15 +10966,27 @@
       "id": "ucsd-cgs-134",
       "code": "CGS 134",
       "name": "Gender and Climate Justice",
-      "description": null,
-      "prerequisites": "Upper-division standing",
-      "credits": null,
+      "description": "Studies how gender shapes environmental knowledge, vulnerability and responses to climate change.",
+      "prerequisites": null,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-climate-approved-pdf",
-      "url": "https://senate.ucsd.edu/media/742288/jtccer-course-list-fa25.pdf",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses",
+      "url": "https://catalog.ucsd.edu/courses/CGS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses"
+        ],
+        "locator": "CGS 134. Gender and Climate Justice (4)",
+        "rationale": "Critical feminist analysis of climate justice is stated; physical climate-science methods are not.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-econ-131",
@@ -24455,29 +24572,59 @@
       "id": "ucsd-mus-107",
       "code": "MUS 107",
       "name": "Critical Studies Seminar",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Examines music history through critical questions about race, gender, sexuality, environment and politics.",
+      "prerequisites": "upper-division standing. Restricted to music majors or consent of instructor; department approval required.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-table-anti-racism-humanities",
-      "url": "https://docs.google.com/spreadsheets/u/0/d/e/2PACX-1vR-aC9cVI_o4xRZ8I_Go7Mkx-hSy6dcbPt8znZAuOFwDBI7lwfdAqtb1IgwV7D-poKWvNVJvlG3OA5V/pubhtml/sheet?headers=false&gid=0",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+      "url": "https://catalog.ucsd.edu/courses/MUS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "May be taken for credit twice as topics vary. Upper-division standing is required; restricted to music majors or instructor consent, with department approval."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-table-anti-racism-humanities"
+        ],
+        "locator": "MUS 107. Critical Studies Seminar (4)",
+        "rationale": "Cultural studies, sociology and musicological interpretation explicitly organize the seminar despite variable topics.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-mus-151",
       "code": "MUS 151",
       "name": "Race, Culture, and Social Change",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Examines how marginalized communities use cultural expression in struggles for social change across national settings.",
+      "prerequisites": "upper-division standing or consent of instructor.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-table-anti-racism-humanities",
-      "url": "https://docs.google.com/spreadsheets/u/0/d/e/2PACX-1vR-aC9cVI_o4xRZ8I_Go7Mkx-hSy6dcbPt8znZAuOFwDBI7lwfdAqtb1IgwV7D-poKWvNVJvlG3OA5V/pubhtml/sheet?headers=false&gid=0",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+      "url": "https://catalog.ucsd.edu/courses/MUS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Explicitly cross-listed with ETHN 108; this helper does not certify an identity group."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-table-anti-racism-humanities"
+        ],
+        "locator": "MUS 151. Race, Culture, and Social Change (4)",
+        "rationale": "Cultural identity, social movements and political change are the direct subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-vis-125g",
@@ -24512,43 +24659,89 @@
       "id": "ucsd-cgs-114",
       "code": "CGS 114",
       "name": "Gender, Race, Ethnicity, and Class",
-      "description": null,
+      "description": "Examines how working-class women of color engage in community politics and challenge political theory.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-table-anti-racism-social",
-      "url": "https://docs.google.com/spreadsheets/u/0/d/e/2PACX-1vR-aC9cVI_o4xRZ8I_Go7Mkx-hSy6dcbPt8znZAuOFwDBI7lwfdAqtb1IgwV7D-poKWvNVJvlG3OA5V/pubhtml/sheet?headers=false&gid=2132537523",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses",
+      "url": "https://catalog.ucsd.edu/courses/CGS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Published relationship or credit condition: (Cross-listed with ETHN 183.) Gender is often neglected in studies of ethnic/racial politics."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses"
+        ],
+        "locator": "CGS 114. Gender, Race, Ethnicity, and Class (4)",
+        "rationale": "Political participation and intersecting social categories organize the course.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-cgs-147",
       "code": "CGS 147",
       "name": "Black Feminisms, Past and Present",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Studies historical and contemporary Black feminisms and their implications for race, class, gender and sexuality.",
+      "prerequisites": "CGS 2A-B, ETHN 1, 2, 3, at least one CGS or ETHN upper-division course, or permission of the instructor.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-table-anti-racism-social",
-      "url": "https://docs.google.com/spreadsheets/u/0/d/e/2PACX-1vR-aC9cVI_o4xRZ8I_Go7Mkx-hSy6dcbPt8znZAuOFwDBI7lwfdAqtb1IgwV7D-poKWvNVJvlG3OA5V/pubhtml/sheet?headers=false&gid=2132537523",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses",
+      "url": "https://catalog.ucsd.edu/courses/CGS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Published relationship or credit condition: (Cross-listed with ETHN 147.) An advanced introduction to historical and contemporary black feminisms in the United States and transnationally.",
+        "Published relationship or credit condition: Students may not receive credit for CGS 147 and ETHN 147.",
+        "The source writes CGS2A-B and any following comma/alternative structure literally; no expanded AND/OR course tree is inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses"
+        ],
+        "locator": "CGS 147. Black Feminisms, Past and Present (4)",
+        "rationale": "Intellectual history and political-cultural theory are explicit.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-cgs-150",
       "code": "CGS 150",
       "name": "Visuality, Sexuality, and Race",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Examines how visual power relations shape race and sexuality, emphasizing relationships and mental images.",
+      "prerequisites": "CGS 2A-B, ETHN 1, 2, 3, at least one CGS or ETHN upper-division course, or permission of the instructor.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-table-anti-racism-social",
-      "url": "https://docs.google.com/spreadsheets/u/0/d/e/2PACX-1vR-aC9cVI_o4xRZ8I_Go7Mkx-hSy6dcbPt8znZAuOFwDBI7lwfdAqtb1IgwV7D-poKWvNVJvlG3OA5V/pubhtml/sheet?headers=false&gid=2132537523",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses",
+      "url": "https://catalog.ucsd.edu/courses/CGS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Published relationship or credit condition: (Cross-listed with ETHN 150.) Visuality is a term for the role of the visual in power relations, the production of what we “see” regarding race and sexuality in everyday life.",
+        "Published relationship or credit condition: Students may not receive credit for both CGS 150 and ETHN 150.",
+        "The source writes CGS2A-B and any following comma/alternative structure literally; no expanded AND/OR course tree is inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses"
+        ],
+        "locator": "CGS 150. Visuality, Sexuality, and Race (4)",
+        "rationale": "The source addresses critical interpretation of social perception rather than computer vision or visual-production methods.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-comm-114i",
@@ -26417,15 +26610,27 @@
       "id": "ucsd-cgs-106",
       "code": "CGS 106",
       "name": "Gender and the Law",
-      "description": null,
+      "description": "Studies legal responses to gender discrimination, equality doctrine and statutory protections.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-table-law",
-      "url": "https://docs.google.com/spreadsheets/u/0/d/e/2PACX-1vR-aC9cVI_o4xRZ8I_Go7Mkx-hSy6dcbPt8znZAuOFwDBI7lwfdAqtb1IgwV7D-poKWvNVJvlG3OA5V/pubhtml/sheet?headers=false&gid=523589065",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses",
+      "url": "https://catalog.ucsd.edu/courses/CGS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses"
+        ],
+        "locator": "CGS 106. Gender and the Law (4)",
+        "rationale": "Law and discrimination analysis are explicitly human-context subjects.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-econ-118",
@@ -28202,29 +28407,62 @@
       "id": "ucsd-mus-132r",
       "code": "MUS 132R",
       "name": "Recital Preparation",
-      "description": null,
-      "prerequisites": "MUS-132; by audition; department approval",
-      "credits": null,
+      "description": "Develops instrumental or vocal repertoire for a senior honors solo recital under faculty direction.",
+      "prerequisites": "by audition only; MUS 132. Department approval required.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-sixth-elr-table",
-      "url": "https://docs.google.com/spreadsheets/u/0/d/e/2PACX-1vR7dTRWsk3I2X0t7p5IV-i19gVI3qRDpF5gdK6wA8p3G_H2qyDfkZASfQOEfoYy_-Tib_JlV_pjCjhv/pubhtml/sheet?headers=false&gid=1715831878",
+      "category": "applications",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+      "url": "https://catalog.ucsd.edu/courses/MUS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "For senior music majors pursuing honors in performance. A special audition is required during Welcome Week before fall quarter. MUS 132, audition and department approval are the printed requirements.",
+        "The R suffix denotes this exact Recital Preparation record; no online-delivery inference is made. No concurrent-enrollment or repeat rule is inherited from the separate prerequisite MUS 132."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-sixth-elr-table"
+        ],
+        "locator": "MUS 132R. Recital Preparation (4)",
+        "rationale": "Advanced performance preparation and recital repertoire are explicit applied musical practice.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-mus-160b",
       "code": "MUS 160B",
       "name": "Senior Project in Computing Arts II",
-      "description": null,
-      "prerequisites": "MUS-160A or VIS-160A; Music or ICAM majors only; department approval",
-      "credits": null,
+      "description": "Completes, documents and presents an independently designed computing-arts project begun in the preceding course.",
+      "prerequisites": "MUS 160A or VIS 160A. Open to music and ICAM majors only. Department approval required.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
       "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-sixth-elr-table",
-      "url": "https://docs.google.com/spreadsheets/u/0/d/e/2PACX-1vR7dTRWsk3I2X0t7p5IV-i19gVI3qRDpF5gdK6wA8p3G_H2qyDfkZASfQOEfoYy_-Tib_JlV_pjCjhv/pubhtml/sheet?headers=false&gid=1715831878",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+      "url": "https://catalog.ucsd.edu/courses/MUS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Continuation of MUS 160A or VIS 160A, open to music and ICAM majors only, with department approval.",
+        "Renumbered from ICAM 160B. Credit is permitted for only one of MUS 160B, VIS 160B and ICAM 160B; no identity group is certified.",
+        "The source prints “Two production-course limitation.” Its period and broader rule are not explained in this block; do not convert it into an invented degree requirement or per-term limit."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-sixth-elr-table"
+        ],
+        "locator": "MUS 160B. Senior Project in Computing Arts II (4)",
+        "rationale": "Neither the concrete project nor its balance of artistic practice, programming and other methods is specified. The Computing Arts title alone cannot establish a precise category.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-nano-120b",
@@ -31698,57 +31936,117 @@
       "id": "ucsd-mus-113",
       "code": "MUS 113",
       "name": "Topics in Classic, Romantic, and Modern Music",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Studies selected topics in Western music from the mid-eighteenth to early twentieth centuries.",
+      "prerequisites": "upper-division standing or consent of instructor. Department approval required. MUS 4, 8–10, or 120 recommended.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-writing",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/udw/UDW_GE.html",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+      "url": "https://catalog.ucsd.edu/courses/MUS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "May be taken for credit five times. Upper-division standing or instructor consent and department approval are required. MUS 4, 8–10 or 120 are recommended, not additional mandatory prerequisites."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-writing"
+        ],
+        "locator": "MUS 113. Topics in Classic, Romantic, and Modern Music (4)",
+        "rationale": "The content is bounded to study of historical musical periods; no composition or performance-training objective is specified. The exact selected topic remains unknown.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-mus-114",
       "code": "MUS 114",
       "name": "Music and Ideas Since 1900",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Critically examines how music since the early twentieth century generates and expresses cultural ideas.",
+      "prerequisites": "upper-division standing or consent of instructor.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-writing",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/udw/UDW_GE.html",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+      "url": "https://catalog.ucsd.edu/courses/MUS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-writing"
+        ],
+        "locator": "MUS 114. Music and Ideas Since 1900 (4)",
+        "rationale": "Interpretation of cultural ideas in music establishes human context.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-mus-152",
       "code": "MUS 152",
-      "name": "Hip Hop: The Politics of Culture (cross-listed: ETHN 128)",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Hip Hop: The Politics of Culture",
+      "description": "Examines hip-hop across media, technology and institutions through race, gender and the politics of creative expression.",
+      "prerequisites": "upper-division standing or consent of instructor.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-writing",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/udw/UDW_GE.html",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+      "url": "https://catalog.ucsd.edu/courses/MUS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Explicitly cross-listed with ETHN 128; no identity group is certified here.",
+        "Listed title: Hip Hop: The Politics of Culture (cross-listed: ETHN 128). Current title: Hip Hop: The Politics of Culture. The difference is punctuation, number styling, a subtitle or an explanatory cross-list label; the specific subject remains aligned."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-writing"
+        ],
+        "locator": "MUS 152. Hip Hop: The Politics of Culture (4)",
+        "rationale": "Technology is analyzed in its cultural and political context rather than taught as a technical production method.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-mus-199",
       "code": "MUS 199",
       "name": "Independent Study",
-      "description": null,
-      "prerequisites": null,
+      "description": "Supports faculty-directed reading, research or creative work based on prior coursework when no existing course covers it.",
+      "prerequisites": "consent of instructor and department chair approval. Department approval required. Pass/Not Pass grade only. May be taken for credit twice.",
       "credits": null,
       "credit_unit": "quarter_hours",
       "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-writing",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/udw/UDW_GE.html",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+      "url": "https://catalog.ucsd.edu/courses/MUS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Printed credits are 1–4 quarter units; scalar credits remain null rather than choosing an amount.",
+        "Only permitted when no existing course covers the material and the study derives from prior coursework. Instructor consent, department chair approval and department approval are required. Pass/Not Pass only. May be taken for credit twice."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-writing"
+        ],
+        "locator": "MUS 199. Independent Study (1–4)",
+        "rationale": "The selected study topic and the choice among reading, research and creative work are unspecified, so neither cultural analysis nor applied practice can be presumed.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-phil-100",
@@ -34425,43 +34723,88 @@
       "id": "ucsd-mus-137d",
       "code": "MUS 137D",
       "name": "Seminar in Jazz Studies I",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Begins a yearlong senior honors sequence of individually developed jazz or African-diaspora projects reviewed in seminar.",
+      "prerequisites": "MUS 137A-B-C and admission into the Music Department Honors Program in jazz. Department approval required.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
       "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-africa",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/all-regions/africa.html",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+      "url": "https://catalog.ucsd.edu/courses/MUS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "For senior music majors pursuing jazz/African-diaspora honors. First course of a yearlong sequence; requires MUS 137A-B-C, admission to the Music Department Honors Program in jazz, and department approval."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-africa"
+        ],
+        "locator": "MUS 137D. Seminar in Jazz Studies I (4)",
+        "rationale": "The description specifies the honors field and review format but not the project’s substantive content or whether it is performance, composition, historical research or another approach.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-mus-137e",
       "code": "MUS 137E",
       "name": "Seminar in Jazz Studies II",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Continues individually developed jazz or African-diaspora honors projects with peer and faculty review.",
+      "prerequisites": "MUS 137D and department approval.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
       "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-africa",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/all-regions/africa.html",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+      "url": "https://catalog.ucsd.edu/courses/MUS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "For senior music majors pursuing jazz/African-diaspora honors. Second course of the yearlong sequence, continuing 137D; MUS 137D and department approval are required."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-africa"
+        ],
+        "locator": "MUS 137E. Seminar in Jazz Studies II (4)",
+        "rationale": "The independent project content remains unspecified; continuation of the honors sequence does not establish a specific practice or interpretive method.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-mus-137f",
       "code": "MUS 137F",
       "name": "Seminar in Jazz Studies III",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Concludes the yearlong jazz or African-diaspora honors project sequence through seminar review.",
+      "prerequisites": "MUS 137E and department approval.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
       "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-africa",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/all-regions/africa.html",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+      "url": "https://catalog.ucsd.edu/courses/MUS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "For senior music majors pursuing jazz/African-diaspora honors. Third course of the yearlong sequence, continuing 137E; MUS 137E and department approval are required."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-africa"
+        ],
+        "locator": "MUS 137F. Seminar in Jazz Studies III (4)",
+        "rationale": "The project’s particular topic and methods are absent; the honors context cannot supply a primary content category.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-poli-120n",
@@ -35073,156 +35416,324 @@
     {
       "id": "ucsd-cgs-108",
       "code": "CGS 108",
-      "name": "Gender, Race, and Artificial Intelligence (Cross-listed with LTCS 108)",
-      "description": null,
+      "name": "Gender, Race, and Artificial Intelligence",
+      "description": "Examines ideas of artificial intelligence in art and science and their relationships to humanity, race and gender.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-north-america",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/all-regions/multiculturalism in north america -- FA21 and after.html",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses",
+      "url": "https://catalog.ucsd.edu/courses/CGS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Original pool title: Gender, Race, and Artificial Intelligence (Cross-listed with LTCS 108). Current exact title: Gender, Race, and Artificial Intelligence. Differences are limited to an ancillary cross-list label or the apparent Trasnational spelling error; no new identity group is inferred.",
+        "Published relationship or credit condition: (Cross-listed with LTCS 108.) This course explores the idea of artificial intelligence in both art and science, its relation to the quest to identify what makes us human, and the role gender and race have played in both.",
+        "Published relationship or credit condition: Students may not receive credit for CGS 108 and LTCS 108."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses"
+        ],
+        "locator": "CGS 108. Gender, Race, and Artificial Intelligence (4)",
+        "rationale": "AI is the object of cultural and historical critique; no model-building or technical AI method is described.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-cgs-112",
       "code": "CGS 112",
-      "name": "Sexuality and Nation (Cross-listed with ETHN 127)",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Sexuality and Nation",
+      "description": "Explores how sexuality, race, gender and nation shape identity, migration, borders and political life.",
+      "prerequisites": "upper-division standing or consent of instructor.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-north-america",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/all-regions/multiculturalism in north america -- FA21 and after.html",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses",
+      "url": "https://catalog.ucsd.edu/courses/CGS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Original pool title: Sexuality and Nation (Cross-listed with ETHN 127). Current exact title: Sexuality and Nation. Differences are limited to an ancillary cross-list label or the apparent Trasnational spelling error; no new identity group is inferred.",
+        "Published relationship or credit condition: (Cross-listed with ETHN 127.) This course explores the nexus of sex, race, ethnicity, gender, and nation and considers their influence on identity, sexuality, migration movement and borders, and other social, cultural, and political issues that these constructs affect."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses"
+        ],
+        "locator": "CGS 112. Sexuality and Nation (4)",
+        "rationale": "The source explicitly studies social and cultural constructions and their political implications.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-cgs-117",
       "code": "CGS 117",
-      "name": "Transgenderisms (Cross listed with ANSC 117)",
-      "description": null,
+      "name": "Transgenderisms",
+      "description": "Contrasts mainstream transgender concepts with ethnographic accounts of gender-expansive people across communities.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-north-america",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/all-regions/multiculturalism in north america -- FA21 and after.html",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses",
+      "url": "https://catalog.ucsd.edu/courses/CGS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Original pool title: Transgenderisms (Cross listed with ANSC 117). Current exact title: Transgenderisms. Differences are limited to an ancillary cross-list label or the apparent Trasnational spelling error; no new identity group is inferred.",
+        "Published relationship or credit condition: (Cross-listed with ANSC 117.) This course contrasts mainstream Anglo-American conceptualizations of transgenderism with ethnographic accounts of the experiences and practices of gender expansive people of color (African, Native, Asian/Pacific Islander, and Latinx Americans) in the United States and abroad.",
+        "Published relationship or credit condition: Students will not receive credit for both CGS 117 and ANSC 117."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses"
+        ],
+        "locator": "CGS 117. Transgenderisms (4)",
+        "rationale": "Ethnographic and conceptual interpretation of gender and sexuality is the substantive focus.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-cgs-119",
       "code": "CGS 119",
-      "name": "Asian American Film, Video, and New Media: The Politics of Pleasure (Cross-listed with LTCS 119)",
-      "description": null,
+      "name": "Asian American Film, Video, and New Media: The Politics of Pleasure",
+      "description": "Analyzes Asian American identities, pleasure and sexuality in film, video and internet media.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-north-america",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/all-regions/multiculturalism in north america -- FA21 and after.html",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses",
+      "url": "https://catalog.ucsd.edu/courses/CGS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Original pool title: Asian American Film, Video, and New Media: The Politics of Pleasure (Cross-listed with LTCS 119). Current exact title: Asian American Film, Video, and New Media: The Politics of Pleasure. Differences are limited to an ancillary cross-list label or the apparent Trasnational spelling error; no new identity group is inferred.",
+        "Published relationship or credit condition: (Cross-listed with LTCS 119.) The course explores the politics of pleasure in relation to the production, reception, and performance of Asian American identities in the mass media of film, video, and the internet.",
+        "Published relationship or credit condition: Students may not receive credit for LTCS 119 and CGS 119."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses"
+        ],
+        "locator": "CGS 119. Asian American Film, Video, and New Media: The Politics of Pleasure (4)",
+        "rationale": "Interpretation of media representation and cultural intervention is explicit, without media-production training.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-cgs-125",
       "code": "CGS 125",
       "name": "Women of Color Writers",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Studies how writing by women of color challenges power and shapes social and political understanding.",
+      "prerequisites": "CGS 2A or CGS 2B or at least one CGS upper-division course.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-north-america",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/all-regions/multiculturalism in north america -- FA21 and after.html",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses",
+      "url": "https://catalog.ucsd.edu/courses/CGS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses"
+        ],
+        "locator": "CGS 125. Women of Color Writers (4)",
+        "rationale": "Literary interpretation and its social context are the primary objectives.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-cgs-130",
       "code": "CGS 130",
       "name": "Queer Performativity",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Examines queer performance, cultural production and social movements through theories of meaning-making.",
+      "prerequisites": "CGS 2A or 2B or at least one CGS upper-division course.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-north-america",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/all-regions/multiculturalism in north america -- FA21 and after.html",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses",
+      "url": "https://catalog.ucsd.edu/courses/CGS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses"
+        ],
+        "locator": "CGS 130. Queer Performativity (4)",
+        "rationale": "Performance is analyzed through scholarship; actual artistic production methods are not specified.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-cgs-135",
       "code": "CGS 135",
       "name": "Feminist Science and Technology Studies",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Examines science and technology as cultural and political practices shaped by race, gender and colonialism.",
+      "prerequisites": "CGS 2A or 2B or at least one CGS upper-division course.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-north-america",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/all-regions/multiculturalism in north america -- FA21 and after.html",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses",
+      "url": "https://catalog.ucsd.edu/courses/CGS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses"
+        ],
+        "locator": "CGS 135. Feminist Science and Technology Studies (4)",
+        "rationale": "Historical, philosophical and sociological interpretation of science supports human context, not the scientific methods being studied.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-cgs-137",
       "code": "CGS 137",
-      "name": "Latina Issues and Cultural Production ( Cross-listed with ETHN 137)",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Latina Issues and Cultural Production",
+      "description": "Analyzes Latina cultural production through labor, class, gender, sexuality, ethnicity and immigration.",
+      "prerequisites": "CGS 2A-B, ETHN 1, 2, or 3, at least one CGS or ETHN upper-division course, or permission of the instructor. Students may receive a combined total of twelve units for CGS 137 and ETHN 137.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-north-america",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/all-regions/multiculturalism in north america -- FA21 and after.html",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses",
+      "url": "https://catalog.ucsd.edu/courses/CGS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Original pool title: Latina Issues and Cultural Production ( Cross-listed with ETHN 137). Current exact title: Latina Issues and Cultural Production. Differences are limited to an ancillary cross-list label or the apparent Trasnational spelling error; no new identity group is inferred.",
+        "Published relationship or credit condition: (Cross-listed with ETHN 137.) This course will focus on the intersection of labor, class, race, ethnicity, gender, sexuality, and immigration in Latina cultural production.",
+        "Published relationship or credit condition: May be taken for credit three times.",
+        "Published relationship or credit condition: Students may receive a combined total of twelve units for CGS 137 and ETHN 137.",
+        "The source writes CGS2A-B and any following comma/alternative structure literally; no expanded AND/OR course tree is inferred.",
+        "The repeat permission and combined12-unit ceiling across CGS137/ETHN137 are separate from this four-unit course amount."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses"
+        ],
+        "locator": "CGS 137. Latina Issues and Cultural Production (4)",
+        "rationale": "Historically grounded literary and sociocultural analysis is the described purpose.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-cgs-165",
       "code": "CGS 165",
-      "name": "Gender and Sexuality in African American Communities (Cross-listed with ETHN165)",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Gender and Sexuality in African American Communities",
+      "description": "Examines changing constructions of gender and sexuality across African American communities and historical contexts.",
+      "prerequisites": "CGS 2A-B, ETHN 1, 2, 3, at least one CGS or ETHN upper-division course, or permission of the instructor.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-north-america",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/all-regions/multiculturalism in north america -- FA21 and after.html",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses",
+      "url": "https://catalog.ucsd.edu/courses/CGS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Original pool title: Gender and Sexuality in African American Communities (Cross-listed with ETHN165). Current exact title: Gender and Sexuality in African American Communities. Differences are limited to an ancillary cross-list label or the apparent Trasnational spelling error; no new identity group is inferred.",
+        "Published relationship or credit condition: (Cross-listed with ETHN 165.) This course will investigate the changing constructions of sexuality, gender, and sexuality in African American communities defined by historical period, region, and class.",
+        "Published relationship or credit condition: Students may not receive credit for CGS 165 and ETHN 165.",
+        "The source writes CGS2A-B and any following comma/alternative structure literally; no expanded AND/OR course tree is inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses"
+        ],
+        "locator": "CGS 165. Gender and Sexuality in African American Communities (4)",
+        "rationale": "Historical and social analysis of identity, labor and politics organizes the course.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-cgs-167a",
       "code": "CGS 167A",
-      "name": "Decolonial Muslim Feminisms (Cross-listed with ETHN 167A)",
-      "description": null,
+      "name": "Decolonial Muslim Feminisms",
+      "description": "Studies decolonial Muslim feminist thought across religious texts and legal, labor, border and cultural contexts.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-north-america",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/all-regions/multiculturalism in north america -- FA21 and after.html",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses",
+      "url": "https://catalog.ucsd.edu/courses/CGS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Original pool title: Decolonial Muslim Feminisms (Cross-listed with ETHN 167A). Current exact title: Decolonial Muslim Feminisms. Differences are limited to an ancillary cross-list label or the apparent Trasnational spelling error; no new identity group is inferred.",
+        "Published relationship or credit condition: (Cross-listed with ETHN 167A.) This course is a pedagogical analysis of the connections between decolonial thinking and studies of Muslims, Islam, and the Islamicate."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses"
+        ],
+        "locator": "CGS 167A. Decolonial Muslim Feminisms (4)",
+        "rationale": "Interpretive and epistemological analysis of religious and social texts is primary; pedagogical wording does not itself establish teaching-practice training.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-cgs-187",
       "code": "CGS 187",
-      "name": "Latinx Sexualities (Cross-listed with ETHN 187)",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Latinx Sexualities",
+      "description": "Explores Latinx sexualities through comparative perspectives on immigration, class, ethnicity, race and gender.",
+      "prerequisites": "CGS 2A-B, ETHN 1, 2, 3, at least one CGS or ETHN upper-division course, or permission of the instructor.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-north-america",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/all-regions/multiculturalism in north america -- FA21 and after.html",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses",
+      "url": "https://catalog.ucsd.edu/courses/CGS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Original pool title: Latinx Sexualities (Cross-listed with ETHN 187). Current exact title: Latinx Sexualities. Differences are limited to an ancillary cross-list label or the apparent Trasnational spelling error; no new identity group is inferred.",
+        "Published relationship or credit condition: (Cross-listed with ETHN 187.) The construction and articulation of Latinx sexualities will be explored in this course through interdisciplinary and comparative perspectives.",
+        "Published relationship or credit condition: Students will not receive credit for both CGS 115 and 187.",
+        "The source writes CGS2A-B and any following comma/alternative structure literally; no expanded AND/OR course tree is inferred.",
+        "The current description excludes credit with CGS115; it does not itself establish an old/new number identity."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses"
+        ],
+        "locator": "CGS 187. Latinx Sexualities (4)",
+        "rationale": "The source analyzes social constructions and identity through interdisciplinary cultural inquiry.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-eds-127",
@@ -37966,72 +38477,152 @@
     {
       "id": "ucsd-mus-18",
       "code": "MUS 18",
-      "name": "Klezmer Music (Cross-listed with JUDA 18)",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Klezmer Music",
+      "description": "Surveys Eastern European Jewish music, Yiddish theater and popular song and their movement to America.",
+      "prerequisites": "none.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-north-america",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/all-regions/multiculturalism in north america -- FA21 and after.html",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+      "url": "https://catalog.ucsd.edu/courses/MUS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Explicitly cross-listed with JUDA 18, with no credit allowed for both; this helper does not certify identity.",
+        "Listed title: Klezmer Music (Cross-listed with JUDA 18). Current title: Klezmer Music. The difference is punctuation, number styling, a subtitle or an explanatory cross-list label; the specific subject remains aligned."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-north-america"
+        ],
+        "locator": "MUS 18. Klezmer Music (4)",
+        "rationale": "Musical and cultural history is the stated subject, without a performance-training objective.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-mus-137a",
       "code": "MUS 137A",
-      "name": "Jazz Theory & Improvisation",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Jazz Theory and Improvisation",
+      "description": "Introduces modern-jazz theory through instrumental application, transcription, composition and improvisation exercises.",
+      "prerequisites": "MUS 2A-B-C, proficiency exam, or consent of instructor.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-north-america",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/all-regions/multiculturalism in north america -- FA21 and after.html",
+      "category": "applications",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+      "url": "https://catalog.ucsd.edu/courses/MUS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "First course of a yearlong sequence. The MUS 2A-B-C, proficiency-exam or instructor-consent prerequisite alternatives are preserved literally.",
+        "Listed title: Jazz Theory & Improvisation. Current title: Jazz Theory and Improvisation. The difference is punctuation, number styling, a subtitle or an explanatory cross-list label; the specific subject remains aligned."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-north-america"
+        ],
+        "locator": "MUS 137A. Jazz Theory and Improvisation (4)",
+        "rationale": "Rhythm, harmony and form are explicitly applied in musical creation and instrumental work; musical theory is not general mathematical theory.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-mus-137b",
       "code": "MUS 137B",
-      "name": "Jazz Theory & Improvisation",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Jazz Theory and Improvisation",
+      "description": "Continues practical jazz theory, transcription, composition and improvisation after the first course.",
+      "prerequisites": "MUS 137A or consent of instructor.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-north-america",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/all-regions/multiculturalism in north america -- FA21 and after.html",
+      "category": "applications",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+      "url": "https://catalog.ucsd.edu/courses/MUS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Second course of a yearlong sequence; continuation of MUS 137A.",
+        "Listed title: Jazz Theory & Improvisation. Current title: Jazz Theory and Improvisation. The difference is punctuation, number styling, a subtitle or an explanatory cross-list label; the specific subject remains aligned."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-north-america"
+        ],
+        "locator": "MUS 137B. Jazz Theory and Improvisation (4)",
+        "rationale": "The explicit instrumental and creative exercises establish applied musical practice.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-mus-137c",
       "code": "MUS 137C",
-      "name": "Jazz Theory & Improvisation",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Jazz Theory and Improvisation",
+      "description": "Completes a yearlong sequence applying jazz theory through listening, transcription, composition and improvisation.",
+      "prerequisites": "MUS 137B or consent of instructor.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-north-america",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/all-regions/multiculturalism in north america -- FA21 and after.html",
+      "category": "applications",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+      "url": "https://catalog.ucsd.edu/courses/MUS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Third course of a yearlong sequence; continuation of MUS 137B.",
+        "Listed title: Jazz Theory & Improvisation. Current title: Jazz Theory and Improvisation. The difference is punctuation, number styling, a subtitle or an explanatory cross-list label; the specific subject remains aligned."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-north-america"
+        ],
+        "locator": "MUS 137C. Jazz Theory and Improvisation (4)",
+        "rationale": "The course continues concrete musical practice rather than primarily interpreting social history.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-mus-153",
       "code": "MUS 153",
-      "name": "African Americans and the Mass Media ( Cross-listed with ETHN 164)",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "African Americans and the Mass Media",
+      "description": "Studies changing media images of African Americans, enduring stereotypes and community responses from slavery onward.",
+      "prerequisites": "upper-division standing or consent of instructor.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-north-america",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/all-regions/multiculturalism in north america -- FA21 and after.html",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+      "url": "https://catalog.ucsd.edu/courses/MUS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Explicitly cross-listed with ETHN 164; no identity group is certified here.",
+        "Listed title: African Americans and the Mass Media ( Cross-listed with ETHN 164). Current title: African Americans and the Mass Media. The difference is punctuation, number styling, a subtitle or an explanatory cross-list label; the specific subject remains aligned."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-north-america"
+        ],
+        "locator": "MUS 153. African Americans and the Mass Media (4)",
+        "rationale": "Historical representation and its social, political and economic context establish human context.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-poli-101a",
@@ -45313,57 +45904,120 @@
       "id": "ucsd-mus-112",
       "code": "MUS 112",
       "name": "Topics in European Music Before 1750",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Studies selected topics in medieval, Renaissance and Baroque European music.",
+      "prerequisites": "knowledge of music notation or consent of instructor; MUS 4, 8–10, or 120 recommended.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-europe",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/all-regions/europe.html",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+      "url": "https://catalog.ucsd.edu/courses/MUS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "May be taken for credit five times. Knowledge of music notation or instructor consent is required; MUS 4, 8–10 or 120 are recommended rather than mandatory."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-europe"
+        ],
+        "locator": "MUS 112. Topics in European Music Before 1750 (4)",
+        "rationale": "The course is explicitly bounded to historical music study; notation knowledge as a prerequisite does not by itself establish composition or performance training.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-mus-120a",
       "code": "MUS 120A",
-      "name": "History of Music in Western Culture 1",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "History of Music in Western Culture I",
+      "description": "Introduces music-studies concepts and research approaches through historical and ethnographic cases.",
+      "prerequisites": "MUS 1C or 2C or passing grade on proficiency exam. Music majors are recommended to take MUS 101A concurrently. Department approval required for nonmajors.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-europe",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/all-regions/europe.html",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+      "url": "https://catalog.ucsd.edu/courses/MUS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Music majors are recommended to take MUS 101A concurrently; this is not a required corequisite. Nonmajors require department approval.",
+        "Listed title: History of Music in Western Culture 1. Current title: History of Music in Western Culture I. The difference is punctuation, number styling, a subtitle or an explanatory cross-list label; the specific subject remains aligned."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-europe"
+        ],
+        "locator": "MUS 120A. History of Music in Western Culture I (4)",
+        "rationale": "The description explicitly centers historical and ethnographic scholarship, making cultural interpretation primary.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-mus-120b",
       "code": "MUS 120B",
-      "name": "History of Music in Western Culture 2",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "History of Music in Western Culture II",
+      "description": "Develops original music-studies research applications building on the preceding course’s approaches.",
+      "prerequisites": "MUS 120A. Music majors are recommended to take MUS 101B concurrently. Department approval required for nonmajors.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-europe",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/all-regions/europe.html",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+      "url": "https://catalog.ucsd.edu/courses/MUS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "MUS 120A is required. Music majors are recommended to take MUS 101B concurrently; nonmajors require department approval.",
+        "Listed title: History of Music in Western Culture 2. Current title: History of Music in Western Culture II. The difference is punctuation, number styling, a subtitle or an explanatory cross-list label; the specific subject remains aligned."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-europe"
+        ],
+        "locator": "MUS 120B. History of Music in Western Culture II (4)",
+        "rationale": "This continuation remains in the stated sequence of historical and ethnographic music studies; applying research skills does not establish programming or musical production.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-mus-120c",
       "code": "MUS 120C",
-      "name": "History of Music in Western Culture 3",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "History of Music in Western Culture III",
+      "description": "Carries out previously developed music-studies projects with peer feedback and faculty advice.",
+      "prerequisites": "MUS 120B. Music majors are recommended to take MUS 101C concurrently. Department approval required for nonmajors.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-europe",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/all-regions/europe.html",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+      "url": "https://catalog.ucsd.edu/courses/MUS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "MUS 120B is required. Music majors are recommended to take MUS 101C concurrently; nonmajors require department approval.",
+        "Listed title: History of Music in Western Culture 3. Current title: History of Music in Western Culture III. The difference is punctuation, number styling, a subtitle or an explanatory cross-list label; the specific subject remains aligned."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-europe"
+        ],
+        "locator": "MUS 120C. History of Music in Western Culture III (4)",
+        "rationale": "The stated sequence frames projects as historical and ethnographic music-studies research, not unqualified performance or composition projects.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-phil-104",
@@ -47979,7 +48633,22 @@
       "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-eighth-table",
       "url": "https://docs.google.com/spreadsheets/u/0/d/e/2PACX-1vTjSFu7S3GggkhDIouNMzkt-2ikXeiCHwu2RVljn44ZIKuvUDCog6TBv0DFOZwvQIlF_zHDGefamoJD/pubhtml/sheet?headers=false&gid=336726230",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-eighth-table"
+        ],
+        "locator": "MUS 19R; bounded current chapter heading inventory",
+        "rationale": "No exact heading for this represented identifier appears in the inspected Music chapter; similar suffixes or titles do not establish a substitute identity, and no discontinuation is inferred.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "No exact identifier is printed in the reviewed 2026–27 MUS chapter. An unsuffixed or otherwise similar course is not substituted; no cancellation or university-wide absence is inferred."
+      ]
     },
     {
       "id": "ucsd-mus-20r",
@@ -47993,21 +48662,52 @@
       "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-eighth-table",
       "url": "https://docs.google.com/spreadsheets/u/0/d/e/2PACX-1vTjSFu7S3GggkhDIouNMzkt-2ikXeiCHwu2RVljn44ZIKuvUDCog6TBv0DFOZwvQIlF_zHDGefamoJD/pubhtml/sheet?headers=false&gid=336726230",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-eighth-table"
+        ],
+        "locator": "MUS 20R; bounded current chapter heading inventory",
+        "rationale": "No exact heading for this represented identifier appears in the inspected Music chapter; similar suffixes or titles do not establish a substitute identity, and no discontinuation is inferred.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "No exact identifier is printed in the reviewed 2026–27 MUS chapter. An unsuffixed or otherwise similar course is not substituted; no cancellation or university-wide absence is inferred."
+      ]
     },
     {
       "id": "ucsd-mus-111",
       "code": "MUS 111",
-      "name": "Topics: World Music Traditions",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Topics/World Music Traditions",
+      "description": "Studies regional musical repertories in cultural context and in relation to other traditions.",
+      "prerequisites": "upper-division standing or consent of instructor.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-eighth-table",
-      "url": "https://docs.google.com/spreadsheets/u/0/d/e/2PACX-1vTjSFu7S3GggkhDIouNMzkt-2ikXeiCHwu2RVljn44ZIKuvUDCog6TBv0DFOZwvQIlF_zHDGefamoJD/pubhtml/sheet?headers=false&gid=336726230",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+      "url": "https://catalog.ucsd.edu/courses/MUS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "May be taken for credit three times with varying regional topics.",
+        "Listed title: Topics: World Music Traditions. Current title: Topics/World Music Traditions. The difference is punctuation, number styling, a subtitle or an explanatory cross-list label; the specific subject remains aligned."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-eighth-table"
+        ],
+        "locator": "MUS 111. Topics/World Music Traditions (4)",
+        "rationale": "Cultural contexts and relationships among traditions are explicit even though the selected region varies.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-mus-126r",
@@ -48021,7 +48721,22 @@
       "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-eighth-table",
       "url": "https://docs.google.com/spreadsheets/u/0/d/e/2PACX-1vTjSFu7S3GggkhDIouNMzkt-2ikXeiCHwu2RVljn44ZIKuvUDCog6TBv0DFOZwvQIlF_zHDGefamoJD/pubhtml/sheet?headers=false&gid=336726230",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-eighth-table"
+        ],
+        "locator": "MUS 126R; bounded current chapter heading inventory",
+        "rationale": "No exact heading for this represented identifier appears in the inspected Music chapter; similar suffixes or titles do not establish a substitute identity, and no discontinuation is inferred.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "No exact identifier is printed in the reviewed 2026–27 MUS chapter. An unsuffixed or otherwise similar course is not substituted; no cancellation or university-wide absence is inferred."
+      ]
     },
     {
       "id": "ucsd-mus-150gs",
@@ -48035,7 +48750,22 @@
       "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-eighth-table",
       "url": "https://docs.google.com/spreadsheets/u/0/d/e/2PACX-1vTjSFu7S3GggkhDIouNMzkt-2ikXeiCHwu2RVljn44ZIKuvUDCog6TBv0DFOZwvQIlF_zHDGefamoJD/pubhtml/sheet?headers=false&gid=336726230",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-eighth-table"
+        ],
+        "locator": "MUS 150GS; bounded current chapter heading inventory",
+        "rationale": "No exact heading for this represented identifier appears in the inspected Music chapter; similar suffixes or titles do not establish a substitute identity, and no discontinuation is inferred.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "No exact identifier is printed in the reviewed 2026–27 MUS chapter. An unsuffixed or otherwise similar course is not substituted; no cancellation or university-wide absence is inferred."
+      ]
     },
     {
       "id": "ucsd-tdge-131",
@@ -50027,57 +50757,118 @@
       "id": "ucsd-cgs-100a",
       "code": "CGS 100A",
       "name": "Conceptualizing Gender: Theoretical Approaches",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Compares theoretical frameworks for analyzing gender alongside race, class, sexuality, nation, disability and religion.",
+      "prerequisites": "CGS 2A-B or at least one CGS upper-division course.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-eighth-table",
-      "url": "https://docs.google.com/spreadsheets/u/0/d/e/2PACX-1vTjSFu7S3GggkhDIouNMzkt-2ikXeiCHwu2RVljn44ZIKuvUDCog6TBv0DFOZwvQIlF_zHDGefamoJD/pubhtml/sheet?headers=false&gid=336726230",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses",
+      "url": "https://catalog.ucsd.edu/courses/CGS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Published relationship or credit condition: Students will not receive credit for both CGS 100 and 100A.",
+        "The source writes CGS2A-B and any following comma/alternative structure literally; no expanded AND/OR course tree is inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses"
+        ],
+        "locator": "CGS 100A. Conceptualizing Gender: Theoretical Approaches (4)",
+        "rationale": "Critical theoretical and intersectional analysis supports human context.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-cgs-100b",
       "code": "CGS 100B",
       "name": "Conceptualizing Gender: Methods and Methodologies",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Introduces interdisciplinary research approaches and evaluates how knowledge about gender and sexuality is produced.",
+      "prerequisites": "CGS 2A-B or at least one CGS upper-division course.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-eighth-table",
-      "url": "https://docs.google.com/spreadsheets/u/0/d/e/2PACX-1vTjSFu7S3GggkhDIouNMzkt-2ikXeiCHwu2RVljn44ZIKuvUDCog6TBv0DFOZwvQIlF_zHDGefamoJD/pubhtml/sheet?headers=false&gid=336726230",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses",
+      "url": "https://catalog.ucsd.edu/courses/CGS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "The source writes CGS2A-B and any following comma/alternative structure literally; no expanded AND/OR course tree is inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses"
+        ],
+        "locator": "CGS 100B. Conceptualizing Gender: Methods and Methodologies (4)",
+        "rationale": "Research methodology serves critical gender inquiry; the broad mention of natural-science methods does not identify a separate scientific domain or concrete technical curriculum.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-cgs-118",
       "code": "CGS 118",
-      "name": "Gender and Incarceration (ANSC 186)",
-      "description": null,
+      "name": "Gender and Incarceration",
+      "description": "Analyzes intersections of racism, gendered violence and state control within incarceration systems.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-eighth-table",
-      "url": "https://docs.google.com/spreadsheets/u/0/d/e/2PACX-1vTjSFu7S3GggkhDIouNMzkt-2ikXeiCHwu2RVljn44ZIKuvUDCog6TBv0DFOZwvQIlF_zHDGefamoJD/pubhtml/sheet?headers=false&gid=336726230",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses",
+      "url": "https://catalog.ucsd.edu/courses/CGS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Original pool title: Gender and Incarceration (ANSC 186). Current exact title: Gender and Incarceration. Differences are limited to an ancillary cross-list label or the apparent Trasnational spelling error; no new identity group is inferred.",
+        "Published relationship or credit condition: (Cross-listed with ANSC 186.) This course investigates the ways in which forces of racism, gendered violence, and state control intersect in the penal system.",
+        "Published relationship or credit condition: Students may not receive credit for CGS 118 and ANSC 186."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses"
+        ],
+        "locator": "CGS 118. Gender and Incarceration (4)",
+        "rationale": "Penal institutions, social power and gendered harm are studied critically.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-cgs-120",
       "code": "CGS 120",
-      "name": "Capitalism and Gender (ANSC 180)",
-      "description": null,
+      "name": "Capitalism and Gender",
+      "description": "Critically examines capitalism, gender performance, exploitation and racialization through anticolonial and queer perspectives.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-eighth-table",
-      "url": "https://docs.google.com/spreadsheets/u/0/d/e/2PACX-1vTjSFu7S3GggkhDIouNMzkt-2ikXeiCHwu2RVljn44ZIKuvUDCog6TBv0DFOZwvQIlF_zHDGefamoJD/pubhtml/sheet?headers=false&gid=336726230",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses",
+      "url": "https://catalog.ucsd.edu/courses/CGS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Original pool title: Capitalism and Gender (ANSC 180). Current exact title: Capitalism and Gender. Differences are limited to an ancillary cross-list label or the apparent Trasnational spelling error; no new identity group is inferred.",
+        "Published relationship or credit condition: (Cross-listed with ANSC 180.) Drawing insight from anticolonial and queer of color critique, this course critically examines the demands capitalism makes on us to perform gender, and how that relates to processes of exploitation and racialization.",
+        "Published relationship or credit condition: Students may receive credit for one of the following: CGS 120, CGS 180, and ANSC 180."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses"
+        ],
+        "locator": "CGS 120. Capitalism and Gender (4)",
+        "rationale": "The source centers social and political critique; navigating employment does not establish business-method instruction.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-comm-50",
@@ -51305,15 +52096,28 @@
       "id": "ucsd-mus-115",
       "code": "MUS 115",
       "name": "Women in Music",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Examines women musicians and their opportunities, creativity and reception across historical and political contexts.",
+      "prerequisites": "upper-division standing or consent of instructor.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-seventh-first",
-      "url": "https://seventh.ucsd.edu/academics/degree-requirements/degree-requirements-first.html",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+      "url": "https://catalog.ucsd.edu/courses/MUS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-seventh-first"
+        ],
+        "locator": "MUS 115. Women in Music (4)",
+        "rationale": "Biographical, sociological and political analysis of musical work is primary.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-vis-103",
@@ -52911,16 +53715,30 @@
     {
       "id": "ucsd-cgs-128",
       "code": "CGS 128",
-      "name": "Trasnational Feminisms",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Transnational Feminisms",
+      "description": "Studies transnational feminist theory, colonial perspectives, labor exploitation and antiracist solidarity.",
+      "prerequisites": "CGS 2A or 2B or at least one CGS upper-division course.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-seventh-first",
-      "url": "https://seventh.ucsd.edu/academics/degree-requirements/degree-requirements-first.html",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses",
+      "url": "https://catalog.ucsd.edu/courses/CGS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Original pool title: Trasnational Feminisms. Current exact title: Transnational Feminisms. Differences are limited to an ancillary cross-list label or the apparent Trasnational spelling error; no new identity group is inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses"
+        ],
+        "locator": "CGS 128. Transnational Feminisms (4)",
+        "rationale": "Political theory and historical social relations organize the course.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-dsc-160",
@@ -53323,15 +54141,30 @@
       "id": "ucsd-mus-103a",
       "code": "MUS 103A",
       "name": "Seminar in Composition I",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Develops composition and instrumentation through score study, creative exercises and a final work for standard ensemble.",
+      "prerequisites": "MUS 33C.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-seventh-first",
-      "url": "https://seventh.ucsd.edu/academics/degree-requirements/degree-requirements-first.html",
+      "category": "applications",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+      "url": "https://catalog.ucsd.edu/courses/MUS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "First course in a composition sequence; MUS 33C is required."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-seventh-first"
+        ],
+        "locator": "MUS 103A. Seminar in Composition I (4)",
+        "rationale": "The course explicitly teaches musical composition through creative application and completed work.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-nano-120a",
@@ -54428,7 +55261,22 @@
       "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-discipline-chinese",
       "url": "https://catalog.ucsd.edu/curric/CHIN.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-discipline-chinese"
+        ],
+        "locator": "MUS 13AS; bounded current chapter heading inventory",
+        "rationale": "No exact heading for this represented identifier appears in the inspected Music chapter; similar suffixes or titles do not establish a substitute identity, and no discontinuation is inferred.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "No exact identifier is printed in the reviewed 2026–27 MUS chapter. An unsuffixed or otherwise similar course is not substituted; no cancellation or university-wide absence is inferred."
+      ]
     },
     {
       "id": "ucsd-hiea-140",
@@ -54769,15 +55617,27 @@
       "id": "ucsd-cgs-127",
       "code": "CGS 127",
       "name": "Feminist Border Studies",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Examines the production and policing of borders through gender, sexuality, embodiment and racialization.",
+      "prerequisites": "CGS 2A or 2B or at least one CGS upper-division course.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-discipline-latin-american",
-      "url": "https://catalog.ucsd.edu/curric/LATI-ug.html",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses",
+      "url": "https://catalog.ucsd.edu/courses/CGS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-cgs-courses"
+        ],
+        "locator": "CGS 127. Feminist Border Studies (4)",
+        "rationale": "Critical border and social-power analysis supports human context.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-comm-183",
@@ -55282,15 +56142,30 @@
       "id": "ucsd-mus-116",
       "code": "MUS 116",
       "name": "Popular Music Studies Seminar",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Studies selected popular-music topics through sociopolitical, aesthetic and performance perspectives and scholarship.",
+      "prerequisites": "upper-division standing or consent of instructor.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-discipline-latin-american",
-      "url": "https://catalog.ucsd.edu/curric/LATI-ug.html",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+      "url": "https://catalog.ucsd.edu/courses/MUS.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "May be taken for credit three times with varying topics. The represented source is a Latin American studies pool, but this generic description does not identify a particular regional offering. This observation does not add a new eligibility condition to the separately reviewed pool."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-mus-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-discipline-latin-american"
+        ],
+        "locator": "MUS 116. Popular Music Studies Seminar (4)",
+        "rationale": "The description specifies music scholarship and critical perspectives rather than actual performance-production assignments; its variable topic remains bounded to cultural music study.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-poli-134a",
@@ -147676,7 +148551,9 @@
     "Corrected an HIEU parser omission:16 previously unmatched identifiers are explicitly printed in shared catalog headings. All16 full blocks and the complete Colloquia policy were reread. Current74-target disposition is72approved observations, only105missing, and122title-held. Eighteen represented colloquia require undergraduate EASY department approval or instructor permission; additional graduate work is not transferred to undergraduates. Joint headings and107/RELI147 credit exclusion do not automatically create identity groups.124units remain omitted;198variableunits remainnull.",
     "History content review adds34 HILA and81 HIUS/HIEA current observations, using actual shared undergraduate/graduate headings without adding graduate records. Colloquia department approval or instructor consent remains undergraduate-scoped; graduate additional-paper rules are not undergraduate obligations. Three HILA and seven HIUS/HIEA exact codes are unmatched, while HIUS120 retains its conflicting older pool title. No prerequisite or shared heading changes formal course roles.",
     "SIO41 targets receive35 approved current observations, four unmatched codes and two substantive title/version holds (105,113). Scientific-domain methods, mixed climate-policy/science and unspecified research are distinguished. SIO194 remains4units with a separate6–8unit internship. SIO109/POLI117 reciprocal relationship statements have differing descriptive detail and subject reviews; no identity group or forced category reconciliation is inferred.",
-    "EDS31 actual complete descriptions now mapped, with138 unmatched. ED25-only103, Summer Bridge/OASIS/Global Seminar admissions and separate139 practicum requirements remain conditional course eligibility, not fixed AI courses.139two-unit service hours and repeat ceiling are separate from credits;190variable1–6 staysnull.141 placement-form reference to140 is preserved as a source anomaly. Further accessible subject content remains active."
+    "EDS31 actual complete descriptions now mapped, with138 unmatched. ED25-only103, Summer Bridge/OASIS/Global Seminar admissions and separate139 practicum requirements remain conditional course eligibility, not fixed AI courses.139two-unit service hours and repeat ceiling are separate from credits;190variable1–6 staysnull.141 placement-form reference to140 is preserved as a source anomaly. Further accessible subject content remains active.",
+    "CGS24 complete current descriptions are human-context inquiry, including cultural AI108 and critical science-studies135; no technical field is inferred from a theme. Four-unit amounts, conditional prerequisites, combined repeat-credit ceilings and exclusions remain literal; cross-list statements do not create identity groups.",
+    "MUS33 targets yield27 current observations and six unmatched codes. Five practical composition/performance courses are applications,17 cultural/historical studies human-context and five individually selected projects/studies unclassified.132R is recital preparation, not inferred online modality;160B major restrictions and unexplained production-course limitation remain exact.199variable1–4 credits remainnull."
   ],
   "curriculum_audit": {
     "scope": "degree",

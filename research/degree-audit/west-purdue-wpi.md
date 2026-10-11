@@ -435,3 +435,7 @@ HILA34 primary-read, HIUS/HIEA81 contributor-read and SIO35 contributor-read obs
 ### UCSD Education Studies, 2026-10-11
 
 Primary read and integrated31 complete EDS descriptions, with138 unmatched. Actual eligibility includes ED25-only103 and course-scoped Summer Bridge/OASIS/Global Seminar admissions; many teaching courses require a separate139 practicum. Credits and source anomalies are retained exactly. No role changes:8fixed/119options/2241context; context subject categories1377other/728human/103applications/7foundations/23systems/3math. Identified unread subject chapters remain active, so audit status stays in progress.
+
+### UCSD CGS and Music, 2026-10-11
+
+CGS24 primary-read and MUS27 contributor-read descriptions integrated, with primary Music boundary checks and six unmatched-code dispositions. Themes do not determine subjects; cultural AI remains human-context, practical composition/performance applications, selected projects unknown. Context categories now1331other/769human/108applications/7foundations/23systems/3math; roles unchanged8/119/2241. Other accessible chapters remain active.
