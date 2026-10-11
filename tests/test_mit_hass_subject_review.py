@@ -215,7 +215,7 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']['description_reviewed_records']==436
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==448
     assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
         o=next(o for o in entry(code)['observations'] if o.get('evidence_basis')=='official_title_only')
@@ -1638,5 +1638,38 @@ def test_sts_archive_actual_replay_guards_all_read_eligibility_and_term():
         for wrong in [{**o,'term':'Fall 2026'},{**o,'units':'3-0-11'},{**o,'source_text':o['source_text']+' Permission now required.'}]:
             assert review.matched_review(course,wrong,e['source_url'],MANIFEST) is None
     path=Path('/tmp/mit-hass-subjects/detail-sts012-sp23.html')
+    if path.exists():
+        with pytest.raises(ValueError):review.observe_sts_archive_description(path.read_text())
+
+
+def test_older_sts_actual_descriptions_do_not_guess_dates_or_domain_methods():
+    report=MANIFEST['sts_older_archive_description_followup']
+    assert len(report['upgraded_record_ids'])==12 and report['detail_pages_read']==9
+    assert len(report['archive_index_pages_read'])==16
+    for code in ['STS.011','STS.012']:
+        e=entry(code)['observations'][-1]
+        assert e['catalog_year'] is e['credits'] is e['prerequisites'] is None
+    for code in ['STS.008','STS.011','STS.012','STS.043','STS.049','STS.088']:
+        assert entry(code)['observations'][-1]['category']=='human_context'
+    for code in ['STS.035','STS.056']:
+        assert entry(code)['observations'][-1]['candidate_categories']==['applications','human_context']
+    assert entry('STS.056')['observations'][-1]['credits']==12
+    assert entry('STS.043')['observations'][-1]['credits']==9
+    assert entry('STS.049')['observations'][-1]['prerequisites']=='None'
+    assert 'despite thefa17URL' in report['metadata_only_reads'][0]['reason']
+
+
+def test_older_sts_actual_source_replay_preserves_full_context_and_term_missingness():
+    for cid in MANIFEST['sts_older_archive_description_followup']['upgraded_record_ids']:
+        row=MANIFEST['courses'][cid];e=row['observations'][-1]
+        key=e['source_id'].removeprefix('mit-ai-hass-review-sts-archive-')
+        path=Path('/tmp/mit-hass-subjects/detail-'+key+'.html')
+        if not path.exists():pytest.skip('Optional public older STS description captures')
+        o=review.observe_sts_archive_description(path.read_text())[0]
+        course=dict(id=cid,code=row['listed_code'],name=row['listed_name'],source_id=row['listed_source_id'])
+        assert review.matched_review(course,o,e['source_url'],MANIFEST)==e
+        assert review.matched_review(course,{**o,'term':'Fall 2026'},e['source_url'],MANIFEST) is None
+        assert review.matched_review(course,{**o,'prerequisites':'Permission'},e['source_url'],MANIFEST) is None
+    path=Path('/tmp/mit-hass-subjects/detail-sts081-fa17.html')
     if path.exists():
         with pytest.raises(ValueError):review.observe_sts_archive_description(path.read_text())

@@ -814,7 +814,7 @@ def observe_sts_archive_description(html):
     title = clean(soup.find('h1'))
     body = soup.select_one('article.sts_subject .academic-content .entry-content')
     text = clean(body)
-    identity = re.match(r'(STS\.\d{3}J?)(?:/444)?[:\s]+(.+)', title)
+    identity = re.match(r'(STS\.\d{3}J?)(?:/44[34])?[:\s]+(.+)', title)
     starts = {
         'STS.051': 'Students will research the history and culture of East Campus',
         'STS.053': 'This problem-solving course is located at the intersection',
@@ -823,11 +823,19 @@ def observe_sts_archive_description(html):
         'STS.040': 'Do you want to know why the dietary proteins',
         'STS.014': 'A growing body of scientific and educational research',
         'STS.041': 'From efforts by the American Medical Association',
+        'STS.043': 'Focuses on the memoir as a window',
+        'STS.008': 'How have computers changed the way',
+        'STS.011': 'We are in the midst of an explosion',
+        'STS.035': 'STS.035 is a making class',
+        'STS.012': 'When controversies about science and technology emerge',
+        'STS.056': 'Examines the linked histories of science',
+        'STS.049': 'Cancer is, in the words of one recent author',
+        'STS.088': 'The aim of this course is to immerse students',
     }
     if identity is None or identity[1] not in starts or starts[identity[1]] not in text:
         raise ValueError('STS archive exact subject or substantive description missing')
     term = re.search(r'\b(Fall|Spring) \d{4}\b', text)
-    if term is None:
+    if term is None and identity[1] not in {'STS.011', 'STS.012'}:
         raise ValueError('STS archive teaching term missing')
     code = identity[1]
     name = identity[2].split(' – ')[0]
@@ -838,8 +846,8 @@ def observe_sts_archive_description(html):
         name = headings[0]
     metadata = text.split(starts[code], 1)[0]
     units = re.search(r'\b\d+-\d+-\d+\b', metadata)
-    prep = re.search(r'Prereq:\s*(.*?)(?=\s+\d+-\d+-\d+|$)', metadata)
-    return [dict(code=code, name=name, term=term[0],
+    prep = re.search(r'Prereq:\s*(None)\b', metadata)
+    return [dict(code=code, name=name, term=term[0] if term else None,
                  description=starts[code]+text.split(starts[code],1)[1],
                  prerequisites=prep[1] if prep else None, units=units[0] if units else None,
                  source_text=text, source_heading=title)]
