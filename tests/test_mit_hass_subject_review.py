@@ -215,7 +215,7 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']['description_reviewed_records']==314
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==328
     assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
         o=entry(code)['observations'][-1]
@@ -285,7 +285,7 @@ def test_sts_titles_preserve_unknowns_and_actual_crosslisted_content():
     o=entry('STS.024')['observations'][-1]
     assert o['observed_code']=='CMS.524[J]' and o['status']=='mixed'
     assert o['category']=='other' and o['source_metadata']['same_subject_as']=='STS.024[J]'
-    assert entry('STS.081J')['observations'][-1]['status']=='unclassified'
+    assert next(o for o in entry('STS.081J')['observations'] if o['source_id']=='mit-ai-hass-review-sts-tier-ii-titles')['status']=='unclassified'
     assert entry('STS.085J')['observations'][-1]['category']=='human_context'
     old=next(r for r in MANIFEST['courses'].values() if r['listed_name']=='Quantifying People: A History of Social Science')
     assert old['review_status']=='identity_review_needed'
@@ -978,5 +978,52 @@ def test_urban_actual_captures_replay_and_historical_unit_amount_is_guarded():
             c=dict(id=cid,code=row['listed_code'],name=row['listed_name'],source_id=row['listed_source_id'])
             assert review.matched_review(c,o,source['url'],MANIFEST)==e
             assert review.matched_review(c,{**o,'prerequisites':'Permission no longer required'},source['url'],MANIFEST) is None
+            seen+=1
+    assert seen==14
+
+
+def test_sts_actual_description_review_preserves_reused_numbers_and_subject_focus():
+    report=MANIFEST['ocw_sts_review']
+    assert report['directory_results_observed']==71
+    assert report['public_course_pages_read']==11 and report['public_syllabi_read']==10
+    assert len(report['upgraded_record_ids'])==14
+    for code in ['STS.002','STS.034','STS.042J','STS.081J']:
+        assert entry(code)['observations'][-1]['category']=='human_context'
+    evolution=entry('STS.009')['observations'][-1]
+    assert evolution['category']=='other' and evolution['status']=='mixed'
+    assert evolution['candidate_categories']==['applications','human_context']
+    nuclear=entry('STS.084J/22.04J')['observations'][-1]
+    assert nuclear['observed_code']=='22.04J' and nuclear['catalog_year']=='Fall 2025'
+    assert nuclear['status']=='mixed'
+    info=entry('STS.085J/6.4590J')['observations'][-1]
+    assert info['observed_code']=='6.4590' and info['category']=='human_context'
+    assert info['prerequisites'] is info['credits'] is None
+    for code in ['STS.005J','STS.011','STS.014','STS.035','STS.036','STS.038','STS.049','STS.062','STS.089','STS.085J/6.805J']:
+        assert entry(code)['observations'][-1]['evidence_basis']=='official_title_only'
+
+
+def test_sts_actual_sources_replay_and_description_heading_guard():
+    path=Path('/tmp/mit-hass-subjects/ocw-sts-index.json')
+    if not path.exists():pytest.skip('Optional ignored public STS OCW captures')
+    seen=0
+    for source in json.loads(path.read_text()):
+        home=source['key'].startswith('6-4590-')
+        if home==source['key'].endswith('-syllabus'):continue
+        cache=path.parent/('ocw-'+source['key']+'.html')
+        if not cache.exists():pytest.skip('Optional ignored public course capture')
+        html=cache.read_text();o=(review.observe_ocw_course if home else review.observe_ocw_syllabus)(html)[0]
+        if o['code']=='STS.001':
+            assert o['description'].startswith('This class will consider')
+            with pytest.raises(ValueError,match='actual description'):
+                review.observe_ocw_syllabus(html.replace('Class Overview','No longer a description'))
+        if o['code']=='STS.034':
+            assert o['description'].startswith('To provide an introduction')
+            assert 'Assessment Grades' not in o['description']
+        for cid,row in MANIFEST['courses'].items():
+            e=next((e for e in row['observations'] if e['source_url']==source['url']),None)
+            if e is None:continue
+            c=dict(id=cid,code=row['listed_code'],name=row['listed_name'],source_id=row['listed_source_id'])
+            assert review.matched_review(c,o,source['url'],MANIFEST)==e
+            assert review.matched_review(c,{**o,'name':'A different topic under the same number'},source['url'],MANIFEST) is None
             seen+=1
     assert seen==14
