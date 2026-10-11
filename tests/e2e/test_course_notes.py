@@ -21,6 +21,9 @@ def notes_site(tmp_path,site_data):
     ]
     for duplicate in site_data['programs'][0]['courses']:
         duplicate['notes']=list(site_data['programs'][0]['courses'][0]['notes'])
+    site_data['programs'][0]['sources'][0]['locator'] = (
+        'Selected public Eligibility tab; source SHA256 ' + '3c904a76fa15e9747' * 4
+    )
     build(site_data,tmp_path/'ai-program-atlas')
     server=ThreadingHTTPServer(('127.0.0.1',0),partial(SimpleHTTPRequestHandler,directory=str(tmp_path)))
     thread=Thread(target=server.serve_forever,daemon=True);thread.start()
@@ -34,6 +37,9 @@ def test_course_notes_keyboard_no_javascript_and_mobile_overflow(browser,notes_s
     page=context.new_page()
     try:
         page.goto(notes_site+'programs/test-ai-0/#course-course-0')
+        locator = page.locator('.sources > li > p').filter(has_text='source SHA256')
+        expect(locator).to_contain_text('3c904a76fa15e9747' * 4)
+        assert page.evaluate('document.documentElement.scrollWidth <= window.innerWidth')
         row=page.locator('#course-course-0')
         notes=row.locator('.course-notes');summary=notes.locator('summary')
         expect(summary).to_have_text('Course notes (2) for AI 001')
