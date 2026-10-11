@@ -11,12 +11,17 @@
   "award_level": "BS",
   "program_kind": "degree",
   "hosting_unit": "School of Information, Golisano College of Computing and Information Sciences",
-  "status": "unknown",
-  "first_offered": null,
+  "status": "announced",
+  "first_offered": {
+    "value": "Fall 2026",
+    "precision": "term",
+    "evidence_url": "https://www.rit.edu/news/rit-launches-hands-bachelor-science-degree-artificial-intelligence",
+    "uncertainty": "Explicit planned first cohort: the August 17, 2026 update describes about 20 students starting the new degree that fall. Actual first instruction is not independently confirmed."
+  },
   "overview": "An interdisciplinary AI degree combining computing, mathematics, machine learning, language technology, human-centered computing, software engineering and security. The 2026–2027 catalog publishes a 122-hour typical sequence and two co-op experiences.",
   "catalog_year": "2026-2027",
   "verification_status": "confirmed",
-  "last_verified": "2026-10-10",
+  "last_verified": "2026-10-11",
   "curriculum_status": "partial",
   "links": [
     {
@@ -28,6 +33,11 @@
       "kind": "catalog",
       "url": "https://academiccatalog.rit.edu/programs/artificial-intelligence-bs/",
       "label": "2026–2027 curriculum"
+    },
+    {
+      "kind": "news",
+      "url": "https://www.rit.edu/news/rit-launches-hands-bachelor-science-degree-artificial-intelligence",
+      "label": "Degree launch and planned Fall 2026 first cohort"
     }
   ],
   "sources": [
@@ -90,6 +100,56 @@
       "catalog_year": null,
       "locator": "II. Writing Across the Curriculum Program Requirement for Undergraduate Programs, student requirements; not graduate section III",
       "confidence": "high"
+    },
+    {
+      "id": "rit-policy-d014",
+      "url": "https://www.rit.edu/policies/d014",
+      "title": "D01.4 General Education Framework",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Overview and Table 1: BS minimum 60 semester credit hours; immersion minimum nine",
+      "confidence": "high"
+    },
+    {
+      "id": "rit-general-degree-requirements",
+      "url": "https://www.rit.edu/generaleducation/general-education-degree-requirements",
+      "title": "General Education Degree Requirements",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "BS Guidelines; Use of Program Courses",
+      "confidence": "high"
+    },
+    {
+      "id": "rit-general-immersions",
+      "url": "https://www.rit.edu/generaleducation/immersions",
+      "title": "Immersions",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Nine-credit requirement; no program overlap; declaration and unrestricted choice",
+      "confidence": "high"
+    },
+    {
+      "id": "rit-undergraduate-graduation",
+      "url": "https://www.rit.edu/study/undergraduate-graduation-requirements",
+      "title": "Undergraduate Graduation Requirements",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Developing Writing Excellence; General Education Curriculum; Wellness Education Requirement and exemptions",
+      "confidence": "high"
+    },
+    {
+      "id": "rit-ai-bs-launch",
+      "url": "https://www.rit.edu/news/rit-launches-hands-bachelor-science-degree-artificial-intelligence",
+      "title": "RIT launches hands-on Bachelor of Science degree in artificial intelligence",
+      "fetched_at": "2026-10-11",
+      "source_date": "2026-08-17",
+      "catalog_year": null,
+      "locator": "Published March 25, 2026; explicitly updated August 17, 2026; approximately 20 students starting this fall; 122 hours and two co-op blocks",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -98,6 +158,20 @@
       "kind": "source_stated",
       "source_id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-official",
       "locator": "Program overview"
+    },
+    {
+      "text": "Prepare graduates to build and improve AI systems, including assessing the accuracy and validity of AI solutions.",
+      "kind": "source_stated",
+      "statement_type": "program_aim",
+      "source_id": "rit-ai-bs-launch",
+      "locator": "Program leaders’ stated goals; no graduate attainment data"
+    },
+    {
+      "text": "Prepare students to consider ethical and economic effects of AI solutions in global, environmental and societal contexts.",
+      "kind": "source_stated",
+      "statement_type": "program_aim",
+      "source_id": "rit-ai-bs-launch",
+      "locator": "AI Explorations course goal described in the launch article"
     }
   ],
   "courses": [
@@ -1160,7 +1234,7 @@
       "category": "other",
       "source_id": "rit-ai-bs-catalog",
       "source_text": null,
-      "summary": "Published general-education slot; approved attribute list and fulfillment policies remain unreviewed.",
+      "summary": "Published general-education slot. University distribution and overlap rules are now mapped, but the complete approved course-attribute list remains unverified.",
       "course_ids": [
         "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-431",
         "rochester-institute-of-technology-artificial-intelligence-bs-degree-swen-566",
@@ -1178,7 +1252,7 @@
       "category": "other",
       "source_id": "rit-ai-bs-catalog",
       "source_text": null,
-      "summary": "Published general-education slot; approved attribute list and fulfillment policies remain unreviewed.",
+      "summary": "Published general-education slot. University distribution and overlap rules are now mapped, but the complete approved course-attribute list remains unverified.",
       "course_ids": [
         "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-431",
         "rochester-institute-of-technology-artificial-intelligence-bs-degree-swen-566",
@@ -1196,7 +1270,7 @@
       "category": "other",
       "source_id": "rit-ai-bs-catalog",
       "source_text": null,
-      "summary": "Published general-education slot; approved attribute list and fulfillment policies remain unreviewed.",
+      "summary": "Published general-education slot. University distribution and overlap rules are now mapped, but the complete approved course-attribute list remains unverified.",
       "course_ids": [
         "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-431",
         "rochester-institute-of-technology-artificial-intelligence-bs-degree-swen-566",
@@ -1214,7 +1288,7 @@
       "category": "other",
       "source_id": "rit-ai-bs-catalog",
       "source_text": null,
-      "summary": "Published general-education slot; approved attribute list and fulfillment policies remain unreviewed.",
+      "summary": "Published general-education slot. University distribution and overlap rules are now mapped, but the complete approved course-attribute list remains unverified.",
       "course_ids": [
         "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-431",
         "rochester-institute-of-technology-artificial-intelligence-bs-degree-swen-566",
@@ -1232,7 +1306,7 @@
       "category": "other",
       "source_id": "rit-ai-bs-catalog",
       "source_text": null,
-      "summary": "Published general-education slot; approved attribute list and fulfillment policies remain unreviewed.",
+      "summary": "Published general-education slot. University distribution and overlap rules are now mapped, but the complete approved course-attribute list remains unverified.",
       "course_ids": [
         "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-431",
         "rochester-institute-of-technology-artificial-intelligence-bs-degree-swen-566",
@@ -1250,7 +1324,7 @@
       "category": "other",
       "source_id": "rit-ai-bs-catalog",
       "source_text": null,
-      "summary": "The sequence lists Immersion 1, 2 and 3 at three hours each. The MATH-190 alternative row is also annotated Immersion 3; overlap and immersion policy require clarification.",
+      "summary": "The sequence lists Immersion 1, 2 and 3 at three hours each. MATH-190 is also annotated Immersion 3. General immersion policy prohibits program-requirement overlap; how the chart annotation applies remains unresolved, and no double-counting is assumed.",
       "course_ids": [
         "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-431",
         "rochester-institute-of-technology-artificial-intelligence-bs-degree-swen-566",
@@ -1322,7 +1396,7 @@
       "category": "other",
       "source_id": "rit-ai-bs-catalog",
       "source_text": null,
-      "summary": "The typical sequence publishes 122 total hours. Credit normalization and degree-wide policies remain under review.",
+      "summary": "The typical sequence publishes 122 semester hours, also confirmed by the dated degree announcement. The university minimum does not lower this total.",
       "course_ids": [
         "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-431",
         "rochester-institute-of-technology-artificial-intelligence-bs-degree-swen-566",
@@ -1525,6 +1599,104 @@
       "source_text": null,
       "summary": "Complete three credit-bearing writing-intensive courses within the degree: first-year FYW Writing Seminar or a designated three-credit FYW alternative approved by its director; a WI-PR course or sequence in the degree program; and a third WI course, ideally general education but permitted to be another WI-PR. Recommended year spacing is not a mandatory semester order. Exact AI-program WI designations still need verification.",
       "course_ids": []
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-general-education-minimum",
+      "parent_id": null,
+      "title": "BS general education distribution",
+      "kind": "note",
+      "count": null,
+      "credits": 60,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "rit-policy-d014",
+      "source_text": null,
+      "summary": "The BS general-education framework totals at least 60 semester hours: three First-Year Writing, 24 Perspectives, nine Immersion and remaining general-education electives (the framework table shows 24). These hours are part of the published degree total, not 60 additional hours.",
+      "course_ids": []
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-perspective-counts",
+      "parent_id": null,
+      "title": "Eight perspective courses across seven categories",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-general-degree-requirements",
+      "source_text": null,
+      "summary": "Complete one course in each of Ethical, Artistic, Global, Social, Natural Science Inquiry and Scientific Principles, plus two Mathematical Perspective courses. These eight courses fulfill the perspective distribution; program-designated courses can cover existing slots. A BS program may prescribe specific courses in no more than three perspective categories.",
+      "course_ids": []
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-general-education-overlap",
+      "parent_id": null,
+      "title": "Primary-discipline general education limit",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-general-degree-requirements",
+      "source_text": null,
+      "summary": "At most three required courses, excluding laboratories, from the program’s primary discipline may count toward general education, and they must have approved General Education designation. Do not assume that every AI/computing course qualifies.",
+      "course_ids": []
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-immersion-rules",
+      "parent_id": null,
+      "title": "Immersion declaration and no program overlap",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-general-immersions",
+      "source_text": null,
+      "summary": "Complete and declare an approved immersion of at least three related general-education courses totaling at least nine credits. Immersion courses may complement the major but cannot overlap program requirements. Programs cannot require one particular immersion or restrict the immersion group. A minor is optional and does not automatically satisfy an immersion.",
+      "course_ids": []
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-fwy-alternatives",
+      "parent_id": null,
+      "title": "Approved first-year writing alternatives",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-undergraduate-graduation",
+      "source_text": null,
+      "summary": "The current university page lists UWRT-150 FYW: Writing Seminar and ISTE-110 FYW: Ethics in Computing as approved first-year writing courses. Other designated three-credit FYW alternatives require the program director’s approval. This general permission does not silently replace a more specific degree-course requirement.",
+      "course_ids": []
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-wellness-exemptions",
+      "parent_id": null,
+      "title": "Wellness exemptions, transfer and experiential credit",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-undergraduate-graduation",
+      "source_text": null,
+      "summary": "The two required wellness activities must differ in activity or level. Exemptions cover age 25 or older at matriculation, six months of active military service, an earlier bachelor degree, or non-matriculated status. Medical exemption requires licensed-provider documentation and authorized approval with both academic and wellness offices. Transfer wellness work requires department review; varsity seasons earn wellness activity credit. Final-semester prior learning or certification may count with Wellness Education approval. Club and intramural sports do not count.",
+      "course_ids": []
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-catalog-sequence-interpretation",
+      "parent_id": null,
+      "title": "Degree requirements and typical sequence charts",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-undergraduate-graduation",
+      "source_text": null,
+      "summary": "The university graduation page directs students to catalog program requirements and says programmatic writing-intensive courses are identified by WI on typical course-sequence charts. The AI chart is relevant published curricular evidence, but the unresolved Immersion 3 annotation and exact WI mapping prevent a complete audit.",
+      "course_ids": []
     }
   ],
   "notes": [
@@ -1533,18 +1705,25 @@
     "Original numeric hours are preserved and normalized as semester hours using the university graduation policy. Individual alternative-course amounts remain unverified. A repeated zero-hour co-op course is one identity plus a two-block rule.",
     "Fall 2026 admission availability is not treated as evidence of actual first instruction. Activity and first-offered date remain unknown.",
     "The MATH-190 row has an Immersion 3 annotation while a separate fourth-year Immersion 3 slot appears. No double-counting or waiver is inferred.",
-    "Public undergraduate policies D02.0/D05.0/D12.0 now cover transfer, grading/repeats, GPA, residency and degree minimums. The university semester-credit basis is explicit. Degree completeness remains partial for writing/general-education/college scope and the catalog sequence conflict; no graduate policy is inherited."
+    "Public undergraduate policies D02.0/D05.0/D12.0 now cover transfer, grading/repeats, GPA, residency and degree minimums. The university semester-credit basis is explicit. Degree completeness remains partial for writing/general-education/college scope and the catalog sequence conflict; no graduate policy is inherited.",
+    "2026-10-11: General education and wellness policies reviewed; approved-course directory retrieval stopped at unavailable robots response (202) after the public registrar redirect. No automated catalog access was inferred.",
+    "The launch article is dated March 25 and explicitly updated August 17, 2026; its Fall 2026 first-cohort statement supports a planned term, not confirmed first instruction. Program-aim statements are not measured graduate outcomes."
   ],
   "curriculum_audit": {
     "scope": "degree",
-    "reviewed_at": "2026-10-10",
+    "reviewed_at": "2026-10-11",
     "source_ids": [
       "rit-ai-bs-catalog",
       "rochester-institute-of-technology-artificial-intelligence-bs-degree-official",
       "rit-policy-d020",
       "rit-policy-d050",
       "rit-policy-d120",
-      "rit-policy-d015"
+      "rit-policy-d015",
+      "rit-policy-d014",
+      "rit-general-degree-requirements",
+      "rit-general-immersions",
+      "rit-undergraduate-graduation",
+      "rit-ai-bs-launch"
     ],
     "sections": [
       "All coded rows, alternative pairs and uncoded slots in typical sequence",
@@ -1553,12 +1732,15 @@
       "First-year and transfer preparation",
       "University minor/undergraduate residency, transfer approval, grading, repeated-course and catalog applicability policies",
       "Degree-wide GPA, 25-percent residency, 120-hour floor, completion conditions and semester-credit basis",
-      "D01.5 undergraduate three-course writing-intensive structure"
+      "D01.5 undergraduate three-course writing-intensive structure",
+      "D01.4 BS general education distribution, perspective counts, discipline-course overlap and immersion restrictions",
+      "Public undergraduate graduation page: FYW options and wellness exceptions",
+      "Dated launch article: 122-hour program and two co-op blocks; planned first cohort"
     ],
     "unresolved_requirements": [
-      "Exact AI-program WI course designations, college-specific completion conditions and general-education requirements remain unreviewed.",
-      "Approved general-education and immersion inventories and the duplicate Immersion 3 annotation need review.",
-      "The catalog labels the mapped table a typical course sequence; its relation to the full mandatory degree inventory remains unresolved."
+      "Exact AI-program WI course designations and college-specific completion conditions remain unverified.",
+      "The complete approved general-education attribute inventory and chosen immersion requirements remain unverified. The public registrar course-list link redirects to a catalog endpoint whose robots response was unavailable (202).",
+      "The MATH-190 Immersion 3 annotation appears beside a separate Immersion 3 slot, while university policy prohibits overlap with program requirements; clarification is required."
     ],
     "metadata_gaps": [
       "Course descriptions, prerequisites, alternative credit amounts, public sites and syllabi remain unverified."

@@ -19,3 +19,6 @@ from atlas.adapters.rit_policies import register
 SOURCES = list(SOURCES)
 SOURCE_PARSERS = globals().get("SOURCE_PARSERS", {})
 register(PROGRAM_ID, SOURCES, SOURCE_PARSERS, minor=False)
+
+from atlas.adapters.rit_general_education import register as register_general_education
+register_general_education(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
