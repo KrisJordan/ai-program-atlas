@@ -7,14 +7,14 @@ from atlas.adapters.national_curriculum_common import course, rule
 PID='mit-ai-decision-making-bs'
 observer=import_module('atlas.adapters.mit-ai-decision-making-bs.reviewed_hass_subjects')
 MANIFEST=json.loads(Path(__file__).with_name('reviewed_hass_subjects.json').read_text())
-PARSERS={k:getattr(observer,'observe_'+k)for k in ['architecture','literature','history','wgs','wgs_detail','performing_arts','cmsw','language_titles','political_pdf_titles','sts_titles','anthropology_titles','economics_titles','shass_field_titles']}
+PARSERS={k:getattr(observer,'observe_'+k)for k in ['architecture','literature','history','wgs','wgs_detail','performing_arts','cmsw','language_titles','political_pdf_titles','sts_titles','anthropology_titles','economics_titles','shass_field_titles','remaining_list_titles']}
 INTEGRATED=json.loads(Path(__file__).with_name('integrated_hass_scope.json').read_text())
 SPECS={sid:MANIFEST['source_specs'][sid]for sid in INTEGRATED['source_ids']}
 
 
 def parse(html,url):
     spec=next(s for s in SPECS.values()if s['url']==url)
-    observations=(PARSERS[spec['parser']](spec['field_key'],html) if spec['parser']=='shass_field_titles' else PARSERS[spec['parser']](html))
+    observations=(PARSERS[spec['parser']](spec['field_key'],html) if spec['parser']=='shass_field_titles' else PARSERS[spec['parser']](spec['source_kind'],html) if spec['parser']=='remaining_list_titles' else PARSERS[spec['parser']](html))
     if isinstance(observations,dict):observations=[observations]
     rows=[];digests={}
     for cid in INTEGRATED['course_ids']:

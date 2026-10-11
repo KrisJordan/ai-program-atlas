@@ -307,3 +307,10 @@ Likewise, the department explicitly makes 6-4_2025 applicable to Fall2025 or lat
 Contributions456a91e, af3540c and8394bd3 add266 guarded manual dispositions from Economics and ten SHASS field lists. These are limited title observations, not full description reviews. Explicit14.16/14.27 prerequisites and2026–27 unavailability survive integration; broad methods, performance, science and interdisciplinary titles remain unknown. Existing field eligibility/overlap rules and original source identities remain intact.
 
 1020 records now have manual dispositions, including676 HASS occurrences:142 description-supported and534 title-only.150 HASS occurrences remain active,17 identity/version holds and two description conflicts remain separate. Fixed3 remains unchanged. Degree status remains partial and full primary audit remains in progress.
+
+
+## Remaining named HASS list integration — 2026-10-11
+
+Contribution2db7909 adds142 approved title dispositions from Computing and Society, Ethics, Linguistics, Urban Studies, Education and the CMS pool. Three malformed Ethics registration strings stay held, not silently normalized. Broad subjects remain unknown; the observer hashes the actual source titles and never emits a review certification.
+
+The primary seed has1162 manual dispositions:818 HASS comprising142 description-supported occurrences and676 title-only, plus344 other represented records. Five code-only HASS observations remain active,20 identity/version holds and two source-description conflicts remain. Contextual field roles, fixed3 and partial degree status remain unchanged.
