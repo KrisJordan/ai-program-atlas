@@ -12,7 +12,7 @@ PID=m.SPEC['program_id']
 def test_integrated_metadata_preserves_roles_and_source_conflict():
     d=json.loads(Path('data/programs',PID+'.json').read_text());validate_program(d)
     c={x['code']:x for x in d['courses']};profile=requirement_profile(d)
-    assert [profile[k]['count']for k in ['required','options','unresolved']]==[8,119,2241]
+    assert [profile[k]['count']for k in ['required','options','unresolved']]==[8,119,2240]
     assert c['PHIL 12']['category']=='mathematics'
     assert c['PHIL 123']['category']=='human_context'
     assert c['ECON 165T']['credits']==2

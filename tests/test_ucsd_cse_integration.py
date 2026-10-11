@@ -30,7 +30,7 @@ def test_handoff_cannot_overwrite_previously_reviewed_core(monkeypatch):
 def test_seed_preserves_roles_missing_codes_and_conditional_restrictions():
     d=json.loads(Path('data/programs',PID+'.json').read_text());courses={c['code']:c for c in d['courses']}
     profile=requirement_profile(d)
-    assert [profile[k]['count']for k in ['required','options','unresolved']]==[8,119,2241]
+    assert [profile[k]['count']for k in ['required','options','unresolved']]==[8,119,2240]
     assert courses['CSE 20']['category']=='mathematics'
     assert courses['CSE 105']['category']=='foundations'
     assert courses['CSE 193']['category_review']['status']=='unclassified'

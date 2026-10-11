@@ -17,7 +17,7 @@ def test_comm_keeps_held_titles_and_explicit_none_distinct_from_unknown():
     assert cs['COMM 124A']['category_review']['status']=='mixed'
     assert cs['COMM 194']['category_review']['status']=='unclassified'
     assert cs['COMM 194']['credits']==4
-    assert [requirement_profile(d)[k]['count']for k in ['required','options','unresolved']]==[8,119,2241]
+    assert [requirement_profile(d)[k]['count']for k in ['required','options','unresolved']]==[8,119,2240]
 
 
 def test_comm_registered_current_source_replays_only_approved_observations():

@@ -72,7 +72,8 @@ def test_corrected_degree_subjects_do_not_follow_required_or_option_role():
     assert all(c['category'] == 'other' for c in u['courses'] if c['name'] is None and c['description'] is None)
     b = {c['code']: c for c in program('ucsb-ai-bs')['courses']}
     assert b['CMPSC 130A']['category'] == b['CMPSC 130B']['category'] == 'foundations'
-    assert b['CMPSC 183']['category'] == 'human_context'
+    assert b['CMPSC 183']['category'] == 'other'
+    assert b['CMPSC 183']['category_review']['status'] == 'mixed'
     assert b['ECE 139']['category'] == 'mathematics'
     assert b['CMPSC 41']['credits'] is None  # source conflict remains
     p = program('purdue-ai-bs')
@@ -113,7 +114,7 @@ def test_ucsd_noncourse_ahi_routes_and_transfer_climate_exemption_remain_context
     profile = requirement_profile(d)
     assert profile['required']['count'] == 8
     assert profile['options']['count'] == 119
-    assert profile['unresolved']['count'] == 2241
+    assert profile['unresolved']['count'] == 2240
     assert all(c['context'] == 'unresolved' for c in profile['choices']
                if c['id'] in [d['id']+'-shared-ahi-pool', d['id']+'-shared-climate-pool'])
 

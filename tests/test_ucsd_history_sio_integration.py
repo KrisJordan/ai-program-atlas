@@ -22,8 +22,8 @@ def test_history_sio_integration_preserves_held_identity_and_roles():
     assert cs['SIO 194']['credits']==4
     assert 'six-to-eight-unit' in ' '.join(cs['SIO 194']['notes'])
     assert cs['SIO 109']['category_review']['status']=='mixed'
-    assert cs['POLI 117']['category_review']['status']=='unclassified'
-    assert [requirement_profile(d)[k]['count']for k in ['required','options','unresolved']]==[8,119,2241]
+    assert cs['POLI 117']['category_review']['status']=='mixed'
+    assert [requirement_profile(d)[k]['count']for k in ['required','options','unresolved']]==[8,119,2240]
 
 @pytest.mark.parametrize('module,subject,count,dispositions',[(hila,'HILA',281,22),(sio,'SIO',41,7),(eds,'EDS',34,1),(cgs,'CGS',30,0),(mus,'MUS',49,7),(bio,'BIOL',42,6),(glbh,'GLBH',25,2),(psyc,'PSYC',21,2),(ling,'LING',75,14),(physics,'PHYS',18,1),(physics,'ASTR',12,1),(chem,'CHEM',19,1),(lit,'LTEA',216,27),(eng,'ECE',17,0),(eng,'MAE',7,6),(eng,'SE',7,0),(eng,'BENG',3,1),(eng,'NANO',8,0),(health,'HDS',11,2),(health,'PH',10,0),(theatre,'THEA',88,2),(env,'ENVR',11,0),(env,'ESYS',5,3),(inter,'MGT',10,1),(inter,'INTL',6,0),(inter,'CLAS',3,0),(inter,'HMNR',2,0),(inter,'LAWS',1,0),(inter,'CCS',1,0),(area,'AAS',17,0),(area,'LATI',16,2),(area,'RELI',11,2),(area,'JWSP',15,0),(college,'HUM',5,1),(college,'CAT',6,0),(college,'DOC',4,1),(college,'AWP',3,0),(college,'TMC',2,0),(college,'MCWP',6,0),(college,'MMW',1,0),(science,'ANTH',115,12),(science,'MATH',40,1),(science,'DSC',14,2),(science,'COGS',66,1),(science,'CSS',2,0),(japan,'JAPN',20,1),(japan,'AAPI',2,0)])
 def test_composed_source_replays_approved_metadata_only(module,subject,count,dispositions):
@@ -126,7 +126,7 @@ def test_literature_engineering_scope_and_holds_survive_integration():
     assert cs['MAE 118']['category_review']['status']=='unclassified'
     assert 'immediately preceding quarter' in cs['MAE 156B']['prerequisites']
     assert any('not imposed as AI-degree graduation' in n for n in cs['MAE 156B']['notes'])
-    assert [requirement_profile(d)[k]['count']for k in ['required','options','unresolved']]==[8,119,2241]
+    assert [requirement_profile(d)[k]['count']for k in ['required','options','unresolved']]==[8,119,2240]
 
 
 def test_health_environment_and_performance_conditions_are_not_universal_rules():

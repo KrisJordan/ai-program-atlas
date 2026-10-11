@@ -458,7 +458,7 @@ Forty-nine approved descriptions integrated across65 targets. Primary read25 exa
 
 ### UCSD Chemistry, 2026-10-11
 
-All13 matching Chemistry blocks independently primary-read and integrated from the contributor, with15unmatched. Exact directional credit and optional preparation retained. CHEM174 supplies positiveSIO141cross-list evidence despite that code's missing own-chapter heading; separate identity reconciliation remains needed, not an absence inference. Context1147other/879human/182applications/7foundations/23systems/3math;8/119/2241roles unchanged. Remaining public source work active.
+All13 matching Chemistry blocks independently primary-read and integrated from the contributor, with15unmatched. Exact directional credit and optional preparation retained. CHEM174 supplies positiveSIO141cross-list evidence despite that code's missing own-chapter heading; the later bounded reconciliation is now complete, retaining a current SIO-body/version gap rather than an absence inference. Context1147other/879human/182applications/7foundations/23systems/3math;8/119/2241roles unchanged. Remaining public source work active.
 
 ### UCSD Literature and Engineering — 2026-10-11
 
@@ -509,3 +509,7 @@ The subject review distinguishes genuine content unknowns from unread evidence: 
 Final role counts remain **8 fixed, 119 options and 2,241 contextual records**. Fixed: two foundations, three AI, one systems, two mathematics. Options: 27 applications, 10 foundations, five human context, 22 other, 27 mathematics, 25 AI and three systems. Context: 397 other, 1,418 human context, 349 applications, 37 mathematics, 13 foundations, 24 systems and three AI. Across all 2,368 raw course records, 1,949 are reviewed, 98 mixed and 321 unclassified for explicit source/content reasons. These are source records, not summed degree loads.
 
 The bounded identified accessible queue is exhausted, so the primary status is now **blocked**, with the existing source-identity, catalog-edition, elective/residence-policy and college-policy limits preserved. This does not certify the full degree or a complete independent second pass. Later authoritative clarification or a changed catalog can reopen a precisely documented gap.
+
+## Bounded independently confirmed core correction — 2026-10-11
+
+UCSD retains 8 fixed and 119 option identities. Explicit reciprocal SIO 109/POLI 117 evidence now deduplicates two contextual source records to one mixed identity, giving 2,240 contextual identities from 2,241 records. The R pair is separate and not expanded; CHEM 174/SIO 141 remains a one-sided current-version gap. UCSB keeps 20 fixed identities from 21 source codes, with CMPSC 25 and CMPSC 183 corrected to mixed after a separate full-description review. Its fixed subject profile is 4 foundations, 8 mathematics, 6 AI and 2 mixed. The companion `independent-core-west` report distinguishes actual independent core confirmation from unreviewed broad GE classifications; both whole-degree audits remain blocked.

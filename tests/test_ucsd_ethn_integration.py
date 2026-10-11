@@ -21,7 +21,7 @@ def test_integrated_ethn_keeps_unknown_topics_and_course_credit_scope():
     assert any('latin american' in n.lower() for n in c['ETHN 189']['notes'])
     assert all(c['ETHN ' + code]['category_review']['status'] == 'unclassified' for code in ('107', '124', '154', '190', '1A', '1B', '1C'))
     assert c['ETHN 140']['id'] != c['ETHN 140A']['id']
-    assert [requirement_profile(d)[k]['count'] for k in ('required', 'options', 'unresolved')] == [8, 119, 2241]
+    assert [requirement_profile(d)[k]['count'] for k in ('required', 'options', 'unresolved')] == [8, 119, 2240]
 
 
 def test_current_ethn_observer_registration_and_saved_facts():

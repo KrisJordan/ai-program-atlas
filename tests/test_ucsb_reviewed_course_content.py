@@ -213,7 +213,9 @@ def test_current_catalog_required_vision_identity_and_precise_eligibility():
     assert 'consent of instructor' in c['ME 107']['prerequisites']
     assert 'not a required prerequisite' in c['ME 107']['prerequisites']
     assert c['CMPSC 1A']['category']=='ai_ml'
-    assert c['CMPSC 25']['category']==c['CMPSC 42']['category']=='foundations'
+    assert c['CMPSC 25']['category']=='other'
+    assert c['CMPSC 25']['category_review']['status']=='mixed'
+    assert c['CMPSC 42']['category']=='foundations'
     assert c['CMPSC 135']['category']=='mathematics'
     profile=requirement_profile(d)
     assert [profile[k]['count']for k in ['required','options','unresolved']]==[20,827,2]

@@ -1,0 +1,40 @@
+# Western core source recheck — 2026-10-11
+
+This is a fresh evidence pass by the **same agent who authored the earlier primary UCSD/UCSB records**. The `independent-core-` filename separates the dimension ledger from the primary audit; it does not make this an independent-person review. The separate root reviewer subsequently reread the complete UCSD AI section, all 13 named choice groups, eight fixed descriptions, the SIO/POLI/CHEM cases, and UCSB's expanded degree tree and all 21 fixed source-code descriptions. This establishes independent confirmation only for that bounded scope. No broad GE extraction or denied-source request occurred.
+
+## UCSD
+
+Read the complete AI-major section of the [2026–27 CSE catalog](https://catalog.ucsd.edu/curric/CSE-ug.html) and compared the [tentative department page](https://cse.ucsd.edu/undergraduate/bs-artificial-intelligence-cse-bs-004). The explicit fixed set is CSE 12, 25, 30, 55, 101, 151A and MATH 20A/20B. Introductory programming, tool courses, discrete mathematics, calculus/linear algebra substitutions, upper data structures and AI core remain choices. Neither their prerequisites nor the department sample schedules add fixed obligations.
+
+The 13 finite named choice groups were manually transcribed from the actual source paragraphs into the ledger. Their union is 119 unique options; overlap between AI core/probability and the AI-elective pool does not create duplicate records or permission to reuse a course. The source's 124 major units exclude GE. Lower 60 and upper 64, four-unit ethics, 12-unit AI electives, and the 32-unit CSE elective structure have different nested scopes. Three eight-unit breadth constraints and the eight-unit open constraint are not summed again atop their parent load. Open CSE ranges and graduate petitions remain predicates, not missing invented finite pools. The tentative department list differs from the catalog, so choice-rule status remains partial.
+
+Read all eight fixed descriptions and their eligibility suffixes in [CSE](https://catalog.ucsd.edu/courses/CSE.html) and [Mathematics](https://catalog.ucsd.edu/courses/MATH.html). Subjects remain two foundations, two mathematics, three AI/ML and one systems. Mathematical preparation in CSE 55 is explicitly organized around AI/ML methods; ethical exposure in CSE 25 does not replace its primary AI introduction. MATH 20A/B nominal four-unit statements retain conditional prior-credit limits. No optional or contextual classification total is independently certified by this pass.
+
+### SIO/POLI and CHEM/SIO
+
+Read the full current [SIO](https://catalog.ucsd.edu/courses/SIO.html), [POLI](https://catalog.ucsd.edu/courses/POLI.html) and [CHEM](https://catalog.ucsd.edu/courses/CHEM.html) target blocks, not only matching titles. SIO 109 explicitly cross-lists POLI 117; POLI 117 reciprocates. The more detailed SIO description deliberately combines technical climate mitigation with policy and governance. POLI 117 is therefore reconciled from unclassified to mixed using both current sources. Its own summary and explicit preparation remain distinct from SIO's omitted prerequisite clause.
+
+One manual identity group keeps both source records and uses SIO 109 as canonical. The contextual view changes from **2,241 records to 2,240 identities**, while fixed/options remain 8/119. The original raw contextual count remains 2,241. SIO 109R and POLI 117R reciprocate separately, but POLI 117R is not represented in this program inventory; no record or R-pair group is added. Four-way credit exclusion is not four-way identity.
+
+CHEM 174 explicitly names SIO 141 as a cross-list in the same 2026–27 edition. The entire SIO chapter has no exact 141 heading. The college-pool title agrees, but there is no current SIO body, credit or prerequisite observation to compare. Positive counterpart evidence is retained; neither discontinuation nor automatic current-version metadata/identity is inferred. This remains a bounded source gap.
+
+## UCSB
+
+Read the expanded [current degree tree](https://catalog.ucsb.edu/programs/mcAVHSCZnQkOVw0EAf1m/program-requirements-kn5uw), the AI requirement sheet in [2026–27 GEAR](https://www.engineering.ucsb.edu/sites/default/files/docs/26-27_GEAR.pdf), and the [department curriculum](https://ai.cs.ucsb.edu/curriculum). The 11 preparation and nine upper-division identities give **20 fixed identities from 21 codes**. Actual reciprocal CMPSC/ECE 181 course descriptions establish the same course, so the closed OR row is one fixed identity. The sample plan does not establish extra fixed courses.
+
+The field list has 39 printed code records, resolving to 37 existing canonical identities after the independently reread 153A and 155 same-course statements. Nine selections/36 units remain the source load; 37 is option breadth. GEAR's 189C/D entries versus two opaque current-tree references remain unresolved. The 190AA–ZZ predicate is not expanded into invented courses. Science Lists A/B retain eight/twelve units and the explicit department-list gap. Existing subtotal, capstone and unit discrepancies remain. The department page explicitly states 32 units for General Education and University requirements; this is a source load, not an inferred product of eight courses and four units. College area choices and writing/ethnicity/culture overlays remain separate constraints. Broad GE inventory is outside this pass; the option subset is explicitly partial.
+
+Read all 21 fixed source-code descriptions in the saved rendered catalog captures, including actual preparation, advisory and repeat fields. Independent review corrected two single-category judgments: CMPSC 25 explicitly combines programming/algorithms with statistical programming, hypothesis testing and inference; CMPSC 183 combines ethics with substantive explainability, fairness and bias algorithms and practical AI frameworks. Both are now mixed. The fixed profile is four foundations, eight mathematics, six AI and two mixed identities. CMPSC 1A teaches substantive AI techniques, so its seminar format does not make its content unknown. This is not a complete elective classification audit.
+
+## Evidence handoff and validation scope
+
+Ignored original captures, not committed copies:
+
+- UCSD major: `.cache/http/d83271a10a53fe78096f9b04b398268ae11178290efa1c28bc1b67b692f1c730.body`, AI section between the Artificial Intelligence and Bioinformatics headings. Department comparison: `.cache/http/ccb06d276ec746333ab140c5cfd0e2c0ce771cbfa98344b45940d9f0d3a957a9.body`.
+- UCSD descriptions: `/tmp/ucsd-sio.html`, `/tmp/ucsd-poli.html`, `/tmp/ucsd-chem.html`; CSE/Math normal HTTP cache keyed by SHA-256 of their registered URLs. Every reviewed chapter is explicitly 2026–27.
+- UCSB degree tree: `/tmp/ucsb-ai-program-current-visible.json`; GEAR text `/tmp/ucsb-gear-all.txt`, `ARTIFICIAL INTELLIGENCE 2026-27` requirement sheet (not the following sample grid).
+- UCSB fixed descriptions: `/tmp/ucsb-current-core-version.json`, `/tmp/ucsb-current-course-batch.json`, `/tmp/ucsb-cmpsc1a-current-visible.json`. The 181 pair appears in the course batch with reciprocal advisory text; the 153A pair does too. `/tmp/ucsb-clit155-visible.json` and `/tmp/ucsb-ger155-visible.json` confirm the bounded field identity.
+
+The JSON pins `core_review_fingerprint` only after these actual readings. Generating a hash does not count as a review. Unreviewed full-role sets and category totals are null, not zero. Focused tests check manually listed fixed sets, named choice rows, cross-list/raw-count behavior, source evidence guards and chart partition semantics. Primary degree status remains blocked; no whole-degree completion is asserted. Independent-person confirmation is limited to the core evidence scope stated above.
+
+Validation: all 708 affected UCSD, core-review, primary-ledger and UCSB content tests pass. An isolated fresh database ingested 168 programs, repeated ingest changed zero records, and the build produced 168 programs / 194 institutions. The maintained database and compiled ledger were untouched.

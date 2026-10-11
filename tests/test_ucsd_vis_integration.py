@@ -25,7 +25,7 @@ def test_integrated_visual_arts_distinguishes_computing_criticism_and_unknown_pr
         if not e['approved_for_integration']:
             assert c[e['code']]['category_review']['status'] == 'unclassified'
             assert c[e['code']]['name'] == e['listed_name']
-    assert [requirement_profile(d)[k]['count'] for k in ('required', 'options', 'unresolved')] == [8, 119, 2241]
+    assert [requirement_profile(d)[k]['count'] for k in ('required', 'options', 'unresolved')] == [8, 119, 2240]
 
 
 def test_current_visual_arts_observer_withholds_twenty_identities():

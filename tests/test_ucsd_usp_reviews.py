@@ -59,7 +59,7 @@ def test_integrated_observations_keep_contextual_roles_and_unknown_missing_codes
     from atlas.curriculum_profile import requirement_profile
     d=json.loads(Path('data/programs',m.SPEC['program_id']+'.json').read_text())
     cs={c['code']:c for c in d['courses']}
-    assert [requirement_profile(d)[k]['count']for k in ['required','options','unresolved']]==[8,119,2241]
+    assert [requirement_profile(d)[k]['count']for k in ['required','options','unresolved']]==[8,119,2240]
     assert cs['USP 129']['category_review']['status']=='unclassified'
     assert cs['USP 185A']['category']=='applications'
     assert 'Restricted to seniors' in cs['USP 185A']['prerequisites']

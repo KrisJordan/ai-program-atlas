@@ -20,7 +20,7 @@ def test_poli_integration_preserves_scope_and_ambiguous_units():
     assert 'for POLI 220J, graduate standing' in c['POLI 120J']['prerequisites']
     assert c['POLI 132B']['category_review']['status'] == 'unclassified'
     assert not any(c['POLI 124']['id'] in g['course_ids'] for g in d.get('course_identity_groups', []))
-    assert [requirement_profile(d)[k]['count'] for k in ('required','options','unresolved')] == [8,119,2241]
+    assert [requirement_profile(d)[k]['count'] for k in ('required','options','unresolved')] == [8,119,2240]
 
 
 def test_registered_poli_observer_replays_only_approved_observations():

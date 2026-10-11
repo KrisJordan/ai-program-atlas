@@ -19,9 +19,9 @@ def test_source_facts_preserve_context_and_unknown_identities():
     validate_program(d)
     courses = {c['code']: c for c in d['courses']}
     profile = requirement_profile(d)
-    assert [profile[k]['count'] for k in ('required', 'options', 'unresolved')] == [8, 119, 2241]
+    assert [profile[k]['count'] for k in ('required', 'options', 'unresolved')] == [8, 119, 2240]
     assert {k: v for k, v in profile['unresolved']['categories'].items() if v} == {
-        'other': 397, 'human_context': 1418, 'applications': 349,
+        'other': 396, 'human_context': 1418, 'applications': 349,
         'foundations': 13, 'systems': 24, 'mathematics': 37, 'ai_ml': 3,
     }
     assert courses['SOCI 105']['credits'] == 6

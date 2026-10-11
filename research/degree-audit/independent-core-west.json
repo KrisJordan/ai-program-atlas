@@ -1,0 +1,621 @@
+{
+  "audit_date": "2026-10-11",
+  "reviewer": "pilots_purdue_minor source recheck; separate root confirmation limited to documented core scope",
+  "programs": [
+    {
+      "program_id": "university-of-california-san-diego-artificial-intelligence-bs-degree",
+      "reviewed_at": "2026-10-11",
+      "reviewer": "pilots_purdue_minor source recheck, with separate root confirmation of the explicitly bounded core scope",
+      "reviewed_content_hash": "f6f647aa3b9e619428dd44cda441068342157792aaf1a2a54c2e2502ba060c97",
+      "dimensions": {
+        "fixed_requirements": {
+          "status": "verified",
+          "summary": "The actual AI major table establishes eight mapped fixed identities: CSE12/25/30/55/101/151A and MATH20A/20B. Alternatives, elective loads and college/cohort courses are not counted as universally fixed. Prior-course preparation is not added again as a degree obligation.",
+          "evidence": [
+            {
+              "url": "https://catalog.ucsd.edu/curric/CSE-ug.html",
+              "locator": "BS Artificial Intelligence: lower-division computing/AI/mathematics rows and upper-division core"
+            }
+          ],
+          "limitations": [
+            "Primary author reread the sources; a separate root reviewer then confirmed the explicitly stated fixed/core scope. This bounded confirmation does not certify all elective or GE content.",
+            "The review is bounded to mapped fixed requirements, named major choice structure and their chart semantics. It does not certify the complete degree, all general-education pools, student-specific exceptions or course availability."
+          ]
+        },
+        "choice_rules": {
+          "status": "partial",
+          "summary": "Thirteen explicit named choice groups were manually transcribed and unioned to119 unique option IDs. Count-one alternatives, one science course, four-unit introductory/ethics selections and12 AI-elective units match the source. Thirty-two CSE-elective units contain three8-unit tagged breadth conditions plus8 open units; descriptors are not independently summed or treated as119 required courses. Catalog/department list differences and broad college contexts remain outside certification.",
+          "evidence": [
+            {
+              "url": "https://catalog.ucsd.edu/curric/CSE-ug.html",
+              "locator": "AI lower/upper tables,12-unit AI pool,32-unit breadth/open electives and nonreuse notes"
+            },
+            {
+              "url": "https://cse.ucsd.edu/undergraduate/bs-artificial-intelligence-cse-bs-004",
+              "locator": "Updated August3,2026; tentative elective table and each course may fulfill only one major requirement"
+            }
+          ],
+          "limitations": [
+            "Primary author reread the sources; a separate root reviewer then confirmed the explicitly stated fixed/core scope. This bounded confirmation does not certify all elective or GE content.",
+            "The review is bounded to mapped fixed requirements, named major choice structure and their chart semantics. It does not certify the complete degree, all general-education pools, student-specific exceptions or course availability.",
+            "The tentative department table differs from the catalog in approved options and open-elective exclusions. Full conditional GE inventory and all version conflicts were not reaudited in this bounded pass."
+          ]
+        },
+        "classification": {
+          "status": "partial",
+          "summary": "All eight fixed full descriptions were reread: two foundations, two mathematics, three AI/ML and one systems. SIO109/POLI117 joint current evidence resolves the generic POLI description to mixed technical climate solutions and policy; one contextual identity is counted from two source records. The online pair is supported but only SIO109R is represented. CHEM174/SIO141 remains a one-sided current cross-list/body-version gap.",
+          "evidence": [
+            {
+              "url": "https://catalog.ucsd.edu/courses/CSE.html",
+              "locator": "Full CSE12/25/30/55/101/151A descriptions and prerequisite suffixes"
+            },
+            {
+              "url": "https://catalog.ucsd.edu/courses/MATH.html",
+              "locator": "Full MATH20A/20B descriptions, nominal units and conditional credit"
+            },
+            {
+              "url": "https://catalog.ucsd.edu/courses/SIO.html",
+              "locator": "SIO109/109R complete blocks; no exact141 heading"
+            },
+            {
+              "url": "https://catalog.ucsd.edu/courses/POLI.html",
+              "locator": "POLI117/117R full blocks and Upper Division policy"
+            },
+            {
+              "url": "https://catalog.ucsd.edu/courses/CHEM.html",
+              "locator": "CHEM174 full block and explicit SIO141 cross-list"
+            }
+          ],
+          "limitations": [
+            "Primary author reread the sources; a separate root reviewer then confirmed the explicitly stated fixed/core scope. This bounded confirmation does not certify all elective or GE content.",
+            "The review is bounded to mapped fixed requirements, named major choice structure and their chart semantics. It does not certify the complete degree, all general-education pools, student-specific exceptions or course availability.",
+            "The119 option classifications and2,240 contextual identity classifications were not all reread for this second pass. No full-category certification."
+          ]
+        }
+      },
+      "expected_course_ids": {
+        "required": [
+          "ucsd-cse-101",
+          "ucsd-cse-12",
+          "ucsd-cse-151a",
+          "ucsd-cse-25",
+          "ucsd-cse-30",
+          "ucsd-cse-55",
+          "ucsd-math-20a",
+          "ucsd-math-20b"
+        ],
+        "options": [
+          "ucsd-bicd-100",
+          "ucsd-bild-1",
+          "ucsd-bild-2",
+          "ucsd-bild-3",
+          "ucsd-bimm-101",
+          "ucsd-bimm-121",
+          "ucsd-ceng-15",
+          "ucsd-chem-6a",
+          "ucsd-chem-6ah",
+          "ucsd-chem-6b",
+          "ucsd-chem-6bh",
+          "ucsd-cogs-10",
+          "ucsd-cogs-107a",
+          "ucsd-cogs-107b",
+          "ucsd-cogs-108",
+          "ucsd-cogs-109",
+          "ucsd-cogs-115",
+          "ucsd-cogs-118a",
+          "ucsd-cogs-118b",
+          "ucsd-cogs-118c",
+          "ucsd-cogs-18",
+          "ucsd-cogs-181",
+          "ucsd-cogs-182",
+          "ucsd-cogs-185",
+          "ucsd-cogs-186",
+          "ucsd-cogs-188",
+          "ucsd-cogs-9",
+          "ucsd-cse-100",
+          "ucsd-cse-100r",
+          "ucsd-cse-103",
+          "ucsd-cse-106",
+          "ucsd-cse-11",
+          "ucsd-cse-150a",
+          "ucsd-cse-150b",
+          "ucsd-cse-151b",
+          "ucsd-cse-152a",
+          "ucsd-cse-152b",
+          "ucsd-cse-153",
+          "ucsd-cse-153r",
+          "ucsd-cse-154",
+          "ucsd-cse-156",
+          "ucsd-cse-157",
+          "ucsd-cse-158",
+          "ucsd-cse-158r",
+          "ucsd-cse-15l",
+          "ucsd-cse-176b",
+          "ucsd-cse-180",
+          "ucsd-cse-180r",
+          "ucsd-cse-186",
+          "ucsd-cse-194",
+          "ucsd-cse-20",
+          "ucsd-cse-21",
+          "ucsd-cse-29",
+          "ucsd-cse-3",
+          "ucsd-cse-42",
+          "ucsd-cse-4gs",
+          "ucsd-cse-6gs",
+          "ucsd-cse-6r",
+          "ucsd-cse-86",
+          "ucsd-cse-89",
+          "ucsd-cse-8a",
+          "ucsd-cse-8b",
+          "ucsd-cse-90",
+          "ucsd-cse-91",
+          "ucsd-cse-95",
+          "ucsd-cse-99",
+          "ucsd-dsc-102",
+          "ucsd-dsc-120",
+          "ucsd-dsc-131",
+          "ucsd-dsc-140a",
+          "ucsd-dsc-140b",
+          "ucsd-dsc-148",
+          "ucsd-dsc-155",
+          "ucsd-dsc-161",
+          "ucsd-dsc-170",
+          "ucsd-dsc-185",
+          "ucsd-ece-109",
+          "ucsd-ece-15",
+          "ucsd-ece-172a",
+          "ucsd-ece-175a",
+          "ucsd-ece-175b",
+          "ucsd-ece-176",
+          "ucsd-econ-120a",
+          "ucsd-eng-10",
+          "ucsd-eng-15",
+          "ucsd-esys-101",
+          "ucsd-hds-110",
+          "ucsd-mae-8",
+          "ucsd-mae-9",
+          "ucsd-math-102",
+          "ucsd-math-109",
+          "ucsd-math-154",
+          "ucsd-math-158",
+          "ucsd-math-15a",
+          "ucsd-math-170a",
+          "ucsd-math-173a",
+          "ucsd-math-173b",
+          "ucsd-math-18",
+          "ucsd-math-181a",
+          "ucsd-math-181d",
+          "ucsd-math-182",
+          "ucsd-math-183",
+          "ucsd-math-184",
+          "ucsd-math-188",
+          "ucsd-math-189",
+          "ucsd-math-20c",
+          "ucsd-math-31ah",
+          "ucsd-math-31bh",
+          "ucsd-math-31ch",
+          "ucsd-nano-15",
+          "ucsd-phil-150",
+          "ucsd-phil-174",
+          "ucsd-phys-2a",
+          "ucsd-phys-2b",
+          "ucsd-phys-4a",
+          "ucsd-phys-4b",
+          "ucsd-poli-121d",
+          "ucsd-sio-126",
+          "ucsd-sio-128"
+        ],
+        "unresolved": null
+      },
+      "expected_profile": {
+        "required": {
+          "count": 8,
+          "categories": {
+            "foundations": 2,
+            "mathematics": 2,
+            "ai_ml": 3,
+            "systems": 1
+          }
+        },
+        "options": {
+          "count": 119,
+          "categories": null
+        },
+        "unresolved": null
+      },
+      "reviewed_choice_groups": {
+        "intro": [
+          "ucsd-cse-11",
+          "ucsd-cse-8b"
+        ],
+        "tools": [
+          "ucsd-cse-15l",
+          "ucsd-cse-29"
+        ],
+        "discrete": [
+          "ucsd-cse-20",
+          "ucsd-math-109",
+          "ucsd-math-15a",
+          "ucsd-math-31ch"
+        ],
+        "discrete2": [
+          "ucsd-cse-21",
+          "ucsd-math-154",
+          "ucsd-math-158",
+          "ucsd-math-184",
+          "ucsd-math-188"
+        ],
+        "lower4": [
+          "ucsd-ceng-15",
+          "ucsd-cogs-10",
+          "ucsd-cogs-18",
+          "ucsd-cogs-9",
+          "ucsd-cse-180",
+          "ucsd-cse-180r",
+          "ucsd-cse-3",
+          "ucsd-cse-42",
+          "ucsd-cse-4gs",
+          "ucsd-cse-6gs",
+          "ucsd-cse-6r",
+          "ucsd-cse-86",
+          "ucsd-cse-89",
+          "ucsd-cse-8a",
+          "ucsd-cse-90",
+          "ucsd-cse-91",
+          "ucsd-cse-95",
+          "ucsd-cse-99",
+          "ucsd-ece-15",
+          "ucsd-eng-10",
+          "ucsd-eng-15",
+          "ucsd-mae-8",
+          "ucsd-mae-9",
+          "ucsd-nano-15"
+        ],
+        "multivariable": [
+          "ucsd-math-20c",
+          "ucsd-math-31bh"
+        ],
+        "linear": [
+          "ucsd-math-18",
+          "ucsd-math-31ah"
+        ],
+        "science": [
+          "ucsd-bicd-100",
+          "ucsd-bild-1",
+          "ucsd-bild-2",
+          "ucsd-bild-3",
+          "ucsd-bimm-101",
+          "ucsd-bimm-121",
+          "ucsd-chem-6a",
+          "ucsd-chem-6ah",
+          "ucsd-chem-6b",
+          "ucsd-chem-6bh",
+          "ucsd-cogs-107a",
+          "ucsd-cogs-107b",
+          "ucsd-cogs-115",
+          "ucsd-esys-101",
+          "ucsd-hds-110",
+          "ucsd-phys-2a",
+          "ucsd-phys-2b",
+          "ucsd-phys-4a",
+          "ucsd-phys-4b",
+          "ucsd-sio-126",
+          "ucsd-sio-128"
+        ],
+        "probability": [
+          "ucsd-cse-103",
+          "ucsd-ece-109",
+          "ucsd-econ-120a",
+          "ucsd-math-181a",
+          "ucsd-math-183"
+        ],
+        "data_structures": [
+          "ucsd-cse-100",
+          "ucsd-cse-100r"
+        ],
+        "AIcore": [
+          "ucsd-cse-150a",
+          "ucsd-cse-150b",
+          "ucsd-cse-151b"
+        ],
+        "ethics": [
+          "ucsd-cse-194",
+          "ucsd-phil-174",
+          "ucsd-poli-121d"
+        ],
+        "AI12": [
+          "ucsd-cogs-108",
+          "ucsd-cogs-109",
+          "ucsd-cogs-118a",
+          "ucsd-cogs-118b",
+          "ucsd-cogs-118c",
+          "ucsd-cogs-181",
+          "ucsd-cogs-182",
+          "ucsd-cogs-185",
+          "ucsd-cogs-186",
+          "ucsd-cogs-188",
+          "ucsd-cse-106",
+          "ucsd-cse-150a",
+          "ucsd-cse-150b",
+          "ucsd-cse-151b",
+          "ucsd-cse-152a",
+          "ucsd-cse-152b",
+          "ucsd-cse-153",
+          "ucsd-cse-153r",
+          "ucsd-cse-154",
+          "ucsd-cse-156",
+          "ucsd-cse-157",
+          "ucsd-cse-158",
+          "ucsd-cse-158r",
+          "ucsd-cse-176b",
+          "ucsd-cse-186",
+          "ucsd-dsc-102",
+          "ucsd-dsc-120",
+          "ucsd-dsc-131",
+          "ucsd-dsc-140a",
+          "ucsd-dsc-140b",
+          "ucsd-dsc-148",
+          "ucsd-dsc-155",
+          "ucsd-dsc-161",
+          "ucsd-dsc-170",
+          "ucsd-dsc-185",
+          "ucsd-ece-172a",
+          "ucsd-ece-175a",
+          "ucsd-ece-175b",
+          "ucsd-ece-176",
+          "ucsd-math-102",
+          "ucsd-math-170a",
+          "ucsd-math-173a",
+          "ucsd-math-173b",
+          "ucsd-math-181a",
+          "ucsd-math-181d",
+          "ucsd-math-182",
+          "ucsd-math-189",
+          "ucsd-phil-150"
+        ]
+      },
+      "independence": "same_author_recheck_with_separate_core_confirmation",
+      "independent_confirmation": {
+        "reviewer": "root",
+        "reviewed_at": "2026-10-11",
+        "scope": "UCSD full major AI section and all 13 named choice groups, eight fixed descriptions and the specific SIO/POLI/CHEM cases; UCSB expanded requirement tree and all 21 fixed source-code descriptions. Broad GE, all option classifications and the UCSB field descriptions are not independently certified."
+      }
+    },
+    {
+      "program_id": "ucsb-ai-bs",
+      "reviewed_at": "2026-10-11",
+      "reviewer": "pilots_purdue_minor source recheck, with separate root confirmation of the explicitly bounded core scope",
+      "reviewed_content_hash": "1110233b12a09eb88da3b467944ccc62d80f5b7d3c0252cfbe5e9363da2c479a",
+      "dimensions": {
+        "fixed_requirements": {
+          "status": "verified",
+          "summary": "Current program tree and2026–27 GEAR establish21 fixed source codes resolving to20 identities. CMPSC181/ECE181 is an explicitly reciprocal same-course pair, so its closed OR row contributes one fixed identity. Five mathematics courses, six preparation computing/statistics courses and nine upper-division identities match the manual set; prerequisites and sample-plan entries are not added.",
+          "evidence": [
+            {
+              "url": "https://catalog.ucsb.edu/programs/mcAVHSCZnQkOVw0EAf1m/program-requirements-kn5uw",
+              "locator": "Preparation for the Major and Required Upper-Division: expanded ALL/AND/OR tree"
+            },
+            {
+              "url": "https://www.engineering.ucsb.edu/sites/default/files/docs/26-27_GEAR.pdf",
+              "locator": "Artificial Intelligence2026–27 requirement sheet; preparation and upper-division core"
+            },
+            {
+              "url": "https://catalog.ucsb.edu/courses/CMPSC%20181/general-aoYks",
+              "locator": "Full current description and explicit same-course advisory"
+            },
+            {
+              "url": "https://catalog.ucsb.edu/courses/ECE%20181/general-aoYks",
+              "locator": "Reciprocal current same-course advisory"
+            }
+          ],
+          "limitations": [
+            "Primary author reread the sources; a separate root reviewer then confirmed the explicitly stated fixed/core scope. This bounded confirmation does not certify all elective or GE content.",
+            "The review is bounded to mapped fixed requirements, named major choice structure and their chart semantics. It does not certify the complete degree, all general-education pools, student-specific exceptions or course availability."
+          ]
+        },
+        "choice_rules": {
+          "status": "partial",
+          "summary": "The field-elective sheet specifies nine courses/36 units. Its39 printed source-code records map to37 existing canonical identities after verified153A and155 pairs; the open190AA–ZZ criterion is retained rather than invented as a finite list. Science ListsA/B remain8/12-unit rules without public finite lists. College area and overlap requirements are choices/overlays, not hundreds of required courses. The source total and subgroups must not be summed as independent loads.",
+          "evidence": [
+            {
+              "url": "https://catalog.ucsb.edu/programs/mcAVHSCZnQkOVw0EAf1m/program-requirements-kn5uw",
+              "locator": "At least9 Major Field Electives; two opaque references; Science ListsA/B8/12 credits"
+            },
+            {
+              "url": "https://www.engineering.ucsb.edu/sites/default/files/docs/26-27_GEAR.pdf",
+              "locator": "AI major field list,192/196 combined4-unit/GPA3.0 restriction and180-unit degree total"
+            },
+            {
+              "url": "https://ai.cs.ucsb.edu/curriculum",
+              "locator": "Degree Requirements and sample-plan context"
+            }
+          ],
+          "limitations": [
+            "Primary author reread the sources; a separate root reviewer then confirmed the explicitly stated fixed/core scope. This bounded confirmation does not certify all elective or GE content.",
+            "The review is bounded to mapped fixed requirements, named major choice structure and their chart semantics. It does not certify the complete degree, all general-education pools, student-specific exceptions or course availability.",
+            "The current tree has opaque field references where GEAR prints189C/D; no renumbering is established. Science pools, capstone interpretation and existing unit/subtotal differences remain unresolved. Broad827 GE-option identities were not independently reread; reviewed_option_subset covers only37 field identities."
+          ]
+        },
+        "classification": {
+          "status": "partial",
+          "summary": "All 21 fixed source-code descriptions were reread by the primary author and separately by root, supporting 20 canonical subjects: four foundations, eight mathematics, six AI/ML and two mixed. CMPSC 25 combines programming/algorithms with statistical programming, hypothesis testing and inference. CMPSC 183 combines ethics with substantive explainability, fairness and bias algorithms and practical AI frameworks. CMPSC 135 remains mathematical foundations; CMPSC 1A teaches substantive AI techniques.",
+          "evidence": [
+            {
+              "url": "https://catalog.ucsb.edu/courses/MATH%203A/general-aoYks",
+              "locator": "MATH 3A full current rendered course fields"
+            },
+            {
+              "url": "https://catalog.ucsb.edu/courses/MATH%203B/general-aoYks",
+              "locator": "MATH 3B full current rendered course fields"
+            },
+            {
+              "url": "https://catalog.ucsb.edu/courses/MATH%204A/general-aoYks",
+              "locator": "MATH 4A full current rendered course fields"
+            },
+            {
+              "url": "https://catalog.ucsb.edu/courses/MATH%204B/general-aoYks",
+              "locator": "MATH 4B full current rendered course fields"
+            },
+            {
+              "url": "https://catalog.ucsb.edu/courses/MATH%206A/general-aoYks",
+              "locator": "MATH 6A full current rendered course fields"
+            },
+            {
+              "url": "https://catalog.ucsb.edu/courses/CMPSC%201A/general-aoYks",
+              "locator": "CMPSC 1A full current rendered course fields"
+            },
+            {
+              "url": "https://catalog.ucsb.edu/courses/CMPSC%209/general-aoYks",
+              "locator": "CMPSC 9 full current rendered course fields"
+            },
+            {
+              "url": "https://catalog.ucsb.edu/courses/CMPSC%2025",
+              "locator": "CMPSC 25 full current rendered course fields"
+            },
+            {
+              "url": "https://catalog.ucsb.edu/courses/CpsoFLv7eRttt8CLECJL/general-aoYks",
+              "locator": "CMPSC 41 full current rendered course fields"
+            },
+            {
+              "url": "https://catalog.ucsb.edu/courses/ilp1w9c3d6XfcZDq766e/general-aoYks",
+              "locator": "CMPSC 42 full current rendered course fields"
+            },
+            {
+              "url": "https://catalog.ucsb.edu/courses/ECE%20139/general-aoYks",
+              "locator": "ECE 139 full current rendered course fields"
+            },
+            {
+              "url": "https://catalog.ucsb.edu/courses/CMPSC%20130A/general-aoYks",
+              "locator": "CMPSC 130A full current rendered course fields"
+            },
+            {
+              "url": "https://catalog.ucsb.edu/courses/CMPSC%20130B/general-aoYks",
+              "locator": "CMPSC 130B full current rendered course fields"
+            },
+            {
+              "url": "https://catalog.ucsb.edu/courses/x48GnLL1rnmr8nyknTQU/general-aoYks",
+              "locator": "CMPSC 135 full current rendered course fields"
+            },
+            {
+              "url": "https://catalog.ucsb.edu/courses/CMPSC%20165A/general-aoYks",
+              "locator": "CMPSC 165A full current rendered course fields"
+            },
+            {
+              "url": "https://catalog.ucsb.edu/courses/CMPSC%20165B/general-aoYks",
+              "locator": "CMPSC 165B full current rendered course fields"
+            },
+            {
+              "url": "https://catalog.ucsb.edu/courses/nRZu8K8jpgGV4lUH4t4H/general-aoYks",
+              "locator": "CMPSC 187 full current rendered course fields"
+            },
+            {
+              "url": "https://catalog.ucsb.edu/courses/zW75yMZ2SFLkXg5izKVI/general-aoYks",
+              "locator": "CMPSC 188 full current rendered course fields"
+            },
+            {
+              "url": "https://catalog.ucsb.edu/courses/CMPSC%20181/general-aoYks",
+              "locator": "CMPSC 181 full current rendered course fields"
+            },
+            {
+              "url": "https://catalog.ucsb.edu/courses/zWAPxdoMy6Ngkki7OkoR/general-aoYks",
+              "locator": "CMPSC 183 full current rendered course fields"
+            },
+            {
+              "url": "https://catalog.ucsb.edu/courses/ECE%20181/general-aoYks",
+              "locator": "ECE 181 full current rendered course fields"
+            }
+          ],
+          "limitations": [
+            "Primary author reread the sources; a separate root reviewer then confirmed the explicitly stated fixed/core scope. This bounded confirmation does not certify all elective or GE content.",
+            "The review is bounded to mapped fixed requirements, named major choice structure and their chart semantics. It does not certify the complete degree, all general-education pools, student-specific exceptions or course availability.",
+            "No new complete classification review of 827 elective identities or two contextual records. Current credit and major-eligibility conflicts are retained rather than waived."
+          ]
+        }
+      },
+      "expected_course_ids": {
+        "required": [
+          "ucsb-cmpsc-130a",
+          "ucsb-cmpsc-130b",
+          "ucsb-cmpsc-135",
+          "ucsb-cmpsc-165a",
+          "ucsb-cmpsc-165b",
+          "ucsb-cmpsc-181",
+          "ucsb-cmpsc-183",
+          "ucsb-cmpsc-187",
+          "ucsb-cmpsc-188",
+          "ucsb-cmpsc-1a",
+          "ucsb-cmpsc-25",
+          "ucsb-cmpsc-41",
+          "ucsb-cmpsc-42",
+          "ucsb-cmpsc-9",
+          "ucsb-ece-139",
+          "ucsb-math-3a",
+          "ucsb-math-3b",
+          "ucsb-math-4a",
+          "ucsb-math-4b",
+          "ucsb-math-6a"
+        ],
+        "options": null,
+        "unresolved": null
+      },
+      "expected_profile": {
+        "required": {
+          "count": 20,
+          "categories": {
+            "foundations": 4,
+            "mathematics": 8,
+            "ai_ml": 6,
+            "other": 2
+          }
+        },
+        "options": null,
+        "unresolved": null
+      },
+      "reviewed_option_subset": [
+        "ucsb-c-lit-155",
+        "ucsb-cmpsc-110",
+        "ucsb-cmpsc-111",
+        "ucsb-cmpsc-132",
+        "ucsb-cmpsc-134",
+        "ucsb-cmpsc-138",
+        "ucsb-cmpsc-140",
+        "ucsb-cmpsc-148",
+        "ucsb-cmpsc-153a",
+        "ucsb-cmpsc-154",
+        "ucsb-cmpsc-156",
+        "ucsb-cmpsc-160",
+        "ucsb-cmpsc-162",
+        "ucsb-cmpsc-170",
+        "ucsb-cmpsc-171",
+        "ucsb-cmpsc-172",
+        "ucsb-cmpsc-174a",
+        "ucsb-cmpsc-174b",
+        "ucsb-cmpsc-176a",
+        "ucsb-cmpsc-176b",
+        "ucsb-cmpsc-176c",
+        "ucsb-cmpsc-177",
+        "ucsb-cmpsc-178",
+        "ucsb-cmpsc-180",
+        "ucsb-cmpsc-184",
+        "ucsb-cmpsc-185",
+        "ucsb-cmpsc-186",
+        "ucsb-cmpsc-189c",
+        "ucsb-cmpsc-189d",
+        "ucsb-cmpsc-192",
+        "ucsb-cmpsc-196",
+        "ucsb-ece-180",
+        "ucsb-ece-186",
+        "ucsb-engl-146ai",
+        "ucsb-engl-146ds",
+        "ucsb-engl-197",
+        "ucsb-me-107"
+      ],
+      "independence": "same_author_recheck_with_separate_core_confirmation",
+      "independent_confirmation": {
+        "reviewer": "root",
+        "reviewed_at": "2026-10-11",
+        "scope": "UCSD full major AI section and all 13 named choice groups, eight fixed descriptions and the specific SIO/POLI/CHEM cases; UCSB expanded requirement tree and all 21 fixed source-code descriptions. Broad GE, all option classifications and the UCSB field descriptions are not independently certified."
+      }
+    }
+  ]
+}

@@ -46,7 +46,7 @@ def test_actual_chapter_all_records_and_registered_integration():
     out=a.SOURCE_PARSERS[s['url']](p.read_text());assert len(out['courses'])==42
     d=json.loads(Path('data/programs',m.SPEC['program_id']+'.json').read_text());cs={c['id']:c for c in d['courses']}
     assert all(cs[c['id']][k]==v for c in out['courses']for k,v in c.items()if k!='notes')
-    assert [requirement_profile(d)[k]['count']for k in ['required','options','unresolved']]==[8,119,2241]
+    assert [requirement_profile(d)[k]['count']for k in ['required','options','unresolved']]==[8,119,2240]
     # Preserve prior Warren language membership rules while enriching descriptions.
     assert a.SOURCES.count(s['url'])==1
     assert len(out['requirements'])==43

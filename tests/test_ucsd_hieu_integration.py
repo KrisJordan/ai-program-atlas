@@ -18,7 +18,7 @@ def test_hieu_preserves_title_hold_missing_units_and_conditional_study():
     assert c['HIEU 124']['prerequisites'] is None
     assert any('not transferred' in n for n in c['HIEU 124']['notes'])
     assert c['HIEU 145']['category_review']['status']=='mixed'
-    assert [requirement_profile(d)[k]['count']for k in ('required','options','unresolved')]==[8,119,2241]
+    assert [requirement_profile(d)[k]['count']for k in ('required','options','unresolved')]==[8,119,2240]
 
 
 def test_hieu_registered_bounded_history_observer_matches_curated_observations():
