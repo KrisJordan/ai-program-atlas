@@ -215,7 +215,7 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']['description_reviewed_records']==385
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==390
     assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
         o=next(o for o in entry(code)['observations'] if o.get('evidence_basis')=='official_title_only')
@@ -1330,3 +1330,29 @@ def test_steam_special_subject_only_upgrades_exact_topic_and_term():
     course=dict(id=cid,code=row['listed_code'],name=row['listed_name'],source_id=row['listed_source_id'])
     assert review.matched_review(course,o,e['source_url'],MANIFEST)==e
     assert review.matched_review(course,{**o,'term':'Fall 2025'},e['source_url'],MANIFEST) is None
+
+
+def test_cms_followup_preserves_explicit_none_and_description_missingness():
+    report=MANIFEST['ocw_cms_followup_review']
+    assert len(report['upgraded_record_ids'])==5 and len(report['source_ids'])==4
+    assert report['directory_rows_observed']>report['directory_unique_urls_observed']
+    assert entry('CMS.621')['observations'][-1]['prerequisites']=='None'
+    assert entry('CMS.360')['observations'][-1]['prerequisites'] is None
+    assert entry('CMS.633')['observations'][-1]['evidence_basis']=='official_title_only'
+    for cid in report['upgraded_record_ids']:
+        e=MANIFEST['courses'][cid]['observations'][-1]
+        assert e['category']=='human_context' and e['credits'] is None
+        assert e['evidence_basis']=='official_description'
+
+
+def test_cms_actual_sources_replay_and_withdraw_changed_prerequisites():
+    report=MANIFEST['ocw_cms_followup_review']
+    for cid in report['upgraded_record_ids']:
+        row=MANIFEST['courses'][cid];e=row['observations'][-1];spec=MANIFEST['source_specs'][e['source_id']]
+        key=e['source_id'].replace('mit-ai-hass-review-ocw-','')+('-syllabus' if spec['parser']=='ocw_syllabus' else '')
+        path=Path('/tmp/mit-hass-subjects/ocw-'+key+'.html')
+        if not path.exists():pytest.skip('Optional public CMS follow-up source captures')
+        o=(review.observe_ocw_syllabus if spec['parser']=='ocw_syllabus' else review.observe_ocw_course)(path.read_text())[0]
+        course=dict(id=cid,code=row['listed_code'],name=row['listed_name'],source_id=row['listed_source_id'])
+        assert review.matched_review(course,o,e['source_url'],MANIFEST)==e
+        assert review.matched_review(course,{**o,'prerequisites':'Permission required'},e['source_url'],MANIFEST) is None
