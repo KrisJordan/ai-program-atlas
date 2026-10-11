@@ -41,3 +41,19 @@ def test_parent_context_is_consistent_in_static_pages_and_comparison_projection(
     assert card.find('a',href='https://example.edu/outcome')
     assert 'Not yet verified' in root.select_one('[data-program-id=test-ai-3] .parent-programs').get_text()
     assert not root.select_one('#filter-panel').has_attr('open')
+    second_detail = BeautifulSoup((tmp_path/'programs/test-ai-0/index.html').read_text(), 'html.parser')
+    assert 'No separate award' in second_detail.select_one('.detail-badges').get_text()
+    other_detail = BeautifulSoup((tmp_path/'programs/test-ai-1/index.html').read_text(), 'html.parser')
+    assert 'BSAI' in other_detail.select_one('.detail-badges').get_text()
+
+
+def test_verified_parent_can_have_full_award_without_invented_abbreviation(site_data):
+    from atlas.site import parent_context_markup
+    program = context_fixture(site_data)['programs'][2]
+    program['parent_programs'] = [program['parent_programs'][1]]
+    program['parent_programs'][0]['award_level'] = None
+    markup = BeautifulSoup(parent_context_markup(program), 'html.parser')
+    assert 'Bachelor of Science' in markup.get_text()
+    assert '(BS)' not in markup.get_text()
+    assert 'Award not yet verified' not in markup.get_text()
+    assert 'Official parent heading' in markup.get_text()

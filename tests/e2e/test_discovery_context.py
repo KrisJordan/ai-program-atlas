@@ -26,6 +26,7 @@ def test_second_major_navigation_and_parent_awards(page,site,tmp_path,site_data,
     page.go_back();expect(award).to_have_value('second_major')
     page.reload();expect(award).to_have_value('second_major')
     expect(page.locator('#tray-count')).to_contain_text('1 of 4')
+    expect(page.locator('.compare-table tr').filter(has=page.get_by_role('rowheader',name='Award / type',exact=True))).to_contain_text('No separate award')
     page.goto(site+'?type=additional_major&award_nu=other')
     expect(page.locator('[data-program-id=test-ai-0]')).to_be_visible()
     page.goto(site+'?path_lac=concentrations&path_nu=concentrations')
