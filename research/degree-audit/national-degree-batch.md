@@ -29,3 +29,36 @@ free electives say 11 while the sample allocates 4 + 6. It does not clarify reus
 of prescribed/depth CSE courses inside the additional open elective allocation.
 Course prerequisites outside the displayed core are enrollment conditions, not
 silent additions. Those exact questions prevent whole-degree audit completion.
+
+## Penn State University Park: empty graphs replaced; policy conflicts remain
+
+Engineering's primary table has five prescribed rows followed by twelve
+C-minimum prescribed rows: **17 fixed**. Its named alternatives are three
+programming-I identities (one route has two courses), two programming-II,
+two machine-learning, three speaking and three writing: **13 options**.
+The 27-hour technical and three-hour nontechnical pools are not supplied by the
+inspected department/degree pages and remain explicit gaps.
+
+IST's prescribed table has **9 fixed** identities. The manual named option union
+has **160** identities: the core alternatives, full technical list and applicable
+University Park application-focus lists, deduplicated by exact identity. The
+explicit sets in the test and JSON ledger are independently transcribed; the
+profile implementation did not generate them. Eleven supporting codes are printed
+without a linked course description; ignoring unlinked spans would lose actual
+eligible-list evidence. Code-only subjects stay unclassified. The Commonwealth
+business variant is not the University Park route. Cross-list aliases are not
+permission to count multiple courses, and the open CYBER/ROTC rules add no IDs.
+
+All 40 distinct named core/immediate-alternative descriptions across the two
+degrees were read. This independently distinguishes algorithm foundations,
+production systems and mathematical optimization from AI-method courses. Their
+current enrollment rules expose preparation not in the displayed core. A-I 370
+is particularly material for Engineering: its explicit CMPSC132, STAT200/DS200
+and concurrent DS305/CMPSC465/CMPSC462 conditions differ from the published route.
+Prerequisites remain enrollment metadata, never silently added degree obligations.
+IST also has a table-versus-plan ambiguity about mixed capstone/research routes.
+
+Senate83-80 displays a June 23, 2026 revision with implementation pending, alongside
+residence/time rules. Effective cohort applicability requires resolution. These
+specific source questions block whole-degree certification; unreviewed supporting
+course metadata remains ordinary accessible work, not a claimed access restriction.

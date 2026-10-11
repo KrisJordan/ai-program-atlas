@@ -247,6 +247,530 @@
       ],
       "correction_status": "Role and all 48 course-subject corrections applied; source conflicts preserved.",
       "second_pass_status": "pending"
+    },
+    {
+      "program_id": "penn-state-ai-engineering-bs",
+      "institution_id": "pennsylvania-state-university",
+      "status": "blocked",
+      "sources": [
+        {
+          "url": "https://bulletins.psu.edu/undergraduate/colleges/engineering/artificial-intelligence-engineering-bs/",
+          "catalog_year": "2026-2027",
+          "locator": "Program heading, award/host and requirements",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://senate.psu.edu/students/policies-and-rules-for-undergraduate-students/42-00-acquisition-of-credit/",
+          "catalog_year": null,
+          "locator": "Explicit semester-hour definition; transfer-credit unit and grade scope",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/a-i/",
+          "catalog_year": "2026–2027",
+          "locator": "A-I 100 and other degree-listed course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/aie/",
+          "catalog_year": "2026–2027",
+          "locator": "AIE 489W and other degree-listed course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/cmpsc/",
+          "catalog_year": "2026–2027",
+          "locator": "CMPSC 360 and other degree-listed course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/ee/",
+          "catalog_year": "2026–2027",
+          "locator": "EE 456 and other degree-listed course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/engl/",
+          "catalog_year": "2026–2027",
+          "locator": "ENGL 202C and other degree-listed course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/math/",
+          "catalog_year": "2026–2027",
+          "locator": "MATH 140 and other degree-listed course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/phys/",
+          "catalog_year": "2026–2027",
+          "locator": "PHYS 211 and other degree-listed course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/stat/",
+          "catalog_year": "2026–2027",
+          "locator": "STAT 401 and other degree-listed course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/ds/",
+          "catalog_year": "2026–2027",
+          "locator": "DS 120 and other degree-listed course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/cas/",
+          "catalog_year": "2026–2027",
+          "locator": "CAS 100A and other degree-listed course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://senate.psu.edu/students/policies-and-rules-for-undergraduate-students/82-00-and-83-00-degree-requirements/",
+          "catalog_year": null,
+          "locator": "83-80 displayed residence/time rules and June 23, 2026 pending-implementation notice",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        }
+      ],
+      "checks": {
+        "degree_identity": "Current 2026–27 University Park degree, explicit B.S.; AIE_BS engineering and AIMA_BS IST are distinct plans. The separate Harrisburg plan is not imported.",
+        "required_and_choices": "17 prescribed identities and 13 named alternatives; an OR-with-AND programming route retains its two-course branch.",
+        "elective_pools": "27-hour technical and three-hour nontechnical approved pools remain unspecified in inspected department/catalog pages; no broad prefix pool is substituted.",
+        "prerequisites": "All named core/immediate alternative descriptions read. Exact enforced prerequisites/corequisites retained as enrollment conditions; no prerequisite-only course is added to the required set. The engineering A-I370 course rule and degree preparation differ.",
+        "credits_and_units": "Senate 42-00 explicitly defines semester hours. Group amounts remain on choices; individual amounts come from course descriptions. Variable A-I494 research remains null rather than six credits. GE overlap and cultures/writing overlays are not additive course counts.",
+        "classification": "29 primary subjects reviewed and one mixed course.",
+        "family_composition": "Standalone degree; no inheritance or merged campus family.",
+        "degree_wide_requirements": "Program table gives entrance, GPA, major grading, GE and overlay rules. Senate83-80 currently carries a pending implementation notice; effective residence/time policy and stricter college applicability remain unresolved."
+      },
+      "expected_profile": {
+        "required": {
+          "count": 17,
+          "categories": {
+            "ai_ml": 4,
+            "applications": 2,
+            "foundations": 1,
+            "human_context": 2,
+            "mathematics": 6,
+            "other": 1,
+            "systems": 1
+          }
+        },
+        "options": {
+          "count": 13,
+          "categories": {
+            "ai_ml": 2,
+            "foundations": 5,
+            "human_context": 6
+          }
+        },
+        "unresolved": {
+          "count": 0,
+          "categories": {}
+        }
+      },
+      "expected_course_ids": {
+        "required": [
+          "psu-a-i-100",
+          "psu-a-i-305",
+          "psu-a-i-341w",
+          "psu-a-i-370",
+          "psu-a-i-375",
+          "psu-a-i-410",
+          "psu-aie-355",
+          "psu-aie-489w",
+          "psu-cmpsc-360",
+          "psu-ee-456",
+          "psu-engl-202c",
+          "psu-math-140",
+          "psu-math-141",
+          "psu-math-225",
+          "psu-phys-211",
+          "psu-phys-212",
+          "psu-stat-401"
+        ],
+        "options": [
+          "psu-cas-100a",
+          "psu-cas-100b",
+          "psu-cas-138t",
+          "psu-cmpsc-121",
+          "psu-cmpsc-122",
+          "psu-cmpsc-131",
+          "psu-cmpsc-132",
+          "psu-cmpsc-445",
+          "psu-cmpsc-448",
+          "psu-ds-120",
+          "psu-engl-137h",
+          "psu-engl-15",
+          "psu-engl-30h"
+        ],
+        "unresolved": []
+      },
+      "discrepancies": [
+        {
+          "issue": "Earlier identity-only record exposed zero courses despite readable published requirements.",
+          "correction": "Replaced with source-parsed fixed, alternative, sequence and conditional supporting graphs; manual expected-ID tests.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://bulletins.psu.edu/undergraduate/colleges/engineering/artificial-intelligence-engineering-bs/"
+          ]
+        },
+        {
+          "issue": "A-I370 enforced preparation and concurrent courses differ from the engineering core/alternatives.",
+          "correction": "Preserved exact competing evidence; no waiver or mixed-route permission inferred.",
+          "status": "unresolved",
+          "evidence_urls": [
+            "https://bulletins.psu.edu/undergraduate/colleges/engineering/artificial-intelligence-engineering-bs/",
+            "https://bulletins.psu.edu/university-course-descriptions/undergraduate/a-i/"
+          ]
+        }
+      ],
+      "blockers": [
+        {
+          "issue": "The current A-I370 enrollment rule names preparation/concurrent courses that are not identical to the engineering major sequence; no program-specific waiver or substitution is established. Other required/optional courses also impose non-core prerequisites; retain exact conditions without adding them as universal degree obligations.",
+          "url": "https://bulletins.psu.edu/undergraduate/colleges/engineering/artificial-intelligence-engineering-bs/"
+        },
+        {
+          "issue": "Senate 83-80 announces June 23, 2026 revisions with implementation pending while displaying residence/time rules. Effective cohort applicability and any stricter college conditions need reconciliation.",
+          "url": "https://senate.psu.edu/students/policies-and-rules-for-undergraduate-students/82-00-and-83-00-degree-requirements/"
+        },
+        {
+          "issue": "The degree and department pages refer to approved technical (27 hours) and nontechnical (3 hours) lists without supplying them. Exact current approved pools are not established by the inspected program pages.",
+          "url": "https://bulletins.psu.edu/undergraduate/colleges/engineering/artificial-intelligence-engineering-bs/"
+        }
+      ],
+      "correction_status": "Source-backed inventory and core metadata applied; exact source-policy conflicts retained. Supporting metadata remains accessible work, not an access denial.",
+      "second_pass_status": "pending"
+    },
+    {
+      "program_id": "penn-state-ai-methods-applications-ist-bs",
+      "institution_id": "pennsylvania-state-university",
+      "status": "blocked",
+      "sources": [
+        {
+          "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+          "catalog_year": "2026-2027",
+          "locator": "Program heading, award/host and requirements",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://senate.psu.edu/students/policies-and-rules-for-undergraduate-students/42-00-acquisition-of-credit/",
+          "catalog_year": null,
+          "locator": "Explicit semester-hour definition; transfer-credit unit and grade scope",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/a-i/",
+          "catalog_year": "2026–2027",
+          "locator": "A-I 100 and other degree-listed course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/cmpsc/",
+          "catalog_year": "2026–2027",
+          "locator": "CMPSC 131 and other degree-listed course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/math/",
+          "catalog_year": "2026–2027",
+          "locator": "MATH 140 and other degree-listed course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/stat/",
+          "catalog_year": "2026–2027",
+          "locator": "STAT 401 and other degree-listed course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/ds/",
+          "catalog_year": "2026–2027",
+          "locator": "DS 200 and other degree-listed course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/aima/",
+          "catalog_year": "2026–2027",
+          "locator": "AIMA 430 and other degree-listed course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/ee/",
+          "catalog_year": "2026–2027",
+          "locator": "EE 456 and other degree-listed course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://senate.psu.edu/students/policies-and-rules-for-undergraduate-students/82-00-and-83-00-degree-requirements/",
+          "catalog_year": null,
+          "locator": "83-80 displayed residence/time rules and June 23, 2026 pending-implementation notice",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        }
+      ],
+      "checks": {
+        "degree_identity": "Current 2026–27 University Park degree, explicit B.S.; AIE_BS engineering and AIMA_BS IST are distinct plans. The separate Harrisburg plan is not imported.",
+        "required_and_choices": "9 prescribed identities and 160 named options. The six-hour capstone permits a paired AIMA430/440 route or variable research; mixed route interpretation remains unresolved.",
+        "elective_pools": "All printed technical and application-focus identities captured, including 11 unlinked printed codes. One application focus required; University Park and Commonwealth business routes distinguished. Open CYBER and ROTC conditions are not finite inventories.",
+        "prerequisites": "All named core/immediate alternative descriptions read. Exact enforced prerequisites/corequisites retained as enrollment conditions; no prerequisite-only course is added to the required set. The engineering A-I370 course rule and degree preparation differ.",
+        "credits_and_units": "Senate 42-00 explicitly defines semester hours. Group amounts remain on choices; individual amounts come from course descriptions. Variable A-I494 research remains null rather than six credits. GE overlap and cultures/writing overlays are not additive course counts.",
+        "classification": "21 primary subjects reviewed, one mixed, and 147 unclassified: research subject is individually determined and code-only supporting options lack reviewed subject descriptions. No prefix/focus classification.",
+        "family_composition": "Standalone degree; no inheritance or merged campus family.",
+        "degree_wide_requirements": "Program table gives entrance, GPA, major grading, GE and overlay rules. Senate83-80 currently carries a pending implementation notice; effective residence/time policy and stricter college applicability remain unresolved."
+      },
+      "expected_profile": {
+        "required": {
+          "count": 9,
+          "categories": {
+            "ai_ml": 3,
+            "foundations": 2,
+            "human_context": 1,
+            "mathematics": 3
+          }
+        },
+        "options": {
+          "count": 160,
+          "categories": {
+            "ai_ml": 6,
+            "foundations": 3,
+            "mathematics": 3,
+            "other": 148
+          }
+        },
+        "unresolved": {
+          "count": 0,
+          "categories": {}
+        }
+      },
+      "expected_course_ids": {
+        "required": [
+          "psu-a-i-100",
+          "psu-a-i-341w",
+          "psu-a-i-370",
+          "psu-a-i-375",
+          "psu-cmpsc-131",
+          "psu-cmpsc-132",
+          "psu-math-140",
+          "psu-math-225",
+          "psu-stat-401"
+        ],
+        "options": [
+          "psu-a-i-285",
+          "psu-a-i-494",
+          "psu-a-i-495",
+          "psu-acctg-211",
+          "psu-aee-216",
+          "psu-agbm-101",
+          "psu-agbm-200",
+          "psu-agbm-445",
+          "psu-aima-430",
+          "psu-aima-440",
+          "psu-ba-301",
+          "psu-ba-302",
+          "psu-ba-303",
+          "psu-ba-304",
+          "psu-blaw-243",
+          "psu-ced-102n",
+          "psu-ced-160",
+          "psu-cmpsc-360",
+          "psu-cmpsc-410",
+          "psu-cmpsc-432",
+          "psu-cmpsc-441",
+          "psu-cmpsc-442",
+          "psu-cmpsc-445",
+          "psu-cmpsc-446",
+          "psu-cmpsc-448",
+          "psu-cmpsc-462",
+          "psu-cmpsc-465",
+          "psu-cyber-100",
+          "psu-cyber-262",
+          "psu-ds-200",
+          "psu-ds-220",
+          "psu-ds-300",
+          "psu-ds-305",
+          "psu-ds-310",
+          "psu-ds-320",
+          "psu-ds-330",
+          "psu-ds-402",
+          "psu-ds-410",
+          "psu-ds-420",
+          "psu-ds-441",
+          "psu-ds-442",
+          "psu-econ-102",
+          "psu-ee-454",
+          "psu-ee-456",
+          "psu-ee-483",
+          "psu-eti-300w",
+          "psu-eti-301",
+          "psu-eti-302",
+          "psu-eti-435",
+          "psu-eti-461",
+          "psu-hdfs-129",
+          "psu-hdfs-200",
+          "psu-hdfs-210",
+          "psu-hdfs-215n",
+          "psu-hdfs-216",
+          "psu-hdfs-249n",
+          "psu-hdfs-434",
+          "psu-hdfs-447",
+          "psu-hdfs-492",
+          "psu-hpa-101",
+          "psu-hpa-200",
+          "psu-hpa-210",
+          "psu-hpa-211",
+          "psu-hpa-301",
+          "psu-hpa-311",
+          "psu-hpa-332",
+          "psu-hpa-410",
+          "psu-hpa-445",
+          "psu-hpa-450",
+          "psu-hpa-470",
+          "psu-ib-303",
+          "psu-ist-140",
+          "psu-ist-220",
+          "psu-ist-240",
+          "psu-ist-242",
+          "psu-ist-250",
+          "psu-ist-256",
+          "psu-ist-301",
+          "psu-ist-302",
+          "psu-ist-311",
+          "psu-ist-331",
+          "psu-ist-411",
+          "psu-ist-413",
+          "psu-ist-451",
+          "psu-ist-454",
+          "psu-ist-456",
+          "psu-math-311w",
+          "psu-math-318",
+          "psu-math-414",
+          "psu-math-425",
+          "psu-math-429",
+          "psu-math-430",
+          "psu-math-448",
+          "psu-math-452",
+          "psu-math-455",
+          "psu-math-486",
+          "psu-nutr-100",
+          "psu-nutr-119",
+          "psu-nutr-251",
+          "psu-nutr-291n",
+          "psu-nutr-358",
+          "psu-nutr-360",
+          "psu-nutr-407",
+          "psu-nutr-487",
+          "psu-phil-103",
+          "psu-phil-107",
+          "psu-phil-110",
+          "psu-phil-125",
+          "psu-phil-127",
+          "psu-phil-131n",
+          "psu-phil-404",
+          "psu-phil-416",
+          "psu-phil-418",
+          "psu-phil-427",
+          "psu-phil-433",
+          "psu-plsc-14",
+          "psu-plsc-290n",
+          "psu-plsc-408",
+          "psu-plsc-410",
+          "psu-plsc-418",
+          "psu-plsc-418w",
+          "psu-plsc-420",
+          "psu-plsc-437",
+          "psu-plsc-438",
+          "psu-plsc-439",
+          "psu-plsc-440",
+          "psu-plsc-449",
+          "psu-plsc-467",
+          "psu-plsc-478",
+          "psu-plsc-479",
+          "psu-plsc-483",
+          "psu-plsc-491",
+          "psu-psych-100",
+          "psu-psych-212",
+          "psu-psych-221",
+          "psu-psych-253",
+          "psu-psych-260",
+          "psu-psych-413",
+          "psu-psych-425",
+          "psu-psych-426",
+          "psu-psych-451",
+          "psu-psych-452",
+          "psu-psych-455",
+          "psu-psych-458",
+          "psu-sra-111",
+          "psu-sra-221",
+          "psu-stat-200",
+          "psu-stat-318",
+          "psu-stat-380",
+          "psu-stat-414",
+          "psu-stat-462",
+          "psu-stat-463",
+          "psu-stat-464",
+          "psu-vbsc-340",
+          "psu-vbsc-418",
+          "psu-vbsc-433",
+          "psu-vbsc-435",
+          "psu-vbsc-444",
+          "psu-vbsc-455",
+          "psu-vbsc-485"
+        ],
+        "unresolved": []
+      },
+      "discrepancies": [
+        {
+          "issue": "Earlier identity-only record exposed zero courses despite readable published requirements.",
+          "correction": "Replaced with source-parsed fixed, alternative, sequence and conditional supporting graphs; manual expected-ID tests.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/"
+          ]
+        },
+        {
+          "issue": "Capstone table pairs AIMA430/440; sample plan presents research alternatives semester by semester.",
+          "correction": "Preserved exact competing evidence; no waiver or mixed-route permission inferred.",
+          "status": "unresolved",
+          "evidence_urls": [
+            "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+            "https://bulletins.psu.edu/university-course-descriptions/undergraduate/a-i/"
+          ]
+        }
+      ],
+      "blockers": [
+        {
+          "issue": "The catalog capstone table groups AIMA430/440 together as a six-credit route, while the sample plan prints AIMA430 or A-I494 and AIMA440 or A-I494 independently. Mixed capstone/research combinations and reuse of A-I494 within technical supporting credits require explicit confirmation. Other course prerequisites remain enrollment conditions, not extra fixed-degree obligations.",
+          "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/"
+        },
+        {
+          "issue": "Senate 83-80 announces June 23, 2026 revisions with implementation pending while displaying residence/time rules. Effective cohort applicability and any stricter college conditions need reconciliation.",
+          "url": "https://senate.psu.edu/students/policies-and-rules-for-undergraduate-students/82-00-and-83-00-degree-requirements/"
+        }
+      ],
+      "correction_status": "Source-backed inventory and core metadata applied; exact source-policy conflicts retained. Supporting metadata remains accessible work, not an access denial.",
+      "second_pass_status": "pending"
     }
   ]
 }
