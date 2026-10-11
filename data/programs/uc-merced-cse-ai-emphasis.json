@@ -16,13 +16,18 @@
   "overview": "Official source identifies this undergraduate concentration. Curriculum extraction is pending.",
   "catalog_year": null,
   "verification_status": "partial",
-  "last_verified": "2026-10-10",
+  "last_verified": "2026-10-11",
   "curriculum_status": "pending",
   "links": [
     {
       "kind": "overview",
       "url": "https://admissions.ucmerced.edu/academics/majors-minors",
       "label": "Majors, Minors & Programs"
+    },
+    {
+      "kind": "outcomes",
+      "url": "https://engineering.ucmerced.edu/academics/undergraduate-programs/computer-science-and-engineering-plo",
+      "label": "Host CSE degree learning outcomes (not emphasis-specific)"
     }
   ],
   "sources": [
@@ -35,14 +40,70 @@
       "catalog_year": null,
       "locator": "Program heading and local award or specialization section",
       "confidence": "high"
+    },
+    {
+      "id": "uc-merced-cse-ai-emphasis-host-outcomes",
+      "url": "https://engineering.ucmerced.edu/academics/undergraduate-programs/computer-science-and-engineering-plo",
+      "title": "CSE host-degree program learning outcomes",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Six host CSE degree learning outcomes; not AI-emphasis-specific statements",
+      "confidence": "high"
     }
   ],
-  "outcomes": [],
+  "outcomes": [
+    {
+      "text": "Host CSE program: analyze computing problems and apply relevant disciplinary principles.",
+      "kind": "source_stated",
+      "statement_type": "learning_outcome",
+      "source_id": "uc-merced-cse-ai-emphasis-host-outcomes",
+      "locator": "Six host CSE degree learning outcomes; not AI-emphasis-specific statements"
+    },
+    {
+      "text": "Host CSE program: design, build and assess computing solutions against requirements.",
+      "kind": "source_stated",
+      "statement_type": "learning_outcome",
+      "source_id": "uc-merced-cse-ai-emphasis-host-outcomes",
+      "locator": "Six host CSE degree learning outcomes; not AI-emphasis-specific statements"
+    },
+    {
+      "text": "Host CSE program: communicate in professional settings.",
+      "kind": "source_stated",
+      "statement_type": "learning_outcome",
+      "source_id": "uc-merced-cse-ai-emphasis-host-outcomes",
+      "locator": "Six host CSE degree learning outcomes; not AI-emphasis-specific statements"
+    },
+    {
+      "text": "Host CSE program: make ethical and legally informed professional judgments.",
+      "kind": "source_stated",
+      "statement_type": "learning_outcome",
+      "source_id": "uc-merced-cse-ai-emphasis-host-outcomes",
+      "locator": "Six host CSE degree learning outcomes; not AI-emphasis-specific statements"
+    },
+    {
+      "text": "Host CSE program: collaborate and lead in appropriate team activities.",
+      "kind": "source_stated",
+      "statement_type": "learning_outcome",
+      "source_id": "uc-merced-cse-ai-emphasis-host-outcomes",
+      "locator": "Six host CSE degree learning outcomes; not AI-emphasis-specific statements"
+    },
+    {
+      "text": "Host CSE program: use computing theory and software-development foundations to construct solutions.",
+      "kind": "source_stated",
+      "statement_type": "learning_outcome",
+      "source_id": "uc-merced-cse-ai-emphasis-host-outcomes",
+      "locator": "Six host CSE degree learning outcomes; not AI-emphasis-specific statements"
+    }
+  ],
   "courses": [],
   "requirements": [],
   "notes": [
-    "Identity-only official-source discovery; requirements, courses, prerequisites, credit totals, outcomes and public syllabi remain unextracted. No verified curriculum is implied by identity refresh.",
+    "Program identity is verified. Public program context is now recorded separately; courses, requirements, prerequisites, credit totals and syllabi remain unextracted.",
     "Source labels this a CS and Engineering BS emphasis. Normalized as concentration; not a separate degree.",
-    "Directory transfer-entry date 2027 is not treated as the program launch date. Catalog access returned 403."
+    "Directory transfer-entry date 2027 is not treated as the program launch date. Catalog access returned 403.",
+    "2026-10-11: independent official public context read through the ordinary web reader. Default local scraper stopped because robots.txt returned403 for the main and Engineering hosts; no robots restriction was bypassed. The new adapter can parse a permitted future/public export and cannot manufacture curriculum from aims.",
+    "Current catalog link observed on the Engineering CSE page resolves to https://catalog.ucmerced.edu/ and returned403 through the ordinary reader. This precise URL supplements the earlier unspecified catalog failure; it does not establish absence or discontinuation.",
+    "The six outcomes are explicitly host CSE degree outcomes and do not claim to be additional or specific AI-emphasis outcomes."
   ]
 }

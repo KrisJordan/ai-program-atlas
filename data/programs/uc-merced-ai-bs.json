@@ -13,10 +13,10 @@
   "hosting_unit": "School of Engineering",
   "status": "active",
   "first_offered": null,
-  "overview": "Official source identifies this undergraduate degree. Curriculum extraction is pending.",
+  "overview": "AI degree overview describes intelligent systems, mathematical and computational AI foundations, and responsible deployment. Named course requirements remain unavailable.",
   "catalog_year": null,
   "verification_status": "partial",
-  "last_verified": "2026-10-10",
+  "last_verified": "2026-10-11",
   "curriculum_status": "pending",
   "links": [
     {
@@ -35,13 +35,54 @@
       "catalog_year": null,
       "locator": "Program heading and local award or specialization section",
       "confidence": "high"
+    },
+    {
+      "id": "uc-merced-ai-bs-context",
+      "url": "https://www.ucmerced.edu/majors-and-minors/artificial-intelligence-bs",
+      "title": "UC Merced Artificial Intelligence BS overview",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Overview, program description and illustrative careers; explicit statement that AI major has no alumni yet",
+      "confidence": "high"
     }
   ],
-  "outcomes": [],
+  "outcomes": [
+    {
+      "text": "Study intelligent systems that perceive, reason, learn and make decisions.",
+      "kind": "source_stated",
+      "statement_type": "program_aim",
+      "source_id": "uc-merced-ai-bs-context",
+      "locator": "Overview, program description and illustrative careers; explicit statement that AI major has no alumni yet"
+    },
+    {
+      "text": "Develop mathematical and computational foundations for machine learning, language processing and robotics.",
+      "kind": "source_stated",
+      "statement_type": "program_aim",
+      "source_id": "uc-merced-ai-bs-context",
+      "locator": "Overview, program description and illustrative careers; explicit statement that AI major has no alumni yet"
+    },
+    {
+      "text": "Address societal questions involving algorithmic bias, privacy and responsible automation.",
+      "kind": "source_stated",
+      "statement_type": "program_aim",
+      "source_id": "uc-merced-ai-bs-context",
+      "locator": "Overview, program description and illustrative careers; explicit statement that AI major has no alumni yet"
+    },
+    {
+      "text": "Illustrative career pathways include AI/ML engineering, data science and software development; some roles may require further education. These are possibilities, not observed graduate outcomes.",
+      "kind": "source_stated",
+      "statement_type": "career_pathway",
+      "source_id": "uc-merced-ai-bs-context",
+      "locator": "Careers; no AI-major alumni yet; further-education caveat"
+    }
+  ],
   "courses": [],
   "requirements": [],
   "notes": [
-    "Identity-only official-source discovery; requirements, courses, prerequisites, credit totals, outcomes and public syllabi remain unextracted. No verified curriculum is implied by identity refresh.",
-    "Directory transfer-entry date 2027 is not treated as the program launch date. Catalog access returned 403."
+    "Program identity is verified. Public program context is now recorded separately; courses, requirements, prerequisites, credit totals and syllabi remain unextracted.",
+    "Directory transfer-entry date 2027 is not treated as the program launch date. Catalog access returned 403.",
+    "2026-10-11: independent official public context read through the ordinary web reader. Default local scraper stopped because robots.txt returned403 for the main and Engineering hosts; no robots restriction was bypassed. The new adapter can parse a permitted future/public export and cannot manufacture curriculum from aims.",
+    "Current catalog link observed on the Engineering CSE page resolves to https://catalog.ucmerced.edu/ and returned403 through the ordinary reader. This precise URL supplements the earlier unspecified catalog failure; it does not establish absence or discontinuation."
   ]
 }

@@ -11,3 +11,7 @@ def parse(html: str) -> dict:
     return parse_special(
         html, mode="merced", program_id=PROGRAM_ID, title=TITLE, award=AWARD, kind=KIND
     )
+
+from atlas.adapters.merced_public_context import CSE_URL, parse_cse
+SOURCES.append(CSE_URL)
+SOURCE_PARSERS={CSE_URL:parse_cse}
