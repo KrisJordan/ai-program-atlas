@@ -7,12 +7,13 @@ import json
 import re
 import sqlite3
 import zlib
-from datetime import datetime, timezone
 from contextlib import contextmanager
+from datetime import datetime, timezone
 from itertools import count
 from pathlib import Path
 from urllib.parse import urlparse
 
+from .awards import validate_award_options
 from .requirements import validate_curriculum_audit, validate_requirements
 
 STATES = {"pending", "inspected", "confirmed", "no_qualifying_program_found", "inaccessible"}
@@ -228,11 +229,12 @@ def validate_program(program, family=None):
             raise ValueError("Source-stated outcome needs source evidence")
     validate_requirements(program)
     validate_curriculum_audit(program)
+    validate_award_options(program)
 
 
 def ingest_program(conn, program, run_id=None):
     """Replace one complete reviewed record atomically; unchanged records are no-ops."""
-    from .family_store import load_family, ingest_membership
+    from .family_store import ingest_membership, load_family
 
     family = load_family(conn, program["family"]["id"]) if program.get("family") else None
     validate_program(program, family)
@@ -281,6 +283,10 @@ def ingest_program(conn, program, run_id=None):
             last_verified=excluded.last_verified,content_hash=excluded.content_hash,record_json=excluded.record_json""",
             values,
         )
+        # Optional award mappings must release source FKs before replacing sources.
+        # The existence check also permits migration fixtures for older schemas.
+        if conn.execute("SELECT 1 FROM sqlite_master WHERE name='program_awards'").fetchone():
+            conn.execute("DELETE FROM program_awards WHERE program_id=?", (pid,))
         # FK-safe replacement order; overrides and revisions are intentionally untouched.
         for table in (
             "program_family_memberships",
@@ -308,6 +314,12 @@ def ingest_program(conn, program, run_id=None):
                     s.get("locator"),
                     s.get("confidence", "medium"),
                 ),
+            )
+        for ordinal, award in enumerate(program.get("award_options", [])):
+            conn.execute(
+                "INSERT INTO program_awards VALUES (?,?,?,?,?,?)",
+                (pid, ordinal, award["label"], award["normalized"],
+                 award["source_id"], award["locator"]),
             )
         for link in program.get("links", []):
             conn.execute(
