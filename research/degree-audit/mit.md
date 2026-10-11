@@ -83,3 +83,10 @@ The mathematics Fall2026 schedule links18.01L to public Canvas, and the ordinary
 The newly read first-year advising description restricts its 18.02A route to successful 18.01A completers. The departmental calculus page states general prerequisite equivalence across forms of 18.01, but does not explicitly waive the specific sequence condition; both rules are retained without inventing a contradiction. All20 GIR rows now have bounded manual dispositions, including the explicit8.021 unknown; this is not full metadata completion or a full-degree audit.
 
 The code-only GIR table observer previously assigned all non-math science codes to computing foundations. That source-independent inference is removed: table-only observations now remain unclassified, and separate evidence-guarded subject observers supply the actual reviewed categories. The remaining undescribed 8.021 is other, never foundations.
+
+
+## Four-term CMS/W metadata integration — 2026-10-11
+
+An additional69 approved subject records were integrated from the public CMS/W subject directory across explicitly selected Fall2026, Spring2026, Fall2025 and Spring2025 panels. The contributions b0badc6/f15397e/0520b3e were replayed against visible ordinary-browser captures. Each term shares a URL but has distinct observation hashes and source IDs; fetching the current page cannot silently refresh an archived record. No hidden endpoint or disabled certificate check was used.
+
+The primary seed now includes139 HASS actual-description records;10 identity/version holds, two conflicting records and694 pending records remain. Cultural analysis of technology is human context; game design and data visualization may be mixed methods/domain subjects. Same-subject, meets-with and additional graduate work are not interchangeable identities. These additions change metadata, not fixed requirement roles or full-degree audit status.

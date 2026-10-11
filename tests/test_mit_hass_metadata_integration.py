@@ -53,7 +53,8 @@ def test_integrated_evidence_preserves_term_rules_and_withholds_conflicts():
 
 
 def test_actual_integrated_source_replay_has_exact_approved_identity_scope():
-    paths = {sid: Path('/tmp/mit-hass-subjects') / (sid.removeprefix('mit-ai-hass-review-') + '.html')
+    paths = {sid: Path('/tmp/mit-hass-subjects') / m.INTEGRATED.get('cache_names', {}).get(
+                sid, sid.removeprefix('mit-ai-hass-review-') + '.html')
              for sid in m.SPECS}
     if not all(p.exists() for p in paths.values()):
         pytest.skip('Optional ignored official source captures absent')
@@ -61,3 +62,17 @@ def test_actual_integrated_source_replay_has_exact_approved_identity_scope():
             for c in m.parse(path.read_text(), m.SPECS[sid]['url'])['courses']]
     assert {c['id'] for c in rows} == set(m.INTEGRATED['course_ids'])
     assert all('category_review' not in c for c in rows)
+
+
+def test_current_cmsw_capture_does_not_certify_archived_term_records():
+    path = Path('/tmp/mit-hass-subjects/cmsw-visible.html')
+    if not path.exists():
+        pytest.skip('Optional ordinary-browser visible source capture absent')
+    url = m.SPECS['mit-ai-hass-review-cmsw-fall2026']['url']
+    rows = m.parse(path.read_text(), url)['courses']
+    assert rows
+    assert all(c['source_id'] == 'mit-ai-hass-review-cmsw-fall2026' for c in rows)
+    archived = {cid for cid in m.INTEGRATED['course_ids']
+                if any(o['approved_for_integration'] and o['source_id'].endswith('cmsw-fall2025')
+                       for o in m.MANIFEST['courses'][cid]['observations'])}
+    assert archived and archived.isdisjoint({c['id'] for c in rows})
