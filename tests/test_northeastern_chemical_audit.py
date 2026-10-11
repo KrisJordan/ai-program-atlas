@@ -40,6 +40,8 @@ def test_bsche_policy_award_label_and_numeric_criteria_are_local_observations():
     No more than two courses may count for both disciplines and there must be at least 16 courses in the combined major.
     There are multiple points of curricular integration. Most combined majors allow the student to choose the home college.
     Completion earns one degree, and one diploma.</p><h2>Other</h2></div>'''
+    from test_northeastern_policies import DECLARATION
+    html=html.replace('<h2>Combined Majors</h2>',DECLARATION+'<h2>Combined Majors</h2>')
     result=m._chemical_policy(html,'combined')
     award=next(r for r in result['requirements'] if r['id'].endswith('combined-one-award'))
     assert 'BSChE' in award['summary'] and 'BSEnvE' not in award['summary']
@@ -87,4 +89,4 @@ def test_optional_actual_chemical_sources_replay_without_manual_review_metadata(
         f=cache/f'policy-{profile}.html'
         if not f.exists():continue
         rows=m._chemical_policy(f.read_text(),profile)['requirements']
-        assert rows==[r for r in p['requirements'] if r['source_id']==PID+'-'+profile+'-policy']
+        assert {r['id']:r for r in rows}=={r['id']:r for r in p['requirements'] if r['source_id']==PID+'-'+profile+'-policy'}

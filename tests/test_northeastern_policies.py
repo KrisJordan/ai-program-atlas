@@ -62,8 +62,14 @@ def test_nupath_criteria_do_not_inherit_ba_or_nyc_requirements():
     with pytest.raises(ValueError,match='list/count'):parse('nupath',NUPATH.replace('set of 11','set of 12'))
 
 
+DECLARATION="""<h2>Declaring Majors and Minors</h2><p>Students must declare a major no later than the end of the sophomore year.</p>
+<h2>Changing Majors</h2><p>Full-time students meet the criteria for immediate entry as defined by the receiving major or have cumulative grade-point average of 2.000 or greater and satisfactorily completes the transition criteria. Lower GPA is at the discretion of the receiving major. Students must discuss their change in person with an advisor in the receiving major, who may set up a transition term. Some students must also audition or submit a portfolio; colleges have deadlines for applications to change major. International students must inform the Office of Global Services of any change of major.</p>
+<h2>Catalog-Year Policy for Majors and Concentrations</h2><p>The concentration requirements follow the same catalog year as the major; requirements may not be combined with concentration requirements from another. Later concentrations require students transition fully to that catalog year; earlier students may only pursue concentrations offered within that catalog year.</p>"""
+
+
 def test_combined_home_college_is_not_inferred_from_catalog_location():
     content='''<h2>Double Major</h2><p>Different policy.</p><h2>Combined Majors</h2><p>A combined major is one major with at least nine courses from each discipline. No more than two courses may count for both disciplines and at least 16 courses in the combined major. It includes multiple points of curricular integration. Most combined majors allow the student to choose the home college. Students receive one major, one degree, and one diploma.</p><h2>Independent Majors</h2><p>Different approval process.</p>'''
+    content=DECLARATION+content
     p=parse('combined',content);validate_requirements(p)
     assert any('individual student’s choice' in r['summary'] for r in p['requirements'])
     assert any('at least 9' in r['summary'] and 'at most 2' in r['summary'] for r in p['requirements'])
@@ -87,3 +93,18 @@ def test_progression_appeal_limit_is_observed_and_stays_conditional():
     assert 'generally allows no more than 1' in node['summary'] and node['kind']=='note'
     changed=parse('progression',content.replace('no more than one','no more than two'))
     assert 'generally allows no more than 2' in changed['requirements'][-1]['summary']
+
+
+def test_declaration_and_change_rules_remain_conditional_without_course_invention():
+    combined='''<h2>Combined Majors</h2><p>A combined major is one major with at least nine courses from each discipline. No more than two courses may count for both disciplines and at least 16 courses in the combined major. It includes multiple points of curricular integration. Most combined majors allow the student to choose the home college. Students receive one major, one degree, and one diploma.</p>'''
+    result=parse('combined',DECLARATION+combined)
+    rows={r['id']:r for r in result['requirements']}
+    assert 'sophomore' in rows['test-program-req-policy-major-declaration']['summary']
+    change=rows['test-program-req-policy-major-change-eligibility']
+    assert change['kind']=='note' and change['course_ids']==[]
+    assert 'GPA 2.000' in change['summary'] and 'conditional admission' in change['summary']
+    changed=parse('combined',(DECLARATION+combined).replace('2.000','2.500'))
+    assert any('GPA 2.500' in r['summary'] for r in changed['requirements'])
+    assert 'does not make a concentration mandatory' in rows['test-program-req-policy-concentration-catalog-year']['summary']
+    with pytest.raises(ValueError):parse('combined',(DECLARATION+combined).replace('end of the sophomore year','end of the junior year'))
+    with pytest.raises(ValueError):parse('combined',(DECLARATION+combined).replace('at the discretion of the receiving major','automatically approved'))

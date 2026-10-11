@@ -153,10 +153,10 @@ def test_communication_variant_uses_its_own_verified_college_context():
 
 def test_shared_policy_scope_is_proven_and_distinct_from_original_ai_core():
     f=family();policy=[r for r in f['shared_requirements'] if r['id'].startswith('policy-')]
-    assert len(policy)==43 and all(r['component']=='other' and not r['course_codes'] for r in policy)
+    assert len(policy)==47 and all(r['component']=='other' and not r['course_codes'] for r in policy)
     for pid in EXPECTED:
         p=program(pid);resolved=resolve_program(p,f)
-        assert len([r for r in resolved['requirements'] if r.get('family_requirement_id','').startswith('policy-')])==43
+        assert len([r for r in resolved['requirements'] if r.get('family_requirement_id','').startswith('policy-')])==47
         assert all('college' in gap.lower() or 'concentration' in gap.lower() for gap in p['curriculum_audit']['unresolved_requirements'])
         assert all(any(s['url']==url for s in p['sources']) for url in [
             'https://catalog.northeastern.edu/undergraduate/university-academics/university-wide-requirements/',
