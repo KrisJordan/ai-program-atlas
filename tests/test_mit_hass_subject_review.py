@@ -215,7 +215,7 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']['description_reviewed_records']==476
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==477
     assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
         o=next(o for o in entry(code)['observations'] if o.get('evidence_basis')=='official_title_only')
@@ -1056,7 +1056,8 @@ def test_language_descriptions_keep_placement_and_formal_prerequisites_distinct(
     assert entry('21G.501')['observations'][-1]['prerequisites']=='None'
     assert entry('21G.504')['observations'][-1]['prerequisites']=='21G.503 Japanese III'
     for code in ['21G.505','21G.506']:
-        assert entry(code)['observations'][-1]['evidence_basis']=='official_title_only'
+        assert any(o.get('evidence_basis')=='official_title_only' for o in entry(code)['observations'])
+    assert entry('21G.506')['observations'][-1]['evidence_basis']=='official_title_only'
 
 
 def test_language_registration_observer_replays_and_withdraws_changed_eligibility():
@@ -1860,3 +1861,46 @@ def test_philosophy_ethics_rejects_contradictory_former_number_even_with_valid_c
     html='<h1>Welcome to the MIT Philosophy Undergraduate Program</h1><p>24.130 Ethics (CI-M) (formerly 24.231)<br>24.130 Ethics (CI-M) (formerly 24.999)</p>'
     with pytest.raises(ValueError,match='former-number'):
         review.observe_philosophy_renumbered_ethics('unread archive',html)
+
+
+def test_gsl_historical_syllabi_preserve_terms_and_alternative_preparation():
+    report=MANIFEST['gsl_historical_syllabus_followup']
+    assert len(report['upgraded_record_ids'])==1 and len(report['held_record_ids'])==2
+    assert len(report['department_pages_read'])==3
+    assert entry('21G.612')['observations'][-1]['catalog_year']=='Spring 2018'
+    russian=entry('21G.613')['observations'][-1]
+    assert russian['catalog_year']=='Fall 2017'
+    assert russian['prerequisites']=='Russian II or permission of instructor.'
+    assert any('limited to18' in n for n in russian['restrictions'])
+    for code in ['21G.612','21G.613','21G.505']:
+        e=entry(code)['observations'][-1]
+        assert e['credits'] is None and e['category']=='human_context'
+    assert entry('21G.612')['observations'][-1]['prerequisites'] is None
+    assert entry('21G.505')['observations'][-1]['prerequisites'] is None
+    assert 'mit-ocw-companion-checks' in MANIFEST['ocw_urban_review']['companion_followup_report']
+
+
+def test_gsl_syllabus_fixture_requires_exact_identity_and_keeps_permission_alternative():
+    text='21G.613 RUSSIAN III Fall 2017 Maria Khotimsky Course Description This intermediate Russian course develops cultural communication through grammar, vocabulary, authentic texts and films, primarily using Russian. Pre-requisites: Russian II or permission of instructor. Enrollment Criteria: Limited to18 with priority for continuing students. Fall Semester Goals Extended conversation.'
+    o,=review.observe_gsl_historical_syllabus(text)
+    assert o['prerequisites']=='Russian II or permission of instructor.' and o['units'] is None
+    assert o['term']=='Fall 2017'
+    for changed in [text.replace('21G.613','21G.633'),text.replace('Fall 2017','Fall 2026'),text.replace('RUSSIAN III','RUSSIAN III (Hybrid)')]:
+        with pytest.raises(ValueError):review.observe_gsl_historical_syllabus(changed)
+
+
+def test_gsl_actual_syllabus_replay_withdraws_changed_preparation_and_version():
+    root=Path('/tmp/mit-hass-subjects')
+    paths=[root/f'language-syllabus-{c}.txt' for c in ['612','613','505']]
+    if not all(p.exists() for p in paths):pytest.skip('Optional public GSL syllabus captures')
+    for path in paths:
+        o,=review.observe_gsl_historical_syllabus(path.read_text())
+        report=MANIFEST['gsl_historical_syllabus_followup']
+        cid=next(c for c in report['upgraded_record_ids']+report['held_record_ids'] if MANIFEST['courses'][c]['listed_code']==o['code'])
+        row=MANIFEST['courses'][cid];e=row['observations'][-1]
+        course=dict(id=cid,code=row['listed_code'],name=row['listed_name'],source_id=row['listed_source_id'])
+        assert review.matched_review(course,o,e['source_url'],MANIFEST)==(e if e['approved_for_integration'] else None)
+        if cid in report['held_record_ids']:
+            assert row['review_status']=='identity_review_needed' and not e['approved_for_integration']
+        assert review.matched_review(course,{**o,'prerequisites':'None'},e['source_url'],MANIFEST) is None
+        assert review.matched_review(course,{**o,'term':'Fall 2026'},e['source_url'],MANIFEST) is None

@@ -970,3 +970,37 @@ def observe_history_free_expression_syllabus(text):
     return [dict(code='21H.317', name='Free Expression, Pluralism, and the University',
                  term=None, units=None, prerequisites=None, description=description.strip(),
                  assignments=assignments, syllabus_digest=digest(text))]
+
+
+def observe_gsl_historical_syllabus(text):
+    """Observe three read historical syllabi; preserve source terms and absent units."""
+    text = clean(text)
+    identities = [
+        ('21G.612 RUSSIAN II Spring 2018', '21G.612', 'Russian II', 'Spring 2018'),
+        ('21G.613 RUSSIAN III Fall 2017', '21G.613', 'Russian III', 'Fall 2017'),
+        ('21G. 505 Japanese V Syllabus Fall 2017', '21G.505', 'Japanese V', 'Fall 2017'),
+    ]
+    identity = next((i for i in identities if text.startswith(i[0])), None)
+    if identity is None:
+        raise ValueError('Historical GSL syllabus exact code, title or term missing')
+    def section(start, end):
+        if start not in text or end not in text.split(start, 1)[1]:
+            raise ValueError('Historical GSL syllabus section missing: ' + start)
+        return text.split(start, 1)[1].split(end, 1)[0].strip()
+    prerequisite = enrollment = None
+    if identity[1] == '21G.505':
+        description = section('IV. Course Objectives', 'V. Evaluation')
+        if 'IKEDA, Masami' not in text or '143 new kanji' not in description:
+            raise ValueError('Japanese V syllabus instructor or objectives changed')
+    else:
+        if 'Maria Khotimsky' not in text:
+            raise ValueError('Russian syllabus instructor missing')
+        description = section('Course Description', 'Pre-requisites:' if identity[1] == '21G.613' else 'Course Materials')
+        if identity[1] == '21G.613':
+            prerequisite = section('Pre-requisites:', 'Enrollment Criteria:')
+            enrollment = section('Enrollment Criteria:', 'Fall Semester Goals')
+    if len(description) < 100:
+        raise ValueError('Historical GSL actual description missing')
+    return [dict(code=identity[1], name=identity[2], term=identity[3], units=None,
+                 prerequisites=prerequisite, enrollment=enrollment,
+                 description=description, syllabus_digest=digest(text))]
