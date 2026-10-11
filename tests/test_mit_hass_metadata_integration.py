@@ -369,3 +369,22 @@ def test_dated_project_site_and_new_department_metadata_keep_resource_scopes():
     assert specific['category_review']['status']=='mixed'
     assert set(specific['category_review']['candidate_categories'])=={'mathematics','ai_ml'}
     assert specific['prerequisites']is None and specific['public_site']is None
+
+
+def test_dated_sts_admission_and_pe_points_do_not_become_degree_credit():
+    p=json.loads(Path('data/programs/mit-ai-decision-making-bs.json').read_text())
+    by={c['id']:c for c in p['courses']}
+    embodied=by['mit-ai-hass-sts-tier-1-sts-014']
+    assert embodied['credits']==12 and embodied['prerequisites']=='None'
+    assert any('PE&W' in n and 'separate' in n for n in embodied['notes'])
+    assert set(embodied['category_review']['candidate_categories'])=={'applications','human_context'}
+    exercise=by['mit-ai-hass-sts-tier-1-sts-041']
+    assert exercise['credits']is None and exercise['prerequisites']is None
+    self=by['mit-ai-hass-sts-tier-2-sts-044']
+    assert self['credits']==9 and self['prerequisites']=='None'
+    assert any('15' in n and 'first class' in n for n in self['notes'])
+    assert any('graduate students do extra' in n for n in self['notes'])
+    political=by['mit-ai-hass-political-subfields-17-831']
+    assert set(political['category_review']['candidate_categories'])=={'mathematics','human_context'}
+    assert political['credits']is None and political['prerequisites']is None
+    assert political['public_site']is None and political['syllabus']is None
