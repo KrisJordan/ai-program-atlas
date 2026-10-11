@@ -115,6 +115,36 @@
       "catalog_year": null,
       "locator": "Applicable bulletin and Degree Progress Report",
       "confidence": "high"
+    },
+    {
+      "id": "miami-cognates-supplement",
+      "url": "https://cognates.miami.edu/",
+      "title": "About Cognates",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "About Cognates, Choosing a Cognate and FAQ",
+      "confidence": "high"
+    },
+    {
+      "id": "miami-individualized-cognates",
+      "url": "https://cognates.miami.edu/courses/individualized",
+      "title": "Individualized Cognate Courses",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Public policy preceding embedded course visualization",
+      "confidence": "high"
+    },
+    {
+      "id": "miami-language-placement",
+      "url": "https://bulletin.miami.edu/undergraduate-academic-programs/arts-sciences/modern-languages-literatures/",
+      "title": "Modern Languages and Literatures",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Placement Guidelines for MLL Courses; Arts and Sciences Language Requirement; SPA 107/207/208/307 catalog descriptions",
+      "confidence": "high"
     }
   ],
   "courses": [
@@ -759,6 +789,62 @@
       "category": "human_context",
       "source_id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-catalog",
       "url": "https://bulletin.miami.edu/search/?P=WRS%20233",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-spa-107",
+      "code": "SPA 107",
+      "name": "Basic Spanish for Heritage Learners",
+      "description": "Develops speaking, reading and writing for heritage learners with passive Spanish knowledge.",
+      "prerequisites": null,
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "human_context",
+      "source_id": "miami-language-placement",
+      "url": "https://bulletin.miami.edu/undergraduate-academic-programs/arts-sciences/modern-languages-literatures/",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-spa-207",
+      "code": "SPA 207",
+      "name": "Intermediate Spanish for Heritage Learners",
+      "description": "Develops communication skills for heritage learners with some prior instruction and functional Spanish.",
+      "prerequisites": null,
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "human_context",
+      "source_id": "miami-language-placement",
+      "url": "https://bulletin.miami.edu/undergraduate-academic-programs/arts-sciences/modern-languages-literatures/",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-spa-208",
+      "code": "SPA 208",
+      "name": "Advanced Spanish for Heritage Learners",
+      "description": "Develops formal Spanish speaking and literacy for heritage learners with functional communication skills.",
+      "prerequisites": null,
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "human_context",
+      "source_id": "miami-language-placement",
+      "url": "https://bulletin.miami.edu/undergraduate-academic-programs/arts-sciences/modern-languages-literatures/",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-spa-307",
+      "code": "SPA 307",
+      "name": "Interpreting Literary and Cultural Texts in Spanish for Heritage/Native Speakers",
+      "description": "Analyzes Spanish-language literary and cultural works, with critical writing for heritage and native speakers.",
+      "prerequisites": "SPA 208. Credit cannot be earned for both SPA 301 and SPA 307 (formerly 343).",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "human_context",
+      "source_id": "miami-language-placement",
+      "url": "https://bulletin.miami.edu/undergraduate-academic-programs/arts-sciences/modern-languages-literatures/",
       "public_site": null,
       "syllabus": null
     }
@@ -1568,6 +1654,81 @@
       "source_text": null,
       "summary": "For the BA, earn at least three natural-science credits in Biology, Chemistry, Geological Sciences, Physical Sciences, Physics, or the permitted Anthropology APY 203, Ecosystem Science ECS 111/112/202, Geography GEG 120 or Marine Sciences excluding MSC 313/314. Complete university quantitative proficiency; existing program mathematics can satisfy it.",
       "course_ids": []
+    },
+    {
+      "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-supplement-cognate-selection",
+      "parent_id": null,
+      "title": "Student-selected cognates and declaration",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "miami-cognates-supplement",
+      "source_text": null,
+      "summary": "A cognate has at least three courses and nine credits. Students select their cognates and declare them through their home college by the end of sophomore year. A major/minor does not prescribe a specific cognate outside its own Area of Knowledge; thematic substitutions require responsible-unit approval.",
+      "course_ids": []
+    },
+    {
+      "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-supplement-individualized-overlap",
+      "parent_id": null,
+      "title": "Individualized cognate restrictions",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "miami-individualized-cognates",
+      "source_text": null,
+      "summary": "Each individualized cognate needs at least three courses and nine credits with the same Area of Knowledge attribute in CaneLink. Its courses cannot also fulfill any other degree requirement, including quantitative proficiency. CR grades are excluded except eligible test credit with a specific Miami equivalency. This stricter statement is specific to individualized cognates, not a prohibition on all thematic cognate/major relationships.",
+      "course_ids": []
+    },
+    {
+      "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-supplement-language-diagnostic",
+      "parent_id": null,
+      "title": "Language placement is assessed individually",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "miami-language-placement",
+      "source_text": null,
+      "summary": "Published placement guidelines are provisional: the instructor conducts a first-day diagnostic and assigns the appropriate course or track. Native speakers of French, German, Italian, Portuguese or Spanish cannot enter 101/102/105/201/202/203/301 in that language. Native Spanish speakers educated in Spanish-language high schools begin with SPA 302,303 or307.",
+      "course_ids": []
+    },
+    {
+      "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-supplement-spanish-heritage",
+      "parent_id": null,
+      "title": "Spanish heritage placement routes",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "miami-language-placement",
+      "source_text": null,
+      "summary": "Spanish heritage learners must enter SPA 107,207,208 or307 according to preparation and assessment, rather than the second-language track. SPA 107 is a preparatory 100-level course; it alone does not meet the college 200-level language requirement. SPA 207 follows SPA 107 or at least two high-school years; SPA 208 corresponds to four years, AP Language 5 or AP Literature 4; direct 307 placement is described for AP Literature 5. SPA 107/207/208 exclude graduates of Spanish-language high schools.",
+      "course_ids": [
+        "university-of-miami-data-science-and-artificial-intelligence-ba-degree-spa-107",
+        "university-of-miami-data-science-and-artificial-intelligence-ba-degree-spa-207",
+        "university-of-miami-data-science-and-artificial-intelligence-ba-degree-spa-208",
+        "university-of-miami-data-science-and-artificial-intelligence-ba-degree-spa-307"
+      ]
+    },
+    {
+      "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-supplement-language-transfer",
+      "parent_id": null,
+      "title": "Other-language equivalence and level",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "miami-language-placement",
+      "source_text": null,
+      "summary": "For a language not taught at Miami, the department may approve an accredited outside course and its transfer equivalency. The published language requirement needs 300-level equivalency for a native speaker or200-level for a second-language learner. This review does not resolve the AI BS table’s nine-credit language row against the college minimum.",
+      "course_ids": []
     }
   ],
   "outcomes": [
@@ -1602,7 +1763,8 @@
     "The elective pools are represented as choices by published credit amount, not as all required courses. EPS 351 / PSY 292 is retained as an alternative where the BA table presents it.",
     "A non-STEM minor/second major applies to the BA only; BS quantitative coursework and degree total are separately sourced.",
     "2026-10-11: Miami Course Information / Academic Credit explicitly identifies academic credits, credit hours and hours as semester credits. Published amounts were normalized without conversion; missing individual amounts remain null.",
-    "2026-10-11 policy review retains partial status because the transfer page contradicts itself about concurrent outside summer enrollment. No source-date, catalog edition, course offering term or launch date is inferred."
+    "2026-10-11 policy review retains partial status because the transfer page contradicts itself about concurrent outside summer enrollment. No source-date, catalog edition, course offering term or launch date is inferred.",
+    "2026-10-11 supplemental review: public thematic and individualized cognate directories are accessible, including the Tableau list labeled updated October 2, 2026. No full pool enumeration is claimed. Student-selected additional credentials remain an open route; the university summer-transfer conflict is unchanged. Four Spanish heritage-placement course observations are conditional preparation/placement options, not four required AI courses; SPA 107 alone does not meet the college language level."
   ],
   "curriculum_audit": {
     "scope": "degree",
@@ -1616,7 +1778,10 @@
       "miami-grades-policy",
       "miami-graduation-policy",
       "miami-transfer-policy",
-      "miami-undergraduate-policy"
+      "miami-undergraduate-policy",
+      "miami-cognates-supplement",
+      "miami-individualized-cognates",
+      "miami-language-placement"
     ],
     "sections": [
       "Full degree curriculum table, course alternatives, uncoded requirements and totals",
@@ -1625,13 +1790,14 @@
       "College major overlap, grading and transfer rules",
       "University transfer/residency, grading and repeat rules; explicit semester-credit definition",
       "University graduation, applicable bulletin, general education and advanced writing",
-      "Arts and Sciences BA/BS additional requirements, language waivers, writing, overlap and electives"
+      "Arts and Sciences BA/BS additional requirements, language waivers, writing, overlap and electives",
+      "Cognate selection/declaration and individualized-cognate overlap restrictions; Spanish heritage placement and native-speaker language equivalency"
     ],
     "unresolved_requirements": [
       "University transfer policy contains inconsistent summer concurrent-enrollment statements; applicability needs authoritative clarification.",
-      "Approved cognate course/attribute options and student-selected secondary credential inventories are not enumerated; full degree general-education option inventory remains incomplete.",
+      "Approved thematic cognate plans and individualized course-attribute pools remain incompletely inventoried. Both public directories load; the October 2, 2026 Tableau list was observed but not fully captured. A student-selected additional credential is an open route, not a requirement to enumerate every optional major/minor.",
       "Arts and Sciences describes an unapproved elective list with examples rather than an exhaustive list; remaining exclusions are unverified.",
-      "Language-specific heritage-learner placement requirements remain unreviewed."
+      "Spanish heritage placement and native-speaker rules are reviewed; language-specific heritage placement for other languages remains unverified."
     ],
     "metadata_gaps": [
       "Course descriptions, most prerequisites, alternative/elective credit amounts, public course sites and syllabi remain unverified.",

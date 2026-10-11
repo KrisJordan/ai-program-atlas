@@ -115,6 +115,26 @@
       "catalog_year": null,
       "locator": "Applicable bulletin and Degree Progress Report",
       "confidence": "high"
+    },
+    {
+      "id": "miami-cognates-supplement",
+      "url": "https://cognates.miami.edu/",
+      "title": "About Cognates",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "About Cognates, Choosing a Cognate and FAQ",
+      "confidence": "high"
+    },
+    {
+      "id": "miami-individualized-cognates",
+      "url": "https://cognates.miami.edu/courses/individualized",
+      "title": "Individualized Cognate Courses",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Public policy preceding embedded course visualization",
+      "confidence": "high"
     }
   ],
   "courses": [
@@ -1942,6 +1962,34 @@
       "source_text": null,
       "summary": "General business policy allows overlap only when a numbered course is explicitly required by both specializations, potentially with replacement coursework; choice electives cannot double count. An outside-school additional major cannot reuse business-major/minor courses. The AI program’s stricter local no-double-counting rule remains controlling in this record; no general exception is silently applied to it.",
       "course_ids": []
+    },
+    {
+      "id": "miami-ai-technologies-business-bsba-supplement-cognate-selection",
+      "parent_id": null,
+      "title": "Student-selected cognates and declaration",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "miami-cognates-supplement",
+      "source_text": null,
+      "summary": "A cognate has at least three courses and nine credits. Students select their cognates and declare them through their home college by the end of sophomore year. A major/minor does not prescribe a specific cognate outside its own Area of Knowledge; thematic substitutions require responsible-unit approval.",
+      "course_ids": []
+    },
+    {
+      "id": "miami-ai-technologies-business-bsba-supplement-individualized-overlap",
+      "parent_id": null,
+      "title": "Individualized cognate restrictions",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "miami-individualized-cognates",
+      "source_text": null,
+      "summary": "Each individualized cognate needs at least three courses and nine credits with the same Area of Knowledge attribute in CaneLink. Its courses cannot also fulfill any other degree requirement, including quantitative proficiency. CR grades are excluded except eligible test credit with a specific Miami equivalency. This stricter statement is specific to individualized cognates, not a prohibition on all thematic cognate/major relationships.",
+      "course_ids": []
     }
   ],
   "outcomes": [
@@ -1976,7 +2024,8 @@
     "The Additional Major tab describes separate additional-major rules; those are not substituted for the standalone degree.",
     "Degree-wide completeness is not certified: general education, admission/progression, residence and transfer policies need a full linked review.",
     "2026-10-11: Miami Course Information / Academic Credit explicitly identifies academic credits, credit hours and hours as semester credits. Published amounts were normalized without conversion; missing individual amounts remain null.",
-    "2026-10-11 policy review retains partial status because the transfer page contradicts itself about concurrent outside summer enrollment. No source-date, catalog edition, course offering term or launch date is inferred."
+    "2026-10-11 policy review retains partial status because the transfer page contradicts itself about concurrent outside summer enrollment. No source-date, catalog edition, course offering term or launch date is inferred.",
+    "2026-10-11 supplemental review: public thematic and individualized cognate directories are accessible, including the Tableau list labeled updated October 2, 2026. No full pool enumeration is claimed. Student-selected additional credentials remain an open route; the university summer-transfer conflict is unchanged."
   ],
   "curriculum_audit": {
     "scope": "degree",
@@ -1990,7 +2039,9 @@
       "miami-grades-policy",
       "miami-graduation-policy",
       "miami-transfer-policy",
-      "miami-undergraduate-policy"
+      "miami-undergraduate-policy",
+      "miami-cognates-supplement",
+      "miami-individualized-cognates"
     ],
     "sections": [
       "Full degree curriculum table, course alternatives, uncoded requirements and totals",
@@ -1998,11 +2049,12 @@
       "Program outcomes and local footnotes",
       "University transfer/residency, grading and repeat rules; explicit semester-credit definition",
       "University graduation, applicable bulletin, general education and advanced writing",
-      "Business BBA/BSBA admission, progression, residence, GPA and cognate policies"
+      "Business BBA/BSBA admission, progression, residence, GPA and cognate policies",
+      "Cognate selection/declaration and individualized-cognate overlap restrictions"
     ],
     "unresolved_requirements": [
       "University transfer policy contains inconsistent summer concurrent-enrollment statements; applicability needs authoritative clarification.",
-      "Approved cognate course/attribute options and student-selected secondary credential inventories are not enumerated; full degree general-education option inventory remains incomplete."
+      "Approved thematic cognate plans and individualized course-attribute pools remain incompletely inventoried. Both public directories load; the October 2, 2026 Tableau list was observed but not fully captured. A student-selected additional credential is an open route, not a requirement to enumerate every optional major/minor."
     ],
     "metadata_gaps": [
       "Course descriptions, most prerequisites, alternative/elective credit amounts, public course sites and syllabi remain unverified.",
