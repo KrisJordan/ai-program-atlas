@@ -61,7 +61,7 @@ def parse_descriptions(html,*,pid,department):
   for key,title,summary in [
    ('vision-conflict','Published vision elective applicability conflict','COMP 345 and COMP 447 contain reciprocal registration exclusions for credit in the other. The major requires COMP 345 and lists COMP 447 as an elective; no permission or waiver is presumed.'),
    ('graduate-options','Graduate-only elective restrictions','COMP 585 and COMP 631 descriptions limit enrollment to Graduate level students. The undergraduate major lists these electives, but undergraduate permission has not been established.'),
-   ('statistics-route','Required-course statistics prerequisite question','COMP 345 and COMP 346 specifically list STAT 315 as a prerequisite. Applicability of the separately published degree statistics alternatives needs clarification; the description alone does not establish substitution permission.')]:
+   ('statistics-route','Conditional statistics preparation','COMP 345 and COMP 346 specifically list STAT 315 as a prerequisite. Choosing a different published degree statistics route does not establish a STAT 315 waiver and may require additional preparation. This known course-entry condition is not an extra universal fixed degree requirement or, by itself, a curriculum contradiction.')]:
    requirements.append(rule(pid+'-'+key,title,pid+'-courses-comp',kind='note',summary=summary))
  return dict(id=pid,curriculum_status='partial',courses=courses,requirements=requirements,observed_description_digests=digests)
 

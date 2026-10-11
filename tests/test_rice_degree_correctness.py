@@ -51,3 +51,13 @@ def test_optional_source_reread_and_restriction_change(dep):
   assert len(p['requirements'])==4
   with pytest.raises(ValueError,match='graduate-only'):
    parse_descriptions(text.replace('Enrollment is limited to Graduate level students','Enrollment is open to undergraduate students'),pid=PID,department=dep)
+
+
+def test_known_preparation_does_not_become_false_conflict_or_fixed_statistics():
+ p=json.loads(Path('data/programs',PID+'.json').read_text())
+ note=next(r for r in p['requirements'] if r['id']==PID+'-statistics-route')
+ assert note['kind']=='note' and 'additional preparation' in note['summary']
+ assert not note.get('course_ids')
+ ledger=json.loads(Path('research/degree-audit/rice.json').read_text())['programs'][0]
+ assert not any('STAT315' in b['issue'] or 'STAT 315' in b['issue'] for b in ledger['blockers'])
+ assert 'rice-ai-stat-315' not in ledger['expected_course_ids']['required']
