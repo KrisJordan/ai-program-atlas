@@ -56,3 +56,31 @@ required/depth courses and the additional CSE100+/approved elective allocation.
 HSS identity and degree-wide policy gaps are substantially resolved. No protected
 source or raw HTML was used in committed files. Most course metadata and public
 sites/syllabi remain independently unverified.
+
+## Degree correctness audit — 2026-10-11
+
+The department table was reread, together with all 48 degree-listed course
+blocks in the current 2026–27 catalog. The old note root incorrectly made every
+prescribed course contextual. It is now an `all` root. The finite nine-course
+12-hour depth pool and twelve named 21-hour elective options are credit choices;
+the additional CSE 100+ eligibility range remains open and is not an invented
+finite pool. Twenty distinct courses are fixed; 28 are named options, including
+three linear-algebra choices and four writing choices. None is a prerequisite-only
+addition. These counts describe the mapped named inventory, not a student's load.
+
+All 48 subjects have source-specific manual taxonomy reviews. In particular,
+CSE 027 is software foundations, CSE 211 is data systems, CSE 252/COMM 351 concern
+human implications, and ISE 230/240/309 teach mathematical methods. CSE 160,
+CSE 282/283 and ECE 303 remain `other` with explicit mixed candidate categories.
+New source parsers reject changed course-block text before replaying reviewed
+paraphrases or subjects and never emit independent category-review objects.
+General catalog credit expressions such as `0,3`, `3,4` and `3-4` are not reduced
+to a single number; the degree's explicit amounts remain scoped to its plan.
+
+The catalog also exposes prerequisites outside the displayed degree core,
+including CSE 017 for CSE 140/327 and multiple depth options. Those are retained
+as enrollment conditions, not automatically added as degree requirements.
+The whole-degree correctness audit remains **blocked** by the contradictory
+130–131/130 totals, 11/10 free-elective allocations, and unresolved reuse of
+required/depth coursework inside the 21-hour pool. The structural correction
+and reviewed subject counts do not certify those policies.

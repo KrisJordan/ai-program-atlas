@@ -87,8 +87,8 @@ def parse(html):
         raise ValueError("Degree credit range changed")
     root = req(
         "Published degree requirements",
-        kind="note",
-        summary="The degree table states a 130–131-credit minimum, while the page highlights 130. Degreewide policies and source discrepancies remain unresolved.",
+        kind="all",
+        summary="The sections below are prescribed degree requirements. The 130–131 versus 130 total discrepancy remains unresolved; it does not make prescribed courses optional context.",
     )
     section = root
     linear = None
@@ -177,10 +177,15 @@ def parse(html):
             target["course_ids"].append(course(code, name, credit))
         if not target["course_ids"]:
             raise ValueError("Empty elective pool")
+        # The registered Undergraduate Studies companion source explicitly
+        # defines Lehigh credits as semester hours. Keep the open CSE range
+        # in the summary, without pretending its finite printed list is closed.
+        target["kind"] = "choose_credits"
+        target["credit_unit"] = "semester_hours"
         target["summary"] = "Listed approved pool. " + (
             "At least "
             + str(target["credits"])
-            + " credits; individual normalized credit units remain unverified."
+            + " semester hours; the registered undergraduate catalog defines the unit."
         )
         if target is elect:
             target["summary"] += (
@@ -202,5 +207,6 @@ def parse(html):
     }
 
 from atlas.adapters.lehigh_degree_policies import SOURCE_PARSERS as POLICY_PARSERS
-SOURCE_PARSERS = {SOURCES[0]: parse, **POLICY_PARSERS}
+from atlas.adapters.lehigh_degree_courses import SOURCE_PARSERS as COURSE_PARSERS
+SOURCE_PARSERS = {SOURCES[0]: parse, **POLICY_PARSERS, **COURSE_PARSERS}
 SOURCES = tuple(SOURCE_PARSERS)
