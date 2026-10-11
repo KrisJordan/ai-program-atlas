@@ -96,3 +96,7 @@ Actual complete source blocks now supply further cognate-course metadata and man
 ## 2026-10-11 transfer-scope correction
 
 Supersedes earlier summer-conflict wording: the complete current source separately regulates enrollment, transfer-credit acceptance and financial aid. Excluding summer from an enrollment prohibition does not grant transfer credit; the explicit UM Session A/outside Session B credit exclusion is preserved. This is not a contradictory permission grant and is removed as a standalone blocker. The current MATES rule requires evaluation and reserves the right to reject work lacking preapproval, rather than guaranteeing approval or asserting every such request is categorically impossible. Source-specific full-policy guard emits the two corrected existing note nodes with stable IDs. Other source questions and accessible course-review work remain in progress.
+
+## 2026-10-11 English contextual descriptions
+
+143 complete official English course blocks now supply source-guarded observations and separate manual content reviews. 120 have supported literary/cultural/writing content; 23 remain explicitly unclassified transfer or unspecified-topic records. Seventeen credit ranges retain null scalar amounts; prerequisite and permission restrictions remain exact. Current source edition is not inferred from mixed PDF navigation. The 143 courses keep their existing contextual ancestry; no degree requirements, approvals or identity merges are invented. See `research/degree-audit/miami-english-context-review.md`.

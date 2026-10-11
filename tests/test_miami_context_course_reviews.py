@@ -89,3 +89,14 @@ def test_language_heritage_exclusions_and_external_credit_stay_explicit():
     assert '1-3' in m.SPEC['courses']['CHI 295']['description']
     assert 'at most three' in m.SPEC['courses']['ARB 394']['prerequisites']
     assert 'ARB 295' not in m.SPEC['courses']  # No invented match to the current Arabic chapter.
+
+
+def test_french_german_language_and_credit_scopes_remain_individual():
+    assert 'two or more years' in m.SPEC['courses']['FRE 101']['prerequisites']
+    assert m.SPEC['courses']['FRE 432']['category']=='human_context'
+    assert 'departmental stipulations' in m.SPEC['courses']['FRE 310']['prerequisites']
+    assert 'twentieth' in m.SPEC['courses']['FRE 365']['description']
+    assert m.SPEC['courses']['GER 321']['review']['status']=='unclassified'
+    assert m.SPEC['courses']['GER 395']['credits'] is None
+    assert 'GER 400' not in m.SPEC['courses']
+    assert m.SPEC['courses']['GER 442']['prerequisites'] is None

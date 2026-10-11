@@ -37,3 +37,6 @@ _parse_bs_table=parse
 def parse(html):
     return apply_bs_requirement_scope(_parse_bs_table(html))
 SOURCE_PARSERS[SOURCES[0]]=parse
+
+from atlas.adapters.miami_eng_context_reviews import register as register_english_context
+register_english_context(PROGRAM_ID,SOURCES,SOURCE_PARSERS)

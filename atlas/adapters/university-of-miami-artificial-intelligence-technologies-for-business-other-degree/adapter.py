@@ -31,3 +31,6 @@ register_context_courses(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
 
 from atlas.adapters.miami_transfer_scope import register as register_transfer_scope
 register_transfer_scope(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
+
+from atlas.adapters.miami_eng_context_reviews import register as register_english_context
+register_english_context(PROGRAM_ID,SOURCES,SOURCE_PARSERS)

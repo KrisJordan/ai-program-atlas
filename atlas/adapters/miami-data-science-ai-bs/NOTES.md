@@ -90,3 +90,7 @@ Supersedes earlier summer-conflict wording: the complete current source separate
 ## 2026-10-11 higher-program-requirement correction
 
 The complete BS table and Arts and Sciences graduation section were reread. The nine-credit language row is compatible with the college at-least-three-credit minimum; 121 program credits likewise exceed the university minimum of 120. Earlier categorical discrepancy wording is withdrawn. The source rows remain unchanged and control over an illustrative sample plan. College-waiver conditions remain explicit, but a waiver of every program-specific credit is not inferred. The main observer guards the exact nine/121 rows before emitting this scope note; changed values require renewed review. Unknown proposed-major wording is preserved, not resolved by assumption.
+
+## 2026-10-11 English contextual descriptions
+
+143 complete official English course blocks now supply source-guarded observations and separate manual content reviews. 120 have supported literary/cultural/writing content; 23 remain explicitly unclassified transfer or unspecified-topic records. Seventeen credit ranges retain null scalar amounts; prerequisite and permission restrictions remain exact. Current source edition is not inferred from mixed PDF navigation. The 143 courses keep their existing contextual ancestry; no degree requirements, approvals or identity merges are invented. See `research/degree-audit/miami-english-context-review.md`.
