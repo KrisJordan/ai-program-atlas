@@ -61,7 +61,7 @@ def test_manual_source_sets_and_subject_counts_match_exported_profile():
     db.validate_program(program)
     ledger=json.loads(Path('research/degree-audit/national-degree-batch.json').read_text())
     entry=next(r for r in ledger['programs'] if r['program_id']==m.PID)
-    assert entry['status']=='blocked' and len(entry['blockers'])==4
+    assert entry['status']=='blocked' and len(entry['blockers'])==3
     assert program['curriculum_status']=='partial'
     assert len(program['courses'])==381
     assert all(c.get('category_review') for c in program['courses'])
@@ -92,3 +92,15 @@ def test_manual_source_sets_and_subject_counts_match_exported_profile():
     rules={r['id']:r for r in program['requirements']}
     assert 'at least eight weeks' in rules[m.PID+'-closure-outside-mtsm']['summary']
     assert 'does not guarantee' in rules[m.PID+'-closure-substitution-petition']['summary']
+
+
+def test_phil310_and_ger_allocation_are_separate_not_an_invented_source_blocker():
+    program=json.loads(Path('data/programs',m.PID+'.json').read_text())
+    courses={c['id']:c for c in program['courses']}
+    assert courses['njit-phil-310']['credits']==3
+    assert not any('PHIL 310' in x for x in program['curriculum_audit']['unresolved_requirements'])
+    root=next(r for r in program['requirements'] if r['id']==m.PID+'-total')
+    assert 'separate GER-300 allocation (6 credits)' in root['summary']
+    assert 'no duplicate fulfillment is assumed' in root['summary']
+    assert len(program['curriculum_audit']['unresolved_requirements'])==3
+    assert any('does not guarantee' in r['summary'] for r in program['requirements'] if r['id'].endswith('-closure-substitution-petition'))

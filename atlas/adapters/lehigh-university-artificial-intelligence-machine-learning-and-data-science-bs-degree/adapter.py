@@ -189,7 +189,7 @@ def parse(html):
         )
         if target is elect:
             target["summary"] += (
-                " The source also permits CSE courses at level 100 or above; that open range is not expanded."
+                " The source also permits CSE courses at level 100 or above; that open range is not expanded. Required, depth and additional elective allocations remain separate; no duplicate fulfillment is assumed."
             )
     if "Does not count toward HSS" not in body:
         raise ValueError("Computing ethics HSS exclusion missing")

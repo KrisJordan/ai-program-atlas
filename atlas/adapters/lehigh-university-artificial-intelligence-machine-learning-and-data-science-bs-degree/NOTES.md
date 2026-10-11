@@ -1,86 +1,23 @@
-# Lehigh AI, ML and Data Science BS
+# Lehigh AI, ML and Data Science BS — current audit state
 
-Reviewed 2026-10-10: https://engineering.lehigh.edu/cse/academics/undergraduate/bs-ai-ml-ds
+Reviewed 2026-10-11. The [department degree page](https://engineering.lehigh.edu/cse/academics/undergraduate/bs-ai-ml-ds) explicitly announces Fall 2026 and supplies the required, depth and additional-elective tables. The primary correctness audit remains **blocked** and curriculum **partial** because the requirements table gives 130–131 credits while the highlight/sample plan gives 130, and eleven free-elective credits conflict with the sample plan's four plus six. No total is silently selected.
 
-Partial curriculum: 43 named courses, 15 requirement nodes covering the required technical/math/science tables, nine depth choices, twelve general-elective choices, open CSE 100+ eligibility, and HSS/free-elective rules. Announced Fall 2026 start has direct department evidence. The table says 130–131 total credits; page highlight says 130.
+## Mapped inventory and actual course review
 
-## Source discrepancies
+The actual named inventory has **20 fixed / 28 option / 0 contextual identities**. Options include three linear-algebra choices, nine depth courses, twelve additional-elective choices and four writing alternatives. All 48 actual course blocks were read: 44 have a primary subject and four remain mixed. CSE 027 is software foundations, CSE 211 is data systems, CSE 252/COMM 351 concern human implications, and ISE 230/240/309 teach mathematical methods. CSE 160, CSE 282/283 and ECE 303 retain explicit mixed candidates. Counts describe mapped inventory, not a student's load.
 
-ECO 001, WRT 001 and WRT 002 incorrectly-looking displayed titles duplicate ENGR 005, ENGR 010 and CHM 030 titles. Do not silently repair from memory: current seeds retain their codes and 4/3/3 credits as notes, without course title records. The source free-elective requirement is eleven credits but the sample sequence lists four plus six. Clarification remains needed.
+The [current college catalog](https://catalog.lehigh.edu/coursesprogramsandcurricula/engineeringandappliedscience/) and course chapters correct the department page's copied ECO 001/WRT 001/WRT 002 titles. Writing alternatives WRT 003/WRT 005 preserve placement and prerequisite conditions. Group amounts for MATH 205/241/242 and PHY 011/012 are not assigned to every course; variable catalog amounts stay nullable where needed. The college specifically assigns ECO 001 four credits. The department's 12-credit depth and additional 21-credit elective requirements remain separate obligations; no duplicate fulfillment across core, depth or additional electives is assumed. Lack of a blanket reuse permission is not an independent source conflict.
 
-MATH 205/241/242 has an aggregate 3–4 range; PHY 011/012 has aggregate five credits. Do not attribute these to every alternative or each component. CSE 252 cannot count as HSS.
+The additional elective rule permits the named pool or eligible CSE 100+ courses. Advanced HSS uses current HE/SW/AL or College of Health CGH/POPH designations: at least three courses and twelve credits, each at least two credits, a 3+-credit course in each of two categories, at least one HE or AL course, and no P/F. These and the science/free-elective rules are open eligibility predicates, not missing finite lists. CSE 252 cannot satisfy HSS.
 
-## Remaining work
+## Applicable policy and conditional preparation
 
-Verify current catalog counterparts, correct titles/credit discrepancies, expand open CSE and HSS rules, and inspect university/college graduation, residency, GPA, substitution, transfer and overlap requirements. No prerequisites or public course sites/syllabi verified. Credit amounts remain unnormalized.
+The [Undergraduate Studies catalog](https://catalog.lehigh.edu/undergraduatestudies/) explicitly defines semester hours. Its prerequisite section allows a student lacking the stated preparation/status to request special consideration, obtain authorized online permission or demonstrate equivalent academic work elsewhere. Requirements must be met and maintained before classes; unmet registrations may be dropped. Corequisites are taken in the same semester. CSE 017 and other preparation outside the displayed core remain conditional enrollment requirements, not new universal fixed courses. The fully stated exception route is neither presumed granted nor treated as a missing blanket waiver.
 
-## Adapter
+Mapped policies include the 2.00 graduation GPA; 90 Lehigh credits or 60 of the last 75 residence alternative; eight-year degree limit; completion deadlines; three-attempt repeat limit including withdrawals; P/F restrictions; transfer grades, equivalence, caps and conversion; graduate-course petitions; and free-elective ROTC/work-experience limits. CSE continuing-student transfer caps preserve their institution, age, assessment and approval scope, including AP/exam credit; they are not applied as invented incoming-transfer limits.
 
-Actually parses the three labeled HTML tables, course codes/titles/credits, required versus alternative/pool membership, and guards published ambiguity. Changed ambiguous titles, totals or group ranges require review. No fabricated reviewer audit or completion promotion.
+## Observers and remaining boundaries
 
-## 2026-10-11 college and university policy review
+The primary adapter extracts the actual three tables and guards their published ambiguity. Policy helpers guard material conditions, including the explicit permission/equivalent-preparation route. Course observers reject changed reviewed blocks and never emit manual category reviews or completeness certification. The repaired all-root preserves fixed roles; named choice pools remain choices. No protected source or raw source body is committed.
 
-The current 2026–2027 college catalog resolves the three mislabelled HSS rows:
-ECO 001 **Principles of Economics**, WRT 001 **Academic and Analytical Writing**,
-and WRT 002 **Research and Argument**. It also explicitly permits WRT 003 and
-WRT 005 as the respective multilingual alternatives. The four writing-course
-entries verify their individual three-credit values and documented prerequisites
-or placement conditions (missing prerequisite statements remain null).
-The economics course listing offers a 0,4 credit pattern; the engineering
-college’s degree requirement explicitly assigns **4**, which is the value used.
-The original department page’s incorrect-looking titles remain recorded above;
-the primary adapter still flags a changed source for renewed review.
-
-`atlas.adapters.lehigh_degree_policies` parses the college HSS table and guards
-the associated university rules. Advanced HSS means at least three courses/12
-credits, all at least two credits, at least one 3+-credit course in each of two
-categories, and at least one HE or AL course. Eligible categories are HE, SW, AL,
-and College of Health CGH/POPH. No advanced HSS course may be P/F. These are open
-designation predicates, not an unextracted finite option list. CSE 252 remains
-excluded. The college’s basic ten HSS credits reuse the existing degree slots.
-
-The Undergraduate Studies **Credit Hours** section explicitly defines semester
-hours, supporting normalized units without inferring them from a calendar.
-Mapped policies include the 2.00 graduation GPA; 90 Lehigh credits **or** 60 of
-last 75 residency; eight-year degree limit; application/completion deadlines;
-three-attempt repeats including withdrawals; optional P/F caps/prohibitions and
-listed exclusions; transfer grades, equivalence, session caps and conversion;
-course standing/prerequisite rules; free elective ROTC/work-experience limits;
-and the department’s continuing-student CSE transfer caps, age, assessment,
-institution and approval conditions. AP/exam credits count toward the CSE caps;
-the scope is continuing students, not an invented incoming-transfer limit.
-
-**Partial remains justified** by the unresolved 130 versus 130–131 total,
-11 versus 10 sample-plan free-elective credits, and unconfirmed overlap between
-required/depth courses and the additional CSE100+/approved elective allocation.
-HSS identity and degree-wide policy gaps are substantially resolved. No protected
-source or raw HTML was used in committed files. Most course metadata and public
-sites/syllabi remain independently unverified.
-
-## Degree correctness audit — 2026-10-11
-
-The department table was reread, together with all 48 degree-listed course
-blocks in the current 2026–27 catalog. The old note root incorrectly made every
-prescribed course contextual. It is now an `all` root. The finite nine-course
-12-hour depth pool and twelve named 21-hour elective options are credit choices;
-the additional CSE 100+ eligibility range remains open and is not an invented
-finite pool. Twenty distinct courses are fixed; 28 are named options, including
-three linear-algebra choices and four writing choices. None is a prerequisite-only
-addition. These counts describe the mapped named inventory, not a student's load.
-
-All 48 subjects have source-specific manual taxonomy reviews. In particular,
-CSE 027 is software foundations, CSE 211 is data systems, CSE 252/COMM 351 concern
-human implications, and ISE 230/240/309 teach mathematical methods. CSE 160,
-CSE 282/283 and ECE 303 remain `other` with explicit mixed candidate categories.
-New source parsers reject changed course-block text before replaying reviewed
-paraphrases or subjects and never emit independent category-review objects.
-General catalog credit expressions such as `0,3`, `3,4` and `3-4` are not reduced
-to a single number; the degree's explicit amounts remain scoped to its plan.
-
-The catalog also exposes prerequisites outside the displayed degree core,
-including CSE 017 for CSE 140/327 and multiple depth options. Those are retained
-as enrollment conditions, not automatically added as degree requirements.
-The whole-degree correctness audit remains **blocked** by the contradictory
-130–131/130 totals, 11/10 free-elective allocations, and unresolved reuse of
-required/depth coursework inside the 21-hour pool. The structural correction
-and reviewed subject counts do not certify those policies.
+Only the contradictory published total/free-elective amounts remain a primary audit blocker. Public course sites, example syllabi and program-assessed outcomes remain separate metadata gaps. The sample sequence does not establish guaranteed offerings. A full independent second pass remains pending.

@@ -49,3 +49,18 @@ def test_lehigh_basic_hss_alternatives_cannot_silently_become_required():
  assert result['courses'][2]['credits'] is None
  assert result['requirements'][-1]['credits']==10
  with pytest.raises(ValueError,match='alternatives changed'):parse_engineering(html.replace('class="orclass"','class=""'))
+
+
+def test_conditional_preparation_does_not_create_an_extra_fixed_course_or_blocker():
+ d=json.loads(Path('data/programs/'+PID+'.json').read_text())
+ assert len(d['curriculum_audit']['unresolved_requirements'])==1
+ assert all(c['code']!='CSE 017' for c in d['courses'])
+ prerequisite=next(r for r in d['requirements'] if r['id'].endswith('-policy-undergrad-prerequisites'))
+ assert 'authorized online permission' in prerequisite['summary']
+ assert 'equivalent outside preparation' in prerequisite['summary']
+ elective=next(r for r in d['requirements'] if r['id']==PID+'-r4')
+ assert elective['credits']==21 and 'no duplicate fulfillment is assumed' in elective['summary']
+ ledger=json.loads(Path('research/degree-audit/national-degree-batch.json').read_text())
+ row=next(r for r in ledger['programs'] if r['program_id']==PID)
+ assert row['status']=='blocked' and len(row['blockers'])==1
+ assert [row['expected_profile'][k]['count'] for k in ['required','options','unresolved']]==[20,28,0]

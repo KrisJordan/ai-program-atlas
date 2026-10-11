@@ -48,7 +48,7 @@ def parse(html):
             "total",
             "Published degree minimum",
             credits=int(total[1]),
-            summary="Official plan of study; generic GER and free-elective rows require linked rules. Full university and school graduation policies remain under review.",
+            summary="Official plan of study; generic GER and free-elective rows use linked eligibility rules. Distinct plan allocations are not merged merely because a fixed course also appears in an eligible GER pool.",
         )
     ]
     courses = []

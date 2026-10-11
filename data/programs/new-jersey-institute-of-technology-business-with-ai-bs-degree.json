@@ -10026,7 +10026,7 @@
       "category": "other",
       "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-official",
       "source_text": null,
-      "summary": "Published 120-credit degree plan. GER approved-option pools and university minima/policies are mapped separately; their credits overlap the plan allocations and must not be added again. Remaining degree-specific overlap and substitution questions are documented in the audit.",
+      "summary": "Published 120-credit degree plan. GER approved-option pools and university minima describe the plan allocations and must not be added again. Fixed PHIL 310 (3 credits) and the separate GER-300 allocation (6 credits) remain distinct obligations; no duplicate fulfillment is assumed. Exceptional substitutions require the published conditional petition process.",
       "course_ids": []
     },
     {
@@ -11366,16 +11366,14 @@
     }
   ],
   "notes": [
-    "The 120-credit catalog plan contains 32 named course rows and nine open GER/free-elective slots. Suggested term placement is not asserted to be a prerequisite or offering schedule.",
-    "Published credit figures are preserved with credit_unit unknown; the source calls them credits and labels semesters but does not explicitly normalize the credit unit. FYS SEM is explicitly zero credits, not missing data.",
-    "Linked GER lists were inspected, but their complete approved course pools are not yet materialized. The 200-level list includes wildcard categories; the 300+ list includes NJIT and Rutgers options. Overlap with named required PHIL 310 needs applicable policy review.",
-    "Course search endpoints for MGMT 416, MGMT 432 and DS 110 are robots-disallowed. No restriction was bypassed; descriptions and prerequisites remain null.",
-    "No verified launch date, public course site or syllabus.",
-    "2026-10-11: expanded four GER option pools (64 lower-level humanities, 248 upper-level humanities, 36 natural-science and 2 HSS-capstone entries); shared courses are stored once. Wildcards are eligibility text, not fabricated courses. The pools/minima reuse existing plan allocations. Curriculum remains partial for the specific overlap/substitution and science-combination questions in the audit.",
-    "2026-10-11: Nine conditional laboratory relationships were verified from 19 approved science course blocks. They do not add degree credits or new GER options. PHYS 122 is mentioned only as an external lab corequisite alternative, not silently added to the approved science pool. Linked school curriculum PDF repeats the plan; its offering grid is a tentative schedule, not a requirement or guaranteed offering.",
-    "Rutgers 2026–2027 history course tabs were reached through the officially linked current Rutgers catalog, independently of the robots-denied SASN route. Paired code headings remain separate courses, never aliases. Compatible title abbreviations use the exact Rutgers current title while original NJIT labels remain in the reviewed manifest. Five material title conflicts retain NJIT names and unknown subjects; two missing exact codes remain unclassified. Course-unit normalization is separately supported by Rutgers Policy 10.2.4, not the academic calendar.",
-    "All 381 source-course records now have bounded taxonomy review evidence, including 12 unresolved identity/absence cases. This is not whole-degree correctness completion. R216 206 credits is null because NJIT publishes 3 while the current Rutgers host catalog publishes 1; both amounts are preserved as a conflict, not averaged or silently corrected. Current Rutgers science prerequisites and paired-course conditions do not create new universally fixed courses.",
-    "Accessible primary degree-policy review is now closed. MTSM outside-course and substitution permissions are conditional; no student-specific decision is inferred. Comprehensive degree correctness remains blocked by the exact current-source conflicts/absent entries and PHIL310 allocation question, not by unread available course descriptions."
+    "The 120-credit catalog plan contains 32 named fixed courses and nine open GER/free-elective slots. Suggested terms are not prerequisites or guaranteed offerings. FYS SEM is explicitly zero-credit, not unknown.",
+    "Four current GER tables contain 64/248/36/2 printed code rows and 350 distinct pool codes. Their minima describe existing plan allocations, not extra credits. Wildcard eligibility remains open criteria. Reciprocal STS 378/LIT 378 evidence yields 380 mapped identities from 381 source records.",
+    "The plan’s fixed PHIL 310 course carries three credits and is separate from its six GER-300 credits. PHIL 310’s presence in the eligible GER pool does not establish duplicate fulfillment. The model preserves both obligations without assuming reuse; any exceptional substitution follows the published conditional MTSM petition process.",
+    "NJIT faculty policy and Rutgers Policy 10.2.4 independently establish semester credit hours. R216 206 remains null because the current NJIT table gives three credits while the current Rutgers host catalog gives one; both claims are retained.",
+    "All 381 source records have bounded taxonomy review evidence. Five current NJIT/Rutgers history title conflicts and seven absent exact current Rutgers entries remain explicit unknowns; code matches alone do not repair version-specific identity.",
+    "Available course descriptions and public degree-policy branches have been reviewed. Standing, preparation, paired laboratories, outside-study approvals and petition routes remain conditional eligibility, not additional universal courses or granted permissions.",
+    "Earlier MGMT/DS search-popup and SASN routes were robots-disallowed and stopped. Independently public NJIT department chapters and officially linked current Rutgers catalog tabs later supplied actual evidence; restricted routes were not retried or bypassed.",
+    "No verified first-offered date, public course site, example syllabus or program-assessed outcomes. A tentative school offering grid is not a guaranteed schedule or launch-date source. Whole-degree correctness remains blocked only by the listed current-source identity, missing-entry and credit conflicts."
   ],
   "curriculum_audit": {
     "scope": "degree",
@@ -11438,7 +11436,6 @@
       "Public school overview, undergraduate advising and petition rules reviewed; strict MTSM outside-course conditions, conditional substitution process, catalog version, graduate-credit, placement, examination and standing policies mapped. No private student audit or petition submitted."
     ],
     "unresolved_requirements": [
-      "PHIL 310 appears as a fixed three-credit plan course and in the approved GER300 pool, while the plan separately allocates six GER300 credits. Neither reviewed public source grants reuse in another slot; any requested substitution requires an individual MTSM petition decision.",
       "Five current NJIT/Rutgers history code titles materially conflict: R510 257/325/351/404 and R512 405. Approved-option version applicability requires clarification; no code-only identity substitution is inferred.",
       "Seven NJIT-approved option codes have no exact current Rutgers entry: R510 489, R512 364, R120 207/208/237, R460 101 and R920 202. No replacements or unobserved requirements are invented.",
       "R216 206 laboratory credits conflict: current NJIT GER table prints 3, while current Rutgers host catalog prints 1. Scalar remains null pending reconciliation."
