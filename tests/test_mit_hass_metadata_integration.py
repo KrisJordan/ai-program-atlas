@@ -208,8 +208,13 @@ def test_urban_historical_units_do_not_cross_course_title_versions():
     assert later['name']=='American Urban History' and later['credits']==12
     assert earlier['name']=='American Urban History I' and earlier['credits'] is None
     assert 'spring-2025' in later['syllabus'] and 'spring-2010' in earlier['syllabus']
-    for held in ['mit-ai-hass-urban-11-041','mit-ai-hass-urban-11-148','mit-ai-hass-urban-11-015-j','mit-ai-hass-urban-11-025-j']:
+    for held in ['mit-ai-hass-urban-11-041','mit-ai-hass-urban-11-148','mit-ai-hass-urban-11-015-j']:
         assert by[held]['description'] is None
+    # The separate current D-Lab page now explicitly prints 11.025; the old
+    # EC.701-only OCW source still does not establish that correspondence.
+    dlab=by['mit-ai-hass-urban-11-025-j']
+    assert 'mit-ai-hass-review-dlab-development' in dlab['category_review']['source_ids']
+    assert not any('ec-701j' in sid for sid in dlab['category_review']['source_ids'])
     law=by['mit-ai-hass-african-and-african-diaspora-studies-11-166']
     assert 'permission' in law['prerequisites'].lower()
 
