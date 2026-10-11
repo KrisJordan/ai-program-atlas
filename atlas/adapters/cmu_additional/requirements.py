@@ -41,6 +41,8 @@ def enrich_requirements(html, observed, url):
         or "Program Administrator" not in introduction
     ):
         raise ValueError("Additional-major admission prerequisites changed")
+    if "following courses are required" not in words:
+        raise ValueError("Additional-major all-of directive changed")
     pid = observed["id"]
     source = pid + "-catalog"
     reqs = observed["requirements"]
@@ -150,6 +152,16 @@ def enrich_requirements(html, observed, url):
                 branch["course_ids"].extend(ids)
         if pre and group != 1 or not pre and (group != 5 or prob_options != 6):
             raise ValueError("Additional-major mathematical choice count changed")
+    # These exact source rows have no OR alternative and sit below the explicit
+    # required-courses directive. This is a source-specific role correction,
+    # not a generic promotion of every observed one-item choice pool.
+    fixed_rows = {"pre-group-1": ["cmu-15-112"], "math-group-3": ["cmu-21-122"],
+                  "math-group-4": ["cmu-21-241"], "math-group-5": ["cmu-36-401"]}
+    for key, expected in fixed_rows.items():
+        row = next(r for r in reqs if r["id"] == pid + "-" + key)
+        if row["course_ids"] != expected:
+            raise ValueError("Additional-major fixed row changed: " + key)
+        row.update(kind="all", count=None)
     add(
         "admission",
         "Admission prerequisites and grade average",

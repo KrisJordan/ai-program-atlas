@@ -208,7 +208,7 @@ def additional_fixture():
     )
     return (
         '<div>2030-2031 Catalog</div><main><h1>Artificial Intelligence, Additional Major</h1><p>Consult the Program Administrator. Students must complete 21-112 or 21-120, 15-122, 15-150, one of 15-210, 15-213, or 15-251, as well as 07-280 with a "B" average.</p>'
-        + "<h4>Prerequisites</h4>"
+        + "<p>The following courses are required for the additional major.</p><h4>Prerequisites</h4>"
         + table(row("15-112"))
         + "<h4>Math and Statistics Core</h4>"
         + table(math)
