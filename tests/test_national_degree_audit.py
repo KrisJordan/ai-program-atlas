@@ -258,3 +258,31 @@ def test_stevens_review_scopes_identity_and_field_changes(monkeypatch):
  assert courses['CS 508']['category_review']['status']=='mixed'
  assert courses['CS 558 / CPE 558']['credits']==3
  assert 'Graduate Student or At Least Junior' in courses['CS 558 / CPE 558']['prerequisites']
+
+
+def test_maryland_reviewed_subjects_and_change_guard(monkeypatch):
+ from atlas.adapters import maryland_course_metadata as meta
+ html='<h1>CMSC - Computer Science</h1><div class="courseblock"><p class="courseblocktitle">CMSC131 Example programming (4 Credits)</p><p class="courseblockdesc">Programming done in Java. Invented fixture.</p></div>'
+ text='CMSC131 Example programming (4 Credits) Programming done in Java. Invented fixture.'
+ monkeypatch.setattr(meta,'SUBJECTS',{'CMSC131':dict(digest=hashlib.sha256(text.encode()).hexdigest(),category='foundations',description='Example programming foundations.')})
+ result=meta.parse(html,pid='example',prefix='cmsc',codes=['CMSC131'])
+ assert result['courses'][0]['category']=='foundations'
+ assert 'category_review' not in result['courses'][0]
+ with pytest.raises(ValueError,match='block changed'):
+  meta.parse(html.replace('Invented fixture.','Changed content.'),pid='example',prefix='cmsc',codes=['CMSC131'])
+ pid='university-of-maryland-college-park-artificial-intelligence-computational-structures-for-ai-systems-bsai-degree'
+ p=json.loads(Path('data/programs/'+pid+'.json').read_text());courses={c['code']:c for c in p['courses']}
+ assert courses['CMSC351']['category']=='foundations'
+ assert courses['CMSC250']['category']=='mathematics'
+ assert courses['INST204']['category']=='human_context'
+ assert courses['CMSC320']['category_review']['status']=='mixed'
+ assert courses['MATH243']['category_review']['status']=='reviewed'
+ assert 'MATH240' in courses['MATH243']['prerequisites']
+
+
+def test_william_mary_partial_core_has_limited_subject_evidence():
+ p=json.loads(Path('data/programs/william-mary-applied-ai-ba.json').read_text())
+ assert {c['code']:c['category'] for c in p['courses']}=={'DATA 201':'other','DATA 202':'human_context','DATA 305':'other'}
+ assert all(c['credits'] is None for c in p['courses'])
+ assert requirement_profile(p)['required']['count']==3
+ assert p['curriculum_status']=='partial'

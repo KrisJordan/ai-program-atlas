@@ -25,3 +25,18 @@ All new sources used the normal robots-aware public fetcher. The record stays **
 ## Exact award label review — 2026-10-11
 
 The reviewed award option preserves **BSAI**, mapped to **BS**. Overview, second paragraph: Bachelor of Science in Artificial Intelligence: Computational Structures for AI Systems (BSAI). The explicit full-name expansion supports BS normalization; this is not inference from the abbreviation or hosting school. Existing program ID, award_level, title and requirement graph are unchanged. This optional mapping is reviewed metadata. Scrapers queue observations without replacing curated JSON; a parse result that omits award_options does not erase it. No parser or shared Northeastern helper change is needed.
+
+### Individual subject review — 2026-10-11
+
+The course-metadata factory previously defaulted to AI/ML regardless of source
+content. Reviewed blocks now have exact-content guards and manual subject
+reviews; other parsed course observations default to unknown subject. Reviewed
+MATH content is mathematical theory; CMSC131/132/351 and INST326 are programming
+and algorithms; CMSC250 is discrete mathematics; CMSC422 is ML; INST204 is
+algorithmic-bias/social analysis; CMSC320 combines statistics, learning and
+systems and retains mixed subject status. Only records present in this degree
+receive the applicable review. Enrollment and credit-exclusion clauses remain
+verbatim metadata, not invented degree obligations or cross-list equivalences.
+
+Full degree correctness remains in progress. The technical BSAI's AI Algorithms
+12-versus-18-credit inconsistency and all prior policy questions remain explicit.

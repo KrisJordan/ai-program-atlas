@@ -1,5 +1,9 @@
 """Selected official Maryland course blocks; no topic or permission inference."""
 import re
+import hashlib
+import json
+from pathlib import Path
+SUBJECTS=json.loads(Path(__file__).with_name("maryland_degree_subject_reviews.json").read_text())
 from functools import partial
 from atlas.adapters.national_curriculum_common import content,clean,require_phrases
 from atlas.adapters.cmu_bs.common import course
@@ -30,11 +34,11 @@ def parse(html,*,pid,prefix,codes):
         if not match or match[1] not in wanted:continue
         code,name,amount=match.groups()
         if code in found:raise ValueError('Duplicate selected Maryland course block')
-        c=course(code,name,pid+'-courses-'+prefix,BASE+prefix+'/',institution='umd',unit='semester_hours',credits=int(amount) if amount.isdigit() else None)
+        c=course(code,name,pid+'-courses-'+prefix,BASE+prefix+'/',institution='umd',unit='semester_hours',credits=int(amount) if amount.isdigit() else None,category='other')
         fields=[]
         for extra in block.find_all(class_='courseblockextra'):
             label=extra.find('strong')
-            if label and clean(label.get_text()).rstrip(':') in {'Prerequisite','Corequisite','Restriction','Credit Only Granted for'}:
+            if label and clean(label.get_text()).rstrip(':') in {'Prerequisite','Corequisite','Restriction','Credit Only Granted for','Additional Information'}:
                 fields.append(clean(extra.get_text(' ',strip=True)))
         c['prerequisites']=' '.join(fields) or None
         if code in DESCRIPTIONS:
@@ -42,6 +46,11 @@ def parse(html,*,pid,prefix,codes):
             desc=block.find(class_='courseblockdesc')
             if desc is None:raise ValueError('Selected description missing: '+code)
             require_phrases(desc,[marker]);c['description']=summary
+        if code in SUBJECTS:
+            entry=SUBJECTS[code]
+            if hashlib.sha256(clean(block.get_text(' ',strip=True)).encode()).hexdigest()!=entry['digest']:
+                raise ValueError('Maryland reviewed course block changed: '+code)
+            c.update(description=entry['description'],category=entry['category'])
         found[code]=c
     if not found:raise ValueError('No reviewed Maryland course blocks found')
     return dict(id=pid,courses=list(found.values()))

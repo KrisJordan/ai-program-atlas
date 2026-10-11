@@ -132,3 +132,15 @@ CS368 and explicit mixed classifications for CS135/456/508. The combined
 CS558/CPE558 heading leads to one Computer Vision record. These corrections
 do not certify the entire degree; remaining course descriptions, unit definition
 and school-scoped policy applicability stay in progress.
+
+## Maryland: course subjects need explicit observation categories
+
+The imported course factory's AI default was not evidence of subject. Sixteen
+distinct current MATH/CMSC/INST blocks were reread across both degrees, with
+explicit category rationales and content-change guards. Fifteen appear in the
+technical BSAI and two in HCAI (INST204 is shared). CMSC320 remains mixed rather
+than being forced into AI; precise course permissions and exclusions remain
+metadata. The technical core has six unconditional named identities; five
+specialization branches are conditional. Its printed AI Algorithms total remains
+inconsistent with its rows and major 18-credit specialization rule. Full audits
+remain in progress.

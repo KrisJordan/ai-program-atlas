@@ -987,6 +987,20 @@
           "locator": "Current degree requirements table and surrounding applicability/alternative prose",
           "checked_at": "2026-10-11",
           "access_status": "read"
+        },
+        {
+          "url": "https://academiccatalog.umd.edu/undergraduate/approved-courses/math/",
+          "catalog_year": null,
+          "locator": "MATH115 or INST204 exact course block",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://academiccatalog.umd.edu/undergraduate/approved-courses/inst/",
+          "catalog_year": null,
+          "locator": "MATH115 or INST204 exact course block",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
         }
       ],
       "checks": {
@@ -995,7 +1009,7 @@
         "elective_pools": "The requirements introduction explicitly permits an internship in place of the capstone seminar. HCAI490 is therefore a named option, not universally fixed. The alternative has an uncoded internship note; no course or credit amount is invented. Current mapped roles become 9 fixed / 59 named options; MATH115 and college-language contextual records retain their unresolved roles pending applicability review.",
         "prerequisites": "Program-specific approval and specialization conditions retained. Independent full course-description and prerequisite review remains in progress; prerequisite identities are not silently added as fixed obligations.",
         "credits_and_units": "Published row/group amounts remain distinct from per-course credits; semester-hour definition is registered in existing university policy evidence. No range or grouped amount is divided between courses.",
-        "classification": "No new classification review claimed in this bounded role correction. Source-backed individual subject audit remains in progress.",
+        "classification": "MATH115 description independently reviewed as mathematics and INST204 as human context. Other course-subject audit remains in progress. No default AI classification is accepted as independent review.",
         "family_composition": "Standalone concrete degree; no family inheritance or degree variant collapse.",
         "degree_wide_requirements": "Existing college/university policy evidence and unresolved questions remain in the seed audit. Independent rereading of all applicable degree-wide rules is unfinished; the role correction does not establish degree completeness."
       },
@@ -1172,6 +1186,174 @@
       ],
       "blockers": [],
       "correction_status": "Current degree plan and local requirements independently reread; five-course metadata correction tested. Comprehensive audit remains in progress.",
+      "second_pass_status": "pending"
+    },
+    {
+      "program_id": "william-mary-applied-ai-ba",
+      "institution_id": "william-and-mary",
+      "status": "blocked",
+      "sources": [
+        {
+          "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/",
+          "catalog_year": null,
+          "locator": "Degree award/30-credit major, FAQ core/residence, substitutions and transfer rules",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/ba_ai_coursework.png",
+          "catalog_year": null,
+          "locator": "Linked Example Pathway image: AAI301 Designing AI Agents, ethics alternative and illustrative elective/method pools",
+          "checked_at": "2026-10-11",
+          "access_status": "visual_read"
+        }
+      ],
+      "checks": {
+        "degree_identity": "Explicit BA in Interdisciplinary Studies with Applied Artificial Intelligence major. 30 credits describe the major only, not the whole BA.",
+        "required_and_choices": "FAQ names DATA201/202/305 as core taken at W&M. Linked example pathway labels Designing AI Agents AAI301 instead of DATA305 and offers DATA202/PHIL150 ethics alternatives. No equivalence, supersession or effective year is stated; preserve conflict rather than silently reconciling.",
+        "elective_pools": "The linked graphic explicitly labels methods/elective examples and two elective slots. It is not an exhaustive approved list; named illustrative courses are not promoted into certified degree inventory.",
+        "prerequisites": "Pathway arrows are illustrative sequencing, not verified prerequisite clauses. No prior coding/statistics/advanced math expected at major entry; course-level enrollment conditions remain unknown.",
+        "credits_and_units": "30-credit major total only; individual credits and normalized unit unknown. No per-course allocation inferred from graphic or four-to-five-semester timeline.",
+        "classification": "DATA202 exact ethics title supports a limited human-context review. DATA201 and DATA305 now unclassified because short titles do not establish primary content and the agent-design code conflicts. No data-science-to-AI classification inference.",
+        "family_composition": "Standalone BA major; its stated ability to pair with another major does not establish a family or remove university-degree scope.",
+        "degree_wide_requirements": "Department transfer/substitution approvals, W&M core/capstone residence and general Registrar declaration conditions remain mapped. Full current degree/catalog inventory and university BA rules are not certified by this department overview."
+      },
+      "expected_profile": {
+        "required": {
+          "count": 3,
+          "categories": {
+            "human_context": 1,
+            "other": 2
+          }
+        },
+        "options": {
+          "count": 0,
+          "categories": {}
+        },
+        "unresolved": {
+          "count": 0,
+          "categories": {}
+        }
+      },
+      "expected_course_ids": {
+        "required": [
+          "wm-applied-ai-data-201",
+          "wm-applied-ai-data-202",
+          "wm-applied-ai-data-305"
+        ],
+        "options": [],
+        "unresolved": []
+      },
+      "discrepancies": [
+        {
+          "issue": "DATA305 in FAQ and AAI301 in linked pathway identify Designing AI Agents differently; no version relationship is stated.",
+          "correction": "Preserve exact FAQ record and unresolved source conflict; no alias or first-offered year inferred.",
+          "status": "unresolved",
+          "evidence_urls": [
+            "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/",
+            "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/ba_ai_coursework.png"
+          ]
+        },
+        {
+          "issue": "Default AI subject labels were unsupported by course-description evidence.",
+          "correction": "DATA201/305 remain unclassified; DATA202 has an explicitly limited official-title review.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/"
+          ]
+        }
+      ],
+      "blockers": [
+        {
+          "issue": "Authoritative department sources disagree on the agent-design course identity and do not specify which requirement version applies.",
+          "urls": [
+            "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/",
+            "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/ba_ai_coursework.png"
+          ]
+        },
+        {
+          "issue": "Department source explicitly provides an example pathway, not the full major and university BA requirement inventory.",
+          "urls": [
+            "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/",
+            "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/ba_ai_coursework.png"
+          ]
+        }
+      ],
+      "correction_status": "Conservative subject correction completed; full degree correctness blocked by unreconciled course identity and incomplete authoritative requirement inventory.",
+      "second_pass_status": "pending"
+    },
+    {
+      "program_id": "university-of-maryland-college-park-artificial-intelligence-computational-structures-for-ai-systems-bsai-degree",
+      "institution_id": "university-of-maryland-college-park",
+      "status": "in_progress",
+      "sources": [
+        {
+          "url": "https://academiccatalog.umd.edu/undergraduate/colleges-schools/computer-mathematical-natural-sciences/computer-science/artificial-intelligence-computational-structures-ai-systems-major/",
+          "catalog_year": "2026-2027",
+          "locator": "Requirements tab: all course tables and footnotes",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://academiccatalog.umd.edu/undergraduate/approved-courses/math/",
+          "catalog_year": "2026-2027",
+          "locator": "Reviewed policy body or exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://academiccatalog.umd.edu/undergraduate/approved-courses/cmsc/",
+          "catalog_year": "2026-2027",
+          "locator": "Reviewed policy body or exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://academiccatalog.umd.edu/undergraduate/approved-courses/inst/",
+          "catalog_year": "2026-2027",
+          "locator": "Reviewed policy body or exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        }
+      ],
+      "checks": {
+        "degree_identity": "Current catalog explicitly names Bachelor of Science in Artificial Intelligence: Computational Structures for AI Systems, BSAI. Preserve exact award mapping; no inference from generic BS.",
+        "required_and_choices": "Read core table and all five specialization tables. Six unconditionally fixed identities are CSAI101,MATH141,PHIL211,INST204,CMSC351,CSAI216; other major rows are alternatives or conditional specialization requirements. General, Generative AI, Society/Decision Making, AI Algorithms and Accessibility routes remain separate.",
+        "elective_pools": "Core alternatives plus five formal specialization pools remain conditional. Topic-specific CMSC498E/Y and GEOG398E do not inherit generic course-topic descriptions. AI Algorithms lists four required 3-credit courses and two electives but prints 12 total, inconsistent with the major 18-credit specialization rule; no quantity is silently repaired.",
+        "prerequisites": "Reviewed programming/discrete/algorithm/data/learning blocks preserve C-minus minima, department permissions, placements and major restrictions. MATH243 does not count as MATH240 prerequisite, and INST326 has explicit program restrictions; alternatives do not imply blanket waivers. Non-core preparation remains enrollment context rather than silently added fixed course obligations.",
+        "credits_and_units": "Major total 66\u201369 and row amounts/ranges preserved separately from degree total. Registered policy establishes semester hours; individual fixed amounts are not derived from ranges or pooled credits.",
+        "classification": "Fifteen degree-listed MATH/CMSC/INST descriptions now have independent manual reviews: mathematical theory, programming/algorithm foundations, fairness as human context, ML as AI, and broad CMSC320 data-science pipeline as mixed. Other named courses remain unreviewed; code/host membership is not subject evidence.",
+        "family_composition": "Standalone concrete BSAI with local specializations, not a collapsed family or five additional standalone degrees.",
+        "degree_wide_requirements": "Current program tables reread; existing graduation/college/transfer policies remain preserved. Full independent degree-wide policy and remaining course audit is still in progress. Source inconsistency in AI Algorithms is explicitly retained."
+      },
+      "expected_profile": null,
+      "expected_course_ids": {
+        "required": [],
+        "options": [],
+        "unresolved": []
+      },
+      "discrepancies": [
+        {
+          "issue": "Course factory default labeled observed programming, mathematical and social content AI/ML.",
+          "correction": "Source-specific reviewed classifications for15degree-listed courses; unreviewed parser observations default to unknown subject rather than AI.",
+          "status": "corrected_for_reviewed_subset",
+          "evidence_urls": [
+            "https://academiccatalog.umd.edu/undergraduate/approved-courses/math/",
+            "https://academiccatalog.umd.edu/undergraduate/approved-courses/cmsc/",
+            "https://academiccatalog.umd.edu/undergraduate/approved-courses/inst/"
+          ]
+        },
+        {
+          "issue": "AI Algorithms specialization prints12total despite four required3-credit courses plus two electives and the major18-credit specialization rule.",
+          "correction": "Preserve each printed quantity and explicit unresolved source conflict.",
+          "status": "unresolved",
+          "evidence_urls": [
+            "https://academiccatalog.umd.edu/undergraduate/colleges-schools/computer-mathematical-natural-sciences/computer-science/artificial-intelligence-computational-structures-ai-systems-major/"
+          ]
+        }
+      ],
+      "blockers": [],
+      "correction_status": "Current primary table reread and reviewed course subjects corrected; comprehensive audit in progress.",
       "second_pass_status": "pending"
     }
   ]

@@ -46,3 +46,18 @@ This is a bounded requirement-role correction. Whole-degree correctness remains
 in progress; existing partial curriculum status and substantive source questions
 are preserved. Synthetic tests distinguish explicit choices from context, and
 current cached catalog replay agrees with the reviewed seed roles.
+
+### Individual subject review — 2026-10-11
+
+The course-metadata factory previously defaulted to AI/ML regardless of source
+content. Reviewed blocks now have exact-content guards and manual subject
+reviews; other parsed course observations default to unknown subject. Reviewed
+MATH content is mathematical theory; CMSC131/132/351 and INST326 are programming
+and algorithms; CMSC250 is discrete mathematics; CMSC422 is ML; INST204 is
+algorithmic-bias/social analysis; CMSC320 combines statistics, learning and
+systems and retains mixed subject status. Only records present in this degree
+receive the applicable review. Enrollment and credit-exclusion clauses remain
+verbatim metadata, not invented degree obligations or cross-list equivalences.
+
+Full degree correctness remains in progress. The technical BSAI's AI Algorithms
+12-versus-18-credit inconsistency and all prior policy questions remain explicit.

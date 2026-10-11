@@ -63,7 +63,7 @@ def ba_overview(html):
     if not match:raise ValueError('Core residency list absent')
     entries=re.findall(r'(DATA \d{3})\s+(.+?)(?=,\s*(?:and\s+)?DATA|$)',match[1])
     if len(entries)!=3:raise ValueError('Unrecognized core residency list')
-    courses=[course('wm-applied-ai',code,name.strip(' ,'),sid,BA,category='human_context' if code=='DATA 202' else 'ai_ml') for code,name in entries]
+    courses=[course('wm-applied-ai',code,name.strip(' ,'),sid,BA,category='human_context' if code=='DATA 202' else 'other') for code,name in entries]
     groups=[rule(pid+'-major-credits','Major credit minimum',sid,kind='note',credits=30,summary='The department describes a 30-credit undergraduate major. This is the major total, not the complete BA degree total.'),rule(pid+'-observed-core','Core courses named in residency policy',sid,[c['id'] for c in courses],summary='The FAQ explicitly names these core courses. This is an incomplete inventory; DATA 305 conflicts with AAI 301 in the linked example pathway.')]+department_policies(root,pid,True)
     require_phrases(root,['choose the right AI tools','coordinating multiple tools/agents','portfolio of real deliverables'])
     result=identity(pid,'Applied Artificial Intelligence','degree')
