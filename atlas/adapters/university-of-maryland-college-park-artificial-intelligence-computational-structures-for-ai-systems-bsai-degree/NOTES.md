@@ -11,3 +11,13 @@ Catalog AI Algorithms total conflicts with the 18-credit specialization rule.
 Launch evidence: https://today.umd.edu/umd-to-launch-2-bachelors-degrees-to-explore-technical-human-dimensions-of-ai
 
 Catalog: https://academiccatalog.umd.edu/undergraduate/colleges-schools/computer-mathematical-natural-sciences/computer-science/artificial-intelligence-computational-structures-ai-systems-major/
+
+## University closure and selected metadata — 2026-10-11
+
+The BSAI now has **85 course observations, 76 requirement nodes and six explicitly classified learning outcomes**. Shared university rules cover credit/residence/upper-level minima, major enrollment and GPA, General Education choices and overlap (including its 40-credit minimum), transfer acceptance/applicability/caps/level, degree applications, incompletes, Pass-Fail and repeat limits. General Education uses official term-designation criteria rather than a fabricated permanent pool.
+
+The linked CMNS declaration page gives college-wide timing but does not place the new AI degree within its named program-specific admission groups. The separate Computer Science limited-enrollment requirements are **not inherited by inference**. AI-specific gateway/transition applicability remains unverified. The catalog’s AI Algorithms 12-versus-18-credit inconsistency also remains unchanged.
+
+Official MATH, CMSC and INST course listings provide metadata for **34 existing course observations**, including **eight concise descriptions and 34 prerequisite/restriction statements**. The new CMSC141/142 and INST436 entries are absent from those current listings; their missing metadata remains unknown. Generic CMSC498 metadata is deliberately not copied into the two topic-specific curriculum options. Published prerequisites, department permissions and other-program restrictions are preserved; a curriculum listing alone is not evidence of an enrollment waiver. Public sites and syllabi remain unverified.
+
+All new sources used the normal robots-aware public fetcher. The record stays **partial** at these concrete requirement/source boundaries, separate from course-metadata missingness.

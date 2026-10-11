@@ -3,6 +3,36 @@ import re
 from urllib.parse import urljoin
 from bs4 import BeautifulSoup
 from atlas.adapters.cmu_bs.common import course, requirement, slug, text
+from atlas.adapters.national_curriculum_common import require_phrases
+
+
+def learning_outcomes(soup, human, source):
+    heading = next((h for h in soup.find_all(['h2','h3']) if text(h) == 'Program Learning Outcomes'), None)
+    if heading is None:
+        return []
+    items = heading.find_next_sibling('ol')
+    rows = items.find_all('li') if items else []
+    specs = [
+        ('human-facing disciplines', 'Use human-centered disciplines to evaluate emerging AI and its consequences.'),
+        ('ethical, social, and cultural', 'Assess ethical, social and cultural implications of AI applications.'),
+        ('biases, transparency, and accountability', 'Evaluate bias, transparency and accountability in AI systems.'),
+        ('technical reports', 'Communicate AI implementation, challenges and results in technical reports.'),
+        ('technical foundations', 'Contribute technically informed AI designs aligned with human and societal values.'),
+    ] if human else [
+        ('modern and classic AI', 'Apply foundational principles of both established and modern AI.'),
+        ('efficient, scalable and effective', 'Build scalable algorithms and systems for practical AI applications.'),
+        ('Configure, train and deploy', 'Configure, train and deploy existing models for practical use.'),
+        ('reliability, efficiency, safety', 'Evaluate AI outputs and tools for reliability, efficiency, safety and goal alignment.'),
+        ('ethics and social sciences', 'Use ethical and social perspectives to address AI risks and societal problems.'),
+        ('multidisciplinary teams', 'Communicate and collaborate across disciplines when designing AI solutions.'),
+    ]
+    if len(rows) != len(specs):
+        raise ValueError('Maryland learning-outcome inventory changed')
+    result=[]
+    for row,(marker,summary) in zip(rows,specs):
+        require_phrases(row,[marker])
+        result.append(dict(text=summary,kind='source_stated',statement_type='learning_outcome',source_id=source,locator='Program Learning Outcomes'))
+    return result
 
 
 def number(node):
@@ -111,6 +141,9 @@ def parse(html, *, pid, title, award, url):
             if trigger not in body:
                 raise ValueError('Maryland BA policy changed: '+trigger)
             req(slug(label),label,kind='note',parent=root['id'],summary=summary)
+        math = course('MATH115',None,source,url,institution='umd',unit='semester_hours',category='mathematics')
+        courses[math['id']] = math
+        next(n for n in nodes if n['id']==pid+'-college-requirements')['course_ids']=[math['id']]
         # Introductory prose is deliberately not interpreted from table titles alone.
         intro = ' '.join(text(n) for n in section.find_all(['p','li']) if not n.find_parent('table'))
         if 'internship' in intro.lower():
@@ -120,4 +153,4 @@ def parse(html, *, pid, title, award, url):
         notes.append('AI Algorithms specialization prints 12 total credits while the major specifies an 18-credit specialization and two electives. This source discrepancy requires clarification.')
     if not courses:
         raise ValueError('Maryland course rows missing')
-    return dict(id=pid,title=title,award_level=award,program_kind='degree',catalog_year=catalog_year,curriculum_status='partial',courses=list(courses.values()),requirements=nodes,notes=notes)
+    return dict(id=pid,title=title,award_level=award,program_kind='degree',catalog_year=catalog_year,curriculum_status='partial',courses=list(courses.values()),requirements=nodes,notes=notes,outcomes=learning_outcomes(soup,human,source))
