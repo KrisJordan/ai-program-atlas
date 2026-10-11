@@ -26,7 +26,7 @@ def test_source_change_drops_stale_editorial_claims(monkeypatch):
  with pytest.raises(ValueError,match='identity changed'):parse(html.replace('Synthetic inquiry','New inquiry'))
 
 
-@pytest.mark.parametrize('award,n',[('BA',444),('BS',443)])
+@pytest.mark.parametrize('award,n',[('BA',480),('BS',479)])
 def test_reviewed_uger_semantics_and_reciprocal_identity(award,n):
  pid=f'case-western-reserve-university-artificial-intelligence-{award.lower()}-degree'
  p=json.loads(Path('data/programs',pid+'.json').read_text());cs={c['code']:c for c in p['courses']}
@@ -187,6 +187,29 @@ def test_professional_course_evidence_preserves_sequence_and_section_rules(award
  assert 'only in combination with EBME 370' in cs['EBME 356']['prerequisites']
  assert 'Recommended corequisite: EMSE 372' in cs['EMSE 320']['prerequisites']
  for dep,count in [('ebme',2),('eche',1),('eciv',5),('emac',1),('emae',2),('emse',2),('acct',1),('entp',5),('mgmt',11),('orbh',10)]:
+  path=Path('/tmp/case-uger-audit',dep+'.html')
+  if path.exists():
+   obs=m.parse_descriptions(path.read_text(),pid=pid,award=award,department=dep)
+   assert len(obs['courses'])==count
+   assert not any('Changed description' in n for n in obs['notes'])
+
+
+@pytest.mark.parametrize('award',['BA','BS'])
+def test_experience_unknowns_and_anthropology_methods(award):
+ pid=f'case-western-reserve-university-artificial-intelligence-{award.lower()}-degree'
+ p=json.loads(Path('data/programs',pid+'.json').read_text());cs={c['code']:c for c in p['courses']}
+ assert cs['DESN 210']['category']=='foundations'
+ assert 'No programming experience is required' in cs['DESN 210']['prerequisites']
+ assert cs['ANTH 319']['category']=='mathematics'
+ assert cs['ANTH 103']['category']=='applications'
+ assert cs['EDAB 21']['description'] is None
+ for code in ['COOP 1','COOP 10','EDAB 1','EDAB 3','EDAB 11','EDAB 21','PRAC 1','PRAC 4','PRAC 10','PRAC 11']:
+  assert cs[code]['credits']==0 and cs[code]['category_review']['status']=='unclassified'
+ assert cs['EDUC 394']['credits'] is None
+ assert 'No previous or current enrollment' in cs['ANTH 359C']['prerequisites']
+ assert 'at least one semester prior' in cs['ANTH 398']['prerequisites']
+ assert 'Veale Snyder Fellowship' in cs['VEAL 334']['prerequisites']
+ for dep,count in [('coop',2),('desn',1),('edab',4),('educ',2),('prac',4),('sass',2),('univ',1),('veal',1),('anth',19)]:
   path=Path('/tmp/case-uger-audit',dep+'.html')
   if path.exists():
    obs=m.parse_descriptions(path.read_text(),pid=pid,award=award,department=dep)

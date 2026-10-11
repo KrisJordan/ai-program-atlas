@@ -600,6 +600,96 @@
       "catalog_year": "2026-2027",
       "locator": "Exact reviewed UGER course blocks: ORBH 222, ORBH 230, ORBH 240, ORBH 375, ORBH 330, ORBH 380, ORBH 303, ORBH 391, ORBH 310, ORBH 320",
       "confidence": "high"
+    },
+    {
+      "id": "case-uger-courses-coop",
+      "url": "https://bulletin.case.edu/course-descriptions/coop/",
+      "title": "Cooperative Education (COOP)",
+      "fetched_at": "2026-10-11T03:16:30+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Exact reviewed UGER course blocks: COOP 1, COOP 10",
+      "confidence": "high"
+    },
+    {
+      "id": "case-uger-courses-desn",
+      "url": "https://bulletin.case.edu/course-descriptions/desn/",
+      "title": "Design & Innovation (DESN)",
+      "fetched_at": "2026-10-11T03:16:35+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Exact reviewed UGER course blocks: DESN 210",
+      "confidence": "high"
+    },
+    {
+      "id": "case-uger-courses-edab",
+      "url": "https://bulletin.case.edu/course-descriptions/edab/",
+      "title": "Education Abroad (EDAB)",
+      "fetched_at": "2026-10-11T03:16:41+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Exact reviewed UGER course blocks: EDAB 1, EDAB 3, EDAB 11, EDAB 21",
+      "confidence": "high"
+    },
+    {
+      "id": "case-uger-courses-educ",
+      "url": "https://bulletin.case.edu/course-descriptions/educ/",
+      "title": "Education (EDUC)",
+      "fetched_at": "2026-10-11T03:16:42+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Exact reviewed UGER course blocks: EDUC 336, EDUC 394",
+      "confidence": "high"
+    },
+    {
+      "id": "case-uger-courses-prac",
+      "url": "https://bulletin.case.edu/course-descriptions/prac/",
+      "title": "Practicum (PRAC)",
+      "fetched_at": "2026-10-11T03:17:27+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Exact reviewed UGER course blocks: PRAC 1, PRAC 4, PRAC 10, PRAC 11",
+      "confidence": "high"
+    },
+    {
+      "id": "case-uger-courses-sass",
+      "url": "https://bulletin.case.edu/course-descriptions/sass/",
+      "title": "School of Applied Social Sciences (SASS)",
+      "fetched_at": "2026-10-10T23:38:14+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Exact reviewed UGER course blocks: SASS 310, SASS 375C",
+      "confidence": "high"
+    },
+    {
+      "id": "case-uger-courses-univ",
+      "url": "https://bulletin.case.edu/course-descriptions/univ/",
+      "title": "University Studies (UNIV)",
+      "fetched_at": "2026-10-11T03:17:38+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Exact reviewed UGER course blocks: UNIV 200",
+      "confidence": "high"
+    },
+    {
+      "id": "case-uger-courses-veal",
+      "url": "https://bulletin.case.edu/course-descriptions/veal/",
+      "title": "Veale Entrepreneurship Institute (VEAL)",
+      "fetched_at": "2026-10-11T03:17:39+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Exact reviewed UGER course blocks: VEAL 334",
+      "confidence": "high"
+    },
+    {
+      "id": "case-uger-courses-anth",
+      "url": "https://bulletin.case.edu/course-descriptions/anth/",
+      "title": "Anthropology (ANTH)",
+      "fetched_at": "2026-10-11T03:16:13+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Exact reviewed UGER course blocks: ANTH 317, ANTH 349, ANTH 369D, ANTH 313, ANTH 359C, ANTH 398, ANTH 319, ANTH 360, ANTH 102, ANTH 215, ANTH 306, ANTH 345, ANTH 353, ANTH 354, ANTH 359, ANTH 103, ANTH 107, ANTH 304, ANTH 324",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -6144,43 +6234,79 @@
       "id": "case-ba-uger-anth-317",
       "code": "ANTH 317",
       "name": "Science and Race",
-      "description": null,
+      "description": "Historical and contemporary scientific concepts of race examined through their social influences and consequences.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=ANTH%20317",
+      "category": "human_context",
+      "source_id": "case-uger-courses-anth",
+      "url": "https://bulletin.case.edu/course-descriptions/anth/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-anth"
+        ],
+        "locator": "ANTH 317; current 2026–2027 course block",
+        "rationale": "The actual description centers on historical and contemporary scientific concepts of race examined through their social influences and consequences.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-anth-349",
       "code": "ANTH 349",
       "name": "Cultures of Latin America",
-      "description": null,
-      "prerequisites": null,
+      "description": "Diversity, inequality and cultural change in Latin America, including transnational relationships.",
+      "prerequisites": "Prereq: ANTH 102 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=ANTH%20349",
+      "category": "human_context",
+      "source_id": "case-uger-courses-anth",
+      "url": "https://bulletin.case.edu/course-descriptions/anth/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-anth"
+        ],
+        "locator": "ANTH 349; current 2026–2027 course block",
+        "rationale": "The actual description centers on diversity, inequality and cultural change in Latin America, including transnational relationships.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-anth-369d",
       "code": "ANTH 369D",
       "name": "The Anthropology of Nutrition",
-      "description": null,
+      "description": "Human nutrition examined through dietary assessment, ecology, genetics and cultural variation.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=ANTH%20369D",
+      "source_id": "case-uger-courses-anth",
+      "url": "https://bulletin.case.edu/course-descriptions/anth/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-anth"
+        ],
+        "locator": "ANTH 369D; current 2026–2027 course block",
+        "rationale": "The actual description centers on human nutrition examined through dietary assessment, ecology, genetics and cultural variation. Substantial scientific and cultural domains are mixed without a single defensible primary subject.",
+        "candidate_categories": [
+          "applications",
+          "human_context"
+        ]
+      }
     },
     {
       "id": "case-ba-uger-arth-272",
@@ -8197,43 +8323,76 @@
       "id": "case-ba-uger-anth-313",
       "code": "ANTH 313",
       "name": "Anthropology Capstone Seminar",
-      "description": null,
-      "prerequisites": null,
+      "description": "Senior research seminar involving a selected topic, literature review, paper and presentation.",
+      "prerequisites": "Prereq: Declared Anthropology major and Senior student standing.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=ANTH%20313",
+      "source_id": "case-uger-courses-anth",
+      "url": "https://bulletin.case.edu/course-descriptions/anth/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-anth"
+        ],
+        "locator": "ANTH 313; current 2026–2027 course block",
+        "rationale": "The description identifies an experience or student-selected project but does not establish its subject matter. No category is inferred from departmental affiliation, destination or engagement approval.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-anth-359c",
       "code": "ANTH 359C",
       "name": "Introduction to Global Health: Capstone",
-      "description": null,
-      "prerequisites": null,
+      "description": "Anthropological global-health study with an additional capstone project and required participation in the companion course.",
+      "prerequisites": "Prereq: Declared Anthropology major with Junior standing or above. Students who enroll in ANTH 359C must attend all the ANTH 359 classes and complete extra work in order to meet the capstone requirement. No previous or current enrollment in ANTH 359 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=ANTH%20359C",
+      "category": "human_context",
+      "source_id": "case-uger-courses-anth",
+      "url": "https://bulletin.case.edu/course-descriptions/anth/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-anth"
+        ],
+        "locator": "ANTH 359C; current 2026–2027 course block",
+        "rationale": "The actual description centers on anthropological global-health study with an additional capstone project and required participation in the companion course.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-anth-398",
       "code": "ANTH 398",
       "name": "Anthropology Capstone Independent Study",
-      "description": null,
-      "prerequisites": null,
+      "description": "Advised independent research project requiring advance faculty consent and any necessary research approvals.",
+      "prerequisites": "Prereq: Major in Anthropology. Therefore, students who are interested in completing an independent research Anthropology Capstone must discuss their interests with the faculty member at least one semester prior to the term they wish to enroll in the Capstone course. Students who do not get a faculty adviser's consent in advance of enrollment for the semester they wish to enroll will not be permitted to enroll in ANTH 398 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=ANTH%20398",
+      "source_id": "case-uger-courses-anth",
+      "url": "https://bulletin.case.edu/course-descriptions/anth/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-anth"
+        ],
+        "locator": "ANTH 398; current 2026–2027 course block",
+        "rationale": "The description identifies an experience or student-selected project but does not establish its subject matter. No category is inferred from departmental affiliation, destination or engagement approval.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-arth-399",
@@ -9030,15 +9189,26 @@
       "id": "case-ba-uger-anth-319",
       "code": "ANTH 319",
       "name": "Introduction to Statistical Analysis in the Social Sciences",
-      "description": null,
-      "prerequisites": null,
+      "description": "Statistical inference, descriptive analysis and comparison methods illustrated through social-science data.",
+      "prerequisites": "A student may receive credit for only one of the following: ANTH 319 , PSCL 282 , SOCI 307 , or STAT 201 . Cannot be used to meet the A&S Humanities and Social Sciences requirement.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=ANTH%20319",
+      "category": "mathematics",
+      "source_id": "case-uger-courses-anth",
+      "url": "https://bulletin.case.edu/course-descriptions/anth/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-anth"
+        ],
+        "locator": "ANTH 319; current 2026–2027 course block",
+        "rationale": "The actual description centers on statistical inference, descriptive analysis and comparison methods illustrated through social-science data.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-csds-101",
@@ -9074,15 +9244,26 @@
       "id": "case-ba-uger-desn-210",
       "code": "DESN 210",
       "name": "Introduction to Programming for Business Applications",
-      "description": null,
-      "prerequisites": null,
+      "description": "Programming logic and Python fundamentals used to develop solutions to business problems.",
+      "prerequisites": "Each student must have access to a computer that can be brought to class. No programming experience is required. Basic computer skills: surfing websites, running programs, saving and opening documents, etc.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=DESN%20210",
+      "category": "foundations",
+      "source_id": "case-uger-courses-desn",
+      "url": "https://bulletin.case.edu/course-descriptions/desn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-desn"
+        ],
+        "locator": "DESN 210; current 2026–2027 course block",
+        "rationale": "The actual description centers on programming logic and Python fundamentals used to develop solutions to business problems.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-ecse-132",
@@ -11396,15 +11577,26 @@
       "id": "case-ba-uger-sass-310",
       "code": "SASS 310",
       "name": "Trauma, Neurobiology, and the Healing Power of Social Connection",
-      "description": null,
+      "description": "Trauma, neurobiology and social connection studied through self-care, stress and resilience practices.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=SASS%20310",
+      "category": "applications",
+      "source_id": "case-uger-courses-sass",
+      "url": "https://bulletin.case.edu/course-descriptions/sass/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-sass"
+        ],
+        "locator": "SASS 310; current 2026–2027 course block",
+        "rationale": "The actual description centers on trauma, neurobiology and social connection studied through self-care, stress and resilience practices.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-thtr-100",
@@ -11438,15 +11630,26 @@
       "id": "case-ba-uger-univ-200",
       "code": "UNIV 200",
       "name": "Career Exploration and Professional Connection",
-      "description": null,
+      "description": "Career exploration through self-assessment, professional connections and planning.",
       "prerequisites": null,
       "credits": 1.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=UNIV%20200",
+      "category": "applications",
+      "source_id": "case-uger-courses-univ",
+      "url": "https://bulletin.case.edu/course-descriptions/univ/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-univ"
+        ],
+        "locator": "UNIV 200; current 2026–2027 course block",
+        "rationale": "The actual description centers on career exploration through self-assessment, professional connections and planning.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-wgst-285",
@@ -11883,15 +12086,26 @@
       "id": "case-ba-uger-anth-360",
       "code": "ANTH 360",
       "name": "Global Politics of Reproduction",
-      "description": null,
+      "description": "Reproductive politics and ethics examined through cultural, institutional and historical factors.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=ANTH%20360",
+      "category": "human_context",
+      "source_id": "case-uger-courses-anth",
+      "url": "https://bulletin.case.edu/course-descriptions/anth/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-anth"
+        ],
+        "locator": "ANTH 360; current 2026–2027 course block",
+        "rationale": "The actual description centers on reproductive politics and ethics examined through cultural, institutional and historical factors.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-beth-271",
@@ -12963,99 +13177,176 @@
       "id": "case-ba-uger-anth-102",
       "code": "ANTH 102",
       "name": "Being Human: An Introduction to Social and Cultural Anthropology",
-      "description": null,
+      "description": "Social and cultural anthropology addressing language, institutions, cultural change and global variation.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=ANTH%20102",
+      "category": "human_context",
+      "source_id": "case-uger-courses-anth",
+      "url": "https://bulletin.case.edu/course-descriptions/anth/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-anth"
+        ],
+        "locator": "ANTH 102; current 2026–2027 course block",
+        "rationale": "The actual description centers on social and cultural anthropology addressing language, institutions, cultural change and global variation.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-anth-215",
       "code": "ANTH 215",
       "name": "Health, Culture, and Disease: An Introduction to Medical Anthropology",
-      "description": null,
+      "description": "Cross-cultural understandings of health, illness and healing within medical anthropology.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=ANTH%20215",
+      "category": "human_context",
+      "source_id": "case-uger-courses-anth",
+      "url": "https://bulletin.case.edu/course-descriptions/anth/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-anth"
+        ],
+        "locator": "ANTH 215; current 2026–2027 course block",
+        "rationale": "The actual description centers on cross-cultural understandings of health, illness and healing within medical anthropology.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-anth-306",
       "code": "ANTH 306",
       "name": "The Anthropology of Childhood and the Family",
-      "description": null,
-      "prerequisites": null,
+      "description": "Childhood and family life examined through ethnography, culture, inequality and political economy.",
+      "prerequisites": "Recommended preparation: ANTH 102 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=ANTH%20306",
+      "category": "human_context",
+      "source_id": "case-uger-courses-anth",
+      "url": "https://bulletin.case.edu/course-descriptions/anth/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-anth"
+        ],
+        "locator": "ANTH 306; current 2026–2027 course block",
+        "rationale": "The actual description centers on childhood and family life examined through ethnography, culture, inequality and political economy.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-anth-345",
       "code": "ANTH 345",
       "name": "Culture and Mental Health",
-      "description": null,
-      "prerequisites": null,
+      "description": "Mental health and recovery examined through culture, power and social inequality.",
+      "prerequisites": "Recommended preparation: ANTH 102 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=ANTH%20345",
+      "category": "human_context",
+      "source_id": "case-uger-courses-anth",
+      "url": "https://bulletin.case.edu/course-descriptions/anth/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-anth"
+        ],
+        "locator": "ANTH 345; current 2026–2027 course block",
+        "rationale": "The actual description centers on mental health and recovery examined through culture, power and social inequality.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-anth-353",
       "code": "ANTH 353",
       "name": "Chinese Culture and Society",
-      "description": null,
-      "prerequisites": null,
+      "description": "Social transformation in contemporary China, including family, gender, migration and ethnic diversity.",
+      "prerequisites": "Recommended preparation: ANTH 102 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=ANTH%20353",
+      "category": "human_context",
+      "source_id": "case-uger-courses-anth",
+      "url": "https://bulletin.case.edu/course-descriptions/anth/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-anth"
+        ],
+        "locator": "ANTH 353; current 2026–2027 course block",
+        "rationale": "The actual description centers on social transformation in contemporary China, including family, gender, migration and ethnic diversity.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-anth-354",
       "code": "ANTH 354",
       "name": "Health and Healing in East Asia",
-      "description": null,
+      "description": "East Asian healing practices and illness experiences examined through medical ethics and political economy.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=ANTH%20354",
+      "category": "human_context",
+      "source_id": "case-uger-courses-anth",
+      "url": "https://bulletin.case.edu/course-descriptions/anth/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-anth"
+        ],
+        "locator": "ANTH 354; current 2026–2027 course block",
+        "rationale": "The actual description centers on east Asian healing practices and illness experiences examined through medical ethics and political economy.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-anth-359",
       "code": "ANTH 359",
       "name": "Introduction to Global Health",
-      "description": null,
+      "description": "Anthropological perspectives on global-health problems and the field’s historical development.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=ANTH%20359",
+      "category": "human_context",
+      "source_id": "case-uger-courses-anth",
+      "url": "https://bulletin.case.edu/course-descriptions/anth/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-anth"
+        ],
+        "locator": "ANTH 359; current 2026–2027 course block",
+        "rationale": "The actual description centers on anthropological perspectives on global-health problems and the field’s historical development.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-arth-101",
@@ -14850,15 +15141,26 @@
       "id": "case-ba-uger-sass-375c",
       "code": "SASS 375C",
       "name": "International Travel & Study Abroad: Invisible Groups in a New Poland",
-      "description": null,
+      "description": "Polish social policy, culture and exclusion studied through institutional visits, workshops and reflection.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=SASS%20375C",
+      "category": "human_context",
+      "source_id": "case-uger-courses-sass",
+      "url": "https://bulletin.case.edu/course-descriptions/sass/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-sass"
+        ],
+        "locator": "SASS 375C; current 2026–2027 course block",
+        "rationale": "The actual description centers on polish social policy, culture and exclusion studied through institutional visits, workshops and reflection.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-soci-236",
@@ -15101,43 +15403,76 @@
       "id": "case-ba-uger-anth-103",
       "code": "ANTH 103",
       "name": "Introduction to Human Evolution",
-      "description": null,
+      "description": "Human biological evolution studied through genetics, primatology, fossils and natural selection.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=ANTH%20103",
+      "category": "applications",
+      "source_id": "case-uger-courses-anth",
+      "url": "https://bulletin.case.edu/course-descriptions/anth/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-anth"
+        ],
+        "locator": "ANTH 103; current 2026–2027 course block",
+        "rationale": "The actual description centers on human biological evolution studied through genetics, primatology, fossils and natural selection.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-anth-107",
       "code": "ANTH 107",
       "name": "Archaeology: An Introduction",
-      "description": null,
+      "description": "Archaeological interpretation of human cultural development, including excavation and dating methods.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=ANTH%20107",
+      "category": "human_context",
+      "source_id": "case-uger-courses-anth",
+      "url": "https://bulletin.case.edu/course-descriptions/anth/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-anth"
+        ],
+        "locator": "ANTH 107; current 2026–2027 course block",
+        "rationale": "The actual description centers on archaeological interpretation of human cultural development, including excavation and dating methods.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-anth-304",
       "code": "ANTH 304",
       "name": "Anthropology of Aging",
-      "description": null,
+      "description": "Aging across cultures, with attention to care, institutions, inequality and discrimination.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=ANTH%20304",
+      "category": "human_context",
+      "source_id": "case-uger-courses-anth",
+      "url": "https://bulletin.case.edu/course-descriptions/anth/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-anth"
+        ],
+        "locator": "ANTH 304; current 2026–2027 course block",
+        "rationale": "The actual description centers on aging across cultures, with attention to care, institutions, inequality and discrimination.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-arth-270",
@@ -15313,15 +15648,26 @@
       "id": "case-ba-uger-educ-336",
       "code": "EDUC 336",
       "name": "The Diverse Learner: Best Practice for Effective Classrooms",
-      "description": null,
-      "prerequisites": null,
+      "description": "Developmental and learning research applied to inclusive classrooms and adolescent learners.",
+      "prerequisites": "Prereq: EDUC 304 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=EDUC%20336",
+      "category": "applications",
+      "source_id": "case-uger-courses-educ",
+      "url": "https://bulletin.case.edu/course-descriptions/educ/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-educ"
+        ],
+        "locator": "EDUC 336; current 2026–2027 course block",
+        "rationale": "The actual description centers on developmental and learning research applied to inclusive classrooms and adolescent learners.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-engl-263",
@@ -16165,15 +16511,26 @@
       "id": "case-ba-uger-anth-324",
       "code": "ANTH 324",
       "name": "Community-Based Research in Medical Anthropology",
-      "description": null,
-      "prerequisites": null,
+      "description": "Community-based ethnographic research on substance use, including qualitative analysis and communication to partners.",
+      "prerequisites": "Prereq: Senior student status and ANTH 335 or ANTH 339 (Prereq or Coreq).",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=ANTH%20324",
+      "category": "human_context",
+      "source_id": "case-uger-courses-anth",
+      "url": "https://bulletin.case.edu/course-descriptions/anth/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-anth"
+        ],
+        "locator": "ANTH 324; current 2026–2027 course block",
+        "rationale": "The actual description centers on community-based ethnographic research on substance use, including qualitative analysis and communication to partners.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-arth-316",
@@ -16246,71 +16603,126 @@
       "id": "case-ba-uger-coop-1",
       "code": "COOP 1",
       "name": "Cooperative Education",
-      "description": null,
+      "description": "Paid engineering work experience connected to a student’s course of study.",
       "prerequisites": null,
       "credits": 0.0,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=COOP%201",
+      "source_id": "case-uger-courses-coop",
+      "url": "https://bulletin.case.edu/course-descriptions/coop/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-coop"
+        ],
+        "locator": "COOP 1; current 2026–2027 course block",
+        "rationale": "The description identifies an experience or student-selected project but does not establish its subject matter. No category is inferred from departmental affiliation, destination or engagement approval.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-coop-10",
       "code": "COOP 10",
       "name": "Cooperative Education Part-time",
-      "description": null,
-      "prerequisites": null,
+      "description": "Part-time engineering work experience for students maintaining full-time enrollment.",
+      "prerequisites": "Students must be enrolled as a full-time student to be eligible for this course. Proof of full-time enrollment is required.",
       "credits": 0.0,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=COOP%2010",
+      "source_id": "case-uger-courses-coop",
+      "url": "https://bulletin.case.edu/course-descriptions/coop/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-coop"
+        ],
+        "locator": "COOP 10; current 2026–2027 course block",
+        "rationale": "The description identifies an experience or student-selected project but does not establish its subject matter. No category is inferred from departmental affiliation, destination or engagement approval.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-edab-1",
       "code": "EDAB 1",
       "name": "Education Abroad",
-      "description": null,
+      "description": "Semester study abroad arranged through the education-abroad office.",
       "prerequisites": null,
       "credits": 0.0,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=EDAB%201",
+      "source_id": "case-uger-courses-edab",
+      "url": "https://bulletin.case.edu/course-descriptions/edab/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-edab"
+        ],
+        "locator": "EDAB 1; current 2026–2027 course block",
+        "rationale": "The description identifies an experience or student-selected project but does not establish its subject matter. No category is inferred from departmental affiliation, destination or engagement approval.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-edab-3",
       "code": "EDAB 3",
       "name": "Education Abroad Summer Term",
-      "description": null,
-      "prerequisites": null,
+      "description": "Summer study abroad requiring education-abroad office enrollment permission.",
+      "prerequisites": "Students will need to work with the Office of Education Abroad to obtain permission to enroll in this course.",
       "credits": 0.0,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=EDAB%203",
+      "source_id": "case-uger-courses-edab",
+      "url": "https://bulletin.case.edu/course-descriptions/edab/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-edab"
+        ],
+        "locator": "EDAB 3; current 2026–2027 course block",
+        "rationale": "The description identifies an experience or student-selected project but does not establish its subject matter. No category is inferred from departmental affiliation, destination or engagement approval.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-edab-11",
       "code": "EDAB 11",
       "name": "Alternate Education Abroad Program Experience",
-      "description": null,
+      "description": "Study abroad in a program outside the office’s approved list.",
       "prerequisites": null,
       "credits": 0.0,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=EDAB%2011",
+      "source_id": "case-uger-courses-edab",
+      "url": "https://bulletin.case.edu/course-descriptions/edab/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-edab"
+        ],
+        "locator": "EDAB 11; current 2026–2027 course block",
+        "rationale": "The description identifies an experience or student-selected project but does not establish its subject matter. No category is inferred from departmental affiliation, destination or engagement approval.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-edab-21",
@@ -16321,24 +16733,46 @@
       "credits": 0.0,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=EDAB%2021",
+      "source_id": "case-uger-courses-edab",
+      "url": "https://bulletin.case.edu/course-descriptions/edab/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-edab"
+        ],
+        "locator": "EDAB 21; current 2026–2027 course block",
+        "rationale": "The source gives only the Madrid first-semester program label; no substantive course description or subject is supplied.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-educ-394",
       "code": "EDUC 394",
       "name": "Student Teaching Practicum",
-      "description": null,
-      "prerequisites": null,
+      "description": "Supervised student teaching, curriculum design and reflective assessment of classroom practice.",
+      "prerequisites": "Coreq: EDUC 390 .",
       "credits": null,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=EDUC%20394",
+      "category": "applications",
+      "source_id": "case-uger-courses-educ",
+      "url": "https://bulletin.case.edu/course-descriptions/educ/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-educ"
+        ],
+        "locator": "EDUC 394; current 2026–2027 course block",
+        "rationale": "The actual description centers on supervised student teaching, curriculum design and reflective assessment of classroom practice.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-engl-307",
@@ -16600,57 +17034,101 @@
       "id": "case-ba-uger-prac-1",
       "code": "PRAC 1",
       "name": "Practicum I",
-      "description": null,
+      "description": "Mentored workplace experience supporting academic and professional development.",
       "prerequisites": null,
       "credits": 0.0,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=PRAC%201",
+      "source_id": "case-uger-courses-prac",
+      "url": "https://bulletin.case.edu/course-descriptions/prac/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-prac"
+        ],
+        "locator": "PRAC 1; current 2026–2027 course block",
+        "rationale": "The description identifies an experience or student-selected project but does not establish its subject matter. No category is inferred from departmental affiliation, destination or engagement approval.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-prac-4",
       "code": "PRAC 4",
       "name": "Practicum - Specialized Programs",
-      "description": null,
+      "description": "Mentored workplace experience within a specialized academic or career-center program.",
       "prerequisites": null,
       "credits": 0.0,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=PRAC%204",
+      "source_id": "case-uger-courses-prac",
+      "url": "https://bulletin.case.edu/course-descriptions/prac/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-prac"
+        ],
+        "locator": "PRAC 4; current 2026–2027 course block",
+        "rationale": "The description identifies an experience or student-selected project but does not establish its subject matter. No category is inferred from departmental affiliation, destination or engagement approval.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-prac-10",
       "code": "PRAC 10",
       "name": "PT Practicum",
-      "description": null,
-      "prerequisites": null,
+      "description": "Part-time mentored workplace experience supporting academic and professional development.",
+      "prerequisites": "Recommended Preparation: Completion of two semesters of coursework at CWRU.",
       "credits": 0.0,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=PRAC%2010",
+      "source_id": "case-uger-courses-prac",
+      "url": "https://bulletin.case.edu/course-descriptions/prac/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-prac"
+        ],
+        "locator": "PRAC 10; current 2026–2027 course block",
+        "rationale": "The description identifies an experience or student-selected project but does not establish its subject matter. No category is inferred from departmental affiliation, destination or engagement approval.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-prac-11",
       "code": "PRAC 11",
       "name": "Part Time Practicum Program - Specialized Programs",
-      "description": null,
-      "prerequisites": null,
+      "description": "Part-time workplace experience within a specialized academic or career-center program.",
+      "prerequisites": "Recommended Preparation: Completion of two semesters of coursework at CWRU.",
       "credits": 0.0,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=PRAC%2011",
+      "source_id": "case-uger-courses-prac",
+      "url": "https://bulletin.case.edu/course-descriptions/prac/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-prac"
+        ],
+        "locator": "PRAC 11; current 2026–2027 course block",
+        "rationale": "The description identifies an experience or student-selected project but does not establish its subject matter. No category is inferred from departmental affiliation, destination or engagement approval.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-pscl-334",
@@ -16681,15 +17159,26 @@
       "id": "case-ba-uger-veal-334",
       "code": "VEAL 334",
       "name": "Startup Lab",
-      "description": null,
-      "prerequisites": null,
+      "description": "Startup development through customer research, prototypes, testing and venture pitches.",
+      "prerequisites": "This course is open to Veale Snyder Fellowship students.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=VEAL%20334",
+      "category": "applications",
+      "source_id": "case-uger-courses-veal",
+      "url": "https://bulletin.case.edu/course-descriptions/veal/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-veal"
+        ],
+        "locator": "VEAL 334; current 2026–2027 course block",
+        "rationale": "The actual description centers on startup development through customer research, prototypes, testing and venture pitches.",
+        "candidate_categories": []
+      }
     }
   ],
   "requirements": [
@@ -19076,7 +19565,8 @@
     "Science-description review 2026-10-11: Read all26 mapped astronomy, biochemistry, biology, business-technology, chemistry and earth-science course descriptions. AI tools in BTEC398 do not establish AI algorithm-method content; its domain is organizational innovation. BIOC211/250/277 retain mixed science/human-context categories. ASTR351 publishes1–3Units and a minimum3credits for UGER capstone use; scalarcredits remain null with the range explicitly preserved. EEPS391+392 remains a whole two-course option, each2Units. Major restrictions and instructor consent remain conditional eligibility, not extra fixed degree courses. Full correctness audit remains in progress.",
     "Health-description review 2026-10-11: Read all 37 mapped nutrition, nursing and psychology descriptions. Mixed public-health science/policy courses remain other with explicit candidate categories; PSCL395 stays unclassified because its independent research topic is unspecified. PSCL282/375 are statistical methods, not AI. Source-stated nutrition-major and nursing prerequisites remain exact conditional eligibility. NURS277 has known zero credits. Missing prerequisite statements remain null. Full correctness audit remains in progress.",
     "Social-science description review 2026-10-11: Read all 36 mapped political-science and 32 sociology descriptions. SOCI307 is statistical methods; SOCI313 focuses on stress/coping health practice; SOCI267 retains mixed scientific and social content. Political and sociological analysis uses human_context only where supported by the actual body. POSC396 preserves junior/senior political-science-major eligibility and faculty approval; credit exclusions do not create identity groups. All 68 summaries are original paraphrases guarded by exact source-body digests.",
-    "Professional-course description review 2026-10-11: Read 40 engineering, accounting, entrepreneurship, management and organizational-behavior descriptions. Engineering laboratory pairs retain their whole-sequence DC conditions. MGMT395 requires three sections under the UGER table; the requirement summary now preserves this rule independently of its shortened course title, and the description preserves no repeat credit for the same topic. AI-assisted investing and quantum leadership are not AI/computing subject evidence. EMAE398 remains unclassified because the project topic is unspecified. Major restrictions, senior standing, fractional amounts and recommended preparation remain explicit."
+    "Professional-course description review 2026-10-11: Read 40 engineering, accounting, entrepreneurship, management and organizational-behavior descriptions. Engineering laboratory pairs retain their whole-sequence DC conditions. MGMT395 requires three sections under the UGER table; the requirement summary now preserves this rule independently of its shortened course title, and the description preserves no repeat credit for the same topic. AI-assisted investing and quantum leadership are not AI/computing subject evidence. EMAE398 remains unclassified because the project topic is unspecified. Major restrictions, senior standing, fractional amounts and recommended preparation remain explicit.",
+    "Anthropology/experience description review 2026-10-11: Read 19 anthropology and 17 experiential/education course blocks. Student-selected research, placements and study-abroad experiences retain other/unclassified where their actual subject is unspecified; EDAB21 provides no substantive description beyond its program label. DESN210 is foundational Python programming, ANTH319 is statistics, and ANTH103 is biological evolution. The former two remain distinct from department-wide subject assumptions. All ten zero-credit placement/abroad records retain known zero; EDUC394 retains its 3–9Unit range with a null scalar. Fellowship, enrollment, advance-consent and capstone companion-course rules remain explicit."
   ],
   "curriculum_audit": {
     "scope": "degree",
