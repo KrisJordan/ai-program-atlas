@@ -39,3 +39,7 @@ Instructor-linked public CS 2000 site explicitly covers Fall 2026 Boston/Oakland
 ## Partner-course description review — 2026-10-11
 
 Partner-course description review (2026-10-11): 1 existing course observations gain original guarded summaries of their official 2026–2027 descriptions. Topics courses retain offering variability. Course activities and aims are not promoted to assessed program outcomes, and placement in an alternative or elective group is unchanged. Existing registered subject parsers apply the new summaries only when the current scoped course description retains its reviewed evidence phrase; otherwise the observation description remains null. Credits, prerequisites, public resources and requirement graphs are unchanged.
+
+## Finite description inventory closure — 2026-10-11
+
+Finite course-description review complete (2026-10-11): all 34 currently listed course observations have source-backed original summaries. This closes the listed-course description queue only. Other offering-specific public sites/syllabi remain unreviewed, null preparation fields do not mean no restriction, and degree completeness remains partial pending the documented applicability boundaries.

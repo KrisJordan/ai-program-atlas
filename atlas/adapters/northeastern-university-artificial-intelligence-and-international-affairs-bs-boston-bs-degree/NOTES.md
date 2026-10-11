@@ -71,3 +71,7 @@ History Africana and sociology alternatives description review (2026-10-11): 43 
 ## Anthropology languages and regional alternatives descriptions — 2026-10-11
 
 Anthropology languages and regional alternatives description review (2026-10-11): 27 existing course observations gain original concise summaries of their official 2026–2027 descriptions. Offering variability, course activities and permission conditions retain their stated scope. Requirement choices, credits, preparation fields and public resource links remain unchanged. Live subject parsers require the reviewed evidence phrase in the scoped course description; unsupported summaries return null. No seed replay or freshness certification.
+
+## Finite description inventory closure — 2026-10-11
+
+Finite course-description review complete (2026-10-11): all 180 currently listed course observations have source-backed original summaries. This closes the listed-course description queue only. Other offering-specific public sites/syllabi remain unreviewed, null preparation fields do not mean no restriction, and degree completeness remains partial pending the documented applicability boundaries.

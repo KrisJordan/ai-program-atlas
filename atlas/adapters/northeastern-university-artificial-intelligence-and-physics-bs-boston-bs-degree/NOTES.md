@@ -45,3 +45,7 @@ Partner-course description review (2026-10-11): 1 existing course observations g
 ## Science/engineering descriptions — 2026-10-11
 
 Science/engineering description review (2026-10-11): 15 existing course observations gain original guarded summaries of official 2026–2027 descriptions. Laboratories, zero-hour recitations and alternative course sequences remain distinct records. Varying seminar topics retain that limitation. No course-level aim is promoted to a program outcome. Existing subject parsers validate the current scoped course block before returning the guarded summary. No change to credits, prerequisites, public resource URLs, family binding or requirements.
+
+## Finite description inventory closure — 2026-10-11
+
+Finite course-description review complete (2026-10-11): all 49 currently listed course observations have source-backed original summaries. This closes the listed-course description queue only. Other offering-specific public sites/syllabi remain unreviewed, null preparation fields do not mean no restriction, and degree completeness remains partial pending the documented applicability boundaries.
