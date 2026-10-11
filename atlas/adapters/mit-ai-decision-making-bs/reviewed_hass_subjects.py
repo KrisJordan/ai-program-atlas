@@ -622,3 +622,45 @@ def observe_concourse_subject(html):
     return [dict(code=code, name=clean(title), term=None, description=description,
                  prerequisites=prep.group(1).strip() if prep else None,
                  units=units.group(1) if units else None, source_text=text)]
+
+
+def observe_wgs_archive_detail(html):
+    """Read historical WGS details from visible year/term labels, not URL slugs."""
+    soup = BeautifulSoup(html, 'html.parser')
+    title = clean(soup.select_one('h1.entry-title'))
+    match = re.fullmatch(r'(WGS\.[\w]+)\s+(.+)', title)
+    blocks = soup.select('.blog-item-content .sqs-html-content')
+    years = {clean(a) for a in soup.find_all('a', href=True)
+             if '/wgs-courses/category/' in a['href'] and re.fullmatch(r'\d{4}-\d{4}', clean(a))}
+    terms = {clean(a) for a in soup.find_all('a', href=True)
+             if '/wgs-courses/tag/' in a['href'] and clean(a) in ['Fall', 'Spring', 'IAP', 'Summer']}
+    if match is None or not blocks or len(years) != 1 or len(terms) != 1:
+        raise ValueError('WGS archive identity, body or visible year/term changed')
+    source_text = ' '.join(clean(b) for b in blocks)
+    topic_context = [clean(h) for b in blocks for h in b.find_all(['h2', 'h3'])]
+    metadata_blocks = [em for b in blocks for em in b.find_all('em') if 'Units:' in clean(em)]
+    if len(metadata_blocks) != 1:
+        raise ValueError('WGS archive metadata structure changed')
+    metadata = clean(metadata_blocks[0])
+    units = re.search(r'Units:\s*(\d+-\d+-\d+)', metadata)
+    if units is None:
+        raise ValueError('WGS archive numeric unit statement missing')
+    prep = re.search(r'Prereq:\s*(.+?)(?=\s+Units:|$)', metadata)
+    metadata_blocks[0].decompose()
+    # Reviewed pages place metadata in italics and instructor credits in strong.
+    # Retain the entire original text in the pinned observation so no change to
+    # exclusions, attribution or ancillary fields silently reuses this review.
+    paragraphs = []
+    for b in blocks:
+        for p in b.find_all('p'):
+            for node in p.find_all(['em', 'strong']):
+                node.decompose()
+            if clean(p):
+                paragraphs.append(clean(p))
+    description = ' '.join(paragraphs)
+    if len(description) < 100:
+        raise ValueError('WGS archive substantial description missing')
+    return [dict(code=match[1], name=match[2], term=next(iter(terms))+' '+next(iter(years)),
+                 description=description, units=units[1], source_text=source_text,
+                 source_metadata=metadata, topic_context=topic_context,
+                 prerequisites=prep[1].strip() if prep else None)]

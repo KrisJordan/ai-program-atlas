@@ -215,7 +215,7 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']['description_reviewed_records']==395
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==414
     assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
         o=next(o for o in entry(code)['observations'] if o.get('evidence_basis')=='official_title_only')
@@ -848,7 +848,9 @@ def test_anthropology_ocw_historical_nine_units_and_nonmerged_renumbered_courses
     assert tech['category']=='human_context'
     meaning=entry('21A.157')['observations'][-1]
     assert meaning['evidence_basis']=='official_description' and meaning['category']=='human_context'
-    assert entry('21A.504J')['observations'][-1]['evidence_basis']=='official_title_only'
+    # Historical OCW renumbering remains unproven; a later WGS page explicitly
+    # prints21A.504J and supplies independent, dated description evidence.
+    assert not any('ocw-' in o['source_id'] and o.get('evidence_basis')=='official_description' for o in entry('21A.504J')['observations'])
     assert entry('21A.508')['observations'][-1]['evidence_basis']=='official_title_only'
 
 
@@ -1385,3 +1387,42 @@ def test_concourse_actual_pages_replay_and_changed_eligibility_withdraws():
         assert review.matched_review(course,o,e['source_url'],MANIFEST)==e
         assert review.matched_review(course,{**o,'source_text':o['source_text']+' Eligibility changed.'},e['source_url'],MANIFEST) is None
         assert review.matched_review(course,{**o,'prerequisites':'Permission required'},e['source_url'],MANIFEST) is None
+
+
+def test_wgs_archive_observer_reads_visible_term_and_split_description_fields():
+    raw='''<h1 class="entry-title">WGS.142 Narrative and Identity</h1>
+    <a href="/wgs-courses/category/2023-2024">2023-2024</a><a href="/wgs-courses/tag/Spring">Spring</a>
+    <div class="blog-item-content"><div class="sqs-html-content"><h2>Specific literary topic</h2></div>
+    <div class="sqs-html-content"><p><em>HASS-H<br>Prereq: None<br>Units: 3-0-9<br>Room: 1</em>
+    Examines literary voices in historical and social context, with readings of poetry and fiction and discussion of identity, family and power.
+    <strong><em>Instructor name</em></strong></p></div></div>'''
+    o=review.observe_wgs_archive_detail(raw)[0]
+    assert o['term']=='Spring 2023-2024' and o['prerequisites']=='None'
+    assert o['topic_context']==['Specific literary topic'] and o['units']=='3-0-9'
+    assert 'Instructor name' not in o['description'] and 'Instructor name' in o['source_text']
+    with pytest.raises(ValueError):review.observe_wgs_archive_detail(raw.replace('/wgs-courses/category/','/not-a-year-category/'))
+    with pytest.raises(ValueError):review.observe_wgs_archive_detail(raw.replace('Units:','Credits:'))
+    report=MANIFEST['wgs_archive_review']
+    assert len(report['upgraded_record_ids'])==19 and len(report['source_ids'])==12
+    e=entry('WGS.243')['observations'][-1]
+    assert e['status']=='mixed' and e['candidate_categories']==['foundations','human_context']
+    assert e['prerequisites'] is None and any('helpful but not required' in n for n in e['restrictions'])
+    assert entry('WGS.228')['observations'][-1]['credits']==12
+    assert report['withheld_description_reads'][0]['observed_code']=='WGS.231'
+    for c in MANIFEST['courses'].values():
+        if c['review_status']=='source_conflict':
+            assert not any(o['source_id'] in report['source_ids'] for o in c['observations'])
+
+
+def test_wgs_archive_actual_pages_replay_and_do_not_transfer_terms_or_topics():
+    report=MANIFEST['wgs_archive_review']
+    for cid in report['upgraded_record_ids']:
+        row=MANIFEST['courses'][cid];e=row['observations'][-1]
+        key=e['source_id'].removeprefix('mit-ai-hass-review-wgs-archive-')
+        path=Path('/tmp/mit-hass-subjects/wgs-archive-'+key+'.html')
+        if not path.exists():pytest.skip('Optional public historical WGS detail captures')
+        o=review.observe_wgs_archive_detail(path.read_text())[0]
+        course=dict(id=cid,code=row['listed_code'],name=row['listed_name'],source_id=row['listed_source_id'])
+        assert review.matched_review(course,o,e['source_url'],MANIFEST)==e
+        for wrong in [{**o,'term':'Fall 2026-2027'},{**o,'topic_context':['Different topic']},{**o,'description':o['description']+' Changed.'},{**o,'source_metadata':o['source_metadata']+' Prereq: Permission'}]:
+            assert review.matched_review(course,wrong,e['source_url'],MANIFEST) is None
