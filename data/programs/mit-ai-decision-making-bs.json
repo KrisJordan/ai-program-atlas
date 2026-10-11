@@ -1145,6 +1145,26 @@
       "catalog_year": "Fall2026",
       "locator": "Guarded actual course panel; exact term retained in course notes",
       "confidence": "high"
+    },
+    {
+      "id": "mit-ai-decision-making-bs-science-advising",
+      "url": "https://firstyear.mit.edu/academics-exploration/general-institute-requirements-girs/science-core/",
+      "title": "Science Core \u2014 Office of the First Year",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Physics advising sections",
+      "confidence": "high"
+    },
+    {
+      "id": "mit-ai-decision-making-bs-calculus-public-syllabus",
+      "url": "https://canvas.mit.edu/courses/39048/assignments/syllabus",
+      "title": "Syllabus for 18.01L Calculus",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": "Fall Term AY2026\u20132027",
+      "locator": "Public course syllabus body and term",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -2985,16 +3005,31 @@
     {
       "id": "mit-ai-gir-18-01l",
       "code": "18.01L",
-      "name": null,
-      "description": null,
+      "name": "Calculus",
+      "description": "Calculus course with an emphasis on accessible mathematical learning; the public page gives meeting information and grading weights.",
       "prerequisites": null,
       "credits": 12.0,
       "credit_unit": "units",
       "category": "mathematics",
       "source_id": "mit-ai-decision-making-bs-gir",
       "url": "https://catalog.mit.edu/mit/undergraduate-education/general-institute-requirements/#sciencerequirementtext",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://canvas.mit.edu/courses/39048/assignments/syllabus",
+      "syllabus": "https://canvas.mit.edu/courses/39048/assignments/syllabus",
+      "notes": [
+        "Public Canvas syllabus page verified for Fall Term AY2026\u20132027. The page links a separate Course Syllabus document, which has not been read; detailed topics, prerequisites and credit amounts are not inferred from the welcome text. The public course page is accessible without login."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-gir",
+          "mit-ai-decision-making-bs-calculus-public-syllabus"
+        ],
+        "locator": "18.01L in actual advising section/public course body",
+        "rationale": "The actual public course page explicitly identifies calculus; this is a bounded subject identification, not a full topic-by-topic syllabus review.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-gir-18-02",
@@ -3037,7 +3072,8 @@
       "syllabus": null,
       "notes": [
         "The paired sequence requires fall registration for both subjects and continued18.02A registration in IAP or spring; full subject credit is12 units, distinct from split term-load accounting.",
-        "First-year completion in IAP is described as Pass/NoRecord; completion in spring as ABC/NoRecord, subject to current institute policy."
+        "First-year completion in IAP is described as Pass/NoRecord; completion in spring as ABC/NoRecord, subject to current institute policy.",
+        "The first-year advising page limits its 18.02A route to students who successfully complete 18.01A in the first half of fall. The mathematics department also states general prerequisite equivalence across forms of 18.01; that general statement does not waive the specific sequence condition."
       ],
       "category_review": {
         "status": "reviewed",
@@ -3080,72 +3116,145 @@
     {
       "id": "mit-ai-gir-8-01",
       "code": "8.01",
-      "name": null,
-      "description": null,
+      "name": "Physics I",
+      "description": "Introductory classical mechanics taught through technology-enabled active learning.",
       "prerequisites": null,
       "credits": 12.0,
       "credit_unit": "units",
-      "category": "foundations",
+      "category": "applications",
       "source_id": "mit-ai-decision-making-bs-gir",
       "url": "https://catalog.mit.edu/mit/undergraduate-education/general-institute-requirements/#sciencerequirementtext",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://firstyear.mit.edu/academics-exploration/general-institute-requirements-girs/science-core/",
+      "syllabus": null,
+      "notes": [
+        "Placement depends on the first-year Math Skills Assessment."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-gir",
+          "mit-ai-decision-making-bs-science-advising"
+        ],
+        "locator": "8.01 in actual advising section/public course body",
+        "rationale": "The actual first-year advising section describes classical mechanics or electricity and magnetism; the subject is a physical-science application/domain, not computing foundations or AI methods.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-gir-8-01l",
       "code": "8.01L",
       "name": null,
-      "description": null,
+      "description": "The longer classical-mechanics route covers the same material and depth as8.01, extending through January IAP.",
       "prerequisites": null,
       "credits": 12.0,
       "credit_unit": "units",
-      "category": "foundations",
+      "category": "applications",
       "source_id": "mit-ai-decision-making-bs-gir",
       "url": "https://catalog.mit.edu/mit/undergraduate-education/general-institute-requirements/#sciencerequirementtext",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://firstyear.mit.edu/academics-exploration/general-institute-requirements-girs/science-core/",
+      "syllabus": null,
+      "notes": [
+        "Offered in fall with IAP completion in the advising description; intended for first-year students with little calculus-based physics. Concurrent Calculus I is recommended; this wording does not establish a formal co-requisite."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-gir",
+          "mit-ai-decision-making-bs-science-advising"
+        ],
+        "locator": "8.01L in actual advising section/public course body",
+        "rationale": "The actual first-year advising section describes classical mechanics or electricity and magnetism; the subject is a physical-science application/domain, not computing foundations or AI methods.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-gir-8-011",
       "code": "8.011",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
+      "name": "Physics I",
+      "description": "Spring classical-mechanics version covering the same material as8.01 for students who did not pass the fall course.",
+      "prerequisites": "For students who do not pass 8.01 in the fall.",
       "credits": 12.0,
       "credit_unit": "units",
-      "category": "foundations",
+      "category": "applications",
       "source_id": "mit-ai-decision-making-bs-gir",
       "url": "https://catalog.mit.edu/mit/undergraduate-education/general-institute-requirements/#sciencerequirementtext",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://firstyear.mit.edu/academics-exploration/general-institute-requirements-girs/science-core/",
+      "syllabus": null,
+      "notes": [
+        "Conditional repeat route; not a new fixed subject for every student."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-gir",
+          "mit-ai-decision-making-bs-science-advising"
+        ],
+        "locator": "8.011 in actual advising section/public course body",
+        "rationale": "The actual first-year advising section describes classical mechanics or electricity and magnetism; the subject is a physical-science application/domain, not computing foundations or AI methods.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-gir-8-012",
       "code": "8.012",
       "name": null,
-      "description": null,
+      "description": "A deeper classical-mechanics route for students with strong physics and mathematics preparation, including more demanding problem sets.",
       "prerequisites": null,
       "credits": 12.0,
       "credit_unit": "units",
-      "category": "foundations",
+      "category": "applications",
       "source_id": "mit-ai-decision-making-bs-gir",
       "url": "https://catalog.mit.edu/mit/undergraduate-education/general-institute-requirements/#sciencerequirementtext",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://firstyear.mit.edu/academics-exploration/general-institute-requirements-girs/science-core/",
+      "syllabus": null,
+      "notes": [
+        "Students already holding8.01 credit who take8.012 receive six elective units. This conditional repeat-credit rule does not replace the regular GIR course-credit observation. AP/ASE preparation is described as intended background, not a universal admission prerequisite."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-gir",
+          "mit-ai-decision-making-bs-science-advising"
+        ],
+        "locator": "8.012 in actual advising section/public course body",
+        "rationale": "The actual first-year advising section describes classical mechanics or electricity and magnetism; the subject is a physical-science application/domain, not computing foundations or AI methods.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-gir-8-02",
       "code": "8.02",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
+      "name": "Physics II",
+      "description": "Introductory electricity and magnetism using technology-enabled active learning.",
+      "prerequisites": "Credit for both 8.01 and 18.01 (Calculus I).",
       "credits": 12.0,
       "credit_unit": "units",
-      "category": "foundations",
+      "category": "applications",
       "source_id": "mit-ai-decision-making-bs-gir",
       "url": "https://catalog.mit.edu/mit/undergraduate-education/general-institute-requirements/#sciencerequirementtext",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://firstyear.mit.edu/academics-exploration/general-institute-requirements-girs/science-core/",
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-gir",
+          "mit-ai-decision-making-bs-science-advising"
+        ],
+        "locator": "8.02 in actual advising section/public course body",
+        "rationale": "The actual first-year advising section describes classical mechanics or electricity and magnetism; the subject is a physical-science application/domain, not computing foundations or AI methods.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-gir-8-021",
@@ -3155,25 +3264,55 @@
       "prerequisites": null,
       "credits": 12.0,
       "credit_unit": "units",
-      "category": "foundations",
+      "category": "other",
       "source_id": "mit-ai-decision-making-bs-gir",
       "url": "https://catalog.mit.edu/mit/undergraduate-education/general-institute-requirements/#sciencerequirementtext",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-gir",
+          "mit-ai-decision-making-bs-science-advising"
+        ],
+        "locator": "Physics II advising section; 8.021 absent",
+        "rationale": "The represented GIR table supplies a code, but the current public advising page does not describe8.021. The ordinary Course8 catalog response contains no description blocks and the department robots request returned403. No title or subject classification is inferred from the course-number family.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "Current advising source describes six other physics variants, not8.021; full title, description and prerequisites remain unknown."
+      ]
     },
     {
       "id": "mit-ai-gir-8-022",
       "code": "8.022",
       "name": null,
-      "description": null,
+      "description": "The more mathematically advanced electricity-and-magnetism route, intended for students with a strong physics and mathematics background.",
       "prerequisites": null,
       "credits": 12.0,
       "credit_unit": "units",
-      "category": "foundations",
+      "category": "applications",
       "source_id": "mit-ai-decision-making-bs-gir",
       "url": "https://catalog.mit.edu/mit/undergraduate-education/general-institute-requirements/#sciencerequirementtext",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://firstyear.mit.edu/academics-exploration/general-institute-requirements-girs/science-core/",
+      "syllabus": null,
+      "notes": [
+        "Fall and spring offerings are stated in the advising page; formal prerequisite details are not supplied there."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-gir",
+          "mit-ai-decision-making-bs-science-advising"
+        ],
+        "locator": "8.022 in actual advising section/public course body",
+        "rationale": "The actual first-year advising section describes classical mechanics or electricity and magnetism; the subject is a physical-science application/domain, not computing foundations or AI methods.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-v2025-18-404",
@@ -38804,6 +38943,48 @@
       "source_text": null,
       "summary": "Greek21L.607 and608 may combine after both are completed as one HASS-H. Latin21L.613+614, or two terms of614, may combine by petition after completion as one HASS-H;614 may be repeated once only if content differs. Separate six-unit subject records remain distinct and are not each treated as a full twelve-unit HASS subject.",
       "course_ids": []
+    },
+    {
+      "id": "mit-ai-gir-advising-8-01",
+      "parent_id": null,
+      "title": "Conditional Physics I routes",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "mit-ai-decision-making-bs-science-advising",
+      "source_text": null,
+      "summary": "Physics I placement uses the Math Skills Assessment. The longer8.01L route continues through IAP, with concurrent Calculus I recommended. Spring8.011 is for students who did not pass fall8.01. The deeper8.012 route is intended for stronger preparation; students already holding8.01 credit receive six elective units for8.012 rather than a new twelve-unit GIR credit. Intended preparation and recommendations are not silently formal prerequisites.",
+      "course_ids": []
+    },
+    {
+      "id": "mit-ai-gir-advising-8-02",
+      "parent_id": null,
+      "title": "Conditional Physics II routes",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "mit-ai-decision-making-bs-science-advising",
+      "source_text": null,
+      "summary": "The first-year advising page requires credit in Physics I8.01 and Calculus I18.01 before enrolling in8.02. It presents8.022 as a more mathematically advanced Physics II alternative for stronger preparation; the page does not supply that variant's full formal prerequisite statement.",
+      "course_ids": []
+    },
+    {
+      "id": "mit-ai-gir-advising-accelerated-calculus",
+      "parent_id": null,
+      "title": "First-year accelerated calculus sequence eligibility",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "mit-ai-decision-making-bs-science-advising",
+      "source_text": null,
+      "summary": "The first-year advising page limits its 18.02A route to students who successfully complete 18.01A in the first half of fall. The mathematics department also states general prerequisite equivalence across forms of 18.01; that general statement does not waive the specific sequence condition.",
+      "course_ids": []
     }
   ],
   "notes": [
@@ -38830,7 +39011,8 @@
     "Historical checkpoint, superseded by the current Music/Theater review below: 2026-10-11 transport correction: a network-enabled ordinary Fetcher successfully read both newly linked Music/Theater homepages under normal robots/TLS checks. The previously reported generic ConnectError did not establish a publisher access barrier. Both remaining local concentration inventories are now accessible-unreviewed, with exact linked degree-requirement URLs recorded in the audit.",
     "2026-10-11 current Music/Theater follow-up: both linked requirement pages returned HTTP 200 through approved-network normal robots/TLS checks. Both concentration tabs are mapped as conditional open plans, not major/minor inventories. Music has six optional introductions and a title-unstated 21M.223J seminar observation; Theater states three to four 9\u201312-unit courses, minimum 36 credits (normalized unit unknown), and up to nine practicum units. All 43 HASS fields now have reviewed local rules: 39 mapped and four source questions. Earlier access chronology is historical; degree/cohort and source conflicts keep the degree partial.",
     "2026-10-11 correctness pass: the fixed versioned6.1010 and6.1210 are computing foundations from actual descriptions. Their separate unversioned occurrences retain independent provenance. All261 versioned subject dispositions and248 unit totals are reviewed; prerequisites are conditional entry requirements, not extra fixed courses. Course/cohort conflicts remain explicit.",
-    "2026-10-11 HASS correctness contribution:70 actual-description records integrated from24 inspected departmental sources. Seven identity/version holds and two conflicting WGS231 observations remain unmerged;766 records remain under active review. No course receives a new fixed role from metadata enrichment."
+    "2026-10-11 HASS correctness contribution:70 actual-description records integrated from24 inspected departmental sources. Seven identity/version holds and two conflicting WGS231 observations remain unmerged;766 records remain under active review. No course receives a new fixed role from metadata enrichment.",
+    "2026-10-11: six Physics GIR records now have current official advising descriptions and conditional placement/repeat rules;8.021 remains unclassified after a bounded source review. The ordinary linked18.01L Canvas course and syllabus page are public for Fall2026, with a bounded calculus description and grading information. A separately linked syllabus document remains unread; no private material or denied catalog path was accessed."
   ],
   "curriculum_audit": {
     "scope": "degree",
@@ -38963,7 +39145,8 @@
       "GIR science tables provide codes and units without titles; those names stay unknown.",
       "Versioned observations supply248 prerequisite fields and MIT-unit totals. All261 versioned records have manual subject dispositions;13 exact annotations are absent and nine generic special-topic descriptions do not establish content. HASS and separate chart/GIR records remain under their own correctness review; public course sites/syllabi remain separate metadata gaps.",
       "The 6.4300 conflict remains an unknown credit amount; ranges remain ranges and the academic calendar remains unverified.",
-      "Additional HASS field listings generally omit subject units, prerequisites and descriptions; only explicitly stated six-unit subjects receive credits. Printed cross-list codes and dated/historical titles are preserved as source observations, not verified current offerings or repaired catalog identities."
+      "Additional HASS field listings generally omit subject units, prerequisites and descriptions; only explicitly stated six-unit subjects receive credits. Printed cross-list codes and dated/historical titles are preserved as source observations, not verified current offerings or repaired catalog identities.",
+      "All20 represented GIR records have a manual disposition:19 have some actual departmental/advising content, including the brief18.01L public welcome;8.021 remains unclassified. Full formal prerequisites and detailed descriptions remain unknown where the inspected sources omit them."
     ]
   },
   "course_identity_groups": [

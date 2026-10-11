@@ -28,7 +28,9 @@ def test_gir_science_domain_and_math_have_distinct_conditional_evidence():
     assert by['7.015']['name']is None and by['7.015']['category']=='applications'
     assert any('70'in n and'60'in n for n in by['7.015']['notes'])
     assert any('three general-elective'in n for n in by['18.01A']['notes'])
-    assert 'category_review'not in by['18.01L']  # absent from inspected departmental calculus page
+    # Separate public Fall2026 course evidence now supplies this earlier gap.
+    assert by['18.01L']['category']=='mathematics'
+    assert by['18.01L']['syllabus'].endswith('/courses/39048/assignments/syllabus')
 
 
 def test_actual_cached_gir_sources_replay_without_new_review():

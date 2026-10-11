@@ -19,6 +19,8 @@ def test_science_choices_and_metadata_missingness():
     choices = [r for r in d['requirements'] if r['kind'] == 'choose_courses']
     assert len(choices) == 6 and all(r['count'] == 1 for r in choices)
     assert all(c['name'] is None and c['credits'] == 12 for c in d['courses'])
+    # The bare GIR table has no content review; science is not computing foundations.
+    assert all(c['category'] == 'other' for c in d['courses'])
     assert {c['code'] for c in d['courses']} == {'7.012', '3.091', '18.01', '18.02', '8.01', '8.02'}
     assert not {'curriculum_status', 'curriculum_audit', 'last_verified'} & d.keys()
 
