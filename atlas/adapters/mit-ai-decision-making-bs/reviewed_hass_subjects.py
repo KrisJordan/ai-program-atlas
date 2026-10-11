@@ -693,3 +693,20 @@ def observe_dlab_course(html):
     return [dict(code=fields['Course #'], name=title, term=None,
                  description=description, prerequisites=clean(prep),
                  units=fields['Units (credit hours)'], source_fields=fields)]
+
+
+def observe_sts_department_detail(html):
+    """Read actual STS descriptions; a schedule/eligibility-only entry is insufficient."""
+    soup = BeautifulSoup(html, 'html.parser')
+    body = soup.select_one('article.sts_subject .academic-content .entry-content')
+    paragraphs = [clean(p) for p in body.find_all('p') if clean(p)] if body else []
+    match = re.fullmatch(r'(STS\.\d{3}J?)\s+(.+)', paragraphs[0]) if paragraphs else None
+    if match is None or len(paragraphs) < 3:
+        raise ValueError('STS detail subject/description fields missing')
+    term = re.search(r'\b(Spring|Fall|IAP|Summer) \d{4}\b', paragraphs[1])
+    units = re.search(r'(\d+-\d+-\d+) [Uu]nits', paragraphs[1])
+    description = ' '.join(paragraphs[2:])
+    if term is None or units is None or not re.search(r'This course will focus|Develops students[’\u0027] abilities', description):
+        raise ValueError('STS dated actual description missing; schedule or eligibility only')
+    return [dict(code=match[1], name=match[2], term=term[0], units=units[1],
+                 prerequisites=None, description=description, source_text=clean(body))]

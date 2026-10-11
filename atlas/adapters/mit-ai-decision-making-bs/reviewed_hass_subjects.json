@@ -28202,11 +28202,37 @@
           ],
           "approved_for_integration": true,
           "identity_note": "Exact numbered subject and corresponding title/content manually reviewed; joint-subjectJ formatting retained. Composite target labels must explicitly contain the observed number. No different-code title substitution, renamed-content inference or alias group created."
+        },
+        {
+          "observed_code": "STS.034",
+          "observed_name": "Science Communication: A Practical Guide",
+          "evidence_basis": "official_description",
+          "description_summary": "Develops critical and practical science communication for diverse and polarized publics through varied media, culminating in a public communication project at the MIT Museum.",
+          "description_digest": "5bb94b5d1bd77c3199bf15a7e9734969fc54cf1742bb6469769df8d2dd619ab9",
+          "observation_digest": "82084dec3283b3df38622237e86c962db542e8f184e1b4ec3a673c7a8ae42eb3",
+          "source_id": "mit-ai-hass-review-sts-department-sts034",
+          "source_url": "https://sts-program.mit.edu/academics/subjects/sts034-sp25/",
+          "catalog_year": "Spring 2025",
+          "locator": "Actual subject heading / dated metadata / full course-content paragraphs",
+          "prerequisites": null,
+          "units_text": "3-0-9",
+          "credits": 12,
+          "credit_unit": "units",
+          "unit_rule_source_url": "https://catalog.mit.edu/subjects/",
+          "category": "human_context",
+          "status": "reviewed",
+          "rationale": "Actual description teaches rhetorical communication and public engagement rather than scientific methods or computing implementation.",
+          "candidate_categories": [],
+          "restrictions": [
+            "Dated Spring 2025course evidence, not a guarantee of future availability. Formal prerequisites are not printed.",
+            "Enrollment limited; no numeric cap is printed. Final science-communication project is presented at the MIT Museum. AI is listed as one possible communication medium, not evidence of AI-method instruction."
+          ],
+          "approved_for_integration": true,
+          "identity_note": "Exact numbered subject with manually reviewed corresponding title. Preserve source-specific term and title; no special-subject-number or cross-list identity merge."
         }
       ],
       "missingness": [
-        "No unit amount printed in reviewed description evidence.",
-        "No prerequisite statement printed in this observation; this does not mean no prerequisites."
+        "Formal prerequisites not printed."
       ]
     },
     "mit-ai-hass-sts-tier-2-sts-035": {
@@ -29157,10 +29183,39 @@
           "restrictions": [],
           "approved_for_integration": true,
           "identity_note": "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+        },
+        {
+          "observed_code": "STS.066",
+          "observed_name": "Discards, Technologies, and Everyday Ecologies",
+          "evidence_basis": "official_description",
+          "description_summary": "Studies discarded materials and processes through social sciences and humanities, examining consumption, citizenship, inequality, global movements, memory and political or artistic practices.",
+          "description_digest": "eeaf10aecf17b602276c2deae03795460c4279e9136317a66401848a5b746054",
+          "observation_digest": "5b15aa8e6198e032c70b62a38dc700fe184ac4d335099a8b6856eb67cefa6170",
+          "source_id": "mit-ai-hass-review-sts-department-sts066",
+          "source_url": "https://sts-program.mit.edu/academics/subjects/sts066-sp26/",
+          "catalog_year": "Spring 2026",
+          "locator": "Actual subject heading / dated metadata / full course-content paragraphs",
+          "prerequisites": null,
+          "units_text": "3-0-9",
+          "credits": 12,
+          "credit_unit": "units",
+          "unit_rule_source_url": "https://catalog.mit.edu/subjects/",
+          "category": "human_context",
+          "status": "reviewed",
+          "rationale": "Actual description explicitly frames social-science/humanities inquiry into discarding, power and society, not environmental engineering or material processing.",
+          "candidate_categories": [],
+          "restrictions": [
+            "Dated Spring 2026course evidence, not a guarantee of future availability. Formal prerequisites are not printed.",
+            "Active participation in class activities and discussions is expected.",
+            "Original tier title uses Technology; actual numbered Spring2026description uses Technologies. Both exact labels are preserved; the minor grammatical variation is manually attributed.",
+            "The separately observed Spring2025special-topic STS.S20schedule is marked canceled. No identity equivalence to that special subject, or claim that it ran, is made."
+          ],
+          "approved_for_integration": true,
+          "identity_note": "Exact numbered subject with manually reviewed corresponding title. Preserve source-specific term and title; no special-subject-number or cross-list identity merge."
         }
       ],
       "missingness": [
-        "Title-only review; description, prerequisites and credits remain unknown."
+        "Formal prerequisites not printed."
       ]
     },
     "mit-ai-hass-sts-tier-2-sts-074j": {
@@ -39694,6 +39749,24 @@
       "fetched_at": "2026-10-11T08:00:05+00:00",
       "body_sha256": "9392f059b59810985c929bedd4b5321764b1d0d54e78f378a530f5f3b06309b1",
       "capture_method": "robots_aware_public_http"
+    },
+    "mit-ai-hass-review-sts-department-sts034": {
+      "url": "https://sts-program.mit.edu/academics/subjects/sts034-sp25/",
+      "title": "MIT STS / STS.034 / Science Communication: A Practical Guide",
+      "catalog_year": "Spring 2025",
+      "parser": "sts_department_detail",
+      "fetched_at": "2026-10-11T08:03:59+00:00",
+      "body_sha256": "44dbbdc607c7dea9adf0d3c077bb6336a2557c575138289a0bb2e60e87462951",
+      "capture_method": "robots_aware_public_http"
+    },
+    "mit-ai-hass-review-sts-department-sts066": {
+      "url": "https://sts-program.mit.edu/academics/subjects/sts066-sp26/",
+      "title": "MIT STS / STS.066 / Discards, Technologies, and Everyday Ecologies",
+      "catalog_year": "Spring 2026",
+      "parser": "sts_department_detail",
+      "fetched_at": "2026-10-11T08:04:04+00:00",
+      "body_sha256": "e2f88d35e68ac17f38180785513b7b6313d812416d384885f9ad1714ffbc2192",
+      "capture_method": "robots_aware_public_http"
     }
   },
   "source_checks": [
@@ -40645,8 +40718,8 @@
     "pending": 58
   },
   "evidence_counts": {
-    "description_reviewed_records": 415,
-    "title_only_reviewed_records": 347,
+    "description_reviewed_records": 416,
+    "title_only_reviewed_records": 346,
     "code_only_unknown_records": 3
   },
   "scope_notes": [
@@ -41886,5 +41959,39 @@
     "public_navigation_pages_read": 3,
     "public_detail_pages_read": 1,
     "remaining_action": "DUSP Subjects page explicitly lists only special/occasional subjects, so its eight visible entries do not establish absence of ordinary subjects. Its current schedule and independent teaching sites remain follow-up opportunities. No denied registrar catalog path was fetched."
+  },
+  "sts_department_detail_review": {
+    "schedule_pages_read": 2,
+    "detail_pages_read": 4,
+    "source_ids": [
+      "mit-ai-hass-review-sts-department-sts034",
+      "mit-ai-hass-review-sts-department-sts066"
+    ],
+    "reviewed_record_ids": [
+      "mit-ai-hass-sts-tier-2-sts-034",
+      "mit-ai-hass-sts-tier-2-sts-066"
+    ],
+    "new_description_record_ids": [
+      "mit-ai-hass-sts-tier-2-sts-066"
+    ],
+    "metadata_only_reads": [
+      {
+        "key": "sts012",
+        "url": "https://sts-program.mit.edu/academics/subjects/sts012-sp25/",
+        "fetched_at": "2026-10-11T08:03:59+00:00",
+        "sha256": "8f95c30773fbd42c207a1de6f89dd021ff3d39c287cc5e6e13e8cc04c5272af2",
+        "status": "read",
+        "reason": "Actual page supplies schedule/enrollment information, not a substantial course-content description. No upgrade based on page existence."
+      },
+      {
+        "key": "sts050",
+        "url": "https://sts-program.mit.edu/academics/subjects/sts050-sp26/",
+        "fetched_at": "2026-10-11T08:04:02+00:00",
+        "sha256": "41dc53d9b96b25be3c98d980f82473c9b19d8de75e6407fcdeaab09083ad163c",
+        "status": "read",
+        "reason": "Actual page supplies schedule/enrollment information, not a substantial course-content description. No upgrade based on page existence."
+      }
+    ],
+    "remaining_action": "Other linked department descriptions and independent teaching sites remain eligible follow-up work; metadata-only pages are not publisher denials. Registrar boundary remains respected."
   }
 }

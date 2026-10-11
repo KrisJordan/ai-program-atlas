@@ -215,7 +215,7 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']['description_reviewed_records']==415
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==416
     assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
         o=next(o for o in entry(code)['observations'] if o.get('evidence_basis')=='official_title_only')
@@ -1448,3 +1448,33 @@ def test_dlab_actual_source_guards_units_cross_registration_and_class_size():
     assert review.matched_review(course,o,e['source_url'],MANIFEST)==e
     for wrong in [{**o,'term':'Fall 2026'},{**o,'units':'3-2-9'},{**o,'source_fields':{**o['source_fields'],'Class Size':'10 students'}},{**o,'prerequisites':'Permission of instructor'}]:
         assert review.matched_review(course,wrong,e['source_url'],MANIFEST) is None
+
+
+def test_sts_department_description_does_not_certify_canceled_special_subject():
+    report=MANIFEST['sts_department_detail_review']
+    assert len(report['reviewed_record_ids'])==2 and len(report['new_description_record_ids'])==1
+    assert len(report['metadata_only_reads'])==2
+    e=entry('STS.066')['observations'][-1]
+    assert e['catalog_year']=='Spring 2026' and e['category']=='human_context'
+    assert e['credits']==12 and e['prerequisites'] is None
+    assert 'Technologies' in e['observed_name'] and 'Technology' in entry('STS.066')['listed_name']
+    assert any('canceled' in n and 'No identity equivalence' in n for n in e['restrictions'])
+    e=entry('STS.034')['observations'][-1]
+    assert e['catalog_year']=='Spring 2025' and e['credits']==12
+    assert any('no numeric cap' in n for n in e['restrictions'])
+
+
+def test_sts_department_actual_description_replay_and_metadata_only_rejection():
+    report=MANIFEST['sts_department_detail_review']
+    for cid in report['reviewed_record_ids']:
+        row=MANIFEST['courses'][cid];e=row['observations'][-1];key=e['source_id'].removeprefix('mit-ai-hass-review-sts-department-')
+        path=Path('/tmp/mit-hass-subjects/urban-dept-'+key+'.html')
+        if not path.exists():pytest.skip('Optional STS department detail captures')
+        o=review.observe_sts_department_detail(path.read_text())[0]
+        course=dict(id=cid,code=row['listed_code'],name=row['listed_name'],source_id=row['listed_source_id'])
+        assert review.matched_review(course,o,e['source_url'],MANIFEST)==e
+        assert review.matched_review(course,{**o,'term':'Fall 2026'},e['source_url'],MANIFEST) is None
+    for key in ['sts012','sts050']:
+        path=Path('/tmp/mit-hass-subjects/urban-dept-'+key+'.html')
+        if path.exists():
+            with pytest.raises(ValueError):review.observe_sts_department_detail(path.read_text())
