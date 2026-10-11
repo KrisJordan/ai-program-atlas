@@ -8,11 +8,11 @@ The primary researcher encountered an explicit human-verification challenge on c
 
 ## Manual classification totals
 
-There are **74 reviewed human_context classifications, two other/mixed classifications, and zero unclassified**. These are bounded source-record counts, not degree requirements or student loads.
+There are **76 reviewed human_context classifications, zero mixed classifications, and zero unclassified**. These are bounded source-record counts, not degree requirements or student loads.
 
-LAIS 127 and LAIS 127E are mixed, with candidate categories human_context and applications. Their descriptions combine literary and film interpretation of Latin American food cultures with substantial ingredient and food-practice knowledge and preparation of traditional dishes. No dominant balance between cultural interpretation and culinary domain practice is established. Their different teaching languages do not change that content decision.
+LAIS 127 and LAIS 127E are human_context. On reconciliation with the identical SPAN descriptions, the explicit organizing frame—Latin American gastronomy through literary texts, film, cultural influences, and culinary syncretism—supports a primary cultural inquiry. Regional ingredient knowledge and preparation of traditional dishes remain explicit in the summaries and rationales; these activities support that inquiry rather than establish a coequal nutrition-science or professional culinary-method objective. The two language versions remain separate, and this classification correction does not establish any identity relationship between them.
 
-The other 74 descriptions establish cultural, historical, literary, religious, political, sociological, ethical, or language-related inquiry. Categories do not derive from prefixes or GE areas. Important boundaries include:
+The remaining 74 descriptions establish cultural, historical, literary, religious, political, sociological, ethical, or language-related inquiry. Categories do not derive from prefixes or GE areas. Important boundaries include:
 
 - LAIS W 13 includes climate science, but explicitly specifies a social-science focus on equity, justice, and systemic change. That coherent primary focus supports human_context rather than an automatic mixed designation.
 - EACS 56 interprets scientific ideas about the body historically and socially; EACS 128 examines religious environmentalism. CHIN 48 applies philosophy to ethical questions. These do not describe technical science instruction.

@@ -105,12 +105,9 @@ def test_manifest_manual_counts_and_prerequisite_limits():
     assert all(e['id'] == 'ucsb-' + e['code'].lower().replace(' ', '-') for e in entries)
     for subject, count in {'CHIN': 13, 'EACS': 20, 'JAPAN': 17, 'KOR': 1, 'LAIS W': 2, 'LAIS': 9, 'PORT': 14}.items():
         assert sum(e['source_code'].rsplit(' ', 1)[0] == subject for e in entries) == count
-    assert sum(e['category'] == 'human_context' for e in entries) == 74
-    assert sum(e['category_review']['status'] == 'reviewed' for e in entries) == 74
-    mixed = [e for e in entries if e['category_review']['status'] == 'mixed']
-    assert {e['code'] for e in mixed} == {'LAIS 127', 'LAIS 127E'}
-    assert all(e['category'] == 'other' for e in mixed)
-    assert all(e['category_review']['candidate_categories'] == ['human_context', 'applications'] for e in mixed)
+    assert sum(e['category'] == 'human_context' for e in entries) == 76
+    assert sum(e['category_review']['status'] == 'reviewed' for e in entries) == 76
+    assert all(e['category_review']['candidate_categories'] == [] for e in entries)
     assert sum(e['credits'] == 5 for e in entries) == 25
     assert sum(e['credits'] == 4 for e in entries) == 51
     assert sum(e['prerequisite_flag'] == 'Yes' for e in entries) == 46
@@ -136,6 +133,11 @@ def test_manual_restrictions_versions_and_boundary_decisions_survive():
     assert any('20 units' in n for n in entries['PORT 129']['notes'])
     assert any('8 units' in n for n in entries['PORT 115']['notes'])
     assert any('Portuguese version' in n for n in entries['PORT 105']['notes'])
+    for code in ('LAIS 127', 'LAIS 127E'):
+        assert entries[code]['category'] == 'human_context'
+        assert 'preparation of traditional dishes' in entries[code]['description']
+        assert 'preparation of traditional dishes' in entries[code]['category_review']['rationale']
+        assert 'cultural inquiry' in entries[code]['category_review']['rationale']
 
 
 def test_raw_source_code_is_guarded_separately_from_stable_identity(synthetic):
