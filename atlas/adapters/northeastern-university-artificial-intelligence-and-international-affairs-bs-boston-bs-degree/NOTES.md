@@ -105,3 +105,7 @@ Finite course-description review complete (2026-10-11): all 180 currently listed
 2026-10-11 final represented-course role checkpoint: Full degree panel independently transcribed:20 fixed/157 options after four reciprocally evidenced aliases;181 source code records remain. Global themes do not create per-theme obligations, and regional analysis requires two courses in one region. All represented subject content is reviewed. AFRS/AFCS prefix discrepancies remain explicit rather than inferred aliases; college/cohort policy applicability remains in progress.
 
 2026-10-11 conditional college-policy closure: complete public source sections reviewed and guarded; only the additional college clearance, entry/re-entry or Business rules appropriate to verified participation are represented. Universal rules are deduplicated. No individual approval, home assignment, unrelated degree rule or extra fixed course is inferred.
+
+## Independent fixed-core category check, 2026-10-11
+
+The complete description develops practical quantitative and qualitative research-tool competency while also teaching empirical and normative traditions, historical analysis and research ethics in international affairs. These applied research methods and human-context inquiry are both substantive; tool terminology alone does not establish mathematical dominance. The complete source block was reread from the existing official 2026–2027 catalog capture. This narrow correction does not certify the remaining degree policies or elective classifications.

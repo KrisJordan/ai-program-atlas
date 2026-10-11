@@ -338,7 +338,7 @@ def test_speech_manual_profile_and_variable_offering_hours_remain_separate():
 
 
 @pytest.mark.parametrize('code,expected,status', [
-    ('CRIM 2370','human_context','reviewed'),('CRIM 3600','human_context','reviewed'),
+    ('CRIM 2370','human_context','reviewed'),('CRIM 3600','other','mixed'),
     ('CRIM 3700','mathematics','reviewed'),('CRIM 3040','applications','reviewed'),
     ('CRIM 3540','other','mixed'),('CRIM 4949','human_context','reviewed'),
     ('PHIL 1300','human_context','reviewed'),('JRNL 3700','human_context','reviewed'),

@@ -67,3 +67,7 @@ Finite course-description review complete (2026-10-11): all 67 currently listed 
 2026-10-11 CSSH transfer review: this exact combined degree is explicitly listed as Khoury/CSSH in Admissions. Five source-specific conditional notes now preserve petition before outside registration, Provost review, academic C-or-higher/non-passfail eligibility, transfer caps, finalization timing, course evaluation and official transcripts. Participation does not assign home college or guarantee a transfer approval.
 
 2026-10-11 conditional college-policy closure: complete public source sections reviewed and guarded; only the additional college clearance, entry/re-entry or Business rules appropriate to verified participation are represented. Universal rules are deduplicated. No individual approval, home assignment, unrelated degree rule or extra fixed course is inferred.
+
+## Independent fixed-core category check, 2026-10-11
+
+The complete description substantively combines applied research-question design and implementation with social interpretation of crime, public attitudes and explicit critique of racism and bias. Neither practical research methods nor critical social inquiry alone captures the course; this is mixed applications/human_context, not mathematics merely because methods are mentioned. The complete source block was reread from the existing official 2026–2027 catalog capture. This narrow correction does not certify the remaining degree policies or elective classifications.

@@ -16,11 +16,12 @@ def test_manual_scope_and_non_keyword_categories():
     c=m.SPEC['courses']
     assert len(c)==24 and sum(len(e['targets']) for e in c.values())==24
     assert Counter(e['subject'] for e in c.values())=={'INTL':23,'PPUA':1}
-    assert Counter(e['category'] for e in c.values())=={'human_context':23,'other':1}
+    assert Counter(e['category'] for e in c.values())=={'human_context':22,'other':2}
     assert c['INTL 1000']['review']['status']=='unclassified'
     assert c['INTL 2600']['category']=='human_context'
     assert c['INTL 3450']['category']=='human_context'
-    assert c['INTL 2718']['category']=='human_context'
+    assert c['INTL 2718']['category']=='other'
+    assert c['INTL 2718']['review']['status']=='mixed'
     assert c['INTL 1000']['credits']==1
     assert sum(bool(e['conditions']) for e in c.values())==3
     assert 'INTL 1101' not in c
