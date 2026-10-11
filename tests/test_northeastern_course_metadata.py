@@ -174,3 +174,34 @@ def test_advanced_writing_grade_is_observed_without_inferring_home_college():
     assert 'family' not in result and 'hosting_unit' not in result
     assert result['requirements']==[]
     assert 'minimum grade of B' in parser(html.replace('minimum grade of C','minimum grade of B'))['courses'][0]['prerequisites']
+
+
+@pytest.mark.parametrize(('subject','heading','code','condition','expected'),[
+    ('PHIL','Philosophy (PHIL)','PHIL 3822','Requires two prior courses in philosophy or department permission to register.','Registration requires two prior courses in philosophy or department permission'),
+    ('ECON','Economics (ECON)','ECON 5650','Requires previous coursework in macroeconomic theory.','Previous coursework in macroeconomic theory'),
+])
+def test_additional_disciplinary_registration_prose_is_observed(subject,heading,code,condition,expected):
+    html=page(f'<div class="courseblock"><p class="courseblocktitle">{code}. A disciplinary course. (4 Hours)</p><p class="cb_desc">{condition}</p></div>',heading=heading)
+    parser=register_subject_sources('test-program',{subject:[code]})[f'https://catalog.northeastern.edu/course-descriptions/{subject.lower()}/']
+    course=parser(html)['courses'][0]
+    assert expected in course['prerequisites']
+    assert course['description'] is None  # factual extraction is not an invented summary
+    assert parser(html.replace(condition,'No eligibility prose.'))['courses'][0]['prerequisites'] is None
+
+
+def test_listed_disciplinary_courses_have_catalog_facts_without_forcing_descriptions():
+    import json
+    from pathlib import Path
+    root=Path(__file__).resolve().parents[1];observations=0;unknown_descriptions=0
+    for path in (root/'data/programs').glob('northeastern-*.json'):
+        p=json.loads(path.read_text())
+        if p.get('family',{}).get('id')!='northeastern-ai-combined-degrees':continue
+        for c in p['courses']:
+            sub=c['code'].split()[0]
+            if sub not in {'BIOL','CHEM','ECON','PSYC','PHYS','PHIL'}:continue
+            observations+=1;unknown_descriptions+=c['description'] is None
+            assert c['source_id']==p['id']+'-'+sub.lower()+'-courses'
+            assert c['credit_unit']=='semester_hours'
+            assert any(s['id']==c['source_id'] and c['code'] in s['locator'] for s in p['sources'])
+        assert p['curriculum_status']=='partial'
+    assert observations>250 and unknown_descriptions>100

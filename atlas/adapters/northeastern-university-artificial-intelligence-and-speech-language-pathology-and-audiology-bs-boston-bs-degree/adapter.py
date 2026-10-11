@@ -36,3 +36,8 @@ SOURCE_PARSERS = {**globals().get('SOURCE_PARSERS', {}), **_FOUNDATION_METADATA}
 _CONTEXT_METADATA = register_subject_sources(PROGRAM_ID, {'ENGW': ['ENGW 1111', 'ENGW 1102', 'ENGW 3302', 'ENGW 3306', 'ENGW 3315'], 'PHYS': ['PHYS 1145', 'PHYS 1146'], 'PHIL': ['PHIL 1145']})
 SOURCES = tuple(SOURCES) + tuple(_CONTEXT_METADATA)
 SOURCE_PARSERS = {**SOURCE_PARSERS, **_CONTEXT_METADATA}
+
+# Observe remaining disciplinary course facts without inventing descriptions.
+_DISCIPLINE_REMAINDER_METADATA = register_subject_sources(PROGRAM_ID, {'BIOL': ['BIOL 2217', 'BIOL 2218']})
+SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + tuple(_DISCIPLINE_REMAINDER_METADATA)))
+SOURCE_PARSERS = {**SOURCE_PARSERS, **_DISCIPLINE_REMAINDER_METADATA}

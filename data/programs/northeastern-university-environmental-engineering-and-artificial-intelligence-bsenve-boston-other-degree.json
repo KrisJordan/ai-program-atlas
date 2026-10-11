@@ -215,6 +215,16 @@
       "catalog_year": "2026-2027",
       "locator": "Selected course blocks: PHYS 1151, PHYS 1152, PHYS 1153. Names, hours, descriptions, prerequisites and concurrent-registration conditions.",
       "confidence": "high"
+    },
+    {
+      "id": "northeastern-university-environmental-engineering-and-artificial-intelligence-bsenve-boston-other-degree-chem-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/chem/",
+      "title": "Chemistry and Chemical Biology (CHEM)",
+      "fetched_at": "2026-10-10T23:53:59+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "confidence": "high",
+      "locator": "All currently listed CHEM courses in this degree: CHEM 1151, CHEM 1153. Course identity, stated hours and explicit registration conditions; descriptions only when separately reviewed."
     }
   ],
   "outcomes": [
@@ -876,11 +886,11 @@
       "name": "General Chemistry for Engineers",
       "description": null,
       "prerequisites": null,
-      "credits": null,
+      "credits": 4.0,
       "credit_unit": "semester_hours",
       "category": "applications",
-      "source_id": "northeastern-university-environmental-engineering-and-artificial-intelligence-bsenve-boston-other-degree-catalog",
-      "url": "https://catalog.northeastern.edu/search/?P=CHEM%201151",
+      "source_id": "northeastern-university-environmental-engineering-and-artificial-intelligence-bsenve-boston-other-degree-chem-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/chem/",
       "public_site": null,
       "syllabus": null
     },
@@ -890,11 +900,11 @@
       "name": "Recitation for CHEM 1151",
       "description": null,
       "prerequisites": null,
-      "credits": null,
+      "credits": 0.0,
       "credit_unit": "semester_hours",
       "category": "applications",
-      "source_id": "northeastern-university-environmental-engineering-and-artificial-intelligence-bsenve-boston-other-degree-catalog",
-      "url": "https://catalog.northeastern.edu/search/?P=CHEM%201153",
+      "source_id": "northeastern-university-environmental-engineering-and-artificial-intelligence-bsenve-boston-other-degree-chem-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/chem/",
       "public_site": null,
       "syllabus": null
     },
@@ -2765,7 +2775,10 @@
     "PHYS 1151 subject catalog corequisite(s): PHYS 1153. These are concurrent conditions, not prerequisites.",
     "PHYS 1152 subject catalog concurrent-registration condition: PHYS 1151 and PHYS 1153. This is not prior-completion eligibility.",
     "PHYS 1153 subject catalog concurrent-registration condition: PHYS 1151 and PHYS 1152. This is not prior-completion eligibility.",
-    "Writing, physics and philosophy metadata review (2026–2027): 7 existing course observations gain official subject-catalog descriptions, stated credits and explicit registration conditions. Physics concurrent-registration prose remains a separate note; advanced-writing prerequisite grade alternatives remain intact. College-related writing audiences do not assign a home college. No learning-outcome assessment or program launch date is inferred."
+    "Writing, physics and philosophy metadata review (2026–2027): 7 existing course observations gain official subject-catalog descriptions, stated credits and explicit registration conditions. Physics concurrent-registration prose remains a separate note; advanced-writing prerequisite grade alternatives remain intact. College-related writing audiences do not assign a home college. No learning-outcome assessment or program launch date is inferred.",
+    "CHEM 1151 subject catalog corequisite(s): CHEM 1153. These are concurrent conditions, not prerequisites.",
+    "CHEM 1153 subject catalog corequisite(s): CHEM 1151. These are concurrent conditions, not prerequisites.",
+    "Disciplinary factual metadata continuation (reviewed 2026-10-11 against 2026–2027 catalogs): 2 additional existing BIOL/CHEM/ECON/PSYC/PHYS/PHIL course records now preserve their stated credit values and explicit registration conditions. Unreviewed descriptions remain unknown; fixed values are never substituted for variable credit ranges. A mentioned prerequisite does not add a course to the prescribed degree graph."
   ],
   "curriculum_audit": {
     "scope": "degree",

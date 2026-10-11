@@ -69,3 +69,15 @@ PHYS 1152 and 1153 embed mandatory concurrent registration in prose rather than 
 Cumulative additions across these four checkpoints are **517 descriptions, 206 prerequisite statements and 299 fixed-credit values**. Course graphs and all 23 partial audit statuses remain intact. Learning-outcome assessment, program inception dates and home-college rules are not inferred from course descriptions.
 
 Writing/physics/philosophy validation completed 2026-10-11 UTC: **119 Northeastern-focused tests passed**. The broader discovery run passed 213 tests and encountered one unrelated concurrent Michigan adapter/source-registration mismatch; no Michigan files were edited. All 23 temporary records ingested/repeated/exported/built with integrity intact. All 37 new source registrations succeeded twice, with zero repeat candidates or source changes.
+
+## Remaining facts in accessible disciplines — 2026-10-11
+
+The six already accessible BIOL/CHEM/ECON/PSYC/PHYS/PHIL catalogs also support factual extraction for every remaining course of those subjects already listed in a variant. Sixteen variants gain **173 additional course observations** with independently sourced identity, credits and explicit registration conditions. No unreviewed description is invented. The updated observations include 49 BIOL, 45 PSYC, 24 CHEM, 15 ECON, 25 PHIL and 15 PHYS program-course records.
+
+Twenty-four subject registrations are added or expanded, six with new program-local sources; each URL is still fetched only once per program. Across their full selections, prerequisite availability grows **36→163** and fixed-credit availability **87→243**: **127 additional prerequisite statements and 156 fixed-credit fields**. Existing 70 descriptions in those selections remain unchanged; unreviewed descriptions remain null.
+
+PSYC 4600’s research-area preparation and PHIL 2330/3492’s prior-course requirements are observed from required prose. PHIL 3822 explicitly permits departmental permission as an alternative to prior philosophy courses; ECON 5650 requires previous macroeconomic theory coursework. The parser preserves those conditions without converting them into a fabricated list of eligible courses. Required writing within a course is not mislabelled as admission eligibility. Variable-credit and concurrent-enrollment handling remain unchanged.
+
+Cumulative additions through this fifth checkpoint: **517 descriptions, 333 prerequisite statements and 455 fixed-credit values**. This closes factual extraction for the six subjects’ existing listed courses, not their unreviewed descriptions or the programs’ home-college scope gap. Other subject catalogs and public course resources remain in the accessible research queue.
+
+Fifth-checkpoint validation: **122 Northeastern-focused tests passed**. All 23 variants ingested and repeated idempotently in a temporary database. All 24 expanded subject registrations succeeded twice through the safe Fetcher/cache, with zero repeat candidates or source changes. Export/build and SQLite integrity passed.

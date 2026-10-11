@@ -166,6 +166,14 @@ def parse_subject(html, *, program_id, subject, heading, codes, url):
         if additional:
             condition = 'Additional course-description condition: ' + additional[1] + '.'
             prerequisites = (prerequisites + '; ' if prerequisites else '') + condition
+        for pattern, prefix in [
+            (r'Requires previous coursework in ([^.]+)\.', 'Previous coursework in '),
+            (r'Requires ([^.]+) to register\.', 'Registration requires '),
+        ]:
+            condition_match = re.search(pattern, prose)
+            if condition_match:
+                condition = 'Additional course-description condition: ' + prefix + condition_match[1] + '.'
+                prerequisites = (prerequisites + '; ' if prerequisites else '') + condition
         concurrent = re.search(r'Requires concurrent registration in ([^.]+)\.', prose)
         if concurrent:
             metadata_notes.append(f'{code} subject catalog concurrent-registration condition: {concurrent[1].strip()}. This is not prior-completion eligibility.')
