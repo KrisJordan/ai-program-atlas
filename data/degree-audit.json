@@ -5896,11 +5896,11 @@
         "degree_identity": "The department explicitly identifies a Bachelor of Science in Artificial Intelligence, Machine Learning, and Data Science; current linked course catalogs label 2026–27.",
         "required_and_choices": "Manually enumerated 20 prescribed identities; 28 named options comprise 3 linear alternatives, 9 depth options, 12 general elective options and 4 writing alternatives. The note-root defect is corrected.",
         "elective_pools": "Depth requires at least 12 semester hours; general AI/ML/DS electives require at least 21 and permit an open CSE 100+ range. HSS, additional science and free electives remain source-defined open predicates; no finite list is fabricated.",
-        "prerequisites": "Read every listed course block. Prerequisite/corequisite conditions are metadata only, not new degree obligations. CSE 017 and other prerequisites outside the displayed core remain explicit enrollment applicability questions.",
+        "prerequisites": "Read every listed course block. Prerequisites outside the displayed core are conditional enrollment requirements, not added universal degree obligations. The undergraduate catalog explicitly permits authorized online permission or demonstrated equivalent outside preparation for exceptions; no permission is presumed granted.",
         "credits_and_units": "Undergraduate catalog explicitly defines semester hours. Degree table and sample totals disagree (130–131 versus 130; free electives 11 versus 10). Grouped physics/linear amounts were not assigned to each alternative. Variable course-catalog amounts remain nullable; degree-specific amounts retain their scope.",
         "classification": "All 48 identities independently reviewed from authoritative descriptions: 44 reviewed primary subjects and 4 mixed. No prefix or degree-membership classification.",
         "family_composition": "Standalone degree; no inherited family requirements.",
-        "degree_wide_requirements": "Previously mapped university and college policies remain; this pass reread basic HSS and unit/prerequisite rules. Whole-degree certification is blocked by source conflicts and unresolved overlapping CSE eligibility."
+        "degree_wide_requirements": "Applicable university and college policies are mapped, including the current special-consideration prerequisite route. Required, depth and additional elective allocations remain separate without presumed duplicate fulfillment. Whole-degree certification remains blocked only by the department’s contradictory total and free-elective credit amounts."
       },
       "expected_profile": {
         "required": {
@@ -6018,13 +6018,9 @@
         {
           "issue": "Department table and sample plan disagree on total and free-elective credits; no authoritative reconciliation.",
           "url": "https://engineering.lehigh.edu/cse/academics/undergraduate/bs-ai-ml-ds"
-        },
-        {
-          "issue": "Required/depth reuse inside the open CSE 100+ elective allocation is not explicitly resolved; some listed options require non-core prerequisites with no documented blanket substitution.",
-          "url": "https://engineering.lehigh.edu/cse/academics/undergraduate/bs-ai-ml-ds"
         }
       ],
-      "correction_status": "Role and all 48 course-subject corrections applied; source conflicts preserved.",
+      "correction_status": "All 48 actual course descriptions and applicable public policies reviewed. Conditional enrollment and separate credit allocations are modeled without an invented waiver or reuse conflict. Genuine 130–131/130 and 11/10 numeric conflicts remain blocked; mapped profile unchanged at 20 fixed / 28 options / 0 contextual.",
       "second_pass_status": "pending",
       "ledger": "research/degree-audit/national-degree-batch.json",
       "audit_date": "2026-10-11",
@@ -6164,7 +6160,7 @@
         {
           "url": "https://bulletin.miami.edu/courses-az/jmm/",
           "catalog_year": null,
-          "locator": "Complete contextual course blocks read: JMM 331. Current public course chapter: copyright/download navigation includes 2026–2027 and a stale 2025–2026 PDF label. No enrollment-cohort edition is assigned from navigation alone.",
+          "locator": "Complete contextual course blocks read: JMM 331. Current public course chapter: copyright/download navigation includes 2026–2027 and a stale 2025–2026 PDF label. No enrollment-cohort edition is assigned from navigation alone. Complete contextual course blocks read: JMM 331, JMM 102, JMM 106, JMM 108, JMM 285, JMM 301, JMM 303, JMM 305, JMM 319, JMM 341, JMM 361, JMM 444, JMM 448, JMM 461. Current official course chapter; full content and eligibility read independently of dated cognate membership. Mixed PDF navigation does not establish an edition.",
           "checked_at": "2026-10-11T04:14:37+00:00",
           "access_status": "accessible_cached_official_source"
         },
@@ -6363,6 +6359,48 @@
           "locator": "PHI 301 exact official search-form target; current chapter lacks the code. Robots restriction respected; existing directory identity retained without new metadata.",
           "checked_at": "2026-10-11",
           "access_status": "robots_disallowed"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/stc/",
+          "catalog_year": null,
+          "locator": "Complete contextual course blocks read: STC 102, STC 114, STC 116, STC 200, STC 201, STC 232, STC 233, STC 234, STC 311, STC 312, STC 316, STC 330, STC 340, STC 350, STC 388, STC 424, STC 426, STC 482. Current official course chapter; full content and eligibility read independently of dated cognate membership. Mixed PDF navigation does not establish an edition.",
+          "checked_at": "2026-10-11T05:51:16+00:00",
+          "access_status": "accessible_cached_official_source"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/cim/",
+          "catalog_year": null,
+          "locator": "Complete contextual course blocks read: CIM 101, CIM 102, CIM 103, CIM 104, CIM 121, CIM 202, CIM 204, CIM 332, CIM 418, CIM 422, CIM 474. Current official course chapter; full content and eligibility read independently of dated cognate membership. Mixed PDF navigation does not establish an edition.",
+          "checked_at": "2026-10-11T04:14:29+00:00",
+          "access_status": "accessible_cached_official_source"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/ins/",
+          "catalog_year": null,
+          "locator": "70 complete represented course blocks manually reviewed; individual source scopes/rationales in miami_ins_context_reviews.json. Current public chapter captured on 2026-10-11; download-navigation labels do not establish the course edition. Title/body scope differences for509/518/551 retained.",
+          "checked_at": "2026-10-11T05:50:39+00:00",
+          "access_status": "accessible_cached_official_source"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/cos/",
+          "catalog_year": null,
+          "locator": "Complete contextual course blocks read: COS 112, COS 120, COS 210, COS 211, COS 212, COS 220, COS 304, COS 311, COS 314, COS 316, COS 318, COS 324, COS 325, COS 328, COS 330, COS 333, COS 336, COS 343, COS 354, COS 360, COS 377, COS 418, COS 472, COS 473, COS 474, COS 545, COS 546, COS 560. Current official course chapter; full content and eligibility read independently of dated cognate membership. Mixed PDF navigation does not establish an edition.",
+          "checked_at": "2026-10-11T05:50:19+00:00",
+          "access_status": "accessible_cached_official_source"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/cca/",
+          "catalog_year": null,
+          "locator": "Complete contextual course blocks read: CCA 103, CCA 113, CCA 126, CCA 151, CCA 206, CCA 251, CCA 355, CCA 401, CCA 403, CCA 404, CCA 406, CCA 407, CCA 408, CCA 458. Current official course chapter; full content and eligibility read independently of dated cognate membership. Mixed PDF navigation does not establish an edition.",
+          "checked_at": "2026-10-11T05:50:13+00:00",
+          "access_status": "accessible_cached_official_source"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/com/",
+          "catalog_year": null,
+          "locator": "Complete contextual course blocks read: COM 101, COM 250. Current official course chapter; full content and eligibility read independently of dated cognate membership. Mixed PDF navigation does not establish an edition.",
+          "checked_at": "2026-10-11T05:50:18+00:00",
+          "access_status": "accessible_cached_official_source"
         }
       ],
       "checks": {
@@ -6371,7 +6409,7 @@
         "elective_pools": "Numeric elective pools are published credit choices, not contextual notes. The named one-of component inside the four-W writing overlay is required, while overlap with major courses remains permitted. Main-table mapped roles are 21 fixed / 33 named options. The much larger university cognate inventory remains contextual, not a degree workload. No subject labels were inferred from elective or cognate membership.",
         "prerequisites": "Actual named-course prerequisites, pre/corequisites, standing restrictions and exclusions are recorded literally. Unlabeled eligibility lines stay qualified. Degree-table row evidence separately preserves approved-project, course-order and overlap conditions when the catalog supplies a normalized course title. Preparatory courses are not added as extra fixed obligations. A finance-major grade rule is not extended to these AI degrees.",
         "credits_and_units": "Published row/group amounts remain distinct from per-course credits; semester-hour definition is registered in existing university policy evidence. No range or grouped amount is divided between courses. Every primary-table named course now has the current catalog amount; variable project ranges are retained with null scalar credits. UMX100 is explicitly zero; CSC405 and professional-development alternatives are explicitly one credit. Degree/area totals remain independent constraints rather than sums over options. Current course-information source explicitly equates semester credits, semester hours, credit hours and credits within Miami’s semester system; other contact-hour amounts are not substituted for academic credit.",
-        "classification": "Every named primary-table fixed/option course has been read. Current full represented inventory: 1939 code records; 40 mixed, 927 reviewed, 120 unclassified, 852 unreviewed. Actual contextual-course descriptions are being reviewed in the finite queue research/miami-description-review-remaining.json. No category is inferred from cognate membership; newly reviewed contextual records retain their original role. PHI296 and PHI301 remain unreviewed: exact current blocks are absent and the official search route disallows crawling. This does not prevent continued review of other accessible courses.",
+        "classification": "Every named primary-table fixed/option course has been read. Current full represented inventory: 1939 code records; 45 mixed, 1065 reviewed, 133 unclassified, 696 unreviewed. Actual contextual-course descriptions are being reviewed in the finite queue research/miami-description-review-remaining.json. No category is inferred from cognate membership; newly reviewed contextual records retain their original role.",
         "family_composition": "Standalone concrete degree; no family inheritance or degree variant collapse.",
         "degree_wide_requirements": "Existing college/university policy evidence and unresolved questions remain in the seed audit. Independent rereading of all applicable degree-wide rules is unfinished; the role correction does not establish degree completeness. Complete current transfer-policy reread distinguishes enrollment, credit acceptance and aid restrictions: summer exclusion from one enrollment rule does not grant transfer credit. The prior categorical contradiction is corrected, with the summer-session credit exclusion and MATES preapproval discretion preserved. Remaining public policy and course-content review continues; this correction does not certify the whole degree. Additional current source review maps seven conditional public course/enrollment/graduation scope notes, including actual processed declarations and optional dual-degree approval. Requirements remain student/cohort scoped; ordinary approval conditions alone are not blockers. Current university progression and written/quantitative proficiency criteria reread and conditionally mapped; explicit college exceptions and declaration/approval rules retained."
       },
@@ -6498,7 +6536,7 @@
         {
           "url": "https://bulletin.miami.edu/courses-az/cim/",
           "catalog_year": null,
-          "locator": "Full source blocks: CIM 563; descriptions, exact credits and eligibility/credit exclusions",
+          "locator": "Full source blocks: CIM 563; descriptions, exact credits and eligibility/credit exclusions Complete contextual course blocks read: CIM 101, CIM 102, CIM 103, CIM 104, CIM 121, CIM 202, CIM 204, CIM 332, CIM 418, CIM 422, CIM 474. Current official course chapter; full content and eligibility read independently of dated cognate membership. Mixed PDF navigation does not establish an edition.",
           "checked_at": "2026-10-11",
           "access_status": "read"
         },
@@ -6533,7 +6571,7 @@
         {
           "url": "https://bulletin.miami.edu/courses-az/jmm/",
           "catalog_year": null,
-          "locator": "Full source blocks: JMM 331, JMM 429; descriptions, exact credits and eligibility/credit exclusions",
+          "locator": "Full source blocks: JMM 331, JMM 429; descriptions, exact credits and eligibility/credit exclusions Complete contextual course blocks read: JMM 102, JMM 106, JMM 108, JMM 285, JMM 301, JMM 303, JMM 305, JMM 319, JMM 341, JMM 361, JMM 444, JMM 448, JMM 461. Current official course chapter; full content and eligibility read independently of dated cognate membership. Mixed PDF navigation does not establish an edition.",
           "checked_at": "2026-10-11",
           "access_status": "read"
         },
@@ -6788,6 +6826,41 @@
           "locator": "PHI 301 exact official search-form target; current chapter lacks the code. Robots restriction respected; existing directory identity retained without new metadata.",
           "checked_at": "2026-10-11",
           "access_status": "robots_disallowed"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/stc/",
+          "catalog_year": null,
+          "locator": "Complete contextual course blocks read: STC 102, STC 114, STC 116, STC 200, STC 201, STC 232, STC 233, STC 234, STC 311, STC 312, STC 316, STC 330, STC 340, STC 350, STC 388, STC 424, STC 426, STC 482. Current official course chapter; full content and eligibility read independently of dated cognate membership. Mixed PDF navigation does not establish an edition.",
+          "checked_at": "2026-10-11T05:51:16+00:00",
+          "access_status": "accessible_cached_official_source"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/ins/",
+          "catalog_year": null,
+          "locator": "70 complete represented course blocks manually reviewed; individual source scopes/rationales in miami_ins_context_reviews.json. Current public chapter captured on 2026-10-11; download-navigation labels do not establish the course edition. Title/body scope differences for509/518/551 retained.",
+          "checked_at": "2026-10-11T05:50:39+00:00",
+          "access_status": "accessible_cached_official_source"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/cos/",
+          "catalog_year": null,
+          "locator": "Complete contextual course blocks read: COS 112, COS 120, COS 210, COS 211, COS 212, COS 220, COS 304, COS 311, COS 314, COS 316, COS 318, COS 324, COS 325, COS 328, COS 330, COS 333, COS 336, COS 343, COS 354, COS 360, COS 377, COS 418, COS 472, COS 473, COS 474, COS 545, COS 546, COS 560. Current official course chapter; full content and eligibility read independently of dated cognate membership. Mixed PDF navigation does not establish an edition.",
+          "checked_at": "2026-10-11T05:50:19+00:00",
+          "access_status": "accessible_cached_official_source"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/cca/",
+          "catalog_year": null,
+          "locator": "Complete contextual course blocks read: CCA 103, CCA 113, CCA 126, CCA 151, CCA 206, CCA 251, CCA 355, CCA 401, CCA 403, CCA 404, CCA 406, CCA 407, CCA 408, CCA 458. Current official course chapter; full content and eligibility read independently of dated cognate membership. Mixed PDF navigation does not establish an edition.",
+          "checked_at": "2026-10-11T05:50:13+00:00",
+          "access_status": "accessible_cached_official_source"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/com/",
+          "catalog_year": null,
+          "locator": "Complete contextual course blocks read: COM 101, COM 250. Current official course chapter; full content and eligibility read independently of dated cognate membership. Mixed PDF navigation does not establish an edition.",
+          "checked_at": "2026-10-11T05:50:18+00:00",
+          "access_status": "accessible_cached_official_source"
         }
       ],
       "checks": {
@@ -6796,7 +6869,7 @@
         "elective_pools": "Numeric elective pools are published credit choices, not contextual notes. The named one-of component inside the four-W writing overlay is required, while overlap with major courses remains permitted. Main-table mapped roles are 13 fixed / 44 named options. The much larger university cognate inventory remains contextual, not a degree workload. No subject labels were inferred from elective or cognate membership.",
         "prerequisites": "Actual named-course prerequisites, pre/corequisites, standing restrictions and exclusions are recorded literally. Unlabeled eligibility lines stay qualified. Degree-table row evidence separately preserves approved-project, course-order and overlap conditions when the catalog supplies a normalized course title. Preparatory courses are not added as extra fixed obligations. A finance-major grade rule is not extended to these AI degrees. Complete publicly listed language placement routes now reviewed and mapped; individual diagnostics and existing course exclusions govern, not inferred waiver or equivalence.",
         "credits_and_units": "Published row/group amounts remain distinct from per-course credits; semester-hour definition is registered in existing university policy evidence. No range or grouped amount is divided between courses. Every primary-table named course now has the current catalog amount; variable project ranges are retained with null scalar credits. UMX100 is explicitly zero; CSC405 and professional-development alternatives are explicitly one credit. Degree/area totals remain independent constraints rather than sums over options. The program nine-credit language row and 121 total are compatible with the college three-credit minimum and university 120-credit minimum; the sample plan does not control. Exact waiver extension to program-specific credits is not assumed. Current course-information source explicitly equates semester credits, semester hours, credit hours and credits within Miami’s semester system; other contact-hour amounts are not substituted for academic credit.",
-        "classification": "Every named primary-table fixed/option course has been read. Current full represented inventory: 1933 code records; 40 mixed, 922 reviewed, 119 unclassified, 852 unreviewed. Actual contextual-course descriptions are being reviewed in the finite queue research/miami-description-review-remaining.json. No category is inferred from cognate membership; newly reviewed contextual records retain their original role. PHI296 and PHI301 remain unreviewed: exact current blocks are absent and the official search route disallows crawling. This does not prevent continued review of other accessible courses.",
+        "classification": "Every named primary-table fixed/option course has been read. Current full represented inventory: 1933 code records; 45 mixed, 1060 reviewed, 132 unclassified, 696 unreviewed. Actual contextual-course descriptions are being reviewed in the finite queue research/miami-description-review-remaining.json. No category is inferred from cognate membership; newly reviewed contextual records retain their original role.",
         "family_composition": "Standalone concrete degree; no family inheritance or degree variant collapse.",
         "degree_wide_requirements": "Existing college/university policy evidence and unresolved questions remain in the seed audit. Independent rereading of all applicable degree-wide rules is unfinished; the role correction does not establish degree completeness. Complete current transfer-policy reread distinguishes enrollment, credit acceptance and aid restrictions: summer exclusion from one enrollment rule does not grant transfer credit. The prior categorical contradiction is corrected, with the summer-session credit exclusion and MATES preapproval discretion preserved. Remaining public policy and course-content review continues; this correction does not certify the whole degree. Additional current source review maps seven conditional public course/enrollment/graduation scope notes, including actual processed declarations and optional dual-degree approval. Requirements remain student/cohort scoped; ordinary approval conditions alone are not blockers. Current university progression and written/quantitative proficiency criteria reread and conditionally mapped; explicit college exceptions and declaration/approval rules retained."
       },
@@ -7908,15 +7981,99 @@
           "locator": "Actual historical syllabus description and preparation, exact code/title/term",
           "checked_at": "2026-10-11",
           "access_status": "read; normal robots-aware public Fetcher"
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/4-601-introduction-to-art-history-fall-2018/pages/syllabus/",
+          "catalog_year": "Fall 2018",
+          "locator": "Actual dated syllabus course identity, description and preparation",
+          "checked_at": "2026-10-11",
+          "access_status": "read; normal robots-aware public Fetcher"
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/4-602-modern-art-and-mass-culture-spring-2012/pages/syllabus/",
+          "catalog_year": "Spring 2012",
+          "locator": "Actual dated syllabus course identity, description and preparation",
+          "checked_at": "2026-10-11",
+          "access_status": "read; normal robots-aware public Fetcher"
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/4-619-historiography-of-islamic-architecture-fall-2014/pages/syllabus/",
+          "catalog_year": "Fall 2014",
+          "locator": "Actual dated syllabus course identity, description and preparation",
+          "checked_at": "2026-10-11",
+          "access_status": "read; normal robots-aware public Fetcher"
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/21a-00-introduction-to-anthropology-spring-2022/pages/syllabus/",
+          "catalog_year": "Spring 2022",
+          "locator": "Actual historical syllabus description and preparation, exact code/title/term",
+          "checked_at": "2026-10-11",
+          "access_status": "read; normal robots-aware public Fetcher"
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/21a-01-how-culture-works-fall-2019/pages/syllabus/",
+          "catalog_year": "Fall 2019",
+          "locator": "Actual historical syllabus description and preparation, exact code/title/term",
+          "checked_at": "2026-10-11",
+          "access_status": "read; normal robots-aware public Fetcher"
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/21a-120-american-dream-using-storytelling-to-explore-social-class-in-the-united-states-spring-2018/pages/syllabus/",
+          "catalog_year": "Spring 2018",
+          "locator": "Actual historical syllabus description and preparation, exact code/title/term",
+          "checked_at": "2026-10-11",
+          "access_status": "read; normal robots-aware public Fetcher"
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/21a-150-teaching-and-learning-cross-cultural-perspectives-fall-2014/pages/syllabus/",
+          "catalog_year": "Fall 2014",
+          "locator": "Actual historical syllabus description and preparation, exact code/title/term",
+          "checked_at": "2026-10-11",
+          "access_status": "read; normal robots-aware public Fetcher"
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/21a-157-the-meaning-of-life-spring-2019/pages/syllabus/",
+          "catalog_year": "Spring 2019",
+          "locator": "Actual historical syllabus description and preparation, exact code/title/term",
+          "checked_at": "2026-10-11",
+          "access_status": "read; normal robots-aware public Fetcher"
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/21a-461-what-is-capitalism-fall-2021/pages/syllabus/",
+          "catalog_year": "Fall 2021",
+          "locator": "Actual historical syllabus description and preparation, exact code/title/term",
+          "checked_at": "2026-10-11",
+          "access_status": "read; normal robots-aware public Fetcher"
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/21a-500j-technology-and-culture-spring-2014/pages/syllabus/",
+          "catalog_year": "Spring 2014",
+          "locator": "Actual historical syllabus description and preparation, exact code/title/term",
+          "checked_at": "2026-10-11",
+          "access_status": "read; normal robots-aware public Fetcher"
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/21a-506-the-anthropology-of-politics-persuasion-and-power-spring-2019/pages/syllabus-and-calendar/",
+          "catalog_year": "Spring 2019",
+          "locator": "Actual historical syllabus description and preparation, exact code/title/term",
+          "checked_at": "2026-10-11",
+          "access_status": "read; normal robots-aware public Fetcher"
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/21a-520-magic-science-and-religion-fall-2021/pages/syllabus/",
+          "catalog_year": "Fall 2021",
+          "locator": "Actual historical syllabus description and preparation, exact code/title/term",
+          "checked_at": "2026-10-11",
+          "access_status": "read; normal robots-aware public Fetcher"
         }
       ],
       "checks": {
         "degree_identity": "BS Artificial Intelligence and Decision Making,Course6-4. Department explicitly requires6-4_2025 for Fall2025+ entrants, with lists labeled Fall2026. Future special-offering tags are preserved, not treated as a date contradiction. Unversioned catalog chart remains a distinct reference, not an additive degree view.",
         "required_and_choices": "Actual6-4_2025 required section makes6.1010,6.1200 and6.1210 fixed. Other math/programming/center/designation/pool selections supply255 mapped option identities; six GIR science choices add20 option identities. Independently enumerated current graph therefore has3fixed,275options and904contextual identities. The latter derive from63unversioned chart/reference plus845HASS records, with four duplicateHASSaliases removed by explicitgroups: explicit field eligibility is conditional and several source-version conflicts remain. No blanket HASS promotion, additive option quantity or equivalence across versions is inferred.",
         "elective_pools": "Versioned lists and39 HASS field inventories were previously mapped; subject and applicability second pass remains ongoing. Existing source questions are preserved. A public C22 topic is offered under21M.389/589, but its year and applicability to every generic offering are not stated; preserve as contextual evidence rather than substituting a topic into the degree pool.",
-        "prerequisites": "All248 annotated versioned prerequisite/corequisite fields were read. Same-semester lecture/module credit, cohort-limited subjects, conditional instructor permission and recommended preparation remain distinct from universal required courses. GIR review preserves split calculus registration/retake/term credit, first-year mathematics graduate restrictions, formal chemistry None versus intended preparation, biology lottery limits and physics placement/repeat/prerequisite-credit rules. All20 GIR rows have bounded dispositions; missing formal prerequisites remain null. The264 description-supported HASS occurrences preserve graduate-only conditions, auditions, repeat limits and half-term language accounting. Limited-title HASS and the remaining unmatched6.9030 reference description/prerequisites remain under separate source review; unknown fields are not no-prerequisite claims. The clinic exam is an in-course field-assignment condition, not a prior subject prerequisite. The61 matched original references retain explicitly dated annotation prerequisites/corequisites and permission clauses; none becomes a fixed degree obligation.",
+        "prerequisites": "All248 annotated versioned prerequisite/corequisite fields were read. Same-semester lecture/module credit, cohort-limited subjects, conditional instructor permission and recommended preparation remain distinct from universal required courses. GIR review preserves split calculus registration/retake/term credit, first-year mathematics graduate restrictions, formal chemistry None versus intended preparation, biology lottery limits and physics placement/repeat/prerequisite-credit rules. All20 GIR rows have bounded dispositions; missing formal prerequisites remain null. The284 description-supported HASS occurrences preserve graduate-only conditions, auditions, repeat limits and half-term language accounting. Limited-title HASS and the remaining unmatched6.9030 reference description/prerequisites remain under separate source review; unknown fields are not no-prerequisite claims. The clinic exam is an in-course field-assignment condition, not a prior subject prerequisite. The61 matched original references retain explicitly dated annotation prerequisites/corequisites and permission clauses; none becomes a fixed degree obligation.",
         "credits_and_units": "The current catalog Subjects notation explicitly defines total credit as the sum of the three numeric unit components. All 248 annotated versioned rows now have observed MIT-unit totals; 13 absent annotations remain null. Generic special-topic zero values are literal printed observations, not proof of current topic/offering. The 6.4300 chart/CI-M conflict remains separate. No conversion to semester hours. The dated6.C35 annotation keeps15units, but its unversioned reference is now null because the Common Ground detail reports12 with no year or published precedence. The C57/C571 index mislink to a C06 page is a navigation defect, not a curricular contradiction.",
-        "classification": "All1189 source occurrences have bounded manual dispositions:261versioned,63unversioned reference,20GIR and845HASS. HASS845 comprises264 description-supported occurrences,578 limited title-only judgments and three code-only unknowns. The22 newly disposed held records comprise14precise human-context titles and eight unknown titles; all20identity/version holds and two source-description conflicts persist. This is not a full description or identity audit. Every mixed/unclassified record remains other. The63 original chart/CI-M references now include61 exact-code/title dated annotation content reviews, one independently dated Spring2024course-site content review, and one brief official instructor content identification. These remain distinct unversioned contextual occurrences; no classification is inferred merely from duplicate code.",
+        "classification": "All1189 source occurrences have bounded manual dispositions:261versioned,63unversioned reference,20GIR and845HASS. HASS845 comprises284 description-supported occurrences,558 limited title-only judgments and three code-only unknowns. The22 newly disposed held records comprise14precise human-context titles and eight unknown titles; all20identity/version holds and two source-description conflicts persist. This is not a full description or identity audit. Every mixed/unclassified record remains other. The63 original chart/CI-M references now include61 exact-code/title dated annotation content reviews, one independently dated Spring2024course-site content review, and one brief official instructor content identification. These remain distinct unversioned contextual occurrences; no classification is inferred merely from duplicate code.",
         "family_composition": "No family inheritance. Two reciprocal within-version EECS cross-list groups map five records to two identities. Two additional explicit CMS same-subject panels map six HASS source records to two identities:CMS524/STS024(Spring2026),CMS406/21A505/STS065(Fall2026). Their original list titles and joint labels match exactly; meets-with, historical, merely equivalent and differently titled versions are excluded.1189source records now map to1182identities; remaining aliases are not assumed resolved.",
         "degree_wide_requirements": "Institute completion, residence, units beyond GIRs, grades, communication, HASS, science, laboratory, REST, PE/swimming, substitutions and transfer/exam policies are represented. The current graph has an independently enumerated full source-role baseline; optional field-plan inventories remain contextual while eligibility/version questions are unresolved. Known HASS transfer prohibition and final-review procedure are compatible. Current2026 entrance-credit policy is explicitly cohort-qualified; historical entrants remain a separate source scope. Five existing curriculum-source questions and actual-description backlog keep the full audit in progress."
       },
@@ -7946,9 +8103,9 @@
             "ai_ml": 9,
             "applications": 64,
             "foundations": 9,
-            "human_context": 605,
+            "human_context": 608,
             "mathematics": 10,
-            "other": 200,
+            "other": 197,
             "systems": 7
           }
         }
@@ -9250,7 +9407,7 @@
         }
       ],
       "remaining_work": [
-        "Continue accessible actual-description research beyond578 limited HASS title judgments and three code-only unknowns. Twenty identity/version holds and two source conflicts remain explicit; no incompatible description/credit/prerequisite or alias inference was adopted.",
+        "Continue accessible actual-description research beyond558 limited HASS title judgments and three code-only unknowns. Twenty identity/version holds and two source conflicts remain explicit; no incompatible description/credit/prerequisite or alias inference was adopted.",
         "Originalreference6.9030 has a brief instructor identification as photography, but its linked detailed course page returnsHTTP404. The department annotation remains untitled and is not enriched from the separate reference.6.8301 has datedSpring2024course-site content linked by the instructor. Continue full degree/source-role applicability review;8.021 remains absent from accessible descriptions.",
         "Resolve or precisely retain existing curriculum-source questions, missing/generic annotations and enrollment-cap discrepancy; no full-degree audit certification yet.",
         "For13 missing versioned annotations,12 have explicit historical numbering context; eight have explicitly stated future-number questions.21M.589 is absent from that table but has a separate permitted C22 topic page: no year or universal applicability is stated. Find exact current code/term content only through permitted public sources; do not reuse historical title as current description.",
@@ -10752,8 +10909,8 @@
       "public_resource_review": {
         "reviewed_at": "2026-10-11",
         "cleared_generic_link_count": 818,
-        "retained_course_site_count": 86,
-        "retained_syllabus_count": 80,
+        "retained_course_site_count": 106,
+        "retained_syllabus_count": 100,
         "notes": "Public-site fields require actual course teaching or syllabus pages. Cleared catalog/concentration/department listing links remain in course URL, registered sources and review provenance. This metadata correction changes no category, credits, prerequisites or requirement membership."
       },
       "ledger": "research/degree-audit/mit.json",
@@ -10942,7 +11099,7 @@
         "credits_and_units": "NJIT faculty policy and Rutgers Policy 10.2.4 independently establish semester credit hours. Degree minimum 120 and exact listed zero-credit FYS are preserved. Rutgers 206 laboratory scalar is null because current sources disagree (NJIT 3/Rutgers 1); both claims remain visible. No choice-load or degree total is computed from option breadth.",
         "classification": "All 381 source records carry bounded manual reviews. Fixed set: 24 primary, seven mixed, one unclassified. The 349 option source records include the separately proven STS/LIT alias; profile counts 348 identities. Five material history title conflicts and seven absent current entries remain unclassified. Precise historical-topic titles may support explicitly limited human-context review without an invented description; no department-prefix classifier is used.",
         "family_composition": "Standalone degree. Reciprocal STS 378/LIT 378 co-listing groups one source-proven offering while preserving both code records; no other identity relationship is inferred.",
-        "degree_wide_requirements": "Public catalog, school overview, undergraduate advising and petition sources reviewed. Graduation GPAs, transfer/residence, repeat/expiration, conditional exams/placement, curriculum election, graduate-course restrictions and formal MTSM substitutions/waivers are mapped. MTSM outside equivalents have stricter exceptional summer-only, eight-week and prior-approval conditions. No graduate 3.0 GPA or unrelated engineering exam is assigned to this BS. The published plan and approved GER list leave PHIL310 reuse unresolved; a petition procedure is not a granted decision."
+        "degree_wide_requirements": "Public catalog, school overview, undergraduate advising and petition sources reviewed. Graduation GPAs, transfer/residence, repeat/expiration, conditional exams/placement, curriculum election, graduate-course restrictions and formal MTSM substitutions/waivers are mapped. MTSM outside equivalents have stricter exceptional summer-only, eight-week and prior-approval conditions. No graduate 3.0 GPA or unrelated engineering exam is assigned to this BS. The fixed three-credit PHIL 310 row and separate six-credit GER-300 allocation remain distinct obligations without presumed reuse. The fully stated petition route is conditional and does not itself create a missing degree requirement or imply a granted exception."
       },
       "expected_profile": {
         "required": {
@@ -11414,14 +11571,6 @@
       ],
       "blockers": [
         {
-          "issue": "PHIL 310 appears as a fixed three-credit plan course and in the approved GER300 pool, while the plan separately allocates six GER300 credits. Neither reviewed public source grants reuse in another slot; any requested substitution requires an individual MTSM petition decision.",
-          "urls": [
-            "https://catalog.njit.edu/undergraduate/management/management/business-with-ai-bs/",
-            "https://catalog.njit.edu/undergraduate/academic-policies-procedures/general-education-requirements/ger-300-level/",
-            "https://management.njit.edu/petition"
-          ]
-        },
-        {
           "issue": "Five current NJIT/Rutgers history code titles materially conflict: R510 257/325/351/404 and R512 405. Approved-option version applicability requires clarification; no code-only identity substitution is inferred.",
           "url": "https://newark-undergrad-26-27.catalogs.rutgers.edu/schools/school-arts-sciences-newark/programs-faculty-and-courses/history-510-and-512"
         },
@@ -11445,7 +11594,7 @@
           ]
         }
       ],
-      "correction_status": "All currently available represented course and public policy sources reviewed; independently established mapped graph: 32 fixed / 348 options / 0 contextual (381 source records, 380 identities). Primary audit blocked only at the exact current-source identity, absence, credit and allocation issues listed. Full independent second pass remains pending.",
+      "correction_status": "All currently available represented course and public policy sources reviewed; independently established mapped graph: 32 fixed / 348 options / 0 contextual (381 source records, 380 identities). Primary audit blocked only at the exact current-source identity, absence and credit issues listed. Full independent second pass remains pending.",
       "second_pass_status": "pending",
       "ledger": "research/degree-audit/national-degree-batch.json",
       "audit_date": "2026-10-11",
@@ -27333,17 +27482,115 @@
           "locator": "Full visible search result: two records, CMPSC189Aand189B",
           "checked_at": "2026-10-11",
           "access_status": "read ordinary current catalog search results"
+        },
+        {
+          "url": "https://catalog.ucsb.edu/courses/CMPSC%209/general-aoYks",
+          "catalog_year": "2026–27",
+          "locator": "Full course fields, including prerequisite and separate recommended/advisory/repeat labels",
+          "checked_at": "2026-10-11",
+          "access_status": "read full rendered public currentcourse fields"
+        },
+        {
+          "url": "https://catalog.ucsb.edu/courses/CMPSC%20130A/general-aoYks",
+          "catalog_year": "2026–27",
+          "locator": "Full course fields, including prerequisite and separate recommended/advisory/repeat labels",
+          "checked_at": "2026-10-11",
+          "access_status": "read full rendered public currentcourse fields"
+        },
+        {
+          "url": "https://catalog.ucsb.edu/courses/CMPSC%20130B/general-aoYks",
+          "catalog_year": "2026–27",
+          "locator": "Full course fields, including prerequisite and separate recommended/advisory/repeat labels",
+          "checked_at": "2026-10-11",
+          "access_status": "read full rendered public currentcourse fields"
+        },
+        {
+          "url": "https://catalog.ucsb.edu/courses/CMPSC%20165A/general-aoYks",
+          "catalog_year": "2026–27",
+          "locator": "Full course fields, including prerequisite and separate recommended/advisory/repeat labels",
+          "checked_at": "2026-10-11",
+          "access_status": "read full rendered public currentcourse fields"
+        },
+        {
+          "url": "https://catalog.ucsb.edu/courses/CMPSC%20165B/general-aoYks",
+          "catalog_year": "2026–27",
+          "locator": "Full course fields, including prerequisite and separate recommended/advisory/repeat labels",
+          "checked_at": "2026-10-11",
+          "access_status": "read full rendered public currentcourse fields"
+        },
+        {
+          "url": "https://catalog.ucsb.edu/courses/zW75yMZ2SFLkXg5izKVI/general-aoYks",
+          "catalog_year": "2026–27",
+          "locator": "Full course fields, including prerequisite and separate recommended/advisory/repeat labels",
+          "checked_at": "2026-10-11",
+          "access_status": "read full rendered public currentcourse fields"
+        },
+        {
+          "url": "https://catalog.ucsb.edu/courses/MATH%203A/general-aoYks",
+          "catalog_year": "2026–27",
+          "locator": "Full course fields, including prerequisite and separate recommended/advisory/repeat labels",
+          "checked_at": "2026-10-11",
+          "access_status": "read full rendered public currentcourse fields"
+        },
+        {
+          "url": "https://catalog.ucsb.edu/courses/MATH%203B/general-aoYks",
+          "catalog_year": "2026–27",
+          "locator": "Full course fields, including prerequisite and separate recommended/advisory/repeat labels",
+          "checked_at": "2026-10-11",
+          "access_status": "read full rendered public currentcourse fields"
+        },
+        {
+          "url": "https://catalog.ucsb.edu/courses/MATH%204A/general-aoYks",
+          "catalog_year": "2026–27",
+          "locator": "Full course fields, including prerequisite and separate recommended/advisory/repeat labels",
+          "checked_at": "2026-10-11",
+          "access_status": "read full rendered public currentcourse fields"
+        },
+        {
+          "url": "https://catalog.ucsb.edu/courses/MATH%204B/general-aoYks",
+          "catalog_year": "2026–27",
+          "locator": "Full course fields, including prerequisite and separate recommended/advisory/repeat labels",
+          "checked_at": "2026-10-11",
+          "access_status": "read full rendered public currentcourse fields"
+        },
+        {
+          "url": "https://catalog.ucsb.edu/courses/MATH%206A/general-aoYks",
+          "catalog_year": "2026–27",
+          "locator": "Full course fields, including prerequisite and separate recommended/advisory/repeat labels",
+          "checked_at": "2026-10-11",
+          "access_status": "read full rendered public currentcourse fields"
+        },
+        {
+          "url": "https://catalog.ucsb.edu/pages/C2Hel8i91Tnxny3zOsMs",
+          "catalog_year": "2026–27",
+          "locator": "Full public policy body; source scope and exceptions preserved",
+          "checked_at": "2026-10-11",
+          "access_status": "read full public policy body"
+        },
+        {
+          "url": "https://registrar.sa.ucsb.edu/enrollment/quarterly-enrollment/course-registration",
+          "catalog_year": null,
+          "locator": "Full public policy body; source scope and exceptions preserved",
+          "checked_at": "2026-10-11",
+          "access_status": "read full public policy body"
+        },
+        {
+          "url": "https://registrar.sa.ucsb.edu/enrollment/quarterly-enrollment",
+          "catalog_year": null,
+          "locator": "Full public policy body; source scope and exceptions preserved",
+          "checked_at": "2026-10-11",
+          "access_status": "read full public policy body"
         }
       ],
       "checks": {
         "degree_identity": "Official Artificial Intelligence BS website and2026–27GEAR; inaugural cohort announcement not converted into confirmed enrollment date.",
         "required_and_choices": "Eleven preparation records and eight universally named upper core records give19fixed; computer vision is CMPSC181/ECE181alternative. Nine major-field elective courses, science andGE choices are separate; sample four-year schedule excluded. Verified C-LIT155/GER155 crosslisting reduces options from65sourcecode observations to64identities, with19fixed and2contextual identities unchanged; no elective promoted to mandatory. Current degree tree confirms required181ORrow and both reciprocal current course pages prove it is one identity, now fixed. 153Areciprocal pair counts one option. Manual counts20fixed/61options/2context;86sourcecodes retained.",
         "elective_pools": "CurrentGEAR provides36core+36major-elective units and8ListA/12ListBscience load. Finite major elective andAreaAwriting options mapped. Missing science memberships, capstone identity andGEpools remain explicit.",
-        "prerequisites": "All35 departmental course eligibility blocks read; recommendations remain distinct, concurrent paths and consent exceptions retained. No required prerequisite for132/188 is explicit. Undated CS/CE-major-only restrictions are not assumed waived for new AI students. These preparation/eligibility facts create no additional degree-course obligations. MATH3A placement exam,3B prerequisite3A,C;4A prerequisite3B,C;4B/6A prerequisite4A,C preserved from undated general department page. Writing105/107/109series requiresWriting2/2E/2LK,upperdivision with90units andAreaA1;105CDneeds no coding experience. Lower2E/50Eblocks stateengineering enrollment without independently restating generic2/50entry prerequisites; no silent inheritance. English offeringpages directprereqs toGOLD, not publishedprerequisites; recordsremainnull, notnone-required. Current181explicitlyincludesAImajors. Current42/139/153A/180retain narrower major restrictions; no blanket AI exception is inferred. ME107consent alternative and recommendedPSTAT120Aremain distinct.",
+        "prerequisites": "All35 departmental course eligibility blocks read; recommendations remain distinct, concurrent paths and consent exceptions retained. No required prerequisite for132/188 is explicit. Undated CS/CE-major-only restrictions are not assumed waived for new AI students. These preparation/eligibility facts create no additional degree-course obligations. MATH3A placement exam,3B prerequisite3A,C;4A prerequisite3B,C;4B/6A prerequisite4A,C preserved from undated general department page. Writing105/107/109series requiresWriting2/2E/2LK,upperdivision with90units andAreaA1;105CDneeds no coding experience. Lower2E/50Eblocks stateengineering enrollment without independently restating generic2/50entry prerequisites; no silent inheritance. English offeringpages directprereqs toGOLD, not publishedprerequisites; recordsremainnull, notnone-required. Current181explicitlyincludesAImajors. Current42/139/153A/180retain narrower major restrictions; no blanket AI exception is inferred. ME107consent alternative and recommendedPSTAT120Aremain distinct. CurrentrequiredCSandmathversionfollow-up:188requires130A+165A+165Bandrecommends138,replacingundateddepartmentnone.130Arepeatsprobabilityinrecommendedandrequiredfields;requiredclausepreserved.Mathalternativepreparation,AP/previouscoursecreditlimitsandrepeatexceptionsretained. ReadcurrentRegulation10andRegistrarregistrationpages: preparednessdiscretion/late-addapproval do not explicitly waive major restrictions; published prerequisites checked atregistrationandbeforequarter. GraduaterouteGPA3.0/12upperunitsBplusinstructor/chairapproval mappedwithcollege-specificscope.",
         "credits_and_units": "Quarter hours. CMPSC41 remains null because requirement page5 vs sample plan/web4. Earlier worksheet81upper subtotal differs from currentGEAR72; source-specific values not silently reconciled. Department supplies33fixed4-quarter-unit records and variable192 (1–5) /196 (2–4) units. The latter remain null and do not replace the separate combined4-unit major elective cap. CMPSC184 metadata is historicalFall2017. Mathematics description page supplies no unit values; existing degree-source amounts are retained, not attributed to that page. Writing1/2explicit5,1E/2E/50/50Eexplicit4; upper105/107/109series4quarterunits. Follow-up source comparison: WRIT1 lower-page5 conflicts with separate guide4, so curated WRIT1 credits remain null; parser observations retain each source value. Both current155records explicitly publish4units; no prerequisite field is stated, retainednull.",
         "classification": "35 exact-code departmental pages read:31 reviewed single-category,1mixed HCI,3unclassified (historical184 without substantive content; generic192/196 projects). Other51records retain their existing precise-title/unknown or writing-source evidence limits. No degree-role-driven classification. Five fixed calculus/linear-algebra/differential-equations records now have full departmental content review rather than title-only evidence. Twenty-five Writing Program blocks read (including2ELWRcontexts already reviewed):24human context,1mixed writing/coding. Writing105AI concerns rhetoric/communication with generativeAI, not model-building methods. ThreeEnglishcode records now source-reviewedhuman context:146AIhistoricalWinter2021,146DShistoricalWinter2023,197allthreeFall2026literary/cultural offerings. NoAIcategoryfromtitle; no155AIcode substitution. Current catalog full GER155/C-LIT155 descriptions establish humanities-centered critical AI analysis, classified human_context; reciprocal statements establish one course identity across the two represented codes. Sixteen current full records reviewed:13new content dispositions and3current refreshes. 1AisAI survey;25/42/184arefoundations;135/139mathematics;153Asystems;180/181/186/187/ME107AI;183humancontext. Current184substantivecontentcloses historical-only unknown. CurrentWRIT109ESdescription is professional environmental communication, human_context; not environmental science by topic.",
         "family_composition": "No family inheritance/bindings; independently scoped standalone degree. Shared policy helpers do not imply shared credential.",
-        "degree_wide_requirements": "Public progression, residence, transfer andgrading policies mapped, but finite AI-specific requirements/source conflicts block full certification. Alternate official images-pathGEAR compared: pages13/14/16/17 unchanged after whitespace normalization; AIpages16/17visually confirm existing requirements and conflicts. This accessible branch is closed, not a pending source."
+        "degree_wide_requirements": "Public progression, residence, transfer andgrading policies mapped, but finite AI-specific requirements/source conflicts block full certification. Alternate official images-pathGEAR compared: pages13/14/16/17 unchanged after whitespace normalization; AIpages16/17visually confirm existing requirements and conflicts. This accessible branch is closed, not a pending source. CurrentRegistrar quarterly registrationcompletion,12unitundergradminimum andEngineering21goodstanding/17probation maximum observed; optionalgraduateenrollmentroute preserved with exactscope."
       },
       "expected_profile": {
         "required": {
@@ -27528,9 +27775,9 @@
           "issue": "Current source explicitly defers science ListsA/Bto department and contains two opaque unresolved field-elective course references. Known current course restrictions exclude AI from listed majors in42/139/153A/180; public exception mechanism/applicability remains an accessible policy follow-up rather than assumed permission."
         }
       ],
-      "correction_status": "84 of86 represented codes now have bounded full-content dispositions; only exact189C/189Ddescriptions remain unresolved. Threeverifiedidentitypairs yield83identities:20fixed/61options/2context. Accessible current-version, GEpool and approval-policy review continues; no whole-degree certification.",
+      "correction_status": "84 of86 represented codes now have bounded full-content dispositions; only exact189C/189Ddescriptions remain unresolved. Threeverifiedidentitypairs yield83identities:20fixed/61options/2context. Accessible current-version, GEpool and approval-policy review continues; no whole-degree certification. All20fixedcourseidentities now have current2026–27course-record field review, including reciprocalvision; this does not resolve degreewidepolicy/poolconflicts.",
       "second_pass_status": "pending",
-      "accessible_work_remaining": "The accessible current catalog review continues: CMPSC189C/189Ddo not appear in the observed fullCSdirectory and the degree tree shows two opaque references; exact identity needs bounded follow-up, not inferred replacement by189A/B. WRIT109EScurrent description is read; its relationship to department-renamed107EPis not proven as a current crosslisting. Current-version English146AI/146DSand remaining undated metadata, GEapprovedpools, collegepolicies and registration approval mechanisms still require actual reading. Science tree explicitly defers ListsA/Bto department; genericcapstoneidentityremains unspecified. No invented pools or major-eligibilityexceptions.",
+      "accessible_work_remaining": "The accessible current catalog review continues: CMPSC189C/189Ddo not appear in the observed fullCSdirectory and the degree tree shows two opaque references; exact identity needs bounded follow-up, not inferred replacement by189A/B. WRIT109EScurrent description is read; its relationship to department-renamed107EPis not proven as a current crosslisting. Current-version English146AI/146DSand remaining undated metadata, GEapprovedpools, collegepolicies and registration approval mechanisms still require actual reading. Science tree explicitly defers ListsA/Bto department; genericcapstoneidentityremains unspecified. No invented pools or major-eligibilityexceptions. CurrentRegulation10/Registrarquarterly/course-registrationbranches are now read; none explicitly establishes AI-major exception to narrower course major lists. Remaining department-specific approval applicability, currentoptionalversions andGEpools remain active.",
       "ledger": "research/degree-audit/west-purdue-wpi.json",
       "audit_date": "2026-10-11",
       "reviewer": "pilots_purdue_minor"
@@ -34923,7 +35170,7 @@
         {
           "url": "https://bulletin.miami.edu/courses-az/jmm/",
           "catalog_year": null,
-          "locator": "Complete contextual course blocks read: JMM 331. Current public course chapter: copyright/download navigation includes 2026–2027 and a stale 2025–2026 PDF label. No enrollment-cohort edition is assigned from navigation alone.",
+          "locator": "Complete contextual course blocks read: JMM 331. Current public course chapter: copyright/download navigation includes 2026–2027 and a stale 2025–2026 PDF label. No enrollment-cohort edition is assigned from navigation alone. Complete contextual course blocks read: JMM 331, JMM 102, JMM 106, JMM 108, JMM 285, JMM 301, JMM 303, JMM 305, JMM 319, JMM 341, JMM 361, JMM 444, JMM 448, JMM 461. Current official course chapter; full content and eligibility read independently of dated cognate membership. Mixed PDF navigation does not establish an edition.",
           "checked_at": "2026-10-11T04:14:37+00:00",
           "access_status": "accessible_cached_official_source"
         },
@@ -35122,6 +35369,48 @@
           "locator": "PHI 301 exact official search-form target; current chapter lacks the code. Robots restriction respected; existing directory identity retained without new metadata.",
           "checked_at": "2026-10-11",
           "access_status": "robots_disallowed"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/stc/",
+          "catalog_year": null,
+          "locator": "Complete contextual course blocks read: STC 102, STC 114, STC 116, STC 200, STC 201, STC 232, STC 233, STC 234, STC 311, STC 312, STC 316, STC 330, STC 340, STC 350, STC 388, STC 424, STC 426, STC 482. Current official course chapter; full content and eligibility read independently of dated cognate membership. Mixed PDF navigation does not establish an edition.",
+          "checked_at": "2026-10-11T05:51:16+00:00",
+          "access_status": "accessible_cached_official_source"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/cim/",
+          "catalog_year": null,
+          "locator": "Complete contextual course blocks read: CIM 101, CIM 102, CIM 103, CIM 104, CIM 121, CIM 202, CIM 204, CIM 332, CIM 418, CIM 422, CIM 474. Current official course chapter; full content and eligibility read independently of dated cognate membership. Mixed PDF navigation does not establish an edition.",
+          "checked_at": "2026-10-11T04:14:29+00:00",
+          "access_status": "accessible_cached_official_source"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/ins/",
+          "catalog_year": null,
+          "locator": "70 complete represented course blocks manually reviewed; individual source scopes/rationales in miami_ins_context_reviews.json. Current public chapter captured on 2026-10-11; download-navigation labels do not establish the course edition. Title/body scope differences for509/518/551 retained.",
+          "checked_at": "2026-10-11T05:50:39+00:00",
+          "access_status": "accessible_cached_official_source"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/cos/",
+          "catalog_year": null,
+          "locator": "Complete contextual course blocks read: COS 112, COS 120, COS 210, COS 211, COS 212, COS 220, COS 304, COS 311, COS 314, COS 316, COS 318, COS 324, COS 325, COS 328, COS 330, COS 333, COS 336, COS 343, COS 354, COS 360, COS 377, COS 418, COS 472, COS 473, COS 474, COS 545, COS 546, COS 560. Current official course chapter; full content and eligibility read independently of dated cognate membership. Mixed PDF navigation does not establish an edition.",
+          "checked_at": "2026-10-11T05:50:19+00:00",
+          "access_status": "accessible_cached_official_source"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/cca/",
+          "catalog_year": null,
+          "locator": "Complete contextual course blocks read: CCA 103, CCA 113, CCA 126, CCA 151, CCA 206, CCA 251, CCA 355, CCA 401, CCA 403, CCA 404, CCA 406, CCA 407, CCA 408, CCA 458. Current official course chapter; full content and eligibility read independently of dated cognate membership. Mixed PDF navigation does not establish an edition.",
+          "checked_at": "2026-10-11T05:50:13+00:00",
+          "access_status": "accessible_cached_official_source"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/com/",
+          "catalog_year": null,
+          "locator": "Complete contextual course blocks read: COM 101, COM 250. Current official course chapter; full content and eligibility read independently of dated cognate membership. Mixed PDF navigation does not establish an edition.",
+          "checked_at": "2026-10-11T05:50:18+00:00",
+          "access_status": "accessible_cached_official_source"
         }
       ],
       "checks": {
@@ -35130,7 +35419,7 @@
         "elective_pools": "Numeric elective pools are published credit choices, not contextual notes. The named one-of component inside the four-W writing overlay is required, while overlap with major courses remains permitted. Main-table mapped roles are 22 fixed / 21 named options. The much larger university cognate inventory remains contextual, not a degree workload. No subject labels were inferred from elective or cognate membership.",
         "prerequisites": "Actual named-course prerequisites, pre/corequisites, standing restrictions and exclusions are recorded literally. Unlabeled eligibility lines stay qualified. Degree-table row evidence separately preserves approved-project, course-order and overlap conditions when the catalog supplies a normalized course title. Preparatory courses are not added as extra fixed obligations. A finance-major grade rule is not extended to these AI degrees.",
         "credits_and_units": "Published row/group amounts remain distinct from per-course credits; semester-hour definition is registered in existing university policy evidence. No range or grouped amount is divided between courses. Every primary-table named course now has the current catalog amount; variable project ranges are retained with null scalar credits. UMX100 is explicitly zero; CSC405 and professional-development alternatives are explicitly one credit. Degree/area totals remain independent constraints rather than sums over options. Current course-information source explicitly equates semester credits, semester hours, credit hours and credits within Miami’s semester system; other contact-hour amounts are not substituted for academic credit.",
-        "classification": "Every named primary-table fixed/option course has been read. Current full represented inventory: 1928 code records; 39 mixed, 917 reviewed, 120 unclassified, 852 unreviewed. Actual contextual-course descriptions are being reviewed in the finite queue research/miami-description-review-remaining.json. No category is inferred from cognate membership; newly reviewed contextual records retain their original role. PHI296 and PHI301 remain unreviewed: exact current blocks are absent and the official search route disallows crawling. This does not prevent continued review of other accessible courses.",
+        "classification": "Every named primary-table fixed/option course has been read. Current full represented inventory: 1928 code records; 44 mixed, 1055 reviewed, 133 unclassified, 696 unreviewed. Actual contextual-course descriptions are being reviewed in the finite queue research/miami-description-review-remaining.json. No category is inferred from cognate membership; newly reviewed contextual records retain their original role.",
         "family_composition": "Standalone concrete degree; no family inheritance or degree variant collapse.",
         "degree_wide_requirements": "Existing college/university policy evidence and unresolved questions remain in the seed audit. Independent rereading of all applicable degree-wide rules is unfinished; the role correction does not establish degree completeness. Complete current transfer-policy reread distinguishes enrollment, credit acceptance and aid restrictions: summer exclusion from one enrollment rule does not grant transfer credit. The prior categorical contradiction is corrected, with the summer-session credit exclusion and MATES preapproval discretion preserved. Remaining public policy and course-content review continues; this correction does not certify the whole degree. Additional current source review maps seven conditional public course/enrollment/graduation scope notes, including actual processed declarations and optional dual-degree approval. Requirements remain student/cohort scoped; ordinary approval conditions alone are not blockers. Current university progression and written/quantitative proficiency criteria reread and conditionally mapped; explicit college exceptions and declaration/approval rules retained."
       },
@@ -35257,7 +35546,7 @@
         {
           "url": "https://bulletin.miami.edu/courses-az/cim/",
           "catalog_year": null,
-          "locator": "Full source blocks: CIM 563; descriptions, exact credits and eligibility/credit exclusions",
+          "locator": "Full source blocks: CIM 563; descriptions, exact credits and eligibility/credit exclusions Complete contextual course blocks read: CIM 101, CIM 102, CIM 103, CIM 104, CIM 121, CIM 202, CIM 204, CIM 332, CIM 418, CIM 422, CIM 474. Current official course chapter; full content and eligibility read independently of dated cognate membership. Mixed PDF navigation does not establish an edition.",
           "checked_at": "2026-10-11",
           "access_status": "read"
         },
@@ -35285,7 +35574,7 @@
         {
           "url": "https://bulletin.miami.edu/courses-az/jmm/",
           "catalog_year": null,
-          "locator": "Full source blocks: JMM 331; descriptions, exact credits and eligibility/credit exclusions",
+          "locator": "Full source blocks: JMM 331; descriptions, exact credits and eligibility/credit exclusions Complete contextual course blocks read: JMM 102, JMM 106, JMM 108, JMM 285, JMM 301, JMM 303, JMM 305, JMM 319, JMM 341, JMM 361, JMM 444, JMM 448, JMM 461. Current official course chapter; full content and eligibility read independently of dated cognate membership. Mixed PDF navigation does not establish an edition.",
           "checked_at": "2026-10-11",
           "access_status": "read"
         },
@@ -35547,6 +35836,41 @@
           "locator": "PHI 301 exact official search-form target; current chapter lacks the code. Robots restriction respected; existing directory identity retained without new metadata.",
           "checked_at": "2026-10-11",
           "access_status": "robots_disallowed"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/stc/",
+          "catalog_year": null,
+          "locator": "Complete contextual course blocks read: STC 102, STC 114, STC 116, STC 200, STC 201, STC 232, STC 233, STC 234, STC 311, STC 312, STC 316, STC 330, STC 340, STC 350, STC 388, STC 424, STC 426, STC 482. Current official course chapter; full content and eligibility read independently of dated cognate membership. Mixed PDF navigation does not establish an edition.",
+          "checked_at": "2026-10-11T05:51:16+00:00",
+          "access_status": "accessible_cached_official_source"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/ins/",
+          "catalog_year": null,
+          "locator": "70 complete represented course blocks manually reviewed; individual source scopes/rationales in miami_ins_context_reviews.json. Current public chapter captured on 2026-10-11; download-navigation labels do not establish the course edition. Title/body scope differences for509/518/551 retained.",
+          "checked_at": "2026-10-11T05:50:39+00:00",
+          "access_status": "accessible_cached_official_source"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/cos/",
+          "catalog_year": null,
+          "locator": "Complete contextual course blocks read: COS 112, COS 120, COS 210, COS 211, COS 212, COS 220, COS 304, COS 311, COS 314, COS 316, COS 318, COS 324, COS 325, COS 328, COS 330, COS 333, COS 336, COS 343, COS 354, COS 360, COS 377, COS 418, COS 472, COS 473, COS 474, COS 545, COS 546, COS 560. Current official course chapter; full content and eligibility read independently of dated cognate membership. Mixed PDF navigation does not establish an edition.",
+          "checked_at": "2026-10-11T05:50:19+00:00",
+          "access_status": "accessible_cached_official_source"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/cca/",
+          "catalog_year": null,
+          "locator": "Complete contextual course blocks read: CCA 103, CCA 113, CCA 126, CCA 151, CCA 206, CCA 251, CCA 355, CCA 401, CCA 403, CCA 404, CCA 406, CCA 407, CCA 408, CCA 458. Current official course chapter; full content and eligibility read independently of dated cognate membership. Mixed PDF navigation does not establish an edition.",
+          "checked_at": "2026-10-11T05:50:13+00:00",
+          "access_status": "accessible_cached_official_source"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/com/",
+          "catalog_year": null,
+          "locator": "Complete contextual course blocks read: COM 101, COM 250. Current official course chapter; full content and eligibility read independently of dated cognate membership. Mixed PDF navigation does not establish an edition.",
+          "checked_at": "2026-10-11T05:50:18+00:00",
+          "access_status": "accessible_cached_official_source"
         }
       ],
       "checks": {
@@ -35555,7 +35879,7 @@
         "elective_pools": "Numeric elective pools are published credit choices, not contextual notes. The named one-of component inside the four-W writing overlay is required, while overlap with major courses remains permitted. Main-table mapped roles are 7 fixed / 39 named options. The much larger university cognate inventory remains contextual, not a degree workload. No subject labels were inferred from elective or cognate membership.",
         "prerequisites": "Actual named-course prerequisites, pre/corequisites, standing restrictions and exclusions are recorded literally. Unlabeled eligibility lines stay qualified. Degree-table row evidence separately preserves approved-project, course-order and overlap conditions when the catalog supplies a normalized course title. Preparatory courses are not added as extra fixed obligations. A finance-major grade rule is not extended to these AI degrees. Complete publicly listed language placement routes now reviewed and mapped; individual diagnostics and existing course exclusions govern, not inferred waiver or equivalence.",
         "credits_and_units": "Published row/group amounts remain distinct from per-course credits; semester-hour definition is registered in existing university policy evidence. No range or grouped amount is divided between courses. Every primary-table named course now has the current catalog amount; variable project ranges are retained with null scalar credits. UMX100 is explicitly zero; CSC405 and professional-development alternatives are explicitly one credit. Degree/area totals remain independent constraints rather than sums over options. Current course-information source explicitly equates semester credits, semester hours, credit hours and credits within Miami’s semester system; other contact-hour amounts are not substituted for academic credit.",
-        "classification": "Every named primary-table fixed/option course has been read. Current full represented inventory: 1927 code records; 40 mixed, 916 reviewed, 119 unclassified, 852 unreviewed. Actual contextual-course descriptions are being reviewed in the finite queue research/miami-description-review-remaining.json. No category is inferred from cognate membership; newly reviewed contextual records retain their original role. PHI296 and PHI301 remain unreviewed: exact current blocks are absent and the official search route disallows crawling. This does not prevent continued review of other accessible courses.",
+        "classification": "Every named primary-table fixed/option course has been read. Current full represented inventory: 1927 code records; 45 mixed, 1054 reviewed, 132 unclassified, 696 unreviewed. Actual contextual-course descriptions are being reviewed in the finite queue research/miami-description-review-remaining.json. No category is inferred from cognate membership; newly reviewed contextual records retain their original role.",
         "family_composition": "Standalone concrete degree; no family inheritance or degree variant collapse.",
         "degree_wide_requirements": "Existing college/university policy evidence and unresolved questions remain in the seed audit. Independent rereading of all applicable degree-wide rules is unfinished; the role correction does not establish degree completeness. Complete current transfer-policy reread distinguishes enrollment, credit acceptance and aid restrictions: summer exclusion from one enrollment rule does not grant transfer credit. The prior categorical contradiction is corrected, with the summer-session credit exclusion and MATES preapproval discretion preserved. Remaining public policy and course-content review continues; this correction does not certify the whole degree. Additional current source review maps seven conditional public course/enrollment/graduation scope notes, including actual processed declarations and optional dual-degree approval. Requirements remain student/cohort scoped; ordinary approval conditions alone are not blockers. Current university progression and written/quantitative proficiency criteria reread and conditionally mapped; explicit college exceptions and declaration/approval rules retained."
       },
