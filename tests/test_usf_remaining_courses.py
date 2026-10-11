@@ -20,8 +20,8 @@ def test_manual_course_content_decisions_and_uncertainty():
         'foundations': {'COP 2510', 'COP 3514', 'COP 4530', 'COT 4400'},
         'mathematics': {'MAC 2311', 'MAC 2312', 'COT 3100', 'EGN 4450', 'EGN 2440', 'STA 2023'},
         'systems': {'CDA 3103', 'CAI 4624'},
-        'applications': {'PHY 2048', 'PHY 2048L'},
-        'human_context': {'ENC 1101', 'ENC 1102', 'PSY 2012', 'POS 2041', 'AMH 2010', 'AMH 2020', 'CAI 4024'},
+        'applications': {'PHY 2048', 'PHY 2048L', 'PSY 2012'},
+        'human_context': {'ENC 1101', 'ENC 1102', 'POS 2041', 'AMH 2010', 'AMH 2020', 'CAI 4024'},
         'ai_ml': {'CAI 1000', 'CAI 2001', 'CAI 4002', 'CAI 4105', 'CAI 4203', 'CAI 4841', 'CAP 4641'},
         'other': {'CIS 1930'},
     }

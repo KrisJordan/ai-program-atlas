@@ -447,12 +447,14 @@ def test_njit_required_subjects_and_enrollment_roles():
  assert len(NJIT_REQUIRED)==32
  profile=requirement_profile(p)
  assert profile['required']['count']==32 and profile['options']['count']==348
- assert profile['required']['classification']=={'reviewed':24,'mixed':7,'unclassified':1,'unreviewed':0}
+ assert profile['required']['classification']=={'reviewed':23,'mixed':8,'unclassified':1,'unreviewed':0}
  assert courses['MGMT116']['category']=='mathematics'
  assert courses['MGMT216']['category']=='mathematics'
  assert courses['OM375']['category']=='mathematics'
  assert courses['MIS385']['category']=='systems'
- assert courses['MGMT422']['category']=='human_context'
+ assert courses['MGMT422']['category']=='other'
+ assert courses['MGMT422']['category_review']['status']=='mixed'
+ assert set(courses['MGMT422']['category_review']['candidate_categories'])=={'applications','human_context'}
  assert courses['MGMT416']['category']=='applications'
  assert courses['FIN410']['category']=='ai_ml'
  assert courses['PHIL310']['category_review']['status']=='mixed'

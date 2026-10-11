@@ -80,3 +80,7 @@ This closes accessible represented course content, not definitive degree roles o
 2026-10-11 public entry/progression follow-up: see [ENTRY_PROGRESSION_REVIEW.md](ENTRY_PROGRESSION_REVIEW.md). AI-specific entry, transfer allocation and manually read Policy 10-505 conditions now mapped. Neighboring majors' requirements and admission-only grade rules are not imposed on every AI student. Public GE pool and full manual graph review remain in progress.
 
 2026-10-11 general-education closure: [GE_COURSE_REVIEW.md](GE_COURSE_REVIEW.md) documents the 152-course/158-designation current export, all full course-field readings and the 141 contextual additions. All 170 represented descriptions now have manual dispositions. Current major catalog/brochure restrictions remain the exact primary-audit blockers; the GE reading queue is finished. Raw export/source pages remain private.
+
+## Bounded independent correction — 2026-10-11
+
+A separate reviewer flagged PSY 2012; the coordinator reread its saved public Course Details description. Scientific study of behavior and mental processes is psychology domain knowledge, consistent with Rice PSYC 203, rather than ethics/communication or social interpretation of technology. Classification changes human context→applications without asserting an AI application. Its recorded fixed role is unchanged; that role remains bounded by the inaccessible current major-source limitation. Both course-review manifests and the replay regression now agree. No denied catalog or brochure route was retried.
