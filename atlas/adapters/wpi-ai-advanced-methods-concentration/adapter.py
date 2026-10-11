@@ -199,3 +199,18 @@ for policy_key in ["options", "graduate"]:
     policy_url = policies.BASE + policies.POLICIES[policy_key][0]
     SOURCES.append(policy_url)
     SOURCE_PARSERS[policy_url] = lambda html, key=policy_key: parse_concentration_policy(html, key)
+
+# Applicable local policies shared with the ten other AI concentrations.
+from atlas.adapters import wpi_local_concentrations as local_policies
+
+
+def parse_parent_with_advising(html):
+    result = local_policies.parse_parent(html, PROGRAM_ID, 'advanced-ai')
+    result['title'] = TITLE
+    return result
+
+
+SOURCE_PARSERS[SOURCES[2]] = parse_parent_with_advising
+grading_url = policies.BASE + policies.POLICIES['grading'][0]
+SOURCES.append(grading_url)
+SOURCE_PARSERS[grading_url] = lambda html: parse_concentration_policy(html, 'grading')

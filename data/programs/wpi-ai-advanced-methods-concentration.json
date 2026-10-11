@@ -110,6 +110,16 @@
       "catalog_year": "2026-2027",
       "locator": "Concentration declaration/overlap and graduate-course rules",
       "confidence": "high"
+    },
+    {
+      "id": "wpi-ai-advanced-methods-concentration-policy-grading",
+      "url": "https://wpi.cleancatalog.net/grading-policies",
+      "title": "Grading Policies",
+      "fetched_at": "2026-10-10T22:43:13.621322+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Credit-bearing completion and undergraduate GPA policy",
+      "confidence": "high"
     }
   ],
   "outcomes": [],
@@ -789,20 +799,6 @@
       ]
     },
     {
-      "id": "wpi-ai-advanced-methods-concentration-parent-scope",
-      "parent_id": null,
-      "title": "Parent AI degree relationship",
-      "kind": "note",
-      "count": null,
-      "credits": null,
-      "credit_unit": "units",
-      "category": "ai_ml",
-      "source_id": "wpi-ai-advanced-methods-concentration-parent",
-      "source_text": null,
-      "summary": "The AI BS requires exactly one concentration of six distinct courses, and its MQP must apply AI within that concentration. Completeness of this local concentration does not certify the host BS degree.",
-      "course_ids": []
-    },
-    {
       "id": "wpi-ai-advanced-methods-concentration-policy-options-concentration",
       "parent_id": null,
       "title": "Concentration declaration and scope",
@@ -843,6 +839,76 @@
       "source_text": null,
       "summary": "Graduate enrollment ordinarily does not require graduate admission; Business School courses require admission to a dual BS/MS program. The published conversion is one graduate credit to 1/6 undergraduate unit, processed by the Registrar.",
       "course_ids": []
+    },
+    {
+      "id": "wpi-ai-advanced-methods-concentration-parent-scope",
+      "parent_id": null,
+      "title": "AI host relationship and concentration total",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "other",
+      "source_id": "wpi-ai-advanced-methods-concentration-parent",
+      "source_text": null,
+      "summary": "The AI BS requires exactly one concentration with six distinct courses (6/3 units). This is the total including fixed requirements and local choices, not an extra elective block. The host degree remains separately audited.",
+      "course_ids": []
+    },
+    {
+      "id": "wpi-ai-advanced-methods-concentration-parent-mqp",
+      "parent_id": null,
+      "title": "Concentration-related MQP and advising",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "other",
+      "source_id": "wpi-ai-advanced-methods-concentration-parent",
+      "source_text": null,
+      "summary": "The AI MQP is 3/3 units and applies AI knowledge and techniques within the selected concentration. A sole adviser must be AI core/collaborative faculty within that discipline; otherwise an AI core/collaborative faculty member and a faculty member with disciplinary knowledge co-advise. This is the host MQP applied to the concentration, not a second additional MQP.",
+      "course_ids": []
+    },
+    {
+      "id": "wpi-ai-advanced-methods-concentration-parent-overlap",
+      "parent_id": null,
+      "title": "Science overlap and degree-level advanced floor",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "other",
+      "source_id": "wpi-ai-advanced-methods-concentration-parent",
+      "source_text": null,
+      "summary": "If a course overlaps the natural/engineering-science requirement and concentration or disciplinary electives, add other BS-AI distribution courses to retain ten program units. The host degree’s 4/3-unit floor at 4000 level or above can be met across core, concentration and other distribution work; it is not an extra four-course local concentration minimum.",
+      "course_ids": []
+    },
+    {
+      "id": "wpi-ai-advanced-methods-concentration-policy-grading-credit",
+      "parent_id": null,
+      "title": "Credit-bearing completion",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "other",
+      "source_id": "wpi-ai-advanced-methods-concentration-policy-grading",
+      "source_text": null,
+      "summary": "A/B/C are undergraduate course grades that earn credit; NR does not. IQP/MQP/HUA require an overall completion evaluation; project SP is temporary and must be replaced by a permanent grade.",
+      "course_ids": []
+    },
+    {
+      "id": "wpi-ai-advanced-methods-concentration-policy-grading-gpa",
+      "parent_id": null,
+      "title": "No institutional undergraduate GPA",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "other",
+      "source_id": "wpi-ai-advanced-methods-concentration-policy-grading",
+      "source_text": null,
+      "summary": "WPI does not maintain an undergraduate cumulative GPA. A numerical equivalent may be requested for external use; no GPA graduation threshold is inferred.",
+      "course_ids": []
     }
   ],
   "notes": [
@@ -854,13 +920,14 @@
   ],
   "curriculum_audit": {
     "scope": "concentration",
-    "reviewed_at": "2026-10-10",
+    "reviewed_at": "2026-10-11",
     "source_ids": [
       "wpi-ai-advanced-methods-concentration-catalog",
       "wpi-ai-advanced-methods-concentration-graduate-core",
       "wpi-ai-advanced-methods-concentration-parent",
       "wpi-ai-advanced-methods-concentration-policy-options",
-      "wpi-ai-advanced-methods-concentration-policy-graduate"
+      "wpi-ai-advanced-methods-concentration-policy-graduate",
+      "wpi-ai-advanced-methods-concentration-policy-grading"
     ],
     "sections": [
       "Six courses beyond AI core",
@@ -869,7 +936,9 @@
       "CS2301/2303 exclusion",
       "Exactly one parent concentration and concentration-related MQP",
       "General concentration declaration and designation-overlap rules",
-      "Graduate credit conversion and Business School enrollment exception"
+      "Graduate credit conversion and Business School enrollment exception",
+      "MQP disciplinary/AI co-advising and host overlap/advanced-level context",
+      "Grading and credit-bearing completion"
     ],
     "unresolved_requirements": [],
     "metadata_gaps": [

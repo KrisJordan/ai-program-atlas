@@ -52,7 +52,9 @@ def test_rit_immersion_requires_its_own_plan_not_minor_title():
 def test_new_records_and_adapter_identity(pid):
     d = json.loads(Path('data/programs/' + pid + '.json').read_text())
     validate_program(d)
-    assert d['curriculum_status'] in ['partial', 'pending']
+    assert d['curriculum_status'] in ['complete', 'partial', 'pending']
+    if d['curriculum_status'] == 'complete':
+        assert d['curriculum_audit']['unresolved_requirements'] == []
     assert d['first_offered'] is None
     spec = importlib.util.spec_from_file_location('candidate', 'atlas/adapters/' + pid + '/adapter.py')
     mod = importlib.util.module_from_spec(spec); spec.loader.exec_module(mod)

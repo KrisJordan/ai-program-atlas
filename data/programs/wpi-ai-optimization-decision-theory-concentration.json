@@ -17,7 +17,7 @@
   "catalog_year": "2026-2027",
   "verification_status": "confirmed",
   "last_verified": "2026-10-11",
-  "curriculum_status": "partial",
+  "curriculum_status": "complete",
   "links": [
     {
       "kind": "catalog",
@@ -34,6 +34,56 @@
       "source_date": null,
       "catalog_year": "2026-2027",
       "locator": "Program heading, award/host and requirements",
+      "confidence": "high"
+    },
+    {
+      "id": "wpi-ai-optimization-decision-theory-concentration-parent",
+      "url": "https://wpi.cleancatalog.net/artificial-intelligence/artificial-intelligence-major",
+      "title": "Artificial Intelligence Major",
+      "fetched_at": "2026-10-10T22:32:59.081667+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Concentration; MQP; overlap and advanced-level distribution",
+      "confidence": "high"
+    },
+    {
+      "id": "wpi-ai-optimization-decision-theory-concentration-policy-options",
+      "url": "https://wpi.cleancatalog.net/degree-options",
+      "title": "Degree Options",
+      "fetched_at": "2026-10-10T22:46:30.790029+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Applicable concentration declaration, overlap, completion and enrollment policy",
+      "confidence": "high"
+    },
+    {
+      "id": "wpi-ai-optimization-decision-theory-concentration-policy-grading",
+      "url": "https://wpi.cleancatalog.net/grading-policies",
+      "title": "Grading Policies",
+      "fetched_at": "2026-10-10T22:43:13.621322+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Applicable concentration declaration, overlap, completion and enrollment policy",
+      "confidence": "high"
+    },
+    {
+      "id": "wpi-ai-optimization-decision-theory-concentration-policy-graduate",
+      "url": "https://wpi.cleancatalog.net/graduate-courses",
+      "title": "Graduate Courses",
+      "fetched_at": "2026-10-10T22:43:27.116161+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Applicable concentration declaration, overlap, completion and enrollment policy",
+      "confidence": "high"
+    },
+    {
+      "id": "wpi-ai-optimization-decision-theory-concentration-catalog-stylesheet",
+      "url": "https://wpi.cleancatalog.net/sites/default/files/css/css_-sXQU_kB0auQ6BjlX02vsjw7FVeDqgoz5YTYcXUwjwY.css?delta=2&language=en&theme=wpi21&include=eJxVjlEOwyAMQy9EG23SzoMCZAUtBZTApt5-8FF1-7P9EsveW_-ikFqRB_gfYzlps9oOJjUD1PC0rRR2KPBvJ22RdoJTXEnP6U2iyMYXIQjSK_KaGu3L7DcVBTfBGvVkV7L2XLsbZ5GC0UPHEzhUMp-a7jfYuDjkZS5MefsCh6BNdw",
+      "title": "Linked catalog subtotal display stylesheet",
+      "fetched_at": "2026-10-11T02:27:15.612623+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": ".hide-subtotal descendant subtotal rows: display none",
       "confidence": "high"
     }
   ],
@@ -238,17 +288,31 @@
   ],
   "requirements": [
     {
-      "id": "wpi-ai-optimization-decision-theory-concentration-observed-options",
+      "id": "wpi-ai-optimization-decision-theory-concentration-total",
       "parent_id": null,
-      "title": "Observed local concentration course inventory",
-      "kind": "note",
+      "title": "Optimization and Decision Theory",
+      "kind": "all",
       "count": null,
       "credits": null,
       "credit_unit": "units",
       "category": "applications",
       "source_id": "wpi-ai-optimization-decision-theory-concentration-catalog",
       "source_text": null,
-      "summary": "Course rows observed in this named concentration catalog. This inventory is not an all-required list. Selection minima, nested alternatives, open pools and policy conditions require the separate reviewed notes; parent BS requirements are outside this local inventory.",
+      "summary": "Complete this selected concentration’s local distribution. Host BS degree requirements remain outside this local inventory.",
+      "course_ids": []
+    },
+    {
+      "id": "wpi-ai-optimization-decision-theory-concentration-selection-total",
+      "parent_id": "wpi-ai-optimization-decision-theory-concentration-total",
+      "title": "Total concentration selection — includes fixed courses",
+      "kind": "choose_courses",
+      "count": 6,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "applications",
+      "source_id": "wpi-ai-optimization-decision-theory-concentration-catalog",
+      "source_text": null,
+      "summary": "Six distinct courses in total, including all fixed courses and selections satisfying the following bins. This is not six additional electives; do not add this total to its component choices. Observed options do not close separately stated open or unresolved routes.",
       "course_ids": [
         "wpi-ma-2621",
         "wpi-ma-2631",
@@ -267,9 +331,102 @@
       ]
     },
     {
-      "id": "wpi-ai-optimization-decision-theory-concentration-reviewed-distribution",
-      "parent_id": null,
-      "title": "Reviewed local distribution and qualifications",
+      "id": "wpi-ai-optimization-decision-theory-concentration-required-alternative-0",
+      "parent_id": "wpi-ai-optimization-decision-theory-concentration-section-0",
+      "title": "Choose one probability course",
+      "kind": "choose_courses",
+      "count": 1,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "applications",
+      "source_id": "wpi-ai-optimization-decision-theory-concentration-catalog",
+      "source_text": null,
+      "summary": "Choose one probability course",
+      "course_ids": [
+        "wpi-ma-2621",
+        "wpi-ma-2631"
+      ]
+    },
+    {
+      "id": "wpi-ai-optimization-decision-theory-concentration-section-0",
+      "parent_id": "wpi-ai-optimization-decision-theory-concentration-total",
+      "title": "Required Foundational Courses (must take both; 2/3 units):",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "applications",
+      "source_id": "wpi-ai-optimization-decision-theory-concentration-catalog",
+      "source_text": null,
+      "summary": "Required Foundational Courses (must take both; 2/3 units):",
+      "course_ids": [
+        "wpi-ma-1024"
+      ]
+    },
+    {
+      "id": "wpi-ai-optimization-decision-theory-concentration-section-1",
+      "parent_id": "wpi-ai-optimization-decision-theory-concentration-total",
+      "title": "Choose one course in Linear Programming or Decision Theory from:",
+      "kind": "choose_courses",
+      "count": 1,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "applications",
+      "source_id": "wpi-ai-optimization-decision-theory-concentration-catalog",
+      "source_text": null,
+      "summary": "Choose one course in Linear Programming or Decision Theory from:",
+      "course_ids": [
+        "wpi-ma-2210",
+        "wpi-ma-3231"
+      ]
+    },
+    {
+      "id": "wpi-ai-optimization-decision-theory-concentration-section-2",
+      "parent_id": "wpi-ai-optimization-decision-theory-concentration-total",
+      "title": "Choose two courses in Optimization and Tools of Decision Theory from:",
+      "kind": "choose_courses",
+      "count": 2,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "applications",
+      "source_id": "wpi-ai-optimization-decision-theory-concentration-catalog",
+      "source_text": null,
+      "summary": "Choose two courses in Optimization and Tools of Decision Theory from:",
+      "course_ids": [
+        "wpi-ma-3233",
+        "wpi-ma-4235",
+        "wpi-ma-4237"
+      ]
+    },
+    {
+      "id": "wpi-ai-optimization-decision-theory-concentration-section-3",
+      "parent_id": "wpi-ai-optimization-decision-theory-concentration-total",
+      "title": "Choose one course from:",
+      "kind": "choose_courses",
+      "count": 1,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "applications",
+      "source_id": "wpi-ai-optimization-decision-theory-concentration-catalog",
+      "source_text": null,
+      "summary": "Choose one course from:",
+      "course_ids": [
+        "wpi-cs-4032-ma-3257",
+        "wpi-ds-4635-ma-4635",
+        "wpi-ma-2073",
+        "wpi-ma-2251",
+        "wpi-ma-2271",
+        "wpi-ma-2273",
+        "wpi-ma-3231",
+        "wpi-ma-3233",
+        "wpi-ma-4235",
+        "wpi-ma-4237"
+      ]
+    },
+    {
+      "id": "wpi-ai-optimization-decision-theory-concentration-core-overlap",
+      "parent_id": "wpi-ai-optimization-decision-theory-concentration-total",
+      "title": "Core Overlap",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -277,30 +434,177 @@
       "category": "applications",
       "source_id": "wpi-ai-optimization-decision-theory-concentration-catalog",
       "source_text": null,
-      "summary": "Six courses beyond the AI core: MA2621 or MA2631, plus MA1024; one linear-programming/decision course, two optimization/tools courses and one final listed elective. Source foundation prose says2/3 units while its displayed Minimum Units says1/3; retain the discrepancy. Repeated pool appearances do not authorize double counting.",
+      "summary": "The six concentration courses are additional to those used for AI core requirements.",
+      "course_ids": []
+    },
+    {
+      "id": "wpi-ai-optimization-decision-theory-concentration-hidden-subtotal",
+      "parent_id": "wpi-ai-optimization-decision-theory-concentration-total",
+      "title": "Suppressed catalog subtotal field",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "applications",
+      "source_id": "wpi-ai-optimization-decision-theory-concentration-catalog",
+      "source_text": null,
+      "summary": "The raw 1/3 subtotal occurs inside a hide-subtotal section. The independently inspected linked stylesheet hides this field; it is not treated as a visible requirement conflicting with the explicit local course distribution. Review if source visibility changes.",
+      "course_ids": []
+    },
+    {
+      "id": "wpi-ai-optimization-decision-theory-concentration-parent-scope",
+      "parent_id": null,
+      "title": "AI host relationship and concentration total",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "other",
+      "source_id": "wpi-ai-optimization-decision-theory-concentration-parent",
+      "source_text": null,
+      "summary": "The AI BS requires exactly one concentration with six distinct courses (6/3 units). This is the total including fixed requirements and local choices, not an extra elective block. The host degree remains separately audited.",
+      "course_ids": []
+    },
+    {
+      "id": "wpi-ai-optimization-decision-theory-concentration-parent-mqp",
+      "parent_id": null,
+      "title": "Concentration-related MQP and advising",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "other",
+      "source_id": "wpi-ai-optimization-decision-theory-concentration-parent",
+      "source_text": null,
+      "summary": "The AI MQP is 3/3 units and applies AI knowledge and techniques within the selected concentration. A sole adviser must be AI core/collaborative faculty within that discipline; otherwise an AI core/collaborative faculty member and a faculty member with disciplinary knowledge co-advise. This is the host MQP applied to the concentration, not a second additional MQP.",
+      "course_ids": []
+    },
+    {
+      "id": "wpi-ai-optimization-decision-theory-concentration-parent-overlap",
+      "parent_id": null,
+      "title": "Science overlap and degree-level advanced floor",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "other",
+      "source_id": "wpi-ai-optimization-decision-theory-concentration-parent",
+      "source_text": null,
+      "summary": "If a course overlaps the natural/engineering-science requirement and concentration or disciplinary electives, add other BS-AI distribution courses to retain ten program units. The host degree’s 4/3-unit floor at 4000 level or above can be met across core, concentration and other distribution work; it is not an extra four-course local concentration minimum.",
+      "course_ids": []
+    },
+    {
+      "id": "wpi-ai-optimization-decision-theory-concentration-policy-options-concentration",
+      "parent_id": null,
+      "title": "Concentration declaration and scope",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "other",
+      "source_id": "wpi-ai-optimization-decision-theory-concentration-policy-options",
+      "source_text": null,
+      "summary": "A concentration requires two integrated-study units and a related MQP. Plan with the adviser and apply to the program review committee by its deadlines; concentration requirements cannot prevent completion of the major.",
+      "course_ids": []
+    },
+    {
+      "id": "wpi-ai-optimization-decision-theory-concentration-policy-options-overlap",
+      "parent_id": null,
+      "title": "Additional-designation overlap ceiling",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "other",
+      "source_id": "wpi-ai-optimization-decision-theory-concentration-policy-options",
+      "source_text": null,
+      "summary": "Concentrations/minors may overlap another additional designation by at most one unit. No credit-bearing activity may be triple-counted across degree requirements or designations.",
+      "course_ids": []
+    },
+    {
+      "id": "wpi-ai-optimization-decision-theory-concentration-policy-grading-credit",
+      "parent_id": null,
+      "title": "Credit-bearing completion",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "other",
+      "source_id": "wpi-ai-optimization-decision-theory-concentration-policy-grading",
+      "source_text": null,
+      "summary": "A/B/C are undergraduate course grades that earn credit; NR does not. IQP/MQP/HUA require an overall completion evaluation; project SP is temporary and must be replaced by a permanent grade.",
+      "course_ids": []
+    },
+    {
+      "id": "wpi-ai-optimization-decision-theory-concentration-policy-grading-gpa",
+      "parent_id": null,
+      "title": "No institutional undergraduate GPA",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "other",
+      "source_id": "wpi-ai-optimization-decision-theory-concentration-policy-grading",
+      "source_text": null,
+      "summary": "WPI does not maintain an undergraduate cumulative GPA. A numerical equivalent may be requested for external use; no GPA graduation threshold is inferred.",
+      "course_ids": []
+    },
+    {
+      "id": "wpi-ai-optimization-decision-theory-concentration-policy-graduate-conversion",
+      "parent_id": null,
+      "title": "Graduate-course use and conversion",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "other",
+      "source_id": "wpi-ai-optimization-decision-theory-concentration-policy-graduate",
+      "source_text": null,
+      "summary": "Graduate enrollment ordinarily does not require graduate admission; Business School courses require admission to a dual BS/MS program. The published conversion is one graduate credit to 1/6 undergraduate unit, processed by the Registrar.",
+      "course_ids": []
+    },
+    {
+      "id": "wpi-ai-optimization-decision-theory-concentration-subtotal-display-policy",
+      "parent_id": null,
+      "title": "Catalog subtotal display policy",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "other",
+      "source_id": "wpi-ai-optimization-decision-theory-concentration-catalog-stylesheet",
+      "source_text": null,
+      "summary": "The stylesheet linked by the inspected catalog explicitly hides degree subtotal rows within hide-subtotal sections. Suppressed machine subtotal values are not promoted to visible student requirements; visible course-distribution prose remains represented.",
       "course_ids": []
     }
   ],
   "notes": [
-    "Six courses beyond the AI core: MA2621 or MA2631, plus MA1024; one linear-programming/decision course, two optimization/tools courses and one final listed elective. Source foundation prose says2/3 units while its displayed Minimum Units says1/3; retain the discrepancy. Repeated pool appearances do not authorize double counting.",
-    "Local course rows and distribution summary are mapped; full nested choice logic, general concentration declaration/overlap policies, and applicable enrollment restrictions remain unreviewed. Parent BS requirements are outside local scope.",
-    "Exact official full concentration title retained. No independent launch date verified. Fractional amounts retain WPI source units; no semester-hour conversion."
+    "This is the exact named concentration within the AI major, not a separate BS award. Only local concentration requirements and applicable policies are audited; the host degree remains separately represented.",
+    "Six distinct courses is the total including fixed requirements and chosen bins, not six additional electives. Do not add total and component choice descriptors. Native WPI units are retained, with the published graduate conversion stated separately.",
+    "Explicitly open subject/level or approval routes remain rules, not invented exhaustive course lists. Course descriptions, recommended background and individual prerequisites remain separate metadata gaps."
   ],
   "curriculum_audit": {
     "scope": "concentration",
     "reviewed_at": "2026-10-11",
     "source_ids": [
-      "wpi-ai-optimization-decision-theory-concentration-catalog"
+      "wpi-ai-optimization-decision-theory-concentration-catalog",
+      "wpi-ai-optimization-decision-theory-concentration-parent",
+      "wpi-ai-optimization-decision-theory-concentration-policy-options",
+      "wpi-ai-optimization-decision-theory-concentration-policy-grading",
+      "wpi-ai-optimization-decision-theory-concentration-policy-graduate",
+      "wpi-ai-optimization-decision-theory-concentration-catalog-stylesheet"
     ],
     "sections": [
-      "Official concentration and associated AI major",
-      "Published local course rows and distribution overview"
+      "Exact concentration identity and AI host relationship",
+      "Six-course total including fixed sections and local selection bins",
+      "Local exclusions, level floors, topic qualifications and any open course predicates",
+      "Concentration-related MQP and faculty-advising rules",
+      "General concentration declaration and additional-designation overlap/no triple counting",
+      "Grading and graduate enrollment/conversion policies"
     ],
-    "unresolved_requirements": [
-      "Local course rows and distribution summary are mapped; full nested choice logic, general concentration declaration/overlap policies, and applicable enrollment restrictions remain unreviewed. Parent BS requirements are outside local scope."
-    ],
+    "unresolved_requirements": [],
     "metadata_gaps": [
-      "Descriptions/prerequisites and external graduate course entries not extracted."
+      "Course descriptions and course-level recommended background/prerequisites are not fully extracted. Public syllabi unverified."
     ]
   }
 }

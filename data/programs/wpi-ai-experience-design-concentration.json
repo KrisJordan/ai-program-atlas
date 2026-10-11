@@ -17,7 +17,7 @@
   "catalog_year": "2026-2027",
   "verification_status": "confirmed",
   "last_verified": "2026-10-11",
-  "curriculum_status": "partial",
+  "curriculum_status": "complete",
   "links": [
     {
       "kind": "catalog",
@@ -34,6 +34,56 @@
       "source_date": null,
       "catalog_year": "2026-2027",
       "locator": "Program heading, award/host and requirements",
+      "confidence": "high"
+    },
+    {
+      "id": "wpi-ai-experience-design-concentration-parent",
+      "url": "https://wpi.cleancatalog.net/artificial-intelligence/artificial-intelligence-major",
+      "title": "Artificial Intelligence Major",
+      "fetched_at": "2026-10-10T22:32:59.081667+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Concentration; MQP; overlap and advanced-level distribution",
+      "confidence": "high"
+    },
+    {
+      "id": "wpi-ai-experience-design-concentration-policy-options",
+      "url": "https://wpi.cleancatalog.net/degree-options",
+      "title": "Degree Options",
+      "fetched_at": "2026-10-10T22:46:30.790029+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Applicable concentration declaration, overlap, completion and enrollment policy",
+      "confidence": "high"
+    },
+    {
+      "id": "wpi-ai-experience-design-concentration-policy-grading",
+      "url": "https://wpi.cleancatalog.net/grading-policies",
+      "title": "Grading Policies",
+      "fetched_at": "2026-10-10T22:43:13.621322+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Applicable concentration declaration, overlap, completion and enrollment policy",
+      "confidence": "high"
+    },
+    {
+      "id": "wpi-ai-experience-design-concentration-policy-graduate",
+      "url": "https://wpi.cleancatalog.net/graduate-courses",
+      "title": "Graduate Courses",
+      "fetched_at": "2026-10-10T22:43:27.116161+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Applicable concentration declaration, overlap, completion and enrollment policy",
+      "confidence": "high"
+    },
+    {
+      "id": "wpi-ai-experience-design-concentration-catalog-stylesheet",
+      "url": "https://wpi.cleancatalog.net/sites/default/files/css/css_-sXQU_kB0auQ6BjlX02vsjw7FVeDqgoz5YTYcXUwjwY.css?delta=2&language=en&theme=wpi21&include=eJxVjlEOwyAMQy9EG23SzoMCZAUtBZTApt5-8FF1-7P9EsveW_-ikFqRB_gfYzlps9oOJjUD1PC0rRR2KPBvJ22RdoJTXEnP6U2iyMYXIQjSK_KaGu3L7DcVBTfBGvVkV7L2XLsbZ5GC0UPHEzhUMp-a7jfYuDjkZS5MefsCh6BNdw",
+      "title": "Linked catalog subtotal display stylesheet",
+      "fetched_at": "2026-10-11T02:27:15.612623+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": ".hide-subtotal descendant subtotal rows: display none",
       "confidence": "high"
     }
   ],
@@ -262,21 +312,63 @@
       "url": "https://wpi.cleancatalog.net/interactive-media-and-game-development/imgd-4900",
       "public_site": null,
       "syllabus": null
+    },
+    {
+      "id": "wpi-imgd-5100",
+      "code": "IMGD 5100",
+      "name": "Tangible and Embodied Interaction",
+      "description": null,
+      "prerequisites": null,
+      "credits": 0.5,
+      "credit_unit": "units",
+      "category": "applications",
+      "source_id": "wpi-ai-experience-design-concentration-catalog",
+      "url": "https://wpi.cleancatalog.net/artificial-intelligence/artificial-intelligence-major-with-concentration-in-experience-design",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "wpi-imgd-5300",
+      "code": "IMGD 5300",
+      "name": "Design of Interactive Experiences",
+      "description": null,
+      "prerequisites": null,
+      "credits": 0.5,
+      "credit_unit": "units",
+      "category": "applications",
+      "source_id": "wpi-ai-experience-design-concentration-catalog",
+      "url": "https://wpi.cleancatalog.net/artificial-intelligence/artificial-intelligence-major-with-concentration-in-experience-design",
+      "public_site": null,
+      "syllabus": null
     }
   ],
   "requirements": [
     {
-      "id": "wpi-ai-experience-design-concentration-observed-options",
+      "id": "wpi-ai-experience-design-concentration-total",
       "parent_id": null,
-      "title": "Observed local concentration course inventory",
-      "kind": "note",
+      "title": "Experience Design",
+      "kind": "all",
       "count": null,
       "credits": null,
       "credit_unit": "units",
       "category": "applications",
       "source_id": "wpi-ai-experience-design-concentration-catalog",
       "source_text": null,
-      "summary": "Course rows observed in this named concentration catalog. This inventory is not an all-required list. Selection minima, nested alternatives, open pools and policy conditions require the separate reviewed notes; parent BS requirements are outside this local inventory.",
+      "summary": "Complete this selected concentration’s local distribution. Host BS degree requirements remain outside this local inventory.",
+      "course_ids": []
+    },
+    {
+      "id": "wpi-ai-experience-design-concentration-selection-total",
+      "parent_id": "wpi-ai-experience-design-concentration-total",
+      "title": "Total concentration selection — includes fixed courses",
+      "kind": "choose_courses",
+      "count": 6,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "applications",
+      "source_id": "wpi-ai-experience-design-concentration-catalog",
+      "source_text": null,
+      "summary": "Six distinct courses in total, including all fixed courses and selections satisfying the following bins. This is not six additional electives; do not add this total to its component choices. Observed options do not close separately stated open or unresolved routes.",
       "course_ids": [
         "wpi-imgd-1000",
         "wpi-imgd-1001",
@@ -293,13 +385,78 @@
         "wpi-imgd-4200",
         "wpi-imgd-4600",
         "wpi-imgd-4700",
-        "wpi-imgd-4900"
+        "wpi-imgd-4900",
+        "wpi-imgd-5100",
+        "wpi-imgd-5300"
       ]
     },
     {
-      "id": "wpi-ai-experience-design-concentration-reviewed-distribution",
-      "parent_id": null,
-      "title": "Reviewed local distribution and qualifications",
+      "id": "wpi-ai-experience-design-concentration-section-0",
+      "parent_id": "wpi-ai-experience-design-concentration-total",
+      "title": "Choose one course in Foundations of Designing Interactive Experiences:",
+      "kind": "choose_courses",
+      "count": 1,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "applications",
+      "source_id": "wpi-ai-experience-design-concentration-catalog",
+      "source_text": null,
+      "summary": "Choose one course in Foundations of Designing Interactive Experiences:",
+      "course_ids": [
+        "wpi-imgd-1000",
+        "wpi-imgd-1001",
+        "wpi-imgd-1002"
+      ]
+    },
+    {
+      "id": "wpi-ai-experience-design-concentration-section-1",
+      "parent_id": "wpi-ai-experience-design-concentration-total",
+      "title": "Choose two courses in Critical and Ethical Design from:",
+      "kind": "choose_courses",
+      "count": 2,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "applications",
+      "source_id": "wpi-ai-experience-design-concentration-catalog",
+      "source_text": null,
+      "summary": "Choose two courses in Critical and Ethical Design from:",
+      "course_ids": [
+        "wpi-imgd-2000",
+        "wpi-imgd-2002",
+        "wpi-wr-2200-imgd-2200"
+      ]
+    },
+    {
+      "id": "wpi-ai-experience-design-concentration-section-2",
+      "parent_id": "wpi-ai-experience-design-concentration-total",
+      "title": "Choose three courses in Experience Design from:",
+      "kind": "choose_courses",
+      "count": 3,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "applications",
+      "source_id": "wpi-ai-experience-design-concentration-catalog",
+      "source_text": null,
+      "summary": "Choose three courses in Experience Design from:",
+      "course_ids": [
+        "wpi-cs-3041",
+        "wpi-imgd-2500",
+        "wpi-imgd-2900",
+        "wpi-imgd-3100",
+        "wpi-imgd-3900",
+        "wpi-imgd-4100-cs-4100",
+        "wpi-imgd-4200",
+        "wpi-imgd-4600",
+        "wpi-imgd-4700",
+        "wpi-imgd-4900",
+        "wpi-imgd-5100",
+        "wpi-imgd-5300"
+      ]
+    },
+    {
+      "id": "wpi-ai-experience-design-concentration-advanced",
+      "parent_id": "wpi-ai-experience-design-concentration-total",
+      "title": "Advanced",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -307,30 +464,177 @@
       "category": "applications",
       "source_id": "wpi-ai-experience-design-concentration-catalog",
       "source_text": null,
-      "summary": "Six-course route: one foundations, two critical/ethical-design and three experience-design courses; at least two at3000+. IMGD5100/5300 are explicitly listed graduate options at1/2 unit, not yet independently reviewed for enrollment eligibility. Source also prints Minimum Units2/2; preserve this alongside six-course prose without reconciling by assumption.",
+      "summary": "At least two concentration courses must be at 3000 level or above.",
+      "course_ids": []
+    },
+    {
+      "id": "wpi-ai-experience-design-concentration-hidden-subtotal",
+      "parent_id": "wpi-ai-experience-design-concentration-total",
+      "title": "Suppressed catalog subtotal field",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "applications",
+      "source_id": "wpi-ai-experience-design-concentration-catalog",
+      "source_text": null,
+      "summary": "The raw 2/2 subtotal occurs inside a hide-subtotal section. The independently inspected linked stylesheet hides this field; it is not treated as a visible requirement conflicting with the explicit local course distribution. Review if source visibility changes.",
+      "course_ids": []
+    },
+    {
+      "id": "wpi-ai-experience-design-concentration-parent-scope",
+      "parent_id": null,
+      "title": "AI host relationship and concentration total",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "other",
+      "source_id": "wpi-ai-experience-design-concentration-parent",
+      "source_text": null,
+      "summary": "The AI BS requires exactly one concentration with six distinct courses (6/3 units). This is the total including fixed requirements and local choices, not an extra elective block. The host degree remains separately audited.",
+      "course_ids": []
+    },
+    {
+      "id": "wpi-ai-experience-design-concentration-parent-mqp",
+      "parent_id": null,
+      "title": "Concentration-related MQP and advising",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "other",
+      "source_id": "wpi-ai-experience-design-concentration-parent",
+      "source_text": null,
+      "summary": "The AI MQP is 3/3 units and applies AI knowledge and techniques within the selected concentration. A sole adviser must be AI core/collaborative faculty within that discipline; otherwise an AI core/collaborative faculty member and a faculty member with disciplinary knowledge co-advise. This is the host MQP applied to the concentration, not a second additional MQP.",
+      "course_ids": []
+    },
+    {
+      "id": "wpi-ai-experience-design-concentration-parent-overlap",
+      "parent_id": null,
+      "title": "Science overlap and degree-level advanced floor",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "other",
+      "source_id": "wpi-ai-experience-design-concentration-parent",
+      "source_text": null,
+      "summary": "If a course overlaps the natural/engineering-science requirement and concentration or disciplinary electives, add other BS-AI distribution courses to retain ten program units. The host degree’s 4/3-unit floor at 4000 level or above can be met across core, concentration and other distribution work; it is not an extra four-course local concentration minimum.",
+      "course_ids": []
+    },
+    {
+      "id": "wpi-ai-experience-design-concentration-policy-options-concentration",
+      "parent_id": null,
+      "title": "Concentration declaration and scope",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "other",
+      "source_id": "wpi-ai-experience-design-concentration-policy-options",
+      "source_text": null,
+      "summary": "A concentration requires two integrated-study units and a related MQP. Plan with the adviser and apply to the program review committee by its deadlines; concentration requirements cannot prevent completion of the major.",
+      "course_ids": []
+    },
+    {
+      "id": "wpi-ai-experience-design-concentration-policy-options-overlap",
+      "parent_id": null,
+      "title": "Additional-designation overlap ceiling",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "other",
+      "source_id": "wpi-ai-experience-design-concentration-policy-options",
+      "source_text": null,
+      "summary": "Concentrations/minors may overlap another additional designation by at most one unit. No credit-bearing activity may be triple-counted across degree requirements or designations.",
+      "course_ids": []
+    },
+    {
+      "id": "wpi-ai-experience-design-concentration-policy-grading-credit",
+      "parent_id": null,
+      "title": "Credit-bearing completion",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "other",
+      "source_id": "wpi-ai-experience-design-concentration-policy-grading",
+      "source_text": null,
+      "summary": "A/B/C are undergraduate course grades that earn credit; NR does not. IQP/MQP/HUA require an overall completion evaluation; project SP is temporary and must be replaced by a permanent grade.",
+      "course_ids": []
+    },
+    {
+      "id": "wpi-ai-experience-design-concentration-policy-grading-gpa",
+      "parent_id": null,
+      "title": "No institutional undergraduate GPA",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "other",
+      "source_id": "wpi-ai-experience-design-concentration-policy-grading",
+      "source_text": null,
+      "summary": "WPI does not maintain an undergraduate cumulative GPA. A numerical equivalent may be requested for external use; no GPA graduation threshold is inferred.",
+      "course_ids": []
+    },
+    {
+      "id": "wpi-ai-experience-design-concentration-policy-graduate-conversion",
+      "parent_id": null,
+      "title": "Graduate-course use and conversion",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "other",
+      "source_id": "wpi-ai-experience-design-concentration-policy-graduate",
+      "source_text": null,
+      "summary": "Graduate enrollment ordinarily does not require graduate admission; Business School courses require admission to a dual BS/MS program. The published conversion is one graduate credit to 1/6 undergraduate unit, processed by the Registrar.",
+      "course_ids": []
+    },
+    {
+      "id": "wpi-ai-experience-design-concentration-subtotal-display-policy",
+      "parent_id": null,
+      "title": "Catalog subtotal display policy",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "other",
+      "source_id": "wpi-ai-experience-design-concentration-catalog-stylesheet",
+      "source_text": null,
+      "summary": "The stylesheet linked by the inspected catalog explicitly hides degree subtotal rows within hide-subtotal sections. Suppressed machine subtotal values are not promoted to visible student requirements; visible course-distribution prose remains represented.",
       "course_ids": []
     }
   ],
   "notes": [
-    "Six-course route: one foundations, two critical/ethical-design and three experience-design courses; at least two at3000+. IMGD5100/5300 are explicitly listed graduate options at1/2 unit, not yet independently reviewed for enrollment eligibility. Source also prints Minimum Units2/2; preserve this alongside six-course prose without reconciling by assumption.",
-    "Local course rows and distribution summary are mapped; full nested choice logic, general concentration declaration/overlap policies, and applicable enrollment restrictions remain unreviewed. Parent BS requirements are outside local scope.",
-    "Exact official full concentration title retained. No independent launch date verified. Fractional amounts retain WPI source units; no semester-hour conversion."
+    "This is the exact named concentration within the AI major, not a separate BS award. Only local concentration requirements and applicable policies are audited; the host degree remains separately represented.",
+    "Six distinct courses is the total including fixed requirements and chosen bins, not six additional electives. Do not add total and component choice descriptors. Native WPI units are retained, with the published graduate conversion stated separately.",
+    "Explicitly open subject/level or approval routes remain rules, not invented exhaustive course lists. Course descriptions, recommended background and individual prerequisites remain separate metadata gaps."
   ],
   "curriculum_audit": {
     "scope": "concentration",
     "reviewed_at": "2026-10-11",
     "source_ids": [
-      "wpi-ai-experience-design-concentration-catalog"
+      "wpi-ai-experience-design-concentration-catalog",
+      "wpi-ai-experience-design-concentration-parent",
+      "wpi-ai-experience-design-concentration-policy-options",
+      "wpi-ai-experience-design-concentration-policy-grading",
+      "wpi-ai-experience-design-concentration-policy-graduate",
+      "wpi-ai-experience-design-concentration-catalog-stylesheet"
     ],
     "sections": [
-      "Official concentration and associated AI major",
-      "Published local course rows and distribution overview"
+      "Exact concentration identity and AI host relationship",
+      "Six-course total including fixed sections and local selection bins",
+      "Local exclusions, level floors, topic qualifications and any open course predicates",
+      "Concentration-related MQP and faculty-advising rules",
+      "General concentration declaration and additional-designation overlap/no triple counting",
+      "Grading and graduate enrollment/conversion policies"
     ],
-    "unresolved_requirements": [
-      "Local course rows and distribution summary are mapped; full nested choice logic, general concentration declaration/overlap policies, and applicable enrollment restrictions remain unreviewed. Parent BS requirements are outside local scope."
-    ],
+    "unresolved_requirements": [],
     "metadata_gaps": [
-      "Descriptions/prerequisites and external graduate course entries not extracted."
+      "Course descriptions and course-level recommended background/prerequisites are not fully extracted. Public syllabi unverified."
     ]
   }
 }

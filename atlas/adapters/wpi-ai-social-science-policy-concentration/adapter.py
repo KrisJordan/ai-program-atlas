@@ -1,5 +1,9 @@
-from atlas.adapters.confirmed_depth3 import parse_wpi
-PROGRAM_ID='wpi-ai-social-science-policy-concentration'
-SOURCES=('https://wpi.cleancatalog.net/artificial-intelligence/artificial-intelligence-major-with-concentration-in-social-science-and',)
+"""Observed local concentration rules; host AI degree is separately audited."""
+from atlas.adapters import wpi_local_concentrations as local
+PROGRAM_ID = 'wpi-ai-social-science-policy-concentration'
+KEY = 'social-policy'
+
 def parse(html):
-    return parse_wpi(html, PROGRAM_ID, 'Artificial Intelligence Major with Concentration in Social Science and Policy Concentration', SOURCES[0])
+    return local.parse(html, PROGRAM_ID, KEY)
+
+local.attach(globals(), KEY)
