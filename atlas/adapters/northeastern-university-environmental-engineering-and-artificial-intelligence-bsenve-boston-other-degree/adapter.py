@@ -76,3 +76,8 @@ SOURCE_PARSERS = {**SOURCE_PARSERS, KHOURY_URL: lambda html: parse_khoury_policy
 from atlas.adapters.northeastern_environment_course_reviews import attach_reviewed_sources
 SOURCE_PARSERS = attach_reviewed_sources(PROGRAM_ID, SOURCE_PARSERS)
 SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + tuple(SOURCE_PARSERS)))
+
+# Exact COE/Khoury combination verified; policy remains conditional.
+from atlas.adapters.northeastern_college_policies import ENGINEERING_URL, parse_engineering_policy
+SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + (ENGINEERING_URL,)))
+SOURCE_PARSERS = {**SOURCE_PARSERS, ENGINEERING_URL: lambda html: parse_engineering_policy(html, program_id=PROGRAM_ID)}

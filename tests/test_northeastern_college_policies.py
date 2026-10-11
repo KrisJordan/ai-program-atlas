@@ -173,3 +173,37 @@ def test_optional_bouve_actual_replay_guards_nested_wrappers_and_missing_semanti
     assert nodes
     for n in nodes:n.decompose()
     with pytest.raises(ValueError):parse_bouve_policy(str(soup),program_id='test')
+
+
+ENGINEERING_PROGRAMS={'northeastern-chemical-engineering-ai-bsche','northeastern-university-environmental-engineering-and-artificial-intelligence-bsenve-boston-other-degree'}
+
+
+def test_two_verified_engineering_combinations_preserve_conditional_dated_rules():
+    from atlas.adapters.northeastern_college_policies import ENGINEERING_URL
+    for pid in ENGINEERING_PROGRAMS:
+        p=json.loads((ROOT/'data/programs'/f'{pid}.json').read_text());m=import_module('atlas.adapters.'+pid+'.adapter')
+        rules={r['id']:r for r in p['requirements']if r['source_id']==pid+'-engineering-college-policy'}
+        assert len(rules)==8 and all(r['kind']=='note' and not r['course_ids']for r in rules.values())
+        assert ENGINEERING_URL in m.SOURCES
+        assert 'September 6, 2023' in rules[pid+'-req-policy-engineering-conditional']['summary']
+        assert 'does not independently assign home college' in rules[pid+'-req-policy-engineering-conditional']['summary']
+        assert 'semester GPA below 1.800' in rules[pid+'-req-policy-engineering-probation']['summary']
+        assert 'cumulative GPA 2.000' in rules[pid+'-req-policy-engineering-probation']['summary']
+        assert 'discretionary rather than guaranteed' in rules[pid+'-req-policy-engineering-dismissal']['summary']
+        assert 'nine' in rules[pid+'-req-policy-engineering-satisfactory-grading']['summary']
+        assert 'only general electives outside Engineering' in rules[pid+'-req-policy-engineering-satisfactory-grading']['summary']
+        assert 'does not require a minor' in rules[pid+'-req-policy-engineering-study-plan']['summary']
+
+
+def test_optional_engineering_source_replay_and_changed_date_scope_thresholds():
+    from atlas.adapters.northeastern_college_policies import parse_engineering_policy
+    cache=ROOT/'.cache/research/degree-audit-northeastern/home-22.html'
+    if not cache.exists():pytest.skip('Optional ignored Engineering source')
+    html=cache.read_text()
+    for pid in ENGINEERING_PROGRAMS:
+        p=json.loads((ROOT/'data/programs'/f'{pid}.json').read_text())
+        assert {r['id']:r for r in parse_engineering_policy(html,program_id=pid)['requirements']}=={r['id']:r for r in p['requirements']if r['source_id']==pid+'-engineering-college-policy'}
+    for old,new in [('September 6, 2023','September 6, 2026'),('1.800','1.500'),('maximum of 9','maximum of 12'),('maximum of 4','maximum of 8'),('Only general electives','All courses'),('below a 1.000','below a 0.500')]:
+        assert old in html
+        with pytest.raises(ValueError):parse_engineering_policy(html.replace(old,new),program_id='test')
+    with pytest.raises(ValueError):parse_engineering_policy('<nav>'+html+'</nav>',program_id='test')

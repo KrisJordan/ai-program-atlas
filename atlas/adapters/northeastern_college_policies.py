@@ -189,3 +189,34 @@ def parse_bouve_policy(html,*,program_id):
     for key,title,guards,summary in BOUVE_RULES:
         need(scoped_section(title),*guards);rows.append(row(program_id+'-req-policy-bouve-'+key,title,summary,base))
     return dict(id=program_id,courses=[],requirements=rows,curriculum_status='partial',notes=['Conditional Bouvé policy observation; home/cohort applicability and actual clinical/professional scope remain student/program specific.'])
+
+ENGINEERING_URL='https://catalog.northeastern.edu/undergraduate/engineering/'
+ENGINEERING_RULES=[
+ ('load','Academic Progression Standards',['four (4 credit) courses','corresponding labs and recitations','at least 12 semester hours each academic semester (fall, spring)'],
+  'Where Engineering undergraduate rules apply, enroll in four four-credit courses with corresponding labs/recitations and successfully complete at least twelve hours each fall/spring academic semester, in addition to university progression standards.'),
+ ('probation','Criteria for Academic Probation',['First-Year Students:','semester GPA of at least a 1.800','Upper-Level and Transfer Students:','cumulative GPA of at least 2.000','Not earning at least 12 semester hours','internal record but not on the permanent transcript'],
+  'For Engineering first-year students, probation follows semester GPA below 1.800 or fewer than twelve earned hours in fall/spring. Upper-level/transfer students need cumulative GPA 2.000 and twelve earned hours. The action applies the next academic semester and appears on the internal record rather than permanent transcript. Preserve semester versus cumulative scope.'),
+ ('dismissal','Criteria for Academic Dismissal',['below a 1.000 GPA or earn fewer than 4 semester hours','may be dismissed, regardless of their prior academic status','After two semesters (fall, spring) on academic probation','may be academically dismissed if they fail to meet academic progression standards','permanent transcript'],
+  'Engineering may dismiss students below GPA 1.000 or four earned hours in a fall/spring semester regardless of prior standing, or after two probation semesters without meeting progression standards. This is discretionary rather than guaranteed dismissal; the action is recorded on the permanent transcript.'),
+ ('satisfactory-grading','Satisfactory/Unsatisfactory Graded Coursework',['maximum of 9 semester hours','maximum of 4 semester hours','per semester','Only general electives taken outside the College of Engineering'],
+  'Engineering permits at most nine satisfactory/unsatisfactory hours toward degree requirements, at most four per semester, and only general electives outside Engineering, under university policy. Do not apply this permission to major courses or infer that it overrides other university restrictions.'),
+ ('graduation-gpa','Graduation Requirements',['2.000 in major coursework','2.000 overall'],
+  'For Engineering graduation, the published cumulative minima are major GPA 2.000 and overall GPA 2.000. This conditional rule does not silently assign an Engineering home college or replace a more specific source-stated degree scope.'),
+ ('catalog-cohort','Graduation Requirements',['year of graduation, determined by the date of entry or reentry into the College of Engineering','fails to make normal academic progress will be subject to review and possible change','reserves the right to amend programs'],
+  'Engineering ties degree requirements to graduation year determined by entry/reentry into the college. Lack of normal progress can prompt review and change of requirements/year, and the college reserves curricular amendment. The public rule does not determine an individual student’s actual controlling cohort.'),
+ ('study-plan','Progression Toward Fulfillment of Degree Requirements',['develop and follow a program of study','after completion of the third year','revised plans should be submitted to an academic advisor for review and approval','declare their minor no later than the third year'],
+  'Follow a planned sequence toward Engineering degree requirements. For graduation-year changes after the third curriculum year, submit a revised plan for advisor review/approval. A student electing a minor should declare it by the third year; this does not require a minor.')]
+
+
+def parse_engineering_policy(html,*,program_id):
+    soup=BeautifulSoup(html,'html.parser')
+    for node in soup.find_all(['nav','aside','script','style','footer']):node.decompose()
+    title=soup.find(id='site-title');h1=title.find('h1') if title else None;panel=soup.find(id='textcontainer')
+    if h1 is None or text(h1)!='College of Engineering' or panel is None:raise ValueError('Expected Engineering college-policy identity/panel missing')
+    need(section(panel,'Undergraduate Academic Standards'),'Effective September 6, 2023')
+    sid=program_id+'-engineering-college-policy';base=program_id+'-req-policy-engineering-conditional'
+    def row(rid,title,summary,parent):return dict(id=rid,parent_id=parent,title=title,kind='note',count=None,credits=None,credit_unit='unknown',category='other',source_id=sid,source_text=None,summary=summary,course_ids=[])
+    rows=[row(base,'Conditional College of Engineering policies','Current 2026–2027 catalog publishes these undergraduate standards as effective September 6, 2023. Apply only when the student’s actual college/enrollment/cohort makes them applicable. Verified COE participation does not independently assign home college or a personal controlling catalog.',None)]
+    for key,title,guards,summary in ENGINEERING_RULES:
+        need(section(panel,title),*guards);rows.append(row(program_id+'-req-policy-engineering-'+key,title,summary,base))
+    return dict(id=program_id,courses=[],requirements=rows,curriculum_status='partial',notes=['Conditional Engineering policy observation retains its explicit effective date and cohort review boundaries; no course graph or award equivalence is inferred.'])

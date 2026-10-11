@@ -102,3 +102,8 @@ SOURCE_PARSERS = {**SOURCE_PARSERS, **_CHEMICAL_POLICIES}
 from atlas.adapters.northeastern_college_policies import KHOURY_URL, parse_khoury_policy
 SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + (KHOURY_URL,)))
 SOURCE_PARSERS = {**SOURCE_PARSERS, KHOURY_URL: lambda html: parse_khoury_policy(html, program_id=PROGRAM_ID)}
+
+# Exact COE/Khoury combination verified; policy remains conditional.
+from atlas.adapters.northeastern_college_policies import ENGINEERING_URL, parse_engineering_policy
+SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + (ENGINEERING_URL,)))
+SOURCE_PARSERS = {**SOURCE_PARSERS, ENGINEERING_URL: lambda html: parse_engineering_policy(html, program_id=PROGRAM_ID)}
