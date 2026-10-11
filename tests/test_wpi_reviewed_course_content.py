@@ -99,7 +99,7 @@ def test_ai_computing_mathematics_source_rules_preserve_option_scope():
     assert 'Suggested background (advisory)' in courses['MA 2210']['prerequisites']
     profile=requirement_profile(p)
     assert [profile[x]['count'] for x in ['required','options','unresolved']]==[6,211,2]
-    assert sum('wpi-ai-bs' in e['program_ids'] for e in m.SPEC.values())==116
+    assert sum('wpi-ai-bs' in e['program_ids'] for e in m.SPEC.values())==144
     assert not p.get('course_identity_groups')
 
 
@@ -151,3 +151,16 @@ def test_engineering_subjects_and_explicit_description_referral(monkeypatch):
     result=m.parse_referral(html,program_id='wpi-ai-bs',code=code)
     assert not result['courses'] and not result['requirements']
     with pytest.raises(ValueError):m.parse_referral(html.replace('companion','unrelated'),program_id='wpi-ai-bs',code=code)
+
+
+def test_life_science_domain_content_and_scoped_credit_rules():
+    p=json.loads(Path('data/programs/wpi-ai-bs.json').read_text());c={x['code']:x for x in p['courses']}
+    for code in ['BB 3080','BB 3010/BCB 3010','BB 4001/BCB 4001','CH 4210']:
+        assert c[code]['category']=='applications'
+        assert c[code]['category_review']['status']=='reviewed'
+    assert c['CH 3520']['category']=='mathematics'
+    assert c['CHE 3501']['category']=='mathematics'
+    for code in ['CHE 2011','CHE 2012','CHE 2013']:
+        assert 'CHE distribution' in c[code]['prerequisites']
+        assert c[code]['credits']==pytest.approx(1/3)
+    assert 'general chemistry' in m.SPEC['CH 2310']['audience_note']
