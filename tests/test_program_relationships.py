@@ -58,11 +58,20 @@ def test_multiple_parent_awards_roundtrip_history_removal_and_idempotence(conn):
 
 
 def test_parent_name_with_unverified_award_remains_partial(conn):
-    p=parent_record();p['parent_programs'][0]['award_level']=None;p['parent_program_review']['status']='partial'
+    p=parent_record();p['parent_programs'][0].update(award_level=None,award_label=None);p['parent_program_review']['status']='partial'
     assert db.ingest_program(conn,p)
     assert db.export_data(conn)['programs'][0]['parent_programs'][0]['award_level'] is None
     p['parent_program_review']['status']='verified'
     with pytest.raises(ValueError,match='explicit parent and award'):db.ingest_program(conn,p)
+
+
+def test_full_official_award_does_not_require_inventing_abbreviation(conn):
+    p=parent_record();p['parent_programs'][0]['award_level']=None
+    assert db.ingest_program(conn,p)
+    out=db.export_data(conn)['programs'][0]
+    assert out['parent_program_review']['status']=='verified'
+    assert out['parent_programs'][0]['award_label']=='Bachelor of Science'
+    assert out['parent_programs'][0]['award_level'] is None
 
 
 @pytest.mark.parametrize('change',[

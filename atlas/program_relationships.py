@@ -62,7 +62,7 @@ def validate_program_relationships(program):
             raise ValueError("Parent review notes must be a list of text")
         if review["status"] == "unknown" and parents:
             raise ValueError("Unknown parent review cannot claim a verified parent")
-        if review["status"] == "verified" and (not parents or any(not p.get("award_level") for p in parents)):
+        if review["status"] == "verified" and (not parents or any(not (p.get("award_level") or p.get("award_label")) for p in parents)):
             raise ValueError("Verified parent review needs an explicit parent and award")
 
 
