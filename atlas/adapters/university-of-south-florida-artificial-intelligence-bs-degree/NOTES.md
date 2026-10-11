@@ -84,3 +84,18 @@ This closes accessible represented course content, not definitive degree roles o
 ## Bounded independent correction — 2026-10-11
 
 A separate reviewer flagged PSY 2012; the coordinator reread its saved public Course Details description. Scientific study of behavior and mental processes is psychology domain knowledge, consistent with Rice PSYC 203, rather than ethics/communication or social interpretation of technology. Classification changes human context→applications without asserting an AI application. Its recorded fixed role is unchanged; that role remains bounded by the inaccessible current major-source limitation. Both course-review manifests and the replay regression now agree. No denied catalog or brochure route was retried.
+
+## Fixed-source available-evidence closure — 2026-10-11
+
+A fresh independent investigation found no readable saved official brochure PDF
+or nonempty brochure capture in existing permitted local evidence. The exact
+brochure robots denial and catalog HTTP202 were not retried. Fixed/choice roles
+remain unverified, with null independent role sets/counts. All 29 original Course
+Details descriptions were independently reread (excluding the later 141 GE
+additions), supporting the existing subjects without certifying their major roles.
+Manual subject subset: foundations4, mathematics6, AI7, systems2, human6,
+applications3, other1. No seed or adapter change is justified by these sources.
+See [resolution evidence](../../../research/degree-audit/independent-resolution-usf-wm.md)
+and the adjacent proposed replacement core rows; shared-ledger application belongs
+to the coordinator. A permitted readable governing major table/PDF is the exact
+remaining evidence need, not a still-unread course-description queue.

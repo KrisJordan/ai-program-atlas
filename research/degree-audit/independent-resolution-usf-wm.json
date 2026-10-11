@@ -1,0 +1,497 @@
+{
+  "audit_date": "2026-10-11",
+  "reviewer": "independent-resolution-usf-wm",
+  "scope": "Complete replacement bounded core rows proposed for independent-core-other.json; coordinator owns application and compiled ledgers. Available-source closure, not whole-degree certification.",
+  "programs": [
+    {
+      "program_id": "university-of-south-florida-artificial-intelligence-bs-degree",
+      "reviewed_at": "2026-10-11",
+      "reviewer": "independent-resolution-usf-wm",
+      "reviewed_content_hash": "d0b5cb0fa72554ddff12a15676e6eedec859dac6de873aaaef8c1104eefb4379",
+      "dimensions": {
+        "fixed_requirements": {
+          "status": "unverified",
+          "summary": "Available-source limit: the historical brochure transcription has 24 mapped fixed identities, but no readable saved official PDF or nonempty brochure text is available. The exact brochure URL is already recorded as robots-disallowed; the definitive catalog returned HTTP 202. Neither denied route was retried, and fixed identities/counts remain unchecked rather than zero.",
+          "evidence": [
+            {
+              "url": "https://www.usf.edu/ai-cybersecurity-computing/documents/brochures/bellini-ug-bsai.pdf",
+              "locator": "Curriculum / main degree requirements / explicitly named FAQ core"
+            }
+          ],
+          "limitations": [
+            "Exact registered brochure URL was robots-disallowed in the primary review; known catalog HTTP 202 remains. Course-description pages establish subjects, not fixed major membership. No PDF, text capture, or alternate authoritative major table was located in the existing permitted evidence."
+          ]
+        },
+        "choice_rules": {
+          "status": "unverified",
+          "summary": "Available-source limit: readable public course details do not establish the brochure statistics alternative or full AI-major elective eligibility. Existing alternatives remain observations; their complete role sets and counts are not independently certified.",
+          "evidence": [
+            {
+              "url": "https://www.usf.edu/ai-cybersecurity-computing/documents/brochures/bellini-ug-bsai.pdf",
+              "locator": "Actual requirement tables, alternative rows, branch footnotes and uncoded choice slots"
+            }
+          ],
+          "limitations": [
+            "This independent pass does not certify university-wide policies, general-education inventories, individual waivers, or total degree completion.",
+            "The definitive catalog returned HTTP 202 rather than a readable curriculum in the primary fetch; no challenge or access workaround was attempted."
+          ]
+        },
+        "classification": {
+          "status": "partial",
+          "summary": "Independently reread all 29 original represented Course Details descriptions (24 provisionally fixed and five provisionally optional records). Subject-only subset: foundations 4, mathematics 6, AI/ML 7, systems 2, human context 6, applications 3, other 1. CIS1930 is orientation/unclassified; PSY2012 is psychology applications. Role-specific totals remain null because the major source is unreadable; the 141 later contextual GE additions were outside this pass.",
+          "evidence": [
+            {
+              "url": "https://cloud.usf.edu/academic-programs/details/prefix/CIS/code/1930",
+              "locator": "CIS 1930 actual Course Details Description; 2026\u20132027 public inventory"
+            },
+            {
+              "url": "https://cloud.usf.edu/academic-programs/details/prefix/COP/code/2510",
+              "locator": "COP 2510 actual Course Details Description; 2026\u20132027 public inventory"
+            },
+            {
+              "url": "https://cloud.usf.edu/academic-programs/details/prefix/ENC/code/1101",
+              "locator": "ENC 1101 actual Course Details Description; 2026\u20132027 public inventory"
+            },
+            {
+              "url": "https://cloud.usf.edu/academic-programs/details/prefix/MAC/code/2311",
+              "locator": "MAC 2311 actual Course Details Description; 2026\u20132027 public inventory"
+            },
+            {
+              "url": "https://cloud.usf.edu/academic-programs/details/prefix/COP/code/3514",
+              "locator": "COP 3514 actual Course Details Description; 2026\u20132027 public inventory"
+            },
+            {
+              "url": "https://cloud.usf.edu/academic-programs/details/prefix/ENC/code/1102",
+              "locator": "ENC 1102 actual Course Details Description; 2026\u20132027 public inventory"
+            },
+            {
+              "url": "https://cloud.usf.edu/academic-programs/details/prefix/MAC/code/2312",
+              "locator": "MAC 2312 actual Course Details Description; 2026\u20132027 public inventory"
+            },
+            {
+              "url": "https://cloud.usf.edu/academic-programs/details/prefix/PHY/code/2048",
+              "locator": "PHY 2048 actual Course Details Description; 2026\u20132027 public inventory"
+            },
+            {
+              "url": "https://cloud.usf.edu/academic-programs/details/prefix/PHY/code/2048L",
+              "locator": "PHY 2048L actual Course Details Description; 2026\u20132027 public inventory"
+            },
+            {
+              "url": "https://cloud.usf.edu/academic-programs/details/prefix/CDA/code/3103",
+              "locator": "CDA 3103 actual Course Details Description; 2026\u20132027 public inventory"
+            },
+            {
+              "url": "https://cloud.usf.edu/academic-programs/details/prefix/COT/code/3100",
+              "locator": "COT 3100 actual Course Details Description; 2026\u20132027 public inventory"
+            },
+            {
+              "url": "https://cloud.usf.edu/academic-programs/details/prefix/COP/code/4530",
+              "locator": "COP 4530 actual Course Details Description; 2026\u20132027 public inventory"
+            },
+            {
+              "url": "https://cloud.usf.edu/academic-programs/details/prefix/EGN/code/4450",
+              "locator": "EGN 4450 actual Course Details Description; 2026\u20132027 public inventory"
+            },
+            {
+              "url": "https://cloud.usf.edu/academic-programs/details/prefix/PSY/code/2012",
+              "locator": "PSY 2012 actual Course Details Description; 2026\u20132027 public inventory"
+            },
+            {
+              "url": "https://cloud.usf.edu/academic-programs/details/prefix/COT/code/4400",
+              "locator": "COT 4400 actual Course Details Description; 2026\u20132027 public inventory"
+            },
+            {
+              "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAP/code/4641",
+              "locator": "CAP 4641 actual Course Details Description; 2026\u20132027 public inventory"
+            },
+            {
+              "url": "https://cloud.usf.edu/academic-programs/details/prefix/EGN/code/2440",
+              "locator": "EGN 2440 actual Course Details Description; 2026\u20132027 public inventory"
+            },
+            {
+              "url": "https://cloud.usf.edu/academic-programs/details/prefix/STA/code/2023",
+              "locator": "STA 2023 actual Course Details Description; 2026\u20132027 public inventory"
+            },
+            {
+              "url": "https://cloud.usf.edu/academic-programs/details/prefix/POS/code/2041",
+              "locator": "POS 2041 actual Course Details Description; 2026\u20132027 public inventory"
+            },
+            {
+              "url": "https://cloud.usf.edu/academic-programs/details/prefix/AMH/code/2010",
+              "locator": "AMH 2010 actual Course Details Description; 2026\u20132027 public inventory"
+            },
+            {
+              "url": "https://cloud.usf.edu/academic-programs/details/prefix/AMH/code/2020",
+              "locator": "AMH 2020 actual Course Details Description; 2026\u20132027 public inventory"
+            },
+            {
+              "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/1000",
+              "locator": "CAI 1000 actual Course Details Description; 2026\u20132027 public inventory"
+            },
+            {
+              "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/2001",
+              "locator": "CAI 2001 actual Course Details Description; 2026\u20132027 public inventory"
+            },
+            {
+              "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/4002",
+              "locator": "CAI 4002 actual Course Details Description; 2026\u20132027 public inventory"
+            },
+            {
+              "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/4024",
+              "locator": "CAI 4024 actual Course Details Description; 2026\u20132027 public inventory"
+            },
+            {
+              "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/4105",
+              "locator": "CAI 4105 actual Course Details Description; 2026\u20132027 public inventory"
+            },
+            {
+              "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/4203",
+              "locator": "CAI 4203 actual Course Details Description; 2026\u20132027 public inventory"
+            },
+            {
+              "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/4624",
+              "locator": "CAI 4624 actual Course Details Description; 2026\u20132027 public inventory"
+            },
+            {
+              "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/4841",
+              "locator": "CAI 4841 actual Course Details Description; 2026\u20132027 public inventory"
+            }
+          ],
+          "limitations": [
+            "The 29-course subject subset is independently checked, but its fixed/option roles cannot be recertified without the brochure/catalog. The 141 contextual GE additions are not re-reviewed; no full fixed-role chart or entire degree classification is certified."
+          ]
+        }
+      },
+      "expected_course_ids": {
+        "required": null,
+        "options": null,
+        "unresolved": null
+      },
+      "expected_profile": {
+        "required": null,
+        "options": null,
+        "unresolved": null
+      },
+      "full_degree_verified": false,
+      "checked_subject_subset": {
+        "course_ids": [
+          "usf-cis-1930",
+          "usf-cop-2510",
+          "usf-enc-1101",
+          "usf-mac-2311",
+          "usf-cop-3514",
+          "usf-enc-1102",
+          "usf-mac-2312",
+          "usf-phy-2048",
+          "usf-phy-2048l",
+          "usf-cda-3103",
+          "usf-cot-3100",
+          "usf-cop-4530",
+          "usf-egn-4450",
+          "usf-psy-2012",
+          "usf-cot-4400",
+          "usf-cap-4641",
+          "usf-egn-2440",
+          "usf-sta-2023",
+          "usf-pos-2041",
+          "usf-amh-2010",
+          "usf-amh-2020",
+          "usf-cai-1000",
+          "usf-cai-2001",
+          "usf-cai-4002",
+          "usf-cai-4024",
+          "usf-cai-4105",
+          "usf-cai-4203",
+          "usf-cai-4624",
+          "usf-cai-4841"
+        ],
+        "count": 29,
+        "categories": {
+          "foundations": 4,
+          "mathematics": 6,
+          "ai_ml": 7,
+          "systems": 2,
+          "human_context": 6,
+          "applications": 3,
+          "electives": 0,
+          "other": 1
+        },
+        "role_membership_verified": false
+      },
+      "source_captures": [
+        {
+          "path": ".cache/http/2b78c2baf4e5c6ce3c96e06826e7f9250d3ab73d5dd037adec82505ac9fe039c.body",
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/CIS/code/1930",
+          "sha256": "0c7f0feff5adf8cd2d4a892bafa19bcb3a550a5e74fe9bdfb1cff22d525e0a52"
+        },
+        {
+          "path": ".cache/http/d8bae7a7e5f70244185f477794dbc0fcbe2d702b8e9a73652e03a126b91cf220.body",
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/MAC/code/2311",
+          "sha256": "20507364ec4aefab532eff074952f927bbb4e079bbc9e8f5f34b6a6a7c2d7c15"
+        },
+        {
+          "path": ".cache/http/5d4da64c35cd1e894fb52df40e3d5a128b0a1adb38f86caadeef74c0cc8e9825.body",
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/CDA/code/3103",
+          "sha256": "8927ceefb78f4f1335a7957bd4701b468ba915d65a83b418b494a614707172f4"
+        },
+        {
+          "path": ".cache/http/676e3407347f62fb7082c8ed42c842a8a7c1dda167c23666e14dc5da8503ea67.body",
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/4203",
+          "sha256": "33e28cfa737302a60a93bf8fd9214ea2999c0abc2ce1178d74476c499201ca2b"
+        },
+        {
+          "path": ".cache/http/8993f3b74d6e39f7990776f17ead86e663e987ff2110792b16a41955061c7dd1.body",
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/COP/code/2510",
+          "sha256": "4787f68f65ab347d5f6ea69a683848caacf098ee7fd82fcc4e1e8549d2e34585"
+        },
+        {
+          "path": ".cache/http/c6bd101840d8a49c228e7c5737e2d54e29e1d9907ab45f29d409b7a361c28c8c.body",
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/4002",
+          "sha256": "bfbb8ea9edcf313fd404c2b018554957dccb93926cdf2cf6c47633bbdcd62f4d"
+        },
+        {
+          "path": ".cache/http/4d4a46b58ee5cd8e37282f66437631ea958ee83cc60668e20b39c20f2f11e63a.body",
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/EGN/code/2440",
+          "sha256": "69e14cea5b25d14611d6e29a0240b28010576f43e3e1a3d33cfa7dcd569f2917"
+        },
+        {
+          "path": ".cache/http/5d4d5fe580f0817b63154eff7a3f598815a74a57f6177f951f72cc567ab9878c.body",
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/PHY/code/2048L",
+          "sha256": "e0b33c61d871dbcc8b01326cb83116e396d110e3144cb50aec2d18dce77cf4e8"
+        },
+        {
+          "path": ".cache/http/4445d8015afff19eb705ed710c0a537e1efb95f79c906ac69eaf65d5733246f1.body",
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/EGN/code/4450",
+          "sha256": "7750316fcb72f958bbf7cdc01fe7c582f63349d12ae6fcaf949b57ea9e20bdc5"
+        },
+        {
+          "path": ".cache/http/a3339d09bebfb7f8447b45ac65a2f54cc23633cfea2125d49127cc4cd8a5f7d7.body",
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/COT/code/4400",
+          "sha256": "d8979557d78b2053392f506ad32ee8682a41130c1df421dfffe852bafafcecbb"
+        },
+        {
+          "path": ".cache/http/3fc77c3df7b9dddda898b6f6809e7c811e17039497db16b9cbdb39dedd4c8d09.body",
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/4105",
+          "sha256": "7246f2c0ec4daee2ff8e1b3a977b44b1017f3ab3084ce4093ccd1871ce222f3d"
+        },
+        {
+          "path": ".cache/http/e6f878b9f0567bf6f1a5c0f2d99041e3ccc66401edaa06a133e70b31251ca3df.body",
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/COT/code/3100",
+          "sha256": "2eb32a1e50a941af088fc42d66cef87784ec01ac2acea4173ad0ea8e922b1594"
+        },
+        {
+          "path": ".cache/http/e2143f3f6512a13c60811b189babcf0cf117cda827b5610445df1f25fd59f336.body",
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/4624",
+          "sha256": "3656a026680550287e8ae23fa02c50ba3ab9d68c96bd8d6ce5395459b081e226"
+        },
+        {
+          "path": ".cache/http/15125aff8c4fa47516688f889115b9137da742695007d265274d7280f0e64259.body",
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/1000",
+          "sha256": "50b4aa2d0e24f2598c9efcb0a8cf741088c90a1c4459d8c1f1077ca3b907ab00"
+        },
+        {
+          "path": ".cache/http/4bd206f02021d363c87949cecb79ee7d2119452560176a8b8096ad4dfb9499e8.body",
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/4841",
+          "sha256": "58561d63a85556dd7f9a1cdf2b514cd2e92f714ae90b9608db9786d2fc5d2e62"
+        },
+        {
+          "path": ".cache/http/4160f23a39ed621cd602a09a0772b645b980bd2e97ea150318efdbbf7091f479.body",
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/COP/code/4530",
+          "sha256": "a23d7af156669731e37f048f60bab6ecd43d65b838a7cbabff130d517841a117"
+        },
+        {
+          "path": ".cache/http/e2a4d0f0bb366d170c5d2f4dd23f5b28e05dc33bd6f544c9f28b812647821ca0.body",
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/POS/code/2041",
+          "sha256": "538394af7e7b146ba8cd3744ab2ee6cd38f11814fc0427d7269308ca38627054"
+        },
+        {
+          "path": ".cache/http/9f81922d152bdcc11deb762b4312ebcef82502aae94bed6ec4506b158d4ec623.body",
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/PSY/code/2012",
+          "sha256": "18ac7ffa0d076ec9a1e4fdca0b3d35dc43028007ccd57efce5ac5e6288147bab"
+        },
+        {
+          "path": ".cache/http/9da36fecd19bc6d49d58c6fc301c516b9db573580a1aafc694a833780f657f8b.body",
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAP/code/4641",
+          "sha256": "2d5c461adae883bbf93a121701278cc2a95af903c0ca2df94cc50e51be3c85e6"
+        },
+        {
+          "path": ".cache/http/41cb579a7c244b72582f90c81bcc46bb76a8a1ec91e49c0149b5c4b2b2a2c82d.body",
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/ENC/code/1102",
+          "sha256": "6aaf2fbf0316cd708e874a14d0928601578ca1ed16fdad48b8b8a1fdd611a15c"
+        },
+        {
+          "path": ".cache/http/2f79553cc48cfa2eb19201441412f58e13abf3dc4ff942878edaa466cb519fb7.body",
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/2001",
+          "sha256": "2f501d98d5cf23b822ce1406835d4016a8a36e5d6adf20cf26d0c5aad4c4be86"
+        },
+        {
+          "path": ".cache/http/1bef0f6fab958855e848c4e0ad18e1941a54748976046b3196c89892029e80d2.body",
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/AMH/code/2020",
+          "sha256": "dcb2006b4228f05f8fa69ff81d15287f8d2ff65479aee4aa5b2a0eb5622ac4db"
+        },
+        {
+          "path": ".cache/http/5bb864093a9899310d1ba54c854b79bc720ab7c3e65ac739b3f72cb7d455dc33.body",
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/AMH/code/2010",
+          "sha256": "5e3c5acdc31b3f3a766fd3aeeb97dde5585f4d388400445d8431d79eabbe87a4"
+        },
+        {
+          "path": ".cache/http/818efbf063c46224dc3a598324a1d17443f7a1c83a2b2840f74fc7baf6fd49e0.body",
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/MAC/code/2312",
+          "sha256": "64bf1b1098618cf8a6a7a3d3fc17790459db016e963e427ccef65ec54badc51c"
+        },
+        {
+          "path": ".cache/http/f469ed0de842650a124eb9f3b139a3d8e8af3085c97ecd7b6083e5886d4342a9.body",
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/ENC/code/1101",
+          "sha256": "2a5fe39adbdc5aeb25ae9ea6843fc0e5564df014fc39b4726d416aca11d96122"
+        },
+        {
+          "path": ".cache/http/8cdc55ee29d6dda084fc27204b791930586122adedc2d26e8070aa1ab37bd0f3.body",
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/4024",
+          "sha256": "e470ce967d5dec1106f54b7e9be242e76b871eaec12cf6a5a958cc3c0b985520"
+        },
+        {
+          "path": ".cache/http/a187c50f1246736fd6f7a12695e53d93c974a0a38ead328e2b257b390ae8b1cd.body",
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/COP/code/3514",
+          "sha256": "312dc6f689832e5143eea25d9df8be48228a2d8e7f77fd6f3a8e770cbce4d9c8"
+        },
+        {
+          "path": ".cache/http/d456059285e70fce72d7ce3050cfff8230a8c6886fb5f4c653808734fd751c9d.body",
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/STA/code/2023",
+          "sha256": "e1f9ae2f71befb767646f7e87cb41216ed8e46fe1600287c2903825587a58ba7"
+        },
+        {
+          "path": ".cache/http/5015f6813143d016f28505771c171a72779e054aa776ddcc136e1ff3dd5d9b51.body",
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/PHY/code/2048",
+          "sha256": "e01bcf5ed3f3fea5751321d0d41c292d729122fb239e76a3c2d604475a32bf2e"
+        }
+      ]
+    },
+    {
+      "program_id": "william-mary-applied-ai-ba",
+      "reviewed_at": "2026-10-11",
+      "reviewer": "independent-resolution-usf-wm",
+      "reviewed_content_hash": "e9ee129a34f1088b027047fce7a80ca6fa7010f8638f935a4024776a70fcf865",
+      "dimensions": {
+        "fixed_requirements": {
+          "status": "partial",
+          "summary": "Available-source limit: the current department FAQ explicitly calls DATA201/202/305 core requirements normally taken at W&M, supporting the exact three mapped fixed identities. Its linked Example Pathway instead labels Designing AI Agents AAI301 and offers DATA202 or PHIL150 as an ethics choice. No source hierarchy, equivalence or complete approved major table resolves either conflict. The FAQ subset remains partial.",
+          "evidence": [
+            {
+              "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/",
+              "locator": "Curriculum / main degree requirements / explicitly named FAQ core"
+            },
+            {
+              "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/ba_ai_coursework.png",
+              "locator": "Entire Example Pathway: AAI301 Designing AI Agents and AI Ethics Course Options DATA202/PHIL150"
+            }
+          ],
+          "limitations": [
+            "Example Pathway AAI301 versus FAQ DATA305 is unresolved; no rename/cross-list is inferred. Example ethics choice DATA202/PHIL150 versus FAQ core DATA202 is unresolved. Known catalog robots HTTP202 was not retried. The complete 30-credit major, capstone identity and additional fixed courses remain unverified."
+          ]
+        },
+        "choice_rules": {
+          "status": "partial",
+          "summary": "Reread the current FAQ substitution, independent-research and study-abroad approval rules and visually inspected the entire linked Example Pathway. The image gives two electives and examples of ethics/methods courses, without proving a closed approved pool or governing curriculum edition; those examples cannot add fixed courses or certify full option membership.",
+          "evidence": [
+            {
+              "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/",
+              "locator": "Actual requirement tables, alternative rows, branch footnotes and uncoded choice slots"
+            },
+            {
+              "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/ba_ai_coursework.png",
+              "locator": "Entire Example Pathway: ethics/methods alternatives and 2x Electives with Example Course Options"
+            }
+          ],
+          "limitations": [
+            "DATA202/PHIL150 ethics choice and DATA305/AAI301 identity conflict have no published version hierarchy. Methods and elective examples are not exhaustive approved pools; no additional image-only course was promoted. Broad degree-wide policy/GE rules are outside this pass."
+          ]
+        },
+        "classification": {
+          "status": "partial",
+          "summary": "All three Fall 2026 registration descriptions were reread. DATA201 explicitly teaches AI modeling approaches, DATA305 RAG/prompt pipelines/agentic workflows, and DATA202 ethical/social interpretation. Their subject distribution is two AI/ML and one human context.",
+          "evidence": [
+            {
+              "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/",
+              "locator": "Current actual course descriptions; fixed-category total where independently checked"
+            },
+            {
+              "url": "https://registration.wm.edu/?details&srcdb=202710&crn=12601",
+              "locator": "DATA 201 Fall 2026 Catalog Description and Registration Restrictions"
+            },
+            {
+              "url": "https://registration.wm.edu/?details&srcdb=202710&crn=12361",
+              "locator": "DATA 202 Fall 2026 Catalog Description and Registration Restrictions"
+            },
+            {
+              "url": "https://registration.wm.edu/?details&srcdb=202710&crn=13505",
+              "locator": "DATA 305 Fall 2026 Catalog Description and Registration Restrictions"
+            }
+          ],
+          "limitations": [
+            "Category totals are verified only for the explicitly enumerated fixed subset; option and contextual classifications are not independently totaled in this pass."
+          ]
+        }
+      },
+      "expected_course_ids": {
+        "required": [
+          "wm-applied-ai-data-201",
+          "wm-applied-ai-data-202",
+          "wm-applied-ai-data-305"
+        ],
+        "options": null,
+        "unresolved": null
+      },
+      "expected_profile": {
+        "required": {
+          "count": 3,
+          "categories": {
+            "foundations": 0,
+            "mathematics": 0,
+            "ai_ml": 2,
+            "systems": 0,
+            "human_context": 1,
+            "applications": 0,
+            "electives": 0,
+            "other": 0
+          }
+        },
+        "options": null,
+        "unresolved": null
+      },
+      "source_captures": [
+        {
+          "path": "/tmp/atlas-resolution-wm-major.html",
+          "sha256": "fc11f67ed4e8874360c32b62f7cf2532315b60c301fd17992002537ed666557c"
+        },
+        {
+          "path": "/tmp/wm-ba-pathway.png",
+          "sha256": "7c42a4e5cbfdeccb0f704a6d301451a3e744c1af418a347d525b1e1e2e61cc60"
+        },
+        {
+          "path": "/tmp/atlas-wm-current-courses.json",
+          "sha256": "afb6736f9d918b01f23f3de935daf1b80f4a84853ec960d748333b5e1978ae36"
+        }
+      ],
+      "full_degree_verified": false,
+      "checked_subject_subset": {
+        "course_ids": [
+          "wm-applied-ai-data-201",
+          "wm-applied-ai-data-202",
+          "wm-applied-ai-data-305"
+        ],
+        "count": 3,
+        "categories": {
+          "foundations": 0,
+          "mathematics": 0,
+          "ai_ml": 2,
+          "systems": 0,
+          "human_context": 1,
+          "applications": 0,
+          "electives": 0,
+          "other": 0
+        },
+        "role_membership_verified": "FAQ subset only; full major unresolved"
+      }
+    }
+  ]
+}

@@ -100,3 +100,17 @@ The [normal-progress page](https://www.wm.edu/offices/advising/forstudents/acade
 The [separate probation page](https://www.wm.edu/offices/advising/forstudents/academicpolicies/probation/index.php) differs from continuance: ASPIRE alone versus ASPIRE or THRIVE; at least 12 passed credits without the latter's approved-underload qualifier; and a possible additional probation semester rather than two compliant semesters. Both are preserved without choosing an unpublished hierarchy. [Suspension policy](https://www.wm.edu/offices/advising/forstudents/academicpolicies/suspension/index.php) explains appeal/reinstatement and prohibits transfer of courses taken while suspended. The actual linked reinstatement URL returned 404; no guessed replacement was requested. [FlexTrack](https://www.wm.edu/offices/advising/forstudents/academicpolicies/flextrackfaqs/index.php) has a conditional 3–18-credit load, annual 12-credit minimum and ten-year degree limit; those rules are not assigned to ordinary full-time students. [Military-service withdrawal](https://www.wm.edu/offices/advising/forstudents/academicpolicies/active-duty/index.php) retains its specific eligibility, written agreements and return exceptions.
 
 The identified accessible policy and three-course metadata queue is complete. Comprehensive primary audit is now **blocked**, not complete: current catalog robots HTTP202 prevents verification of full BA residency/time-limit/unit details and the complete major/capstone inventory; DATA305/AAI301, language-exemption shorthand and probation applicability remain unresolved source questions. There is no unread description backlog for the three represented courses. No login or private degree audit was entered. The 36 notes from nineteen public policy sources preserve conditions and do not fabricate finite course pools. The source observer checks the actual continuance table and emits no audit; all review judgments remain manual.
+
+## Fixed-source available-evidence closure — 2026-10-11
+
+A fresh independent full FAQ read, whole-image inspection and three actual Fall2026
+PATH description reads retain the three-course FAQ fixed subset (DATA201/202/305;
+AI2 and human1). The image conflicts both on DATA305/AAI301 and on fixed DATA202
+versus an ethics DATA202/PHIL150 choice. Neither source gives a governing edition
+or hierarchy; the current DATA305 offering does not establish an AAI301 rename.
+No diagram-only course or example option is promoted. The exact missing evidence
+is a readable governing major table reconciling those two conflicts, complete
+fixed/capstone identities and approved choices. Known catalog robots HTTP202 was
+not retried. No seed or adapter change is justified; bounded dimensions remain
+partial. See [resolution evidence](../../../research/degree-audit/independent-resolution-usf-wm.md)
+and its complete proposed replacement core rows for coordinator application.
