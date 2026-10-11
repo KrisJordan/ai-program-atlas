@@ -636,6 +636,13 @@
           "locator": "Visible official instructor link to detailed course page",
           "checked_at": "2026-10-11",
           "access_status": "HTTP404; no bypass attempted"
+        },
+        {
+          "url": "https://eecsis.mit.edu/numbering.html",
+          "catalog_year": "Fall2022 renumbering context",
+          "locator": "12 exact codes absent from current annotations; eight visible future6.Sxxx statements",
+          "checked_at": "2026-10-11",
+          "access_status": "read; normal Fetcher HTTP200 plus ordinary public Chrome rendered rows"
         }
       ],
       "checks": {
@@ -1965,12 +1972,18 @@
           "issue": "6.9030 has only a brief official instructor identification as photography; its linked detailed course page returnsHTTP404. Formal prerequisites, fuller topical description and current offering remain unknown. The separate versioned untitled occurrence is not silently filled from this reference.",
           "url": "https://edgerton.mit.edu/courses/strobe-project-laboratory",
           "kind": "metadata_source_gap"
+        },
+        {
+          "issue": "Eight codes still appear in6-4_2025 pools but the published Fall2022 renumbering table visibly states they will use a future6.Sxxx number:6.5370,6.5380,6.5390,6.5480,6.5490,6.5690,6.5890,6.6440. Exact replacement/registration and current-offering applicability are unspecified. Do not infer historical credit is invalid or silently choose a special-subject substitute.",
+          "url": "https://eecsis.mit.edu/numbering.html",
+          "kind": "metadata_source_question"
         }
       ],
       "remaining_work": [
         "Continue accessible actual-description research beyond660 limited HASS title judgments and three code-only unknowns. Twenty identity/version holds and two source conflicts remain explicit; no incompatible description/credit/prerequisite or alias inference was adopted.",
         "Originalreference6.9030 has a brief instructor identification as photography, but its linked detailed course page returnsHTTP404. The department annotation remains untitled and is not enriched from the separate reference.6.8301 has datedSpring2024course-site content linked by the instructor. Continue full degree/source-role applicability review;8.021 remains absent from accessible descriptions.",
-        "Resolve or precisely retain existing curriculum-source questions, missing/generic annotations and enrollment-cap discrepancy; no full-degree audit certification yet."
+        "Resolve or precisely retain existing curriculum-source questions, missing/generic annotations and enrollment-cap discrepancy; no full-degree audit certification yet.",
+        "For13 missing versioned annotations,12 have explicit historical numbering context; eight have explicitly stated future-number questions.21M.589 remains absent from that table. Find exact current code/term content only through permitted public sources; do not reuse historical title as current description."
       ],
       "correction_status": "All1189source occurrences have boundedmanualdispositions. Four reviewedcross-listgroups yield1182mappedidentities:3fixed,275options,904contextual. Fullprimaryaudit remainsin_progress; actual-description and policy/identitysource questions remain.",
       "second_pass_status": "pending",

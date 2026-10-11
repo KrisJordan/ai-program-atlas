@@ -398,3 +398,9 @@ The alternate6.869.csail.mit.edu archive failed local transport at robots.txt; n
 ### Strobe instructor identification — 2026-10-11
 
 The accessible official Edgerton instructor biography explicitly links6.9030 Strobe Project Lab and identifies it as a photography course. That brief content statement supports applications for the original reference; it does not support inferred computing topics or a full description review. The linked detailed page, `https://edgerton.mit.edu/courses/strobe-project-laboratory`, returned HTTP404. A paragraph-digest/code/link guard supplies only this bounded summary. Formal prerequisites and term remain null; original catalog12units are preserved independently. The separate versioned untitled6.9030 occurrence stays unknown. All63 original references now have some actual supplemental content, but only62 have full annotation/course-overview content; this does not close the degree audit.
+
+### Visible historical numbering context — 2026-10-11
+
+`https://eecsis.mit.edu/numbering.html` returned HTTP200 through the normal Fetcher and rendered normally in public Chrome. Its heading expressly scopes the renumbering to Fall2022. Twelve of13 untitled6-4_2025 codes have visible rows with former code/title/level;21M.589 does not. Eight rows visibly state “will use6.Sxxx number in future”:6.5370,6.5380,6.5390,6.5480,6.5490,6.5690,6.5890,6.6440. The adapter extracts only these displayed fields from the literal data used by the page renderer; no hidden API or restricted destination is accessed.
+
+These historical titles and future-number statements are contextual notes. They do not fill missing current annotations, identify a particular replacement, establish current offering, invalidate historical credit, or remove a course from the separately observed6-4_2025 pool. The source question is exact registration/replacement applicability. No required/option role, count, category or identity group changes.
