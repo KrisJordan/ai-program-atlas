@@ -1,0 +1,382 @@
+[
+  {
+    "institution_id": "pennsylvania-state-university",
+    "status": "confirmed",
+    "checked_at": "2026-10-11",
+    "note": "Current 2026–27 undergraduate all-program directory and three linked AI BS catalogs read. Two new University Park degrees: AI Engineering (Engineering, AIE_BS,126credits) and AI Methods and Applications (IST,AIMA_BS,120credits). Harrisburg/Capital AI Methods and Applications BS is independently verified but excluded from this University Park-ranked cohort record; retain as campus-scope lead. Existing AI Engineering minor preserved. Artificial Intelligence and Society and Building Artificial Intelligence are certificates, excluded. Degree identity and minimum only structured; department-internal options beyond these catalogs are not exhaustively surveyed.",
+    "sources": [
+      {
+        "url": "https://bulletins.psu.edu/programs/",
+        "title": "2026–27 Undergraduate Programs",
+        "locator": "AI-titled bachelor/minor/certificate entries and campus labels",
+        "fetched_at": "2026-10-11T01:50:40+00:00",
+        "source_date": null
+      },
+      {
+        "url": "https://bulletins.psu.edu/undergraduate/colleges/engineering/artificial-intelligence-engineering-bs/",
+        "title": "AI Engineering BS",
+        "locator": "Degree/campus/plan and126credit minimum",
+        "fetched_at": "2026-10-11T01:51:27+00:00",
+        "source_date": null
+      },
+      {
+        "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+        "title": "AI Methods and Applications BS, IST",
+        "locator": "University Park degree/plan and120credit minimum",
+        "fetched_at": "2026-10-11T01:51:27+00:00",
+        "source_date": null
+      },
+      {
+        "url": "https://bulletins.psu.edu/undergraduate/colleges/capital/artificial-intelligence-methods-applications-bs/",
+        "title": "AI Methods and Applications BS, Capital",
+        "locator": "Harrisburg campus exclusion; separate official degree",
+        "fetched_at": "2026-10-11T01:51:27+00:00",
+        "source_date": null
+      }
+    ],
+    "discoveries": [
+      {
+        "title": "Artificial Intelligence Engineering, B.S.",
+        "kind": "degree",
+        "award_level": "BS",
+        "url": "https://bulletins.psu.edu/undergraduate/colleges/engineering/artificial-intelligence-engineering-bs/"
+      },
+      {
+        "title": "Artificial Intelligence Methods and Applications, B.S. (Information Sciences and Technology)",
+        "kind": "degree",
+        "award_level": "BS",
+        "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/"
+      }
+    ]
+  },
+  {
+    "institution_id": "stony-brook-university-suny",
+    "status": "confirmed",
+    "checked_at": "2026-10-11",
+    "note": "Read current full admissions majors/minors/degrees directory and Business specialization page. Reconfirms existing CS AI and Data Science specialization and AI for Business Innovation specialization. No additional qualifying identity found in these inspected sources. Current catalog restrictions were not retried; other department-internal paths remain unreviewed. This is not an institution-wide absence finding.",
+    "sources": [
+      {
+        "url": "https://www.stonybrook.edu/undergraduate-admissions/programs/index.php",
+        "title": "Majors, Minors & Degrees",
+        "locator": "Program directory and named subpaths",
+        "fetched_at": "2026-10-11T01:50:40+00:00",
+        "source_date": null
+      },
+      {
+        "url": "https://www.stonybrook.edu/business/undergraduate/specializations.html",
+        "title": "Business Specializations",
+        "locator": "AI for Business Innovation formal specialization",
+        "fetched_at": "2026-10-10T23:05:59+00:00",
+        "source_date": null
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "university-of-delaware",
+    "status": "confirmed",
+    "checked_at": "2026-10-11",
+    "note": "Read major finder, public CS and CS+Business admissions pages, and CIS BS program options. Newly verifies transcript-recognized Artificial Intelligence and Robotics concentration within CS BS. AI Engineering degree already recorded. CS+Business Areas of Study is not a formal AI concentration. Department distinguishes prior informal focus areas from named transcript concentrations. Catalog access restrictions not retried; local concentration curriculum pending. Admissions raw fetch had transport failures at robots retrieval; ordinary public web reading succeeded, with no explicit denial bypass. No exhaustive minor-directory claim.",
+    "sources": [
+      {
+        "url": "https://www.udel.edu/apply/undergraduate-admissions/major-finder/",
+        "title": "Major Finder",
+        "locator": "Existing AI Engineering and CS/CS+Business links",
+        "fetched_at": "2026-10-10T21:53:50+00:00",
+        "source_date": null
+      },
+      {
+        "url": "https://www.udel.edu/apply/undergraduate-admissions/major-finder/computer-science/",
+        "title": "Computer Science admissions",
+        "locator": "Area-of-study wording not sufficient for formal path",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://www.udel.edu/apply/undergraduate-admissions/major-finder/computer-science-and-business/",
+        "title": "Computer Science and Business",
+        "locator": "AI appears in Areas of Study",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://www.cis.udel.edu/academics/undergraduate-programs/bscs/",
+        "title": "BS Computer Science program options",
+        "locator": "Named AI and Robotics concentration, transcript statement and year2 selection",
+        "fetched_at": "2026-10-11T01:53:19+00:00",
+        "source_date": null
+      }
+    ],
+    "discoveries": [
+      {
+        "title": "BS Computer Science with Concentration in Artificial Intelligence and Robotics",
+        "kind": "concentration",
+        "award_level": "concentration",
+        "url": "https://www.cis.udel.edu/academics/undergraduate-programs/bscs/"
+      }
+    ]
+  },
+  {
+    "institution_id": "university-of-rochester",
+    "status": "confirmed",
+    "checked_at": "2026-10-11",
+    "note": "Reviewed academic navigation, Arts and Sciences department directory, CS BS concentration, BA and minor/cluster pages. Only qualifying title in these inspected paths is existing CS BS AI concentration. BA page does not establish that concentration; CS minor and three named clusters are not AI-titled. Arts/Sciences Programs of Study returned filter shell without rendered program rows; not treated as an empty directory. Other department paths and rendered full directory remain unreviewed; no absence finding.",
+    "sources": [
+      {
+        "url": "https://www.rochester.edu/academics/",
+        "title": "Academic navigation",
+        "locator": "Links to schools/departments",
+        "fetched_at": "2026-10-11T01:50:40+00:00",
+        "source_date": null
+      },
+      {
+        "url": "https://www.sas.rochester.edu/about-us/departments-programs.html",
+        "title": "Departments and Programs",
+        "locator": "Arts, natural and social science departments",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://www.sas.rochester.edu/undergraduate/programs.html",
+        "title": "Programs of Study",
+        "locator": "Filter shell; no program rows observed",
+        "fetched_at": "2026-10-11T01:53:19+00:00",
+        "source_date": null
+      },
+      {
+        "url": "https://www.cs.rochester.edu/undergraduate/bs-requirements.html",
+        "title": "CS BS requirements",
+        "locator": "Named AI concentration",
+        "fetched_at": "2026-10-10T21:59:27+00:00",
+        "source_date": null
+      },
+      {
+        "url": "https://www.cs.rochester.edu/undergraduate/ba-requirements.html",
+        "title": "CS BA requirements",
+        "locator": "No separate formal AI title established",
+        "fetched_at": "2026-10-11T01:51:37+00:00",
+        "source_date": null
+      },
+      {
+        "url": "https://www.cs.rochester.edu/undergraduate/minor-clusters.html",
+        "title": "CS Minor and Clusters",
+        "locator": "Minor and three named non-AI clusters",
+        "fetched_at": "2026-10-11T01:51:39+00:00",
+        "source_date": null
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "rochester-institute-of-technology",
+    "status": "confirmed",
+    "checked_at": "2026-10-11",
+    "note": "Reviewed study landing page, full public immersions/minors list, CS BS page and detailed CS student resources. Existing AI minor and AI in Society minor appear. Newly verified AI in Society Immersion is a separately defined formal undergraduate general-education concentration of three courses, plan AISTS-IM; normalized concentration-kind with exact title. Not standalone degree/minor; transcript recognition unverified. Specific course choices pending; no reuse of minor requirements. BS references AI electives/interests; the named three-course AI cluster is explicitly graduate/MS, and advanced AI certificate is graduate, so excluded. Academic catalog fetch stopped because robots endpoint returned202/unavailable. Study landing has dynamic content gap. Formal undergraduate internal specializations outside inspected pages remain unreviewed; not an absence finding.",
+    "sources": [
+      {
+        "url": "https://www.rit.edu/study",
+        "title": "All Degrees and Programs",
+        "locator": "Landing labels; dynamic bachelor-list gap",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://www.rit.edu/study/immersions-and-minors",
+        "title": "Immersions and Minors",
+        "locator": "Current listed AI minor and AI in Society minor",
+        "fetched_at": "2026-10-11T01:51:28+00:00",
+        "source_date": null
+      },
+      {
+        "url": "https://www.rit.edu/study/computer-science-bs",
+        "title": "Computer Science BS",
+        "locator": "Elective areas versus explicit named path",
+        "fetched_at": "2026-10-11T01:51:28+00:00",
+        "source_date": null
+      },
+      {
+        "url": "https://www.rit.edu/computing/department-computer-science/resources",
+        "title": "Computer Science Resources",
+        "locator": "Undergraduate electives; graduate AI cluster and advanced certificate",
+        "fetched_at": "2026-10-11T01:53:20+00:00",
+        "source_date": null
+      },
+      {
+        "url": "https://academiccatalog.rit.edu/programs/",
+        "title": "Academic catalog directory access attempt",
+        "locator": "Not fetched: robots unavailable202; no bypass",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://www.rit.edu/study/ai-society-immersion",
+        "title": "AI in Society Immersion",
+        "fetched_at": "2026-10-11T01:57:03+00:00",
+        "source_date": null,
+        "locator": "Exact title, AISTS-IM plan, curriculum year and host"
+      }
+    ],
+    "discoveries": [
+      {
+        "title": "AI in Society Immersion",
+        "kind": "concentration",
+        "award_level": "concentration",
+        "url": "https://www.rit.edu/study/ai-society-immersion"
+      }
+    ]
+  },
+  {
+    "institution_id": "worcester-polytechnic-institute",
+    "status": "confirmed",
+    "checked_at": "2026-10-11",
+    "note": "Read full public degree/minor/certificate directory and current undergraduate AI program directory, then all ten previously unrecorded concentration pages. Exact official full titles include Artificial Intelligence Major with Concentration in; added as concentration-kind routes within existing AI BS, not ten additional bachelor awards. Existing Advanced AI Methods concentration retained. AI and applied-business BS awards already recorded; AI in Business/Manufacturing entries labeled certificates excluded. Local course inventories and distribution notes only partial; degreewide parent policies not certified. Other departments internal paths remain outside this finite pass.",
+    "sources": [
+      {
+        "url": "https://www.wpi.edu/academics/study",
+        "title": "Degrees & Certificates",
+        "locator": "Award-type columns including AI/business awards and certificates",
+        "fetched_at": "2026-10-11T01:50:42+00:00",
+        "source_date": null
+      },
+      {
+        "url": "https://wpi.cleancatalog.net/artificial-intelligence",
+        "title": "2026–27 AI program directory",
+        "locator": "Eleven formal concentration links",
+        "fetched_at": "2026-10-11T01:50:42+00:00",
+        "source_date": null
+      },
+      {
+        "url": "https://wpi.cleancatalog.net/artificial-intelligence/artificial-intelligence-major-with-concentration-in-built-and-natural",
+        "title": "Artificial Intelligence Major with Concentration in Built and Natural Environment",
+        "locator": "Degree Type Concentration, associated AI major, local course distribution",
+        "fetched_at": "2026-10-10T22:43:30+00:00",
+        "source_date": null
+      },
+      {
+        "url": "https://wpi.cleancatalog.net/artificial-intelligence/artificial-intelligence-major-with-concentration-in-business-applications",
+        "title": "Artificial Intelligence Major with Concentration in Business Applications",
+        "locator": "Degree Type Concentration, associated AI major, local course distribution",
+        "fetched_at": "2026-10-10T22:43:31+00:00",
+        "source_date": null
+      },
+      {
+        "url": "https://wpi.cleancatalog.net/artificial-intelligence/artificial-intelligence-major-with-concentration-in-electrical-and-computer",
+        "title": "Artificial Intelligence Major with Concentration in Electrical and Computer Engineering",
+        "locator": "Degree Type Concentration, associated AI major, local course distribution",
+        "fetched_at": "2026-10-10T22:43:33+00:00",
+        "source_date": null
+      },
+      {
+        "url": "https://wpi.cleancatalog.net/artificial-intelligence/artificial-intelligence-major-with-concentration-in-experience-design",
+        "title": "Artificial Intelligence Major with Concentration in Experience Design",
+        "locator": "Degree Type Concentration, associated AI major, local course distribution",
+        "fetched_at": "2026-10-10T22:43:34+00:00",
+        "source_date": null
+      },
+      {
+        "url": "https://wpi.cleancatalog.net/artificial-intelligence/artificial-intelligence-major-with-concentration-in-life-sciences-and-0",
+        "title": "Artificial Intelligence Major with Concentration in Life Sciences and Biotechnology",
+        "locator": "Degree Type Concentration, associated AI major, local course distribution",
+        "fetched_at": "2026-10-10T22:43:36+00:00",
+        "source_date": null
+      },
+      {
+        "url": "https://wpi.cleancatalog.net/artificial-intelligence/artificial-intelligence-major-with-concentration-in-life-sciences-and",
+        "title": "Artificial Intelligence Major with Concentration in Life Sciences and Molecular Biochemistry",
+        "locator": "Degree Type Concentration, associated AI major, local course distribution",
+        "fetched_at": "2026-10-10T22:43:37+00:00",
+        "source_date": null
+      },
+      {
+        "url": "https://wpi.cleancatalog.net/artificial-intelligence/artificial-intelligence-major-with-concentration-in-optimization-and",
+        "title": "Artificial Intelligence Major with Concentration in Optimization and Decision Theory",
+        "locator": "Degree Type Concentration, associated AI major, local course distribution",
+        "fetched_at": "2026-10-10T22:43:39+00:00",
+        "source_date": null
+      },
+      {
+        "url": "https://wpi.cleancatalog.net/artificial-intelligence/artificial-intelligence-major-with-concentration-in-robotics-engineering",
+        "title": "Artificial Intelligence Major with Concentration in Robotics Engineering",
+        "locator": "Degree Type Concentration, associated AI major, local course distribution",
+        "fetched_at": "2026-10-10T22:43:40+00:00",
+        "source_date": null
+      },
+      {
+        "url": "https://wpi.cleancatalog.net/artificial-intelligence/artificial-intelligence-major-with-concentration-in-social-science-and",
+        "title": "Artificial Intelligence Major with Concentration in Social Science and Policy Concentration",
+        "locator": "Degree Type Concentration, associated AI major, local course distribution",
+        "fetched_at": "2026-10-10T22:43:42+00:00",
+        "source_date": null
+      },
+      {
+        "url": "https://wpi.cleancatalog.net/artificial-intelligence/artificial-intelligence-major-with-concentration-in-sustainable-chemical",
+        "title": "Artificial Intelligence Major with Concentration in Sustainable Chemical Production",
+        "locator": "Degree Type Concentration, associated AI major, local course distribution",
+        "fetched_at": "2026-10-10T22:43:43+00:00",
+        "source_date": null
+      }
+    ],
+    "discoveries": [
+      {
+        "title": "Artificial Intelligence Major with Concentration in Built and Natural Environment",
+        "kind": "concentration",
+        "award_level": "concentration",
+        "url": "https://wpi.cleancatalog.net/artificial-intelligence/artificial-intelligence-major-with-concentration-in-built-and-natural"
+      },
+      {
+        "title": "Artificial Intelligence Major with Concentration in Business Applications",
+        "kind": "concentration",
+        "award_level": "concentration",
+        "url": "https://wpi.cleancatalog.net/artificial-intelligence/artificial-intelligence-major-with-concentration-in-business-applications"
+      },
+      {
+        "title": "Artificial Intelligence Major with Concentration in Electrical and Computer Engineering",
+        "kind": "concentration",
+        "award_level": "concentration",
+        "url": "https://wpi.cleancatalog.net/artificial-intelligence/artificial-intelligence-major-with-concentration-in-electrical-and-computer"
+      },
+      {
+        "title": "Artificial Intelligence Major with Concentration in Experience Design",
+        "kind": "concentration",
+        "award_level": "concentration",
+        "url": "https://wpi.cleancatalog.net/artificial-intelligence/artificial-intelligence-major-with-concentration-in-experience-design"
+      },
+      {
+        "title": "Artificial Intelligence Major with Concentration in Life Sciences and Biotechnology",
+        "kind": "concentration",
+        "award_level": "concentration",
+        "url": "https://wpi.cleancatalog.net/artificial-intelligence/artificial-intelligence-major-with-concentration-in-life-sciences-and-0"
+      },
+      {
+        "title": "Artificial Intelligence Major with Concentration in Life Sciences and Molecular Biochemistry",
+        "kind": "concentration",
+        "award_level": "concentration",
+        "url": "https://wpi.cleancatalog.net/artificial-intelligence/artificial-intelligence-major-with-concentration-in-life-sciences-and"
+      },
+      {
+        "title": "Artificial Intelligence Major with Concentration in Optimization and Decision Theory",
+        "kind": "concentration",
+        "award_level": "concentration",
+        "url": "https://wpi.cleancatalog.net/artificial-intelligence/artificial-intelligence-major-with-concentration-in-optimization-and"
+      },
+      {
+        "title": "Artificial Intelligence Major with Concentration in Robotics Engineering",
+        "kind": "concentration",
+        "award_level": "concentration",
+        "url": "https://wpi.cleancatalog.net/artificial-intelligence/artificial-intelligence-major-with-concentration-in-robotics-engineering"
+      },
+      {
+        "title": "Artificial Intelligence Major with Concentration in Social Science and Policy Concentration",
+        "kind": "concentration",
+        "award_level": "concentration",
+        "url": "https://wpi.cleancatalog.net/artificial-intelligence/artificial-intelligence-major-with-concentration-in-social-science-and"
+      },
+      {
+        "title": "Artificial Intelligence Major with Concentration in Sustainable Chemical Production",
+        "kind": "concentration",
+        "award_level": "concentration",
+        "url": "https://wpi.cleancatalog.net/artificial-intelligence/artificial-intelligence-major-with-concentration-in-sustainable-chemical"
+      }
+    ]
+  }
+]
