@@ -95,3 +95,11 @@ def test_optional_reviewed_source_replay(key):
     assert d['courses'] and d['requirements']
     assert len({c['id'] for c in d['courses']}) == len(d['courses'])
     assert all('HASS-' not in c['name'] for c in d['courses'])
+
+
+def test_display_title_does_not_determine_canonical_source_slug():
+    key = 'asian-and-asian-diaspora-studies'
+    actual = 'https://shass.mit.edu/for-students/undergraduate-study/asian-and-diaspora-studies-concentration/'
+    assert actual in m.SOURCE_PARSERS
+    d = m.SOURCE_PARSERS[actual](fixture(key))
+    assert all(c['url'] == actual for c in d['courses'])

@@ -58,6 +58,12 @@ FIELDS = {
   policies=[('selection', 'Four-subject plan and cross-registration context', 'The page directs concentrators to choose four listed MIT subjects and separately permits cross-registration at Harvard or Wellesley in Eastern European/Russian languages, history, literature, government and related fields. The general registrar concentration-approval and external-credit rules still apply; this sentence alone does not create an automatic substitution. At most one subject may also satisfy HASS Distribution. Parenthetical term labels on course names are source annotations, not verified current scheduling.')]),
 }
 
+def field_url(key):
+    # This official route omits the second 'Asian' present in the displayed title.
+    slug = 'asian-and-diaspora-studies' if key == 'asian-and-asian-diaspora-studies' else key
+    return BASE + slug + '-concentration/'
+
+
 CODE = r'[A-Z0-9]+\.[A-Z0-9]+(?:\[J\])?'
 ROW = re.compile(r'^(' + CODE + r'(?:\s*/\s*' + CODE + r')*)\s*[/,:]?\s+(.+)$')
 
@@ -81,7 +87,7 @@ def parse_field(key, html):
     spec = FIELDS[key]
     section = _section(html, spec)
     sid, prefix = PID + '-hass-' + key, 'mit-ai-hass-' + key
-    url = BASE + key + '-concentration/'
+    url = field_url(key)
     courses, groups = {}, {name: [] for name in spec['areas']}
     current = None
     for n in section.find_all(['h3', 'p']):
@@ -142,4 +148,4 @@ def parse_field(key, html):
     return dict(id=PID, courses=list(courses.values()), requirements=rules)
 
 
-SOURCE_PARSERS = {BASE + key + '-concentration/': partial(parse_field, key) for key in FIELDS}
+SOURCE_PARSERS = {field_url(key): partial(parse_field, key) for key in FIELDS}
