@@ -63,3 +63,17 @@ def test_business_credit_exclusions_and_existing_concurrent_route_retained():
     # Similar titles and credit exclusions are not identity-group evidence.
     assert m.SPEC['courses']['ECO 301']['name']==m.SPEC['courses']['ECO 303']['name']
     assert m.SPEC['courses']['ECO 301']['block_hash']!=m.SPEC['courses']['ECO 303']['block_hash']
+
+
+def test_content_distinguishes_ai_tools_statistics_and_unknown_topics():
+    assert m.SPEC['courses']['WRS 250']['category']=='human_context'
+    assert m.SPEC['courses']['WRS 310']['category']=='human_context'
+    assert m.SPEC['courses']['WRS 306']['credits'] is None
+    assert '1–3' in m.SPEC['courses']['WRS 306']['description']
+    assert 'working understanding' in m.SPEC['courses']['WRS 335']['prerequisites']
+    assert m.SPEC['courses']['PSY 291']['category']=='mathematics'
+    assert m.SPEC['courses']['PSY 250']['category']=='applications'
+    assert m.SPEC['courses']['PSY 390']['review']['status']=='mixed'
+    assert m.SPEC['courses']['PSY 375']['review']['status']=='unclassified'
+    assert m.SPEC['courses']['PSY 225']['prerequisites'] is None
+    assert 'PSY Major or PSY Minor or NEU major' in m.SPEC['courses']['PSY 291']['prerequisites']
