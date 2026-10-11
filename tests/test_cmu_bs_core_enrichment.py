@@ -120,3 +120,13 @@ def test_live_cache_replay_when_available():
         observed=adapter.SOURCE_PARSERS[url](path.read_text())
         assert 'curriculum_audit' not in observed and 'last_verified' not in observed
         assert observed['curriculum_status']=='partial'
+
+
+def test_additional_math_resources_preserve_historical_term():
+    url='https://www.math.cmu.edu/~jmackey/151_128/syll.html'
+    raw='<title>21-128 and 15-151, Fall 2023</title><h2>Syllabus for 15-151 and 21-128</h2><p>Course Outline: Topics. Tentative week by week schedule</p>'
+    out=e.parse_resource(raw,url)
+    assert out['courses'][0]['syllabus']==url
+    assert out['courses'][0]['public_site'] is None
+    assert 'Fall 2023' in out['notes'][0]
+    with pytest.raises(ValueError):e.parse_resource(raw.replace('Fall 2023','Fall 2026'),url)

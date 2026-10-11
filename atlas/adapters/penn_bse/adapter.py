@@ -114,3 +114,7 @@ SOURCE_PARSERS[HANDBOOK_URL] = parse_canonical_handbook
 
 SOURCES.append(ABROAD)
 SOURCE_PARSERS[ABROAD] = parse_abroad
+
+# Shared public course observations, dispatched with the BSE's own program ID.
+from atlas.adapters.penn_cs.course_metadata import register_resources
+register_resources(PROGRAM_ID, SOURCES, SOURCE_PARSERS)

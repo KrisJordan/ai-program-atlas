@@ -13,6 +13,9 @@ DIRECTORIES = {
     STATS: ('Department of Statistics and Data Science Courses', 'cmu-bs-ai-statistics-directory', ('36-218', '36-225', '36-226', '36-235', '36-236', '36-401', '36-402')),
 }
 RESOURCES = {
+    'https://www.math.cmu.edu/~jmackey/151_128/welcome.html': ('15-151', 'Mathematical Foundations for Computer Science', 'Fall 2023', 'cmu-15151-fall-2023-site', False),
+    'https://www.math.cmu.edu/~jmackey/151_128/syll.html': ('15-151', 'Mathematical Foundations for Computer Science', 'Fall 2023', 'cmu-15151-fall-2023-syllabus', True),
+    'https://www.cs.cmu.edu/~harchol/PnC/class.html': ('15-259', 'Probability and Computing', 'FALL 2026', 'cmu-15259-fall-2026-site', False),
     'https://www.cs.cmu.edu/~15122/home.shtml': ('15-122', 'Principles of Imperative Computation', 'Fall 2026', 'cmu-15122-fall-2026-site', False),
     'https://www.cs.cmu.edu/~15122/syllabus.shtml': ('15-122', 'Principles of Imperative Computation', 'Fall 2026', 'cmu-15122-fall-2026-syllabus', True),
     'https://www.cs.cmu.edu/~15210/': ('15-210', 'Parallel and Sequential Data Structures and Algorithms', 'Fall 26', 'cmu-15210-fall-2026-site', False),
@@ -91,10 +94,11 @@ def parse_resource(html, url):
     identity = code in headings if code != '15-251' else name in headings and 'CS251 at CMU' in value
     if not identity or (term and term not in value):
         raise ValueError('Core course identity or reviewed term missing')
-    if syllabus and not all(x in value for x in ['Course syllabus', 'Grading', 'Prerequisites', 'Learning Objectives']):
+    syllabus_sections = ['Syllabus for 15-151 and 21-128', 'Course Outline:', 'Tentative week by week schedule'] if code == '15-151' else ['Course syllabus', 'Grading', 'Prerequisites', 'Learning Objectives']
+    if syllabus and not all(x in value for x in syllabus_sections):
         raise ValueError('Public syllabus content missing')
     c = course(code, name, source, url, category='foundations')
-    if not url.endswith(('syllabus.shtml', 'policies.html')):
+    if not url.endswith(('syllabus.shtml', 'policies.html', 'syll.html')):
         c['public_site'] = url
     if syllabus:
         c['syllabus'] = url
