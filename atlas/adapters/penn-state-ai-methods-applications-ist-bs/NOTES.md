@@ -98,3 +98,31 @@ The displayed existing residence rules and the pending-implementation notice
 are both retained; no revised effective policy is guessed. College-specific
 implementation and remaining course descriptions remain unfinished. The whole
 degree audit stays in progress.
+
+### Named-option description pass closed — 2026-10-11
+
+The remaining 76 available descriptions were read individually. Current raw
+coverage is **145 primary subject reviews, nine mixed reviews, four inspected
+unknowns and eleven unreviewed identities whose current subject-catalog entries
+are missing**. Thus 158 of 169 source-code records have description-based
+reviews. The eleven are the nine IST codes above, SRA221 and PHIL433. Missing
+entries do not authorize substitutions, removal from the published option pool,
+or invented aliases. The four proved cross-list groups still yield 165 mapped
+identities overall and 156 option identities.
+
+Accounting, finance, health practice, nutrition and biological-science methods
+are classified by their actual domain content. Ethical, political and explicit
+social analysis are human context; HDFS200's quantitative/statistical procedures
+are mathematics. HPA470 and NUTR291N remain mixed; the very short HDFS216
+skill-enhancement description is insufficient to select a primary subject.
+Credit exclusions, non-major restrictions and actual Boolean prerequisites are
+retained. A credit exclusion is never treated as cross-list evidence.
+
+The official college major page confirms the entrance requirements and directs
+focus-area course selection back to the Bulletin. Its FAQ explicitly exempts
+AIMA from the general IST internship graduation requirement. The current
+University Park external-transfer admissions restriction is distinct from
+transfer-credit review for students already enrolled. The FAQ's general
+custom-focus advice is not used to override the AIMA-specific published list.
+Remaining scope questions concern policy/cohort implementation; current
+course descriptions available for the named inventory have now been read.

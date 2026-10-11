@@ -291,13 +291,13 @@ def test_william_mary_partial_core_has_limited_subject_evidence():
 def test_psu_unread_descriptions_are_unreviewed_not_inspected_unknown():
  p=json.loads(Path('data/programs/penn-state-ai-methods-applications-ist-bs.json').read_text())
  courses={c['code']:c for c in p['courses']}
- assert 'category_review' not in courses['PHIL 103']
- assert courses['PHIL 103']['category']=='other'
+ assert 'category_review' not in courses['PHIL 433']
+ assert courses['PHIL 433']['category']=='other'
  assert courses['PSYCH 260']['category']=='applications'
  assert courses['PSYCH 260']['category_review']['status']=='reviewed'
  assert courses['A-I 494']['category_review']['status']=='unclassified'
- assert sum('category_review' not in c for c in p['courses'])==87
- assert requirement_profile(p)['options']['classification']['unreviewed']==87
+ assert sum('category_review' not in c for c in p['courses'])==11
+ assert requirement_profile(p)['options']['classification']['unreviewed']==11
 
 
 def test_usf_review_does_not_recertify_brochure_or_infer_units():
@@ -402,3 +402,34 @@ def test_psu_public_degree_procedures_preserve_conditions(pid):
  assert 'cross-listed' in notes[pid+'-general-education-policy']
  assert 'integrative studies is exempt' in notes[pid+'-general-education-policy'].lower()
  assert p['curriculum_status']=='partial'
+
+
+def test_psu_domain_reviews_preserve_restrictions_and_missing_catalog_entries():
+ p=json.loads(Path('data/programs/penn-state-ai-methods-applications-ist-bs.json').read_text())
+ c={x['code']:x for x in p['courses']}
+ assert c['HDFS 200']['category']=='mathematics'
+ assert c['NUTR 360']['category']=='human_context'
+ assert c['VBSC 418']['category']=='applications' and c['VBSC 418']['credits']==2
+ assert c['NUTR 291N']['category_review']['status']=='mixed'
+ assert c['HPA 470']['category_review']['status']=='mixed'
+ assert c['HDFS 216']['category_review']['status']=='unclassified'
+ assert c['AGBM 445']['credits']==3
+ assert 'FIN 100' in c['BA 301']['prerequisites']
+ assert 'Smeal' in c['BLAW 243']['prerequisites']
+ assert 'non-nutrition' in c['NUTR 119']['prerequisites']
+ assert 'SOC 30' in c['HDFS 129']['prerequisites']
+ missing={'IST 301','IST 302','IST 311','IST 331','IST 411','IST 413','IST 451','IST 454','IST 456','SRA 221','PHIL 433'}
+ assert {x['code'] for x in c.values() if 'category_review' not in x}==missing
+ assert len(c)==169 and requirement_profile(p)['options']['count']==156
+
+
+def test_psu_college_policy_observations_do_not_leak_between_degrees():
+ from atlas.adapters import psu_degree_policy_details as module
+ ist='penn-state-ai-methods-applications-ist-bs';eng='penn-state-ai-engineering-bs'
+ assert module.SPEC['ist-faq-exemption']['url'] in module.source_parsers(ist)
+ assert module.SPEC['ist-faq-exemption']['url'] not in module.source_parsers(eng)
+ assert module.SPEC['engineering-department-guidance']['url'] not in module.source_parsers(ist)
+ p=json.loads(Path('data/programs/'+ist+'.json').read_text())
+ summary=next(r['summary'] for r in p['requirements'] if r['id']==ist+'-ist-faq-exemption')
+ assert 'exempt' in summary and 'distinct' in summary
+ assert 'IST 495' not in {c['code'] for c in p['courses']}

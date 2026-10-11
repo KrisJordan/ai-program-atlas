@@ -54,3 +54,13 @@ restrictions involving the major department and cross-listed courses. The exact
 Senate83-80 pending-revision legislation is robots-disallowed; no revised rule or
 effective date is inferred. The displayed policy remains distinguished from the
 pending revision. College-specific applicability remains unfinished.
+
+### Department list check — 2026-10-11
+
+Read the official EECS AI Engineering degree page. It repeats the 27 approved
+technical-elective credits (15 at the 400 level) and three approved nontechnical
+credits, but publishes no finite approved list or list link. No courses are
+borrowed from another engineering major's elective inventory. Its condensed
+additional-course summary does not replace the more explicit Bulletin
+programming sequences and speech alternatives. The exact list boundary remains
+unfinished/unresolved, not evidence that there are no approved electives.

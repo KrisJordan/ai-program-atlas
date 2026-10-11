@@ -11,7 +11,7 @@ SPEC = json.loads(Path(__file__).with_suffix('.json').read_text())
 
 def policy_text(html):
     soup = BeautifulSoup(html, 'html.parser')
-    root = soup.select_one('main') or soup.select_one('.entry-content')
+    root = soup.select_one('main') or soup.select_one('.entry-content') or soup.select_one('#content')
     if root is None:
         raise ValueError('Penn State policy main content missing')
     for element in root.select('nav, aside, footer, script, style'):
@@ -32,4 +32,5 @@ def parse_policy(html, pid, key):
 
 def source_parsers(pid):
     return {spec['url']: partial(parse_policy, pid=pid, key=key)
-            for key, spec in SPEC.items()}
+            for key, spec in SPEC.items()
+            if not spec.get('program_ids') or pid in spec['program_ids']}
