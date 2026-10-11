@@ -166,3 +166,47 @@ def test_communication_and_cinema_practice_follow_content_and_amounts():
     assert 'Junior Standing' in m.SPEC['courses']['CCA 404']['prerequisites']
     assert m.SPEC['courses']['COS 545']['prerequisites'] is None
     assert m.SPEC['courses']['COM 250']['category']=='human_context'
+
+
+def test_health_statistics_science_and_policy_scopes():
+    for code in ['BPH 202','HCS 202','NUR 202']:
+        c=m.SPEC['courses'][code]
+        assert c['category']=='mathematics' and c['credits']==3
+        assert 'ALEKS 40' in c['prerequisites'] and 'ACT 22' in c['prerequisites']
+    assert m.SPEC['courses']['ATM 306']['review']['status']=='mixed'
+    assert 'Major or Minor in Meteorology' in m.SPEC['courses']['ATM 103']['prerequisites']
+    assert m.SPEC['courses']['GSC 109']['category']=='applications'
+    assert m.SPEC['courses']['PHY 110']['category']=='applications'
+    assert m.SPEC['courses']['NUR 536']['category']=='human_context'
+    assert 'no IP Credit' in m.SPEC['courses']['NUR 536']['prerequisites']
+    assert m.SPEC['courses']['BPH 301']['review']['status']=='mixed'
+    assert m.SPEC['courses']['BPH 319']['category']=='human_context'
+    assert m.SPEC['courses']['MSC 191']['credits'] is None
+    assert m.SPEC['courses']['MSC 191']['review']['status']=='unclassified'
+    assert 'excludes Marine Science major/minor students' in m.SPEC['courses']['MSC 101']['prerequisites']
+    assert m.SPEC['courses']['MSC 313']['category']=='human_context'
+    assert m.SPEC['courses']['MSC 346']['review']['status']=='mixed'
+
+
+def test_source_verified_health_statistics_identity_preserves_context_and_records():
+    from atlas.curriculum_profile import requirement_profile
+    pids=m.SPEC['courses']['BPH 202']['program_ids']
+    for pid in pids:
+        p=json.loads(Path('data/programs',pid+'.json').read_text())
+        groups=[g for g in p['course_identity_groups'] if g['id'].endswith('crosslisted-health-statistics-202')]
+        assert len(groups)==1
+        byid={c['id']:c for c in p['courses']};g=groups[0]
+        assert {byid[x]['code']for x in g['course_ids']}=={'BPH 202','HCS 202','NUR 202'}
+        assert 'miami-general-education-policy' in g['source_ids']
+        assert {byid[x]['category']for x in g['course_ids']}=={'mathematics'}
+        before=deepcopy(p);before['course_identity_groups'].remove(g)
+        a,b=requirement_profile(before),requirement_profile(p)
+        assert a['required']==b['required'] and a['options']==b['options']
+        assert a['unresolved']['count']==b['unresolved']['count']+2
+        assert a['unresolved']['source_record_count']==b['unresolved']['source_record_count']
+        assert len(before['courses'])==len(p['courses'])
+    cache=Path('.cache/research/miami-degree-audit/policy-general.html')
+    if cache.exists():
+        text=clean(BeautifulSoup(cache.read_text(),'html.parser').get_text(' ',strip=True))
+        assert 'NUR 202 Introductory Statistics in Health Care (also listed as BPH 202 and HCS 202 )' in text
+        assert 'BPH 202 Introductory Statistics in Health Care (also listed as NUR 202 and HCS 202 )' in text

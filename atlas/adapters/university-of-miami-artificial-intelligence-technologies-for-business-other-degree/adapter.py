@@ -55,3 +55,9 @@ register_apy_context(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
 
 from atlas.adapters.miami_ins_context_reviews import register as register_ins_context
 register_ins_context(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
+
+from atlas.adapters.miami_arh_context_reviews import register as register_arh_context
+register_arh_context(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
+
+from atlas.adapters.miami_soc_context_reviews import register as register_soc_context
+register_soc_context(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
