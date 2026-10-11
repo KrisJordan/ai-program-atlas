@@ -320,6 +320,46 @@
       "catalog_year": "2026-2027",
       "locator": "Independent UGER description review: PHED 108, PHED 131, PHED 141, PHED 170, PHED 171, PHED 172, PHED 174, PHED 175, PHED 178, PHED 180, PHED 181, PHED 182, PHED 183, PHED 184, PHED 185, PHED 186, PHED 187, PHED 188, PHED 189, PHED 190, PHED 10A, PHED 10B, PHED 12A, PHED 12B, PHED 13A, PHED 14B, PHED 21A, PHED 21B, PHED 22A, PHED 22B, PHED 24A, PHED 24B, PHED 25A, PHED 25B, PHED 26A, PHED 26B, PHED 27A, PHED 27B, PHED 29A, PHED 29B, PHED 30A, PHED 30B, PHED 31A, PHED 31B, PHED 34A, PHED 34B, PHED 40A, PHED 40B, PHED 41A, PHED 41B, PHED 42B, PHED 44A, PHED 44B, PHED 55A, PHED 55B, PHED 66A, PHED 66B, PHED 68A, PHED 68B, PHED 69A, PHED 69B, PHED 130, PHED 222, PHED 332, PHED 50A, PHED 50B, PHED 60A, PHED 60B, PHED 65B, PHED 67A, PHED 67B, PHED 70A, PHED 70B",
       "confidence": "high"
+    },
+    {
+      "id": "case-uger-courses-rlgn",
+      "url": "https://bulletin.case.edu/course-descriptions/rlgn/",
+      "title": "Religious Studies (RLGN)",
+      "fetched_at": "2026-10-11T03:17:31+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Independent UGER description review: RLGN 101, RLGN 172, RLGN 173, RLGN 201, RLGN 206, RLGN 209, RLGN 210, RLGN 211, RLGN 212, RLGN 216, RLGN 217, RLGN 220, RLGN 221, RLGN 226, RLGN 227, RLGN 228, RLGN 230, RLGN 236, RLGN 241, RLGN 242, RLGN 243, RLGN 244, RLGN 246, RLGN 250, RLGN 252, RLGN 253, RLGN 254, RLGN 275, RLGN 285, RLGN 287, RLGN 288, RLGN 309, RLGN 346, RLGN 347, RLGN 371, RLGN 373, RLGN 380, RLGN 399",
+      "confidence": "high"
+    },
+    {
+      "id": "case-uger-courses-anee",
+      "url": "https://bulletin.case.edu/course-descriptions/anee/",
+      "title": "Ancient Near East/Egyptian Studies (ANEE)",
+      "fetched_at": "2026-10-11T03:16:12+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Independent UGER description review: ANEE 107, ANEE 194, ANEE 210, ANEE 224, ANEE 242, ANEE 316, ANEE 381",
+      "confidence": "high"
+    },
+    {
+      "id": "case-uger-courses-ling",
+      "url": "https://bulletin.case.edu/course-descriptions/ling/",
+      "title": "Linguistics (LING)",
+      "fetched_at": "2026-10-11T03:17:09+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Independent UGER description review: LING 333, LING 340",
+      "confidence": "high"
+    },
+    {
+      "id": "case-uger-courses-jwst",
+      "url": "https://bulletin.case.edu/course-descriptions/jwst/",
+      "title": "Jewish Studies (JWST)",
+      "fetched_at": "2026-10-11T03:17:06+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Independent UGER description review: JWST 220, JWST 254, JWST 293, JWST 371, JWST 381, JWST 389",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -2290,29 +2330,51 @@
       "id": "case-bs-uger-anee-210",
       "code": "ANEE 210",
       "name": "Ancient Near Eastern and Egyptian Literature",
-      "description": null,
+      "description": "Near Eastern and Egyptian literary traditions, including myths, legal writings, poetry and their broader cultural relationships.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=ANEE%20210",
+      "category": "human_context",
+      "source_id": "case-uger-courses-anee",
+      "url": "https://bulletin.case.edu/course-descriptions/anee/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-anee"
+        ],
+        "locator": "ANEE 210; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: near Eastern and Egyptian literary traditions, including myths, legal writings, poetry and their broader cultural relationships.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-anee-242",
       "code": "ANEE 242",
       "name": "Cooking Up the Past: Food & Foodways in the Ancient World",
-      "description": null,
+      "description": "Ancient food practices as evidence about cultural identity, social institutions, ritual and relationships.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=ANEE%20242",
+      "category": "human_context",
+      "source_id": "case-uger-courses-anee",
+      "url": "https://bulletin.case.edu/course-descriptions/anee/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-anee"
+        ],
+        "locator": "ANEE 242; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: ancient food practices as evidence about cultural identity, social institutions, ritual and relationships.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-arth-220",
@@ -3697,99 +3759,176 @@
       "id": "case-bs-uger-jwst-220",
       "code": "JWST 220",
       "name": "Jewish Art and Architecture",
-      "description": null,
+      "description": "Jewish visual art and architecture as expressions of identity, diaspora, ethical commitments and social representation.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=JWST%20220",
+      "category": "human_context",
+      "source_id": "case-uger-courses-jwst",
+      "url": "https://bulletin.case.edu/course-descriptions/jwst/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-jwst"
+        ],
+        "locator": "JWST 220; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: jewish visual art and architecture as expressions of identity, diaspora, ethical commitments and social representation.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-jwst-254",
       "code": "JWST 254",
       "name": "The Holocaust",
-      "description": null,
+      "description": "The Holocaust’s historical development, persecution and responses across communities, and its subsequent public memory.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=JWST%20254",
+      "category": "human_context",
+      "source_id": "case-uger-courses-jwst",
+      "url": "https://bulletin.case.edu/course-descriptions/jwst/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-jwst"
+        ],
+        "locator": "JWST 254; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: the Holocaust’s historical development, persecution and responses across communities, and its subsequent public memory.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-jwst-293",
       "code": "JWST 293",
       "name": "Introduction to Modern Jewish Literature, 1880-1945",
-      "description": null,
+      "description": "Modern Jewish literature in its social and cultural settings, with attention to identity, history and genre.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=JWST%20293",
+      "category": "human_context",
+      "source_id": "case-uger-courses-jwst",
+      "url": "https://bulletin.case.edu/course-descriptions/jwst/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-jwst"
+        ],
+        "locator": "JWST 293; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: modern Jewish literature in its social and cultural settings, with attention to identity, history and genre.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-jwst-371",
       "code": "JWST 371",
       "name": "Jews Under Christianity and Islam",
-      "description": null,
+      "description": "Jewish social and political experiences under Christian and Muslim rule, including interfaith relations and communal responses.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=JWST%20371",
+      "category": "human_context",
+      "source_id": "case-uger-courses-jwst",
+      "url": "https://bulletin.case.edu/course-descriptions/jwst/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-jwst"
+        ],
+        "locator": "JWST 371; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: jewish social and political experiences under Christian and Muslim rule, including interfaith relations and communal responses.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-jwst-381",
       "code": "JWST 381",
       "name": "Gender, Sexuality, and Queer Culture in Israel",
-      "description": null,
+      "description": "Gender and sexuality in Israeli cultural expression, identity formation, nation-building and struggles for equal rights.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=JWST%20381",
+      "category": "human_context",
+      "source_id": "case-uger-courses-jwst",
+      "url": "https://bulletin.case.edu/course-descriptions/jwst/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-jwst"
+        ],
+        "locator": "JWST 381; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: gender and sexuality in Israeli cultural expression, identity formation, nation-building and struggles for equal rights.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-jwst-389",
       "code": "JWST 389",
       "name": "History of Zionism",
-      "description": null,
+      "description": "Zionism’s diverse movements, historical development, regional appeal and influence on contemporary Israeli society.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=JWST%20389",
+      "category": "human_context",
+      "source_id": "case-uger-courses-jwst",
+      "url": "https://bulletin.case.edu/course-descriptions/jwst/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-jwst"
+        ],
+        "locator": "JWST 389; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: zionism’s diverse movements, historical development, regional appeal and influence on contemporary Israeli society.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-ling-333",
       "code": "LING 333",
       "name": "Introduction to Language Teaching Methods",
-      "description": null,
+      "description": "Second-language teaching approaches connected to acquisition research through material evaluation, lesson design and instructional practice.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=LING%20333",
+      "category": "applications",
+      "source_id": "case-uger-courses-ling",
+      "url": "https://bulletin.case.edu/course-descriptions/ling/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-ling"
+        ],
+        "locator": "LING 333; current 2026–2027 exact course block",
+        "rationale": "The description emphasizes applied language pedagogy: evaluating teaching materials, designing lessons and practicing instructional methods. It is domain teaching practice, not programming-language construction or AI language models.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-mgmt-221",
@@ -4637,225 +4776,401 @@
       "id": "case-bs-uger-rlgn-172",
       "code": "RLGN 172",
       "name": "Introducing Islam",
-      "description": null,
+      "description": "Islamic beliefs, practices and intellectual traditions, examined through historical developments and varied cultural contexts.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=RLGN%20172",
+      "category": "human_context",
+      "source_id": "case-uger-courses-rlgn",
+      "url": "https://bulletin.case.edu/course-descriptions/rlgn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-rlgn"
+        ],
+        "locator": "RLGN 172; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: islamic beliefs, practices and intellectual traditions, examined through historical developments and varied cultural contexts.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-rlgn-211",
       "code": "RLGN 211",
       "name": "The Lives of Sacred Objects: Studying Religion through Our Material World",
-      "description": null,
+      "description": "Religious objects as carriers of meaning, memory and ethical controversy, studied through material and cross-cultural analysis.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=RLGN%20211",
+      "category": "human_context",
+      "source_id": "case-uger-courses-rlgn",
+      "url": "https://bulletin.case.edu/course-descriptions/rlgn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-rlgn"
+        ],
+        "locator": "RLGN 211; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: religious objects as carriers of meaning, memory and ethical controversy, studied through material and cross-cultural analysis.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-rlgn-220",
       "code": "RLGN 220",
       "name": "Jewish Art and Architecture",
-      "description": null,
+      "description": "Jewish visual art and architecture as expressions of identity, diaspora, ethical commitments and social representation.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=RLGN%20220",
+      "category": "human_context",
+      "source_id": "case-uger-courses-rlgn",
+      "url": "https://bulletin.case.edu/course-descriptions/rlgn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-rlgn"
+        ],
+        "locator": "RLGN 220; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: jewish visual art and architecture as expressions of identity, diaspora, ethical commitments and social representation.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-rlgn-221",
       "code": "RLGN 221",
       "name": "Indian Philosophy",
-      "description": null,
+      "description": "Indian philosophical schools and their arguments about reality, knowledge, personhood and liberation.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=RLGN%20221",
+      "category": "human_context",
+      "source_id": "case-uger-courses-rlgn",
+      "url": "https://bulletin.case.edu/course-descriptions/rlgn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-rlgn"
+        ],
+        "locator": "RLGN 221; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: indian philosophical schools and their arguments about reality, knowledge, personhood and liberation.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-rlgn-227",
       "code": "RLGN 227",
       "name": "Islam, Gender, and Sexuality",
-      "description": null,
-      "prerequisites": null,
+      "description": "Gender, sexuality and authority in Muslim traditions, including scriptural interpretation, law and contemporary social debates.",
+      "prerequisites": "There are no prerequisites for this course. No prior knowledge of Islam is expected.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=RLGN%20227",
+      "category": "human_context",
+      "source_id": "case-uger-courses-rlgn",
+      "url": "https://bulletin.case.edu/course-descriptions/rlgn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-rlgn"
+        ],
+        "locator": "RLGN 227; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: gender, sexuality and authority in Muslim traditions, including scriptural interpretation, law and contemporary social debates.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-rlgn-236",
       "code": "RLGN 236",
       "name": "Religion and the Internet: Digitizing the Sacred",
-      "description": null,
+      "description": "Religious practices in virtual environments and the implications of digital media for community, sacred spaces and meaning.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=RLGN%20236",
+      "category": "human_context",
+      "source_id": "case-uger-courses-rlgn",
+      "url": "https://bulletin.case.edu/course-descriptions/rlgn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-rlgn"
+        ],
+        "locator": "RLGN 236; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: religious practices in virtual environments and the implications of digital media for community, sacred spaces and meaning.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-rlgn-242",
       "code": "RLGN 242",
       "name": "World Christianity",
-      "description": null,
-      "prerequisites": null,
+      "description": "Christianity’s global diversity and transformation through migration, colonial encounters and changing social institutions.",
+      "prerequisites": "Prereq: Academic Inquiry Seminar (AIQS) or SAGES First Seminar.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=RLGN%20242",
+      "category": "human_context",
+      "source_id": "case-uger-courses-rlgn",
+      "url": "https://bulletin.case.edu/course-descriptions/rlgn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-rlgn"
+        ],
+        "locator": "RLGN 242; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: christianity’s global diversity and transformation through migration, colonial encounters and changing social institutions.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-rlgn-243",
       "code": "RLGN 243",
       "name": "Bollywood, Social Justice, Gender and Sexuality: Contemporary Bollywood Movies with a Social Message",
-      "description": null,
+      "description": "Bollywood representations of religion, inequality, gender and sexuality as a lens on social justice.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=RLGN%20243",
+      "category": "human_context",
+      "source_id": "case-uger-courses-rlgn",
+      "url": "https://bulletin.case.edu/course-descriptions/rlgn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-rlgn"
+        ],
+        "locator": "RLGN 243; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: bollywood representations of religion, inequality, gender and sexuality as a lens on social justice.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-rlgn-246",
       "code": "RLGN 246",
       "name": "Food, Culture, Ethics, and Religion",
-      "description": null,
-      "prerequisites": null,
+      "description": "Food practices and choices in relation to identity, religion, ethics, inequality and global social change.",
+      "prerequisites": "Prereq: Academic Inquiry Seminar (AIQS).",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=RLGN%20246",
+      "category": "human_context",
+      "source_id": "case-uger-courses-rlgn",
+      "url": "https://bulletin.case.edu/course-descriptions/rlgn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-rlgn"
+        ],
+        "locator": "RLGN 246; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: food practices and choices in relation to identity, religion, ethics, inequality and global social change.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-rlgn-254",
       "code": "RLGN 254",
       "name": "The Holocaust",
-      "description": null,
+      "description": "The Holocaust’s historical development, persecution and responses across communities, and its subsequent public memory.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=RLGN%20254",
+      "category": "human_context",
+      "source_id": "case-uger-courses-rlgn",
+      "url": "https://bulletin.case.edu/course-descriptions/rlgn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-rlgn"
+        ],
+        "locator": "RLGN 254; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: the Holocaust’s historical development, persecution and responses across communities, and its subsequent public memory.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-rlgn-275",
       "code": "RLGN 275",
       "name": "Religion in the City: Skyscrapers, Hip-Hop, and Urban Spirituality",
-      "description": null,
+      "description": "Religious diversity in American cities shaped by migration, globalization, neighborhoods and diaspora.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=RLGN%20275",
+      "category": "human_context",
+      "source_id": "case-uger-courses-rlgn",
+      "url": "https://bulletin.case.edu/course-descriptions/rlgn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-rlgn"
+        ],
+        "locator": "RLGN 275; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: religious diversity in American cities shaped by migration, globalization, neighborhoods and diaspora.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-rlgn-309",
       "code": "RLGN 309",
       "name": "Cults and New Religious Movements",
-      "description": null,
+      "description": "New religious movements and the social construction of cults, including leadership, persuasion, rights and cultural context.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=RLGN%20309",
+      "category": "human_context",
+      "source_id": "case-uger-courses-rlgn",
+      "url": "https://bulletin.case.edu/course-descriptions/rlgn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-rlgn"
+        ],
+        "locator": "RLGN 309; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: new religious movements and the social construction of cults, including leadership, persuasion, rights and cultural context.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-rlgn-346",
       "code": "RLGN 346",
       "name": "Buddhism Goes to the Movies",
-      "description": null,
-      "prerequisites": null,
+      "description": "Buddhist teachings, practices and communities interpreted through film and cinematic expression.",
+      "prerequisites": "Prior knowledge of Buddhism (for example, RLGN 101 or RLGN 217 ) is strongly preferred but not strictly required. Students may wish to take RLGN 217 and RLGN 346 at the same time.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=RLGN%20346",
+      "category": "human_context",
+      "source_id": "case-uger-courses-rlgn",
+      "url": "https://bulletin.case.edu/course-descriptions/rlgn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-rlgn"
+        ],
+        "locator": "RLGN 346; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: buddhist teachings, practices and communities interpreted through film and cinematic expression.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-rlgn-347",
       "code": "RLGN 347",
       "name": "Buddhism, Gender, and Sexuality",
-      "description": null,
-      "prerequisites": null,
+      "description": "Buddhist understandings of gender and sexuality across historical and cultural settings, including exchanges with other traditions.",
+      "prerequisites": "Previous knowledge of Buddhism is preferred but not required.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=RLGN%20347",
+      "category": "human_context",
+      "source_id": "case-uger-courses-rlgn",
+      "url": "https://bulletin.case.edu/course-descriptions/rlgn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-rlgn"
+        ],
+        "locator": "RLGN 347; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: buddhist understandings of gender and sexuality across historical and cultural settings, including exchanges with other traditions.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-rlgn-371",
       "code": "RLGN 371",
       "name": "Jews Under Christianity and Islam",
-      "description": null,
+      "description": "Jewish social and political experiences under Christian and Muslim rule, including interfaith relations and communal responses.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=RLGN%20371",
+      "category": "human_context",
+      "source_id": "case-uger-courses-rlgn",
+      "url": "https://bulletin.case.edu/course-descriptions/rlgn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-rlgn"
+        ],
+        "locator": "RLGN 371; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: jewish social and political experiences under Christian and Muslim rule, including interfaith relations and communal responses.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-rlgn-380",
       "code": "RLGN 380",
       "name": "Thinking Sex: Theorizing the Intersections of Religion, Gender, Sexuality, and Power",
-      "description": null,
-      "prerequisites": null,
+      "description": "Religious constructions of gender, sexuality and power examined through theory and historical and social case studies.",
+      "prerequisites": "Prereq: Academic Inquiry Seminar (AIQS).",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=RLGN%20380",
+      "category": "human_context",
+      "source_id": "case-uger-courses-rlgn",
+      "url": "https://bulletin.case.edu/course-descriptions/rlgn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-rlgn"
+        ],
+        "locator": "RLGN 380; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: religious constructions of gender, sexuality and power examined through theory and historical and social case studies.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-soci-213",
@@ -5239,15 +5554,26 @@
       "id": "case-bs-uger-anee-316",
       "code": "ANEE 316",
       "name": "Alexander the Great: Materials and Methods",
-      "description": null,
-      "prerequisites": null,
+      "description": "Ancient-world research and communication methods applied to sources and scholarship about Alexander the Great.",
+      "prerequisites": "it can also be taken for regular credit in ANEE, CLSC or HSTY by any undergraduate or graduate student.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=ANEE%20316",
+      "category": "human_context",
+      "source_id": "case-uger-courses-anee",
+      "url": "https://bulletin.case.edu/course-descriptions/anee/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-anee"
+        ],
+        "locator": "ANEE 316; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: ancient-world research and communication methods applied to sources and scholarship about Alexander the Great.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-anth-317",
@@ -6547,15 +6873,26 @@
       "id": "case-bs-uger-rlgn-201",
       "code": "RLGN 201",
       "name": "Interpreting Religion: Approaches and Current Issues",
-      "description": null,
+      "description": "Theories and methods for studying religion, including comparison, non-Western traditions and reflection on the field’s assumptions.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=RLGN%20201",
+      "category": "human_context",
+      "source_id": "case-uger-courses-rlgn",
+      "url": "https://bulletin.case.edu/course-descriptions/rlgn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-rlgn"
+        ],
+        "locator": "RLGN 201; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: theories and methods for studying religion, including comparison, non-Western traditions and reflection on the field’s assumptions.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-soci-325",
@@ -6673,15 +7010,26 @@
       "id": "case-bs-uger-anee-381",
       "code": "ANEE 381",
       "name": "Senior Capstone",
-      "description": null,
-      "prerequisites": null,
+      "description": "A substantial researched paper and presentation on ancient Near Eastern, Egyptian or Greco-Roman history and culture.",
+      "prerequisites": "Prereq: Senior student status and a declared major in Ancient Near Eastern and Egyptian Studies.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=ANEE%20381",
+      "category": "human_context",
+      "source_id": "case-uger-courses-anee",
+      "url": "https://bulletin.case.edu/course-descriptions/anee/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-anee"
+        ],
+        "locator": "ANEE 381; current 2026–2027 exact course block",
+        "rationale": "The description explicitly specifies disciplinary research, writing and presentation in ancient history or religious studies. The project topic varies, but the stated humanistic methods establish the subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-anth-313",
@@ -7241,15 +7589,26 @@
       "id": "case-bs-uger-rlgn-399",
       "code": "RLGN 399",
       "name": "Majors Seminar",
-      "description": null,
-      "prerequisites": null,
+      "description": "Religious-studies research, disciplinary methods, writing and peer review culminating in a capstone presentation.",
+      "prerequisites": "Prereq: RLGN 201 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=RLGN%20399",
+      "category": "human_context",
+      "source_id": "case-uger-courses-rlgn",
+      "url": "https://bulletin.case.edu/course-descriptions/rlgn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-rlgn"
+        ],
+        "locator": "RLGN 399; current 2026–2027 exact course block",
+        "rationale": "The description explicitly specifies disciplinary research, writing and presentation in ancient history or religious studies. The project topic varies, but the stated humanistic methods establish the subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-soci-392",
@@ -9525,15 +9884,26 @@
       "id": "case-bs-uger-rlgn-285",
       "code": "RLGN 285",
       "name": "Embodied Politics: Contemplative Practices and Social Justice",
-      "description": null,
+      "description": "Contemplative and spiritual practices within social justice movements, emphasizing feminist and marginalized-community perspectives.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=RLGN%20285",
+      "category": "human_context",
+      "source_id": "case-uger-courses-rlgn",
+      "url": "https://bulletin.case.edu/course-descriptions/rlgn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-rlgn"
+        ],
+        "locator": "RLGN 285; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: contemplative and spiritual practices within social justice movements, emphasizing feminist and marginalized-community perspectives.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-sass-310",
@@ -10513,99 +10883,176 @@
       "id": "case-bs-uger-rlgn-101",
       "code": "RLGN 101",
       "name": "Religion and Culture",
-      "description": null,
+      "description": "Comparative study of religious practices in cultural settings, alongside critical approaches to religion as an academic field.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=RLGN%20101",
+      "category": "human_context",
+      "source_id": "case-uger-courses-rlgn",
+      "url": "https://bulletin.case.edu/course-descriptions/rlgn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-rlgn"
+        ],
+        "locator": "RLGN 101; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: comparative study of religious practices in cultural settings, alongside critical approaches to religion as an academic field.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-rlgn-206",
       "code": "RLGN 206",
       "name": "Religion and Ecology",
-      "description": null,
+      "description": "Religious understandings of ecological relationships and environmental ethics across cultural traditions.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=RLGN%20206",
+      "category": "human_context",
+      "source_id": "case-uger-courses-rlgn",
+      "url": "https://bulletin.case.edu/course-descriptions/rlgn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-rlgn"
+        ],
+        "locator": "RLGN 206; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: religious understandings of ecological relationships and environmental ethics across cultural traditions.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-rlgn-212",
       "code": "RLGN 212",
       "name": "Introduction to Christianity",
-      "description": null,
+      "description": "Christianity’s development into diverse global traditions and its changing doctrines, ethics and social relationships.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=RLGN%20212",
+      "category": "human_context",
+      "source_id": "case-uger-courses-rlgn",
+      "url": "https://bulletin.case.edu/course-descriptions/rlgn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-rlgn"
+        ],
+        "locator": "RLGN 212; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: christianity’s development into diverse global traditions and its changing doctrines, ethics and social relationships.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-rlgn-228",
       "code": "RLGN 228",
       "name": "Asian Americans: Histories, Cultures, Religions",
-      "description": null,
+      "description": "Asian American histories, cultures and religions in relation to migration, racialization, law, empire and activism.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=RLGN%20228",
+      "category": "human_context",
+      "source_id": "case-uger-courses-rlgn",
+      "url": "https://bulletin.case.edu/course-descriptions/rlgn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-rlgn"
+        ],
+        "locator": "RLGN 228; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: asian American histories, cultures and religions in relation to migration, racialization, law, empire and activism.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-rlgn-250",
       "code": "RLGN 250",
       "name": "Responsible AI: Cultivating a Just and Sustainable Socio-technical Future through Data Citizenship",
-      "description": null,
+      "description": "Ethical responsibilities surrounding AI data practices, explored through practical engagement and models of collective data citizenship.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=RLGN%20250",
+      "category": "human_context",
+      "source_id": "case-uger-courses-rlgn",
+      "url": "https://bulletin.case.edu/course-descriptions/rlgn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-rlgn"
+        ],
+        "locator": "RLGN 250; current 2026–2027 exact course block",
+        "rationale": "The description’s stated focus is ethical responsibility, data practices and collective citizenship. Practical AI-tool engagement supports those social and ethical aims rather than establishing a primary AI-methods course.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-rlgn-252",
       "code": "RLGN 252",
       "name": "Soul Murder: Religion and Sexual Abuse",
-      "description": null,
+      "description": "Religious sexual abuse examined through social, legal and ethical case studies and its effects on relationships and belief.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=RLGN%20252",
+      "category": "human_context",
+      "source_id": "case-uger-courses-rlgn",
+      "url": "https://bulletin.case.edu/course-descriptions/rlgn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-rlgn"
+        ],
+        "locator": "RLGN 252; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: religious sexual abuse examined through social, legal and ethical case studies and its effects on relationships and belief.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-rlgn-253",
       "code": "RLGN 253",
       "name": "Religion and Philosophy in China",
-      "description": null,
+      "description": "Chinese Confucian, Daoist and Buddhist traditions and their philosophical, ethical and social development.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=RLGN%20253",
+      "category": "human_context",
+      "source_id": "case-uger-courses-rlgn",
+      "url": "https://bulletin.case.edu/course-descriptions/rlgn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-rlgn"
+        ],
+        "locator": "RLGN 253; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: chinese Confucian, Daoist and Buddhist traditions and their philosophical, ethical and social development.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-sjus-100",
@@ -10681,43 +11128,76 @@
       "id": "case-bs-uger-anee-107",
       "code": "ANEE 107",
       "name": "Introduction to the Ancient Near East and Egypt",
-      "description": null,
+      "description": "Ancient Near Eastern and Egyptian societies, cultural achievements and their surviving historical legacy.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=ANEE%20107",
+      "category": "human_context",
+      "source_id": "case-uger-courses-anee",
+      "url": "https://bulletin.case.edu/course-descriptions/anee/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-anee"
+        ],
+        "locator": "ANEE 107; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: ancient Near Eastern and Egyptian societies, cultural achievements and their surviving historical legacy.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-anee-194",
       "code": "ANEE 194",
       "name": "Catapults and Cavalry: Warfare in the Ancient Mediterranean",
-      "description": null,
+      "description": "Warfare’s historical development across ancient Mediterranean societies, from early conflicts to Roman expansion.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=ANEE%20194",
+      "category": "human_context",
+      "source_id": "case-uger-courses-anee",
+      "url": "https://bulletin.case.edu/course-descriptions/anee/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-anee"
+        ],
+        "locator": "ANEE 194; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: warfare’s historical development across ancient Mediterranean societies, from early conflicts to Roman expansion.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-anee-224",
       "code": "ANEE 224",
       "name": "Sword and Sandal: The Ancient Mediterranean in Film",
-      "description": null,
-      "prerequisites": null,
+      "description": "Modern film portrayals of ancient Mediterranean societies, explored through viewing and discussion.",
+      "prerequisites": "No prior knowledge of the ancient Mediterranean is necessary; all readings and films will be in English or subtitled in English.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=ANEE%20224",
+      "category": "human_context",
+      "source_id": "case-uger-courses-anee",
+      "url": "https://bulletin.case.edu/course-descriptions/anee/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-anee"
+        ],
+        "locator": "ANEE 224; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: modern film portrayals of ancient Mediterranean societies, explored through viewing and discussion.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-anth-102",
@@ -11937,15 +12417,26 @@
       "id": "case-bs-uger-ling-340",
       "code": "LING 340",
       "name": "Experiential Cross-cultural Learning: Service Abroad",
-      "description": null,
-      "prerequisites": null,
+      "description": "International community service combined with reflection on civic responsibility, cultural differences and collaborative engagement.",
+      "prerequisites": "Language proficiency in the target language used in the country is not required.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=LING%20340",
+      "category": "human_context",
+      "source_id": "case-uger-courses-ling",
+      "url": "https://bulletin.case.edu/course-descriptions/ling/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-ling"
+        ],
+        "locator": "LING 340; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: international community service combined with reflection on civic responsibility, cultural differences and collaborative engagement.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-mued-305",
@@ -12189,141 +12680,251 @@
       "id": "case-bs-uger-rlgn-173",
       "code": "RLGN 173",
       "name": "Introducing Judaism",
-      "description": null,
+      "description": "Jewish religious life explored through understandings of time, place, divinity, sacred texts and community boundaries.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=RLGN%20173",
+      "category": "human_context",
+      "source_id": "case-uger-courses-rlgn",
+      "url": "https://bulletin.case.edu/course-descriptions/rlgn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-rlgn"
+        ],
+        "locator": "RLGN 173; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: jewish religious life explored through understandings of time, place, divinity, sacred texts and community boundaries.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-rlgn-210",
       "code": "RLGN 210",
       "name": "Sacred Space in Global Religious Traditions",
-      "description": null,
+      "description": "Sacred spaces as expressions of community, authority, ritual and social change, including local site visits.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=RLGN%20210",
+      "category": "human_context",
+      "source_id": "case-uger-courses-rlgn",
+      "url": "https://bulletin.case.edu/course-descriptions/rlgn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-rlgn"
+        ],
+        "locator": "RLGN 210; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: sacred spaces as expressions of community, authority, ritual and social change, including local site visits.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-rlgn-216",
       "code": "RLGN 216",
       "name": "Hinduism",
-      "description": null,
+      "description": "Hindu traditions through texts, practices, artifacts and contemporary cultural complexities.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=RLGN%20216",
+      "category": "human_context",
+      "source_id": "case-uger-courses-rlgn",
+      "url": "https://bulletin.case.edu/course-descriptions/rlgn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-rlgn"
+        ],
+        "locator": "RLGN 216; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: hindu traditions through texts, practices, artifacts and contemporary cultural complexities.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-rlgn-217",
       "code": "RLGN 217",
       "name": "Buddhism",
-      "description": null,
+      "description": "Buddhist traditions, shared teachings and diverse practices in relation to society and intercultural exchange.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=RLGN%20217",
+      "category": "human_context",
+      "source_id": "case-uger-courses-rlgn",
+      "url": "https://bulletin.case.edu/course-descriptions/rlgn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-rlgn"
+        ],
+        "locator": "RLGN 217; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: buddhist traditions, shared teachings and diverse practices in relation to society and intercultural exchange.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-rlgn-226",
       "code": "RLGN 226",
       "name": "Southeast Asia And The World: History, Politics, Religions",
-      "description": null,
+      "description": "Southeast Asian societies’ historical transformations, from colonial rule to postcolonial political and religious life.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=RLGN%20226",
+      "category": "human_context",
+      "source_id": "case-uger-courses-rlgn",
+      "url": "https://bulletin.case.edu/course-descriptions/rlgn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-rlgn"
+        ],
+        "locator": "RLGN 226; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: southeast Asian societies’ historical transformations, from colonial rule to postcolonial political and religious life.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-rlgn-230",
       "code": "RLGN 230",
       "name": "Drugs, Religion, and Mystical Experiences",
-      "description": null,
+      "description": "Drug use and mystical experience in religious traditions, examining the meanings and boundaries of those categories.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=RLGN%20230",
+      "category": "human_context",
+      "source_id": "case-uger-courses-rlgn",
+      "url": "https://bulletin.case.edu/course-descriptions/rlgn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-rlgn"
+        ],
+        "locator": "RLGN 230; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: drug use and mystical experience in religious traditions, examining the meanings and boundaries of those categories.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-rlgn-244",
       "code": "RLGN 244",
       "name": "Ghosts, Zombies, and Monsters: What We Fear and Loathe in Religions",
-      "description": null,
+      "description": "Frightening beings in religious traditions as expressions of cultural fears, hopes and exclusion, emphasizing Asian contexts.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=RLGN%20244",
+      "category": "human_context",
+      "source_id": "case-uger-courses-rlgn",
+      "url": "https://bulletin.case.edu/course-descriptions/rlgn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-rlgn"
+        ],
+        "locator": "RLGN 244; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: frightening beings in religious traditions as expressions of cultural fears, hopes and exclusion, emphasizing Asian contexts.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-rlgn-287",
       "code": "RLGN 287",
       "name": "South Asian Religions",
-      "description": null,
+      "description": "South Asian religious traditions through their practices, teachings, histories and ethnographic accounts.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=RLGN%20287",
+      "category": "human_context",
+      "source_id": "case-uger-courses-rlgn",
+      "url": "https://bulletin.case.edu/course-descriptions/rlgn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-rlgn"
+        ],
+        "locator": "RLGN 287; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: south Asian religious traditions through their practices, teachings, histories and ethnographic accounts.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-rlgn-288",
       "code": "RLGN 288",
       "name": "Psychedelics and Entheogens",
-      "description": null,
+      "description": "Psychedelic practices in religious and nonreligious settings, including cultural experience and associated legal and ethical questions.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=RLGN%20288",
+      "category": "human_context",
+      "source_id": "case-uger-courses-rlgn",
+      "url": "https://bulletin.case.edu/course-descriptions/rlgn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-rlgn"
+        ],
+        "locator": "RLGN 288; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: psychedelic practices in religious and nonreligious settings, including cultural experience and associated legal and ethical questions.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-rlgn-373",
       "code": "RLGN 373",
       "name": "History of Early Christianities: First-Fourth Centuries CE",
-      "description": null,
+      "description": "Early Christian diversity and its beliefs, moral frameworks and changing relationships with Roman society and government.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=RLGN%20373",
+      "category": "human_context",
+      "source_id": "case-uger-courses-rlgn",
+      "url": "https://bulletin.case.edu/course-descriptions/rlgn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-rlgn"
+        ],
+        "locator": "RLGN 373; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: early Christian diversity and its beliefs, moral frameworks and changing relationships with Roman society and government.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-sass-375c",
@@ -13120,29 +13721,51 @@
       "id": "case-bs-uger-rlgn-209",
       "code": "RLGN 209",
       "name": "Introduction to Biblical Literature",
-      "description": null,
-      "prerequisites": null,
+      "description": "Biblical writings interpreted within historical settings and contemporary American cultural and political life.",
+      "prerequisites": "No background in religion is necessary.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=RLGN%20209",
+      "category": "human_context",
+      "source_id": "case-uger-courses-rlgn",
+      "url": "https://bulletin.case.edu/course-descriptions/rlgn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-rlgn"
+        ],
+        "locator": "RLGN 209; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: biblical writings interpreted within historical settings and contemporary American cultural and political life.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-rlgn-241",
       "code": "RLGN 241",
       "name": "Translating Religion",
-      "description": null,
+      "description": "Translation across languages and media as a means of religious communication, cultural encounter and ethical negotiation.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=RLGN%20241",
+      "category": "human_context",
+      "source_id": "case-uger-courses-rlgn",
+      "url": "https://bulletin.case.edu/course-descriptions/rlgn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-rlgn"
+        ],
+        "locator": "RLGN 241; current 2026–2027 exact course block",
+        "rationale": "The actual description centers on cultural, historical, ethical or communicative interpretation: translation across languages and media as a means of religious communication, cultural encounter and ethical negotiation.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-uger-soci-208",
@@ -16695,7 +17318,8 @@
     "2026-10-11 major-course audit: all named major course descriptions read. Prerequisites are course access conditions, not additional fixed degree requirements. Source-stated Units are not converted to semester hours without separate evidence. CSDS 102 requires no current or previous 300-level CSDS enrollment; CSDS 499 permits graduate standing OR Requisites Not Met permission; other advanced courses retain their own prerequisites or permissions. CSDS 463 heading and degree row agree, but its description cross-list footer says CSDS 466; no alias or equivalence inferred.",
     "General-education metadata batch: 59 distinct additional descriptions read across 10 subjects (59 BA/58 BS records; ENGR399 was already reviewed for BS). AI-related philosophy and writing are classified from actual subject matter, not AI title words. Explicit permission, enrollment, placement and credit exclusions remain course metadata. Other general-education subjects remain unreviewed.",
     "Registrar policy review 2026-10-11 supersedes the earlier SCMG eligibility-conflict interpretation: the official general process explicitly permits requesting an override for unmet prerequisites, corequisites or other conditions, and separate school registrar/dean approval for career restrictions. The BA’s expressly listed SCMG462/463 options remain conditional on meeting their master’s-program restriction or receiving all necessary permissions; approval is never assumed. Optional course preparation/permission does not itself make the degree inventory incomplete.",
-    "2026-10-11 UGER continuation: 50 HSTY descriptions reviewed by the coordinator and all 73 mapped PHED blocks reviewed by the degree researcher. Varsity/jogging blocks containing only approval labels have limited exact-title subject rationales and retain null descriptions. Physical-education choices remain duration-based unresolved records; zero source-stated credits are preserved."
+    "2026-10-11 UGER continuation: 50 HSTY descriptions reviewed by the coordinator and all 73 mapped PHED blocks reviewed by the degree researcher. Varsity/jogging blocks containing only approval labels have limited exact-title subject rationales and retain null descriptions. Physical-education choices remain duration-based unresolved records; zero source-stated credits are preserved.",
+    "2026-10-11 coordinator review adds 53 UGER descriptions from Religious Studies, Ancient Near East/Egyptian Studies, Jewish Studies and Linguistics. The actual-subject review classifies applied language pedagogy separately from historical/cultural inquiry and preserves explicit course restrictions. Full correctness audit remains in progress."
   ],
   "curriculum_audit": {
     "scope": "degree",

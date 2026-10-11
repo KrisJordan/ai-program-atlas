@@ -26,7 +26,7 @@ def test_source_change_drops_stale_editorial_claims(monkeypatch):
  with pytest.raises(ValueError,match='identity changed'):parse(html.replace('Synthetic inquiry','New inquiry'))
 
 
-@pytest.mark.parametrize('award,n',[('BA',182),('BS',181)])
+@pytest.mark.parametrize('award,n',[('BA',235),('BS',234)])
 def test_reviewed_uger_semantics_and_reciprocal_identity(award,n):
  pid=f'case-western-reserve-university-artificial-intelligence-{award.lower()}-degree'
  p=json.loads(Path('data/programs',pid+'.json').read_text());cs={c['code']:c for c in p['courses']}
@@ -73,6 +73,21 @@ def test_history_and_wellness_review_is_precise_not_keyword_based(award):
  assert cs['PHED 40B']['prerequisites'] is None # no copying the first-half restriction to the second-half course
  assert 'mastered intermediate swimming skills' in cs['PHED 30A']['prerequisites']
  for dep,count in [('hsty',50),('phed',73)]:
+  path=Path('/tmp/case-uger-audit',dep+'.html')
+  if path.exists():
+   observed=m.parse_descriptions(path.read_text(),pid=pid,award=award,department=dep)
+   assert len(observed['courses'])==count
+   assert all('Changed description' not in n for n in observed['notes'])
+
+
+@pytest.mark.parametrize('award',['BA','BS'])
+def test_coordinator_religion_batch_source_guards(award):
+ pid=f'case-western-reserve-university-artificial-intelligence-{award.lower()}-degree'
+ p=json.loads(Path('data/programs',pid+'.json').read_text());cs={c['code']:c for c in p['courses']}
+ assert cs['LING 333']['category']=='applications'
+ assert cs['RLGN 250']['category']=='human_context'
+ assert 'Senior student status and a declared major' in cs['ANEE 381']['prerequisites']
+ for dep,count in [('rlgn',38),('anee',7),('jwst',6),('ling',2)]:
   path=Path('/tmp/case-uger-audit',dep+'.html')
   if path.exists():
    observed=m.parse_descriptions(path.read_text(),pid=pid,award=award,department=dep)
