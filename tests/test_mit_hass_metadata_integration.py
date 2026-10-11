@@ -300,3 +300,27 @@ def test_concourse_corequisite_preference_and_unknown_fields_stay_distinct():
     assert any('Spring2013' in n and 'not imported' in n for n in unprinted['notes'])
     for c in [limited,preference,unprinted]:
         assert c['public_site'] is None and c['syllabus'] is None
+
+
+def test_wgs_dated_topic_does_not_resolve_other_term_conflict_or_create_resources():
+    p=json.loads(Path('data/programs/mit-ai-decision-making-bs.json').read_text())
+    by={c['id']:c for c in p['courses']}
+    digital=by['mit-ai-hass-computing-wgs-243']
+    assert digital['category_review']['status']=='mixed'
+    assert set(digital['category_review']['candidate_categories'])=={'foundations','human_context'}
+    assert digital['credits']==12 and digital['prerequisites'] is None
+    assert any('helpful but not required' in n for n in digital['notes'])
+    assert any('Feminist Geographies' in n for n in digital['notes'])
+    assert digital['public_site'] is None and digital['syllabus'] is None
+    conflicts=[c for c in p['courses'] if c['code']=='21W.742J [WGS.231]']
+    assert len(conflicts)==2 and all(c['description'] is None for c in conflicts)
+
+
+def test_wgs_historical_year_change_withdraws_saved_review():
+    sid='mit-ai-hass-review-wgs-archive-wgs243-sp26'
+    path=Path(m.INTEGRATED['cache_paths'][sid])
+    if not path.exists():pytest.skip('Optional ignored WGS capture absent')
+    html=path.read_text();url=m.SPECS[sid]['url']
+    rows=m.parse(html,url)['courses']
+    assert len(rows)==1 and rows[0]['source_id']==sid
+    assert m.parse(html.replace('2025-2026','2026-2027'),url)['courses']==[]
