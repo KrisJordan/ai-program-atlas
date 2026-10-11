@@ -422,3 +422,8 @@ Delegated review read all 41 exact current course blocks; primary checked seven 
 ### UCSD Chinese and archaeology source batches — 2026-10-11
 
 Primary reviewed all41 Chinese descriptions; delegated review read28ANAR blocks with15 primary boundary checks. Exact methods versus language/culture classifications and variable/repeat/admission conditions are retained. Eight unmatchedANAR codes have bounded unknown dispositions. CHIN's same-URL membership parser retains43rules; Anthropology's existing72observations are composed with28ANAR records. Neither source enrichment changes the manually enumerated8/119/2241partition. Context categories now1547other/600human/62applications/7foundations/23systems/2math. Further identified accessible subjects remain in progress.
+
+
+### HIEU joint-heading corrective review — 2026-10-11
+
+Actual source review found that16of the17previously unmatched HIEU identifiers were printed in joint headings. All16blocks and the full Colloquia enrollment policy were reread, correcting the matcher rather than treating the omission as an access barrier. The resulting72approved/one missing/one title-held disposition includes18source-scoped undergraduate approval notes. Graduate work and lecture-course eligibility remain distinct; no identity groups or extra required courses are inferred. Current context categories are1538other/609human/62applications/7foundations/23systems/2math. The earlier17missing statements are superseded.

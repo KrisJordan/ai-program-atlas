@@ -1,3 +1,5 @@
+> Correction checkpoint, 2026-10-11: the original 17-unmatched disposition below is superseded. Sixteen identifiers are explicitly present in shared undergraduate/graduate or cross-subject headings. Primary read all 16 full blocks and the complete Colloquia admission policy; current result is 72 approved observations, HIEU105 unmatched, and HIEU122 title-held. Earlier bounded claims remain below as review history, not current missingness.
+
 # UC San Diego HIEU course-content contribution
 
 Reviewed 2026-10-11. This contribution covers the 74 represented identifiers supplied by the primary UCSD reviewer; it changes no program requirements, identities, seed, or audit status.
@@ -22,3 +24,12 @@ Material details:
 `ucsd_hieu_reviews.py` verifies the chapter heading, edition, period marker, complete reviewed headings and full description hashes. A previously missing exact identifier appearing, an eligibility change, or a changed companion restriction requires new review. Parsers emit observed fields and dispositions only; manual `category_review` records remain in the manifest for primary integration. No audit certification or requirement membership is emitted.
 
 Seven focused tests cover actual cached replay, variable credits and exact prerequisites, substantive title holds, missing unsuffixed codes, duplicate/source/edition changes, the period marker, and the companion credit-exclusion guard. Raw copyrighted source remains outside the repository. Remaining work is primary-owner integration and any independently sourced resolution of the 18 explicit identity/content dispositions.
+
+
+## Shared-heading correction and section policy
+
+A matcher requiring a period immediately after one code omitted explicit headings such as HIEU161/261 and HIEU166/HIEU266. Sixteen actual represented identifiers were present; this was a parsing/review oversight, not a source access gap. The primary reviewer read every recovered block. Nine support historical human-context judgments and seven leave their selected topic unspecified. All print four units. Exact shared heading maps now identify the represented undergraduate records only; no graduate identity or alias group is created.
+
+The complete HIEU Colloquia note requires undergraduate department approval through EASY or instructor permission and states that undergraduate, master's and doctoral requirements differ. It applies to 18 represented entries, including existing160/198/199, and is now guarded by full text and section membership. Individual clauses about additional graduate work remain scoped to graduate students. Lecture-course107 does not inherit colloquium approval. Its RELI147 credit exclusion is preserved without automatic crosslisting.
+
+Course-block parsing stops at h4 and other section headings, so following section policy cannot leak into the preceding lecture description. Within a course it includes ordinary/unwrapped text, preserving future changed conditions rather than ignoring them. Synthetic tests exercise shared headings, whole-policy edits, section labels, course additions and the no-graduate-expansion boundary; actual-cache tests verify all72observations and18scoped policy notes. The HIEU105 missing exact code,122 temporal-title hold,124 missing unit field and198 variable amount remain unresolved. This correction does not certify a whole-degree or full independent second pass.

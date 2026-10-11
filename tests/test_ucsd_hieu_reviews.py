@@ -7,7 +7,7 @@ from atlas.adapters import ucsd_hieu_reviews as review
 def fixture(monkeypatch, code='HIEU 198', body='Supervised study. Prerequisites: upper-division standing and department stamp.'):
     entry=dict(next(e for e in review.SPEC['entries'] if e['code']==code))
     entry['description_hash']=hashlib.sha256(body.encode()).hexdigest()
-    monkeypatch.setattr(review,'SPEC',{**review.SPEC,'entries':[entry],'supplementary_blocks':[]})
+    monkeypatch.setattr(review,'SPEC',{**review.SPEC,'entries':[entry],'supplementary_blocks':[], 'colloquium_policy':None})
     return ('<h1>History</h1><p class="course-disclaimer">General Catalog 2026–27</p>'
             '<p class="course-subhead-1">+ indicates courses that focus on the period before 1800.</p>'
             f'<p class="course-name">{entry["heading"]}</p><p class="course-descriptions">{body}</p>')
@@ -62,8 +62,8 @@ def test_supplementary_exclusion_has_its_own_full_block_guard(monkeypatch):
 
 def test_manual_dispositions_distinguish_public_history_practice_and_unknown_topics():
     entries={e['code']:e for e in review.SPEC['entries']}
-    assert len(entries)==74 and sum(e['approved_for_integration'] for e in entries.values())==56
-    assert sum(e['heading'] is None for e in entries.values())==17
+    assert len(entries)==74 and sum(e['approved_for_integration'] for e in entries.values())==72
+    assert sum(e['heading'] is None for e in entries.values())==1
     assert entries['HIEU 145']['category_review']['status']=='mixed'
     assert set(entries['HIEU 145']['category_review']['candidate_categories'])=={'human_context','applications'}
     for code in ['144','153','160','198','199']:
@@ -78,7 +78,7 @@ def test_actual_current_history_chapter_replays_bounded_evidence():
     path=Path(review.SPEC['sources']['HIEU']['cache_path'])
     if not path.exists():pytest.skip('Optional ignored History chapter absent')
     out=review.parse_observations(path.read_text());by={c['code']:c for c in out['courses']}
-    assert len(by)==56 and len(out['source_dispositions'])==18
+    assert len(by)==72 and len(out['source_dispositions'])==2
     assert {'HIEU 159','HIEU 159S','HIEU 116B','HIEU 117A'}<=by.keys()
     assert 'minimum UC San Diego GPA of 2.95' in by['HIEU 198']['prerequisites']
     assert 'ninety units' in by['HIEU 198']['prerequisites']
@@ -86,3 +86,37 @@ def test_actual_current_history_chapter_replays_bounded_evidence():
     assert by['HIEU 160']['prerequisites']=='upper-division standing and department approval required. +'
     assert by['HIEU 124']['credits'] is None and by['HIEU 198']['credits'] is None
     assert 'HIEU 124GS' not in by and 'HIEU 122' not in by
+
+
+def test_shared_heading_and_section_conditions_are_independently_guarded(monkeypatch):
+    e=dict(next(e for e in review.SPEC['entries']if e['code']=='HIEU 161'))
+    body='Changing historical topics. Prerequisites: advanced standing.'
+    policy='Undergraduates need approval. Graduate work differs.'
+    e['description_hash']=hashlib.sha256(body.encode()).hexdigest()
+    spec={**review.SPEC,'entries':[e],'supplementary_blocks':[],
+          'colloquium_policy':{'anchor_code':'HIEU 161','heading':'Colloquia',
+            'body_hash':hashlib.sha256(policy.encode()).hexdigest(),'course_codes':['HIEU 161']}}
+    monkeypatch.setattr(review,'SPEC',spec)
+    html=('<h1>History</h1><p class="course-disclaimer">2026–27</p>'
+          '<p class="course-subhead-1">+ indicates courses that focus on the period before 1800.</p>'
+          '<h4>Colloquia</h4><p class="course-note">'+policy+'</p>'
+          '<p class="course-name">'+e['heading']+'</p><p>'+body+'</p>')
+    r=review.parse_observations(html)
+    assert [c['code']for c in r['courses']]==['HIEU 161']
+    assert 'course_identity_groups'not in r
+    assert any('graduate additional-work rules are not undergraduate obligations' in n for n in r['courses'][0]['notes'])
+    for changed in [html.replace('Undergraduates need approval','Undergraduates never need approval'),html.replace('<h4>Colloquia</h4>','<h4>Lecture Courses</h4>'),html+'<p>New course condition.</p>']:
+        with pytest.raises(ValueError):review.parse_observations(changed)
+
+
+def test_actual_shared_headings_restore_present_codes_without_graduate_expansion():
+    path=Path(review.SPEC['sources']['HIEU']['cache_path'])
+    if not path.exists():pytest.skip('Optional History chapter')
+    r=review.parse_observations(path.read_text());cs={c['code']:c for c in r['courses']}
+    assert len(cs)==72 and len(r['source_dispositions'])==2
+    assert all('HIEU '+n in cs for n in ['107','161','162','163','164','166','167','171','172','174','176','178','181','182','183','184'])
+    assert not any(int(c.split()[1][:3])>=200 for c in cs)
+    assert any('EASY' in n for n in cs['HIEU 164']['notes'])
+    assert not any('EASY' in n for n in cs['HIEU 107']['notes'])
+    assert any('graduate' in n.lower() and 'not' in n.lower()for n in cs['HIEU 172']['notes'])
+    assert len(review.SPEC['colloquium_policy']['course_codes'])==18

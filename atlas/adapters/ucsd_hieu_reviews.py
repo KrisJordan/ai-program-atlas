@@ -9,7 +9,7 @@ import json
 import re
 from functools import partial
 from pathlib import Path
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, Comment, NavigableString
 
 SPEC=json.loads(Path(__file__).with_suffix('.json').read_text())
 
@@ -29,6 +29,7 @@ def source_blocks(html, subject):
     if SPEC['chapter_marker'] not in [clean(p.get_text(' ',strip=True)) for p in soup.select('p.course-subhead-1')]:
         raise ValueError('History period marker changed')
     blocks={}
+    nodes={}
     for heading in soup.select('p.course-name'):
         title=clean(heading.get_text(' ',strip=True));match=re.match(r'('+subject+r' \d+[A-Z]*)\.',title)
         codes=SPEC.get('grouped_headings',{}).get(title)
@@ -37,11 +38,25 @@ def source_blocks(html, subject):
         parts=[]
         for sibling in heading.next_siblings:
             classes=getattr(sibling,'attrs',{}).get('class',[])
-            if getattr(sibling,'name',None) in ['h1','h2','h3'] or 'course-name' in classes:break
-            if 'course-descriptions' in classes:parts.append(clean(sibling.get_text(' ',strip=True)))
+            if getattr(sibling,'name',None) in ['h1','h2','h3','h4','h5','h6'] or 'course-name' in classes:break
+            if isinstance(sibling,Comment) or getattr(sibling,'name',None) in ['script','style']:continue
+            value=clean(str(sibling)) if isinstance(sibling,NavigableString) else clean(sibling.get_text(' ',strip=True))
+            if value:parts.append(value)
         for code in codes:
             if code in blocks:raise ValueError('Duplicate UCSD course heading: '+code)
             blocks[code]=(title,clean(' '.join(parts)))
+            nodes[code]=heading
+    policy=SPEC.get('colloquium_policy')
+    if policy:
+        anchor=nodes.get(policy['anchor_code'])
+        section=anchor.find_previous('h4') if anchor else None
+        note=section.find_next_sibling('p',class_='course-note') if section else None
+        value=clean(note.get_text(' ',strip=True)) if note else ''
+        if section is None or clean(section.get_text(' ',strip=True))!=policy['heading'] or hashlib.sha256(value.encode()).hexdigest()!=policy['body_hash']:
+            raise ValueError('History undergraduate colloquium policy changed')
+        for code in policy['course_codes']:
+            if code not in nodes or nodes[code].find_previous('h4') is not section:
+                raise ValueError('History colloquium policy scope changed: '+code)
     return blocks
 
 
