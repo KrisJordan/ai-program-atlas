@@ -16,9 +16,10 @@ def test_all_course_titles_and_note_grouping_preserve_graph(site_data):
     original=deepcopy(p)
     soup=BeautifulSoup(requirement_tree(p),'html.parser')
     assert p==original
-    preview=soup.select_one('#requirement-list > details > summary .requirement-preview')
-    assert len(preview.select('[role=listitem]'))==6
-    assert all(f'Course title {i}' in preview.get_text() for i in range(6))
+    header=soup.select_one('#requirement-list > details > summary')
+    assert not header.select('.requirement-preview')
+    assert all(f'CS {100+i} · Course title {i}' in header.select_one('h3').get_text() for i in range(6))
+    assert header.select_one('.requirement-rule').get_text()=='Complete all courses in this group'
     assert soup.select_one('.requirements > li')['id']=='requirement-main'
     for key in ['other-top','optional-top','notes-main']:
         assert not soup.select_one('#requirements-group-'+key+' > details').has_attr('open')
@@ -122,3 +123,24 @@ def test_major_excluding_general_education_remains_program_scope(site_data):
     assert soup.select_one('.requirements > #requirement-major')
     assert not soup.select_one('#requirements-group-general-top')
     assert soup.select_one('#requirement-major > details').has_attr('open')
+
+
+def test_course_leaf_headers_credits_and_incomplete_references(site_data):
+    p=site_data['programs'][0]
+    p['courses']=[dict(id='one',code='CS 100',name='Programming',credits=99,credit_unit='quarter_hours'),dict(id='two',code='CS 200',name='Methods')]
+    p['requirements']=[dict(rule('single',courses=['one'],title='CS 100'),credits=3.0,credit_unit='semester_hours'),rule('unknown',courses=['one'],title='CS 100'),dict(rule('bundle',courses=['one','two'],title='CS 100 + CS 200'),credits=12,credit_unit='units'),dict(rule('unknown-unit',courses=['two'],title='CS 200'),credits=4,credit_unit='unknown'),rule('partial',courses=['one','missing']),dict(rule('choice',kind='choose_courses',courses=['one']),count=1)]
+    before=deepcopy(p);soup=BeautifulSoup(requirement_tree(p),'html.parser')
+    assert p==before
+    header=soup.select_one('#requirement-single > details > summary')
+    assert header.h3.get_text()=='CS 100 · Programming'
+    assert header.select_one('.requirement-rule').get_text()=='3 Semester hours'
+    assert 'Complete all' not in header.get_text()
+    assert not header.select('.requirement-preview')
+    assert not soup.select_one('#requirement-unknown > details > summary .requirement-rule')
+    assert '99' not in soup.select_one('#requirement-unknown > details > summary').get_text()
+    bundle=soup.select_one('#requirement-bundle > details > summary')
+    assert bundle.h3.get_text()=='CS 100 · Programming + CS 200 · Methods'
+    assert bundle.select_one('.requirement-rule').get_text()=='Complete all courses in this group · 12 Units'
+    assert soup.select_one('#requirement-unknown-unit > details > summary .requirement-rule').get_text()=='4 credit unit unknown'
+    assert not soup.select_one('#requirement-partial').get('class')==['requirement','requirement-course-group']
+    assert 'Choose courses' in soup.select_one('#requirement-choice > details > summary').get_text()

@@ -85,3 +85,8 @@
 @media(max-width:700px){.requirement-disclosure>summary{padding:8px 10px}.requirement-rule{margin-left:5px}.requirement-body{padding:9px 10px}.requirement-preview{margin-left:12px}.requirement-preview-list{gap:2px}.outcomes li{padding-bottom:7px}}
 
 .related-course-groups{margin-top:10px}.related-course-groups>h4{margin:0 0 4px;font-size:13px}.related-course-groups>p{font-size:11px;color:var(--muted);margin-bottom:7px}.related-course-group{border:1px solid var(--line);border-left:3px solid var(--carolina);border-radius:4px;margin:5px 0;background:var(--wash)}.related-course-group>summary{padding:8px 10px}.related-course-group>summary h4{display:inline;font-size:13px;margin:0}.related-course-group>summary>span{font-size:11px;margin-left:8px;color:var(--muted)}.related-course-group>p{font-size:12px;margin:7px 10px}.related-course-group>ul{font-size:12px;line-height:1.55;padding-left:28px;margin:7px 10px;display:grid;grid-template-columns:1fr 1fr;gap:6px 20px}.related-group-context{display:inline-block;margin:3px 10px 9px;font-size:11px}.requirement-option-pool{margin-top:10px}.requirement-option-pool>summary{font-size:12px;font-weight:600;padding:7px 0}.requirement-option-pool>ul{list-style:none;padding:0;margin:0}@media(max-width:700px){.related-course-group>ul{grid-template-columns:1fr}}
+
+/* Direct course cards: code and title share a line; only bundles need a rule. */
+.requirement-course-group>.requirement-disclosure>summary>.requirement-rule{display:block;margin:3px 0 0 16px}
+.requirement-course-group>.requirement-disclosure>summary>.requirement-rule::before{content:none}
+.requirement-single-course>.requirement-disclosure>summary>.requirement-rule{font-size:11px;white-space:normal}

@@ -727,8 +727,38 @@ def requirement_tree(p):
             preview_label = 'Courses in this group' if r.get('kind') == 'all' else 'Options / branches include' if r.get('kind') != 'note' else 'Referenced courses / branches'
             preview = '<span class="requirement-preview"><span class="requirement-preview-label">' + preview_label + '</span><span class="requirement-preview-list" role="list">' + ''.join('<span class="requirement-preview-item" role="listitem">' + esc(title) + '</span>' for title in shown) + '</span>' + ('<span class="requirement-preview-more">+' + str(len(preview_titles) - len(shown)) + ' more · expand for the full list</span>' if len(preview_titles) > len(shown) else '') + '</span>'
         rule = esc(operator + (' · ' + ' · '.join(selection) if selection else ''))
+        title = esc(r.get('title'))
+        header_class = ''
+        # Only complete, direct all-of leaves are course cards. Choice pools and
+        # structural headings retain their rules, previews and original context.
+        direct_courses = r.get('course_ids') or []
+        course_card = (r.get('kind') == 'all' and not child_nodes and requirement_courses
+                       and len(requirement_courses) == len(set(direct_courses))
+                       and r.get('count') in (None, len(requirement_courses)))
+        if course_card:
+            labels = [(c.get('code') + ' · ' if c.get('code') else '') +
+                      (c.get('name') or 'Course name not verified') for c in requirement_courses]
+            original_title = (r.get('title') or '').strip()
+            identifiers = {str(c.get(k) or '').strip().casefold() for c in requirement_courses for k in ('code', 'name')}
+            code_bundle = ' + '.join(c.get('code') or '' for c in requirement_courses)
+            prefix = '' if original_title.casefold() in identifiers or original_title == code_bundle else original_title + ': ' if original_title else ''
+            title = esc(prefix + ' + '.join(labels))
+            preview = ''
+            credits = ''
+            if r.get('credits') is not None:
+                amount = r['credits']
+                amount = int(amount) if isinstance(amount, (int, float)) and amount == int(amount) else amount
+                unit = human(r.get('credit_unit')) if r.get('credit_unit') not in (None, 'unknown') else 'credit unit unknown'
+                credits = f'{amount} {unit}'
+            if len(requirement_courses) == 1:
+                header_class = ' requirement-single-course'
+                rule = esc(credits)
+            else:
+                header_class = ' requirement-course-group'
+                rule = esc('Complete all courses in this group' + (' · ' + credits if credits else ''))
         opened = depth < 2 and has_courses(r) and not optional(r) and not general_education(r) and (r.get('kind') != 'note' or depth > 0)
-        return f'''<li class="requirement" id="requirement-{esc(rid)}" data-requirement-depth="{depth}"><details class="requirement-disclosure" {"open" if opened else ""}><summary><h3 class="requirement-title">{esc(r.get('title'))}</h3><span class="requirement-rule">{rule}</span>{preview}</summary><div class="requirement-body">{'<div class="requirement-tags">' + provenance_badges + '</div>' if provenance_badges else ''}<p>{esc(r.get('summary') or 'Requirement detail has not been extracted.')}</p>{source_wording}{related}{course_list}{child_markup}{evidence}</div></details></li>'''
+        rule_markup = '<span class="requirement-rule">' + rule + '</span>' if rule else ''
+        return f'''<li class="requirement{header_class}" id="requirement-{esc(rid)}" data-requirement-depth="{depth}"><details class="requirement-disclosure" {"open" if opened else ""}><summary><h3 class="requirement-title">{title}</h3>{rule_markup}{preview}</summary><div class="requirement-body">{'<div class="requirement-tags">' + provenance_badges + '</div>' if provenance_badges else ''}<p>{esc(r.get('summary') or 'Requirement detail has not been extracted.')}</p>{source_wording}{related}{course_list}{child_markup}{evidence}</div></details></li>'''
 
     roots = [r for r in requirements if not r.get("parent_id") or r.get("parent_id") not in ids]
     if not requirements:

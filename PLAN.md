@@ -250,3 +250,7 @@ Fresh/maintained current facts agree, repeat ingestion changes zero programs, in
 Six deployed files byte-match the clean build. Live desktop/mobile checks pass five group headings inside the Center block, source route counts4/5/3/4/7, keyboard expansion, complete 6.C01+6.C011 bundle display, full recorded-context navigation and original option-fragment reload through the closed full-pool disclosure. No browser errors or document overflow; live screenshots were inspected.
 
 The exact live memberships of the catalog's five areas and the department's five designation lists/19-route pool agree with their respective stored views. The two sources still differ; no source-precedence, new one-per-area ancestry, credit reconciliation or whole-degree certification is asserted. Existing cohort, program and taxonomy evidence priorities remain unchanged. This documentation closeout does not change the deployed source checkpoint.
+
+### Compact course-card headers — in progress
+
+Apply the shared requirement renderer to the Penn State A-I examples and all complete direct all-of course leaves: codes and names together, smaller explicit credits inline for a single course, and a second rule/credit line for multi-course bundles. Remove the redundant collapsed course-list preview for these cards. Preserve meaningful group titles, choices, context headings, original graph/deep links and expandable evidence. Do not calculate missing credit totals or convert units. Focused real-source desktop/mobile and regression checks underway; publication remains to be verified.

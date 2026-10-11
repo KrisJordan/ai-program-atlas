@@ -17,7 +17,7 @@ def test_detail_section_order_and_requirement_disclosure(site_data):
     for n in range(4):
         node=soup.select_one(f'#requirement-r-{n} > details')
         assert node.has_attr('open') == (n<2)
-        assert node.select_one('summary .requirement-title').get_text()==f'Group {n}'
+        assert node.select_one('summary .requirement-title').get_text().startswith(f'Group {n}')
     assert 'Group 3' in soup.select_one('#requirement-r-2 > details > summary .requirement-preview').get_text()
 
 

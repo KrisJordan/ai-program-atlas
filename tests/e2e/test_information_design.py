@@ -79,9 +79,10 @@ def test_readable_lists_grouped_notes_optional_fields_and_prerequisites(page,sit
     page.goto(site+'programs/test-ai-0/')
     listing=page.locator('#requirement-list > details')
     expect(listing).not_to_have_attribute('open','')
-    preview=listing.locator(':scope > summary > .requirement-preview')
-    for i in range(6):expect(preview).to_contain_text(f'Course title {i}')
-    expect(preview.locator('[role=listitem]')).to_have_count(6)
+    header=listing.locator(':scope > summary')
+    for i in range(6):expect(header.locator('h3')).to_contain_text(f'CS {100+i} · Course title {i}')
+    expect(header.locator('.requirement-preview')).to_have_count(0)
+    assert header.locator('.requirement-rule').evaluate('n=>getComputedStyle(n).display')=='block'
     for key in ['notes-mid','other-top','optional-top']:
         expect(page.locator(f'#requirements-group-{key} > details')).not_to_have_attribute('open','')
     expect(page.locator('#course-c5').locator('..').locator('.prerequisite-titles')).to_contain_text('Course title 0')
@@ -136,3 +137,29 @@ def test_real_mit_domain_context_order_and_compact_outcomes(page,site,tmp_path,w
     assert page.locator('#requirement-mit-ai-version-required > details > summary .requirement-rule').evaluate('n=>getComputedStyle(n).display')=='inline'
     expect(page.locator('#requirement-mit-ai-version-required > details > .requirement-body > .requirement-tags')).to_have_count(0)
     assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
+
+
+@pytest.mark.parametrize('width',[1440,390])
+def test_real_penn_state_single_course_headers(page,site,tmp_path,width):
+    import json
+    from pathlib import Path
+    from atlas import db
+    seed=json.loads((Path(__file__).resolve().parents[2]/'data/programs/penn-state-ai-engineering-bs.json').read_text())
+    conn=db.connect(tmp_path/'penn-state.sqlite');db.migrate(conn);db.ingest_program(conn,seed)
+    build(db.export_data(conn),tmp_path/'ai-program-atlas');conn.close()
+    page.set_viewport_size({'width':width,'height':950})
+    page.goto(site+'programs/penn-state-ai-engineering-bs/')
+    card=page.locator('#requirement-penn-state-ai-engineering-bs-major-r3 > details')
+    header=card.locator(':scope > summary')
+    expect(header.locator('h3')).to_have_text('A-I 100 · Artificial Intelligence: Automated Thinking to Augment Human Intellect')
+    expect(header.locator('.requirement-rule')).to_have_text('3 Semester hours')
+    expect(header.locator('.requirement-preview')).to_have_count(0)
+    expect(header).not_to_contain_text('Complete all')
+    assert header.locator('.requirement-rule').evaluate('n=>getComputedStyle(n).display')=='inline'
+    assert header.locator('.requirement-rule').evaluate('n=>parseFloat(getComputedStyle(n).fontSize)') < header.locator('h3').evaluate('n=>parseFloat(getComputedStyle(n).fontSize)')
+    header.focus();page.keyboard.press('Enter')
+    expect(card).to_have_attribute('open','')
+    expect(card.locator(':scope > .requirement-body .requirement-courses a')).to_contain_text('Artificial Intelligence: Automated Thinking')
+    page.goto(site+'programs/penn-state-ai-engineering-bs/#requirement-penn-state-ai-engineering-bs-major-r3')
+    page.reload();expect(card).to_have_attribute('open','')
+    assert page.evaluate('document.documentElement.scrollWidth<=innerWidth')
