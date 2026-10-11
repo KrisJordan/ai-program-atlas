@@ -119,3 +119,7 @@ SOURCE_PARSERS.update({shared.UC_WRITING_URL: shared.parse_uc_writing,
 from atlas.adapters import ucsd_revelle_pools as revelle
 SOURCES += tuple(revelle.BASE + page + '.html' for page in revelle.PAGES)
 SOURCE_PARSERS.update({revelle.BASE + page + '.html': parser for page, parser in revelle.PARSERS.items()})
+
+from atlas.adapters import ucsd_muir_pools as muir
+SOURCES += (muir.URL, muir.POLICY_URL)
+SOURCE_PARSERS.update({muir.URL: muir.parse, muir.POLICY_URL: muir.parse_policy})
