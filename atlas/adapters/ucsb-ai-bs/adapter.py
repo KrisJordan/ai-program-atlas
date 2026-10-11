@@ -79,3 +79,5 @@ writing_content.attach(globals())
 
 # Alternate official PDF compared offline; raw binary refresh is not HTML parsing.
 SOURCES += ('https://engineering.ucsb.edu/sites/default/files/images/26-27_GEAR.pdf',)
+from atlas.adapters import ucsb_english_content as english_content
+english_content.attach(globals())

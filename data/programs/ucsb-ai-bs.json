@@ -605,6 +605,56 @@
       "catalog_year": "2026-2027",
       "locator": "PDFpages13,14,16,17 compared with reviewed docs-path file; AIpages16–17 visually inspected; whole-file SHA256 693a71da8261577ccfec6b02ebfaa9dd1a69d133b63f9b5c04ca4066754299e5",
       "confidence": "high"
+    },
+    {
+      "id": "ucsb-ai-bs-engl146ai-offering",
+      "url": "https://english.ucsb.edu/courses/spring-2021/literature-of-and-artificial-intelligence/",
+      "title": "Literature of/and Artificial Intelligence — Winter 2021",
+      "fetched_at": "2026-10-11T06:03:03+00:00",
+      "source_date": null,
+      "catalog_year": "Winter 2021",
+      "locator": "Entire offering: exact course number, displayed quarter, description, GOLD prerequisite direction",
+      "confidence": "high"
+    },
+    {
+      "id": "ucsb-ai-bs-engl146ds-offering",
+      "url": "https://english.ucsb.edu/courses/winter-2023/data-stories-theory-and-practice-of-data-driven-narratives-in-the-digital-age/",
+      "title": "Data Stories: Theory and Practice of Data-driven Narratives in the Digital Age — Winter 2023",
+      "fetched_at": "2026-10-11T06:03:02+00:00",
+      "source_date": null,
+      "catalog_year": "Winter 2023",
+      "locator": "Entire offering: exact course number, displayed quarter, description, GOLD prerequisite direction",
+      "confidence": "high"
+    },
+    {
+      "id": "ucsb-ai-bs-engl197-poetry-offering",
+      "url": "https://english.ucsb.edu/courses/fall2026/engl-197-23/",
+      "title": "Upper Division Seminar: Poetry and Painting — Fall 2026",
+      "fetched_at": "2026-10-11T06:00:26+00:00",
+      "source_date": null,
+      "catalog_year": "Fall 2026",
+      "locator": "Entire offering: exact course number, displayed quarter, description, GOLD prerequisite direction",
+      "confidence": "high"
+    },
+    {
+      "id": "ucsb-ai-bs-engl197-novel-offering",
+      "url": "https://english.ucsb.edu/courses/fall2026/engl-197-24/",
+      "title": "Upper Division Seminar: Novel Thinking: Expectation and Experimentalism — Fall 2026",
+      "fetched_at": "2026-10-11T06:00:28+00:00",
+      "source_date": null,
+      "catalog_year": "Fall 2026",
+      "locator": "Entire offering: exact course number, displayed quarter, description, GOLD prerequisite direction",
+      "confidence": "high"
+    },
+    {
+      "id": "ucsb-ai-bs-engl197-black-offering",
+      "url": "https://english.ucsb.edu/courses/fall2026/engl-197-25/",
+      "title": "Upper Division Seminar: In Search of the Black Fantastic — Fall 2026",
+      "fetched_at": "2026-10-11T06:00:29+00:00",
+      "source_date": null,
+      "catalog_year": "Fall 2026",
+      "locator": "Entire offering: exact course number, displayed quarter, description, GOLD prerequisite direction",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -1915,75 +1965,77 @@
     {
       "id": "ucsb-engl-197",
       "code": "ENGL 197",
-      "name": null,
-      "description": null,
+      "name": "Upper Division Seminar",
+      "description": "Variable-topic seminar: the three department-listed Fall2026 offerings examine poetry/visual art, experimental fiction/cognition, and Black cultural expression/art/politics. No single offering is inferred universally required.",
       "prerequisites": null,
       "credits": null,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "ucsb-ai-bs-gear-2026",
-      "url": "https://www.engineering.ucsb.edu/sites/default/files/docs/26-27_GEAR.pdf",
+      "category": "human_context",
+      "source_id": "ucsb-ai-bs-engl197-poetry-offering",
+      "url": "https://english.ucsb.edu/courses/fall2026/engl-197-23/",
       "public_site": null,
       "syllabus": null,
       "category_review": {
-        "status": "unclassified",
+        "status": "reviewed",
         "taxonomy_version": "1",
         "reviewed_at": "2026-10-11",
         "source_ids": [
-          "ucsb-ai-bs-gear-2026"
+          "ucsb-ai-bs-engl197-poetry-offering",
+          "ucsb-ai-bs-engl197-novel-offering",
+          "ucsb-ai-bs-engl197-black-offering"
         ],
-        "locator": "ENGL 197 eligibility-list observation",
-        "rationale": "The recorded source observation supplies a course identifier but no course title or description. Requirement or pool membership does not establish subject. This is an evidence-insufficiency check, not a review of course content.",
+        "locator": "All three Fall2026 ENGL197 department-listed full descriptions",
+        "rationale": "Each actually reviewedFall2026 offering centers on literary/cultural analysis. This classification is confined to that observedterm; futurevariabletopics are notcertified. Actualprerequisites are directedtoGOLD, unitsunstated.",
         "candidate_categories": []
       }
     },
     {
       "id": "ucsb-engl-146ds",
       "code": "ENGL 146DS",
-      "name": null,
-      "description": null,
+      "name": "Data Stories: Theory and Practice of Data-driven Narratives in the Digital Age",
+      "description": "The Winter2023 offering studies data-driven narratives using humanities theories of genre and media, journalism and visualization, culminating in an ethically considered data-story project.",
       "prerequisites": null,
       "credits": null,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "ucsb-ai-bs-gear-2026",
-      "url": "https://www.engineering.ucsb.edu/sites/default/files/docs/26-27_GEAR.pdf",
+      "category": "human_context",
+      "source_id": "ucsb-ai-bs-engl146ds-offering",
+      "url": "https://english.ucsb.edu/courses/winter-2023/data-stories-theory-and-practice-of-data-driven-narratives-in-the-digital-age/",
       "public_site": null,
       "syllabus": null,
       "category_review": {
-        "status": "unclassified",
+        "status": "reviewed",
         "taxonomy_version": "1",
         "reviewed_at": "2026-10-11",
         "source_ids": [
-          "ucsb-ai-bs-gear-2026"
+          "ucsb-ai-bs-engl146ds-offering"
         ],
-        "locator": "ENGL 146DS eligibility-list observation",
-        "rationale": "The recorded source observation supplies a course identifier but no course title or description. Requirement or pool membership does not establish subject. This is an evidence-insufficiency check, not a review of course content.",
+        "locator": "Full dated course description",
+        "rationale": "Actual course content centers on literary/cultural analysis, narrative, rhetoric and ethical interpretation. Data visualization serves rhetorical and narrative analysis; no mathematical or machine-learning curriculum is inferred. Current-version applicability is unverified. Prerequisites are directed toGOLD rather than published here; no units are stated.",
         "candidate_categories": []
       }
     },
     {
       "id": "ucsb-engl-146ai",
       "code": "ENGL 146AI",
-      "name": null,
-      "description": null,
+      "name": "Literature of/and Artificial Intelligence",
+      "description": "The Winter2021 offering studies agency, automation and nonhuman intelligence through literature, film, art and philosophy, with discussion of contemporary AI technologies.",
       "prerequisites": null,
       "credits": null,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "ucsb-ai-bs-gear-2026",
-      "url": "https://www.engineering.ucsb.edu/sites/default/files/docs/26-27_GEAR.pdf",
+      "category": "human_context",
+      "source_id": "ucsb-ai-bs-engl146ai-offering",
+      "url": "https://english.ucsb.edu/courses/spring-2021/literature-of-and-artificial-intelligence/",
       "public_site": null,
       "syllabus": null,
       "category_review": {
-        "status": "unclassified",
+        "status": "reviewed",
         "taxonomy_version": "1",
         "reviewed_at": "2026-10-11",
         "source_ids": [
-          "ucsb-ai-bs-gear-2026"
+          "ucsb-ai-bs-engl146ai-offering"
         ],
-        "locator": "ENGL 146AI eligibility-list observation",
-        "rationale": "The recorded source observation supplies a course identifier but no course title or description. Requirement or pool membership does not establish subject. This is an evidence-insufficiency check, not a review of course content.",
+        "locator": "Full dated course description",
+        "rationale": "Actual course content centers on literary/cultural analysis, narrative, rhetoric and ethical interpretation. The page displaysWinter2021 despite its spring-2021URL. Primary materials are literary/artistic; no technological knowledge presumed. Current-version applicability is unverified. Prerequisites are directed toGOLD rather than published here; no units are stated.",
         "candidate_categories": []
       }
     },
@@ -4219,7 +4271,8 @@
     "Five fixed mathematics descriptions and prerequisites independently read on the undated department page. That page states no units; existing degree-source four-quarter-unit amounts retained. Course preparation creates no additional degree obligations.",
     "Writing Program:25represented full course descriptions reviewed, including2previously reviewed ELWR contexts. WRIT1/2 are5units,1E/2E/50/50E4; upper105/107/109series4. Upper-series Writing2/2E/2LK and90-unit eligibility preserved. WRIT107EP explicitly formerly109ES, but109ES has no separate current block; no renumbering/duplicate-credit assumption. Writing105AI is communication/human context,105CD mixed coding/composition.",
     "WRIT1 unit conflict: individual Writing1 guide says4; lower-division overview says5. Neither undated page establishes precedence; curated credits remain null. Both source-specific parsers retain their observed value.",
-    "The alternate official images-path2026–27GEAR file has a different whole-file hash, but reviewed PDFpages13/14/16/17 have identical whitespace-normalized text to the docs-path file. AIpages16–17 also visually inspected. CMPSC41five/four-unit conflict, unspecified scienceListsA/B, and genericcapstone gap remain. No source precedence inferred."
+    "The alternate official images-path2026–27GEAR file has a different whole-file hash, but reviewed PDFpages13/14/16/17 have identical whitespace-normalized text to the docs-path file. AIpages16–17 also visually inspected. CMPSC41five/four-unit conflict, unspecified scienceListsA/B, and genericcapstone gap remain. No source precedence inferred.",
+    "English exact-code review: ENGL146AI Winter2021 and146DS Winter2023 full department descriptions arehistorical; current applicability unverified. ENGL197 threeFall2026 topics areliterary/cultural analysis, with variabletopic scope retained. Allfive pages direct prerequisite checks toGOLD and state no units. Fall2025 ENGL155AIisdistinct andnot substituted. BlockedTranscriptions archive wasnotretried."
   ],
   "curriculum_audit": {
     "scope": "degree",

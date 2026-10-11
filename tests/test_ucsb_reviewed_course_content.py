@@ -100,7 +100,7 @@ def test_writing_series_guard_and_no_automatic_identity_or_prerequisite_role(mon
     assert c['WRIT 109ES']['description'] is None
     assert 'formerly' in c['WRIT 107EP']['prerequisites']
     assert 'does not independently restate' in c['WRIT 50E']['prerequisites']
-    assert requirement_profile(d)['options']['categories']['human_context']==23
+    assert requirement_profile(d)['options']['categories']['human_context']==26
 
 
 def test_writing_actual_cache_matches_all25_read_blocks():
@@ -127,3 +127,31 @@ def test_alternate_gear_comparison_does_not_claim_pdf_html_refresh_or_resolve_co
     assert any(s['url']==url and 'visually' in s['locator']for s in d['sources'])
     assert next(c for c in d['courses']if c['code']=='CMPSC 41')['credits'] is None
     assert any('190 AA–ZZ' in r.get('summary','')for r in d['requirements'])
+
+
+def test_english_offering_guards_do_not_infer_current_version_or_gold_prerequisites(monkeypatch):
+    from atlas.adapters import ucsb_english_content as english
+    html='<main>Course Number: ENGL 146AI Quarter: Winter 2021 Synthetic literary description.</main>'
+    e={**english.SPEC['engl146ai'],'main_digest':hashlib.sha256(text(BeautifulSoup(html,'html.parser').main).encode()).hexdigest()}
+    monkeypatch.setitem(english.SPEC,'engl146ai',e)
+    result=english.parse(html,key='engl146ai');c=result['courses'][0]
+    assert c['prerequisites'] is None and 'credits'not in c
+    assert c['category']=='human_context' and 'category_review'not in c
+    with pytest.raises(ValueError):english.parse(html.replace('Winter 2021','Fall 2026'),key='engl146ai')
+    d=json.loads(Path('data/programs/ucsb-ai-bs.json').read_text());courses={c['code']:c for c in d['courses']}
+    assert courses['ENGL 197']['name']=='Upper Division Seminar'
+    assert len(courses['ENGL 197']['category_review']['source_ids'])==3
+    assert courses['ENGL 146AI']['code']!='ENGL 155AI'
+    assert 'Winter2021' in courses['ENGL 146AI']['description']
+    assert requirement_profile(d)['options']['categories']['human_context']==26
+
+
+def test_english_all_five_actual_dated_offerings_are_guarded():
+    from atlas.adapters import ucsb_english_content as english
+    root=Path('.cache/research/ucsb-course-content')
+    if not (root/'engl146ai.html').exists():pytest.skip('Optional ignored official-source cache')
+    for key in english.SPEC:
+        result=english.parse((root/(key+'.html')).read_text(),key=key)
+        assert len(result['courses'])==1 and result['requirements']==[]
+        if result['courses'][0]['code']=='ENGL 197':
+            assert 'description'not in result['courses'][0]  # individual topic cannot certify all sections
