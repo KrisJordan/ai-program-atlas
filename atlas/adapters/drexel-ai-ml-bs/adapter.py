@@ -283,3 +283,6 @@ SOURCES = tuple(SOURCE_PARSERS)
 from atlas.adapters.drexel_required_course_review import register as register_reviewed_courses
 SOURCES=list(SOURCES)
 register_reviewed_courses(SOURCES,SOURCE_PARSERS)
+
+from atlas.adapters.drexel_computing_option_review import register as register_computing_options
+register_computing_options(SOURCES, SOURCE_PARSERS)

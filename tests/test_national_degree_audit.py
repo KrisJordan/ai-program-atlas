@@ -335,7 +335,8 @@ def test_drexel_prescribed_subjects_and_source_result_guard(monkeypatch):
  p=json.loads(Path('data/programs/drexel-ai-ml-bs.json').read_text())
  courses={c['code']:c for c in p['courses']}
  expected={'CS 180','CS 260','CS 265','CS 380','INFO 212','INFO 215','SE 201','SE 310','PHIL 311','CIVC 101','COOP 101'}
- assert {c['code'] for c in p['courses'] if c.get('category_review')}==expected
+ assert expected <= {c['code'] for c in p['courses'] if c.get('category_review')}
+ # Additional reviewed options are checked separately; the fixed role set stays eleven.
  assert requirement_profile(p)['required']['count']==len(expected)==11
  assert courses['INFO 215']['category']=='human_context'
  assert courses['INFO 212']['category']=='foundations'
