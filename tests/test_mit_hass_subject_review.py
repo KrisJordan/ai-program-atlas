@@ -215,7 +215,7 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']['description_reviewed_records']==247
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==263
     assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
         o=entry(code)['observations'][-1]
@@ -380,7 +380,7 @@ def test_history_title_reviews_do_not_classify_broad_titles_from_department():
         o=entry(code)['observations'][-1]
         assert o['category']=='other' and o['status']=='unclassified'
     for code in ['21H.165','21H.319','21H.333','21H.244J [21G.085]']:
-        o=entry(code)['observations'][-1]
+        o=next(o for o in entry(code)['observations'] if o.get('evidence_basis')=='official_title_only')
         assert o['category']=='human_context' and o['evidence_basis']=='official_title_only'
         assert o['description_summary'] is None
     # Prior substantively changed versions are not overwritten by a later old-list title review.
@@ -795,3 +795,43 @@ def test_actual_political_ocw_observations_replay_with_changed_text_withdrawal()
             assert review.matched_review(c,{**o,'description':o['description']+' Changed.'},source['url'],MANIFEST) is None
             seen+=1
     assert seen==42
+
+
+def test_history_home_description_never_borrows_syllabus_fields():
+    html='''<div id="course-banner"><span class="course-number-term-detail">21H.132 | Spring 2017 | Undergraduate</span><h1>The Ancient World: Rome</h1></div><div id="expanded-description">Roman society and politics.<button>Show less</button></div>'''
+    o=review.observe_ocw_course(html)[0]
+    assert o['description']=='Roman society and politics.'
+    assert o['prerequisites'] is o['units'] is None
+    with pytest.raises(ValueError,match='complete description'):
+        review.observe_ocw_course(html.replace('expanded-description','collapsed-description'))
+    rome=entry('21H.132')['observations'][-1]
+    assert rome['prerequisites'] is None and any('separate Spring2017syllabus' in t for t in rome['restrictions'])
+    samurai=entry('21H.154')['observations'][-1]
+    assert 'meets with 21G.554' in samurai['prerequisites']
+    assert any('No identity merge' in t for t in samurai['restrictions'])
+    assert samurai['category']=='human_context'
+    assert MANIFEST['courses']['mit-ai-hass-russian-and-eurasian-studies-21h-245j']['review_status']=='identity_review_needed'
+
+
+def test_actual_history_observations_replay_and_keep_separate_identity_hold():
+    report=MANIFEST['ocw_history_review']
+    assert report['directory_results_observed']==92
+    assert report['public_course_pages_read']==report['public_syllabi_read']==14
+    assert len(report['upgraded_record_ids'])==16
+    path=Path('/tmp/mit-hass-subjects/ocw-history-index.json')
+    if not path.exists():pytest.skip('Optional ignored public OCW captures')
+    seen=0
+    for source in json.loads(path.read_text()):
+        home=source['key'].startswith(('21h-101-','21h-132-'))
+        if home==source['key'].endswith('-syllabus'):continue
+        cache=path.parent/('ocw-'+source['key']+'.html')
+        if not cache.exists():pytest.skip('Optional ignored public course capture')
+        o=(review.observe_ocw_course if home else review.observe_ocw_syllabus)(cache.read_text())[0]
+        for cid,row in MANIFEST['courses'].items():
+            e=next((e for e in row['observations'] if e['source_url']==source['url']),None)
+            if e is None:continue
+            c=dict(id=cid,code=row['listed_code'],name=row['listed_name'],source_id=row['listed_source_id'])
+            assert review.matched_review(c,o,source['url'],MANIFEST)==e
+            assert review.matched_review(c,{**o,'code':'21H.999'},source['url'],MANIFEST) is None
+            seen+=1
+    assert seen==16

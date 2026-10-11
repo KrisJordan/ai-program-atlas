@@ -458,3 +458,22 @@ def observe_minds_machines(html):
     return [dict(code='24.09', name='Minds and Machines', term='Spring 2020',
                  description=clean(paragraph), prerequisites=None, units=None,
                  identity_link=identity['href'])]
+
+
+def observe_ocw_course(html):
+    """Actual OCW home description when the linked syllabus has no prose section."""
+    soup = BeautifulSoup(html, 'html.parser')
+    banner = soup.select_one('#course-banner')
+    body = soup.select_one('#expanded-description') or soup.select_one('#full-description')
+    if banner is None or body is None:
+        raise ValueError('OCW course identity or complete description missing')
+    parts = clean(banner.select_one('.course-number-term-detail')).split(' | ')
+    title = clean(banner.find('h1'))
+    if len(parts) != 3 or not re.fullmatch(r'(Fall|Spring|Summer|IAP) \d{4}', parts[1]) or not title:
+        raise ValueError('OCW course code, term or title changed')
+    for button in body.find_all('button'):
+        button.decompose()
+    if not clean(body):
+        raise ValueError('OCW complete description is empty')
+    return [dict(code=parts[0], name=title, term=parts[1], level=parts[2],
+                 description=clean(body), prerequisites=None, units=None)]
