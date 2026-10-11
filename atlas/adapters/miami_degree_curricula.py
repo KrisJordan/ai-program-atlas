@@ -35,6 +35,10 @@ def observe(html,pid,title,award,heading,sid,url):
    if section is None:raise ValueError('Course before section')
    if pool:
     if c['id'] not in section['course_ids']:section['course_ids'].append(c['id'])
+    # The degree row can restrict a particular option (approved project,
+    # course-order rule, overlap exclusion). Keep that source evidence on the
+    # requirement when a later course-catalog observation normalizes its name.
+    section['source_text']=(section['source_text']+'\n' if section['source_text'] else '')+code+': '+name
     if 'orclass' in classes:
      if previous is None:raise ValueError('Or choice without predecessor')
      node('Alternative within elective pool','note',[previous,c['id']],summary='The source lists these as alternatives within the elective pool; they are not two independently required courses.',parent=section['id'])
@@ -44,8 +48,10 @@ def observe(html,pid,title,award,heading,sid,url):
     if previous['kind']!='choose_courses':
      previous.update(kind='choose_courses',count=1,title='Course alternatives',summary=previous['summary']+' Complete one listed alternative for this requirement.')
     previous['course_ids'].append(c['id'])
+    previous['source_text']=(previous['source_text']+'\n' if previous['source_text'] else '')+code+': '+name
    else:
     previous=node(name,ids=[c['id']],summary=name+(' — published credit amount/range: '+value if value else ''),parent=section['id'])
+    previous['source_text']=code+': '+name
    continue
   # Every table label remains visible, including uncoded cognates and credit ranges.
   is_pool=('Electives'==label and amount is not None) or label in ['Techniques','Applications'] or 'Major Choice Courses' in label or 'Quantitative Choice -' in label

@@ -19,3 +19,9 @@ register_cognate_pools(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
 
 from atlas.adapters.miami_fixed_course_reviews import register as register_fixed_courses
 register_fixed_courses(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
+
+from atlas.adapters.miami_named_option_reviews import register as register_named_options
+register_named_options(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
+
+from atlas.adapters.miami_csc_option_reviews import register as register_csc_options
+register_csc_options(PROGRAM_ID,SOURCES,SOURCE_PARSERS)

@@ -1915,6 +1915,126 @@
       "catalog_year": null,
       "locator": "Current course blocks: WRS 105; descriptions, published credits and eligibility wording",
       "confidence": "high"
+    },
+    {
+      "id": "miami-named-options-apy",
+      "url": "https://bulletin.miami.edu/courses-az/apy/",
+      "title": "Miami APY named option course descriptions",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Full source blocks: APY 313; descriptions, exact credits and eligibility/credit exclusions",
+      "confidence": "high"
+    },
+    {
+      "id": "miami-named-options-cim",
+      "url": "https://bulletin.miami.edu/courses-az/cim/",
+      "title": "Miami CIM named option course descriptions",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Full source blocks: CIM 563; descriptions, exact credits and eligibility/credit exclusions",
+      "confidence": "high"
+    },
+    {
+      "id": "miami-named-options-ece",
+      "url": "https://bulletin.miami.edu/courses-az/ece/",
+      "title": "Miami ECE named option course descriptions",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Full source blocks: ECE 553, ECE 574; descriptions, exact credits and eligibility/credit exclusions",
+      "confidence": "high"
+    },
+    {
+      "id": "miami-named-options-eng",
+      "url": "https://bulletin.miami.edu/courses-az/eng/",
+      "title": "Miami ENG named option course descriptions",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Full source blocks: ENG 106; descriptions, exact credits and eligibility/credit exclusions",
+      "confidence": "high"
+    },
+    {
+      "id": "miami-named-options-eps",
+      "url": "https://bulletin.miami.edu/courses-az/eps/",
+      "title": "Miami EPS named option course descriptions",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Full source blocks: EPS 351, EPS 401, EPS 402; descriptions, exact credits and eligibility/credit exclusions",
+      "confidence": "high"
+    },
+    {
+      "id": "miami-named-options-geg",
+      "url": "https://bulletin.miami.edu/courses-az/geg/",
+      "title": "Miami GEG named option course descriptions",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Full source blocks: GEG 305, GEG 310, GEG 405, GEG 410; descriptions, exact credits and eligibility/credit exclusions",
+      "confidence": "high"
+    },
+    {
+      "id": "miami-named-options-jmm",
+      "url": "https://bulletin.miami.edu/courses-az/jmm/",
+      "title": "Miami JMM named option course descriptions",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Full source blocks: JMM 331, JMM 429; descriptions, exact credits and eligibility/credit exclusions",
+      "confidence": "high"
+    },
+    {
+      "id": "miami-named-options-mth",
+      "url": "https://bulletin.miami.edu/courses-az/mth/",
+      "title": "Miami MTH named option course descriptions",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Full source blocks: MTH 230, MTH 309, MTH 524, MTH 525, MTH 542; descriptions, exact credits and eligibility/credit exclusions",
+      "confidence": "high"
+    },
+    {
+      "id": "miami-named-options-phi",
+      "url": "https://bulletin.miami.edu/courses-az/phi/",
+      "title": "Miami PHI named option course descriptions",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Full source blocks: PHI 115, PHI 239, PHI 330; descriptions, exact credits and eligibility/credit exclusions",
+      "confidence": "high"
+    },
+    {
+      "id": "miami-named-options-psy",
+      "url": "https://bulletin.miami.edu/courses-az/psy/",
+      "title": "Miami PSY named option course descriptions",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Full source blocks: PSY 110, PSY 290, PSY 292; descriptions, exact credits and eligibility/credit exclusions",
+      "confidence": "high"
+    },
+    {
+      "id": "miami-named-options-wrs",
+      "url": "https://bulletin.miami.edu/courses-az/wrs/",
+      "title": "Miami WRS named option course descriptions",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Full source blocks: WRS 106, WRS 107, WRS 233; descriptions, exact credits and eligibility/credit exclusions",
+      "confidence": "high"
+    },
+    {
+      "id": "miami-csc-option-course-catalog",
+      "url": "https://bulletin.miami.edu/courses-az/csc/",
+      "title": "Miami Computer Science named option descriptions",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Complete source blocks for the 16 scoped CSC options, including variable credits and enrollment conditions; per-program subset in adapter manifest",
+      "confidence": "high"
     }
   ],
   "courses": [
@@ -2225,533 +2345,967 @@
       "id": "miami-data-science-ai-bs-mth-309",
       "code": "MTH 309",
       "name": "Discrete Mathematics I",
-      "description": null,
-      "prerequisites": null,
+      "description": "Mathematical reasoning, sets, relations, Boolean algebra, combinatorics and graphs form discrete mathematics.",
+      "prerequisites": "Prerequisite: MTH 141 or MTH 151 or MTH 161 or MTH 171 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "mathematics",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=MTH%20309",
+      "source_id": "miami-named-options-mth",
+      "url": "https://bulletin.miami.edu/courses-az/mth/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-named-options-mth"
+        ],
+        "locator": "MTH 309 complete current course block",
+        "rationale": "Mathematical reasoning, sets, relations, Boolean algebra, combinatorics and graphs form discrete mathematics.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-mth-230",
       "code": "MTH 230",
       "name": "Introduction to Abstract Mathematics",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "description": "Set theory, logic and mathematical proof establish the subject.",
+      "prerequisites": "Pre/Corequisite: MTH 162 or MTH 172 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "mathematics",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=MTH%20230",
+      "source_id": "miami-named-options-mth",
+      "url": "https://bulletin.miami.edu/courses-az/mth/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-named-options-mth"
+        ],
+        "locator": "MTH 230 complete current course block",
+        "rationale": "Set theory, logic and mathematical proof establish the subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-csc-115",
       "code": "CSC 115",
-      "name": "Python Programming for Everyone (only if taken before CSC 120 )",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "name": "Python Programming for Everyone",
+      "description": "Introduces Python programming through variables, control flow, methods, collections and object-oriented design.",
+      "prerequisites": "Pre/Corequisite: MTH 107 , or Math SAT score of 620, or ACT score of 27, or ALEKS score of 61.",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "foundations",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=CSC%20115",
+      "source_id": "miami-csc-option-course-catalog",
+      "url": "https://bulletin.miami.edu/courses-az/csc/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-csc-option-course-catalog"
+        ],
+        "locator": "CSC 115 complete current course block",
+        "rationale": "The source centers on general programming constructs and implementation.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-csc-322",
       "code": "CSC 322",
       "name": "System Programming",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "foundations",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=CSC%20322",
+      "description": "Develops UNIX system programming using C, shell tools, system calls, processes, threads, files, signals and network interfaces.",
+      "prerequisites": "Prerequisite: CSC 220 or ECE 218 , and CSC 314 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "systems",
+      "source_id": "miami-csc-option-course-catalog",
+      "url": "https://bulletin.miami.edu/courses-az/csc/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-csc-option-course-catalog"
+        ],
+        "locator": "CSC 322 complete current course block",
+        "rationale": "C programming supports the primary focus on operating-system interfaces and system resources.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-csc-423",
       "code": "CSC 423",
       "name": "Database Systems",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "foundations",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=CSC%20423",
+      "description": "Covers information models, relational database design, query languages and database-backed web programming, with introductory mining concepts.",
+      "prerequisites": "Prerequisite: CSC 322 or ECE 322 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "systems",
+      "source_id": "miami-csc-option-course-catalog",
+      "url": "https://bulletin.miami.edu/courses-az/csc/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-csc-option-course-catalog"
+        ],
+        "locator": "CSC 423 complete current course block",
+        "rationale": "Database organization, design and access dominate the description.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-csc-506",
       "code": "CSC 506",
       "name": "Logic and Automated Reasoning",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "foundations",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=CSC%20506",
+      "description": "Combines formal logic and incompleteness with resolution, proof-search methods and automated theorem-proving systems.",
+      "prerequisites": "Prerequisite: CSC317 or CSC545 and MTH309 or MTH230.",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "miami-csc-option-course-catalog",
+      "url": "https://bulletin.miami.edu/courses-az/csc/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-csc-option-course-catalog"
+        ],
+        "locator": "CSC 506 complete current course block",
+        "rationale": "The description gives substantial attention both to mathematical logic and to automated-reasoning methods; neither component is reduced to an incidental application.",
+        "candidate_categories": [
+          "mathematics",
+          "ai_ml"
+        ]
+      }
     },
     {
       "id": "miami-data-science-ai-bs-csc-542",
       "code": "CSC 542",
       "name": "Statistical Learning with Applications",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "foundations",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=CSC%20542",
+      "description": "Applies supervised and unsupervised statistical learning in R, including regression, classification, clustering and dimensionality reduction.",
+      "prerequisites": "Prerequisite: MTH 224 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "miami-csc-option-course-catalog",
+      "url": "https://bulletin.miami.edu/courses-az/csc/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-csc-option-course-catalog"
+        ],
+        "locator": "CSC 542 complete current course block",
+        "rationale": "Explicit statistical machine-learning models and their application establish AI/ML rather than general statistics alone.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-csc-543",
       "code": "CSC 543",
       "name": "Computer Vision with Deep Learning",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "description": "Uses deep-learning projects in PyTorch to analyze, process and generate images.",
+      "prerequisites": "Prerequisite: CSC 315 or CSC 546 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "ai_ml",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=CSC%20543",
+      "source_id": "miami-csc-option-course-catalog",
+      "url": "https://bulletin.miami.edu/courses-az/csc/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-csc-option-course-catalog"
+        ],
+        "locator": "CSC 543 complete current course block",
+        "rationale": "Deep neural methods for computer vision and image generation are explicitly central.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-cim-563",
       "code": "CIM 563",
       "name": "Design with Artificial Intelligence (AI)",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "ai_ml",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=CIM%20563",
+      "description": "Design practice builds everyday applications with AI technologies; ethical issues and technology limitations support that design purpose.",
+      "prerequisites": "Pre-Requisite: CIM 203 or CSC 220 or CSC 315 or ECE 118 or BTE 120 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-named-options-cim",
+      "url": "https://bulletin.miami.edu/courses-az/cim/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-named-options-cim"
+        ],
+        "locator": "CIM 563 complete current course block",
+        "rationale": "Design practice builds everyday applications with AI technologies; ethical issues and technology limitations support that design purpose.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-ece-553",
       "code": "ECE 553",
       "name": "Neural Networks",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "description": "Neural learning algorithms, network structures and training methods establish explicit AI content.",
+      "prerequisites": "Prerequisite: ECE 218 . Or MTH 309 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "ai_ml",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=ECE%20553",
+      "source_id": "miami-named-options-ece",
+      "url": "https://bulletin.miami.edu/courses-az/ece/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-named-options-ece"
+        ],
+        "locator": "ECE 553 complete current course block",
+        "rationale": "Neural learning algorithms, network structures and training methods establish explicit AI content.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-ece-574",
       "code": "ECE 574",
       "name": "Agent Technology",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "applications",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=ECE%20574",
+      "description": "Agent models, representations, behavior, communication and multiagent systems establish an intelligent-agent methods focus.",
+      "prerequisites": "Prerequisite: ECE 537 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "miami-named-options-ece",
+      "url": "https://bulletin.miami.edu/courses-az/ece/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-named-options-ece"
+        ],
+        "locator": "ECE 574 complete current course block",
+        "rationale": "Agent models, representations, behavior, communication and multiagent systems establish an intelligent-agent methods focus.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-eps-351",
       "code": "EPS 351",
       "name": "Intro to Statistics for the Social, Behavioral, and Educational Sciences",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "description": "Probability, distributions, hypothesis testing and statistical inference are the methods taught.",
+      "prerequisites": "Prerequisite: MTH 101 or higher.",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "mathematics",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=EPS%20351",
+      "source_id": "miami-named-options-eps",
+      "url": "https://bulletin.miami.edu/courses-az/eps/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-named-options-eps"
+        ],
+        "locator": "EPS 351 complete current course block",
+        "rationale": "Probability, distributions, hypothesis testing and statistical inference are the methods taught.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-eps-401",
       "code": "EPS 401",
       "name": "Applied Regression in the Social and Behavioral Sciences",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "description": "Regression, interactions, assumptions and statistical interpretation are central, despite the social-science applications.",
+      "prerequisites": "Expected preparation: basic descriptive statistics, hypothesis testing and algebra; the course states that calculus is not required.",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "mathematics",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=EPS%20401",
+      "source_id": "miami-named-options-eps",
+      "url": "https://bulletin.miami.edu/courses-az/eps/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-named-options-eps"
+        ],
+        "locator": "EPS 401 complete current course block",
+        "rationale": "Regression, interactions, assumptions and statistical interpretation are central, despite the social-science applications.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-eps-402",
       "code": "EPS 402",
       "name": "Statistical Programming: R, Python, and SQL for Social and Behavioral Data",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "mathematics",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=EPS%20402",
+      "description": "Programming constructs and code for data input, transformation and analysis organize the course, with statistics as a use context.",
+      "prerequisites": "Prior R/Python/SQL experience is expressly not required; familiarity with statistics and programming concepts is helpful, not stated as an enforced course prerequisite.",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "foundations",
+      "source_id": "miami-named-options-eps",
+      "url": "https://bulletin.miami.edu/courses-az/eps/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-named-options-eps"
+        ],
+        "locator": "EPS 402 complete current course block",
+        "rationale": "Programming constructs and code for data input, transformation and analysis organize the course, with statistics as a use context.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-jmm-331",
       "code": "JMM 331",
       "name": "Introduction to Infographics and Data Visualization",
-      "description": null,
+      "description": "Visual communication encodes information through graphs, maps and diagrams.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "applications",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=JMM%20331",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "human_context",
+      "source_id": "miami-named-options-jmm",
+      "url": "https://bulletin.miami.edu/courses-az/jmm/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-named-options-jmm"
+        ],
+        "locator": "JMM 331 complete current course block",
+        "rationale": "Visual communication encodes information through graphs, maps and diagrams.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-jmm-429",
       "code": "JMM 429",
       "name": "Advanced Infographics and Data Visualization",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "applications",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=JMM%20429",
+      "description": "Interactive visual communication and visualization practices are central; code libraries are tools rather than an explicit programming-methods curriculum.",
+      "prerequisites": "Pre-Requisite: JMM 331 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "human_context",
+      "source_id": "miami-named-options-jmm",
+      "url": "https://bulletin.miami.edu/courses-az/jmm/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-named-options-jmm"
+        ],
+        "locator": "JMM 429 complete current course block",
+        "rationale": "Interactive visual communication and visualization practices are central; code libraries are tools rather than an explicit programming-methods curriculum.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-mth-524",
       "code": "MTH 524",
       "name": "Introduction to Probability",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "description": "Probability spaces, random variables, expectation and limit theorems establish probability theory.",
+      "prerequisites": "Prerequisite: MTH 224 and MTH 211 or MTH 310 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "mathematics",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=MTH%20524",
+      "source_id": "miami-named-options-mth",
+      "url": "https://bulletin.miami.edu/courses-az/mth/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-named-options-mth"
+        ],
+        "locator": "MTH 524 complete current course block",
+        "rationale": "Probability spaces, random variables, expectation and limit theorems establish probability theory.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-mth-525",
       "code": "MTH 525",
       "name": "Introduction to Mathematical Statistics",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "description": "Sampling theory and statistical hypothesis testing are central.",
+      "prerequisites": "Prerequisite: MTH 524 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "mathematics",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=MTH%20525",
+      "source_id": "miami-named-options-mth",
+      "url": "https://bulletin.miami.edu/courses-az/mth/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-named-options-mth"
+        ],
+        "locator": "MTH 525 complete current course block",
+        "rationale": "Sampling theory and statistical hypothesis testing are central.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-mth-542",
       "code": "MTH 542",
       "name": "Statistical Analysis",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "description": "Statistical inference, variance analysis, regression and research design form the subject.",
+      "prerequisites": "Prerequisite: MTH 210 and MTH 224 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "mathematics",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=MTH%20542",
+      "source_id": "miami-named-options-mth",
+      "url": "https://bulletin.miami.edu/courses-az/mth/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-named-options-mth"
+        ],
+        "locator": "MTH 542 complete current course block",
+        "rationale": "Statistical inference, variance analysis, regression and research design form the subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-phi-330",
       "code": "PHI 330",
       "name": "Ethics",
-      "description": null,
+      "description": "Ethical systems, concepts and their application to individuals and society are central.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=PHI%20330",
+      "source_id": "miami-named-options-phi",
+      "url": "https://bulletin.miami.edu/courses-az/phi/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-named-options-phi"
+        ],
+        "locator": "PHI 330 complete current course block",
+        "rationale": "Ethical systems, concepts and their application to individuals and society are central.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-psy-292",
       "code": "PSY 292",
-      "name": "Introduction to Biobehavioral Statistics Section B (not permitted with MTH 524 , MTH 525 , or MTH 542 )",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "applications",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=PSY%20292",
+      "name": "Introduction to Biobehavioral Statistics Section B",
+      "description": "Descriptive and inferential statistics, including regression and hypothesis tests, are central.",
+      "prerequisites": "Prerequisite: C- or higher in MTH 101 or higher. The description explicitly opens the course to psychology majors and nonmajors; the BS degree table separately prohibits pairing this option with MTH 524,525 or542.",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "mathematics",
+      "source_id": "miami-named-options-psy",
+      "url": "https://bulletin.miami.edu/courses-az/psy/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-named-options-psy"
+        ],
+        "locator": "PSY 292 complete current course block",
+        "rationale": "Descriptive and inferential statistics, including regression and hypothesis tests, are central.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-csc-210",
       "code": "CSC 210",
       "name": "Computing for Scientists",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "foundations",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=CSC%20210",
+      "description": "Combines algorithm implementation and computing tools with scientific data storage, analysis and visualization.",
+      "prerequisites": "Prerequisite: MTH 141 or MTH 151 or MTH 161 or MTH 171 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "miami-csc-option-course-catalog",
+      "url": "https://bulletin.miami.edu/courses-az/csc/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-csc-option-course-catalog"
+        ],
+        "locator": "CSC 210 complete current course block",
+        "rationale": "Programming methods and scientific computing applications share the brief description; neither is sufficiently dominant for a single narrower category.",
+        "candidate_categories": [
+          "foundations",
+          "applications"
+        ]
+      }
     },
     {
       "id": "miami-data-science-ai-bs-csc-329",
       "code": "CSC 329",
       "name": "Introduction to Game Programming",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "description": "Uses a team-built game to teach software design, version control, graphics, interfaces and networked implementation.",
+      "prerequisites": "Prerequisite: CSC 220 or ECE 318 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "foundations",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=CSC%20329",
+      "source_id": "miami-csc-option-course-catalog",
+      "url": "https://bulletin.miami.edu/courses-az/csc/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-csc-option-course-catalog"
+        ],
+        "locator": "CSC 329 complete current course block",
+        "rationale": "Game development supplies the project context for software construction rather than independent game-domain or AI instruction.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-csc-410",
       "code": "CSC 410",
-      "name": "Computer Science Project Planning (project must be approved as DS&AI related)",
-      "description": null,
-      "prerequisites": null,
+      "name": "Computer Science Project Planning",
+      "description": "Plans a computing project through requirements analysis, architecture, algorithm selection, interface design, validation and prototyping. The source permits1\u20133 credit hours.",
+      "prerequisites": "Prerequisite: At least 12 credits of CSC courses.",
       "credits": null,
-      "credit_unit": "unknown",
-      "category": "ai_ml",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=CSC%20410",
+      "credit_unit": "semester_hours",
+      "category": "foundations",
+      "source_id": "miami-csc-option-course-catalog",
+      "url": "https://bulletin.miami.edu/courses-az/csc/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-csc-option-course-catalog"
+        ],
+        "locator": "CSC 410 complete current course block",
+        "rationale": "The stated content consists of general software design and development methods; program-specific approval of a DS/AI topic does not turn those methods into AI course content.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-csc-411",
       "code": "CSC 411",
-      "name": "Computer Science Project Implementation (project must be approved as DS&AI related)",
-      "description": null,
-      "prerequisites": null,
+      "name": "Computer Science Project Implementation",
+      "description": "Implements and integrates a computing project, covering components, verification, validation and documentation. The source permits1\u20133 credit hours.",
+      "prerequisites": "Prerequisite: At least 12 credits of CSC courses.",
       "credits": null,
-      "credit_unit": "unknown",
-      "category": "ai_ml",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=CSC%20411",
+      "credit_unit": "semester_hours",
+      "category": "foundations",
+      "source_id": "miami-csc-option-course-catalog",
+      "url": "https://bulletin.miami.edu/courses-az/csc/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-csc-option-course-catalog"
+        ],
+        "locator": "CSC 411 complete current course block",
+        "rationale": "Implementation, integration and testing establish general software construction; unspecified hardware preparation does not establish systems as the dominant subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-csc-412",
       "code": "CSC 412",
-      "name": "Computer Science Internship (project must be approved as DS&AI related)",
-      "description": null,
-      "prerequisites": null,
+      "name": "Computer Science Internship",
+      "description": "Places students in commercial computing work, normally requiring50 documented internship hours per earned credit. The source permits1\u20133 credit hours.",
+      "prerequisites": "Prerequisite: At least 12 credits of CSC courses.",
       "credits": null,
-      "credit_unit": "unknown",
-      "category": "ai_ml",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=CSC%20412",
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "miami-csc-option-course-catalog",
+      "url": "https://bulletin.miami.edu/courses-az/csc/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-csc-option-course-catalog"
+        ],
+        "locator": "CSC 412 complete current course block",
+        "rationale": "The host work and substantive topic are unspecified. Degree approval does not provide a course-level AI or programming content description.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-csc-548",
       "code": "CSC 548",
       "name": "Problem Solving for Bioinformatics",
-      "description": null,
+      "description": "Combines Perl programming with genome and protein inference, biological-network analysis and machine-learning applications to biomedical data.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "foundations",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=CSC%20548",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "miami-csc-option-course-catalog",
+      "url": "https://bulletin.miami.edu/courses-az/csc/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-csc-option-course-catalog"
+        ],
+        "locator": "CSC 548 complete current course block",
+        "rationale": "The source explicitly combines substantial programming instruction, learning methods and biological prediction; a single dominant subject is not established.",
+        "candidate_categories": [
+          "foundations",
+          "ai_ml",
+          "applications"
+        ]
+      }
     },
     {
       "id": "miami-data-science-ai-bs-csc-549",
       "code": "CSC 549",
       "name": "Biomedical Data Science",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "foundations",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=CSC%20549",
+      "description": "Develops scripting and computational workflows for genomic data, including sequencing analysis, version control and responsible research.",
+      "prerequisites": "Prerequisite: CSC 120 and BIL 150 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "miami-csc-option-course-catalog",
+      "url": "https://bulletin.miami.edu/courses-az/csc/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-csc-option-course-catalog"
+        ],
+        "locator": "CSC 549 complete current course block",
+        "rationale": "Programming skills and substantive genomic-data analysis are interwoven; the description does not establish either as incidental.",
+        "candidate_categories": [
+          "foundations",
+          "applications"
+        ]
+      }
     },
     {
       "id": "miami-data-science-ai-bs-csc-550",
       "code": "CSC 550",
       "name": "Computational Neuroscience",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "foundations",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=CSC%20550",
+      "description": "Models neural systems from individual neurons to perception and behavior, with MATLAB practice and links to machine learning.",
+      "prerequisites": "Prerequisite: MTH 162 and MTH 224 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-csc-option-course-catalog",
+      "url": "https://bulletin.miami.edu/courses-az/csc/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-csc-option-course-catalog"
+        ],
+        "locator": "CSC 550 complete current course block",
+        "rationale": "Neuroscience is the primary domain; connections to machine learning do not establish an AI-methods course.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-apy-313",
       "code": "APY 313",
       "name": "Data Science of Culture and Language",
-      "description": null,
+      "description": "The short description lists data-science workflow, quantitative analysis and assessment of scientific claims but does not specify enough method content for a defensible primary subject.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "applications",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=APY%20313",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "miami-named-options-apy",
+      "url": "https://bulletin.miami.edu/courses-az/apy/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-named-options-apy"
+        ],
+        "locator": "APY 313 complete current course block",
+        "rationale": "The short description lists data-science workflow, quantitative analysis and assessment of scientific claims but does not specify enough method content for a defensible primary subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-geg-305",
       "code": "GEG 305",
       "name": "Spatial Data Analysis I",
-      "description": null,
+      "description": "Descriptive and inferential statistical methods for spatial data are explicit core content.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "applications",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=GEG%20305",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "mathematics",
+      "source_id": "miami-named-options-geg",
+      "url": "https://bulletin.miami.edu/courses-az/geg/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-named-options-geg"
+        ],
+        "locator": "GEG 305 complete current course block",
+        "rationale": "Descriptive and inferential statistical methods for spatial data are explicit core content.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-geg-310",
       "code": "GEG 310",
       "name": "Geographic Information Systems I",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "description": "GIS software is used to answer spatial research questions; the description emphasizes domain use rather than computing infrastructure.",
+      "prerequisites": "Prior GIS software experience is expressly not required.",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "applications",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=GEG%20310",
+      "source_id": "miami-named-options-geg",
+      "url": "https://bulletin.miami.edu/courses-az/geg/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-named-options-geg"
+        ],
+        "locator": "GEG 310 complete current course block",
+        "rationale": "GIS software is used to answer spatial research questions; the description emphasizes domain use rather than computing infrastructure.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-geg-405",
       "code": "GEG 405",
       "name": "Spatial Data Analysis II",
-      "description": null,
+      "description": "Spatial statistical analysis, especially spatial autocorrelation, is the stated focus.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "applications",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=GEG%20405",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "mathematics",
+      "source_id": "miami-named-options-geg",
+      "url": "https://bulletin.miami.edu/courses-az/geg/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-named-options-geg"
+        ],
+        "locator": "GEG 405 complete current course block",
+        "rationale": "Spatial statistical analysis, especially spatial autocorrelation, is the stated focus.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-geg-410",
       "code": "GEG 410",
       "name": "Geographic Information Systems II",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "description": "Spatial analysis and geographic modeling employ GIS techniques to evaluate geographic patterns and suitability.",
+      "prerequisites": "Prerequisite: GEG 310 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "applications",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=GEG%20410",
+      "source_id": "miami-named-options-geg",
+      "url": "https://bulletin.miami.edu/courses-az/geg/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-named-options-geg"
+        ],
+        "locator": "GEG 410 complete current course block",
+        "rationale": "Spatial analysis and geographic modeling employ GIS techniques to evaluate geographic patterns and suitability.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-psy-110",
       "code": "PSY 110",
       "name": "Introduction to Psychology",
-      "description": null,
+      "description": "The broad psychology survey spans cognition, biological and behavioral science, personality and social psychology without a defensible single taxonomy subject.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "applications",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=PSY%20110",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "miami-named-options-psy",
+      "url": "https://bulletin.miami.edu/courses-az/psy/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-named-options-psy"
+        ],
+        "locator": "PSY 110 complete current course block",
+        "rationale": "The broad psychology survey spans cognition, biological and behavioral science, personality and social psychology without a defensible single taxonomy subject.",
+        "candidate_categories": [
+          "applications",
+          "human_context"
+        ]
+      }
     },
     {
       "id": "miami-data-science-ai-bs-psy-290",
       "code": "PSY 290",
       "name": "Introduction to Research Methods",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "description": "Psychology research practice covers study design, measurement and presentation; it is not described as a statistical-methods course.",
+      "prerequisites": "Prerequisite or Corequisite: C- or Higher in PSY 110 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "applications",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=PSY%20290",
+      "source_id": "miami-named-options-psy",
+      "url": "https://bulletin.miami.edu/courses-az/psy/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-named-options-psy"
+        ],
+        "locator": "PSY 290 complete current course block",
+        "rationale": "Psychology research practice covers study design, measurement and presentation; it is not described as a statistical-methods course.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-phi-239",
       "code": "PHI 239",
       "name": "Ethics of Artificial Intelligence",
-      "description": null,
+      "description": "The explicit description examines ethical issues in artificial intelligence.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=PHI%20239",
+      "source_id": "miami-named-options-phi",
+      "url": "https://bulletin.miami.edu/courses-az/phi/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-named-options-phi"
+        ],
+        "locator": "PHI 239 complete current course block",
+        "rationale": "The explicit description examines ethical issues in artificial intelligence.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-phi-115",
       "code": "PHI 115",
       "name": "Social and Ethical Issues in Computing",
-      "description": null,
+      "description": "Computing's social context, professional ethics, privacy, rights and intellectual property are central.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=PHI%20115",
+      "source_id": "miami-named-options-phi",
+      "url": "https://bulletin.miami.edu/courses-az/phi/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-named-options-phi"
+        ],
+        "locator": "PHI 115 complete current course block",
+        "rationale": "Computing's social context, professional ethics, privacy, rights and intellectual property are central.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-wrs-105",
@@ -2782,85 +3336,151 @@
       "id": "miami-data-science-ai-bs-wrs-106",
       "code": "WRS 106",
       "name": "First-Year Writing II",
-      "description": null,
-      "prerequisites": null,
+      "description": "Academic written and multimodal communication develops analysis, argument and research skills.",
+      "prerequisites": "Requisite: WRS 105 OR ACT English score 32 or above; or SAT Evidence-Based Reading and Writing or Critical Reading score 700 or above or Foote Fellow designation. The course excludes credit-only grading. Its unnamed major/minor exclusion is preserved without removing its explicit degree-table role.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=WRS%20106",
+      "source_id": "miami-named-options-wrs",
+      "url": "https://bulletin.miami.edu/courses-az/wrs/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-named-options-wrs"
+        ],
+        "locator": "WRS 106 complete current course block",
+        "rationale": "Academic written and multimodal communication develops analysis, argument and research skills.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-wrs-107",
       "code": "WRS 107",
       "name": "First-Year Writing II: STEM",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "description": "Academic communication and argument in STEM contexts center writing rather than technical STEM content.",
+      "prerequisites": "Prerequisite: WRS 105 or Requisite: ACT English score 32 or above; or SAT Evidence-Based Reading and Writing or Critical Reading score 700 or above. The course excludes credit-only grading. Its unnamed major/minor exclusion is preserved without removing its explicit degree-table role.",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=WRS%20107",
+      "source_id": "miami-named-options-wrs",
+      "url": "https://bulletin.miami.edu/courses-az/wrs/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-named-options-wrs"
+        ],
+        "locator": "WRS 107 complete current course block",
+        "rationale": "Academic communication and argument in STEM contexts center writing rather than technical STEM content.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-eng-106",
       "code": "ENG 106",
       "name": "Writing About Literature and Culture",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "description": "Academic argument, textual analysis and research in literature and culture center written communication.",
+      "prerequisites": "Prerequisite: WRS 105 ; or ACT English score 32 or above; or SAT Evidence-Based Reading and Writing or Critical Reading score 700 or above; or Foote Fellow designation. The course excludes credit-only grading.",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=ENG%20106",
+      "source_id": "miami-named-options-eng",
+      "url": "https://bulletin.miami.edu/courses-az/eng/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-named-options-eng"
+        ],
+        "locator": "ENG 106 complete current course block",
+        "rationale": "Academic argument, textual analysis and research in literature and culture center written communication.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-csc-405",
       "code": "CSC 405",
       "name": "Computer Science Seminars Reports",
-      "description": null,
-      "prerequisites": null,
+      "description": "Students attend departmental computer-science seminars and write reports on their varying subjects.",
+      "prerequisites": "Prerequisite: At least 12 credits of CSC courses.",
       "credits": 1.0,
       "credit_unit": "semester_hours",
-      "category": "foundations",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=CSC%20405",
+      "category": "other",
+      "source_id": "miami-csc-option-course-catalog",
+      "url": "https://bulletin.miami.edu/courses-az/csc/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-csc-option-course-catalog"
+        ],
+        "locator": "CSC 405 complete current course block",
+        "rationale": "The seminar subjects are unspecified; report writing alone does not establish a primary communication or technical category.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-csc-431",
       "code": "CSC 431",
       "name": "Introduction to Software Engineering",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "description": "Studies software processes from requirements and design through validation and evolution, including project tools, interaction and professional risks.",
+      "prerequisites": "Prerequisite: CSC 317 or CSC 322 or CSC 517.",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "foundations",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=CSC%20431",
+      "source_id": "miami-csc-option-course-catalog",
+      "url": "https://bulletin.miami.edu/courses-az/csc/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-csc-option-course-catalog"
+        ],
+        "locator": "CSC 431 complete current course block",
+        "rationale": "Software engineering methods are the primary subject; legal and interaction considerations support that development focus.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-wrs-233",
       "code": "WRS 233",
       "name": "Advanced Writing for STEM",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "description": "Scientific communication develops writing for specialist and public audiences through proposals, reviews and presentations.",
+      "prerequisites": "Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107 or WRS 208 or ENG 208.",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=WRS%20233",
+      "source_id": "miami-named-options-wrs",
+      "url": "https://bulletin.miami.edu/courses-az/wrs/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-named-options-wrs"
+        ],
+        "locator": "WRS 233 complete current course block",
+        "rationale": "Scientific communication develops writing for specialist and public audiences through proposals, reviews and presentations.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-spa-107",
@@ -29166,7 +29786,7 @@
       "credit_unit": "unknown",
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
-      "source_text": null,
+      "source_text": "CSC 113: Data Science for the World (New course: Data Science for Everyone)",
       "summary": "Data Science for the World (New course: Data Science for Everyone) \u2014 published credit amount/range: 4",
       "course_ids": [
         "miami-data-science-ai-bs-csc-113"
@@ -29182,7 +29802,7 @@
       "credit_unit": "unknown",
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
-      "source_text": null,
+      "source_text": "CSC 120: Computer Programming I",
       "summary": "Computer Programming I \u2014 published credit amount/range: 4",
       "course_ids": [
         "miami-data-science-ai-bs-csc-120"
@@ -29198,7 +29818,7 @@
       "credit_unit": "unknown",
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
-      "source_text": null,
+      "source_text": "CSC 220: Computer Programming II",
       "summary": "Computer Programming II \u2014 published credit amount/range: 4",
       "course_ids": [
         "miami-data-science-ai-bs-csc-220"
@@ -29214,7 +29834,7 @@
       "credit_unit": "unknown",
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
-      "source_text": null,
+      "source_text": "CSC 315: Introduction to Python for Scientists",
       "summary": "Introduction to Python for Scientists \u2014 published credit amount/range: 3",
       "course_ids": [
         "miami-data-science-ai-bs-csc-315"
@@ -29230,7 +29850,7 @@
       "credit_unit": "unknown",
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
-      "source_text": null,
+      "source_text": "CSC 317: Data Structures and Algorithm Analysis",
       "summary": "Data Structures and Algorithm Analysis \u2014 published credit amount/range: 3",
       "course_ids": [
         "miami-data-science-ai-bs-csc-317"
@@ -29246,7 +29866,7 @@
       "credit_unit": "unknown",
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
-      "source_text": null,
+      "source_text": "CSC 345: Introduction to Artificial Intelligence",
       "summary": "Introduction to Artificial Intelligence \u2014 published credit amount/range: 3",
       "course_ids": [
         "miami-data-science-ai-bs-csc-345"
@@ -29262,7 +29882,7 @@
       "credit_unit": "unknown",
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
-      "source_text": null,
+      "source_text": "CSC 545: Advanced Artificial Intelligence",
       "summary": "Advanced Artificial Intelligence \u2014 published credit amount/range: 3",
       "course_ids": [
         "miami-data-science-ai-bs-csc-545"
@@ -29278,7 +29898,7 @@
       "credit_unit": "unknown",
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
-      "source_text": null,
+      "source_text": "CSC 546: Machine Learning with Applications",
       "summary": "Machine Learning with Applications \u2014 published credit amount/range: 3",
       "course_ids": [
         "miami-data-science-ai-bs-csc-546"
@@ -29308,7 +29928,7 @@
       "credit_unit": "unknown",
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
-      "source_text": null,
+      "source_text": "MTH 161: Calculus I (Also fulfills Quantitative Proficiency Skills Requirement)",
       "summary": "Calculus I (Also fulfills Quantitative Proficiency Skills Requirement) \u2014 published credit amount/range: 4",
       "course_ids": [
         "miami-data-science-ai-bs-mth-161"
@@ -29324,7 +29944,7 @@
       "credit_unit": "unknown",
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
-      "source_text": null,
+      "source_text": "MTH 162: Calculus II",
       "summary": "Calculus II \u2014 published credit amount/range: 4",
       "course_ids": [
         "miami-data-science-ai-bs-mth-162"
@@ -29340,7 +29960,7 @@
       "credit_unit": "unknown",
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
-      "source_text": null,
+      "source_text": "MTH 210: Introduction to Linear Algebra",
       "summary": "Introduction to Linear Algebra \u2014 published credit amount/range: 3",
       "course_ids": [
         "miami-data-science-ai-bs-mth-210"
@@ -29356,7 +29976,7 @@
       "credit_unit": "unknown",
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
-      "source_text": null,
+      "source_text": "MTH 224: Introduction to Probability and Statistics",
       "summary": "Introduction to Probability and Statistics \u2014 published credit amount/range: 3",
       "course_ids": [
         "miami-data-science-ai-bs-mth-224"
@@ -29372,7 +29992,7 @@
       "credit_unit": "unknown",
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
-      "source_text": null,
+      "source_text": "MTH 309: Discrete Mathematics I\nMTH 230: Introduction to Abstract Mathematics",
       "summary": "Discrete Mathematics I \u2014 published credit amount/range: 3 Complete one listed alternative for this requirement.",
       "course_ids": [
         "miami-data-science-ai-bs-mth-309",
@@ -29389,7 +30009,7 @@
       "credit_unit": "semester_hours",
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
-      "source_text": null,
+      "source_text": "CSC 115: Python Programming for Everyone (only if taken before CSC 120 )\nCSC 322: System Programming\nCSC 423: Database Systems\nCSC 506: Logic and Automated Reasoning\nCSC 542: Statistical Learning with Applications\nCSC 543: Computer Vision with Deep Learning\nCIM 563: Design with Artificial Intelligence (AI)\nECE 553: Neural Networks\nECE 574: Agent Technology\nEPS 351: Intro to Statistics for the Social, Behavioral, and Educational Sciences\nEPS 401: Applied Regression in the Social and Behavioral Sciences\nEPS 402: Statistical Programming: R, Python, and SQL for Social and Behavioral Data\nJMM 331: Introduction to Infographics and Data Visualization\nJMM 429: Advanced Infographics and Data Visualization\nMTH 524: Introduction to Probability\nMTH 525: Introduction to Mathematical Statistics\nMTH 542: Statistical Analysis\nPHI 330: Ethics\nPSY 292: Introduction to Biobehavioral Statistics Section B (not permitted with MTH 524 , MTH 525 , or MTH 542 )",
       "summary": "Techniques \u2014 6 published credits. Listed courses are options, not all required. Credit hours are semester hours under the university Academic Credit policy.",
       "course_ids": [
         "miami-data-science-ai-bs-csc-115",
@@ -29423,7 +30043,7 @@
       "credit_unit": "semester_hours",
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
-      "source_text": null,
+      "source_text": "CSC 210: Computing for Scientists\nCSC 329: Introduction to Game Programming\nCSC 410: Computer Science Project Planning (project must be approved as DS&AI related)\nCSC 411: Computer Science Project Implementation (project must be approved as DS&AI related)\nCSC 412: Computer Science Internship (project must be approved as DS&AI related)\nCSC 548: Problem Solving for Bioinformatics\nCSC 549: Biomedical Data Science\nCSC 550: Computational Neuroscience\nAPY 313: Data Science of Culture and Language\nGEG 305: Spatial Data Analysis I\nGEG 310: Geographic Information Systems I\nGEG 405: Spatial Data Analysis II\nGEG 410: Geographic Information Systems II\nPSY 110: Introduction to Psychology\nPSY 290: Introduction to Research Methods",
       "summary": "Applications \u2014 9 published credits. Listed courses are options, not all required. Credit hours are semester hours under the university Academic Credit policy.",
       "course_ids": [
         "miami-data-science-ai-bs-csc-210",
@@ -29467,7 +30087,7 @@
       "credit_unit": "unknown",
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
-      "source_text": null,
+      "source_text": "PHI 239: Ethics of Artificial Intelligence\nPHI 115: Social and Ethical Issues in Computing",
       "summary": "Ethics of Artificial Intelligence \u2014 published credit amount/range: 3 Complete one listed alternative for this requirement.",
       "course_ids": [
         "miami-data-science-ai-bs-phi-239",
@@ -29512,7 +30132,7 @@
       "credit_unit": "unknown",
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
-      "source_text": null,
+      "source_text": "WRS 105: First-Year Writing I",
       "summary": "First-Year Writing I \u2014 published credit amount/range: 3",
       "course_ids": [
         "miami-data-science-ai-bs-wrs-105"
@@ -29528,7 +30148,7 @@
       "credit_unit": "unknown",
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
-      "source_text": null,
+      "source_text": "WRS 106: First-Year Writing II\nWRS 107: First-Year Writing II: STEM\nENG 106: Writing About Literature and Culture",
       "summary": "First-Year Writing II \u2014 published credit amount/range: 3 Complete one listed alternative for this requirement.",
       "course_ids": [
         "miami-data-science-ai-bs-wrs-106",
@@ -29672,7 +30292,7 @@
       "credit_unit": "unknown",
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
-      "source_text": null,
+      "source_text": "CSC 405: Computer Science Seminars Reports\nCSC 410: Computer Science Project Planning\nCSC 431: Introduction to Software Engineering\nWRS 233: Advanced Writing for STEM",
       "summary": "Computer Science Seminars Reports \u2014 published credit amount/range: 1 Complete one listed alternative for this requirement.",
       "course_ids": [
         "miami-data-science-ai-bs-csc-405",
@@ -43023,7 +43643,19 @@
       "miami-cognate-ps_0073-fall2026",
       "miami-fixed-courses-csc",
       "miami-fixed-courses-mth",
-      "miami-fixed-courses-wrs"
+      "miami-fixed-courses-wrs",
+      "miami-named-options-apy",
+      "miami-named-options-cim",
+      "miami-named-options-ece",
+      "miami-named-options-eng",
+      "miami-named-options-eps",
+      "miami-named-options-geg",
+      "miami-named-options-jmm",
+      "miami-named-options-mth",
+      "miami-named-options-phi",
+      "miami-named-options-psy",
+      "miami-named-options-wrs",
+      "miami-csc-option-course-catalog"
     ],
     "sections": [
       "Full degree curriculum table, course alternatives, uncoded requirements and totals",
@@ -43037,7 +43669,8 @@
       "Full October 2, 2026 individualized Master List: all 50 rendered pages, row/identity/area accounting, AH/PS candidates and conditional attribute/overlap/transfer context",
       "All 215 active directory entries reviewed for selected Fall 2026: 212 thematic plans and three individualized routes; 173 conditional AH/PS thematic plans attached, every displayed group/course row, inactive flag and applicability condition retained; STEM already supplied by major",
       "2026-10-11 degree correctness reread: finite credit pools and named advanced-writing alternatives retain option roles rather than contextual-note ancestry",
-      "Read 13 additional fixed-course descriptions and their published eligibility clauses; manual content classifications and exact credit amounts are preserved."
+      "Read 13 additional fixed-course descriptions and their published eligibility clauses; manual content classifications and exact credit amounts are preserved.",
+      "Individually read every remaining named primary-table option description; preserve degree-row restrictions separately from normalized catalog names and course enrollment conditions."
     ],
     "unresolved_requirements": [
       "University transfer policy contains inconsistent summer concurrent-enrollment statements; applicability needs authoritative clarification.",
@@ -43050,7 +43683,8 @@
       "Course descriptions, most prerequisites, alternative/elective credit amounts, public course sites and syllabi remain unverified.",
       "Current individual course prerequisite statements remain unverified where null; following the prerequisite structure is required.",
       "The full individualized directory supplies no credits/descriptions/prerequisites; 121 source titles are truncated across all areas (104 among AH/PS candidates) and remain null unless separately verified. Alphabetic and transfer-equivalency codes preserve their exact identities. Thematic metadata does not confer universal enrollment permission or guaranteed offerings; cognate evidence does not establish AI program launch dates or outcomes.",
-      "This fixed-course pass does not certify remaining named options or university cognate-course metadata. Unlabeled eligibility expressions are explicitly labeled as such; null prerequisites are unknown, not permission to enroll."
+      "This fixed-course pass does not certify remaining named options or university cognate-course metadata. Unlabeled eligibility expressions are explicitly labeled as such; null prerequisites are unknown, not permission to enroll.",
+      "All main degree-table named course descriptions now have manual subject reviews. Contextual cognate-only descriptions remain a separate unreviewed inventory. Null prerequisites mean the reviewed block publishes no explicit enforced expression, unless a note expressly states no prerequisite."
     ]
   }
 }

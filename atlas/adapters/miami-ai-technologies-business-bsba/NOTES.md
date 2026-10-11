@@ -82,3 +82,9 @@ Read 16 additional fixed-course descriptions and their published eligibility cla
 Finance 302's B threshold applies to students declaring a finance major, not this AI degree. MAS 311 retains the source's prerequisite-or-corequisite wording. UMX 100 is explicitly zero credits and remains reviewed unclassified because its broad orientation content has no defensible primary subject. MGT 100 is mixed management practice and human communication/culture.
 
 WRS 105 excludes credit-only grading and says “Not for major or minor” without naming a credential. That limitation is recorded literally, not interpreted as removing the course from these explicit degree tables. No first-offered date is inferred from routine offering-season text.
+
+## Named primary-table options — 2026-10-11
+
+Read all 26 remaining named option blocks applicable to this degree. Source rows are now retained on requirement evidence, so course-catalog title normalization cannot erase project approval, course-order, overlap or exclusion conditions. Observed credit ranges remain null scalar amounts, with the range recorded. Credit exclusions do not establish cross-listed identities. All named primary-table fixed and option course descriptions are now reviewed; this does not cover the much larger contextual cognate inventory or settle the open degree-wide policy questions.
+
+AI in the title does not decide subject: BSL 444 and ECO 395 concern law/ethics and societal-economic consequences; FIN 460 and MKT 371 expressly focus financial/marketing use; MAS 548 teaches machine-learning methods. BTE 324 is programming and BTE 423 database systems. BUS 428 keeps its variable 1–3 credits and AI-focused project approval as separate facts. ACC 211/221 and 212/222 credit exclusions do not certify aliases; BUS 211/MGT 199 and MKT 201/301 remain separate alternatives.
