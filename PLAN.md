@@ -6,8 +6,8 @@ Updated 2026-10-11. A published research project; **the full target cohort and c
 
 - Repository: https://github.com/KrisJordan/ai-program-atlas
 - Site: https://krisjordan.github.io/ai-program-atlas/
-- Verified release: `1d48c7ec582ef6b047b364728a5d5e6301510d6b`, [successful CI and Pages deployment](https://github.com/KrisJordan/ai-program-atlas/actions/runs/38096036474).
-- Fresh locked uv environment and clean committed source: **730 tests passed**, including all **17 required Chromium tests**. The 24 skipped cases require optional ignored source caches; no browser tests were skipped.
+- Verified release: `f18086ca2008fed7632690bb093e098c8d0f1227`, [successful CI and Pages deployment](https://github.com/KrisJordan/ai-program-atlas/actions/runs/38097182363).
+- Fresh locked uv environment and clean committed source: **787 tests passed**, including all **17 required Chromium tests**. The 44 skipped cases require optional ignored source caches; no browser tests were skipped.
 - Fresh reconstruction and maintained publication copy passed integrity checks and agreed on current facts; additional historical coverage sources were preserved. Repeat ingest changed zero programs. Repeated static builds were byte-identical across 132 files.
 - Live public JSON matched these counts. Live checks passed keyboard family expansion, concrete comparison reload, discipline back/forward, direct program pages, learning/career statement distinctions and 390px mobile layout, with no JavaScript errors or horizontal overflow.
 - Dedicated local repository: `ai-program-atlas/` in this Mac Studio task. No existing personal website or unrelated repository was changed. Coordinated Astra high research and implementation use explicit ownership and incremental commits.
@@ -22,11 +22,11 @@ Updated 2026-10-11. A published research project; **the full target cohort and c
 | Loaded institutions pending / absence conclusions | 0 / 0 |
 | Concrete programs | 125 |
 | Degrees / minors / concentrations / additional majors | 60 / 43 / 19 / 3 |
-| Complete / partial / pending requirement inventories | 29 / 90 / 6 |
-| Program-course records / resolved requirement nodes | 5,421 / 6,128 |
+| Complete / partial / pending requirement inventories | 31 / 89 / 5 |
+| Program-course records / resolved requirement nodes | 7,838 / 6,922 |
 | Program families / concrete family variants | 2 / 31 |
-| Descriptions / prerequisite statements | 295 / 373 |
-| Credit amounts with verified units | 1,572 |
+| Descriptions / prerequisite statements | 825 / 831 |
+| Credit amounts with verified units | 1,925 |
 | Public course sites / example syllabi | 22 / 18 |
 
 Course counts include elective pools and repeated observations across sibling programs. They are not unique institution-wide courses, required-course totals, completion percentages or quality scores. Complete refers to an explicitly reviewed scope: a complete minor/concentration/additional major does not certify the host degree. Metadata availability is separate. Zero pending in the loaded roster is not full target-cohort coverage; missing institutions remain outside that denominator.
@@ -49,7 +49,7 @@ National Universities has 108 cited secondary-table members, including nine tied
 - [x] Carolina-blue/navy responsive sans-serif interface, keyboard navigation, filters, coverage ledger, detail pages and ranking methodology. No UNC marks or sponsorship claims.
 - [x] Explicit families, expandable variants, discipline filtering, concrete comparison URLs, common/local requirements, provenance and missingness. Stable IDs and base-path reload/back/forward work on GitHub Pages.
 - [x] Course-category and inferred-theme comparisons preserve credit units and separate source-stated learning outcomes, program aims and career pathways from editorial taxonomy. No opaque quality score.
-- [x] Compact directory projection reduced root HTML about 69% raw and 64% gzipped in a controlled same-data comparison. Live root HTML is 2,793,157 bytes; full static detail pages and data.json remain intact. No runtime fetch/server added.
+- [x] Compact directory projection reduced root HTML about 69% raw and 64% gzipped in a controlled same-data comparison. Live root HTML is 2,987,218 bytes; full static detail pages and data.json remain intact. No runtime fetch/server added.
 - [x] CI tests fresh reconstruction and publishes an updated copy of the maintained DB. Reviewed discovery classification corrections refresh correctly; manual program corrections and evidence history survive.
 
 ## Program families and current evidence
@@ -74,7 +74,7 @@ The initial90 partial and six pending inventories now have a pinned, itemized [g
 
 - Stanford's AI track has a complete concentration scope: 217 fixed course observations, 29 requirement nodes, the seven-course/25-unit depth, elective areas, humanities options and applicable policies. This does not certify the entire CS BS; missing individual credits remain visible.
 - Tulane's technical AI minor and Tufts' Application of AI minor now have complete local scopes. The distinct Tulane AI Literacy minor is separately listed and partial. Tufts' AI Development minor stays partial because its checklist and department disagree on a required-course alternative.
-- MIT now has 84 course observations and 86 requirement nodes including institute policies and explicitly versioned department evidence. Its Fall-2025-entry requirements differ from the unversioned catalog chart; reconciliation and the 6.4300 credit conflict remain unresolved. NC State and both UVA concentrations retain their mapped partial inventories and exact policy/source gaps.
+- MIT now has390 course observations and633 requirement nodes including institute policies and explicitly versioned department evidence. Its Fall-2025-entry requirements differ from the unversioned catalog chart; reconciliation and the 6.4300 credit conflict remain unresolved. NC State and both UVA concentrations retain their mapped partial inventories and exact policy/source gaps.
 - Case minor metadata adds 30 descriptions, 20 prerequisite statements and 28 verified credit amounts. Applied AI was downgraded to partial because three listed electives restrict enrollment to graduate programs; no undergraduate exception is invented. The catalog's approval-status ambiguity is also retained.
 - Robots precedence now follows RFC 9309 through Protego: more-specific allow rules work while more-specific denials still stop retrieval. Pacing, request-rate limits, visit windows, redirect checks and access failures have regressions. This corrected a local interpretation error for Tufts' ordinary public Box checklist viewers; no authentication or publisher restriction was bypassed.
 - A final product audit found and fixed long source-URL overflow on mobile. Isolated browser checks verified Stanford's large course table, Tufts' differing statuses and source conflict, Tulane's separate listing and Northeastern's carefully qualified hosting context. The clean release suite includes this regression.
@@ -85,13 +85,13 @@ Each adapter's NOTES.md states evidence, interpretations, exact conflicts, metad
 
 1. **Cohort:** obtain a permitted authoritative 2027 roster for both categories and all cutoff ties; complete missing liberal-arts enumeration. Preserve secondary/inferred/membership-only labels until resolved.
 2. **CSRankings:** numerical import remains held pending permission or qualified reuse review. Methodology records ai,vision,mlmining,nlp,inforet, proposed 2016–2025 window, U.S. filter, pinned source snapshot and computation method. Values remain null, not zero quality. Publication research does not measure undergraduate teaching quality. See [research note](research/csrankings.md).
-3. **Access:** eight loaded institutions remain inaccessible. All six pending curricula have documented barriers; additional program-specific links remain blocked or unread. See [access review](research/access-review.md), [pending curriculum barriers](research/pending-curriculum-barriers.md) and adapter notes. No bypass of robots/auth/403/password gates.
-4. **Curricula:** Six published inventories remain pending and 90 partial. Verify finite pools, nested alternatives, policy applicability and source conflicts before promoting completeness.
+3. **Access:** eight loaded institutions remain inaccessible. The five currently published pending curricula have documented barriers; additional program-specific links remain blocked or unread. See [access review](research/access-review.md), [pending curriculum barriers](research/pending-curriculum-barriers.md) and adapter notes. No bypass of robots/auth/403/password gates.
+4. **Curricula:** Five published inventories remain pending and89 partial. Verify finite pools, nested alternatives, policy applicability and source conflicts before promoting completeness.
 5. **Metadata:** many descriptions, prerequisites, public course sites and example syllabi remain unknown. Verify exact course identity and term; preserve historical labels and link rather than redistribute.
 6. **Institution depth:** directory searches alone do not establish absence. Continue bounded catalog/minor/concentration searches and documented leads. No absence conclusion has been asserted.
 
 Use `uv run atlas status`, `uv run atlas candidates`, adapter notes and task-specific skills. Refreshes queue observations for review; they never silently replace the research database.
 
-## Candidate research integration — 2026-10-11
+## Research integration verified — 2026-10-11
 
-Committed evidence through `351170d0` is ingested in the maintained database. This is a candidate checkpoint, not yet a verified published release: 31 complete / 89 partial / 5 pending; 7838 course observations and 6922 requirement nodes. Michigan HCAI now has a public-handbook inventory; RIT’s two minors have complete scoped policy audits. Source-version conflicts at MIT/Penn/Purdue and home-college applicability at Northeastern remain explicit. Clean-checkout/browser verification and publication are next while accessible research continues.
+Committed evidence through `351170d0` is ingested in the maintained database. Release f18086c passed clean locked-environment tests, fresh/maintained agreement, repeat ingest/build checks, successful GitHub CI/Pages deployment and live browser/JSON verification: 31 complete / 89 partial / 5 pending; 7838 course observations and 6922 requirement nodes. Michigan HCAI now has a public-handbook inventory; RIT’s two minors have complete scoped policy audits. Source-version conflicts at MIT/Penn/Purdue and home-college applicability at Northeastern remain explicit. Further committed research includes Case degree-scope audits, Miami policies, Drexel approved writing courses and Duke policies; those newer commits await the next frozen integration. Accessible research continues after this publication checkpoint.
