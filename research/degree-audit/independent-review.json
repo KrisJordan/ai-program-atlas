@@ -1,0 +1,665 @@
+{
+  "audit_date": "2026-10-11",
+  "reviewer": "frontend-independent",
+  "review_type": "Bounded independent second pass; not replacement primary audits",
+  "live_trace": {
+    "url": "https://krisjordan.github.io/ai-program-atlas/data.json",
+    "observed_at": "2026-10-11",
+    "case_ba": {
+      "required": 8,
+      "foundations": 0,
+      "other": 3
+    },
+    "case_bs": {
+      "required": 9,
+      "foundations": 0,
+      "other": 4
+    },
+    "root_cause": "Source courses existed, but several computing/mathematics categories fell through to other. Rendering exposed zero without a sufficiently explicit classification-coverage distinction."
+  },
+  "programs": [
+    {
+      "program_id": "case-western-reserve-university-artificial-intelligence-ba-degree",
+      "institution_id": "case-western-reserve-university",
+      "primary_audit": "research/degree-audit/case-western.json",
+      "reviewed_commit": "41e36d5",
+      "second_pass_status": "partial",
+      "verified_scope": "Fixed mapped course set, its subject classification, introductory programming alternatives, source metadata and displayed aggregate semantics.",
+      "full_degree_verified": false,
+      "sources": [
+        {
+          "url": "https://bulletin.case.edu/engineering/computer-data-sciences/artificial-intelligence-ba/",
+          "locator": "Program Requirements: fixed core, introductory programming alternative and breadth selections",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; robots-aware fetch"
+        },
+        {
+          "url": "https://bulletin.case.edu/course-descriptions/csds/",
+          "locator": "CSDS 132,134,233,237,302,310,330,340,395A",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; robots-aware fetch"
+        }
+      ],
+      "expected_course_ids": {
+        "required": [
+          "case-ba-math-121",
+          "case-ba-math-307",
+          "case-ba-csds-233",
+          "case-ba-csds-302",
+          "case-ba-csds-310",
+          "case-ba-csds-330",
+          "case-ba-csds-340",
+          "case-ba-csds-395a"
+        ],
+        "options": [
+          "case-ba-csds-132",
+          "case-ba-csds-134",
+          "case-ba-csds-237"
+        ],
+        "unresolved": null
+      },
+      "expected_ids_scope": "Required list is the full manually established fixed set. Options list is only the independently reviewed introductory programming subset, not all elective candidates.",
+      "expected_profile": {
+        "required": {
+          "count": 8,
+          "categories": {
+            "foundations": 2,
+            "mathematics": 3,
+            "ai_ml": 3,
+            "systems": 0,
+            "human_context": 0,
+            "applications": 0,
+            "electives": 0,
+            "other": 0
+          }
+        },
+        "options": null,
+        "unresolved": null
+      },
+      "findings": [
+        "CSDS233 data structures and CSDS310 algorithm design/analysis are foundations;CSDS302 is mathematics by its discrete mathematical reasoning description.",
+        "CSDS134 OR CSDS132+237 is a route choice: three observed foundation option records do not mean three mandatory courses.",
+        "Prerequisite and mutual-credit exclusions remain source conditions, not new fixed obligations. Source units are preserved without summing alternative loads.",
+        "Every fixed identity now has source-backed category_review. Most broader elective/UGER categories remain unreviewed."
+      ],
+      "remaining": [
+        "Remaining elective/general-education course identities, prerequisites and categories need independent review.",
+        "Full degree-wide policy second pass remains unfinished; earlier complete inventory is not full correctness verification."
+      ],
+      "result": "Fixed-core correction independently verified; full-degree second pass remains partial."
+    },
+    {
+      "program_id": "case-western-reserve-university-artificial-intelligence-bs-degree",
+      "institution_id": "case-western-reserve-university",
+      "primary_audit": "research/degree-audit/case-western.json",
+      "reviewed_commit": "41e36d5",
+      "second_pass_status": "partial",
+      "verified_scope": "Fixed mapped course set, its subject classification, introductory programming alternatives, source metadata and displayed aggregate semantics.",
+      "full_degree_verified": false,
+      "sources": [
+        {
+          "url": "https://bulletin.case.edu/engineering/computer-data-sciences/artificial-intelligence-bs/",
+          "locator": "Program Requirements: fixed core, introductory programming alternative and breadth selections",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; robots-aware fetch"
+        },
+        {
+          "url": "https://bulletin.case.edu/course-descriptions/csds/",
+          "locator": "CSDS 132,134,233,237,302,310,330,340,395A",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; robots-aware fetch"
+        },
+        {
+          "url": "https://bulletin.case.edu/course-descriptions/engr/",
+          "locator": "ENGR 399",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; robots-aware fetch"
+        }
+      ],
+      "expected_course_ids": {
+        "required": [
+          "case-bs-math-121",
+          "case-bs-math-307",
+          "case-bs-csds-233",
+          "case-bs-csds-302",
+          "case-bs-csds-310",
+          "case-bs-csds-330",
+          "case-bs-csds-340",
+          "case-bs-csds-395a",
+          "case-bs-engr-399"
+        ],
+        "options": [
+          "case-bs-csds-132",
+          "case-bs-csds-134",
+          "case-bs-csds-237"
+        ],
+        "unresolved": null
+      },
+      "expected_ids_scope": "Required list is the full manually established fixed set. Options list is only the independently reviewed introductory programming subset, not all elective candidates.",
+      "expected_profile": {
+        "required": {
+          "count": 9,
+          "categories": {
+            "foundations": 2,
+            "mathematics": 3,
+            "ai_ml": 3,
+            "systems": 0,
+            "human_context": 1,
+            "applications": 0,
+            "electives": 0,
+            "other": 0
+          }
+        },
+        "options": null,
+        "unresolved": null
+      },
+      "findings": [
+        "CSDS233 data structures and CSDS310 algorithm design/analysis are foundations;CSDS302 is mathematics by its discrete mathematical reasoning description.",
+        "CSDS134 OR CSDS132+237 is a route choice: three observed foundation option records do not mean three mandatory courses.",
+        "Prerequisite and mutual-credit exclusions remain source conditions, not new fixed obligations. Source units are preserved without summing alternative loads.",
+        "Every fixed identity now has source-backed category_review. Most broader elective/UGER categories remain unreviewed."
+      ],
+      "remaining": [
+        "Remaining elective/general-education course identities, prerequisites and categories need independent review.",
+        "Full degree-wide policy second pass remains unfinished; earlier complete inventory is not full correctness verification."
+      ],
+      "result": "Fixed-core correction independently verified; full-degree second pass remains partial."
+    }
+  ],
+  "cross_program_screen": [
+    {
+      "program_id": "case-western-reserve-university-artificial-intelligence-ba-degree",
+      "required_count": 8,
+      "required_foundations": 0,
+      "required_other": 3,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "case-western-reserve-university-artificial-intelligence-bs-degree",
+      "required_count": 9,
+      "required_foundations": 0,
+      "required_other": 4,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "cmu-bs-ai",
+      "required_count": 9,
+      "required_foundations": 5,
+      "required_other": 2,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "delaware-ai-engineering-major",
+      "required_count": 0,
+      "required_foundations": 0,
+      "required_other": 0,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "drexel-ai-ml-bs",
+      "required_count": 11,
+      "required_foundations": 6,
+      "required_other": 2,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "furman-ai-bs",
+      "required_count": 0,
+      "required_foundations": 0,
+      "required_other": 0,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "lehigh-university-artificial-intelligence-machine-learning-and-data-science-bs-degree",
+      "required_count": 0,
+      "required_foundations": 0,
+      "required_other": 0,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "miami-ai-technologies-business-bsba",
+      "required_count": 21,
+      "required_foundations": 0,
+      "required_other": 0,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "miami-data-science-ai-bs",
+      "required_count": 13,
+      "required_foundations": 5,
+      "required_other": 0,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "mit-ai-decision-making-bs",
+      "required_count": 2,
+      "required_foundations": 0,
+      "required_other": 2,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree",
+      "required_count": 32,
+      "required_foundations": 0,
+      "required_other": 0,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "northeastern-chemical-engineering-ai-bsche",
+      "required_count": 40,
+      "required_foundations": 7,
+      "required_other": 20,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree",
+      "required_count": 23,
+      "required_foundations": 6,
+      "required_other": 1,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree",
+      "required_count": 26,
+      "required_foundations": 6,
+      "required_other": 0,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree",
+      "required_count": 26,
+      "required_foundations": 6,
+      "required_other": 2,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-business-administration-bs-boston-bs-degree",
+      "required_count": 20,
+      "required_foundations": 7,
+      "required_other": 0,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree",
+      "required_count": 27,
+      "required_foundations": 6,
+      "required_other": 5,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-communication-studies-bs-boston-bs-degree",
+      "required_count": 14,
+      "required_foundations": 7,
+      "required_other": 1,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree",
+      "required_count": 18,
+      "required_foundations": 7,
+      "required_other": 5,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree",
+      "required_count": 22,
+      "required_foundations": 7,
+      "required_other": 8,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree",
+      "required_count": 27,
+      "required_foundations": 6,
+      "required_other": 3,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-economics-bs-boston-bs-degree",
+      "required_count": 17,
+      "required_foundations": 7,
+      "required_other": 0,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree",
+      "required_count": 22,
+      "required_foundations": 6,
+      "required_other": 5,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree",
+      "required_count": 25,
+      "required_foundations": 8,
+      "required_other": 5,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-international-affairs-bs-boston-bs-degree",
+      "required_count": 19,
+      "required_foundations": 7,
+      "required_other": 5,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree",
+      "required_count": 24,
+      "required_foundations": 7,
+      "required_other": 9,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-linguistics-bs-boston-bs-degree",
+      "required_count": 18,
+      "required_foundations": 7,
+      "required_other": 4,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree",
+      "required_count": 20,
+      "required_foundations": 6,
+      "required_other": 0,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-philosophy-bs-boston-bs-degree",
+      "required_count": 16,
+      "required_foundations": 7,
+      "required_other": 0,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-physics-bs-boston-bs-degree",
+      "required_count": 25,
+      "required_foundations": 6,
+      "required_other": 10,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-psychology-bs-boston-bs-degree",
+      "required_count": 14,
+      "required_foundations": 6,
+      "required_other": 1,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-public-health-bs-boston-bs-degree",
+      "required_count": 22,
+      "required_foundations": 9,
+      "required_other": 8,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree",
+      "required_count": 15,
+      "required_foundations": 7,
+      "required_other": 3,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree",
+      "required_count": 29,
+      "required_foundations": 8,
+      "required_other": 13,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "northeastern-university-environmental-engineering-and-artificial-intelligence-bsenve-boston-other-degree",
+      "required_count": 37,
+      "required_foundations": 7,
+      "required_other": 18,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree",
+      "required_count": 21,
+      "required_foundations": 0,
+      "required_other": 15,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "penn-bse-ai",
+      "required_count": 10,
+      "required_foundations": 5,
+      "required_other": 0,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "penn-state-ai-engineering-bs",
+      "required_count": 0,
+      "required_foundations": 0,
+      "required_other": 0,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "penn-state-ai-methods-applications-ist-bs",
+      "required_count": 0,
+      "required_foundations": 0,
+      "required_other": 0,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "purdue-ai-ba",
+      "required_count": 5,
+      "required_foundations": 4,
+      "required_other": 0,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "purdue-ai-bs",
+      "required_count": 9,
+      "required_foundations": 5,
+      "required_other": 0,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "rice-university-artificial-intelligence-bs-degree",
+      "required_count": 13,
+      "required_foundations": 0,
+      "required_other": 10,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "rochester-institute-of-technology-artificial-intelligence-bs-degree",
+      "required_count": 23,
+      "required_foundations": 3,
+      "required_other": 0,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "stevens-institute-of-technology-artificial-intelligence-bs-degree",
+      "required_count": 24,
+      "required_foundations": 8,
+      "required_other": 2,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "uc-merced-ai-bs",
+      "required_count": 0,
+      "required_foundations": 0,
+      "required_other": 0,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "ucsb-ai-bs",
+      "required_count": 19,
+      "required_foundations": 6,
+      "required_other": 0,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "university-at-buffalo-suny-ai-and-geospatial-analytics-bs-degree",
+      "required_count": 0,
+      "required_foundations": 0,
+      "required_other": 0,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "university-at-buffalo-suny-ai-and-language-and-intercultural-competence-bs-degree",
+      "required_count": 0,
+      "required_foundations": 0,
+      "required_other": 0,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "university-at-buffalo-suny-ai-and-language-technology-bs-degree",
+      "required_count": 0,
+      "required_foundations": 0,
+      "required_other": 0,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "university-at-buffalo-suny-ai-and-logic-and-ontology-bs-degree",
+      "required_count": 0,
+      "required_foundations": 0,
+      "required_other": 0,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "university-at-buffalo-suny-ai-and-philosophy-politics-economics-bs-degree",
+      "required_count": 0,
+      "required_foundations": 0,
+      "required_other": 0,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "university-at-buffalo-suny-ai-and-policy-analysis-bs-degree",
+      "required_count": 0,
+      "required_foundations": 0,
+      "required_other": 0,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "university-at-buffalo-suny-ai-and-quantitative-economics-bs-degree",
+      "required_count": 0,
+      "required_foundations": 0,
+      "required_other": 0,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "university-at-buffalo-suny-ai-and-responsible-communication-bs-degree",
+      "required_count": 0,
+      "required_foundations": 0,
+      "required_other": 0,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "university-of-california-san-diego-artificial-intelligence-bs-degree",
+      "required_count": 8,
+      "required_foundations": 2,
+      "required_other": 0,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "university-of-maryland-college-park-artificial-intelligence-computational-structures-for-ai-systems-bsai-degree",
+      "required_count": 6,
+      "required_foundations": 0,
+      "required_other": 0,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "university-of-maryland-college-park-human-centered-ai-ba-degree",
+      "required_count": 10,
+      "required_foundations": 0,
+      "required_other": 0,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree",
+      "required_count": 22,
+      "required_foundations": 0,
+      "required_other": 0,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree",
+      "required_count": 7,
+      "required_foundations": 3,
+      "required_other": 0,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "university-of-south-florida-artificial-intelligence-bs-degree",
+      "required_count": 24,
+      "required_foundations": 15,
+      "required_other": 0,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "william-mary-applied-ai-ba",
+      "required_count": 3,
+      "required_foundations": 0,
+      "required_other": 0,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "wpi-ai-bs",
+      "required_count": 3,
+      "required_foundations": 0,
+      "required_other": 0,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    },
+    {
+      "program_id": "wpi-business-analytics-applied-ai-bs",
+      "required_count": 0,
+      "required_foundations": 0,
+      "required_other": 0,
+      "interpretation": "Screen only; zero and other counts do not establish missing subject matter."
+    }
+  ],
+  "cross_program_checks": [
+    {
+      "programs": [
+        "cmu-bs-ai",
+        "penn-bse-ai"
+      ],
+      "scope": "Source-specific data structures comparison",
+      "finding": "CMU15-210 description and PennCIS1210 precise official core title support foundations. Both fixed graph roles agree with CaseCSDS233. This is not a complete CMU/Penn audit.",
+      "sources": [
+        "https://coursecatalog.web.cmu.edu/schools-colleges/schoolofcomputerscience/courses/",
+        "https://ai.engineering.upenn.edu/academics/undergraduate/"
+      ]
+    },
+    {
+      "programs": [
+        "mit-ai-decision-making-bs"
+      ],
+      "scope": "Source-version graph isolation",
+      "finding": "Versioned6.1210 core remains fixed; separate conflicted chart occurrence is unresolved under note ancestry. Neither duplicate identity nor prerequisite is promoted to extra fixed workload.",
+      "source_review": "Graph/record review only; broader new official evidence review remains primary owner work."
+    },
+    {
+      "programs": [
+        "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree",
+        "university-at-buffalo-suny-ai-and-policy-analysis-bs-degree"
+      ],
+      "scope": "Resolved family semantics",
+      "finding": "NortheasternCS2000/2001 inherited fixed occurrences remain counted once. Buffalo note-only framework does not invent fixed courses. Source placement/waiver caveats remain applicable.",
+      "source_review": "Resolved graph/record review only; not a full family degree audit."
+    }
+  ],
+  "open_findings": [
+    {
+      "program_id": "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree",
+      "issue": "Live fixed21 foundations0 other15; source-mapped COMP_SCI111/208/211/336 need course-evidence category review.",
+      "status": "routed to coordinator; no automatic reclassification"
+    },
+    {
+      "program_id": "rice-university-artificial-intelligence-bs-degree",
+      "issue": "Live fixed13 foundations0 other10 warrants direct description review, not a missing-foundations conclusion.",
+      "status": "routed to coordinator"
+    },
+    {
+      "program_id": "penn-bse-ai",
+      "issue": "MATH3400/3410 technical-pool observations use legacy electives subject label.",
+      "status": "routed to coordinator"
+    },
+    {
+      "program_id": "wpi-ai-bs",
+      "issue": "CS2022/MA2201 Discrete Mathematics observed as ai_ml from pool context; source-specific review required.",
+      "status": "routed to coordinator"
+    }
+  ]
+}

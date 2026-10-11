@@ -469,3 +469,56 @@ def test_required_profile_detail_without_javascript(browser,site,tmp_path,site_d
     expect(page.locator('.profile-panel[data-profile="options"]')).to_be_visible()
     expect(page.locator('.profile-panel[data-profile="options"]')).to_contain_text('14 distinct elective option records')
     context.close()
+
+
+def test_profile_zero_mapping_and_taxonomy_missingness_on_mobile(page,site,tmp_path,site_data):
+    from playwright.sync_api import expect
+    from tests.test_curriculum_profile_ui import profile_fixture
+    profile_fixture(site_data)
+    site_data['programs'][0]['curriculum_status']='complete'
+    build(site_data,tmp_path/'ai-program-atlas')
+    page.set_viewport_size({'width':390,'height':900})
+    errors=[]
+    page.on('pageerror',lambda error:errors.append(str(error)))
+    page.goto(site+'programs/test-ai-0/#curriculum')
+    required=page.locator('[data-profile="required"]')
+    expect(required.locator('[data-category="foundations"] strong')).to_have_text('0 mapped')
+    expect(required.locator('.profile-taxonomy')).to_contain_text('2 unreviewed')
+    expect(page.locator('.curriculum-profile')).to_contain_text('not evidence that the curriculum lacks that subject')
+    assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
+    page.goto(site+'?compare=test-ai-0#comparison')
+    expect(page.locator('.compare-profile-cell')).to_contain_text('0 mapped')
+    expect(page.locator('.compare-profile-cell .profile-taxonomy')).to_contain_text('2 unreviewed')
+    expect(page.locator('.compare-profile-cell')).to_contain_text('not evidence that the curriculum lacks the subject')
+    page.locator('#compare-profile').select_option('options')
+    expect(page.locator('.compare-profile-cell .profile-taxonomy')).to_contain_text('14 unreviewed')
+    page.reload()
+    expect(page.locator('#compare-profile')).to_have_value('options')
+    assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
+    assert not errors
+
+
+def test_case_corrected_fixed_foundations_and_source_review_are_visible(page,site,tmp_path,site_data):
+    import json
+    from pathlib import Path
+    from playwright.sync_api import expect
+    root=Path(__file__).resolve().parents[2]
+    pid='case-western-reserve-university-artificial-intelligence-ba-degree'
+    program=json.loads((root/'data/programs'/f'{pid}.json').read_text())
+    site_data['programs']=[program]
+    site_data['institutions']=[program['institution']]
+    build(site_data,tmp_path/'ai-program-atlas')
+    page.goto(site+f'programs/{pid}/#curriculum')
+    required=page.locator('[data-profile="required"]')
+    expect(required.locator('[data-category="foundations"] strong')).to_have_text('2')
+    expect(required.locator('.profile-taxonomy')).to_contain_text('8 reviewed')
+    expect(required.locator('.profile-taxonomy')).to_contain_text('0 unreviewed')
+    row=page.locator('#course-case-ba-csds-233').locator('..')
+    expect(row.locator('.category-review-status')).to_have_text('Reviewed classification')
+    row.locator('.category-review summary').click()
+    expect(row.locator('.category-review a')).to_have_attribute('href','https://bulletin.case.edu/course-descriptions/csds/')
+    expect(row.locator('.category-review')).to_contain_text('data structures')
+    page.goto(site+f'?compare={pid}#comparison')
+    dt=page.locator('.compare-profile-cell dt',has_text='Computing foundations')
+    expect(dt.locator('+ dd')).to_have_text('2')
+    expect(page.locator('.compare-profile-cell .profile-taxonomy')).to_contain_text('8 reviewed')
