@@ -47,7 +47,7 @@ def test_optional_actual_current_pages():
     root=Path('.cache/research/wpi-content-review')
     if not root.exists():pytest.skip('Ignored current source pages unavailable')
     for code,entry in m.SPEC.items():
-        path=root/(code.lower().replace(' ','-').replace('/','_')+'.html')
+        path=root/(entry.get('heading_code',code).lower().replace(' ','-').replace('/','_')+'.html')
         if not path.exists():pytest.skip('Optional source page absent')
         for pid in entry['program_ids']:
             first=m.parse(path.read_text(),program_id=pid,code=code)
@@ -99,7 +99,7 @@ def test_ai_computing_mathematics_source_rules_preserve_option_scope():
     assert 'Suggested background (advisory)' in courses['MA 2210']['prerequisites']
     profile=requirement_profile(p)
     assert [profile[x]['count'] for x in ['required','options','unresolved']]==[6,211,2]
-    assert sum('wpi-ai-bs' in e['program_ids'] for e in m.SPEC.values())==92
+    assert sum('wpi-ai-bs' in e['program_ids'] for e in m.SPEC.values())==116
     assert not p.get('course_identity_groups')
 
 
@@ -129,4 +129,25 @@ def test_graduate_mixtures_and_source_version_limits():
     assert c['CS 585/DS 503']['category']=='systems'
     assert c['CS 551/DS 551']['category']=='ai_ml'
     grad=[e for e in m.SPEC.values() if e.get('catalog_heading')=='Graduate Catalog']
-    assert len(grad)==15 and all(e['catalog_year'] is None and e['credit_unit']=='unknown' for e in grad)
+    assert len(grad)==20 and all(e['catalog_year'] is None and e['credit_unit']=='unknown' for e in grad)
+
+
+def test_engineering_subjects_and_explicit_description_referral(monkeypatch):
+    from bs4 import BeautifulSoup
+    from atlas.adapters.cmu_bs.common import text
+    p=json.loads(Path('data/programs/wpi-ai-bs.json').read_text());c={x['code']:x for x in p['courses']}
+    assert c['RBE 2002']['category']=='applications'
+    assert c['RBE 4744']['category']=='ai_ml'
+    assert c['RBE 4601']['category']=='human_context'
+    assert c['ECE 2311']['category']=='mathematics'
+    assert c['ECE 4801']['category']=='systems'
+    assert c['RBE 2020']['category_review']['status']=='mixed'
+    code='ECE 545/CS 545';entry=copy.deepcopy(m.SPEC[code])
+    assert entry['heading_code']=='CS 545/ECE 545'
+    assert len(c[code]['category_review']['source_ids'])==2
+    html='<main><h1>Synthetic referral</h1><p>See the named companion description.</p></main>'
+    entry['referral_main_digest']=hashlib.sha256(text(BeautifulSoup(html,'html.parser').find('main')).encode()).hexdigest()
+    monkeypatch.setitem(m.SPEC,code,entry)
+    result=m.parse_referral(html,program_id='wpi-ai-bs',code=code)
+    assert not result['courses'] and not result['requirements']
+    with pytest.raises(ValueError):m.parse_referral(html.replace('companion','unrelated'),program_id='wpi-ai-bs',code=code)

@@ -17,7 +17,7 @@ def parse(html, *, program_id, code):
     soup = BeautifulSoup(html, 'html.parser')
     main = soup.find('main')
     heading = main.find('h1') if main else None
-    if not heading or text(heading) != code + ': ' + entry['name']:
+    if not heading or text(heading) != entry.get('heading_code', code) + ': ' + entry['name']:
         raise ValueError('WPI reviewed identity changed')
     if entry.get('catalog_heading', 'Undergraduate Catalog 2026-2027') not in text(soup):
         raise ValueError('WPI reviewed catalog version changed')
@@ -58,12 +58,26 @@ def parse(html, *, program_id, code):
         notes.append(code + ' ' + entry['offering_note'])
     if entry.get('credit_note'):
         notes.append(code + ' ' + entry['credit_note'])
+    if entry.get('referral_note'):
+        notes.append(code + ' ' + entry['referral_note'])
     key = entry.get('source_key', code.lower().replace(' ','-'))
     return {'id': program_id, 'courses': [dict(id=entry.get('course_id', 'wpi-'+key), code=code,
             name=entry['name'], description=entry['description'], prerequisites=recommended,
             credits=float(Fraction(text(units))), credit_unit=entry.get('credit_unit', 'units'), category=entry['category'],
             source_id=program_id+'-course-'+key, url=entry['url'])],
             'requirements': [], 'notes': notes}
+
+
+def parse_referral(html, *, program_id, code):
+    """Observe the source's explicit referral without duplicating the course."""
+    entry = SPEC[code]
+    if program_id not in entry['program_ids']:
+        raise ValueError('WPI referral outside reviewed program scope')
+    main = BeautifulSoup(html, 'html.parser').find('main')
+    if not main or hashlib.sha256(text(main).encode()).hexdigest() != entry['referral_main_digest']:
+        raise ValueError('WPI course-description referral changed')
+    return {'id': program_id, 'courses': [], 'requirements': [],
+            'notes': [entry['referral_note']]}
 
 
 def attach(namespace):
@@ -74,3 +88,7 @@ def attach(namespace):
         if entry['url'] not in namespace['SOURCES']:
             namespace['SOURCES'].append(entry['url'])
         namespace['SOURCE_PARSERS'][entry['url']] = partial(parse, program_id=pid, code=code)
+        if entry.get('referral_url'):
+            if entry['referral_url'] not in namespace['SOURCES']:
+                namespace['SOURCES'].append(entry['referral_url'])
+            namespace['SOURCE_PARSERS'][entry['referral_url']] = partial(parse_referral, program_id=pid, code=code)
