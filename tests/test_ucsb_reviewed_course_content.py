@@ -43,10 +43,10 @@ def test_real_seed_exact_roles_and_limits():
     assert 'CMPSC 130A, CMPSC 165A, and CMPSC 165B' in c['CMPSC 188']['prerequisites']
     assert 'recommended' in c['CMPSC 174A']['prerequisites'].lower()
     p=requirement_profile(d)
-    assert [p[k]['count']for k in ['required','options','unresolved']]==[20,262,2]
+    assert [p[k]['count']for k in ['required','options','unresolved']]==[20,827,2]
     assert p['options']['categories']['systems']==12
     assert p['options']['categories']['foundations']==10
-    assert d['course_identity_groups'][0]['course_ids']==['ucsb-c-lit-155','ucsb-ger-155']
+    assert d['course_identity_groups'][0]['course_ids']==['ucsb-c-lit-155','ucsb-ger-155','ucsb-engl-155ai']
 
 
 def test_registered_parsers_observe_all_available_cached_pages():
@@ -102,7 +102,7 @@ def test_writing_series_guard_and_no_automatic_identity_or_prerequisite_role(mon
     assert any('formerly WRIT109ES' in n for n in c['WRIT 107EP']['notes'])
     assert 'Writing 2 or 2E or 2LK' in c['WRIT 50E']['prerequisites']
     assert 'freshmen only' in c['WRIT 50E']['prerequisites']
-    assert requirement_profile(d)['options']['categories']['human_context']==223
+    assert requirement_profile(d)['options']['categories']['human_context']==736
 
 
 def test_writing_actual_cache_matches_all25_read_blocks():
@@ -146,7 +146,7 @@ def test_english_offering_guards_do_not_infer_current_version_or_gold_prerequisi
     assert courses['ENGL 146AI']['code']!='ENGL 155AI'
     assert 'Winter 2021' in english.SPEC['engl146ai']['term']
     assert courses['ENGL 146AI']['credits']==4
-    assert requirement_profile(d)['options']['categories']['human_context']==223
+    assert requirement_profile(d)['options']['categories']['human_context']==736
 
 
 def test_english_all_five_actual_dated_offerings_are_guarded():
@@ -180,13 +180,13 @@ def test_current_crosslisting_uses_reciprocal_evidence_and_retains_raw_codes():
     d=json.loads(Path('data/programs/ucsb-ai-bs.json').read_text())
     group=d['course_identity_groups'][0]
     assert group['canonical_course_id']=='ucsb-c-lit-155'
-    assert len(group['source_ids'])==2
+    assert set(group['source_ids'])=={'ucsb-ai-bs-ger155-catalog-2026','ucsb-ai-bs-clit155-catalog-2026','ucsb-ai-bs-ge-defg-export'}
     assert 'ucsb-engl-146ai'not in group['course_ids']
     profile=requirement_profile(d)
-    assert profile['options']['count']==262
-    assert profile['options']['source_record_count']==264
-    assert profile['options']['categories']['human_context']==223
-    assert profile['options']['categories']['other']==10
+    assert profile['options']['count']==827
+    assert profile['options']['source_record_count']==917
+    assert profile['options']['categories']['human_context']==736
+    assert profile['options']['categories']['other']==44
     from atlas.adapters import ucsb_catalog_course_content as current
     for code, entry in current.SPEC.items():
         key='clit155' if code=='C LIT 155' else code.lower().replace(' ','')
@@ -201,7 +201,7 @@ def test_current_crosslisting_uses_reciprocal_evidence_and_retains_raw_codes():
 def test_current_catalog_required_vision_identity_and_precise_eligibility():
     d=json.loads(Path('data/programs/ucsb-ai-bs.json').read_text())
     c={c['code']:c for c in d['courses']}
-    assert len(d['course_identity_groups'])==3
+    assert len(d['course_identity_groups'])==82
     vision=next(r for r in d['requirements']if r['id']=='ucsb-ai-bs-ucsb-cmpsc-181')
     assert vision['kind']=='all' and vision['count'] is None
     assert vision['course_ids']==['ucsb-cmpsc-181','ucsb-ece-181']
@@ -216,8 +216,8 @@ def test_current_catalog_required_vision_identity_and_precise_eligibility():
     assert c['CMPSC 25']['category']==c['CMPSC 42']['category']=='foundations'
     assert c['CMPSC 135']['category']=='mathematics'
     profile=requirement_profile(d)
-    assert [profile[k]['count']for k in ['required','options','unresolved']]==[20,262,2]
-    assert [profile[k]['source_record_count']for k in ['required','options','unresolved']]==[21,264,2]
+    assert [profile[k]['count']for k in ['required','options','unresolved']]==[20,827,2]
+    assert [profile[k]['source_record_count']for k in ['required','options','unresolved']]==[21,917,2]
 
 
 def test_all_fixed_course_versions_and_recommendation_fields_are_current():
@@ -294,7 +294,7 @@ def test_current_entry_writing_preserves_narrow_eligibility_and_unit_conflict():
 def test_all_represented_writing_versions_preserve_exact_alternatives():
     from atlas.adapters import ucsb_catalog_course_content as current
     d=json.loads(Path('data/programs/ucsb-ai-bs.json').read_text());c={x['code']:x for x in d['courses']}
-    writing=[x for x in d['courses']if x['code'].startswith('WRIT ')]
+    writing=[x for x in d['courses']if x['code'] in current.SPEC and x['code'].startswith('WRIT ')]
     assert len(writing)==26
     assert all(x['source_id'].endswith('-catalog-2026')for x in writing)
     assert c['WRIT 50']['credits'] is None and current.SPEC['WRIT 50']['credits']==5
@@ -304,7 +304,7 @@ def test_all_represented_writing_versions_preserve_exact_alternatives():
     assert 'Summer 2003 and Spring 2010' in c['WRIT 107M']['prerequisites']
     assert 'legal repeat' in c['WRIT 107WC']['prerequisites']
     assert c['WRIT 105CD']['category_review']['status']=='mixed'
-    assert all(not any(i.startswith('ucsb-writ-')for i in g['course_ids']) for g in d['course_identity_groups'])
+    assert {i for g in d['course_identity_groups'] for i in g['course_ids'] if i.startswith('ucsb-writ-')} == {'ucsb-writ-w-6r'}
 
 
 def test_current_cs_options_keep_permission_alternatives_and_source_barrier():

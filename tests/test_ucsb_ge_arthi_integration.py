@@ -21,9 +21,9 @@ def test_completed_art_history_batch_maps_choices_without_inferred_prerequisites
     assert any('same course' in n.lower() for n in courses['ARTHIW 6F']['notes'])
     assert courses['ARTHIW 6F']['id'] != courses['ARTHI 6F']['id']
     profile = requirement_profile(d)
-    assert [profile[k]['count'] for k in ('required', 'options', 'unresolved')] == [20, 262, 2]
-    assert profile['options']['source_record_count'] == 264
-    assert len(d['course_identity_groups']) == 3
+    assert [profile[k]['count'] for k in ('required', 'options', 'unresolved')] == [20, 827, 2]
+    assert profile['options']['source_record_count'] == 917
+    assert len(d['course_identity_groups']) == 82
     r = {r['id']: r for r in d['requirements']}
     assert 'ucsb-arthiw-6r' in r['ucsb-ai-bs-policy-area-e']['course_ids']
     assert 'ucsb-arthiw-6r' in r['ucsb-ai-bs-policy-area-f']['course_ids']

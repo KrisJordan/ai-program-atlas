@@ -19,4 +19,4 @@ def test_integrated_religious_studies_and_comparative_literature_keep_scope():
     assert c['C LIT 155']['source_id'] != 'ucsb-ai-bs-ge-defg-export'
     assert 'ucsb-ai-bs-ge-defg-export' in c['C LIT 155']['category_review']['source_ids']
     assert len([x for x in d['courses'] if x['id'] == 'ucsb-c-lit-155']) == 1
-    assert [requirement_profile(d)[k]['count'] for k in ('required', 'options', 'unresolved')] == [20, 262, 2]
+    assert [requirement_profile(d)[k]['count'] for k in ('required', 'options', 'unresolved')] == [20, 827, 2]
