@@ -44,4 +44,37 @@ def test_primary_fixed_core_independently_reviewed():
  assert all(c['category_review']['status']=='reviewed'for c in p['courses']if c['code'] in expected)
  assert next(c for c in p['courses']if c['code']=='CIS 2450')['prerequisites'] is None
  assert next(c for c in p['courses']if c['code']=='CIS 1100')['credits'] is None
- assert len([c for c in p['courses']if c.get('category_review')])==83
+ assert len([c for c in p['courses']if c.get('category_review')])==552
+
+
+def test_independent_full_source_role_sets_and_unknown_evidence():
+ p=json.loads(Path('data/programs/penn-bse-ai.json').read_text())
+ e=json.loads(Path('research/degree-audit/penn.json').read_text())['programs'][0]
+ observed=requirement_profile(p)
+ assert e['status']=='blocked' and not e['remaining_work']
+ for role in ['required','options','unresolved']:
+  assert observed[role]['count']==len(e['expected_course_ids'][role])==e['expected_profile'][role]['count']
+  assert observed[role]['categories']==e['expected_profile'][role]['categories']
+ assert [observed[r]['count']for r in ['required','options','unresolved']]==[10,372,170]
+ assert all(c['category']=='other' and c['category_review']['status']=='unclassified'for c in p['courses']if c['name'] is None)
+ assert next(c for c in p['courses']if c['code']=='WRIT 1380')['category']=='other'
+ assert next(c for c in p['courses']if c['code']=='ECON 2300')['category']=='mathematics'
+ assert next(c for c in p['courses']if c['code']=='CIS 5190')['category']=='ai_ml'
+
+
+def test_unapproved_inventory_row_supplies_title_without_eligibility():
+ from atlas.adapters.penn_bse.inventory_titles import parse_inventory_with_titles
+ rows=[dict(course4d='CIS 3500',title='Software Engineering',status='yes'),dict(course4d='EAS 2030',title='Engineering Ethics',status='no'),dict(course4d='ZZZ 1234',title='Unrelated title',status='no')]
+ d=classify_observed(parse_inventory_with_titles(json.dumps(rows)))
+ by={c['code']:c for c in d['courses']}
+ assert set(by)=={'CIS 3500','EAS 2030'}
+ assert by['EAS 2030']['name']=='Engineering Ethics' and by['EAS 2030']['category']=='human_context'
+ assert not any(by['EAS 2030']['id']in r['course_ids'] for r in d['requirements'])
+ rows[1]['title']='Changed ambiguous subject'
+ changed=classify_observed(parse_inventory_with_titles(json.dumps(rows)))
+ assert next(c for c in changed['courses']if c['code']=='EAS 2030')['category']=='other'
+ rows[1]['status']='ask'
+ conditional=parse_inventory_with_titles(json.dumps(rows))
+ assert len([c for c in conditional['courses']if c['code']=='EAS 2030'])==1
+ assert any(r['kind']=='note' and by['EAS 2030']['id']in r['course_ids']for r in conditional['requirements'])
+ assert not any('category_review'in c for c in conditional['courses'])

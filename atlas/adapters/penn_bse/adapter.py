@@ -122,3 +122,13 @@ register_resources(PROGRAM_ID, SOURCES, SOURCE_PARSERS)
 
 from .core_resources import register as register_core_resources
 register_core_resources(SOURCES, SOURCE_PARSERS)
+
+from .inventory_titles import parse_inventory_with_titles
+SOURCE_PARSERS[INVENTORY] = parse_inventory_with_titles
+
+# Apply the same exact identity review to this program's linked inventories.
+# Eligibility-list membership and worksheet labels do not classify subjects.
+from .subjects import classify_observed as classify_linked_subjects
+for _subject_url in [INVENTORY, HANDBOOK_URL]:
+    _subject_parser = SOURCE_PARSERS[_subject_url]
+    SOURCE_PARSERS[_subject_url] = lambda html, parser=_subject_parser: classify_linked_subjects(parser(html))

@@ -12,7 +12,10 @@ def test_bse_enrichment_preserves_scope_and_missingness():
     db.validate_program(p)
     assert p['curriculum_status']=='partial'
     by={c['code']:c for c in p['courses']}
-    assert by['CIS 5190']['category']=='electives'
+    assert by['CIS 5190']['category']=='ai_ml'
+    technical=next(r for r in p['requirements']if r['id'].endswith('technical-electives'))
+    assert by['CIS 5190']['id']in technical['course_ids']
+    assert technical['kind']=='choose_credits'
     for code in ['CIS 4190','CIS 5190','CIS 4210','CIS 5210','CIS 5200']:
         assert by[code]['description'] and by[code]['public_site']
         assert by[code]['credits'] is None
