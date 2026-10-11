@@ -178,59 +178,7 @@ def parse_plan(html):
     }
 
 
-def parse_rules(html):
-    soup = BeautifulSoup(html, "html.parser")
-    body = text(soup)
-    if not soup.find(
-        lambda n: n.name == "h1" and text(n) == "Bachelor of Science in Artificial Intelligence"
-    ):
-        raise ValueError("Expected catalog BS heading")
-    if any(text(a) == "course" for a in soup.find_all("a", attrs={"data-course-id": True})):
-        raise ValueError("Unhydrated catalog course references; browser rendering required")
-    rules = []
-    for sid, title, pattern in [
-        ("technical", "Technical Electives", r"complete (\d+) Technical electives"),
-        ("general", "General Electives", r"complete (\d+) General Electives"),
-    ]:
-        h = soup.find(lambda n, title=title: n.name == "button" and text(n) == title)
-        panel = soup.find(id=h.get("aria-controls")) if h else None
-        if panel is None:
-            raise ValueError("Expected requirement panel: " + title)
-        value = text(panel)
-        match = re.search(pattern, value)
-        if match is None or "prior approval" not in value:
-            raise ValueError("Elective count or advising rule changed")
-        links = [text(a) for a in panel.find_all("a", attrs={"data-course-id": True})]
-        summary = "Complete " + match[1] + " courses; prior academic-advisor approval required. "
-        if sid == "technical":
-            summary += (
-                "Listed options: "
-                + ", ".join(links)
-                + ". Detailed course titles/credits and undergraduate access remain unverified."
-            )
-        else:
-            summary += "Use courses carrying at least three credits; required or equivalent coursework is excluded. Additional prohibited courses and overlapping pairs need the full published rule."
-        rules.append(
-            requirement(
-                "policy-" + sid,
-                title,
-                "choose_courses",
-                count=int(match[1]),
-                summary=summary,
-                source="rules",
-            )
-        )
-    if "two science courses and a science laboratory" not in body:
-        raise ValueError("Science sequence structure changed")
-    rules.append(
-        requirement(
-            "policy-science",
-            "Science sequence",
-            summary="Complete two science courses and a science laboratory using one published sequence. The six permitted pathways and laboratory alternatives require the source table.",
-            source="rules",
-        )
-    )
-    return {"id": PROGRAM_ID, "curriculum_status": "partial", "requirements": rules}
+from atlas.adapters.stevens_ai_requirements import parse as parse_rules
 
 
 SOURCE_PARSERS = {SOURCES[0]: parse, PLAN: parse_plan, RULES: parse_rules}
@@ -239,3 +187,7 @@ from atlas.adapters.stevens_public_policies import register
 SOURCES=list(SOURCES)
 SOURCE_PARSERS=globals().get("SOURCE_PARSERS", {})
 register(PROGRAM_ID,SOURCES,SOURCE_PARSERS,minor=False)
+
+from atlas.adapters.stevens_ai_general_education import SOURCE_PARSERS as GENERAL_EDUCATION_PARSERS
+SOURCE_PARSERS.update(GENERAL_EDUCATION_PARSERS)
+SOURCES.extend(u for u in GENERAL_EDUCATION_PARSERS if u not in SOURCES)
