@@ -76,3 +76,15 @@ register_open_related(SOURCES,SOURCE_PARSERS)
 
 from atlas.adapters.rit_policy_political_immersion_integration import register as register_policy_politics
 register_policy_politics(SOURCES,SOURCE_PARSERS)
+
+from atlas.adapters.rit_english_communication_course_reviews import parse as parse_writing_cards
+from atlas.adapters.rit_policy_political_immersion_integration import parse_rules as parse_immersion_rules
+for slug in ['advertising-and-public-relations-immersion', 'communication-immersion', 'creative-writing-immersion', 'digital-literatures-and-comparative-media-immersion', 'literature-and-media-immersion']:
+    url = 'https://www.rit.edu/study/' + slug
+    if url not in SOURCES:
+        SOURCES.append(url)
+    SOURCE_PARSERS[url] = partial(parse_writing_cards, url=url)
+url = 'https://www.rit.edu/study/black-studies-immersion'
+if url not in SOURCES:
+    SOURCES.append(url)
+SOURCE_PARSERS[url] = partial(parse_immersion_rules, title='Black Studies Immersion')
