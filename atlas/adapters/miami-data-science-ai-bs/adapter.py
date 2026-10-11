@@ -43,3 +43,6 @@ register_english_context(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
 
 from atlas.adapters.miami_his_context_reviews import register as register_history_context
 register_history_context(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
+
+from atlas.adapters.miami_enrollment_scope import register as register_enrollment_scope
+register_enrollment_scope(PROGRAM_ID,SOURCES,SOURCE_PARSERS)

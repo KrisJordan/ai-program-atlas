@@ -104,3 +104,7 @@ Supersedes earlier summer-conflict wording: the complete current source separate
 ## 2026-10-11 History contextual descriptions
 
 151 complete official History course blocks now supply source-guarded observations and separate manual content reviews. 136 have supported historical/cultural content; 15 remain explicitly unclassified transfer or unspecified-topic records. Thirteen credit ranges retain null scalar amounts; prerequisite and permission restrictions remain exact. Current source edition is not inferred from mixed PDF navigation. The 151 courses keep their existing contextual ancestry; no degree requirements, approvals or identity merges are invented. See `research/degree-audit/miami-history-context-review.md`.
+
+## 2026-10-11 public enrollment and graduation scopes
+
+Current university course-information and graduation sections were reread. Seven additional course-free conditional notes preserve explicit semester-credit terminology, course-level eligibility, permission/confirmed enrollment, modality limits, CR/NC timing, processed declarations, optional dual-degree approval and nonregistration-credit ceilings. Approval processes are not approval grants; a dual degree does not change this single award’s published total. Source-specific full-policy guards compose with earlier observers and emit no audit. The source-wide credit normalization is explicit. Current public sources do not certify a particular student’s private Degree Progress Report.
