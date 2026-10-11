@@ -40,3 +40,13 @@ verbatim metadata, not invented degree obligations or cross-list equivalences.
 
 Full degree correctness remains in progress. The technical BSAI's AI Algorithms
 12-versus-18-credit inconsistency and all prior policy questions remain explicit.
+
+## Full available course-content pass — 2026-10-11
+
+Reviewed all available exact current course blocks for this represented inventory. **60 course records have current-block dispositions; 25 missing entries or topic-specific versions remain unclassified.** Across both Maryland degrees, 148 distinct current blocks produce 153 program observations. Three Latin blocks have no description paragraph: their precise elementary/intermediate language titles support a explicitly limited human-context judgment; no unseen description is asserted. The remaining 150 program observations have full description-based review.
+
+The ordinary robots-aware chapter fetch found current HCAI and CSAI chapter URLs return HTTP 404. Other absent exact codes are not replaced by similar titles or former codes. Generic CMSC498/IMDM498/GEOG398 blocks do not certify particular topic versions, nor does generic PHIL438 certify PHIL438L. Current catalog restrictions, permissions, recommended preparation and repeat conditions remain enrollment metadata, not new fixed degree courses or automatic waivers. Mutually exclusive credit is not enough for identity merging.
+
+Logical metatheory is mathematics; geospatial/data algorithms are foundations; social AI courses are human context; linguistic and behavioral science are domain knowledge. Broad graphics/game/visualization or statistical-learning combinations retain mixed status. The dated language-reference paths keep their scope and conditions; updated current course metadata does not declare that reference current or settle its grading conflict.
+
+The source-specific manifest stores hashes, original summaries and explicit judgments. Changed or missing blocks fail without emitting manual certifications. The rerunnable observer is registered in each program adapter. Validation: 51 focused tests, 44 actual chapter observations, isolated two-program SQLite export/static build, repeat ingest zero changes and clean integrity/foreign keys. Requirement-role counts are unchanged by this content pass. Comprehensive policy, exact role/identity and source-gap closure remain in progress.

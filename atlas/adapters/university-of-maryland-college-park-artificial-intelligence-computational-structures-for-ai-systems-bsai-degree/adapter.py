@@ -10,3 +10,8 @@ SOURCES += tuple(SOURCE_PARSERS)
 
 def parse(html):
     return parse_curriculum(html, pid=PROGRAM_ID, title='Artificial Intelligence: Computational Structures for AI Systems', award='BSAI', url=SOURCES[0])
+
+# Full exact-code review supersedes the earlier bounded metadata selections.
+from atlas.adapters.maryland_full_course_reviews import parsers as full_course_parsers
+SOURCE_PARSERS.update(full_course_parsers(PROGRAM_ID))
+SOURCES=tuple(dict.fromkeys(SOURCES+tuple(SOURCE_PARSERS)))
