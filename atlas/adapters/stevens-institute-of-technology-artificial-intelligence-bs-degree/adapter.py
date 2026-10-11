@@ -191,3 +191,5 @@ register(PROGRAM_ID,SOURCES,SOURCE_PARSERS,minor=False)
 from atlas.adapters.stevens_ai_general_education import SOURCE_PARSERS as GENERAL_EDUCATION_PARSERS
 SOURCE_PARSERS.update(GENERAL_EDUCATION_PARSERS)
 SOURCES.extend(u for u in GENERAL_EDUCATION_PARSERS if u not in SOURCES)
+from atlas.adapters.stevens_degree_course_review import register as register_reviewed_courses
+register_reviewed_courses(SOURCES,SOURCE_PARSERS)

@@ -236,3 +236,25 @@ def test_miami_bte_description_guard_never_emits_manual_review(monkeypatch):
   assert courses['BTE 401']['category']=='human_context'
   assert courses['BTE 210']['category_review']['status']=='mixed'
   assert courses['BTE 497']['credits'] is None
+
+
+def test_stevens_review_scopes_identity_and_field_changes(monkeypatch):
+ from atlas.adapters import stevens_degree_course_review as review
+ html='<h1>Navigation</h1><article class="flex-1"><h1>CS 368</h1><div><h3 class="field-label">Course Description</h3><section class="field-value">Example database infrastructure.</section></div><div><h3 class="field-label">Credits</h3><section class="field-value">3</section></div></article>'
+ monkeypatch.setattr(review,'SPEC',{'CS 368':dict(id='stevens-cs-368',name='Example data management',source_id='catalog',url='https://example.edu/course',description_digest=hashlib.sha256(b'Example database infrastructure.').hexdigest(),category='systems',description='Example database infrastructure.')})
+ result=review.parse(html,'CS 368')
+ assert result['courses'][0]['category']=='systems'
+ assert result['courses'][0]['credit_unit']=='unknown'
+ assert 'category_review' not in result['courses'][0]
+ with pytest.raises(ValueError,match='field changed'):
+  review.parse(html.replace('database infrastructure.','changed content.'),'CS 368')
+ with pytest.raises(ValueError,match='identity changed'):
+  review.parse(html.replace('<h1>CS 368</h1>','<h1>Login</h1>'),'CS 368')
+ p=json.loads(Path('data/programs/stevens-institute-of-technology-artificial-intelligence-bs-degree.json').read_text())
+ courses={c['code']:c for c in p['courses']}
+ assert courses['CS 368']['category']=='systems'
+ assert courses['CS 135']['category_review']['status']=='mixed'
+ assert courses['CS 456']['category_review']['status']=='mixed'
+ assert courses['CS 508']['category_review']['status']=='mixed'
+ assert courses['CS 558 / CPE 558']['credits']==3
+ assert 'Graduate Student or At Least Junior' in courses['CS 558 / CPE 558']['prerequisites']

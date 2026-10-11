@@ -122,3 +122,13 @@ occurs in the 32 prescribed identities, so the four credit-choice pools produce
 double counting PHIL310 across degree allocations. Open wildcard criteria and
 conditional laboratory relationships remain intact. Subject and full degree
 policy audits are unfinished.
+
+## Stevens: hydrated plan and five-course subject review
+
+The public catalog was independently reread in its loaded state: 125 credits,
+24 prescribed named rows and the science, technical, general, humanities and
+SUCCESS conditions. Course detail pages support a systems classification for
+CS368 and explicit mixed classifications for CS135/456/508. The combined
+CS558/CPE558 heading leads to one Computer Vision record. These corrections
+do not certify the entire degree; remaining course descriptions, unit definition
+and school-scoped policy applicability stay in progress.

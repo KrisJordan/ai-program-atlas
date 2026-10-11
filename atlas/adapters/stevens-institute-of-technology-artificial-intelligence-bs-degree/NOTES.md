@@ -42,3 +42,27 @@ The previous blanket School-of-Computing graduate-access gap was an overly broad
 **Remaining inventory barriers are now two applicability questions:** (1) the arts/language humanities approval list expressly names SES and Business but not Computing; (2) AP Calculus AB/BC rows specify SES/QF/QSS or SB/HASS, omitting Computing. Neither a school-wide general-education link nor the FAQ explicitly extends these restricted rows. No automatic former-CS/SES inheritance or degree-complete claim is made. Other description/prerequisite/title/credit gaps and standalone credit-unit normalization are metadata, kept separately from these inventory questions.
 
 All browser observations used ordinary public tabs without login or hidden endpoints. Default HTTP responses still contain unresolved course labels or the default policy tab and correctly fail these source observers. Development used the allowed HTML shell plus course labels visibly read in the browser and temporary transcriptions of rendered tables; neither is committed as a raw source fixture. Tests use reduced synthetic structures and verify changed choices, missing panels, unmatched columns, stale policy conditions, cross-list grouping and nested alternatives. Source observers never emit reviewer audits/freshness or promote completeness.
+
+### Degree correctness review — 2026-10-11
+
+The browser's fully hydrated academic plan repeats 125 credits; initial incomplete
+HTML displays 58 with undefined course placeholders and remains invalid evidence.
+Prescribed named rows independently total 24: 6/5/4/3/3/1/1/1 by semester. The
+requirements tab was reread for all six science routes, nested laboratory
+alternative, technical/general/math electives, advisor approval, exclusions and
+SUCCESS. These are named-source inventory counts, not a student's full load.
+
+Five course descriptions now have source-specific content guards and manual
+subject reviews. CS368 is data-management infrastructure (systems). CS135
+combines proof/discrete mathematics with programming, CS456 mathematics with
+implemented AI methods, and CS508 governance/ethics with UX design: all three
+retain mixed subjects. CS558/CPE558 resolves to one official Computer Vision
+record under the combined heading; its single record is preserved.
+
+CS368 eligibility is CS385. Computer Vision's description gives undergraduate
+and graduate preparation separately; its Eligibility tab has a broader grouped
+expression. Both source observations are preserved, without inventing an
+undergraduate waiver from the graduate clause. Three other fetched eligibility
+tabs show no rule; this is unknown, not proof of no prerequisites. Credits remain
+in original unnormalized units until an explicit institutional definition is
+reviewed. Whole-degree correctness remains in progress.

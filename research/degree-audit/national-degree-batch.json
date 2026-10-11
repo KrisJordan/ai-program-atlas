@@ -1068,6 +1068,111 @@
       "blockers": [],
       "correction_status": "Credit-unit and bounded role correction tested; comprehensive degree audit remains in progress.",
       "second_pass_status": "pending"
+    },
+    {
+      "program_id": "stevens-institute-of-technology-artificial-intelligence-bs-degree",
+      "institution_id": "stevens-institute-of-technology",
+      "status": "in_progress",
+      "sources": [
+        {
+          "url": "https://stevens.catalog.prod.coursedog.com/programs/qT6Ld1CzBAhQsVKYFNVv/academic-plan-JKlwr",
+          "catalog_year": null,
+          "locator": "Browser-rendered academic plan, eight semesters; 125-credit total",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://stevens.catalog.prod.coursedog.com/programs/qT6Ld1CzBAhQsVKYFNVv/requirements-and-concentrations-n90Np",
+          "catalog_year": null,
+          "locator": "Rendered full program requirement panels: six science sequences, math/science open rule, finite technical pool, general exclusions/pairs, humanities link and SUCCESS choices",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://stevens.catalog.prod.coursedog.com/courses/056460e3138301782f7011235234c347",
+          "catalog_year": null,
+          "locator": "Official course heading, Course Description and Credits; unit definition not established here",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://stevens.catalog.prod.coursedog.com/courses/82d152525dc410019fc9857176880000",
+          "catalog_year": null,
+          "locator": "Official course heading, Course Description and Credits; unit definition not established here",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://stevens.catalog.prod.coursedog.com/courses/82d152525dc410019fc9857176880000/eligibility-6OfL6",
+          "catalog_year": null,
+          "locator": "Student Eligibility Rule; exact AND/OR grouping retained",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://stevens.catalog.prod.coursedog.com/courses/adfec19493d510020d3e9cbf6bff0000",
+          "catalog_year": null,
+          "locator": "Official course heading, Course Description and Credits; unit definition not established here",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://stevens.catalog.prod.coursedog.com/courses/462eac10b56610020053750da7a40000",
+          "catalog_year": null,
+          "locator": "Official course heading, Course Description and Credits; unit definition not established here",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://stevens.catalog.prod.coursedog.com/courses/056460e3138301b3191bdf345234a257/course-information-aoYks",
+          "catalog_year": null,
+          "locator": "Official course heading, Course Description and Credits; unit definition not established here",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://stevens.catalog.prod.coursedog.com/courses/056460e3138301b3191bdf345234a257/eligibility-6OfL6",
+          "catalog_year": null,
+          "locator": "Student Eligibility Rule; exact AND/OR grouping retained",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        }
+      ],
+      "checks": {
+        "degree_identity": "Public browser navigation and fully hydrated official academic plan verify Bachelor of Science in Artificial Intelligence and 125credits. The incomplete initial response saying 58credits is not accepted.",
+        "required_and_choices": "Independently counted 24 prescribed named plan rows: 6/5/4/3/3/1/1/1 by semester. Named ethics choice is separate; science and open math/general slots are not invented fixed courses. SUCCESS requires PRV101 and three of five PRV choices.",
+        "elective_pools": "Read six science pathways including nested CH117/BIO182 lab choice; technical six-from-eleven source rows; two math/science electives with exemptions and approval; four general electives with exclusions and nine prohibited course-pair combinations. The official CS558/CPE558 combined heading resolves to one Computer Vision record, supporting the existing single combined source identity.",
+        "prerequisites": "CS368 explicitly requires CS385. Computer Vision publishes separate undergraduate/graduate preparation in the description and a structured eligibility expression; preserve both rather than flattening AND/OR. Three other reviewed courses have no displayed eligibility rule in the fetched tab, so absence remains unknown. Full prerequisite review remains in progress.",
+        "credits_and_units": "Plan total 125 and observed per-course amounts preserved. Semester calendar does not establish normalized credit-unit definition; units remain unknown. No pooled amount is divided into individual courses.",
+        "classification": "Five descriptions independently read: CS368 systems, CS558/CPE558 AI methods; CS135 mixed mathematics/programming, CS456 mixed mathematics/AI, CS508 mixed human context/UX application. Other classifications remain unreviewed.",
+        "family_composition": "Standalone concrete degree, not an inferred variant family.",
+        "degree_wide_requirements": "Existing general education, graduation and prior-credit policies remain mapped but full independent applicability review is unfinished. School of Computing applicability of school-scoped humanities/AP equivalence rules remains an explicit question, not an invented waiver or automatic access blocker."
+      },
+      "expected_profile": null,
+      "expected_course_ids": {
+        "required": [],
+        "options": [],
+        "unresolved": []
+      },
+      "discrepancies": [
+        {
+          "issue": "Legacy AI/title classifications obscured data infrastructure and mixed primary content.",
+          "correction": "Source-description review corrects CS368 to systems and preserves mixed content in CS135/456/508; Computer Vision gains explicit metadata and conditional eligibility. No prerequisite is added as a universal degree obligation.",
+          "status": "corrected_for_five_course_subset",
+          "evidence_urls": [
+            "https://stevens.catalog.prod.coursedog.com/courses/056460e3138301782f7011235234c347",
+            "https://stevens.catalog.prod.coursedog.com/courses/82d152525dc410019fc9857176880000",
+            "https://stevens.catalog.prod.coursedog.com/courses/82d152525dc410019fc9857176880000/eligibility-6OfL6",
+            "https://stevens.catalog.prod.coursedog.com/courses/adfec19493d510020d3e9cbf6bff0000",
+            "https://stevens.catalog.prod.coursedog.com/courses/462eac10b56610020053750da7a40000",
+            "https://stevens.catalog.prod.coursedog.com/courses/056460e3138301b3191bdf345234a257/course-information-aoYks",
+            "https://stevens.catalog.prod.coursedog.com/courses/056460e3138301b3191bdf345234a257/eligibility-6OfL6"
+          ]
+        }
+      ],
+      "blockers": [],
+      "correction_status": "Current degree plan and local requirements independently reread; five-course metadata correction tested. Comprehensive audit remains in progress.",
+      "second_pass_status": "pending"
     }
   ]
 }
