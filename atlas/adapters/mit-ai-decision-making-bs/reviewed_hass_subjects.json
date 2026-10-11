@@ -25652,11 +25652,41 @@
           "restrictions": [],
           "approved_for_integration": true,
           "identity_note": "Literal dated source identity retained; no code-prefix or companion-course identity merge."
+        },
+        {
+          "observed_code": "17.831",
+          "observed_name": "Data and Politics",
+          "evidence_basis": "official_description",
+          "description_summary": "Uses political datasets, social-science statistics, visualization and original survey research to study polling, turnout, voter targeting and changing public opinion. The Spring 2025 teaching account also emphasizes political conflict, bias, information literacy and communicating findings about the people represented by data.",
+          "description_digest": "8ce7676685fb1e9bc8e18e7dd200b06c6dce98cefc30b1e6b5df14530e7be78e",
+          "observation_digest": "6ba929c49c1ab98083df2dc392a4522bd162f3592777ca0508605ea4a2aa29be",
+          "source_id": "mit-ai-hass-review-political-data-news-spring2025",
+          "source_url": "https://news.mit.edu/2025/exploring-data-and-its-influence-political-behavior-0707",
+          "catalog_year": "Spring 2025",
+          "locator": "MIT News teaching feature; exact17.831 course paragraph, Spring2025 redesign statement, complete article body",
+          "prerequisites": null,
+          "units_text": null,
+          "credits": null,
+          "credit_unit": null,
+          "category": "other",
+          "status": "mixed",
+          "rationale": "The actual teaching account combines statistical survey design, analysis and visualization with explicit political-behavior, conflict, bias and information-literacy analysis. Both mathematics and human context are substantive. References to AI making the course important do not establish AI-model instruction.",
+          "candidate_categories": [
+            "mathematics",
+            "human_context"
+          ],
+          "restrictions": [
+            "Article published July 7,2025 explicitly discusses the Spring2025 redesign and students who took that spring offering; publication date is not a catalog edition.",
+            "Formal prerequisites, course units and software language are not printed. Student comments about coding do not establish a required language or prior programming course.",
+            "The original survey project is described as a course capstone, not a separate degree capstone requirement.",
+            "This institutional news feature is course-description evidence, not a public teaching website or syllabus."
+          ],
+          "approved_for_integration": true,
+          "identity_note": "Exact code17.831 and title appear repeatedly in this institutional course account. No teaching-term continuity or new requirement membership is inferred."
         }
       ],
       "missingness": [
-        "Limited official-title review; no course description or prerequisite observed.",
-        "Dated reference does not certify current offering or enrollment eligibility."
+        "Formal prerequisites, units and required software language are not stated in the dated teaching feature."
       ]
     },
     "mit-ai-hass-political-subfields-17-835": {
@@ -40082,6 +40112,16 @@
       "body_sha256": "3be86898bb4a8d6c2b140a7cad4b1cd09eb6246f226a0f72ee7985732ac33044",
       "capture_method": "robots_aware_public_pdf_then_PDFKit_text",
       "text_sha256": "6d6f7eecfd2fd16566ac1a03ef26ff4fe2fb2cabdd230d1f270b2959e2859f36"
+    },
+    "mit-ai-hass-review-political-data-news-spring2025": {
+      "url": "https://news.mit.edu/2025/exploring-data-and-its-influence-political-behavior-0707",
+      "title": "MIT News / Exploring data and its influence on political behavior",
+      "catalog_year": "Spring 2025",
+      "parser": "political_data_news",
+      "fetched_at": "2026-10-11T08:26:48+00:00",
+      "body_sha256": "ffa03d2215cf5f8c6bc5cc5fea233e9f9ebf3a58859c377f20ea9791b0b7a073",
+      "capture_method": "robots_aware_public_http",
+      "publication_date": "2025-07-07T14:00:00Z"
     }
   },
   "source_checks": [
@@ -41033,8 +41073,8 @@
     "pending": 58
   },
   "evidence_counts": {
-    "description_reviewed_records": 425,
-    "title_only_reviewed_records": 337,
+    "description_reviewed_records": 426,
+    "title_only_reviewed_records": 336,
     "code_only_unknown_records": 3
   },
   "scope_notes": [
@@ -42399,5 +42439,56 @@
       "access_outcome": "Robots disallows fetch; stopped without alternate path or retry."
     },
     "remaining_action": "Independent exact-code public sources remain open for other Political Science records; no general departmental denial or completed description inventory is inferred."
+  },
+  "political_data_news_followup": {
+    "source_ids": [
+      "mit-ai-hass-review-political-data-news-spring2025"
+    ],
+    "upgraded_record_ids": [
+      "mit-ai-hass-political-subfields-17-831"
+    ],
+    "independent_pages_read": [
+      {
+        "key": "berinsky",
+        "url": "https://berinsky.mit.edu/courses/",
+        "fetched_at": "2026-10-11T08:25:18+00:00",
+        "sha256": "e59984fb4a9fa32a064c20d0e7f3c77668a57de5ce1252c55967d59787dcf7c9",
+        "status": "read",
+        "review_outcome": "Titles and dated offerings only; directs students to Canvas. Restricted student.mit.edu catalog links were not followed, and no Canvas access was attempted."
+      },
+      {
+        "key": "berstler",
+        "url": "https://samberstlerteaching.wordpress.com/courses/",
+        "fetched_at": "2026-10-11T08:25:20+00:00",
+        "sha256": "ea2cb2b9bede6ead6b5f3976f1f3c474bf839f7dea5d9c66c94bd2d6ce42592f",
+        "status": "read",
+        "review_outcome": "24.252 listed for Spring2025 and Spring2022, but no linked description/syllabus for that exact course. Graduate24.729 material was not substituted."
+      },
+      {
+        "key": "rennard",
+        "url": "https://mitgovlab.org/news/introducing-virgile-rennard/",
+        "fetched_at": "2026-10-11T08:25:21+00:00",
+        "sha256": "90832941e6dd57e0d37a281bf0708adbe8559854205817af9d4cc41c2dad2c32",
+        "status": "read",
+        "review_outcome": "Interview contains actual teaching discussion, but names Applications of AI for Democracy without a course code; introduction also mentions Democracy and AI. No exact17.839 identity or equivalence established."
+      },
+      {
+        "key": "hassan",
+        "url": "https://maihassan.mit.edu/teaching/",
+        "fetched_at": "2026-10-11T08:26:33+00:00",
+        "sha256": "f21c76c50f98742603ed6524e24625e917180d50491fb84c54c4d80362458f73",
+        "status": "read",
+        "review_outcome": "17.503 code/title/level only, no description or public syllabus link."
+      },
+      {
+        "key": "hidalgo-news-link",
+        "url": "https://polisci.mit.edu/news/2025/exploring-data-and-its-influence-political-behavior",
+        "fetched_at": "2026-10-11T08:26:35+00:00",
+        "sha256": "1f95fef1c2f1693b78af1837ed9ffb3e981c1d266936544f3852403eef7c6fa0",
+        "status": "read",
+        "review_outcome": "Official17.831 feature teaser links the complete MIT News article used for the approved observation."
+      }
+    ],
+    "remaining_action": "Title-only faculty listings do not exhaust other independent sources. No department-wide description barrier or course identity based on an unnumbered interview is inferred."
   }
 }

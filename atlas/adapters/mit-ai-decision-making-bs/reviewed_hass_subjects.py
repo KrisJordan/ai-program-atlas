@@ -790,3 +790,19 @@ def observe_political_methods_syllabus(text):
     return [dict(code=identity[1], name=identity[2], term=identity[3], units=None,
                  description=description, prerequisites=preparation, computing=computing,
                  outline=outline[1], syllabus_digest=digest(text))]
+
+
+def observe_political_data_news(html):
+    """Read the exact institutional teaching feature, excluding unrelated news cards."""
+    soup = BeautifulSoup(html, 'html.parser')
+    title = clean(soup.find('h1'))
+    date = soup.find('time')
+    body = soup.select_one('.paragraph--type--content-block-text')
+    text = clean(body)
+    if title != 'Exploring data and its influence on political behavior' or date is None or body is None:
+        raise ValueError('Political data teaching feature identity missing')
+    if 'In class 17.831 (Data and Politics)' not in text or 'redesigned the course for the spring 2025 semester' not in text:
+        raise ValueError('Political data exact course identity or teaching term changed')
+    return [dict(code='17.831', name='Data and Politics', term='Spring 2025',
+                 description=text, prerequisites=None, units=None,
+                 publication_date=date.get('datetime'), article_title=title)]

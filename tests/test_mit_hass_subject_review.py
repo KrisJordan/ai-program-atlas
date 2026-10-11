@@ -215,7 +215,7 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']['description_reviewed_records']==425
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==426
     assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
         o=next(o for o in entry(code)['observations'] if o.get('evidence_basis')=='official_title_only')
@@ -1576,3 +1576,29 @@ def test_political_methods_syllabus_replay_pins_term_identity_and_complete_outli
     for wrong in [{**o,'term':'Fall 2026'},{**o,'prerequisites':'None'},{**o,'units':'12'},{**o,'outline':o['outline']+' New topic.'}]:
         assert review.matched_review(course,wrong,e['source_url'],MANIFEST) is None
     with pytest.raises(ValueError):review.observe_political_methods_syllabus(path.read_text().replace('4 Prerequisites','4 Recommended preparation'))
+
+
+def test_political_data_teaching_feature_does_not_infer_ai_or_credits():
+    e=entry('17.831')['observations'][-1]
+    assert e['catalog_year']=='Spring 2025' and e['prerequisites'] is e['credits'] is None
+    assert e['status']=='mixed' and e['candidate_categories']==['mathematics','human_context']
+    assert any('not a separate degree capstone' in n for n in e['restrictions'])
+    report=MANIFEST['political_data_news_followup']
+    assert len(report['independent_pages_read'])==5
+    rennard=next(x for x in report['independent_pages_read'] if x['key']=='rennard')
+    assert 'No exact17.839 identity' in rennard['review_outcome']
+    assert entry('17.839')['observations'][-1]['evidence_basis']=='official_title_only'
+    with pytest.raises(ValueError):review.observe_political_data_news('<h1>Data and Politics</h1>')
+
+
+def test_political_data_feature_actual_source_replay_and_term_guard():
+    path=Path('/tmp/mit-hass-subjects/hidalgo-article.html')
+    if not path.exists():pytest.skip('Optional public institutional teaching article')
+    cid=MANIFEST['political_data_news_followup']['upgraded_record_ids'][0]
+    row=MANIFEST['courses'][cid];e=row['observations'][-1]
+    o=review.observe_political_data_news(path.read_text())[0]
+    course=dict(id=cid,code=row['listed_code'],name=row['listed_name'],source_id=row['listed_source_id'])
+    assert review.matched_review(course,o,e['source_url'],MANIFEST)==e
+    for wrong in [{**o,'term':'Spring 2026'},{**o,'prerequisites':'Python'},{**o,'description':o['description']+' Neural network training.'}]:
+        assert review.matched_review(course,wrong,e['source_url'],MANIFEST) is None
+    with pytest.raises(ValueError):review.observe_political_data_news(path.read_text().replace('spring 2025 semester','spring 2026 semester'))
