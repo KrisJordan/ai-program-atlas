@@ -1904,3 +1904,42 @@ def test_gsl_actual_syllabus_replay_withdraws_changed_preparation_and_version():
             assert row['review_status']=='identity_review_needed' and not e['approved_for_integration']
         assert review.matched_review(course,{**o,'prerequisites':'None'},e['source_url'],MANIFEST) is None
         assert review.matched_review(course,{**o,'term':'Fall 2026'},e['source_url'],MANIFEST) is None
+
+
+def test_remaining_hass_queue_is_exact_finite_and_does_not_turn_workload_into_barriers():
+    import collections
+    queue=json.loads((ROOT/'atlas/adapters/mit-ai-decision-making-bs/reviewed_hass_description_queue.json').read_text())
+    rows=queue['records'];counts=queue['counts']
+    assert len(rows)==counts['remaining_records']==361
+    assert len({r['id'] for r in rows})==len(rows)
+    assert counts['with_description_evidence_or_integrated_description']+len(rows)==845
+    assert dict(collections.Counter(r['state'] for r in rows))==counts['states']
+    assert counts['states']['identity_or_version_question']==22
+    assert counts['states']['delegated_architecture_remainder']==52
+    for r in rows:
+        original=MANIFEST['courses'][r['id']]
+        assert (r['listed_code'],r['listed_name'])==(original['listed_code'],original['listed_name'])
+        assert r['next_action'] and r['listed_source_url'].startswith(('http://','https://'))
+    by_source={s['id']:s for s in queue['identified_teaching_sources']}
+    assert len(by_source)==17
+    for r in rows:
+        for sid in r['identified_teaching_source_ids']:
+            assert r['id'] in by_source[sid]['record_ids']
+    assert set(s['status'] for s in by_source.values())=={'source_policy_review_needed','human_verification_challenge','index_identity_mismatch'}
+    assert not any('blocked' in r['state'] for r in rows)
+    assert 'bounded' in queue['limits'][0] and 'not exhaustive' in queue['limits'][0]
+
+
+def test_remaining_hass_queue_preserves_source_specific_failure_and_nonmatch_evidence():
+    queue=json.loads((ROOT/'atlas/adapters/mit-ai-decision-making-bs/reviewed_hass_description_queue.json').read_text())
+    links=queue['identified_teaching_sources']
+    challenge=next(s for s in links if s['url']=='https://vimeo.com/194581386')
+    assert challenge['status']=='human_verification_challenge'
+    assert 'No challenge was solved' in challenge['note']
+    renamed=next(s for s in links if '21h.315/' in s['url'])
+    assert renamed['status']=='index_identity_mismatch' and renamed['target_attempt'] is None
+    for source in links:
+        if source['status']=='source_policy_review_needed':
+            assert source['target_attempt'] or source['shared_origin_evidence_urls']
+            assert 'not a publisher denial' in source['note']
+    assert all('Not a denial' in s['outcome'] or 'not a denial' in s['outcome'] for s in queue['additional_catalog_checks'])
