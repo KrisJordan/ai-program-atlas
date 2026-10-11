@@ -88,3 +88,6 @@ url = 'https://www.rit.edu/study/black-studies-immersion'
 if url not in SOURCES:
     SOURCES.append(url)
 SOURCE_PARSERS[url] = partial(parse_immersion_rules, title='Black Studies Immersion')
+
+from atlas.adapters.rit_combined_sts_course_cards import register as register_combined_sts
+register_combined_sts(SOURCES,SOURCE_PARSERS)
