@@ -35,7 +35,7 @@ def synthetic(monkeypatch):
 def test_singular_and_variable_credits_exact_conditions_no_manual_review(pid, synthetic):
     result = module.parse(synthetic, pid)
     courses = {c['code']: c for c in result['courses']}
-    assert set(courses) == CODES
+    assert set(courses) == (CODES if pid == BS else CODES - {'CSC 506'})
     assert courses['CSC 405']['credits'] == 1
     for code in ['CSC 410', 'CSC 411', 'CSC 412']:
         assert courses[code]['credits'] is None
@@ -43,7 +43,8 @@ def test_singular_and_variable_credits_exact_conditions_no_manual_review(pid, sy
             'minimum': 1, 'maximum': 3, 'credit_unit': 'semester_hours'}
         assert '1–3' in courses[code]['description']
     assert courses['CSC 115']['prerequisites'].startswith('Pre/Corequisite:')
-    assert courses['CSC 506']['prerequisites'] == 'Prerequisite: TEST101 or TEST102 and TEST103 or TEST104.'
+    if pid == BS:
+        assert courses['CSC 506']['prerequisites'] == 'Prerequisite: TEST101 or TEST102 and TEST103 or TEST104.'
     assert 'last_verified' not in result and 'curriculum_audit' not in result
     assert all('category_review' not in c for c in courses.values())
 
@@ -84,8 +85,8 @@ def test_declared_subject_decisions_not_inferred_from_application_pool():
                 'CSC 431': 'foundations', 'CSC 506': 'other', 'CSC 542': 'ai_ml',
                 'CSC 543': 'ai_ml', 'CSC 548': 'other', 'CSC 549': 'other', 'CSC 550': 'applications'}
     assert {code: e['category'] for code, e in module.SPEC.items()} == expected
-    for entry in module.SPEC.values():
-        assert set(entry['program_ids']) == {BS, BA}
+    for code, entry in module.SPEC.items():
+        assert set(entry['program_ids']) == ({BS} if code == 'CSC 506' else {BS, BA})
         assert entry['rationale'] and entry['description']
         if entry['review_status'] == 'mixed':
             assert entry['category'] == 'other' and len(entry['candidate_categories']) >= 2

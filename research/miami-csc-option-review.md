@@ -1,6 +1,6 @@
 # Miami CSC option-description contribution
 
-Reviewed2026-10-11 for the DS/AI BA and BS only. The primary owner retains all degree seeds, requirement graphs and fixed CSC courses. This contribution supplies16 disjoint named options: **115,210,322,329,405,410,411,412,423,431,506,542,543,548,549,550**.
+Reviewed2026-10-11 for the DS/AI BA and BS only. The primary owner retains all degree seeds, requirement graphs and fixed CSC courses. This contribution supplies16 disjoint named options in the BS, of which15 are named BA options (CSC506 is BS-only): **115,210,322,329,405,410,411,412,423,431,506,542,543,548,549,550**.
 
 ## Actual source review
 
@@ -28,3 +28,5 @@ Both existing degree graphs require CSC410/411/412 projects or internships to be
 Register source ID `miami-csc-option-course-catalog` for the official directory, and call `register(pid,sources,parsers)` **after** `miami_fixed_course_reviews.register`. The helper composes an existing same-URL observer, preserving its fields and requirements while rejecting duplicate course identities. Repeated registration is idempotent. It parses singular/plural credit headings and actual prerequisite fields, validates the exact reviewed whole-block hash, and rejects missing, duplicate or changed blocks. It emits no `category_review`, verification date or audit/completeness claim; the primary owner applies reviewed manifest evidence explicitly.
 
 Six focused tests pass: synthetic singular/range cases, literal eligibility handling, source-change failures, nonmutating composition and duplicate rejection, program scope/subject decisions, plus replay against the actual cached directory. No seed, shared national ledger or maintained database was edited. The much larger Miami cognate metadata inventory and whole-degree policy uncertainties remain outside this bounded contribution.
+
+Scope correction: CSC506 is a named primary requirement option only in the BS. The BA has a same-code contextual cognate record, which is outside this delegated review scope. Its presence alone does not authorize applying this named-option review. The helper now explicitly excludes BA506; the primary owner restores that contextual record separately.
