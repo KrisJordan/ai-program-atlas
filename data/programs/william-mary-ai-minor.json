@@ -16,7 +16,7 @@
   "overview": "An interdisciplinary AI minor open to all majors, with a published 19-credit minimum. The detailed catalog inventory remains inaccessible.",
   "catalog_year": null,
   "verification_status": "confirmed",
-  "last_verified": "2026-10-10",
+  "last_verified": "2026-10-11",
   "curriculum_status": "partial",
   "links": [
     {
@@ -34,6 +34,26 @@
       "source_date": null,
       "catalog_year": null,
       "locator": "Minoring in Artificial Intelligence; Artificial Intelligence program entry",
+      "confidence": "high"
+    },
+    {
+      "id": "wm-registrar-minor-declaration",
+      "url": "https://www.wm.edu/offices/registrar/_documents/degree/declaration_of_academic_minor.pdf",
+      "title": "Declaration of Academic Minor",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Page 1; printed revision January 2026",
+      "confidence": "high"
+    },
+    {
+      "id": "wm-advising-academic-forms",
+      "url": "https://www.wm.edu/offices/advising/academic-forms/",
+      "title": "Academic Forms & Processes",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Form Categories; Registrar Forms",
       "confidence": "high"
     }
   ],
@@ -74,25 +94,115 @@
       "source_text": null,
       "summary": "Students in any major may pursue the AI minor.",
       "course_ids": []
+    },
+    {
+      "id": "william-mary-ai-minor-declaration-form",
+      "parent_id": null,
+      "title": "Minor declaration and certification",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "wm-registrar-minor-declaration",
+      "source_text": null,
+      "summary": "Submit the completed minor form to the Registrar before the last add/drop day of the final semester. Student and department chair/program director signatures certify the listed courses.",
+      "course_ids": []
+    },
+    {
+      "id": "william-mary-ai-minor-major-relationship",
+      "parent_id": null,
+      "title": "Relationship to declared majors",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "wm-registrar-minor-declaration",
+      "source_text": null,
+      "summary": "The minor must differ from the declared major. Students with two majors may not declare a minor. The AI overview permits all major fields; it does not remove these university-level conditions.",
+      "course_ids": []
+    },
+    {
+      "id": "william-mary-ai-minor-grades",
+      "parent_id": null,
+      "title": "Minor grading",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "wm-registrar-minor-declaration",
+      "source_text": null,
+      "summary": "Courses used for the minor cannot be taken Pass/Fail; the minor GPA must be at least 2.00.",
+      "course_ids": []
+    },
+    {
+      "id": "william-mary-ai-minor-residence",
+      "parent_id": null,
+      "title": "Minor residency",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "wm-registrar-minor-declaration",
+      "source_text": null,
+      "summary": "At least 9 credits toward the minor must be in residence unless the catalog specifies otherwise. AI-specific catalog exceptions remain unverified; the published amount is not normalized to a credit unit.",
+      "course_ids": []
+    },
+    {
+      "id": "william-mary-ai-minor-substitution-form",
+      "parent_id": null,
+      "title": "Minor substitutions and transfer exceptions",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "wm-registrar-minor-declaration",
+      "source_text": null,
+      "summary": "For post-matriculation elective transfer credit (such as 1XX/2XX) or courses not listed as satisfying the minor, the form requires committee approval and an attached Major/Minor Substitution Waiver. The form names the Committee on Degrees; the linked advising site separately identifies its successor.",
+      "course_ids": []
+    },
+    {
+      "id": "william-mary-ai-minor-exceptions-office",
+      "parent_id": null,
+      "title": "Academic exception committee context",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "wm-advising-academic-forms",
+      "source_text": null,
+      "summary": "The advising site states that the Committee on Academic Exceptions replaces the former Committee on Degrees and Committee on Academic Status. It handles exception requests; no individual exception or AI-specific waiver is presumed. The minor declaration listing says no minor advisor is required.",
+      "course_ids": []
     }
   ],
   "notes": [
     "Curriculum evidence reviewed on 2026-10-10. The official catalog returned a JavaScript/robot challenge; no access restriction was bypassed. Department sources support the observations below, but a full catalog audit remains outstanding.",
-    "Published credits remain in source units (unknown normalized unit). Course credit values, descriptions, prerequisites, syllabi and calendar have not been inferred."
+    "Published credits remain in source units (unknown normalized unit). Course credit values, descriptions, prerequisites, syllabi and calendar have not been inferred.",
+    "Public policy review 2026-10-11: Registrar declaration PDFs are also linked from current advising pages and departmental resources. Printed month-only revisions are retained in source locators; no day or effective catalog year is invented. The known catalog challenge was not retried. PDF text is manually reviewed evidence, not supported by the ordinary text-only HTTP scrape path.",
+    "The minor form still names the Committee on Degrees; current advising pages identify the Committee on Academic Exceptions as its successor. The general residency rule expressly permits catalog exceptions, which remain unverified for AI."
   ],
   "curriculum_audit": {
     "scope": "minor",
-    "reviewed_at": "2026-10-10",
+    "reviewed_at": "2026-10-11",
     "source_ids": [
-      "william-mary-ai-minor-identity"
+      "william-mary-ai-minor-identity",
+      "wm-registrar-minor-declaration",
+      "wm-advising-academic-forms"
     ],
     "sections": [
       "19-credit minor total",
       "Eligibility for students in all majors",
-      "Source-stated learning aims"
+      "Source-stated learning aims",
+      "Public Registrar declaration form and applicable major/minor relationship policies",
+      "Current advising form directory and committee naming"
     ],
     "unresolved_requirements": [
-      "Detailed required and elective course inventory, choice rules and minor completion policies remain inaccessible."
+      "Detailed required/elective course inventory, choice rules, overlap restrictions and any AI-specific exceptions to the published university minor policies remain inaccessible."
     ],
     "metadata_gaps": [
       "No individual course metadata is available from the inspected source."

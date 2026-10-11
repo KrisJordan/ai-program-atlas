@@ -16,7 +16,7 @@
   "overview": "A formally declared AI/Machine Learning concentration within the CS BS. Local course requirements remain behind an inaccessible catalog.",
   "catalog_year": null,
   "verification_status": "confirmed",
-  "last_verified": "2026-10-10",
+  "last_verified": "2026-10-11",
   "curriculum_status": "partial",
   "links": [
     {
@@ -34,6 +34,26 @@
       "source_date": null,
       "catalog_year": null,
       "locator": "Bachelor of Science; Artificial Intelligence/Machine Learning program entry",
+      "confidence": "high"
+    },
+    {
+      "id": "wm-registrar-major-declaration",
+      "url": "https://www.wm.edu/offices/registrar/_documents/degree/declaration_of_major_form.pdf",
+      "title": "Instructions for Declaration/Change of Major",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Page 1; printed revision August 2025",
+      "confidence": "high"
+    },
+    {
+      "id": "wm-advising-academic-forms",
+      "url": "https://www.wm.edu/offices/advising/academic-forms/",
+      "title": "Academic Forms & Processes",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Form Categories; Registrar Forms",
       "confidence": "high"
     }
   ],
@@ -53,20 +73,67 @@
       "source_text": null,
       "summary": "CS BS students select a concentration when declaring the major. AI/Machine Learning has its own required and elective courses; those courses are not enumerated on this department page.",
       "course_ids": []
+    },
+    {
+      "id": "william-mary-cs-ai-ml-concentration-earned-credits",
+      "parent_id": null,
+      "title": "Earned-credit declaration thresholds",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "wm-registrar-major-declaration",
+      "source_text": null,
+      "summary": "Major declaration is permitted at 39 earned credits and required at 54; in-progress credits do not count. Entrants with AP, IB or dual-enrollment credit may wait until 39 credits earned since high school; transfers entering with at least 54 credits may wait until the end of their first W&M semester.",
+      "course_ids": []
+    },
+    {
+      "id": "william-mary-cs-ai-ml-concentration-declaration-process",
+      "parent_id": null,
+      "title": "Major declaration review and changes",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "wm-registrar-major-declaration",
+      "source_text": null,
+      "summary": "Use a What If degree audit and major worksheet; the student and major advisor must sign. Double majors submit separate forms. Major changes must be submitted before the last add/drop day of the final semester. Program-specific declaration instructions continue to apply.",
+      "course_ids": []
+    },
+    {
+      "id": "william-mary-cs-ai-ml-concentration-degree-relationship",
+      "parent_id": null,
+      "title": "Major, minor and degree relationship",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "wm-registrar-major-declaration",
+      "source_text": null,
+      "summary": "The form explicitly includes the School of Computing, Data Sciences and Physics: one major is required; students may have two majors or one major and a minor. W&M awards one baccalaureate degree based on the primary major; two majors do not constitute two degrees.",
+      "course_ids": []
     }
   ],
   "notes": [
     "Curriculum evidence reviewed on 2026-10-10. The official catalog returned a JavaScript/robot challenge; no access restriction was bypassed. Department sources support the observations below, but a full catalog audit remains outstanding.",
-    "Published credits remain in source units (unknown normalized unit). Course credit values, descriptions, prerequisites, syllabi and calendar have not been inferred."
+    "Published credits remain in source units (unknown normalized unit). Course credit values, descriptions, prerequisites, syllabi and calendar have not been inferred.",
+    "Public policy review 2026-10-11: Registrar declaration PDFs are also linked from current advising pages and departmental resources. Printed month-only revisions are retained in source locators; no day or effective catalog year is invented. The known catalog challenge was not retried. PDF text is manually reviewed evidence, not supported by the ordinary text-only HTTP scrape path."
   ],
   "curriculum_audit": {
     "scope": "concentration",
-    "reviewed_at": "2026-10-10",
+    "reviewed_at": "2026-10-11",
     "source_ids": [
-      "william-mary-cs-ai-ml-concentration-identity"
+      "william-mary-cs-ai-ml-concentration-identity",
+      "wm-registrar-major-declaration",
+      "wm-advising-academic-forms"
     ],
     "sections": [
-      "Concentration selection at CS major declaration"
+      "Concentration selection at CS major declaration",
+      "Public Registrar declaration form and applicable major/minor relationship policies",
+      "Current advising form directory and committee naming"
     ],
     "unresolved_requirements": [
       "AI/ML-specific required and elective courses, choice rules and concentration completion policies remain inaccessible."

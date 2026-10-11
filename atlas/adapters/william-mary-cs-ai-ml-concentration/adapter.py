@@ -6,3 +6,12 @@ SOURCES = ('https://cdsp.wm.edu/computerscience/undergraduate/bachelor-of-scienc
 
 def parse(html):
     return cs_concentration(html)
+
+from atlas.adapters.william_mary_public_policies import ADVISING, parse_advising
+
+def parse_public_policies(html):
+    return parse_advising(html, PROGRAM_ID)
+
+SOURCE_PARSERS = {SOURCES[0]: parse}
+SOURCES = SOURCES + (ADVISING,)
+SOURCE_PARSERS[ADVISING] = parse_public_policies

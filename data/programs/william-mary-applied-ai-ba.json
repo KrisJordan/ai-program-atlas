@@ -16,7 +16,7 @@
   "overview": "A 30-credit Applied Artificial Intelligence major awarding a BA in Interdisciplinary Studies. The department emphasizes responsible AI workflows and professional project work. Major and full-degree requirements remain partially mapped.",
   "catalog_year": null,
   "verification_status": "confirmed",
-  "last_verified": "2026-10-10",
+  "last_verified": "2026-10-11",
   "curriculum_status": "partial",
   "links": [
     {
@@ -59,11 +59,31 @@
     {
       "id": "william-mary-applied-ai-ba-example-pathway",
       "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/ba_ai_coursework.png",
-      "title": "Coursework Sequence \u2014 Major in Applied AI",
+      "title": "Coursework Sequence — Major in Applied AI",
       "fetched_at": "2026-10-10",
       "source_date": null,
       "catalog_year": null,
       "locator": "Department-linked example pathway image, visually inspected",
+      "confidence": "high"
+    },
+    {
+      "id": "wm-registrar-major-declaration",
+      "url": "https://www.wm.edu/offices/registrar/_documents/degree/declaration_of_major_form.pdf",
+      "title": "Instructions for Declaration/Change of Major",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Page 1; printed revision August 2025",
+      "confidence": "high"
+    },
+    {
+      "id": "wm-advising-academic-forms",
+      "url": "https://www.wm.edu/offices/advising/academic-forms/",
+      "title": "Academic Forms & Processes",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Form Categories; Registrar Forms",
       "confidence": "high"
     }
   ],
@@ -233,7 +253,49 @@
       "category": "other",
       "source_id": "william-mary-applied-ai-ba-declaration",
       "source_text": null,
-      "summary": "Declare after 39\u201354 earned credit hours, including AP, IB and transfer credit. Request an advisor, review the major declaration with the advisor, and submit the signed form to the Registrar. Annual advisor check-ins are recommended.",
+      "summary": "Declare after 39–54 earned credit hours, including AP, IB and transfer credit. Request an advisor, review the major declaration with the advisor, and submit the signed form to the Registrar. Annual advisor check-ins are recommended.",
+      "course_ids": []
+    },
+    {
+      "id": "william-mary-applied-ai-ba-earned-credits",
+      "parent_id": null,
+      "title": "Earned-credit declaration thresholds",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "wm-registrar-major-declaration",
+      "source_text": null,
+      "summary": "Major declaration is permitted at 39 earned credits and required at 54; in-progress credits do not count. Entrants with AP, IB or dual-enrollment credit may wait until 39 credits earned since high school; transfers entering with at least 54 credits may wait until the end of their first W&M semester.",
+      "course_ids": []
+    },
+    {
+      "id": "william-mary-applied-ai-ba-declaration-process",
+      "parent_id": null,
+      "title": "Major declaration review and changes",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "wm-registrar-major-declaration",
+      "source_text": null,
+      "summary": "Use a What If degree audit and major worksheet; the student and major advisor must sign. Double majors submit separate forms. Major changes must be submitted before the last add/drop day of the final semester. Program-specific declaration instructions continue to apply.",
+      "course_ids": []
+    },
+    {
+      "id": "william-mary-applied-ai-ba-degree-relationship",
+      "parent_id": null,
+      "title": "Major, minor and degree relationship",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "wm-registrar-major-declaration",
+      "source_text": null,
+      "summary": "The form explicitly includes the School of Computing, Data Sciences and Physics: one major is required; students may have two majors or one major and a minor. W&M awards one baccalaureate degree based on the primary major; two majors do not constitute two degrees.",
       "course_ids": []
     }
   ],
@@ -241,22 +303,27 @@
     "Curriculum evidence reviewed on 2026-10-10. The official catalog returned a JavaScript/robot challenge; no access restriction was bypassed. Department sources support the observations below, but a full catalog audit remains outstanding.",
     "Published credits remain in source units (unknown normalized unit). Course credit values, descriptions, prerequisites, syllabi and calendar have not been inferred.",
     "The linked example pathway names AAI 101, AAI 301, AAI 302, DATA 201, DATA 405 and DATA 303, plus ethics and methods alternatives and two elective slots. These have not been promoted into a complete required-course inventory because the pathway is illustrative and conflicts with the FAQ on Designing AI Agents.",
-    "The example pathway lists DATA 202 or PHIL 150 for ethics; its methods and elective options are explicitly examples, so they are not treated as exhaustive approved pools."
+    "The example pathway lists DATA 202 or PHIL 150 for ethics; its methods and elective options are explicitly examples, so they are not treated as exhaustive approved pools.",
+    "Public policy review 2026-10-11: Registrar declaration PDFs are also linked from current advising pages and departmental resources. Printed month-only revisions are retained in source locators; no day or effective catalog year is invented. The known catalog challenge was not retried. PDF text is manually reviewed evidence, not supported by the ordinary text-only HTTP scrape path."
   ],
   "curriculum_audit": {
     "scope": "degree",
-    "reviewed_at": "2026-10-10",
+    "reviewed_at": "2026-10-11",
     "source_ids": [
       "william-mary-applied-ai-ba-identity",
       "william-mary-applied-ai-ba-declaration",
-      "william-mary-applied-ai-ba-example-pathway"
+      "william-mary-applied-ai-ba-example-pathway",
+      "wm-registrar-major-declaration",
+      "wm-advising-academic-forms"
     ],
     "sections": [
       "30-credit major total and BA award",
       "Three core courses named in the FAQ residency policy",
       "Department substitution, independent research and study-abroad policies",
       "Major declaration, advising and Registrar submission",
-      "Visual review of the linked example pathway; unresolved code conflict and illustrative electives"
+      "Visual review of the linked example pathway; unresolved code conflict and illustrative electives",
+      "Public Registrar declaration form and applicable major/minor relationship policies",
+      "Current advising form directory and committee naming"
     ],
     "unresolved_requirements": [
       "Resolve DATA 305 (FAQ) versus AAI 301 (example pathway) for Designing AI Agents.",
