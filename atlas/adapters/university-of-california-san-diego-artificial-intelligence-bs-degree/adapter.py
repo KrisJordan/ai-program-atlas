@@ -190,3 +190,27 @@ SOURCE_PARSERS[MATH_URL] = parse_math
 from atlas.adapters.west_degree_subjects import observe as observe_subjects
 parse = observe_subjects(parse, PROGRAM_ID)
 SOURCE_PARSERS = {url: observe_subjects(parser, PROGRAM_ID) for url, parser in SOURCE_PARSERS.items()}
+
+# Add the separately reviewed remaining CSE descriptions after the legacy subject
+# wrapper, retaining core metadata and all source tag/choice observations.
+from atlas.adapters import ucsd_cse_remaining_reviews as remaining_cse
+_previous_cse_parser = SOURCE_PARSERS[COURSE_URL]
+
+def parse_all_reviewed_cse(html):
+    original = _previous_cse_parser(html)
+    extra = remaining_cse.parse_observations(html)
+    records = {c['id']: dict(c) for c in original['courses']}
+    if len(records) != len(original['courses']):
+        raise ValueError('Duplicate original UCSD course identities')
+    seen = set()
+    for c in extra['courses']:
+        if c['id'] in seen:
+            raise ValueError('Duplicate reviewed UCSD course identity')
+        seen.add(c['id'])
+        # The handoff excludes the eight previously reviewed core codes.
+        if c['code'] in {'CSE 12','CSE 30','CSE 25','CSE 55','CSE 100','CSE 101','CSE 150A','CSE 151A'}:
+            raise ValueError('Remaining CSE observer overlaps core ownership')
+        records.setdefault(c['id'], {}).update(c)
+    return {**original, 'courses': list(records.values())}
+
+SOURCE_PARSERS[COURSE_URL] = parse_all_reviewed_cse

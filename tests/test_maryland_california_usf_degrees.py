@@ -78,9 +78,10 @@ def test_ucsd_seed_mathematical_substitutions_are_choices():
 
 def test_ucsd_metadata_requires_actual_course_blocks_and_preserves_logic():
  m=importlib.import_module('atlas.adapters.'+UCSD+'.course_metadata')
- html=''.join(f'<p class="course-name">{code}. Synthetic title (4)</p><p>Synthetic description. Prerequisites: CSE 12 and CSE 25 or CSE 29; major restriction.</p>' for code in sorted(m.CODES))
+ html=''.join(f'<p class="course-name">{code}. Synthetic title (4)</p><p class="course-descriptions">Synthetic description. Students may not receive credit for both CSE 151A and COGS 188. Prerequisites: CSE 12 and CSE 25 or CSE 29; major restriction.</p>' for code in sorted(m.CODES))
  r=m.parse(html)
  assert len(r['courses'])==8
- assert all(c['credits']==4 and c['prerequisites']=='CSE 12 and CSE 25 or CSE 29' for c in r['courses'])
+ assert all(c['credits']==4 and c['prerequisites'].startswith('CSE 12 and CSE 25 or CSE 29; major restriction.') for c in r['courses'])
+ assert 'COGS 188' in next(c for c in r['courses']if c['code']=='CSE 151A')['prerequisites']
  assert 'curriculum_audit' not in r
  with pytest.raises(ValueError):m.parse(html.replace('CSE 55.','CSE 56.'))

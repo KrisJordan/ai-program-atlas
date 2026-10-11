@@ -158,3 +158,25 @@ The profile now reports **8 fixed mapped major courses**, rather than 19; colleg
 See [eight-degree audit](../../../research/degree-audit/west-purdue-wpi.md) and its adjacent per-program JSON ledger. This program is blocked for whole-degree certification by the specific evidence gaps recorded there. Verified role/subject corrections are retained; parser success and prior local curriculum labels are not a completed degree audit. Remaining course-content review work is distinguished from actual source barriers. Independent second pass remains pending.
 
 CSE12/30 now have actual course titles, four-unit values, concise descriptions and prerequisite metadata. CSE101 is computing foundations; CSE30 is systems. Newly inspected2026–27 Mathematics source confirms MATH20A/20B four-unit values and calculus content, with prior-credit reductions retained. No prerequisite course is added. AHI course choices now inherit the existing alternative-fulfillment policy note, and climate choices inherit the transfer-exemption scope note. The current partition is8fixed/119options/2,241contextual, from2,368course observations. Broad GE membership no longer implies human-context subject.
+
+### Remaining CSE source-content integration (2026-10-11)
+
+The coordinator's separately guarded82course review is composed after existing
+CSEtag/core observation and subject wrapping, preserving all requirements and
+original core records. Six exact identifiers are absent from that current chapter;
+their dispositions are unclassified, without descriptions/renumbering assumptions.
+Manual taxonomy review annotations are deliberately applied from the reviewed
+manifest, never returned by a parser. See `CSE_REVIEW.md` and the source-review note.
+
+The primary reviewer additionally reread all8existingcoreCSEdescription blocks.
+The earlier metadata parser incorrectly truncated prerequisites at the first
+semicolon/sentence, losing undergraduate/major-priority and space-permission rules.
+It now retains full suffixes, CSE100optional preparation, and the preceding151A/
+COGS188credit restriction. No logical parentheses are invented. CSE25/55priority
+forCS29includes explicit space-based admission for others. Conditional restrictions
+are retained rather than interpreted as extra required courses.
+
+Role counts remain8fixed/119options/2241contextual. Source-reviewed new content
+changes subject composition only; CSE5/5RAI/CS/DSexclusions do not disappear because
+of a collegeGEreference. Other subjects and college/cohort applicability remain
+accessible work; whole-degree status staysin_progress.

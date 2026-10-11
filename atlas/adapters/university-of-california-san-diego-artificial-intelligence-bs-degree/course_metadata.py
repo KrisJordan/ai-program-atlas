@@ -12,12 +12,24 @@ def parse(html):
         match=re.match(r'^(CSE \d+[A-Z]*)\. (.*?) \((\d+)\)',text(heading))
         if not match or match[1] not in CODES:continue
         code,name,credits=match.groups();c=course(code,name,PID+'-courses',URL,credits=int(credits),institution='ucsd',unit='quarter_hours')
-        sibling=heading.find_next_sibling()
-        if sibling and sibling.name=='p' and 'course-name' not in sibling.get('class',[]):
-            prose=text(sibling)
-            if 'Prerequisites:' in prose:
-                # Do not invent parenthesization of the catalog's mixed and/or chains.
-                c['prerequisites']=prose.split('Prerequisites:',1)[1].split(';',1)[0].split('. ',1)[0].strip().rstrip('.')
+        parts=[]
+        for sibling in heading.find_next_siblings():
+            if 'course-name' in sibling.get('class',[]) or sibling.name in ['h1','h2','h3']:
+                break
+            if 'course-descriptions' in sibling.get('class',[]):
+                parts.append(text(sibling))
+        prose=' '.join(parts)
+        if 'Prerequisites:' not in prose:
+            raise ValueError('UCSD reviewed core prerequisite field missing')
+        # Keep full logical wording, subsequent eligibility and credit rules.
+        c['prerequisites']=prose.split('Prerequisites:',1)[1].strip()
+        before=prose.split('Prerequisites:',1)[0]
+        if 'Recommended preparation:' in before:
+            c['prerequisites']+=' Recommended preparation (not a prerequisite): '+before.split('Recommended preparation:',1)[1].strip()
+        if code=='CSE 151A':
+            restriction='Students may not receive credit for both CSE 151A and COGS 188.'
+            if restriction not in before:raise ValueError('CSE151Acredit restriction changed')
+            c['prerequisites']+=' Credit restriction: '+restriction
         courses.append(c)
     if {c['code'] for c in courses}!=CODES:raise ValueError('UCSD selected course metadata inventory changed')
     return {'id':PID,'courses':courses,'notes':['Selected CSE course metadata only. Mixed and/or prerequisites retain catalog wording; no additional logical grouping is inferred. Enrollment and equivalent-credit restrictions remain in the linked course source.']}

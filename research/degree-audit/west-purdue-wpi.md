@@ -193,3 +193,19 @@ restriction. No automatic renumbering merge with107EP. The currentcatalogsearch
 codes remain unknown rather than replaced. Eighty-four of86coursecodes now have
 bounded content dispositions. Optionhuman_context27→28andother7→6; all role and
 identity counts remain20/61/2. GE/current-version/approval-policywork remainsactive.
+
+### UCSD CSE contribution integration and core eligibility repair (2026-10-11)
+
+Coordinator-read82full descriptions and6missing exact-heading dispositions were
+integrated from the guarded manifest, with author/scope distinguished from the
+primary review. The original8CSEcoredescription blocks were independently reread
+for eligibility and credit clauses; all suffixes now remain intact rather than
+being truncated at a semicolon or sentence. CSE100preparation remainsrecommended,
+151A/COGS188credit exclusion remains explicit, and25/55majorpriority includes its
+space-permission exception. No prerequisite becomes a new degree obligation.
+
+Manual existing role sets remain8fixed/119options/2241context. Their subject
+composition now reflects82actual descriptions; six exact missing codes remain
+unknown. No crosslist identities or contextualcollegeeligibility were inferred.
+The code-set partition is unchanged and the composedsource retains existingtags.
+Non-CSEchapters and policy applicability remain active accessiblework.
