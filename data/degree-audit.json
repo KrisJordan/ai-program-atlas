@@ -11497,7 +11497,7 @@
     {
       "program_id": "mit-ai-decision-making-bs",
       "institution_id": "massachusetts-institute-of-technology",
-      "status": "in_progress",
+      "status": "blocked",
       "sources": [
         {
           "url": "https://catalog.mit.edu/degree-charts/artifical-intelligence-decision-making-course-6-4/",
@@ -13619,17 +13619,59 @@
           "locator": "Actual identified course content and printed metadata; dated scope retained",
           "checked_at": "2026-10-11",
           "access_status": "read; normal robots-aware public Fetcher"
+        },
+        {
+          "url": "https://web.mit.edu/gsl/syllabi/21G.505-Syllabus.pdf",
+          "catalog_year": "Fall 2017",
+          "locator": "Actual identified course content and printed metadata; dated scope retained",
+          "checked_at": "2026-10-11",
+          "access_status": "read; normal robots-aware public Fetcher"
+        },
+        {
+          "url": "http://mitgsl.mit.edu/robots.txt",
+          "catalog_year": null,
+          "locator": "Published robots policy or redirect only; no target course access inferred",
+          "checked_at": "2026-10-11",
+          "access_status": "302; Redirect target is a homepage, not a robots policy document. No target course content requested after this unresolved cross-origin preflight. This is not a publisher denial."
+        },
+        {
+          "url": "https://mitgsl.mit.edu/robots.txt",
+          "catalog_year": null,
+          "locator": "Published robots policy or redirect only; no target course access inferred",
+          "checked_at": "2026-10-11",
+          "access_status": "302; Same homepage redirect; a readable policy on the canonical Languages origin does not silently supply policy for the legacy host."
+        },
+        {
+          "url": "https://languages.mit.edu/robots.txt",
+          "catalog_year": null,
+          "locator": "Published robots policy or redirect only; no target course access inferred",
+          "checked_at": "2026-10-11T09:32:23+00:00",
+          "access_status": "200; Canonical policy read normally: general disallow wp-admin, administrative AJAX allow, crawl-delay 30. Current canonical departmental source branches were already reviewed."
+        },
+        {
+          "url": "http://cmsw.mit.edu/robots.txt",
+          "catalog_year": null,
+          "locator": "Published robots policy or redirect only; no target course access inferred",
+          "checked_at": "2026-10-11",
+          "access_status": "301; Same-host HTTPS upgrade, not itself denial. Canonical policy checked separately."
+        },
+        {
+          "url": "https://cmsw.mit.edu/robots.txt",
+          "catalog_year": null,
+          "locator": "Published robots policy or redirect only; no target course access inferred",
+          "checked_at": "2026-10-11",
+          "access_status": "unresolved_transport_and_browser_boundary; Normal approved-network Fetcher returned ConnectError. Ordinary Chrome navigation returned net::ERR_BLOCKED_BY_CLIENT. No certificate bypass, target request or policy assumption. Previously readable CMS sources remain valid under their separately recorded captures."
         }
       ],
       "checks": {
         "degree_identity": "BS Artificial Intelligence and Decision Making,Course6-4. Department explicitly requires6-4_2025 for Fall2025+ entrants, with lists labeled Fall2026. Future special-offering tags are preserved, not treated as a date contradiction. Unversioned catalog chart remains a distinct reference, not an additive degree view.",
         "required_and_choices": "Actual6-4_2025 required section makes6.1010,6.1200 and6.1210 fixed. Other math/programming/center/designation/pool selections supply255 mapped option identities; six GIR science choices add20 option identities. Independently enumerated current graph therefore has3fixed,275options and904contextual identities. The latter derive from63unversioned chart/reference plus845HASS records, with four duplicateHASSaliases removed by explicitgroups: explicit field eligibility is conditional and several source-version conflicts remain. No blanket HASS promotion, additive option quantity or equivalence across versions is inferred.",
-        "elective_pools": "Versioned lists and39 HASS field inventories were previously mapped; subject and applicability second pass remains ongoing. Existing source questions are preserved. A public C22 topic is offered under21M.389/589, but its year and applicability to every generic offering are not stated; preserve as contextual evidence rather than substituting a topic into the degree pool.",
-        "prerequisites": "All248 annotated versioned prerequisite/corequisite fields were read. Same-semester lecture/module credit, cohort-limited subjects, conditional instructor permission and recommended preparation remain distinct from universal required courses. GIR review preserves split calculus registration/retake/term credit, first-year mathematics graduate restrictions, formal chemistry None versus intended preparation, biology lottery limits and physics placement/repeat/prerequisite-credit rules. All20 GIR rows have bounded dispositions; missing formal prerequisites remain null. The483 description-supported HASS occurrences preserve graduate-only conditions, auditions, repeat limits and half-term language accounting. Limited-title HASS and the remaining unmatched6.9030 reference description/prerequisites remain under separate source review; unknown fields are not no-prerequisite claims. The clinic exam is an in-course field-assignment condition, not a prior subject prerequisite. The61 matched original references retain explicitly dated annotation prerequisites/corequisites and permission clauses; none becomes a fixed degree obligation. The catalog-wide prior-Physics-I-credit rule now appears explicitly on otherwise-undescribed8.021 and8.022 records; additional prerequisites remain unknown.",
+        "elective_pools": "Versioned lists and 39 HASS field inventories have bounded primary dispositions. All identified accessible exact source branches in the finite HASS queue were reviewed; 52 Architecture remnants reconcile to the existing individual title reviews. Field applicability and source-version questions remain explicit. The public C22 topic under 21M.389/589 has no stated year or universal generic-offering applicability, so remains contextual.",
+        "prerequisites": "All248 annotated versioned prerequisite/corequisite fields were read. Same-semester lecture/module credit, cohort-limited subjects, conditional instructor permission and recommended preparation remain distinct from universal required courses. GIR review preserves split calculus registration/retake/term credit, first-year mathematics graduate restrictions, formal chemistry None versus intended preparation, biology lottery limits and physics placement/repeat/prerequisite-credit rules. All20 GIR rows have bounded dispositions; missing formal prerequisites remain null. The484 description-supported HASS occurrences preserve graduate-only conditions, auditions, repeat limits and half-term language accounting. Limited-title HASS and the remaining unmatched6.9030 reference description/prerequisites have individually documented missing-evidence dispositions after bounded source review; unknown fields are not no-prerequisite claims. The clinic exam is an in-course field-assignment condition, not a prior subject prerequisite. The61 matched original references retain explicitly dated annotation prerequisites/corequisites and permission clauses; none becomes a fixed degree obligation. The catalog-wide prior-Physics-I-credit rule now appears explicitly on otherwise-undescribed8.021 and8.022 records; additional prerequisites remain unknown.",
         "credits_and_units": "The current catalog Subjects notation explicitly defines total credit as the sum of the three numeric unit components. All 248 annotated versioned rows now have observed MIT-unit totals; 13 absent annotations remain null. Generic special-topic zero values are literal printed observations, not proof of current topic/offering. The 6.4300 chart/CI-M conflict remains separate. No conversion to semester hours. The dated6.C35 annotation keeps15units, but its unversioned reference is now null because the Common Ground detail reports12 with no year or published precedence. The C57/C571 index mislink to a C06 page is a navigation defect, not a curricular contradiction.",
-        "classification": "All1189 source occurrences have bounded manual dispositions:261versioned,63unversioned reference,20GIR and845HASS. HASS845 comprises483 description-supported occurrences,359 limited title-only judgments and three code-only unknowns. The22 newly disposed held records comprise14precise human-context titles and eight unknown titles; all20identity/version holds and two source-description conflicts persist. This is not a full description or identity audit. Every mixed/unclassified record remains other. The63 original chart/CI-M references now include61 exact-code/title dated annotation content reviews, one independently dated Spring2024course-site content review, and one brief official instructor content identification. These remain distinct unversioned contextual occurrences; no classification is inferred merely from duplicate code.",
+        "classification": "All1189 source occurrences have bounded manual dispositions:261versioned,63unversioned reference,20GIR and845HASS. HASS845 comprises484 description-supported occurrences,358 limited title-only judgments and three code-only unknowns. The22 newly disposed held records comprise14precise human-context titles and eight unknown titles; all20identity/version holds and two source-description conflicts persist. This is not a full description or identity audit. Every mixed/unclassified record remains other. The63 original chart/CI-M references now include61 exact-code/title dated annotation content reviews, one independently dated Spring2024course-site content review, and one brief official instructor content identification. These remain distinct unversioned contextual occurrences; no classification is inferred merely from duplicate code.",
         "family_composition": "No family inheritance. Two reciprocal within-version EECS cross-list groups map five records to two identities. Two additional explicit CMS same-subject panels map six HASS source records to two identities:CMS524/STS024(Spring2026),CMS406/21A505/STS065(Fall2026). Their original list titles and joint labels match exactly; meets-with, historical, merely equivalent and differently titled versions are excluded.1189source records now map to1182identities; remaining aliases are not assumed resolved.",
-        "degree_wide_requirements": "Institute completion, residence, units beyond GIRs, grades, communication, HASS, science, laboratory, REST, PE/swimming, substitutions and transfer/exam policies are represented. The current graph has an independently enumerated full source-role baseline; optional field-plan inventories remain contextual while eligibility/version questions are unresolved. Known HASS transfer prohibition and final-review procedure are compatible. Current2026 entrance-credit policy is explicitly cohort-qualified; historical entrants remain a separate source scope. Five existing curriculum-source questions and actual-description backlog keep the full audit in progress."
+        "degree_wide_requirements": "Institute completion, residence, units beyond GIRs, grades, communication, HASS, science, laboratory, REST, PE/swimming, substitutions and transfer/exam policies are represented. The current graph has an independently enumerated full source-role baseline; optional field-plan inventories remain contextual while eligibility/version questions are unresolved. Known HASS transfer prohibition and final-review procedure are compatible. Current2026 entrance-credit policy is explicitly cohort-qualified; historical entrants remain a separate source scope. Specific curriculum, cohort, identity and metadata source questions keep the full audit blocked after bounded accessible-source closure; no current identified unrestricted unread exact teaching page remains. See mit-hass-bounded-closure.json for every remaining HASS occurrence, rather than treating a title-only judgment as a description review."
       },
       "expected_profile": {
         "required": {
@@ -14963,16 +15005,21 @@
           "issue": "14.27 prerequisite scopes disagree: the Economics concentration list prints14.30or6.041; the unversioned EECS6-P14annotation prints14.01and(6.3700or14.30). Both descriptions are individually observed, but no publication-date or numbering precedence resolves applicability. Preserve attributed statements with normalized prerequisite unknown; this metadata question does not invent a degree-inventory conflict.",
           "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-P14",
           "kind": "metadata_source_question"
+        },
+        {
+          "issue": "The finite 361-record HASS remainder has individual source dispositions: exact reviewed-source description gaps, existing identity/version conflicts and legacy teaching-link boundaries or nonmatches. Architecture 52 is reconciled, not delegated pending. Missing descriptions are not inferred from title or broad department membership; metadata and current eligibility remain unknown.",
+          "url": "https://web.mit.edu/is/courseweb/courses.html",
+          "kind": "bounded_individual_metadata_and_identity_questions",
+          "evidence_ledger": "research/degree-audit/mit-hass-bounded-closure.json"
         }
       ],
       "remaining_work": [
-        "Continue accessible actual-description research beyond359 limited HASS title judgments and three code-only unknowns. Twenty identity/version holds and two source conflicts remain explicit; no incompatible description/credit/prerequisite or alias inference was adopted.",
-        "Originalreference6.9030 has a brief instructor identification as photography, but its linked detailed course page returnsHTTP404. The department annotation remains untitled and is not enriched from the separate reference.6.8301 has datedSpring2024course-site content linked by the instructor. Continue full degree/source-role applicability review;8.021 remains absent from accessible descriptions.",
-        "Resolve or precisely retain existing curriculum-source questions, missing/generic annotations and enrollment-cap discrepancy; no full-degree audit certification yet.",
-        "For13 missing versioned annotations,12 have explicit historical numbering context; eight have explicitly stated future-number questions.21M.589 is absent from that table but has a separate permitted C22 topic page: no year or universal applicability is stated. Find exact current code/term content only through permitted public sources; do not reuse historical title as current description.",
-        "C57/C571 public Common Ground index links /optimization/, whose actual heading/codes are C06LinearAlgebraandOptimization/6.C06+18.C06. Do not reuse that mismatched detail for6.7200/7201; existing EECS6.C571 explicitly states former6.7201 and remains a separate occurrence."
+        "Institutional or newly published exact evidence is needed for the curriculum/cohort/identity questions listed in blockers. The bounded accessible primary source queue is closed; no full-degree audit is certified.",
+        "For every one of the 361 remaining HASS occurrences, mit-hass-bounded-closure.json records the exact identity, reviewed source IDs and source-specific missingness or boundary. These are 323 reviewed-source description gaps (including 52 Architecture), 22 identity/version questions and 16 legacy-source boundary/nonmatch records. Generic CV/publication discovery is not an unbounded pending queue.",
+        "The 13 missing versioned annotations, 8.021, 6.9030, future 6.Sxxx numbering questions and enrollment/credit/preparation discrepancies retain their exact documented evidence limits. Reopen only when a specifically relevant permitted source or institutional clarification becomes available.",
+        "C57/C571 index navigation points to the mismatched C06 page. Existing exact EECS observations remain valid; do not transfer C06 content or invent a curricular conflict from the navigation defect."
       ],
-      "correction_status": "All1189source occurrences have boundedmanualdispositions. Four reviewedcross-listgroups yield1182mappedidentities:3fixed,275options,904contextual. Fullprimaryaudit remainsin_progress; actual-description and policy/identitysource questions remain.",
+      "correction_status": "All 1189 source occurrences have bounded manual dispositions. Four reviewed cross-list groups yield 1182 mapped identities: 3 fixed, 275 options and 904 contextual. The finite identified accessible source queue is closed; full primary audit is blocked by individually recorded evidence questions, not lack of time or an unassigned description backlog.",
       "second_pass_status": "pending",
       "reviewed_course_ids": [
         "mit-ai-6-1000",
@@ -16468,9 +16515,16 @@
       "public_resource_review": {
         "reviewed_at": "2026-10-11",
         "cleared_generic_link_count": 818,
-        "retained_course_site_count": 215,
-        "retained_syllabus_count": 191,
+        "retained_course_site_count": 219,
+        "retained_syllabus_count": 195,
         "notes": "Public-site fields require actual course teaching or syllabus pages. Cleared catalog/concentration/department listing links remain in course URL, registered sources and review provenance. This metadata correction changes no category, credits, prerequisites or requirement membership."
+      },
+      "bounded_source_queue_review": {
+        "reviewed_at": "2026-10-11",
+        "path": "research/degree-audit/mit-hass-bounded-closure.json",
+        "sha256": "d0a8674d510ad5fbe360259c94e58245c15d155811ce46d43d15ab27db5f1712",
+        "identified_unrestricted_unread_exact_pages": 0,
+        "full_audit_certified": false
       },
       "ledger": "research/degree-audit/mit.json",
       "audit_date": "2026-10-11",
@@ -31463,7 +31517,7 @@
     {
       "program_id": "rochester-institute-of-technology-artificial-intelligence-bs-degree",
       "institution_id": "rochester-institute-of-technology",
-      "status": "in_progress",
+      "status": "blocked",
       "sources": [
         {
           "url": "https://www.rit.edu/study/artificial-intelligence-bs",
@@ -32192,17 +32246,374 @@
           "locator": "Complete overview, current curriculum table and footnotes, including repeated one-credit ensembles, lower-level dance selection and maximum-one rules.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/art-history-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "2026–2027 course table and full settled public popup opened by the exact source-label link.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/museum-studies-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "2026–2027 course table and full settled public popup opened by the exact source-label link.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/visual-culture-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "2026–2027 course table and full settled public popup opened by the exact source-label link.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/film-studies-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "2026–2027 course table and full settled public popup opened by the exact source-label link.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/journalism-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "2026–2027 course table and full settled public popup opened by the exact source-label link.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/science-film-photography-and-imaging-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "2026–2027 course table and full settled public popup opened by the exact source-label link.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/film-studies-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "Rendered 2026–2027 curriculum and actual settled public popup, read in ordinary Chrome.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/art-history-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "2026–2027 curriculum table and complete settled public course popups",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/american-arts-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "2026–2027 curriculum table and complete settled public course popups",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/journalism-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "Rendered 2026–2027 curriculum table and settled exact public course popup; direct visible-browser read.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/american-arts-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "Complete current overview, curriculum table and footnotes; discipline distribution, exclusions, MUSE minimum and imaging credit ranges preserved.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/art-history-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "Complete current overview, curriculum table and footnotes; discipline distribution, exclusions, MUSE minimum and imaging credit ranges preserved.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/film-studies-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "Complete current overview, curriculum table and footnotes; discipline distribution, exclusions, MUSE minimum and imaging credit ranges preserved.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/journalism-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "Complete current overview, curriculum table and footnotes; discipline distribution, exclusions, MUSE minimum and imaging credit ranges preserved.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/museum-studies-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "Complete current overview, curriculum table and footnotes; discipline distribution, exclusions, MUSE minimum and imaging credit ranges preserved.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/science-film-photography-and-imaging-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "Complete current overview, curriculum table and footnotes; discipline distribution, exclusions, MUSE minimum and imaging credit ranges preserved.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/visual-culture-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "Complete current overview, curriculum table and footnotes; discipline distribution, exclusions, MUSE minimum and imaging credit ranges preserved.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/geographic-information-systems-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "Exact current curriculum link and settled full public course popup read in ordinary Chrome.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/free-culture-and-free-and-open-source-computing-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "Exact current curriculum link and settled full public course popup read in ordinary Chrome.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/transmedia-storytelling-and-entertainment-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "Exact current curriculum link and settled full public course popup read in ordinary Chrome.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/analytic-and-expressive-communication-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "Exact current curriculum link and settled full public course popup read in ordinary Chrome.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/vertically-integrated-projects-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "Exact current curriculum link and settled full public course popup read in ordinary Chrome.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/principles-computing-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "Exact current curriculum link and settled full public course popup read in ordinary Chrome.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/global-public-health-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "Rendered 2026–2027 curriculum and actual settled public popup, read in ordinary Chrome.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/language-science-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "Rendered 2026–2027 curriculum and actual settled public popup, read in ordinary Chrome.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/american-sign-language-and-deaf-cultural-studies-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "Rendered 2026–2027 curriculum and actual settled public popup, read in ordinary Chrome.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/geographic-information-systems-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "2026–2027 course table and full settled public popup opened by the exact source-label link.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/comics-studies-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "Rendered 2026–2027 curriculum table and settled exact public course popup; direct visible-browser read.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/transmedia-storytelling-and-entertainment-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "Rendered 2026–2027 curriculum table and settled exact public course popup; direct visible-browser read.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/health-culture-and-society-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "Rendered 2026–2027 curriculum table and settled exact public course popup; direct visible-browser read.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/american-sign-language-and-deaf-cultural-studies-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "Rendered 2026–2027 curriculum table and settled exact public course popup; direct visible-browser read.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/global-public-health-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "Current 2026–2027 curriculum table and complete public course popup opened from its exact code link.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/analytic-and-expressive-communication-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "Current curriculum table and complete settled public popup opened from the exact course-code link.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/american-sign-language-and-deaf-cultural-studies-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "2026–2027 curriculum table and complete settled public course popups",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/computational-linguistics-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "2026–2027 curriculum table and complete settled public course popup opened through its exact course-code link.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/american-sign-language-and-deaf-cultural-studies-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "Complete current overview, curriculum table and footnotes; exact groups, preparation, audience, topic, credit and no-reuse conditions reviewed.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/analytic-and-expressive-communication-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "Complete current overview, curriculum table and footnotes; exact groups, preparation, audience, topic, credit and no-reuse conditions reviewed.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/comics-studies-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "Complete current overview, curriculum table and footnotes; exact groups, preparation, audience, topic, credit and no-reuse conditions reviewed.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/computational-linguistics-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "Complete current overview, curriculum table and footnotes; exact groups, preparation, audience, topic, credit and no-reuse conditions reviewed.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/free-culture-and-free-and-open-source-computing-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "Complete current overview, curriculum table and footnotes; exact groups, preparation, audience, topic, credit and no-reuse conditions reviewed.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/geographic-information-systems-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "Complete current overview, curriculum table and footnotes; exact groups, preparation, audience, topic, credit and no-reuse conditions reviewed.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/global-justice-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "Complete current overview, curriculum table and footnotes; exact groups, preparation, audience, topic, credit and no-reuse conditions reviewed.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/global-public-health-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "Complete current overview, curriculum table and footnotes; exact groups, preparation, audience, topic, credit and no-reuse conditions reviewed.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/health-culture-and-society-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "Complete current overview, curriculum table and footnotes; exact groups, preparation, audience, topic, credit and no-reuse conditions reviewed.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/language-science-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "Complete current overview, curriculum table and footnotes; exact groups, preparation, audience, topic, credit and no-reuse conditions reviewed.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/principles-computing-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "Complete current overview, curriculum table and footnotes; exact groups, preparation, audience, topic, credit and no-reuse conditions reviewed.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/transmedia-storytelling-and-entertainment-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "Complete current overview, curriculum table and footnotes; exact groups, preparation, audience, topic, credit and no-reuse conditions reviewed.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/vertically-integrated-projects-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "Complete current overview, curriculum table and footnotes; exact groups, preparation, audience, topic, credit and no-reuse conditions reviewed.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/curriculum-requirements",
+          "catalog_year": null,
+          "locator": "Entire public main content and actual links read 2026-10-11; matriculation/advised catalog applicability, advising report and current versus historical catalog destinations.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/global-justice-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "Exact current curriculum link and settled full public course popup read in ordinary Chrome.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
+        },
+        {
+          "url": "https://www.rit.edu/study/comics-studies-immersion",
+          "catalog_year": "2026-2027",
+          "locator": "Exact current curriculum link and settled full public course popup read in ordinary Chrome.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_browser_rendered"
         }
       ],
       "checks": {
-        "degree_identity": "Public study page explicitly states Artificial Intelligence Bachelor of Science; curriculum heading is2026–2027. Exact BS maintained.",
+        "degree_identity": "The public study page explicitly states Artificial Intelligence Bachelor of Science and Curriculum for 2026–2027. Exact BS identity is maintained; planned Fall 2026 launch is not recast as proof of first instruction.",
         "required_and_choices": "Independently reread all four expanded years:23 distinct single-code mapped sequence records, six pairs selected one each, and AI electives choose two across four entries (one is a robotics pair). Co-op repeats the same identity in two summers and counts once as a record, not one required placement. Twelve unsupported memberships cleared from uncoded context nodes.",
-        "elective_pools": "All 77 immersion route rules are read, with 18 represented branches: Mathematics, AI in Society, Applied Statistics, Cellular Biology, Physics, Astronomy, Chemistry, eight languages, Archaeology, Cultural Anthropology and Sociology. Language routes preserve whole three-language OR two-language-plus-culture bundles, consecutive-study/placement conditions, source exclusions and topic/campus restrictions. Cultural Anthropology preserves its first three-way OR entry. Three current AI elective options and their robotics alternative remain separate from advising-only identities. The queue retains 439 unread named identifiers; additional completed contributions await graph integration. Global Experience stays an open approved criterion. Full current GE/WI attributes remain SIS-dependent. Six additional represented local routes are Ecology/Evolution and five gender-study paths. Ecology preserves required OR plus two further electives, repeated membership without double-count permission, and actual four-credit options. Gender routes preserve required versus elective groups, max-one introductory options where stated, 300-level minimum only where stated and exact topic restrictions. All 24 represented routes remain conditional choices for the AI degree. Philosophy, Ethics, History and Economics bring represented routes to 28. Ethics preserves the explicit one-foundation-plus-two OR both-foundations-plus-one bundles with two upper-level courses and ethical-topic restriction. Economics keeps ECON-101 outside the three elective choices as separate preparation; History and Philosophy each require one upper-level course. Four further paths are Indigenous Studies, Latino/Latina/Latin American Studies, Urban Studies and Global Experience. The last uses nine approved GE credits with required global/study-away experience and explicit RIT Global/GE Committee approval, no finite course menu. Latino language/culture partition remains source-untagged; no prefix inference is certified. Seven further complete local menus bring represented paths to 39: Public Policy, Political Science, American Politics, International Relations, Cyberpolitics, Climate Change and Quantum Information. Political Science requires at least one course from American Politics OR International Relations, not one from each. Climate and Quantum retain three separate choose-one groups. The AI-fixed MATH-241 still cannot double-count under the immersion no-overlap rule. Six more paths bring the represented graph to 45: Advertising/Public Relations, Communication, Creative Writing, Digital Literatures, Black Studies and Literature/Media. Digital Literatures has one local required course plus two choices; Advertising and Literature each have separate foundation and additional-elective groups. Concentration-specific English exclusions are not expanded to all English majors. Black Studies has no invented upper-level rule. Environmental Studies and STS add two paths, each selecting three courses/nine credits with one upper-level course. Both combined labels were opened on both routes and resolve to actual STSO cards; each row supplies one actual identity without inferring WGST aliases. Variable-topic 488/489 credit/permission conditions remain applicable. Six more paths yield 53 represented routes. Psychology entry preparation stays separate, honors elective pairs are nested alternatives, and AI-fixed PSYC-223 is excluded from reuse. Diversity keeps five paired elective alternatives. Legal/Religious Studies retain discipline-spread and applicable home-major conditions. Broader Psychology 2xx/3xx criteria remain open beyond the finite named table. Four performing-arts paths bring represented routes to 57. Music/Theatre ensemble entries explicitly require three one-credit enrollments, while actual 0–1 ranges remain unknown scalar values. Theatre permits at most one named dance entry; Dance requires a 200-level choice plus one additional course; Stagecraft retains separate required/lower/advanced groups.",
-        "prerequisites": "All 40 current course cards read, including grades and alternatives. ISTE476 has a restricted audience; EEEE485 requires EEEE346 or equivalent. D03.0 explicitly requires prerequisites and offering-department approval for courses outside the usual plan, with both departments approving undergraduate use of graduate-level courses. These conditional entry paths are preserved without granting waivers, supplying an equivalent or adding prerequisite courses to the fixed graph. CSCI431 credit-exclusion self-reference remains a source wording question. Mathematics immersion separates 7 prerequisite identities from electives; 3 previously unmapped calculus preparation identities are context/unresolved rather than fixed. All 37 cards were actually read, with their honors GPA, audience and legacy-number conditions preserved.",
-        "credits_and_units": "Forty current cards have explicit credit amounts; D12.0/D01.4 verify semester basis. Sequence states122, including uncodedGE/open slots. Zero-credit YOPS10 and IDAI499 remainzero; two co-op placements do not create credit totals. Advising-only three-course amounts remain separately sourced. Mathematics immersion publishes a 9–12 selection range alongside total 9; preserve both as minimum/variable route evidence, not a fabricated single scalar load. Every represented course card gives its own amount, and D01.4 supplies semester normalization. All 14 society-route cards individually state 3 credits, corroborating the 9-hour route without division-based imputation; their absent prerequisite fields remain null. Sixteen beginning-language cards independently print four credits while route totals print nine. Preserve three-course selection and actual amounts without an invented nine-credit cap; Chinese displayed 9+3 rows remain substitution, not 12. All 57 anthropology/sociology cards independently print 3 credits.",
-        "classification": "Current 679 mapped identities have 676 actual descriptions and three advising-only missing descriptions. Manual profile: 23 fixed / 641 options / 15 context. Appreciation/history/communication stay human context, actual performance/design practice is applications, and substantive combined practice/interpretation remains mixed. PRFN-250/341/243 were independently reread; source membership does not classify subject.",
+        "elective_pools": "All 77 published immersion paths and every named current card are reviewed and represented: 76 conditional candidate routes, including approval-based Global Experience, plus Principles of Computing retained as excluded context because required ISCH-370 prohibits GCCIS degree credit. The 787-label queue has 784 integrated current observations and three historical references, with no unread current contribution or graph backlog. Whole-route alternatives, discipline distribution, repeated credit accumulation, preparation, topic/campus/audience restrictions and no reuse remain explicit. Combined labels map only to observed popup identities; no cross-list equivalence is inferred. Broader Psychology eligibility and other approval-based criteria remain open source-stated rules, not fabricated finite pools. Complete university GE/WI attributes remain inaccessible through the identified public destinations.",
+        "prerequisites": "All 807 available actual descriptions were read, with 333 prerequisite/eligibility statements and null where the inspected card provides none. Program entry prerequisites remain separate from degree obligations. D03.0 establishes departmental approval conditions without granting waivers. ISCH-370 expressly prohibits GCCIS degree credit, unlike ISCH-201 approval-only wording; ISCH-110 names Computer Science specifically. CSCI-431 was reread in its current public card: its literal prior-credit self-reference and conjunction are preserved as a repeat/eligibility condition, not a standalone initial-entry blocker. Honors, NTID support, placement, declared-immersion and historical-number conditions remain source-specific.",
+        "credits_and_units": "The degree sequence states 122 semester hours, distinct from the 120-hour institutional floor; D01.4 establishes semester-hour meaning. Actual zero-credit courses and repeated co-op placements are preserved. Every current card supplies its own amount or range; route totals are not divided to infer credits. Four-credit language/imaging choices, 1–3 or 1–6 variable courses, zero-to-one music ensembles and fixed one-credit Theatre Ensemble remain distinct. VIP requires nine credits on one project, at least three advanced; Music/Theatre repeated-credit bundles are not three distinct identities. No count-to-credit conversion is performed.",
+        "classification": "Current 810 mapped identities have 807 actual descriptions and three advising-only missing descriptions. Manual profile: 23 fixed / 770 options / 17 context. All exact current immersion cards were read; generic topic/project bodies can remain source-inspected unclassified, and no category is inferred from membership or a prefix.",
         "family_composition": "No family inheritance for this degree.",
-        "degree_wide_requirements": "D12.0 undergraduates: 2.0 GPA,25% RIT semester residency,120 minimum,co-op/wellness/writing and catalog applicability retained. D01.4 BS 60 GE,three-course 9-hour immersion and no program overlap reviewed. Typical sequence shows 122 and IDAI 490WI-PR. ExtraWI/completeGE pools remain unmapped; MATH 190Immersion 3 annotation conflicts with a separateImmersion 3 slot/no-overlap policy. D03.0 now adds current public registration, independent-study and cross-registration conditions; graduate-course permission is conditional, not inferred from course number. Remaining accessible GE/WI pool review is active work, not an access blocker; status corrected to in_progress on 2026-10-11. Current UWP/committee pages and linked petition now close exceptional WI substitution criteria/timing, FYW AP/transfer exemption, and the current WRTG search boundary. The science recommendation document is March2013 and cannot populate a current pool. Public immersion pages render finite curricula; their remaining review is still accessible backlog."
+        "degree_wide_requirements": "Reviewed D02.0/D05.0/D12.0/D01.4/D01.5/D03.0 cover transfer, grades and P–N/repeats, 2.0 GPA, 25-percent RIT residency, the 120-hour floor, catalog applicability, 60 BS GE hours, eight perspectives, immersion/no overlap, registration and two distinct wellness activities. Degree 122-hour sequence and IDAI-490 WI-PR designation remain intact. Current UWP/committee and petition evidence covers three WI courses within existing hours, FYW AP/transfer exemptions and exceptional WI-GE substitution criteria/timing. Current-student guidance was reread: use matriculation/advised catalog and the student AAR; it gives no public reconciliation of catalog/advising differences. All identified accessible immersion work is complete. The full current GE/WI attribute inventory remains unavailable at the public SIS destinations; the March 2013 science list is historical. MATH-190 allocation and advising elective version discrepancies remain substantive source gaps."
       },
       "expected_profile": {
         "required": {
@@ -32219,29 +32630,29 @@
           }
         },
         "options": {
-          "count": 641,
+          "count": 770,
           "categories": {
-            "foundations": 7,
-            "mathematics": 45,
-            "ai_ml": 3,
+            "foundations": 8,
+            "mathematics": 47,
+            "ai_ml": 4,
             "systems": 2,
-            "human_context": 441,
-            "applications": 96,
+            "human_context": 535,
+            "applications": 112,
             "electives": 0,
-            "other": 47
+            "other": 62
           }
         },
         "unresolved": {
-          "count": 15,
+          "count": 17,
           "categories": {
-            "foundations": 0,
+            "foundations": 1,
             "mathematics": 3,
             "ai_ml": 0,
             "systems": 0,
             "human_context": 0,
             "applications": 9,
             "electives": 0,
-            "other": 3
+            "other": 4
           }
         }
       },
@@ -32322,7 +32733,29 @@
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-arth-317",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-arth-318",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-arth-364",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-arth-366",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-arth-368",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-arth-369",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-arth-379",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-arth-400",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-arth-457",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-arth-521",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-arth-522",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-arth-541",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-arth-544",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-arth-549",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-arth-550",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-arth-551",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-arth-555",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-arth-556",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-arth-558",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-arth-568",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-arth-573",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-arth-574",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-arth-577",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-arth-578",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-arth-584",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-arth-588",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-biol-206",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-biol-211",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-biol-212",
@@ -32351,7 +32784,13 @@
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-comm-212",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-comm-221",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-comm-223",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-comm-240",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-comm-253",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-comm-263",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-comm-271",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-comm-272",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-comm-280",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-comm-291",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-comm-302",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-comm-303",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-comm-304",
@@ -32365,6 +32804,9 @@
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-comm-344",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-comm-356",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-comm-357",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-comm-370",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-comm-374",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-comm-390",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-comm-421",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-comm-503",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-crim-110",
@@ -32388,8 +32830,12 @@
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-142",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-431",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-634",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-dchp-301",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-dhss-101",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-dhss-103",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-dhss-377",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-dhss-488",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-dhss-500",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-econ-201",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-econ-401",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-econ-402",
@@ -32417,30 +32863,39 @@
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-engl-211",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-engl-212",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-engl-215",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-engl-230",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-engl-275",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-engl-307",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-engl-309",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-engl-312",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-engl-313",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-engl-314",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-engl-315",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-engl-316",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-engl-318",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-engl-319",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-engl-320",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-engl-330",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-engl-345",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-engl-370",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-engl-373",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-engl-375",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-engl-376",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-engl-377",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-engl-379",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-engl-386",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-engl-389",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-engl-390",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-engl-391",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-engl-392",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-engl-410",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-engl-417",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-engl-418",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-engl-421",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-engl-422",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-engl-424",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-engl-450",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-engl-475",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-engl-490",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-engl-511",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-engl-543",
@@ -32454,6 +32909,10 @@
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-eshs-360",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-gcis-123",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-gcis-124",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-glph-101",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-glph-105",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-glph-355",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-glph-455",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-hist-101",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-hist-102",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-hist-103",
@@ -32508,9 +32967,25 @@
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-hist-465",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-hist-470",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-hist-480",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-igme-382",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-igme-384",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-igme-386",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-igme-484",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-igme-489",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-imgs-111",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-imgs-221",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-imgs-261",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-imgs-321",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-imgs-341",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-imgs-351",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-ings-205",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-ings-270",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-isch-201",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-iste-230",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-itdl-151h",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-itdl-205",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-itdl-211",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-itdl-511",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-lead-200",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-lead-201",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-lead-203",
@@ -32527,7 +33002,13 @@
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-lead-311",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-lead-312",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-lead-313",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-ling-214",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-ling-301",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-ling-302",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-ling-351",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-ling-356",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-ling-370",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-ling-449",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-ling-581",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-math-190",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-math-200",
@@ -32559,6 +33040,8 @@
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-math-441",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-math-442",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-math-505",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-medg-106",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-meds-201",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-meds-250",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-meds-251",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-mgmt-340",
@@ -32566,6 +33049,14 @@
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-mlar-202",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-mlar-301",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-mlar-449",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-mlas-201",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-mlas-202",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-mlas-301",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-mlas-302",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-mlas-351",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-mlas-352",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-mlas-401",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-mlas-402",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-mlch-201",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-mlch-202",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-mlch-301",
@@ -32576,6 +33067,7 @@
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-mlch-401",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-mlch-410",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-mlch-415",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-mlfr-151",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-mlfr-201",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-mlfr-202",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-mlfr-301",
@@ -32636,6 +33128,30 @@
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-mlsp-402",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-mlsp-410",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-mlsp-415",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-muse-220",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-muse-221",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-muse-224",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-muse-225",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-muse-226",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-muse-241",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-muse-244",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-muse-249",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-muse-341",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-muse-360",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-muse-361",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-muse-388",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-nasl-180",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-nasl-190",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-nasl-200",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-nasl-210",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-nasl-230",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-nasl-240",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-nasl-275",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-nhss-251",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-nhss-275",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-nutr-215",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-phil-102",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-phil-103",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-phil-201",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-phil-202",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-phil-203",
@@ -32758,6 +33274,7 @@
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-prfl-352",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-prfl-372",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-prfl-376",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-prfl-379",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-prfl-465",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-prfn-101",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-prfn-200",
@@ -32766,6 +33283,7 @@
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-prfn-207",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-prfn-208",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-prfn-209",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-prfn-214",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-prfn-240",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-prfn-243",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-prfn-244",
@@ -32773,6 +33291,7 @@
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-prfn-247",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-prfn-250",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-prfn-303",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-prfn-314",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-prfn-316",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-prfn-340",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-prfn-341",
@@ -32798,6 +33317,7 @@
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-psyc-242",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-psyc-255",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-psyc-300",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-psyc-431",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-publ-201",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-publ-210",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-publ-301",
@@ -32829,8 +33349,10 @@
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-soci-361",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-soci-370",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-soci-395",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-sofa-103",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-sois-240",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-sois-333",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-stat-145",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-stat-205",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-stat-257",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-stat-305",
@@ -32870,7 +33392,25 @@
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-stso-550",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-swen-344",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-swen-566",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-uwrt-365",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-visl-206",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-visl-210",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-visl-224",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-visl-234",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-visl-295",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-visl-320",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-visl-363",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-visl-365",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-visl-366",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-visl-372",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-visl-373",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-visl-376",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-visl-383",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-visl-384",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-visl-387",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-visl-388",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-visl-390",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-visl-440",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-wgst-200",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-wgst-205",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-wgst-206",
@@ -32922,6 +33462,8 @@
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-chmg-146",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-632",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-econ-101",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-isch-110",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-isch-370",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-ling-582",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-ling-584",
           "rochester-institute-of-technology-artificial-intelligence-bs-degree-math-171",
@@ -32971,20 +33513,12 @@
       ],
       "blockers": [
         {
-          "url": "https://www.rit.edu/study/artificial-intelligence-bs",
-          "gap": "CSCI431 credit-exclusion self-reference requires clarification. Ordinary departmental approvals and EEEE485 preparation are recorded enrollment conditions rather than a presumed blanket curriculum defect."
-        },
-        {
           "url": "https://www.rit.edu/computing/sites/rit.edu.computing/files/docs/IST-Information/AI%202026_0.pdf",
-          "gap": "AdvisingCSCI 632/LING 582/LING 584 alternatives conflict with current 2026–27 rendered catalogCSCI 634/four-option list."
+          "gap": "Advising CSCI 632/LING 582/LING 584 alternatives conflict with current 2026–27 rendered catalog CSCI 634/four-option list."
         },
         {
           "url": "https://www.rit.edu/generaleducation/immersions",
-          "gap": "No-program-overlap policy versus MATH 190Immersion 3 annotation plus separateImmersion 3 slot. Applicability of the immersion annotation remains unresolved."
-        },
-        {
-          "url": "https://academiccatalog.rit.edu/programs/artificial-intelligence-bs/",
-          "gap": "Direct automated catalog route had unreadable robot/JavaScript response; public study-page rendering supplies course evidence without bypass, not a complete independently readable degree-wide catalog."
+          "gap": "No-program-overlap policy versus MATH-190 Immersion 3 annotation plus separate Immersion 3 slot. Applicability of the immersion annotation remains unresolved."
         },
         {
           "url": "https://mycampus.ps.rit.edu/psc/RITXCPRD/EMPLOYEE/SA/c/COMMUNITY_ACCESS.CLASS_SEARCH.GBL",
@@ -32993,9 +33527,17 @@
         {
           "url": "https://mycampus.ps.rit.edu/",
           "gap": "Ordinary browser navigation rendered RIT Login; no account interaction or authenticated source access attempted."
+        },
+        {
+          "url": "https://www.rit.edu/study/transmedia-storytelling-and-entertainment-immersion",
+          "gap": "The overview requires DHSS/ITDL-500 first/concurrently while the table permits ENGL-377 instead; applicability of the 500-specific sequence to that alternative is unstated."
+        },
+        {
+          "url": "https://www.rit.edu/study/free-culture-and-free-and-open-source-computing-immersion",
+          "gap": "Historical substitutions refer to ISCH-110, which is absent from the current requirement table. The current required DHSS-488 Topic ID #4 has only a generic Special Topics card; no offering-specific description or reassignment of the old substitution is invented."
         }
       ],
-      "correction_status": "In progress. All 77 route rules read; 57 paths represented with 679 identities (23 fixed / 641 options / 15 context), 676 descriptions. Named queue: 650 integrated / 46 completed contributions awaiting integration / 88 unread / three historical. Genuine current GE/WI access, source-version boundaries and broader Psychology eligibility remain explicit.",
+      "correction_status": "Bounded accessible review closed. All 77 immersion graphs and named current cards integrated: 810 identities, 807 descriptions, 333 prerequisite/eligibility statements; manual sets 23 fixed / 770 options / 17 context. Queue: 784 integrated labels, three historical references, no unread current contribution or identified accessible graph backlog. Primary status is blocked only at the exact remaining current GE/WI access and authoritative catalog/advising/allocation/version boundaries. CSCI-431 prior-credit wording is preserved but no longer treated as an initial-entry blocker. Full independent degree review is not certified.",
       "second_pass_status": "pending",
       "ledger": "research/degree-audit/buffalo-delaware-rit.json",
       "audit_date": "2026-10-11",
@@ -39991,7 +40533,7 @@
     {
       "program_id": "university-of-california-san-diego-artificial-intelligence-bs-degree",
       "institution_id": "university-of-california-san-diego",
-      "status": "in_progress",
+      "status": "blocked",
       "sources": [
         {
           "url": "https://catalog.ucsd.edu/curric/CSE-ug.html",
@@ -40265,15 +40807,302 @@
           "locator": "All13 exact complete represented blocks read by contributor and primary, with section introductions",
           "checked_at": "2026-10-11",
           "access_status": "Normal official-index-linked HTTP200 chapter"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/LIT.html",
+          "catalog_year": "2026–27",
+          "locator": "Contribution full course blocks and applicable section introductions reviewed; primary read all27 engineering matches and47 remaining-literature matches, plus first-literature scope/hold checks",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal official-index-linked HTTP200 chapter"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/ECE.html",
+          "catalog_year": "2026–27",
+          "locator": "Contribution full course blocks and applicable section introductions reviewed; primary read all27 engineering matches and47 remaining-literature matches, plus first-literature scope/hold checks",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal official-index-linked HTTP200 chapter"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/MAE.html",
+          "catalog_year": "2026–27",
+          "locator": "Contribution full course blocks and applicable section introductions reviewed; primary read all27 engineering matches and47 remaining-literature matches, plus first-literature scope/hold checks",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal official-index-linked HTTP200 chapter"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/SE.html",
+          "catalog_year": "2026–27",
+          "locator": "Contribution full course blocks and applicable section introductions reviewed; primary read all27 engineering matches and47 remaining-literature matches, plus first-literature scope/hold checks",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal official-index-linked HTTP200 chapter"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/BENG.html",
+          "catalog_year": "2026–27",
+          "locator": "Contribution full course blocks and applicable section introductions reviewed; primary read all27 engineering matches and47 remaining-literature matches, plus first-literature scope/hold checks",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal official-index-linked HTTP200 chapter"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/NANO.html",
+          "catalog_year": "2026–27",
+          "locator": "Contribution full course blocks and applicable section introductions reviewed; primary read all27 engineering matches and47 remaining-literature matches, plus first-literature scope/hold checks",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal official-index-linked HTTP200 chapter"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/HDS.html",
+          "catalog_year": "2026–27",
+          "locator": "Full contributor source-block/section review; primary read all17 HDS/PH blocks and18 consequential contributor blocks for scope/category/identity checks",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal official-index-linked HTTP200 chapter"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/PH.html",
+          "catalog_year": "2026–27",
+          "locator": "Full contributor source-block/section review; primary read all17 HDS/PH blocks and18 consequential contributor blocks for scope/category/identity checks",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal official-index-linked HTTP200 chapter"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/THEA.html",
+          "catalog_year": "2026–27",
+          "locator": "Full contributor source-block/section review; primary read all17 HDS/PH blocks and18 consequential contributor blocks for scope/category/identity checks",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal official-index-linked HTTP200 chapter"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/ENVR.html",
+          "catalog_year": "2026–27",
+          "locator": "Full contributor source-block/section review; primary read all17 HDS/PH blocks and18 consequential contributor blocks for scope/category/identity checks",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal official-index-linked HTTP200 chapter"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/ESYS.html",
+          "catalog_year": "2026–27",
+          "locator": "Full contributor source-block/section review; primary read all17 HDS/PH blocks and18 consequential contributor blocks for scope/category/identity checks",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal official-index-linked HTTP200 chapter"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/MGT.html",
+          "catalog_year": "2026–27",
+          "locator": "Full contributor source-block/section review; primary read all17 HDS/PH blocks and18 consequential contributor blocks for scope/category/identity checks",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal official-index-linked HTTP200 chapter"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/INTL.html",
+          "catalog_year": "2026–27",
+          "locator": "Full contributor source-block/section review; primary read all17 HDS/PH blocks and18 consequential contributor blocks for scope/category/identity checks",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal official-index-linked HTTP200 chapter"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/CLAS.html",
+          "catalog_year": "2026–27",
+          "locator": "Full contributor source-block/section review; primary read all17 HDS/PH blocks and18 consequential contributor blocks for scope/category/identity checks",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal official-index-linked HTTP200 chapter"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/HMNR.html",
+          "catalog_year": "2026–27",
+          "locator": "Full contributor source-block/section review; primary read all17 HDS/PH blocks and18 consequential contributor blocks for scope/category/identity checks",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal official-index-linked HTTP200 chapter"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/LAWS.html",
+          "catalog_year": "2026–27",
+          "locator": "Full contributor source-block/section review; primary read all17 HDS/PH blocks and18 consequential contributor blocks for scope/category/identity checks",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal official-index-linked HTTP200 chapter"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/CCS.html",
+          "catalog_year": "2026–27",
+          "locator": "Full contributor source-block/section review; primary read all17 HDS/PH blocks and18 consequential contributor blocks for scope/category/identity checks",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal official-index-linked HTTP200 chapter"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/AASM.html",
+          "catalog_year": "2026–27",
+          "locator": "Full contributor source-block/section review; primary read all17 HDS/PH blocks and18 consequential contributor blocks for scope/category/identity checks",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal official-index-linked HTTP200 chapter"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/LATI.html",
+          "catalog_year": "2026–27",
+          "locator": "Full contributor source-block/section review; primary read all17 HDS/PH blocks and18 consequential contributor blocks for scope/category/identity checks",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal official-index-linked HTTP200 chapter"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/RELI.html",
+          "catalog_year": "2026–27",
+          "locator": "Full contributor source-block/section review; primary read all17 HDS/PH blocks and18 consequential contributor blocks for scope/category/identity checks",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal official-index-linked HTTP200 chapter"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/JWSP.html",
+          "catalog_year": "2026–27",
+          "locator": "Full contributor source-block/section review; primary read all17 HDS/PH blocks and18 consequential contributor blocks for scope/category/identity checks",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal official-index-linked HTTP200 chapter"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/HUM.html",
+          "catalog_year": "2026–27",
+          "locator": "Complete contributor source-block/context review; primary read all21 College Writing and8 Japanese/AAPI blocks plus SOC/SOCI source identity check; science contribution independently guarded and boundary-reviewed",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal official-index-linked HTTP200 chapter"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/CAT.html",
+          "catalog_year": "2026–27",
+          "locator": "Complete contributor source-block/context review; primary read all21 College Writing and8 Japanese/AAPI blocks plus SOC/SOCI source identity check; science contribution independently guarded and boundary-reviewed",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal official-index-linked HTTP200 chapter"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/DOC.html",
+          "catalog_year": "2026–27",
+          "locator": "Complete contributor source-block/context review; primary read all21 College Writing and8 Japanese/AAPI blocks plus SOC/SOCI source identity check; science contribution independently guarded and boundary-reviewed",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal official-index-linked HTTP200 chapter"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/AWP.html",
+          "catalog_year": "2026–27",
+          "locator": "Complete contributor source-block/context review; primary read all21 College Writing and8 Japanese/AAPI blocks plus SOC/SOCI source identity check; science contribution independently guarded and boundary-reviewed",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal official-index-linked HTTP200 chapter"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/TMC.html",
+          "catalog_year": "2026–27",
+          "locator": "Complete contributor source-block/context review; primary read all21 College Writing and8 Japanese/AAPI blocks plus SOC/SOCI source identity check; science contribution independently guarded and boundary-reviewed",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal official-index-linked HTTP200 chapter"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/MCWP.html",
+          "catalog_year": "2026–27",
+          "locator": "Complete contributor source-block/context review; primary read all21 College Writing and8 Japanese/AAPI blocks plus SOC/SOCI source identity check; science contribution independently guarded and boundary-reviewed",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal official-index-linked HTTP200 chapter"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/MMW.html",
+          "catalog_year": "2026–27",
+          "locator": "Complete contributor source-block/context review; primary read all21 College Writing and8 Japanese/AAPI blocks plus SOC/SOCI source identity check; science contribution independently guarded and boundary-reviewed",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal official-index-linked HTTP200 chapter"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/ANTH.html",
+          "catalog_year": "2026–27",
+          "locator": "Complete contributor source-block/context review; primary read all21 College Writing and8 Japanese/AAPI blocks plus SOC/SOCI source identity check; science contribution independently guarded and boundary-reviewed",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal official-index-linked HTTP200 chapter"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/DSC.html",
+          "catalog_year": "2026–27",
+          "locator": "Complete contributor source-block/context review; primary read all21 College Writing and8 Japanese/AAPI blocks plus SOC/SOCI source identity check; science contribution independently guarded and boundary-reviewed",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal official-index-linked HTTP200 chapter"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/MATH.html",
+          "catalog_year": "2026–27",
+          "locator": "Complete contributor source-block/context review; primary read all21 College Writing and8 Japanese/AAPI blocks plus SOC/SOCI source identity check; science contribution independently guarded and boundary-reviewed",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal official-index-linked HTTP200 chapter"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/COGS.html",
+          "catalog_year": "2026–27",
+          "locator": "Complete contributor source-block/context review; primary read all21 College Writing and8 Japanese/AAPI blocks plus SOC/SOCI source identity check; science contribution independently guarded and boundary-reviewed",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal official-index-linked HTTP200 chapter"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/css.html",
+          "catalog_year": "2023–24",
+          "locator": "Complete contributor source-block/context review; primary read all21 College Writing and8 Japanese/AAPI blocks plus SOC/SOCI source identity check; science contribution independently guarded and boundary-reviewed",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal official-index-linked HTTP200 chapter"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/JAPN.html",
+          "catalog_year": "2026–27",
+          "locator": "Complete contributor source-block/context review; primary read all21 College Writing and8 Japanese/AAPI blocks plus SOC/SOCI source identity check; science contribution independently guarded and boundary-reviewed",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal official-index-linked HTTP200 chapter"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/AAPI.html",
+          "catalog_year": "2026–27",
+          "locator": "Complete contributor source-block/context review; primary read all21 College Writing and8 Japanese/AAPI blocks plus SOC/SOCI source identity check; science contribution independently guarded and boundary-reviewed",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal official-index-linked HTTP200 chapter"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/ENG.html",
+          "catalog_year": "2026–27",
+          "locator": "Full target course blocks and applicable chapter/section context read by named contributor; primary checked composition and consequential examples. Scope documented in adjacent contribution note.",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal official-index-linked public HTTP 200 capture"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/DSGN.html",
+          "catalog_year": "2026–27",
+          "locator": "Full target course blocks and applicable chapter/section context read by named contributor; primary checked composition and consequential examples. Scope documented in adjacent contribution note.",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal official-index-linked public HTTP 200 capture"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/CIN.html",
+          "catalog_year": "2026–27",
+          "locator": "Full target course blocks and applicable chapter/section context read by named contributor; primary checked composition and consequential examples. Scope documented in adjacent contribution note.",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal official-index-linked public HTTP 200 capture"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/GSS.html",
+          "catalog_year": "2026–27",
+          "locator": "Final bounded humanities course-block and chapter/section context review; contributor full reads with primary consequential checks",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal official-index-linked HTTP200 capture"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/CCE.html",
+          "catalog_year": "2026–27",
+          "locator": "Final bounded humanities course-block and chapter/section context review; contributor full reads with primary consequential checks",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal official-index-linked HTTP200 capture"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/SYN.html",
+          "catalog_year": "2026–27",
+          "locator": "Final bounded humanities course-block and chapter/section context review; contributor full reads with primary consequential checks",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal official-index-linked HTTP200 capture"
         }
       ],
       "checks": {
         "degree_identity": "Catalog BS Artificial Intelligence; department2026–27 page is explicitly tentative, datedAugust3,2026. Version differences are retained.",
         "required_and_choices": "Eight fixed major courses independently enumerated. Major alternatives and elective pools remain options. College/cohort branches remain beneath their eight policy notes. AHI course route now beneath existing policy note because high-school/test/prior-college routes exist; climate pool beneath applicability note because transfers are exempt.",
         "elective_pools": "13explicit major-choice groups yield119distinct option records;50AHI course records become contextual/unresolved. CSEbreadth tag eligibility notes and conditional/dated GE lists are not promoted to universal course obligations.",
-        "prerequisites": "Required CSE12/25/30/55/101/151A entries read, along withMATH20A/20B. Mixedand/or catalog strings preserved, without invented grouping. New metadata adds no courses or prerequisite requirements. The82newCSErecords retain the entire published prerequisite suffix. EarlierCSE89PACErestriction and95tutorappointmentareexplicit. Conditionalcredit reductions, exclusions and remotevariant distinctions remain source-specific; inherited prerequisites do not become extra fixedcourses. Primary independently rereadall8existingcoreblocks and repairedsemicolon/sentence truncation. CSE25/55CS29priority has explicitspacepermission;100recommendation remainsoptional;151ACOGS188creditexclusionretained. PHIL/ECON full eligibility suffixes retained. PHIL115 is philosophy-major/letter-grade restricted; PHIL27/28 letter-grade restriction is Warren-specific; ECON137 restricts majors/MA33 plus approval. PHIL110 sequence typo and PHIL185 inconsistent repeat clauses remain explicit program notes, not repaired. Complete SOCI/ANTH/ANSC eligibility suffixes and course notes retain approval, study-abroad, Honors, UCDC and MMFRP conditions. ANTH196B requires B+ in196A; malformed SOCI105 wording is not repaired. Cross-list text alone creates no identity groups. ETHN literal prerequisite/major/approval strings retained. Optional189topics do not automatically satisfy the existing Latin American-content pool condition; no course or prerequisite graph expansion. VIS printed none is retained whenexplicit; senior/major/consent/department-stamp and two-production-course limitations remain exact. Self-designed ICAMprojects not automatically permitted forAIstudents; source prerequisites not addedtofixeddegreecourses. POLI120J/220J enrollment clauses keep their distinct course scopes.194SD explicit corequisite197SD remains course-specific; departmental approval and recommendations are not new fixeddegree obligations. HIEU198 exact90UCSDunits/GPA2.95/specialstudyapproval remains course-specific.124GS GlobalSeminaradmission is not applied to124; only explicit sharedcredit exclusion is noted. Plusmarkmeansbefore1800. USP185A and186 retain exact major/senior restrictions;190 retains 3.5 major GPA and department approval. USP188 Spanish fluency is recommended, while MMFRP admission is required. No preparation or program admission is added to the fixed AI degree set. COMM102D explicitly states none, unlike absent labels elsewhere; printed alternative conjunctions remain un-reassociated.COMM194 UCDC participation and other course-specific fieldwork/repeat/admission requirements remain attached to their source records. CHIN previous-course-or-placement clauses remain literal, without inferred exact predecessor codes.186CB anomaly retained. ANAR182 ANTH3 is recommended;160 ANTH202 clause applies to graduate students;155/155S application/consent versus acceptance conditions remain distinct. HIEU Colloquia policy explicitly covers18 represented records, requiring undergraduate EASY department approval or instructor permission. Per-course prerequisites remain exact; additional graduate work is not an undergraduate obligation. HIEU107 belongs to Lecture Courses and does not inherit colloquium admission. All applicable HILA/HIUS/HIEA Colloquia scope and full approval paragraphs are guarded; shared headings do not add graduate preparation or papers to undergraduate courses. HIUS120D internship is strongly recommended, not required. SIO114 upper-division-or-consent and194 UCDC/approval conditions remain exact. EDS103 ED25-major limit, Global Seminar/OASIS/Summer Bridge admission, long120 prerequisite alternatives and139 corequisite conditions are preserved;141 source-copy140 placement-form reference not silently corrected. CGS2A-B and comma alternatives remain literal;137 combined ceiling distinct from single-course credits. MUS132R honors/audition and160B music/ICAM restrictions remain source-specific; suffixR does not establish online modality. Biology chapter strictly enforces preparation and initial-meeting attendance; BICD136 recommendedBILD2 remains optional. Lab W policy conditional to labs; BISP196 senior/GPA/Honors restriction retained. GLBH111 preparation recommended but border crossing required; missing current labels do not waive older pool admission notes. PSYC117/193L exact AND/OR expressions and distinct major-code lists are ungrouped;194A Honors/major admission and conditional letter grading retained. CSE100 C/C++ recommended rather than mandatory;150A restricted-major/space permission preserved. Actual Colloquia membership guarded per source region; undergraduate EASY approval or instructor consent remains scoped. HIAF161 sufficient-background/approval rules retained outside formal Prerequisites label. Spanish/Portuguese conversation-analysis pairing and distinct C-minus/D prior-grade thresholds preserved. RecommendedLIGN152/174 not required. Physics strict enrollment enforcement and sequence audiences remain scoped;1lecture/lab separate-term permission and11actualmathcorequisite differ. CHEM4 first/sophomore restriction distinct from optional math;6CH/6C credit permission directional;172recommends171;143C department-major rule has explicitspace exception.",
-        "credits_and_units": "Quarter hours; required CSE entries4each, newly verified MATH20A/20B4each with prior-calculus credit reductions preserved. Major124 lower60 upper64 are source totals, not sums from unknown elective values. Computing22/24 variation retained without forced arithmetic. Exact82CSEheadings supply ordinary units (e.g.15L2,901,1705); conditionalearned-credit reductions remain separately stated, not substituted forordinaryamounts. Verifiedquarter-hourmappingreused. Current ECON165T is2quarter units; other approvedPHIL/ECON ordinary amounts retained without adding conditional prerequisites to load. SOCI105 andANTH128A are six quarter units; SOCI194 remains four, excluding its separately described six-unit internship. No aggregate load is summed. ETHN179 four-unit course remains distinct from eight-unit combined repeat ceiling; no repeat-credit total substituted for course amount. VIS190 is8quarter units; its actual source amount is not generalized tootherVIScourses or accumulated as degree load. POLI191A printed4–4sequence notation leaves scalarcreditsnull. Grouped headings do not imply crosslisted identities or multiplied course load. HIEU124omittedunitfield and198variable1/2/3/4remainnull; no nearbyheadingamount borrowed. USP53 source amounts are 47 four-unit, five six-unit and one eight-unit course. USP194 separate six-unit internship is not added to its four-unit seminar. COMM approved headings give36 four-unit and three six-unit courses. COMM194 separate internship is not summed into its four units. CHIN9five/30four/twovariable2or4 amounts remain exact. ANAR25four/3eight, with155/155S combined12-unit ceiling kept separate from each4-unit amount. HILA119 has no printed amount, so scalar null; other33 state4units. SIO50/147/167 state6, remaining32 approved state4; SIO194 separate6–8 internship is not added to its4units. EDS27four/one6/two2/onevariable1–6;139 service hours and twelve-repeat ceiling do not multiply credits. CGS24 and26 MUS observations state4units;MUS1991–4range remainsnull. Unexplained160B production-course limitation preserved. Biology32four-unit and2variable courses; GLBH24four-unit. BISP193 sourceP/PN retained and repeat ceilings not multiplied. PSYC111B6units, thirteen other approved courses4; CSE100/150A4each unchanged. RemainingHistory76four/one6/onevariable1–4; HISA199 pool4-unit condition separate. HITO193 sharedheading6 conflicts with current POLI194/USP1944; internship separately6, never summed or merged. Linguistics15four+10two-and-a-half; each paired component separate. Physics/Astronomy20four+3three+154five; held150candidate5not transferred. All13 reviewedCHEMheadings state4units.",
-        "classification": "CSE101 correctedAI→foundations; CSE30 foundations→systems. Required profile now2foundations/2math/3AI/1systems from actual descriptions. Broad GE/pool role-based labels removed; code-only entriesother with precise insufficiency rationale. Named unreviewed pool courses remain unreviewed. Coordinator-reviewed82CSEblocks integrated with per-course rationale;6unmatched identifiers remainunclassified. CSE20/21/103/106mathematics;105foundations;127systems;151BAI;194humancontext;193unspecifiedresearchother. MixedCSE5/5RretainAI/human candidates. PHIL/ECON contribution:65 approved current-content rows (57human context,7applications,1mathematics) integrated after source-specific guards; three held/missing records explicitly unclassified. PHIL12 logic/statistical inference is mathematics; philosophy-of-mathematics courses remain humanities; no prefix or GE-role category inference. SOCI and ANTH/ANSC: 155 current observations from 157 inspected blocks integrated with 139 human-context, six applications, four mixed and six selected-topic unknown dispositions; seven held/missing records stay unclassified. Applied ethnographic/survey methods are not recast as computing or AI; mixed biological, environmental and social content remains other with candidate categories. ETHN88 approved content observations:81human-context,5mixed and2selected-topic unknown;7missing exact headings remainunclassified. Actual mixed cases distinguish exhibition/media/theatre practice, environmental science and music methods from social interpretation. VIS67 integrated observations:56human-context,7applications,1foundations(VIS42),1mixed(VIS157),2unknown projects(VIS160A/B). VIS6 AI-fiction criticism is notAI methods. Seven material title changes and13missing exact headings remainunclassified. POLI113 integrated observations:96human-context,6applications,1mathematics,5mixed,5unknown. Actualdomainintelligence practice is not AI; political cyberwar analysis is not computing. HIEU56currentobservations integrated:50historicalhuman-context,1mixedpublichistory145,5unspecifiedtopics/studiesunclassified.17missingheadings and122titleholdremain unknown. Urban Studies full-content review integrated 53 exact records: 33 human-context, 11 applied-domain, three mixed and six unspecified-topic content judgments; four missing codes remain unclassified. Design/finance/health/data-analysis methods are distinguished from policy interpretation and social themes. COMM39 approved content observations integrated:31 human-context, four applied production/field-methods, one mixed critical-design and three unspecified-topic/research. Four missing and two title-held records remain unclassified; no metadata is transferred from their unverified current titles. CHIN41 full blocks yield38 language/cultural human-context and3 unspecified-study records. ANAR28 yield19 historical-human-context,7 applied scientific/field-methods,1mixed155 and1unknown100. No clinical/business-method label from language themes or archaeological-prefix label. Correction: sixteen shared HIEU headings were falsely classified as unmatched by the single-code matcher. Full primary reread restores nine human-context and seven topic-unspecified records, giving72approved HIEU observations; only105is absent and122remains title-held. HILA34 adds29 historical human-context and5 unknown-topic decisions. HIUS/HIEA81 adds75 human-context, oral/public-history120D mixed and5 unknown. SIO35 adds29 scientific applications,4 mixed and2 unknown; title-held105/113 retain unclassified seed identities regardless of current candidate subject. EDS31 full blocks yield15 human-context,12 applied education/research,103mathematics,2mixed and190unknown; computing/climate/STEAM themes are not classifications by title. CGS24 actual blocks support human-context; AI/climate/science themes do not imply technical coursework. MUS27 supports17human-context/5applied artistic practice/5unspecified projects, with direct source-content rationale. Biology34 actual blocks support25applications/2human-context/5mixed/2unknown; GLBH24 supports15human-context/2applications/6mixed/1unknown. No title-only AI, computing or science classification. PSYC14 yields7applications/5human-context/2unknown; title-held162 retains unknown older identity. Source-read CSE100systems and150AAI/ML correct two previously unreviewed option categories. Four prior COMM unmatched dispositions now explicitly labeled unclassified. RemainingHistory78 yields68human-context/10unknown; source-malformed HISC144 and title-replaced HINE116 held. Unknown selected studies remain distinct from explicit historical topics. Linguistics25 yields19human-context/6applied linguistic or neural science; PHYS/ASTR24 yields22applications/ASTR60human-context/154mixed mathematics-AI. Theme, code suffix and department are not the category rationale. CHEM13 supports12applications and117mixed biological/social history;151 synthesis methods outweigh its societal framing.174 explicitly supplies currentSIO141counterpart evidence without autoidentitymerge.",
+        "prerequisites": "Required CSE12/25/30/55/101/151A entries read, along withMATH20A/20B. Mixedand/or catalog strings preserved, without invented grouping. New metadata adds no courses or prerequisite requirements. The82newCSErecords retain the entire published prerequisite suffix. EarlierCSE89PACErestriction and95tutorappointmentareexplicit. Conditionalcredit reductions, exclusions and remotevariant distinctions remain source-specific; inherited prerequisites do not become extra fixedcourses. Primary independently rereadall8existingcoreblocks and repairedsemicolon/sentence truncation. CSE25/55CS29priority has explicitspacepermission;100recommendation remainsoptional;151ACOGS188creditexclusionretained. PHIL/ECON full eligibility suffixes retained. PHIL115 is philosophy-major/letter-grade restricted; PHIL27/28 letter-grade restriction is Warren-specific; ECON137 restricts majors/MA33 plus approval. PHIL110 sequence typo and PHIL185 inconsistent repeat clauses remain explicit program notes, not repaired. Complete SOCI/ANTH/ANSC eligibility suffixes and course notes retain approval, study-abroad, Honors, UCDC and MMFRP conditions. ANTH196B requires B+ in196A; malformed SOCI105 wording is not repaired. Cross-list text alone creates no identity groups. ETHN literal prerequisite/major/approval strings retained. Optional189topics do not automatically satisfy the existing Latin American-content pool condition; no course or prerequisite graph expansion. VIS printed none is retained whenexplicit; senior/major/consent/department-stamp and two-production-course limitations remain exact. Self-designed ICAMprojects not automatically permitted forAIstudents; source prerequisites not addedtofixeddegreecourses. POLI120J/220J enrollment clauses keep their distinct course scopes.194SD explicit corequisite197SD remains course-specific; departmental approval and recommendations are not new fixeddegree obligations. HIEU198 exact90UCSDunits/GPA2.95/specialstudyapproval remains course-specific.124GS GlobalSeminaradmission is not applied to124; only explicit sharedcredit exclusion is noted. Plusmarkmeansbefore1800. USP185A and186 retain exact major/senior restrictions;190 retains 3.5 major GPA and department approval. USP188 Spanish fluency is recommended, while MMFRP admission is required. No preparation or program admission is added to the fixed AI degree set. COMM102D explicitly states none, unlike absent labels elsewhere; printed alternative conjunctions remain un-reassociated.COMM194 UCDC participation and other course-specific fieldwork/repeat/admission requirements remain attached to their source records. CHIN previous-course-or-placement clauses remain literal, without inferred exact predecessor codes.186CB anomaly retained. ANAR182 ANTH3 is recommended;160 ANTH202 clause applies to graduate students;155/155S application/consent versus acceptance conditions remain distinct. HIEU Colloquia policy explicitly covers18 represented records, requiring undergraduate EASY department approval or instructor permission. Per-course prerequisites remain exact; additional graduate work is not an undergraduate obligation. HIEU107 belongs to Lecture Courses and does not inherit colloquium admission. All applicable HILA/HIUS/HIEA Colloquia scope and full approval paragraphs are guarded; shared headings do not add graduate preparation or papers to undergraduate courses. HIUS120D internship is strongly recommended, not required. SIO114 upper-division-or-consent and194 UCDC/approval conditions remain exact. EDS103 ED25-major limit, Global Seminar/OASIS/Summer Bridge admission, long120 prerequisite alternatives and139 corequisite conditions are preserved;141 source-copy140 placement-form reference not silently corrected. CGS2A-B and comma alternatives remain literal;137 combined ceiling distinct from single-course credits. MUS132R honors/audition and160B music/ICAM restrictions remain source-specific; suffixR does not establish online modality. Biology chapter strictly enforces preparation and initial-meeting attendance; BICD136 recommendedBILD2 remains optional. Lab W policy conditional to labs; BISP196 senior/GPA/Honors restriction retained. GLBH111 preparation recommended but border crossing required; missing current labels do not waive older pool admission notes. PSYC117/193L exact AND/OR expressions and distinct major-code lists are ungrouped;194A Honors/major admission and conditional letter grading retained. CSE100 C/C++ recommended rather than mandatory;150A restricted-major/space permission preserved. Actual Colloquia membership guarded per source region; undergraduate EASY approval or instructor consent remains scoped. HIAF161 sufficient-background/approval rules retained outside formal Prerequisites label. Spanish/Portuguese conversation-analysis pairing and distinct C-minus/D prior-grade thresholds preserved. RecommendedLIGN152/174 not required. Physics strict enrollment enforcement and sequence audiences remain scoped;1lecture/lab separate-term permission and11actualmathcorequisite differ. CHEM4 first/sophomore restriction distinct from optional math;6CH/6C credit permission directional;172recommends171;143C department-major rule has explicitspace exception. Literature actual division standing OR instructor consent is distinct from extra course preparation. French teaching language and Russian LTRU/LTEU reading rubric retained; no upper rule on lower Italian. MAE prior-quarter156A/major codes, CENG-only C-minus scope and BENG193 requested-as-requirement GPA remain local, not universal AI rules. PHcapstones remain public-health-major restricted; lettergrade clause scoped to thatmajor. HDS191 requires pre-enrollment oneacademicyear prior. Dance audition/concurrency and ENVR144 twononcredittrainingquarters not optional. HMNR broad literal chapteradmission retained without inventingAND. College writing actual Marshall/Revelle/ERC/Sixth/Muir cohorts retained beneath existing contextual branches; DOC100D cross-college transfer access distinguished. CAT grading recommendation not mandatory; AWP3concurrency exact; MCWP40C unnamedCgrade prerequisite remains a source ambiguity. Japanese placement applies Language section, not all seminars. ANBI132/BIEB176 current content difference preserved; no identity merge. LTSP heritage/classroom populations and AP/placement routes stay separate from upper standing/consent.174GS lacks100F/consent in its current printed clause, not filled from174. COGS recommendations remain optional and named-major/space rules course-specific. Math higher/equivalent substitution is source-stated, not assumed waiver. Chapter/section guards in new observers preserve standing-or-consent, major/placement/concurrent routes, conditional grading and optional recommendations. Older ETHN/POLI section-preparation mapping is a separate active correction before closure. Primary integrated the independently reviewed full ETHN/POLI Upper Division policies on all191 applicable older observations, preserving10 lower-division exceptions. Runtime guards exact policy text, actual node ancestry and complete duplicate/grouped bodies. All newly composed batches guard their applicable source contexts; source-specific absence of a labeled prerequisite remains unknown rather than universal permission.",
+        "credits_and_units": "Quarter hours; required CSE entries4each, newly verified MATH20A/20B4each with prior-calculus credit reductions preserved. Major124 lower60 upper64 are source totals, not sums from unknown elective values. Computing22/24 variation retained without forced arithmetic. Exact82CSEheadings supply ordinary units (e.g.15L2,901,1705); conditionalearned-credit reductions remain separately stated, not substituted forordinaryamounts. Verifiedquarter-hourmappingreused. Current ECON165T is2quarter units; other approvedPHIL/ECON ordinary amounts retained without adding conditional prerequisites to load. SOCI105 andANTH128A are six quarter units; SOCI194 remains four, excluding its separately described six-unit internship. No aggregate load is summed. ETHN179 four-unit course remains distinct from eight-unit combined repeat ceiling; no repeat-credit total substituted for course amount. VIS190 is8quarter units; its actual source amount is not generalized tootherVIScourses or accumulated as degree load. POLI191A printed4–4sequence notation leaves scalarcreditsnull. Grouped headings do not imply crosslisted identities or multiplied course load. HIEU124omittedunitfield and198variable1/2/3/4remainnull; no nearbyheadingamount borrowed. USP53 source amounts are 47 four-unit, five six-unit and one eight-unit course. USP194 separate six-unit internship is not added to its four-unit seminar. COMM approved headings give36 four-unit and three six-unit courses. COMM194 separate internship is not summed into its four units. CHIN9five/30four/twovariable2or4 amounts remain exact. ANAR25four/3eight, with155/155S combined12-unit ceiling kept separate from each4-unit amount. HILA119 has no printed amount, so scalar null; other33 state4units. SIO50/147/167 state6, remaining32 approved state4; SIO194 separate6–8 internship is not added to its4units. EDS27four/one6/two2/onevariable1–6;139 service hours and twelve-repeat ceiling do not multiply credits. CGS24 and26 MUS observations state4units;MUS1991–4range remainsnull. Unexplained160B production-course limitation preserved. Biology32four-unit and2variable courses; GLBH24four-unit. BISP193 sourceP/PN retained and repeat ceilings not multiplied. PSYC111B6units, thirteen other approved courses4; CSE100/150A4each unchanged. RemainingHistory76four/one6/onevariable1–4; HISA199 pool4-unit condition separate. HITO193 sharedheading6 conflicts with current POLI194/USP1944; internship separately6, never summed or merged. Linguistics15four+10two-and-a-half; each paired component separate. Physics/Astronomy20four+3three+154five; held150candidate5not transferred. All13 reviewedCHEMheadings state4units. Literature109 fixed4unit observations plusLTWL199 variable2or4null; Engineering23fixed4 plusBENG1961–4 andECE193H4–8null. Repeat limits are not single-enrollment credit amounts. HDS194A/C shared4-4-4means4perrepresentedcomponent, noBadded. HDS191/PH196BH6units; ENVR1442. Theatre10andarea5 variableloads scalarunknown, precise ranges retained. CollegeWriting20approved:4six-unit,1one-unit,15four-unit. Finalscience18four-unit. Japanese/AAPI:5four-unit,1one-unit,1omittedamountnull; heldJAPN190alsoomitsunits, no candidate transfer. MATH11fiveunits andCOGS120fiveunits; other33Math and63COGS observations4. LTSP2A/B/Cfive and32othercurrentLTSPfour. No repeat/sequence amount substituted. Shared 4-4-4 sequence headings produce only represented four-unit components, not12unitindividuals. COMM101six; ENG10/15two; MUS80variable1–4null; nine Linguistics GlobalSeminars headings omit units. ECE109one-unitafter-prior-course reduction remains conditional. CSS2 retains actual2023–24 source edition. JWSP1/2/3 each five units;77 other approved final humanities observations four. Shared GSS/HILD/AAS headings supply only printed represented components. No sequence total counted as one course.",
+        "classification": "CSE101 correctedAI→foundations; CSE30 foundations→systems. Required profile now2foundations/2math/3AI/1systems from actual descriptions. Broad GE/pool role-based labels removed; code-only entriesother with precise insufficiency rationale. Originally named-course targets have bounded actual-source dispositions;652 earlier code-only evidence-insufficiency labels remain explicitly not content reviews. No subject is guessed for either unresolved class. Coordinator-reviewed82CSEblocks integrated with per-course rationale;6unmatched identifiers remainunclassified. CSE20/21/103/106mathematics;105foundations;127systems;151BAI;194humancontext;193unspecifiedresearchother. MixedCSE5/5RretainAI/human candidates. PHIL/ECON contribution:65 approved current-content rows (57human context,7applications,1mathematics) integrated after source-specific guards; three held/missing records explicitly unclassified. PHIL12 logic/statistical inference is mathematics; philosophy-of-mathematics courses remain humanities; no prefix or GE-role category inference. SOCI and ANTH/ANSC: 155 current observations from 157 inspected blocks integrated with 139 human-context, six applications, four mixed and six selected-topic unknown dispositions; seven held/missing records stay unclassified. Applied ethnographic/survey methods are not recast as computing or AI; mixed biological, environmental and social content remains other with candidate categories. ETHN88 approved content observations:81human-context,5mixed and2selected-topic unknown;7missing exact headings remainunclassified. Actual mixed cases distinguish exhibition/media/theatre practice, environmental science and music methods from social interpretation. VIS67 integrated observations:56human-context,7applications,1foundations(VIS42),1mixed(VIS157),2unknown projects(VIS160A/B). VIS6 AI-fiction criticism is notAI methods. Seven material title changes and13missing exact headings remainunclassified. POLI113 integrated observations:96human-context,6applications,1mathematics,5mixed,5unknown. Actualdomainintelligence practice is not AI; political cyberwar analysis is not computing. HIEU56currentobservations integrated:50historicalhuman-context,1mixedpublichistory145,5unspecifiedtopics/studiesunclassified.17missingheadings and122titleholdremain unknown. Urban Studies full-content review integrated 53 exact records: 33 human-context, 11 applied-domain, three mixed and six unspecified-topic content judgments; four missing codes remain unclassified. Design/finance/health/data-analysis methods are distinguished from policy interpretation and social themes. COMM39 approved content observations integrated:31 human-context, four applied production/field-methods, one mixed critical-design and three unspecified-topic/research. Four missing and two title-held records remain unclassified; no metadata is transferred from their unverified current titles. CHIN41 full blocks yield38 language/cultural human-context and3 unspecified-study records. ANAR28 yield19 historical-human-context,7 applied scientific/field-methods,1mixed155 and1unknown100. No clinical/business-method label from language themes or archaeological-prefix label. Correction: sixteen shared HIEU headings were falsely classified as unmatched by the single-code matcher. Full primary reread restores nine human-context and seven topic-unspecified records, giving72approved HIEU observations; only105is absent and122remains title-held. HILA34 adds29 historical human-context and5 unknown-topic decisions. HIUS/HIEA81 adds75 human-context, oral/public-history120D mixed and5 unknown. SIO35 adds29 scientific applications,4 mixed and2 unknown; title-held105/113 retain unclassified seed identities regardless of current candidate subject. EDS31 full blocks yield15 human-context,12 applied education/research,103mathematics,2mixed and190unknown; computing/climate/STEAM themes are not classifications by title. CGS24 actual blocks support human-context; AI/climate/science themes do not imply technical coursework. MUS27 supports17human-context/5applied artistic practice/5unspecified projects, with direct source-content rationale. Biology34 actual blocks support25applications/2human-context/5mixed/2unknown; GLBH24 supports15human-context/2applications/6mixed/1unknown. No title-only AI, computing or science classification. PSYC14 yields7applications/5human-context/2unknown; title-held162 retains unknown older identity. Source-read CSE100systems and150AAI/ML correct two previously unreviewed option categories. Four prior COMM unmatched dispositions now explicitly labeled unclassified. RemainingHistory78 yields68human-context/10unknown; source-malformed HISC144 and title-replaced HINE116 held. Unknown selected studies remain distinct from explicit historical topics. Linguistics25 yields19human-context/6applied linguistic or neural science; PHYS/ASTR24 yields22applications/ASTR60human-context/154mixed mathematics-AI. Theme, code suffix and department are not the category rationale. CHEM13 supports12applications and117mixed biological/social history;151 synthesis methods outweigh its societal framing.174 explicitly supplies currentSIO141counterpart evidence without autoidentitymerge. Literature110:108human-context,1creative-writing application,1unclassified topic. Engineering25:16applications,1systems,4mixed and4unclassified. AI cultural critique is not AI methods; generic project content remains unknown. Bounded135 batch added123observations. Public-health statistics primary mathematics; culturally responsive/PAR research methods applications; cultural/environmental context distinct from science methods; unspecified honors/research topics remain unclassified. Final49 closes the originally named-course queue, not the separate652 code-only evidence-insufficiency records. Japanese professional communication and college writing are human context; MATH163 is mathematical history, while20D/20E/111A are methods. DSC20/30 andCSS1 programming foundations; generic DSC180projects remain unknown. CSS1 review explicitly2023–24. Code-only140 actual source continuation adds33math+MATH181DAI, COGS44applications/7AI/2foundations/2math/3human/6mixed, LTSP33human/2appliedlinguistic-methods. ETHN179 prior generic mixed rationale corrected after actual critical-jazz-content reread. Additional423 source dispositions add392 actual full-description reviews across language/performance/social/science/linguistics/computing/design. Manual subject rationales distinguish taught methods from thematic mentions; source observers do not issue audit judgments. Final humanities89 contributes63 human context,11 applications,1 mathematics,4 mixed and1 topic-dependent unknown. All652 initial insufficiency labels are replaced by605 actual content reviews and47 exact-heading gap dispositions. Primary checked six consequential final blocks; contributor read every full block. Whole-degree second pass remains partial.",
         "family_composition": "No family inheritance/bindings; independently scoped standalone degree. Shared policy helpers do not imply shared credential.",
         "degree_wide_requirements": "Extensive college policies remain conditional. Specific edition, residence, transfer and approval conflicts still prevent whole-degree certification."
       },
@@ -40290,24 +41119,25 @@
         "options": {
           "count": 119,
           "categories": {
-            "other": 95,
-            "systems": 2,
-            "foundations": 6,
-            "mathematics": 4,
-            "ai_ml": 10,
-            "human_context": 1,
-            "applications": 1
+            "applications": 27,
+            "foundations": 10,
+            "human_context": 5,
+            "other": 22,
+            "mathematics": 27,
+            "ai_ml": 25,
+            "systems": 3
           }
         },
         "unresolved": {
           "count": 2241,
           "categories": {
-            "other": 1147,
-            "human_context": 879,
-            "applications": 182,
-            "foundations": 7,
-            "systems": 23,
-            "mathematics": 3
+            "other": 397,
+            "human_context": 1418,
+            "applications": 349,
+            "mathematics": 37,
+            "foundations": 13,
+            "systems": 24,
+            "ai_ml": 3
           }
         }
       },
@@ -42872,11 +43702,47 @@
         {
           "url": "https://catalog.ucsd.edu/courses/CHEM.html",
           "issue": "CHEM15 exact heading absent. CHEM174 explicitly cross-listsSIO141; priorSIOchapter absence is now qualified by this positive counterpart evidence pending separate identity reconciliation."
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/LIT.html",
+          "issue": "Literature125:11 exact-heading gaps and4 title/topic holds remain; explicitLTWR101W/126Wrenumbering evidence retained without silently changing older approved-pool identities. LTAM110GSLATINO/LatinAmerican scope conflict; Russian LTRU translation-heading/section-language distinction preserved."
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/MAE.html",
+          "issue": "Engineering29:MAE124/BENG191unmatched,MAE118/190title/topic holds; variable units and degree-specific enrollment/grade policies retained without universal applicability."
+        },
+        {
+          "url": "https://catalog.ucsd.edu/curric/LATI-ug.html",
+          "issue": "LiteralESD119 versus actualEDS/LIGN119 remains unresolved code relationship. Current source does not explicitly correct or equate codes; no metadata transfer."
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/THEA.html",
+          "issue": "TDMV143 exact-heading absent;TDGE131title/version held. Other batch unresolved:HDS170/177,ESYS120/190B,LATI87/191,RELI100/110B exact-heading gaps andMGT12changedAccounting/PersonalFinance title."
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/css.html",
+          "issue": "Current official index links a CSS1 page explicitly labeled2023–24. Version-qualified description retained; current2026–27 content/applicability is not established."
+        },
+        {
+          "url": "https://seventh.ucsd.edu/academics/degree-requirements/degree-requirements-first.html",
+          "issue": "Current literalSOC-102pool versus currentSOCI102chapter title match does not explicitly establish code correction/equivalence. Distinct records retained without metadata or identity merge."
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/JAPN.html",
+          "issue": "JAPN190 selected-topics/currentresearch-seminar identity hold;JAPN180unitomission. HUM2title/version hold,COGS194exact-heading gap; MMW15literalcreditwording andMCWP40Cunnamedprerequisite remain source ambiguities."
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/MATH.html",
+          "issue": "MATH15A exact current heading absent despite prerequisite mentions. LTSP2D/2E/100B current successors explicitly renumbered, but old approved-pool treatment not automatically inferred;50A/B/C exact headings absent."
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/",
+          "issue": "The formerly code-only652 target set has47 exact current-heading gaps, individually documented in the ten source-review manifests. Includes generic CHIN identifiers with current differentiated tracks, CCE110/120 and DOC170 not yet in course chapters, and older renumbered Spanish identities without automatic pool substitution. Missing descriptions do not establish nonexistent courses. CSS2 retains the linked2023–24 edition."
         }
       ],
-      "correction_status": "In progress:82remaining CSEcourse descriptions and6unmatched exact identifiers incorporated from coordinator-reviewed source manifest; original8core and2calculus reviews retained. Requirement roles8fixed/119options/2241context unchanged. Substantial accessible other-subject content and policy applicability work remains alongside genuine source conflicts. Independent PHIL/ECON65 current observations and3 held/missing dispositions integrated; existing manual8fixed/119options/2241context sets remain unchanged. Broader accessible description/policy queues remain in progress. SOCI83 and ANTH/ANSC72 approved observations integrated; seven held/missing dispositions preserved. Accessible other-subject descriptions remain active work; no whole-degree audit completion claimed. ETHN88 actual descriptions integrated;7missing exact headings retained. Remaining accessible other-subject work continues. VIS67 currentobservations and20held/missingdispositions integrated; accessibleother-subject workcontinues. POLI113 approved observations/3missing dispositions integrated; remaining accessible subjects remain active. HIEU56approved content and18held/missingdispositions integrated; remaining identified accessible UCSDsubjects continue. USP53 full descriptions integrated; four exact headings absent. COMM contribution is active; HIUS/HIEA current-source review is queued. Other identified accessible chapters remain active work. COMM39 observations integrated, retaining six missing/title-held dispositions; ANAR36 delegated review is active and HIUS/HIEA89 queued. CHIN41 and ANAR28 metadata integrated; eight ANAR headings absent, no aliases inferred. Other accessible current chapters remain active. Shared-heading correction restores16 actual present HIEU codes and guards18-course colloquium policy scope; previous17missing claim is superseded by one genuinely unmatched identifier. HILA34, HIUS/HIEA81 and SIO35 current metadata integrated; bounded holds remain explicit. Unread accessible represented subject chapters remain active. EDS31 integrated;138 unmatched. Remaining accessible subjects continue actively. CGS24 andMUS27 current observations integrated; six MUS exact headings unmatched. Remaining accessible subjects continue actively. Biology34/GLBH24 current observations integrated; exact missing/title/version holds remain separately documented. Further accessible subjects continue actively. PSYC14 andtwo legacy CSE option review omissions closed; four already-unmatched COMM review labels normalized. Other accessible subjects remain active. RemainingHistory78 integrated; current full History observer composes265approved/20dispositions across all represented subject batches. Other accessible chapters remain active. Linguistics25 andPhysics/Astronomy24 integrated with16 exact-code/title holds, no seasonal or counterpart-code substitution. Remaining accessible subjects active. CHEM13 integrated;15 unmatched. SIO141 now annotated with positive currentCHEM174crosslist evidence while exact SIOheading remains missing, not nonexistence.",
+      "correction_status": "In progress:82remaining CSEcourse descriptions and6unmatched exact identifiers incorporated from coordinator-reviewed source manifest; original8core and2calculus reviews retained. Requirement roles8fixed/119options/2241context unchanged. Substantial accessible other-subject content and policy applicability work remains alongside genuine source conflicts. Independent PHIL/ECON65 current observations and3 held/missing dispositions integrated; existing manual8fixed/119options/2241context sets remain unchanged. Broader accessible description/policy queues remain in progress. SOCI83 and ANTH/ANSC72 approved observations integrated; seven held/missing dispositions preserved. Accessible other-subject descriptions remain active work; no whole-degree audit completion claimed. ETHN88 actual descriptions integrated;7missing exact headings retained. Remaining accessible other-subject work continues. VIS67 currentobservations and20held/missingdispositions integrated; accessibleother-subject workcontinues. POLI113 approved observations/3missing dispositions integrated; remaining accessible subjects remain active. HIEU56approved content and18held/missingdispositions integrated; remaining identified accessible UCSDsubjects continue. USP53 full descriptions integrated; four exact headings absent. COMM contribution is active; HIUS/HIEA current-source review is queued. Other identified accessible chapters remain active work. COMM39 observations integrated, retaining six missing/title-held dispositions; ANAR36 delegated review is active and HIUS/HIEA89 queued. CHIN41 and ANAR28 metadata integrated; eight ANAR headings absent, no aliases inferred. Other accessible current chapters remain active. Shared-heading correction restores16 actual present HIEU codes and guards18-course colloquium policy scope; previous17missing claim is superseded by one genuinely unmatched identifier. HILA34, HIUS/HIEA81 and SIO35 current metadata integrated; bounded holds remain explicit. Unread accessible represented subject chapters remain active. EDS31 integrated;138 unmatched. Remaining accessible subjects continue actively. CGS24 andMUS27 current observations integrated; six MUS exact headings unmatched. Remaining accessible subjects continue actively. Biology34/GLBH24 current observations integrated; exact missing/title/version holds remain separately documented. Further accessible subjects continue actively. PSYC14 andtwo legacy CSE option review omissions closed; four already-unmatched COMM review labels normalized. Other accessible subjects remain active. RemainingHistory78 integrated; current full History observer composes265approved/20dispositions across all represented subject batches. Other accessible chapters remain active. Linguistics25 andPhysics/Astronomy24 integrated with16 exact-code/title holds, no seasonal or counterpart-code substitution. Remaining accessible subjects active. CHEM13 integrated;15 unmatched. SIO141 now annotated with positive currentCHEM174crosslist evidence while exact SIOheading remains missing, not nonexistence. Literature125 and Engineering29 represented identities now have bounded dispositions:110 literature and25 engineering observations integrated,15 literature and4 engineering exact-heading/title holds retained. Literature cultural AI and medical humanities remain human context; intensive Spanish creative writing is applications. Upper-division language-course standing/consent and language-of-instruction rules are scoped by actual section; Italian lower-division components do not inherit them. Engineering variable credits, current major restrictions and conditional substitution policies remain exact. No course-role or identity merge follows from this content review. A bounded135-target pass integrated123 current observations from Public Health/Human Development, Theatre/Dance, Environment, Management/interdisciplinary, and area/religion sources. Twelve unmatched or title/code holds remain; ESD119 stays distinct from current EDS/LIGN119. SharedHDS194A-B-C andAAS170/R headings supply only already represented components. Department-major admission and grade scopes, variable units, required concurrency and noncredit preparation remain explicit. Final49 represented records received45 source-supported observations and4 explicit dispositions (COGS194 exact-heading gap, HUM2/JAPN190 title/version holds, SOC102 versus SOCI102 code hold). CSS1 remains dated2023–24 evidence from the current official index, not a verified2026–27 description. The finite originally named-course queue is closed. Separately652 pre-existing code-only records have evidence-insufficiency labels, not actual content reviews; their accessible chapter follow-ups remain active. Code-only continuation140 replaces prior insufficiency labels with133 actual descriptions and7 exact current-heading dispositions (MATH15A,LTSP2D/2E/50A/50B/50C/100B). Positive Spanish successor renumbering is retained without old-pool substitution. ETHN179 corrected to human context after actual two-source reread; jazz performance techniques are objects of cultural study, not taught performance in this block. Six disjoint code-only batches disposition423 records:392 actual descriptions and31 exact-heading gaps. Contributors read each full block and applicable context; primary checked14 consequential blocks and composition/source metadata. Scope:language102,performance103,social85,science61,linguistics50,computing-design22. The remaining89 humanities records are assigned accessible work, not a blocker. The 652 previously code-only records now have 605 actual source descriptions and 47 exact-heading gap dispositions. Final humanities89 adds80 descriptions and9 gaps. Older ETHN/POLI section preparation is corrected for88 and103 applicable records; ten lower-division POLI records do not inherit it. No degree-role or identity merge is inferred. The bounded accessible represented-course queue is exhausted; genuine source-identity, edition and policy conflicts remain.",
       "second_pass_status": "pending",
-      "accessible_work_remaining": "Remaining identified accessible subjects include Literature72 delegated and remaining Literature53 primary; engineering29 active contributor; management, health/area studies and other finite represented chapters. Completed Chemistry/Physics/Linguistics source dispositions remain distinct from this active unread queue.",
+      "accessible_work_remaining": "No identified unread accessible branch remains in this bounded represented-course queue. All 652 former code-only records have actual content or explicit current-heading dispositions. Remaining exact identity/version/requirement conflicts and independently documented policy-source limits are genuine blockers, not hidden unread chapter work. This does not certify all possible future catalog changes or a full independent second pass.",
       "ledger": "research/degree-audit/west-purdue-wpi.json",
       "audit_date": "2026-10-11",
       "reviewer": "pilots_purdue_minor"
