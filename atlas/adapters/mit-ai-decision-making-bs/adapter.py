@@ -165,3 +165,7 @@ hass_access_review = import_module('atlas.adapters.mit-ai-decision-making-bs.has
 for module in (hass_architecture, hass_access_review):
     SOURCES.extend(module.SOURCE_PARSERS)
     SOURCE_PARSERS.update(module.SOURCE_PARSERS)
+
+hass_cmsw = import_module('atlas.adapters.mit-ai-decision-making-bs.hass_cmsw')
+SOURCES.extend(hass_cmsw.SOURCE_PARSERS)
+SOURCE_PARSERS.update(hass_cmsw.SOURCE_PARSERS)

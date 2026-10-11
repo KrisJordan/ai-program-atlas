@@ -43,9 +43,13 @@ def test_field_review_has_evidence_for_every_status_and_preserves_open_questions
     rows = review['fields']
     assert len({r['field'] for r in rows}) == len(rows)
     assert dict(Counter(r['status'] for r in rows)) == review['counts']
-    expected_blocked = {'Comparative Media Studies', 'Education', 'English Language Studies (ELS)', 'Writing', 'Music', 'Theater Arts'}
+    expected_blocked = {'Music', 'Theater Arts'}
     blocked = {r['field'] for r in rows if r['status'] == 'department_detail_blocked'}
     assert expected_blocked <= blocked
+    for row in rows:
+        if row['field'] in {'Comparative Media Studies', 'Education', 'English Language Studies (ELS)', 'Writing'}:
+            assert row['previous_barrier'] and row['browser_followup']
+            assert row['status'] != 'department_detail_blocked'
     questions = {r['field'] for r in rows if r['status'] == 'mapped_with_source_question'}
     assert {'Ethics', 'Art, Culture, and Technology', 'Urban Studies'} <= questions
     for row in rows:

@@ -5,9 +5,9 @@
   "directory_url": "https://registrar.mit.edu/registration-academics/academic-requirements/hass-requirement/hass-concentrations",
   "scope": "Finite registrar-listed field review, not an assertion that the AI degree or every institutional policy is complete. Global Languages umbrella is not counted separately from its eleven named routes.",
   "counts": {
-    "mapped": 34,
-    "mapped_with_source_question": 3,
-    "department_detail_blocked": 6
+    "mapped": 37,
+    "mapped_with_source_question": 4,
+    "department_detail_blocked": 2
   },
   "fields": [
     {
@@ -131,20 +131,33 @@
     {
       "field": "Comparative Media Studies",
       "directory_url": "https://cmsw.mit.edu/academics/comparative-media-studies/undergraduate/#:~:text=The%20Comparative%20Media%20Studies%20concentration,but%20not%20the%20CMS%20concentration.",
-      "status": "department_detail_blocked",
+      "status": "mapped_with_source_question",
       "source_ids": [
-        "mit-ai-decision-making-bs-hass-cmsw-catalog-context"
+        "mit-ai-decision-making-bs-hass-cmsw-catalog-context",
+        "mit-ai-decision-making-bs-hass-cmsw-cms",
+        "mit-ai-decision-making-bs-hass-cmsw-pool"
       ],
-      "barrier": "TLS certificate verification failed while requesting https://cmsw.mit.edu/robots.txt: unable to get local issuer certificate. No TLS bypass attempted.",
-      "next_action": "Restore a valid supported TLS chain and rerun the exact directory-linked department page through the default Fetcher.",
+      "next_action": "Clarify major-only external-elective approval applicability to CMS concentrators; preserve media-content and HASS criteria.",
       "catalog_review": "Independent current official department catalog inspected; it contains major/minor sections but no concentration-specific requirement section. No historical or minor curriculum substituted.",
       "inspected_sources": [
         {
           "id": "mit-ai-decision-making-bs-hass-cmsw-catalog-context",
           "url": "https://catalog.mit.edu/schools/humanities-arts-social-sciences/comparative-media-studies-writing/",
           "fetched_at": "2026-10-11T01:18:10+00:00"
+        },
+        {
+          "id": "mit-ai-decision-making-bs-hass-cmsw-cms",
+          "url": "https://cmsw.mit.edu/academics/comparative-media-studies/undergraduate/",
+          "fetched_at": "2026-10-11T02:00:51.751269+00:00"
+        },
+        {
+          "id": "mit-ai-decision-making-bs-hass-cmsw-pool",
+          "url": "https://cmsw.mit.edu/academics/subject-lists/cms/",
+          "fetched_at": "2026-10-11T02:00:51.751269+00:00"
         }
-      ]
+      ],
+      "previous_barrier": "TLS certificate verification failed while requesting https://cmsw.mit.edu/robots.txt: unable to get local issuer certificate. No TLS bypass attempted.",
+      "browser_followup": "2026-10-11: ordinary Chrome rendered current requirements without a certificate interstitial; no TLS bypass. Default Fetcher transport barrier remains separate."
     },
     {
       "field": "Computing and Society",
@@ -219,38 +232,52 @@
     {
       "field": "Education",
       "directory_url": "https://cmsw.mit.edu/academics/education/",
-      "status": "department_detail_blocked",
+      "status": "mapped",
       "source_ids": [
-        "mit-ai-decision-making-bs-hass-cmsw-catalog-context"
+        "mit-ai-decision-making-bs-hass-cmsw-catalog-context",
+        "mit-ai-decision-making-bs-hass-cmsw-education"
       ],
-      "barrier": "TLS certificate verification failed while requesting https://cmsw.mit.edu/robots.txt: unable to get local issuer certificate. No TLS bypass attempted.",
-      "next_action": "Restore a valid supported TLS chain and rerun the exact directory-linked department page through the default Fetcher.",
+      "next_action": "No unreviewed local concentration inventory remains in the inspected public section. Open subject/advisor criteria are represented without inventing a closed pool.",
       "catalog_review": "Independent current official department catalog inspected; it contains major/minor sections but no concentration-specific requirement section. No historical or minor curriculum substituted.",
       "inspected_sources": [
         {
           "id": "mit-ai-decision-making-bs-hass-cmsw-catalog-context",
           "url": "https://catalog.mit.edu/schools/humanities-arts-social-sciences/comparative-media-studies-writing/",
           "fetched_at": "2026-10-11T01:18:10+00:00"
+        },
+        {
+          "id": "mit-ai-decision-making-bs-hass-cmsw-education",
+          "url": "https://cmsw.mit.edu/education-and-teaching-licensure/",
+          "fetched_at": "2026-10-11T02:00:51.751269+00:00"
         }
-      ]
+      ],
+      "previous_barrier": "TLS certificate verification failed while requesting https://cmsw.mit.edu/robots.txt: unable to get local issuer certificate. No TLS bypass attempted.",
+      "browser_followup": "2026-10-11: ordinary Chrome rendered current requirements without a certificate interstitial; no TLS bypass. Default Fetcher transport barrier remains separate."
     },
     {
       "field": "English Language Studies (ELS)",
       "directory_url": "https://cmsw.mit.edu/english-language-studies/",
-      "status": "department_detail_blocked",
+      "status": "mapped",
       "source_ids": [
-        "mit-ai-decision-making-bs-hass-cmsw-catalog-context"
+        "mit-ai-decision-making-bs-hass-cmsw-catalog-context",
+        "mit-ai-decision-making-bs-hass-cmsw-els"
       ],
-      "barrier": "TLS certificate verification failed while requesting https://cmsw.mit.edu/robots.txt: unable to get local issuer certificate. No TLS bypass attempted.",
-      "next_action": "Restore a valid supported TLS chain and rerun the exact directory-linked department page through the default Fetcher.",
+      "next_action": "No unreviewed local concentration inventory remains in the inspected public section. Open subject/advisor criteria are represented without inventing a closed pool.",
       "catalog_review": "Independent current official department catalog inspected; it contains major/minor sections but no concentration-specific requirement section. No historical or minor curriculum substituted.",
       "inspected_sources": [
         {
           "id": "mit-ai-decision-making-bs-hass-cmsw-catalog-context",
           "url": "https://catalog.mit.edu/schools/humanities-arts-social-sciences/comparative-media-studies-writing/",
           "fetched_at": "2026-10-11T01:18:10+00:00"
+        },
+        {
+          "id": "mit-ai-decision-making-bs-hass-cmsw-els",
+          "url": "https://cmsw.mit.edu/english-language-studies/",
+          "fetched_at": "2026-10-11T02:00:51.751269+00:00"
         }
-      ]
+      ],
+      "previous_barrier": "TLS certificate verification failed while requesting https://cmsw.mit.edu/robots.txt: unable to get local issuer certificate. No TLS bypass attempted.",
+      "browser_followup": "2026-10-11: ordinary Chrome rendered current requirements without a certificate interstitial; no TLS bypass. Default Fetcher transport barrier remains separate."
     },
     {
       "field": "Ethics",
@@ -753,18 +780,25 @@
       "directory_url": "http://mta.mit.edu/music/degree-requirements/music-concentration",
       "status": "department_detail_blocked",
       "source_ids": [
-        "mit-ai-decision-making-bs-hass-mta-catalog-context"
+        "mit-ai-decision-making-bs-hass-mta-catalog-context",
+        "mit-ai-decision-making-bs-hass-mta-browser-migration"
       ],
       "barrier": "robots.txt returns an HTML page after a trailing-slash redirect on both HTTP and HTTPS mta.mit.edu; policy cannot be evaluated. No authentication or HTTP 403 denial was observed.",
-      "next_action": "Obtain an evaluable published robots policy or a separately authorized public institutional requirement document, then read the exact directory-linked concentration page.",
+      "next_action": "Obtain a usable published policy for https://music.mit.edu/ then inspect its publicly linked concentration requirements; old mta host is a migration gateway.",
       "catalog_review": "Independent current official department catalog inspected; it contains major/minor sections but no concentration-specific requirement section. No historical or minor curriculum substituted.",
       "inspected_sources": [
         {
           "id": "mit-ai-decision-making-bs-hass-mta-catalog-context",
           "url": "https://catalog.mit.edu/schools/humanities-arts-social-sciences/music-theater-arts/",
           "fetched_at": "2026-10-11T01:18:11+00:00"
+        },
+        {
+          "id": "mit-ai-decision-making-bs-hass-mta-browser-migration",
+          "url": "https://mta.mit.edu/robots.txt/",
+          "fetched_at": "2026-10-11T02:02:14.648447+00:00"
         }
-      ]
+      ],
+      "browser_followup": "2026-10-11: Chrome robots URL rendered an explicit migration notice, not a policy. It linked https://music.mit.edu/; default Fetcher then failed robots retrieval on that canonical new host with ConnectError. No requirement page was read and no policy bypass attempted. A focused Chrome navigation to the new host robots.txt likewise returned net::ERR_BLOCKED_BY_CLIENT; the requirement page was not opened."
     },
     {
       "field": "Philosophy",
@@ -875,18 +909,25 @@
       "directory_url": "http://mta.mit.edu/theater-arts/degree-requirements/theater-arts-concentration",
       "status": "department_detail_blocked",
       "source_ids": [
-        "mit-ai-decision-making-bs-hass-mta-catalog-context"
+        "mit-ai-decision-making-bs-hass-mta-catalog-context",
+        "mit-ai-decision-making-bs-hass-mta-browser-migration"
       ],
       "barrier": "robots.txt returns an HTML page after a trailing-slash redirect on both HTTP and HTTPS mta.mit.edu; policy cannot be evaluated. No authentication or HTTP 403 denial was observed.",
-      "next_action": "Obtain an evaluable published robots policy or a separately authorized public institutional requirement document, then read the exact directory-linked concentration page.",
+      "next_action": "Obtain a usable published policy for https://theater.mit.edu/ then inspect its publicly linked concentration requirements; old mta host is a migration gateway.",
       "catalog_review": "Independent current official department catalog inspected; it contains major/minor sections but no concentration-specific requirement section. No historical or minor curriculum substituted.",
       "inspected_sources": [
         {
           "id": "mit-ai-decision-making-bs-hass-mta-catalog-context",
           "url": "https://catalog.mit.edu/schools/humanities-arts-social-sciences/music-theater-arts/",
           "fetched_at": "2026-10-11T01:18:11+00:00"
+        },
+        {
+          "id": "mit-ai-decision-making-bs-hass-mta-browser-migration",
+          "url": "https://mta.mit.edu/robots.txt/",
+          "fetched_at": "2026-10-11T02:02:14.648447+00:00"
         }
-      ]
+      ],
+      "browser_followup": "2026-10-11: Chrome robots URL rendered an explicit migration notice, not a policy. It linked https://theater.mit.edu/; default Fetcher then failed robots retrieval on that canonical new host with ConnectError. No requirement page was read and no policy bypass attempted. A focused Chrome navigation to the new host robots.txt likewise returned net::ERR_BLOCKED_BY_CLIENT; the requirement page was not opened."
     },
     {
       "field": "Urban Studies",
@@ -923,20 +964,28 @@
     {
       "field": "Writing",
       "directory_url": "https://cmsw.mit.edu/minor-and-concentration/",
-      "status": "department_detail_blocked",
+      "status": "mapped",
       "source_ids": [
-        "mit-ai-decision-making-bs-hass-cmsw-catalog-context"
+        "mit-ai-decision-making-bs-hass-cmsw-catalog-context",
+        "mit-ai-decision-making-bs-hass-cmsw-writing"
       ],
-      "barrier": "TLS certificate verification failed while requesting https://cmsw.mit.edu/robots.txt: unable to get local issuer certificate. No TLS bypass attempted.",
-      "next_action": "Restore a valid supported TLS chain and rerun the exact directory-linked department page through the default Fetcher.",
+      "next_action": "No unreviewed local concentration inventory remains in the inspected public section. Open subject/advisor criteria are represented without inventing a closed pool.",
       "catalog_review": "Independent current official department catalog inspected; it contains major/minor sections but no concentration-specific requirement section. No historical or minor curriculum substituted.",
       "inspected_sources": [
         {
           "id": "mit-ai-decision-making-bs-hass-cmsw-catalog-context",
           "url": "https://catalog.mit.edu/schools/humanities-arts-social-sciences/comparative-media-studies-writing/",
           "fetched_at": "2026-10-11T01:18:10+00:00"
+        },
+        {
+          "id": "mit-ai-decision-making-bs-hass-cmsw-writing",
+          "url": "https://cmsw.mit.edu/academics/writing/undergraduate/",
+          "fetched_at": "2026-10-11T02:00:51.751269+00:00"
         }
-      ]
+      ],
+      "previous_barrier": "TLS certificate verification failed while requesting https://cmsw.mit.edu/robots.txt: unable to get local issuer certificate. No TLS bypass attempted.",
+      "browser_followup": "2026-10-11: ordinary Chrome rendered current requirements without a certificate interstitial; no TLS bypass. Default Fetcher transport barrier remains separate."
     }
-  ]
+  ],
+  "followup_at": "2026-10-11T02:00:51.751269+00:00"
 }
