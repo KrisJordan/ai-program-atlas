@@ -20,7 +20,8 @@
   const filterPanel = document.getElementById('filter-panel');
   const controls = Object.fromEntries(keys.map(k => [k, form.elements.namedItem(k)]));
   const byId = new Map(programs.map(p => [p.id, p]));
-  const cards = [...document.querySelectorAll('[data-program-id]')];
+  const cards = [...document.querySelectorAll('[data-program-id], [data-row-id]')];
+  const viewControl = document.getElementById('directory-view');
   let selected = [];
   let profileMode = 'required';
   const sortControl = document.getElementById('sort-order');
@@ -83,6 +84,7 @@
 
   function readState() {
     const params = new URLSearchParams(location.search);
+    viewControl.value = params.get('view') === 'cards' ? 'cards' : 'table';
     sortControl.value = ['rank', 'name', 'csrankings'].includes(params.get('sort')) ? params.get('sort') : 'csrankings';
     keys.forEach(key => {
       const value = params.get(key) || '';
@@ -95,7 +97,7 @@
       const award = params.get('award_' + group);
       awardState[group] = ['BS','BSE','BA','second_major','other'].includes(award) ? award : '';
       if (controls.type.value === 'additional_major' && awardState[group] === 'other') awardState[group] = '';
-      section.querySelector('[data-major-award]').value = awardState[group];
+      document.getElementById('major-award-' + section.dataset.cohortGroup).value = awardState[group];
       pathState[group] = pathForType(controls.type.value) || (['majors', 'concentrations', 'minors'].includes(value) ? value : pathForType(controls.award.value) || 'majors');
     });
     profileMode = params.get('profile') === 'options' ? 'options' : 'required';
@@ -109,6 +111,7 @@
 
   function writeState() {
     const params = new URLSearchParams();
+    if (viewControl.value === 'cards') params.set('view', 'cards');
     if (sortControl.value !== 'csrankings') params.set('sort', sortControl.value);
     keys.forEach(key => { if (controls[key].value) params.set(key, controls[key].value); });
     if (selected.length) params.set('compare', selected.join(','));
@@ -244,7 +247,7 @@
       }
       return 0;
     };
-    document.querySelectorAll('.program-grid, .family-variants').forEach(container => {
+    document.querySelectorAll('.program-grid, .family-variants, .directory-table tbody').forEach(container => {
       const entries = [...container.children];
       const ordered = [...entries].sort(compare);
       if (ordered.some((entry, index) => entry !== entries[index])) ordered.forEach(entry => container.append(entry));
@@ -254,22 +257,24 @@
   function render() {
     const filterLabels = {q:'Search',type:'Program type',award:'Award',evidence:'Evidence',calendar:'Calendar',institution:'Institution',cohort:'Category',category:'Course category',discipline:'Discipline'};
     const activeFilters = keys.filter(key => controls[key].value.trim()).map(key => `${filterLabels[key]}: ${key === 'q' ? controls[key].value.trim() : controls[key].selectedOptions[0]?.textContent || controls[key].value}`);
+    Object.entries(awardState).filter(([,award]) => award).forEach(([group]) => { const control = document.getElementById('major-award-' + group); activeFilters.push(`${{nu:'National University',lac:'Liberal Arts',unclassified:'Unclassified'}[group]} major award: ${control.selectedOptions[0].textContent}`); });
     const filterSummary = document.getElementById('active-filter-summary');
     filterSummary.textContent = activeFilters.length ? `${activeFilters.length} active ${activeFilters.length === 1 ? 'filter' : 'filters'} · ${activeFilters.slice(0,2).map(text => text.length > 64 ? text.slice(0,61) + '…' : text).join(' · ')}${activeFilters.length > 2 ? ` · +${activeFilters.length - 2} more` : ''}` : 'No search filters active';
     filterSummary.title = activeFilters.join(' · ');
     sortDirectory();
-    let count = 0;
+    document.documentElement.dataset.directoryView = viewControl.value;
+    const visibleIds = new Set();
     cards.forEach(card => {
-      const program = byId.get(card.dataset.programId);
+      const program = byId.get(card.dataset.programId || card.dataset.rowId);
       const show = matches(program) && majorMatches(program) && pathState[program.cohort_group] === program.program_path;
       card.hidden = !show;
-      if (show) count++;
+      if (show) visibleIds.add(program.id);
     });
     cohortSections.forEach(section => {
       const group = section.dataset.cohortGroup;
       const allCandidates = programs.filter(p => p.cohort_group === group && matches(p));
       const candidates = allCandidates.filter(majorMatches);
-      const awardControl = section.querySelector('[data-major-award]');
+      const awardControl = document.getElementById('major-award-' + section.dataset.cohortGroup);
       awardControl.value = awardState[group];
       const awardLabels = {'':'All awards',BS:'BS',BSE:'BSE',BA:'BA',second_major:'Second majors',other:'Other / unspecified'};
       [...awardControl.options].forEach(option => { const n = allCandidates.filter(p => p.program_path === 'majors' && (!option.value || p.major_awards.includes(option.value))).length; option.textContent = `${awardLabels[option.value]} (${n})`; });
@@ -288,6 +293,7 @@
       const labels = {nu: 'National Universities', lac: 'National Liberal Arts Colleges'};
       section.hidden = Boolean(controls.cohort.value && labels[group] !== controls.cohort.value);
     });
+    const count = visibleIds.size;
     let visibleFamilies = 0;
     familyPanels.forEach(panel => {
       const visible = [...panel.querySelectorAll('[data-program-id]')].filter(card => !card.hidden).length;
@@ -299,13 +305,13 @@
     });
     document.getElementById('result-count').textContent = `${count} ${count === 1 ? 'program' : 'programs'}${count !== programs.length ? ' of ' + programs.length : ''}${visibleFamilies ? ' · ' + visibleFamilies + ' program ' + (visibleFamilies === 1 ? 'family' : 'families') : ''}`;
     document.getElementById('empty-state').hidden = count > 0;
-    document.querySelectorAll('[data-compare]').forEach(input => { input.checked = selected.includes(input.dataset.compare); });
+    document.querySelectorAll('[data-compare], [data-row-compare]').forEach(input => { input.checked = selected.includes(input.dataset.compare || input.dataset.rowCompare); });
     renderComparison();
   }
 
   cohortSections.forEach(section => {
     const tabs = [...section.querySelectorAll('[role=tab]')];
-    section.querySelector('[data-major-award]').addEventListener('change', event => { awardState[section.dataset.cohortGroup] = event.target.value; controls.award.value = ''; if ((event.target.value === 'second_major' && controls.type.value === 'degree') || (['BS','BSE','BA'].includes(event.target.value) && controls.type.value === 'additional_major')) controls.type.value = ''; clearTimeout(timer); writeState(); });
+    document.getElementById('major-award-' + section.dataset.cohortGroup).addEventListener('change', event => { awardState[section.dataset.cohortGroup] = event.target.value; controls.award.value = ''; if ((event.target.value === 'second_major' && controls.type.value === 'degree') || (['BS','BSE','BA'].includes(event.target.value) && controls.type.value === 'additional_major')) controls.type.value = ''; clearTimeout(timer); writeState(); });
     const selectPath = tab => {
       pathState[section.dataset.cohortGroup] = tab.dataset.path;
       if (controls.type.value && pathForType(controls.type.value) !== tab.dataset.path) controls.type.value = '';
@@ -327,14 +333,23 @@
     clearTimeout(timer);
     writeState();
   }));
+  viewControl.addEventListener('change', () => { clearTimeout(timer); writeState(); });
+  const openFilters = () => { if (!filterPanel.open) filterPanel.showModal(); controls.q.focus(); };
+  const closeFilters = () => { clearTimeout(timer); writeState(); filterPanel.close(); };
+  document.getElementById('open-filters').addEventListener('click', openFilters);
+  document.getElementById('close-filters').addEventListener('click', closeFilters);
+  document.getElementById('apply-filters').addEventListener('click', closeFilters);
+  filterPanel.addEventListener('keydown', event => { if (event.key === 'Escape') { event.preventDefault(); event.stopPropagation(); closeFilters(); } });
+  filterPanel.addEventListener('cancel', () => { clearTimeout(timer); writeState(); });
+  filterPanel.addEventListener('click', event => { const rect = filterPanel.getBoundingClientRect(); if (event.target === filterPanel && (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom)) closeFilters(); });
   sortControl.addEventListener('change', () => { clearTimeout(timer); writeState(); });
   profileControl.addEventListener('change', () => { profileMode = profileControl.value; clearTimeout(timer); writeState(); announce(profileMode === 'required' ? 'Showing required curriculum profiles.' : 'Showing elective option profiles.'); });
-  form.addEventListener('submit', event => { event.preventDefault(); clearTimeout(timer); writeState(); });
+  form.addEventListener('submit', event => { event.preventDefault(); closeFilters(); });
   controls.q.addEventListener('input', () => { clearTimeout(timer); timer = setTimeout(writeState, 220); });
   keys.filter(k => k !== 'q').forEach(key => controls[key].addEventListener('change', () => { clearTimeout(timer); if (key === 'award') { Object.keys(awardState).forEach(group => { awardState[group] = ''; }); const path = pathForType(controls.award.value) || (controls.award.value ? 'majors' : null); if (path) Object.keys(pathState).forEach(group => { pathState[group] = path; }); } if (key === 'type' && controls.type.value) Object.keys(pathState).forEach(group => { pathState[group] = pathForType(controls.type.value); awardState[group] = ''; }); if (key === 'discipline' && controls.discipline.value) programs.filter(p => (p.family?.disciplines || []).includes(controls.discipline.value)).forEach(p => { if (!expanded.includes(p.family.id)) expanded.push(p.family.id); }); writeState(); }));
   const reset = () => { clearTimeout(timer); sortControl.value = 'csrankings'; keys.forEach(key => { controls[key].value = ''; }); Object.keys(pathState).forEach(group => { pathState[group] = 'majors'; awardState[group] = ''; }); writeState(); };
-  document.getElementById('reset-filters').addEventListener('click', reset);
-  document.getElementById('empty-reset').addEventListener('click', () => { reset(); filterPanel.open = true; controls.q.focus(); });
+  document.getElementById('reset-filters').addEventListener('click', () => { reset(); filterPanel.close(); });
+  document.getElementById('empty-reset').addEventListener('click', () => { reset(); openFilters(); });
   document.getElementById('clear-comparison').addEventListener('click', () => {
     selected = [];
     writeState();
@@ -342,8 +357,8 @@
     document.getElementById('compare-title').setAttribute('tabindex', '-1');
     document.getElementById('compare-title').focus({preventScroll: true});
   });
-  document.querySelectorAll('[data-compare]').forEach(input => input.addEventListener('change', () => {
-    const id = input.dataset.compare;
+  document.querySelectorAll('[data-compare], [data-row-compare]').forEach(input => input.addEventListener('change', () => {
+    const id = input.dataset.compare || input.dataset.rowCompare;
     if (input.checked && selected.length === 4) { input.checked = false; announce('Choose up to four programs. Remove a selection to add another.'); return; }
     selected = input.checked ? [...selected, id] : selected.filter(value => value !== id);
     const family = byId.get(id)?.family?.id;

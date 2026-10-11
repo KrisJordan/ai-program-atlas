@@ -35,7 +35,7 @@ def test_real_database_pages_comparison_and_mobile(browser, tmp_path):
     page.on("pageerror", lambda error: errors.append(str(error)))
     base = f"http://127.0.0.1:{server.server_port}/ai-program-atlas/"
     try:
-        page.goto(base)
+        page.goto(base + '?view=cards')
         expect(page.locator(".program-card")).to_have_count(len(data["programs"]))
         for summary in page.locator(".program-family:visible > summary").all():
             summary.click()
@@ -95,7 +95,7 @@ def test_real_family_variants_from_fresh_cli_database(browser,tmp_path,width):
     page.on('pageerror',lambda error:errors.append(str(error)))
     base=f'http://127.0.0.1:{server.server_port}/ai-program-atlas/'
     try:
-        page.goto(base)
+        page.goto(base + '?view=cards')
         panel=page.locator('[data-family-id="'+family['id']+'"]')
         expect(panel).to_be_visible()
         panel.locator(':scope > summary').focus()
@@ -107,10 +107,12 @@ def test_real_family_variants_from_fresh_cli_database(browser,tmp_path,width):
         expect(panel).to_have_attribute('open','')
         open_filters(page)
         page.locator('#filter-discipline').select_option(discipline)
+        page.locator('#apply-filters').click()
         expect(panel.locator('.program-card:visible')).to_have_count(len(matching))
         page.locator('[data-compare="'+first['id']+'"]').check()
         open_filters(page)
         page.locator('#filter-discipline').select_option('')
+        page.locator('#apply-filters').click()
         page.locator('[data-compare="'+second['id']+'"]').check()
         expect(page.locator('.compare-table thead th')).to_have_count(3)
         expect(page.locator('.compare-table')).to_contain_text(first['family']['variant_label'])
@@ -130,6 +132,7 @@ def test_real_family_variants_from_fresh_cli_database(browser,tmp_path,width):
         expect(page.locator('.compare-table thead th')).to_have_count(3)
         open_filters(page)
         page.locator('#filter-discipline').select_option(discipline)
+        page.locator('#apply-filters').click()
         page.go_back();expect(page.locator('#filter-discipline')).to_have_value('')
         page.go_forward();expect(page.locator('#filter-discipline')).to_have_value(discipline)
         assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')

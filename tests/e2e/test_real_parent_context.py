@@ -66,7 +66,7 @@ def test_committed_parent_evidence_cards_details_comparison(browser, parent_inve
     errors = []
     page.on('pageerror', lambda error: errors.append(str(error)))
     try:
-        page.goto(base+'?path_nu=concentrations&path_lac=concentrations')
+        page.goto(base+'?view=cards&path_nu=concentrations&path_lac=concentrations')
         expect(page.locator('#filter-panel')).not_to_have_attribute('open', '')
         for pid in concentration_ids:
             card = page.locator(f'[data-program-id="{pid}"] .parent-programs')
@@ -93,7 +93,7 @@ def test_committed_parent_evidence_cards_details_comparison(browser, parent_inve
                     assert url in detail.locator('a').evaluate_all('(links)=>links.map(a=>a.href)')
             assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
         selected = [ohio, partials[0], unknown, wpi]
-        page.goto(base+'?path_nu=concentrations&path_lac=concentrations&compare='+','.join(selected))
+        page.goto(base+'?view=cards&path_nu=concentrations&path_lac=concentrations&compare='+','.join(selected))
         row = page.locator('.compare-table tr').filter(has=page.get_by_role('rowheader', name='Parent program / award', exact=True))
         expect(row).to_contain_text('Award not yet verified')
         expect(row).to_contain_text('Not yet verified')
@@ -104,6 +104,7 @@ def test_committed_parent_evidence_cards_details_comparison(browser, parent_inve
         expect(page.locator('#tray-count')).to_contain_text('4 of 4')
         open_filters(page)
         page.locator('#search').fill('Ohio State')
+        page.locator('#apply-filters').click()
         expect(page.locator('[data-program-id]:visible')).to_have_count(1)
         page.go_back()
         expect(page.locator('#search')).to_have_value('')

@@ -4,6 +4,7 @@ from __future__ import annotations
 from collections import Counter
 from html import escape
 import json
+from hashlib import sha256
 from pathlib import Path
 import re
 import shutil
@@ -156,6 +157,11 @@ def directory_payload(data, base):
     return {'programs': programs, 'institutions': institutions, 'families': families, 'base_path': base, 'categories': CATEGORIES}
 
 
+def asset_url(base, filename):
+    digest = sha256((Path(__file__).parent / "web" / filename).read_bytes()).hexdigest()[:12]
+    return f"{base}assets/{filename}?v={digest}"
+
+
 def shell(title, body, base, current="", payload=None):
     current_attr = 'aria-current="page"'
     nav = "".join(f'<a {current_attr if current == key else ""} href="{base}{path}">{label}</a>' for key, path, label in [
@@ -163,11 +169,11 @@ def shell(title, body, base, current="", payload=None):
     script = ""
     if payload is not None:
         serialized = json.dumps(payload, ensure_ascii=False, separators=(',', ':')).replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026")
-        script = f'<script id="atlas-data" type="application/json">{serialized}</script><script src="{base}assets/atlas.js" defer></script>'
+        script = f'<script id="atlas-data" type="application/json">{serialized}</script><script src="{asset_url(base, "atlas.js")}" defer></script>'
     return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)} · AI Program Atlas</title><meta name="description" content="A source-backed field guide to undergraduate artificial intelligence programs, curricula, and research context.">
-<link rel="stylesheet" href="{base}assets/atlas.css"></head><body>
+<link rel="stylesheet" href="{asset_url(base, "atlas.css")}"></head><body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="masthead"><a class="brand" href="{base}" aria-label="AI Program Atlas home"><span class="brand-mark" aria-hidden="true">A<span>i</span></span><span>AI Program Atlas<small>UNDERGRADUATE PROGRAM RESEARCH</small></span></a><nav aria-label="Main navigation">{nav}</nav></header>
 <main id="main">{body}</main>
@@ -301,6 +307,17 @@ def program_card(p, base):
 <div class="card-bottom"><a href="{base}programs/{esc(p['id'])}/">View program <span aria-hidden="true">→</span></a><label class="compare-choice js-only"><input type="checkbox" data-compare="{esc(p['id'])}"> Compare<span class="sr-only"> {esc(p.get('title'))} at {esc(institution.get('name'))}</span></label></div></article>'''
 
 
+def program_table(programs, base):
+    rows = []
+    for p in sorted(programs, key=directory_sort_key):
+        rank = p.get('_research_rank')
+        context = p.get('_rank_context', {})
+        news_rank = context.get('rank')
+        award = 'Additional Major' if p.get('program_kind') == 'additional_major' else ' / '.join(o['label'] for o in p.get('award_options', [])) or (p.get('award_level') if p.get('award_level') != 'other' else 'Unspecified')
+        rows.append(f'''<tr data-row-id="{esc(p['id'])}" {directory_sort_attributes(p)}><th scope="row">{esc(p.get('institution', {}).get('name'))}</th><td><a class="directory-program-link" href="{base}programs/{esc(p['id'])}/">{esc(p.get('title'))}</a><label class="compare-choice js-only"><input type="checkbox" data-row-compare="{esc(p['id'])}"> Compare<span class="sr-only"> {esc(p.get('title'))} at {esc(p.get('institution', {}).get('name'))}</span></label></td><td>{esc('#' + str(rank) if rank is not None else 'Unavailable')}<small>CSRankings · U.S.</small></td><td>{external(context.get('source_url'), '#' + str(news_rank)) if news_rank is not None else 'Unverified'}<small>{esc(context.get('edition') or 'Edition unverified')} · {esc(human(context.get('verification_status')))}</small></td><td>{esc(award)}</td></tr>''')
+    return '<p class="directory-scroll-hint">Scroll the table to see rankings and degree types.</p><div class="directory-table-wrap table-scroll" role="region" aria-label="Program directory table" tabindex="0"><table class="directory-table"><caption class="sr-only">Undergraduate programs; institution rankings are context, not measures of undergraduate teaching quality.</caption><thead><tr>' + ''.join('<th scope="col">' + label + '</th>' for label in ['University', 'Program', '<a href="' + base + 'methodology/#research" title="CSRankings five-field aggregate U.S. publication rank">AI Ranking</a>', 'US News Ranking', 'Degree Type']) + '</tr></thead><tbody>' + ''.join(rows) + '</tbody></table></div>'
+
+
 def family_group(family, members, base):
     sources = ' · '.join(external(source.get('url'), source.get('title') or 'Family source') for source in family.get('sources', []))
     shared = family.get('shared_requirements') or []
@@ -378,11 +395,7 @@ def cohort_directory(programs, institutions, families, base, edition=None, csran
         for path, label in PROGRAM_PATHS.items():
             entries = [p for p in members if program_path(p) == path]
             tabs.append(f'<button type="button" role="tab" id="tab-{key}-{path}" data-path="{path}" aria-controls="cohort-{key}-{path}" aria-selected="{"true" if path == "majors" else "false"}" tabindex="{0 if path == "majors" else -1}">{label} <span class="path-count">{len(entries)}</span></button>')
-            award_filter = ''
-            if path == 'majors':
-                award_options = [('','All awards'),('BS','BS'),('BSE','BSE'),('BA','BA'),('second_major','Second majors'),('other','Other / unspecified')]
-                award_filter = '<div class="major-award-controls js-only"><label for="major-award-' + key + '">Major type / award<select id="major-award-' + key + '" data-major-award aria-label="' + name + ' major award">' + ''.join('<option value="' + value + '">' + label + ' (' + str(sum(not value or value in major_filter_buckets(p) for p in entries)) + ')</option>' for value, label in award_options) + '</select></label><p>Exact recorded awards or verified equivalents only. Second majors require a source-confirmed second/additional-major relationship and do not imply a separate degree award. Multiple offered awards may match more than one filter; total records are counted once.</p></div>'
-            panels.append(f'<div role="tabpanel" id="cohort-{key}-{path}" data-path="{path}" aria-labelledby="tab-{key}-{path}" tabindex="0"><h4 class="no-js-path-title">{label}</h4>{award_filter}<div class="program-grid">{grouped_programs(entries, families, base)}</div><p class="cohort-empty" {"hidden" if entries else ""}>No {label.lower()} match the current filters in this institution category. This is not evidence that none exist.</p></div>')
+            panels.append(f'<div role="tabpanel" id="cohort-{key}-{path}" data-path="{path}" aria-labelledby="tab-{key}-{path}" tabindex="0"><h4 class="no-js-path-title">{label}</h4>{program_table(entries, base)}<div class="directory-cards"><div class="program-grid">{grouped_programs(entries, families, base)}</div></div><p class="cohort-empty" {"hidden" if entries else ""}>No {label.lower()} match the current filters in this institution category. This is not evidence that none exist.</p></div>')
         explanation = 'Category has not been resolved from recorded ranking evidence; institution names and program awards are not used to guess it.' if key == 'unclassified' else 'Grouped by recorded U.S. News institution category. Majors includes degrees and separately labeled additional majors.'
         blocks.append(f'<section class="cohort-directory" data-cohort-group="{key}" aria-labelledby="cohort-title-{key}"><div class="cohort-heading"><h3 id="cohort-title-{key}">{name}</h3><p class="cohort-result-count" role="status"></p></div><p class="cohort-explanation">{explanation}</p><div class="program-path-tabs js-only" role="tablist" aria-label="{name} program types">{"".join(tabs)}</div>{"".join(panels)}</section>')
     return '<div id="program-grid">' + ''.join(blocks) + '</div>'
@@ -394,14 +407,8 @@ def root_page(data, base):
     meta = data.get("meta", {})
     families = data.get("families") or []
     variants = [p for p in programs if p.get("family")]
-    institution_count = len({p.get("institution", {}).get("id") for p in programs})
     discipline_values = sorted({d for p in variants for d in p["family"].get("disciplines", [])})
-    inventory_counts = '<dl class="inventory-counts" aria-label="Inventory counts">' + ''.join(f'<div><dt>{label}</dt><dd>{count}</dd></div>' for label, count in [("Institutions with programs", institution_count), ("Award / program records", len(programs)), ("Program families", len(families)), ("Named family variants", len(variants))]) + '</dl>'
     cohort = meta.get("cohort")
-    cohort_label = cohort if isinstance(cohort, str) else f"U.S. News {cohort.get('edition', 'edition unverified')} target cohorts · incomplete inventory" if isinstance(cohort, dict) else "U.S. undergraduate programs · source-backed pilot"
-    summary = meta.get("coverage_summary")
-    identity_only = sum(p.get('curriculum_status') == 'pending' for p in programs)
-    summary = summary if isinstance(summary, str) else f"{len(programs)} documented programs; {identity_only} identity-only records await curriculum extraction. Institution and cohort coverage remain incomplete. An unlisted program is not evidence of absence."
     filters = [
         ("type", "Program type", [("degree", "Degree"), ("additional_major", "Additional major"), ("minor", "Minor"), ("concentration", "Concentration")]),
         ("award", "Award", sorted({(p.get("award_level", "other"), p.get("award_level", "Other")) for p in programs})),
@@ -413,13 +420,20 @@ def root_page(data, base):
         ("discipline", "Family discipline", [(d, d) for d in discipline_values]),
     ]
     controls = "".join(f'<label for="filter-{key}">{label}<select id="filter-{key}" name="{key}"><option value="">All</option>{options(vals)}</select></label>' for key, label, vals in filters)
-    body = f'''<section class="hero"><div><div class="eyebrow"><span class="status-dot"></span> UNDERGRADUATE AI PROGRAMS</div><h1>Undergraduate AI programs</h1><p class="lede">Search undergraduate degrees, minors and concentrations. Compare documented curricula, review the sources, and see what still needs verification.</p></div><aside class="edition-note"><span class="eyebrow">RESEARCH SNAPSHOT</span><p>{esc(cohort_label)}</p><a href="{base}coverage/">Read the coverage notes →</a></aside></section>
-<div class="coverage-strip"><span class="eyebrow">COVERAGE STATUS</span><p>{esc(summary)}</p><a href="{base}coverage/">Coverage & limitations <span aria-hidden="true">↗</span></a></div>
-{inventory_counts}<section class="explorer" aria-labelledby="explore-title"><div class="section-heading"><div><span class="eyebrow">PROGRAM DIRECTORY</span><h2 id="explore-title">Find a program</h2></div><p>Choose an institution category and program type. Compare up to four programs.</p></div>
-<details id="filter-panel" class="filter-panel js-only"><summary><span>Search &amp; filters</span><span id="active-filter-summary" role="status" aria-live="polite">No search filters active</span></summary><form id="filters" class="filters" role="search"><label class="search-label" for="search">Search programs<input type="search" id="search" name="q" placeholder="Institution, program, or course…" autocomplete="off"></label><div class="filter-row">{controls}</div><div class="filter-footer"><p class="filter-help">The course-category filter searches all documented course records, including elective options. Discipline filters use explicitly recorded family membership; unclassified programs are not assumed to match.</p><button type="button" id="reset-filters" class="text-button">Reset filters</button></div></form></details>
+    institution_map = {i['id']: i for i in institutions}
+    for group, name in COHORT_GROUPS.items():
+        members = [p for p in programs if program_cohort(p, institution_map) == group]
+        if group == 'unclassified' and not members:
+            continue
+        award_values = [('', 'All awards'), ('BS', 'BS'), ('BSE', 'BSE'), ('BA', 'BA'), ('second_major', 'Second majors'), ('other', 'Other / unspecified')]
+        controls += '<label for="major-award-' + group + '">' + name + ' major award<select id="major-award-' + group + '" data-major-award data-award-group="' + group + '">' + options(award_values) + '</select></label>'
+    body = f'''<section class="hero directory-hero"><div><div class="eyebrow"><span class="status-dot"></span> UNDERGRADUATE AI PROGRAMS</div><h1>Undergraduate AI programs</h1><p class="lede">Explore majors and compare documented curricula. Official sources and verification details accompany every program.</p></div></section>
+<section class="explorer directory-explorer" aria-labelledby="explore-title"><h2 id="explore-title" class="sr-only">Find a program</h2>
+<div class="directory-toolbar js-only"><button type="button" id="open-filters" aria-haspopup="dialog" aria-controls="filter-panel">Search &amp; filters</button><span id="active-filter-summary" role="status" aria-live="polite">No search filters active</span><label for="directory-view" class="view-control">View<select id="directory-view"><option value="table">Table</option><option value="cards">Cards</option></select></label></div>
+<dialog id="filter-panel" class="filter-dialog" aria-labelledby="filter-title"><div class="dialog-heading"><h2 id="filter-title">Search &amp; filters</h2><button type="button" id="close-filters" aria-label="Close search and filters">Close</button></div><form id="filters" class="filters" role="search"><label class="search-label" for="search">Search programs<input type="search" id="search" name="q" placeholder="Institution, program, or course…" autocomplete="off"></label><div class="filter-row">{controls}</div><div class="filter-footer"><p class="filter-help">Course categories include elective options. Discipline filters use reviewed family membership. Exact awards and second-major eligibility are source verified; multiple offered awards count as one program.</p><button type="button" id="reset-filters" class="text-button">Reset filters</button></div><button type="button" id="apply-filters">Show results</button></form></dialog>
 <noscript><p class="notice">All documented programs are listed below. Enable JavaScript to filter and compare programs.</p></noscript>
-<div class="results-heading"><p id="result-count" role="status" aria-live="polite">{len(programs)} programs</p><label class="sort-control js-only" for="sort-order">Sort programs<select id="sort-order" name="sort"><option value="csrankings">CSRankings aggregate U.S. rank · ascending</option><option value="rank">U.S. News rank · ascending</option><option value="name">Institution name · A–Z</option></select></label></div><p class="sort-explanation">Default: ascending CSRankings aggregate U.S. rank within each category and program tab. Institutions without an observed aggregate rank follow. Ties use institution and program names alphabetically. The aggregate covers five AI research fields in the configured publication window; publication activity does not measure undergraduate teaching quality. U.S. News and alphabetical sorts remain available.</p>
-{cohort_directory(programs, institutions, families, base, cohort.get('edition') if isinstance(cohort, dict) else None, data.get('csrankings'))}
+<div class="results-heading"><p id="result-count" role="status" aria-live="polite">{len(programs)} programs</p><label class="sort-control js-only" for="sort-order">Sort programs<select id="sort-order" name="sort"><option value="csrankings">CSRankings aggregate U.S. rank · ascending</option><option value="rank">U.S. News rank · ascending</option><option value="name">Institution name · A–Z</option></select></label></div>
+{cohort_directory(programs, institutions, families, base, cohort.get('edition') if isinstance(cohort, dict) else None, data.get('csrankings'))}<p class="directory-method-note">AI Ranking: CSRankings five-field aggregate U.S. publication rank. Missing ranks stay unavailable; ranking categories and credit systems are not interchangeable. <a href="{base}methodology/#research">Ranking methodology</a> · <a href="{base}coverage/">Coverage and limitations</a></p>
 <div id="empty-state" class="empty-state" hidden><span class="eyebrow">NO MATCHES</span><h3>No programs match your filters.</h3><p>No documented program matches these filters. This does not establish that such a program does not exist.</p><button type="button" id="empty-reset">Clear filters</button></div></section>
 <div id="compare-tray" class="compare-tray" hidden><span id="tray-count">0 of 4 selected</span><a href="#comparison">Compare programs ↓</a></div><section id="comparison" class="comparison js-only" aria-labelledby="compare-title"><div class="section-heading"><div><span class="eyebrow">PROGRAM COMPARISON</span><h2 id="compare-title">Compare programs</h2></div><button type="button" id="clear-comparison" class="text-button">Clear selection</button></div><p class="comparison-intro">Choose up to four programs. Credit units and incomplete curricula stay visible; course counts are not measures of program quality.</p><label class="comparison-profile-control" for="compare-profile">Curriculum profile<select id="compare-profile"><option value="required">Required curriculum</option><option value="options">Elective options</option></select></label><div id="compare-status" role="status" aria-live="polite"></div><div id="comparison-content"><p class="comparison-placeholder">Select “Compare” on a program to begin.</p></div></section>
 <section class="method-callout"><span class="eyebrow">SOURCES & METHODS</span><h2>Check the evidence behind each record.</h2><p>Official sources, verification dates, requirement structure, and unknowns travel with the data. Source statements about program aims and outcomes are kept separate from editorial classifications.</p><a href="{base}methodology/">How to read this atlas →</a></section>'''

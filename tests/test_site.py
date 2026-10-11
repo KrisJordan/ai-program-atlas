@@ -33,7 +33,7 @@ def test_build_static_routes_and_unique_counts(tmp_path, site_data):
     assert len(unique_courses(site_data["programs"][0])) == 1
     index = (tmp_path / "index.html").read_text()
     assert 'href="/nested/atlas/programs/test-ai-0/"' in index
-    assert 'src="/nested/atlas/assets/atlas.js"' in index
+    assert 'src="/nested/atlas/assets/atlas.js?v=' in index
     detail = (tmp_path / "programs/test-ai-0/index.html").read_text()
     assert "1 course record is outside the fixed/option count profiles" in detail
     assert "1 of 1 course records have unknown credits" in detail
@@ -149,4 +149,8 @@ def test_directory_static_rank_order_keeps_category_and_evidence(site_data, tmp_
     assert cards[2].find(class_='card-ranking').find('a')['href'] == 'https://example.edu/rank-1'
     assert '2027' in cards[2].find(class_='card-ranking').get_text()
     assert soup.find(id='sort-order').find('option')['value'] == 'csrankings'
-    assert 'five AI research fields' in soup.find(class_='sort-explanation').get_text()
+    assert 'five-field aggregate' in soup.find(class_='directory-method-note').get_text()
+    rows = soup.select('#cohort-nu-majors .directory-table tbody tr')
+    assert [r['data-row-id'] for r in rows] == [c['data-program-id'] for c in cards]
+    assert soup.find('dialog', id='filter-panel')
+    assert not soup.select('.inventory-counts, .edition-note, .coverage-strip')

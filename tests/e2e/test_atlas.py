@@ -56,25 +56,28 @@ def page(browser):
 def open_filters(page):
     panel=page.locator('#filter-panel')
     if panel.get_attribute('open') is None:
-        panel.locator(':scope > summary').click()
+        page.locator('#open-filters').click()
 
 
 def test_filters_empty_reset_detail_and_base_path(page, site):
     from playwright.sync_api import expect
     errors = []
     page.on("pageerror", lambda error: errors.append(str(error)))
-    page.goto(site)
+    page.goto(site + '?view=cards')
     expect(page.locator(".program-card:visible")).to_have_count(2)
     open_filters(page)
     page.locator("#filter-award").select_option("BS")
+    page.locator('#apply-filters').click()
     expect(page.locator(".program-card:visible")).to_have_count(1)
     open_filters(page)
     page.locator("#filter-calendar").select_option("quarter")
+    page.locator('#apply-filters').click()
     expect(page.locator("#empty-state")).to_be_visible()
     page.locator("#empty-reset").click()
     expect(page.locator(".program-card:visible")).to_have_count(2)
     open_filters(page)
     page.locator("#filter-cohort").select_option("National Universities")
+    page.locator('#apply-filters').click()
     expect(page.locator(".program-card:visible")).to_have_count(1)
     page.get_by_role("link", name="View program").first.click()
     expect(page).to_have_url(site + "programs/test-ai-0/")
@@ -87,7 +90,7 @@ def test_filters_empty_reset_detail_and_base_path(page, site):
 
 def test_comparison_url_reload_history_and_limit(page, site):
     from playwright.sync_api import expect
-    page.goto(site)
+    page.goto(site + '?view=cards')
     page.locator('[data-compare="test-ai-0"]').check()
     page.locator('#tab-lac-minors').click()
     page.locator('[data-compare="test-ai-1"]').check()
@@ -117,10 +120,11 @@ def test_search_history_mobile_and_no_document_overflow(page, site):
     page.on('request', lambda request: requests.append(request.url))
     page.route('**/data.json', lambda route: route.abort())
     page.set_viewport_size({"width": 390, "height": 844})
-    page.goto(site)
+    page.goto(site + '?view=cards')
     page.locator("#tab-lac-minors").click()
     open_filters(page)
     page.locator("#search").fill("Institution 4")
+    page.locator('#apply-filters').click()
     expect(page.locator(".program-card:visible")).to_have_count(1)
     page.locator('[data-compare="test-ai-4"]').check()
     page.reload()
@@ -134,16 +138,20 @@ def test_search_history_mobile_and_no_document_overflow(page, site):
     expect(page.locator("#search")).to_have_value("Institution 4")
     open_filters(page)
     page.locator('#search').fill('AI 001')
+    page.locator('#apply-filters').click()
     expect(page.locator('.program-card:visible')).to_have_count(1)
     expect(page.locator('.program-card:visible')).to_have_attribute('data-program-id', 'test-ai-0')
     open_filters(page)
     page.locator('#search').fill('machine LEARNING')
+    page.locator('#apply-filters').click()
     expect(page.locator('.program-card:visible')).to_have_count(3)
     open_filters(page)
     page.locator('#filter-category').select_option('ai_ml')
+    page.locator('#apply-filters').click()
     expect(page.locator('.program-card:visible')).to_have_count(3)
     open_filters(page)
     page.locator('#filter-category').select_option('other')
+    page.locator('#apply-filters').click()
     expect(page.locator('#empty-state')).to_be_visible()
     assert not any('/data.json' in url for url in requests)
 
@@ -153,21 +161,23 @@ def test_no_javascript_baseline(browser, site):
     context = browser.new_context(java_script_enabled=False)
     page = context.new_page()
     page.goto(site)
-    expect(page.locator(".program-card:visible")).to_have_count(5)
+    expect(page.locator("[data-row-id]:visible")).to_have_count(5)
     expect(page.locator("#filters")).not_to_be_visible()
-    page.get_by_role("link", name="View program").first.click()
+    page.locator('.directory-program-link').first.click()
     expect(page.locator("h1")).to_have_text("Artificial Intelligence 0")
     context.close()
 
 
 def test_program_type_and_evidence_filters_preserve_history(page, site):
     from playwright.sync_api import expect
-    page.goto(site)
+    page.goto(site + '?view=cards')
     open_filters(page)
     page.locator('#filter-evidence').select_option('pending')
+    page.locator('#apply-filters').click()
     expect(page.locator('.program-card:visible')).to_have_count(1)
     open_filters(page)
     page.locator('#filter-type').select_option('additional_major')
+    page.locator('#apply-filters').click()
     expect(page.locator('.program-card:visible')).to_have_count(1)
     expect(page.locator('.program-card:visible .card-badges')).to_contain_text('Additional major')
     assert 'type=additional_major' in page.url and 'evidence=pending' in page.url
@@ -176,6 +186,7 @@ def test_program_type_and_evidence_filters_preserve_history(page, site):
     expect(page.locator('#filter-evidence')).to_have_value('pending')
     open_filters(page)
     page.locator('#filter-evidence').select_option('complete')
+    page.locator('#apply-filters').click()
     expect(page.locator('#empty-state')).to_be_visible()
     page.go_back()
     expect(page.locator('.program-card:visible')).to_have_count(1)
@@ -186,7 +197,7 @@ def test_program_type_and_evidence_filters_preserve_history(page, site):
 
 def test_cohort_context_theme_matrix_and_unknown_categories(page, site):
     from playwright.sync_api import expect
-    page.goto(site + '?compare=test-ai-0,test-ai-1,test-ai-2')
+    page.goto(site + '?view=cards&compare=test-ai-0,test-ai-1,test-ai-2')
     ranks = page.locator('.compare-table tr').filter(has=page.get_by_role('rowheader', name='U.S. News cohort context', exact=True))
     expect(ranks).to_contain_text('U.S. News 2027 · National Universities · #20')
     expect(ranks.locator('a').first).to_have_attribute('href', 'https://example.edu/ranking')
@@ -240,7 +251,7 @@ def test_complete_concentration_scope_metadata_and_nested_choices(page, site, tm
     expect(page.get_by_text('Approval is required for a substitution.', exact=True)).to_be_visible()
     expect(page.locator('.requirement-evidence a').first).to_have_attribute('href', 'https://example.edu/outcome')
     assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
-    page.goto(site + '?compare=test-ai-0,test-ai-1')
+    page.goto(site + '?view=cards&compare=test-ai-0,test-ai-1')
     scope = page.locator('.compare-table tr').filter(has=page.get_by_role('rowheader', name='Requirement coverage', exact=True))
     expect(scope).to_contain_text('Concentration requirements only; not the whole parent degree')
     counts = page.locator('.compare-table tr').filter(has=page.get_by_role('rowheader', name='Course metadata availability', exact=True))
@@ -286,7 +297,7 @@ def test_family_expand_discipline_compare_history_and_detail(page,site,tmp_path,
     page.set_viewport_size({'width':width,'height':950})
     errors=[]
     page.on('pageerror',lambda error:errors.append(str(error)))
-    page.goto(site)
+    page.goto(site + '?view=cards')
     expect(page.locator('.program-family')).to_have_count(1)
     expect(page.locator('.program-card:visible')).to_have_count(1)
     family=page.locator('[data-family-id="test-family"]')
@@ -297,11 +308,13 @@ def test_family_expand_discipline_compare_history_and_detail(page,site,tmp_path,
     expect(family).to_have_attribute('open','')
     open_filters(page)
     page.locator('#filter-discipline').select_option('Physics')
+    page.locator('#apply-filters').click()
     expect(page.locator('.program-card:visible')).to_have_count(1)
     expect(family.locator('.family-match-count')).to_have_text('1 matching variant')
     page.locator('[data-compare="test-ai-1"]').check()
     open_filters(page)
     page.locator('#filter-discipline').select_option('Economics')
+    page.locator('#apply-filters').click()
     page.locator('[data-compare="test-ai-0"]').check()
     expect(page.locator('.compare-table thead th')).to_have_count(3)
     expect(page.locator('.compare-table')).to_contain_text('AI and Physics')
@@ -321,6 +334,7 @@ def test_family_expand_discipline_compare_history_and_detail(page,site,tmp_path,
     expect(page.locator('.compare-table thead th')).to_have_count(3)
     open_filters(page)
     page.locator('#filter-discipline').select_option('Physics')
+    page.locator('#apply-filters').click()
     page.go_back()
     expect(page.locator('#filter-discipline')).to_have_value('Economics')
     page.go_forward()
@@ -338,15 +352,15 @@ def test_family_expand_discipline_compare_history_and_detail(page,site,tmp_path,
     assert not errors
 
 
-def test_family_native_disclosure_works_without_javascript(browser,site,tmp_path,site_data):
+def test_family_variants_are_accessible_without_javascript(browser,site,tmp_path,site_data):
     from playwright.sync_api import expect
     build(family_fixture(site_data),tmp_path/'ai-program-atlas')
     context=browser.new_context(java_script_enabled=False)
     page=context.new_page()
     page.goto(site)
-    page.locator('.program-family > summary').click()
-    expect(page.locator('.family-variants .program-card:visible')).to_have_count(2)
-    page.locator('.family-variants').get_by_role('link',name='View program').first.click()
+    expect(page.locator('[data-row-id="test-ai-0"]')).to_be_visible()
+    expect(page.locator('[data-row-id="test-ai-1"]')).to_be_visible()
+    page.locator('[data-row-id="test-ai-0"] .directory-program-link').click()
     expect(page.locator('.family-context')).to_be_visible()
     context.close()
 
@@ -358,7 +372,7 @@ def test_explicit_family_exclusion_is_visible_in_compare_and_detail(page,site,tm
     p['requirements']=[r for r in p['requirements'] if r.get('origin')!='family']
     p['family']['requirement_overrides']=[{'shared_id':'shared-core','operation':'exclude','reason':'A documented exception for this variant.','source_id':'family-source'}]
     build(data,tmp_path/'ai-program-atlas')
-    page.goto(site+'?compare=test-ai-0,test-ai-1')
+    page.goto(site + '?view=cards&compare=test-ai-0,test-ai-1')
     expect(page.locator('.compare-table')).to_contain_text('Excluded for this variant')
     expect(page.locator('.compare-table')).to_contain_text('A documented exception for this variant.')
     page.goto(site+'programs/test-ai-1/')
@@ -372,7 +386,7 @@ def test_statement_types_stay_separate_from_inferred_themes(page, site, width):
     errors = []
     page.on('pageerror', lambda error: errors.append(str(error)))
     page.set_viewport_size({'width': width, 'height': 900})
-    page.goto(site + '?compare=test-ai-0,test-ai-1')
+    page.goto(site + '?view=cards&compare=test-ai-0,test-ai-1')
     row = page.locator('.compare-table tr').filter(has=page.get_by_role('rowheader', name='Program aims & outcomes', exact=True))
     first = row.locator('td').nth(0)
     for text, label in [('Learn a documented skill.', 'Source statement'), ('Evaluate a model.', 'Learning outcome'), ('Connect computing and society.', 'Program aim'), ('Careers in research and industry.', 'Career pathway')]:
@@ -397,7 +411,7 @@ def test_statement_types_stay_separate_from_inferred_themes(page, site, width):
 def test_clear_comparison_keeps_keyboard_focus(page, site, width):
     from playwright.sync_api import expect
     page.set_viewport_size({'width': width, 'height': 900})
-    page.goto(site + '?compare=test-ai-0,test-ai-1')
+    page.goto(site + '?view=cards&compare=test-ai-0,test-ai-1')
     page.locator('#clear-comparison').focus()
     page.keyboard.press('Enter')
     expect(page.locator('#compare-title')).to_be_focused()
@@ -414,7 +428,7 @@ def test_explicit_family_collapse_survives_reload_and_history(page, site, tmp_pa
     from playwright.sync_api import expect
     build(family_fixture(site_data), tmp_path / 'ai-program-atlas')
     page.set_viewport_size({'width': width, 'height': 900})
-    page.goto(site + '?' + query)
+    page.goto(site + '?view=cards&' + query)
     family = page.locator('[data-family-id="test-family"]')
     # An absent expansion parameter still reveals the selected/filtered variant.
     expect(family).to_have_attribute('open', '')
@@ -459,7 +473,7 @@ def test_required_profile_default_options_history_and_mobile(page,site,tmp_path,
     expect(page.locator('.profile-choices')).to_contain_text('6 Quarter hours')
     expect(page.locator('.profile-choices a').first).to_have_attribute('href','https://example.edu/outcome')
     assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
-    page.goto(site+'?compare=test-ai-0,test-ai-1')
+    page.goto(site + '?view=cards&compare=test-ai-0,test-ai-1')
     expect(page.locator('#compare-profile')).to_have_value('required')
     cell=page.locator('.compare-profile-cell').first
     expect(cell).to_contain_text('2 distinct fixed required course records')
@@ -508,7 +522,7 @@ def test_profile_zero_mapping_and_taxonomy_missingness_on_mobile(page,site,tmp_p
     expect(required.locator('.profile-taxonomy')).to_contain_text('2 unreviewed')
     expect(page.locator('.curriculum-profile')).to_contain_text('not evidence that the curriculum lacks that subject')
     assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
-    page.goto(site+'?compare=test-ai-0#comparison')
+    page.goto(site + '?view=cards&compare=test-ai-0#comparison')
     expect(page.locator('.compare-profile-cell')).to_contain_text('0 mapped')
     expect(page.locator('.compare-profile-cell .profile-taxonomy')).to_contain_text('2 unreviewed')
     expect(page.locator('.compare-profile-cell')).to_contain_text('not evidence that the curriculum lacks the subject')
@@ -540,7 +554,7 @@ def test_case_corrected_fixed_foundations_and_source_review_are_visible(page,sit
     row.locator('.category-review summary').click()
     expect(row.locator('.category-review a')).to_have_attribute('href','https://bulletin.case.edu/course-descriptions/csds/')
     expect(row.locator('.category-review')).to_contain_text('data structures')
-    page.goto(site+f'?compare={pid}#comparison')
+    page.goto(site + f'?view=cards&compare={pid}#comparison')
     dt=page.locator('.compare-profile-cell dt',has_text='Computing foundations')
     expect(dt.locator('+ dd')).to_have_text('2')
     expect(page.locator('.compare-profile-cell .profile-taxonomy')).to_contain_text('8 reviewed')
@@ -567,7 +581,7 @@ def test_crosslisted_identity_denominator_detail_comparison_mobile(page,site,tmp
     expect(page.locator('[data-profile=required] .profile-identity')).to_contain_text('2 mapped course identities from 3 retained source-code records')
     expect(page.locator('[data-profile=required] .profile-total')).to_contain_text('2 distinct fixed required course identities')
     assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
-    page.goto(site+'?compare=test-ai-0')
+    page.goto(site + '?view=cards&compare=test-ai-0')
     expect(page.locator('.compare-profile-cell .profile-identity')).to_contain_text('2 mapped course identities from 3 retained source-code records')
     page.locator('#compare-profile').select_option('options')
     expect(page.locator('.compare-profile-cell .profile-identity')).to_contain_text('14 mapped course identities from 14 retained source-code records')
@@ -595,7 +609,7 @@ def test_real_crosslist_evidence_keyboard_and_mobile(page,site,tmp_path,site_dat
     expect(evidence.locator('a').first).to_have_attribute('href','https://bulletins.psu.edu/university-course-descriptions/undergraduate/ds/')
     assert 'IST 301 / ETI 301' not in evidence.inner_text()
     assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
-    page.goto(site+'?compare='+pid+'&profile=options')
+    page.goto(site + '?view=cards&compare='+pid+'&profile=options')
     expect(page.locator('.compare-profile-cell .profile-identity')).to_contain_text('156 mapped course identities from 160 retained source-code records')
     page.reload()
     expect(page.locator('#compare-profile')).to_have_value('options')
