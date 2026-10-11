@@ -141,3 +141,28 @@ def test_spanish_digital_methods_and_credit_exclusions_are_scoped():
     assert 'no second prerequisite' in m.SPEC['courses']['SPA 361']['prerequisites']
     assert m.SPEC['courses']['SPA 280']['review']['status']=='unclassified'
     assert m.SPEC['courses']['MLL 295']['credits'] is None
+
+
+def test_media_methods_design_and_ai_creation_are_not_conflated():
+    assert m.SPEC['courses']['JMM 285']['category']=='mathematics'
+    assert m.SPEC['courses']['JMM 301']['category']=='human_context'
+    assert m.SPEC['courses']['JMM 341']['category']=='applications'
+    assert m.SPEC['courses']['CIM 103']['review']['status']=='mixed'
+    assert m.SPEC['courses']['CIM 103']['review']['candidate_categories']==['human_context','applications']
+    assert m.SPEC['courses']['CIM 104']['category']=='human_context'
+    assert m.SPEC['courses']['CIM 204']['category']=='applications'
+    assert 'Approved Statistics' in m.SPEC['courses']['STC 311']['prerequisites']
+    assert 'Permission of Instructor' in m.SPEC['courses']['JMM 461']['prerequisites']
+    assert 'Requisite: Junior Standing' in m.SPEC['courses']['STC 482']['prerequisites']
+
+
+def test_communication_and_cinema_practice_follow_content_and_amounts():
+    assert m.SPEC['courses']['COS 304']['credits']==1
+    assert m.SPEC['courses']['COS 377']['category']=='human_context'
+    assert m.SPEC['courses']['COS 324']['category']=='human_context'
+    assert m.SPEC['courses']['CCA 126']['category']=='human_context'
+    assert m.SPEC['courses']['CCA 151']['category']=='applications'
+    assert m.SPEC['courses']['CCA 403']['category']=='human_context'
+    assert 'Junior Standing' in m.SPEC['courses']['CCA 404']['prerequisites']
+    assert m.SPEC['courses']['COS 545']['prerequisites'] is None
+    assert m.SPEC['courses']['COM 250']['category']=='human_context'

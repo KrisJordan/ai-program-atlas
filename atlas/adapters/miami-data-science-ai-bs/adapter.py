@@ -58,3 +58,6 @@ register_phi_context(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
 
 from atlas.adapters.miami_apy_context_reviews import register as register_apy_context
 register_apy_context(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
+
+from atlas.adapters.miami_ins_context_reviews import register as register_ins_context
+register_ins_context(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
