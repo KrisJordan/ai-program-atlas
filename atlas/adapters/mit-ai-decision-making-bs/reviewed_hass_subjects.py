@@ -806,3 +806,40 @@ def observe_political_data_news(html):
     return [dict(code='17.831', name='Data and Politics', term='Spring 2025',
                  description=text, prerequisites=None, units=None,
                  publication_date=date.get('datetime'), article_title=title)]
+
+
+def observe_sts_archive_description(html):
+    """Observe read STS archive panels; require actual content beyond logistics."""
+    soup = BeautifulSoup(html, 'html.parser')
+    title = clean(soup.find('h1'))
+    body = soup.select_one('article.sts_subject .academic-content .entry-content')
+    text = clean(body)
+    identity = re.match(r'(STS\.\d{3}J?)(?:/444)?[:\s]+(.+)', title)
+    starts = {
+        'STS.051': 'Students will research the history and culture of East Campus',
+        'STS.053': 'This problem-solving course is located at the intersection',
+        'STS.044': 'Explores emotional and intellectual impact of objects.',
+        'STS.086J': '“Cultures of Computing” is an interdisciplinary course',
+        'STS.040': 'Do you want to know why the dietary proteins',
+        'STS.014': 'A growing body of scientific and educational research',
+        'STS.041': 'From efforts by the American Medical Association',
+    }
+    if identity is None or identity[1] not in starts or starts[identity[1]] not in text:
+        raise ValueError('STS archive exact subject or substantive description missing')
+    term = re.search(r'\b(Fall|Spring) \d{4}\b', text)
+    if term is None:
+        raise ValueError('STS archive teaching term missing')
+    code = identity[1]
+    name = identity[2].split(' – ')[0]
+    if code == 'STS.086J':
+        headings = [clean(h) for h in body.find_all('h2') if clean(h)]
+        if headings != ['Cultures of Computing']:
+            raise ValueError('STS computing actual subject title changed')
+        name = headings[0]
+    metadata = text.split(starts[code], 1)[0]
+    units = re.search(r'\b\d+-\d+-\d+\b', metadata)
+    prep = re.search(r'Prereq:\s*(.*?)(?=\s+\d+-\d+-\d+|$)', metadata)
+    return [dict(code=code, name=name, term=term[0],
+                 description=starts[code]+text.split(starts[code],1)[1],
+                 prerequisites=prep[1] if prep else None, units=units[0] if units else None,
+                 source_text=text, source_heading=title)]

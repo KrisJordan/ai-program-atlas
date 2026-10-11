@@ -215,7 +215,7 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']['description_reviewed_records']==426
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==436
     assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
         o=next(o for o in entry(code)['observations'] if o.get('evidence_basis')=='official_title_only')
@@ -1002,7 +1002,9 @@ def test_sts_actual_description_review_preserves_reused_numbers_and_subject_focu
     assert info['observed_code']=='6.4590' and info['category']=='human_context'
     assert info['prerequisites'] is info['credits'] is None
     for code in ['STS.005J','STS.011','STS.014','STS.035','STS.036','STS.038','STS.049','STS.062','STS.089','STS.085J/6.805J']:
-        assert entry(code)['observations'][-1]['evidence_basis']=='official_title_only'
+        observations=entry(code)['observations']
+        assert any(e['evidence_basis']=='official_title_only' for e in observations)
+        assert not any(e['evidence_basis']=='official_description' and e['source_id'].startswith('mit-ai-hass-review-ocw-sts-') for e in observations)
 
 
 def test_sts_actual_sources_replay_and_description_heading_guard():
@@ -1602,3 +1604,39 @@ def test_political_data_feature_actual_source_replay_and_term_guard():
     for wrong in [{**o,'term':'Spring 2026'},{**o,'prerequisites':'Python'},{**o,'description':o['description']+' Neural network training.'}]:
         assert review.matched_review(course,wrong,e['source_url'],MANIFEST) is None
     with pytest.raises(ValueError):review.observe_political_data_news(path.read_text().replace('spring 2025 semester','spring 2026 semester'))
+
+
+def test_sts_archive_descriptions_keep_units_levels_and_actual_method_distinctions():
+    report=MANIFEST['sts_archive_description_followup'];assert len(report['upgraded_record_ids'])==10
+    assert report['detail_pages_read']==8 and len(report['metadata_only_reads'])==1
+    computing=entry('STS.086J')['observations'][-1]
+    assert computing['category']=='human_context' and computing['catalog_year']=='Spring 2024'
+    embodied=entry('STS.014')['observations'][-1]
+    assert embodied['credits']==12 and embodied['prerequisites']=='None'
+    assert embodied['candidate_categories']==['applications','human_context']
+    exercise=entry('STS.041')['observations'][-1]
+    assert exercise['credits'] is None and exercise['prerequisites'] is None
+    assert any('PE&W points are not course units' in n for n in exercise['restrictions'])
+    objects=entry('STS.044')['observations'][-1]
+    assert objects['credits']==9 and objects['prerequisites']=='None'
+    assert any('graduate students do extra assignments' in n for n in objects['restrictions'])
+    assert entry('STS.051')['observations'][-1]['credits']==9
+    assert entry('STS.053')['observations'][-1]['status']=='mixed'
+    assert entry('STS.040')['observations'][-1]['category']=='human_context'
+
+
+def test_sts_archive_actual_replay_guards_all_read_eligibility_and_term():
+    report=MANIFEST['sts_archive_description_followup']
+    for cid in report['upgraded_record_ids']:
+        row=MANIFEST['courses'][cid];e=row['observations'][-1]
+        key=e['source_id'].removeprefix('mit-ai-hass-review-sts-archive-')
+        path=Path('/tmp/mit-hass-subjects/detail-'+key+'.html')
+        if not path.exists():pytest.skip('Optional public STS archive course captures')
+        o=review.observe_sts_archive_description(path.read_text())[0]
+        course=dict(id=cid,code=row['listed_code'],name=row['listed_name'],source_id=row['listed_source_id'])
+        assert review.matched_review(course,o,e['source_url'],MANIFEST)==e
+        for wrong in [{**o,'term':'Fall 2026'},{**o,'units':'3-0-11'},{**o,'source_text':o['source_text']+' Permission now required.'}]:
+            assert review.matched_review(course,wrong,e['source_url'],MANIFEST) is None
+    path=Path('/tmp/mit-hass-subjects/detail-sts012-sp23.html')
+    if path.exists():
+        with pytest.raises(ValueError):review.observe_sts_archive_description(path.read_text())
