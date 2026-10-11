@@ -152,3 +152,9 @@ The public Spring2025 Literature archive was selected and expanded through the o
 American Literature's plants/animals topic and World Literatures' speculative-fiction topic now also have actual descriptions. Both center literary interpretation and social questions, not natural-science or computing-method instruction. The archive's exact term and full observation digests guard these three upgrades; earlier title-only observations remain retained. Capture: `/tmp/mit-hass-subjects/literature-spring2025-visible.html`.
 
 Approved depth is now **162 description-supported records,600 limited-title records and3 code-only unknowns**. The765approved,20held,2conflicting and58delegated dispositions remain unchanged. Further accessible description branches remain active research; this checkpoint does not certify a full primary or independent degree audit.
+
+## Fall2024 descriptions with cancellation preserved
+
+Read five matching descriptions in the public expanded Fall2024 Literature archive, supporting seven concrete records. Western Literature's foundations concern ancient/medieval literary traditions, not computing foundations. Narrative/media identity, modern comedy and speculative freedom remain literary/philosophical interpretation. The American Novel panel supplies an actual description but is explicitly **CANCELLED** in that semester; the observation retains cancellation and conditional repeat permission and makes no active/current availability claim. Source capture: `/tmp/mit-hass-subjects/literature-fall2024-visible.html`, separately registered with term and digest.
+
+The contribution now contains **169 description-supported records,593 limited-title records and3 code-only unknowns** among765approved dispositions. No requirement roles, identity groups,20held records or2source conflicts changed. Older archives and other accessible department branches remain open research, not access barriers.

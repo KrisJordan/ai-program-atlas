@@ -214,7 +214,7 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']['description_reviewed_records']==162
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==169
     assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
         o=entry(code)['observations'][-1]
@@ -412,7 +412,7 @@ def test_remaining_field_title_snapshot_keeps_performance_and_science_unknown():
         assert o['status']=='unclassified' and o['category']=='other'
         assert o['description_digest'] is None
     for code in ['21G.705','21L.001','STS.085J/6.805J','17.571','WGS.226J [STS.023]']:
-        o=entry(code)['observations'][-1]
+        o=next(o for o in entry(code)['observations'] if o['source_id'].startswith('mit-ai-hass-review-field-titles-'))
         assert o['category']=='human_context'
         assert o['evidence_basis']=='official_title_only'
     # Foundations in a literature/policy title does not establish programming content.
@@ -577,3 +577,19 @@ def test_spring2025_literature_exact_topic_and_changed_text_guard():
         course=dict(id=cid,code=r['listed_code'],name=r['listed_name'],source_id=r['listed_source_id'])
         assert review.matched_review(course,o,e['source_url'],MANIFEST)==e
         assert review.matched_review(course,{**o,'description':'Different topic with a changed description'},e['source_url'],MANIFEST) is None
+
+
+def test_literature_cancelled_offering_keeps_description_without_availability_claim():
+    novel=entry('21L.501')['observations'][-1]
+    assert novel['observed_name'].endswith('CANCELLED')
+    assert novel['catalog_year']=='Fall 2024' and novel['description_digest']
+    assert any('does not establish actual or current availability' in r for r in novel['restrictions'])
+    foundations=[r for r in MANIFEST['courses'].values() if r['listed_code']=='21L.001']
+    assert len(foundations)==2
+    assert all(r['observations'][-1]['category']=='human_context' for r in foundations)
+    path=Path('/tmp/mit-hass-subjects/literature-fall2024-visible.html')
+    if not path.exists():
+        pytest.skip('Optional ignored public Literature archive')
+    hashes={review.observation_digest(o) for o in review.observe_literature(path.read_text())}
+    saved=[o for r in MANIFEST['courses'].values() for o in r['observations'] if o['source_id']=='mit-ai-hass-review-literature-fall2024']
+    assert len(saved)==7 and all(o['observation_digest'] in hashes for o in saved)
