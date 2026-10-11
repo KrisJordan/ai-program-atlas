@@ -1,0 +1,189 @@
+{
+  "checked_at": "2026-10-11",
+  "purpose": "Bounded follow-up of a documented candidate with a new ordinary official-source branch; research artifact, not automatic cohort input.",
+  "prior_evidence": [
+    "research/cohort.md",
+    "research/lac-cohort-evidence-2026-10-11.md",
+    "research/lac-cohort-evidence-2026-10-11.json"
+  ],
+  "baseline": {
+    "lac_institution_count": 86,
+    "institution_ids": [
+      "williams-college",
+      "amherst-college",
+      "bowdoin-college",
+      "claremont-mckenna-college",
+      "pomona-college",
+      "swarthmore-college",
+      "united-states-naval-academy",
+      "harvey-mudd-college",
+      "united-states-military-academy",
+      "wellesley-college",
+      "united-states-air-force-academy",
+      "vassar-college",
+      "washington-and-lee-university",
+      "hamilton-college",
+      "wesleyan-university",
+      "carleton-college",
+      "davidson-college",
+      "grinnell-college",
+      "barnard-college",
+      "middlebury-college",
+      "university-of-richmond",
+      "colby-college",
+      "colgate-university",
+      "college-of-the-holy-cross",
+      "smith-college",
+      "bates-college",
+      "haverford-college",
+      "macalester-college",
+      "bucknell-university",
+      "lafayette-college",
+      "bryn-mawr-college",
+      "denison-university",
+      "trinity-college",
+      "colorado-college",
+      "franklin-and-marshall-college",
+      "mount-holyoke-college",
+      "spelman-college",
+      "occidental-college",
+      "scripps-college",
+      "trinity-university",
+      "kenyon-college",
+      "skidmore-college",
+      "soka-university-of-america",
+      "pitzer-college",
+      "union-college",
+      "wabash-college",
+      "connecticut-college",
+      "hillsdale-college",
+      "depauw-university",
+      "rhodes-college",
+      "st-lawrence-university",
+      "st-olaf-college",
+      "sewanee-the-university-of-the-south",
+      "centre-college",
+      "gettysburg-college",
+      "furman-university",
+      "wheaton-college-illinois",
+      "thomas-aquinas-college",
+      "lawrence-university",
+      "saint-anselm-college",
+      "rollins-college",
+      "earlham-college",
+      "lewis-and-clark-college",
+      "whittier-college",
+      "hendrix-college",
+      "beloit-college",
+      "muhlenberg-college",
+      "berea-college",
+      "hope-college",
+      "saint-marys-college-indiana",
+      "allegheny-college",
+      "lycoming-college",
+      "college-of-saint-benedict",
+      "saint-johns-university-minnesota",
+      "kalamazoo-college",
+      "morehouse-college",
+      "randolph-macon-college",
+      "augustana-college-illinois",
+      "juniata-college",
+      "southwestern-university",
+      "lake-forest-college",
+      "ursinus-college",
+      "stonehill-college",
+      "college-of-wooster",
+      "washington-college",
+      "hobart-and-william-smith-colleges"
+    ],
+    "complete": false,
+    "enumeration_complete": false,
+    "cutoff_tie_count": null
+  },
+  "proposed_additions": [],
+  "proposed_sources": [],
+  "candidates": [
+    {
+      "candidate_id": "knox-college",
+      "name": "Knox College",
+      "status": "edition_unresolved",
+      "candidate_basis": "The previously reviewed official facts page supplies an overall U.S. News National Liberal Arts Colleges rank of 76, without the U.S. News edition. Its ordinary linked news/media archive had not been covered in the later 18-candidate ledger.",
+      "ranking_observation": {
+        "publisher": "U.S. News",
+        "category": "National Liberal Arts Colleges",
+        "observed_rank": 76,
+        "edition": null,
+        "eligible_for_cohort": false
+      },
+      "sources": [
+        {
+          "url": "https://www.knox.edu/about-knox/fast-facts/what-experts-say",
+          "title": "What Experts Say About Knox",
+          "fetched_at": "2026-10-11",
+          "locator": "Section 1, academically excellent; section 4, best-value school",
+          "observation": "Overall rank 76 has no U.S. News edition or publication date. The adjacent 2026 edition belongs to Princeton Review; separate U.S. News value and mobility ranks do not date the overall number."
+        },
+        {
+          "url": "https://www.knox.edu/",
+          "title": "Knox College homepage",
+          "fetched_at": "2026-10-11",
+          "locator": "News and For the Media navigation links; Knox News section",
+          "observation": "Followed ordinary top-level official navigation after links from the nested facts-page response resolved to nonexistent nested paths."
+        },
+        {
+          "url": "https://www.knox.edu/news",
+          "title": "News",
+          "fetched_at": "2026-10-11",
+          "locator": "Featured story, Homecoming and Recent Stories sections; View All Stories link",
+          "observation": "Readable October 9 and September 29, 2026 event context and recent-story links, but no qualifying 2027 overall ranking statement in inspected content."
+        },
+        {
+          "url": "https://www.knox.edu/news/for-the-media",
+          "title": "For the Media",
+          "fetched_at": "2026-10-11",
+          "locator": "Working with Knox College Communications and Media Archive navigation",
+          "observation": "Media guidance and institutional contacts; no edition-specific rank in inspected content."
+        },
+        {
+          "url": "https://www.knox.edu/news/media-archive",
+          "title": "Media Archive",
+          "fetched_at": "2026-10-11",
+          "locator": "September 2026 listing",
+          "observation": "Returned reader content exposes six September entries dated September 1 through September 21. Reader reports crawl two weeks ago. This is not a verified complete archive after the September 22 ranking release."
+        }
+      ],
+      "navigation_errors": [
+        {
+          "url": "https://www.knox.edu/about-knox/fast-facts/news",
+          "outcome": "404 from relative-link resolution in facts-page response"
+        },
+        {
+          "url": "https://www.knox.edu/about-knox/fast-facts/news/for-the-media",
+          "outcome": "404 from relative-link resolution in facts-page response"
+        },
+        {
+          "url": "https://www.knox.edu/news/news/for-the-media/knox-at-a-glance",
+          "outcome": "404 from relative-link resolution in media-page response; not used as evidence"
+        }
+      ],
+      "remaining_evidence_needed": "A permitted official statement assigning an overall National Liberal Arts Colleges rank or explicit top-100 bound to the 2027 U.S. News edition. A dated release-specific numerical statement may support a separately qualified edition inference; neither undated rank nor a neighboring publisher edition suffices."
+    }
+  ],
+  "prior_barriers_not_retried": [
+    "U.S.News restricted category tables",
+    "VMI official candidate article403",
+    "Agnes Scott linked news403",
+    "Andrew Reiter datasets403",
+    "CollegeAdvisor article403"
+  ],
+  "prior_access_or_content_limits_not_retried": [
+    "Puget Sound homepage internal reader error",
+    "Hollins homepage internal reader error",
+    "Whitman Stories HTTP 502",
+    "Susquehanna restricted news URL",
+    "Sarah Lawrence news filter shell"
+  ],
+  "stop_reason": "The reviewed records supplied one additional concrete ordinary-source branch (Knox news/media navigation), now checked to the documented content boundary. No new authoritative candidate enumeration or qualifying ranking announcement emerged. Do not manufacture candidates or repeat restricted branches merely to increase the roster.",
+  "scope_limit": "This follow-up does not claim all public official sources or every possible institution archive are exhausted. Earlier candidate records retain their exact unresolved routes and freshness limits. A new independent official announcement or permitted authoritative export can reopen research.",
+  "interpretation": "No additions verified. The 86-member LAC subset and its three null exact ranks remain unchanged. Overall and category completeness are false; the rank-100 tie count remains unknown. No candidate is excluded by this result."
+}

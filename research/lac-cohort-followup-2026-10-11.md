@@ -1,0 +1,15 @@
+# LAC cohort follow-up — 2026-10-11
+
+No new 2027 member was verified. The 86-institution LAC subset remains unchanged, with both completeness flags false and the cutoff tie count unknown. This follow-up adds a [separate evidence ledger](lac-cohort-followup-2026-10-11.json), not runtime cohort facts.
+
+Review of [the cohort research](cohort.md) and [the prior 18-candidate pass](lac-cohort-evidence-2026-10-11.md) identified one concrete additional source branch: Knox had a previously observed official overall number, but its linked news/media archive was not part of the later candidate pass. This is a reason to check an edition, not proof of membership.
+
+[Knox’s facts page](https://www.knox.edu/about-knox/fast-facts/what-experts-say) still gives overall U.S. News National Liberal Arts Colleges rank 76 without an edition or date. The nearby 2026 reference belongs to Princeton Review and cannot date that rank. The source therefore does not establish 2027 membership.
+
+Ordinary [homepage](https://www.knox.edu/) links reached the readable [news page](https://www.knox.edu/news) and [media guidance](https://www.knox.edu/news/for-the-media). The news page has late September and October 2026 context, but the inspected content supplied no qualifying ranking statement. Its linked [media archive](https://www.knox.edu/news/media-archive) returned six September items ending September 21, before the September 22 ranking release, and the reader reported a two-week-old crawl. That response cannot certify a complete post-release archive. Relative links on two nested page responses also resolved to nonexistent nested paths; those 404s establish neither an access restriction nor an institutional ranking result. Top-level navigation supplied the working news and media links.
+
+The bounded branch ends with an edition/content-freshness gap. Inclusion requires an official 2027 overall numerical rank or explicit overall top-100 membership, or a dated release-specific statement with an honestly qualified edition inference. Completion of the whole roster still requires a permitted authoritative table/export or sufficient exact independent institutional reports to account for every member and cutoff tie. Public-only, component-metric, other-publisher, previous-edition and 2026–27 global ranks remain inadmissible substitutes.
+
+No previously restricted publisher, dataset, VMI or Agnes Scott branch was retried. The five previously documented reader/content failures were not retried either. The earlier 18 candidates retain their exact unresolved evidence needs; this note does not assert that every public source or archive has been exhausted. No new independent candidate basis emerged from this bounded review, so speculative institution searches were not added.
+
+Validation: the follow-up JSON parses; Knox is absent from both the loaded roster and the prior 18-candidate ledger; its observed rank has a null edition and is explicitly ineligible for import; proposal arrays are empty; the baseline IDs and incompleteness fields match the existing evidence ledger and current roster. No runtime data, database, schema, PLAN or site changes.
