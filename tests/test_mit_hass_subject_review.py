@@ -215,7 +215,7 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']['description_reviewed_records']==418
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==420
     assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
         o=next(o for o in entry(code)['observations'] if o.get('evidence_basis')=='official_title_only')
@@ -1504,3 +1504,18 @@ def test_urban_project_source_replay_pins_exact_course_and_scope():
             assert review.matched_review(course,wrong,e['source_url'],MANIFEST) is None
         if key=='indigenous':
             with pytest.raises(ValueError):review.observe_urban_project_course(path.read_text().replace('11.171/11.172','11.999'))
+
+
+def test_concourse_explicit_companion_numbers_support_separate_political_records():
+    report=MANIFEST['concourse_companion_review'];assert len(report['upgraded_record_ids'])==2
+    for cid in report['upgraded_record_ids']:
+        row=MANIFEST['courses'][cid];e=row['observations'][-1]
+        assert row['listed_code'].rstrip('J') in e['observed_code']
+        assert e['catalog_year'] is None and e['category']=='human_context'
+        key=e['source_id'].removeprefix('mit-ai-hass-review-concourse-')
+        path=Path('/tmp/mit-hass-subjects/concourse-'+key+'.html')
+        if not path.exists():pytest.skip('Optional public Concourse detail captures')
+        o=review.observe_concourse_subject(path.read_text())[0]
+        course=dict(id=cid,code=row['listed_code'],name=row['listed_name'],source_id=row['listed_source_id'])
+        assert review.matched_review(course,o,e['source_url'],MANIFEST)==e
+        assert review.matched_review(course,{**o,'code':o['code'].split('/')[0]},e['source_url'],MANIFEST) is None

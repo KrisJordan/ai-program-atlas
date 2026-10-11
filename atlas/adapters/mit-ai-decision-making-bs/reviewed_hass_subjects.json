@@ -22875,11 +22875,40 @@
           "restrictions": [],
           "approved_for_integration": true,
           "identity_note": "Literal dated source identity retained; no code-prefix or companion-course identity merge."
+        },
+        {
+          "observed_code": "CC.111/17.04",
+          "observed_name": "Modern Conceptions of Freedom",
+          "evidence_basis": "official_description",
+          "description_summary": "Examines early modern political theories of freedom, political obligations and association, with readings of political theorists and founding United States documents.",
+          "description_digest": "76440eaa71b8d4af417e2df125b11fd6ac72037b37ccc8e2cb22db5b5d58687d",
+          "observation_digest": "e8b0f8c8d92883129b476f5798fcf457f0c09f2a2bb3630038d0724408c9cb22",
+          "source_id": "mit-ai-hass-review-concourse-111",
+          "source_url": "https://concourse.mit.edu/class/1460/",
+          "catalog_year": null,
+          "locator": "Core Concourse Classes / printed course identity / full subject description and prerequisites/units when present",
+          "prerequisites": null,
+          "units_text": null,
+          "credits": null,
+          "credit_unit": null,
+          "category": "human_context",
+          "status": "reviewed",
+          "rationale": "Actual description centers ethical, political, cultural or economic-history interpretation rather than formal economic modeling or scientific methods; subject association does not imply AI application.",
+          "candidate_categories": [],
+          "restrictions": [
+            "No catalog year or offering term is printed; fetch date is not a catalog edition.",
+            "Preference to Concourse students is not exclusive eligibility. Current page prints no prerequisites or units. The separately read Spring2013OCW prerequisite/corequisite is not imported into this undated page.",
+            "The page explicitly prints CC.111/17.04, corroborating both numbered components of the retained joint label. J suffix typography is preserved in the original listing; no cross-list identity group is created.",
+            "The political-science numbered record retains its original label; explicit companion-number evidence supports this description, not a title-only guess."
+          ],
+          "approved_for_integration": true,
+          "identity_note": "Manual binding to the explicitly printed 17.04 companion number and matching course title on the same Concourse detail page; no course identity merge or graduate/undergraduate equivalence is inferred."
         }
       ],
       "missingness": [
-        "Limited official-title review; no course description or prerequisite observed.",
-        "Dated reference does not certify current offering or enrollment eligibility."
+        "Catalog year/term not printed.",
+        "Formal prerequisites not printed.",
+        "Credit units not printed."
       ]
     },
     "mit-ai-hass-political-subfields-17-043j": {
@@ -22986,11 +23015,39 @@
           "restrictions": [],
           "approved_for_integration": true,
           "identity_note": "Literal dated source identity retained; no code-prefix or companion-course identity merge."
+        },
+        {
+          "observed_code": "CC.117/17.05",
+          "observed_name": "Humane Warfare: Ancient and Medieval Perspectives on Ethics in War",
+          "evidence_basis": "official_description",
+          "description_summary": "Studies justice and ethics in war through ancient, medieval, biblical, Christian and Islamic texts, connecting just-war traditions to contemporary ethical dilemmas.",
+          "description_digest": "59233021b476ee2b0348d2e7b4db13e4fd818566a2297bee37f6f912a370c95e",
+          "observation_digest": "8402648a37f16632788f5a87e9b8387a1faab731b86088abe12ad16f12fe19c0",
+          "source_id": "mit-ai-hass-review-concourse-117",
+          "source_url": "https://concourse.mit.edu/class/cc-117-17-05/",
+          "catalog_year": null,
+          "locator": "Core Concourse Classes / printed course identity / full subject description and prerequisites/units when present",
+          "prerequisites": "None",
+          "units_text": "3-0-9",
+          "credits": 12,
+          "credit_unit": "units",
+          "category": "human_context",
+          "status": "reviewed",
+          "rationale": "Actual description centers ethical, political, cultural or economic-history interpretation rather than formal economic modeling or scientific methods; subject association does not imply AI application.",
+          "candidate_categories": [],
+          "restrictions": [
+            "No catalog year or offering term is printed; fetch date is not a catalog edition.",
+            "Not offered regularly; consult department. Preference to Concourse students is not an exclusive enrollment restriction.",
+            "Page explicitly prints CC.117/17.05 and Same subject as17.05[J]. Original joint labels remain intact; no program-course identities are merged here.",
+            "The political-science numbered record retains its original label; explicit companion-number evidence supports this description, not a title-only guess."
+          ],
+          "approved_for_integration": true,
+          "identity_note": "Manual binding to the explicitly printed 17.05 companion number and matching course title on the same Concourse detail page; no course identity merge or graduate/undergraduate equivalence is inferred.",
+          "unit_rule_source_url": "https://catalog.mit.edu/subjects/"
         }
       ],
       "missingness": [
-        "Limited official-title review; no course description or prerequisite observed.",
-        "Dated reference does not certify current offering or enrollment eligibility."
+        "Catalog year/term not printed."
       ]
     },
     "mit-ai-hass-political-subfields-17-055": {
@@ -40791,8 +40848,8 @@
     "pending": 58
   },
   "evidence_counts": {
-    "description_reviewed_records": 418,
-    "title_only_reviewed_records": 344,
+    "description_reviewed_records": 420,
+    "title_only_reviewed_records": 342,
     "code_only_unknown_records": 3
   },
   "scope_notes": [
@@ -42078,5 +42135,16 @@
     ],
     "detail_pages_read": 2,
     "remaining_action": "Full course syllabi and exact contemporary subject-method balance remain unreviewed. The dated BigData site may serve as an actual public course project resource; the general DUSP project page is metadata evidence only."
+  },
+  "concourse_companion_review": {
+    "upgraded_record_ids": [
+      "mit-ai-hass-political-subfields-17-04j",
+      "mit-ai-hass-political-subfields-17-05j"
+    ],
+    "source_ids": [
+      "mit-ai-hass-review-concourse-111",
+      "mit-ai-hass-review-concourse-117"
+    ],
+    "basis": "Previously read actual detail pages explicitly print bothCCand17numbers. Original standalone political-science records are preserved; no deduplication."
   }
 }
