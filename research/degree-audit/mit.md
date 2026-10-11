@@ -225,3 +225,5 @@ The bounded Strobe follow-up found an explicit photography identification in the
 ### Historical numbering boundary
 
 The public EECS numbering table was verified in normal Chrome as well as by ordinary Fetcher. Its twelve exact rows and eight future6.Sxxx statements are visible content. Retain the Fall2022 scope and both source views; no unidentified6.Sxxx replacement or exclusion from the present degree pool is inferred. The parser adds only contextual note nodes; current missing titles and classifications stay unknown. This makes the remaining metadata questions more precise without manufacturing a curricular contradiction.
+
+The remaining21M.589 branch has an accessible public C22 topic description, not a blanket generic-course description. The actual sound/computation/ML content and stated12units/permission are recorded as topic context with unspecified year. Original course metadata and all counts remain unchanged. This narrows the gap from unread content to the scope/applicability of an undated topic; no denied catalog was accessed.

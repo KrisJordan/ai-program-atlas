@@ -226,3 +226,7 @@ SOURCE_PARSERS.update(strobe_review.SOURCE_PARSERS)
 numbering_context = import_module('atlas.adapters.mit-ai-decision-making-bs.numbering_context')
 SOURCES.extend(numbering_context.SOURCE_PARSERS)
 SOURCE_PARSERS.update(numbering_context.SOURCE_PARSERS)
+
+audio_topic_context = import_module('atlas.adapters.mit-ai-decision-making-bs.audio_topic_context')
+SOURCES.extend(audio_topic_context.SOURCE_PARSERS)
+SOURCE_PARSERS.update(audio_topic_context.SOURCE_PARSERS)
