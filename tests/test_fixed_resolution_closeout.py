@@ -7,13 +7,23 @@ from atlas.degree_audit import collect_ledgers
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def test_exact_sixteen_proposals_applied_without_whole_degree_promotion():
+def test_latest_scoped_proposals_applied_without_whole_degree_promotion():
     proposals = {}
     for path in (ROOT/'research/degree-audit').glob('independent-resolution-*.json'):
         for row in json.loads(path.read_text())['programs']:
             assert row['program_id'] not in proposals
             proposals[row['program_id']] = row
     assert len(proposals) == 16
+    # Later university-only evidence supersedes these dated proposals; Furman
+    # and already-verified Purdue BS remain at their accepted earlier scope.
+    followup = {}
+    for path in (ROOT/'research').glob('university-core-followup-*.json'):
+        for row in json.loads(path.read_text())['programs']:
+            assert row['program_id'] not in followup
+            followup[row['program_id']] = row
+    assert len(followup) == 14
+    assert all('furman' not in pid for pid in followup)
+    proposals.update(followup)
     programs = [json.loads(path.read_text()) for path in (ROOT/'data/programs').glob('*.json')]
     ledger = collect_ledgers(ROOT/'research/degree-audit', programs)
     lookup = {row['program_id']: row for row in ledger['programs']}

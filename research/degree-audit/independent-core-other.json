@@ -892,44 +892,49 @@
     {
       "program_id": "stevens-institute-of-technology-artificial-intelligence-bs-degree",
       "reviewed_at": "2026-10-11",
-      "reviewer": "sol-medium-independent-resolution-stevens",
-      "reviewed_content_hash": "a238f2e2e7a9c8d9afeca74a887e7e8f278526149568c2dd7ffecdffc6803606",
+      "reviewer": "sol-medium-university-authoritative-plans",
+      "reviewed_content_hash": "3cb045323db4a386884be415b29753e9a55b6db4a9aa8fda6d7369bf3ac32372",
       "dimensions": {
         "fixed_requirements": {
-          "status": "unverified",
-          "summary": "The permitted degree overview establishes AI BS identity and a two-semester capstone, but links curriculum readers back to the held catalog host. The actual saved Academic Plan still has unresolved course labels and a provisional 58-credit total; no complete rendered plan capture establishes all 24 represented fixed identities independently.",
+          "status": "partial",
+          "summary": "The independently linked Fall 2026 advising PDF explicitly names all 24 represented fixed identities. It is an UNOFFICIAL DRAFT, for academic advising only, with Workday identified as the official record. This establishes the named fixed scope in the draft; it does not verify the adopted governing degree plan.",
           "evidence": [
             {
-              "url": "https://stevens.catalog.prod.coursedog.com/programs/qT6Ld1CzBAhQsVKYFNVv/academic-plan-JKlwr",
-              "locator": "Actual saved Academic Plan: all eight semester panels; unresolved labels and repeated incomplete 58-credit degree total"
+              "url": "https://www.stevens.edu/academic-plan",
+              "locator": "Undergraduate Computing Programs → Artificial Intelligence → 2026–2027 Entry; model-plan guide disclaimer"
             },
             {
-              "url": "https://www.stevens.edu/program/bachelors-degree-in-artificial-intelligence",
-              "locator": "AI BS overview: two-semester senior design capstone and Academic Catalog curriculum link; no complete mandatory named-course inventory"
+              "url": "https://assets.stevens.edu/mviowpldu823/7b2ACb3qhjMicuqbQE9xQt/735e3fc849cb9009e2edd9c7bf92f943/Artificial_Intelligence_26_27.pdf",
+              "locator": "Page 1: UNOFFICIAL DRAFT ACADEMIC PLAN FOR FALL 2026; Required Courses, SUCCESS Core Curriculum and Humanities; footer effective Sept. 1, 2026. Page 2: complete Standard AI Semester Outline."
             }
           ],
           "limitations": [
-            "The catalog host presented a human-verification challenge at ENGR 116 on 2026-10-11; it was not retried through HTTP, browser or search-reader routes. A complete already-permitted saved plan was not located.",
-            "Primary observed 125-credit degree total and 24 fixed identities are retained as primary facts, not independently certified or replaced with placeholder 58. Manually reconstructed labels are not treated as an actual source capture."
+            "UNOFFICIAL DRAFT ACADEMIC PLAN FOR FALL 2026 and FOR ACADEMIC ADVISING PURPOSES ONLY are explicit source limits; effective Sept. 1, 2026 is the draft effective date, not adopted-catalog certification. The governing complete catalog plan remains unreadable; Workday is referenced but was not accessed.",
+            "Expected required identities/counts certify only agreement with the named draft scope. No additional required slot is filled by choosing an example path; the unhydrated 58-credit placeholder and reconstructed 27-name primary transcription remain invalid independent plan evidence."
           ]
         },
         "choice_rules": {
           "status": "partial",
-          "summary": "The actual saved requirements HTML supports six science-sequence rows, two approved math/science electives, six technical electives, four general electives and three SUCCESS selections. Named links remain generic course placeholders in this source; the prior 27-name transcription and specific nested CH117/BIO182 identities are not independently source-certified by this capture.",
+          "summary": "The actual unofficial draft PDF names six science-track rows (including CH117 or BIO182 in the chemistry/biology laboratory branch), eleven technical options and three humanities alternatives: 22 positive named option identities. It shows six technical, two science/math, four general-elective and three PRV20X slots. Visual inspection shows EN250, CE240 and NANO200 are excluded by this draft, conflicting with the actual saved catalog panel’s may-also-count course links that treat them as additional options. The reader extraction dropped the word not; its positive wording is rejected.",
           "evidence": [
             {
               "url": "https://stevens.catalog.prod.coursedog.com/programs/qT6Ld1CzBAhQsVKYFNVv/requirements-and-concentrations-n90Np",
               "locator": "Actual saved requirements HTML: science-table row topology, explicit numeric elective/SUCCESS rules; unhydrated named-course links"
+            },
+            {
+              "url": "https://assets.stevens.edu/mviowpldu823/7b2ACb3qhjMicuqbQE9xQt/735e3fc849cb9009e2edd9c7bf92f943/Artificial_Intelligence_26_27.pdf",
+              "locator": "Pages 1–2: elective slots; Required Science Track table with six rows; Science/Math Electives notes; Technical Electives list; Humanities alternative"
             }
           ],
           "limitations": [
-            "The reviewed-labels file is an explicitly reconstructed primary browser transcription, not an actual hydrated source capture. Its 27 named options and specific cross-code branch memberships remain primary observations, not independent certification.",
-            "The catalog host challenge is respected; exact current named options and fully hydrated fixed plan require authorized readable source evidence. No whole-degree or policy applicability certification results."
+            "Named option agreement is bounded to this actual unofficial draft, separately from the earlier unsupported 27-name reconstruction. The five named Frontiers choices and the catalog-only CPE558 cross-list alias are not established by this PDF.",
+            "The published index labels model plans as guides, not degree audit tools. Governing edition/adoption, catalog approval and overlap conditions remain unresolved; complete option/unresolved sets and counts stay null.",
+            "Draft Science/Math Electives excludes EN250/CE240/NANO200, while the represented primary catalog graph permits them. This is an unresolved source/authority conflict; neither source is silently replaced. The visual PDF line controls the recorded draft finding, not the defective reader extraction."
           ]
         },
         "classification": {
           "status": "partial",
-          "summary": "All 24 represented fixed-course descriptions were independently read from actual earlier permitted captures: six foundations, six mathematics, three AI, two human context, one systems, one entrepreneurship application and five other (four mixed, one unclassified seminar). This validates the subjects of those represented records; missing complete plan evidence prevents independent certification of their fixed membership, and broader option/context classifications remain outside this check.",
+          "summary": "The prior independently accepted 24 actual course-description readings support the subjects of every identity named fixed in the newly readable unofficial draft: foundations6, mathematics6, AI3, systems1, human2, applications1, other5. Membership is now supported within that draft scope. Broader option/context classification and adopted-plan authority remain partial.",
           "evidence": [
             {
               "url": "https://stevens.catalog.prod.coursedog.com/courses/056460e31383014015da07255234c549/course-information-aoYks",
@@ -942,20 +947,61 @@
             {
               "url": "https://stevens.catalog.prod.coursedog.com/courses/adfec19493d510020d3e9cbf6bff0000",
               "locator": "CS456 saved Course Description: mathematical foundations plus implemented learning algorithms; mixed mathematics/AI retained"
+            },
+            {
+              "url": "https://assets.stevens.edu/mviowpldu823/7b2ACb3qhjMicuqbQE9xQt/735e3fc849cb9009e2edd9c7bf92f943/Artificial_Intelligence_26_27.pdf",
+              "locator": "Page 1: UNOFFICIAL DRAFT ACADEMIC PLAN FOR FALL 2026; Required Courses, SUCCESS Core Curriculum and Humanities; footer effective Sept. 1, 2026. Page 2: complete Standard AI Semester Outline."
             }
           ],
           "limitations": [
-            "Twenty-four actual descriptions support bounded subject judgments, but do not establish mandatory degree membership. Broader option/context classification and source-year/version limits remain."
+            "Category totals are checked only for the 24 named draft identities using the prior accepted actual description reviews; descriptions were not refetched on restricted catalog routes. This is not whole-degree, full-option or adopted-plan classification verification."
           ]
         }
       },
       "expected_course_ids": {
-        "required": null,
+        "required": [
+          "stevens-cs-101",
+          "stevens-cs-115",
+          "stevens-cs-135",
+          "stevens-cs-284",
+          "stevens-cs-334",
+          "stevens-cs-367",
+          "stevens-cs-368",
+          "stevens-cs-385",
+          "stevens-cs-423",
+          "stevens-cs-424",
+          "stevens-cs-456",
+          "stevens-cs-508",
+          "stevens-cs-559",
+          "stevens-cs-583",
+          "stevens-hass-103",
+          "stevens-hass-105",
+          "stevens-ma-121",
+          "stevens-ma-122",
+          "stevens-ma-125",
+          "stevens-ma-126",
+          "stevens-ma-223",
+          "stevens-ma-331",
+          "stevens-mgt-103",
+          "stevens-prv-101"
+        ],
         "options": null,
         "unresolved": null
       },
       "expected_profile": {
-        "required": null,
+        "required": {
+          "count": 24,
+          "categories": {
+            "foundations": 6,
+            "mathematics": 6,
+            "ai_ml": 3,
+            "systems": 1,
+            "human_context": 2,
+            "applications": 1,
+            "electives": 0,
+            "other": 5
+          }
+        },
         "options": null,
         "unresolved": null
       },
@@ -993,9 +1039,175 @@
           "path": "/tmp/stevens-degree-requirements.html",
           "sha256": "15d575b7733c2c1b486332832073eb65f6c8661d23c9793549bf1e98cd8e3430",
           "evidence_kind": "actual_saved_unhydrated_source"
+        },
+        {
+          "path": "/tmp/atlas-followup-stevens-ai-26-27.pdf",
+          "url": "https://assets.stevens.edu/mviowpldu823/7b2ACb3qhjMicuqbQE9xQt/735e3fc849cb9009e2edd9c7bf92f943/Artificial_Intelligence_26_27.pdf",
+          "sha256": "74575e842656331cf116c82dfbdb0ba97d29e74ae7c447bff349933011bce5c1",
+          "evidence_kind": "actual_public_pdf_unofficial_draft"
+        },
+        {
+          "path": "/tmp/atlas-authoritative-plans/stevens-ai-pdf-reader.txt",
+          "url": "https://assets.stevens.edu/mviowpldu823/7b2ACb3qhjMicuqbQE9xQt/735e3fc849cb9009e2edd9c7bf92f943/Artificial_Intelligence_26_27.pdf",
+          "sha256": "b489b2949d5b13bf453160935e4de412b2014b4ba1e6570b26f157e3d6a6895a",
+          "evidence_kind": "actual_reader_extraction_not_pdf_bytes"
+        },
+        {
+          "path": "/tmp/atlas-authoritative-plans/stevens-page2-lower.jpg",
+          "url": "https://assets.stevens.edu/mviowpldu823/7b2ACb3qhjMicuqbQE9xQt/735e3fc849cb9009e2edd9c7bf92f943/Artificial_Intelligence_26_27.pdf",
+          "sha256": "60b645edbfe09f4e29fe2407b63eaebfae84a7561e2ba46e2dcb532819d4d8b5",
+          "evidence_kind": "actual_browser_screenshot",
+          "locator": "stevens-page2-lower"
+        },
+        {
+          "path": "/tmp/atlas-authoritative-plans/stevens-page1-footer-page2-upper.jpg",
+          "url": "https://assets.stevens.edu/mviowpldu823/7b2ACb3qhjMicuqbQE9xQt/735e3fc849cb9009e2edd9c7bf92f943/Artificial_Intelligence_26_27.pdf",
+          "sha256": "f9e56c8868f7b6bb5e11f63f101cb170e28d87045d3bdd99b8a02809536ca87f",
+          "evidence_kind": "actual_browser_screenshot",
+          "locator": "stevens-page1-footer-page2-upper"
+        },
+        {
+          "path": "/tmp/atlas-authoritative-plans/stevens-page1-upper.jpg",
+          "url": "https://assets.stevens.edu/mviowpldu823/7b2ACb3qhjMicuqbQE9xQt/735e3fc849cb9009e2edd9c7bf92f943/Artificial_Intelligence_26_27.pdf",
+          "sha256": "6d4b08154eea6fd63baec541e9e12d5cf25c41d0fe44c5396c7ab2aa411f1f99",
+          "evidence_kind": "actual_browser_screenshot",
+          "locator": "stevens-page1-upper"
+        },
+        {
+          "evidence_kind": "actual_saved_catalog_requirements_bounded_link_check",
+          "url": "https://stevens.catalog.prod.coursedog.com/programs/qT6Ld1CzBAhQsVKYFNVv/requirements-and-concentrations-n90Np",
+          "local_path": "/tmp/stevens-degree-requirements.html",
+          "sha256": "15d575b7733c2c1b486332832073eb65f6c8661d23c9793549bf1e98cd8e3430",
+          "locator": "Math/Science Electives: following courses may also count; three href/data-course-id links matched to actual saved EN250/CE240/NANO200 course identities. No refetch; placeholder labels not promoted to evidence for other pools."
+        },
+        {
+          "evidence_kind": "actual_saved_catalog_course_identity_bounded_link_check",
+          "url": "https://stevens.catalog.prod.coursedog.com/courses/056460e3138301eb377c6c5252345d73",
+          "path": "/tmp/atlas-stevens-options/EN250.html",
+          "sha256": "84e8db37062e35a3d263ddffdb8413d0b3b832d92d4f1d0d9629ae25286b903c",
+          "locator": "Actual saved course h1 identity EN 250; matches may-also-count course ID in actual saved requirements HTML. No network request."
+        },
+        {
+          "evidence_kind": "actual_saved_catalog_course_identity_bounded_link_check",
+          "url": "https://stevens.catalog.prod.coursedog.com/courses/056460e3138301ddc20c92f85134e320",
+          "path": "/tmp/atlas-stevens-options/CE240.html",
+          "sha256": "fd59355e46d16f6a5727722dc83dd586ec67d0cd1abb5dce68e1371abd1582b8",
+          "locator": "Actual saved course h1 identity CE 240; matches may-also-count course ID in actual saved requirements HTML. No network request."
+        },
+        {
+          "evidence_kind": "actual_saved_catalog_course_identity_bounded_link_check",
+          "url": "https://stevens.catalog.prod.coursedog.com/courses/056460e31383018c4b278ebd523400d5",
+          "path": "/tmp/atlas-stevens-options/NANO200.html",
+          "sha256": "2be29e90b1c79e38f00ec81f1b88e485c1ad333623bdb8cc07ed953aa5a60323",
+          "locator": "Actual saved course h1 identity NANO 200; matches may-also-count course ID in actual saved requirements HTML. No network request."
         }
       ],
-      "full_degree_verified": false
+      "full_degree_verified": false,
+      "checked_choice_subsets": {
+        "scope": "Actual unofficial draft only; not a certified complete option graph",
+        "science_sequences": [
+          [
+            "PEP111",
+            "PEP112",
+            "PEP221"
+          ],
+          [
+            "PEP111",
+            "BIO181",
+            "BIO182"
+          ],
+          [
+            "PEP111",
+            "CH115",
+            "CH117"
+          ],
+          [
+            "CH115",
+            "CH116",
+            "CH117"
+          ],
+          [
+            "CH115",
+            "BIO181",
+            [
+              "CH117",
+              "BIO182"
+            ]
+          ],
+          [
+            "CH115",
+            "PEP111",
+            "CH117"
+          ]
+        ],
+        "technical_codes": [
+          "CS532",
+          "CS544",
+          "CS545",
+          "CS558",
+          "CS560",
+          "CS582",
+          "CS584",
+          "CS589",
+          "MA661",
+          "BIA665",
+          "ME598"
+        ],
+        "humanities_alternative_codes": [
+          "HSSC371",
+          "HST381",
+          "HPL455"
+        ],
+        "frontiers_named_pool": null,
+        "slots": {
+          "technical": 6,
+          "science_math": 2,
+          "general": 4,
+          "frontiers": 3
+        },
+        "draft_term_credits": [
+          16,
+          15,
+          17,
+          17,
+          15,
+          15,
+          15,
+          15
+        ],
+        "draft_term_credit_sum": 125,
+        "normalized_credit_unit": null,
+        "science_math_excluded_codes": [
+          "MA117",
+          "MA118",
+          "MA119",
+          "MA134",
+          "MA503",
+          "MA520",
+          "EN250",
+          "CE240",
+          "NANO200"
+        ],
+        "positive_named_option_identity_count": 22,
+        "source_conflicts": [
+          {
+            "draft_codes": [
+              "EN250",
+              "CE240",
+              "NANO200"
+            ],
+            "draft_role": "excluded",
+            "primary_catalog_transcription_role": "additional eligible options",
+            "resolution": null,
+            "locator": "PDF page2, Science/Math Electives final line; visual screenshot overrides reader extraction that dropped not",
+            "catalog_claim_basis": "Actual saved requirements HTML contains may-also-count links with course IDs 056460e3138301eb377c6c5252345d73, 056460e3138301ddc20c92f85134e320 and 056460e31383018c4b278ebd523400d5, matching already saved actual EN250/CE240/NANO200 course identities. The displayed link labels are placeholders, but these three links establish a bounded catalog membership claim independently of reconstructed labels.",
+            "catalog_edition": null,
+            "draft_scope": "UNOFFICIAL DRAFT Fall 2026 advising plan, effective Sept. 1, 2026; Workday official record",
+            "primary_representation": "Retained catalog-claimed option role; explicitly disputed eligibility in both math/science nodes, an actual-PDF-sourced conflict note, and each course note."
+          }
+        ]
+      },
+      "adopted_plan_verified": false
     },
     {
       "program_id": "lehigh-university-artificial-intelligence-machine-learning-and-data-science-bs-degree",
@@ -1013,7 +1225,7 @@
             }
           ],
           "limitations": [
-            "Degree table says 130\u2013131 total and eleven free-elective credits; highlight/sample plan says 130 and ten free-elective credits."
+            "Degree table says 130–131 total and eleven free-elective credits; highlight/sample plan says 130 and ten free-elective credits."
           ]
         },
         "choice_rules": {
@@ -1027,7 +1239,7 @@
           ],
           "limitations": [
             "This independent pass does not certify university-wide policies, general-education inventories, individual waivers, or total degree completion.",
-            "Degree table says 130\u2013131 total and eleven free-elective credits; highlight/sample plan says 130 and ten free-elective credits."
+            "Degree table says 130–131 total and eleven free-elective credits; highlight/sample plan says 130 and ten free-elective credits."
           ]
         },
         "classification": {
@@ -1420,7 +1632,7 @@
     {
       "program_id": "uc-merced-ai-bs",
       "reviewed_at": "2026-10-11",
-      "reviewer": "independent-resolution-merced",
+      "reviewer": "sol-medium-university-authoritative-plans",
       "reviewed_content_hash": "2ba56703c98bcc42e0c1965f563f731623abd35957ad065810348ba705bcdb7b",
       "dimensions": {
         "fixed_requirements": {
@@ -1433,25 +1645,30 @@
             },
             {
               "url": "https://senate.ucmerced.edu/node/7946",
-              "locator": "AY 2025\u201326: AI BS review row dated March 3\u2013April 7, 2026; completed; exact proposal link"
+              "locator": "AY 2025–26: AI BS review row dated March 3–April 7, 2026; completed; exact proposal link"
             },
             {
               "url": "https://senate.ucmerced.edu/sites/g/files/ufvvjh1616/f/page/documents/ugc_annual_report_ay_25-26.pdf",
-              "locator": "AY 2025\u201326 report page 3: AI BS review dated May 13"
+              "locator": "AY 2025–26 report page 3: AI BS review dated May 13"
             },
             {
               "url": "https://senate.ucmerced.edu/sites/g/files/ufvvjh1616/f/page/documents/divcoannualreport2025_2026.pdf",
-              "locator": "AY 2025\u201326 report page 6 Appendix A: AI BS proposal endorsement"
+              "locator": "AY 2025–26 report page 6 Appendix A: AI BS proposal endorsement"
             },
             {
               "url": "https://engr-advising.ucmerced.edu/majors/cse",
-              "locator": "Major Requirements: 2025\u201326 CSE catalog/plan and advisor flowchart; separate degree"
+              "locator": "Major Requirements: 2025–26 CSE catalog/plan and advisor flowchart; separate degree"
+            },
+            {
+              "url": "https://senate.ucmerced.edu/sites/g/files/ufvvjh1616/f/news/documents/2026.08.19senatechairmonroewelcomeletter_.pdf",
+              "locator": "All three pages of August 19, 2026 chair letter: governance priorities, no AI BS adopted course table"
             }
           ],
           "limitations": [
             "Current catalog https://catalog.ucmerced.edu/ remains held at the prior HTTP 403 boundary; no catalog route was requested in this follow-up.",
             "Exact Senate-linked AI BS proposal https://ucmerced.box.com/s/dcp2fpp8o1owv2lgqxmdpkzdnubi8jdu was not readable through the ordinary reader: nonretryable 500 redirect to ucmerced.app.box.com marked unsafe; no redirect retry or alternate endpoint was attempted.",
-            "Senate review/endorsement does not establish the adopted course list, applicable AI BS catalog year or cohort. The 2025\u201326 CSE advising curriculum cannot be inherited by the separate AI BS."
+            "Senate review/endorsement does not establish the adopted course list, applicable AI BS catalog year or cohort. The 2025–26 CSE advising curriculum cannot be inherited by the separate AI BS.",
+            "New public governance and Engineering navigation did not supply an adopted AI BS curriculum. The readable August 19 chair letter and June 11 systemwide Assembly agenda do not establish AI BS course requirements. Missing directory entries are not absence evidence."
           ]
         },
         "choice_rules": {
@@ -1464,25 +1681,25 @@
             },
             {
               "url": "https://senate.ucmerced.edu/node/7946",
-              "locator": "AY 2025\u201326: AI BS review row dated March 3\u2013April 7, 2026; completed; exact proposal link"
+              "locator": "AY 2025–26: AI BS review row dated March 3–April 7, 2026; completed; exact proposal link"
             },
             {
               "url": "https://senate.ucmerced.edu/sites/g/files/ufvvjh1616/f/page/documents/ugc_annual_report_ay_25-26.pdf",
-              "locator": "AY 2025\u201326 report page 3: AI BS review dated May 13"
+              "locator": "AY 2025–26 report page 3: AI BS review dated May 13"
             },
             {
               "url": "https://senate.ucmerced.edu/sites/g/files/ufvvjh1616/f/page/documents/divcoannualreport2025_2026.pdf",
-              "locator": "AY 2025\u201326 report page 6 Appendix A: AI BS proposal endorsement"
+              "locator": "AY 2025–26 report page 6 Appendix A: AI BS proposal endorsement"
             },
             {
               "url": "https://engr-advising.ucmerced.edu/majors/cse",
-              "locator": "Major Requirements: 2025\u201326 CSE catalog/plan and advisor flowchart; separate degree"
+              "locator": "Major Requirements: 2025–26 CSE catalog/plan and advisor flowchart; separate degree"
             }
           ],
           "limitations": [
             "Current catalog https://catalog.ucmerced.edu/ remains held at the prior HTTP 403 boundary; no catalog route was requested in this follow-up.",
             "Exact Senate-linked AI BS proposal https://ucmerced.box.com/s/dcp2fpp8o1owv2lgqxmdpkzdnubi8jdu was not readable through the ordinary reader: nonretryable 500 redirect to ucmerced.app.box.com marked unsafe; no redirect retry or alternate endpoint was attempted.",
-            "Senate review/endorsement does not establish the adopted course list, applicable AI BS catalog year or cohort. The 2025\u201326 CSE advising curriculum cannot be inherited by the separate AI BS.",
+            "Senate review/endorsement does not establish the adopted course list, applicable AI BS catalog year or cohort. The 2025–26 CSE advising curriculum cannot be inherited by the separate AI BS.",
             "This bounded follow-up does not certify degree-wide policies, general education, waivers or full degree completion."
           ]
         },
@@ -1496,13 +1713,13 @@
             },
             {
               "url": "https://senate.ucmerced.edu/node/7946",
-              "locator": "AY 2025\u201326: AI BS review row dated March 3\u2013April 7, 2026; completed; exact proposal link"
+              "locator": "AY 2025–26: AI BS review row dated March 3–April 7, 2026; completed; exact proposal link"
             }
           ],
           "limitations": [
             "Current catalog https://catalog.ucmerced.edu/ remains held at the prior HTTP 403 boundary; no catalog route was requested in this follow-up.",
             "Exact Senate-linked AI BS proposal https://ucmerced.box.com/s/dcp2fpp8o1owv2lgqxmdpkzdnubi8jdu was not readable through the ordinary reader: nonretryable 500 redirect to ucmerced.app.box.com marked unsafe; no redirect retry or alternate endpoint was attempted.",
-            "Senate review/endorsement does not establish the adopted course list, applicable AI BS catalog year or cohort. The 2025\u201326 CSE advising curriculum cannot be inherited by the separate AI BS.",
+            "Senate review/endorsement does not establish the adopted course list, applicable AI BS catalog year or cohort. The 2025–26 CSE advising curriculum cannot be inherited by the separate AI BS.",
             "All expected role sets, counts and category totals remain null, meaning unchecked rather than absent."
           ]
         }
@@ -1522,7 +1739,7 @@
     {
       "program_id": "university-of-south-florida-artificial-intelligence-bs-degree",
       "reviewed_at": "2026-10-11",
-      "reviewer": "independent-resolution-usf-wm",
+      "reviewer": "sol-medium-university-authoritative-plans",
       "reviewed_content_hash": "d0b5cb0fa72554ddff12a15676e6eedec859dac6de873aaaef8c1104eefb4379",
       "dimensions": {
         "fixed_requirements": {
@@ -1532,10 +1749,15 @@
             {
               "url": "https://www.usf.edu/ai-cybersecurity-computing/documents/brochures/bellini-ug-bsai.pdf",
               "locator": "Curriculum / main degree requirements / explicitly named FAQ core"
+            },
+            {
+              "url": "https://www.usf.edu/ai-cybersecurity-computing/academics/current_students.aspx",
+              "locator": "Current Students / Welcome Current Students: academic information and forms transition to automatically enrolled Canvas course; no public named degree table"
             }
           ],
           "limitations": [
-            "Exact registered brochure URL was robots-disallowed in the primary review; known catalog HTTP 202 remains. Course-description pages establish subjects, not fixed major membership. No PDF, text capture, or alternate authoritative major table was located in the existing permitted evidence."
+            "Exact registered brochure URL was robots-disallowed in the primary review; known catalog HTTP 202 remains. Course-description pages establish subjects, not fixed major membership. No PDF, text capture, or alternate authoritative major table was located in the existing permitted evidence.",
+            "New public current-student navigation exposes an enrolled Canvas destination rather than an independent readable plan; Canvas was not requested. Public academics/program pages point back to held catalog/brochure routes, which were not followed."
           ]
         },
         "choice_rules": {
@@ -1558,119 +1780,119 @@
           "evidence": [
             {
               "url": "https://cloud.usf.edu/academic-programs/details/prefix/CIS/code/1930",
-              "locator": "CIS 1930 actual Course Details Description; 2026\u20132027 public inventory"
+              "locator": "CIS 1930 actual Course Details Description; 2026–2027 public inventory"
             },
             {
               "url": "https://cloud.usf.edu/academic-programs/details/prefix/COP/code/2510",
-              "locator": "COP 2510 actual Course Details Description; 2026\u20132027 public inventory"
+              "locator": "COP 2510 actual Course Details Description; 2026–2027 public inventory"
             },
             {
               "url": "https://cloud.usf.edu/academic-programs/details/prefix/ENC/code/1101",
-              "locator": "ENC 1101 actual Course Details Description; 2026\u20132027 public inventory"
+              "locator": "ENC 1101 actual Course Details Description; 2026–2027 public inventory"
             },
             {
               "url": "https://cloud.usf.edu/academic-programs/details/prefix/MAC/code/2311",
-              "locator": "MAC 2311 actual Course Details Description; 2026\u20132027 public inventory"
+              "locator": "MAC 2311 actual Course Details Description; 2026–2027 public inventory"
             },
             {
               "url": "https://cloud.usf.edu/academic-programs/details/prefix/COP/code/3514",
-              "locator": "COP 3514 actual Course Details Description; 2026\u20132027 public inventory"
+              "locator": "COP 3514 actual Course Details Description; 2026–2027 public inventory"
             },
             {
               "url": "https://cloud.usf.edu/academic-programs/details/prefix/ENC/code/1102",
-              "locator": "ENC 1102 actual Course Details Description; 2026\u20132027 public inventory"
+              "locator": "ENC 1102 actual Course Details Description; 2026–2027 public inventory"
             },
             {
               "url": "https://cloud.usf.edu/academic-programs/details/prefix/MAC/code/2312",
-              "locator": "MAC 2312 actual Course Details Description; 2026\u20132027 public inventory"
+              "locator": "MAC 2312 actual Course Details Description; 2026–2027 public inventory"
             },
             {
               "url": "https://cloud.usf.edu/academic-programs/details/prefix/PHY/code/2048",
-              "locator": "PHY 2048 actual Course Details Description; 2026\u20132027 public inventory"
+              "locator": "PHY 2048 actual Course Details Description; 2026–2027 public inventory"
             },
             {
               "url": "https://cloud.usf.edu/academic-programs/details/prefix/PHY/code/2048L",
-              "locator": "PHY 2048L actual Course Details Description; 2026\u20132027 public inventory"
+              "locator": "PHY 2048L actual Course Details Description; 2026–2027 public inventory"
             },
             {
               "url": "https://cloud.usf.edu/academic-programs/details/prefix/CDA/code/3103",
-              "locator": "CDA 3103 actual Course Details Description; 2026\u20132027 public inventory"
+              "locator": "CDA 3103 actual Course Details Description; 2026–2027 public inventory"
             },
             {
               "url": "https://cloud.usf.edu/academic-programs/details/prefix/COT/code/3100",
-              "locator": "COT 3100 actual Course Details Description; 2026\u20132027 public inventory"
+              "locator": "COT 3100 actual Course Details Description; 2026–2027 public inventory"
             },
             {
               "url": "https://cloud.usf.edu/academic-programs/details/prefix/COP/code/4530",
-              "locator": "COP 4530 actual Course Details Description; 2026\u20132027 public inventory"
+              "locator": "COP 4530 actual Course Details Description; 2026–2027 public inventory"
             },
             {
               "url": "https://cloud.usf.edu/academic-programs/details/prefix/EGN/code/4450",
-              "locator": "EGN 4450 actual Course Details Description; 2026\u20132027 public inventory"
+              "locator": "EGN 4450 actual Course Details Description; 2026–2027 public inventory"
             },
             {
               "url": "https://cloud.usf.edu/academic-programs/details/prefix/PSY/code/2012",
-              "locator": "PSY 2012 actual Course Details Description; 2026\u20132027 public inventory"
+              "locator": "PSY 2012 actual Course Details Description; 2026–2027 public inventory"
             },
             {
               "url": "https://cloud.usf.edu/academic-programs/details/prefix/COT/code/4400",
-              "locator": "COT 4400 actual Course Details Description; 2026\u20132027 public inventory"
+              "locator": "COT 4400 actual Course Details Description; 2026–2027 public inventory"
             },
             {
               "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAP/code/4641",
-              "locator": "CAP 4641 actual Course Details Description; 2026\u20132027 public inventory"
+              "locator": "CAP 4641 actual Course Details Description; 2026–2027 public inventory"
             },
             {
               "url": "https://cloud.usf.edu/academic-programs/details/prefix/EGN/code/2440",
-              "locator": "EGN 2440 actual Course Details Description; 2026\u20132027 public inventory"
+              "locator": "EGN 2440 actual Course Details Description; 2026–2027 public inventory"
             },
             {
               "url": "https://cloud.usf.edu/academic-programs/details/prefix/STA/code/2023",
-              "locator": "STA 2023 actual Course Details Description; 2026\u20132027 public inventory"
+              "locator": "STA 2023 actual Course Details Description; 2026–2027 public inventory"
             },
             {
               "url": "https://cloud.usf.edu/academic-programs/details/prefix/POS/code/2041",
-              "locator": "POS 2041 actual Course Details Description; 2026\u20132027 public inventory"
+              "locator": "POS 2041 actual Course Details Description; 2026–2027 public inventory"
             },
             {
               "url": "https://cloud.usf.edu/academic-programs/details/prefix/AMH/code/2010",
-              "locator": "AMH 2010 actual Course Details Description; 2026\u20132027 public inventory"
+              "locator": "AMH 2010 actual Course Details Description; 2026–2027 public inventory"
             },
             {
               "url": "https://cloud.usf.edu/academic-programs/details/prefix/AMH/code/2020",
-              "locator": "AMH 2020 actual Course Details Description; 2026\u20132027 public inventory"
+              "locator": "AMH 2020 actual Course Details Description; 2026–2027 public inventory"
             },
             {
               "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/1000",
-              "locator": "CAI 1000 actual Course Details Description; 2026\u20132027 public inventory"
+              "locator": "CAI 1000 actual Course Details Description; 2026–2027 public inventory"
             },
             {
               "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/2001",
-              "locator": "CAI 2001 actual Course Details Description; 2026\u20132027 public inventory"
+              "locator": "CAI 2001 actual Course Details Description; 2026–2027 public inventory"
             },
             {
               "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/4002",
-              "locator": "CAI 4002 actual Course Details Description; 2026\u20132027 public inventory"
+              "locator": "CAI 4002 actual Course Details Description; 2026–2027 public inventory"
             },
             {
               "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/4024",
-              "locator": "CAI 4024 actual Course Details Description; 2026\u20132027 public inventory"
+              "locator": "CAI 4024 actual Course Details Description; 2026–2027 public inventory"
             },
             {
               "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/4105",
-              "locator": "CAI 4105 actual Course Details Description; 2026\u20132027 public inventory"
+              "locator": "CAI 4105 actual Course Details Description; 2026–2027 public inventory"
             },
             {
               "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/4203",
-              "locator": "CAI 4203 actual Course Details Description; 2026\u20132027 public inventory"
+              "locator": "CAI 4203 actual Course Details Description; 2026–2027 public inventory"
             },
             {
               "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/4624",
-              "locator": "CAI 4624 actual Course Details Description; 2026\u20132027 public inventory"
+              "locator": "CAI 4624 actual Course Details Description; 2026–2027 public inventory"
             },
             {
               "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/4841",
-              "locator": "CAI 4841 actual Course Details Description; 2026\u20132027 public inventory"
+              "locator": "CAI 4841 actual Course Details Description; 2026–2027 public inventory"
             }
           ],
           "limitations": [
@@ -1885,12 +2107,12 @@
     {
       "program_id": "william-mary-applied-ai-ba",
       "reviewed_at": "2026-10-11",
-      "reviewer": "independent-resolution-usf-wm",
+      "reviewer": "university-core-followup-plan-conflicts / university_plan_conflicts",
       "reviewed_content_hash": "e9ee129a34f1088b027047fce7a80ca6fa7010f8638f935a4024776a70fcf865",
       "dimensions": {
         "fixed_requirements": {
           "status": "partial",
-          "summary": "Available-source limit: the current department FAQ explicitly calls DATA201/202/305 core requirements normally taken at W&M, supporting the exact three mapped fixed identities. Its linked Example Pathway instead labels Designing AI Agents AAI301 and offers DATA202 or PHIL150 as an ethics choice. No source hierarchy, equivalence or complete approved major table resolves either conflict. The FAQ subset remains partial.",
+          "summary": "Prior bounded finding retained: Available-source limit: the current department FAQ explicitly calls DATA201/202/305 core requirements normally taken at W&M, supporting the exact three mapped fixed identities. Its linked Example Pathway instead labels Designing AI Agents AAI301 and offers DATA202 or PHIL150 as an ethics choice. No source hierarchy, equivalence or complete approved major table resolves either conflict. The FAQ subset remains partial.",
           "evidence": [
             {
               "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/",
@@ -1902,12 +2124,13 @@
             }
           ],
           "limitations": [
-            "Example Pathway AAI301 versus FAQ DATA305 is unresolved; no rename/cross-list is inferred. Example ethics choice DATA202/PHIL150 versus FAQ core DATA202 is unresolved. Known catalog robots HTTP202 was not retried. The complete 30-credit major, capstone identity and additional fixed courses remain unverified."
+            "Example Pathway AAI301 versus FAQ DATA305 is unresolved; no rename/cross-list is inferred. Example ethics choice DATA202/PHIL150 versus FAQ core DATA202 is unresolved. Known catalog robots HTTP202 was not retried. The complete 30-credit major, capstone identity and additional fixed courses remain unverified.",
+            "This follow-up checks new public planning/governance alternatives; earlier identity/category conclusions remain attributed to the prior review and are not newly certified by these alternatives."
           ]
         },
         "choice_rules": {
           "status": "partial",
-          "summary": "Reread the current FAQ substitution, independent-research and study-abroad approval rules and visually inspected the entire linked Example Pathway. The image gives two electives and examples of ethics/methods courses, without proving a closed approved pool or governing curriculum edition; those examples cannot add fixed courses or certify full option membership.",
+          "summary": "Prior bounded finding retained: Reread the current FAQ substitution, independent-research and study-abroad approval rules and visually inspected the entire linked Example Pathway. The image gives two electives and examples of ethics/methods courses, without proving a closed approved pool or governing curriculum edition; those examples cannot add fixed courses or certify full option membership.",
           "evidence": [
             {
               "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/",
@@ -1919,12 +2142,13 @@
             }
           ],
           "limitations": [
-            "DATA202/PHIL150 ethics choice and DATA305/AAI301 identity conflict have no published version hierarchy. Methods and elective examples are not exhaustive approved pools; no additional image-only course was promoted. Broad degree-wide policy/GE rules are outside this pass."
+            "DATA202/PHIL150 ethics choice and DATA305/AAI301 identity conflict have no published version hierarchy. Methods and elective examples are not exhaustive approved pools; no additional image-only course was promoted. Broad degree-wide policy/GE rules are outside this pass.",
+            "This follow-up checks new public planning/governance alternatives; earlier identity/category conclusions remain attributed to the prior review and are not newly certified by these alternatives."
           ]
         },
         "classification": {
           "status": "partial",
-          "summary": "All three Fall 2026 registration descriptions were reread. DATA201 explicitly teaches AI modeling approaches, DATA305 RAG/prompt pipelines/agentic workflows, and DATA202 ethical/social interpretation. Their subject distribution is two AI/ML and one human context.",
+          "summary": "Prior bounded finding retained: All three Fall 2026 registration descriptions were reread. DATA201 explicitly teaches AI modeling approaches, DATA305 RAG/prompt pipelines/agentic workflows, and DATA202 ethical/social interpretation. Their subject distribution is two AI/ML and one human context.",
           "evidence": [
             {
               "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/",
@@ -1944,7 +2168,8 @@
             }
           ],
           "limitations": [
-            "Category totals are verified only for the explicitly enumerated fixed subset; option and contextual classifications are not independently totaled in this pass."
+            "Category totals are verified only for the explicitly enumerated fixed subset; option and contextual classifications are not independently totaled in this pass.",
+            "This follow-up checks new public planning/governance alternatives; earlier identity/category conclusions remain attributed to the prior review and are not newly certified by these alternatives."
           ]
         }
       },
@@ -2007,7 +2232,96 @@
           "other": 0
         },
         "role_membership_verified": "FAQ subset only; full major unresolved"
-      }
+      },
+      "prior_review_file": "research/degree-audit/independent-resolution-usf-wm.json",
+      "prior_identity_and_category_review_retained": true,
+      "resolution_outcome": "unresolved_after_new_permitted_public_links",
+      "followup_sources": [
+        {
+          "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/",
+          "locator": "30-credit major and study-abroad FAQ DATA201/202/305, capstone residence",
+          "finding": "FAQ still conflicts with prior example pathway; no effective edition or precedence statement.",
+          "checked_at": "2026-10-11",
+          "source_date": null,
+          "catalog_year": null,
+          "access_status": "readable",
+          "new_to_followup": false,
+          "saved_source_path": "var/university-core-followup-plan-conflicts/open1.web-reader.json",
+          "saved_source_sha256": "324ccb76bb91643fd4eec652f9e3b15cb1a6344e1636f21fd055ce366ab0d55c",
+          "saved_source_format": "public_web_reader_output_batch"
+        },
+        {
+          "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/declare-ba-aai/",
+          "locator": "Steps0–5, especially Step2 declaration download and advisor review",
+          "finding": "New public advising lead instructs students to edit electives and review with advisor; no populated course table. AAI101 suggestion is not a mandatory major requirement.",
+          "checked_at": "2026-10-11",
+          "source_date": null,
+          "catalog_year": null,
+          "access_status": "readable",
+          "new_to_followup": true,
+          "saved_source_path": "var/university-core-followup-plan-conflicts/open2.web-reader.json",
+          "saved_source_sha256": "1df906f56932cf46a97b19828c3b6f26b4b427accbe5405e61092801dd3ba523",
+          "saved_source_format": "public_web_reader_output_batch"
+        },
+        {
+          "url": "https://www.wm.edu/offices/registrar/_documents/degree/declaration_of_major_form.pdf",
+          "locator": "All3 extracted pages; page3 Requirements for Major/Core Courses and Electives blank worksheet; Rev8/2025",
+          "finding": "Linked form is generic blank worksheet, not an Applied AI curriculum. Its revision date cannot establish the current major version.",
+          "checked_at": "2026-10-11",
+          "source_date": "2025-08",
+          "catalog_year": null,
+          "access_status": "readable",
+          "new_to_followup": true,
+          "saved_source_path": "var/university-core-followup-plan-conflicts/open3.web-reader.json",
+          "saved_source_sha256": "0d290a0bcad51d03d7fcb1eaacd93ff50343b40bb72e87b2520abfba1c56f11a",
+          "saved_source_format": "public_web_reader_output_batch"
+        },
+        {
+          "url": "https://cdsp.wm.edu/academics/undergraduate/undergrad_forms/",
+          "locator": "Complete Undergraduate Forms list",
+          "finding": "Public list has internship/graduate-credit forms, no populated Applied AI plan; no DocuSign workflow entered.",
+          "checked_at": "2026-10-11",
+          "source_date": null,
+          "catalog_year": null,
+          "access_status": "readable",
+          "new_to_followup": true,
+          "saved_source_path": "var/university-core-followup-plan-conflicts/open3.web-reader.json",
+          "saved_source_sha256": "0d290a0bcad51d03d7fcb1eaacd93ff50343b40bb72e87b2520abfba1c56f11a",
+          "saved_source_format": "public_web_reader_output_batch"
+        },
+        {
+          "url": "https://cdsp.wm.edu/academics/degree-pathways/",
+          "locator": "Full degree pathways body",
+          "finding": "Broad degree overview supplies no adopted Applied AI requirement table or conflict reconciliation.",
+          "checked_at": "2026-10-11",
+          "source_date": null,
+          "catalog_year": null,
+          "access_status": "readable",
+          "new_to_followup": true,
+          "saved_source_path": "var/university-core-followup-plan-conflicts/open9.web-reader.json",
+          "saved_source_sha256": "eaec33a69aa344119ee3b11a93a6691fff9fb60c7407bda7c9863d5749ad63ba",
+          "saved_source_format": "public_web_reader_output_batch"
+        },
+        {
+          "url": "https://cdsp.wm.edu/about/policies/bylaws/",
+          "locator": "Revision adoption/approval dates; ArticleVI§1; ArticleVII§2",
+          "finding": "March2026 faculty revision and April2026 Board approval; faculty determine school-specific requirements, Committee on Undergraduate Studies may approve catalog/routine degree changes. No actual course-change decision, equivalence or FAQ/image precedence.",
+          "checked_at": "2026-10-11",
+          "source_date": "2026-04-24",
+          "catalog_year": null,
+          "access_status": "readable",
+          "new_to_followup": true,
+          "saved_source_path": "var/university-core-followup-plan-conflicts/open7.web-reader.json",
+          "saved_source_sha256": "4c37f5d6876b8d18705db445a41b6568216db5190e23472c7984dd089d530d44",
+          "saved_source_format": "public_web_reader_output_batch"
+        }
+      ],
+      "hierarchy_and_version": {
+        "established": "Published bylaws assign school requirements to voting faculty, subject to university policy/approval; Undergraduate Studies committee has delegated catalog/routine requirement-change authority. Bylaws revised by faculty2026-03-02 and approved by Board2026-04-24.",
+        "not_established": "No adopted Applied AI table, change decision or effective cohort resolves DATA305 versus AAI301 or fixed DATA202 versus DATA202/PHIL150. Generic worksheet Rev8/2025 is not the major version.",
+        "governing_inventory_verified": false
+      },
+      "next_evidence_needed": "A permitted published approved major table or dated course-change decision with entry-cohort applicability resolving both code/ethics conflicts and complete capstone/methods/elective rules."
     }
   ],
   "audit_date": "2026-10-11",

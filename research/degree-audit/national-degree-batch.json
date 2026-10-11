@@ -14145,6 +14145,14 @@
           "locator": "Public human-verification screen with Begin button; stopped without interaction. The later 22 queue entries were not individually attempted.",
           "checked_at": "2026-10-11T07:06:39+00:00",
           "access_status": "human_verification_required"
+        },
+        {
+          "url": "https://assets.stevens.edu/mviowpldu823/7b2ACb3qhjMicuqbQE9xQt/735e3fc849cb9009e2edd9c7bf92f943/Artificial_Intelligence_26_27.pdf",
+          "catalog_year": "Fall 2026 draft",
+          "locator": "Pages 1–2, UNOFFICIAL DRAFT; 24 fixed and 22 positive option identities; EN250/CE240/NANO200 exclusion conflicts with linked catalog rules",
+          "checked_at": "2026-10-11",
+          "access_status": "read_public_pdf",
+          "content_sha256": "74575e842656331cf116c82dfbdb0ba97d29e74ae7c447bff349933011bce5c1"
         }
       ],
       "checks": {
@@ -14169,7 +14177,14 @@
             "applications": 1,
             "electives": 0,
             "other": 5
-          }
+          },
+          "classification": {
+            "reviewed": 19,
+            "mixed": 4,
+            "unclassified": 1,
+            "unreviewed": 0
+          },
+          "source_record_count": 24
         },
         "options": {
           "count": 30,
@@ -14182,7 +14197,14 @@
             "applications": 12,
             "electives": 0,
             "other": 6
-          }
+          },
+          "classification": {
+            "reviewed": 24,
+            "mixed": 6,
+            "unclassified": 0,
+            "unreviewed": 0
+          },
+          "source_record_count": 30
         },
         "unresolved": {
           "count": 25,
@@ -14195,7 +14217,203 @@
             "applications": 4,
             "electives": 0,
             "other": 0
+          },
+          "classification": {
+            "reviewed": 25,
+            "mixed": 0,
+            "unclassified": 0,
+            "unreviewed": 0
+          },
+          "source_record_count": 25
+        },
+        "choices": [
+          {
+            "id": "stevens-institute-of-technology-artificial-intelligence-bs-degree-human-alternative",
+            "title": "Human-context alternatives",
+            "kind": "alternative",
+            "count": null,
+            "credits": null,
+            "credit_unit": "unknown",
+            "source_id": "stevens-institute-of-technology-artificial-intelligence-bs-degree-plan",
+            "parent_id": "stevens-institute-of-technology-artificial-intelligence-bs-degree-term-5",
+            "origin": null,
+            "summary": "",
+            "context": "required"
+          },
+          {
+            "id": "stevens-institute-of-technology-artificial-intelligence-bs-degree-science-sequences",
+            "title": "Science sequences",
+            "kind": "alternative",
+            "count": null,
+            "credits": null,
+            "credit_unit": "unknown",
+            "source_id": "stevens-institute-of-technology-artificial-intelligence-bs-degree-rules",
+            "parent_id": null,
+            "origin": null,
+            "summary": "Select one published sequence of two science courses and one laboratory; the chemistry/biology row permits a lab alternative.",
+            "context": "required"
+          },
+          {
+            "id": "stevens-institute-of-technology-artificial-intelligence-bs-degree-math-science-electives",
+            "title": "Math/science electives",
+            "kind": "choose_courses",
+            "count": 2,
+            "credits": null,
+            "credit_unit": "unknown",
+            "source_id": "stevens-institute-of-technology-artificial-intelligence-bs-degree-rules",
+            "parent_id": null,
+            "origin": null,
+            "summary": "Catalog claim: choose two 3-credit PEP, CH, BIO or MA courses with prior academic-advisor approval; required and equivalent coursework is excluded (examples MA 117, MA 118, MA 119, MA 134, MA 520). This is an open eligibility rule. Eligibility source conflict: the public catalog requirements panel (no stated edition) links EN 250, CE 240 and NANO 200 after “may also count”; the UNOFFICIAL DRAFT Fall 2026 advising plan, effective Sept. 1, 2026, page 2 instead excludes these courses. Workday is identified as the official record and was not accessed. Neither applicable governing version nor eligibility is resolved; catalog option links preserve the catalog claim only.",
+            "context": "required"
+          },
+          {
+            "id": "stevens-institute-of-technology-artificial-intelligence-bs-degree-technical-electives",
+            "title": "Technical electives",
+            "kind": "choose_courses",
+            "count": 6,
+            "credits": null,
+            "credit_unit": "unknown",
+            "source_id": "stevens-institute-of-technology-artificial-intelligence-bs-degree-rules",
+            "parent_id": null,
+            "origin": null,
+            "summary": "Choose the specified number from the published finite pool, with prior academic-advisor approval. A cross-listed label is one option; undergraduate graduate-course access rules also apply.",
+            "context": "required"
+          },
+          {
+            "id": "stevens-institute-of-technology-artificial-intelligence-bs-degree-general-electives",
+            "title": "General electives",
+            "kind": "choose_courses",
+            "count": 4,
+            "credits": null,
+            "credit_unit": "unknown",
+            "source_id": "stevens-institute-of-technology-artificial-intelligence-bs-degree-rules",
+            "parent_id": null,
+            "origin": null,
+            "summary": "Choose the specified number of Stevens courses carrying at least three credits, with prior academic-advisor approval. Required/equivalent courses and the separately recorded exclusions cannot count. This published open route requires no invented finite course pool.",
+            "context": "required"
+          },
+          {
+            "id": "stevens-institute-of-technology-artificial-intelligence-bs-degree-success-choice",
+            "title": "SUCCESS Frontiers choice",
+            "kind": "choose_courses",
+            "count": 3,
+            "credits": null,
+            "credit_unit": "unknown",
+            "source_id": "stevens-institute-of-technology-artificial-intelligence-bs-degree-rules",
+            "parent_id": null,
+            "origin": null,
+            "summary": "Choose three of the published Frontiers courses.",
+            "context": "required"
+          },
+          {
+            "id": "stevens-institute-of-technology-artificial-intelligence-bs-degree-science-sequence-5-lab",
+            "title": "Laboratory alternative",
+            "kind": "alternative",
+            "count": null,
+            "credits": null,
+            "credit_unit": "unknown",
+            "source_id": "stevens-institute-of-technology-artificial-intelligence-bs-degree-rules",
+            "parent_id": "stevens-institute-of-technology-artificial-intelligence-bs-degree-science-sequence-5",
+            "origin": null,
+            "summary": "Choose one lab within this selected sequence.",
+            "context": "conditional"
           }
+        ],
+        "choice_count": 7,
+        "unresolved_group_count": 90,
+        "overlap_count": 22,
+        "identity": {
+          "source_records": 79,
+          "mapped_identities": 79,
+          "crosslisted_aliases": 0,
+          "reviewed_groups": 0
+        },
+        "course_ids": {
+          "required": [
+            "stevens-cs-101",
+            "stevens-cs-115",
+            "stevens-cs-135",
+            "stevens-cs-284",
+            "stevens-cs-334",
+            "stevens-cs-367",
+            "stevens-cs-368",
+            "stevens-cs-385",
+            "stevens-cs-423",
+            "stevens-cs-424",
+            "stevens-cs-456",
+            "stevens-cs-508",
+            "stevens-cs-559",
+            "stevens-cs-583",
+            "stevens-hass-103",
+            "stevens-hass-105",
+            "stevens-ma-121",
+            "stevens-ma-122",
+            "stevens-ma-125",
+            "stevens-ma-126",
+            "stevens-ma-223",
+            "stevens-ma-331",
+            "stevens-mgt-103",
+            "stevens-prv-101"
+          ],
+          "options": [
+            "stevens-bia-665",
+            "stevens-bio-181",
+            "stevens-bio-182",
+            "stevens-ce-240",
+            "stevens-ch-115",
+            "stevens-ch-116",
+            "stevens-ch-117",
+            "stevens-cs-532",
+            "stevens-cs-544",
+            "stevens-cs-545",
+            "stevens-cs-558-cpe-558",
+            "stevens-cs-560",
+            "stevens-cs-582",
+            "stevens-cs-584",
+            "stevens-cs-589",
+            "stevens-en-250",
+            "stevens-hpl-455",
+            "stevens-hssc-371",
+            "stevens-hst-381",
+            "stevens-ma-661",
+            "stevens-me-598",
+            "stevens-nano-200",
+            "stevens-pep-111",
+            "stevens-pep-112",
+            "stevens-pep-221",
+            "stevens-prv-201",
+            "stevens-prv-202",
+            "stevens-prv-203",
+            "stevens-prv-204",
+            "stevens-prv-205"
+          ],
+          "unresolved": [
+            "stevens-clk-183",
+            "stevens-cs-105",
+            "stevens-econ-242",
+            "stevens-econ-243",
+            "stevens-econ-244",
+            "stevens-engr-116",
+            "stevens-har-180",
+            "stevens-har-271",
+            "stevens-hass-101",
+            "stevens-hhs-130",
+            "stevens-hli-220",
+            "stevens-hmu-101",
+            "stevens-hmu-265",
+            "stevens-hmu-450",
+            "stevens-hpl-112",
+            "stevens-hqss-141",
+            "stevens-hqss-175",
+            "stevens-hst-120",
+            "stevens-ma-110",
+            "stevens-ma-111",
+            "stevens-ma-112",
+            "stevens-mgt-372",
+            "stevens-mis-110",
+            "stevens-pep-151",
+            "stevens-qf-102"
+          ]
         }
       },
       "expected_course_ids": {
@@ -14334,9 +14552,13 @@
         {
           "issue": "AP Calculus equivalence rows name SES/QF/QSS or SB/HASS but omit Computing. The new AI degree’s conditional prior-credit route remains unstated.",
           "url": "https://stevens.catalog.prod.coursedog.com/academic-policies-procedures/undergraduate-education/requirements-procedures#advanced-placement"
+        },
+        {
+          "issue": "Unofficial Fall 2026 draft advising plan excludes EN250/CE240/NANO200, whereas actual linked catalog rules permit them. Workday is designated the official record. Governing version and eligibility remain unresolved.",
+          "url": "https://assets.stevens.edu/mviowpldu823/7b2ACb3qhjMicuqbQE9xQt/735e3fc849cb9009e2edd9c7bf92f943/Artificial_Intelligence_26_27.pdf"
         }
       ],
-      "correction_status": "All 79 subject dispositions and the available plan/policy review are complete. Selected Eligibility tabs were read until the exact public human-verification barrier. Three precise access/applicability questions remain. Manual 24/30/25 profiles are unchanged; no full independent certification is claimed.",
+      "correction_status": "All 79 subject dispositions retained. New actual Fall 2026 draft corroborates 24 fixed identities and 22 positive options only within its unofficial advising scope. Catalog option memberships remain attributed claims, explicitly qualified by the three-course eligibility conflict. Manual 24/30/25 profile unchanged; whole-degree review remains blocked.",
       "second_pass_status": "pending"
     },
     {
