@@ -40,3 +40,15 @@ def test_core_competency_description_and_changed_subject_guard():
  assert changed['courses'][0]['credits']==4 and changed['observed_description_digests']!=observed['observed_description_digests']
  with pytest.raises(ValueError):parse(html.replace('Communication','Programming'))
  with pytest.raises(ValueError):parse(html.replace('99-101 Core@CMU','99-102 Core@CMU'))
+
+
+def test_all_source_reviewed_roles_match_manual_sets_and_do_not_promote_preparation():
+ p=json.loads(Path('data/programs/cmu-bs-ai.json').read_text());validate_program(p)
+ ledger=json.loads(Path('research/degree-audit/cmu.json').read_text())['programs'][0]
+ for kind in ['required','options','unresolved']:
+  expected=ledger['expected_profile'][kind];actual=requirement_profile(p)[kind]
+  assert actual['count']==expected['count'] and actual['categories']==expected['categories']
+ assert ledger['expected_course_ids']['unresolved']==['cmu-15-112']
+ assert {'cmu-70-100','cmu-19-440','cmu-17-416'}<=set(ledger['expected_course_ids']['options'])
+ assert ledger['expected_profile']['options']['count']==259
+ assert ledger['status']=='blocked' and ledger['remaining_work']==[]

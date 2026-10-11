@@ -134,6 +134,10 @@ def parse_regulations(html):
         "all courses taken after the first year",
         "eight semesters of full-time enrollment",
         "Higher Level IB exams",
+        "not being used to fulfill a college, school, major or minor requirement",
+        "completed two full semesters",
+        "Vice-Provost for Education",
+        "space-available basis",
     ]:
         if marker not in words:
             raise ValueError("CMU undergraduate regulation changed: " + marker)
@@ -143,7 +147,13 @@ def parse_regulations(html):
             (
                 "university-grading",
                 "Grading and repeated credit",
-                "Pass/no-pass may be elected for a free elective unless disallowed; A–D earns P credit without QPA points. Audit earns no credit. Repeated-course grades all affect QPA, but units count once; repeating a passed course needs dean/department-head approval. Course prerequisites and corequisites must be met.",
+                "A free elective is not simultaneously used for a college, school, major or minor requirement. Pass/no-pass may be elected for a free elective unless disallowed; A–D earns P credit without QPA points. Audit earns no credit. Repeated-course grades all affect QPA, but units count once; repeating a passed course needs dean/department-head approval. Course prerequisites and corequisites must be met.",
+                [],
+            ),
+            (
+                "university-course-access",
+                "Course access and campus transfer",
+                "Primary-major registration has priority. Other-program courses are space-available and not guaranteed; prerequisites and corequisites still apply. Pittsburgh–Doha permanent campus transfer requires good standing, two completed semesters, a compelling rationale and Vice-Provost approval through the exceptional formal process; consult the home associate dean. A Qatar-only pool listing is not permission for an individual to enroll there.",
                 [],
             ),
             (

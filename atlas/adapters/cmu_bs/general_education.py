@@ -116,6 +116,9 @@ def parse(html):
         course_ids=rows(tables[2], "mathematics"),
         summary="These courses supplement eligible departmental offerings; they are options, not additional required courses.",
     )
+    # Explicit approved additions are members of the existing choice pool.
+    # The note explains their source; it does not add a separate selection.
+    science["course_ids"] = rows(tables[2], "mathematics")
     humanities = add(
         "humanities",
         "Humanities/arts distribution",
@@ -210,6 +213,7 @@ def parse(html):
         course_ids=rows(tables[9]),
         summary="Additional eligible options, not mandatory courses. 70-352 requires combination with a 6+ unit humanities/arts course. New DC/CFA/TSB courses require adviser and SCS General Education Committee approval.",
     )
+    electives["course_ids"] = rows(tables[9])
     return {
         "id": PID,
         "curriculum_status": "partial",

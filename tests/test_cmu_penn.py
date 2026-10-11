@@ -612,6 +612,13 @@ def test_cmu_gened_ai_replacement_exclusions_and_writing_choice():
     codes = {c["code"] for c in p["courses"]}
     assert "85-110" in codes and "85-100" not in codes
     assert "03-511" not in codes and "80-210" not in codes
+    groups = {r["id"]: r for r in p["requirements"]}
+    # Approved additions belong to the existing parent choice, not a new
+    # mandatory subgroup and not merely contextual note-only records.
+    assert groups["cmu-bs-ai-gened-science"]["course_ids"] == ["cmu-85-170"]
+    assert groups["cmu-bs-ai-gened-science"]["count"] == 4
+    assert groups["cmu-bs-ai-gened-humanities-electives"]["course_ids"] == ["cmu-70-352"]
+    assert groups["cmu-bs-ai-gened-humanities-electives"]["count"] == 3
     mini = next(r for r in p["requirements"] if r["id"].endswith("writing-minis"))
     assert mini["count"] == 2 and mini["credits"] == 9 and len(mini["course_ids"]) == 3
     parent = next(r for r in p["requirements"] if r["id"] == mini["parent_id"])
