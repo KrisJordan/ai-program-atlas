@@ -106,7 +106,7 @@ DHSS101 and VISL234 combine interpretation with substantial digital/art practice
 and remain mixed. No separate prerequisite statements were present, so null
 remains unknown. The route's required STSO320 is conditional for the AI degree,
 under the same optional-immersion parent; it is not an extra fixed AI core.
-This branch contributes fourteen of the current degree’s 99 identities and 96
+This branch contributes fourteen of the current degree’s 134 identities and 131
 descriptions. The separate
 standalone immersion record was not edited. Source-specific observations reuse
 its actual local-table parser but do not transfer its aims or completeness to
@@ -118,9 +118,7 @@ the host degree. See `research/degree-audit/rit-society-immersion-route.md`.
 All 77 published immersion overviews, current curriculum tables and footnotes
 are now read across coordinated contributions. The exact queue has 1,324
 within-route named references / 787 literal identifiers, including preparation,
-historical substitution and combined-subject notation. Seventy identifiers now
-have actual reviewed descriptions in this degree, three are historical-only,
-and 714 remain unread. Global Experience is an open approval-based nine-credit
+historical substitution and combined-subject notation. There are 105 identifiers with integrated actual descriptions, six separately reviewed contributions, three historical-only references, and 673 unread identifiers. Global Experience is an open approval-based nine-credit
 route; no finite course pool is invented. Current SIS/GE/WI access boundaries
 remain distinct from the accessible public immersion pages.
 
@@ -132,5 +130,12 @@ exclusion, exact individual prerequisites/equivalents and engineering audience
 conditions remain visible. Ten new courses are mathematics; STAT-330 is applied
 data-visualization practice based on its actual description. STAT-325's two WI
 attributes do not imply guaranteed term availability. The mapped graph is now
-23 fixed / 70 options / 6 contextual identities; the whole-degree audit remains
+23 fixed / 98 options / 13 contextual identities; the whole-degree audit remains
 in progress. Research rule evidence is not a completed course-content audit.
+
+
+## Natural-science immersion branches — 2026-10-11
+
+Forty-one complete public course cards were read across biology, physics and chemistry. Thirty-five records now support four additional local branches: Cellular and Molecular Biology, Physics, Astronomy and Chemistry. The graph has 134 identities: 23 fixed, 98 options and 13 preparation/context records; 131 have actual descriptions. Seven newly represented preparation identities stay outside elective and fixed degree counts. Chemistry preparation preserves the whole four-course lecture/lab sequence OR CHMG-131, rather than five independent alternatives.
+
+Individual one-, three- and four-credit cards retain their published amounts. The Cellular Biology and Physics nominal table subtotals do not impose a fabricated exact credit cap on four-credit options. PHYS-315 explicitly permits declared physics-immersion students; additional physics-major-only prerequisites remain conditional. Concurrent chemistry laboratories remain enrollment conditions without recursive expansion into universal AI core. Six additional reviewed cards for Ecology, Quantum and Climate remain contributions outside the mapped branch graph. Full degree status stays in progress because accessible named-course content remains unread and exact GE/WI and source-version boundaries remain.

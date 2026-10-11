@@ -16,7 +16,7 @@ def test_reviewed_catalog_preserves_choices_repeated_coop_and_scope():
  assert len([c for c in d['courses'] if c['source_id']=='rit-ai-bs-rendered-2026-2027'])==40
  assert len([c for c in d['courses'] if c['source_id']=='rit-ai-bs-advising-2026-2027'])==3
  assert sum(c['code']=='IDAI-499' for c in d['courses'])==1
- assert len([r for r in d['requirements'] if r['kind']=='choose_courses' and r['count']==1])==6
+ assert len([r for r in d['requirements'] if r['source_id']=='rit-ai-bs-catalog' and r['kind']=='choose_courses' and r['count']==1])==6
  electives=next(r for r in d['requirements'] if r['id'].endswith('-ai-electives'))
  assert electives['count']==2 and len(electives['course_ids'])==3
  assert any(r['parent_id']==electives['id'] and r['kind']=='alternative' for r in d['requirements'])

@@ -30,3 +30,12 @@ def parse(html, *, url):
     if not courses:raise ValueError('No settled biology cards')
     if len({c['id'] for c in courses})!=len(courses):raise ValueError('Duplicate biology cards')
     return {'id':PID,'courses':courses,'requirements':[],'observed_immersion_tables':observed['observed_tables']}
+
+
+def register(sources, parsers):
+    from functools import partial
+    for slug in ['biology-cellular-and-molecular-immersion']:
+        url = "https://www.rit.edu/study/" + slug
+        if url not in sources:
+            sources.append(url)
+        parsers[url] = partial(parse, url=url)

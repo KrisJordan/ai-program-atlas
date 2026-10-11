@@ -44,3 +44,12 @@ register_society_immersion(SOURCES, SOURCE_PARSERS)
 
 from atlas.adapters.rit_statistics_course_reviews import register as register_statistics_immersion
 register_statistics_immersion(SOURCES, SOURCE_PARSERS)
+
+from atlas.adapters.rit_biology_course_reviews import register as register_biology_immersion
+register_biology_immersion(SOURCES, SOURCE_PARSERS)
+
+from atlas.adapters.rit_physics_course_reviews import register as register_physics_immersion
+register_physics_immersion(SOURCES, SOURCE_PARSERS)
+
+from atlas.adapters.rit_chemistry_course_reviews import register as register_chemistry_immersion
+register_chemistry_immersion(SOURCES, SOURCE_PARSERS)
