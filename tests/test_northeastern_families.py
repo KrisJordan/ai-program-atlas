@@ -100,6 +100,18 @@ def test_reviewed_variant_reconstruction_preserves_entire_original_graph(pid):
         for r in allocations:
             assert r['kind']=='note' and 'complete GE 1110/1111 substitute bundle' in r['summary']
             r['kind']='all';r['summary']='Listed course.'
+    if 'public-health' in pid:
+        # Source publishes one hour per home-aligned pool, not five fixed courses.
+        # Dedicated changed-source tests protect this deliberate ancestry repair.
+        for section,codes in [('introduction-to-college',['cs-1200','hsci-1000','inpr-1000']),('professional-development',['cs-1210','hsci-2000'])]:
+            parent=pid+'-req-'+section;choice=parent+'-rule'
+            condition=next(r for r in rows if r['id']==choice)
+            assert condition['kind']=='choose_credits' and condition['credits']==1
+            condition.update(kind='note',credits=None,summary='Seminar and professional-development choices depend on the home college.')
+            for code in codes:
+                member=next(r for r in rows if r['id']==pid+'-req-'+code)
+                assert member['parent_id']==choice and member['kind']=='all'
+                member['parent_id']=parent
     if 'business-administration' in pid:
         # The reviewed follow-up adds independent concentration-source subtrees
         # and two main-page selection nodes; test those in the concentration suite.

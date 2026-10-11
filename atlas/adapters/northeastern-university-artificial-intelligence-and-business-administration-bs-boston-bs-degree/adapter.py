@@ -81,3 +81,8 @@ SOURCE_PARSERS = {**SOURCE_PARSERS, KHOURY_URL: lambda html: parse_khoury_policy
 from atlas.adapters.northeastern_communication_course_reviews import attach_reviewed_sources
 SOURCE_PARSERS = attach_reviewed_sources(PROGRAM_ID, SOURCE_PARSERS)
 SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + tuple(SOURCE_PARSERS)))
+
+# Exact public-health review composes with, rather than discards, broader metadata.
+from atlas.adapters.northeastern_public_health_course_reviews import attach_reviewed_sources
+SOURCE_PARSERS = attach_reviewed_sources(PROGRAM_ID, SOURCE_PARSERS)
+SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + tuple(SOURCE_PARSERS)))

@@ -676,3 +676,27 @@ def test_finance_observations_retain_concurrent_and_recommended_preparation():
         observed=import_module('atlas.adapters.'+pid+'.adapter').SOURCE_PARSERS['https://catalog.northeastern.edu/course-descriptions/fina/'](source.read_text())
         assert len(observed['courses'])==27
         for c in observed['courses']:assert c=={k:v for k,v in cs[c['code']].items()if k!='category_review'}
+
+
+def test_public_health_manual_profile_and_reciprocal_identity_keep_conditional_loads():
+    from atlas.families import resolve_program
+    from atlas.curriculum_profile import requirement_profile
+    pid='northeastern-university-artificial-intelligence-and-public-health-bs-boston-bs-degree';p=json.loads((ROOT/'data/programs'/f'{pid}.json').read_text());f=json.loads((ROOT/'data/families/northeastern-ai-combined-degrees.json').read_text());r=resolve_program(p,f);profile=requirement_profile(r)
+    assert profile['required']['count']==18 and profile['options']['count']==79
+    assert profile['options']['source_record_count']==80 and profile['unresolved']['count']==0
+    assert len(p['courses'])==98 and all('category_review'in c for c in p['courses'])
+    cs={c['code']:c for c in p['courses']};group=p['course_identity_groups'][0]
+    assert group['canonical_course_id']==cs['INTL 5100']['id']
+    assert set(group['course_ids'])=={cs[c]['id']for c in ['INTL 5100','PPUA 5100']}
+    assert cs['HLTH 5280']['credits'] is None
+    assert cs['ENVR 2502']['credits']==0
+    assert cs['AFCS 3424']['category_review']['status']=='mixed'
+    assert any('3,4' in n or 'three-or-four' in n for n in p['notes'])
+    assert not any(c['code']=='BIOL 1107'for c in p['courses'])
+    for subject,code,other in [('intl','INTL 5100','PPUA 5100'),('ppua','PPUA 5100','INTL 5100')]:
+        path=ROOT/'.cache/research/degree-audit-northeastern'/f'{subject}.html'
+        if path.exists():
+            from bs4 import BeautifulSoup
+            from atlas.adapters.northeastern_courseleaf import clean
+            soup=BeautifulSoup(path.read_text(),'html.parser');block=next(b for b in soup.select('.courseblock')if clean(b.select_one('.courseblocktitle')).startswith(code+'.'))
+            assert 'Cross-listed with '+other in clean(block)
