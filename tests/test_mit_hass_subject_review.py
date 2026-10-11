@@ -215,7 +215,7 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']['description_reviewed_records']==384
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==385
     assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
         o=next(o for o in entry(code)['observations'] if o.get('evidence_basis')=='official_title_only')
@@ -1314,3 +1314,19 @@ def test_actual_archaeology_description_replay_rejects_changed_evidence():
         assert review.matched_review(course,o,e['source_url'],MANIFEST)==e
         for wrong in [{**o,'term':'Fall 2026'},{**o,'description':o['description']+' Changed.'},{**o,'name':'Different course'}]:
             assert review.matched_review(course,wrong,e['source_url'],MANIFEST) is None
+
+
+def test_steam_special_subject_only_upgrades_exact_topic_and_term():
+    report=MANIFEST['ocw_steam_review'];cid=report['upgraded_record_ids'][0]
+    e=MANIFEST['courses'][cid]['observations'][-1]
+    assert e['catalog_year']=='Spring 2024' and e['observed_code']=='CMS.S61'
+    assert e['category']=='applications' and e['prerequisites'] is None and e['credits'] is None
+    assert len(report['unmatched_same_code_records'])==3
+    for other in report['unmatched_same_code_records']:
+        assert not any(o['source_id'] in report['source_ids'] for o in MANIFEST['courses'][other]['observations'])
+    path=Path('/tmp/mit-hass-subjects/ocw-cms-s61-steam-learning-architecture-a-framework-for-educational-innovation-spring-2024-syllabus.html')
+    if not path.exists():pytest.skip('Optional dated STEAM syllabus capture')
+    o=review.observe_ocw_syllabus(path.read_text())[0];row=MANIFEST['courses'][cid]
+    course=dict(id=cid,code=row['listed_code'],name=row['listed_name'],source_id=row['listed_source_id'])
+    assert review.matched_review(course,o,e['source_url'],MANIFEST)==e
+    assert review.matched_review(course,{**o,'term':'Fall 2025'},e['source_url'],MANIFEST) is None
