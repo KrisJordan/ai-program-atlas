@@ -88,6 +88,7 @@ def test_optional_actual_pdf_and_html_replay():
     if not cached.exists():pytest.skip('Ignored source extraction absent')
     p=json.loads((ROOT/'data/programs/ut-austin-cs-ml-ai-concentration.json').read_text())
     r=m.parse_pdf_text(cached.read_text())
-    assert r['courses']==p['courses'] and r['requirements']==p['requirements']
+    assert [(c['id'],c['code'],c['name']) for c in r['courses']]==[(c['id'],c['code'],c['name']) for c in p['courses']]
+    assert r['requirements']==p['requirements']
     directory=Path('/tmp/atlas-ut-concentrations.html')
     if directory.exists():assert m.parse(directory.read_text())['id']==p['id']

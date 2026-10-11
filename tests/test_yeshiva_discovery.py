@@ -55,10 +55,10 @@ def test_reviewed_seed_scope_and_live_replay_if_available():
     validate_program(seed)
     assert seed['award_level']=='concentration' and seed['hosting_unit']=='Yeshiva College'
     assert len(seed['courses'])==22 and seed['curriculum_status']=='partial'
-    assert seed['first_offered'] is None and seed['catalog_year'] is None
+    assert seed['first_offered'] is None and seed['catalog_year']=='2026-2027'
     assert all(o['statement_type']!='learning_outcome' for o in seed['outcomes'])
     cache=ROOT/'.cache/research/yeshiva-cs-ai.html'
     if cache.exists():
         result=mod.parse(cache.read_text())
         assert result['courses']==seed['courses']
-        assert result['requirements']==seed['requirements']
+        assert result['requirements']==seed['requirements'][:1]

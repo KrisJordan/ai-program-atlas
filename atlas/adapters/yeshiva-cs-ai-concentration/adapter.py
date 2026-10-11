@@ -58,3 +58,46 @@ def parse(html):
         raise ValueError('Incomplete, duplicate or inconsistent required-course table')
     requirement = dict(id=PROGRAM_ID+'-required',parent_id=None,title='AI concentration required courses',kind='all',count=None,credits=total,credit_unit='unknown',category='other',source_id=SOURCE_ID,source_text=None,summary=f'Complete the published AI concentration course table ({total} source-stated credits). This includes common CS and mathematics requirements of the host major.',course_ids=[c['id'] for c in courses])
     return dict(id=PROGRAM_ID,title='Artificial Intelligence',award_level='concentration',program_kind='concentration',curriculum_status='partial',courses=courses,requirements=[requirement])
+
+# Human-reviewed summaries are emitted only for the exact scoped source prose.
+# A changed policy must be reviewed; no seed file supplies parser output.
+import hashlib
+import json
+from pathlib import Path
+POLICY_PROFILES = json.loads(Path(__file__).with_name('reviewed-policies.json').read_text())
+FAQ_PROFILES = json.loads(Path(__file__).with_name('reviewed-faq.json').read_text())
+DEPARTMENT = 'https://www.yu.edu/yeshiva-college/ug/computer-science'
+
+def policy_digest(text):
+    return hashlib.sha256(' '.join(text.split()).encode()).hexdigest()
+
+def policy_note(profile):
+    return dict(id=PROGRAM_ID+'-policy-'+profile['id'],parent_id=None,title=profile['title'],kind='note',count=None,credits=None,credit_unit='unknown',category='other',source_id=profile['source_id'],source_text=None,summary=profile['summary'],course_ids=[])
+
+def parse_policy(html, profile):
+    soup=BeautifulSoup(html,'html.parser')
+    for noise in soup.find_all(['nav','footer','script','style']):noise.decompose()
+    main=soup.find(id='main')
+    if main is None or main.find('h1') is None or main.h1.get_text(' ',strip=True)!=profile['heading']:
+        raise ValueError('Wrong undergraduate policy scope')
+    if policy_digest(main.get_text(' ',strip=True))!=profile['sha256']:
+        raise ValueError('Changed policy prose needs review')
+    return dict(id=PROGRAM_ID,requirements=[policy_note(profile)])
+
+def parse_department_policies(html):
+    soup=BeautifulSoup(html,'html.parser')
+    for noise in soup.find_all(['nav','footer','script','style']):noise.decompose()
+    h1=soup.find('h1')
+    if h1 is None or h1.get_text(' ',strip=True)!='Computer Science' or 'Yeshiva College' not in soup.get_text(' ',strip=True):
+        raise ValueError('Wrong Yeshiva College department scope')
+    rules=[]
+    for profile in FAQ_PROFILES:
+        headings=[h for h in soup.find_all('h2') if h.get_text(' ',strip=True)==profile['heading']]
+        if len(headings)!=1 or policy_digest(headings[0].parent.get_text(' ',strip=True))!=profile['sha256']:
+            raise ValueError('Changed department FAQ needs review')
+        rules.append(policy_note(profile))
+    return dict(id=PROGRAM_ID,requirements=rules)
+
+SOURCE_PARSERS = {url:(lambda html,p=profile:parse_policy(html,p)) for url,profile in POLICY_PROFILES.items()}
+SOURCE_PARSERS[DEPARTMENT]=parse_department_policies
+SOURCES = SOURCES + tuple(POLICY_PROFILES) + (DEPARTMENT,)

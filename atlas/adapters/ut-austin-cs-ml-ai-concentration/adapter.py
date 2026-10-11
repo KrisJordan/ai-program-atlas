@@ -101,3 +101,43 @@ def parse_pdf_text(text):
     return dict(id=PROGRAM_ID,title=TITLE,award_level='concentration',program_kind='concentration',curriculum_status='partial',courses=courses,requirements=requirements)
 
 PDF_TEXT_PARSER = parse_pdf_text
+
+import hashlib
+import json
+from pathlib import Path
+COURSES_URL='https://www.cs.utexas.edu/undergraduate/degrees-and-programs/courses'
+CREDIT_URL='https://catalog.utexas.edu/general-information/academic-policies-and-procedures/credit-value-and-course-numbers/'
+ADVISING_URL='https://www.cs.utexas.edu/undergraduate/academic-advising'
+COURSE_PROFILES=json.loads(Path(__file__).with_name('reviewed-courses.json').read_text())
+
+def parse_course_metadata(html, profiles=None):
+    profiles=COURSE_PROFILES if profiles is None else profiles
+    soup=BeautifulSoup(html,'html.parser')
+    for noise in soup.find_all(['nav','footer','script','style','aside']):noise.decompose()
+    main=soup.find('main')
+    if main is None or main.h1 is None or clean(main.h1.get_text())!='Undergraduate Courses':
+        raise ValueError('Wrong UT undergraduate course directory')
+    courses=[]
+    for profile in profiles:
+        headings=[h for h in main.find_all('h4') if clean(h.get_text())==profile['heading']]
+        if len(headings)!=1:
+            raise ValueError('Exact reviewed course heading missing or duplicated')
+        block=headings[0].find_parent(class_='accordion-item')
+        body=block.select_one('.accordion-body') if block else None
+        if body is None or hashlib.sha256(clean(body.get_text(' ',strip=True)).encode()).hexdigest()!=profile['sha256']:
+            raise ValueError('Changed course description or prerequisites need review')
+        courses.append(dict(id=PROGRAM_ID+'-'+slug(profile['code']+' '+profile['name']),code=profile['code'],name=profile['name'],description=profile['description'],prerequisites=profile['prerequisites'],credits=None,credit_unit='unknown',category='ai_ml',source_id=PROGRAM_ID+'-courses',url=COURSES_URL,public_site=None,syllabus=None))
+    return dict(id=PROGRAM_ID,courses=courses)
+
+def parse_credit_policy(html):
+    soup=BeautifulSoup(html,'html.parser');body=soup.find(id='textcontainer')
+    text=clean(body.get_text(' ',strip=True)) if body else ''
+    if hashlib.sha256(text.encode()).hexdigest() != 'cb37de986992537d9837e529f871480c9ec9bb5775ecb2092820f44936eacff6':
+        raise ValueError('Changed credit-numbering policy needs review')
+    if ('Except in the Dell Medical School, the first digit of the course number indicates the credit value of the course in semester hours.' not in text
+        or '301 through 399, a value of three semester hours' not in text):
+        raise ValueError('UT credit-numbering rule changed or missing')
+    return dict(id=PROGRAM_ID,notes=['UT’s published numbering rule assigns three semester hours to courses numbered 301–399. The nine printed concentration routes all use a 3xx code; this does not resolve honors/topic identity or individual prerequisites.'])
+
+SOURCE_PARSERS={COURSES_URL:parse_course_metadata,CREDIT_URL:parse_credit_policy}
+SOURCES=SOURCES+(COURSES_URL,CREDIT_URL,ADVISING_URL)
