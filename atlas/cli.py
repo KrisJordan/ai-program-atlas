@@ -63,6 +63,7 @@ def main(argv=None):
         help="Refresh expired or current cache within robots/rate limits",
     )
     sub.add_parser("status")
+    sub.add_parser("compact", help="Reclaim unused SQLite pages without removing facts or history")
     sub.add_parser("candidates")
     review = sub.add_parser(
         "review", help="Show an extraction candidate against current reviewed fields"
@@ -102,6 +103,10 @@ def main(argv=None):
             return 1 if any(r["status"] != "success" for r in results) else 0
         elif args.command == "status":
             print(json.dumps(db.export_data(conn)["meta"], indent=2))
+        elif args.command == "compact":
+            before = args.db.stat().st_size
+            conn.execute("VACUUM")
+            print(f"Compacted SQLite: {before:,} → {args.db.stat().st_size:,} bytes; facts and history retained")
         elif args.command == "candidates":
             rows = conn.execute(
                 "SELECT id,program_id,source_url,created_at,status FROM extraction_candidates WHERE status='pending' ORDER BY id"

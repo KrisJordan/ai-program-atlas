@@ -22,6 +22,8 @@ ATLAS_REQUIRE_BROWSER=1 uv run pytest -q
 
 `data/atlas.sqlite` is the maintained research database. Migrations live in `atlas/migrations/`; reviewed factual inputs in `data/programs/`, `data/families/`, `data/cohort.json` and `data/surveys/` reconstruct the public snapshot. The database also preserves revisions, refresh runs, source hashes, extraction candidates and manual overrides. Revision payloads use lossless zlib compression; `atlas.db.revision_record(row)` decodes and verifies a row selected from `program_revisions`. Current relational data and program JSON remain directly queryable. Use `--db /tmp/atlas.sqlite` before a subcommand to test a fresh database without altering the maintained copy. Builds read SQLite and make no network requests.
 
+Requirement groups and course links use SQLite composite primary keys without redundant rowid indexes. After large imports or storage migrations, `uv run atlas compact` reclaims unused pages; it does not remove research history or corrections. See [storage validation](research/sqlite-storage-layout.md).
+
 For a local preview:
 
 ```sh
@@ -39,6 +41,7 @@ uv run atlas scrape cmu-bs-ai penn-bse-ai  # Selected adapters
 uv run atlas candidates
 uv run atlas review 1                     # Compare an observed subset to reviewed fields
 uv run atlas status
+uv run atlas compact                      # Reclaim unused pages; retain facts and history
 ```
 
 Refreshes respect robots, bounded retries, Retry-After, per-host pacing, content limits and cache TTL. Crawl intervals up to five minutes are honored in waits of at most 30 seconds each; longer intervals are deferred. A 120-second policy therefore slows retrieval instead of being treated as a denial. No 401/403/paywall bypass is attempted. A source may be manually inspectable while rejecting the unattended fetcher; record this limitation. Raw HTML stays in ignored `.cache/`, outside Git and the public build. Nonzero refresh exit status means at least one source needs review; successful observations are retained.
