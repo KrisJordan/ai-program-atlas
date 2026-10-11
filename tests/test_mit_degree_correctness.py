@@ -19,7 +19,8 @@ def test_exact_fixed_versioned_identities_are_not_merged_with_catalog():
  assert requirement_profile(p)['required']['count']==2
  assert requirement_profile(p)['required']['categories']['foundations']==2
  reviewed=[c for c in p['courses']if c.get('category_review')]
- assert {c['id']for c in reviewed}=={'mit-ai-v2025-6-1010','mit-ai-v2025-6-1210'}
+ assert {'mit-ai-v2025-6-1010','mit-ai-v2025-6-1210'}<={c['id']for c in reviewed}
+ assert all(c['id'].startswith('mit-ai-v2025-')for c in reviewed)
  assert all(c['source_id']=='mit-ai-decision-making-bs-versioned'for c in reviewed)
  duplicates=[c for c in p['courses']if c['code']=='6.1210'and not c['id'].startswith('mit-ai-v2025-')]
  assert duplicates and all('category_review'not in c for c in duplicates)
@@ -31,5 +32,5 @@ def test_optional_versioned_source_replay_observes_no_review_metadata():
  if not path.exists():pytest.skip('Optional ignored source cache absent')
  v=importlib.import_module('atlas.adapters.mit-ai-decision-making-bs.versioned')
  p=v.parse(path.read_text())
- assert len(p['observed_core_description_digests'])==2
+ assert {'mit-ai-v2025-6-1010','mit-ai-v2025-6-1210'}<=set(p['observed_core_description_digests'])
  assert all('category_review'not in c for c in p['courses'])

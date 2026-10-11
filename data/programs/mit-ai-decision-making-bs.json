@@ -13,7 +13,7 @@
   "hosting_unit": "Department of Electrical Engineering and Computer Science",
   "status": "active",
   "first_offered": null,
-  "overview": "Course 6-4 combines AI and decision-making foundations, center requirements and advanced options. Institute rules are mapped alongside an explicit unresolved difference between the unversioned catalog chart and the department’s 6-4_2025 requirements for Fall 2025+ entrants.",
+  "overview": "Course 6-4 combines AI and decision-making foundations, center requirements and advanced options. Institute rules are mapped alongside an explicit unresolved difference between the unversioned catalog chart and the department\u2019s 6-4_2025 requirements for Fall 2025+ entrants.",
   "catalog_year": null,
   "verification_status": "partial",
   "last_verified": "2026-10-10",
@@ -49,7 +49,7 @@
     {
       "id": "mit-ai-decision-making-bs-cim-reference",
       "url": "https://catalog.mit.edu/degree-charts/eecs-subject-groupings/",
-      "title": "EECS Subject Groupings — Communication-Intensive in the Major Subjects",
+      "title": "EECS Subject Groupings \u2014 Communication-Intensive in the Major Subjects",
       "fetched_at": "2026-10-10",
       "source_date": null,
       "catalog_year": null,
@@ -109,7 +109,7 @@
     {
       "id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
-      "title": "Public EECS requirements — 6-4_2025",
+      "title": "Public EECS requirements \u2014 6-4_2025",
       "fetched_at": "2026-10-10",
       "source_date": null,
       "catalog_year": null,
@@ -659,7 +659,7 @@
     {
       "id": "mit-ai-decision-making-bs-hass-architecture-act-page",
       "url": "https://architecture.mit.edu/art-culture-technology",
-      "title": "Optional HASS field: Art, Culture and Technology — webpage reference",
+      "title": "Optional HASS field: Art, Culture and Technology \u2014 webpage reference",
       "fetched_at": "2026-10-11T01:05:06+00:00",
       "source_date": null,
       "catalog_year": null,
@@ -799,7 +799,7 @@
     {
       "id": "mit-ai-decision-making-bs-hass-mta-browser-migration",
       "url": "https://mta.mit.edu/robots.txt/",
-      "title": "MIT Music and Theater Arts Section — migration notice",
+      "title": "MIT Music and Theater Arts Section \u2014 migration notice",
       "fetched_at": "2026-10-11T02:02:14.648447+00:00",
       "source_date": null,
       "catalog_year": null,
@@ -829,7 +829,7 @@
     {
       "id": "mit-ai-decision-making-bs-hass-music-current",
       "url": "https://music.mit.edu/program/degree-requirements/",
-      "title": "Music degree requirements — concentration tab",
+      "title": "Music degree requirements \u2014 concentration tab",
       "fetched_at": "2026-10-11T02:32:14+00:00",
       "source_date": null,
       "catalog_year": null,
@@ -839,7 +839,7 @@
     {
       "id": "mit-ai-decision-making-bs-hass-theater-current",
       "url": "https://theater.mit.edu/program/degree-requirements/",
-      "title": "Theater Arts degree requirements — concentration tab",
+      "title": "Theater Arts degree requirements \u2014 concentration tab",
       "fetched_at": "2026-10-11T02:32:24+00:00",
       "source_date": null,
       "catalog_year": null,
@@ -2023,15 +2023,29 @@
       "id": "mit-ai-v2025-18-404",
       "code": "18.404",
       "name": "Theory of Computation",
-      "description": null,
+      "description": "Computability and computational complexity characterize what problems computers can solve.",
       "prerequisites": "Prereqs: 6.1200 or 18.200",
       "credits": null,
       "credit_unit": "units",
-      "category": "other",
+      "category": "foundations",
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "18.404 exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "Computability and computational complexity characterize what problems computers can solve.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-6-3020",
@@ -2345,99 +2359,197 @@
       "id": "mit-ai-v2025-6-1800",
       "code": "6.1800",
       "name": "Computer Systems Engineering",
-      "description": null,
+      "description": "Software/hardware system architecture, networks, concurrency and fault tolerance are central.",
       "prerequisites": "Prereqs: 6.1910",
       "credits": null,
       "credit_unit": "units",
-      "category": "other",
+      "category": "systems",
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "6.1800 exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "Software/hardware system architecture, networks, concurrency and fault tolerance are central.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-6-1850",
       "code": "6.1850",
       "name": "Computer Systems and Society",
-      "description": null,
+      "description": "Ethical and social analysis evaluates computing design decisions and power structures.",
       "prerequisites": "Prereqs: 6.1800",
       "credits": null,
       "credit_unit": "units",
-      "category": "other",
+      "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "6.1850 exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "Ethical and social analysis evaluates computing design decisions and power structures.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-6-2040",
       "code": "6.2040",
       "name": "Analog Electronics Laboratory",
-      "description": null,
+      "description": "Analog circuit design and laboratory electronic devices are central.",
       "prerequisites": "Prereqs: 6.2000",
       "credits": null,
       "credit_unit": "units",
-      "category": "other",
+      "category": "applications",
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "6.2040 exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "Analog circuit design and laboratory electronic devices are central.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-6-2050",
       "code": "6.2050",
       "name": "Digital Systems Laboratory",
-      "description": null,
+      "description": "Digital hardware logic and FPGA-based system design are central.",
       "prerequisites": "Prereqs: 6.1910 or permission of instructor",
       "credits": null,
       "credit_unit": "units",
-      "category": "other",
+      "category": "systems",
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "6.2050 exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "Digital hardware logic and FPGA-based system design are central.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-6-2060",
       "code": "6.2060",
       "name": "Microcomputer Project Laboratory",
-      "description": null,
+      "description": "Embedded computing-system construction and interfaces are central.",
       "prerequisites": "Prereqs: 6.1910, 6.2000, or 6.3000",
       "credits": null,
       "credit_unit": "units",
-      "category": "other",
+      "category": "systems",
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "6.2060 exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "Embedded computing-system construction and interfaces are central.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-6-2061",
       "code": "6.2061",
       "name": "Microcomputer Project Laboratory - Independent Inquiry",
-      "description": null,
+      "description": "Embedded computing-system construction and interfaces are central, with expanded independent inquiry.",
       "prerequisites": "Prereqs: 6.1910, 6.2000, or 6.3000",
       "credits": null,
       "credit_unit": "units",
-      "category": "other",
+      "category": "systems",
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "6.2061 exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "Embedded computing-system construction and interfaces are central, with expanded independent inquiry.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-6-2220",
       "code": "6.2220",
       "name": "Power Electronics Laboratory",
-      "description": null,
+      "description": "Power electronics, motor drives and electric-machine laboratory practice are central.",
       "prerequisites": "Prereqs: 6.2000 or 6.3100",
       "credits": null,
       "credit_unit": "units",
-      "category": "other",
+      "category": "applications",
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "6.2220 exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "Power electronics, motor drives and electric-machine laboratory practice are central.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-6-2221",
@@ -2569,29 +2681,57 @@
       "id": "mit-ai-v2025-6-1220",
       "code": "6.1220",
       "name": "Design and Analysis of Algorithms",
-      "description": null,
+      "description": "Design and analysis of efficient algorithms and data structures are central.",
       "prerequisites": "Prereqs: 6.1200 and 6.1210",
       "credits": null,
       "credit_unit": "units",
-      "category": "other",
+      "category": "foundations",
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "6.1220 exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "Design and analysis of efficient algorithms and data structures are central.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-6-1400",
       "code": "6.1400",
       "name": "Computability and Complexity Theory",
-      "description": null,
+      "description": "Computability and complexity classify computational tasks and efficient computation.",
       "prerequisites": "Prereqs: (6.1200 and 6.1210) or permission of instructor",
       "credits": null,
       "credit_unit": "units",
-      "category": "other",
+      "category": "foundations",
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "6.1400 exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "Computability and complexity classify computational tasks and efficient computation.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-6-4400",
@@ -2695,119 +2835,231 @@
       "id": "mit-ai-v2025-18-03",
       "code": "18.03",
       "name": "Differential Equations",
-      "description": null,
+      "description": "Differential equations, linear systems and analytical solution methods are central.",
       "prerequisites": "Prereqs/[Coreqs]: [GIR:CAL2]",
       "credits": null,
       "credit_unit": "units",
-      "category": "other",
+      "category": "mathematics",
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "18.03 exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "Differential equations, linear systems and analytical solution methods are central.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-18-032",
       "code": "18.032",
       "name": "Differential Equations",
-      "description": null,
+      "description": "Theoretical differential equations with proofs of existence and uniqueness are central.",
       "prerequisites": "Prereqs/[Coreqs]: [GIR:CAL2]",
       "credits": null,
       "credit_unit": "units",
-      "category": "other",
+      "category": "mathematics",
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "18.032 exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "Theoretical differential equations with proofs of existence and uniqueness are central.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-18-05",
       "code": "18.05",
       "name": "Introduction to Probability and Statistics",
-      "description": null,
+      "description": "Probability, Bayesian inference and frequentist statistical methods are central.",
       "prerequisites": "Prereqs: GIR:CAL2",
       "credits": null,
       "credit_unit": "units",
-      "category": "other",
+      "category": "mathematics",
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "18.05 exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "Probability, Bayesian inference and frequentist statistical methods are central.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-18-06",
       "code": "18.06",
       "name": "Linear Algebra",
-      "description": null,
+      "description": "Matrix theory and linear algebra are central.",
       "prerequisites": "Prereqs: GIR:CAL2",
       "credits": null,
       "credit_unit": "units",
-      "category": "other",
+      "category": "mathematics",
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "18.06 exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "Matrix theory and linear algebra are central.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-18-600",
       "code": "18.600",
       "name": "Probability and Random Variables",
-      "description": null,
+      "description": "Probability spaces, distributions and limit theorems are central.",
       "prerequisites": "Prereqs: GIR:CAL2",
       "credits": null,
       "credit_unit": "units",
-      "category": "other",
+      "category": "mathematics",
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "18.600 exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "Probability spaces, distributions and limit theorems are central.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-18-c06",
       "code": "18.C06",
       "name": "Linear Algebra and Optimization",
-      "description": null,
+      "description": "Linear algebra and mathematical optimization are central.",
       "prerequisites": "Prereqs: GIR:CAL2",
       "credits": null,
       "credit_unit": "units",
-      "category": "other",
+      "category": "mathematics",
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "18.C06 exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "Linear algebra and mathematical optimization are central.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-6-1000",
       "code": "6.1000",
       "name": "Introduction to Programming and Computer Science",
-      "description": null,
+      "description": "Programming concepts, algorithms and computational problem solving in Python are central.",
       "prerequisites": "Prereqs: none",
       "credits": null,
       "credit_unit": "units",
-      "category": "other",
+      "category": "foundations",
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "6.1000 exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "Programming concepts, algorithms and computational problem solving in Python are central.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-6-100a",
       "code": "6.100A",
       "name": "Introduction to Computer Science Programming in Python",
-      "description": null,
+      "description": "Basic programming, algorithms, data structures and debugging are central.",
       "prerequisites": "Prereqs: none",
       "credits": null,
       "credit_unit": "units",
-      "category": "other",
+      "category": "foundations",
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "6.100A exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "Basic programming, algorithms, data structures and debugging are central.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-16-c20",
       "code": "16.C20",
       "name": "Introduction to Computational Science and Engineering",
-      "description": null,
+      "description": "Computational algorithms and mathematical modeling, optimization and uncertainty methods are jointly central.",
       "prerequisites": "Prereqs/[Coreqs]: 6.100A; [8.01 and 18.01]",
       "credits": null,
       "credit_unit": "units",
@@ -2815,13 +3067,30 @@
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "16.C20 exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "Computational algorithms and mathematical modeling, optimization and uncertainty methods are jointly central.",
+        "candidate_categories": [
+          "foundations",
+          "mathematics"
+        ]
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-18-c20",
       "code": "18.C20",
       "name": "Introduction to Computational Science and Engineering",
-      "description": null,
+      "description": "Computational algorithms and mathematical modeling, optimization and uncertainty methods are jointly central.",
       "prerequisites": "Prereqs/[Coreqs]: 6.100A; [8.01 and 18.01]",
       "credits": null,
       "credit_unit": "units",
@@ -2829,13 +3098,30 @@
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "18.C20 exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "Computational algorithms and mathematical modeling, optimization and uncertainty methods are jointly central.",
+        "candidate_categories": [
+          "foundations",
+          "mathematics"
+        ]
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-6-100b",
       "code": "6.100B",
       "name": "Introduction to Computational Thinking and Data Science",
-      "description": null,
+      "description": "Computational model construction combines programming methods, optimization and statistical simulation without one clear taxonomy focus.",
       "prerequisites": "Prereqs: 6.100A or permission of instructor",
       "credits": null,
       "credit_unit": "units",
@@ -2843,7 +3129,24 @@
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "6.100B exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "Computational model construction combines programming methods, optimization and statistical simulation without one clear taxonomy focus.",
+        "candidate_categories": [
+          "foundations",
+          "mathematics"
+        ]
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-6-1010",
@@ -2888,35 +3191,63 @@
       "id": "mit-ai-v2025-6-1020",
       "code": "6.1020",
       "name": "Software Construction",
-      "description": null,
+      "description": "Software construction, specifications, testing and abstractions are central.",
       "prerequisites": "Prereqs: 6.1010",
       "credits": null,
       "credit_unit": "units",
-      "category": "other",
+      "category": "foundations",
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "6.1020 exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "Software construction, specifications, testing and abstractions are central.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-6-1040",
       "code": "6.1040",
       "name": "Software Design",
-      "description": null,
+      "description": "Design and construction of complex software applications are central; human-centered and ethical considerations support the software-design practice.",
       "prerequisites": "Prereqs: 6.1020 and 6.1200",
       "credits": null,
       "credit_unit": "units",
-      "category": "other",
+      "category": "foundations",
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "6.1040 exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "Design and construction of complex software applications are central; human-centered and ethical considerations support the software-design practice.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-6-1060",
       "code": "6.1060",
       "name": "Software Performance Engineering",
-      "description": null,
+      "description": "Algorithmic software optimization and hardware-aware performance engineering are jointly central.",
       "prerequisites": "Prereqs: 6.1020, 6.1210, and 6.1910",
       "credits": null,
       "credit_unit": "units",
@@ -2924,49 +3255,108 @@
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "6.1060 exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "Algorithmic software optimization and hardware-aware performance engineering are jointly central.",
+        "candidate_categories": [
+          "foundations",
+          "systems"
+        ]
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-6-1100",
       "code": "6.1100",
       "name": "Computer Language Engineering",
-      "description": null,
+      "description": "Compiler construction and implementation of programming languages are foundational software methods.",
       "prerequisites": "Prereqs: 6.1020 and 6.1910",
       "credits": null,
       "credit_unit": "units",
-      "category": "other",
+      "category": "foundations",
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "6.1100 exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "Compiler construction and implementation of programming languages are foundational software methods.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-6-1120",
       "code": "6.1120",
       "name": "Dynamic Computer Language Engineering",
-      "description": null,
+      "description": "Language implementation, interpretation and runtime construction are foundational software methods.",
       "prerequisites": "Prereqs: 6.1020 or 6.1910",
       "credits": null,
       "credit_unit": "units",
-      "category": "other",
+      "category": "foundations",
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "6.1120 exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "Language implementation, interpretation and runtime construction are foundational software methods.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-6-1200",
       "code": "6.1200",
       "name": "Mathematics for Computer Science",
-      "description": null,
+      "description": "Discrete mathematical tools, proof techniques, counting and probability are central.",
       "prerequisites": "Prereqs: GIR:CAL1",
       "credits": null,
       "credit_unit": "units",
-      "category": "other",
+      "category": "mathematics",
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "6.1200 exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "Discrete mathematical tools, proof techniques, counting and probability are central.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-6-1210",
@@ -2997,197 +3387,393 @@
       "id": "mit-ai-v2025-6-1420",
       "code": "6.1420",
       "name": "Fixed Parameter and Fine-grained Computation",
-      "description": null,
+      "description": "Parameterized algorithms and fine-grained computational complexity are central.",
       "prerequisites": "Prereqs: 6.1200, 6.1210, and (6.1220, 6.1400, or 18.404)",
       "credits": null,
       "credit_unit": "units",
-      "category": "other",
+      "category": "foundations",
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "6.1420 exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "Parameterized algorithms and fine-grained computational complexity are central.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-6-1600",
       "code": "6.1600",
       "name": "Foundations of Computer Security",
-      "description": null,
+      "description": "Computer-system security combines cryptographic tools, isolation and implementation defenses.",
       "prerequisites": "Prereqs: (6.1210 and (6.1800 or 6.1810)) or permission of instructor",
       "credits": null,
       "credit_unit": "units",
-      "category": "other",
+      "category": "systems",
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "6.1600 exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "Computer-system security combines cryptographic tools, isolation and implementation defenses.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-6-1810",
       "code": "6.1810",
       "name": "Operating System Engineering",
-      "description": null,
+      "description": "Operating-system implementation, memory, files, processes and kernels are central.",
       "prerequisites": "Prereqs: 6.1910",
       "credits": null,
       "credit_unit": "units",
-      "category": "other",
+      "category": "systems",
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "6.1810 exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "Operating-system implementation, memory, files, processes and kernels are central.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-6-1820",
       "code": "6.1820",
       "name": "Mobile and Sensor Computing",
-      "description": null,
+      "description": "Mobile and sensor computing infrastructure, architectures and communications are central.",
       "prerequisites": "Prereqs: 6.1800 or permission of instructor",
       "credits": null,
       "credit_unit": "units",
-      "category": "other",
+      "category": "systems",
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "6.1820 exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "Mobile and sensor computing infrastructure, architectures and communications are central.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-6-1852",
       "code": "6.1852",
       "name": "Computer Systems and Society",
-      "description": null,
+      "description": "Ethical and social analysis evaluates computing design decisions and power structures.",
       "prerequisites": "Prereqs: 6.1800",
       "credits": null,
       "credit_unit": "units",
-      "category": "other",
+      "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "6.1852 exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "Ethical and social analysis evaluates computing design decisions and power structures.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-6-1910",
       "code": "6.1910",
       "name": "Computation Structures",
-      "description": null,
+      "description": "Digital systems and computer architecture are central.",
       "prerequisites": "Prereqs: (GIR:PHY2, 6.100A, and (6.1903 or 6.1904)) or permission of instructor",
       "credits": null,
       "credit_unit": "units",
-      "category": "other",
+      "category": "systems",
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "6.1910 exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "Digital systems and computer architecture are central.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-6-1920",
       "code": "6.1920",
       "name": "Constructive Computer Architecture",
-      "description": null,
+      "description": "Microarchitecture, caches, memory and multicore hardware construction are central.",
       "prerequisites": "Prereqs: 6.1910",
       "credits": null,
       "credit_unit": "units",
-      "category": "other",
+      "category": "systems",
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "6.1920 exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "Microarchitecture, caches, memory and multicore hardware construction are central.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-6-2000",
       "code": "6.2000",
       "name": "Electrical Circuits: Modeling and Design of Physical Systems",
-      "description": null,
+      "description": "Electrical circuits and physical-system modeling are the applied engineering domain.",
       "prerequisites": "Prereqs: GIR:PHY2",
       "credits": null,
       "credit_unit": "units",
-      "category": "other",
+      "category": "applications",
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "6.2000 exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "Electrical circuits and physical-system modeling are the applied engineering domain.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-6-2080",
       "code": "6.2080",
       "name": "Semiconductor Electronic Circuits",
-      "description": null,
+      "description": "Semiconductor devices and analog circuit design are central.",
       "prerequisites": "Prereqs: 6.2000",
       "credits": null,
       "credit_unit": "units",
-      "category": "other",
+      "category": "applications",
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "6.2080 exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "Semiconductor devices and analog circuit design are central.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-6-2090",
       "code": "6.2090",
       "name": "Solid-State Circuits",
-      "description": null,
+      "description": "Analog solid-state circuit analysis and design are central.",
       "prerequisites": "Prereqs: 6.2040, 6.2080, or permission of instructor",
       "credits": null,
       "credit_unit": "units",
-      "category": "other",
+      "category": "applications",
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "6.2090 exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "Analog solid-state circuit analysis and design are central.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-6-2092",
       "code": "6.2092",
       "name": "Solid-State Circuits",
-      "description": null,
+      "description": "Analog solid-state circuit analysis and design are central.",
       "prerequisites": "Prereqs: 6.2040, 6.2080, or permission of instructor",
       "credits": null,
       "credit_unit": "units",
-      "category": "other",
+      "category": "applications",
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "6.2092 exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "Analog solid-state circuit analysis and design are central.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-6-2200",
       "code": "6.2200",
       "name": "Electric Energy Systems",
-      "description": null,
+      "description": "Electrical power generation, delivery and energy-system engineering are central.",
       "prerequisites": "Prereqs: 6.2000",
       "credits": null,
       "credit_unit": "units",
-      "category": "other",
+      "category": "applications",
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "6.2200 exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "Electrical power generation, delivery and energy-system engineering are central.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-6-2202",
       "code": "6.2202",
       "name": "Electric Energy Systems",
-      "description": null,
+      "description": "Electrical power generation, delivery and energy-system engineering are central.",
       "prerequisites": "Prereqs: 6.2000",
       "credits": null,
       "credit_unit": "units",
-      "category": "other",
+      "category": "applications",
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "6.2202 exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "Electrical power generation, delivery and energy-system engineering are central.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-6-2210",
       "code": "6.2210",
       "name": "Electromagnetic Fields, Forces and Motion",
-      "description": null,
+      "description": "Electromagnetic fields, energy conversion and physical engineering devices are central.",
       "prerequisites": "Prereqs: GIR:PHY2 and 18.03",
       "credits": null,
       "credit_unit": "units",
-      "category": "other",
+      "category": "applications",
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "6.2210 exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "Electromagnetic fields, energy conversion and physical engineering devices are central.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-6-2300",
@@ -5209,15 +5795,29 @@
       "id": "mit-ai-v2025-16-420",
       "code": "16.420",
       "name": "Planning Under Uncertainty",
-      "description": null,
+      "description": "Planning algorithms under uncertainty, partial observability and reinforcement learning are central.",
       "prerequisites": "Prereqs: 16.413",
       "credits": null,
       "credit_unit": "units",
-      "category": "other",
+      "category": "ai_ml",
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "16.420 exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "Planning algorithms under uncertainty, partial observability and reinforcement learning are central.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-21m-589",
@@ -5231,7 +5831,21 @@
       "source_id": "mit-ai-decision-making-bs-versioned",
       "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-versioned"
+        ],
+        "locator": "21M.589 exact6-4_2025 annotated subject; lists labeledFall2026",
+        "rationale": "This exact versioned entry has no subject annotation; no description or category is inferred from its code or list membership.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "This review applies only to the exact versioned source occurrence. Annotation unit triplets remain unconverted; no current offering or automatic equivalence with another source view is inferred."
+      ]
     },
     {
       "id": "mit-ai-v2025-6-2532",
@@ -8904,7 +9518,7 @@
     {
       "id": "mit-ai-hass-asian-and-asian-diaspora-studies-21h-351j",
       "code": "21H.351J [11.153]",
-      "name": "Shanghai and China’s Modernization",
+      "name": "Shanghai and China\u2019s Modernization",
       "description": null,
       "prerequisites": null,
       "credits": null,
@@ -9450,7 +10064,7 @@
     {
       "id": "mit-ai-hass-latin-american-and-latino-a-studies-21h-173",
       "code": "21H.173",
-      "name": "Socialism in Latin America, from Che Guevara to Hugo Chávez",
+      "name": "Socialism in Latin America, from Che Guevara to Hugo Ch\u00e1vez",
       "description": null,
       "prerequisites": null,
       "credits": null,
@@ -9954,7 +10568,7 @@
     {
       "id": "mit-ai-hass-latin-american-and-latino-a-studies-21l-640j",
       "code": "21L.640J [21G.740]",
-      "name": "The New Spain: 1977 – Present",
+      "name": "The New Spain: 1977 \u2013 Present",
       "description": null,
       "prerequisites": null,
       "credits": null,
@@ -10850,7 +11464,7 @@
     {
       "id": "mit-ai-hass-russian-and-eurasian-studies-17-569",
       "code": "17.569",
-      "name": "Russia’s Foreign Policy: Toward the Post-Soviet States and Beyond",
+      "name": "Russia\u2019s Foreign Policy: Toward the Post-Soviet States and Beyond",
       "description": null,
       "prerequisites": null,
       "credits": null,
@@ -10892,7 +11506,7 @@
     {
       "id": "mit-ai-hass-russian-and-eurasian-studies-21g-600",
       "code": "21G.600",
-      "name": "Russian I (Intensive – offered over IAP)",
+      "name": "Russian I (Intensive \u2013 offered over IAP)",
       "description": null,
       "prerequisites": null,
       "credits": null,
@@ -10906,7 +11520,7 @@
     {
       "id": "mit-ai-hass-russian-and-eurasian-studies-21g-611",
       "code": "21G.611",
-      "name": "Russian I (Hybrid – offered in Fall)",
+      "name": "Russian I (Hybrid \u2013 offered in Fall)",
       "description": null,
       "prerequisites": null,
       "credits": null,
@@ -18191,7 +18805,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-identity",
       "source_text": null,
-      "summary": "Select one of the listed application CI-M subjects; the chart gives a 12–15-unit range.",
+      "summary": "Select one of the listed application CI-M subjects; the chart gives a 12\u201315-unit range.",
       "course_ids": []
     },
     {
@@ -18283,7 +18897,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-identity",
       "source_text": null,
-      "summary": "Choose one listed advanced subject; the chart gives 12–15 units for this slot.",
+      "summary": "Choose one listed advanced subject; the chart gives 12\u201315 units for this slot.",
       "course_ids": [
         "mit-ai-6-3020-j",
         "mit-ai-6-3730-j",
@@ -18334,7 +18948,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-identity",
       "source_text": null,
-      "summary": "The unversioned chart permits one subject satisfying a Course 6 or Course 18 degree requirement, with a 12–15-unit slot. This is a published eligibility criterion. The department’s 6-4_2025 version separately specifies named EECS/graduate pools and an open MATH criterion; the two source scopes are not silently equated.",
+      "summary": "The unversioned chart permits one subject satisfying a Course 6 or Course 18 degree requirement, with a 12\u201315-unit slot. This is a published eligibility criterion. The department\u2019s 6-4_2025 version separately specifies named EECS/graduate pools and an open MATH criterion; the two source scopes are not silently equated.",
       "course_ids": []
     },
     {
@@ -18348,7 +18962,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-identity",
       "source_text": null,
-      "summary": "The unversioned chart requires a second CI-M subject beyond the application choice. A named CIM2 pool has now been verified for the department’s explicit 6-4_2025 version; applicability differences between that version and the catalog chart remain unresolved.",
+      "summary": "The unversioned chart requires a second CI-M subject beyond the application choice. A named CIM2 pool has now been verified for the department\u2019s explicit 6-4_2025 version; applicability differences between that version and the catalog chart remain unresolved.",
       "course_ids": []
     },
     {
@@ -18404,7 +19018,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-identity",
       "source_text": null,
-      "summary": "The chart reports 168–177 major units, 36 major units also satisfying GIRs, and 180–189 units beyond the GIRs. Units for any of the 17 GIR subjects cannot also count toward units required beyond the GIRs. Ranges are preserved, not replaced with a fabricated single total.",
+      "summary": "The chart reports 168\u2013177 major units, 36 major units also satisfying GIRs, and 180\u2013189 units beyond the GIRs. Units for any of the 17 GIR subjects cannot also count toward units required beyond the GIRs. Ranges are preserved, not replaced with a fabricated single total.",
       "course_ids": []
     },
     {
@@ -18610,7 +19224,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-gir",
       "source_text": null,
-      "summary": "Complete two REST-designated subjects, ordinarily no more than one from the student’s department; jointly offered J subjects are exempt from that departmental limit. Departmental degree subjects may simultaneously satisfy REST. Course 6-4 identifies 6.1200[J] and 18.C06[J] as its normal route; substitutions require review.",
+      "summary": "Complete two REST-designated subjects, ordinarily no more than one from the student\u2019s department; jointly offered J subjects are exempt from that departmental limit. Departmental degree subjects may simultaneously satisfy REST. Course 6-4 identifies 6.1200[J] and 18.C06[J] as its normal route; substitutions require review.",
       "course_ids": []
     },
     {
@@ -18776,7 +19390,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-grades",
       "source_text": null,
-      "summary": "D is generally passing, but a department may require additional work or repetition before the next subject. Authorized P corresponds to A–C performance; first-year DN/FN do not earn credit. Exact first-year and flexible P/NR eligibility remains subject to separate policy review.",
+      "summary": "D is generally passing, but a department may require additional work or repetition before the next subject. Authorized P corresponds to A\u2013C performance; first-year DN/FN do not earn credit. Exact first-year and flexible P/NR eligibility remains subject to separate policy review.",
       "course_ids": []
     },
     {
@@ -18832,7 +19446,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-petitions",
       "source_text": null,
-      "summary": "Discuss a proposed substitution with the advisor, then submit a departmental petition for advisor comments and department action. Decisions are individual, never automatically guaranteed by another student’s approval. Submit early, including before taking a proposed substitute, rather than waiting until the final semester. The student-specific audit is restricted to current EECS students and is not part of this public-source inventory.",
+      "summary": "Discuss a proposed substitution with the advisor, then submit a departmental petition for advisor comments and department action. Decisions are individual, never automatically guaranteed by another student\u2019s approval. Submit early, including before taking a proposed substitute, rather than waiting until the final semester. The student-specific audit is restricted to current EECS students and is not part of this public-source inventory.",
       "course_ids": []
     },
     {
@@ -27391,7 +28005,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-registrar-transfer",
       "source_text": null,
-      "summary": "Department examiners decide equivalence, elective credit and any minimum grade; consult before external enrollment and provide an official transcript. Transfer credit uses S, counts toward approved requirements and does not enter GPA. Work used for another institution’s awarded degree cannot transfer. HASS and CI require additional approval.",
+      "summary": "Department examiners decide equivalence, elective credit and any minimum grade; consult before external enrollment and provide an official transcript. Transfer credit uses S, counts toward approved requirements and does not enter GPA. Work used for another institution\u2019s awarded degree cannot transfer. HASS and CI require additional approval.",
       "course_ids": []
     },
     {
@@ -27578,7 +28192,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-entrance-international",
       "source_text": null,
-      "summary": "Within the Fall-2026-entry policy gateway, A-level Mathematics/Physics A* or A earn 18.01/8.01; higher-level IB Mathematics/Physics 7 earn those respective subjects. Pre-U Physics D1/D2/D3 earns 8.01, while Pre-U Mathematics/Further Mathematics earns none. French Baccalaureate Mathematics/Physics 16–20 and Abitur Mathematics/Physics 13–15 earn 18.01/8.01 respectively. Unlisted examinations require departmental review.",
+      "summary": "Within the Fall-2026-entry policy gateway, A-level Mathematics/Physics A* or A earn 18.01/8.01; higher-level IB Mathematics/Physics 7 earn those respective subjects. Pre-U Physics D1/D2/D3 earns 8.01, while Pre-U Mathematics/Further Mathematics earns none. French Baccalaureate Mathematics/Physics 16\u201320 and Abitur Mathematics/Physics 13\u201315 earn 18.01/8.01 respectively. Unlisted examinations require departmental review.",
       "course_ids": []
     },
     {
@@ -27592,7 +28206,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-entrance-international",
       "source_text": null,
-      "summary": "The listed qualifying humanities/arts/social-science international exams earn nine unrestricted elective units: A-level A*/A, higher-level IB 7, Pre-U D1–D3, French Baccalaureate 16–20 or Abitur 13–15. Geography A*/A is listed for three unrestricted units in A-level and Pre-U sections. The source denies Biology/Chemistry credit across its listed systems and specified A-level CS/IB ITGS credit. Final degree credit needs official final certification (or electronically released IB results), not preliminary results alone. The gateway limits these policies to its entrant cohort.",
+      "summary": "The listed qualifying humanities/arts/social-science international exams earn nine unrestricted elective units: A-level A*/A, higher-level IB 7, Pre-U D1\u2013D3, French Baccalaureate 16\u201320 or Abitur 13\u201315. Geography A*/A is listed for three unrestricted units in A-level and Pre-U sections. The source denies Biology/Chemistry credit across its listed systems and specified A-level CS/IB ITGS credit. Final degree credit needs official final certification (or electronically released IB results), not preliminary results alone. The gateway limits these policies to its entrant cohort.",
       "course_ids": []
     },
     {
@@ -28030,7 +28644,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-american-studies",
       "source_text": null,
-      "summary": "Overlay within the four-subject plan, subject to the source’s permitted variances and advisor-approved additional subjects.",
+      "summary": "Overlay within the four-subject plan, subject to the source\u2019s permitted variances and advisor-approved additional subjects.",
       "course_ids": [
         "mit-ai-hass-american-studies-11-013j",
         "mit-ai-hass-american-studies-17-28j",
@@ -28073,7 +28687,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-american-studies",
       "source_text": null,
-      "summary": "Overlay within the four-subject plan, subject to the source’s permitted variances and advisor-approved additional subjects.",
+      "summary": "Overlay within the four-subject plan, subject to the source\u2019s permitted variances and advisor-approved additional subjects.",
       "course_ids": [
         "mit-ai-hass-american-studies-21l-006",
         "mit-ai-hass-american-studies-21l-432j",
@@ -28277,7 +28891,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-ancient-and-medieval-studies",
       "source_text": null,
-      "summary": "Consult the concentration advisor. The published list is not exhaustive; relevant former offerings and variable-topic courses may count at the advisor’s discretion.",
+      "summary": "Consult the concentration advisor. The published list is not exhaustive; relevant former offerings and variable-topic courses may count at the advisor\u2019s discretion.",
       "course_ids": []
     },
     {
@@ -28771,7 +29385,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-latin-american-and-latino-a-studies",
       "source_text": null,
-      "summary": "Choose four subjects with no more than two in a single discipline and no more than one on the Iberian Peninsula; an Iberian subject is optional. At least three must be MIT subjects. The source’s multi-discipline display groups are not themselves single disciplines. At most one subject may also satisfy HASS Distribution.",
+      "summary": "Choose four subjects with no more than two in a single discipline and no more than one on the Iberian Peninsula; an Iberian subject is optional. At least three must be MIT subjects. The source\u2019s multi-discipline display groups are not themselves single disciplines. At most one subject may also satisfy HASS Distribution.",
       "course_ids": []
     },
     {
@@ -28785,7 +29399,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-latin-american-and-latino-a-studies",
       "source_text": null,
-      "summary": "Harvard or Wellesley coursework needs concentration-advisor permission before registration. The published list is nonexhaustive; relevant former offerings and variable topics may count at the advisor’s discretion.",
+      "summary": "Harvard or Wellesley coursework needs concentration-advisor permission before registration. The published list is nonexhaustive; relevant former offerings and variable topics may count at the advisor\u2019s discretion.",
       "course_ids": []
     },
     {
@@ -28925,7 +29539,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-legal-studies",
       "source_text": null,
-      "summary": "Harvard or Wellesley subjects require advisor permission; relevant former offerings and variable-topic subjects may count at the advisor’s discretion.",
+      "summary": "Harvard or Wellesley subjects require advisor permission; relevant former offerings and variable-topic subjects may count at the advisor\u2019s discretion.",
       "course_ids": []
     },
     {
@@ -29087,7 +29701,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-middle-eastern-studies",
       "source_text": null,
-      "summary": "With the concentration advisor’s permission, one or two language subjects at introductory, intermediate or advanced level may come from Harvard or Wellesley in Arabic, Hebrew, Persian or Turkish; the advisor may approve other Middle Eastern languages.",
+      "summary": "With the concentration advisor\u2019s permission, one or two language subjects at introductory, intermediate or advanced level may come from Harvard or Wellesley in Arabic, Hebrew, Persian or Turkish; the advisor may approve other Middle Eastern languages.",
       "course_ids": []
     },
     {
@@ -29101,7 +29715,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-middle-eastern-studies",
       "source_text": null,
-      "summary": "The list is not exhaustive. Relevant former offerings and variable-topic subjects may count at the concentration advisor’s discretion.",
+      "summary": "The list is not exhaustive. Relevant former offerings and variable-topic subjects may count at the concentration advisor\u2019s discretion.",
       "course_ids": []
     },
     {
@@ -29236,7 +29850,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-economics",
       "source_text": null,
-      "summary": "This field plan applies only when selected for the degree’s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
+      "summary": "This field plan applies only when selected for the degree\u2019s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
       "course_ids": []
     },
     {
@@ -29430,7 +30044,7 @@
     {
       "id": "mit-ai-hass-economics-offering-annotation",
       "parent_id": "mit-ai-hass-economics",
-      "title": "Published 2026–27 availability annotations",
+      "title": "Published 2026\u201327 availability annotations",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -29438,7 +30052,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-economics",
       "source_text": null,
-      "summary": "The concentration source marks these eligible-list entries not offered in 2026–27: 14.06, 14.11, 14.42, 14.73, 14.74, 14.78[J]. Eligibility-list inclusion does not establish a current offering.",
+      "summary": "The concentration source marks these eligible-list entries not offered in 2026\u201327: 14.06, 14.11, 14.42, 14.73, 14.74, 14.78[J]. Eligibility-list inclusion does not establish a current offering.",
       "course_ids": []
     },
     {
@@ -29452,7 +30066,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-economics",
       "source_text": null,
-      "summary": "This field plan applies only when selected for the degree’s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
+      "summary": "This field plan applies only when selected for the degree\u2019s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
       "course_ids": []
     },
     {
@@ -29597,7 +30211,7 @@
     {
       "id": "mit-ai-hass-development-economics-offering-annotation",
       "parent_id": "mit-ai-hass-development-economics",
-      "title": "Published 2026–27 availability annotations",
+      "title": "Published 2026\u201327 availability annotations",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -29605,7 +30219,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-economics",
       "source_text": null,
-      "summary": "The concentration source marks these eligible-list entries not offered in 2026–27: 14.73, 14.74. Eligibility-list inclusion does not establish a current offering.",
+      "summary": "The concentration source marks these eligible-list entries not offered in 2026\u201327: 14.73, 14.74. Eligibility-list inclusion does not establish a current offering.",
       "course_ids": []
     },
     {
@@ -29619,7 +30233,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-philosophy-ethics",
       "source_text": null,
-      "summary": "This field plan applies only when selected for the degree’s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
+      "summary": "This field plan applies only when selected for the degree\u2019s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
       "course_ids": []
     },
     {
@@ -29647,7 +30261,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-philosophy-ethics",
       "source_text": null,
-      "summary": "At most two subjects may be introductory, defined here as 24.00–24.09 or 24.C40; all three may instead be nonintroductory. One Concourse philosophy subject may serve as an introductory Course 24 subject.",
+      "summary": "At most two subjects may be introductory, defined here as 24.00\u201324.09 or 24.C40; all three may instead be nonintroductory. One Concourse philosophy subject may serve as an introductory Course 24 subject.",
       "course_ids": []
     },
     {
@@ -29675,7 +30289,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-philosophy-ethics",
       "source_text": null,
-      "summary": "This field plan applies only when selected for the degree’s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
+      "summary": "This field plan applies only when selected for the degree\u2019s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
       "course_ids": []
     },
     {
@@ -29841,7 +30455,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-political-science",
       "source_text": null,
-      "summary": "This field plan applies only when selected for the degree’s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
+      "summary": "This field plan applies only when selected for the degree\u2019s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
       "course_ids": []
     },
     {
@@ -30106,7 +30720,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-anthropology",
       "source_text": null,
-      "summary": "This field plan applies only when selected for the degree’s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
+      "summary": "This field plan applies only when selected for the degree\u2019s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
       "course_ids": []
     },
     {
@@ -30166,7 +30780,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-history",
       "source_text": null,
-      "summary": "This field plan applies only when selected for the degree’s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
+      "summary": "This field plan applies only when selected for the degree\u2019s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
       "course_ids": []
     },
     {
@@ -30194,7 +30808,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-history",
       "source_text": null,
-      "summary": "History concentration subjects may also count toward a History minor. The minor’s separate seminar, historical-methods and period-distribution rules are not concentration requirements.",
+      "summary": "History concentration subjects may also count toward a History minor. The minor\u2019s separate seminar, historical-methods and period-distribution rules are not concentration requirements.",
       "course_ids": []
     },
     {
@@ -30208,7 +30822,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-linguistics",
       "source_text": null,
-      "summary": "This field plan applies only when selected for the degree’s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
+      "summary": "This field plan applies only when selected for the degree\u2019s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
       "course_ids": []
     },
     {
@@ -30271,7 +30885,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-wgs",
       "source_text": null,
-      "summary": "This field plan applies only when selected for the degree’s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
+      "summary": "This field plan applies only when selected for the degree\u2019s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
       "course_ids": []
     },
     {
@@ -30301,7 +30915,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-wgs",
       "source_text": null,
-      "summary": "At least three WGS subjects in total, with the required introduction plus two additional WGS subjects of the student’s choice. This is an open departmental subject criterion.",
+      "summary": "At least three WGS subjects in total, with the required introduction plus two additional WGS subjects of the student\u2019s choice. This is an open departmental subject criterion.",
       "course_ids": []
     },
     {
@@ -30329,7 +30943,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-literature",
       "source_text": null,
-      "summary": "This field plan applies only when selected for the degree’s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
+      "summary": "This field plan applies only when selected for the degree\u2019s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
       "course_ids": []
     },
     {
@@ -30385,7 +30999,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-urban",
       "source_text": null,
-      "summary": "This field plan applies only when selected for the degree’s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
+      "summary": "This field plan applies only when selected for the degree\u2019s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
       "course_ids": []
     },
     {
@@ -30399,7 +31013,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-urban",
       "source_text": null,
-      "summary": "The department helps choose three HASS subjects suited to the student’s interests and background. The named combinations are suggestions, not nine mandatory tracks or a closed approved-course list. Individually crafted plans may follow Institute guidelines. Offerings change annually; consult the department.",
+      "summary": "The department helps choose three HASS subjects suited to the student\u2019s interests and background. The named combinations are suggestions, not nine mandatory tracks or a closed approved-course list. Individually crafted plans may follow Institute guidelines. Offerings change annually; consult the department.",
       "course_ids": []
     },
     {
@@ -30590,7 +31204,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-sts",
       "source_text": null,
-      "summary": "This field plan applies only when selected for the degree’s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
+      "summary": "This field plan applies only when selected for the degree\u2019s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
       "course_ids": []
     },
     {
@@ -30604,7 +31218,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-sts",
       "source_text": null,
-      "summary": "Choose any three subjects in the published STS Tier I/Tier II classifications. The separate minor’s additional three subjects and required STS.004 are not concentration requirements.",
+      "summary": "Choose any three subjects in the published STS Tier I/Tier II classifications. The separate minor\u2019s additional three subjects and required STS.004 are not concentration requirements.",
       "course_ids": []
     },
     {
@@ -30718,7 +31332,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-sts-transfer",
       "source_text": null,
-      "summary": "Concentrators may use at most one non-MIT subject. STS’s undergraduate academic officer has final approval after reviewing course/syllabus, work samples and transcript; preliminary approval is strongly recommended, not stated mandatory. The outside grade must be B− or better. AP, secondary-school and unaccredited/non-degree institution coursework cannot supply HASS transfer credit. Harvard/Wellesley cross-registration does not need a transfer request, but requests to count those subjects toward HASS go to the HASS Education Office. The broader abroad exceptions stated for majors/minors are not extended to concentrators.",
+      "summary": "Concentrators may use at most one non-MIT subject. STS\u2019s undergraduate academic officer has final approval after reviewing course/syllabus, work samples and transcript; preliminary approval is strongly recommended, not stated mandatory. The outside grade must be B\u2212 or better. AP, secondary-school and unaccredited/non-degree institution coursework cannot supply HASS transfer credit. Harvard/Wellesley cross-registration does not need a transfer request, but requests to count those subjects toward HASS go to the HASS Education Office. The broader abroad exceptions stated for majors/minors are not extended to concentrators.",
       "course_ids": []
     },
     {
@@ -30732,7 +31346,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-language-programs",
       "source_text": null,
-      "summary": "This field plan applies only when selected for the degree’s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
+      "summary": "This field plan applies only when selected for the degree\u2019s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
       "course_ids": []
     },
     {
@@ -30760,7 +31374,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-language-programs",
       "source_text": null,
-      "summary": "A student beginning at semester I typically completes semesters I–IV. These are language-progression levels, not four academic terms of residence.",
+      "summary": "A student beginning at semester I typically completes semesters I\u2013IV. These are language-progression levels, not four academic terms of residence.",
       "course_ids": []
     },
     {
@@ -30774,7 +31388,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-language-programs",
       "source_text": null,
-      "summary": "A student beginning at semester II or higher needs three subjects, progressing through at least semester IV; examples are II–IV or III–V. Advisor-approved combinations may differ, but the stated minimum/progression conditions remain.",
+      "summary": "A student beginning at semester II or higher needs three subjects, progressing through at least semester IV; examples are II\u2013IV or III\u2013V. Advisor-approved combinations may differ, but the stated minimum/progression conditions remain.",
       "course_ids": []
     },
     {
@@ -30802,7 +31416,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-language-programs",
       "source_text": null,
-      "summary": "This field plan applies only when selected for the degree’s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
+      "summary": "This field plan applies only when selected for the degree\u2019s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
       "course_ids": []
     },
     {
@@ -30830,7 +31444,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-language-programs",
       "source_text": null,
-      "summary": "A student beginning at semester I typically completes semesters I–IV. These are language-progression levels, not four academic terms of residence.",
+      "summary": "A student beginning at semester I typically completes semesters I\u2013IV. These are language-progression levels, not four academic terms of residence.",
       "course_ids": []
     },
     {
@@ -30844,7 +31458,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-language-programs",
       "source_text": null,
-      "summary": "A student beginning at semester II or higher needs three subjects, progressing through at least semester IV; examples are II–IV or III–V. Advisor-approved combinations may differ, but the stated minimum/progression conditions remain.",
+      "summary": "A student beginning at semester II or higher needs three subjects, progressing through at least semester IV; examples are II\u2013IV or III\u2013V. Advisor-approved combinations may differ, but the stated minimum/progression conditions remain.",
       "course_ids": []
     },
     {
@@ -30872,7 +31486,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-language-programs",
       "source_text": null,
-      "summary": "This field plan applies only when selected for the degree’s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
+      "summary": "This field plan applies only when selected for the degree\u2019s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
       "course_ids": []
     },
     {
@@ -30900,7 +31514,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-language-programs",
       "source_text": null,
-      "summary": "A student beginning at semester I typically completes semesters I–IV. These are language-progression levels, not four academic terms of residence.",
+      "summary": "A student beginning at semester I typically completes semesters I\u2013IV. These are language-progression levels, not four academic terms of residence.",
       "course_ids": []
     },
     {
@@ -30914,7 +31528,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-language-programs",
       "source_text": null,
-      "summary": "A student beginning at semester II or higher needs three subjects, progressing through at least semester IV; examples are II–IV or III–V. Advisor-approved combinations may differ, but the stated minimum/progression conditions remain.",
+      "summary": "A student beginning at semester II or higher needs three subjects, progressing through at least semester IV; examples are II\u2013IV or III\u2013V. Advisor-approved combinations may differ, but the stated minimum/progression conditions remain.",
       "course_ids": []
     },
     {
@@ -30942,7 +31556,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-language-programs",
       "source_text": null,
-      "summary": "This field plan applies only when selected for the degree’s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
+      "summary": "This field plan applies only when selected for the degree\u2019s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
       "course_ids": []
     },
     {
@@ -30970,7 +31584,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-language-programs",
       "source_text": null,
-      "summary": "A student beginning at semester I typically completes semesters I–IV. These are language-progression levels, not four academic terms of residence.",
+      "summary": "A student beginning at semester I typically completes semesters I\u2013IV. These are language-progression levels, not four academic terms of residence.",
       "course_ids": []
     },
     {
@@ -30984,7 +31598,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-language-programs",
       "source_text": null,
-      "summary": "A student beginning at semester II or higher needs three subjects, progressing through at least semester IV; examples are II–IV or III–V. Advisor-approved combinations may differ, but the stated minimum/progression conditions remain.",
+      "summary": "A student beginning at semester II or higher needs three subjects, progressing through at least semester IV; examples are II\u2013IV or III\u2013V. Advisor-approved combinations may differ, but the stated minimum/progression conditions remain.",
       "course_ids": []
     },
     {
@@ -31012,7 +31626,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-language-programs",
       "source_text": null,
-      "summary": "This field plan applies only when selected for the degree’s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
+      "summary": "This field plan applies only when selected for the degree\u2019s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
       "course_ids": []
     },
     {
@@ -31040,7 +31654,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-language-programs",
       "source_text": null,
-      "summary": "A student beginning at semester I typically completes semesters I–IV. These are language-progression levels, not four academic terms of residence.",
+      "summary": "A student beginning at semester I typically completes semesters I\u2013IV. These are language-progression levels, not four academic terms of residence.",
       "course_ids": []
     },
     {
@@ -31054,7 +31668,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-language-programs",
       "source_text": null,
-      "summary": "A student beginning at semester II or higher needs three subjects, progressing through at least semester IV; examples are II–IV or III–V. Advisor-approved combinations may differ, but the stated minimum/progression conditions remain.",
+      "summary": "A student beginning at semester II or higher needs three subjects, progressing through at least semester IV; examples are II\u2013IV or III\u2013V. Advisor-approved combinations may differ, but the stated minimum/progression conditions remain.",
       "course_ids": []
     },
     {
@@ -31082,7 +31696,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-language-programs",
       "source_text": null,
-      "summary": "This field plan applies only when selected for the degree’s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
+      "summary": "This field plan applies only when selected for the degree\u2019s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
       "course_ids": []
     },
     {
@@ -31110,7 +31724,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-language-programs",
       "source_text": null,
-      "summary": "A student beginning at semester I typically completes semesters I–IV. These are language-progression levels, not four academic terms of residence.",
+      "summary": "A student beginning at semester I typically completes semesters I\u2013IV. These are language-progression levels, not four academic terms of residence.",
       "course_ids": []
     },
     {
@@ -31124,7 +31738,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-language-programs",
       "source_text": null,
-      "summary": "A student beginning at semester II or higher needs three subjects, progressing through at least semester IV; examples are II–IV or III–V. Advisor-approved combinations may differ, but the stated minimum/progression conditions remain.",
+      "summary": "A student beginning at semester II or higher needs three subjects, progressing through at least semester IV; examples are II\u2013IV or III\u2013V. Advisor-approved combinations may differ, but the stated minimum/progression conditions remain.",
       "course_ids": []
     },
     {
@@ -31152,7 +31766,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-language-programs",
       "source_text": null,
-      "summary": "This field plan applies only when selected for the degree’s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
+      "summary": "This field plan applies only when selected for the degree\u2019s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
       "course_ids": []
     },
     {
@@ -31180,7 +31794,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-language-programs",
       "source_text": null,
-      "summary": "A student beginning at semester I typically completes semesters I–IV. These are language-progression levels, not four academic terms of residence.",
+      "summary": "A student beginning at semester I typically completes semesters I\u2013IV. These are language-progression levels, not four academic terms of residence.",
       "course_ids": []
     },
     {
@@ -31194,7 +31808,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-language-programs",
       "source_text": null,
-      "summary": "A student beginning at semester II or higher needs three subjects, progressing through at least semester IV; examples are II–IV or III–V. Advisor-approved combinations may differ, but the stated minimum/progression conditions remain.",
+      "summary": "A student beginning at semester II or higher needs three subjects, progressing through at least semester IV; examples are II\u2013IV or III\u2013V. Advisor-approved combinations may differ, but the stated minimum/progression conditions remain.",
       "course_ids": []
     },
     {
@@ -31222,7 +31836,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-language-programs",
       "source_text": null,
-      "summary": "This field plan applies only when selected for the degree’s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
+      "summary": "This field plan applies only when selected for the degree\u2019s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
       "course_ids": []
     },
     {
@@ -31250,7 +31864,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-language-programs",
       "source_text": null,
-      "summary": "A student beginning at semester I typically completes semesters I–IV. These are language-progression levels, not four academic terms of residence.",
+      "summary": "A student beginning at semester I typically completes semesters I\u2013IV. These are language-progression levels, not four academic terms of residence.",
       "course_ids": []
     },
     {
@@ -31264,7 +31878,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-language-programs",
       "source_text": null,
-      "summary": "A student beginning at semester II or higher needs three subjects, progressing through at least semester IV; examples are II–IV or III–V. Advisor-approved combinations may differ, but the stated minimum/progression conditions remain.",
+      "summary": "A student beginning at semester II or higher needs three subjects, progressing through at least semester IV; examples are II\u2013IV or III\u2013V. Advisor-approved combinations may differ, but the stated minimum/progression conditions remain.",
       "course_ids": []
     },
     {
@@ -31292,7 +31906,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-language-programs",
       "source_text": null,
-      "summary": "This field plan applies only when selected for the degree’s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
+      "summary": "This field plan applies only when selected for the degree\u2019s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
       "course_ids": []
     },
     {
@@ -31320,7 +31934,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-language-programs",
       "source_text": null,
-      "summary": "A student beginning at semester I typically completes semesters I–IV. These are language-progression levels, not four academic terms of residence.",
+      "summary": "A student beginning at semester I typically completes semesters I\u2013IV. These are language-progression levels, not four academic terms of residence.",
       "course_ids": []
     },
     {
@@ -31334,7 +31948,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-language-programs",
       "source_text": null,
-      "summary": "A student beginning at semester II or higher needs three subjects, progressing through at least semester IV; examples are II–IV or III–V. Advisor-approved combinations may differ, but the stated minimum/progression conditions remain.",
+      "summary": "A student beginning at semester II or higher needs three subjects, progressing through at least semester IV; examples are II\u2013IV or III\u2013V. Advisor-approved combinations may differ, but the stated minimum/progression conditions remain.",
       "course_ids": []
     },
     {
@@ -31362,7 +31976,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-language-programs",
       "source_text": null,
-      "summary": "This field plan applies only when selected for the degree’s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
+      "summary": "This field plan applies only when selected for the degree\u2019s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
       "course_ids": []
     },
     {
@@ -31404,7 +32018,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-language-programs",
       "source_text": null,
-      "summary": "This field plan applies only when selected for the degree’s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
+      "summary": "This field plan applies only when selected for the degree\u2019s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
       "course_ids": []
     },
     {
@@ -31483,7 +32097,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-language-placement",
       "source_text": null,
-      "summary": "Students who have not taken Spanish at MIT must take written and oral placement assessments. The usual window is the two weeks before classes; other times may be arranged. The contact route differs for one–two, three, or four-plus prior years/AP experience and heritage speakers; uncertain students use the general placement contact. No placement category awards credit by itself.",
+      "summary": "Students who have not taken Spanish at MIT must take written and oral placement assessments. The usual window is the two weeks before classes; other times may be arranged. The contact route differs for one\u2013two, three, or four-plus prior years/AP experience and heritage speakers; uncertain students use the general placement contact. No placement category awards credit by itself.",
       "course_ids": []
     },
     {
@@ -31497,7 +32111,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-language-transfer",
       "source_text": null,
-      "summary": "Contact the appropriate examiner before outside coursework for a strongly encouraged preliminary review, including any applicable minimum grade. Final credit depends on completed-course evidence and relevance to residential 21G subject matter; merely being taught in a language is insufficient. The examiner determines HASS/elective classification and amount after reviewing catalog/instructor/institution information, syllabus/assignments, grade report and work samples. Signed HASS requests go to the SHASS Dean’s Office and the official transcript to the registrar. Harvard/Wellesley/MassArt cross-registration does not use the transfer-credit process. The contact roster is labeled AY2024 and is not asserted to be current. The program page separately requires concentration-advisor approval for applicable outside coursework.",
+      "summary": "Contact the appropriate examiner before outside coursework for a strongly encouraged preliminary review, including any applicable minimum grade. Final credit depends on completed-course evidence and relevance to residential 21G subject matter; merely being taught in a language is insufficient. The examiner determines HASS/elective classification and amount after reviewing catalog/instructor/institution information, syllabus/assignments, grade report and work samples. Signed HASS requests go to the SHASS Dean\u2019s Office and the official transcript to the registrar. Harvard/Wellesley/MassArt cross-registration does not use the transfer-credit process. The contact roster is labeled AY2024 and is not asserted to be current. The program page separately requires concentration-advisor approval for applicable outside coursework.",
       "course_ids": []
     },
     {
@@ -31511,7 +32125,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-language-chinese-context",
       "source_text": null,
-      "summary": "Chinese I–VI, regular and streamlined tracks, are capped at 16. Preregistration preference includes undergraduates previously cut for capacity and requires first-day attendance; priority then runs minors, concentrators, first-years, sophomores, juniors, seniors, graduate students. These are enrollment conditions, not a guarantee of a seat or a different concentration subject count. Seasonal offerings on the page are not treated as a closed eligibility list.",
+      "summary": "Chinese I\u2013VI, regular and streamlined tracks, are capped at 16. Preregistration preference includes undergraduates previously cut for capacity and requires first-day attendance; priority then runs minors, concentrators, first-years, sophomores, juniors, seniors, graduate students. These are enrollment conditions, not a guarantee of a seat or a different concentration subject count. Seasonal offerings on the page are not treated as a closed eligibility list.",
       "course_ids": []
     },
     {
@@ -31657,7 +32271,7 @@
     {
       "id": "mit-ai-hass-architecture-act-page",
       "parent_id": null,
-      "title": "Optional HASS field: Art, Culture and Technology — webpage reference",
+      "title": "Optional HASS field: Art, Culture and Technology \u2014 webpage reference",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -31665,7 +32279,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-architecture-act-page",
       "source_text": null,
-      "summary": "This field plan applies only when selected for the degree’s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
+      "summary": "This field plan applies only when selected for the degree\u2019s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
       "course_ids": []
     },
     {
@@ -31708,7 +32322,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-architecture-act-page",
       "source_text": null,
-      "summary": "This page points to Group A’s History of Art section at a legacy URL that returned 404. The separately linked ACT PDF supplies a specific six-subject Group 2 pool. The observed wording is not silently replaced with that PDF or the different History of Art subgroup in the current HTC PDF. Advisor/source-precedence clarification is needed. These source versions are not cumulative.",
+      "summary": "This page points to Group A\u2019s History of Art section at a legacy URL that returned 404. The separately linked ACT PDF supplies a specific six-subject Group 2 pool. The observed wording is not silently replaced with that PDF or the different History of Art subgroup in the current HTC PDF. Advisor/source-precedence clarification is needed. These source versions are not cumulative.",
       "course_ids": []
     },
     {
@@ -31736,7 +32350,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-architecture-undergraduate",
       "source_text": null,
-      "summary": "The current undergraduate page links Design, HTC and ACT requirement sheets. It allows Course 4 majors to concentrate in HTC or ACT, and Course 4B majors in Design/HTC/ACT with attention to overlapped courses; students are directed to the undergraduate administrator for overlap allowances. These conditional major-affiliation rules are preserved without applying an architecture major’s degree requirements to the AI BS.",
+      "summary": "The current undergraduate page links Design, HTC and ACT requirement sheets. It allows Course 4 majors to concentrate in HTC or ACT, and Course 4B majors in Design/HTC/ACT with attention to overlapped courses; students are directed to the undergraduate administrator for overlap allowances. These conditional major-affiliation rules are preserved without applying an architecture major\u2019s degree requirements to the AI BS.",
       "course_ids": []
     },
     {
@@ -31756,7 +32370,7 @@
     {
       "id": "mit-ai-hass-architecture-design-pdf",
       "parent_id": null,
-      "title": "Optional HASS field: Design — published PDF plan",
+      "title": "Optional HASS field: Design \u2014 published PDF plan",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -31764,7 +32378,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-architecture-design-pdf",
       "source_text": null,
-      "summary": "This field plan applies only when selected for the degree’s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects. This is a self-contained source version, not cumulative with a separate webpage reference. File path labels are not assumed printed publication dates or launch dates; seasonal annotations are not current-offering guarantees.",
+      "summary": "This field plan applies only when selected for the degree\u2019s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects. This is a self-contained source version, not cumulative with a separate webpage reference. File path labels are not assumed printed publication dates or launch dates; seasonal annotations are not current-offering guarantees.",
       "course_ids": []
     },
     {
@@ -31824,7 +32438,7 @@
     {
       "id": "mit-ai-hass-architecture-htc-pdf",
       "parent_id": null,
-      "title": "Optional HASS field: History of Architecture, Art, and Design — published PDF plan",
+      "title": "Optional HASS field: History of Architecture, Art, and Design \u2014 published PDF plan",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -31832,7 +32446,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-architecture-htc-pdf",
       "source_text": null,
-      "summary": "This field plan applies only when selected for the degree’s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects. This is a self-contained source version, not cumulative with a separate webpage reference. File path labels are not assumed printed publication dates or launch dates; seasonal annotations are not current-offering guarantees.",
+      "summary": "This field plan applies only when selected for the degree\u2019s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects. This is a self-contained source version, not cumulative with a separate webpage reference. File path labels are not assumed printed publication dates or launch dates; seasonal annotations are not current-offering guarantees.",
       "course_ids": []
     },
     {
@@ -31895,7 +32509,7 @@
     {
       "id": "mit-ai-hass-architecture-act-pdf",
       "parent_id": null,
-      "title": "Optional HASS field: Art, Culture, and Technology — published PDF plan",
+      "title": "Optional HASS field: Art, Culture, and Technology \u2014 published PDF plan",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -31903,7 +32517,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-architecture-act-pdf",
       "source_text": null,
-      "summary": "This field plan applies only when selected for the degree’s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects. This is a self-contained source version, not cumulative with a separate webpage reference. File path labels are not assumed printed publication dates or launch dates; seasonal annotations are not current-offering guarantees.",
+      "summary": "This field plan applies only when selected for the degree\u2019s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects. This is a self-contained source version, not cumulative with a separate webpage reference. File path labels are not assumed printed publication dates or launch dates; seasonal annotations are not current-offering guarantees.",
       "course_ids": []
     },
     {
@@ -31967,7 +32581,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-cmsw-catalog-context",
       "source_text": null,
-      "summary": "This independently accessible catalog page was reviewed for the registrar-listed HASS fields. Its undergraduate sections describe majors/minors, not the missing field-specific concentration selection rules. Those other programs’ course counts and pools are not substituted for HASS concentration requirements. This is a scoped page observation, not a finding that no concentration exists.",
+      "summary": "This independently accessible catalog page was reviewed for the registrar-listed HASS fields. Its undergraduate sections describe majors/minors, not the missing field-specific concentration selection rules. Those other programs\u2019 course counts and pools are not substituted for HASS concentration requirements. This is a scoped page observation, not a finding that no concentration exists.",
       "course_ids": []
     },
     {
@@ -31981,7 +32595,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-mta-catalog-context",
       "source_text": null,
-      "summary": "This independently accessible catalog page was reviewed for the registrar-listed HASS fields. Its undergraduate sections describe majors/minors, not the missing field-specific concentration selection rules. Those other programs’ course counts and pools are not substituted for HASS concentration requirements. This is a scoped page observation, not a finding that no concentration exists.",
+      "summary": "This independently accessible catalog page was reviewed for the registrar-listed HASS fields. Its undergraduate sections describe majors/minors, not the missing field-specific concentration selection rules. Those other programs\u2019 course counts and pools are not substituted for HASS concentration requirements. This is a scoped page observation, not a finding that no concentration exists.",
       "course_ids": []
     },
     {
@@ -31995,7 +32609,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-cmsw-cms",
       "source_text": null,
-      "summary": "This field plan applies only when selected for the degree’s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
+      "summary": "This field plan applies only when selected for the degree\u2019s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
       "course_ids": []
     },
     {
@@ -32023,7 +32637,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-cmsw-writing",
       "source_text": null,
-      "summary": "This field plan applies only when selected for the degree’s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
+      "summary": "This field plan applies only when selected for the degree\u2019s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
       "course_ids": []
     },
     {
@@ -32037,7 +32651,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-cmsw-writing",
       "source_text": null,
-      "summary": "Four Writing subjects chosen with the concentration advisor; every subject must carry HASS and at most one may be CI-HW. This is an advisor-selected subject criterion, not the Writing minor’s Tier I/II plan.",
+      "summary": "Four Writing subjects chosen with the concentration advisor; every subject must carry HASS and at most one may be CI-HW. This is an advisor-selected subject criterion, not the Writing minor\u2019s Tier I/II plan.",
       "course_ids": []
     },
     {
@@ -32051,7 +32665,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-cmsw-writing",
       "source_text": null,
-      "summary": "Completing the Writing minor removes the need for a separate concentration, but proposal/completion forms are still required. The page limits that minor’s HASS-GIR contribution to five subjects. Its six-subject minor and thesis/CI-M major requirements are not imported into the four-subject concentration.",
+      "summary": "Completing the Writing minor removes the need for a separate concentration, but proposal/completion forms are still required. The page limits that minor\u2019s HASS-GIR contribution to five subjects. Its six-subject minor and thesis/CI-M major requirements are not imported into the four-subject concentration.",
       "course_ids": []
     },
     {
@@ -32065,7 +32679,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-cmsw-els",
       "source_text": null,
-      "summary": "This field plan applies only when selected for the degree’s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
+      "summary": "This field plan applies only when selected for the degree\u2019s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
       "course_ids": []
     },
     {
@@ -32079,7 +32693,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-cmsw-els",
       "source_text": null,
-      "summary": "Any three English Language Studies or related-field subjects with the ELS concentration advisor. The surrounding general three-or-four-subject HASS introduction does not change this field’s explicit three-subject rule.",
+      "summary": "Any three English Language Studies or related-field subjects with the ELS concentration advisor. The surrounding general three-or-four-subject HASS introduction does not change this field\u2019s explicit three-subject rule.",
       "course_ids": []
     },
     {
@@ -32107,7 +32721,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-cmsw-education",
       "source_text": null,
-      "summary": "This field plan applies only when selected for the degree’s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
+      "summary": "This field plan applies only when selected for the degree\u2019s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
       "course_ids": []
     },
     {
@@ -32255,7 +32869,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-cmsw-education",
       "source_text": null,
-      "summary": "The introductory Education sequence includes 25 hours per semester observing/working in local schools. Listed special-subject topics retain their source terms; they are not assurances of current availability or permission to count repeated content twice. Teacher-licensure requirements and the separate six-subject minor’s 300-hour practicum are not concentration requirements.",
+      "summary": "The introductory Education sequence includes 25 hours per semester observing/working in local schools. Listed special-subject topics retain their source terms; they are not assurances of current availability or permission to count repeated content twice. Teacher-licensure requirements and the separate six-subject minor\u2019s 300-hour practicum are not concentration requirements.",
       "course_ids": []
     },
     {
@@ -32437,7 +33051,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-music-current",
       "source_text": null,
-      "summary": "This field plan applies only when selected for the degree’s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
+      "summary": "This field plan applies only when selected for the degree\u2019s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
       "course_ids": []
     },
     {
@@ -32518,7 +33132,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-theater-current",
       "source_text": null,
-      "summary": "This field plan applies only when selected for the degree’s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
+      "summary": "This field plan applies only when selected for the degree\u2019s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
       "course_ids": []
     },
     {
@@ -32532,7 +33146,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-theater-current",
       "source_text": null,
-      "summary": "Complete three to four 9–12-unit courses in the Theater Arts curriculum, with the concentration advisor and general HASS approval rules. The page states a minimum of 36 credits; this source-stated amount remains in unknown normalized units rather than assuming a credits-to-units conversion. Course count is a range, not exactly three or exactly four. This is an open departmental curriculum criterion, not a fabricated closed course pool.",
+      "summary": "Complete three to four 9\u201312-unit courses in the Theater Arts curriculum, with the concentration advisor and general HASS approval rules. The page states a minimum of 36 credits; this source-stated amount remains in unknown normalized units rather than assuming a credits-to-units conversion. Course count is a range, not exactly three or exactly four. This is an open departmental curriculum criterion, not a fabricated closed course pool.",
       "course_ids": []
     },
     {
@@ -32546,7 +33160,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-theater-current",
       "source_text": null,
-      "summary": "Up to nine units of acting, directing or design practicum in Theater Arts productions may count toward this concentration. This is a permitted contribution within the plan, not an additional nine-unit requirement. The major’s CI-M/thesis structure and the minor’s separate curriculum are not concentration obligations.",
+      "summary": "Up to nine units of acting, directing or design practicum in Theater Arts productions may count toward this concentration. This is a permitted contribution within the plan, not an additional nine-unit requirement. The major\u2019s CI-M/thesis structure and the minor\u2019s separate curriculum are not concentration obligations.",
       "course_ids": []
     }
   ],
@@ -32565,14 +33179,14 @@
     "The optional Computing and Society HASS concentration adds 46 source-named choices and a conditional four-course rule. It is not mandatory for the AI major and is not the only HASS field. Most of its course credits/descriptions/prerequisites remain unknown.",
     "Entrance-exam credit rules come from an explicitly Fall 2026/Class of 2030 gateway. Earlier entrants cannot automatically use that cohort policy. Subject-equivalent credit, placement-only routes, unrestricted elective credit, and HASS/CI requirements remain distinct.",
     "2026-10-11: ten additional central SHASS HASS field plans are represented conditionally, alongside Computing and Society. Open advisor-approved subject routes are not mislabeled as missing finite pools. Course observations are separated by field source; repeated and jointly listed labels do not increase degree requirements. The degree remains partial for named unreviewed fields and preserved source/cohort conflicts.",
-    "2026-10-11: Economics/Development Economics, Philosophy/Ethics and Political Science HASS choices are mapped conditionally. Economics minor-only statistics/substitution/overlap rules are excluded. Ethics printed code anomalies and same-page old/new number conflicts require clarification. Course lists are eligibility observations, including explicit not-offered-2026–27 annotations; these are not current-offering claims.",
-    "Political Science’s linked public PDF has now been extracted and visually checked on all three pages: 66 distinct named subjects in seven overlapping subfield groups. Its URL update label is July 10, 2024, not a printed publication date. Current-offering claims remain unverified. The two specific enrollment restrictions and 17.567 nine-unit IAP annotation are preserved; PDFKit ligature errors were corrected only after visual verification.",
-    "2026-10-11: seven further HASS plans and the STS Tier I/Tier II/transfer policies are mapped. STS contains source-specific observations for the same STS.041 in both tiers, not two countable subjects. History’s legacy directory URL returned an unrelated course page; only the actual current Undergraduate Studies navigation page supplies its concentration rules. Anthopology’s 33 source-stated credits remain unconverted.",
+    "2026-10-11: Economics/Development Economics, Philosophy/Ethics and Political Science HASS choices are mapped conditionally. Economics minor-only statistics/substitution/overlap rules are excluded. Ethics printed code anomalies and same-page old/new number conflicts require clarification. Course lists are eligibility observations, including explicit not-offered-2026\u201327 annotations; these are not current-offering claims.",
+    "Political Science\u2019s linked public PDF has now been extracted and visually checked on all three pages: 66 distinct named subjects in seven overlapping subfield groups. Its URL update label is July 10, 2024, not a printed publication date. Current-offering claims remain unverified. The two specific enrollment restrictions and 17.567 nine-unit IAP annotation are preserved; PDFKit ligature errors were corrected only after visual verification.",
+    "2026-10-11: seven further HASS plans and the STS Tier I/Tier II/transfer policies are mapped. STS contains source-specific observations for the same STS.041 in both tiers, not two countable subjects. History\u2019s legacy directory URL returned an unrelated course page; only the actual current Undergraduate Studies navigation page supplies its concentration rules. Anthopology\u2019s 33 source-stated credits remain unconverted.",
     "2026-10-11: all eleven Global Languages field plans and their shared placement/transfer policies are represented. Semester-IV progression and advisor-approved combinations are open criteria, not missing finite pools. Eight individual language pages refer to those central requirements; their differing enrollment priorities are preserved. The Other Languages and SILC pages were independently inspected and refer back to the same central rules. The transfer contact roster is labeled AY2024 and is not certified as current.",
     "Historical checkpoint, superseded by the current Music/Theater review below: 2026-10-11: the 43-field registrar HASS queue is exhausted for currently accessible field-rule sources: 37 plans mapped (with explicit Ethics/ACT/Urban source questions); six department-detail barriers remain precisely documented. The independent CMS/W and Music/Theater catalog pages do not supply their local concentration inventories. Architecture PDFs and the corroborating Literature sheet were visually checked on every page and parsed offline; ordinary fetches respected robots/TLS. No inaccessible page is claimed verified.",
     "Historical checkpoint, superseded by the current Music/Theater review below: 2026-10-11 browser follow-up: normal Chrome read the four CMS/W concentration pages and the full CMS subject list without a security interstitial or certificate bypass. Education and Writing redirected to new canonical routes recorded in sources. Default Fetcher TLS issuer validation still fails. Browser robots.txt alone reported ERR_BLOCKED_BY_CLIENT; no sitewide denial or authentication requirement is inferred. All previously captured CMS/W curriculum-access gaps are replaced by actual observations; Music/Theater new-host policy barriers remain.",
     "Historical checkpoint, superseded by the current Music/Theater review below: 2026-10-11 transport correction: a network-enabled ordinary Fetcher successfully read both newly linked Music/Theater homepages under normal robots/TLS checks. The previously reported generic ConnectError did not establish a publisher access barrier. Both remaining local concentration inventories are now accessible-unreviewed, with exact linked degree-requirement URLs recorded in the audit.",
-    "2026-10-11 current Music/Theater follow-up: both linked requirement pages returned HTTP 200 through approved-network normal robots/TLS checks. Both concentration tabs are mapped as conditional open plans, not major/minor inventories. Music has six optional introductions and a title-unstated 21M.223J seminar observation; Theater states three to four 9–12-unit courses, minimum 36 credits (normalized unit unknown), and up to nine practicum units. All 43 HASS fields now have reviewed local rules: 39 mapped and four source questions. Earlier access chronology is historical; degree/cohort and source conflicts keep the degree partial.",
+    "2026-10-11 current Music/Theater follow-up: both linked requirement pages returned HTTP 200 through approved-network normal robots/TLS checks. Both concentration tabs are mapped as conditional open plans, not major/minor inventories. Music has six optional introductions and a title-unstated 21M.223J seminar observation; Theater states three to four 9\u201312-unit courses, minimum 36 credits (normalized unit unknown), and up to nine practicum units. All 43 HASS fields now have reviewed local rules: 39 mapped and four source questions. Earlier access chronology is historical; degree/cohort and source conflicts keep the degree partial.",
     "2026-10-11 independent correctness pass: both fixed foundation records in the 6-4_2025 source view,6.1010 and6.1210, are now reviewed computing foundations from their actual annotated descriptions. Their separate unversioned catalog occurrences remain independently sourced/contextual. Units triplets are not summed, prerequisites are not extra fixed courses, and course/cohort conflicts are not resolved by the category review."
   ],
   "curriculum_audit": {
@@ -32690,15 +33304,15 @@
       "Eleven Global Languages HASS routes: nine semester-IV progression criteria, Theory of Language two-language-plus-theory plan, SILC three twelve-unit subjects; declaration/placement/transfer and eight language-specific enrollment contexts",
       "Design full 1-of-2 studio plus visual-communication plus elective plan; HTC 13/14-subject 3+1 pools; ACT coherent PDF 14/6-subject 3+1 pools alongside conflicting webpage reference; architecture major-overlap context; corroborating Literature sheet; independently inspected CMS/W and Music/Theater catalog boundaries",
       "Browser-verified CMS four-subject HASS/media-content rule and all 78 CMS plus 45 external-reference rows; Education 1+2/2+1 alternatives with 14 term-sensitive elective observations; ELS open three-subject criterion and matriculation context; Writing four-subject HASS/CI-HW/minor-form constraints",
-      "Current Music four-subject open concentration plan, six introductory suggestions, unnamed joint seminar/CI-H eligibility and optional ensemble combinations; Theater Arts three-to-four 9–12-unit course criterion, stated 36-credit minimum and nine-unit production-practicum allowance; generic HASS approval and overlap retained"
+      "Current Music four-subject open concentration plan, six introductory suggestions, unnamed joint seminar/CI-H eligibility and optional ensemble combinations; Theater Arts three-to-four 9\u201312-unit course criterion, stated 36-credit minimum and nine-unit production-practicum allowance; generic HASS approval and overlap retained"
     ],
     "unresolved_requirements": [
       "The complete public 6-4_2025 departmental pool is represented separately from the unversioned catalog chart. The source labels lists Fall 2026 but includes @2027FA special offerings; official clarification of this internal date conflict and catalog/cohort precedence remains unresolved. No combined degree total or supersession is inferred.",
       "Reconcile 6.4300 credit discrepancy: chart 15 versus unversioned general CI-M list 12; versioned annotation uses a 4-0-11 breakdown. No publication-date/source-precedence assumption resolves the conflict.",
       "External HASS Distribution conflict: HASS requirement/substitution policies prohibit it, but the transfer-processing page describes signature handling for an examiner award. Seek office clarification before asserting an exception.",
-      "Ethics subject-identity clarification: its concentration list retains 24.120 and 24.237J, while the same page’s major section calls these former numbers for 24.220 and 24.137J. Three printed cross-list labels also contain missing punctuation/concatenation. Both the observed labels and advisor petition route are retained; no automatic renumbering or corrected registration identity is inferred.",
+      "Ethics subject-identity clarification: its concentration list retains 24.120 and 24.237J, while the same page\u2019s major section calls these former numbers for 24.220 and 24.137J. Three printed cross-list labels also contain missing punctuation/concatenation. Both the observed labels and advisor petition route are retained; no automatic renumbering or corrected registration identity is inferred.",
       "Urban Studies lists 11.074 Cybersecurity Clinic with an unexplained asterisk. The three-subject advisor-approved plan and all nine suggested combinations are represented; the department must clarify any special clinic condition. Suggestions do not imply unrestricted enrollment.",
-      "ACT source precedence: its webpage directs Group B to the History of Art portion of a linked legacy page that returns 404, while the current undergraduate page links an ACT PDF with a specific six-subject history pool. The current HTC PDF’s History of Art subgroup is different. Preserve the full ACT PDF plan and separate webpage reference; department clarification is required rather than silently merging or treating the later filename as supersession.",
+      "ACT source precedence: its webpage directs Group B to the History of Art portion of a linked legacy page that returns 404, while the current undergraduate page links an ACT PDF with a specific six-subject history pool. The current HTC PDF\u2019s History of Art subgroup is different. Preserve the full ACT PDF plan and separate webpage reference; department clarification is required rather than silently merging or treating the later filename as supersession.",
       "CMS concentration links the full required/elective page, but its external-elective sampling and substitution permission are explicitly framed for majors. The four-HASS-subject criterion and education/media-content exclusion are mapped; the external list is retained only as reference pending concentration-advisor applicability clarification. Printed CMS.614 cross-list punctuation is retained rather than silently repaired.",
       "AP/international-exam applicability for earlier entrants before Fall 2026 remains unresolved."
     ],
