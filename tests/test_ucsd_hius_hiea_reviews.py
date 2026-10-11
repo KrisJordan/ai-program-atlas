@@ -78,6 +78,8 @@ def test_joint_heading_and_section_eligibility_are_both_guarded(monkeypatch):
     prefix='<h3>EAST ASIA</h3><h4>Colloquia</h4><p>'+review.SPEC['section_conditions']['EAST ASIA']+'</p>'
     html=html.replace('<p class="course-name">',prefix+'<p class="course-name">')
     html+='<h4>Another section</h4><p class="course-descriptions">Unrelated prose must not leak.</p>'
+    with pytest.raises(ValueError,match='outside reviewed colloquium'):
+        review.parse_observations(html.replace('<p class="course-name">','<h4>Lecture Courses</h4><p class="course-name">'))
     courses=review.parse_observations(html)['courses']
     assert [c['code'] for c in courses]==['HIEA 163']
     assert 'graduate standing' in courses[0]['prerequisites']

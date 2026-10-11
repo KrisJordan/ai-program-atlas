@@ -48,6 +48,14 @@ def source_blocks(html, subject):
         if codes is None:codes=[match[1]] if match else []
         codes=[code for code in codes if code.startswith(subject+' ')]
         if not codes:continue
+        for code in codes:
+            entry=next((e for e in SPEC['entries'] if e['code']==code),None)
+            expected=entry.get('section_condition_region') if entry else None
+            if expected:
+                actual=heading.find_previous(['h3','h4'])
+                region=actual.find_previous('h3') if actual else None
+                if actual is None or clean(actual.get_text(' ',strip=True))!='Colloquia' or region is None or clean(region.get_text(' ',strip=True))!=expected:
+                    raise ValueError('History course moved outside reviewed colloquium: '+code)
         parts=[]
         for sibling in heading.next_siblings:
             classes=getattr(sibling,'attrs',{}).get('class',[])
