@@ -147,3 +147,7 @@ for module in (registrar, supplement):
 hass_fields = import_module('atlas.adapters.mit-ai-decision-making-bs.hass_fields')
 SOURCES.extend(hass_fields.SOURCE_PARSERS)
 SOURCE_PARSERS.update(hass_fields.SOURCE_PARSERS)
+
+hass_departments = import_module('atlas.adapters.mit-ai-decision-making-bs.hass_departments')
+SOURCES.extend(hass_departments.SOURCE_PARSERS)
+SOURCE_PARSERS.update(hass_departments.SOURCE_PARSERS)
