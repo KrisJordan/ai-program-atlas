@@ -1,0 +1,73 @@
+{
+  "reviewed_at": "2026-10-11",
+  "scope": "Bounded follow-up of five proposed legacy/current Theater subject-number pairs; no title-based equivalence",
+  "sources": [
+    {
+      "url": "https://theater.mit.edu/program/degree-requirements/",
+      "fetched_at": "2026-10-11T02:32:24+00:00",
+      "status": 200,
+      "source_hash": "fcdd356171adfcc2a78133d9a66bfeffa4cf2cc4ce555e606a5303665f21422e",
+      "observation": "Public Theater degree page describes current concentration and host-degree context but contains no former-number mapping."
+    },
+    {
+      "url": "https://catalog.mit.edu/degree-charts/theater-arts-course-21t/",
+      "fetched_at": "2026-10-11T07:41:13+00:00",
+      "status": 200,
+      "source_hash": "465d5fc64fef6c9ca17ac00ba66284d7076b7b77930b5f3318a82f886f734abf",
+      "observation": "Current Theater BS chart lists 21T.130 and five other introductory choices without former numbers; degree rules are not substituted for the HASS concentration."
+    },
+    {
+      "url": "https://catalog.mit.edu/schools/humanities-arts-social-sciences/music-theater-arts/",
+      "fetched_at": "2026-10-11T01:18:11+00:00",
+      "status": 200,
+      "source_hash": "aa9be363fc72bf7a914c2845bb5f8b9ed4e48390d5de88b4da99984576610950",
+      "observation": "Current department page links the Theater subject catalog and lists current 21T minor choices; no former-number mapping appears."
+    },
+    {
+      "url": "https://catalog.mit.edu/subjects/21t/",
+      "fetched_at": "2026-10-11T04:30:23+00:00",
+      "status": 200,
+      "source_hash": "292d72487a0c5a289002866ef5c36510fc01a53703d8214ee049525ceeab351e",
+      "observation": "HTTP200 public Theater subject page contains its heading but zero courseblock elements and no course descriptions or former-number statements. This is a content gap, not a login/access-denial finding."
+    }
+  ],
+  "pairs": [
+    {
+      "listed_code": "21M.624",
+      "observed_current_code": "21T.201",
+      "title_context": "Acting with Camera",
+      "status": "equivalence_unverified",
+      "action": "Keep existing identity and description disposition; do not transfer current content solely by title or proposed numbering."
+    },
+    {
+      "listed_code": "21M.706",
+      "observed_current_code": "21T.242",
+      "title_context": "Asian American Theater",
+      "status": "equivalence_unverified",
+      "action": "Keep existing identity and description disposition; do not transfer current content solely by title or proposed numbering."
+    },
+    {
+      "listed_code": "21M.700",
+      "observed_current_code": "21T.241",
+      "title_context": "China on Stage",
+      "status": "equivalence_unverified",
+      "action": "Keep existing identity and description disposition; do not transfer current content solely by title or proposed numbering."
+    },
+    {
+      "listed_code": "21M.840",
+      "observed_current_code": "21T.130",
+      "title_context": "Performance Media",
+      "status": "equivalence_unverified",
+      "action": "Keep existing identity and description disposition; do not transfer current content solely by title or proposed numbering."
+    },
+    {
+      "listed_code": "21M.846",
+      "observed_current_code": "21T.424",
+      "title_context": "Topics in Performance Studies",
+      "status": "equivalence_unverified",
+      "action": "Keep existing identity and description disposition; do not transfer current content solely by title or proposed numbering."
+    }
+  ],
+  "remaining_action": "A published former-number table or an explicit same-subject/former-number clause is needed before binding these versions. Current pages were inspected; this bounded pass does not establish that no such evidence exists elsewhere.",
+  "search_note": "Three ordinary web searches for exact pairs and Theater renumbering returned unrelated results and supplied no admissible source evidence; no absence conclusion drawn."
+}
