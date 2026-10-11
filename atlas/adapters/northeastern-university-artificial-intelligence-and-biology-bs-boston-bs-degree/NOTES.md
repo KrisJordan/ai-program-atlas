@@ -53,3 +53,5 @@ Biology ecology and biochemical methods description review (2026-10-11): 18 exis
 ## Finite description inventory closure — 2026-10-11
 
 Finite course-description review complete (2026-10-11): all 72 currently listed course observations have source-backed original summaries. This closes the listed-course description queue only. Other offering-specific public sites/syllabi remain unreviewed, null preparation fields do not mean no restriction, and degree completeness remains partial pending the documented applicability boundaries.
+
+2026-10-11 science concurrency audit: 5 omitted laboratory/recitation observations now inherit 3 exact lecture/pair nodes. The finite source profile guards original course IDs, direct parent and fixed/choice role, plus the degree preamble; separate subject observers guard exact concurrency statements, titles and zero/one-hour values. Choices never become top-level obligations; unrelated prerequisite alternatives are not expanded. Manual category reviews stay outside observations.

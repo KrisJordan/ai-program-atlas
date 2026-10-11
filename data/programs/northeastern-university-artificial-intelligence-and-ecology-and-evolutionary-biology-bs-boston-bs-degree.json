@@ -203,7 +203,7 @@
       "fetched_at": "2026-10-10T23:58:21+00:00",
       "source_date": null,
       "catalog_year": "2026-2027",
-      "locator": "Selected course blocks: PHYS 1145, PHYS 1146, PHYS 1151, PHYS 1152, PHYS 1153, PHYS 1161, PHYS 1162. Names, hours, descriptions, prerequisites and concurrent-registration conditions.",
+      "locator": "Selected course blocks: PHYS 1145, PHYS 1146, PHYS 1151, PHYS 1152, PHYS 1153, PHYS 1161, PHYS 1162. Names, hours, descriptions, prerequisites and concurrent-registration conditions. Degree-audit concurrent additions: PHYS 1163.",
       "confidence": "high"
     },
     {
@@ -1702,6 +1702,31 @@
         ],
         "locator": "DS 4420 course block; description, not department or degree label",
         "rationale": "Advanced learning algorithms, structured-data models, Bayesian estimation and generative models are explicitly machine-learning content.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-phys-1163",
+      "code": "PHYS 1163",
+      "name": "Recitation for PHYS 1161",
+      "description": "Provides guided problem solving for introductory physics.",
+      "prerequisites": null,
+      "credits": 0.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-phys-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/phys/",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-phys-courses"
+        ],
+        "locator": "PHYS 1163 course block, including explicitly accompanying lecture and concurrent registration evidence",
+        "rationale": "The recitation supports interactive problem solving for the reviewed mechanics and fluids of PHYS 1161; zero credit hours do not erase its distinct course identity.",
         "candidate_categories": []
       }
     }
@@ -3276,6 +3301,22 @@
       "source_text": null,
       "summary": "This combined major cannot be combined with majors in biology, marine biology, or environmental and sustainability sciences, or with minors in biology, marine science, or environmental and sustainability sciences.",
       "course_ids": []
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-req-phys-1161-phys-1162-concurrent",
+      "parent_id": "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-req-phys-1161-phys-1162",
+      "title": "Concurrent courses for PHYS 1161, PHYS 1162",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-phys-courses",
+      "source_text": null,
+      "summary": "Explicit subject-catalog concurrency applies when this lecture/pair is taken. The degree requires specified corequisite labs/recitations; these courses inherit this exact branch and are not unrelated prerequisite obligations.",
+      "course_ids": [
+        "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-phys-1163"
+      ]
     }
   ],
   "notes": [
@@ -3330,7 +3371,8 @@
     "Partner-course description review (2026-10-11): 8 existing course observations gain original guarded summaries of their official 2026–2027 descriptions. Topics courses retain offering variability. Course activities and aims are not promoted to assessed program outcomes, and placement in an alternative or elective group is unchanged.",
     "Biology ecology and biochemical methods description review (2026-10-11): 12 existing course observations gain original concise summaries of their official 2026–2027 descriptions. Offering variability, course activities and permission conditions retain their stated scope. Requirement choices, credits, preparation fields and public resource links remain unchanged.",
     "Environmental science and engineering methods description review (2026-10-11): 10 existing course observations gain original concise summaries of their official 2026–2027 descriptions. Offering variability, course activities and permission conditions retain their stated scope. Requirement choices, credits, preparation fields and public resource links remain unchanged.",
-    "Finite course-description review complete (2026-10-11): all 71 currently listed course observations have source-backed original summaries. This closes the listed-course description queue only. Other offering-specific public sites/syllabi remain unreviewed, null preparation fields do not mean no restriction, and degree completeness remains partial pending the documented applicability boundaries."
+    "Finite course-description review complete (2026-10-11): all 71 currently listed course observations have source-backed original summaries. This closes the listed-course description queue only. Other offering-specific public sites/syllabi remain unreviewed, null preparation fields do not mean no restriction, and degree completeness remains partial pending the documented applicability boundaries.",
+    "Degree audit: explicitly specified science corequisite laboratories/recitations are mapped beneath their exact lecture or lecture/lab pair. Alternatives retain their original parent choices; zero-hour recitations remain distinct and unrelated prerequisites are not expanded."
   ],
   "curriculum_audit": {
     "scope": "degree",

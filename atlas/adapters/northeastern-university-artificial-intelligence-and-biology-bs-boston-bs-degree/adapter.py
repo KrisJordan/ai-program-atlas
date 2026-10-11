@@ -61,3 +61,7 @@ from atlas.adapters.northeastern_course_resources import register_resources
 _PUBLIC_CS_RESOURCES = register_resources(PROGRAM_ID)
 SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + tuple(_PUBLIC_CS_RESOURCES)))
 SOURCE_PARSERS = {**SOURCE_PARSERS, **_PUBLIC_CS_RESOURCES}
+
+# Individually reviewed science concurrency keeps exact alternative ancestry.
+from atlas.adapters.northeastern_science_corequisites import register_science_corequisites
+parse, SOURCE_PARSERS = register_science_corequisites(parse, SOURCE_PARSERS, PROGRAM_ID, 'biology')

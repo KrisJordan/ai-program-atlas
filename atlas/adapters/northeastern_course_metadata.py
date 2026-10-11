@@ -6,6 +6,10 @@ from atlas.adapters.northeastern_courseleaf import clean, slug, numeric, categor
 # Short editorial summaries of the linked official descriptions. Each has a
 # source phrase guard; changed prose cannot silently replay an unsupported summary.
 SUMMARIES = {
+    'CHEM 2325': ('Accompanies CHEM 2317', 'Reinforces CHEM 2317 organic reactivity and spectroscopy through interactive work on lecture and laboratory material.'),
+    'CHEM 2324': ('Accompanies CHEM 2315', 'Reinforces CHEM 2315 organic chemistry and synthesis through interactive work on lecture and laboratory material.'),
+    'CHEM 2323': ('Accompanies CHEM 2321', 'Reinforces CHEM 2321 analytical chemistry through interactive work on lecture and laboratory material.'),
+    'CHEM 2163': ('Accompanies CHEM 2161', 'Reinforces CHEM 2161 thermodynamics, electrochemistry and material chemistry through interactive work on lecture and laboratory material.'),
     'CS 1802': ('Accompanies CS 1800', 'Reinforces CS 1800 discrete-structures material through seminar discussion, quizzes and assignments.'),
     'ANTH 1101': ('basic concepts in cultural anthropology', 'Introduces cultural anthropology through comparative societies and their responses to globalization and social change.'),
     'ANTH 2305': ('local responses and/or resistances', 'Examines globalization, production, urbanization and labor migration through their effects on developing and postcolonial societies and local responses.'),

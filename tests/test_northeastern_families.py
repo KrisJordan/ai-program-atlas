@@ -56,6 +56,12 @@ def test_reviewed_variant_reconstruction_preserves_entire_original_graph(pid):
         assert r['parent_id']==pid+'-req-cs-1800' and r['source_id']==pid+'-cs-courses'
         assert r['kind']=='all' and r['course_ids']==[pid+'-cs-1802']
     rows=[r for r in rows if r not in added]
+    science=[r for r in rows if r['id'].endswith('-concurrent') and r['source_id'] in {pid+'-chem-courses',pid+'-phys-courses'}]
+    for r in science:
+        assert r['parent_id']==r['id'].removesuffix('-concurrent') and r['kind']=='all'
+    # The independent source/role/delta tests in test_northeastern_science_corequisites
+    # verify these additions; every original degree node still matches its hash.
+    rows=[r for r in rows if r not in science]
     if 'business-administration' in pid:
         # The reviewed follow-up adds independent concentration-source subtrees
         # and two main-page selection nodes; test those in the concentration suite.

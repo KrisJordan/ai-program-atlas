@@ -178,7 +178,7 @@
       "fetched_at": "2026-10-10T23:53:59+00:00",
       "source_date": null,
       "catalog_year": "2026-2027",
-      "locator": "All currently listed CHEM courses in this degree: CHEM 1161, CHEM 1162, CHEM 2311, CHEM 2312, CHEM 2313, CHEM 2314. Course identity, stated hours and explicit registration conditions; descriptions only when separately reviewed.",
+      "locator": "All currently listed CHEM courses in this degree: CHEM 1161, CHEM 1162, CHEM 2311, CHEM 2312, CHEM 2313, CHEM 2314. Course identity, stated hours and explicit registration conditions; descriptions only when separately reviewed. Degree-audit concurrent additions: CHEM 1163.",
       "confidence": "high"
     },
     {
@@ -208,7 +208,7 @@
       "fetched_at": "2026-10-10T23:58:21+00:00",
       "source_date": null,
       "catalog_year": "2026-2027",
-      "locator": "Selected course blocks: PHYS 1145, PHYS 1146, PHYS 1151, PHYS 1161. Names, hours, descriptions, prerequisites and concurrent-registration conditions.",
+      "locator": "Selected course blocks: PHYS 1145, PHYS 1146, PHYS 1151, PHYS 1161. Names, hours, descriptions, prerequisites and concurrent-registration conditions. Degree-audit concurrent additions: PHYS 1152, PHYS 1153, PHYS 1162, PHYS 1163.",
       "confidence": "high"
     },
     {
@@ -1954,6 +1954,131 @@
         ],
         "locator": "BIOL 4900 course block; description and any explicitly accompanying lecture context",
         "rationale": "The research capstone specifies proposal, reporting and feedback activities around an independently chosen research project; it does not fix that project subject.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-chem-1163",
+      "code": "CHEM 1163",
+      "name": "Recitation for CHEM 1161",
+      "description": "Provides guided practice applying concepts from general chemistry lectures.",
+      "prerequisites": null,
+      "credits": 0.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-chem-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/chem/",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-chem-courses"
+        ],
+        "locator": "CHEM 1163 course block, including explicitly accompanying lecture and concurrent registration evidence",
+        "rationale": "The zero-hour recitation applies the chemical concepts of the accompanying CHEM 1161 lecture.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-phys-1152",
+      "code": "PHYS 1152",
+      "name": "Lab for PHYS 1151",
+      "description": "Investigates introductory engineering physics through laboratory experiments.",
+      "prerequisites": null,
+      "credits": 1.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-phys-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/phys/",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-phys-courses"
+        ],
+        "locator": "PHYS 1152 course block, including explicitly accompanying lecture and concurrent registration evidence",
+        "rationale": "Experiments accompany PHYS 1151 engineering mechanics and fluids; the laboratory subject is physical science.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-phys-1153",
+      "code": "PHYS 1153",
+      "name": "Interactive Learning Seminar for PHYS 1151",
+      "description": "Practices mathematical problem solving in mechanics and fluids.",
+      "prerequisites": null,
+      "credits": 1.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-phys-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/phys/",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-phys-courses"
+        ],
+        "locator": "PHYS 1153 course block, including explicitly accompanying lecture and concurrent registration evidence",
+        "rationale": "The seminar solves physical mechanics, equilibrium, dynamics and fluids problems accompanying PHYS 1151; mathematical techniques support those physical models.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-phys-1162",
+      "code": "PHYS 1162",
+      "name": "Lab for PHYS 1161",
+      "description": "Investigates introductory physics concepts through laboratory experiments.",
+      "prerequisites": null,
+      "credits": 1.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-phys-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/phys/",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-phys-courses"
+        ],
+        "locator": "PHYS 1162 course block, including explicitly accompanying lecture and concurrent registration evidence",
+        "rationale": "Experiments accompany the PHYS 1161 mechanics-and-fluids lecture and remain physical-science laboratory practice.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-phys-1163",
+      "code": "PHYS 1163",
+      "name": "Recitation for PHYS 1161",
+      "description": "Provides guided problem solving for introductory physics.",
+      "prerequisites": null,
+      "credits": 0.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-phys-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/phys/",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-phys-courses"
+        ],
+        "locator": "PHYS 1163 course block, including explicitly accompanying lecture and concurrent registration evidence",
+        "rationale": "The recitation supports interactive problem solving for the reviewed mechanics and fluids of PHYS 1161; zero credit hours do not erase its distinct course identity.",
         "candidate_categories": []
       }
     }
@@ -3716,6 +3841,56 @@
       "source_text": null,
       "summary": "138 total semester hours required",
       "course_ids": []
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-req-chem-1161-chem-1162-concurrent",
+      "parent_id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-req-chem-1161-chem-1162",
+      "title": "Concurrent courses for CHEM 1161, CHEM 1162",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-chem-courses",
+      "source_text": null,
+      "summary": "Explicit subject-catalog concurrency applies when this lecture/pair is taken. The degree requires specified corequisite labs/recitations; these courses inherit this exact branch and are not unrelated prerequisite obligations.",
+      "course_ids": [
+        "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-chem-1163"
+      ]
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-req-phys-1151-concurrent",
+      "parent_id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-req-phys-1151",
+      "title": "Concurrent courses for PHYS 1151",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-phys-courses",
+      "source_text": null,
+      "summary": "Explicit subject-catalog concurrency applies when this lecture/pair is taken. The degree requires specified corequisite labs/recitations; these courses inherit this exact branch and are not unrelated prerequisite obligations.",
+      "course_ids": [
+        "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-phys-1152",
+        "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-phys-1153"
+      ]
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-req-phys-1161-concurrent",
+      "parent_id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-req-phys-1161",
+      "title": "Concurrent courses for PHYS 1161",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-phys-courses",
+      "source_text": null,
+      "summary": "Explicit subject-catalog concurrency applies when this lecture/pair is taken. The degree requires specified corequisite labs/recitations; these courses inherit this exact branch and are not unrelated prerequisite obligations.",
+      "course_ids": [
+        "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-phys-1162",
+        "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-phys-1163"
+      ]
     }
   ],
   "notes": [
@@ -3765,7 +3940,8 @@
     "Public syllabus explicitly covers CS 2000 classes and CS 2001 labs. It is linked by the separately verified Fall 2026 site but does not itself state an offering year; catalog credits and prerequisites remain separate.",
     "Partner-course description review (2026-10-11): 14 existing course observations gain original guarded summaries of their official 2026–2027 descriptions. Topics courses retain offering variability. Course activities and aims are not promoted to assessed program outcomes, and placement in an alternative or elective group is unchanged.",
     "Biology ecology and biochemical methods description review (2026-10-11): 18 existing course observations gain original concise summaries of their official 2026–2027 descriptions. Offering variability, course activities and permission conditions retain their stated scope. Requirement choices, credits, preparation fields and public resource links remain unchanged.",
-    "Finite course-description review complete (2026-10-11): all 72 currently listed course observations have source-backed original summaries. This closes the listed-course description queue only. Other offering-specific public sites/syllabi remain unreviewed, null preparation fields do not mean no restriction, and degree completeness remains partial pending the documented applicability boundaries."
+    "Finite course-description review complete (2026-10-11): all 72 currently listed course observations have source-backed original summaries. This closes the listed-course description queue only. Other offering-specific public sites/syllabi remain unreviewed, null preparation fields do not mean no restriction, and degree completeness remains partial pending the documented applicability boundaries.",
+    "Degree audit: explicitly specified science corequisite laboratories/recitations are mapped beneath their exact lecture or lecture/lab pair. Alternatives retain their original parent choices; zero-hour recitations remain distinct and unrelated prerequisites are not expanded."
   ],
   "curriculum_audit": {
     "scope": "degree",
