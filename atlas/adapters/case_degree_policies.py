@@ -216,7 +216,7 @@ def parse_uger(html, program_id, award):
     communication = t.group(
         "Communication sequence and Experience Portfolio",
         parent=parent["id"],
-        kind="note",
+        kind="all",
         summary="Pass with letter grades an Academic Inquiry Seminar in the first or second semester, two communication-intensive courses of at least three credits each, disciplinary communication of at least three credits, and a capstone of at least three credits. Submit work from every component to the Experience Portfolio, including inquiry and capstone reflections. DC/capstone may be approved sequences and are usually completed within the major.",
     )
     wellness = t.group(
@@ -282,7 +282,7 @@ def parse_uger(html, program_id, award):
         "Inquiry seminar placement and transfer",
         parent=communication["id"],
         kind="note",
-        summary="Choose AIQS 100, 110, 120 or community-engaged AIQS 130 (four credits). Students needing academic-English preparation take AIAE 100 (three credits) first, then the seminar; others enter AIQS 120 directly. Incoming transfers who completed prior first-year writing receive inquiry transfer credit. Other students require FSCUE appeal approval to use transfer credit. Submit two inquiry assignments; the printed word counts are ordinary examples, not universal numeric minima.",
+        summary="Choose AIQS 100, 110, 120 or community-engaged AIQS 130 (four credits). Students for whom English is a second language and who need academic-English preparation take AIAE 100 (three credits) first, then the seminar. Some students for whom English is a second language enter AIQS 120 directly. Incoming transfers who completed prior first-year writing receive inquiry transfer credit. Other students require FSCUE appeal approval to use transfer credit. Submit two inquiry assignments; the printed word counts are ordinary examples, not universal numeric minima.",
     )
     t.group(
         "Communication residency and portfolio",

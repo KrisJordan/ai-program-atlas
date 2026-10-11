@@ -126,3 +126,22 @@ def test_degree_numbers_are_parsed_with_award_scope():
     assert p.parse_degree(html, "test", "BA")["requirements"][-1]["credits"] == 120
     with pytest.raises(ValueError, match="BA school"):
         p.parse_degree(html.replace("90 credit hours", "89 credit hours"), "test", "BA")
+
+
+@pytest.mark.parametrize('award', ['BA', 'BS'])
+def test_required_communication_choices_are_not_hidden_under_note(award):
+    pid='case-western-reserve-university-artificial-intelligence-'+award.lower()+'-degree'
+    data=json.loads((Path('data/programs')/(pid+'.json')).read_text())
+    rules={r['id']:r for r in data['requirements']}
+    for title,count in [('Academic Inquiry Seminar approved options',1),('Communication-Intensive approved options',2),('Disciplinary Communication approved options',1),('Capstone Project approved options',1)]:
+        choice=next(r for r in rules.values() if r['title']==title)
+        assert choice['kind']=='choose_courses' and choice['count']==count
+        ancestor=rules[choice['parent_id']]
+        while True:
+            assert ancestor['kind']=='all'
+            if not ancestor['parent_id']:break
+            ancestor=rules[ancestor['parent_id']]
+    policy=next(r for r in rules.values() if r['title']=='Inquiry seminar placement and transfer')
+    assert 'Some students for whom English is a second language enter AIQS 120 directly' in policy['summary']
+    observed=p.parse_uger(fixture(),pid,award)
+    assert next(r for r in observed['requirements'] if r['title']=='Communication sequence and Experience Portfolio')['kind']=='all'
