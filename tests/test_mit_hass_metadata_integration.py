@@ -225,3 +225,18 @@ def test_sts_exact_composites_and_homepage_resource_limits():
     assert ethics['syllabus'] is None
     assert not by['mit-ai-hass-sts-tier-2-sts-085j']['description']
     assert by['mit-ai-hass-sts-tier-2-sts-081j']['category']=='human_context'
+
+
+def test_historical_language_registration_is_not_a_current_general_prerequisite():
+    p=json.loads(Path('data/programs/mit-ai-decision-making-bs.json').read_text())
+    by={c['id']:c for c in p['courses']}
+    regular=by['mit-ai-hass-asian-and-asian-diaspora-studies-21g-101']
+    streamlined=by['mit-ai-hass-asian-and-asian-diaspora-studies-21g-107']
+    calligraphy=by['mit-ai-hass-asian-and-asian-diaspora-studies-21g-111']
+    assert 'no prior background' in regular['prerequisites']
+    assert any('capped at16' in n and 'auditors' in n for n in regular['notes'])
+    assert any('21G.171 requires concurrent21G.076' in n and 'not silently applied' in n for n in regular['notes'])
+    assert streamlined['prerequisites'] is None
+    assert any('audience/placement context' in n for n in streamlined['notes'])
+    assert calligraphy['category']=='other' and calligraphy['category_review']['status']=='mixed'
+    assert calligraphy['syllabus'].endswith('/pages/syllabus/')
