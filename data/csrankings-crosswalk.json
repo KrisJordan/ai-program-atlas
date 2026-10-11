@@ -1,0 +1,2036 @@
+{
+  "source_snapshot": "5e8a27d68310c728a182b8bb3b6437c39bce0cad",
+  "sources": [
+    {
+      "filename": "csrankings.js",
+      "url": "https://raw.githubusercontent.com/emeryberger/CSrankings/5e8a27d68310c728a182b8bb3b6437c39bce0cad/csrankings.js",
+      "sha256": "444e6523c60b95415916532cc8bf5db179c33b5cd9f4a2e0abf01b549b717f54",
+      "bytes": 193198,
+      "retrieved_date": "2026-10-11",
+      "locator": "parentMap/defaultNextTier; loadCountryInfo; inRegion; buildDepartments; computeStats; buildOutputString (rounding/ties); constructor defaults; makeURL (year window)"
+    },
+    {
+      "filename": "index.html",
+      "url": "https://raw.githubusercontent.com/emeryberger/CSrankings/5e8a27d68310c728a182b8bb3b6437c39bce0cad/index.html",
+      "sha256": "7481e91e881f3610d288968aefeb8c7bb539f8b4061d1e14872c2554cc6d4048",
+      "bytes": 62757,
+      "retrieved_date": "2026-10-11",
+      "locator": "AI field controls and next-tier KDD checkbox; current-year selectors"
+    },
+    {
+      "filename": "faq.html",
+      "url": "https://raw.githubusercontent.com/emeryberger/CSrankings/5e8a27d68310c728a182b8bb3b6437c39bce0cad/faq.html",
+      "sha256": "5afd82bebfe6f71924ac0a6695e322035db48b456af1088af3130c9d0aa6d751",
+      "bytes": 15334,
+      "retrieved_date": "2026-10-11",
+      "locator": "License; faculty inclusion; fractional author credit; geometric mean; publication scope"
+    },
+    {
+      "filename": "COPYING",
+      "url": "https://raw.githubusercontent.com/emeryberger/CSrankings/5e8a27d68310c728a182b8bb3b6437c39bce0cad/COPYING",
+      "sha256": "a8abb07d9604a60e6633f48400875ad1288a60cc99ee340d47f4cfa1498f404e",
+      "bytes": 19121,
+      "retrieved_date": "2026-10-11",
+      "locator": "Full CC BY-NC-ND 4.0 license notice"
+    },
+    {
+      "filename": "README.md",
+      "url": "https://raw.githubusercontent.com/emeryberger/CSrankings/5e8a27d68310c728a182b8bb3b6437c39bce0cad/README.md",
+      "sha256": "932c42eccf87b1134c16b782f5c9fd1461aca9e0fe73725822085d0207b79206",
+      "bytes": 5735,
+      "retrieved_date": "2026-10-11",
+      "locator": "DBLP ODC Attribution notice and CSRankings license links"
+    },
+    {
+      "filename": "generated-author-info.csv",
+      "url": "https://raw.githubusercontent.com/emeryberger/CSrankings/5e8a27d68310c728a182b8bb3b6437c39bce0cad/generated-author-info.csv",
+      "sha256": "c177ca0c2e3149a0129b1231b719c85fa3427c9d34e643cafd983e0a30debbce",
+      "bytes": 17788453,
+      "retrieved_date": "2026-10-11",
+      "locator": "Complete name,dept,area,count,adjustedcount,year rows; selected2016–2025/default venues"
+    },
+    {
+      "filename": "csrankings.csv",
+      "url": "https://raw.githubusercontent.com/emeryberger/CSrankings/5e8a27d68310c728a182b8bb3b6437c39bce0cad/csrankings.csv",
+      "sha256": "4c3a13771132d9550fae875782445b322996efff7e47fc42e1aeaa4d5844b7a3",
+      "bytes": 4013553,
+      "retrieved_date": "2026-10-11",
+      "locator": "Complete faculty identity and current affiliation registry"
+    },
+    {
+      "filename": "institutions.csv",
+      "url": "https://raw.githubusercontent.com/emeryberger/CSrankings/5e8a27d68310c728a182b8bb3b6437c39bce0cad/institutions.csv",
+      "sha256": "254ead69bb539611cdf05033d5c95064db23acabddeca762b581f8ca5a867a70",
+      "bytes": 50421,
+      "retrieved_date": "2026-10-11",
+      "locator": "Complete institution,region,countryabbrv,homepage registry; countryabbrv=us"
+    },
+    {
+      "filename": "countries.csv",
+      "url": "https://raw.githubusercontent.com/emeryberger/CSrankings/5e8a27d68310c728a182b8bb3b6437c39bce0cad/countries.csv",
+      "sha256": "acce45adae86cab202420db3390bd05cfcb5396291b564ad45312a14d4891450",
+      "bytes": 19677,
+      "retrieved_date": "2026-10-11",
+      "locator": "Upstream country registry (retained provenance, not used as US institution membership)"
+    }
+  ],
+  "identity_policy": "Explicit mappings only. Never transfer campus metrics to sibling campuses or graduate/military institutions to similarly named colleges/academies. A missing registry entry does not establish PhD ineligibility.",
+  "institutions": [
+    {
+      "institution_id": "massachusetts-institute-of-technology",
+      "roster_name": "Massachusetts Institute of Technology",
+      "status": "matched",
+      "upstream_institution": "Massachusetts Inst. of Technology",
+      "match_basis": "Explicit alias/campus identity reviewed against upstream institution label and linked department homepage; no fuzzy join.",
+      "upstream_homepage": "https://www.eecs.mit.edu/",
+      "source_locator": "institutions.csv: institution=Massachusetts Inst. of Technology",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "princeton-university",
+      "roster_name": "Princeton University",
+      "status": "matched",
+      "upstream_institution": "Princeton University",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://www.cs.princeton.edu/",
+      "source_locator": "institutions.csv: institution=Princeton University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "harvard-university",
+      "roster_name": "Harvard University",
+      "status": "matched",
+      "upstream_institution": "Harvard University",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://seas.harvard.edu/computer-science",
+      "source_locator": "institutions.csv: institution=Harvard University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "yale-university",
+      "roster_name": "Yale University",
+      "status": "matched",
+      "upstream_institution": "Yale University",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://cpsc.yale.edu/",
+      "source_locator": "institutions.csv: institution=Yale University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "california-institute-of-technology",
+      "roster_name": "California Institute of Technology",
+      "status": "matched",
+      "upstream_institution": "California Inst. of Technology",
+      "match_basis": "Explicit alias/campus identity reviewed against upstream institution label and linked department homepage; no fuzzy join.",
+      "upstream_homepage": "https://www.cms.caltech.edu/",
+      "source_locator": "institutions.csv: institution=California Inst. of Technology",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "stanford-university",
+      "roster_name": "Stanford University",
+      "status": "matched",
+      "upstream_institution": "Stanford University",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://www.cs.stanford.edu/",
+      "source_locator": "institutions.csv: institution=Stanford University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "university-of-pennsylvania",
+      "roster_name": "University of Pennsylvania",
+      "status": "matched",
+      "upstream_institution": "University of Pennsylvania",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://www.cis.upenn.edu/",
+      "source_locator": "institutions.csv: institution=University of Pennsylvania",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "duke-university",
+      "roster_name": "Duke University",
+      "status": "matched",
+      "upstream_institution": "Duke University",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://cs.duke.edu/",
+      "source_locator": "institutions.csv: institution=Duke University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "johns-hopkins-university",
+      "roster_name": "Johns Hopkins University",
+      "status": "matched",
+      "upstream_institution": "Johns Hopkins University",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://www.cs.jhu.edu/",
+      "source_locator": "institutions.csv: institution=Johns Hopkins University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "northwestern-university",
+      "roster_name": "Northwestern University",
+      "status": "matched",
+      "upstream_institution": "Northwestern University",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://www.mccormick.northwestern.edu/computer-science/",
+      "source_locator": "institutions.csv: institution=Northwestern University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "university-of-chicago",
+      "roster_name": "University of Chicago",
+      "status": "matched",
+      "upstream_institution": "University of Chicago",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://computerscience.uchicago.edu/",
+      "source_locator": "institutions.csv: institution=University of Chicago",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "columbia-university",
+      "roster_name": "Columbia University",
+      "status": "matched",
+      "upstream_institution": "Columbia University",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://www.cs.columbia.edu/",
+      "source_locator": "institutions.csv: institution=Columbia University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "dartmouth-college",
+      "roster_name": "Dartmouth College",
+      "status": "matched",
+      "upstream_institution": "Dartmouth College",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://web.cs.dartmouth.edu/",
+      "source_locator": "institutions.csv: institution=Dartmouth College",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "carnegie-mellon-university",
+      "roster_name": "Carnegie Mellon University",
+      "status": "matched",
+      "upstream_institution": "Carnegie Mellon University",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://www.csd.cs.cmu.edu/",
+      "source_locator": "institutions.csv: institution=Carnegie Mellon University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "cornell-university",
+      "roster_name": "Cornell University",
+      "status": "matched",
+      "upstream_institution": "Cornell University",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://www.cs.cornell.edu/",
+      "source_locator": "institutions.csv: institution=Cornell University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "brown-university",
+      "roster_name": "Brown University",
+      "status": "matched",
+      "upstream_institution": "Brown University",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://cs.brown.edu/",
+      "source_locator": "institutions.csv: institution=Brown University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "rice-university",
+      "roster_name": "Rice University",
+      "status": "matched",
+      "upstream_institution": "Rice University",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://cs.rice.edu/",
+      "source_locator": "institutions.csv: institution=Rice University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "vanderbilt-university",
+      "roster_name": "Vanderbilt University",
+      "status": "matched",
+      "upstream_institution": "Vanderbilt University",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://engineering.vanderbilt.edu/departments/computer-science/",
+      "source_locator": "institutions.csv: institution=Vanderbilt University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "washington-university-in-st-louis",
+      "roster_name": "Washington University in St. Louis",
+      "status": "matched",
+      "upstream_institution": "Washington University in St. Louis",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://cse.washu.edu/",
+      "source_locator": "institutions.csv: institution=Washington University in St. Louis",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "university-of-california-berkeley",
+      "roster_name": "University of California, Berkeley",
+      "status": "matched",
+      "upstream_institution": "Univ. of California - Berkeley",
+      "match_basis": "Explicit alias/campus identity reviewed against upstream institution label and linked department homepage; no fuzzy join.",
+      "upstream_homepage": "https://eecs.berkeley.edu/",
+      "source_locator": "institutions.csv: institution=Univ. of California - Berkeley",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "university-of-california-los-angeles",
+      "roster_name": "University of California, Los Angeles",
+      "status": "matched",
+      "upstream_institution": "Univ. of California - Los Angeles",
+      "match_basis": "Explicit alias/campus identity reviewed against upstream institution label and linked department homepage; no fuzzy join.",
+      "upstream_homepage": "https://www.cs.ucla.edu/",
+      "source_locator": "institutions.csv: institution=Univ. of California - Los Angeles",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "university-of-notre-dame",
+      "roster_name": "University of Notre Dame",
+      "status": "matched",
+      "upstream_institution": "University of Notre Dame",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://cse.nd.edu/",
+      "source_locator": "institutions.csv: institution=University of Notre Dame",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "emory-university",
+      "roster_name": "Emory University",
+      "status": "matched",
+      "upstream_institution": "Emory University",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://computerscience.emory.edu/",
+      "source_locator": "institutions.csv: institution=Emory University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "georgetown-university",
+      "roster_name": "Georgetown University",
+      "status": "matched",
+      "upstream_institution": "Georgetown University",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://cs.georgetown.edu/",
+      "source_locator": "institutions.csv: institution=Georgetown University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "university-of-michigan-ann-arbor",
+      "roster_name": "University of Michigan–Ann Arbor",
+      "status": "matched",
+      "upstream_institution": "University of Michigan",
+      "match_basis": "Pinned registry links Michigan to its CSE department and separately lists Dearborn and Flint. The independently indexed official CSE page identifies its Ann Arbor address. Coordinator accepted this bounded institutional identity corroboration.",
+      "upstream_homepage": "https://cse.engin.umich.edu/",
+      "source_locator": "institutions.csv: institution=University of Michigan",
+      "review_date": "2026-10-11",
+      "identity_evidence": {
+        "url": "https://cse.engin.umich.edu/",
+        "locator": "Official indexed department contact address identifies Ann Arbor; exact department URL appears in institutions.csv",
+        "source_kind": "Official indexed address plus complete pinned registry",
+        "limitation": "Actual CSE homepage and report bodies returned403; no denied route was retried. This supports institutional identity only, not curriculum facts."
+      }
+    },
+    {
+      "institution_id": "university-of-virginia",
+      "roster_name": "University of Virginia",
+      "status": "matched",
+      "upstream_institution": "University of Virginia",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://engineering.virginia.edu/department/computer-science",
+      "source_locator": "institutions.csv: institution=University of Virginia",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "university-of-north-carolina-chapel-hill",
+      "roster_name": "University of North Carolina–Chapel Hill",
+      "status": "matched",
+      "upstream_institution": "University of North Carolina",
+      "match_basis": "Explicit alias/campus identity reviewed against upstream institution label and linked department homepage; no fuzzy join.",
+      "upstream_homepage": "https://cs.unc.edu/",
+      "source_locator": "institutions.csv: institution=University of North Carolina",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "university-of-southern-california",
+      "roster_name": "University of Southern California",
+      "status": "matched",
+      "upstream_institution": "University of Southern California",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://www.cs.usc.edu/",
+      "source_locator": "institutions.csv: institution=University of Southern California",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "georgia-institute-of-technology",
+      "roster_name": "Georgia Institute of Technology",
+      "status": "matched",
+      "upstream_institution": "Georgia Institute of Technology",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://www.cc.gatech.edu/",
+      "source_locator": "institutions.csv: institution=Georgia Institute of Technology",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "university-of-california-san-diego",
+      "roster_name": "University of California San Diego",
+      "status": "matched",
+      "upstream_institution": "Univ. of California - San Diego",
+      "match_basis": "Explicit alias/campus identity reviewed against upstream institution label and linked department homepage; no fuzzy join.",
+      "upstream_homepage": "https://cse.ucsd.edu/",
+      "source_locator": "institutions.csv: institution=Univ. of California - San Diego",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "boston-college",
+      "roster_name": "Boston College",
+      "status": "matched",
+      "upstream_institution": "Boston College",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://www.bc.edu/bc-web/schools/morrissey/departments/computer-science.html",
+      "source_locator": "institutions.csv: institution=Boston College",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "new-york-university",
+      "roster_name": "New York University",
+      "status": "matched",
+      "upstream_institution": "New York University",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://cs.nyu.edu/",
+      "source_locator": "institutions.csv: institution=New York University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "tufts-university",
+      "roster_name": "Tufts University",
+      "status": "matched",
+      "upstream_institution": "Tufts University",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://engineering.tufts.edu/cs/",
+      "source_locator": "institutions.csv: institution=Tufts University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "boston-university",
+      "roster_name": "Boston University",
+      "status": "matched",
+      "upstream_institution": "Boston University",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://www.bu.edu/cs/",
+      "source_locator": "institutions.csv: institution=Boston University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "university-of-california-davis",
+      "roster_name": "University of California, Davis",
+      "status": "matched",
+      "upstream_institution": "Univ. of California - Davis",
+      "match_basis": "Explicit alias/campus identity reviewed against upstream institution label and linked department homepage; no fuzzy join.",
+      "upstream_homepage": "https://cs.ucdavis.edu/",
+      "source_locator": "institutions.csv: institution=Univ. of California - Davis",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "university-of-california-irvine",
+      "roster_name": "University of California, Irvine",
+      "status": "matched",
+      "upstream_institution": "Univ. of California - Irvine",
+      "match_basis": "Explicit alias/campus identity reviewed against upstream institution label and linked department homepage; no fuzzy join.",
+      "upstream_homepage": "https://cs.ics.uci.edu/",
+      "source_locator": "institutions.csv: institution=Univ. of California - Irvine",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "university-of-florida",
+      "roster_name": "University of Florida",
+      "status": "matched",
+      "upstream_institution": "University of Florida",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://cise.ufl.edu/",
+      "source_locator": "institutions.csv: institution=University of Florida",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "university-of-illinois-urbana-champaign",
+      "roster_name": "University of Illinois Urbana-Champaign",
+      "status": "matched",
+      "upstream_institution": "Univ. of Illinois at Urbana-Champaign",
+      "match_basis": "Explicit alias/campus identity reviewed against upstream institution label and linked department homepage; no fuzzy join.",
+      "upstream_homepage": "https://siebelschool.illinois.edu/",
+      "source_locator": "institutions.csv: institution=Univ. of Illinois at Urbana-Champaign",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "university-of-texas-austin",
+      "roster_name": "University of Texas–Austin",
+      "status": "matched",
+      "upstream_institution": "University of Texas at Austin",
+      "match_basis": "Explicit alias/campus identity reviewed against upstream institution label and linked department homepage; no fuzzy join.",
+      "upstream_homepage": "https://www.cs.utexas.edu/",
+      "source_locator": "institutions.csv: institution=University of Texas at Austin",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "university-of-wisconsin-madison",
+      "roster_name": "University of Wisconsin–Madison",
+      "status": "matched",
+      "upstream_institution": "University of Wisconsin - Madison",
+      "match_basis": "Explicit alias/campus identity reviewed against upstream institution label and linked department homepage; no fuzzy join.",
+      "upstream_homepage": "https://www.cs.wisc.edu/",
+      "source_locator": "institutions.csv: institution=University of Wisconsin - Madison",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "wake-forest-university",
+      "roster_name": "Wake Forest University",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "northeastern-university",
+      "roster_name": "Northeastern University",
+      "status": "matched",
+      "upstream_institution": "Northeastern University",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://www.khoury.northeastern.edu/",
+      "source_locator": "institutions.csv: institution=Northeastern University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "villanova-university",
+      "roster_name": "Villanova University",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "case-western-reserve-university",
+      "roster_name": "Case Western Reserve University",
+      "status": "matched",
+      "upstream_institution": "Case Western Reserve University",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://engineering.case.edu/computer-and-data-sciences",
+      "source_locator": "institutions.csv: institution=Case Western Reserve University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "lehigh-university",
+      "roster_name": "Lehigh University",
+      "status": "matched",
+      "upstream_institution": "Lehigh University",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://engineering.lehigh.edu/cse",
+      "source_locator": "institutions.csv: institution=Lehigh University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "ohio-state-university",
+      "roster_name": "The Ohio State University",
+      "status": "matched",
+      "upstream_institution": "Ohio State University",
+      "match_basis": "Explicit alias/campus identity reviewed against upstream institution label and linked department homepage; no fuzzy join.",
+      "upstream_homepage": "https://cse.osu.edu/",
+      "source_locator": "institutions.csv: institution=Ohio State University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "rutgers-university-new-brunswick",
+      "roster_name": "Rutgers University–New Brunswick",
+      "status": "matched",
+      "upstream_institution": "Rutgers University",
+      "match_basis": "Explicit alias/campus identity reviewed against upstream institution label and linked department homepage; no fuzzy join.",
+      "upstream_homepage": "https://www.cs.rutgers.edu/",
+      "source_locator": "institutions.csv: institution=Rutgers University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "university-of-california-santa-barbara",
+      "roster_name": "University of California, Santa Barbara",
+      "status": "matched",
+      "upstream_institution": "Univ. of California - Santa Barbara",
+      "match_basis": "Explicit alias/campus identity reviewed against upstream institution label and linked department homepage; no fuzzy join.",
+      "upstream_homepage": "https://cs.ucsb.edu/",
+      "source_locator": "institutions.csv: institution=Univ. of California - Santa Barbara",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "university-of-maryland-college-park",
+      "roster_name": "University of Maryland, College Park",
+      "status": "matched",
+      "upstream_institution": "Univ. of Maryland - College Park",
+      "match_basis": "Explicit alias/campus identity reviewed against upstream institution label and linked department homepage; no fuzzy join.",
+      "upstream_homepage": "https://www.cs.umd.edu/",
+      "source_locator": "institutions.csv: institution=Univ. of Maryland - College Park",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "university-of-rochester",
+      "roster_name": "University of Rochester",
+      "status": "matched",
+      "upstream_institution": "University of Rochester",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://www.cs.rochester.edu/",
+      "source_locator": "institutions.csv: institution=University of Rochester",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "university-of-washington",
+      "roster_name": "University of Washington",
+      "status": "matched",
+      "upstream_institution": "University of Washington",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://www.cs.washington.edu/",
+      "source_locator": "institutions.csv: institution=University of Washington",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "university-of-georgia",
+      "roster_name": "University of Georgia",
+      "status": "matched",
+      "upstream_institution": "University of Georgia",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://cobweb.cs.uga.edu",
+      "source_locator": "institutions.csv: institution=University of Georgia",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "virginia-tech",
+      "roster_name": "Virginia Tech",
+      "status": "matched",
+      "upstream_institution": "Virginia Tech",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://cs.vt.edu/",
+      "source_locator": "institutions.csv: institution=Virginia Tech",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "william-and-mary",
+      "roster_name": "William & Mary",
+      "status": "matched",
+      "upstream_institution": "College of William and Mary",
+      "match_basis": "Explicit alias/campus identity reviewed against upstream institution label and linked department homepage; no fuzzy join.",
+      "upstream_homepage": "https://www.wm.edu/as/computerscience/",
+      "source_locator": "institutions.csv: institution=College of William and Mary",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "pennsylvania-state-university",
+      "roster_name": "Pennsylvania State University",
+      "status": "matched",
+      "upstream_institution": "Pennsylvania State University",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://www.eecs.psu.edu/",
+      "source_locator": "institutions.csv: institution=Pennsylvania State University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "purdue-university",
+      "roster_name": "Purdue University",
+      "status": "matched",
+      "upstream_institution": "Purdue University",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://www.cs.purdue.edu/",
+      "source_locator": "institutions.csv: institution=Purdue University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "santa-clara-university",
+      "roster_name": "Santa Clara University",
+      "status": "matched",
+      "upstream_institution": "Santa Clara University",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://www.scu.edu/engineering/academic-programs/department-of-computer-engineering/",
+      "source_locator": "institutions.csv: institution=Santa Clara University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "university-of-miami",
+      "roster_name": "University of Miami",
+      "status": "matched",
+      "upstream_institution": "University of Miami",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://www.cs.miami.edu",
+      "source_locator": "institutions.csv: institution=University of Miami",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "brandeis-university",
+      "roster_name": "Brandeis University",
+      "status": "matched",
+      "upstream_institution": "Brandeis University",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://www.brandeis.edu/computer-science/",
+      "source_locator": "institutions.csv: institution=Brandeis University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "florida-state-university",
+      "roster_name": "Florida State University",
+      "status": "matched",
+      "upstream_institution": "Florida State University",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://www.cs.fsu.edu/",
+      "source_locator": "institutions.csv: institution=Florida State University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "george-washington-university",
+      "roster_name": "George Washington University",
+      "status": "matched",
+      "upstream_institution": "George Washington University",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://cs.engineering.gwu.edu/",
+      "source_locator": "institutions.csv: institution=George Washington University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "stevens-institute-of-technology",
+      "roster_name": "Stevens Institute of Technology",
+      "status": "matched",
+      "upstream_institution": "Stevens Institute of Technology",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://www.cs.stevens.edu",
+      "source_locator": "institutions.csv: institution=Stevens Institute of Technology",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "stony-brook-university-suny",
+      "roster_name": "Stony Brook University–SUNY",
+      "status": "matched",
+      "upstream_institution": "Stony Brook University",
+      "match_basis": "Explicit alias/campus identity reviewed against upstream institution label and linked department homepage; no fuzzy join.",
+      "upstream_homepage": "https://www.cs.stonybrook.edu/",
+      "source_locator": "institutions.csv: institution=Stony Brook University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "texas-am-university",
+      "roster_name": "Texas A&M University",
+      "status": "matched",
+      "upstream_institution": "Texas A&M University",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://engineering.tamu.edu/cse/",
+      "source_locator": "institutions.csv: institution=Texas A&M University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "tulane-university-of-louisiana",
+      "roster_name": "Tulane University of Louisiana",
+      "status": "matched",
+      "upstream_institution": "Tulane University",
+      "match_basis": "Explicit alias/campus identity reviewed against upstream institution label and linked department homepage; no fuzzy join.",
+      "upstream_homepage": "https://www.cs.tulane.edu",
+      "source_locator": "institutions.csv: institution=Tulane University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "university-of-massachusetts-amherst",
+      "roster_name": "University of Massachusetts–Amherst",
+      "status": "matched",
+      "upstream_institution": "Univ. of Massachusetts Amherst",
+      "match_basis": "Explicit alias/campus identity reviewed against upstream institution label and linked department homepage; no fuzzy join.",
+      "upstream_homepage": "https://www.cics.umass.edu/",
+      "source_locator": "institutions.csv: institution=Univ. of Massachusetts Amherst",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "university-of-minnesota-twin-cities",
+      "roster_name": "University of Minnesota–Twin Cities",
+      "status": "matched",
+      "upstream_institution": "University of Minnesota",
+      "match_basis": "Explicit alias/campus identity reviewed against upstream institution label and linked department homepage; no fuzzy join.",
+      "upstream_homepage": "https://cse.umn.edu/cs",
+      "source_locator": "institutions.csv: institution=University of Minnesota",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "university-of-pittsburgh",
+      "roster_name": "University of Pittsburgh",
+      "status": "matched",
+      "upstream_institution": "University of Pittsburgh",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://www.cs.pitt.edu/",
+      "source_locator": "institutions.csv: institution=University of Pittsburgh",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "michigan-state-university",
+      "roster_name": "Michigan State University",
+      "status": "matched",
+      "upstream_institution": "Michigan State University",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://www.cse.msu.edu/",
+      "source_locator": "institutions.csv: institution=Michigan State University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "rensselaer-polytechnic-institute",
+      "roster_name": "Rensselaer Polytechnic Institute",
+      "status": "matched",
+      "upstream_institution": "Rensselaer Polytechnic Institute",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://compsci.rpi.edu/",
+      "source_locator": "institutions.csv: institution=Rensselaer Polytechnic Institute",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "university-of-california-merced",
+      "roster_name": "University of California, Merced",
+      "status": "matched",
+      "upstream_institution": "Univ. of California - Merced",
+      "match_basis": "Explicit alias/campus identity reviewed against upstream institution label and linked department homepage; no fuzzy join.",
+      "upstream_homepage": "https://engineering.ucmerced.edu/departments/computer-science-engineering-cse",
+      "source_locator": "institutions.csv: institution=Univ. of California - Merced",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "syracuse-university",
+      "roster_name": "Syracuse University",
+      "status": "matched",
+      "upstream_institution": "Syracuse University",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://ecs.syracuse.edu/",
+      "source_locator": "institutions.csv: institution=Syracuse University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "binghamton-university-suny",
+      "roster_name": "Binghamton University–SUNY",
+      "status": "matched",
+      "upstream_institution": "Binghamton University",
+      "match_basis": "Explicit alias/campus identity reviewed against upstream institution label and linked department homepage; no fuzzy join.",
+      "upstream_homepage": "https://www.binghamton.edu/computer-science/",
+      "source_locator": "institutions.csv: institution=Binghamton University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "howard-university",
+      "roster_name": "Howard University",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "indiana-university-bloomington",
+      "roster_name": "Indiana University–Bloomington",
+      "status": "matched",
+      "upstream_institution": "Indiana University",
+      "match_basis": "Explicit alias/campus identity reviewed against upstream institution label and linked department homepage; no fuzzy join.",
+      "upstream_homepage": "https://cs.indiana.edu/",
+      "source_locator": "institutions.csv: institution=Indiana University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "north-carolina-state-university",
+      "roster_name": "North Carolina State University",
+      "status": "matched",
+      "upstream_institution": "North Carolina State University",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://csc.ncsu.edu/",
+      "source_locator": "institutions.csv: institution=North Carolina State University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "rutgers-university-newark",
+      "roster_name": "Rutgers University–Newark",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "university-of-connecticut",
+      "roster_name": "University of Connecticut",
+      "status": "matched",
+      "upstream_institution": "University of Connecticut",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://computing.engineering.uconn.edu/",
+      "source_locator": "institutions.csv: institution=University of Connecticut",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "worcester-polytechnic-institute",
+      "roster_name": "Worcester Polytechnic Institute",
+      "status": "matched",
+      "upstream_institution": "Worcester Polytechnic Institute",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://www.wpi.edu/academics/departments/computer-science",
+      "source_locator": "institutions.csv: institution=Worcester Polytechnic Institute",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "clemson-university",
+      "roster_name": "Clemson University",
+      "status": "matched",
+      "upstream_institution": "Clemson University",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://www.clemson.edu/cecas/departments/computing/",
+      "source_locator": "institutions.csv: institution=Clemson University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "colorado-school-of-mines",
+      "roster_name": "Colorado School of Mines",
+      "status": "matched",
+      "upstream_institution": "Colorado School of Mines",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://cs.mines.edu/",
+      "source_locator": "institutions.csv: institution=Colorado School of Mines",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "drexel-university",
+      "roster_name": "Drexel University",
+      "status": "matched",
+      "upstream_institution": "Drexel University",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://drexel.edu/cci/academics/computer-science-department/",
+      "source_locator": "institutions.csv: institution=Drexel University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "pepperdine-university",
+      "roster_name": "Pepperdine University",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "university-of-california-riverside",
+      "roster_name": "University of California, Riverside",
+      "status": "matched",
+      "upstream_institution": "Univ. of California - Riverside",
+      "match_basis": "Explicit alias/campus identity reviewed against upstream institution label and linked department homepage; no fuzzy join.",
+      "upstream_homepage": "https://www.cs.ucr.edu",
+      "source_locator": "institutions.csv: institution=Univ. of California - Riverside",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "fordham-university",
+      "roster_name": "Fordham University",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "new-jersey-institute-of-technology",
+      "roster_name": "New Jersey Institute of Technology",
+      "status": "matched",
+      "upstream_institution": "NJIT",
+      "match_basis": "Explicit alias/campus identity reviewed against upstream institution label and linked department homepage; no fuzzy join.",
+      "upstream_homepage": "https://cs.njit.edu/",
+      "source_locator": "institutions.csv: institution=NJIT",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "southern-methodist-university",
+      "roster_name": "Southern Methodist University",
+      "status": "matched",
+      "upstream_institution": "Southern Methodist University",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://www.smu.edu/lyle/departments/cs",
+      "source_locator": "institutions.csv: institution=Southern Methodist University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "university-at-buffalo-suny",
+      "roster_name": "University at Buffalo–SUNY",
+      "status": "matched",
+      "upstream_institution": "University at Buffalo",
+      "match_basis": "Explicit alias/campus identity reviewed against upstream institution label and linked department homepage; no fuzzy join.",
+      "upstream_homepage": "https://cse.buffalo.edu",
+      "source_locator": "institutions.csv: institution=University at Buffalo",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "university-of-delaware",
+      "roster_name": "University of Delaware",
+      "status": "matched",
+      "upstream_institution": "University of Delaware",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://www.cis.udel.edu/",
+      "source_locator": "institutions.csv: institution=University of Delaware",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "baylor-university",
+      "roster_name": "Baylor University",
+      "status": "matched",
+      "upstream_institution": "Baylor University",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://www.ecs.baylor.edu/programs-departments/computer-science",
+      "source_locator": "institutions.csv: institution=Baylor University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "gonzaga-university",
+      "roster_name": "Gonzaga University",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "marquette-university",
+      "roster_name": "Marquette University",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "texas-christian-university",
+      "roster_name": "Texas Christian University",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "yeshiva-university",
+      "roster_name": "Yeshiva University",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "american-university",
+      "roster_name": "American University",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "rochester-institute-of-technology",
+      "roster_name": "Rochester Institute of Technology",
+      "status": "matched",
+      "upstream_institution": "Rochester Inst. of Technology",
+      "match_basis": "Explicit alias/campus identity reviewed against upstream institution label and linked department homepage; no fuzzy join.",
+      "upstream_homepage": "https://www.rit.edu/computing/department-computer-science",
+      "source_locator": "institutions.csv: institution=Rochester Inst. of Technology",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "rutgers-university-camden",
+      "roster_name": "Rutgers University–Camden",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "university-of-illinois-chicago",
+      "roster_name": "University of Illinois Chicago",
+      "status": "matched",
+      "upstream_institution": "University of Illinois at Chicago",
+      "match_basis": "Explicit alias/campus identity reviewed against upstream institution label and linked department homepage; no fuzzy join.",
+      "upstream_homepage": "https://www.cs.uic.edu",
+      "source_locator": "institutions.csv: institution=University of Illinois at Chicago",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "university-of-missouri",
+      "roster_name": "University of Missouri",
+      "status": "matched",
+      "upstream_institution": "University of Missouri",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://engineering.missouri.edu/departments/eecs/",
+      "source_locator": "institutions.csv: institution=University of Missouri",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "auburn-university",
+      "roster_name": "Auburn University",
+      "status": "matched",
+      "upstream_institution": "Auburn University",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://www.eng.auburn.edu/comp/",
+      "source_locator": "institutions.csv: institution=Auburn University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "chapman-university",
+      "roster_name": "Chapman University",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "creighton-university",
+      "roster_name": "Creighton University",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "elon-university",
+      "roster_name": "Elon University",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "florida-international-university",
+      "roster_name": "Florida International University",
+      "status": "matched",
+      "upstream_institution": "Florida International University",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://www.cis.fiu.edu/",
+      "source_locator": "institutions.csv: institution=Florida International University",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "saint-louis-university",
+      "roster_name": "Saint Louis University",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "university-of-iowa",
+      "roster_name": "University of Iowa",
+      "status": "matched",
+      "upstream_institution": "University of Iowa",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://cs.uiowa.edu/",
+      "source_locator": "institutions.csv: institution=University of Iowa",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "university-of-san-diego",
+      "roster_name": "University of San Diego",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "university-of-south-florida",
+      "roster_name": "University of South Florida",
+      "status": "matched",
+      "upstream_institution": "University of South Florida",
+      "match_basis": "Exact institution name in complete US registry.",
+      "upstream_homepage": "https://www.cse.usf.edu",
+      "source_locator": "institutions.csv: institution=University of South Florida",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "williams-college",
+      "roster_name": "Williams College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "amherst-college",
+      "roster_name": "Amherst College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "bowdoin-college",
+      "roster_name": "Bowdoin College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "claremont-mckenna-college",
+      "roster_name": "Claremont McKenna College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "pomona-college",
+      "roster_name": "Pomona College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "swarthmore-college",
+      "roster_name": "Swarthmore College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "united-states-naval-academy",
+      "roster_name": "United States Naval Academy",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "harvey-mudd-college",
+      "roster_name": "Harvey Mudd College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "united-states-military-academy",
+      "roster_name": "United States Military Academy",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "wellesley-college",
+      "roster_name": "Wellesley College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "united-states-air-force-academy",
+      "roster_name": "United States Air Force Academy",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "vassar-college",
+      "roster_name": "Vassar College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "washington-and-lee-university",
+      "roster_name": "Washington and Lee University",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "hamilton-college",
+      "roster_name": "Hamilton College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "wesleyan-university",
+      "roster_name": "Wesleyan University",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "carleton-college",
+      "roster_name": "Carleton College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "davidson-college",
+      "roster_name": "Davidson College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "grinnell-college",
+      "roster_name": "Grinnell College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "barnard-college",
+      "roster_name": "Barnard College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "middlebury-college",
+      "roster_name": "Middlebury College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "university-of-richmond",
+      "roster_name": "University of Richmond",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "colby-college",
+      "roster_name": "Colby College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "colgate-university",
+      "roster_name": "Colgate University",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "college-of-the-holy-cross",
+      "roster_name": "College of the Holy Cross",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "smith-college",
+      "roster_name": "Smith College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "bates-college",
+      "roster_name": "Bates College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "haverford-college",
+      "roster_name": "Haverford College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "macalester-college",
+      "roster_name": "Macalester College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "bucknell-university",
+      "roster_name": "Bucknell University",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "lafayette-college",
+      "roster_name": "Lafayette College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "bryn-mawr-college",
+      "roster_name": "Bryn Mawr College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "denison-university",
+      "roster_name": "Denison University",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "trinity-college",
+      "roster_name": "Trinity College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "colorado-college",
+      "roster_name": "Colorado College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "franklin-and-marshall-college",
+      "roster_name": "Franklin & Marshall College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "mount-holyoke-college",
+      "roster_name": "Mount Holyoke College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "spelman-college",
+      "roster_name": "Spelman College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "occidental-college",
+      "roster_name": "Occidental College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "scripps-college",
+      "roster_name": "Scripps College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "trinity-university",
+      "roster_name": "Trinity University",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "kenyon-college",
+      "roster_name": "Kenyon College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "skidmore-college",
+      "roster_name": "Skidmore College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "soka-university-of-america",
+      "roster_name": "Soka University of America",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "pitzer-college",
+      "roster_name": "Pitzer College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "union-college",
+      "roster_name": "Union College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "wabash-college",
+      "roster_name": "Wabash College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "connecticut-college",
+      "roster_name": "Connecticut College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "hillsdale-college",
+      "roster_name": "Hillsdale College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "depauw-university",
+      "roster_name": "DePauw University",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "rhodes-college",
+      "roster_name": "Rhodes College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "st-lawrence-university",
+      "roster_name": "St. Lawrence University",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "st-olaf-college",
+      "roster_name": "St. Olaf College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "sewanee-the-university-of-the-south",
+      "roster_name": "Sewanee: The University of the South",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "centre-college",
+      "roster_name": "Centre College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "gettysburg-college",
+      "roster_name": "Gettysburg College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "furman-university",
+      "roster_name": "Furman University",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "wheaton-college-illinois",
+      "roster_name": "Wheaton College (Illinois)",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "thomas-aquinas-college",
+      "roster_name": "Thomas Aquinas College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "lawrence-university",
+      "roster_name": "Lawrence University",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "saint-anselm-college",
+      "roster_name": "Saint Anselm College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "rollins-college",
+      "roster_name": "Rollins College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "earlham-college",
+      "roster_name": "Earlham College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "lewis-and-clark-college",
+      "roster_name": "Lewis & Clark College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "whittier-college",
+      "roster_name": "Whittier College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "hendrix-college",
+      "roster_name": "Hendrix College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "beloit-college",
+      "roster_name": "Beloit College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "muhlenberg-college",
+      "roster_name": "Muhlenberg College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "berea-college",
+      "roster_name": "Berea College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "hope-college",
+      "roster_name": "Hope College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "saint-marys-college-indiana",
+      "roster_name": "Saint Mary's College (Indiana)",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "allegheny-college",
+      "roster_name": "Allegheny College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "lycoming-college",
+      "roster_name": "Lycoming College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "college-of-saint-benedict",
+      "roster_name": "College of Saint Benedict",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "saint-johns-university-minnesota",
+      "roster_name": "Saint John's University (Minnesota)",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "kalamazoo-college",
+      "roster_name": "Kalamazoo College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "morehouse-college",
+      "roster_name": "Morehouse College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "randolph-macon-college",
+      "roster_name": "Randolph-Macon College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "augustana-college-illinois",
+      "roster_name": "Augustana College (Illinois)",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "juniata-college",
+      "roster_name": "Juniata College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "southwestern-university",
+      "roster_name": "Southwestern University",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "lake-forest-college",
+      "roster_name": "Lake Forest College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "ursinus-college",
+      "roster_name": "Ursinus College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "stonehill-college",
+      "roster_name": "Stonehill College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "college-of-wooster",
+      "roster_name": "The College of Wooster",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "washington-college",
+      "roster_name": "Washington College",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    },
+    {
+      "institution_id": "hobart-and-william-smith-colleges",
+      "roster_name": "Hobart and William Smith Colleges",
+      "status": "not_listed",
+      "upstream_institution": null,
+      "match_basis": "No corresponding institution in complete pinned US registry; eligibility unknown. No rank is inferred.",
+      "upstream_homepage": null,
+      "source_locator": "institutions.csv: complete countryabbrv=us registry",
+      "review_date": "2026-10-11"
+    }
+  ],
+  "commit_resolution_evidence": {
+    "url": "https://api.github.com/repos/emeryberger/CSrankings/commits/gh-pages",
+    "captured_filename": "commit.json",
+    "sha256": "44201eaf5196758fadbcf55a4d03e4c9da2e11da069da9c882631051210925e9",
+    "bytes": 46319,
+    "retrieved_date": "2026-10-11",
+    "locator": "sha; commit.committer.date",
+    "resolved_commit": "5e8a27d68310c728a182b8bb3b6437c39bce0cad",
+    "commit_date": "2026-09-28T04:21:02Z"
+  }
+}
