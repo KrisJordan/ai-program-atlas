@@ -79,7 +79,7 @@ def test_filters_empty_reset_detail_and_base_path(page, site):
     page.get_by_role("link", name="View program").first.click()
     expect(page).to_have_url(site + "programs/test-ai-0/")
     expect(page.locator("h1")).to_have_text("Artificial Intelligence 0")
-    expect(page.locator(".profile-uncertainty")).to_contain_text("1 course records have unresolved requirement roles")
+    expect(page.locator(".profile-uncertainty")).to_contain_text("1 course record is outside the fixed/option count profiles")
     page.reload()
     expect(page.locator("h1")).to_have_text("Artificial Intelligence 0")
     assert not errors

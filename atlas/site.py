@@ -510,7 +510,9 @@ def category_chart(p):
             chart = '<p class="profile-unavailable">' + ('A fixed required course set is not established by the recorded rules. This does not mean there are no requirements.' if mode == 'required' else 'No elective option set is established by the recorded structured rules.') + '</p>'
         panels.append(f'<div class="profile-panel" data-profile="{mode}"><p class="profile-total">{total} distinct {label} {count_noun}</p><p class="profile-denominator">{description}</p>{identity_markup}<p class="profile-taxonomy">{esc(taxonomy_coverage_note(group))}</p>{chart}</div>')
     uncertainty_noun = 'course identities' if profile.get('identity', {}).get('crosslisted_aliases') else 'course records'
-    uncertainty = f'{profile["unresolved"]["count"]} {uncertainty_noun} have unresolved requirement roles; they are excluded from both views.'
+    outside_count = profile["unresolved"]["count"]
+    outside_noun = ('course identity' if profile.get('identity', {}).get('crosslisted_aliases') else 'course record') if outside_count == 1 else uncertainty_noun
+    uncertainty = f'{outside_count} {outside_noun} {"is" if outside_count == 1 else "are"} outside the fixed/option count profiles; see individual requirement rules for their context.'
     if profile['unresolved_group_count']:
         uncertainty += f' {profile["unresolved_group_count"]} groups need their full recorded context.'
     if profile['overlap_count']:

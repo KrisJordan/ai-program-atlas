@@ -35,7 +35,7 @@ def test_build_static_routes_and_unique_counts(tmp_path, site_data):
     assert 'href="/nested/atlas/programs/test-ai-0/"' in index
     assert 'src="/nested/atlas/assets/atlas.js"' in index
     detail = (tmp_path / "programs/test-ai-0/index.html").read_text()
-    assert "1 course records have unresolved requirement roles" in detail
+    assert "1 course record is outside the fixed/option count profiles" in detail
     assert "1 of 1 course records have unknown credits" in detail
     assert "Unknown values are not zero" in detail
     assert (tmp_path / "coverage/index.html").exists()
