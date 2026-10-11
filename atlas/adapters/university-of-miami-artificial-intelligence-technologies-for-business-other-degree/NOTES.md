@@ -55,3 +55,22 @@ Validation: 83 focused Miami tests passed, including every actual HTML plan repl
 ## Exact award label review — 2026-10-11
 
 The reviewed award option preserves **B.B.A.**, mapped to **other**. Catalog page h1: B.B.A. in Artificial Intelligence Technologies for Business. Distinct from the separate B.S.B.A. curriculum; no BA equivalence inferred. Existing program ID, award_level, title and requirement graph are unchanged. This optional mapping is reviewed metadata. Scrapers queue observations without replacing curated JSON; a parse result that omits award_options does not erase it. No parser or shared Northeastern helper change is needed.
+
+### Degree correctness review — 2026-10-11
+
+Numeric elective pools are published credit choices, not contextual notes. The named one-of component inside the four-W writing overlay is required, while overlap with major courses remains permitted. Main-table mapped roles are 22 fixed / 21 named options. The much larger university cognate inventory remains contextual, not a degree workload. No subject labels were inferred from elective or cognate membership.
+
+This is a bounded requirement-role correction. Whole-degree correctness remains
+in progress; existing partial curriculum status and substantive source questions
+are preserved. Synthetic tests distinguish explicit choices from context, and
+current cached catalog replay agrees with the reviewed seed roles.
+
+Twelve current BTE course blocks were read independently for subject evidence.
+BTE320 and BTE440 center on programming/software construction; BTE403 centers
+on cloud deployment infrastructure; BTE401 centers on societal/ethical effects.
+BTE210 and BTE271 retain mixed subjects, and generic BTE497/499 topics remain
+unclassified. Other named AI-method courses retain evidence-backed AI labels.
+Prerequisite AND/OR expressions are preserved without adding degree obligations.
+The variable 1–3 credits of BTE497 remain null per course. A source-block digest
+guard prevents unchanged reviewed paraphrases from surviving a changed catalog;
+parser observations never emit the independent category-review object.

@@ -32,8 +32,8 @@ def test_maryland_or_rows_ranges_and_topics_are_not_flattened():
  with pytest.raises(ValueError):module(MD_BS).parse(md_doc('Artificial Intelligence: Computational Structures for AI Systems',tables[:-1]))
 
 def test_maryland_ba_extra_required_course_and_approved_topics():
- rows=comment('Specializations (students will choose 6 courses from one of the following specialization areas)')+comment('Law, Policy, and Governance Specialization (GVPT170 is required along with 6 other courses)')+row('GVPT170',indent=True)+row('PHIL438','Topics (PHIL438L Invented)<sup>1</sup>',indent=True)
- html=md_doc('Human-Centered Artificial Intelligence',[rows],'<p>MATH115; at least 2 courses must be from LING. Final semester capstone may be replaced by internship.</p>')
+ rows=row('HCAI490','Example capstone')+comment('Specializations (students will choose 6 courses from one of the following specialization areas)')+comment('Law, Policy, and Governance Specialization (GVPT170 is required along with 6 other courses)')+row('GVPT170',indent=True)+row('PHIL438','Topics (PHIL438L Invented)<sup>1</sup>',indent=True)
+ html=md_doc('Human-Centered Artificial Intelligence',[rows],'<p>MATH115; at least 2 courses must be from LING. Final semester capstone seminar. Students may replace this course with an internship.</p>')
  r=module(MD_BA).parse(html);pool=next(n for n in r['requirements'] if n['count']==6)
  assert 'umd-gvpt170' not in pool['course_ids']
  assert any(n['course_ids']==['umd-gvpt170'] and n['kind']=='all' for n in r['requirements'])

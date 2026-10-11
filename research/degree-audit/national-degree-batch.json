@@ -773,6 +773,301 @@
       "blockers": [],
       "correction_status": "Inventory and core metadata corrections applied. Whole-degree audit remains in progress while accessible college/policy and supporting metadata checks continue; no inaccessible source is claimed.",
       "second_pass_status": "pending"
+    },
+    {
+      "program_id": "miami-ai-technologies-business-bsba",
+      "institution_id": "university-of-miami",
+      "status": "in_progress",
+      "sources": [
+        {
+          "url": "https://bulletin.miami.edu/undergraduate-academic-programs/business/business-technology/ai-tech-for-business-bsba/",
+          "catalog_year": null,
+          "locator": "Current degree requirements table and surrounding applicability/alternative prose",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/bte/",
+          "catalog_year": null,
+          "locator": "Twelve degree-listed BTE blocks: descriptions, credits and prerequisite/requisite clauses",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        }
+      ],
+      "checks": {
+        "degree_identity": "Current official degree identity and primary requirements reread; exact award and host-college distinction preserved.",
+        "required_and_choices": "Read current degree curriculum table, fixed rows, explicit OR choices, major credit pools and writing overlay. Source ranges and open free-elective predicates remain unsummed.",
+        "elective_pools": "Numeric elective pools are published credit choices, not contextual notes. The named one-of component inside the four-W writing overlay is required, while overlap with major courses remains permitted. Main-table mapped roles are 21 fixed / 33 named options. The much larger university cognate inventory remains contextual, not a degree workload. No subject labels were inferred from elective or cognate membership.",
+        "prerequisites": "Program-specific approval and specialization conditions retained. Independent full course-description and prerequisite review remains in progress; prerequisite identities are not silently added as fixed obligations.",
+        "credits_and_units": "Published row/group amounts remain distinct from per-course credits; semester-hour definition is registered in existing university policy evidence. No range or grouped amount is divided between courses.",
+        "classification": "Twelve current BTE blocks independently read: eight reviewed primary subjects, two mixed (210/271), two unclassified variable/special topics (497/499). Corrected programming320/440 to foundations, cloud403 to systems, societal401 to human_context. Other department courses and contextual cognate inventory remain unreviewed.",
+        "family_composition": "Standalone concrete degree; no family inheritance or degree variant collapse.",
+        "degree_wide_requirements": "Existing college/university policy evidence and unresolved questions remain in the seed audit. Independent rereading of all applicable degree-wide rules is unfinished; the role correction does not establish degree completeness."
+      },
+      "expected_profile": null,
+      "expected_course_ids": {
+        "required": [],
+        "options": [],
+        "unresolved": []
+      },
+      "discrepancies": [
+        {
+          "issue": "Published credit-choice and writing-overlay branches were represented as notes, obscuring named option membership.",
+          "correction": "Numeric elective pools are published credit choices, not contextual notes. The named one-of component inside the four-W writing overlay is required, while overlap with major courses remains permitted. Main-table mapped roles are 21 fixed / 33 named options. The much larger university cognate inventory remains contextual, not a degree workload. No subject labels were inferred from elective or cognate membership.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://bulletin.miami.edu/undergraduate-academic-programs/business/business-technology/ai-tech-for-business-bsba/"
+          ]
+        },
+        {
+          "issue": "Legacy subject labels followed AI/business naming instead of individual content.",
+          "correction": "Twelve current BTE blocks independently read: eight reviewed primary subjects, two mixed (210/271), two unclassified variable/special topics (497/499). Corrected programming320/440 to foundations, cloud403 to systems, societal401 to human_context. Other department courses and contextual cognate inventory remain unreviewed.",
+          "status": "corrected_for_reviewed_BTE_subset",
+          "evidence_urls": [
+            "https://bulletin.miami.edu/courses-az/bte/"
+          ]
+        }
+      ],
+      "blockers": [],
+      "correction_status": "Source-backed role correction tested; comprehensive correctness audit remains in progress.",
+      "second_pass_status": "pending"
+    },
+    {
+      "program_id": "miami-data-science-ai-bs",
+      "institution_id": "university-of-miami",
+      "status": "in_progress",
+      "sources": [
+        {
+          "url": "https://bulletin.miami.edu/undergraduate-academic-programs/arts-sciences/computer-science/data-science-and-ai-bs/",
+          "catalog_year": null,
+          "locator": "Current degree requirements table and surrounding applicability/alternative prose",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        }
+      ],
+      "checks": {
+        "degree_identity": "Current official degree identity and primary requirements reread; exact award and host-college distinction preserved.",
+        "required_and_choices": "Read current degree curriculum table, fixed rows, explicit OR choices, major credit pools and writing overlay. Source ranges and open free-elective predicates remain unsummed.",
+        "elective_pools": "Numeric elective pools are published credit choices, not contextual notes. The named one-of component inside the four-W writing overlay is required, while overlap with major courses remains permitted. Main-table mapped roles are 13 fixed / 44 named options. The much larger university cognate inventory remains contextual, not a degree workload. No subject labels were inferred from elective or cognate membership.",
+        "prerequisites": "Program-specific approval and specialization conditions retained. Independent full course-description and prerequisite review remains in progress; prerequisite identities are not silently added as fixed obligations.",
+        "credits_and_units": "Published row/group amounts remain distinct from per-course credits; semester-hour definition is registered in existing university policy evidence. No range or grouped amount is divided between courses.",
+        "classification": "No new classification review claimed in this bounded role correction. Source-backed individual subject audit remains in progress.",
+        "family_composition": "Standalone concrete degree; no family inheritance or degree variant collapse.",
+        "degree_wide_requirements": "Existing college/university policy evidence and unresolved questions remain in the seed audit. Independent rereading of all applicable degree-wide rules is unfinished; the role correction does not establish degree completeness."
+      },
+      "expected_profile": null,
+      "expected_course_ids": {
+        "required": [],
+        "options": [],
+        "unresolved": []
+      },
+      "discrepancies": [
+        {
+          "issue": "Published credit-choice and writing-overlay branches were represented as notes, obscuring named option membership.",
+          "correction": "Numeric elective pools are published credit choices, not contextual notes. The named one-of component inside the four-W writing overlay is required, while overlap with major courses remains permitted. Main-table mapped roles are 13 fixed / 44 named options. The much larger university cognate inventory remains contextual, not a degree workload. No subject labels were inferred from elective or cognate membership.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://bulletin.miami.edu/undergraduate-academic-programs/arts-sciences/computer-science/data-science-and-ai-bs/"
+          ]
+        }
+      ],
+      "blockers": [],
+      "correction_status": "Source-backed role correction tested; comprehensive correctness audit remains in progress.",
+      "second_pass_status": "pending"
+    },
+    {
+      "program_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree",
+      "institution_id": "university-of-miami",
+      "status": "in_progress",
+      "sources": [
+        {
+          "url": "https://bulletin.miami.edu/undergraduate-academic-programs/business/business-technology/ai-tech-for-business-bba/",
+          "catalog_year": null,
+          "locator": "Current degree requirements table and surrounding applicability/alternative prose",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/bte/",
+          "catalog_year": null,
+          "locator": "Twelve degree-listed BTE blocks: descriptions, credits and prerequisite/requisite clauses",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        }
+      ],
+      "checks": {
+        "degree_identity": "Current official degree identity and primary requirements reread; exact award and host-college distinction preserved.",
+        "required_and_choices": "Read current degree curriculum table, fixed rows, explicit OR choices, major credit pools and writing overlay. Source ranges and open free-elective predicates remain unsummed.",
+        "elective_pools": "Numeric elective pools are published credit choices, not contextual notes. The named one-of component inside the four-W writing overlay is required, while overlap with major courses remains permitted. Main-table mapped roles are 22 fixed / 21 named options. The much larger university cognate inventory remains contextual, not a degree workload. No subject labels were inferred from elective or cognate membership.",
+        "prerequisites": "Program-specific approval and specialization conditions retained. Independent full course-description and prerequisite review remains in progress; prerequisite identities are not silently added as fixed obligations.",
+        "credits_and_units": "Published row/group amounts remain distinct from per-course credits; semester-hour definition is registered in existing university policy evidence. No range or grouped amount is divided between courses.",
+        "classification": "Twelve current BTE blocks independently read: eight reviewed primary subjects, two mixed (210/271), two unclassified variable/special topics (497/499). Corrected programming320/440 to foundations, cloud403 to systems, societal401 to human_context. Other department courses and contextual cognate inventory remain unreviewed.",
+        "family_composition": "Standalone concrete degree; no family inheritance or degree variant collapse.",
+        "degree_wide_requirements": "Existing college/university policy evidence and unresolved questions remain in the seed audit. Independent rereading of all applicable degree-wide rules is unfinished; the role correction does not establish degree completeness."
+      },
+      "expected_profile": null,
+      "expected_course_ids": {
+        "required": [],
+        "options": [],
+        "unresolved": []
+      },
+      "discrepancies": [
+        {
+          "issue": "Published credit-choice and writing-overlay branches were represented as notes, obscuring named option membership.",
+          "correction": "Numeric elective pools are published credit choices, not contextual notes. The named one-of component inside the four-W writing overlay is required, while overlap with major courses remains permitted. Main-table mapped roles are 22 fixed / 21 named options. The much larger university cognate inventory remains contextual, not a degree workload. No subject labels were inferred from elective or cognate membership.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://bulletin.miami.edu/undergraduate-academic-programs/business/business-technology/ai-tech-for-business-bba/"
+          ]
+        },
+        {
+          "issue": "Legacy subject labels followed AI/business naming instead of individual content.",
+          "correction": "Twelve current BTE blocks independently read: eight reviewed primary subjects, two mixed (210/271), two unclassified variable/special topics (497/499). Corrected programming320/440 to foundations, cloud403 to systems, societal401 to human_context. Other department courses and contextual cognate inventory remain unreviewed.",
+          "status": "corrected_for_reviewed_BTE_subset",
+          "evidence_urls": [
+            "https://bulletin.miami.edu/courses-az/bte/"
+          ]
+        }
+      ],
+      "blockers": [],
+      "correction_status": "Source-backed role correction tested; comprehensive correctness audit remains in progress.",
+      "second_pass_status": "pending"
+    },
+    {
+      "program_id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree",
+      "institution_id": "university-of-miami",
+      "status": "in_progress",
+      "sources": [
+        {
+          "url": "https://bulletin.miami.edu/undergraduate-academic-programs/arts-sciences/computer-science/data-science-and-ai-ba/",
+          "catalog_year": null,
+          "locator": "Current degree requirements table and surrounding applicability/alternative prose",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        }
+      ],
+      "checks": {
+        "degree_identity": "Current official degree identity and primary requirements reread; exact award and host-college distinction preserved.",
+        "required_and_choices": "Read current degree curriculum table, fixed rows, explicit OR choices, major credit pools and writing overlay. Source ranges and open free-elective predicates remain unsummed.",
+        "elective_pools": "Numeric elective pools are published credit choices, not contextual notes. The named one-of component inside the four-W writing overlay is required, while overlap with major courses remains permitted. Main-table mapped roles are 7 fixed / 39 named options. The much larger university cognate inventory remains contextual, not a degree workload. No subject labels were inferred from elective or cognate membership.",
+        "prerequisites": "Program-specific approval and specialization conditions retained. Independent full course-description and prerequisite review remains in progress; prerequisite identities are not silently added as fixed obligations.",
+        "credits_and_units": "Published row/group amounts remain distinct from per-course credits; semester-hour definition is registered in existing university policy evidence. No range or grouped amount is divided between courses.",
+        "classification": "No new classification review claimed in this bounded role correction. Source-backed individual subject audit remains in progress.",
+        "family_composition": "Standalone concrete degree; no family inheritance or degree variant collapse.",
+        "degree_wide_requirements": "Existing college/university policy evidence and unresolved questions remain in the seed audit. Independent rereading of all applicable degree-wide rules is unfinished; the role correction does not establish degree completeness."
+      },
+      "expected_profile": null,
+      "expected_course_ids": {
+        "required": [],
+        "options": [],
+        "unresolved": []
+      },
+      "discrepancies": [
+        {
+          "issue": "Published credit-choice and writing-overlay branches were represented as notes, obscuring named option membership.",
+          "correction": "Numeric elective pools are published credit choices, not contextual notes. The named one-of component inside the four-W writing overlay is required, while overlap with major courses remains permitted. Main-table mapped roles are 7 fixed / 39 named options. The much larger university cognate inventory remains contextual, not a degree workload. No subject labels were inferred from elective or cognate membership.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://bulletin.miami.edu/undergraduate-academic-programs/arts-sciences/computer-science/data-science-and-ai-ba/"
+          ]
+        }
+      ],
+      "blockers": [],
+      "correction_status": "Source-backed role correction tested; comprehensive correctness audit remains in progress.",
+      "second_pass_status": "pending"
+    },
+    {
+      "program_id": "university-of-maryland-college-park-human-centered-ai-ba-degree",
+      "institution_id": "university-of-maryland-college-park",
+      "status": "in_progress",
+      "sources": [
+        {
+          "url": "https://academiccatalog.umd.edu/undergraduate/colleges-schools/arts-humanities/philosophy/human-centered-artificial-intelligence-major/",
+          "catalog_year": "2026-2027",
+          "locator": "Current degree requirements table and surrounding applicability/alternative prose",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        }
+      ],
+      "checks": {
+        "degree_identity": "Current official degree identity and primary requirements reread; exact award and host-college distinction preserved.",
+        "required_and_choices": "Read core, seven specialization routes, additional GVPT170 requirement for Law/Policy, LING/PHIL distribution and approved-content footnotes. Corrected HCAI490 fixed role using explicit internship replacement permission.",
+        "elective_pools": "The requirements introduction explicitly permits an internship in place of the capstone seminar. HCAI490 is therefore a named option, not universally fixed. The alternative has an uncoded internship note; no course or credit amount is invented. Current mapped roles become 9 fixed / 59 named options; MATH115 and college-language contextual records retain their unresolved roles pending applicability review.",
+        "prerequisites": "Program-specific approval and specialization conditions retained. Independent full course-description and prerequisite review remains in progress; prerequisite identities are not silently added as fixed obligations.",
+        "credits_and_units": "Published row/group amounts remain distinct from per-course credits; semester-hour definition is registered in existing university policy evidence. No range or grouped amount is divided between courses.",
+        "classification": "No new classification review claimed in this bounded role correction. Source-backed individual subject audit remains in progress.",
+        "family_composition": "Standalone concrete degree; no family inheritance or degree variant collapse.",
+        "degree_wide_requirements": "Existing college/university policy evidence and unresolved questions remain in the seed audit. Independent rereading of all applicable degree-wide rules is unfinished; the role correction does not establish degree completeness."
+      },
+      "expected_profile": null,
+      "expected_course_ids": {
+        "required": [],
+        "options": [],
+        "unresolved": []
+      },
+      "discrepancies": [
+        {
+          "issue": "Named capstone treated as universally fixed despite explicit replacement permission.",
+          "correction": "The requirements introduction explicitly permits an internship in place of the capstone seminar. HCAI490 is therefore a named option, not universally fixed. The alternative has an uncoded internship note; no course or credit amount is invented. Current mapped roles become 9 fixed / 59 named options; MATH115 and college-language contextual records retain their unresolved roles pending applicability review.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://academiccatalog.umd.edu/undergraduate/colleges-schools/arts-humanities/philosophy/human-centered-artificial-intelligence-major/"
+          ]
+        }
+      ],
+      "blockers": [],
+      "correction_status": "Source-backed role correction tested; comprehensive correctness audit remains in progress.",
+      "second_pass_status": "pending"
+    },
+    {
+      "program_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree",
+      "institution_id": "new-jersey-institute-of-technology",
+      "status": "in_progress",
+      "sources": [
+        {
+          "url": "https://catalog.njit.edu/undergraduate/management/management/business-with-ai-bs/",
+          "catalog_year": null,
+          "locator": "Business with AI heading and undergraduate plan of study; explicit BS award is established by the separate school overview source.",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://www.njit.edu/sites/njit.edu.facultysenate/files/CUE%20and%20CGE%20Definition%20of%20Course%20Credit.pdf",
+          "catalog_year": null,
+          "locator": "Page1, definition and Units of Credit A\u2013C: semester credit hour and application across all NJIT schools/colleges",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        }
+      ],
+      "checks": {
+        "degree_identity": "Current Business with AI degree plan reread; 120-credit BS identity is separately supported by the official management school degree page.",
+        "required_and_choices": "The plan supplies 32 prescribed named records. Generic GER/free-elective slots are not fabricated courses; suggested term placement is not a prerequisite or offering guarantee.",
+        "elective_pools": "Four approved GER lists contain 64/248/36/2 printed code records, 350 total. Fixed PHIL310 also occurs in GER300, so the present mapped profile has 32 fixed and 349 options. This is pool eligibility, not permission to reuse the course across allocations. Wildcards remain open predicates.",
+        "prerequisites": "Nine explicitly published laboratory relationships remain conditional on selecting those science options. No arbitrary lecture/lab interchangeability or additional universal prerequisite obligation is inferred. Other individual course prerequisite review remains in progress.",
+        "credits_and_units": "Faculty Senate Definition of Course Credit by Hours explicitly defines semester credit hour and applies credits across all NJIT schools and colleges. Unit normalized from that evidence, not calendar. Publication/effective date remains unknown; cited regulation date is not used. Variable and missing course amounts remain unchanged.",
+        "classification": "No new subject classification review claimed in this credit/role correction. Full individual subject audit remains in progress; existing labels are not thereby independently certified.",
+        "family_composition": "Standalone concrete degree; no family inheritance.",
+        "degree_wide_requirements": "Existing graduation, transfer, residence and repeat rules remain preserved. PHIL310 overlap permission, Rutgers science relationships/credit value and any additional MTSM conditions remain separate applicability questions; full independent review is unfinished."
+      },
+      "expected_profile": null,
+      "expected_course_ids": {
+        "required": [],
+        "options": [],
+        "unresolved": []
+      },
+      "discrepancies": [
+        {
+          "issue": "Unknown normalized credit units kept published GER option inventories in contextual note roles.",
+          "correction": "Register explicit university semester-credit definition and change four GER pools to choose_credits without changing published allocation amounts or adding courses. Preserve source-specific laboratory eligibility.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://www.njit.edu/sites/njit.edu.facultysenate/files/CUE%20and%20CGE%20Definition%20of%20Course%20Credit.pdf"
+          ]
+        }
+      ],
+      "blockers": [],
+      "correction_status": "Credit-unit and bounded role correction tested; comprehensive degree audit remains in progress.",
+      "second_pass_status": "pending"
     }
   ]
 }

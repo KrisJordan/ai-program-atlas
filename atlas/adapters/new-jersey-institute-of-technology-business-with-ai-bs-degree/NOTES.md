@@ -62,3 +62,22 @@ The school [course-planning page](https://management.njit.edu/course-planning), 
 Both PDF URLs were explicitly linked from the program page and returned HTTP 200 after normal robots checks: [school curriculum](https://management.njit.edu/sites/management/files/BS%20BusinesswithAI%20Curriculum%20.pdf) (three pages) and [course offering grid](https://management.njit.edu/sites/management/files/bsai-curriculum-studentgrid20262028%20.pdf) (two pages). The former repeats the 120-credit plan and does not supply the missing overlap/substitution rule. The latter includes tentative future offering annotations and a cancellation caveat; these are not a degree requirement, launch date or guaranteed recurring offering. PDFs remain uncommitted and are research provenance only, not falsely accepted as HTML parser inputs.
 
 **Partial remains.** PHIL 310/GER reuse, free-elective substitution limits/additional school completion conditions, and unresolved Rutgers science relationships still require authoritative evidence. The full published 36-course GER option pool is already mapped; the remaining gap is not a missing entire pool. Course metadata is tracked separately.
+
+### Degree correctness review — 2026-10-11: units and GER roles
+
+The Faculty Senate's publicly posted Definition of Course Credit by Hours
+explicitly defines semester credit hours and applies that unit across NJIT's
+schools and colleges. Its publication date is unstated; the date in the cited
+New Jersey regulation is not a university policy effective date. This supports
+semester_hours normalization without deriving units from the semester calendar.
+The PDF was independently read; it is manually registered evidence, not a
+fabricated HTML parser observation.
+
+The four finite GER inventories are credit-choice pools (3, 6, 7 and 3 hours),
+not merely contextual notes. All original course records and open wildcard
+criteria remain. Source-proven individual laboratory relationships remain
+conditional; no arbitrary lecture/lab combination is authorized. PHIL310 is
+already fixed and its additional GER eligibility does not add a second course
+or establish permission to fill two allocations with it. The mapped profile is
+32 fixed and 349 named options, not a student load. Whole-degree correctness and
+individual course-subject review remain in progress.

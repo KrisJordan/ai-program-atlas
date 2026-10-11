@@ -16,3 +16,6 @@ register_supplement(PROGRAM_ID,SOURCES,SOURCE_PARSERS,arts=False)
 
 from atlas.adapters.miami_thematic_directory import register as register_cognate_pools
 register_cognate_pools(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
+
+from atlas.adapters.miami_bte_degree_courses import register as register_bte_metadata
+register_bte_metadata(PROGRAM_ID,SOURCES,SOURCE_PARSERS)

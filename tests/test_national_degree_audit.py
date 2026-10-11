@@ -157,3 +157,82 @@ def test_psu_real_identity_export_preserves_unproved_slash_pairs(tmp_path):
  assert not {bycode[c] for c in ('IST301','ETI301','IST302','ETI302','PLSC418','PLSC418W')}&grouped
  assert not conn.execute('PRAGMA foreign_key_check').fetchall()
  conn.close()
+
+
+@pytest.mark.parametrize('pid,fixed,options',[
+ ('university-of-miami-artificial-intelligence-technologies-for-business-other-degree',22,21),
+ ('miami-ai-technologies-business-bsba',21,33),
+ ('university-of-miami-data-science-and-artificial-intelligence-ba-degree',7,39),
+ ('miami-data-science-ai-bs',13,44),
+])
+def test_miami_primary_table_role_counts_keep_cognates_contextual(pid,fixed,options):
+ p=json.loads(Path('data/programs/'+pid+'.json').read_text())
+ profile=requirement_profile(p)
+ assert (profile['required']['count'],profile['options']['count'])==(fixed,options)
+ assert profile['unresolved']['count']>1800  # University cognate inventory, not all degree obligations.
+ pools=[r for r in p['requirements'] if '-table-' in r['id'] and r['kind']=='choose_credits']
+ assert pools and all(r['credit_unit']=='semester_hours' for r in pools)
+ assert p['curriculum_status']=='partial'
+
+
+def test_miami_synthetic_credit_pool_and_writing_overlay_roles():
+ from atlas.adapters.miami_degree_curricula import observe
+ html="""<h1>Example AI degree</h1><div id="curriculumtextcontainer"><table>
+ <tr class="areaheader"><td>Core Computer Science Courses</td></tr>
+ <tr><td><a class="code" href="/a">CSC 120</a></td><td>Example programming</td><td>4</td></tr>
+ <tr><td>Electives</td><td>6</td></tr><tr><td>Techniques</td><td></td></tr>
+ <tr><td><a class="code" href="/b">CSC 345</a></td><td>Example option</td><td></td></tr>
+ <tr><td>Advanced Writing and Communication Requirement: Four W courses, including one of the following:</td><td></td></tr>
+ <tr><td><a class="code" href="/c">CSC 405</a></td><td>Example writing</td><td>1</td></tr>
+ <tr class="orclass"><td><a class="code" href="/d">CSC 431</a></td><td>Example alternative writing</td><td></td></tr>
+ </table></div>"""
+ result=observe(html,'test-degree','Example AI degree','BA','Example AI degree','catalog','https://example.edu/catalog')
+ profile=requirement_profile(result)
+ assert [profile[k]['count'] for k in ('required','options','unresolved')]==[1,3,0]
+ pool=next(r for r in result['requirements'] if r['kind']=='choose_credits')
+ assert pool['credits']==6 and pool['credit_unit']=='semester_hours'
+ assert len(pool['course_ids'])==1  # One observed option does not become required.
+ assert 'curriculum_audit' not in result
+
+
+def test_maryland_capstone_requires_explicit_replacement_permission():
+ from atlas.adapters.maryland_ai_curricula import parse
+ html="""<h1>Human-Centered Artificial Intelligence Major</h1><div id="requirementstextcontainer">
+ <p>College requirements include MATH115; at least 2 courses must be from LING.</p>
+ <p>All students complete a capstone seminar. Students may replace this course with an internship.</p>
+ <table class="sc_courselist"><tr><td class="codecol">HCAI100</td><td>Example core</td><td class="hourscol">3</td></tr>
+ <tr><td class="codecol">HCAI490</td><td>Example capstone</td><td class="hourscol">3</td></tr></table></div>"""
+ args=dict(pid='test-ba',title='Human-Centered Artificial Intelligence',award='BA',url='https://example.edu/catalog')
+ result=parse(html,**args)
+ profile=requirement_profile(result)
+ assert [profile[k]['count'] for k in ('required','options','unresolved')]==[1,1,1]
+ assert next(r for r in result['requirements'] if 'umd-hcai490' in r['course_ids'])['kind']=='alternative'
+ assert len(result['courses'])==3  # No invented internship code.
+ assert 'curriculum_audit' not in result
+ with pytest.raises(ValueError):
+  parse(html.replace('Students may replace this course with an internship.','An internship may be interesting.'),**args)
+ p=json.loads(Path('data/programs/university-of-maryland-college-park-human-centered-ai-ba-degree.json').read_text())
+ assert [requirement_profile(p)[k]['count'] for k in ('required','options')]==[9,59]
+
+
+def test_miami_bte_description_guard_never_emits_manual_review(monkeypatch):
+ from atlas.adapters import miami_bte_degree_courses as bte
+ html='<div class="courseblock"><p class="courseblocktitle">BTE 320. Example programming. 3 Credit Hours.</p><p class="courseblockdesc">Example software construction. Requisite: Business School. Components: LEC.</p></div>'
+ text='BTE 320. Example programming. 3 Credit Hours. Example software construction. Requisite: Business School. Components: LEC.'
+ monkeypatch.setattr(bte,'SPEC',{'BTE 320':dict(digest=hashlib.sha256(text.encode()).hexdigest(),category='foundations',description='Example programming focus.')})
+ result=bte.parse(html,'example')
+ assert result['courses'][0]['prerequisites']=='Requisite: Business School.'
+ assert result['courses'][0]['credits']==3
+ assert 'category_review' not in result['courses'][0]
+ with pytest.raises(ValueError,match='description changed'):
+  bte.parse(html.replace('software construction','different content'),'example')
+ with pytest.raises(ValueError,match='identities missing'):
+  bte.parse('<h1>Login</h1>','example')
+ for pid in ['miami-ai-technologies-business-bsba','university-of-miami-artificial-intelligence-technologies-for-business-other-degree']:
+  p=json.loads(Path('data/programs/'+pid+'.json').read_text());courses={c['code']:c for c in p['courses']}
+  assert courses['BTE 403']['category']=='systems'
+  assert courses['BTE 320']['category']=='foundations'
+  assert courses['BTE 440']['category']=='foundations'
+  assert courses['BTE 401']['category']=='human_context'
+  assert courses['BTE 210']['category_review']['status']=='mixed'
+  assert courses['BTE 497']['credits'] is None

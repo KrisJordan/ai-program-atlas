@@ -139,7 +139,7 @@
     {
       "id": "miami-cognate-directory-20261002",
       "url": "https://cognates.miami.edu/courses/individualized",
-      "title": "Individualized cognate Master List — full dated public PDF capture",
+      "title": "Individualized cognate Master List \u2014 full dated public PDF capture",
       "fetched_at": "2026-10-11",
       "source_date": "2026-10-02",
       "catalog_year": null,
@@ -1875,6 +1875,16 @@
       "catalog_year": null,
       "locator": "Fall 2026 Description: BUS courses not available for credit toward any business major, minor or degree; excluded route.",
       "confidence": "high"
+    },
+    {
+      "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-course-catalog",
+      "url": "https://bulletin.miami.edu/courses-az/bte/",
+      "title": "Business Technology (BTE) course descriptions",
+      "locator": "BTE210,271,320,371,401,403,413,416,440,471,497,499 course blocks; descriptions and enrollment conditions",
+      "catalog_year": null,
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "confidence": "high"
     }
   ],
   "courses": [
@@ -2008,15 +2018,29 @@
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-210",
       "code": "BTE 210",
       "name": "Fundamentals of Business Technology and Innovation",
-      "description": null,
-      "prerequisites": null,
+      "description": "Infrastructure and enterprise innovation share the focus.",
+      "prerequisites": "Requisite: Business School.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "applications",
-      "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=BTE%20210",
+      "category": "other",
+      "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-course-catalog",
+      "url": "https://bulletin.miami.edu/courses-az/bte/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-course-catalog"
+        ],
+        "locator": "BTE 210 course description",
+        "rationale": "Infrastructure and enterprise innovation share the focus.",
+        "candidate_categories": [
+          "systems",
+          "applications"
+        ]
+      }
     },
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bus-150",
@@ -2232,71 +2256,129 @@
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-271",
       "code": "BTE 271",
       "name": "Generative AI for Business Technology",
-      "description": null,
-      "prerequisites": null,
+      "description": "Generative tools and business strategy are interwoven.",
+      "prerequisites": "Prerequisite: BTE 210 or BUS 150 or equivalent.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "ai_ml",
-      "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=BTE%20271",
+      "category": "other",
+      "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-course-catalog",
+      "url": "https://bulletin.miami.edu/courses-az/bte/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-course-catalog"
+        ],
+        "locator": "BTE 271 course description",
+        "rationale": "Generative tools and business strategy are interwoven.",
+        "candidate_categories": [
+          "ai_ml",
+          "applications"
+        ]
+      }
     },
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-320",
       "code": "BTE 320",
       "name": "Python Programming: Fundamentals and Algorithms",
-      "description": null,
-      "prerequisites": null,
+      "description": "Programming structures, algorithms and data structures dominate.",
+      "prerequisites": "Requisite: Business School or BTEC Minor.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "applications",
-      "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=BTE%20320",
+      "category": "foundations",
+      "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-course-catalog",
+      "url": "https://bulletin.miami.edu/courses-az/bte/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-course-catalog"
+        ],
+        "locator": "BTE 320 course description",
+        "rationale": "Programming structures, algorithms and data structures dominate.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-371",
       "code": "BTE 371",
       "name": "Foundations of AI for Business Technology",
-      "description": null,
-      "prerequisites": null,
+      "description": "Core AI methods support enterprise decisions.",
+      "prerequisites": "Pre-Requisite BTE 210 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "ai_ml",
-      "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=BTE%20371",
+      "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-course-catalog",
+      "url": "https://bulletin.miami.edu/courses-az/bte/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-course-catalog"
+        ],
+        "locator": "BTE 371 course description",
+        "rationale": "Core AI methods support enterprise decisions.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-403",
       "code": "BTE 403",
       "name": "AI Cloud Computing",
-      "description": null,
-      "prerequisites": null,
+      "description": "Cloud architecture and deployment infrastructure dominate.",
+      "prerequisites": "Prerequisite: BTE 320 or BTE 420 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "ai_ml",
-      "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=BTE%20403",
+      "category": "systems",
+      "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-course-catalog",
+      "url": "https://bulletin.miami.edu/courses-az/bte/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-course-catalog"
+        ],
+        "locator": "BTE 403 course description",
+        "rationale": "Cloud architecture and deployment infrastructure dominate.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-416",
       "code": "BTE 416",
       "name": "AI Agents for Business Technology",
-      "description": null,
-      "prerequisites": null,
+      "description": "Retrieval augmentation and agent workflows are central.",
+      "prerequisites": "Prerequisite: BTE 320 or BTE 420 AND BTE 413 or MAS 548 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "ai_ml",
-      "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=BTE%20416",
+      "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-course-catalog",
+      "url": "https://bulletin.miami.edu/courses-az/bte/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-course-catalog"
+        ],
+        "locator": "BTE 416 course description",
+        "rationale": "Retrieval augmentation and agent workflows are central.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bsl-444",
@@ -2316,85 +2398,151 @@
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-401",
       "code": "BTE 401",
       "name": "Artificial Intelligence in an Interconnected Society",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "ai_ml",
-      "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=BTE%20401",
+      "description": "Societal, organizational and ethical effects dominate.",
+      "prerequisites": "Pre-Requisite BTE 210 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "human_context",
+      "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-course-catalog",
+      "url": "https://bulletin.miami.edu/courses-az/bte/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-course-catalog"
+        ],
+        "locator": "BTE 401 course description",
+        "rationale": "Societal, organizational and ethical effects dominate.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-413",
       "code": "BTE 413",
       "name": "Introduction to Machine Learning in Business Technology",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "description": "Machine-learning concepts and Python implementation are explicit.",
+      "prerequisites": "Prerequisite: BTE 320 or BTE 420 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "ai_ml",
-      "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=BTE%20413",
+      "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-course-catalog",
+      "url": "https://bulletin.miami.edu/courses-az/bte/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-course-catalog"
+        ],
+        "locator": "BTE 413 course description",
+        "rationale": "Machine-learning concepts and Python implementation are explicit.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-440",
       "code": "BTE 440",
       "name": "Advanced Programming with Generative AI",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "applications",
-      "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=BTE%20440",
+      "description": "Software construction and code modernization dominate.",
+      "prerequisites": "Prerequisite: BTE 320 or BTE 420 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "foundations",
+      "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-course-catalog",
+      "url": "https://bulletin.miami.edu/courses-az/bte/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-course-catalog"
+        ],
+        "locator": "BTE 440 course description",
+        "rationale": "Software construction and code modernization dominate.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-471",
       "code": "BTE 471",
       "name": "AI Programming for Business Management",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "description": "Search, reasoning, planning and learning are central.",
+      "prerequisites": "Prerequisite: BTE 210 and BTE 320 or BTE 420 or equivalent.",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "ai_ml",
-      "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=BTE%20471",
+      "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-course-catalog",
+      "url": "https://bulletin.miami.edu/courses-az/bte/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-course-catalog"
+        ],
+        "locator": "BTE 471 course description",
+        "rationale": "Search, reasoning, planning and learning are central.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-497",
       "code": "BTE 497",
-      "name": "Directed Studies in Business Technology (AI-focused topics)",
-      "description": null,
+      "name": "Directed Studies in Business Technology",
+      "description": "Individual project topics determine the subject.",
       "prerequisites": null,
       "credits": null,
-      "credit_unit": "unknown",
-      "category": "applications",
-      "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=BTE%20497",
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-course-catalog",
+      "url": "https://bulletin.miami.edu/courses-az/bte/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-course-catalog"
+        ],
+        "locator": "BTE 497 course description",
+        "rationale": "Individual project topics determine the subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-499",
       "code": "BTE 499",
-      "name": "Special Topics in Business Technology (AI-focused topics)",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "applications",
-      "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=BTE%20499",
+      "name": "Special Topics in Business Technology",
+      "description": "Unspecified special topics do not establish subject.",
+      "prerequisites": "Requisite: Sophomore Standing or Higher.",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-course-catalog",
+      "url": "https://bulletin.miami.edu/courses-az/bte/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-course-catalog"
+        ],
+        "locator": "BTE 499 course description",
+        "rationale": "Unspecified special topics do not establish subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bus-428",
@@ -9637,7 +9785,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-eng-484",
       "code": "ENG 484",
-      "name": "American Literature, 1915–1945",
+      "name": "American Literature, 1915\u20131945",
       "description": null,
       "prerequisites": null,
       "credits": 3.0,
@@ -20991,7 +21139,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-ghs-337",
       "code": "GHS 337",
-      "name": "A Global Perspective on Women’s Health",
+      "name": "A Global Perspective on Women\u2019s Health",
       "description": null,
       "prerequisites": null,
       "credits": null,
@@ -28911,7 +29059,7 @@
       "category": "other",
       "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
       "source_text": null,
-      "summary": "First-Year Writing I — published credit amount/range: 3",
+      "summary": "First-Year Writing I \u2014 published credit amount/range: 3",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-wrs-105"
       ]
@@ -28927,7 +29075,7 @@
       "category": "other",
       "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
       "source_text": null,
-      "summary": "First-Year Writing II — published credit amount/range: 3 Complete one listed alternative for this requirement.",
+      "summary": "First-Year Writing II \u2014 published credit amount/range: 3 Complete one listed alternative for this requirement.",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-wrs-106",
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-eng-106"
@@ -28989,7 +29137,7 @@
       "category": "other",
       "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
       "source_text": null,
-      "summary": "Arts and Humanities Cognate — 9 published credits",
+      "summary": "Arts and Humanities Cognate \u2014 9 published credits",
       "course_ids": []
     },
     {
@@ -29003,7 +29151,7 @@
       "category": "other",
       "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
       "source_text": null,
-      "summary": "People and Society Cognate — 9 published credits",
+      "summary": "People and Society Cognate \u2014 9 published credits",
       "course_ids": []
     },
     {
@@ -29045,7 +29193,7 @@
       "category": "other",
       "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
       "source_text": null,
-      "summary": "The University of Miami Experience — published credit amount/range: 0",
+      "summary": "The University of Miami Experience \u2014 published credit amount/range: 0",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-umx-100"
       ]
@@ -29054,14 +29202,14 @@
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-table-13",
       "parent_id": null,
       "title": "Electives",
-      "kind": "note",
+      "kind": "choose_credits",
       "count": null,
       "credits": 23.0,
       "credit_unit": "semester_hours",
       "category": "other",
       "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
       "source_text": null,
-      "summary": "Electives — 23 published credits. Listed courses are options, not all required. Credit hours are semester hours under the university Academic Credit policy.",
+      "summary": "Electives \u2014 23 published credits. Listed courses are options, not all required. Credit hours are semester hours under the university Academic Credit policy.",
       "course_ids": []
     },
     {
@@ -29089,7 +29237,7 @@
       "category": "other",
       "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
       "source_text": null,
-      "summary": "Principles of Financial Accounting — published credit amount/range: 3",
+      "summary": "Principles of Financial Accounting \u2014 published credit amount/range: 3",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-acc-211"
       ]
@@ -29105,7 +29253,7 @@
       "category": "other",
       "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
       "source_text": null,
-      "summary": "Managerial Accounting — published credit amount/range: 3",
+      "summary": "Managerial Accounting \u2014 published credit amount/range: 3",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-acc-212"
       ]
@@ -29121,7 +29269,7 @@
       "category": "other",
       "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
       "source_text": null,
-      "summary": "Introduction to Business Law and Ethics — published credit amount/range: 3",
+      "summary": "Introduction to Business Law and Ethics \u2014 published credit amount/range: 3",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bsl-212"
       ]
@@ -29137,7 +29285,7 @@
       "category": "other",
       "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
       "source_text": null,
-      "summary": "Fundamentals of Business Technology and Innovation — published credit amount/range: 3",
+      "summary": "Fundamentals of Business Technology and Innovation \u2014 published credit amount/range: 3",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-210"
       ]
@@ -29153,7 +29301,7 @@
       "category": "other",
       "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
       "source_text": null,
-      "summary": "Business Analytics — published credit amount/range: 3",
+      "summary": "Business Analytics \u2014 published credit amount/range: 3",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bus-150"
       ]
@@ -29169,7 +29317,7 @@
       "category": "other",
       "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
       "source_text": null,
-      "summary": "Critical Thinking and Persuasion for Business — published credit amount/range: 3",
+      "summary": "Critical Thinking and Persuasion for Business \u2014 published credit amount/range: 3",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bus-300"
       ]
@@ -29185,7 +29333,7 @@
       "category": "other",
       "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
       "source_text": null,
-      "summary": "Principles of Microeconomics (Microeconomics) — published credit amount/range: 3",
+      "summary": "Principles of Microeconomics (Microeconomics) \u2014 published credit amount/range: 3",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-eco-211"
       ]
@@ -29201,7 +29349,7 @@
       "category": "other",
       "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
       "source_text": null,
-      "summary": "Principles of Macroeconomics (Macroeconomics) — published credit amount/range: 3",
+      "summary": "Principles of Macroeconomics (Macroeconomics) \u2014 published credit amount/range: 3",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-eco-212"
       ]
@@ -29217,7 +29365,7 @@
       "category": "other",
       "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
       "source_text": null,
-      "summary": "Fundamentals of Finance — published credit amount/range: 3",
+      "summary": "Fundamentals of Finance \u2014 published credit amount/range: 3",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-fin-302"
       ]
@@ -29233,7 +29381,7 @@
       "category": "other",
       "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
       "source_text": null,
-      "summary": "Quantitative Applications in Business (minimum grade of C- required; fulfills Quantitative Skills Requirement) — published credit amount/range: 3 Complete one listed alternative for this requirement.",
+      "summary": "Quantitative Applications in Business (minimum grade of C- required; fulfills Quantitative Skills Requirement) \u2014 published credit amount/range: 3 Complete one listed alternative for this requirement.",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-mas-110",
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-mth-161"
@@ -29250,7 +29398,7 @@
       "category": "other",
       "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
       "source_text": null,
-      "summary": "Introduction to Business Statistics (minimum grade of C- required) — published credit amount/range: 3",
+      "summary": "Introduction to Business Statistics (minimum grade of C- required) \u2014 published credit amount/range: 3",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-mas-201"
       ]
@@ -29266,7 +29414,7 @@
       "category": "other",
       "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
       "source_text": null,
-      "summary": "Intermediate Business Statistics — published credit amount/range: 3",
+      "summary": "Intermediate Business Statistics \u2014 published credit amount/range: 3",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-mas-202"
       ]
@@ -29282,7 +29430,7 @@
       "category": "other",
       "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
       "source_text": null,
-      "summary": "Managing for Success in the Global Environment — published credit amount/range: 3",
+      "summary": "Managing for Success in the Global Environment \u2014 published credit amount/range: 3",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-mgt-100"
       ]
@@ -29298,7 +29446,7 @@
       "category": "other",
       "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
       "source_text": null,
-      "summary": "Professional Development and Success in the Workplace (or other approved University of Miami Business School career course) — published credit amount/range: 1 Complete one listed alternative for this requirement.",
+      "summary": "Professional Development and Success in the Workplace (or other approved University of Miami Business School career course) \u2014 published credit amount/range: 1 Complete one listed alternative for this requirement.",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-mgt-199",
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bus-211"
@@ -29315,7 +29463,7 @@
       "category": "other",
       "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
       "source_text": null,
-      "summary": "Operations Management — published credit amount/range: 3",
+      "summary": "Operations Management \u2014 published credit amount/range: 3",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-mgt-303"
       ]
@@ -29331,7 +29479,7 @@
       "category": "other",
       "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
       "source_text": null,
-      "summary": "Organizational Behavior — published credit amount/range: 3",
+      "summary": "Organizational Behavior \u2014 published credit amount/range: 3",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-mgt-304"
       ]
@@ -29347,7 +29495,7 @@
       "category": "other",
       "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
       "source_text": null,
-      "summary": "Strategic Management (taken in the final semester) — published credit amount/range: 3",
+      "summary": "Strategic Management (taken in the final semester) \u2014 published credit amount/range: 3",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-mgt-401"
       ]
@@ -29363,7 +29511,7 @@
       "category": "other",
       "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
       "source_text": null,
-      "summary": "Foundations of Marketing — published credit amount/range: 3 Complete one listed alternative for this requirement.",
+      "summary": "Foundations of Marketing \u2014 published credit amount/range: 3 Complete one listed alternative for this requirement.",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-mkt-201",
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-mkt-301"
@@ -29394,7 +29542,7 @@
       "category": "other",
       "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
       "source_text": null,
-      "summary": "Generative AI for Business Technology — published credit amount/range: 3",
+      "summary": "Generative AI for Business Technology \u2014 published credit amount/range: 3",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-271"
       ]
@@ -29410,7 +29558,7 @@
       "category": "other",
       "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
       "source_text": null,
-      "summary": "Python Programming: Fundamentals and Algorithms — published credit amount/range: 3",
+      "summary": "Python Programming: Fundamentals and Algorithms \u2014 published credit amount/range: 3",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-320"
       ]
@@ -29426,7 +29574,7 @@
       "category": "other",
       "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
       "source_text": null,
-      "summary": "Foundations of AI for Business Technology — published credit amount/range: 3",
+      "summary": "Foundations of AI for Business Technology \u2014 published credit amount/range: 3",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-371"
       ]
@@ -29442,7 +29590,7 @@
       "category": "other",
       "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
       "source_text": null,
-      "summary": "AI Cloud Computing — published credit amount/range: 3",
+      "summary": "AI Cloud Computing \u2014 published credit amount/range: 3",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-403"
       ]
@@ -29458,7 +29606,7 @@
       "category": "other",
       "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
       "source_text": null,
-      "summary": "AI Agents for Business Technology — published credit amount/range: 3",
+      "summary": "AI Agents for Business Technology \u2014 published credit amount/range: 3",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-416"
       ]
@@ -29474,7 +29622,7 @@
       "category": "other",
       "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
       "source_text": null,
-      "summary": "Major Choice Courses - Select two courses (6 credit hours) from the following: — 6 published credits. Listed courses are options, not all required. Credit hours are semester hours under the university Academic Credit policy.",
+      "summary": "Major Choice Courses - Select two courses (6 credit hours) from the following: \u2014 6 published credits. Listed courses are options, not all required. Credit hours are semester hours under the university Academic Credit policy.",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bsl-444",
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-401",
@@ -29810,7 +29958,7 @@
       "category": "other",
       "source_id": "miami-business-policy",
       "source_text": null,
-      "summary": "BBA and BSBA require at least 120 credits, minimum 2.5 in both the combined UM-plus-transfer and Miami-only GPA, and 2.5 in each business major/minor. The last 45 credits must be consecutive and exclusive degree-seeking residence at Miami Business; examination credit does not count. WRS 103, TAL 191, MTH 099 and UMI 105–410 do not count toward the degree. Applied music, including band, is capped at eight elective credits; science electives preparing for medical school must be graded.",
+      "summary": "BBA and BSBA require at least 120 credits, minimum 2.5 in both the combined UM-plus-transfer and Miami-only GPA, and 2.5 in each business major/minor. The last 45 credits must be consecutive and exclusive degree-seeking residence at Miami Business; examination credit does not count. WRS 103, TAL 191, MTH 099 and UMI 105\u2013410 do not count toward the degree. Applied music, including band, is capped at eight elective credits; science electives preparing for medical school must be graded.",
       "course_ids": []
     },
     {
@@ -29866,7 +30014,7 @@
       "category": "other",
       "source_id": "miami-business-policy",
       "source_text": null,
-      "summary": "General business policy allows overlap only when a numbered course is explicitly required by both specializations, potentially with replacement coursework; choice electives cannot double count. An outside-school additional major cannot reuse business-major/minor courses. The AI program’s stricter local no-double-counting rule remains controlling in this record; no general exception is silently applied to it.",
+      "summary": "General business policy allows overlap only when a numbered course is explicitly required by both specializations, potentially with replacement coursework; choice electives cannot double count. An outside-school additional major cannot reuse business-major/minor courses. The AI program\u2019s stricter local no-double-counting rule remains controlling in this record; no general exception is silently applied to it.",
       "course_ids": []
     },
     {
@@ -29914,7 +30062,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-cognate-directory-sample-ah",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-cognate-directory-sample",
-      "title": "Arts & Humanities — dated attribute pool",
+      "title": "Arts & Humanities \u2014 dated attribute pool",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -31038,7 +31186,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-cognate-directory-sample-ps",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-cognate-directory-sample",
-      "title": "People & Society — dated attribute pool",
+      "title": "People & Society \u2014 dated attribute pool",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -31958,7 +32106,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0031",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0031: A Cross-Cultural and Historic Examination of Sexuality — optional thematic route",
+      "title": "PS_0031: A Cross-Cultural and Historic Examination of Sexuality \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -32033,7 +32181,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0027",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0027: Introduction to Philosophy (Arts and Humanities) — optional thematic route",
+      "title": "AT_0027: Introduction to Philosophy (Arts and Humanities) \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -32104,7 +32252,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0044",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0044: Abnormal Psychology — optional thematic route",
+      "title": "PS_0044: Abnormal Psychology \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -32169,7 +32317,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0021",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0021: Africa and the African Diaspora — optional thematic route",
+      "title": "AT_0021: Africa and the African Diaspora \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -32238,7 +32386,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0067",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0067: American Literature — optional thematic route",
+      "title": "AT_0067: American Literature \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -32296,7 +32444,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0059",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0059: American Political Institutions — optional thematic route",
+      "title": "PS_0059: American Political Institutions \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -32348,7 +32496,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0076",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0076: American Studies: Literature, History & Culture — optional thematic route",
+      "title": "AT_0076: American Studies: Literature, History & Culture \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -32386,7 +32534,7 @@
       "category": "human_context",
       "source_id": "miami-cognate-at_0076-fall2026",
       "source_text": null,
-      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete exactly 1 course from the following: Additional row conditions: HIS 382: 0–3 published credit range. Listed courses are options, not all individually required; inactive rows are excluded.",
+      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete exactly 1 course from the following: Additional row conditions: HIS 382: 0\u20133 published credit range. Listed courses are options, not all individually required; inactive rows are excluded.",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-ams-321",
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-his-101",
@@ -32424,7 +32572,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0069",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0069: American Studies: Politics and Religion — optional thematic route",
+      "title": "PS_0069: American Studies: Politics and Religion \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -32490,7 +32638,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0029",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0029: An Anthropologically Based Approach to the Study of Human Languages. — optional thematic route",
+      "title": "PS_0029: An Anthropologically Based Approach to the Study of Human Languages. \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -32539,7 +32687,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0096",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0096: Ancient Greek Language and Literature — optional thematic route",
+      "title": "AT_0096: Ancient Greek Language and Literature \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -32561,7 +32709,7 @@
       "category": "human_context",
       "source_id": "miami-cognate-at_0096-fall2026",
       "source_text": null,
-      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at least 2 courses from the following: Additional row conditions: GRE 491: 1–3 published credit range. Listed courses are options, not all individually required; inactive rows are excluded.",
+      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at least 2 courses from the following: Additional row conditions: GRE 491: 1\u20133 published credit range. Listed courses are options, not all individually required; inactive rows are excluded.",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-gre-101",
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-gre-102",
@@ -32605,7 +32753,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0020",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0020: Ancient Roman Literature, Culture and History — optional thematic route",
+      "title": "PS_0020: Ancient Roman Literature, Culture and History \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -32685,7 +32833,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0024",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0024: Applied Ethics — optional thematic route",
+      "title": "PS_0024: Applied Ethics \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -32753,7 +32901,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0046",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0046: Arabic Language & Culture: Communicating with Arabic Speakers — optional thematic route",
+      "title": "AT_0046: Arabic Language & Culture: Communicating with Arabic Speakers \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -32798,7 +32946,7 @@
       "category": "human_context",
       "source_id": "miami-cognate-at_0046-fall2026",
       "source_text": null,
-      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at most 2 courses from the following: Additional row conditions: ARB 310: Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107; ARB 312: Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107; ARB 315: Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107; ARB 394: Prerequisite: ARB 204.; ARB 394: 1–3 published credit range; ARB 410: Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107. Listed courses are options, not all individually required; inactive rows are excluded.",
+      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at most 2 courses from the following: Additional row conditions: ARB 310: Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107; ARB 312: Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107; ARB 315: Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107; ARB 394: Prerequisite: ARB 204.; ARB 394: 1\u20133 published credit range; ARB 410: Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107. Listed courses are options, not all individually required; inactive rows are excluded.",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-arb-310",
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-arb-312",
@@ -32810,7 +32958,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0021",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0021: Archaeology: the Social Life of Things — optional thematic route",
+      "title": "PS_0021: Archaeology: the Social Life of Things \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -32879,7 +33027,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0058",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0058: Architectural Design: An introduction from Theory to Practice — optional thematic route",
+      "title": "AT_0058: Architectural Design: An introduction from Theory to Practice \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -32976,7 +33124,7 @@
       "category": "human_context",
       "source_id": "miami-cognate-at_0058-fall2026",
       "source_text": null,
-      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at least 1 course from the following: Additional row conditions: ARC 141: 3–6 published credit range; ARC 323: 3–6 published credit range. Listed courses are options, not all individually required; inactive rows are excluded.",
+      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at least 1 course from the following: Additional row conditions: ARC 141: 3\u20136 published credit range; ARC 323: 3\u20136 published credit range. Listed courses are options, not all individually required; inactive rows are excluded.",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-arc-141",
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-arc-323",
@@ -32986,7 +33134,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0059",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0059: Architecture and Urbanism: Urban Design and Development — optional thematic route",
+      "title": "AT_0059: Architecture and Urbanism: Urban Design and Development \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -33052,7 +33200,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0060",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0060: Architecture: Design & Theory — optional thematic route",
+      "title": "AT_0060: Architecture: Design & Theory \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -33091,7 +33239,7 @@
       "category": "human_context",
       "source_id": "miami-cognate-at_0060-fall2026",
       "source_text": null,
-      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at least 6 credits from the following: Additional row conditions: ARC 141: 3–6 published credit range; ARC 323: 3–6 published credit range. Listed courses are options, not all individually required; inactive rows are excluded.",
+      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at least 6 credits from the following: Additional row conditions: ARC 141: 3\u20136 published credit range; ARC 323: 3\u20136 published credit range. Listed courses are options, not all individually required; inactive rows are excluded.",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-arc-121",
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-arc-122",
@@ -33108,7 +33256,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0045",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0045: Arts and Humanities Beyond the USA — optional thematic route",
+      "title": "AT_0045: Arts and Humanities Beyond the USA \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -33116,7 +33264,7 @@
       "category": "human_context",
       "source_id": "miami-cognate-at_0045-fall2026",
       "source_text": null,
-      "summary": "Fall 2026 Arts and Humanities thematic cognate; responsible unit Study Abroad Cognate. Source recommendation: All Students.. If selected: Students must complete at least 3 courses for at least 9 credits. Course Options: Complete exactly 2 of the following option groups: This is an optional cognate route, not a required AI component. Thematic unit, subject, language and overlap policies still apply. The individualized no-other-degree-requirement restriction is not generalized to this distinct route. Both study-abroad and related beyond-USA AH courses require approval from the cognate representative in the school of the student’s major. This is an open approval route, not an empty finite course list.",
+      "summary": "Fall 2026 Arts and Humanities thematic cognate; responsible unit Study Abroad Cognate. Source recommendation: All Students.. If selected: Students must complete at least 3 courses for at least 9 credits. Course Options: Complete exactly 2 of the following option groups: This is an optional cognate route, not a required AI component. Thematic unit, subject, language and overlap policies still apply. The individualized no-other-degree-requirement restriction is not generalized to this distinct route. Both study-abroad and related beyond-USA AH courses require approval from the cognate representative in the school of the student\u2019s major. This is an open approval route, not an empty finite course list.",
       "course_ids": []
     },
     {
@@ -33150,7 +33298,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0091",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0091: Belonging in a Diverse Society: Intersections of culture, identity, and social justice — optional thematic route",
+      "title": "PS_0091: Belonging in a Diverse Society: Intersections of culture, identity, and social justice \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -33190,7 +33338,7 @@
       "category": "human_context",
       "source_id": "miami-cognate-ps_0091-fall2026",
       "source_text": null,
-      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at least 1 course from the following: Additional row conditions: EPS 587: 1–3 published credit range; TAL 308: Co-Requisite: TAL 306. Listed courses are options, not all individually required; inactive rows are excluded.",
+      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at least 1 course from the following: Additional row conditions: EPS 587: 1\u20133 published credit range; TAL 308: Co-Requisite: TAL 306. Listed courses are options, not all individually required; inactive rows are excluded.",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-cos-343",
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-eps-365",
@@ -33209,7 +33357,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0009",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0009: Brazilian Studies — optional thematic route",
+      "title": "AT_0009: Brazilian Studies \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -33265,7 +33413,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0001",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0001: Broadcast Meteorology — optional thematic route",
+      "title": "PS_0001: Broadcast Meteorology \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -33328,7 +33476,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0023",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0023: Caribbean Studies — optional thematic route",
+      "title": "PS_0023: Caribbean Studies \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -33398,7 +33546,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0075",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0075: The Caribbean through Literature, History, & the Arts — optional thematic route",
+      "title": "AT_0075: The Caribbean through Literature, History, & the Arts \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -33454,7 +33602,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0017",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0017: Child Adolescent and Adult Development Across the Lifespan — optional thematic route",
+      "title": "PS_0017: Child Adolescent and Adult Development Across the Lifespan \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -33522,7 +33670,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0098",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0098: China Studies — optional thematic route",
+      "title": "AT_0098: China Studies \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -33613,7 +33761,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0075",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0075: Chinese Culture, History, and Politics — optional thematic route",
+      "title": "PS_0075: Chinese Culture, History, and Politics \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -33679,7 +33827,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0047",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0047: Chinese Language and Culture: Communicating with Chinese Speakers — optional thematic route",
+      "title": "AT_0047: Chinese Language and Culture: Communicating with Chinese Speakers \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -33720,7 +33868,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0036",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0036: Communication and Social Interaction — optional thematic route",
+      "title": "PS_0036: Communication and Social Interaction \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -33776,7 +33924,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0028",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0028: Community Engagement and Social Change — optional thematic route",
+      "title": "PS_0028: Community Engagement and Social Change \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -33820,7 +33968,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0109",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0109: Contemporary Issues in Religion — optional thematic route",
+      "title": "AT_0109: Contemporary Issues in Religion \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -33889,7 +34037,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0099",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0099: Creative Arts in Therapy: Integrating Music and Dance into Counseling and Healthcare — optional thematic route",
+      "title": "AT_0099: Creative Arts in Therapy: Integrating Music and Dance into Counseling and Healthcare \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -33959,7 +34107,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0005",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0005: Creative Drawing and Design Stressing Imaginative Use of Visual Materials — optional thematic route",
+      "title": "AT_0005: Creative Drawing and Design Stressing Imaginative Use of Visual Materials \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -34102,7 +34250,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0025",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0025: Criminology — optional thematic route",
+      "title": "PS_0025: Criminology \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -34142,7 +34290,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0026",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0026: Critical Thinking and Writing Skills Paper Writing. — optional thematic route",
+      "title": "AT_0026: Critical Thinking and Writing Skills Paper Writing. \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -34176,7 +34324,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0055",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0055: Cultural Codes in the Arabic-Speaking World — optional thematic route",
+      "title": "PS_0055: Cultural Codes in the Arabic-Speaking World \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -34228,7 +34376,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0057",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0057: Cultural Codes in the Italian-Speaking World — optional thematic route",
+      "title": "PS_0057: Cultural Codes in the Italian-Speaking World \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -34281,7 +34429,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0054",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0054: Cultural Codes in the Spanish-Speaking World — optional thematic route",
+      "title": "PS_0054: Cultural Codes in the Spanish-Speaking World \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -34342,7 +34490,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0056",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0056: Cultural and Social Dimensions of Health and Disease — optional thematic route",
+      "title": "PS_0056: Cultural and Social Dimensions of Health and Disease \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -34389,7 +34537,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0090",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0090: Development Economics — optional thematic route",
+      "title": "PS_0090: Development Economics \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -34459,7 +34607,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0035",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0035: Digital Expression — optional thematic route",
+      "title": "AT_0035: Digital Expression \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -34526,7 +34674,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0093",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0093: DisAbility and Society — optional thematic route",
+      "title": "PS_0093: DisAbility and Society \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -34576,7 +34724,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0067",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0067: Disparities and Inequities in Health and Illness — optional thematic route",
+      "title": "PS_0067: Disparities and Inequities in Health and Illness \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -34610,7 +34758,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0065",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0065: Diversity in the World's Cultures and Thought — optional thematic route",
+      "title": "PS_0065: Diversity in the World's Cultures and Thought \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -34686,7 +34834,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0074",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0074: Documentary Ideas and Practice — optional thematic route",
+      "title": "AT_0074: Documentary Ideas and Practice \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -34751,7 +34899,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0018",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0018: Drawing and Design for Artists- Fine Art, Graphic Design, Costume Design and Scenic Design — optional thematic route",
+      "title": "AT_0018: Drawing and Design for Artists- Fine Art, Graphic Design, Costume Design and Scenic Design \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -34804,7 +34952,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0107",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0107: Empires and Economies in Modern World History — optional thematic route",
+      "title": "AT_0107: Empires and Economies in Modern World History \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -34841,7 +34989,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0053",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0053: Environmental Politics and Policy — optional thematic route",
+      "title": "PS_0053: Environmental Politics and Policy \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -34879,7 +35027,7 @@
       "category": "human_context",
       "source_id": "miami-cognate-ps_0053-fall2026",
       "source_text": null,
-      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete exactly 2 courses from the following: Additional row conditions: ECS 572: 0–3 published credit range; MSC 108: NOT FOR ANY MSC STUDENT MAJOR OR MINOR.; MSC 340: Prerequisite: MSC 111 and MSC 219.; MSC 346: Prerequisite: MSC 111. Or ATM 103. Or ECS 111. And Requisite: Junior Standing.; POL 525: Prerequisite: POL 202.; POL 531: Prerequisite: POL 203 Or INS 101.. Listed courses are options, not all individually required; inactive rows are excluded.",
+      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete exactly 2 courses from the following: Additional row conditions: ECS 572: 0\u20133 published credit range; MSC 108: NOT FOR ANY MSC STUDENT MAJOR OR MINOR.; MSC 340: Prerequisite: MSC 111 and MSC 219.; MSC 346: Prerequisite: MSC 111. Or ATM 103. Or ECS 111. And Requisite: Junior Standing.; POL 525: Prerequisite: POL 202.; POL 531: Prerequisite: POL 203 Or INS 101.. Listed courses are options, not all individually required; inactive rows are excluded.",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-ecs-572",
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-las-503",
@@ -34900,7 +35048,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0058",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0058: Ethics in Society: A New Look at Ethical Problems in Today's Society — optional thematic route",
+      "title": "PS_0058: Ethics in Society: A New Look at Ethical Problems in Today's Society \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -34941,7 +35089,7 @@
       "category": "human_context",
       "source_id": "miami-cognate-ps_0058-fall2026",
       "source_text": null,
-      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at least 2 courses from the following: Additional row conditions: PHI 295: 1–4 published credit range. Listed courses are options, not all individually required; inactive rows are excluded.",
+      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at least 2 courses from the following: Additional row conditions: PHI 295: 1\u20134 published credit range. Listed courses are options, not all individually required; inactive rows are excluded.",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-apy-390",
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-phi-295",
@@ -34954,7 +35102,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0086",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0086: European Politics — optional thematic route",
+      "title": "PS_0086: European Politics \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -35049,7 +35197,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0043",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0043: Exploring the Caribbean through the Social Sciences — optional thematic route",
+      "title": "PS_0043: Exploring the Caribbean through the Social Sciences \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -35123,7 +35271,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0084",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0084: Film Studies — optional thematic route",
+      "title": "AT_0084: Film Studies \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -35175,7 +35323,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0076",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0076: Foundations of Behavior for Prehealth Professions — optional thematic route",
+      "title": "PS_0076: Foundations of Behavior for Prehealth Professions \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -35245,7 +35393,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0092",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0092: Foundations of European Literature and Society — optional thematic route",
+      "title": "AT_0092: Foundations of European Literature and Society \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -35318,7 +35466,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0049",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0049: French Language and Culture: Communicating with French Speakers — optional thematic route",
+      "title": "AT_0049: French Language and Culture: Communicating with French Speakers \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -35405,7 +35553,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0017",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0017: French and Francophone Studies: Literature, History, and Culture — optional thematic route",
+      "title": "AT_0017: French and Francophone Studies: Literature, History, and Culture \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -35460,7 +35608,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0077",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0077: Fundamentals of Representational Painting — optional thematic route",
+      "title": "AT_0077: Fundamentals of Representational Painting \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -35508,7 +35656,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0077",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0077: Gender and Politics — optional thematic route",
+      "title": "PS_0077: Gender and Politics \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -35561,7 +35709,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0089",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0089: Gender, Literature, and the Fine Arts — optional thematic route",
+      "title": "AT_0089: Gender, Literature, and the Fine Arts \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -35643,7 +35791,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0050",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0050: German Language and Culture: Communicating with German Speakers — optional thematic route",
+      "title": "AT_0050: German Language and Culture: Communicating with German Speakers \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -35698,7 +35846,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0046",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0046: Germany: History, Politics, and Culture — optional thematic route",
+      "title": "PS_0046: Germany: History, Politics, and Culture \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -35748,7 +35896,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0052",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0052: Global Sustainability: Living on a Finite Planet — optional thematic route",
+      "title": "PS_0052: Global Sustainability: Living on a Finite Planet \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -35822,7 +35970,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0068",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0068: Global Urbanization — optional thematic route",
+      "title": "PS_0068: Global Urbanization \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -35861,7 +36009,7 @@
       "category": "human_context",
       "source_id": "miami-cognate-ps_0068-fall2026",
       "source_text": null,
-      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete exactly 2 courses from the following: Additional row conditions: GEG 590: 1–6 published credit range. Listed courses are options, not all individually required; inactive rows are excluded.",
+      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete exactly 2 courses from the following: Additional row conditions: GEG 590: 1\u20136 published credit range. Listed courses are options, not all individually required; inactive rows are excluded.",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-ams-350",
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-apy-420",
@@ -35894,7 +36042,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0111",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0111: Haitian Language and Culture: Communicating with Haitian Creole Speakers — optional thematic route",
+      "title": "AT_0111: Haitian Language and Culture: Communicating with Haitian Creole Speakers \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -35946,7 +36094,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0039",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0039: Health & Medicine in the Social Sciences — optional thematic route",
+      "title": "PS_0039: Health & Medicine in the Social Sciences \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -36030,7 +36178,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0066",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0066: Health Promotion and Disease Prevention Across the Lifespan — optional thematic route",
+      "title": "PS_0066: Health Promotion and Disease Prevention Across the Lifespan \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -36067,7 +36215,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0030",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0030: Hispanic Literature: Understanding the Power of Words Through Spanish-Language Texts — optional thematic route",
+      "title": "AT_0030: Hispanic Literature: Understanding the Power of Words Through Spanish-Language Texts \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -36145,7 +36293,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0040",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0040: History and Philosophy of Science and Medicine — optional thematic route",
+      "title": "PS_0040: History and Philosophy of Science and Medicine \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -36218,7 +36366,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0084",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0084: History and Politics of War — optional thematic route",
+      "title": "PS_0084: History and Politics of War \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -36278,7 +36426,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0072",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0072: History of Early Modern Europe — optional thematic route",
+      "title": "AT_0072: History of Early Modern Europe \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -36329,7 +36477,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0006",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0006: History of European Art — optional thematic route",
+      "title": "AT_0006: History of European Art \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -36403,7 +36551,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0038",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0038: History of Gender and Sexuality — optional thematic route",
+      "title": "PS_0038: History of Gender and Sexuality \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -36453,7 +36601,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0002",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0002: How to Write and Illustrate Books; Becoming an Author and an Illustrator of Visual Essays — optional thematic route",
+      "title": "AT_0002: How to Write and Illustrate Books; Becoming an Author and an Illustrator of Visual Essays \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -36475,7 +36623,7 @@
       "category": "human_context",
       "source_id": "miami-cognate-at_0002-fall2026",
       "source_text": null,
-      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete exactly 3 courses from the following: Additional row conditions: ART 593: 1–6 published credit range. Listed courses are options, not all individually required; inactive rows are excluded.",
+      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete exactly 3 courses from the following: Additional row conditions: ART 593: 1\u20136 published credit range. Listed courses are options, not all individually required; inactive rows are excluded.",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-arh-132",
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-arh-346",
@@ -36491,7 +36639,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0030",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0030: Human Social Process — optional thematic route",
+      "title": "PS_0030: Human Social Process \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -36552,7 +36700,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0100",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0100: Introduction to Literature — optional thematic route",
+      "title": "AT_0100: Introduction to Literature \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -36610,7 +36758,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0061",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0061: Introduction to the Social Sciences — optional thematic route",
+      "title": "PS_0061: Introduction to the Social Sciences \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -36650,7 +36798,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0106",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0106: Islam and the Arab World — optional thematic route",
+      "title": "AT_0106: Islam and the Arab World \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -36714,7 +36862,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0070",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0070: Italian Language and Culture: Communicating with Italian Speakers. — optional thematic route",
+      "title": "AT_0070: Italian Language and Culture: Communicating with Italian Speakers. \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -36767,7 +36915,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0052",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0052: Japanese Language and Culture: Communicating with Japanese Speakers — optional thematic route",
+      "title": "AT_0052: Japanese Language and Culture: Communicating with Japanese Speakers \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -36805,7 +36953,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0087",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0087: Know Thyself: A Creative and Critical Exploration — optional thematic route",
+      "title": "AT_0087: Know Thyself: A Creative and Critical Exploration \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -36874,7 +37022,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0079",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0079: Lesbian, Gay, Bisexual, Transgender, and Queer Studies — optional thematic route",
+      "title": "PS_0079: Lesbian, Gay, Bisexual, Transgender, and Queer Studies \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -36956,7 +37104,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0079",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0079: Language and Cultures of the Spanish-Speaking World: Intermediate and Advanced — optional thematic route",
+      "title": "AT_0079: Language and Cultures of the Spanish-Speaking World: Intermediate and Advanced \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -37042,7 +37190,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0014",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0014: Latin American Art and Culture — optional thematic route",
+      "title": "PS_0014: Latin American Art and Culture \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -37100,7 +37248,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0015",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0015: Latin American Politics and Society — optional thematic route",
+      "title": "PS_0015: Latin American Politics and Society \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -37171,7 +37319,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0031",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0031: Latin American and Caribbean History — optional thematic route",
+      "title": "AT_0031: Latin American and Caribbean History \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -37232,7 +37380,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0094",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0094: Latin Language and Literature — optional thematic route",
+      "title": "AT_0094: Latin Language and Literature \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -37254,7 +37402,7 @@
       "category": "human_context",
       "source_id": "miami-cognate-at_0094-fall2026",
       "source_text": null,
-      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at least 2 courses from the following: Additional row conditions: LAT 491: 1–3 published credit range. Listed courses are options, not all individually required; inactive rows are excluded.",
+      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at least 2 courses from the following: Additional row conditions: LAT 491: 1\u20133 published credit range. Listed courses are options, not all individually required; inactive rows are excluded.",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-lat-101",
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-lat-102",
@@ -37299,7 +37447,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0045",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0045: Law and ethics in news, public relations, advertising, and related media — optional thematic route",
+      "title": "PS_0045: Law and ethics in news, public relations, advertising, and related media \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -37367,7 +37515,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0097",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0097: Legal topics in Classics — optional thematic route",
+      "title": "AT_0097: Legal topics in Classics \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -37424,7 +37572,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0110",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0110: Legal Writing and Advocacy — optional thematic route",
+      "title": "AT_0110: Legal Writing and Advocacy \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -37474,7 +37622,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0047",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0047: Linguistics — optional thematic route",
+      "title": "PS_0047: Linguistics \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -37513,7 +37661,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0063",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0063: Literature of people of African descent in the U.S., the Caribbean, and Africa — optional thematic route",
+      "title": "AT_0063: Literature of people of African descent in the U.S., the Caribbean, and Africa \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -37564,7 +37712,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0006",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0006: Making Environmental Policy Decisions — optional thematic route",
+      "title": "PS_0006: Making Environmental Policy Decisions \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -37606,7 +37754,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0027",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0027: Marine Policy — optional thematic route",
+      "title": "PS_0027: Marine Policy \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -37664,7 +37812,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0095",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0095: Medical topics in Classics — optional thematic route",
+      "title": "AT_0095: Medical topics in Classics \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -37737,7 +37885,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0037",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0037: Middle East Politics — optional thematic route",
+      "title": "PS_0037: Middle East Politics \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -37774,7 +37922,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0091",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0091: Modern American Literature, Culture, and History — optional thematic route",
+      "title": "AT_0091: Modern American Literature, Culture, and History \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -37848,7 +37996,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0057",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0057: Modern European History: French Revolution to the Present — optional thematic route",
+      "title": "AT_0057: Modern European History: French Revolution to the Present \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -37902,7 +38050,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0093",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0093: Modern European Literature and Society — optional thematic route",
+      "title": "AT_0093: Modern European Literature and Society \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -38001,7 +38149,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0026",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0026: Modern Latin America — optional thematic route",
+      "title": "PS_0026: Modern Latin America \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -38077,7 +38225,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0025",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0025: Modern US History: Civil War to Present — optional thematic route",
+      "title": "AT_0025: Modern US History: Civil War to Present \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -38122,7 +38270,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0015",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0015: Modern and Contemporary Art, Theory, and Practice — optional thematic route",
+      "title": "AT_0015: Modern and Contemporary Art, Theory, and Practice \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -38175,7 +38323,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0071",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0071: Modern and Contemporary Literature — optional thematic route",
+      "title": "AT_0071: Modern and Contemporary Literature \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -38229,7 +38377,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0014",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0014: Museum Studies: Art, Material Culture, and History — optional thematic route",
+      "title": "AT_0014: Museum Studies: Art, Material Culture, and History \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -38267,7 +38415,7 @@
       "category": "human_context",
       "source_id": "miami-cognate-at_0014-fall2026",
       "source_text": null,
-      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at least 6 credits from the following: Additional row conditions: ARH 411: Prerequisite: ARH 225, or ARH 132.; ARH 511: Prerequisite: ARH 131 and ARH 132.; HIS 382: 0–3 published credit range; THA 385: Requisite: Sophomore Standing or Higher. Listed courses are options, not all individually required; inactive rows are excluded.",
+      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at least 6 credits from the following: Additional row conditions: ARH 411: Prerequisite: ARH 225, or ARH 132.; ARH 511: Prerequisite: ARH 131 and ARH 132.; HIS 382: 0\u20133 published credit range; THA 385: Requisite: Sophomore Standing or Higher. Listed courses are options, not all individually required; inactive rows are excluded.",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-apy-505",
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-arh-220",
@@ -38285,7 +38433,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0102",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0102: Music Performance and Understanding — optional thematic route",
+      "title": "AT_0102: Music Performance and Understanding \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -38372,7 +38520,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0101",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0101: Music and Movement — optional thematic route",
+      "title": "AT_0101: Music and Movement \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -38439,7 +38587,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0049",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0049: People and Society Beyond the USA — optional thematic route",
+      "title": "PS_0049: People and Society Beyond the USA \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -38447,7 +38595,7 @@
       "category": "human_context",
       "source_id": "miami-cognate-ps_0049-fall2026",
       "source_text": null,
-      "summary": "Fall 2026 People and Society thematic cognate; responsible unit Study Abroad Cognate. Source recommendation: All students.. If selected: Students must complete at least 3 courses for at least 9 credits. Course Options: Complete exactly 2 of the following option groups: This is an optional cognate route, not a required AI component. Thematic unit, subject, language and overlap policies still apply. The individualized no-other-degree-requirement restriction is not generalized to this distinct route. Both study-abroad and related beyond-USA PS courses require approval from the cognate representative in the school of the student’s major. This is an open approval route, not an empty finite course list.",
+      "summary": "Fall 2026 People and Society thematic cognate; responsible unit Study Abroad Cognate. Source recommendation: All students.. If selected: Students must complete at least 3 courses for at least 9 credits. Course Options: Complete exactly 2 of the following option groups: This is an optional cognate route, not a required AI component. Thematic unit, subject, language and overlap policies still apply. The individualized no-other-degree-requirement restriction is not generalized to this distinct route. Both study-abroad and related beyond-USA PS courses require approval from the cognate representative in the school of the student\u2019s major. This is an open approval route, not an empty finite course list.",
       "course_ids": []
     },
     {
@@ -38481,7 +38629,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0018",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0018: Philosophy and Religion in Ancient Culture and Society — optional thematic route",
+      "title": "PS_0018: Philosophy and Religion in Ancient Culture and Society \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -38536,7 +38684,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0083",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0083: Philosophy of Art, Film and Literature — optional thematic route",
+      "title": "AT_0083: Philosophy of Art, Film and Literature \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -38586,7 +38734,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0090",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0090: Philosophy of Mind — optional thematic route",
+      "title": "AT_0090: Philosophy of Mind \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -38646,7 +38794,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0005",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0005: Political Behavior — optional thematic route",
+      "title": "PS_0005: Political Behavior \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -38681,7 +38829,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0081",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0081: Political Economy — optional thematic route",
+      "title": "PS_0081: Political Economy \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -38719,7 +38867,7 @@
       "category": "human_context",
       "source_id": "miami-cognate-ps_0081-fall2026",
       "source_text": null,
-      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at least 2 courses from the following: Additional row conditions: ECS 572: 0–3 published credit range; POL 581: Prerequisite: POL 202.; POL 582: Prerequisite: POL 202.; POL 592: Prerequisite: POL 203 Or INS 101.. Listed courses are options, not all individually required; inactive rows are excluded.",
+      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at least 2 courses from the following: Additional row conditions: ECS 572: 0\u20133 published credit range; POL 581: Prerequisite: POL 202.; POL 582: Prerequisite: POL 202.; POL 592: Prerequisite: POL 203 Or INS 101.. Listed courses are options, not all individually required; inactive rows are excluded.",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-ecs-572",
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-las-340",
@@ -38735,7 +38883,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0009",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0009: Political Science: Courts and Laws in the United States — optional thematic route",
+      "title": "PS_0009: Political Science: Courts and Laws in the United States \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -38783,7 +38931,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0004",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0004: Politics and Religion — optional thematic route",
+      "title": "PS_0004: Politics and Religion \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -38828,7 +38976,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0010",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0010: Politics of the United States Congress — optional thematic route",
+      "title": "PS_0010: Politics of the United States Congress \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -38877,7 +39025,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0082",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0082: Popular Culture — optional thematic route",
+      "title": "AT_0082: Popular Culture \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -38946,7 +39094,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0081",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0081: Portuguese Language & Culture: Communicating with Portuguese Speakers — optional thematic route",
+      "title": "AT_0081: Portuguese Language & Culture: Communicating with Portuguese Speakers \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -38986,7 +39134,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0035",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0035: Pre-Law: Social Foundations of the Legal System — optional thematic route",
+      "title": "PS_0035: Pre-Law: Social Foundations of the Legal System \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -39027,7 +39175,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0074",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0074: Psychology, Ethics and Society — optional thematic route",
+      "title": "PS_0074: Psychology, Ethics and Society \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -39094,7 +39242,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0002",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0002: Psychosocial and Community Well-Being — optional thematic route",
+      "title": "PS_0002: Psychosocial and Community Well-Being \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -39169,7 +39317,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0034",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0034: Public Administration — optional thematic route",
+      "title": "PS_0034: Public Administration \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -39230,7 +39378,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0088",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0088: Public Advocacy, Civic Engagement, and Social Change — optional thematic route",
+      "title": "PS_0088: Public Advocacy, Civic Engagement, and Social Change \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -39278,7 +39426,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0064",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0064: Public Relations — optional thematic route",
+      "title": "PS_0064: Public Relations \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -39330,7 +39478,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0089",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0089: Public Speaking, Critical Thinking, and Debate for Effective Expression and Influence — optional thematic route",
+      "title": "PS_0089: Public Speaking, Critical Thinking, and Debate for Effective Expression and Influence \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -39383,7 +39531,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0033",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0033: Race and Ethnic Relations in the United States — optional thematic route",
+      "title": "PS_0033: Race and Ethnic Relations in the United States \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -39420,7 +39568,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0083",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0083: Regime Change and Democratization — optional thematic route",
+      "title": "PS_0083: Regime Change and Democratization \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -39487,7 +39635,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0051",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0051: Religion and Medicine — optional thematic route",
+      "title": "AT_0051: Religion and Medicine \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -39522,7 +39670,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0108",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0108: Religious Traditions and Texts — optional thematic route",
+      "title": "AT_0108: Religious Traditions and Texts \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -39592,7 +39740,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0013",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0013: Renaissance Art and Culture.. — optional thematic route",
+      "title": "AT_0013: Renaissance Art and Culture.. \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -39658,7 +39806,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0078",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0078: Representation of the Human Figure in Art — optional thematic route",
+      "title": "AT_0078: Representation of the Human Figure in Art \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -39706,7 +39854,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0042",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0042: Research Methods in Sociology — optional thematic route",
+      "title": "PS_0042: Research Methods in Sociology \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -39728,7 +39876,7 @@
       "category": "human_context",
       "source_id": "miami-cognate-ps_0042-fall2026",
       "source_text": null,
-      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete exactly 3 courses from the following: Additional row conditions: APY 501: 2–6 published credit range; SOC 210: Prerequisite: SOC 101.; SOC 211: Prerequisite: SOC 101, 210. Corequisite: 212.. Listed courses are options, not all individually required; inactive rows are excluded.",
+      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete exactly 3 courses from the following: Additional row conditions: APY 501: 2\u20136 published credit range; SOC 210: Prerequisite: SOC 101.; SOC 211: Prerequisite: SOC 101, 210. Corequisite: 212.. Listed courses are options, not all individually required; inactive rows are excluded.",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-apy-501",
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-geg-306",
@@ -39742,7 +39890,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0008",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0008: Revolutionary Change in History — optional thematic route",
+      "title": "PS_0008: Revolutionary Change in History \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -39797,7 +39945,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0019",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0019: Rhetoric and Self-Presentation in Ancient Culture — optional thematic route",
+      "title": "PS_0019: Rhetoric and Self-Presentation in Ancient Culture \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -39856,7 +40004,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0080",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0080: Science of Human Development — optional thematic route",
+      "title": "PS_0080: Science of Human Development \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -39932,7 +40080,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0094",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0094: Essential Skills for Life and Work — optional thematic route",
+      "title": "PS_0094: Essential Skills for Life and Work \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -40005,7 +40153,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0041",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0041: Social Institutions — optional thematic route",
+      "title": "PS_0041: Social Institutions \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -40040,7 +40188,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0071",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0071: Social and Behavioral Sciences for Pre-med Students — optional thematic route",
+      "title": "PS_0071: Social and Behavioral Sciences for Pre-med Students \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -40122,7 +40270,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0050",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0050: Social and Scientific Perspectives on Global Environmental Change — optional thematic route",
+      "title": "PS_0050: Social and Scientific Perspectives on Global Environmental Change \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -40176,7 +40324,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0087",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0087: Sociology for Pre-Health Students — optional thematic route",
+      "title": "PS_0087: Sociology for Pre-Health Students \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -40228,7 +40376,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0078",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0078: Society and the Creative Self — optional thematic route",
+      "title": "PS_0078: Society and the Creative Self \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -40295,7 +40443,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0055",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0055: Spanish Language & Culture for Heritage and Native Learners — optional thematic route",
+      "title": "AT_0055: Spanish Language & Culture for Heritage and Native Learners \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -40408,7 +40556,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0056",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0056: Spanish Language & Culture: Communicating with Spanish Speakers for 2nd Language Learners — optional thematic route",
+      "title": "AT_0056: Spanish Language & Culture: Communicating with Spanish Speakers for 2nd Language Learners \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -40520,7 +40668,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0085",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0085: Sports Communication — optional thematic route",
+      "title": "PS_0085: Sports Communication \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -40554,7 +40702,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0007",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0007: Step by Step How to Design Costumes for Theatre Productions — optional thematic route",
+      "title": "AT_0007: Step by Step How to Design Costumes for Theatre Productions \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -40606,7 +40754,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0034",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0034: Studies in the History of Film, Photography, and Art — optional thematic route",
+      "title": "AT_0034: Studies in the History of Film, Photography, and Art \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -40657,7 +40805,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0062",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0062: Studies of Modern Day Israel — optional thematic route",
+      "title": "PS_0062: Studies of Modern Day Israel \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -40730,7 +40878,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0069",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0069: Studies of the European Middle Ages — optional thematic route",
+      "title": "AT_0069: Studies of the European Middle Ages \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -40790,7 +40938,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0036",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0036: Studio Fine Arts: Introduction to Drawing and Design — optional thematic route",
+      "title": "AT_0036: Studio Fine Arts: Introduction to Drawing and Design \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -40855,7 +41003,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0060",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0060: Study of Aspects of the Holocaust — optional thematic route",
+      "title": "PS_0060: Study of Aspects of the Holocaust \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -40898,7 +41046,7 @@
       "category": "human_context",
       "source_id": "miami-cognate-ps_0060-fall2026",
       "source_text": null,
-      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at most 1 course from the following: Additional row conditions: JUS 421: 1–3 published credit range. Listed courses are options, not all individually required; inactive rows are excluded.",
+      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at most 1 course from the following: Additional row conditions: JUS 421: 1\u20133 published credit range. Listed courses are options, not all individually required; inactive rows are excluded.",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-jus-205",
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-jus-421",
@@ -40939,7 +41087,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0092",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0092: Sustainable Cities — optional thematic route",
+      "title": "PS_0092: Sustainable Cities \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -40992,7 +41140,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0013",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0013: The American Politics Subfield of Political Science — optional thematic route",
+      "title": "PS_0013: The American Politics Subfield of Political Science \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -41049,7 +41197,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0010",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0010: The Arts in Education: Contextual Connections — optional thematic route",
+      "title": "AT_0010: The Arts in Education: Contextual Connections \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -41104,7 +41252,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0064",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0064: The British Literary Tradition — optional thematic route",
+      "title": "AT_0064: The British Literary Tradition \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -41172,7 +41320,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0063",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0063: The Business of Advertising — optional thematic route",
+      "title": "PS_0063: The Business of Advertising \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -41223,7 +41371,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0011",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0011: The Comparative Politics Subfield of Political Science — optional thematic route",
+      "title": "PS_0011: The Comparative Politics Subfield of Political Science \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -41261,7 +41409,7 @@
       "category": "human_context",
       "source_id": "miami-cognate-ps_0011-fall2026",
       "source_text": null,
-      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete exactly 2 courses from the following: Additional row conditions: GSS 469: Prerequisite: POL 201 or POL 202 Or GSS 202 or GSS 301.; GSS 471: Prerequisite: POL 202.; POL 344: Prerequisite: POL 202.; POL 381: Prerequisite: POL 202.; POL 382: Prerequisite: POL 202.; POL 384: Prerequisite: POL 202.; POL 385: Prerequisite: POL 202.; POL 386: Prerequisite: POL 202.; POL 387: Prerequisite: POL 202.; POL 388: Prerequisite: POL 202.; POL 398: 1–9 published credit range; POL 525: Prerequisite: POL 202.; POL 531: Prerequisite: POL 203 Or INS 101.; POL 581: Prerequisite: POL 202.; POL 582: Prerequisite: POL 202.; POL 584: Prerequisite: POL 202.; POL 598: Prerequisite: POL 202.. Listed courses are options, not all individually required; inactive rows are excluded.",
+      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete exactly 2 courses from the following: Additional row conditions: GSS 469: Prerequisite: POL 201 or POL 202 Or GSS 202 or GSS 301.; GSS 471: Prerequisite: POL 202.; POL 344: Prerequisite: POL 202.; POL 381: Prerequisite: POL 202.; POL 382: Prerequisite: POL 202.; POL 384: Prerequisite: POL 202.; POL 385: Prerequisite: POL 202.; POL 386: Prerequisite: POL 202.; POL 387: Prerequisite: POL 202.; POL 388: Prerequisite: POL 202.; POL 398: 1\u20139 published credit range; POL 525: Prerequisite: POL 202.; POL 531: Prerequisite: POL 203 Or INS 101.; POL 581: Prerequisite: POL 202.; POL 582: Prerequisite: POL 202.; POL 584: Prerequisite: POL 202.; POL 598: Prerequisite: POL 202.. Listed courses are options, not all individually required; inactive rows are excluded.",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-gss-469",
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-gss-471",
@@ -41309,7 +41457,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0029",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0029: The Epic Tradition from Antiquity Through the Twentieth Century — optional thematic route",
+      "title": "AT_0029: The Epic Tradition from Antiquity Through the Twentieth Century \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -41352,7 +41500,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0072",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0072: The Evolution of the Jewish People in their Homeland and the Diaspora — optional thematic route",
+      "title": "PS_0072: The Evolution of the Jewish People in their Homeland and the Diaspora \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -41461,7 +41609,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0007",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0007: The International Relations Subfield of Political Science — optional thematic route",
+      "title": "PS_0007: The International Relations Subfield of Political Science \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -41525,7 +41673,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0048",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0048: The Media, Political Opinions and Attitudes — optional thematic route",
+      "title": "PS_0048: The Media, Political Opinions and Attitudes \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -41575,7 +41723,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0003",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0003: The United States and Latin America — optional thematic route",
+      "title": "PS_0003: The United States and Latin America \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -41654,7 +41802,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0062",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0062: The art of handmade objects — optional thematic route",
+      "title": "AT_0062: The art of handmade objects \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -41704,7 +41852,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0033",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0033: Theatre Arts, Acting, Design, Management, Drama and History — optional thematic route",
+      "title": "AT_0033: Theatre Arts, Acting, Design, Management, Drama and History \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -41726,7 +41874,7 @@
       "category": "human_context",
       "source_id": "miami-cognate-at_0033-fall2026",
       "source_text": null,
-      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete exactly 3 courses from the following: Additional row conditions: THA 181: 1–3 published credit range; THA 251: Prerequisite: THA 105 or THA 106.; THA 252: Prerequisite: THA 251.; THA 253: Prerequisite: Successful completion of one 100-level THA performance course or instructor permission.; THA 254: Prerequisite: Successful completion of one 100-level THA performance course or instructor permission.; THA 264: Prerequisite: THA 101 or Theatre Arts BFA major status; THA 342: Prerequisite: THA 141 or THA 243.; THA 343: Prerequisite: THA 141 or THA 243.; THA 352: Prerequisite: THA 105 or THA 106.; THA 385: Requisite: Sophomore Standing or Higher. Listed courses are options, not all individually required; inactive rows are excluded.",
+      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete exactly 3 courses from the following: Additional row conditions: THA 181: 1\u20133 published credit range; THA 251: Prerequisite: THA 105 or THA 106.; THA 252: Prerequisite: THA 251.; THA 253: Prerequisite: Successful completion of one 100-level THA performance course or instructor permission.; THA 254: Prerequisite: Successful completion of one 100-level THA performance course or instructor permission.; THA 264: Prerequisite: THA 101 or Theatre Arts BFA major status; THA 342: Prerequisite: THA 141 or THA 243.; THA 343: Prerequisite: THA 141 or THA 243.; THA 352: Prerequisite: THA 105 or THA 106.; THA 385: Requisite: Sophomore Standing or Higher. Listed courses are options, not all individually required; inactive rows are excluded.",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-tha-101",
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-tha-105",
@@ -41780,7 +41928,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0012",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0012: Theatre Management and Daily Business Operations in the Non-profit World — optional thematic route",
+      "title": "AT_0012: Theatre Management and Daily Business Operations in the Non-profit World \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -41841,7 +41989,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0037",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0037: Three Dimensional Fine Arts: Sculpture, Ceramics and Glass — optional thematic route",
+      "title": "AT_0037: Three Dimensional Fine Arts: Sculpture, Ceramics and Glass \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -41893,7 +42041,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0061",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0061: Three dimensional works of art and their meaning — optional thematic route",
+      "title": "AT_0061: Three dimensional works of art and their meaning \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -41959,7 +42107,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0038",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0038: Two Dimensional Fine Arts: Drawing, Painting and Printmaking — optional thematic route",
+      "title": "AT_0038: Two Dimensional Fine Arts: Drawing, Painting and Printmaking \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -42011,7 +42159,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0028",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0028: US History Through the Civil War — optional thematic route",
+      "title": "AT_0028: US History Through the Civil War \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -42033,7 +42181,7 @@
       "category": "human_context",
       "source_id": "miami-cognate-at_0028-fall2026",
       "source_text": null,
-      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at least 3 courses from the following Additional row conditions: HIS 382: 0–3 published credit range. Listed courses are options, not all individually required; inactive rows are excluded.",
+      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at least 3 courses from the following Additional row conditions: HIS 382: 0\u20133 published credit range. Listed courses are options, not all individually required; inactive rows are excluded.",
       "course_ids": [
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-his-101",
         "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-his-209",
@@ -42065,7 +42213,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0016",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0016: Understanding Politics — optional thematic route",
+      "title": "PS_0016: Understanding Politics \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -42128,7 +42276,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0011",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0011: Western Civilization: Historical Approaches — optional thematic route",
+      "title": "AT_0011: Western Civilization: Historical Approaches \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -42190,7 +42338,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0082",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0082: Women's and Gender Studies — optional thematic route",
+      "title": "PS_0082: Women's and Gender Studies \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -42271,7 +42419,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0066",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0066: Women, Gender, Literature — optional thematic route",
+      "title": "AT_0066: Women, Gender, Literature \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -42322,7 +42470,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0073",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0073: World Literature in Translation — optional thematic route",
+      "title": "AT_0073: World Literature in Translation \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -42389,7 +42537,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-at_0001",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "AT_0001: World of Music — optional thematic route",
+      "title": "AT_0001: World of Music \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -42461,7 +42609,7 @@
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-thematic-ps_0073",
       "parent_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-policy-cognate-rules",
-      "title": "PS_0073: Writing, Public Speaking and Digital Communication Skills — optional thematic route",
+      "title": "PS_0073: Writing, Public Speaking and Digital Communication Skills \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -42791,7 +42939,8 @@
       "Business BBA/BSBA admission, progression, residence, GPA and cognate policies",
       "Cognate selection/declaration and individualized-cognate overlap restrictions",
       "Full October 2, 2026 individualized Master List: all 50 rendered pages, row/identity/area accounting, AH/PS candidates and conditional attribute/overlap/transfer context",
-      "All 215 active directory entries reviewed for selected Fall 2026: 212 thematic plans and three individualized routes; 172 conditional AH/PS thematic plans attached, every displayed group/course row, inactive flag and applicability condition retained; STEM already supplied by major"
+      "All 215 active directory entries reviewed for selected Fall 2026: 212 thematic plans and three individualized routes; 172 conditional AH/PS thematic plans attached, every displayed group/course row, inactive flag and applicability condition retained; STEM already supplied by major",
+      "2026-10-11 degree correctness reread: finite credit pools and named advanced-writing alternatives retain option roles rather than contextual-note ancestry"
     ],
     "unresolved_requirements": [
       "University transfer policy contains inconsistent summer concurrent-enrollment statements; applicability needs authoritative clarification.",

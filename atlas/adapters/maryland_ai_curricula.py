@@ -147,6 +147,16 @@ def parse(html, *, pid, title, award, url):
         # Introductory prose is deliberately not interpreted from table titles alone.
         intro = ' '.join(text(n) for n in section.find_all(['p','li']) if not n.find_parent('table'))
         if 'internship' in intro.lower():
+            if not all(phrase in intro.casefold() for phrase in ['capstone seminar', 'students may replace this course with an internship']):
+                raise ValueError('Human-centered capstone replacement permission changed')
+            capstone = next((n for n in nodes if 'umd-hcai490' in n['course_ids']), None)
+            if capstone is None:
+                raise ValueError('Human-centered capstone course row missing')
+            # A named capstone is not universally fixed when the same official
+            # requirements prose explicitly permits an internship replacement.
+            capstone.update(kind='alternative', title='Capstone seminar or internship',
+                summary='HCAI490 is the named seminar route. The catalog expressly permits replacement by an internship; no unlisted internship course code or credit amount is invented.')
+            req('capstone-internship-route','Internship replacement route',kind='note',parent=capstone['id'],summary='The catalog permits an internship in place of the capstone seminar. Approval/registration details and its course identity are not specified here.')
             req('capstone-policy','Capstone and specialization timing',kind='note',parent=root['id'],summary='Select specialization by fall of junior year; capstone in final semester may be replaced by an internship. Additional prerequisites vary by specialization.')
         notes.append('Six-course specialization pools preserve the extra GVPT170 requirement and course-content approval footnotes.')
     else:

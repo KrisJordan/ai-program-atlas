@@ -53,3 +53,12 @@ Four plans leave overall logic blank (AT_0077, AT_0094, PS_0079, PS_0082); PS_00
 See [full review](../../../research/miami-cognate-pool-review.md) and [plan/group/row facts](../../../research/miami-thematic-cognate-pools.json). Raw HTML remains ignored. Isolated four-program ingest/check/build passed; focused source-change, completeness-accounting and preservation tests are documented in the review. No maintained DB edit.
 
 Validation: 83 focused Miami tests passed, including every actual HTML plan replay and full public PDF replay; isolated four-program ingest/check/build passed. Five optional PyMuPDF deprecation warnings only.
+
+### Degree correctness review — 2026-10-11
+
+Numeric elective pools are published credit choices, not contextual notes. The named one-of component inside the four-W writing overlay is required, while overlap with major courses remains permitted. Main-table mapped roles are 7 fixed / 39 named options. The much larger university cognate inventory remains contextual, not a degree workload. No subject labels were inferred from elective or cognate membership.
+
+This is a bounded requirement-role correction. Whole-degree correctness remains
+in progress; existing partial curriculum status and substantive source questions
+are preserved. Synthetic tests distinguish explicit choices from context, and
+current cached catalog replay agrees with the reviewed seed roles.

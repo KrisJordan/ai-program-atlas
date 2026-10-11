@@ -44,7 +44,7 @@ def parse_science(html, kind):
         if desc_node is None:
             raise ValueError('Missing NJIT science course description: ' + code)
         desc = clean(desc_node.get_text(' ', strip=True))
-        c = course('njit', code, match[2], sid, url, credits=int(match[3]))
+        c = course('njit', code, match[2], sid, url, credits=int(match[3]),unit='semester_hours')
         # Only explicit preparation clauses; absence remains null, not "none".
         clauses = re.findall(r'((?:Pre|Co-?)requisites?:\s*.*?)(?:\.\s|\.$|$)', desc, re.I)
         c['prerequisites'] = '; '.join(clean(clause) for clause in clauses) or None

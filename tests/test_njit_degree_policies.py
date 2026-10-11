@@ -10,7 +10,8 @@ def test_njit_pool_extracts_changed_options_and_preserves_blank_credits():
  assert [c['code'] for c in result['courses']]==['COM 200']
  assert result['courses'][0]['credits'] is None
  assert 'HIST 2**' in result['requirements'][0]['summary']
- assert result['requirements'][0]['kind']=='note'
+ assert result['requirements'][0]['kind']=='choose_credits'
+ assert result['requirements'][0]['credit_unit']=='semester_hours'
  changed=parse_pool(html.replace('COM 200','COM 201'),'njit-ger-200')
  assert changed['courses'][0]['code']=='COM 201'
  assert 'curriculum_audit' not in result and 'last_verified' not in result
@@ -37,3 +38,16 @@ def test_njit_seed_explicit_pools_no_duplicate_required_course():
  assert 'njit-phil-310' in rules[PID+'-njit-ger-300']['course_ids']
  assert not any('*' in c['code'] for c in courses.values())
  assert d['curriculum_status']=='partial' and d['curriculum_audit']['unresolved_requirements']
+
+
+def test_degree_pool_profile_preserves_fixed_overlap_and_open_predicates():
+ from atlas.curriculum_profile import requirement_profile
+ d=json.loads(Path('data/programs/'+PID+'.json').read_text())
+ profile=requirement_profile(d)
+ assert [profile[k]['count'] for k in ('required','options','unresolved')]==[32,349,0]
+ # Four published code pools contain 350 records, with prescribed PHIL310
+ # already fixed. This does not authorize using PHIL310 for two credit slots.
+ assert sum(len(r['course_ids']) for r in d['requirements'] if r['id'] in {PID+'-'+k for k in POOLS})==350
+ assert all(c['credit_unit']=='semester_hours' for c in d['courses'])
+ assert any(s['id']==PID+'-credit-definition' and s['source_date'] is None for s in d['sources'])
+ assert any('PHIL 310' in q for q in d['curriculum_audit']['unresolved_requirements'])

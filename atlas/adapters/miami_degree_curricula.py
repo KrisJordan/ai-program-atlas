@@ -56,11 +56,19 @@ def observe(html,pid,title,award,heading,sid,url):
    if label in ['Techniques','Applications'] and amount is None and section and pool:
     node(label+' pool label','note',parent=section['id']);continue
    m=re.search(r'Select (one|two|three)\b',label);count={'one':1,'two':2,'three':3}[m[1]] if m else None
-   section=node(label,'choose_courses' if count else 'note',count=count,credits=amount,summary=label+(' — '+value+' published credits' if value else '')+'. Listed courses are options, not all required. Credit units require independent review.')
+   # The registered university Course Information source explicitly defines
+   # semester credit hours. Numeric technique/application/major-elective pools
+   # are real credit choices, not contextual notes. An uncoded free-elective
+   # slot can remain a credit predicate with no invented course identities.
+   section=node(label,'choose_courses' if count else 'choose_credits' if amount else 'note',count=count,credits=amount,summary=label+(' — '+value+' published semester credit hours' if value else '')+'. Listed courses are options, not all required.')
+   if section['kind']=='choose_credits':section['credit_unit']='semester_hours'
    pool=True;previous=None
   elif 'areaheader' not in classes and label not in ['Core Computer Science Courses','Core Mathematics Courses','Additional Required Course for the Major']:
    r=node(label,'note',credits=amount,summary=label+(' — '+value+' published credits' if value else ''),parent=section['id'] if section else None)
    if 'Advanced Writing and Communication Requirement' in label:
+    # The four-W overlay is contextual, but the explicitly named one-of choice
+    # beneath it is a required component of that overlay.
+    r['kind']='all'
     section=r;pool=False;previous=None
  if not courses or not req:raise ValueError('Empty curriculum')
  return dict(id=pid,title=title,award_level=award,program_kind='degree',curriculum_status='partial',courses=list(courses.values()),requirements=req)

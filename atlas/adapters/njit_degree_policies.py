@@ -34,13 +34,13 @@ def parse_pool(html, key):
   if not re.fullmatch(r'[A-Z]+\d* \d+[A-Z]?',code): raise ValueError('Unexpected approved course code: '+code)
   hours=clean(cells[-1].get_text(' ',strip=True))
   if hours and not re.fullmatch(r'\d+',hours): raise ValueError('Unexpected approved course credit')
-  courses.append(course('njit',code,name,sid,url,credits=int(hours) if hours else None,category='human_context' if key!='njit-natural' else 'other'))
+  courses.append(course('njit',code,name,sid,url,credits=int(hours) if hours else None,unit='semester_hours',category='human_context' if key!='njit-natural' else 'other'))
  if not courses: raise ValueError('Empty approved course pool')
  if len({c['id'] for c in courses})!=len(courses): raise ValueError('Duplicate approved course')
  summary='Approved options for the corresponding GER allocation; this pool does not add credits to the 120-credit degree plan. Individual credit amounts remain unknown where the table leaves them blank.'
  if key=='njit-natural': summary+=' The GER requires laboratory experience; listed courses are options, not interchangeable lecture/lab combinations. Published R216 206 value is retained as 3 credits.'
  if wildcards: summary+=' The source also permits these open subject/level categories: '+'; '.join(wildcards)+'. These are eligibility rules, not individual courses.'
- return observed([rule(PID+'-'+key,heading+' approved options',sid,[c['id'] for c in courses],kind='note',credits=credits,summary=summary)],courses)
+ return observed([rule(PID+'-'+key,heading+' approved options',sid,[c['id'] for c in courses],kind='choose_credits',credits=credits,unit='semester_hours',summary=summary)],courses)
 
 # Each material rule is guarded against changed source wording; numeric changes fail review.
 GER_RULES = [

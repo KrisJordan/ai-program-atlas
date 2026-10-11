@@ -20,7 +20,8 @@ def test_concrete_degree_table_and_curated_scope(index):
 def test_ba_and_bs_preserve_distinct_pools_totals_and_alternatives():
  ba=observed(0);bs=observed(2)
  pool=next(r for r in ba['requirements'] if r['title']=='Electives' and r['credits']==6)
- assert pool['kind']=='note' and len(pool['course_ids'])==27  # unknown normalized units: no guessed course count
+ assert pool['kind']=='choose_credits' and len(pool['course_ids'])==27
+ assert pool['credit_unit']=='semester_hours' and pool['count'] is None  # Registered unit policy; no guessed course count
  assert any(r['parent_id']==pool['id'] and len(r['course_ids'])==2 for r in ba['requirements'])
  assert any(r['kind']=='choose_courses' and '1-3' in r['summary'] for r in ba['requirements'])
  assert [(r['title'],r['credits'],len(r['course_ids'])) for r in bs['requirements'] if r['title'] in ['Techniques','Applications']]==[('Techniques',6,19),('Applications',9,15)]

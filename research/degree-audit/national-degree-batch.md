@@ -87,3 +87,38 @@ blocks do not declare cross-listing; the current IST directory lacks those codes
 Neither pair is merged. PLSC418/418W are alternatives, not established aliases.
 Thus 165 is the current evidence-backed mapped count, not a certification that
 every potential historical identity relationship has been resolved.
+
+## Miami and Maryland HCAI: bounded role corrections
+
+Miami BA DS/AI has six prescribed major identities plus WRS105: seven fixed.
+Its named options comprise nine core/writing alternatives, 27 major elective
+codes and three additional unique advanced-writing alternatives (CSC410 appears
+in both pools): **39**. Miami BS DS/AI has eight CS + four mathematics + WRS105:
+**13 fixed**. Its seven core/writing alternatives + 19 technique + 15 application
++ four advanced-writing alternatives, less the shared CSC410, give **44 options**.
+Business BBA and BSBA remain 22/21 and 21/33 fixed/option counts respectively.
+The approximately 1,900 university cognate records remain contextual. Credit
+choices do not turn every option into a requirement or resolve all college policy
+questions. Full subject and degree-wide audits remain in progress.
+
+Maryland HCAI's introduction permits replacement of its capstone seminar by an
+internship. HCAI490 changes from fixed to option, giving nine fixed and 59 named
+options. The internship remains an uncoded prose route; its approval/registration
+mechanics are not invented. College MATH115 applicability, individual subjects
+and the existing dated language-policy question remain separate review work.
+
+These five entries intentionally have no certified full expected profile yet.
+The tests independently protect the corrected bounded role counts, not a claim
+that all course subjects and degree-wide source policies have been audited.
+
+## NJIT: credit definition and conditional GER options
+
+The university's publicly posted Faculty Senate credit definition establishes
+semester credit hours across its schools and colleges. Its publication date is
+not printed; the cited regulation date is not inferred as an effective date.
+The four GER tables provide 64 + 248 + 36 + 2 = 350 code records. PHIL310 already
+occurs in the 32 prescribed identities, so the four credit-choice pools produce
+349 additional named options. Neither the profile nor this correction authorizes
+double counting PHIL310 across degree allocations. Open wildcard criteria and
+conditional laboratory relationships remain intact. Subject and full degree
+policy audits are unfinished.

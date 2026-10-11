@@ -37,3 +37,12 @@ The Chinese non-heritage path requires **CHIN102 and CHIN103** at its terminal, 
 `maryland_language_sequences.parse` is rerunnable against a reviewer-captured **visible page-one text** with row line breaks (plain text or AX `text` lines). It validates the edition, conditions, complete subject/path inventory, code order, conjunctions, heritage/placement labels and the visually reviewed terminal identities; it extracts credit amounts. A raw Drive HTML shell without rendered text fails closed. It makes no network requests, returns no audit/freshness/completeness, and does not imply unattended PDF retrieval works. The ignored local visible-text capture is `var/maryland-visible-language.txt`; synthetic changed-policy/credit/identity/heritage fixtures are committed. Raw source pages/PDFs are not committed.
 
 Validation: `uv run pytest -q tests/test_maryland_language_sequences.py tests/test_maryland_degree_policies.py` — **36 passed** (including available policy-source cache replays). An isolated one-program CLI ingest, SQLite/tree check and static build passed under `var/maryland-viewer-check/`; the maintained database was not changed.
+
+### Degree correctness review — 2026-10-11
+
+The requirements introduction explicitly permits an internship in place of the capstone seminar. HCAI490 is therefore a named option, not universally fixed. The alternative has an uncoded internship note; no course or credit amount is invented. Current mapped roles become 9 fixed / 59 named options; MATH115 and college-language contextual records retain their unresolved roles pending applicability review.
+
+This is a bounded requirement-role correction. Whole-degree correctness remains
+in progress; existing partial curriculum status and substantive source questions
+are preserved. Synthetic tests distinguish explicit choices from context, and
+current cached catalog replay agrees with the reviewed seed roles.
