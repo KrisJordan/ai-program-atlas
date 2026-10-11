@@ -45,6 +45,33 @@ The profile counts registered identities once, with fixed membership winning ove
 
 Independent secondary ledgers use the `independent-*.json` filename prefix. They do not replace primary per-program audit entries or certify the full degree merely by verifying a bounded correction.
 
+## Bounded source reviews and stale-evidence protection
+
+`independent-core-*.json` files attach separate `fixed_requirements`, `choice_rules`
+and `classification` judgments to the primary audit as `core_review`. Each judgment
+has a status (`verified`, `partial`, `unverified`), a precise source scope, evidence
+URLs/locators and explicit limitations. These statuses do not change the primary
+whole-degree status or assert that every elective description was reread. A missing
+readable saved source is an evidence limitation even when the existing graph has
+consistent arithmetic. An unverified empty core never means no core is required.
+
+Reviewers record source-enumerated course IDs and expected counts where established.
+Null role sets or category totals remain unchecked, not zero. Named option subsets
+do not certify full option pools. The compiler rejects duplicate review ownership,
+unknown programs and malformed evidence. Export checks the exact reviewed identities,
+recorded counts and a pinned digest of the resolved requirements, course facts,
+identity groups and source editions. Thus changing a choice quantity or replacing a
+course invalidates the review even when aggregate totals happen to remain equal.
+The digest is a stale-evidence guard, never an automated source certification.
+
+An exceptional closed rule can establish a fixed sequence by manual source review:
+WPI's exact published “Three of DS 1010, DS 2010, DS 3010” names all three members
+and a three-course minimum, with no fourth candidate or open-ended pool. Its adapter
+requires that exact heading and complete code set before retaining the three fixed
+identities. This does not permit the generic profile algorithm to promote observed
+options merely because their count equals a selection quantity. Credit pools,
+incomplete menus, example paths and ordinary alternatives remain choices.
+
 ## Separate bounded review dimensions
 
 An optional per-program `core_review` records an independent, bounded source judgment with `reviewed_at`, `reviewer`, and `dimensions`. The three dimension keys are `fixed_requirements`, `choice_rules`, and `classification`. Each contains a `status` (`verified`, `partial`, or `unverified`), a scope `summary`, `evidence` entries with `url` and `locator`, and explicit `limitations`.

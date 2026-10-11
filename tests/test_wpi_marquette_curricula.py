@@ -211,6 +211,19 @@ def test_wpi_ai_keeps_calculus_pairs_and_core_choice_bins():
         m.parse(ai_degree_fixture().replace("AI Core Courses", "Research Core"))
 
 
+def test_wpi_closed_foundation_sequence_needs_exact_source_rule_and_membership():
+    m = load("wpi-ai-bs")
+    rules = {x["id"]: x for x in m.parse(ai_degree_fixture())["requirements"]}
+    fixed = rules["wpi-ai-bs-core-ai-foundations"]
+    assert fixed["kind"] == "all"
+    assert set(fixed["course_ids"]) == {"wpi-ds-1010", "wpi-ds-2010", "wpi-ds-3010"}
+    # A changed selection rule cannot reuse the earlier manual closed-set judgment.
+    with pytest.raises(ValueError, match="Closed required"):
+        m.parse(ai_degree_fixture().replace("Three of DS", "Two of DS"))
+    with pytest.raises(ValueError, match="Closed required"):
+        m.parse(ai_degree_fixture().replace("DS 3010", "DS 3999"))
+
+
 def business_fixture():
     parts = [
         section(
