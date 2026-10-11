@@ -100,3 +100,18 @@ SOURCES += (policies.DEGREE_URL,) + tuple(policies.COLLEGE_BASE + k + '/index.ht
 SOURCE_PARSERS.update({COURSE_URL: parse_course_catalog, policies.DEGREE_URL: policies.parse_degree,
                       policies.DEPARTMENT_URL: policies.parse_department})
 SOURCE_PARSERS.update({policies.COLLEGE_BASE + k + '/index.html': (lambda html, k=k: policies.parse_college(html, k)) for k in policies.COLLEGES})
+
+from atlas.adapters import ucsd_shared_requirements as shared
+
+def parse_degree_with_ahi(html):
+    r = policies.parse_degree(html)
+    extra = shared.parse_ahi(html)
+    r['courses'] = extra['courses']
+    r['requirements'].extend(extra['requirements'])
+    return r
+
+SOURCES += (shared.UC_WRITING_URL, shared.SENATE_URL, shared.CLIMATE_URL, shared.DEI_PDF, shared.CLIMATE_PDF)
+SOURCE_PARSERS.update({shared.UC_WRITING_URL: shared.parse_uc_writing,
+                      shared.SENATE_URL: shared.parse_senate,
+                      shared.CLIMATE_URL: shared.parse_climate,
+                      shared.DEGREE_URL: parse_degree_with_ahi})
