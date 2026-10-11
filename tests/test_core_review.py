@@ -271,3 +271,45 @@ def test_reviewed_discovery_classification_updates_and_preserves_history(conn):
     assert [
         dict(r) for r in conn.execute("SELECT kind,award_level FROM discoveries")
     ] == discoveries
+
+
+@pytest.mark.parametrize("newest_first", [False, True])
+def test_survey_dates_preserve_latest_inspection_and_history(conn, newest_first):
+    db.upsert_institution(conn, program()["institution"])
+    older = {
+        "institution_id": "review-university", "status": "inaccessible",
+        "checked_at": "2026-10-09", "note": "Old catalog retrieval failed",
+        "sources": [{"url": "https://catalog.example.edu/old"}],
+        "discoveries": [{"title": "AI", "kind": "degree", "award_level": "BS",
+                         "url": "https://catalog.example.edu/ai"}],
+    }
+    newer = deepcopy(older)
+    newer.update(status="inspected", checked_at="2026-10-11", note="Public minor directory reviewed")
+    newer["sources"] = [{"url": "https://catalog.example.edu/new"}]
+    newer["discoveries"][0].update(kind="minor", award_level="minor")
+    entries = [newer, older] if newest_first else [older, newer]
+    db.ingest_survey(conn, entries)
+    db.ingest_survey(conn, entries)
+    row = conn.execute("SELECT coverage_status,coverage_note,last_inspected FROM institutions").fetchone()
+    assert tuple(row) == ("inspected", newer["note"], "2026-10-11")
+    assert conn.execute("SELECT count(*) FROM coverage_events").fetchone()[0] == 2
+    assert tuple(conn.execute("SELECT kind,award_level FROM discoveries").fetchone()) == ("minor", "minor")
+    # A newly encountered historical lead remains available without replacing
+    # the institution's current inspection or an existing classification.
+    older["discoveries"][0]["title"] = "AI historical lead"
+    db.ingest_survey(conn, [older])
+    assert conn.execute("SELECT count(*) FROM discoveries").fetchone()[0] == 2
+    assert conn.execute("SELECT coverage_note FROM institutions").fetchone()[0] == newer["note"]
+
+
+def test_survey_note_does_not_regress_newer_program_verification_date(conn):
+    record = program()
+    record["last_verified"] = "2026-10-11"
+    db.ingest_program(conn, record)
+    db.ingest_survey(conn, [{
+        "institution_id": record["institution"]["id"], "status": "inspected",
+        "checked_at": "2026-10-09", "note": "Earlier broad directory review",
+        "sources": [{"url": "https://catalog.example.edu/directory"}],
+    }])
+    row = conn.execute("SELECT coverage_status,coverage_note,last_inspected FROM institutions").fetchone()
+    assert tuple(row) == ("confirmed", "Earlier broad directory review", "2026-10-11")

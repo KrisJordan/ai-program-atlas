@@ -400,21 +400,34 @@ def ingest_survey(conn, entries):
                     digest(entry),
                 ),
             )
+            latest = conn.execute(
+                "SELECT MAX(checked_at) FROM coverage_events WHERE institution_id=?",
+                (iid,),
+            ).fetchone()[0]
+            current = entry["checked_at"] >= latest
             # A partial survey cannot downgrade a confirmed existing program.
             has_program = conn.execute(
                 "SELECT 1 FROM programs WHERE institution_id=?", (iid,)
             ).fetchone()
             effective = "confirmed" if has_program else status
-            conn.execute(
-                "UPDATE institutions SET coverage_status=?,coverage_note=?,last_inspected=? WHERE id=?",
-                (effective, entry["note"], entry["checked_at"], iid),
-            )
+            if current:
+                conn.execute(
+                    """UPDATE institutions SET coverage_status=?,coverage_note=?,
+                    last_inspected=MAX(COALESCE(last_inspected,''),?) WHERE id=?""",
+                    (effective, entry["note"], entry["checked_at"], iid),
+                )
             for d in entry.get("discoveries", []):
+                # Older evidence can add an unseen lead, but cannot overwrite a
+                # later reviewed classification. Same-day corrections still apply.
+                conflict = (
+                    """DO UPDATE SET
+                    kind=COALESCE(excluded.kind,discoveries.kind),
+                    award_level=COALESCE(excluded.award_level,discoveries.award_level)"""
+                    if current else "DO NOTHING"
+                )
                 conn.execute(
                     """INSERT INTO discoveries(institution_id,title,kind,award_level,url) VALUES (?,?,?,?,?)
-                    ON CONFLICT(institution_id,title,url) DO UPDATE SET
-                    kind=COALESCE(excluded.kind,discoveries.kind),
-                    award_level=COALESCE(excluded.award_level,discoveries.award_level)""",
+                    ON CONFLICT(institution_id,title,url) """ + conflict,
                     (iid, d["title"], d.get("kind"), d.get("award_level"), d["url"]),
                 )
 
