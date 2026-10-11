@@ -4,7 +4,7 @@
     {
       "program_id": "case-western-reserve-university-artificial-intelligence-ba-degree",
       "institution_id": "case-western-reserve-university",
-      "status": "blocked",
+      "status": "in_progress",
       "sources": [
         {
           "url": "https://bulletin.case.edu/engineering/computer-data-sciences/artificial-intelligence-ba/",
@@ -56,7 +56,9 @@
           ]
         }
       ],
-      "blockers": [
+      "correction_status": "Verified fixed-core taxonomy correction; full-degree audit in progress",
+      "second_pass_status": "pending",
+      "remaining_work": [
         {
           "issue": "Independent subject and prerequisite review of the remaining major/elective/UGER course records is not complete. Existing aggregate counts must not be mistaken for reviewed classifications.",
           "url": "https://bulletin.case.edu/engineering/computer-data-sciences/artificial-intelligence-ba/"
@@ -66,8 +68,7 @@
           "url": "https://bulletin.case.edu/undergraduate-academics/unified-general-education-requirements/"
         }
       ],
-      "correction_status": "Verified fixed-core taxonomy correction; full-degree audit blocked",
-      "second_pass_status": "pending",
+      "blockers": [],
       "ledger": "research/degree-audit/case-western.json",
       "audit_date": "2026-10-11",
       "reviewer": "pilots_cmu_penn"
@@ -75,7 +76,7 @@
     {
       "program_id": "case-western-reserve-university-artificial-intelligence-bs-degree",
       "institution_id": "case-western-reserve-university",
-      "status": "blocked",
+      "status": "in_progress",
       "sources": [
         {
           "url": "https://bulletin.case.edu/engineering/computer-data-sciences/artificial-intelligence-bs/",
@@ -136,7 +137,9 @@
           ]
         }
       ],
-      "blockers": [
+      "correction_status": "Verified fixed-core taxonomy correction; full-degree audit in progress",
+      "second_pass_status": "pending",
+      "remaining_work": [
         {
           "issue": "Independent subject and prerequisite review of the remaining major/elective/UGER course records is not complete. Existing aggregate counts must not be mistaken for reviewed classifications.",
           "url": "https://bulletin.case.edu/engineering/computer-data-sciences/artificial-intelligence-bs/"
@@ -146,9 +149,2333 @@
           "url": "https://bulletin.case.edu/undergraduate-academics/unified-general-education-requirements/"
         }
       ],
-      "correction_status": "Verified fixed-core taxonomy correction; full-degree audit blocked",
-      "second_pass_status": "pending",
+      "blockers": [],
       "ledger": "research/degree-audit/case-western.json",
+      "audit_date": "2026-10-11",
+      "reviewer": "pilots_cmu_penn"
+    },
+    {
+      "program_id": "lehigh-university-artificial-intelligence-machine-learning-and-data-science-bs-degree",
+      "institution_id": "lehigh-university",
+      "status": "blocked",
+      "sources": [
+        {
+          "url": "https://engineering.lehigh.edu/cse/academics/undergraduate/bs-ai-ml-ds",
+          "catalog_year": null,
+          "locator": "Named undergraduate program entry: Artificial Intelligence, Machine Learning and Data Science; award/type: BS / degree",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://catalog.lehigh.edu/coursesprogramsandcurricula/engineeringandappliedscience/",
+          "catalog_year": "2026\u20132027",
+          "locator": "Advanced HSS distribution; Free electives and work experience; College basic HSS structure",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://catalog.lehigh.edu/undergraduatestudies/",
+          "catalog_year": "2026\u20132027",
+          "locator": "Semester credit hours and course eligibility; Prerequisite and corequisite compliance",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://catalog.lehigh.edu/courselisting/chm/",
+          "catalog_year": "2026\u20132027",
+          "locator": "Reviewed degree-listed course blocks; descriptions, enrollment conditions and subject classification",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://catalog.lehigh.edu/courselisting/comm/",
+          "catalog_year": "2026\u20132027",
+          "locator": "Reviewed degree-listed course blocks; descriptions, enrollment conditions and subject classification",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://catalog.lehigh.edu/courselisting/cse/",
+          "catalog_year": "2026\u20132027",
+          "locator": "Reviewed degree-listed course blocks; descriptions, enrollment conditions and subject classification",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://catalog.lehigh.edu/courselisting/ece/",
+          "catalog_year": "2026\u20132027",
+          "locator": "Reviewed degree-listed course blocks; descriptions, enrollment conditions and subject classification",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://catalog.lehigh.edu/courselisting/eco/",
+          "catalog_year": "2026\u20132027",
+          "locator": "Reviewed degree-listed course blocks; descriptions, enrollment conditions and subject classification",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://catalog.lehigh.edu/courselisting/engr/",
+          "catalog_year": "2026\u20132027",
+          "locator": "Reviewed degree-listed course blocks; descriptions, enrollment conditions and subject classification",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://catalog.lehigh.edu/courselisting/ise/",
+          "catalog_year": "2026\u20132027",
+          "locator": "Reviewed degree-listed course blocks; descriptions, enrollment conditions and subject classification",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://catalog.lehigh.edu/courselisting/jour/",
+          "catalog_year": "2026\u20132027",
+          "locator": "Reviewed degree-listed course blocks; descriptions, enrollment conditions and subject classification",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://catalog.lehigh.edu/courselisting/math/",
+          "catalog_year": "2026\u20132027",
+          "locator": "Reviewed degree-listed course blocks; descriptions, enrollment conditions and subject classification",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://catalog.lehigh.edu/courselisting/phy/",
+          "catalog_year": "2026\u20132027",
+          "locator": "Reviewed degree-listed course blocks; descriptions, enrollment conditions and subject classification",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://catalog.lehigh.edu/courselisting/tlt/",
+          "catalog_year": "2026\u20132027",
+          "locator": "Reviewed degree-listed course blocks; descriptions, enrollment conditions and subject classification",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://catalog.lehigh.edu/courselisting/wrt/",
+          "catalog_year": "2026\u20132027",
+          "locator": "Reviewed degree-listed course blocks; descriptions, enrollment conditions and subject classification",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        }
+      ],
+      "checks": {
+        "degree_identity": "The department explicitly identifies a Bachelor of Science in Artificial Intelligence, Machine Learning, and Data Science; current linked course catalogs label 2026\u201327.",
+        "required_and_choices": "Manually enumerated 20 prescribed identities; 28 named options comprise 3 linear alternatives, 9 depth options, 12 general elective options and 4 writing alternatives. The note-root defect is corrected.",
+        "elective_pools": "Depth requires at least 12 semester hours; general AI/ML/DS electives require at least 21 and permit an open CSE 100+ range. HSS, additional science and free electives remain source-defined open predicates; no finite list is fabricated.",
+        "prerequisites": "Read every listed course block. Prerequisite/corequisite conditions are metadata only, not new degree obligations. CSE 017 and other prerequisites outside the displayed core remain explicit enrollment applicability questions.",
+        "credits_and_units": "Undergraduate catalog explicitly defines semester hours. Degree table and sample totals disagree (130\u2013131 versus 130; free electives 11 versus 10). Grouped physics/linear amounts were not assigned to each alternative. Variable course-catalog amounts remain nullable; degree-specific amounts retain their scope.",
+        "classification": "All 48 identities independently reviewed from authoritative descriptions: 44 reviewed primary subjects and 4 mixed. No prefix or degree-membership classification.",
+        "family_composition": "Standalone degree; no inherited family requirements.",
+        "degree_wide_requirements": "Previously mapped university and college policies remain; this pass reread basic HSS and unit/prerequisite rules. Whole-degree certification is blocked by source conflicts and unresolved overlapping CSE eligibility."
+      },
+      "expected_profile": {
+        "required": {
+          "count": 20,
+          "categories": {
+            "ai_ml": 3,
+            "applications": 5,
+            "foundations": 3,
+            "human_context": 1,
+            "mathematics": 4,
+            "other": 3,
+            "systems": 1
+          }
+        },
+        "options": {
+          "count": 28,
+          "categories": {
+            "ai_ml": 8,
+            "applications": 1,
+            "human_context": 7,
+            "mathematics": 11,
+            "other": 1
+          }
+        },
+        "unresolved": {
+          "count": 0,
+          "categories": {}
+        }
+      },
+      "expected_course_ids": {
+        "required": [
+          "lehigh-chm-030",
+          "lehigh-cse-012",
+          "lehigh-cse-027",
+          "lehigh-cse-127",
+          "lehigh-cse-140",
+          "lehigh-cse-160",
+          "lehigh-cse-211",
+          "lehigh-cse-252",
+          "lehigh-cse-282",
+          "lehigh-cse-283",
+          "lehigh-cse-327",
+          "lehigh-cse-330",
+          "lehigh-eco-001",
+          "lehigh-engr-005",
+          "lehigh-engr-010",
+          "lehigh-math-021",
+          "lehigh-math-022",
+          "lehigh-math-231",
+          "lehigh-phy-011",
+          "lehigh-phy-012"
+        ],
+        "options": [
+          "lehigh-comm-165",
+          "lehigh-comm-351",
+          "lehigh-cse-323",
+          "lehigh-cse-325",
+          "lehigh-cse-326",
+          "lehigh-cse-335",
+          "lehigh-cse-337",
+          "lehigh-cse-347",
+          "lehigh-cse-348",
+          "lehigh-cse-349",
+          "lehigh-ece-303",
+          "lehigh-ise-230",
+          "lehigh-ise-240",
+          "lehigh-ise-309",
+          "lehigh-jour-025",
+          "lehigh-math-023",
+          "lehigh-math-205",
+          "lehigh-math-241",
+          "lehigh-math-242",
+          "lehigh-math-310",
+          "lehigh-math-312",
+          "lehigh-math-338",
+          "lehigh-math-339",
+          "lehigh-tlt-351",
+          "lehigh-wrt-001",
+          "lehigh-wrt-002",
+          "lehigh-wrt-003",
+          "lehigh-wrt-005"
+        ],
+        "unresolved": []
+      },
+      "discrepancies": [
+        {
+          "issue": "A note ancestor hid all prescribed and option course roles.",
+          "correction": "Required root is all; depth/general pools are source-backed credit choices.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://engineering.lehigh.edu/cse/academics/undergraduate/bs-ai-ml-ds"
+          ]
+        },
+        {
+          "issue": "Legacy subjects conflated algorithms for AI, data systems, ethics and statistical methods.",
+          "correction": "48 manual description-based category reviews; four mixed courses remain other.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.lehigh.edu/courselisting/chm/",
+            "https://catalog.lehigh.edu/courselisting/comm/",
+            "https://catalog.lehigh.edu/courselisting/cse/",
+            "https://catalog.lehigh.edu/courselisting/ece/",
+            "https://catalog.lehigh.edu/courselisting/eco/",
+            "https://catalog.lehigh.edu/courselisting/engr/",
+            "https://catalog.lehigh.edu/courselisting/ise/",
+            "https://catalog.lehigh.edu/courselisting/jour/",
+            "https://catalog.lehigh.edu/courselisting/math/",
+            "https://catalog.lehigh.edu/courselisting/phy/",
+            "https://catalog.lehigh.edu/courselisting/tlt/",
+            "https://catalog.lehigh.edu/courselisting/wrt/"
+          ]
+        }
+      ],
+      "blockers": [
+        {
+          "issue": "Department table and sample plan disagree on total and free-elective credits; no authoritative reconciliation.",
+          "url": "https://engineering.lehigh.edu/cse/academics/undergraduate/bs-ai-ml-ds"
+        },
+        {
+          "issue": "Required/depth reuse inside the open CSE 100+ elective allocation is not explicitly resolved; some listed options require non-core prerequisites with no documented blanket substitution.",
+          "url": "https://engineering.lehigh.edu/cse/academics/undergraduate/bs-ai-ml-ds"
+        }
+      ],
+      "correction_status": "Role and all 48 course-subject corrections applied; source conflicts preserved.",
+      "second_pass_status": "pending",
+      "ledger": "research/degree-audit/national-degree-batch.json",
+      "audit_date": "2026-10-11",
+      "reviewer": "survey_national"
+    },
+    {
+      "program_id": "northeastern-chemical-engineering-ai-bsche",
+      "institution_id": "northeastern-university",
+      "status": "in_progress",
+      "sources": [
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/engineering/chemical/chemical-engineering-artificial-intelligence-bsche-bos/",
+          "catalog_year": "2026-2027",
+          "locator": "Program Requirements tab; individual structural review in progress",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-11T01:55:54+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: CS 1800, CS 2000, CS 2001, CS 2100, CS 2101, CS 3200",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:52+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/ds/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: DS 3500, DS 3000, DS 4200, DS 4300, DS 4400",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:22:37+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/ge/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: GE 1501, GE 1502, GE 1000",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:53:24+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/math/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: MATH 1341, MATH 1342, MATH 2321, MATH 2341, MATH 3081, MATH 3082",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:50+00:00"
+        }
+      ],
+      "checks": {
+        "degree_identity": "Official catalog identity and exact award/campus are retained as Chemical Engineering and Artificial Intelligence, BSChE (Boston). Current official page retrieved; catalog/cohort scope remains explicit.",
+        "required_and_choices": "Individual structural source interpretation is in progress. Parser replay/family resolution alone is not independent validation. Existing all/choice/bundle graph retained at this checkpoint.",
+        "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
+        "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant.",
+        "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
+        "classification": "20 of 43 observations have individually authored category reviews in this checkpoint; 23 remain legacy/unreviewed. Mixed and unclassified observations use other. No blanket title/prefix inference certifies remaining categories.",
+        "family_composition": "This BSChE record is not a member of the 23-variant family; no shared core or college rules inherited.",
+        "degree_wide_requirements": "University/engineering/NUpath and substitution conditions are not yet fully independently reviewed in this audit."
+      },
+      "expected_profile": null,
+      "expected_course_ids": null,
+      "discrepancies": [
+        {
+          "issue": "Legacy subject-prefix/title heuristics misclassified concrete courses: GE 1501 other -> applications; GE 1502 other -> applications; CS 1800 foundations -> mathematics; DS 3000 ai_ml -> mathematics; DS 4200 foundations -> other",
+          "correction": "Individually interpreted official descriptions and registered course.category_review evidence; no department-wide inference.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/cs/",
+            "https://catalog.northeastern.edu/course-descriptions/ds/",
+            "https://catalog.northeastern.edu/course-descriptions/ge/",
+            "https://catalog.northeastern.edu/course-descriptions/math/"
+          ]
+        },
+        {
+          "issue": "Official CS 1800 subject block corequires one-hour CS 1802, absent from the current mapped degree course set. Degree preamble also directs completion of specified corequisite labs/recitations/tools.",
+          "correction": "Dependency applicability and exact parent role are under review; no prerequisite-only course has been promoted automatically.",
+          "status": "under_review",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/undergraduate/engineering/chemical/chemical-engineering-artificial-intelligence-bsche-bos/",
+            "https://catalog.northeastern.edu/course-descriptions/cs/"
+          ]
+        }
+      ],
+      "blockers": [],
+      "correction_status": "First category and parser corrections applied; remaining accessible individual review continues.",
+      "second_pass_status": "pending",
+      "ledger": "research/degree-audit/northeastern.json",
+      "audit_date": "2026-10-11",
+      "reviewer": "cohort"
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree",
+      "institution_id": "northeastern-university",
+      "status": "in_progress",
+      "sources": [
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-behavioral-neuroscience-bs-bos/",
+          "catalog_year": "2026-2027",
+          "locator": "Program Requirements tab; individual structural review in progress",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:26:30+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: CS 1200, CS 1210, CS 2000, CS 2001, CS 2100, CS 2101, CS 3200, CS 4100",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:52+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/ds/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: DS 3500, DS 3000, DS 4200, DS 4300, DS 4400",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:22:37+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/math/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: MATH 1365, MATH 1465, MATH 1341",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:50+00:00"
+        }
+      ],
+      "checks": {
+        "degree_identity": "Official catalog identity and exact award/campus are retained as Artificial Intelligence and Behavioral Neuroscience, BS (Boston). Current official page retrieved; catalog/cohort scope remains explicit.",
+        "required_and_choices": "Individual structural source interpretation is in progress. Parser replay/family resolution alone is not independent validation. Existing all/choice/bundle graph retained at this checkpoint.",
+        "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
+        "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant.",
+        "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
+        "classification": "16 of 71 observations have individually authored category reviews in this checkpoint; 55 remain legacy/unreviewed. Mixed and unclassified observations use other. No blanket title/prefix inference certifies remaining categories.",
+        "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
+        "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed."
+      },
+      "expected_profile": null,
+      "expected_course_ids": null,
+      "discrepancies": [
+        {
+          "issue": "Legacy subject-prefix/title heuristics misclassified concrete courses: CS 1200 foundations -> other; CS 1210 foundations -> other; DS 3000 ai_ml -> mathematics; DS 4200 foundations -> other",
+          "correction": "Individually interpreted official descriptions and registered course.category_review evidence; no department-wide inference.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/cs/",
+            "https://catalog.northeastern.edu/course-descriptions/ds/",
+            "https://catalog.northeastern.edu/course-descriptions/math/"
+          ]
+        }
+      ],
+      "blockers": [
+        {
+          "issue": "Exact allowed/designated home-college choices and resulting additional progression/graduation rules remain an institutional source clarification; catalog hosting context does not establish assignment.",
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-behavioral-neuroscience-bs-bos/"
+        }
+      ],
+      "correction_status": "First category and parser corrections applied; remaining accessible individual review continues.",
+      "second_pass_status": "pending",
+      "ledger": "research/degree-audit/northeastern.json",
+      "audit_date": "2026-10-11",
+      "reviewer": "cohort"
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree",
+      "institution_id": "northeastern-university",
+      "status": "in_progress",
+      "sources": [
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-biochemistry-bs-bos/",
+          "catalog_year": "2026-2027",
+          "locator": "Program Requirements tab; individual structural review in progress",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:26:32+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: CS 1200, CS 1210, CS 2000, CS 2001, CS 2100, CS 2101, CS 3200",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:52+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/ds/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: DS 3500, DS 3000, DS 4200, DS 4300, DS 4400",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:22:37+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/math/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: MATH 1365, MATH 1465, MATH 3081, MATH 1341, MATH 1342",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:50+00:00"
+        }
+      ],
+      "checks": {
+        "degree_identity": "Official catalog identity and exact award/campus are retained as Artificial Intelligence and Biochemistry, BS (Boston). Current official page retrieved; catalog/cohort scope remains explicit.",
+        "required_and_choices": "Individual structural source interpretation is in progress. Parser replay/family resolution alone is not independent validation. Existing all/choice/bundle graph retained at this checkpoint.",
+        "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
+        "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant.",
+        "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
+        "classification": "17 of 52 observations have individually authored category reviews in this checkpoint; 35 remain legacy/unreviewed. Mixed and unclassified observations use other. No blanket title/prefix inference certifies remaining categories.",
+        "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
+        "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed."
+      },
+      "expected_profile": null,
+      "expected_course_ids": null,
+      "discrepancies": [
+        {
+          "issue": "Legacy subject-prefix/title heuristics misclassified concrete courses: CS 1200 foundations -> other; CS 1210 foundations -> other; DS 3000 ai_ml -> mathematics; DS 4200 foundations -> other",
+          "correction": "Individually interpreted official descriptions and registered course.category_review evidence; no department-wide inference.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/cs/",
+            "https://catalog.northeastern.edu/course-descriptions/ds/",
+            "https://catalog.northeastern.edu/course-descriptions/math/"
+          ]
+        }
+      ],
+      "blockers": [
+        {
+          "issue": "Exact allowed/designated home-college choices and resulting additional progression/graduation rules remain an institutional source clarification; catalog hosting context does not establish assignment.",
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-biochemistry-bs-bos/"
+        }
+      ],
+      "correction_status": "First category and parser corrections applied; remaining accessible individual review continues.",
+      "second_pass_status": "pending",
+      "ledger": "research/degree-audit/northeastern.json",
+      "audit_date": "2026-10-11",
+      "reviewer": "cohort"
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree",
+      "institution_id": "northeastern-university",
+      "status": "in_progress",
+      "sources": [
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-biology-bs-bos/",
+          "catalog_year": "2026-2027",
+          "locator": "Program Requirements tab; individual structural review in progress",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:13:00+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: CS 1200, CS 1210, CS 2000, CS 2001, CS 2100, CS 2101, CS 3200",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:52+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/ds/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: DS 3500, DS 3000, DS 4200, DS 4300, DS 4400",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:22:37+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/math/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: MATH 1365, MATH 1465, MATH 1341",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:50+00:00"
+        }
+      ],
+      "checks": {
+        "degree_identity": "Official catalog identity and exact award/campus are retained as Artificial Intelligence and Biology, BS (Boston). Current official page retrieved; catalog/cohort scope remains explicit.",
+        "required_and_choices": "Individual structural source interpretation is in progress. Parser replay/family resolution alone is not independent validation. Existing all/choice/bundle graph retained at this checkpoint.",
+        "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
+        "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant.",
+        "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
+        "classification": "15 of 72 observations have individually authored category reviews in this checkpoint; 57 remain legacy/unreviewed. Mixed and unclassified observations use other. No blanket title/prefix inference certifies remaining categories.",
+        "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
+        "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed."
+      },
+      "expected_profile": null,
+      "expected_course_ids": null,
+      "discrepancies": [
+        {
+          "issue": "Legacy subject-prefix/title heuristics misclassified concrete courses: CS 1200 foundations -> other; CS 1210 foundations -> other; DS 3000 ai_ml -> mathematics; DS 4200 foundations -> other",
+          "correction": "Individually interpreted official descriptions and registered course.category_review evidence; no department-wide inference.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/cs/",
+            "https://catalog.northeastern.edu/course-descriptions/ds/",
+            "https://catalog.northeastern.edu/course-descriptions/math/"
+          ]
+        }
+      ],
+      "blockers": [
+        {
+          "issue": "Exact allowed/designated home-college choices and resulting additional progression/graduation rules remain an institutional source clarification; catalog hosting context does not establish assignment.",
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-biology-bs-bos/"
+        }
+      ],
+      "correction_status": "First category and parser corrections applied; remaining accessible individual review continues.",
+      "second_pass_status": "pending",
+      "ledger": "research/degree-audit/northeastern.json",
+      "audit_date": "2026-10-11",
+      "reviewer": "cohort"
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-business-administration-bs-boston-bs-degree",
+      "institution_id": "northeastern-university",
+      "status": "in_progress",
+      "sources": [
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-business-admnistration-bs-bos/",
+          "catalog_year": "2026-2027",
+          "locator": "Program Requirements tab; individual structural review in progress",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:12:59+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: CS 1200, CS 1210, CS 1800, CS 2000, CS 2001, CS 2100, CS 2101, CS 3200, CS 4520",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:52+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/ds/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: DS 3500, DS 3000, DS 4200, DS 4300, DS 4400, DS 4420",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:22:37+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/econ/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: ECON 1115, ECON 1116, ECON 3413",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:54:00+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/math/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: MATH 1341, MATH 1231, MATH 1241, MATH 1245, MATH 1340",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:50+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/mgsc/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: MGSC 2301",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-11T00:10:10+00:00"
+        }
+      ],
+      "checks": {
+        "degree_identity": "Official catalog identity and exact award/campus are retained as Artificial Intelligence and Business Administration, BS (Boston). Current official page retrieved; catalog/cohort scope remains explicit.",
+        "required_and_choices": "Individual structural source interpretation is in progress. Parser replay/family resolution alone is not independent validation. Existing all/choice/bundle graph retained at this checkpoint.",
+        "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
+        "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant.",
+        "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
+        "classification": "24 of 179 observations have individually authored category reviews in this checkpoint; 155 remain legacy/unreviewed. Mixed and unclassified observations use other. No blanket title/prefix inference certifies remaining categories.",
+        "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
+        "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed."
+      },
+      "expected_profile": null,
+      "expected_course_ids": null,
+      "discrepancies": [
+        {
+          "issue": "Legacy subject-prefix/title heuristics misclassified concrete courses: CS 1200 foundations -> other; CS 1210 foundations -> other; CS 1800 foundations -> mathematics; DS 3000 ai_ml -> mathematics; DS 4200 foundations -> other; ECON 1115 mathematics -> human_context; ECON 1116 mathematics -> human_context; ECON 3413 mathematics -> human_context",
+          "correction": "Individually interpreted official descriptions and registered course.category_review evidence; no department-wide inference.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/cs/",
+            "https://catalog.northeastern.edu/course-descriptions/ds/",
+            "https://catalog.northeastern.edu/course-descriptions/econ/",
+            "https://catalog.northeastern.edu/course-descriptions/math/",
+            "https://catalog.northeastern.edu/course-descriptions/mgsc/"
+          ]
+        },
+        {
+          "issue": "Official CS 1800 subject block corequires one-hour CS 1802, absent from the current mapped degree course set. Degree preamble also directs completion of specified corequisite labs/recitations/tools.",
+          "correction": "Dependency applicability and exact parent role are under review; no prerequisite-only course has been promoted automatically.",
+          "status": "under_review",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-business-admnistration-bs-bos/",
+            "https://catalog.northeastern.edu/course-descriptions/cs/"
+          ]
+        }
+      ],
+      "blockers": [
+        {
+          "issue": "Exact allowed/designated home-college choices and resulting additional progression/graduation rules remain an institutional source clarification; catalog hosting context does not establish assignment.",
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-business-admnistration-bs-bos/"
+        }
+      ],
+      "correction_status": "First category and parser corrections applied; remaining accessible individual review continues.",
+      "second_pass_status": "pending",
+      "ledger": "research/degree-audit/northeastern.json",
+      "audit_date": "2026-10-11",
+      "reviewer": "cohort"
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree",
+      "institution_id": "northeastern-university",
+      "status": "in_progress",
+      "sources": [
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-chemistry-bs-bos/",
+          "catalog_year": "2026-2027",
+          "locator": "Program Requirements tab; individual structural review in progress",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:26:33+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: CS 1200, CS 1210, CS 2000, CS 2001, CS 2100, CS 2101, CS 3200",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:52+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/ds/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: DS 3500, DS 3000, DS 4200, DS 4300, DS 4400",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:22:37+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/math/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: MATH 1365, MATH 1465, MATH 1341, MATH 1342",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:50+00:00"
+        }
+      ],
+      "checks": {
+        "degree_identity": "Official catalog identity and exact award/campus are retained as Artificial Intelligence and Chemistry, BS (Boston). Current official page retrieved; catalog/cohort scope remains explicit.",
+        "required_and_choices": "Individual structural source interpretation is in progress. Parser replay/family resolution alone is not independent validation. Existing all/choice/bundle graph retained at this checkpoint.",
+        "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
+        "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant.",
+        "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
+        "classification": "16 of 51 observations have individually authored category reviews in this checkpoint; 35 remain legacy/unreviewed. Mixed and unclassified observations use other. No blanket title/prefix inference certifies remaining categories.",
+        "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
+        "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed."
+      },
+      "expected_profile": null,
+      "expected_course_ids": null,
+      "discrepancies": [
+        {
+          "issue": "Legacy subject-prefix/title heuristics misclassified concrete courses: CS 1200 foundations -> other; CS 1210 foundations -> other; DS 3000 ai_ml -> mathematics; DS 4200 foundations -> other",
+          "correction": "Individually interpreted official descriptions and registered course.category_review evidence; no department-wide inference.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/cs/",
+            "https://catalog.northeastern.edu/course-descriptions/ds/",
+            "https://catalog.northeastern.edu/course-descriptions/math/"
+          ]
+        }
+      ],
+      "blockers": [
+        {
+          "issue": "Exact allowed/designated home-college choices and resulting additional progression/graduation rules remain an institutional source clarification; catalog hosting context does not establish assignment.",
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-chemistry-bs-bos/"
+        }
+      ],
+      "correction_status": "First category and parser corrections applied; remaining accessible individual review continues.",
+      "second_pass_status": "pending",
+      "ledger": "research/degree-audit/northeastern.json",
+      "audit_date": "2026-10-11",
+      "reviewer": "cohort"
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-communication-studies-bs-boston-bs-degree",
+      "institution_id": "northeastern-university",
+      "status": "in_progress",
+      "sources": [
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-communication-studies-bs-bos/",
+          "catalog_year": "2026-2027",
+          "locator": "Program Requirements tab; individual structural review in progress",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:50:34+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: CS 1800, CS 2000, CS 2001, CS 2100, CS 2101, CS 3200, CS 4120, CS 1200, CS 1210",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:52+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/cy/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: CY 4170, CY 5240",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:53+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/ds/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: DS 3500, DS 3000, DS 4200, DS 4300, DS 4400, DS 4420, DS 4440, DS 1300",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:22:37+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/econ/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: ECON 2350",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:54:00+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/math/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: MATH 1341",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:50+00:00"
+        }
+      ],
+      "checks": {
+        "degree_identity": "Official catalog identity and exact award/campus are retained as Artificial Intelligence and Communication Studies, BS (Boston). Current official page retrieved; catalog/cohort scope remains explicit.",
+        "required_and_choices": "Individual structural source interpretation is in progress. Parser replay/family resolution alone is not independent validation. Existing all/choice/bundle graph retained at this checkpoint.",
+        "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
+        "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant.",
+        "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
+        "classification": "21 of 77 observations have individually authored category reviews in this checkpoint; 56 remain legacy/unreviewed. Mixed and unclassified observations use other. No blanket title/prefix inference certifies remaining categories.",
+        "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
+        "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed."
+      },
+      "expected_profile": null,
+      "expected_course_ids": null,
+      "discrepancies": [
+        {
+          "issue": "Legacy subject-prefix/title heuristics misclassified concrete courses: CS 1800 foundations -> mathematics; DS 3000 ai_ml -> mathematics; DS 4200 foundations -> other; CS 4120 foundations -> ai_ml; CS 1200 foundations -> other; CS 1210 foundations -> other; CY 4170 other -> human_context; CY 5240 other -> human_context; DS 1300 foundations -> human_context",
+          "correction": "Individually interpreted official descriptions and registered course.category_review evidence; no department-wide inference.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/cs/",
+            "https://catalog.northeastern.edu/course-descriptions/cy/",
+            "https://catalog.northeastern.edu/course-descriptions/ds/",
+            "https://catalog.northeastern.edu/course-descriptions/econ/",
+            "https://catalog.northeastern.edu/course-descriptions/math/"
+          ]
+        },
+        {
+          "issue": "Current parser rejected the published minimum-16-semester-hour general-elective wording despite correct reviewed seed.",
+          "correction": "Narrow minimum-credit grammar support with changed-amount rejection.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-communication-studies-bs-bos/"
+          ]
+        },
+        {
+          "issue": "Official CS 1800 subject block corequires one-hour CS 1802, absent from the current mapped degree course set. Degree preamble also directs completion of specified corequisite labs/recitations/tools.",
+          "correction": "Dependency applicability and exact parent role are under review; no prerequisite-only course has been promoted automatically.",
+          "status": "under_review",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-communication-studies-bs-bos/",
+            "https://catalog.northeastern.edu/course-descriptions/cs/"
+          ]
+        }
+      ],
+      "blockers": [
+        {
+          "issue": "Exact allowed/designated home-college choices and resulting additional progression/graduation rules remain an institutional source clarification; catalog hosting context does not establish assignment.",
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-communication-studies-bs-bos/"
+        }
+      ],
+      "correction_status": "First category and parser corrections applied; remaining accessible individual review continues.",
+      "second_pass_status": "pending",
+      "ledger": "research/degree-audit/northeastern.json",
+      "audit_date": "2026-10-11",
+      "reviewer": "cohort"
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree",
+      "institution_id": "northeastern-university",
+      "status": "in_progress",
+      "sources": [
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-criminal-justice-bs-bos/",
+          "catalog_year": "2026-2027",
+          "locator": "Program Requirements tab; individual structural review in progress",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:50:32+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: CS 1200, CS 1210, CS 1800, CS 2000, CS 2001, CS 2100, CS 2101, CS 3200",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:52+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/cy/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: CY 4170, CY 5240",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:53+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/ds/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: DS 3500, DS 3000, DS 4200, DS 4300, DS 4400, DS 1300",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:22:37+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/econ/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: ECON 2350",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:54:00+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/math/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: MATH 1341",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:50+00:00"
+        }
+      ],
+      "checks": {
+        "degree_identity": "Official catalog identity and exact award/campus are retained as Artificial Intelligence and Criminal Justice, BS (Boston). Current official page retrieved; catalog/cohort scope remains explicit.",
+        "required_and_choices": "Individual structural source interpretation is in progress. Parser replay/family resolution alone is not independent validation. Existing all/choice/bundle graph retained at this checkpoint.",
+        "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
+        "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant.",
+        "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
+        "classification": "18 of 67 observations have individually authored category reviews in this checkpoint; 49 remain legacy/unreviewed. Mixed and unclassified observations use other. No blanket title/prefix inference certifies remaining categories.",
+        "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
+        "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed."
+      },
+      "expected_profile": null,
+      "expected_course_ids": null,
+      "discrepancies": [
+        {
+          "issue": "Legacy subject-prefix/title heuristics misclassified concrete courses: CS 1200 foundations -> other; CS 1210 foundations -> other; CS 1800 foundations -> mathematics; DS 3000 ai_ml -> mathematics; DS 4200 foundations -> other; CY 4170 other -> human_context; CY 5240 other -> human_context; DS 1300 foundations -> human_context",
+          "correction": "Individually interpreted official descriptions and registered course.category_review evidence; no department-wide inference.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/cs/",
+            "https://catalog.northeastern.edu/course-descriptions/cy/",
+            "https://catalog.northeastern.edu/course-descriptions/ds/",
+            "https://catalog.northeastern.edu/course-descriptions/econ/",
+            "https://catalog.northeastern.edu/course-descriptions/math/"
+          ]
+        },
+        {
+          "issue": "Official CS 1800 subject block corequires one-hour CS 1802, absent from the current mapped degree course set. Degree preamble also directs completion of specified corequisite labs/recitations/tools.",
+          "correction": "Dependency applicability and exact parent role are under review; no prerequisite-only course has been promoted automatically.",
+          "status": "under_review",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-criminal-justice-bs-bos/",
+            "https://catalog.northeastern.edu/course-descriptions/cs/"
+          ]
+        }
+      ],
+      "blockers": [
+        {
+          "issue": "Exact allowed/designated home-college choices and resulting additional progression/graduation rules remain an institutional source clarification; catalog hosting context does not establish assignment.",
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-criminal-justice-bs-bos/"
+        }
+      ],
+      "correction_status": "First category and parser corrections applied; remaining accessible individual review continues.",
+      "second_pass_status": "pending",
+      "ledger": "research/degree-audit/northeastern.json",
+      "audit_date": "2026-10-11",
+      "reviewer": "cohort"
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree",
+      "institution_id": "northeastern-university",
+      "status": "in_progress",
+      "sources": [
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-design-bs-bos/",
+          "catalog_year": "2026-2027",
+          "locator": "Program Requirements tab; individual structural review in progress",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:19:33+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: CS 1200, CS 1210, CS 1800, CS 2000, CS 2001, CS 2100, CS 2101, CS 3200",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:52+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/cy/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: CY 4170, CY 5240",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:53+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/ds/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: DS 3500, DS 3000, DS 4300, DS 4400, DS 4200, DS 1300",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:22:37+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/econ/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: ECON 2350",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:54:00+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/math/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: MATH 1341",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:50+00:00"
+        }
+      ],
+      "checks": {
+        "degree_identity": "Official catalog identity and exact award/campus are retained as Artificial Intelligence and Design, BS (Boston). Current official page retrieved; catalog/cohort scope remains explicit.",
+        "required_and_choices": "Individual structural source interpretation is in progress. Parser replay/family resolution alone is not independent validation. Existing all/choice/bundle graph retained at this checkpoint.",
+        "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
+        "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant.",
+        "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
+        "classification": "18 of 62 observations have individually authored category reviews in this checkpoint; 44 remain legacy/unreviewed. Mixed and unclassified observations use other. No blanket title/prefix inference certifies remaining categories.",
+        "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
+        "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed."
+      },
+      "expected_profile": null,
+      "expected_course_ids": null,
+      "discrepancies": [
+        {
+          "issue": "Legacy subject-prefix/title heuristics misclassified concrete courses: CS 1200 foundations -> other; CS 1210 foundations -> other; CS 1800 foundations -> mathematics; DS 3000 ai_ml -> mathematics; DS 4200 foundations -> other; CY 4170 other -> human_context; CY 5240 other -> human_context; DS 1300 foundations -> human_context",
+          "correction": "Individually interpreted official descriptions and registered course.category_review evidence; no department-wide inference.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/cs/",
+            "https://catalog.northeastern.edu/course-descriptions/cy/",
+            "https://catalog.northeastern.edu/course-descriptions/ds/",
+            "https://catalog.northeastern.edu/course-descriptions/econ/",
+            "https://catalog.northeastern.edu/course-descriptions/math/"
+          ]
+        },
+        {
+          "issue": "Official CS 1800 subject block corequires one-hour CS 1802, absent from the current mapped degree course set. Degree preamble also directs completion of specified corequisite labs/recitations/tools.",
+          "correction": "Dependency applicability and exact parent role are under review; no prerequisite-only course has been promoted automatically.",
+          "status": "under_review",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-design-bs-bos/",
+            "https://catalog.northeastern.edu/course-descriptions/cs/"
+          ]
+        }
+      ],
+      "blockers": [
+        {
+          "issue": "Exact allowed/designated home-college choices and resulting additional progression/graduation rules remain an institutional source clarification; catalog hosting context does not establish assignment.",
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-design-bs-bos/"
+        }
+      ],
+      "correction_status": "First category and parser corrections applied; remaining accessible individual review continues.",
+      "second_pass_status": "pending",
+      "ledger": "research/degree-audit/northeastern.json",
+      "audit_date": "2026-10-11",
+      "reviewer": "cohort"
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree",
+      "institution_id": "northeastern-university",
+      "status": "in_progress",
+      "sources": [
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-ecology-evolutionary-biology-bs-bos/",
+          "catalog_year": "2026-2027",
+          "locator": "Program Requirements tab; individual structural review in progress",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:26:36+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: CS 1200, CS 1210, CS 2000, CS 2001, CS 2100, CS 2101, CS 3200",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:52+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/ds/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: DS 3500, DS 3000, DS 4200, DS 4300, DS 4400, DS 4420",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:22:37+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/math/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: MATH 1365, MATH 1465, MATH 1341",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:50+00:00"
+        }
+      ],
+      "checks": {
+        "degree_identity": "Official catalog identity and exact award/campus are retained as Artificial Intelligence and Ecology and Evolutionary Biology, BS (Boston). Current official page retrieved; catalog/cohort scope remains explicit.",
+        "required_and_choices": "Individual structural source interpretation is in progress. Parser replay/family resolution alone is not independent validation. Existing all/choice/bundle graph retained at this checkpoint.",
+        "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
+        "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant.",
+        "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
+        "classification": "16 of 71 observations have individually authored category reviews in this checkpoint; 55 remain legacy/unreviewed. Mixed and unclassified observations use other. No blanket title/prefix inference certifies remaining categories.",
+        "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
+        "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed."
+      },
+      "expected_profile": null,
+      "expected_course_ids": null,
+      "discrepancies": [
+        {
+          "issue": "Legacy subject-prefix/title heuristics misclassified concrete courses: CS 1200 foundations -> other; CS 1210 foundations -> other; DS 3000 ai_ml -> mathematics; DS 4200 foundations -> other",
+          "correction": "Individually interpreted official descriptions and registered course.category_review evidence; no department-wide inference.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/cs/",
+            "https://catalog.northeastern.edu/course-descriptions/ds/",
+            "https://catalog.northeastern.edu/course-descriptions/math/"
+          ]
+        }
+      ],
+      "blockers": [
+        {
+          "issue": "Exact allowed/designated home-college choices and resulting additional progression/graduation rules remain an institutional source clarification; catalog hosting context does not establish assignment.",
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-ecology-evolutionary-biology-bs-bos/"
+        }
+      ],
+      "correction_status": "First category and parser corrections applied; remaining accessible individual review continues.",
+      "second_pass_status": "pending",
+      "ledger": "research/degree-audit/northeastern.json",
+      "audit_date": "2026-10-11",
+      "reviewer": "cohort"
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-economics-bs-boston-bs-degree",
+      "institution_id": "northeastern-university",
+      "status": "in_progress",
+      "sources": [
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-economics-bs-bos/",
+          "catalog_year": "2026-2027",
+          "locator": "Program Requirements tab; individual structural review in progress",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:19:32+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: CS 1200, CS 1210, CS 1800, CS 2000, CS 2001, CS 2100, CS 2101, CS 3200",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:52+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/cy/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: CY 4170, CY 5240",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:53+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/ds/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: DS 3500, DS 3000, DS 4200, DS 4300, DS 4400, DS 1300",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:22:37+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/econ/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: ECON 1000, ECON 1115, ECON 1116, ECON 2315, ECON 2316, ECON 2350, ECON 4692, ECON 4997, ECON 2560",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:54:00+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/math/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: MATH 1231, MATH 1241, MATH 1245, MATH 1340, MATH 1341",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:50+00:00"
+        }
+      ],
+      "checks": {
+        "degree_identity": "Official catalog identity and exact award/campus are retained as Artificial Intelligence and Economics, BS (Boston). Current official page retrieved; catalog/cohort scope remains explicit.",
+        "required_and_choices": "Individual structural source interpretation is in progress. Parser replay/family resolution alone is not independent validation. Existing all/choice/bundle graph retained at this checkpoint.",
+        "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
+        "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant.",
+        "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
+        "classification": "30 of 49 observations have individually authored category reviews in this checkpoint; 19 remain legacy/unreviewed. Mixed and unclassified observations use other. No blanket title/prefix inference certifies remaining categories.",
+        "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
+        "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed."
+      },
+      "expected_profile": null,
+      "expected_course_ids": null,
+      "discrepancies": [
+        {
+          "issue": "Legacy subject-prefix/title heuristics misclassified concrete courses: CS 1200 foundations -> other; ECON 1000 mathematics -> other; CS 1210 foundations -> other; CS 1800 foundations -> mathematics; DS 3000 ai_ml -> mathematics; DS 4200 foundations -> other; ECON 1115 mathematics -> human_context; ECON 1116 mathematics -> human_context; ECON 2315 mathematics -> human_context; ECON 2316 mathematics -> human_context; ECON 4692 mathematics -> other; ECON 4997 mathematics -> other; CY 4170 other -> human_context; CY 5240 other -> human_context; DS 1300 foundations -> human_context",
+          "correction": "Individually interpreted official descriptions and registered course.category_review evidence; no department-wide inference.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/cs/",
+            "https://catalog.northeastern.edu/course-descriptions/cy/",
+            "https://catalog.northeastern.edu/course-descriptions/ds/",
+            "https://catalog.northeastern.edu/course-descriptions/econ/",
+            "https://catalog.northeastern.edu/course-descriptions/math/"
+          ]
+        },
+        {
+          "issue": "Official CS 1800 subject block corequires one-hour CS 1802, absent from the current mapped degree course set. Degree preamble also directs completion of specified corequisite labs/recitations/tools.",
+          "correction": "Dependency applicability and exact parent role are under review; no prerequisite-only course has been promoted automatically.",
+          "status": "under_review",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-economics-bs-bos/",
+            "https://catalog.northeastern.edu/course-descriptions/cs/"
+          ]
+        }
+      ],
+      "blockers": [
+        {
+          "issue": "Exact allowed/designated home-college choices and resulting additional progression/graduation rules remain an institutional source clarification; catalog hosting context does not establish assignment.",
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-economics-bs-bos/"
+        }
+      ],
+      "correction_status": "First category and parser corrections applied; remaining accessible individual review continues.",
+      "second_pass_status": "pending",
+      "ledger": "research/degree-audit/northeastern.json",
+      "audit_date": "2026-10-11",
+      "reviewer": "cohort"
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree",
+      "institution_id": "northeastern-university",
+      "status": "in_progress",
+      "sources": [
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-environmental-sustainability-sciences-bs-bos/",
+          "catalog_year": "2026-2027",
+          "locator": "Program Requirements tab; individual structural review in progress",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:26:38+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: CS 1200, CS 1210, CS 2000, CS 2001, CS 2100, CS 2101, CS 3200, CS 4991",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:52+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/ds/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: DS 3500, DS 3000, DS 4200, DS 4300, DS 4400, DS 4420",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:22:37+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/math/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: MATH 1365, MATH 1465, MATH 1341",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:50+00:00"
+        }
+      ],
+      "checks": {
+        "degree_identity": "Official catalog identity and exact award/campus are retained as Artificial Intelligence and Environmental and Sustainability Sciences, BS (Boston). Current official page retrieved; catalog/cohort scope remains explicit.",
+        "required_and_choices": "Individual structural source interpretation is in progress. Parser replay/family resolution alone is not independent validation. Existing all/choice/bundle graph retained at this checkpoint.",
+        "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
+        "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant.",
+        "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
+        "classification": "17 of 82 observations have individually authored category reviews in this checkpoint; 65 remain legacy/unreviewed. Mixed and unclassified observations use other. No blanket title/prefix inference certifies remaining categories.",
+        "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
+        "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed."
+      },
+      "expected_profile": null,
+      "expected_course_ids": null,
+      "discrepancies": [
+        {
+          "issue": "Legacy subject-prefix/title heuristics misclassified concrete courses: CS 1200 foundations -> other; CS 1210 foundations -> other; DS 3000 ai_ml -> mathematics; DS 4200 foundations -> other; CS 4991 foundations -> other",
+          "correction": "Individually interpreted official descriptions and registered course.category_review evidence; no department-wide inference.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/cs/",
+            "https://catalog.northeastern.edu/course-descriptions/ds/",
+            "https://catalog.northeastern.edu/course-descriptions/math/"
+          ]
+        }
+      ],
+      "blockers": [
+        {
+          "issue": "Exact allowed/designated home-college choices and resulting additional progression/graduation rules remain an institutional source clarification; catalog hosting context does not establish assignment.",
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-environmental-sustainability-sciences-bs-bos/"
+        }
+      ],
+      "correction_status": "First category and parser corrections applied; remaining accessible individual review continues.",
+      "second_pass_status": "pending",
+      "ledger": "research/degree-audit/northeastern.json",
+      "audit_date": "2026-10-11",
+      "reviewer": "cohort"
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree",
+      "institution_id": "northeastern-university",
+      "status": "in_progress",
+      "sources": [
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-health-science-bs-bos/",
+          "catalog_year": "2026-2027",
+          "locator": "Program Requirements tab; individual structural review in progress",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:19:38+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: CS 1200, CS 1210, CS 1800, CS 2000, CS 2001, CS 2100, CS 2101, CS 3200, CS 2484",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:52+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/ds/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: DS 3500, DS 3000, DS 4200, DS 4300, DS 4400, DS 4420",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:22:37+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/econ/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: ECON 2350",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:54:00+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/math/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: MATH 1341, MATH 1241, MATH 3081",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:50+00:00"
+        }
+      ],
+      "checks": {
+        "degree_identity": "Official catalog identity and exact award/campus are retained as Artificial Intelligence and Health Science, BS (Boston). Current official page retrieved; catalog/cohort scope remains explicit.",
+        "required_and_choices": "Individual structural source interpretation is in progress. Parser replay/family resolution alone is not independent validation. Existing all/choice/bundle graph retained at this checkpoint.",
+        "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
+        "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant.",
+        "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
+        "classification": "19 of 51 observations have individually authored category reviews in this checkpoint; 32 remain legacy/unreviewed. Mixed and unclassified observations use other. No blanket title/prefix inference certifies remaining categories.",
+        "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
+        "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed."
+      },
+      "expected_profile": null,
+      "expected_course_ids": null,
+      "discrepancies": [
+        {
+          "issue": "Legacy subject-prefix/title heuristics misclassified concrete courses: CS 1200 foundations -> other; CS 1210 foundations -> other; CS 1800 foundations -> mathematics; CS 2484 foundations -> applications; DS 3000 ai_ml -> mathematics; DS 4200 foundations -> other",
+          "correction": "Individually interpreted official descriptions and registered course.category_review evidence; no department-wide inference.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/cs/",
+            "https://catalog.northeastern.edu/course-descriptions/ds/",
+            "https://catalog.northeastern.edu/course-descriptions/econ/",
+            "https://catalog.northeastern.edu/course-descriptions/math/"
+          ]
+        },
+        {
+          "issue": "Official CS 1800 subject block corequires one-hour CS 1802, absent from the current mapped degree course set. Degree preamble also directs completion of specified corequisite labs/recitations/tools.",
+          "correction": "Dependency applicability and exact parent role are under review; no prerequisite-only course has been promoted automatically.",
+          "status": "under_review",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-health-science-bs-bos/",
+            "https://catalog.northeastern.edu/course-descriptions/cs/"
+          ]
+        }
+      ],
+      "blockers": [
+        {
+          "issue": "Exact allowed/designated home-college choices and resulting additional progression/graduation rules remain an institutional source clarification; catalog hosting context does not establish assignment.",
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-health-science-bs-bos/"
+        }
+      ],
+      "correction_status": "First category and parser corrections applied; remaining accessible individual review continues.",
+      "second_pass_status": "pending",
+      "ledger": "research/degree-audit/northeastern.json",
+      "audit_date": "2026-10-11",
+      "reviewer": "cohort"
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-international-affairs-bs-boston-bs-degree",
+      "institution_id": "northeastern-university",
+      "status": "in_progress",
+      "sources": [
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-international-affairs-bs-bos/",
+          "catalog_year": "2026-2027",
+          "locator": "Program Requirements tab; individual structural review in progress",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:50:38+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: CS 1200, CS 1210, CS 1800, CS 2000, CS 2001, CS 2100, CS 2101, CS 3200",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:52+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/cy/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: CY 4170",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:53+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/ds/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: DS 3500, DS 3000, DS 4200, DS 4300, DS 4400",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:22:37+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/econ/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: ECON 3290, ECON 3635, ECON 3291, ECON 3404, ECON 3405, ECON 5650, ECON 1292, ECON 2350",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:54:00+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/math/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: MATH 1341",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:50+00:00"
+        }
+      ],
+      "checks": {
+        "degree_identity": "Official catalog identity and exact award/campus are retained as Artificial Intelligence and International Affairs, BS (Boston). Current official page retrieved; catalog/cohort scope remains explicit.",
+        "required_and_choices": "Individual structural source interpretation is in progress. Parser replay/family resolution alone is not independent validation. Existing all/choice/bundle graph retained at this checkpoint.",
+        "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
+        "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant.",
+        "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
+        "classification": "23 of 180 observations have individually authored category reviews in this checkpoint; 157 remain legacy/unreviewed. Mixed and unclassified observations use other. No blanket title/prefix inference certifies remaining categories.",
+        "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
+        "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed."
+      },
+      "expected_profile": null,
+      "expected_course_ids": null,
+      "discrepancies": [
+        {
+          "issue": "Legacy subject-prefix/title heuristics misclassified concrete courses: CS 1200 foundations -> other; CS 1210 foundations -> other; CS 1800 foundations -> mathematics; DS 3000 ai_ml -> mathematics; DS 4200 foundations -> other; ECON 3290 mathematics -> human_context; ECON 3635 mathematics -> human_context; ECON 3291 mathematics -> human_context; ECON 3404 mathematics -> human_context; ECON 3405 mathematics -> human_context; ECON 5650 mathematics -> human_context; ECON 1292 mathematics -> human_context; CY 4170 other -> human_context",
+          "correction": "Individually interpreted official descriptions and registered course.category_review evidence; no department-wide inference.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/cs/",
+            "https://catalog.northeastern.edu/course-descriptions/cy/",
+            "https://catalog.northeastern.edu/course-descriptions/ds/",
+            "https://catalog.northeastern.edu/course-descriptions/econ/",
+            "https://catalog.northeastern.edu/course-descriptions/math/"
+          ]
+        },
+        {
+          "issue": "Official CS 1800 subject block corequires one-hour CS 1802, absent from the current mapped degree course set. Degree preamble also directs completion of specified corequisite labs/recitations/tools.",
+          "correction": "Dependency applicability and exact parent role are under review; no prerequisite-only course has been promoted automatically.",
+          "status": "under_review",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-international-affairs-bs-bos/",
+            "https://catalog.northeastern.edu/course-descriptions/cs/"
+          ]
+        }
+      ],
+      "blockers": [
+        {
+          "issue": "Exact allowed/designated home-college choices and resulting additional progression/graduation rules remain an institutional source clarification; catalog hosting context does not establish assignment.",
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-international-affairs-bs-bos/"
+        }
+      ],
+      "correction_status": "First category and parser corrections applied; remaining accessible individual review continues.",
+      "second_pass_status": "pending",
+      "ledger": "research/degree-audit/northeastern.json",
+      "audit_date": "2026-10-11",
+      "reviewer": "cohort"
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree",
+      "institution_id": "northeastern-university",
+      "status": "in_progress",
+      "sources": [
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-journalism-bs-bos/",
+          "catalog_year": "2026-2027",
+          "locator": "Program Requirements tab; individual structural review in progress",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:50:40+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: CS 1200, CS 1210, CS 1800, CS 2000, CS 2001, CS 2100, CS 2101, CS 3200",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:52+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/cy/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: CY 4170, CY 5240",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:53+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/ds/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: DS 3500, DS 3000, DS 4200, DS 4300, DS 4400, DS 4420, DS 1300",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:22:37+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/econ/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: ECON 2350",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:54:00+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/math/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: MATH 1341",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:50+00:00"
+        }
+      ],
+      "checks": {
+        "degree_identity": "Official catalog identity and exact award/campus are retained as Artificial Intelligence and Journalism, BS (Boston). Current official page retrieved; catalog/cohort scope remains explicit.",
+        "required_and_choices": "Individual structural source interpretation is in progress. Parser replay/family resolution alone is not independent validation. Existing all/choice/bundle graph retained at this checkpoint.",
+        "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
+        "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant.",
+        "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
+        "classification": "19 of 45 observations have individually authored category reviews in this checkpoint; 26 remain legacy/unreviewed. Mixed and unclassified observations use other. No blanket title/prefix inference certifies remaining categories.",
+        "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
+        "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed."
+      },
+      "expected_profile": null,
+      "expected_course_ids": null,
+      "discrepancies": [
+        {
+          "issue": "Legacy subject-prefix/title heuristics misclassified concrete courses: CS 1200 foundations -> other; CS 1210 foundations -> other; CS 1800 foundations -> mathematics; CY 4170 other -> human_context; DS 3000 ai_ml -> mathematics; DS 4200 foundations -> other; CY 5240 other -> human_context; DS 1300 foundations -> human_context",
+          "correction": "Individually interpreted official descriptions and registered course.category_review evidence; no department-wide inference.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/cs/",
+            "https://catalog.northeastern.edu/course-descriptions/cy/",
+            "https://catalog.northeastern.edu/course-descriptions/ds/",
+            "https://catalog.northeastern.edu/course-descriptions/econ/",
+            "https://catalog.northeastern.edu/course-descriptions/math/"
+          ]
+        },
+        {
+          "issue": "Official CS 1800 subject block corequires one-hour CS 1802, absent from the current mapped degree course set. Degree preamble also directs completion of specified corequisite labs/recitations/tools.",
+          "correction": "Dependency applicability and exact parent role are under review; no prerequisite-only course has been promoted automatically.",
+          "status": "under_review",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-journalism-bs-bos/",
+            "https://catalog.northeastern.edu/course-descriptions/cs/"
+          ]
+        }
+      ],
+      "blockers": [
+        {
+          "issue": "Exact allowed/designated home-college choices and resulting additional progression/graduation rules remain an institutional source clarification; catalog hosting context does not establish assignment.",
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-journalism-bs-bos/"
+        }
+      ],
+      "correction_status": "First category and parser corrections applied; remaining accessible individual review continues.",
+      "second_pass_status": "pending",
+      "ledger": "research/degree-audit/northeastern.json",
+      "audit_date": "2026-10-11",
+      "reviewer": "cohort"
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-linguistics-bs-boston-bs-degree",
+      "institution_id": "northeastern-university",
+      "status": "in_progress",
+      "sources": [
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-linguistics-bs-bos/",
+          "catalog_year": "2026-2027",
+          "locator": "Program Requirements tab; individual structural review in progress",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:19:35+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: CS 1200, CS 1210, CS 2000, CS 2001, CS 2100, CS 2101, CS 3200, CS 4120",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:52+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/ds/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: DS 3500, DS 3000, DS 4200, DS 4300, DS 4400, DS 4420",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:22:37+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/math/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: MATH 1365, MATH 1465, MATH 1341",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:50+00:00"
+        }
+      ],
+      "checks": {
+        "degree_identity": "Official catalog identity and exact award/campus are retained as Artificial Intelligence and Linguistics, BS (Boston). Current official page retrieved; catalog/cohort scope remains explicit.",
+        "required_and_choices": "Individual structural source interpretation is in progress. Parser replay/family resolution alone is not independent validation. Existing all/choice/bundle graph retained at this checkpoint.",
+        "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
+        "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant.",
+        "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
+        "classification": "17 of 45 observations have individually authored category reviews in this checkpoint; 28 remain legacy/unreviewed. Mixed and unclassified observations use other. No blanket title/prefix inference certifies remaining categories.",
+        "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
+        "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed."
+      },
+      "expected_profile": null,
+      "expected_course_ids": null,
+      "discrepancies": [
+        {
+          "issue": "Legacy subject-prefix/title heuristics misclassified concrete courses: CS 1200 foundations -> other; CS 1210 foundations -> other; DS 3000 ai_ml -> mathematics; DS 4200 foundations -> other; CS 4120 foundations -> ai_ml",
+          "correction": "Individually interpreted official descriptions and registered course.category_review evidence; no department-wide inference.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/cs/",
+            "https://catalog.northeastern.edu/course-descriptions/ds/",
+            "https://catalog.northeastern.edu/course-descriptions/math/"
+          ]
+        }
+      ],
+      "blockers": [
+        {
+          "issue": "Exact allowed/designated home-college choices and resulting additional progression/graduation rules remain an institutional source clarification; catalog hosting context does not establish assignment.",
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-linguistics-bs-bos/"
+        }
+      ],
+      "correction_status": "First category and parser corrections applied; remaining accessible individual review continues.",
+      "second_pass_status": "pending",
+      "ledger": "research/degree-audit/northeastern.json",
+      "audit_date": "2026-10-11",
+      "reviewer": "cohort"
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree",
+      "institution_id": "northeastern-university",
+      "status": "in_progress",
+      "sources": [
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-mathematics-bs-bos/",
+          "catalog_year": "2026-2027",
+          "locator": "Program Requirements tab; individual structural review in progress",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:19:30+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: CS 1200, CS 1210, CS 2000, CS 2001, CS 2100, CS 2101, CS 3200",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:52+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/ds/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: DS 3500, DS 3000, DS 4200, DS 4300, DS 4400, DS 4420",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:22:37+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/math/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: MATH 1365, MATH 1341, MATH 1342, MATH 2321, MATH 2331, MATH 2341, MATH 3081, MATH 3175, MATH 3527",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:50+00:00"
+        }
+      ],
+      "checks": {
+        "degree_identity": "Official catalog identity and exact award/campus are retained as Artificial Intelligence and Mathematics, BS (Boston). Current official page retrieved; catalog/cohort scope remains explicit.",
+        "required_and_choices": "Individual structural source interpretation is in progress. Parser replay/family resolution alone is not independent validation. Existing all/choice/bundle graph retained at this checkpoint.",
+        "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
+        "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant.",
+        "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
+        "classification": "22 of 34 observations have individually authored category reviews in this checkpoint; 12 remain legacy/unreviewed. Mixed and unclassified observations use other. No blanket title/prefix inference certifies remaining categories.",
+        "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
+        "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed."
+      },
+      "expected_profile": null,
+      "expected_course_ids": null,
+      "discrepancies": [
+        {
+          "issue": "Legacy subject-prefix/title heuristics misclassified concrete courses: CS 1200 foundations -> other; CS 1210 foundations -> other; DS 3000 ai_ml -> mathematics; DS 4200 foundations -> other",
+          "correction": "Individually interpreted official descriptions and registered course.category_review evidence; no department-wide inference.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/cs/",
+            "https://catalog.northeastern.edu/course-descriptions/ds/",
+            "https://catalog.northeastern.edu/course-descriptions/math/"
+          ]
+        }
+      ],
+      "blockers": [
+        {
+          "issue": "Exact allowed/designated home-college choices and resulting additional progression/graduation rules remain an institutional source clarification; catalog hosting context does not establish assignment.",
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-mathematics-bs-bos/"
+        }
+      ],
+      "correction_status": "First category and parser corrections applied; remaining accessible individual review continues.",
+      "second_pass_status": "pending",
+      "ledger": "research/degree-audit/northeastern.json",
+      "audit_date": "2026-10-11",
+      "reviewer": "cohort"
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-philosophy-bs-boston-bs-degree",
+      "institution_id": "northeastern-university",
+      "status": "in_progress",
+      "sources": [
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-philosophy-bs-bos/",
+          "catalog_year": "2026-2027",
+          "locator": "Program Requirements tab; individual structural review in progress",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:12:57+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: CS 1200, CS 1210, CS 1800, CS 2000, CS 2001, CS 2100, CS 2101, CS 3200",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:52+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/ds/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: DS 3500, DS 3000, DS 4200, DS 4300, DS 4400, DS 4420, DS 4440",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:22:37+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/econ/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: ECON 2350",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:54:00+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/math/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: MATH 1341",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:50+00:00"
+        }
+      ],
+      "checks": {
+        "degree_identity": "Official catalog identity and exact award/campus are retained as Artificial Intelligence and Philosophy, BS (Boston). Current official page retrieved; catalog/cohort scope remains explicit.",
+        "required_and_choices": "Individual structural source interpretation is in progress. Parser replay/family resolution alone is not independent validation. Existing all/choice/bundle graph retained at this checkpoint.",
+        "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
+        "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant.",
+        "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
+        "classification": "17 of 50 observations have individually authored category reviews in this checkpoint; 33 remain legacy/unreviewed. Mixed and unclassified observations use other. No blanket title/prefix inference certifies remaining categories.",
+        "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
+        "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed."
+      },
+      "expected_profile": null,
+      "expected_course_ids": null,
+      "discrepancies": [
+        {
+          "issue": "Legacy subject-prefix/title heuristics misclassified concrete courses: CS 1200 foundations -> other; CS 1210 foundations -> other; CS 1800 foundations -> mathematics; DS 3000 ai_ml -> mathematics; DS 4200 foundations -> other",
+          "correction": "Individually interpreted official descriptions and registered course.category_review evidence; no department-wide inference.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/cs/",
+            "https://catalog.northeastern.edu/course-descriptions/ds/",
+            "https://catalog.northeastern.edu/course-descriptions/econ/",
+            "https://catalog.northeastern.edu/course-descriptions/math/"
+          ]
+        },
+        {
+          "issue": "Official CS 1800 subject block corequires one-hour CS 1802, absent from the current mapped degree course set. Degree preamble also directs completion of specified corequisite labs/recitations/tools.",
+          "correction": "Dependency applicability and exact parent role are under review; no prerequisite-only course has been promoted automatically.",
+          "status": "under_review",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-philosophy-bs-bos/",
+            "https://catalog.northeastern.edu/course-descriptions/cs/"
+          ]
+        }
+      ],
+      "blockers": [
+        {
+          "issue": "Exact allowed/designated home-college choices and resulting additional progression/graduation rules remain an institutional source clarification; catalog hosting context does not establish assignment.",
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-philosophy-bs-bos/"
+        }
+      ],
+      "correction_status": "First category and parser corrections applied; remaining accessible individual review continues.",
+      "second_pass_status": "pending",
+      "ledger": "research/degree-audit/northeastern.json",
+      "audit_date": "2026-10-11",
+      "reviewer": "cohort"
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-physics-bs-boston-bs-degree",
+      "institution_id": "northeastern-university",
+      "status": "in_progress",
+      "sources": [
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-physics-bs-bos/",
+          "catalog_year": "2026-2027",
+          "locator": "Program Requirements tab; individual structural review in progress",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:26:34+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: CS 1200, CS 1210, CS 2000, CS 2001, CS 2100, CS 2101, CS 3200",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:52+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/ds/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: DS 3500, DS 3000, DS 4200, DS 4300, DS 4400",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:22:37+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/math/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: MATH 1365, MATH 1465, MATH 1341, MATH 1342, MATH 2321, MATH 2341, MATH 3081",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:50+00:00"
+        }
+      ],
+      "checks": {
+        "degree_identity": "Official catalog identity and exact award/campus are retained as Artificial Intelligence and Physics, BS (Boston). Current official page retrieved; catalog/cohort scope remains explicit.",
+        "required_and_choices": "Individual structural source interpretation is in progress. Parser replay/family resolution alone is not independent validation. Existing all/choice/bundle graph retained at this checkpoint.",
+        "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
+        "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant.",
+        "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
+        "classification": "19 of 49 observations have individually authored category reviews in this checkpoint; 30 remain legacy/unreviewed. Mixed and unclassified observations use other. No blanket title/prefix inference certifies remaining categories.",
+        "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
+        "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed."
+      },
+      "expected_profile": null,
+      "expected_course_ids": null,
+      "discrepancies": [
+        {
+          "issue": "Legacy subject-prefix/title heuristics misclassified concrete courses: CS 1200 foundations -> other; CS 1210 foundations -> other; DS 3000 ai_ml -> mathematics; DS 4200 foundations -> other",
+          "correction": "Individually interpreted official descriptions and registered course.category_review evidence; no department-wide inference.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/cs/",
+            "https://catalog.northeastern.edu/course-descriptions/ds/",
+            "https://catalog.northeastern.edu/course-descriptions/math/"
+          ]
+        }
+      ],
+      "blockers": [
+        {
+          "issue": "Exact allowed/designated home-college choices and resulting additional progression/graduation rules remain an institutional source clarification; catalog hosting context does not establish assignment.",
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-physics-bs-bos/"
+        }
+      ],
+      "correction_status": "First category and parser corrections applied; remaining accessible individual review continues.",
+      "second_pass_status": "pending",
+      "ledger": "research/degree-audit/northeastern.json",
+      "audit_date": "2026-10-11",
+      "reviewer": "cohort"
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-psychology-bs-boston-bs-degree",
+      "institution_id": "northeastern-university",
+      "status": "in_progress",
+      "sources": [
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-psychology-bs-bos/",
+          "catalog_year": "2026-2027",
+          "locator": "Program Requirements tab; individual structural review in progress",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:19:36+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: CS 1200, CS 1210, CS 2000, CS 2001, CS 2100, CS 2101, CS 3200, CS 2484",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:52+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/ds/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: DS 3500, DS 3000, DS 4200, DS 4300, DS 4400, DS 4420",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:22:37+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/math/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: MATH 1365, MATH 1465, MATH 1341",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:50+00:00"
+        }
+      ],
+      "checks": {
+        "degree_identity": "Official catalog identity and exact award/campus are retained as Artificial Intelligence and Psychology, BS (Boston). Current official page retrieved; catalog/cohort scope remains explicit.",
+        "required_and_choices": "Individual structural source interpretation is in progress. Parser replay/family resolution alone is not independent validation. Existing all/choice/bundle graph retained at this checkpoint.",
+        "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
+        "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant.",
+        "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
+        "classification": "17 of 62 observations have individually authored category reviews in this checkpoint; 45 remain legacy/unreviewed. Mixed and unclassified observations use other. No blanket title/prefix inference certifies remaining categories.",
+        "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
+        "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed."
+      },
+      "expected_profile": null,
+      "expected_course_ids": null,
+      "discrepancies": [
+        {
+          "issue": "Legacy subject-prefix/title heuristics misclassified concrete courses: CS 1200 foundations -> other; CS 1210 foundations -> other; DS 3000 ai_ml -> mathematics; DS 4200 foundations -> other; CS 2484 foundations -> applications",
+          "correction": "Individually interpreted official descriptions and registered course.category_review evidence; no department-wide inference.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/cs/",
+            "https://catalog.northeastern.edu/course-descriptions/ds/",
+            "https://catalog.northeastern.edu/course-descriptions/math/"
+          ]
+        }
+      ],
+      "blockers": [
+        {
+          "issue": "Exact allowed/designated home-college choices and resulting additional progression/graduation rules remain an institutional source clarification; catalog hosting context does not establish assignment.",
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-psychology-bs-bos/"
+        }
+      ],
+      "correction_status": "First category and parser corrections applied; remaining accessible individual review continues.",
+      "second_pass_status": "pending",
+      "ledger": "research/degree-audit/northeastern.json",
+      "audit_date": "2026-10-11",
+      "reviewer": "cohort"
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-public-health-bs-boston-bs-degree",
+      "institution_id": "northeastern-university",
+      "status": "in_progress",
+      "sources": [
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-public-health-bs-bos/",
+          "catalog_year": "2026-2027",
+          "locator": "Program Requirements tab; individual structural review in progress",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:26:39+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: CS 1800, CS 2000, CS 2001, CS 2100, CS 2101, CS 3200, CS 1200, CS 1210",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:52+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/ds/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: DS 3500, DS 3000, DS 4200, DS 4300, DS 4400, DS 4420",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:22:37+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/econ/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: ECON 2350, ECON 1115, ECON 1116, ECON 3404, ECON 3423, ECON 3424, ECON 3413",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:54:00+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/math/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: MATH 1341, MATH 1241, MATH 3081",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:50+00:00"
+        }
+      ],
+      "checks": {
+        "degree_identity": "Official catalog identity and exact award/campus are retained as Artificial Intelligence and Public Health, BS (Boston). Current official page retrieved; catalog/cohort scope remains explicit.",
+        "required_and_choices": "Individual structural source interpretation is in progress. Parser replay/family resolution alone is not independent validation. Existing all/choice/bundle graph retained at this checkpoint.",
+        "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
+        "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant.",
+        "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
+        "classification": "24 of 97 observations have individually authored category reviews in this checkpoint; 73 remain legacy/unreviewed. Mixed and unclassified observations use other. No blanket title/prefix inference certifies remaining categories.",
+        "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
+        "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed."
+      },
+      "expected_profile": null,
+      "expected_course_ids": null,
+      "discrepancies": [
+        {
+          "issue": "Legacy subject-prefix/title heuristics misclassified concrete courses: CS 1800 foundations -> mathematics; DS 3000 ai_ml -> mathematics; DS 4200 foundations -> other; CS 1200 foundations -> other; CS 1210 foundations -> other; ECON 1115 mathematics -> human_context; ECON 1116 mathematics -> human_context; ECON 3404 mathematics -> human_context; ECON 3423 mathematics -> human_context; ECON 3424 mathematics -> human_context; ECON 3413 mathematics -> human_context",
+          "correction": "Individually interpreted official descriptions and registered course.category_review evidence; no department-wide inference.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/cs/",
+            "https://catalog.northeastern.edu/course-descriptions/ds/",
+            "https://catalog.northeastern.edu/course-descriptions/econ/",
+            "https://catalog.northeastern.edu/course-descriptions/math/"
+          ]
+        },
+        {
+          "issue": "Official CS 1800 subject block corequires one-hour CS 1802, absent from the current mapped degree course set. Degree preamble also directs completion of specified corequisite labs/recitations/tools.",
+          "correction": "Dependency applicability and exact parent role are under review; no prerequisite-only course has been promoted automatically.",
+          "status": "under_review",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-public-health-bs-bos/",
+            "https://catalog.northeastern.edu/course-descriptions/cs/"
+          ]
+        }
+      ],
+      "blockers": [
+        {
+          "issue": "Exact allowed/designated home-college choices and resulting additional progression/graduation rules remain an institutional source clarification; catalog hosting context does not establish assignment.",
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-public-health-bs-bos/"
+        }
+      ],
+      "correction_status": "First category and parser corrections applied; remaining accessible individual review continues.",
+      "second_pass_status": "pending",
+      "ledger": "research/degree-audit/northeastern.json",
+      "audit_date": "2026-10-11",
+      "reviewer": "cohort"
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree",
+      "institution_id": "northeastern-university",
+      "status": "in_progress",
+      "sources": [
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-sociology-bs-bos/",
+          "catalog_year": "2026-2027",
+          "locator": "Program Requirements tab; individual structural review in progress",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:50:37+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: CS 1800, CS 2000, CS 2001, CS 2100, CS 2101, CS 3200, CS 1200, CS 1210",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:52+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/ds/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: DS 3500, DS 3000, DS 4200, DS 4300, DS 4400",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:22:37+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/math/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: MATH 1341",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:50+00:00"
+        }
+      ],
+      "checks": {
+        "degree_identity": "Official catalog identity and exact award/campus are retained as Artificial Intelligence and Sociology, BS (Boston). Current official page retrieved; catalog/cohort scope remains explicit.",
+        "required_and_choices": "Individual structural source interpretation is in progress. Parser replay/family resolution alone is not independent validation. Existing all/choice/bundle graph retained at this checkpoint.",
+        "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
+        "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant.",
+        "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
+        "classification": "14 of 36 observations have individually authored category reviews in this checkpoint; 22 remain legacy/unreviewed. Mixed and unclassified observations use other. No blanket title/prefix inference certifies remaining categories.",
+        "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
+        "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed."
+      },
+      "expected_profile": null,
+      "expected_course_ids": null,
+      "discrepancies": [
+        {
+          "issue": "Legacy subject-prefix/title heuristics misclassified concrete courses: CS 1800 foundations -> mathematics; DS 3000 ai_ml -> mathematics; DS 4200 foundations -> other; CS 1200 foundations -> other; CS 1210 foundations -> other",
+          "correction": "Individually interpreted official descriptions and registered course.category_review evidence; no department-wide inference.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/cs/",
+            "https://catalog.northeastern.edu/course-descriptions/ds/",
+            "https://catalog.northeastern.edu/course-descriptions/math/"
+          ]
+        },
+        {
+          "issue": "Official CS 1800 subject block corequires one-hour CS 1802, absent from the current mapped degree course set. Degree preamble also directs completion of specified corequisite labs/recitations/tools.",
+          "correction": "Dependency applicability and exact parent role are under review; no prerequisite-only course has been promoted automatically.",
+          "status": "under_review",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-sociology-bs-bos/",
+            "https://catalog.northeastern.edu/course-descriptions/cs/"
+          ]
+        }
+      ],
+      "blockers": [
+        {
+          "issue": "Exact allowed/designated home-college choices and resulting additional progression/graduation rules remain an institutional source clarification; catalog hosting context does not establish assignment.",
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-sociology-bs-bos/"
+        }
+      ],
+      "correction_status": "First category and parser corrections applied; remaining accessible individual review continues.",
+      "second_pass_status": "pending",
+      "ledger": "research/degree-audit/northeastern.json",
+      "audit_date": "2026-10-11",
+      "reviewer": "cohort"
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree",
+      "institution_id": "northeastern-university",
+      "status": "in_progress",
+      "sources": [
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-speech-language-pathology-audiology-bs-bos/",
+          "catalog_year": "2026-2027",
+          "locator": "Program Requirements tab; individual structural review in progress",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:50:35+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: CS 1200, CS 1210, CS 1800, CS 2000, CS 2001, CS 2100, CS 2101, CS 3200, CS 4120",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:52+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/ds/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: DS 3500, DS 3000, DS 4200, DS 4300, DS 4400",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:22:37+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/math/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: MATH 1341",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:50+00:00"
+        }
+      ],
+      "checks": {
+        "degree_identity": "Official catalog identity and exact award/campus are retained as Artificial Intelligence and Speech-Language Pathology and Audiology, BS (Boston). Current official page retrieved; catalog/cohort scope remains explicit.",
+        "required_and_choices": "Individual structural source interpretation is in progress. Parser replay/family resolution alone is not independent validation. Existing all/choice/bundle graph retained at this checkpoint.",
+        "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
+        "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant.",
+        "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
+        "classification": "15 of 43 observations have individually authored category reviews in this checkpoint; 28 remain legacy/unreviewed. Mixed and unclassified observations use other. No blanket title/prefix inference certifies remaining categories.",
+        "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
+        "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed."
+      },
+      "expected_profile": null,
+      "expected_course_ids": null,
+      "discrepancies": [
+        {
+          "issue": "Legacy subject-prefix/title heuristics misclassified concrete courses: CS 1200 foundations -> other; CS 1210 foundations -> other; CS 1800 foundations -> mathematics; DS 3000 ai_ml -> mathematics; DS 4200 foundations -> other; CS 4120 foundations -> ai_ml",
+          "correction": "Individually interpreted official descriptions and registered course.category_review evidence; no department-wide inference.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/cs/",
+            "https://catalog.northeastern.edu/course-descriptions/ds/",
+            "https://catalog.northeastern.edu/course-descriptions/math/"
+          ]
+        },
+        {
+          "issue": "Official CS 1800 subject block corequires one-hour CS 1802, absent from the current mapped degree course set. Degree preamble also directs completion of specified corequisite labs/recitations/tools.",
+          "correction": "Dependency applicability and exact parent role are under review; no prerequisite-only course has been promoted automatically.",
+          "status": "under_review",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-speech-language-pathology-audiology-bs-bos/",
+            "https://catalog.northeastern.edu/course-descriptions/cs/"
+          ]
+        }
+      ],
+      "blockers": [
+        {
+          "issue": "Exact allowed/designated home-college choices and resulting additional progression/graduation rules remain an institutional source clarification; catalog hosting context does not establish assignment.",
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-speech-language-pathology-audiology-bs-bos/"
+        }
+      ],
+      "correction_status": "First category and parser corrections applied; remaining accessible individual review continues.",
+      "second_pass_status": "pending",
+      "ledger": "research/degree-audit/northeastern.json",
+      "audit_date": "2026-10-11",
+      "reviewer": "cohort"
+    },
+    {
+      "program_id": "northeastern-university-environmental-engineering-and-artificial-intelligence-bsenve-boston-other-degree",
+      "institution_id": "northeastern-university",
+      "status": "in_progress",
+      "sources": [
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/engineering/civil-environmental/environmental-engineering-artificial-intelligence-bsenve/",
+          "catalog_year": "2026-2027",
+          "locator": "Program Requirements tab; individual structural review in progress",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T21:54:26+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: CS 1800, CS 2000, CS 2001, CS 2100, CS 2101, CS 3200",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:52+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/ds/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: DS 3500, DS 3000, DS 4200, DS 4300, DS 4400",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:22:37+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/ge/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: GE 3300, GE 1501, GE 1502, GE 1000",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T22:53:24+00:00"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/math/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reviewed course blocks: MATH 1341, MATH 1342, MATH 2321, MATH 2341, MATH 3081",
+          "checked_at": "2026-10-11",
+          "access_status": "http_200_cached_official_snapshot_2026-10-10T23:49:50+00:00"
+        }
+      ],
+      "checks": {
+        "degree_identity": "Official catalog identity and exact award/campus are retained as Environmental Engineering and Artificial Intelligence, BSEnvE (Boston). Current official page retrieved; catalog/cohort scope remains explicit.",
+        "required_and_choices": "Individual structural source interpretation is in progress. Parser replay/family resolution alone is not independent validation. Existing all/choice/bundle graph retained at this checkpoint.",
+        "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
+        "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant.",
+        "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
+        "classification": "20 of 68 observations have individually authored category reviews in this checkpoint; 48 remain legacy/unreviewed. Mixed and unclassified observations use other. No blanket title/prefix inference certifies remaining categories.",
+        "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
+        "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed."
+      },
+      "expected_profile": null,
+      "expected_course_ids": null,
+      "discrepancies": [
+        {
+          "issue": "Legacy subject-prefix/title heuristics misclassified concrete courses: GE 3300 other -> applications; GE 1501 other -> applications; GE 1502 other -> applications; CS 1800 foundations -> mathematics; DS 3000 ai_ml -> mathematics; DS 4200 foundations -> other",
+          "correction": "Individually interpreted official descriptions and registered course.category_review evidence; no department-wide inference.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/cs/",
+            "https://catalog.northeastern.edu/course-descriptions/ds/",
+            "https://catalog.northeastern.edu/course-descriptions/ge/",
+            "https://catalog.northeastern.edu/course-descriptions/math/"
+          ]
+        },
+        {
+          "issue": "Official CS 1800 subject block corequires one-hour CS 1802, absent from the current mapped degree course set. Degree preamble also directs completion of specified corequisite labs/recitations/tools.",
+          "correction": "Dependency applicability and exact parent role are under review; no prerequisite-only course has been promoted automatically.",
+          "status": "under_review",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/undergraduate/engineering/civil-environmental/environmental-engineering-artificial-intelligence-bsenve/",
+            "https://catalog.northeastern.edu/course-descriptions/cs/"
+          ]
+        }
+      ],
+      "blockers": [
+        {
+          "issue": "Exact allowed/designated home-college choices and resulting additional progression/graduation rules remain an institutional source clarification; catalog hosting context does not establish assignment.",
+          "url": "https://catalog.northeastern.edu/undergraduate/engineering/civil-environmental/environmental-engineering-artificial-intelligence-bsenve/"
+        }
+      ],
+      "correction_status": "First category and parser corrections applied; remaining accessible individual review continues.",
+      "second_pass_status": "pending",
+      "ledger": "research/degree-audit/northeastern.json",
+      "audit_date": "2026-10-11",
+      "reviewer": "cohort"
+    },
+    {
+      "program_id": "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree",
+      "institution_id": "northwestern-university",
+      "status": "in_progress",
+      "sources": [
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/engineering-applied-science/artificial-intelligence/artificial-intelligence-major/",
+          "catalog_year": "2026-2027",
+          "locator": "Requirement table",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; ordinary robots-aware Fetcher"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/engineering-applied-science/",
+          "catalog_year": "2026-2027",
+          "locator": "Requirement table",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; ordinary robots-aware Fetcher"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/comp_sci/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact core course-description blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; ordinary robots-aware Fetcher"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/gen_eng/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact core course-description blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; ordinary robots-aware Fetcher"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/dsgn/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact core course-description blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; ordinary robots-aware Fetcher"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/english/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact core course-description blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; ordinary robots-aware Fetcher"
+        }
+      ],
+      "checks": {
+        "degree_identity": "2026-2027 Artificial Intelligence Major, BS in Engineering; McCormick degree, separate from secondary-major variants.",
+        "required_and_choices": "Seven innovation/oral communication alternatives were incorrectly fixed because they lack indentation. Explicit Select one now governs them. Manual fixed set contains 14 records. Programming major slot remains 180 OR111; engineering programming remains150 OR151. Writing/design require the two paired half-unit sequences.",
+        "elective_pools": "Five of six breadth domains, four advanced electives, seven technical electives, societal-impact choice and college science/theme alternatives remain separate. Full finite-pool second-pass identity review is still underway.",
+        "prerequisites": "Core CS/engineering/design/writing blocks reviewed. 208/211 concurrent-registration restrictions preserved as metadata. Some descriptions retain legacy identifiers such as214 and GEN_ENG205; no silent equivalence is imposed. COMP_SCI212 still names110/111 although major permits180/111; placement/substitution applicability needs institutional clarification.",
+        "credits_and_units": "Actual course descriptions state units: design and English106 are0.5 each; reviewed CS/engineering courses1 each. No quarter-hour conversion. Four fixed half-unit writing/design records count as four course records, not four units.",
+        "classification": "Required core:2 foundations,6 mathematics,2AI,2 human context and2mixed-design other. Four programming option records reviewed as foundations. Exact descriptions, not prefixes, support classifications.",
+        "family_composition": "No family inheritance. Corrections apply to standalone BSE record only; no assumptions about a secondary major.",
+        "degree_wide_requirements": "College core table reread and structural defect corrected. Existing residency/theme/P-N/transfer policy mapping remains partial with its published source conflicts; broader audit continues."
+      },
+      "expected_profile": null,
+      "expected_course_ids": {
+        "required": [
+          "nw-bse-math-220-1",
+          "nw-bse-math-220-2",
+          "nw-bse-math-228-1",
+          "nw-bse-comp-sci-212-0",
+          "nw-bse-comp-sci-208-0",
+          "nw-bse-comp-sci-211-0",
+          "nw-bse-comp-sci-348-0",
+          "nw-bse-comp-sci-349-0",
+          "nw-bse-gen-eng-231-0",
+          "nw-bse-gen-eng-241-0",
+          "nw-bse-dsgn-106-1",
+          "nw-bse-dsgn-106-2",
+          "nw-bse-english-106-1",
+          "nw-bse-english-106-2"
+        ],
+        "options": null,
+        "unresolved": null
+      },
+      "discrepancies": [
+        {
+          "issue": "Unindented rows under an explicit Select one directive reset generic table choice scope and promoted seven alternatives to fixed.",
+          "correction": "Source-specific design-table observer reparents exactly the observed choice rows under the actual choice node; required writing/design bundles stay fixed.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalogs.northwestern.edu/undergraduate/engineering-applied-science/"
+          ]
+        },
+        {
+          "issue": "Narrow title heuristic left programming, data structures and engineering mathematics as other.",
+          "correction": "Exact source identities and official descriptions support categories; mixed design courses explicitly retain other.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalogs.northwestern.edu/undergraduate/courses-az/comp_sci/",
+            "https://catalogs.northwestern.edu/undergraduate/courses-az/gen_eng/",
+            "https://catalogs.northwestern.edu/undergraduate/courses-az/dsgn/",
+            "https://catalogs.northwestern.edu/undergraduate/courses-az/english/"
+          ]
+        }
+      ],
+      "blockers": [
+        {
+          "issue": "COMP_SCI212 prerequisite wording uses110/111 while the current major introductory slot permits180/111; no published equivalence was established in this pass.",
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/comp_sci/"
+        }
+      ],
+      "remaining_work": [
+        "Review remaining major/elective course descriptions and existing school policy discrepancies before independently establishing full option/unresolved sets."
+      ],
+      "correction_status": "Verified structural and core taxonomy corrections; audit continues",
+      "second_pass_status": "pending",
+      "ledger": "research/degree-audit/northwestern.json",
       "audit_date": "2026-10-11",
       "reviewer": "pilots_cmu_penn"
     }
