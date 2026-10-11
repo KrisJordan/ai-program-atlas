@@ -18,7 +18,7 @@ def test_complete_linguistics_subject_review_preserves_mixed_content_and_unknown
     for e in m.SPEC['entries']:
         assert courses[e['id']]['prerequisites'] is None
         assert courses[e['id']]['category_review'] == e['category_review']
-    assert [requirement_profile(d)[k]['count'] for k in ('required', 'options', 'unresolved')] == [20, 133, 2]
+    assert [requirement_profile(d)[k]['count'] for k in ('required', 'options', 'unresolved')] == [20, 262, 2]
     r = {r['id']: r for r in d['requirements']}
     assert 'ucsb-ling-36' in r['ucsb-ai-bs-policy-area-d']['course_ids']
     assert 'ucsb-ling-36' in r['ucsb-ai-bs-policy-area-e']['course_ids']

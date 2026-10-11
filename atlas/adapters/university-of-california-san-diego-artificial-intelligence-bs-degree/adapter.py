@@ -241,3 +241,10 @@ for _review_url, _review_parser in ethn_reviews.SOURCE_PARSERS.items():
         raise ValueError('UCSD ETHN source needs explicit parser composition')
     SOURCES += (_review_url,)
     SOURCE_PARSERS[_review_url] = _review_parser
+
+from atlas.adapters import ucsd_vis_reviews as vis_reviews
+for _review_url, _review_parser in vis_reviews.SOURCE_PARSERS.items():
+    if _review_url in SOURCE_PARSERS:
+        raise ValueError('UCSD VIS source needs explicit parser composition')
+    SOURCES += (_review_url,)
+    SOURCE_PARSERS[_review_url] = _review_parser

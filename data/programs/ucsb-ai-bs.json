@@ -1523,7 +1523,7 @@
       "fetched_at": "2026-10-11",
       "source_date": null,
       "catalog_year": "2026-2027",
-      "locator": "Public Export all results CSV with D/E/F/G selected; complete LING/LING W and ARTHI/ARTHIW subject rows reviewed; actual prerequisite rules not exported",
+      "locator": "Public D/E/F/G CSV; complete LING/LING W, ARTHI/ARTHIW, RG ST and C LIT/C LITW rows reviewed; actual prerequisite rules not exported",
       "confidence": "high"
     }
   ],
@@ -2961,12 +2961,18 @@
         "taxonomy_version": "1",
         "reviewed_at": "2026-10-11",
         "source_ids": [
-          "ucsb-ai-bs-clit155-catalog-2026"
+          "ucsb-ai-bs-clit155-catalog-2026",
+          "ucsb-ai-bs-ge-defg-export"
         ],
-        "locator": "Full course description in current 2026–27 catalog",
+        "locator": "Full course description in current 2026–27 catalog; matching current D/E/F/G export row",
         "rationale": "The course introduces AI history and theory from the humanities, centered on cultural techniques and philosophical/political implications. Analysis of system construction serves this critical framing; it does not establish a primarily technical model-training course.",
         "candidate_categories": []
-      }
+      },
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The advisor or repeat field identifies the same course as German 155 and ENGL 155AI; this helper emits no identity group and does not review the other subject.",
+        "The current GE export independently repeats the existing course-page identity, description scope and four-unit amount. Existing full course-page metadata/provenance is retained."
+      ]
     },
     {
       "id": "ucsb-ger-155",
@@ -5761,6 +5767,3741 @@
         "rationale": "The game is a teaching format for cultural heritage, ethical interpretation, and research writing, not game programming.",
         "candidate_categories": []
       }
+    },
+    {
+      "id": "ucsb-rg-st-1",
+      "code": "RG ST 1",
+      "name": "Introduction to the Study of Religion",
+      "description": "Introduces the diversity of religious traditions, figures, and phenomena and approaches to studying them.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 1; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The course introduces historical and interpretive study of religion as a human and cultural phenomenon.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-101",
+      "code": "RG ST 101",
+      "name": "New Religious Movements",
+      "description": "Examines recent religious movements, including developments within traditions and eclectic combinations, primarily in the United States.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 101; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The stated focus is the emergence and cultural development of religious movements.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-110",
+      "code": "RG ST 110",
+      "name": "Religion and Literature",
+      "description": "Explores relationships between religion and literature through selected literary works.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 110; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Literary interpretation and religious expression define the subject.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-111b",
+      "code": "RG ST 111B",
+      "name": "Mongolian Buddhism",
+      "description": "Traces Mongolian Buddhism and its interactions with shamanism and other traditions in religious and political life.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 111B; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The description centers on religious history, cultural exchange, and political transformation.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-114",
+      "code": "RG ST 114",
+      "name": "The Great Migration and Black Religious Imagination",
+      "description": "Examines how the Great Migration reshaped Black religious expression, community, and urban life in the United States.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 114; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Analysis of migration, race, religious institutions, and cultural change establishes human context.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-115a",
+      "code": "RG ST 115A",
+      "name": "Literature and Religion of the Hebrew Bible/Old Testament",
+      "description": "Introduces ancient Israel’s literary traditions and institutions through the prophetic era.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 115A; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Ancient texts and cultural institutions are the stated objects of study.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-115g",
+      "code": "RG ST 115G",
+      "name": "The Dead Sea Scrolls and Their Community",
+      "description": "Studies the Qumran community through its beliefs, literature, and surviving biblical manuscripts.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 115G; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The description uses textual evidence to examine a historical religious community.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-116a",
+      "code": "RG ST 116A",
+      "name": "The New Testament and Early Christianity",
+      "description": "Examines first-century Christian traditions and writings, with particular attention to the New Testament.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 116A; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Historical and literary interpretation of early Christianity defines the course.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-12",
+      "code": "RG ST 12",
+      "name": "Religious Approaches to Death",
+      "description": "Compares how twenty religious traditions understand death and care for the dead within their historical and social settings.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 12; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The central method is cross-cultural interpretation of beliefs and practices concerning death.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-123",
+      "code": "RG ST 123",
+      "name": "Asian American Religions",
+      "description": "Examines Asian American religious traditions historically, including migration, Christianity, theology, and civil religion.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The advisor field identifies the same course as Asian American Studies 161; the other subject is outside this review and no identity group is emitted."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 123; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The description concerns religious history, cultural transplantation, and social identity.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-124g",
+      "code": "RG ST 124G",
+      "name": "The Virgin of Guadalupe: From Tilma to Tattoo",
+      "description": "Uses traditions surrounding Guadalupe to examine Mexican and Chicano/a religious, racial, sexual, and national identities.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 124G; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The inquiry explicitly concerns identity, cultural symbolism, and political interpretation.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-128",
+      "code": "RG ST 128",
+      "name": "Religious Environmentalism in the Anthropocene: Asia & U.S.",
+      "description": "Examines religious ideas and examples of environmental protection in Asian and United States traditions.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 128; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The course studies religious doctrines and their environmental implications rather than technical environmental methods.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-129",
+      "code": "RG ST 129",
+      "name": "Religions of the Ancient Near East",
+      "description": "Studies ancient Near Eastern religions through literary and archaeological evidence.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 129; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Interpretation of historical religious traditions and their material and textual remains is the stated focus.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-13",
+      "code": "RG ST 13",
+      "name": "Religion and Popular Culture",
+      "description": "Examines religion’s relationship with popular culture and what shared stories and practices reveal about social power.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 13; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The course analyzes cultural representation, religion, and structures of power.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-131h",
+      "code": "RG ST 131H",
+      "name": "Politics and Religion of Jerusalem",
+      "description": "Traces Jerusalem’s religious, political, and cultural history through sacred space, texts, and material evidence.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 131H; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Religious symbolism, politics, and historical interpretation of sacred space organize the course.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-133c",
+      "code": "RG ST 133C",
+      "name": "Jewish Law",
+      "description": "Traces Jewish law from biblical sources through medieval writings, emphasizing continuity and change.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 133C; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Law and its historical development within a religious tradition fall within human context.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-133e",
+      "code": "RG ST 133E",
+      "name": "Identity, Feminism, and Secularism in Hebrew Literature",
+      "description": "Surveys modern Hebrew literature through identity, feminism, secularism, Zionism, and relationships among literary generations.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "Lectures and discussions are in English. Readings are available in translation and in Hebrew for interested students.",
+        "The advisor field identifies the same course as Comparative Literature 184C; the other subject is outside this review and no identity group is emitted."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 133E; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The course interprets literature through cultural identity, gender, and intellectual history.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-14",
+      "code": "RG ST 14",
+      "name": "Introduction to Native American Religious Studies",
+      "description": "Introduces Native North American religious thought, including philosophy, medicine, ritual, knowledge, and relationships of balance.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 14; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The description examines cultural belief systems and philosophical concepts, not clinical or technical practice.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-140b",
+      "code": "RG ST 140B",
+      "name": "Religion, Politics and Society in the Persian Gulf Region",
+      "description": "Examines Islam and politics in Saudi Arabia, Iran, and Iraq since 1500 through religious movements, state power, and modernity.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 140B; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Religious and political history and state-society relationships define the subject.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-141a",
+      "code": "RG ST 141A",
+      "name": "Sociology of Religion: The Classical Statements",
+      "description": "Studies how major classical social theorists explained religion.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 141A; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Social theory and sociological interpretation of religion are the explicit focus.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-144",
+      "code": "RG ST 144",
+      "name": "The Problem of Evil in Religious Traditions",
+      "description": "Compares philosophical and religious responses to natural and moral evil through historically situated primary texts.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 144; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Comparative philosophical reasoning and ethical interpretation establish human context.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-144a",
+      "code": "RG ST 144A",
+      "name": "ATHEISM",
+      "description": "Explores the changing forms of atheism and related traditions of nonbelief, including their beliefs, practices, and communities.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 144A; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The description studies historical and social forms of belief, nonbelief, and belonging.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-147",
+      "code": "RG ST 147",
+      "name": "Religion and the American Experience",
+      "description": "Examines a selected theme in United States religious history within its cultural setting.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "May be repeated for credit to a maximum of 8 units.",
+        "The particular topic varies within U.S. religious history; this classification does not establish a specific offering’s topic."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 147; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Although the particular topic varies, the description explicitly bounds every version to cultural analysis of U.S. religious history.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-147t",
+      "code": "RG ST 147T",
+      "name": "Introduction to Daoism",
+      "description": "Studies early Daoist sources and the religious practices that developed from them.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The advisor field identifies the same course as EACS 147T; the other subject is outside this review and no identity group is emitted."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 147T; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Textual interpretation and historical development of a religious tradition define the course.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-149h",
+      "code": "RG ST 149H",
+      "name": "Islamic Humanism",
+      "description": "Examines humanist themes in early and classical Islamic thought through primary sources and their diverse historical settings.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 149H; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Close reading, intellectual history, and intercultural interpretation are the described methods.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-150wr",
+      "code": "RG ST 150WR",
+      "name": "Religion and Wrestling",
+      "description": "Examines twentieth-century professional wrestling as a possible religious ritual through historical cases, performers, media, and fan culture.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 150WR; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Wrestling is the object of historical and cultural analysis, not athletic training.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-152",
+      "code": "RG ST 152",
+      "name": "Religion in America Today",
+      "description": "Examines recent developments in American religion and its relationships with society.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 152; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The stated subject is religion’s changing social role.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-152vr",
+      "code": "RG ST 152VR",
+      "name": "Religion and Technology",
+      "description": "Explores how religious traditions adopt and respond to technologies, from communication media to digital worship and applications.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "Some versions may be taught partly or entirely in virtual reality; this is a conditional delivery mode, not a guaranteed format or technical course prerequisite."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 152VR; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Technology is studied through its cultural and religious uses; possible virtual-reality delivery does not establish a computing-methods subject.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-153",
+      "code": "RG ST 153",
+      "name": "Metaphysical Spirituality",
+      "description": "Traces the history and shared roots of metaphysical spiritual traditions and examines their influence and cultural borrowing.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "No repeats."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 153; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Historical interpretation of beliefs, practices, and appropriation establishes cultural analysis.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-157cp",
+      "code": "RG ST 157CP",
+      "name": "Contemporary Persian Literature and Translation",
+      "description": "Uses twentieth-century Persian fiction to study Iranian intellectual life while developing Persian reading and language fluency.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The description targets students with intermediate or advanced Persian proficiency; exact prerequisite rules are unavailable in this export."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 157CP; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Literary analysis, cultural understanding, and language development are all within human context.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-157g",
+      "code": "RG ST 157G",
+      "name": "Persian Cinema",
+      "description": "Develops Persian language skills through analysis of Iranian films and their cultural settings.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 157G; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The course combines language communication and critical cultural interpretation, both human-context subjects.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-157i",
+      "code": "RG ST 157I",
+      "name": "Persian Media and Translation",
+      "description": "Develops Persian reading, translation, and analysis through news, film, music, and other media.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 157I; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Language communication and interpretation of media and culture define the stated learning activities.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-157pp",
+      "code": "RG ST 157PP",
+      "name": "Classic Persian Literature and Translation",
+      "description": "Studies themes in classical Persian poetry while developing advanced reading fluency.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The description targets students with advanced Persian proficiency; exact prerequisite rules are unavailable in this export."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 157PP; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Literary interpretation and language skills establish human context.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-166",
+      "code": "RG ST 166",
+      "name": "Race and Religion in the American West",
+      "description": "Examines how encounters among racial and religious groups shaped the American West from the nineteenth century onward.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 166; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The course centers on historical identity, social relationships, and regional cultural change.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-167a",
+      "code": "RG ST 167A",
+      "name": "Religion in Japanese Culture",
+      "description": "Analyzes classical and medieval Japanese religious systems through texts, rituals, and institutions.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The advisor field identifies the same course as Japan 167A; the other subject is outside this review and no identity group is emitted."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 167A; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The description explicitly frames religious institutions and practices through historical analysis.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-175b",
+      "code": "RG ST 175B",
+      "name": "Shinto through the Ages",
+      "description": "Traces diverse Shinto traditions through translated texts from ancient mythology to modern nationalism.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The course uses original texts in English translation.",
+        "The advisor field identifies the same course as JAPAN 175B; the other subject is outside this review and no identity group is emitted."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 175B; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Historical and textual interpretation of religion and nationalism defines the subject.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-176",
+      "code": "RG ST 176",
+      "name": "Buddhist Political Thought and Institutions",
+      "description": "Examines Buddhist political thought and institutions across Asian societies through state formation, cultural identity, and interreligious relationships.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The advisor field identifies the same course as EACS 176; the other subject is outside this review and no identity group is emitted."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 176; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Political theory, institutional history, and cultural identity are explicit human-context subjects.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-179",
+      "code": "RG ST 179",
+      "name": "Visual Culture of Buddhism",
+      "description": "Examines Buddhist sacred images, their ritual uses, and the ideas of representation underlying them.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The advisor field identifies the same course as EACS 179; the other subject is outside this review and no identity group is emitted."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 179; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Visual culture and interpretation of religious representation organize the course.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-179b",
+      "code": "RG ST 179B",
+      "name": "Mysticism",
+      "description": "Studies German mystical writing, its ancient roots, connections to other traditions, and influence on secular literature.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "Not open for credit to students who have completed German 169.",
+        "The description states that instruction is in English.",
+        "The advisor field identifies the same course as Comparative Literature 179B and German 179B; the other subject is outside this review and no identity group is emitted."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 179B; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The description centers on literary interpretation and the history of religious ideas.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-18",
+      "code": "RG ST 18",
+      "name": "Comparing Religions",
+      "description": "Compares five religious traditions and Humanism through historical approaches to identity, origins, and human purposes.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 18; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Comparative philosophical and historical interpretation of worldviews establishes human context.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-183b",
+      "code": "RG ST 183B",
+      "name": "Religious Practice and the State in China",
+      "description": "Examines interactions between religious practice and state power in China through historical and anthropological approaches.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The advisor field identifies the same course as Chinese 183B; the other subject is outside this review and no identity group is emitted."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 183B; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The described methods analyze social institutions, political power, and cultural change.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-185",
+      "code": "RG ST 185",
+      "name": "Food, Religion, and Culture in the Middle East",
+      "description": "Studies Middle Eastern food practices through religious history, community identity, dietary rules, and questions of sovereignty and resilience.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 185; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Food is examined as cultural and religious practice rather than as culinary training or nutrition science.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-19",
+      "code": "RG ST 19",
+      "name": "The Gods and Goddesses of India",
+      "description": "Introduces Hindu deities through myth, imagery, pilgrimage, and associated religious movements.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "Not open for credit to students who have completed Religious Studies 158A."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 19; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Mythological and cultural interpretation of religious traditions defines the course.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-193b",
+      "code": "RG ST 193B",
+      "name": "Religion and Healing in Global Perspective",
+      "description": "Compares religious and philosophical worldviews shaping healing traditions across cultures.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 193B; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The course interprets worldviews and their influence on healing; the description does not teach clinical treatment practice.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-20",
+      "code": "RG ST 20",
+      "name": "Indic Civilization",
+      "description": "Surveys the Indian subcontinent’s religious history from the Indus Valley to encounters with modernity.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "Not open for credit to students who have completed Religious Studies 162E."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 20; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The description traces religious traditions and cultural change historically.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-21",
+      "code": "RG ST 21",
+      "name": "Zen Buddhism",
+      "description": "Introduces the history and writings of major Chinese Chan and Japanese Zen Buddhist lineages.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The advisor field identifies the same course as EACS 21; the other subject is outside this review and no identity group is emitted."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 21; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Historical and textual study of religious lineages establishes human context.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-28",
+      "code": "RG ST 28",
+      "name": "Gandhi: Nonviolence, Resistance, Truth",
+      "description": "Studies Gandhi’s thought, actions, religious identity, nonviolent resistance, social-justice legacy, and critics.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The advisor field identifies the same course as History 28; the other subject is outside this review and no identity group is emitted."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 28; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Historical, ethical, and political interpretation of Gandhi’s ideas and legacy defines the course.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-29",
+      "code": "RG ST 29",
+      "name": "Patriarchy and Religion: A Global Perspective",
+      "description": "Examines how religions support or challenge patriarchal norms and how religious communities pursue gender equality.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 29; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Critical analysis of gender, social power, and cultural change is explicit.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-3",
+      "code": "RG ST 3",
+      "name": "Introduction to Asian Religious Traditions",
+      "description": "Introduces religious texts, institutions, and practices of South and East Asia.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The advisor field identifies the same course as EACS 3; the other subject is outside this review and no identity group is emitted."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 3; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The subject is cultural interpretation of religious traditions and institutions.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-30",
+      "code": "RG ST 30",
+      "name": "Judaism",
+      "description": "Surveys Jewish beliefs, texts, practices, and historical figures from biblical times onward.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 30; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The description presents a historical and cultural survey of Judaism.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-31",
+      "code": "RG ST 31",
+      "name": "The Religions of Tibet",
+      "description": "Surveys Tibetan religious traditions, emphasizing Buddhist schools, histories, doctrines, and meditation practices.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 31; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The course studies religious histories and doctrines, with practices examined as part of those traditions.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-32",
+      "code": "RG ST 32",
+      "name": "Contemporary Chinese Religions",
+      "description": "Examines how Chinese religions respond to revolution, nationalism, urbanization, commercialization, and changing social identities.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The advisor field identifies the same course as Chinese 32; the other subject is outside this review and no identity group is emitted."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 32; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Religious and cultural change in relation to social forces is the explicit focus.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-35",
+      "code": "RG ST 35",
+      "name": "Introduction to Religion and Politics",
+      "description": "Examines religion’s influence on American political mobilization, public policy, elections, and social groups.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 35; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Political institutions, public values, and social mobilization define the subject.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-37",
+      "code": "RG ST 37",
+      "name": "Law in Everyday Life",
+      "description": "Uses humanities perspectives to examine law, justice, empire, and efforts by marginalized groups to change culture through law.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The advisor field identifies the same course as ENGL 37; the other subject is outside this review and no identity group is emitted."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 37; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The course explicitly examines law, rights, oppression, and cultural interpretation.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-4",
+      "code": "RG ST 4",
+      "name": "Introduction to Buddhism",
+      "description": "Explores diverse Buddhist traditions historically and across cultures through their texts, institutions, and practices.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The advisor comment names Religious Studies 5 and East Asian Cultural Studies 5 as the same course, although this row is RG ST 4. The inconsistent code reference is preserved as a source limitation; no alias for RG ST 4 or correction of its code is inferred."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 4; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The description explicitly identifies historical and cross-cultural analysis as the approach.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-48",
+      "code": "RG ST 48",
+      "name": "Nature and Ethics in Chinese Philosophy",
+      "description": "Examines classical Chinese ideas about individuals, society, and nature and their relevance to contemporary ethical debates.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The advisor field identifies the same course as Chinese 48; the other subject is outside this review and no identity group is emitted."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 48; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Ethical reasoning and philosophical interpretation of social and environmental relationships establish human context.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-5",
+      "code": "RG ST 5",
+      "name": "Introduction to Judaism, Christianity, and Islam",
+      "description": "Introduces the texts, institutions, and practices of Judaism, Christianity, and Islam.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 5; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The course studies cultural and religious traditions through texts and institutions.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-6",
+      "code": "RG ST 6",
+      "name": "Islam and Modernity",
+      "description": "Examines how Islamic traditions encounter modern changes in individuals and society.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 6; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The focus is religious and cultural interpretation of social transformation.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-61",
+      "code": "RG ST 61",
+      "name": "African Religions of the Americas",
+      "description": "Studies African-derived religions in the Americas through history, lived practice, media portrayals, gender, race, resistance, and aesthetics.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 61; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The description centers on cultural history, representation, and social identity.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-62",
+      "code": "RG ST 62",
+      "name": "Dark Goddesses and Black Madonnas",
+      "description": "Examines dark-skinned female deities and Marian figures through color, devotional relationships, and racial or ethnic identities.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 62; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Religious representation and racial and cultural identity are the stated analytical concerns.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-66",
+      "code": "RG ST 66",
+      "name": "Introduction to African American Religion",
+      "description": "Traces African American religious thought and communities from the slave trade onward through slavery, migration, civil rights, and artistic expression.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 66; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Historical interpretation of religion, racial identity, and social change defines the course.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-7",
+      "code": "RG ST 7",
+      "name": "Introduction to American Religion",
+      "description": "Surveys diverse American religious traditions and shared forms such as civil religion.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 7; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The description concerns cultural and social interpretation of religious diversity.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-71",
+      "code": "RG ST 71",
+      "name": "Introduction to Asian American Religions",
+      "description": "Introduces Asian American religious history through race, orientalism, immigrant identity, Christianity, and contextual theology.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The advisor field identifies the same course as AS AM 71; the other subject is outside this review and no identity group is emitted."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 71; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Historical and social analysis of identity and religious experience establishes human context.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-73",
+      "code": "RG ST 73",
+      "name": "Introduction to Japanese Religion: Texts, Concepts, and Representations",
+      "description": "Introduces Japanese religious and philosophical traditions through analysis of influential texts in translation.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The course analyzes original texts in English translation.",
+        "The advisor field identifies the same course as Japan 73; the other subject is outside this review and no identity group is emitted."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 73; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Textual interpretation of religious and philosophical ideas is the explicit method.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-80a",
+      "code": "RG ST 80A",
+      "name": "Religion and Western Civilization I: Ancient",
+      "description": "Examines Greek and Roman religions, their philosophical dimensions, and the development of early Christianity.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 80A; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The course analyzes ancient religious and intellectual history.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-80b",
+      "code": "RG ST 80B",
+      "name": "Religion and Western Civilization II: Medieval",
+      "description": "Traces religion and culture from late antiquity through medieval Christianity, the Renaissance, and the Reformation.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 80B; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Historical interpretation of religious and cultural transformations defines the subject.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-rg-st-80c",
+      "code": "RG ST 80C",
+      "name": "Religion and Western Civilization III: Modern",
+      "description": "Examines religious responses to modern science and later developments in European and American religion.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "RG ST 80C; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Science appears as a historical challenge to religious thought, not as a technical subject taught by the course.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-100",
+      "code": "C LIT 100",
+      "name": "Introduction to Comparative Literature",
+      "description": "Introduces comparative-literature methods through transnational scholarship, translation, and debates about world literature.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "Topics, texts, or regional emphasis vary by instructor or offering within the described subject; no specific offering is established."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 100; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The described methods analyze literature, cultural exchange, and translation.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-101",
+      "code": "C LIT 101",
+      "name": "Introduction to Literary and Critical Theory",
+      "description": "Examines how literary and critical theories shape reading and writing across a range of interpretive approaches.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "Topics, texts, or regional emphasis vary by instructor or offering within the described subject; no specific offering is established."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 101; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Critical interpretation of literature and culture defines the subject.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-106",
+      "code": "C LIT 106",
+      "name": "Lusophone Cityscapes: Cultures, Histories, and Urban Imaginaries",
+      "description": "Examines cities across the Portuguese-speaking world through cultural production, colonial histories, migration, inequality, and environmental challenges.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The source states that instruction or readings are in English.",
+        "The advisor or repeat field identifies the same course as Portuguese 107; this helper emits no identity group and does not review the other subject."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 106; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Urban life is interpreted through cultural history, representation, and social relationships.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-106e",
+      "code": "C LIT 106E",
+      "name": "Survey of Brazilian Literature from its Beginnings to the Present",
+      "description": "Surveys writing produced in and about Brazil from early travel accounts to contemporary literature in historical and cultural context.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The repeat field identifies C LIT 106E and PORT 106E as English versions and legal repeats of Portuguese 106; this does not identify Portuguese 106 as an alias in this review.",
+        "The source states that instruction or readings are in English.",
+        "The advisor or repeat field identifies the same course as PORT 106E; this helper emits no identity group and does not review the other subject."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 106E; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Historical and cultural interpretation of literary works is the explicit focus.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-107",
+      "code": "C LIT 107",
+      "name": "Voyages to the Unknown",
+      "description": "Examines real and imagined voyages and their impact on European thought in the late fifteenth and sixteenth centuries.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The advisor or repeat field identifies the same course as French 154A; this helper emits no identity group and does not review the other subject."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 107; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Literary readings are used to examine historical and cultural encounters.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-108",
+      "code": "C LIT 108",
+      "name": "Crossreadings : French and Italian Cultures in Dialogue and Translation",
+      "description": "Compares French and Italian writing and intellectual traditions from the Renaissance onward through cultural exchange and translation.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The source states that instruction or readings are in English.",
+        "The advisor or repeat field identifies the same course as French 158 and Italian 158X; this helper emits no identity group and does not review the other subject."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 108; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Comparative reading and intellectual history establish human context.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-113",
+      "code": "C LIT 113",
+      "name": "Trauma, Memory, Historiography",
+      "description": "Examines how people and communities remember, preserve, suppress, or erase traumatic events.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "May be repeated for credit up to a maximum of 8 units with consent of department chair."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 113; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The description centers on cultural memory and historical representation of trauma.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-114",
+      "code": "C LIT 114",
+      "name": "Dante's Divine Comedy",
+      "description": "Follows the journey through Dante’s Divine Comedy, examining its literary and spiritual concerns.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The advisor or repeat field identifies the same course as Italian 114X; this helper emits no identity group and does not review the other subject."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 114; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The course studies and interprets a specific literary work.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-122a",
+      "code": "C LIT 122A",
+      "name": "Representations of the Holocaust",
+      "description": "Closely reads literature written after the Holocaust.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "Not open for credit to students who have completed German 116A.",
+        "The source states that instruction or readings are in English."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 122A; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Literary interpretation of historical representation is the stated activity.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-126",
+      "code": "C LIT 126",
+      "name": "Comparative Black Literatures",
+      "description": "Examines Black literatures globally through racial discourse and the social construction of racial identities.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The advisor or repeat field identifies the same course as Black Studies 126; this helper emits no identity group and does not review the other subject."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 126; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The description combines literary analysis with cultural interpretation of race.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-128a",
+      "code": "C LIT 128A",
+      "name": "Children's Literature",
+      "description": "Studies children’s literature and theory through representations of childhood, family, and the market.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 128A; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Narrative and ideological analysis of cultural representations defines the subject.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-131b",
+      "code": "C LIT 131B",
+      "name": "Understanding Brazilian Music in its Cultural Context",
+      "description": "Traces Brazilian music through cultural history, dictatorship, censorship, and African influences on music and religion.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The source states that instruction or readings are in English.",
+        "The advisor or repeat field identifies the same course as MUS 178BR and PORT 110; this helper emits no identity group and does not review the other subject."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 131B; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Music is studied through historical and political context rather than performance training.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-132",
+      "code": "C LIT 132",
+      "name": "Beyond the Cold War: European Culture and Daily Life Onscreen, 1945-1991",
+      "description": "Uses film to examine everyday life and social change in Europe from 1945 to 1991.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 132; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Film analysis explains historical, political, and cultural experience.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-133",
+      "code": "C LIT 133",
+      "name": "Transpacific Literature",
+      "description": "Examines Pacific literary and historical imagination through writing produced across transpacific encounters.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The advisor or repeat field identifies the same course as ENGL 133TL and EACS 133; this helper emits no identity group and does not review the other subject."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 133; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The subject is literary representation and intercultural history.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-134",
+      "code": "C LIT 134",
+      "name": "Poetics of the Second Language",
+      "description": "Studies writers who choose another language and considers their work through translation and self-translation.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 134; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Literary language, translation, and cultural expression establish human context.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-139",
+      "code": "C LIT 139",
+      "name": "China in Translation: Theory, Art, History",
+      "description": "Uses translations into and out of China to examine translation theory, cultural exchange, modernization, and adaptation.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The advisor or repeat field identifies the same course as CHIN 139; this helper emits no identity group and does not review the other subject."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 139; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The described inquiry concerns literary translation and cultural representation.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-139tx",
+      "code": "C LIT 139TX",
+      "name": "Italy as Destination: Italian Travel Literature",
+      "description": "Studies Italian travel writing within Italy and abroad from Marco Polo onward.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "May be repeated for credit to a maximum of 16 units provided letter designation is different.",
+        "The source states that instruction or readings are in English."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 139TX; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The course explicitly examines a literary tradition historically.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-152",
+      "code": "C LIT 152",
+      "name": "Digital Humanities Practice",
+      "description": "Introduces programming for humanities research, including computational approaches associated with language, images, and machine learning.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "foundations",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The advisor or repeat field identifies the same course as German 152; this helper emits no identity group and does not review the other subject."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 152; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The explicit primary learning activity is introductory computer programming beyond ready-made tools; NLP, vision, and machine learning supply concepts and use cases within that foundational skills course.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-153b",
+      "code": "C LIT 153B",
+      "name": "French Theatre in Translation",
+      "description": "Surveys French drama through its historical cultural settings and major theatrical movements.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The source states that instruction or readings are in English."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 153B; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The course interprets plays within literary and cultural history.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-154",
+      "code": "C LIT 154",
+      "name": "Science Fiction in Eastern Europe",
+      "description": "Examines Eastern European science fiction in literature and film through themes such as utopia, dystopia, and technology.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The source states that instruction or readings are in English.",
+        "The advisor or repeat field identifies the same course as Slavic 154; this helper emits no identity group and does not review the other subject."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 154; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Science and technology are represented within a literary genre rather than taught as technical methods.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-154i",
+      "code": "C LIT 154I",
+      "name": "Economic Fictions: Literature, Film, and Theory",
+      "description": "Examines how Western literature, film, and theory have represented economic ideas since the eighteenth century.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The source states that instruction or readings are in English.",
+        "The advisor or repeat field identifies the same course as French 154I; this helper emits no identity group and does not review the other subject."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 154I; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The description studies cultural representations and intellectual history of economic concepts rather than quantitative economic methods.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-161",
+      "code": "C LIT 161",
+      "name": "Literature of Central Europe",
+      "description": "Examines selected Central European literatures across a culturally and linguistically diverse region.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The source states that instruction or readings are in English.",
+        "The advisor or repeat field identifies the same course as German 151C and Slavic 151C; this helper emits no identity group and does not review the other subject."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 161; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The described activity is regional literary study and cultural interpretation.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-170",
+      "code": "C LIT 170",
+      "name": "Translation as Metaphor: Introduction to Translation Theory and Practice",
+      "description": "Develops literary translation skills while examining translation as creative, cultural, and ethical work.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 170; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Language communication, literary creativity, and ethical interpretation define the course despite the use of translation technologies.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-171",
+      "code": "C LIT 171",
+      "name": "Post-Colonial Cultures",
+      "description": "Studies fiction from the Caribbean, West Africa, and the Maghreb through colonial legacies, cultural exchange, and multiculturalism.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The source states that instruction or readings are in English.",
+        "The advisor or repeat field identifies the same course as French 154G; this helper emits no identity group and does not review the other subject."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 171; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Literary analysis of postcolonial cultural relationships establishes human context.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-175a",
+      "code": "C LIT 175A",
+      "name": "Literatures of Eurasia: Armenian Literature",
+      "description": "Examines literature and culture at Eurasian crossroads, with regional and topical selections varying by instructor.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The title specifies Armenian Literature, but the description permits varying Eurasian regional topics. No particular offering’s topic beyond that source wording is inferred.",
+        "The source states that instruction or readings are in English.",
+        "The advisor or repeat field identifies the same course as Slavic 175A; this helper emits no identity group and does not review the other subject."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 175A; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The variable topics remain explicitly bounded to regional literature and cultural analysis.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-179b",
+      "code": "C LIT 179B",
+      "name": "Mysticism",
+      "description": "Studies German mystical writing, its ancient roots, connections to other traditions, and influence on secular literature.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "Not open for credit to students who have completed German 169.",
+        "The source states that instruction or readings are in English.",
+        "The advisor or repeat field identifies the same course as German 179B and Religious Studies 179B; this helper emits no identity group and does not review the other subject."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 179B; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Literary interpretation and the history of religious ideas define the subject.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-179c",
+      "code": "C LIT 179C",
+      "name": "Mediatechnology",
+      "description": "Examines how communication and recording technologies changed literary representation and thought.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "Not open for credit to students who have completed German 180.",
+        "The source states that instruction or readings are in English.",
+        "The advisor or repeat field identifies the same course as German 179C and ART 179C; this helper emits no identity group and does not review the other subject."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 179C; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Technology is considered through its cultural and literary effects rather than technical implementation.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-181",
+      "code": "C LIT 181",
+      "name": "Special Topics in Russian, East European, and Eurasian Studies",
+      "description": "Examines selected topics in Russian, East European, or Eurasian literature, culture, and thought.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "May be repeated for credit to a maximum of 12 units provided letter designations are different.",
+        "The source states that instruction or readings are in English.",
+        "Topics, texts, or regional emphasis vary by instructor or offering within the described subject; no specific offering is established."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 181; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Although topics vary, the description explicitly bounds the inquiry to cultural and literary interpretation.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-181b",
+      "code": "C LIT 181B",
+      "name": "Ukrainian Cinema and Culture",
+      "description": "Traces Ukrainian film and culture from the early twentieth century through the Russo-Ukrainian war in wider social and political settings.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "May be repeated for credit provided letter designations are different.",
+        "The source states that instruction or readings are in English.",
+        "The advisor or repeat field identifies the same course as Slavic Studies 181B and Film Studies 122UK; this helper emits no identity group and does not review the other subject."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 181B; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Cinema is examined through cultural history and political context.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-181c",
+      "code": "C LIT 181C",
+      "name": "Southeastern European Literature",
+      "description": "Studies an instructor-selected portion of Southeastern European literature.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "May be repeated for credit to a maximum of 12 units provided letter designations are different.",
+        "Topics, texts, or regional emphasis vary by instructor or offering within the described subject; no specific offering is established."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 181C; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The unspecified selection remains explicitly within literary study, supporting a bounded classification.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-182",
+      "code": "C LIT 182",
+      "name": "Critical Childhood Studies",
+      "description": "Examines childhood across periods and regions using literary, historical, artistic, and sociological approaches, with discussion and research writing.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The advisor or repeat field identifies the same course as EACS 182; this helper emits no identity group and does not review the other subject."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 182; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "All named approaches analyze childhood as a cultural and social phenomenon.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-184c",
+      "code": "C LIT 184C",
+      "name": "Identity, Feminism, and Secularism in Hebrew Literature",
+      "description": "Surveys modern Hebrew literature through identity, feminism, secularism, Zionism, and relationships among literary generations.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "Lectures and discussions are in English. Readings are available in translation and in Hebrew for interested students.",
+        "The advisor or repeat field identifies the same course as Religious Studies 133E; this helper emits no identity group and does not review the other subject."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 184C; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Literature is interpreted through cultural identity, gender, and intellectual history.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-184ka",
+      "code": "C LIT 184KA",
+      "name": "Major Works in German Literature: Kafka",
+      "description": "Closely reads Kafka’s fiction and diaries.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The source states that instruction or readings are in English."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 184KA; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Close literary analysis is the explicit course activity.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-185",
+      "code": "C LIT 185",
+      "name": "Science and Technology in European Philosophy",
+      "description": "Examines European philosophical perspectives on science and technology, potentially including machines, simulation, and AI.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 185; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Science and technology are objects of philosophical inquiry rather than technical methods taught by the course.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-186ee",
+      "code": "C LIT 186EE",
+      "name": "Exile, Displacement, and Estrangement in Literature and Film",
+      "description": "Examines exile and displacement in contemporary literature and film across Latin America and Europe, including migration, labor, and identity.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "May be repeated for credit to a maximum of 12 units provided letter designations are different."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 186EE; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The focus is literary representation, cultural experience, and social identity.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-186fl",
+      "code": "C LIT 186FL",
+      "name": "Vegetarianism: Food, Literature, Philosophy",
+      "description": "Traces vegetarianism and animal ethics through philosophy, religion, and literature from antiquity onward.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "May be repeated for credit to a maximum of 12 units provided letter designations are different."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 186FL; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Historical and ethical interpretation is explicit; food is not studied as nutritional or culinary practice.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-186g",
+      "code": "C LIT 186G",
+      "name": "Dostoevsky",
+      "description": "Studies Dostoevsky through intensive reading and selected literary criticism.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "May be repeated for credit to a maximum of 12 units provided letter designations are different.",
+        "The source states that instruction or readings are in English.",
+        "The advisor or repeat field identifies the same course as Slavic 117G; this helper emits no identity group and does not review the other subject."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 186G; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Literary reading and critical interpretation define the course.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-187",
+      "code": "C LIT 187",
+      "name": "The Devil in Literature",
+      "description": "Examines literary bargains with the devil and the influence of earlier works on modern ideas of the diabolic.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 187; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The course analyzes recurring literary themes and cultural influence.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-189",
+      "code": "C LIT 189",
+      "name": "Autobiographies and Life Stories",
+      "description": "Examines autobiographical and first-person writing through themes such as family, gender, illness, and disability.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "Not open to students who have taken French 189.",
+        "Topics, texts, or regional emphasis vary by instructor or offering within the described subject; no specific offering is established.",
+        "The advisor or repeat field identifies the same course as FR 153C; this helper emits no identity group and does not review the other subject."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 189; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Narrative interpretation and cultural representation establish the subject despite variable texts.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-190a",
+      "code": "C LIT 190A",
+      "name": "Disability and Culture",
+      "description": "Examines disability and ideas of normality through cultural representations across literature, art, film, philosophy, and other humanities fields.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "Topics, texts, or regional emphasis vary by instructor or offering within the described subject; no specific offering is established."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 190A; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Disability is approached as a critical cultural category rather than clinical diagnosis or treatment.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-190b",
+      "code": "C LIT 190B",
+      "name": "Disability and Literature",
+      "description": "Uses literary criticism to examine disability and its effects on literary and artistic form.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "Topics, texts, or regional emphasis vary by instructor or offering within the described subject; no specific offering is established."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 190B; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Critical reading and cultural representation are the explicit methods.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-191",
+      "code": "C LIT 191",
+      "name": "Fantasy and the Fantastic",
+      "description": "Examines literary worlds suspended between reality and the supernatural through works of fantastic fiction.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The advisor or repeat field identifies the same course as French 153D; this helper emits no identity group and does not review the other subject."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 191; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The description concerns literary form and interpretation of fiction.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-27",
+      "code": "C LIT 27",
+      "name": "Memory: Bridging the Humanities and Neurosciences",
+      "description": "Explores connections between neuroscience and humanities perspectives on memory, morality, perception, identity, and agency.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "other",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The advisor or repeat field identifies the same course as French 40X; this helper emits no identity group and does not review the other subject."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 27; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The description brings neuroscience and humanistic inquiry together without specifying a dominant approach or the balance of scientific and cultural content; both remain substantive candidates.",
+        "candidate_categories": [
+          "human_context",
+          "applications"
+        ]
+      }
+    },
+    {
+      "id": "ucsb-c-lit-30a",
+      "code": "C LIT 30A",
+      "name": "Major Works in European Literature",
+      "description": "Surveys European literature from classical antiquity through the medieval period.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 30A; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The course explicitly surveys a historical literary tradition.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-30b",
+      "code": "C LIT 30B",
+      "name": "Major Works in European Literature",
+      "description": "Surveys Renaissance and Neoclassical European literature.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The advisor or repeat field identifies the same course as ENGL 30B; this helper emits no identity group and does not review the other subject."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 30B; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Historical literary study is the stated subject.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-30c",
+      "code": "C LIT 30C",
+      "name": "Major Works in European Literature",
+      "description": "Surveys Romantic and modern European literature.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 30C; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The description explicitly establishes historical literary interpretation.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-31",
+      "code": "C LIT 31",
+      "name": "Major Works of Asian Literatures",
+      "description": "Introduces selected Asian literary traditions, with regional emphasis varying across East, South, and Southeast Asia.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "Topics, texts, or regional emphasis vary by instructor or offering within the described subject; no specific offering is established."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 31; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The regional selection varies within a clearly literary and cultural subject.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-32",
+      "code": "C LIT 32",
+      "name": "Major Works of Middle Eastern Literatures",
+      "description": "Introduces selected literary traditions across North Africa, the Middle East, and Central Asia.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "Topics, texts, or regional emphasis vary by instructor or offering within the described subject; no specific offering is established."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 32; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The course is explicitly a literary survey despite varying regional focus.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-33",
+      "code": "C LIT 33",
+      "name": "Major Works of African Literatures",
+      "description": "Introduces selected African literary traditions, with regional emphasis varying by offering.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "Topics, texts, or regional emphasis vary by instructor or offering within the described subject; no specific offering is established.",
+        "The advisor or repeat field identifies the same course as Black Studies 33; this helper emits no identity group and does not review the other subject."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 33; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Variable regional scope remains within literary and cultural interpretation.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-34",
+      "code": "C LIT 34",
+      "name": "Literature of the Americas",
+      "description": "Introduces selected literatures of North America, the Caribbean, and Latin America.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "Topics, texts, or regional emphasis vary by instructor or offering within the described subject; no specific offering is established.",
+        "The advisor or repeat field identifies the same course as French 34; this helper emits no identity group and does not review the other subject."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 34; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The description establishes literary interpretation across varying regional traditions.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-35",
+      "code": "C LIT 35",
+      "name": "The Making of the Modern World",
+      "description": "Examines historical events and ideas shaping modern life, including cities, warfare, technology, media, and theories of modernity.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The advisor or repeat field identifies the same course as German 35; this helper emits no identity group and does not review the other subject."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 35; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Historical and cultural explanation of modernity is the organizing inquiry.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-37",
+      "code": "C LIT 37",
+      "name": "Comparative Media",
+      "description": "Analyzes media as cultural texts through their social, political, and environmental dimensions.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The source states that instruction or readings are in English.",
+        "Topics, texts, or regional emphasis vary by instructor or offering within the described subject; no specific offering is established.",
+        "The advisor or repeat field identifies the same course as German 37; this helper emits no identity group and does not review the other subject."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 37; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Even when topics include algorithms or digital humanities, the stated activity is cultural analysis of media forms.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-40",
+      "code": "C LIT 40",
+      "name": "Young Humans: Introduction to Childhood Studies",
+      "description": "Introduces childhood studies through history, literature, and critical perspectives on children’s agency, voices, and rights.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The advisor or repeat field identifies the same course as EACS 41; this helper emits no identity group and does not review the other subject."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 40; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The description treats childhood as a social and cultural construction through humanities and related social inquiry.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-43a",
+      "code": "C LIT 43A",
+      "name": "Dreaming Revolutions: Introduction to Marx, Nietzsche, and Freud",
+      "description": "Introduces the influential theories and writings of Marx, Nietzsche, and Freud.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "Not open for credit to students who have completed German 41.",
+        "The advisor or repeat field identifies the same course as German 43A; this helper emits no identity group and does not review the other subject."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 43A; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Philosophical and social thought and its historical influence define the subject.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-50",
+      "code": "C LIT 50",
+      "name": "Love in the Western World, from Plato to Dating Apps",
+      "description": "Examines how Western societies define love through historical literature, philosophy, religion, and contemporary culture.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 50; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The inquiry connects cultural representation of love to changing social arrangements.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-50a",
+      "code": "C LIT 50A",
+      "name": "Tales of Love in the Western Tradition",
+      "description": "Compares Western literary and philosophical treatments of love and sexuality from antiquity through the Renaissance.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The source states that instruction or readings are in English.",
+        "The advisor or repeat field identifies the same course as French 50AX; this helper emits no identity group and does not review the other subject."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 50A; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Literary and philosophical interpretation establish human context.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-50b",
+      "code": "C LIT 50B",
+      "name": "Tales of Love in the Western Tradition",
+      "description": "Compares Western literary and philosophical treatments of love and sexuality in the seventeenth and eighteenth centuries.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The source states that instruction or readings are in English.",
+        "The advisor or repeat field identifies the same course as French 50BX; this helper emits no identity group and does not review the other subject."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 50B; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The course studies historical literature and philosophy.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-50c",
+      "code": "C LIT 50C",
+      "name": "Tales of Love in the Western Tradition",
+      "description": "Compares Western literary and philosophical treatments of love and sexuality in the nineteenth and twentieth centuries.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The source states that instruction or readings are in English.",
+        "The advisor or repeat field identifies the same course as French 50CX; this helper emits no identity group and does not review the other subject."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 50C; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Literary and philosophical analysis of cultural ideas is the stated activity.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-52",
+      "code": "C LIT 52",
+      "name": "Culture and Revolution in the Americas",
+      "description": "Examines revolutions in the Americas through art and literature, exploring identity, freedom, violence, memory, and historical narratives.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "Instruction is in English; a Spanish discussion section may be offered depending on enrollment."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 52; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Artistic interpretation is used to analyze political history and cultural memory.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-60",
+      "code": "C LIT 60",
+      "name": "Introduction to Disability Studies",
+      "description": "Introduces disability studies through historical representations and cultural theories across literature, art, media, and medicine.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: Yes, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "Topics, texts, or regional emphasis vary by instructor or offering within the described subject; no specific offering is established."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 60; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The central inquiry is cultural representation and theory, not clinical practice.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-lit-82",
+      "code": "C LIT 82",
+      "name": "Modern Chinese Literature",
+      "description": "Surveys modern Chinese literature as a way to examine historical change, cultural identity, and challenges to national narratives.",
+      "credits": 5,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "The source states that instruction or readings are in English.",
+        "The advisor or repeat field identifies the same course as Chinese 82; this helper emits no identity group and does not review the other subject."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LIT 82; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "Literature is explicitly interpreted through historical and cultural contexts.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsb-c-litw-40",
+      "code": "C LITW 40",
+      "name": "Young Humans: Introduction to Childhood Studies",
+      "description": "Introduces childhood studies through history, literature, and critical perspectives on children’s agency, voices, and rights.",
+      "credits": 4,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "notes": [
+        "The 2026-2027 export reports Prerequisites: No, a flag only. Exact prerequisite rules are unavailable here; prerequisites remain null and this is not an absence claim.",
+        "This C LITW 40 row has the same description as C LIT 40, but its advisor comment names EACS 41 and C LIT 40 rather than C LITW 40. An online-version identity is not explicitly established by this row; all records remain separate."
+      ],
+      "prerequisites": null,
+      "source_id": "ucsb-ai-bs-ge-defg-export",
+      "url": "https://catalog.ucsb.edu/courses?generalSubjectAreas=D&generalSubjectAreas=E&generalSubjectAreas=F&generalSubjectAreas=G&page=1&cq=",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "ucsb-ai-bs-ge-defg-export"
+        ],
+        "locator": "C LITW 40; complete CSV row, including description, units, advisor and repeat fields",
+        "rationale": "The description treats childhood as a social and cultural construction through humanities and related social inquiry.",
+        "candidate_categories": []
+      }
     }
   ],
   "requirements": [
@@ -6453,7 +10194,20 @@
         "ucsb-ling-132",
         "ucsb-ling-170",
         "ucsb-ling-180",
-        "ucsb-ling-187"
+        "ucsb-ling-187",
+        "ucsb-rg-st-115a",
+        "ucsb-rg-st-124g",
+        "ucsb-rg-st-131h",
+        "ucsb-rg-st-14",
+        "ucsb-rg-st-140b",
+        "ucsb-rg-st-141a",
+        "ucsb-rg-st-147",
+        "ucsb-rg-st-152",
+        "ucsb-rg-st-152vr",
+        "ucsb-rg-st-35",
+        "ucsb-rg-st-7",
+        "ucsb-c-lit-186fl",
+        "ucsb-c-lit-60"
       ]
     },
     {
@@ -6482,7 +10236,87 @@
         "ucsb-arthi-136i",
         "ucsb-arthi-187d",
         "ucsb-arthiw-6c",
-        "ucsb-arthiw-6r"
+        "ucsb-arthiw-6r",
+        "ucsb-rg-st-1",
+        "ucsb-rg-st-101",
+        "ucsb-rg-st-111b",
+        "ucsb-rg-st-114",
+        "ucsb-rg-st-115g",
+        "ucsb-rg-st-116a",
+        "ucsb-rg-st-12",
+        "ucsb-rg-st-123",
+        "ucsb-rg-st-128",
+        "ucsb-rg-st-133c",
+        "ucsb-rg-st-144",
+        "ucsb-rg-st-144a",
+        "ucsb-rg-st-147t",
+        "ucsb-rg-st-149h",
+        "ucsb-rg-st-150wr",
+        "ucsb-rg-st-153",
+        "ucsb-rg-st-157i",
+        "ucsb-rg-st-166",
+        "ucsb-rg-st-167a",
+        "ucsb-rg-st-175b",
+        "ucsb-rg-st-176",
+        "ucsb-rg-st-179",
+        "ucsb-rg-st-18",
+        "ucsb-rg-st-183b",
+        "ucsb-rg-st-185",
+        "ucsb-rg-st-19",
+        "ucsb-rg-st-193b",
+        "ucsb-rg-st-20",
+        "ucsb-rg-st-21",
+        "ucsb-rg-st-28",
+        "ucsb-rg-st-29",
+        "ucsb-rg-st-3",
+        "ucsb-rg-st-30",
+        "ucsb-rg-st-31",
+        "ucsb-rg-st-32",
+        "ucsb-rg-st-37",
+        "ucsb-rg-st-4",
+        "ucsb-rg-st-48",
+        "ucsb-rg-st-5",
+        "ucsb-rg-st-6",
+        "ucsb-rg-st-61",
+        "ucsb-rg-st-62",
+        "ucsb-rg-st-66",
+        "ucsb-rg-st-71",
+        "ucsb-rg-st-73",
+        "ucsb-rg-st-80a",
+        "ucsb-rg-st-80b",
+        "ucsb-rg-st-80c",
+        "ucsb-c-lit-101",
+        "ucsb-c-lit-106",
+        "ucsb-c-lit-108",
+        "ucsb-c-lit-113",
+        "ucsb-c-lit-122a",
+        "ucsb-c-lit-134",
+        "ucsb-c-lit-139",
+        "ucsb-c-lit-139tx",
+        "ucsb-c-lit-152",
+        "ucsb-c-lit-154i",
+        "ucsb-c-lit-155",
+        "ucsb-c-lit-171",
+        "ucsb-c-lit-181",
+        "ucsb-c-lit-181b",
+        "ucsb-c-lit-181c",
+        "ucsb-c-lit-185",
+        "ucsb-c-lit-190a",
+        "ucsb-c-lit-27",
+        "ucsb-c-lit-30a",
+        "ucsb-c-lit-30b",
+        "ucsb-c-lit-30c",
+        "ucsb-c-lit-35",
+        "ucsb-c-lit-37",
+        "ucsb-c-lit-40",
+        "ucsb-c-lit-43a",
+        "ucsb-c-lit-50",
+        "ucsb-c-lit-50a",
+        "ucsb-c-lit-50b",
+        "ucsb-c-lit-50c",
+        "ucsb-c-lit-52",
+        "ucsb-c-lit-82",
+        "ucsb-c-litw-40"
       ]
     },
     {
@@ -6552,7 +10386,11 @@
         "ucsb-arthi-144c",
         "ucsb-arthiw-6c",
         "ucsb-arthiw-6f",
-        "ucsb-arthiw-6r"
+        "ucsb-arthiw-6r",
+        "ucsb-rg-st-13",
+        "ucsb-rg-st-157g",
+        "ucsb-c-lit-131b",
+        "ucsb-c-lit-132"
       ]
     },
     {
@@ -6568,7 +10406,51 @@
       "source_text": null,
       "summary": "Choose approved Area G courses. This mapped subset contains only completed subject reviews from the current official filtered export; it is not the full published pool. Full remaining pool and special-designation review is in progress. One course may count in only one general area.",
       "course_ids": [
-        "ucsb-ling-133"
+        "ucsb-ling-133",
+        "ucsb-rg-st-110",
+        "ucsb-rg-st-115a",
+        "ucsb-rg-st-115g",
+        "ucsb-rg-st-129",
+        "ucsb-rg-st-133e",
+        "ucsb-rg-st-157cp",
+        "ucsb-rg-st-157pp",
+        "ucsb-rg-st-179b",
+        "ucsb-c-lit-100",
+        "ucsb-c-lit-106e",
+        "ucsb-c-lit-107",
+        "ucsb-c-lit-113",
+        "ucsb-c-lit-114",
+        "ucsb-c-lit-122a",
+        "ucsb-c-lit-126",
+        "ucsb-c-lit-128a",
+        "ucsb-c-lit-133",
+        "ucsb-c-lit-139",
+        "ucsb-c-lit-153b",
+        "ucsb-c-lit-154",
+        "ucsb-c-lit-154i",
+        "ucsb-c-lit-161",
+        "ucsb-c-lit-170",
+        "ucsb-c-lit-171",
+        "ucsb-c-lit-175a",
+        "ucsb-c-lit-179b",
+        "ucsb-c-lit-179c",
+        "ucsb-c-lit-182",
+        "ucsb-c-lit-184c",
+        "ucsb-c-lit-184ka",
+        "ucsb-c-lit-186ee",
+        "ucsb-c-lit-186g",
+        "ucsb-c-lit-187",
+        "ucsb-c-lit-189",
+        "ucsb-c-lit-190b",
+        "ucsb-c-lit-191",
+        "ucsb-c-lit-30a",
+        "ucsb-c-lit-30b",
+        "ucsb-c-lit-30c",
+        "ucsb-c-lit-31",
+        "ucsb-c-lit-32",
+        "ucsb-c-lit-33",
+        "ucsb-c-lit-34",
+        "ucsb-c-lit-82"
       ]
     },
     {
@@ -7464,7 +11346,8 @@
     "All26represented Writing Program records now have current2026–27field review. CurrentWRIT50 is5units versus undateddepartment4; curatedamountnull. WRIT2E/50Eshare the named freshman/engineering-major restrictions.105CW/105SW/107WCpublish encoded AP/IB/waiver alternatives; their exact source codes are retained without invented examination names. Dated credit exclusions and107WC legal-repeat wording remain eligibility evidence, not crosslist identity certification.",
     "Nineteen further CMPSC options now have current2026–27field review.132 has recommended preparation but no published required-prerequisite field;134 expressly requires130B atB or better.172 publishes a department-consent alternative to its named-major restriction. Dated190A/189A exclusions and legal-repeat clauses are retained without inferred equivalence. After these reads, navigating observed177link presented a human-verification challenge; no interaction or alternate route attempted. Current177/178/180/185/186/192/196versions remain blocked by that challenge; prior public department descriptions remain bounded evidence.",
     "Current public D/E/F/G export: all15 LING/LING W course rows now have description/credit/subject reviews and exact area memberships. Thirteen are human context; LING20 and34 are mixed linguistic/scientific or programming/data/communication content. The CSV prerequisite field is only Yes/No, so every exact prerequisite remains null with its observed flag in notes. LING36/130/133/187 flag Yes. The explicit catalog verification challenge prevents new individual-page checks; cached export review continues. Online variants remain distinct records; legal-repeat and same-course comments alone have not produced new identity groups.",
-    "Current cached GE Art History review: all57 ARTHI/ARTHIW rows integrated after delegated complete-row review and primary boundary-example checks.55human-context,1architectural-practice application(136W),1mixedmuseumcourse(5B). All exact prerequisites remain null because the export has only flags(40Yes/17No). Specific advisor/repeat restrictions remain notes. Online same-course6F and cross-subject associations are retained explicitly without new crosslisted identity groups; mapped source identities remain distinct pending relationship normalization. Remaining784exportrows are active review/integration."
+    "Current cached GE Art History review: all57 ARTHI/ARTHIW rows integrated after delegated complete-row review and primary boundary-example checks.55human-context,1architectural-practice application(136W),1mixedmuseumcourse(5B). All exact prerequisites remain null because the export has only flags(40Yes/17No). Specific advisor/repeat restrictions remain notes. Online same-course6F and cross-subject associations are retained explicitly without new crosslisted identity groups; mapped source identities remain distinct pending relationship normalization. Remaining784exportrows are active review/integration.",
+    "Current cached GE review adds all67 RG ST and63 C LIT/C LITW source rows. Existing C LIT155 metadata and identity group are preserved, with export provenance added;129 new source records enter exact area choices. RG ST4 has an inconsistent advisor alias naming RG ST5/EACS5; C LITW40 advisor text names other codes, not its online code. Neither inconsistency is silently repaired. C LIT152 explicitly teaches programming and is foundations; C LIT27 is mixed neuroscience/humanities. General varying literature/religious-history topics remain human context where the source bounds that domain. Exact prerequisite flags remain notes, not rule text.202 of856 exported rows now have completed subject reviews and mapped memberships;654 remain active."
   ],
   "curriculum_audit": {
     "scope": "degree",

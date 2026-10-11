@@ -314,3 +314,9 @@ The export prerequisite field is onlyYes/No. Four entries(LING36/130/133/187) sa
 Delegated57complete cached rows now integrated after primary checks of5B/136W/136O/141G/187D/113B/ARTHIW6R/6F and whole-row guard replay.55historical/culturalhuman-context,1architecturalpracticeapplication,1mixedmuseumcourse. All57exact prerequisites remainnull, with40Yes/17Noflags and observed advisor/repeat restrictions explicit.17courses are5units,40are4units. No unused variable-unit zero becomes an actual credit value.
 
 GEcompletedsubjects now72of856rows;784remain active cached review. Current mapped profile20fixed/133options/2context counts distinct observed identities; no online or cross-subject same-course normalization has been inferred. ARTHIW6F explicitly sayssamecourseasARTHI6F, so this relationship is visible innotes pending normalized relationship review. Exact prerequisite rules remain unavailable after the catalog challenge; this does not halt review of already cached full descriptions.
+
+### Completed RG ST and C LIT subject batches — 2026-10-11
+
+Delegated reviewers read all 67 RG ST and 63 C LIT/C LITW rows. Primary checked technology, healing, food, language and selected-topic boundaries plus C LIT 27/152/155/online 40, then replayed complete guards. C LIT 152 teaches programming; C LIT 27 mixes neuroscience and humanities. Existing C LIT 155 keeps its full individual-page metadata and identity group, with the export added as corroboration. The other 129 records are new choices. Their flags still do not disclose exact prerequisites.
+
+RG ST 4's alias comment names RG ST 5/EACS 5, not its own code; C LITW 40's comment similarly names other codes. These source inconsistencies remain explicit, without guessed aliases. The mapped profile is 20 fixed / 262 options / two contextual identities. Completed GE subject rows total 202 of 856; remaining cached descriptions and all applicable exact-rule/identity checks remain active work.

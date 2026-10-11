@@ -19,7 +19,7 @@ def test_catalog_policy_closes_cal_getc_without_stem_or_college_overreach():
     overlap=byid['ucsb-ai-bs-progress-ge-current-provisions']['summary']
     assert 'only one' in overlap and 'major course' in overlap
     assert 'Letters and Science only' in byid['ucsb-ai-bs-progress-ge-current-special']['summary']
-    assert [requirement_profile(d)[k]['count']for k in ['required','options','unresolved']]==[20,133,2]
+    assert [requirement_profile(d)[k]['count']for k in ['required','options','unresolved']]==[20,262,2]
 
 
 def test_pool_manifest_is_membership_only_and_not_a_content_audit():
