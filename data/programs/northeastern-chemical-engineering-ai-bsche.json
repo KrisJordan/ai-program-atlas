@@ -922,6 +922,56 @@
       "url": "https://catalog.northeastern.edu/search/?P=ENGW%203315",
       "public_site": null,
       "syllabus": null
+    },
+    {
+      "id": "northeastern-chemical-engineering-ai-bsche-ge-1110",
+      "code": "GE 1110",
+      "name": "Engineering Design",
+      "description": null,
+      "prerequisites": null,
+      "credits": 4.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "northeastern-chemical-engineering-ai-bsche-ge-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/ge/",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northeastern-chemical-engineering-ai-bsche-ge-courses"
+        ],
+        "locator": "GE 1110 official course-description block",
+        "rationale": "The description centers on engineering problem formulation, design evaluation, CAD and a technical design project. This is applied engineering design, not an AI method.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "northeastern-chemical-engineering-ai-bsche-ge-1111",
+      "code": "GE 1111",
+      "name": "Engineering Problem Solving and Computation",
+      "description": null,
+      "prerequisites": null,
+      "credits": 4.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "northeastern-chemical-engineering-ai-bsche-ge-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/ge/",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northeastern-chemical-engineering-ai-bsche-ge-courses"
+        ],
+        "locator": "GE 1111 official course-description block",
+        "rationale": "The description uses engineering analysis and design problems to teach computation, matrix tools and microcontrollers. Its primary domain practice is engineering problem solving; it is not evidence of an AI specialization.",
+        "candidate_categories": []
+      }
     }
   ],
   "requirements": [
@@ -1259,14 +1309,14 @@
       "id": "northeastern-chemical-engineering-ai-bsche-req-ge-1501",
       "parent_id": "northeastern-chemical-engineering-ai-bsche-req-supplemental-credit",
       "title": "GE 1501",
-      "kind": "all",
+      "kind": "note",
       "count": null,
       "credits": null,
       "credit_unit": "semester_hours",
       "category": "other",
       "source_id": "northeastern-chemical-engineering-ai-bsche-catalog",
       "source_text": null,
-      "summary": "Listed course.",
+      "summary": "Credit allocation for the Cornerstone bundle; the footnote permits the complete GE 1110/1111 substitute bundle. This row is not an additional enrollment obligation.",
       "course_ids": [
         "northeastern-chemical-engineering-ai-bsche-ge-1501"
       ]
@@ -1289,14 +1339,14 @@
       "id": "northeastern-chemical-engineering-ai-bsche-req-ge-1502",
       "parent_id": "northeastern-chemical-engineering-ai-bsche-req-supplemental-credit",
       "title": "GE 1502",
-      "kind": "all",
+      "kind": "note",
       "count": null,
       "credits": null,
       "credit_unit": "semester_hours",
       "category": "other",
       "source_id": "northeastern-chemical-engineering-ai-bsche-catalog",
       "source_text": null,
-      "summary": "Listed course.",
+      "summary": "Credit allocation for the Cornerstone bundle; the footnote permits the complete GE 1110/1111 substitute bundle. This row is not an additional enrollment obligation.",
       "course_ids": [
         "northeastern-chemical-engineering-ai-bsche-ge-1502"
       ]
@@ -1693,14 +1743,14 @@
       "id": "northeastern-chemical-engineering-ai-bsche-req-ge-1501-2",
       "parent_id": "northeastern-chemical-engineering-ai-bsche-req-supplemental-credit-2",
       "title": "GE 1501",
-      "kind": "all",
+      "kind": "note",
       "count": null,
       "credits": null,
       "credit_unit": "semester_hours",
       "category": "other",
       "source_id": "northeastern-chemical-engineering-ai-bsche-catalog",
       "source_text": null,
-      "summary": "Listed course.",
+      "summary": "Credit allocation for the Cornerstone bundle; the footnote permits the complete GE 1110/1111 substitute bundle. This row is not an additional enrollment obligation.",
       "course_ids": [
         "northeastern-chemical-engineering-ai-bsche-ge-1501"
       ]
@@ -1799,14 +1849,14 @@
       "id": "northeastern-chemical-engineering-ai-bsche-req-ge-1501-3",
       "parent_id": "northeastern-chemical-engineering-ai-bsche-req-additional-required-courses",
       "title": "GE 1501",
-      "kind": "all",
+      "kind": "note",
       "count": null,
       "credits": null,
       "credit_unit": "semester_hours",
       "category": "other",
       "source_id": "northeastern-chemical-engineering-ai-bsche-catalog",
       "source_text": null,
-      "summary": "Listed course.",
+      "summary": "Credit allocation for the Cornerstone bundle; the footnote permits the complete GE 1110/1111 substitute bundle. This row is not an additional enrollment obligation.",
       "course_ids": [
         "northeastern-chemical-engineering-ai-bsche-ge-1501"
       ]
@@ -1829,14 +1879,14 @@
       "id": "northeastern-chemical-engineering-ai-bsche-req-ge-1502-2",
       "parent_id": "northeastern-chemical-engineering-ai-bsche-req-additional-required-courses",
       "title": "GE 1502",
-      "kind": "all",
+      "kind": "note",
       "count": null,
       "credits": null,
       "credit_unit": "semester_hours",
       "category": "other",
       "source_id": "northeastern-chemical-engineering-ai-bsche-catalog",
       "source_text": null,
-      "summary": "Listed course.",
+      "summary": "Credit allocation for the Cornerstone bundle; the footnote permits the complete GE 1110/1111 substitute bundle. This row is not an additional enrollment obligation.",
       "course_ids": [
         "northeastern-chemical-engineering-ai-bsche-ge-1502"
       ]
@@ -2088,13 +2138,62 @@
       "source_text": null,
       "summary": "Students can substitute Engineering Design ( GE 1110 ) and Engineering Problem Solving and Computation ( GE 1111 ) for Cornerstone of Engineering 1 ( GE 1501 ) and Cornerstone of Engineering 2 ( GE 1502 ) .",
       "course_ids": []
+    },
+    {
+      "count": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "northeastern-chemical-engineering-ai-bsche-catalog",
+      "source_text": null,
+      "id": "northeastern-chemical-engineering-ai-bsche-req-introductory-engineering-bundle",
+      "parent_id": "northeastern-chemical-engineering-ai-bsche-req-engineering-requirements",
+      "title": "Introductory engineering bundle",
+      "kind": "alternative",
+      "course_ids": [],
+      "summary": "Take GE 1501 and GE 1502, or substitute both GE 1110 and GE 1111 (footnote 1)."
+    },
+    {
+      "count": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "northeastern-chemical-engineering-ai-bsche-catalog",
+      "source_text": null,
+      "id": "northeastern-chemical-engineering-ai-bsche-req-introductory-engineering-bundle-cornerstone",
+      "parent_id": "northeastern-chemical-engineering-ai-bsche-req-introductory-engineering-bundle",
+      "title": "Cornerstone course pair",
+      "kind": "all",
+      "course_ids": [
+        "northeastern-chemical-engineering-ai-bsche-ge-1501",
+        "northeastern-chemical-engineering-ai-bsche-ge-1502"
+      ],
+      "summary": "Both courses in the chosen pair are required."
+    },
+    {
+      "count": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "northeastern-chemical-engineering-ai-bsche-catalog",
+      "source_text": null,
+      "id": "northeastern-chemical-engineering-ai-bsche-req-introductory-engineering-bundle-substitute",
+      "parent_id": "northeastern-chemical-engineering-ai-bsche-req-introductory-engineering-bundle",
+      "title": "Substitute course pair",
+      "kind": "all",
+      "course_ids": [
+        "northeastern-chemical-engineering-ai-bsche-ge-1110",
+        "northeastern-chemical-engineering-ai-bsche-ge-1111"
+      ],
+      "summary": "Both courses in the chosen pair are required."
     }
   ],
   "notes": [
     "All local major-page tables and prose rules are represented, including course bundles, writing alternatives, GE credit allocations, placement substitutions, integration reuse, NUpath gaps and the 2.000 CHME GPA minimum. Linked university, college and NUpath policies are not fully incorporated; curriculum remains partial.",
     "The current chemical-engineering department page and old detailed-requirements URL retain data-science URL/PlusOne residue. The requirements link redirects to the current 2026–2027 Chemical Engineering and Artificial Intelligence BSChE catalog; legacy data-science curricula were not silently substituted.",
     "No family inheritance is asserted in this bounded discovery pass. The AI component resembles the DS-based environmental-engineering variant, but shared policies and all bindings require an independent family review. The existing 23 family variants are unchanged.",
-    "First offering and formal program launch remain unknown. Course descriptions, prerequisites and split bundle credits remain missing unless the local table states them."
+    "First offering and formal program launch remain unknown. Course descriptions, prerequisites and split bundle credits remain missing unless the local table states them.",
+    "Degree correctness audit: footnote 1 permits GE 1110 plus GE 1111 instead of GE 1501 plus GE 1502. The two complete pairs are an alternative; repeated Cornerstone rows allocate credits across degree areas and do not create fixed extra enrollments. Both new course identities and four-hour values are independently checked in the GE subject catalog."
   ],
   "award_options": [
     {

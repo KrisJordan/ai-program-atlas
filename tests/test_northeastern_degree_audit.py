@@ -83,3 +83,40 @@ def test_optional_communication_catalog_minimum_phrase_replays():
     parsed=import_module('atlas.adapters.'+pid+'.adapter').parse(file.read_text())
     node=next(r for r in parsed['requirements'] if r['id']==pid+'-req-required-general-electives-credit-choice')
     assert node['credits']==16 and node['kind']=='choose_credits'
+
+
+def test_engineering_substitution_is_two_complete_bundles_not_four_fixed_courses():
+    from test_confirmed_depth4 import ne
+    from atlas.curriculum_profile import requirement_profile
+    pid='northeastern-chemical-engineering-ai-bsche'
+    module=import_module('atlas.adapters.'+pid+'.adapter')
+    parsed=module.parse(ne())
+    profile=requirement_profile(parsed)
+    assert profile['required']['count']==1  # Synthetic CHME 4512 only.
+    assert profile['options']['count']==4
+    bundles=[r for r in parsed['requirements'] if r['parent_id']==pid+'-req-introductory-engineering-bundle']
+    assert {tuple(c.rsplit('-ge-',1)[1] for c in r['course_ids']) for r in bundles}=={('1501','1502'),('1110','1111')}
+    assert all(r['kind']=='all' for r in bundles)
+    allocations=[r for r in parsed['requirements'] if r['id'].startswith(pid+'-req-ge-150')]
+    assert len(allocations)==5 and all(r['kind']=='note' for r in allocations)
+    with pytest.raises(ValueError,match='substitution'):
+        module.parse(ne().replace('Students can substitute','Students cannot substitute'))
+    with pytest.raises(ValueError,match='substitution'):
+        module.parse(ne().replace('Computation (GE 1111)','Computation (GE 1112)'))
+
+
+def test_engineering_reviewed_seed_has_no_fixed_cornerstone_override():
+    from atlas.curriculum_profile import requirement_profile
+    pid='northeastern-chemical-engineering-ai-bsche'
+    seed=json.loads((ROOT/'data/programs'/f'{pid}.json').read_text())
+    # Independent delta: original 40 fixed minus the two substituted GE
+    # identities; three writing options plus all four engineering identities.
+    profile=requirement_profile(seed)
+    assert profile['required']['count']==38
+    assert profile['options']['count']==7
+    assert profile['unresolved']['count']==0
+    assert len(seed['courses'])==45
+    for code in ['GE 1110','GE 1111']:
+        c=next(c for c in seed['courses'] if c['code']==code)
+        assert c['credits']==4 and c['credit_unit']=='semester_hours'
+        assert c['category_review']['status']=='reviewed'

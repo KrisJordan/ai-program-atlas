@@ -45,11 +45,11 @@
       ],
       "checks": {
         "degree_identity": "Official catalog identity and exact award/campus are retained as Chemical Engineering and Artificial Intelligence, BSChE (Boston). Current official page retrieved; catalog/cohort scope remains explicit.",
-        "required_and_choices": "Individual structural source interpretation is in progress. Parser replay/family resolution alone is not independent validation. Existing all/choice/bundle graph retained at this checkpoint.",
+        "required_and_choices": "Individual structural source interpretation is in progress. Parser replay/family resolution alone is not independent validation. Existing all/choice/bundle graph retained at this checkpoint. Engineering footnote 1 has now been independently read: the two complete introductory engineering pairs are alternatives, and five repeated GE rows are credit allocations rather than extra enrollments.",
         "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
         "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant.",
         "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
-        "classification": "20 of 43 observations have individually authored category reviews in this checkpoint; 23 remain legacy/unreviewed. Mixed and unclassified observations use other. No blanket title/prefix inference certifies remaining categories.",
+        "classification": "20 of 43 observations have individually authored category reviews in this checkpoint; 23 remain legacy/unreviewed. Mixed and unclassified observations use other. No blanket title/prefix inference certifies remaining categories. Two additional GE substitution courses are individually reviewed as applied engineering design/problem solving.",
         "family_composition": "This BSChE record is not a member of the 23-variant family; no shared core or college rules inherited.",
         "degree_wide_requirements": "University/engineering/NUpath and substitution conditions are not yet fully independently reviewed in this audit."
       },
@@ -74,6 +74,15 @@
           "evidence_urls": [
             "https://catalog.northeastern.edu/undergraduate/engineering/chemical/chemical-engineering-artificial-intelligence-bsche-bos/",
             "https://catalog.northeastern.edu/course-descriptions/cs/"
+          ]
+        },
+        {
+          "issue": "Cornerstone pair was treated as fixed although footnote 1 permits a complete substitute pair.",
+          "correction": "Model a two-bundle alternative: GE 1501+1502 or GE 1110+1111. Preserve repeated credit-allocation rows as contextual notes. Add independently verified GE 1110/1111 identities and four-semester-hour values.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/undergraduate/engineering/chemical/chemical-engineering-artificial-intelligence-bsche-bos/",
+            "https://catalog.northeastern.edu/course-descriptions/ge/"
           ]
         }
       ],

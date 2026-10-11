@@ -24,7 +24,13 @@ def gt_thread():
 
 def ne():
     m=adapter(IDS[2]); headings=''.join('<h2>'+s+'</h2>' for s in m.SECTIONS)
-    return '<div id="site-title"><h1>'+m.TITLE+'</h1></div><div>Academic Catalog 2026-2027</div><div id="programrequirementstextcontainer">'+headings+'<p>NUpath (IC), (SI), (DD), and (EX) are not explicitly satisfied by required engineering coursework. Successful co-op may fulfill the EX requirement.</p><p>134 total semester hours required</p><table class="sc_courselist"><tr><td class="codecol"><a class="code" href="/course/">CHME 4512</a></td><td>Process Control</td><td class="hourscol">4</td></tr></table></div>'
+    base = '<div id="site-title"><h1>'+m.TITLE+'</h1></div><div>Academic Catalog 2026-2027</div><div id="programrequirementstextcontainer">'+headings+'<p>NUpath (IC), (SI), (DD), and (EX) are not explicitly satisfied by required engineering coursework. Successful co-op may fulfill the EX requirement.</p><p>134 total semester hours required</p><table class="sc_courselist"><tr><td class="codecol"><a class="code" href="/course/">CHME 4512</a></td><td>Process Control</td><td class="hourscol">4</td></tr></table></div>'
+
+    allocations = '<h2>Engineering Requirements</h2><table class="sc_courselist">'+''.join(
+        '<tr><td class="codecol"><a class="code" href="/course/">'+code+'</a></td><td>Cornerstone of Engineering '+code[-1]+'</td><td class="hourscol"></td></tr>'
+        for code in ['GE 1501','GE 1502','GE 1501','GE 1501','GE 1502'])+'</table>'
+    footnote = '<dl><dt>1</dt><dd>Students can substitute Engineering Design (GE 1110) and Engineering Problem Solving and Computation (GE 1111) for Cornerstone of Engineering 1 (GE 1501) and Cornerstone of Engineering 2 (GE 1502).</dd></dl>'
+    return base[:-6] + allocations + footnote + '</div>'
 
 def test_cmu_four_independent_groups_and_real_changes():
     m=adapter(IDS[0]); r=m.parse(cmu())
