@@ -87,3 +87,33 @@ def test_optional_all_actual_catalog_blocks_and_idempotence():
         assert all('category_review' not in c for c in a['courses'])
         observations += len(a['courses'])
     assert observations == 69
+
+
+def test_composed_environment_observer_preserves_other_courses_and_requirement_nodes():
+    from atlas.adapters.northeastern_environment_course_reviews import attach_reviewed_sources,SPEC,SOURCES
+    from atlas.adapters.northeastern_course_metadata import register_subject_sources
+    from pathlib import Path
+    import json
+    root=Path(__file__).resolve().parents[1];cache=root/'.cache/research/degree-audit-northeastern'
+    if not all((cache/(s.lower()+'.html')).exists()for s in SOURCES):pytest.skip('Optional actual subject source')
+    pids={t['program_id']for e in SPEC['courses'].values()for t in e['targets']}
+    for pid in pids:
+        seed=json.loads((root/'data/programs'/f'{pid}.json').read_text())
+        selected={s:[c['code']for c in seed['courses']if c['code'].startswith(s+' ')]for s in SOURCES}
+        selected={s:codes for s,codes in selected.items()if codes}
+        original=register_subject_sources(pid,selected)
+        sentry={'id':'independent-rule','kind':'note'}
+        for url,parser in list(original.items()):
+            def previous(html,parser=parser):
+                result=parser(html);result['requirements']=[sentry];return result
+            original[url]=previous
+        composed=attach_reviewed_sources(pid,original)
+        for subject,codes in selected.items():
+            result=composed[SOURCES[subject]]((cache/(subject.lower()+'.html')).read_text())
+            assert {c['code']for c in result['courses']}==set(codes)
+            assert result['requirements']==[sentry]
+            assert all('category_review'not in c for c in result['courses'])
+            for c in result['courses']:
+                expected=next(x for x in seed['courses']if x['id']==c['id'])
+                assert all(expected[k]==v for k,v in c.items())
+                assert set(expected)-set(c)<={'category_review','public_site','syllabus'}

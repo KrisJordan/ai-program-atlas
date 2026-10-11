@@ -81,3 +81,24 @@ def parse_subject(html, *, program_id, subject, codes=None):
                             category=entry['category'], source_id=program_id+'-'+subject.lower()+'-courses',
                             url=source['url']))
     return {'id': program_id, 'courses': courses, 'requirements': [], 'notes': notes}
+
+
+def attach_reviewed_sources(program_id, parsers):
+    """Compose exact reviewed targets with an existing broader subject observer."""
+    result=dict(parsers)
+    for subject,url in SOURCES.items():
+        if not any(t['program_id']==program_id for e in SPEC['courses'].values()
+                   if e['subject']==subject for t in e['targets']):
+            continue
+        previous=result.get(url)
+        def observe(html,subject=subject,previous=previous):
+            reviewed=parse_subject(html,program_id=program_id,subject=subject)
+            if previous is None:return reviewed
+            original=previous(html)
+            updates={c['id']:c for c in reviewed['courses']}
+            courses=[updates.pop(c['id'],c) for c in original.get('courses',[])]
+            courses.extend(updates.values())
+            return {**original,'courses':courses,
+                    'notes':list(dict.fromkeys(original.get('notes',[])+reviewed.get('notes',[])))}
+        result[url]=observe
+    return result

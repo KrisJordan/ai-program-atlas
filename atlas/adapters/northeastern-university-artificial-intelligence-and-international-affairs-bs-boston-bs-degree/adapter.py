@@ -81,3 +81,8 @@ SOURCE_PARSERS = {**SOURCE_PARSERS, KHOURY_URL: lambda html: parse_khoury_policy
 from atlas.adapters.northeastern_college_policies import CSSH_TRANSFER_URL, parse_cssh_transfer
 SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + (CSSH_TRANSFER_URL,)))
 SOURCE_PARSERS = {**SOURCE_PARSERS, CSSH_TRANSFER_URL: lambda html: parse_cssh_transfer(html, program_id=PROGRAM_ID)}
+
+# Exact environmental review composes with, rather than discards, broader metadata.
+from atlas.adapters.northeastern_environment_course_reviews import attach_reviewed_sources
+SOURCE_PARSERS = attach_reviewed_sources(PROGRAM_ID, SOURCE_PARSERS)
+SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + tuple(SOURCE_PARSERS)))

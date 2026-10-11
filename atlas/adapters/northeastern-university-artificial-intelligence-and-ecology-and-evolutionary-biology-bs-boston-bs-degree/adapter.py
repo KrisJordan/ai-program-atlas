@@ -80,3 +80,8 @@ SOURCE_PARSERS = {**SOURCE_PARSERS, KHOURY_URL: lambda html: parse_khoury_policy
 from atlas.adapters.northeastern_college_policies import SCIENCE_URL, parse_science_policy
 SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + (SCIENCE_URL,)))
 SOURCE_PARSERS = {**SOURCE_PARSERS, SCIENCE_URL: lambda html: parse_science_policy(html, program_id=PROGRAM_ID)}
+
+# Exact environmental review composes with, rather than discards, broader metadata.
+from atlas.adapters.northeastern_environment_course_reviews import attach_reviewed_sources
+SOURCE_PARSERS = attach_reviewed_sources(PROGRAM_ID, SOURCE_PARSERS)
+SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + tuple(SOURCE_PARSERS)))
