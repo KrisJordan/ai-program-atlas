@@ -26,7 +26,7 @@ def test_source_change_drops_stale_editorial_claims(monkeypatch):
  with pytest.raises(ValueError,match='identity changed'):parse(html.replace('Synthetic inquiry','New inquiry'))
 
 
-@pytest.mark.parametrize('award,n',[('BA',480),('BS',479)])
+@pytest.mark.parametrize('award,n',[('BA',685),('BS',684)])
 def test_reviewed_uger_semantics_and_reciprocal_identity(award,n):
  pid=f'case-western-reserve-university-artificial-intelligence-{award.lower()}-degree'
  p=json.loads(Path('data/programs',pid+'.json').read_text());cs={c['code']:c for c in p['courses']}
@@ -214,4 +214,62 @@ def test_experience_unknowns_and_anthropology_methods(award):
   if path.exists():
    obs=m.parse_descriptions(path.read_text(),pid=pid,award=award,department=dep)
    assert len(obs['courses'])==count
+   assert not any('Changed description' in n for n in obs['notes'])
+
+
+@pytest.mark.parametrize('award',['BA','BS'])
+def test_arts_subjects_hyphenated_corequisite_and_ranges(award):
+ pid=f'case-western-reserve-university-artificial-intelligence-{award.lower()}-degree'
+ p=json.loads(Path('data/programs',pid+'.json').read_text());cs={c['code']:c for c in p['courses']}
+ assert cs['DANC 101']['category']=='applications' and cs['DANC 121']['category']=='human_context'
+ assert cs['MUED 343']['category']=='applications'
+ assert 'Co-req: MUED 396A' in cs['MUED 396B']['prerequisites']
+ assert 'both the fall and spring semesters' in cs['THTR 395']['prerequisites']
+ assert 'only through applications' in cs['THTR 395']['prerequisites']
+ assert cs['MUHI 317']['category_review']['status']=='mixed'
+ for code in ['MUHI 395A','MUHI 395B','THTR 395']:assert cs[code]['category_review']['status']=='unclassified'
+ for code in ['MUHI 395B','THTR 395','MUEN 384']:assert cs[code]['credits'] is None
+ for dep,count in [('mude',2),('mued',10),('muen',2),('mugn',1),('muhi',15),('danc',6),('thtr',12)]:
+  path=Path('/tmp/case-uger-audit',dep+'.html')
+  if path.exists():
+   obs=m.parse_descriptions(path.read_text(),pid=pid,award=award,department=dep)
+   assert len(obs['courses'])==count
+   assert not any('Changed description' in n for n in obs['notes'])
+
+
+@pytest.mark.parametrize('award',['BA','BS'])
+def test_coordinator_english_art_review_and_source_unknown(award):
+ pid=f'case-western-reserve-university-artificial-intelligence-{award.lower()}-degree'
+ p=json.loads(Path('data/programs',pid+'.json').read_text());cs={c['code']:c for c in p['courses']}
+ assert cs['ENGL 390C']['category_review']['status']=='unclassified'
+ assert cs['ENGL 390C']['credits'] is None
+ assert cs['ARTH 101']['category']=='human_context'
+ for dep,count in [('engl',31),('arth',23)]:
+  path=Path('/tmp/case-uger-audit',dep+'.html')
+  if path.exists():
+   obs=m.parse_descriptions(path.read_text(),pid=pid,award=award,department=dep)
+   assert len(obs['courses'])==count
+   assert not any('Changed description' in n for n in obs['notes'])
+
+
+@pytest.mark.parametrize('award',['BA','BS'])
+def test_all_mapped_course_content_has_explicit_review(award):
+ pid=f'case-western-reserve-university-artificial-intelligence-{award.lower()}-degree'
+ p=json.loads(Path('data/programs',pid+'.json').read_text());cs={c['code']:c for c in p['courses']}
+ assert len(cs)=={'BA':744,'BS':756}[award]
+ assert all(c.get('category_review') for c in cs.values())
+ assert cs['FRCH 377']['category_review']['status']=='unclassified'
+ assert cs['HTEC 399B']['category_review']['status']=='unclassified'
+ assert cs['WRIT 230']['category']=='human_context'
+ assert cs['WGST 391']['category']=='applications'
+ assert cs['CLSC 318']['category']=='applications'
+ assert cs['GRMN 314']['category_review']['status']=='mixed'
+ assert cs['WLIT 382']['category_review']['status']=='mixed' and cs['WLIT 382']['credits']==4
+ assert cs['CHIN 350D']['prerequisites'] and 'native' in cs['CHIN 350D']['prerequisites']
+ assert 'There are no prerequisites' in cs['WGST 227']['prerequisites']
+ for dep in ['beth','chst','hpsc','htec','estd','eths','intl','sjus','writ','afst','wgst','chin','frch','kore','span','grmn','japn','wlit','clsc']:
+  path=Path('/tmp/case-uger-audit',dep+'.html')
+  if path.exists():
+   obs=m.parse_descriptions(path.read_text(),pid=pid,award=award,department=dep)
+   assert obs['courses']
    assert not any('Changed description' in n for n in obs['notes'])
