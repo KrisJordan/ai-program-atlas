@@ -151,6 +151,34 @@ def observe_remaining_list_titles(kind, html):
                  source_kind=kind) for row in parser(html).get('courses', [])]
 
 
+def observe_french_spotlights(html):
+    """Read the actual prose spotlights separately from the title-only schedule."""
+    soup = BeautifulSoup(html, 'html.parser')
+    main = soup.find('main')
+    if main is None or clean(main.find('h1')) != 'French & Francophone Studies':
+        raise ValueError('French program heading changed')
+    rows = []
+    for heading in main.find_all('strong'):
+        match = re.fullmatch(r'(21G\.\d+)\s+(.+)', clean(heading))
+        if match is None:
+            continue
+        body = heading.find_parent('p').find_next('p')
+        if body is None or body.find('strong') is not None or not clean(body):
+            raise ValueError('French spotlight description missing')
+        term = next((clean(v) for v in heading.find_all_previous('div', class_='value')
+                     if re.fullmatch(r'(Fall|Spring|IAP) \d{4}', clean(v))), None)
+        if term is None:
+            raise ValueError('French spotlight term missing')
+        note = heading.find_parent('div', class_='value')
+        enrollment = next((clean(p) for p in note.find_all('p')
+                           if clean(p).startswith('A note regarding the enrollment policy')), None) if note else None
+        rows.append(dict(code=match[1], name=match[2], description=clean(body),
+                         prerequisites=None, units=None, term=term, enrollment=enrollment))
+    if not rows:
+        raise ValueError('French spotlight subjects missing')
+    return rows
+
+
 def observe_literature(html):
     soup = BeautifulSoup(html, 'html.parser')
     selected = soup.find('select', attrs={'name': 'semester'})

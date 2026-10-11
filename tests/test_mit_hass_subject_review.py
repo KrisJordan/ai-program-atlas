@@ -37,6 +37,10 @@ def test_scope_is_exact_and_unread_records_are_not_certified():
                 if evidence['credits'] is not None:
                     assert evidence['units_text']=='9 unit IAP version' and evidence['credits']==9
                 assert 'title' in evidence['rationale']
+            elif evidence.get('evidence_basis') == 'official_code_only':
+                assert evidence['observed_name'] is evidence['description_digest'] is evidence['description_summary'] is None
+                assert evidence['credits'] is evidence['prerequisites'] is None
+                assert evidence['status']=='unclassified' and evidence['category']=='other'
             else:
                 assert evidence['description_digest']
                 assert evidence['description_summary']
@@ -210,7 +214,7 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']['description_reviewed_records']==142
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==144
     assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
         o=entry(code)['observations'][-1]
@@ -445,3 +449,56 @@ def test_remaining_list_title_observations_replay_exact_public_source(kind,file)
     assert saved and all(o['observation_digest'] in hashes for o in saved)
     changed=copy.deepcopy(rows[0]);changed['name']='Unseen changed subject'
     assert review.observation_digest(changed) not in {o['observation_digest'] for o in saved}
+
+
+def test_non_delegated_hass_scope_has_explicit_dispositions_without_full_audit_claim():
+    pending={cid for cid,r in MANIFEST['courses'].items() if r['review_status']=='pending'}
+    architecture=json.loads((ADAPTER/'reviewed_architecture_remainder.json').read_text())
+    # The other primary contribution retains ownership of exactly these source records.
+    assert len(pending)==58
+    assert all(MANIFEST['courses'][cid]['listed_code'].startswith('4.') for cid in pending)
+    assert MANIFEST['counts']==dict(scope=845,reviewed=765,identity_review_needed=20,source_conflict=2,pending=58)
+    assert sum(MANIFEST['evidence_counts'].values())==765
+    assert MANIFEST['full_audit_status']=='partial'
+    assert pending == set(architecture['courses'])
+
+
+def test_code_only_unknowns_do_not_invent_titles_or_content():
+    for code in ['21G.342','21G.347','21M.223J']:
+        o=entry(code)['observations'][-1]
+        assert o['evidence_basis']=='official_code_only'
+        assert o['observed_name'] is o['description_summary'] is o['credits'] is None
+        assert o['status']=='unclassified' and o['category']=='other'
+        assert o['approved_for_integration']
+    for code in ['21G.312','21G.346']:
+        o=entry(code)['observations'][-1]
+        assert o['evidence_basis']=='official_description' and o['description_digest']
+        assert o['catalog_year']=='Spring 2027' and o['category']=='human_context'
+        assert o['prerequisites'] is o['credits'] is None
+
+
+def test_french_spotlight_parser_binds_description_and_term_and_not_schedule_title():
+    html='''<main><h1>French &amp; Francophone Studies</h1><div class="value">Spring 2027</div>
+    <div class="value"><p><strong>21G.312 Oceanic Writing</strong></p><p>Close reading in French.</p>
+    <p><strong>A note regarding the enrollment policy:</strong> limited to18.</p></div></main>'''
+    o=review.observe_french_spotlights(html)[0]
+    assert o['code']=='21G.312' and o['description']=='Close reading in French.'
+    assert o['term']=='Spring 2027' and 'limited to18' in o['enrollment']
+    assert o['units'] is o['prerequisites'] is None
+    with pytest.raises(ValueError,match='description missing'):
+        review.observe_french_spotlights(html.replace('<p>Close reading in French.</p>',''))
+    with pytest.raises(ValueError,match='term missing'):
+        review.observe_french_spotlights(html.replace('Spring 2027','Unknown term'))
+
+
+def test_actual_final_code_and_description_observations_replay():
+    sources=[('french-spotlights','atlas-mit-hass-rest-french.html',review.observe_french_spotlights),
+             ('code-only-language_placement','atlas-mit-hass-rest-language-placement.html',lambda text:review.observe_remaining_list_titles('language_placement',text)),
+             ('code-only-music','atlas-mit-hass-music-degree.html',lambda text:review.observe_remaining_list_titles('music',text))]
+    for source,file,parser in sources:
+        path=Path('/tmp')/file
+        if not path.exists():
+            pytest.skip('Optional ignored official source capture')
+        hashes={review.observation_digest(o) for o in parser(path.read_text())}
+        saved=[o for r in MANIFEST['courses'].values() for o in r['observations'] if o['source_id']=='mit-ai-hass-review-'+source]
+        assert saved and all(o['observation_digest'] in hashes for o in saved)
