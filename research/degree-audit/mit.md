@@ -199,3 +199,9 @@ The original1189source rows remain. With the two priorEECSgroups, currentmappedi
 Contributions11a026b andf900d7d add12 actual-description upgrades acrossFall2024,Fall2022 andSpring2023. Explicit cancellation of21L501 inFall2024 is preserved; an archived description never establishes current availability. TeachingSpanish does not override the formalnone prerequisite on637;638 separately requires intermediateSpanishorpermission. Source-term identities, restrictions and units remain individually cited.
 
 HASS description-supported occurrences now total175, with667limited-title dispositions and three code-onlyunknowns. Primaryidentityholds and degreepolicyquestions remain; fixed3 and other currentrolecounts are unchanged.
+
+### Bounded dated reference content — 2026-10-11
+
+Reread all61 exact-code/title matching departmental annotations for the63 original chart/general-CI-M references. Both source occurrences remain explicit: original roles/IDs and unversioned context are preserved, while supplemental metadata is labeled6-4_2025/listsFall2026. Full annotation hashes guard reruns. This is an authored primary content review, not a second independent reviewer or a cross-version identity merge.6.8301/6.9030 remain unmatched;6.4300's disputed original-reference credits remain null. Content now supports specific corrections such as6.3000 mathematical signal methods,6.4400 graphics algorithms/software, and6.1800 computer systems; mixed subjects remain other.
+
+Manual role sets are still3fixed,275option,904contextual identities. The ledger's category sums are recomputed only over those independently enumerated unchanged sets, not used to establish requirement membership. The full degree audit remains in progress with the separately recorded source/cohort questions and remaining actual-description work.

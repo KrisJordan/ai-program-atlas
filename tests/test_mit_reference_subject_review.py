@@ -13,11 +13,14 @@ def test_exact_reference_identity_and_title_required():
     m.observe([other]);assert other['category']=='other'
 
 
-def test_ambiguous_titles_stay_unclassified_and_versions_stay_distinct():
+def test_title_observation_remains_limited_when_dated_metadata_is_separate():
     p=json.loads(Path('data/programs/mit-ai-decision-making-bs.json').read_text());by={c['id']:c for c in p['courses']}
-    assert by['mit-ai-6-3260-j']['category']=='other'
+    assert m.REVIEWS['mit-ai-6-3260-j']['category']=='other'
+    assert by['mit-ai-6-3260-j']['category']=='mathematics'
     assert by['mit-ai-v2025-6-3260']['category']=='mathematics'
     assert by['mit-ai-6-5931']['category']=='systems'
-    assert 'Limited official-title review only.'in by['mit-ai-6-5931']['category_review']['rationale']
-    assert by['mit-ai-6-5931']['description']is None
+    assert 'Bounded dated annotation review.'in by['mit-ai-6-5931']['category_review']['rationale']
+    assert by['mit-ai-6-5931']['description']
+    assert by['mit-ai-6-5931']['source_id']!=by['mit-ai-v2025-6-5931']['source_id']
+    assert set(by['mit-ai-6-5931']['category_review']['source_ids'])=={by['mit-ai-6-5931']['source_id'],'mit-ai-decision-making-bs-versioned'}
     assert len(m.REVIEWS)==63 and sum(r['category']!='other'for r in m.REVIEWS.values())==39

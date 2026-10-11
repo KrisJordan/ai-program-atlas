@@ -210,3 +210,6 @@ SOURCE_PARSERS.update(clinic_review.SOURCE_PARSERS)
 hass_hold_dispositions = import_module('atlas.adapters.mit-ai-decision-making-bs.hass_hold_dispositions')
 for url in hass_hold_dispositions.URLS:
     SOURCE_PARSERS[url] = hass_hold_dispositions.with_dispositions(SOURCE_PARSERS[url], url)
+
+reference_annotations = import_module('atlas.adapters.mit-ai-decision-making-bs.reference_annotations')
+SOURCE_PARSERS[policies.EMBEDDED] = reference_annotations.with_annotations(SOURCE_PARSERS[policies.EMBEDDED])
