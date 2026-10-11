@@ -186,3 +186,14 @@ Three guarded CIVE notes preserve conditions without changing preparation fields
 This batch reviewed 63 distinct source descriptions and added **75 description fields across 7 variants**, bringing the total to **1141 of1,593 course observations**. The exact remaining inventory now contains **452 accessible unreviewed observations across 411 codes**. All source timestamps remain the actual catalog fetch times. All requirement graphs, credit amounts, preparation fields and public-resource links remain unchanged.
 
 Validation: **142 Northeastern-focused tests passed**; all23 temporary ingest/repeat/export/build/integrity checks passed. All10 affected source registrations succeeded twice with zero repeat candidates/source changes. The queue integrity test verifies its counts and exact code/program membership against the concrete records.
+
+## Accounting finance and information analysis — 2026-10-11
+
+Read the remaining nine Accounting,26 Finance and three Management Information Systems descriptions in the existing Business variant's officially listed choices. Concise summaries cover financial analysis, financial machine learning, econometrics, accounting analytics, valuation, data mining and visualization. They describe course content rather than investment recommendations or credential attainment. Special finance topics remain instructor-dependent.
+
+Guarded notes retain the source's expected programming or finance-concept familiarity without converting that broad expectation into a finite prerequisite list. FINA4412 explicitly disclaims preparation for the Certified Financial Planner examination; that qualification is preserved. Concentration selection, course eligibility expressions and all14 concentration requirement trees remain unchanged.
+
+
+This batch reviewed 38 distinct source descriptions and added **38 description fields across 1 variants**, bringing the total to **1179 of1,593 course observations**. The exact remaining inventory now contains **414 accessible unreviewed observations across 373 codes**. All source timestamps remain the actual catalog fetch times. All requirement graphs, credit amounts, preparation fields and public-resource links remain unchanged.
+
+Validation: **144 Northeastern-focused tests passed**; all23 temporary ingest/repeat/export/build/integrity checks passed. All3 affected source registrations succeeded twice with zero repeat candidates/source changes. The queue integrity test verifies its counts and exact code/program membership against the concrete records.

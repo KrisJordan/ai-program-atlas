@@ -216,6 +216,8 @@ def test_listed_disciplinary_courses_have_catalog_facts_without_forcing_descript
     ('PSYC','Psychology (PSYC)','PSYC 3510','Students who do not meet course prerequisites may seek permission of instructor.','permission is not guaranteed'),
     ('PHTH','Public Health (PHTH)','PHTH 5222','Requires permission of instructor for students outside designated programs.','does not enumerate those programs'),
     ('JRNL','Journalism (JRNL)','JRNL 5360','International students wishing to register need to speak to the International Student and Scholar Institute prior to registration.','before registering'),
+    ('FINA','Finance and Insurance (FINA)','FINA 4460','Familiarity with a programming language such as Python is expected.','no specific prior programming course is named'),
+    ('FINA','Finance and Insurance (FINA)','FINA 4412','This course is not designed to prepare students to take the Certified Financial Planner exam.','not designed as preparation'),
 ])
 def test_scoped_registration_conditions_keep_eligibility_uncertainty(subject,heading,code,prose,note):
     html=page(f'<div class="courseblock"><p class="courseblocktitle">{code}. Sample course. (4 Hours)</p><p class="cb_desc">{prose}</p></div>',heading=heading)
