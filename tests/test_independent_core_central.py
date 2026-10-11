@@ -45,7 +45,7 @@ def test_scope_excludes_primary_authored_rit():
     assert not any(pid.startswith('rochester-institute') for pid in ENTRIES)
 
 
-@pytest.mark.parametrize('pid', BUFFALO)
+@pytest.mark.parametrize('pid', [pid for pid in BUFFALO if 'quantitative-economics' not in pid])
 def test_buffalo_framework_and_dated_candidates_do_not_become_fixed_courses(pid):
     p, e = load(pid), ENTRIES[pid]
     assert e['dimensions']['fixed_requirements']['status'] == 'unverified'
@@ -102,9 +102,15 @@ def test_purdue_named_choices_and_nested_nlp_transcription():
     assert sum(bool(q['course_ids']) for q in children) == 1
     assert all(q['credits'] == 3 for q in children)
     union = set().union(*(set(v) for v in e['manual_option_components'].values()))
-    assert union == set(e['expected_course_ids']['options']) and len(union) == 140
+    # The earlier mapped college/core options stay in the graph, but the new
+    # independent pass certifies only its named department subset.
+    assert union == set(e['reviewed_option_subset']) and len(union) == 33
+    assert union <= set(requirement_profile(p, include_course_ids=True)['course_ids']['options'])
+    assert e['expected_course_ids']['options'] is None
+    assert len(e['reviewed_option_subset']) == 33
+    assert set(e['reviewed_option_subset']) <= union
     for key, rid in [('UCC01', 'purdue-ai-bs-college-core-written-communication'), ('UCC08', 'purdue-ai-bs-college-core-science-technology-and-society')]:
-        assert set(r[rid]['course_ids']) == set(e['manual_option_components'][key])
+        assert len(r[rid]['course_ids']) == {'UCC01': 10, 'UCC08': 94}[key]
         assert r[rid]['kind'] == 'choose_courses' and r[rid]['count'] == 1
     courses = {c['id']: c for c in p['courses']}
     assert courses['purdue-ma-26100']['credits'] == 4
@@ -115,8 +121,8 @@ def test_purdue_named_choices_and_nested_nlp_transcription():
 
 def test_purdue_content_checks_have_explicit_dated_and_unreviewed_boundaries():
     p = load('purdue-ai-bs');e = ENTRIES[p['id']]
-    assert e['expected_profile']['options']['categories'] is None
-    assert e['expected_profile']['unresolved']['categories'] is None
+    assert e['expected_profile']['options'] is None
+    assert e['expected_profile']['unresolved'] is None
     assert e['expected_course_ids']['unresolved'] is None
     courses = {c['id']: c for c in p['courses']}
     for number, category in {'18000': 'foundations', '18200': 'other', '34800': 'systems', '37300': 'ai_ml', '38100': 'foundations', '44800': 'systems', '47100': 'ai_ml', '48300': 'foundations', '52300': 'human_context', '57700': 'ai_ml'}.items():

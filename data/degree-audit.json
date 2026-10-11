@@ -4624,20 +4624,24 @@
       "core_review": {
         "program_id": "delaware-ai-engineering-major",
         "reviewed_at": "2026-10-11",
-        "reviewer": "independent-core-central / survey_national",
+        "reviewer": "independent-resolution-delaware-furman / resolve_delaware_furman",
         "reviewed_content_hash": "3c6be795281d2c88bb6d4213e19fc78ff8c3f081d09f7931e6eaa2687688731a",
         "dimensions": {
           "fixed_requirements": {
             "status": "unverified",
-            "summary": "The source explicitly labels its sequence a sample. Its 28 named identities are correctly retained beneath note ancestry; zero mapped fixed courses is not an independently verified empty degree.",
+            "summary": "The complete current department sequence remains explicitly a Sample Plan of Study with courses subject to change. The linked 2025 curriculum flowchart has no verified current cohort applicability and differs on named alternatives; it does not establish the 2026\u201327 fixed inventory.",
             "evidence": [
               {
                 "url": "https://www.ece.udel.edu/academics/undergraduate/artificial-intelligence-engineering-bs/",
                 "locator": "Sample Plan of Study: all four years; courses subject to change and direction to 2026\u201327 catalog"
+              },
+              {
+                "url": "https://www.ece.udel.edu/wp-content/uploads/2025/07/2025-AI-flowchart.pdf",
+                "locator": "Entire one-page term grid; ELEG405 and ELEG398, without ELEG625/ELEG397; no applicability statement for 2026\u201327"
               }
             ],
             "limitations": [
-              "The mandatory current catalog inventory remains unverified; its recorded HTTP 403 was not retried."
+              "Current catalog requirement source previously returned HTTP403 and was not retried. The linked 2025 flowchart does not state applicable entry cohort or establish current mandatory roles. No fixed absence is certified."
             ]
           },
           "choice_rules": {
@@ -4650,7 +4654,8 @@
               }
             ],
             "limitations": [
-              "These are illustrative alternatives, not certified graduation choice rules. Exact AI/STEM elective pools, undergraduate eligibility for ELEG 625 and individual course amounts remain unknown."
+              "These are illustrative alternatives, not certified graduation choice rules. Exact AI/STEM elective pools, undergraduate eligibility for ELEG 625 and individual course amounts remain unknown.",
+              "The older flowchart shows ELEG405 and ELEG398 without the current sample alternatives; the edition/applicability conflict is unresolved."
             ]
           },
           "classification": {
@@ -4723,6 +4728,79 @@
         },
         "expected_profile_scope": "Complete represented sample-plan identities; no binding curriculum certification.",
         "full_degree_verified": false,
+        "resolution_outcome": "unresolved_after_permitted_alternatives",
+        "sources": [
+          {
+            "url": "https://www.ece.udel.edu/academics/undergraduate/artificial-intelligence-engineering-bs/",
+            "catalog_year": null,
+            "locator": "Complete Sample Plan of Study, four years, two alternatives, paired physics and current catalog direction",
+            "checked_at": "2026-10-11",
+            "access_status": "readable",
+            "finding": "Readable saved official HTML and current web reader; still explicitly sample",
+            "saved_source_path": "var/resolution-delaware-furman/delaware-department.html",
+            "saved_source_sha256": "f92f8a4bd2ee98e300ff2fdd8662f2df17ec1772716abd65d62b49fe83c4d1fb",
+            "saved_source_format": "official_cached_html"
+          },
+          {
+            "url": "https://www.ece.udel.edu/wp-content/uploads/2025/07/2025-AI-flowchart.pdf",
+            "catalog_year": null,
+            "locator": "One-page Flowchart of AI Engineering Curriculum, term grid and named courses",
+            "checked_at": "2026-10-11",
+            "access_status": "readable",
+            "finding": "Readable public PDF; 2025 path, no current cohort applicability; ELEG405 and ELEG398 shown without current alternatives",
+            "saved_source_path": "var/resolution-delaware-furman/delaware-flowchart.web-reader.txt",
+            "saved_source_sha256": "792ad7a5cfe765c08cc51d2605c45babe86f5f2954a7e87a633f26745861650f",
+            "saved_source_format": "public_web_reader_output"
+          }
+        ],
+        "manual_category_course_ids": {
+          "foundations": [
+            "delaware-cisc-220",
+            "delaware-cisc-320"
+          ],
+          "mathematics": [
+            "delaware-math-241",
+            "delaware-math-242",
+            "delaware-math-243",
+            "delaware-math-351",
+            "delaware-math-210",
+            "delaware-math-450",
+            "delaware-math-426"
+          ],
+          "ai_ml": [
+            "delaware-eleg-381",
+            "delaware-eleg-405",
+            "delaware-eleg-404"
+          ],
+          "human_context": [
+            "delaware-engl-110",
+            "delaware-eleg-491"
+          ],
+          "other": [
+            "delaware-eggg-101",
+            "delaware-cisc-106",
+            "delaware-cpeg-202",
+            "delaware-cisc-210",
+            "delaware-math-219",
+            "delaware-eleg-310",
+            "delaware-eleg-305",
+            "delaware-eleg-625",
+            "delaware-eleg-397",
+            "delaware-eleg-398",
+            "delaware-cpeg-457",
+            "delaware-eleg-498",
+            "delaware-eleg-401",
+            "delaware-eleg-499"
+          ]
+        },
+        "checked_boundaries": [
+          {
+            "url": "https://catalog.udel.edu/preview_program.php?catoid=97&poid=98013&returnto=35894",
+            "access_status": "prior_http403_not_retried",
+            "locator": "2026\u201327 AI Engineering BS linked catalog"
+          }
+        ],
+        "manual_source_read_scope": "Exact source sections described in sources were read; requirement and subject sets describe mapped observations only. No inferred degree-wide fixed or choice set.",
         "ledger": "research/degree-audit/independent-core-central.json"
       }
     },
@@ -6408,46 +6486,82 @@
       "core_review": {
         "program_id": "furman-ai-bs",
         "reviewed_at": "2026-10-11",
-        "reviewer": "independent-core-central / survey_national",
+        "reviewer": "independent-resolution-delaware-furman / resolve_delaware_furman",
         "reviewed_content_hash": "f8e4c03738647547f23ebf8136013874fe2047443e8060bc34122cdff1016f1c",
         "dimensions": {
           "fixed_requirements": {
             "status": "unverified",
-            "summary": "Only program identity is corroborated from the public directory. An empty stored graph supplies no fixed, choice or subject evidence.",
+            "summary": "The public directory confirms the undergraduate AI BS, and department/Program Overview pages explicitly describe declaring an AI major. Neither enumerates its fixed or choice curriculum. CSC105 themes are introductory opportunities for students from all majors and establish no AI degree obligation.",
             "evidence": [
               {
                 "url": "https://www.furman.edu/academics/majors-minors-programs/",
                 "locator": "Artificial Intelligence Major directory card: BS and undergraduate major; no requirements or course metadata"
+              },
+              {
+                "url": "https://www.furman.edu/academics/computer-science/",
+                "locator": "AI named in major declaration sentence"
+              },
+              {
+                "url": "https://www.furman.edu/academics/computer-science/program-overview/",
+                "locator": "AI major declaration sentence and Introductory Courses section"
+              },
+              {
+                "url": "https://www.furman.edu/academics/computer-science/program-overview/introductory-courses/",
+                "locator": "CSC105 themes, Fall 2026 and Spring 2027; introduction for all majors"
               }
             ],
             "limitations": [
-              "The linked AI major page was recorded as password protected by the primary reviewer; this pass did not retry it or independently reproduce the gate. No authoritative AI BS curriculum is available in the inspected cache."
+              "The AI detail-page password boundary was not retried. The earlier different-program catalog403 is retained only as a historical note: its exact URL is not preserved in the adjacent source notes and it is not an independently established AI curriculum blocker. No named AI BS course obligation, choice pool or curriculum course classification is established by these alternatives. Empty mapped categories remain null; they do not certify no coursework."
             ]
           },
           "choice_rules": {
             "status": "unverified",
-            "summary": "Only program identity is corroborated from the public directory. An empty stored graph supplies no fixed, choice or subject evidence.",
+            "summary": "The public directory confirms the undergraduate AI BS, and department/Program Overview pages explicitly describe declaring an AI major. Neither enumerates its fixed or choice curriculum. CSC105 themes are introductory opportunities for students from all majors and establish no AI degree obligation.",
             "evidence": [
               {
                 "url": "https://www.furman.edu/academics/majors-minors-programs/",
                 "locator": "Artificial Intelligence Major directory card: BS and undergraduate major; no requirements or course metadata"
+              },
+              {
+                "url": "https://www.furman.edu/academics/computer-science/",
+                "locator": "AI named in major declaration sentence"
+              },
+              {
+                "url": "https://www.furman.edu/academics/computer-science/program-overview/",
+                "locator": "AI major declaration sentence and Introductory Courses section"
+              },
+              {
+                "url": "https://www.furman.edu/academics/computer-science/program-overview/introductory-courses/",
+                "locator": "CSC105 themes, Fall 2026 and Spring 2027; introduction for all majors"
               }
             ],
             "limitations": [
-              "The linked AI major page was recorded as password protected by the primary reviewer; this pass did not retry it or independently reproduce the gate. No authoritative AI BS curriculum is available in the inspected cache."
+              "The AI detail-page password boundary was not retried. The earlier different-program catalog403 is retained only as a historical note: its exact URL is not preserved in the adjacent source notes and it is not an independently established AI curriculum blocker. No named AI BS course obligation, choice pool or curriculum course classification is established by these alternatives. Empty mapped categories remain null; they do not certify no coursework."
             ]
           },
           "classification": {
             "status": "unverified",
-            "summary": "Only program identity is corroborated from the public directory. An empty stored graph supplies no fixed, choice or subject evidence.",
+            "summary": "The public directory confirms the undergraduate AI BS, and department/Program Overview pages explicitly describe declaring an AI major. Neither enumerates its fixed or choice curriculum. CSC105 themes are introductory opportunities for students from all majors and establish no AI degree obligation.",
             "evidence": [
               {
                 "url": "https://www.furman.edu/academics/majors-minors-programs/",
                 "locator": "Artificial Intelligence Major directory card: BS and undergraduate major; no requirements or course metadata"
+              },
+              {
+                "url": "https://www.furman.edu/academics/computer-science/",
+                "locator": "AI named in major declaration sentence"
+              },
+              {
+                "url": "https://www.furman.edu/academics/computer-science/program-overview/",
+                "locator": "AI major declaration sentence and Introductory Courses section"
+              },
+              {
+                "url": "https://www.furman.edu/academics/computer-science/program-overview/introductory-courses/",
+                "locator": "CSC105 themes, Fall 2026 and Spring 2027; introduction for all majors"
               }
             ],
             "limitations": [
-              "The linked AI major page was recorded as password protected by the primary reviewer; this pass did not retry it or independently reproduce the gate. No authoritative AI BS curriculum is available in the inspected cache."
+              "The AI detail-page password boundary was not retried. The earlier different-program catalog403 is retained only as a historical note: its exact URL is not preserved in the adjacent source notes and it is not an independently established AI curriculum blocker. No named AI BS course obligation, choice pool or curriculum course classification is established by these alternatives. Empty mapped categories remain null; they do not certify no coursework."
             ]
           }
         },
@@ -6472,6 +6586,62 @@
         },
         "expected_profile_scope": "Empty mapped graph only; all curriculum dimensions unverified.",
         "full_degree_verified": false,
+        "resolution_outcome": "unresolved_after_permitted_alternatives",
+        "sources": [
+          {
+            "url": "https://www.furman.edu/academics/majors-minors-programs/",
+            "catalog_year": null,
+            "locator": "Both AI Major directory cards",
+            "checked_at": "2026-10-11",
+            "access_status": "readable",
+            "finding": "Readable saved official HTML and current web reader; BS undergraduate identity only",
+            "saved_source_path": "var/resolution-delaware-furman/furman-directory.html",
+            "saved_source_sha256": "89ca9d99e2e040d2da14d431eaf26ca1be8cb0280ae3f278ac7f7d8ae7eb53a6",
+            "saved_source_format": "official_cached_html"
+          },
+          {
+            "url": "https://www.furman.edu/academics/computer-science/",
+            "catalog_year": null,
+            "locator": "Mission, major declaration sentence, Program Overview link",
+            "checked_at": "2026-10-11",
+            "access_status": "readable",
+            "finding": "Readable web reader; AI explicitly declarable; no AI curriculum",
+            "saved_source_path": "var/resolution-delaware-furman/furman-department.web-reader.txt",
+            "saved_source_sha256": "c7496fd8a38d2a521a408e9648a4fa1c05aa9fbaeda0c553ae8925108846260f",
+            "saved_source_format": "public_web_reader_output"
+          },
+          {
+            "url": "https://www.furman.edu/academics/computer-science/program-overview/",
+            "catalog_year": null,
+            "locator": "Major declaration sentence and Introductory Courses section",
+            "checked_at": "2026-10-11",
+            "access_status": "readable",
+            "finding": "Readable web reader; no AI fixed/choice curriculum",
+            "saved_source_path": "var/resolution-delaware-furman/furman-overview.web-reader.txt",
+            "saved_source_sha256": "21cb0b4ce1a5c373eeb02b5db6a3d1c2721b52bf4bdb4b82e726418cff75b79b",
+            "saved_source_format": "public_web_reader_output"
+          },
+          {
+            "url": "https://www.furman.edu/academics/computer-science/program-overview/introductory-courses/",
+            "catalog_year": null,
+            "locator": "CSC105 introduction, both Fall 2026 themes and Spring 2027 Biowearables theme",
+            "checked_at": "2026-10-11",
+            "access_status": "readable",
+            "finding": "Readable web reader; courses for all majors, no AI BS requirement role",
+            "saved_source_path": "var/resolution-delaware-furman/furman-introductory.web-reader.txt",
+            "saved_source_sha256": "d7ae8437c1df167dbc4d978c991e90322be834e3ef70efa99690dfa2b51f98a4",
+            "saved_source_format": "public_web_reader_output"
+          }
+        ],
+        "manual_category_course_ids": null,
+        "checked_boundaries": [
+          {
+            "url": "https://www.furman.edu/academics/majors-minors-programs/artificial-intelligence-major/",
+            "access_status": "prior_password_gate_not_retried",
+            "locator": "AI major detail linked by directory"
+          }
+        ],
+        "manual_source_read_scope": "Exact source sections described in sources were read; requirement and subject sets describe mapped observations only. No inferred degree-wide fixed or choice set.",
         "ledger": "research/degree-audit/independent-core-central.json"
       }
     },
@@ -34660,12 +34830,12 @@
       "core_review": {
         "program_id": "purdue-ai-ba",
         "reviewed_at": "2026-10-11",
-        "reviewer": "independent-core-central / survey_national",
+        "reviewer": "independent-resolution-purdue / resolve_purdue",
         "reviewed_content_hash": "3977442614053507f6950f3ef5a6ce27d8261723a12b433d31beae209c4e0885",
         "dimensions": {
           "fixed_requirements": {
             "status": "partial",
-            "summary": "The department explicitly requires the five represented CS identities. Its 15-hour group amount does not establish equal individual credits; individual amounts remain null.",
+            "summary": "Five fixed CS identities are individually enumerated by the department BA plan and match the graph. A complete fixed major inventory remains unestablished because the source gives eight philosophy courses/24 hours without naming their fixed/choice structure.",
             "evidence": [
               {
                 "url": "https://www.cla.purdue.edu/academic/philosophy/students/undergraduate/majors/artificial-intelligence/index.html",
@@ -34673,7 +34843,8 @@
               }
             ],
             "limitations": [
-              "The precise eight-course philosophy inventory and full current CLA/degree rules remain inaccessible; five mapped fixed identities is not a complete degree inventory."
+              "Complete eight-course philosophy inventory and its required/optional divisions are not published on the accessible department plan. The linked denied catalog was not retried. Five fixed computing identities do not establish the complete fixed major set.",
+              "The department page was modified October 15, 2025; its source-specific CS 17600/24300 titles are older than the Fall 2026 directory. Course descriptions and title-version equivalence are unresolved. Individual BA course credits remain null; 15 CS hours cannot be divided equally or replaced with BS credits."
             ]
           },
           "choice_rules": {
@@ -34686,7 +34857,8 @@
               }
             ],
             "limitations": [
-              "The internal required/optional philosophy structure and approved options are not established by the overview."
+              "The internal required/optional philosophy structure and approved options are not established by the overview.",
+              "Current philosophy offerings cannot identify degree requirements, and no BS philosophy choice pool is inherited into this independent BA."
             ]
           },
           "classification": {
@@ -34746,6 +34918,27 @@
         },
         "expected_profile_scope": "Only the five explicitly named department-plan CS records; empty other sets do not mean no philosophy or college requirements.",
         "full_degree_verified": false,
+        "resolution_scope": "Department-major fixed membership, source choice branches and bounded content review; no whole-degree policy certification.",
+        "source_dispositions": [
+          {
+            "url": "https://www.cla.purdue.edu/academic/philosophy/students/undergraduate/majors/artificial-intelligence/index.html",
+            "checked_at": "2026-10-11",
+            "access_status": "accessible; reread complete department page"
+          },
+          {
+            "url": "https://selfservice.mypurdue.purdue.edu/",
+            "checked_at": "2026-10-11",
+            "access_status": "known robots-disallowed linked detail host; not retried"
+          },
+          {
+            "url": "http://catalog.purdue.edu/preview_program.php?catoid=19&poid=35726",
+            "checked_at": "2026-10-11",
+            "access_status": "known HTTP 403 catalog plan; not retried"
+          }
+        ],
+        "corrections": [
+          "No source-backed requirement or course-fact discrepancy found in the curated record. Parser-only correction guards malformed duplicate/truncated/conditional branches."
+        ],
         "ledger": "research/degree-audit/independent-core-central.json"
       }
     },
@@ -36862,12 +37055,12 @@
       "core_review": {
         "program_id": "purdue-ai-bs",
         "reviewed_at": "2026-10-11",
-        "reviewer": "independent-core-central / survey_national",
+        "reviewer": "independent-resolution-purdue / resolve_purdue",
         "reviewed_content_hash": "efeff72ece99c21a402ba002f96ef2edb96b91d2849340140ee1dac9a41a9edc",
         "dimensions": {
           "fixed_requirements": {
-            "status": "partial",
-            "summary": "Nine named fixed department-core identities are independently transcribed and match the graph. Seven two-course core alternatives remain options. The 50\u201351-credit core range is not a scalar total and the four-credit/five-credit multivariate alternatives remain distinct.",
+            "status": "verified",
+            "summary": "The complete Fall 2026-to-present department major page enumerates nine fixed course identities and seven paired core alternatives. The nine fixed identities match the graph exactly; none of the paired choices or capstone alternatives is fixed.",
             "evidence": [
               {
                 "url": "https://www.cs.purdue.edu/undergraduate/curriculum/bachelor-ai.html",
@@ -36875,28 +37068,22 @@
               }
             ],
             "limitations": [
-              "The inaccessible full catalog and degree-wide rules prevent verification that this is the complete fixed degree inventory. The chart counts identities, not the number of courses each student must take."
+              "Scope is the explicitly published department major, not every College of Science or university requirement. Known catalog denial remains and whole-degree status stays blocked.",
+              "50\u201351 core credits is a source range, not a scalar total. The chart counts mapped fixed identities, not every course a student must select."
             ]
           },
           "choice_rules": {
             "status": "partial",
-            "summary": "Source verifies choose two Selective I entries with one nested CS 47700/57700 NLP alternative, choose one Selective II, choose one Philosophy Selective, and one of four three-credit capstone routes. The college permits cross-mixing its two calculus sequences. PWL WC/STS rows contribute 10/94 memberships; the union with 37 named core/college alternatives is 140 mapped identities after overlap.",
+            "summary": "Complete department-major source branches reread: seven choose-one core pairs, choose two Selective I entries with CS 47700/57700 as one nested OR option, choose one Selective II, choose one Philosophy Selective, and one of four three-credit capstone routes. Thirty-three named department option identities match the graph. Non-course capstone routes require pre-approval.",
             "evidence": [
               {
                 "url": "https://www.cs.purdue.edu/undergraduate/curriculum/bachelor-ai.html",
                 "locator": "Fall 2026 to present: complete Core Requirements, Selectives I/II, Philosophy Selective and four capstone routes"
-              },
-              {
-                "url": "https://www.purdue.edu/science/Current_Students/curriculum_and_degree_requirements/laboratory-science.html",
-                "locator": "Mathematics: two sequences and explicit cross-mixing note"
-              },
-              {
-                "url": "https://tableau.it.purdue.edu/t/public/views/ActiveUCCRequirementCourses/ActiveUCCRequirementCourses",
-                "locator": "Actual visible-download crosstab, PWL campus; UCC01 and UCC08 rows, approval intervals including Fall 2026"
               }
             ],
             "limitations": [
-              "Other college pools remain context rather than unrestricted options. Lab applicability, language sequences, exact catalog rules and university AI-competency reconciliation remain unresolved. No open research/honors/AI Forge route is treated as automatic approval."
+              "Department-major branches verified; this replacement does not recertify the broad college/UCC pools or their descriptions. College lab/language applicability and university AI-competency mapping remain unresolved.",
+              "33 named department options are only a reviewed subset of 140 graph options. No whole option/category or contextual pool total is independently established in this pass."
             ]
           },
           "classification": {
@@ -36921,7 +37108,9 @@
               }
             ],
             "limitations": [
-              "Canonical dates are not current-term equivalences; CS 48300 is proposed. This pass does not independently classify the broad GE/culture pool. Option/context category totals are deliberately unchecked."
+              "Canonical dates are not current-term equivalences; CS 48300 is proposed. This pass does not independently classify the broad GE/culture pool. Option/context category totals are deliberately unchecked.",
+              "The nine fixed records have four bounded canonical outlines, three precise-title decisions, one mixed canonical record and one insufficiently described record; descriptions/dated title equivalence are not complete.",
+              "CS 17600 remains other in the BS because Data Engineering in Python does not establish its dominant subject. No department-prefix category inference."
             ]
           }
         },
@@ -36937,148 +37126,7 @@
             "purdue-cs-47100",
             "purdue-psy-12000"
           ],
-          "options": [
-            "purdue-abe-22600",
-            "purdue-abe-29000",
-            "purdue-ad-39500-ucc-340b52b6a5",
-            "purdue-agry-12500",
-            "purdue-agry-28500-pool-f8388d043a51",
-            "purdue-amst-10100-pool-f6b52bcd7ac6",
-            "purdue-amst-31000-ucc-e552209ae1",
-            "purdue-amst-32500-ucc-3ff839fb1a",
-            "purdue-ansc-10200",
-            "purdue-anth-21000-pool-3d6ca61ab87a",
-            "purdue-asec-35500-pool-cddca6bd9027",
-            "purdue-asm-10500",
-            "purdue-asm-23600",
-            "purdue-astr-12300",
-            "purdue-biol-12100",
-            "purdue-btny-28500",
-            "purdue-cce-35500",
-            "purdue-cgt-10501",
-            "purdue-cgt-17208",
-            "purdue-cm-10000",
-            "purdue-com-20400-pool-41c627648399",
-            "purdue-com-25100-pool-13c15818932e",
-            "purdue-cs-10100",
-            "purdue-cs-34800",
-            "purdue-cs-43900",
-            "purdue-cs-44000",
-            "purdue-cs-44800",
-            "purdue-cs-45800",
-            "purdue-cs-47300",
-            "purdue-cs-47500",
-            "purdue-cs-47600",
-            "purdue-cs-47700",
-            "purdue-cs-48300",
-            "purdue-cs-52300",
-            "purdue-cs-52900",
-            "purdue-cs-57700",
-            "purdue-cs-57800",
-            "purdue-eaps-10000",
-            "purdue-eaps-10400",
-            "purdue-eaps-10600",
-            "purdue-eaps-12000",
-            "purdue-eaps-12500",
-            "purdue-eaps-12900",
-            "purdue-eaps-20000",
-            "purdue-edci-20500",
-            "purdue-edps-45900",
-            "purdue-edps-45901",
-            "purdue-eee-35500",
-            "purdue-engl-10600",
-            "purdue-engl-10800",
-            "purdue-engl-22300-pool-5d35abd57f18",
-            "purdue-engl-22600-pool-38b159ae2555",
-            "purdue-engl-23400-ucc-e09a3128a3",
-            "purdue-engl-30400",
-            "purdue-engl-38000-pool-cbe0438ba8aa",
-            "purdue-engr-31000-pool-83c78507b225",
-            "purdue-entm-10500",
-            "purdue-entm-12800",
-            "purdue-epcs-10100",
-            "purdue-epcs-10200",
-            "purdue-epcs-11100",
-            "purdue-epcs-12100",
-            "purdue-epcs-20100",
-            "purdue-epcs-20200",
-            "purdue-epcs-30100",
-            "purdue-epcs-30200",
-            "purdue-epcs-40100",
-            "purdue-epcs-40200",
-            "purdue-fnr-12500",
-            "purdue-fnr-23000",
-            "purdue-fnr-24000",
-            "purdue-fs-16100",
-            "purdue-hist-28000",
-            "purdue-hist-28100",
-            "purdue-hist-28200",
-            "purdue-hist-30305-pool-212400ea9109",
-            "purdue-hist-30605-ucc-04bf3d8e67",
-            "purdue-hist-31305-ucc-111d84e08f",
-            "purdue-hist-31405-ucc-925468300d",
-            "purdue-hist-33205-pool-66ff07e693d5",
-            "purdue-hist-35205-death-disease-medicine",
-            "purdue-hist-36305-ucc-e1d08bd81e",
-            "purdue-hist-38001-pool-fcd11404cf15",
-            "purdue-hist-38400-pool-b74af67b4bb8",
-            "purdue-hist-38700-pool-d757d5e2f9f0",
-            "purdue-honr-19903",
-            "purdue-honr-31300-ucc-43513c84c5",
-            "purdue-honr-46000-pool-3b1826606826",
-            "purdue-hort-12100",
-            "purdue-hort-30600",
-            "purdue-hsci-20100",
-            "purdue-hsci-20200",
-            "purdue-la-16100",
-            "purdue-ma-16100",
-            "purdue-ma-16200",
-            "purdue-ma-16500",
-            "purdue-ma-16600",
-            "purdue-ma-26100",
-            "purdue-ma-26500",
-            "purdue-ma-27101",
-            "purdue-ma-35100",
-            "purdue-ma-41600",
-            "purdue-me-29000-pool-21625d49ef32",
-            "purdue-nres-12500",
-            "purdue-obhr-33500",
-            "purdue-phil-20700",
-            "purdue-phil-20700-ucc-cb5bcbef92",
-            "purdue-phil-20800",
-            "purdue-phil-22100",
-            "purdue-phil-22100-pool-1aa0f04e65be",
-            "purdue-phil-25501",
-            "purdue-phil-25601",
-            "purdue-phil-25701",
-            "purdue-phil-27000-pool-c563336e674e",
-            "purdue-phil-30300",
-            "purdue-phil-32200",
-            "purdue-phil-43200",
-            "purdue-pol-22300-ucc-44589c9e8e",
-            "purdue-pol-23700-pool-a58830e2c438",
-            "purdue-psy-20000",
-            "purdue-psy-22200",
-            "purdue-pubh-20200",
-            "purdue-scla-10100",
-            "purdue-slhs-11500",
-            "purdue-slhs-21500",
-            "purdue-slhs-30900",
-            "purdue-soc-33500-pool-001e1256ac38",
-            "purdue-stat-11300",
-            "purdue-stat-35000",
-            "purdue-stat-51100",
-            "purdue-stat-51600",
-            "purdue-sys-30000-ucc-8445df6041",
-            "purdue-sys-40000",
-            "purdue-tech-12000",
-            "purdue-vip-17910",
-            "purdue-vip-17911",
-            "purdue-vip-17920",
-            "purdue-vip-27920",
-            "purdue-vip-37920",
-            "purdue-vip-47920"
-          ],
+          "options": null,
           "unresolved": null
         },
         "expected_profile": {
@@ -37091,16 +37139,10 @@
               "other": 2
             }
           },
-          "options": {
-            "count": 140,
-            "categories": null
-          },
-          "unresolved": {
-            "count": 1684,
-            "categories": null
-          }
+          "options": null,
+          "unresolved": null
         },
-        "expected_profile_scope": "Source-transcribed fixed/named options and WC/STS membership; contextual total is mapped remainder 1833\u22129\u2212140, not independently verified full pool content.",
+        "expected_profile_scope": "Only the manually transcribed nine fixed department identities and their subject counts are complete expected sets. Thirty-three named department options are checked as a subset; broad option/context counts and subjects remain unchecked.",
         "full_degree_verified": false,
         "manual_option_components": {
           "core_psychology": [
@@ -37157,122 +37199,6 @@
           ],
           "capstone_named_route": [
             "purdue-cs-47600"
-          ],
-          "single_variable_calculus_1": [
-            "purdue-ma-16100",
-            "purdue-ma-16500"
-          ],
-          "single_variable_calculus_2": [
-            "purdue-ma-16200",
-            "purdue-ma-16600"
-          ],
-          "UCC01": [
-            "purdue-amst-10100-pool-f6b52bcd7ac6",
-            "purdue-com-20400-pool-41c627648399",
-            "purdue-edci-20500",
-            "purdue-engl-10600",
-            "purdue-engl-10800",
-            "purdue-engl-30400",
-            "purdue-engl-38000-pool-cbe0438ba8aa",
-            "purdue-honr-19903",
-            "purdue-obhr-33500",
-            "purdue-scla-10100"
-          ],
-          "UCC08": [
-            "purdue-abe-22600",
-            "purdue-abe-29000",
-            "purdue-ad-39500-ucc-340b52b6a5",
-            "purdue-agry-12500",
-            "purdue-agry-28500-pool-f8388d043a51",
-            "purdue-amst-31000-ucc-e552209ae1",
-            "purdue-amst-32500-ucc-3ff839fb1a",
-            "purdue-ansc-10200",
-            "purdue-anth-21000-pool-3d6ca61ab87a",
-            "purdue-asec-35500-pool-cddca6bd9027",
-            "purdue-asm-10500",
-            "purdue-asm-23600",
-            "purdue-astr-12300",
-            "purdue-biol-12100",
-            "purdue-btny-28500",
-            "purdue-cce-35500",
-            "purdue-cgt-10501",
-            "purdue-cgt-17208",
-            "purdue-cm-10000",
-            "purdue-com-25100-pool-13c15818932e",
-            "purdue-cs-10100",
-            "purdue-eaps-10000",
-            "purdue-eaps-10400",
-            "purdue-eaps-10600",
-            "purdue-eaps-12000",
-            "purdue-eaps-12500",
-            "purdue-eaps-12900",
-            "purdue-eaps-20000",
-            "purdue-edps-45900",
-            "purdue-edps-45901",
-            "purdue-eee-35500",
-            "purdue-engl-22300-pool-5d35abd57f18",
-            "purdue-engl-22600-pool-38b159ae2555",
-            "purdue-engl-23400-ucc-e09a3128a3",
-            "purdue-engr-31000-pool-83c78507b225",
-            "purdue-entm-10500",
-            "purdue-entm-12800",
-            "purdue-epcs-10100",
-            "purdue-epcs-10200",
-            "purdue-epcs-11100",
-            "purdue-epcs-12100",
-            "purdue-epcs-20100",
-            "purdue-epcs-20200",
-            "purdue-epcs-30100",
-            "purdue-epcs-30200",
-            "purdue-epcs-40100",
-            "purdue-epcs-40200",
-            "purdue-fnr-12500",
-            "purdue-fnr-23000",
-            "purdue-fnr-24000",
-            "purdue-fs-16100",
-            "purdue-hist-28000",
-            "purdue-hist-28100",
-            "purdue-hist-28200",
-            "purdue-hist-30305-pool-212400ea9109",
-            "purdue-hist-30605-ucc-04bf3d8e67",
-            "purdue-hist-31305-ucc-111d84e08f",
-            "purdue-hist-31405-ucc-925468300d",
-            "purdue-hist-33205-pool-66ff07e693d5",
-            "purdue-hist-35205-death-disease-medicine",
-            "purdue-hist-36305-ucc-e1d08bd81e",
-            "purdue-hist-38001-pool-fcd11404cf15",
-            "purdue-hist-38400-pool-b74af67b4bb8",
-            "purdue-hist-38700-pool-d757d5e2f9f0",
-            "purdue-honr-31300-ucc-43513c84c5",
-            "purdue-honr-46000-pool-3b1826606826",
-            "purdue-hort-12100",
-            "purdue-hort-30600",
-            "purdue-hsci-20100",
-            "purdue-hsci-20200",
-            "purdue-la-16100",
-            "purdue-me-29000-pool-21625d49ef32",
-            "purdue-nres-12500",
-            "purdue-phil-20700-ucc-cb5bcbef92",
-            "purdue-phil-20800",
-            "purdue-phil-22100-pool-1aa0f04e65be",
-            "purdue-phil-27000-pool-c563336e674e",
-            "purdue-pol-22300-ucc-44589c9e8e",
-            "purdue-pol-23700-pool-a58830e2c438",
-            "purdue-pubh-20200",
-            "purdue-slhs-11500",
-            "purdue-slhs-21500",
-            "purdue-slhs-30900",
-            "purdue-soc-33500-pool-001e1256ac38",
-            "purdue-stat-11300",
-            "purdue-sys-30000-ucc-8445df6041",
-            "purdue-sys-40000",
-            "purdue-tech-12000",
-            "purdue-vip-17910",
-            "purdue-vip-17911",
-            "purdue-vip-17920",
-            "purdue-vip-27920",
-            "purdue-vip-37920",
-            "purdue-vip-47920"
           ]
         },
         "classification_reviewed_codes": [
@@ -37287,6 +37213,77 @@
           "CS 48300",
           "CS 52300",
           "CS 57700"
+        ],
+        "resolution_scope": "Department-major fixed membership, source choice branches and bounded content review; no whole-degree policy certification.",
+        "source_dispositions": [
+          {
+            "url": "https://www.cs.purdue.edu/undergraduate/curriculum/bachelor-ai.html",
+            "checked_at": "2026-10-11",
+            "access_status": "accessible; reread complete department page"
+          },
+          {
+            "url": "https://www.cs.purdue.edu/undergraduate/docs/ai-prereq-flowchart-2024.pdf",
+            "checked_at": "2026-10-11",
+            "access_status": "accessible; explicitly effective Fall 2024; not current Fall 2026 prerequisite authority"
+          },
+          {
+            "url": "https://www.purdue.edu/science/Current_Students/majors/index.html",
+            "checked_at": "2026-10-11",
+            "access_status": "accessible; AI row has distinct 2026 and 2025 progression guides"
+          },
+          {
+            "url": "https://purdue0-my.sharepoint.com/:w:/g/personal/edbrandt_purdue_edu/IQDOqCX9L5jeSa3JIc9g2UEGAYh5Kx2h3-J73jhoQ3wC5WU?e=MEJzyQ",
+            "checked_at": "2026-10-11",
+            "access_status": "2026 AI progression guide redirects to Microsoft sign-in; stopped; no authentication attempted"
+          },
+          {
+            "url": "https://selfservice.mypurdue.purdue.edu/",
+            "checked_at": "2026-10-11",
+            "access_status": "known robots-disallowed linked detail host; not retried"
+          },
+          {
+            "url": "https://catalog.purdue.edu/preview_program.php?catoid=19&poid=35981",
+            "checked_at": "2026-10-11",
+            "access_status": "known HTTP 403 catalog plan; not retried"
+          }
+        ],
+        "reviewed_option_subset": [
+          "purdue-cs-34800",
+          "purdue-cs-43900",
+          "purdue-cs-44000",
+          "purdue-cs-44800",
+          "purdue-cs-45800",
+          "purdue-cs-47300",
+          "purdue-cs-47500",
+          "purdue-cs-47600",
+          "purdue-cs-47700",
+          "purdue-cs-48300",
+          "purdue-cs-52300",
+          "purdue-cs-52900",
+          "purdue-cs-57700",
+          "purdue-cs-57800",
+          "purdue-ma-26100",
+          "purdue-ma-26500",
+          "purdue-ma-27101",
+          "purdue-ma-35100",
+          "purdue-ma-41600",
+          "purdue-phil-20700",
+          "purdue-phil-20800",
+          "purdue-phil-22100",
+          "purdue-phil-25501",
+          "purdue-phil-25601",
+          "purdue-phil-25701",
+          "purdue-phil-30300",
+          "purdue-phil-32200",
+          "purdue-phil-43200",
+          "purdue-psy-20000",
+          "purdue-psy-22200",
+          "purdue-stat-35000",
+          "purdue-stat-51100",
+          "purdue-stat-51600"
+        ],
+        "corrections": [
+          "No source-backed requirement or course-fact discrepancy found in the curated record. Parser-only correction guards malformed duplicate/truncated/conditional branches."
         ],
         "ledger": "research/degree-audit/independent-core-central.json"
       }
@@ -41085,51 +41082,60 @@
       "core_review": {
         "program_id": "stevens-institute-of-technology-artificial-intelligence-bs-degree",
         "reviewed_at": "2026-10-11",
-        "reviewer": "independent-core-other",
+        "reviewer": "sol-medium-independent-resolution-stevens",
         "reviewed_content_hash": "a238f2e2e7a9c8d9afeca74a887e7e8f278526149568c2dd7ffecdffc6803606",
         "dimensions": {
           "fixed_requirements": {
             "status": "unverified",
-            "summary": "No complete hydrated Academic Plan capture was located for this independent pass. Available saved plan HTML has unresolved labels and a provisional 58-credit total, so it cannot independently establish the 24 fixed identities reported by the primary reviewer.",
+            "summary": "The permitted degree overview establishes AI BS identity and a two-semester capstone, but links curriculum readers back to the held catalog host. The actual saved Academic Plan still has unresolved course labels and a provisional 58-credit total; no complete rendered plan capture establishes all 24 represented fixed identities independently.",
             "evidence": [
               {
-                "url": "https://stevens.catalog.prod.coursedog.com/programs/qT6Ld1CzBAhQsVKYFNVv/requirements-and-concentrations-n90Np",
-                "locator": "Curriculum / main degree requirements / explicitly named FAQ core"
+                "url": "https://stevens.catalog.prod.coursedog.com/programs/qT6Ld1CzBAhQsVKYFNVv/academic-plan-JKlwr",
+                "locator": "Actual saved Academic Plan: all eight semester panels; unresolved labels and repeated incomplete 58-credit degree total"
+              },
+              {
+                "url": "https://www.stevens.edu/program/bachelors-degree-in-artificial-intelligence",
+                "locator": "AI BS overview: two-semester senior design capstone and Academic Catalog curriculum link; no complete mandatory named-course inventory"
               }
             ],
             "limitations": [
-              "Only incomplete plan HTML and primary-review transcriptions were available; the primary 125-credit browser observation is not replaced with 58."
+              "The catalog host presented a human-verification challenge at ENGR 116 on 2026-10-11; it was not retried through HTTP, browser or search-reader routes. A complete already-permitted saved plan was not located.",
+              "Primary observed 125-credit degree total and 24 fixed identities are retained as primary facts, not independently certified or replaced with placeholder 58. Manually reconstructed labels are not treated as an actual source capture."
             ]
           },
           "choice_rules": {
             "status": "partial",
-            "summary": "The saved rendered requirement text verifies six complete science routes, including the nested CH117/BIO182 lab alternative; two approved math/science electives, six technical electives, four general electives and three of five SUCCESS courses. The 27 directly named option identities in these rules are recorded as a subset only.",
+            "summary": "The actual saved requirements HTML supports six science-sequence rows, two approved math/science electives, six technical electives, four general electives and three SUCCESS selections. Named links remain generic course placeholders in this source; the prior 27-name transcription and specific nested CH117/BIO182 identities are not independently source-certified by this capture.",
             "evidence": [
               {
                 "url": "https://stevens.catalog.prod.coursedog.com/programs/qT6Ld1CzBAhQsVKYFNVv/requirements-and-concentrations-n90Np",
-                "locator": "Actual requirement tables, alternative rows, branch footnotes and uncoded choice slots"
+                "locator": "Actual saved requirements HTML: science-table row topology, explicit numeric elective/SUCCESS rules; unhydrated named-course links"
               }
             ],
             "limitations": [
-              "This independent pass does not certify university-wide policies, general-education inventories, individual waivers, or total degree completion.",
-              "Only incomplete plan HTML and primary-review transcriptions were available; the primary 125-credit browser observation is not replaced with 58."
+              "The reviewed-labels file is an explicitly reconstructed primary browser transcription, not an actual hydrated source capture. Its 27 named options and specific cross-code branch memberships remain primary observations, not independent certification.",
+              "The catalog host challenge is respected; exact current named options and fully hydrated fixed plan require authorized readable source evidence. No whole-degree or policy applicability certification results."
             ]
           },
           "classification": {
             "status": "partial",
-            "summary": "Twenty current fixed-course description captures were independently read, supporting programming/algorithms/design as foundations, mathematics as mathematics, explicit learning methods as AI and bounded mixed/unknown outcomes. Their existence does not establish fixed-plan membership.",
+            "summary": "All 24 represented fixed-course descriptions were independently read from actual earlier permitted captures: six foundations, six mathematics, three AI, two human context, one systems, one entrepreneurship application and five other (four mixed, one unclassified seminar). This validates the subjects of those represented records; missing complete plan evidence prevents independent certification of their fixed membership, and broader option/context classifications remain outside this check.",
             "evidence": [
               {
-                "url": "https://stevens.catalog.prod.coursedog.com/programs/qT6Ld1CzBAhQsVKYFNVv/requirements-and-concentrations-n90Np",
-                "locator": "Current actual course descriptions; fixed-category total where independently checked"
+                "url": "https://stevens.catalog.prod.coursedog.com/courses/056460e31383014015da07255234c549/course-information-aoYks",
+                "locator": "CS423/CS424 actual saved descriptions: general software design and continuation, not automatically AI methods"
               },
               {
-                "url": "https://stevens.catalog.prod.coursedog.com/courses/056460e31383014015da07255234c549/course-information-aoYks",
-                "locator": "CS423 Senior Design I: software for clients; saved ordinary rendered Course Information capture"
+                "url": "https://stevens.catalog.prod.coursedog.com/courses/82d152525dc410019fc9857176880000",
+                "locator": "CS368 saved Course Description: Python data processing, relational database connectivity and privacy/access control; infrastructure supports systems classification"
+              },
+              {
+                "url": "https://stevens.catalog.prod.coursedog.com/courses/adfec19493d510020d3e9cbf6bff0000",
+                "locator": "CS456 saved Course Description: mathematical foundations plus implemented learning algorithms; mixed mathematics/AI retained"
               }
             ],
             "limitations": [
-              "No complete fixed-role category total is independently certified in this pass."
+              "Twenty-four actual descriptions support bounded subject judgments, but do not establish mandatory degree membership. Broader option/context classification and source-year/version limits remain."
             ]
           }
         },
@@ -41146,41 +41152,38 @@
         "source_captures": [
           {
             "path": "/tmp/atlas-stevens-reviewed-labels.html",
-            "sha256": "b29060e35eeb704100fdea3ec340689ae5a3eaf7820b6c5de27cd5ab2ec131ff"
+            "sha256": "b29060e35eeb704100fdea3ec340689ae5a3eaf7820b6c5de27cd5ab2ec131ff",
+            "evidence_kind": "primary_reconstruction_not_actual_source"
           },
           {
             "path": "/tmp/stevens-fixed-course-captures.json",
             "sha256": "7286caf17e6a9110ee3f7cb9367b4a9ad3ad133e18c724a7b0483c0093e27b5c"
+          },
+          {
+            "path": "/tmp/stevens-degree-plan.html",
+            "sha256": "029a6a2a80f519c6932d50223ed43216e692fd7c1e099524578170889da9fd38"
+          },
+          {
+            "path": "/tmp/atlas-national-degree-audit/stevens-cs135.html",
+            "sha256": "830191c5f81c64b0816a7d21b38e25bb565d55d01b98089e5cae299b344d0c00"
+          },
+          {
+            "path": "/tmp/atlas-national-degree-audit/stevens-cs368.html",
+            "sha256": "31c705cf53577a31ad70d7b6c87a4c73624039a4d07d8660af19233ba010bd4c"
+          },
+          {
+            "path": "/tmp/atlas-national-degree-audit/stevens-cs456.html",
+            "sha256": "afd6cc485c1889e39e34e5556dc39cdb5b09479e625485fd78cb2eaf02e44417"
+          },
+          {
+            "path": "/tmp/atlas-national-degree-audit/stevens-cs508.html",
+            "sha256": "9147a44c03b3df83f4db3cb10291519365514724e5422dcc7534fc7df9eaf904"
+          },
+          {
+            "path": "/tmp/stevens-degree-requirements.html",
+            "sha256": "15d575b7733c2c1b486332832073eb65f6c8661d23c9793549bf1e98cd8e3430",
+            "evidence_kind": "actual_saved_unhydrated_source"
           }
-        ],
-        "reviewed_option_subset": [
-          "stevens-bia-665",
-          "stevens-bio-181",
-          "stevens-bio-182",
-          "stevens-ce-240",
-          "stevens-ch-115",
-          "stevens-ch-116",
-          "stevens-ch-117",
-          "stevens-cs-532",
-          "stevens-cs-544",
-          "stevens-cs-545",
-          "stevens-cs-558-cpe-558",
-          "stevens-cs-560",
-          "stevens-cs-582",
-          "stevens-cs-584",
-          "stevens-cs-589",
-          "stevens-en-250",
-          "stevens-ma-661",
-          "stevens-me-598",
-          "stevens-nano-200",
-          "stevens-pep-111",
-          "stevens-pep-112",
-          "stevens-pep-221",
-          "stevens-prv-201",
-          "stevens-prv-202",
-          "stevens-prv-203",
-          "stevens-prv-204",
-          "stevens-prv-205"
         ],
         "full_degree_verified": false,
         "ledger": "research/degree-audit/independent-core-other.json"
@@ -41244,47 +41247,90 @@
       "core_review": {
         "program_id": "uc-merced-ai-bs",
         "reviewed_at": "2026-10-11",
-        "reviewer": "independent-core-other",
-        "reviewed_content_hash": "1a626496f1c9bc9b119f6e8d846b4d2891e02deafd9d6a04dc4b6abcf412052d",
+        "reviewer": "independent-resolution-merced",
+        "reviewed_content_hash": "2ba56703c98bcc42e0c1965f563f731623abd35957ad065810348ba705bcdb7b",
         "dimensions": {
           "fixed_requirements": {
             "status": "unverified",
-            "summary": "The readable degree identity/context does not establish an authoritative named curriculum. Catalog access is already held at HTTP 403; an empty seed inventory cannot certify zero requirements.",
+            "summary": "Official AI BS context, Senate review and endorsement were reread, but no readable authoritative named AI BS curriculum was established. The empty represented inventory does not certify zero fixed requirements.",
             "evidence": [
               {
                 "url": "https://www.ucmerced.edu/majors-and-minors/artificial-intelligence-bs",
-                "locator": "Curriculum / main degree requirements / explicitly named FAQ core"
+                "locator": "Overview and UC Merced Artificial Intelligence Program: aims without named courses or catalog edition"
+              },
+              {
+                "url": "https://senate.ucmerced.edu/node/7946",
+                "locator": "AY 2025\u201326: AI BS review row dated March 3\u2013April 7, 2026; completed; exact proposal link"
+              },
+              {
+                "url": "https://senate.ucmerced.edu/sites/g/files/ufvvjh1616/f/page/documents/ugc_annual_report_ay_25-26.pdf",
+                "locator": "AY 2025\u201326 report page 3: AI BS review dated May 13"
+              },
+              {
+                "url": "https://senate.ucmerced.edu/sites/g/files/ufvvjh1616/f/page/documents/divcoannualreport2025_2026.pdf",
+                "locator": "AY 2025\u201326 report page 6 Appendix A: AI BS proposal endorsement"
+              },
+              {
+                "url": "https://engr-advising.ucmerced.edu/majors/cse",
+                "locator": "Major Requirements: 2025\u201326 CSE catalog/plan and advisor flowchart; separate degree"
               }
             ],
             "limitations": [
-              "Current catalog https://catalog.ucmerced.edu/ is already blocked at HTTP 403; no denied route was retried."
+              "Current catalog https://catalog.ucmerced.edu/ remains held at the prior HTTP 403 boundary; no catalog route was requested in this follow-up.",
+              "Exact Senate-linked AI BS proposal https://ucmerced.box.com/s/dcp2fpp8o1owv2lgqxmdpkzdnubi8jdu was not readable through the ordinary reader: nonretryable 500 redirect to ucmerced.app.box.com marked unsafe; no redirect retry or alternate endpoint was attempted.",
+              "Senate review/endorsement does not establish the adopted course list, applicable AI BS catalog year or cohort. The 2025\u201326 CSE advising curriculum cannot be inherited by the separate AI BS."
             ]
           },
           "choice_rules": {
             "status": "unverified",
-            "summary": "No readable authoritative choice rules were available in the saved source captures. Program aims and career examples cannot establish electives or prerequisite requirements.",
+            "summary": "The inspected AI BS alternatives contain no named choice paths or selection quantities. CSE flowcharts, general program aims and careers do not establish AI BS options or prerequisites.",
             "evidence": [
               {
                 "url": "https://www.ucmerced.edu/majors-and-minors/artificial-intelligence-bs",
-                "locator": "Actual requirement tables, alternative rows, branch footnotes and uncoded choice slots"
+                "locator": "Overview and UC Merced Artificial Intelligence Program: aims without named courses or catalog edition"
+              },
+              {
+                "url": "https://senate.ucmerced.edu/node/7946",
+                "locator": "AY 2025\u201326: AI BS review row dated March 3\u2013April 7, 2026; completed; exact proposal link"
+              },
+              {
+                "url": "https://senate.ucmerced.edu/sites/g/files/ufvvjh1616/f/page/documents/ugc_annual_report_ay_25-26.pdf",
+                "locator": "AY 2025\u201326 report page 3: AI BS review dated May 13"
+              },
+              {
+                "url": "https://senate.ucmerced.edu/sites/g/files/ufvvjh1616/f/page/documents/divcoannualreport2025_2026.pdf",
+                "locator": "AY 2025\u201326 report page 6 Appendix A: AI BS proposal endorsement"
+              },
+              {
+                "url": "https://engr-advising.ucmerced.edu/majors/cse",
+                "locator": "Major Requirements: 2025\u201326 CSE catalog/plan and advisor flowchart; separate degree"
               }
             ],
             "limitations": [
-              "This independent pass does not certify university-wide policies, general-education inventories, individual waivers, or total degree completion.",
-              "Current catalog https://catalog.ucmerced.edu/ is already blocked at HTTP 403; no denied route was retried."
+              "Current catalog https://catalog.ucmerced.edu/ remains held at the prior HTTP 403 boundary; no catalog route was requested in this follow-up.",
+              "Exact Senate-linked AI BS proposal https://ucmerced.box.com/s/dcp2fpp8o1owv2lgqxmdpkzdnubi8jdu was not readable through the ordinary reader: nonretryable 500 redirect to ucmerced.app.box.com marked unsafe; no redirect retry or alternate endpoint was attempted.",
+              "Senate review/endorsement does not establish the adopted course list, applicable AI BS catalog year or cohort. The 2025\u201326 CSE advising curriculum cannot be inherited by the separate AI BS.",
+              "This bounded follow-up does not certify degree-wide policies, general education, waivers or full degree completion."
             ]
           },
           "classification": {
             "status": "unverified",
-            "summary": "No authoritative course descriptions were available for an independently established curriculum; zero represented courses is not a verified category distribution.",
+            "summary": "An authoritative AI BS course set and its descriptions were not established, so no fixed-course subject distribution can be independently certified.",
             "evidence": [
               {
                 "url": "https://www.ucmerced.edu/majors-and-minors/artificial-intelligence-bs",
-                "locator": "Current actual course descriptions; fixed-category total where independently checked"
+                "locator": "Overview and UC Merced Artificial Intelligence Program: aims without named courses or catalog edition"
+              },
+              {
+                "url": "https://senate.ucmerced.edu/node/7946",
+                "locator": "AY 2025\u201326: AI BS review row dated March 3\u2013April 7, 2026; completed; exact proposal link"
               }
             ],
             "limitations": [
-              "No accessible authoritative curriculum/course descriptions; catalog denial remains."
+              "Current catalog https://catalog.ucmerced.edu/ remains held at the prior HTTP 403 boundary; no catalog route was requested in this follow-up.",
+              "Exact Senate-linked AI BS proposal https://ucmerced.box.com/s/dcp2fpp8o1owv2lgqxmdpkzdnubi8jdu was not readable through the ordinary reader: nonretryable 500 redirect to ucmerced.app.box.com marked unsafe; no redirect retry or alternate endpoint was attempted.",
+              "Senate review/endorsement does not establish the adopted course list, applicable AI BS catalog year or cohort. The 2025\u201326 CSE advising curriculum cannot be inherited by the separate AI BS.",
+              "All expected role sets, counts and category totals remain null, meaning unchecked rather than absent."
             ]
           }
         },
@@ -44017,7 +44063,7 @@
       "core_review": {
         "program_id": "university-at-buffalo-suny-ai-and-geospatial-analytics-bs-degree",
         "reviewed_at": "2026-10-11",
-        "reviewer": "independent-core-central / survey_national",
+        "reviewer": "independent-resolution-buffalo / resolve_buffalo",
         "reviewed_content_hash": "5bd640ec12c56ff8235b076b352d725fa4b490d5ef9fb0c93abb3d31f51584f8",
         "dimensions": {
           "fixed_requirements": {
@@ -44031,11 +44077,17 @@
               {
                 "url": "https://engineering.buffalo.edu/ai-society/academics.html",
                 "locator": "Based in AI and its Societal Impacts: five framework components and eight current AI+X major links"
+              },
+              {
+                "url": "https://www.buffalo.edu/cas/geography/undergraduate/bs-ai-geospatial-analytics.html",
+                "locator": "Program highlights; What you will learn"
               }
             ],
             "limitations": [
               "The individual major catalog was not available in the recorded primary evidence; this pass did not retry the restricted catalog route. No exact fixed major-course inventory is independently verified.",
-              "Zero fixed mapped identities is a graph coverage result, not evidence of a degree with no required courses. ENG 105 and UBC 399 remain contextual pending full degree applicability/exception mapping."
+              "Zero fixed mapped identities is a graph coverage result, not evidence of a degree with no required courses. ENG 105 and UBC 399 remain contextual pending full degree applicability/exception mapping.",
+              "Named AI/society titles are introduced as examples; quantitative/geography topics and capstone lack exact coded fixed membership.",
+              "Alternative department source is undated as a catalog/cohort edition. Known denied catalog routes were not retried. Search snippets do not supply complete source-read membership."
             ]
           },
           "choice_rules": {
@@ -44410,13 +44462,15 @@
             }
           }
         },
-        "expected_profile_scope": "All currently mapped contextual identities only; no certified empty major inventory.",
+        "expected_profile_scope": "All currently mapped contextual identities only; no certified empty major inventory. The alternative-source title review does not change mapped course identities; uncoded major titles are recorded separately where established.",
         "full_degree_verified": false,
         "source_row_counts": {
           "pathway_rows": 830,
           "distinct_pathway_code_titles": 308,
           "university_context_records": 2
         },
+        "resolution_outcome": "exact_evidence_limit",
+        "resolution_summary": "Named AI/society titles are introduced as examples; quantitative/geography topics and capstone lack exact coded fixed membership.",
         "ledger": "research/degree-audit/independent-core-central.json"
       }
     },
@@ -44893,7 +44947,7 @@
       "core_review": {
         "program_id": "university-at-buffalo-suny-ai-and-language-and-intercultural-competence-bs-degree",
         "reviewed_at": "2026-10-11",
-        "reviewer": "independent-core-central / survey_national",
+        "reviewer": "independent-resolution-buffalo / resolve_buffalo",
         "reviewed_content_hash": "c0a40e58f8a7977f8c2b0e30dc96e8fdcb7c681531b40aa0631463797d92b308",
         "dimensions": {
           "fixed_requirements": {
@@ -44907,11 +44961,17 @@
               {
                 "url": "https://engineering.buffalo.edu/ai-society/academics.html",
                 "locator": "Based in AI and its Societal Impacts: five framework components and eight current AI+X major links"
+              },
+              {
+                "url": "https://arts-sciences.buffalo.edu/linguistics/undergraduate/bs-ai-intercultural-competence.html",
+                "locator": "Choose your language specialization; The learning experience"
               }
             ],
             "limitations": [
               "The individual major catalog was not available in the recorded primary evidence; this pass did not retry the restricted catalog route. No exact fixed major-course inventory is independently verified.",
-              "Zero fixed mapped identities is a graph coverage result, not evidence of a degree with no required courses. ENG 105 and UBC 399 remain contextual pending full degree applicability/exception mapping."
+              "Zero fixed mapped identities is a graph coverage result, not evidence of a degree with no required courses. ENG 105 and UBC 399 remain contextual pending full degree applicability/exception mapping.",
+              "Eight language specializations are explicit; five titles are introduced as courses students might take. They do not establish mandatory course identities or exact language sequences.",
+              "Alternative department source is undated as a catalog/cohort edition. Known denied catalog routes were not retried. Search snippets do not supply complete source-read membership."
             ]
           },
           "choice_rules": {
@@ -45286,13 +45346,15 @@
             }
           }
         },
-        "expected_profile_scope": "All currently mapped contextual identities only; no certified empty major inventory.",
+        "expected_profile_scope": "All currently mapped contextual identities only; no certified empty major inventory. The alternative-source title review does not change mapped course identities; uncoded major titles are recorded separately where established.",
         "full_degree_verified": false,
         "source_row_counts": {
           "pathway_rows": 830,
           "distinct_pathway_code_titles": 308,
           "university_context_records": 2
         },
+        "resolution_outcome": "exact_evidence_limit",
+        "resolution_summary": "Eight language specializations are explicit; five titles are introduced as courses students might take. They do not establish mandatory course identities or exact language sequences.",
         "ledger": "research/degree-audit/independent-core-central.json"
       }
     },
@@ -45769,7 +45831,7 @@
       "core_review": {
         "program_id": "university-at-buffalo-suny-ai-and-language-technology-bs-degree",
         "reviewed_at": "2026-10-11",
-        "reviewer": "independent-core-central / survey_national",
+        "reviewer": "independent-resolution-buffalo / resolve_buffalo",
         "reviewed_content_hash": "45f3cabc3b8936bb460499a599a58a7bb757af04f39d3e1722d564237a7a500e",
         "dimensions": {
           "fixed_requirements": {
@@ -45783,11 +45845,17 @@
               {
                 "url": "https://engineering.buffalo.edu/ai-society/academics.html",
                 "locator": "Based in AI and its Societal Impacts: five framework components and eight current AI+X major links"
+              },
+              {
+                "url": "https://arts-sciences.buffalo.edu/linguistics/undergraduate/bs-ai-language-tech.html",
+                "locator": "Program structure; The learning experience"
               }
             ],
             "limitations": [
               "The individual major catalog was not available in the recorded primary evidence; this pass did not retry the restricted catalog route. No exact fixed major-course inventory is independently verified.",
-              "Zero fixed mapped identities is a graph coverage result, not evidence of a degree with no required courses. ENG 105 and UBC 399 remain contextual pending full degree applicability/exception mapping."
+              "Zero fixed mapped identities is a graph coverage result, not evidence of a degree with no required courses. ENG 105 and UBC 399 remain contextual pending full degree applicability/exception mapping.",
+              "Four broad component areas include data structures and algorithms, programming and software development, but no mandatory coded course set is listed. Do not misreport these foundations as absent.",
+              "Alternative department source is undated as a catalog/cohort edition. Known denied catalog routes were not retried. Search snippets do not supply complete source-read membership."
             ]
           },
           "choice_rules": {
@@ -46162,13 +46230,15 @@
             }
           }
         },
-        "expected_profile_scope": "All currently mapped contextual identities only; no certified empty major inventory.",
+        "expected_profile_scope": "All currently mapped contextual identities only; no certified empty major inventory. The alternative-source title review does not change mapped course identities; uncoded major titles are recorded separately where established.",
         "full_degree_verified": false,
         "source_row_counts": {
           "pathway_rows": 830,
           "distinct_pathway_code_titles": 308,
           "university_context_records": 2
         },
+        "resolution_outcome": "exact_evidence_limit",
+        "resolution_summary": "Four broad component areas include data structures and algorithms, programming and software development, but no mandatory coded course set is listed. Do not misreport these foundations as absent.",
         "ledger": "research/degree-audit/independent-core-central.json"
       }
     },
@@ -46645,7 +46715,7 @@
       "core_review": {
         "program_id": "university-at-buffalo-suny-ai-and-logic-and-ontology-bs-degree",
         "reviewed_at": "2026-10-11",
-        "reviewer": "independent-core-central / survey_national",
+        "reviewer": "independent-resolution-buffalo / resolve_buffalo",
         "reviewed_content_hash": "2bb865ff7db10b698f1c1d47fd38d93eb29b36bdcee958d11618d14361a0ba6d",
         "dimensions": {
           "fixed_requirements": {
@@ -46659,11 +46729,17 @@
               {
                 "url": "https://engineering.buffalo.edu/ai-society/academics.html",
                 "locator": "Based in AI and its Societal Impacts: five framework components and eight current AI+X major links"
+              },
+              {
+                "url": "https://www.buffalo.edu/cas/philosophy/undergraduate/bs.html",
+                "locator": "Program highlights; Degree requirements at a glance; Learning experience"
               }
             ],
             "limitations": [
               "The individual major catalog was not available in the recorded primary evidence; this pass did not retry the restricted catalog route. No exact fixed major-course inventory is independently verified.",
-              "Zero fixed mapped identities is a graph coverage result, not evidence of a degree with no required courses. ENG 105 and UBC 399 remain contextual pending full degree applicability/exception mapping."
+              "Zero fixed mapped identities is a graph coverage result, not evidence of a degree with no required courses. ENG 105 and UBC 399 remain contextual pending full degree applicability/exception mapping.",
+              "A philosophy internship is explicitly required; five course titles are introduced as courses students may take. Neither the internship code nor a complete fixed course set is established.",
+              "Alternative department source is undated as a catalog/cohort edition. Known denied catalog routes were not retried. Search snippets do not supply complete source-read membership."
             ]
           },
           "choice_rules": {
@@ -47038,13 +47114,15 @@
             }
           }
         },
-        "expected_profile_scope": "All currently mapped contextual identities only; no certified empty major inventory.",
+        "expected_profile_scope": "All currently mapped contextual identities only; no certified empty major inventory. The alternative-source title review does not change mapped course identities; uncoded major titles are recorded separately where established.",
         "full_degree_verified": false,
         "source_row_counts": {
           "pathway_rows": 830,
           "distinct_pathway_code_titles": 308,
           "university_context_records": 2
         },
+        "resolution_outcome": "exact_evidence_limit",
+        "resolution_summary": "A philosophy internship is explicitly required; five course titles are introduced as courses students may take. Neither the internship code nor a complete fixed course set is established.",
         "ledger": "research/degree-audit/independent-core-central.json"
       }
     },
@@ -47521,7 +47599,7 @@
       "core_review": {
         "program_id": "university-at-buffalo-suny-ai-and-philosophy-politics-economics-bs-degree",
         "reviewed_at": "2026-10-11",
-        "reviewer": "independent-core-central / survey_national",
+        "reviewer": "independent-resolution-buffalo / resolve_buffalo",
         "reviewed_content_hash": "4ed764ff460cc75f22c50dca96e537a9c84708f9067922314663e47f03898c73",
         "dimensions": {
           "fixed_requirements": {
@@ -47535,11 +47613,17 @@
               {
                 "url": "https://engineering.buffalo.edu/ai-society/academics.html",
                 "locator": "Based in AI and its Societal Impacts: five framework components and eight current AI+X major links"
+              },
+              {
+                "url": "https://arts-sciences.buffalo.edu/philosophy-politics-economics/undergraduate/bs.html",
+                "locator": "The learning experience"
               }
             ],
             "limitations": [
               "The individual major catalog was not available in the recorded primary evidence; this pass did not retry the restricted catalog route. No exact fixed major-course inventory is independently verified.",
-              "Zero fixed mapped identities is a graph coverage result, not evidence of a degree with no required courses. ENG 105 and UBC 399 remain contextual pending full degree applicability/exception mapping."
+              "Zero fixed mapped identities is a graph coverage result, not evidence of a degree with no required courses. ENG 105 and UBC 399 remain contextual pending full degree applicability/exception mapping.",
+              "Six titles follow might take; broad mandatory components and a capstone have no exact course identities. Examples are not fixed courses.",
+              "Alternative department source is undated as a catalog/cohort edition. Known denied catalog routes were not retried. Search snippets do not supply complete source-read membership."
             ]
           },
           "choice_rules": {
@@ -47914,13 +47998,15 @@
             }
           }
         },
-        "expected_profile_scope": "All currently mapped contextual identities only; no certified empty major inventory.",
+        "expected_profile_scope": "All currently mapped contextual identities only; no certified empty major inventory. The alternative-source title review does not change mapped course identities; uncoded major titles are recorded separately where established.",
         "full_degree_verified": false,
         "source_row_counts": {
           "pathway_rows": 830,
           "distinct_pathway_code_titles": 308,
           "university_context_records": 2
         },
+        "resolution_outcome": "exact_evidence_limit",
+        "resolution_summary": "Six titles follow might take; broad mandatory components and a capstone have no exact course identities. Examples are not fixed courses.",
         "ledger": "research/degree-audit/independent-core-central.json"
       }
     },
@@ -48397,7 +48483,7 @@
       "core_review": {
         "program_id": "university-at-buffalo-suny-ai-and-policy-analysis-bs-degree",
         "reviewed_at": "2026-10-11",
-        "reviewer": "independent-core-central / survey_national",
+        "reviewer": "independent-resolution-buffalo / resolve_buffalo",
         "reviewed_content_hash": "f4216e02de00853316f98b6347e271109fe897ef1371388d41e3c6f0ebfc88d8",
         "dimensions": {
           "fixed_requirements": {
@@ -48411,11 +48497,17 @@
               {
                 "url": "https://engineering.buffalo.edu/ai-society/academics.html",
                 "locator": "Based in AI and its Societal Impacts: five framework components and eight current AI+X major links"
+              },
+              {
+                "url": "https://arts-sciences.buffalo.edu/political-science/undergraduate/overview.html",
+                "locator": "Our Degrees; BS in AI and Policy Analysis link"
               }
             ],
             "limitations": [
               "The individual major catalog was not available in the recorded primary evidence; this pass did not retry the restricted catalog route. No exact fixed major-course inventory is independently verified.",
-              "Zero fixed mapped identities is a graph coverage result, not evidence of a degree with no required courses. ENG 105 and UBC 399 remain contextual pending full degree applicability/exception mapping."
+              "Zero fixed mapped identities is a graph coverage result, not evidence of a degree with no required courses. ENG 105 and UBC 399 remain contextual pending full degree applicability/exception mapping.",
+              "The department overview confirms the degree but its degree link leads directly to the previously restricted catalog host. That route was not followed; no fixed course list is printed here.",
+              "Alternative department source is undated as a catalog/cohort edition. Known denied catalog routes were not retried. Search snippets do not supply complete source-read membership."
             ]
           },
           "choice_rules": {
@@ -48790,13 +48882,15 @@
             }
           }
         },
-        "expected_profile_scope": "All currently mapped contextual identities only; no certified empty major inventory.",
+        "expected_profile_scope": "All currently mapped contextual identities only; no certified empty major inventory. The alternative-source title review does not change mapped course identities; uncoded major titles are recorded separately where established.",
         "full_degree_verified": false,
         "source_row_counts": {
           "pathway_rows": 830,
           "distinct_pathway_code_titles": 308,
           "university_context_records": 2
         },
+        "resolution_outcome": "exact_evidence_limit",
+        "resolution_summary": "The department overview confirms the degree but its degree link leads directly to the previously restricted catalog host. That route was not followed; no fixed course list is printed here.",
         "ledger": "research/degree-audit/independent-core-central.json"
       }
     },
@@ -48874,62 +48968,90 @@
           "locator": "Exact previously observed catalog barrier; no retry or bypass during audit",
           "checked_at": "2026-10-11",
           "access_status": "prior_catalog_root_http_403_and_robots_transport_failure; no_per_variant_endpoint_claim"
+        },
+        {
+          "url": "https://arts-sciences.buffalo.edu/economics/undergraduate/bs-ai-and-quantitative-economics.html",
+          "catalog_year": null,
+          "locator": "Required Courses: six component sections; nineteen fixed titles, sixteen named choices and selection1/2/4",
+          "checked_at": "2026-10-11",
+          "access_status": "Robots-aware permitted official department HTTP200 capture independently reread; codes and catalog edition unprinted"
         }
       ],
       "checks": {
         "degree_identity": "Exact AI and Quantitative Economics degree identity remains supported by the individual official undergraduate overview; the PPE BS is explicitly named by its department. Public identity does not establish its catalog requirements.",
-        "required_and_choices": "All 310 represented courses are attached only to contextual notes. No fixed major or choice-pool course identities are established. ENG105 CL1 and UBC399 policy observations remain contextual pending exemptions and complete degree applicability.",
-        "elective_pools": "308 distinct dated Pathways course/topic records are Winter/Spring2027 offering candidates, not an AI+X major elective pool or exhaustive GE list. No absence inference.",
+        "required_and_choices": "Department Required Courses supplies19 fixed uncoded title identities and16 named options in choose1/choose2/choose4 groups. The prior310 records remain contextual university candidates. No title-to-code mapping or sibling-major inheritance is inferred; catalog/cohort applicability stays unresolved.",
+        "elective_pools": "Department finite title pools are3 mathematics options,3 AI/society options and10 economics options. Selection counts remain1/2/4; individual credits and code aliases are unknown. The dated308 Pathways candidates remain contextual, not these major pools.",
         "prerequisites": "UBC399 requires completed UB Seminar and completed/concurrent remaining UB Curriculum. Major prerequisites, admission/continuation restrictions and individual Pathways prerequisites remain inaccessible.",
-        "credits_and_units": "ENG105 amount4 and UBC399 amount1 retain unknown normalized unit. Pathways amounts remain null. University 120-credit floor and 30-at-UB residency are not the specific major total.",
-        "classification": "ENG105 human_context from explicit writing/communication mapping; UBC399 unclassified because integrative portfolio content does not establish a primary subject; all 308 Pathways records unclassified because abbreviated offering labels do not replace course descriptions.",
+        "credits_and_units": "ENG105 amount4 and UBC399 amount1 retain unknown normalized unit. Pathways amounts remain null. University 120-credit floor and 30-at-UB residency are not the specific major total. Department component amounts8/15/16/6/38/3 are retained as source-stated groups with unknown normalized unit; neither individual credits nor a combined degree total are inferred.",
+        "classification": "Seven unequivocal limited-title major classifications: fixed2mathematics,1AI,1human-context and options3mathematics. The other28 major titles are unclassified including generic Introduction to Computer Science I/II. Actual major descriptions are unavailable. Existing ENG105/context dispositions stay unchanged.",
         "family_composition": "Five explicit shared framework notes reviewed against Department of AI and Society Academics: mathematical prerequisites as needed, five three-credit Society courses, variable technology component drawn from four-credit courses, integration and capstone. No inherited course bindings or requirement overrides supply a fixed course set. Family unchanged.",
         "degree_wide_requirements": "Public UB Curriculum framework and conferral minima reviewed. Approved pools, Pathways list/area combinations, college requirements, transfer exceptions, GPA/grade rules and exact major total remain unresolved behind catalog barriers."
       },
       "expected_profile": {
         "required": {
-          "count": 0,
+          "count": 19,
           "categories": {
-            "foundations": 0,
-            "mathematics": 0,
-            "ai_ml": 0,
-            "systems": 0,
-            "human_context": 0,
-            "applications": 0,
-            "electives": 0,
-            "other": 0
+            "mathematics": 2,
+            "ai_ml": 1,
+            "human_context": 1,
+            "other": 15
           }
         },
         "options": {
-          "count": 0,
+          "count": 16,
           "categories": {
-            "foundations": 0,
-            "mathematics": 0,
-            "ai_ml": 0,
-            "systems": 0,
-            "human_context": 0,
-            "applications": 0,
-            "electives": 0,
-            "other": 0
+            "mathematics": 3,
+            "other": 13
           }
         },
         "unresolved": {
           "count": 310,
           "categories": {
-            "foundations": 0,
-            "mathematics": 0,
-            "ai_ml": 0,
-            "systems": 0,
             "human_context": 1,
-            "applications": 0,
-            "electives": 0,
             "other": 309
           }
         }
       },
       "expected_course_ids": {
-        "required": [],
-        "options": [],
+        "required": [
+          "buffalo-ai-qe-title-precalculus",
+          "buffalo-ai-qe-title-ai-society",
+          "buffalo-ai-qe-title-ai-ethics",
+          "buffalo-ai-qe-title-technological-disruption-and-diffusion",
+          "buffalo-ai-qe-title-applied-linear-algebra-and-probability-for-ai",
+          "buffalo-ai-qe-title-applied-machine-learning",
+          "buffalo-ai-qe-title-introduction-to-computer-science-i",
+          "buffalo-ai-qe-title-introduction-to-computer-science-ii",
+          "buffalo-ai-qe-title-artificial-intelligence-and-economic-policy",
+          "buffalo-ai-qe-title-big-data-and-application-of-machine-learning-in-economics",
+          "buffalo-ai-qe-title-introduction-to-macroeconomics",
+          "buffalo-ai-qe-title-introduction-to-microeconomics",
+          "buffalo-ai-qe-title-economic-statistics-and-data-analysis",
+          "buffalo-ai-qe-title-microeconomic-theory-1",
+          "buffalo-ai-qe-title-macroeconomic-theory",
+          "buffalo-ai-qe-title-time-series-analysis-and-forecasting",
+          "buffalo-ai-qe-title-econometrics-i",
+          "buffalo-ai-qe-title-econometrics-ii",
+          "buffalo-ai-qe-title-ai-and-society-capstone"
+        ],
+        "options": [
+          "buffalo-ai-qe-title-survey-of-calculus-and-its-applications-i",
+          "buffalo-ai-qe-title-mathematical-analysis-for-management",
+          "buffalo-ai-qe-title-college-calculus-i",
+          "buffalo-ai-qe-title-ai-policy",
+          "buffalo-ai-qe-title-ai-and-social-structures",
+          "buffalo-ai-qe-title-ai-the-information-environment",
+          "buffalo-ai-qe-title-health-economics",
+          "buffalo-ai-qe-title-environmental-economics",
+          "buffalo-ai-qe-title-economic-development",
+          "buffalo-ai-qe-title-urban-economics",
+          "buffalo-ai-qe-title-financial-economics",
+          "buffalo-ai-qe-title-international-finance",
+          "buffalo-ai-qe-title-economics-of-education",
+          "buffalo-ai-qe-title-labor-economics",
+          "buffalo-ai-qe-title-public-economics",
+          "buffalo-ai-qe-title-industrial-organization"
+        ],
         "unresolved": [
           "buffalo-ubc-aas-100-8afb6e73",
           "buffalo-ubc-aas-117-4a7ed0ac",
@@ -49253,12 +49375,20 @@
             "https://www.buffalo.edu/ubcurriculum/capstone.html",
             "https://www.buffalo.edu/ubcurriculum/foundations.html"
           ]
+        },
+        {
+          "issue": "Binding major title inventory absent from earlier contextual-only graph",
+          "correction": "Map19 fixed/16 option title identities with code:null and preserved1/2/4 rules; scopepartial because edition/code/description remain unknown.",
+          "status": "corrected_with_limits",
+          "evidence_urls": [
+            "https://arts-sciences.buffalo.edu/economics/undergraduate/bs-ai-and-quantitative-economics.html"
+          ]
         }
       ],
       "blockers": [
         {
           "url": "https://catalogs.buffalo.edu",
-          "gap": "Major catalog inventory, local prerequisite/eligibility and completion policies unavailable. Root/host restriction is not asserted as an individually tested403 for every variant; exact per-variant catalog URL is unverified except PPE."
+          "gap": "Department title inventory is mapped, but exact current catalog codes/cohort applicability, aliases, major prerequisite/eligibility and completion policies remain unavailable. Known restricted catalog routes were not retried; title records are not claimed as code-verified."
         },
         {
           "url": "https://www.buffalo.edu/ubcurriculum/pathways.html",
@@ -49273,12 +49403,12 @@
       "core_review": {
         "program_id": "university-at-buffalo-suny-ai-and-quantitative-economics-bs-degree",
         "reviewed_at": "2026-10-11",
-        "reviewer": "independent-core-central / survey_national",
-        "reviewed_content_hash": "e05b05573b7dc2f0a04b18f4d8380659ddb8ba14adad9f57a1550e78cda8819a",
+        "reviewer": "independent-resolution-buffalo / resolve_buffalo",
+        "reviewed_content_hash": "d3282379a23acbb1794f7cbddfa3d788401c213014770c3b0ffa2c047c499ce4",
         "dimensions": {
           "fixed_requirements": {
-            "status": "unverified",
-            "summary": "Identity and broad framework are corroborated, but no named fixed AI+X major course set is established. All 310 mapped course observations remain contextual; five inherited family notes introduce no course identities.",
+            "status": "partial",
+            "summary": "The Economics department binding Required Courses inventory supplies 19 fixed title identities and16 named options in three choice groups. All35 preserve unknown catalog codes as null. Membership is source-read within this departmental title scope; exact catalog/cohort applicability remains unverified, so the dimension is partial.",
             "evidence": [
               {
                 "url": "https://www.buffalo.edu/undergrad-programs/ai-and-quantitative-economics.html",
@@ -49287,16 +49417,21 @@
               {
                 "url": "https://engineering.buffalo.edu/ai-society/academics.html",
                 "locator": "Based in AI and its Societal Impacts: five framework components and eight current AI+X major links"
+              },
+              {
+                "url": "https://arts-sciences.buffalo.edu/economics/undergraduate/bs-ai-and-quantitative-economics.html",
+                "locator": "Required Courses: Math Core through AI & Society Capstone"
               }
             ],
             "limitations": [
-              "The individual major catalog was not available in the recorded primary evidence; this pass did not retry the restricted catalog route. No exact fixed major-course inventory is independently verified.",
-              "Zero fixed mapped identities is a graph coverage result, not evidence of a degree with no required courses. ENG 105 and UBC 399 remain contextual pending full degree applicability/exception mapping."
+              "A binding title-level inventory establishes 19 fixed titles and 16 options with choose-one, choose-two and choose-four rules. No course codes or exact catalog/cohort applicability are printed.",
+              "Alternative department source is undated as a catalog/cohort edition. Known denied catalog routes were not retried. Search snippets do not supply complete source-read membership.",
+              "Nineteen fixed title identities are established only within the department Required Courses source. Exact catalog codes, aliases and applicable catalog/cohort are unverified; no sibling major inherits this list."
             ]
           },
           "choice_rules": {
             "status": "partial",
-            "summary": "Source verifies a five-course society component and Global/Thematic Pathways of at least nine credits each. The 830 Winter/Spring 2027 offering rows reconcile to 308 exact code/topic observations; they are dated planning context, not mandatory choices or a complete major pool.",
+            "summary": "Source verifies a five-course society component and Global/Thematic Pathways of at least nine credits each. The 830 Winter/Spring 2027 offering rows reconcile to 308 exact code/topic observations; they are dated planning context, not mandatory choices or a complete major pool. The department also explicitly names three finite major pools of 3, 3 and 10 titles, selecting 1, 2 and 4 respectively; coded identities and applicability remain unresolved.",
             "evidence": [
               {
                 "url": "https://engineering.buffalo.edu/ai-society/academics.html",
@@ -49305,15 +49440,20 @@
               {
                 "url": "https://www.buffalo.edu/ubcurriculum/pathways.html",
                 "locator": "About the Pathways, Path Finder submission, Winter/Spring 2027 ub-areas table"
+              },
+              {
+                "url": "https://arts-sciences.buffalo.edu/economics/undergraduate/bs-ai-and-quantitative-economics.html",
+                "locator": "Required Courses: choose one Math Elective; choose two AI & Society Electives; choose four ECO Advanced Electives"
               }
             ],
             "limitations": [
-              "Degree-specific society/technology/integrative approved menus, overlap and complete Path Finder selection rules remain unverified. Source-stated loads are not calculated from the 308 displayed candidates."
+              "Catalog applicability, overlap and full Path Finder selection rules remain unverified. The department title pools are mapped independently; source-stated major and Pathway loads are not calculated from the308 displayed context candidates.",
+              "The alternative Required Courses source supplies title-level major selections; course codes, title aliases, current catalog applicability, prerequisites and overlap remain unverified."
             ]
           },
           "classification": {
             "status": "partial",
-            "summary": "ENG 105 is supported as communication/writing by the CL1 description. UBC 399 is an integrative portfolio without a single taxonomy subject. The 308 abbreviated offering titles remain insufficient-content observations, not independently read course descriptions.",
+            "summary": "ENG 105 is supported as communication/writing by the CL1 description. UBC 399 is an integrative portfolio without a single taxonomy subject. The 308 abbreviated offering titles remain insufficient-content observations, not independently read course descriptions. Seven exact title-level major classifications are supported (five mathematics, one AI/ML, one ethics/human-context across fixed/options);28 remaining titles are explicitly unclassified.",
             "evidence": [
               {
                 "url": "https://www.buffalo.edu/ubcurriculum/foundations.html",
@@ -49326,6 +49466,10 @@
               {
                 "url": "https://www.buffalo.edu/ubcurriculum/pathways.html",
                 "locator": "Course-title/term/pathway/availability table; no descriptions"
+              },
+              {
+                "url": "https://arts-sciences.buffalo.edu/economics/undergraduate/bs-ai-and-quantitative-economics.html",
+                "locator": "Required Courses exact title inventory; seven unequivocal limited title classifications,28 insufficient-content major titles"
               }
             ],
             "limitations": [
@@ -49334,8 +49478,45 @@
           }
         },
         "expected_course_ids": {
-          "required": [],
-          "options": [],
+          "required": [
+            "buffalo-ai-qe-title-precalculus",
+            "buffalo-ai-qe-title-ai-society",
+            "buffalo-ai-qe-title-ai-ethics",
+            "buffalo-ai-qe-title-technological-disruption-and-diffusion",
+            "buffalo-ai-qe-title-applied-linear-algebra-and-probability-for-ai",
+            "buffalo-ai-qe-title-applied-machine-learning",
+            "buffalo-ai-qe-title-introduction-to-computer-science-i",
+            "buffalo-ai-qe-title-introduction-to-computer-science-ii",
+            "buffalo-ai-qe-title-artificial-intelligence-and-economic-policy",
+            "buffalo-ai-qe-title-big-data-and-application-of-machine-learning-in-economics",
+            "buffalo-ai-qe-title-introduction-to-macroeconomics",
+            "buffalo-ai-qe-title-introduction-to-microeconomics",
+            "buffalo-ai-qe-title-economic-statistics-and-data-analysis",
+            "buffalo-ai-qe-title-microeconomic-theory-1",
+            "buffalo-ai-qe-title-macroeconomic-theory",
+            "buffalo-ai-qe-title-time-series-analysis-and-forecasting",
+            "buffalo-ai-qe-title-econometrics-i",
+            "buffalo-ai-qe-title-econometrics-ii",
+            "buffalo-ai-qe-title-ai-and-society-capstone"
+          ],
+          "options": [
+            "buffalo-ai-qe-title-survey-of-calculus-and-its-applications-i",
+            "buffalo-ai-qe-title-mathematical-analysis-for-management",
+            "buffalo-ai-qe-title-college-calculus-i",
+            "buffalo-ai-qe-title-ai-policy",
+            "buffalo-ai-qe-title-ai-and-social-structures",
+            "buffalo-ai-qe-title-ai-the-information-environment",
+            "buffalo-ai-qe-title-health-economics",
+            "buffalo-ai-qe-title-environmental-economics",
+            "buffalo-ai-qe-title-economic-development",
+            "buffalo-ai-qe-title-urban-economics",
+            "buffalo-ai-qe-title-financial-economics",
+            "buffalo-ai-qe-title-international-finance",
+            "buffalo-ai-qe-title-economics-of-education",
+            "buffalo-ai-qe-title-labor-economics",
+            "buffalo-ai-qe-title-public-economics",
+            "buffalo-ai-qe-title-industrial-organization"
+          ],
           "unresolved": [
             "buffalo-ubc-aas-100-8afb6e73",
             "buffalo-ubc-aas-117-4a7ed0ac",
@@ -49651,12 +49832,20 @@
         },
         "expected_profile": {
           "required": {
-            "count": 0,
-            "categories": {}
+            "count": 19,
+            "categories": {
+              "mathematics": 2,
+              "ai_ml": 1,
+              "human_context": 1,
+              "other": 15
+            }
           },
           "options": {
-            "count": 0,
-            "categories": {}
+            "count": 16,
+            "categories": {
+              "mathematics": 3,
+              "other": 13
+            }
           },
           "unresolved": {
             "count": 310,
@@ -49666,13 +49855,171 @@
             }
           }
         },
-        "expected_profile_scope": "All currently mapped contextual identities only; no certified empty major inventory.",
+        "expected_profile_scope": "Source-read department title set establishes19 fixed and16 option identities with null catalog codes. Existing310 university context IDs remain unresolved. Exact category totals are manual limited-title judgments, not a complete course-content audit.",
         "full_degree_verified": false,
         "source_row_counts": {
           "pathway_rows": 830,
           "distinct_pathway_code_titles": 308,
-          "university_context_records": 2
+          "university_context_records": 2,
+          "department_fixed_titles": 19,
+          "department_option_titles": 16
         },
+        "manual_uncoded_major_inventory": {
+          "source_url": "https://arts-sciences.buffalo.edu/economics/undergraduate/bs-ai-and-quantitative-economics.html",
+          "locator": "Required Courses: Math Core through AI & Society Capstone",
+          "catalog_year": null,
+          "fixed_titles_by_component": {
+            "Math Core": [
+              "Precalculus"
+            ],
+            "AI & Society Core": [
+              "AI & Society",
+              "AI & Ethics",
+              "Technological Disruption and Diffusion"
+            ],
+            "AI & Technology Core": [
+              "Applied Linear Algebra and Probability for AI",
+              "Applied Machine Learning",
+              "Introduction to Computer Science I",
+              "Introduction to Computer Science II"
+            ],
+            "Bridge Courses": [
+              "Artificial Intelligence and Economic Policy",
+              "Big Data and Application of Machine Learning in Economics"
+            ],
+            "AI in Quantitative Economics Core": [
+              "Introduction to Macroeconomics",
+              "Introduction to Microeconomics",
+              "Economic Statistics and Data Analysis",
+              "Microeconomic Theory 1",
+              "Macroeconomic Theory",
+              "Time Series Analysis and Forecasting",
+              "Econometrics I",
+              "Econometrics II"
+            ],
+            "AI & Society Capstone": [
+              "AI and Society Capstone"
+            ]
+          },
+          "choice_groups": [
+            {
+              "component": "Math Core",
+              "count": 1,
+              "titles": [
+                "Survey of Calculus and Its Applications I",
+                "Mathematical Analysis for Management",
+                "College Calculus I"
+              ]
+            },
+            {
+              "component": "AI & Society Core",
+              "count": 2,
+              "titles": [
+                "AI & Policy",
+                "AI and Social Structures",
+                "AI & The Information Environment"
+              ]
+            },
+            {
+              "component": "AI in Quantitative Economics Core",
+              "count": 4,
+              "titles": [
+                "Health Economics",
+                "Environmental Economics",
+                "Economic Development",
+                "Urban Economics",
+                "Financial Economics",
+                "International Finance",
+                "Economics of Education",
+                "Labor Economics",
+                "Public Economics",
+                "Industrial Organization"
+              ]
+            }
+          ],
+          "expected_title_profile": {
+            "required": {
+              "count": 19,
+              "categories": {
+                "mathematics": 2,
+                "ai_ml": 1,
+                "human_context": 1,
+                "other": 15
+              }
+            },
+            "options": {
+              "count": 16,
+              "categories": {
+                "mathematics": 3,
+                "other": 13
+              }
+            },
+            "unresolved": {
+              "count": 310,
+              "categories": {
+                "human_context": 1,
+                "other": 309
+              }
+            }
+          },
+          "expected_course_ids": {
+            "required": [
+              "buffalo-ai-qe-title-precalculus",
+              "buffalo-ai-qe-title-ai-society",
+              "buffalo-ai-qe-title-ai-ethics",
+              "buffalo-ai-qe-title-technological-disruption-and-diffusion",
+              "buffalo-ai-qe-title-applied-linear-algebra-and-probability-for-ai",
+              "buffalo-ai-qe-title-applied-machine-learning",
+              "buffalo-ai-qe-title-introduction-to-computer-science-i",
+              "buffalo-ai-qe-title-introduction-to-computer-science-ii",
+              "buffalo-ai-qe-title-artificial-intelligence-and-economic-policy",
+              "buffalo-ai-qe-title-big-data-and-application-of-machine-learning-in-economics",
+              "buffalo-ai-qe-title-introduction-to-macroeconomics",
+              "buffalo-ai-qe-title-introduction-to-microeconomics",
+              "buffalo-ai-qe-title-economic-statistics-and-data-analysis",
+              "buffalo-ai-qe-title-microeconomic-theory-1",
+              "buffalo-ai-qe-title-macroeconomic-theory",
+              "buffalo-ai-qe-title-time-series-analysis-and-forecasting",
+              "buffalo-ai-qe-title-econometrics-i",
+              "buffalo-ai-qe-title-econometrics-ii",
+              "buffalo-ai-qe-title-ai-and-society-capstone"
+            ],
+            "options": [
+              "buffalo-ai-qe-title-survey-of-calculus-and-its-applications-i",
+              "buffalo-ai-qe-title-mathematical-analysis-for-management",
+              "buffalo-ai-qe-title-college-calculus-i",
+              "buffalo-ai-qe-title-ai-policy",
+              "buffalo-ai-qe-title-ai-and-social-structures",
+              "buffalo-ai-qe-title-ai-the-information-environment",
+              "buffalo-ai-qe-title-health-economics",
+              "buffalo-ai-qe-title-environmental-economics",
+              "buffalo-ai-qe-title-economic-development",
+              "buffalo-ai-qe-title-urban-economics",
+              "buffalo-ai-qe-title-financial-economics",
+              "buffalo-ai-qe-title-international-finance",
+              "buffalo-ai-qe-title-economics-of-education",
+              "buffalo-ai-qe-title-labor-economics",
+              "buffalo-ai-qe-title-public-economics",
+              "buffalo-ai-qe-title-industrial-organization"
+            ]
+          },
+          "component_credit_amounts": {
+            "Math Core": 8,
+            "AI & Society Core": 15,
+            "AI & Technology Core": 16,
+            "Bridge Courses": 6,
+            "AI in Quantitative Economics Core": 38,
+            "AI & Society Capstone": 3
+          },
+          "credit_unit": "unknown",
+          "limitations": [
+            "Names are retained exactly as printed. No title was joined to a code in another major or catalog snippet.",
+            "The source says credits but does not define semester hours; component amounts are not a solved degree total.",
+            "The scope is a department title inventory, not an independently verified full current catalog curriculum or per-course classification."
+          ]
+        },
+        "resolution_outcome": "exact_evidence_limit",
+        "resolution_summary": "A binding title-level inventory establishes 19 fixed titles and 16 options with choose-one, choose-two and choose-four rules. No course codes or exact catalog/cohort applicability are printed.",
         "ledger": "research/degree-audit/independent-core-central.json"
       }
     },
@@ -50149,7 +50496,7 @@
       "core_review": {
         "program_id": "university-at-buffalo-suny-ai-and-responsible-communication-bs-degree",
         "reviewed_at": "2026-10-11",
-        "reviewer": "independent-core-central / survey_national",
+        "reviewer": "independent-resolution-buffalo / resolve_buffalo",
         "reviewed_content_hash": "5769fe367961c37bd4b3f99b58d958ece761f1770aa5ac0a1e093560643ec538",
         "dimensions": {
           "fixed_requirements": {
@@ -50163,11 +50510,17 @@
               {
                 "url": "https://engineering.buffalo.edu/ai-society/academics.html",
                 "locator": "Based in AI and its Societal Impacts: five framework components and eight current AI+X major links"
+              },
+              {
+                "url": "https://www.buffalo.edu/cas/communication/undergraduate/bs.html",
+                "locator": "What you will learn"
               }
             ],
             "limitations": [
               "The individual major catalog was not available in the recorded primary evidence; this pass did not retry the restricted catalog route. No exact fixed major-course inventory is independently verified.",
-              "Zero fixed mapped identities is a graph coverage result, not evidence of a degree with no required courses. ENG 105 and UBC 399 remain contextual pending full degree applicability/exception mapping."
+              "Zero fixed mapped identities is a graph coverage result, not evidence of a degree with no required courses. ENG 105 and UBC 399 remain contextual pending full degree applicability/exception mapping.",
+              "Communication, programming/data and research-methods subject areas and capstone are stated, without exact coded fixed course inventory. The course-catalog link routes to the already reviewed overview.",
+              "Alternative department source is undated as a catalog/cohort edition. Known denied catalog routes were not retried. Search snippets do not supply complete source-read membership."
             ]
           },
           "choice_rules": {
@@ -50542,13 +50895,15 @@
             }
           }
         },
-        "expected_profile_scope": "All currently mapped contextual identities only; no certified empty major inventory.",
+        "expected_profile_scope": "All currently mapped contextual identities only; no certified empty major inventory. The alternative-source title review does not change mapped course identities; uncoded major titles are recorded separately where established.",
         "full_degree_verified": false,
         "source_row_counts": {
           "pathway_rows": 830,
           "distinct_pathway_code_titles": 308,
           "university_context_records": 2
         },
+        "resolution_outcome": "exact_evidence_limit",
+        "resolution_summary": "Communication, programming/data and research-methods subject areas and capstone are stated, without exact coded fixed course inventory. The course-catalog link routes to the already reviewed overview.",
         "ledger": "research/degree-audit/independent-core-central.json"
       }
     },
@@ -62475,12 +62830,12 @@
       "core_review": {
         "program_id": "university-of-south-florida-artificial-intelligence-bs-degree",
         "reviewed_at": "2026-10-11",
-        "reviewer": "independent-core-other",
+        "reviewer": "independent-resolution-usf-wm",
         "reviewed_content_hash": "d0b5cb0fa72554ddff12a15676e6eedec859dac6de873aaaef8c1104eefb4379",
         "dimensions": {
           "fixed_requirements": {
             "status": "unverified",
-            "summary": "The current record attributes 24 fixed identities to the September 2026 brochure, but the saved brochure text located in this pass is empty and no readable PDF capture was found. Those course-role counts are not independently certified.",
+            "summary": "Available-source limit: the historical brochure transcription has 24 mapped fixed identities, but no readable saved official PDF or nonempty brochure text is available. The exact brochure URL is already recorded as robots-disallowed; the definitive catalog returned HTTP 202. Neither denied route was retried, and fixed identities/counts remain unchecked rather than zero.",
             "evidence": [
               {
                 "url": "https://www.usf.edu/ai-cybersecurity-computing/documents/brochures/bellini-ug-bsai.pdf",
@@ -62488,12 +62843,12 @@
               }
             ],
             "limitations": [
-              "The definitive catalog returned HTTP 202 rather than a readable curriculum in the primary fetch; no challenge or access workaround was attempted."
+              "Exact registered brochure URL was robots-disallowed in the primary review; known catalog HTTP 202 remains. Course-description pages establish subjects, not fixed major membership. No PDF, text capture, or alternate authoritative major table was located in the existing permitted evidence."
             ]
           },
           "choice_rules": {
             "status": "unverified",
-            "summary": "The existing brochure-derived alternatives cannot be independently re-enumerated from an empty text capture. Catalog and pool uncertainty remains; no choice count is inferred from the seed.",
+            "summary": "Available-source limit: readable public course details do not establish the brochure statistics alternative or full AI-major elective eligibility. Existing alternatives remain observations; their complete role sets and counts are not independently certified.",
             "evidence": [
               {
                 "url": "https://www.usf.edu/ai-cybersecurity-computing/documents/brochures/bellini-ug-bsai.pdf",
@@ -62507,19 +62862,127 @@
           },
           "classification": {
             "status": "partial",
-            "summary": "The actual PSY2012 inventory description teaches scientific study of behavior and mental processes. It was independently flagged for applications rather than human context; the broader fixed-course category total is left unchecked here.",
+            "summary": "Independently reread all 29 original represented Course Details descriptions (24 provisionally fixed and five provisionally optional records). Subject-only subset: foundations 4, mathematics 6, AI/ML 7, systems 2, human context 6, applications 3, other 1. CIS1930 is orientation/unclassified; PSY2012 is psychology applications. Role-specific totals remain null because the major source is unreadable; the 141 later contextual GE additions were outside this pass.",
             "evidence": [
               {
-                "url": "https://www.usf.edu/ai-cybersecurity-computing/documents/brochures/bellini-ug-bsai.pdf",
-                "locator": "Current actual course descriptions; fixed-category total where independently checked"
+                "url": "https://cloud.usf.edu/academic-programs/details/prefix/CIS/code/1930",
+                "locator": "CIS 1930 actual Course Details Description; 2026\u20132027 public inventory"
+              },
+              {
+                "url": "https://cloud.usf.edu/academic-programs/details/prefix/COP/code/2510",
+                "locator": "COP 2510 actual Course Details Description; 2026\u20132027 public inventory"
+              },
+              {
+                "url": "https://cloud.usf.edu/academic-programs/details/prefix/ENC/code/1101",
+                "locator": "ENC 1101 actual Course Details Description; 2026\u20132027 public inventory"
+              },
+              {
+                "url": "https://cloud.usf.edu/academic-programs/details/prefix/MAC/code/2311",
+                "locator": "MAC 2311 actual Course Details Description; 2026\u20132027 public inventory"
+              },
+              {
+                "url": "https://cloud.usf.edu/academic-programs/details/prefix/COP/code/3514",
+                "locator": "COP 3514 actual Course Details Description; 2026\u20132027 public inventory"
+              },
+              {
+                "url": "https://cloud.usf.edu/academic-programs/details/prefix/ENC/code/1102",
+                "locator": "ENC 1102 actual Course Details Description; 2026\u20132027 public inventory"
+              },
+              {
+                "url": "https://cloud.usf.edu/academic-programs/details/prefix/MAC/code/2312",
+                "locator": "MAC 2312 actual Course Details Description; 2026\u20132027 public inventory"
+              },
+              {
+                "url": "https://cloud.usf.edu/academic-programs/details/prefix/PHY/code/2048",
+                "locator": "PHY 2048 actual Course Details Description; 2026\u20132027 public inventory"
+              },
+              {
+                "url": "https://cloud.usf.edu/academic-programs/details/prefix/PHY/code/2048L",
+                "locator": "PHY 2048L actual Course Details Description; 2026\u20132027 public inventory"
+              },
+              {
+                "url": "https://cloud.usf.edu/academic-programs/details/prefix/CDA/code/3103",
+                "locator": "CDA 3103 actual Course Details Description; 2026\u20132027 public inventory"
+              },
+              {
+                "url": "https://cloud.usf.edu/academic-programs/details/prefix/COT/code/3100",
+                "locator": "COT 3100 actual Course Details Description; 2026\u20132027 public inventory"
+              },
+              {
+                "url": "https://cloud.usf.edu/academic-programs/details/prefix/COP/code/4530",
+                "locator": "COP 4530 actual Course Details Description; 2026\u20132027 public inventory"
+              },
+              {
+                "url": "https://cloud.usf.edu/academic-programs/details/prefix/EGN/code/4450",
+                "locator": "EGN 4450 actual Course Details Description; 2026\u20132027 public inventory"
               },
               {
                 "url": "https://cloud.usf.edu/academic-programs/details/prefix/PSY/code/2012",
-                "locator": "PSY2012 official Course Details description"
+                "locator": "PSY 2012 actual Course Details Description; 2026\u20132027 public inventory"
+              },
+              {
+                "url": "https://cloud.usf.edu/academic-programs/details/prefix/COT/code/4400",
+                "locator": "COT 4400 actual Course Details Description; 2026\u20132027 public inventory"
+              },
+              {
+                "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAP/code/4641",
+                "locator": "CAP 4641 actual Course Details Description; 2026\u20132027 public inventory"
+              },
+              {
+                "url": "https://cloud.usf.edu/academic-programs/details/prefix/EGN/code/2440",
+                "locator": "EGN 2440 actual Course Details Description; 2026\u20132027 public inventory"
+              },
+              {
+                "url": "https://cloud.usf.edu/academic-programs/details/prefix/STA/code/2023",
+                "locator": "STA 2023 actual Course Details Description; 2026\u20132027 public inventory"
+              },
+              {
+                "url": "https://cloud.usf.edu/academic-programs/details/prefix/POS/code/2041",
+                "locator": "POS 2041 actual Course Details Description; 2026\u20132027 public inventory"
+              },
+              {
+                "url": "https://cloud.usf.edu/academic-programs/details/prefix/AMH/code/2010",
+                "locator": "AMH 2010 actual Course Details Description; 2026\u20132027 public inventory"
+              },
+              {
+                "url": "https://cloud.usf.edu/academic-programs/details/prefix/AMH/code/2020",
+                "locator": "AMH 2020 actual Course Details Description; 2026\u20132027 public inventory"
+              },
+              {
+                "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/1000",
+                "locator": "CAI 1000 actual Course Details Description; 2026\u20132027 public inventory"
+              },
+              {
+                "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/2001",
+                "locator": "CAI 2001 actual Course Details Description; 2026\u20132027 public inventory"
+              },
+              {
+                "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/4002",
+                "locator": "CAI 4002 actual Course Details Description; 2026\u20132027 public inventory"
+              },
+              {
+                "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/4024",
+                "locator": "CAI 4024 actual Course Details Description; 2026\u20132027 public inventory"
+              },
+              {
+                "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/4105",
+                "locator": "CAI 4105 actual Course Details Description; 2026\u20132027 public inventory"
+              },
+              {
+                "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/4203",
+                "locator": "CAI 4203 actual Course Details Description; 2026\u20132027 public inventory"
+              },
+              {
+                "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/4624",
+                "locator": "CAI 4624 actual Course Details Description; 2026\u20132027 public inventory"
+              },
+              {
+                "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/4841",
+                "locator": "CAI 4841 actual Course Details Description; 2026\u20132027 public inventory"
               }
             ],
             "limitations": [
-              "No complete fixed-role category total is independently certified in this pass."
+              "The 29-course subject subset is independently checked, but its fixed/option roles cannot be recertified without the brochure/catalog. The 141 contextual GE additions are not re-reviewed; no full fixed-role chart or entire degree classification is certified."
             ]
           }
         },
@@ -62534,6 +62997,198 @@
           "unresolved": null
         },
         "full_degree_verified": false,
+        "checked_subject_subset": {
+          "course_ids": [
+            "usf-cis-1930",
+            "usf-cop-2510",
+            "usf-enc-1101",
+            "usf-mac-2311",
+            "usf-cop-3514",
+            "usf-enc-1102",
+            "usf-mac-2312",
+            "usf-phy-2048",
+            "usf-phy-2048l",
+            "usf-cda-3103",
+            "usf-cot-3100",
+            "usf-cop-4530",
+            "usf-egn-4450",
+            "usf-psy-2012",
+            "usf-cot-4400",
+            "usf-cap-4641",
+            "usf-egn-2440",
+            "usf-sta-2023",
+            "usf-pos-2041",
+            "usf-amh-2010",
+            "usf-amh-2020",
+            "usf-cai-1000",
+            "usf-cai-2001",
+            "usf-cai-4002",
+            "usf-cai-4024",
+            "usf-cai-4105",
+            "usf-cai-4203",
+            "usf-cai-4624",
+            "usf-cai-4841"
+          ],
+          "count": 29,
+          "categories": {
+            "foundations": 4,
+            "mathematics": 6,
+            "ai_ml": 7,
+            "systems": 2,
+            "human_context": 6,
+            "applications": 3,
+            "electives": 0,
+            "other": 1
+          },
+          "role_membership_verified": false
+        },
+        "source_captures": [
+          {
+            "path": ".cache/http/2b78c2baf4e5c6ce3c96e06826e7f9250d3ab73d5dd037adec82505ac9fe039c.body",
+            "url": "https://cloud.usf.edu/academic-programs/details/prefix/CIS/code/1930",
+            "sha256": "0c7f0feff5adf8cd2d4a892bafa19bcb3a550a5e74fe9bdfb1cff22d525e0a52"
+          },
+          {
+            "path": ".cache/http/d8bae7a7e5f70244185f477794dbc0fcbe2d702b8e9a73652e03a126b91cf220.body",
+            "url": "https://cloud.usf.edu/academic-programs/details/prefix/MAC/code/2311",
+            "sha256": "20507364ec4aefab532eff074952f927bbb4e079bbc9e8f5f34b6a6a7c2d7c15"
+          },
+          {
+            "path": ".cache/http/5d4da64c35cd1e894fb52df40e3d5a128b0a1adb38f86caadeef74c0cc8e9825.body",
+            "url": "https://cloud.usf.edu/academic-programs/details/prefix/CDA/code/3103",
+            "sha256": "8927ceefb78f4f1335a7957bd4701b468ba915d65a83b418b494a614707172f4"
+          },
+          {
+            "path": ".cache/http/676e3407347f62fb7082c8ed42c842a8a7c1dda167c23666e14dc5da8503ea67.body",
+            "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/4203",
+            "sha256": "33e28cfa737302a60a93bf8fd9214ea2999c0abc2ce1178d74476c499201ca2b"
+          },
+          {
+            "path": ".cache/http/8993f3b74d6e39f7990776f17ead86e663e987ff2110792b16a41955061c7dd1.body",
+            "url": "https://cloud.usf.edu/academic-programs/details/prefix/COP/code/2510",
+            "sha256": "4787f68f65ab347d5f6ea69a683848caacf098ee7fd82fcc4e1e8549d2e34585"
+          },
+          {
+            "path": ".cache/http/c6bd101840d8a49c228e7c5737e2d54e29e1d9907ab45f29d409b7a361c28c8c.body",
+            "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/4002",
+            "sha256": "bfbb8ea9edcf313fd404c2b018554957dccb93926cdf2cf6c47633bbdcd62f4d"
+          },
+          {
+            "path": ".cache/http/4d4a46b58ee5cd8e37282f66437631ea958ee83cc60668e20b39c20f2f11e63a.body",
+            "url": "https://cloud.usf.edu/academic-programs/details/prefix/EGN/code/2440",
+            "sha256": "69e14cea5b25d14611d6e29a0240b28010576f43e3e1a3d33cfa7dcd569f2917"
+          },
+          {
+            "path": ".cache/http/5d4d5fe580f0817b63154eff7a3f598815a74a57f6177f951f72cc567ab9878c.body",
+            "url": "https://cloud.usf.edu/academic-programs/details/prefix/PHY/code/2048L",
+            "sha256": "e0b33c61d871dbcc8b01326cb83116e396d110e3144cb50aec2d18dce77cf4e8"
+          },
+          {
+            "path": ".cache/http/4445d8015afff19eb705ed710c0a537e1efb95f79c906ac69eaf65d5733246f1.body",
+            "url": "https://cloud.usf.edu/academic-programs/details/prefix/EGN/code/4450",
+            "sha256": "7750316fcb72f958bbf7cdc01fe7c582f63349d12ae6fcaf949b57ea9e20bdc5"
+          },
+          {
+            "path": ".cache/http/a3339d09bebfb7f8447b45ac65a2f54cc23633cfea2125d49127cc4cd8a5f7d7.body",
+            "url": "https://cloud.usf.edu/academic-programs/details/prefix/COT/code/4400",
+            "sha256": "d8979557d78b2053392f506ad32ee8682a41130c1df421dfffe852bafafcecbb"
+          },
+          {
+            "path": ".cache/http/3fc77c3df7b9dddda898b6f6809e7c811e17039497db16b9cbdb39dedd4c8d09.body",
+            "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/4105",
+            "sha256": "7246f2c0ec4daee2ff8e1b3a977b44b1017f3ab3084ce4093ccd1871ce222f3d"
+          },
+          {
+            "path": ".cache/http/e6f878b9f0567bf6f1a5c0f2d99041e3ccc66401edaa06a133e70b31251ca3df.body",
+            "url": "https://cloud.usf.edu/academic-programs/details/prefix/COT/code/3100",
+            "sha256": "2eb32a1e50a941af088fc42d66cef87784ec01ac2acea4173ad0ea8e922b1594"
+          },
+          {
+            "path": ".cache/http/e2143f3f6512a13c60811b189babcf0cf117cda827b5610445df1f25fd59f336.body",
+            "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/4624",
+            "sha256": "3656a026680550287e8ae23fa02c50ba3ab9d68c96bd8d6ce5395459b081e226"
+          },
+          {
+            "path": ".cache/http/15125aff8c4fa47516688f889115b9137da742695007d265274d7280f0e64259.body",
+            "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/1000",
+            "sha256": "50b4aa2d0e24f2598c9efcb0a8cf741088c90a1c4459d8c1f1077ca3b907ab00"
+          },
+          {
+            "path": ".cache/http/4bd206f02021d363c87949cecb79ee7d2119452560176a8b8096ad4dfb9499e8.body",
+            "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/4841",
+            "sha256": "58561d63a85556dd7f9a1cdf2b514cd2e92f714ae90b9608db9786d2fc5d2e62"
+          },
+          {
+            "path": ".cache/http/4160f23a39ed621cd602a09a0772b645b980bd2e97ea150318efdbbf7091f479.body",
+            "url": "https://cloud.usf.edu/academic-programs/details/prefix/COP/code/4530",
+            "sha256": "a23d7af156669731e37f048f60bab6ecd43d65b838a7cbabff130d517841a117"
+          },
+          {
+            "path": ".cache/http/e2a4d0f0bb366d170c5d2f4dd23f5b28e05dc33bd6f544c9f28b812647821ca0.body",
+            "url": "https://cloud.usf.edu/academic-programs/details/prefix/POS/code/2041",
+            "sha256": "538394af7e7b146ba8cd3744ab2ee6cd38f11814fc0427d7269308ca38627054"
+          },
+          {
+            "path": ".cache/http/9f81922d152bdcc11deb762b4312ebcef82502aae94bed6ec4506b158d4ec623.body",
+            "url": "https://cloud.usf.edu/academic-programs/details/prefix/PSY/code/2012",
+            "sha256": "18ac7ffa0d076ec9a1e4fdca0b3d35dc43028007ccd57efce5ac5e6288147bab"
+          },
+          {
+            "path": ".cache/http/9da36fecd19bc6d49d58c6fc301c516b9db573580a1aafc694a833780f657f8b.body",
+            "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAP/code/4641",
+            "sha256": "2d5c461adae883bbf93a121701278cc2a95af903c0ca2df94cc50e51be3c85e6"
+          },
+          {
+            "path": ".cache/http/41cb579a7c244b72582f90c81bcc46bb76a8a1ec91e49c0149b5c4b2b2a2c82d.body",
+            "url": "https://cloud.usf.edu/academic-programs/details/prefix/ENC/code/1102",
+            "sha256": "6aaf2fbf0316cd708e874a14d0928601578ca1ed16fdad48b8b8a1fdd611a15c"
+          },
+          {
+            "path": ".cache/http/2f79553cc48cfa2eb19201441412f58e13abf3dc4ff942878edaa466cb519fb7.body",
+            "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/2001",
+            "sha256": "2f501d98d5cf23b822ce1406835d4016a8a36e5d6adf20cf26d0c5aad4c4be86"
+          },
+          {
+            "path": ".cache/http/1bef0f6fab958855e848c4e0ad18e1941a54748976046b3196c89892029e80d2.body",
+            "url": "https://cloud.usf.edu/academic-programs/details/prefix/AMH/code/2020",
+            "sha256": "dcb2006b4228f05f8fa69ff81d15287f8d2ff65479aee4aa5b2a0eb5622ac4db"
+          },
+          {
+            "path": ".cache/http/5bb864093a9899310d1ba54c854b79bc720ab7c3e65ac739b3f72cb7d455dc33.body",
+            "url": "https://cloud.usf.edu/academic-programs/details/prefix/AMH/code/2010",
+            "sha256": "5e3c5acdc31b3f3a766fd3aeeb97dde5585f4d388400445d8431d79eabbe87a4"
+          },
+          {
+            "path": ".cache/http/818efbf063c46224dc3a598324a1d17443f7a1c83a2b2840f74fc7baf6fd49e0.body",
+            "url": "https://cloud.usf.edu/academic-programs/details/prefix/MAC/code/2312",
+            "sha256": "64bf1b1098618cf8a6a7a3d3fc17790459db016e963e427ccef65ec54badc51c"
+          },
+          {
+            "path": ".cache/http/f469ed0de842650a124eb9f3b139a3d8e8af3085c97ecd7b6083e5886d4342a9.body",
+            "url": "https://cloud.usf.edu/academic-programs/details/prefix/ENC/code/1101",
+            "sha256": "2a5fe39adbdc5aeb25ae9ea6843fc0e5564df014fc39b4726d416aca11d96122"
+          },
+          {
+            "path": ".cache/http/8cdc55ee29d6dda084fc27204b791930586122adedc2d26e8070aa1ab37bd0f3.body",
+            "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/4024",
+            "sha256": "e470ce967d5dec1106f54b7e9be242e76b871eaec12cf6a5a958cc3c0b985520"
+          },
+          {
+            "path": ".cache/http/a187c50f1246736fd6f7a12695e53d93c974a0a38ead328e2b257b390ae8b1cd.body",
+            "url": "https://cloud.usf.edu/academic-programs/details/prefix/COP/code/3514",
+            "sha256": "312dc6f689832e5143eea25d9df8be48228a2d8e7f77fd6f3a8e770cbce4d9c8"
+          },
+          {
+            "path": ".cache/http/d456059285e70fce72d7ce3050cfff8230a8c6886fb5f4c653808734fd751c9d.body",
+            "url": "https://cloud.usf.edu/academic-programs/details/prefix/STA/code/2023",
+            "sha256": "e1f9ae2f71befb767646f7e87cb41216ed8e46fe1600287c2903825587a58ba7"
+          },
+          {
+            "path": ".cache/http/5015f6813143d016f28505771c171a72779e054aa776ddcc136e1ff3dd5d9b51.body",
+            "url": "https://cloud.usf.edu/academic-programs/details/prefix/PHY/code/2048",
+            "sha256": "e01bcf5ed3f3fea5751321d0d41c292d729122fb239e76a3c2d604475a32bf2e"
+          }
+        ],
         "ledger": "research/degree-audit/independent-core-other.json"
       }
     },
@@ -62882,34 +63537,41 @@
       "core_review": {
         "program_id": "william-mary-applied-ai-ba",
         "reviewed_at": "2026-10-11",
-        "reviewer": "independent-core-other",
+        "reviewer": "independent-resolution-usf-wm",
         "reviewed_content_hash": "e9ee129a34f1088b027047fce7a80ca6fa7010f8638f935a4024776a70fcf865",
         "dimensions": {
           "fixed_requirements": {
             "status": "partial",
-            "summary": "The department FAQ explicitly calls DATA 201, DATA 202 and DATA 305 core requirements normally taken at W&M. This verifies the three represented identities, not a complete 30-credit major or its uncoded capstone.",
+            "summary": "Available-source limit: the current department FAQ explicitly calls DATA201/202/305 core requirements normally taken at W&M, supporting the exact three mapped fixed identities. Its linked Example Pathway instead labels Designing AI Agents AAI301 and offers DATA202 or PHIL150 as an ethics choice. No source hierarchy, equivalence or complete approved major table resolves either conflict. The FAQ subset remains partial.",
             "evidence": [
               {
                 "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/",
                 "locator": "Curriculum / main degree requirements / explicitly named FAQ core"
+              },
+              {
+                "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/ba_ai_coursework.png",
+                "locator": "Entire Example Pathway: AAI301 Designing AI Agents and AI Ethics Course Options DATA202/PHIL150"
               }
             ],
             "limitations": [
-              "The illustrative pathway uses AAI 301 where the FAQ names DATA 305; it is not treated as a rename or complete approved-option list."
+              "Example Pathway AAI301 versus FAQ DATA305 is unresolved; no rename/cross-list is inferred. Example ethics choice DATA202/PHIL150 versus FAQ core DATA202 is unresolved. Known catalog robots HTTP202 was not retried. The complete 30-credit major, capstone identity and additional fixed courses remain unverified."
             ]
           },
           "choice_rules": {
             "status": "partial",
-            "summary": "The department supports conditional substitutions and independent study by committee approval, plus study-abroad preapproval. The linked pathway is explicitly an example and cannot establish a closed elective pool.",
+            "summary": "Reread the current FAQ substitution, independent-research and study-abroad approval rules and visually inspected the entire linked Example Pathway. The image gives two electives and examples of ethics/methods courses, without proving a closed approved pool or governing curriculum edition; those examples cannot add fixed courses or certify full option membership.",
             "evidence": [
               {
                 "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/",
                 "locator": "Actual requirement tables, alternative rows, branch footnotes and uncoded choice slots"
+              },
+              {
+                "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/ba_ai_coursework.png",
+                "locator": "Entire Example Pathway: ethics/methods alternatives and 2x Electives with Example Course Options"
               }
             ],
             "limitations": [
-              "This independent pass does not certify university-wide policies, general-education inventories, individual waivers, or total degree completion.",
-              "The illustrative pathway uses AAI 301 where the FAQ names DATA 305; it is not treated as a rename or complete approved-option list."
+              "DATA202/PHIL150 ethics choice and DATA305/AAI301 identity conflict have no published version hierarchy. Methods and elective examples are not exhaustive approved pools; no additional image-only course was promoted. Broad degree-wide policy/GE rules are outside this pass."
             ]
           },
           "classification": {
@@ -62966,11 +63628,38 @@
         },
         "source_captures": [
           {
-            "path": "/tmp/atlas-wm-major.html",
+            "path": "/tmp/atlas-resolution-wm-major.html",
             "sha256": "fc11f67ed4e8874360c32b62f7cf2532315b60c301fd17992002537ed666557c"
+          },
+          {
+            "path": "/tmp/wm-ba-pathway.png",
+            "sha256": "7c42a4e5cbfdeccb0f704a6d301451a3e744c1af418a347d525b1e1e2e61cc60"
+          },
+          {
+            "path": "/tmp/atlas-wm-current-courses.json",
+            "sha256": "afb6736f9d918b01f23f3de935daf1b80f4a84853ec960d748333b5e1978ae36"
           }
         ],
         "full_degree_verified": false,
+        "checked_subject_subset": {
+          "course_ids": [
+            "wm-applied-ai-data-201",
+            "wm-applied-ai-data-202",
+            "wm-applied-ai-data-305"
+          ],
+          "count": 3,
+          "categories": {
+            "foundations": 0,
+            "mathematics": 0,
+            "ai_ml": 2,
+            "systems": 0,
+            "human_context": 1,
+            "applications": 0,
+            "electives": 0,
+            "other": 0
+          },
+          "role_membership_verified": "FAQ subset only; full major unresolved"
+        },
         "ledger": "research/degree-audit/independent-core-other.json"
       }
     },

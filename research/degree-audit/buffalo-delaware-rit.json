@@ -2884,62 +2884,90 @@
           "locator": "Exact previously observed catalog barrier; no retry or bypass during audit",
           "checked_at": "2026-10-11",
           "access_status": "prior_catalog_root_http_403_and_robots_transport_failure; no_per_variant_endpoint_claim"
+        },
+        {
+          "url": "https://arts-sciences.buffalo.edu/economics/undergraduate/bs-ai-and-quantitative-economics.html",
+          "catalog_year": null,
+          "locator": "Required Courses: six component sections; nineteen fixed titles, sixteen named choices and selection1/2/4",
+          "checked_at": "2026-10-11",
+          "access_status": "Robots-aware permitted official department HTTP200 capture independently reread; codes and catalog edition unprinted"
         }
       ],
       "checks": {
         "degree_identity": "Exact AI and Quantitative Economics degree identity remains supported by the individual official undergraduate overview; the PPE BS is explicitly named by its department. Public identity does not establish its catalog requirements.",
-        "required_and_choices": "All 310 represented courses are attached only to contextual notes. No fixed major or choice-pool course identities are established. ENG105 CL1 and UBC399 policy observations remain contextual pending exemptions and complete degree applicability.",
-        "elective_pools": "308 distinct dated Pathways course/topic records are Winter/Spring2027 offering candidates, not an AI+X major elective pool or exhaustive GE list. No absence inference.",
+        "required_and_choices": "Department Required Courses supplies19 fixed uncoded title identities and16 named options in choose1/choose2/choose4 groups. The prior310 records remain contextual university candidates. No title-to-code mapping or sibling-major inheritance is inferred; catalog/cohort applicability stays unresolved.",
+        "elective_pools": "Department finite title pools are3 mathematics options,3 AI/society options and10 economics options. Selection counts remain1/2/4; individual credits and code aliases are unknown. The dated308 Pathways candidates remain contextual, not these major pools.",
         "prerequisites": "UBC399 requires completed UB Seminar and completed/concurrent remaining UB Curriculum. Major prerequisites, admission/continuation restrictions and individual Pathways prerequisites remain inaccessible.",
-        "credits_and_units": "ENG105 amount4 and UBC399 amount1 retain unknown normalized unit. Pathways amounts remain null. University 120-credit floor and 30-at-UB residency are not the specific major total.",
-        "classification": "ENG105 human_context from explicit writing/communication mapping; UBC399 unclassified because integrative portfolio content does not establish a primary subject; all 308 Pathways records unclassified because abbreviated offering labels do not replace course descriptions.",
+        "credits_and_units": "ENG105 amount4 and UBC399 amount1 retain unknown normalized unit. Pathways amounts remain null. University 120-credit floor and 30-at-UB residency are not the specific major total. Department component amounts8/15/16/6/38/3 are retained as source-stated groups with unknown normalized unit; neither individual credits nor a combined degree total are inferred.",
+        "classification": "Seven unequivocal limited-title major classifications: fixed2mathematics,1AI,1human-context and options3mathematics. The other28 major titles are unclassified including generic Introduction to Computer Science I/II. Actual major descriptions are unavailable. Existing ENG105/context dispositions stay unchanged.",
         "family_composition": "Five explicit shared framework notes reviewed against Department of AI and Society Academics: mathematical prerequisites as needed, five three-credit Society courses, variable technology component drawn from four-credit courses, integration and capstone. No inherited course bindings or requirement overrides supply a fixed course set. Family unchanged.",
         "degree_wide_requirements": "Public UB Curriculum framework and conferral minima reviewed. Approved pools, Pathways list/area combinations, college requirements, transfer exceptions, GPA/grade rules and exact major total remain unresolved behind catalog barriers."
       },
       "expected_profile": {
         "required": {
-          "count": 0,
+          "count": 19,
           "categories": {
-            "foundations": 0,
-            "mathematics": 0,
-            "ai_ml": 0,
-            "systems": 0,
-            "human_context": 0,
-            "applications": 0,
-            "electives": 0,
-            "other": 0
+            "mathematics": 2,
+            "ai_ml": 1,
+            "human_context": 1,
+            "other": 15
           }
         },
         "options": {
-          "count": 0,
+          "count": 16,
           "categories": {
-            "foundations": 0,
-            "mathematics": 0,
-            "ai_ml": 0,
-            "systems": 0,
-            "human_context": 0,
-            "applications": 0,
-            "electives": 0,
-            "other": 0
+            "mathematics": 3,
+            "other": 13
           }
         },
         "unresolved": {
           "count": 310,
           "categories": {
-            "foundations": 0,
-            "mathematics": 0,
-            "ai_ml": 0,
-            "systems": 0,
             "human_context": 1,
-            "applications": 0,
-            "electives": 0,
             "other": 309
           }
         }
       },
       "expected_course_ids": {
-        "required": [],
-        "options": [],
+        "required": [
+          "buffalo-ai-qe-title-precalculus",
+          "buffalo-ai-qe-title-ai-society",
+          "buffalo-ai-qe-title-ai-ethics",
+          "buffalo-ai-qe-title-technological-disruption-and-diffusion",
+          "buffalo-ai-qe-title-applied-linear-algebra-and-probability-for-ai",
+          "buffalo-ai-qe-title-applied-machine-learning",
+          "buffalo-ai-qe-title-introduction-to-computer-science-i",
+          "buffalo-ai-qe-title-introduction-to-computer-science-ii",
+          "buffalo-ai-qe-title-artificial-intelligence-and-economic-policy",
+          "buffalo-ai-qe-title-big-data-and-application-of-machine-learning-in-economics",
+          "buffalo-ai-qe-title-introduction-to-macroeconomics",
+          "buffalo-ai-qe-title-introduction-to-microeconomics",
+          "buffalo-ai-qe-title-economic-statistics-and-data-analysis",
+          "buffalo-ai-qe-title-microeconomic-theory-1",
+          "buffalo-ai-qe-title-macroeconomic-theory",
+          "buffalo-ai-qe-title-time-series-analysis-and-forecasting",
+          "buffalo-ai-qe-title-econometrics-i",
+          "buffalo-ai-qe-title-econometrics-ii",
+          "buffalo-ai-qe-title-ai-and-society-capstone"
+        ],
+        "options": [
+          "buffalo-ai-qe-title-survey-of-calculus-and-its-applications-i",
+          "buffalo-ai-qe-title-mathematical-analysis-for-management",
+          "buffalo-ai-qe-title-college-calculus-i",
+          "buffalo-ai-qe-title-ai-policy",
+          "buffalo-ai-qe-title-ai-and-social-structures",
+          "buffalo-ai-qe-title-ai-the-information-environment",
+          "buffalo-ai-qe-title-health-economics",
+          "buffalo-ai-qe-title-environmental-economics",
+          "buffalo-ai-qe-title-economic-development",
+          "buffalo-ai-qe-title-urban-economics",
+          "buffalo-ai-qe-title-financial-economics",
+          "buffalo-ai-qe-title-international-finance",
+          "buffalo-ai-qe-title-economics-of-education",
+          "buffalo-ai-qe-title-labor-economics",
+          "buffalo-ai-qe-title-public-economics",
+          "buffalo-ai-qe-title-industrial-organization"
+        ],
         "unresolved": [
           "buffalo-ubc-aas-100-8afb6e73",
           "buffalo-ubc-aas-117-4a7ed0ac",
@@ -3263,12 +3291,20 @@
             "https://www.buffalo.edu/ubcurriculum/capstone.html",
             "https://www.buffalo.edu/ubcurriculum/foundations.html"
           ]
+        },
+        {
+          "issue": "Binding major title inventory absent from earlier contextual-only graph",
+          "correction": "Map19 fixed/16 option title identities with code:null and preserved1/2/4 rules; scopepartial because edition/code/description remain unknown.",
+          "status": "corrected_with_limits",
+          "evidence_urls": [
+            "https://arts-sciences.buffalo.edu/economics/undergraduate/bs-ai-and-quantitative-economics.html"
+          ]
         }
       ],
       "blockers": [
         {
           "url": "https://catalogs.buffalo.edu",
-          "gap": "Major catalog inventory, local prerequisite/eligibility and completion policies unavailable. Root/host restriction is not asserted as an individually tested403 for every variant; exact per-variant catalog URL is unverified except PPE."
+          "gap": "Department title inventory is mapped, but exact current catalog codes/cohort applicability, aliases, major prerequisite/eligibility and completion policies remain unavailable. Known restricted catalog routes were not retried; title records are not claimed as code-verified."
         },
         {
           "url": "https://www.buffalo.edu/ubcurriculum/pathways.html",
@@ -3767,7 +3803,7 @@
         }
       ],
       "checks": {
-        "degree_identity": "Official ECE department heading explicitly names Artificial Intelligence Engineering BS and links2026–27 catalog.",
+        "degree_identity": "Official ECE department heading explicitly names Artificial Intelligence Engineering BS and links2026\u201327 catalog.",
         "required_and_choices": "Four-year content is explicitly Sample Plan of Study and courses may change. All 28 records remain under note ancestry. ELEG405/625 and397/398 alternatives remain conditional sample observations, not independently mandatory course options.",
         "elective_pools": "AI, STEM, breadth, writing and multicultural slots are unspecified. No pool inferred from graduate program or career lists.",
         "prerequisites": "All course-specific prerequisites remain unknown; sample placement is not a prerequisite chain. ELEG625 eligibility for undergraduate degree use is unresolved. EE/CE-only FAQ rules are not imported.",
@@ -3969,7 +4005,7 @@
         {
           "url": "https://www.rit.edu/policies/d030",
           "catalog_year": null,
-          "locator": "D03.0 sections II and IV–VI",
+          "locator": "D03.0 sections II and IV\u2013VI",
           "checked_at": "2026-10-11",
           "access_status": "read"
         },
@@ -4081,77 +4117,77 @@
         {
           "url": "https://www.rit.edu/study/modern-languages-and-cultures-arabic-immersion",
           "catalog_year": "2026-2027",
-          "locator": "2026–2027 curriculum table / complete settled public course popup opened using its exact code link",
+          "locator": "2026\u20132027 curriculum table / complete settled public course popup opened using its exact code link",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/modern-languages-and-cultures-chinese-immersion",
           "catalog_year": "2026-2027",
-          "locator": "2026–2027 curriculum table / complete settled public course popup opened using its exact code link",
+          "locator": "2026\u20132027 curriculum table / complete settled public course popup opened using its exact code link",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/modern-languages-and-cultures-french-immersion",
           "catalog_year": "2026-2027",
-          "locator": "2026–2027 curriculum table / complete settled public course popup opened using its exact code link",
+          "locator": "2026\u20132027 curriculum table / complete settled public course popup opened using its exact code link",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/modern-languages-and-cultures-german-immersion",
           "catalog_year": "2026-2027",
-          "locator": "2026–2027 curriculum table / complete settled public course popup opened using its exact code link",
+          "locator": "2026\u20132027 curriculum table / complete settled public course popup opened using its exact code link",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/modern-languages-and-cultures-italian-immersion",
           "catalog_year": "2026-2027",
-          "locator": "2026–2027 curriculum table / complete settled public course popup opened using its exact code link",
+          "locator": "2026\u20132027 curriculum table / complete settled public course popup opened using its exact code link",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/modern-languages-and-cultures-japanese-immersion",
           "catalog_year": "2026-2027",
-          "locator": "2026–2027 curriculum table / complete settled public course popup opened using its exact code link",
+          "locator": "2026\u20132027 curriculum table / complete settled public course popup opened using its exact code link",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/modern-languages-and-cultures-russian-immersion",
           "catalog_year": "2026-2027",
-          "locator": "2026–2027 curriculum table / complete settled public course popup opened using its exact code link",
+          "locator": "2026\u20132027 curriculum table / complete settled public course popup opened using its exact code link",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/modern-languages-and-cultures-spanish-immersion",
           "catalog_year": "2026-2027",
-          "locator": "2026–2027 curriculum table / complete settled public course popup opened using its exact code link",
+          "locator": "2026\u20132027 curriculum table / complete settled public course popup opened using its exact code link",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/cultural-anthropology-immersion",
           "catalog_year": "2026-2027",
-          "locator": "2026–2027 curriculum table and complete settled public course popups, opened through exact course-code links.",
+          "locator": "2026\u20132027 curriculum table and complete settled public course popups, opened through exact course-code links.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/archaeology-immersion",
           "catalog_year": "2026-2027",
-          "locator": "2026–2027 curriculum table and complete settled public course popups, opened through exact course-code links.",
+          "locator": "2026\u20132027 curriculum table and complete settled public course popups, opened through exact course-code links.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/sociology-immersion",
           "catalog_year": "2026-2027",
-          "locator": "2026–2027 curriculum table and complete settled public course popups, opened through exact course-code links.",
+          "locator": "2026\u20132027 curriculum table and complete settled public course popups, opened through exact course-code links.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
@@ -4165,49 +4201,49 @@
         {
           "url": "https://www.rit.edu/study/climate-change-interdisciplinary-problem-immersion",
           "catalog_year": "2026-2027",
-          "locator": "Current 2026–2027 curriculum table and complete public course popup opened from its exact code link.",
+          "locator": "Current 2026\u20132027 curriculum table and complete public course popup opened from its exact code link.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/biology-ecology-and-evolution-immersion",
           "catalog_year": "2026-2027",
-          "locator": "Current 2026–2027 curriculum table and complete public course popup opened from its exact code link.",
+          "locator": "Current 2026\u20132027 curriculum table and complete public course popup opened from its exact code link.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/gender-art-and-media-immersion",
           "catalog_year": "2026-2027",
-          "locator": "Rendered 2026–2027 curriculum table and exact settled public course popup; direct visible-browser read.",
+          "locator": "Rendered 2026\u20132027 curriculum table and exact settled public course popup; direct visible-browser read.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/womens-and-gender-studies-immersion",
           "catalog_year": "2026-2027",
-          "locator": "Rendered 2026–2027 curriculum table and exact settled public course popup; direct visible-browser read.",
+          "locator": "Rendered 2026\u20132027 curriculum table and exact settled public course popup; direct visible-browser read.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/gender-and-stem-studies-immersion",
           "catalog_year": "2026-2027",
-          "locator": "Complete public 2026–2027 overview, curriculum groups and footnotes, reviewed in the coordinated immersion rule inventory.",
+          "locator": "Complete public 2026\u20132027 overview, curriculum groups and footnotes, reviewed in the coordinated immersion rule inventory.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/gender-equity-social-institutions-and-public-affairs-immersion",
           "catalog_year": "2026-2027",
-          "locator": "Complete public 2026–2027 overview, curriculum groups and footnotes, reviewed in the coordinated immersion rule inventory.",
+          "locator": "Complete public 2026\u20132027 overview, curriculum groups and footnotes, reviewed in the coordinated immersion rule inventory.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/queer-and-transgender-studies-immersion",
           "catalog_year": "2026-2027",
-          "locator": "Complete public 2026–2027 overview, curriculum groups and footnotes, reviewed in the coordinated immersion rule inventory.",
+          "locator": "Complete public 2026\u20132027 overview, curriculum groups and footnotes, reviewed in the coordinated immersion rule inventory.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
@@ -4242,7 +4278,7 @@
         {
           "url": "https://www.rit.edu/study/environmental-studies-immersion",
           "catalog_year": "2026-2027",
-          "locator": "Rendered 2026–2027 curriculum table and exact settled public course popup; direct visible-browser read.",
+          "locator": "Rendered 2026\u20132027 curriculum table and exact settled public course popup; direct visible-browser read.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
@@ -4291,14 +4327,14 @@
         {
           "url": "https://www.rit.edu/study/political-science-immersion",
           "catalog_year": "2026-2027",
-          "locator": "2026–2027 curriculum table and complete settled public course popups",
+          "locator": "2026\u20132027 curriculum table and complete settled public course popups",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/quantum-information-science-and-technology-immersion",
           "catalog_year": "2026-2027",
-          "locator": "Current 2026–2027 curriculum table and complete public course popup opened from its exact code link.",
+          "locator": "Current 2026\u20132027 curriculum table and complete public course popup opened from its exact code link.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
@@ -4319,84 +4355,84 @@
         {
           "url": "https://www.rit.edu/study/public-policy-immersion",
           "catalog_year": "2026-2027",
-          "locator": "Complete overview, 2026–2027 curriculum table and footnotes; separately reviewed course cards retain their own source identifiers.",
+          "locator": "Complete overview, 2026\u20132027 curriculum table and footnotes; separately reviewed course cards retain their own source identifiers.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/political-science-immersion",
           "catalog_year": "2026-2027",
-          "locator": "Complete overview, 2026–2027 curriculum table and footnotes; separately reviewed course cards retain their own source identifiers.",
+          "locator": "Complete overview, 2026\u20132027 curriculum table and footnotes; separately reviewed course cards retain their own source identifiers.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/american-politics-immersion",
           "catalog_year": "2026-2027",
-          "locator": "Complete overview, 2026–2027 curriculum table and footnotes; separately reviewed course cards retain their own source identifiers.",
+          "locator": "Complete overview, 2026\u20132027 curriculum table and footnotes; separately reviewed course cards retain their own source identifiers.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/international-relations-immersion",
           "catalog_year": "2026-2027",
-          "locator": "Complete overview, 2026–2027 curriculum table and footnotes; separately reviewed course cards retain their own source identifiers.",
+          "locator": "Complete overview, 2026\u20132027 curriculum table and footnotes; separately reviewed course cards retain their own source identifiers.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/cyberpolitics-immersion",
           "catalog_year": "2026-2027",
-          "locator": "Complete overview, 2026–2027 curriculum table and footnotes; separately reviewed course cards retain their own source identifiers.",
+          "locator": "Complete overview, 2026\u20132027 curriculum table and footnotes; separately reviewed course cards retain their own source identifiers.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/climate-change-interdisciplinary-problem-immersion",
           "catalog_year": "2026-2027",
-          "locator": "Complete overview, 2026–2027 curriculum table and footnotes; separately reviewed course cards retain their own source identifiers.",
+          "locator": "Complete overview, 2026\u20132027 curriculum table and footnotes; separately reviewed course cards retain their own source identifiers.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/quantum-information-science-and-technology-immersion",
           "catalog_year": "2026-2027",
-          "locator": "Complete overview, 2026–2027 curriculum table and footnotes; separately reviewed course cards retain their own source identifiers.",
+          "locator": "Complete overview, 2026\u20132027 curriculum table and footnotes; separately reviewed course cards retain their own source identifiers.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/advertising-and-public-relations-immersion",
           "catalog_year": "2026-2027",
-          "locator": "Rendered 2026–2027 curriculum table and settled exact public course popup; direct visible-browser read.",
+          "locator": "Rendered 2026\u20132027 curriculum table and settled exact public course popup; direct visible-browser read.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/communication-immersion",
           "catalog_year": "2026-2027",
-          "locator": "Rendered 2026–2027 curriculum table and settled exact public course popup; direct visible-browser read.",
+          "locator": "Rendered 2026\u20132027 curriculum table and settled exact public course popup; direct visible-browser read.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/literature-and-media-immersion",
           "catalog_year": "2026-2027",
-          "locator": "Rendered 2026–2027 curriculum table and settled exact public course popup; direct visible-browser read.",
+          "locator": "Rendered 2026\u20132027 curriculum table and settled exact public course popup; direct visible-browser read.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/creative-writing-immersion",
           "catalog_year": "2026-2027",
-          "locator": "Rendered 2026–2027 curriculum table and settled exact public course popup; direct visible-browser read.",
+          "locator": "Rendered 2026\u20132027 curriculum table and settled exact public course popup; direct visible-browser read.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/digital-literatures-and-comparative-media-immersion",
           "catalog_year": "2026-2027",
-          "locator": "Rendered 2026–2027 curriculum table and settled exact public course popup; direct visible-browser read.",
+          "locator": "Rendered 2026\u20132027 curriculum table and settled exact public course popup; direct visible-browser read.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
@@ -4445,7 +4481,7 @@
         {
           "url": "https://www.rit.edu/study/science-technology-and-society-immersion",
           "catalog_year": "2026-2027",
-          "locator": "Rendered2026–2027 curriculum table and exact settled public course popup; direct visible-browser read.",
+          "locator": "Rendered2026\u20132027 curriculum table and exact settled public course popup; direct visible-browser read.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
@@ -4466,35 +4502,35 @@
         {
           "url": "https://www.rit.edu/study/psychology-immersion",
           "catalog_year": "2026-2027",
-          "locator": "2026–2027 curriculum table and complete settled public course popup opened through its exact course-code link.",
+          "locator": "2026\u20132027 curriculum table and complete settled public course popup opened through its exact course-code link.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/criminal-justice-immersion",
           "catalog_year": "2026-2027",
-          "locator": "2026–2027 curriculum table and complete settled public course popup opened through its exact course-code link.",
+          "locator": "2026\u20132027 curriculum table and complete settled public course popup opened through its exact course-code link.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/legal-studies-immersion",
           "catalog_year": "2026-2027",
-          "locator": "2026–2027 curriculum table and complete settled public course popup opened through its exact course-code link.",
+          "locator": "2026\u20132027 curriculum table and complete settled public course popup opened through its exact course-code link.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/deaf-leadership-immersion",
           "catalog_year": "2026-2027",
-          "locator": "2026–2027 curriculum table and complete settled public course popup opened through its exact course-code link.",
+          "locator": "2026\u20132027 curriculum table and complete settled public course popup opened through its exact course-code link.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/diversity-inclusion-and-dialogue-immersion",
           "catalog_year": "2026-2027",
-          "locator": "2026–2027 curriculum table and complete settled public course popup opened through its exact course-code link.",
+          "locator": "2026\u20132027 curriculum table and complete settled public course popup opened through its exact course-code link.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
@@ -4543,28 +4579,28 @@
         {
           "url": "https://www.rit.edu/study/theatre-arts-immersion",
           "catalog_year": "2026-2027",
-          "locator": "2026–2027 curriculum table and complete settled public course popups",
+          "locator": "2026\u20132027 curriculum table and complete settled public course popups",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/music-immersion",
           "catalog_year": "2026-2027",
-          "locator": "2026–2027 curriculum table and complete settled public course popups",
+          "locator": "2026\u20132027 curriculum table and complete settled public course popups",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/theatre-design-and-stagecraft-immersion",
           "catalog_year": "2026-2027",
-          "locator": "2026–2027 curriculum table and complete settled public course popups",
+          "locator": "2026\u20132027 curriculum table and complete settled public course popups",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/dance-immersion",
           "catalog_year": "2026-2027",
-          "locator": "2026–2027 curriculum table and complete settled public course popups",
+          "locator": "2026\u20132027 curriculum table and complete settled public course popups",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
@@ -4606,70 +4642,70 @@
         {
           "url": "https://www.rit.edu/study/art-history-immersion",
           "catalog_year": "2026-2027",
-          "locator": "2026–2027 course table and full settled public popup opened by the exact source-label link.",
+          "locator": "2026\u20132027 course table and full settled public popup opened by the exact source-label link.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/museum-studies-immersion",
           "catalog_year": "2026-2027",
-          "locator": "2026–2027 course table and full settled public popup opened by the exact source-label link.",
+          "locator": "2026\u20132027 course table and full settled public popup opened by the exact source-label link.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/visual-culture-immersion",
           "catalog_year": "2026-2027",
-          "locator": "2026–2027 course table and full settled public popup opened by the exact source-label link.",
+          "locator": "2026\u20132027 course table and full settled public popup opened by the exact source-label link.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/film-studies-immersion",
           "catalog_year": "2026-2027",
-          "locator": "2026–2027 course table and full settled public popup opened by the exact source-label link.",
+          "locator": "2026\u20132027 course table and full settled public popup opened by the exact source-label link.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/journalism-immersion",
           "catalog_year": "2026-2027",
-          "locator": "2026–2027 course table and full settled public popup opened by the exact source-label link.",
+          "locator": "2026\u20132027 course table and full settled public popup opened by the exact source-label link.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/science-film-photography-and-imaging-immersion",
           "catalog_year": "2026-2027",
-          "locator": "2026–2027 course table and full settled public popup opened by the exact source-label link.",
+          "locator": "2026\u20132027 course table and full settled public popup opened by the exact source-label link.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/film-studies-immersion",
           "catalog_year": "2026-2027",
-          "locator": "Rendered 2026–2027 curriculum and actual settled public popup, read in ordinary Chrome.",
+          "locator": "Rendered 2026\u20132027 curriculum and actual settled public popup, read in ordinary Chrome.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/art-history-immersion",
           "catalog_year": "2026-2027",
-          "locator": "2026–2027 curriculum table and complete settled public course popups",
+          "locator": "2026\u20132027 curriculum table and complete settled public course popups",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/american-arts-immersion",
           "catalog_year": "2026-2027",
-          "locator": "2026–2027 curriculum table and complete settled public course popups",
+          "locator": "2026\u20132027 curriculum table and complete settled public course popups",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/journalism-immersion",
           "catalog_year": "2026-2027",
-          "locator": "Rendered 2026–2027 curriculum table and settled exact public course popup; direct visible-browser read.",
+          "locator": "Rendered 2026\u20132027 curriculum table and settled exact public course popup; direct visible-browser read.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
@@ -4767,63 +4803,63 @@
         {
           "url": "https://www.rit.edu/study/global-public-health-immersion",
           "catalog_year": "2026-2027",
-          "locator": "Rendered 2026–2027 curriculum and actual settled public popup, read in ordinary Chrome.",
+          "locator": "Rendered 2026\u20132027 curriculum and actual settled public popup, read in ordinary Chrome.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/language-science-immersion",
           "catalog_year": "2026-2027",
-          "locator": "Rendered 2026–2027 curriculum and actual settled public popup, read in ordinary Chrome.",
+          "locator": "Rendered 2026\u20132027 curriculum and actual settled public popup, read in ordinary Chrome.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/american-sign-language-and-deaf-cultural-studies-immersion",
           "catalog_year": "2026-2027",
-          "locator": "Rendered 2026–2027 curriculum and actual settled public popup, read in ordinary Chrome.",
+          "locator": "Rendered 2026\u20132027 curriculum and actual settled public popup, read in ordinary Chrome.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/geographic-information-systems-immersion",
           "catalog_year": "2026-2027",
-          "locator": "2026–2027 course table and full settled public popup opened by the exact source-label link.",
+          "locator": "2026\u20132027 course table and full settled public popup opened by the exact source-label link.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/comics-studies-immersion",
           "catalog_year": "2026-2027",
-          "locator": "Rendered 2026–2027 curriculum table and settled exact public course popup; direct visible-browser read.",
+          "locator": "Rendered 2026\u20132027 curriculum table and settled exact public course popup; direct visible-browser read.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/transmedia-storytelling-and-entertainment-immersion",
           "catalog_year": "2026-2027",
-          "locator": "Rendered 2026–2027 curriculum table and settled exact public course popup; direct visible-browser read.",
+          "locator": "Rendered 2026\u20132027 curriculum table and settled exact public course popup; direct visible-browser read.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/health-culture-and-society-immersion",
           "catalog_year": "2026-2027",
-          "locator": "Rendered 2026–2027 curriculum table and settled exact public course popup; direct visible-browser read.",
+          "locator": "Rendered 2026\u20132027 curriculum table and settled exact public course popup; direct visible-browser read.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/american-sign-language-and-deaf-cultural-studies-immersion",
           "catalog_year": "2026-2027",
-          "locator": "Rendered 2026–2027 curriculum table and settled exact public course popup; direct visible-browser read.",
+          "locator": "Rendered 2026\u20132027 curriculum table and settled exact public course popup; direct visible-browser read.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/global-public-health-immersion",
           "catalog_year": "2026-2027",
-          "locator": "Current 2026–2027 curriculum table and complete public course popup opened from its exact code link.",
+          "locator": "Current 2026\u20132027 curriculum table and complete public course popup opened from its exact code link.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
@@ -4837,14 +4873,14 @@
         {
           "url": "https://www.rit.edu/study/american-sign-language-and-deaf-cultural-studies-immersion",
           "catalog_year": "2026-2027",
-          "locator": "2026–2027 curriculum table and complete settled public course popups",
+          "locator": "2026\u20132027 curriculum table and complete settled public course popups",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
         {
           "url": "https://www.rit.edu/study/computational-linguistics-immersion",
           "catalog_year": "2026-2027",
-          "locator": "2026–2027 curriculum table and complete settled public course popup opened through its exact course-code link.",
+          "locator": "2026\u20132027 curriculum table and complete settled public course popup opened through its exact course-code link.",
           "checked_at": "2026-10-11",
           "access_status": "public_browser_rendered"
         },
@@ -4962,14 +4998,14 @@
         }
       ],
       "checks": {
-        "degree_identity": "The public study page explicitly states Artificial Intelligence Bachelor of Science and Curriculum for 2026–2027. Exact BS identity is maintained; planned Fall 2026 launch is not recast as proof of first instruction.",
+        "degree_identity": "The public study page explicitly states Artificial Intelligence Bachelor of Science and Curriculum for 2026\u20132027. Exact BS identity is maintained; planned Fall 2026 launch is not recast as proof of first instruction.",
         "required_and_choices": "Independently reread all four expanded years:23 distinct single-code mapped sequence records, six pairs selected one each, and AI electives choose two across four entries (one is a robotics pair). Co-op repeats the same identity in two summers and counts once as a record, not one required placement. Twelve unsupported memberships cleared from uncoded context nodes.",
         "elective_pools": "All 77 published immersion paths and every named current card are reviewed and represented: 76 conditional candidate routes, including approval-based Global Experience, plus Principles of Computing retained as excluded context because required ISCH-370 prohibits GCCIS degree credit. The 787-label queue has 784 integrated current observations and three historical references, with no unread current contribution or graph backlog. Whole-route alternatives, discipline distribution, repeated credit accumulation, preparation, topic/campus/audience restrictions and no reuse remain explicit. Combined labels map only to observed popup identities; no cross-list equivalence is inferred. Broader Psychology eligibility and other approval-based criteria remain open source-stated rules, not fabricated finite pools. Complete university GE/WI attributes remain inaccessible through the identified public destinations.",
         "prerequisites": "All 807 available actual descriptions were read, with 333 prerequisite/eligibility statements and null where the inspected card provides none. Program entry prerequisites remain separate from degree obligations. D03.0 establishes departmental approval conditions without granting waivers. ISCH-370 expressly prohibits GCCIS degree credit, unlike ISCH-201 approval-only wording; ISCH-110 names Computer Science specifically. CSCI-431 was reread in its current public card: its literal prior-credit self-reference and conjunction are preserved as a repeat/eligibility condition, not a standalone initial-entry blocker. Honors, NTID support, placement, declared-immersion and historical-number conditions remain source-specific.",
-        "credits_and_units": "The degree sequence states 122 semester hours, distinct from the 120-hour institutional floor; D01.4 establishes semester-hour meaning. Actual zero-credit courses and repeated co-op placements are preserved. Every current card supplies its own amount or range; route totals are not divided to infer credits. Four-credit language/imaging choices, 1–3 or 1–6 variable courses, zero-to-one music ensembles and fixed one-credit Theatre Ensemble remain distinct. VIP requires nine credits on one project, at least three advanced; Music/Theatre repeated-credit bundles are not three distinct identities. No count-to-credit conversion is performed.",
+        "credits_and_units": "The degree sequence states 122 semester hours, distinct from the 120-hour institutional floor; D01.4 establishes semester-hour meaning. Actual zero-credit courses and repeated co-op placements are preserved. Every current card supplies its own amount or range; route totals are not divided to infer credits. Four-credit language/imaging choices, 1\u20133 or 1\u20136 variable courses, zero-to-one music ensembles and fixed one-credit Theatre Ensemble remain distinct. VIP requires nine credits on one project, at least three advanced; Music/Theatre repeated-credit bundles are not three distinct identities. No count-to-credit conversion is performed.",
         "classification": "Current 810 mapped identities have 807 actual descriptions and three advising-only missing descriptions. Manual profile: 23 fixed / 770 options / 17 context. All exact current immersion cards were read; generic topic/project bodies can remain source-inspected unclassified, and no category is inferred from membership or a prefix.",
         "family_composition": "No family inheritance for this degree.",
-        "degree_wide_requirements": "Reviewed D02.0/D05.0/D12.0/D01.4/D01.5/D03.0 cover transfer, grades and P–N/repeats, 2.0 GPA, 25-percent RIT residency, the 120-hour floor, catalog applicability, 60 BS GE hours, eight perspectives, immersion/no overlap, registration and two distinct wellness activities. Degree 122-hour sequence and IDAI-490 WI-PR designation remain intact. Current UWP/committee and petition evidence covers three WI courses within existing hours, FYW AP/transfer exemptions and exceptional WI-GE substitution criteria/timing. Current-student guidance was reread: use matriculation/advised catalog and the student AAR; it gives no public reconciliation of catalog/advising differences. All identified accessible immersion work is complete. The full current GE/WI attribute inventory remains unavailable at the public SIS destinations; the March 2013 science list is historical. MATH-190 allocation and advising elective version discrepancies remain substantive source gaps."
+        "degree_wide_requirements": "Reviewed D02.0/D05.0/D12.0/D01.4/D01.5/D03.0 cover transfer, grades and P\u2013N/repeats, 2.0 GPA, 25-percent RIT residency, the 120-hour floor, catalog applicability, 60 BS GE hours, eight perspectives, immersion/no overlap, registration and two distinct wellness activities. Degree 122-hour sequence and IDAI-490 WI-PR designation remain intact. Current UWP/committee and petition evidence covers three WI courses within existing hours, FYW AP/transfer exemptions and exceptional WI-GE substitution criteria/timing. Current-student guidance was reread: use matriculation/advised catalog and the student AAR; it gives no public reconciliation of catalog/advising differences. All identified accessible immersion work is complete. The full current GE/WI attribute inventory remains unavailable at the public SIS destinations; the March 2013 science list is historical. MATH-190 allocation and advising elective version discrepancies remain substantive source gaps."
       },
       "expected_profile": {
         "required": {
@@ -5870,7 +5906,7 @@
       "blockers": [
         {
           "url": "https://www.rit.edu/computing/sites/rit.edu.computing/files/docs/IST-Information/AI%202026_0.pdf",
-          "gap": "Advising CSCI 632/LING 582/LING 584 alternatives conflict with current 2026–27 rendered catalog CSCI 634/four-option list."
+          "gap": "Advising CSCI 632/LING 582/LING 584 alternatives conflict with current 2026\u201327 rendered catalog CSCI 634/four-option list."
         },
         {
           "url": "https://www.rit.edu/generaleducation/immersions",
