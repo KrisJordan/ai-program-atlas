@@ -170,8 +170,8 @@ def test_cmsw_archived_term_credits_and_missing_description_are_not_imputed():
     assert obs['CMS.593[J]']['prerequisites']=='CMS.592'
     assert all(o['catalog_year']=='Spring 2026' for o in obs.values())
     hamilton=[r for r in MANIFEST['courses'].values() if r['listed_code'].startswith('CMS.427')]
-    assert hamilton and all(r['review_status']=='pending' and not r['observations'] for r in hamilton)
-    assert all(any('no description' in x for x in r['missingness']) for r in hamilton)
+    assert hamilton and all(r['review_status']=='pending' or all(o.get('evidence_basis')=='official_title_only' and o['status']=='unclassified' for o in r['observations']) for r in hamilton)
+    assert all(any('description' in x for x in r['missingness']) for r in hamilton)
     changed=next(r for r in rows if r['listed_name']=='Intersectionality, Neurodiversity, and Disability')
     assert changed['review_status']=='identity_review_needed'
 
@@ -384,7 +384,7 @@ def test_history_title_reviews_do_not_classify_broad_titles_from_department():
 
 def test_actual_shass_title_review_replays_all_nine_fields_and_rejects_policy_change():
     source_specs=[(sid,s) for sid,s in MANIFEST['source_specs'].items() if s.get('parser')=='shass_field_titles']
-    assert len(source_specs)==9
+    assert len(source_specs)==10
     matched=0
     for sid,spec in source_specs:
         path=Path('/tmp')/('atlas-mit-hass-'+spec['field_key']+'.html')
@@ -396,7 +396,21 @@ def test_actual_shass_title_review_replays_all_nine_fields_and_rejects_policy_ch
         saved=[o for r in MANIFEST['courses'].values() for o in r['observations'] if o['source_id']==sid]
         assert saved and all(o['observation_digest'] in hashes for o in saved)
         matched+=len(saved)
-    assert matched==67
+    assert matched==229
     text=Path('/tmp/atlas-mit-hass-american-studies.html').read_text()
     with pytest.raises(ValueError):
         review.observe_shass_field_titles('american-studies',text.replace('taking four subjects','taking five subjects'))
+
+
+def test_remaining_field_title_snapshot_keeps_performance_and_science_unknown():
+    for code in ['21M.226','21M.291','3.985J [5.24J]','3.987','21G.067','21L.590']:
+        o=next(o for r in MANIFEST['courses'].values() if r['listed_code']==code for o in r['observations'] if o['source_id'].startswith('mit-ai-hass-review-field-titles-'))
+        assert o['status']=='unclassified' and o['category']=='other'
+        assert o['description_digest'] is None
+    for code in ['21G.705','21L.001','STS.085J/6.805J','17.571','WGS.226J [STS.023]']:
+        o=entry(code)['observations'][-1]
+        assert o['category']=='human_context'
+        assert o['evidence_basis']=='official_title_only'
+    # Foundations in a literature/policy title does not establish programming content.
+    assert entry('21L.001')['observations'][-1]['observed_name']=='Foundations of Western Literature: Homer to Dante'
+    assert MANIFEST['full_audit_status']=='partial'
