@@ -117,3 +117,33 @@ def test_statement_type_does_not_change_inference_provenance():
     html = outcomes({'outcomes': [{'text': 'A recorded editorial interpretation.', 'kind': 'inferred_taxonomy', 'statement_type': 'program_aim'}]}, 'inferred_taxonomy')
     assert 'Program aim · Documented inference' in html
     assert 'Source statement' not in html
+
+
+def test_directory_static_rank_order_keeps_category_and_evidence(site_data, tmp_path):
+    """No-JS baseline has numeric rank order and never sorts by a bound/old rank."""
+    from bs4 import BeautifulSoup
+    site_data['meta']['cohort'] = {'edition': '2027'}
+    for index, (name, rank, status) in enumerate([
+        ('Zulu', 2, 'primary_verified'), ('Alpha', 10, 'enumerated_secondary'),
+        ('Beta', 1, 'primary_edition_inferred'), ('Gamma', None, 'primary_verified'),
+        ('Omega', 2, 'secondary_reported'),
+    ]):
+        institution = site_data['institutions'][index]
+        institution['name'] = name
+        institution['rankings'] = [dict(publisher='U.S. News', edition='2027', category='National Universities', rank=rank, rank_upper_bound=100, source_url='https://example.edu/rank-' + str(index), verification_status=status)]
+        site_data['programs'][index]['institution'] = deepcopy(institution)
+        site_data['programs'][index].update(program_kind='degree', award_level='BS')
+    original = deepcopy(site_data)
+    build(site_data, tmp_path)
+    assert site_data == original
+    soup = BeautifulSoup((tmp_path / 'index.html').read_text(), 'html.parser')
+    grid = soup.find(id='cohort-nu-majors').find(class_='program-grid')
+    cards = grid.find_all('article', recursive=False)
+    assert [c['data-program-id'] for c in cards] == ['test-ai-4', 'test-ai-0', 'test-ai-1', 'test-ai-2', 'test-ai-3']
+    assert [c['data-sort-rank'] for c in cards] == ['2', '2', '10', '', '']
+    assert 'reported #1 is not used for sorting' in cards[3].get_text()
+    assert 'Enumerated secondary' in cards[2].get_text()
+    assert cards[2].find(class_='card-ranking').find('a')['href'] == 'https://example.edu/rank-1'
+    assert '2027' in cards[2].find(class_='card-ranking').get_text()
+    assert soup.find(id='sort-order').find('option')['value'] == 'rank'
+    assert 'not a publisher tiebreak' in soup.find(class_='sort-explanation').get_text()

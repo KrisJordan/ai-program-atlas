@@ -22,6 +22,7 @@
   const cards = [...document.querySelectorAll('[data-program-id]')];
   let selected = [];
   let profileMode = 'required';
+  const sortControl = document.getElementById('sort-order');
   const profileControl = document.getElementById('compare-profile');
   let timer;
   // Search text and course counts are projected once at build time.
@@ -76,6 +77,7 @@
 
   function readState() {
     const params = new URLSearchParams(location.search);
+    sortControl.value = params.get('sort') === 'name' ? 'name' : 'rank';
     keys.forEach(key => {
       const value = params.get(key) || '';
       controls[key].value = value;
@@ -100,6 +102,7 @@
 
   function writeState() {
     const params = new URLSearchParams();
+    if (sortControl.value === 'name') params.set('sort', 'name');
     keys.forEach(key => { if (controls[key].value) params.set(key, controls[key].value); });
     if (selected.length) params.set('compare', selected.join(','));
     if (profileMode === 'options') params.set('profile', 'options');
@@ -204,7 +207,29 @@
     }));
   }
 
+  function sortDirectory() {
+    const compareText = (a, b) => a < b ? -1 : a > b ? 1 : 0;
+    const compare = (a, b) => {
+      if (sortControl.value === 'rank') {
+        const rankA = a.dataset.sortRank ? Number(a.dataset.sortRank) : Infinity;
+        const rankB = b.dataset.sortRank ? Number(b.dataset.sortRank) : Infinity;
+        if (rankA !== rankB) return rankA < rankB ? -1 : 1;
+      }
+      for (const key of ['sortInstitution', 'sortTitle', 'sortId']) {
+        const order = compareText(a.dataset[key] || '', b.dataset[key] || '');
+        if (order) return order;
+      }
+      return 0;
+    };
+    document.querySelectorAll('.program-grid, .family-variants').forEach(container => {
+      const entries = [...container.children];
+      const ordered = [...entries].sort(compare);
+      if (ordered.some((entry, index) => entry !== entries[index])) ordered.forEach(entry => container.append(entry));
+    });
+  }
+
   function render() {
+    sortDirectory();
     let count = 0;
     cards.forEach(card => {
       const program = byId.get(card.dataset.programId);
@@ -274,11 +299,12 @@
     clearTimeout(timer);
     writeState();
   }));
+  sortControl.addEventListener('change', () => { clearTimeout(timer); writeState(); });
   profileControl.addEventListener('change', () => { profileMode = profileControl.value; clearTimeout(timer); writeState(); announce(profileMode === 'required' ? 'Showing required curriculum profiles.' : 'Showing elective option profiles.'); });
   form.addEventListener('submit', event => { event.preventDefault(); clearTimeout(timer); writeState(); });
   controls.q.addEventListener('input', () => { clearTimeout(timer); timer = setTimeout(writeState, 220); });
   keys.filter(k => k !== 'q').forEach(key => controls[key].addEventListener('change', () => { clearTimeout(timer); if (key === 'award') { Object.keys(awardState).forEach(group => { awardState[group] = ''; }); const path = pathForType(controls.award.value) || (controls.award.value ? 'majors' : null); if (path) Object.keys(pathState).forEach(group => { pathState[group] = path; }); } if (key === 'type' && controls.type.value) Object.keys(pathState).forEach(group => { pathState[group] = pathForType(controls.type.value); }); if (key === 'discipline' && controls.discipline.value) programs.filter(p => (p.family?.disciplines || []).includes(controls.discipline.value)).forEach(p => { if (!expanded.includes(p.family.id)) expanded.push(p.family.id); }); writeState(); }));
-  const reset = () => { clearTimeout(timer); keys.forEach(key => { controls[key].value = ''; }); Object.keys(pathState).forEach(group => { pathState[group] = 'majors'; awardState[group] = ''; }); writeState(); };
+  const reset = () => { clearTimeout(timer); sortControl.value = 'rank'; keys.forEach(key => { controls[key].value = ''; }); Object.keys(pathState).forEach(group => { pathState[group] = 'majors'; awardState[group] = ''; }); writeState(); };
   document.getElementById('reset-filters').addEventListener('click', reset);
   document.getElementById('empty-reset').addEventListener('click', () => { reset(); controls.q.focus(); });
   document.getElementById('clear-comparison').addEventListener('click', () => {

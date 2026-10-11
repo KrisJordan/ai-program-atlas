@@ -10,6 +10,7 @@ import shutil
 
 from atlas.curriculum_profile import requirement_profile
 from atlas.awards import major_award_buckets
+from atlas.rankings import institution_rank_context
 
 CATEGORIES = {
     "foundations": "Computing foundations", "mathematics": "Mathematics",
@@ -214,15 +215,44 @@ def award_options_markup(program):
     return '<p class="award-options"><strong>Offered awards:</strong> ' + labels + '</p>'
 
 
+def directory_sort_key(program, title=None, identity=None):
+    rank = program.get('_rank_context', {}).get('rank')
+    return (rank if rank is not None else float('inf'),
+            str(program.get('institution', {}).get('name') or '').casefold(),
+            str(title if title is not None else program.get('title') or '').casefold(),
+            identity or program['id'])
+
+
+def directory_sort_attributes(program, title=None, identity=None):
+    rank, institution, title, identity = directory_sort_key(program, title, identity)
+    return ' '.join(f'data-sort-{key}="{esc(value)}"' for key, value in [
+        ('rank', '' if rank == float('inf') else rank), ('institution', institution),
+        ('title', title), ('id', identity)])
+
+
+def directory_rank_markup(program, linked=True):
+    context = program.get('_rank_context', {})
+    rank = context.get('rank')
+    label = f"#{rank}" if rank is not None else 'Exact rank unverified'
+    details = f"U.S. News {context.get('edition') or 'edition unverified'} · {context.get('category') or 'Category unverified'}"
+    evidence = human(context.get('verification_status'))
+    if rank is None and context.get('reported_rank') is not None:
+        evidence += f" · reported #{context['reported_rank']} is not used for sorting"
+    if rank is None and context.get('reason'):
+        evidence += ' · ' + str(context['reason']).replace('_', ' ')
+    citation = external(context.get('source_url'), 'Ranking source') if linked and context.get('source_url') else ''
+    return '<span class="card-ranking"><strong>' + esc(label) + '</strong> · ' + esc(details) + '<small>' + esc(evidence) + (' · ' + citation if citation else '') + '</small></span>'
+
+
 def program_card(p, base):
     institution = p.get("institution", {})
     courses = unique_courses(p)
     variant = p.get("family") or {}
     variant_label = '<p class="variant-label">Variant: ' + esc(variant.get("variant_label") or p.get("title")) + '</p>' if variant else ''
-    return f'''<article class="program-card" data-program-id="{esc(p['id'])}">
+    return f'''<article class="program-card" data-program-id="{esc(p['id'])}" {directory_sort_attributes(p)}>
 <div class="card-top"><span class="eyebrow">{esc(institution.get('name'))}</span><span class="card-badges">{badge(human(p.get('program_kind')))}{badge(p.get('award_level')) if p.get('award_level') not in ('other', 'minor', 'concentration', None) else ''}</span></div>
 <h3><a href="{base}programs/{esc(p['id'])}/">{esc(p.get('title'))}<span aria-hidden="true">↗</span></a></h3>
-{variant_label}{award_options_markup(p)}<p class="card-description">{esc(p.get('overview') or 'Program overview has not yet been recorded.')}</p>
+{directory_rank_markup(p)}{variant_label}{award_options_markup(p)}<p class="card-description">{esc(p.get('overview') or 'Program overview has not yet been recorded.')}</p>
 <dl class="card-facts"><div><dt>Academic calendar</dt><dd>{esc(human(institution.get('calendar')))}</dd></div><div><dt>Curriculum evidence</dt><dd>{esc(evidence_label(p))}</dd></div></dl>
 <div class="card-evidence"><span>{len(courses)} course records</span><span>Verified {esc(date_value(p))}</span></div>
 <div class="card-bottom"><a href="{base}programs/{esc(p['id'])}/">View program <span aria-hidden="true">→</span></a><label class="compare-choice js-only"><input type="checkbox" data-compare="{esc(p['id'])}"> Compare<span class="sr-only"> {esc(p.get('title'))} at {esc(institution.get('name'))}</span></label></div></article>'''
@@ -234,20 +264,20 @@ def family_group(family, members, base):
     shared_titles = ''.join('<li>' + esc(r.get('title')) + '</li>' for r in shared)
     codes = ', '.join(family.get('shared_course_codes') or [])
     classification = {'source_stated': 'Source-stated family', 'analyst_classified': 'Analyst-classified family'}.get(family.get('classification_kind'), 'Classification not recorded')
-    return f'''<details class="program-family" data-family-id="{esc(family['id'])}"><summary><span class="family-heading"><span class="eyebrow">{esc(members[0].get('institution', {}).get('name'))}</span><strong>{esc(family.get('name'))}</strong><span class="family-description">{esc(family.get('description') or 'Related programs with an explicitly documented family relationship.')}</span></span><span class="family-summary-meta">{badge(classification)}<span class="family-match-count">{len(members)} variants</span><span class="family-toggle">View variants</span></span></summary><div class="family-body"><div class="family-evidence"><p><strong>Shared structure; separate awards.</strong> Compare a concrete variant below. Family grouping does not combine awards or imply identical requirements.</p><details class="family-sources"><summary>Family evidence ({len(family.get('sources', []))} sources)</summary><p>{sources or 'Family sources not recorded.'}</p></details>{'<details class="shared-preview"><summary>Recorded shared requirements (' + str(len(shared)) + ' groups)</summary><ul>' + shared_titles + '</ul><p>Requirement groups include containers and choices; this is not a course total.</p></details>' if shared else '<p>Shared requirement structure has not yet been recorded.</p>'}{'<p><strong>Recorded shared course codes:</strong> ' + esc(codes) + '</p>' if codes else ''}</div><div class="family-variants">{''.join(program_card(program, base) for program in members)}</div></div></details>'''
+    return f'''<details class="program-family" data-family-id="{esc(family['id'])}" {directory_sort_attributes(members[0], family.get("name"), family["id"])}><summary><span class="family-heading"><span class="eyebrow">{esc(members[0].get('institution', {}).get('name'))}</span><strong>{esc(family.get('name'))}</strong>{directory_rank_markup(members[0], linked=False)}<span class="family-description">{esc(family.get('description') or 'Related programs with an explicitly documented family relationship.')}</span></span><span class="family-summary-meta">{badge(classification)}<span class="family-match-count">{len(members)} variants</span><span class="family-toggle">View variants</span></span></summary><div class="family-body"><div class="family-evidence"><p class="family-rank-source">{external(members[0].get("_rank_context", {}).get("source_url"), "Institution ranking source")}</p><p><strong>Shared structure; separate awards.</strong> Compare a concrete variant below. Family grouping does not combine awards or imply identical requirements.</p><details class="family-sources"><summary>Family evidence ({len(family.get('sources', []))} sources)</summary><p>{sources or 'Family sources not recorded.'}</p></details>{'<details class="shared-preview"><summary>Recorded shared requirements (' + str(len(shared)) + ' groups)</summary><ul>' + shared_titles + '</ul><p>Requirement groups include containers and choices; this is not a course total.</p></details>' if shared else '<p>Shared requirement structure has not yet been recorded.</p>'}{'<p><strong>Recorded shared course codes:</strong> ' + esc(codes) + '</p>' if codes else ''}</div><div class="family-variants">{''.join(program_card(program, base) for program in members)}</div></div></details>'''
 
 
 def grouped_programs(programs, families, base):
     grouped = set()
     entries = []
     for family in families:
-        members = [p for p in programs if p.get('family', {}).get('id') == family.get('id') and p['id'] in family.get('variant_ids', [])]
+        members = sorted([p for p in programs if p.get('family', {}).get('id') == family.get('id') and p['id'] in family.get('variant_ids', [])], key=directory_sort_key)
         if not members:
             continue
         grouped.update(p['id'] for p in members)
-        entries.append((members[0].get('institution', {}).get('name', ''), 0, family.get('name', ''), family_group(family, members, base)))
-    entries.extend((p.get('institution', {}).get('name', ''), 1, p.get('title', ''), program_card(p, base)) for p in programs if p['id'] not in grouped)
-    return ''.join(entry[3] for entry in sorted(entries, key=lambda entry: (entry[0], entry[1], entry[2])))
+        entries.append((directory_sort_key(members[0], family.get('name'), family['id']), family_group(family, members, base)))
+    entries.extend((directory_sort_key(p), program_card(p, base)) for p in programs if p['id'] not in grouped)
+    return ''.join(entry[1] for entry in sorted(entries, key=lambda entry: entry[0]))
 
 
 def family_context(p, family, base):
@@ -292,11 +322,11 @@ def program_cohort(program, institutions):
     return 'nu' if 'National Universities' in categories else 'lac'
 
 
-def cohort_directory(programs, institutions, families, base):
+def cohort_directory(programs, institutions, families, base, edition=None):
     institution_map = {i['id']: i for i in institutions}
     blocks = []
     for key, name in COHORT_GROUPS.items():
-        members = [p for p in programs if program_cohort(p, institution_map) == key]
+        members = [{**p, '_rank_context': institution_rank_context(institution_map.get(p.get('institution', {}).get('id'), p.get('institution', {})), name if key != 'unclassified' else None, edition)} for p in programs if program_cohort(p, institution_map) == key]
         if key == 'unclassified' and not members:
             continue
         tabs = []
@@ -344,8 +374,8 @@ def root_page(data, base):
 {inventory_counts}<section class="explorer" aria-labelledby="explore-title"><div class="section-heading"><div><span class="eyebrow">PROGRAM DIRECTORY</span><h2 id="explore-title">Find a program</h2></div><p>Choose an institution category and program type. Compare up to four programs.</p></div>
 <form id="filters" class="filters js-only" role="search"><label class="search-label" for="search">Search programs<input type="search" id="search" name="q" placeholder="Institution, program, or course…" autocomplete="off"></label><div class="filter-row">{controls}</div><div class="filter-footer"><p class="filter-help">The course-category filter searches all documented course records, including elective options. Discipline filters use explicitly recorded family membership; unclassified programs are not assumed to match.</p><button type="button" id="reset-filters" class="text-button">Reset filters</button></div></form>
 <noscript><p class="notice">All documented programs are listed below. Enable JavaScript to filter and compare programs.</p></noscript>
-<div class="results-heading"><p id="result-count" role="status" aria-live="polite">{len(programs)} programs</p><span>Alphabetical by institution</span></div>
-{cohort_directory(programs, institutions, families, base)}
+<div class="results-heading"><p id="result-count" role="status" aria-live="polite">{len(programs)} programs</p><label class="sort-control js-only" for="sort-order">Sort programs<select id="sort-order" name="sort"><option value="rank">U.S. News rank · ascending</option><option value="name">Institution name · A–Z</option></select></label></div><p class="sort-explanation">Default: ascending verified numeric U.S. News rank within each category. Unknown or unverified ranks follow. Ties use institution and program names alphabetically for navigation, not a publisher tiebreak. Institution ranks do not measure program or teaching quality.</p>
+{cohort_directory(programs, institutions, families, base, cohort.get('edition') if isinstance(cohort, dict) else None)}
 <div id="empty-state" class="empty-state" hidden><span class="eyebrow">NO MATCHES</span><h3>No programs match your filters.</h3><p>No documented program matches these filters. This does not establish that such a program does not exist.</p><button type="button" id="empty-reset">Clear filters</button></div></section>
 <div id="compare-tray" class="compare-tray" hidden><span id="tray-count">0 of 4 selected</span><a href="#comparison">Compare programs ↓</a></div><section id="comparison" class="comparison js-only" aria-labelledby="compare-title"><div class="section-heading"><div><span class="eyebrow">PROGRAM COMPARISON</span><h2 id="compare-title">Compare programs</h2></div><button type="button" id="clear-comparison" class="text-button">Clear selection</button></div><p class="comparison-intro">Choose up to four programs. Credit units and incomplete curricula stay visible; course counts are not measures of program quality.</p><label class="comparison-profile-control" for="compare-profile">Curriculum profile<select id="compare-profile"><option value="required">Required curriculum</option><option value="options">Elective options</option></select></label><div id="compare-status" role="status" aria-live="polite"></div><div id="comparison-content"><p class="comparison-placeholder">Select “Compare” on a program to begin.</p></div></section>
 <section class="method-callout"><span class="eyebrow">SOURCES & METHODS</span><h2>Check the evidence behind each record.</h2><p>Official sources, verification dates, requirement structure, and unknowns travel with the data. Source statements about program aims and outcomes are kept separate from editorial classifications.</p><a href="{base}methodology/">How to read this atlas →</a></section>'''
