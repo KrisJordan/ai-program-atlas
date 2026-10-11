@@ -34,10 +34,10 @@ def test_buffalo_framework_preserves_exact_reviewed_graph_and_gaps(pid):
     program = json.loads((ROOT / "data/programs" / f"{pid}.json").read_text())
     db.validate_program(program, family)
     resolved = resolve_program(program, family)
-    rows = [{k: v for k, v in r.items() if k not in ANNOTATIONS} for r in resolved["requirements"] if not r["id"].startswith("buffalo-ubc-")]
+    rows = [{k: v for k, v in r.items() if k not in ANNOTATIONS} for r in resolved["requirements"] if not r["id"].startswith("buffalo-ubc-") and "-department-" not in r["id"]]
     assert db.digest(sorted(rows, key=lambda r: r["id"])) == EXPECTED[pid]
     assert len([r for r in resolved["requirements"] if r["origin"] == "family"]) == 5
-    assert all(c["id"].startswith("buffalo-ubc-") for c in resolved["courses"])
+    assert all(c["id"].startswith(("buffalo-ubc-", "buffalo-ai-qe-title-")) for c in resolved["courses"])
     # Independent general education additions do not change the original major framework.
     assert resolved["curriculum_status"] == "partial"
     assert resolved["curriculum_audit"]["unresolved_requirements"]

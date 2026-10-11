@@ -25,3 +25,7 @@ from atlas.adapters.buffalo_public_policies import register as register_public_p
 SOURCES = list(SOURCES)
 SOURCE_PARSERS = globals().get("SOURCE_PARSERS", {})
 register_public_policies(PROGRAM_ID, SOURCES, SOURCE_PARSERS)
+
+from atlas.adapters.buffalo_economics_titles import URL as DEPARTMENT_URL, parse as parse_department
+SOURCES.append(DEPARTMENT_URL)
+SOURCE_PARSERS[DEPARTMENT_URL] = parse_department

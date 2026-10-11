@@ -67,7 +67,7 @@ def test_reviewed_buffalo_records_preserve_gaps():
         )
         validate_program(d, family)
         assert d["curriculum_status"] == "partial"
-        assert all(c["id"].startswith("buffalo-ubc-") for c in d["courses"])
+        assert all(c["id"].startswith(("buffalo-ubc-", "buffalo-ai-qe-title-")) for c in d["courses"])
         assert d["curriculum_audit"]["unresolved_requirements"]
         spec = importlib.util.spec_from_file_location(
             d["id"], ROOT / "atlas/adapters" / d["id"] / "adapter.py"

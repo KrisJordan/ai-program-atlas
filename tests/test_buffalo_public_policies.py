@@ -57,8 +57,10 @@ def test_all_family_degrees_preserve_partial_major_scope():
         d=json.loads(p.read_text())
         if not d.get('family'):continue
         records.append(d)
-        assert len(d['courses'])==310
-        assert all(c['id'].startswith('buffalo-ubc-') for c in d['courses'])
+        assert len([c for c in d['courses'] if c['id'].startswith('buffalo-ubc-')])==310
+        major=[c for c in d['courses'] if not c['id'].startswith('buffalo-ubc-')]
+        assert len(major)==(35 if 'quantitative-economics' in d['id'] else 0)
+        assert all(c['id'].startswith('buffalo-ai-qe-title-') and c['code'] is None for c in major)
         assert d['curriculum_status']=='partial'
         assert any('AI+X-specific major inventories' in x for x in d['curriculum_audit']['unresolved_requirements'])
         assert set(URLS.values())<={s['url'] for s in d['sources']}
