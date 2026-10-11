@@ -315,3 +315,64 @@ def test_northeastern_role_overlays_corequisites_and_variable_hours_do_not_infla
     assert course['credits'] is None
     assert any(r.get('credits')==4 and course['id'] in r.get('course_ids',[]) for r in speech['requirements'])
     assert next(c for c in speech['courses'] if c['code']=='SLPA 4219')['credits']==3
+
+
+def test_northeastern_economics_full_manual_inventory_and_rendered_profile():
+    import hashlib
+    from bs4 import BeautifulSoup
+    from atlas.site import category_chart
+    ledger = json.loads((ROOT/'research/degree-audit/independent-review.json').read_text())
+    pid = 'northeastern-university-artificial-intelligence-and-economics-bs-boston-bs-degree'
+    entry = next(e for e in ledger['programs'] if e['program_id']==pid)
+    p = load(pid)
+    courses = {c['code']:c for c in p['courses']}
+    profile = requirement_profile(p)
+    assert len(entry['course_review'])==len(courses)==50
+    assert profile['identity']==entry['expected_identity']
+    for source in entry['course_review']:
+        c = courses[source['code']]
+        assert (c['name'],c['category'],c['category_review']['status'],c['credits'],c['credit_unit']) == (
+            source['title'],source['category'],source['status'],source['credits'],source['credit_unit'])
+        assert (hashlib.sha256(c['prerequisites'].encode()).hexdigest() if c['prerequisites'] else None)==source['prerequisites_sha256']
+        assert requirement_profile(only_course(p,c['id']))[source['role']]['count']==1
+    chart = BeautifulSoup(category_chart(p), 'html.parser')
+    for role in ['required','options','unresolved']:
+        manual = entry['expected_profile'][role]
+        assert profile[role]['count']==manual['count']
+        assert profile[role]['categories']=={k:manual['categories'].get(k,0) for k in profile[role]['categories']}
+        assert profile[role]['classification']=={k:manual['classification'].get(k,0) for k in profile[role]['classification']}
+        assert set(entry['expected_course_ids'][role])=={courses[r['code']]['id'] for r in entry['course_review'] if r['role']==role}
+        if role!='unresolved':
+            panel = chart.select_one(f'[data-profile={role}]')
+            assert f"{manual['count']} distinct" in panel.select_one('.profile-total').get_text()
+            for key,value in profile[role]['categories'].items():
+                assert panel.select_one(f'[data-category={key}] strong').get_text()==(str(value) if value else '0 mapped')
+    assert entry['second_pass_status']=='partial' and not entry['full_degree_verified']
+
+
+def test_northeastern_economics_calculus_choices_gpa_overlay_and_local_pool_scope():
+    p = load('northeastern-university-artificial-intelligence-and-economics-bs-boston-bs-degree')
+    courses = {c['code']:c for c in p['courses']}
+    for code in ['MATH 1231','MATH 1241','MATH 1245','MATH 1340','MATH 1341']:
+        profile = requirement_profile(only_course(p,courses[code]['id']))
+        assert profile['required']['count']==0 and profile['options']['count']==1
+    assert courses['MATH 1340']['credits']==6
+    assert 'PHIL 1300' not in courses  # This degree's local social-issues menu differs.
+    for code in ['ECON 2315','ECON 2316','ECON 2350','ECON 2560']:
+        cid = courses[code]['id']
+        assert len([r for r in p['requirements'] if cid in r.get('course_ids',[])])==2
+        profile = requirement_profile(only_course(p,cid))
+        assert profile['required']['count']==1 and profile['options']['count']==0
+    gpa = next(r for r in p['requirements'] if r['id'].endswith('economics-gpa-requirement-policy'))
+    assert 'average' in gpa['summary'] and '2.000' in gpa['summary']
+    elective = next(r for r in p['requirements'] if r['id'].endswith('economics-electives-course-choice'))
+    assert (elective['count'],elective['credits'],elective['credit_unit'])==(5,20,'semester_hours')
+    assert 'no more than two' in elective['summary'] and 'cannot be counted as electives' in elective['summary']
+    assert not elective['course_ids']  # Open ranges do not fabricate finite course members.
+    for code in ['ECON 1115','ECON 1116','ECON 2315','ECON 2316']:
+        assert courses[code]['category']=='human_context'
+    for code in ['ECON 2350','ECON 2560']:
+        assert courses[code]['category']=='mathematics'
+    for code in ['ECON 4692','ECON 4997']:
+        assert courses[code]['category_review']['status']=='unclassified'
+        assert requirement_profile(only_course(p,courses[code]['id']))['options']['count']==1
