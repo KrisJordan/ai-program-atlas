@@ -1,0 +1,3 @@
+# CSE content contribution, 2026-10-11
+
+See [the complete review and integration boundaries](../../../research/degree-audit/ucsd-cse-course-content.md) and `atlas/adapters/ucsd_cse_remaining_reviews.py` with its adjacent manifest. The contribution reads 82 complete current descriptions among 88 handed-off identifiers. Six exact headings are absent; they remain unknown. Compose the observer with the existing same-URL core and tag parsers, preserving their observations. Manual taxonomy review is intentionally separate from scrape certification. No requirement membership or identity merge is authorized by this batch. Next checks include missing-code/version resolution, source-stated credit exceptions, reciprocal aliases and route-specific eligibility.

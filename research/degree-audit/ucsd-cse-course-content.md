@@ -1,0 +1,23 @@
+# UC San Diego CSE chapter content review
+
+Reviewed 2026-10-11 against the [public CSE course chapter](https://catalog.ucsd.edu/courses/CSE.html), fetched 2026-10-10T23:00:34+00:00. The source snapshot hash is recorded in `atlas/adapters/ucsd_cse_remaining_reviews.json`; raw copyrighted HTML remains in ignored private cache. No edition is inferred from the current URL.
+
+The program owner handed off 88 represented identifiers outside the earlier eight core-course descriptions. All 82 exact current headings and complete description fields were read, including their restrictions. Six identifiers have no exact heading: CSE 8B, 154, 157, 176B, 186 and 5A. This is a bounded current-chapter finding, not a claim of discontinuation or a reason to invent aliases. They remain unclassified pending other evidence.
+
+The manifest contains original summaries and individually reasoned taxonomy judgments. Course role remains independent: no fixed requirement, choice group, contextual membership, credit total or course identity is changed by this contribution. Mixed content remains mixed. General orientations, topic-variable seminars and research with no specified subject remain unclassified. Explicit source tags were read as context; they do not automatically determine Atlas categories. For example, CSE 20/21/103/106 are mathematical, CSE 105 is theoretical computing foundations, and CSE 193 does not become foundational programming merely because it is computing research.
+
+## Important scope and interpretation boundaries
+
+- CSE 5/5R explicitly target general audiences and exclude students planning AI, CS or data science study. A general-education appearance must not be promoted to AI-major eligibility. Both AI methods and their human implications are covered.
+- CSE 8A plus 8B is stated to be a sequence equivalent to CSE 11; that does not make each individual code identical. CSE 151B is explicitly renumbered from 154, but no historical description or current eligibility is copied into the missing 154 record.
+- CSE 20 states equivalence to MATH 15A, while CSE 184 explicitly cross-lists three biology/engineering/chemistry codes. Reciprocal/version checks remain the program owner's responsibility; this helper creates no identity group.
+- CSE 103 explicitly says its credit is **not** duplicate credit for ECE 109, ECON 120A or MATH 183. This is not a prohibition. Other entries' credit exclusions also do not establish identity.
+- Remote variants retain separate source records and IDs. Co-scheduling with graduate classes is not identity or undergraduate eligibility evidence.
+- Ordinary credits come from each exact heading: for example, CSE 15L/86/89/91/95/141L/142L have two units, CSE 90 one, and CSE 170 five. CSE 11 can earn zero after/concurrently with 8B; CSE 29 earns two after 15L; CSE 141 earns two after 142; CSE 142 earns two after/concurrently with 141. These conditional amounts do not replace ordinary heading credits or create ranges.
+- Recommended preparation is distinct from prerequisites: CSE 6R expects school algebra but assumes no programming; CSE 11 recommends substantial programming; CSE 121 recommends language knowledge; CSE 132C requires C++ knowledge while recommending 132B. Additional recommendations occur in vision, neural networks, wireless systems, animation, interaction design and embedded systems. The full-field digest guards these statements even where the short metadata does not repeat them.
+- The parser preserves the complete source suffix after `Prerequisites:` without guessing parentheses around AND/OR expressions. Earlier restrictions also matter: CSE 89 is CSE-PACE-only, and CSE 95 requires a concurrent tutor appointment. CSE 90 has no explicit prerequisite statement, while CSE 3 explicitly states none.
+- The existing program's verified quarter-hour unit mapping is reused; the course headings themselves say units. No conversion to another calendar is performed.
+
+## Integration and next checks
+
+`parse_observations` is a guarded additive observer. The owner must compose it with existing CSE tag/core parsers and apply the manifest's manual `category_review` objects deliberately. It checks all 82 heading/body pairs before returning observations and raises if a previously missing identifier appears. A changed source or partial scrape must not erase the maintained facts. Follow up on the six missing identities, reciprocal cross-list evidence, and applicability of general-education and major-restricted courses to each college/cohort route. This batch does not close the UCSD degree audit or its other discipline pools.
