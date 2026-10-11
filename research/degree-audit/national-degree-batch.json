@@ -3372,6 +3372,76 @@
           "locator": "Current registrar-linked root; robots HTTP202 stopped content request",
           "checked_at": "2026-10-11",
           "access_status": "inaccessible"
+        },
+        {
+          "url": "https://www.wm.edu/as/undergraduate/coll/index.php",
+          "catalog_year": null,
+          "locator": "Full public The College Curriculum; conditional pathways preserved",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://www.wm.edu/as/undergraduate/coll/coll-planning-guide/index.php",
+          "catalog_year": null,
+          "locator": "Full public COLL Planning Guide; conditional pathways preserved",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://www.wm.edu/as/undergraduate/coll/other-requirements/",
+          "catalog_year": null,
+          "locator": "Full public Other College Curriculum Requirements; conditional pathways preserved",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://www.wm.edu/as/undergraduate/coll/bor-transfer-students/index.php",
+          "catalog_year": null,
+          "locator": "Full public COLL Curriculum Rules and Requirements for Incoming Transfer Students; conditional pathways preserved",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://www.wm.edu/as/undergraduate/coll/100/index.php",
+          "catalog_year": null,
+          "locator": "Entire public COLL100 explanation and approved-designation criteria",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://www.wm.edu/as/undergraduate/coll/150/index.php",
+          "catalog_year": null,
+          "locator": "Entire public COLL150 explanation and approved-designation criteria",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://www.wm.edu/as/undergraduate/coll/200/index.php",
+          "catalog_year": null,
+          "locator": "Entire public COLL200 explanation and approved-designation criteria",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://www.wm.edu/as/undergraduate/coll/300/index.php",
+          "catalog_year": null,
+          "locator": "Entire public COLL300 explanation and approved-designation criteria",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://www.wm.edu/as/undergraduate/coll/350/index.php",
+          "catalog_year": null,
+          "locator": "Entire public COLL350 explanation and approved-designation criteria",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://www.wm.edu/as/undergraduate/coll/400/index.php",
+          "catalog_year": null,
+          "locator": "Entire public COLL400 explanation and approved-designation criteria",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
         }
       ],
       "checks": {
@@ -3382,7 +3452,7 @@
         "credits_and_units": "30-credit major total only; individual credits and normalized unit unknown. No per-course allocation inferred from graphic or four-to-five-semester timeline.",
         "classification": "DATA202 exact ethics title supports a limited human-context review. DATA201 and DATA305 now unclassified because short titles do not establish primary content and the agent-design code conflicts. No data-science-to-AI classification inference.",
         "family_composition": "Standalone BA major; its stated ability to pair with another major does not establish a family or remove university-degree scope.",
-        "degree_wide_requirements": "Current public registrar and Reves policies reviewed: explicit CDSP elective pass/fail eligibility and major/COLL/proficiency exclusions, post-matriculation transfer approval, Fall 2025 repeat examples, graduation application, university-wide CAE petitions and abroad credit/grade/residence/approval conditions. Study-abroad source states at least 60 W&M credits; no whole-degree 120 minimum inferred from its transfer-allocation wording. Full core, BA distributions/proficiencies, normalized credit unit and applicable grade/overlap rules remain unresolved at current catalog robots HTTP 202 and further public source review."
+        "degree_wide_requirements": "Current public registrar and Reves policies reviewed: explicit CDSP elective pass/fail eligibility and major/COLL/proficiency exclusions, post-matriculation transfer approval, Fall 2025 repeat examples, graduation application, university-wide CAE petitions and abroad credit/grade/residence/approval conditions. Study-abroad source states at least 60 W&M credits; no whole-degree 120 minimum inferred from its transfer-allocation wording. Full core, BA distributions/proficiencies, normalized credit unit and applicable grade/overlap rules remain unresolved at current catalog robots HTTP 202 and further public source review. Public COLL overview expressly applies to all undergraduate schools. Guide/other/transfer pages establish the 120-credit graduation overview, first-year C− minimums, separate domain/COLL distributions, language/math/arts alternatives, permitted proficiency overlap, prohibited COLL/domain duplication, and distinct incoming-transfer waivers. Credit units stay unknown; detailed ten-semester/residence/GPA and exact language shorthand applicability remain unresolved."
       },
       "expected_profile": {
         "required": {
@@ -3447,9 +3517,16 @@
         {
           "issue": "Current registrar explicitly links the 2026–2027 catalog; robots HTTP 202 prevents ordinary content retrieval. No course/PDF subroute attempted.",
           "url": "https://catalog.wm.edu/"
+        },
+        {
+          "issue": "Public general planning guide specifies four high-school years in one language; incoming-transfer table abbreviates three or four. Exact exemption scope is unverified under the inaccessible current catalog.",
+          "urls": [
+            "https://www.wm.edu/as/undergraduate/coll/coll-planning-guide/index.php",
+            "https://www.wm.edu/as/undergraduate/coll/bor-transfer-students/index.php"
+          ]
         }
       ],
-      "correction_status": "Public policy supplement mapped 13 conditional notes with source-specific guards. Current catalog boundary now exact. Three FAQ course identities and prior source conflict remain; comprehensive primary status stays in_progress while independent public BA/general-education and metadata branches remain unexhausted.",
+      "correction_status": "Six public registrar/Reves sources plus four COLL sources now supply 24 conditional/open-criteria notes. All six individual COLL explanations also read. Current catalog robots HTTP 202, three named FAQ observations and DATA305/AAI301 conflict remain; status in_progress while specific remaining public GPA/residence/ten-semester/metadata branches are reviewed.",
       "second_pass_status": "pending"
     },
     {
