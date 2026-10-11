@@ -1078,20 +1078,151 @@
           "locator": "Full conditional College of Science academic policy",
           "checked_at": "2026-10-11T03:39:45+00:00",
           "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/eemb/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: EEMB 2302, EEMB 2303, EEMB 2400, EEMB 2700, EEMB 2701, EEMB 3460, EEMB 3466, EEMB 3600",
+          "checked_at": "2026-10-11T00:07:07+00:00",
+          "access_status": "accessible"
         }
       ],
       "checks": {
         "degree_identity": "Official catalog identity and exact award/campus are retained as Artificial Intelligence and Biology, BS (Boston). Current official page retrieved; catalog/cohort scope remains explicit.",
-        "required_and_choices": "Individual structural source interpretation is in progress. Parser replay/family resolution alone is not independent validation. Existing all/choice/bundle graph retained at this checkpoint.",
-        "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
-        "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant. Individually verified and mapped the explicit CHEM/PHYS concurrent courses beneath their exact lecture/pair nodes, preserving original required versus alternative ancestry and actual zero/one-hour values.",
-        "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
-        "classification": "Current represented inventory: 78 course observations; 55 individually reviewed subject classifications, 4 explicitly mixed, 11 source-inspected but unclassified, and 8 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
-        "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
-        "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed. The shared declaration deadline, conditional change-major eligibility/advising and concentration catalog-year rules are now source-parsed course-free criteria; college-specific conditional transfer/progression mappings remain active. Current Khoury advising progression, graduation and conditional transfer/home-change rules now appear in eleven source-scoped course-free nodes. They remain conditional and do not infer assignment or override catalog/cohort scope. Other partner-college policy work continues. Nine conditional Science catalog criteria now preserve junior-year clearance, full/reduced course loads, grading restrictions, graduation GPA, semester-based first-year versus cumulative later GPA, and major/university dismissal/transitional rules. Exact Admissions COS participation was checked individually. No home assignment or BA-only requirement is inferred; remaining exact applicability and any additional accessible policy checks remain open."
+        "required_and_choices": "Full primary degree table independently transcribed: 27 fixed identities and 51 named options. The common ten computing/AI courses, statistics pair, seven fixed biology identities, seven chemistry identities including concurrent zero-hour recitation, and MATH 1341 are fixed. BIOL 2309 versus 2407 stays a project-lab choice. Physics remains three alternative complete routes, preserving the preferred life-sciences pair and separately sourced conditional labs/recitations. Integration and capstone are distinct selections; BIOL 4900 concurrent research inherits that optional capstone. Repeated BIOL 4971/4991/4994 appearances count once, not as extra obligations.",
+        "elective_pools": "The intermediate/advanced elective retains the exact disjoint BIOL/EEMB ranges plus named research/honors/internship choices. The organismal/evolutionary selection requires one course and its corresponding lab where specified. Open ranges are not falsely enumerated, and range endpoints do not become new required records. BIOL 4900 explicitly permits its concurrent research to count toward intermediate/advanced electives; no invented blanket nonreuse rule overrides it. Khoury ranges/exclusions and adviser-dependent extensions stay separate.",
+        "prerequisites": "Every represented subject block and published registration field reviewed, including ecology/marine reciprocal labs and the independently guarded science concurrent branches. Optional-course eligibility does not add unrelated fixed prerequisite paths. EEMB 3600 retains the actual D-minimum alternatives, not silently D-minus; ecology/marine writing conditions retain C. The degree’s explicit BIOL 4900 concurrent research and its permitted elective overlap remain intact.",
+        "credits_and_units": "The source degree minimum is 138 semester hours with twenty general-elective hours. All 78 individual course credit scopes reviewed, including known-zero CHEM/PHYS recitations and one-hour labs. CHEM 1161/1162 require D or better. The GPA 2.000 code scope is BIOC, BIOL, BNSC, CHEM, EEMB, ENVR, MATH, PHYS and PSYC, not silently the entire AI curriculum. Bundle/choice credits remain separate from individual course observations and are not an earned-load sum.",
+        "classification": "Current represented inventory: 78 course observations; 63 individually reviewed subject classifications, 4 explicitly mixed, 11 source-inspected but unclassified, and 0 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
+        "family_composition": "Each shared computing/AI and placement unit verified against this concrete panel. Optional physics/engineering concurrency, biology laboratories and research-capstone relationships remain local. CS 1800/1802 and partner-course lists from other degrees are not inherited. The original degree rows remain unchanged by source-based concurrency additions.",
+        "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed. The shared declaration deadline, conditional change-major eligibility/advising and concentration catalog-year rules are now source-parsed course-free criteria; college-specific conditional transfer/progression mappings remain active. Current Khoury advising progression, graduation and conditional transfer/home-change rules now appear in eleven source-scoped course-free nodes. They remain conditional and do not infer assignment or override catalog/cohort scope. Other partner-college policy work continues. Nine conditional Science catalog criteria now preserve junior-year clearance, full/reduced course loads, grading restrictions, graduation GPA, semester-based first-year versus cumulative later GPA, and major/university dismissal/transitional rules. Exact Admissions COS participation was checked individually. No home assignment or BA-only requirement is inferred; remaining exact applicability and any additional accessible policy checks remain open. Full Biology primary page and represented content now read. Conditional Science and Khoury policy graphs are mapped; exact home-college/cohort designation and any additional applicable public advising requirements remain active review. This does not yet certify the whole degree."
       },
-      "expected_profile": null,
-      "expected_course_ids": null,
+      "expected_profile": {
+        "required": {
+          "count": 27,
+          "categories": {
+            "foundations": 5,
+            "mathematics": 4,
+            "ai_ml": 1,
+            "systems": 2,
+            "human_context": 0,
+            "applications": 14,
+            "electives": 0,
+            "other": 1
+          }
+        },
+        "options": {
+          "count": 51,
+          "categories": {
+            "foundations": 0,
+            "mathematics": 2,
+            "ai_ml": 0,
+            "systems": 2,
+            "human_context": 5,
+            "applications": 28,
+            "electives": 0,
+            "other": 14
+          }
+        },
+        "unresolved": {
+          "count": 0,
+          "categories": {
+            "foundations": 0,
+            "mathematics": 0,
+            "ai_ml": 0,
+            "systems": 0,
+            "human_context": 0,
+            "applications": 0,
+            "electives": 0,
+            "other": 0
+          }
+        }
+      },
+      "expected_course_ids": {
+        "required": [
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-cs-2000",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-cs-2001",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-cs-2100",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-cs-2101",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-cs-3200",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-ds-3500",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-ds-3000",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-ds-4200",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-ds-4300",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-ds-4400",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-envr-2500",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-envr-2501",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-biol-1107",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-biol-1108",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-biol-2299",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-biol-2301",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-biol-2302",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-biol-3611",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-biol-3612",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-chem-1161",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-chem-1162",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-chem-1163",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-chem-2311",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-chem-2312",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-chem-2313",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-chem-2314",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-math-1341"
+        ],
+        "options": [
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-cs-1200",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-biol-1000",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-inpr-1000",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-insc-1000",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-cs-1210",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-eesc-2000",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-math-1365",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-math-1465",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-eece-2160",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-eece-2322",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-eece-2323",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-mktg-4606",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-engw-1111",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-engw-1102",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-engw-3302",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-engw-3315",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-engw-3307",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-biol-2309",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-biol-2407",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-biol-4991",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-biol-4970",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-biol-4971",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-biol-4994",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-biol-2327",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-biol-3401",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-biol-3413",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-biol-3427",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-biol-3451",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-biol-5585",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-eemb-2302",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-eemb-2303",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-eemb-2400",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-eemb-2700",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-eemb-2701",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-eemb-3460",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-eemb-3466",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-eemb-3600",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-phys-1145",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-phys-1146",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-phys-1151",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-phys-1152",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-phys-1153",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-phys-1161",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-phys-1162",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-phys-1163",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-binf-6310",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-biol-4707",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-biol-5581",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-biol-5591",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-biol-4701",
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-biol-4900"
+        ],
+        "unresolved": []
+      },
       "discrepancies": [
         {
           "issue": "Legacy subject-prefix/title heuristics misclassified concrete courses: CS 1200 foundations -> other; CS 1210 foundations -> other; DS 3000 ai_ml -> mathematics; DS 4200 foundations -> other",
@@ -1165,7 +1296,7 @@
           "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-biology-bs-bos/"
         }
       ],
-      "correction_status": "First category and parser corrections applied; remaining accessible individual review continues.",
+      "correction_status": "All 78 represented identities/content, source credits/eligibility and independent 27-fixed/51-option category partition reviewed. Whole-degree policy applicability/follow-up remains in_progress.",
       "second_pass_status": "pending"
     },
     {
@@ -2645,6 +2776,13 @@
           "locator": "Full conditional College of Science academic policy",
           "checked_at": "2026-10-11T03:39:45+00:00",
           "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/eemb/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: EEMB 2400, EEMB 2302, EEMB 2303, EEMB 2700, EEMB 2701, EEMB 3600, EEMB 3460",
+          "checked_at": "2026-10-11T00:07:07+00:00",
+          "access_status": "accessible"
         }
       ],
       "checks": {
@@ -2653,7 +2791,7 @@
         "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
         "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant. Individually verified and mapped the explicit CHEM/PHYS concurrent courses beneath their exact lecture/pair nodes, preserving original required versus alternative ancestry and actual zero/one-hour values.",
         "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
-        "classification": "Current represented inventory: 73 course observations; 38 individually reviewed subject classifications, 2 explicitly mixed, 5 source-inspected but unclassified, and 28 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
+        "classification": "Current represented inventory: 73 course observations; 45 individually reviewed subject classifications, 2 explicitly mixed, 5 source-inspected but unclassified, and 21 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
         "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
         "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed. The shared declaration deadline, conditional change-major eligibility/advising and concentration catalog-year rules are now source-parsed course-free criteria; college-specific conditional transfer/progression mappings remain active. Current Khoury advising progression, graduation and conditional transfer/home-change rules now appear in eleven source-scoped course-free nodes. They remain conditional and do not infer assignment or override catalog/cohort scope. Other partner-college policy work continues. Nine conditional Science catalog criteria now preserve junior-year clearance, full/reduced course loads, grading restrictions, graduation GPA, semester-based first-year versus cumulative later GPA, and major/university dismissal/transitional rules. Exact Admissions COS participation was checked individually. No home assignment or BA-only requirement is inferred; remaining exact applicability and any additional accessible policy checks remain open."
       },
@@ -3272,6 +3410,13 @@
           "locator": "Full conditional College of Science academic policy",
           "checked_at": "2026-10-11T03:39:45+00:00",
           "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/eemb/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: EEMB 2302, EEMB 2303, EEMB 2400, EEMB 3460",
+          "checked_at": "2026-10-11T00:07:07+00:00",
+          "access_status": "accessible"
         }
       ],
       "checks": {
@@ -3280,7 +3425,7 @@
         "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
         "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant.",
         "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
-        "classification": "Current represented inventory: 82 course observations; 28 individually reviewed subject classifications, 2 explicitly mixed, 6 source-inspected but unclassified, and 46 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
+        "classification": "Current represented inventory: 82 course observations; 32 individually reviewed subject classifications, 2 explicitly mixed, 6 source-inspected but unclassified, and 42 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
         "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
         "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed. The shared declaration deadline, conditional change-major eligibility/advising and concentration catalog-year rules are now source-parsed course-free criteria; college-specific conditional transfer/progression mappings remain active. Current Khoury advising progression, graduation and conditional transfer/home-change rules now appear in eleven source-scoped course-free nodes. They remain conditional and do not infer assignment or override catalog/cohort scope. Other partner-college policy work continues. Nine conditional Science catalog criteria now preserve junior-year clearance, full/reduced course loads, grading restrictions, graduation GPA, semester-based first-year versus cumulative later GPA, and major/university dismissal/transitional rules. Exact Admissions COS participation was checked individually. No home assignment or BA-only requirement is inferred; remaining exact applicability and any additional accessible policy checks remain open."
       },

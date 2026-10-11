@@ -524,3 +524,29 @@ def test_behavioral_manual_roles_keep_anatomy_bundle_and_advanced_nonreuse():
     assert next(c for c in p['courses']if c['code']=='PT 5411')['credits']==1
     assert next(c for c in p['courses']if c['code']=='BINF 6200')['category']=='foundations'
     assert next(c for c in p['courses']if c['code']=='BINF 6310')['category_review']['status']=='mixed'
+
+
+@pytest.mark.parametrize('code', ['EEMB 2302','EEMB 2303','EEMB 2400','EEMB 2700','EEMB 2701','EEMB 3460','EEMB 3466','EEMB 3600'])
+def test_ecological_domain_classification_requires_exact_content(code):
+    d=CATEGORY_DECISIONS[code]
+    assert category(code,d['name'],d['guard'])=='applications'
+    assert category(code,d['name'],'Changed mathematics-only course')=='other'
+    assert category(code,'Different ecology course',d['guard'])=='other'
+
+
+def test_biology_full_profile_preserves_conditional_research_and_actual_grade():
+    from atlas.families import resolve_program
+    from atlas.curriculum_profile import requirement_profile
+    pid='northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree'
+    p=json.loads((ROOT/'data/programs'/f'{pid}.json').read_text());f=json.loads((ROOT/'data/families/northeastern-ai-combined-degrees.json').read_text());resolved=resolve_program(p,f);profile=requirement_profile(resolved)
+    assert profile['required']['count']==27 and profile['options']['count']==51 and profile['unresolved']['count']==0
+    assert len(p['courses'])==78 and all('category_review' in c for c in p['courses'])
+    cs={c['code']:c for c in p['courses']}
+    assert 'minimum grade of D or' in cs['EEMB 3600']['prerequisites']
+    assert 'D-' not in cs['EEMB 3600']['prerequisites']
+    nodes={r['id']:r for r in resolved['requirements']}
+    research=next(r for r in nodes.values() if r['title']=='BIOL 4900 concurrent research')
+    assert research['kind']=='alternative' and research['parent_id']==pid+'-req-biol-4900'
+    assert nodes[nodes[research['parent_id']]['parent_id']]['kind']=='choose_courses'
+    assert sum(c['code']=='BIOL 4991' for c in p['courses'])==1
+    assert cs['PHYS 1163']['credits']==0 and cs['CHEM 1163']['credits']==0
