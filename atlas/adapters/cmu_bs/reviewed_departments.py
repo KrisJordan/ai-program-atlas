@@ -8,6 +8,7 @@ from .common import course, text, requirement
 
 PID = 'cmu-bs-ai'
 MANIFEST = json.loads(Path(__file__).with_name('reviewed_department_subjects.json').read_text())
+MANIFEST.update(json.loads(Path(__file__).with_name('reviewed_history_subjects.json').read_text()))
 
 
 def observe(html, spec):
@@ -59,4 +60,5 @@ def classify_titles(observed):
     for c in observed.get('courses',[]):
         r=subjects.get(c['code'])
         if r:c['category']=r['category']if c['name']==r['name']else'other'
+        elif any(c['code']in spec.get('unresolved',{})for spec in MANIFEST.values()):c['category']='other'
     return observed

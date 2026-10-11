@@ -132,3 +132,10 @@ The new department observer validates heading, edition, complete represented inv
 All26 represented Business/Economics descriptions are reviewed, bringing the total to128of273. Business/economic theory and professional practice are domain subjects; communication, cultural analysis and law are human context.70-341 remains mixed between communication and organizational leadership. Incidental search/text-mining tools in digital marketing do not establish an AI-methods course. Exact units and formal prerequisites are read from the actual current directory, without conversion or copying stale pool metadata.
 
 Four source-guarded notes preserve non-Tepper-BA eligibility for70-100, Qatar-only offerings for70-348/352, and exam-preparation entry for73-104.70-352 is a three-unit one-week course. The catalog pool listing does not establish Pittsburgh availability or grant a campus/entry exception. These are conditional constraints, not added universal requirements. All fixed13 identities and their categories remain unchanged.145 course records and the full role/policy second pass remain; the correctness audit is in progress.
+
+
+## History contribution integrated — 2026-10-11
+
+The disjoint review in REVIEWED_HISTORY.md supplies52 exact current descriptions and four explicitly unclassified missing-description identities. Documented dispositions now cover184of273 records:180 have actual current descriptions;79-156/177/244/286 retain their original approved-pool title/credit evidence and are not claimed withdrawn. The remaining89 identities and full role/policy review are still work in progress.
+
+Three title differences are preserved against the approved pool (79-240/300/329). Eight Qatar-only restrictions and79-255's prior-enrollment exclusion remain explicit conditional notes, not assumptions of local access.79-465's Spring2020 wording is historical, despite appearing in the current directory. Source observers enforce the52-present-course inventory and exact descriptive digests. Absence is not converted to a fabricated current description or unknown-credit overwrite. No course-identity merge or fixed-set change is inferred.
