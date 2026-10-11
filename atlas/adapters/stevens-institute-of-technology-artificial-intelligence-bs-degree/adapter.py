@@ -197,3 +197,6 @@ register_reviewed_courses(SOURCES,SOURCE_PARSERS)
 from atlas.adapters.stevens_fixed_course_reviews import register as register_fixed_metadata
 SOURCES=list(SOURCES)
 register_fixed_metadata(SOURCES,SOURCE_PARSERS)
+
+from atlas.adapters.stevens_option_course_reviews import register as register_option_metadata
+register_option_metadata(SOURCES, SOURCE_PARSERS)
