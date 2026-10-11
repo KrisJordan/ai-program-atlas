@@ -355,3 +355,23 @@ def test_graduate_only_project_is_not_imposed_on_undergraduate_degree():
     assert result['courses'][0]['prerequisites'] is None and result['requirements']==[]
     assert any('not imposed on this undergraduate degree' in n for n in result['notes'])
     assert not any('mandatory class-project' in n for n in parse_subject(html.replace(prose,''),**args)['notes'])
+
+
+def test_experiential_summary_requires_title_evidence_for_half_time_abroad_scope():
+    html=page('<div class="courseblock"><p class="courseblocktitle">COOP 3947. Co-op Work Experience Abroad--Half Time. (0 Hours)</p><p class="cb_desc">Provides students with an opportunity for work experience abroad.</p></div>',heading='Cooperative Education (COOP)')
+    parser=register_subject_sources('test-program',{'COOP':['COOP 3947']})['https://catalog.northeastern.edu/course-descriptions/coop/']
+    assert 'half-time' in parser(html)['courses'][0]['description']
+    assert parser(html.replace('Abroad--Half Time.','Abroad.'))['courses'][0]['description'] is None
+
+
+def test_business_intb_credit_conflict_retains_both_sources_and_original_alternative():
+    import json
+    from pathlib import Path
+    path=next((Path(__file__).resolve().parents[1]/'data/programs').glob('northeastern-*-business-administration-*.json'))
+    p=json.loads(path.read_text());c=next(c for c in p['courses'] if c['code']=='INTB 1209')
+    assert 'excluded for business majors' in c['description']
+    assert any(c['id'] in r['course_ids'] and r['parent_id'].endswith('intb-1203-alternatives') for r in p['requirements'])
+    assert any('INTB 1209 applicability conflict' in n for n in p['curriculum_audit']['unresolved_requirements'])
+    assert p['id']+'-intb-courses' in p['curriculum_audit']['source_ids']
+    assert p['id']+'-concentration-international-business-catalog' in p['curriculum_audit']['source_ids']
+    assert p['curriculum_status']=='partial'

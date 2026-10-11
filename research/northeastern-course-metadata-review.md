@@ -208,3 +208,14 @@ The catalogs' terse special-topics entries receive correspondingly limited summa
 This batch reviewed 40 distinct source descriptions and added **41 description fields across 2 variants**, bringing the total to **1220 of1,593 course observations**. The exact remaining inventory now contains **373 accessible unreviewed observations across 333 codes**. All source timestamps remain the actual catalog fetch times. All requirement graphs, credit amounts, preparation fields and public-resource links remain unchanged.
 
 Validation: **144 Northeastern-focused tests passed**; all23 temporary ingest/repeat/export/build/integrity checks passed. All5 affected source registrations succeeded twice with zero repeat candidates/source changes. The queue integrity test verifies its counts and exact code/program membership against the concrete records.
+
+## Enterprise innovation and supply-chain options — 2026-10-11
+
+Read the remaining14 Entrepreneurship,12 Corporate Innovation, eight International Business, nine Supply Chain, four Business Administration, four Co-op and two Business Experiential Education descriptions. Summaries preserve field-study locations, simulation versus external-project settings, and limited special-topic descriptions. Half-time and abroad designations use an additional exact course-title guard because some descriptions otherwise share identical prose. Zero-hour co-op/internship registrations remain zero and do not become mandatory experiences.
+
+A substantive source conflict is now explicit in the Business variant's partial audit: the International Business concentration table lists INTB1209 as an alternative to1203, but the INTB1209 subject description excludes credit for business majors and limits1203 equivalence to business minors. Both registered sources are retained and the original alternative remains represented; institutional applicability clarification is required. The partial audit review date is2026-10-11 for this newly identified issue. International Affairs also lists1209, but its discipline title alone does not establish the same business-major restriction. No automatic exclusion, substitution or equivalence was inferred.
+
+
+This batch reviewed 53 distinct source descriptions and added **57 description fields across 2 variants**, bringing the total to **1277 of1,593 course observations**. The exact remaining inventory now contains **316 accessible unreviewed observations across 280 codes**. All source timestamps remain the actual catalog fetch times. All requirement graphs, credit amounts, preparation fields and public-resource links remain unchanged.
+
+Validation: **146 Northeastern-focused tests passed**; all23 temporary ingest/repeat/export/build/integrity checks passed. All9 affected source registrations succeeded twice with zero repeat candidates/source changes. The queue integrity test verifies its counts and exact code/program membership against the concrete records.

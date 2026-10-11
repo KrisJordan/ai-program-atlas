@@ -113,7 +113,8 @@ def test_reviewed_seed_preserves_family_and_conditional_scopes():
     optional=[x for x in p['requirements'] if x['parent_id']==PID+'-req-business-concentration-second-only']
     assert len(optional)==1 and optional[0]['title'].startswith('International Business')
     assert len([s for s in p['sources'] if '/business/concentrations/' in s['url']])==14
-    assert p['curriculum_status']=='partial' and len(p['curriculum_audit']['unresolved_requirements'])==1
+    assert p['curriculum_status']=='partial'
+    assert any('home-college' in issue for issue in p['curriculum_audit']['unresolved_requirements'])
     assert 'home-college' in p['curriculum_audit']['unresolved_requirements'][0]
     assert not any('remain unexpanded' in x['summary'] for x in p['requirements'])
 

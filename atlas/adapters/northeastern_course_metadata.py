@@ -6,6 +6,60 @@ from atlas.adapters.northeastern_courseleaf import clean, slug, numeric, categor
 # Short editorial summaries of the linked official descriptions. Each has a
 # source phrase guard; changed prose cannot silently replay an unsupported summary.
 SUMMARIES = {
+    'ENTR 2215': ('family owned and managed companies', 'Examines family-business management, succession, governance and interpersonal challenges.'),
+    'ENTR 2225': ('family relationships and family business dynamics', 'Analyzes family-enterprise dynamics through film, television and business theory.'),
+    'ENTR 2303': ('entrepreneurial marketing plan', 'Develops startup opportunities and marketing plans through validation and field research.'),
+    'ENTR 3217': ('spring break international field project', 'Examines global family-business leadership through cultural analysis and an international field project.'),
+    'ENTR 3220': ('consulting to growing companies and social enterprises abroad', 'Develops international venture-consulting methods and preparation for field studies.'),
+    'ENTR 3304': ('legal issues associated with starting and operating a business', 'Examines legal decisions, intellectual property, agreements and risk in entrepreneurship.'),
+    'ENTR 3305': ('business model design and implementation', 'Develops startup strategy through innovation ecosystems and business-model design.'),
+    'ENTR 3306': ('field experience in South Africa', 'Applies small-business planning and financing methods through field consulting in South Africa.'),
+    'ENTR 3330': ('design thinking methodology', 'Develops startup concepts and prototypes using design thinking and customer validation.'),
+    'ENTR 3401': ('consult with owners of small- and medium-sized enterprises', 'Develops consulting projects addressing smaller firms’ operations and growth.'),
+    'ENTR 3945': ('semester-long startup immersion internship project', 'Develops venture concepts through a mentored startup-immersion internship project.'),
+    'ENTR 4414': ('entrepreneurs from diverse backgrounds', 'Develops startup consulting, conflict resolution and leadership across diverse founding teams.'),
+    'ENTR 4501': ('technology venture that goes through multiple rounds of financing', 'Examines technology-venture growth, financing, business planning and exit strategies.'),
+    'ENTR 4983': ('Covers special topics in entrepreneurship', 'Offers study of a special entrepreneurship topic.'),
+    'INNO 2206': ('entrepreneurship in the social sector', 'Examines social-enterprise business models through cases of entrepreneurial responses to social problems.'),
+    'INNO 2304': ('origin and implications of industry disruptions', 'Examines industry disruption and innovation responses within established companies.'),
+    'INNO 2414': ('stakeholder theory', 'Examines stakeholder-oriented business models, governance and social and environmental effects.'),
+    'INNO 3303': ('digital, data-driven, and platform-based business models', 'Analyzes digital business models, platform ecosystems and strategic uses of data and AI.'),
+    'INNO 3308': ('economic history of modern South Africa', 'Examines South Africa’s economic development alongside historical, political and cultural change.'),
+    'INNO 3309': ('impact finance and impact measurement landscape', 'Develops social-impact measurement frameworks and funding strategies for impact projects.'),
+    'INNO 3335': ('project management, product development, and product portfolio management', 'Examines corporate product development, commercialization and portfolio management.'),
+    'INNO 3520': ('social and ecological effects of finance', 'Examines impact-investment tools and models for social and environmental goals.'),
+    'INNO 4225': ('choice of make, buy, or partner', 'Evaluates corporate expansion through internal growth, acquisitions and alliances.'),
+    'INNO 4504': ('Students, as a class, represent a specific firm', 'Simulates corporate innovation challenges and improvements to an existing business model.'),
+    'INNO 4506': ('system thinking approach', 'Uses systems thinking and team projects to develop social-innovation strategies.'),
+    'INNO 4983': ('Topics depend on the instructor', 'Examines instructor-selected innovation topics through lectures, cases and projects.'),
+    'INTB 1203': ('social responsibility imperatives across national borders', 'Examines globalization, national business environments and cross-border social responsibility.'),
+    'INTB 1209': ('Does not count as credit for business majors. Counts as INTB 1203 for business minors only.', 'Credit is excluded for business majors; INTB 1203 equivalence is limited to business minors.'),
+    'INTB 2501': ('introduction to emerging markets', 'Examines opportunities, risks and competitive strategies in emerging economies.'),
+    'INTB 3205': ('cultural agility in a global career', 'Develops cultural awareness, adaptation and relationship management for international work.'),
+    'INTB 3310': ('hidden influence of culture on behavior', 'Examines cultural influences on management and collaboration across national boundaries.'),
+    'INTB 3320': ('political, economic, and sociocultural environment', 'Examines global management challenges and professional development in international business.'),
+    'INTB 3330': ('opportunities and challenges that digitalization presents', 'Examines digitalization across international markets, governments and types of business.'),
+    'INTB 4983': ('special topics in the field of international business', 'Offers study of a current international-business topic.'),
+    'SCHM 3301': ('design of international supply chain systems', 'Examines international sourcing, logistics, risk and strategic supply-chain design.'),
+    'SCHM 3302': ('context uniquely geared to engineering students', 'Introduces supply-chain planning, sourcing and logistics from an engineering perspective.'),
+    'SCHM 3303': ('risk identification, assessment, and response strategies', 'Develops supply-chain risk assessment, disruption planning and mitigation strategies.'),
+    'SCHM 3305': ('strategic and operational role of sourcing and procurement', 'Examines supplier selection, procurement, negotiation and supply-chain relationships.'),
+    'SCHM 3308': ('analytics capabilities and how they drive supply chains', 'Applies emerging analytics capabilities to strategic supply-chain decisions.'),
+    'SCHM 3310': ('logistics and transportation operations', 'Examines transportation markets, logistics providers and supply-chain cost management.'),
+    'SCHM 3315': ('healthcare sector operations and supply chain', 'Applies operations and supply-chain methods to healthcare processes and resources.'),
+    'SCHM 3330': ('create sustainable supply chains', 'Examines sustainable supply chains, environmental measurement and stakeholder effects.'),
+    'SCHM 4983': ('Offers special topics in Supply Chain Management', 'Offers study of a special supply-chain-management topic.'),
+    'BUSN 1102': ('self-analysis, leadership traits and styles', 'Develops self-awareness, professional skills and academic planning for business study.'),
+    'BUSN 1103': ('job-search and career-management skills', 'Prepares students for business co-op searches and professional workplace expectations.'),
+    'BUSN 3110': ('analysis of complex business situations', 'Develops consulting frameworks and analytical approaches through cases and practitioner perspectives.'),
+    'BUSN 4945': ('semester-long project paired with a business professional development course', 'Integrates academic study and professional practice through a mentored organization-based project.'),
+    'COOP 3945': ('opportunity for work experience', 'Provides a co-op work-experience opportunity.'),
+    'COOP 3946': ('opportunity for work experience', 'Provides a half-time co-op work-experience opportunity.'),
+    'COOP 3947': ('opportunity for work experience abroad', 'Provides a half-time co-op work-experience opportunity abroad.'),
+    'COOP 3948': ('opportunity for work experience abroad', 'Provides a co-op work-experience opportunity abroad.'),
+    'EEBA 2945': ('employment-based experiential learning', 'Integrates academic knowledge and workplace learning through internship activities.'),
+    'EEBA 2948': ('employment-based experiential learning', 'Integrates academic knowledge and workplace learning through internship activities abroad.'),
+
     'MKTG 2301': ('role of marketing and business in society’s central contemporary problems', 'Examines marketing’s social effects, ethical responsibilities and potential for positive change.'),
     'MKTG 2601': ('consumer data using Python', 'Develops Python programming and analysis through consumer-data case studies.'),
     'MKTG 2602': ('consumer data and applications using R', 'Develops quantitative consumer-data analysis, inference and visualization using R.'),
@@ -469,6 +523,16 @@ SUMMARIES = {
 }
 
 
+SUMMARY_TITLE_GUARDS = {
+    'COOP 3945': 'Co-op Work Experience',
+    'COOP 3946': 'Co-op Work Experience--Half Time',
+    'COOP 3947': 'Co-op Work Experience Abroad--Half Time',
+    'COOP 3948': 'Co-op Work Experience Abroad',
+    'EEBA 2945': 'Internship Experience',
+    'EEBA 2948': 'Internship Experience Abroad',
+}
+
+
 def parse_subject(html, *, program_id, subject, heading, codes, url):
     soup = BeautifulSoup(html, 'html.parser')
     title_area = soup.find(id='site-title')
@@ -493,7 +557,7 @@ def parse_subject(html, *, program_id, subject, heading, codes, url):
         body = block.find(class_='cb_desc')
         prose = clean(body) if body else ''
         guard, summary = SUMMARIES.get(code, ('', None))
-        description = summary if guard and guard in prose else None
+        description = summary if guard and guard in prose and name == SUMMARY_TITLE_GUARDS.get(code, name) else None
         prerequisites = None
         for extra in block.find_all(class_='courseblockextra'):
             text = clean(extra)
