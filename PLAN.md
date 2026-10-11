@@ -10,6 +10,12 @@ Case Western's initial trace found correctly stored courses left `other` by a na
 
 Shared taxonomy v1 now separates source-reviewed, mixed, unclassified and legacy/unreviewed course classifications, with relational evidence in migration 010. Empty or zero mapped categories never establish actual subject absence. Rank ordering and its eight additional browser tests are published in the same correction release. The audit continues beyond this checkpoint.
 
+### Next release in preparation
+
+The user requested three further discovery refinements: a source-confirmed **Second majors** group; the actual parent program and award on every concentration/track card; and an accessible **Find a program** pane collapsed by default with visible active-filter context. Migration 013 separates those curricular relationships from awards and preserves source evidence, unknowns and revisions. All five additional-major catalog pages were reread successfully; all 50 concentration relationships are being inspected individually. Existing category ranks, family membership, IDs, comparison selections and shareable filter state remain part of the required browser gate.
+
+This release will also carry the intervening degree corrections, including verified cross-list identities and known zero-credit requirements. A committed-source integration at `a43d56b` passed repeat ingest, migration, integrity and foreign-key checks: 58 of 63 primary audit entries were documented (22 with specific source blockers and 36 in progress; five entries pending documentation). None was yet certified as a completed full-degree audit or complete second pass. This is a checkpoint, not current publication or the end of the audit.
+
 ## Verified publication
 
 - Repository: https://github.com/KrisJordan/ai-program-atlas
