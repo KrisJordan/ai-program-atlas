@@ -7,7 +7,7 @@
   "counts": {
     "mapped": 37,
     "mapped_with_source_question": 4,
-    "department_detail_blocked": 2
+    "accessible_unreviewed": 2
   },
   "fields": [
     {
@@ -778,13 +778,13 @@
     {
       "field": "Music",
       "directory_url": "http://mta.mit.edu/music/degree-requirements/music-concentration",
-      "status": "department_detail_blocked",
+      "status": "accessible_unreviewed",
       "source_ids": [
         "mit-ai-decision-making-bs-hass-mta-catalog-context",
-        "mit-ai-decision-making-bs-hass-mta-browser-migration"
+        "mit-ai-decision-making-bs-hass-mta-browser-migration",
+        "mit-ai-decision-making-bs-hass-music-migration-home"
       ],
-      "barrier": "robots.txt returns an HTML page after a trailing-slash redirect on both HTTP and HTTPS mta.mit.edu; policy cannot be evaluated. No authentication or HTTP 403 denial was observed.",
-      "next_action": "Obtain a usable published policy for https://music.mit.edu/ then inspect its publicly linked concentration requirements; old mta host is a migration gateway.",
+      "next_action": "Inspect the current homepage-linked https://music.mit.edu/program/degree-requirements/ and complete the local concentration rules; do not import host-major/minor requirements.",
       "catalog_review": "Independent current official department catalog inspected; it contains major/minor sections but no concentration-specific requirement section. No historical or minor curriculum substituted.",
       "inspected_sources": [
         {
@@ -796,9 +796,16 @@
           "id": "mit-ai-decision-making-bs-hass-mta-browser-migration",
           "url": "https://mta.mit.edu/robots.txt/",
           "fetched_at": "2026-10-11T02:02:14.648447+00:00"
+        },
+        {
+          "id": "mit-ai-decision-making-bs-hass-music-migration-home",
+          "url": "https://music.mit.edu/",
+          "fetched_at": "2026-10-11T02:27:56+00:00"
         }
       ],
-      "browser_followup": "2026-10-11: Chrome robots URL rendered an explicit migration notice, not a policy. It linked https://music.mit.edu/; default Fetcher then failed robots retrieval on that canonical new host with ConnectError. No requirement page was read and no policy bypass attempted. A focused Chrome navigation to the new host robots.txt likewise returned net::ERR_BLOCKED_BY_CLIENT; the requirement page was not opened."
+      "browser_followup": "2026-10-11: Chrome robots URL rendered an explicit migration notice, not a policy. It linked https://music.mit.edu/; default Fetcher then failed robots retrieval on that canonical new host with ConnectError. No requirement page was read and no policy bypass attempted. A focused Chrome navigation to the new host robots.txt likewise returned net::ERR_BLOCKED_BY_CLIENT; the requirement page was not opened.",
+      "previous_barrier": "robots.txt returns an HTML page after a trailing-slash redirect on both HTTP and HTTPS mta.mit.edu; policy cannot be evaluated. No authentication or HTTP 403 denial was observed.",
+      "transport_correction": "Approved network execution passed normal robots/TLS checks and read the current homepage. Earlier generic ConnectError was environment-specific, not established publisher denial."
     },
     {
       "field": "Philosophy",
@@ -907,13 +914,13 @@
     {
       "field": "Theater Arts",
       "directory_url": "http://mta.mit.edu/theater-arts/degree-requirements/theater-arts-concentration",
-      "status": "department_detail_blocked",
+      "status": "accessible_unreviewed",
       "source_ids": [
         "mit-ai-decision-making-bs-hass-mta-catalog-context",
-        "mit-ai-decision-making-bs-hass-mta-browser-migration"
+        "mit-ai-decision-making-bs-hass-mta-browser-migration",
+        "mit-ai-decision-making-bs-hass-theater-migration-home"
       ],
-      "barrier": "robots.txt returns an HTML page after a trailing-slash redirect on both HTTP and HTTPS mta.mit.edu; policy cannot be evaluated. No authentication or HTTP 403 denial was observed.",
-      "next_action": "Obtain a usable published policy for https://theater.mit.edu/ then inspect its publicly linked concentration requirements; old mta host is a migration gateway.",
+      "next_action": "Inspect the current homepage-linked https://theater.mit.edu/program/degree-requirements/ and complete the local concentration rules; do not import host-major/minor requirements.",
       "catalog_review": "Independent current official department catalog inspected; it contains major/minor sections but no concentration-specific requirement section. No historical or minor curriculum substituted.",
       "inspected_sources": [
         {
@@ -925,9 +932,16 @@
           "id": "mit-ai-decision-making-bs-hass-mta-browser-migration",
           "url": "https://mta.mit.edu/robots.txt/",
           "fetched_at": "2026-10-11T02:02:14.648447+00:00"
+        },
+        {
+          "id": "mit-ai-decision-making-bs-hass-theater-migration-home",
+          "url": "https://theater.mit.edu/",
+          "fetched_at": "2026-10-11T02:28:07+00:00"
         }
       ],
-      "browser_followup": "2026-10-11: Chrome robots URL rendered an explicit migration notice, not a policy. It linked https://theater.mit.edu/; default Fetcher then failed robots retrieval on that canonical new host with ConnectError. No requirement page was read and no policy bypass attempted. A focused Chrome navigation to the new host robots.txt likewise returned net::ERR_BLOCKED_BY_CLIENT; the requirement page was not opened."
+      "browser_followup": "2026-10-11: Chrome robots URL rendered an explicit migration notice, not a policy. It linked https://theater.mit.edu/; default Fetcher then failed robots retrieval on that canonical new host with ConnectError. No requirement page was read and no policy bypass attempted. A focused Chrome navigation to the new host robots.txt likewise returned net::ERR_BLOCKED_BY_CLIENT; the requirement page was not opened.",
+      "previous_barrier": "robots.txt returns an HTML page after a trailing-slash redirect on both HTTP and HTTPS mta.mit.edu; policy cannot be evaluated. No authentication or HTTP 403 denial was observed.",
+      "transport_correction": "Approved network execution passed normal robots/TLS checks and read the current homepage. Earlier generic ConnectError was environment-specific, not established publisher denial."
     },
     {
       "field": "Urban Studies",

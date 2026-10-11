@@ -43,9 +43,9 @@ def test_field_review_has_evidence_for_every_status_and_preserves_open_questions
     rows = review['fields']
     assert len({r['field'] for r in rows}) == len(rows)
     assert dict(Counter(r['status'] for r in rows)) == review['counts']
-    expected_blocked = {'Music', 'Theater Arts'}
-    blocked = {r['field'] for r in rows if r['status'] == 'department_detail_blocked'}
-    assert expected_blocked <= blocked
+    expected_accessible = {'Music', 'Theater Arts'}
+    accessible = {r['field'] for r in rows if r['status'] == 'accessible_unreviewed'}
+    assert expected_accessible <= accessible
     for row in rows:
         if row['field'] in {'Comparative Media Studies', 'Education', 'English Language Studies (ELS)', 'Writing'}:
             assert row['previous_barrier'] and row['browser_followup']
@@ -60,5 +60,6 @@ def test_field_review_has_evidence_for_every_status_and_preserves_open_questions
             source = sources[observed['id']]
             assert observed['url'] == source['url']
             assert datetime.fromisoformat(observed['fetched_at']).tzinfo is not None
-        if row['status'] == 'department_detail_blocked':
-            assert row['barrier'] and row['catalog_review']
+        if row['status'] == 'accessible_unreviewed':
+            assert row['previous_barrier'] and row['transport_correction']
+            assert '/program/degree-requirements/' in row['next_action']

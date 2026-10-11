@@ -805,6 +805,26 @@
       "catalog_year": null,
       "locator": "Ordinary Chrome navigation to /robots.txt redirected to /robots.txt/. Visible page announces three new websites and links music.mit.edu, musictech.mit.edu and theater.mit.edu. This HTML is not a robots policy.",
       "confidence": "high"
+    },
+    {
+      "id": "mit-ai-decision-making-bs-hass-music-migration-home",
+      "url": "https://music.mit.edu/",
+      "title": "Music at MIT",
+      "fetched_at": "2026-10-11T02:27:56+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Normal Fetcher with approved network execution; robots/TLS checks retained. Current homepage navigation links /program/degree-requirements/. Requirements not yet reviewed.",
+      "confidence": "high"
+    },
+    {
+      "id": "mit-ai-decision-making-bs-hass-theater-migration-home",
+      "url": "https://theater.mit.edu/",
+      "title": "Theater at MIT",
+      "fetched_at": "2026-10-11T02:28:07+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Normal Fetcher with approved network execution; robots/TLS checks retained. Current homepage navigation links /program/degree-requirements/. Requirements not yet reviewed.",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -32287,7 +32307,8 @@
     "2026-10-11: seven further HASS plans and the STS Tier I/Tier II/transfer policies are mapped. STS contains source-specific observations for the same STS.041 in both tiers, not two countable subjects. History’s legacy directory URL returned an unrelated course page; only the actual current Undergraduate Studies navigation page supplies its concentration rules. Anthopology’s 33 source-stated credits remain unconverted.",
     "2026-10-11: all eleven Global Languages field plans and their shared placement/transfer policies are represented. Semester-IV progression and advisor-approved combinations are open criteria, not missing finite pools. Eight individual language pages refer to those central requirements; their differing enrollment priorities are preserved. The Other Languages and SILC pages were independently inspected and refer back to the same central rules. The transfer contact roster is labeled AY2024 and is not certified as current.",
     "2026-10-11: the 43-field registrar HASS queue is exhausted for currently accessible field-rule sources: 37 plans mapped (with explicit Ethics/ACT/Urban source questions); six department-detail barriers remain precisely documented. The independent CMS/W and Music/Theater catalog pages do not supply their local concentration inventories. Architecture PDFs and the corroborating Literature sheet were visually checked on every page and parsed offline; ordinary fetches respected robots/TLS. No inaccessible page is claimed verified.",
-    "2026-10-11 browser follow-up: normal Chrome read the four CMS/W concentration pages and the full CMS subject list without a security interstitial or certificate bypass. Education and Writing redirected to new canonical routes recorded in sources. Default Fetcher TLS issuer validation still fails. Browser robots.txt alone reported ERR_BLOCKED_BY_CLIENT; no sitewide denial or authentication requirement is inferred. All previously captured CMS/W curriculum-access gaps are replaced by actual observations; Music/Theater new-host policy barriers remain."
+    "2026-10-11 browser follow-up: normal Chrome read the four CMS/W concentration pages and the full CMS subject list without a security interstitial or certificate bypass. Education and Writing redirected to new canonical routes recorded in sources. Default Fetcher TLS issuer validation still fails. Browser robots.txt alone reported ERR_BLOCKED_BY_CLIENT; no sitewide denial or authentication requirement is inferred. All previously captured CMS/W curriculum-access gaps are replaced by actual observations; Music/Theater new-host policy barriers remain.",
+    "2026-10-11 transport correction: a network-enabled ordinary Fetcher successfully read both newly linked Music/Theater homepages under normal robots/TLS checks. The previously reported generic ConnectError did not establish a publisher access barrier. Both remaining local concentration inventories are now accessible-unreviewed, with exact linked degree-requirement URLs recorded in the audit."
   ],
   "curriculum_audit": {
     "scope": "degree",
@@ -32369,7 +32390,9 @@
       "mit-ai-decision-making-bs-hass-cmsw-els",
       "mit-ai-decision-making-bs-hass-cmsw-education",
       "mit-ai-decision-making-bs-hass-cmsw-pool",
-      "mit-ai-decision-making-bs-hass-mta-browser-migration"
+      "mit-ai-decision-making-bs-hass-mta-browser-migration",
+      "mit-ai-decision-making-bs-hass-music-migration-home",
+      "mit-ai-decision-making-bs-hass-theater-migration-home"
     ],
     "sections": [
       "Programming alternatives with two-subject bundles",
@@ -32408,8 +32431,8 @@
       "Ethics subject-identity clarification: its concentration list retains 24.120 and 24.237J, while the same page’s major section calls these former numbers for 24.220 and 24.137J. Three printed cross-list labels also contain missing punctuation/concatenation. Both the observed labels and advisor petition route are retained; no automatic renumbering or corrected registration identity is inferred.",
       "Urban Studies lists 11.074 Cybersecurity Clinic with an unexplained asterisk. The three-subject advisor-approved plan and all nine suggested combinations are represented; the department must clarify any special clinic condition. Suggestions do not imply unrestricted enrollment.",
       "ACT source precedence: its webpage directs Group B to the History of Art portion of a linked legacy page that returns 404, while the current undergraduate page links an ACT PDF with a specific six-subject history pool. The current HTC PDF’s History of Art subgroup is different. Preserve the full ACT PDF plan and separate webpage reference; department clarification is required rather than silently merging or treating the later filename as supersession.",
-      "Music and Theater Arts field detail remains unverified. Normal Chrome shows the legacy mta.mit.edu/robots.txt/ is a migration page explicitly linking music.mit.edu and theater.mit.edu. Normal Fetcher requests for both new hosts fail at /robots.txt with ConnectError; ordinary Chrome also reported net::ERR_BLOCKED_BY_CLIENT for both new-host robots URLs. No usable policy was obtained, so no new department requirement page was read. CMS/W public requirements are now browser-verified; the default Fetcher TLS chain failure remains an automation limitation, not missing curriculum evidence. AP/international-exam applicability for earlier entrants before Fall 2026 remains unresolved.",
-      "CMS concentration links the full required/elective page, but its external-elective sampling and substitution permission are explicitly framed for majors. The four-HASS-subject criterion and education/media-content exclusion are mapped; the external list is retained only as reference pending concentration-advisor applicability clarification. Printed CMS.614 cross-list punctuation is retained rather than silently repaired."
+      "CMS concentration links the full required/elective page, but its external-elective sampling and substitution permission are explicitly framed for majors. The four-HASS-subject criterion and education/media-content exclusion are mapped; the external list is retained only as reference pending concentration-advisor applicability clarification. Printed CMS.614 cross-list punctuation is retained rather than silently repaired.",
+      "Music and Theater Arts requirements remain accessible but unreviewed at https://music.mit.edu/program/degree-requirements/ and https://theater.mit.edu/program/degree-requirements/, as linked from current official homepages. Approved network execution successfully passed normal robots/TLS checks and read both homepages. Earlier generic ConnectError was execution-environment-specific; Chrome robots-only ERR_BLOCKED_BY_CLIENT is historical and not publisher denial. AP/international-exam applicability for earlier entrants before Fall 2026 remains unresolved."
     ],
     "metadata_gaps": [
       "GIR science tables provide codes and units without titles; those names stay unknown.",
