@@ -78,4 +78,6 @@ All 50 remaining Spanish and 14 Modern Languages complete blocks were read (64 c
 
 SPA301/307 have an explicit mutual credit exclusion and different student preparation; the exclusion is not a cross-list identity. Heritage preparation, translation-course language-requirement exclusions and conditional major use remain visible. SPA361's duplicated prerequisite/component text does not create a second obligation. No requirement graph or identity group changed. Current review total:3,323 program-course observations; remaining1,101codes/4,404observations (1,042 exact current blocks plus59 identity follow-ups).
 
-Validation: 31 focused language, supplemental-policy and enrollment tests, isolated four-degree ingestion/repeat (4/0), integrity/foreign keys, 3,323 reviewed exports and static build passed.
+Validation correction: the initial language/policy run passed 29 tests and exposed two stale assertions tying heritage-course metadata to the old source ID. Current subject descriptions correctly replace that field while the four exact identities and heritage-policy note remain. The follow-up test checks those identities, credits, contextual ancestry and registered source provenance. Isolated four-degree ingestion/repeat (4/0), integrity/foreign keys, 3,323 reviewed exports and static build passed.
+
+Follow-up: all 31 focused language/policy tests now pass, including preserved exact heritage-course identities after metadata source enrichment.

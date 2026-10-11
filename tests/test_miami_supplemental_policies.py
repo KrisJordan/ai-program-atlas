@@ -40,7 +40,15 @@ def test_seed_applicability_and_remaining_conflicts(pid):
  assert (a.LANGUAGES in m.SOURCE_PARSERS)==('data-science' in pid)
  assert d['curriculum_status']=='partial' and not any('inconsistent summer' in x for x in d['curriculum_audit']['unresolved_requirements'])
  assert any('open route' in x for x in d['curriculum_audit']['unresolved_requirements'])
- assert len([c for c in d['courses'] if c['source_id']==a.SOURCE_IDS['languages']])==(4 if 'data-science' in pid else 0)
+ heritage=next((r for r in d['requirements'] if r['id']==pid+'-supplement-spanish-heritage'),None)
+ assert bool(heritage)==('data-science' in pid)
+ if heritage:
+  assert heritage['kind']=='note' and heritage['source_id']==a.SOURCE_IDS['languages']
+  byid={c['id']:c for c in d['courses']}
+  assert {byid[c]['code'] for c in heritage['course_ids']}=={'SPA 107','SPA 207','SPA 208','SPA 307'}
+  assert all(byid[c]['credits']==3 for c in heritage['course_ids'])
+  assert 'high schools' in heritage['summary']
+  assert all(byid[c]['source_id'] in {s['id']for s in d['sources']} for c in heritage['course_ids'])
 
 @pytest.mark.parametrize('key',['cognates','individualized','languages'])
 def test_optional_public_cache(key):
