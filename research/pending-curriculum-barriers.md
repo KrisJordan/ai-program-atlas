@@ -33,3 +33,10 @@ Michigan is no longer pending: its current handbook/course-table inventory is pa
 The separate Michigan Engineering Artificial Intelligence minor is now confirmed by an independently public Engineering news report, updated April9,2026. Its detailed curriculum is pending: the department entry and indexed committee proposal were unavailable, and no current requirements were inferred from the news. This adds a sixth pending inventory, rather than changing the five original unresolved records. It is not the UMSI Human-Centered AI minor. See its dedicated adapter notes.
 
 The specific Michigan CSE [Artificial Intelligence Minor page](https://cse.engin.umich.edu/academics/undergraduate/minors/artificial-intelligence-minor/) was newly discovered and attempted on 11 October 2026. The public reader returned 403. This is now the precise unverified curriculum target; discovery of its URL and search snippet does not resolve the pending inventory.
+
+
+### Seventh pending inventory: announced UIC concentration
+
+The [UIC Engineering announcement of April 1, 2026](https://engineering.uic.edu/news-stories/uic-engineering-launches-ai-curriculum-initiatives/) introduces a formal AI concentration for incoming CS students, with planned Fall 2026 availability. It describes four AI technical electives among six overall technical electives, but the inspected current BS Computer Science catalog does not identify the concentration or its approved pool. `uic-cs-ai-concentration` therefore remains **announced**, with curriculum pending and first-offered date unknown. The calendar passing the proposed term is not implementation evidence. See [the adapter notes](../atlas/adapters/uic-cs-ai-concentration/NOTES.md).
+
+As of the 142-program candidate, seven inventories are pending: Gonzaga, Stony Brook, the two UC Merced programs, Furman, the separate Michigan Engineering AI minor, and this UIC concentration. Michigan UMSI's Human-Centered AI minor is partial and is not in that count. Earlier tables above are historical access observations; they should not be read as the current status list.
