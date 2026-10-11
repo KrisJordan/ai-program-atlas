@@ -28,7 +28,7 @@ def test_formal_merged_alternatives_are_not_misread_as_single_code():
 
 def test_warren_curated_applicability_and_table_inventory():
     d=json.loads(Path('data/programs/'+p.PID+'.json').read_text());validate_program(d)
-    rows=[n for n in d['requirements']if n['id'].startswith(p.PID+'-warren-')]
+    rows=[n for n in d['requirements']if n['id'].startswith(p.PID+'-warren-') and not n['id'].startswith(p.PID+'-warren-discipline-')]
     assert len(rows)==319
     assert next(n for n in rows if n['id'].endswith('ai-scope'))['summary'].startswith('The published B.S. Engineering list explicitly includes CSE Artificial Intelligence')
     counts={key:sum(n['id'].startswith(p.PID+'-warren-option-'+key+'-')for n in rows)for key in p.TABLES}

@@ -164,3 +164,8 @@ SOURCE_PARSERS.update({transfer_options.HUM_URL: transfer_options.parse_humaniti
 from atlas.adapters import ucsd_exam_credit as exam_credit
 SOURCES += (exam_credit.AP_URL, exam_credit.IB_URL, exam_credit.WARREN_URL)
 SOURCE_PARSERS.update({exam_credit.WARREN_URL: exam_credit.parse_warren})
+
+from atlas.adapters import ucsd_warren_disciplines as warren_disciplines
+SOURCES += tuple(warren_disciplines.URLS.values())
+SOURCE_PARSERS.update({url: (lambda html, key=key: warren_disciplines.parse(html, key))
+                      for key, url in warren_disciplines.URLS.items()})
