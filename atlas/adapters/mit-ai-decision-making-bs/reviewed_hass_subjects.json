@@ -21099,10 +21099,45 @@
           "restrictions": [],
           "approved_for_integration": true,
           "identity_note": "Exact original source title/code retained, including dated special-subject topics and compound labels. No alias group, current offering or enrollment permission inferred."
+        },
+        {
+          "observed_code": "24.231",
+          "observed_name": "Ethics",
+          "evidence_basis": "official_description",
+          "description_summary": "Historical seminar examining the validity of moral claims, normative judgments about lives and actions, and virtue, freedom and moral responsibility.",
+          "description_digest": "3baddf5ca0900ba5d33e501400511318759a4931b63037bc5665f4051675bf00",
+          "observation_digest": "329a9faef70fd2a6b4f871edfef1d9f9f5790a6d82b80765803ccd80b6149826",
+          "source_id": "mit-ai-hass-review-philosophy-renumbered-ethics-fall2009",
+          "source_url": "https://ocw.mit.edu/courses/24-231-ethics-fall-2009/pages/syllabus/",
+          "catalog_year": "Fall 2009",
+          "locator": "Fall2009 OCW24.231 syllabus Description and Prerequisites; independent Philosophy undergraduate former-number statement",
+          "prerequisites": "The prerequisites for this course include one philosophy course.",
+          "units_text": null,
+          "credits": null,
+          "credit_unit": null,
+          "category": "human_context",
+          "status": "reviewed",
+          "rationale": "Actual dated syllabus centers philosophical arguments about morality, justice, virtue and responsibility.",
+          "candidate_categories": [],
+          "restrictions": [
+            "Historical Fall2009 description and prerequisite only; no current24.130metadata or content continuity is certified.",
+            "The department explicitly labels24.130Ethics formerly24.231. No alias group or requirement-pool precedence is inferred.",
+            "Both exact source payloads are required for replay; changed numbering evidence withdraws this approved observation."
+          ],
+          "approved_for_integration": true,
+          "identity_note": "Explicit independently published former-number relation supports dated historical evidence for the retained24.130record. Observed code remains24.231.",
+          "numbering_source_id": "mit-ai-hass-review-philosophy-numbering",
+          "numbering_source_url": "https://philosophy.mit.edu/undergraduate/",
+          "numbering_support": {
+            "code": "24.130",
+            "former_code": "24.231",
+            "title": "Ethics (CI-M)",
+            "source_statement": "24.130 Ethics (CI-M) (formerly 24.231)"
+          }
         }
       ],
       "missingness": [
-        "Title-only review; actual description, prerequisites and credit amount remain unknown."
+        "Current offering description/prerequisites and unit amount remain unknown; approved evidence is Fall2009 with an explicitly published former-number relation."
       ]
     },
     "mit-ai-hass-ethics-24-131": {
@@ -41719,6 +41754,27 @@
       "fetched_at": "2026-10-11T08:47:02+00:00",
       "body_sha256": "3d764cf7cb80fed07a6a42a7f586a88bd31f2f95b4d56f7a78930a1d28dd4297",
       "capture_method": "robots_aware_public_http"
+    },
+    "mit-ai-hass-review-philosophy-numbering": {
+      "url": "https://philosophy.mit.edu/undergraduate/",
+      "title": "MIT Philosophy undergraduate / explicit former-number statements",
+      "catalog_year": null,
+      "parser": "philosophy_numbering",
+      "fetched_at": "2026-10-11T08:52:56+00:00",
+      "body_sha256": "670d76d839520b460c0234504edf0602603faba35272c1b5b9f488cf4c22e9b7",
+      "scope": "Numbering evidence only; not degree-pool precedence or current course-description continuity."
+    },
+    "mit-ai-hass-review-philosophy-renumbered-ethics-fall2009": {
+      "url": "https://ocw.mit.edu/courses/24-231-ethics-fall-2009/pages/syllabus/",
+      "title": "MIT OCW24.231 Ethics Fall2009 / explicitly stated former number of24.130",
+      "catalog_year": "Fall 2009",
+      "parser": "philosophy_renumbered_ethics",
+      "required_source_ids": [
+        "mit-ai-hass-review-philosophy-numbering"
+      ],
+      "fetched_at": "2026-10-11T08:54:31+00:00",
+      "body_sha256": "540d6f10d1bc30b3f5d91611620aac38f10563bebcf3695c55c926aba0e8dee2",
+      "scope": "Dual-source observer requires actual archive plus separately fetched current department numbering proof; no fallback to plainOCWobserver."
     }
   },
   "source_checks": [
@@ -42670,8 +42726,8 @@
     "pending": 58
   },
   "evidence_counts": {
-    "description_reviewed_records": 472,
-    "title_only_reviewed_records": 290,
+    "description_reviewed_records": 473,
+    "title_only_reviewed_records": 289,
     "code_only_unknown_records": 3
   },
   "scope_notes": [
@@ -45024,5 +45080,76 @@
       }
     ],
     "remaining_access": "Linked independent public teaching resources and unmatched descriptions remain a finite follow-up queue; linked restricted registrar targets were not fetched."
+  },
+  "philosophy_numbering_followup": {
+    "reviewed_at": "2026-10-11",
+    "source_checks": [
+      {
+        "url": "https://philosophy.mit.edu/undergraduate/",
+        "fetched_at": "2026-10-11T08:52:56+00:00",
+        "sha256": "670d76d839520b460c0234504edf0602603faba35272c1b5b9f488cf4c22e9b7",
+        "cache": "philosophy-undergraduate.html"
+      },
+      {
+        "url": "https://catalog.mit.edu/schools/humanities-arts-social-sciences/linguistics-philosophy/",
+        "fetched_at": "2026-10-11T08:52:57+00:00",
+        "sha256": "c8ce6fb7841f1088669d7ed98a62b5d2972acfa371ed14ee8d0dc81e851fdb75",
+        "cache": "philosophy-department-catalog.html"
+      },
+      {
+        "url": "https://ocw.mit.edu/courses/24-231-ethics-fall-2009/pages/syllabus/",
+        "fetched_at": "2026-10-11T08:54:31+00:00",
+        "sha256": "540d6f10d1bc30b3f5d91611620aac38f10563bebcf3695c55c926aba0e8dee2"
+      }
+    ],
+    "numbering_statements": [
+      {
+        "code": "24.121",
+        "former_code": "24.221",
+        "title": "Metaphysics (CI-M)",
+        "source_statement": "24.121 Metaphysics (CI-M) (formerly 24.221)"
+      },
+      {
+        "code": "24.130",
+        "former_code": "24.231",
+        "title": "Ethics (CI-M)",
+        "source_statement": "24.130 Ethics (CI-M) (formerly 24.231)"
+      },
+      {
+        "code": "24.137J",
+        "former_code": "24.237J",
+        "title": "Feminist Thought (CI-M)",
+        "source_statement": "24.137J Feminist Thought (CI-M) (formerly 24.237J)"
+      },
+      {
+        "code": "24.220",
+        "former_code": "24.120",
+        "title": "Moral Psychology",
+        "source_statement": "24.220 Moral Psychology (formerly 24.120)"
+      },
+      {
+        "code": "24.233",
+        "former_code": "24.07",
+        "title": "The Ethics of Climate Change",
+        "source_statement": "24.233 The Ethics of Climate Change (formerly 24.07)"
+      },
+      {
+        "code": "24.240J",
+        "former_code": "24.140J",
+        "title": "Literature and Philosophy",
+        "source_statement": "24.240J Literature and Philosophy (formerly 24.140J)"
+      },
+      {
+        "code": "24.141",
+        "former_code": "24.241",
+        "title": "Logic I",
+        "source_statement": "24.141 Logic I (formerly 24.241)"
+      }
+    ],
+    "upgraded_record_ids": [
+      "mit-ai-hass-ethics-24-130"
+    ],
+    "department_catalog_outcome": "Successful public HTML fetch with zero course blocks; not a publisher denial.",
+    "remaining": "Explicit former numbers do not resolve precedence between conflicting degree/HASS requirement lists. Other historical/current descriptions remain separate work."
   }
 }

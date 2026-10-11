@@ -215,7 +215,7 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']['description_reviewed_records']==472
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==473
     assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
         o=next(o for o in entry(code)['observations'] if o.get('evidence_basis')=='official_title_only')
@@ -715,7 +715,7 @@ def test_ocw_actual_manual_subjects_keep_mixed_content_and_historical_identity()
     assert phonology['catalog_year']=='Spring 2026'
     assert phonology['prerequisites']=='24.900 Introduction to Linguistics or 24.9000 Introduction to Linguistics'
     assert entry('24.9000')['observations'][-1]['evidence_basis']=='official_title_only'
-    assert entry('24.130')['observations'][-1]['evidence_basis']=='official_title_only'
+    assert not any(o.get('evidence_basis')=='official_description' and o['source_id'] in report['source_ids'] for o in entry('24.130')['observations'])
     assert entry('24.120')['observations'][-1]['observed_code']=='24.120'
     assert entry('24.120')['observations'][-1]['catalog_year']=='Spring 2009'
     assert 'recommended' in entry('24.235J/17.021J')['observations'][-1]['prerequisites']
@@ -1769,3 +1769,32 @@ def test_anthropology_faculty_source_replay_withdraws_changed_description_and_co
         assert review.matched_review(course,o,e['source_url'],MANIFEST)==e
         for wrong in [{**o,'description':o['description']+' Changed.'},{**o,'offered_codes':['21A.999']},{**o,'term':'Fall2026'}]:
             assert review.matched_review(course,wrong,e['source_url'],MANIFEST) is None
+
+
+def test_philosophy_renumbered_ethics_is_historical_with_two_source_dependency():
+    e=entry('24.130')['observations'][-1]
+    assert e['observed_code']=='24.231' and e['catalog_year']=='Fall 2009'
+    assert e['prerequisites']=='The prerequisites for this course include one philosophy course.'
+    assert e['credits'] is None and e['category']=='human_context'
+    assert MANIFEST['source_specs'][e['source_id']]['required_source_ids']==[e['numbering_source_id']]
+    assert e['numbering_support']['source_statement']=='24.130 Ethics (CI-M) (formerly 24.231)'
+    assert len(MANIFEST['philosophy_numbering_followup']['numbering_statements'])==7
+
+
+def test_philosophy_numbering_guard_does_not_infer_from_matching_title():
+    html='<h1>Welcome to the MIT Philosophy Undergraduate Program</h1><p>24.130 Ethics (CI-M) (formerly 24.231)<br>24.233 The Ethics of Climate Change (formerly 24.07)</p>'
+    assert review.observe_philosophy_numbering(html)[0]['former_code']=='24.231'
+    with pytest.raises(ValueError):review.observe_philosophy_numbering(html.replace('formerly','possibly equivalent to'))
+    with pytest.raises(ValueError):review.observe_philosophy_numbering(html.replace('Welcome to the MIT Philosophy Undergraduate Program','Other program'))
+
+
+def test_philosophy_two_source_replay_withdraws_missing_or_changed_numbering():
+    root=Path('/tmp/mit-hass-subjects');a=root/'ocw-24-231-ethics-fall-2009-syllabus.html';n=root/'philosophy-undergraduate.html'
+    if not a.exists() or not n.exists():pytest.skip('Optional public Philosophy/OCW captures')
+    o,=review.observe_philosophy_renumbered_ethics(a.read_text(),n.read_text())
+    row=entry('24.130');e=row['observations'][-1]
+    course=dict(id='mit-ai-hass-ethics-24-130',code=row['listed_code'],name=row['listed_name'],source_id=row['listed_source_id'])
+    assert review.matched_review(course,o,e['source_url'],MANIFEST)==e
+    with pytest.raises(ValueError):review.observe_philosophy_renumbered_ethics(a.read_text(),n.read_text().replace('formerly 24.231','formerly 24.999'))
+    with pytest.raises(ValueError):review.observe_philosophy_renumbered_ethics(a.read_text().replace('Fall 2009','Fall 2010'),n.read_text())
+    assert review.matched_review(course,{**o,'numbering_support':{}},e['source_url'],MANIFEST) is None

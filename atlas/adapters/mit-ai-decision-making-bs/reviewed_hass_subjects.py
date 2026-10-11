@@ -916,3 +916,36 @@ def observe_anthropology_faculty(html):
     if not rows:
         raise ValueError('Anthropology teaching descriptions missing')
     return rows
+
+
+def observe_philosophy_numbering(html):
+    """Literal former-number statements, not same-title inferred equivalences."""
+    soup = BeautifulSoup(html, 'html.parser')
+    if not any(clean(h) == 'Welcome to the MIT Philosophy Undergraduate Program' for h in soup.find_all('h1')):
+        raise ValueError('Philosophy undergraduate context missing')
+    rows = []
+    for p in soup.find_all('p'):
+        # Preserve a printed row, including punctuation and CI designation.
+        for chunk in re.split(r'<br\s*/?>', str(p)):
+            text = clean(BeautifulSoup(chunk, 'html.parser'))
+            match = re.fullmatch(r'(24\.\d+J?) (.+?) \(formerly (24\.\d+J?)\)', text)
+            if match:
+                row = dict(code=match[1], former_code=match[3], title=match[2], source_statement=text)
+                if row not in rows:
+                    rows.append(row)
+    if not rows:
+        raise ValueError('Philosophy former-number statements missing')
+    return rows
+
+
+def observe_philosophy_renumbered_ethics(archive_html, numbering_html):
+    """Require both the historical description and explicit independent numbering proof."""
+    proof = next((r for r in observe_philosophy_numbering(numbering_html)
+                  if r['code'] == '24.130' and r['former_code'] == '24.231'
+                  and r['title'] == 'Ethics (CI-M)'), None)
+    if proof is None:
+        raise ValueError('Exact Ethics former-number support missing')
+    rows = observe_ocw_syllabus(archive_html)
+    if len(rows) != 1 or (rows[0]['code'], rows[0]['name'], rows[0]['term']) != ('24.231', 'Ethics', 'Fall 2009'):
+        raise ValueError('Historical Ethics identity or term changed')
+    return [{**rows[0], 'numbering_support': proof}]
