@@ -75,3 +75,25 @@ SOURCE_PARSERS = {**SOURCE_PARSERS, **_WRITING_PHYSICS_METADATA}
 _BIO_CHEM_METADATA = register_subject_sources(PROGRAM_ID, {'CHEM': ['CHEM 1151', 'CHEM 1153']})
 SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + tuple(_BIO_CHEM_METADATA)))
 SOURCE_PARSERS = {**SOURCE_PARSERS, **_BIO_CHEM_METADATA}
+
+# Independently reviewed individually reviewed chemical engineering/professional course subject evidence.
+_CHEMICAL_ENGINEERING_AUDIT_METADATA = register_subject_sources(PROGRAM_ID, {'CHME': ['CHME 2308', 'CHME 2310', 'CHME 2320', 'CHME 3305', 'CHME 3306', 'CHME 3312', 'CHME 3322', 'CHME 4510', 'CHME 4512', 'CHME 4701', 'CHME 4703', 'CHME 4705'], 'ENCP': ['ENCP 2000', 'ENCP 3000']})
+SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + tuple(_CHEMICAL_ENGINEERING_AUDIT_METADATA)))
+SOURCE_PARSERS = {**SOURCE_PARSERS, **_CHEMICAL_ENGINEERING_AUDIT_METADATA}
+
+# Independently verified Boston combined-degree scope for the same university
+# policy pages used by the other NE degrees. Keep this BSChE local: it does not
+# acquire unreviewed family membership or a different award label.
+from atlas.adapters.northeastern_policies import PROFILES, parse_policy
+
+def _chemical_policy(html, profile):
+    result = parse_policy(html, program_id=PROGRAM_ID, profile=profile)
+    if profile == 'combined':
+        row = next(r for r in result['requirements'] if r['id'] == PROGRAM_ID+'-req-policy-combined-one-award')
+        row['summary'] = 'Completion earns one major, one degree and one diploma; the combined major and home college appear on transcript and diploma. Preserve this concrete program’s BSChE designation.'
+    return result
+
+_CHEMICAL_POLICIES = {url: (lambda html, profile=profile: _chemical_policy(html, profile))
+    for profile, (url, _, _) in PROFILES.items()}
+SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + tuple(_CHEMICAL_POLICIES)))
+SOURCE_PARSERS = {**SOURCE_PARSERS, **_CHEMICAL_POLICIES}

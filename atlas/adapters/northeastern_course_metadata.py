@@ -6,6 +6,18 @@ from atlas.adapters.northeastern_courseleaf import clean, slug, numeric, categor
 # Short editorial summaries of the linked official descriptions. Each has a
 # source phrase guard; changed prose cannot silently replay an unsupported summary.
 SUMMARIES = {
+    'CHME 2308': ('mass and energy conservation', 'Uses conservation laws to calculate material and energy balances in chemical processes.'),
+    'CHME 2310': ('incompressible and compressible fluids', 'Studies fluid and energy transport for analysis of industrial engineering processes.'),
+    'CHME 2320': ('first and second laws of thermodynamics', 'Applies thermodynamics and real-fluid properties to batch and flow engineering systems.'),
+    'CHME 3305': ('momentum, heat, and mass transport', 'Investigates transport principles through chemical-engineering experiments, emphasizing safe experimental design and technical reporting.'),
+    'CHME 3306': ('Accompanies CHME 3305', 'Supports the chemical-engineering laboratory through safety, experimental design, data analysis and reporting.'),
+    'CHME 3312': ('simultaneous energy/mass transport', 'Studies coupled energy and mass transport and its applications to engineering processes.'),
+    'CHME 3322': ('thermodynamic properties of mixtures', 'Analyzes mixture properties, phase behavior and equilibrium in chemical reactions.'),
+    'CHME 4510': ('design of batch and continuous-flow chemical reactors', 'Uses reaction kinetics and experimental data to design chemical reactors.'),
+    'CHME 4512': ('modeling liquid-level, temperature, and composition dynamics', 'Models chemical-process dynamics and designs feedback, feed-forward and cascade controls.'),
+    'CHME 4701': ('particular emphasis on separation technologies', 'Designs chemical processing systems using separation methods, simulations and economic evaluation.'),
+    'CHME 4703': ('comprehensive chemical process', 'Develops and validates a team chemical-process design using experiments or simulation, considering practical and societal constraints.'),
+    'CHME 4705': ('Accompanies CHME 4703', 'Provides shared lectures and guest presentations supporting the chemical-process design capstone.'),
     'CHEM 2325': ('Accompanies CHEM 2317', 'Reinforces CHEM 2317 organic reactivity and spectroscopy through interactive work on lecture and laboratory material.'),
     'CHEM 2324': ('Accompanies CHEM 2315', 'Reinforces CHEM 2315 organic chemistry and synthesis through interactive work on lecture and laboratory material.'),
     'CHEM 2323': ('Accompanies CHEM 2321', 'Reinforces CHEM 2321 analytical chemistry through interactive work on lecture and laboratory material.'),
@@ -814,6 +826,18 @@ SUMMARIES = {
 
 
 SUMMARY_TITLE_GUARDS = {
+    'CHME 2308': 'Conservation Principles in Chemical Engineering',
+    'CHME 2310': 'Transport Processes 1',
+    'CHME 2320': 'Engineering Thermodynamics',
+    'CHME 3305': 'Chemical Engineering Laboratory',
+    'CHME 3306': 'Recitation for CHME 3305',
+    'CHME 3312': 'Transport Processes 2',
+    'CHME 3322': 'Chemical Thermodynamics',
+    'CHME 4510': 'Chemical Engineering Kinetics',
+    'CHME 4512': 'Chemical Engineering Process Control',
+    'CHME 4701': 'Separations and Process Analysis',
+    'CHME 4703': 'Chemical Process Design Capstone',
+    'CHME 4705': 'Recitation for CHME 4703',
     'COOP 3945': 'Co-op Work Experience',
     'COOP 3946': 'Co-op Work Experience--Half Time',
     'COOP 3947': 'Co-op Work Experience Abroad--Half Time',
@@ -911,6 +935,7 @@ def parse_subject(html, *, program_id, subject, heading, codes, url):
 
 
 SUBJECT_HEADINGS = {
+    'CHME': 'Chemical Engineering (CHME)',
     'GE': 'General Engineering (GE)',
     'AFCS': 'Africana Studies (AFCS)',
     'ANTH': 'Anthropology (ANTH)',

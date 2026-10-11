@@ -93,7 +93,7 @@ def test_reviewed_seed_and_optional_live_replay(pid):
     elif pid == IDS[2]:
         # The degree page supplies requirement rows; independently reviewed
         # subject pages now enrich credits/prerequisites and manual taxonomy.
-        assert requirements == [r for r in seed['requirements'] if not r['id'].endswith('-req-cs-1802-concurrent')]
+        assert requirements == [r for r in seed['requirements'] if r['source_id'] == pid+'-catalog']
         actual = {c['id']:c for c in seed['courses']}
         assert {(c['id'],c['code'],c['name']) for c in courses} == {(c['id'],c['code'],c['name']) for c in seed['courses'] if c['code'] != 'CS 1802'}
         for observed in courses:
