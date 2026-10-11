@@ -24,7 +24,7 @@ def ingest_family(conn, family, program_updates=None):
     dependents = {
         r["program_id"]: db.program_record(r)
         for r in conn.execute(
-            "SELECT m.program_id,p.record_zlib,p.content_hash FROM program_family_memberships m JOIN programs p ON p.id=m.program_id WHERE m.family_id=?",
+            "SELECT m.program_id,p.* FROM program_family_memberships m JOIN programs p ON p.id=m.program_id WHERE m.family_id=?",
             (family["id"],),
         )
     }

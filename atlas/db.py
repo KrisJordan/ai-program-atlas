@@ -82,7 +82,14 @@ def revision_record(row) -> dict:
 
 def program_record(row) -> dict:
     """Decode the current canonical snapshot; relational facts remain queryable."""
-    return _decode_record(row, "Program")
+    if "record_zlib" in row.keys():
+        return _decode_record(row, "Program")
+    # Upgrade verification may inspect an older database before migrating it.
+    # Verify legacy canonical bytes too; never fall back from a corrupt blob.
+    raw = row["record_json"].encode("utf-8")
+    if hashlib.sha256(raw).hexdigest() != row["content_hash"]:
+        raise ValueError("Program content hash mismatch")
+    return json.loads(raw)
 
 
 def connect(path: str | Path) -> sqlite3.Connection:
@@ -272,6 +279,11 @@ def ingest_program(conn, program, run_id=None):
                 "SELECT id FROM hosting_units WHERE institution_id=? AND name=?",
                 (program["institution"]["id"], program["hosting_unit"]),
             ).fetchone()[0]
+        storage_column = ("record_zlib" if any(row["name"] == "record_zlib"
+                          for row in conn.execute("PRAGMA table_info(programs)")) else "record_json")
+        snapshot = canonical(program)
+        stored_snapshot = (_compress_revision(snapshot, fingerprint)
+                           if storage_column == "record_zlib" else snapshot)
         values = (
             pid,
             program["institution"]["id"],
@@ -287,15 +299,15 @@ def ingest_program(conn, program, run_id=None):
             program.get("curriculum_status", "pending"),
             program["last_verified"],
             fingerprint,
-            _compress_revision(canonical(program), fingerprint),
+            stored_snapshot,
         )
         conn.execute(
-            """INSERT INTO programs VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT(id) DO UPDATE SET
+            f"""INSERT INTO programs VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT(id) DO UPDATE SET
             institution_id=excluded.institution_id,hosting_unit_id=excluded.hosting_unit_id,title=excluded.title,
             award_level=excluded.award_level,program_kind=excluded.program_kind,status=excluded.status,
             first_offered_json=excluded.first_offered_json,overview=excluded.overview,catalog_year=excluded.catalog_year,
             verification_status=excluded.verification_status,curriculum_status=excluded.curriculum_status,
-            last_verified=excluded.last_verified,content_hash=excluded.content_hash,record_zlib=excluded.record_zlib""",
+            last_verified=excluded.last_verified,content_hash=excluded.content_hash,{storage_column}=excluded.{storage_column}""",
             values,
         )
         # Optional award mappings must release source FKs before replacing sources.
@@ -533,7 +545,7 @@ def set_override(conn, program_id, field, value, reason, evidence_url):
         )
     if not reason.strip() or urlparse(evidence_url).scheme not in {"http", "https"}:
         raise ValueError("Overrides require a reason and HTTP(S) evidence link")
-    row = conn.execute("SELECT record_zlib,content_hash FROM programs WHERE id=?", (program_id,)).fetchone()
+    row = conn.execute("SELECT * FROM programs WHERE id=?", (program_id,)).fetchone()
     if not row:
         raise ValueError("Unknown program")
     candidate = program_record(row)

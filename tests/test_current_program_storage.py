@@ -74,3 +74,12 @@ def test_current_decode_fails_closed_for_changed_or_invalid_payload():
         db.program_record({'record_zlib':zlib.compress(b'{"id":"changed"}'),'content_hash':'wrong'})
     with pytest.raises(zlib.error):
         db.program_record({'record_zlib':b'\x00','content_hash':'wrong'})
+
+
+def test_legacy_current_decode_verifies_hash_before_migration():
+    record = {'id':'legacy','title':'AI — résumé'}
+    row = {'record_json':db.canonical(record),'content_hash':db.digest(record)}
+    assert db.program_record(row) == record
+    row['content_hash'] = 'wrong'
+    with pytest.raises(ValueError, match='Program content hash mismatch'):
+        db.program_record(row)
