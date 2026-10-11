@@ -81,9 +81,12 @@
     const choices = p.curriculum_profile.choices;
     if (!choices.length) return 'No structured selection rules recorded. Full requirements may contain unresolved notes.';
     const sources = new Map((p.sources || []).map(source => [source.id,source]));
+    const counted = new Map(p.curriculum_profile.required_obligations.counted_choices.map(c => [c.id,c]));
+    const excluded = new Map(p.curriculum_profile.required_obligations.excluded_choices.map(c => [c.id,c.reason]));
+    const accounting = choice => counted.has(choice.id) ? `Counts as ${counted.get(choice.id).count} required ${categories[counted.get(choice.id).category]} selection(s).` : `Not added to counts: ${excluded.get(choice.id) || 'context unresolved'}.`;
     const contexts = {required:'Required selection',conditional:'Conditional selection',unresolved:'Selection context unresolved'};
     const origins = {family:'Shared family requirement',variant:'Local variant requirement',replacement:'Variant replacement'};
-    return `<details class="profile-choices"><summary>${choices.length} documented selection rules</summary><ul>${choices.map(choice => `<li><strong>${e(choice.title)}</strong><div class="profile-choice-rule">${e(selectionLabel(choice))}</div><small>${e(contexts[choice.context] || contexts.unresolved)}${origins[choice.origin] ? ' · ' + e(origins[choice.origin]) : ''}</small><small>${link(sources.get(choice.source_id)?.url,'Source')} · <a href="${base}programs/${e(p.id)}/#requirement-${e(choice.id)}">Full requirement</a></small></li>`).join('')}</ul></details><small>Nested quantities are not summed. Course counts and credit units remain distinct; no pathway is selected.</small>`;
+    return `<details class="profile-choices"><summary>${choices.length} documented selection rules</summary><ul>${choices.map(choice => `<li><small>${e(accounting(choice))}</small><strong>${e(choice.title)}</strong><div class="profile-choice-rule">${e(selectionLabel(choice))}</div><small>${e(contexts[choice.context] || contexts.unresolved)}${origins[choice.origin] ? ' · ' + e(origins[choice.origin]) : ''}</small><small>${link(sources.get(choice.source_id)?.url,'Source')} · <a href="${base}programs/${e(p.id)}/#requirement-${e(choice.id)}">Full requirement</a></small></li>`).join('')}</ul></details><small>Nested quantities are not summed. Course counts and credit units remain distinct; no pathway is selected.</small>`;
   };
 
   function readState() {

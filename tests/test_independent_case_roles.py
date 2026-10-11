@@ -76,7 +76,7 @@ def test_case_chart_distinguishes_profile_scope_from_missing_evidence(award):
     for role in ['required','options']:
         panel = soup.select_one(f'[data-profile={role}]')
         manual = expected['expected_profile'][role]
-        assert f"{manual['count']} distinct" in panel.select_one('.profile-total').get_text()
+        assert f"{manual['count']} distinct" in panel.select_one('.profile-denominator' if role == 'required' else '.profile-total').get_text()
         assert str(manual['source_record_count'])+' retained source-code records' in panel.select_one('.profile-identity').get_text()
         for key,value in manual['categories'].items():
             assert panel.select_one(f'[data-category={key}] strong').get_text()==str(value)

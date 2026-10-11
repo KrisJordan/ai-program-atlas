@@ -21,7 +21,7 @@ def test_rice_required_foundations_and_systems_remain_visible(browser,parent_inv
         expect(required).to_be_visible()
         expect(required.locator('[data-category=foundations] strong')).to_have_text('3')
         expect(required.locator('[data-category=systems] strong')).to_have_text('2')
-        expect(required.locator('.profile-total')).to_contain_text('13 distinct')
+        expect(required.locator('.profile-denominator')).to_contain_text('13 distinct')
         expect(required.locator('.profile-taxonomy')).to_contain_text('13 reviewed')
         page.locator('label[for=profile-options]').click()
         options = page.locator('[data-profile=options]')
@@ -31,12 +31,12 @@ def test_rice_required_foundations_and_systems_remain_visible(browser,parent_inv
         assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
         page.goto(base+'?compare='+pid)
         cell = page.locator('.compare-profile-cell')
-        expect(cell.locator('.profile-total')).to_contain_text('13 distinct')
+        expect(cell.locator('.profile-denominator')).to_contain_text('13 distinct')
         for label,count in [('Computing foundations','3'),('Systems','2')]:
             term = cell.locator('dt').filter(has_text=label)
             expect(term.locator('xpath=following-sibling::dd[1]')).to_have_text(count)
         page.reload()
-        expect(cell.locator('.profile-total')).to_contain_text('13 distinct')
+        expect(cell.locator('.profile-denominator')).to_contain_text('13 distinct')
         assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
         assert not errors
     finally:

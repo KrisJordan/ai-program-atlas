@@ -45,7 +45,7 @@ def test_stevens_fixed_options_and_context_survive_comparison_history(browser,st
     try:
         page.goto(stevens_inventory+'programs/'+PID+'/')
         required = page.locator('[data-profile=required]')
-        expect(required.locator('.profile-total')).to_contain_text('24 distinct')
+        expect(required.locator('.profile-denominator')).to_contain_text('24 distinct')
         expect(required.locator('[data-category=foundations] strong')).to_have_text('6')
         expect(page.locator('.profile-uncertainty')).to_contain_text('25 course records are outside the fixed/option count profiles')
         page.locator('label[for=profile-options]').click()
@@ -56,7 +56,7 @@ def test_stevens_fixed_options_and_context_survive_comparison_history(browser,st
         assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
         page.goto(stevens_inventory+'?compare='+PID)
         cell = page.locator('.compare-profile-cell')
-        expect(cell.locator('.profile-total')).to_contain_text('24 distinct')
+        expect(cell.locator('.profile-denominator')).to_contain_text('24 distinct')
         page.locator('#compare-profile').select_option('options')
         expect(cell.locator('.profile-total')).to_contain_text('30 distinct')
         page.reload()

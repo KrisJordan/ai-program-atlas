@@ -261,7 +261,7 @@ def test_rice_rendered_required_chart_cannot_lose_reviewed_computing_foundations
     options = soup.select_one('[data-profile=options]')
     assert required.select_one('[data-category=foundations] strong').get_text() == '3'
     assert required.select_one('[data-category=systems] strong').get_text() == '2'
-    assert '13 distinct' in required.select_one('.profile-total').get_text()
+    assert '13 distinct' in required.select_one('.profile-denominator').get_text()
     assert '13 reviewed' in required.select_one('.profile-taxonomy').get_text()
     assert '26 distinct' in options.select_one('.profile-total').get_text()
     assert '30 retained source-code records' in options.get_text()
@@ -295,7 +295,7 @@ def test_northeastern_four_manual_sets_survive_family_resolution_and_rendering()
                 assert requirement_profile(only_course(p,cid))[role]['count']==1
             if role!='unresolved':
                 panel = chart.select_one(f'[data-profile={role}]')
-                assert f"{expected['count']} distinct" in panel.select_one('.profile-total').get_text()
+                assert f"{expected['count']} distinct" in panel.select_one('.profile-denominator' if role == 'required' else '.profile-total').get_text()
                 for category,value in observed[role]['categories'].items():
                     assert panel.select_one(f'[data-category={category}] strong').get_text()==(str(value) if value else '0 mapped')
         assert observed['identity']['source_records']==len(courses)
@@ -359,7 +359,7 @@ def test_northeastern_additional_full_manual_inventory_and_rendered_profile(pid,
         assert set(entry['expected_course_ids'][role])=={courses[r['code']]['id'] for r in entry['course_review'] if r['role']==role}
         if role!='unresolved':
             panel = chart.select_one(f'[data-profile={role}]')
-            assert f"{manual['count']} distinct" in panel.select_one('.profile-total').get_text()
+            assert f"{manual['count']} distinct" in panel.select_one('.profile-denominator' if role == 'required' else '.profile-total').get_text()
             for key,value in profile[role]['categories'].items():
                 assert panel.select_one(f'[data-category={key}] strong').get_text()==(str(value) if value else '0 mapped')
     assert entry['second_pass_status']=='partial' and not entry['full_degree_verified']
