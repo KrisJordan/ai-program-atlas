@@ -129,3 +129,7 @@ The [initial gap triage](research/curriculum-gap-triage.md) is a dated starting 
 ### Publication discipline
 
 The verified public checkpoint is `dd797acc`; later commits are not described as published until their own clean build, tests, CI/Pages and live gates pass. The failed candidates and their repairs are retained in the release history.
+
+Course-note correction: the existing canonical snapshots and JSON preserved all course-level notes, but HTML previously omitted them. The new accessible disclosure has 13 passing site tests and 29 passing Chromium tests including no-JS keyboard activation and 390px layout. Migration 015 adds ordered relational note queries, backfilled from verified snapshots without changing source hashes or history. This correction awaits the next full publication gate.
+
+Migration 015 verification: an isolated copy of the last published maintained database preserved the complete exported JSON byte-for-byte, every program hash and revision count while adding relational course-note rows; integrity and foreign keys passed. The focused storage/pipeline suite passes 48 tests. Its full-inventory case encountered the expected stale compiled audit snapshot during concurrent source edits; it must run again after the next coordinated ledger freeze and is not reported as passed now.

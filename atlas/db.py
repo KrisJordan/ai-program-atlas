@@ -103,9 +103,11 @@ def connect(path: str | Path) -> sqlite3.Connection:
 
 
 def migrate(conn: sqlite3.Connection) -> None:
-    # Used only by the transactional canonical-snapshot storage migrations. The resulting
+    # Used only by transactional snapshot-storage and relational-backfill migrations. The resulting
     # database needs no SQLite extension or custom function for ordinary reads.
     conn.create_function("atlas_compress_revision", 2, _compress_revision)
+    conn.create_function("atlas_verified_program_json", 2, lambda payload, fingerprint:
+        canonical(_decode_record({"record_zlib": payload, "content_hash": fingerprint}, "Program")))
     conn.execute(
         "CREATE TABLE IF NOT EXISTS schema_migrations(version INTEGER PRIMARY KEY, applied_at TEXT NOT NULL)"
     )
@@ -232,6 +234,10 @@ def validate_program(program, family=None):
         if item.get("source_id") and item["source_id"] not in source_ids:
             raise ValueError(f"Unknown source {item['source_id']}")
     for course in courses:
+        if "notes" in course and (not isinstance(course["notes"], list) or any(
+            not isinstance(note, str) or not note.strip() for note in course["notes"]
+        )):
+            raise ValueError("Course notes must be a list of nonempty strings")
         if course.get("credits") is not None and (
             not isinstance(course["credits"], (int, float)) or course["credits"] < 0
         ):
@@ -395,6 +401,13 @@ def ingest_program(conn, program, run_id=None):
                     c.get("syllabus"),
                 ),
             )
+        # Older migration fixtures may intentionally ingest before schema 015.
+        if conn.execute("SELECT 1 FROM sqlite_master WHERE name='course_notes'").fetchone():
+            conn.executemany("INSERT INTO course_notes VALUES (?,?,?,?)", [
+                (pid, course["id"], position, note)
+                for course in program.get("courses", [])
+                for position, note in enumerate(course.get("notes", []))
+            ])
         for group in program.get("course_identity_groups", []):
             conn.execute("INSERT INTO course_identity_groups VALUES (?,?,?,?,?,?,?)", (
                 pid, group["id"], group["canonical_course_id"], group["relation"],
