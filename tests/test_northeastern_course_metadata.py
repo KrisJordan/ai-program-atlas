@@ -254,3 +254,35 @@ def test_required_field_participation_does_not_create_prerequisite_or_universal_
     assert observed['courses'][0]['prerequisites'] is None and observed['requirements']==[]
     assert any('spring-break international field project' in n for n in observed['notes'])
     assert not any('field project' in n for n in parser(html.replace(prose,''))['notes'])
+
+
+def test_zero_hour_experiential_registration_keeps_standing_without_requiring_coop():
+    html=page('<div class="courseblock"><p class="courseblocktitle">COOP 3945. Co-op Work Experience. (0 Hours)</p><p class="cb_desc">Provides students an opportunity for work experience. Requires sophomore standing or above.</p></div>',heading='Cooperative Education (COOP)')
+    parser=register_subject_sources('test-program',{'COOP':['COOP 3945']})['https://catalog.northeastern.edu/course-descriptions/coop/']
+    observed=parser(html);course=observed['courses'][0]
+    assert course['credits']==0 and course['credit_unit']=='semester_hours'
+    assert 'sophomore standing or above' in course['prerequisites']
+    assert observed['requirements']==[] and 'family' not in observed
+    changed=parser(html.replace('sophomore standing','junior standing'))['courses'][0]
+    assert 'junior standing' in changed['prerequisites'] and 'sophomore' not in changed['prerequisites']
+
+
+def test_all_ne_family_course_records_have_independent_subject_catalog_provenance():
+    import json
+    from pathlib import Path
+    from atlas.scrape import adapters
+    root=Path(__file__).resolve().parents[1];registered=adapters();variants=0;unknown=0;zeros=0
+    for path in (root/'data/programs').glob('northeastern-*.json'):
+        p=json.loads(path.read_text())
+        if p.get('family',{}).get('id')!='northeastern-ai-combined-degrees':continue
+        variants+=1;sources={s['id']:s for s in p['sources']}
+        for c in p['courses']:
+            subject=c['code'].split()[0].lower();sid=p['id']+'-'+subject+'-courses'
+            assert c['source_id']==sid
+            assert sources[sid]['url']==f'https://catalog.northeastern.edu/course-descriptions/{subject}/'
+            assert c['code'] in sources[sid]['locator']
+            assert sources[sid]['url'] in registered[p['id']].SOURCE_PARSERS
+            assert c['credit_unit']=='semester_hours'
+            unknown+=c['description'] is None;zeros+=c['credits']==0
+        assert p['curriculum_status']=='partial' and p['curriculum_audit']['unresolved_requirements']
+    assert variants==23 and unknown>0 and zeros>0

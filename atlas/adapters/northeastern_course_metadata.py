@@ -6,6 +6,13 @@ from atlas.adapters.northeastern_courseleaf import clean, slug, numeric, categor
 # Short editorial summaries of the linked official descriptions. Each has a
 # source phrase guard; changed prose cannot silently replay an unsupported summary.
 SUMMARIES = {
+    'INSH 2102': ('geospatial mapping, data visualization, and network science', 'Integrates computational methods with cultural and social research using Boston case studies.'),
+    'INSH 3101': ('develop a research design', 'Develops research questions, methods and critical analysis in the social sciences.'),
+    'INSH 3102': ('display or visualize quantitative data', 'Develops statistical and computational methods for social-science research.'),
+    'EESH 2000': ('develop job-search and career-management skills', 'Prepares students for co-op searches, interviewing, professional practice and career decisions.'),
+    'EESC 2000': ('develop job-search and career-management skills', 'Prepares students for co-op searches, interviewing, professional practice and career decisions.'),
+    'EEAM 2000': ('develop job-search and career-management skills', 'Prepares students for co-op searches, interviewing, professional practice and career decisions.'),
+    'LANG 3600': ('institutional/systemic control of language use', 'Examines language policy, institutions and social effects through regional case studies.'),
     'MKTG 2201': ('evaluation of marketing efforts', 'Introduces marketing strategy, implementation and evaluation across organizational settings.'),
     'ACCT 1201': ('interpret, analyze, and evaluate published corporate financial reports', 'Develops financial-statement analysis and examines accounting principles and reporting ethics.'),
     'FINA 2201': ('time value of money', 'Develops financial analysis, valuation, financing and capital-management decisions.'),
@@ -192,6 +199,7 @@ def parse_subject(html, *, program_id, subject, heading, codes, url):
             (r'Requires previous coursework in ([^.]+)\.', 'Previous coursework in '),
             (r'Requires ([^.]+) to register\.', 'Registration requires '),
             (r'Requires a working knowledge of ([^.]+)\.', 'Working knowledge of '),
+            (r'Requires ([a-z]+ standing or above)\.', 'Academic standing: '),
         ]:
             condition_match = re.search(pattern, prose)
             if condition_match:
@@ -206,6 +214,7 @@ def parse_subject(html, *, program_id, subject, heading, codes, url):
         if code == 'PSYC 2320' and 'Should be taken before the end of the sophomore year.' in prose:
             metadata_notes.append('PSYC 2320 subject catalog timing advice: complete before the end of the sophomore year. This advice is separate from prerequisite eligibility.')
         scoped_conditions = {
+            'POLS 3423': ('Permission of instructor required for students who do not meet prerequisite.', 'Instructor permission is required for students who do not meet the prerequisite; approval is not presumed.'),
             'ARTG 5330': ('Students who do not meet course restrictions may seek permission of instructor or program coordinator.', 'Students outside course restrictions may seek instructor or program-coordinator permission; permission is not guaranteed.'),
             'ENTR 3217': ('Required participation in spring break international field project.', 'Participation in a spring-break international field project is required. This is a course activity, not prior-completion eligibility.'),
             'ENVR 3300': ('Students who do not meet course prerequisites may seek permission of instructor.', 'Students who do not meet the prerequisites may seek instructor permission; permission is not guaranteed.'),
@@ -228,6 +237,39 @@ def parse_subject(html, *, program_id, subject, heading, codes, url):
 
 
 SUBJECT_HEADINGS = {
+    'AFCS': 'Africana Studies (AFCS)',
+    'ANTH': 'Anthropology (ANTH)',
+    'ARAB': 'Arabic (ARAB)',
+    'ASNS': 'Asian Studies (ASNS)',
+    'BINF': 'Bioinformatics (BINF)',
+    'BIOC': 'Biochemistry (BIOC)',
+    'BNSC': 'Behavioral Neuroscience (BNSC)',
+    'COOP': 'Cooperative Education (COOP)',
+    'DEAF': 'Deaf Studies (DEAF)',
+    'EEAM': 'Co-op/Experiential Education in Arts, Media, and Design (EEAM)',
+    'EEBA': 'Co-op/Experiential Education in Business (EEBA)',
+    'EESC': 'Co-op/Experiential Education in Science (EESC)',
+    'EESH': 'Co-op/Experiential Education in Social Sciences and Humanities (EESH)',
+    'ENCP': 'Engineering Cooperative Education (ENCP)',
+    'ENGL': 'English (ENGL)',
+    'FRNH': 'French (FRNH)',
+    'HIST': 'History (HIST)',
+    'HLTH': 'Health Science - Interdisciplinary (HLTH)',
+    'HSCI': 'Health Science (HSCI)',
+    'HUSV': 'Human Services (HUSV)',
+    'IE': 'Industrial Engineering (IE)',
+    'INSH': 'Interdisciplinary Studies in Social Sciences and Humanities (INSH)',
+    'JPNS': 'Japanese (JPNS)',
+    'LACS': 'Latin American and Caribbean Studies (LACS)',
+    'LANG': 'Language - General (LANG)',
+    'MSCR': 'Media and Screen Studies (MSCR)',
+    'POLS': 'Political Science (POLS)',
+    'PPUA': 'Public Policy and Urban Affairs (PPUA)',
+    'PREL': 'Public Relations (PREL)',
+    'PT': 'Physical Therapy (PT)',
+    'SPNS': 'Spanish (SPNS)',
+    'WMNS': 'Women’s, Gender, and Sexuality Studies (WMNS)',
+
     'MKTG': 'Marketing (MKTG)',
     'FINA': 'Finance and Insurance (FINA)',
     'MGMT': 'Management (MGMT)',

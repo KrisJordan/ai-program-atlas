@@ -27,3 +27,7 @@ Engineering, environment, health and social-science metadata continuation (revie
 ## Business and design course metadata — 2026-10-11
 
 Business and design metadata review (2026-10-11, 2026–2027 official subject catalogs): 1 existing course records gain independent identity, credit and explicit registration facts. Existing concentration choices and conditional college policies remain unchanged. Required spreadsheet knowledge, optional work experience, permission routes and field-project participation retain their distinct scope. Unreviewed descriptions remain unknown. Current HTML is parsed using exact subject headings and explicit existing-course selectors; missing or duplicate selected codes fail. No seed replay, freshness stamp, review audit or completeness promotion.
+
+## Remaining humanities language and ancillary course metadata — 2026-10-11
+
+Remaining subject metadata review (2026-10-11, 2026–2027 official catalogs): 3 existing course records gain independent identity, credits and explicit preparation facts. Known zero-hour experiential registrations remain zero; their presence does not make a co-op or internship mandatory. Conditional college seminar choices and degree requirements are preserved. Unreviewed descriptions and absent prerequisite statements remain unknown. Current HTML is parsed using exact subject headings and explicit existing-course selectors; missing or duplicate selected codes fail. No seed replay, freshness stamp, review audit or completeness promotion.

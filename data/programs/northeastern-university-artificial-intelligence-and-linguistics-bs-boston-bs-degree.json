@@ -240,6 +240,26 @@
       "catalog_year": "2026-2027",
       "confidence": "high",
       "locator": "All currently listed MKTG courses in this degree: MKTG 4606. Course identity, stated hours and explicit registration conditions; descriptions only when separately reviewed."
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-linguistics-bs-boston-bs-degree-deaf-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/deaf/",
+      "title": "Deaf Studies (DEAF)",
+      "fetched_at": "2026-10-11T00:12:28+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "confidence": "high",
+      "locator": "All currently listed DEAF courses in this degree: DEAF 2700. Course identity, stated hours and explicit registration conditions; descriptions only when separately reviewed."
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-linguistics-bs-boston-bs-degree-eesc-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/eesc/",
+      "title": "Co-op/Experiential Education in Science (EESC)",
+      "fetched_at": "2026-10-11T00:12:27+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "confidence": "high",
+      "locator": "All currently listed EESC courses in this degree: EESC 2000. Course identity, stated hours and explicit registration conditions; descriptions only when separately reviewed."
     }
   ],
   "outcomes": [
@@ -317,13 +337,13 @@
       "id": "northeastern-university-artificial-intelligence-and-linguistics-bs-boston-bs-degree-eesc-2000",
       "code": "EESC 2000",
       "name": "Professional Development for Co-op",
-      "description": null,
+      "description": "Prepares students for co-op searches, interviewing, professional practice and career decisions.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 1.0,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "northeastern-university-artificial-intelligence-and-linguistics-bs-boston-bs-degree-catalog",
-      "url": "https://catalog.northeastern.edu/search/?P=EESC%202000",
+      "source_id": "northeastern-university-artificial-intelligence-and-linguistics-bs-boston-bs-degree-eesc-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/eesc/",
       "public_site": null,
       "syllabus": null
     },
@@ -752,12 +772,12 @@
       "code": "DEAF 2700",
       "name": "ASL Linguistics",
       "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "prerequisites": "( LING 1150 with a minimum grade of D- or ENGL 1150 with a minimum grade of D- ); (ENGL 1111 with a minimum grade of C or ENGL 1102 with a minimum grade of C or ENGW 1111 with a minimum grade of C or WRIT 201M with a minimum grade of C or ENGW 1102 with a minimum grade of C ); AMSL 1102 with a minimum grade of C",
+      "credits": 4.0,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "northeastern-university-artificial-intelligence-and-linguistics-bs-boston-bs-degree-catalog",
-      "url": "https://catalog.northeastern.edu/search/?P=DEAF%202700",
+      "source_id": "northeastern-university-artificial-intelligence-and-linguistics-bs-boston-bs-degree-deaf-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/deaf/",
       "public_site": null,
       "syllabus": null
     },
@@ -2156,7 +2176,8 @@
     "EECE 2322 subject catalog corequisite(s): EECE 2323. These are concurrent conditions, not prerequisites.",
     "EECE 2323 subject catalog corequisite(s): EECE 2322. These are concurrent conditions, not prerequisites.",
     "Engineering, environment, health and social-science metadata continuation (reviewed 2026-10-11, 2026–2027 catalogs): 5 additional existing course records gain official subject-catalog facts. Seminar audiences do not establish home-college assignment or turn conditional courses into universal requirements. Permission and registration advice retain their source scope; unreviewed descriptions stay unknown.",
-    "Business and design metadata review (2026-10-11, 2026–2027 official subject catalogs): 1 existing course records gain independent identity, credit and explicit registration facts. Existing concentration choices and conditional college policies remain unchanged. Required spreadsheet knowledge, optional work experience, permission routes and field-project participation retain their distinct scope. Unreviewed descriptions remain unknown."
+    "Business and design metadata review (2026-10-11, 2026–2027 official subject catalogs): 1 existing course records gain independent identity, credit and explicit registration facts. Existing concentration choices and conditional college policies remain unchanged. Required spreadsheet knowledge, optional work experience, permission routes and field-project participation retain their distinct scope. Unreviewed descriptions remain unknown.",
+    "Remaining subject metadata review (2026-10-11, 2026–2027 official catalogs): 2 existing course records gain independent identity, credits and explicit preparation facts. Known zero-hour experiential registrations remain zero; their presence does not make a co-op or internship mandatory. Conditional college seminar choices and degree requirements are preserved. Unreviewed descriptions and absent prerequisite statements remain unknown."
   ],
   "curriculum_audit": {
     "scope": "degree",

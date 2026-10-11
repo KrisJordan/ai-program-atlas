@@ -27,3 +27,7 @@ Disciplinary factual continuation (2026-10-11, 2026–2027 catalogs): 5 addition
 ## Additional discipline metadata — 2026-10-11
 
 Engineering, environment, health and social-science metadata continuation (reviewed 2026-10-11, 2026–2027 catalogs): 15 additional existing course records gain official subject-catalog facts. Seminar audiences do not establish home-college assignment or turn conditional courses into universal requirements. Permission and registration advice retain their source scope; unreviewed descriptions stay unknown. Current HTML is parsed using exact subject headings and explicit existing-course selectors; missing or duplicate selected codes fail. No seed replay, freshness stamp, review audit or completeness promotion.
+
+## Remaining humanities language and ancillary course metadata — 2026-10-11
+
+Remaining subject metadata review (2026-10-11, 2026–2027 official catalogs): 2 existing course records gain independent identity, credits and explicit preparation facts. Known zero-hour experiential registrations remain zero; their presence does not make a co-op or internship mandatory. Conditional college seminar choices and degree requirements are preserved. Unreviewed descriptions and absent prerequisite statements remain unknown. Current HTML is parsed using exact subject headings and explicit existing-course selectors; missing or duplicate selected codes fail. No seed replay, freshness stamp, review audit or completeness promotion.
