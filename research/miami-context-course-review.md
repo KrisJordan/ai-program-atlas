@@ -71,3 +71,11 @@ The primary reviewer additionally read all 15 Greek,21 Latin,6 Hebrew and7 Haiti
 Current review total:3,067 program-course observations. Remaining1,165codes/4,660observations includes1,106located exact currentblocks and59identityfollowups. Allfour audits stay inprogress while this accessible work remains.
 
 Validation:31 focused source/policy tests passed; isolated four-degree ingestion/repeat(4/0), integrity/foreignkeys,3,067reviewedexports andstaticbuildpassed.
+
+## Spanish and Modern Languages — 2026-10-11
+
+All 50 remaining Spanish and 14 Modern Languages complete blocks were read (64 codes,256 observations). Fifty-three have explicit language, literary, cultural or critical communication content; ten external-credit records and SPA280's undefined study-abroad topic remain unclassified. MLL210 uses and critically evaluates AI tools for multilingual work; SPA410 applies digital text methods to literary interpretation. Neither description establishes algorithm-development instruction. Professional vocabulary and correspondence in SPA432/433/434 remain language communication, and SPA333's medical humanities analysis remains distinct from clinical practice.
+
+SPA301/307 have an explicit mutual credit exclusion and different student preparation; the exclusion is not a cross-list identity. Heritage preparation, translation-course language-requirement exclusions and conditional major use remain visible. SPA361's duplicated prerequisite/component text does not create a second obligation. No requirement graph or identity group changed. Current review total:3,323 program-course observations; remaining1,101codes/4,404observations (1,042 exact current blocks plus59 identity follow-ups).
+
+Validation: 31 focused language, supplemental-policy and enrollment tests, isolated four-degree ingestion/repeat (4/0), integrity/foreign keys, 3,323 reviewed exports and static build passed.

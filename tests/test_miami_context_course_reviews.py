@@ -127,3 +127,17 @@ def test_classical_hebrew_creole_exact_scopes_remain_separate():
     assert 'Normally closed' in m.SPEC['courses']['HEB 101']['prerequisites']
     assert m.SPEC['courses']['HAI 202']['category']=='human_context'
     assert m.SPEC['courses']['HAI 495']['review']['status']=='unclassified'
+
+
+def test_spanish_digital_methods_and_credit_exclusions_are_scoped():
+    assert m.SPEC['courses']['MLL 210']['category']=='human_context'
+    assert 'critically evaluates' in m.SPEC['courses']['MLL 210']['description']
+    assert m.SPEC['courses']['SPA 410']['category']=='human_context'
+    assert 'topic-modeling' in m.SPEC['courses']['SPA 410']['description']
+    assert m.SPEC['courses']['SPA 333']['category']=='human_context'
+    assert m.SPEC['courses']['SPA 433']['category']=='human_context'
+    for code in ['SPA 301','SPA 307']:
+        assert 'does not establish identical courses' in m.SPEC['courses'][code]['prerequisites']
+    assert 'no second prerequisite' in m.SPEC['courses']['SPA 361']['prerequisites']
+    assert m.SPEC['courses']['SPA 280']['review']['status']=='unclassified'
+    assert m.SPEC['courses']['MLL 295']['credits'] is None
