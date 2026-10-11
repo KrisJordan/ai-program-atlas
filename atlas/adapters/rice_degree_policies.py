@@ -47,3 +47,39 @@ REGISTRATION_RULES=[
 ]
 def parse_registration(html):return observe(html,'Registration',REGISTRATION_RULES,'registration')
 SOURCE_PARSERS[REGISTRATION]=parse_registration
+
+COMMON_ERRORS = 'https://registrar.rice.edu/students/common-errors'
+SPECIAL_REGISTRATION = 'https://registrar.rice.edu/students/special-registration'
+
+
+def parse_common_errors(html):
+    root = content(html, 'Common Registration Errors')
+    rows = {}
+    for row in root.find_all('tr'):
+        cells = row.find_all(['td', 'th'])
+        if len(cells) == 3:
+            rows[' '.join(cells[0].stripped_strings)] = cells
+    specs = [
+        ('Mutually Exclusive', 'mutual-exclusion', 'Previously earned credit prohibits registration', 'Mutual-exclusion registration errors may be overridden only with instructor/department approval through an electronic Course Registration Override in ESTHER. The ordinary exclusion remains in force without approval. This is a conditional registration route, not guaranteed approval or an independent declaration of duplicate degree-credit entitlement.'),
+        ('Prerequisite and Test Score', 'prerequisite', 'pre-requisite that you have not yet completed', 'A missing prerequisite must be completed or an instructor-permission Course Registration Override obtained through ESTHER. Thus the published alternative statistics routes can require approved exceptions for entry to later courses; no extra course, automatic waiver or guaranteed approval is inferred.'),
+    ]
+    result = []
+    for label, key, condition, summary in specs:
+        if label not in rows:
+            raise ValueError('Registration error row missing: ' + label)
+        cells = rows[label]
+        require_phrases(cells[1], [condition])
+        require_phrases(cells[2], ["instructor's permission", 'electronic Course Registration Override request via ESTHER'])
+        if label == 'Mutually Exclusive':
+            require_phrases(cells[2], ['If approved'])
+        result.append(rule('rice-ai-registrar-' + key, label + ' conditional registration route', PID + '-registration-errors', kind='note', summary=summary))
+    return dict(id=PID, requirements=result)
+
+
+def parse_special_registration(html):
+    root = content(html, 'Special Registration (and Course Registration Overrides)')
+    require_phrases(root, ['Instructor-approved registration overrides', 'missing a required prerequisite', 'There is a level restriction on the course', 'If approved, return to ESTHER to complete your course registration'])
+    return dict(id=PID, requirements=[rule('rice-ai-registrar-approval-procedure', 'Instructor-approved registration exceptions', PID + '-special-registration', kind='note', summary='Request the needed prerequisite or level exception electronically through ESTHER. Instructor approval and subsequent completion of registration are distinct steps; a submitted request is not permission. Individual decisions are not inferred from a published degree option.')])
+
+SOURCE_PARSERS[COMMON_ERRORS] = parse_common_errors
+SOURCE_PARSERS[SPECIAL_REGISTRATION] = parse_special_registration

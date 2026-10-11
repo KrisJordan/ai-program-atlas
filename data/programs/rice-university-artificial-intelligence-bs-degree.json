@@ -170,6 +170,26 @@
       "catalog_year": "2026-2027",
       "locator": "Exact degree-listed course descriptions, prerequisite/recommendation, credit, level and cross-list fields",
       "confidence": "high"
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-registration-errors",
+      "url": "https://registrar.rice.edu/students/common-errors",
+      "title": "Common Registration Errors",
+      "fetched_at": "2026-10-11T03:44:53+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Mutual-exclusion/prerequisite error rows and instructor-approved registration exception procedure",
+      "confidence": "high"
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-special-registration",
+      "url": "https://registrar.rice.edu/students/special-registration",
+      "title": "Special Registration (and Course Registration Overrides)",
+      "fetched_at": "2026-10-11T03:44:54+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Mutual-exclusion/prerequisite error rows and instructor-approved registration exception procedure",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -2361,7 +2381,7 @@
     {
       "id": "rice-university-artificial-intelligence-bs-degree-vision-conflict",
       "parent_id": null,
-      "title": "Published vision elective applicability conflict",
+      "title": "Published vision elective registration condition",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -2369,7 +2389,7 @@
       "category": "other",
       "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
       "source_text": null,
-      "summary": "COMP 345 and COMP 447 contain reciprocal registration exclusions for credit in the other. The major requires COMP 345 and lists COMP 447 as an elective; no permission or waiver is presumed.",
+      "summary": "COMP 345 and COMP 447 contain reciprocal registration exclusions based on prior credit. The registrar explicitly permits an instructor-approved mutual-exclusion registration override. This is a conditional approval route, not a contradictory degree requirement or guaranteed permission. No separate duplicate-credit prohibition is inferred from this registration wording.",
       "course_ids": []
     },
     {
@@ -2383,7 +2403,7 @@
       "category": "other",
       "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
       "source_text": null,
-      "summary": "COMP 585 and COMP 631 descriptions restrict enrollment to Graduate level students. The separately reviewed university registration rule permits out-of-level enrollment through an electronic override with instructor approval; these options are conditional on that approval, not automatically available.",
+      "summary": "COMP585 and631 list Graduate-level enrollment restrictions. The GA and registrar provide an instructor-approved level-override route; the undergraduate elective listing is not itself permission.",
       "course_ids": []
     },
     {
@@ -2397,7 +2417,7 @@
       "category": "other",
       "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
       "source_text": null,
-      "summary": "COMP345/346 explicitly require STAT315. STAT315 excludes prior STAT310/311 credit; the degree nevertheless publishes those courses with STAT314 as alternative statistics routes. This combined prerequisite-and-exclusion issue needs institutional interpretation; no automatic equivalence, waiver or extra fixed course is inferred. STAT314 additionally requires STAT310 (concurrent enrollment permitted), whereas the degree also lists STAT311+314 and the STAT310/311 descriptions exclude prior credit in the other.",
+      "summary": "COMP345/346 require STAT315, and STAT314 requires STAT310 (concurrent permitted). The published STAT310+314 or STAT311+314 degree routes can therefore require instructor-approved prerequisite exceptions for later enrollment. STAT315 and the alternative statistics courses also carry prior-credit registration exclusions, for which the registrar provides a conditional override route. No automatic equivalence, granted waiver, extra universal fixed course or duplicate-credit entitlement is inferred.",
       "course_ids": []
     },
     {
@@ -3029,22 +3049,60 @@
       "source_text": null,
       "summary": "Should not be taken if student already has credit for MATH 211 , MATH 212 , or MATH 221 , without permission.",
       "course_ids": []
+    },
+    {
+      "id": "rice-ai-registrar-mutual-exclusion",
+      "parent_id": null,
+      "title": "Mutually Exclusive conditional registration route",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-registration-errors",
+      "source_text": null,
+      "summary": "Mutual-exclusion registration errors may be overridden only with instructor/department approval through an electronic Course Registration Override in ESTHER. The ordinary exclusion remains in force without approval. This is a conditional registration route, not guaranteed approval or an independent declaration of duplicate degree-credit entitlement.",
+      "course_ids": []
+    },
+    {
+      "id": "rice-ai-registrar-prerequisite",
+      "parent_id": null,
+      "title": "Prerequisite and Test Score conditional registration route",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-registration-errors",
+      "source_text": null,
+      "summary": "A missing prerequisite must be completed or an instructor-permission Course Registration Override obtained through ESTHER. Thus the published alternative statistics routes can require approved exceptions for entry to later courses; no extra course, automatic waiver or guaranteed approval is inferred.",
+      "course_ids": []
+    },
+    {
+      "id": "rice-ai-registrar-approval-procedure",
+      "parent_id": null,
+      "title": "Instructor-approved registration exceptions",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-special-registration",
+      "source_text": null,
+      "summary": "Request the needed prerequisite or level exception electronically through ESTHER. Instructor approval and subsequent completion of registration are distinct steps; a submitted request is not permission. Individual decisions are not inferred from a published degree option.",
+      "course_ids": []
     }
   ],
   "notes": [
     "Major requirements are observed from the catalog; sample plans and optional graduate opportunities are not degree requirements.",
-    "Course descriptions, prerequisites and missing credits remain unknown. Open elective categories are explicitly identified and not represented as exhaustive course lists.",
-    "University graduation, residence, distribution, communication, diversity and physical activity policies require full structured mapping.",
-    "Program substitutions and transfer rules link to university policies that remain incompletely mapped.",
     "University degree rules are mapped from the 2026\u20132027 General Announcements: residence/credit/GPA/standing, FWIS and transfer limits, three distribution groups, Analyzing Diversity, LPAP, catalog-year selection and degree application. Term-dependent designation criteria remain rules rather than invented fixed pools.",
     "The graduation and transfer pages disagree on summer eligibility for the four-semester residency minimum. Both are GA pages; the GA precedence statement does not resolve this internal conflict. Curriculum remains partial pending clarification.",
     "Transfer and registration rules preserve C- eligibility, no pass/fail transfers, the summer transfer cap and study-abroad exception, external-study approvals, repeat/AP/transfer/cross-list accounting and instructor approval for graduate-level enrollment.",
-    "2026-10-11 independent core correctness pass: official descriptions correct all13 fixed subject classifications (3 foundations,1 mathematics,5 AI/ML,2 systems,1 human context,1 applications). Exact ARTIFICAL source spellings are preserved. Capstone456/457 must be sequential in the same academic year. Full-degree correctness remains in progress; prerequisite/enrollment conflicts are explicitly retained.",
-    "Required COMP345 and listed elective COMP447 have reciprocal registration/credit exclusions in their descriptions. COMP447 remains a published option with an unresolved eligibility conflict, not a generally available alternative.",
+    "2026-10-11 independent core correctness pass: official descriptions correct all13 fixed subject classifications (3 foundations,1 mathematics,5 AI/ML,2 systems,1 human context,1 applications). Exact ARTIFICAL source spellings are preserved. Capstone456/457 must be sequential in the same academic year. Course-entry conditions remain explicit; the subsequent registrar-policy review resolves their exception mechanism.",
     "All43 degree-listed course identities and individual credit amounts were reviewed against exact2026\u20132027 department descriptions. Source-listed aliases remain separate option records but cross-list rules prohibit duplicate credit. Individual credit units are semester_hours, corroborated by the university registration policy, without conversion.",
     "COMP631 and COMP462 retain explicit mixed reviews rather than an unsupported single subject. PSYC468 is human_context, COMP414 mathematics, and COMP409/480/585 computing foundations based on their actual descriptions.",
-    "COMP345/346 explicitly require STAT315. STAT315 excludes prior STAT310/311 credit; the degree nevertheless publishes those courses with STAT314 as alternative statistics routes. This combined prerequisite-and-exclusion issue needs institutional interpretation; no automatic equivalence, waiver or extra fixed course is inferred.",
-    "Three independently reviewed reciprocal cross-list groups preserve43 source records but yield39 mapped course identities:13 fixed and26 options. Statistics315/DSCI301, vision447 and the three robotics450 aliases are deduplicated only through explicit source evidence; selection quantities remain unchanged."
+    "Three independently reviewed reciprocal cross-list groups preserve43 source records but yield39 mapped course identities:13 fixed and26 options. Statistics315/DSCI301, vision447 and the three robotics450 aliases are deduplicated only through explicit source evidence; selection quantities remain unchanged.",
+    "Registrar policy explicitly permits instructor-approved mutual-exclusion and prerequisite overrides. COMP345/447 registration restrictions and the alternative statistics routes are therefore conditional approval paths, not unresolved curriculum contradictions. Individual permission and duplicate-credit entitlement are not presumed. The GA residency wording disagreement remains the only unresolved requirement interpretation."
   ],
   "curriculum_audit": {
     "scope": "degree",
@@ -3053,7 +3111,9 @@
       "rice-university-artificial-intelligence-bs-degree-catalog",
       "rice-university-artificial-intelligence-bs-degree-graduation",
       "rice-university-artificial-intelligence-bs-degree-transfer",
-      "rice-university-artificial-intelligence-bs-degree-registration"
+      "rice-university-artificial-intelligence-bs-degree-registration",
+      "rice-university-artificial-intelligence-bs-degree-registration-errors",
+      "rice-university-artificial-intelligence-bs-degree-special-registration"
     ],
     "sections": [
       "Mathematics and computing core with whole statistics bundles",
@@ -3064,12 +3124,11 @@
       "University credit/level/residency, GPA/standing and applicable catalog year",
       "FWIS placement/transfer, distribution eligibility, diversity overlap and LPAP",
       "Transfer eligibility/approval/GPA/limits, course-load and graduate-level permissions, repeat/cross-list accounting",
-      "Degree application and conditional dual-degree requirements"
+      "Degree application and conditional dual-degree requirements",
+      "Conditional instructor-approved mutual-exclusion, prerequisite and level-registration exception mechanisms"
     ],
     "unresolved_requirements": [
-      "Residency wording conflict within the General Announcements: graduation permits up to one summer within four full-time semesters; the transfer page states four full fall/spring semesters. An authoritative clarification is required before claiming a fully reconciled degree audit.",
-      "Required COMP345 and listed elective COMP447 have reciprocal registration/credit exclusions in their descriptions. COMP447 remains a published option with an unresolved eligibility conflict, not a generally available alternative.",
-      "COMP345/346 explicitly require STAT315. STAT315 excludes prior STAT310/311 credit; the degree nevertheless publishes those courses with STAT314 as alternative statistics routes. This combined prerequisite-and-exclusion issue needs institutional interpretation; no automatic equivalence, waiver or extra fixed course is inferred. STAT314 additionally requires STAT310 (concurrent enrollment permitted), whereas the degree also lists STAT311+314 and the STAT310/311 descriptions exclude prior credit in the other."
+      "Residency wording conflict within the General Announcements: graduation permits up to one summer within four full-time semesters; the transfer page states four full fall/spring semesters. An authoritative clarification is required before claiming a fully reconciled degree audit."
     ],
     "metadata_gaps": [
       "No course-level subject classification remains unreviewed among43 listed identities; COMP631/462 are deliberately mixed. Public resource coverage remains incomplete. No individual student approval or term-specific distribution eligibility is certified."

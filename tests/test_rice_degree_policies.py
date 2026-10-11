@@ -40,3 +40,17 @@ def test_optional_real_policy_replay(url,parse):
     if not p.exists():pytest.skip('Raw official source cache is optional')
     d=parse(p.read_text());assert d['requirements']
     assert not {'curriculum_audit','curriculum_status','last_verified'} & d.keys()
+
+
+def test_override_is_tied_to_correct_error_row_not_global_permission_text():
+    html='''<main><h1>Common Registration Errors</h1><table>
+    <tr><td>Mutually Exclusive</td><td>Previously earned credit prohibits registration.</td><td>If approved, obtain the instructor's permission through the electronic Course Registration Override request via ESTHER.</td></tr>
+    <tr><td>Prerequisite and Test Score</td><td>A pre-requisite that you have not yet completed.</td><td>Obtain the instructor's permission through the electronic Course Registration Override request via ESTHER.</td></tr>
+    </table></main>'''
+    d=m.parse_common_errors(html)
+    assert len(d['requirements'])==2 and all(r['kind']=='note' and not r['course_ids']for r in d['requirements'])
+    assert 'not guaranteed approval' in d['requirements'][0]['summary']
+    assert not {'curriculum_audit','last_verified','curriculum_status'}&d.keys()
+    with pytest.raises(ValueError):m.parse_common_errors(html.replace('If approved, obtain', 'Never obtain'))
+    with pytest.raises(ValueError):m.parse_common_errors(html.replace('Mutually Exclusive','Different error'))
+    with pytest.raises(ValueError):m.parse_common_errors(html.replace('Previously earned credit prohibits registration.','Previous credit causes no restriction.'))

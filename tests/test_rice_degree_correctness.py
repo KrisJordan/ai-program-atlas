@@ -27,7 +27,7 @@ def test_exact_source_spelling_and_systems_subject_are_preserved():
   classify_observed([dict(code='COMP 346',name='Renamed subject',category='other')])
 
 
-def test_manual_fixed_core_arithmetic_and_explicit_conflicts():
+def test_manual_fixed_core_arithmetic_and_explicit_conditions():
  p=json.loads(Path('data/programs',PID+'.json').read_text());validate_program(p)
  required=requirement_profile(p)['required']
  assert required['count']==13
@@ -38,7 +38,7 @@ def test_manual_fixed_core_arithmetic_and_explicit_conflicts():
  notes={r['id']:r for r in p['requirements']}
  assert 'same academic year'in notes[PID+'-senior-design-sequence']['summary']
  assert 'reciprocal'in notes[PID+'-vision-conflict']['summary']
- assert 'Graduate level'in notes[PID+'-graduate-options']['summary']
+ assert 'Graduate-level'in notes[PID+'-graduate-options']['summary']
  assert 'STAT315'in notes[PID+'-statistics-route']['summary']
 
 
@@ -55,15 +55,17 @@ def test_optional_source_reread_and_restriction_change(dep):
 
 
 
-def test_statistics_blocker_requires_actual_exclusion_not_merely_missing_core():
+def test_statistics_route_preserves_restrictions_and_conditional_override():
  p=json.loads(Path('data/programs',PID+'.json').read_text())
  note=next(r for r in p['requirements'] if r['id']==PID+'-statistics-route')
- assert note['kind']=='note' and 'excludes prior STAT310/311 credit' in note['summary']
+ assert note['kind']=='note' and 'instructor-approved prerequisite exceptions' in note['summary']
+ assert 'conditional override route' in note['summary']
  assert not note.get('course_ids')
  assert 'STAT 310 / STAT 311' in next(r['summary'] for r in p['requirements'] if r['id'].endswith('course-entry-stat-315'))
  ledger=json.loads(Path('research/degree-audit/rice.json').read_text())['programs'][0]
  assert 'rice-ai-stat-315' not in ledger['expected_course_ids']['required']
- assert not any('Graduate level' in b['issue'] for b in ledger['blockers'])
+ assert len(ledger['blockers'])==1 and 'summer' in ledger['blockers'][0]['issue']
+ assert 'registration override' in next(r['summary']for r in p['requirements']if r['id']==PID+'-vision-conflict')
 
 
 def test_all_manual_course_sets_and_subject_totals_match_graph():

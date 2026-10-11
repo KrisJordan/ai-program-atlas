@@ -37,21 +37,21 @@
         },
         {
           "url": "https://ga.rice.edu/undergraduate-students/academic-policies-procedures/graduation-requirements/",
-          "catalog_year": "2026–2027",
+          "catalog_year": "2026\u20132027",
           "locator": "Current General Announcements policy body",
           "checked_at": "2026-10-11",
           "access_status": "accessible; normal verified Fetcher cache inspected"
         },
         {
           "url": "https://ga.rice.edu/undergraduate-students/academic-policies-procedures/transfer-credit/",
-          "catalog_year": "2026–2027",
+          "catalog_year": "2026\u20132027",
           "locator": "Current General Announcements policy body",
           "checked_at": "2026-10-11",
           "access_status": "accessible; normal verified Fetcher cache inspected"
         },
         {
           "url": "https://ga.rice.edu/undergraduate-students/academic-policies-procedures/registration/",
-          "catalog_year": "2026–2027",
+          "catalog_year": "2026\u20132027",
           "locator": "Current General Announcements policy body",
           "checked_at": "2026-10-11",
           "access_status": "accessible; normal verified Fetcher cache inspected"
@@ -97,17 +97,31 @@
           "locator": "Individually reviewed degree-listed course descriptions and enrollment/credit conditions",
           "checked_at": "2026-10-11",
           "access_status": "accessible; normal verified Fetcher cache inspected"
+        },
+        {
+          "url": "https://registrar.rice.edu/students/common-errors",
+          "catalog_year": null,
+          "locator": "Exact mutual-exclusion/prerequisite row and instructor-approved exception procedure",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; normal Fetcher and actual source clauses independently reviewed"
+        },
+        {
+          "url": "https://registrar.rice.edu/students/special-registration",
+          "catalog_year": null,
+          "locator": "Exact mutual-exclusion/prerequisite row and instructor-approved exception procedure",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; normal Fetcher and actual source clauses independently reviewed"
         }
       ],
       "checks": {
         "degree_identity": "Exact BS Degree with a Major in Artificial Intelligence,2026-2027 General Announcements. Standalone degree, no inferred engineering-award equivalence.",
         "required_and_choices": "Thirteen manually identified fixed records; calculus includes AP-credit alternatives, linear algebra selectsone, statistics permits three routes including whole two-course bundles. Choose three of five AI areas, one course in each. No optional pool is made fixed.",
         "elective_pools": "All30 option identities reviewed individually:14 mathematics/statistics route records and16 AI-area option identities. Cross-listed aliases remain separately observable but cannot earn duplicate credit. The five areas require one course in each of three chosen areas. Graduate options have an explicit instructor-override route in university registration policy. Three explicit identity groups distinguish43 source records from39 mapped identities; no ordinary alternative or exclusion is merged.",
-        "prerequisites": "All43 descriptions reviewed for formal versus recommended prerequisites, concurrent enrollment, level restrictions and mutual-credit exclusions; conditions are note nodes, not universal fixed obligations. STAT315 excludes credit from STAT310/311, which turns their combination with requiredCOMP345/346 prerequisites into a substantive route-interpretation question. Capstones must be sequential within one academic year.",
+        "prerequisites": "All43 descriptions reviewed: formal versus recommended prerequisites, concurrent enrollment, level restrictions and prior-credit registration exclusions remain explicit. Registrar common-error rows authorize instructor-approved prerequisite and mutual-exclusion exceptions, so alternative statistics routes and vision registration are conditional paths rather than unresolved contradictions. No extra fixed preparation course, granted individual waiver or duplicate-credit entitlement is inferred. Capstones must be sequential within one academic year.",
         "credits_and_units": "All43 individual amounts checked. Rice registration/graduation policy establishes semester credit hours, now explicit without conversion. AP calculus entries are examination credit, not taught courses; statistical bundles use3+1hours versus4 for STAT315/DSCI301. Cross-lists may not duplicate earned credit.",
         "classification": "All43 manual reviews:13 fixed (3foundations,1math,5AI,2systems,1human,1domain) and30 options (3foundations,15math,8AI,1human,1domain,2mixedother). Mixed COMP631 retrieval and COMP462 robotics are explicitly other with candidate subjects; no fractional counts. Reciprocal source-reviewed cross-lists collapse four aliases, producing26 mapped option identities:3foundations,14math,5AI,1human,1domain,2mixedother. Fixed13unchanged.",
         "family_composition": "No family inheritance; ECE specialization is a separate program and does not contribute requirements.",
-        "degree_wide_requirements": "Reread graduation, registration and transfer policies: totals, applicable catalog, resident/upper-level work, GPA/lettergrades, FWIS/placement, term-designated distribution/AD, LPAP, transfer, load, graduate override and repeat/cross-list rules mapped. Graduation and transfer residency wording remains inconsistent. Term-designated selection and individual approvals are published conditions, not missing finite pools."
+        "degree_wide_requirements": "Reread graduation, registration and transfer policies: totals, applicable catalog, resident/upper-level work, GPA/lettergrades, FWIS/placement, term-designated distribution/AD, LPAP, transfer, load, graduate override and repeat/cross-list rules mapped. Graduation and transfer residency wording remains inconsistent. Term-designated selection and individual approvals are published conditions, not missing finite pools. Registrar override procedures now reconcile the registration restrictions; the internal GA residence wording remains the only unresolved requirement interpretation."
       },
       "expected_profile": {
         "required": {
@@ -214,26 +228,27 @@
           "evidence_urls": [
             "https://ga.rice.edu/programs-study/courses/comp/"
           ]
+        },
+        {
+          "issue": "Earlier audit treated overridable registration restrictions as curriculum conflicts without checking the registrar exception mechanism.",
+          "correction": "Registered current registrar error/exception policies and mapped conditional approval routes for mutual exclusion, prerequisites and levels. Preserved actual restrictions and no assumed individual approval; removed two unsupported contradiction claims.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://registrar.rice.edu/students/common-errors",
+            "https://registrar.rice.edu/students/special-registration"
+          ]
         }
       ],
       "blockers": [
         {
           "issue": "Graduation permits up to one summer within four full-time residency semesters; the same-year transfer page specifies four full fall/spring semesters. No source hierarchy between these GA pages resolves this wording.",
           "url": "https://ga.rice.edu/undergraduate-students/academic-policies-procedures/graduation-requirements/"
-        },
-        {
-          "issue": "COMP345/346 explicitly require STAT315. STAT315 excludes prior STAT310/311 credit; the degree nevertheless publishes those courses with STAT314 as alternative statistics routes. This combined prerequisite-and-exclusion issue needs institutional interpretation; no automatic equivalence, waiver or extra fixed course is inferred. STAT314 additionally requires STAT310 (concurrent enrollment permitted), whereas the degree also lists STAT311+314 and the STAT310/311 descriptions exclude prior credit in the other.",
-          "url": "https://ga.rice.edu/programs-study/courses/stat/"
-        },
-        {
-          "issue": "RequiredCOMP345 and publishedCOMP447 option contain reciprocal credit registration exclusions. Preserve conditional ineligibility rather than presume a waiver; exact degree-option applicability requires clarification.",
-          "url": "https://ga.rice.edu/programs-study/courses/comp/"
         }
       ],
       "remaining_work": [],
-      "correction_status": "All43 listed course identities, subjects and local/degreewide rules reviewed; exact policy and route interpretation blockers remain",
+      "correction_status": "All43 listed-course identities, subjects and known course-entry mechanisms reviewed; conditional overrides mapped. Only the GA residence wording question remains unresolved.",
       "second_pass_status": "partial",
-      "second_pass_scope": "Independent review 6be4756 reread 14 official sources and all 43 listed course records, verified 13 fixed and 26 option identities, credits/prerequisites, and rendered detail/comparison counts on desktop/mobile. Three route/residence questions remain; the full university-policy inventory is not independently certified. See research/degree-audit/independent-review.json."
+      "second_pass_scope": "Independent 6be4756 reviewed all43 represented course records, roles, subjects, units and reciprocal identity groups. Full-degree second pass remains partial. Subsequent registrar review provides explicit conditional registration mechanisms; only the GA residence wording interpretation remains unresolved."
     }
   ]
 }
