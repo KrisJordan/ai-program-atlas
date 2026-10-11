@@ -25,7 +25,7 @@ def test_history_sio_integration_preserves_held_identity_and_roles():
     assert cs['POLI 117']['category_review']['status']=='unclassified'
     assert [requirement_profile(d)[k]['count']for k in ['required','options','unresolved']]==[8,119,2241]
 
-@pytest.mark.parametrize('module,subject,count,dispositions',[(hila,'HILA',265,20),(sio,'SIO',35,6),(eds,'EDS',31,1),(cgs,'CGS',24,0),(mus,'MUS',27,6),(bio,'BIOL',34,3),(glbh,'GLBH',24,2),(psyc,'PSYC',14,2),(ling,'LING',25,14),(physics,'PHYS',14,1),(physics,'ASTR',10,1),(chem,'CHEM',13,1),(lit,'LTEA',110,15),(eng,'ECE',9,0),(eng,'MAE',6,3),(eng,'SE',5,0),(eng,'BENG',2,1),(eng,'NANO',3,0),(health,'HDS',8,2),(health,'PH',10,0),(theatre,'THEA',35,2),(env,'ENVR',6,0),(env,'ESYS',4,2),(inter,'MGT',7,1),(inter,'INTL',4,0),(inter,'CLAS',3,0),(inter,'HMNR',2,0),(inter,'LAWS',1,0),(inter,'CCS',1,0),(area,'AAS',11,0),(area,'LATI',14,2),(area,'RELI',8,2),(area,'JWSP',9,0),(college,'HUM',5,1),(college,'CAT',5,0),(college,'DOC',4,0),(college,'AWP',2,0),(college,'TMC',2,0),(college,'MCWP',1,0),(college,'MMW',1,0),(science,'ANTH',106,11),(science,'MATH',6,0),(science,'DSC',5,0),(science,'COGS',2,1),(science,'CSS',1,0),(japan,'JAPN',5,1),(japan,'AAPI',2,0)])
+@pytest.mark.parametrize('module,subject,count,dispositions',[(hila,'HILA',265,20),(sio,'SIO',35,6),(eds,'EDS',31,1),(cgs,'CGS',24,0),(mus,'MUS',27,6),(bio,'BIOL',34,3),(glbh,'GLBH',24,2),(psyc,'PSYC',14,2),(ling,'LING',25,14),(physics,'PHYS',14,1),(physics,'ASTR',10,1),(chem,'CHEM',13,1),(lit,'LTEA',145,21),(eng,'ECE',9,0),(eng,'MAE',6,3),(eng,'SE',5,0),(eng,'BENG',2,1),(eng,'NANO',3,0),(health,'HDS',8,2),(health,'PH',10,0),(theatre,'THEA',35,2),(env,'ENVR',6,0),(env,'ESYS',4,2),(inter,'MGT',7,1),(inter,'INTL',4,0),(inter,'CLAS',3,0),(inter,'HMNR',2,0),(inter,'LAWS',1,0),(inter,'CCS',1,0),(area,'AAS',11,0),(area,'LATI',14,2),(area,'RELI',8,2),(area,'JWSP',9,0),(college,'HUM',5,1),(college,'CAT',5,0),(college,'DOC',4,0),(college,'AWP',2,0),(college,'TMC',2,0),(college,'MCWP',1,0),(college,'MMW',1,0),(science,'ANTH',106,11),(science,'MATH',40,1),(science,'DSC',5,0),(science,'COGS',66,1),(science,'CSS',1,0),(japan,'JAPN',5,1),(japan,'AAPI',2,0)])
 def test_composed_source_replays_approved_metadata_only(module,subject,count,dispositions):
     s=module.SPEC['sources'][subject];p=Path(s['cache_path'])
     if not p.exists():pytest.skip('Optional ignored official chapter capture')
@@ -168,7 +168,8 @@ def test_final_named_queue_preserves_code_only_backlog_and_scope():
     ledger=json.loads(Path('research/degree-audit/west-purdue-wpi.json').read_text())
     row=next(r for r in ledger['programs']if r['program_id']==PID)
     pending=[c for c in cs.values()if 'not a review of course content' in c.get('category_review',{}).get('rationale','')]
-    assert len(pending)==652
+    assert len(pending)==512
     assert row['status']=='in_progress'
-    assert '652' in row['accessible_work_remaining']
-    assert cs['MATH 109']['name']is None # A code-only insufficiency label is not a content review.
+    assert '512' in row['accessible_work_remaining']
+    assert cs['MATH 109']['description'] # Its actual full block is now reviewed.
+    assert any(c['name'] is None for c in pending) # Unread records remain explicitly visible.

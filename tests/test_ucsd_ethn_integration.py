@@ -16,7 +16,7 @@ def test_integrated_ethn_keeps_unknown_topics_and_course_credit_scope():
     assert c['ETHN 110']['category'] == 'human_context'
     assert c['ETHN 179']['credits'] == 4
     assert any('eight' in n.lower() or '8' in n for n in c['ETHN 179']['notes'])
-    assert all(c[code]['category_review']['status'] == 'mixed' for code in ('ETHN 114B', 'ETHN 136', 'ETHN 146A', 'ETHN 162', 'ETHN 179'))
+    assert all(c[code]['category_review']['status'] == 'mixed' for code in ('ETHN 114B', 'ETHN 136', 'ETHN 146A', 'ETHN 162'))
     assert c['ETHN 189']['category_review']['status'] == 'unclassified'
     assert any('latin american' in n.lower() for n in c['ETHN 189']['notes'])
     assert all(c['ETHN ' + code]['category_review']['status'] == 'unclassified' for code in ('107', '124', '154', '190', '1A', '1B', '1C'))

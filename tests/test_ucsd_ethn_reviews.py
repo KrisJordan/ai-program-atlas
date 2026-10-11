@@ -58,6 +58,9 @@ def test_content_classifications_and_credit_topic_limits():
     assert any('Latin American' in n and 'does not establish' in n for n in by['ETHN 189']['notes'])
     assert any('eight units' in n for n in by['ETHN 179']['notes'])
     assert by['ETHN 179']['credits']==4
+    assert by['ETHN 179']['category']=='human_context'
+    assert by['ETHN 179']['category_review']['status']=='reviewed'
+    assert 'does not teach performance' in by['ETHN 179']['category_review']['rationale']
     assert by['ETHN 140']['id']!=by['ETHN 140A']['id']
     assert any('identical' in n for n in by['ETHN 140']['notes'])
 

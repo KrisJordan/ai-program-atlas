@@ -473,3 +473,13 @@ All13 matching Chemistry blocks independently primary-read and integrated from t
 Final49 contributes45 metadata observations plus four holds, preserving CSS1's actual2023–24 edition and college-specific restrictions. Primary read the21 college and8 Japanese/AAPI blocks and SOC102 source mismatch; the science owner read18 current matches. Context903other/1069human/228applications/10foundations/24systems/7math, roles8/119/2241 unchanged.
 
 A closure cross-check found652 earlier code-only “not a review of course content” labels. They are **not** content-reviewed merely because `category_review` is populated. Those finite accessible chapter checks keep UCSD **in_progress**, separate from the genuine blockers. The originally named-course queue is exhausted; the whole represented inventory is not. COGS64/LTSP41/LIHL36/MATH35 lead the remaining queue.
+
+### UCSD code-only continuation: Mathematics, Cognitive Science and Spanish — 2026-10-11
+
+The first 140 previously code-only records now have actual source dispositions: 133 current descriptions and seven exact-heading gaps. Contributors read all 34 present Mathematics and 64 Cognitive Science blocks; primary read all 35 present Spanish blocks and their section rules. Full-block and section guards preserve source scope. MATH 15A is missing; LTSP 2D, 2E and 100B have explicitly named successors, but that does not automatically substitute them into older approved pools. LTSP 50A/B/C remain unmatched.
+
+MATH 11 and COGS 120 carry five units. Spanish 2A/B/C carry five; the remaining approved observations carry four. Spanish heritage/classroom populations, placement routes, upper-division standing or consent, and additional course preparation stay distinct. Cognitive Science recommendations remain optional. No prerequisite is added as a degree requirement.
+
+Primary reread both ETHN 179 and MUS 127 descriptions: their jazz performance styles are objects of cultural interpretation, not an explicitly taught performance curriculum. ETHN 179 is corrected to human context; its repeat limit is two enrollments, not two additional repeats. This correction does not merge identities.
+
+The role sets remain **8 fixed, 119 options and 2,241 contextual records**. Context categories are 808 other, 1,105 human context, 270 applications, 23 mathematics, 11 foundations and 24 systems. **512 code-only records remain active source work**, all assigned to finite disjoint batches. The degree stays in progress while this work and the older source conflicts coexist.

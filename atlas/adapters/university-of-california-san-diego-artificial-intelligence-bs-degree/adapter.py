@@ -477,3 +477,12 @@ for _review_module in (college_writing_reviews, final_science_reviews, japanese_
         else:
             SOURCES += (_review_url,)
             SOURCE_PARSERS[_review_url] = _review_parser
+
+from atlas.adapters import ucsd_math_remaining_reviews as math_remaining_reviews
+from atlas.adapters import ucsd_cogs_remaining_reviews as cogs_remaining_reviews
+from atlas.adapters import ucsd_ltsp_remaining_reviews as ltsp_remaining_reviews
+for _review_module in (math_remaining_reviews, cogs_remaining_reviews, ltsp_remaining_reviews):
+    for _review_url, _review_parser in _review_module.SOURCE_PARSERS.items():
+        if _review_url not in SOURCE_PARSERS:
+            raise ValueError('Code-only continuation expected an existing reviewed source URL')
+        SOURCE_PARSERS[_review_url] = _compose_disjoint_review_observers(SOURCE_PARSERS[_review_url], _review_parser)
