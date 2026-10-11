@@ -37,6 +37,8 @@ The homepage groups records by their documented National University or National 
 
 Curriculum profiles default to the fixed mapped required set. Elective and required-choice pools are separate, with source-stated selection quantities beside their evidence. Counts use distinct course records, not credits or degree shares; source conditions and unresolved roles remain explicit. `profile=options` selects the option-pool comparison, and browser back/forward restores the view. See the [profile and award contract](docs/CONTRACT.md) for conservative classification and provenance rules.
 
+The [degree correctness audit](docs/DEGREE_AUDIT.md) separately rechecks authoritative sources, identities, requirement roles, credits, course subjects and displayed aggregates. Course taxonomy has explicit reviewed, mixed, unclassified and legacy/unreviewed states. “0 mapped” never proves that a subject is absent from the actual curriculum. Research ledgers live in `research/degree-audit/`; `uv run atlas audit-report` compiles them into `data/degree-audit.json` before ingestion. The maintained database preserves classification rationale and source references relationally. A scraper can propose changed course observations but cannot certify an independent taxonomy review.
+
 ## Refresh and review
 
 ```sh
