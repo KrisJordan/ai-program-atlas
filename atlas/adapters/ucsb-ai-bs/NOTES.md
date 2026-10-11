@@ -302,3 +302,9 @@ the prior bounded directory/search inspection, a separate source-identity gap.
 The already downloaded856-row GE export remains available for actual content
 review, so the overall degree audit remains in progress rather than hiding that
 accessible queue behind the new browser barrier.
+
+### Complete cached GE subject batch: LING/LING W — 2026-10-11
+
+All15 actual exported rows reviewed and integrated into exact existing D/E/G choices:13 human context,2 mixed(LING20/34), with original summaries, unit amounts and course-specific repeat/identity notes. The explicit CSV observer is `ucsb_ge_ling_reviews.parse_csv`; it guards complete row evidence and does not treat the course-search HTML shell as CSV. Source counts/requirements remain separate. Mapped profile is now20fixed/76options/2context; allother841exportrows remain active review/integration.
+
+The export prerequisite field is onlyYes/No. Four entries(LING36/130/133/187) sayYes; actual rules are absent from the export and individual-page checks are blocked by the already-observed human-verification challenge. Exact prerequisites remainnull for all15, includingNo flags. Online/legal-repeat statements are retained without automatic identity merges. See `research/degree-audit/ucsb-ge-linguistics.md` for manual judgments and precise limits.
