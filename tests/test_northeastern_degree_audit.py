@@ -244,3 +244,27 @@ def test_biological_learning_is_not_ai_and_unspecified_research_is_not_inherited
     assert category(code,decision['name'],'Different undocumented research subject')=='other'
     if status=='mixed':assert decision['candidate_categories']==['applications','human_context']
     if status=='unclassified':assert decision['candidate_categories']==[]
+
+
+def test_independently_transcribed_named_course_roles_match_current_four_degree_graphs():
+    from atlas.families import resolve_program
+    from atlas.curriculum_profile import requirement_profile
+    ledger=json.loads((ROOT/'research/degree-audit/northeastern.json').read_text())
+    families={x['id']:x for p in (ROOT/'data/families').glob('*.json') for x in [json.loads(p.read_text())]}
+    checked=0
+    for entry in ledger['programs']:
+        sets=entry.get('expected_course_ids')
+        if sets is None:continue
+        seed=json.loads((ROOT/'data/programs'/f"{entry['program_id']}.json").read_text())
+        program=resolve_program(seed,families.get(seed.get('family',{}).get('id')))
+        lookup={c['id']:c for c in program['courses']}
+        assert set(lookup)==set().union(*(set(v) for v in sets.values()))
+        assert sum(map(len,sets.values()))==len(lookup)
+        for role,ids in sets.items():
+            for cid in ids:
+                # The source-transcribed expected identity sets are independent
+                # inputs; ask the actual public algorithm for that identity's role.
+                singleton={**program,'courses':[lookup[cid]]}
+                assert requirement_profile(singleton)[role]['count']==1,(entry['program_id'],cid,role)
+        checked+=1
+    assert checked>=4
