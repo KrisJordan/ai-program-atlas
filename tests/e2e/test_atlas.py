@@ -554,3 +554,28 @@ def test_crosslisted_identity_denominator_detail_comparison_mobile(page,site,tmp
     expect(page.locator('#compare-profile')).to_have_value('options')
     assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
     assert not errors
+
+
+def test_real_crosslist_evidence_keyboard_and_mobile(page,site,tmp_path,site_data):
+    import json
+    from pathlib import Path
+    from playwright.sync_api import expect
+    pid='penn-state-ai-methods-applications-ist-bs'
+    program=json.loads((Path(__file__).resolve().parents[2]/'data/programs'/f'{pid}.json').read_text())
+    site_data['programs']=[program];site_data['institutions']=[program['institution']]
+    build(site_data,tmp_path/'ai-program-atlas')
+    page.set_viewport_size({'width':390,'height':950})
+    page.goto(site+'programs/'+pid+'/')
+    evidence=page.locator('.profile-identities')
+    evidence.locator(':scope > summary').focus()
+    page.keyboard.press('Enter')
+    expect(evidence).to_have_attribute('open','')
+    expect(evidence).to_contain_text('DS 410 / CMPSC 410')
+    expect(evidence.locator('a').first).to_have_attribute('href','https://bulletins.psu.edu/university-course-descriptions/undergraduate/ds/')
+    assert 'IST 301 / ETI 301' not in evidence.inner_text()
+    assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
+    page.goto(site+'?compare='+pid+'&profile=options')
+    expect(page.locator('.compare-profile-cell .profile-identity')).to_contain_text('156 mapped course identities from 160 retained source-code records')
+    page.reload()
+    expect(page.locator('#compare-profile')).to_have_value('options')
+    assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
