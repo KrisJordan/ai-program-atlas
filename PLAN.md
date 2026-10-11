@@ -87,6 +87,16 @@ This status does **not** mean complete program evidence. Course descriptions, in
 
 ## Current work after the verified release
 
+### Committed local audit progress after `e81973f4`
+
+This is local research progress, **not a newer verified publication**. The current primary ledgers contain **2 audited, 27 blocked and 34 in progress** out of 63 degrees. Case BA/BS primary review is complete (`d085750`); its independent source-role/identity check and neutral context-record wording passed additional browser checks (`fb87963`). Full independent description coverage remains partial. Case profiles are BA 8 fixed / 585 options / 97 context and BS 9 / 595 / 97 after explicit cross-list merges.
+
+Penn State policy closure (`7b8530d`) now records exact remaining gaps: Engineering's unpublished approved elective lists and IST's eleven missing current entries. Current Senate, college, honors and graduation conditions are mapped without inventing future rules. CMU's 273 represented records all have dispositions; five unavailable descriptions remain its precise primary blockers (`765961a`). Maryland's two degrees gained 153 current-block dispositions from 148 distinct blocks, with 53 absent/topic-specific observations still unknown (`0ecb2cc`); three Latin classifications explicitly rely on precise titles because no description paragraph exists. Its policy/role closure is ongoing.
+
+Miami's 200 primary-table observations now have actual-description reviews, including preserved row-specific approval and overlap conditions (`97a4216`); contextual cognate work remains. Northeastern is completing remaining domain descriptions and college rules; conditional Khoury, CSSH and Science requirements are mapped only to source-verified participants without guessing a home college. Northwestern's expanded source/role review, NJIT's remaining options, Stevens's current course-viewer review and MIT's disjoint EECS/HASS inventories are active. An audit is not marked blocked merely because accessible work remains unfinished.
+
+The maintained SQLite and published count table above still describe the verified release. Next publication must compile committed ledgers, refresh the maintained database, verify idempotence and clean reconstruction, run the full required browser suite, deploy the exact tested commit and check the live site. Continue the 63-degree audit after that checkpoint.
+
 The 168-program correction release is a checkpoint. It includes the four paths committed before the audit priority change, completed RIT immersion/CMU concentration/WPI local inventory work, and verified degree-data corrections. **Inventory expansion is paused for the full 63-degree correctness audit.**
 
 The published audit ledger has **zero fully audited, 31 blocked, 32 in progress and zero awaiting documented results**; all are assigned. Bounded independent checks verify Case's fixed core/programming routes and WPI's fixed/choice roles without certifying their entire degrees. This checkpoint also includes reviewed Lehigh, Northwestern, Rice, Northeastern, RIT, Buffalo, Delaware and Penn State corrections; source-specific limits remain explicit. Accessible unfinished work remains in progress, never an invented access blocker.
