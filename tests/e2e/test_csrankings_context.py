@@ -42,6 +42,7 @@ def test_research_context_direct_keyboard_comparison_history(browser,research_si
         expect(provenance).to_contain_text('No broader permission is inferred')
         assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
         page.goto(research_site+'?compare=test-ai-0,test-ai-1')
+        expect(page.locator('.compare-table')).to_have_count(1)
         matrix=page.locator('.research-comparison')
         expect(matrix.locator('tbody tr')).to_have_count(6)
         expect(matrix).to_contain_text('#175 of 197')
