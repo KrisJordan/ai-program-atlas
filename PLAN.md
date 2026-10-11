@@ -35,7 +35,7 @@ Course counts include elective pools and repeated observations across sibling pr
 
 ## Cohort definition and boundaries
 
-Qualifying official undergraduate titles contain AI or Artificial Intelligence, including source-defined GenAI and GeoAI compounds. Degrees, additional majors, minors and formal concentrations/tracks/emphases are distinct. Ordinary electives, research centers, informal interest areas, graduate credentials and surveyed certificates are excluded or retained as leads.
+Qualifying official undergraduate titles contain AI or Artificial Intelligence, including source-defined GenAI and GeoAI compounds. Degrees, additional majors, minors and formal concentrations/tracks/emphases are distinct. Ordinary electives, research centers, informal interest areas, graduate credentials and surveyed certificates are excluded or retained as leads. A catalog-defined, formally declared specialization may qualify even when it is not a separate transcript credential; its exact institutional terminology, host degree and recognition limitations must remain explicit. See the [scope contract](docs/CONTRACT.md).
 
 The target is **2027 U.S. News Best Colleges**, separately covering every institution ranked 100 or better in **National Universities** and **National Liberal Arts Colleges**, including all cutoff ties. The edition was released September 22, 2026. Category ranks are never combined.
 
