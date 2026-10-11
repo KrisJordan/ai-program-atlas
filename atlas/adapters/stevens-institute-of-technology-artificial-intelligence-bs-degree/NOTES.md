@@ -66,3 +66,11 @@ undergraduate waiver from the graduate clause. Three other fetched eligibility
 tabs show no rule; this is unknown, not proof of no prerequisites. Credits remain
 in original unnormalized units until an explicit institutional definition is
 reviewed. Whole-degree correctness remains in progress.
+
+### Remaining fixed-course metadata — 2026-10-11
+
+The independent ordinary-browser pass read 20 remaining fixed-course descriptions and all 20 settled Eligibility tabs. All 24 fixed identities now have actual-description reviews: six foundations, six mathematics, three AI, two human context, one systems, one entrepreneurship application, and five other (four mixed plus one unspecified computing seminar). The additional previously reviewed Computer Vision course remains an option. Public course pages display credits but do not define the institutional credit unit, which remains unknown.
+
+CS 423 and CS 424 teach the general software development life cycle and application capstone practice; their AI-degree membership does not make those descriptions AI methods. CS 423 requires the displayed CS 182/385 alternative and senior standing; CS 424 requires CS 423. Five blank settled Eligibility tabs remain unknown, not unrestricted admission.
+
+CS 583's prose requires Python and linear algebra, calls probability/statistics/numerical analysis recommended, and separately labels undergraduate linear algebra and probability as prerequisites. The Eligibility tab displays MA 232 or CS 556 and graduate/junior/senior conditions. Both statements remain visible with their original logical wording; no precedence correction or prerequisite waiver is invented. Existing policy applicability questions and remaining option descriptions keep the full audit in progress.

@@ -260,3 +260,7 @@ Twenty-two actual GER option descriptions now have explicit subject reviews: 20 
 ## NJIT humanities/social-science subset and identity — 2026-10-11
 
 Fifty actual course blocks yield 43 primary, four mixed and three unclassified subjects. The quantitative-research course STS 307 is mathematics; philosophical/social AI analysis is human_context. Five courses explicitly prohibit satisfying both alternative GER allocations with the same selection, now retained as conditional notes. Reciprocal STS 378/LIT 378 co-listing supplies an independently reviewed identity group: 32 fixed/348 option identities from 32/349 source records. All records, choice quantities and lecture/lab conditions remain. Other similarly named or slash-separated options are not deduplicated. Remaining publicly accessible descriptions stay unfinished work, not fabricated access blockers.
+
+## Stevens fixed-course content closure — 2026-10-11
+
+Independent ordinary-browser review supplied all 20 remaining fixed descriptions plus settled Eligibility panels (40 source observations). The 24 prescribed identities now all have actual content reviews; general software capstones remain foundations and broad CS 101 seminar content remains unclassified. No subject is inferred from the AI degree. CS 583's competing preparation wording and grouped Eligibility expression remain explicit, as do five blank eligibility fields. Institutional unit normalization and remaining options/policy applicability are not certified.
