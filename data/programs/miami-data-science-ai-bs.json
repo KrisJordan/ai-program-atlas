@@ -149,7 +149,7 @@
     {
       "id": "miami-cognate-directory-20261002",
       "url": "https://cognates.miami.edu/courses/individualized",
-      "title": "Individualized cognate Master List — full dated public PDF capture",
+      "title": "Individualized cognate Master List \u2014 full dated public PDF capture",
       "fetched_at": "2026-10-11",
       "source_date": "2026-10-02",
       "catalog_year": null,
@@ -1885,176 +1885,341 @@
       "catalog_year": null,
       "locator": "PS_0073; selected Fall 2026; Details, Description applicability and all 3 Option Groups/12 displayed course rows, including 1 inactive flags. Optional People and Society route; per-group/row facts in research manifest. Active-directory snapshot, not guaranteed offerings.",
       "confidence": "high"
+    },
+    {
+      "id": "miami-fixed-courses-csc",
+      "url": "https://bulletin.miami.edu/courses-az/csc/",
+      "title": "University of Miami CSC course descriptions",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Current course blocks: CSC 113, CSC 120, CSC 220, CSC 315, CSC 317, CSC 345, CSC 545, CSC 546; descriptions, published credits and eligibility wording",
+      "confidence": "high"
+    },
+    {
+      "id": "miami-fixed-courses-mth",
+      "url": "https://bulletin.miami.edu/courses-az/mth/",
+      "title": "University of Miami MTH course descriptions",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Current course blocks: MTH 161, MTH 162, MTH 210, MTH 224; descriptions, published credits and eligibility wording",
+      "confidence": "high"
+    },
+    {
+      "id": "miami-fixed-courses-wrs",
+      "url": "https://bulletin.miami.edu/courses-az/wrs/",
+      "title": "University of Miami WRS course descriptions",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Current course blocks: WRS 105; descriptions, published credits and eligibility wording",
+      "confidence": "high"
     }
   ],
   "courses": [
     {
       "id": "miami-data-science-ai-bs-csc-113",
       "code": "CSC 113",
-      "name": "Data Science for the World (New course: Data Science for Everyone)",
-      "description": null,
-      "prerequisites": null,
+      "name": "Data Science for the World",
+      "description": "The brief description combines introductory data analysis and R programming without establishing a dominant subject.",
+      "prerequisites": "Prerequisite: MTH 108 or higher.",
       "credits": 4.0,
       "credit_unit": "semester_hours",
-      "category": "foundations",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=CSC%20113",
+      "category": "other",
+      "source_id": "miami-fixed-courses-csc",
+      "url": "https://bulletin.miami.edu/courses-az/csc/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-fixed-courses-csc"
+        ],
+        "locator": "CSC 113 complete course-description block",
+        "rationale": "The brief description combines introductory data analysis and R programming without establishing a dominant subject.",
+        "candidate_categories": [
+          "foundations",
+          "applications"
+        ]
+      }
     },
     {
       "id": "miami-data-science-ai-bs-csc-120",
       "code": "CSC 120",
       "name": "Computer Programming I",
-      "description": null,
-      "prerequisites": null,
+      "description": "Programming constructs, algorithmic problem solving, object orientation and recursion are central.",
+      "prerequisites": "Prerequisite:CSC115 or BTE320 or MTH141 or MTH151 or MTH161 or MTH171 or MAS110.",
       "credits": 4.0,
       "credit_unit": "semester_hours",
       "category": "foundations",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=CSC%20120",
+      "source_id": "miami-fixed-courses-csc",
+      "url": "https://bulletin.miami.edu/courses-az/csc/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-fixed-courses-csc"
+        ],
+        "locator": "CSC 120 complete course-description block",
+        "rationale": "Programming constructs, algorithmic problem solving, object orientation and recursion are central.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-csc-220",
       "code": "CSC 220",
       "name": "Computer Programming II",
-      "description": null,
-      "prerequisites": null,
+      "description": "Data structures, API implementation, sorting, recursion and asymptotic analysis support software construction.",
+      "prerequisites": "Prerequisites: CSC 120 or BTE 324 or ECE 218 and MTH 108 or MTH 140 or MTH 141 or MTH 161 or MTH 162 or MTH 171 or MTH 172 or MAS 110 .",
       "credits": 4.0,
       "credit_unit": "semester_hours",
       "category": "foundations",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=CSC%20220",
+      "source_id": "miami-fixed-courses-csc",
+      "url": "https://bulletin.miami.edu/courses-az/csc/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-fixed-courses-csc"
+        ],
+        "locator": "CSC 220 complete course-description block",
+        "rationale": "Data structures, API implementation, sorting, recursion and asymptotic analysis support software construction.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-csc-315",
       "code": "CSC 315",
       "name": "Introduction to Python for Scientists",
-      "description": null,
-      "prerequisites": null,
+      "description": "Python programming and scientific packages are the focus; data science and machine learning are application contexts.",
+      "prerequisites": "Prerequisite: MTH 161 and (CSC113 or MTH224 or other approved statistics course).",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "foundations",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=CSC%20315",
+      "source_id": "miami-fixed-courses-csc",
+      "url": "https://bulletin.miami.edu/courses-az/csc/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-fixed-courses-csc"
+        ],
+        "locator": "CSC 315 complete course-description block",
+        "rationale": "Python programming and scientific packages are the focus; data science and machine learning are application contexts.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-csc-317",
       "code": "CSC 317",
       "name": "Data Structures and Algorithm Analysis",
-      "description": null,
-      "prerequisites": null,
+      "description": "Algorithm analysis, design strategies and computing algorithms are the stated subject.",
+      "prerequisites": "Prerequisite: CSC 220 or ECE 318 , and MTH 309 or MTH 230 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "foundations",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=CSC%20317",
+      "source_id": "miami-fixed-courses-csc",
+      "url": "https://bulletin.miami.edu/courses-az/csc/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-fixed-courses-csc"
+        ],
+        "locator": "CSC 317 complete course-description block",
+        "rationale": "Algorithm analysis, design strategies and computing algorithms are the stated subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-csc-345",
       "code": "CSC 345",
       "name": "Introduction to Artificial Intelligence",
-      "description": null,
-      "prerequisites": null,
+      "description": "AI knowledge representation, learning and reasoning form the central conceptual inventory.",
+      "prerequisites": "Published unlabeled course-eligibility line: (CSC220 or ECE318), MTH161, (MTH309 or MTH230).",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "ai_ml",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=CSC%20345",
+      "source_id": "miami-fixed-courses-csc",
+      "url": "https://bulletin.miami.edu/courses-az/csc/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-fixed-courses-csc"
+        ],
+        "locator": "CSC 345 complete course-description block",
+        "rationale": "AI knowledge representation, learning and reasoning form the central conceptual inventory.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-csc-545",
       "code": "CSC 545",
-      "name": "Advanced Artificial Intelligence",
-      "description": null,
-      "prerequisites": null,
+      "name": "Introduction to Artificial Intelligence",
+      "description": "Intelligent systems cover search, constraints, representation, reasoning, language processing, learning and AI programming.",
+      "prerequisites": "Prerequisite: CSC 317 or ECE 511 , MTH 224 or ECE 310 or IEN 310.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "ai_ml",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=CSC%20545",
+      "source_id": "miami-fixed-courses-csc",
+      "url": "https://bulletin.miami.edu/courses-az/csc/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-fixed-courses-csc"
+        ],
+        "locator": "CSC 545 complete course-description block",
+        "rationale": "Intelligent systems cover search, constraints, representation, reasoning, language processing, learning and AI programming.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-csc-546",
       "code": "CSC 546",
-      "name": "Machine Learning with Applications",
-      "description": null,
-      "prerequisites": null,
+      "name": "Introduction to Machine Learning with Applications",
+      "description": "Clustering, classification, regression, model evaluation and neural learning methods constitute the course.",
+      "prerequisites": "Prerequisite: MTH 210 and MTH 224 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "ai_ml",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=CSC%20546",
+      "source_id": "miami-fixed-courses-csc",
+      "url": "https://bulletin.miami.edu/courses-az/csc/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-fixed-courses-csc"
+        ],
+        "locator": "CSC 546 complete course-description block",
+        "rationale": "Clustering, classification, regression, model evaluation and neural learning methods constitute the course.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-mth-161",
       "code": "MTH 161",
-      "name": "Calculus I (Also fulfills Quantitative Proficiency Skills Requirement)",
-      "description": null,
-      "prerequisites": null,
+      "name": "Calculus I",
+      "description": "Limits, derivatives and definite integrals establish a calculus focus.",
+      "prerequisites": "Requisite: ALEKS score >= 78 or SAT Math Section score >= 730 or Math ACT score >= 31 or score of 4 AP Calculus (AB) or score of 3 in AP Calculus (BC) or a C- or higher in MTH 108 or AP Precalculus Score = 5 with credit in MTH108.",
       "credits": 4.0,
       "credit_unit": "semester_hours",
       "category": "mathematics",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=MTH%20161",
+      "source_id": "miami-fixed-courses-mth",
+      "url": "https://bulletin.miami.edu/courses-az/mth/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-fixed-courses-mth"
+        ],
+        "locator": "MTH 161 complete course-description block",
+        "rationale": "Limits, derivatives and definite integrals establish a calculus focus.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-mth-162",
       "code": "MTH 162",
       "name": "Calculus II",
-      "description": null,
-      "prerequisites": null,
+      "description": "Integration, series, polar coordinates and differential equations continue calculus.",
+      "prerequisites": "Prerequisite: MTH 141 or MTH 151 or MTH 161 or MTH 171 .",
       "credits": 4.0,
       "credit_unit": "semester_hours",
       "category": "mathematics",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=MTH%20162",
+      "source_id": "miami-fixed-courses-mth",
+      "url": "https://bulletin.miami.edu/courses-az/mth/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-fixed-courses-mth"
+        ],
+        "locator": "MTH 162 complete course-description block",
+        "rationale": "Integration, series, polar coordinates and differential equations continue calculus.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-mth-210",
       "code": "MTH 210",
       "name": "Introduction to Linear Algebra",
-      "description": null,
-      "prerequisites": null,
+      "description": "Vector spaces, matrices, linear transformations and eigenstructure establish linear algebra.",
+      "prerequisites": "Pre/Corequisite: MTH 162 or MTH 172 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "mathematics",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=MTH%20210",
+      "source_id": "miami-fixed-courses-mth",
+      "url": "https://bulletin.miami.edu/courses-az/mth/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-fixed-courses-mth"
+        ],
+        "locator": "MTH 210 complete course-description block",
+        "rationale": "Vector spaces, matrices, linear transformations and eigenstructure establish linear algebra.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-mth-224",
       "code": "MTH 224",
       "name": "Introduction to Probability and Statistics",
-      "description": null,
-      "prerequisites": null,
+      "description": "Probability distributions, expectation, statistical estimation and tests establish probability and statistics.",
+      "prerequisites": "Pre/Corequisite: MTH 162 or MTH 172 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "mathematics",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=MTH%20224",
+      "source_id": "miami-fixed-courses-mth",
+      "url": "https://bulletin.miami.edu/courses-az/mth/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-fixed-courses-mth"
+        ],
+        "locator": "MTH 224 complete course-description block",
+        "rationale": "Probability distributions, expectation, statistical estimation and tests establish probability and statistics.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-mth-309",
@@ -2592,15 +2757,26 @@
       "id": "miami-data-science-ai-bs-wrs-105",
       "code": "WRS 105",
       "name": "First-Year Writing I",
-      "description": null,
-      "prerequisites": null,
+      "description": "Academic inquiry, argument and written and multimodal communication are the course focus.",
+      "prerequisites": "Requisite: ACT English score 18-31; or SAT Evidence-Based Reading and Writing or Critical Reading score 430-690; or TOEFL iBT Writing score 18 or above. The course block excludes the credit-only option and states \"Not for major or minor\" without naming the credential; this wording is preserved without overriding its explicit inclusion in these degree tables.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-data-science-ai-bs-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=WRS%20105",
+      "source_id": "miami-fixed-courses-wrs",
+      "url": "https://bulletin.miami.edu/courses-az/wrs/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-fixed-courses-wrs"
+        ],
+        "locator": "WRS 105 complete course-description block",
+        "rationale": "Academic inquiry, argument and written and multimodal communication are the course focus.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "miami-data-science-ai-bs-wrs-106",
@@ -9871,7 +10047,7 @@
     {
       "id": "miami-data-science-ai-bs-eng-484",
       "code": "ENG 484",
-      "name": "American Literature, 1915–1945",
+      "name": "American Literature, 1915\u20131945",
       "description": null,
       "prerequisites": null,
       "credits": 3.0,
@@ -21155,7 +21331,7 @@
     {
       "id": "miami-data-science-ai-bs-ghs-337",
       "code": "GHS 337",
-      "name": "A Global Perspective on Women’s Health",
+      "name": "A Global Perspective on Women\u2019s Health",
       "description": null,
       "prerequisites": null,
       "credits": null,
@@ -28991,7 +29167,7 @@
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
       "source_text": null,
-      "summary": "Data Science for the World (New course: Data Science for Everyone) — published credit amount/range: 4",
+      "summary": "Data Science for the World (New course: Data Science for Everyone) \u2014 published credit amount/range: 4",
       "course_ids": [
         "miami-data-science-ai-bs-csc-113"
       ]
@@ -29007,7 +29183,7 @@
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
       "source_text": null,
-      "summary": "Computer Programming I — published credit amount/range: 4",
+      "summary": "Computer Programming I \u2014 published credit amount/range: 4",
       "course_ids": [
         "miami-data-science-ai-bs-csc-120"
       ]
@@ -29023,7 +29199,7 @@
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
       "source_text": null,
-      "summary": "Computer Programming II — published credit amount/range: 4",
+      "summary": "Computer Programming II \u2014 published credit amount/range: 4",
       "course_ids": [
         "miami-data-science-ai-bs-csc-220"
       ]
@@ -29039,7 +29215,7 @@
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
       "source_text": null,
-      "summary": "Introduction to Python for Scientists — published credit amount/range: 3",
+      "summary": "Introduction to Python for Scientists \u2014 published credit amount/range: 3",
       "course_ids": [
         "miami-data-science-ai-bs-csc-315"
       ]
@@ -29055,7 +29231,7 @@
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
       "source_text": null,
-      "summary": "Data Structures and Algorithm Analysis — published credit amount/range: 3",
+      "summary": "Data Structures and Algorithm Analysis \u2014 published credit amount/range: 3",
       "course_ids": [
         "miami-data-science-ai-bs-csc-317"
       ]
@@ -29071,7 +29247,7 @@
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
       "source_text": null,
-      "summary": "Introduction to Artificial Intelligence — published credit amount/range: 3",
+      "summary": "Introduction to Artificial Intelligence \u2014 published credit amount/range: 3",
       "course_ids": [
         "miami-data-science-ai-bs-csc-345"
       ]
@@ -29087,7 +29263,7 @@
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
       "source_text": null,
-      "summary": "Advanced Artificial Intelligence — published credit amount/range: 3",
+      "summary": "Advanced Artificial Intelligence \u2014 published credit amount/range: 3",
       "course_ids": [
         "miami-data-science-ai-bs-csc-545"
       ]
@@ -29103,7 +29279,7 @@
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
       "source_text": null,
-      "summary": "Machine Learning with Applications — published credit amount/range: 3",
+      "summary": "Machine Learning with Applications \u2014 published credit amount/range: 3",
       "course_ids": [
         "miami-data-science-ai-bs-csc-546"
       ]
@@ -29133,7 +29309,7 @@
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
       "source_text": null,
-      "summary": "Calculus I (Also fulfills Quantitative Proficiency Skills Requirement) — published credit amount/range: 4",
+      "summary": "Calculus I (Also fulfills Quantitative Proficiency Skills Requirement) \u2014 published credit amount/range: 4",
       "course_ids": [
         "miami-data-science-ai-bs-mth-161"
       ]
@@ -29149,7 +29325,7 @@
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
       "source_text": null,
-      "summary": "Calculus II — published credit amount/range: 4",
+      "summary": "Calculus II \u2014 published credit amount/range: 4",
       "course_ids": [
         "miami-data-science-ai-bs-mth-162"
       ]
@@ -29165,7 +29341,7 @@
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
       "source_text": null,
-      "summary": "Introduction to Linear Algebra — published credit amount/range: 3",
+      "summary": "Introduction to Linear Algebra \u2014 published credit amount/range: 3",
       "course_ids": [
         "miami-data-science-ai-bs-mth-210"
       ]
@@ -29181,7 +29357,7 @@
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
       "source_text": null,
-      "summary": "Introduction to Probability and Statistics — published credit amount/range: 3",
+      "summary": "Introduction to Probability and Statistics \u2014 published credit amount/range: 3",
       "course_ids": [
         "miami-data-science-ai-bs-mth-224"
       ]
@@ -29197,7 +29373,7 @@
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
       "source_text": null,
-      "summary": "Discrete Mathematics I — published credit amount/range: 3 Complete one listed alternative for this requirement.",
+      "summary": "Discrete Mathematics I \u2014 published credit amount/range: 3 Complete one listed alternative for this requirement.",
       "course_ids": [
         "miami-data-science-ai-bs-mth-309",
         "miami-data-science-ai-bs-mth-230"
@@ -29214,7 +29390,7 @@
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
       "source_text": null,
-      "summary": "Techniques — 6 published credits. Listed courses are options, not all required. Credit hours are semester hours under the university Academic Credit policy.",
+      "summary": "Techniques \u2014 6 published credits. Listed courses are options, not all required. Credit hours are semester hours under the university Academic Credit policy.",
       "course_ids": [
         "miami-data-science-ai-bs-csc-115",
         "miami-data-science-ai-bs-csc-322",
@@ -29248,7 +29424,7 @@
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
       "source_text": null,
-      "summary": "Applications — 9 published credits. Listed courses are options, not all required. Credit hours are semester hours under the university Academic Credit policy.",
+      "summary": "Applications \u2014 9 published credits. Listed courses are options, not all required. Credit hours are semester hours under the university Academic Credit policy.",
       "course_ids": [
         "miami-data-science-ai-bs-csc-210",
         "miami-data-science-ai-bs-csc-329",
@@ -29292,7 +29468,7 @@
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
       "source_text": null,
-      "summary": "Ethics of Artificial Intelligence — published credit amount/range: 3 Complete one listed alternative for this requirement.",
+      "summary": "Ethics of Artificial Intelligence \u2014 published credit amount/range: 3 Complete one listed alternative for this requirement.",
       "course_ids": [
         "miami-data-science-ai-bs-phi-239",
         "miami-data-science-ai-bs-phi-115"
@@ -29337,7 +29513,7 @@
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
       "source_text": null,
-      "summary": "First-Year Writing I — published credit amount/range: 3",
+      "summary": "First-Year Writing I \u2014 published credit amount/range: 3",
       "course_ids": [
         "miami-data-science-ai-bs-wrs-105"
       ]
@@ -29353,7 +29529,7 @@
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
       "source_text": null,
-      "summary": "First-Year Writing II — published credit amount/range: 3 Complete one listed alternative for this requirement.",
+      "summary": "First-Year Writing II \u2014 published credit amount/range: 3 Complete one listed alternative for this requirement.",
       "course_ids": [
         "miami-data-science-ai-bs-wrs-106",
         "miami-data-science-ai-bs-wrs-107",
@@ -29399,7 +29575,7 @@
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
       "source_text": null,
-      "summary": "Arts & Humanities Cognate — 9 published credits",
+      "summary": "Arts & Humanities Cognate \u2014 9 published credits",
       "course_ids": []
     },
     {
@@ -29413,7 +29589,7 @@
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
       "source_text": null,
-      "summary": "People & Society Cognate — 9 published credits",
+      "summary": "People & Society Cognate \u2014 9 published credits",
       "course_ids": []
     },
     {
@@ -29455,7 +29631,7 @@
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
       "source_text": null,
-      "summary": "At least 3 credit hours in Natural Science — 3 published credits",
+      "summary": "At least 3 credit hours in Natural Science \u2014 3 published credits",
       "course_ids": []
     },
     {
@@ -29469,7 +29645,7 @@
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
       "source_text": null,
-      "summary": "Language course 200-level or higher — 9 published credits",
+      "summary": "Language course 200-level or higher \u2014 9 published credits",
       "course_ids": []
     },
     {
@@ -29497,7 +29673,7 @@
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
       "source_text": null,
-      "summary": "Computer Science Seminars Reports — published credit amount/range: 1 Complete one listed alternative for this requirement.",
+      "summary": "Computer Science Seminars Reports \u2014 published credit amount/range: 1 Complete one listed alternative for this requirement.",
       "course_ids": [
         "miami-data-science-ai-bs-csc-405",
         "miami-data-science-ai-bs-csc-410",
@@ -29516,7 +29692,7 @@
       "category": "other",
       "source_id": "miami-data-science-ai-bs-catalog",
       "source_text": null,
-      "summary": "General Electives — 22 published credits",
+      "summary": "General Electives \u2014 22 published credits",
       "course_ids": []
     },
     {
@@ -29782,7 +29958,7 @@
       "category": "other",
       "source_id": "miami-arts-sciences-policy",
       "source_text": null,
-      "summary": "The college minimum is three credits in a non-English language at 200 level or higher: approved modern languages excluding courses 310–319, Greek, Latin or ASL, or equivalent. Heritage learners follow language-specific placement rules. Waivers include qualifying in-class placement into 202/203/204/208/300-level during add/drop, committee-approved proficiency for other languages, documented two years of full-time non-English secondary education, or TOEFL for admission. Language courses and their prerequisites cannot also satisfy area cognates. A higher program-specific language row is not replaced by this college minimum.",
+      "summary": "The college minimum is three credits in a non-English language at 200 level or higher: approved modern languages excluding courses 310\u2013319, Greek, Latin or ASL, or equivalent. Heritage learners follow language-specific placement rules. Waivers include qualifying in-class placement into 202/203/204/208/300-level during add/drop, committee-approved proficiency for other languages, documented two years of full-time non-English secondary education, or TOEFL for admission. Language courses and their prerequisites cannot also satisfy area cognates. A higher program-specific language row is not replaced by this college minimum.",
       "course_ids": []
     },
     {
@@ -29838,7 +30014,7 @@
       "category": "other",
       "source_id": "miami-arts-sciences-policy",
       "source_text": null,
-      "summary": "For the BS, earn at least three natural-science credits in Biology, Chemistry, Geological Sciences, Microbiology and Immunology, or Physics, in a course counting toward that department’s major. Have MTH 162/MTH 172 or equivalent and three department-approved computing/statistics credits. Existing program courses may meet these requirements; these are not automatically extra credits.",
+      "summary": "For the BS, earn at least three natural-science credits in Biology, Chemistry, Geological Sciences, Microbiology and Immunology, or Physics, in a course counting toward that department\u2019s major. Have MTH 162/MTH 172 or equivalent and three department-approved computing/statistics credits. Existing program courses may meet these requirements; these are not automatically extra credits.",
       "course_ids": []
     },
     {
@@ -29913,7 +30089,7 @@
       "category": "other",
       "source_id": "miami-language-placement",
       "source_text": null,
-      "summary": "For a language not taught at Miami, the department may approve an accredited outside course and its transfer equivalency. The published language requirement needs 300-level equivalency for a native speaker or200-level for a second-language learner. This review does not resolve the AI BS table’s nine-credit language row against the college minimum.",
+      "summary": "For a language not taught at Miami, the department may approve an accredited outside course and its transfer equivalency. The published language requirement needs 300-level equivalency for a native speaker or200-level for a second-language learner. This review does not resolve the AI BS table\u2019s nine-credit language row against the college minimum.",
       "course_ids": []
     },
     {
@@ -29933,7 +30109,7 @@
     {
       "id": "miami-data-science-ai-bs-cognate-directory-sample-ah",
       "parent_id": "miami-data-science-ai-bs-cognate-directory-sample",
-      "title": "Arts & Humanities — dated attribute pool",
+      "title": "Arts & Humanities \u2014 dated attribute pool",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -31057,7 +31233,7 @@
     {
       "id": "miami-data-science-ai-bs-cognate-directory-sample-ps",
       "parent_id": "miami-data-science-ai-bs-cognate-directory-sample",
-      "title": "People & Society — dated attribute pool",
+      "title": "People & Society \u2014 dated attribute pool",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -31977,7 +32153,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0031",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0031: A Cross-Cultural and Historic Examination of Sexuality — optional thematic route",
+      "title": "PS_0031: A Cross-Cultural and Historic Examination of Sexuality \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -32052,7 +32228,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0027",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0027: Introduction to Philosophy (Arts and Humanities) — optional thematic route",
+      "title": "AT_0027: Introduction to Philosophy (Arts and Humanities) \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -32123,7 +32299,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0044",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0044: Abnormal Psychology — optional thematic route",
+      "title": "PS_0044: Abnormal Psychology \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -32188,7 +32364,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0021",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0021: Africa and the African Diaspora — optional thematic route",
+      "title": "AT_0021: Africa and the African Diaspora \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -32257,7 +32433,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0067",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0067: American Literature — optional thematic route",
+      "title": "AT_0067: American Literature \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -32315,7 +32491,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0059",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0059: American Political Institutions — optional thematic route",
+      "title": "PS_0059: American Political Institutions \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -32367,7 +32543,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0076",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0076: American Studies: Literature, History & Culture — optional thematic route",
+      "title": "AT_0076: American Studies: Literature, History & Culture \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -32405,7 +32581,7 @@
       "category": "human_context",
       "source_id": "miami-cognate-at_0076-fall2026",
       "source_text": null,
-      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete exactly 1 course from the following: Additional row conditions: HIS 382: 0–3 published credit range. Listed courses are options, not all individually required; inactive rows are excluded.",
+      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete exactly 1 course from the following: Additional row conditions: HIS 382: 0\u20133 published credit range. Listed courses are options, not all individually required; inactive rows are excluded.",
       "course_ids": [
         "miami-data-science-ai-bs-ams-321",
         "miami-data-science-ai-bs-his-101",
@@ -32443,7 +32619,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0069",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0069: American Studies: Politics and Religion — optional thematic route",
+      "title": "PS_0069: American Studies: Politics and Religion \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -32509,7 +32685,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0029",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0029: An Anthropologically Based Approach to the Study of Human Languages. — optional thematic route",
+      "title": "PS_0029: An Anthropologically Based Approach to the Study of Human Languages. \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -32558,7 +32734,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0096",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0096: Ancient Greek Language and Literature — optional thematic route",
+      "title": "AT_0096: Ancient Greek Language and Literature \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -32580,7 +32756,7 @@
       "category": "human_context",
       "source_id": "miami-cognate-at_0096-fall2026",
       "source_text": null,
-      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at least 2 courses from the following: Additional row conditions: GRE 491: 1–3 published credit range. Listed courses are options, not all individually required; inactive rows are excluded.",
+      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at least 2 courses from the following: Additional row conditions: GRE 491: 1\u20133 published credit range. Listed courses are options, not all individually required; inactive rows are excluded.",
       "course_ids": [
         "miami-data-science-ai-bs-gre-101",
         "miami-data-science-ai-bs-gre-102",
@@ -32624,7 +32800,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0020",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0020: Ancient Roman Literature, Culture and History — optional thematic route",
+      "title": "PS_0020: Ancient Roman Literature, Culture and History \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -32704,7 +32880,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0024",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0024: Applied Ethics — optional thematic route",
+      "title": "PS_0024: Applied Ethics \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -32772,7 +32948,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0046",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0046: Arabic Language & Culture: Communicating with Arabic Speakers — optional thematic route",
+      "title": "AT_0046: Arabic Language & Culture: Communicating with Arabic Speakers \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -32817,7 +32993,7 @@
       "category": "human_context",
       "source_id": "miami-cognate-at_0046-fall2026",
       "source_text": null,
-      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at most 2 courses from the following: Additional row conditions: ARB 310: Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107; ARB 312: Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107; ARB 315: Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107; ARB 394: Prerequisite: ARB 204.; ARB 394: 1–3 published credit range; ARB 410: Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107. Listed courses are options, not all individually required; inactive rows are excluded.",
+      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at most 2 courses from the following: Additional row conditions: ARB 310: Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107; ARB 312: Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107; ARB 315: Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107; ARB 394: Prerequisite: ARB 204.; ARB 394: 1\u20133 published credit range; ARB 410: Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107. Listed courses are options, not all individually required; inactive rows are excluded.",
       "course_ids": [
         "miami-data-science-ai-bs-arb-310",
         "miami-data-science-ai-bs-arb-312",
@@ -32829,7 +33005,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0021",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0021: Archaeology: the Social Life of Things — optional thematic route",
+      "title": "PS_0021: Archaeology: the Social Life of Things \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -32898,7 +33074,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0058",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0058: Architectural Design: An introduction from Theory to Practice — optional thematic route",
+      "title": "AT_0058: Architectural Design: An introduction from Theory to Practice \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -32995,7 +33171,7 @@
       "category": "human_context",
       "source_id": "miami-cognate-at_0058-fall2026",
       "source_text": null,
-      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at least 1 course from the following: Additional row conditions: ARC 141: 3–6 published credit range; ARC 323: 3–6 published credit range. Listed courses are options, not all individually required; inactive rows are excluded.",
+      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at least 1 course from the following: Additional row conditions: ARC 141: 3\u20136 published credit range; ARC 323: 3\u20136 published credit range. Listed courses are options, not all individually required; inactive rows are excluded.",
       "course_ids": [
         "miami-data-science-ai-bs-arc-141",
         "miami-data-science-ai-bs-arc-323",
@@ -33005,7 +33181,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0059",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0059: Architecture and Urbanism: Urban Design and Development — optional thematic route",
+      "title": "AT_0059: Architecture and Urbanism: Urban Design and Development \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -33071,7 +33247,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0060",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0060: Architecture: Design & Theory — optional thematic route",
+      "title": "AT_0060: Architecture: Design & Theory \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -33110,7 +33286,7 @@
       "category": "human_context",
       "source_id": "miami-cognate-at_0060-fall2026",
       "source_text": null,
-      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at least 6 credits from the following: Additional row conditions: ARC 141: 3–6 published credit range; ARC 323: 3–6 published credit range. Listed courses are options, not all individually required; inactive rows are excluded.",
+      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at least 6 credits from the following: Additional row conditions: ARC 141: 3\u20136 published credit range; ARC 323: 3\u20136 published credit range. Listed courses are options, not all individually required; inactive rows are excluded.",
       "course_ids": [
         "miami-data-science-ai-bs-arc-121",
         "miami-data-science-ai-bs-arc-122",
@@ -33127,7 +33303,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0045",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0045: Arts and Humanities Beyond the USA — optional thematic route",
+      "title": "AT_0045: Arts and Humanities Beyond the USA \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -33135,7 +33311,7 @@
       "category": "human_context",
       "source_id": "miami-cognate-at_0045-fall2026",
       "source_text": null,
-      "summary": "Fall 2026 Arts and Humanities thematic cognate; responsible unit Study Abroad Cognate. Source recommendation: All Students.. If selected: Students must complete at least 3 courses for at least 9 credits. Course Options: Complete exactly 2 of the following option groups: This is an optional cognate route, not a required AI component. Thematic unit, subject, language and overlap policies still apply. The individualized no-other-degree-requirement restriction is not generalized to this distinct route. Both study-abroad and related beyond-USA AH courses require approval from the cognate representative in the school of the student’s major. This is an open approval route, not an empty finite course list.",
+      "summary": "Fall 2026 Arts and Humanities thematic cognate; responsible unit Study Abroad Cognate. Source recommendation: All Students.. If selected: Students must complete at least 3 courses for at least 9 credits. Course Options: Complete exactly 2 of the following option groups: This is an optional cognate route, not a required AI component. Thematic unit, subject, language and overlap policies still apply. The individualized no-other-degree-requirement restriction is not generalized to this distinct route. Both study-abroad and related beyond-USA AH courses require approval from the cognate representative in the school of the student\u2019s major. This is an open approval route, not an empty finite course list.",
       "course_ids": []
     },
     {
@@ -33169,7 +33345,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0091",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0091: Belonging in a Diverse Society: Intersections of culture, identity, and social justice — optional thematic route",
+      "title": "PS_0091: Belonging in a Diverse Society: Intersections of culture, identity, and social justice \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -33209,7 +33385,7 @@
       "category": "human_context",
       "source_id": "miami-cognate-ps_0091-fall2026",
       "source_text": null,
-      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at least 1 course from the following: Additional row conditions: EPS 587: 1–3 published credit range; TAL 308: Co-Requisite: TAL 306. Listed courses are options, not all individually required; inactive rows are excluded.",
+      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at least 1 course from the following: Additional row conditions: EPS 587: 1\u20133 published credit range; TAL 308: Co-Requisite: TAL 306. Listed courses are options, not all individually required; inactive rows are excluded.",
       "course_ids": [
         "miami-data-science-ai-bs-cos-343",
         "miami-data-science-ai-bs-eps-365",
@@ -33228,7 +33404,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0009",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0009: Brazilian Studies — optional thematic route",
+      "title": "AT_0009: Brazilian Studies \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -33284,7 +33460,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0001",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0001: Broadcast Meteorology — optional thematic route",
+      "title": "PS_0001: Broadcast Meteorology \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -33347,7 +33523,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0023",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0023: Caribbean Studies — optional thematic route",
+      "title": "PS_0023: Caribbean Studies \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -33417,7 +33593,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0075",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0075: The Caribbean through Literature, History, & the Arts — optional thematic route",
+      "title": "AT_0075: The Caribbean through Literature, History, & the Arts \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -33473,7 +33649,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0017",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0017: Child Adolescent and Adult Development Across the Lifespan — optional thematic route",
+      "title": "PS_0017: Child Adolescent and Adult Development Across the Lifespan \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -33541,7 +33717,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0098",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0098: China Studies — optional thematic route",
+      "title": "AT_0098: China Studies \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -33632,7 +33808,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0075",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0075: Chinese Culture, History, and Politics — optional thematic route",
+      "title": "PS_0075: Chinese Culture, History, and Politics \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -33698,7 +33874,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0047",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0047: Chinese Language and Culture: Communicating with Chinese Speakers — optional thematic route",
+      "title": "AT_0047: Chinese Language and Culture: Communicating with Chinese Speakers \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -33739,7 +33915,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0036",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0036: Communication and Social Interaction — optional thematic route",
+      "title": "PS_0036: Communication and Social Interaction \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -33795,7 +33971,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0028",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0028: Community Engagement and Social Change — optional thematic route",
+      "title": "PS_0028: Community Engagement and Social Change \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -33839,7 +34015,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0109",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0109: Contemporary Issues in Religion — optional thematic route",
+      "title": "AT_0109: Contemporary Issues in Religion \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -33908,7 +34084,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0099",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0099: Creative Arts in Therapy: Integrating Music and Dance into Counseling and Healthcare — optional thematic route",
+      "title": "AT_0099: Creative Arts in Therapy: Integrating Music and Dance into Counseling and Healthcare \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -33978,7 +34154,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0005",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0005: Creative Drawing and Design Stressing Imaginative Use of Visual Materials — optional thematic route",
+      "title": "AT_0005: Creative Drawing and Design Stressing Imaginative Use of Visual Materials \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -34121,7 +34297,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0025",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0025: Criminology — optional thematic route",
+      "title": "PS_0025: Criminology \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -34161,7 +34337,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0026",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0026: Critical Thinking and Writing Skills Paper Writing. — optional thematic route",
+      "title": "AT_0026: Critical Thinking and Writing Skills Paper Writing. \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -34195,7 +34371,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0055",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0055: Cultural Codes in the Arabic-Speaking World — optional thematic route",
+      "title": "PS_0055: Cultural Codes in the Arabic-Speaking World \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -34247,7 +34423,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0057",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0057: Cultural Codes in the Italian-Speaking World — optional thematic route",
+      "title": "PS_0057: Cultural Codes in the Italian-Speaking World \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -34300,7 +34476,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0054",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0054: Cultural Codes in the Spanish-Speaking World — optional thematic route",
+      "title": "PS_0054: Cultural Codes in the Spanish-Speaking World \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -34361,7 +34537,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0056",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0056: Cultural and Social Dimensions of Health and Disease — optional thematic route",
+      "title": "PS_0056: Cultural and Social Dimensions of Health and Disease \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -34408,7 +34584,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0090",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0090: Development Economics — optional thematic route",
+      "title": "PS_0090: Development Economics \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -34478,7 +34654,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0035",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0035: Digital Expression — optional thematic route",
+      "title": "AT_0035: Digital Expression \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -34545,7 +34721,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0093",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0093: DisAbility and Society — optional thematic route",
+      "title": "PS_0093: DisAbility and Society \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -34595,7 +34771,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0067",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0067: Disparities and Inequities in Health and Illness — optional thematic route",
+      "title": "PS_0067: Disparities and Inequities in Health and Illness \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -34629,7 +34805,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0065",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0065: Diversity in the World's Cultures and Thought — optional thematic route",
+      "title": "PS_0065: Diversity in the World's Cultures and Thought \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -34705,7 +34881,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0074",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0074: Documentary Ideas and Practice — optional thematic route",
+      "title": "AT_0074: Documentary Ideas and Practice \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -34770,7 +34946,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0018",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0018: Drawing and Design for Artists- Fine Art, Graphic Design, Costume Design and Scenic Design — optional thematic route",
+      "title": "AT_0018: Drawing and Design for Artists- Fine Art, Graphic Design, Costume Design and Scenic Design \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -34823,7 +34999,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0107",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0107: Empires and Economies in Modern World History — optional thematic route",
+      "title": "AT_0107: Empires and Economies in Modern World History \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -34860,7 +35036,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0053",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0053: Environmental Politics and Policy — optional thematic route",
+      "title": "PS_0053: Environmental Politics and Policy \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -34898,7 +35074,7 @@
       "category": "human_context",
       "source_id": "miami-cognate-ps_0053-fall2026",
       "source_text": null,
-      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete exactly 2 courses from the following: Additional row conditions: ECS 572: 0–3 published credit range; MSC 108: NOT FOR ANY MSC STUDENT MAJOR OR MINOR.; MSC 340: Prerequisite: MSC 111 and MSC 219.; MSC 346: Prerequisite: MSC 111. Or ATM 103. Or ECS 111. And Requisite: Junior Standing.; POL 525: Prerequisite: POL 202.; POL 531: Prerequisite: POL 203 Or INS 101.. Listed courses are options, not all individually required; inactive rows are excluded.",
+      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete exactly 2 courses from the following: Additional row conditions: ECS 572: 0\u20133 published credit range; MSC 108: NOT FOR ANY MSC STUDENT MAJOR OR MINOR.; MSC 340: Prerequisite: MSC 111 and MSC 219.; MSC 346: Prerequisite: MSC 111. Or ATM 103. Or ECS 111. And Requisite: Junior Standing.; POL 525: Prerequisite: POL 202.; POL 531: Prerequisite: POL 203 Or INS 101.. Listed courses are options, not all individually required; inactive rows are excluded.",
       "course_ids": [
         "miami-data-science-ai-bs-ecs-572",
         "miami-data-science-ai-bs-las-503",
@@ -34919,7 +35095,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0058",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0058: Ethics in Society: A New Look at Ethical Problems in Today's Society — optional thematic route",
+      "title": "PS_0058: Ethics in Society: A New Look at Ethical Problems in Today's Society \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -34960,7 +35136,7 @@
       "category": "human_context",
       "source_id": "miami-cognate-ps_0058-fall2026",
       "source_text": null,
-      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at least 2 courses from the following: Additional row conditions: PHI 295: 1–4 published credit range. Listed courses are options, not all individually required; inactive rows are excluded.",
+      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at least 2 courses from the following: Additional row conditions: PHI 295: 1\u20134 published credit range. Listed courses are options, not all individually required; inactive rows are excluded.",
       "course_ids": [
         "miami-data-science-ai-bs-apy-390",
         "miami-data-science-ai-bs-phi-295",
@@ -34973,7 +35149,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0086",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0086: European Politics — optional thematic route",
+      "title": "PS_0086: European Politics \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -35068,7 +35244,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0043",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0043: Exploring the Caribbean through the Social Sciences — optional thematic route",
+      "title": "PS_0043: Exploring the Caribbean through the Social Sciences \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -35142,7 +35318,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0084",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0084: Film Studies — optional thematic route",
+      "title": "AT_0084: Film Studies \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -35194,7 +35370,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0076",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0076: Foundations of Behavior for Prehealth Professions — optional thematic route",
+      "title": "PS_0076: Foundations of Behavior for Prehealth Professions \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -35264,7 +35440,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0092",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0092: Foundations of European Literature and Society — optional thematic route",
+      "title": "AT_0092: Foundations of European Literature and Society \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -35337,7 +35513,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0049",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0049: French Language and Culture: Communicating with French Speakers — optional thematic route",
+      "title": "AT_0049: French Language and Culture: Communicating with French Speakers \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -35424,7 +35600,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0017",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0017: French and Francophone Studies: Literature, History, and Culture — optional thematic route",
+      "title": "AT_0017: French and Francophone Studies: Literature, History, and Culture \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -35479,7 +35655,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0077",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0077: Fundamentals of Representational Painting — optional thematic route",
+      "title": "AT_0077: Fundamentals of Representational Painting \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -35527,7 +35703,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0077",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0077: Gender and Politics — optional thematic route",
+      "title": "PS_0077: Gender and Politics \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -35580,7 +35756,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0089",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0089: Gender, Literature, and the Fine Arts — optional thematic route",
+      "title": "AT_0089: Gender, Literature, and the Fine Arts \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -35662,7 +35838,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0050",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0050: German Language and Culture: Communicating with German Speakers — optional thematic route",
+      "title": "AT_0050: German Language and Culture: Communicating with German Speakers \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -35717,7 +35893,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0046",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0046: Germany: History, Politics, and Culture — optional thematic route",
+      "title": "PS_0046: Germany: History, Politics, and Culture \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -35767,7 +35943,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0052",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0052: Global Sustainability: Living on a Finite Planet — optional thematic route",
+      "title": "PS_0052: Global Sustainability: Living on a Finite Planet \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -35841,7 +36017,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0068",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0068: Global Urbanization — optional thematic route",
+      "title": "PS_0068: Global Urbanization \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -35880,7 +36056,7 @@
       "category": "human_context",
       "source_id": "miami-cognate-ps_0068-fall2026",
       "source_text": null,
-      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete exactly 2 courses from the following: Additional row conditions: GEG 590: 1–6 published credit range. Listed courses are options, not all individually required; inactive rows are excluded.",
+      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete exactly 2 courses from the following: Additional row conditions: GEG 590: 1\u20136 published credit range. Listed courses are options, not all individually required; inactive rows are excluded.",
       "course_ids": [
         "miami-data-science-ai-bs-ams-350",
         "miami-data-science-ai-bs-apy-420",
@@ -35913,7 +36089,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0111",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0111: Haitian Language and Culture: Communicating with Haitian Creole Speakers — optional thematic route",
+      "title": "AT_0111: Haitian Language and Culture: Communicating with Haitian Creole Speakers \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -35965,7 +36141,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0039",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0039: Health & Medicine in the Social Sciences — optional thematic route",
+      "title": "PS_0039: Health & Medicine in the Social Sciences \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -36049,7 +36225,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0066",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0066: Health Promotion and Disease Prevention Across the Lifespan — optional thematic route",
+      "title": "PS_0066: Health Promotion and Disease Prevention Across the Lifespan \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -36086,7 +36262,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0030",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0030: Hispanic Literature: Understanding the Power of Words Through Spanish-Language Texts — optional thematic route",
+      "title": "AT_0030: Hispanic Literature: Understanding the Power of Words Through Spanish-Language Texts \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -36164,7 +36340,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0040",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0040: History and Philosophy of Science and Medicine — optional thematic route",
+      "title": "PS_0040: History and Philosophy of Science and Medicine \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -36237,7 +36413,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0084",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0084: History and Politics of War — optional thematic route",
+      "title": "PS_0084: History and Politics of War \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -36297,7 +36473,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0072",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0072: History of Early Modern Europe — optional thematic route",
+      "title": "AT_0072: History of Early Modern Europe \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -36348,7 +36524,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0006",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0006: History of European Art — optional thematic route",
+      "title": "AT_0006: History of European Art \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -36422,7 +36598,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0038",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0038: History of Gender and Sexuality — optional thematic route",
+      "title": "PS_0038: History of Gender and Sexuality \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -36472,7 +36648,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0002",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0002: How to Write and Illustrate Books; Becoming an Author and an Illustrator of Visual Essays — optional thematic route",
+      "title": "AT_0002: How to Write and Illustrate Books; Becoming an Author and an Illustrator of Visual Essays \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -36494,7 +36670,7 @@
       "category": "human_context",
       "source_id": "miami-cognate-at_0002-fall2026",
       "source_text": null,
-      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete exactly 3 courses from the following: Additional row conditions: ART 593: 1–6 published credit range. Listed courses are options, not all individually required; inactive rows are excluded.",
+      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete exactly 3 courses from the following: Additional row conditions: ART 593: 1\u20136 published credit range. Listed courses are options, not all individually required; inactive rows are excluded.",
       "course_ids": [
         "miami-data-science-ai-bs-arh-132",
         "miami-data-science-ai-bs-arh-346",
@@ -36510,7 +36686,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0030",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0030: Human Social Process — optional thematic route",
+      "title": "PS_0030: Human Social Process \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -36571,7 +36747,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0100",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0100: Introduction to Literature — optional thematic route",
+      "title": "AT_0100: Introduction to Literature \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -36629,7 +36805,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0061",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0061: Introduction to the Social Sciences — optional thematic route",
+      "title": "PS_0061: Introduction to the Social Sciences \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -36669,7 +36845,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0106",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0106: Islam and the Arab World — optional thematic route",
+      "title": "AT_0106: Islam and the Arab World \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -36733,7 +36909,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0070",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0070: Italian Language and Culture: Communicating with Italian Speakers. — optional thematic route",
+      "title": "AT_0070: Italian Language and Culture: Communicating with Italian Speakers. \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -36786,7 +36962,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0052",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0052: Japanese Language and Culture: Communicating with Japanese Speakers — optional thematic route",
+      "title": "AT_0052: Japanese Language and Culture: Communicating with Japanese Speakers \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -36824,7 +37000,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0087",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0087: Know Thyself: A Creative and Critical Exploration — optional thematic route",
+      "title": "AT_0087: Know Thyself: A Creative and Critical Exploration \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -36893,7 +37069,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0079",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0079: Lesbian, Gay, Bisexual, Transgender, and Queer Studies — optional thematic route",
+      "title": "PS_0079: Lesbian, Gay, Bisexual, Transgender, and Queer Studies \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -36975,7 +37151,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0079",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0079: Language and Cultures of the Spanish-Speaking World: Intermediate and Advanced — optional thematic route",
+      "title": "AT_0079: Language and Cultures of the Spanish-Speaking World: Intermediate and Advanced \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -37061,7 +37237,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0014",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0014: Latin American Art and Culture — optional thematic route",
+      "title": "PS_0014: Latin American Art and Culture \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -37119,7 +37295,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0015",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0015: Latin American Politics and Society — optional thematic route",
+      "title": "PS_0015: Latin American Politics and Society \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -37190,7 +37366,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0031",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0031: Latin American and Caribbean History — optional thematic route",
+      "title": "AT_0031: Latin American and Caribbean History \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -37251,7 +37427,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0094",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0094: Latin Language and Literature — optional thematic route",
+      "title": "AT_0094: Latin Language and Literature \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -37273,7 +37449,7 @@
       "category": "human_context",
       "source_id": "miami-cognate-at_0094-fall2026",
       "source_text": null,
-      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at least 2 courses from the following: Additional row conditions: LAT 491: 1–3 published credit range. Listed courses are options, not all individually required; inactive rows are excluded.",
+      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at least 2 courses from the following: Additional row conditions: LAT 491: 1\u20133 published credit range. Listed courses are options, not all individually required; inactive rows are excluded.",
       "course_ids": [
         "miami-data-science-ai-bs-lat-101",
         "miami-data-science-ai-bs-lat-102",
@@ -37318,7 +37494,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0045",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0045: Law and ethics in news, public relations, advertising, and related media — optional thematic route",
+      "title": "PS_0045: Law and ethics in news, public relations, advertising, and related media \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -37386,7 +37562,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0097",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0097: Legal topics in Classics — optional thematic route",
+      "title": "AT_0097: Legal topics in Classics \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -37443,7 +37619,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0110",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0110: Legal Writing and Advocacy — optional thematic route",
+      "title": "AT_0110: Legal Writing and Advocacy \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -37493,7 +37669,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0047",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0047: Linguistics — optional thematic route",
+      "title": "PS_0047: Linguistics \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -37532,7 +37708,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0063",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0063: Literature of people of African descent in the U.S., the Caribbean, and Africa — optional thematic route",
+      "title": "AT_0063: Literature of people of African descent in the U.S., the Caribbean, and Africa \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -37583,7 +37759,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0006",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0006: Making Environmental Policy Decisions — optional thematic route",
+      "title": "PS_0006: Making Environmental Policy Decisions \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -37625,7 +37801,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0027",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0027: Marine Policy — optional thematic route",
+      "title": "PS_0027: Marine Policy \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -37683,7 +37859,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0095",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0095: Medical topics in Classics — optional thematic route",
+      "title": "AT_0095: Medical topics in Classics \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -37756,7 +37932,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0037",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0037: Middle East Politics — optional thematic route",
+      "title": "PS_0037: Middle East Politics \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -37793,7 +37969,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0091",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0091: Modern American Literature, Culture, and History — optional thematic route",
+      "title": "AT_0091: Modern American Literature, Culture, and History \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -37867,7 +38043,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0057",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0057: Modern European History: French Revolution to the Present — optional thematic route",
+      "title": "AT_0057: Modern European History: French Revolution to the Present \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -37921,7 +38097,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0093",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0093: Modern European Literature and Society — optional thematic route",
+      "title": "AT_0093: Modern European Literature and Society \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -38020,7 +38196,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0026",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0026: Modern Latin America — optional thematic route",
+      "title": "PS_0026: Modern Latin America \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -38096,7 +38272,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0025",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0025: Modern US History: Civil War to Present — optional thematic route",
+      "title": "AT_0025: Modern US History: Civil War to Present \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -38141,7 +38317,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0015",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0015: Modern and Contemporary Art, Theory, and Practice — optional thematic route",
+      "title": "AT_0015: Modern and Contemporary Art, Theory, and Practice \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -38194,7 +38370,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0071",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0071: Modern and Contemporary Literature — optional thematic route",
+      "title": "AT_0071: Modern and Contemporary Literature \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -38248,7 +38424,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0014",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0014: Museum Studies: Art, Material Culture, and History — optional thematic route",
+      "title": "AT_0014: Museum Studies: Art, Material Culture, and History \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -38286,7 +38462,7 @@
       "category": "human_context",
       "source_id": "miami-cognate-at_0014-fall2026",
       "source_text": null,
-      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at least 6 credits from the following: Additional row conditions: ARH 411: Prerequisite: ARH 225, or ARH 132.; ARH 511: Prerequisite: ARH 131 and ARH 132.; HIS 382: 0–3 published credit range; THA 385: Requisite: Sophomore Standing or Higher. Listed courses are options, not all individually required; inactive rows are excluded.",
+      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at least 6 credits from the following: Additional row conditions: ARH 411: Prerequisite: ARH 225, or ARH 132.; ARH 511: Prerequisite: ARH 131 and ARH 132.; HIS 382: 0\u20133 published credit range; THA 385: Requisite: Sophomore Standing or Higher. Listed courses are options, not all individually required; inactive rows are excluded.",
       "course_ids": [
         "miami-data-science-ai-bs-apy-505",
         "miami-data-science-ai-bs-arh-220",
@@ -38304,7 +38480,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0102",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0102: Music Performance and Understanding — optional thematic route",
+      "title": "AT_0102: Music Performance and Understanding \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -38391,7 +38567,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0101",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0101: Music and Movement — optional thematic route",
+      "title": "AT_0101: Music and Movement \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -38458,7 +38634,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0049",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0049: People and Society Beyond the USA — optional thematic route",
+      "title": "PS_0049: People and Society Beyond the USA \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -38466,7 +38642,7 @@
       "category": "human_context",
       "source_id": "miami-cognate-ps_0049-fall2026",
       "source_text": null,
-      "summary": "Fall 2026 People and Society thematic cognate; responsible unit Study Abroad Cognate. Source recommendation: All students.. If selected: Students must complete at least 3 courses for at least 9 credits. Course Options: Complete exactly 2 of the following option groups: This is an optional cognate route, not a required AI component. Thematic unit, subject, language and overlap policies still apply. The individualized no-other-degree-requirement restriction is not generalized to this distinct route. Both study-abroad and related beyond-USA PS courses require approval from the cognate representative in the school of the student’s major. This is an open approval route, not an empty finite course list.",
+      "summary": "Fall 2026 People and Society thematic cognate; responsible unit Study Abroad Cognate. Source recommendation: All students.. If selected: Students must complete at least 3 courses for at least 9 credits. Course Options: Complete exactly 2 of the following option groups: This is an optional cognate route, not a required AI component. Thematic unit, subject, language and overlap policies still apply. The individualized no-other-degree-requirement restriction is not generalized to this distinct route. Both study-abroad and related beyond-USA PS courses require approval from the cognate representative in the school of the student\u2019s major. This is an open approval route, not an empty finite course list.",
       "course_ids": []
     },
     {
@@ -38500,7 +38676,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0018",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0018: Philosophy and Religion in Ancient Culture and Society — optional thematic route",
+      "title": "PS_0018: Philosophy and Religion in Ancient Culture and Society \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -38555,7 +38731,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0083",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0083: Philosophy of Art, Film and Literature — optional thematic route",
+      "title": "AT_0083: Philosophy of Art, Film and Literature \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -38605,7 +38781,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0090",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0090: Philosophy of Mind — optional thematic route",
+      "title": "AT_0090: Philosophy of Mind \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -38665,7 +38841,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0005",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0005: Political Behavior — optional thematic route",
+      "title": "PS_0005: Political Behavior \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -38700,7 +38876,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0081",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0081: Political Economy — optional thematic route",
+      "title": "PS_0081: Political Economy \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -38738,7 +38914,7 @@
       "category": "human_context",
       "source_id": "miami-cognate-ps_0081-fall2026",
       "source_text": null,
-      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at least 2 courses from the following: Additional row conditions: ECS 572: 0–3 published credit range; POL 581: Prerequisite: POL 202.; POL 582: Prerequisite: POL 202.; POL 592: Prerequisite: POL 203 Or INS 101.. Listed courses are options, not all individually required; inactive rows are excluded.",
+      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at least 2 courses from the following: Additional row conditions: ECS 572: 0\u20133 published credit range; POL 581: Prerequisite: POL 202.; POL 582: Prerequisite: POL 202.; POL 592: Prerequisite: POL 203 Or INS 101.. Listed courses are options, not all individually required; inactive rows are excluded.",
       "course_ids": [
         "miami-data-science-ai-bs-ecs-572",
         "miami-data-science-ai-bs-las-340",
@@ -38754,7 +38930,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0009",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0009: Political Science: Courts and Laws in the United States — optional thematic route",
+      "title": "PS_0009: Political Science: Courts and Laws in the United States \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -38802,7 +38978,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0004",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0004: Politics and Religion — optional thematic route",
+      "title": "PS_0004: Politics and Religion \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -38847,7 +39023,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0010",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0010: Politics of the United States Congress — optional thematic route",
+      "title": "PS_0010: Politics of the United States Congress \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -38896,7 +39072,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0082",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0082: Popular Culture — optional thematic route",
+      "title": "AT_0082: Popular Culture \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -38965,7 +39141,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0081",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0081: Portuguese Language & Culture: Communicating with Portuguese Speakers — optional thematic route",
+      "title": "AT_0081: Portuguese Language & Culture: Communicating with Portuguese Speakers \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -39005,7 +39181,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0035",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0035: Pre-Law: Social Foundations of the Legal System — optional thematic route",
+      "title": "PS_0035: Pre-Law: Social Foundations of the Legal System \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -39046,7 +39222,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0074",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0074: Psychology, Ethics and Society — optional thematic route",
+      "title": "PS_0074: Psychology, Ethics and Society \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -39113,7 +39289,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0002",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0002: Psychosocial and Community Well-Being — optional thematic route",
+      "title": "PS_0002: Psychosocial and Community Well-Being \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -39188,7 +39364,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0034",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0034: Public Administration — optional thematic route",
+      "title": "PS_0034: Public Administration \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -39249,7 +39425,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0088",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0088: Public Advocacy, Civic Engagement, and Social Change — optional thematic route",
+      "title": "PS_0088: Public Advocacy, Civic Engagement, and Social Change \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -39297,7 +39473,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0064",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0064: Public Relations — optional thematic route",
+      "title": "PS_0064: Public Relations \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -39349,7 +39525,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0089",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0089: Public Speaking, Critical Thinking, and Debate for Effective Expression and Influence — optional thematic route",
+      "title": "PS_0089: Public Speaking, Critical Thinking, and Debate for Effective Expression and Influence \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -39402,7 +39578,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0033",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0033: Race and Ethnic Relations in the United States — optional thematic route",
+      "title": "PS_0033: Race and Ethnic Relations in the United States \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -39439,7 +39615,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0083",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0083: Regime Change and Democratization — optional thematic route",
+      "title": "PS_0083: Regime Change and Democratization \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -39506,7 +39682,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0051",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0051: Religion and Medicine — optional thematic route",
+      "title": "AT_0051: Religion and Medicine \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -39541,7 +39717,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0108",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0108: Religious Traditions and Texts — optional thematic route",
+      "title": "AT_0108: Religious Traditions and Texts \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -39611,7 +39787,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0013",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0013: Renaissance Art and Culture.. — optional thematic route",
+      "title": "AT_0013: Renaissance Art and Culture.. \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -39677,7 +39853,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0078",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0078: Representation of the Human Figure in Art — optional thematic route",
+      "title": "AT_0078: Representation of the Human Figure in Art \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -39725,7 +39901,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0042",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0042: Research Methods in Sociology — optional thematic route",
+      "title": "PS_0042: Research Methods in Sociology \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -39747,7 +39923,7 @@
       "category": "human_context",
       "source_id": "miami-cognate-ps_0042-fall2026",
       "source_text": null,
-      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete exactly 3 courses from the following: Additional row conditions: APY 501: 2–6 published credit range; SOC 210: Prerequisite: SOC 101.; SOC 211: Prerequisite: SOC 101, 210. Corequisite: 212.. Listed courses are options, not all individually required; inactive rows are excluded.",
+      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete exactly 3 courses from the following: Additional row conditions: APY 501: 2\u20136 published credit range; SOC 210: Prerequisite: SOC 101.; SOC 211: Prerequisite: SOC 101, 210. Corequisite: 212.. Listed courses are options, not all individually required; inactive rows are excluded.",
       "course_ids": [
         "miami-data-science-ai-bs-apy-501",
         "miami-data-science-ai-bs-geg-306",
@@ -39761,7 +39937,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0008",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0008: Revolutionary Change in History — optional thematic route",
+      "title": "PS_0008: Revolutionary Change in History \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -39816,7 +39992,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0019",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0019: Rhetoric and Self-Presentation in Ancient Culture — optional thematic route",
+      "title": "PS_0019: Rhetoric and Self-Presentation in Ancient Culture \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -39875,7 +40051,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0080",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0080: Science of Human Development — optional thematic route",
+      "title": "PS_0080: Science of Human Development \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -39951,7 +40127,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0094",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0094: Essential Skills for Life and Work — optional thematic route",
+      "title": "PS_0094: Essential Skills for Life and Work \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -40024,7 +40200,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0041",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0041: Social Institutions — optional thematic route",
+      "title": "PS_0041: Social Institutions \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -40059,7 +40235,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0071",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0071: Social and Behavioral Sciences for Pre-med Students — optional thematic route",
+      "title": "PS_0071: Social and Behavioral Sciences for Pre-med Students \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -40141,7 +40317,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0050",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0050: Social and Scientific Perspectives on Global Environmental Change — optional thematic route",
+      "title": "PS_0050: Social and Scientific Perspectives on Global Environmental Change \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -40195,7 +40371,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0087",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0087: Sociology for Pre-Health Students — optional thematic route",
+      "title": "PS_0087: Sociology for Pre-Health Students \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -40247,7 +40423,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0078",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0078: Society and the Creative Self — optional thematic route",
+      "title": "PS_0078: Society and the Creative Self \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -40314,7 +40490,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0055",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0055: Spanish Language & Culture for Heritage and Native Learners — optional thematic route",
+      "title": "AT_0055: Spanish Language & Culture for Heritage and Native Learners \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -40427,7 +40603,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0056",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0056: Spanish Language & Culture: Communicating with Spanish Speakers for 2nd Language Learners — optional thematic route",
+      "title": "AT_0056: Spanish Language & Culture: Communicating with Spanish Speakers for 2nd Language Learners \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -40539,7 +40715,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0085",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0085: Sports Communication — optional thematic route",
+      "title": "PS_0085: Sports Communication \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -40573,7 +40749,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0007",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0007: Step by Step How to Design Costumes for Theatre Productions — optional thematic route",
+      "title": "AT_0007: Step by Step How to Design Costumes for Theatre Productions \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -40625,7 +40801,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0034",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0034: Studies in the History of Film, Photography, and Art — optional thematic route",
+      "title": "AT_0034: Studies in the History of Film, Photography, and Art \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -40676,7 +40852,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0062",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0062: Studies of Modern Day Israel — optional thematic route",
+      "title": "PS_0062: Studies of Modern Day Israel \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -40749,7 +40925,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0069",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0069: Studies of the European Middle Ages — optional thematic route",
+      "title": "AT_0069: Studies of the European Middle Ages \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -40809,7 +40985,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0036",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0036: Studio Fine Arts: Introduction to Drawing and Design — optional thematic route",
+      "title": "AT_0036: Studio Fine Arts: Introduction to Drawing and Design \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -40874,7 +41050,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0060",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0060: Study of Aspects of the Holocaust — optional thematic route",
+      "title": "PS_0060: Study of Aspects of the Holocaust \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -40917,7 +41093,7 @@
       "category": "human_context",
       "source_id": "miami-cognate-ps_0060-fall2026",
       "source_text": null,
-      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at most 1 course from the following: Additional row conditions: JUS 421: 1–3 published credit range. Listed courses are options, not all individually required; inactive rows are excluded.",
+      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at most 1 course from the following: Additional row conditions: JUS 421: 1\u20133 published credit range. Listed courses are options, not all individually required; inactive rows are excluded.",
       "course_ids": [
         "miami-data-science-ai-bs-jus-205",
         "miami-data-science-ai-bs-jus-421",
@@ -40958,7 +41134,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0092",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0092: Sustainable Cities — optional thematic route",
+      "title": "PS_0092: Sustainable Cities \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -41011,7 +41187,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0013",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0013: The American Politics Subfield of Political Science — optional thematic route",
+      "title": "PS_0013: The American Politics Subfield of Political Science \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -41068,7 +41244,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0010",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0010: The Arts in Education: Contextual Connections — optional thematic route",
+      "title": "AT_0010: The Arts in Education: Contextual Connections \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -41123,7 +41299,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0064",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0064: The British Literary Tradition — optional thematic route",
+      "title": "AT_0064: The British Literary Tradition \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -41191,7 +41367,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0063",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0063: The Business of Advertising — optional thematic route",
+      "title": "PS_0063: The Business of Advertising \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -41242,7 +41418,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0011",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0011: The Comparative Politics Subfield of Political Science — optional thematic route",
+      "title": "PS_0011: The Comparative Politics Subfield of Political Science \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -41280,7 +41456,7 @@
       "category": "human_context",
       "source_id": "miami-cognate-ps_0011-fall2026",
       "source_text": null,
-      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete exactly 2 courses from the following: Additional row conditions: GSS 469: Prerequisite: POL 201 or POL 202 Or GSS 202 or GSS 301.; GSS 471: Prerequisite: POL 202.; POL 344: Prerequisite: POL 202.; POL 381: Prerequisite: POL 202.; POL 382: Prerequisite: POL 202.; POL 384: Prerequisite: POL 202.; POL 385: Prerequisite: POL 202.; POL 386: Prerequisite: POL 202.; POL 387: Prerequisite: POL 202.; POL 388: Prerequisite: POL 202.; POL 398: 1–9 published credit range; POL 525: Prerequisite: POL 202.; POL 531: Prerequisite: POL 203 Or INS 101.; POL 581: Prerequisite: POL 202.; POL 582: Prerequisite: POL 202.; POL 584: Prerequisite: POL 202.; POL 598: Prerequisite: POL 202.. Listed courses are options, not all individually required; inactive rows are excluded.",
+      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete exactly 2 courses from the following: Additional row conditions: GSS 469: Prerequisite: POL 201 or POL 202 Or GSS 202 or GSS 301.; GSS 471: Prerequisite: POL 202.; POL 344: Prerequisite: POL 202.; POL 381: Prerequisite: POL 202.; POL 382: Prerequisite: POL 202.; POL 384: Prerequisite: POL 202.; POL 385: Prerequisite: POL 202.; POL 386: Prerequisite: POL 202.; POL 387: Prerequisite: POL 202.; POL 388: Prerequisite: POL 202.; POL 398: 1\u20139 published credit range; POL 525: Prerequisite: POL 202.; POL 531: Prerequisite: POL 203 Or INS 101.; POL 581: Prerequisite: POL 202.; POL 582: Prerequisite: POL 202.; POL 584: Prerequisite: POL 202.; POL 598: Prerequisite: POL 202.. Listed courses are options, not all individually required; inactive rows are excluded.",
       "course_ids": [
         "miami-data-science-ai-bs-gss-469",
         "miami-data-science-ai-bs-gss-471",
@@ -41328,7 +41504,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0029",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0029: The Epic Tradition from Antiquity Through the Twentieth Century — optional thematic route",
+      "title": "AT_0029: The Epic Tradition from Antiquity Through the Twentieth Century \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -41371,7 +41547,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0072",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0072: The Evolution of the Jewish People in their Homeland and the Diaspora — optional thematic route",
+      "title": "PS_0072: The Evolution of the Jewish People in their Homeland and the Diaspora \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -41480,7 +41656,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0007",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0007: The International Relations Subfield of Political Science — optional thematic route",
+      "title": "PS_0007: The International Relations Subfield of Political Science \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -41544,7 +41720,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0048",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0048: The Media, Political Opinions and Attitudes — optional thematic route",
+      "title": "PS_0048: The Media, Political Opinions and Attitudes \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -41594,7 +41770,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0003",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0003: The United States and Latin America — optional thematic route",
+      "title": "PS_0003: The United States and Latin America \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -41673,7 +41849,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0062",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0062: The art of handmade objects — optional thematic route",
+      "title": "AT_0062: The art of handmade objects \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -41723,7 +41899,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0033",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0033: Theatre Arts, Acting, Design, Management, Drama and History — optional thematic route",
+      "title": "AT_0033: Theatre Arts, Acting, Design, Management, Drama and History \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -41745,7 +41921,7 @@
       "category": "human_context",
       "source_id": "miami-cognate-at_0033-fall2026",
       "source_text": null,
-      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete exactly 3 courses from the following: Additional row conditions: THA 181: 1–3 published credit range; THA 251: Prerequisite: THA 105 or THA 106.; THA 252: Prerequisite: THA 251.; THA 253: Prerequisite: Successful completion of one 100-level THA performance course or instructor permission.; THA 254: Prerequisite: Successful completion of one 100-level THA performance course or instructor permission.; THA 264: Prerequisite: THA 101 or Theatre Arts BFA major status; THA 342: Prerequisite: THA 141 or THA 243.; THA 343: Prerequisite: THA 141 or THA 243.; THA 352: Prerequisite: THA 105 or THA 106.; THA 385: Requisite: Sophomore Standing or Higher. Listed courses are options, not all individually required; inactive rows are excluded.",
+      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete exactly 3 courses from the following: Additional row conditions: THA 181: 1\u20133 published credit range; THA 251: Prerequisite: THA 105 or THA 106.; THA 252: Prerequisite: THA 251.; THA 253: Prerequisite: Successful completion of one 100-level THA performance course or instructor permission.; THA 254: Prerequisite: Successful completion of one 100-level THA performance course or instructor permission.; THA 264: Prerequisite: THA 101 or Theatre Arts BFA major status; THA 342: Prerequisite: THA 141 or THA 243.; THA 343: Prerequisite: THA 141 or THA 243.; THA 352: Prerequisite: THA 105 or THA 106.; THA 385: Requisite: Sophomore Standing or Higher. Listed courses are options, not all individually required; inactive rows are excluded.",
       "course_ids": [
         "miami-data-science-ai-bs-tha-101",
         "miami-data-science-ai-bs-tha-105",
@@ -41799,7 +41975,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0012",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0012: Theatre Management and Daily Business Operations in the Non-profit World — optional thematic route",
+      "title": "AT_0012: Theatre Management and Daily Business Operations in the Non-profit World \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -41860,7 +42036,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0037",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0037: Three Dimensional Fine Arts: Sculpture, Ceramics and Glass — optional thematic route",
+      "title": "AT_0037: Three Dimensional Fine Arts: Sculpture, Ceramics and Glass \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -41912,7 +42088,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0061",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0061: Three dimensional works of art and their meaning — optional thematic route",
+      "title": "AT_0061: Three dimensional works of art and their meaning \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -41978,7 +42154,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0038",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0038: Two Dimensional Fine Arts: Drawing, Painting and Printmaking — optional thematic route",
+      "title": "AT_0038: Two Dimensional Fine Arts: Drawing, Painting and Printmaking \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -42030,7 +42206,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0028",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0028: US History Through the Civil War — optional thematic route",
+      "title": "AT_0028: US History Through the Civil War \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -42052,7 +42228,7 @@
       "category": "human_context",
       "source_id": "miami-cognate-at_0028-fall2026",
       "source_text": null,
-      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at least 3 courses from the following Additional row conditions: HIS 382: 0–3 published credit range. Listed courses are options, not all individually required; inactive rows are excluded.",
+      "summary": "Only within this selected thematic route, subject to its overall course/credit minimum and group-selection rule: Complete at least 3 courses from the following Additional row conditions: HIS 382: 0\u20133 published credit range. Listed courses are options, not all individually required; inactive rows are excluded.",
       "course_ids": [
         "miami-data-science-ai-bs-his-101",
         "miami-data-science-ai-bs-his-209",
@@ -42084,7 +42260,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0051",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0051: Understanding Business — optional thematic route",
+      "title": "PS_0051: Understanding Business \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -42135,7 +42311,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0016",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0016: Understanding Politics — optional thematic route",
+      "title": "PS_0016: Understanding Politics \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -42198,7 +42374,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0011",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0011: Western Civilization: Historical Approaches — optional thematic route",
+      "title": "AT_0011: Western Civilization: Historical Approaches \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -42260,7 +42436,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0082",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0082: Women's and Gender Studies — optional thematic route",
+      "title": "PS_0082: Women's and Gender Studies \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -42341,7 +42517,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0066",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0066: Women, Gender, Literature — optional thematic route",
+      "title": "AT_0066: Women, Gender, Literature \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -42392,7 +42568,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0073",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0073: World Literature in Translation — optional thematic route",
+      "title": "AT_0073: World Literature in Translation \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -42459,7 +42635,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-at_0001",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "AT_0001: World of Music — optional thematic route",
+      "title": "AT_0001: World of Music \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -42531,7 +42707,7 @@
     {
       "id": "miami-data-science-ai-bs-thematic-ps_0073",
       "parent_id": "miami-data-science-ai-bs-policy-cognate-rules",
-      "title": "PS_0073: Writing, Public Speaking and Digital Communication Skills — optional thematic route",
+      "title": "PS_0073: Writing, Public Speaking and Digital Communication Skills \u2014 optional thematic route",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -42844,7 +43020,10 @@
       "miami-cognate-at_0066-fall2026",
       "miami-cognate-at_0073-fall2026",
       "miami-cognate-at_0001-fall2026",
-      "miami-cognate-ps_0073-fall2026"
+      "miami-cognate-ps_0073-fall2026",
+      "miami-fixed-courses-csc",
+      "miami-fixed-courses-mth",
+      "miami-fixed-courses-wrs"
     ],
     "sections": [
       "Full degree curriculum table, course alternatives, uncoded requirements and totals",
@@ -42857,7 +43036,8 @@
       "Cognate selection/declaration and individualized-cognate overlap restrictions; Spanish heritage placement and native-speaker language equivalency",
       "Full October 2, 2026 individualized Master List: all 50 rendered pages, row/identity/area accounting, AH/PS candidates and conditional attribute/overlap/transfer context",
       "All 215 active directory entries reviewed for selected Fall 2026: 212 thematic plans and three individualized routes; 173 conditional AH/PS thematic plans attached, every displayed group/course row, inactive flag and applicability condition retained; STEM already supplied by major",
-      "2026-10-11 degree correctness reread: finite credit pools and named advanced-writing alternatives retain option roles rather than contextual-note ancestry"
+      "2026-10-11 degree correctness reread: finite credit pools and named advanced-writing alternatives retain option roles rather than contextual-note ancestry",
+      "Read 13 additional fixed-course descriptions and their published eligibility clauses; manual content classifications and exact credit amounts are preserved."
     ],
     "unresolved_requirements": [
       "University transfer policy contains inconsistent summer concurrent-enrollment statements; applicability needs authoritative clarification.",
@@ -42869,7 +43049,8 @@
     "metadata_gaps": [
       "Course descriptions, most prerequisites, alternative/elective credit amounts, public course sites and syllabi remain unverified.",
       "Current individual course prerequisite statements remain unverified where null; following the prerequisite structure is required.",
-      "The full individualized directory supplies no credits/descriptions/prerequisites; 121 source titles are truncated across all areas (104 among AH/PS candidates) and remain null unless separately verified. Alphabetic and transfer-equivalency codes preserve their exact identities. Thematic metadata does not confer universal enrollment permission or guaranteed offerings; cognate evidence does not establish AI program launch dates or outcomes."
+      "The full individualized directory supplies no credits/descriptions/prerequisites; 121 source titles are truncated across all areas (104 among AH/PS candidates) and remain null unless separately verified. Alphabetic and transfer-equivalency codes preserve their exact identities. Thematic metadata does not confer universal enrollment permission or guaranteed offerings; cognate evidence does not establish AI program launch dates or outcomes.",
+      "This fixed-course pass does not certify remaining named options or university cognate-course metadata. Unlabeled eligibility expressions are explicitly labeled as such; null prerequisites are unknown, not permission to enroll."
     ]
   }
 }

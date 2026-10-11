@@ -62,3 +62,11 @@ This is a bounded requirement-role correction. Whole-degree correctness remains
 in progress; existing partial curriculum status and substantive source questions
 are preserved. Synthetic tests distinguish explicit choices from context, and
 current cached catalog replay agrees with the reviewed seed roles.
+
+## Fixed-course description audit — 2026-10-11
+
+Read 7 additional fixed-course descriptions and their published eligibility clauses; manual content classifications and exact credit amounts are preserved. The exact reviewed codes are CSC 113, CSC 120, CSC 220, DSC 344, DSC 345, MTH 161, WRS 105. Course eligibility remains distinct from degree obligation; extra prerequisite identities are not inserted as fixed requirements. Each complete source block is guarded on replay, and observations contain no independent audit or classification-review certificate. Remaining options, cognate metadata and previously documented policy questions remain in progress.
+
+CSC 113 is mixed introductory data analysis and R programming; the current course block is titled Data Science for the World, while the degree table uses an older/qualified title. CSC 345 and CSC 545 remain different codes despite identical current course titles. CSC 345 and DSC 344/345 publish unlabeled eligibility expressions; those expressions are preserved as unlabeled, without inventing catalog labels or waiver rules.
+
+WRS 105 excludes credit-only grading and says “Not for major or minor” without naming a credential. That limitation is recorded literally, not interpreted as removing the course from these explicit degree tables. No first-offered date is inferred from routine offering-season text.

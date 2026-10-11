@@ -74,3 +74,11 @@ Prerequisite AND/OR expressions are preserved without adding degree obligations.
 The variable 1–3 credits of BTE497 remain null per course. A source-block digest
 guard prevents unchanged reviewed paraphrases from surviving a changed catalog;
 parser observations never emit the independent category-review object.
+
+## Fixed-course description audit — 2026-10-11
+
+Read 16 additional fixed-course descriptions and their published eligibility clauses; manual content classifications and exact credit amounts are preserved. The exact reviewed codes are BSL 212, BUS 150, BUS 300, ECO 211, ECO 212, FIN 302, MAS 311, MAS 312, MGT 100, MGT 303, MGT 304, MGT 401, MTH 161, MTH 162, UMX 100, WRS 105. Course eligibility remains distinct from degree obligation; extra prerequisite identities are not inserted as fixed requirements. Each complete source block is guarded on replay, and observations contain no independent audit or classification-review certificate. Remaining options, cognate metadata and previously documented policy questions remain in progress.
+
+Finance 302's B threshold applies to students declaring a finance major, not this AI degree. MAS 311 retains the source's prerequisite-or-corequisite wording. UMX 100 is explicitly zero credits and remains reviewed unclassified because its broad orientation content has no defensible primary subject. MGT 100 is mixed management practice and human communication/culture.
+
+WRS 105 excludes credit-only grading and says “Not for major or minor” without naming a credential. That limitation is recorded literally, not interpreted as removing the course from these explicit degree tables. No first-offered date is inferred from routine offering-season text.

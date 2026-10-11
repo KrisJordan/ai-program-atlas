@@ -1885,6 +1885,96 @@
       "fetched_at": "2026-10-11",
       "source_date": null,
       "confidence": "high"
+    },
+    {
+      "id": "miami-fixed-courses-acc",
+      "url": "https://bulletin.miami.edu/courses-az/acc/",
+      "title": "University of Miami ACC course descriptions",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Current course blocks: ACC 211, ACC 212; descriptions, published credits and eligibility wording",
+      "confidence": "high"
+    },
+    {
+      "id": "miami-fixed-courses-bsl",
+      "url": "https://bulletin.miami.edu/courses-az/bsl/",
+      "title": "University of Miami BSL course descriptions",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Current course blocks: BSL 212; descriptions, published credits and eligibility wording",
+      "confidence": "high"
+    },
+    {
+      "id": "miami-fixed-courses-bus",
+      "url": "https://bulletin.miami.edu/courses-az/bus/",
+      "title": "University of Miami BUS course descriptions",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Current course blocks: BUS 150, BUS 300; descriptions, published credits and eligibility wording",
+      "confidence": "high"
+    },
+    {
+      "id": "miami-fixed-courses-eco",
+      "url": "https://bulletin.miami.edu/courses-az/eco/",
+      "title": "University of Miami ECO course descriptions",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Current course blocks: ECO 211, ECO 212; descriptions, published credits and eligibility wording",
+      "confidence": "high"
+    },
+    {
+      "id": "miami-fixed-courses-fin",
+      "url": "https://bulletin.miami.edu/courses-az/fin/",
+      "title": "University of Miami FIN course descriptions",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Current course blocks: FIN 302; descriptions, published credits and eligibility wording",
+      "confidence": "high"
+    },
+    {
+      "id": "miami-fixed-courses-mas",
+      "url": "https://bulletin.miami.edu/courses-az/mas/",
+      "title": "University of Miami MAS course descriptions",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Current course blocks: MAS 201, MAS 202; descriptions, published credits and eligibility wording",
+      "confidence": "high"
+    },
+    {
+      "id": "miami-fixed-courses-mgt",
+      "url": "https://bulletin.miami.edu/courses-az/mgt/",
+      "title": "University of Miami MGT course descriptions",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Current course blocks: MGT 100, MGT 303, MGT 304, MGT 401; descriptions, published credits and eligibility wording",
+      "confidence": "high"
+    },
+    {
+      "id": "miami-fixed-courses-umx",
+      "url": "https://bulletin.miami.edu/courses-az/umx/",
+      "title": "University of Miami UMX course descriptions",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Current course blocks: UMX 100; descriptions, published credits and eligibility wording",
+      "confidence": "high"
+    },
+    {
+      "id": "miami-fixed-courses-wrs",
+      "url": "https://bulletin.miami.edu/courses-az/wrs/",
+      "title": "University of Miami WRS course descriptions",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Current course blocks: WRS 105; descriptions, published credits and eligibility wording",
+      "confidence": "high"
     }
   ],
   "courses": [
@@ -1892,15 +1982,26 @@
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-wrs-105",
       "code": "WRS 105",
       "name": "First-Year Writing I",
-      "description": null,
-      "prerequisites": null,
+      "description": "Academic inquiry, argument and written and multimodal communication are the course focus.",
+      "prerequisites": "Requisite: ACT English score 18-31; or SAT Evidence-Based Reading and Writing or Critical Reading score 430-690; or TOEFL iBT Writing score 18 or above. The course block excludes the credit-only option and states \"Not for major or minor\" without naming the credential; this wording is preserved without overriding its explicit inclusion in these degree tables.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=WRS%20105",
+      "source_id": "miami-fixed-courses-wrs",
+      "url": "https://bulletin.miami.edu/courses-az/wrs/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-fixed-courses-wrs"
+        ],
+        "locator": "WRS 105 complete course-description block",
+        "rationale": "Academic inquiry, argument and written and multimodal communication are the course focus.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-wrs-106",
@@ -1962,57 +2063,101 @@
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-umx-100",
       "code": "UMX 100",
       "name": "The University of Miami Experience",
-      "description": null,
+      "description": "Broad university orientation combines campus resources, academic and career planning, wellness and advising; no single taxonomy subject is defensible.",
       "prerequisites": null,
       "credits": 0.0,
       "credit_unit": "semester_hours",
-      "category": "applications",
-      "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=UMX%20100",
+      "category": "other",
+      "source_id": "miami-fixed-courses-umx",
+      "url": "https://bulletin.miami.edu/courses-az/umx/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-fixed-courses-umx"
+        ],
+        "locator": "UMX 100 complete course-description block",
+        "rationale": "Broad university orientation combines campus resources, academic and career planning, wellness and advising; no single taxonomy subject is defensible.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-acc-211",
       "code": "ACC 211",
       "name": "Principles of Financial Accounting",
-      "description": null,
-      "prerequisites": null,
+      "description": "Financial accounting reports assets, liabilities, equity, operating results and cash flows for business decisions.",
+      "prerequisites": "Requisite: Sophomore Standing or Higher.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "applications",
-      "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=ACC%20211",
+      "source_id": "miami-fixed-courses-acc",
+      "url": "https://bulletin.miami.edu/courses-az/acc/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-fixed-courses-acc"
+        ],
+        "locator": "ACC 211 complete course-description block",
+        "rationale": "Financial accounting reports assets, liabilities, equity, operating results and cash flows for business decisions.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-acc-212",
       "code": "ACC 212",
       "name": "Managerial Accounting",
-      "description": null,
-      "prerequisites": null,
+      "description": "Managerial accounting uses product costing, cost behavior and budgeting to address management problems.",
+      "prerequisites": "Prerequisite: ACC 211 or ACC 221 or ACC 223 and Requisite: Business School.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "applications",
-      "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=ACC%20212",
+      "source_id": "miami-fixed-courses-acc",
+      "url": "https://bulletin.miami.edu/courses-az/acc/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-fixed-courses-acc"
+        ],
+        "locator": "ACC 212 complete course-description block",
+        "rationale": "Managerial accounting uses product costing, cost behavior and budgeting to address management problems.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bsl-212",
       "code": "BSL 212",
       "name": "Introduction to Business Law and Ethics",
-      "description": null,
-      "prerequisites": null,
+      "description": "Business ethics and contract law are examined through critical analysis and writing.",
+      "prerequisites": "Requisite: Business School.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=BSL%20212",
+      "source_id": "miami-fixed-courses-bsl",
+      "url": "https://bulletin.miami.edu/courses-az/bsl/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-fixed-courses-bsl"
+        ],
+        "locator": "BSL 212 complete course-description block",
+        "rationale": "Business ethics and contract law are examined through critical analysis and writing.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-210",
@@ -2046,113 +2191,204 @@
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bus-150",
       "code": "BUS 150",
       "name": "Business Analytics",
-      "description": null,
-      "prerequisites": null,
+      "description": "Business cases teach spreadsheet, database and collaboration software use for decision making, rather than database architecture or algorithm theory.",
+      "prerequisites": "Requisite: Business School.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "applications",
-      "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=BUS%20150",
+      "source_id": "miami-fixed-courses-bus",
+      "url": "https://bulletin.miami.edu/courses-az/bus/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-fixed-courses-bus"
+        ],
+        "locator": "BUS 150 complete course-description block",
+        "rationale": "Business cases teach spreadsheet, database and collaboration software use for decision making, rather than database architecture or algorithm theory.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bus-300",
       "code": "BUS 300",
       "name": "Critical Thinking and Persuasion for Business",
-      "description": null,
-      "prerequisites": null,
+      "description": "Critical analysis and persuasive written and oral communication are the central skills.",
+      "prerequisites": "Prerequisite: WRS 106 or ENG 106 with a C- or better AND Requisite: Business School.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "applications",
-      "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=BUS%20300",
+      "category": "human_context",
+      "source_id": "miami-fixed-courses-bus",
+      "url": "https://bulletin.miami.edu/courses-az/bus/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-fixed-courses-bus"
+        ],
+        "locator": "BUS 300 complete course-description block",
+        "rationale": "Critical analysis and persuasive written and oral communication are the central skills.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-eco-211",
       "code": "ECO 211",
-      "name": "Principles of Microeconomics (Microeconomics)",
-      "description": null,
+      "name": "Principles of Microeconomics",
+      "description": "Microeconomics examines markets, firms, allocation and economic policy as domain knowledge.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "applications",
-      "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=ECO%20211",
+      "source_id": "miami-fixed-courses-eco",
+      "url": "https://bulletin.miami.edu/courses-az/eco/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-fixed-courses-eco"
+        ],
+        "locator": "ECO 211 complete course-description block",
+        "rationale": "Microeconomics examines markets, firms, allocation and economic policy as domain knowledge.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-eco-212",
       "code": "ECO 212",
-      "name": "Principles of Macroeconomics (Macroeconomics)",
-      "description": null,
+      "name": "Principles of Macroeconomics",
+      "description": "Macroeconomics examines income, employment, banking, growth and economic systems as domain knowledge.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "applications",
-      "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=ECO%20212",
+      "source_id": "miami-fixed-courses-eco",
+      "url": "https://bulletin.miami.edu/courses-az/eco/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-fixed-courses-eco"
+        ],
+        "locator": "ECO 212 complete course-description block",
+        "rationale": "Macroeconomics examines income, employment, banking, growth and economic systems as domain knowledge.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-fin-302",
       "code": "FIN 302",
       "name": "Fundamentals of Finance",
-      "description": null,
-      "prerequisites": null,
+      "description": "Finance tools address business valuation, capital markets, risk and budgeting.",
+      "prerequisites": "Prerequisite: MAS 110 or MTH 130 or MTH 141 or MTH 151 or MTH 161 or MTH 171 AND MAS 201 or MAS 311 or MTH 224 or ISE 311 or ISE 310 or PSY 292 and ACC 211 or ACC 221 or Pre/Corequisite ACC 223 . The published B-or-higher threshold applies to eligibility to major in finance; it is not stated as an AI-degree grade requirement.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "applications",
-      "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=FIN%20302",
+      "source_id": "miami-fixed-courses-fin",
+      "url": "https://bulletin.miami.edu/courses-az/fin/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-fixed-courses-fin"
+        ],
+        "locator": "FIN 302 complete course-description block",
+        "rationale": "Finance tools address business valuation, capital markets, risk and budgeting.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-mas-201",
       "code": "MAS 201",
-      "name": "Introduction to Business Statistics (minimum grade of C- required)",
-      "description": null,
-      "prerequisites": null,
+      "name": "Introduction to Business Statistics",
+      "description": "Probability, inference, hypothesis tests and descriptive statistical methods are central despite the business setting.",
+      "prerequisites": "Prerequisites: MAS 110 or MTH 130 or MTH 141 or MTH 151 or MTH 161 or MTH 171 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "mathematics",
-      "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=MAS%20201",
+      "source_id": "miami-fixed-courses-mas",
+      "url": "https://bulletin.miami.edu/courses-az/mas/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-fixed-courses-mas"
+        ],
+        "locator": "MAS 201 complete course-description block",
+        "rationale": "Probability, inference, hypothesis tests and descriptive statistical methods are central despite the business setting.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-mas-202",
       "code": "MAS 202",
       "name": "Intermediate Business Statistics",
-      "description": null,
-      "prerequisites": null,
+      "description": "Statistical testing, analysis of variance, regression, forecasting and statistical quality methods are central.",
+      "prerequisites": "Prerequisite: MAS 201 or MAS 311 or MTH 224 or ISE 311 or PSY 291 or PSY 292 and Requisite: Business School.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "mathematics",
-      "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=MAS%20202",
+      "source_id": "miami-fixed-courses-mas",
+      "url": "https://bulletin.miami.edu/courses-az/mas/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-fixed-courses-mas"
+        ],
+        "locator": "MAS 202 complete course-description block",
+        "rationale": "Statistical testing, analysis of variance, regression, forecasting and statistical quality methods are central.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-mgt-100",
       "code": "MGT 100",
       "name": "Managing for Success in the Global Environment",
-      "description": null,
-      "prerequisites": null,
+      "description": "Management practice and career planning are combined with communication, culture and teamwork without a clear primary subject.",
+      "prerequisites": "Requisite: Business School and Freshman Standing.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "applications",
-      "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=MGT%20100",
+      "category": "other",
+      "source_id": "miami-fixed-courses-mgt",
+      "url": "https://bulletin.miami.edu/courses-az/mgt/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-fixed-courses-mgt"
+        ],
+        "locator": "MGT 100 complete course-description block",
+        "rationale": "Management practice and career planning are combined with communication, culture and teamwork without a clear primary subject.",
+        "candidate_categories": [
+          "applications",
+          "human_context"
+        ]
+      }
     },
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-mgt-199",
@@ -2186,43 +2422,76 @@
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-mgt-303",
       "code": "MGT 303",
       "name": "Operations Management",
-      "description": null,
-      "prerequisites": null,
+      "description": "Operations-management decisions about production, scheduling, resources and inventory organize the course; quantitative techniques support those decisions.",
+      "prerequisites": "Prerequisite: MAS 201 or MAS 311 or MTH 224 or ISE 311 or PSY 291 or PSY 292 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "applications",
-      "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=MGT%20303",
+      "source_id": "miami-fixed-courses-mgt",
+      "url": "https://bulletin.miami.edu/courses-az/mgt/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-fixed-courses-mgt"
+        ],
+        "locator": "MGT 303 complete course-description block",
+        "rationale": "Operations-management decisions about production, scheduling, resources and inventory organize the course; quantitative techniques support those decisions.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-mgt-304",
       "code": "MGT 304",
       "name": "Organizational Behavior",
-      "description": null,
-      "prerequisites": null,
+      "description": "Organizational behavior centers motivation, leadership, groups, personality and organizational development.",
+      "prerequisites": "Requisite: Must be in Business School OR have a plan of MGMT_MN OR LDSP_MN AND Sophomore status or higher.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "applications",
-      "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=MGT%20304",
+      "category": "human_context",
+      "source_id": "miami-fixed-courses-mgt",
+      "url": "https://bulletin.miami.edu/courses-az/mgt/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-fixed-courses-mgt"
+        ],
+        "locator": "MGT 304 complete course-description block",
+        "rationale": "Organizational behavior centers motivation, leadership, groups, personality and organizational development.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-mgt-401",
       "code": "MGT 401",
-      "name": "Strategic Management (taken in the final semester)",
-      "description": null,
-      "prerequisites": null,
+      "name": "Strategic Management",
+      "description": "Business strategy formulation and implementation integrate management domains through cases.",
+      "prerequisites": "Requisite: Business School and Senior Standing.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "applications",
-      "source_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-catalog",
-      "url": "https://bulletin.miami.edu/search/?P=MGT%20401",
+      "source_id": "miami-fixed-courses-mgt",
+      "url": "https://bulletin.miami.edu/courses-az/mgt/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-fixed-courses-mgt"
+        ],
+        "locator": "MGT 401 complete course-description block",
+        "rationale": "Business strategy formulation and implementation integrate management domains through cases.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-mkt-201",
@@ -42928,7 +43197,16 @@
       "miami-cognate-at_0073-fall2026",
       "miami-cognate-at_0001-fall2026",
       "miami-cognate-ps_0073-fall2026",
-      "miami-cognate-ps_0051-fall2026"
+      "miami-cognate-ps_0051-fall2026",
+      "miami-fixed-courses-acc",
+      "miami-fixed-courses-bsl",
+      "miami-fixed-courses-bus",
+      "miami-fixed-courses-eco",
+      "miami-fixed-courses-fin",
+      "miami-fixed-courses-mas",
+      "miami-fixed-courses-mgt",
+      "miami-fixed-courses-umx",
+      "miami-fixed-courses-wrs"
     ],
     "sections": [
       "Full degree curriculum table, course alternatives, uncoded requirements and totals",
@@ -42940,7 +43218,8 @@
       "Cognate selection/declaration and individualized-cognate overlap restrictions",
       "Full October 2, 2026 individualized Master List: all 50 rendered pages, row/identity/area accounting, AH/PS candidates and conditional attribute/overlap/transfer context",
       "All 215 active directory entries reviewed for selected Fall 2026: 212 thematic plans and three individualized routes; 172 conditional AH/PS thematic plans attached, every displayed group/course row, inactive flag and applicability condition retained; STEM already supplied by major",
-      "2026-10-11 degree correctness reread: finite credit pools and named advanced-writing alternatives retain option roles rather than contextual-note ancestry"
+      "2026-10-11 degree correctness reread: finite credit pools and named advanced-writing alternatives retain option roles rather than contextual-note ancestry",
+      "Read 16 additional fixed-course descriptions and their published eligibility clauses; manual content classifications and exact credit amounts are preserved."
     ],
     "unresolved_requirements": [
       "University transfer policy contains inconsistent summer concurrent-enrollment statements; applicability needs authoritative clarification.",
@@ -42949,7 +43228,8 @@
     "metadata_gaps": [
       "Course descriptions, most prerequisites, alternative/elective credit amounts, public course sites and syllabi remain unverified.",
       "Current individual course prerequisite statements remain unverified where null; following the prerequisite structure is required.",
-      "The full individualized directory supplies no credits/descriptions/prerequisites; 121 source titles are truncated across all areas (104 among AH/PS candidates) and remain null unless separately verified. Alphabetic and transfer-equivalency codes preserve their exact identities. Thematic metadata does not confer universal enrollment permission or guaranteed offerings; cognate evidence does not establish AI program launch dates or outcomes."
+      "The full individualized directory supplies no credits/descriptions/prerequisites; 121 source titles are truncated across all areas (104 among AH/PS candidates) and remain null unless separately verified. Alphabetic and transfer-equivalency codes preserve their exact identities. Thematic metadata does not confer universal enrollment permission or guaranteed offerings; cognate evidence does not establish AI program launch dates or outcomes.",
+      "This fixed-course pass does not certify remaining named options or university cognate-course metadata. Unlabeled eligibility expressions are explicitly labeled as such; null prerequisites are unknown, not permission to enroll."
     ]
   },
   "award_options": [

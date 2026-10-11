@@ -230,3 +230,9 @@ communication are distinguished by the actual descriptions. Eligibility and
 credit restrictions remain separate from fixed degree obligations, and blocked
 search popups were not retried. Existing overlap/substitution/Rutgers evidence
 questions and GER subject review are not falsely certified by this subset.
+
+## Miami fixed-course content — 2026-10-11
+
+Read 32 distinct current course blocks across 12 public Bulletin subject chapters; applied only to the specified primary fixed-course IDs (16 BBA, 16 BSBA, 7 DS/AI BA, 13 DS/AI BS records). Prior BTE reviews remain. The 32 identities comprise 29 primary subjects, two mixed courses (CSC 113 and MGT 100) and one reviewed unclassified orientation (UMX 100). Source-defined zero credits are retained for UMX 100. Role counts remain 22/21, 21/33, 7/39 and 13/44 fixed/options respectively; the large contextual cognate inventory is not silently reclassified or counted as degree load.
+
+Finance 302's finance-major grade threshold is not an AI-degree rule. Eligibility conditions are recorded without adding prerequisite courses to fixed obligations. CSC 345 and DSC 344/345 have unlabeled code expressions, preserved with that qualifier. CSC 345 and 545 share the current title but remain distinct identities. WRS 105's credit-only and unnamed major/minor restriction is retained rather than interpreted as a contradiction of its degree-table role. Changed or missing source blocks fail the parser and require fresh review. All four comprehensive degree audits remain in progress.

@@ -19,3 +19,6 @@ register_cognate_pools(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
 
 from atlas.adapters.miami_bte_degree_courses import register as register_bte_metadata
 register_bte_metadata(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
+
+from atlas.adapters.miami_fixed_course_reviews import register as register_fixed_courses
+register_fixed_courses(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
