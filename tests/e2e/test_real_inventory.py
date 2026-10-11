@@ -11,7 +11,7 @@ from playwright.sync_api import expect
 from atlas import db
 from atlas.cli import ingest_all
 from atlas.site import build
-from tests.e2e.test_atlas import browser  # noqa: F401
+from tests.e2e.test_atlas import open_filters, browser  # noqa: F401
 
 pytestmark = pytest.mark.e2e
 
@@ -105,9 +105,11 @@ def test_real_family_variants_from_fresh_cli_database(browser,tmp_path,width):
         assert 'expand=' in page.url
         page.reload()
         expect(panel).to_have_attribute('open','')
+        open_filters(page)
         page.locator('#filter-discipline').select_option(discipline)
         expect(panel.locator('.program-card:visible')).to_have_count(len(matching))
         page.locator('[data-compare="'+first['id']+'"]').check()
+        open_filters(page)
         page.locator('#filter-discipline').select_option('')
         page.locator('[data-compare="'+second['id']+'"]').check()
         expect(page.locator('.compare-table thead th')).to_have_count(3)
@@ -126,6 +128,7 @@ def test_real_family_variants_from_fresh_cli_database(browser,tmp_path,width):
             expect(variants).to_contain_text(local['title'])
         page.reload()
         expect(page.locator('.compare-table thead th')).to_have_count(3)
+        open_filters(page)
         page.locator('#filter-discipline').select_option(discipline)
         page.go_back();expect(page.locator('#filter-discipline')).to_have_value('')
         page.go_forward();expect(page.locator('#filter-discipline')).to_have_value(discipline)

@@ -53,18 +53,27 @@ def page(browser):
     context.close()
 
 
+def open_filters(page):
+    panel=page.locator('#filter-panel')
+    if panel.get_attribute('open') is None:
+        panel.locator(':scope > summary').click()
+
+
 def test_filters_empty_reset_detail_and_base_path(page, site):
     from playwright.sync_api import expect
     errors = []
     page.on("pageerror", lambda error: errors.append(str(error)))
     page.goto(site)
     expect(page.locator(".program-card:visible")).to_have_count(2)
+    open_filters(page)
     page.locator("#filter-award").select_option("BS")
     expect(page.locator(".program-card:visible")).to_have_count(1)
+    open_filters(page)
     page.locator("#filter-calendar").select_option("quarter")
     expect(page.locator("#empty-state")).to_be_visible()
     page.locator("#empty-reset").click()
     expect(page.locator(".program-card:visible")).to_have_count(2)
+    open_filters(page)
     page.locator("#filter-cohort").select_option("National Universities")
     expect(page.locator(".program-card:visible")).to_have_count(1)
     page.get_by_role("link", name="View program").first.click()
@@ -110,6 +119,7 @@ def test_search_history_mobile_and_no_document_overflow(page, site):
     page.set_viewport_size({"width": 390, "height": 844})
     page.goto(site)
     page.locator("#tab-lac-minors").click()
+    open_filters(page)
     page.locator("#search").fill("Institution 4")
     expect(page.locator(".program-card:visible")).to_have_count(1)
     page.locator('[data-compare="test-ai-4"]').check()
@@ -117,17 +127,22 @@ def test_search_history_mobile_and_no_document_overflow(page, site):
     expect(page.locator("#search")).to_have_value("Institution 4")
     expect(page.locator('[data-compare="test-ai-4"]')).to_be_checked()
     assert page.evaluate("document.documentElement.scrollWidth <= innerWidth")
+    open_filters(page)
     page.locator("#reset-filters").click()
     expect(page.locator(".program-card:visible")).to_have_count(2)
     page.go_back()
     expect(page.locator("#search")).to_have_value("Institution 4")
+    open_filters(page)
     page.locator('#search').fill('AI 001')
     expect(page.locator('.program-card:visible')).to_have_count(1)
     expect(page.locator('.program-card:visible')).to_have_attribute('data-program-id', 'test-ai-0')
+    open_filters(page)
     page.locator('#search').fill('machine LEARNING')
     expect(page.locator('.program-card:visible')).to_have_count(3)
+    open_filters(page)
     page.locator('#filter-category').select_option('ai_ml')
     expect(page.locator('.program-card:visible')).to_have_count(3)
+    open_filters(page)
     page.locator('#filter-category').select_option('other')
     expect(page.locator('#empty-state')).to_be_visible()
     assert not any('/data.json' in url for url in requests)
@@ -148,8 +163,10 @@ def test_no_javascript_baseline(browser, site):
 def test_program_type_and_evidence_filters_preserve_history(page, site):
     from playwright.sync_api import expect
     page.goto(site)
+    open_filters(page)
     page.locator('#filter-evidence').select_option('pending')
     expect(page.locator('.program-card:visible')).to_have_count(1)
+    open_filters(page)
     page.locator('#filter-type').select_option('additional_major')
     expect(page.locator('.program-card:visible')).to_have_count(1)
     expect(page.locator('.program-card:visible .card-badges')).to_contain_text('Additional major')
@@ -157,6 +174,7 @@ def test_program_type_and_evidence_filters_preserve_history(page, site):
     page.reload()
     expect(page.locator('#filter-type')).to_have_value('additional_major')
     expect(page.locator('#filter-evidence')).to_have_value('pending')
+    open_filters(page)
     page.locator('#filter-evidence').select_option('complete')
     expect(page.locator('#empty-state')).to_be_visible()
     page.go_back()
@@ -277,10 +295,12 @@ def test_family_expand_discipline_compare_history_and_detail(page,site,tmp_path,
     assert 'expand=test-family' in page.url
     page.reload()
     expect(family).to_have_attribute('open','')
+    open_filters(page)
     page.locator('#filter-discipline').select_option('Physics')
     expect(page.locator('.program-card:visible')).to_have_count(1)
     expect(family.locator('.family-match-count')).to_have_text('1 matching variant')
     page.locator('[data-compare="test-ai-1"]').check()
+    open_filters(page)
     page.locator('#filter-discipline').select_option('Economics')
     page.locator('[data-compare="test-ai-0"]').check()
     expect(page.locator('.compare-table thead th')).to_have_count(3)
@@ -299,6 +319,7 @@ def test_family_expand_discipline_compare_history_and_detail(page,site,tmp_path,
     page.reload()
     expect(page.locator('#filter-discipline')).to_have_value('Economics')
     expect(page.locator('.compare-table thead th')).to_have_count(3)
+    open_filters(page)
     page.locator('#filter-discipline').select_option('Physics')
     page.go_back()
     expect(page.locator('#filter-discipline')).to_have_value('Economics')

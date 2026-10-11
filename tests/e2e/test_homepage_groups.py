@@ -5,7 +5,7 @@ import pytest
 from playwright.sync_api import expect
 
 from atlas.site import build
-from tests.e2e.test_atlas import browser, page, site, family_fixture  # noqa: F401
+from tests.e2e.test_atlas import open_filters, browser, page, site, family_fixture  # noqa: F401
 from tests.test_site import site_data  # noqa: F401
 
 pytestmark = pytest.mark.e2e
@@ -97,6 +97,7 @@ def test_legacy_type_category_search_and_explicit_empty_state(
     expect(group(page, 'unclassified')).not_to_be_visible()
     expect(page.locator('.compare-table thead th')).to_have_count(2)
     expect(tab(nu, 'minors').locator('.path-count')).to_have_text('1')
+    open_filters(page)
     page.locator('#search').fill('no-such-program')
     expect(tab(nu, 'minors').locator('.path-count')).to_have_text('0')
     expect(nu.locator('.cohort-empty:visible')).to_have_count(1)
@@ -169,9 +170,11 @@ def test_major_awards_multiple_options_and_combined_state(
     expect(lac.locator('[data-program-id="test-ai-2"]')).to_be_visible()
     expect(lac.locator('[data-program-id="test-ai-2"] .card-badges')).to_contain_text('Additional major')
     award.select_option('BA')
+    open_filters(page)
     page.locator('#search').fill('multi degree')
     expect(nu.locator('.program-card:visible')).to_have_count(1)
     expect(page.locator('#result-count')).to_contain_text('1')
+    open_filters(page)
     page.locator('#filter-cohort').select_option('National Universities')
     page.reload()
     expect(award).to_have_value('BA')

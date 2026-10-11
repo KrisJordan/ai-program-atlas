@@ -17,6 +17,7 @@
   let expansionSpecified = false;
   const institutionMap = new Map(institutions.map(i => [i.id, i]));
   const form = document.getElementById('filters');
+  const filterPanel = document.getElementById('filter-panel');
   const controls = Object.fromEntries(keys.map(k => [k, form.elements.namedItem(k)]));
   const byId = new Map(programs.map(p => [p.id, p]));
   const cards = [...document.querySelectorAll('[data-program-id]')];
@@ -91,7 +92,8 @@
       const group = section.dataset.cohortGroup;
       const value = params.get('path_' + group);
       const award = params.get('award_' + group);
-      awardState[group] = ['BS','BSE','BA','other'].includes(award) ? award : '';
+      awardState[group] = ['BS','BSE','BA','second_major','other'].includes(award) ? award : '';
+      if (controls.type.value === 'additional_major' && awardState[group] === 'other') awardState[group] = '';
       section.querySelector('[data-major-award]').value = awardState[group];
       pathState[group] = pathForType(controls.type.value) || (['majors', 'concentrations', 'minors'].includes(value) ? value : pathForType(controls.award.value) || 'majors');
     });
@@ -176,6 +178,8 @@
       ['Shared family requirements', familyRequirementList],
       ['Variant requirements / changes', variantRequirementList],
       ['Award / type', p => e(p.award_level) + '<small>' + e(pretty(p.program_kind)) + '</small>' + (p.award_options.length ? '<small>Offered awards: ' + p.award_options.map(option => e(option.label)).join(' · ') + '</small>' : '')],
+      ['Parent program / award', p => p.parent_context_html || 'Not applicable to this program type'],
+      ['Second-major eligibility', p => p.major_context_html || 'No second-major-only relationship recorded'],
       ['U.S. News cohort context', p => { const ranks = institutionMap.get(p.institution?.id)?.rankings || p.institution?.rankings || []; return ranks.length ? ranks.map(r => link(r.source_url, `${r.publisher || 'U.S. News'} ${r.edition || 'Edition unknown'} · ${r.category || 'Category unknown'} · ${rankLabel(r)}`) + '<small>Membership evidence: ' + e(pretty(r.verification_status)) + '</small>').join('<br>') + '<small>Institution context, not teaching quality. Different categories are not comparable.</small>' : 'Ranking provenance not recorded'; }],
       ['Calendar', p => e(pretty(p.institution?.calendar))],
       ['Catalog year', p => e(p.catalog_year)],
@@ -233,6 +237,11 @@
   }
 
   function render() {
+    const filterLabels = {q:'Search',type:'Program type',award:'Award',evidence:'Evidence',calendar:'Calendar',institution:'Institution',cohort:'Category',category:'Course category',discipline:'Discipline'};
+    const activeFilters = keys.filter(key => controls[key].value.trim()).map(key => `${filterLabels[key]}: ${key === 'q' ? controls[key].value.trim() : controls[key].selectedOptions[0]?.textContent || controls[key].value}`);
+    const filterSummary = document.getElementById('active-filter-summary');
+    filterSummary.textContent = activeFilters.length ? `${activeFilters.length} active ${activeFilters.length === 1 ? 'filter' : 'filters'} · ${activeFilters.slice(0,2).map(text => text.length > 64 ? text.slice(0,61) + '…' : text).join(' · ')}${activeFilters.length > 2 ? ` · +${activeFilters.length - 2} more` : ''}` : 'No search filters active';
+    filterSummary.title = activeFilters.join(' · ');
     sortDirectory();
     let count = 0;
     cards.forEach(card => {
@@ -247,7 +256,7 @@
       const candidates = allCandidates.filter(majorMatches);
       const awardControl = section.querySelector('[data-major-award]');
       awardControl.value = awardState[group];
-      const awardLabels = {'':'All awards',BS:'BS',BSE:'BSE',BA:'BA',other:'Other / unspecified'};
+      const awardLabels = {'':'All awards',BS:'BS',BSE:'BSE',BA:'BA',second_major:'Second majors',other:'Other / unspecified'};
       [...awardControl.options].forEach(option => { const n = allCandidates.filter(p => p.program_path === 'majors' && (!option.value || p.major_awards.includes(option.value))).length; option.textContent = `${awardLabels[option.value]} (${n})`; });
       section.querySelectorAll('[role=tab]').forEach(tab => {
         const active = tab.dataset.path === pathState[group];
@@ -281,7 +290,7 @@
 
   cohortSections.forEach(section => {
     const tabs = [...section.querySelectorAll('[role=tab]')];
-    section.querySelector('[data-major-award]').addEventListener('change', event => { awardState[section.dataset.cohortGroup] = event.target.value; controls.award.value = ''; clearTimeout(timer); writeState(); });
+    section.querySelector('[data-major-award]').addEventListener('change', event => { awardState[section.dataset.cohortGroup] = event.target.value; controls.award.value = ''; if ((event.target.value === 'second_major' && controls.type.value === 'degree') || (['BS','BSE','BA'].includes(event.target.value) && controls.type.value === 'additional_major')) controls.type.value = ''; clearTimeout(timer); writeState(); });
     const selectPath = tab => {
       pathState[section.dataset.cohortGroup] = tab.dataset.path;
       if (controls.type.value && pathForType(controls.type.value) !== tab.dataset.path) controls.type.value = '';
@@ -307,10 +316,10 @@
   profileControl.addEventListener('change', () => { profileMode = profileControl.value; clearTimeout(timer); writeState(); announce(profileMode === 'required' ? 'Showing required curriculum profiles.' : 'Showing elective option profiles.'); });
   form.addEventListener('submit', event => { event.preventDefault(); clearTimeout(timer); writeState(); });
   controls.q.addEventListener('input', () => { clearTimeout(timer); timer = setTimeout(writeState, 220); });
-  keys.filter(k => k !== 'q').forEach(key => controls[key].addEventListener('change', () => { clearTimeout(timer); if (key === 'award') { Object.keys(awardState).forEach(group => { awardState[group] = ''; }); const path = pathForType(controls.award.value) || (controls.award.value ? 'majors' : null); if (path) Object.keys(pathState).forEach(group => { pathState[group] = path; }); } if (key === 'type' && controls.type.value) Object.keys(pathState).forEach(group => { pathState[group] = pathForType(controls.type.value); }); if (key === 'discipline' && controls.discipline.value) programs.filter(p => (p.family?.disciplines || []).includes(controls.discipline.value)).forEach(p => { if (!expanded.includes(p.family.id)) expanded.push(p.family.id); }); writeState(); }));
+  keys.filter(k => k !== 'q').forEach(key => controls[key].addEventListener('change', () => { clearTimeout(timer); if (key === 'award') { Object.keys(awardState).forEach(group => { awardState[group] = ''; }); const path = pathForType(controls.award.value) || (controls.award.value ? 'majors' : null); if (path) Object.keys(pathState).forEach(group => { pathState[group] = path; }); } if (key === 'type' && controls.type.value) Object.keys(pathState).forEach(group => { pathState[group] = pathForType(controls.type.value); awardState[group] = ''; }); if (key === 'discipline' && controls.discipline.value) programs.filter(p => (p.family?.disciplines || []).includes(controls.discipline.value)).forEach(p => { if (!expanded.includes(p.family.id)) expanded.push(p.family.id); }); writeState(); }));
   const reset = () => { clearTimeout(timer); sortControl.value = 'rank'; keys.forEach(key => { controls[key].value = ''; }); Object.keys(pathState).forEach(group => { pathState[group] = 'majors'; awardState[group] = ''; }); writeState(); };
   document.getElementById('reset-filters').addEventListener('click', reset);
-  document.getElementById('empty-reset').addEventListener('click', () => { reset(); controls.q.focus(); });
+  document.getElementById('empty-reset').addEventListener('click', () => { reset(); filterPanel.open = true; controls.q.focus(); });
   document.getElementById('clear-comparison').addEventListener('click', () => {
     selected = [];
     writeState();

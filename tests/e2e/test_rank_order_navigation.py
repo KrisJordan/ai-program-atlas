@@ -5,7 +5,7 @@ import pytest
 from playwright.sync_api import expect
 
 from atlas.site import build
-from tests.e2e.test_atlas import browser, page, site  # noqa: F401
+from tests.e2e.test_atlas import open_filters, browser, page, site  # noqa: F401
 from tests.test_site import site_data  # noqa: F401
 
 pytestmark = pytest.mark.e2e
@@ -95,6 +95,7 @@ def test_numeric_ties_unknowns_families_and_filters_in_both_categories(
                 f'{cohort}-two-{path}-a',f'{cohort}-two-{path}']
         expect(root.locator(f'[data-program-id="{cohort}-beta-{path}"] .card-ranking')).to_contain_text('#10')
         expect(root.locator(f'[data-program-id="{cohort}-unverified-{path}"] .card-ranking')).to_contain_text('not used for sorting')
+    open_filters(page)
     page.locator('#search').fill('Beta Ten')
     for cohort in ('nu','lac'):
         expect(section(page,cohort).locator('.program-card:visible')).to_have_count(1)
@@ -129,6 +130,7 @@ def test_explicit_sort_preserves_award_path_comparison_and_history(page,site,tmp
     page.go_forward()
     expect(page.locator('#sort-order')).to_have_value('rank')
     page.locator('#sort-order').select_option('name')
+    open_filters(page)
     page.locator('#reset-filters').click()
     expect(page.locator('#sort-order')).to_have_value('rank')
 
