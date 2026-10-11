@@ -206,3 +206,48 @@ def test_cmu_plain_required_math_singletons_are_not_optional_menus():
     for code in ['15-151','21-127']:
         assert requirement_profile(only_course(p,'cmu-'+code))['options']['count']==1
     assert next(c for c in p['courses'] if c['id']=='cmu-15-213')['category']=='systems'
+
+
+def test_rice_full_independent_inventory_preserves_manual_roles_and_crosslists():
+    ledger = json.loads((ROOT/'research/degree-audit/independent-review.json').read_text())
+    entry = next(e for e in ledger['programs'] if e['institution_id']=='rice-university')
+    p = load(entry['program_id'])
+    courses = {c['code']:c for c in p['courses']}
+    assert len(entry['course_review']) == len(courses) == 43
+    assert {r['code'] for r in entry['course_review']} == set(courses)
+    for reviewed in entry['course_review']:
+        course = courses[reviewed['code']]
+        assert course['name'] == reviewed['title']
+        assert course['category'] == reviewed['category']
+        assert course['category_review']['status'] == reviewed['status']
+        assert course['credits'] == reviewed['credits']
+        assert course['credit_unit'] == reviewed['credit_unit']
+        assert course['prerequisites'] == reviewed['prerequisites']
+        profile = requirement_profile(only_course(p, course['id']))
+        assert profile[reviewed['role']]['count'] == 1
+        assert sum(profile[role]['count'] for role in ['required','options','unresolved']) == 1
+    profile = requirement_profile(p)
+    assert profile['identity'] == entry['expected_identity']
+    for role in ['required','options','unresolved']:
+        manual = entry['expected_profile'][role]
+        assert profile[role]['count'] == manual['count']
+        assert profile[role]['categories'] == {k:manual['categories'].get(k,0) for k in profile[role]['categories']}
+    assert profile['required']['source_record_count'] == 13
+    assert profile['options']['source_record_count'] == 30
+    assert profile['options']['classification'] == dict(reviewed=24,mixed=2,unclassified=0,unreviewed=0)
+    assert entry['second_pass_status']=='partial' and not entry['full_degree_verified']
+
+
+def test_rice_rendered_required_chart_cannot_lose_reviewed_computing_foundations():
+    from bs4 import BeautifulSoup
+    from atlas.site import category_chart
+    p = load('rice-university-artificial-intelligence-bs-degree')
+    soup = BeautifulSoup(category_chart(p), 'html.parser')
+    required = soup.select_one('[data-profile=required]')
+    options = soup.select_one('[data-profile=options]')
+    assert required.select_one('[data-category=foundations] strong').get_text() == '3'
+    assert required.select_one('[data-category=systems] strong').get_text() == '2'
+    assert '13 distinct' in required.select_one('.profile-total').get_text()
+    assert '13 reviewed' in required.select_one('.profile-taxonomy').get_text()
+    assert '26 distinct' in options.select_one('.profile-total').get_text()
+    assert '30 retained source-code records' in options.get_text()
