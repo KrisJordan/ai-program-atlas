@@ -61,3 +61,19 @@ def test_political_syllabi_preserve_conditional_preparation_and_distinct_iap_ver
     composite=by['mit-ai-hass-middle-eastern-studies-17-565-17-567']
     assert any('17.565 only' in n for n in composite['notes'])
     assert composite['syllabus'].endswith('identity-spring-2019/pages/syllabus/')
+
+
+def test_history_homepage_is_course_site_without_synthesized_syllabus_fields():
+    p=json.loads(Path('data/programs/mit-ai-decision-making-bs.json').read_text())
+    by={c['id']:c for c in p['courses']}
+    rome=by['mit-ai-hass-ancient-and-medieval-studies-21h-132']
+    assert rome['public_site']=='https://ocw.mit.edu/courses/21h-132-the-ancient-world-rome-spring-2017/'
+    assert rome['description'] and rome['prerequisites'] is None and rome['syllabus'] is None
+    h=importlib.import_module('atlas.adapters.mit-ai-decision-making-bs.hass_metadata')
+    sid='mit-ai-hass-review-ocw-21h-132-the-ancient-world-rome-spring-2017'
+    path=Path(h.INTEGRATED['cache_paths'][sid])
+    if not path.exists():pytest.skip('Optional actual public course homepage capture absent')
+    rows=h.parse(path.read_text(),rome['public_site'])['courses']
+    row=next(c for c in rows if c['id']==rome['id'])
+    assert row['description']==rome['description']
+    assert row['prerequisites'] is None and row['syllabus'] is None
