@@ -1,0 +1,311 @@
+{
+  "audit_date": "2026-10-11",
+  "reviewer": "coordinator",
+  "scope": "Independent Case BA/BS degree-policy and published UGER pool review, not a full second pass on every course description.",
+  "program_ids": [
+    "case-western-reserve-university-artificial-intelligence-ba-degree",
+    "case-western-reserve-university-artificial-intelligence-bs-degree"
+  ],
+  "second_pass_status": "partial",
+  "policy_review_status": "verified_within_recorded_catalog_scope",
+  "sources": [
+    {
+      "url": "https://bulletin.case.edu/undergraduate-academics/bachelors-degree-requirements/",
+      "reviewed_at": "2026-10-11",
+      "source_sha256": "23806d59e5ead1f37958f08c3f9ec8c69c79e3e3bc22b3928b01712983ec16f2",
+      "access_status": "Independently reread existing permitted official-source capture; no fresh network fetch claimed.",
+      "locator": "Full major requirements or degree/UGER governing prose and approval tables; registrar permission conditions and faculty routing."
+    },
+    {
+      "url": "https://bulletin.case.edu/undergraduate-academics/unified-general-education-requirements/",
+      "reviewed_at": "2026-10-11",
+      "source_sha256": "5487d7d9c7c75974d0c957ab8d71a3720b24cdd9ebc99e85c73f53eb13ac08c4",
+      "access_status": "Independently reread existing permitted official-source capture; no fresh network fetch claimed.",
+      "locator": "Full major requirements or degree/UGER governing prose and approval tables; registrar permission conditions and faculty routing."
+    },
+    {
+      "url": "https://case.edu/registrar/general/student-information-system-sis/sis-resources/faculty-reviewing-permission-requests",
+      "reviewed_at": "2026-10-11",
+      "source_sha256": "6fb19a6fc216cc9c2fcb3d64158e8490170c4ecbb286334033becae935ace23c",
+      "access_status": "Independently reread existing permitted official-source capture; no fresh network fetch claimed.",
+      "locator": "Full major requirements or degree/UGER governing prose and approval tables; registrar permission conditions and faculty routing."
+    },
+    {
+      "url": "https://case.edu/registrar/registration-classes/registration-information/permissions",
+      "reviewed_at": "2026-10-11",
+      "source_sha256": "6e6b6656a0d3f877e9ce1a351522f50648bee2b5a49eac20d714251c930bbfeb",
+      "access_status": "Independently reread existing permitted official-source capture; no fresh network fetch claimed.",
+      "locator": "Full major requirements or degree/UGER governing prose and approval tables; registrar permission conditions and faculty routing."
+    },
+    {
+      "url": "https://bulletin.case.edu/engineering/computer-data-sciences/artificial-intelligence-ba/",
+      "reviewed_at": "2026-10-11",
+      "source_sha256": "9f213492b14d8d0a0e3e25d479cfd0aa38059535c4190934be61092c7350eec9",
+      "access_status": "Independently reread existing permitted official-source capture; no fresh network fetch claimed.",
+      "locator": "Full major requirements or degree/UGER governing prose and approval tables; registrar permission conditions and faculty routing."
+    },
+    {
+      "url": "https://bulletin.case.edu/engineering/computer-data-sciences/artificial-intelligence-bs/",
+      "reviewed_at": "2026-10-11",
+      "source_sha256": "0843331ffbbb7ca1630d689b7a5a652a52a28666c034957734250c6bcc1331ea",
+      "access_status": "Independently reread existing permitted official-source capture; no fresh network fetch claimed.",
+      "locator": "Full major requirements or degree/UGER governing prose and approval tables; registrar permission conditions and faculty routing."
+    }
+  ],
+  "approval_pools": [
+    {
+      "pool": "Academic Inquiry Seminar",
+      "source_distinct_codes": 4,
+      "source_bundles": [],
+      "non_enumerated_options": 0,
+      "program_checks": [
+        {
+          "award": "BA",
+          "source_pool_matches": true
+        },
+        {
+          "award": "BS",
+          "source_pool_matches": true
+        }
+      ]
+    },
+    {
+      "pool": "Communication-Intensive",
+      "source_distinct_codes": 180,
+      "source_bundles": [],
+      "non_enumerated_options": 0,
+      "program_checks": [
+        {
+          "award": "BA",
+          "source_pool_matches": true
+        },
+        {
+          "award": "BS",
+          "source_pool_matches": true
+        }
+      ]
+    },
+    {
+      "pool": "Disciplinary Communication",
+      "source_distinct_codes": 92,
+      "source_bundles": [
+        [
+          "EBME 356",
+          "EBME 370"
+        ],
+        [
+          "ECIV 260",
+          "ECIV 268"
+        ],
+        [
+          "EMSE 220",
+          "EMSE 320"
+        ],
+        [
+          "PHYS 301",
+          "PHYS 303"
+        ],
+        [
+          "PHYS 317",
+          "PHYS 303"
+        ]
+      ],
+      "non_enumerated_options": 0,
+      "program_checks": [
+        {
+          "award": "BA",
+          "source_pool_matches": true
+        },
+        {
+          "award": "BS",
+          "source_pool_matches": true
+        }
+      ]
+    },
+    {
+      "pool": "Capstone Project",
+      "source_distinct_codes": 44,
+      "source_bundles": [
+        [
+          "EEPS 391",
+          "EEPS 392"
+        ],
+        [
+          "HTEC 399A",
+          "HTEC 399B"
+        ],
+        [
+          "MUHI 395A",
+          "MUHI 395B"
+        ]
+      ],
+      "non_enumerated_options": 1,
+      "program_checks": [
+        {
+          "award": "BA",
+          "source_pool_matches": true
+        },
+        {
+          "award": "BS",
+          "source_pool_matches": true
+        }
+      ]
+    },
+    {
+      "pool": "Quantitative Reasoning",
+      "source_distinct_codes": 16,
+      "source_bundles": [],
+      "non_enumerated_options": 0,
+      "program_checks": [
+        {
+          "award": "BA",
+          "source_pool_matches": true
+        },
+        {
+          "award": "BS",
+          "source_pool_matches": true
+        }
+      ]
+    },
+    {
+      "pool": "Semester Wellness with significant physical movement",
+      "source_distinct_codes": 29,
+      "source_bundles": [],
+      "non_enumerated_options": 0,
+      "program_checks": [
+        {
+          "award": "BA",
+          "source_pool_matches": true
+        },
+        {
+          "award": "BS",
+          "source_pool_matches": true
+        }
+      ]
+    },
+    {
+      "pool": "Half-semester Wellness with significant physical movement",
+      "source_distinct_codes": 41,
+      "source_bundles": [],
+      "non_enumerated_options": 0,
+      "program_checks": [
+        {
+          "award": "BA",
+          "source_pool_matches": true
+        },
+        {
+          "award": "BS",
+          "source_pool_matches": true
+        }
+      ]
+    },
+    {
+      "pool": "Semester Wellness without significant physical movement",
+      "source_distinct_codes": 25,
+      "source_bundles": [],
+      "non_enumerated_options": 0,
+      "program_checks": [
+        {
+          "award": "BA",
+          "source_pool_matches": true
+        },
+        {
+          "award": "BS",
+          "source_pool_matches": true
+        }
+      ]
+    },
+    {
+      "pool": "Half-semester Wellness without significant physical movement",
+      "source_distinct_codes": 16,
+      "source_bundles": [],
+      "non_enumerated_options": 0,
+      "program_checks": [
+        {
+          "award": "BA",
+          "source_pool_matches": true
+        },
+        {
+          "award": "BS",
+          "source_pool_matches": true
+        }
+      ]
+    },
+    {
+      "pool": "Moral and Ethical Reasoning",
+      "source_distinct_codes": 99,
+      "source_bundles": [],
+      "non_enumerated_options": 0,
+      "program_checks": [
+        {
+          "award": "BA",
+          "source_pool_matches": true
+        },
+        {
+          "award": "BS",
+          "source_pool_matches": true
+        }
+      ]
+    },
+    {
+      "pool": "Understanding Global Perspectives",
+      "source_distinct_codes": 219,
+      "source_bundles": [],
+      "non_enumerated_options": 0,
+      "program_checks": [
+        {
+          "award": "BA",
+          "source_pool_matches": true
+        },
+        {
+          "award": "BS",
+          "source_pool_matches": true
+        }
+      ]
+    },
+    {
+      "pool": "Human Diversity and Commonality",
+      "source_distinct_codes": 231,
+      "source_bundles": [],
+      "non_enumerated_options": 0,
+      "program_checks": [
+        {
+          "award": "BA",
+          "source_pool_matches": true
+        },
+        {
+          "award": "BS",
+          "source_pool_matches": true
+        }
+      ]
+    },
+    {
+      "pool": "Local and Global Engagement",
+      "source_distinct_codes": 51,
+      "source_bundles": [],
+      "non_enumerated_options": 8,
+      "program_checks": [
+        {
+          "award": "BA",
+          "source_pool_matches": true
+        },
+        {
+          "award": "BS",
+          "source_pool_matches": true
+        }
+      ]
+    }
+  ],
+  "findings": {
+    "degree_totals": "The BA requires 120 credits, including 90 arts/sciences and 30 upper-division credits, with a six-credit arts/sciences exception for concurrent BA+BS students and major GPA of 2.000. The engineering AI BS requires 123 credits; separate Arts and Sciences BS rules do not apply.",
+    "university": "CWRU GPA must be at least 2.000. Complete 60 CWRU credits, including 15 after reaching 105 total credits, and half of major requirements at CWRU, including required related-field work. Matriculation or later catalog selection and review after ten years remain explicit.",
+    "breadth": "AI belongs to STEM+N. Complete 18 outside-area credits, with six each in arts/humanities and social sciences/management. Preserve the nine-credit test/transfer limit, three CWRU credits per area and approved incoming-transfer exception. One cross-listed course counts in only one breadth area.",
+    "communication": "Inquiry, two communication-intensive courses, disciplinary communication, capstone and portfolio remain required. Minimum credits, CWRU residency and appeal conditions remain explicit. Variable-credit capstones require three total credits; the MGMT 395 route requires three sections.",
+    "wellness": "Complete two semester-equivalents, including one with physical movement, independent of credit amounts. Repetition exceptions, formal enrollment, military waiver and transfer conditions remain explicit.",
+    "perspectives": "Four distinct obligations remain. Local/global engagement can use an approved activity. Transfer substitution requires an FSCUE appeal. A course can meet every approved requirement except duplicate breadth areas.",
+    "permissions": "Requisite and career restrictions remain binding unless the appropriate permission is granted. Career restrictions require school registrar/administrator action; approval still requires subsequent registration. No automatic waiver or eligibility is inferred.",
+    "secondary_major": "Full-degree records preserve the school-specific requirement exemption when AI serves only as a secondary major within another undergraduate degree.",
+    "substitutions": "Unlisted AI-related substitutions require advisor permission; technical electives require chair/designee permission. At most two of four technical electives may come from Group 2, without double counting. Suggested two-course sequences remain recommendations."
+  },
+  "remaining_second_pass": "The coordinator separately read 207 UGER course descriptions and previously checked the fixed core. This policy review does not assert a second reading of all 744 BA or 756 BS records, complete cross-list reconciliation, or a full-degree second-pass certification."
+}
