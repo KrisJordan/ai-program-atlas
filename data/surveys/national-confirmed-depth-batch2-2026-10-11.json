@@ -1,0 +1,492 @@
+[
+  {
+    "institution_id": "north-carolina-state-university",
+    "status": "confirmed",
+    "checked_at": "2026-10-11",
+    "note": "The undergraduate catalog directory lists two additional formal AI/ML concentrations: Computer Engineering BS and Electrical Engineering BS. Both have independent catalog plans and differ in open-elective hours and the placement of ECE 525. Their local core and published named elective lists are captured; broader BS curricula are outside these concentration records.",
+    "sources": [
+      {
+        "url": "https://catalog.ncsu.edu/undergraduate/",
+        "title": "Undergraduate catalog 2026–2027",
+        "locator": "Majors, concentrations and Minors directory; Artificial Intelligence entries",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "access_method": "robots-aware HTTP; readable official HTML"
+      },
+      {
+        "url": "https://catalog.ncsu.edu/undergraduate/engineering/electrical-computer/computer-engineering-ai-machine-learning-concentration-bs/",
+        "title": "Computer Engineering (BS): Artificial Intelligence and Machine Learning Concentration",
+        "locator": "AI/ML Concentration; AI/ML Electives; ECE Elective List; other Open Electives; footnotes",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "access_method": "robots-aware HTTP; readable official HTML"
+      },
+      {
+        "url": "https://catalog.ncsu.edu/undergraduate/engineering/electrical-computer/electrical-engineering-bs-ai-machine-learning-concentration/",
+        "title": "Electrical Engineering (BS): Artificial Intelligence and Machine Learning Concentration",
+        "locator": "AI/ML Concentration; AI/ML Required Electives; ECE and other open lists; footnotes",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "access_method": "robots-aware HTTP; readable official HTML"
+      }
+    ],
+    "discoveries": [
+      {
+        "title": "Artificial Intelligence and Machine Learning concentration (Computer Engineering BS)",
+        "kind": "concentration",
+        "award_level": "concentration",
+        "url": "https://catalog.ncsu.edu/undergraduate/engineering/electrical-computer/computer-engineering-ai-machine-learning-concentration-bs/",
+        "program_id": "ncsu-computer-engineering-ai-ml-concentration"
+      },
+      {
+        "title": "Artificial Intelligence and Machine Learning concentration (Electrical Engineering BS)",
+        "kind": "concentration",
+        "award_level": "concentration",
+        "url": "https://catalog.ncsu.edu/undergraduate/engineering/electrical-computer/electrical-engineering-bs-ai-machine-learning-concentration/",
+        "program_id": "ncsu-electrical-engineering-ai-ml-concentration"
+      }
+    ],
+    "new_program_ids": [
+      "ncsu-computer-engineering-ai-ml-concentration",
+      "ncsu-electrical-engineering-ai-ml-concentration"
+    ],
+    "existing_program_ids": [
+      "ncsu-cs-ai-concentration"
+    ],
+    "inspection_scope": "Bounded undergraduate program/minor directory and selected formal concentration/specialization branches; not an institution-wide exhaustive absence review.",
+    "remaining_work": [
+      "Review applicable concentration declaration, grade, overlap, residence and transfer rules; verify the published Hours unit definition.",
+      "Other departmental subpages and announcements not linked as AI-titled paths in this directory were not exhaustively reviewed."
+    ],
+    "nonqualifying_observations": [],
+    "access_issues": [],
+    "absence_claim": false
+  },
+  {
+    "institution_id": "university-of-florida",
+    "status": "confirmed",
+    "checked_at": "2026-10-11",
+    "note": "Reviewed the full undergraduate program directory and the engineering CS, liberal-arts CS, computer-engineering and electrical-engineering degree pages. No additional qualifying AI-titled undergraduate path was verified in these branches. AI-title directory hits beyond the existing GeoAI minor are certificates. Cybersecurity is explicitly a CS/CpE specialization; intelligent systems is mentioned as a CpE elective-interest example without a formal AI-titled path.",
+    "sources": [
+      {
+        "url": "https://catalog.ufl.edu/UGRD/",
+        "title": "Undergraduate Catalog",
+        "locator": "Program directory entry points",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "access_method": "robots-aware HTTP; readable official HTML"
+      },
+      {
+        "url": "https://catalog.ufl.edu/UGRD/programs/",
+        "title": "Undergraduate programs",
+        "locator": "AI-title matches and displayed degree/minor/certificate types",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "access_method": "robots-aware HTTP; readable official HTML"
+      },
+      {
+        "url": "https://catalog.ufl.edu/UGRD/colleges-schools/UGENG/CPS_BSCS/",
+        "title": "Computer Science — engineering",
+        "locator": "Specializations and technical electives",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "access_method": "robots-aware HTTP; readable official HTML"
+      },
+      {
+        "url": "https://catalog.ufl.edu/UGRD/colleges-schools/UGLAS/CSC_BS/",
+        "title": "Computer Science — liberal arts",
+        "locator": "Specialization and elective rules",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "access_method": "robots-aware HTTP; readable official HTML"
+      },
+      {
+        "url": "https://catalog.ufl.edu/UGRD/colleges-schools/UGENG/CPE_BSCO/",
+        "title": "Computer Engineering",
+        "locator": "Specialization and technical-elective areas",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "access_method": "robots-aware HTTP; readable official HTML"
+      },
+      {
+        "url": "https://catalog.ufl.edu/UGRD/colleges-schools/UGENG/ELE_BSEE/",
+        "title": "Electrical Engineering",
+        "locator": "Published specialization/technical areas",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "access_method": "robots-aware HTTP; readable official HTML"
+      }
+    ],
+    "discoveries": [],
+    "new_program_ids": [],
+    "existing_program_ids": [
+      "florida-geoai-geographic-analysis-minor"
+    ],
+    "inspection_scope": "Bounded undergraduate program/minor directory and selected formal concentration/specialization branches; not an institution-wide exhaustive absence review.",
+    "remaining_work": [
+      "Other department-specific formal paths and announcements were not exhaustively reviewed; no institution-wide absence finding."
+    ],
+    "nonqualifying_observations": [
+      {
+        "title": "Artificial Intelligence and Data Analytics in Tourism, Hospitality, and Event Management",
+        "reason": "Undergraduate certificate, outside degree/minor/formal concentration scope.",
+        "source_url": "https://catalog.ufl.edu/UGRD/programs/"
+      },
+      {
+        "title": "Artificial Intelligence Fundamentals and Applications",
+        "reason": "Undergraduate certificate, outside degree/minor/formal concentration scope.",
+        "source_url": "https://catalog.ufl.edu/UGRD/programs/"
+      },
+      {
+        "title": "Artificial Intelligence in Public Health and Healthcare",
+        "reason": "Undergraduate certificate, outside degree/minor/formal concentration scope.",
+        "source_url": "https://catalog.ufl.edu/UGRD/programs/"
+      },
+      {
+        "title": "Geographic AI and Big Data",
+        "reason": "Undergraduate certificate, outside degree/minor/formal concentration scope.",
+        "source_url": "https://catalog.ufl.edu/UGRD/programs/"
+      }
+    ],
+    "access_issues": [],
+    "absence_claim": false
+  },
+  {
+    "institution_id": "university-of-georgia",
+    "status": "confirmed",
+    "checked_at": "2026-10-11",
+    "note": "The ordinary public program-directory UI search for artificial intelligence returned 13 results on one page, including the existing CS BS host, Cognitive Science AB, a Cognitive Science minor, graduate paths and four undergraduate certificates. The current CS BS and Cognitive Science AB details were read. The CS AI emphasis is the existing record; the Cognitive Science AI Foundations Area is a course-distribution area among four, not an independently declared AI concentration. The current CS host page has conflicting 23-hour versus 12-hour general elective wording and a sample AI plan that retains courses waived by the emphasis; these host-plan ambiguities were not used to rewrite the department-sourced local emphasis inventory.",
+    "sources": [
+      {
+        "url": "https://bulletin.uga.edu/",
+        "title": "UGA Bulletin",
+        "locator": "Public bulletin navigation",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "access_method": "robots-aware HTTP; readable official HTML"
+      },
+      {
+        "url": "https://bulletin.uga.edu/Program/Index",
+        "title": "Program directory",
+        "locator": "Visible search artificial intelligence: 13 results, one page; undergraduate/graduate/certificate distinctions",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "access_method": "ordinary public Chrome UI; static HTML alone was a search shell"
+      },
+      {
+        "url": "https://bulletin.uga.edu/Program/Details/73962?IDc=ARTS",
+        "title": "Computer Science BS",
+        "locator": "Areas of Emphasis; Artificial Intelligence; major-elective headings; Four-Year Program of Study",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "access_method": "robots-aware HTTP; readable official HTML"
+      },
+      {
+        "url": "https://bulletin.uga.edu/Program/Details/96447?IDc=ARTS",
+        "title": "Cognitive Science AB",
+        "locator": "Foundation Areas: AI Foundations Area and overall distribution rule",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "access_method": "robots-aware HTTP; readable official HTML"
+      }
+    ],
+    "discoveries": [],
+    "new_program_ids": [],
+    "existing_program_ids": [
+      "georgia-ai-emphasis"
+    ],
+    "inspection_scope": "Bounded undergraduate program/minor directory and selected formal concentration/specialization branches; not an institution-wide exhaustive absence review.",
+    "remaining_work": [
+      "Cognitive Science minor details, other departments and announcements remain outside this bounded pass.",
+      "Reconcile the CS host Bulletin elective-hour and sample-plan inconsistencies if expanding beyond the existing local emphasis scope."
+    ],
+    "nonqualifying_observations": [
+      {
+        "title": "Artificial Intelligence in Business",
+        "reason": "Undergraduate certificate, excluded from current scope.",
+        "source_url": "https://bulletin.uga.edu/Program/Index"
+      },
+      {
+        "title": "Artificial Intelligence in Computing",
+        "reason": "Undergraduate certificate, excluded from current scope.",
+        "source_url": "https://bulletin.uga.edu/Program/Index"
+      },
+      {
+        "title": "Artificial Intelligence, Language, Minds and Machines",
+        "reason": "Undergraduate certificate, excluded from current scope.",
+        "source_url": "https://bulletin.uga.edu/Program/Index"
+      },
+      {
+        "title": "Artificial Intelligence in Pharmaceutical Sciences",
+        "reason": "Undergraduate certificate, excluded from current scope.",
+        "source_url": "https://bulletin.uga.edu/Program/Index"
+      },
+      {
+        "title": "Artificial Intelligence Foundations Area (Cognitive Science AB)",
+        "reason": "Course-distribution category; no independent formal concentration/declaration established.",
+        "source_url": "https://bulletin.uga.edu/Program/Details/96447?IDc=ARTS"
+      },
+      {
+        "title": "CS BS/Artificial Intelligence MS and Cognitive Science AB/Artificial Intelligence MS",
+        "reason": "The AI-titled award is graduate; the undergraduate host title alone does not qualify as another AI program.",
+        "source_url": "https://bulletin.uga.edu/Program/Index"
+      }
+    ],
+    "access_issues": [],
+    "absence_claim": false
+  },
+  {
+    "institution_id": "ohio-state-university",
+    "status": "confirmed",
+    "checked_at": "2026-10-11",
+    "note": "Reviewed the current public majors finder (artificial intelligence search displayed Majors (0)), the current linked cross-college minor directory, CSE majors/minor branches and ECE academic domains. The CSE undergraduate inventory remains BS CSE, BS CIS and BA CIS; no additional formally named AI undergraduate path was established beyond the existing specialization shared by BS CSE/BS CIS. The BA flexibility and ECE domain/elective descriptions do not establish an AI specialization. Zero finder matches are only a bounded query observation, not institution-wide absence.",
+    "sources": [
+      {
+        "url": "https://undergrad.osu.edu/majors-and-academics/majors",
+        "title": "Majors and degrees",
+        "locator": "Visible search artificial intelligence; Majors (0)",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "access_method": "ordinary public Chrome UI"
+      },
+      {
+        "url": "https://undergrad.osu.edu/majors-and-academics/more-ways-to-explore",
+        "title": "More ways to explore majors",
+        "locator": "Public link to current Minors and double or dual majors directory",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "access_method": "ordinary public Chrome UI"
+      },
+      {
+        "url": "https://artsandsciences.osu.edu/academics/programs/minors",
+        "title": "Programs: Minors",
+        "locator": "Full alphabetical cross-college directory",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "access_method": "robots-aware HTTP; readable official HTML"
+      },
+      {
+        "url": "https://cse.osu.edu/prospective-students/undergrad/majors",
+        "title": "CSE undergraduate majors",
+        "locator": "BS CSE, BS CIS, BA CIS descriptions",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "access_method": "robots-aware HTTP; readable official HTML"
+      },
+      {
+        "url": "https://cse.osu.edu/prospective-students/undergrad/minor",
+        "title": "CSE undergraduate minor",
+        "locator": "Computer Information Science minor",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "access_method": "robots-aware HTTP; readable official HTML"
+      },
+      {
+        "url": "https://ece.osu.edu/futurestudents/current-students/academicareas",
+        "title": "ECE academic domains and electives",
+        "locator": "Seven undergraduate domain titles and technical-elective rules",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "access_method": "robots-aware HTTP; readable official HTML"
+      }
+    ],
+    "discoveries": [],
+    "new_program_ids": [],
+    "existing_program_ids": [
+      "ohio-state-ai-specialization"
+    ],
+    "inspection_scope": "Bounded undergraduate program/minor directory and selected formal concentration/specialization branches; not an institution-wide exhaustive absence review.",
+    "remaining_work": [
+      "Other college/department concentration pages and announcements were not exhaustively reviewed."
+    ],
+    "nonqualifying_observations": [],
+    "access_issues": [
+      {
+        "url": "https://undergrad.osu.edu/majors-and-academics/minors",
+        "classification": "stale_url",
+        "detail": "HTTP request returned500; ordinary public browser displayed Page Not Found. Followed visible navigation to the current cross-college minor directory. This is not a robots/authentication access barrier."
+      }
+    ],
+    "absence_claim": false
+  },
+  {
+    "institution_id": "michigan-state-university",
+    "status": "confirmed",
+    "checked_at": "2026-10-11",
+    "note": "Read the undergraduate degree and minor directories, alphabetical index, engineering chapter and CS BS details. The CS BS has an optional officially transcripted Artificial Intelligence concentration, distinct from the existing AI minor. Its two-stage course selection, non-reuse rule, one-concentration maximum and approved CSE 499 option are mapped. The engineering-index standalone Artificial Intelligence entry resolves to a graduate MS, not another undergraduate degree.",
+    "sources": [
+      {
+        "url": "https://reg.msu.edu/AcademicPrograms/",
+        "title": "Academic Programs",
+        "locator": "Directory entry points",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "access_method": "robots-aware HTTP; readable official HTML"
+      },
+      {
+        "url": "https://reg.msu.edu/AcademicPrograms/Programs.aspx?PType=MNUN",
+        "title": "Undergraduate minors",
+        "locator": "AI minor and full minor list",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "access_method": "robots-aware HTTP; readable official HTML"
+      },
+      {
+        "url": "https://reg.msu.edu/AcademicPrograms/Programs.aspx?PType=UGRD",
+        "title": "Undergraduate degrees",
+        "locator": "Published undergraduate degree titles",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "access_method": "robots-aware HTTP; readable official HTML"
+      },
+      {
+        "url": "https://reg.msu.edu/AcademicPrograms/Index.aspx",
+        "title": "Academic Programs alphabetical index",
+        "locator": "Artificial Intelligence entries and college destinations",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "access_method": "robots-aware HTTP; readable official HTML"
+      },
+      {
+        "url": "https://reg.msu.edu/AcademicPrograms/Text.aspx?Section=120",
+        "title": "College of Engineering",
+        "locator": "Graduate Artificial Intelligence context and CS undergraduate program links",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "access_method": "robots-aware HTTP; readable official HTML"
+      },
+      {
+        "url": "https://reg.msu.edu/AcademicPrograms/ProgramDetail.aspx?PType=UGRD&Program=CMPS1_BS1",
+        "title": "Computer Science BS",
+        "locator": "Concentrations in Computer Science; Artificial Intelligence; common concentration rules",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "access_method": "robots-aware HTTP; readable official HTML"
+      }
+    ],
+    "discoveries": [
+      {
+        "title": "Artificial Intelligence concentration (Computer Science BS)",
+        "kind": "concentration",
+        "award_level": "concentration",
+        "url": "https://reg.msu.edu/AcademicPrograms/ProgramDetail.aspx?PType=UGRD&Program=CMPS1_BS1",
+        "program_id": "michigan-state-cs-ai-concentration"
+      }
+    ],
+    "new_program_ids": [
+      "michigan-state-cs-ai-concentration"
+    ],
+    "existing_program_ids": [
+      "michigan-state-university-artificial-intelligence-minor-minor"
+    ],
+    "inspection_scope": "Bounded undergraduate program/minor directory and selected formal concentration/specialization branches; not an institution-wide exhaustive absence review.",
+    "remaining_work": [
+      "Review applicable local declaration, grade, residence, transfer/overlap and graduate CSE 803 eligibility rules; verify credit-unit definition.",
+      "Other undergraduate department detail pages and announcements were not exhaustively reviewed."
+    ],
+    "nonqualifying_observations": [
+      {
+        "title": "Artificial Intelligence MS",
+        "reason": "Graduate award.",
+        "source_url": "https://reg.msu.edu/AcademicPrograms/Text.aspx?Section=120"
+      }
+    ],
+    "access_issues": [],
+    "absence_claim": false
+  },
+  {
+    "institution_id": "texas-am-university",
+    "status": "confirmed",
+    "checked_at": "2026-10-11",
+    "note": "The catalog-wide program directory explicitly identifies a second undergraduate AI minor, Artificial Intelligence in the Arts. Catalog and department curriculum agree on three required PVFA courses plus two of four prescribed arts electives, totaling 15 semester credit hours. CS BS tracks and EE areas were also reviewed; broad AI course/interest mentions did not establish another AI-titled concentration. The existing Business minor was not edited.",
+    "sources": [
+      {
+        "url": "https://catalog.tamu.edu/undergraduate/",
+        "title": "Undergraduate catalog",
+        "locator": "Degree/minor directory navigation",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "access_method": "robots-aware HTTP; readable official HTML"
+      },
+      {
+        "url": "https://catalog.tamu.edu/programs/",
+        "title": "All programs",
+        "locator": "Artificial Intelligence hits with explicit Minor/Masters/Certificate-GR labels",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "access_method": "robots-aware HTTP; readable official HTML"
+      },
+      {
+        "url": "https://catalog.tamu.edu/undergraduate/performance-visualization-fine-arts/artificial-intelligence-arts-minor/",
+        "title": "Artificial Intelligence in the Arts — Minor",
+        "locator": "Application Process and Program Requirements",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "access_method": "robots-aware HTTP; readable official HTML"
+      },
+      {
+        "url": "https://pvfa.tamu.edu/academics/visualization-program/minor-in-ai-in-the-arts/",
+        "title": "AI In The Arts — Undergraduate Minor",
+        "locator": "Curriculum tables: three required, select two; Apply",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "access_method": "robots-aware HTTP; readable official HTML"
+      },
+      {
+        "url": "https://catalog.tamu.edu/undergraduate/engineering/computer-science/bs/",
+        "title": "Computer Science BS",
+        "locator": "Named tracks and electives",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "access_method": "robots-aware HTTP; readable official HTML"
+      },
+      {
+        "url": "https://catalog.tamu.edu/undergraduate/engineering/electrical-computer/electrical-bs/",
+        "title": "Electrical Engineering BS",
+        "locator": "Named specialization/technical areas",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "access_method": "robots-aware HTTP; readable official HTML"
+      }
+    ],
+    "discoveries": [
+      {
+        "title": "Artificial Intelligence in the Arts minor",
+        "kind": "minor",
+        "award_level": "minor",
+        "url": "https://catalog.tamu.edu/undergraduate/performance-visualization-fine-arts/artificial-intelligence-arts-minor/",
+        "program_id": "texas-am-ai-arts-minor"
+      }
+    ],
+    "new_program_ids": [
+      "texas-am-ai-arts-minor"
+    ],
+    "existing_program_ids": [
+      "texas-am-ai-business-minor"
+    ],
+    "inspection_scope": "Bounded undergraduate program/minor directory and selected formal concentration/specialization branches; not an institution-wide exhaustive absence review.",
+    "remaining_work": [
+      "Review applicable university/college minor eligibility, grade, overlap, residence and transfer policies.",
+      "Other departmental paths and announcements remain outside this bounded pass."
+    ],
+    "nonqualifying_observations": [
+      {
+        "title": "Artificial Intelligence and Machine Learning certificate",
+        "reason": "Explicit graduate certificate or graduate degree, outside undergraduate degree/minor/concentration scope.",
+        "source_url": "https://catalog.tamu.edu/programs/"
+      },
+      {
+        "title": "Artificial Intelligence in Business certificate",
+        "reason": "Explicit graduate certificate or graduate degree, outside undergraduate degree/minor/concentration scope.",
+        "source_url": "https://catalog.tamu.edu/programs/"
+      },
+      {
+        "title": "Master of Science in Artificial Intelligence",
+        "reason": "Explicit graduate certificate or graduate degree, outside undergraduate degree/minor/concentration scope.",
+        "source_url": "https://catalog.tamu.edu/programs/"
+      }
+    ],
+    "access_issues": [],
+    "absence_claim": false
+  }
+]
