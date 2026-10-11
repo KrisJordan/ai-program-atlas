@@ -46,3 +46,6 @@ register_history_context(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
 
 from atlas.adapters.miami_enrollment_scope import register as register_enrollment_scope
 register_enrollment_scope(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
+
+from atlas.adapters.miami_pol_context_reviews import register as register_pol_context
+register_pol_context(PROGRAM_ID,SOURCES,SOURCE_PARSERS)

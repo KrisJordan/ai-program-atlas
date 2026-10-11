@@ -61,3 +61,13 @@ Validation: 29 focused source/policy tests and isolated four-degree ingestion/re
 The 151-block actual History source review in `miami_his_context_reviews` is integrated across four degrees (604 observations). The contribution retains 136 history/culture classifications, 15 source-inspected but unspecified transfer/topic/internship records, and thirteen variable credit amounts (including HIS 382 at 0–3). The source's one-history-course and faculty-approval conditions remain exact. Existing requirement ancestry is unchanged. See the separate history review for actual block evidence and semantic decisions.
 
 There are now 2,287 reviewed program-course observations. Remaining: 1,360 codes/5,440 observations; 1,301 codes have located current official blocks and 59 need exact-identity follow-up. Validation: 34 focused English/History/shared-source tests, isolated four-degree ingestion/repeat (4/0), integrity/foreign keys, exact exported review counts and static build passed.
+
+## Political science and four further language chapters — 2026-10-11
+
+The separately reviewed POL146 contribution adds 584 observations with individual human-context, mathematical, applied, mixed and unclassified decisions. POL585 retains its exact Russian-foreign-policy heading but mismatched Latin American description and two printed prerequisite clauses; it remains source-inspected and unclassified. POL558's government/AI policy and tool-use scope is not promoted to AI algorithm methods. POL510/517/518 have explicit statistical-methods content. No role changed.
+
+The primary reviewer additionally read all 15 Greek,21 Latin,6 Hebrew and7 Haitian Creole complete blocks (49codes,196observations). Forty-one have explicit language/literary/cultural content;8 directed or external-credit entries remain unclassified, with1–3credit ranges kept as null scalar. Precise Greek/Latin literature titles support a explicitly limited category for five variable-topic entries; no particular offering's subject is inferred. LAT103's extra drill hour is contact time, not a fourth academic credit; subsequent placement depends on performance. Its combined graduate section is not silently merged with a different code. Hebrew native-speaker and ordinary prior-study exclusions remain exact.
+
+Current review total:3,067 program-course observations. Remaining1,165codes/4,660observations includes1,106located exact currentblocks and59identityfollowups. Allfour audits stay inprogress while this accessible work remains.
+
+Validation:31 focused source/policy tests passed; isolated four-degree ingestion/repeat(4/0), integrity/foreignkeys,3,067reviewedexports andstaticbuildpassed.

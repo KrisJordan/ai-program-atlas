@@ -102,3 +102,7 @@ The complete BS table and Arts and Sciences graduation section were reread. The 
 ## 2026-10-11 public enrollment and graduation scopes
 
 Current university course-information and graduation sections were reread. Seven additional course-free conditional notes preserve explicit semester-credit terminology, course-level eligibility, permission/confirmed enrollment, modality limits, CR/NC timing, processed declarations, optional dual-degree approval and nonregistration-credit ceilings. Approval processes are not approval grants; a dual degree does not change this single award’s published total. Source-specific full-policy guards compose with earlier observers and emit no audit. The source-wide credit normalization is explicit. Current public sources do not certify a particular student’s private Degree Progress Report.
+
+## 2026-10-11 Political Science (POL) contextual review
+
+146 complete official blocks now supply guarded observations and separately attached manual content reviews. Variable credits, prerequisite/permission restrictions, source conflicts and insufficient-topic records retain their precise scopes in `miami_pol_context_reviews.json`. No contextual row is promoted to a required course; no approval or equivalence is inferred. Source chapter edition remains unassigned where current navigation does not establish it.

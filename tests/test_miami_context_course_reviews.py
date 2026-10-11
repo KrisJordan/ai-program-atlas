@@ -114,3 +114,16 @@ def test_italian_portuguese_japanese_routes_do_not_erase_restrictions():
     assert 'two college years' in m.SPEC['courses']['JPN 432']['prerequisites']
     assert m.SPEC['courses']['ITA 399']['category']=='other'
     assert m.SPEC['courses']['JPN 495']['credits'] is None
+
+
+def test_classical_hebrew_creole_exact_scopes_remain_separate():
+    assert m.SPEC['courses']['LAT 103']['credits']==3
+    assert 'extra weekly' in m.SPEC['courses']['LAT 103']['prerequisites']
+    assert 'placement depends' in m.SPEC['courses']['LAT 103']['prerequisites']
+    assert m.SPEC['courses']['GRE 491']['category']=='other'
+    assert m.SPEC['courses']['GRE 491']['credits'] is None
+    assert 'title-supported' in m.SPEC['courses']['GRE 401']['review']['rationale']
+    assert m.SPEC['courses']['GRE 411']['prerequisites'] is None
+    assert 'Normally closed' in m.SPEC['courses']['HEB 101']['prerequisites']
+    assert m.SPEC['courses']['HAI 202']['category']=='human_context'
+    assert m.SPEC['courses']['HAI 495']['review']['status']=='unclassified'
