@@ -74,3 +74,8 @@ SOURCE_PARSERS = {**SOURCE_PARSERS, **_PUBLIC_CS_RESOURCES}
 from atlas.adapters.northeastern_college_policies import KHOURY_URL, parse_khoury_policy
 SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + (KHOURY_URL,)))
 SOURCE_PARSERS = {**SOURCE_PARSERS, KHOURY_URL: lambda html: parse_khoury_policy(html, program_id=PROGRAM_ID)}
+
+# Verified COS participation; rules remain conditional on actual applicability.
+from atlas.adapters.northeastern_college_policies import SCIENCE_URL, parse_science_policy
+SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + (SCIENCE_URL,)))
+SOURCE_PARSERS = {**SOURCE_PARSERS, SCIENCE_URL: lambda html: parse_science_policy(html, program_id=PROGRAM_ID)}

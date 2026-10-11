@@ -98,3 +98,35 @@ def parse_cssh_transfer(html,*,program_id):
       ('evaluation','Evaluation and official records','Obtain an official approved Northeastern evaluation before petition consideration; for an unlisted course provide its description and syllabus to the advisor for departmental evaluation. After completion submit the official transcript promptly, in an unopened sealed envelope or sent electronically directly to the advisor. Opened transcripts are not accepted.')]
     rows=[dict(id=base+('-'+key if key else ''),parent_id=base if key else None,title=title,kind='note',count=None,credits=None,credit_unit='unknown',category='other',source_id=sid,source_text=None,summary=summary,course_ids=[]) for key,title,summary in claims]
     return dict(id=program_id,courses=[],requirements=rows,curriculum_status='partial',notes=['Conditional CSSH transfer-policy observation; no home-college assignment, course equivalence or approval inferred.'])
+
+SCIENCE_URL='https://catalog.northeastern.edu/undergraduate/science/'
+SCIENCE_RULES=[
+ ('clearance','Graduation Clearance Process',['required to meet with an academic advisor in the College of Science','completed in the junior year'],
+  'For College of Science students, meet a Science advisor in the junior year to identify remaining graduation requirements and allow time to finish them.'),
+ ('load','Academic Progression Standards',['full-time science students enroll in four (3- or 4-credit) courses','appropriate labs and recitations','at least 12 semester hours each academic semester'],
+  'When subject to full-time Science rules, enroll in four three- or four-credit courses with appropriate labs/recitations and complete at least twelve hours per academic semester, alongside the relevant GPA standards.'),
+ ('reduced-load','Academic Progression Standards',['final semester with less than 12 semester hours needed','request this with their academic advisor before the start of their final semester','approved for reduced course load accommodation','Disability Access Services','not evaluated or approved by a students’ academic advisor'],
+  'A reduced Science course load is allowed for a final semester needing fewer than twelve hours, requested from the advisor before that semester, or through a Disability Access Services-approved accommodation. The latter is evaluated by that service rather than the academic advisor; other exceptions are not invented.'),
+ ('grades','Graduation Requirements',['2.000 in major courses','2.000 overall','minimum grade of C for First-Year Writing and Advanced Writing requirements'],
+  'For Science graduation, require major and overall cumulative GPA 2.000, with university C-minimum first-year and advanced writing. The concrete degree may specify its own major-GPA code scope; do not silently replace that scope.'),
+ ('first-year-standing','First-year Students:',['semester GPA of at least a 1.800','at the end of each full-term semester','at least 12 semester hours at the end of each fall and spring semester'],
+  'For Science first-year students, probation follows a semester GPA below 1.800 or fewer than twelve earned hours at each fall/spring term end. This source says semester GPA, unlike the separate Khoury cumulative first-year wording.'),
+ ('later-standing','Upperclass and Transfer Students:',['at least 12 semester hours in the academic full-term semester','overall cumulative GPA of at least 2.000','each full-term academic semester'],
+  'For Science upperclass/transfer students, probation follows fewer than twelve earned hours in the full term or cumulative overall GPA below 2.000 at each full-term end.'),
+ ('major-dismissal','Academic Dismissal from Major',['2.000 GPA in courses aligned with one\'s major','at the end of the second academic full-term semester','up to two semesters','placed on academic probation','does not find a new major after two transitional semesters'],
+  'Science may dismiss a student from the major for major-aligned GPA below 2.000 from the second full academic term onward. Otherwise university-eligible students may remain transitional for up to two semesters on probation, potentially subject to university dismissal; without a new major after two transitional semesters they are dismissed from the college.'),
+ ('university-dismissal','Academic Dismissal from University',['probation after two full-term academic semesters','below a 1.000 GPA or fewer than 4 earned semester hours','at the discretion of their college','appeal this decision to the Academic Standing Committee','International students must consult with an advisor'],
+  'After two full terms of continuing probation, Science students may face university dismissal. GPA below 1.000 or fewer than four earned hours in a term or cumulatively may also trigger college-discretionary dismissal. Appeal is to the Academic Standing Committee; international students must consult Global Services about implications rather than relying on an inferred immigration outcome.')]
+
+
+def parse_science_policy(html,*,program_id):
+    soup=BeautifulSoup(html,'html.parser');title=soup.find(id='site-title');h1=title.find('h1') if title else None;panel=soup.find(id='textcontainer')
+    if h1 is None or text(h1)!='College of Science' or panel is None:raise ValueError('Expected Science college-policy identity/panel missing')
+    for node in panel.find_all(['nav','aside','script','style']):node.decompose()
+    need(section(panel,'Academic Progression Standards'),'Satisfactory/unsatisfactory graded courses are restricted to electives outside of the major, minor, and NUpath requirements')
+    sid=program_id+'-science-college-policy';base=program_id+'-req-policy-science-conditional'
+    def row(rid,title,summary,parent):return dict(id=rid,parent_id=parent,title=title,kind='note',count=None,credits=None,credit_unit='unknown',category='other',source_id=sid,source_text=None,summary=summary,course_ids=[])
+    rows=[row(base,'Conditional College of Science policies','Apply only where the student is subject to College of Science rules; participating-college evidence does not assign the home college. Satisfactory/unsatisfactory courses may count only as electives outside major, minor and NUpath. BA-only additional rules are not imposed on these BS degrees.',None)]
+    for key,title,guards,summary in SCIENCE_RULES:
+        need(section(panel,title),*guards);rows.append(row(program_id+'-req-policy-science-'+key,title,summary,base))
+    return dict(id=program_id,courses=[],requirements=rows,curriculum_status='partial',notes=['Conditional Science college observation; no inferred home assignment, course pool or whole-degree completion.'])

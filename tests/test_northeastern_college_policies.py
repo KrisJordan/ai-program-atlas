@@ -94,3 +94,37 @@ def test_five_explicit_cssh_partners_register_only_conditional_transfer_rules():
         assert len(rows)==5 and all(r['kind']=='note' and not r['course_ids'] for r in rows.values())
         assert CSSH_TRANSFER_URL in m.SOURCES
         if cache.exists():assert {r['id']:r for r in m.SOURCE_PARSERS[CSSH_TRANSFER_URL](cache.read_text())['requirements']}==rows
+
+
+SCIENCE_PARTNERS={'biology','biochemistry','chemistry','behavioral-neuroscience','ecology-and-evolutionary-biology','environmental-and-sustainability-sciences','linguistics','mathematics','physics','psychology'}
+
+
+def test_ten_verified_science_variants_keep_conditional_semester_vs_cumulative_rules():
+    from atlas.adapters.northeastern_college_policies import SCIENCE_URL
+    for slug in SCIENCE_PARTNERS:
+        pid=f'northeastern-university-artificial-intelligence-and-{slug}-bs-boston-bs-degree'
+        p=json.loads((ROOT/'data/programs'/f'{pid}.json').read_text());m=import_module('atlas.adapters.'+pid+'.adapter')
+        rules={r['id']:r for r in p['requirements'] if r['source_id']==pid+'-science-college-policy'}
+        assert len(rules)==9 and all(r['kind']=='note' and not r['course_ids'] for r in rules.values())
+        assert SCIENCE_URL in m.SOURCES
+        first=rules[pid+'-req-policy-science-first-year-standing']['summary']
+        later=rules[pid+'-req-policy-science-later-standing']['summary']
+        assert 'semester GPA below 1.800' in first
+        assert 'cumulative overall GPA below 2.000' in later
+        assert 'does not assign' in rules[pid+'-req-policy-science-conditional']['summary']
+        assert 'before that semester' in rules[pid+'-req-policy-science-reduced-load']['summary']
+        assert 'Disability Access Services' in rules[pid+'-req-policy-science-reduced-load']['summary']
+
+
+def test_optional_science_actual_source_replay_and_changed_scope_guards():
+    from atlas.adapters.northeastern_college_policies import parse_science_policy
+    cache=ROOT/'.cache/research/degree-audit-northeastern/home-19.html'
+    if not cache.exists():pytest.skip('Optional ignored official Science policy source')
+    html=cache.read_text()
+    for slug in SCIENCE_PARTNERS:
+        pid=f'northeastern-university-artificial-intelligence-and-{slug}-bs-boston-bs-degree';p=json.loads((ROOT/'data/programs'/f'{pid}.json').read_text())
+        assert {r['id']:r for r in parse_science_policy(html,program_id=pid)['requirements']}=={r['id']:r for r in p['requirements'] if r['source_id']==pid+'-science-college-policy'}
+    # Alter actual policy meaning rather than deriving a fixture from parser guards.
+    for old,new in [('semester GPA','cumulative GPA'),('1.800','1.500'),('up to two semesters','up to three semesters'),('College of Science','College of Other Studies')]:
+        assert old in html
+        with pytest.raises(ValueError):parse_science_policy(html.replace(old,new),program_id='test')
