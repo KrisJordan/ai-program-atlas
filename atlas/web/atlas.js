@@ -147,6 +147,19 @@
     }).join('') + '</ul>' : '<span class="muted">Not recorded</span>';
   }
 
+  function researchComparison(items) {
+    const contexts = items.map(p => p.research_context);
+    const context = contexts.find(Boolean);
+    if (!context) return '';
+    const fields = context.rows;
+    const cell = (p, field) => {
+      const row = p.research_context?.rows.find(row => row.field === field);
+      if (!row) return '<span class="muted">Source observation unavailable</span>';
+      return `<strong>${e(row.score_text)}</strong><small>U.S. research rank: ${e(row.rank_text)}</small>${field !== 'aggregate' ? '<small>Adjusted publications: ' + e(row.adjusted_count_text) + '</small>' : ''}<small>${e(row.status_label)}</small>`;
+    };
+    return `<section class="research-comparison" aria-labelledby="research-comparison-title"><h3 id="research-comparison-title">Institution publication research context</h3><p class="section-note">CSRankings · ${e(context.year_start)}–${e(context.year_end)} · United States. These are institution-level publication measures, not undergraduate teaching or program quality. Programs at the same institution repeat the same context. U.S. ranks were computed before joining this Atlas cohort.</p><div class="table-scroll" role="region" aria-label="Institution research comparison" tabindex="0"><table class="compare-table research-table"><caption>Displayed research scores, U.S. ranks and adjusted publication counts</caption><thead><tr><th scope="col">Research selection</th>${items.map(p => `<th scope="col">${e(p.institution?.name)}<small>${e(p.title)}</small></th>`).join('')}</tr></thead><tbody>${fields.map(row => `<tr data-research-field="${e(row.field)}"><th scope="row">${e(row.label)}</th>${items.map(p => '<td>' + cell(p, row.field) + '</td>').join('')}</tr>`).join('')}</tbody></table></div><p class="section-note">Each field score is adjusted publications + 1. The five-field aggregate is their geometric mean, not an average rank. Scores use one decimal; adjusted counts here use three decimals. Missing observations stay unavailable and receive no zero score or last-place rank. <a href="${base}methodology/#research">Methodology, source snapshot &amp; reuse scope →</a></p></section>`;
+  }
+
   function renderComparison() {
     const target = document.getElementById('comparison-content');
     document.getElementById('compare-tray').hidden = selected.length === 0;
@@ -206,7 +219,7 @@
       return '<span class="badge">Documented inference</span>' + matches.map(o => '<small>' + link(sources.get(o.source_id)?.url, 'Supporting source') + '</small>').join('');
     };
     const themeMatrix = `<section class="theme-comparison" aria-labelledby="theme-title"><h3 id="theme-title">Recorded inferred themes</h3><p class="section-note">These are the exact inferred taxonomy labels stored in the records, shown as editorial interpretations with supporting sources. “Not recorded” is missing evidence, not proof that a program lacks a theme. Source statements about program aims and outcomes remain separate below.</p>${themes.length ? `<div class="table-scroll" role="region" aria-label="Recorded inferred theme matrix" tabindex="0"><table class="theme-table"><caption class="sr-only">Recorded inferred themes by program</caption><thead><tr><th scope="col">Theme</th>${items.map(p => `<th scope="col">${e(p.institution?.name)}<small>${e(p.title)}</small></th>`).join('')}</tr></thead><tbody>${themes.map(theme => `<tr><th scope="row">${e(theme)}</th>${items.map(p => '<td>' + themeCell(p, theme) + '</td>').join('')}</tr>`).join('')}</tbody></table></div>` : '<p class="notice">No inferred themes have been recorded for the selected programs.</p>'}</section>`;
-    target.innerHTML = `<div class="table-scroll" role="region" aria-label="Program comparison" tabindex="0"><table class="compare-table"><caption class="sr-only">Comparison of ${items.length} selected programs. Credit units remain distinct and unknown values are not zero.</caption><thead><tr><th scope="col">Program context</th>${items.map(p => `<th scope="col"><small>${e(p.institution?.name)}</small><a href="${base}programs/${e(p.id)}/">${e(p.title)}</a><button type="button" class="text-button remove" data-remove="${e(p.id)}" aria-label="Remove ${e(p.title)} at ${e(p.institution?.name)}">Remove</button></th>`).join('')}</tr></thead><tbody>${rows.map(([title, content]) => `<tr><th scope="row">${title}</th>${items.map(p => '<td>' + content(p) + '</td>').join('')}</tr>`).join('')}</tbody></table></div>` + themeMatrix;
+    target.innerHTML = `<div class="table-scroll" role="region" aria-label="Program comparison" tabindex="0"><table class="compare-table"><caption class="sr-only">Comparison of ${items.length} selected programs. Credit units remain distinct and unknown values are not zero.</caption><thead><tr><th scope="col">Program context</th>${items.map(p => `<th scope="col"><small>${e(p.institution?.name)}</small><a href="${base}programs/${e(p.id)}/">${e(p.title)}</a><button type="button" class="text-button remove" data-remove="${e(p.id)}" aria-label="Remove ${e(p.title)} at ${e(p.institution?.name)}">Remove</button></th>`).join('')}</tr></thead><tbody>${rows.map(([title, content]) => `<tr><th scope="row">${title}</th>${items.map(p => '<td>' + content(p) + '</td>').join('')}</tr>`).join('')}</tbody></table></div>` + researchComparison(items) + themeMatrix;
     target.querySelectorAll('[data-remove]').forEach(button => button.addEventListener('click', () => {
       selected = selected.filter(id => id !== button.dataset.remove);
       writeState();

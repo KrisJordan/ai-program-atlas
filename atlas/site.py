@@ -11,6 +11,7 @@ import shutil
 from atlas.curriculum_profile import requirement_profile
 from atlas.awards import major_award_buckets
 from atlas.rankings import institution_rank_context
+from atlas.research_context import FIELDS as RESEARCH_FIELDS, institution_context
 
 CATEGORIES = {
     "foundations": "Computing foundations", "mathematics": "Mathematics",
@@ -95,6 +96,7 @@ def directory_payload(data, base):
         p['major_awards'] = major_filter_buckets(original)
         p['parent_context_html'] = parent_context_markup(original)
         p['major_context_html'] = major_relationship_markup(original)
+        p['research_context'] = institution_context(data, institution.get('id'))
         p['award_options'] = [fields(option, 'label normalized source_id') for option in original.get('award_options', [])]
         if institution.get('rankings'):
             p['institution']['rankings'] = ranking_fields(institution)
@@ -613,7 +615,7 @@ def course_notes_markup(course):
     return f'<details class="course-notes"><summary>{label}<span class="sr-only"> for {esc(context)}</span></summary><ul>{items}</ul></details>'
 
 
-def program_page(p, base, family=None):
+def program_page(p, base, family=None, research=None):
     institution = p.get("institution", {})
     courses = unique_courses(p)
     course_sources = {source['id']: source for source in p.get('sources', [])}
@@ -639,7 +641,7 @@ def program_page(p, base, family=None):
     ranking_context += '</section>'
     body = f'''<div class="breadcrumb"><a href="{base}">Program index</a><span>/</span>{esc(institution.get('name'))}</div><section class="detail-hero"><div class="eyebrow">{esc(institution.get('name'))} / {esc(p.get('hosting_unit') or 'Hosting unit unknown')}</div><h1>{esc(p.get('title'))}</h1><p class="lede">{esc(p.get('overview') or 'Overview not yet recorded.')}</p><div class="detail-badges">{badge('No separate award' if (p.get('major_relationship') or {}).get('kind') == 'second_major_only' else p.get('award_level'))}{badge(human(p.get('program_kind')))}{badge(human(p.get('status')))}</div>{award_options_markup(p)}{major_relationship_markup(p)}{parent_context_markup(p)}<div class="official-links">{links}</div></section>
 {family_context(p, family, base)}<dl class="fact-grid"><div><dt>Calendar</dt><dd>{esc(human(institution.get('calendar')))}</dd></div><div><dt>Catalog year</dt><dd>{esc(p.get('catalog_year'))}</dd></div><div><dt>Last verified</dt><dd>{esc(date_value(p))}</dd></div><div><dt>Requirement inventory</dt><dd>{esc(evidence_label(p))}</dd></div></dl>
-<div class="notice evidence-notice"><strong>Read the evidence in context.</strong><p>Verification: {esc(human(p.get('verification_status')))}. {missing_credits} of {len(courses)} course records have unknown credits. Unknown values are not zero. Recorded course credits must not be added to estimate degree requirements.</p><p class="curriculum-scope">{esc(curriculum_scope(p))}</p><p>First offered: {first_text}</p>{'<ul>' + notes + '</ul>' if notes else ''}</div>{degree_audit_program(p)}{ranking_context}
+<div class="notice evidence-notice"><strong>Read the evidence in context.</strong><p>Verification: {esc(human(p.get('verification_status')))}. {missing_credits} of {len(courses)} course records have unknown credits. Unknown values are not zero. Recorded course credits must not be added to estimate degree requirements.</p><p class="curriculum-scope">{esc(curriculum_scope(p))}</p><p>First offered: {first_text}</p>{'<ul>' + notes + '</ul>' if notes else ''}</div>{degree_audit_program(p)}{ranking_context}{research_program_markup(research, base)}
 <nav class="section-nav" aria-label="Program sections"><a href="#curriculum">Curriculum</a><a href="#requirements">Requirements</a><a href="#outcomes">Program aims &amp; outcomes</a><a href="#courses">Course records</a><a href="#sources">Sources</a></nav>
 <section id="curriculum" class="detail-section"><span class="eyebrow">01 / CURRICULUM PROFILE</span><h2>Required curriculum &amp; elective options</h2>{category_chart(p)}</section>
 <section id="requirements" class="detail-section"><span class="eyebrow">02 / PROGRAM STRUCTURE</span><h2>Requirements & choices</h2><p class="section-note">Nested groups preserve course choices and alternatives. The profile uses the resolved rules above the course level. Follow each group’s rule: elective pools and alternative paths do not make every listed course compulsory.</p>{requirement_tree(p)}</section>
@@ -727,38 +729,60 @@ def coverage_page(data, base):
     return shell('Coverage & limitations', body, base, 'coverage')
 
 
+def research_program_markup(context, base):
+    if context is None:
+        return ''
+    rows=''.join('<tr data-research-field="'+esc(row['field'])+'"><th scope="row">'+esc(row['label'])+'</th><td>'+esc(row['score_text'])+'</td><td>'+esc(row['rank_text'])+'</td><td>'+esc(row['adjusted_count_text'])+'</td><td>'+esc(row['status_label'])+'</td></tr>' for row in context['rows'])
+    upstream='<p class="section-note">Matched upstream institution: '+esc(context['upstream_institution'])+'.</p>' if context.get('upstream_institution') else ''
+    return '<section id="research-context" class="detail-section research-context" aria-labelledby="research-context-title"><span class="eyebrow">INSTITUTION RESEARCH CONTEXT</span><h2 id="research-context-title">CSRankings publication activity</h2><p class="section-note">'+esc(context.get('year_start'))+'–'+esc(context.get('year_end'))+' · United States · institution-level research. These values do not measure undergraduate teaching or the quality of this program. Programs at the same institution share this context.</p>'+upstream+'<div class="table-scroll" role="region" aria-label="CSRankings research fields" tabindex="0"><table class="research-table"><caption>Five research fields and their aggregate; ranks use the full U.S. population for each selection.</caption><thead><tr><th scope="col">Research selection</th><th scope="col">Displayed score</th><th scope="col">U.S. research rank</th><th scope="col">Adjusted publications</th><th scope="col">Source status</th></tr></thead><tbody>'+rows+'</tbody></table></div><p class="section-note">Individual field scores are adjusted publication counts + 1. The aggregate is the geometric mean of the five field scores; it is not an average of ranks. Displayed scores use one decimal and ties share competition ranks. Adjusted counts here use three decimals for readability; full precision remains in the public data. Missing observations stay unavailable, without a zero score or last-place rank.</p><p><a href="'+base+'methodology/#research">Research methodology, source snapshot &amp; reuse scope →</a></p></section>'
+
+
+def research_method_markup(cs):
+    method=cs.get('methodology') or {}
+    if not isinstance(method,dict):
+        text=method if isinstance(method,str) else 'CSRankings is a publication-based view of computer science research activity.'
+        return badge('CSRankings · not imported')+'<p>'+esc(text)+'</p><p>No research values are available in this snapshot. Missing values do not mean zero publications or no AI research.</p><p>'+external('https://csrankings.org/','Visit CSRankings')+' · '+external('https://csrankings.org/faq','Read the CSRankings FAQ')+'</p>'
+    available=method.get('status')=='available'
+    fields=', '.join(RESEARCH_FIELDS.get(field,field)+' ('+field+')' for field in method.get('fields',[])) or 'Not configured'
+    missingness=sorted({o.get('missingness') for o in cs.get('observations',[]) if o.get('missingness')})
+    settings=[('Publication window',str(method.get('year_start','Unknown'))+'–'+str(method.get('year_end','Unknown'))),('Geographic filter',method.get('geographic_filter') or 'Not configured'),('Research fields',fields),('Pinned source snapshot',method.get('source_snapshot') or 'Not recorded'),('Import status',method.get('status') or 'not_imported'),('Recorded missingness',', '.join(missingness) or 'No observation status recorded')]
+    config='<dl class="research-config">'+''.join('<div><dt>'+esc(label)+'</dt><dd>'+esc(value)+'</dd></div>' for label,value in settings)+'</dl>'
+    if not available:
+        return badge('CSRankings · not imported')+'<p>'+esc(method.get('method') or 'Configured publication-research context; no imported values.')+'</p>'+config+'<p>No research score is attached to a program. Permission-required observations remain unknown, never zero or last place.</p><p>'+external(method.get('source_url') or 'https://csrankings.org/faq','Configured methodology source')+'</p>'
+    snapshot=str(method.get('source_snapshot') or '')
+    copying='https://github.com/emeryberger/CSrankings/blob/'+snapshot+'/COPYING' if re.fullmatch('[0-9a-f]{40}',snapshot) else 'https://github.com/emeryberger/CSrankings/blob/gh-pages/COPYING'
+    population=cs.get('population') or {}
+    population_rows=[]
+    if population.get('listed_us_institutions') is not None:
+        population_rows.append(('Listed U.S. institutions',population['listed_us_institutions']))
+    if (population.get('ranked_institutions_by_field') or {}).get('aggregate') is not None:
+        population_rows.append(('U.S. institutions with selected output across the five fields',population['ranked_institutions_by_field']['aggregate']))
+    config+='<dl class="research-config">'+''.join('<div><dt>'+esc(label)+'</dt><dd>'+esc(value)+'</dd></div>' for label,value in population_rows)+'</dl>' if population_rows else ''
+    permission=method.get('permission') or {}
+    venue_rows=''.join('<div><dt>'+esc(RESEARCH_FIELDS.get(field,field))+'</dt><dd>'+esc(', '.join(venues))+'</dd></div>' for field,venues in (method.get('field_membership') or {}).items())
+    sources=''.join('<li>'+external(source.get('url'),source.get('filename') or 'Source file')+('<br><code>SHA-256: '+esc(source['sha256'])+'</code>' if source.get('sha256') else '')+'</li>' for source in method.get('sources',[]) if isinstance(source,dict))
+    details='<details class="research-provenance"><summary>Source configuration &amp; permission record</summary>'
+    if venue_rows:details+='<h3>Selected venue groups</h3><dl class="research-config">'+venue_rows+'</dl><p>KDD is a separate next-tier option, excluded from this configuration; robotics is outside these five fields.</p>'
+    if permission:details+='<h3>Project permission record</h3><p>'+esc(permission.get('statement') or 'Educational-project permission confirmed by the project owner.')+'</p><p>Confirmed: '+esc(permission.get('confirmed_date'))+' · Scope: '+esc(permission.get('scope'))+'. No broader permission is inferred.</p>'
+    if method.get('retrieved_date'):details+='<p>Source retrieved: '+esc(method['retrieved_date'])+'.</p>'
+    if sources:details+='<h3>Snapshot sources</h3><ul>'+sources+'</ul>'
+    details+='</details>'
+    attribution=method.get('attribution') or {}
+    attribution_text='CSRankings' + (' by '+str(attribution['maintainer']) if attribution.get('maintainer') else '')
+    snapshot_link=external('https://github.com/emeryberger/CSrankings/tree/'+snapshot,'Pinned source snapshot') if re.fullmatch('[0-9a-f]{40}',snapshot) else ''
+    attribution_note='<p>'+esc(attribution['publication_data'])+'</p>' if attribution.get('publication_data') else ''
+    notes=''.join('<p>'+esc(method[key])+'</p>' for key in ('license_explanation','license_notes','missingness_explanation') if method.get(key))
+    return badge('CSRankings · research context available')+'<p>'+esc(method.get('method') or 'Publication-based research context using five individually reported fields and an explicit geometric aggregate.')+'</p>'+config+'<p>The Atlas uses the configured completed-year publication window shown above. The upstream live default includes the current year; this project configuration is separate. Field scores are adjusted publication counts + 1. The five-field aggregate is the geometric mean of those scores, without subtracting one. Displayed scores are rounded to one decimal before competition ranking; tied scores share ranks. Each selection is ranked across its full eligible U.S. positive-output population before matching institutions to the Atlas roster. These are U.S. research ranks, not ranks within this cohort, and ordinal ranks are never averaged.</p><p>Adjusted publications reflect fractional author credit. The selected snapshot’s faculty affiliations and venue configuration govern attribution; this is not a faculty-size-normalized or historical-enrollment measure. Publication activity does not measure undergraduate teaching, curriculum depth, admissions outcomes, or program quality.</p><p>Source statuses distinguish observed values, no selected output, institutions not listed, institutions outside the eligible population, unresolved institution matches, and unavailable source observations. An absent value stays null; it is not a zero score or last-place rank. Different programs at one institution share the same research context.</p><p>Project owner Kris Jordan confirmed educational-project permission on October 11, 2026. This records permission for this Atlas project; it does not claim broader reuse rights or replace the upstream license notices.</p><p>Attribution: '+external('https://csrankings.org/',attribution_text)+' · '+external('https://csrankings.org/faq','CSRankings FAQ')+' · '+external(copying,'Upstream COPYING and license notices')+' · '+external(method.get('source_url'),'Source website / methodology')+(' · '+snapshot_link if snapshot_link else '')+'</p>'+attribution_note+notes+details
+
+
 def methodology_page(data, base):
     meta = data.get('meta', {})
-    cs = data.get('csrankings') or {}
-    method = cs.get('methodology')
-    research_config = ''
-    if isinstance(method, dict):
-        field_names = {'ai': 'Artificial intelligence', 'vision': 'Computer vision', 'mlmining': 'Machine learning & data mining', 'nlp': 'Natural language processing', 'inforet': 'Information retrieval'}
-        fields = ', '.join(f'{field_names.get(field, field)} ({field})' for field in method.get('fields', [])) or 'Not configured'
-        missingness = sorted({o.get('missingness') for o in cs.get('observations', []) if o.get('missingness')})
-        settings = [
-            ('Publication window', f"{method.get('year_start', 'Unknown')}–{method.get('year_end', 'Unknown')}"),
-            ('Geographic filter', method.get('geographic_filter') or 'Not configured'),
-            ('Research fields', fields),
-            ('Pinned source snapshot', method.get('source_snapshot') or 'Not recorded'),
-            ('Import status', method.get('status') or 'not_imported'),
-            ('Recorded missingness', ', '.join(missingness) or 'No observation status recorded'),
-        ]
-        research_config = '<p>The following configuration is recorded for reproducibility. It has not been used to publish research values or ranks.</p><dl class="research-config">' + ''.join(f'<div><dt>{esc(label)}</dt><dd>{esc(value)}</dd></div>' for label, value in settings) + '</dl>'
-        research_config += '<p>Null values and ranks remain unknown. The status “permission_required” means reuse permission is unresolved; it does not mean zero publications, no AI research, or an unranked institution.</p>'
-        if method.get('source_url'):
-            research_config += '<p>' + external(method['source_url'], 'Configured methodology source') + '</p>'
-        for key in ('license_explanation', 'license_notes', 'missingness_explanation'):
-            if method.get(key):
-                research_config += f'<p>{esc(method[key])}</p>'
-        method = method.get('method') or 'Publication-based research context; no values have been computed or redistributed.'
-    elif not isinstance(method, str):
-        method = 'CSRankings is a publication-based view of computer science research activity. Research context is distinct from undergraduate program quality.'
-    body = f'''<section class="page-hero"><span class="eyebrow">HOW TO READ THE ATLAS</span><h1>Sources &amp; methodology</h1><p class="lede">An inspectable research index. No composite scores, hidden rankings, or claims that a curriculum count measures quality.</p></section>
+    research_markup = research_method_markup(data.get('csrankings') or {})
+    body = f'''<section class="page-hero"><span class="eyebrow">HOW TO READ THE ATLAS</span><h1>Sources &amp; methodology</h1><p class="lede">An inspectable research index. Curriculum evidence and publication-based research context are separate; neither is a program-quality score.</p></section>
 <div class="method-layout"><nav class="method-nav" aria-label="Methodology sections"><a href="#scope">01 · Scope</a><a href="#evidence">02 · Evidence</a><a href="#curriculum-method">03 · Curriculum</a><a href="#research">04 · Research context</a><a href="#unknowns">05 · Limitations</a></nav><div class="prose"><section id="scope"><h2>01 / A precise inclusion rule</h2><p>Programs qualify when their official undergraduate title includes AI or Artificial Intelligence. This includes explicit AI compounds such as GenAI and GeoAI when the official source identifies their artificial-intelligence meaning; incidental letters in unrelated words do not qualify. Degrees, additional majors, minors, and concentrations remain separate program types. A general computer science program with AI electives does not qualify on that basis alone.</p><p>The intended institution scope comprises two independent U.S. News top-100 cohorts, inclusive of ties: National Universities and National Liberal Arts Colleges. Until complete membership is source-verified and recorded, the atlas is a pilot inventory. Consult the coverage ledger for what has actually been inspected.</p></section>
 <section id="evidence"><h2>02 / Follow the source</h2><p>Official university catalogs, program pages, and announcements support program records. Sources retain their URLs, retrieval dates, catalog years, locators, and confidence. The last verification date describes the research record, not a guarantee that the source has remained unchanged.</p><p>Launch dates are recorded only when evidence supports the date and its precision. The oldest search result is not treated as a program’s first offering. Source statements about program aims, learning outcomes and career pathways appear separately from inferred editorial themes. Statement types are shown only when explicitly recorded.</p></section>
 {degree_audit_summary(meta)}<section id="curriculum-method"><h2>03 / Compare structure with care</h2><p>Requirements preserve all-of groups, course-count choices, credit-count choices, and nested alternatives. A course can belong to multiple requirements. The required profile shows only fixed courses established by all-of rules with no choice or unresolved-note ancestor. The options profile shows documented elective and required-choice candidates, excluding fixed required courses. Each view deduplicates stable course IDs; note-only and unbound records stay unresolved rather than becoming compulsory. Categories use course-level classifications, including Other / unclassified. A zero category count means no mapped classified records in the selected view, not proven absence from the actual curriculum. Taxonomy coverage is independent of requirement-inventory completeness; a complete inventory can contain unclassified courses.</p><p>“Complete” describes the requirement inventory for the represented award at its recorded catalog year. A complete minor or concentration inventory does not cover the whole parent degree. Course descriptions, prerequisite statements, credit amounts, and known credit units have separate availability counts; a complete requirement inventory may still have missing course metadata.</p><p>Program families are grouped only when an explicit, sourced relationship has been recorded; titles are not used to infer membership. A family groups related programs but is not an additional award. Each named variant retains its stable program page and is compared as a concrete program. Shared, local variant and replacement requirement labels identify the recorded relationship; a local requirement is not necessarily unique to that variant. Missing labels mean the relationship has not been classified. Discipline filters use only recorded family membership.</p><p>The default required profile is a fixed course set, not an estimate of the entire degree: required choice blocks remain separate with their published choose-N or credit rules. No pathway is selected or averaged. Nested selection amounts are not added together, and course counts never share a denominator with credits. Family profiles use resolved variant requirements after exclusions and replacements. These counts do not measure depth, quality or student experience.</p><p>Quarter hours, semester hours, course units, and other units retain their original labels. No conversion or normalized total is inferred. Unknown credits are null, never zero. Missing prerequisites, descriptions, course sites, or syllabi remain explicitly unrecorded.</p></section>
-<section id="research"><h2>04 / Research is context</h2>{badge('CSRankings · not imported')}<p>{esc(method)}</p>{research_config}<p>CSRankings data and code have not been imported or redistributed because redistribution licensing remains unresolved for this project. No research score is attached to a program. Publication activity does not measure undergraduate teaching quality. Consult the original resource and its methodology directly.</p><p>{external('https://csrankings.org/', 'Visit CSRankings')} · {external('https://csrankings.org/faq', 'Read the CSRankings FAQ')}</p></section>
+<section id="research"><h2>04 / Research is context</h2>{research_markup}</section>
 <section id="unknowns"><h2>05 / What remains unknown</h2><p>Coverage is incomplete. A missing institution or program does not establish absence. A “no qualifying program found” conclusion requires a documented search of official sources. Inaccessible pages remain inaccessible; pending institutions remain pending.</p><ul>{limitations(meta)}</ul><p>Use this atlas to frame questions, then confirm current admission and graduation requirements with the institution.</p><a href="{base}coverage/">Inspect the coverage ledger →</a></section></div></div>'''
     return shell('Methodology', body, base, 'methodology')
 
@@ -781,7 +805,7 @@ def build(data: dict, output: Path, base_path: str = '/ai-program-atlas/') -> No
     for family in family_map.values():
         family['_variant_labels'] = [(p['id'], (p.get('family') or {}).get('variant_label') or p.get('title')) for p in programs if p['id'] in family.get('variant_ids', [])]
     for program in programs:
-        pages[f'programs/{program["id"]}/index.html'] = program_page(program, base, family_map.get((program.get('family') or {}).get('id')))
+        pages[f'programs/{program["id"]}/index.html'] = program_page(program, base, family_map.get((program.get('family') or {}).get('id')), institution_context(data, (program.get('institution') or {}).get('id')))
     for relative, content in pages.items():
         target = output / relative
         target.parent.mkdir(parents=True, exist_ok=True)
