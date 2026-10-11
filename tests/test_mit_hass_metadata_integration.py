@@ -212,3 +212,16 @@ def test_urban_historical_units_do_not_cross_course_title_versions():
         assert by[held]['description'] is None
     law=by['mit-ai-hass-african-and-african-diaspora-studies-11-166']
     assert 'permission' in law['prerequisites'].lower()
+
+
+def test_sts_exact_composites_and_homepage_resource_limits():
+    p=json.loads(Path('data/programs/mit-ai-decision-making-bs.json').read_text())
+    by={c['id']:c for c in p['courses']}
+    nuclear=by['mit-ai-hass-ethics-sts-084j-22-04j']
+    ethics=by['mit-ai-hass-ethics-sts-085j-6-4590j']
+    assert nuclear['category_review']['status']=='mixed'
+    assert set(nuclear['category_review']['candidate_categories'])=={'applications','human_context'}
+    assert ethics['description'] and ethics['public_site'].endswith('/6-4590-foundations-of-information-policy-fall-2024/')
+    assert ethics['syllabus'] is None
+    assert not by['mit-ai-hass-sts-tier-2-sts-085j']['description']
+    assert by['mit-ai-hass-sts-tier-2-sts-081j']['category']=='human_context'
