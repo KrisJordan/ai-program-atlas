@@ -375,3 +375,13 @@ def test_business_intb_credit_conflict_retains_both_sources_and_original_alterna
     assert p['id']+'-intb-courses' in p['curriculum_audit']['source_ids']
     assert p['id']+'-concentration-international-business-catalog' in p['curriculum_audit']['source_ids']
     assert p['curriculum_status']=='partial'
+
+
+def test_epidemiology_computation_scope_requires_current_course_evidence():
+    html=page('<div class="courseblock"><p class="courseblocktitle">PHTH 4202. Principles of Epidemiology. (4 Hours)</p><p class="cb_desc">Studies research design, bias and causal inference; there are no computational requirements.</p></div>',heading='Public Health (PHTH)')
+    parser=register_subject_sources('test-program',{'PHTH':['PHTH 4202']})['https://catalog.northeastern.edu/course-descriptions/phth/']
+    observed=parser(html)
+    assert 'no computation is required' in observed['courses'][0]['description']
+    assert observed['courses'][0]['prerequisites'] is None
+    assert observed['requirements']==[] and 'outcomes' not in observed
+    assert parser(html.replace('there are no computational requirements','computational exercises are required'))['courses'][0]['description'] is None

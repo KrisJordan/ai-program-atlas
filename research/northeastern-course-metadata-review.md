@@ -219,3 +219,12 @@ A substantive source conflict is now explicit in the Business variant's partial 
 This batch reviewed 53 distinct source descriptions and added **57 description fields across 2 variants**, bringing the total to **1277 of1,593 course observations**. The exact remaining inventory now contains **316 accessible unreviewed observations across 280 codes**. All source timestamps remain the actual catalog fetch times. All requirement graphs, credit amounts, preparation fields and public-resource links remain unchanged.
 
 Validation: **146 Northeastern-focused tests passed**; all23 temporary ingest/repeat/export/build/integrity checks passed. All9 affected source registrations succeeded twice with zero repeat candidates/source changes. The queue integrity test verifies its counts and exact code/program membership against the concrete records.
+
+## Health economics and ethics options — 2026-10-11
+
+Reviewed official PHTH, HSCI, HLTH, PT, BIOC, BNSC, ECON and PHIL catalog descriptions for health methods, economic policy, ethical analysis and named major options. Summaries distinguish clinical anatomy from its laboratory, course activities from assessed program outcomes, and religious/philosophical inquiry from endorsement of the ideas examined. PHTH 4202’s explicit absence of computational requirements is guarded and tested against a changed course statement. Existing recommendation, permission and prior-coursework fields retain their original scope; no missing prerequisite is converted to “none.”
+
+
+This batch reviewed 59 distinct source descriptions and added **74 description fields across 9 variants**, bringing the total to **1351 of1,593 course observations**. The exact remaining inventory now contains **242 accessible unreviewed observations across 221 codes**. All source timestamps remain the actual catalog fetch times. All requirement graphs, credit amounts, preparation fields and public-resource links remain unchanged.
+
+Validation: **147 Northeastern-focused tests passed**; all23 temporary ingest/repeat/export/build/integrity checks passed. All19 affected source registrations succeeded twice with zero repeat candidates/source changes. The queue integrity test verifies its counts and exact code/program membership against the concrete records.
