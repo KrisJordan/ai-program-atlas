@@ -194,3 +194,9 @@ Live public JSON matched every projected curriculum profile and award bucket. Pr
 The clean suite passed 3,065 cases and skipped 428 optional private-cache or historical cases, but one required mobile browser case failed: Stevens source locator fingerprints extended the 390px page to 501px. This candidate was not published. Fresh and maintained current facts agreed, repeat ingestion changed zero programs, integrity and foreign keys passed, and all 175 static files were deterministic.
 
 Commit `3846967` fixes the cause with wrapping scoped to source citation paragraphs. It retains the full evidence text. Both real Stevens desktop/mobile cases and both no-JavaScript course-note cases pass, along with 15 site/note tests. The next complete release must still pass the full clean suite, CI/Pages, and live verification.
+
+## Unpublished candidate 2d77063d — 2026-10-11
+
+The complete clean suite passed 3,193 tests, including the repaired mobile browser checks, and skipped 434 optional private-cache or historical cases. Three old RIT tests expected the earlier 43-record inventory to still equal the entire expanded degree graph. This candidate was not published. Fresh and maintained facts agreed, repeat ingestion was unchanged, and 175 static files were deterministic.
+
+Commit `acd03e6` declares the existing independent review's exact bounded inventory without altering its manually transcribed IDs, roles, or categories. New immersion records remain outside that independent certification. Tests still reject deletion of a reviewed course, changes to its role or subject, and promotion of later immersion additions into universal fixed requirements. All 44 affected tests pass. This is a scope correction, not an independent source review of new records.
