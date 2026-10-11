@@ -33,6 +33,10 @@ uv run python -m http.server 8000 --directory var/preview
 
 For Pages-style paths, build to `var/site/ai-program-atlas` using the default base path, serve `var/site`, and visit `/ai-program-atlas/`. Direct details, reload, back/forward, and copied comparison URLs work without server routing rules. Basic program content works without JavaScript.
 
+The homepage groups records by their documented National University or National Liberal Arts College ranking category. Each group has independent Majors, Concentrations and Minors tabs; Majors includes distinctly labeled additional majors. Major award filters use verified BS/BSE/BA mappings and retain Other/unspecified records. Exact source labels remain visible. `path_nu` / `path_lac` and `award_nu` / `award_lac` preserve these choices in shared URLs, alongside existing search and comparison state. For example, [National University BSE majors](https://krisjordan.github.io/ai-program-atlas/?cohort=National+Universities&path_nu=majors&award_nu=BSE).
+
+Curriculum profiles default to the fixed mapped required set. Elective and required-choice pools are separate, with source-stated selection quantities beside their evidence. Counts use distinct course records, not credits or degree shares; source conditions and unresolved roles remain explicit. `profile=options` selects the option-pool comparison, and browser back/forward restores the view. See the [profile and award contract](docs/CONTRACT.md) for conservative classification and provenance rules.
+
 ## Refresh and review
 
 ```sh

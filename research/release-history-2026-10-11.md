@@ -69,3 +69,8 @@ Release `7ae8cf4d` passed 1,322 tests (all 17 Chromium cases), fresh/maintained 
 ## Verified 136-program checkpoint (superseded)
 
 Release `7ae8cf4dfbb4f7b45c6baf8621347c2495acb375`, [CI/Pages run](https://github.com/KrisJordan/ai-program-atlas/actions/runs/38101661236): 1,322 passing tests with 17 required Chromium cases, 111 optional-cache/historical skips, fresh/maintained equality, repeat ingest zero, 143 deterministic files and live browser checks. It contained 136 programs across 194 institutions (67 confirmed, 118 inspected, eight inaccessible, one bounded absence result), with 36 complete scoped inventories, 93 partial and seven pending. This is historical; PLAN.md records the newer verified release.
+
+
+## Verified 142-program checkpoint (superseded)
+
+Release `fd44e55b7437452986ba145d5473978c4e9f521f`, [CI/Pages run](https://github.com/KrisJordan/ai-program-atlas/actions/runs/38102605687), passed 1,405 tests with all 23 required browser cases, 118 optional-cache/historical skips, fresh/maintained equality, repeat ingest zero and 149-file deterministic builds. It contained 142 programs across 194 institutions: 72 confirmed, 113 inspected, eight inaccessible, one bounded absence finding; curricula were 37 complete, 98 partial and seven pending. Program-course observations were 22,609 and requirement nodes 16,717. Live checks verified family expansion/collapse history, comparison focus, direct links and mobile layout. Root HTML was 2,831,909 bytes. These are historical counts; PLAN.md records the later 164-program release and requested profile/navigation changes.
