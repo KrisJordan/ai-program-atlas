@@ -1,6 +1,7 @@
 """Validate requirement trees without inventing equivalence or degree totals."""
 
 from datetime import date
+import math
 
 
 def validate_curriculum_audit(program: dict) -> None:
@@ -49,6 +50,11 @@ def validate_requirements(program: dict) -> None:
         raise ValueError("Duplicate requirement IDs")
     for gid, group in groups.items():
         kind = group["kind"]
+        credits = group.get("credits")
+        if credits is not None and (isinstance(credits, bool)
+                or not isinstance(credits, (int, float))
+                or not math.isfinite(credits) or credits < 0):
+            raise ValueError(f"{gid}: credits must be a finite nonnegative number or null")
         if kind not in {"all", "choose_courses", "choose_credits", "alternative", "note"}:
             raise ValueError(f"Unknown requirement kind: {kind}")
         if kind == "choose_courses" and (
