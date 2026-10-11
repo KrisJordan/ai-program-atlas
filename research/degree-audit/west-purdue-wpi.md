@@ -225,3 +225,23 @@ conditions, but not a blanketAImajor waiver. Exact college applicability is reta
 for graduatecoursecredit/deanapprovalrules. Fourguardednote nodes contain no course
 references or additionaldegree-load assumptions. Major-restrictionapplicability is
 still an evidence question, not inferred impossibility or automatic permission.
+
+
+### Current English version closure (2026-10-11)
+
+The ordinary current catalog records for ENGL 146AI, 146DS and 197 were read
+in full. Each gives four units and explicit writing/standing prerequisites.
+146AI studies literary and philosophical questions about artificial entities;
+146DS studies narrative/media theory and data storytelling. Their classifications
+remain human context, independently of their AI or data titles. Current evidence
+replaces the earlier dated offering metadata without treating those older pages
+as a fresh catalog version or merging 146AI with the separate 155AI identity.
+
+The current generic 197 description establishes a variable seminar and library
+research project, not a universal seminar subject. Its metadata parser therefore
+omits category; the retained manual human-context classification is explicitly
+limited to the three separately read Fall 2026 offerings and does not certify
+future topics. Exact repeat limits and writing alternatives remain in the
+observed eligibility field. Roles, aliases and 20 fixed/61 option/2 contextual
+identity counts are unchanged. Remaining optional-course versions, approved GE
+pools and specific AI enrollment exceptions remain accessible audit work.

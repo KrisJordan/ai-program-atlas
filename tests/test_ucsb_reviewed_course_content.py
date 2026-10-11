@@ -140,10 +140,11 @@ def test_english_offering_guards_do_not_infer_current_version_or_gold_prerequisi
     assert c['category']=='human_context' and 'category_review'not in c
     with pytest.raises(ValueError):english.parse(html.replace('Winter 2021','Fall 2026'),key='engl146ai')
     d=json.loads(Path('data/programs/ucsb-ai-bs.json').read_text());courses={c['code']:c for c in d['courses']}
-    assert courses['ENGL 197']['name']=='Upper Division Seminar'
-    assert len(courses['ENGL 197']['category_review']['source_ids'])==3
+    assert courses['ENGL 197']['name']=='Upper-Division Seminar'
+    assert len(courses['ENGL 197']['category_review']['source_ids'])==4
     assert courses['ENGL 146AI']['code']!='ENGL 155AI'
-    assert 'Winter2021' in courses['ENGL 146AI']['description']
+    assert 'Winter 2021' in english.SPEC['engl146ai']['term']
+    assert courses['ENGL 146AI']['credits']==4
     assert requirement_profile(d)['options']['categories']['human_context']==28
 
 
@@ -255,3 +256,22 @@ def test_optional_registration_source_replay():
         result=registration.parse(cache.read_text(),key=key)
         assert result==registration.parse(cache.read_text(),key=key)
         assert 'curriculum_audit'not in result
+
+
+def test_current_english_metadata_does_not_generalize_seminar_subject(monkeypatch):
+    from atlas.adapters import ucsb_catalog_course_content as current
+    html='<main><h1>ENGL197</h1><h3>Full Course Title</h3><p>Synthetic variable seminar, four units.</p><h3>Programs</h3><p>Synthetic program.</p></main>'
+    entry={**current.SPEC['ENGL 197'],'fields_digest':hashlib.sha256(b'Synthetic variable seminar, four units.').hexdigest()}
+    monkeypatch.setitem(current.SPEC,'ENGL 197',entry)
+    observation=current.parse(html,code='ENGL 197')['courses'][0]
+    assert observation['credits']==4
+    assert 'category'not in observation and 'category_review'not in observation
+    assert 'upper-division standing' in observation['prerequisites']
+    d=json.loads(Path('data/programs/ucsb-ai-bs.json').read_text());c={x['code']:x for x in d['courses']}
+    for code in ['ENGL 146AI','ENGL 146DS']:
+        assert c[code]['credits']==4 and c[code]['category']=='human_context'
+        assert c[code]['source_id'].endswith('-catalog-2026')
+        assert 'Writing 2' in c[code]['prerequisites']
+    assert 'Fall 2026' in c['ENGL 197']['category_review']['rationale']
+    assert 'future' in c['ENGL 197']['category_review']['rationale']
+    assert all('ucsb-engl-146ai'not in g['course_ids'] for g in d['course_identity_groups'])

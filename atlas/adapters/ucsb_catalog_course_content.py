@@ -32,6 +32,9 @@ def parse(html, *, code):
                   credit_unit='quarter_hours', prerequisites=entry['prerequisites'],
                   category=entry['category'], source_id=entry['source_id'],
                   url=entry['url'])
+    if not entry.get('observe_category', True):
+        # Generic current metadata cannot certify the subject of specific terms.
+        course.pop('category')
     # Identity certification and taxonomy review are manual seed annotations.
     return dict(id='ucsb-ai-bs', courses=[course], requirements=[], notes=[
         'Observed current catalog metadata does not itself certify a manual '
