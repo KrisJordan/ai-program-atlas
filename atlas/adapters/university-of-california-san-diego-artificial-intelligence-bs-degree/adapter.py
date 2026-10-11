@@ -123,3 +123,8 @@ SOURCE_PARSERS.update({revelle.BASE + page + '.html': parser for page, parser in
 from atlas.adapters import ucsd_muir_pools as muir
 SOURCES += (muir.URL, muir.POLICY_URL)
 SOURCE_PARSERS.update({muir.URL: muir.parse, muir.POLICY_URL: muir.parse_policy})
+
+from atlas.adapters import ucsd_warren_pools as warren
+SOURCES += (warren.AREA_URL, warren.TRANSFER_URL) + tuple(warren.TABLE_URLS.values())
+SOURCE_PARSERS.update({warren.AREA_URL: warren.parse_area, warren.TRANSFER_URL: warren.parse_transfer})
+SOURCE_PARSERS.update({url: (lambda html, key=key: warren.parse_table(html, key)) for key, url in warren.TABLE_URLS.items()})
