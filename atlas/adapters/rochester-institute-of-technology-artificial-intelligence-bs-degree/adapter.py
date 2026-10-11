@@ -62,3 +62,11 @@ register_anthropology_sociology(SOURCES, SOURCE_PARSERS)
 
 from atlas.adapters.rit_ecology_gender_integration import register as register_ecology_gender
 register_ecology_gender(SOURCES, SOURCE_PARSERS)
+
+from atlas.adapters.rit_philosophy_course_reviews import parse as parse_philosophy_cards
+from atlas.adapters.rit_history_economics_course_reviews import parse as parse_history_economics_cards
+for slug, observer in [('philosophy-immersion', parse_philosophy_cards), ('ethics-immersion', parse_philosophy_cards), ('history-immersion', parse_history_economics_cards), ('economics-immersion', parse_history_economics_cards)]:
+    url = 'https://www.rit.edu/study/' + slug
+    if url not in SOURCES:
+        SOURCES.append(url)
+    SOURCE_PARSERS[url] = partial(observer, url=url)

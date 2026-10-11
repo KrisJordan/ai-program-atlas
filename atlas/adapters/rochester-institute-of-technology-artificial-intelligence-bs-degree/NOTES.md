@@ -2,7 +2,7 @@
 
 Reviewed 2026-10-11. The primary degree audit is **in progress**, not complete or
 wholly inaccessible. The current reviewed graph has 23 fixed course identities,
-313 options and 13 unresolved/context identities (three advising-only and ten preparation-only). The 2026–2027 public
+411 options and 14 unresolved/context identities (three advising-only and eleven preparation-only). The 2026–2027 public
 study curriculum states 122 semester hours, six core alternative pairs and two AI
 electives across four options (five course codes, including a robotics pair).
 Two zero-credit co-op placements reuse one course identity. Uncoded GE,
@@ -11,7 +11,7 @@ requirements are represented without fabricated course membership.
 
 All 40 current public course popups were read. Their credits and 28 prerequisite
 or expectation statements are mapped; absent prerequisite fields stay unknown.
-The 24 represented immersion branches supply 306 additional actual-description records. Every represented course has a source-specific taxonomy review, including three
+The 28 represented immersion branches supply 405 additional actual-description records. Every represented course has a source-specific taxonomy review, including three
 advising-only identities for which current descriptions are unavailable. Exact
 profile sets and role corrections are in the RIT row of
 `research/degree-audit/buffalo-delaware-rit.json`.
@@ -49,8 +49,8 @@ current section syllabus or a program outcome. See the separate source review
   retried. The linked science list explicitly dates to March 2013 and is not used
   as a current pool.
 - Public immersion curricula do render in an ordinary browser. The directory
-  has 77 immersion links; all local route rules are now reviewed. Twenty-four branches
-  have represented course records; the full named queue still has 439 unread
+  has 77 immersion links; all local route rules are now reviewed. Twenty-eight branches
+  have represented course records; the full named queue still has 338 unread
   identifiers. No blanket catalog-access claim or full GE closure is justified.
 - The current AI sequence annotates MATH190 as Immersion3 and separately lists
   another Immersion3 slot. The advising chart instead shows three separate
@@ -153,3 +153,12 @@ The 107 actual language-route descriptions are human context under the explicit 
 The current graph has 349 identities: 23 fixed, 313 options and 13 preparation/context records; 346 actual descriptions. Twenty-four local branches are represented. The named queue has 320 integrated actual descriptions, 25 reviewed contributions awaiting integration, three historical references and 439 unread identifiers. Whole-degree review remains in progress.
 
 Ecology/Evolution preserves BIOL-265 OR BIOL-240 plus two further electives; those two identities also appear in the elective pool, without permission to count a course twice. Four-credit ecology/anatomy cards, study-away applications/fees and permission conditions remain visible alongside nominal table totals. The five gender-study paths retain different required/choice groups, max-one introductory constraints where stated, relevant-topic conditions and the one specified upper-level elective rule. Women's and Gender Studies has a nine-hour selection row but no total row; that distinction remains. WGST-380 now has its actual popup identity, Gender and Political Thought. No repeated code is an inferred alias or additional fixed AI obligation.
+
+
+## Philosophy, Ethics, History and Economics — 2026-10-11
+
+The current graph is 448 identities: 23 fixed, 411 options and 14 preparation/context records; 445 have actual reviewed descriptions. Twenty-eight branches are represented. The named queue has 419 integrated descriptions, 27 completed contributions awaiting integration, three historical references and 338 unread identifiers.
+
+Philosophy and History each select three listed courses with at least one upper-level course. Ethics retains the full one-foundation-plus-two OR both-foundations-plus-one bundles, requires two upper-level courses and limits PHIL-449 to ethical topics. Economics selects three of 22 electives; ECON-101 is separate three-credit preparation, not a fourth immersion selection or universal AI core. PHIL-401's prose permission alternative and formal prerequisite are both preserved; advanced course eligibility is not inferred from placement or code numbers.
+
+Actual rereads of ECON-408, ECON-411 and HIST-326 confirmed purpose-based taxonomy: economic methods remain applications when law or programming is the domain/tool, while historical inquiry and communication remain human context despite digital tools. PHIL-205 is formal mathematics; AI Ethics is human context. Unspecified PHIL-416/449 topics remain source-inspected unclassified. These scoped reviews do not close remaining GE/WI access boundaries or the unread accessible queue.
