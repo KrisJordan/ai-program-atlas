@@ -410,3 +410,27 @@ for _review_url, _review_parser in chem_reviews.SOURCE_PARSERS.items():
         raise ValueError('UCSD Chemistry source needs explicit parser composition')
     SOURCES += (_review_url,)
     SOURCE_PARSERS[_review_url] = _review_parser
+
+from atlas.adapters import ucsd_literature_first_reviews as literature_first_reviews
+from atlas.adapters import ucsd_literature_remaining_reviews as literature_remaining_reviews
+from atlas.adapters import ucsd_engineering_reviews as engineering_reviews
+_LITERAL_REVIEW_URL = next(iter(literature_first_reviews.SOURCE_PARSERS))
+
+def parse_all_reviewed_literature(html):
+    outputs = [literature_first_reviews.parse_observations(html),
+               literature_remaining_reviews.parse_observations(html)]
+    courses = [course for result in outputs for course in result['courses']]
+    if len({course['id'] for course in courses}) != len(courses):
+        raise ValueError('Duplicate complete Literature course ID')
+    return {'id': PROGRAM_ID, 'courses': courses,
+            'source_dispositions': [item for result in outputs for item in result['source_dispositions']]}
+
+if _LITERAL_REVIEW_URL in SOURCE_PARSERS:
+    raise ValueError('UCSD Literature source needs explicit parser composition')
+SOURCES += (_LITERAL_REVIEW_URL,)
+SOURCE_PARSERS[_LITERAL_REVIEW_URL] = parse_all_reviewed_literature
+for _review_url, _review_parser in engineering_reviews.SOURCE_PARSERS.items():
+    if _review_url in SOURCE_PARSERS:
+        raise ValueError('UCSD Engineering source needs explicit parser composition')
+    SOURCES += (_review_url,)
+    SOURCE_PARSERS[_review_url] = _review_parser

@@ -2,7 +2,7 @@ import importlib
 import json
 from pathlib import Path
 import pytest
-from atlas.adapters import ucsd_hila_reviews as hila, ucsd_sio_reviews as sio, ucsd_eds_reviews as eds, ucsd_cgs_reviews as cgs, ucsd_mus_reviews as mus, ucsd_biology_reviews as bio, ucsd_glbh_reviews as glbh, ucsd_psyc_reviews as psyc, ucsd_linguistics_reviews as ling, ucsd_physics_astronomy_reviews as physics, ucsd_chem_reviews as chem
+from atlas.adapters import ucsd_hila_reviews as hila, ucsd_sio_reviews as sio, ucsd_eds_reviews as eds, ucsd_cgs_reviews as cgs, ucsd_mus_reviews as mus, ucsd_biology_reviews as bio, ucsd_glbh_reviews as glbh, ucsd_psyc_reviews as psyc, ucsd_linguistics_reviews as ling, ucsd_physics_astronomy_reviews as physics, ucsd_chem_reviews as chem, ucsd_literature_first_reviews as lit, ucsd_engineering_reviews as eng
 from atlas.curriculum_profile import requirement_profile
 
 PID=hila.SPEC['program_id']
@@ -25,7 +25,7 @@ def test_history_sio_integration_preserves_held_identity_and_roles():
     assert cs['POLI 117']['category_review']['status']=='unclassified'
     assert [requirement_profile(d)[k]['count']for k in ['required','options','unresolved']]==[8,119,2241]
 
-@pytest.mark.parametrize('module,subject,count,dispositions',[(hila,'HILA',265,20),(sio,'SIO',35,6),(eds,'EDS',31,1),(cgs,'CGS',24,0),(mus,'MUS',27,6),(bio,'BIOL',34,3),(glbh,'GLBH',24,2),(psyc,'PSYC',14,2),(ling,'LING',25,14),(physics,'PHYS',14,1),(physics,'ASTR',10,1),(chem,'CHEM',13,1)])
+@pytest.mark.parametrize('module,subject,count,dispositions',[(hila,'HILA',265,20),(sio,'SIO',35,6),(eds,'EDS',31,1),(cgs,'CGS',24,0),(mus,'MUS',27,6),(bio,'BIOL',34,3),(glbh,'GLBH',24,2),(psyc,'PSYC',14,2),(ling,'LING',25,14),(physics,'PHYS',14,1),(physics,'ASTR',10,1),(chem,'CHEM',13,1),(lit,'LTEA',110,15),(eng,'ECE',9,0),(eng,'MAE',6,3),(eng,'SE',5,0),(eng,'BENG',2,1),(eng,'NANO',3,0)])
 def test_composed_source_replays_approved_metadata_only(module,subject,count,dispositions):
     s=module.SPEC['sources'][subject];p=Path(s['cache_path'])
     if not p.exists():pytest.skip('Optional ignored official chapter capture')
@@ -103,3 +103,24 @@ def test_chemistry_directional_credit_and_positive_counterpart_evidence():
     assert any('May receive credit for CHEM 6CH after CHEM 6C' in n for n in cs['CHEM 6CH']['notes'])
     assert any('Positive counterpart evidence' in n for n in cs['SIO 141']['notes'])
     assert cs['CHEM 15']['category_review']['status']=='unclassified'
+
+
+def test_literature_engineering_scope_and_holds_survive_integration():
+    d=json.loads(Path('data/programs',PID+'.json').read_text());cs={c['code']:c for c in d['courses']}
+    assert cs['LTCS 108']['category']=='human_context'
+    assert cs['LTSP 166']['category']=='applications'
+    assert 'or consent' in cs['LTFR 123']['prerequisites']
+    assert 'LTFR 104' in cs['LTFR 123']['prerequisites']
+    assert cs['LTIT 12AR']['prerequisites'] is None
+    assert cs['LTAM 110GS']['name']=='Latino/a Literature in Translation'
+    assert cs['LTAM 110GS']['category_review']['status']=='unclassified'
+    assert cs['LTWR 126']['description'] is None
+    assert any('renumbered' in n for n in cs['LTWR 126']['notes'])
+    assert cs['LTWL 199']['credits'] is None
+    assert cs['BENG 196']['credits'] is None and cs['ECE 193H']['credits'] is None
+    assert cs['ECE 25']['prerequisites']=='none.'
+    assert cs['MAE 190']['name']=='Digital Storytelling: Dynamic STEM Communication'
+    assert cs['MAE 118']['category_review']['status']=='unclassified'
+    assert 'immediately preceding quarter' in cs['MAE 156B']['prerequisites']
+    assert any('not imposed as AI-degree graduation' in n for n in cs['MAE 156B']['notes'])
+    assert [requirement_profile(d)[k]['count']for k in ['required','options','unresolved']]==[8,119,2241]
