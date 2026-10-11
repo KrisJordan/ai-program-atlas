@@ -1,5 +1,6 @@
 """Source-anchored second-pass examples; no keyword-based category inference."""
 import json
+import pytest
 from pathlib import Path
 
 from atlas.curriculum_profile import requirement_profile
@@ -317,17 +318,20 @@ def test_northeastern_role_overlays_corequisites_and_variable_hours_do_not_infla
     assert next(c for c in speech['courses'] if c['code']=='SLPA 4219')['credits']==3
 
 
-def test_northeastern_economics_full_manual_inventory_and_rendered_profile():
+@pytest.mark.parametrize(('pid','record_count'), [
+    ('northeastern-university-artificial-intelligence-and-economics-bs-boston-bs-degree',50),
+    ('northeastern-chemical-engineering-ai-bsche',46),
+])
+def test_northeastern_additional_full_manual_inventory_and_rendered_profile(pid,record_count):
     import hashlib
     from bs4 import BeautifulSoup
     from atlas.site import category_chart
     ledger = json.loads((ROOT/'research/degree-audit/independent-review.json').read_text())
-    pid = 'northeastern-university-artificial-intelligence-and-economics-bs-boston-bs-degree'
     entry = next(e for e in ledger['programs'] if e['program_id']==pid)
     p = load(pid)
     courses = {c['code']:c for c in p['courses']}
     profile = requirement_profile(p)
-    assert len(entry['course_review'])==len(courses)==50
+    assert len(entry['course_review'])==len(courses)==record_count
     assert profile['identity']==entry['expected_identity']
     for source in entry['course_review']:
         c = courses[source['code']]
@@ -376,3 +380,34 @@ def test_northeastern_economics_calculus_choices_gpa_overlay_and_local_pool_scop
     for code in ['ECON 4692','ECON 4997']:
         assert courses[code]['category_review']['status']=='unclassified'
         assert requirement_profile(only_course(p,courses[code]['id']))['options']['count']==1
+
+
+def test_northeastern_chemical_engineering_preserves_pairs_zero_hours_and_entry_constraints():
+    p = load('northeastern-chemical-engineering-ai-bsche')
+    assert not p.get('family')
+    courses = {c['code']:c for c in p['courses']}
+    nodes = {r['id']:r for r in p['requirements']}
+    pair = next(r for r in nodes.values() if r['id'].endswith('introductory-engineering-bundle'))
+    assert pair['kind']=='alternative'
+    children = [r for r in nodes.values() if r.get('parent_id')==pair['id']]
+    assert len(children)==2 and all(r['kind']=='all' for r in children)
+    assert {frozenset(r['course_ids']) for r in children}=={
+        frozenset(courses[c]['id'] for c in ['GE 1501','GE 1502']),
+        frozenset(courses[c]['id'] for c in ['GE 1110','GE 1111']),
+    }
+    for code in ['GE 1501','GE 1502','GE 1110','GE 1111']:
+        profile = requirement_profile(only_course(p,courses[code]['id']))
+        assert profile['required']['count']==0 and profile['options']['count']==1
+    for code in ['CHME 3306','CHME 4705','CHEM 1153','MATH 3082']:
+        assert courses[code]['credits']==0 and courses[code]['credit_unit']=='semester_hours'
+        assert requirement_profile(only_course(p,courses[code]['id']))['required']['count']==1
+    process = courses['CHME 4512']
+    assert process['category']=='applications'  # Physical process control is not computing infrastructure.
+    assert len([r for r in nodes.values() if process['id'] in r.get('course_ids',[])])==2
+    assert requirement_profile(only_course(p,process['id']))['required']['count']==1
+    # Retain the catalog option and the distinct lab prerequisite; do not invent a waiver.
+    assert requirement_profile(only_course(p,courses['ENGW 3307']['id']))['options']['count']==1
+    lab = courses['CHME 3305']['prerequisites']
+    assert 'ENGW 3302' in lab and 'ENGW 3315' in lab and 'ENGW 3307' not in lab
+    assert 'MATH 1341 or permission' in courses['MATH 1342']['prerequisites']
+    assert not any('Khoury Approved Electives' in r['title'] for r in nodes.values())
