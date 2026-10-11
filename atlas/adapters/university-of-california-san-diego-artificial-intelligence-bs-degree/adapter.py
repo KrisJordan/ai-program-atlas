@@ -154,3 +154,9 @@ SOURCE_PARSERS.update({eighth.FIRST_URL: eighth.parse_first, eighth.TRANSFER_URL
 from atlas.adapters import ucsd_seventh_pools as seventh
 SOURCES += (seventh.FIRST_URL, seventh.TRANSFER_URL)
 SOURCE_PARSERS.update({seventh.FIRST_URL: seventh.parse_first, seventh.TRANSFER_URL: seventh.parse_transfer})
+
+from atlas.adapters import ucsd_transfer_options as transfer_options
+SOURCES += (transfer_options.HUM_URL, transfer_options.REVELLE_URL, transfer_options.MARSHALL_URL)
+SOURCE_PARSERS.update({transfer_options.HUM_URL: transfer_options.parse_humanities,
+                      transfer_options.REVELLE_URL: transfer_options.parse_revelle_transfer,
+                      transfer_options.MARSHALL_URL: transfer_options.parse_marshall_service})
