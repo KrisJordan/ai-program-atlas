@@ -15,7 +15,7 @@ from atlas.rankings import institution_rank_context
 CATEGORIES = {
     "foundations": "Computing foundations", "mathematics": "Mathematics",
     "ai_ml": "AI & machine learning", "systems": "Systems",
-    "human_context": "Human context", "applications": "Applications",
+    "human_context": "Human context", "applications": "Domain studies & applications",
     "electives": "Electives", "other": "Other / unclassified",
 }
 

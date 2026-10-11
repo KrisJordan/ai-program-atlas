@@ -428,6 +428,7 @@ def test_required_profile_default_options_history_and_mobile(page,site,tmp_path,
     expect(options).not_to_be_visible()
     expect(required).to_contain_text('2 distinct fixed required course records')
     expect(required).to_contain_text('Other / unclassified')
+    expect(required.locator('[data-category=applications]')).to_contain_text('Domain studies & applications')
     page.locator('label[for=profile-options]').click()
     expect(options).to_be_visible()
     expect(required).not_to_be_visible()
