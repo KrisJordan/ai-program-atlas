@@ -67,3 +67,7 @@ SOURCE_PARSERS.update({policy_closure.CALGETC_URL: lambda html: policy_closure.p
 from atlas.adapters.west_degree_subjects import observe as observe_subjects
 parse = observe_subjects(parse, PROGRAM_ID)
 SOURCE_PARSERS = {url: observe_subjects(parser, PROGRAM_ID) for url, parser in SOURCE_PARSERS.items()}
+
+# Independent public department content; no inferred current catalog edition.
+from atlas.adapters import ucsb_reviewed_course_content as reviewed_content
+reviewed_content.attach(globals())
