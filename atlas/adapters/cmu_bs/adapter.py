@@ -344,3 +344,11 @@ for key in linked_policies.DATASETS:
 from atlas.adapters.cmu_bs.course_resources import register as register_course_resources
 
 register_course_resources(PROGRAM_ID, SOURCES, SOURCE_PARSERS)
+
+# BS-only quantitative metadata and publicly visited core-course resources.
+from atlas.adapters.cmu_bs.core_enrichment import register as register_core_enrichment
+register_core_enrichment(SOURCES, SOURCE_PARSERS)
+from atlas.adapters.cmu_bs.core_enrichment import MINOR, OPTIONS, parse_minor_access
+for _url in (MINOR, OPTIONS):
+    SOURCES.append(_url)
+    SOURCE_PARSERS[_url] = lambda html, url=_url: parse_minor_access(html, url)
