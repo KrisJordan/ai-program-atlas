@@ -11,6 +11,7 @@ SOURCES = [
 
 
 def parse(html: str) -> dict:
+    verify_other_electives(html)
     return parse_program(
         html,
         pid=PROGRAM_ID,
@@ -42,3 +43,24 @@ SOURCE_PARSERS["https://live-villanova-catalog.cleancatalog.io/management/mgt-41
         url="https://live-villanova-catalog.cleancatalog.io/management/mgt-4170",
     )
 )
+
+
+def verify_other_electives(html):
+    """Do not silently keep the empty-list interpretation after new content appears."""
+    from bs4 import BeautifulSoup
+
+    soup = BeautifulSoup(html, "html.parser")
+    headings = [
+        h
+        for h in soup.find_all("h5", class_="modal-title")
+        if " ".join(h.get_text(" ", strip=True).split()) == "Other Approved Electives"
+    ]
+    if len(headings) != 1:
+        raise ValueError("Other Approved Electives modal missing or duplicated")
+    modal = headings[0].find_parent(class_="modal")
+    body = modal.find(class_="modal-body") if modal else None
+    if body is None:
+        raise ValueError("Other Approved Electives body missing")
+    value = " ".join(body.get_text(" ", strip=True).split())
+    if value != "Total Credits" or body.find(["a", "article", "iframe", "object", "embed"]):
+        raise ValueError("Other Approved Electives now contains content; review its inventory")

@@ -75,6 +75,16 @@
       "catalog_year": "2026-2027",
       "locator": "Course description, credits and Prerequisites",
       "confidence": "high"
+    },
+    {
+      "id": "villanova-analytics-ai-co-major-program-followup",
+      "url": "https://www.villanova.edu/university/business/academics/undergraduate-programs/degrees/analytics-and-artifical-intelligence.html",
+      "title": "Analytics and Artificial Intelligence — co-major and minor program page",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Earning a Co-Major; directs to test catalog host (robots-disallowed), no additional elective pool published on this page",
+      "confidence": "high"
     }
   ],
   "outcomes": [],
@@ -460,15 +470,17 @@
     "Local program inventory only; does not certify the host BBA degree. Credits are source amounts; credit-unit normalization is unverified. Pool subtotals are not required totals.",
     "Required-course descriptions are original summaries of separate course catalog entries; prerequisites preserve source notation (:Y is not interpreted). Their sources are registered separately while course source_id remains the program catalog.",
     "Conditional graduate substitutes are not ordinary unrestricted electives. Unknown elective metadata and public syllabi remain null.",
-    "Other Approved Electives modal is empty. Neither its membership nor approval rule is verified, so the co-major remains partial."
+    "Other Approved Electives modal is empty. Neither its membership nor approval rule is verified, so the co-major remains partial.",
+    "2026-10-11: The live Other Approved Electives modal still contains only the label Total Credits. The official program page links to a test catalog host whose robots policy disallows retrieval. No list or open-ended approval rule was obtained; no alternate-host bypass or live/test curriculum merge was attempted. The primary parser now rejects newly populated modal content for review."
   ],
   "curriculum_audit": {
     "scope": "additional_major",
-    "reviewed_at": "2026-10-10",
+    "reviewed_at": "2026-10-11",
     "source_ids": [
       "villanova-analytics-ai-co-major-identity",
       "villanova-mgt-3170-catalog",
-      "villanova-mgt-4170-catalog"
+      "villanova-mgt-4170-catalog",
+      "villanova-analytics-ai-co-major-program-followup"
     ],
     "sections": [
       "Local course total and required courses",

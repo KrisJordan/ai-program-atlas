@@ -168,6 +168,48 @@
       "source_text": null,
       "summary": "Complete ((CMPSC 121 and DS 120) or CMPSC 131), plus either CMPSC 122 or CMPSC 132. Entrance credits are not added to the 18-credit minor total.",
       "course_ids": []
+    },
+    {
+      "id": "penn-state-ai-engineering-minor-directory-route",
+      "parent_id": null,
+      "title": "Public directory returns to the bulletin",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "ai_ml",
+      "source_id": "penn-state-eecs-minors",
+      "source_text": null,
+      "summary": "The canonical EECS directory identifies the jointly offered AI Engineering minor and links its Learn more entry to the minor bulletin. This is identity/provenance context, not an approved Department List.",
+      "course_ids": []
+    },
+    {
+      "id": "penn-state-ai-engineering-minor-faq-list-route",
+      "parent_id": null,
+      "title": "Department-list guidance does not establish minor options",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "ai_ml",
+      "source_id": "penn-state-eecs-advising-faq",
+      "source_text": null,
+      "summary": "The FAQ refers readers to each major handbook for departmental lists. Its AIE link leads to the AI Engineering BS overview, which does not enumerate the minor Department List or explicitly authorize a BS pool for the minor. No major-to-minor equivalence is inferred.",
+      "course_ids": []
+    },
+    {
+      "id": "penn-state-ai-engineering-minor-faq-prerequisites",
+      "parent_id": null,
+      "title": "Prerequisite enforcement and substitution review",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "ai_ml",
+      "source_id": "penn-state-eecs-advising-faq",
+      "source_text": null,
+      "summary": "EECS course prerequisites are strictly enforced. Students expecting a course substitution to satisfy a prerequisite must request an override through the enrollment section of LionPATH and are advised to consult their assigned adviser. The minor CMPSC 445 alternative does not itself waive the separately published A-I 410 prerequisites. No private system or form was accessed.",
+      "course_ids": []
     }
   ],
   "notes": [
@@ -179,7 +221,8 @@
     "Pilot record; institution ranking/cohort membership is established separately. Null fields indicate unverified facts, not absence.",
     "All five course descriptions, credits and enforced prerequisites were reviewed on permitted subject-catalog pages. Search/bubble endpoints are robots-disallowed and are not refresh sources.",
     "The EECS minor directory links back to the same bulletin without publishing the Department List. The finite approved elective inventory remains unresolved.",
-    "A-I 410 currently requires (CMPSC 448 or DS 310), A-I 341W and EE 456. The minor also allows CMPSC 445 in its machine-learning choice; the sources do not establish that this substitutes for the A-I 410 prerequisite. Advising review is needed."
+    "A-I 410 currently requires (CMPSC 448 or DS 310), A-I 341W and EE 456. The minor also allows CMPSC 445 in its machine-learning choice; the sources do not establish that this substitutes for the A-I 410 prerequisite. Advising review is needed.",
+    "2026-10-11: Corrected the directory URL to the case-sensitive canonical Majors-Minors-Certificates.aspx path published in EECS navigation. The old lowercase request returned unrelated AI BS content. The actual minor directory returns to the bulletin; the advising FAQ AIE handbook link leads to a BS overview without the minor approved list. The remaining gap is missing public minor-list evidence, not a demonstrated access denial."
   ],
   "institution": {
     "id": "pennsylvania-state-university",
@@ -249,12 +292,32 @@
     },
     {
       "id": "penn-state-eecs-minors",
-      "url": "https://www.eecs.psu.edu/students/undergraduate/majors-minors-certificates.aspx",
+      "url": "https://www.eecs.psu.edu/students/undergraduate/Majors-Minors-Certificates.aspx",
       "title": "EECS majors, minors and certificates",
-      "locator": "Artificial Intelligence Engineering Minor; Learn more links back to bulletin",
-      "fetched_at": "2026-10-10",
+      "locator": "Artificial Intelligence Engineering Minor / Learn more; canonical case-sensitive directory path",
+      "fetched_at": "2026-10-11",
       "source_date": null,
       "catalog_year": null,
+      "confidence": "high"
+    },
+    {
+      "id": "penn-state-eecs-advising-faq",
+      "url": "https://www.eecs.psu.edu/students/undergraduate/advising/faqs.aspx",
+      "title": "EECS Advising FAQs",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "#department, #prerequisites, #override",
+      "confidence": "high"
+    },
+    {
+      "id": "penn-state-eecs-aie-overview-check",
+      "url": "https://www.eecs.psu.edu/students/undergraduate/artificial-intelligence-engineering-bs.aspx",
+      "title": "Artificial Intelligence Engineering BS — advising FAQ AIE destination",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Supporting Courses and Related Areas; no minor-approved list supplied",
       "confidence": "high"
     }
   ],
@@ -281,14 +344,16 @@
   ],
   "curriculum_audit": {
     "scope": "minor",
-    "reviewed_at": "2026-10-10",
+    "reviewed_at": "2026-10-11",
     "source_ids": [
       "penn-state-ai-engineering-minor-catalog",
       "penn-state-calendar-2026",
       "penn-state-a-i-subject",
       "penn-state-cmpsc-subject",
       "penn-state-ee-subject",
-      "penn-state-eecs-minors"
+      "penn-state-eecs-minors",
+      "penn-state-eecs-advising-faq",
+      "penn-state-eecs-aie-overview-check"
     ],
     "sections": [
       "Prescribed courses",
@@ -296,7 +361,9 @@
       "Entrance prerequisites",
       "Grade and overlap rules",
       "Supporting elective credit/level constraints",
-      "Five course catalog blocks"
+      "Five course catalog blocks",
+      "Canonical minors directory link route",
+      "Department-list FAQ route and course-prerequisite override policy"
     ],
     "unresolved_requirements": [
       "Department List approved elective inventory unavailable"

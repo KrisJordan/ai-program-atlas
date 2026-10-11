@@ -234,3 +234,9 @@ def parse_ee(html: str) -> dict:
 
 
 SOURCE_PARSERS = {SOURCES[1]: parse_ai, SOURCES[2]: parse_cmpsc, SOURCES[3]: parse_ee}
+
+
+from atlas.adapters.penn_state_minor_followup import DIRECTORY, FAQ, parse_directory, parse_faq
+
+SOURCES += (DIRECTORY, FAQ)
+SOURCE_PARSERS.update({DIRECTORY: parse_directory, FAQ: parse_faq})
