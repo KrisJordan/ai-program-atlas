@@ -74,3 +74,5 @@ reviewed_content.attach(globals())
 from atlas.adapters import ucsb_math_content as math_content
 SOURCES += (math_content.URL,)
 SOURCE_PARSERS[math_content.URL] = math_content.parse
+from atlas.adapters import ucsb_writing_content as writing_content
+writing_content.attach(globals())

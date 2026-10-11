@@ -7372,15 +7372,29 @@
           "locator": "Math3A/3B/4A/4B/6A full descriptions and prerequisites",
           "checked_at": "2026-10-11",
           "access_status": "HTTP200; entire represented blocks manually read. No login-only study resources accessed."
+        },
+        {
+          "url": "https://writing.ucsb.edu/courses/upper-division-and-specialized-courses",
+          "catalog_year": null,
+          "locator": "All25represented full descriptions and applicable series/unit/eligibility text",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP200; actual full page read."
+        },
+        {
+          "url": "https://writing.ucsb.edu/courses/lower-division-courses",
+          "catalog_year": null,
+          "locator": "All25represented full descriptions and applicable series/unit/eligibility text",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP200; actual full page read."
         }
       ],
       "checks": {
         "degree_identity": "Official Artificial Intelligence BS website and2026–27GEAR; inaugural cohort announcement not converted into confirmed enrollment date.",
         "required_and_choices": "Eleven preparation records and eight universally named upper core records give19fixed; computer vision is CMPSC181/ECE181alternative. Nine major-field elective courses, science andGE choices are separate; sample four-year schedule excluded.",
         "elective_pools": "CurrentGEAR provides36core+36major-elective units and8ListA/12ListBscience load. Finite major elective andAreaAwriting options mapped. Missing science memberships, capstone identity andGEpools remain explicit.",
-        "prerequisites": "All35 departmental course eligibility blocks read; recommendations remain distinct, concurrent paths and consent exceptions retained. No required prerequisite for132/188 is explicit. Undated CS/CE-major-only restrictions are not assumed waived for new AI students. These preparation/eligibility facts create no additional degree-course obligations. MATH3A placement exam,3B prerequisite3A,C;4A prerequisite3B,C;4B/6A prerequisite4A,C preserved from undated general department page.",
-        "credits_and_units": "Quarter hours. CMPSC41 remains null because requirement page5 vs sample plan/web4. Earlier worksheet81upper subtotal differs from currentGEAR72; source-specific values not silently reconciled. Department supplies33fixed4-quarter-unit records and variable192 (1–5) /196 (2–4) units. The latter remain null and do not replace the separate combined4-unit major elective cap. CMPSC184 metadata is historicalFall2017. Mathematics description page supplies no unit values; existing degree-source amounts are retained, not attributed to that page.",
-        "classification": "35 exact-code departmental pages read:31 reviewed single-category,1mixed HCI,3unclassified (historical184 without substantive content; generic192/196 projects). Other51records retain their existing precise-title/unknown or writing-source evidence limits. No degree-role-driven classification. Five fixed calculus/linear-algebra/differential-equations records now have full departmental content review rather than title-only evidence.",
+        "prerequisites": "All35 departmental course eligibility blocks read; recommendations remain distinct, concurrent paths and consent exceptions retained. No required prerequisite for132/188 is explicit. Undated CS/CE-major-only restrictions are not assumed waived for new AI students. These preparation/eligibility facts create no additional degree-course obligations. MATH3A placement exam,3B prerequisite3A,C;4A prerequisite3B,C;4B/6A prerequisite4A,C preserved from undated general department page. Writing105/107/109series requiresWriting2/2E/2LK,upperdivision with90units andAreaA1;105CDneeds no coding experience. Lower2E/50Eblocks stateengineering enrollment without independently restating generic2/50entry prerequisites; no silent inheritance.",
+        "credits_and_units": "Quarter hours. CMPSC41 remains null because requirement page5 vs sample plan/web4. Earlier worksheet81upper subtotal differs from currentGEAR72; source-specific values not silently reconciled. Department supplies33fixed4-quarter-unit records and variable192 (1–5) /196 (2–4) units. The latter remain null and do not replace the separate combined4-unit major elective cap. CMPSC184 metadata is historicalFall2017. Mathematics description page supplies no unit values; existing degree-source amounts are retained, not attributed to that page. Writing1/2explicit5,1E/2E/50/50Eexplicit4; upper105/107/109series4quarterunits.",
+        "classification": "35 exact-code departmental pages read:31 reviewed single-category,1mixed HCI,3unclassified (historical184 without substantive content; generic192/196 projects). Other51records retain their existing precise-title/unknown or writing-source evidence limits. No degree-role-driven classification. Five fixed calculus/linear-algebra/differential-equations records now have full departmental content review rather than title-only evidence. Twenty-five Writing Program blocks read (including2ELWRcontexts already reviewed):24human context,1mixed writing/coding. Writing105AI concerns rhetoric/communication with generativeAI, not model-building methods.",
         "family_composition": "No family inheritance/bindings; independently scoped standalone degree. Shared policy helpers do not imply shared credential.",
         "degree_wide_requirements": "Public progression, residence, transfer andgrading policies mapped, but finite AI-specific requirements/source conflicts block full certification."
       },
@@ -7399,12 +7413,12 @@
           "count": 65,
           "categories": {
             "ai_ml": 1,
-            "human_context": 1,
+            "human_context": 23,
             "mathematics": 2,
             "foundations": 8,
             "systems": 12,
             "applications": 1,
-            "other": 40
+            "other": 18
           }
         },
         "unresolved": {
@@ -7545,9 +7559,9 @@
           "issue": "ELWRcatalog restrictsAWPErecognition tootherUCtransfers whilecollegewording broader; applicability remainsconflict."
         }
       ],
-      "correction_status": "40department pages/blocks reviewed and source-guarded corrections retained (35CS,5mathematics); whole-degree audit remains in_progress for accessible other-subject descriptions separately from actual source conflicts.",
+      "correction_status": "65represented departmental course blocks/pages reviewed acrossCS35,mathematics5,writing25(including2previouslyreviewedELWRcontexts). Whole-degree audit remainsin_progress for accessible remaining descriptions/identity/version questions and actual degree gaps.",
       "second_pass_status": "pending",
-      "accessible_work_remaining": "Remaining accessible course-content work includes ECE/writing/humanities and bounded discovery for9CMPSCcodes absent from the department directory. ECE2026–27schedule has names/availability but directs prerequisites to the catalog; it is not a full description or reciprocal cross-list proof. No absent code is inferred nonexistent. Degree-specific missing pools and applicability of undated restrictions remain separate."
+      "accessible_work_remaining": "Remaining accessible/bounded follow-up:9newCMPSCcodes absent departmentdirectory; ECE139/153A/180/181/186, ME107, C-LIT155/GER155, ENGL146AI/146DS/197 and legacyWRIT109ES current-code applicability. Paired ECE cross-list proof and department-source version/AI-major eligibility remain open; degree-specific source conflicts separately retained."
     },
     {
       "program_id": "uc-merced-ai-bs",

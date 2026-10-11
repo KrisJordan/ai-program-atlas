@@ -82,3 +82,34 @@ def test_math_actual_cache_matches_reviewed_metadata():
     for c in observed['courses']:
         assert all(c[k]==courses[c['code']][k]for k in c)
         assert courses[c['code']]['credits']==4
+
+
+def test_writing_series_guard_and_no_automatic_identity_or_prerequisite_role(monkeypatch):
+    from atlas.adapters import ucsb_writing_content as writing
+    html='<main><h3>Writing 105AI. Synthetic writing</h3><p>4 units; synthetic eligibility.</p></main>'
+    e=dict(writing.SPEC['upper']['courses']['WRIT 105AI']);e['heading']='Writing 105AI. Synthetic writing'
+    data={**writing.SPEC['upper'],'courses':{'WRIT 105AI':e},'main_digest':hashlib.sha256(text(BeautifulSoup(html,'html.parser').main).encode()).hexdigest()}
+    monkeypatch.setitem(writing.SPEC,'upper',data)
+    result=writing.parse(html,section='upper')
+    assert result['requirements']==[] and result['courses'][0]['category']=='human_context'
+    assert 'category_review'not in result['courses'][0]
+    with pytest.raises(ValueError):writing.parse(html.replace('4 units','5 units'),section='upper')
+    d=json.loads(Path('data/programs/ucsb-ai-bs.json').read_text());c={x['code']:x for x in d['courses']}
+    assert c['WRIT 2']['credits']==5 and c['WRIT 2E']['credits']==4
+    assert c['WRIT 105CD']['category_review']['status']=='mixed'
+    assert c['WRIT 109ES']['description'] is None
+    assert 'formerly' in c['WRIT 107EP']['prerequisites']
+    assert 'does not independently restate' in c['WRIT 50E']['prerequisites']
+    assert requirement_profile(d)['options']['categories']['human_context']==23
+
+
+def test_writing_actual_cache_matches_all25_read_blocks():
+    from atlas.adapters import ucsb_writing_content as writing
+    root=Path('.cache/research/ucsb-course-content')
+    if not (root/'writing-upper.html').exists():pytest.skip('Optional ignored official-source cache')
+    d=json.loads(Path('data/programs/ucsb-ai-bs.json').read_text());c={x['code']:x for x in d['courses']}
+    observed=[]
+    for section in writing.SPEC:
+        observed+=writing.parse((root/('writing-'+section+'.html')).read_text(),section=section)['courses']
+    assert len(observed)==25
+    for x in observed:assert all(x[k]==c[x['code']][k]for k in x)
