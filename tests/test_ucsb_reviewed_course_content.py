@@ -38,7 +38,7 @@ def test_real_seed_exact_roles_and_limits():
     assert c['CMPSC 184']['description'] is None
     assert m.SPEC['CMPSC 184']['catalog_year']=='Fall 2017'
     assert c['CMPSC 192']['credits'] is c['CMPSC 196']['credits'] is None
-    assert '1–5' in d['notes'][-1] and '2–4' in d['notes'][-1]
+    assert any('1–5' in note and '2–4' in note for note in d['notes'])
     assert c['CMPSC 41']['credits'] is None
     assert 'No required prerequisites' in c['CMPSC 188']['prerequisites']
     assert 'recommended' in c['CMPSC 174A']['prerequisites']
@@ -61,3 +61,24 @@ def test_registered_parsers_observe_all_available_cached_pages():
         c=result['courses'][0]
         assert all(c[k]==courses[code][k]for k in c)
         assert 'category_review'not in c
+
+
+def test_math_source_does_not_invent_units_or_degree_obligations(monkeypatch):
+    from atlas.adapters import ucsb_math_content as math
+    html=''.join(f'<h2>Math {code.split()[1]}</h2><p>Synthetic prerequisite.</p><p>Synthetic calculus.</p>'for code in math.SPEC)
+    digest=hashlib.sha256(b'Synthetic prerequisite. Synthetic calculus.').hexdigest()
+    monkeypatch.setattr(math,'SPEC',{code:{**e,'block_digest':digest}for code,e in math.SPEC.items()})
+    result=math.parse(html)
+    assert len(result['courses'])==5 and result['requirements']==[]
+    assert all('credits'not in c and 'category_review'not in c for c in result['courses'])
+    with pytest.raises(ValueError):math.parse(html.replace('Synthetic calculus.','Changed calculus.',1))
+
+
+def test_math_actual_cache_matches_reviewed_metadata():
+    from atlas.adapters import ucsb_math_content as math
+    cache=Path('.cache/research/ucsb-course-content/math-courses.html')
+    if not cache.exists():pytest.skip('Optional ignored official-source cache')
+    observed=math.parse(cache.read_text());d=json.loads(Path('data/programs/ucsb-ai-bs.json').read_text());courses={c['code']:c for c in d['courses']}
+    for c in observed['courses']:
+        assert all(c[k]==courses[c['code']][k]for k in c)
+        assert courses[c['code']]['credits']==4

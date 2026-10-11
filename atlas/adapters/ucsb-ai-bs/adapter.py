@@ -71,3 +71,6 @@ SOURCE_PARSERS = {url: observe_subjects(parser, PROGRAM_ID) for url, parser in S
 # Independent public department content; no inferred current catalog edition.
 from atlas.adapters import ucsb_reviewed_course_content as reviewed_content
 reviewed_content.attach(globals())
+from atlas.adapters import ucsb_math_content as math_content
+SOURCES += (math_content.URL,)
+SOURCE_PARSERS[math_content.URL] = math_content.parse
