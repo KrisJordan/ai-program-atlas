@@ -21,6 +21,8 @@ def parse(html, *, program_id, code):
         raise ValueError('WPI reviewed identity changed')
     if 'Undergraduate Catalog 2026-2027' not in text(soup):
         raise ValueError('WPI reviewed catalog version changed')
+    if entry.get('main_digest') and hashlib.sha256(text(main).encode()).hexdigest() != entry['main_digest']:
+        raise ValueError('WPI complete reviewed course content changed')
     desc = main.find(class_='field--name-field-description')
     rec = main.find(class_='field--name-field-recommended')
     rec = rec.find(class_='field__item') if rec else None
@@ -33,11 +35,27 @@ def parse(html, *, program_id, code):
     if not units or text(units) != entry['units_text']:
         raise ValueError('WPI reviewed unit amount changed')
     recommended = 'Recommended background (not a mandatory prerequisite): ' + text(rec) if rec else None
-    return {'id': program_id, 'courses': [dict(id='wpi-'+code.lower().replace(' ','-'), code=code,
+    if entry.get('description_prerequisites'):
+        recommended = (recommended + '; ' if recommended else '') + 'Course eligibility: ' + entry['description_prerequisites']
+    notes = ['Course-description observation only; advisory background does not add fixed or elective degree obligations.']
+    if entry.get('suggested_background'):
+        recommended = (recommended + '; ' if recommended else '') + 'Suggested background (advisory): ' + entry['suggested_background']
+    if entry.get('credit_restriction'):
+        notes.append(code + ' credit restriction: ' + entry['credit_restriction'] + ' This does not establish a cross-listed identity.')
+        if not recommended or 'credit' not in recommended.lower():
+            recommended = (recommended + '; ' if recommended else '') + 'Credit limitation: ' + entry['credit_restriction']
+    if entry.get('audience_note'):
+        notes.append(code + ' ' + entry['audience_note'])
+    if entry.get('eligibility_note'):
+        notes.append(code + ' ' + entry['eligibility_note'])
+    if entry.get('offering_note'):
+        notes.append(code + ' ' + entry['offering_note'])
+    key = entry.get('source_key', code.lower().replace(' ','-'))
+    return {'id': program_id, 'courses': [dict(id=entry.get('course_id', 'wpi-'+key), code=code,
             name=entry['name'], description=entry['description'], prerequisites=recommended,
             credits=float(Fraction(text(units))), credit_unit='units', category=entry['category'],
-            source_id=program_id+'-course-'+code.lower().replace(' ','-'), url=entry['url'])],
-            'requirements': [], 'notes': ['Course-description observation only; advisory background does not add fixed or elective degree obligations.']}
+            source_id=program_id+'-course-'+key, url=entry['url'])],
+            'requirements': [], 'notes': notes}
 
 
 def attach(namespace):

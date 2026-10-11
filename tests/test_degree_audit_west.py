@@ -134,7 +134,7 @@ def test_eight_degree_ledger_has_independent_partitions_and_honest_blockers():
     assert len(ledger['programs']) == 8
     for audit in ledger['programs']:
         assert audit['blockers']
-        expected_status = 'blocked' if audit['program_id'] in ['uc-merced-ai-bs', 'furman-ai-bs'] else 'in_progress'
+        expected_status = 'blocked' if audit['program_id'] in ['uc-merced-ai-bs', 'furman-ai-bs', 'wpi-business-analytics-applied-ai-bs'] else 'in_progress'
         assert audit['status'] == expected_status
         if expected_status == 'in_progress':
             assert 'accessible' in audit['accessible_work_remaining']

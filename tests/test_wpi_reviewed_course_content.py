@@ -15,6 +15,7 @@ def fixture(code,entry,desc='Synthetic prediction methods.',rec='Synthetic backg
 
 def test_changed_content_background_credits_version_rejected(monkeypatch):
     entry=copy.deepcopy(m.SPEC['DS 2010'])
+    entry.pop('main_digest',None)
     entry['description_digest']=hashlib.sha256(b'Synthetic prediction methods.').hexdigest()
     entry['recommended_digest']=hashlib.sha256(b'Synthetic background').hexdigest()
     monkeypatch.setitem(m.SPEC,'DS 2010',entry)
@@ -46,8 +47,37 @@ def test_optional_actual_current_pages():
     root=Path('.cache/research/wpi-content-review')
     if not root.exists():pytest.skip('Ignored current source pages unavailable')
     for code,entry in m.SPEC.items():
-        path=root/(code.lower().replace(' ','-')+'.html')
+        path=root/(code.lower().replace(' ','-').replace('/','_')+'.html')
         if not path.exists():pytest.skip('Optional source page absent')
         for pid in entry['program_ids']:
             first=m.parse(path.read_text(),program_id=pid,code=code)
             assert first==m.parse(path.read_text(),program_id=pid,code=code)
+
+
+def test_business_complete_source_partition_and_hua_entry_rules():
+    p=json.loads(Path('data/programs/wpi-business-analytics-applied-ai-bs.json').read_text())
+    assert len(p['courses'])==49 and all(c['description'] for c in p['courses'])
+    profile=requirement_profile(p)
+    assert {k:v for k,v in profile['options']['categories'].items() if v} == {
+        'foundations':4,'mathematics':11,'ai_ml':6,'systems':3,'human_context':3,'applications':17,'other':3}
+    assert profile['unresolved']['categories']['human_context']==2
+    courses={c['code']:c for c in p['courses']}
+    assert 'Instructor consent' in courses['HU 3910']['prerequisites']
+    assert 'at least two thematically related' in courses['HU 3900']['prerequisites']
+    assert 'Suggested background (advisory)' in courses['OIE 4430']['prerequisites']
+    assert any('OIE4430 and OIE4420' in n for n in p['notes'])
+    assert not p.get('course_identity_groups')  # credit exclusions never imply alias identity
+
+
+def test_complete_content_guard_covers_suggested_background(monkeypatch):
+    from bs4 import BeautifulSoup
+    from atlas.adapters.cmu_bs.common import text
+    entry=copy.deepcopy(m.SPEC['OIE 4430'])
+    entry['description_digest']=hashlib.sha256(b'Synthetic prediction methods.').hexdigest()
+    entry['recommended_digest']=hashlib.sha256(b'Synthetic background').hexdigest()
+    html=fixture('OIE 4430',entry).replace('</main>','<div class="field--name-field-suggested">Synthetic suggested condition</div></main>')
+    entry['main_digest']=hashlib.sha256(text(BeautifulSoup(html,'html.parser').find('main')).encode()).hexdigest()
+    monkeypatch.setitem(m.SPEC,'OIE 4430',entry)
+    m.parse(html,program_id='wpi-business-analytics-applied-ai-bs',code='OIE 4430')
+    with pytest.raises(ValueError):
+        m.parse(html.replace('Synthetic suggested condition','Different condition'),program_id='wpi-business-analytics-applied-ai-bs',code='OIE 4430')
