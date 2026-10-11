@@ -3435,6 +3435,86 @@
       "catalog_year": null,
       "locator": "D-Lab exact title and printed 11.025 component; full description, units, prerequisites and dated travel context",
       "confidence": "high"
+    },
+    {
+      "id": "mit-ai-hass-review-common-c08",
+      "url": "https://computing.mit.edu/cross-cutting/common-ground-for-computing-education/common-ground-subjects/c08-causal-inference/",
+      "title": "MIT Common Ground / Causal Inference",
+      "fetched_at": "2026-10-11T08:11:16+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Exact course identity, full substantive description and separately printed metadata; offering scope retained",
+      "confidence": "high"
+    },
+    {
+      "id": "mit-ai-hass-review-common-c40",
+      "url": "https://computing.mit.edu/cross-cutting/common-ground-for-computing-education/common-ground-subjects/c40-ethics-of-computing/",
+      "title": "MIT Common Ground / Ethics of Computing",
+      "fetched_at": "2026-10-11T08:10:23+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Exact course identity, full substantive description and separately printed metadata; offering scope retained",
+      "confidence": "high"
+    },
+    {
+      "id": "mit-ai-hass-review-common-c41",
+      "url": "https://computing.mit.edu/cross-cutting/common-ground-for-computing-education/common-ground-subjects/ai-and-rationality/",
+      "title": "MIT Common Ground / AI and Rationality",
+      "fetched_at": "2026-10-11T08:11:15+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Exact course identity, full substantive description and separately printed metadata; offering scope retained",
+      "confidence": "high"
+    },
+    {
+      "id": "mit-ai-hass-review-sts-department-sts034",
+      "url": "https://sts-program.mit.edu/academics/subjects/sts034-sp25/",
+      "title": "MIT STS / STS.034 / Science Communication: A Practical Guide",
+      "fetched_at": "2026-10-11T08:03:59+00:00",
+      "source_date": null,
+      "catalog_year": "Spring 2025",
+      "locator": "Exact course identity, full substantive description and separately printed metadata; offering scope retained",
+      "confidence": "high"
+    },
+    {
+      "id": "mit-ai-hass-review-sts-department-sts066",
+      "url": "https://sts-program.mit.edu/academics/subjects/sts066-sp26/",
+      "title": "MIT STS / STS.066 / Discards, Technologies, and Everyday Ecologies",
+      "fetched_at": "2026-10-11T08:04:04+00:00",
+      "source_date": null,
+      "catalog_year": "Spring 2026",
+      "locator": "Exact course identity, full substantive description and separately printed metadata; offering scope retained",
+      "confidence": "high"
+    },
+    {
+      "id": "mit-ai-hass-review-urban-project-bigdatavis",
+      "url": "https://bigdatavis.mit.edu/",
+      "title": "MIT / Big Data, Visualization, and Society / course project evidence",
+      "fetched_at": "2026-10-11T08:02:43+00:00",
+      "source_date": null,
+      "catalog_year": "Fall 2021",
+      "locator": "Exact course identity, full substantive description and separately printed metadata; offering scope retained",
+      "confidence": "high"
+    },
+    {
+      "id": "mit-ai-hass-review-urban-project-indigenous",
+      "url": "https://dusp.mit.edu/projects/indigenous-community-planning",
+      "title": "MIT / Indigenous Environmental Planning / course project evidence",
+      "fetched_at": "2026-10-11T08:02:45+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Exact course identity, full substantive description and separately printed metadata; offering scope retained",
+      "confidence": "high"
+    },
+    {
+      "id": "mit-ai-hass-review-political-methods-fall2023",
+      "url": "https://web.mit.edu/insong/www/pdf/syl-poldata.pdf",
+      "title": "MIT 17.835 / Fall 2023 faculty syllabus",
+      "fetched_at": "2026-10-11T08:20:59.738252+00:00",
+      "source_date": null,
+      "catalog_year": "Fall 2023",
+      "locator": "Fall 2023 syllabus pp.1\u20132 sections3\u20135; pp.5\u201310 complete tentative outline",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -14267,9 +14347,9 @@
       "id": "mit-ai-hass-computing-24-c40",
       "code": "24.C40",
       "name": "Ethics of Computing",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Examines ethical challenges in AI and computing, including alignment, algorithmic fairness, privacy, surveillance and online systems, using philosophical and computing perspectives.",
+      "prerequisites": "None",
+      "credits": 12,
       "credit_unit": "units",
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-computing",
@@ -14277,9 +14357,12 @@
       "public_site": null,
       "syllabus": null,
       "notes": [
-        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
         "Observed departmental source term/version: not stated. The original list identity is retained.",
-        "Exact original source title/code retained, including dated special-subject topics and compound labels. No alias group, current offering or enrollment permission inferred."
+        "Exact original source title/code retained, including dated special-subject topics and compound labels. No alias group, current offering or enrollment permission inferred.",
+        "No academic year printed. Fall is an availability statement, not a dated offering.",
+        "Exact offered-under numbers support this named subject; no alias identity groups or equal-workload claims are added.",
+        "This College subject description is metadata evidence, not automatically a teaching website or syllabus.",
+        "Manual exact offered-under number and named subject binding; original code typography and compound labels retained. Unprinted catalog year remains unknown."
       ],
       "category_review": {
         "status": "reviewed",
@@ -14287,10 +14370,10 @@
         "reviewed_at": "2026-10-11",
         "source_ids": [
           "mit-ai-decision-making-bs-hass-computing",
-          "mit-ai-hass-review-list-titles-computing"
+          "mit-ai-hass-review-common-c40"
         ],
-        "locator": "computing public source / exact 24.C40 / Ethics of Computing",
-        "rationale": "Limited official-title-only review: this precise source title identifies ethics, politics, social/cultural/literary analysis, language/communication, educational study or history. Neither a technical object in the title nor membership in this field establishes technical computing methods.",
+        "locator": "Common Ground subject heading / Offered under / complete description / published prerequisite and unit fields",
+        "rationale": "Actual description centers normative evaluation of computing; using computer-science perspectives does not itself establish algorithm implementation or AI training.",
         "candidate_categories": []
       }
     },
@@ -14298,9 +14381,9 @@
       "id": "mit-ai-hass-computing-24-s00-9b7fdfac",
       "code": "24.S00",
       "name": "AI and Rationality",
-      "description": null,
+      "description": "Studies ideal and bounded rationality in humans and artificial agents through Bayesian probability, expected utility, sequential decisions, belief and goal inference and multi-agent settings.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 12,
       "credit_unit": "units",
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-computing",
@@ -14308,21 +14391,28 @@
       "public_site": null,
       "syllabus": null,
       "notes": [
-        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
         "Observed departmental source term/version: not stated. The original list identity is retained.",
-        "Exact original source title/code retained, including dated special-subject topics and compound labels. No alias group, current offering or enrollment permission inferred."
+        "Exact original source title/code retained, including dated special-subject topics and compound labels. No alias group, current offering or enrollment permission inferred.",
+        "No academic year printed. Fall is an availability statement, not a dated offering.",
+        "Exact offered-under numbers support this named subject; no alias identity groups or equal-workload claims are added.",
+        "This College subject description is metadata evidence, not automatically a teaching website or syllabus.",
+        "The retained special-subject24.S00record is specifically titled AI and Rationality. This observation must not propagate to other24.S00topics; formal prerequisites are not printed.",
+        "Manual exact offered-under number and named subject binding; original code typography and compound labels retained. Unprinted catalog year remains unknown."
       ],
       "category_review": {
-        "status": "unclassified",
+        "status": "mixed",
         "taxonomy_version": "1",
         "reviewed_at": "2026-10-11",
         "source_ids": [
           "mit-ai-decision-making-bs-hass-computing",
-          "mit-ai-hass-review-list-titles-computing"
+          "mit-ai-hass-review-common-c41"
         ],
-        "locator": "computing public source / exact 24.S00 / AI and Rationality",
-        "rationale": "Limited official-title-only review: subject balance or printed identity is insufficiently precise to select one category. Technical, methods, performance and variable-topic wording does not certify an underlying computing or other course.",
-        "candidate_categories": []
+        "locator": "Common Ground subject heading / Offered under / complete description / published prerequisite and unit fields",
+        "rationale": "Actual description combines formal probability/decision theory with artificial-agent learning and inference; preserve both substantial methods subjects.",
+        "candidate_categories": [
+          "mathematics",
+          "ai_ml"
+        ]
       }
     },
     {
@@ -26790,9 +26880,9 @@
       "id": "mit-ai-hass-ethics-24-c40j-6-c40j",
       "code": "24.C40J/6.C40J",
       "name": "Ethics of Computing",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Examines ethical challenges in AI and computing, including alignment, algorithmic fairness, privacy, surveillance and online systems, using philosophical and computing perspectives.",
+      "prerequisites": "None",
+      "credits": 12,
       "credit_unit": "units",
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-philosophy-ethics",
@@ -26800,9 +26890,12 @@
       "public_site": null,
       "syllabus": null,
       "notes": [
-        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
         "Observed departmental source term/version: not stated. The original list identity is retained.",
-        "Exact original source title/code retained, including dated special-subject topics and compound labels. No alias group, current offering or enrollment permission inferred."
+        "Exact original source title/code retained, including dated special-subject topics and compound labels. No alias group, current offering or enrollment permission inferred.",
+        "No academic year printed. Fall is an availability statement, not a dated offering.",
+        "Exact offered-under numbers support this named subject; no alias identity groups or equal-workload claims are added.",
+        "This College subject description is metadata evidence, not automatically a teaching website or syllabus.",
+        "Manual exact offered-under number and named subject binding; original code typography and compound labels retained. Unprinted catalog year remains unknown."
       ],
       "category_review": {
         "status": "reviewed",
@@ -26810,10 +26903,10 @@
         "reviewed_at": "2026-10-11",
         "source_ids": [
           "mit-ai-decision-making-bs-hass-philosophy-ethics",
-          "mit-ai-hass-review-list-titles-ethics"
+          "mit-ai-hass-review-common-c40"
         ],
-        "locator": "ethics public source / exact 24.C40J/6.C40J / Ethics of Computing",
-        "rationale": "Limited official-title-only review: this precise source title identifies ethics, politics, social/cultural/literary analysis, language/communication, educational study or history. Neither a technical object in the title nor membership in this field establishes technical computing methods.",
+        "locator": "Common Ground subject heading / Offered under / complete description / published prerequisite and unit fields",
+        "rationale": "Actual description centers normative evaluation of computing; using computer-science perspectives does not itself establish algorithm implementation or AI training.",
         "candidate_categories": []
       }
     },
@@ -28633,7 +28726,7 @@
       "id": "mit-ai-hass-political-subfields-17-04j",
       "code": "17.04J",
       "name": "Modern Conceptions of Freedom",
-      "description": null,
+      "description": "Examines early modern political theories of freedom, political obligations and association, with readings of political theorists and founding United States documents.",
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
@@ -28643,9 +28736,13 @@
       "public_site": null,
       "syllabus": null,
       "notes": [
-        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
         "Observed departmental source term/version: not stated. The original list identity is retained.",
-        "Literal dated source identity retained; no code-prefix or companion-course identity merge."
+        "Literal dated source identity retained; no code-prefix or companion-course identity merge.",
+        "No catalog year or offering term is printed; fetch date is not a catalog edition.",
+        "Preference to Concourse students is not exclusive eligibility. Current page prints no prerequisites or units. The separately read Spring2013OCW prerequisite/corequisite is not imported into this undated page.",
+        "The page explicitly prints CC.111/17.04, corroborating both numbered components of the retained joint label. J suffix typography is preserved in the original listing; no cross-list identity group is created.",
+        "The political-science numbered record retains its original label; explicit companion-number evidence supports this description, not a title-only guess.",
+        "Manual binding to the explicitly printed 17.04 companion number and matching course title on the same Concourse detail page; no course identity merge or graduate/undergraduate equivalence is inferred."
       ],
       "category_review": {
         "status": "reviewed",
@@ -28653,10 +28750,10 @@
         "reviewed_at": "2026-10-11",
         "source_ids": [
           "mit-ai-decision-making-bs-hass-political-subfields",
-          "mit-ai-hass-review-political-pdf-titles"
+          "mit-ai-hass-review-concourse-111"
         ],
-        "locator": "Dated Political Science Classes in Subfields PDF / literal 17.04J row",
-        "rationale": "Limited official-title-only review: the printed title explicitly identifies political, legal, philosophical, historical or social-policy inquiry. No description read or current offering claim.",
+        "locator": "Core Concourse Classes / printed course identity / full subject description and prerequisites/units when present",
+        "rationale": "Actual description centers ethical, political, cultural or economic-history interpretation rather than formal economic modeling or scientific methods; subject association does not imply AI application.",
         "candidate_categories": []
       }
     },
@@ -28726,9 +28823,9 @@
       "id": "mit-ai-hass-political-subfields-17-05j",
       "code": "17.05J",
       "name": "Humane Warfare: Ancient and Medieval Perspectives on Ethics in War",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Studies justice and ethics in war through ancient, medieval, biblical, Christian and Islamic texts, connecting just-war traditions to contemporary ethical dilemmas.",
+      "prerequisites": "None",
+      "credits": 12,
       "credit_unit": "units",
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-political-subfields",
@@ -28736,9 +28833,13 @@
       "public_site": null,
       "syllabus": null,
       "notes": [
-        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
         "Observed departmental source term/version: not stated. The original list identity is retained.",
-        "Literal dated source identity retained; no code-prefix or companion-course identity merge."
+        "Literal dated source identity retained; no code-prefix or companion-course identity merge.",
+        "No catalog year or offering term is printed; fetch date is not a catalog edition.",
+        "Not offered regularly; consult department. Preference to Concourse students is not an exclusive enrollment restriction.",
+        "Page explicitly prints CC.117/17.05 and Same subject as17.05[J]. Original joint labels remain intact; no program-course identities are merged here.",
+        "The political-science numbered record retains its original label; explicit companion-number evidence supports this description, not a title-only guess.",
+        "Manual binding to the explicitly printed 17.05 companion number and matching course title on the same Concourse detail page; no course identity merge or graduate/undergraduate equivalence is inferred."
       ],
       "category_review": {
         "status": "reviewed",
@@ -28746,10 +28847,10 @@
         "reviewed_at": "2026-10-11",
         "source_ids": [
           "mit-ai-decision-making-bs-hass-political-subfields",
-          "mit-ai-hass-review-political-pdf-titles"
+          "mit-ai-hass-review-concourse-117"
         ],
-        "locator": "Dated Political Science Classes in Subfields PDF / literal 17.05J row",
-        "rationale": "Limited official-title-only review: the printed title explicitly identifies political, legal, philosophical, historical or social-policy inquiry. No description read or current offering claim.",
+        "locator": "Core Concourse Classes / printed course identity / full subject description and prerequisites/units when present",
+        "rationale": "Actual description centers ethical, political, cultural or economic-history interpretation rather than formal economic modeling or scientific methods; subject association does not imply AI application.",
         "candidate_categories": []
       }
     },
@@ -30480,61 +30581,74 @@
       "id": "mit-ai-hass-political-subfields-17-835",
       "code": "17.835",
       "name": "Machine Learning and Data Science in Politics",
-      "description": null,
-      "prerequisites": null,
+      "description": "Introduces machine learning and quantitative political research using political, lobbying, trade and social-media data. Students implement analyses in R and complete a research project. The syllabus covers causal inference, regression, supervised and unsupervised learning, mixture models, text analysis, word embeddings and networks.",
+      "prerequisites": "This class will assume that you do not have any prior exposure to political science and machine learning. One prerequisite for this course is basic programming skills in at least one language (e.g., Python). Students who have taken 6.100A: Introduction to Computer Science and Programming in Python or the equivalent are ready to take this course. If you have any questions about whether you are prepared for this course, please talk to the instructor.",
       "credits": null,
       "credit_unit": "units",
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-political-subfields",
       "url": "https://polisci.mit.edu/files/ps/imce/undergraduate/concentration/classes_subfields%20Updated%20July%2010%202024.pdf",
-      "public_site": null,
-      "syllabus": null,
+      "public_site": "https://web.mit.edu/insong/www/pdf/syl-poldata.pdf",
+      "syllabus": "https://web.mit.edu/insong/www/pdf/syl-poldata.pdf",
       "notes": [
-        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
         "Observed departmental source term/version: not stated. The original list identity is retained.",
-        "Literal dated source identity retained; no code-prefix or companion-course identity merge."
+        "Literal dated source identity retained; no code-prefix or companion-course identity merge.",
+        "Historical Fall 2023 syllabus; no claim that its policies are the current offering or that the retained HASS list shares this edition.",
+        "Basic programming in at least one language is required; 6.100A or equivalent is sufficient preparation, not an all-of pair. No prior political science or machine learning exposure is assumed.",
+        "R is introduced in class; prior R knowledge is not required. Another statistical package is permitted without instructional support.",
+        "No unit amount is printed. Lecture/recitation meeting hours and assessment percentages are not course credits.",
+        "The tentative outline and classroom AI-use, attendance and assessment rules are dated source context. No Canvas, Piazza or Stellar access was attempted.",
+        "Observed departmental source term/version: Fall 2023. The original list identity is retained.",
+        "Exact 17.835 code and title printed in the faculty-linked syllabus; original HASS role is unchanged. The public PDF is an actual dated syllabus, not a generic catalog link."
       ],
       "category_review": {
-        "status": "unclassified",
+        "status": "mixed",
         "taxonomy_version": "1",
         "reviewed_at": "2026-10-11",
         "source_ids": [
           "mit-ai-decision-making-bs-hass-political-subfields",
-          "mit-ai-hass-review-political-pdf-titles"
+          "mit-ai-hass-review-political-methods-fall2023"
         ],
-        "locator": "Dated Political Science Classes in Subfields PDF / literal 17.835 row",
-        "rationale": "Limited official-title-only review: the printed methodological, computing or cross-disciplinary title does not establish enough course content to assign a single taxonomy category. Pool membership is not subject evidence.",
-        "candidate_categories": []
+        "locator": "Fall 2023 syllabus pp.1\u20132 sections3\u20135; pp.5\u201310 complete tentative outline",
+        "rationale": "Actual syllabus devotes substantial instruction to statistical causal inference/regression and supervised/unsupervised machine learning and NLP. Preserve mathematics and AI methods; political examples do not by themselves make this a normative social-analysis course. R is the implementation tool, not a separate computing-foundations classification.",
+        "candidate_categories": [
+          "mathematics",
+          "ai_ml"
+        ]
       }
     },
     {
       "id": "mit-ai-hass-political-subfields-17-c08j",
       "code": "17.C08J",
       "name": "Causal Inference",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Introduces quantitative causal inference through potential outcomes, causal graphs, experiments, observational studies and instrumental variables, using Python or R with applied data.",
+      "prerequisites": "6.3800, 6.3900, 6.C01, 14.32, 17.803, 18.05, 18.650, or permission of instructor",
+      "credits": 12,
       "credit_unit": "units",
-      "category": "other",
+      "category": "mathematics",
       "source_id": "mit-ai-decision-making-bs-hass-political-subfields",
       "url": "https://polisci.mit.edu/files/ps/imce/undergraduate/concentration/classes_subfields%20Updated%20July%2010%202024.pdf",
       "public_site": null,
       "syllabus": null,
       "notes": [
-        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
         "Observed departmental source term/version: not stated. The original list identity is retained.",
-        "Literal dated source identity retained; no code-prefix or companion-course identity merge."
+        "Literal dated source identity retained; no code-prefix or companion-course identity merge.",
+        "No academic year printed. Spring only is an availability statement, not a dated offering.",
+        "Exact offered-under numbers support this named subject; no alias identity groups or equal-workload claims are added.",
+        "This College subject description is metadata evidence, not automatically a teaching website or syllabus.",
+        "Preparation is an explicit list of alternatives or instructor permission; it is not an all-of requirement. The page says this course satisfies listed degree-program requirements, but that does not add new mandatory roles to this represented degree graph.",
+        "Manual exact offered-under number and named subject binding; original code typography and compound labels retained. Unprinted catalog year remains unknown."
       ],
       "category_review": {
-        "status": "unclassified",
+        "status": "reviewed",
         "taxonomy_version": "1",
         "reviewed_at": "2026-10-11",
         "source_ids": [
           "mit-ai-decision-making-bs-hass-political-subfields",
-          "mit-ai-hass-review-political-pdf-titles"
+          "mit-ai-hass-review-common-c08"
         ],
-        "locator": "Dated Political Science Classes in Subfields PDF / literal 17.C08J row",
-        "rationale": "Limited official-title-only review: the printed methodological, computing or cross-disciplinary title does not establish enough course content to assign a single taxonomy category. Pool membership is not subject evidence.",
+        "locator": "Common Ground subject heading / Offered under / complete description / published prerequisite and unit fields",
+        "rationale": "Actual description primarily teaches statistical causal identification and inference. Python/R are implementation tools; contrasted machine-learning techniques do not redefine the main subject.",
         "candidate_categories": []
       }
     },
@@ -30898,30 +31012,32 @@
       "id": "mit-ai-hass-urban-11-171",
       "code": "11.171",
       "name": "Indigenous Environmental Planning",
-      "description": null,
+      "description": "Examines governmental planning\u2019s effects on Indigenous relationships to homelands and environments, using participatory action research with faculty, students and community guests to explore environmental challenges and solutions.",
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
-      "category": "other",
+      "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-urban",
       "url": "https://dusp.mit.edu/undergraduate",
       "public_site": null,
       "syllabus": null,
       "notes": [
-        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
         "Observed departmental source term/version: not stated. The original list identity is retained.",
-        "Exact original source title/code retained, including dated special-subject topics and compound labels. No alias group, current offering or enrollment permission inferred."
+        "Exact original source title/code retained, including dated special-subject topics and compound labels. No alias group, current offering or enrollment permission inferred.",
+        "Undated departmental project page explicitly identifies the11.171/11.172course. Its course paragraph is distinguished from broader project/member/publication descriptions.",
+        "No enrollment term, units, prerequisites or student eligibility are printed for the course. No undergraduate/graduate identity equivalence is inferred from the paired number.",
+        "Exact retained course/title appears as an explicitly printed component of the course source. No prefix heuristic, renumbering or cross-list identity merge."
       ],
       "category_review": {
-        "status": "unclassified",
+        "status": "reviewed",
         "taxonomy_version": "1",
         "reviewed_at": "2026-10-11",
         "source_ids": [
           "mit-ai-decision-making-bs-hass-urban",
-          "mit-ai-hass-review-list-titles-urban"
+          "mit-ai-hass-review-urban-project-indigenous"
         ],
-        "locator": "urban public source / exact 11.171 / Indigenous Environmental Planning",
-        "rationale": "Limited official-title-only review: subject balance or printed identity is insufficiently precise to select one category. Technical, methods, performance and variable-topic wording does not certify an underlying computing or other course.",
+        "locator": "Indigenous Community Planning / explicit11.171/11.172course paragraph",
+        "rationale": "Actual course paragraph focuses on Indigenous communities, governmental planning and participatory social inquiry. Broader environmental projects do not establish a technical engineering curriculum.",
         "candidate_categories": []
       }
     },
@@ -31458,19 +31574,23 @@
       "id": "mit-ai-hass-urban-11-154",
       "code": "11.154",
       "name": "Big Data, Visualization, and Society",
-      "description": null,
+      "description": "The Fall2021class used household-interview and web-survey data to investigate Central American migration, working around a client-defined theme with the World Food Program and Migration Policy Institute.",
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-urban",
       "url": "https://dusp.mit.edu/undergraduate",
-      "public_site": null,
+      "public_site": "https://bigdatavis.mit.edu/",
       "syllabus": null,
       "notes": [
-        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
         "Observed departmental source term/version: not stated. The original list identity is retained.",
-        "Exact original source title/code retained, including dated special-subject topics and compound labels. No alias group, current offering or enrollment permission inferred."
+        "Exact original source title/code retained, including dated special-subject topics and compound labels. No alias group, current offering or enrollment permission inferred.",
+        "Dated Fall2021CentralAmericanMigration theme; the About section describes this cohort\u2019s data/project context, not a full general syllabus.",
+        "The source identifies11.154/11.454but does not state identical undergraduate/graduate expectations; no identity group is created.",
+        "The page publishes original student project links. No inference of Python, JavaScript, statistics, or AI instruction is made from the title or project artifacts.",
+        "Observed departmental source term/version: Fall 2021. The original list identity is retained.",
+        "Exact retained course/title appears as an explicitly printed component of the course source. No prefix heuristic, renumbering or cross-list identity merge."
       ],
       "category_review": {
         "status": "unclassified",
@@ -31478,10 +31598,10 @@
         "reviewed_at": "2026-10-11",
         "source_ids": [
           "mit-ai-decision-making-bs-hass-urban",
-          "mit-ai-hass-review-list-titles-urban"
+          "mit-ai-hass-review-urban-project-bigdatavis"
         ],
-        "locator": "urban public source / exact 11.154 / Big Data, Visualization, and Society",
-        "rationale": "Limited official-title-only review: subject balance or printed identity is insufficiently precise to select one category. Technical, methods, performance and variable-topic wording does not certify an underlying computing or other course.",
+        "locator": "Dated course banner and About project description",
+        "rationale": "Actual source describes migration data and a client project, but does not specify the balance of programming, visualization methodology and social inquiry. Preserve an actual description while leaving subject classification unclassified; the title alone is insufficient.",
         "candidate_categories": []
       }
     },
@@ -32234,11 +32354,11 @@
       "id": "mit-ai-hass-sts-tier-2-sts-034",
       "code": "STS.034",
       "name": "Science Communication: A Practical Guide",
-      "description": "Develops critical and practical science communication through speaking, writing, exhibitions and a substantial public-communication project.",
+      "description": "Develops critical and practical science communication for diverse and polarized publics through varied media, culminating in a public communication project at the MIT Museum.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 12,
       "credit_unit": "units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
       "public_site": "https://ocw.mit.edu/courses/sts-034-science-communication-a-practical-guide-fall-2011/pages/syllabus/",
@@ -32248,19 +32368,26 @@
         "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement.",
         "Dated Fall 2011 evidence; current offering and unchanged prerequisites or eligibility are not established.",
         "Observed departmental source term/version: Fall 2011. The original list identity is retained.",
-        "Exact numbered subject and corresponding title/content manually reviewed; joint-subjectJ formatting retained. Composite target labels must explicitly contain the observed number. No different-code title substitution, renamed-content inference or alias group created."
+        "Exact numbered subject and corresponding title/content manually reviewed; joint-subjectJ formatting retained. Composite target labels must explicitly contain the observed number. No different-code title substitution, renamed-content inference or alias group created.",
+        "Dated Spring 2025course evidence, not a guarantee of future availability. Formal prerequisites are not printed.",
+        "Enrollment limited; no numeric cap is printed. Final science-communication project is presented at the MIT Museum. AI is listed as one possible communication medium, not evidence of AI-method instruction.",
+        "Observed departmental source term/version: Spring 2025. The original list identity is retained.",
+        "Exact numbered subject with manually reviewed corresponding title. Preserve source-specific term and title; no special-subject-number or cross-list identity merge."
       ],
       "category_review": {
-        "status": "reviewed",
+        "status": "mixed",
         "taxonomy_version": "1",
         "reviewed_at": "2026-10-11",
         "source_ids": [
           "mit-ai-decision-making-bs-hass-sts-tier-2",
-          "mit-ai-hass-review-ocw-sts-034-science-communication-a-practical-guide-fall-2011"
+          "mit-ai-hass-review-sts-department-sts034"
         ],
-        "locator": "Dated course banner / Syllabus actual overview, description or aims",
-        "rationale": "Actual aims explicitly teach communication and rhetorical interpretation for public audiences rather than scientific research or computing implementation.",
-        "candidate_categories": []
+        "locator": "Actual subject heading / dated metadata / full course-content paragraphs",
+        "rationale": "The Spring 2025 source explicitly combines practical media experimentation and a final Museum communication project with analysis of public engagement, polarized audiences and exclusion. These substantial production and social-analysis components support a mixed judgment; the earlier dated observation remains unchanged.",
+        "candidate_categories": [
+          "applications",
+          "human_context"
+        ]
       }
     },
     {
@@ -33015,30 +33142,35 @@
       "id": "mit-ai-hass-sts-tier-2-sts-066",
       "code": "STS.066",
       "name": "Discards, Technology, and Everyday Ecologies",
-      "description": null,
+      "description": "Studies discarded materials and processes through social sciences and humanities, examining consumption, citizenship, inequality, global movements, memory and political or artistic practices.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 12,
       "credit_unit": "units",
-      "category": "other",
+      "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
       "public_site": null,
       "syllabus": null,
       "notes": [
-        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
         "Observed departmental source term/version: not stated. The original list identity is retained.",
-        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement.",
+        "Dated Spring 2026course evidence, not a guarantee of future availability. Formal prerequisites are not printed.",
+        "Active participation in class activities and discussions is expected.",
+        "Original tier title uses Technology; actual numbered Spring2026description uses Technologies. Both exact labels are preserved; the minor grammatical variation is manually attributed.",
+        "The separately observed Spring2025special-topic STS.S20schedule is marked canceled. No identity equivalence to that special subject, or claim that it ran, is made.",
+        "Observed departmental source term/version: Spring 2026. The original list identity is retained.",
+        "Exact numbered subject with manually reviewed corresponding title. Preserve source-specific term and title; no special-subject-number or cross-list identity merge."
       ],
       "category_review": {
-        "status": "unclassified",
+        "status": "reviewed",
         "taxonomy_version": "1",
         "reviewed_at": "2026-10-11",
         "source_ids": [
           "mit-ai-decision-making-bs-hass-sts-tier-2",
-          "mit-ai-hass-review-sts-tier-ii-titles"
+          "mit-ai-hass-review-sts-department-sts066"
         ],
-        "locator": "Tier II Subjects / literal STS.066 title",
-        "rationale": "Limited official-title-only review: broad interdisciplinary, practical or technical wording does not establish enough content to select a single taxonomy category.",
+        "locator": "Actual subject heading / dated metadata / full course-content paragraphs",
+        "rationale": "Actual description explicitly frames social-science/humanities inquiry into discarding, power and society, not environmental engineering or material processing.",
         "candidate_categories": []
       }
     },
@@ -55667,7 +55799,9 @@
     "2026-10-11: Five HASS occurrences gain dated OCW content for CMS.360, CMS.361 in two source lists, CMS.621, and 21L.715. Exact descriptions support human-context media inquiry; CMS.621 explicitly prints no prerequisites. The differently titled CMS.633 source remains withheld, with no same-code topic propagation.",
     "2026-10-11: Five HASS occurrences gain actual public Concourse department descriptions. CC.110 has no prerequisites but CC.010-or-CC.A10 co-requisite and Concourse-only enrollment; CC.117 has no prerequisites, irregular offering and Concourse preference. Their numeric unit triplets total12; CC.111 and14.70 unit/prerequisite fields remain unknown. Companion identifiers are printed evidence, not a new canonical group. The changed-title CC.116 remains withheld.",
     "2026-10-11: Nineteen HASS occurrences gain descriptions from twelve dated WGS detail pages. Visible season/year and topic govern; no historical offering is certified current. WGS243 combines digital-tool implementation and feminist inquiry; prior coding/GIS is helpful, not required. Printed same-subject components support bounded metadata without identity merging; the WGS231 Fall2026 content conflict remains held. Department metadata pages do not become public teaching sites or syllabi.",
-    "2026-10-11: Exact D-Lab: Development/11.025 evidence supports one additional HASS description,12MITunits and explicit None prerequisites with first-session participation and Harvard/Wellesley cross-registration guidance. Mixed practical development and social inquiry is preserved. The undated course page does not make its2022\u201323conditional travel paragraph current; companion graduate numbers do not imply equal workload or identity merging."
+    "2026-10-11: Exact D-Lab: Development/11.025 evidence supports one additional HASS description,12MITunits and explicit None prerequisites with first-session participation and Harvard/Wellesley cross-registration guidance. Mixed practical development and social inquiry is preserved. The undated course page does not make its2022\u201323conditional travel paragraph current; companion graduate numbers do not imply equal workload or identity merging.",
+    "2026-10-11: Nine additional HASS descriptions and a datedSTS034metadata update come from exact STS,Urban,Concourse andCommonGround evidence.17.C08causal-inference preparation is alternatives or permission; the specifically titled24.S00AIandRationality observation is not transferred to other topics. Fall2021BigData project content remains unclassified as to methods; its actual course-project website is a verified public resource, not a syllabus. Existing2011STS034OCWteaching resources remain historical resources alongside2025department evidence.",
+    "2026-10-11: Exact Fall2023faculty syllabus17.835adds actual content, programming preparation and a public syllabus resource. Substantive statistical/causal methods plusML/NLPremain mixed mathematics/AI; units are not printed. Spring2025STS034is separately reviewed as mixed practical communication and social/public-engagement analysis; its2011observation is not rewritten."
   ],
   "curriculum_audit": {
     "scope": "degree",

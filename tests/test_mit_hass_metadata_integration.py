@@ -122,10 +122,19 @@ def test_political_titles_do_not_inherit_pool_category_and_keep_explicit_credit(
     p = json.loads(Path('data/programs/mit-ai-decision-making-bs.json').read_text())
     rows = [c for c in p['courses'] if c['id'].startswith('mit-ai-hass-political-subfields-')]
     by = {c['code']: c for c in rows}
-    for code in ['17.835', '17.C08J', '17.811', '17.447J']:
+    for code in ['17.811', '17.447J']:
         assert by[code]['category'] == 'other'
         assert by[code]['category_review']['status'] == 'unclassified'
         assert by[code]['description'] is None
+    methods=by['17.835']
+    assert methods['category_review']['status']=='mixed'
+    assert set(methods['category_review']['candidate_categories'])=={'mathematics','ai_ml'}
+    assert '6.100A' in methods['prerequisites'] and methods['credits']is None
+    assert methods['syllabus']=='https://web.mit.edu/insong/www/pdf/syl-poldata.pdf'
+    causal=by['17.C08J']
+    assert causal['category']=='mathematics' and causal['description']
+    assert 'mit-ai-hass-review-common-c08' in causal['category_review']['source_ids']
+    assert 'or permission of instructor' in causal['prerequisites']
     assert by['17.567']['credits'] == 9
     assert any('MISTI' in n for n in by['17.567']['notes'])
 
@@ -340,3 +349,23 @@ def test_dlab_current_page_does_not_make_historical_travel_a_current_requirement
     assert c['category']=='other'
     assert any('2022' in n and 'does not promise or require present travel' in n for n in c['notes'])
     assert c['public_site'] is None and c['syllabus'] is None
+
+
+def test_dated_project_site_and_new_department_metadata_keep_resource_scopes():
+    p=json.loads(Path('data/programs/mit-ai-decision-making-bs.json').read_text())
+    by={c['id']:c for c in p['courses']}
+    project=by['mit-ai-hass-urban-11-154']
+    assert project['description'] and project['category_review']['status']=='unclassified'
+    assert project['public_site']=='https://bigdatavis.mit.edu/' and project['syllabus']is None
+    assert any('Fall2021' in note for note in project['notes'])
+    assert project['credits']is None and project['prerequisites']is None
+    communication=by['mit-ai-hass-sts-tier-2-sts-034']
+    assert communication['credits']==12
+    assert communication['category_review']['status']=='mixed'
+    assert set(communication['category_review']['candidate_categories'])=={'applications','human_context'}
+    assert 'fall-2011' in communication['syllabus']
+    assert any('Spring 2025' in note for note in communication['notes'])
+    specific=by['mit-ai-hass-computing-24-s00-9b7fdfac']
+    assert specific['category_review']['status']=='mixed'
+    assert set(specific['category_review']['candidate_categories'])=={'mathematics','ai_ml'}
+    assert specific['prerequisites']is None and specific['public_site']is None
