@@ -215,7 +215,7 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']['description_reviewed_records']==263
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==277
     assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
         o=entry(code)['observations'][-1]
@@ -317,7 +317,7 @@ def test_anthropology_renamed_identity_and_broad_titles_are_not_silently_classif
     assert old['observations'][-1]['observed_name']=='The Human Past: Introduction to Archaeology'
     assert not old['observations'][-1]['approved_for_integration']
     for code in ['21A.511','21A.157','21A.406J']:
-        o=entry(code)['observations'][-1]
+        o=next(o for o in entry(code)['observations'] if o.get('evidence_basis')=='official_title_only')
         assert o['category']=='other' and o['status']=='unclassified'
         assert o['description_digest'] is None
     assert entry('21A.504J')['observations'][-1]['category']=='human_context'
@@ -835,3 +835,42 @@ def test_actual_history_observations_replay_and_keep_separate_identity_hold():
             assert review.matched_review(c,{**o,'code':'21H.999'},source['url'],MANIFEST) is None
             seen+=1
     assert seen==16
+
+
+def test_anthropology_ocw_historical_nine_units_and_nonmerged_renumbered_courses():
+    report=MANIFEST['ocw_anthropology_review']
+    assert report['directory_results_observed']==67
+    assert report['public_course_pages_read']==report['public_syllabi_read']==9
+    assert len(report['upgraded_record_ids'])==14
+    tech=entry('21A.500J')['observations'][-1]
+    assert tech['credits']==9 and tech['credit_unit']=='units'
+    assert tech['units_text']=='9 units' and tech['catalog_year']=='Spring 2014'
+    assert tech['category']=='human_context'
+    meaning=entry('21A.157')['observations'][-1]
+    assert meaning['evidence_basis']=='official_description' and meaning['category']=='human_context'
+    assert entry('21A.504J')['observations'][-1]['evidence_basis']=='official_title_only'
+    assert entry('21A.508')['observations'][-1]['evidence_basis']=='official_title_only'
+
+
+def test_actual_anthropology_observer_h5_and_explicit_unit_amount_replay():
+    path=Path('/tmp/mit-hass-subjects/ocw-anthropology-index.json')
+    if not path.exists():pytest.skip('Optional ignored OCW Anthropology captures')
+    seen=0
+    for source in json.loads(path.read_text()):
+        if not source['key'].endswith('-syllabus'):continue
+        cache=path.parent/('ocw-'+source['key']+'.html')
+        if not cache.exists():pytest.skip('Optional ignored public syllabus')
+        html=cache.read_text();o=review.observe_ocw_syllabus(html)[0]
+        if o['code']=='21A.500J':
+            assert o['units']=='9 units'
+            assert review.observe_ocw_syllabus(html.replace('This 9-unit subject','This subject'))[0]['units'] is None
+        if o['code']=='21A.520':
+            assert o['description'].startswith('This course explores magic') and 'Code of Conduct' not in o['description']
+            assert o['prerequisites']=='There are no prerequisites for this course.'
+        for cid,row in MANIFEST['courses'].items():
+            e=next((e for e in row['observations'] if e['source_url']==source['url']),None)
+            if e is None:continue
+            c=dict(id=cid,code=row['listed_code'],name=row['listed_name'],source_id=row['listed_source_id'])
+            assert review.matched_review(c,o,source['url'],MANIFEST)==e
+            seen+=1
+    assert seen==14

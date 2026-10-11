@@ -426,13 +426,13 @@ def observe_ocw_syllabus(html):
     if len(parts) != 3 or not re.fullmatch(r'(Fall|Spring|Summer|IAP) \d{4}', parts[1]) or not name:
         raise ValueError('OCW code, term or title changed')
     sections = {}
-    for heading in main.find_all(['h2', 'h3', 'h4']):
+    for heading in main.find_all(['h2', 'h3', 'h4', 'h5']):
         title = clean(heading).rstrip(':')
         if title not in ['Description', 'Course Description', 'Course Overview', 'Course Summary', 'Overview', 'Class Objectives', 'Objectives and Organization', 'Purpose', 'Prerequisites', 'Prerequisite']:
             continue
         content = []
         for sibling in heading.next_siblings:
-            if getattr(sibling, 'name', None) in ['h2', 'h3', 'h4']:
+            if getattr(sibling, 'name', None) in ['h2', 'h3', 'h4', 'h5']:
                 break
             if hasattr(sibling, 'get_text'):
                 content.append(clean(sibling))
@@ -440,10 +440,11 @@ def observe_ocw_syllabus(html):
     description = next((sections[k] for k in ['Description', 'Course Description', 'Course Overview', 'Course Summary', 'Overview', 'Class Objectives', 'Objectives and Organization', 'Purpose'] if sections.get(k)), None)
     if not description:
         raise ValueError('OCW syllabus actual description section missing')
+    unit_match = re.match(r'This (\d+)-unit subject\b', description)
     return [dict(code=parts[0], name=name, term=parts[1], level=parts[2],
                  description=description,
                  prerequisites=sections.get('Prerequisites', sections.get('Prerequisite')),
-                 units=None)]
+                 units=(unit_match[1] + ' units') if unit_match else None)]
 
 
 def observe_minds_machines(html):
