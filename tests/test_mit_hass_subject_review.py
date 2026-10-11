@@ -28,8 +28,14 @@ def test_scope_is_exact_and_unread_records_are_not_certified():
         if row['review_status'] == 'pending':
             assert row['observations'] == []
         for evidence in row['observations']:
-            assert evidence['description_digest']
-            assert evidence['description_summary']
+            if evidence.get('evidence_basis') == 'official_title_only':
+                assert evidence['description_digest'] is None
+                assert evidence['description_summary'] is None
+                assert evidence['prerequisites'] is evidence['credits'] is None
+                assert 'title' in evidence['rationale']
+            else:
+                assert evidence['description_digest']
+                assert evidence['description_summary']
             assert evidence['source_id'] in MANIFEST['source_specs']
 
 
@@ -197,3 +203,42 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
     hashes={review.observation_digest(o) for o in review.observe_cmsw(path.read_text())}
     saved=[o for r in MANIFEST['courses'].values() for o in r['observations'] if o['source_id']==f'mit-ai-hass-review-cmsw-{term}']
     assert saved and all(o['observation_digest'] in hashes for o in saved)
+
+
+def test_official_language_title_reviews_do_not_invent_description_or_identity():
+    assert MANIFEST['evidence_counts']==dict(description_reviewed_records=139,title_only_reviewed_records=45)
+    for code in ['21G.715','21G.111','21H.186']:
+        o=entry(code)['observations'][-1]
+        assert o['evidence_basis']=='official_title_only'
+        assert o['status']=='unclassified' and o['category']=='other'
+        assert o['description_summary'] is o['description_digest'] is o['credits'] is None
+    assert entry('21G.901')['observations'][-1]['category']=='human_context'
+    for code in ['21G.094','21G.612','21G.613','21G.614']:
+        assert entry(code)['review_status']=='identity_review_needed'
+        assert not entry(code)['observations'][-1]['approved_for_integration']
+
+
+@pytest.mark.parametrize('language',['french','spanish','chinese','japanese','korean','portuguese','russian'])
+def test_actual_language_schedule_title_observations_replay(language):
+    path=Path('/tmp')/f'atlas-mit-hass-rest-{language}.html'
+    if not path.exists():
+        pytest.skip('Optional ignored official language page capture')
+    observations=review.observe_language_titles(path.read_text())
+    hashes={review.observation_digest(o) for o in observations}
+    saved=[o for r in MANIFEST['courses'].values() for o in r['observations'] if o['source_id']==f'mit-ai-hass-review-language-titles-{language}']
+    assert saved and all(o['observation_digest'] in hashes for o in saved)
+    assert all(o['description'] is o['prerequisites'] is o['units'] is None for o in observations)
+
+
+def test_language_observer_uses_printed_code_not_a_conflicting_link():
+    html='''<main><h1>French &amp; Francophone Studies</h1><div class="value">Fall 2026</div>
+    <div><div class="credit-section-wrap"><div class="value">21G</div>
+    <div class="semester-section-titile"><div class="value">333</div></div>
+    <a href="https://example.edu/#21G.304">catalog link</a></div>
+    <div><div class="value">French IV</div></div></div></main>'''
+    o=review.observe_language_titles(html)[0]
+    assert o['code']=='21G.333' and o['name']=='French IV'
+    assert o['linked_urls']==['https://example.edu/#21G.304']
+    assert o['description'] is None
+    with pytest.raises(ValueError,match='identity/term'):
+        review.observe_language_titles(html.replace('Fall 2026','Term unknown'))

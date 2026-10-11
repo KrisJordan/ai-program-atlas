@@ -212,3 +212,34 @@ def observe_cmsw(html):
     if not rows:
         raise ValueError('CMS/W public subject rows missing')
     return rows
+
+
+def observe_language_titles(html):
+    """Literal public language schedule labels, not descriptions or alias merges."""
+    soup=BeautifulSoup(html,'html.parser')
+    main=soup.find('main')
+    if main is None or main.find('h1') is None:
+        raise ValueError('Global Languages page heading missing')
+    heading=clean(main.find('h1'))
+    if not heading.endswith('Studies'):
+        raise ValueError('Global Languages program heading changed')
+    rows=[]
+    for codes in main.select('.credit-section-wrap'):
+        row=codes.parent
+        title_node=codes.find_next_sibling('div')
+        title=clean(title_node.select_one('.value')) if title_node else None
+        prefix=codes.select_one('.value')
+        prefix=clean(prefix)
+        suffixes=[clean(x.select_one('.value')) for x in codes.select('.semester-section-titile')]
+        term=next((clean(v) for v in row.find_all_previous('div',class_='value')
+                   if re.fullmatch(r'(Fall|Spring|IAP) \d{4}',clean(v))),None)
+        if not prefix or not suffixes or not title or term is None:
+            raise ValueError('Global Languages schedule identity/term missing')
+        for suffix in suffixes:
+            rows.append(dict(code=prefix+'.'+suffix,name=title,term=term,
+                             description=None,prerequisites=None,units=None,
+                             heading=heading,printed_companion_codes=[prefix+'.'+x for x in suffixes],
+                             linked_urls=[a['href'] for a in codes.find_all('a',href=True)]))
+    if not rows:
+        raise ValueError('Global Languages schedule rows missing')
+    return rows
