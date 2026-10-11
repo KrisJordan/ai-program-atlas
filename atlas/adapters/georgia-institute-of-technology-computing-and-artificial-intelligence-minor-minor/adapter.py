@@ -66,3 +66,7 @@ def parse_policies(html):
       groups.append(policy(root,marker,'gt-policy-'+gid,title,summary,POLICY_ID))
     return dict(id=PROGRAM_ID,requirements=groups)
 SOURCE_PARSERS={SOURCES[1]:parse_thread,SOURCES[2]:parse_policies}
+
+from atlas.adapters.gatech_minor_followup import COMPUTING_URL, parse_computing
+SOURCES += (COMPUTING_URL,)
+SOURCE_PARSERS[COMPUTING_URL] = lambda html: parse_computing(html, PROGRAM_ID)

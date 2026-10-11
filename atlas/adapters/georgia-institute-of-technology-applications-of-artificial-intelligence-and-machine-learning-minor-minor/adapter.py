@@ -64,3 +64,8 @@ def parse_institute_policies(html):
         if g['id']=='gt-policy-letter':g['summary']='All minor courses require letter grades and C or better.'
     return original
 SOURCE_PARSERS={SOURCES[1]:parse_institute_policies}
+
+from atlas.adapters.gatech_minor_followup import NEUR_URL, parse_neuroscience, parse_program_neuroscience
+PROGRAM_REQUIREMENTS_URL = 'https://sites.gatech.edu/apps-ai-ml-minor/main-page/minor-requirements/'
+SOURCES += (NEUR_URL, PROGRAM_REQUIREMENTS_URL)
+SOURCE_PARSERS.update({NEUR_URL: lambda html: parse_neuroscience(html, PROGRAM_ID), PROGRAM_REQUIREMENTS_URL: lambda html: parse_program_neuroscience(html, PROGRAM_ID)})

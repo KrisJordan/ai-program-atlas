@@ -15,3 +15,9 @@ Individual CS credits and selected core-course descriptions/prerequisites were c
 Unresolved requirements: Catalog ECE substitution eligibility contains incomplete wording (ECE2035 and either ECE2020 with no completed alternative). Confirm with advisor before applying the 15-hour exception.
 
 Metadata gaps: Course descriptions and individual prerequisites are not fully mapped. Credits remain unknown wherever the source does not specify an individual course value. Public course sites and syllabi remain unverified.
+
+## Eligibility clarification pass — 2026-10-11
+
+The public [College of Computing minors page](https://www.cc.gatech.edu/minors) explicitly excludes Computer Science, Computational Media, Mathematics and Computing, and Computer Engineering on catalog years 2021–22 onward. It also requires good academic standing, B-or-higher introductory CS/CS1331 grades, and acceptance before the minor-change form; the old minimum-remaining-hours rule no longer applies. These three new policy nodes bring the record to 21 nodes. The new source parser validates the actual eligibility heading/list and material restrictions, without importing calculus or discipline exclusions belonging to other minors.
+
+The catalog still says “ECE 2035 and either ECE 2020” with no second branch. The college links to `https://prod-cc.cc.gatech.edu/degree-programs/minor-computing-intelligence`, but the standard fetcher stops because that host's robots response redirects across origins. This is an exact local access-review barrier, not a claim of university denial or login requirement. No alternate-host substitution/bypass was attempted. The ECE course catalog alone cannot establish the missing eligibility alternative. **Partial remains** pending an authoritative correction/adviser clarification of this exception.

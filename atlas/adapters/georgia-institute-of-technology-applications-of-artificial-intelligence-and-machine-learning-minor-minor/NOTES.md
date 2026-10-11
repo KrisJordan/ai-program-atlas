@@ -17,3 +17,9 @@ The official program website was read via the robots-aware client after the web 
 Unresolved requirements: Catalog science-track neuroscience entries disagree with the program website: the site lists NEUR/PSYC3803 for the cognitive-neuroscience topic and NEUR/PSYC4740 for Neuroethics. The catalog attaches the cognitive topic to a differently cross-listed Neuroethics row. Preserve catalog entries pending adviser clarification.; The 2026–2027 overview lists four eligible colleges, but declaration is limited to participating schools. The linked advising roster omits Sciences and some engineering schools; exact current major eligibility requires confirmation with the home-major adviser.
 
 Metadata gaps: Most pool entries have no individual credits stated; group credit totals retained. Special-topic course metadata and prerequisites are not fully mapped. Public course resources and syllabi unverified.
+
+## Neuroscience and eligibility clarification pass — 2026-10-11
+
+The public [NEUR catalog](https://catalog.gatech.edu/courses-undergrad/neur/) identifies NEUR 3803 as Special Topics in Neuroscience and NEUR 4740 as Neuroethics, each three credit hours. The program page still lists the cognitive-neuroscience topic under NEUR/PSYC 3803 and Neuroethics under NEUR/PSYC 4740; the minor catalog still instead combines NEUR 4740/PSYC 3803 with the cognitive topic. New source-specific parsers record these as two evidence notes, not silently changed course eligibility or inferred cross-listings. This brings the record to 38 nodes; course inventory is unchanged.
+
+The current overview still names all four colleges for 2026–27 while restricting declaration to participating schools. The advising roster still omits Sciences and some engineering schools. Reinspection does not establish that omissions imply ineligibility. **Both precise clarification blockers remain**, with no invented waiver or additional program restriction.

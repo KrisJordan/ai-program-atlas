@@ -80,6 +80,16 @@
       "catalog_year": "2026-2027",
       "locator": "Individual course blocks for listed CS course codes; credits and selected descriptions/prerequisites",
       "confidence": "high"
+    },
+    {
+      "id": "gatech-computing-minor-eligibility",
+      "url": "https://www.cc.gatech.edu/minors",
+      "title": "College of Computing — Minors",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Policies and Eligibility; application and remaining-credit-hour guidance",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -587,20 +597,64 @@
       "source_text": null,
       "summary": "Declare no later than applying for graduation. Minor and major are conferred together and recorded on the transcript; the minor is not on the diploma and cannot be awarded retroactively.",
       "course_ids": []
+    },
+    {
+      "id": "gt-college-standing",
+      "parent_id": null,
+      "title": "Admission and standing",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "gatech-computing-minor-eligibility",
+      "source_text": null,
+      "summary": "Applicants must have good academic standing, without warning/probation, and satisfactory academic progress. CS 1301/1315/1371 and CS 1331 must be completed with B or higher. Apply to and receive acceptance into the CS minor program before a change-of-minor form is processed.",
+      "course_ids": []
+    },
+    {
+      "id": "gt-college-excluded-majors",
+      "parent_id": null,
+      "title": "Computing-minor eligibility exclusions",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "gatech-computing-minor-eligibility",
+      "source_text": null,
+      "summary": "Computer Science, Computational Media, and Mathematics and Computing majors cannot declare a CS minor. Computer Engineering majors using catalog year 2021–22 or later cannot select any CS minor. Restrictions specific to other computing minors are not imposed on this AI minor.",
+      "course_ids": []
+    },
+    {
+      "id": "gt-college-remaining-hours",
+      "parent_id": null,
+      "title": "Admission timing",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "gatech-computing-minor-eligibility",
+      "source_text": null,
+      "summary": "There is no longer a minimum remaining-credit-hour admission requirement. The college advises allowing three to four semesters, excluding summer, because of sequencing and course availability; this is planning guidance, not an invented minimum enrollment requirement.",
+      "course_ids": []
     }
   ],
   "notes": [
     "The catalog supplies minor choice counts; the separate thread page supplies category membership. Only CS entries were included. Source wording for the ECE exception is incomplete, so requirements remain partial.",
-    "Individual CS credits and selected core-course descriptions/prerequisites were checked against https://catalog.gatech.edu/courses-undergrad/cs/ (gatech-cs-course-catalog). Course source IDs retain the minor/thread eligibility provenance. No credits inferred by dividing program totals; variable-credit topics remain unknown when not explicitly fixed."
+    "Individual CS credits and selected core-course descriptions/prerequisites were checked against https://catalog.gatech.edu/courses-undergrad/cs/ (gatech-cs-course-catalog). Course source IDs retain the minor/thread eligibility provenance. No credits inferred by dividing program totals; variable-credit topics remain unknown when not explicitly fixed.",
+    "2026-10-11: College eligibility excludes Computational Media, Mathematics and Computing, and Computer Engineering majors on 2021–22 or later catalogs, in addition to CS. The incomplete ECE substitution remains unresolved. Its linked prod-cc minor page could not be fetched: cross-origin robots redirect requires review; no alternate-host bypass attempted."
   ],
   "curriculum_audit": {
     "scope": "minor",
-    "reviewed_at": "2026-10-10",
+    "reviewed_at": "2026-10-11",
     "source_ids": [
       "georgia-institute-of-technology-computing-and-artificial-intelligence-minor-minor-official",
       "gatech-ai-thread-pools",
       "gatech-minor-guidelines",
-      "gatech-cs-course-catalog"
+      "gatech-cs-course-catalog",
+      "gatech-computing-minor-eligibility"
     ],
     "sections": [
       "Prerequisite excluded from minor hours",
@@ -610,7 +664,8 @@
       "Eligibility and application",
       "Grades, transfer, excluded coursework",
       "ECE substitution",
-      "Institute letter-grade, double-counting and conferral policies"
+      "Institute letter-grade, double-counting and conferral policies",
+      "College-wide computing-minor excluded majors and admission standing"
     ],
     "unresolved_requirements": [
       "Catalog ECE substitution eligibility contains incomplete wording (ECE2035 and either ECE2020 with no completed alternative). Confirm with advisor before applying the 15-hour exception."

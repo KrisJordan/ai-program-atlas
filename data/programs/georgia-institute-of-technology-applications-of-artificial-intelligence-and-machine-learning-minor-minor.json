@@ -78,7 +78,7 @@
       "fetched_at": "2026-10-10",
       "source_date": null,
       "catalog_year": null,
-      "locator": "Academic year2026\u20132027 participating colleges",
+      "locator": "Academic year2026–2027 participating colleges",
       "confidence": "high"
     },
     {
@@ -110,6 +110,16 @@
       "catalog_year": null,
       "locator": "Published school roster",
       "confidence": "high"
+    },
+    {
+      "id": "gatech-neuroscience-course-catalog",
+      "url": "https://catalog.gatech.edu/courses-undergrad/neur/",
+      "title": "Neuroscience course catalog",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "NEUR 3803 and NEUR 4740 individual entries",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -120,7 +130,7 @@
       "locator": "Learning Outcomes"
     },
     {
-      "text": "Apply probability, statistics and AI/ML methods within the selected track\u2019s engineering, humanities/social-science, business, or science domain.",
+      "text": "Apply probability, statistics and AI/ML methods within the selected track’s engineering, humanities/social-science, business, or science domain.",
       "kind": "source_stated",
       "source_id": "georgia-institute-of-technology-applications-of-artificial-intelligence-and-machine-learning-minor-minor-official",
       "locator": "Track-specific Learning Outcomes"
@@ -1976,22 +1986,52 @@
       "source_text": null,
       "summary": "Declare no later than applying for graduation. Minor and major are conferred together and recorded on the transcript; the minor is not on the diploma and cannot be awarded retroactively.",
       "course_ids": []
+    },
+    {
+      "id": "gt-apps-neur-crosscheck",
+      "parent_id": null,
+      "title": "Neuroscience subject-catalog cross-check",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "gatech-neuroscience-course-catalog",
+      "source_text": null,
+      "summary": "NEUR 3803 is Special Topics in Neuroscience (3 catalog credit hours); NEUR 4740 is Neuroethics (3 catalog credit hours). These individual course identities support a discrepancy review but do not establish the intended minor cross-listing or topic. The conflicting minor row is retained pending advising clarification.",
+      "course_ids": []
+    },
+    {
+      "id": "gt-apps-site-neuroscience",
+      "parent_id": null,
+      "title": "Competing program-site neuroscience wording",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "gatech-apps-program-requirements",
+      "source_text": null,
+      "summary": "The program site lists the computational-cognitive-neuroscience topic under NEUR/PSYC 3803 and Neuroethics under NEUR/PSYC 4740. The catalog minor row combines NEUR 4740/PSYC 3803 with that topic. This records both source statements without rewriting catalog eligibility.",
+      "course_ids": []
     }
   ],
   "notes": [
-    "Every displayed track and pool is mapped, but ambiguous neuroscience topic/cross-list wording prevents a complete audit. Named topics are separate IDs; placeholderXXXX4699 research is a policy option, not a fabricated course. General permission to share 3 credits with another minor is superseded by this minor\u2019s total prohibition on other-minor/certificate overlap.",
-    "The official program website was read via the robots-aware client after the web reader returned a gateway error. Its curriculum page resolves likely intended neuroscience labels but conflicts with catalog rows; no silent correction made. Its general no-extra-overlap wording also differs from the catalog\u2019s explicit prohibition on other-minor/certificate reuse; the catalog restriction is retained."
+    "Every displayed track and pool is mapped, but ambiguous neuroscience topic/cross-list wording prevents a complete audit. Named topics are separate IDs; placeholderXXXX4699 research is a policy option, not a fabricated course. General permission to share 3 credits with another minor is superseded by this minor’s total prohibition on other-minor/certificate overlap.",
+    "The official program website was read via the robots-aware client after the web reader returned a gateway error. Its curriculum page resolves likely intended neuroscience labels but conflicts with catalog rows; no silent correction made. Its general no-extra-overlap wording also differs from the catalog’s explicit prohibition on other-minor/certificate reuse; the catalog restriction is retained.",
+    "2026-10-11: NEUR catalog confirms 3803 Special Topics and 4740 Neuroethics, but does not resolve the minor topic/cross-list mismatch. The overview still names four colleges while the advising roster omits Sciences; no ineligibility is inferred from omission."
   ],
   "curriculum_audit": {
     "scope": "minor",
-    "reviewed_at": "2026-10-10",
+    "reviewed_at": "2026-10-11",
     "source_ids": [
       "georgia-institute-of-technology-applications-of-artificial-intelligence-and-machine-learning-minor-minor-official",
       "gatech-minor-guidelines",
       "gatech-apps-overview",
       "gatech-apps-organization",
       "gatech-apps-program-requirements",
-      "gatech-apps-advisers"
+      "gatech-apps-advisers",
+      "gatech-neuroscience-course-catalog"
     ],
     "sections": [
       "Four whole-track 15-credit paths without mixing",
@@ -2003,11 +2043,12 @@
       "Prerequisite exceptions for BMED2400 and AI in Business",
       "Grades and upper-level minimum",
       "Major/minor/certificate overlap",
-      "General institute minor policies"
+      "General institute minor policies",
+      "NEUR 3803/4740 catalog identities compared with program/curriculum conflict"
     ],
     "unresolved_requirements": [
       "Catalog science-track neuroscience entries disagree with the program website: the site lists NEUR/PSYC3803 for the cognitive-neuroscience topic and NEUR/PSYC4740 for Neuroethics. The catalog attaches the cognitive topic to a differently cross-listed Neuroethics row. Preserve catalog entries pending adviser clarification.",
-      "The 2026\u20132027 overview lists four eligible colleges, but declaration is limited to participating schools. The linked advising roster omits Sciences and some engineering schools; exact current major eligibility requires confirmation with the home-major adviser."
+      "The 2026–2027 overview lists four eligible colleges, but declaration is limited to participating schools. The linked advising roster omits Sciences and some engineering schools; exact current major eligibility requires confirmation with the home-major adviser."
     ],
     "metadata_gaps": [
       "Most pool entries have no individual credits stated; group credit totals retained.",
