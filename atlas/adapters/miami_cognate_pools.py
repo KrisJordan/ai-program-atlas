@@ -1,9 +1,6 @@
-"""Miami public cognate observations: bounded exported rows and thematic HTML.
+"""Miami public thematic HTML observations; full PDF parser is miami_cognate_export.
 
-The public Tableau PDF is obtained through Download > PDF > Specific sheets >
-Select All, not an undocumented endpoint. parse_individualized_text accepts
-pypdf page text separated by formfeeds, limited to explicitly selected pages.
-It does not fetch, infer pool completeness, or promote a curriculum audit.
+Observations never promote a curriculum audit or invent verification dates.
 """
 import re
 from bs4 import BeautifulSoup
@@ -16,87 +13,6 @@ PLANS = {
     'PS_0031': ('A Cross-Cultural and Historic Examination of Sexuality', 'People and Society', 'Gender and Sexuality Studies'),
     'AT_0027': ('Introduction to Philosophy (Arts and Humanities)', 'Arts and Humanities', 'Philosophy'),
 }
-
-
-def parse_individualized_text(text):
-    """Parse complete selected Master List pages, deduplicating overlapping rows.
-
-    A course's additional area can occupy the next row without repeating its
-    code/title. Six-digit Course ID is an identity, never a credit amount.
-    Truncated source titles remain unknown instead of being completed by guess.
-    """
-    records = {}
-    for page_no, page in enumerate(text.strip().split('\f'), 1):
-        lines = [clean(line) for line in page.splitlines() if line.strip()]
-        expected = ['Subject', 'Course No.', 'Course Title', 'Area of Knowledge',
-                    'Typically Oﬀered', 'Course ID']
-        if lines[:6] != expected or lines[-2:] != ['Courses Eligible to be Used in Individualized Cognates', '(Updated 10/2/2026)']:
-            raise ValueError('Master List export identity, columns or update date changed')
-        lines = lines[6:-2]
-        i = 0
-        subject = code = title = None
-        while i < len(lines):
-            value = lines[i]
-            if re.fullmatch('[A-Z]{2,5}', value) and value not in AREAS:
-                subject = value
-                i += 1
-                if i >= len(lines): raise ValueError('Incomplete subject row')
-                value = lines[i]
-            if re.fullmatch(r'\d{3}[A-Z]?', value):
-                if subject is None: raise ValueError('Course without a subject')
-                code = subject + ' ' + value
-                i += 1
-                names = []
-                while i < len(lines) and lines[i] not in AREAS:
-                    if re.fullmatch(r'\d{6}', lines[i]): raise ValueError('Unknown area or malformed title row')
-                    names.append(lines[i]); i += 1
-                title = clean(' '.join(names))
-                if not title: raise ValueError('Missing displayed title')
-            if i >= len(lines) or lines[i] not in AREAS or code is None:
-                raise ValueError('Unreviewed course-number or area layout')
-            area = lines[i]; i += 1
-            offered = []
-            while i < len(lines) and not re.fullmatch(r'\d{6}', lines[i]):
-                offered.append(lines[i]); i += 1
-            if i >= len(lines) or not offered:
-                raise ValueError('Incomplete course identity/area row')
-            identity = lines[i]; i += 1
-            key = (code, identity)
-            r = records.setdefault(key, dict(code=code, source_course_id=identity,
-                name=None if '..' in title or '…' in title else title,
-                display_title=title, areas=[], pages=[]))
-            if r['display_title'] != title:
-                raise ValueError('Conflicting titles for repeated course identity')
-            if area not in r['areas']: r['areas'].append(area)
-            if page_no not in r['pages']: r['pages'].append(page_no)
-    if not records: raise ValueError('Empty exported course evidence')
-    by_code = {}
-    for r in records.values():
-        if r['code'] in by_code and by_code[r['code']] != r['source_course_id']:
-            raise ValueError('Multiple source identities for one course code need review')
-        by_code[r['code']] = r['source_course_id']
-    return list(records.values())
-
-
-def individualized_observation(text, *, pid):
-    if len(text.strip().split('\f')) != 2:
-        raise ValueError('This bounded observation requires the first two complete Master List pages')
-    rows = parse_individualized_text(text)
-    courses = []
-    root = pid + '-cognate-directory-sample'
-    requirements = [rule(root, 'Individualized cognates: bounded directory evidence', SID,
-        parent=pid+'-supplement-individualized-overlap', kind='note',
-        summary='Observed Master List pages 1–2 of the public PDF export, updated October 2, 2026. This is a partial candidate pool, not the complete approved list. Arts & Humanities and People & Society rows are attached; this AI major already supplies STEM. A selected individualized cognate needs at least three courses/nine credits in one area, with the current CaneLink attribute. None may satisfy another degree requirement, including quantitative proficiency. The same course cannot satisfy two area cognates. Credits and prerequisites are unknown in this directory.')]
-    for area, key in list(AREAS.items())[:2]:
-        selected = [r for r in rows if area in r['areas']]
-        for r in selected:
-            c = course(pid, r['code'], r['name'], SID, DIRECTORY, unit='unknown', category='human_context')
-            if c['id'] not in {c['id'] for c in courses}: courses.append(c)
-        ids = [course(pid,r['code'],r['name'],SID,DIRECTORY)['id'] for r in selected]
-        requirements.append(rule(root+'-'+key, area+' — captured subset', SID, ids,
-            parent=root, kind='note', category='human_context',
-            summary=f'{len(selected)} course identities in the captured pages carry this Area of Knowledge attribute. Membership in this subset does not certify a course is available, that the full pool was captured, or that it can overlap another degree requirement. Multi-area entries are one course, not multiple credits.'))
-    return dict(id=pid, courses=courses, requirements=requirements)
 
 
 def parse_thematic(html, *, pid, plan):
