@@ -290,3 +290,8 @@ Contribution b57a26b supplies fifteen actual-description upgrades from fifteen C
 ### Romance-language historical syllabi — 2026-10-11
 
 Contribution 3afe6d3 supplies twelve actual-description upgrades from twelve dated OCW syllabi, using the guarded language observer. Spanish prerequisite lists for 21G.711/880 do not state an AND/OR operator; that uncertainty remains explicit instead of selecting one. The 21G.714 level discussion expressly accommodates other students and is not made into an exclusion. A source-specific guard reads the unheaded Fall 2003 21G.712 paragraph without treating adjacent logistics as description. HASS now has 362 description-supported occurrences, 480 limited title judgments and three code-only unknowns. Requirement roles and identity groups remain unchanged, and the primary audit continues while accessible source review remains open.
+
+
+### Cultural-language historical syllabi — 2026-10-11
+
+Contribution 0c9fca0 supplies fifteen actual-description upgrades from ten exact OCW syllabi. The language observer now preserves explicit enrollment and Japanese-option sections. Spring 2015 21G.030 expressly carries twelve units and no prerequisite, while the separately stated 21G.193 registration carries thirteen units; the different registration contexts are not merged. Japanese 591/592 options remain conditional contexts. Global Africa's French preparation applies to the source-defined French-concentrator path. A source for Japanese Media Cultures under a changed code remains withheld from the older listed identifier. HASS now has 377 description-supported occurrences, 465 limited title judgments and three code-only unknowns. The primary audit remains in progress, with all requirement roles and identity groups unchanged.
