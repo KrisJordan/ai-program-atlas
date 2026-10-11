@@ -67,5 +67,5 @@ def test_integrated_observations_keep_contextual_roles_and_unknown_missing_codes
     if not p.exists():pytest.skip('Optional official USP chapter')
     a=importlib.import_module('atlas.adapters.'+m.SPEC['program_id']+'.adapter')
     observed=a.SOURCE_PARSERS[m.SPEC['sources']['USP']['url']](p.read_text())
-    assert len(observed['courses'])==53
+    assert len(observed['courses'])==61
     assert all(cs[c['code']][key]==value for c in observed['courses']for key,value in c.items()if key!='notes')

@@ -32,7 +32,7 @@ def test_current_ethn_observer_registration_and_saved_facts():
     adapter = importlib.import_module('atlas.adapters.' + PID + '.adapter')
     assert adapter.SOURCES.count(s['url']) == 1
     result = adapter.SOURCE_PARSERS[s['url']](cache.read_text())
-    assert len(result['courses']) == 88 and len(result['source_dispositions']) == 7
+    assert len(result['courses']) == 110 and len(result['source_dispositions']) == 10
     saved = {c['id']: c for c in json.loads(Path('data/programs', PID + '.json').read_text())['courses']}
     for c in result['courses']:
         assert 'category_review' not in c

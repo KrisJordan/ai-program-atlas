@@ -24,6 +24,6 @@ def test_comm_registered_current_source_replays_only_approved_observations():
     s=m.SPEC['sources']['COMM'];p=Path(s['cache_path'])
     if not p.exists():pytest.skip('Optional current Communication chapter')
     a=importlib.import_module('atlas.adapters.'+m.SPEC['program_id']+'.adapter');out=a.SOURCE_PARSERS[s['url']](p.read_text())
-    assert len(out['courses'])==39 and len(out['source_dispositions'])==6
+    assert len(out['courses'])==43 and len(out['source_dispositions'])==7
     cs={c['id']:c for c in json.loads(Path('data/programs',m.SPEC['program_id']+'.json').read_text())['courses']}
     assert all(cs[c['id']][key]==v for c in out['courses']for key,v in c.items()if key!='notes')

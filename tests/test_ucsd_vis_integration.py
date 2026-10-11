@@ -36,7 +36,7 @@ def test_current_visual_arts_observer_withholds_twenty_identities():
     adapter = importlib.import_module('atlas.adapters.' + PID + '.adapter')
     assert adapter.SOURCES.count(s['url']) == 1
     result = adapter.SOURCE_PARSERS[s['url']](cache.read_text())
-    assert len(result['courses']) == 67 and len(result['source_dispositions']) == 20
+    assert len(result['courses']) == 94 and len(result['source_dispositions']) == 20
     saved = {c['id']: c for c in json.loads(Path('data/programs', PID + '.json').read_text())['courses']}
     for c in result['courses']:
         assert 'category_review' not in c

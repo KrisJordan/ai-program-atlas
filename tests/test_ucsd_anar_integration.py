@@ -24,7 +24,7 @@ def test_shared_anthropology_url_composes_prior_records_without_overwrite():
     a=importlib.import_module('atlas.adapters.'+m.SPEC['program_id']+'.adapter')
     assert a.SOURCES.count(s['url'])==1
     out=a.SOURCE_PARSERS[s['url']](p.read_text())
-    assert len(out['courses'])==106 and len({c['id']for c in out['courses']})==106
+    assert len(out['courses'])==115 and len({c['id']for c in out['courses']})==115
     assert {'ANAR 117','ANSC 138','ANTH 128A'}<={c['code']for c in out['courses']}
     d=json.loads(Path('data/programs',m.SPEC['program_id']+'.json').read_text());cs={c['id']:c for c in d['courses']}
     assert all(cs[c['id']][k]==v for c in out['courses']for k,v in c.items()if k!='notes')

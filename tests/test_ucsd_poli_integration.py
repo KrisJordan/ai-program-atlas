@@ -31,8 +31,8 @@ def test_registered_poli_observer_replays_only_approved_observations():
     adapter = importlib.import_module('atlas.adapters.' + PID + '.adapter')
     result = adapter.SOURCE_PARSERS[source['url']](p.read_text())
     assert adapter.SOURCES.count(source['url']) == 1
-    assert len(result['courses']) == 113
-    assert len(result['source_dispositions']) == 3
+    assert len(result['courses']) == 125
+    assert len(result['source_dispositions']) == 4
     saved = {c['id']: c for c in json.loads(Path('data/programs',PID+'.json').read_text())['courses']}
     for c in result['courses']:
         assert 'category_review' not in c

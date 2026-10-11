@@ -43,7 +43,7 @@ def test_actual_chapter_all_records_and_registered_integration():
     s=m.SPEC['sources']['CHIN'];p=Path(s['cache_path'])
     if not p.exists():pytest.skip('Optional Chinese chapter')
     a=importlib.import_module('atlas.adapters.'+m.SPEC['program_id']+'.adapter')
-    out=a.SOURCE_PARSERS[s['url']](p.read_text());assert len(out['courses'])==41
+    out=a.SOURCE_PARSERS[s['url']](p.read_text());assert len(out['courses'])==42
     d=json.loads(Path('data/programs',m.SPEC['program_id']+'.json').read_text());cs={c['id']:c for c in d['courses']}
     assert all(cs[c['id']][k]==v for c in out['courses']for k,v in c.items()if k!='notes')
     assert [requirement_profile(d)[k]['count']for k in ['required','options','unresolved']]==[8,119,2241]

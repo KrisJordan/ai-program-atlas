@@ -323,3 +323,17 @@ def test_current_cs_options_keep_permission_alternatives_and_source_barrier():
     assert '856-row D/E/F/G export' in audit['accessible_work_remaining']
     assert 'Remaining exact prerequisites' in audit['correction_status']
     assert any(s['access_status']=='human_verification_challenge_not_bypassed'for s in audit['sources'])
+
+
+def test_two_capstone_code_gaps_have_actual_bounded_dispositions():
+    import json
+    from pathlib import Path
+    program=json.loads(Path('data/programs/ucsb-ai-bs.json').read_text())
+    courses={c['code']:c for c in program['courses']}
+    for code in ['CMPSC 189C','CMPSC 189D']:
+        c=courses[code]
+        assert c['description'] is None and c['credits'] is None and c['prerequisites'] is None
+        assert 'not a review of course content' not in c['category_review']['rationale']
+        assert 'bounded unresolved identity/source gap' in c['category_review']['rationale']
+        assert 'ucsb-ai-bs-cmpsc189-search-2026' in c['category_review']['source_ids']
+    assert next(s for s in program['sources']if s['id']=='ucsb-ai-bs-cmpsc189-search-2026')['url'].endswith('cq=CMPSC189')

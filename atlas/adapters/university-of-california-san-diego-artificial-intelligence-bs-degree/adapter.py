@@ -486,3 +486,26 @@ for _review_module in (math_remaining_reviews, cogs_remaining_reviews, ltsp_rema
         if _review_url not in SOURCE_PARSERS:
             raise ValueError('Code-only continuation expected an existing reviewed source URL')
         SOURCE_PARSERS[_review_url] = _compose_disjoint_review_observers(SOURCE_PARSERS[_review_url], _review_parser)
+
+# Disjoint additional code-only descriptions retain all existing same-URL observations.
+from atlas.adapters import ucsd_codeonly_language_reviews
+from atlas.adapters import ucsd_performance_remaining_reviews
+from atlas.adapters import ucsd_codeonly_social_reviews
+from atlas.adapters import ucsd_codeonly_science_reviews
+from atlas.adapters import ucsd_linguistics_remaining_reviews
+from atlas.adapters import ucsd_computing_design_remaining_reviews
+for _review_module in (ucsd_codeonly_language_reviews, ucsd_performance_remaining_reviews, ucsd_codeonly_social_reviews, ucsd_codeonly_science_reviews, ucsd_linguistics_remaining_reviews, ucsd_computing_design_remaining_reviews):
+    for _review_url, _review_parser in _review_module.SOURCE_PARSERS.items():
+        if _review_url in SOURCE_PARSERS:
+            SOURCE_PARSERS[_review_url] = _compose_disjoint_review_observers(SOURCE_PARSERS[_review_url], _review_parser)
+        else:
+            SOURCES += (_review_url,)
+            SOURCE_PARSERS[_review_url] = _review_parser
+
+from atlas.adapters import ucsd_codeonly_humanities_reviews
+for _review_url, _review_parser in ucsd_codeonly_humanities_reviews.SOURCE_PARSERS.items():
+    if _review_url in SOURCE_PARSERS:
+        SOURCE_PARSERS[_review_url] = _compose_disjoint_review_observers(SOURCE_PARSERS[_review_url], _review_parser)
+    else:
+        SOURCES += (_review_url,)
+        SOURCE_PARSERS[_review_url] = _review_parser
