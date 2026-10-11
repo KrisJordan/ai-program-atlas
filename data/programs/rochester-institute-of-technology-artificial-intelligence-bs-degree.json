@@ -150,6 +150,16 @@
       "catalog_year": null,
       "locator": "Published March 25, 2026; explicitly updated August 17, 2026; approximately 20 students starting this fall; 122 hours and two co-op blocks",
       "confidence": "high"
+    },
+    {
+      "id": "rit-ai-bs-advising-2026-2027",
+      "url": "https://www.rit.edu/computing/sites/rit.edu.computing/files/docs/IST-Information/AI%202026_0.pdf",
+      "title": "Artificial Intelligence Undergraduate Program: advising flowchart and AI electives",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "PDF p.1: IDAI490 WI-PR and separate immersion slots; p.2: six elective options",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -732,6 +742,48 @@
       "category": "human_context",
       "source_id": "rit-ai-bs-catalog",
       "url": "https://academiccatalog.rit.edu/search/?P=PUBL-550",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-632",
+      "code": "CSCI-632",
+      "name": "Mobile Robot Programming",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "semester_hours",
+      "category": "electives",
+      "source_id": "rit-ai-bs-advising-2026-2027",
+      "url": "https://www.rit.edu/computing/sites/rit.edu.computing/files/docs/IST-Information/AI%202026_0.pdf",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-ling-582",
+      "code": "LING-582",
+      "name": "Natural Language Processing II",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "semester_hours",
+      "category": "electives",
+      "source_id": "rit-ai-bs-advising-2026-2027",
+      "url": "https://www.rit.edu/computing/sites/rit.edu.computing/files/docs/IST-Information/AI%202026_0.pdf",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-ling-584",
+      "code": "LING-584",
+      "name": "Undergraduate Speech Processing",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "semester_hours",
+      "category": "electives",
+      "source_id": "rit-ai-bs-advising-2026-2027",
+      "url": "https://www.rit.edu/computing/sites/rit.edu.computing/files/docs/IST-Information/AI%202026_0.pdf",
       "public_site": null,
       "syllabus": null
     }
@@ -1697,6 +1749,58 @@
       "source_text": null,
       "summary": "The university graduation page directs students to catalog program requirements and says programmatic writing-intensive courses are identified by WI on typical course-sequence charts. The AI chart is relevant published curricular evidence, but the unresolved Immersion 3 annotation and exact WI mapping prevent a complete audit.",
       "course_ids": []
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-advising-wi",
+      "parent_id": null,
+      "title": "Program writing-intensive designation",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-advising-2026-2027",
+      "source_text": null,
+      "summary": "The 2026–27 School of Information flowchart explicitly marks IDAI-490 AI Team Capstone as WI-PR and requires fourth-year standing. It separately shows first-year writing and an additional Writing Intensive checkbox; these fit the existing university three-course structure, not extra credits.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-idai-490"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-advising-elective-conflict",
+      "parent_id": null,
+      "title": "Advising elective list differs from catalog",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-advising-2026-2027",
+      "source_text": null,
+      "summary": "The 2026–27 advising PDF says to select two three-credit AI electives. It lists CSCI-431; EEEE-485 OR CSCI-632; LING-582; LING-584; SWEN-566; PUBL-550. The separately captured catalog instead uses CSCI-634 for robotics and omits the two linguistics options. These source-specific options are retained as conflicting evidence, not combined into one approved pool.",
+      "course_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-431",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-eeee-485",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-632",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-ling-582",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-ling-584",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-swen-566",
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree-publ-550"
+      ]
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-advising-immersion",
+      "parent_id": null,
+      "title": "Independent advising chart and immersion ambiguity",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-ai-bs-advising-2026-2027",
+      "source_text": null,
+      "summary": "The 2026–27 flowchart shows three separate immersion slots and labels MATH-190 as discrete mathematics, without an immersion designation. It therefore does not establish an exception to the university no-program-overlap rule or resolve the captured catalog’s extra Immersion 3 annotation.",
+      "course_ids": []
     }
   ],
   "notes": [
@@ -1707,7 +1811,8 @@
     "The MATH-190 row has an Immersion 3 annotation while a separate fourth-year Immersion 3 slot appears. No double-counting or waiver is inferred.",
     "Public undergraduate policies D02.0/D05.0/D12.0 now cover transfer, grading/repeats, GPA, residency and degree minimums. The university semester-credit basis is explicit. Degree completeness remains partial for writing/general-education/college scope and the catalog sequence conflict; no graduate policy is inherited.",
     "2026-10-11: General education and wellness policies reviewed; approved-course directory retrieval stopped at unavailable robots response (202) after the public registrar redirect. No automated catalog access was inferred.",
-    "The launch article is dated March 25 and explicitly updated August 17, 2026; its Fall 2026 first-cohort statement supports a planned term, not confirmed first instruction. Program-aim statements are not measured graduate outcomes."
+    "The launch article is dated March 25 and explicitly updated August 17, 2026; its Fall 2026 first-cohort statement supports a planned term, not confirmed first instruction. Program-aim statements are not measured graduate outcomes.",
+    "2026-10-11: Public School of Information advising PDF confirms IDAI-490 as program WI. Its elective evidence is kept separate from the catalog pool: CSCI-632 and two linguistics courses are source-specific options with an explicit disagreement, not silently added to the catalog’s selection rule. The PDF’s three separate immersion slots do not justify MATH-190 reuse. Raw PDF and visual review remain outside git; its source date is unknown."
   ],
   "curriculum_audit": {
     "scope": "degree",
@@ -1723,7 +1828,8 @@
       "rit-general-degree-requirements",
       "rit-general-immersions",
       "rit-undergraduate-graduation",
-      "rit-ai-bs-launch"
+      "rit-ai-bs-launch",
+      "rit-ai-bs-advising-2026-2027"
     ],
     "sections": [
       "All coded rows, alternative pairs and uncoded slots in typical sequence",
@@ -1735,12 +1841,14 @@
       "D01.5 undergraduate three-course writing-intensive structure",
       "D01.4 BS general education distribution, perspective counts, discipline-course overlap and immersion restrictions",
       "Public undergraduate graduation page: FYW options and wellness exceptions",
-      "Dated launch article: 122-hour program and two co-op blocks; planned first cohort"
+      "Dated launch article: 122-hour program and two co-op blocks; planned first cohort",
+      "2026–27 School of Information advising PDF: explicit capstone WI designation, immersion layout and separately preserved elective list"
     ],
     "unresolved_requirements": [
-      "Exact AI-program WI course designations and college-specific completion conditions remain unverified.",
+      "IDAI-490 program WI is verified; the additional WI approved course pool and any applicable college-specific completion conditions remain incompletely inventoried.",
       "The complete approved general-education attribute inventory and chosen immersion requirements remain unverified. The public registrar course-list link redirects to a catalog endpoint whose robots response was unavailable (202).",
-      "The MATH-190 Immersion 3 annotation appears beside a separate Immersion 3 slot, while university policy prohibits overlap with program requirements; clarification is required."
+      "The MATH-190 Immersion 3 annotation appears beside a separate Immersion 3 slot, while university policy prohibits overlap with program requirements; clarification is required.",
+      "The 2026–27 advising PDF lists CSCI-632 and LING-582/584, whereas the captured catalog uses CSCI-634 and omits those linguistics electives; authoritative reconciliation is required."
     ],
     "metadata_gaps": [
       "Course descriptions, prerequisites, alternative credit amounts, public sites and syllabi remain unverified."
