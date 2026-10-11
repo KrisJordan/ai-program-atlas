@@ -73,7 +73,7 @@ def test_reviewed_fixed_set_and_programming_bundle(award):
  assert next(c for c in p['courses'] if c['id']==f'case-{award.lower()}-csds-310')['prerequisites'].count('C or higher')==2
  audit=json.loads(Path('research/degree-audit/case-western.json').read_text())
  record=next(x for x in audit['programs'] if x['program_id']==pid)
- assert record['status']=='blocked' and record['expected_profile'] is None
+ assert record['status']=='in_progress' and record['expected_profile'] is None
  assert set(record['expected_course_ids']['required'])==fixed_ids
 
 
