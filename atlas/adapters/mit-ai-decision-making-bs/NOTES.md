@@ -448,3 +448,8 @@ Contribution 15640dd supplies 14 actual-description upgrades from nine public An
 ### Shared Physics II preparation and ACT follow-up — 2026-10-11
 
 The actual catalog Science Requirement Physics section explicitly prohibits enrollment in any Physics II GIR without prior Physics I GIR credit. The parser now assigns that group-level preparation to each observed Physics II row, and otherwise-undescribed 8.021/8.022 records retain it with additional prerequisites unknown. No title, content, classification or fixed-role inference follows. A renewed approved-network normal Fetcher attempt to the linked ACT undergraduate site failed connecting to robots.txt (ConnectError), before policy/content could be inspected. This remains a transport boundary, not an institutional access denial.
+
+
+### Economics historical teaching sources — 2026-10-11
+
+Contribution aabdaf2 supplies 23 actual-description upgrades across 17 OCW subjects. Actual game/network methods support mathematics for 14.12/14.15/14.16; 14.03 combines mathematical methods and social inquiry and remains mixed/other. Four domain-economic subjects are applications. Five homepage descriptions retain unknown prerequisites; separately read syllabus preparation remains explicit contextual evidence, not silently synthesized. Historical 14.74 wording and the original 14.73 not-offered-2026–27 annotation remain. No units or identities are inferred. HASS now has 307 description-supported occurrences, 535 limited title judgments and three code-only unknowns. The audit remains in progress.

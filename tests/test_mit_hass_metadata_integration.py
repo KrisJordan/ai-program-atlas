@@ -147,8 +147,10 @@ def test_economics_limited_title_review_preserves_printed_prerequisites_and_rule
     by={c['id']:c for c in p['courses']}
     assert by['mit-ai-hass-economics-14-16']['prerequisites']=='14.03/14.04'
     assert by['mit-ai-hass-economics-14-27']['prerequisites']=='14.30 or 6.041'
-    assert by['mit-ai-hass-economics-14-15-j']['category_review']['status']=='unclassified'
-    assert by['mit-ai-hass-economics-14-16']['description'] is None
+    assert by['mit-ai-hass-economics-14-15-j']['category_review']['status']=='reviewed'
+    assert by['mit-ai-hass-economics-14-15-j']['category']=='mathematics'
+    assert 'mit-ai-hass-review-ocw-14-15-networks-spring-2022' in by['mit-ai-hass-economics-14-15-j']['category_review']['source_ids']
+    assert by['mit-ai-hass-economics-14-16']['description']
     assert by['mit-ai-hass-economics-14-16']['credits'] is None
     path=Path('/tmp/atlas-mit-hass-economics.html')
     if not path.exists():pytest.skip('Optional public source capture absent')
@@ -156,6 +158,9 @@ def test_economics_limited_title_review_preserves_printed_prerequisites_and_rule
     adapter=importlib.import_module('atlas.adapters.mit-ai-decision-making-bs.adapter')
     url=m.SPECS['mit-ai-hass-review-economics-titles']['url']
     actual=adapter.SOURCE_PARSERS[url](path.read_text())
+    source_rows={c['id']:c for c in actual['courses']}
+    assert source_rows['mit-ai-hass-economics-14-16']['description'] is None
+    assert source_rows['mit-ai-hass-economics-14-15-j']['category']=='other'
     assert actual['requirements']==fields.parse_economics(path.read_text())['requirements']
     assert actual['observed_hass_description_digests']
 
