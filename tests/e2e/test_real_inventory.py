@@ -37,9 +37,9 @@ def test_real_database_pages_comparison_and_mobile(browser, tmp_path):
     try:
         page.goto(base)
         expect(page.locator(".program-card")).to_have_count(len(data["programs"]))
-        for summary in page.locator(".program-family > summary").all():
+        for summary in page.locator(".program-family:visible > summary").all():
             summary.click()
-        expect(page.locator(".program-card:visible")).to_have_count(len(data["programs"]))
+        expect(page.locator(".program-card:visible")).to_have_count(sum(p["program_kind"] in ("degree", "additional_major") for p in data["programs"]))
         page.locator('[data-compare="purdue-ai-bs"]').check()
         page.locator('[data-compare="penn-bse-ai"]').check()
         page.reload()

@@ -7,6 +7,11 @@
   document.documentElement.classList.add('js');
   const keys = ['q', 'type', 'award', 'evidence', 'calendar', 'institution', 'cohort', 'category', 'discipline'];
   const familyMap = new Map(families.map(f => [f.id, f]));
+  const cohortSections = [...document.querySelectorAll('[data-cohort-group]')];
+  const pathState = Object.fromEntries(cohortSections.map(section => [section.dataset.cohortGroup, 'majors']));
+  const awardState = Object.fromEntries(cohortSections.map(section => [section.dataset.cohortGroup, '']));
+  const majorMatches = p => p.program_path !== 'majors' || !awardState[p.cohort_group] || p.major_awards.includes(awardState[p.cohort_group]);
+  const pathForType = type => ({minor: 'minors', concentration: 'concentrations', degree: 'majors', additional_major: 'majors'}[type]);
   const familyPanels = [...document.querySelectorAll('[data-family-id]')];
   let expanded = [];
   let expansionSpecified = false;
@@ -76,6 +81,14 @@
       controls[key].value = value;
       if (key !== 'q' && ![...controls[key].options].some(o => o.value === value)) controls[key].value = '';
     });
+    cohortSections.forEach(section => {
+      const group = section.dataset.cohortGroup;
+      const value = params.get('path_' + group);
+      const award = params.get('award_' + group);
+      awardState[group] = ['BS','BSE','BA','other'].includes(award) ? award : '';
+      section.querySelector('[data-major-award]').value = awardState[group];
+      pathState[group] = pathForType(controls.type.value) || (['majors', 'concentrations', 'minors'].includes(value) ? value : pathForType(controls.award.value) || 'majors');
+    });
     profileMode = params.get('profile') === 'options' ? 'options' : 'required';
     profileControl.value = profileMode;
     selected = [...new Set((params.get('compare') || '').split(','))].filter(id => byId.has(id)).slice(0, 4);
@@ -90,6 +103,8 @@
     keys.forEach(key => { if (controls[key].value) params.set(key, controls[key].value); });
     if (selected.length) params.set('compare', selected.join(','));
     if (profileMode === 'options') params.set('profile', 'options');
+    Object.entries(pathState).forEach(([group,path]) => { if (path !== 'majors') params.set('path_' + group, path); });
+    Object.entries(awardState).forEach(([group,award]) => { if (award) params.set('award_' + group, award); });
     if (expanded.length || expansionSpecified) params.set('expand', expanded.join(','));
     const next = base + (params.size ? '?' + params.toString() : '') + location.hash;
     if (next !== location.pathname + location.search + location.hash) history.pushState(null, '', next);
@@ -102,7 +117,7 @@
     return (!query || query.split(/\s+/).every(term => searchable.includes(term))) &&
       (!controls.type.value || p.program_kind === controls.type.value) &&
       (!controls.evidence.value || p.curriculum_status === controls.evidence.value) &&
-      (!controls.award.value || p.award_level === controls.award.value) &&
+      (!controls.award.value || p.award_level === controls.award.value || p.award_options.some(option => option.normalized === controls.award.value)) &&
       (!controls.calendar.value || (p.institution?.calendar || 'unknown') === controls.calendar.value) &&
       (!controls.institution.value || p.institution?.id === controls.institution.value) &&
       (!controls.cohort.value || (institutionMap.get(p.institution?.id)?.rankings || []).some(r => r.category === controls.cohort.value)) &&
@@ -153,7 +168,7 @@
       ['Concrete variant / disciplines', p => p.family ? e(p.family.variant_label || p.title) + '<small>' + e((p.family.disciplines || []).join(', ') || 'Disciplines not recorded') + '</small><small>Relationship: ' + e(relationshipLabel(p)) + '</small><small>Membership evidence: ' + e(pretty(p.family.classification_kind)) + '</small>' : e(p.title)],
       ['Shared family requirements', familyRequirementList],
       ['Variant requirements / changes', variantRequirementList],
-      ['Award / type', p => e(p.award_level) + '<small>' + e(pretty(p.program_kind)) + '</small>'],
+      ['Award / type', p => e(p.award_level) + '<small>' + e(pretty(p.program_kind)) + '</small>' + (p.award_options.length ? '<small>Offered awards: ' + p.award_options.map(option => e(option.label)).join(' · ') + '</small>' : '')],
       ['U.S. News cohort context', p => { const ranks = institutionMap.get(p.institution?.id)?.rankings || p.institution?.rankings || []; return ranks.length ? ranks.map(r => link(r.source_url, `${r.publisher || 'U.S. News'} ${r.edition || 'Edition unknown'} · ${r.category || 'Category unknown'} · ${rankLabel(r)}`) + '<small>Membership evidence: ' + e(pretty(r.verification_status)) + '</small>').join('<br>') + '<small>Institution context, not teaching quality. Different categories are not comparable.</small>' : 'Ranking provenance not recorded'; }],
       ['Calendar', p => e(pretty(p.institution?.calendar))],
       ['Catalog year', p => e(p.catalog_year)],
@@ -192,9 +207,33 @@
   function render() {
     let count = 0;
     cards.forEach(card => {
-      const show = matches(byId.get(card.dataset.programId));
+      const program = byId.get(card.dataset.programId);
+      const show = matches(program) && majorMatches(program) && pathState[program.cohort_group] === program.program_path;
       card.hidden = !show;
       if (show) count++;
+    });
+    cohortSections.forEach(section => {
+      const group = section.dataset.cohortGroup;
+      const allCandidates = programs.filter(p => p.cohort_group === group && matches(p));
+      const candidates = allCandidates.filter(majorMatches);
+      const awardControl = section.querySelector('[data-major-award]');
+      awardControl.value = awardState[group];
+      const awardLabels = {'':'All awards',BS:'BS',BSE:'BSE',BA:'BA',other:'Other / unspecified'};
+      [...awardControl.options].forEach(option => { const n = allCandidates.filter(p => p.program_path === 'majors' && (!option.value || p.major_awards.includes(option.value))).length; option.textContent = `${awardLabels[option.value]} (${n})`; });
+      section.querySelectorAll('[role=tab]').forEach(tab => {
+        const active = tab.dataset.path === pathState[group];
+        tab.setAttribute('aria-selected', String(active));
+        tab.tabIndex = active ? 0 : -1;
+        tab.querySelector('.path-count').textContent = candidates.filter(p => p.program_path === tab.dataset.path).length;
+      });
+      section.querySelectorAll('[role=tabpanel]').forEach(panel => {
+        panel.hidden = panel.dataset.path !== pathState[group];
+        panel.querySelector('.cohort-empty').hidden = candidates.some(p => p.program_path === panel.dataset.path);
+      });
+      const activeCount = candidates.filter(p => p.program_path === pathState[group]).length;
+      section.querySelector('.cohort-result-count').textContent = `${activeCount} ${activeCount === 1 ? 'program' : 'programs'} in active tab`;
+      const labels = {nu: 'National Universities', lac: 'National Liberal Arts Colleges'};
+      section.hidden = Boolean(controls.cohort.value && labels[group] !== controls.cohort.value);
     });
     let visibleFamilies = 0;
     familyPanels.forEach(panel => {
@@ -211,6 +250,22 @@
     renderComparison();
   }
 
+  cohortSections.forEach(section => {
+    const tabs = [...section.querySelectorAll('[role=tab]')];
+    section.querySelector('[data-major-award]').addEventListener('change', event => { awardState[section.dataset.cohortGroup] = event.target.value; controls.award.value = ''; clearTimeout(timer); writeState(); });
+    const selectPath = tab => {
+      pathState[section.dataset.cohortGroup] = tab.dataset.path;
+      if (controls.type.value && pathForType(controls.type.value) !== tab.dataset.path) controls.type.value = '';
+      clearTimeout(timer); writeState();
+    };
+    tabs.forEach((tab,index) => {
+      tab.addEventListener('click', () => selectPath(tab));
+      tab.addEventListener('keydown', event => {
+        const next = event.key === 'ArrowRight' ? (index + 1) % tabs.length : event.key === 'ArrowLeft' ? (index + tabs.length - 1) % tabs.length : event.key === 'Home' ? 0 : event.key === 'End' ? tabs.length - 1 : null;
+        if (next !== null) { event.preventDefault(); selectPath(tabs[next]); tabs[next].focus(); }
+      });
+    });
+  });
   familyPanels.forEach(panel => panel.querySelector(':scope > summary').addEventListener('click', event => {
     event.preventDefault();
     const id = panel.dataset.familyId;
@@ -222,8 +277,8 @@
   profileControl.addEventListener('change', () => { profileMode = profileControl.value; clearTimeout(timer); writeState(); announce(profileMode === 'required' ? 'Showing required curriculum profiles.' : 'Showing elective option profiles.'); });
   form.addEventListener('submit', event => { event.preventDefault(); clearTimeout(timer); writeState(); });
   controls.q.addEventListener('input', () => { clearTimeout(timer); timer = setTimeout(writeState, 220); });
-  keys.filter(k => k !== 'q').forEach(key => controls[key].addEventListener('change', () => { clearTimeout(timer); if (key === 'discipline' && controls.discipline.value) programs.filter(p => (p.family?.disciplines || []).includes(controls.discipline.value)).forEach(p => { if (!expanded.includes(p.family.id)) expanded.push(p.family.id); }); writeState(); }));
-  const reset = () => { clearTimeout(timer); keys.forEach(key => { controls[key].value = ''; }); writeState(); };
+  keys.filter(k => k !== 'q').forEach(key => controls[key].addEventListener('change', () => { clearTimeout(timer); if (key === 'award') { Object.keys(awardState).forEach(group => { awardState[group] = ''; }); const path = pathForType(controls.award.value) || (controls.award.value ? 'majors' : null); if (path) Object.keys(pathState).forEach(group => { pathState[group] = path; }); } if (key === 'type' && controls.type.value) Object.keys(pathState).forEach(group => { pathState[group] = pathForType(controls.type.value); }); if (key === 'discipline' && controls.discipline.value) programs.filter(p => (p.family?.disciplines || []).includes(controls.discipline.value)).forEach(p => { if (!expanded.includes(p.family.id)) expanded.push(p.family.id); }); writeState(); }));
+  const reset = () => { clearTimeout(timer); keys.forEach(key => { controls[key].value = ''; }); Object.keys(pathState).forEach(group => { pathState[group] = 'majors'; awardState[group] = ''; }); writeState(); };
   document.getElementById('reset-filters').addEventListener('click', reset);
   document.getElementById('empty-reset').addEventListener('click', () => { reset(); controls.q.focus(); });
   document.getElementById('clear-comparison').addEventListener('click', () => {

@@ -9,6 +9,7 @@ import re
 import shutil
 
 from atlas.curriculum_profile import requirement_profile
+from atlas.awards import major_award_buckets
 
 CATEGORIES = {
     "foundations": "Computing foundations", "mathematics": "Mathematics",
@@ -82,11 +83,16 @@ def directory_payload(data, base):
         return [fields(r, 'publisher edition category rank rank_upper_bound source_url verification_status') for r in institution.get('rankings', [])]
 
     family_map = {f['id']: f for f in data.get('families', [])}
+    institution_map = {i['id']: i for i in data.get('institutions', [])}
     programs = []
     for original in data.get('programs', []):
         p = fields(original, 'id title program_kind award_level catalog_year last_verified verification_status curriculum_status')
         institution = original.get('institution', {})
         p['institution'] = fields(institution, 'id name calendar')
+        p['cohort_group'] = program_cohort(original, institution_map)
+        p['program_path'] = program_path(original)
+        p['major_awards'] = major_award_buckets(original)
+        p['award_options'] = [fields(option, 'label normalized source_id') for option in original.get('award_options', [])]
         if institution.get('rankings'):
             p['institution']['rankings'] = ranking_fields(institution)
         membership = original.get('family') or {}
@@ -125,7 +131,7 @@ def directory_payload(data, base):
             p['requirements'].append(projected)
         p['outcomes'] = [fields(o, 'text kind statement_type source_id') for o in original.get('outcomes', [])]
         p['links'] = [fields(link, 'url label kind') for link in original.get('links', [])]
-        source_ids = {c.get('source_id') for c in p['curriculum_profile']['choices']} | {r.get('source_id') for r in p['requirements']} | {o.get('source_id') for o in p['outcomes']} | {c.get('source_id') for c in membership.get('requirement_overrides', [])}
+        source_ids = {o.get('source_id') for o in p['award_options']} | {c.get('source_id') for c in p['curriculum_profile']['choices']} | {r.get('source_id') for r in p['requirements']} | {o.get('source_id') for o in p['outcomes']} | {c.get('source_id') for c in membership.get('requirement_overrides', [])}
         source_ids |= {r.get('source_id') for r in family_map.get(membership.get('id'), {}).get('shared_requirements', [])}
         p['sources'] = [fields(source, 'id url') for source in original.get('sources', []) if source.get('id') in source_ids]
         programs.append(p)
@@ -199,6 +205,15 @@ def metadata_availability(p):
     return '<section class="metadata-availability" aria-labelledby="metadata-title"><h3 id="metadata-title">Course metadata availability</h3><p class="section-note">Counts below show populated fields with a recorded course or source URL, across ' + str(len(courses)) + ' unique course records. They describe evidence availability, not requirement completeness. A missing prerequisite statement does not mean “no prerequisites”; an unknown credit unit cannot be converted or totaled.</p><dl class="metadata-counts">' + ''.join(f'<div><dt>{esc(label)}</dt><dd><strong>{count}</strong> of {len(courses)} sourced</dd></div>' for label, count in counts) + '</dl></section>'
 
 
+def award_options_markup(program):
+    offered = program.get('award_options') or []
+    if not offered:
+        return ''
+    sources = {s.get('id'): s for s in program.get('sources', [])}
+    labels = ' · '.join(external(sources.get(option.get('source_id'), {}).get('url'), option['label']) for option in offered)
+    return '<p class="award-options"><strong>Offered awards:</strong> ' + labels + '</p>'
+
+
 def program_card(p, base):
     institution = p.get("institution", {})
     courses = unique_courses(p)
@@ -207,7 +222,7 @@ def program_card(p, base):
     return f'''<article class="program-card" data-program-id="{esc(p['id'])}">
 <div class="card-top"><span class="eyebrow">{esc(institution.get('name'))}</span><span class="card-badges">{badge(human(p.get('program_kind')))}{badge(p.get('award_level')) if p.get('award_level') not in ('other', 'minor', 'concentration', None) else ''}</span></div>
 <h3><a href="{base}programs/{esc(p['id'])}/">{esc(p.get('title'))}<span aria-hidden="true">↗</span></a></h3>
-{variant_label}<p class="card-description">{esc(p.get('overview') or 'Program overview has not yet been recorded.')}</p>
+{variant_label}{award_options_markup(p)}<p class="card-description">{esc(p.get('overview') or 'Program overview has not yet been recorded.')}</p>
 <dl class="card-facts"><div><dt>Academic calendar</dt><dd>{esc(human(institution.get('calendar')))}</dd></div><div><dt>Curriculum evidence</dt><dd>{esc(evidence_label(p))}</dd></div></dl>
 <div class="card-evidence"><span>{len(courses)} course records</span><span>Verified {esc(date_value(p))}</span></div>
 <div class="card-bottom"><a href="{base}programs/{esc(p['id'])}/">View program <span aria-hidden="true">→</span></a><label class="compare-choice js-only"><input type="checkbox" data-compare="{esc(p['id'])}"> Compare<span class="sr-only"> {esc(p.get('title'))} at {esc(institution.get('name'))}</span></label></div></article>'''
@@ -261,6 +276,44 @@ def options(values):
     return "".join(f'<option value="{esc(key)}">{esc(label)}</option>' for key, label in values)
 
 
+COHORT_GROUPS = {'nu': 'National Universities', 'lac': 'National Liberal Arts Colleges', 'unclassified': 'Institution category not established'}
+PROGRAM_PATHS = {'majors': 'Majors', 'concentrations': 'Concentrations', 'minors': 'Minors'}
+
+
+def program_path(program):
+    return {'concentration': 'concentrations', 'minor': 'minors'}.get(program.get('program_kind'), 'majors')
+
+
+def program_cohort(program, institutions):
+    institution = institutions.get(program.get('institution', {}).get('id'), program.get('institution', {}))
+    categories = {r.get('category') for r in institution.get('rankings', []) if r.get('category') in ('National Universities', 'National Liberal Arts Colleges')}
+    if len(categories) != 1:
+        return 'unclassified'
+    return 'nu' if 'National Universities' in categories else 'lac'
+
+
+def cohort_directory(programs, institutions, families, base):
+    institution_map = {i['id']: i for i in institutions}
+    blocks = []
+    for key, name in COHORT_GROUPS.items():
+        members = [p for p in programs if program_cohort(p, institution_map) == key]
+        if key == 'unclassified' and not members:
+            continue
+        tabs = []
+        panels = []
+        for path, label in PROGRAM_PATHS.items():
+            entries = [p for p in members if program_path(p) == path]
+            tabs.append(f'<button type="button" role="tab" id="tab-{key}-{path}" data-path="{path}" aria-controls="cohort-{key}-{path}" aria-selected="{"true" if path == "majors" else "false"}" tabindex="{0 if path == "majors" else -1}">{label} <span class="path-count">{len(entries)}</span></button>')
+            award_filter = ''
+            if path == 'majors':
+                award_options = [('','All awards'),('BS','BS'),('BSE','BSE'),('BA','BA'),('other','Other / unspecified')]
+                award_filter = '<div class="major-award-controls js-only"><label for="major-award-' + key + '">Major award<select id="major-award-' + key + '" data-major-award aria-label="' + name + ' major award">' + ''.join('<option value="' + value + '">' + label + ' (' + str(sum(not value or value in major_award_buckets(p) for p in entries)) + ')</option>' for value, label in award_options) + '</select></label><p>Exact recorded awards or verified equivalents only. Additional majors without an independent award stay Other. Multiple offered awards may match more than one filter; total records are counted once.</p></div>'
+            panels.append(f'<div role="tabpanel" id="cohort-{key}-{path}" data-path="{path}" aria-labelledby="tab-{key}-{path}" tabindex="0"><h4 class="no-js-path-title">{label}</h4>{award_filter}<div class="program-grid">{grouped_programs(entries, families, base)}</div><p class="cohort-empty" {"hidden" if entries else ""}>No {label.lower()} match the current filters in this institution category. This is not evidence that none exist.</p></div>')
+        explanation = 'Category has not been resolved from recorded ranking evidence; institution names and program awards are not used to guess it.' if key == 'unclassified' else 'Grouped by recorded U.S. News institution category. Majors includes degrees and separately labeled additional majors.'
+        blocks.append(f'<section class="cohort-directory" data-cohort-group="{key}" aria-labelledby="cohort-title-{key}"><div class="cohort-heading"><h3 id="cohort-title-{key}">{name}</h3><p class="cohort-result-count" role="status"></p></div><p class="cohort-explanation">{explanation}</p><div class="program-path-tabs js-only" role="tablist" aria-label="{name} program types">{"".join(tabs)}</div>{"".join(panels)}</section>')
+    return '<div id="program-grid">' + ''.join(blocks) + '</div>'
+
+
 def root_page(data, base):
     programs = data.get("programs", [])
     institutions = data.get("institutions", [])
@@ -288,11 +341,11 @@ def root_page(data, base):
     controls = "".join(f'<label for="filter-{key}">{label}<select id="filter-{key}" name="{key}"><option value="">All</option>{options(vals)}</select></label>' for key, label, vals in filters)
     body = f'''<section class="hero"><div><div class="eyebrow"><span class="status-dot"></span> UNDERGRADUATE AI PROGRAMS</div><h1>Undergraduate AI programs</h1><p class="lede">Search undergraduate degrees, minors and concentrations. Compare documented curricula, review the sources, and see what still needs verification.</p></div><aside class="edition-note"><span class="eyebrow">RESEARCH SNAPSHOT</span><p>{esc(cohort_label)}</p><a href="{base}coverage/">Read the coverage notes →</a></aside></section>
 <div class="coverage-strip"><span class="eyebrow">COVERAGE STATUS</span><p>{esc(summary)}</p><a href="{base}coverage/">Coverage & limitations <span aria-hidden="true">↗</span></a></div>
-{inventory_counts}<section class="explorer" aria-labelledby="explore-title"><div class="section-heading"><div><span class="eyebrow">PROGRAM DIRECTORY</span><h2 id="explore-title">Find a program</h2></div><p>Filter the inventory. Select up to four programs to compare.</p></div>
+{inventory_counts}<section class="explorer" aria-labelledby="explore-title"><div class="section-heading"><div><span class="eyebrow">PROGRAM DIRECTORY</span><h2 id="explore-title">Find a program</h2></div><p>Choose an institution category and program type. Compare up to four programs.</p></div>
 <form id="filters" class="filters js-only" role="search"><label class="search-label" for="search">Search programs<input type="search" id="search" name="q" placeholder="Institution, program, or course…" autocomplete="off"></label><div class="filter-row">{controls}</div><div class="filter-footer"><p class="filter-help">The course-category filter searches all documented course records, including elective options. Discipline filters use explicitly recorded family membership; unclassified programs are not assumed to match.</p><button type="button" id="reset-filters" class="text-button">Reset filters</button></div></form>
 <noscript><p class="notice">All documented programs are listed below. Enable JavaScript to filter and compare programs.</p></noscript>
 <div class="results-heading"><p id="result-count" role="status" aria-live="polite">{len(programs)} programs</p><span>Alphabetical by institution</span></div>
-<div class="program-grid" id="program-grid">{grouped_programs(programs, families, base)}</div>
+{cohort_directory(programs, institutions, families, base)}
 <div id="empty-state" class="empty-state" hidden><span class="eyebrow">NO MATCHES</span><h3>No programs match your filters.</h3><p>No documented program matches these filters. This does not establish that such a program does not exist.</p><button type="button" id="empty-reset">Clear filters</button></div></section>
 <div id="compare-tray" class="compare-tray" hidden><span id="tray-count">0 of 4 selected</span><a href="#comparison">Compare programs ↓</a></div><section id="comparison" class="comparison js-only" aria-labelledby="compare-title"><div class="section-heading"><div><span class="eyebrow">PROGRAM COMPARISON</span><h2 id="compare-title">Compare programs</h2></div><button type="button" id="clear-comparison" class="text-button">Clear selection</button></div><p class="comparison-intro">Choose up to four programs. Credit units and incomplete curricula stay visible; course counts are not measures of program quality.</p><label class="comparison-profile-control" for="compare-profile">Curriculum profile<select id="compare-profile"><option value="required">Required curriculum</option><option value="options">Elective options</option></select></label><div id="compare-status" role="status" aria-live="polite"></div><div id="comparison-content"><p class="comparison-placeholder">Select “Compare” on a program to begin.</p></div></section>
 <section class="method-callout"><span class="eyebrow">SOURCES & METHODS</span><h2>Check the evidence behind each record.</h2><p>Official sources, verification dates, requirement structure, and unknowns travel with the data. Source statements about program aims and outcomes are kept separate from editorial classifications.</p><a href="{base}methodology/">How to read this atlas →</a></section>'''
@@ -452,7 +505,7 @@ def program_page(p, base, family=None):
     else:
         ranking_context += '<p>Ranking provenance is not recorded for this institution.</p>'
     ranking_context += '</section>'
-    body = f'''<div class="breadcrumb"><a href="{base}">Program index</a><span>/</span>{esc(institution.get('name'))}</div><section class="detail-hero"><div class="eyebrow">{esc(institution.get('name'))} / {esc(p.get('hosting_unit') or 'Hosting unit unknown')}</div><h1>{esc(p.get('title'))}</h1><p class="lede">{esc(p.get('overview') or 'Overview not yet recorded.')}</p><div class="detail-badges">{badge(p.get('award_level'))}{badge(human(p.get('program_kind')))}{badge(human(p.get('status')))}</div><div class="official-links">{links}</div></section>
+    body = f'''<div class="breadcrumb"><a href="{base}">Program index</a><span>/</span>{esc(institution.get('name'))}</div><section class="detail-hero"><div class="eyebrow">{esc(institution.get('name'))} / {esc(p.get('hosting_unit') or 'Hosting unit unknown')}</div><h1>{esc(p.get('title'))}</h1><p class="lede">{esc(p.get('overview') or 'Overview not yet recorded.')}</p><div class="detail-badges">{badge(p.get('award_level'))}{badge(human(p.get('program_kind')))}{badge(human(p.get('status')))}</div>{award_options_markup(p)}<div class="official-links">{links}</div></section>
 {family_context(p, family, base)}<dl class="fact-grid"><div><dt>Calendar</dt><dd>{esc(human(institution.get('calendar')))}</dd></div><div><dt>Catalog year</dt><dd>{esc(p.get('catalog_year'))}</dd></div><div><dt>Last verified</dt><dd>{esc(date_value(p))}</dd></div><div><dt>Requirement inventory</dt><dd>{esc(evidence_label(p))}</dd></div></dl>
 <div class="notice evidence-notice"><strong>Read the evidence in context.</strong><p>Verification: {esc(human(p.get('verification_status')))}. {missing_credits} of {len(courses)} course records have unknown credits. Unknown values are not zero. Recorded course credits must not be added to estimate degree requirements.</p><p class="curriculum-scope">{esc(curriculum_scope(p))}</p><p>First offered: {first_text}</p>{'<ul>' + notes + '</ul>' if notes else ''}</div>{ranking_context}
 <nav class="section-nav" aria-label="Program sections"><a href="#curriculum">Curriculum</a><a href="#requirements">Requirements</a><a href="#outcomes">Program aims &amp; outcomes</a><a href="#courses">Course records</a><a href="#sources">Sources</a></nav>
