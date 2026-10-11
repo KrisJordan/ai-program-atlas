@@ -1535,6 +1535,26 @@
       "catalog_year": null,
       "locator": "Actual course-title list and explicit annotations; no description inference",
       "confidence": "high"
+    },
+    {
+      "id": "mit-ai-hass-review-literature-spring2026",
+      "url": "https://lit.mit.edu/academics/subject-offerings/?semester=spring+2026&order_by=course_number&tier=&topic=",
+      "title": "MIT Literature Spring 2026 expanded public descriptions",
+      "fetched_at": null,
+      "source_date": null,
+      "catalog_year": "Spring 2026",
+      "locator": "Actual term-specific Literature course panels and unit/prerequisite fields",
+      "confidence": "high"
+    },
+    {
+      "id": "mit-ai-hass-review-literature-fall2025",
+      "url": "https://lit.mit.edu/academics/subject-offerings/?semester=fall+2025&order_by=course_number&tier=&topic=",
+      "title": "MIT Literature Fall2025 expanded public descriptions",
+      "fetched_at": null,
+      "source_date": null,
+      "catalog_year": "Fall 2025",
+      "locator": "Actual term-specific Literature course panels and unit/prerequisite fields",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -12050,30 +12070,32 @@
       "id": "mit-ai-hass-computing-21l-489-j",
       "code": "21L.489[J]",
       "name": "Interactive Narrative",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Critical writing, narrative theory and creative practice examine interactive fiction; a digital project may use programming or structured text.",
+      "prerequisites": "none",
+      "credits": 12,
       "credit_unit": "units",
-      "category": "other",
+      "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-computing",
       "url": "https://shass.mit.edu/for-students/undergraduate-study/computing-and-society-concentration/",
-      "public_site": "https://shass.mit.edu/for-students/undergraduate-study/computing-and-society-concentration/",
+      "public_site": "https://lit.mit.edu/academics/subject-offerings/?semester=fall+2025&order_by=course_number&tier=&topic=",
       "syllabus": null,
       "notes": [
-        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
         "Observed departmental source term/version: not stated. The original list identity is retained.",
-        "Exact original source title/code retained, including dated special-subject topics and compound labels. No alias group, current offering or enrollment permission inferred."
+        "Exact original source title/code retained, including dated special-subject topics and compound labels. No alias group, current offering or enrollment permission inferred.",
+        "Programming ability is helpful, not a prerequisite. The digital narrative permits programming or text-structuring alternatives.",
+        "Observed departmental source term/version: Fall 2025. The original list identity is retained.",
+        "Exact primary code and base title agree; term-specific subtitle retained. NewSpain dash/spacing variation is cosmetic. The distinct AI-and-consciousness21L707 record is deliberately not upgraded from this other topic."
       ],
       "category_review": {
-        "status": "unclassified",
+        "status": "reviewed",
         "taxonomy_version": "1",
         "reviewed_at": "2026-10-11",
         "source_ids": [
           "mit-ai-decision-making-bs-hass-computing",
-          "mit-ai-hass-review-list-titles-computing"
+          "mit-ai-hass-review-literature-fall2025"
         ],
-        "locator": "computing public source / exact 21L.489[J] / Interactive Narrative",
-        "rationale": "Limited official-title-only review: subject balance or printed identity is insufficiently precise to select one category. Technical, methods, performance and variable-topic wording does not certify an underlying computing or other course.",
+        "locator": "21L.489[J]-61513",
+        "rationale": "The actual dated description centers language, cultural/literary interpretation, history or political inquiry. Optional programming and game exercises do not establish a required computing-method subject.",
         "candidate_categories": []
       }
     },
@@ -13004,19 +13026,21 @@
       "id": "mit-ai-hass-african-and-african-diaspora-studies-21l-504j",
       "code": "21L.504J [WGS.140]",
       "name": "Race and Identity in American Literature",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Literary style, identity and persuasion are examined through close reading and writing experiments; AI misfires are teaching examples, not an AI-method curriculum.",
+      "prerequisites": "Permission of instructor",
+      "credits": 12,
       "credit_unit": "units",
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-african-and-african-diaspora-studies",
       "url": "https://shass.mit.edu/for-students/undergraduate-study/african-and-african-diaspora-studies-concentration/",
-      "public_site": "https://shass.mit.edu/for-students/undergraduate-study/african-and-african-diaspora-studies-concentration/",
+      "public_site": "https://lit.mit.edu/academics/subject-offerings/?semester=spring+2026&order_by=course_number&tier=&topic=",
       "syllabus": null,
       "notes": [
-        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
         "Observed departmental source term/version: not stated. The original list identity is retained.",
-        "Exact literal source list identity retained, including bracketed/slash labels. No current-offering, student eligibility or cross-list identity claim."
+        "Exact literal source list identity retained, including bracketed/slash labels. No current-offering, student eligibility or cross-list identity claim.",
+        "Instructor permission required; source permits repeated credit.",
+        "Observed departmental source term/version: Spring 2026. The original list identity is retained.",
+        "Exact primary course number and base title agree; printed semester-specific subtitle retained as a dated topic. Joined labels are not merged into course identity groups and the topic is not generalized across versions."
       ],
       "category_review": {
         "status": "reviewed",
@@ -13024,10 +13048,10 @@
         "reviewed_at": "2026-10-11",
         "source_ids": [
           "mit-ai-decision-making-bs-hass-african-and-african-diaspora-studies",
-          "mit-ai-hass-review-field-titles-african-and-african-diaspora-studies"
+          "mit-ai-hass-review-literature-spring2026"
         ],
-        "locator": "African and African Diaspora Studies subject requirements / literal 21L.504J [WGS.140] title",
-        "rationale": "Limited official-title-only review of this precise title: it identifies language/communication, literary or cultural study, historical/social/political inquiry, law or ethics. No technical computing content is inferred from technology-related objects or words.",
+        "locator": "21L.504[J]-62731",
+        "rationale": "The actual dated course description centers language, literary/philosophical analysis, culture or communication; technical references are objects or teaching examples rather than a computing-method course.",
         "candidate_categories": []
       }
     },
@@ -14975,19 +14999,21 @@
       "id": "mit-ai-hass-american-studies-21l-504j",
       "code": "21L.504J [WGS.140]",
       "name": "Race and Identity in American Literature",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Literary style, identity and persuasion are examined through close reading and writing experiments; AI misfires are teaching examples, not an AI-method curriculum.",
+      "prerequisites": "Permission of instructor",
+      "credits": 12,
       "credit_unit": "units",
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-american-studies",
       "url": "https://shass.mit.edu/for-students/undergraduate-study/american-studies-concentration/",
-      "public_site": "https://shass.mit.edu/for-students/undergraduate-study/american-studies-concentration/",
+      "public_site": "https://lit.mit.edu/academics/subject-offerings/?semester=spring+2026&order_by=course_number&tier=&topic=",
       "syllabus": null,
       "notes": [
-        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
         "Observed departmental source term/version: not stated. The original list identity is retained.",
-        "Exact literal source list identity retained, including bracketed/slash labels. No current-offering, student eligibility or cross-list identity claim."
+        "Exact literal source list identity retained, including bracketed/slash labels. No current-offering, student eligibility or cross-list identity claim.",
+        "Instructor permission required; source permits repeated credit.",
+        "Observed departmental source term/version: Spring 2026. The original list identity is retained.",
+        "Exact primary course number and base title agree; printed semester-specific subtitle retained as a dated topic. Joined labels are not merged into course identity groups and the topic is not generalized across versions."
       ],
       "category_review": {
         "status": "reviewed",
@@ -14995,10 +15021,10 @@
         "reviewed_at": "2026-10-11",
         "source_ids": [
           "mit-ai-decision-making-bs-hass-american-studies",
-          "mit-ai-hass-review-field-titles-american-studies"
+          "mit-ai-hass-review-literature-spring2026"
         ],
-        "locator": "American Studies subject requirements / literal 21L.504J [WGS.140] title",
-        "rationale": "Limited official-title-only review of this precise title: it identifies language/communication, literary or cultural study, historical/social/political inquiry, law or ethics. No technical computing content is inferred from technology-related objects or words.",
+        "locator": "21L.504[J]-62731",
+        "rationale": "The actual dated course description centers language, literary/philosophical analysis, culture or communication; technical references are objects or teaching examples rather than a computing-method course.",
         "candidate_categories": []
       }
     },
@@ -15006,19 +15032,21 @@
       "id": "mit-ai-hass-american-studies-21l-512",
       "code": "21L.512",
       "name": "American Authors",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Poetry, plays and criticism by Eliot and Auden examine artistic, cultural, religious and social responsibilities.",
+      "prerequisites": "none",
+      "credits": 12,
       "credit_unit": "units",
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-american-studies",
       "url": "https://shass.mit.edu/for-students/undergraduate-study/american-studies-concentration/",
-      "public_site": "https://shass.mit.edu/for-students/undergraduate-study/american-studies-concentration/",
+      "public_site": "https://lit.mit.edu/academics/subject-offerings/?semester=spring+2026&order_by=course_number&tier=&topic=",
       "syllabus": null,
       "notes": [
-        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
         "Observed departmental source term/version: not stated. The original list identity is retained.",
-        "Exact literal source list identity retained, including bracketed/slash labels. No current-offering, student eligibility or cross-list identity claim."
+        "Exact literal source list identity retained, including bracketed/slash labels. No current-offering, student eligibility or cross-list identity claim.",
+        "Source permits repeated credit.",
+        "Observed departmental source term/version: Spring 2026. The original list identity is retained.",
+        "Exact primary course number and base title agree; printed semester-specific subtitle retained as a dated topic. Joined labels are not merged into course identity groups and the topic is not generalized across versions."
       ],
       "category_review": {
         "status": "reviewed",
@@ -15026,10 +15054,10 @@
         "reviewed_at": "2026-10-11",
         "source_ids": [
           "mit-ai-decision-making-bs-hass-american-studies",
-          "mit-ai-hass-review-field-titles-american-studies"
+          "mit-ai-hass-review-literature-spring2026"
         ],
-        "locator": "American Studies subject requirements / literal 21L.512 title",
-        "rationale": "Limited official-title-only review of this precise title: it identifies language/communication, literary or cultural study, historical/social/political inquiry, law or ethics. No technical computing content is inferred from technology-related objects or words.",
+        "locator": "21L.512-62732",
+        "rationale": "The actual dated course description centers language, literary/philosophical analysis, culture or communication; technical references are objects or teaching examples rather than a computing-method course.",
         "candidate_categories": []
       }
     },
@@ -15990,19 +16018,21 @@
       "id": "mit-ai-hass-ancient-and-medieval-studies-21l-611",
       "code": "21L.611",
       "name": "Latin I",
-      "description": null,
-      "prerequisites": null,
+      "description": "Beginning Latin grammar and vocabulary prepare students to read ancient and medieval literary and historical texts.",
+      "prerequisites": "none",
       "credits": 6,
       "credit_unit": "units",
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-ancient-and-medieval-studies",
       "url": "https://shass.mit.edu/for-students/undergraduate-study/ancient-and-medieval-studies-concentration/",
-      "public_site": "https://shass.mit.edu/for-students/undergraduate-study/ancient-and-medieval-studies-concentration/",
+      "public_site": "https://lit.mit.edu/academics/subject-offerings/?semester=spring+2026&order_by=course_number&tier=&topic=",
       "syllabus": null,
       "notes": [
-        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
         "Observed departmental source term/version: not stated. The original list identity is retained.",
-        "Exact literal source list identity retained, including bracketed/slash labels. No current-offering, student eligibility or cross-list identity claim."
+        "Exact literal source list identity retained, including bracketed/slash labels. No current-offering, student eligibility or cross-list identity claim.",
+        "First half-term; LatinI+II may count as oneHASS-H only by petition after both are completed.",
+        "Observed departmental source term/version: Spring 2026. The original list identity is retained.",
+        "Exact primary course number and base title agree; printed semester-specific subtitle retained as a dated topic. Joined labels are not merged into course identity groups and the topic is not generalized across versions."
       ],
       "category_review": {
         "status": "reviewed",
@@ -16010,10 +16040,10 @@
         "reviewed_at": "2026-10-11",
         "source_ids": [
           "mit-ai-decision-making-bs-hass-ancient-and-medieval-studies",
-          "mit-ai-hass-review-field-titles-ancient-and-medieval-studies"
+          "mit-ai-hass-review-literature-spring2026"
         ],
-        "locator": "Ancient and Medieval Studies subject requirements / literal 21L.611 title",
-        "rationale": "Limited official-title-only review of this precise title: it identifies language/communication, literary or cultural study, historical/social/political inquiry, law or ethics. No technical computing content is inferred from technology-related objects or words.",
+        "locator": "21L.611-62737",
+        "rationale": "The actual dated course description centers language, literary/philosophical analysis, culture or communication; technical references are objects or teaching examples rather than a computing-method course.",
         "candidate_categories": []
       }
     },
@@ -16021,19 +16051,21 @@
       "id": "mit-ai-hass-ancient-and-medieval-studies-21l-612",
       "code": "21L.612",
       "name": "Latin II",
-      "description": null,
-      "prerequisites": null,
+      "description": "Introductory Latin extends grammar and vocabulary for ancient and medieval reading; independent enrollment requires instructor permission.",
+      "prerequisites": "21L.611 or permission of instructor",
       "credits": 6,
       "credit_unit": "units",
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-ancient-and-medieval-studies",
       "url": "https://shass.mit.edu/for-students/undergraduate-study/ancient-and-medieval-studies-concentration/",
-      "public_site": "https://shass.mit.edu/for-students/undergraduate-study/ancient-and-medieval-studies-concentration/",
+      "public_site": "https://lit.mit.edu/academics/subject-offerings/?semester=spring+2026&order_by=course_number&tier=&topic=",
       "syllabus": null,
       "notes": [
-        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
         "Observed departmental source term/version: not stated. The original list identity is retained.",
-        "Exact literal source list identity retained, including bracketed/slash labels. No current-offering, student eligibility or cross-list identity claim."
+        "Exact literal source list identity retained, including bracketed/slash labels. No current-offering, student eligibility or cross-list identity claim.",
+        "Second half-term; LatinI+II may count as oneHASS-H only by petition after both are completed.",
+        "Observed departmental source term/version: Spring 2026. The original list identity is retained.",
+        "Exact primary course number and base title agree; printed semester-specific subtitle retained as a dated topic. Joined labels are not merged into course identity groups and the topic is not generalized across versions."
       ],
       "category_review": {
         "status": "reviewed",
@@ -16041,10 +16073,10 @@
         "reviewed_at": "2026-10-11",
         "source_ids": [
           "mit-ai-decision-making-bs-hass-ancient-and-medieval-studies",
-          "mit-ai-hass-review-field-titles-ancient-and-medieval-studies"
+          "mit-ai-hass-review-literature-spring2026"
         ],
-        "locator": "Ancient and Medieval Studies subject requirements / literal 21L.612 title",
-        "rationale": "Limited official-title-only review of this precise title: it identifies language/communication, literary or cultural study, historical/social/political inquiry, law or ethics. No technical computing content is inferred from technology-related objects or words.",
+        "locator": "21L.612-62750",
+        "rationale": "The actual dated course description centers language, literary/philosophical analysis, culture or communication; technical references are objects or teaching examples rather than a computing-method course.",
         "candidate_categories": []
       }
     },
@@ -16356,19 +16388,20 @@
       "id": "mit-ai-hass-ancient-and-medieval-studies-21l-601j",
       "code": "21L.601J [24.916J]",
       "name": "Old English and Beowulf",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Old English study develops reading through Beowulf and other early literary and religious texts.",
+      "prerequisites": "none",
+      "credits": 12,
       "credit_unit": "units",
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-ancient-and-medieval-studies",
       "url": "https://shass.mit.edu/for-students/undergraduate-study/ancient-and-medieval-studies-concentration/",
-      "public_site": "https://shass.mit.edu/for-students/undergraduate-study/ancient-and-medieval-studies-concentration/",
+      "public_site": "https://lit.mit.edu/academics/subject-offerings/?semester=fall+2025&order_by=course_number&tier=&topic=",
       "syllabus": null,
       "notes": [
-        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
         "Observed departmental source term/version: not stated. The original list identity is retained.",
-        "Exact literal source list identity retained, including bracketed/slash labels. No current-offering, student eligibility or cross-list identity claim."
+        "Exact literal source list identity retained, including bracketed/slash labels. No current-offering, student eligibility or cross-list identity claim.",
+        "Observed departmental source term/version: Fall 2025. The original list identity is retained.",
+        "Exact primary code and base title agree; term-specific subtitle retained. NewSpain dash/spacing variation is cosmetic. The distinct AI-and-consciousness21L707 record is deliberately not upgraded from this other topic."
       ],
       "category_review": {
         "status": "reviewed",
@@ -16376,10 +16409,10 @@
         "reviewed_at": "2026-10-11",
         "source_ids": [
           "mit-ai-decision-making-bs-hass-ancient-and-medieval-studies",
-          "mit-ai-hass-review-field-titles-ancient-and-medieval-studies"
+          "mit-ai-hass-review-literature-fall2025"
         ],
-        "locator": "Ancient and Medieval Studies subject requirements / literal 21L.601J [24.916J] title",
-        "rationale": "Limited official-title-only review of this precise title: it identifies language/communication, literary or cultural study, historical/social/political inquiry, law or ethics. No technical computing content is inferred from technology-related objects or words.",
+        "locator": "21L.601[J]-61533",
+        "rationale": "The actual dated description centers language, cultural/literary interpretation, history or political inquiry. Optional programming and game exercises do not establish a required computing-method subject.",
         "candidate_categories": []
       }
     },
@@ -16818,19 +16851,21 @@
       "id": "mit-ai-hass-ancient-and-medieval-studies-21l-455",
       "code": "21L.455",
       "name": "Ancient Authors",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Close reading of literature and philosophy from antiquity onward examines self, community, obligations and the common good.",
+      "prerequisites": "none",
+      "credits": 12,
       "credit_unit": "units",
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-ancient-and-medieval-studies",
       "url": "https://shass.mit.edu/for-students/undergraduate-study/ancient-and-medieval-studies-concentration/",
-      "public_site": "https://shass.mit.edu/for-students/undergraduate-study/ancient-and-medieval-studies-concentration/",
+      "public_site": "https://lit.mit.edu/academics/subject-offerings/?semester=spring+2026&order_by=course_number&tier=&topic=",
       "syllabus": null,
       "notes": [
-        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
         "Observed departmental source term/version: not stated. The original list identity is retained.",
-        "Exact literal source list identity retained, including bracketed/slash labels. No current-offering, student eligibility or cross-list identity claim."
+        "Exact literal source list identity retained, including bracketed/slash labels. No current-offering, student eligibility or cross-list identity claim.",
+        "Source permits repeated credit; earlier24.01 enrollment is encouraged, not required.",
+        "Observed departmental source term/version: Spring 2026. The original list identity is retained.",
+        "Exact primary course number and base title agree; printed semester-specific subtitle retained as a dated topic. Joined labels are not merged into course identity groups and the topic is not generalized across versions."
       ],
       "category_review": {
         "status": "reviewed",
@@ -16838,10 +16873,10 @@
         "reviewed_at": "2026-10-11",
         "source_ids": [
           "mit-ai-decision-making-bs-hass-ancient-and-medieval-studies",
-          "mit-ai-hass-review-field-titles-ancient-and-medieval-studies"
+          "mit-ai-hass-review-literature-spring2026"
         ],
-        "locator": "Ancient and Medieval Studies subject requirements / literal 21L.455 title",
-        "rationale": "Limited official-title-only review of this precise title: it identifies language/communication, literary or cultural study, historical/social/political inquiry, law or ethics. No technical computing content is inferred from technology-related objects or words.",
+        "locator": "21L.455-62721",
+        "rationale": "The actual dated course description centers language, literary/philosophical analysis, culture or communication; technical references are objects or teaching examples rather than a computing-method course.",
         "candidate_categories": []
       }
     },
@@ -20401,19 +20436,20 @@
       "id": "mit-ai-hass-latin-american-and-latino-a-studies-21l-019",
       "code": "21L.019",
       "name": "Introduction to European and Latin American Fiction",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "European and Latin American fiction examines outsiders, deception and social norms across novels, stories, film and graphic narrative.",
+      "prerequisites": "none",
+      "credits": 12,
       "credit_unit": "units",
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-latin-american-and-latino-a-studies",
       "url": "https://shass.mit.edu/for-students/undergraduate-study/latin-american-and-latino-a-studies-concentration/",
-      "public_site": "https://shass.mit.edu/for-students/undergraduate-study/latin-american-and-latino-a-studies-concentration/",
+      "public_site": "https://lit.mit.edu/academics/subject-offerings/?semester=spring+2026&order_by=course_number&tier=&topic=",
       "syllabus": null,
       "notes": [
-        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
         "Observed departmental source term/version: not stated. The original list identity is retained.",
-        "Exact literal source list identity retained, including bracketed/slash labels. No current-offering, student eligibility or cross-list identity claim."
+        "Exact literal source list identity retained, including bracketed/slash labels. No current-offering, student eligibility or cross-list identity claim.",
+        "Observed departmental source term/version: Spring 2026. The original list identity is retained.",
+        "Exact primary course number and base title agree; printed semester-specific subtitle retained as a dated topic. Joined labels are not merged into course identity groups and the topic is not generalized across versions."
       ],
       "category_review": {
         "status": "reviewed",
@@ -20421,10 +20457,10 @@
         "reviewed_at": "2026-10-11",
         "source_ids": [
           "mit-ai-decision-making-bs-hass-latin-american-and-latino-a-studies",
-          "mit-ai-hass-review-field-titles-latin-american-and-latino-a-studies"
+          "mit-ai-hass-review-literature-spring2026"
         ],
-        "locator": "Latin American and Latino/a Studies subject requirements / literal 21L.019 title",
-        "rationale": "Limited official-title-only review of this precise title: it identifies language/communication, literary or cultural study, historical/social/political inquiry, law or ethics. No technical computing content is inferred from technology-related objects or words.",
+        "locator": "21L.019-62707",
+        "rationale": "The actual dated course description centers language, literary/philosophical analysis, culture or communication; technical references are objects or teaching examples rather than a computing-method course.",
         "candidate_categories": []
       }
     },
@@ -20463,19 +20499,21 @@
       "id": "mit-ai-hass-latin-american-and-latino-a-studies-21l-636j",
       "code": "21L.636J [21G.716]",
       "name": "Introduction to Contemporary Hispanic Literature and Film",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Contemporary Spanish and Latin American literature and cinema are read in their historical, political and cultural contexts.",
+      "prerequisites": "One intermediate subject in Spanish or permission of instructor",
+      "credits": 12,
       "credit_unit": "units",
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-latin-american-and-latino-a-studies",
       "url": "https://shass.mit.edu/for-students/undergraduate-study/latin-american-and-latino-a-studies-concentration/",
-      "public_site": "https://shass.mit.edu/for-students/undergraduate-study/latin-american-and-latino-a-studies-concentration/",
+      "public_site": "https://lit.mit.edu/academics/subject-offerings/",
       "syllabus": null,
       "notes": [
-        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
         "Observed departmental source term/version: not stated. The original list identity is retained.",
-        "Exact literal source list identity retained, including bracketed/slash labels. No current-offering, student eligibility or cross-list identity claim."
+        "Exact literal source list identity retained, including bracketed/slash labels. No current-offering, student eligibility or cross-list identity claim.",
+        "Course, reading and writing are conducted in Spanish.",
+        "Observed departmental source term/version: Fall 2026. The original list identity is retained.",
+        "Exact primary course number and base title agree; printed semester-specific subtitle retained as a dated topic. Joined labels are not merged into course identity groups and the topic is not generalized across versions."
       ],
       "category_review": {
         "status": "reviewed",
@@ -20483,10 +20521,10 @@
         "reviewed_at": "2026-10-11",
         "source_ids": [
           "mit-ai-decision-making-bs-hass-latin-american-and-latino-a-studies",
-          "mit-ai-hass-review-field-titles-latin-american-and-latino-a-studies"
+          "mit-ai-hass-review-literature"
         ],
-        "locator": "Latin American and Latino/a Studies subject requirements / literal 21L.636J [21G.716] title",
-        "rationale": "Limited official-title-only review of this precise title: it identifies language/communication, literary or cultural study, historical/social/political inquiry, law or ethics. No technical computing content is inferred from technology-related objects or words.",
+        "locator": "21L.636[J]-63490",
+        "rationale": "The actual dated course description centers language, literary/philosophical analysis, culture or communication; technical references are objects or teaching examples rather than a computing-method course.",
         "candidate_categories": []
       }
     },
@@ -20556,19 +20594,21 @@
       "id": "mit-ai-hass-latin-american-and-latino-a-studies-21l-639j",
       "code": "21L.639J [21G.739]",
       "name": "Globalization and its Discontents: Spanish-speaking Nations",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Spanish-language cultural analysis studies Latin American identity, exchanges and globalization through literature, film, music, television and art.",
+      "prerequisites": "One intermediate subject in Spanish or permission of instructor",
+      "credits": 12,
       "credit_unit": "units",
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-latin-american-and-latino-a-studies",
       "url": "https://shass.mit.edu/for-students/undergraduate-study/latin-american-and-latino-a-studies-concentration/",
-      "public_site": "https://shass.mit.edu/for-students/undergraduate-study/latin-american-and-latino-a-studies-concentration/",
+      "public_site": "https://lit.mit.edu/academics/subject-offerings/?semester=fall+2025&order_by=course_number&tier=&topic=",
       "syllabus": null,
       "notes": [
-        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
         "Observed departmental source term/version: not stated. The original list identity is retained.",
-        "Exact literal source list identity retained, including bracketed/slash labels. No current-offering, student eligibility or cross-list identity claim."
+        "Exact literal source list identity retained, including bracketed/slash labels. No current-offering, student eligibility or cross-list identity claim.",
+        "Taught in Spanish.",
+        "Observed departmental source term/version: Fall 2025. The original list identity is retained.",
+        "Exact primary code and base title agree; term-specific subtitle retained. NewSpain dash/spacing variation is cosmetic. The distinct AI-and-consciousness21L707 record is deliberately not upgraded from this other topic."
       ],
       "category_review": {
         "status": "reviewed",
@@ -20576,10 +20616,10 @@
         "reviewed_at": "2026-10-11",
         "source_ids": [
           "mit-ai-decision-making-bs-hass-latin-american-and-latino-a-studies",
-          "mit-ai-hass-review-field-titles-latin-american-and-latino-a-studies"
+          "mit-ai-hass-review-literature-fall2025"
         ],
-        "locator": "Latin American and Latino/a Studies subject requirements / literal 21L.639J [21G.739] title",
-        "rationale": "Limited official-title-only review of this precise title: it identifies language/communication, literary or cultural study, historical/social/political inquiry, law or ethics. No technical computing content is inferred from technology-related objects or words.",
+        "locator": "21L.639[J]-61536",
+        "rationale": "The actual dated description centers language, cultural/literary interpretation, history or political inquiry. Optional programming and game exercises do not establish a required computing-method subject.",
         "candidate_categories": []
       }
     },
@@ -20587,19 +20627,21 @@
       "id": "mit-ai-hass-latin-american-and-latino-a-studies-21l-640j",
       "code": "21L.640J [21G.740]",
       "name": "The New Spain: 1977 \u2013 Present",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Spanish social, political and cultural changes after Franco are studied through film, news, television, fiction and individual research.",
+      "prerequisites": "One intermediate subject in Spanish or permission of instructor",
+      "credits": 12,
       "credit_unit": "units",
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-latin-american-and-latino-a-studies",
       "url": "https://shass.mit.edu/for-students/undergraduate-study/latin-american-and-latino-a-studies-concentration/",
-      "public_site": "https://shass.mit.edu/for-students/undergraduate-study/latin-american-and-latino-a-studies-concentration/",
+      "public_site": "https://lit.mit.edu/academics/subject-offerings/?semester=fall+2025&order_by=course_number&tier=&topic=",
       "syllabus": null,
       "notes": [
-        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
         "Observed departmental source term/version: not stated. The original list identity is retained.",
-        "Exact literal source list identity retained, including bracketed/slash labels. No current-offering, student eligibility or cross-list identity claim."
+        "Exact literal source list identity retained, including bracketed/slash labels. No current-offering, student eligibility or cross-list identity claim.",
+        "Taught in Spanish.",
+        "Observed departmental source term/version: Fall 2025. The original list identity is retained.",
+        "Exact primary code and base title agree; term-specific subtitle retained. NewSpain dash/spacing variation is cosmetic. The distinct AI-and-consciousness21L707 record is deliberately not upgraded from this other topic."
       ],
       "category_review": {
         "status": "reviewed",
@@ -20607,10 +20649,10 @@
         "reviewed_at": "2026-10-11",
         "source_ids": [
           "mit-ai-decision-making-bs-hass-latin-american-and-latino-a-studies",
-          "mit-ai-hass-review-field-titles-latin-american-and-latino-a-studies"
+          "mit-ai-hass-review-literature-fall2025"
         ],
-        "locator": "Latin American and Latino/a Studies subject requirements / literal 21L.640J [21G.740] title",
-        "rationale": "Limited official-title-only review of this precise title: it identifies language/communication, literary or cultural study, historical/social/political inquiry, law or ethics. No technical computing content is inferred from technology-related objects or words.",
+        "locator": "21L.640[J]-61525",
+        "rationale": "The actual dated description centers language, cultural/literary interpretation, history or political inquiry. Optional programming and game exercises do not establish a required computing-method subject.",
         "candidate_categories": []
       }
     },
@@ -36273,19 +36315,21 @@
       "id": "mit-ai-hass-cmsw-pool-external-21l-430",
       "code": "21L.430",
       "name": "Popular Culture and Narrative",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Philosophy, art and popular culture examine what makes a good life, including morality, class, politics and identity.",
+      "prerequisites": "none",
+      "credits": 12,
       "credit_unit": "unknown",
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-cmsw-pool",
       "url": "https://cmsw.mit.edu/academics/subject-lists/cms/",
-      "public_site": "https://cmsw.mit.edu/academics/subject-lists/cms/",
+      "public_site": "https://lit.mit.edu/academics/subject-offerings/?semester=spring+2026&order_by=course_number&tier=&topic=",
       "syllabus": null,
       "notes": [
-        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
         "Observed departmental source term/version: not stated. The original list identity is retained.",
-        "Exact original source title/code retained, including dated special-subject topics and compound labels. No alias group, current offering or enrollment permission inferred."
+        "Exact original source title/code retained, including dated special-subject topics and compound labels. No alias group, current offering or enrollment permission inferred.",
+        "Source permits repeated credit.",
+        "Observed departmental source term/version: Spring 2026. The original list identity is retained.",
+        "Exact primary course number and base title agree; printed semester-specific subtitle retained as a dated topic. Joined labels are not merged into course identity groups and the topic is not generalized across versions."
       ],
       "category_review": {
         "status": "reviewed",
@@ -36293,10 +36337,10 @@
         "reviewed_at": "2026-10-11",
         "source_ids": [
           "mit-ai-decision-making-bs-hass-cmsw-pool",
-          "mit-ai-hass-review-list-titles-cms_pool"
+          "mit-ai-hass-review-literature-spring2026"
         ],
-        "locator": "cms_pool public source / exact 21L.430 / Popular Culture and Narrative",
-        "rationale": "Limited official-title-only review: this precise source title identifies ethics, politics, social/cultural/literary analysis, language/communication, educational study or history. Neither a technical object in the title nor membership in this field establishes technical computing methods.",
+        "locator": "21L.430-62716",
+        "rationale": "The actual dated course description centers language, literary/philosophical analysis, culture or communication; technical references are objects or teaching examples rather than a computing-method course.",
         "candidate_categories": []
       }
     },
@@ -36335,19 +36379,21 @@
       "id": "mit-ai-hass-cmsw-pool-external-21l-433",
       "code": "21L.433",
       "name": "Film Styles and Genres",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Close analysis of Kubrick films studies form, genre, style and cultural themes including war, technology and gender.",
+      "prerequisites": "none",
+      "credits": 12,
       "credit_unit": "unknown",
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-cmsw-pool",
       "url": "https://cmsw.mit.edu/academics/subject-lists/cms/",
-      "public_site": "https://cmsw.mit.edu/academics/subject-lists/cms/",
+      "public_site": "https://lit.mit.edu/academics/subject-offerings/?semester=fall+2025&order_by=course_number&tier=&topic=",
       "syllabus": null,
       "notes": [
-        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
         "Observed departmental source term/version: not stated. The original list identity is retained.",
-        "Exact original source title/code retained, including dated special-subject topics and compound labels. No alias group, current offering or enrollment permission inferred."
+        "Exact original source title/code retained, including dated special-subject topics and compound labels. No alias group, current offering or enrollment permission inferred.",
+        "Repeat credit is permitted.",
+        "Observed departmental source term/version: Fall 2025. The original list identity is retained.",
+        "Exact primary code and base title agree; term-specific subtitle retained. NewSpain dash/spacing variation is cosmetic. The distinct AI-and-consciousness21L707 record is deliberately not upgraded from this other topic."
       ],
       "category_review": {
         "status": "reviewed",
@@ -36355,10 +36401,10 @@
         "reviewed_at": "2026-10-11",
         "source_ids": [
           "mit-ai-decision-making-bs-hass-cmsw-pool",
-          "mit-ai-hass-review-list-titles-cms_pool"
+          "mit-ai-hass-review-literature-fall2025"
         ],
-        "locator": "cms_pool public source / exact 21L.433 / Film Styles and Genres",
-        "rationale": "Limited official-title-only review: this precise source title identifies ethics, politics, social/cultural/literary analysis, language/communication, educational study or history. Neither a technical object in the title nor membership in this field establishes technical computing methods.",
+        "locator": "21L.433-61497",
+        "rationale": "The actual dated description centers language, cultural/literary interpretation, history or political inquiry. Optional programming and game exercises do not establish a required computing-method subject.",
         "candidate_categories": []
       }
     },
@@ -36488,19 +36534,21 @@
       "id": "mit-ai-hass-cmsw-pool-external-21l-707",
       "code": "21L.707",
       "name": "Problems in Cultural Interpretation",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Historical, literary and strategic texts examine diplomacy, war and peace; media and game exercises support cultural/political analysis.",
+      "prerequisites": "Two subjects in Literature or permission of instructor",
+      "credits": 12,
       "credit_unit": "unknown",
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-cmsw-pool",
       "url": "https://cmsw.mit.edu/academics/subject-lists/cms/",
-      "public_site": "https://cmsw.mit.edu/academics/subject-lists/cms/",
+      "public_site": "https://lit.mit.edu/academics/subject-offerings/?semester=fall+2025&order_by=course_number&tier=&topic=",
       "syllabus": null,
       "notes": [
-        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
         "Observed departmental source term/version: not stated. The original list identity is retained.",
-        "Exact original source title/code retained, including dated special-subject topics and compound labels. No alias group, current offering or enrollment permission inferred."
+        "Exact original source title/code retained, including dated special-subject topics and compound labels. No alias group, current offering or enrollment permission inferred.",
+        "Repeat credit is permitted. This observed topic is the Art of War and Peace, not the separate AI-and-consciousness offering.",
+        "Observed departmental source term/version: Fall 2025. The original list identity is retained.",
+        "Exact primary code and base title agree; term-specific subtitle retained. NewSpain dash/spacing variation is cosmetic. The distinct AI-and-consciousness21L707 record is deliberately not upgraded from this other topic."
       ],
       "category_review": {
         "status": "reviewed",
@@ -36508,10 +36556,10 @@
         "reviewed_at": "2026-10-11",
         "source_ids": [
           "mit-ai-decision-making-bs-hass-cmsw-pool",
-          "mit-ai-hass-review-list-titles-cms_pool"
+          "mit-ai-hass-review-literature-fall2025"
         ],
-        "locator": "cms_pool public source / exact 21L.707 / Problems in Cultural Interpretation",
-        "rationale": "Limited official-title-only review: this precise source title identifies ethics, politics, social/cultural/literary analysis, language/communication, educational study or history. Neither a technical object in the title nor membership in this field establishes technical computing methods.",
+        "locator": "21L.707-61531",
+        "rationale": "The actual dated description centers language, cultural/literary interpretation, history or political inquiry. Optional programming and game exercises do not establish a required computing-method subject.",
         "candidate_categories": []
       }
     },
@@ -52354,7 +52402,8 @@
     "2026-10-11:142 additional Computing and Society, Ethics, Linguistics, Urban, Education and CMS source-title observations receive bounded manual dispositions. Three malformed printed Ethics labels stay held rather than silently repaired. These are not verified descriptions or newly required degree subjects.",
     "2026-10-11:actual public Cybersecurity Clinic content supplies a mixed course classification, registeredMIT/Harvard/Wellesley participation and first-attempt exam condition for field assignment. The unexplained suggested-pool asterisk is an annotation gap, not evidence of an extra requirement.",
     "2026-10-11:final five previously undisposed HASS references now have explicit dispositions:two exact-code FrenchSpring2027 topic descriptions and three code-only unknowns. Generic placement names staynull; term-specific topic evidence does not imply all offerings share that content.",
-    "2026-10-11:the22 identity/description-held HASS source occurrences now have limited original-title-only dispositions. Precise original humanities/social/language titles can support classification without adopting the conflicting or differently titled supplemental metadata; broad titles remain unknown. All20identity/version holds and two description conflicts remain open, with no alias merge or automatic renumbering."
+    "2026-10-11:the22 identity/description-held HASS source occurrences now have limited original-title-only dispositions. Precise original humanities/social/language titles can support classification without adopting the conflicting or differently titled supplemental metadata; broad titles remain unknown. All20identity/version holds and two description conflicts remain open, with no alias merge or automatic renumbering.",
+    "2026-10-11:15 Literature source occurrences upgraded from limited titles to actual term-specific descriptions:Spring2026eight,Fall2025six andFall2026one. Latin611/612eachsixunits combineoneHASS onlybypetitionafterboth; languagepreparation,instructorpermission,repeatedcredit and recommended-versus-requiredpreparation remain explicit. Generic21L707war/peace evidence is not copied onto the separate AI-topic row."
   ],
   "curriculum_audit": {
     "scope": "degree",

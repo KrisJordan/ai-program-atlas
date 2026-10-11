@@ -49,8 +49,10 @@ def test_integrated_evidence_preserves_term_rules_and_withholds_conflicts():
             assert 'Limited official-title-only' in c['category_review']['rationale']
         else:
             # A separately sourced content review can supersede the initial title disposition.
-            assert 'mit-ai-clinic-review-news' in c['category_review']['source_ids']
-            assert c['category_review']['status']=='mixed'
+            evidence=[o for o in m.MANIFEST['courses'][c['id']]['observations']
+                      if o['approved_for_integration'] and o.get('description_summary')==c['description']
+                      and o['source_id'] in c['category_review']['source_ids']]
+            assert evidence or 'mit-ai-clinic-review-news' in c['category_review']['source_ids']
     assert {s['url'] for s in m.SPECS.values()} <= {s['url'] for s in p['sources']}
     greek = [c for c in integrated if c['code'] in {'21L.607', '21L.608'}]
     assert greek and all(c['credits'] == 6 for c in greek)
@@ -172,3 +174,20 @@ def test_same_french_url_observes_both_titles_and_term_specific_prose():
     assert all(c['category_review']['status']=='unclassified'and c['category']=='other'for c in unknown)
     assert all(c['name'] is None and c['description'] is None and c['credits'] is None for c in unknown)
     assert all(any('code-only observation' in n for n in c['notes'])for c in unknown)
+
+
+def test_literature_term_upgrade_preserves_bundle_and_preparation_limits():
+    p=json.loads(Path('data/programs/mit-ai-decision-making-bs.json').read_text())
+    by={c['id']:c for c in p['courses']}
+    first=by['mit-ai-hass-ancient-and-medieval-studies-21l-611']
+    second=by['mit-ai-hass-ancient-and-medieval-studies-21l-612']
+    assert first['credits']==second['credits']==6
+    assert second['prerequisites']=='21L.611 or permission of instructor'
+    assert any('petition after both' in n for n in first['notes'])
+    writing=by['mit-ai-hass-african-and-african-diaspora-studies-21l-504j']
+    assert writing['category']=='human_context'and writing['prerequisites']=='Permission of instructor'
+    narrative=by['mit-ai-hass-computing-21l-489-j']
+    assert narrative['prerequisites']=='none'
+    assert any('helpful, not a prerequisite' in n for n in narrative['notes'])
+    current=[c for c in p['courses']if c['code']=='21L.707'and c['name']and 'AI'in c['name']]
+    assert all(not c.get('description')or 'Art of War and Peace'not in c['description']for c in current)
