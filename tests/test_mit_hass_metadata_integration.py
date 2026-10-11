@@ -73,7 +73,9 @@ def test_actual_integrated_source_replay_has_exact_approved_identity_scope():
     if not all(p.exists() for p in paths.values()):
         pytest.skip('Optional ignored official source captures absent')
     rows = [c for sid, path in paths.items()
-            for c in m.parse(path.read_text(), m.SPECS[sid]['url'])['courses']]
+            for c in m.parse(path.read_text(), m.SPECS[sid]['url'],
+                             source_payloads={key:p.read_text() for key,p in paths.items()
+                                              if key in m.SPECS[sid].get('required_source_ids',[])})['courses']]
     assert {c['id'] for c in rows} == set(m.INTEGRATED['course_ids'])
     assert all('category_review' not in c for c in rows)
 

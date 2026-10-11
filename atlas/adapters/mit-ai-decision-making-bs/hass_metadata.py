@@ -6,17 +6,18 @@ from atlas.adapters.national_curriculum_common import course, rule
 
 PID='mit-ai-decision-making-bs'
 observer=import_module('atlas.adapters.mit-ai-decision-making-bs.reviewed_hass_subjects')
+historical_ethics=import_module('atlas.adapters.mit-ai-decision-making-bs.historical_ethics')
 public_resources=import_module('atlas.adapters.mit-ai-decision-making-bs.public_resources')
 MANIFEST=json.loads(Path(__file__).with_name('reviewed_hass_subjects.json').read_text())
-PARSERS={k:getattr(observer,'observe_'+k)for k in ['architecture','literature','history','wgs','wgs_detail','performing_arts','cmsw','language_titles','political_pdf_titles','sts_titles','anthropology_titles','economics_titles','shass_field_titles','remaining_list_titles','french_spotlights','literature_aliases','ocw_syllabus','minds_machines','ocw_course','ocw_language_syllabus','music_semester_capture','theater_semester_capture','concourse_subject','wgs_archive_detail','dlab_course','sts_department_detail','urban_project_course','common_ground_subject','political_methods_syllabus','political_data_news','sts_archive_description','eecs_economics_annotations','anthropology_faculty']}
+PARSERS={k:getattr(observer,'observe_'+k)for k in ['architecture','literature','history','wgs','wgs_detail','performing_arts','cmsw','language_titles','political_pdf_titles','sts_titles','anthropology_titles','economics_titles','shass_field_titles','remaining_list_titles','french_spotlights','literature_aliases','ocw_syllabus','minds_machines','ocw_course','ocw_language_syllabus','music_semester_capture','theater_semester_capture','concourse_subject','wgs_archive_detail','dlab_course','sts_department_detail','urban_project_course','common_ground_subject','political_methods_syllabus','political_data_news','sts_archive_description','eecs_economics_annotations','anthropology_faculty','philosophy_numbering']}
 INTEGRATED=json.loads(Path(__file__).with_name('integrated_hass_scope.json').read_text())
 SPECS={sid:MANIFEST['source_specs'][sid]for sid in INTEGRATED['source_ids']}
 
 
-def parse(html,url):
+def parse(html,url,*,source_payloads=None):
     specs=[s for s in SPECS.values()if s['url']==url]
     spec=specs[0]
-    observations=[];seen=set()
+    observations=[];seen=set();dependency_gaps=[]
     captured_input=html.lstrip().startswith('{')
     for source in specs:
         capture_parser=source['parser'] in {'music_semester_capture','theater_semester_capture'}
@@ -24,6 +25,14 @@ def parse(html,url):
         signature=(source['parser'],source.get('field_key'),source.get('source_kind'))
         if signature in seen:continue
         seen.add(signature)
+        if source['parser']=='philosophy_renumbered_ethics':
+            payloads={**(source_payloads or {}),historical_ethics.ARCHIVE_ID:html}
+            missing=[sid for sid in source['required_source_ids'] if not payloads.get(sid)]
+            if missing:
+                dependency_gaps.append(dict(source_id=historical_ethics.ARCHIVE_ID,missing_source_ids=missing,reason='Historical observation requires separately supplied numbering evidence; no saved proof replay.'))
+                continue
+            observations.extend(historical_ethics.observe_sources(payloads))
+            continue
         parser=PARSERS[source['parser']]
         found=(parser(source['field_key'],html) if source['parser']=='shass_field_titles'
                else parser(source['source_kind'],html) if source['parser']=='remaining_list_titles' else parser(html))
@@ -56,7 +65,7 @@ def parse(html,url):
             latin=by['21L.613']['description']+' '+by['21L.614']['description']
             if 'after completion of both'in greek and 'single HASS-H'in greek and 'by petition'in latin and 'two terms of 21L.614'in latin:
                 rules.append(rule('mit-ai-hass-reviewed-language-bundles','Departmental half-term language combinations','mit-ai-hass-review-literature',kind='note',summary='Greek21L.607 and608 may combine after both are completed as one HASS-H. Latin21L.613+614, or two terms of614, may combine by petition after completion as one HASS-H;614 may be repeated once only if content differs. Separate six-unit subject records remain distinct and are not each treated as a full twelve-unit HASS subject.'))
-    return dict(id=PID,courses=rows,requirements=rules,observed_hass_description_digests=digests)
+    return dict(id=PID,courses=rows,requirements=rules,observed_hass_description_digests=digests,observed_hass_dependency_gaps=dependency_gaps)
 
 
 SOURCE_PARSERS={s['url']:(lambda html,url=s['url']:parse(html,url))for s in SPECS.values()}
