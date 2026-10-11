@@ -655,7 +655,7 @@ def degree_audit_summary(meta):
         return ''
     stats = [('audited', 'First-pass audited'), ('blocked', 'Blocked / incomplete review'), ('in_progress', 'In progress'), ('pending', 'Pending'), ('second_pass_verified', 'Independent second pass verified')]
     counts = ''.join('<div><dt>' + label + '</dt><dd>' + esc(audit.get(key, 0)) + '</dd></div>' for key, label in stats)
-    return '<section class="degree-audit-summary notice" aria-labelledby="degree-audit-title"><h2 id="degree-audit-title">Degree correctness audit</h2><p>' + esc(audit.get('scope_programs')) + ' standalone degree records in scope · ' + esc(audit.get('audit_date') or 'Date not recorded') + '.</p><dl class="metadata-counts">' + counts + '</dl><p>This audit checks source requirements, course identity, classification and displayed profiles. Earlier “complete requirement inventory” labels do not certify this separate correctness review. Blocked reviews retain verified corrections and explicit evidence gaps; counts do not imply that the remaining programs are correct or incorrect.</p></section>'
+    return '<section class="degree-audit-summary notice" aria-labelledby="degree-audit-title"><h2 id="degree-audit-title">Degree correctness audit</h2><p>' + esc(audit.get('scope_programs')) + ' standalone degree records in scope · ' + esc(audit.get('audit_date') or 'Date not recorded') + '.</p><dl class="metadata-counts">' + counts + '</dl><p>These counts describe whole-degree reviews, including applicable policies. Earlier “complete requirement inventory” labels do not certify this separate correctness review. Blocked reviews retain verified corrections and explicit evidence gaps; counts do not imply that the remaining programs are correct or incorrect.</p><p>Degree pages separately report bounded independent reviews of fixed requirements, choice rules and chart classification, with their own evidence and limitations. A verified dimension does not certify the whole degree; an unresolved policy does not erase a verified curriculum correction. Missing dimension evidence is labeled “Not independently reviewed.”</p></section>'
 
 
 def degree_audit_program(program):
@@ -664,7 +664,27 @@ def degree_audit_program(program):
     audit = program.get('degree_audit')
     state = human(audit.get('status')) if audit else 'Pending'
     second = human(audit.get('second_pass_status') or 'pending') if audit else 'Pending'
-    return '<div class="notice degree-audit-program"><strong>Degree correctness audit: ' + esc(state) + '</strong><p>Independent second pass: ' + esc(second) + '. This review is separate from the requirement inventory status and course metadata coverage.</p></div>'
+    core = (audit or {}).get('core_review') or {}
+    dimensions = core.get('dimensions') or {}
+    rows = []
+    labels = [('fixed_requirements', 'Fixed requirements'), ('choice_rules', 'Choice rules'), ('classification', 'Chart classification')]
+    for key, label in labels:
+        dimension = dimensions.get(key) or {}
+        status = {'verified': 'Verified within stated scope', 'partial': 'Partially reviewed', 'unverified': 'Not independently reviewed'}.get(dimension.get('status'), 'Not independently reviewed')
+        summary = '<p>' + esc(dimension['summary']) + '</p>' if dimension.get('summary') else ''
+        evidence = ''.join('<li>' + external(item.get('url'), item.get('locator') or 'Review source') + '</li>' for item in dimension.get('evidence', []))
+        limitations = ''.join('<li>' + esc(item) + '</li>' for item in dimension.get('limitations', []))
+        details = ''
+        if evidence or limitations:
+            details = '<details><summary>Evidence &amp; limitations</summary>'
+            details += '<h4>Evidence</h4><ul>' + evidence + '</ul>' if evidence else '<p>No evidence links recorded.</p>'
+            details += '<h4>Scope limitations</h4><ul>' + limitations + '</ul>' if limitations else ''
+            details += '</details>'
+        rows.append('<div class="review-dimension" data-review-dimension="' + key + '"><dt>' + label + '</dt><dd><strong class="review-dimension-status">' + status + '</strong>' + summary + details + '</dd></div>')
+    provenance = ''
+    if core:
+        provenance = '<p class="review-provenance">Reviewed: ' + esc(core.get('reviewed_at') or 'Date not recorded') + ' · Reviewer: ' + esc(core.get('reviewer') or 'Not recorded') + '.</p>'
+    return '<section class="notice degree-audit-program" aria-labelledby="program-audit-title"><h2 id="program-audit-title">Whole-degree correctness audit: ' + esc(state) + '</h2><p>Whole-degree independent second pass: ' + esc(second) + '. These statuses include applicable degree policies and are separate from requirement inventory and course metadata coverage.</p><h3>Bounded independent review</h3><p>Each judgment applies only to its stated source scope. Unresolved policies can coexist with verified fixed courses, choice rules or chart classifications.</p>' + provenance + '<dl class="review-dimensions">' + ''.join(rows) + '</dl></section>'
 
 
 def coverage_page(data, base):

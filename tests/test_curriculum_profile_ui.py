@@ -102,7 +102,8 @@ def test_degree_correctness_audit_is_separate_from_inventory_status(site_data,tm
         assert 'do not certify this separate correctness review' in audit.get_text()
         assert 'Independent second pass verified' in audit.get_text()
     detail=BeautifulSoup((tmp_path/'programs/test-ai-0/index.html').read_text(),'html.parser')
-    assert 'Degree correctness audit: In progress' in detail.find(class_='degree-audit-program').get_text()
+    assert 'Whole-degree correctness audit: In progress' in detail.find(class_='degree-audit-program').get_text()
+    assert detail.find(class_='degree-audit-program').get_text().count('Not independently reviewed') == 3
 
 
 def test_identity_note_appears_only_for_documented_aliases():

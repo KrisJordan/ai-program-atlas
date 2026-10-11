@@ -46,3 +46,7 @@
 
 /* Course-specific conditions and version evidence remain beside the description. */
 .course-notes{margin-top:10px;font-size:11px;font-weight:400;line-height:1.7;color:var(--muted);overflow-wrap:anywhere}.course-notes summary{cursor:pointer;color:var(--accent);font-weight:600;padding:6px 0}.course-notes summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px}.course-notes ul{padding-left:18px;margin:8px 0 0}.course-notes li+li{margin-top:8px}
+
+/* Bounded source judgments are distinct from whole-degree review status. */
+.degree-audit-program h2{font-size:18px;margin:0 0 10px}.degree-audit-program h3{font-size:16px;margin:22px 0 8px}.degree-audit-program .review-provenance{color:var(--muted);font-size:12px}.review-dimensions{margin:16px 0 0}.review-dimension{display:grid;grid-template-columns:170px minmax(0,1fr);gap:18px;padding:16px 0;border-top:1px solid var(--line);overflow-wrap:anywhere}.review-dimension dt{font-weight:650}.review-dimension dd{margin:0;min-width:0}.review-dimension-status{font-size:13px}.review-dimension details{margin-top:10px}.review-dimension summary{cursor:pointer;color:var(--accent);font-weight:600}.review-dimension summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px}.review-dimension h4{font-size:12px;margin:14px 0 6px}.review-dimension ul{padding-left:20px;margin:6px 0}.review-dimension li+li{margin-top:8px}
+@media(max-width:700px){.review-dimension{grid-template-columns:1fr;gap:7px}.degree-audit-program h2{font-size:17px}}
