@@ -35,3 +35,9 @@ Next: review home-college overlap policies; inspect current topic sections; seek
 ### Current topic identity — 2026-10-11
 
 The public spreadsheet's visible Special Topics - Current tab identifies SI311 section151, Generative AI & UX, in Winter. No year is printed. Undergraduate prerequisites, description and credits are blank; SI511.151 separately lists1.5 credits, which is not imported as undergraduate evidence. The handbook remains the basis for SI311's1.5 amount. SI411 History of Information is not identified in the inspected current-topic table; absence from a current offering table does not imply ineligibility or discontinuation. Source-specific parser guards topic identity and flags newly filled metadata for review. Audit narrowed accordingly, remaining partial.
+
+### LSA home-college policy — 2026-10-11
+
+[LSA Current Policies](https://lsa.umich.edu/lsa/academics/lsa-requirements/minors.html), effective Winter2020, explicitly cover its students taking minors in other academic units. Six scoped notes now capture planning/eligibility, overlap, residence/test credit, grading, degree requirements and graduation timing. These are conditional LSA rules, not restrictions attributed to all eleven approving colleges. The UMSI handbook retains its stricter all-residential and letter-grade requirements. Other home-college and individual-major policies remain gaps.
+
+The ordinary public reader displayed this section; default bounded HTTP returned403 and is not claimed successful. `parse_lsa_reviewed` requires the normalized digest of the reviewed section in a public-reader text export; HTML shells or changed policies fail closed. Raw text stays outside git. No automatic freshness/completeness is emitted.

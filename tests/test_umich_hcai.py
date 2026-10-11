@@ -57,7 +57,7 @@ def test_seed_has_explicit_remaining_gaps_and_sources():
     d=json.loads((ROOT/'data/programs'/f'{adapter.PROGRAM_ID}.json').read_text());validate_program(d)
     assert d['curriculum_status']=='partial' and d['curriculum_audit']['unresolved_requirements']
     assert d['first_offered']['value']=='Fall 2025'
-    assert len(d['courses'])==25 and len(d['requirements'])==19
+    assert len(d['courses'])==25 and len(d['requirements'])==25
     assert sum(bool(c['description']) for c in d['courses'])==10
     assert sum(bool(c['prerequisites']) for c in d['courses'])==4
     assert all(c['syllabus'] is None for c in d['courses'])
@@ -72,3 +72,17 @@ def test_topics_do_not_transfer_graduate_metadata_to_undergraduate():
     assert 'courses' not in d and 'graduate' in d['requirements'][0]['summary']
     with pytest.raises(ValueError):adapter.parse_topics(html.replace('>311<','>511<'))
     with pytest.raises(ValueError):adapter.parse_topics(html.replace('>Winter<','>Fall<'))
+
+
+def test_lsa_home_rules_are_scoped_and_fail_closed(monkeypatch):
+    text='Synthetic reviewed LSA minor policies'
+    monkeypatch.setattr(adapter,'LSA_REVIEWED_HASH',hashlib.sha256(adapter.clean(text).encode()).hexdigest())
+    d=adapter.parse_lsa_reviewed(text)
+    assert len(d['requirements'])==6
+    assert all(r['title'].startswith('LSA students:') for r in d['requirements'])
+    assert all(r['parent_id']=='umich-hcai-root' for r in d['requirements'])
+    overlap=next(r for r in d['requirements'] if r['id'].endswith('-overlap'))
+    assert 'each major' in overlap['summary']
+    assert not {'last_verified','curriculum_audit','curriculum_status'} & d.keys()
+    with pytest.raises(ValueError):adapter.parse_lsa_reviewed(text+' changed')
+    with pytest.raises(ValueError):adapter.parse_lsa_reviewed('<h1>Access denied</h1>')

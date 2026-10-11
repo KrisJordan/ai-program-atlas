@@ -6,8 +6,8 @@ Updated 2026-10-11. A published research project; **the full target cohort and c
 
 - Repository: https://github.com/KrisJordan/ai-program-atlas
 - Site: https://krisjordan.github.io/ai-program-atlas/
-- Verified release: `f18086ca2008fed7632690bb093e098c8d0f1227`, [successful CI and Pages deployment](https://github.com/KrisJordan/ai-program-atlas/actions/runs/38097182363).
-- Fresh locked uv environment and clean committed source: **787 tests passed**, including all **17 required Chromium tests**. The 44 skipped cases require optional ignored source caches; no browser tests were skipped.
+- Verified release: `551a81e979c9837e9f084c67d0ab47b081f3eddf`, [successful CI and Pages deployment](https://github.com/KrisJordan/ai-program-atlas/actions/runs/38097964481).
+- Fresh locked uv environment and clean committed source: **904 tests passed**, including all **17 required Chromium tests**. The 67 skipped cases require optional ignored source caches or historical snapshots; no browser tests were skipped.
 - Fresh reconstruction and maintained publication copy passed integrity checks and agreed on current facts; additional historical coverage sources were preserved. Repeat ingest changed zero programs. Repeated static builds were byte-identical across 132 files.
 - Live public JSON matched these counts. Live checks passed keyboard family expansion, concrete comparison reload, discipline back/forward, direct program pages, learning/career statement distinctions and 390px mobile layout, with no JavaScript errors or horizontal overflow.
 - Dedicated local repository: `ai-program-atlas/` in this Mac Studio task. No existing personal website or unrelated repository was changed. Coordinated Astra high research and implementation use explicit ownership and incremental commits.
@@ -22,11 +22,11 @@ Updated 2026-10-11. A published research project; **the full target cohort and c
 | Loaded institutions pending / absence conclusions | 0 / 0 |
 | Concrete programs | 125 |
 | Degrees / minors / concentrations / additional majors | 60 / 43 / 19 / 3 |
-| Complete / partial / pending requirement inventories | 31 / 89 / 5 |
-| Program-course records / resolved requirement nodes | 7,838 / 6,922 |
+| Complete / partial / pending requirement inventories | 33 / 87 / 5 |
+| Program-course records / resolved requirement nodes | 11,963 / 8,488 |
 | Program families / concrete family variants | 2 / 31 |
-| Descriptions / prerequisite statements | 825 / 831 |
-| Credit amounts with verified units | 1,925 |
+| Descriptions / prerequisite statements | 981 / 1,251 |
+| Credit amounts with verified units | 4,154 |
 | Public course sites / example syllabi | 22 / 18 |
 
 Course counts include elective pools and repeated observations across sibling programs. They are not unique institution-wide courses, required-course totals, completion percentages or quality scores. Complete refers to an explicitly reviewed scope: a complete minor/concentration/additional major does not certify the host degree. Metadata availability is separate. Zero pending in the loaded roster is not full target-cohort coverage; missing institutions remain outside that denominator.
@@ -49,14 +49,14 @@ National Universities has 108 cited secondary-table members, including nine tied
 - [x] Carolina-blue/navy responsive sans-serif interface, keyboard navigation, filters, coverage ledger, detail pages and ranking methodology. No UNC marks or sponsorship claims.
 - [x] Explicit families, expandable variants, discipline filtering, concrete comparison URLs, common/local requirements, provenance and missingness. Stable IDs and base-path reload/back/forward work on GitHub Pages.
 - [x] Course-category and inferred-theme comparisons preserve credit units and separate source-stated learning outcomes, program aims and career pathways from editorial taxonomy. No opaque quality score.
-- [x] Compact directory projection reduced root HTML about 69% raw and 64% gzipped in a controlled same-data comparison. Live root HTML is 2,987,218 bytes; full static detail pages and data.json remain intact. No runtime fetch/server added.
+- [x] Compact directory projection reduced root HTML about 69% raw and 64% gzipped in a controlled same-data comparison. Live root HTML is 3,922,608 bytes; full static detail pages and data.json remain intact. No runtime fetch/server added.
 - [x] CI tests fresh reconstruction and publishes an updated copy of the maintained DB. Reviewed discovery classification corrections refresh correctly; manual program corrections and evidence history survive.
 
 ## Program families and current evidence
 
 Northeastern's analyst-defined comparison family contains 23 independently verified combined degrees: 22 BS and one BSEnvE. Nine shared AI/core definitions plus 43 universal policy definitions are bound with program-specific provenance. All 14 Business concentration inventories are mapped with first/second concentration eligibility and conditional selection rules. Business, Biology and Design carry independently cited participating-college context. Participating colleges are not silently treated as permitted or mandatory home colleges. Exact allowed home-college options and applicable college rules remain a scope gap; all 23 degrees remain partial.
 
-Buffalo's university-described AI+X family contains eight independently verified BS degrees sharing five framework notes. PPE's award is verified directly from its department. No identical course inventory is implied, and the two minors are outside this degree framework. Detailed catalog courses remain unverified.
+Buffalo's university-described AI+X family contains eight independently verified BS degrees sharing five framework notes. PPE's award is verified directly from its department. No identical course inventory is implied, and the two minors are outside this degree framework. The eight degrees now include independently accessible university policies and dated public Pathways candidates; detailed major catalog courses remain unverified. Dated general-education candidates are not represented as complete approved pools.
 
 See [family contract](docs/PROGRAM_FAMILIES.md), [Northeastern evidence](research/program-families.md), [college applicability review](research/northeastern-policy-review.md) and [Buffalo evidence](research/families/buffalo-ai-plus-x.md).
 
@@ -86,7 +86,7 @@ Each adapter's NOTES.md states evidence, interpretations, exact conflicts, metad
 1. **Cohort:** obtain a permitted authoritative 2027 roster for both categories and all cutoff ties; complete missing liberal-arts enumeration. Preserve secondary/inferred/membership-only labels until resolved.
 2. **CSRankings:** numerical import remains held pending permission or qualified reuse review. Methodology records ai,vision,mlmining,nlp,inforet, proposed 2016–2025 window, U.S. filter, pinned source snapshot and computation method. Values remain null, not zero quality. Publication research does not measure undergraduate teaching quality. See [research note](research/csrankings.md).
 3. **Access:** eight loaded institutions remain inaccessible. The five currently published pending curricula have documented barriers; additional program-specific links remain blocked or unread. See [access review](research/access-review.md), [pending curriculum barriers](research/pending-curriculum-barriers.md) and adapter notes. No bypass of robots/auth/403/password gates.
-4. **Curricula:** Five published inventories remain pending and89 partial. Verify finite pools, nested alternatives, policy applicability and source conflicts before promoting completeness.
+4. **Curricula:** Five published inventories remain pending and87 partial. Verify finite pools, nested alternatives, policy applicability and source conflicts before promoting completeness.
 5. **Metadata:** many descriptions, prerequisites, public course sites and example syllabi remain unknown. Verify exact course identity and term; preserve historical labels and link rather than redistribute.
 6. **Institution depth:** directory searches alone do not establish absence. Continue bounded catalog/minor/concentration searches and documented leads. No absence conclusion has been asserted.
 
@@ -94,8 +94,8 @@ Use `uv run atlas status`, `uv run atlas candidates`, adapter notes and task-spe
 
 ## Research integration verified — 2026-10-11
 
-Committed evidence through `351170d0` is ingested in the maintained database. Release f18086c passed clean locked-environment tests, fresh/maintained agreement, repeat ingest/build checks, successful GitHub CI/Pages deployment and live browser/JSON verification: 31 complete / 89 partial / 5 pending; 7838 course observations and 6922 requirement nodes. Michigan HCAI now has a public-handbook inventory; RIT’s two minors have complete scoped policy audits. Source-version conflicts at MIT/Penn/Purdue and home-college applicability at Northeastern remain explicit. Further committed research includes Case degree-scope audits, Miami policies, Drexel approved writing courses and Duke policies; those newer commits await the next frozen integration. Accessible research continues after this publication checkpoint.
+Committed evidence through `bc71b611` is integrated in release `551a81e9`:33 complete/87 partial/5 pending inventories;11963 observed course records;8488 resolved requirement nodes. Case BA/BS now have complete degree-scope audits; Buffalo adds independently accessible general-education policies and dated Pathways candidates while major catalogs remain unavailable. Michigan HCAI has a public-handbook inventory, and Northeastern course catalogs plus several university policy sources expand independently measured metadata.
 
-## Next research checkpoint — 2026-10-11
+A clean locked uv environment passed904 tests, including all17 required Chromium cases. Fresh reconstruction and the maintained publication copy agreed on current facts; repeat ingest changed zero programs, database integrity passed, and132 build files reproduced byte-for-byte. GitHub CI and Pages deployment succeeded. Live JSON matched the frozen counts; browser checks passed direct details, comparison reload, filter back/forward, keyboard expansion and390px mobile layout without JavaScript errors or overflow.
 
-Evidence through `bc71b611` is integrated locally: 33 complete/87 partial/5 pending inventories; 11963 observed course records; 8488 resolved requirement nodes. Case BA/BS now have complete degree-scope audits; Buffalo adds independently accessible general-education policies and dated Pathways candidates while its major catalogs stay unavailable. Northeastern course catalogs and multiple university policies substantially expand metadata. This checkpoint awaits a frozen clean test/build and verified deployment; the published counts above continue to describe f18086c.
+Subsequent commits continue Northeastern descriptions/resources, UCSB's current college guide, William & Mary policies and additional minor-policy reviews. They await the next frozen integration. The initial gap ledger is being reconciled against these follow-ups to identify remaining accessible work independently of the unresolved cohort and CSRankings questions. Publications remain checkpoints, not a stopping condition.

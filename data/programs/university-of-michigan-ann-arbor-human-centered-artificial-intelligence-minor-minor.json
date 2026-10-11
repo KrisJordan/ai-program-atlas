@@ -155,6 +155,16 @@
       "catalog_year": null,
       "locator": "Public Special Topics - Current tab; Winter SI311 section151 Generative AI & UX; separate SI511 row not used for undergraduate metadata",
       "confidence": "high"
+    },
+    {
+      "id": "umich-hcai-lsa-minor-policies",
+      "url": "https://lsa.umich.edu/lsa/academics/lsa-requirements/minors.html",
+      "title": "LSA minor policies",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Current Policies, effective Winter2020; ordinary public-reader text reviewed. Default bounded HTTP403 remained unresolved.",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -864,6 +874,90 @@
       "source_text": null,
       "summary": "The current public topics table identifies SI311 section151 as Generative AI & UX for Winter, without an explicit year. Its undergraduate description, prerequisites and credits are blank; the handbook’s1.5-credit amount is retained. The separate graduate SI511 row does not supply undergraduate prerequisites or credits.",
       "course_ids": []
+    },
+    {
+      "id": "umich-hcai-lsa-scope",
+      "parent_id": "umich-hcai-root",
+      "title": "LSA students: applicability and planning",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "umich-hcai-lsa-minor-policies",
+      "source_text": null,
+      "summary": "For LSA AB/BS students taking an outside-unit minor, an advisor-approved plan is required. BGS students cannot earn a minor; individually designed minors are unavailable.",
+      "course_ids": []
+    },
+    {
+      "id": "umich-hcai-lsa-overlap",
+      "parent_id": "umich-hcai-root",
+      "title": "LSA students: major and minor sharing",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "umich-hcai-lsa-minor-policies",
+      "source_text": null,
+      "summary": "At most one minor course may count toward each major; different majors may share different courses. No sharing between minors or with supplemental studies. Major prerequisites may also satisfy minor prerequisites.",
+      "course_ids": []
+    },
+    {
+      "id": "umich-hcai-lsa-credit",
+      "parent_id": "umich-hcai-root",
+      "title": "LSA students: credits and residence",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "umich-hcai-lsa-minor-policies",
+      "source_text": null,
+      "summary": "LSA sets a15-credit minimum with nine in residence. HCAI independently requires all coursework residentially at Michigan. Test credit may satisfy prerequisites, not minor requirements.",
+      "course_ids": []
+    },
+    {
+      "id": "umich-hcai-lsa-grades",
+      "parent_id": "umich-hcai-root",
+      "title": "LSA students: grading and GPA",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "umich-hcai-lsa-minor-policies",
+      "source_text": null,
+      "summary": "No pass/fail; minor GPA must reach2.0 including necessary departmental prerequisites. HCAI’s letter-grade rule remains stricter than LSA’s general allowance for departmental credit/no-credit courses.",
+      "course_ids": []
+    },
+    {
+      "id": "umich-hcai-lsa-distribution",
+      "parent_id": "umich-hcai-root",
+      "title": "LSA students: degree requirements",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "umich-hcai-lsa-minor-policies",
+      "source_text": null,
+      "summary": "Minor courses may also meet distribution, language, upper-level writing, race/ethnicity and quantitative-reasoning requirements.",
+      "course_ids": []
+    },
+    {
+      "id": "umich-hcai-lsa-graduation",
+      "parent_id": "umich-hcai-root",
+      "title": "LSA students: completion deadline",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "umich-hcai-lsa-minor-policies",
+      "source_text": null,
+      "summary": "No minor declaration or completion after graduation. A subsequently completed additional major may replace the minor on the transcript.",
+      "course_ids": []
     }
   ],
   "notes": [
@@ -892,7 +986,8 @@
       "umich-hcai-course-directory",
       "umich-hcai-registration",
       "umich-hcai-colleges",
-      "umich-hcai-current-topics"
+      "umich-hcai-current-topics",
+      "umich-hcai-lsa-minor-policies"
     ],
     "sections": [
       "Core and all 23 elective options",
@@ -902,10 +997,11 @@
       "Five handbook learning outcomes",
       "Ten current SI course metadata rows",
       "Credit-hour basis and explicit launch evidence",
-      "Current undergraduate SI311 section151 topic identity"
+      "Current undergraduate SI311 section151 topic identity",
+      "LSA home-college minor policies, explicitly limited to LSA students"
     ],
     "unresolved_requirements": [
-      "Home-major and home-college overlap restrictions for the eleven approved colleges have not all been reviewed.",
+      "LSA and BSI home-college rules are mapped, but restrictions for other approving colleges and individual home majors remain unreviewed.",
       "The linked course-specific registration guide is unavailable; reconcile current enrollment and topic-specific restrictions before certifying the scoped inventory.",
       "Resolve handbook/current-course-table title differences and verify SI411 History of Information topic and prerequisites. SI311 section151 identity is now corroborated, but undergraduate prerequisite/enrollment details remain blank."
     ],

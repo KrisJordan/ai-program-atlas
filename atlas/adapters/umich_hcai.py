@@ -94,3 +94,14 @@ def parse_topics(html):
     if any(matches[0][i] for i in (7,8,9)):
         raise ValueError('New undergraduate topic metadata requires review')
     return dict(id=PROGRAM_ID,requirements=[rule('umich-hcai-topic-311','Named SI311 elective topic','umich-hcai-current-topics',kind='note',summary='The current public topics table identifies SI311 section151 as Generative AI & UX for Winter, without an explicit year. Its undergraduate description, prerequisites and credits are blank; the handbook’s1.5-credit amount is retained. The separate graduate SI511 row does not supply undergraduate prerequisites or credits.')])
+
+LSA='https://lsa.umich.edu/lsa/academics/lsa-requirements/minors.html'
+LSA_SID='umich-hcai-lsa-minor-policies'
+LSA_REVIEWED_HASH='7982f400e1630ed2b248a775c002d0efcfd6b1ff8c8d218f4fc36f61aa35cfe2'
+LSA_POLICIES=[('scope', 'LSA students: applicability and planning', 'For LSA AB/BS students taking an outside-unit minor, an advisor-approved plan is required. BGS students cannot earn a minor; individually designed minors are unavailable.'), ('overlap', 'LSA students: major and minor sharing', 'At most one minor course may count toward each major; different majors may share different courses. No sharing between minors or with supplemental studies. Major prerequisites may also satisfy minor prerequisites.'), ('credit', 'LSA students: credits and residence', 'LSA sets a15-credit minimum with nine in residence. HCAI independently requires all coursework residentially at Michigan. Test credit may satisfy prerequisites, not minor requirements.'), ('grades', 'LSA students: grading and GPA', 'No pass/fail; minor GPA must reach2.0 including necessary departmental prerequisites. HCAI’s letter-grade rule remains stricter than LSA’s general allowance for departmental credit/no-credit courses.'), ('distribution', 'LSA students: degree requirements', 'Minor courses may also meet distribution, language, upper-level writing, race/ethnicity and quantitative-reasoning requirements.'), ('graduation', 'LSA students: completion deadline', 'No minor declaration or completion after graduation. A subsequently completed additional major may replace the minor on the transcript.')]
+
+def parse_lsa_reviewed(text):
+    """Reviewed public-reader text only; HTTP403/shells never certify policy."""
+    if hashlib.sha256(clean(text).encode()).hexdigest()!=LSA_REVIEWED_HASH:
+        raise ValueError('LSA policy changed or reader export unavailable; manual review required')
+    return dict(id=PROGRAM_ID, requirements=[rule('umich-hcai-lsa-'+key,title,LSA_SID,parent='umich-hcai-root',kind='note',summary=summary) for key,title,summary in LSA_POLICIES])

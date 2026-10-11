@@ -13,3 +13,7 @@ SOURCE_PARSERS = {HANDBOOK: parse_handbook, TABLE: parse_table}
 from atlas.adapters.umich_hcai import TOPICS, parse_topics
 SOURCES = (*SOURCES, TOPICS)
 SOURCE_PARSERS[TOPICS] = parse_topics
+
+from atlas.adapters.umich_hcai import LSA, parse_lsa_reviewed
+SOURCES = (*SOURCES, LSA)
+SOURCE_PARSERS[LSA] = parse_lsa_reviewed
