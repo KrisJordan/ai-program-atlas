@@ -283,3 +283,20 @@ def test_archaeology_and_steam_descriptions_stay_with_exact_source_versions():
                 'mit-ai-hass-cmsw-education-cms-s61-a0a026fc',
                 'mit-ai-hass-cmsw-pool-cms-cms-s61']:
         assert by[cid]['description'] != target['description']
+
+
+def test_concourse_corequisite_preference_and_unknown_fields_stay_distinct():
+    p=json.loads(Path('data/programs/mit-ai-decision-making-bs.json').read_text())
+    by={c['id']:c for c in p['courses']}
+    limited=by['mit-ai-hass-ethics-cc-110']
+    preference=by['mit-ai-hass-ethics-cc-117j-17-05j']
+    unprinted=by['mit-ai-hass-ethics-cc-111j-17-04j']
+    assert limited['prerequisites']=='None. Coreq: CC.010 or CC.A10'
+    assert limited['credits']==12
+    assert any('Limited to students in Concourse' in n for n in limited['notes'])
+    assert preference['prerequisites']=='None' and preference['credits']==12
+    assert any('not an exclusive enrollment restriction' in n for n in preference['notes'])
+    assert unprinted['prerequisites'] is None and unprinted['credits'] is None
+    assert any('Spring2013' in n and 'not imported' in n for n in unprinted['notes'])
+    for c in [limited,preference,unprinted]:
+        assert c['public_site'] is None and c['syllabus'] is None
