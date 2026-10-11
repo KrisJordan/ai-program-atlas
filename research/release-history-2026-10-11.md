@@ -74,3 +74,38 @@ Release `7ae8cf4dfbb4f7b45c6baf8621347c2495acb375`, [CI/Pages run](https://githu
 ## Verified 142-program checkpoint (superseded)
 
 Release `fd44e55b7437452986ba145d5473978c4e9f521f`, [CI/Pages run](https://github.com/KrisJordan/ai-program-atlas/actions/runs/38102605687), passed 1,405 tests with all 23 required browser cases, 118 optional-cache/historical skips, fresh/maintained equality, repeat ingest zero and 149-file deterministic builds. It contained 142 programs across 194 institutions: 72 confirmed, 113 inspected, eight inaccessible, one bounded absence finding; curricula were 37 complete, 98 partial and seven pending. Program-course observations were 22,609 and requirement nodes 16,717. Live checks verified family expansion/collapse history, comparison focus, direct links and mobile layout. Root HTML was 2,831,909 bytes. These are historical counts; PLAN.md records the later 164-program release and requested profile/navigation changes.
+
+
+## Archived 164-program checkpoint: 91974dc
+
+## Verified publication
+
+- Repository: https://github.com/KrisJordan/ai-program-atlas
+- Site: https://krisjordan.github.io/ai-program-atlas/
+- Verified release: `91974dc63c95a863960f8685e20eb6f80e74315b`, [successful CI and Pages deployment](https://github.com/KrisJordan/ai-program-atlas/actions/runs/38104814294).
+- Fresh locked uv environment and clean committed source: **1,617 tests passed**, including all **32 required Chromium tests**. The 132 skipped cases require optional ignored source caches or historical snapshots; no browser tests were skipped.
+- Fresh reconstruction and maintained publication copy passed integrity checks and agreed on current facts; additional historical coverage sources were preserved. Repeat ingest changed zero programs. Repeated static builds were byte-identical across 171 files.
+- Live public JSON matched these counts, and every projected curriculum profile and award bucket matched the source data. Live checks passed cohort tabs, BS/BSE/BA/Other filters, keyboard navigation, hidden comparison selection, profile toggling, reload/back/forward, comparison-clear focus, direct new and existing pages and 390px mobile layout. Screenshots were visually checked; no JavaScript errors or document overflow occurred. Family, empty-state, no-JS and multi-award cases also passed the required browser suite.
+- Dedicated local repository: `ai-program-atlas/` in this Mac Studio task. No existing personal website or unrelated repository was changed. Coordinated Astra high research and implementation use explicit ownership and incremental commits.
+
+## Published coverage
+
+| Measure | Verified count |
+| --- | ---: |
+| Institutions in loaded roster | 194 |
+| National Universities / National Liberal Arts Colleges | 108 / 86 |
+| Confirmed qualifying title / partially inspected / inaccessible | 72 / 114 / 7 |
+| Loaded institutions pending / absence conclusions | 0 / 1 |
+| Concrete programs | 164 |
+| Degrees / minors / concentrations / additional majors | 63 / 49 / 47 / 5 |
+| Complete / partial / pending requirement inventories | 36 / 119 / 9 |
+| Program-course records / resolved requirement nodes | 23,722 / 18,476 |
+| Program families / concrete family variants | 2 / 31 |
+| Descriptions / prerequisite statements | 1,941 / 2,768 |
+| Credit amounts with verified units | 8,949 |
+| Public course sites / example syllabi | 78 / 72 |
+
+Caltech has one bounded no-qualifying-program finding after the current program directory and all 32 option/minor catalog pages were reviewed. It is a dated search result, not a claim about future offerings.
+
+Course counts include elective pools and repeated observations across sibling programs. They are not unique institution-wide courses, required-course totals, completion percentages or quality scores. Complete refers to an explicitly reviewed scope: a complete minor/concentration/additional major does not certify the host degree. Metadata availability is separate. Zero pending in the loaded roster is not full target-cohort coverage; missing institutions remain outside that denominator.
+
