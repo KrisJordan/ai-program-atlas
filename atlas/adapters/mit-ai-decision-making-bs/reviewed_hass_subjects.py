@@ -428,7 +428,7 @@ def observe_ocw_syllabus(html):
     sections = {}
     for heading in main.find_all(['h2', 'h3', 'h4', 'h5']):
         title = clean(heading).rstrip(':')
-        if title not in ['Description', 'Course Description', 'Course Overview', 'Course Summary', 'Overview', 'Class Objectives', 'Objectives and Organization', 'Purpose', 'Introduction', 'Goals for the Class', 'Course Goals and Organization', 'Class Overview', 'Course Aims', 'Prerequisites', 'Prerequisite']:
+        if title not in ['Description', 'Course Description', 'Course Overview', 'Course Summary', 'Overview', 'Class Objectives', 'Objectives and Organization', 'Purpose', 'Introduction', 'Goals for the Class', 'Course Goals and Organization', 'Class Overview', 'Course Aims', 'Course Description and Learning Objectives', 'Course Description (HASS-D Language Option)', 'Course Objectives and Procedures', 'コースの目標 (もくひょう) Course Objectives', 'Prerequisites', 'Prerequisite']:
             continue
         content = []
         for sibling in heading.next_siblings:
@@ -437,7 +437,7 @@ def observe_ocw_syllabus(html):
             if hasattr(sibling, 'get_text'):
                 content.append(clean(sibling))
         sections[title] = clean(' '.join(content)) or None
-    description = next((sections[k] for k in ['Description', 'Course Description', 'Course Overview', 'Course Summary', 'Overview', 'Class Objectives', 'Objectives and Organization', 'Purpose', 'Introduction', 'Goals for the Class', 'Course Goals and Organization', 'Class Overview', 'Course Aims'] if sections.get(k)), None)
+    description = next((sections[k] for k in ['Description', 'Course Description', 'Course Overview', 'Course Summary', 'Overview', 'Class Objectives', 'Objectives and Organization', 'Purpose', 'Introduction', 'Goals for the Class', 'Course Goals and Organization', 'Class Overview', 'Course Aims', 'Course Description and Learning Objectives', 'Course Description (HASS-D Language Option)', 'Course Objectives and Procedures', 'コースの目標 (もくひょう) Course Objectives'] if sections.get(k)), None)
     if not description:
         raise ValueError('OCW syllabus actual description section missing')
     prerequisites = sections.get('Prerequisites', sections.get('Prerequisite'))
@@ -491,3 +491,31 @@ def observe_ocw_course(html):
         raise ValueError('OCW complete description is empty')
     return [dict(code=parts[0], name=title, term=parts[1], level=parts[2],
                  description=clean(body), prerequisites=None, units=None)]
+
+
+def observe_ocw_language_syllabus(html):
+    """Pin dated language placement/registration sections independently of prerequisites."""
+    observation = observe_ocw_syllabus(html)[0]
+    main = BeautifulSoup(html, 'html.parser').select_one('#course-main-content')
+    policy = {}
+    for heading in main.find_all(['h2', 'h3', 'h4', 'h5']):
+        title = clean(heading).rstrip(':')
+        if title not in ['Selection Criteria of Registration', 'Sign up for', 'Sign Up For']:
+            continue
+        parts = []
+        for sibling in heading.next_siblings:
+            if getattr(sibling, 'name', None) in ['h2', 'h3', 'h4', 'h5']:
+                break
+            if hasattr(sibling, 'get_text'):
+                parts.append(clean(sibling))
+        policy[title] = clean(' '.join(parts))
+    observation['registration_policy'] = policy
+    # These statements are explicitly printed in the description, not inferred
+    # from the course sequence number or from a student's eligibility.
+    preparation = {
+        '21G.101': 'The course presupposes no prior background in the language.',
+        '21G.111': 'No prior knowledge of the Chinese language is required.',
+    }.get(observation['code'])
+    if observation['prerequisites'] is None and preparation and preparation in observation['description']:
+        observation['prerequisites'] = preparation
+    return [observation]

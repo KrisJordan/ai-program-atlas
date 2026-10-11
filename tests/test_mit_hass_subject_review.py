@@ -215,10 +215,10 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']['description_reviewed_records']==328
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==343
     assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
-        o=entry(code)['observations'][-1]
+        o=next(o for o in entry(code)['observations'] if o.get('evidence_basis')=='official_title_only')
         assert o['evidence_basis']=='official_title_only'
         assert o['status']=='unclassified' and o['category']=='other'
         assert o['description_summary'] is o['description_digest'] is o['credits'] is None
@@ -1027,3 +1027,53 @@ def test_sts_actual_sources_replay_and_description_heading_guard():
             assert review.matched_review(c,{**o,'name':'A different topic under the same number'},source['url'],MANIFEST) is None
             seen+=1
     assert seen==14
+
+
+def test_language_descriptions_keep_placement_and_formal_prerequisites_distinct():
+    report=MANIFEST['ocw_east_asian_language_review']
+    assert report['directory_results_observed']==119
+    assert report['public_course_pages_read']==report['public_syllabi_read']==15
+    assert len(report['upgraded_record_ids'])==15
+    first=entry('21G.101')['observations'][-1]
+    assert first['prerequisites']=='The course presupposes no prior background in the language.'
+    assert any('placement test' in n for n in first['restrictions'])
+    assert any('Registration as21G.171 requires concurrent21G.076' in n for n in first['restrictions'])
+    assert first['source_metadata']['registration_policy_digest']
+    assert entry('21G.103')['observations'][-1]['prerequisites']=='21G.102 Chinese II (Regular)'
+    assert entry('21G.104')['observations'][-1]['prerequisites']=='21G.103 Chinese III (Regular)'
+    for code in ['21G.105','21G.106','21G.107','21G.108','21G.109','21G.110']:
+        assert entry(code)['observations'][-1]['prerequisites'] is None
+    assert any('prior conversational Chinese' in n for n in entry('21G.107')['observations'][-1]['restrictions'])
+    calligraphy=entry('21G.111')['observations'][-1]
+    assert calligraphy['status']=='mixed' and calligraphy['category']=='other'
+    assert calligraphy['candidate_categories']==['applications','human_context']
+    assert calligraphy['prerequisites']=='No prior knowledge of the Chinese language is required.'
+    assert entry('21G.501')['observations'][-1]['prerequisites']=='None'
+    assert entry('21G.504')['observations'][-1]['prerequisites']=='21G.503 Japanese III'
+    for code in ['21G.505','21G.506']:
+        assert entry(code)['observations'][-1]['evidence_basis']=='official_title_only'
+
+
+def test_language_registration_observer_replays_and_withdraws_changed_eligibility():
+    path=Path('/tmp/mit-hass-subjects/ocw-east-asian-languages-index.json')
+    if not path.exists():pytest.skip('Optional ignored public Chinese/Japanese OCW captures')
+    seen=0
+    for source in json.loads(path.read_text()):
+        if not source['key'].endswith('-syllabus'):continue
+        cache=path.parent/('ocw-'+source['key']+'.html')
+        if not cache.exists():pytest.skip('Optional ignored public syllabus')
+        html=cache.read_text();o=review.observe_ocw_language_syllabus(html)[0]
+        if o['code']=='21G.101':
+            assert 'No auditors' in o['registration_policy']['Selection Criteria of Registration']
+            changed=review.observe_ocw_language_syllabus(html.replace('No auditors','Auditors permitted'))[0]
+            assert changed['description']==o['description']
+            assert review.observation_digest(changed)!=review.observation_digest(o)
+        if o['code']=='21G.504':assert o['description'].startswith('The main objective')
+        for cid,row in MANIFEST['courses'].items():
+            e=next((e for e in row['observations'] if e['source_url']==source['url']),None)
+            if e is None:continue
+            c=dict(id=cid,code=row['listed_code'],name=row['listed_name'],source_id=row['listed_source_id'])
+            assert review.matched_review(c,o,source['url'],MANIFEST)==e
+            if o['code']=='21G.101':assert review.matched_review(c,changed,source['url'],MANIFEST) is None
+            seen+=1
+    assert seen==15
