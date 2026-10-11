@@ -1,0 +1,3529 @@
+{
+  "program_id": "university-of-california-san-diego-artificial-intelligence-bs-degree",
+  "reviewed_at": "2026-10-11",
+  "scope": "89 previously code-only humanities/interdisciplinary identifiers. Exact current full course blocks, shared-sequence headers and relevant chapter context; no role, identity-group or degree completion changes.",
+  "sources": {
+    "HILD": {
+      "url": "https://catalog.ucsd.edu/courses/HIST.html",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-hild-courses",
+      "heading": "History",
+      "catalog_year": "2026\u201327",
+      "fetched_at": "2026-10-11T07:52:50+00:00",
+      "source_hash": "f212cfc6f9ce3e48e34cb751a17b95d27b276e69c30a7f429901c44958de63a3",
+      "cache_path": "/tmp/ucsd-hieu.html"
+    },
+    "EDS": {
+      "url": "https://catalog.ucsd.edu/courses/EDS.html",
+      "fetched_at": "2026-10-11T08:41:28+00:00",
+      "source_hash": "249d6be2fade291215c3b238791fecdc7da731d74715baa0b8f895e0404d1ee0",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-eds-courses",
+      "heading": "Education Studies Program",
+      "catalog_year": "2026\u201327",
+      "cache_path": "/tmp/ucsd-eds.html"
+    },
+    "MGT": {
+      "url": "https://catalog.ucsd.edu/courses/MGT.html",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-mgt-courses",
+      "heading": "Rady School of Management",
+      "subjects": [
+        "MGT"
+      ],
+      "catalog_year": "2026\u201327",
+      "fetched_at": "2026-10-11T09:25:58+00:00",
+      "source_hash": "1fee129deb2ac3252297b0fcd753c7a9611bd74bb9a61f31a3adc96a923fa6bd",
+      "cache_path": "/tmp/ucsd-management-interdisciplinary-MGT.html",
+      "chapter_context_sha256": "67739157e9252e18132dd385d31a923ef23f0175cebe2f97a35a80388a342163"
+    },
+    "INTL": {
+      "url": "https://catalog.ucsd.edu/courses/INTL.html",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-intl-courses",
+      "heading": "International Studies",
+      "subjects": [
+        "INTL"
+      ],
+      "catalog_year": "2026\u201327",
+      "fetched_at": "2026-10-11T09:25:59+00:00",
+      "source_hash": "5190702f6becceb449d134ffa46507eee29ed30a46fdfb0c5622448dab362be8",
+      "cache_path": "/tmp/ucsd-management-interdisciplinary-INTL.html",
+      "chapter_context_sha256": "dfe2865c022a79a22036bb4be6a0c2bff4f34a8883113122f7fc11d8e636b4e9"
+    },
+    "ANTH": {
+      "url": "https://catalog.ucsd.edu/courses/ANTH.html",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+      "heading": "Anthropology",
+      "catalog_year": "2026\u201327",
+      "fetched_at": "2026-10-11T07:06:54+00:00",
+      "source_hash": "021cef05715af29ab5e4fd8a5502bd8ca4af86aa944f44209412aa89d15b65b1",
+      "cache_path": "/tmp/ucsd-anth-ansc.html"
+    },
+    "ANSC": {
+      "url": "https://catalog.ucsd.edu/courses/ANTH.html",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+      "heading": "Anthropology",
+      "catalog_year": "2026\u201327",
+      "fetched_at": "2026-10-11T07:06:54+00:00",
+      "source_hash": "021cef05715af29ab5e4fd8a5502bd8ca4af86aa944f44209412aa89d15b65b1",
+      "cache_path": "/tmp/ucsd-anth-ansc.html"
+    },
+    "USP": {
+      "url": "https://catalog.ucsd.edu/courses/USP.html",
+      "fetched_at": "2026-10-11T08:12:22+00:00",
+      "source_hash": "963344273ecb40a3c441f54e306b2f72de2f17080d27f06864857f69a30a2300",
+      "status": 200,
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-usp-courses",
+      "heading": "Urban Studies and Planning",
+      "catalog_year": "2026\u201327",
+      "cache_path": "/tmp/ucsd-usp.html"
+    },
+    "CAT": {
+      "url": "https://catalog.ucsd.edu/courses/CAT.html",
+      "status": 200,
+      "fetched_at": "2026-10-11T09:32:00+00:00",
+      "source_hash": "fdbab8c7fd03cebd5c54832afaf4d2861279c05c985c948fec00e60a8c1a5853",
+      "heading": "Culture, Art, and Technology",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-cat-courses",
+      "subjects": [
+        "CAT"
+      ],
+      "catalog_year": "2026\u201327",
+      "cache_path": "/tmp/ucsd-college-writing-root/CAT.html",
+      "chapter_context_sha256": "541625c04eb6333d7e572a3bcdfca1da111aeac9997e7924820a26b4ab074bf9"
+    },
+    "DOC": {
+      "url": "https://catalog.ucsd.edu/courses/DOC.html",
+      "status": 200,
+      "fetched_at": "2026-10-11T09:32:02+00:00",
+      "source_hash": "95eb3b683c328267b362b8e93b4f575f989cf69aadf118324c94be7548bcc9d7",
+      "heading": "Dimensions of Culture",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-doc-courses",
+      "subjects": [
+        "DOC"
+      ],
+      "catalog_year": "2026\u201327",
+      "cache_path": "/tmp/ucsd-college-writing-root/DOC.html",
+      "chapter_context_sha256": "af2ef3c649ad3529b71c4018825e89d2e8d60f7bc806d40055b21dae4fa28306"
+    },
+    "AWP": {
+      "url": "https://catalog.ucsd.edu/courses/AWP.html",
+      "status": 200,
+      "fetched_at": "2026-10-11T09:32:03+00:00",
+      "source_hash": "da11a8a3d726d85ae04343700274ccff3cdafd24144f416a489079a27733ae96",
+      "heading": "Analytical Writing Program",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-awp-courses",
+      "subjects": [
+        "AWP"
+      ],
+      "catalog_year": "2026\u201327",
+      "cache_path": "/tmp/ucsd-college-writing-root/AWP.html",
+      "chapter_context_sha256": "58b56743511c18d8aae5d0101272ce8329aad4d061198068491160474f17e531"
+    },
+    "MCWP": {
+      "url": "https://catalog.ucsd.edu/courses/MCWP.html",
+      "status": 200,
+      "fetched_at": "2026-10-11T09:32:06+00:00",
+      "source_hash": "17265720458df08db5e29d77bea4143df4163da68060bf03569b8e26d4c7edab",
+      "heading": "Muir College",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-mcwp-courses",
+      "subjects": [
+        "MCWP"
+      ],
+      "catalog_year": "2026\u201327",
+      "cache_path": "/tmp/ucsd-college-writing-root/MCWP.html",
+      "chapter_context_sha256": "c675e7ce9b1c4ca541dc583fee08e853f05666cf26391146575adfb19fdad829"
+    },
+    "ENVR": {
+      "url": "https://catalog.ucsd.edu/courses/ENVR.html",
+      "status": 200,
+      "fetched_at": "2026-10-11T09:25:54+00:00",
+      "source_hash": "d17144de6811dd087eede23f769c29f46058771ec5cb9c6146bef27a61b200e6",
+      "heading": "Environmental Studies",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-envr-courses",
+      "subjects": [
+        "ENVR"
+      ],
+      "catalog_year": "2026\u201327",
+      "cache_path": "/tmp/ucsd-environment-root/ENVR.html",
+      "chapter_context_sha256": "cad249b86c72e373c36975226fa8ae06cb93c6e8b9040cb26f91ac9398a6c6a9"
+    },
+    "ESYS": {
+      "url": "https://catalog.ucsd.edu/courses/ESYS.html",
+      "status": 200,
+      "fetched_at": "2026-10-11T09:25:56+00:00",
+      "source_hash": "51dcd9ff4529cf78838a3ede49cca987a518d004ec35826a45a85fde82b487ff",
+      "heading": "Environmental Systems",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-esys-courses",
+      "subjects": [
+        "ESYS"
+      ],
+      "catalog_year": "2026\u201327",
+      "cache_path": "/tmp/ucsd-environment-root/ESYS.html",
+      "chapter_context_sha256": "bcd562425c030e2c55f1fc71077bfe8fe7ef0b6187e3e91cf1c52838d2a0e909"
+    },
+    "AAS": {
+      "url": "https://catalog.ucsd.edu/courses/AASM.html",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-aas-courses",
+      "heading": "Black Diaspora and African American Studies",
+      "catalog_year": "2026\u201327",
+      "fetched_at": "2026-10-11T09:26:18+00:00",
+      "source_hash": "a13d1d7f0caa142dff18e4edbbaa239753bc79b79131c62c8cddbb5e66d71be1",
+      "cache_path": "/tmp/ucsd-area-aasm.html"
+    },
+    "LATI": {
+      "url": "https://catalog.ucsd.edu/courses/LATI.html",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-lati-courses",
+      "heading": "Latin American Studies",
+      "catalog_year": "2026\u201327",
+      "fetched_at": "2026-10-11T09:26:21+00:00",
+      "source_hash": "833e3903f1193944949a03f7bacd9c0a6b78de7e8accff2ab11d1940c8e9c23f",
+      "cache_path": "/tmp/ucsd-area-lati.html"
+    },
+    "RELI": {
+      "url": "https://catalog.ucsd.edu/courses/RELI.html",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-reli-courses",
+      "heading": "Religion, Study of",
+      "catalog_year": "2026\u201327",
+      "fetched_at": "2026-10-11T09:26:22+00:00",
+      "source_hash": "85db5fcbb300ca6dae9c28389961a6b93cfd12f62e0171784d861d82ce0c451b",
+      "cache_path": "/tmp/ucsd-area-reli.html"
+    },
+    "JWSP": {
+      "url": "https://catalog.ucsd.edu/courses/JWSP.html",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-jwsp-courses",
+      "heading": "Jewish Studies",
+      "catalog_year": "2026\u201327",
+      "fetched_at": "2026-10-11T09:26:20+00:00",
+      "source_hash": "e3bbb1cfaa1ef5cb644b80ebdde1f3739860ca7dc9a0a91109307cda0f6802af",
+      "cache_path": "/tmp/ucsd-area-jwsp.html"
+    },
+    "GSS": {
+      "url": "https://catalog.ucsd.edu/courses/GSS.html",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-gss-courses",
+      "heading": "Global South Studies",
+      "catalog_year": "2026\u201327",
+      "fetched_at": "2026-10-11T09:52:45+00:00",
+      "source_hash": "83a53118bc8ddf6471b3c1122688f23cdf50f4e31a6e01d2e8c78f33f0e597cb",
+      "cache_path": "/tmp/ucsd-humanities89-GSS.html"
+    },
+    "CCE": {
+      "url": "https://catalog.ucsd.edu/courses/CCE.html",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-cce-courses",
+      "heading": "Critical Community Engagement",
+      "catalog_year": "2026\u201327",
+      "fetched_at": "2026-10-11T09:52:47+00:00",
+      "source_hash": "37b798f592218c24c36a94842ed4351351bb33e32e3450fcbf17181be56b7998",
+      "cache_path": "/tmp/ucsd-humanities89-CCE.html"
+    },
+    "SYN": {
+      "url": "https://catalog.ucsd.edu/courses/SYN.html",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-syn-courses",
+      "heading": "Synthesis Program",
+      "catalog_year": "2026\u201327",
+      "fetched_at": "2026-10-11T09:52:48+00:00",
+      "source_hash": "3df9a7260727e3533ab9e80af1ad2f6ee37f302b91f06c8af3cef9182b63433c",
+      "cache_path": "/tmp/ucsd-humanities89-SYN.html"
+    }
+  },
+  "target_codes": [
+    "ESYS 101",
+    "EDS 124AR",
+    "EDS 124BR",
+    "HILD 2A",
+    "HILD 2B",
+    "HILD 2C",
+    "HILD 7A",
+    "HILD 7B",
+    "HILD 7C",
+    "USP 103",
+    "USP 106",
+    "USP 167",
+    "AAS 10",
+    "AAS 11",
+    "AAS 14",
+    "AAS 15",
+    "GSS 20",
+    "GSS 22",
+    "GSS 27",
+    "LATI 10",
+    "LATI 50",
+    "MGT 3",
+    "ANTH 5",
+    "ANTH 42",
+    "USP 4",
+    "ENVR 105",
+    "ENVR 110",
+    "ENVR 120",
+    "ENVR 140",
+    "ENVR 142GS",
+    "ANTH 24",
+    "ANTH 45",
+    "ANTH 102",
+    "ANTH 104",
+    "ANTH 106",
+    "ANTH 108",
+    "USP 5",
+    "USP 7",
+    "USP 15",
+    "USP 25",
+    "USP 6",
+    "GSS 21",
+    "GSS 23",
+    "GSS 25",
+    "GSS 26",
+    "HILD 80GS",
+    "HILD 10",
+    "HILD 11",
+    "HILD 12",
+    "HILD 14",
+    "HILD 20",
+    "HILD 30",
+    "HILD 30GS",
+    "HILD 40",
+    "HILD 41",
+    "HILD 42",
+    "HILD 50",
+    "AWP 10",
+    "GSS 132",
+    "MGT 16",
+    "RELI 1",
+    "RELI 2",
+    "RELI 3",
+    "JWSP 1",
+    "JWSP 2",
+    "JWSP 3",
+    "JWSP 101",
+    "JWSP 102",
+    "JWSP 103",
+    "MCWP 40",
+    "MCWP 40CR",
+    "MCWP 40R",
+    "MCWP 50",
+    "MCWP 50R",
+    "ESYS 150",
+    "ANSC 140",
+    "ANTH 2",
+    "AAS 10R",
+    "AAS 11R",
+    "GSS 24",
+    "DOC 170",
+    "CAT 125GS",
+    "EDS 117",
+    "INTL 101",
+    "INTL 102",
+    "MGT 166",
+    "CCE 110",
+    "CCE 120",
+    "SYN 100"
+  ],
+  "grouped_headings": {
+    "HILD 2A-B-C. United States (4-4-4)": [
+      "HILD 2A",
+      "HILD 2B",
+      "HILD 2C"
+    ],
+    "HILD 7A-B-C. Race and Ethnicity in the United States (4-4-4)": [
+      "HILD 7A",
+      "HILD 7B",
+      "HILD 7C"
+    ],
+    "AAS 10/R. Introduction to African American Studies (4)": [
+      "AAS 10",
+      "AAS 10R"
+    ],
+    "AAS 11/R. Introduction to Black Diasporic Studies (4)": [
+      "AAS 11",
+      "AAS 11R"
+    ],
+    "GSS 21-22-23-25-26-27. History, Culture, and Politics of the Global South (4-4-4-4-4-4)": [
+      "GSS 21",
+      "GSS 22",
+      "GSS 23",
+      "GSS 25",
+      "GSS 26",
+      "GSS 27"
+    ]
+  },
+  "context_guards": {
+    "HILD": [
+      {
+        "tag": "h2",
+        "heading": "Courses",
+        "content_hash": "2520d0b438954c3d656002c7491ff0e6240c677008fd77a4c1f7b84a2511b619"
+      }
+    ],
+    "EDS": [
+      {
+        "tag": "h2",
+        "heading": "Courses",
+        "content_hash": "1a60823751911ec55b85baac35bcd56ef5997eec0a9f5df92e06dd2245ab6dcc"
+      }
+    ],
+    "ANTH": [
+      {
+        "tag": "h2",
+        "heading": "Courses",
+        "content_hash": "2cf43f4a26e139e360cd7be7d6dc97c9d4b1718c4e0ff15d1e86f0242d1ffa5e"
+      }
+    ],
+    "ANSC": [
+      {
+        "tag": "h2",
+        "heading": "Courses",
+        "content_hash": "2cf43f4a26e139e360cd7be7d6dc97c9d4b1718c4e0ff15d1e86f0242d1ffa5e"
+      }
+    ],
+    "ESYS": [
+      {
+        "tag": "h2",
+        "heading": "Courses",
+        "content_hash": "9c3ab3487a1051d50190d9bdf95ebc1a5ee1d47364f99bb34929d2303ae7a161"
+      }
+    ]
+  },
+  "entries": [
+    {
+      "id": "ucsd-aas-10",
+      "code": "AAS 10",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-revelle-soc-science",
+      "heading": "AAS 10/R. Introduction to African American Studies (4)",
+      "name": "Introduction to African American Studies",
+      "description": "Examines African American and diaspora experience through cultural production, political struggle and intersecting inequalities.",
+      "description_hash": "431e590c0ccfcdccdd3db10c26967b33fabcdcce0f33196a6dcaf26c5e76503a",
+      "observations": [
+        {
+          "heading": "AAS 10/R. Introduction to African American Studies (4)",
+          "description_hash": "431e590c0ccfcdccdd3db10c26967b33fabcdcce0f33196a6dcaf26c5e76503a",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "The exact printed shared heading establishes this target code; uniform printed component units are four each. No course-identity group or separate mandatory course count is inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-aas-courses"
+        ],
+        "locator": "AAS 10/R. Introduction to African American Studies (4); Lower Division",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Examines African American and diaspora experience through cultural production, political struggle and intersecting inequalities.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-aas-10r",
+      "code": "AAS 10R",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-marshall-first",
+      "heading": "AAS 10/R. Introduction to African American Studies (4)",
+      "name": "Introduction to African American Studies",
+      "description": "Examines African American and diaspora experience through cultural production, political struggle and intersecting inequalities.",
+      "description_hash": "431e590c0ccfcdccdd3db10c26967b33fabcdcce0f33196a6dcaf26c5e76503a",
+      "observations": [
+        {
+          "heading": "AAS 10/R. Introduction to African American Studies (4)",
+          "description_hash": "431e590c0ccfcdccdd3db10c26967b33fabcdcce0f33196a6dcaf26c5e76503a",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "The exact printed shared heading establishes this target code; uniform printed component units are four each. No course-identity group or separate mandatory course count is inferred.",
+        "The literal /R heading supplies this exact suffix. The chapter does not separately describe delivery mode or enrollment restrictions for R, so those are not inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-aas-courses"
+        ],
+        "locator": "AAS 10/R. Introduction to African American Studies (4); Lower Division",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Examines African American and diaspora experience through cultural production, political struggle and intersecting inequalities.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-aas-11",
+      "code": "AAS 11",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-revelle-soc-science",
+      "heading": "AAS 11/R. Introduction to Black Diasporic Studies (4)",
+      "name": "Introduction to Black Diasporic Studies",
+      "description": "Introduces major scholarship, concepts and theoretical approaches in Black diasporic studies.",
+      "description_hash": "f990a5625d441a630226b3d69c9bbe771d62c73c4317444965918bd527a5bcf0",
+      "observations": [
+        {
+          "heading": "AAS 11/R. Introduction to Black Diasporic Studies (4)",
+          "description_hash": "f990a5625d441a630226b3d69c9bbe771d62c73c4317444965918bd527a5bcf0",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "The exact printed shared heading establishes this target code; uniform printed component units are four each. No course-identity group or separate mandatory course count is inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-aas-courses"
+        ],
+        "locator": "AAS 11/R. Introduction to Black Diasporic Studies (4); Lower Division",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Introduces major scholarship, concepts and theoretical approaches in Black diasporic studies.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-aas-11r",
+      "code": "AAS 11R",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-marshall-first",
+      "heading": "AAS 11/R. Introduction to Black Diasporic Studies (4)",
+      "name": "Introduction to Black Diasporic Studies",
+      "description": "Introduces major scholarship, concepts and theoretical approaches in Black diasporic studies.",
+      "description_hash": "f990a5625d441a630226b3d69c9bbe771d62c73c4317444965918bd527a5bcf0",
+      "observations": [
+        {
+          "heading": "AAS 11/R. Introduction to Black Diasporic Studies (4)",
+          "description_hash": "f990a5625d441a630226b3d69c9bbe771d62c73c4317444965918bd527a5bcf0",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "The exact printed shared heading establishes this target code; uniform printed component units are four each. No course-identity group or separate mandatory course count is inferred.",
+        "The literal /R heading supplies this exact suffix. The chapter does not separately describe delivery mode or enrollment restrictions for R, so those are not inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-aas-courses"
+        ],
+        "locator": "AAS 11/R. Introduction to Black Diasporic Studies (4); Lower Division",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Introduces major scholarship, concepts and theoretical approaches in Black diasporic studies.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-aas-14",
+      "code": "AAS 14",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-revelle-soc-science",
+      "heading": "AAS 14. Introduction to African Studies (4)",
+      "name": "Introduction to African Studies",
+      "description": "Introduces foundational scholarship and theoretical frameworks in African studies.",
+      "description_hash": "15274222a64396a0a44de21af185088f58587a1332370275f2dc4664d8a08490",
+      "observations": [
+        {
+          "heading": "AAS 14. Introduction to African Studies (4)",
+          "description_hash": "15274222a64396a0a44de21af185088f58587a1332370275f2dc4664d8a08490",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-aas-courses"
+        ],
+        "locator": "AAS 14. Introduction to African Studies (4); Lower Division",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Introduces foundational scholarship and theoretical frameworks in African studies.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-aas-15",
+      "code": "AAS 15",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-revelle-soc-science",
+      "heading": "AAS 15. Racism and Global Imperialism (4)",
+      "name": "Racism and Global Imperialism",
+      "description": "Studies the global history and institutional structures of racism, colonialism and imperialism.",
+      "description_hash": "340b710c8623c2772b02a011c60ce7939af3bec62ece6d2469afe3706fe10410",
+      "observations": [
+        {
+          "heading": "AAS 15. Racism and Global Imperialism (4)",
+          "description_hash": "340b710c8623c2772b02a011c60ce7939af3bec62ece6d2469afe3706fe10410",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-aas-courses"
+        ],
+        "locator": "AAS 15. Racism and Global Imperialism (4); Lower Division",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Studies the global history and institutional structures of racism, colonialism and imperialism.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-ansc-140",
+      "code": "ANSC 140",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-table-law",
+      "heading": null,
+      "name": null,
+      "description": null,
+      "description_hash": null,
+      "observations": [],
+      "observed_prerequisites": null,
+      "credits": null,
+      "category": "other",
+      "approved_for_integration": false,
+      "disposition": "no_current_heading",
+      "notes": [
+        "No exact current heading was found in the reviewed 2026\u201327 chapter. The original identifier remains a separate pool observation; no discontinuation, successor or alias is inferred."
+      ]
+    },
+    {
+      "id": "ucsd-anth-102",
+      "code": "ANTH 102",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "ANTH 102. Humans Are Cultural Animals (4)",
+      "name": "Humans Are Cultural Animals",
+      "description": "Examines interactions between human biology and culture and their implications for debates about social life.",
+      "description_hash": "820409018545ed06db514fb779e379c90f4ed20fc8adf5153f6d54b6e9b112d4",
+      "observations": [
+        {
+          "heading": "ANTH 102. Humans Are Cultural Animals (4)",
+          "description_hash": "820409018545ed06db514fb779e379c90f4ed20fc8adf5153f6d54b6e9b112d4",
+          "section": "Upper Division",
+          "region": "Upper Division"
+        }
+      ],
+      "observed_prerequisites": "upper-division standing.",
+      "credits": 4,
+      "category": "other",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "The chapter cautions that not all courses are offered every year; this is content evidence, not a current offering guarantee."
+      ],
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses"
+        ],
+        "locator": "ANTH 102. Humans Are Cultural Animals (4); Upper Division",
+        "rationale": "The actual description does not establish a single primary taxonomy category. Examines interactions between human biology and culture and their implications for debates about social life.",
+        "candidate_categories": [
+          "applications",
+          "human_context"
+        ]
+      }
+    },
+    {
+      "id": "ucsd-anth-104",
+      "code": "ANTH 104",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "ANTH 104. Transforming the Global Environment (4)",
+      "name": "Transforming the Global Environment",
+      "description": "Examines human transformation of the physical environment and contemporary public issues arising from those changes.",
+      "description_hash": "716fef9c4c45a308401bd24f056fc541c0c7e90a1c601779c6aeccbf84148020",
+      "observations": [
+        {
+          "heading": "ANTH 104. Transforming the Global Environment (4)",
+          "description_hash": "716fef9c4c45a308401bd24f056fc541c0c7e90a1c601779c6aeccbf84148020",
+          "section": "Upper Division",
+          "region": "Upper Division"
+        }
+      ],
+      "observed_prerequisites": "upper-division standing.",
+      "credits": 4,
+      "category": "other",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "The chapter cautions that not all courses are offered every year; this is content evidence, not a current offering guarantee."
+      ],
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses"
+        ],
+        "locator": "ANTH 104. Transforming the Global Environment (4); Upper Division",
+        "rationale": "The actual description does not establish a single primary taxonomy category. Examines human transformation of the physical environment and contemporary public issues arising from those changes.",
+        "candidate_categories": [
+          "applications",
+          "human_context"
+        ]
+      }
+    },
+    {
+      "id": "ucsd-anth-106",
+      "code": "ANTH 106",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "ANTH 106. Climate and Civilization (4)",
+      "name": "Climate and Civilization",
+      "description": "Critically examines historical collapse narratives and their claimed consequences for human societies.",
+      "description_hash": "f779565cb44d44a68789d064721fdf269d87da1ba19d741fdf1b445b7e498340",
+      "observations": [
+        {
+          "heading": "ANTH 106. Climate and Civilization (4)",
+          "description_hash": "f779565cb44d44a68789d064721fdf269d87da1ba19d741fdf1b445b7e498340",
+          "section": "Upper Division",
+          "region": "Upper Division"
+        }
+      ],
+      "observed_prerequisites": "upper-division standing.",
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "The chapter cautions that not all courses are offered every year; this is content evidence, not a current offering guarantee."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses"
+        ],
+        "locator": "ANTH 106. Climate and Civilization (4); Upper Division",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Critically examines historical collapse narratives and their claimed consequences for human societies.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-anth-108",
+      "code": "ANTH 108",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "ANTH 108. Indigenous Peoples, Extractive Development, and Climate Change (4)",
+      "name": "Indigenous Peoples, Extractive Development, and Climate Change",
+      "description": "Examines Indigenous communities\u2019 cultural and political responses to extraction, environmental change and threats to livelihoods.",
+      "description_hash": "522339ea522f1dc26f88ccf0f06cab44382c852a475ed7305e07b37e964807b3",
+      "observations": [
+        {
+          "heading": "ANTH 108. Indigenous Peoples, Extractive Development, and Climate Change (4)",
+          "description_hash": "522339ea522f1dc26f88ccf0f06cab44382c852a475ed7305e07b37e964807b3",
+          "section": "Upper Division",
+          "region": "Upper Division"
+        }
+      ],
+      "observed_prerequisites": "upper-division standing.",
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "The chapter cautions that not all courses are offered every year; this is content evidence, not a current offering guarantee."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses"
+        ],
+        "locator": "ANTH 108. Indigenous Peoples, Extractive Development, and Climate Change (4); Upper Division",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Examines Indigenous communities\u2019 cultural and political responses to extraction, environmental change and threats to livelihoods.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-anth-2",
+      "code": "ANTH 2",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-marshall-first",
+      "heading": "ANTH 2. Human Origins (4)",
+      "name": "Human Origins",
+      "description": "Introduces human evolution through evolutionary theory, fossil evidence and comparative primate behavior.",
+      "description_hash": "e7cafd760bf3d25c52d307d0277ae653d9515df986e3c5e3794343536d2dfa53",
+      "observations": [
+        {
+          "heading": "ANTH 2. Human Origins (4)",
+          "description_hash": "e7cafd760bf3d25c52d307d0277ae653d9515df986e3c5e3794343536d2dfa53",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "applications",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "The chapter cautions that not all courses are offered every year; this is content evidence, not a current offering guarantee."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses"
+        ],
+        "locator": "ANTH 2. Human Origins (4); Lower Division",
+        "rationale": "The actual description teaches substantive domain knowledge or applied practice. Introduces human evolution through evolutionary theory, fossil evidence and comparative primate behavior.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-anth-24",
+      "code": "ANTH 24",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "ANTH 24. Mapping Capitalism (4)",
+      "name": "Mapping Capitalism",
+      "description": "Examines humanities and social-science interpretations of capitalism, including desire, meaning, habit and deception.",
+      "description_hash": "d98c0ed86ec977ffd4bb93c63f2f1ba6c1a5da51716040b223f5aebe8e95e747",
+      "observations": [
+        {
+          "heading": "ANTH 24. Mapping Capitalism (4)",
+          "description_hash": "d98c0ed86ec977ffd4bb93c63f2f1ba6c1a5da51716040b223f5aebe8e95e747",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "The chapter cautions that not all courses are offered every year; this is content evidence, not a current offering guarantee."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses"
+        ],
+        "locator": "ANTH 24. Mapping Capitalism (4); Lower Division",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Examines humanities and social-science interpretations of capitalism, including desire, meaning, habit and deception.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-anth-42",
+      "code": "ANTH 42",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "ANTH 42. Primates in a Human-Dominated World (4)",
+      "name": "Primates in a Human-Dominated World",
+      "description": "Studies primate behavior and conservation under habitat loss, fragmentation and human-wildlife pressures.",
+      "description_hash": "c0158f7653d3231f6559b313ecb045e539653de1fad36308f5d480cf45fa9e38",
+      "observations": [
+        {
+          "heading": "ANTH 42. Primates in a Human-Dominated World (4)",
+          "description_hash": "c0158f7653d3231f6559b313ecb045e539653de1fad36308f5d480cf45fa9e38",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "applications",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "The chapter cautions that not all courses are offered every year; this is content evidence, not a current offering guarantee."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses"
+        ],
+        "locator": "ANTH 42. Primates in a Human-Dominated World (4); Lower Division",
+        "rationale": "The actual description teaches substantive domain knowledge or applied practice. Studies primate behavior and conservation under habitat loss, fragmentation and human-wildlife pressures.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-anth-45",
+      "code": "ANTH 45",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "ANTH 45. Wisdom and Ecstasy (4)",
+      "name": "Wisdom and Ecstasy",
+      "description": "Studies religious understandings of existence, suffering and transformation across diverse communities.",
+      "description_hash": "6813d3f71f538bd2c357fc1c4dd49eb291547393119fcb392b62313cbb1213c3",
+      "observations": [
+        {
+          "heading": "ANTH 45. Wisdom and Ecstasy (4)",
+          "description_hash": "6813d3f71f538bd2c357fc1c4dd49eb291547393119fcb392b62313cbb1213c3",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "The chapter cautions that not all courses are offered every year; this is content evidence, not a current offering guarantee."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses"
+        ],
+        "locator": "ANTH 45. Wisdom and Ecstasy (4); Lower Division",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Studies religious understandings of existence, suffering and transformation across diverse communities.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-anth-5",
+      "code": "ANTH 5",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "ANTH 5. The Human Machine (4)",
+      "name": "The Human Machine",
+      "description": "Introduces skeletal, muscular and neural anatomy and how these structures support human movement.",
+      "description_hash": "ba7824f6516eacead943cd6cfffc674ccb0f9e08310b42c5eafb49381b8adf42",
+      "observations": [
+        {
+          "heading": "ANTH 5. The Human Machine (4)",
+          "description_hash": "ba7824f6516eacead943cd6cfffc674ccb0f9e08310b42c5eafb49381b8adf42",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "applications",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "The chapter cautions that not all courses are offered every year; this is content evidence, not a current offering guarantee."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses"
+        ],
+        "locator": "ANTH 5. The Human Machine (4); Lower Division",
+        "rationale": "The actual description teaches substantive domain knowledge or applied practice. Introduces skeletal, muscular and neural anatomy and how these structures support human movement.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-awp-10",
+      "code": "AWP 10",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "AWP 10. Language and Learning in the American Academy (4)",
+      "name": "Language and Learning in the American Academy",
+      "description": "Develops analytical reading and writing through debates about identity, language and higher education.",
+      "description_hash": "cf4d8bef7be612acb0f1cd1a9acbccd3b23971ac58dfe4274099227f1d2519a6",
+      "observations": [
+        {
+          "heading": "AWP 10. Language and Learning in the American Academy (4)",
+          "description_hash": "cf4d8bef7be612acb0f1cd1a9acbccd3b23971ac58dfe4274099227f1d2519a6",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "Published condition: Students may not receive credit for AWP 10 and AWP 10R."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-awp-courses"
+        ],
+        "locator": "AWP 10. Language and Learning in the American Academy (4); Lower Division",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Develops analytical reading and writing through debates about identity, language and higher education.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-cat-125gs",
+      "code": "CAT 125GS",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-sixth-cat125",
+      "heading": "CAT 125GS. Public Rhetoric and Practical Communication Global Seminar (4)",
+      "name": "Public Rhetoric and Practical Communication Global Seminar",
+      "description": "Develops public rhetoric, writing, oral presentation and digital communication in relation to experiential learning.",
+      "description_hash": "4149a8f7c8866ced650fe8a404e5d0eb6b4cd0924a434e871ba412c40f2da184",
+      "observations": [
+        {
+          "heading": "CAT 125GS. Public Rhetoric and Practical Communication Global Seminar (4)",
+          "description_hash": "4149a8f7c8866ced650fe8a404e5d0eb6b4cd0924a434e871ba412c40f2da184",
+          "section": "Upper Division",
+          "region": "Upper Division"
+        }
+      ],
+      "observed_prerequisites": "upper-division standing; department authorization required.",
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "Published condition: Completion of lower-division writing requirement is preferred but not required.",
+        "Published condition: It is recommended that students pursuing graduate degrees select \u201cLetter Grade\u201d at the time of enrollment.",
+        "Published condition: This course is a distance education course.",
+        "Published condition: Program or materials fees may apply.",
+        "The source labels this Global Seminar as distance education. Completion of lower-division writing is preferred, not required; graduate-study letter grading is a recommendation, while department authorization and upper-division standing are formal prerequisites."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-cat-courses"
+        ],
+        "locator": "CAT 125GS. Public Rhetoric and Practical Communication Global Seminar (4); Upper Division",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Develops public rhetoric, writing, oral presentation and digital communication in relation to experiential learning.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-cce-110",
+      "code": "CCE 110",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-eighth-transfer",
+      "heading": null,
+      "name": null,
+      "description": null,
+      "description_hash": null,
+      "observations": [],
+      "observed_prerequisites": null,
+      "credits": null,
+      "category": "other",
+      "approved_for_integration": false,
+      "disposition": "no_current_heading",
+      "notes": [
+        "No exact current heading was found in the reviewed 2026\u201327 chapter. The original identifier remains a separate pool observation; no discontinuation, successor or alias is inferred."
+      ]
+    },
+    {
+      "id": "ucsd-cce-120",
+      "code": "CCE 120",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-eighth-transfer",
+      "heading": null,
+      "name": null,
+      "description": null,
+      "description_hash": null,
+      "observations": [],
+      "observed_prerequisites": null,
+      "credits": null,
+      "category": "other",
+      "approved_for_integration": false,
+      "disposition": "no_current_heading",
+      "notes": [
+        "No exact current heading was found in the reviewed 2026\u201327 chapter. The original identifier remains a separate pool observation; no discontinuation, successor or alias is inferred."
+      ]
+    },
+    {
+      "id": "ucsd-doc-170",
+      "code": "DOC 170",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-marshall-transfer",
+      "heading": null,
+      "name": null,
+      "description": null,
+      "description_hash": null,
+      "observations": [],
+      "observed_prerequisites": null,
+      "credits": null,
+      "category": "other",
+      "approved_for_integration": false,
+      "disposition": "no_current_heading",
+      "notes": [
+        "No exact current heading was found in the reviewed 2026\u201327 chapter. The original identifier remains a separate pool observation; no discontinuation, successor or alias is inferred."
+      ]
+    },
+    {
+      "id": "ucsd-eds-117",
+      "code": "EDS 117",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-sixth-ge-pdf",
+      "heading": "EDS 117. Language, Culture, and Education (4)",
+      "name": "Language, Culture, and Education",
+      "description": "Analyzes language, culture and educational outcomes through bilingualism, cultural transmission and identity.",
+      "description_hash": "c138dc23e818ba04a4fe00ca288ef05a181cd5007dece7f8e1738f163799cd58",
+      "observations": [
+        {
+          "heading": "EDS 117. Language, Culture, and Education (4)",
+          "description_hash": "c138dc23e818ba04a4fe00ca288ef05a181cd5007dece7f8e1738f163799cd58",
+          "section": "Upper Division",
+          "region": "Upper Division"
+        }
+      ],
+      "observed_prerequisites": "upper-division standing.",
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "Published condition: Students may not receive credit for EDS 117 and SOCI 117 and EDS 117GS.",
+        "The chapter recommends consulting an EDS adviser for credential applicability; a course description does not establish credential completion."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-eds-courses"
+        ],
+        "locator": "EDS 117. Language, Culture, and Education (4); Upper Division",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Analyzes language, culture and educational outcomes through bilingualism, cultural transmission and identity.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-eds-124ar",
+      "code": "EDS 124AR",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-catalog",
+      "heading": "EDS 124AR. Teaching Computation in the Digital World (4)",
+      "name": "Teaching Computation in the Digital World",
+      "description": "Combines educator preparation in digital technologies and their social implications with novice-programming projects and modeling.",
+      "description_hash": "e7d8c1d8232df13c7db14e3631b70d10c465551bb6d7d54ce899f950219e0bbe",
+      "observations": [
+        {
+          "heading": "EDS 124AR. Teaching Computation in the Digital World (4)",
+          "description_hash": "e7d8c1d8232df13c7db14e3631b70d10c465551bb6d7d54ce899f950219e0bbe",
+          "section": "Upper Division",
+          "region": "Upper Division"
+        }
+      ],
+      "observed_prerequisites": "upper-division standing.",
+      "credits": 4,
+      "category": "other",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "Published condition: Prior programming experience is not required.",
+        "Published condition: This course is a distance education course.",
+        "The chapter recommends consulting an EDS adviser for credential applicability; a course description does not establish credential completion.",
+        "The source explicitly says prior programming experience is not required; introductory programming projects do not imply a programming prerequisite."
+      ],
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-eds-courses"
+        ],
+        "locator": "EDS 124AR. Teaching Computation in the Digital World (4); Upper Division",
+        "rationale": "Actual instruction combines novice programming/computational concepts, practical education design and social issues in computing education. These substantive elements remain mixed rather than assigning all education content to one subject.",
+        "candidate_categories": [
+          "foundations",
+          "applications",
+          "human_context"
+        ]
+      }
+    },
+    {
+      "id": "ucsd-eds-124br",
+      "code": "EDS 124BR",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-catalog",
+      "heading": "EDS 124BR. Teaching Computational Thinking for Everyone (4)",
+      "name": "Teaching Computational Thinking for Everyone",
+      "description": "Combines basic programming concepts with computing-teaching methods, assessment and questions of educational access and equity.",
+      "description_hash": "1d44e606b7bd4d497df3c069cf598d1339eceffec2cc15f77830f58b39721560",
+      "observations": [
+        {
+          "heading": "EDS 124BR. Teaching Computational Thinking for Everyone (4)",
+          "description_hash": "1d44e606b7bd4d497df3c069cf598d1339eceffec2cc15f77830f58b39721560",
+          "section": "Upper Division",
+          "region": "Upper Division"
+        }
+      ],
+      "observed_prerequisites": "upper-division standing.",
+      "credits": 4,
+      "category": "other",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "The chapter recommends consulting an EDS adviser for credential applicability; a course description does not establish credential completion."
+      ],
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-eds-courses"
+        ],
+        "locator": "EDS 124BR. Teaching Computational Thinking for Everyone (4); Upper Division",
+        "rationale": "Actual instruction combines novice programming/computational concepts, practical education design and social issues in computing education. These substantive elements remain mixed rather than assigning all education content to one subject.",
+        "candidate_categories": [
+          "foundations",
+          "applications",
+          "human_context"
+        ]
+      }
+    },
+    {
+      "id": "ucsd-envr-105",
+      "code": "ENVR 105",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "ENVR 105. Conservation Solutions (4)",
+      "name": "Conservation Solutions",
+      "description": "Applies environmental field research and conservation knowledge to designing and teaching a high-school curriculum module.",
+      "description_hash": "0ae05cba43d964e8c456582325017fb809aa1aa1855136e2c8ddba21a88cf2a9",
+      "observations": [
+        {
+          "heading": "ENVR 105. Conservation Solutions (4)",
+          "description_hash": "0ae05cba43d964e8c456582325017fb809aa1aa1855136e2c8ddba21a88cf2a9",
+          "section": "Courses",
+          "region": "Courses"
+        }
+      ],
+      "observed_prerequisites": "upper-division standing or consent of instructor.",
+      "credits": 4,
+      "category": "applications",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "Published condition: Course may include a required field trip, and students are responsible for their own transportation.",
+        "A field trip may be required and students must provide their own transportation; it is not represented as guaranteed travel or an added credit requirement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-envr-courses"
+        ],
+        "locator": "ENVR 105. Conservation Solutions (4); Courses",
+        "rationale": "The actual description teaches substantive domain knowledge or applied practice. Applies environmental field research and conservation knowledge to designing and teaching a high-school curriculum module.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-envr-110",
+      "code": "ENVR 110",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "ENVR 110. Environmental Law (4)",
+      "name": "Environmental Law",
+      "description": "Examines US environmental law and policy through government action, environmental justice and racism.",
+      "description_hash": "b2b0ab5154e80950cc0f6e81f4de04fe113e348821294b4a38be66dfdc05eb3e",
+      "observations": [
+        {
+          "heading": "ENVR 110. Environmental Law (4)",
+          "description_hash": "b2b0ab5154e80950cc0f6e81f4de04fe113e348821294b4a38be66dfdc05eb3e",
+          "section": "Courses",
+          "region": "Courses"
+        }
+      ],
+      "observed_prerequisites": "upper-division standing or consent of instructor.",
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-envr-courses"
+        ],
+        "locator": "ENVR 110. Environmental Law (4); Courses",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Examines US environmental law and policy through government action, environmental justice and racism.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-envr-120",
+      "code": "ENVR 120",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "ENVR 120. Coastal Ecology (4)",
+      "name": "Coastal Ecology",
+      "description": "Studies coastal ecosystems using field ecology, natural history and ecological data-collection techniques.",
+      "description_hash": "f3021feb73bbe9555831d42b1ef1e13aef23a8fd6c31c11f681b52b00cfca27c",
+      "observations": [
+        {
+          "heading": "ENVR 120. Coastal Ecology (4)",
+          "description_hash": "f3021feb73bbe9555831d42b1ef1e13aef23a8fd6c31c11f681b52b00cfca27c",
+          "section": "Courses",
+          "region": "Courses"
+        }
+      ],
+      "observed_prerequisites": "upper-division standing or consent of instructor.",
+      "credits": 4,
+      "category": "applications",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-envr-courses"
+        ],
+        "locator": "ENVR 120. Coastal Ecology (4); Courses",
+        "rationale": "The actual description teaches substantive domain knowledge or applied practice. Studies coastal ecosystems using field ecology, natural history and ecological data-collection techniques.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-envr-140",
+      "code": "ENVR 140",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "ENVR 140. Wilderness and Human Values (4)",
+      "name": "Wilderness and Human Values",
+      "description": "Examines changing historical, philosophical and aesthetic meanings of wilderness in environmental values and public life.",
+      "description_hash": "048465215992a51ea3ba31cd26d1a300721819f0a8c0538501fca22063c3e69c",
+      "observations": [
+        {
+          "heading": "ENVR 140. Wilderness and Human Values (4)",
+          "description_hash": "048465215992a51ea3ba31cd26d1a300721819f0a8c0538501fca22063c3e69c",
+          "section": "Courses",
+          "region": "Courses"
+        }
+      ],
+      "observed_prerequisites": "upper-division standing or consent of instructor.",
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-envr-courses"
+        ],
+        "locator": "ENVR 140. Wilderness and Human Values (4); Courses",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Examines changing historical, philosophical and aesthetic meanings of wilderness in environmental values and public life.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-envr-142gs",
+      "code": "ENVR 142GS",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "ENVR 142GS. Wilderness and Human Values Abroad (4)",
+      "name": "Wilderness and Human Values Abroad",
+      "description": "Studies historical and cultural human-nature relationships through class, race, gender and the politics of wilderness abroad.",
+      "description_hash": "7262a0993dc22873cc67d3a61533fe109f4d8bd14104d86a9031bb5a9efb9163",
+      "observations": [
+        {
+          "heading": "ENVR 142GS. Wilderness and Human Values Abroad (4)",
+          "description_hash": "7262a0993dc22873cc67d3a61533fe109f4d8bd14104d86a9031bb5a9efb9163",
+          "section": "Courses",
+          "region": "Courses"
+        }
+      ],
+      "observed_prerequisites": "upper-division standing required. Must apply and be accepted to the Global Seminar Program.",
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "Published condition: Program or materials fees may apply.",
+        "Published condition: Must apply and be accepted to the Global Seminar Program."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-envr-courses"
+        ],
+        "locator": "ENVR 142GS. Wilderness and Human Values Abroad (4); Courses",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Studies historical and cultural human-nature relationships through class, race, gender and the politics of wilderness abroad.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-esys-101",
+      "code": "ESYS 101",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-catalog",
+      "heading": "ESYS 101. Environmental Biology (4)",
+      "name": "Environmental Biology",
+      "description": "Studies biochemical and physiological relationships between organisms and environments, including human biological interventions.",
+      "description_hash": "5559c76b98ff79563b7b3540c1d4432ab46514bee7b2cd8e36a7b78f645eac70",
+      "observations": [
+        {
+          "heading": "ESYS 101. Environmental Biology (4)",
+          "description_hash": "5559c76b98ff79563b7b3540c1d4432ab46514bee7b2cd8e36a7b78f645eac70",
+          "section": "Upper Division",
+          "region": "Upper Division"
+        }
+      ],
+      "observed_prerequisites": "BILD 1 or 2 or 3 or equivalent, or consent of instructor.",
+      "credits": 4,
+      "category": "applications",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "The chapter directs students to the Schedule of Classes or program office for current availability."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-esys-courses"
+        ],
+        "locator": "ESYS 101. Environmental Biology (4); Upper Division",
+        "rationale": "The actual description teaches substantive domain knowledge or applied practice. Studies biochemical and physiological relationships between organisms and environments, including human biological interventions.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-esys-150",
+      "code": "ESYS 150",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-table-environment",
+      "heading": null,
+      "name": null,
+      "description": null,
+      "description_hash": null,
+      "observations": [],
+      "observed_prerequisites": null,
+      "credits": null,
+      "category": "other",
+      "approved_for_integration": false,
+      "disposition": "no_current_heading",
+      "notes": [
+        "No exact current heading was found in the reviewed 2026\u201327 chapter. The original identifier remains a separate pool observation; no discontinuation, successor or alias is inferred."
+      ]
+    },
+    {
+      "id": "ucsd-gss-132",
+      "code": "GSS 132",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "GSS 132. Literature and Global South Societies (4)",
+      "name": "Literature and Global South Societies",
+      "description": "Interprets literature through imperialism, colonial societies and minority experience, relating aesthetics to social history.",
+      "description_hash": "9cc26f98b62bd55973f1b801070ca1a4c2f2c7ea9f0511d9efd8d467f7a71e86",
+      "observations": [
+        {
+          "heading": "GSS 132. Literature and Global South Societies (4)",
+          "description_hash": "9cc26f98b62bd55973f1b801070ca1a4c2f2c7ea9f0511d9efd8d467f7a71e86",
+          "section": "Upper Division",
+          "region": "Upper Division"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-gss-courses"
+        ],
+        "locator": "GSS 132. Literature and Global South Societies (4); Upper Division",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Interprets literature through imperialism, colonial societies and minority experience, relating aesthetics to social history.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-gss-20",
+      "code": "GSS 20",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-revelle-soc-science",
+      "heading": "GSS 20. Introduction to Global South Studies (4)",
+      "name": "Introduction to Global South Studies",
+      "description": "Introduces historical and theoretical debates about the Global South through political, economic and cultural processes.",
+      "description_hash": "be97303159172916e160846ad034f7d581994268a9374ff2f4a9b17c278c7a65",
+      "observations": [
+        {
+          "heading": "GSS 20. Introduction to Global South Studies (4)",
+          "description_hash": "be97303159172916e160846ad034f7d581994268a9374ff2f4a9b17c278c7a65",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-gss-courses"
+        ],
+        "locator": "GSS 20. Introduction to Global South Studies (4); Lower Division",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Introduces historical and theoretical debates about the Global South through political, economic and cultural processes.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-gss-21",
+      "code": "GSS 21",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "GSS 21-22-23-25-26-27. History, Culture, and Politics of the Global South (4-4-4-4-4-4)",
+      "name": "Africa: History, Culture, and Politics",
+      "description": "Uses multidisciplinary readings to study African history, culture and politics within Global South studies.",
+      "description_hash": "b3cfb625d341b0592fe8c4466e930bcc7e8bf6c3d817826f744b8d8fffb39ed6",
+      "observations": [
+        {
+          "heading": "GSS 21-22-23-25-26-27. History, Culture, and Politics of the Global South (4-4-4-4-4-4)",
+          "description_hash": "b3cfb625d341b0592fe8c4466e930bcc7e8bf6c3d817826f744b8d8fffb39ed6",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "The exact printed shared heading establishes this target code; uniform printed component units are four each. No course-identity group or separate mandatory course count is inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-gss-courses"
+        ],
+        "locator": "GSS 21-22-23-25-26-27. History, Culture, and Politics of the Global South (4-4-4-4-4-4); Lower Division",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Uses multidisciplinary readings to study African history, culture and politics within Global South studies.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-gss-22",
+      "code": "GSS 22",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-revelle-soc-science",
+      "heading": "GSS 21-22-23-25-26-27. History, Culture, and Politics of the Global South (4-4-4-4-4-4)",
+      "name": "Latin America and the Caribbean: History, Culture, and Politics",
+      "description": "Uses multidisciplinary readings to study Latin American and Caribbean history, culture and politics.",
+      "description_hash": "b3cfb625d341b0592fe8c4466e930bcc7e8bf6c3d817826f744b8d8fffb39ed6",
+      "observations": [
+        {
+          "heading": "GSS 21-22-23-25-26-27. History, Culture, and Politics of the Global South (4-4-4-4-4-4)",
+          "description_hash": "b3cfb625d341b0592fe8c4466e930bcc7e8bf6c3d817826f744b8d8fffb39ed6",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "The exact printed shared heading establishes this target code; uniform printed component units are four each. No course-identity group or separate mandatory course count is inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-gss-courses"
+        ],
+        "locator": "GSS 21-22-23-25-26-27. History, Culture, and Politics of the Global South (4-4-4-4-4-4); Lower Division",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Uses multidisciplinary readings to study Latin American and Caribbean history, culture and politics.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-gss-23",
+      "code": "GSS 23",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "GSS 21-22-23-25-26-27. History, Culture, and Politics of the Global South (4-4-4-4-4-4)",
+      "name": "China and East Asia: History, Culture, and Politics",
+      "description": "Uses multidisciplinary readings to study Chinese and East Asian history, culture and politics.",
+      "description_hash": "b3cfb625d341b0592fe8c4466e930bcc7e8bf6c3d817826f744b8d8fffb39ed6",
+      "observations": [
+        {
+          "heading": "GSS 21-22-23-25-26-27. History, Culture, and Politics of the Global South (4-4-4-4-4-4)",
+          "description_hash": "b3cfb625d341b0592fe8c4466e930bcc7e8bf6c3d817826f744b8d8fffb39ed6",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "The exact printed shared heading establishes this target code; uniform printed component units are four each. No course-identity group or separate mandatory course count is inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-gss-courses"
+        ],
+        "locator": "GSS 21-22-23-25-26-27. History, Culture, and Politics of the Global South (4-4-4-4-4-4); Lower Division",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Uses multidisciplinary readings to study Chinese and East Asian history, culture and politics.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-gss-24",
+      "code": "GSS 24",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-marshall-first",
+      "heading": null,
+      "name": null,
+      "description": null,
+      "description_hash": null,
+      "observations": [],
+      "observed_prerequisites": null,
+      "credits": null,
+      "category": "other",
+      "approved_for_integration": false,
+      "disposition": "no_current_heading",
+      "notes": [
+        "No exact current heading was found in the reviewed 2026\u201327 chapter. The original identifier remains a separate pool observation; no discontinuation, successor or alias is inferred."
+      ]
+    },
+    {
+      "id": "ucsd-gss-25",
+      "code": "GSS 25",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "GSS 21-22-23-25-26-27. History, Culture, and Politics of the Global South (4-4-4-4-4-4)",
+      "name": "Middle East: History, Culture, and Politics",
+      "description": "Uses multidisciplinary readings to study Middle Eastern history, culture and politics.",
+      "description_hash": "b3cfb625d341b0592fe8c4466e930bcc7e8bf6c3d817826f744b8d8fffb39ed6",
+      "observations": [
+        {
+          "heading": "GSS 21-22-23-25-26-27. History, Culture, and Politics of the Global South (4-4-4-4-4-4)",
+          "description_hash": "b3cfb625d341b0592fe8c4466e930bcc7e8bf6c3d817826f744b8d8fffb39ed6",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "The exact printed shared heading establishes this target code; uniform printed component units are four each. No course-identity group or separate mandatory course count is inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-gss-courses"
+        ],
+        "locator": "GSS 21-22-23-25-26-27. History, Culture, and Politics of the Global South (4-4-4-4-4-4); Lower Division",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Uses multidisciplinary readings to study Middle Eastern history, culture and politics.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-gss-26",
+      "code": "GSS 26",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "GSS 21-22-23-25-26-27. History, Culture, and Politics of the Global South (4-4-4-4-4-4)",
+      "name": "South Asia: History, Culture, and Politics",
+      "description": "Uses multidisciplinary readings to study South Asian history, culture and politics.",
+      "description_hash": "b3cfb625d341b0592fe8c4466e930bcc7e8bf6c3d817826f744b8d8fffb39ed6",
+      "observations": [
+        {
+          "heading": "GSS 21-22-23-25-26-27. History, Culture, and Politics of the Global South (4-4-4-4-4-4)",
+          "description_hash": "b3cfb625d341b0592fe8c4466e930bcc7e8bf6c3d817826f744b8d8fffb39ed6",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "The exact printed shared heading establishes this target code; uniform printed component units are four each. No course-identity group or separate mandatory course count is inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-gss-courses"
+        ],
+        "locator": "GSS 21-22-23-25-26-27. History, Culture, and Politics of the Global South (4-4-4-4-4-4); Lower Division",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Uses multidisciplinary readings to study South Asian history, culture and politics.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-gss-27",
+      "code": "GSS 27",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-revelle-soc-science",
+      "heading": "GSS 21-22-23-25-26-27. History, Culture, and Politics of the Global South (4-4-4-4-4-4)",
+      "name": "Southeast Asia: History, Culture, and Politics",
+      "description": "Uses multidisciplinary readings to study Southeast Asian history, culture and politics.",
+      "description_hash": "b3cfb625d341b0592fe8c4466e930bcc7e8bf6c3d817826f744b8d8fffb39ed6",
+      "observations": [
+        {
+          "heading": "GSS 21-22-23-25-26-27. History, Culture, and Politics of the Global South (4-4-4-4-4-4)",
+          "description_hash": "b3cfb625d341b0592fe8c4466e930bcc7e8bf6c3d817826f744b8d8fffb39ed6",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "The exact printed shared heading establishes this target code; uniform printed component units are four each. No course-identity group or separate mandatory course count is inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-gss-courses"
+        ],
+        "locator": "GSS 21-22-23-25-26-27. History, Culture, and Politics of the Global South (4-4-4-4-4-4); Lower Division",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Uses multidisciplinary readings to study Southeast Asian history, culture and politics.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-hild-10",
+      "code": "HILD 10",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "HILD 10. East Asia: The Great Tradition (4)",
+      "name": "East Asia: The Great Tradition",
+      "description": "Studies early Chinese, Korean and Japanese civilizations through religious, political and family institutions.",
+      "description_hash": "a207e67e722599295aa93d3846e41778d1c6d5287c886c8ac3072532a84f7380",
+      "observations": [
+        {
+          "heading": "HILD 10. East Asia: The Great Tradition (4)",
+          "description_hash": "a207e67e722599295aa93d3846e41778d1c6d5287c886c8ac3072532a84f7380",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-hild-courses"
+        ],
+        "locator": "HILD 10. East Asia: The Great Tradition (4); Lower Division",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Studies early Chinese, Korean and Japanese civilizations through religious, political and family institutions.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-hild-11",
+      "code": "HILD 11",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "HILD 11. East Asia and the West, 1279\u20131911 (4)",
+      "name": "East Asia and the West, 1279\u20131911",
+      "description": "Examines East Asian political and cultural change from the Mongol period through responses to Western imperialism.",
+      "description_hash": "fee181b467f9901b71285a25abb68d57f0861daa9202a3eb73b14d4ddc801a23",
+      "observations": [
+        {
+          "heading": "HILD 11. East Asia and the West, 1279\u20131911 (4)",
+          "description_hash": "fee181b467f9901b71285a25abb68d57f0861daa9202a3eb73b14d4ddc801a23",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-hild-courses"
+        ],
+        "locator": "HILD 11. East Asia and the West, 1279\u20131911 (4); Lower Division",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Examines East Asian political and cultural change from the Mongol period through responses to Western imperialism.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-hild-12",
+      "code": "HILD 12",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "HILD 12. Twentieth-Century East Asia (4)",
+      "name": "Twentieth-Century East Asia",
+      "description": "Studies modern East Asian state formation, colonialism, war, revolution and industrialization.",
+      "description_hash": "022f365bf16df9b6e2107acaadaa01d7ae007abda9295a3fbd3b66d2ae638402",
+      "observations": [
+        {
+          "heading": "HILD 12. Twentieth-Century East Asia (4)",
+          "description_hash": "022f365bf16df9b6e2107acaadaa01d7ae007abda9295a3fbd3b66d2ae638402",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-hild-courses"
+        ],
+        "locator": "HILD 12. Twentieth-Century East Asia (4); Lower Division",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Studies modern East Asian state formation, colonialism, war, revolution and industrialization.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-hild-14",
+      "code": "HILD 14",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "HILD 14. Film and History in Latin America (4)",
+      "name": "Film and History in Latin America",
+      "description": "Compares cinematic portrayals of Latin America with historical research on colonialism, labor, religion and modernization.",
+      "description_hash": "5a360b018ff7995bbea378644d684b89c0e070b41100ddc6881322a194328f10",
+      "observations": [
+        {
+          "heading": "HILD 14. Film and History in Latin America (4)",
+          "description_hash": "5a360b018ff7995bbea378644d684b89c0e070b41100ddc6881322a194328f10",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-hild-courses"
+        ],
+        "locator": "HILD 14. Film and History in Latin America (4); Lower Division",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Compares cinematic portrayals of Latin America with historical research on colonialism, labor, religion and modernization.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-hild-20",
+      "code": "HILD 20",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": null,
+      "name": null,
+      "description": null,
+      "description_hash": null,
+      "observations": [],
+      "observed_prerequisites": null,
+      "credits": null,
+      "category": "other",
+      "approved_for_integration": false,
+      "disposition": "no_current_heading",
+      "notes": [
+        "No exact current heading was found in the reviewed 2026\u201327 chapter. The original identifier remains a separate pool observation; no discontinuation, successor or alias is inferred."
+      ]
+    },
+    {
+      "id": "ucsd-hild-2a",
+      "code": "HILD 2A",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-degree-policies",
+      "heading": "HILD 2A-B-C. United States (4-4-4)",
+      "name": "United States",
+      "description": "Surveys US social, economic and political history as part of a yearlong sequence from the colonial era to the present.",
+      "description_hash": "6103edff0ef5b9ad22d27ab31fef338739a974127085d3d1cf7ae93bc182ae0b",
+      "observations": [
+        {
+          "heading": "HILD 2A-B-C. United States (4-4-4)",
+          "description_hash": "6103edff0ef5b9ad22d27ab31fef338739a974127085d3d1cf7ae93bc182ae0b",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "Published condition: A yearlong lower-division course that will provide students with a background in United States history from colonial times to the present, concentrating on social, economic, and political developments. (Satisfies Muir College humanities requirement and American History and Institutions requirement.)",
+        "The exact printed shared heading establishes this target code; uniform printed component units are four each. No course-identity group or separate mandatory course count is inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-hild-courses"
+        ],
+        "locator": "HILD 2A-B-C. United States (4-4-4); Lower Division",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Surveys US social, economic and political history as part of a yearlong sequence from the colonial era to the present.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-hild-2b",
+      "code": "HILD 2B",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-degree-policies",
+      "heading": "HILD 2A-B-C. United States (4-4-4)",
+      "name": "United States",
+      "description": "Continues a yearlong survey of US social, economic and political development from colonial times to the present.",
+      "description_hash": "6103edff0ef5b9ad22d27ab31fef338739a974127085d3d1cf7ae93bc182ae0b",
+      "observations": [
+        {
+          "heading": "HILD 2A-B-C. United States (4-4-4)",
+          "description_hash": "6103edff0ef5b9ad22d27ab31fef338739a974127085d3d1cf7ae93bc182ae0b",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "Published condition: A yearlong lower-division course that will provide students with a background in United States history from colonial times to the present, concentrating on social, economic, and political developments. (Satisfies Muir College humanities requirement and American History and Institutions requirement.)",
+        "The exact printed shared heading establishes this target code; uniform printed component units are four each. No course-identity group or separate mandatory course count is inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-hild-courses"
+        ],
+        "locator": "HILD 2A-B-C. United States (4-4-4); Lower Division",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Continues a yearlong survey of US social, economic and political development from colonial times to the present.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-hild-2c",
+      "code": "HILD 2C",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-degree-policies",
+      "heading": "HILD 2A-B-C. United States (4-4-4)",
+      "name": "United States",
+      "description": "Completes a yearlong survey of US social, economic and political development from colonial times to the present.",
+      "description_hash": "6103edff0ef5b9ad22d27ab31fef338739a974127085d3d1cf7ae93bc182ae0b",
+      "observations": [
+        {
+          "heading": "HILD 2A-B-C. United States (4-4-4)",
+          "description_hash": "6103edff0ef5b9ad22d27ab31fef338739a974127085d3d1cf7ae93bc182ae0b",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "Published condition: A yearlong lower-division course that will provide students with a background in United States history from colonial times to the present, concentrating on social, economic, and political developments. (Satisfies Muir College humanities requirement and American History and Institutions requirement.)",
+        "The exact printed shared heading establishes this target code; uniform printed component units are four each. No course-identity group or separate mandatory course count is inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-hild-courses"
+        ],
+        "locator": "HILD 2A-B-C. United States (4-4-4); Lower Division",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Completes a yearlong survey of US social, economic and political development from colonial times to the present.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-hild-30",
+      "code": "HILD 30",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "HILD 30. History of Public Health (4)",
+      "name": "History of Public Health",
+      "description": "Traces public-health history through changing cultural and social relationships with disease and medicine.",
+      "description_hash": "2f34b3e282c783ff9f91c09079720c1b28598680f51b0471622da83b1f7f2f35",
+      "observations": [
+        {
+          "heading": "HILD 30. History of Public Health (4)",
+          "description_hash": "2f34b3e282c783ff9f91c09079720c1b28598680f51b0471622da83b1f7f2f35",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-hild-courses"
+        ],
+        "locator": "HILD 30. History of Public Health (4); Lower Division",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Traces public-health history through changing cultural and social relationships with disease and medicine.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-hild-30gs",
+      "code": "HILD 30GS",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "HILD 30GS. History of Public Health (4)",
+      "name": "History of Public Health",
+      "description": "Studies historical public-health institutions and the cultural and social dimensions of disease and medicine in a Global Seminar setting.",
+      "description_hash": "0d224a19cdc61facaf11939ea88db86f1499b7af065536a33e2a45d04d3d07b2",
+      "observations": [
+        {
+          "heading": "HILD 30GS. History of Public Health (4)",
+          "description_hash": "0d224a19cdc61facaf11939ea88db86f1499b7af065536a33e2a45d04d3d07b2",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "Published condition: Program or materials fees may apply.",
+        "Published condition: Students may not receive credit for both HILD 30 and HILD 30GS.",
+        "Published condition: Students must apply to and be accepted into the Global Seminar Program."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-hild-courses"
+        ],
+        "locator": "HILD 30GS. History of Public Health (4); Lower Division",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Studies historical public-health institutions and the cultural and social dimensions of disease and medicine in a Global Seminar setting.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-hild-40",
+      "code": "HILD 40",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "HILD 40. Anthropocene 1: The Neolithic (4)",
+      "name": "Anthropocene 1: The Neolithic",
+      "description": "Examines the historical emergence of settled agriculture and debates about its long-term environmental consequences.",
+      "description_hash": "aaaa0e73e7855a83cfd83e956bac82deed59d88f86b579a9f413923597bdb4cb",
+      "observations": [
+        {
+          "heading": "HILD 40. Anthropocene 1: The Neolithic (4)",
+          "description_hash": "aaaa0e73e7855a83cfd83e956bac82deed59d88f86b579a9f413923597bdb4cb",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "The printed plus marker is defined by this chapter as focus on the period before 1800; it is not a grade or added credit."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-hild-courses"
+        ],
+        "locator": "HILD 40. Anthropocene 1: The Neolithic (4); Lower Division",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Examines the historical emergence of settled agriculture and debates about its long-term environmental consequences.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-hild-41",
+      "code": "HILD 41",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "HILD 41. Anthropocene 2: The First Global Era, 1400\u20131750 (4)",
+      "name": "Anthropocene 2: The First Global Era, 1400\u20131750",
+      "description": "Studies post-1492 exchanges of people, organisms and diseases and their lasting social and environmental effects.",
+      "description_hash": "ce99470f53316d9b8aad3e5c836f67a62a3d2e38b9acf80c78c917257218ca1a",
+      "observations": [
+        {
+          "heading": "HILD 41. Anthropocene 2: The First Global Era, 1400\u20131750 (4)",
+          "description_hash": "ce99470f53316d9b8aad3e5c836f67a62a3d2e38b9acf80c78c917257218ca1a",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "The printed plus marker is defined by this chapter as focus on the period before 1800; it is not a grade or added credit."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-hild-courses"
+        ],
+        "locator": "HILD 41. Anthropocene 2: The First Global Era, 1400\u20131750 (4); Lower Division",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Studies post-1492 exchanges of people, organisms and diseases and their lasting social and environmental effects.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-hild-42",
+      "code": "HILD 42",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "HILD 42. Anthropocene 3: The Industrial Revolutions (4)",
+      "name": "Anthropocene 3: The Industrial Revolutions",
+      "description": "Examines industrialization through fossil fuels, extractive economies, agriculture and infrastructure and their environmental effects.",
+      "description_hash": "6af09293b6614bcdbafb3042eeaae131d40a5626b920018a1bea0eb9f0805f6e",
+      "observations": [
+        {
+          "heading": "HILD 42. Anthropocene 3: The Industrial Revolutions (4)",
+          "description_hash": "6af09293b6614bcdbafb3042eeaae131d40a5626b920018a1bea0eb9f0805f6e",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-hild-courses"
+        ],
+        "locator": "HILD 42. Anthropocene 3: The Industrial Revolutions (4); Lower Division",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Examines industrialization through fossil fuels, extractive economies, agriculture and infrastructure and their environmental effects.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-hild-50",
+      "code": "HILD 50",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "HILD 50. Introduction to Law and Society (4)",
+      "name": "Introduction to Law and Society",
+      "description": "Uses historical context to examine contemporary relationships between law and society.",
+      "description_hash": "da60782a944ba2f0dc6cd09e433119509c5c8a730b2fb332708ad05c5e590cb7",
+      "observations": [
+        {
+          "heading": "HILD 50. Introduction to Law and Society (4)",
+          "description_hash": "da60782a944ba2f0dc6cd09e433119509c5c8a730b2fb332708ad05c5e590cb7",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "Published condition: Satisfies the lower-division requirement for the law and society minor."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-hild-courses"
+        ],
+        "locator": "HILD 50. Introduction to Law and Society (4); Lower Division",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Uses historical context to examine contemporary relationships between law and society.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-hild-7a",
+      "code": "HILD 7A",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-degree-policies",
+      "heading": "HILD 7A. Race and Ethnicity in the United States (4)",
+      "name": "Race and Ethnicity in the United States",
+      "description": "Examines comparative US ethnic history with particular attention to African Americans, enslavement, migration and struggles over power.",
+      "description_hash": "e445f369f319ec8d46a1b767c7049321b932cf17889ebae261cbd62956cd5de0",
+      "observations": [
+        {
+          "heading": "HILD 7A-B-C. Race and Ethnicity in the United States (4-4-4)",
+          "description_hash": "797de335a668f4c3ad22c1c9d47f61363c8d2f6d51e519f902a3a1309525f55f",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        },
+        {
+          "heading": "HILD 7A. Race and Ethnicity in the United States (4)",
+          "description_hash": "e445f369f319ec8d46a1b767c7049321b932cf17889ebae261cbd62956cd5de0",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "The chapter publishes both a shared HILD 7A-B-C overview and this exact individual course block. Both complete observations are guarded; the specific course description supplies its emphasis. Neither is discarded by parser order."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-hild-courses"
+        ],
+        "locator": "HILD 7A. Race and Ethnicity in the United States (4); Lower Division",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Examines comparative US ethnic history with particular attention to African Americans, enslavement, migration and struggles over power.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-hild-7b",
+      "code": "HILD 7B",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-degree-policies",
+      "heading": "HILD 7B. Race and Ethnicity in the United States (4)",
+      "name": "Race and Ethnicity in the United States",
+      "description": "Examines comparative US ethnic history with particular attention to Asian Americans and white ethnic groups, migration and power.",
+      "description_hash": "90a6fd6c4e47320be45bc360b9bc2ca6cef44f3914137edd569125bd9a4c0dc7",
+      "observations": [
+        {
+          "heading": "HILD 7A-B-C. Race and Ethnicity in the United States (4-4-4)",
+          "description_hash": "797de335a668f4c3ad22c1c9d47f61363c8d2f6d51e519f902a3a1309525f55f",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        },
+        {
+          "heading": "HILD 7B. Race and Ethnicity in the United States (4)",
+          "description_hash": "90a6fd6c4e47320be45bc360b9bc2ca6cef44f3914137edd569125bd9a4c0dc7",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "The chapter publishes both a shared HILD 7A-B-C overview and this exact individual course block. Both complete observations are guarded; the specific course description supplies its emphasis. Neither is discarded by parser order."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-hild-courses"
+        ],
+        "locator": "HILD 7B. Race and Ethnicity in the United States (4); Lower Division",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Examines comparative US ethnic history with particular attention to Asian Americans and white ethnic groups, migration and power.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-hild-7c",
+      "code": "HILD 7C",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-degree-policies",
+      "heading": "HILD 7C. Race and Ethnicity in the United States (4)",
+      "name": "Race and Ethnicity in the United States",
+      "description": "Examines comparative US ethnic history with particular attention to Mexican Americans, migration and power.",
+      "description_hash": "e369cb110b5a92010a1896df194aab901a665b4309cfc80b6591e7ab898c9a5c",
+      "observations": [
+        {
+          "heading": "HILD 7A-B-C. Race and Ethnicity in the United States (4-4-4)",
+          "description_hash": "797de335a668f4c3ad22c1c9d47f61363c8d2f6d51e519f902a3a1309525f55f",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        },
+        {
+          "heading": "HILD 7C. Race and Ethnicity in the United States (4)",
+          "description_hash": "e369cb110b5a92010a1896df194aab901a665b4309cfc80b6591e7ab898c9a5c",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "The chapter publishes both a shared HILD 7A-B-C overview and this exact individual course block. Both complete observations are guarded; the specific course description supplies its emphasis. Neither is discarded by parser order."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-hild-courses"
+        ],
+        "locator": "HILD 7C. Race and Ethnicity in the United States (4); Lower Division",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Examines comparative US ethnic history with particular attention to Mexican Americans, migration and power.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-hild-80gs",
+      "code": "HILD 80GS",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": null,
+      "name": null,
+      "description": null,
+      "description_hash": null,
+      "observations": [],
+      "observed_prerequisites": null,
+      "credits": null,
+      "category": "other",
+      "approved_for_integration": false,
+      "disposition": "no_current_heading",
+      "notes": [
+        "No exact current heading was found in the reviewed 2026\u201327 chapter. The original identifier remains a separate pool observation; no discontinuation, successor or alias is inferred."
+      ]
+    },
+    {
+      "id": "ucsd-intl-101",
+      "code": "INTL 101",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-sixth-ge-pdf",
+      "heading": "INTL 101. Culture and Society in International Perspective (4)",
+      "name": "Culture and Society in International Perspective",
+      "description": "Analyzes modern cultural and social development through interactions among societies and changing boundaries.",
+      "description_hash": "8e6f7640b97d69434e17efc0ab2a2f0e2cd41981b11daeb106a2d8045de75b87",
+      "observations": [
+        {
+          "heading": "INTL 101. Culture and Society in International Perspective (4)",
+          "description_hash": "8e6f7640b97d69434e17efc0ab2a2f0e2cd41981b11daeb106a2d8045de75b87",
+          "section": "Upper Division",
+          "region": "Upper Division"
+        }
+      ],
+      "observed_prerequisites": "completion of INTL 100 with a grade of C\u2013 or better.",
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-intl-courses"
+        ],
+        "locator": "INTL 101. Culture and Society in International Perspective (4); Upper Division",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Analyzes modern cultural and social development through interactions among societies and changing boundaries.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-intl-102",
+      "code": "INTL 102",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-sixth-ge-pdf",
+      "heading": "INTL 102. Economics, Politics, and International Change (4)",
+      "name": "Economics, Politics, and International Change",
+      "description": "Examines political and economic change through states, development, regime types, conflict and globalization.",
+      "description_hash": "815171057d1b323d7de2101a038820d97f0839bbe86ef8e16bc518e837451114",
+      "observations": [
+        {
+          "heading": "INTL 102. Economics, Politics, and International Change (4)",
+          "description_hash": "815171057d1b323d7de2101a038820d97f0839bbe86ef8e16bc518e837451114",
+          "section": "Upper Division",
+          "region": "Upper Division"
+        }
+      ],
+      "observed_prerequisites": "completion of INTL 100 with a grade of C\u2013 or better.",
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-intl-courses"
+        ],
+        "locator": "INTL 102. Economics, Politics, and International Change (4); Upper Division",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Examines political and economic change through states, development, regime types, conflict and globalization.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-jwsp-1",
+      "code": "JWSP 1",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "JWSP 1. Beginning Hebrew (5)",
+      "name": "Beginning Hebrew",
+      "description": "Develops beginning Hebrew vocabulary, grammar, conversation and reading.",
+      "description_hash": "bf0d5610c6bb0d9eaea960f93ede7e599f659d2827ec6beb1984360cff1c7c37",
+      "observations": [
+        {
+          "heading": "JWSP 1. Beginning Hebrew (5)",
+          "description_hash": "bf0d5610c6bb0d9eaea960f93ede7e599f659d2827ec6beb1984360cff1c7c37",
+          "section": "Courses",
+          "region": "Courses"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 5,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-jwsp-courses"
+        ],
+        "locator": "JWSP 1. Beginning Hebrew (5); Courses",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Develops beginning Hebrew vocabulary, grammar, conversation and reading.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-jwsp-101",
+      "code": "JWSP 101",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "JWSP 101. Introduction to Hebrew Texts (4)",
+      "name": "Introduction to Hebrew Texts",
+      "description": "Develops advanced Hebrew language skills through analysis of biblical and modern texts.",
+      "description_hash": "bfed476347d4c7d3b9cbc06e3e12b494293bedb5ce546b5b090cb9590834acd0",
+      "observations": [
+        {
+          "heading": "JWSP 101. Introduction to Hebrew Texts (4)",
+          "description_hash": "bfed476347d4c7d3b9cbc06e3e12b494293bedb5ce546b5b090cb9590834acd0",
+          "section": "Courses",
+          "region": "Courses"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "Published condition: Course taught in Hebrew and in English.",
+        "The source explicitly states instruction in Hebrew and English; no formal language prerequisite is printed."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-jwsp-courses"
+        ],
+        "locator": "JWSP 101. Introduction to Hebrew Texts (4); Courses",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Develops advanced Hebrew language skills through analysis of biblical and modern texts.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-jwsp-102",
+      "code": "JWSP 102",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "JWSP 102. Intermediate Hebrew Texts (4)",
+      "name": "Intermediate Hebrew Texts",
+      "description": "Studies Hebrew literature across periods while developing advanced grammar and vocabulary.",
+      "description_hash": "fb020549792407a81229240ea3367309a390e25dc186c701cd58b5f5e767f216",
+      "observations": [
+        {
+          "heading": "JWSP 102. Intermediate Hebrew Texts (4)",
+          "description_hash": "fb020549792407a81229240ea3367309a390e25dc186c701cd58b5f5e767f216",
+          "section": "Courses",
+          "region": "Courses"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "Published condition: Course taught in Hebrew and in English.",
+        "The source explicitly states instruction in Hebrew and English; no formal language prerequisite is printed."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-jwsp-courses"
+        ],
+        "locator": "JWSP 102. Intermediate Hebrew Texts (4); Courses",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Studies Hebrew literature across periods while developing advanced grammar and vocabulary.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-jwsp-103",
+      "code": "JWSP 103",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "JWSP 103. Advanced Hebrew Texts (4)",
+      "name": "Advanced Hebrew Texts",
+      "description": "Integrates Hebrew fluency, grammar and reading through texts from different periods.",
+      "description_hash": "69997f08d20031e9b162488029edc645e5dc3013fcdc849d7edec7e56e552067",
+      "observations": [
+        {
+          "heading": "JWSP 103. Advanced Hebrew Texts (4)",
+          "description_hash": "69997f08d20031e9b162488029edc645e5dc3013fcdc849d7edec7e56e552067",
+          "section": "Courses",
+          "region": "Courses"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-jwsp-courses"
+        ],
+        "locator": "JWSP 103. Advanced Hebrew Texts (4); Courses",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Integrates Hebrew fluency, grammar and reading through texts from different periods.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-jwsp-2",
+      "code": "JWSP 2",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "JWSP 2. Intermediate Hebrew (5)",
+      "name": "Intermediate Hebrew",
+      "description": "Develops intermediate Hebrew vocabulary, grammar, conversational fluency and reading.",
+      "description_hash": "d2e0d0b76b98582dd9c2a42c99aa4575e9fc362da97bd5fc964cfdda907af08d",
+      "observations": [
+        {
+          "heading": "JWSP 2. Intermediate Hebrew (5)",
+          "description_hash": "d2e0d0b76b98582dd9c2a42c99aa4575e9fc362da97bd5fc964cfdda907af08d",
+          "section": "Courses",
+          "region": "Courses"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 5,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-jwsp-courses"
+        ],
+        "locator": "JWSP 2. Intermediate Hebrew (5); Courses",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Develops intermediate Hebrew vocabulary, grammar, conversational fluency and reading.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-jwsp-3",
+      "code": "JWSP 3",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "JWSP 3. Intermediate Hebrew, Continued (5)",
+      "name": "Intermediate Hebrew, Continued",
+      "description": "Extends Hebrew language skills through conversation and literary and nonliterary texts.",
+      "description_hash": "65f930a9f0a3efd898937b5c359d85de7fba7ab016e505ccfba29bb2bea83af5",
+      "observations": [
+        {
+          "heading": "JWSP 3. Intermediate Hebrew, Continued (5)",
+          "description_hash": "65f930a9f0a3efd898937b5c359d85de7fba7ab016e505ccfba29bb2bea83af5",
+          "section": "Courses",
+          "region": "Courses"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 5,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-jwsp-courses"
+        ],
+        "locator": "JWSP 3. Intermediate Hebrew, Continued (5); Courses",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Extends Hebrew language skills through conversation and literary and nonliterary texts.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-lati-10",
+      "code": "LATI 10",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-revelle-soc-science",
+      "heading": "LATI 10. Reading North by South: Latin American Studies and the US Liberation Movements (4)",
+      "name": "Reading North by South: Latin American Studies and the US Liberation Movements",
+      "description": "Studies connections between Latin American studies and US liberation, Indigenous, human-rights and cross-border movements.",
+      "description_hash": "159aa8cc1c93abe91771816a4c5b766e1c0aa4810fb9df49e686d08b0923dad9",
+      "observations": [
+        {
+          "heading": "LATI 10. Reading North by South: Latin American Studies and the US Liberation Movements (4)",
+          "description_hash": "159aa8cc1c93abe91771816a4c5b766e1c0aa4810fb9df49e686d08b0923dad9",
+          "section": "Courses",
+          "region": "Courses"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "Published condition: Students may not receive credit for LATI 100 and LATI 10."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-lati-courses"
+        ],
+        "locator": "LATI 10. Reading North by South: Latin American Studies and the US Liberation Movements (4); Courses",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Studies connections between Latin American studies and US liberation, Indigenous, human-rights and cross-border movements.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-lati-50",
+      "code": "LATI 50",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-revelle-soc-science",
+      "heading": "LATI 50. Introduction to Latin America (4)",
+      "name": "Introduction to Latin America",
+      "description": "Surveys Latin American society and culture through colonial legacies, development, gender, popular culture and political change.",
+      "description_hash": "95c96240d103aa8f488cd96cfd3294c9303dcfc724df010e44baa8751daf4014",
+      "observations": [
+        {
+          "heading": "LATI 50. Introduction to Latin America (4)",
+          "description_hash": "95c96240d103aa8f488cd96cfd3294c9303dcfc724df010e44baa8751daf4014",
+          "section": "Courses",
+          "region": "Courses"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-lati-courses"
+        ],
+        "locator": "LATI 50. Introduction to Latin America (4); Courses",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Surveys Latin American society and culture through colonial legacies, development, gender, popular culture and political change.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-mcwp-40",
+      "code": "MCWP 40",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "MCWP 40. Critical Writing (4)",
+      "name": "Critical Writing",
+      "description": "Introduces university argument and analysis through close reading, iterative writing and individual conferences.",
+      "description_hash": "958537ff92d5d7173eb1da83b65122f1755d018f869ee5aa99ffa24c438c705d",
+      "observations": [
+        {
+          "heading": "MCWP 40. Critical Writing (4)",
+          "description_hash": "958537ff92d5d7173eb1da83b65122f1755d018f869ee5aa99ffa24c438c705d",
+          "section": "Courses",
+          "region": "Courses"
+        }
+      ],
+      "observed_prerequisites": "satisfaction of Entry Level Writing Requirement.",
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "Published condition: First course of sequence in university reading and writing which satisfies the Muir College graduation requirement in writing.",
+        "Published condition: Required of all Muir College first-year students and of transfer students who have not completed a comparable course elsewhere.",
+        "Published condition: Grades of C or higher are required for prerequisites.",
+        "Published condition: Students must take MCWP 40 for a letter grade to count toward the Muir College writing requirement.",
+        "Published condition: Students may receive credit for one of the following: MCWP 40, MCWP 40R, MCWP 40C, or MCWP 40CR."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-mcwp-courses"
+        ],
+        "locator": "MCWP 40. Critical Writing (4); Courses",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Introduces university argument and analysis through close reading, iterative writing and individual conferences.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-mcwp-40cr",
+      "code": "MCWP 40CR",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "MCWP 40CR. CritWrit: Climate Change (4)",
+      "name": "CritWrit: Climate Change",
+      "description": "Develops argument and analytical writing through climate-change topics in synchronous online instruction.",
+      "description_hash": "9c8996777f9c35b4fe531ba2b0981746fe10afd0628e205e5495d5e945dab09c",
+      "observations": [
+        {
+          "heading": "MCWP 40CR. CritWrit: Climate Change (4)",
+          "description_hash": "9c8996777f9c35b4fe531ba2b0981746fe10afd0628e205e5495d5e945dab09c",
+          "section": "Courses",
+          "region": "Courses"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "Published condition: Online version of the first course of sequence which satisfies the Muir College graduation requirement in writing.",
+        "Published condition: Required of all Muir College first-year students and of transfer students who have not completed a comparable course elsewhere.",
+        "Published condition: Satisfies the Jane Teranes Climate Change Education Requirement.",
+        "Published condition: This class is held synchronously online.",
+        "Published condition: Grades of C or higher are required for prerequisites.",
+        "Published condition: Students must take MCWP 40CR for a letter grade to count toward the Muir College writing requirement.",
+        "Published condition: Students may receive credit for one of the following: MCWP 40, MCWP 40R, MCWP 40C, or MCWP 40CR.",
+        "Published condition: This is a distance education course.",
+        "This exact online variant has no labeled prerequisite clause. Preparation from the separately described face-to-face variant is not silently copied; grade/requirement conditions printed here remain recorded.",
+        "The printed climate-education satisfaction statement is conditional course applicability, not a full-degree audit."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-mcwp-courses"
+        ],
+        "locator": "MCWP 40CR. CritWrit: Climate Change (4); Courses",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Develops argument and analytical writing through climate-change topics in synchronous online instruction.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-mcwp-40r",
+      "code": "MCWP 40R",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "MCWP 40R. Critical Writing (4)",
+      "name": "Critical Writing",
+      "description": "Introduces critical university reading and writing through synchronous online analysis, revision and conferences.",
+      "description_hash": "01357ea60c99310c4ce6a24d9a929bf720e0d1ba09ba585d35e1705d22c45a81",
+      "observations": [
+        {
+          "heading": "MCWP 40R. Critical Writing (4)",
+          "description_hash": "01357ea60c99310c4ce6a24d9a929bf720e0d1ba09ba585d35e1705d22c45a81",
+          "section": "Courses",
+          "region": "Courses"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "Published condition: Online version of the first course of sequence in university reading and writing which satisfies the Muir College graduation requirement in writing.",
+        "Published condition: Required of all Muir College first-year students and of transfer students who have not completed a comparable course elsewhere.",
+        "Published condition: This class is held synchronously online.",
+        "Published condition: Grades of C or higher are required for prerequisites.",
+        "Published condition: Must take MCWP 40R for a letter grade for the Muir College writing requirement.",
+        "Published condition: Credit given for only one of the following: MCWP 40, MCWP 40R, MCWP 40C, or MCWP 40CR.",
+        "Published condition: This is a distance education course.",
+        "This exact online variant has no labeled prerequisite clause. Preparation from the separately described face-to-face variant is not silently copied; grade/requirement conditions printed here remain recorded."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-mcwp-courses"
+        ],
+        "locator": "MCWP 40R. Critical Writing (4); Courses",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Introduces critical university reading and writing through synchronous online analysis, revision and conferences.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-mcwp-50",
+      "code": "MCWP 50",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "MCWP 50. Critical Writing (4)",
+      "name": "Critical Writing",
+      "description": "Develops advanced academic argument and analysis through close reading, revision and individual feedback.",
+      "description_hash": "c38ad85d9e3a6f8795a8b357c6903e44498efcbc7f26e8140763ac644d039f58",
+      "observations": [
+        {
+          "heading": "MCWP 50. Critical Writing (4)",
+          "description_hash": "c38ad85d9e3a6f8795a8b357c6903e44498efcbc7f26e8140763ac644d039f58",
+          "section": "Courses",
+          "region": "Courses"
+        }
+      ],
+      "observed_prerequisites": "satisfaction of the MCWP 40 requirement or completion of IGETC.",
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "Published condition: Second course of sequence in reading and writing which satisfies the Muir College graduation requirement in writing.",
+        "Published condition: Required of all Muir College first-year students and of transfer students.",
+        "Published condition: Students will not receive credit for both MCWP 50 and MCWP 50R.",
+        "Published condition: Must be taken for a letter grade to satisfy the Muir College writing requirement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-mcwp-courses"
+        ],
+        "locator": "MCWP 50. Critical Writing (4); Courses",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Develops advanced academic argument and analysis through close reading, revision and individual feedback.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-mcwp-50r",
+      "code": "MCWP 50R",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "MCWP 50R. Critical Writing (4)",
+      "name": "Critical Writing",
+      "description": "Develops advanced academic argument and analysis through synchronous online reading, writing and revision.",
+      "description_hash": "7f967f0258a7bc98193cac20c11d847dd628f18470e829725167cb28ab248cac",
+      "observations": [
+        {
+          "heading": "MCWP 50R. Critical Writing (4)",
+          "description_hash": "7f967f0258a7bc98193cac20c11d847dd628f18470e829725167cb28ab248cac",
+          "section": "Courses",
+          "region": "Courses"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "Published condition: Online version of the second course of sequence in reading and writing which satisfies the Muir College graduation requirement in writing.",
+        "Published condition: Required of all Muir College first-year students and of transfer students.",
+        "Published condition: This class is held synchronously online.",
+        "Published condition: Students will not receive credit for both MCWP 50 and MCWP 50R.",
+        "Published condition: Must be taken for a letter grade to satisfy the Muir College writing requirement.",
+        "Published condition: This is a distance education course.",
+        "This exact online variant has no labeled prerequisite clause. Preparation from the separately described face-to-face variant is not silently copied; grade/requirement conditions printed here remain recorded."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-mcwp-courses"
+        ],
+        "locator": "MCWP 50R. Critical Writing (4); Courses",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Develops advanced academic argument and analysis through synchronous online reading, writing and revision.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-mgt-16",
+      "code": "MGT 16",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "MGT 16. Personal Ethics at Work (4)",
+      "name": "Personal Ethics at Work",
+      "description": "Examines ethical choices in professional and personal life, including privacy, disclosure, confidentiality and workplace relationships.",
+      "description_hash": "3bd0c5b7dfa915723efa45b7a271402d8a018b82ec5ea7e0e28c36776a66ec85",
+      "observations": [
+        {
+          "heading": "MGT 16. Personal Ethics at Work (4)",
+          "description_hash": "3bd0c5b7dfa915723efa45b7a271402d8a018b82ec5ea7e0e28c36776a66ec85",
+          "section": "Lower-Division Undergraduate Courses",
+          "region": "Lower-Division Undergraduate Courses"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-mgt-courses"
+        ],
+        "locator": "MGT 16. Personal Ethics at Work (4); Lower-Division Undergraduate Courses",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Examines ethical choices in professional and personal life, including privacy, disclosure, confidentiality and workplace relationships.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-mgt-166",
+      "code": "MGT 166",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-sixth-ge-pdf",
+      "heading": "MGT 166. Business Ethics and Corporate Responsibility (4)",
+      "name": "Business Ethics and Corporate Responsibility",
+      "description": "Examines organizational ethics, leadership and corporate responsibility in international and product-life-cycle contexts.",
+      "description_hash": "4ffab810f76e661c56d1cd5af09cf0ec6b361975f0602fda0dc7e4764a831821",
+      "observations": [
+        {
+          "heading": "MGT 166. Business Ethics and Corporate Responsibility (4)",
+          "description_hash": "4ffab810f76e661c56d1cd5af09cf0ec6b361975f0602fda0dc7e4764a831821",
+          "section": "Upper-Division Undergraduate Courses",
+          "region": "Upper-Division Undergraduate Courses"
+        }
+      ],
+      "observed_prerequisites": "upper-division standing.",
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-mgt-courses"
+        ],
+        "locator": "MGT 166. Business Ethics and Corporate Responsibility (4); Upper-Division Undergraduate Courses",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Examines organizational ethics, leadership and corporate responsibility in international and product-life-cycle contexts.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-mgt-3",
+      "code": "MGT 3",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "MGT 3. Quantitative Methods in Business (4)",
+      "name": "Quantitative Methods in Business",
+      "description": "Teaches probability, statistical inference, regression and optimization for management decisions using formulas and spreadsheets.",
+      "description_hash": "2284f3024f31dcc85323f4c88ace801e04e1275bb1dfe39154769ba6cebbaa29",
+      "observations": [
+        {
+          "heading": "MGT 3. Quantitative Methods in Business (4)",
+          "description_hash": "2284f3024f31dcc85323f4c88ace801e04e1275bb1dfe39154769ba6cebbaa29",
+          "section": "Lower-Division Undergraduate Courses",
+          "region": "Lower-Division Undergraduate Courses"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "mathematics",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-mgt-courses"
+        ],
+        "locator": "MGT 3. Quantitative Methods in Business (4); Lower-Division Undergraduate Courses",
+        "rationale": "The description explicitly teaches statistical inference, probability, regression and optimization; managerial examples do not change that mathematical focus. Teaches probability, statistical inference, regression and optimization for management decisions using formulas and spreadsheets.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-reli-1",
+      "code": "RELI 1",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "RELI 1. Introduction to Religion (4)",
+      "name": "Introduction to Religion",
+      "description": "Introduces interpretive approaches to religion through texts, artifacts and practices.",
+      "description_hash": "f36e0774f8609ad935944d8e84d7718a601b180696c00fcfa4b79389e1f1cba4",
+      "observations": [
+        {
+          "heading": "RELI 1. Introduction to Religion (4)",
+          "description_hash": "f36e0774f8609ad935944d8e84d7718a601b180696c00fcfa4b79389e1f1cba4",
+          "section": "Courses",
+          "region": "Courses"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-reli-courses"
+        ],
+        "locator": "RELI 1. Introduction to Religion (4); Courses",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Introduces interpretive approaches to religion through texts, artifacts and practices.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-reli-2",
+      "code": "RELI 2",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "RELI 2. Comparative World Religions (4)",
+      "name": "Comparative World Religions",
+      "description": "Compares major religious traditions with attention to contemporary beliefs and practices.",
+      "description_hash": "34dbe304d2ead29039bf9a4e334eded0566110cc3789b919e48c9f6daf784b78",
+      "observations": [
+        {
+          "heading": "RELI 2. Comparative World Religions (4)",
+          "description_hash": "34dbe304d2ead29039bf9a4e334eded0566110cc3789b919e48c9f6daf784b78",
+          "section": "Courses",
+          "region": "Courses"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-reli-courses"
+        ],
+        "locator": "RELI 2. Comparative World Religions (4); Courses",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Compares major religious traditions with attention to contemporary beliefs and practices.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-reli-3",
+      "code": "RELI 3",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "RELI 3. Technoscience and Religion (4)",
+      "name": "Technoscience and Religion",
+      "description": "Examines social relationships between religion and scientific-technological practices across fields.",
+      "description_hash": "75192a08ea99db0c5439e330334abfc4716570198cf45714ed98daf7ce7c4b15",
+      "observations": [
+        {
+          "heading": "RELI 3. Technoscience and Religion (4)",
+          "description_hash": "75192a08ea99db0c5439e330334abfc4716570198cf45714ed98daf7ce7c4b15",
+          "section": "Courses",
+          "region": "Courses"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-reli-courses"
+        ],
+        "locator": "RELI 3. Technoscience and Religion (4); Courses",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Examines social relationships between religion and scientific-technological practices across fields.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-syn-100",
+      "code": "SYN 100",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-seventh-transfer",
+      "heading": "SYN 100. Engaging with a Changing Planet (4)",
+      "name": "Engaging with a Changing Planet",
+      "description": "Develops a collaborative project addressing a section-specific climate-related global problem; disciplinary content varies by section.",
+      "description_hash": "fe7cb434de806b8f9fa98a45b20637347fe98b966efe1b674c919a51fe802f14",
+      "observations": [
+        {
+          "heading": "SYN 100. Engaging with a Changing Planet (4)",
+          "description_hash": "fe7cb434de806b8f9fa98a45b20637347fe98b966efe1b674c919a51fe802f14",
+          "section": "Upper Division",
+          "region": "Upper Division"
+        }
+      ],
+      "observed_prerequisites": "restricted to Seventh College students only, upper-division standing, completion of SYN 1/1R and SYN 2/2R, must be taken for a letter grade to count toward Seventh College general-education requirements.",
+      "credits": 4,
+      "category": "other",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "The exact prerequisite field includes Seventh College membership, upper-division standing, SYN 1/1R and SYN 2/2R completion, and letter grading for the college requirement; no applicable discipline can be inferred for every section-specific team project."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-syn-courses"
+        ],
+        "locator": "SYN 100. Engaging with a Changing Planet (4); Upper Division",
+        "rationale": "The actual description specifies a collaborative climate-related project but lets disciplinary content vary by section. Neither the project format nor climate context establishes one primary subject category without the actual section topic.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-usp-103",
+      "code": "USP 103",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-degree-policies",
+      "heading": null,
+      "name": null,
+      "description": null,
+      "description_hash": null,
+      "observations": [],
+      "observed_prerequisites": null,
+      "credits": null,
+      "category": "other",
+      "approved_for_integration": false,
+      "disposition": "no_current_heading",
+      "notes": [
+        "No exact current heading was found in the reviewed 2026\u201327 chapter. The original identifier remains a separate pool observation; no discontinuation, successor or alias is inferred."
+      ]
+    },
+    {
+      "id": "ucsd-usp-106",
+      "code": "USP 106",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-degree-policies",
+      "heading": "USP 106. The History of Race and Ethnicity in American Cities (4)",
+      "name": "The History of Race and Ethnicity in American Cities",
+      "description": "Studies racial and ethnic urban history through immigration, empowerment, social movements and segregation policy.",
+      "description_hash": "ddbc3ffa57b30ba81d1a654bf839929e8059e5134ae60e9e1b09a9cc8de0c519",
+      "observations": [
+        {
+          "heading": "USP 106. The History of Race and Ethnicity in American Cities (4)",
+          "description_hash": "ddbc3ffa57b30ba81d1a654bf839929e8059e5134ae60e9e1b09a9cc8de0c519",
+          "section": "Upper Division",
+          "region": "Upper Division"
+        }
+      ],
+      "observed_prerequisites": "upper-division standing or consent of instructor.",
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-usp-courses"
+        ],
+        "locator": "USP 106. The History of Race and Ethnicity in American Cities (4); Upper Division",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Studies racial and ethnic urban history through immigration, empowerment, social movements and segregation policy.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-usp-15",
+      "code": "USP 15",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "USP 15. Applied Urban Economics for Planning and Development (4)",
+      "name": "Applied Urban Economics for Planning and Development",
+      "description": "Applies economic analysis to planning and development problems involving land, housing and zoning.",
+      "description_hash": "c89dae7f92edc220c6dcdb8d69d0535e56b0c7b2f7d7bbe4e334a3d847ab0b7f",
+      "observations": [
+        {
+          "heading": "USP 15. Applied Urban Economics for Planning and Development (4)",
+          "description_hash": "c89dae7f92edc220c6dcdb8d69d0535e56b0c7b2f7d7bbe4e334a3d847ab0b7f",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "applications",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [
+        "Published condition: Economic analysis will be applied to important issues that planners and developers must deal with, such as land markets, housing, and zoning."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-usp-courses"
+        ],
+        "locator": "USP 15. Applied Urban Economics for Planning and Development (4); Lower Division",
+        "rationale": "The actual description teaches substantive domain knowledge or applied practice. Applies economic analysis to planning and development problems involving land, housing and zoning.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-usp-167",
+      "code": "USP 167",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-degree-policies",
+      "heading": "USP 167. History of New York City (4)",
+      "name": "History of New York City",
+      "description": "Traces New York City\u2019s development and its cultural role in American identity from colonial times onward.",
+      "description_hash": "29121e3f08d9bf2c98890f2837741328b04b01d9e806b9536c8baf76727bca76",
+      "observations": [
+        {
+          "heading": "USP 167. History of New York City (4)",
+          "description_hash": "29121e3f08d9bf2c98890f2837741328b04b01d9e806b9536c8baf76727bca76",
+          "section": "Upper Division",
+          "region": "Upper Division"
+        }
+      ],
+      "observed_prerequisites": "upper-division standing or consent of instructor.",
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-usp-courses"
+        ],
+        "locator": "USP 167. History of New York City (4); Upper Division",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Traces New York City\u2019s development and its cultural role in American identity from colonial times onward.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-usp-25",
+      "code": "USP 25",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "USP 25. Real Estate and Development Principles and Analysis (4)",
+      "name": "Real Estate and Development Principles and Analysis",
+      "description": "Develops real-estate planning, valuation and financing decisions through applied problems and industry software.",
+      "description_hash": "3986f4c80cc5e9c9d28014d98045a85158bbebd254a98ad7fc17ce2e3b041764",
+      "observations": [
+        {
+          "heading": "USP 25. Real Estate and Development Principles and Analysis (4)",
+          "description_hash": "3986f4c80cc5e9c9d28014d98045a85158bbebd254a98ad7fc17ce2e3b041764",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "applications",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-usp-courses"
+        ],
+        "locator": "USP 25. Real Estate and Development Principles and Analysis (4); Lower Division",
+        "rationale": "The actual description teaches substantive domain knowledge or applied practice. Develops real-estate planning, valuation and financing decisions through applied problems and industry software.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-usp-4",
+      "code": "USP 4",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "USP 4. Introduction to Geographic Information Systems (4)",
+      "name": "Introduction to Geographic Information Systems",
+      "description": "Introduces GIS-based spatial decision making through data organization, demographic mapping and geocoding.",
+      "description_hash": "6dbb37a6fb5bae8cef66d093cedb5a8982611fc46d10dad35eff7005c5814d45",
+      "observations": [
+        {
+          "heading": "USP 4. Introduction to Geographic Information Systems (4)",
+          "description_hash": "6dbb37a6fb5bae8cef66d093cedb5a8982611fc46d10dad35eff7005c5814d45",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "applications",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-usp-courses"
+        ],
+        "locator": "USP 4. Introduction to Geographic Information Systems (4); Lower Division",
+        "rationale": "The actual description teaches substantive domain knowledge or applied practice. Introduces GIS-based spatial decision making through data organization, demographic mapping and geocoding.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-usp-5",
+      "code": "USP 5",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "USP 5. Introduction to the Real Estate and Development Process (4)",
+      "name": "Introduction to the Real Estate and Development Process",
+      "description": "Introduces real-estate development practice through finance, law, valuation, marketing, management and taxation.",
+      "description_hash": "9fd85b9f271b29d475a99a622f80eefceff7da35cfab73cb646a3eb48cb325f2",
+      "observations": [
+        {
+          "heading": "USP 5. Introduction to the Real Estate and Development Process (4)",
+          "description_hash": "9fd85b9f271b29d475a99a622f80eefceff7da35cfab73cb646a3eb48cb325f2",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "applications",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-usp-courses"
+        ],
+        "locator": "USP 5. Introduction to the Real Estate and Development Process (4); Lower Division",
+        "rationale": "The actual description teaches substantive domain knowledge or applied practice. Introduces real-estate development practice through finance, law, valuation, marketing, management and taxation.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-usp-6",
+      "code": "USP 6",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "USP 6. Introduction to Global Architecture (4)",
+      "name": "Introduction to Global Architecture",
+      "description": "Studies global architectural history through the circulation of built forms, ideas and power.",
+      "description_hash": "ef591d1ab2ec2115eb1734d994323e5bbd0811c67b3a2cac5877df614b7c30d3",
+      "observations": [
+        {
+          "heading": "USP 6. Introduction to Global Architecture (4)",
+          "description_hash": "ef591d1ab2ec2115eb1734d994323e5bbd0811c67b3a2cac5877df614b7c30d3",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "human_context",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-usp-courses"
+        ],
+        "locator": "USP 6. Introduction to Global Architecture (4); Lower Division",
+        "rationale": "The actual description emphasizes historical, social, philosophical, cultural or linguistic interpretation and communication. Studies global architectural history through the circulation of built forms, ideas and power.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "ucsd-usp-7",
+      "code": "USP 7",
+      "listed_name": null,
+      "listed_source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-muir-themes",
+      "heading": "USP 7. Introduction to Climate Change Planning and Policy (4)",
+      "name": "Introduction to Climate Change Planning and Policy",
+      "description": "Studies practical urban climate mitigation and adaptation through planning, design and policy examples.",
+      "description_hash": "7e1b5ffe813e7fa5f91564338819868b0d881da0227491c7d311d994e8b742d7",
+      "observations": [
+        {
+          "heading": "USP 7. Introduction to Climate Change Planning and Policy (4)",
+          "description_hash": "7e1b5ffe813e7fa5f91564338819868b0d881da0227491c7d311d994e8b742d7",
+          "section": "Lower Division",
+          "region": "Lower Division"
+        }
+      ],
+      "observed_prerequisites": null,
+      "credits": 4,
+      "category": "applications",
+      "approved_for_integration": true,
+      "disposition": "reviewed",
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-usp-courses"
+        ],
+        "locator": "USP 7. Introduction to Climate Change Planning and Policy (4); Lower Division",
+        "rationale": "The actual description teaches substantive domain knowledge or applied practice. Studies practical urban climate mitigation and adaptation through planning, design and policy examples.",
+        "candidate_categories": []
+      }
+    }
+  ]
+}
