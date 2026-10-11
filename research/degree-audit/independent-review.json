@@ -833,13 +833,14 @@
         "The explicit Prescribed Courses table, not the suggested plan, establishes the fixed set. Engineering has five initial plus twelve C-minimum rows; IST has nine C-minimum rows.",
         "Actual descriptions distinguish algorithm foundations (A-I 305), infrastructure (A-I 410), mathematical optimization (AIE 355), responsible-AI social/ethical analysis (A-I 341W) and domain physics.",
         "A-I 370 expressly requires CMPSC 132, STAT 200 or DS 200, and concurrent DS 305/CMPSC 465/CMPSC 462 plus STAT 401. These enrollment conditions are not silently added to fixed degree obligations.",
-        "160 is the existing named code-observation union, not 160 distinct underlying offerings. The technical and ETI lists explicitly slash-pair six identities; their alias handling requires correction. Commonwealth Business Fundamentals is not the University Park route. Open CYBER/ROTC predicates do not create invented course IDs."
+        "160 is the existing named code-observation union, not 160 distinct underlying offerings. The technical and ETI lists explicitly slash-pair six identities; their alias handling requires correction. Commonwealth Business Fundamentals is not the University Park route. Open CYBER/ROTC predicates do not create invented course IDs.",
+        "Follow-up reciprocal course descriptions verified the first four slash pairs as cross-lists. IST/ETI 301 and302 slash notation alone does not establish identical courses; those two pairs remain unmerged pending evidence."
       ],
       "remaining": [
         "A-I 370 enrollment conditions do not match all routes supplied by the degree table.",
         "Senate policy 83-80 has a pending-implementation revision notice; applicable cohort remains unresolved.",
         "Independent whole-degree elective taxonomy and policy certification is unfinished.",
-        "Six published cross-list pairs need explicit identity representation; reported to primary owner and coordinator.",
+        "Four reciprocally verified cross-list pairs need explicit identity representation; two IST/ETI slash pairs remain unproven and must not be merged.",
         "Mixed capstone/research route applicability differs between table and plan."
       ],
       "result": "Fixed sets and source-specific categories verified; full-degree second pass partial.",
@@ -965,6 +966,74 @@
         "Remaining 32 course descriptions have not received this independent second pass."
       ],
       "result": "Mapped identity partition, zero-credit facts and selected subject/conflict checks verified; full-degree second pass remains partial."
+    },
+    {
+      "program_id": "cmu-bs-ai",
+      "institution_id": "carnegie-mellon-university",
+      "reviewed_commit": "2a80350",
+      "primary_audit": "research/degree-audit/cmu.json",
+      "second_pass_status": "partial",
+      "full_degree_verified": false,
+      "verified_scope": "All 13 mapped fixed identities, exact fixed SCS descriptions and four plainly required mathematics rows; not full option taxonomy or university policies.",
+      "sources": [
+        {
+          "url": "https://coursecatalog.web.cmu.edu/schools-colleges/schoolofcomputerscience/artificialintelligence/artificial-intelligence-bs/",
+          "catalog_year": "2026-2027",
+          "locator": "All of the following math/CS tables; Modern Regression; seminar/Core rows",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independent robots-aware fetch"
+        },
+        {
+          "url": "https://coursecatalog.web.cmu.edu/schools-colleges/schoolofcomputerscience/courses/",
+          "catalog_year": "2026-2027",
+          "locator": "15-122/150/210/213/251 and 07-128/280/380 exact descriptions",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independent robots-aware fetch"
+        }
+      ],
+      "expected_course_ids": {
+        "required": [
+          "cmu-15-122",
+          "cmu-15-150",
+          "cmu-15-210",
+          "cmu-15-213",
+          "cmu-15-251",
+          "cmu-07-280",
+          "cmu-07-380",
+          "cmu-07-128",
+          "cmu-99-101",
+          "cmu-21-120",
+          "cmu-21-122",
+          "cmu-21-241",
+          "cmu-36-401"
+        ],
+        "options": null,
+        "unresolved": null
+      },
+      "expected_profile": {
+        "required": {
+          "count": 13,
+          "categories": {
+            "foundations": 4,
+            "mathematics": 4,
+            "systems": 1,
+            "ai_ml": 2,
+            "other": 2
+          }
+        },
+        "options": null,
+        "unresolved": null
+      },
+      "findings": [
+        "Independent source reread found four math rows under an explicit All of the following heading incorrectly stored as singleton choices: 21-120,21-122,21-241 and36-401. Primary repair 2a80350 changes only these required rows; prior fixed9 is superseded.",
+        "15-151 conditionally permits21-127; multivariable calculus and probability retain real alternatives. Conditional preparation15-112 remains contextual, not automatically required of every student.",
+        "15-213 concerns execution, storage and communication infrastructure; four other fixedCS courses concern programming, algorithms and computing theory.07-280/380 concernAI/ML. Seminar07-128 andCore99-101 remain explicitly unclassified.",
+        "Four added math subjects are supported by precise degree-table titles; units remain10,10,11 and9 rather than converted credit hours."
+      ],
+      "remaining": [
+        "Remaining option classifications, Core99-101 detailed subject evidence and university-policy second pass remain unfinished."
+      ],
+      "result": "Independent counterexample corrected and13-course fixed aggregate verified; full-degree second pass remains partial."
     }
   ],
   "cross_program_screen": [

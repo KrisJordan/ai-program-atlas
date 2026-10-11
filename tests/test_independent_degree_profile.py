@@ -19,7 +19,7 @@ def load(pid):
 
 def only_course(p,cid):
     """Isolate a known identity to test its graph role, independent of taxonomy."""
-    return {**p,'courses':[c for c in p['courses'] if c['id']==cid]}
+    return {**p,'courses':[c for c in p['courses'] if c['id']==cid], 'course_identity_groups':[]}
 
 
 def test_case_manual_fixed_sets_and_intro_route_are_not_interchangeable():
@@ -193,3 +193,16 @@ def test_rit_actual_zero_credits_and_context_do_not_create_elective_memberships(
         for g in p['requirements']:
             if any(term in g['title'].lower() for term in ['global perspective','immersion','wellness','open elective']):
                 assert cid not in g['course_ids']
+
+
+def test_cmu_plain_required_math_singletons_are_not_optional_menus():
+    p=load('cmu-bs-ai');profile=requirement_profile(p)
+    expected={'foundations':4,'mathematics':4,'systems':1,'ai_ml':2,'other':2}
+    assert profile['required']['count']==13
+    assert profile['required']['categories']=={k:expected.get(k,0) for k in profile['required']['categories']}
+    for code in ['21-120','21-122','21-241','36-401']:
+        assert requirement_profile(only_course(p,'cmu-'+code))['required']['count']==1
+    assert requirement_profile(only_course(p,'cmu-15-112'))['unresolved']['count']==1
+    for code in ['15-151','21-127']:
+        assert requirement_profile(only_course(p,'cmu-'+code))['options']['count']==1
+    assert next(c for c in p['courses'] if c['id']=='cmu-15-213')['category']=='systems'
