@@ -59,3 +59,6 @@ register_language(SOURCES, SOURCE_PARSERS)
 
 from atlas.adapters.rit_anthropology_sociology_course_reviews import register as register_anthropology_sociology
 register_anthropology_sociology(SOURCES, SOURCE_PARSERS)
+
+from atlas.adapters.rit_ecology_gender_integration import register as register_ecology_gender
+register_ecology_gender(SOURCES, SOURCE_PARSERS)

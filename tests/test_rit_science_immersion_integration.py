@@ -25,9 +25,10 @@ def test_science_preparation_is_context_and_local_core_is_optional():
     assert 'PHYS-IM' in c['PHYS-315']['prerequisites']
     assert c['CHMG-131']['prerequisites'] is None
     assert 'CHMO-235' in c['CHMO-231']['prerequisites']
-    assert 'CHEM-531' not in c and 'PHYS-251' not in c and 'BIOL-575' not in c
+    assert PID+'-biol-575' not in r['cellular-biology-electives']['course_ids']
+    assert PID+'-phys-251' not in r['physics-electives']['course_ids']
     p=requirement_profile(d)
-    assert [p[k]['count'] for k in ['required','options','unresolved']]==[23,262,13]
+    assert [p[k]['count'] for k in ['required','options','unresolved']]==[23,313,13]
     assert d['curriculum_status']=='partial'
 
 
@@ -39,4 +40,5 @@ def test_registered_science_sources_are_only_integrated_current_routes():
     assert set(a.SOURCES)<={s['url'] for s in d['sources']}
     for slug in ['biology-cellular-and-molecular-immersion','physics-immersion','astronomy-immersion','chemistry-immersion']:
         assert 'https://www.rit.edu/study/'+slug in a.SOURCE_PARSERS
-    assert 'https://www.rit.edu/study/climate-change-interdisciplinary-problem-immersion' not in a.SOURCE_PARSERS
+    assert 'https://www.rit.edu/study/climate-change-interdisciplinary-problem-immersion' in a.SOURCE_PARSERS
+    assert 'https://www.rit.edu/study/biology-ecology-and-evolution-immersion' in a.SOURCE_PARSERS

@@ -61,7 +61,7 @@ def test_manual_scope_roles_and_exact_profile():
     assert '1055-359' in c['MATH-412']['prerequisites']
     assert not d.get('course_identity_groups')
     profile=requirement_profile(d)
-    assert [profile[k]['count'] for k in ('required','options','unresolved')]==[23,262,13]
+    assert [profile[k]['count'] for k in ('required','options','unresolved')]==[23,313,13]
     ledger=json.loads((ROOT/'research/degree-audit/buffalo-delaware-rit.json').read_text())
     row=next(x for x in ledger['programs'] if x['program_id']==PID)
     for k in ('required','options','unresolved'):

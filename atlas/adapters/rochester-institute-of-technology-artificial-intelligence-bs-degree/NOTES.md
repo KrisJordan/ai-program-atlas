@@ -2,7 +2,7 @@
 
 Reviewed 2026-10-11. The primary degree audit is **in progress**, not complete or
 wholly inaccessible. The current reviewed graph has 23 fixed course identities,
-262 options and 13 unresolved/context identities (three advising-only and ten preparation-only). The 2026–2027 public
+313 options and 13 unresolved/context identities (three advising-only and ten preparation-only). The 2026–2027 public
 study curriculum states 122 semester hours, six core alternative pairs and two AI
 electives across four options (five course codes, including a robotics pair).
 Two zero-credit co-op placements reuse one course identity. Uncoded GE,
@@ -11,7 +11,7 @@ requirements are represented without fabricated course membership.
 
 All 40 current public course popups were read. Their credits and 28 prerequisite
 or expectation statements are mapped; absent prerequisite fields stay unknown.
-The 18 represented immersion branches supply 255 additional actual-description records. Every represented course has a source-specific taxonomy review, including three
+The 24 represented immersion branches supply 306 additional actual-description records. Every represented course has a source-specific taxonomy review, including three
 advising-only identities for which current descriptions are unavailable. Exact
 profile sets and role corrections are in the RIT row of
 `research/degree-audit/buffalo-delaware-rit.json`.
@@ -49,7 +49,7 @@ current section syllabus or a program outcome. See the separate source review
   retried. The linked science list explicitly dates to March 2013 and is not used
   as a current pool.
 - Public immersion curricula do render in an ordinary browser. The directory
-  has 77 immersion links; all local route rules are now reviewed. Eighteen branches
+  has 77 immersion links; all local route rules are now reviewed. Twenty-four branches
   have represented course records; the full named queue still has 439 unread
   identifiers. No blanket catalog-access claim or full GE closure is justified.
 - The current AI sequence annotates MATH190 as Immersion3 and separately lists
@@ -141,8 +141,15 @@ Individual one-, three- and four-credit cards retain their published amounts. Th
 
 ## Language and anthropology/sociology integration — 2026-10-11
 
-The current graph contains 298 course identities: 23 fixed, 262 options and 13 context/preparation records; 295 actual descriptions are reviewed. Eight language routes and Archaeology, Cultural Anthropology and Sociology bring represented branches to 18. All 77 route rules are reviewed. Of 787 named identifiers, 269 have integrated descriptions, 76 are completed separate contributions awaiting graph integration, three are historical references and 439 remain unread. These are literal source identifiers, not certified alias-deduplicated offerings or the open Global Experience universe.
+The current graph contains 298 course identities: 23 fixed, 313 options and 13 context/preparation records; 295 actual descriptions are reviewed. Eight language routes and Archaeology, Cultural Anthropology and Sociology bring represented branches to 18. All 77 route rules are reviewed. Of 787 named identifiers, 269 have integrated descriptions, 76 are completed separate contributions awaiting graph integration, three are historical references and 439 remain unread. These are literal source identifiers, not certified alias-deduplicated offerings or the open Global Experience universe.
 
 Language routes preserve the whole three-consecutive-language OR two-consecutive-language-plus-culture selection, placement, exact native-speaker/home-major exclusions, and regional-topic/global-campus conditions. Sixteen beginning-language cards carry four credits, despite nominal nine-hour totals; no exact credit cap is invented. Chinese displayed 9+3 groups remain a substitution. Spanish HIST-130/135 retain both printed group memberships with applicability to consecutive-language progression unresolved. MLSP-301 retains conflicting formal and prose prerequisites; MLSP-310 retains its Corequisites label.
 
 The 107 actual language-route descriptions are human context under the explicit communication/culture taxonomy. Anthropology/sociology adds 46 human-context, two mathematics, two applications, six mixed and one source-inspected unclassified topic course. Similar ANTH/SOCI/INGS descriptions do not establish cross-list identity. Cultural Anthropology preserves the first ANTH-102 OR104 OR105 elective entry, and global-campus/topic restrictions remain local conditions. No course becomes universal AI core. Manual audits and classifications remain separate from rerunnable actual-content observers.
+
+
+## Ecology and five gender-study branches — 2026-10-11
+
+The current graph has 349 identities: 23 fixed, 313 options and 13 preparation/context records; 346 actual descriptions. Twenty-four local branches are represented. The named queue has 320 integrated actual descriptions, 25 reviewed contributions awaiting integration, three historical references and 439 unread identifiers. Whole-degree review remains in progress.
+
+Ecology/Evolution preserves BIOL-265 OR BIOL-240 plus two further electives; those two identities also appear in the elective pool, without permission to count a course twice. Four-credit ecology/anatomy cards, study-away applications/fees and permission conditions remain visible alongside nominal table totals. The five gender-study paths retain different required/choice groups, max-one introductory constraints where stated, relevant-topic conditions and the one specified upper-level elective rule. Women's and Gender Studies has a nine-hour selection row but no total row; that distinction remains. WGST-380 now has its actual popup identity, Gender and Political Thought. No repeated code is an inferred alias or additional fixed AI obligation.
