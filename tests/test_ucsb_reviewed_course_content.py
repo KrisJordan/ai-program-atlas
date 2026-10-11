@@ -41,7 +41,7 @@ def test_real_seed_exact_roles_and_limits():
     assert any('1–5' in note and '2–4' in note for note in d['notes'])
     assert c['CMPSC 41']['credits'] is None
     assert 'CMPSC 130A, CMPSC 165A, and CMPSC 165B' in c['CMPSC 188']['prerequisites']
-    assert 'recommended' in c['CMPSC 174A']['prerequisites']
+    assert 'recommended' in c['CMPSC 174A']['prerequisites'].lower()
     p=requirement_profile(d)
     assert [p[k]['count']for k in ['required','options','unresolved']]==[20,61,2]
     assert p['options']['categories']['systems']==12
@@ -59,7 +59,7 @@ def test_registered_parsers_observe_all_available_cached_pages():
         result=adapter.SOURCE_PARSERS[e['url']](html)
         assert result==adapter.SOURCE_PARSERS[e['url']](html)
         c=result['courses'][0]
-        if code not in {'CMPSC 153A', 'CMPSC 181', 'CMPSC 184', 'CMPSC 9', 'CMPSC 130A', 'CMPSC 130B', 'CMPSC 165A', 'CMPSC 165B', 'CMPSC 188'}:
+        if not courses[code]['source_id'].endswith('-catalog-2026'):
             assert all(c[k]==courses[code][k]for k in c)
         assert 'category_review'not in c
 
@@ -305,3 +305,18 @@ def test_all_represented_writing_versions_preserve_exact_alternatives():
     assert 'legal repeat' in c['WRIT 107WC']['prerequisites']
     assert c['WRIT 105CD']['category_review']['status']=='mixed'
     assert all(not any(i.startswith('ucsb-writ-')for i in g['course_ids']) for g in d['course_identity_groups'])
+
+
+def test_current_cs_options_keep_permission_alternatives_and_source_barrier():
+    d=json.loads(Path('data/programs/ucsb-ai-bs.json').read_text());c={x['code']:x for x in d['courses']}
+    assert 'no required-prerequisite field' in c['CMPSC 132']['prerequisites'].lower()
+    assert 'not a required prerequisite' in c['CMPSC 132']['prerequisites']
+    assert 'B or better' in c['CMPSC 134']['prerequisites']
+    assert 'or by consent of department' in c['CMPSC 172']['prerequisites']
+    assert 'Winter 2003-Summer 2021' in c['CMPSC 172']['prerequisites']
+    assert c['CMPSC 176C']['source_id'].endswith('-catalog-2026')
+    assert not c['CMPSC 177']['source_id'].endswith('-catalog-2026')
+    ledger=json.loads(Path('research/degree-audit/west-purdue-wpi.json').read_text())
+    audit=next(r for r in ledger['programs']if r['program_id']=='ucsb-ai-bs')
+    assert audit['status']=='in_progress' and 'downloaded856' in audit['accessible_work_remaining']
+    assert any(s['access_status']=='human_verification_challenge_not_bypassed'for s in audit['sources'])

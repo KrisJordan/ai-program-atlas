@@ -281,3 +281,24 @@ coding105CD record in this batch; no category or role totals change. The five
 online codes named by the college-specific Area A page still need exact local
 list/identity review, and hundreds of GE pool descriptions are still unread.
 Current-version review of these26 records does not certify those other branches.
+
+
+### Computing option versions and explicit verification barrier (2026-10-11)
+
+Nineteen additional current CS records were read in full through observed
+directory links. Their content confirms existing manual categories.132publishes
+recommended preparation but no required-prerequisite field; do not restate the
+older “none” observation as a current fact.134requires130B atB or better, and172
+explicitly permits departmental consent beyond its named-major restriction.
+Term-bounded190A/189A credit exclusions, legal-repeat clauses, concurrent routes
+and recommended preparation remain distinct. No required/option roles changed.
+
+Normal navigation to the observed current CMPSC177 link then presented a human-
+verification challenge. Work stopped without clicking Begin, solving a challenge
+or using another transport. Current177/178/180/185/186/192/196versions now have
+that concrete access barrier; their earlier public departmental descriptions
+remain version-limited evidence. Current189C/Dexact identities were absent from
+the prior bounded directory/search inspection, a separate source-identity gap.
+The already downloaded856-row GE export remains available for actual content
+review, so the overall degree audit remains in progress rather than hiding that
+accessible queue behind the new browser barrier.
