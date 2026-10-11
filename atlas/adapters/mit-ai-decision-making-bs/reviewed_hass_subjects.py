@@ -412,3 +412,49 @@ def observe_sts_titles(html):
     if not rows:
         raise ValueError('STS tier subject list missing')
     return rows
+
+
+def observe_ocw_syllabus(html):
+    """Read dated public OCW prose; never turn its schedule into current catalog rules."""
+    soup = BeautifulSoup(html, 'html.parser')
+    banner = soup.select_one('#course-banner')
+    main = soup.select_one('#course-main-content')
+    if banner is None or main is None:
+        raise ValueError('OCW course identity/content container missing')
+    parts = clean(banner.select_one('.course-number-term-detail')).split(' | ')
+    name = clean(banner.find('h1'))
+    if len(parts) != 3 or not re.fullmatch(r'(Fall|Spring|Summer|IAP) \d{4}', parts[1]) or not name:
+        raise ValueError('OCW code, term or title changed')
+    sections = {}
+    for heading in main.find_all(['h2', 'h3', 'h4']):
+        title = clean(heading).rstrip(':')
+        if title not in ['Description', 'Course Description', 'Course Overview', 'Course Summary', 'Prerequisites', 'Prerequisite']:
+            continue
+        content = []
+        for sibling in heading.next_siblings:
+            if getattr(sibling, 'name', None) in ['h2', 'h3', 'h4']:
+                break
+            if hasattr(sibling, 'get_text'):
+                content.append(clean(sibling))
+        sections[title] = clean(' '.join(content)) or None
+    description = next((sections[k] for k in ['Description', 'Course Description', 'Course Overview', 'Course Summary'] if sections.get(k)), None)
+    if not description:
+        raise ValueError('OCW syllabus actual description section missing')
+    return [dict(code=parts[0], name=name, term=parts[1], level=parts[2],
+                 description=description,
+                 prerequisites=sections.get('Prerequisites', sections.get('Prerequisite')),
+                 units=None)]
+
+
+def observe_minds_machines(html):
+    """Exact instructor page linked by MIT Philosophy's Spring2020 history."""
+    soup = BeautifulSoup(html, 'html.parser')
+    if clean(soup.find('h1')) != 'Minds and Machines (Spring 2020)':
+        raise ValueError('Minds and Machines dated course heading changed')
+    identity = soup.find('a', href='https://learning-modules.mit.edu/class/index.html?uuid=/course/24/sp20/24.09')
+    paragraph = next((p for p in soup.find_all('p') if clean(p).startswith('This course is an introduction to the central questions in philosophy of mind.')), None)
+    if identity is None or paragraph is None:
+        raise ValueError('Minds and Machines explicit code link or description changed')
+    return [dict(code='24.09', name='Minds and Machines', term='Spring 2020',
+                 description=clean(paragraph), prerequisites=None, units=None,
+                 identity_link=identity['href'])]

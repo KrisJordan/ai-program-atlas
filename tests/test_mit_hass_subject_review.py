@@ -215,7 +215,7 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']['description_reviewed_records']==181
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==205
     assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
         o=entry(code)['observations'][-1]
@@ -685,3 +685,69 @@ def test_department_followup_distinguishes_login_heading_and_approval_barriers()
     assert len(rejected)==1 and rejected[0]['url']=='https://stellar.mit.edu/S/course/24/sp19/24.903'
     assert 'not a publisher denial' in rejected[0]['reason']
     assert 'independent public' in report['remaining_action']
+
+
+def test_ocw_syllabus_guards_date_identity_description_and_prerequisite_semantics():
+    html='''<div id="course-banner"><span class="course-number-term-detail">24.235J | Spring 2012 | Undergraduate</span><h1>Philosophy of Law</h1></div><div id="course-main-content"><h3>Prerequisites</h3><p>One philosophy subject is recommended.</p><h3>Course Description</h3><p>Law, morality and responsibility.</p><h3>Grading</h3><p>Three essays.</p></div>'''
+    o=review.observe_ocw_syllabus(html)[0]
+    assert o['description']=='Law, morality and responsibility.'
+    assert o['prerequisites']=='One philosophy subject is recommended.'
+    assert o['term']=='Spring 2012' and o['units'] is None
+    with pytest.raises(ValueError,match='description'):
+        review.observe_ocw_syllabus(html.replace('Course Description','Resources'))
+    with pytest.raises(ValueError,match='term'):
+        review.observe_ocw_syllabus(html.replace('Spring 2012','Undated'))
+    absent=review.observe_ocw_syllabus(html.replace('<h3>Prerequisites</h3><p>One philosophy subject is recommended.</p>',''))[0]
+    assert absent['prerequisites'] is None
+
+
+def test_ocw_actual_manual_subjects_keep_mixed_content_and_historical_identity():
+    report=MANIFEST['ocw_philosophy_review']
+    assert report['directory_results_observed']==78
+    assert report['public_course_pages_read']==report['public_syllabi_read']==17
+    assert len(report['upgraded_record_ids'])==24
+    decision=entry('24.222')['observations'][-1]
+    assert decision['category']=='other' and decision['status']=='mixed'
+    assert decision['candidate_categories']==['mathematics','human_context']
+    assert decision['catalog_year']=='Spring 2008' and decision['credits'] is None
+    phonology=entry('24.901')['observations'][-1]
+    assert phonology['observed_name']=='Introduction to Phonology'
+    assert phonology['catalog_year']=='Spring 2026'
+    assert phonology['prerequisites']=='24.900 Introduction to Linguistics or 24.9000 Introduction to Linguistics'
+    assert entry('24.9000')['observations'][-1]['evidence_basis']=='official_title_only'
+    assert entry('24.130')['observations'][-1]['evidence_basis']=='official_title_only'
+    assert entry('24.120')['observations'][-1]['observed_code']=='24.120'
+    assert entry('24.120')['observations'][-1]['catalog_year']=='Spring 2009'
+    assert 'recommended' in entry('24.235J/17.021J')['observations'][-1]['prerequisites']
+    assert entry('24.02')['observations'][-1]['prerequisites'] is None
+    assert entry('24.03')['observations'][-1]['prerequisites']=='None'
+
+
+def test_actual_ocw_observations_replay_and_reject_changed_term_or_prerequisite():
+    index=Path('/tmp/mit-hass-subjects/ocw-philosophy-syllabus-index.json')
+    if not index.exists():
+        pytest.skip('Optional ignored public OCW captures')
+    seen=0
+    for source in json.loads(index.read_text()):
+        path=index.parent/('ocw-'+source['key']+'-syllabus.html')
+        if not path.exists():
+            pytest.skip('Optional ignored public OCW syllabus')
+        o=review.observe_ocw_syllabus(path.read_text())[0]
+        for cid,row in MANIFEST['courses'].items():
+            e=next((e for e in row['observations'] if e['source_url']==source['url']),None)
+            if e is None:continue
+            course=dict(id=cid,code=row['listed_code'],name=row['listed_name'],source_id=row['listed_source_id'])
+            assert review.matched_review(course,o,source['url'],MANIFEST)==e
+            assert review.matched_review(course,{**o,'term':'Fall 2026'},source['url'],MANIFEST) is None
+            assert review.matched_review(course,{**o,'prerequisites':'Changed condition'},source['url'],MANIFEST) is None
+            seen+=1
+    assert seen==23
+
+
+def test_instructor_mind_description_requires_published_code_link():
+    html='''<h1>Minds and Machines (Spring 2020)</h1><p>This course is an introduction to the central questions in philosophy of mind. Consciousness and representation.</p><a href="https://learning-modules.mit.edu/class/index.html?uuid=/course/24/sp20/24.09">Course site</a>'''
+    o=review.observe_minds_machines(html)[0]
+    assert o['code']=='24.09' and o['prerequisites'] is o['units'] is None
+    with pytest.raises(ValueError,match='code link'):
+        review.observe_minds_machines(html.replace('sp20/24.09','sp20/24.99'))
+    assert entry('24.09')['observations'][-1]['category']=='human_context'
