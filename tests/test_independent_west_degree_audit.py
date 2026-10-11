@@ -290,3 +290,47 @@ def test_ne_physics_resolved_storage_preserves_reviewed_roles_and_known_zeros(co
     courses = {c['code']: c for c in saved['courses']}
     assert all(courses[code]['credits'] == 0 for code in ['PHYS 1163', 'PHYS 1193', 'PHYS 1167'])
     assert not conn.execute('PRAGMA foreign_key_check').fetchall()
+
+
+def test_ne_linguistics_all45_independent_course_decisions_and_nonreuse():
+    from atlas.families import resolve_program
+    pid = 'northeastern-university-artificial-intelligence-and-linguistics-bs-boston-bs-degree'
+    family = json.loads((ROOT / 'data/families/northeastern-ai-combined-degrees.json').read_text())
+    raw = load(pid)
+    before = deepcopy(raw)
+    p = resolve_program(raw, family)
+    courses = {c['code']: c for c in p['courses']}
+    e = entry(pid)
+    assert set(courses) == set(e['manual_course_decisions']) and len(courses) == 45
+    for role, expected in e['expected_profile'].items():
+        actual = requirement_profile(p)[role]
+        assert (actual['count'], actual['categories']) == (expected['count'], expected['categories'])
+    for code, decision in e['manual_course_decisions'].items():
+        course = courses[code]
+        assert (course['category'], course['credits'], course['credit_unit']) == (
+            decision['category'], decision['credits'], 'semester_hours')
+        assert requirement_profile({**p, 'courses': [course]})[decision['role']]['count'] == 1
+    group = next(g for g in p['requirements'] if g['id'].endswith('-req-linguistics-electives-course-choice'))
+    assert group['kind'] == 'choose_courses' and group['count'] == 2
+    assert 'not used to fulfill other degree requirements' in group['summary']
+    assert e['source_load_rules']['linguistics_elective_nonreuse'] is True
+    assert raw == before
+
+
+def test_ne_linguistics_optional_preparation_and_variable_research_subjects():
+    pid = 'northeastern-university-artificial-intelligence-and-linguistics-bs-boston-bs-degree'
+    p = load(pid)
+    courses = {c['code']: c for c in p['courses']}
+    for code in ['PSYC 4610', 'PSYC 4658']:
+        assert 'PSYC 3464' in courses[code]['prerequisites']
+        assert 'PSYC 3466' in courses[code]['prerequisites']
+    assert 'AMSL 1102' in courses['DEAF 2700']['prerequisites']
+    assert not {'AMSL 1102', 'PSYC 3464', 'PSYC 3466'} & set(courses)
+    assert 'permission of instructor' in courses['LING 4654']['prerequisites']
+    for code in ['LING 4654', 'LING 4891', 'LING 4991']:
+        assert courses[code]['category'] == 'other'
+        assert courses[code]['category_review']['status'] == 'unclassified'
+    assert courses['PSYC 2320']['category'] == 'mathematics'
+    assert courses['LING 3412']['category'] == 'human_context'
+    assert courses['CS 4120']['category'] == 'ai_ml'
+    assert not entry(pid)['full_degree_verified']
