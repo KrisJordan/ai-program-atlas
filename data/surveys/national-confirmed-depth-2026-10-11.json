@@ -1,0 +1,332 @@
+[
+  {
+    "institution_id": "stanford-university",
+    "status": "confirmed",
+    "checked_at": "2026-10-11",
+    "note": "Reviewed the Symbolic Systems formal concentration directory and both AI-titled routes, including the publicly linked G4 Google Docs through ordinary public browser UI. Added two Symbolic Systems concentrations distinct from the existing CS AI track. The central Bulletin programs page returned a JavaScript shell: its full program rows were not reviewed. Other university departments and graduate branches remain outside this bounded pass. Both public documents date September 27, 2024 and reserve later approved nominations to a Stanford-login spreadsheet; that sheet was not accessed.",
+    "sources": [
+      {
+        "url": "https://symsys.stanford.edu/",
+        "title": "Symbolic Systems Program",
+        "locator": "Visible program directory, headings and linked undergraduate branch content; scope detailed in note",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://symsys.stanford.edu/undergraduates/concentrations",
+        "title": "Concentrations",
+        "locator": "Visible program directory, headings and linked undergraduate branch content; scope detailed in note",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://symsys.stanford.edu/undergraduates/concentrations/artificial-intelligence-ai-concentration",
+        "title": "Artificial Intelligence (AI) - Concentration",
+        "locator": "Visible program directory, headings and linked undergraduate branch content; scope detailed in note",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://symsys.stanford.edu/undergraduates/concentrations/human-centered-artificial-intelligence-hai-concentration",
+        "title": "Human-Centered Artificial Intelligence (HAI) - Concentration",
+        "locator": "Visible program directory, headings and linked undergraduate branch content; scope detailed in note",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://docs.google.com/document/d/1_sseXB7_q-DqWJ0dJp1RX7pIlPUBw5TSowzSU_2f4D8/edit",
+        "title": "Artificial Intelligence Concentration",
+        "locator": "Public Google Docs Markdown export through ordinary browser UI; dated requirement sections and course bullets",
+        "fetched_at": "2026-10-11",
+        "source_date": "2024-09-27"
+      },
+      {
+        "url": "https://docs.google.com/document/d/1EPlLmOy_ilG18TLOG0CseuQT2Pysr3TIIZclFjKnEJE/edit#heading=h.ul46srog64pj",
+        "title": "Human-Centered Artificial Intelligence Concentration",
+        "locator": "Public Google Docs Markdown export through ordinary browser UI; dated requirement sections and course bullets",
+        "fetched_at": "2026-10-11",
+        "source_date": "2024-09-27"
+      }
+    ],
+    "discoveries": [
+      {
+        "title": "Artificial Intelligence (AI) - Concentration",
+        "kind": "concentration",
+        "award_level": "concentration",
+        "url": "https://symsys.stanford.edu/undergraduates/concentrations/artificial-intelligence-ai-concentration",
+        "program_id": "stanford-symsys-ai-concentration"
+      },
+      {
+        "title": "Human-Centered Artificial Intelligence (HAI) - Concentration",
+        "kind": "concentration",
+        "award_level": "concentration",
+        "url": "https://symsys.stanford.edu/undergraduates/concentrations/human-centered-artificial-intelligence-hai-concentration",
+        "program_id": "stanford-symsys-hai-concentration"
+      }
+    ],
+    "new_program_ids": [
+      "stanford-symsys-ai-concentration",
+      "stanford-symsys-hai-concentration"
+    ]
+  },
+  {
+    "institution_id": "columbia-university",
+    "status": "confirmed",
+    "checked_at": "2026-10-11",
+    "note": "Reviewed the Columbia College bulletin department index, Computer Science major/minor and historical concentration sections, Business undergraduate special program, and Cognitive Science major/sample specializations. AI minor identity remains confirmed; no additional AI-titled path was established in these branches. The central college.columbia.edu/academics/programs request stopped at robots-policy HTTP 403 and was not retried. Engineering, General Studies and university-wide announcements remain unreviewed; no institution-wide absence claim.",
+    "sources": [
+      {
+        "url": "https://bulletin.columbia.edu/columbia-college/",
+        "title": "Columbia College Bulletin",
+        "locator": "Visible program directory, headings and linked undergraduate branch content; scope detailed in note",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://bulletin.columbia.edu/columbia-college/departments-instruction/",
+        "title": "Departments, Programs, and Courses",
+        "locator": "Visible program directory, headings and linked undergraduate branch content; scope detailed in note",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://bulletin.columbia.edu/columbia-college/departments-instruction/computer-science/",
+        "title": "Computer Science",
+        "locator": "Visible program directory, headings and linked undergraduate branch content; scope detailed in note",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://bulletin.columbia.edu/columbia-college/departments-instruction/business/",
+        "title": "Business",
+        "locator": "Visible program directory, headings and linked undergraduate branch content; scope detailed in note",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://bulletin.columbia.edu/columbia-college/departments-instruction/cognitive-science/",
+        "title": "Cognitive Science",
+        "locator": "Visible program directory, headings and linked undergraduate branch content; scope detailed in note",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      }
+    ],
+    "discoveries": [
+      {
+        "title": "Artificial Intelligence Minor",
+        "kind": "minor",
+        "award_level": "minor",
+        "url": "https://bulletin.columbia.edu/columbia-college/departments-instruction/computer-science/"
+      }
+    ],
+    "new_program_ids": []
+  },
+  {
+    "institution_id": "cornell-university",
+    "status": "confirmed",
+    "checked_at": "2026-10-11",
+    "note": "Reviewed the Bowers program directory, university AI education page, Information Science BA concentration list and Information Science minor updates. The existing AI minor is listed; the online AI master’s is graduate and excluded. INFO 4470 Human-AI Interaction Design is a course, not another formal concentration. The named IS concentrations do not carry AI titles. Previously challenged catalog.cornell.edu paths were not retried. Other undergraduate colleges, their catalogs and announcements remain outside this bounded review.",
+    "sources": [
+      {
+        "url": "https://bowers.cornell.edu/programs",
+        "title": "Program Directory",
+        "locator": "Visible program directory, headings and linked undergraduate branch content; scope detailed in note",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://ai.cornell.edu/education/",
+        "title": "",
+        "locator": "Visible program directory, headings and linked undergraduate branch content; scope detailed in note",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://infosci.cornell.edu/bachelor-arts-information-science",
+        "title": "Information Science",
+        "locator": "Visible program directory, headings and linked undergraduate branch content; scope detailed in note",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://infosci.cornell.edu/information-science-minor",
+        "title": "Information Science",
+        "locator": "Visible program directory, headings and linked undergraduate branch content; scope detailed in note",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      }
+    ],
+    "discoveries": [
+      {
+        "title": "Artificial Intelligence Minor",
+        "kind": "minor",
+        "award_level": "minor",
+        "url": "https://bowers.cornell.edu/programs"
+      }
+    ],
+    "new_program_ids": []
+  },
+  {
+    "institution_id": "duke-university",
+    "status": "confirmed",
+    "checked_at": "2026-10-11",
+    "note": "Reviewed the undergraduate academic-possibilities major/minor/certificate directory, Pratt admissions overview and full CS degree/options/concentration page. Observed the existing AI Applications and Implications minor, existing BS AI and Machine Learning concentration and directory-listed Machine Learning and AI minor. No additional AI-titled route was established here. A CS robots crawl-delay condition was handled with the supported 60-second setting, not treated as a publisher denial. Other departmental concentration catalogs and announcements remain unreviewed; no private Stellic pool was accessed.",
+    "sources": [
+      {
+        "url": "https://admissions.duke.edu/academic-possibilities/",
+        "title": "",
+        "locator": "Visible program directory, headings and linked undergraduate branch content; scope detailed in note",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://admissions.duke.edu/pratt/",
+        "title": "",
+        "locator": "Visible program directory, headings and linked undergraduate branch content; scope detailed in note",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://cs.duke.edu/undergraduate/degrees",
+        "title": "Degree Options",
+        "locator": "Visible program directory, headings and linked undergraduate branch content; scope detailed in note",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      }
+    ],
+    "discoveries": [
+      {
+        "title": "Artificial Intelligence: Applications and Implications",
+        "kind": "minor",
+        "award_level": "minor",
+        "url": "https://cs.duke.edu/undergraduate/degrees"
+      }
+    ],
+    "new_program_ids": []
+  },
+  {
+    "institution_id": "rice-university",
+    "status": "confirmed",
+    "checked_at": "2026-10-11",
+    "note": "Reviewed General Announcements program directory and CS, ECE, cognitive sciences and business undergraduate branches. Added the declared BSECE AI & Systems area of specialization. The registrar expressly says an area of specialization is not an official academic credential and does not appear on the transcript; the record preserves this distinction while using Atlas’s concentration category for formal paths. The six-course local selection structure is mapped; whole BSECE requirements/outcomes are not relabeled as specialization requirements/outcomes. Other program departments remain unreviewed.",
+    "sources": [
+      {
+        "url": "https://ga.rice.edu/programs-study/",
+        "title": "Programs of Study",
+        "locator": "Visible program directory, headings and linked undergraduate branch content; scope detailed in note",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://ga.rice.edu/programs-study/departments-programs/engineering/computer-science/",
+        "title": "Computer Science",
+        "locator": "Visible program directory, headings and linked undergraduate branch content; scope detailed in note",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://ga.rice.edu/programs-study/departments-programs/engineering/electrical-computer-engineering/",
+        "title": "Electrical and Computer Engineering",
+        "locator": "Visible program directory, headings and linked undergraduate branch content; scope detailed in note",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://ga.rice.edu/programs-study/departments-programs/engineering/electrical-computer-engineering/electrical-computer-engineering-bsece/",
+        "title": "Bachelor of Science in Electrical and Computer Engineering (BSECE) Degree",
+        "locator": "Visible program directory, headings and linked undergraduate branch content; scope detailed in note",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://ga.rice.edu/programs-study/departments-programs/social-sciences/cognitive-sciences/",
+        "title": "Cognitive Sciences",
+        "locator": "Visible program directory, headings and linked undergraduate branch content; scope detailed in note",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://ga.rice.edu/programs-study/departments-programs/business/business/",
+        "title": "Business",
+        "locator": "Visible program directory, headings and linked undergraduate branch content; scope detailed in note",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://registrar.rice.edu/students/majors-minors-and-university-certificates",
+        "title": "Majors, Minors, and University Certificates",
+        "locator": "Visible program directory, headings and linked undergraduate branch content; scope detailed in note",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      }
+    ],
+    "discoveries": [
+      {
+        "title": "AI & Systems",
+        "kind": "concentration",
+        "award_level": "concentration",
+        "url": "https://ga.rice.edu/programs-study/departments-programs/engineering/electrical-computer-engineering/electrical-computer-engineering-bsece/",
+        "program_id": "rice-ece-ai-systems-specialization"
+      }
+    ],
+    "new_program_ids": [
+      "rice-ece-ai-systems-specialization"
+    ]
+  },
+  {
+    "institution_id": "northwestern-university",
+    "status": "confirmed",
+    "checked_at": "2026-10-11",
+    "note": "Reviewed the current undergraduate A–Z directory and both AI second-major catalogs, plus college rules specifically applicable to these routes. Added two formal additional-major routes with distinct eligibility, course counts and related-course requirements; neither is a standalone degree. Music and AI certificate and graduate/SPS certificate or specialization entries are excluded. Existing AI BSE and minor remain separate. Other department-specific concentration branches and the linked non-WCAS overlap PDF were not exhaustively reviewed.",
+    "sources": [
+      {
+        "url": "https://catalogs.northwestern.edu/undergraduate/programs-az/",
+        "title": "Academic Catalog",
+        "locator": "Visible program directory, headings and linked undergraduate branch content; scope detailed in note",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://catalogs.northwestern.edu/undergraduate/engineering-applied-science/artificial-intelligence/artificial-intelligence-second-major-mccormick/",
+        "title": "Academic Catalog",
+        "locator": "Visible program directory, headings and linked undergraduate branch content; scope detailed in note",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://catalogs.northwestern.edu/undergraduate/engineering-applied-science/artificial-intelligence/artificial-intelligence-second-major-non-mccormick/",
+        "title": "Academic Catalog",
+        "locator": "Visible program directory, headings and linked undergraduate branch content; scope detailed in note",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      },
+      {
+        "url": "https://catalogs.northwestern.edu/undergraduate/engineering-applied-science/",
+        "title": "McCormick School of Engineering and Applied Science",
+        "locator": "Eleven unique AI units expressly including both second-major routes; transfer and grade section with 22-unit scope",
+        "fetched_at": "2026-10-11",
+        "source_date": null
+      }
+    ],
+    "discoveries": [
+      {
+        "title": "Artificial Intelligence as a Second Major for McCormick Students",
+        "kind": "additional_major",
+        "award_level": "other",
+        "url": "https://catalogs.northwestern.edu/undergraduate/engineering-applied-science/artificial-intelligence/artificial-intelligence-second-major-mccormick/",
+        "program_id": "northwestern-ai-second-major-mccormick"
+      },
+      {
+        "title": "Artificial Intelligence as a Second Major for non-McCormick Students",
+        "kind": "additional_major",
+        "award_level": "other",
+        "url": "https://catalogs.northwestern.edu/undergraduate/engineering-applied-science/artificial-intelligence/artificial-intelligence-second-major-non-mccormick/",
+        "program_id": "northwestern-ai-second-major-non-mccormick"
+      }
+    ],
+    "new_program_ids": [
+      "northwestern-ai-second-major-mccormick",
+      "northwestern-ai-second-major-non-mccormick"
+    ]
+  }
+]
