@@ -41,3 +41,7 @@ Instructor-linked public CS 2000 site explicitly covers Fall 2026 Boston/Oakland
 ## Partner-course description review — 2026-10-11
 
 Partner-course description review (2026-10-11): 1 existing course observations gain original guarded summaries of their official 2026–2027 descriptions. Topics courses retain offering variability. Course activities and aims are not promoted to assessed program outcomes, and placement in an alternative or elective group is unchanged. Existing registered subject parsers apply the new summaries only when the current scoped course description retains its reviewed evidence phrase; otherwise the observation description remains null. Credits, prerequisites, public resources and requirement graphs are unchanged.
+
+## Science/engineering descriptions — 2026-10-11
+
+Science/engineering description review (2026-10-11): 15 existing course observations gain original guarded summaries of official 2026–2027 descriptions. Laboratories, zero-hour recitations and alternative course sequences remain distinct records. Varying seminar topics retain that limitation. No course-level aim is promoted to a program outcome. Existing subject parsers validate the current scoped course block before returning the guarded summary. No change to credits, prerequisites, public resource URLs, family binding or requirements.

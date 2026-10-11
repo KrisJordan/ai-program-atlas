@@ -283,6 +283,8 @@ def test_all_ne_family_course_records_have_independent_subject_catalog_provenanc
             assert c['code'] in sources[sid]['locator']
             assert sources[sid]['url'] in registered[p['id']].SOURCE_PARSERS
             assert c['credit_unit']=='semester_hours'
+            if c['credits'] is None:
+                assert any(n.startswith(c['code']+' subject catalog credit options:') for n in p['notes'])
             unknown+=c['description'] is None;zeros+=c['credits']==0
         assert p['curriculum_status']=='partial' and p['curriculum_audit']['unresolved_requirements']
     assert variants==23 and unknown>0 and zeros>0
@@ -303,3 +305,15 @@ def test_design_topics_description_retains_offering_variability():
     parser=register_subject_sources('test-program',{'ARTG':['ARTG 3400']})['https://catalog.northeastern.edu/course-descriptions/artg/']
     assert 'varies by offering' in parser(html)['courses'][0]['description']
     assert parser(html.replace('Topics vary each semester.','Fixed topic.'))['courses'][0]['description'] is None
+
+
+def test_physics_lecture_lab_and_zero_hour_recitation_stay_distinct():
+    html=page('<div class="courseblock"><p class="courseblocktitle">PHYS 1165. Physics 2. (4 Hours)</p><p class="cb_desc">Includes electrostatics; capacitors, magnetism and waves.</p></div><div class="courseblock"><p class="courseblocktitle">PHYS 1166. Lab for PHYS 1165. (1 Hour)</p><p class="cb_desc">Accompanies PHYS 1165. Includes experiments.</p></div><div class="courseblock"><p class="courseblocktitle">PHYS 1167. Recitation for PHYS 1165. (0 Hours)</p><p class="cb_desc">Offers interactive problem solving.</p></div>',heading='Physics (PHYS)')
+    parser=register_subject_sources('test-program',{'PHYS':['PHYS 1165','PHYS 1166','PHYS 1167']})['https://catalog.northeastern.edu/course-descriptions/phys/']
+    result=parser(html)
+    assert [c['credits'] for c in result['courses']]==[4,1,0]
+    assert len({c['description'] for c in result['courses']})==3
+    assert result['requirements']==[]
+    changed=parser(html.replace('interactive problem solving','a new teaching format'))
+    assert changed['courses'][2]['description'] is None
+    assert changed['courses'][0]['description']==result['courses'][0]['description']
