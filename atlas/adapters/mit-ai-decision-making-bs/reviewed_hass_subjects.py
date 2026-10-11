@@ -882,3 +882,37 @@ def observe_eecs_economics_annotations(html):
     if set(observed) != codes:
         raise ValueError('Reviewed Economics annotation inventory changed')
     return list(observed.values())
+
+
+def observe_anthropology_faculty(html):
+    """Observe explicit teaching panels, keeping printed companions and unknown dates."""
+    soup = BeautifulSoup(html, 'html.parser')
+    faculty = clean(soup.find('h1'))
+    heading = next((h for h in soup.find_all('h2') if clean(h) == 'Teaching'), None)
+    if not faculty or heading is None:
+        raise ValueError('Anthropology faculty teaching context missing')
+    rows = []
+    for node in heading.next_siblings:
+        if getattr(node, 'name', None) == 'h2':
+            break
+        if getattr(node, 'name', None) != 'h4' or node.find('br') is None:
+            continue
+        lines = [clean(x) for x in node.get_text('\n', strip=True).split('\n') if clean(x)]
+        label, title = lines[0], ' '.join(lines[1:])
+        codes = re.findall(r'(?:21A|21G|24|STS|WGS|HST|11|15|17|7|4)\.\s*[A-Z]?\d+[A-Z]*', label)
+        codes = [re.sub(r'\s+', '', code) for code in codes]
+        paragraphs = []
+        for sibling in node.next_siblings:
+            if getattr(sibling, 'name', None) in {'h2', 'h4'}:
+                break
+            if getattr(sibling, 'name', None) == 'p' and clean(sibling):
+                paragraphs.append(clean(sibling))
+        if not codes or not title or not paragraphs:
+            continue
+        rows.append(dict(code=codes[0], name=title, description=' '.join(paragraphs),
+                         prerequisites=None, units=None, term=None,
+                         faculty=faculty, printed_code_label=label, offered_codes=codes,
+                         source_heading=clean(node)))
+    if not rows:
+        raise ValueError('Anthropology teaching descriptions missing')
+    return rows

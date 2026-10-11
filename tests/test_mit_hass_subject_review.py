@@ -215,7 +215,7 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']['description_reviewed_records']==460
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==472
     assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
         o=next(o for o in entry(code)['observations'] if o.get('evidence_basis')=='official_title_only')
@@ -1726,3 +1726,46 @@ def test_economics_conflicting_preparation_is_attributed_not_silently_reconciled
         o=next(o for o in row['observations'] if o['source_id']==discrepancy[key+'_source_id'])
         assert o['prerequisites']==discrepancy[key+'_prerequisite']
     assert any('not reconciled' in n for n in row['observations'][-1]['restrictions'])
+
+
+def test_anthropology_faculty_descriptions_keep_unknowns_and_identity_holds():
+    report=MANIFEST['anthropology_faculty_followup']
+    assert report['faculty_pages_read']==17 and len(report['source_checks'])==17
+    assert len(report['upgraded_record_ids'])==12
+    for cid in report['upgraded_record_ids']:
+        e=MANIFEST['courses'][cid]['observations'][-1]
+        assert e['evidence_basis']=='official_description'
+        assert all(e[k] is None for k in ['catalog_year','prerequisites','units_text','credits','credit_unit'])
+        assert e['source_metadata']['offered_codes']
+    assert entry('21A.511')['observations'][-1]['category']=='human_context'
+    assert entry('STS.074J')['observations'][-1]['candidate_categories']==['applications','human_context']
+    assert entry('21A.550/ STS.064')['observations'][-1]['status']=='mixed'
+    for code in ['21A.311','21A.406J','STS.022J','STS.064J','17.045J']:
+        assert entry(code)['observations'][-1]['evidence_basis']=='official_title_only'
+    assert len(report['held'])==5
+
+
+def test_anthropology_panel_fixture_does_not_follow_links_or_infer_metadata():
+    html='<h1>Faculty Name</h1><h2>Teaching</h2><h4>21A.511<br><a href="https://student.mit.edu/catalog/blocked">Hacking from the South</a></h4><p>Ethnographic analysis of social and political contexts.</p><h2>Biography</h2><h4>21A.999<br>Not a teaching panel</h4><p>Unrelated biography text.</p>'
+    o,=review.observe_anthropology_faculty(html)
+    assert o['code']=='21A.511' and o['offered_codes']==['21A.511']
+    assert o['units'] is None and o['prerequisites'] is None and o['term'] is None
+    assert 'Biography' not in o['description']
+    with pytest.raises(ValueError):review.observe_anthropology_faculty(html.replace('Teaching','Research'))
+    with pytest.raises(ValueError):review.observe_anthropology_faculty('<h1>Faculty</h1><h2>Teaching</h2><h4>21A.511<br>Title only</h4>')
+
+
+def test_anthropology_faculty_source_replay_withdraws_changed_description_and_companions():
+    cache=Path('/tmp/mit-hass-subjects')
+    report=MANIFEST['anthropology_faculty_followup']
+    if not all((cache/c['cache']).exists() for c in report['source_checks']):
+        pytest.skip('Optional public Anthropology faculty captures')
+    for cid in report['upgraded_record_ids']:
+        row=MANIFEST['courses'][cid];e=row['observations'][-1]
+        meta=next(x for x in report['source_checks'] if x['url']==e['source_url'])
+        observations=review.observe_anthropology_faculty((cache/meta['cache']).read_text())
+        o=next(x for x in observations if x['code']==e['observed_code'])
+        course=dict(id=cid,code=row['listed_code'],name=row['listed_name'],source_id=row['listed_source_id'])
+        assert review.matched_review(course,o,e['source_url'],MANIFEST)==e
+        for wrong in [{**o,'description':o['description']+' Changed.'},{**o,'offered_codes':['21A.999']},{**o,'term':'Fall2026'}]:
+            assert review.matched_review(course,wrong,e['source_url'],MANIFEST) is None
