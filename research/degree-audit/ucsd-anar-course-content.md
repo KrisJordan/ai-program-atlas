@@ -1,0 +1,39 @@
+# UC San Diego ANAR course-content contribution
+
+Reviewed 2026-10-11. Scope is exactly **36 existing ANAR records without category reviews** in the current UCSD seed, copied to the private `/tmp/ucsd-anar-targets.json`. This contribution changes only its adapter, manifest, focused tests and this evidence note. The primary owner integrates observations and composes the existing chapter observer.
+
+## Source and coverage
+
+The authoritative [Anthropology chapter](https://catalog.ucsd.edu/courses/ANTH.html), already obtained through the normal robots-aware Fetcher, identifies **General Catalog 2026–27**. The cached `/tmp/ucsd-anth-ansc.html` exactly matches SHA-256 `021cef05715af29ab5e4fd8a5502bd8ca4af86aa944f44209412aa89d15b65b1` in `/tmp/ucsd-anth-ansc-source-index.json`, fetched at `2026-10-11T07:06:54+00:00` with HTTP 200. It was reused without another network request. The existing registered source ID ending `-anthropology-courses` is preserved. Raw source stays outside committed files.
+
+All **28 exact matching course blocks** were read in full. They support **19 human-context and seven applications reviews, one mixed review, and one deliberately unclassified review**. Thus 26 have a reviewed single category. Eight targets have no exact current chapter heading: **ANAR 103, 105, 125, 135S, 141, 142, 190 and 191**. No alternative code is substituted; these are current-chapter dispositions, not assertions of cancellation or university-wide absence. In particular, existing ANAR 135 does not resolve missing ANAR 135S, and cyber-archaeology elsewhere in the chapter does not supply ANAR 191 content.
+
+There are no substantive matched-title holds. Lab/Laboratory, spelling, spacing, case and conjunction differences are disclosed. The qualifier “when Latin American content” on ANAR 100 is a conditional pool rule, not part of the current course title.
+
+## Content decisions
+
+- **Applied methods and scientific domains:** ANAR 117 and 119S explicitly teach archaeological research design, excavation/data collection and laboratory procedures. ANAR 120 teaches climate documentation and geospatial data use. ANAR 115 centers coastal geomorphological processes and research methodology; 116 covers sea-level indicators, proxies, dating and uncertainty; 114 uses geology and disaster records to assess environmental hazard. These are substantive domain science or practice, not categories inferred from the archaeology prefix.
+- **ANAR 146, applications:** the actual course examines diet, cultivation, farming systems and crop modification in considering sustainable food production. Its historical survey supports understanding agriculture and food systems. This differs from a course whose organizing question is cultural identity or food-justice politics.
+- **Historical-cultural interpretation:** the other civilization, region and heritage surveys use archaeological evidence to understand societies. A field visit, historical mention of technology, or environmental background does not itself establish methods instruction. ANAR 113 organizes natural resources around ancient exploitation cases and modern economic roles, without a coequal geology or extraction-method objective. ANAR 118 interprets early human settlement; 143 compares archaeological, historical and biblical evidence; 165 studies maritime cultures. ANAR 182’s agricultural transition is a socio-evolutionary question rather than practical farming training.
+- **ANAR 155, mixed:** its description promises practical field skills alongside Mesoamerican archaeological learning, without detailing their balance or methods. Both human-context and application candidates are retained. ANAR 155S instead describes regionally bounded learning through visits without stating field-skills training, so its independently reviewed description supports human context. Similar names and a shared credit cap do not force identical metadata.
+- **ANAR 160, human context:** the selected Maya region/site changes, but the explicit literature in archaeology, epigraphy and art history bounds its interpretive subject. This is more specific than a generic selected-topics description.
+- **ANAR 100, unclassified:** title and content vary by offering and are published elsewhere. The generic current block does not identify a subject, nor does it establish the pool’s required Latin American topic. Course metadata may be recorded while that offering-specific eligibility remains unresolved.
+
+## Credits, preparation and conditions
+
+All 28 matched headings print fixed credits: **25 courses at four quarter units and three at eight**. The eight-unit courses are ANAR 117, 119S and 135. No range, credit aggregation, or conversion beyond the verified quarter-hours contract is inferred. Every matched block supplies a prerequisite clause, which is retained exactly.
+
+- ANAR 117 takes place in San Diego or adjacent counties, permits credit up to twice, and may have program/materials fees. ANAR 119S takes place in Moquegua, Peru, and may have materials fees; no repeat permission is inferred from another field class.
+- ANAR 135 requires a study-abroad application, upper-division standing and department approval. It permits credit twice and may have program/materials fees.
+- ANAR 155 and 155S have a **combined twelve-unit cap**, not a twelve-unit course or requirement. ANAR 155S allows repeated enrollment as itinerary/content varies and requires program application and acceptance. ANAR 155 requires program application and instructor consent. Both may have fees. Their differing enrollment clauses remain separate; no identity group is declared.
+- ANAR 145S requires instructor consent only, may have fees and is complementary to 144. Likewise, 155S is complementary to 154. Complementarity is not turned into a prerequisite.
+- ANAR 182 recommends ANTH 3 as preparation; the prerequisite is upper-division standing. The source’s archaeology-concentration designation is not transferred into an AI-degree requirement.
+- ANAR 160 permits credit three times. Upper-division standing and ANAR 153 are the printed requirements. Its additional ANTH 202 statement applies specifically to graduate students and is not imposed on every undergraduate.
+- ANAR 157 and 157S reciprocally exclude receiving credit for both. Only 157S explicitly says summer study abroad; that enrollment context is not transferred to 157. The exclusion is not an identity claim.
+- ANAR 146 excludes credit alongside 146R. ANAR 100 may be taken for credit four times, subject to its unresolved selected topic. Neither statement creates a required load.
+
+## Guarded output and checks
+
+`ucsd_anar_reviews.py` exports metadata-only `parse_observations(html)` and URL-keyed `SOURCE_PARSERS`. It checks the Anthropology heading, catalog edition and every reviewed complete heading/body; additional paragraphs and unwrapped text are included, not just paragraphs with the ordinary description class. A changed clause, units, prerequisite, held/missing identifier, or duplicate heading fails closed for renewed review. Parser output has only the program ID, course observations and bounded source dispositions. Manual category reviews stay in the manifest; no requirement, audit, identity or completion status is emitted.
+
+**14 focused tests passed**, including exact-cache replay of all 28 observations and eight dispositions. Tests cover the methods/history boundaries, the mixed/variable-topic cases, eight-unit field courses, graduate-only preparation wording, distinct study-abroad rules, credit caps/exclusions, source/edition changes and full-block guards. No refetch, full suite, build, seed or ledger update was performed. Primary integration and resolution of the eight absent identifiers and ANAR 100’s conditional regional eligibility remain outside this contribution.
