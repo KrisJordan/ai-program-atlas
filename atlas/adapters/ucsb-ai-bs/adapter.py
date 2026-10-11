@@ -46,3 +46,15 @@ SOURCE_PARSERS = {
     policies.GRADING_URL: policies.parse_grading,
     policies.ELWR_URL: policies.parse_elwr,
 }
+
+from atlas.adapters import ucsb_progression as progression
+SOURCES += (progression.TRANSFER_URL, progression.REPEAT_URL, progression.PROGRESS_URL,
+            progression.NOTICE_URL, progression.PETITION_URL, progression.FAQ_URL)
+SOURCE_PARSERS.update({progression.TRANSFER_URL: progression.parse_transfer,
+                      progression.REPEAT_URL: progression.parse_repeat,
+                      progression.PROGRESS_URL: progression.parse_progress,
+                      progression.NOTICE_URL: progression.parse_notice,
+                      progression.PETITION_URL: progression.parse_petitions,
+                      progression.FAQ_URL: progression.parse_faq})
+SOURCES += (progression.WRITING_URL, progression.GUIDANCE_URL)
+SOURCE_PARSERS.update({progression.WRITING_URL: progression.parse_writing})
