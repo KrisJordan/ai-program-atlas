@@ -55,3 +55,9 @@ The JPN 210 block prints a JPN 102 prerequisite while its prose also says “No 
 Current reviewed total: 1,683 program-course observations. The exact remaining queue has 1,511 codes/6,044 observations, with 1,452 located current blocks and 59 identity follow-ups. Those located but unread descriptions remain accessible work in progress, not blocked work.
 
 Validation: 29 focused source/policy tests and isolated four-degree ingestion/repeat (4/0), integrity/foreign keys, 1,683 reviewed exports and static build passed.
+
+## History contribution integration — 2026-10-11
+
+The 151-block actual History source review in `miami_his_context_reviews` is integrated across four degrees (604 observations). The contribution retains 136 history/culture classifications, 15 source-inspected but unspecified transfer/topic/internship records, and thirteen variable credit amounts (including HIS 382 at 0–3). The source's one-history-course and faculty-approval conditions remain exact. Existing requirement ancestry is unchanged. See the separate history review for actual block evidence and semantic decisions.
+
+There are now 2,287 reviewed program-course observations. Remaining: 1,360 codes/5,440 observations; 1,301 codes have located current official blocks and 59 need exact-identity follow-up. Validation: 34 focused English/History/shared-source tests, isolated four-degree ingestion/repeat (4/0), integrity/foreign keys, exact exported review counts and static build passed.
