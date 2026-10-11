@@ -39,6 +39,8 @@ def test_projection_preserves_search_counts_evidence_and_root_choices(site_data,
     assert profile['credit_units'] == ['semester_hours', 'unknown']
     assert len(projected['requirements']) == 1
     assert projected['requirements'][0]['has_children'] is True
+    assert projected['requirements'][0]['is_root'] is True
+    assert not {'id', 'parent_id', 'summary', 'source_id'} & projected['requirements'][0].keys()
     assert projected['outcomes'][0]['source_id'] == 'outcome-source'
     assert projected['sources'] == [{'id': 'outcome-source', 'url': 'https://example.edu/outcome'}]
     assert view['institutions'][0]['rankings'][0]['source_url'] == 'https://example.edu/ranking'
@@ -65,7 +67,10 @@ def test_family_projection_keeps_nested_local_changes_and_source_precedence(site
     view = directory_payload(site_data, '/')
     projected = view['programs'][0]
     assert projected['family']['requirement_overrides'][0]['reason'] == 'Explicit test exception'
-    assert any(r['id'] == 'local-child' for r in projected['requirements'])
+    child = next(r for r in projected['requirements'] if r['title'] == 'Nested local rule')
+    assert child['is_root'] is False
+    assert child['summary'] == 'Source-backed replacement' and child['source_id'] == 'override'
+    assert child['origin'] == 'replacement' and child['component'] == 'domain'
     assert {'id': 'override', 'url': 'https://example.edu/exception'} in projected['sources']
     assert view['families'][0]['shared_requirements'][0]['id'] == 'shared-core'
     assert view['families'][0]['sources'] == [{'id': 'family-source', 'url': 'https://example.edu/family'}]
@@ -85,6 +90,31 @@ def test_current_inventory_projection_is_materially_smaller_and_lossless_for_cou
     # Ratio leaves room for new research while catching accidental full-payload embedding.
     assert len(json.dumps(view)) < len(json.dumps(full)) * .4
     for original, projected in zip(data['programs'], view['programs']):
+        # The compact view must preserve every rendered comparison value while
+        # the export retains the graph identities and full evidence separately.
+        membership = original.get('family')
+        requirements = original.get('requirements', [])
+        shown = [r for r in requirements if not r.get('parent_id') or
+                 (membership and r.get('origin') in ('variant', 'replacement'))]
+        assert len(shown) == len(projected['requirements'])
+        for source, row in zip(shown, projected['requirements']):
+            assert row['title'] == source['title']
+            assert row['is_root'] == (not source.get('parent_id'))
+            assert 'id' not in row and 'parent_id' not in row
+            if row['is_root']:
+                assert row.get('kind') == source.get('kind')
+                assert row.get('count') == source.get('count')
+                assert row.get('credits') == source.get('credits')
+                if source.get('count') is not None:
+                    assert row['has_children'] == any(r.get('parent_id') == source['id'] for r in requirements)
+                if source.get('credits') is not None:
+                    assert row.get('credit_unit') == source.get('credit_unit')
+            if membership and source.get('origin') in ('variant', 'replacement'):
+                for key in ('origin', 'component', 'summary', 'source_id'):
+                    assert row.get(key) == source.get(key)
+                sid = row.get('source_id')
+                source_url = next((s['url'] for s in original['sources'] if s['id'] == sid), None)
+                assert next((s['url'] for s in projected['sources'] if s['id'] == sid), None) == source_url
         courses = {c['id']: c for c in original['courses']}.values()
         assert projected['course_profile']['count'] == len(courses)
         for c in courses:

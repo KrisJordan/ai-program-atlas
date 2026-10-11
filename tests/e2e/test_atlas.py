@@ -192,7 +192,7 @@ def test_complete_concentration_scope_metadata_and_nested_choices(page, site, tm
     def group(id, parent, title, kind, **extra):
         return dict(id=id, parent_id=parent, title=title, kind=kind, source_id='outcome-source', summary='Follow this recorded group rule.', course_ids=[], **extra)
     program['requirements'] = [
-        group('root', None, 'Select one pathway', 'alternative'),
+        group('root', None, 'Select one pathway', 'alternative', count=1),
         {**group('branch', 'root', 'Foundations pathway', 'all'), 'course_ids': [course['id']]},
         {**group('choice', 'root', 'Elective pathway', 'choose_courses', count=1), 'course_ids': [course['id'], unsourced['id']]},
         group('note', 'branch', 'Advisor approval', 'note', source_text='Approval is required for a substitution.'),
@@ -227,6 +227,12 @@ def test_complete_concentration_scope_metadata_and_nested_choices(page, site, tm
     records = page.locator('.compare-table tr').filter(has=page.get_by_role('rowheader', name='Course records', exact=True))
     expect(records.locator('td').first).to_contain_text('2 unique records')
     expect(records.locator('td').first).to_contain_text('1 with unknown credits')
+    structure = page.locator('.compare-table tr').filter(has=page.get_by_role('rowheader', name='Requirement structure', exact=True))
+    expect(structure).to_contain_text('1 alternative')
+    expect(structure).not_to_contain_text('Foundations pathway')
+    region = page.get_by_role('region', name='Program comparison', exact=True)
+    region.focus()
+    expect(region).to_be_focused()
     assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
 
 
@@ -247,7 +253,12 @@ def family_fixture(data):
 @pytest.mark.parametrize('width',[1440,390])
 def test_family_expand_discipline_compare_history_and_detail(page,site,tmp_path,site_data,width):
     from playwright.sync_api import expect
-    build(family_fixture(site_data),tmp_path/'ai-program-atlas')
+    family_fixture(site_data)
+    site_data['programs'][0]['requirements'].append(dict(
+        id='nested-local', parent_id='variant-0', title='Nested local exception',
+        kind='note', origin='replacement', component='domain',
+        source_id='family-source', summary='Preserve the nested evidence.', course_ids=[]))
+    build(site_data,tmp_path/'ai-program-atlas')
     page.set_viewport_size({'width':width,'height':950})
     errors=[]
     page.on('pageerror',lambda error:errors.append(str(error)))
@@ -271,6 +282,13 @@ def test_family_expand_discipline_compare_history_and_detail(page,site,tmp_path,
     expect(page.locator('.compare-table')).to_contain_text('Shared AI core')
     expect(page.locator('.compare-table')).to_contain_text('Physics integration')
     expect(page.locator('.compare-table')).to_contain_text('Economics integration')
+    local_row = page.locator('.compare-table tr').filter(has=page.get_by_role('rowheader', name='Variant requirements / changes', exact=True))
+    expect(local_row).to_contain_text('Nested local exception')
+    expect(local_row).to_contain_text('Preserve the nested evidence.')
+    local_row.locator('details').last.locator('summary').click()
+    expect(local_row.locator('a[href="https://example.edu/family"]').last).to_be_visible()
+    roots = page.locator('.compare-table tr').filter(has=page.get_by_role('rowheader', name='Requirement structure', exact=True))
+    expect(roots).not_to_contain_text('Nested local exception')
     assert 'compare=test-ai-1%2Ctest-ai-0' in page.url
     page.reload()
     expect(page.locator('#filter-discipline')).to_have_value('Economics')

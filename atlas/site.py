@@ -97,8 +97,27 @@ def directory_payload(data, base):
         p['course_profile'] = course_profile(original)
         requirements = original.get('requirements', [])
         parents = {r.get('parent_id') for r in requirements if r.get('parent_id')}
-        # Comparison shows roots plus all local/replacement summaries for families.
-        p['requirements'] = [dict(fields(r, 'id parent_id title kind count credits credit_unit origin component summary source_id'), has_children=r.get('id') in parents) for r in requirements if not r.get('parent_id') or (membership and r.get('origin') in ('variant', 'replacement'))]
+        # Comparison renders root selection facts and family-local evidence, not
+        # a navigable graph. Keep graph IDs and unused root summaries in the full
+        # export/detail pages instead of repeating them in every family variant.
+        p['requirements'] = []
+        for requirement in requirements:
+            is_root = not requirement.get('parent_id')
+            is_local = bool(membership) and requirement.get('origin') in ('variant', 'replacement')
+            if not (is_root or is_local):
+                continue
+            projected = fields(requirement, 'title')
+            projected['is_root'] = is_root
+            if is_root:
+                projected.update(fields(requirement, 'kind'))
+                if requirement.get('count') is not None:
+                    projected['count'] = requirement['count']
+                    projected['has_children'] = requirement.get('id') in parents
+                if requirement.get('credits') is not None:
+                    projected.update(fields(requirement, 'credits credit_unit'))
+            if is_local:
+                projected.update(fields(requirement, 'origin component summary source_id'))
+            p['requirements'].append(projected)
         p['outcomes'] = [fields(o, 'text kind statement_type source_id') for o in original.get('outcomes', [])]
         p['links'] = [fields(link, 'url label kind') for link in original.get('links', [])]
         source_ids = {r.get('source_id') for r in p['requirements']} | {o.get('source_id') for o in p['outcomes']} | {c.get('source_id') for c in membership.get('requirement_overrides', [])}
