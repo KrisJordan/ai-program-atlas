@@ -23,7 +23,7 @@ def test_reviewed_pdf_observation_preserves_source_conflict(monkeypatch):
 
 def test_curated_pool_not_silently_expanded():
  d=json.loads((ROOT/'data/programs'/f'{a.PROGRAM_ID}.json').read_text());validate_program(d)
- assert len(d['courses'])==43 and d['curriculum_status']=='partial'
+ assert len(d['courses'])==74 and d['curriculum_status']=='partial'
  existing=next(r for r in d['requirements'] if r['id']==a.PROGRAM_ID+'-ai-electives')
  assert not any(x.endswith(('-csci-632','-ling-582','-ling-584')) for x in existing['course_ids'])
  assert any('IDAI-490 program WI is verified' in x for x in d['curriculum_audit']['unresolved_requirements'])

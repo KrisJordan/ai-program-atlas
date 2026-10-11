@@ -2,7 +2,7 @@
 
 Reviewed 2026-10-11. The primary degree audit is **in progress**, not complete or
 wholly inaccessible. The current reviewed graph has 23 fixed course identities,
-17 options and three unresolved advising-only identities. The 2026–2027 public
+45 options and six unresolved/context identities (three advising-only and three preparation-only). The 2026–2027 public
 study curriculum states 122 semester hours, six core alternative pairs and two AI
 electives across four options (five course codes, including a robotics pair).
 Two zero-credit co-op placements reuse one course identity. Uncoded GE,
@@ -11,7 +11,7 @@ requirements are represented without fabricated course membership.
 
 All 40 current public course popups were read. Their credits and 28 prerequisite
 or expectation statements are mapped; absent prerequisite fields stay unknown.
-Every represented course has a source-specific taxonomy review, including three
+The additional Mathematics branch supplies 31 new actual-description records. Every represented course has a source-specific taxonomy review, including three
 advising-only identities for which current descriptions are unavailable. Exact
 profile sets and role corrections are in the RIT row of
 `research/degree-audit/buffalo-delaware-rit.json`.
@@ -50,7 +50,7 @@ current section syllabus or a program outcome. See the separate source review
   as a current pool.
 - Public immersion curricula do render in an ordinary browser. The directory
   has 77 immersion links; the Mathematics route’s requirements were inspected,
-  and its course-level inventory and other applicable routes remain accessible
+  and all 37 course cards are now reviewed/mapped. The other 76 routes remain accessible
   work. No blanket catalog-access claim or full GE closure is justified yet.
 - The current AI sequence annotates MATH190 as Immersion3 and separately lists
   another Immersion3 slot. The advising chart instead shows three separate
@@ -82,3 +82,17 @@ or new verification timestamps. The advising and writing PDF helpers are manual
 format adapters: re-fetch through ordinary robots-aware access, extract and
 visually inspect relevant pages before updating a reviewed digest. Raw captures
 stay ignored. No direct catalog access restriction was bypassed.
+
+## Mathematics immersion branch — 2026-10-11
+
+All 37 exact course cards were read: 30 source-listed electives and seven
+prerequisite identities. The AI-specific choice node excludes fixed MATH241/251
+under the explicit no-program-overlap rule, leaving 28 conditional options. The
+three newly observed calculus preparation codes remain context only; no course
+is added to fixed degree load. A parent alternative explicitly labels this one
+route as a partially observed menu, not a default or an exhaustive directory.
+The selection shows 9–12 hours while the total row shows 9; the variable amount
+is preserved without declaring those ordinary minimum/selection figures a
+contradiction. Pair exclusions, upper-level minimum, honors GPA thresholds and
+MATH233 restricted audience are explicit. Credit exclusions do not establish
+identity equivalence. See `research/degree-audit/rit-mathematics-immersion.md`.

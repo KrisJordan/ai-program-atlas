@@ -35,3 +35,6 @@ SOURCE_PARSERS['https://www.rit.edu/policies/d030'] = partial(parse_policy, pid=
 
 from atlas.adapters.rit_writing_closure import register as register_writing_closure
 register_writing_closure(SOURCES, SOURCE_PARSERS)
+
+from atlas.adapters.rit_mathematics_immersion import register as register_math_immersion
+register_math_immersion(SOURCES, SOURCE_PARSERS)
