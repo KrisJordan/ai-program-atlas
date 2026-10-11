@@ -370,6 +370,26 @@
       "catalog_year": "2026-2027",
       "locator": "Independent UGER description review: JWST 220, JWST 254, JWST 293, JWST 371, JWST 381, JWST 389",
       "confidence": "high"
+    },
+    {
+      "id": "case-uger-courses-cogs",
+      "url": "https://bulletin.case.edu/course-descriptions/cogs/",
+      "title": "Cognitive Science (COGS)",
+      "fetched_at": "2026-10-10T23:38:00+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Exact reviewed UGER course blocks: COGS 222, COGS 251, COGS 390, COGS 205, COGS 305, COGS 311, COGS 319, COGS 327, COGS 399H, COGS 397, COGS 377, COGS 250, COGS 202, COGS 317, COGS 343",
+      "confidence": "high"
+    },
+    {
+      "id": "case-uger-courses-cosi",
+      "url": "https://bulletin.case.edu/course-descriptions/cosi/",
+      "title": "Communication Sciences (COSI)",
+      "fetched_at": "2026-10-11T03:16:32+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Exact reviewed UGER course blocks: COSI 226, COSI 310, COSI 345, COSI 364",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -2271,71 +2291,129 @@
       "id": "case-ba-uger-cogs-222",
       "code": "COGS 222",
       "name": "Embodied Writing and Communication",
-      "description": null,
+      "description": "Writing and multimodal communication developed through embodied cognition, reflective practice and wellbeing activities.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=COGS%20222",
+      "category": "human_context",
+      "source_id": "case-uger-courses-cogs",
+      "url": "https://bulletin.case.edu/course-descriptions/cogs/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-cogs"
+        ],
+        "locator": "COGS 222; current 2026–2027 course block",
+        "rationale": "The actual description centers on writing and multimodal communication developed through embodied cognition, reflective practice and wellbeing activities.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-cogs-251",
       "code": "COGS 251",
       "name": "Cognition and Immersion: From Gaming to AR/VR",
-      "description": null,
+      "description": "Cognitive and cultural analysis of immersive experiences such as games and virtual reality, with substantial communication practice.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=COGS%20251",
+      "source_id": "case-uger-courses-cogs",
+      "url": "https://bulletin.case.edu/course-descriptions/cogs/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-cogs"
+        ],
+        "locator": "COGS 251; current 2026–2027 course block",
+        "rationale": "The actual description centers on cognitive and cultural analysis of immersive experiences such as games and virtual reality, with substantial communication practice. These substantial domains are mixed without a single defensible primary subject.",
+        "candidate_categories": [
+          "applications",
+          "human_context"
+        ]
+      }
     },
     {
       "id": "case-ba-uger-cogs-390",
       "code": "COGS 390",
       "name": "Signs and Symbols: Semiotics in Cognition, Culture, and Communication",
-      "description": null,
+      "description": "Semiotic theories and methods for understanding signs, meaning and human communication.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=COGS%20390",
+      "category": "human_context",
+      "source_id": "case-uger-courses-cogs",
+      "url": "https://bulletin.case.edu/course-descriptions/cogs/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-cogs"
+        ],
+        "locator": "COGS 390; current 2026–2027 course block",
+        "rationale": "The actual description centers on semiotic theories and methods for understanding signs, meaning and human communication.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-cosi-226",
       "code": "COSI 226",
       "name": "Research-to-Practice Implementation: Evidence Translation in Real-World Settings",
-      "description": null,
-      "prerequisites": null,
+      "description": "Implementation science and quality improvement for healthcare, education and community services, supported by professional communication.",
+      "prerequisites": "Prereq: Academic Inquiry Seminar (AIQS).",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=COSI%20226",
+      "category": "applications",
+      "source_id": "case-uger-courses-cosi",
+      "url": "https://bulletin.case.edu/course-descriptions/cosi/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-cosi"
+        ],
+        "locator": "COSI 226; current 2026–2027 course block",
+        "rationale": "The actual description centers on implementation science and quality improvement for healthcare, education and community services, supported by professional communication.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-cosi-310",
       "code": "COSI 310",
       "name": "AI in Communication Sciences",
-      "description": null,
-      "prerequisites": null,
+      "description": "Critical evaluation of AI use in communication-sciences research and clinical practice, with professional writing and presentations.",
+      "prerequisites": "Pre-req: Academic Inquiry Seminar (AIQS) and COSI 109 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=COSI%20310",
+      "category": "applications",
+      "source_id": "case-uger-courses-cosi",
+      "url": "https://bulletin.case.edu/course-descriptions/cosi/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-cosi"
+        ],
+        "locator": "COSI 310; current 2026–2027 course block",
+        "rationale": "The actual description centers on critical evaluation of AI use in communication-sciences research and clinical practice, with professional writing and presentations.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-eciv-110",
@@ -5639,99 +5717,179 @@
       "id": "case-ba-uger-cogs-205",
       "code": "COGS 205",
       "name": "Cognition and Design",
-      "description": null,
+      "description": "Cultural and philosophical interpretation of spatial design as human expression and meaning-making.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=COGS%20205",
+      "category": "human_context",
+      "source_id": "case-uger-courses-cogs",
+      "url": "https://bulletin.case.edu/course-descriptions/cogs/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-cogs"
+        ],
+        "locator": "COGS 205; current 2026–2027 course block",
+        "rationale": "The actual description centers on cultural and philosophical interpretation of spatial design as human expression and meaning-making.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-cogs-305",
       "code": "COGS 305",
       "name": "Social Cognition and the Brain",
-      "description": null,
+      "description": "Scientific study of social cognition, empathy, cultural variation and clinical populations through cognitive neuroscience.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=COGS%20305",
+      "category": "applications",
+      "source_id": "case-uger-courses-cogs",
+      "url": "https://bulletin.case.edu/course-descriptions/cogs/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-cogs"
+        ],
+        "locator": "COGS 305; current 2026–2027 course block",
+        "rationale": "The actual description centers on scientific study of social cognition, empathy, cultural variation and clinical populations through cognitive neuroscience.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-cogs-311",
       "code": "COGS 311",
       "name": "Mind and Media",
-      "description": null,
+      "description": "Cognitive mechanisms and media analysis, examining how communication evokes perception, imagination, identity and immersion.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=COGS%20311",
+      "source_id": "case-uger-courses-cogs",
+      "url": "https://bulletin.case.edu/course-descriptions/cogs/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-cogs"
+        ],
+        "locator": "COGS 311; current 2026–2027 course block",
+        "rationale": "The actual description centers on cognitive mechanisms and media analysis, examining how communication evokes perception, imagination, identity and immersion. These substantial domains are mixed without a single defensible primary subject.",
+        "candidate_categories": [
+          "applications",
+          "human_context"
+        ]
+      }
     },
     {
       "id": "case-ba-uger-cogs-319",
       "code": "COGS 319",
       "name": "Elements of Surprise",
-      "description": null,
+      "description": "Psychological research on surprise, suspense, prediction and explanation in everyday interaction and cultural experiences.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=COGS%20319",
+      "category": "applications",
+      "source_id": "case-uger-courses-cogs",
+      "url": "https://bulletin.case.edu/course-descriptions/cogs/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-cogs"
+        ],
+        "locator": "COGS 319; current 2026–2027 course block",
+        "rationale": "The actual description centers on psychological research on surprise, suspense, prediction and explanation in everyday interaction and cultural experiences.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-cogs-327",
       "code": "COGS 327",
       "name": "Gesture in Cognition and Communication",
-      "description": null,
+      "description": "Scientific research on gesture, thought, language and neural representation.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=COGS%20327",
+      "category": "applications",
+      "source_id": "case-uger-courses-cogs",
+      "url": "https://bulletin.case.edu/course-descriptions/cogs/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-cogs"
+        ],
+        "locator": "COGS 327; current 2026–2027 course block",
+        "rationale": "The actual description centers on scientific research on gesture, thought, language and neural representation.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-cogs-399h",
       "code": "COGS 399H",
       "name": "Honors Independent Study",
-      "description": null,
+      "description": "Advanced independent cognitive-science research with sustained writing and disciplinary communication.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=COGS%20399H",
+      "source_id": "case-uger-courses-cogs",
+      "url": "https://bulletin.case.edu/course-descriptions/cogs/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-cogs"
+        ],
+        "locator": "COGS 399H; current 2026–2027 course block",
+        "rationale": "The description leaves the individual cognitive-science research topic unspecified; communication output alone does not establish the project subject. No department-wide classification is inferred.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-cosi-345",
       "code": "COSI 345",
       "name": "Communication and Aging",
-      "description": null,
+      "description": "Biological and psychological aging, communication disorders and rehabilitation practices.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=COSI%20345",
+      "category": "applications",
+      "source_id": "case-uger-courses-cosi",
+      "url": "https://bulletin.case.edu/course-descriptions/cosi/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-cosi"
+        ],
+        "locator": "COSI 345; current 2026–2027 course block",
+        "rationale": "The actual description centers on biological and psychological aging, communication disorders and rehabilitation practices.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-ebme-356",
@@ -6988,15 +7146,26 @@
       "id": "case-ba-uger-cogs-397",
       "code": "COGS 397",
       "name": "Capstone in Cognitive Science",
-      "description": null,
+      "description": "Supervised cognitive-science research culminating in a substantial paper and public presentation.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=COGS%20397",
+      "source_id": "case-uger-courses-cogs",
+      "url": "https://bulletin.case.edu/course-descriptions/cogs/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-cogs"
+        ],
+        "locator": "COGS 397; current 2026–2027 course block",
+        "rationale": "The description leaves the individual cognitive-science research topic unspecified; communication output alone does not establish the project subject. No department-wide classification is inferred.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-eciv-398",
@@ -9423,15 +9592,29 @@
       "id": "case-ba-uger-cogs-377",
       "code": "COGS 377",
       "name": "Ecopsychology: Reconnecting Mind, Body, Community",
-      "description": null,
+      "description": "Ecopsychology connecting personal wellbeing, environmental justice and community engagement.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=COGS%20377",
+      "source_id": "case-uger-courses-cogs",
+      "url": "https://bulletin.case.edu/course-descriptions/cogs/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-cogs"
+        ],
+        "locator": "COGS 377; current 2026–2027 course block",
+        "rationale": "The actual description centers on ecopsychology connecting personal wellbeing, environmental justice and community engagement. These substantial domains are mixed without a single defensible primary subject.",
+        "candidate_categories": [
+          "applications",
+          "human_context"
+        ]
+      }
     },
     {
       "id": "case-ba-uger-mgmt-205",
@@ -10244,15 +10427,26 @@
       "id": "case-ba-uger-cogs-250",
       "code": "COGS 250",
       "name": "Responsible AI: Cultivating a Just and Sustainable Socio-technical Future through Data Citizenship",
-      "description": null,
+      "description": "Ethical and civic participation in AI data practices, including responsibility, justice and sustainable technology use.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=COGS%20250",
+      "category": "human_context",
+      "source_id": "case-uger-courses-cogs",
+      "url": "https://bulletin.case.edu/course-descriptions/cogs/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-cogs"
+        ],
+        "locator": "COGS 250; current 2026–2027 course block",
+        "rationale": "The actual description centers on ethical and civic participation in AI data practices, including responsibility, justice and sustainable technology use.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-engl-250",
@@ -13117,57 +13311,104 @@
       "id": "case-ba-uger-cogs-202",
       "code": "COGS 202",
       "name": "Cognition and Culture",
-      "description": null,
+      "description": "Relationships between cognition and cultural products, institutions and practices, with attention to human difference.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=COGS%20202",
+      "category": "human_context",
+      "source_id": "case-uger-courses-cogs",
+      "url": "https://bulletin.case.edu/course-descriptions/cogs/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-cogs"
+        ],
+        "locator": "COGS 202; current 2026–2027 course block",
+        "rationale": "The actual description centers on relationships between cognition and cultural products, institutions and practices, with attention to human difference.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-cogs-317",
       "code": "COGS 317",
       "name": "Cognitive Diversity and Commonality",
-      "description": null,
+      "description": "Cognitive-science research on how experience, bodies, language and cultural differences shape cognition and social interaction.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=COGS%20317",
+      "source_id": "case-uger-courses-cogs",
+      "url": "https://bulletin.case.edu/course-descriptions/cogs/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-cogs"
+        ],
+        "locator": "COGS 317; current 2026–2027 course block",
+        "rationale": "The actual description centers on cognitive-science research on how experience, bodies, language and cultural differences shape cognition and social interaction. These substantial domains are mixed without a single defensible primary subject.",
+        "candidate_categories": [
+          "applications",
+          "human_context"
+        ]
+      }
     },
     {
       "id": "case-ba-uger-cogs-343",
       "code": "COGS 343",
       "name": "Music Cognition",
-      "description": null,
-      "prerequisites": null,
+      "description": "Scientific research on music perception, cognitive processing and behavior, including neural and cultural influences.",
+      "prerequisites": "Prereq: Academic Inquiry Seminar (AIQS).",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=COGS%20343",
+      "category": "applications",
+      "source_id": "case-uger-courses-cogs",
+      "url": "https://bulletin.case.edu/course-descriptions/cogs/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-cogs"
+        ],
+        "locator": "COGS 343; current 2026–2027 course block",
+        "rationale": "The actual description centers on scientific research on music perception, cognitive processing and behavior, including neural and cultural influences.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-cosi-364",
       "code": "COSI 364",
       "name": "Disability and the ICF Framework",
-      "description": null,
+      "description": "Child disability and development through a functioning-and-health framework, including family-centered care and participation.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=COSI%20364",
+      "category": "applications",
+      "source_id": "case-uger-courses-cosi",
+      "url": "https://bulletin.case.edu/course-descriptions/cosi/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-cosi"
+        ],
+        "locator": "COSI 364; current 2026–2027 course block",
+        "rationale": "The actual description centers on child disability and development through a functioning-and-health framework, including family-centered care and participation.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-educ-336",
@@ -16700,7 +16941,8 @@
     "Registrar policy review 2026-10-11 supersedes the earlier SCMG eligibility-conflict interpretation: the official general process explicitly permits requesting an override for unmet prerequisites, corequisites or other conditions, and separate school registrar/dean approval for career restrictions. The BA’s expressly listed SCMG462/463 options remain conditional on meeting their master’s-program restriction or receiving all necessary permissions; approval is never assumed. Optional course preparation/permission does not itself make the degree inventory incomplete.",
     "2026-10-11 UGER continuation: 50 HSTY descriptions reviewed by the coordinator and all 73 mapped PHED blocks reviewed by the degree researcher. Varsity/jogging blocks containing only approval labels have limited exact-title subject rationales and retain null descriptions. Physical-education choices remain duration-based unresolved records; zero source-stated credits are preserved.",
     "2026-10-11 coordinator review adds 53 UGER descriptions from Religious Studies, Ancient Near East/Egyptian Studies, Jewish Studies and Linguistics. The actual-subject review classifies applied language pedagogy separately from historical/cultural inquiry and preserves explicit course restrictions. Full correctness audit remains in progress.",
-    "2026-10-11: all 69 mapped HSTY descriptions reviewed. Twelve reciprocal-source cross-list groups now reconcile 14 aliases while preserving every source record. Identity reconciliation is explicitly bounded to the listed groups; remaining unreviewed aliases and course subjects are not certified."
+    "2026-10-11: all 69 mapped HSTY descriptions reviewed. Twelve reciprocal-source cross-list groups now reconcile 14 aliases while preserving every source record. Identity reconciliation is explicitly bounded to the listed groups; remaining unreviewed aliases and course subjects are not certified.",
+    "Cognitive/communication-sciences review 2026-10-11 adds 19 actual course descriptions. COSI310 is critical clinical AI use, not an algorithm-design course. COGS399H/397 remain explicitly unclassified because individual research topics are unspecified. COGS250 joins the existing reciprocal Responsible AI cross-list group; all records and selection counts remain."
   ],
   "curriculum_audit": {
     "scope": "degree",
@@ -16883,13 +17125,15 @@
       "canonical_course_id": "case-ba-humn-250",
       "course_ids": [
         "case-ba-humn-250",
-        "case-ba-uger-rlgn-250"
+        "case-ba-uger-rlgn-250",
+        "case-ba-uger-cogs-250"
       ],
       "source_ids": [
         "case-degree-courses-humn",
-        "case-uger-courses-rlgn"
+        "case-uger-courses-rlgn",
+        "case-uger-courses-cogs"
       ],
-      "locator": "Exact current course blocks for HUMN 250, RLGN 250; reciprocal Offered as statements reread",
+      "locator": "COGS250, HUMN250 and RLGN250; reciprocal current Offered-as statements for Responsible AI",
       "reviewed_at": "2026-10-11",
       "rationale": "Each included code’s official course description explicitly identifies the included aliases as cross-listed versions of the same course. All source records remain; this group counts one mapped identity. Other aliases not yet independently reviewed are not silently included, and credit exclusions are not identity evidence."
     },

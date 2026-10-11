@@ -7,13 +7,13 @@ from bs4 import BeautifulSoup
 from atlas.adapters.national_curriculum_common import clean, course
 from atlas.adapters.case_degree_metadata import BASE, HEADINGS
 
-REVIEW_FILES=('case_uger_subject_reviews.json','case_uger_history_reviews.json','case_uger_wellness_reviews.json','case_uger_religion_reviews.json')
+REVIEW_FILES=('case_uger_subject_reviews.json','case_uger_history_reviews.json','case_uger_wellness_reviews.json','case_uger_religion_reviews.json','case_uger_cognitive_reviews.json')
 REVIEWS={}
 for filename in REVIEW_FILES:
     new=json.loads(Path(__file__).with_name(filename).read_text())
     if REVIEWS.keys() & new.keys():raise ValueError('Duplicate Case UGER reviewed identity')
     REVIEWS.update(new)
-DEPARTMENTS={**HEADINGS,'aiqs':'Academic Inquiry Seminar (AIQS)','hsty':'History (HSTY)','phed':'Physical Education (PHED)','rlgn':'Religious Studies (RLGN)','anee':'Ancient Near East/Egyptian Studies (ANEE)','ling':'Linguistics (LING)','jwst':'Jewish Studies (JWST)'}
+DEPARTMENTS={**HEADINGS,'aiqs':'Academic Inquiry Seminar (AIQS)','hsty':'History (HSTY)','phed':'Physical Education (PHED)','rlgn':'Religious Studies (RLGN)','anee':'Ancient Near East/Egyptian Studies (ANEE)','ling':'Linguistics (LING)','jwst':'Jewish Studies (JWST)','cogs':'Cognitive Science (COGS)','cosi':'Communication Sciences (COSI)'}
 # Exact fragments selected from reviewed blocks; additions require source review.
 EXTRA_RULES={
  'CSDS 101':['The recommended pre-requisite is comfort with high school algebra.'],
@@ -29,7 +29,7 @@ EXTRA_RULES={
 
 def eligibility(body,code):
     # Extract only explicit rule sentences, never all trailing descriptive prose.
-    labels=r'(?:Prereq(?:uisites?)?(?: or Coreq)?\s*:|Coreq\s*:|Recommended (?:preparation|background)\s*:|Credit given for only|Credit for at most|A student may (?:not receive|receive) credit|Students cannot earn credit|Students may earn credit for only)'
+    labels=r'(?:Pre-?req(?:uisites?)?(?: or Coreq)?\s*:|Coreq\s*:|Recommended (?:preparation|background)\s*:|Credit given for only|Credit for at most|A student may (?:not receive|receive) credit|Students cannot earn credit|Students may earn credit for only)'
     pieces=[m[0] for m in re.finditer(r'\b'+labels+r'[^.]*\.',body,re.I)]
     for fragment in EXTRA_RULES.get(code,[])+REVIEWS.get(code,{}).get('extra_prerequisite_fragments',[]):
         if fragment in body:pieces.append(fragment)

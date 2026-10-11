@@ -26,7 +26,7 @@ def test_source_change_drops_stale_editorial_claims(monkeypatch):
  with pytest.raises(ValueError,match='identity changed'):parse(html.replace('Synthetic inquiry','New inquiry'))
 
 
-@pytest.mark.parametrize('award,n',[('BA',254),('BS',253)])
+@pytest.mark.parametrize('award,n',[('BA',273),('BS',272)])
 def test_reviewed_uger_semantics_and_reciprocal_identity(award,n):
  pid=f'case-western-reserve-university-artificial-intelligence-{award.lower()}-degree'
  p=json.loads(Path('data/programs',pid+'.json').read_text());cs={c['code']:c for c in p['courses']}
@@ -43,8 +43,8 @@ def test_reviewed_uger_semantics_and_reciprocal_identity(award,n):
  java=next(g for g in groups if g['id'].endswith('java-crosslisting'))
  assert java['course_ids']==[f'case-{award.lower()}-csds-132',f'case-{award.lower()}-uger-ecse-132']
  profile=requirement_profile(p)
- assert profile['identity']['crosslisted_aliases']==14
- assert profile['options']['source_record_count']==profile['options']['count']+14
+ assert profile['identity']['crosslisted_aliases']==15
+ assert profile['options']['source_record_count']==profile['options']['count']+15
  assert profile['required']['count']=={'BA':8,'BS':9}[award]
 
 
@@ -89,6 +89,23 @@ def test_coordinator_religion_batch_source_guards(award):
  assert cs['RLGN 250']['category']=='human_context'
  assert 'Senior student status and a declared major' in cs['ANEE 381']['prerequisites']
  for dep,count in [('rlgn',38),('anee',7),('jwst',6),('ling',2)]:
+  path=Path('/tmp/case-uger-audit',dep+'.html')
+  if path.exists():
+   observed=m.parse_descriptions(path.read_text(),pid=pid,award=award,department=dep)
+   assert len(observed['courses'])==count
+   assert all('Changed description' not in n for n in observed['notes'])
+
+
+@pytest.mark.parametrize('award',['BA','BS'])
+def test_cognitive_subjects_and_hyphenated_prerequisites(award):
+ pid=f'case-western-reserve-university-artificial-intelligence-{award.lower()}-degree'
+ p=json.loads(Path('data/programs',pid+'.json').read_text());cs={c['code']:c for c in p['courses']}
+ assert cs['COSI 310']['category']=='applications'
+ assert cs['COSI 310']['prerequisites']=='Pre-req: Academic Inquiry Seminar (AIQS) and COSI 109 .'
+ assert cs['COGS 250']['category']=='human_context'
+ for code in ['COGS 399H','COGS 397']:
+  assert cs[code]['category']=='other' and cs[code]['category_review']['status']=='unclassified'
+ for dep,count in [('cogs',15),('cosi',4)]:
   path=Path('/tmp/case-uger-audit',dep+'.html')
   if path.exists():
    observed=m.parse_descriptions(path.read_text(),pid=pid,award=award,department=dep)
