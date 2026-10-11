@@ -24,7 +24,8 @@ def test_exact_fixed_versioned_identities_are_not_merged_with_catalog():
  assert all(c['source_id']=='mit-ai-decision-making-bs-versioned'for c in reviewed)
  duplicates=[c for c in p['courses']if c['code']=='6.1210'and not c['id'].startswith('mit-ai-v2025-')]
  assert duplicates and all('category_review'not in c for c in duplicates)
- assert all(c['credits']is None for c in reviewed)
+ assert all(c['credits']is None for c in reviewed if c['name']is None)
+ assert next(c for c in reviewed if c['code']=='6.1010')['credits']==12
 
 
 def test_optional_versioned_source_replay_observes_no_review_metadata():

@@ -35,11 +35,11 @@ def test_bundles_remain_all_components_in_required_and_overlay_choices():
     assert 'Select 5 printed option(s)' in rules['mit-ai-v2025-centers']['summary']
 
 
-def test_observations_have_distinct_ids_and_no_inferred_units_or_review():
+def test_observations_have_distinct_ids_and_published_units_without_review():
     d = adapter.parse(html())
     assert all(c['id'].startswith('mit-ai-v2025-') for c in d['courses'])
     assert not any(c['code'] == '6.000' for c in d['courses'])
-    assert all(c['credits'] is None for c in d['courses'])
+    assert all(c['credits'] == 12 for c in d['courses'])
     assert all(c['prerequisites'] == 'Prereqs: synthetic prerequisite' for c in d['courses'])
     assert not {'curriculum_audit', 'curriculum_status', 'last_verified', 'first_offered', 'catalog_year'} & d.keys()
 
@@ -64,5 +64,6 @@ def test_seed_keeps_conditional_source_views_and_credit_conflict():
     assert rules['mit-ai-version-required']['parent_id'] is None
     assert 'not cumulative' in rules['mit-ai-version-required']['summary']
     assert len([c for c in d['courses'] if c['code'] == '6.4300']) == 2
-    assert all(c['credits'] is None for c in d['courses'] if c['code'] == '6.4300')
+    assert next(c for c in d['courses'] if c['id']=='mit-ai-v2025-6-4300')['credits']==15
+    assert next(c for c in d['courses'] if c['id']=='mit-ai-6-4300')['credits']is None
     assert d['curriculum_status'] == 'partial'

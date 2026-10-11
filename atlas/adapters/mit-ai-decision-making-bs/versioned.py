@@ -13,6 +13,7 @@ PID, URL = policies.PID, policies.EMBEDDED
 SID = PID + '-versioned'
 core_subjects = import_module('atlas.adapters.mit-ai-decision-making-bs.core_subjects')
 reviewed_subjects = import_module('atlas.adapters.mit-ai-decision-making-bs.reviewed_subjects')
+subject_conventions = import_module('atlas.adapters.mit-ai-decision-making-bs.subject_conventions')
 ROOT_ID = 'mit-ai-version-required'
 LISTS = ['AI+D_AUS', 'AI+D_SERC', 'Application_CIM', 'CIM2',
          'Computation-centric', 'Data-centric', 'Decision-centric', 'EECS',
@@ -63,12 +64,14 @@ def parse(html):
             text = clean(annotation.get_text(' ', strip=True))
             prereq = re.search(r'(Prereqs(?:/\[Coreqs\])?:.*?)\s+Units:', text)
             c['prerequisites'] = prereq[1] if prereq else None
+            c['credits'] = subject_conventions.credits(text)
         if annotation:
             digest = core_subjects.classify_annotation(c, clean(annotation.get_text(' ', strip=True)))
             if digest: core_digests[c['id']] = digest
         reviewed_digest = reviewed_subjects.classify(c, clean(annotation.get_text(' ', strip=True)) if annotation else None)
         if reviewed_digest: core_digests[c['id']] = reviewed_digest
-        # Unit triplets, ranges and arranged units are not silently summed.
+        # The official catalog convention explicitly authorizes summing a
+        # complete numeric triplet; ranges and arranged units remain unknown.
         if c['id'] in courses and courses[c['id']] != c:
             raise ValueError('Conflicting versioned annotations: ' + code)
         courses[c['id']] = c

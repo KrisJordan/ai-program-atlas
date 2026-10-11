@@ -173,3 +173,7 @@ SOURCE_PARSERS.update(hass_cmsw.SOURCE_PARSERS)
 hass_music_theater = import_module('atlas.adapters.mit-ai-decision-making-bs.hass_music_theater')
 SOURCES.extend(hass_music_theater.SOURCE_PARSERS)
 SOURCE_PARSERS.update(hass_music_theater.SOURCE_PARSERS)
+
+subject_conventions = import_module('atlas.adapters.mit-ai-decision-making-bs.subject_conventions')
+SOURCES.extend(subject_conventions.SOURCE_PARSERS)
+SOURCE_PARSERS.update(subject_conventions.SOURCE_PARSERS)
