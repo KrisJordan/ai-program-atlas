@@ -17,3 +17,14 @@ SOURCE_PARSERS[TOPICS] = parse_topics
 from atlas.adapters.umich_hcai import LSA, parse_lsa_reviewed
 SOURCES = (*SOURCES, LSA)
 SOURCE_PARSERS[LSA] = parse_lsa_reviewed
+
+from atlas.adapters import umich_home_policies as home
+SOURCE_PARSERS.update({
+    home.SOURCE_INFO['ross']['url']: home.parse,
+    home.SOURCE_INFO['ross-bulletin']['url']: home.parse_ross_bulletin_reviewed,
+    home.SOURCE_INFO['ford']['url']: home.parse_ford_reviewed,
+    home.SOURCE_INFO['kinesiology']['url']: home.parse_kinesiology_reviewed,
+    home.SOURCE_INFO['stamps']['url']: home.parse_stamps_reviewed,
+    home.SOURCE_INFO['public-health']['url']: home.parse_public_health_reviewed,
+})
+SOURCES = (*SOURCES, *home.SOURCES)

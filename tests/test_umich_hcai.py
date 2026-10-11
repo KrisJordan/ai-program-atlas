@@ -57,7 +57,7 @@ def test_seed_has_explicit_remaining_gaps_and_sources():
     d=json.loads((ROOT/'data/programs'/f'{adapter.PROGRAM_ID}.json').read_text());validate_program(d)
     assert d['curriculum_status']=='partial' and d['curriculum_audit']['unresolved_requirements']
     assert d['first_offered']['value']=='Fall 2025'
-    assert len(d['courses'])==25 and len(d['requirements'])==25
+    assert len(d['courses'])==25 and len(d['requirements'])==37
     assert sum(bool(c['description']) for c in d['courses'])==10
     assert sum(bool(c['prerequisites']) for c in d['courses'])==4
     assert all(c['syllabus'] is None for c in d['courses'])
