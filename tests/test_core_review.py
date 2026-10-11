@@ -313,3 +313,20 @@ def test_survey_note_does_not_regress_newer_program_verification_date(conn):
     }])
     row = conn.execute("SELECT coverage_status,coverage_note,last_inspected FROM institutions").fetchone()
     assert tuple(row) == ("confirmed", "Earlier broad directory review", "2026-10-11")
+
+
+def test_multi_program_inspection_date_is_order_independent_and_repairs_old_import(conn):
+    first = program()
+    first["last_verified"] = "2026-10-11"
+    second = deepcopy(first)
+    second.update(id="other-ai-minor", last_verified="2026-10-09")
+    db.ingest_program(conn, first)
+    db.ingest_program(conn, second)
+    assert conn.execute("SELECT last_inspected FROM institutions").fetchone()[0] == "2026-10-11"
+    # Simulate a maintained database written by the earlier last-write-wins code.
+    conn.execute("UPDATE institutions SET last_inspected='2026-10-09'")
+    assert not db.ingest_program(conn, first)
+    assert not db.ingest_program(conn, second)
+    db.refresh_inspection_dates(conn)
+    assert conn.execute("SELECT last_inspected FROM institutions").fetchone()[0] == "2026-10-11"
+    assert conn.execute("SELECT count(*) FROM program_revisions").fetchone()[0] == 2

@@ -39,6 +39,7 @@ def ingest_all(conn, data_dir):
                 conn, content if isinstance(content, list) else content["institutions"]
             )
         db.initialize_csrankings(conn)
+        db.refresh_inspection_dates(conn)
     return changed
 
 

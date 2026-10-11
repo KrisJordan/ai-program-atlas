@@ -389,10 +389,28 @@ def ingest_program(conn, program, run_id=None):
             (pid, fingerprint, _compress_revision(canonical(program), fingerprint), now(), run_id),
         )
         conn.execute(
-            "UPDATE institutions SET coverage_status='confirmed',last_inspected=? WHERE id=?",
+            """UPDATE institutions SET coverage_status='confirmed',
+            last_inspected=MAX(COALESCE(last_inspected,''),?) WHERE id=?""",
             (program["last_verified"], program["institution"]["id"]),
         )
     return True
+
+
+def refresh_inspection_dates(conn):
+    """Recompute the latest available inspection across every current program and survey.
+
+    This also repairs dates left by earlier last-write-wins imports without
+    changing any program, survey evidence, classification or review timestamp.
+    """
+    conn.execute("""UPDATE institutions SET last_inspected=(
+        SELECT MAX(inspected_at) FROM (
+            SELECT last_verified AS inspected_at FROM programs
+            WHERE institution_id=institutions.id
+            UNION ALL
+            SELECT checked_at AS inspected_at FROM coverage_events
+            WHERE institution_id=institutions.id
+        )
+    )""")
 
 
 def ingest_survey(conn, entries):
