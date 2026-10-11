@@ -283,10 +283,10 @@ def test_maryland_reviewed_subjects_and_change_guard(monkeypatch):
  assert 'MATH240' in courses['MATH243']['prerequisites']
 
 
-def test_william_mary_partial_core_has_limited_subject_evidence():
+def test_william_mary_partial_core_has_actual_current_subject_evidence():
  p=json.loads(Path('data/programs/william-mary-applied-ai-ba.json').read_text())
- assert {c['code']:c['category'] for c in p['courses']}=={'DATA 201':'other','DATA 202':'human_context','DATA 305':'other'}
- assert all(c['credits'] is None for c in p['courses'])
+ assert {c['code']:c['category'] for c in p['courses']}=={'DATA 201':'ai_ml','DATA 202':'human_context','DATA 305':'ai_ml'}
+ assert all(c['credits']==3 and c['credit_unit']=='unknown' for c in p['courses'])
  assert requirement_profile(p)['required']['count']==3
  assert p['curriculum_status']=='partial'
 

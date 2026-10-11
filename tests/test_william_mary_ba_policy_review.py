@@ -41,7 +41,7 @@ def test_current_public_source_cache_when_available(key):
 def test_integrated_policies_preserve_unresolved_identity_and_partial_scope():
     p=json.loads(Path('data/programs',m.PID+'.json').read_text());db.validate_program(p)
     assert p['curriculum_status']=='partial' and len(p['courses'])==3
-    assert all(c['credits'] is None for c in p['courses'])
+    assert all(c['credit_unit']=='unknown' for c in p['courses'])
     profile=requirement_profile(p)
     assert profile['required']['count']==3 and profile['options']['count']==0
     rules={r['id']:r for r in p['requirements']}
