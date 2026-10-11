@@ -50,7 +50,7 @@ def parse_policy(html,*,program_id,key):
         courses=[course('buffalo-ubc','ENG 105',None,sid,URLS[key],4,category='human_context')]
         requirements[0]['course_ids']=[courses[0]['id']]
     if key=='capstone':
-        c=course('buffalo-ubc','UBC 399','UB Curriculum Capstone',sid,URLS[key],1,category='human_context')
+        c=course('buffalo-ubc','UBC 399','UB Curriculum Capstone',sid,URLS[key],1,category='other')
         c['description']='Builds a reflective portfolio linking general-education coursework with other learning experiences.'
         c['prerequisites']='Completed UB Seminar; all remaining UB Curriculum requirements completed or concurrently enrolled.'
         courses=[c];requirements[0]['course_ids']=[c['id']]
@@ -65,7 +65,7 @@ def parse_policy(html,*,program_id,key):
             match=re.fullmatch(r'([A-Z]+) (\d{3})(?:[A-Z]+)?: (.+)',cells[0])
             if not match:raise ValueError('Unrecognized course offering: '+cells[0])
             code=match[1]+' '+match[2];name=match[3]
-            c=course('buffalo-ubc',code,name,sid,URLS[key],category='electives',topic=name)
+            c=course('buffalo-ubc',code,name,sid,URLS[key],category='other',topic=name)
             observed[c['id']]=c
             if not re.fullmatch(r'(Fall|Winter|Spring|Summer) \d{4}',cells[1]):raise ValueError('Unrecognized offering term')
             context=(cells[1],cells[2]);groups.setdefault(context,set()).add(c['id'])

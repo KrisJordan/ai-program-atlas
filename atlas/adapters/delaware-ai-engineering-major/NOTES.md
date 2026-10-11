@@ -17,3 +17,8 @@ Added 11 college/university policy nodes: entry-year catalog and complete degree
 Reviewed ECE undergraduate FAQ but did not import its C-minus threshold for CISC106/210/220/361: it explicitly names Electrical or Computer Engineering, not AI Engineering. Its general technical-elective wording likewise does not define the AI/STEM pools. The AI program links a 2025 flowchart; this older sample does not replace the restricted2026–27 catalog. Public registrar Degrees & Graduation mainly supplies administrative clearance/diploma timing, not complete degree requirements.
 
 Still partial: catalog403 remains a boundary; no bypass or regenerated catalog mirror. Totaldegree credits, exact AI/STEM/breadth/writing/multicultural pools, AI-specific grades/GPA/residency and ELEG625 eligibility remain unresolved. Independent policy evidence reduces gaps without turning the sample sequence into a certified inventory. Raw pages stay ignored.
+
+## Degree correctness audit — 2026-10-11
+
+See `research/degree-audit/buffalo-delaware-rit.md` and the adjacent per-program JSON for independently reviewed source scope, exact blockers, manual expected course sets and taxonomy rationales. Full degree audit remains blocked and curriculum remains partial; successful overview reads are not catalog completion. Every represented course now has a source-specific category review. Parser observations never emit these independent reviews.
+All 28 sample-plan observations remain contextual. Fourteen unequivocal exact titles receive limited classifications; fourteen remain unclassified. The parser no longer infers subjects from prefixes or broad keywords. Current 2026–27 catalog 403 and ELEG625 eligibility are still unresolved.

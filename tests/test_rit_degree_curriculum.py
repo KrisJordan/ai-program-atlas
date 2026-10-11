@@ -13,7 +13,7 @@ def test_study_observation_reads_changed_blocks_without_replaying_catalog():
 def test_reviewed_catalog_preserves_choices_repeated_coop_and_scope():
  from atlas.db import validate_program
  d=json.loads((ROOT/'data/programs'/f'{PID}.json').read_text());validate_program(d)
- assert len([c for c in d['courses'] if c['source_id']=='rit-ai-bs-catalog'])==40
+ assert len([c for c in d['courses'] if c['source_id']=='rit-ai-bs-rendered-2026-2027'])==40
  assert len([c for c in d['courses'] if c['source_id']=='rit-ai-bs-advising-2026-2027'])==3
  assert sum(c['code']=='IDAI-499' for c in d['courses'])==1
  assert len([r for r in d['requirements'] if r['kind']=='choose_courses' and r['count']==1])==6

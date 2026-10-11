@@ -103,17 +103,7 @@ def parse(html):
                         "prerequisites": None,
                         "credits": None,
                         "credit_unit": "unknown",
-                        "category": "ai_ml"
-                        if any(
-                            w in name.lower() for w in ["intelligence", "learning", "data mining"]
-                        )
-                        else "mathematics"
-                        if subject == "MATH"
-                        else "human_context"
-                        if subject == "ENGL" or "Ethics" in name
-                        else "foundations"
-                        if subject == "CISC"
-                        else "other",
+                        "category": "other",
                         "source_id": SOURCE_ID,
                         "url": SOURCES[0],
                         "public_site": None,

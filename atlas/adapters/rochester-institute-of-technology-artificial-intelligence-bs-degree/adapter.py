@@ -13,7 +13,11 @@ def parse(html):
  numbers={'one':1,'two':2,'three':3,'four':4}
  if not m or m[1] not in numbers:raise ValueError('Co-op block requirement missing or changed')
  r=requirement(PROGRAM_ID,'coop','Cooperative education blocks',SOURCE_ID,[],kind='note',summary='Complete '+str(numbers[m[1]])+' cooperative education blocks.')
- return dict(id=PROGRAM_ID,title='Artificial Intelligence',award_level='BS',program_kind='degree',curriculum_status='partial',requirements=[r])
+ result=dict(id=PROGRAM_ID,title='Artificial Intelligence',award_level='BS',program_kind='degree',curriculum_status='partial',requirements=[r])
+ if s.select('.courseblock'):
+  from atlas.adapters.rit_ai_degree_courses import parse_rendered_courses
+  result['courses']=parse_rendered_courses(html)['courses']
+ return result
 
 from atlas.adapters.rit_policies import register
 SOURCES = list(SOURCES)
