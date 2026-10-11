@@ -286,3 +286,7 @@ SOURCE_PARSERS[followup.GRADUATION_URL] = parse_registrar_graduation
 from atlas.adapters.wpi_degree_subjects import observe as observe_subjects
 parse = observe_subjects(parse)
 SOURCE_PARSERS = {url: observe_subjects(parser) for url, parser in SOURCE_PARSERS.items()}
+
+# Full course descriptions supersede title-only candidate classifications.
+from atlas.adapters import wpi_reviewed_course_content
+wpi_reviewed_course_content.attach(globals())

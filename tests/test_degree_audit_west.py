@@ -133,7 +133,11 @@ def test_eight_degree_ledger_has_independent_partitions_and_honest_blockers():
     ledger = json.loads(Path('research/degree-audit/west-purdue-wpi.json').read_text())
     assert len(ledger['programs']) == 8
     for audit in ledger['programs']:
-        assert audit['status'] == 'blocked' and audit['blockers']
+        assert audit['blockers']
+        expected_status = 'blocked' if audit['program_id'] in ['uc-merced-ai-bs', 'furman-ai-bs'] else 'in_progress'
+        assert audit['status'] == expected_status
+        if expected_status == 'in_progress':
+            assert 'accessible' in audit['accessible_work_remaining']
         assert audit['second_pass_status'] == 'pending'
         assert set(audit['checks']) == {'degree_identity', 'required_and_choices', 'elective_pools',
             'prerequisites', 'credits_and_units', 'classification', 'family_composition', 'degree_wide_requirements'}
