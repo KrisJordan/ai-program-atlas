@@ -2787,16 +2787,135 @@
       ],
       "checks": {
         "degree_identity": "Official catalog identity and exact award/campus are retained as Artificial Intelligence and Ecology and Evolutionary Biology, BS (Boston). Current official page retrieved; catalog/cohort scope remains explicit.",
-        "required_and_choices": "Individual structural source interpretation is in progress. Parser replay/family resolution alone is not independent validation. Existing all/choice/bundle graph retained at this checkpoint.",
-        "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
-        "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant. Individually verified and mapped the explicit CHEM/PHYS concurrent courses beneath their exact lecture/pair nodes, preserving original required versus alternative ancestry and actual zero/one-hour values.",
-        "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
+        "required_and_choices": "Complete primary degree table independently transcribed: 27 fixed and 46 option identities. Ten common computing/AI identities, nine EEMB/BIOL lecture/lab identities, ENVR 4997, the statistics pair/calculus, the three-part general chemistry bundle and DS 4420 integration are fixed. Physics remains three complete alternative routes, including the independently observed zero-hour PHYS 1163 recitation. EECE 2323 inherits its optional EECE 2322 parent. College orientation, professional development, mathematical reasoning and both writing levels retain their alternatives.",
+        "elective_pools": "The topical requirement preserves sixteen semester hours overall and at least one course from each of Evolution of Organisms, Ecology and Conservation Biology, and Analytical Skills. EEMB 3465 appears in all three lists, and EEMB 3475 in two, but each course identity is counted once. The source does not itself establish whether one selection can satisfy multiple distribution lists; no permission or prohibition is invented. Paired labs stay with their named choice. Khoury ranges/exclusions and adviser-approved extensions remain criteria, not a fabricated finite pool.",
+        "prerequisites": "All 73 represented subject blocks reviewed across primary and delegated exact-block decisions. Concurrent lecture/lab and optional physics/engineering branches preserve ancestry. ENVR 3125 requires prior laboratory science or instructor permission in descriptive prose; ENVR 3300 requires permission; EEMB 5130 preserves the concurrent-calculus/graduate admission route. These entry conditions do not automatically add fixed degree courses. ENVR 5563 preserves the catalog’s duplicated prerequisite expression rather than silently editing it. EEMB 3600 retains actual D-minimum wording.",
+        "credits_and_units": "The degree states 134 total semester hours and sixteen general-elective hours. Individual observations retain one-hour labs and known-zero CHEM/PHYS recitations. Source-stated science GPA 2.000 applies to EEMB and ENVR codes; the rule is not broadened to all sciences or the whole degree. Sixteen topical hours plus category participation remain unsummed nested obligations. Source credit amounts are not inferred earned-load totals.",
         "classification": "Current represented inventory: 73 course observations; 64 individually reviewed subject classifications, 3 explicitly mixed, 6 source-inspected but unclassified, and 0 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
-        "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
-        "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed. The shared declaration deadline, conditional change-major eligibility/advising and concentration catalog-year rules are now source-parsed course-free criteria; college-specific conditional transfer/progression mappings remain active. Current Khoury advising progression, graduation and conditional transfer/home-change rules now appear in eleven source-scoped course-free nodes. They remain conditional and do not infer assignment or override catalog/cohort scope. Other partner-college policy work continues. Nine conditional Science catalog criteria now preserve junior-year clearance, full/reduced course loads, grading restrictions, graduation GPA, semester-based first-year versus cumulative later GPA, and major/university dismissal/transitional rules. Exact Admissions COS participation was checked individually. No home assignment or BA-only requirement is inferred; remaining exact applicability and any additional accessible policy checks remain open."
+        "family_composition": "Each inherited common AI/computing and placement rule verified against this concrete degree. MATH 1365/1465 replaces any assumption of CS 1800/1802; those CS courses are not present. The exact local integrative course is DS 4420. EEMB/ENVR/BIOL domain and topical rules stay local, with optional engineering concurrency beneath its original option.",
+        "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed. The shared declaration deadline, conditional change-major eligibility/advising and concentration catalog-year rules are now source-parsed course-free criteria; college-specific conditional transfer/progression mappings remain active. Current Khoury advising progression, graduation and conditional transfer/home-change rules now appear in eleven source-scoped course-free nodes. They remain conditional and do not infer assignment or override catalog/cohort scope. Other partner-college policy work continues. Nine conditional Science catalog criteria now preserve junior-year clearance, full/reduced course loads, grading restrictions, graduation GPA, semester-based first-year versus cumulative later GPA, and major/university dismissal/transitional rules. Exact Admissions COS participation was checked individually. No home assignment or BA-only requirement is inferred; remaining exact applicability and any additional accessible policy checks remain open. Complete Ecology/Evolutionary Biology table and all represented content now reviewed. Conditional Science/Khoury rules remain mapped; exact home-college/cohort applicability and remaining public policy follow-up remain in progress. A potentially overlapping topical distribution is reported without an unsupported double-counting policy."
       },
-      "expected_profile": null,
-      "expected_course_ids": null,
+      "expected_profile": {
+        "required": {
+          "count": 27,
+          "categories": {
+            "foundations": 5,
+            "mathematics": 4,
+            "ai_ml": 2,
+            "systems": 2,
+            "human_context": 0,
+            "applications": 12,
+            "electives": 0,
+            "other": 2
+          }
+        },
+        "options": {
+          "count": 46,
+          "categories": {
+            "foundations": 0,
+            "mathematics": 4,
+            "ai_ml": 0,
+            "systems": 2,
+            "human_context": 6,
+            "applications": 27,
+            "electives": 0,
+            "other": 7
+          }
+        },
+        "unresolved": {
+          "count": 0,
+          "categories": {
+            "foundations": 0,
+            "mathematics": 0,
+            "ai_ml": 0,
+            "systems": 0,
+            "human_context": 0,
+            "applications": 0,
+            "electives": 0,
+            "other": 0
+          }
+        }
+      },
+      "expected_course_ids": {
+        "required": [
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-cs-2000",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-cs-2001",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-cs-2100",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-cs-2101",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-ds-3500",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-cs-3200",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-ds-3000",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-ds-4200",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-ds-4300",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-ds-4400",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-eemb-1101",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-eemb-1102",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-eemb-1105",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-eemb-1106",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-biol-2301",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-biol-2302",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-eemb-2400",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-eemb-2302",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-eemb-2303",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-envr-4997",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-envr-2500",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-envr-2501",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-math-1341",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-chem-1161",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-chem-1162",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-chem-1163",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-ds-4420"
+        ],
+        "options": [
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-cs-1200",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-inpr-1000",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-insc-1000",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-cs-1210",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-eesc-2000",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-math-1365",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-math-1465",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-eece-2160",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-eece-2322",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-eece-2323",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-mktg-4606",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-biol-2327",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-eemb-2610",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-eemb-2700",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-eemb-2701",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-eemb-3465",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-eemb-3475",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-eemb-3600",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-envr-3800",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-envr-3801",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-eemb-3460",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-eemb-4001",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-envr-3125",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-envr-3150",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-envr-4505",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-envr-5700",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-envr-5750",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-eemb-5130",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-envr-3300",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-envr-3301",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-envr-5500",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-envr-5563",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-phys-1145",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-phys-1146",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-phys-1151",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-phys-1152",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-phys-1153",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-phys-1161",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-phys-1162",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-phys-1163",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-engw-1111",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-engw-1102",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-engw-3302",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-engw-3303",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-engw-3307",
+          "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree-engw-3315"
+        ],
+        "unresolved": []
+      },
       "discrepancies": [
         {
           "issue": "Legacy subject-prefix/title heuristics misclassified concrete courses: CS 1200 foundations -> other; CS 1210 foundations -> other; DS 3000 ai_ml -> mathematics; DS 4200 foundations -> other",
@@ -2869,7 +2988,7 @@
           "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-ecology-evolutionary-biology-bs-bos/"
         }
       ],
-      "correction_status": "First category and parser corrections applied; remaining accessible individual review continues.",
+      "correction_status": "All 73 represented observations, subject classifications/credits/eligibility and independent 27-fixed/46-option profile reviewed. Whole-degree policy applicability/follow-up remains in_progress.",
       "second_pass_status": "pending"
     },
     {

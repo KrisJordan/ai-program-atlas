@@ -599,3 +599,27 @@ def test_optional_actual_philosophy_crosslist_evidence_and_observation_replay():
         assert 'course_identity_groups' not in obs
         found=next(c for c in obs['courses']if c['code']==code);seed=next(c for c in p['courses']if c['code']==code)
         assert found=={k:v for k,v in seed.items()if k!='category_review'}
+
+
+def test_ecology_full_profile_preserves_three_list_distribution_and_shared_options():
+    from atlas.families import resolve_program
+    from atlas.curriculum_profile import requirement_profile
+    pid='northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree'
+    p=json.loads((ROOT/'data/programs'/f'{pid}.json').read_text());f=json.loads((ROOT/'data/families/northeastern-ai-combined-degrees.json').read_text());resolved=resolve_program(p,f);profile=requirement_profile(resolved)
+    assert profile['required']['count']==27 and profile['options']['count']==46 and profile['unresolved']['count']==0
+    assert len(p['courses'])==73 and all('category_review'in c for c in p['courses'])
+    nodes={r['id']:r for r in resolved['requirements']};outer=nodes[pid+'-req-ecology-and-evolutionary-biology-topical-requirement-credit-choice']
+    assert outer['kind']=='choose_credits' and outer['credits']==16
+    lists=[nodes[pid+'-req-'+s]for s in ['evolution-of-organisms','ecology-and-conservation-biology','analytical-skills']]
+    assert all(r['kind']=='choose_courses' and r['count']==1 and r['parent_id']==outer['id'] and 'At least one' in r['summary']for r in lists)
+    assert sum(c['code']=='EEMB 3465'for c in p['courses'])==1
+    appearances=[r for r in nodes.values()if pid+'-eemb-3465' in r['course_ids']]
+    assert len(appearances)==3
+    assert {r['parent_id']for r in appearances}=={r['id']for r in lists}
+    cs={c['code']:c for c in p['courses']}
+    assert cs['EEMB 5130']['category']=='mathematics'
+    assert cs['ENVR 4997']['category_review']['status']=='unclassified'
+    assert cs['ENVR 5563']['category_review']['status']=='mixed'
+    assert 'CS 1800'not in cs and 'CS 1802'not in cs
+    assert cs['PHYS 1163']['credits']==0
+    assert 'permission' in cs['ENVR 3125']['prerequisites']
