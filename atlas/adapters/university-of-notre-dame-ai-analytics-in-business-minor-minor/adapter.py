@@ -7,3 +7,6 @@ SOURCES = ('https://mendoza.nd.edu/undergraduate/ai-analytics-in-business-minor/
 SOURCE_ID = 'university-of-notre-dame-ai-analytics-in-business-minor-minor-current-curriculum'
 def parse(html: str) -> dict:
     return observe(html, PROGRAM_ID, 'AI Analytics in Business', SOURCE_ID, SOURCES[0], 'nd')
+
+from atlas.adapters.notre_dame_followup import CATALOG_URL, COLLEGE_URL, parse_catalog, parse_college
+SOURCE_PARSERS = {CATALOG_URL: lambda html: parse_catalog(html, PROGRAM_ID), COLLEGE_URL: lambda html: parse_college(html, PROGRAM_ID)}

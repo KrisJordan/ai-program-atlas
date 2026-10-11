@@ -404,17 +404,46 @@
       "source_text": null,
       "summary": "Mendoza students must complete added minors within four years. The BBA’s degree-wide GPA/residency requirements are not relabeled as minor-specific limits.",
       "course_ids": []
+    },
+    {
+      "id": "notre-dame-ai-essentials-business-minor-college-pass-fail-observation",
+      "parent_id": null,
+      "title": "Mendoza pass-fail wording — applicability unresolved",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "notre-dame-ai-essentials-business-minor-college-policy",
+      "source_text": null,
+      "summary": "The BBA paragraph permits juniors/seniors one non-business elective per term with academic-adviser permission and assistant-dean approval, selected in the first six days and irrevocable. It excludes business/required/second-major/minor courses but parenthetically excepts a first minor-track course. This source-specific observation does not override the university code or grant an AI-minor exception, especially for students outside Mendoza.",
+      "course_ids": []
+    },
+    {
+      "id": "notre-dame-ai-essentials-business-minor-additional-pool-observation",
+      "parent_id": null,
+      "title": "Additional approved-elective section is empty",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "notre-dame-ai-essentials-business-minor-curriculum",
+      "source_text": null,
+      "summary": "The public additional-approved-electives accordion contains an empty content container. No finite additional pool or approval rule can be verified from this section; it is not evidence that no additional electives exist.",
+      "course_ids": []
     }
   ],
   "notes": [
     "Published total is 15 credit hours: 7.5 core plus at least 7.5 elective hours. FIN 40260 / 40262 is preserved as one grouped listing, not two separately required courses. The empty additional-electives section prevents complete inventory certification.",
     "Course theme categories are editorial classifications; source-stated outcomes are labeled separately. Unknown prerequisite values do not mean there are no prerequisites.",
     "Academic Code §5.4.2 explicitly identifies all course credits as semester hours; numeric amounts are unchanged. The public additional-electives button was expanded and remained empty, so no hidden approved list is guessed.",
-    "The university prohibits pass/fail coursework from satisfying program requirements; the college lists a first-minor-course exception in its BBA policy. Its applicability to this all-majors minor remains unresolved. No degree-wide residency percentage or GPA is imposed as a minor-specific rule."
+    "The university prohibits pass/fail coursework from satisfying program requirements; the college lists a first-minor-course exception in its BBA policy. Its applicability to this all-majors minor remains unresolved. No degree-wide residency percentage or GPA is imposed as a minor-specific rule.",
+    "2026-10-11 reinspection confirms the unresolved source wording/list issue. Secondary parsers now observe the current catalog pool and pass-fail paragraph independently; blank catalog hours do not overwrite reviewed course amounts. No source-precedence rule authorizing a merged pool or grading exception was found in these sections."
   ],
   "curriculum_audit": {
     "scope": "minor",
-    "reviewed_at": "2026-10-10",
+    "reviewed_at": "2026-10-11",
     "source_ids": [
       "notre-dame-ai-essentials-business-minor-curriculum",
       "notre-dame-ai-essentials-business-minor-academic-code",
@@ -425,7 +454,8 @@
       "Core and elective inventory",
       "Program-local overlap and completion notes",
       "2026 university academic code: credit definition, grading, transfer, repeats and cross-college overlap",
-      "Mendoza college credential-completion and pass/fail wording; host-degree scope distinguished"
+      "Mendoza college credential-completion and pass/fail wording; host-degree scope distinguished",
+      "Rerunnable source-specific catalog/college or empty-additional-elective observations; conflicts retained"
     ],
     "unresolved_requirements": [
       "Additional approved electives section remained empty after public-browser expansion; the full finite approved list is unresolved.",

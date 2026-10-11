@@ -13,3 +13,9 @@ The additional approved-electives button was opened in the ordinary public brows
 The introductory preparation statement is labeled `program_aim`, independently from its `source_stated` provenance. Course categories are editorial taxonomy. Public course sites, syllabi, most formal prerequisites and first-offered date remain unknown.
 
 The adapter continues to extract the primary page's course entries, amounts and groups only, with partial status and no review timestamps/audit. Unit normalization and policy review are curated from separate evidence. Reduced fixtures retain original fractional choices and grouped Finance codes without publishing raw pages.
+
+## Bounded clarification and refresh pass — 2026-10-11
+
+The public program HTML again returned HTTP 200. Its exact “Additional approved electives across Notre Dame” accordion still contains an empty `.accordion__content`/`.accordion__interior` container, consistent with the prior ordinary-browser inspection. This is missing published list content, not a login/403/robots barrier and not proof of an empty eligible pool. The primary parser now validates this explicit empty state and requires review if text, a link, or an embedded document appears, rather than silently ignoring a new list.
+
+The current Mendoza catalog Pass-Fail paragraph still mentions a first-minor-course exception but also restricts its option to juniors/seniors, non-business electives, adviser permission and assistant-dean approval; selection is within six days and irrevocable. A secondary source parser preserves that scoped wording without overriding the university academic code or extending BBA policy to every home college. **Partial remains** for the unavailable additional pool and cross-college/pass-fail applicability. The record now has 13 policy/requirement nodes; course inventory is unchanged. No new launch date, individual-course waiver, or public syllabus is inferred.
