@@ -66,3 +66,24 @@ def test_multiple_sources_agree_and_program_ties_have_stable_display_order():
     assert institution_rank_context(i,NU,'2027')['reason'] == 'verified_primary'
     programs = [dict(id='z',title='AI Beta'),dict(id='b',title='AI Alpha'),dict(id='a',title='AI Alpha')]
     assert [p['id'] for p in sorted(programs,key=lambda p:program_rank_key(p,i,NU,'2027'))] == ['a','b','z']
+
+
+@pytest.mark.parametrize('row', [
+    dict(rank=0,value=3,missingness='observed'),
+    dict(rank=True,value=3,missingness='observed'),
+    dict(rank=1,value=None,missingness='observed'),
+    dict(rank=1,value=3,missingness='not_listed'),
+    dict(rank=1,value=float('nan'),missingness='observed'),
+])
+def test_research_sort_never_promotes_missing_or_invalid_evidence(row):
+    from atlas.research_context import aggregate_rank_map
+    cs=dict(methodology=dict(status='available'),observations=[dict(institution_id='a',field='aggregate',**row)])
+    assert aggregate_rank_map(cs)=={'a':None}
+    cs['methodology']['status']='not_imported'
+    assert aggregate_rank_map(cs)=={}
+
+
+def test_duplicate_research_observations_do_not_select_a_favorable_rank():
+    from atlas.research_context import aggregate_rank_map
+    rows=[dict(institution_id='a',field='aggregate',value=5,rank=r,missingness='observed') for r in (2,1)]
+    assert aggregate_rank_map(dict(methodology=dict(status='available'),observations=rows))=={'a':None}

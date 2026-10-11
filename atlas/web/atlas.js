@@ -83,7 +83,7 @@
 
   function readState() {
     const params = new URLSearchParams(location.search);
-    sortControl.value = params.get('sort') === 'name' ? 'name' : 'rank';
+    sortControl.value = ['rank', 'name', 'csrankings'].includes(params.get('sort')) ? params.get('sort') : 'csrankings';
     keys.forEach(key => {
       const value = params.get(key) || '';
       controls[key].value = value;
@@ -109,7 +109,7 @@
 
   function writeState() {
     const params = new URLSearchParams();
-    if (sortControl.value === 'name') params.set('sort', 'name');
+    if (sortControl.value !== 'csrankings') params.set('sort', sortControl.value);
     keys.forEach(key => { if (controls[key].value) params.set(key, controls[key].value); });
     if (selected.length) params.set('compare', selected.join(','));
     if (profileMode === 'options') params.set('profile', 'options');
@@ -232,9 +232,10 @@
   function sortDirectory() {
     const compareText = (a, b) => a < b ? -1 : a > b ? 1 : 0;
     const compare = (a, b) => {
-      if (sortControl.value === 'rank') {
-        const rankA = a.dataset.sortRank ? Number(a.dataset.sortRank) : Infinity;
-        const rankB = b.dataset.sortRank ? Number(b.dataset.sortRank) : Infinity;
+      if (sortControl.value !== 'name') {
+        const key = sortControl.value === 'rank' ? 'sortRank' : 'sortCsrankings';
+        const rankA = a.dataset[key] ? Number(a.dataset[key]) : Infinity;
+        const rankB = b.dataset[key] ? Number(b.dataset[key]) : Infinity;
         if (rankA !== rankB) return rankA < rankB ? -1 : 1;
       }
       for (const key of ['sortInstitution', 'sortTitle', 'sortId']) {
@@ -331,7 +332,7 @@
   form.addEventListener('submit', event => { event.preventDefault(); clearTimeout(timer); writeState(); });
   controls.q.addEventListener('input', () => { clearTimeout(timer); timer = setTimeout(writeState, 220); });
   keys.filter(k => k !== 'q').forEach(key => controls[key].addEventListener('change', () => { clearTimeout(timer); if (key === 'award') { Object.keys(awardState).forEach(group => { awardState[group] = ''; }); const path = pathForType(controls.award.value) || (controls.award.value ? 'majors' : null); if (path) Object.keys(pathState).forEach(group => { pathState[group] = path; }); } if (key === 'type' && controls.type.value) Object.keys(pathState).forEach(group => { pathState[group] = pathForType(controls.type.value); awardState[group] = ''; }); if (key === 'discipline' && controls.discipline.value) programs.filter(p => (p.family?.disciplines || []).includes(controls.discipline.value)).forEach(p => { if (!expanded.includes(p.family.id)) expanded.push(p.family.id); }); writeState(); }));
-  const reset = () => { clearTimeout(timer); sortControl.value = 'rank'; keys.forEach(key => { controls[key].value = ''; }); Object.keys(pathState).forEach(group => { pathState[group] = 'majors'; awardState[group] = ''; }); writeState(); };
+  const reset = () => { clearTimeout(timer); sortControl.value = 'csrankings'; keys.forEach(key => { controls[key].value = ''; }); Object.keys(pathState).forEach(group => { pathState[group] = 'majors'; awardState[group] = ''; }); writeState(); };
   document.getElementById('reset-filters').addEventListener('click', reset);
   document.getElementById('empty-reset').addEventListener('click', () => { reset(); filterPanel.open = true; controls.q.focus(); });
   document.getElementById('clear-comparison').addEventListener('click', () => {

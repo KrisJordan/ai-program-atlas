@@ -120,7 +120,7 @@ def test_statement_type_does_not_change_inference_provenance():
 
 
 def test_directory_static_rank_order_keeps_category_and_evidence(site_data, tmp_path):
-    """No-JS baseline has numeric rank order and never sorts by a bound/old rank."""
+    """No-JS baseline uses research ranks while retaining U.S. News provenance."""
     from bs4 import BeautifulSoup
     site_data['meta']['cohort'] = {'edition': '2027'}
     for index, (name, rank, status) in enumerate([
@@ -133,6 +133,9 @@ def test_directory_static_rank_order_keeps_category_and_evidence(site_data, tmp_
         institution['rankings'] = [dict(publisher='U.S. News', edition='2027', category='National Universities', rank=rank, rank_upper_bound=100, source_url='https://example.edu/rank-' + str(index), verification_status=status)]
         site_data['programs'][index]['institution'] = deepcopy(institution)
         site_data['programs'][index].update(program_kind='degree', award_level='BS')
+    site_data['csrankings'] = dict(methodology=dict(status='available'), observations=[
+        dict(institution_id=site_data['institutions'][i]['id'], field='aggregate',
+             missingness='observed', value=5.0, rank=rank) for i, rank in [(0,2),(1,10),(4,2)]])
     original = deepcopy(site_data)
     build(site_data, tmp_path)
     assert site_data == original
@@ -145,5 +148,5 @@ def test_directory_static_rank_order_keeps_category_and_evidence(site_data, tmp_
     assert 'Enumerated secondary' in cards[2].get_text()
     assert cards[2].find(class_='card-ranking').find('a')['href'] == 'https://example.edu/rank-1'
     assert '2027' in cards[2].find(class_='card-ranking').get_text()
-    assert soup.find(id='sort-order').find('option')['value'] == 'rank'
-    assert 'not a publisher tiebreak' in soup.find(class_='sort-explanation').get_text()
+    assert soup.find(id='sort-order').find('option')['value'] == 'csrankings'
+    assert 'five AI research fields' in soup.find(class_='sort-explanation').get_text()

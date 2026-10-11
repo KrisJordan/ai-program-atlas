@@ -56,3 +56,23 @@ def institution_context(data, institution_id):
             'source_url':method.get('source_url'),'source_snapshot':method.get('source_snapshot'),
             'upstream_institution':next((r.get('upstream_institution') for r in observations.values() if r.get('upstream_institution')),None),
             'rows':rows}
+
+
+def aggregate_rank_map(csrankings):
+    """Use only available observed aggregate ranks; never manufacture missing ranks."""
+    if (csrankings.get('methodology') or {}).get('status') != 'available':
+        return {}
+    result = {}
+    seen = set()
+    for row in csrankings.get('observations', []):
+        if row.get('field') != 'aggregate':
+            continue
+        iid, rank, score = row.get('institution_id'), row.get('rank'), row.get('value')
+        valid = (row.get('missingness') == 'observed' and number(score) and score > 0
+                 and isinstance(rank, int) and not isinstance(rank, bool) and rank > 0)
+        if iid in seen:
+            result[iid] = None
+        else:
+            result[iid] = rank if valid else None
+        seen.add(iid)
+    return result

@@ -11,7 +11,7 @@ import shutil
 from atlas.curriculum_profile import requirement_profile
 from atlas.awards import major_award_buckets
 from atlas.rankings import institution_rank_context
-from atlas.research_context import FIELDS as RESEARCH_FIELDS, institution_context
+from atlas.research_context import FIELDS as RESEARCH_FIELDS, institution_context, aggregate_rank_map
 
 CATEGORIES = {
     "foundations": "Computing foundations", "mathematics": "Mathematics",
@@ -256,7 +256,7 @@ def award_options_markup(program):
 
 
 def directory_sort_key(program, title=None, identity=None):
-    rank = program.get('_rank_context', {}).get('rank')
+    rank = program.get('_research_rank')
     return (rank if rank is not None else float('inf'),
             str(program.get('institution', {}).get('name') or '').casefold(),
             str(title if title is not None else program.get('title') or '').casefold(),
@@ -266,7 +266,8 @@ def directory_sort_key(program, title=None, identity=None):
 def directory_sort_attributes(program, title=None, identity=None):
     rank, institution, title, identity = directory_sort_key(program, title, identity)
     return ' '.join(f'data-sort-{key}="{esc(value)}"' for key, value in [
-        ('rank', '' if rank == float('inf') else rank), ('institution', institution),
+        ('rank', program.get('_rank_context', {}).get('rank') or ''),
+        ('csrankings', '' if rank == float('inf') else rank), ('institution', institution),
         ('title', title), ('id', identity)])
 
 
@@ -281,7 +282,9 @@ def directory_rank_markup(program, linked=True):
     if rank is None and context.get('reason'):
         evidence += ' · ' + str(context['reason']).replace('_', ' ')
     citation = external(context.get('source_url'), 'Ranking source') if linked and context.get('source_url') else ''
-    return '<span class="card-ranking"><strong>' + esc(label) + '</strong> · ' + esc(details) + '<small>' + esc(evidence) + (' · ' + citation if citation else '') + '</small></span>'
+    research_rank = program.get('_research_rank')
+    research_label = f'CSRankings AI aggregate · U.S. #{research_rank}' if research_rank is not None else 'CSRankings AI aggregate · rank unavailable'
+    return '<span class="card-research-ranking">' + esc(research_label) + '</span><span class="card-ranking"><strong>' + esc(label) + '</strong> · ' + esc(details) + '<small>' + esc(evidence) + (' · ' + citation if citation else '') + '</small></span>'
 
 
 def program_card(p, base):
@@ -362,11 +365,12 @@ def program_cohort(program, institutions):
     return 'nu' if 'National Universities' in categories else 'lac'
 
 
-def cohort_directory(programs, institutions, families, base, edition=None):
+def cohort_directory(programs, institutions, families, base, edition=None, csrankings=None):
     institution_map = {i['id']: i for i in institutions}
+    research_ranks = aggregate_rank_map(csrankings or {})
     blocks = []
     for key, name in COHORT_GROUPS.items():
-        members = [{**p, '_rank_context': institution_rank_context(institution_map.get(p.get('institution', {}).get('id'), p.get('institution', {})), name if key != 'unclassified' else None, edition)} for p in programs if program_cohort(p, institution_map) == key]
+        members = [{**p, '_research_rank': research_ranks.get(p.get('institution', {}).get('id')), '_rank_context': institution_rank_context(institution_map.get(p.get('institution', {}).get('id'), p.get('institution', {})), name if key != 'unclassified' else None, edition)} for p in programs if program_cohort(p, institution_map) == key]
         if key == 'unclassified' and not members:
             continue
         tabs = []
@@ -414,8 +418,8 @@ def root_page(data, base):
 {inventory_counts}<section class="explorer" aria-labelledby="explore-title"><div class="section-heading"><div><span class="eyebrow">PROGRAM DIRECTORY</span><h2 id="explore-title">Find a program</h2></div><p>Choose an institution category and program type. Compare up to four programs.</p></div>
 <details id="filter-panel" class="filter-panel js-only"><summary><span>Search &amp; filters</span><span id="active-filter-summary" role="status" aria-live="polite">No search filters active</span></summary><form id="filters" class="filters" role="search"><label class="search-label" for="search">Search programs<input type="search" id="search" name="q" placeholder="Institution, program, or course…" autocomplete="off"></label><div class="filter-row">{controls}</div><div class="filter-footer"><p class="filter-help">The course-category filter searches all documented course records, including elective options. Discipline filters use explicitly recorded family membership; unclassified programs are not assumed to match.</p><button type="button" id="reset-filters" class="text-button">Reset filters</button></div></form></details>
 <noscript><p class="notice">All documented programs are listed below. Enable JavaScript to filter and compare programs.</p></noscript>
-<div class="results-heading"><p id="result-count" role="status" aria-live="polite">{len(programs)} programs</p><label class="sort-control js-only" for="sort-order">Sort programs<select id="sort-order" name="sort"><option value="rank">U.S. News rank · ascending</option><option value="name">Institution name · A–Z</option></select></label></div><p class="sort-explanation">Default: ascending verified numeric U.S. News rank within each category. Unknown or unverified ranks follow. Ties use institution and program names alphabetically for navigation, not a publisher tiebreak. Institution ranks do not measure program or teaching quality.</p>
-{cohort_directory(programs, institutions, families, base, cohort.get('edition') if isinstance(cohort, dict) else None)}
+<div class="results-heading"><p id="result-count" role="status" aria-live="polite">{len(programs)} programs</p><label class="sort-control js-only" for="sort-order">Sort programs<select id="sort-order" name="sort"><option value="csrankings">CSRankings aggregate U.S. rank · ascending</option><option value="rank">U.S. News rank · ascending</option><option value="name">Institution name · A–Z</option></select></label></div><p class="sort-explanation">Default: ascending CSRankings aggregate U.S. rank within each category and program tab. Institutions without an observed aggregate rank follow. Ties use institution and program names alphabetically. The aggregate covers five AI research fields in the configured publication window; publication activity does not measure undergraduate teaching quality. U.S. News and alphabetical sorts remain available.</p>
+{cohort_directory(programs, institutions, families, base, cohort.get('edition') if isinstance(cohort, dict) else None, data.get('csrankings'))}
 <div id="empty-state" class="empty-state" hidden><span class="eyebrow">NO MATCHES</span><h3>No programs match your filters.</h3><p>No documented program matches these filters. This does not establish that such a program does not exist.</p><button type="button" id="empty-reset">Clear filters</button></div></section>
 <div id="compare-tray" class="compare-tray" hidden><span id="tray-count">0 of 4 selected</span><a href="#comparison">Compare programs ↓</a></div><section id="comparison" class="comparison js-only" aria-labelledby="compare-title"><div class="section-heading"><div><span class="eyebrow">PROGRAM COMPARISON</span><h2 id="compare-title">Compare programs</h2></div><button type="button" id="clear-comparison" class="text-button">Clear selection</button></div><p class="comparison-intro">Choose up to four programs. Credit units and incomplete curricula stay visible; course counts are not measures of program quality.</p><label class="comparison-profile-control" for="compare-profile">Curriculum profile<select id="compare-profile"><option value="required">Required curriculum</option><option value="options">Elective options</option></select></label><div id="compare-status" role="status" aria-live="polite"></div><div id="comparison-content"><p class="comparison-placeholder">Select “Compare” on a program to begin.</p></div></section>
 <section class="method-callout"><span class="eyebrow">SOURCES & METHODS</span><h2>Check the evidence behind each record.</h2><p>Official sources, verification dates, requirement structure, and unknowns travel with the data. Source statements about program aims and outcomes are kept separate from editorial classifications.</p><a href="{base}methodology/">How to read this atlas →</a></section>'''

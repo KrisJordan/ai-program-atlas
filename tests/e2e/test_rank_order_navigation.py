@@ -54,6 +54,9 @@ def rank_fixture(data):
             sources=deepcopy(template['sources']),shared_requirements=[]))
     # Reverse input order to ensure sorting does not accidentally reflect fixtures.
     data['programs'].reverse()
+    data['csrankings'] = dict(methodology=dict(status='available'), observations=[
+        dict(institution_id=f'{cohort}-{key}',field='aggregate',missingness='observed',value=5.0,rank=rank)
+        for cohort in ('nu','lac') for key,rank in [('two',2),('alpha',10),('beta',10)]])
     return data
 
 
@@ -81,7 +84,7 @@ def test_numeric_ties_unknowns_families_and_filters_in_both_categories(
     errors=[]
     page.on('pageerror',lambda error:errors.append(str(error)))
     page.goto(site+f'?path_nu={path}&path_lac={path}')
-    expect(page.locator('#sort-order')).to_have_value('rank')
+    expect(page.locator('#sort-order')).to_have_value('csrankings')
     for cohort in ('nu','lac'):
         assert ids(page,cohort,path)==expected_ids(cohort,path)
         root=section(page,cohort)
@@ -102,7 +105,7 @@ def test_numeric_ties_unknowns_families_and_filters_in_both_categories(
         assert ids(page,cohort,path)==[f'{cohort}-beta-{path}']
     page.reload()
     expect(page.locator('#search')).to_have_value('Beta Ten')
-    expect(page.locator('#sort-order')).to_have_value('rank')
+    expect(page.locator('#sort-order')).to_have_value('csrankings')
     page.go_back()
     expect(page.locator('#search')).to_have_value('')
     for cohort in ('nu','lac'):
@@ -132,15 +135,48 @@ def test_explicit_sort_preserves_award_path_comparison_and_history(page,site,tmp
     page.locator('#sort-order').select_option('name')
     open_filters(page)
     page.locator('#reset-filters').click()
-    expect(page.locator('#sort-order')).to_have_value('rank')
+    expect(page.locator('#sort-order')).to_have_value('csrankings')
 
 
 def test_static_no_javascript_default_is_ranked_in_each_panel(browser,site,tmp_path,site_data):
-    build(rank_fixture(site_data),tmp_path/'ai-program-atlas')
+    data=rank_fixture(site_data)
+    for row in data['csrankings']['observations']:
+        row['rank'] = 1 if row['institution_id'].endswith('-beta') else 20
+    build(data,tmp_path/'ai-program-atlas')
     context=browser.new_context(java_script_enabled=False)
     page=context.new_page()
     page.goto(site)
     for cohort in ('nu','lac'):
         for path in PATHS:
-            assert ids(page,cohort,path)==expected_ids(cohort,path)
+            assert ids(page,cohort,path)==[f'{cohort}-beta-{path}',f'{cohort}-alpha-{path}',f'family-{cohort}',
+                f'{cohort}-unverified-{path}',f'{cohort}-unknown-{path}',f'{cohort}-inferred-{path}']
     context.close()
+
+
+@pytest.mark.parametrize('width', [1440,390])
+def test_aggregate_default_differs_from_usnews_and_restores_sort_history(page,site,tmp_path,site_data,width):
+    data=rank_fixture(site_data)
+    for row in data['csrankings']['observations']:
+        row['rank'] = 1 if row['institution_id'].endswith('-beta') else 20
+    build(data,tmp_path/'ai-program-atlas')
+    page.set_viewport_size({'width':width,'height':900})
+    page.goto(site+'?award_nu=BS&compare=nu-two-majors&path_lac=minors')
+    aggregate=['nu-beta-majors','nu-alpha-majors','family-nu',
+               'nu-unverified-majors','nu-unknown-majors','nu-inferred-majors']
+    expect(page.locator('#sort-order')).to_have_value('csrankings')
+    assert ids(page,'nu','majors') == aggregate
+    expect(section(page,'nu').locator('[data-program-id="nu-beta-majors"] .card-research-ranking')).to_contain_text('U.S. #1')
+    page.reload();assert ids(page,'nu','majors') == aggregate
+    page.locator('#sort-order').select_option('rank')
+    assert 'sort=rank' in page.url
+    assert ids(page,'nu','majors') == expected_ids('nu','majors')
+    page.reload();expect(page.locator('#sort-order')).to_have_value('rank')
+    page.locator('#sort-order').select_option('csrankings')
+    assert 'sort=' not in page.url
+    assert ids(page,'nu','majors') == aggregate
+    page.go_back();expect(page.locator('#sort-order')).to_have_value('rank')
+    page.go_forward();expect(page.locator('#sort-order')).to_have_value('csrankings')
+    expect(section(page,'nu').locator('[data-major-award]')).to_have_value('BS')
+    expect(section(page,'lac').locator('[role="tab"][data-path="minors"]')).to_have_attribute('aria-selected','true')
+    expect(page.locator('.compare-table thead th')).to_have_count(2)
+    assert page.evaluate('document.documentElement.scrollWidth<=innerWidth')
