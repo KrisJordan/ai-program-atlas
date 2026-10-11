@@ -215,7 +215,7 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']['description_reviewed_records']==343
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==355
     assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
         o=next(o for o in entry(code)['observations'] if o.get('evidence_basis')=='official_title_only')
@@ -1077,3 +1077,55 @@ def test_language_registration_observer_replays_and_withdraws_changed_eligibilit
             if o['code']=='21G.101':assert review.matched_review(c,changed,source['url'],MANIFEST) is None
             seen+=1
     assert seen==15
+
+
+def test_romance_language_reviews_preserve_dated_eligibility_and_topic():
+    report=MANIFEST['ocw_romance_language_review']
+    assert len(report['upgraded_record_ids'])==12
+    assert report['public_course_pages_read']==report['public_syllabi_read']==12
+    for code in ['21G.711','21G.880']:
+        e=entry(code)['observations'][-1]
+        assert '21G.704' in e['prerequisites'] and '21G.774' in e['prerequisites']
+        assert any('without a printed AND/OR' in n for n in e['restrictions'])
+        assert e['credits'] is None
+    e=entry('21G.712')['observations'][-1]
+    assert e['prerequisites'].endswith('o un curso equivalente.')
+    heritage=entry('21G.714')['observations'][-1]
+    assert heritage['observed_name']=='Spanish for Bilingual Students'
+    assert heritage['prerequisites'] is None and heritage['source_metadata']['registration_policy_digest']
+    assert any('accommodates other students' in n for n in heritage['restrictions'])
+    assert any('Luis Buñuel topic' in n for n in entry('21G.735')['observations'][-1]['restrictions'])
+    for code in ['21G.702','21G.801','21G.802']:
+        assert entry(code)['observations'][-1]['prerequisites'] is None
+    assert entry('21G.705')['observations'][-1]['evidence_basis']=='official_title_only'
+
+
+def test_spanish_unheaded_source_requires_exact_dated_identity_and_preparation():
+    html='''<div id="course-banner"><span class="course-number-term-detail">21G.712 | Fall 2003 | Undergraduate</span><h1>Spanish Conversation and Composition</h1></div><div id="course-main-content"><h2>Horario del Curso</h2><p>Esta asignatura está destinada a aquellos alumnos que hayan terminado 21G.704 (Spanish IV) o un curso equivalente. Los objetivos son la conversación y la escritura.</p></div>'''
+    o=review.observe_ocw_language_syllabus(html)[0]
+    assert o['prerequisites'].endswith('o un curso equivalente.')
+    assert o['units'] is None
+    for altered in [html.replace('Fall 2003','Fall 2026'),html.replace('21G.712','21G.713'),html.replace('curso equivalente.','experiencia previa.')]:
+        with pytest.raises(ValueError):review.observe_ocw_language_syllabus(altered)
+
+
+def test_romance_language_captures_replay_with_registration_withdrawal():
+    path=Path('/tmp/mit-hass-subjects/ocw-romance-languages-index.json')
+    if not path.exists():pytest.skip('Optional ignored public Romance-language OCW captures')
+    seen=0
+    for source in json.loads(path.read_text()):
+        if not source['key'].endswith('-syllabus'):continue
+        cache=path.parent/('ocw-'+source['key']+'.html')
+        if not cache.exists():pytest.skip('Optional ignored public syllabus')
+        html=cache.read_text();o=review.observe_ocw_language_syllabus(html)[0]
+        for cid,row in MANIFEST['courses'].items():
+            e=next((e for e in row['observations'] if e['source_url']==source['url']),None)
+            if e is None:continue
+            c=dict(id=cid,code=row['listed_code'],name=row['listed_name'],source_id=row['listed_source_id'])
+            assert review.matched_review(c,o,source['url'],MANIFEST)==e
+            if o['code']=='21G.714':
+                assert o['registration_policy']['Nivel']
+                changed={**o,'registration_policy':{'Nivel':'Only heritage speakers admitted'}}
+                assert review.matched_review(c,changed,source['url'],MANIFEST) is None
+            seen+=1
+    assert seen==12

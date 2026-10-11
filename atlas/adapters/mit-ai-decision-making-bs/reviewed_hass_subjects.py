@@ -428,7 +428,9 @@ def observe_ocw_syllabus(html):
     sections = {}
     for heading in main.find_all(['h2', 'h3', 'h4', 'h5']):
         title = clean(heading).rstrip(':')
-        if title not in ['Description', 'Course Description', 'Course Overview', 'Course Summary', 'Overview', 'Class Objectives', 'Objectives and Organization', 'Purpose', 'Introduction', 'Goals for the Class', 'Course Goals and Organization', 'Class Overview', 'Course Aims', 'Course Description and Learning Objectives', 'Course Description (HASS-D Language Option)', 'Course Objectives and Procedures', 'コースの目標 (もくひょう) Course Objectives', 'Prerequisites', 'Prerequisite']:
+        if title == 'Prerequisites / Requisitos Previos':
+            title = 'Prerequisites'
+        if title not in ['Description', 'Course Description', 'Course Overview', 'Course Summary', 'Overview', 'Class Objectives', 'Objectives and Organization', 'Purpose', 'Introduction', 'Goals for the Class', 'Course Goals and Organization', 'Class Overview', 'Course Aims', 'Course Description and Learning Objectives', 'Course Description (HASS-D Language Option)', 'Course Objectives and Procedures', 'コースの目標 (もくひょう) Course Objectives', 'Course Objectives', 'General Description', 'El propósito', 'Course Description and Goals', 'Course Description / Descripción Del Curso', 'Contenido', 'Films', 'Prerequisites', 'Prerequisite']:
             continue
         content = []
         for sibling in heading.next_siblings:
@@ -437,7 +439,7 @@ def observe_ocw_syllabus(html):
             if hasattr(sibling, 'get_text'):
                 content.append(clean(sibling))
         sections[title] = clean(' '.join(content)) or None
-    description = next((sections[k] for k in ['Description', 'Course Description', 'Course Overview', 'Course Summary', 'Overview', 'Class Objectives', 'Objectives and Organization', 'Purpose', 'Introduction', 'Goals for the Class', 'Course Goals and Organization', 'Class Overview', 'Course Aims', 'Course Description and Learning Objectives', 'Course Description (HASS-D Language Option)', 'Course Objectives and Procedures', 'コースの目標 (もくひょう) Course Objectives'] if sections.get(k)), None)
+    description = next((sections[k] for k in ['Description', 'Course Description', 'Course Overview', 'Course Summary', 'Overview', 'Class Objectives', 'Objectives and Organization', 'Purpose', 'Introduction', 'Goals for the Class', 'Course Goals and Organization', 'Class Overview', 'Course Aims', 'Course Description and Learning Objectives', 'Course Description (HASS-D Language Option)', 'Course Objectives and Procedures', 'コースの目標 (もくひょう) Course Objectives', 'Course Objectives', 'General Description', 'El propósito', 'Course Description and Goals', 'Course Description / Descripción Del Curso', 'Contenido', 'Films'] if sections.get(k)), None)
     if not description:
         raise ValueError('OCW syllabus actual description section missing')
     prerequisites = sections.get('Prerequisites', sections.get('Prerequisite'))
@@ -495,12 +497,30 @@ def observe_ocw_course(html):
 
 def observe_ocw_language_syllabus(html):
     """Pin dated language placement/registration sections independently of prerequisites."""
-    observation = observe_ocw_syllabus(html)[0]
-    main = BeautifulSoup(html, 'html.parser').select_one('#course-main-content')
+    soup = BeautifulSoup(html, 'html.parser')
+    main = soup.select_one('#course-main-content')
+    try:
+        observation = observe_ocw_syllabus(html)[0]
+    except ValueError:
+        # This dated syllabus puts the actual Spanish description in an
+        # unheaded paragraph; require its exact banner and introductory clause.
+        banner = soup.select_one('#course-banner')
+        if banner is None or main is None:
+            raise
+        parts = clean(banner.select_one('.course-number-term-detail')).split(' | ')
+        name = clean(banner.find('h1'))
+        paragraph = next((p for p in main.find_all('p') if clean(p).startswith('Esta asignatura está destinada a aquellos alumnos que hayan terminado')), None)
+        if parts != ['21G.712', 'Fall 2003', 'Undergraduate'] or name != 'Spanish Conversation and Composition' or paragraph is None:
+            raise
+        description = clean(paragraph)
+        prerequisite = re.match(r'Esta asignatura .+?curso equivalente\.', description)
+        if prerequisite is None:
+            raise ValueError('Spanish conversation preparation clause changed')
+        observation = dict(code=parts[0], name=name, term=parts[1], level=parts[2], description=description, prerequisites=prerequisite.group(0), units=None)
     policy = {}
     for heading in main.find_all(['h2', 'h3', 'h4', 'h5']):
         title = clean(heading).rstrip(':')
-        if title not in ['Selection Criteria of Registration', 'Sign up for', 'Sign Up For']:
+        if title not in ['Selection Criteria of Registration', 'Sign up for', 'Sign Up For', 'Nivel']:
             continue
         parts = []
         for sibling in heading.next_siblings:
