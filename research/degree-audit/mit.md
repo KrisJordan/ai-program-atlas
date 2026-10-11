@@ -380,3 +380,10 @@ The official Philosophy undergraduate page explicitly identifies 24.130 Ethics a
 ### D-Lab companion description and mixed content — 2026-10-11
 
 The actual WGS.277 Fall 2026–2027 page explicitly identifies undergraduate 24.234 in its same-subject metadata, supporting one additional retained description record without an identity merge. Its full teaching scope combines gender/inequality analysis with gender-sensitive development strategies and project design/implementation; both represented occurrences are now mixed applications/human_context. The body separately says meets with EC.718, limits all meeting versions to 20, and requires additional graduate assignments. Twelve units follow the printed 3-0-9 notation; formal preparation is unknown. An independently read D-Lab page’s older travel and 12-person cap are not combined into this dated observation. HASS now has 481 description-supported / 361 title-only / three code-only occurrences; roles and in-progress audit status are unchanged.
+
+
+### Free Expression syllabus — 2026-10-11
+
+The actual five-page faculty-linked 21H.317 syllabus supplies historical/legal free-expression content for two retained occurrences. The PDF itself prints no date, unit amount or prerequisite; those remain unknown. A separate teaching index labels a 2024–2025 version, which is contextual evidence only. Graduate supplementary readings do not become undergraduate requirements. A guarded text observer validates actual source identity and body; no date is inferred from the URL. HASS now has 483 description-supported occurrences, 359 title-only and three code-only unknowns. Requirement roles are unchanged; accessible remaining description/policy work keeps the full-degree audit in progress.
+
+The two Free Expression occurrences and historically renumbered Ethics occurrence also link their actually inspected public course-specific syllabi. Ethics remains explicitly Fall 2009; Free Expression remains undated. These are verified syllabus resources, not generic catalog links.
