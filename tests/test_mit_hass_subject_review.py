@@ -148,3 +148,31 @@ def test_cmsw_actual_visible_capture_replays_approved_observations():
                     if o['source_id'] == 'mit-ai-hass-review-cmsw-fall2026']
     assert len(observations) == 33
     assert all(o['observation_digest'] in hashes for o in observations)
+
+
+def test_cmsw_archived_term_credits_and_missing_description_are_not_imputed():
+    rows=[r for r in MANIFEST['courses'].values() if any(o['source_id']=='mit-ai-hass-review-cmsw-spring2026' for o in r['observations'])]
+    obs={o['observed_code']:o for r in rows for o in r['observations'] if o['source_id']=='mit-ai-hass-review-cmsw-spring2026'}
+    assert obs['CMS.305[J]']['credits']==9
+    assert obs['CMS.C35[J]']['credits']==15
+    assert obs['CMS.C35[J]']['status']=='mixed'
+    assert obs['CMS.702']['category']=='human_context'
+    assert obs['CMS.593[J]']['prerequisites']=='CMS.592'
+    assert all(o['catalog_year']=='Spring 2026' for o in obs.values())
+    hamilton=[r for r in MANIFEST['courses'].values() if r['listed_code'].startswith('CMS.427')]
+    assert hamilton and all(r['review_status']=='pending' and not r['observations'] for r in hamilton)
+    assert all(any('no description' in x for x in r['missingness']) for r in hamilton)
+    changed=next(r for r in rows if r['listed_name']=='Intersectionality, Neurodiversity, and Disability')
+    assert changed['review_status']=='identity_review_needed'
+
+
+def test_cmsw_spring_visible_capture_replays_without_assuming_latest_term():
+    path=Path('/tmp/mit-hass-subjects/cmsw-spring2026-visible.html')
+    if not path.exists():
+        pytest.skip('Optional ignored public archived-term capture')
+    source=review.observe_cmsw(path.read_text())
+    assert {o['term'] for o in source}=={'Spring 2026'}
+    assert next(o for o in source if o['code']=='CMS.427[J]')['description'] is None
+    hashes={review.observation_digest(o) for o in source}
+    saved=[o for r in MANIFEST['courses'].values() for o in r['observations'] if o['source_id']=='mit-ai-hass-review-cmsw-spring2026']
+    assert len(saved)==31 and all(o['observation_digest'] in hashes for o in saved)
