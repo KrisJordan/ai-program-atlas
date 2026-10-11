@@ -54,7 +54,10 @@ def test_exact_observations_reject_stale_editorial_content(monkeypatch):
 
 
 def test_optional_actual_all_metadata_and_role_sources():
-    if not Path('/tmp/nw-full-audit/fetch-index.json').exists():pytest.skip('Ignored actual source captures absent')
+    theme_path=Path('.cache/http',hashlib.sha256(THEME_URL.encode()).hexdigest()+'.body')
+    required=[Path('/tmp/nw-full-audit/fetch-index.json'),Path('/tmp/nw-audit-major.html'),Path('/tmp/nw-audit-college.html'),theme_path]
+    required.extend(Path('/tmp/nw-full-audit',dep+'.html') for dep in m.MANIFEST['headings'])
+    if not all(path.exists() for path in required):pytest.skip('Complete ignored actual source captures absent')
     module=importlib.import_module('atlas.adapters.'+PID+'.adapter')
     seen=set()
     for dep in m.MANIFEST['headings']:
@@ -72,7 +75,7 @@ def test_optional_actual_all_metadata_and_role_sources():
     college=parse_college(Path('/tmp/nw-audit-college.html').read_text())
     honors=next(r for r in college['requirements']if r['id'].endswith('policy-honors-calculus'))
     assert honors['course_ids']==['nw-bse-math-228-1','nw-bse-es-appm-252-1'] and honors['count']==1
-    theme=parse_theme(Path('.cache/http',hashlib.sha256(THEME_URL.encode()).hexdigest()+'.body').read_text())
+    theme=parse_theme(theme_path.read_text())
     assert len(theme['courses'])==13
     assert not any('1xx'in c['code'] or c['code'].startswith('PRDV')for c in theme['courses'])
     assert theme['requirements'][-1]['credits']==7 and theme['requirements'][-1]['kind']=='choose_credits'
