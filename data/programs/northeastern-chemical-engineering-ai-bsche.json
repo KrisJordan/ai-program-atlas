@@ -3201,14 +3201,15 @@
     "All46 represented course identities, catalog descriptions, explicit prerequisites and individual semester-hour values have been inspected in the correctness audit. Absent prerequisite statements remain unknown. First offering and formal launch remain unknown.",
     "Degree correctness audit: footnote 1 permits GE 1110 plus GE 1111 instead of GE 1501 plus GE 1502. The two complete pairs are an alternative; repeated Cornerstone rows allocate credits across degree areas and do not create fixed extra enrollments. Both new course identities and four-hour values are independently checked in the GE subject catalog.",
     "Degree audit: CS 1802 is the explicitly specified one-hour corequisite seminar for fixed CS 1800. Its requirement is a child of CS 1800, supported by the degree preamble and reciprocal CS catalog corequisite conditions; other prerequisites have not been promoted to degree requirements.",
-    "The six shared university policies are locally observed with BSChE award wording; no family membership or unconditional home-college assignment is asserted. Each policy retains its scope, exceptions, overlaps and higher-program-minimum rule."
+    "The six shared university policies are locally observed with BSChE award wording; no family membership or unconditional home-college assignment is asserted. Each policy retains its scope, exceptions, overlaps and higher-program-minimum rule.",
+    "Degree-identity audit: the official overview explicitly spells out Bachelor of Science in Chemical Engineering and Artificial Intelligence. The exact BSChE award label is retained, with normalized BS based on that full name rather than the abbreviation prefix."
   ],
   "award_options": [
     {
       "label": "BSChE",
-      "normalized": "other",
+      "normalized": "BS",
       "source_id": "northeastern-chemical-engineering-ai-bsche-catalog",
-      "locator": "Catalog #site-title h1: Chemical Engineering and Artificial Intelligence, BSChE (Boston). The exact discipline-specific award is retained; not equated with generic BSE."
+      "locator": "Catalog #site-title h1 gives Chemical Engineering and Artificial Intelligence, BSChE (Boston); #textcontainer overview explicitly names the Bachelor of Science in Chemical Engineering and Artificial Intelligence. BS normalization follows that full official award name, while preserving BSChE and not equating it with BSE."
     }
   ]
 }

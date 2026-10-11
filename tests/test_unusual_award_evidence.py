@@ -17,7 +17,7 @@ ROOT=Path(__file__).resolve().parents[1]
 CASES=[
  ('miami-ai-technologies-business-bsba','B.S.B.A.','other'),
  ('university-of-miami-artificial-intelligence-technologies-for-business-other-degree','B.B.A.','other'),
- ('northeastern-chemical-engineering-ai-bsche','BSChE','other'),
+ ('northeastern-chemical-engineering-ai-bsche','BSChE','BS'),
  ('northeastern-university-environmental-engineering-and-artificial-intelligence-bsenve-boston-other-degree','BSEnvE','other'),
  ('university-of-maryland-college-park-artificial-intelligence-computational-structures-for-ai-systems-bsai-degree','BSAI','BS'),
  ('university-of-south-florida-artificial-intelligence-bs-degree','BSAI','BS'),
@@ -71,3 +71,16 @@ def test_existing_primary_source_parser_does_not_rewrite_award_metadata(pid,labe
     # Parser omissions are deliberate: reviewed mappings are retained by the queue.
     assert 'award_options' not in observed or observed['award_options']==seed(pid)['award_options']
     assert observed['id']==pid
+
+
+def test_optional_bsche_overview_explicitly_supports_bachelor_of_science_family():
+    from bs4 import BeautifulSoup
+    from atlas.adapters.northeastern_courseleaf import clean
+    pid='northeastern-chemical-engineering-ai-bsche'
+    path=ROOT/'.cache/research/degree-audit-northeastern'/f'{pid}.html'
+    if not path.exists():pytest.skip('Optional ignored official source snapshot')
+    soup=BeautifulSoup(path.read_text(),'html.parser')
+    assert 'BSChE (Boston)' in clean(soup.find(id='site-title'))
+    assert 'Bachelor of Science in Chemical Engineering and Artificial Intelligence' in clean(soup.find(id='textcontainer'))
+    assert seed(pid)['award_options'][0]['label']=='BSChE'
+    assert major_award_buckets(seed(pid))==['BS']
