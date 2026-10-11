@@ -175,3 +175,9 @@ SOURCES += (warren_languages.CHIN_URL, warren_languages.JAPN_URL, warren_languag
 SOURCE_PARSERS.update({warren_languages.CHIN_URL: warren_languages.parse_chinese,
                       warren_languages.JAPN_URL: warren_languages.parse_japanese,
                       warren_languages.CLX_URL: warren_languages.parse_chicanx})
+
+from atlas.adapters import uc_policy_closure as policy_closure
+SOURCES += (policy_closure.PETITION_URL, policy_closure.LANGUAGE_URL, policy_closure.CALGETC_URL)
+SOURCE_PARSERS.update({policy_closure.PETITION_URL: policy_closure.parse_petition,
+                      policy_closure.LANGUAGE_URL: policy_closure.parse_language,
+                      policy_closure.CALGETC_URL: policy_closure.parse_calgetc})

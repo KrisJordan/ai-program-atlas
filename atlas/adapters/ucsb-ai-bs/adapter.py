@@ -58,3 +58,7 @@ SOURCE_PARSERS.update({progression.TRANSFER_URL: progression.parse_transfer,
                       progression.FAQ_URL: progression.parse_faq})
 SOURCES += (progression.WRITING_URL, progression.GUIDANCE_URL)
 SOURCE_PARSERS.update({progression.WRITING_URL: progression.parse_writing})
+
+from atlas.adapters import uc_policy_closure as policy_closure
+SOURCES += (policy_closure.CALGETC_URL,)
+SOURCE_PARSERS.update({policy_closure.CALGETC_URL: lambda html: policy_closure.parse_calgetc(html, PROGRAM_ID)})

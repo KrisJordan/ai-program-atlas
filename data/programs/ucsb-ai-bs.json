@@ -205,6 +205,16 @@
       "catalog_year": null,
       "locator": "Both pages of public Google Doc exported through normal browser and visually reviewed; HTML shell is not an automatic parser",
       "confidence": "high"
+    },
+    {
+      "id": "ucsb-ai-bs-closure-calgetc-context",
+      "url": "https://admission.universityofcalifornia.edu/admission-requirements/transfer-requirements/preparing-to-transfer/general-education-igetc/cal-getc/",
+      "title": "UC Cal-GETC general transfer context",
+      "fetched_at": "2026-10-11T01:45:52+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Named heading and policy paragraphs",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -2873,13 +2883,28 @@
       "source_text": null,
       "summary": "October2025 guidance permits at most two UCEAP writing substitutions for Fall1999-onward admits, individually approved and not transferable to classmates. Supply the term syllabus, every paper and a short explanation of writing instruction/feedback. One-to-three non-exam papers must total at least1800words excluding ancillary material and represent at least25% of the course grade; evidence must show writing instruction or feedback and proficiency in the writing outcomes. Non-English papers may be considered. Unapproved UCSB courses cannot use this petition.",
       "course_ids": []
+    },
+    {
+      "id": "ucsb-ai-bs-closure-calgetc-context",
+      "parent_id": null,
+      "title": "UC Cal-GETC context; college applicability unresolved",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "quarter_hours",
+      "category": "human_context",
+      "source_id": "ucsb-ai-bs-closure-calgetc-context",
+      "source_text": null,
+      "summary": "UC admissions identifies Cal-GETC as the available CCC pattern for entrants from fall2025 onward. Complete the pattern before transfer; otherwise the receiving college or school evaluates its own lower-division GE. Courses require C or better, including Pass/Credit only where equivalent to C. The pattern is not required for UC admission. This systemwide page does not establish UCSB Engineering specific substitutions, remaining requirements or certification treatment; retain that unresolved college decision rather than extend its IGETC rules by assumption.",
+      "course_ids": []
     }
   ],
   "notes": [
     "Current 2026–27 college GEAR page 16 supplies upper-division total 72 (36 core + 36 electives), science Lists A/B of 8/12 units, and Computer Science department grading language, superseding the ambiguous earlier worksheet fields. CMPSC 41 remains five units on the requirements page versus four on the website and GEAR sample plan; its scalar credit value is therefore null. Sample plans are not requirements.",
     "Current catalog restricts AWPE recognition to transfers from another UC, while the college overview describes a broader historical route. Both observations are retained; current catalog qualification is explicit.",
     "Filtered public catalog Area D page returned a JavaScript loading shell; zero displayed results is not evidence that the approved pool is empty. No login or hidden API access attempted.",
-    "Current GEAR supplies15 AHI department expressions; compressed suffix ranges and the printed Political Science152153 separator remain literal. AP African American Studies3+ satisfies AHI in this dated guide. Full IGETC can replace Engineering GE but not AHI; CalGETC not established. The petitions page expressly permits up to two approved UC EAP special-writing courses, qualifying the general transfer page UCSB-only wording. AI FAQ says no hidden curriculum requirements but does not identify a capstone; transfer/change-major entries begin2028, not current2026 admission."
+    "Current GEAR supplies15 AHI department expressions; compressed suffix ranges and the printed Political Science152153 separator remain literal. AP African American Studies3+ satisfies AHI in this dated guide. Full IGETC can replace Engineering GE but not AHI; CalGETC not established. The petitions page expressly permits up to two approved UC EAP special-writing courses, qualifying the general transfer page UCSB-only wording. AI FAQ says no hidden curriculum requirements but does not identify a capstone; transfer/change-major entries begin2028, not current2026 admission.",
+    "2026-10-11 bounded official-source discovery found UC-wide Cal-GETC entry/completion guidance but no verified UCSB Engineering-specific substitution policy. Preserve the college applicability gap; an unsuccessful search is not evidence of rejection or absence of policy."
   ],
   "curriculum_audit": {
     "scope": "degree",
@@ -2898,7 +2923,8 @@
       "ucsb-ai-bs-petitions",
       "ucsb-ai-bs-faq",
       "ucsb-ai-bs-writing-course",
-      "ucsb-ai-bs-writing-guidance"
+      "ucsb-ai-bs-writing-guidance",
+      "ucsb-ai-bs-closure-calgetc-context"
     ],
     "sections": [
       "Preparation and core-area course inventory",
@@ -2910,7 +2936,8 @@
       "Engineering transfer GPA/duplication/105-unit limits, repeat eligibility/GPA, MCP complete threshold table and entry branches, notice/dismissal review and approval pathways",
       "Current AI FAQ entry/change/transfer timing and explicit no-hidden-requirements statement",
       "2026–27 GEAR AHI approved department expressions, AP African American Studies route, IGETC GE substitution and specific Area A letter grading",
-      "Public Writing1/1E credits and enrollment restrictions; October2025 two-page EAP writing-petition evidence/word-count/assessment rules"
+      "Public Writing1/1E credits and enrollment restrictions; October2025 two-page EAP writing-petition evidence/word-count/assessment rules",
+      "Bounded policy closure: UC Cal-GETC context without inferred college waiver"
     ],
     "unresolved_requirements": [
       "CMPSC 41 is five units on current GEAR requirement page, four on its illustrative plan and AI website; departmental clarification needed.",
