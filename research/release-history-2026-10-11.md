@@ -214,3 +214,11 @@ Published coverage: 168 programs at 194 institutions; 24,638 course observations
 ## Frozen continuation 3d6587df — not published
 
 The source snapshot 1c2c4d8 produced 25,758 course observations, 19,854 requirement nodes, 16,288 descriptions, 7,383 prerequisite statements, 301 teaching links and 265 syllabus links. The 84,279,296-byte maintained schema-015 database passed repeat-zero ingestion and integrity checks. Fresh and maintained facts agreed, and 175 build files reproduced byte-for-byte. The full clean run passed 3,550 tests, including every required browser case, with 453 optional-cache/historical skips, but one UCSB status assertion still expected in-progress after the documented bounded closure. Candidate publication was withheld. Commit 16e1d84 corrects that evidence-specific assertion; its 20 focused tests passed. A new frozen release must pass all gates.
+
+## Candidate 95b9648b — clean checks passed, publication withheld for clarification
+
+The exact frozen candidate passed **3,701 tests**, including all **58 required Chromium cases**, with 454 optional private-cache/historical skips. Fresh and maintained current facts agreed, repeat ingestion changed zero programs, database integrity/foreign keys passed, and all 175 static files reproduced byte-for-byte. Its source checkpoint was 304ae0d; maintained database size was 86,056,960 bytes.
+
+Candidate facts: 168 programs / 194 institutions, 25,988 course observations, 19,921 requirement nodes, 16,688 descriptions, 7,500 prerequisite statements, 15,718 credit amounts with known units, 304 actual teaching links and 268 syllabi. Audit status remained two audited, 58 blocked and three in progress.
+
+During continuing independent review, a Theatre Ensemble requirement explanation was found to contain a copied sentence about variable-credit music ensembles. The actual PRFL-220 credit amount and three-enrollment graph were already correct. Commit 568dc66 clarifies the fixed one-credit theatre card and three-enrollment rule and adds focused assertions. Publication is withheld until the clarification is part of a new tested snapshot. GitHub/Pages and live checks were therefore not run for 95b9648b; the last verified public release remains 65555101. This is a prepublication wording correction, not a failed test run.
