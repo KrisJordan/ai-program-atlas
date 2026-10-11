@@ -155,7 +155,8 @@ def test_economics_limited_title_review_preserves_printed_prerequisites_and_rule
     p=json.loads(Path('data/programs/mit-ai-decision-making-bs.json').read_text())
     by={c['id']:c for c in p['courses']}
     assert by['mit-ai-hass-economics-14-16']['prerequisites']=='14.03/14.04'
-    assert by['mit-ai-hass-economics-14-27']['prerequisites']=='14.30 or 6.041'
+    assert by['mit-ai-hass-economics-14-27']['prerequisites']is None
+    assert any('14.30or6.041' in n for n in by['mit-ai-hass-economics-14-27']['notes'])
     assert by['mit-ai-hass-economics-14-15-j']['category_review']['status']=='reviewed'
     assert by['mit-ai-hass-economics-14-15-j']['category']=='mathematics'
     assert 'mit-ai-hass-review-ocw-14-15-networks-spring-2022' in by['mit-ai-hass-economics-14-15-j']['category_review']['source_ids']
@@ -388,3 +389,20 @@ def test_dated_sts_admission_and_pe_points_do_not_become_degree_credit():
     assert set(political['category_review']['candidate_categories'])=={'mathematics','human_context'}
     assert political['credits']is None and political['prerequisites']is None
     assert political['public_site']is None and political['syllabus']is None
+
+
+def test_economics_annotation_scope_and_prerequisite_disagreement_are_preserved():
+    p=json.loads(Path('data/programs/mit-ai-decision-making-bs.json').read_text())
+    by={c['id']:c for c in p['courses']}
+    for cid in ['mit-ai-hass-computing-14-27','mit-ai-hass-economics-14-27']:
+        c=by[cid]
+        assert c['description'] and c['prerequisites']is None
+        assert any('14.30or6.041' in n and '6.3700or14.30' in n for n in c['notes'])
+        assert c['public_site']is None and c['syllabus']is None
+    model=by['mit-ai-hass-economics-14-18']
+    assert model['category']=='mathematics' and model['credits']==12
+    assert model['prerequisites']=='14.04, 14.12, 14.15, or 14.19'
+    assert any('limited to18' in n for n in model['notes'])
+    generic=by['mit-ai-hass-economics-14-11']
+    assert generic['description'] and generic['category_review']['status']=='unclassified'
+    assert any('no independent catalog year' in n for n in generic['notes'])
