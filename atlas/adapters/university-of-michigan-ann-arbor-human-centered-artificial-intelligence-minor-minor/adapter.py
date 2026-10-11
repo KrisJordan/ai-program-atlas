@@ -32,3 +32,7 @@ SOURCES = (*SOURCES, *home.SOURCES)
 from atlas.adapters.umich_hcai import SI326_SYLLABUS, parse_si326_syllabus_reviewed
 SOURCES = (*SOURCES, SI326_SYLLABUS)
 SOURCE_PARSERS[SI326_SYLLABUS] = parse_si326_syllabus_reviewed
+
+from atlas.adapters.umich_hcai import ADDITIONAL_SYLLABI, parse_si405_syllabus_reviewed, parse_si465_syllabus_reviewed
+SOURCE_PARSERS.update({ADDITIONAL_SYLLABI['405']['url']:parse_si405_syllabus_reviewed, ADDITIONAL_SYLLABI['465']['url']:parse_si465_syllabus_reviewed})
+SOURCES = (*SOURCES, *(r['url'] for r in ADDITIONAL_SYLLABI.values()))

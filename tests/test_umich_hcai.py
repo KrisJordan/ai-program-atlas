@@ -60,7 +60,7 @@ def test_seed_has_explicit_remaining_gaps_and_sources():
     assert len(d['courses'])==25 and len(d['requirements'])==37
     assert sum(bool(c['description']) for c in d['courses'])==10
     assert sum(bool(c['prerequisites']) for c in d['courses'])==5
-    assert sum(c['syllabus'] is not None for c in d['courses'])==1
+    assert sum(c['syllabus'] is not None for c in d['courses'])==3
     mod=importlib.import_module('atlas.adapters.'+adapter.PROGRAM_ID+'.adapter')
     assert set(mod.SOURCES)<={s['url'] for s in d['sources']}
 
@@ -99,3 +99,14 @@ def test_syllabus_metadata_remains_offering_specific():
     for old,new in [('Winter 2026','Fall 2026'),('Prerequisites None','Prerequisites SI212'),('SI 326','SI 376')]:
         with pytest.raises(ValueError):adapter.parse_si326_syllabus_reviewed(raw.replace(old,new))
     with pytest.raises(ValueError):adapter.parse_si326_syllabus_reviewed('<html>'+raw+'</html>')
+
+
+@pytest.mark.parametrize('code',['405','465'])
+def test_additional_syllabi_do_not_supply_unverified_terms_or_override_catalog(code):
+    resource=adapter.ADDITIONAL_SYLLABI[code]
+    text='\n'.join(resource['phrases'])
+    d=adapter.parse_additional_syllabus_reviewed(text,code)
+    assert d['courses']==[{'id':'umich-hcai-si-'+code,'syllabus':resource['url']}]
+    assert set(d)=={'id','courses'}
+    with pytest.raises(ValueError):adapter.parse_additional_syllabus_reviewed('Access denied',code)
+    with pytest.raises(ValueError):adapter.parse_additional_syllabus_reviewed(text.replace(resource['phrases'][0],'Different course'),code)

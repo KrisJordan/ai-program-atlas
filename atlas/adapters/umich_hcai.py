@@ -117,3 +117,20 @@ def parse_si326_syllabus_reviewed(text):
         if phrase not in normalized:
             raise ValueError('Reviewed SI326 syllabus identity or metadata changed')
     return dict(id=PROGRAM_ID,courses=[dict(id='umich-hcai-si-326',syllabus=SI326_SYLLABUS,prerequisites='Winter2026 example syllabus explicitly states no prerequisites and no programming requirement. The current catalog table leaves prerequisites blank; later offerings are not certified by this example.')])
+
+ADDITIONAL_SYLLABI={'405': {'url': 'https://drive.google.com/file/d/1O2kv3RbdQgWVbQ0PIKa9eRI5hY5Q5BaF/view?usp=drive_open', 'title': 'SI405 Applied Generative AI syllabus', 'phrases': ['SI 405 Applied Generative AI', 'Required Skills', 'Python Programming', 'upper division undergraduate course']}, '465': {'url': 'https://drive.google.com/file/d/1vcdfnGUsr6HU8fSWkAp6HU6rghLmytY7/view?usp=drive_open', 'title': 'SI465 Applied AI: Machine Learning syllabus', 'phrases': ['SI 465 Applied AI: Machine Learning', 'requires basic proficiency with python', '4 credit hour course']}}
+
+def parse_additional_syllabus_reviewed(text, code):
+    if '<html' in text.lower() or '<script' in text.lower():
+        raise ValueError('Visible syllabus text required')
+    normalized=clean(text)
+    resource=ADDITIONAL_SYLLABI[code]
+    if any(phrase not in normalized for phrase in resource['phrases']):
+        raise ValueError('Reviewed syllabus identity/preparation markers changed')
+    return dict(id=PROGRAM_ID,courses=[dict(id='umich-hcai-si-'+code,syllabus=resource['url'])])
+
+def parse_si405_syllabus_reviewed(text):
+    return parse_additional_syllabus_reviewed(text,'405')
+
+def parse_si465_syllabus_reviewed(text):
+    return parse_additional_syllabus_reviewed(text,'465')
