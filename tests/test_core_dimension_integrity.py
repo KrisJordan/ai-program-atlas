@@ -1,6 +1,7 @@
 """Evidence judgments stay separate from mechanical and whole-degree checks."""
 import copy
 import json
+from pathlib import Path
 
 import pytest
 
@@ -103,3 +104,24 @@ def test_snapshot_does_not_invalidate_for_optional_course_site_but_does_for_iden
     assert core_review_fingerprint(changed) == baseline
     changed['courses'][0]['code'] = 'CS 999'
     assert core_review_fingerprint(changed) != baseline
+
+
+def test_published_dimension_ledger_covers_current_degrees_and_matches_source_reviews():
+    from atlas.families import resolve_program
+    root = Path(__file__).resolve().parents[1]
+    programs = [json.loads(p.read_text()) for p in (root/'data/programs').glob('*.json')]
+    compiled = collect_ledgers(root/'research/degree-audit', programs)
+    saved = json.loads((root/'data/degree-audit.json').read_text())
+    assert compiled == saved
+    assert len(saved['programs']) == 63
+    assert all(e.get('core_review') for e in saved['programs'])
+    families = {f['id']: f for path in (root/'data/families').glob('*.json')
+                if (f := json.loads(path.read_text()))}
+    resolved = [resolve_program(p, families[p['family']['id']]) if p.get('family') else p
+                for p in programs]
+    result = audit_summary(saved, resolved)
+    assert all(sum(counts.values()) == 63 for counts in result['core_review_dimensions'].values())
+    rice = next(e for e in saved['programs'] if e['institution_id'] == 'rice-university')
+    assert rice['status'] == 'blocked'
+    assert rice['core_review']['dimensions']['fixed_requirements']['status'] == 'verified'
+    assert rice['core_review']['expected_profile']['required']['count'] == 13

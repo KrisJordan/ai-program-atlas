@@ -195,7 +195,7 @@ def curriculum_scope(p):
     }.get(kind, 'This inventory covers only the represented award or program.')
     state = {
         'complete': 'Complete means the requirement inventory for this represented award has been extracted from the recorded sources.',
-        'partial': 'Partial means some of this program’s requirement inventory remains unextracted.',
+        'partial': 'Partial means some requirements or their applicability remain unverified or unresolved.',
         'pending': 'Pending means program identity is documented; its requirement inventory has not yet been extracted.',
     }.get(p.get('curriculum_status'), 'Requirement inventory completeness has not been established.')
     return state + ' ' + scope + ' Course metadata completeness is assessed separately below. Listed electives and alternatives are options; every listed course is not necessarily required.'
