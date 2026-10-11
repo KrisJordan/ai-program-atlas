@@ -26,7 +26,12 @@ def test_independently_reviewed_profiles_and_sources(entry):
     for kind in ('required','options','unresolved'):
         assert profile[kind]['count']==entry['expected_profile'][kind]['count']
         assert profile[kind]['categories']==entry['expected_profile'][kind]['categories']
-    assert p['curriculum_status']=='partial' and entry['status']=='blocked'
+    assert p['curriculum_status']=='partial'
+    expected_status = 'in_progress' if entry['program_id'] == PROGRAM_ID else 'blocked'
+    assert entry['status'] == expected_status
+    if entry['program_id'] == PROGRAM_ID:
+        assert 'accessible GE/WI pool review' in entry['checks']['degree_wide_requirements']
+        assert all('not fully mapped' not in b.get('gap', '') for b in entry['blockers'])
     assert entry['blockers'] and entry['second_pass_status']=='pending'
     sources={s['id'] for s in p['sources']}
     for c in p['courses']:
