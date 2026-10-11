@@ -258,13 +258,17 @@ def test_independently_transcribed_named_course_roles_match_current_four_degree_
         seed=json.loads((ROOT/'data/programs'/f"{entry['program_id']}.json").read_text())
         program=resolve_program(seed,families.get(seed.get('family',{}).get('id')))
         lookup={c['id']:c for c in program['courses']}
-        assert set(lookup)==set().union(*(set(v) for v in sets.values()))
-        assert sum(map(len,sets.values()))==len(lookup)
+        from atlas.course_identity import identity_map
+        identities=identity_map(program)
+        assert set(identities.values())==set().union(*(set(v) for v in sets.values()))
+        assert sum(map(len,sets.values()))==len(set(identities.values()))
         for role,ids in sets.items():
             for cid in ids:
                 # The source-transcribed expected identity sets are independent
                 # inputs; ask the actual public algorithm for that identity's role.
-                singleton={**program,'courses':[lookup[cid]]}
+                aliases=[c for c in lookup if identities[c]==cid]
+                singleton={**program,'courses':[lookup[c] for c in aliases],
+                           'course_identity_groups':[g for g in program.get('course_identity_groups',[]) if g['canonical_course_id']==cid]}
                 assert requirement_profile(singleton)[role]['count']==1,(entry['program_id'],cid,role)
         checked+=1
     assert checked>=4
@@ -550,3 +554,48 @@ def test_biology_full_profile_preserves_conditional_research_and_actual_grade():
     assert nodes[nodes[research['parent_id']]['parent_id']]['kind']=='choose_courses'
     assert sum(c['code']=='BIOL 4991' for c in p['courses'])==1
     assert cs['PHYS 1163']['credits']==0 and cs['CHEM 1163']['credits']==0
+
+
+@pytest.mark.parametrize('code,expected', [('PHIL 1115','mathematics'),('PHIL 3050','mathematics'),('PHIL 4515','mathematics'),('PHIL 4516','mathematics'),('PHIL 2001','human_context'),('PHIL 4050','human_context'),('PHIL 5005','human_context'),('PHIL 5010','human_context'),('AFCS 1101','human_context'),('PHIL 1000','other')])
+def test_philosophy_content_separates_formal_methods_from_ai_social_questions(code,expected):
+    d=CATEGORY_DECISIONS[code]
+    assert category(code,d['name'],d['guard'])==expected
+    assert category(code,d['name'],'Entirely changed subject description')=='other'
+    assert category(code,'Changed course identity',d['guard'])=='other'
+
+
+def test_philosophy_crosslist_preserves_code_specific_observations_and_choice():
+    from atlas.families import resolve_program
+    from atlas.curriculum_profile import requirement_profile
+    pid='northeastern-university-artificial-intelligence-and-philosophy-bs-boston-bs-degree'
+    p=json.loads((ROOT/'data/programs'/f'{pid}.json').read_text());f=json.loads((ROOT/'data/families/northeastern-ai-combined-degrees.json').read_text());resolved=resolve_program(p,f);profile=requirement_profile(resolved)
+    assert profile['required']['count']==17 and profile['options']['count']==33
+    assert profile['options']['source_record_count']==34 and profile['unresolved']['count']==0
+    assert len(p['courses'])==51 and all('category_review'in c for c in p['courses'])
+    cs={c['code']:c for c in p['courses']};g=p['course_identity_groups'][0]
+    assert g['canonical_course_id']==cs['PHIL 2325']['id']
+    assert set(g['course_ids'])=={cs['PHIL 2325']['id'],cs['POLS 2325']['id']}
+    assert 'WRIT 201M' in cs['PHIL 2325']['prerequisites']
+    assert 'WRIT 201M' not in cs['POLS 2325']['prerequisites']
+    assert any('PHIL 3492 requires two' in n for n in p['notes'])
+    assert cs['PHIL 2001']['prerequisites'] is None
+    assert any('recommended preparation' in n and 'PHIL 2001' in n for n in p['notes'])
+    nodes={r['id']:r for r in resolved['requirements']}
+    alternatives=next(r for r in nodes.values() if r['id']==pid+'-req-phil-2325-alternatives')
+    assert alternatives['kind']=='alternative'
+    assert {cid for r in nodes.values() if r['parent_id']==alternatives['id'] for cid in r['course_ids']}=={cs[c]['id']for c in ['PHIL 2325','POLS 2325','PHIL 2330']}
+
+
+def test_optional_actual_philosophy_crosslist_evidence_and_observation_replay():
+    from bs4 import BeautifulSoup
+    from atlas.adapters.northeastern_courseleaf import clean
+    cache=ROOT/'.cache/research/degree-audit-northeastern'
+    if not all((cache/(s+'.html')).exists()for s in ['phil','pols']):pytest.skip('Optional actual catalog cache')
+    pid='northeastern-university-artificial-intelligence-and-philosophy-bs-boston-bs-degree';p=json.loads((ROOT/'data/programs'/f'{pid}.json').read_text());mod=import_module('atlas.adapters.'+pid+'.adapter')
+    for subject,code in [('phil','PHIL 2325'),('pols','POLS 2325')]:
+        html=(cache/(subject+'.html')).read_text();soup=BeautifulSoup(html,'html.parser');block=next(b for b in soup.select('.courseblock')if clean(b.find(class_='courseblocktitle')).startswith(code+'.'))
+        assert 'PHIL 2325 and POLS 2325 are cross-listed.' in clean(block.find(class_='cb_desc'))
+        obs=mod.SOURCE_PARSERS[f'https://catalog.northeastern.edu/course-descriptions/{subject}/'](html)
+        assert 'course_identity_groups' not in obs
+        found=next(c for c in obs['courses']if c['code']==code);seed=next(c for c in p['courses']if c['code']==code)
+        assert found=={k:v for k,v in seed.items()if k!='category_review'}
