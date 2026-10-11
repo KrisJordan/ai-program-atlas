@@ -214,7 +214,7 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']['description_reviewed_records']==174
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==179
     assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
         o=entry(code)['observations'][-1]
@@ -612,6 +612,33 @@ def test_older_literature_spanish_language_does_not_invent_prerequisite():
 
 @pytest.mark.parametrize('term,count',[('fall2022',4),('spring2023',1)])
 def test_older_literature_observations_replay(term,count):
+    path=Path('/tmp/mit-hass-subjects')/f'literature-{term}-visible.html'
+    if not path.exists():
+        pytest.skip('Optional ignored public Literature archive')
+    hashes={review.observation_digest(o) for o in review.observe_literature(path.read_text())}
+    saved=[o for r in MANIFEST['courses'].values() for o in r['observations'] if o['source_id']==f'mit-ai-hass-review-literature-{term}']
+    assert len(saved)==count and all(o['observation_digest'] in hashes for o in saved)
+
+
+def test_literature_archive_accounting_and_spanish_incubator_actual_content():
+    audit=MANIFEST['literature_archive_review']
+    assert len(audit['semesters'])==len({r['term'] for r in audit['semesters']})==38
+    assert set(audit['remaining_title_only_records'])=={'mit-ai-hass-american-studies-21l-632j','mit-ai-hass-cmsw-pool-external-21l-715'}
+    assert all(r['description_panels']<=r['observed_panels'] for r in audit['semesters'])
+    incubator=entry('21L.590')['observations'][-1]
+    assert incubator['evidence_basis']=='official_description' and incubator['category']=='human_context'
+    assert incubator['catalog_year']=='IAP 2025' and incubator['credits']==9
+    assert incubator['prerequisites']=='none'
+    assert any('Spanish is explicitly not a prerequisite' in r for r in incubator['restrictions'])
+    assert any('priority registration' in r for r in incubator['restrictions'])
+    arthur=entry('21L.460')['observations'][-1]
+    assert arthur['catalog_year']=='Fall 2021' and arthur['prerequisites']=='One subject in Literature'
+    darwin=entry('21L.022J [21W.739J]')['observations'][-1]
+    assert darwin['category']=='human_context' and darwin['catalog_year']=='Fall 2014'
+
+
+@pytest.mark.parametrize('term,count',[('fall2021',1),('spring2020',2),('fall2014',1),('iap2025',1)])
+def test_latest_matching_archived_literature_descriptions_replay(term,count):
     path=Path('/tmp/mit-hass-subjects')/f'literature-{term}-visible.html'
     if not path.exists():
         pytest.skip('Optional ignored public Literature archive')
