@@ -38,4 +38,7 @@ def test_curated_rows_preserve_historical_future_and_malformed_evidence():
     assert any('through Spring 2023' in r['summary']for r in dei)
     assert any('USP/ANTH 128A, USP/ANTH 128' in r['summary']and not r['course_ids']for r in climate)
     assert d['curriculum_status']=='partial'
-    assert next(c for c in d['courses']if c['code']=='MGT 18GS')['prerequisites'].endswith('Global Seminars Program.')
+    seminar=next(c for c in d['courses']if c['code']=='MGT 18GS')
+    assert seminar['prerequisites'] is None # Current block omits a labeled prerequisite clause.
+    assert any('must apply' in n and 'accepted into the Global Seminar Program' in n for n in seminar['notes'])
+    assert any('older pool also states department approval' in n and 'does not establish a waiver' in n for n in seminar['notes'])

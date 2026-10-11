@@ -2,7 +2,7 @@ import importlib
 import json
 from pathlib import Path
 import pytest
-from atlas.adapters import ucsd_hila_reviews as hila, ucsd_sio_reviews as sio, ucsd_eds_reviews as eds, ucsd_cgs_reviews as cgs, ucsd_mus_reviews as mus, ucsd_biology_reviews as bio, ucsd_glbh_reviews as glbh, ucsd_psyc_reviews as psyc, ucsd_linguistics_reviews as ling, ucsd_physics_astronomy_reviews as physics, ucsd_chem_reviews as chem, ucsd_literature_first_reviews as lit, ucsd_engineering_reviews as eng
+from atlas.adapters import ucsd_hila_reviews as hila, ucsd_sio_reviews as sio, ucsd_eds_reviews as eds, ucsd_cgs_reviews as cgs, ucsd_mus_reviews as mus, ucsd_biology_reviews as bio, ucsd_glbh_reviews as glbh, ucsd_psyc_reviews as psyc, ucsd_linguistics_reviews as ling, ucsd_physics_astronomy_reviews as physics, ucsd_chem_reviews as chem, ucsd_literature_first_reviews as lit, ucsd_engineering_reviews as eng, ucsd_health_development_reviews as health, ucsd_theatre_reviews as theatre, ucsd_environment_reviews as env, ucsd_management_interdisciplinary_reviews as inter, ucsd_area_religion_reviews as area
 from atlas.curriculum_profile import requirement_profile
 
 PID=hila.SPEC['program_id']
@@ -25,7 +25,7 @@ def test_history_sio_integration_preserves_held_identity_and_roles():
     assert cs['POLI 117']['category_review']['status']=='unclassified'
     assert [requirement_profile(d)[k]['count']for k in ['required','options','unresolved']]==[8,119,2241]
 
-@pytest.mark.parametrize('module,subject,count,dispositions',[(hila,'HILA',265,20),(sio,'SIO',35,6),(eds,'EDS',31,1),(cgs,'CGS',24,0),(mus,'MUS',27,6),(bio,'BIOL',34,3),(glbh,'GLBH',24,2),(psyc,'PSYC',14,2),(ling,'LING',25,14),(physics,'PHYS',14,1),(physics,'ASTR',10,1),(chem,'CHEM',13,1),(lit,'LTEA',110,15),(eng,'ECE',9,0),(eng,'MAE',6,3),(eng,'SE',5,0),(eng,'BENG',2,1),(eng,'NANO',3,0)])
+@pytest.mark.parametrize('module,subject,count,dispositions',[(hila,'HILA',265,20),(sio,'SIO',35,6),(eds,'EDS',31,1),(cgs,'CGS',24,0),(mus,'MUS',27,6),(bio,'BIOL',34,3),(glbh,'GLBH',24,2),(psyc,'PSYC',14,2),(ling,'LING',25,14),(physics,'PHYS',14,1),(physics,'ASTR',10,1),(chem,'CHEM',13,1),(lit,'LTEA',110,15),(eng,'ECE',9,0),(eng,'MAE',6,3),(eng,'SE',5,0),(eng,'BENG',2,1),(eng,'NANO',3,0),(health,'HDS',8,2),(health,'PH',10,0),(theatre,'THEA',35,2),(env,'ENVR',6,0),(env,'ESYS',4,2),(inter,'MGT',7,1),(inter,'INTL',4,0),(inter,'CLAS',3,0),(inter,'HMNR',2,0),(inter,'LAWS',1,0),(inter,'CCS',1,0),(area,'AAS',11,0),(area,'LATI',14,2),(area,'RELI',8,2),(area,'JWSP',9,0)])
 def test_composed_source_replays_approved_metadata_only(module,subject,count,dispositions):
     s=module.SPEC['sources'][subject];p=Path(s['cache_path'])
     if not p.exists():pytest.skip('Optional ignored official chapter capture')
@@ -124,3 +124,26 @@ def test_literature_engineering_scope_and_holds_survive_integration():
     assert 'immediately preceding quarter' in cs['MAE 156B']['prerequisites']
     assert any('not imposed as AI-degree graduation' in n for n in cs['MAE 156B']['notes'])
     assert [requirement_profile(d)[k]['count']for k in ['required','options','unresolved']]==[8,119,2241]
+
+
+def test_health_environment_and_performance_conditions_are_not_universal_rules():
+    d=json.loads(Path('data/programs',PID+'.json').read_text());cs={c['code']:c for c in d['courses']}
+    assert cs['PH 102']['category']=='mathematics'
+    assert cs['PH 193']['category_review']['status']=='unclassified'
+    assert 'senior public health majors only' in cs['PH 193']['prerequisites']
+    assert cs['HDS 194A']['credits']==cs['HDS 194C']['credits']==4
+    assert cs['HDS 191']['credits']==6
+    assert any('one academic year' in n for n in cs['HDS 191']['notes'])
+    assert cs['TDPF 163']['credits'] is None
+    assert 'concurrent enrollment' in cs['TDPF 163']['prerequisites']
+    assert cs['ENVR 144']['credits']==2
+    assert any('noncredit' in n.lower().replace('-','') for n in cs['ENVR 144']['notes'])
+    assert cs['MGT 12']['name']=='Principles of Accounting'
+    assert cs['MGT 12']['category_review']['status']=='unclassified'
+    assert cs['LATI 175']['category']=='applications'
+    assert cs['LATI 150']['category']=='human_context'
+    assert cs['AAS 170']['credits']==cs['AAS 170R']['credits']==4
+    assert cs['AAS 198']['credits'] is None
+    assert cs['ESD 119']['description'] is None
+    assert cs['ESD 119']['category_review']['status']=='unclassified'
+    assert 'Neither source explicitly' in cs['ESD 119']['category_review']['rationale']

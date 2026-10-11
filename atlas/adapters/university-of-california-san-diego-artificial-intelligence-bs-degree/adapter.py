@@ -434,3 +434,16 @@ for _review_url, _review_parser in engineering_reviews.SOURCE_PARSERS.items():
         raise ValueError('UCSD Engineering source needs explicit parser composition')
     SOURCES += (_review_url,)
     SOURCE_PARSERS[_review_url] = _review_parser
+
+from atlas.adapters import ucsd_health_development_reviews as health_development_reviews
+from atlas.adapters import ucsd_theatre_reviews as theatre_reviews
+from atlas.adapters import ucsd_environment_reviews as environment_reviews
+from atlas.adapters import ucsd_management_interdisciplinary_reviews as management_interdisciplinary_reviews
+from atlas.adapters import ucsd_area_religion_reviews as area_religion_reviews
+for _review_module in (health_development_reviews, theatre_reviews, environment_reviews,
+                       management_interdisciplinary_reviews, area_religion_reviews):
+    for _review_url, _review_parser in _review_module.SOURCE_PARSERS.items():
+        if _review_url in SOURCE_PARSERS:
+            raise ValueError('UCSD health/theatre/environment/interdisciplinary source needs explicit composition')
+        SOURCES += (_review_url,)
+        SOURCE_PARSERS[_review_url] = _review_parser
