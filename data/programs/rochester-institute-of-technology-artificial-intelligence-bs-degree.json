@@ -180,6 +180,66 @@
       "catalog_year": null,
       "locator": "Sections II and IV–VI; effective/history dates differ, so no single inferred publication date",
       "confidence": "high"
+    },
+    {
+      "id": "rit-writing-students",
+      "url": "https://www.rit.edu/writing/students-and-wi",
+      "title": "Students and WI",
+      "fetched_at": "2026-10-11T07:05:43+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "UWRT150 description and explicitly linked sample; FYW exemptions and FAQ; WI substitution; conflicting ISTE150/ISTE110 references",
+      "confidence": "high"
+    },
+    {
+      "id": "rit-writing-committee",
+      "url": "https://www.rit.edu/facultysenate/uwc",
+      "title": "The University Writing Committee",
+      "fetched_at": "2026-10-11T07:05:28+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Writing-Intensive FAQs: current WRTG attribute in SIS; dated-list placeholder has no link",
+      "confidence": "high"
+    },
+    {
+      "id": "rit-first-year-writing",
+      "url": "https://www.rit.edu/generaleducation/first-year-writing",
+      "title": "First Year Writing",
+      "fetched_at": "2026-10-11T07:04:26+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Required FYW purpose and official navigation to Writing Committee and UWP",
+      "confidence": "high"
+    },
+    {
+      "id": "rit-wi-petition",
+      "url": "https://www.rit.edu/writing/sites/rit.edu.writing/files/documents/petition_to_substitute_a_general_education_writing_intensive_requirement_5-17-22.pdf",
+      "title": "Petition to Substitute a General Education Writing Intensive Requirement (WI-GE)",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Both pages visually reviewed. Printed form date 3/4/2016; current UWP page links this copy. Deadline blanks in PDF remain unknown; current web page separately supplies two-week restriction.",
+      "confidence": "high"
+    },
+    {
+      "id": "rit-uwrt150-sample",
+      "url": "https://www.rit.edu/writing/sites/rit.edu.writing/files/documents/UWRT%20150%20Syllabus%20(Sample).pdf",
+      "title": "UWRT.150 Sample Syllabus",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Page 1 visually reviewed; 12 pages text inspected. Explicit sample, no identified term/year. Example syllabus only, not present-section policy.",
+      "confidence": "high"
+    },
+    {
+      "id": "rit-science-perspectives",
+      "url": "https://www.rit.edu/generaleducation/sites/rit.edu.generaleducation/files/documents/Science%20Perspectives%20v3.docx",
+      "title": "Science perspectives recommendations as of March 2013",
+      "fetched_at": "2026-10-11",
+      "source_date": "2013-03",
+      "catalog_year": null,
+      "locator": "Complete document text inspected. Explicit March2013 snapshot; current FAQ says check SIS for changes. Not used as a current approved pool.",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -309,15 +369,15 @@
       "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-uwrt-150",
       "code": "UWRT-150",
       "name": "FYW: Writing Seminar",
-      "description": "Analytical reading, rhetorical writing, academic research and revision across cultural and disciplinary contexts.",
+      "description": "Analytical reading, rhetorical writing, academic research and revision across cultural and disciplinary contexts. The separately linked UWP syllabus is explicitly an undated sample, not a verified current section syllabus.",
       "prerequisites": null,
       "credits": 3,
       "credit_unit": "semester_hours",
       "category": "human_context",
       "source_id": "rit-ai-bs-rendered-2026-2027",
       "url": "https://www.rit.edu/study/artificial-intelligence-bs",
-      "public_site": null,
-      "syllabus": null,
+      "public_site": "https://www.rit.edu/writing/students-and-wi",
+      "syllabus": "https://www.rit.edu/writing/sites/rit.edu.writing/files/documents/UWRT%20150%20Syllabus%20(Sample).pdf",
       "category_review": {
         "status": "reviewed",
         "taxonomy_version": "1",
@@ -2298,6 +2358,76 @@
       "source_text": null,
       "summary": "Rochester-area cross-registration requires full-time home enrollment, a needed course unavailable at home, degree relevance and available space. It excludes summer, graduate students and graduate courses; host academic rules apply. Associated fees or overload charges may remain.",
       "course_ids": []
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-fyw-exemption",
+      "parent_id": null,
+      "title": "First-year writing exemption and source-specific alternatives",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-writing-students",
+      "source_text": null,
+      "summary": "The UWP student page permits an approved first-year writing transfer course or an AP Language and Composition score of 3 or better to satisfy FYW. UWRT150 remains the AI sequence course. The FAQ names an online ISTE150 section for selected students, while the same page’s prize section and university graduation page name ISTE110; this is preserved as an unresolved code discrepancy, not an inferred replacement or additional fixed course.",
+      "course_ids": []
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-wi-attribute",
+      "parent_id": null,
+      "title": "Current writing-intensive approval inventory",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-writing-committee",
+      "source_text": null,
+      "summary": "The Writing Committee directs students to the WRTG attribute in SIS for current approved offerings. Its dated-list reference is placeholder text with no document link. UWP descriptions of UWRT150, UWRT325 and UWRT365 do not by themselves certify that those courses exhaust or belong to the current additional-WI pool. The university three-course WI requirement remains within existing degree hours.",
+      "course_ids": []
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-wi-substitution-web",
+      "parent_id": null,
+      "title": "Exceptional general-education WI substitution timing",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-writing-students",
+      "source_text": null,
+      "summary": "The public UWP page says GE WI substitutions are rarely granted and requires a petition and writing portfolio. It will not consider last-minute petitions after the two weeks prior to graduation. Planning and an advance graduation audit with the advisor are advised; approval is not assumed.",
+      "course_ids": []
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-wi-substitution-form",
+      "parent_id": null,
+      "title": "Conditional GE writing-intensive substitution evidence",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-wi-petition",
+      "source_text": null,
+      "summary": "The currently linked two-page form permits consideration of an already completed approved GE course passed with C or better, including accepted transfer GE credit. The advisor confirms that no WI-GE course has been taken and other GE credit requirements are fulfilled; the home department confirms a compelling case and submits the portfolio. The portfolio must include a reasoned letter, course syllabus/assignment evidence, final writing and a transcript; evidence must show formal revision with feedback, informal writing, distributed writing instruction and at least 20 percent of the course grade for writing. The UWP director has sole discretion, with no further direct appeal; submission does not guarantee approval or change earned/required credits or GPA. The PDF’s deadline fields are blank, so timing is taken only from the separately reviewed current web page.",
+      "course_ids": []
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-science-list-version",
+      "parent_id": null,
+      "title": "Historical science recommendation list is not a current pool",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-science-perspectives",
+      "source_text": null,
+      "summary": "The science-perspectives document linked by the current GE FAQ expressly lists approvals as of March 2013 and directs readers to SIS for current information. Its codes are not promoted into the 2026–2027 AI degree’s current approved GE pool.",
+      "course_ids": []
     }
   ],
   "notes": [
@@ -2329,7 +2459,13 @@
       "rit-ai-bs-launch",
       "rit-ai-bs-advising-2026-2027",
       "rit-ai-bs-rendered-2026-2027",
-      "rit-policy-d030"
+      "rit-policy-d030",
+      "rit-writing-students",
+      "rit-writing-committee",
+      "rit-first-year-writing",
+      "rit-wi-petition",
+      "rit-uwrt150-sample",
+      "rit-science-perspectives"
     ],
     "sections": [
       "All coded rows, alternative pairs and uncoded slots in typical sequence",
@@ -2344,17 +2480,19 @@
       "Dated launch article: 122-hour program and two co-op blocks; planned first cohort",
       "2026–27 School of Information advising PDF: explicit capstone WI designation, immersion layout and separately preserved elective list",
       "2026–27 public rendered curriculum and all 40 current course-description popups: exact identities, credits, prerequisites, restrictions and subject rationale",
-      "D03.0 undergraduate prerequisites/department approvals, graduate-level permission, independent study and conditional cross-registration"
+      "D03.0 undergraduate prerequisites/department approvals, graduate-level permission, independent study and conditional cross-registration",
+      "Current public UWP/committee guidance, conditional WI petition (both PDF pages), UWRT150 example syllabus identity, and explicitly historical March2013 science recommendations"
     ],
     "unresolved_requirements": [
-      "IDAI-490 program WI is verified; the additional WI approved course pool and any applicable college-specific completion conditions remain incompletely inventoried.",
-      "The complete approved general-education attribute inventory and chosen immersion requirements remain unverified. The public registrar course-list link redirects to a catalog endpoint whose robots response was unavailable (202).",
+      "IDAI-490 program WI is verified. The public Writing Committee identifies SIS WRTG as the current additional-WI inventory, but its dated-list reference has no link; the official SIS landing page requires RIT Login. Applicable college-specific completion conditions and accessible immersion branches remain under review.",
+      "The complete approved GE attribute inventory remains unverified. The registrar course-list route previously stopped at catalog robots 202; the FAQ’s public SIS search link now returns “Site name is not valid,” and linked SIS landing navigation renders RIT Login. The recommended science list is explicitly March2013, not current. Independently public immersion curricula remain accessible and are still being mapped.",
       "The MATH-190 Immersion 3 annotation appears beside a separate Immersion 3 slot, while university policy prohibits overlap with program requirements; clarification is required.",
       "The 2026–27 advising PDF lists CSCI-632 and LING-582/584, whereas the captured catalog uses CSCI-634 and omits those linguistics electives; authoritative reconciliation is required.",
-      "The CSCI-431 credit exclusion contains an apparent self-reference (CSCI-431 and CSCI-631). Its intended scope remains unclarified."
+      "The CSCI-431 credit exclusion contains an apparent self-reference (CSCI-431 and CSCI-631). Its intended scope remains unclarified.",
+      "The UWP FYW FAQ names ISTE150 for selected online students, whereas its own prize section and university graduation page name ISTE110. The AI sequence’s UWRT150 identity is retained; no equivalence or new alternative is inferred."
     ],
     "metadata_gaps": [
-      "Descriptions/prerequisites for three advising-only elective identities remain unknown. Twelve current prerequisite values remain null; thirteen cards had no separate prerequisite field, with LING581 expectations instead preserved from its description. Null is unknown, not no prerequisites. Exact public course sites and syllabi remain unverified.",
+      "Descriptions/prerequisites for three advising-only elective identities remain unknown. Twelve current prerequisite values remain null; thirteen cards had no separate prerequisite field, with LING581 expectations instead preserved from its description. Null is unknown, not no prerequisites. UWRT150 now has a verified public UWP page and explicitly undated sample syllabus; other public course sites and syllabi remain unverified.",
       "ISTE476 audience and EEEE485 preparation remain explicit course-entry conditions. D03.0 supplies a general departmental approval route, not a specific waiver or equivalent for an individual student."
     ]
   }

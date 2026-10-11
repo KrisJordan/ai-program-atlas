@@ -32,3 +32,6 @@ from functools import partial
 from atlas.adapters.rit_policies import parse_policy
 SOURCES.append('https://www.rit.edu/policies/d030')
 SOURCE_PARSERS['https://www.rit.edu/policies/d030'] = partial(parse_policy, pid=PROGRAM_ID, code='d030')
+
+from atlas.adapters.rit_writing_closure import register as register_writing_closure
+register_writing_closure(SOURCES, SOURCE_PARSERS)

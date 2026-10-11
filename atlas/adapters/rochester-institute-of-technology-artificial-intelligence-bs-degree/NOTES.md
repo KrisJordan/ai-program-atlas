@@ -1,56 +1,84 @@
-# Artificial Intelligence BS
+# Artificial Intelligence BS — current audit state
 
-Reviewed 2026-10-10. The ordinary browser displayed the full 2026–2027 catalog curriculum, a typical sequence totaling 122 published hours: 35 distinct core/alternative course entries plus five AI elective entries. IDAI-499 occurs twice but is stored once, with a separate two-block completion note confirmed by the study page. Six core alternative pairs and the robotics elective alternative remain disjunctions. Uncoded general-education, immersion, open elective, co-op preparation and two distinct wellness requirements are represented.
+Reviewed 2026-10-11. The primary degree audit is **in progress**, not complete or
+wholly inaccessible. The current reviewed graph has 23 fixed course identities,
+17 options and three unresolved advising-only identities. The 2026–2027 public
+study curriculum states 122 semester hours, six core alternative pairs and two AI
+electives across four options (five course codes, including a robotics pair).
+Two zero-credit co-op placements reuse one course identity. Uncoded GE,
+immersion, open electives, co-op preparation and two distinct wellness
+requirements are represented without fabricated course membership.
 
-The degree remains partial. The table is explicitly a typical sequence; university/college graduation, residency, transfer, GPA and full general-education policies remain unreviewed. MATH-190's Immersion 3 annotation appears alongside another Immersion 3 slot; overlap cannot be inferred. Original numerical hours are retained with unknown normalized units; amounts on alternative rows are group amounts, not independently verified amounts for both courses. Descriptions, prerequisites, public sites and syllabi remain metadata gaps.
+All 40 current public course popups were read. Their credits and 28 prerequisite
+or expectation statements are mapped; absent prerequisite fields stay unknown.
+Every represented course has a source-specific taxonomy review, including three
+advising-only identities for which current descriptions are unavailable. Exact
+profile sets and role corrections are in the RIT row of
+`research/degree-audit/buffalo-delaware-rit.json`.
 
-The catalog displayed through ordinary browsing, while automated catalog retrieval yielded a JavaScript/bot-access shell. No challenge or access restriction was bypassed. The source-specific adapter therefore observes only the accessible study-page degree heading and co-op rule; it does not replay curated catalog courses or claim automated catalog coverage. Admission preparation comes from that same study page. Fall 2026 admission availability is not a first-instruction date; activity remains unknown.
+## Verified university policies
 
+Public D02.0, D05.0, D12.0, D01.4, D01.5 and D03.0 supply undergraduate transfer,
+grades/repeats/P–N, 2.0 GPA, 25-percent RIT residency, the 120-hour institutional
+floor, catalog applicability, semester-credit definition, writing, GE and
+registration conditions. The degree’s 122 hours are not replaced by that floor.
+The BS framework is 60 GE hours within the degree, with eight perspectives,
+three-course/nine-hour immersion and program-course overlap limits. Wellness
+exceptions and two different activities/levels are mapped.
 
-## Public university policy review — 2026-10-10
+D03.0 provides conditional departmental approvals for out-of-plan courses and
+both departments’ approval for undergraduate use of graduate courses. ISTE476’s
+restricted audience and EEEE485’s preparation therefore remain explicit entry
+conditions; neither proves an impossible degree. No waiver or equivalence is
+asserted, and prerequisites are not added to fixed degree requirements.
 
-Robots-permitted public RIT policies d020, d050, d120 returned HTTP 200. Source-specific parsers validate exact policy/section identities and hash actual section text; changed text queues review without emitting a curated audit. Undergraduate rules only were applied. The degree remains partial. Added university GPA, 25-percent RIT residency, transfer, grading/repeats, 120-hour baccalaureate floor, catalog applicability and completion notes. The explicit semester-credit basis resolves unit normalization. Exact AI-program WI designations, college/general-education scope and the typical-sequence/Immersion 3 issue remain unresolved. Catalog robot/JavaScript access limitations and missing course metadata remain visible; public policy access does not imply automated catalog access.
+The public 2026–27 advising PDF explicitly designates IDAI490 as WI-PR, closing
+that identity gap. Three WI courses must fit existing degree hours. The current
+UWP/committee follow-up records AP/transfer FYW exemptions, the exceptional
+WI-GE petition criteria and the web deadline, plus UWRT150’s public description
+and an explicitly **undated sample syllabus**. This is example metadata, not a
+current section syllabus or a program outcome. See the separate source review
+`research/degree-audit/rit-writing-closure.md`.
 
-D01.5 was then reviewed: three writing-intensive courses (FYW, program WI course/sequence, and one additional WI) must fit within existing requirements. Recommended spacing is not made mandatory. Exact AI course-designation mapping remains unverified. The same section-digest parser observes this public policy.
+## Exact remaining boundaries and accessible queue
 
-## 2026-10-11 general education, wellness and launch evidence
+- Current WRTG/GE attributes are directed to SIS. The UWC dated-list reference
+  has no actual link. The FAQ’s public search URL returns an invalid-site error;
+  ordinary SIS landing navigation renders RIT Login. No sign-in was attempted.
+  The registrar catalog route previously stopped at robots HTTP 202 and was not
+  retried. The linked science list explicitly dates to March 2013 and is not used
+  as a current pool.
+- Public immersion curricula do render in an ordinary browser. The directory
+  has 77 immersion links; the Mathematics route’s requirements were inspected,
+  and its course-level inventory and other applicable routes remain accessible
+  work. No blanket catalog-access claim or full GE closure is justified yet.
+- The current AI sequence annotates MATH190 as Immersion3 and separately lists
+  another Immersion3 slot. The advising chart instead shows three separate
+  immersion slots; university and Mathematics-immersion policy prohibit program
+  overlap. The Mathematics route lists MATH190 under prerequisites, not in its
+  30-course elective pool. No overlap exception is inferred.
+- Advising lists CSCI632/LING582/LING584, whereas the rendered catalog uses
+  CSCI634 and omits those linguistics electives. Pools remain separate.
+- CSCI431’s credit exclusion has an apparent self-reference; no correction is
+  guessed.
+- The UWP FYW FAQ names ISTE150 for selected online students, but its own prize
+  section and the graduation page name ISTE110. UWRT150 stays the AI sequence
+  course. No alternative-code equivalence is inferred.
+- Remaining college-specific completion checks and accessible immersion course
+  descriptions are work in progress, not access blockers.
 
-Reviewed D01.4, General Education Degree Requirements, Immersions, student FAQs and the public Undergraduate Graduation Requirements page. Added BS 60-hour framework, eight perspectives, primary-discipline course cap, immersion declaration/no program overlap, FYW alternatives and detailed wellness exceptions. These are constraints within the existing degree hours, not additive course loads. The graduation page explicitly treats typical sequence charts as identifying program WI courses; the chart is published curricular evidence, not dismissed solely for being “typical.” Exact AI WI course mapping and the MATH-190 duplicate Immersion 3 annotation still prevent a complete audit.
+The March 25, 2026 launch article explicitly updated August 17 describes a planned
+Fall 2026 cohort. It does not independently verify first instruction; planned
+first-offered evidence and announced status remain qualified. Program aims are
+not recast as assessed outcomes.
 
-The public registrar general-education course-list URL redirected to academiccatalog.rit.edu/course-search/?generation_education_elective=generation_education_elective_GENED_ELEC; the robots-aware fetcher stopped because robots returned 202. No challenge bypass was attempted. Complete approved course attributes and chosen immersion requirements remain unverified. Other public policy pages returned HTTP 200.
+## Rerun boundary
 
-The March 25, 2026 launch article explicitly carries an August 17, 2026 update and describes about 20 students starting the new degree that fall. Record Fall 2026 as a planned first-cohort term with uncertainty, status announced, rather than claiming verified first instruction. The article separately confirms 122 hours and two co-op blocks. Its goal statements are tagged program_aim, not assessed learning outcomes. Source-specific observers hash actual public source bodies and never certify dates, status or completeness.
-
-## 2026-10-11 public advising PDF: WI closure and elective conflict
-
-The independently public School of Information 2026–27 two-page advising PDF returned 200 through the robots-aware request; the text-only fetcher correctly required a reviewed-format adapter. Both pages were rendered and visually reviewed. Page 1 explicitly marks IDAI-490 AI Team Capstone WI-PR, with fourth-year standing, and separately includes FYW and another WI checkbox. This closes the program-WI identity gap; the additional approved WI pool is still unverified. Three immersion slots appear separately from MATH-190, so the catalog overlap ambiguity is not resolved.
-
-Page 2 states two three-credit electives from six options, with seven course identities: CSCI-431; EEEE-485 or CSCI-632; LING-582; LING-584; SWEN-566; PUBL-550. The captured catalog instead uses CSCI-634 and omits the two linguistics options. Three new source-specific course records and a note preserve this conflict; the catalog selection pool was not silently expanded. No date or newer-version precedence is inferred from the filename suffix.
-
-`atlas.adapters.rit_ai_advising.parse_reviewed(text)` guards the visually reviewed extracted PDF text. It is a manual format adapter, not registered as an HTML parser. Re-fetch through ordinary robots-aware access, extract text and review both pages before updating the digest. It emits no audit, completeness or freshness date. The full catalog robots barrier remains unchanged and was not retried.
-
-## Degree correctness audit — 2026-10-11
-
-See `research/degree-audit/buffalo-delaware-rit.md` and the adjacent per-program JSON for independently reviewed source scope, exact blockers, manual expected course sets and taxonomy rationales. Full degree audit remains blocked and curriculum remains partial; successful overview reads are not catalog completion. Every represented course now has a source-specific category review. Parser observations never emit these independent reviews.
-All 40 current public course popups were read with exact identities; added original descriptions, 28 prerequisite/expectation summaries and verified alternative amounts. Twelve spurious context-to-AI-elective memberships were cleared. Public rendered cards can be rerun through rit_ai_degree_courses.parse_rendered_courses with exact degree/version context. HTTP-only page may omit those cards; direct catalog access is not bypassed. The new source uses fetched_at null because this was UI evidence. The current ISTE476 restriction omits AI BS, EEEE485 requires unmapped EEEE346/equivalent, and CSCI431 exclusion contains an apparent self-reference; advising-code and immersion conflicts remain. Current source explicitly confirms IDAI490 WI-PR.
-
-Zero-credit evidence: YOPS10 and IDAI499 course records, their mapped all-nodes, and the uncoded co-op preparation note preserve explicit numeric zero with semester units. This relies on the coordinator’s migration11 allowing zero-credit non-credit-choice requirements.
-
-
-## Registration-policy clarification — 2026-10-11
-
-The permitted current [D03.0 policy](https://www.rit.edu/policies/d030) was read
-in full. It establishes prerequisite completion and departmental approval paths,
-including both departments' approval for undergraduate use of graduate courses.
-ISTE476 audience restrictions and EEEE485 preparation therefore remain explicit
-conditional enrollment issues; they are not by themselves proof of an impossible
-degree, nor are prerequisites promoted to extra fixed requirements. No individual
-waiver, equivalent or approval is asserted. Earlier language calling these
-ordinary conditions substantive curriculum conflicts is superseded by this check.
-
-Independent-study, add/drop and cross-registration conditions are also mapped.
-The source observer records section hashes and never re-certifies the audit.
-Current card/advising-version differences, CSCI431's self-referential exclusion,
-immersion overlap wording and the restricted approved-attribute catalog remain
-the concrete source boundaries. The registrar enrollment page was also read; its
-non-degree-specific approval language was not generalized to AI degree students.
+The HTTP study adapter observes the actual overview/co-op statement and parses
+course cards only when supplied a rendered capture. `rit_ai_degree_courses`
+requires exact rendered degree/version context. Public policy/writing adapters
+observe current content and links, never emit manual reviews, audit completion,
+or new verification timestamps. The advising and writing PDF helpers are manual
+format adapters: re-fetch through ordinary robots-aware access, extract and
+visually inspect relevant pages before updating a reviewed digest. Raw captures
+stay ignored. No direct catalog access restriction was bypassed.
