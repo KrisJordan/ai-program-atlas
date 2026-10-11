@@ -309,3 +309,27 @@ _ANTHROPOLOGY_URL = anar_reviews.SPEC['sources']['ANAR']['url']
 if _ANTHROPOLOGY_URL not in SOURCE_PARSERS:
     raise ValueError('Expected existing Anthropology source observer')
 SOURCE_PARSERS[_ANTHROPOLOGY_URL] = parse_reviewed_anthropology
+
+# One History chapter supplies disjoint bounded subject inventories. Preserve
+# every prior observer and guard each subject's actual section-level rules.
+from atlas.adapters import ucsd_hila_reviews as hila_reviews
+from atlas.adapters import ucsd_hius_hiea_reviews as hius_hiea_reviews
+
+def parse_reviewed_history(html):
+    outputs = [module.parse_observations(html) for module in
+               (hieu_reviews, hila_reviews, hius_hiea_reviews)]
+    courses = [course for output in outputs for course in output['courses']]
+    if len({course['id'] for course in courses}) != len(courses):
+        raise ValueError('Duplicate reviewed History course ID')
+    return {'id': PROGRAM_ID, 'courses': courses,
+            'source_dispositions': [item for output in outputs for item in output['source_dispositions']]}
+
+_HISTORY_URL = hieu_reviews.SPEC['sources']['HIEU']['url']
+SOURCE_PARSERS[_HISTORY_URL] = parse_reviewed_history
+
+from atlas.adapters import ucsd_sio_reviews as sio_reviews
+for _review_url, _review_parser in sio_reviews.SOURCE_PARSERS.items():
+    if _review_url in SOURCE_PARSERS:
+        raise ValueError('UCSD SIO source needs explicit parser composition')
+    SOURCES += (_review_url,)
+    SOURCE_PARSERS[_review_url] = _review_parser
