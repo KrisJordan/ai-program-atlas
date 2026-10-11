@@ -1,0 +1,73 @@
+[
+  {
+    "institution_id": "university-of-chicago",
+    "status": "inspected",
+    "checked_at": "2026-10-11",
+    "note": "Ordinary Chrome rendered the official undergraduate program directory; CS department overview, FAQ, current policy announcements, specialization list and independent Data Science overviews are readable. No qualifying AI title was established in those branches. Machine Learning specialization is not renamed AI; research headings and individual AI courses are excluded. Catalog connection refusal and Cognitive Science reader 502 persist. Other departmental specializations and detailed Data Science tracks remain unreviewed, so no institution-wide absence conclusion.",
+    "sources": [
+      {
+        "url": "https://college.uchicago.edu/academics/programs-study",
+        "title": "Programs of Study",
+        "fetched_at": "2026-10-11",
+        "locator": "Rendered directory headings; expanded Computer Science, Data Science and Cognitive Science sections. Ordinary Chrome inspection; reader alone showed only the shell."
+      },
+      {
+        "url": "https://cs.uchicago.edu/academics/undergraduate/program-overview/",
+        "title": "Undergraduate Program Overview",
+        "fetched_at": "2026-10-11",
+        "locator": "BA/BS, minor and combined programs; current linked announcements; AI & Machine Learning is navigation under Research Areas."
+      },
+      {
+        "url": "https://cs.uchicago.edu/academics/undergraduate/cs-major-faq/",
+        "title": "CS Major FAQ",
+        "fetched_at": "2026-10-11",
+        "locator": "Published undergraduate pathways, current catalog references and links to course categories."
+      },
+      {
+        "url": "https://cs.uchicago.edu/academics/undergraduate/new-cs-major-requirements-in-ay-2024-25/",
+        "title": "New CS Major Requirements in AY 2024-25",
+        "fetched_at": "2026-10-11",
+        "locator": "April 1, 2024 announcement; required BS specialization and BA breadth; historical applicability kept explicit.",
+        "source_date": "2024-04-01"
+      },
+      {
+        "url": "https://cs.uchicago.edu/academics/undergraduate/revised-policy-for-honors-in-the-cs-major/",
+        "title": "Revised Policy for Honors in the CS Major",
+        "fetched_at": "2026-10-11",
+        "locator": "March 17, 2026 announcement applies to 2026–27 honors policy; does not introduce an AI credential.",
+        "source_date": "2026-03-17"
+      },
+      {
+        "url": "https://course-info.cs.uchicago.edu/static/combined-designations.html",
+        "title": "CMSC course designations for undergraduate programs",
+        "fetched_at": "2026-10-11",
+        "locator": "Seven named specialization headings, including Machine Learning, not AI/Artificial Intelligence. AI-named individual courses do not change specialization title."
+      },
+      {
+        "url": "https://datascience.uchicago.edu/education/undergrad-major/",
+        "title": "Undergraduate Data Science Major",
+        "fetched_at": "2026-10-11",
+        "locator": "BA/BS/minor overview; mentions tracks without supplying their full titles or rules."
+      },
+      {
+        "url": "https://codas.uchicago.edu/undergraduate-program/",
+        "title": "Committee on Data Science — Undergraduate Program",
+        "fetched_at": "2026-10-11",
+        "locator": "BA/BS/minor overview; AI and Data, AI, and Society are research areas, not undergraduate credential titles."
+      },
+      {
+        "url": "https://collegecatalog.uchicago.edu/thecollege/computerscience/",
+        "title": "College catalog — unresolved connection",
+        "fetched_at": "2026-10-11",
+        "locator": "Ordinary Chrome attempt 2026-10-11 returned ERR_CONNECTION_REFUSED. Prior reader 502 and transport failure remain unresolved; no security interstitial bypass."
+      },
+      {
+        "url": "https://voices.uchicago.edu/cognitivescience/",
+        "title": "Cognitive Science program website — unresolved reader error",
+        "fetched_at": "2026-10-11",
+        "locator": "Official directory-linked program page returned reader 502; overview was independently readable in directory."
+      }
+    ],
+    "discoveries": []
+  }
+]
