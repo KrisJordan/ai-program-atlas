@@ -351,3 +351,10 @@ HASS845 now comprises160 description-supported occurrences,682 limited-title jud
 The current official entrance-credit gateway was reread: it applies only toClass2030enteringFall2026 and says policies change by enteringclass. Its visible links provide no earliercohort policy. The degree-chart footer links https://catalog.mit.edu/archive/; the normal robots-aware Fetcher refused that path with`Robots disallows fetch`. No body, browser workaround or mirror was used. Thus the earlierentrant scope is a specific access/evidence boundary, not a contradiction in the current2026rules and not unfinished reading of an available archive. Fall2025credit applicability remains unknown.
 
 A bounded approved-network ACT retry again stopped before content: `Transport failure: https://act.mit.edu/robots.txt: ConnectError`. It establishes a transport boundary, not publisher denial or proof that the linked ACT PDF is unavailable. The existing separate PDF/webpage source discrepancy remains unmerged.
+
+
+## Exact AI-topic Literature follow-up — 2026-10-11
+
+Contributionbdd9e2b supplies actualSpring2025descriptions for21L006,21L007 and the exactAI-and-consciousness21L707topic. The latter studies literary/philosophical questions about AI, consciousness and humanity; it is human context rather than AI-method implementation. Twelve units and twoLiterature-subjects-or-permission are attached to that exact observed topic. The separateWar-and-Peace offering remains distinct.
+
+HASS now has163description-supported occurrences,679limited-title dispositions and three code-only unknowns. Fixed/currentrole sets are unchanged; metadata/identity and policy scope remain inprogress.
