@@ -32,3 +32,6 @@ for _key, _url in [('theme-faq', policies.FAQ_URL), ('registration', policies.RE
 
 from atlas.adapters import northwestern_degree_courses
 SOURCES = northwestern_degree_courses.register(PROGRAM_ID, SOURCES, SOURCE_PARSERS)
+
+from atlas.adapters import northwestern_degree_metadata
+SOURCES = northwestern_degree_metadata.register(PROGRAM_ID, SOURCES, SOURCE_PARSERS)

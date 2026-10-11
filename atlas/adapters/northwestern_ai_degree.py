@@ -12,6 +12,8 @@ def parse_northwestern(html,pid,url):
     if len(tables)!=10:raise ValueError('Northwestern major table structure changed')
     t=Tables('nw-bse',pid+'-catalog',url,unit='units')
     t.table(tables[0],'Listed mathematics and physics core')
+    calculus=next(r for r in t.rules if r['course_ids']==['nw-bse-math-228-1'])
+    calculus.update(kind='note', summary='The college honors-calculus alternative represents this required slot; MATH 228-1 is not universally fixed when its published substitute is used.')
     require_phrases(root,['PHYSICS 125-1','PHYSICS 140-1','GEN_ENG 212-0'])
     physics=next(r for r in t.rules if r['course_ids']==['nw-bse-physics-135-1'])
     physics.update(kind='note',summary='PHYSICS 135-1 may be replaced by PHYSICS 125-1, PHYSICS 140-1 or GEN_ENG 212-0. These substitute courses still need individual metadata records.')

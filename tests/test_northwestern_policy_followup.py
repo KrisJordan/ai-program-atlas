@@ -40,7 +40,8 @@ def test_seed_boundaries_and_no_legacy_ai_grade_inference():
     pool=next(n for n in d['requirements']if n['id'].endswith('policy-advanced-intro'))
     assert len(pool['course_ids'])==14
     assert any('2018' in n['summary'] and 'distinct AI' in n['summary']for n in d['requirements'])
-    assert any('21vs22' in s for s in d['curriculum_audit']['unresolved_requirements'])
+    assert any('major 21 units' in n['summary'] and 'major is 22' in n['summary'] for n in d['requirements'])
+    assert any('eight units versus eight courses' in s for s in d['curriculum_audit']['unresolved_requirements'])
     science=next(n for n in d['requirements']if n['title']=='Approved basic-science pool')
     assert science['kind']=='choose_credits' and science['credits']==4
     assert any(len(n['course_ids'])==2 and n['kind']=='all' for n in d['requirements']if n['id'].startswith('nw-bse-college-'))

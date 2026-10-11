@@ -47,8 +47,8 @@ def test_english_half_units_are_observed_not_inferred():
 def test_current_seed_manual_fixed_set_and_mixed_design():
  p=json.loads(Path('data/programs',PID+'.json').read_text());validate_program(p)
  profile=requirement_profile(p)
- expected={'foundations':2,'mathematics':6,'ai_ml':2,'systems':0,'human_context':2,'applications':0,'electives':0,'other':2}
- assert profile['required']['count']==14 and profile['required']['categories']==expected
+ expected={'foundations':2,'mathematics':5,'ai_ml':2,'systems':0,'human_context':2,'applications':0,'electives':0,'other':2}
+ assert profile['required']['count']==13 and profile['required']['categories']==expected
  # These seven are one source-defined choice, not mandatory cumulative courses.
  pool=['COMM_ST 102-0','ENTREP 225-0','ENTREP 325-0','PERF_ST 103-0','PERF_ST 203-0','PRDV 335-0','BMD_ENG 390-2']
  rules={r['id']:r for r in p['requirements']};byid={c['id']:c for c in p['courses']}
@@ -62,7 +62,8 @@ def test_current_seed_manual_fixed_set_and_mixed_design():
   assert c['category_review']['candidate_categories']==['applications','human_context']
  assert next(c for c in p['courses']if c['code']=='COMP_SCI 211-0')['category']=='foundations'
  audit=json.loads(Path('research/degree-audit/northwestern.json').read_text())['programs'][0]
- assert audit['status']=='in_progress' and len(audit['expected_course_ids']['required'])==14
+ assert audit['status']=='blocked' and len(audit['expected_course_ids']['required'])==13
+ assert audit['blockers'] and not audit['remaining_work']
 
 
 @pytest.mark.parametrize('dept',['comp_sci','gen_eng','dsgn','english'])

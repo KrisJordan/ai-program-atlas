@@ -1,45 +1,13 @@
-# AI degree curriculum observations
+# Northwestern AI BSE — reviewed 2026-10-11
 
-Reviewed the official catalog on 2026-10-10: https://catalogs.northwestern.edu/undergraduate/engineering-applied-science/artificial-intelligence/artificial-intelligence-major/
+The standalone McCormick BSE has a 48-unit degree structure, distinct from the two additional-major records. Primary degree correctness work covers all represented source records and policies but remains blocked by the exact theme-deadline and P/N unit/course discrepancies documented in `research/degree-audit/northwestern.{json,md}`. Inventory stays partial and the full independent second pass is pending.
 
-Mapped sections:
-- Listed mathematics and physics core and substitutions
-- Five major course slots and advanced-elective category
-- Five of six breadth domains with topic-specific options
-- Societal impact and seven technical electives
+`northwestern_ai_degree.py` reads ten major tables. `northwestern_degree_policies.py` reads the college tables and public rules, including explicit unindented innovation choices, the honors-calculus counterpart, 14 introductory advanced-elective exceptions, 13 finite theme exceptions and open departmental/level predicates. Course bundles and source counts remain intact. MATH 228-1 is an honors alternative, while AI-specific COMP_SCI 212 remains fixed. ES_APPM 252-2 is contextual, not another fixed course. Theme is seven units total, not seven extra named choices.
 
-Remaining degree-audit gaps:
-- School-wide engineering, science, design and humanities approved pools and policies remain incomplete.
-- The college page explicitly defers complete humanities criteria to its advising system; public rules alone are not a full degree audit.
-- Four advanced-elective introductory exceptions and physics-substitute metadata remain to be expanded.
-- The Undergraduate Registration Requirement and full college degree policies remain to be mapped.
+Core descriptions are observed by `northwestern_degree_courses.py`; `northwestern_degree_metadata.py` registers the other exact undergraduate/Graduate School sources. `northwestern_degree_subject_reviews.json` stores original summaries, source-body hashes and manual rationales. Exact heading/code/title checks reject identity changes. A changed body drops its stale summary/category. Generic special-topic bodies never emit topic-specific classification. Parsers never emit an independent category review, identity group or audit certification.
 
-Course descriptions, prerequisites, missing individual credits remain separate metadata gaps. Parser output never asserts review status or completeness.
+All 190 source records have explicit seed reviews, including 16 limited topic-title observations, four code-only GEOG listings and an examination-credit placeholder. Exact credits include 0.34-unit labs and 0.5-unit writing/design; no quarter-hour conversion. Twenty-one descriptions and five amounts remain null. Unstated prerequisites, first-offered date and term-specific public syllabi remain unknown. Course restrictions and permission are eligibility, not additional fixed obligations.
 
-The catalog banner identifies the 2026–2027 edition. No learning-outcome section was published on the inspected major page.
+One explicit robotics cross-list reconciles COMP_SCI/MECH_ENG 301; other alternatives, levels and duplicate-credit exclusions stay separate. The independent actual-source calculation yields 13 fixed / 175 option / 1 contextual identity from 190 records. See `northwestern-profile-expectations.py` for the independent calculation and the ledger for explicit sets.
 
-## 2026-10-11 public college/registration follow-up
-
-The current college catalog, public theme requirements/FAQ, registration, transfer, P/N, duplicate-course pages, and linked registrar transfer-after-matriculation page were successfully fetched. No MAS/CAESAR login, petition submission, or contact was attempted.
-
-Mapped the actual four-unit basic-science pool with lecture/lab bundles and laboratory condition; engineering foundations; design/communication/innovation choices; AI-specific mathematics override; and all **14** introductory advanced-elective exceptions. The earlier note's “four exceptions” confused the four required advanced electives with the number of exception options. COMP_SCI 1CA is an AP/IB transfer-credit designation, not an invented scheduled class. Physics alternatives now have explicit course records and one-of logic. Individual credits absent from tables remain null; sequence totals are not donated to component courses.
-
-The public humanities page provides both tables previously thought to require MAS: approved department predicates and explicit allowed/excluded categories. These are now mapped with the seven-course, maximum-five-per-category, related-theme, level, fractional-credit, language exception and no-overlap rules. Department eligibility is an open predicate, not an invented finite course inventory. Planned theme approval, study-abroad syllabus petition and denied-plan review are represented.
-
-The BSE major may be added from other schools, but its **11 unique major units** cannot serve another major/minor/certificate. The record covers the McCormick 48-unit degree; it does not claim a complete degree inventory for every other home school. The college's GPA, D-grade maximum, four-unit major transfer cap, application timing, exemption and P/N conditions are mapped. URR first-year/transfer and dual-degree quarter/unit rules, counted registration versus earned credit, faculty-led study-abroad exception and narrow waiver criteria are separate from degree units.
-
-Public registration/adviser holds, load approval, time-conflict signatures, transfer proposal/transcript review and mathematics in-person/four-year-institution restriction are mapped. All public duplicate-course sets retain their printed codes, dates, order-dependent qualifications and “and” bundles; a duplicate is not a substitution permission.
-
-Exact unresolved source differences: catalog theme deadline **winter junior year** versus public guidance **end sophomore year**; public transfer page **21-unit major** versus current AI/catalog **22**; P/N limit **eight courses** on public pages versus **eight units** in catalog. The linked one-page P/N PDF was visually inspected and is dated **2018-01-22**. It has no AI entry. Its Computer Science prohibition is not silently assigned to AI; current AI-specific major P/N permission remains unresolved. PDF is a provenance/manual-review source, not an HTML parser.
-
-Coverage: 175 course observations, 233 requirement/policy nodes; partial. `northwestern_degree_policies.py` parses observed tables/codes and guarded policy clauses. Synthetic fixtures exercise bundles, altered exception codes, exclusions, policy guards and partial audit boundaries. No source replay, timestamps or completion audits are emitted by parsers.
-
-## Independent correctness pass — 2026-10-11
-
-The official McCormick design/communication table's seven unindented courses after “Select one” were incorrectly interpreted as fixed by the generic table helper. A source-specific observer now retains that explicit choice. Required writing/design bundles remain fixed, reducing the fixed mapped set from 21 to 14 records. The table is reread, not replayed from the seed.
-
-Official CS, general engineering, design and English descriptions support exact core subject reviews and individual unit values. Required profile: 2 foundations, 6 mathematics, 2 AI/ML, 2 human context and 2 deliberately mixed/other design courses. Four programming alternatives are foundations options. CS211's emphasis is foundational software design; DSGN106 is explicitly mixed applied design and communication. Mathematical calculus classifications have limited precise-title evidence. Full independent correctness remains in progress; see research/degree-audit/northwestern.json and adjacent Markdown. The parsers never emit independent review metadata. Registered description URLs are under https://catalogs.northwestern.edu/undergraduate/courses-az/ for comp_sci, gen_eng, dsgn and english.
-
-### Prerequisite interpretation correction — 2026-10-11
-
-CS212’s published CS110/111 prerequisite remains exact. A student using CS180 for the major introductory slot may need additional preparation; the different degree option does not establish a waiver. This known condition is not itself a contradiction or a universal extra fixed course, and has been removed from the audit blocker list.
+Known access observations: catalog search path robots-disallowed (not retried); public graduate directories independently linked and readable; GEOG directory 404. Raw source captures remain ignored. Public catalog/public-school policy conflicts and the legacy 2018 P/N document remain visible without assuming institutional permission.

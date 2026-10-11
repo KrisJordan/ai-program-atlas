@@ -1,85 +1,596 @@
 {
   "audit_date": "2026-10-11",
-  "reviewer": "pilots_cmu_penn",
+  "reviewer": "pilots_cmu_penn; survey_liberal continuation",
   "programs": [
     {
       "program_id": "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree",
       "institution_id": "northwestern-university",
-      "status": "in_progress",
+      "status": "blocked",
       "sources": [
         {
           "url": "https://catalogs.northwestern.edu/undergraduate/engineering-applied-science/artificial-intelligence/artificial-intelligence-major/",
           "catalog_year": "2026-2027",
-          "locator": "Requirement table",
+          "locator": "Advanced-elective introductory exception list; physics substitutes; AP/IB footnote",
           "checked_at": "2026-10-11",
-          "access_status": "accessible; ordinary robots-aware Fetcher"
+          "access_status": "accessible; actual source read"
         },
         {
           "url": "https://catalogs.northwestern.edu/undergraduate/engineering-applied-science/",
           "catalog_year": "2026-2027",
-          "locator": "Requirement table",
+          "locator": "Core tables, BSE relationship, grade/transfer/overlap/application rules",
           "checked_at": "2026-10-11",
-          "access_status": "accessible; ordinary robots-aware Fetcher"
+          "access_status": "accessible; actual source read"
         },
         {
-          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/comp_sci/",
+          "url": "https://catalogs.northwestern.edu/undergraduate/requirements-policies/undergraduate-registration-requirement/",
           "catalog_year": "2026-2027",
-          "locator": "Exact core course-description blocks",
+          "locator": "Single and dual degree registration; counted quarters and credits; waiver procedure",
           "checked_at": "2026-10-11",
-          "access_status": "accessible; ordinary robots-aware Fetcher"
+          "access_status": "accessible; actual source read"
         },
         {
-          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/gen_eng/",
-          "catalog_year": "2026-2027",
-          "locator": "Exact core course-description blocks",
+          "url": "https://www.mccormick.northwestern.edu/students/undergraduate/social-science-humanities-theme/index.html",
+          "catalog_year": null,
+          "locator": "Two public tables; thematic/level/overlap constraints; submission timing",
           "checked_at": "2026-10-11",
-          "access_status": "accessible; ordinary robots-aware Fetcher"
+          "access_status": "accessible; actual source read"
         },
         {
-          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/dsgn/",
-          "catalog_year": "2026-2027",
-          "locator": "Exact core course-description blocks",
+          "url": "https://www.mccormick.northwestern.edu/students/undergraduate/social-science-humanities-theme/frequently-asked-questions.html",
+          "catalog_year": null,
+          "locator": "Public operative policy section; bounded reviewed rules",
           "checked_at": "2026-10-11",
-          "access_status": "accessible; ordinary robots-aware Fetcher"
+          "access_status": "accessible; actual source read"
+        },
+        {
+          "url": "https://www.mccormick.northwestern.edu/students/undergraduate/advising-registration/registration.html",
+          "catalog_year": null,
+          "locator": "Public operative policy section; bounded reviewed rules",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual source read"
+        },
+        {
+          "url": "https://www.mccormick.northwestern.edu/students/undergraduate/advising-registration/transfer-credits.html",
+          "catalog_year": null,
+          "locator": "Public operative policy section; bounded reviewed rules",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual source read"
+        },
+        {
+          "url": "https://www.mccormick.northwestern.edu/students/undergraduate/advising-registration/pass-no-credit-option.html",
+          "catalog_year": null,
+          "locator": "Public operative policy section; bounded reviewed rules",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual source read"
+        },
+        {
+          "url": "https://www.mccormick.northwestern.edu/students/undergraduate/advising-registration/course-duplicates.html",
+          "catalog_year": null,
+          "locator": "Public operative policy section; bounded reviewed rules",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual source read"
+        },
+        {
+          "url": "https://www.registrar.northwestern.edu/registration-graduation/transfer-and-test-credit/transfer-credit-after-matriculating-at-nu.html",
+          "catalog_year": null,
+          "locator": "Public approval process and school/department restrictions",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual source read"
+        },
+        {
+          "url": "https://www.mccormick.northwestern.edu/documents/students/undergraduate/advising/pass-no-credit-policies.pdf",
+          "catalog_year": null,
+          "locator": "One-page PDF, department program list; visually inspected; AI not listed",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual source read"
         },
         {
           "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/english/",
           "catalog_year": "2026-2027",
-          "locator": "Exact core course-description blocks",
+          "locator": "Exact blocks: ENGLISH 106-1, ENGLISH 106-2",
           "checked_at": "2026-10-11",
-          "access_status": "accessible; ordinary robots-aware Fetcher"
+          "access_status": "accessible; actual source read"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/math/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact blocks: MATH 220-1, MATH 220-2, MATH 228-1, MATH 228-2, MATH 230-2",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual source read"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/physics/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact blocks: PHYSICS 125-1, PHYSICS 125-2, PHYSICS 125-3, PHYSICS 126-1, PHYSICS 126-2, PHYSICS 126-3, PHYSICS 135-1, PHYSICS 135-2, PHYSICS 135-3, PHYSICS 136-1, PHYSICS 136-2, PHYSICS 136-3, PHYSICS 140-1, PHYSICS 140-2, PHYSICS 140-3, PHYSICS 239-0",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual source read"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/comp_sci/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact blocks: COMP_SCI 213-0, COMP_SCI 260-0, COMP_SCI 262-0, COMP_SCI 265-0, COMP_SCI 296-0, COMP_SCI 298-0, COMP_SCI 301-0, COMP_SCI 303-0, COMP_SCI 310-0, COMP_SCI 311-0, COMP_SCI 314-0, COMP_SCI 317-0, COMP_SCI 325-0, COMP_SCI 329-0, COMP_SCI 330-0, COMP_SCI 332-0, COMP_SCI 333-0, COMP_SCI 336-0, COMP_SCI 337-0, COMP_SCI 344-0, COMP_SCI 347-0, COMP_SCI 353-0, COMP_SCI 358-0, COMP_SCI 368-0, COMP_SCI 371-0, COMP_SCI 387-0, COMP_SCI 394-0, COMP_SCI 396-0",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual source read"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/tgs/courses-az/comp_sci/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact blocks: COMP_SCI 447-0, COMP_SCI 449-0, COMP_SCI 461-0, COMP_SCI 468-0, COMP_SCI 469-0, COMP_SCI 496-0, COMP_SCI 497-0",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual source read"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/iems/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact blocks: IEMS 301-0, IEMS 304-0, IEMS 305-0, IEMS 351-0",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual source read"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/comp_eng/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact blocks: COMP_ENG 203-0, COMP_ENG 205-0, COMP_ENG 303-0, COMP_ENG 329-0, COMP_ENG 334-0, COMP_ENG 346-0, COMP_ENG 355-0, COMP_ENG 356-0, COMP_ENG 357-0, COMP_ENG 358-0, COMP_ENG 361-0, COMP_ENG 362-0, COMP_ENG 364-0, COMP_ENG 365-0, COMP_ENG 366-0, COMP_ENG 368-0, COMP_ENG 395-0",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual source read"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/tgs/courses-az/comp_eng/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact blocks: COMP_ENG 452-0, COMP_ENG 453-0, COMP_ENG 456-0, COMP_ENG 459-0, COMP_ENG 464-0, COMP_ENG 465-0, COMP_ENG 466-0, COMP_ENG 468-0, COMP_ENG 495-0",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual source read"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/es_appm/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact blocks: ES_APPM 252-1, ES_APPM 252-2, ES_APPM 344-0, ES_APPM 345-0",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual source read"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/cog_sci/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact blocks: COG_SCI 207-0, COG_SCI 210-0",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual source read"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/dsgn/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact blocks: DSGN 395-0",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual source read"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/mech_eng/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact blocks: MECH_ENG 233-0, MECH_ENG 301-0",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual source read"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/tgs/courses-az/mech_eng/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact blocks: MECH_ENG 455-0, MECH_ENG 469-0, MECH_ENG 495-0",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual source read"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/elec_eng/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact blocks: ELEC_ENG 326-0, ELEC_ENG 332-0, ELEC_ENG 334-0, ELEC_ENG 375-0",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual source read"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/comm_st/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact blocks: COMM_ST 102-0, COMM_ST 358-0, COMM_ST 378-0, COMM_ST 379-0",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual source read"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/tgs/courses-az/es_appm/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact blocks: ES_APPM 479-0",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual source read"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/tgs/courses-az/elec_eng/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact blocks: ELEC_ENG 433-0, ELEC_ENG 435-0",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual source read"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/gen_eng/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact blocks: GEN_ENG 211-0, GEN_ENG 212-0, GEN_ENG 251-0",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual source read"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/biol_sci/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact blocks: BIOL_SCI 150-0, BIOL_SCI 201-0, BIOL_SCI 202-0, BIOL_SCI 203-0, BIOL_SCI 232-0, BIOL_SCI 233-0, BIOL_SCI 234-0",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual source read"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/chem_eng/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact blocks: CHEM_ENG 275-0",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual source read"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/civ_env/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact blocks: CIV_ENV 202-0, CIV_ENV 203-0",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual source read"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/chem/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact blocks: CHEM 131-0, CHEM 132-0, CHEM 141-0, CHEM 142-0, CHEM 151-0, CHEM 152-0, CHEM 161-0, CHEM 162-0, CHEM 171-0, CHEM 172-0, CHEM 181-0, CHEM 182-0, CHEM 215-1, CHEM 215-2, CHEM 235-1, CHEM 235-2",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual source read"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/astron/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact blocks: ASTRON 220-1, ASTRON 220-2",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual source read"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/earth/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact blocks: EARTH 210-0, EARTH 214-0, EARTH 215-0",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual source read"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/csd/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact blocks: CSD 202-0, CSD 303-0",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual source read"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/psych/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact blocks: PSYCH 221-0",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual source read"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/entrep/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact blocks: ENTREP 225-0, ENTREP 325-0",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual source read"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/perf_st/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact blocks: PERF_ST 103-0, PERF_ST 203-0",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual source read"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/prdv/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact blocks: PRDV 335-0",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual source read"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/bmd_eng/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact blocks: BMD_ENG 390-2",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual source read"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/bus_inst/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact blocks: BUS_INST 303-0",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual source read"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/mmss/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact blocks: MMSS 211-1, MMSS 211-3, MMSS 311-2",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual source read"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/nav_sci/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact blocks: NAV_SCI 120-0, NAV_SCI 230-0, NAV_SCI 341-0",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual source read"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/teach_ed/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact blocks: TEACH_ED 329-0",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual source read"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/trans/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact blocks: TRANS 310-0",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual source read"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/geog/",
+          "catalog_year": null,
+          "locator": "Four code-only theme exceptions; no course metadata inferred",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP404; no repeated attempt"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/search/?P=COMP_SCI%20449-0",
+          "catalog_year": null,
+          "locator": "Exact linked course search; graduate directory independently linked from catalog navigation used instead",
+          "checked_at": "2026-10-11",
+          "access_status": "robots disallowed; no retry or bypass"
         }
       ],
       "checks": {
         "degree_identity": "2026-2027 Artificial Intelligence Major, BS in Engineering; McCormick degree, separate from secondary-major variants.",
-        "required_and_choices": "Seven innovation/oral communication alternatives were incorrectly fixed because they lack indentation. Explicit Select one now governs them. Manual fixed set contains 14 records. Programming major slot remains 180 OR111; engineering programming remains150 OR151. Writing/design require the two paired half-unit sequences.",
-        "elective_pools": "Five of six breadth domains, four advanced electives, seven technical electives, societal-impact choice and college science/theme alternatives remain separate. Full finite-pool second-pass identity review is still underway.",
-        "prerequisites": "Core CS/engineering/design/writing blocks reviewed. 208/211 concurrent-registration restrictions remain metadata. COMP_SCI212 names110/111 while the major introductory slot permits180/111; choosing180 does not establish a110/111 waiver and may require additional preparation. This is not inherently a contradiction or another universal fixed course. Legacy prerequisite identifiers remain exact without assumed equivalence.",
-        "credits_and_units": "Actual course descriptions state units: design and English106 are0.5 each; reviewed CS/engineering courses1 each. No quarter-hour conversion. Four fixed half-unit writing/design records count as four course records, not four units.",
-        "classification": "Required core:2 foundations,6 mathematics,2AI,2 human context and2mixed-design other. Four programming option records reviewed as foundations. Exact descriptions, not prefixes, support classifications.",
-        "family_composition": "No family inheritance. Corrections apply to standalone BSE record only; no assumptions about a secondary major.",
-        "degree_wide_requirements": "College core table reread and structural defect corrected. Existing residency/theme/P-N/transfer policy mapping remains partial with its published source conflicts; broader audit continues."
+        "required_and_choices": "Actual major and college tables establish 13 fixed records after applying the published corresponding honors-calculus substitute; discrete mathematics remains fixed. Introductory programming and engineering programming remain separate choices. Four advanced electives now have choice ancestry; all 14 introductory exceptions remain eligible alongside the open 300-level-or-higher rule. Five distinct breadth domains out of six, one societal-impact choice and seven technical electives remain separate; science lecture/lab and writing/design bundles are intact.",
+        "elective_pools": "Read all ten major tables, four college core tables, two public theme tables and governing prose. Thirteen finite additional theme exceptions are now mapped alongside open eligible-department predicates, specific exclusions, GEOG 1xx and credit-bearing 300-level PRDV. No finite catalog is invented for open level/department rules. ES_APPM 252-2 remains contextual to the generic honors sequence, not another fixed AI obligation.",
+        "prerequisites": "Reviewed all available exact course blocks, including graduate entries and sixteen generic special-topic descriptions. Published preparation, graduate permission, home-school restrictions, concurrency, repeats and credit exclusions remain exact. COMP_SCI 212 names 110/111 while the introductory degree slot permits 180/111: possible extra preparation is not a universal requirement or automatic waiver. MATH 230-2 excludes McCormick students despite appearing in the major introductory exception list; its availability is conditional on student route/prior credit/approval, not assumed for every McCormick student. No instructor permission or transfer approval is guaranteed.",
+        "credits_and_units": "Actual directories corroborate source units, including 0.5 writing/design and 0.34 laboratory amounts. No quarter-hour conversion. Five scalar amounts remain unknown: the AP/IB transfer-credit designation and four code-only GEOG exceptions. The theme combines fractional units, so its finite pool is represented under seven units rather than seven extra courses. Lecture/lab pairs count their actual amounts and obey course restrictions.",
+        "classification": "All 190 source records have explicit reviews:169 descriptions or previously reviewed core summaries,16 limited topic-title observations, one unclassified examination-credit designation and 4 unclassified GEOG code-only listings. Actual descriptions distinguish systems from software foundations, domain science from AI methods, human implications from AI methods, and genuinely mixed content. Current profile:13 fixed,175 option identities,1 contextual honors identity. One explicit robotics cross-list reconciles 2 source records; other level variants, alternatives and credit exclusions remain separate.",
+        "family_composition": "No family inheritance. This is the standalone McCormick BSE pathway; separate additional-major variants are not changed or certified.",
+        "degree_wide_requirements": "Reread 2026–2027 college requirements and policies, university registration requirement, public theme/FAQ, registration, duplicate-course sets, transfer procedures, P/N page and linked 2018PDF. Confirmed 48total/26 core/22 major, GPA2.0, at most 3 D major units, C external credit,4 major-transfer-unit cap,11 unique major units, residency and petition rules. Substantive current-catalog versus undated-public P/N/theme discrepancies remain unresolved and prevent full-degree policy certification. Other-home-school degrees are outside this record, not missing McCormick obligations."
       },
-      "expected_profile": null,
+      "expected_profile": {
+        "required": {
+          "count": 13,
+          "categories": {
+            "foundations": 2,
+            "mathematics": 5,
+            "ai_ml": 2,
+            "systems": 0,
+            "human_context": 2,
+            "applications": 0,
+            "electives": 0,
+            "other": 2
+          }
+        },
+        "options": {
+          "count": 175,
+          "categories": {
+            "foundations": 8,
+            "mathematics": 8,
+            "ai_ml": 24,
+            "systems": 29,
+            "human_context": 16,
+            "applications": 61,
+            "electives": 0,
+            "other": 29
+          }
+        },
+        "unresolved": {
+          "count": 1,
+          "categories": {
+            "foundations": 0,
+            "mathematics": 1,
+            "ai_ml": 0,
+            "systems": 0,
+            "human_context": 0,
+            "applications": 0,
+            "electives": 0,
+            "other": 0
+          }
+        }
+      },
       "expected_course_ids": {
         "required": [
-          "nw-bse-math-220-1",
-          "nw-bse-math-220-2",
-          "nw-bse-math-228-1",
-          "nw-bse-comp-sci-212-0",
           "nw-bse-comp-sci-208-0",
           "nw-bse-comp-sci-211-0",
+          "nw-bse-comp-sci-212-0",
           "nw-bse-comp-sci-348-0",
           "nw-bse-comp-sci-349-0",
-          "nw-bse-gen-eng-231-0",
-          "nw-bse-gen-eng-241-0",
           "nw-bse-dsgn-106-1",
           "nw-bse-dsgn-106-2",
           "nw-bse-english-106-1",
-          "nw-bse-english-106-2"
+          "nw-bse-english-106-2",
+          "nw-bse-gen-eng-231-0",
+          "nw-bse-gen-eng-241-0",
+          "nw-bse-math-220-1",
+          "nw-bse-math-220-2"
         ],
-        "options": null,
-        "unresolved": null
+        "options": [
+          "nw-bse-astron-220-1",
+          "nw-bse-astron-220-2",
+          "nw-bse-biol-sci-150-0",
+          "nw-bse-biol-sci-201-0",
+          "nw-bse-biol-sci-202-0",
+          "nw-bse-biol-sci-203-0",
+          "nw-bse-biol-sci-232-0",
+          "nw-bse-biol-sci-233-0",
+          "nw-bse-biol-sci-234-0",
+          "nw-bse-bmd-eng-390-2",
+          "nw-bse-bus-inst-303-0",
+          "nw-bse-chem-131-0",
+          "nw-bse-chem-132-0",
+          "nw-bse-chem-141-0",
+          "nw-bse-chem-142-0",
+          "nw-bse-chem-151-0",
+          "nw-bse-chem-152-0",
+          "nw-bse-chem-161-0",
+          "nw-bse-chem-162-0",
+          "nw-bse-chem-171-0",
+          "nw-bse-chem-172-0",
+          "nw-bse-chem-181-0",
+          "nw-bse-chem-182-0",
+          "nw-bse-chem-215-1",
+          "nw-bse-chem-215-2",
+          "nw-bse-chem-235-1",
+          "nw-bse-chem-235-2",
+          "nw-bse-chem-eng-275-0",
+          "nw-bse-civ-env-202-0",
+          "nw-bse-civ-env-203-0",
+          "nw-bse-cog-sci-207-0",
+          "nw-bse-cog-sci-210-0",
+          "nw-bse-comm-st-102-0",
+          "nw-bse-comm-st-358-0",
+          "nw-bse-comm-st-378-0",
+          "nw-bse-comm-st-379-0",
+          "nw-bse-comp-eng-203-0",
+          "nw-bse-comp-eng-205-0",
+          "nw-bse-comp-eng-303-0",
+          "nw-bse-comp-eng-329-0",
+          "nw-bse-comp-eng-334-0",
+          "nw-bse-comp-eng-346-0",
+          "nw-bse-comp-eng-355-0",
+          "nw-bse-comp-eng-356-0",
+          "nw-bse-comp-eng-357-0",
+          "nw-bse-comp-eng-358-0",
+          "nw-bse-comp-eng-361-0",
+          "nw-bse-comp-eng-362-0",
+          "nw-bse-comp-eng-364-0",
+          "nw-bse-comp-eng-365-0",
+          "nw-bse-comp-eng-366-0",
+          "nw-bse-comp-eng-368-0",
+          "nw-bse-comp-eng-395-0-b7ccc1fc",
+          "nw-bse-comp-eng-452-0",
+          "nw-bse-comp-eng-453-0",
+          "nw-bse-comp-eng-456-0",
+          "nw-bse-comp-eng-459-0",
+          "nw-bse-comp-eng-464-0",
+          "nw-bse-comp-eng-465-0",
+          "nw-bse-comp-eng-466-0",
+          "nw-bse-comp-eng-468-0",
+          "nw-bse-comp-eng-495-0-b7ccc1fc",
+          "nw-bse-comp-sci-111-0",
+          "nw-bse-comp-sci-180-0",
+          "nw-bse-comp-sci-1ca",
+          "nw-bse-comp-sci-213-0",
+          "nw-bse-comp-sci-260-0",
+          "nw-bse-comp-sci-262-0",
+          "nw-bse-comp-sci-265-0",
+          "nw-bse-comp-sci-296-0",
+          "nw-bse-comp-sci-298-0",
+          "nw-bse-comp-sci-301-0",
+          "nw-bse-comp-sci-303-0",
+          "nw-bse-comp-sci-310-0",
+          "nw-bse-comp-sci-311-0",
+          "nw-bse-comp-sci-314-0",
+          "nw-bse-comp-sci-317-0",
+          "nw-bse-comp-sci-325-0",
+          "nw-bse-comp-sci-329-0",
+          "nw-bse-comp-sci-330-0",
+          "nw-bse-comp-sci-332-0",
+          "nw-bse-comp-sci-333-0",
+          "nw-bse-comp-sci-336-0",
+          "nw-bse-comp-sci-337-0",
+          "nw-bse-comp-sci-344-0",
+          "nw-bse-comp-sci-347-0",
+          "nw-bse-comp-sci-353-0",
+          "nw-bse-comp-sci-358-0",
+          "nw-bse-comp-sci-368-0",
+          "nw-bse-comp-sci-371-0",
+          "nw-bse-comp-sci-387-0",
+          "nw-bse-comp-sci-394-0",
+          "nw-bse-comp-sci-396-0-153a2077",
+          "nw-bse-comp-sci-396-0-233c988d",
+          "nw-bse-comp-sci-396-0-80e5ad96",
+          "nw-bse-comp-sci-396-0-bb33ae15",
+          "nw-bse-comp-sci-396-0-cdcfa26c",
+          "nw-bse-comp-sci-447-0",
+          "nw-bse-comp-sci-449-0",
+          "nw-bse-comp-sci-461-0",
+          "nw-bse-comp-sci-468-0",
+          "nw-bse-comp-sci-469-0",
+          "nw-bse-comp-sci-496-0-153a2077",
+          "nw-bse-comp-sci-496-0-2df07665",
+          "nw-bse-comp-sci-496-0-790fbe03",
+          "nw-bse-comp-sci-496-0-cdcfa26c",
+          "nw-bse-comp-sci-496-0-e5956793",
+          "nw-bse-comp-sci-496-0-fd548892",
+          "nw-bse-comp-sci-497-0-4363580d",
+          "nw-bse-csd-202-0",
+          "nw-bse-csd-303-0",
+          "nw-bse-dsgn-395-0-8e28b88b",
+          "nw-bse-earth-210-0",
+          "nw-bse-earth-214-0",
+          "nw-bse-earth-215-0",
+          "nw-bse-elec-eng-326-0",
+          "nw-bse-elec-eng-332-0",
+          "nw-bse-elec-eng-334-0",
+          "nw-bse-elec-eng-375-0",
+          "nw-bse-elec-eng-433-0",
+          "nw-bse-elec-eng-435-0",
+          "nw-bse-entrep-225-0",
+          "nw-bse-entrep-325-0",
+          "nw-bse-es-appm-252-1",
+          "nw-bse-es-appm-344-0",
+          "nw-bse-es-appm-345-0",
+          "nw-bse-es-appm-479-0",
+          "nw-bse-gen-eng-150-0",
+          "nw-bse-gen-eng-151-0",
+          "nw-bse-gen-eng-211-0",
+          "nw-bse-gen-eng-212-0",
+          "nw-bse-gen-eng-251-0",
+          "nw-bse-geog-240",
+          "nw-bse-geog-312",
+          "nw-bse-geog-313",
+          "nw-bse-geog-328",
+          "nw-bse-iems-301-0",
+          "nw-bse-iems-304-0",
+          "nw-bse-iems-305-0",
+          "nw-bse-iems-351-0",
+          "nw-bse-math-228-1",
+          "nw-bse-math-228-2",
+          "nw-bse-math-230-2",
+          "nw-bse-mech-eng-233-0",
+          "nw-bse-mech-eng-455-0",
+          "nw-bse-mech-eng-469-0",
+          "nw-bse-mech-eng-495-0-afe31884",
+          "nw-bse-mmss-211-1",
+          "nw-bse-mmss-211-3",
+          "nw-bse-mmss-311-2",
+          "nw-bse-nav-sci-120-0",
+          "nw-bse-nav-sci-230-0",
+          "nw-bse-nav-sci-341-0",
+          "nw-bse-perf-st-103-0",
+          "nw-bse-perf-st-203-0",
+          "nw-bse-physics-125-1",
+          "nw-bse-physics-125-2",
+          "nw-bse-physics-125-3",
+          "nw-bse-physics-126-1",
+          "nw-bse-physics-126-2",
+          "nw-bse-physics-126-3",
+          "nw-bse-physics-135-1",
+          "nw-bse-physics-135-2",
+          "nw-bse-physics-135-3",
+          "nw-bse-physics-136-1",
+          "nw-bse-physics-136-2",
+          "nw-bse-physics-136-3",
+          "nw-bse-physics-140-1",
+          "nw-bse-physics-140-2",
+          "nw-bse-physics-140-3",
+          "nw-bse-physics-239-0",
+          "nw-bse-prdv-335-0",
+          "nw-bse-psych-221-0",
+          "nw-bse-teach-ed-329-0",
+          "nw-bse-trans-310-0"
+        ],
+        "unresolved": [
+          "nw-bse-es-appm-252-2"
+        ]
       },
       "discrepancies": [
         {
@@ -100,13 +611,52 @@
             "https://catalogs.northwestern.edu/undergraduate/courses-az/dsgn/",
             "https://catalogs.northwestern.edu/undergraduate/courses-az/english/"
           ]
+        },
+        {
+          "issue": "Four advanced-elective introductory exceptions had note ancestry, so their isolated course records appeared unresolved.",
+          "correction": "The existing policy node now selects four courses and explicitly retains the open 300-level-or-higher category; count is not the size of the finite exception list.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalogs.northwestern.edu/undergraduate/engineering-applied-science/artificial-intelligence/artificial-intelligence-major/"
+          ]
+        },
+        {
+          "issue": "Honors-calculus substitution appeared only in prose while MATH 228-1 remained universally fixed.",
+          "correction": "Mapped ES_APPM 252-1 as corresponding alternative; retained 252-2 as sequence context and kept AI-specific CS212 fixed.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalogs.northwestern.edu/undergraduate/engineering-applied-science/",
+            "https://catalogs.northwestern.edu/undergraduate/courses-az/es_appm/"
+          ]
+        },
+        {
+          "issue": "Thirteen finite additional theme options existed only inside a policy note.",
+          "correction": "Mapped a seven-unit pool retaining all thirteen literal identities; four GEOG codes stay unknown after 404 and open predicates remain prose.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://www.mccormick.northwestern.edu/students/undergraduate/social-science-humanities-theme/index.html"
+          ]
         }
       ],
-      "blockers": [],
-      "remaining_work": [
-        "Review remaining major/elective course descriptions and existing school policy discrepancies before independently establishing full option/unresolved sets."
+      "blockers": [
+        {
+          "issue": "Theme declaration deadline differs:2026–2027 catalog junior winter versus public school policy end of sophomore year; no dated supersession statement located.",
+          "urls": [
+            "https://catalogs.northwestern.edu/undergraduate/engineering-applied-science/",
+            "https://www.mccormick.northwestern.edu/students/undergraduate/social-science-humanities-theme/index.html"
+          ]
+        },
+        {
+          "issue": "P/N cap is 8 units in current catalog versus 8 courses on public school page; fractional-unit coursework means these are not assumed equivalent. The linked 2018department table contains no AI row; no AI-specific major P/N permission is inferred.",
+          "urls": [
+            "https://catalogs.northwestern.edu/undergraduate/engineering-applied-science/",
+            "https://www.mccormick.northwestern.edu/students/undergraduate/advising-registration/pass-no-credit-option.html",
+            "https://www.mccormick.northwestern.edu/documents/students/undergraduate/advising/pass-no-credit-policies.pdf"
+          ]
+        }
       ],
-      "correction_status": "Verified structural and core taxonomy corrections; audit continues",
+      "remaining_work": [],
+      "correction_status": "All represented source/role/category checks completed with independent expected sets; publication of a fully certified policy audit remains blocked by the exact authoritative policy discrepancies. Full independent second pass pending.",
       "second_pass_status": "pending"
     }
   ]

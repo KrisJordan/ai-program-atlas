@@ -42,6 +42,7 @@ def parse_major_exceptions(html,url):
         cs.append(course(code,name,PID+'-catalog',url,institution='nw-bse',unit='units',category='other'))
     rows=[rule('advanced-intro','Introductory advanced-elective exceptions','catalog','These explicitly listed introductory courses may fill the four advanced-elective slots; courses at level 300 or higher are also eligible. COMP_SCI 1CA is transfer credit awarded for AP CS A scores 4/5 or IB CS HL scores 5/6/7, not an invented scheduled course.',course_ids=[c['id']for c in cs[:-3]]),
           requirement(PID,'policy-physics-alternatives','Required physics alternative',PID+'-catalog',unit='units',kind='choose_courses',count=1,course_ids=['nw-bse-physics-135-1']+[c['id']for c in cs[-3:]],summary='Complete PHYSICS 135-1 or one of the three explicitly permitted substitutes. Remaining basic science rules still apply.')]
+    rows[0].update(kind='choose_courses', count=4)
     return {'id':PID,'curriculum_status':'partial','courses':cs,'requirements':rows}
 
 
@@ -96,6 +97,12 @@ def parse_college(html):
       ('pn','Catalog P/N limits','No more than eight P/N units toward the 48-unit degree, and at most one per quarter in years one/two. No P/N in mathematics, engineering foundations, sciences or design/communication/innovation. Theme permits any 300-level course but at most four at 100/200 level. Major P/N eligibility is delegated to the department; do not assume permission.'),
       ('exemptions','Approved placement and exemptions','Approved tests or individually reviewed prior coursework may grant credit or an exemption reducing required units. Such approval never removes the separate registration requirement; no particular waiver is presumed.')]
     t.rules.extend(rule(k,title,'college',summary)for k,title,summary in specs)
+    guard(v, ['ES_APPM 252-1', 'ES_APPM 252-2', 'may substitute for'])
+    for code in ['ES_APPM 252-1', 'ES_APPM 252-2']:
+        c = course(code, 'Honors Calculus for Engineers', PID+'-college', COLLEGE_URL, institution='nw-bse', unit='units', category='mathematics')
+        t.courses[c['id']] = c
+    t.rules.append(requirement(PID, 'policy-honors-calculus', 'Multivariable differential calculus alternative', PID+'-college', kind='choose_courses', count=1, unit='units', course_ids=['nw-bse-math-228-1', 'nw-bse-es-appm-252-1'], summary='MATH 228-1 or its corresponding honors substitute ES_APPM 252-1. The college permits the 252-1/252-2 sequence for 228-1/228-2; the AI-specific requirement still uses COMP_SCI 212 instead of MATH 228-2.'))
+    t.rules.append(rule('honors-sequence-context', 'Honors sequence and AI mathematics distinction', 'college', 'ES_APPM 252-2 is the published counterpart to MATH 228-2 in the general honors sequence; it does not replace AI-specific COMP_SCI 212. This contextual record does not make it another fixed AI course or independently authorize an elective substitution.', course_ids=['nw-bse-es-appm-252-2']))
     return {'id':PID,'curriculum_status':'partial','courses':classify_observed(list(t.courses.values())),'requirements':t.rules}
 
 
@@ -111,7 +118,7 @@ def parse_theme(html):
     guard(v,['maximum of five courses','minimum of three','up to four 100-level courses if three are foreign language','Half-unit (1/2) and one-third (1/3)','By the end of your sophomore year'])
     tables=s.find_all('table');first=next((t for t in tables if [text(x)for x in t.find_all('th')]==['Social & Behavioral Sciences','Humanities']),None);second=next((t for t in tables if [text(x)for x in t.find_all('th')]==['Courses Allowed','Courses NOT Allowed']),None)
     if first is None or second is None:raise ValueError('Theme policy tables missing')
-    rows=[]
+    rows=[]; finite=[]
     for i,label in enumerate(['Social & Behavioral Sciences','Humanities']):
         entries=[text(p)for p in first.find_all('td')[i].find_all('p')if text(p)]
         prefixes=[]
@@ -124,8 +131,20 @@ def parse_theme(html):
         entries=[text(p)for p in second.find_all('td')[i].find_all('p')if text(p)]
         if not entries:raise ValueError('Theme exception table empty')
         rows.append(rule('theme-exceptions-'+str(i),'Theme '+label,'theme','Public table '+label+': '+'; '.join(entries)+'. Codes and open predicates are retained as printed; no nonexistent course is generated from GEOG 1xx or the PRDV level rule.'))
+        if i == 0:
+            # Current course-directory identities independently verify these -0 suffixes.
+            canonical = {'BUS_INST 303':'BUS_INST 303-0','NAV_SCI 120':'NAV_SCI 120-0','NAV_SCI 230':'NAV_SCI 230-0','NAV_SCI 341':'NAV_SCI 341-0','TEACH_ED 329':'TEACH_ED 329-0','TRANS 310':'TRANS 310-0'}
+            for entry in entries:
+                match=re.match(r'^([A-Z_]+ \d+(?:-\d+)?)\s+[–-]',entry)
+                if match:
+                    code=canonical.get(match[1],match[1])
+                    finite.append(course(code,None,PID+'-theme',THEME_URL,institution='nw-bse',unit='units',category='other'))
     rows.append(rule('theme-process','Theme structure and approval','theme','Use seven courses, at most five in one category, with at least three related and a title/narrative. Three 100-level courses maximum, or four if three are foreign language. Fractional-unit courses combine; petition Weinberg first-year seminars. AP/IB may qualify. No course may also fill another of the 48 McCormick requirements. Public deadline is end of sophomore year, differing from the catalog’s junior-winter deadline.'))
-    return {'id':PID,'curriculum_status':'partial','requirements':rows}
+    result={'id':PID,'curriculum_status':'partial','requirements':rows}
+    if finite:
+        rows.append(requirement(PID,'policy-theme-finite','Named theme exceptions within the seven-unit requirement',PID+'-theme',kind='choose_credits',credits=7,unit='units',course_ids=[c['id']for c in finite],summary='These finite additional options supplement the open eligible-department rules. Complete seven theme units subject to category, related-course, level and approval rules; this is not seven extra units. GEOG 1xx and credit-bearing 300-level PRDV remain open predicates.'))
+        result['courses']=finite
+    return result
 
 
 def parse_public(html, key):
