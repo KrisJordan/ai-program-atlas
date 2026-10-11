@@ -1,11 +1,14 @@
 """Reviewed classifications must survive storage and remain separate from roles."""
 from copy import deepcopy
 import sqlite3
+from types import SimpleNamespace
 
 import pytest
 
 from atlas import db
 from atlas.curriculum_profile import requirement_profile
+from atlas.http import FetchError, FetchResult
+from atlas.scrape import scrape_one
 from tests.test_core_review import conn, program  # noqa: F401
 
 
@@ -94,3 +97,31 @@ def test_reviewed_does_not_certify_unknown_or_requirement_role(category,status,c
     p["courses"][0]["category_review"]["candidate_categories"] = candidates
     with pytest.raises(ValueError):
         db.validate_program(p)
+
+
+def test_refresh_and_partial_failure_preserve_reviewed_classification(conn):
+    p = program()
+    p["courses"] = [reviewed_course()]
+    db.ingest_program(conn, p)
+    before = db.export_data(conn)["programs"]
+
+    class Fetch:
+        def fetch(self, url, **kwargs):
+            if url.endswith("restricted"):
+                raise FetchError("Robots disallows fetch")
+            return FetchResult(url, "changed source", "new-hash", "2026-10-11", 200, False)
+
+    observed = deepcopy(p["courses"][0])
+    observed.pop("category_review")
+    observed.update(category="other", description="Changed content needs new independent review")
+    module = SimpleNamespace(SOURCES=["https://catalog.example.edu/ai", "https://catalog.example.edu/restricted"],
+                             parse=lambda html: {"id": p["id"], "courses": [observed]})
+    result = scrape_one(conn, p["id"], module, Fetch())
+    assert result["status"] == "partial" and result["new_candidates"] == 1
+    assert db.export_data(conn)["programs"] == before
+    assert scrape_one(conn, p["id"], module, Fetch())["new_candidates"] == 0
+    module.parse = lambda html: {"id": p["id"], "courses": p["courses"]}
+    result = scrape_one(conn, p["id"], module, Fetch())
+    assert result["new_candidates"] == 0
+    assert "cannot certify" in result["errors"][0]
+    assert db.export_data(conn)["programs"] == before
