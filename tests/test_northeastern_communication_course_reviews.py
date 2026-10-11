@@ -104,3 +104,27 @@ def test_optional_actual_subjects_and_policies():
     assert 'junior year' in policy['requirements'][1]['summary']
     with pytest.raises(ValueError):
         m.parse_camd_policy(html.replace('junior year','senior year'),program_id=PID)
+
+
+def test_integrated_observers_preserve_manual_seed_facts_and_one_additional_camd_rule():
+    from importlib import import_module
+    import json
+    base=Path('.cache/research/degree-audit-northeastern')
+    pids={t['program_id']for e in m.SPEC['courses'].values()for t in e['targets']}
+    for pid in pids:
+        seed=json.loads(Path('data/programs',pid+'.json').read_text());adapter=import_module('atlas.adapters.'+pid+'.adapter')
+        for subject,url in m.SOURCES.items():
+            targets=[c for c,e in m.SPEC['courses'].items()if e['subject']==subject and any(t['program_id']==pid for t in e['targets'])]
+            if not targets:continue
+            source=base/(subject.lower()+'.html')
+            if not source.exists():pytest.skip('Optional ignored subject source')
+            observed=adapter.SOURCE_PARSERS[url](source.read_text())
+            for code in targets:
+                course=next(c for c in observed['courses']if c['code']==code);reviewed=next(c for c in seed['courses']if c['code']==code)
+                assert all(reviewed[k]==v for k,v in course.items())
+                assert 'category_review'not in course and reviewed['category_review']['status']in {'reviewed','unclassified'}
+    seed=json.loads(Path('data/programs',PID+'.json').read_text());adapter=import_module('atlas.adapters.'+PID+'.adapter');url=m.SPEC['camd_policy']['url']
+    observed=adapter.SOURCE_PARSERS[url]((base/'home-16.html').read_text())
+    assert len(observed['requirements'])==1
+    assert observed['requirements'][0]in seed['requirements']
+    assert observed['requirements'][0]['id']==PID+'-conditional-camd-clearance'

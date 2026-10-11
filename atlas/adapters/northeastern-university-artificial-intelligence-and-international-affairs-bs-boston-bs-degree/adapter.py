@@ -86,3 +86,8 @@ SOURCE_PARSERS = {**SOURCE_PARSERS, CSSH_TRANSFER_URL: lambda html: parse_cssh_t
 from atlas.adapters.northeastern_environment_course_reviews import attach_reviewed_sources
 SOURCE_PARSERS = attach_reviewed_sources(PROGRAM_ID, SOURCE_PARSERS)
 SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + tuple(SOURCE_PARSERS)))
+
+# Exact communication review composes with, rather than discards, broader metadata.
+from atlas.adapters.northeastern_communication_course_reviews import attach_reviewed_sources
+SOURCE_PARSERS = attach_reviewed_sources(PROGRAM_ID, SOURCE_PARSERS)
+SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + tuple(SOURCE_PARSERS)))

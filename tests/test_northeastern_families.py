@@ -80,6 +80,11 @@ def test_reviewed_variant_reconstruction_preserves_entire_original_graph(pid):
     if engineering_policy:
         assert len(engineering_policy)==8 and all(r['kind']=='note' and not r['course_ids'] for r in engineering_policy)
         rows=[r for r in rows if r not in engineering_policy]
+    camd_policy=[r for r in rows if r['source_id']==pid+'-camd-policy-review']
+    if camd_policy:
+        assert len(camd_policy)==1 and camd_policy[0]['id']==pid+'-conditional-camd-clearance'
+        assert camd_policy[0]['kind']=='note' and not camd_policy[0]['course_ids']
+        rows=[r for r in rows if r not in camd_policy]
     if 'business-administration' in pid:
         # The reviewed follow-up adds independent concentration-source subtrees
         # and two main-page selection nodes; test those in the concentration suite.

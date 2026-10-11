@@ -76,3 +76,8 @@ parse, SOURCE_PARSERS = register_cs1802(parse, SOURCE_PARSERS, PROGRAM_ID)
 from atlas.adapters.northeastern_college_policies import KHOURY_URL, parse_khoury_policy
 SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + (KHOURY_URL,)))
 SOURCE_PARSERS = {**SOURCE_PARSERS, KHOURY_URL: lambda html: parse_khoury_policy(html, program_id=PROGRAM_ID)}
+
+# Exact communication review composes with, rather than discards, broader metadata.
+from atlas.adapters.northeastern_communication_course_reviews import attach_reviewed_sources
+SOURCE_PARSERS = attach_reviewed_sources(PROGRAM_ID, SOURCE_PARSERS)
+SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + tuple(SOURCE_PARSERS)))

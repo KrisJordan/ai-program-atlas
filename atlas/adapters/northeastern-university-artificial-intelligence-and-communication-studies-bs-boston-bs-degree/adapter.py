@@ -76,3 +76,24 @@ parse, SOURCE_PARSERS = register_cs1802(parse, SOURCE_PARSERS, PROGRAM_ID)
 from atlas.adapters.northeastern_college_policies import KHOURY_URL, parse_khoury_policy
 SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + (KHOURY_URL,)))
 SOURCE_PARSERS = {**SOURCE_PARSERS, KHOURY_URL: lambda html: parse_khoury_policy(html, program_id=PROGRAM_ID)}
+
+# Exact communication review composes with, rather than discards, broader metadata.
+from atlas.adapters.northeastern_communication_course_reviews import attach_reviewed_sources
+SOURCE_PARSERS = attach_reviewed_sources(PROGRAM_ID, SOURCE_PARSERS)
+SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + tuple(SOURCE_PARSERS)))
+
+# Full reviewed degree panel and only the additional college clearance rule.
+from atlas.adapters.northeastern_communication_course_reviews import observe_degree_rules, parse_camd_policy
+_communication_base_parse = parse
+def parse(html):
+    result = _communication_base_parse(html)
+    checked = observe_degree_rules(html)
+    result['notes'] = list(dict.fromkeys(result.get('notes', []) + checked['notes']))
+    return result
+def parse_camd_clearance(html):
+    observed = parse_camd_policy(html, program_id=PROGRAM_ID)
+    observed['requirements'] = [r for r in observed['requirements'] if r['id'] == PROGRAM_ID+'-conditional-camd-clearance']
+    return observed
+_CAMD_URL = 'https://catalog.northeastern.edu/undergraduate/arts-media-design/'
+SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + (_CAMD_URL,)))
+SOURCE_PARSERS = {**SOURCE_PARSERS, _CAMD_URL: parse_camd_clearance}
