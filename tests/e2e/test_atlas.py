@@ -580,7 +580,7 @@ def test_crosslisted_identity_denominator_detail_comparison_mobile(page,site,tmp
     errors=[];page.on('pageerror',lambda error:errors.append(str(error)))
     page.goto(site+'programs/test-ai-0/')
     expect(page.locator('[data-profile=required] .profile-identity')).to_contain_text('2 mapped course identities from 3 retained source-code records')
-    expect(page.locator('[data-profile=required] .profile-total')).to_contain_text('2 required course obligations')
+    expect(page.locator('[data-profile=required] .profile-total')).to_contain_text('3 required course obligations')
     assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
     page.goto(site + '?view=cards&compare=test-ai-0')
     expect(page.locator('.compare-profile-cell .profile-identity')).to_contain_text('2 mapped course identities from 3 retained source-code records')

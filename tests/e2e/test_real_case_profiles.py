@@ -49,7 +49,7 @@ def test_case_role_identity_and_context_counts_in_real_views(browser,case_invent
         for pid,fixed,options,records in zip(PIDS,[8,9],[585,595],[639,650]):
             page.goto(case_inventory+'programs/'+pid+'/')
             required = page.locator('[data-profile=required]')
-            expect(required.locator('.profile-total')).to_contain_text(f'{fixed} distinct')
+            expect(required.locator('.profile-total')).to_contain_text(f'{fixed} required course obligations')
             expect(required.locator('[data-category=foundations] strong')).to_have_text('2')
             expect(page.locator('.profile-uncertainty')).to_contain_text('97 course identities are outside the fixed/option count profiles')
             expect(page.locator('.profile-uncertainty')).not_to_contain_text('unresolved requirement roles')
@@ -60,7 +60,7 @@ def test_case_role_identity_and_context_counts_in_real_views(browser,case_invent
             assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
         page.goto(case_inventory+'?compare='+','.join(PIDS))
         for cell,count in zip(page.locator('.compare-profile-cell').all(),[8,9]):
-            expect(cell.locator('.profile-total')).to_contain_text(f'{count} distinct')
+            expect(cell.locator('.profile-total')).to_contain_text(f'{count} required course obligations')
             expect(cell.locator('.profile-uncertainty')).to_contain_text('97 course identities are outside the fixed/option count profiles')
         page.locator('#compare-profile').select_option('options')
         for cell,count in zip(page.locator('.compare-profile-cell').all(),[585,595]):

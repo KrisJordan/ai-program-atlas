@@ -131,3 +131,18 @@ def test_real_penn_state_aliases_keep_codes_and_source_evidence(site_data,tmp_pa
     assert 'MATH 318 / STAT 318' in evidence.get_text()
     assert evidence.find('a',href='https://bulletins.psu.edu/university-course-descriptions/undergraduate/ds/')
     assert 'IST 301 / ETI 301' not in evidence.get_text()
+
+
+def test_mandatory_choices_share_counts_across_directory_detail_and_comparison(site_data,tmp_path):
+    from atlas.site import required_directory_counts
+    profile_fixture(site_data)
+    p=site_data['programs'][0]
+    view=directory_payload(site_data,'/nested/atlas/')['programs'][0]
+    assert view['curriculum_profile']['required']['count']==2
+    assert view['curriculum_profile']['required_obligations']['count']==3
+    assert view['curriculum_profile']['required_obligations']['categories']['mathematics']==1
+    assert required_directory_counts(p)['mathematics']==1
+    build(site_data,tmp_path,'/nested/atlas/')
+    page=BeautifulSoup((tmp_path/'programs/test-ai-0/index.html').read_text(),'html.parser')
+    assert page.select_one('[data-profile=required] [data-category=mathematics] strong').get_text()=='1'
+    assert page.select_one('[data-profile=required] .profile-total').get_text()=='3 required course obligations'
