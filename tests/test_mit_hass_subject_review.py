@@ -215,7 +215,7 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']['description_reviewed_records']==355
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==370
     assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
         o=next(o for o in entry(code)['observations'] if o.get('evidence_basis')=='official_title_only')
@@ -1129,3 +1129,51 @@ def test_romance_language_captures_replay_with_registration_withdrawal():
                 assert review.matched_review(c,changed,source['url'],MANIFEST) is None
             seen+=1
     assert seen==12
+
+
+def test_cultural_descriptions_keep_language_options_and_conditional_preparation_distinct():
+    report=MANIFEST['ocw_cultural_language_review']
+    assert len(report['upgraded_record_ids'])==15
+    assert report['public_course_pages_read']==report['public_syllabi_read']==10
+    african=entry('21A.136J/21G.326 [21G.026J]')['observations'][-1]
+    assert 'no prerequisites' in african['prerequisites']
+    assert 'French language concentrators' in african['prerequisites']
+    assert '21G.028' in african['prerequisites'] and 'permission' in african['prerequisites']
+    east=entry('21G.030J [WGS.236]')['observations'][-1]
+    assert east['credits']==12 and east['credit_unit']=='units'
+    assert 'nor any other prerequisites' in east['prerequisites']
+    assert any('21G.193' in n and '13units' in n for n in east['restrictions'])
+    japanese=entry('21G.064')['observations'][-1]
+    assert japanese['prerequisites'] is None
+    assert japanese['source_metadata']['registration_policy_digest']
+    assert any('not imposed on ordinary21G.064' in n for n in japanese['restrictions'])
+    film=entry('21G.052')['observations'][-1]
+    assert any('capped at18' in n for n in film['restrictions'])
+    assert not any(o.get('source_id') in report['source_ids'] for o in entry('CMS.354/21G.065')['observations'])
+    assert entry('21G.043J [21H.107]')['observations'][-1]['evidence_basis']=='official_title_only'
+
+
+def test_cultural_sources_replay_and_option_policy_changes_withdraw_review():
+    path=Path('/tmp/mit-hass-subjects/ocw-cultural-languages-index.json')
+    if not path.exists():pytest.skip('Optional ignored public cultural-course OCW captures')
+    seen=0
+    for source in json.loads(path.read_text()):
+        if not source['key'].endswith('-syllabus'):continue
+        cache=path.parent/('ocw-'+source['key']+'.html')
+        if not cache.exists():pytest.skip('Optional ignored public syllabus')
+        html=cache.read_text();o=review.observe_ocw_language_syllabus(html)[0]
+        for cid,row in MANIFEST['courses'].items():
+            e=next((e for e in row['observations'] if e['source_url']==source['url']),None)
+            if e is None:continue
+            c=dict(id=cid,code=row['listed_code'],name=row['listed_name'],source_id=row['listed_source_id'])
+            assert review.matched_review(c,o,source['url'],MANIFEST)==e
+            if o['code']=='21G.052':
+                changed=review.observe_ocw_language_syllabus(html.replace('limited to 18 students','limited to 28 students'))[0]
+                assert changed['description']==o['description']
+                assert review.matched_review(c,changed,source['url'],MANIFEST) is None
+            if o['code']=='21G.030':
+                changed=review.observe_ocw_language_syllabus(html.replace('This 12-unit class','This 10-unit class'))[0]
+                assert changed['units']=='10 units'
+                assert review.matched_review(c,changed,source['url'],MANIFEST) is None
+            seen+=1
+    assert seen==15

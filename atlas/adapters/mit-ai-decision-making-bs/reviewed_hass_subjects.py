@@ -520,7 +520,7 @@ def observe_ocw_language_syllabus(html):
     policy = {}
     for heading in main.find_all(['h2', 'h3', 'h4', 'h5']):
         title = clean(heading).rstrip(':')
-        if title not in ['Selection Criteria of Registration', 'Sign up for', 'Sign Up For', 'Nivel']:
+        if title not in ['Selection Criteria of Registration', 'Sign up for', 'Sign Up For', 'Nivel', 'Enrollment Limits', 'Note Regarding Course Number 21G.592 (The Japanese Language Option)', 'Writing and Speaking Assignments for a Communication Intensive Course', 'Writing and Speaking Assignments as a Communication Intensive Course']:
             continue
         parts = []
         for sibling in heading.next_siblings:
@@ -538,4 +538,9 @@ def observe_ocw_language_syllabus(html):
     }.get(observation['code'])
     if observation['prerequisites'] is None and preparation and preparation in observation['description']:
         observation['prerequisites'] = preparation
+    if observation['code'] == '21G.030' and observation['term'] == 'Spring 2015':
+        explicit = re.search(r'This (\d+)-unit class .+?requires no Asian language background nor any other prerequisites\.', observation['description'])
+        if explicit:
+            observation['units'] = explicit.group(1) + ' units'
+            observation['prerequisites'] = explicit.group(0)
     return [observation]
