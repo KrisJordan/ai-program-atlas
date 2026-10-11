@@ -64,7 +64,8 @@ def test_rice_noncredential_policy_rejects_contrary_evidence():
 @pytest.mark.parametrize('pid',PIDS)
 def test_reviewed_seed_and_registered_refresh_sources(pid):
  p=json.loads((ROOT/'data/programs'/f'{pid}.json').read_text());db.validate_program(p)
- assert p['curriculum_status']=='partial' and p['curriculum_audit']['unresolved_requirements']
+ assert p['curriculum_status']==('complete' if pid=='rice-ece-ai-systems-specialization' else 'partial')
+ assert bool(p['curriculum_audit']['unresolved_requirements']) == (p['curriculum_status']=='partial')
  assert p['first_offered'] is None
  a=adapter(pid);assert set(a.SOURCES)<={s['url'] for s in p['sources']}
  assert all(r['source_id'] in {s['id'] for s in p['sources']} for r in p['requirements'])
@@ -93,3 +94,12 @@ def test_rice_merged_pools_keep_crosslist_as_one_option():
  t=Tables('synthetic','catalog','https://example.invalid/')
  t.table(merged,'Choose one',kind='choose_courses',count=1,interpret_choices=False)
  option=t.rules[1];assert option['kind']=='choose_courses' and option['count']==1 and len(option['course_ids'])==2
+
+
+@pytest.mark.parametrize('key',['graduation','transfer','grades','registration'])
+def test_rice_policy_changed_material_condition_rejected(key):
+ a=adapter('rice-ece-ai-systems-specialization');_,heading,specs=a.POLICIES[key]
+ html='<main><h1>'+heading+'</h1><p>'+'; '.join(marker for _,markers,_ in specs for marker in markers)+'</p></main>'
+ r=a.parse_policy(html,key);assert len(r['requirements'])==len(specs)
+ assert not {'curriculum_status','curriculum_audit','last_verified'} & r.keys()
+ with pytest.raises(ValueError):a.parse_policy(html.replace(specs[0][1][0],'changed condition'),key)

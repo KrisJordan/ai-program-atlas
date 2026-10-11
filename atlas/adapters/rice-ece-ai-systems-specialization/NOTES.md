@@ -1,6 +1,6 @@
 # AI & Systems
 
-Reviewed 2026-10-11. Local scope: concentration. Curriculum remains partial.
+Reviewed 2026-10-11. Local scope: concentration. Local requirement inventory is complete; course metadata remains incomplete.
 
 A declared area of specialization within Rice’s BSECE. Rice explicitly states that an area of specialization is not an official academic credential and does not appear on the transcript. Atlas’s concentration category includes this formal path; it is not a standalone award.
 
@@ -16,16 +16,13 @@ A declared area of specialization within Rice’s BSECE. Rice explicitly states 
 - 500-level ELEC permission route, formal substitutions, design-laboratory exclusion and mandatory junior/senior advising
 - Registrar declaration, catalog-year selection and noncredential/nontranscript status
 
-## Boundaries
+## Policy closure, 2026-10-11
 
-- Applicable university pass/fail, grade, residency and transfer limits have not yet been fully reviewed for the specialization.
-- Permission-based 500-level substitutions remain open eligibility rules; precise student-specific approval and enrollment prerequisites are not inferred.
-- First-offered date is unknown; neither the catalog year nor an update date establishes a launch.
-- No concentration-specific assessed outcomes, descriptions, prerequisites, public course sites or example syllabi were verified in this bounded pass. Course titles and identities are observed; unknown exact course credits remain null.
-- The whole BSECE core and degree requirements are outside this local path audit. BSECE-wide learning outcomes are not relabeled as specialization outcomes.
-- The catalog’s Computer Engineering preparation footnotes are retained as recommendations, not invented unconditional prerequisites.
+The current GA [graduation](https://ga.rice.edu/undergraduate-students/academic-policies-procedures/graduation-requirements/), [transfer](https://ga.rice.edu/undergraduate-students/academic-policies-procedures/transfer-credit/), [grades](https://ga.rice.edu/undergraduate-students/academic-policies-procedures/grades/) and [registration](https://ga.rice.edu/undergraduate-students/academic-policies-procedures/registration/) pages close the local policy queue. Twelve additional observed rules cover major-wide GPA 2.00 and letter grading, P-grade uncovering, transfer equivalence/grades/summer limits, repeats, graduate instructor overrides, semester-hour units and the major’s upper-level residence fraction. No separate specialization GPA or residence fraction is invented. Instructor-designated S/U credit does not itself waive the major letter-grade rule.
 
-The catalog’s credit-hour total is preserved, while its standardized credit-unit definition remains unknown. No conversion is inferred from the academic calendar.
+Complete applies only to the declared specialization and its host-major relationship. The whole BSECE curriculum remains outside this audit. The host-degree four-semester residence wording differs between graduation (one summer allowed) and transfer (fall/spring only); this known disagreement remains explicitly recorded rather than silently reconciled.
+
+The 500-level ELEC route remains a permission-based open eligibility rule, not an unavailable finite list. Each substitution needs the catalog’s program approval, with an instructor override to enroll in graduate-level courses. Course descriptions, individual prerequisites, exact course-credit amounts, public sites, syllabi, explicit specialization outcomes and first-offered date remain unverified. Host BSECE outcomes are not assigned to the specialization.
 
 ## Refresh
 
