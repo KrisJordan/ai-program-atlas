@@ -92,6 +92,33 @@ def observe_anthropology_titles(html):
     return rows
 
 
+def observe_economics_titles(html):
+    """Observe the two concentration lists, excluding the adjacent minor pool."""
+    from importlib import import_module
+    # Existing source-specific policy guards also withdraw changed list context.
+    module = import_module('atlas.adapters.mit-ai-decision-making-bs.hass_departments')
+    module.parse_economics(html)
+    soup = BeautifulSoup(html, 'html.parser')
+    rows = []
+    for title in ['Concentration in Economics', 'Concentration in Development Economics']:
+        heading = soup.find(lambda node: node.name == 'h3' and clean(node) == title)
+        if heading is None:
+            raise ValueError('Economics concentration title missing')
+        for node in heading.parent.find_all('li'):
+            if node.find('ul'):
+                continue
+            text = clean(node)
+            match = re.fullmatch(r'(14\.[A-Z0-9]+(?:\[J\])?) (.+)', text)
+            if match is None:
+                raise ValueError('Economics concentration subject row changed')
+            prerequisite = re.search(r'\(Prereq\. ([^)]+)\)', match[2])
+            name = re.split(r'\s*\(', match[2])[0].replace('*', '').removesuffix(' and/or').strip()
+            rows.append(dict(code=match[1], name=name, description=None,
+                             prerequisites=prerequisite[1] if prerequisite else None,
+                             units=None, term=None, source_annotation=text, list_heading=title))
+    return rows
+
+
 def observe_literature(html):
     soup = BeautifulSoup(html, 'html.parser')
     selected = soup.find('select', attrs={'name': 'semester'})

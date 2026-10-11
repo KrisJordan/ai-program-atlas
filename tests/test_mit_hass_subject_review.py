@@ -31,7 +31,9 @@ def test_scope_is_exact_and_unread_records_are_not_certified():
             if evidence.get('evidence_basis') == 'official_title_only':
                 assert evidence['description_digest'] is None
                 assert evidence['description_summary'] is None
-                assert evidence['prerequisites'] is None
+                if evidence['prerequisites'] is not None:
+                    assert evidence['source_id']=='mit-ai-hass-review-economics-titles'
+                    assert evidence['prerequisites'] in evidence['source_metadata']['source_annotation']
                 if evidence['credits'] is not None:
                     assert evidence['units_text']=='9 unit IAP version' and evidence['credits']==9
                 assert 'title' in evidence['rationale']
@@ -339,3 +341,30 @@ def test_anthropology_actual_directory_replays_title_observations():
     hashes={review.observation_digest(o) for o in review.observe_anthropology_titles(path.read_text())}
     saved=[o for r in MANIFEST['courses'].values() for o in r['observations'] if o['source_id']=='mit-ai-hass-review-anthropology-titles']
     assert len(saved)==32 and all(o['observation_digest'] in hashes for o in saved)
+
+
+def test_economic_pool_does_not_certify_mathematics_computing_or_current_offering():
+    for code in ['14.12','14.15[J]','14.17','14.18','14.78[J]']:
+        row=entry(code)['observations'][-1]
+        assert row['category']=='other' and row['status']=='unclassified'
+        assert row['description_digest'] is None
+    assert entry('14.70')['observations'][-1]['category']=='human_context'
+    assert entry('14.27')['observations'][-1]['prerequisites']=='14.30 or 6.041'
+    assert entry('14.16')['observations'][-1]['prerequisites']=='14.03/14.04'
+    assert entry('14.01')['observations'][-1]['prerequisites'] is None
+    assert any('not offered in2026–27' in x for x in entry('14.73')['observations'][-1]['restrictions'])
+
+
+def test_actual_economics_concentration_observer_preserves_source_context():
+    path=Path('/tmp/atlas-mit-hass-economics.html')
+    if not path.exists():
+        pytest.skip('Optional ignored official Economics concentration capture')
+    text=path.read_text();rows=review.observe_economics_titles(text)
+    assert len(rows)==34
+    # Adjacent minor's statistics, finance bundle and AI title are not concentration entries.
+    assert not {'14.30','15.401/417','14.C395'} & {o['code'] for o in rows}
+    hashes={review.observation_digest(o) for o in rows}
+    saved=[o for r in MANIFEST['courses'].values() for o in r['observations'] if o['source_id']=='mit-ai-hass-review-economics-titles']
+    assert len(saved)==37 and all(o['observation_digest'] in hashes for o in saved)
+    with pytest.raises(ValueError):
+        review.observe_economics_titles(text.replace('One or two of:','One or three of:'))
