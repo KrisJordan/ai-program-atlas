@@ -237,3 +237,12 @@ Reviewed the official COMM, JRNL, ARTF, ARTG, MSCR and PREL descriptions, emphas
 This batch reviewed 59 distinct source descriptions and added **63 description fields across 5 variants**, bringing the total to **1414 of1,593 course observations**. The exact remaining inventory now contains **179 accessible unreviewed observations across 162 codes**. All source timestamps remain the actual catalog fetch times. All requirement graphs, credit amounts, preparation fields and public-resource links remain unchanged.
 
 Validation: **147 Northeastern-focused tests passed**; all23 temporary ingest/repeat/export/build/integrity checks passed. All11 affected source registrations succeeded twice with zero repeat candidates/source changes. The queue integrity test verifies its counts and exact code/program membership against the concrete records.
+
+## Criminology international affairs and public policy options — 2026-10-11
+
+Reviewed the official CRIM, INTL, POLS, PPUA and HUSV descriptions for research methods, justice institutions, international affairs, environmental policy and the listed alternatives. Cross-listed topics retain separate source records rather than inferred transfer or substitution rules. International-relations simulations are distinguished from selective external conference participation; a changed selection statement makes the reviewed NATO summary null. Contested political and historical topics are described as the subjects of study, without endorsing course framings as program outcomes. Existing permission and preparation conditions remain intact.
+
+
+This batch reviewed 81 distinct source descriptions and added **92 description fields across 6 variants**, bringing the total to **1506 of1,593 course observations**. The exact remaining inventory now contains **87 accessible unreviewed observations across 81 codes**. All source timestamps remain the actual catalog fetch times. All requirement graphs, credit amounts, preparation fields and public-resource links remain unchanged.
+
+Validation: **148 Northeastern-focused tests passed**; all23 temporary ingest/repeat/export/build/integrity checks passed. All14 affected source registrations succeeded twice with zero repeat candidates/source changes. The queue integrity test verifies its counts and exact code/program membership against the concrete records.

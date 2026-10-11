@@ -385,3 +385,12 @@ def test_epidemiology_computation_scope_requires_current_course_evidence():
     assert observed['courses'][0]['prerequisites'] is None
     assert observed['requirements']==[] and 'outcomes' not in observed
     assert parser(html.replace('there are no computational requirements','computational exercises are required'))['courses'][0]['description'] is None
+
+
+def test_model_nato_summary_does_not_turn_selective_conference_into_entitlement():
+    html=page('<div class="courseblock"><p class="courseblocktitle">POLS 4918. Model NATO. (4 Hours)</p><p class="cb_desc">Teams research countries and conduct a simulation. Students may be selected to represent the university at a national conference.</p></div>',heading='Political Science (POLS)')
+    parser=register_subject_sources('test-program',{'POLS':['POLS 4918']})['https://catalog.northeastern.edu/course-descriptions/pols/']
+    result=parser(html)
+    assert 'conference is selective' in result['courses'][0]['description']
+    assert result['requirements']==[] and 'outcomes' not in result
+    assert parser(html.replace('Students may be selected','All students are required'))['courses'][0]['description'] is None
