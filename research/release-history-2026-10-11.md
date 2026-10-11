@@ -64,3 +64,8 @@ Newer research commits are not included in these published metrics. They continu
 ### Verified 136-program checkpoint (2026-10-11)
 
 Release `7ae8cf4d` passed 1,322 tests (all 17 Chromium cases), fresh/maintained current-fact comparison, repeat ingest, integrity and 143-file deterministic builds. CI/Pages run `38101661236` succeeded. Public JSON and browser verified the new Binghamton, Lewis & Clark, Vanderbilt and Florida details, complete SMU local audits, Caltech bounded coverage state, existing direct links, comparison reload/history, keyboard expansion and 390px layout. Root HTML is 2,785,533 bytes. New research commits after this release remain unreleased until a subsequent checkpoint.
+
+
+## Verified 136-program checkpoint (superseded)
+
+Release `7ae8cf4dfbb4f7b45c6baf8621347c2495acb375`, [CI/Pages run](https://github.com/KrisJordan/ai-program-atlas/actions/runs/38101661236): 1,322 passing tests with 17 required Chromium cases, 111 optional-cache/historical skips, fresh/maintained equality, repeat ingest zero, 143 deterministic files and live browser checks. It contained 136 programs across 194 institutions (67 confirmed, 118 inspected, eight inaccessible, one bounded absence result), with 36 complete scoped inventories, 93 partial and seven pending. This is historical; PLAN.md records the newer verified release.

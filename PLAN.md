@@ -6,10 +6,10 @@ Updated 2026-10-11. A published research project; **the full target cohort and c
 
 - Repository: https://github.com/KrisJordan/ai-program-atlas
 - Site: https://krisjordan.github.io/ai-program-atlas/
-- Verified release: `7ae8cf4dfbb4f7b45c6baf8621347c2495acb375`, [successful CI and Pages deployment](https://github.com/KrisJordan/ai-program-atlas/actions/runs/38101661236).
-- Fresh locked uv environment and clean committed source: **1,322 tests passed**, including all **17 required Chromium tests**. The 111 skipped cases require optional ignored source caches or historical snapshots; no browser tests were skipped.
-- Fresh reconstruction and maintained publication copy passed integrity checks and agreed on current facts; additional historical coverage sources were preserved. Repeat ingest changed zero programs. Repeated static builds were byte-identical across 143 files.
-- Live public JSON matched these counts. Live checks passed keyboard family expansion, concrete comparison reload, discipline back/forward, direct program pages, learning/career statement distinctions and 390px mobile layout, with no JavaScript errors or horizontal overflow.
+- Verified release: `fd44e55b7437452986ba145d5473978c4e9f521f`, [successful CI and Pages deployment](https://github.com/KrisJordan/ai-program-atlas/actions/runs/38102605687).
+- Fresh locked uv environment and clean committed source: **1,405 tests passed**, including all **23 required Chromium tests**. The 118 skipped cases require optional ignored source caches or historical snapshots; no browser tests were skipped.
+- Fresh reconstruction and maintained publication copy passed integrity checks and agreed on current facts; additional historical coverage sources were preserved. Repeat ingest changed zero programs. Repeated static builds were byte-identical across 149 files.
+- Live public JSON matched these counts. Live checks passed keyboard family expansion, explicit family collapse across reload/back/forward, focus after clearing comparison, concrete comparison reload, discipline back/forward, direct new and existing program pages, learning/career statement distinctions and 390px mobile layout, with no JavaScript errors or horizontal overflow.
 - Dedicated local repository: `ai-program-atlas/` in this Mac Studio task. No existing personal website or unrelated repository was changed. Coordinated Astra high research and implementation use explicit ownership and incremental commits.
 
 ## Published coverage
@@ -18,15 +18,15 @@ Updated 2026-10-11. A published research project; **the full target cohort and c
 | --- | ---: |
 | Institutions in loaded roster | 194 |
 | National Universities / National Liberal Arts Colleges | 108 / 86 |
-| Confirmed qualifying title / partially inspected / inaccessible | 67 / 118 / 8 |
+| Confirmed qualifying title / partially inspected / inaccessible | 72 / 113 / 8 |
 | Loaded institutions pending / absence conclusions | 0 / 1 |
-| Concrete programs | 136 |
-| Degrees / minors / concentrations / additional majors | 60 / 48 / 25 / 3 |
-| Complete / partial / pending requirement inventories | 36 / 93 / 7 |
-| Program-course records / resolved requirement nodes | 22,480 / 16,033 |
+| Concrete programs | 142 |
+| Degrees / minors / concentrations / additional majors | 60 / 49 / 30 / 3 |
+| Complete / partial / pending requirement inventories | 37 / 98 / 7 |
+| Program-course records / resolved requirement nodes | 22,609 / 16,717 |
 | Program families / concrete family variants | 2 / 31 |
-| Descriptions / prerequisite statements | 1,839 / 2,651 |
-| Credit amounts with verified units | 8,591 |
+| Descriptions / prerequisite statements | 1,846 / 2,657 |
+| Credit amounts with verified units | 8,660 |
 | Public course sites / example syllabi | 78 / 72 |
 
 Caltech has one bounded no-qualifying-program finding after the current program directory and all 32 option/minor catalog pages were reviewed. It is a dated search result, not a claim about future offerings.
@@ -51,7 +51,7 @@ National Universities has 108 cited secondary-table members, including nine tied
 - [x] Carolina-blue/navy responsive sans-serif interface, keyboard navigation, filters, coverage ledger, detail pages and ranking methodology. No UNC marks or sponsorship claims.
 - [x] Explicit families, expandable variants, discipline filtering, concrete comparison URLs, common/local requirements, provenance and missingness. Stable IDs and base-path reload/back/forward work on GitHub Pages.
 - [x] Course-category and inferred-theme comparisons preserve credit units and separate source-stated learning outcomes, program aims and career pathways from editorial taxonomy. No opaque quality score.
-- [x] Compact directory projection reduced root HTML about 69% raw and 64% gzipped in a controlled same-data comparison. Live root HTML is 2,785,533 bytes; full static detail pages and data.json remain intact. No runtime fetch/server added.
+- [x] Compact directory projection reduced root HTML about 69% raw and 64% gzipped in a controlled same-data comparison. Live root HTML is 2,831,909 bytes; full static detail pages and data.json remain intact. No runtime fetch/server added.
 - [x] CI tests fresh reconstruction and publishes an updated copy of the maintained DB. Reviewed discovery classification corrections refresh correctly; manual program corrections and evidence history survive.
 
 ## Program families and current evidence
@@ -70,16 +70,15 @@ This status does **not** mean complete program evidence. Course descriptions, in
 
 ## Current work after the verified release
 
-The 136-program release is a checkpoint. Subsequent committed evidence and active adapters remain unreleased until another fixed-commit verification.
-
-**Candidate under validation:** evidence through `9049892` contains 142 programs at 194 institutions: 72 confirmed, 113 inspected, eight inaccessible and one bounded absence finding. Requirements comprise 37 complete scoped inventories, 98 partial and seven pending, with 22,609 program-course observations and 16,717 rule nodes. This candidate also includes six additional browser regression cases and the Soup Sieve compatibility constraint. These counts are not yet the public release.
+The 142-program release is a checkpoint. Subsequent committed evidence and active adapters remain unreleased until another fixed-commit verification.
 
 - **Institution discovery:** ordinary liberal-arts depth reviews cover the loaded roster's assigned queue, with readable and unresolved branches documented separately. An 18-candidate official-news follow-up verified no additional 2027 cohort member; wrong editions and component ranks were rejected. The roster remains incomplete. See [membership follow-up](research/lac-cohort-evidence-2026-10-11.md).
-- **National Universities:** deeper directory and concentration reviews continue across the remaining inspected pool. New official evidence includes Yeshiva, UNC–Chapel Hill, American, San Diego and UT Austin; their publication depends on completed adapters, tests and integration. Certificates remain excluded rather than relabeled. See dated `data/surveys/national-*` and adjacent research notes.
+- **National Universities:** deeper directory and concentration reviews continue across the remaining inspected pool. Yeshiva, UNC–Chapel Hill, American, San Diego and UT Austin are now published. A further bounded review of six already-confirmed universities found additional formal Stanford, Northwestern and Rice paths; their adapters are in progress. Certificates remain excluded rather than relabeled. See dated `data/surveys/national-*` and adjacent research notes.
 - **MIT:** all 43 registrar HASS fields have a dated review ledger. The current committed inventory maps 34, records three precise source questions and six department-detail barriers. Ordinary browser review is testing whether client TLS failures can be resolved without relaxing validation. The degree remains partial because of source/cohort conflicts and remaining policies. See [field ledger](research/mit-hass-field-review-2026-10-11.json).
 - **UCSD/UCSB:** all eight principal UCSD college pools are mapped; linked discipline, transfer and examination-policy checks continue. UCSB's current guide, progression and transfer policies are mapped; science-list/course-credit/capstone ambiguity and dynamic GE pools remain explicit.
 - **Miami/Northeastern:** all 215 active Miami cognate pages have been captured and reviewed; blank/conflicting plans and applicability gaps keep the degrees partial. Northeastern's 1,593 course observations now have names/descriptions, while exact home-college applicability remains unresolved. Large option pools are not portrayed as mandatory-course counts.
-- **Product review:** an independent live review fixed two query/keyboard edge cases and stale Case degree overview text in the release candidate. All 23 required browser tests passed in its isolated review; the full clean release check is next. Existing live checks passed mobile overflow, navigation and comparison workflows.
+- **Product review:** an independent review fixed explicit family collapse persistence, keyboard focus after clearing comparison and stale Case degree overview text. All fixes passed clean and live verification in the 142-program release. A six-program evidence pass now targets missing descriptions/prerequisites, stated outcomes and first-offered dates.
+- **New concentration policies:** UT and Yeshiva gained exact-match course metadata and scoped declaration, grade, transfer, residence and approval rules after the verified release. American and San Diego policy reviews are in progress; remaining conflicts are retained. See [policy review](research/concentration-policy-review-2026-10-11.md).
 - **Parser compatibility:** Soup Sieve 3.0.1 failed valid tag/attribute selectors in both local and fresh Python 3.11.4 environments. The dependency is now constrained to verified 2.x, with six regression probes. See [compatibility evidence](research/parser-compatibility.md).
 
 ## Remaining work and exact boundaries
@@ -87,7 +86,7 @@ The 136-program release is a checkpoint. Subsequent committed evidence and activ
 1. **Ranked cohort:** obtain a permitted authoritative 2027 roster for both categories and every cutoff tie. National Universities has a secondary-table enumeration; liberal arts still lacks at least 14 members before accounting for ties. Do not certify full coverage or guess missing identities/ranks. Publisher access restrictions and the failed official-news branches remain documented.
 2. **CSRankings:** numerical import is held for permission or qualified reuse review. Methodology records `ai`, `vision`, `mlmining`, `nlp`, `inforet`, the proposed 2016–2025 U.S. window, source snapshot and computation method. Missing values remain null; publication research does not measure undergraduate teaching. See [reuse note](research/csrankings.md).
 3. **Access:** eight loaded institutions remain inaccessible in the verified release. Seven published curricula remain pending: the original six separately documented restricted/detail-unavailable programs and the announced UIC concentration. A normal public browser may resolve transport or dynamic-rendering gaps; robots, authentication and explicit restrictions are never bypassed. See [pending barriers](research/pending-curriculum-barriers.md), [access review](research/access-review.md), and each adapter's notes.
-4. **Requirement inventories:** 93 published records remain partial. Finish finite eligible lists, nested alternatives, home-college applicability and completion policies where accessible. Source disagreements need documentary reconciliation; elapsed time or program marketing cannot resolve them. Every proposed promotion requires an explicit scoped audit.
+4. **Requirement inventories:** 98 published records remain partial. Finish finite eligible lists, nested alternatives, home-college applicability and completion policies where accessible. Source disagreements need documentary reconciliation; elapsed time or program marketing cannot resolve them. Every proposed promotion requires an explicit scoped audit.
 5. **Institution search depth:** a confirmed program proves that title exists, not that every program at the institution was found. Inspected records retain the areas searched and unreviewed. Caltech alone has the documented bounded no-qualifying-program finding; no global absence is implied.
 6. **Course metadata:** descriptions, prerequisites, exact credits, public sites, syllabi, launch dates and outcomes remain separately incomplete. Match exact course identity/term; source-stated aims and careers stay distinct from learning outcomes and analyst taxonomy. Do not redistribute raw copyrighted catalogs.
 7. **Next publication:** freeze committed evidence, ingest into the maintained database, repeat to zero changes, check foreign keys/integrity, compare fresh and maintained current facts, reproduce the static build, run locked clean tests with required Chromium, push that tested commit, and verify both CI/Pages and the public site. Preserve WIP and newer commits outside the tested release.
