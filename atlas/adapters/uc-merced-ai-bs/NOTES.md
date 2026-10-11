@@ -37,3 +37,8 @@ Senate robots transport ConnectError are distinguished in the adjacent JSON.
 ## Degree correctness audit — 2026-10-11
 
 See [eight-degree audit](../../../research/degree-audit/west-purdue-wpi.md) and its adjacent per-program JSON ledger. This program is blocked for whole-degree certification by the specific evidence gaps recorded there. Verified role/subject corrections are retained; parser success and prior local curriculum labels are not a completed degree audit. Remaining course-content review work is distinguished from actual source barriers. Independent second pass remains pending.
+
+
+## New authoritative-plan evidence — 2026-10-11
+
+New public Senate chair letter, systemwide agenda and actual Engineering navigation provide no adopted AI course table. All independent roles/counts remain null and dimensions unverified. No catalog or failed Box proposal retry; no CSE inheritance. See [follow-up](../../../research/university-core-followup-authoritative-plans.md) and adjacent complete proposed replacement rows. Coordinator owns acceptance/integration/publication.

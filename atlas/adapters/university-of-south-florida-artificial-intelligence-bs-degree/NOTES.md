@@ -99,3 +99,8 @@ See [resolution evidence](../../../research/degree-audit/independent-resolution-
 and the adjacent proposed replacement core rows; shared-ledger application belongs
 to the coordinator. A permitted readable governing major table/PDF is the exact
 remaining evidence need, not a still-unread course-description queue.
+
+
+## New authoritative-plan evidence — 2026-10-11
+
+New public current-student navigation says academic materials are moving to automatically enrolled Canvas. Canvas was not requested. This adds an exact advising boundary, not mandatory roles; fixed/choice sets and totals remain null. No restricted catalog/brochure retry. See [follow-up](../../../research/university-core-followup-authoritative-plans.md) and adjacent complete proposed replacement rows. Coordinator owns acceptance/integration/publication.
