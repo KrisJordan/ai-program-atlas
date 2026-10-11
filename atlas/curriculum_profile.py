@@ -11,7 +11,7 @@ from .course_identity import identity_map
 CHOICES = {"choose_courses", "choose_credits", "alternative"}
 
 
-def requirement_profile(program: dict) -> dict:
+def requirement_profile(program: dict, *, include_course_ids: bool = False) -> dict:
     """Partition documented course IDs without changing or resolving the input.
 
     Call after ``families.resolve_program`` (as public database export does).
@@ -86,7 +86,7 @@ def requirement_profile(program: dict) -> dict:
         return {"count": len(ids), "categories": categories, "classification": classification,
                 "source_record_count": sum(canonical in ids for canonical in identities.values())}
 
-    return {
+    result = {
         "required": profile(fixed),
         "options": profile(options),
         "unresolved": profile(unresolved),
@@ -99,3 +99,7 @@ def requirement_profile(program: dict) -> dict:
                      "crosslisted_aliases": len(courses) - len(set(identities.values())),
                      "reviewed_groups": len(program.get("course_identity_groups", []))},
     }
+    if include_course_ids:
+        result["course_ids"] = {"required": sorted(fixed), "options": sorted(options),
+                                "unresolved": sorted(unresolved)}
+    return result
