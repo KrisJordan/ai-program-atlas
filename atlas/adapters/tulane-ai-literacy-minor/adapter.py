@@ -192,3 +192,7 @@ from atlas.adapters.tulane_literacy_policy_followup import DECLARATION,UNIVERSIT
 SOURCES=(*SOURCES,DECLARATION,UNIVERSITY)
 SOURCE_PARSERS[DECLARATION]=lambda html:parse_declaration(html,PROGRAM_ID)
 SOURCE_PARSERS[UNIVERSITY]=lambda html:parse_university(html,PROGRAM_ID)
+
+from atlas.adapters.tulane_home_policies import register as register_home
+SOURCES=list(SOURCES)
+register_home(PROGRAM_ID,SOURCES,SOURCE_PARSERS)

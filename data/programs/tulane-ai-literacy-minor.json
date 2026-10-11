@@ -78,6 +78,36 @@
       "catalog_year": "2026-2027",
       "locator": "Credit-Hour; Curriculum Effective Date; catalog 2026–2027",
       "confidence": "high"
+    },
+    {
+      "id": "tulane-ai-literacy-minor-home-liberal-arts",
+      "url": "https://catalog.tulane.edu/liberal-arts/",
+      "title": "School of Liberal Arts — 2026–2027 catalog",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Undergraduate Degree Requirements: Minors",
+      "confidence": "high"
+    },
+    {
+      "id": "tulane-ai-literacy-minor-home-business",
+      "url": "https://catalog.tulane.edu/business/",
+      "title": "A. B. Freeman School of Business — 2026–2027 catalog",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Undergraduate Policies: Program Combinations",
+      "confidence": "high"
+    },
+    {
+      "id": "tulane-ai-literacy-minor-home-public-health-tropical-medicine",
+      "url": "https://catalog.tulane.edu/public-health-tropical-medicine/",
+      "title": "Celia Scott Weatherhead School of Public Health and Tropical Medicine — 2026–2027 catalog",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Undergraduate Student Policies (before graduate policies)",
+      "confidence": "high"
     }
   ],
   "links": [
@@ -712,6 +742,48 @@
       "source_text": null,
       "summary": "New programs and curriculum changes become effective in fall and must appear in that academic year’s catalog. Students may complete requirements published for their program matriculation; the responsible dean resolves old/new-catalog disputes and exceptions. The current catalog edition does not establish this minor’s launch date.",
       "course_ids": []
+    },
+    {
+      "id": "tulane-ai-literacy-minor-home-liberal-arts",
+      "parent_id": null,
+      "title": "Liberal Arts home-school minor limits",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "tulane-ai-literacy-minor-home-liberal-arts",
+      "source_text": null,
+      "summary": "For Liberal Arts students, the school permits one or two minors, requires at least a 2.000 minor GPA, and prohibits counting a first-minor course toward a second minor. Individual departments may add major/minor overlap restrictions; the AI Literacy minor’s own three-credit major overlap cap still applies.",
+      "course_ids": []
+    },
+    {
+      "id": "tulane-ai-literacy-minor-home-business",
+      "parent_id": null,
+      "title": "Freeman overlap wording — outside-school scope unresolved",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "tulane-ai-literacy-minor-home-business",
+      "source_text": null,
+      "summary": "Freeman prohibits double-counting in its described double-major or major/minor combinations and requires semester advising. The paragraph starts with a within-Freeman qualifier but does not explicitly explain its reach to an NTC minor. Applicability to AI Literacy versus that minor’s three-credit major overlap permission remains unresolved; neither permission nor a blanket prohibition is inferred.",
+      "course_ids": []
+    },
+    {
+      "id": "tulane-ai-literacy-minor-home-public-health-tropical-medicine",
+      "parent_id": null,
+      "title": "Public Health undergraduate policy referral",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "tulane-ai-literacy-minor-home-public-health-tropical-medicine",
+      "source_text": null,
+      "summary": "Public Health’s undergraduate policy section directs students to Newcomb-Tulane College academic policies. Those minor rules are already mapped. The separate graduate transfer, residency and grading rules on the same page are not applied to this undergraduate minor.",
+      "course_ids": []
     }
   ],
   "notes": [
@@ -732,7 +804,10 @@
       "tulane-ai-literacy-minor-sse-policies",
       "tulane-ai-literacy-minor-cmps-catalog",
       "tulane-literacy-declaration",
-      "tulane-university-credit-policy"
+      "tulane-university-credit-policy",
+      "tulane-ai-literacy-minor-home-liberal-arts",
+      "tulane-ai-literacy-minor-home-business",
+      "tulane-ai-literacy-minor-home-public-health-tropical-medicine"
     ],
     "sections": [
       "Three groups and 14 named course options",
@@ -740,11 +815,13 @@
       "Minor GPA and major/minor/certificate overlap",
       "NTC minor policies and conditional SSE restrictions",
       "CMPS 1500 credit/corequisite cross-check",
-      "NTC general declaration process; university semester credit-hour definition and catalog applicability"
+      "NTC general declaration process; university semester credit-hour definition and catalog applicability",
+      "Non-SSE home-school review: Liberal Arts minor count/overlap, Freeman scope ambiguity, Public Health NTC referral; Architecture overview bounded review"
     ],
     "unresolved_requirements": [
       "Clarify four-credit CMPS 1500 allocation within the six-credit problem-solving group and published 15-credit total; the current minor table contains no allocation exception.",
-      "Additional program-specific declaration instructions and non-SSE host-school restrictions remain unverified."
+      "Freeman’s no-overlap paragraph does not clearly resolve applicability to this NTC minor for business students; the minor separately permits three major credits of overlap.",
+      "Architecture’s public school overview did not resolve additional outside-unit minor restrictions; no exemption is inferred. Individual home-major departmental restrictions remain student-specific."
     ],
     "metadata_gaps": [
       "All other individual credit values and prerequisite statements unverified",
