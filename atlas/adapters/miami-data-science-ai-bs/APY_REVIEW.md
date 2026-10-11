@@ -1,0 +1,3 @@
+# Shared Anthropology evidence
+
+The four Miami degree records share the 52-code [Anthropology content contribution](../../../research/degree-audit/miami-anthropology-context-review.md), implemented in `atlas/adapters/miami_apy_context_reviews.py` with its adjacent manifest. The helper's explicit program scopes cover BS/BA Data Science and Artificial Intelligence and the two Business degree variants. It preserves prior APY 313 evidence and all contextual requirements. Manual subject judgments, variable credits and enrollment conditions remain separate from program membership. The cohort owner integrates the observations and manual review objects; this contribution does not certify any whole-degree audit.
