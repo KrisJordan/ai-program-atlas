@@ -383,3 +383,8 @@ The supplemental parser binds each observation to its exact title and full annot
 ### Five further Literature descriptions — 2026-10-11
 
 Contribution6ea2d89 adds five actual archived descriptions: Arthurian literature(Fall2021), two Bible literature records(Spring2020), Darwin literature(Fall2014), and the Literary Incubator(IAP2025). Exact terms, units and formal preparation remain source-specific. The contributor inspected all38 visible selector terms;21L632and715 were not found there, which does not establish absence from other sources. HASS now has180description-supported occurrences,662limited-title dispositions and three code-onlyunknowns. Roles and identity groups are unchanged; the full primary audit remains in progress.
+
+
+### Hamilton explicit subject alias — 2026-10-11
+
+Contributionccc3b36 provides two CMS427 description upgrades from the actual Spring2026 Literature21L500 panel's explicit same-subject clause. The description concerns theatrical, literary and historical analysis, supporting human_context rather than coding inferred from the CMS prefix. A dedicated observer hashes the same-subject and meets-with fields; changed alias semantics withhold the supplement. No identity group is created. HASS now has182description-supported occurrences,660limited-title dispositions and three code-onlyunknowns.

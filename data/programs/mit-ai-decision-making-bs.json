@@ -1635,6 +1635,16 @@
       "catalog_year": "Fall 2014",
       "locator": "Actual term-specific Literature course panels and unit/prerequisite fields",
       "confidence": "high"
+    },
+    {
+      "id": "mit-ai-hass-review-literature-aliases-spring2026",
+      "url": "https://lit.mit.edu/academics/subject-offerings/?semester=spring+2026&order_by=course_number&tier=&topic=",
+      "title": "MIT Literature Spring2026 explicit same-subject descriptions",
+      "fetched_at": null,
+      "source_date": null,
+      "catalog_year": "Spring 2026",
+      "locator": "Actual term-specific Literature course panels and unit/prerequisite fields",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -14083,30 +14093,32 @@
       "id": "mit-ai-hass-american-studies-cms-427j",
       "code": "CMS.427J [21L.500, 21T.247]",
       "name": "How We Got to Hamilton",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Musical-theater history and close analysis of songs, performance and representation place Hamilton in earlier traditions, including overlooked or appropriated work by artists of color; assignments combine critical and creative work.",
+      "prerequisites": "none",
+      "credits": 12,
       "credit_unit": "units",
-      "category": "other",
+      "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-american-studies",
       "url": "https://shass.mit.edu/for-students/undergraduate-study/american-studies-concentration/",
-      "public_site": "https://shass.mit.edu/for-students/undergraduate-study/american-studies-concentration/",
+      "public_site": "https://lit.mit.edu/academics/subject-offerings/?semester=spring+2026&order_by=course_number&tier=&topic=",
       "syllabus": null,
       "notes": [
-        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
         "Observed departmental source term/version: not stated. The original list identity is retained.",
-        "Exact literal source list identity retained, including bracketed/slash labels. No current-offering, student eligibility or cross-list identity claim."
+        "Exact literal source list identity retained, including bracketed/slash labels. No current-offering, student eligibility or cross-list identity claim.",
+        "Creative and critical assignments may include theater, dance-studio or archive visits.",
+        "Observed departmental source term/version: Spring 2026. The original list identity is retained.",
+        "The exact Literature panel explicitly says Same subject as CMS.427[J],21T.247[J]. This supports both printed CMS427 source records for this dated description; no identity group or version merge is created."
       ],
       "category_review": {
-        "status": "unclassified",
+        "status": "reviewed",
         "taxonomy_version": "1",
         "reviewed_at": "2026-10-11",
         "source_ids": [
           "mit-ai-decision-making-bs-hass-american-studies",
-          "mit-ai-hass-review-field-titles-american-studies"
+          "mit-ai-hass-review-literature-aliases-spring2026"
         ],
-        "locator": "American Studies subject requirements / literal CMS.427J [21L.500, 21T.247] title",
-        "rationale": "Limited official-title-only review: the title does not establish the balance of practical performance, scientific/domain methods, social inquiry or other subject content. Neither department nor HASS field membership resolves that uncertainty.",
+        "locator": "21L.500[J]-62730",
+        "rationale": "The actual description centers cultural history, representation and critical interpretation of musical theater, with creative communication assignments. It does not describe computing-method training.",
         "candidate_categories": []
       }
     },
@@ -34912,30 +34924,32 @@
       "id": "mit-ai-hass-cmsw-pool-cms-cms-427-21l-500-21t-247",
       "code": "CMS.427/21L.500/21T.247",
       "name": "How We Got to Hamilton",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Musical-theater history and close analysis of songs, performance and representation place Hamilton in earlier traditions, including overlooked or appropriated work by artists of color; assignments combine critical and creative work.",
+      "prerequisites": "none",
+      "credits": 12,
       "credit_unit": "unknown",
-      "category": "other",
+      "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-cmsw-pool",
       "url": "https://cmsw.mit.edu/academics/subject-lists/cms/",
-      "public_site": "https://cmsw.mit.edu/academics/subject-lists/cms/",
+      "public_site": "https://lit.mit.edu/academics/subject-offerings/?semester=spring+2026&order_by=course_number&tier=&topic=",
       "syllabus": null,
       "notes": [
-        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
         "Observed departmental source term/version: not stated. The original list identity is retained.",
-        "Exact original source title/code retained, including dated special-subject topics and compound labels. No alias group, current offering or enrollment permission inferred."
+        "Exact original source title/code retained, including dated special-subject topics and compound labels. No alias group, current offering or enrollment permission inferred.",
+        "Creative and critical assignments may include theater, dance-studio or archive visits.",
+        "Observed departmental source term/version: Spring 2026. The original list identity is retained.",
+        "The exact Literature panel explicitly says Same subject as CMS.427[J],21T.247[J]. This supports both printed CMS427 source records for this dated description; no identity group or version merge is created."
       ],
       "category_review": {
-        "status": "unclassified",
+        "status": "reviewed",
         "taxonomy_version": "1",
         "reviewed_at": "2026-10-11",
         "source_ids": [
           "mit-ai-decision-making-bs-hass-cmsw-pool",
-          "mit-ai-hass-review-list-titles-cms_pool"
+          "mit-ai-hass-review-literature-aliases-spring2026"
         ],
-        "locator": "cms_pool public source / exact CMS.427/21L.500/21T.247 / How We Got to Hamilton",
-        "rationale": "Limited official-title-only review: subject balance or printed identity is insufficiently precise to select one category. Technical, methods, performance and variable-topic wording does not certify an underlying computing or other course.",
+        "locator": "21L.500[J]-62730",
+        "rationale": "The actual description centers cultural history, representation and critical interpretation of musical theater, with creative communication assignments. It does not describe computing-method training.",
         "candidate_categories": []
       }
     },
@@ -52882,7 +52896,8 @@
     "2026-10-11:Three Literature source occurrences upgraded from actualSpring2025descriptions:21L006,21L007 and the exact21L707AI-and-consciousness topic. The latter is literary/philosophical human-context inquiry, not AI-method instruction. Its own twoLiterature-subjects-or-instructor-permission prerequisite is preserved; no other707offering is assumed equivalent.",
     "2026-10-11:two explicit same-subject CMS panels support boundedHASSidentitygroups:CMS524/STS024(Spring2026) andCMS406/21A505/STS065(Fall2026), each mapping three represented source rows. Both panels have explicit same-subject clauses, not meets-with relationships. Fixed3 and275option identities are unchanged; contextual mapped identities drop908to904 while all1189source records remain.",
     "2026-10-11:Twelve further Literature source occurrences now have actualFall2024,Fall2022orSpring2023description evidence. TheFall2024cancelled501offering remains explicitlycancelled; archiveddescriptiondoesnotmean currentavailability. Spanish637formallystatesnone while638requiresintermediateSpanishorpermission; teachinglanguageisnotan inventedformalprerequisite.",
-    "2026-10-11:Five Literature source occurrences have actual archived descriptions fromFall2021,Spring2020,Fall2014andIAP2025; current offering is not inferred. The public38-term selector was inspected;21L632and715 were not found in that bounded archive, without inferring absence elsewhere."
+    "2026-10-11:Five Literature source occurrences have actual archived descriptions fromFall2021,Spring2020,Fall2014andIAP2025; current offering is not inferred. The public38-term selector was inspected;21L632and715 were not found in that bounded archive, without inferring absence elsewhere.",
+    "2026-10-11:Two CMS427 references now have actual Spring2026 Literature21L500 description evidence under an explicit same-subject clause. The alias clause is digest-guarded; meets-with wording cannot activate this evidence. Source records remain separate; no new identity group is inferred."
   ],
   "curriculum_audit": {
     "scope": "degree",
