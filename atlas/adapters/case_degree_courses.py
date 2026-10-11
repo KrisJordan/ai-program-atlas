@@ -40,13 +40,15 @@ MARKERS = {
 
 
 def classify_observed(courses):
-    """Correct exact Case identities; unknown identities retain the caller's category."""
+    """Correct exact Case identities; other major identities require description review."""
     for row in courses:
         expected = IDENTITIES.get(row['code'])
         if expected:
             if clean(row['name'] or '') != expected[0]:
                 raise ValueError('Reviewed Case course title changed: ' + row['code'])
             row['category'] = expected[1]
+        else:
+            row['category'] = 'other'
     return courses
 
 

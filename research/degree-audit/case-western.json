@@ -1,11 +1,11 @@
 {
   "audit_date": "2026-10-11",
-  "reviewer": "pilots_cmu_penn",
+  "reviewer": "pilots_cmu_penn; survey_liberal major-course continuation",
   "programs": [
     {
       "program_id": "case-western-reserve-university-artificial-intelligence-ba-degree",
       "institution_id": "case-western-reserve-university",
-      "status": "in_progress",
+      "status": "blocked",
       "sources": [
         {
           "url": "https://bulletin.case.edu/engineering/computer-data-sciences/artificial-intelligence-ba/",
@@ -20,15 +20,92 @@
           "locator": "Exact reviewed core course blocks",
           "checked_at": "2026-10-11",
           "access_status": "accessible; approved robots-aware Fetcher"
+        },
+        {
+          "url": "https://bulletin.case.edu/course-descriptions/dsci/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact reviewed major course blocks: DSCI 353",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; approved robots-aware Fetcher; actual descriptions reviewed"
+        },
+        {
+          "url": "https://bulletin.case.edu/course-descriptions/econ/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact reviewed major course blocks: ECON 334, ECON 380, ECON 381",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; approved robots-aware Fetcher; actual descriptions reviewed"
+        },
+        {
+          "url": "https://bulletin.case.edu/course-descriptions/ecse/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact reviewed major course blocks: ECSE 373",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; approved robots-aware Fetcher; actual descriptions reviewed"
+        },
+        {
+          "url": "https://bulletin.case.edu/course-descriptions/humn/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact reviewed major course blocks: HUMN 250",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; approved robots-aware Fetcher; actual descriptions reviewed"
+        },
+        {
+          "url": "https://bulletin.case.edu/course-descriptions/math/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact reviewed major course blocks: MATH 121, MATH 122, MATH 124, MATH 307, MATH 327, MATH 380, MATH 431, MATH 444",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; approved robots-aware Fetcher; actual descriptions reviewed"
+        },
+        {
+          "url": "https://bulletin.case.edu/course-descriptions/mbap/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact reviewed major course blocks: MBAP 429H",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; approved robots-aware Fetcher; actual descriptions reviewed"
+        },
+        {
+          "url": "https://bulletin.case.edu/course-descriptions/phil/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact reviewed major course blocks: PHIL 393",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; approved robots-aware Fetcher; actual descriptions reviewed"
+        },
+        {
+          "url": "https://bulletin.case.edu/course-descriptions/pqhs/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact reviewed major course blocks: PQHS 416",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; approved robots-aware Fetcher; actual descriptions reviewed"
+        },
+        {
+          "url": "https://bulletin.case.edu/course-descriptions/scmg/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact reviewed major course blocks: SCMG 462, SCMG 463",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; approved robots-aware Fetcher; actual descriptions reviewed"
+        },
+        {
+          "url": "https://bulletin.case.edu/course-descriptions/stat/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact reviewed major course blocks: STAT 301, STAT 327",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; approved robots-aware Fetcher; actual descriptions reviewed"
+        },
+        {
+          "url": "https://bulletin.case.edu/course-descriptions/sybb/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact reviewed major course blocks: SYBB 464",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; approved robots-aware Fetcher; actual descriptions reviewed"
         }
       ],
       "checks": {
         "degree_identity": "Exact Artificial Intelligence, BA heading; 2026-2027 Bulletin; distinct award record.",
         "required_and_choices": "Independently read fixed core: MATH 121, MATH 307, CSDS 233, CSDS 302, CSDS 310, CSDS 330, CSDS 340, CSDS 395A. Introductory programming is CSDS 134 OR the complete CSDS 132+237 bundle, never three fixed requirements. Calculus II and probability are also alternatives; BS calculus III is an alternative.",
-        "elective_pools": "Existing finite program tables re-read. BA three technical selections plus a 3\u20134-credit application course or two 1.5-credit courses. BS six breadth selections and four technical electives, at most two Group 2, no double counting; open CSDS eligibility and approval rules remain. Full pool descriptions not reviewed in this hotfix.",
-        "prerequisites": "Reviewed exact core CSDS prerequisites. CSDS 310 requires C or higher in discrete mathematics and data structures; CSDS 237 requires CSDS 132. CSDS 395A requires declared AI major and senior standing. No prerequisite is promoted to an additional fixed degree course. Wider option-pool prerequisites remain unreviewed.",
-        "credits_and_units": "Degree tables label Credit Hours; description blocks say Units. Existing verified units retained; newly observed standalone programming values preserve unknown unit. Java 3 plus Python bridge 1 remains a 4-unit bundle, versus the 3-unit Python route.",
-        "classification": "Nine exact CSDS descriptions reviewed, plus BS ENGR 399. MATH 121 and 307 have explicit limited precise-title review. Required foundations=2, mathematics=3, AI=3. Introductory programming contributes three option records, not three required courses. All other course categories remain legacy/unreviewed.",
+        "elective_pools": "All named major-pool descriptions independently read (78 distinct identities across BA/BS). BA application alternatives retain the one 3–4-unit or two 1.5-unit route; current SCMG 462/463 descriptions impose graduate-program enrollment, unresolved against undergraduate listing. BS any-CSDS and prior-approval open options remain explicitly open. General-education subject review is still in progress.",
+        "prerequisites": "All named major descriptions reviewed, including credit exclusions, placements, invitation-only physics and permission-based advanced courses. CSDS 102 must precede any 300-level CSDS enrollment; CSDS 499 has an explicit permission alternative to graduate standing. SCMG 462/463 require enrollment in a named master’s program with no stated undergraduate exception. Prerequisites are not promoted to fixed degree obligations.",
+        "credits_and_units": "Individual amounts observed for all named major course blocks, including 1.5-unit application courses. Description headers say Units; previously corroborated credit-hour units retained, otherwise unknown. No inferred semester-hour conversion.",
+        "classification": "All 59 named major identities now have actual-description category reviews and original summaries. Mixed courses remain other with explicit candidate categories. General-education-only classifications remain legacy/unreviewed; independent overall profile is not yet established.",
         "family_composition": "No family inheritance; BA and BS have independent catalog curricula and stable IDs.",
         "degree_wide_requirements": "Earlier complete inventory audit covers bachelor rules and UGER; that audit is not an independent correctness audit. Full general-education identity/description/category review remains unfinished."
       },
@@ -55,13 +132,22 @@
           "evidence_urls": [
             "https://bulletin.case.edu/course-descriptions/csds/"
           ]
+        },
+        {
+          "issue": "BA application listing conflicts with graduate-only SCMG 462/463 enrollment restrictions.",
+          "correction": "BA requirement inventory downgraded to partial; source-specific enrollment restrictions retained and no exception invented.",
+          "status": "unresolved",
+          "evidence_urls": [
+            "https://bulletin.case.edu/course-descriptions/scmg/",
+            "https://bulletin.case.edu/engineering/computer-data-sciences/artificial-intelligence-ba/"
+          ]
         }
       ],
-      "correction_status": "Verified fixed-core taxonomy correction; full-degree audit in progress",
+      "correction_status": "Named major metadata and taxonomy expanded; full general-education audit remains in progress",
       "second_pass_status": "pending",
       "remaining_work": [
         {
-          "issue": "Independent subject and prerequisite review of the remaining major/elective/UGER course records is not complete. Existing aggregate counts must not be mistaken for reviewed classifications.",
+          "issue": "All named major descriptions reviewed; remaining accessible general-education-only identities/descriptions/categories and full policy second pass are unfinished.",
           "url": "https://bulletin.case.edu/engineering/computer-data-sciences/artificial-intelligence-ba/"
         },
         {
@@ -69,7 +155,12 @@
           "url": "https://bulletin.case.edu/undergraduate-academics/unified-general-education-requirements/"
         }
       ],
-      "blockers": []
+      "blockers": [
+        {
+          "issue": "Undergraduate eligibility of listed SCMG 462 and SCMG 463 remains contradicted by explicit master’s-program enrollment requirements.",
+          "url": "https://bulletin.case.edu/course-descriptions/scmg/"
+        }
+      ]
     },
     {
       "program_id": "case-western-reserve-university-artificial-intelligence-bs-degree",
@@ -96,15 +187,78 @@
           "locator": "Exact reviewed core course blocks",
           "checked_at": "2026-10-11",
           "access_status": "accessible; approved robots-aware Fetcher"
+        },
+        {
+          "url": "https://bulletin.case.edu/course-descriptions/dsci/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact reviewed major course blocks: DSCI 353",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; approved robots-aware Fetcher; actual descriptions reviewed"
+        },
+        {
+          "url": "https://bulletin.case.edu/course-descriptions/ecse/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact reviewed major course blocks: ECSE 373",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; approved robots-aware Fetcher; actual descriptions reviewed"
+        },
+        {
+          "url": "https://bulletin.case.edu/course-descriptions/humn/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact reviewed major course blocks: HUMN 250",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; approved robots-aware Fetcher; actual descriptions reviewed"
+        },
+        {
+          "url": "https://bulletin.case.edu/course-descriptions/math/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact reviewed major course blocks: MATH 121, MATH 122, MATH 124, MATH 223, MATH 227, MATH 307, MATH 327, MATH 330, MATH 380, MATH 382, MATH 406, MATH 408, MATH 431, MATH 433, MATH 444",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; approved robots-aware Fetcher; actual descriptions reviewed"
+        },
+        {
+          "url": "https://bulletin.case.edu/course-descriptions/phil/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact reviewed major course blocks: PHIL 306, PHIL 393",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; approved robots-aware Fetcher; actual descriptions reviewed"
+        },
+        {
+          "url": "https://bulletin.case.edu/course-descriptions/phys/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact reviewed major course blocks: PHYS 115, PHYS 116, PHYS 121, PHYS 122, PHYS 123, PHYS 124",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; approved robots-aware Fetcher; actual descriptions reviewed"
+        },
+        {
+          "url": "https://bulletin.case.edu/course-descriptions/pqhs/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact reviewed major course blocks: PQHS 416",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; approved robots-aware Fetcher; actual descriptions reviewed"
+        },
+        {
+          "url": "https://bulletin.case.edu/course-descriptions/stat/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact reviewed major course blocks: STAT 301, STAT 302, STAT 327",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; approved robots-aware Fetcher; actual descriptions reviewed"
+        },
+        {
+          "url": "https://bulletin.case.edu/course-descriptions/sybb/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact reviewed major course blocks: SYBB 464",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; approved robots-aware Fetcher; actual descriptions reviewed"
         }
       ],
       "checks": {
         "degree_identity": "Exact Artificial Intelligence, BS heading; 2026-2027 Bulletin; distinct award record.",
         "required_and_choices": "Independently read fixed core: MATH 121, MATH 307, CSDS 233, CSDS 302, CSDS 310, CSDS 330, CSDS 340, CSDS 395A, ENGR 399. Introductory programming is CSDS 134 OR the complete CSDS 132+237 bundle, never three fixed requirements. Calculus II and probability are also alternatives; BS calculus III is an alternative.",
-        "elective_pools": "Existing finite program tables re-read. BA three technical selections plus a 3\u20134-credit application course or two 1.5-credit courses. BS six breadth selections and four technical electives, at most two Group 2, no double counting; open CSDS eligibility and approval rules remain. Full pool descriptions not reviewed in this hotfix.",
-        "prerequisites": "Reviewed exact core CSDS prerequisites. CSDS 310 requires C or higher in discrete mathematics and data structures; CSDS 237 requires CSDS 132. CSDS 395A requires declared AI major and senior standing. No prerequisite is promoted to an additional fixed degree course. Wider option-pool prerequisites remain unreviewed.",
-        "credits_and_units": "Degree tables label Credit Hours; description blocks say Units. Existing verified units retained; newly observed standalone programming values preserve unknown unit. Java 3 plus Python bridge 1 remains a 4-unit bundle, versus the 3-unit Python route.",
-        "classification": "Nine exact CSDS descriptions reviewed, plus BS ENGR 399. MATH 121 and 307 have explicit limited precise-title review. Required foundations=2, mathematics=3, AI=3, human_context=1. Introductory programming contributes three option records, not three required courses. All other course categories remain legacy/unreviewed.",
+        "elective_pools": "All named major-pool descriptions independently read (78 distinct identities across BA/BS). BA application alternatives retain the one 3–4-unit or two 1.5-unit route; current SCMG 462/463 descriptions impose graduate-program enrollment, unresolved against undergraduate listing. BS any-CSDS and prior-approval open options remain explicitly open. General-education subject review is still in progress.",
+        "prerequisites": "All named major descriptions reviewed, including credit exclusions, placements, invitation-only physics and permission-based advanced courses. CSDS 102 must precede any 300-level CSDS enrollment; CSDS 499 has an explicit permission alternative to graduate standing. SCMG 462/463 require enrollment in a named master’s program with no stated undergraduate exception. Prerequisites are not promoted to fixed degree obligations.",
+        "credits_and_units": "Individual amounts observed for all named major course blocks, including 1.5-unit application courses. Description headers say Units; previously corroborated credit-hour units retained, otherwise unknown. No inferred semester-hour conversion.",
+        "classification": "All 72 named major identities now have actual-description category reviews and original summaries. Mixed courses remain other with explicit candidate categories. General-education-only classifications remain legacy/unreviewed; independent overall profile is not yet established.",
         "family_composition": "No family inheritance; BA and BS have independent catalog curricula and stable IDs.",
         "degree_wide_requirements": "Earlier complete inventory audit covers bachelor rules and UGER; that audit is not an independent correctness audit. Full general-education identity/description/category review remains unfinished."
       },
@@ -135,11 +289,11 @@
           ]
         }
       ],
-      "correction_status": "Verified fixed-core taxonomy correction; full-degree audit in progress",
+      "correction_status": "Named major metadata and taxonomy expanded; full general-education audit remains in progress",
       "second_pass_status": "pending",
       "remaining_work": [
         {
-          "issue": "Independent subject and prerequisite review of the remaining major/elective/UGER course records is not complete. Existing aggregate counts must not be mistaken for reviewed classifications.",
+          "issue": "All named major descriptions reviewed; remaining accessible general-education-only identities/descriptions/categories and full policy second pass are unfinished.",
           "url": "https://bulletin.case.edu/engineering/computer-data-sciences/artificial-intelligence-bs/"
         },
         {
