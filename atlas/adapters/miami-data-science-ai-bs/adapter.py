@@ -49,3 +49,6 @@ register_enrollment_scope(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
 
 from atlas.adapters.miami_pol_context_reviews import register as register_pol_context
 register_pol_context(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
+
+from atlas.adapters.miami_rel_context_reviews import register as register_rel_context
+register_rel_context(PROGRAM_ID,SOURCES,SOURCE_PARSERS)

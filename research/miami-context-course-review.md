@@ -81,3 +81,9 @@ SPA301/307 have an explicit mutual credit exclusion and different student prepar
 Validation correction: the initial language/policy run passed 29 tests and exposed two stale assertions tying heritage-course metadata to the old source ID. Current subject descriptions correctly replace that field while the four exact identities and heritage-policy note remain. The follow-up test checks those identities, credits, contextual ancestry and registered source provenance. Isolated four-degree ingestion/repeat (4/0), integrity/foreign keys, 3,323 reviewed exports and static build passed.
 
 Follow-up: all 31 focused language/policy tests now pass, including preserved exact heritage-course identities after metadata source enrichment.
+
+## Religion and reviewed History adjustment — 2026-10-11
+
+The 113-block Religion contribution is integrated across four degrees (452 observations). It distinguishes 97 historical/cultural/ethical subjects, two cognitive/psychological applications, two mixed subjects and twelve unspecified external-credit records. Fourteen ranges retain null scalar credits. Its evidence also prompted a narrow HIS412 correction: the actual classroom/community-work/reflection modules support mixed human-context and applied service content. All four HIS412 records now use that reviewed mixed rationale; source identity, eligibility and role remain unchanged.
+
+Current total: 3,775 reviewed observations; 988 codes/3,952 observations remain, including 929 exact current blocks and 59 identity follow-ups. Validation: 36 focused Religion/History/shared-content tests and isolated four-degree ingestion/repeat (4/0), integrity/foreign keys, review exports and static build passed.
