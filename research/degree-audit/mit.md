@@ -51,3 +51,17 @@ The same page distinguishes cross-listing from merely meeting together and state
 Twelve GIR entries now have separately inspected actual departmental descriptions: five calculus alternatives, four biology variants and three chemistry options. Five calculus subjects are mathematics; seven biology/chemistry subjects are domain sciences. Unknown individual titles stay null when the page identifies only a code. Formal None in chemistry remains distinct from intended high-school preparation. Calculus credit has completion/retake and split-term rules; math first-year students may not enroll in graduate subjects. Biology descriptions explicitly label Fall2025/Spring2026 instructor contexts, so these are not current offering claims. The7.015 cap conflicts within one page (70 versus60); capacity/lottery still applies.
 
 Seven physics records and18.01L remain without verified actual descriptions. Canonical catalog department pages returned empty public content; the ordinary physics.mit.edu robots request returned403, so no departmental content was fetched. Source terms and registration approval are not inferred. Public course links point to the exact inspected departmental pages; no private Canvas/Stellar material was accessed.
+
+
+## Separate unversioned reference-title review — 2026-10-11
+
+The actual current Course6-4 chart and linked CI-M tables were reread for all63 separately retained reference records.39 have an unequivocal subject title supporting a limited classification;24 remain unclassified because their titles do not establish a primary subject. These are explicitly title-only reviews, not copied descriptions, prerequisites or eligibility from the cohort-qualified departmental page. In particular Networks, Introduction to Inference, Strobe Project Laboratory and broad robotics/creative-computing titles remain unknown. The CI-M list's6.8301 is not silently replaced with the versioned6.8300.
+
+The observer reapplies a title judgment only to the exact saved record identity and exact printed title. Changed titles revert to other; no review metadata is emitted. Full degree/source-role and HASS work remains in progress.
+
+
+## Independent versioned requirement-role correction — 2026-10-11
+
+The actual required-subject section says three mathematics subjects and prints6.1200 alone, followed by two explicitly labeled One of rows. The previous generic option wrapper incorrectly made that first subject optional. The parser now guards this exact source structure and makes only the bare row fixed. The corrected fixed set is6.1200 Mathematics for Computer Science,6.1010 Fundamentals of Programming, and6.1210 Introduction to Algorithms: one mathematics and two foundations identities. This supersedes the earlier two-fixed count.
+
+Five Center subject choices are now a counted choice node, retaining each printed bundle; designation overlays remain notes because they reuse completed subjects. Independent source sets were reconstructed from the actual required-section choices and the six expressly eligible elective lists, excluding designation-only lists. The adjacent JSON records those exact versioned identity sets and counts. Full chart/GIR/HASS role certification remains separate.

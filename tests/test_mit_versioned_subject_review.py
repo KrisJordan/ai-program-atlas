@@ -27,7 +27,7 @@ def test_versioned_subjects_distinguish_computation_physical_engineering_and_soc
     assert by['6.1060']['category_review']['status']=='mixed'
     assert by['21M.589']['name']is None and by['21M.589']['category_review']['status']=='unclassified'
     assert by['6.1800']['credits']==12  # explicit catalog unit convention, not semester-hour conversion
-    assert all('category_review'not in c for c in p['courses']if c['id']=='mit-ai-6-1800')
+    assert all('Limited official-title review only.'in c['category_review']['rationale']for c in p['courses']if c['id']=='mit-ai-6-1800')
 
 
 def test_network_math_and_robotics_mixture_use_descriptions():

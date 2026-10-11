@@ -31,8 +31,12 @@ def test_bundles_remain_all_components_in_required_and_overlay_choices():
     assert rules['mit-ai-v2025-overlay-ai-d-serc-1']['course_ids'] == ['mit-ai-v2025-6-c01', 'mit-ai-v2025-6-c011']
     assert rules['mit-ai-v2025-overlay-ai-d-serc']['kind'] == 'note'
     assert 'not additional required slots' in rules['mit-ai-v2025-overlay-ai-d-serc']['summary']
-    assert rules['mit-ai-v2025-centers']['kind'] == 'note'
+    assert rules['mit-ai-v2025-centers']['kind'] == 'choose_courses'
+    assert rules['mit-ai-v2025-centers']['count'] == 5
     assert 'Select 5 printed option(s)' in rules['mit-ai-v2025-centers']['summary']
+    assert rules['mit-ai-v2025-math-1']['kind']=='all'
+    assert rules['mit-ai-v2025-math-2']['kind']=='alternative'
+    assert rules['mit-ai-v2025-math-3']['kind']=='alternative'
 
 
 def test_observations_have_distinct_ids_and_published_units_without_review():

@@ -1,6 +1,9 @@
 """MIT Course 6-4 chart: local choices and explicitly incomplete degree-wide scope."""
 from atlas.adapters.national_curriculum_common import content, clean, require_phrases, rule
 from atlas.adapters.degree_table_observations import Tables
+from importlib import import_module
+
+reference_subjects = import_module('atlas.adapters.mit-ai-decision-making-bs.reference_subjects')
 
 PROGRAM_ID = 'mit-ai-decision-making-bs'
 SOURCES = ['https://catalog.mit.edu/degree-charts/artifical-intelligence-decision-making-course-6-4/', 'https://catalog.mit.edu/degree-charts/', 'https://catalog.mit.edu/degree-charts/eecs-subject-groupings/']
@@ -94,7 +97,7 @@ def parse(html):
         ('unit-accounting', 'Major, GIR overlap and degree accounting', 'The chart reports 168–177 major units, 36 major units also satisfying GIRs, and 180–189 units beyond the GIRs. Units for any of the 17 GIR subjects cannot also count toward units required beyond the GIRs. Ranges are preserved, not replaced with a fabricated single total.')]
     for suffix, title, summary in policies:
         t.rules.append(rule('mit-ai-policy-' + suffix, title, SOURCE_ID, kind='note', summary=summary))
-    return dict(id=PROGRAM_ID, title='Artificial Intelligence and Decision Making', award_level='BS', program_kind='degree', courses=list(t.courses.values()), requirements=t.rules)
+    return dict(id=PROGRAM_ID, title='Artificial Intelligence and Decision Making', award_level='BS', program_kind='degree', courses=reference_subjects.observe(list(t.courses.values())), requirements=t.rules)
 
 
 def parse_cim_reference(html):
@@ -116,12 +119,10 @@ def parse_cim_reference(html):
     if not ids:
         raise ValueError('Linked CI-M list empty')
     note = rule('mit-ai-cim-reference', 'Linked general CI-M reference list', sid, ids, kind='note', summary='The degree chart links this general EECS CI-M list, but the page does not identify a CIM2 subset. These course observations are a reference pool, not a verified set of second-CI-M choices for Course 6-4.')
-    return dict(id=PROGRAM_ID, courses=list(t.courses.values()), requirements=[note])
+    return dict(id=PROGRAM_ID, courses=reference_subjects.observe(list(t.courses.values())), requirements=[note])
 
 
 SOURCE_PARSERS = {SOURCES[2]: parse_cim_reference}
-
-from importlib import import_module
 
 policies = import_module('atlas.adapters.mit-ai-decision-making-bs.policies')
 versioned = import_module('atlas.adapters.mit-ai-decision-making-bs.versioned')

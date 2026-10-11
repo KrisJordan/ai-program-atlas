@@ -121,7 +121,8 @@ def parse(html):
         summary = ('At least ' + str(count) + ' completed option(s) must have this designation; this is an overlay, not additional required slots.' if overlay else
                    'Select ' + str(count) + ' printed option(s). Complete every component of any bundled option; joint listings are retained as published alternatives.')
         rules.append(rule(gid, title, SID, parent=parent,
-                          kind='note' if overlay or count != 1 else 'alternative', summary=summary))
+                          kind='note' if overlay else 'choose_courses' if count != 1 else 'alternative',
+                          count=count if not overlay and count != 1 else None, summary=summary))
         for index, ids in enumerate(opts, 1):
             codes = [courses[c]['code'] for c in ids]
             rules.append(rule(gid + '-' + str(index), ' + '.join(codes), SID, ids,
@@ -141,7 +142,15 @@ def parse(html):
         ids = [observe(a) for a in line.find_all('a', class_='annotated-link')]
         if not ids:
             raise ValueError('Versioned math slot empty')
-        add_options('math-' + str(index), ['Discrete mathematics', 'Linear algebra', 'Probability or inference'][index-1], [[c] for c in ids], ROOT_ID)
+        gid = add_options('math-' + str(index), ['Discrete mathematics', 'Linear algebra', 'Probability or inference'][index-1], [[c] for c in ids], ROOT_ID)
+        if index == 1:
+            # Unlike the following two rows, this is one bare required subject,
+            # not a "One of" list. Never promote arbitrary singleton pools.
+            if len(ids) != 1 or clean(line.get_text()).startswith('One of'):
+                raise ValueError('Fixed discrete mathematics row changed')
+            group = next(r for r in rules if r['id'] == gid)
+            group['kind'] = 'all'
+            group['summary'] = 'Complete the bare discrete-mathematics subject printed before the two explicit One of rows.'
     foundation = options(sections[2].find('div'))
     if len(foundation) != 2 or any(len(o) != 1 for o in foundation):
         raise ValueError('Versioned foundation slot structure changed')
