@@ -17,3 +17,34 @@ Complete GER pools and constraints; verify school/university GPA, grades, reside
 ## Adapter
 
 Reads actual course rows, credits, suggested terms and generic requirement slots from the catalog plan. Rejects changed/missing identities, missing totals, unexpected rows and duplicate named courses. Does not emit reviewer audit or complete status.
+
+## 2026-10-11 degree-wide review
+
+The live robots-permitted 2026–2027 catalog GER pages now feed rerunnable
+`atlas.adapters.njit_degree_policies` parsers registered with this adapter.
+The four full named option pools contain 64 GER-200, 248 GER-300+, 36 natural
+science and 2 HSS-seminar rows. Wildcard HIST/HUM/STS subject-level rules stay
+textual eligibility rules; blank credits stay unknown. Existing named degree
+courses retain their primary-plan source and credit values when also eligible
+in a pool. In particular, PHIL 310 is one course, not two requirements satisfied.
+
+The GER root supplies minima/progression (3 computing, 18 cultural, 6 quantitative
+with probability/statistics, 7 science with laboratory experience, 3 social
+science, freshman seminar). These contextual nodes and option-pool allocations
+must not be added to the plan’s 120 credits. The academic-policies page supplies
+the two 2.0 graduation GPA tests, 33-credit transfer-student upper-division NJIT
+residency, C/equivalence/official-transcript transfer conditions, prior outside
+study approval, summer limitations and NJIT HSS-capstone residence, four-attempt
+limit, expiration review, and no degree credit for U grades. Material source
+wording is guarded so a changed numeric rule fails instead of silently retaining
+a stale interpretation.
+
+The published R216 206 laboratory row says **3 credits**; retained without
+correction. Exact eligible lecture/lab combinations and PHIL-310/GER overlap,
+free-elective substitutions and any further MTSM degree-specific conditions
+remain unresolved; **partial** is deliberate. School overview was inspected and
+describes separate Business, FinTech and Business-with-AI degrees, with no
+standalone graduation-policy section. Its accessible direct management course
+entries can support a later metadata review despite robots-disallowed search
+popups; this update does not claim those descriptions/prerequisites were mapped.
+No raw HTML is committed and no blocked endpoint was bypassed.
