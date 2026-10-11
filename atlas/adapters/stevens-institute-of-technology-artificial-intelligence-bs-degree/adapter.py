@@ -203,3 +203,6 @@ register_option_metadata(SOURCES, SOURCE_PARSERS)
 
 from atlas.adapters.stevens_transition_policy import register as register_transition_policy
 register_transition_policy(SOURCES, SOURCE_PARSERS)
+
+from atlas.adapters.stevens_option_eligibility_reviews import register as register_option_eligibility
+register_option_eligibility(SOURCES, SOURCE_PARSERS)
