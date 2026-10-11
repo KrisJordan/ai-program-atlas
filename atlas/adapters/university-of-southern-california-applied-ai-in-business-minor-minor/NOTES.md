@@ -14,3 +14,11 @@ Sources:
 - https://students.marshall.usc.edu/current-students/applying-marshall-current-usc-students/marshall-minors
 - https://students.marshall.usc.edu/sites/default/files/2026-07/Marshall%20Minors%20List.pdf
 - https://catalogue.usc.edu/preview_program.php?catoid=22&poid=32945&returnto=9453 (compliant 120-second-paced retry returned HTTP 202; not parsed)
+
+## Independent advising supplement — 2026-10-11
+
+Read https://students.marshall.usc.edu/current-students/academic-advising/faqs and https://students.marshall.usc.edu/current-students/academic-advising/academic-programs/marshall-minors. Four new policy nodes cover common Marshall minor letter grading (D− or better for an individual requirement), withdrawals counting within the three pre-admission courses, and residency/study-abroad restrictions. Non-Marshall majors must complete minor work in residence; the resource page explicitly includes USC-affiliated abroad programs in that restriction. Marshall majors must obtain advising about limited abroad credit. No automatic abroad substitution is inferred.
+
+These common rules do not establish the minor's overall GPA, total units or any stricter program-specific rule. The FAQ's Accounting-minor substitution example was not generalized to Applied AI. The known HTTP 202 catalog route was not retried. Inventory and detailed overlap/eligibility exceptions remain unresolved; all public advising routes read successfully.
+
+Both additional parsers guard the applicable minor conditions and emit independent observations without review/audit state. Synthetic fixtures test changed passing grade and student scope, and permitted cached live pages pass.

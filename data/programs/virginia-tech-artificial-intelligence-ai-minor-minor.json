@@ -55,6 +55,16 @@
       "catalog_year": null,
       "locator": "Non-Restricted Engineering Minors: Artificial Intelligence; application procedure",
       "confidence": "high"
+    },
+    {
+      "id": "vt-ai-registrar-checksheets",
+      "url": "https://www.registrar.vt.edu/graduation-multi-brief/checksheets.html",
+      "title": "Registrar — Checksheets",
+      "fetched_at": "2026-10-11T00:19:50+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Legacy checksheets versus current catalog authority and DARS catalog year",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -120,6 +130,20 @@
       "source_text": null,
       "summary": "AI is listed as a non-restricted engineering minor. Students submit the College of Engineering minor application during an application window; the page identifies availability from the August 2026 review.",
       "course_ids": []
+    },
+    {
+      "id": "vt-ai-catalog-authority",
+      "parent_id": null,
+      "title": "Applicable curriculum source and catalog year",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "vt-ai-registrar-checksheets",
+      "source_text": null,
+      "summary": "The registrar directs catalog years 2024–25 onward to the University Catalog, while these legacy checksheets cover 2021–23 requirements. Confirm the applicable catalog year in DARS with an advisor. Historical checksheets do not verify this new minor’s current courses.",
+      "course_ids": []
     }
   ],
   "notes": [
@@ -130,14 +154,16 @@
   ],
   "curriculum_audit": {
     "scope": "minor",
-    "reviewed_at": "2026-10-10",
+    "reviewed_at": "2026-10-11",
     "source_ids": [
       "vt-ai-department",
-      "vt-engineering-minors"
+      "vt-engineering-minors",
+      "vt-ai-registrar-checksheets"
     ],
     "sections": [
       "Program purpose and undergraduate eligibility",
-      "Declaration/application policy"
+      "Declaration/application policy",
+      "Legacy checksheets versus current catalog authority and DARS catalog year"
     ],
     "unresolved_requirements": [
       "Catalog course and study-track inventory, credits, alternatives and completion constraints remain unreviewed because catalog access was unavailable.",

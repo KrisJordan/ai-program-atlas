@@ -49,11 +49,31 @@
     {
       "id": "university-of-south-florida-artificial-intelligence-bs-degree-brochure",
       "url": "https://www.usf.edu/ai-cybersecurity-computing/documents/brochures/bellini-ug-bsai.pdf",
-      "title": "Bellini Bachelor of Science Programs \u2014 Artificial Intelligence",
+      "title": "Bellini Bachelor of Science Programs — Artificial Intelligence",
       "fetched_at": "2026-10-10",
       "source_date": "2026-09",
       "catalog_year": null,
       "locator": "Page 2: BSAI Four Year Plan; updated September 2026; enrolled-student account",
+      "confidence": "high"
+    },
+    {
+      "id": "usf-ai-degreeworks",
+      "url": "https://www.usf.edu/registrar/register/degreeworks.aspx",
+      "title": "Registrar — Degree Works",
+      "fetched_at": "2026-10-11T00:17:03+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Credit Hour Breakdown: university total, upper-level, summer and residency overview",
+      "confidence": "high"
+    },
+    {
+      "id": "usf-ai-registrar-faq",
+      "url": "https://www.usf.edu/registrar/faq/index.aspx",
+      "title": "Registrar — Frequently Asked Questions",
+      "fetched_at": "2026-10-11T00:19:52+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Summer enrollment waiver and grade forgiveness",
       "confidence": "high"
     }
   ],
@@ -582,6 +602,90 @@
       "source_text": null,
       "summary": "Sequence is recommended for full-time students. Students not calculus-ready can start with precalculus with advising. Summer research, abroad and internship experiences are recommendations, not mandatory courses.",
       "course_ids": []
+    },
+    {
+      "id": "usf-ai-university-total",
+      "parent_id": null,
+      "title": "University minimum degree credits",
+      "kind": "note",
+      "count": null,
+      "credits": 120,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "usf-ai-degreeworks",
+      "source_text": null,
+      "summary": "Registrar overview gives 120 credit hours for this university requirement; program-specific requirements may be stricter. The normalized unit and detailed applicability remain unverified.",
+      "course_ids": []
+    },
+    {
+      "id": "usf-ai-university-upper",
+      "parent_id": null,
+      "title": "University minimum upper-level credits",
+      "kind": "note",
+      "count": null,
+      "credits": 42,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "usf-ai-degreeworks",
+      "source_text": null,
+      "summary": "Registrar overview gives 42 credit hours for this university requirement; program-specific requirements may be stricter. The normalized unit and detailed applicability remain unverified.",
+      "course_ids": []
+    },
+    {
+      "id": "usf-ai-university-summer",
+      "parent_id": null,
+      "title": "Published summer-enrollment minimum",
+      "kind": "note",
+      "count": null,
+      "credits": 9,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "usf-ai-degreeworks",
+      "source_text": null,
+      "summary": "Registrar overview gives 9 credit hours for this university requirement; program-specific requirements may be stricter. The normalized unit and detailed applicability remain unverified. The registrar FAQ permits documented waiver requests; entry-cohort exceptions remain unresolved.",
+      "course_ids": []
+    },
+    {
+      "id": "usf-ai-university-residence",
+      "parent_id": null,
+      "title": "University final-credit residency",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "usf-ai-degreeworks",
+      "source_text": null,
+      "summary": "Complete 30 of the final 60 credit hours at USF according to the registrar overview. Additional major/college residency requirements remain unverified.",
+      "course_ids": []
+    },
+    {
+      "id": "usf-ai-summer-waiver",
+      "parent_id": null,
+      "title": "Conditional summer-enrollment waiver",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "usf-ai-registrar-faq",
+      "source_text": null,
+      "summary": "A waiver may be requested for documented seasonal summer employment in each summer missed, unavailable program courses certified by an advisor, or exceptional hardship outside the student’s control. Submit supporting evidence during the graduation-application semester; allow three weeks for a decision. A request is not automatic approval.",
+      "course_ids": []
+    },
+    {
+      "id": "usf-ai-grade-forgiveness",
+      "parent_id": null,
+      "title": "Grade-forgiveness limits",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "usf-ai-registrar-faq",
+      "source_text": null,
+      "summary": "Both attempts must be at USF; the repeat grade must be at least D. At most three forgiveness uses are allowed, with one repeat per course. Academic-dishonesty FF grades are excluded, and forgiveness cannot change courses counted toward an already awarded bachelor’s degree. This does not establish AI-major passing grades.",
+      "course_ids": []
     }
   ],
   "notes": [
@@ -591,17 +695,21 @@
   ],
   "curriculum_audit": {
     "scope": "degree",
-    "reviewed_at": "2026-10-10",
+    "reviewed_at": "2026-10-11",
     "source_ids": [
-      "university-of-south-florida-artificial-intelligence-bs-degree-brochure"
+      "university-of-south-florida-artificial-intelligence-bs-degree-brochure",
+      "usf-ai-degreeworks",
+      "usf-ai-registrar-faq"
     ],
     "sections": [
       "September 2026 brochure named courses and explicit alternatives",
-      "Brochure elective/general education placeholders and optional experience labels"
+      "Brochure elective/general education placeholders and optional experience labels",
+      "Credit Hour Breakdown: university total, upper-level, summer and residency overview",
+      "Summer enrollment waiver and grade forgiveness"
     ],
     "unresolved_requirements": [
       "Definitive catalog retried with compliant 120-second pacing but returned HTTP 202; full curriculum remains unavailable through the fetcher.",
-      "Major elective pool, credit requirements, GE/college/university policies and course prerequisites unreviewed."
+      "Major elective pool, program credit requirements, general education, college policies, program grade/prerequisite rules and detailed applicability/exceptions to university minimums remain unreviewed. Registrar overview minimums and summer-waiver/grade-forgiveness guidance are mapped."
     ],
     "metadata_gaps": [
       "Individual credits, descriptions and prerequisites not printed in brochure."

@@ -20,3 +20,32 @@ def parse(html):
       groups.append(policy(r,marker,'cornell-'+gid,title,summary,SOURCE_ID))
     return dict(id=PROGRAM_ID,title='Artificial Intelligence',award_level='minor',program_kind='minor',requirements=groups,
                 notes=['Detailed linked catalog returned a JavaScript robot challenge. No bypass attempted. Only accessible department requirements observed; curriculum remains partial.'])
+
+
+INFO_URL = 'https://classes.cornell.edu/browse/roster/FA26/class/INFO/3170'
+INFO_SOURCE = 'cornell-ai-info3170-fall2026'
+SOURCES += (INFO_URL,)
+
+def parse_info3170(html):
+    """Independent Fall 2026 roster metadata, not the minor's full elective pool."""
+    from atlas.adapters.national_curriculum_common import course
+    root = content(html, 'INFO 3170')
+    heading = root.find('h3', id='head-INFO-3170')
+    if not heading:
+        raise ValueError('INFO 3170 roster heading missing')
+    name = heading.find('div', class_='title-coursedescr')
+    description = root.find('p', class_='catalog-descr')
+    credit = root.find('span', class_='credit-val')
+    require_phrases(root, ['Fall 2026', '2026-2027 Catalog', 'GradeNoAud'])
+    if not name or not description or not credit:
+        raise ValueError('Roster metadata structure changed')
+    require_phrases(description, ['shape - and are shaped by - society', 'quantitative', 'qualitative', 'responsible development, deployment, and governance'])
+    value = clean(credit.get_text())
+    if not re.fullmatch(r'\d+(?:\.\d+)?', value):
+        raise ValueError('Variable or missing course credit amount')
+    c = course('cornell-ai', 'INFO 3170', clean(name.get_text()), INFO_SOURCE, INFO_URL,
+               credits=float(value), category='human_context')
+    c['description'] = 'Fall 2026 roster: examines AI and social institutions using quantitative and qualitative research, with evidence-based assessment of responsible AI development, deployment and governance.'
+    return dict(id=PROGRAM_ID, courses=[c], notes=['INFO 3170 is separately approved as an elective by the department overview. This roster verifies its Fall 2026 metadata, not a complete minor pool. Credits are published but their normalized unit and prerequisites remain unverified; an absent prerequisite field does not mean none.'])
+
+SOURCE_PARSERS = {SOURCES[0]: parse, INFO_URL: parse_info3170}

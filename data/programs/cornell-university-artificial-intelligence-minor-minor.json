@@ -35,6 +35,16 @@
       "catalog_year": null,
       "locator": "Program requirements, course tables, eligibility and policy text",
       "confidence": "high"
+    },
+    {
+      "id": "cornell-ai-info3170-fall2026",
+      "url": "https://classes.cornell.edu/browse/roster/FA26/class/INFO/3170",
+      "title": "INFO 3170 — Fall 2026 roster",
+      "fetched_at": "2026-10-11T00:16:56+00:00",
+      "source_date": null,
+      "catalog_year": "2026–2027",
+      "locator": "Course identity, description and credit/grading entry; 2026–2027 catalog information",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -45,13 +55,28 @@
       "locator": "Overview paragraph"
     },
     {
-      "text": "Apply and assess AI in the student\u2019s chosen field.",
+      "text": "Apply and assess AI in the student’s chosen field.",
       "kind": "source_stated",
       "source_id": "cornell-university-artificial-intelligence-minor-minor-official",
       "locator": "Overview paragraph"
     }
   ],
-  "courses": [],
+  "courses": [
+    {
+      "id": "cornell-ai-info-3170",
+      "code": "INFO 3170",
+      "name": "Understanding AI and Society",
+      "description": "Fall 2026 roster: examines AI and social institutions using quantitative and qualitative research, with evidence-based assessment of responsible AI development, deployment and governance.",
+      "prerequisites": null,
+      "credits": 3.0,
+      "credit_unit": "unknown",
+      "category": "human_context",
+      "source_id": "cornell-ai-info3170-fall2026",
+      "url": "https://classes.cornell.edu/browse/roster/FA26/class/INFO/3170",
+      "public_site": null,
+      "syllabus": null
+    }
+  ],
   "requirements": [
     {
       "id": "cornell-minimum",
@@ -140,28 +165,30 @@
   ],
   "notes": [
     "Detailed linked catalog returned a JavaScript robot challenge. No bypass attempted. Only accessible department requirements observed; curriculum remains partial.",
-    "No course names or credits inferred from the two bare approved-course codes on the overview."
+    "No course names or credits inferred from the two bare approved-course codes on the overview.",
+    "INFO 3170 is separately approved as an elective by the department overview. This roster verifies its Fall 2026 metadata, not a complete minor pool. Credits are published but their normalized unit and prerequisites remain unverified; an absent prerequisite field does not mean none."
   ],
   "curriculum_audit": {
     "scope": "minor",
-    "reviewed_at": "2026-10-10",
+    "reviewed_at": "2026-10-11",
     "source_ids": [
-      "cornell-university-artificial-intelligence-minor-minor-official"
+      "cornell-university-artificial-intelligence-minor-minor-official",
+      "cornell-ai-info3170-fall2026"
     ],
     "sections": [
       "Six courses /18-credit minimum",
       "Grade and undergraduate eligibility",
       "Published supplemental approvals",
       "Foundation/elective reuse caution",
-      "Application timing"
+      "Application timing",
+      "Course identity, description and credit/grading entry; 2026–2027 catalog information"
     ],
     "unresolved_requirements": [
       "Detailed catalog foundation distribution, approved course pools, forbidden overlaps and any further policies remain inaccessible behind a JavaScript robot challenge."
     ],
     "metadata_gaps": [
-      "Course descriptions and individual prerequisites are not fully mapped.",
-      "Credits remain unknown wherever the source does not specify an individual course value.",
-      "Public course sites and syllabi remain unverified."
+      "Only INFO 3170 has independently reviewed Fall 2026 course metadata. Its prerequisites and normalized credit unit remain unverified. MAE 3200 has only the department approval code; no name or credits are inferred.",
+      "Other course descriptions, prerequisites, public sites and syllabi remain unverified."
     ]
   }
 }

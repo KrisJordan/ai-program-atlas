@@ -50,6 +50,16 @@
       "catalog_year": null,
       "locator": "Academic minors: Artificial Intelligence",
       "confidence": "high"
+    },
+    {
+      "id": "clemson-computing-advising-faq",
+      "url": "https://www.clemson.edu/cecas/departments/computing/students/advising/faq.html",
+      "title": "School of Computing — Advising FAQ",
+      "fetched_at": "2026-10-11T00:20:37+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "CPSC grade guidance and prior approval of outside coursework",
+      "confidence": "high"
     }
   ],
   "outcomes": [],
@@ -68,6 +78,34 @@
       "source_text": null,
       "summary": "Minimum 24 published credits, including programming fundamentals and statistical foundations; individual courses and normalized credit unit remain unverified.",
       "course_ids": []
+    },
+    {
+      "id": "clemson-ai-cpsc-grade-guidance",
+      "parent_id": null,
+      "title": "CPSC grade guidance; minor-specific policy unresolved",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "clemson-computing-advising-faq",
+      "source_text": null,
+      "summary": "Computing advising generally requires C or better when a CPSC course serves a degree requirement other than general electives, and directs students to the undergraduate announcements. This guidance does not establish this minor’s exact grade or GPA rules.",
+      "course_ids": []
+    },
+    {
+      "id": "clemson-ai-external-course-review",
+      "parent_id": null,
+      "title": "Prior review of external coursework",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "clemson-computing-advising-faq",
+      "source_text": null,
+      "summary": "Before taking outside coursework, obtain the Elsewhere form and advisor approval; use the transfer-equivalency list for non-CPSC courses. For CPSC-equivalent work, arrange the named computing review and supply the syllabus. This process does not itself grant minor credit.",
+      "course_ids": []
     }
   ],
   "notes": [
@@ -76,13 +114,15 @@
   ],
   "curriculum_audit": {
     "scope": "minor",
-    "reviewed_at": "2026-10-10",
+    "reviewed_at": "2026-10-11",
     "source_ids": [
       "clemson-university-artificial-intelligence-minor-minor-official",
-      "clemson-ai-minor-department"
+      "clemson-ai-minor-department",
+      "clemson-computing-advising-faq"
     ],
     "sections": [
-      "Department minor description and minimum credit amount"
+      "Department minor description and minimum credit amount",
+      "CPSC grade guidance and prior approval of outside coursework"
     ],
     "unresolved_requirements": [
       "Catalog returned HTTP 403: required courses, choice rules, eligibility and completion policies remain unresolved.",

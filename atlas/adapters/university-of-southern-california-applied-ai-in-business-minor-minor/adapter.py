@@ -27,3 +27,24 @@ def parse_policies(html):
 
 
 SOURCE_PARSERS={SOURCES[0]:parse,SOURCES[1]:parse_policies}
+
+
+FAQ_URL = 'https://students.marshall.usc.edu/current-students/academic-advising/faqs'
+RESOURCES_URL = 'https://students.marshall.usc.edu/current-students/academic-advising/academic-programs/marshall-minors'
+SOURCES += (FAQ_URL, RESOURCES_URL)
+
+def parse_minor_faq(html):
+    root = content(html, 'QUESTIONS ABOUT MINORS')
+    require_phrases(root, ['All courses used to satisfy a Marshall minor requirement must be taken for a letter-grade', 'D- or higher', 'If you are not a Marshall major, courses must be taken in-residence at USC', 'potential to complete limited minor courses abroad', 'Withdrawing from a Marshall course is considered enrollment', 'counted as one of the three courses'])
+    sid = PROGRAM_ID + '-faq'
+    return dict(id=PROGRAM_ID, requirements=[
+        rule(PROGRAM_ID+'-letter-grading', 'Common Marshall minor grade rule', sid, kind='note', summary='Marshall minor courses require letter grades; the common advising FAQ accepts D− or better for an individual minor requirement. This is not a verified overall minor GPA threshold or a waiver of any stricter program-specific catalog rule.'),
+        rule(PROGRAM_ID+'-withdrawals', 'Withdrawals count toward pre-admission limit', sid, kind='note', summary='A withdrawal still counts as enrollment within the three Marshall courses allowed before admission to a Marshall major or minor.'),
+        rule(PROGRAM_ID+'-residence', 'Minor course residency and study abroad', sid, kind='note', summary='Non-Marshall majors must take Marshall minor courses in residence at USC. Marshall majors must consult their advisor about limited minor credit abroad; approval is not automatic.')])
+
+def parse_minor_resources(html):
+    root = content(html, 'Marshall Minors')
+    require_phrases(root, ['For Non-Marshall majors, Marshall minor courses cannot be completed abroad through USC-affiliated abroad programs', 'Marshall majors, please speak with your Marshall major advisor'])
+    return dict(id=PROGRAM_ID, requirements=[rule(PROGRAM_ID+'-abroad-scope', 'Study-abroad rule includes USC-affiliated programs', PROGRAM_ID+'-resources', kind='note', summary='The restriction for non-Marshall majors explicitly includes USC-affiliated abroad programs. Marshall majors should consult their major advisor about possible minor credit abroad.')])
+
+SOURCE_PARSERS.update({FAQ_URL: parse_minor_faq, RESOURCES_URL: parse_minor_resources})

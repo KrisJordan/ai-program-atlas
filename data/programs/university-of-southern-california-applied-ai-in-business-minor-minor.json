@@ -32,7 +32,7 @@
     {
       "kind": "study",
       "url": "https://students.marshall.usc.edu/current-students/applying-marshall-current-usc-students/marshall-minors",
-      "label": "Marshall Minors \u2014 admission and eligibility"
+      "label": "Marshall Minors — admission and eligibility"
     },
     {
       "kind": "study",
@@ -42,7 +42,7 @@
     {
       "kind": "catalog",
       "url": "https://catalogue.usc.edu/preview_program.php?catoid=22&poid=32945&returnto=9453",
-      "label": "Linked 2026\u20132027 catalog requirements (HTTP 202 on compliant fetch)"
+      "label": "Linked 2026–2027 catalog requirements (HTTP 202 on compliant fetch)"
     }
   ],
   "sources": [
@@ -59,11 +59,11 @@
     {
       "id": "university-of-southern-california-applied-ai-in-business-minor-minor-admission",
       "url": "https://students.marshall.usc.edu/current-students/applying-marshall-current-usc-students/marshall-minors",
-      "title": "Marshall Minors \u2014 admission and eligibility",
+      "title": "Marshall Minors — admission and eligibility",
       "fetched_at": "2026-10-10",
       "source_date": null,
-      "catalog_year": "2026\u20132027",
-      "locator": "Admission paragraphs and 2026\u20132027 minor list",
+      "catalog_year": "2026–2027",
+      "locator": "Admission paragraphs and 2026–2027 minor list",
       "confidence": "high"
     },
     {
@@ -74,6 +74,26 @@
       "source_date": null,
       "catalog_year": null,
       "locator": "Three-page major/emphasis eligibility matrix; visually inspected",
+      "confidence": "high"
+    },
+    {
+      "id": "university-of-southern-california-applied-ai-in-business-minor-minor-faq",
+      "url": "https://students.marshall.usc.edu/current-students/academic-advising/faqs",
+      "title": "Marshall advising FAQs",
+      "fetched_at": "2026-10-11T00:17:01+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Marshall minor letter grading/residence and pre-admission course withdrawals",
+      "confidence": "high"
+    },
+    {
+      "id": "university-of-southern-california-applied-ai-in-business-minor-minor-resources",
+      "url": "https://students.marshall.usc.edu/current-students/academic-advising/academic-programs/marshall-minors",
+      "title": "Marshall minor resources",
+      "fetched_at": "2026-10-11T00:17:00+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Study abroad: non-Marshall versus Marshall majors",
       "confidence": "high"
     }
   ],
@@ -98,7 +118,7 @@
       "category": "other",
       "source_id": "university-of-southern-california-applied-ai-in-business-minor-minor-admission",
       "source_text": null,
-      "summary": "Admission requires a declared major, completion of 32\u201348 units and a USC GPA of at least 2.75. Applications are accepted throughout the year.",
+      "summary": "Admission requires a declared major, completion of 32–48 units and a USC GPA of at least 2.75. Applications are accepted throughout the year.",
       "course_ids": []
     },
     {
@@ -140,7 +160,7 @@
       "category": "other",
       "source_id": "university-of-southern-california-applied-ai-in-business-minor-minor-admission",
       "source_text": null,
-      "summary": "At least 16 unique units must be outside the student\u2019s home academic department. This is a common minor rule, not a verified total for this minor.",
+      "summary": "At least 16 unique units must be outside the student’s home academic department. This is a common minor rule, not a verified total for this minor.",
       "course_ids": []
     },
     {
@@ -154,7 +174,7 @@
       "category": "other",
       "source_id": "university-of-southern-california-applied-ai-in-business-minor-minor-admission",
       "source_text": null,
-      "summary": "Students enter under the catalog year current at admission, and that year\u2019s requirements appear on their STARS report.",
+      "summary": "Students enter under the catalog year current at admission, and that year’s requirements appear on their STARS report.",
       "course_ids": []
     },
     {
@@ -170,30 +190,90 @@
       "source_text": null,
       "summary": "Business Administration and Accounting majors may apply, subject to exceptions for their specific major, emphasis or joint program. Consult the published eligibility list and an advisor about overlap restrictions.",
       "course_ids": []
+    },
+    {
+      "id": "university-of-southern-california-applied-ai-in-business-minor-minor-letter-grading",
+      "parent_id": null,
+      "title": "Common Marshall minor grade rule",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "university-of-southern-california-applied-ai-in-business-minor-minor-faq",
+      "source_text": null,
+      "summary": "Marshall minor courses require letter grades; the common advising FAQ accepts D− or better for an individual minor requirement. This is not a verified overall minor GPA threshold or a waiver of any stricter program-specific catalog rule.",
+      "course_ids": []
+    },
+    {
+      "id": "university-of-southern-california-applied-ai-in-business-minor-minor-withdrawals",
+      "parent_id": null,
+      "title": "Withdrawals count toward pre-admission limit",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "university-of-southern-california-applied-ai-in-business-minor-minor-faq",
+      "source_text": null,
+      "summary": "A withdrawal still counts as enrollment within the three Marshall courses allowed before admission to a Marshall major or minor.",
+      "course_ids": []
+    },
+    {
+      "id": "university-of-southern-california-applied-ai-in-business-minor-minor-residence",
+      "parent_id": null,
+      "title": "Minor course residency and study abroad",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "university-of-southern-california-applied-ai-in-business-minor-minor-faq",
+      "source_text": null,
+      "summary": "Non-Marshall majors must take Marshall minor courses in residence at USC. Marshall majors must consult their advisor about limited minor credit abroad; approval is not automatic.",
+      "course_ids": []
+    },
+    {
+      "id": "university-of-southern-california-applied-ai-in-business-minor-minor-abroad-scope",
+      "parent_id": null,
+      "title": "Study-abroad rule includes USC-affiliated programs",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "university-of-southern-california-applied-ai-in-business-minor-minor-resources",
+      "source_text": null,
+      "summary": "The restriction for non-Marshall majors explicitly includes USC-affiliated abroad programs. Marshall majors should consult their major advisor about possible minor credit abroad.",
+      "course_ids": []
     }
   ],
   "notes": [
-    "The advising page links 2026\u20132027 requirements. A 2026-10-10 retry with the updated default Fetcher honored the full 120-second robots interval but the linked catalog returned HTTP 202. The former local scheduling limit is resolved; no readable catalog content was obtained. The web reader also could not open the same URL. No access restriction was bypassed.",
-    "The announcement broadly welcomes students from all majors. The detailed eligibility matrix flags overlap restrictions for many Marshall majors/emphases, and does not list AAIB under the AI for Business major. Eligibility and overlap must therefore be checked against the student\u2019s specific program; no universal eligibility claim is made here.",
-    "The three-page eligibility matrix was visually reviewed. Detailed overlap limits are not enumerated in the matrix, and the minor\u2019s course list, total units, prerequisites and completion rules remain unverified.",
+    "The advising page links 2026–2027 requirements. A 2026-10-10 retry with the updated default Fetcher honored the full 120-second robots interval but the linked catalog returned HTTP 202. The former local scheduling limit is resolved; no readable catalog content was obtained. The web reader also could not open the same URL. No access restriction was bypassed.",
+    "The announcement broadly welcomes students from all majors. The detailed eligibility matrix flags overlap restrictions for many Marshall majors/emphases, and does not list AAIB under the AI for Business major. Eligibility and overlap must therefore be checked against the student’s specific program; no universal eligibility claim is made here.",
+    "The three-page eligibility matrix was visually reviewed. Detailed overlap limits are not enumerated in the matrix, and the minor’s course list, total units, prerequisites and completion rules remain unverified.",
     "The 16 unique-unit rule is common to Marshall minors and is not treated as the total units for Applied AI in Business."
   ],
   "curriculum_audit": {
     "scope": "minor",
-    "reviewed_at": "2026-10-10",
+    "reviewed_at": "2026-10-11",
     "source_ids": [
       "university-of-southern-california-applied-ai-in-business-minor-minor-official",
       "university-of-southern-california-applied-ai-in-business-minor-minor-admission",
-      "university-of-southern-california-applied-ai-in-business-minor-minor-eligibility"
+      "university-of-southern-california-applied-ai-in-business-minor-minor-eligibility",
+      "university-of-southern-california-applied-ai-in-business-minor-minor-faq",
+      "university-of-southern-california-applied-ai-in-business-minor-minor-resources"
     ],
     "sections": [
       "Published Fall 2026 launch and curriculum aims",
       "Marshall minor admission and pre-admission course limits",
       "Prerequisite, unique-unit and applicable-catalog rules",
-      "Visual review of the Marshall eligibility and overlap matrix"
+      "Visual review of the Marshall eligibility and overlap matrix",
+      "Marshall minor letter grading/residence and pre-admission course withdrawals",
+      "Study abroad: non-Marshall versus Marshall majors"
     ],
     "unresolved_requirements": [
-      "Program-specific course inventory, total units and completion policies remain unverified: the linked catalog returned HTTP 202 after compliant 120-second pacing.",
+      "Program-specific course inventory, total units, overall minor GPA and any stricter completion rules remain unverified: the linked catalog returned HTTP 202 after compliant 120-second pacing. Common Marshall letter-grade and residency rules are now reviewed.",
       "Detailed major/emphasis overlap limits and eligibility exceptions need catalog or advisor-policy confirmation."
     ],
     "metadata_gaps": [
