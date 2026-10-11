@@ -1,0 +1,23 @@
+# UCSD college-writing contribution: 21 actual blocks
+
+Reviewed 2026-10-11. All seven exact chapter links were observed in the official course index and fetched through the ordinary robots-aware client: HUM, CAT, DOC, AWP, TMC, MCWP and MMW. All 21 complete assigned blocks and their section context were read. The manifest preserves source hashes, timestamps, exact headings and original summaries; raw chapters remain outside Git.
+
+Twenty observations are approved for primary integration. **HUM 2** remains a source-title/version hold: the retained pool says *Rome, Christianity, and the Middle Ages*, while the current chapter says *Rome and the Medieval World*. The full new six-unit description was read, but no explicit historical/current mapping was found in this source. It is not silently substituted. Other title differences are explicit style or qualification differences: DOC prefixes, CAT ampersand/Roman numeral forms, current CAT 125R Online, MCWP CritWrit abbreviation, and MMW's added period subtitle. These do not create identity groups or rewrite source pool records.
+
+## Conditions that matter
+
+- **HUM:** Revelle-only and letter graded. HUM 1 and the held HUM 2 are six units; the other assigned courses are four. HUM 3 requires HUM 1 or 2; other entry-writing conditions remain their own literal rules. HUM 3/4/5 variant credit exclusions do not establish aliases.
+- **DOC:** DOC 1/2/3 are Marshall-only and letter graded; DOC 2/3 are six units. DOC 1 explicitly permits concurrent AWP 3 as an alternative to already satisfying entry-level writing. DOC 2 also requires department approval. DOC 100D is different: its target population includes upper-division/transfer students across colleges; the lower-division Marshall-only restriction must not be transferred to it.
+- **CAT:** CAT 3CE is six units with CAT 2/2CE preparation and Sixth College/department restrictions. CAT 90 is one unit, repeatable three times and recommended as experiential-learning preparation, not universally required. CAT 124 is repeatable twice and requires upper-division standing and department authorization. CAT 125/125R distinguish first-year CAT 1/2/3 preparation from transfer equivalency, and recommend letter grading for graduate-school plans without making that recommendation mandatory for everyone. 125R is explicitly distance education. Mutual credit exclusions do not establish alias groups.
+- **MCWP 40C:** four units, Muir writing-sequence context, first-year and transfer distinctions, climate focus and letter grading for Muir writing credit. Its prose says prerequisite grades must be C or higher but does not identify a separate prerequisite course in this card; no invented prerequisite is inserted. The Muir requirement is not universal across AI students.
+- **MMW 15:** ERC-only and letter graded for ERC graduation, with literal preparation alternatives and D-or-better wording preserved without invented Boolean grouping. The printed MMW variant credit clause is retained without asserting a cross-list or multiple awards of credit.
+- **AWP:** upper-division or graduate standing; actual law/climate communication descriptions support human-context classification. Published DEI/climate claims are separately noted rather than treated as complete college applicability proof.
+- **TMC:** the public-service course has no separately printed prerequisite field, which does not prove unrestricted enrollment. The partnership-school course combines critical analysis of inequity with actual tutoring/internship service, requires upper-division standing, and does not prove an individual placement.
+
+The 20 approved observations include 16 human-context courses, two mixed courses (CAT 3CE and TMC 120) and two unclassified experiential-learning/project courses (CAT 90 and 124). Writing and communication stay human context even when the topic concerns science or technology. Actual art-making/service practice supports the two mixed judgments; broad project formats alone do not establish a subject category.
+
+## Rerun and integration limits
+
+The observer checks exact chapter identity, the 2026–27 edition, section context and complete current block hashes. Changed titles, credits, prerequisites or enrollment restrictions withdraw reuse. It emits no manual taxonomy certificate, requirement graph or alias. Missing separate prerequisite fields stay null, with relevant prose conditions in notes.
+
+Eighteen focused tests pass, including all seven exact ignored-source replays. The primary reviewer owns source-parser composition, degree/college applicability, profile roles, ledger changes and publication. This contribution completes the assigned 21-record source reading, not the full UCSD degree audit.
