@@ -2,7 +2,7 @@
 
 Reviewed 2026-10-11. The primary degree audit is **in progress**, not complete or
 wholly inaccessible. The current reviewed graph has 23 fixed course identities,
-45 options and six unresolved/context identities (three advising-only and three preparation-only). The 2026–2027 public
+59 options and six unresolved/context identities (three advising-only and three preparation-only). The 2026–2027 public
 study curriculum states 122 semester hours, six core alternative pairs and two AI
 electives across four options (five course codes, including a robotics pair).
 Two zero-credit co-op placements reuse one course identity. Uncoded GE,
@@ -50,7 +50,7 @@ current section syllabus or a program outcome. See the separate source review
   as a current pool.
 - Public immersion curricula do render in an ordinary browser. The directory
   has 77 immersion links; the Mathematics route’s requirements were inspected,
-  and all 37 course cards are now reviewed/mapped. The other 76 routes remain accessible
+  and all 37 course cards are now reviewed/mapped. The other 75 routes remain accessible
   work. No blanket catalog-access claim or full GE closure is justified yet.
 - The current AI sequence annotates MATH190 as Immersion3 and separately lists
   another Immersion3 slot. The advising chart instead shows three separate
@@ -96,3 +96,17 @@ is preserved without declaring those ordinary minimum/selection figures a
 contradiction. Pair exclusions, upper-level minimum, honors GPA thresholds and
 MATH233 restricted audience are explicit. Credit exclusions do not establish
 identity equivalence. See `research/degree-audit/rit-mathematics-immersion.md`.
+
+## AI in Society route — 2026-10-11
+
+The second reviewed public route has STSO320 plus two of thirteen electives,
+nine semester hours. All fourteen actual course cards individually confirm three
+credits. Twelve have social/ethical/historical/philosophical subject matter;
+DHSS101 and VISL234 combine interpretation with substantial digital/art practice
+and remain mixed. No separate prerequisite statements were present, so null
+remains unknown. The route's required STSO320 is conditional for the AI degree,
+under the same optional-immersion parent; it is not an extra fixed AI core.
+The degree now represents 88 identities, with 85 descriptions. The separate
+standalone immersion record was not edited. Source-specific observations reuse
+its actual local-table parser but do not transfer its aims or completeness to
+the host degree. See `research/degree-audit/rit-society-immersion-route.md`.

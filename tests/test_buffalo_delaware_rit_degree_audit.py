@@ -51,7 +51,7 @@ def test_rit_uncoded_slots_have_no_accidental_elective_memberships():
 
 def test_rit_actual_subjects_and_eligibility_are_preserved():
     p=load(PROGRAM_ID);c={c['code']:c for c in p['courses']}
-    assert len([x for x in c.values() if x['description']])==71
+    assert len([x for x in c.values() if x['description']])==85
     assert len([x for x in c.values() if x['prerequisites']])==59
     for code,category in {'IDAI-360':'mathematics','ISTE-230':'systems','IDAI-485':'systems','SWEN-261':'foundations','IDAI-490':'foundations','YOPS-10':'other','PSYC-223':'applications'}.items():
         assert c[code]['category']==category

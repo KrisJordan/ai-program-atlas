@@ -38,3 +38,6 @@ register_writing_closure(SOURCES, SOURCE_PARSERS)
 
 from atlas.adapters.rit_mathematics_immersion import register as register_math_immersion
 register_math_immersion(SOURCES, SOURCE_PARSERS)
+
+from atlas.adapters.rit_society_immersion_route import register as register_society_immersion
+register_society_immersion(SOURCES, SOURCE_PARSERS)
