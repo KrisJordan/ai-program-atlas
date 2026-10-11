@@ -15121,7 +15121,7 @@
     {
       "program_id": "purdue-ai-ba",
       "institution_id": "purdue-university",
-      "status": "blocked",
+      "status": "in_progress",
       "sources": [
         {
           "url": "https://admissions.purdue.edu/majors/artificial-intelligence/",
@@ -15228,6 +15228,7 @@
       ],
       "correction_status": "Evidence-backed corrections retained; whole-degree audit blocked. Named unreviewed course descriptions remain a separate accessible-review backlog, not falsely called an access barrier.",
       "second_pass_status": "pending",
+      "accessible_work_remaining": "Represented course-content review remains accessible and incomplete, separately from retained source/access/applicability blockers. This workload is not classified as an access blocker.",
       "ledger": "research/degree-audit/west-purdue-wpi.json",
       "audit_date": "2026-10-11",
       "reviewer": "pilots_purdue_minor"
@@ -15235,7 +15236,7 @@
     {
       "program_id": "purdue-ai-bs",
       "institution_id": "purdue-university",
-      "status": "blocked",
+      "status": "in_progress",
       "sources": [
         {
           "url": "https://www.cs.purdue.edu/undergraduate/curriculum/bachelor-ai.html",
@@ -17104,6 +17105,7 @@
       ],
       "correction_status": "Evidence-backed corrections retained; whole-degree audit blocked. Named unreviewed course descriptions remain a separate accessible-review backlog, not falsely called an access barrier.",
       "second_pass_status": "pending",
+      "accessible_work_remaining": "Represented course-content review remains accessible and incomplete, separately from retained source/access/applicability blockers. This workload is not classified as an access blocker.",
       "ledger": "research/degree-audit/west-purdue-wpi.json",
       "audit_date": "2026-10-11",
       "reviewer": "pilots_purdue_minor"
@@ -18066,7 +18068,7 @@
     {
       "program_id": "ucsb-ai-bs",
       "institution_id": "university-of-california-santa-barbara",
-      "status": "blocked",
+      "status": "in_progress",
       "sources": [
         {
           "url": "https://ai.cs.ucsb.edu/curriculum",
@@ -18264,6 +18266,7 @@
       ],
       "correction_status": "Evidence-backed corrections retained; whole-degree audit blocked. Named unreviewed course descriptions remain a separate accessible-review backlog, not falsely called an access barrier.",
       "second_pass_status": "pending",
+      "accessible_work_remaining": "Represented course-content review remains accessible and incomplete, separately from retained source/access/applicability blockers. This workload is not classified as an access blocker.",
       "ledger": "research/degree-audit/west-purdue-wpi.json",
       "audit_date": "2026-10-11",
       "reviewer": "pilots_purdue_minor"
@@ -22039,7 +22042,7 @@
     {
       "program_id": "university-of-california-san-diego-artificial-intelligence-bs-degree",
       "institution_id": "university-of-california-san-diego",
-      "status": "blocked",
+      "status": "in_progress",
       "sources": [
         {
           "url": "https://catalog.ucsd.edu/curric/CSE-ug.html",
@@ -24569,6 +24572,7 @@
       ],
       "correction_status": "Evidence-backed corrections retained; whole-degree audit blocked. Named unreviewed course descriptions remain a separate accessible-review backlog, not falsely called an access barrier.",
       "second_pass_status": "pending",
+      "accessible_work_remaining": "Represented course-content review remains accessible and incomplete, separately from retained source/access/applicability blockers. This workload is not classified as an access blocker.",
       "ledger": "research/degree-audit/west-purdue-wpi.json",
       "audit_date": "2026-10-11",
       "reviewer": "pilots_purdue_minor"
@@ -26057,7 +26061,7 @@
     {
       "program_id": "wpi-ai-bs",
       "institution_id": "worcester-polytechnic-institute",
-      "status": "blocked",
+      "status": "in_progress",
       "sources": [
         {
           "url": "https://wpi.cleancatalog.net/artificial-intelligence/artificial-intelligence-major",
@@ -26198,15 +26202,64 @@
           "locator": "Six-course total vs required pair plus minimum three leaves sixth-slot allocation unspecified.",
           "checked_at": "2026-10-11",
           "access_status": "Existing access barrier/conflict reviewed from source notes; no denied-route retry."
+        },
+        {
+          "url": "https://wpi.cleancatalog.net/computer-science/cs-2223",
+          "catalog_year": "2026-2027",
+          "locator": "CS 2223 complete description, Units and Recommended Background",
+          "checked_at": "2026-10-11",
+          "access_status": "Robots-aware permitted HTTP200 actual page read; fetched 2026-10-11T04:41:35+00:00"
+        },
+        {
+          "url": "https://wpi.cleancatalog.net/mathematical-sciences/ma-2611",
+          "catalog_year": "2026-2027",
+          "locator": "MA 2611 complete description, Units and Recommended Background",
+          "checked_at": "2026-10-11",
+          "access_status": "Robots-aware permitted HTTP200 actual page read; fetched 2026-10-11T04:41:36+00:00"
+        },
+        {
+          "url": "https://wpi.cleancatalog.net/mathematical-sciences/ma-2612",
+          "catalog_year": "2026-2027",
+          "locator": "MA 2612 complete description, Units and Recommended Background",
+          "checked_at": "2026-10-11",
+          "access_status": "Robots-aware permitted HTTP200 actual page read; fetched 2026-10-11T04:41:38+00:00"
+        },
+        {
+          "url": "https://wpi.cleancatalog.net/data-science/ds-1010",
+          "catalog_year": "2026-2027",
+          "locator": "DS 1010 complete description, Units and Recommended Background",
+          "checked_at": "2026-10-11",
+          "access_status": "Robots-aware permitted HTTP200 actual page read; fetched 2026-10-11T04:41:40+00:00"
+        },
+        {
+          "url": "https://wpi.cleancatalog.net/data-science/ds-2010",
+          "catalog_year": "2026-2027",
+          "locator": "DS 2010 complete description, Units and Recommended Background",
+          "checked_at": "2026-10-11",
+          "access_status": "Robots-aware permitted HTTP200 actual page read; fetched 2026-10-11T04:41:41+00:00"
+        },
+        {
+          "url": "https://wpi.cleancatalog.net/data-science/ds-3010",
+          "catalog_year": "2026-2027",
+          "locator": "DS 3010 complete description, Units and Recommended Background",
+          "checked_at": "2026-10-11",
+          "access_status": "Robots-aware permitted HTTP200 actual page read; fetched 2026-10-11T04:41:43+00:00"
+        },
+        {
+          "url": "https://wpi.cleancatalog.net/finance/fin-2070",
+          "catalog_year": "2026-2027",
+          "locator": "FIN 2070 complete description, Units and Recommended Background",
+          "checked_at": "2026-10-11",
+          "access_status": "Robots-aware permitted HTTP200 actual page read; fetched 2026-10-11T04:41:44+00:00"
         }
       ],
       "checks": {
         "degree_identity": "Official AI major catalog explicitly Bachelor of Science; concentration routes are within this degree, not additional BS awards.",
         "required_and_choices": "Exact Three of DS1010/2010/3010 clause and three identities establish fixed triple. Together withCS2223 andMA2611/2612 gives six fixed.8/3core descriptor includes fixed courses; other core bins remain choices. One concentration needs six distinct courses; no summation of overlapping descriptors.",
         "elective_pools": "All currently mapped concentration/core/disciplinary pools retained. Business Applications and Social Science/Policy concentration section allocations leave respectively two and one of the six-course distribution decisions unspecified; do not infer free choice.",
-        "prerequisites": "CS2119/4341/4342 actual descriptions distinguish recommended background from mandatory requirements; no new fixed prerequisites. Other course descriptions largely remain title-level review.",
+        "prerequisites": "CS2119/4341/4342 actual descriptions distinguish recommended background from mandatory requirements; no new fixed prerequisites. Other course descriptions largely remain title-level review. New course descriptions distinguish Recommended Background from mandatory prerequisite requirements; no degree role added.",
         "credits_and_units": "WPI units retained, ordinarily1/3course and3/3MQP. Do not convert to semester/quarter hours. Core8/3 and concentration6/3 are inclusive loads.",
-        "classification": "Removed nearly universalAI defaults. Exact titles support bounded subject labels; five inspected course descriptions support specific computing/AI classifications. DS sequence mixedother; unreviewed/ambiguous coursesother.",
+        "classification": "Removed nearly universalAI defaults. Exact titles support bounded subject labels; five inspected course descriptions support specific computing/AI classifications. DS sequence mixedother; unreviewed/ambiguous coursesother. Full current DS1010/2010 and FIN2070 descriptions now checked; DS2010 is AI/ML and FIN2070 applications. AI degree also verifies DS3010 mixed systems/AI, algorithms CS2223 and statistics MA2611/2612. Accessible course-description backlog remains in progress.",
         "family_composition": "No family inheritance/bindings; independently scoped standalone degree. Shared policy helpers do not imply shared credential.",
         "degree_wide_requirements": "University/project/HUA policies mapped but applicable conflicts and concentration allocation gaps block full degree audit."
       },
@@ -26216,7 +26269,8 @@
           "categories": {
             "foundations": 1,
             "mathematics": 2,
-            "other": 3
+            "other": 2,
+            "ai_ml": 1
           }
         },
         "options": {
@@ -26225,10 +26279,10 @@
             "foundations": 11,
             "mathematics": 20,
             "ai_ml": 23,
-            "other": 84,
+            "other": 83,
             "human_context": 8,
             "systems": 10,
-            "applications": 55
+            "applications": 56
           }
         },
         "unresolved": {
@@ -26474,6 +26528,14 @@
             "https://wpi.cleancatalog.net/artificial-intelligence/artificial-intelligence-major",
             "https://wpi.cleancatalog.net/computer-science/cs-2119"
           ]
+        },
+        {
+          "issue": "FIN2070 slot heading differs from linked course title; earlier ledger bundled this with unresolved evidence.",
+          "correction": "Current linked course explicitly verifies FIN2070 Risk Analysis for Decision Making and financial-content subject. Retain slot-heading wording as context, without treating identity as blocked.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://wpi.cleancatalog.net/finance/fin-2070"
+          ]
         }
       ],
       "blockers": [
@@ -26494,8 +26556,9 @@
           "issue": "Six-course total vs required pair plus minimum three leaves sixth-slot allocation unspecified."
         }
       ],
-      "correction_status": "Evidence-backed corrections retained; whole-degree audit blocked. Named unreviewed course descriptions remain a separate accessible-review backlog, not falsely called an access barrier.",
+      "correction_status": "Source-backed role and subject corrections retained; accessible content review remains in progress separately from genuine policy blockers.",
       "second_pass_status": "pending",
+      "accessible_work_remaining": "Represented course-content review remains accessible and incomplete, separately from retained source/access/applicability blockers. This workload is not classified as an access blocker.",
       "ledger": "research/degree-audit/west-purdue-wpi.json",
       "audit_date": "2026-10-11",
       "reviewer": "pilots_purdue_minor"
@@ -26503,7 +26566,7 @@
     {
       "program_id": "wpi-business-analytics-applied-ai-bs",
       "institution_id": "worcester-polytechnic-institute",
-      "status": "blocked",
+      "status": "in_progress",
       "sources": [
         {
           "url": "https://wpi.cleancatalog.net/business/business-analytics-and-applied-ai-major",
@@ -26567,15 +26630,50 @@
           "locator": "Undergraduate application table; accepts December 2026 and May 2027 applications",
           "checked_at": "2026-10-11",
           "access_status": "Official source reread or specific existing conflict evidence retained; cached fetch date preserved in program source. No fresh network claim."
+        },
+        {
+          "url": "https://wpi.cleancatalog.net/mathematical-sciences/ma-2611",
+          "catalog_year": "2026-2027",
+          "locator": "MA 2611 complete description, Units and Recommended Background",
+          "checked_at": "2026-10-11",
+          "access_status": "Robots-aware permitted HTTP200 actual page read; fetched 2026-10-11T04:41:36+00:00"
+        },
+        {
+          "url": "https://wpi.cleancatalog.net/mathematical-sciences/ma-2612",
+          "catalog_year": "2026-2027",
+          "locator": "MA 2612 complete description, Units and Recommended Background",
+          "checked_at": "2026-10-11",
+          "access_status": "Robots-aware permitted HTTP200 actual page read; fetched 2026-10-11T04:41:38+00:00"
+        },
+        {
+          "url": "https://wpi.cleancatalog.net/data-science/ds-1010",
+          "catalog_year": "2026-2027",
+          "locator": "DS 1010 complete description, Units and Recommended Background",
+          "checked_at": "2026-10-11",
+          "access_status": "Robots-aware permitted HTTP200 actual page read; fetched 2026-10-11T04:41:40+00:00"
+        },
+        {
+          "url": "https://wpi.cleancatalog.net/data-science/ds-2010",
+          "catalog_year": "2026-2027",
+          "locator": "DS 2010 complete description, Units and Recommended Background",
+          "checked_at": "2026-10-11",
+          "access_status": "Robots-aware permitted HTTP200 actual page read; fetched 2026-10-11T04:41:41+00:00"
+        },
+        {
+          "url": "https://wpi.cleancatalog.net/finance/fin-2070",
+          "catalog_year": "2026-2027",
+          "locator": "FIN 2070 complete description, Units and Recommended Background",
+          "checked_at": "2026-10-11",
+          "access_status": "Robots-aware permitted HTTP200 actual page read; fetched 2026-10-11T04:41:44+00:00"
         }
       ],
       "checks": {
         "degree_identity": "Official catalog explicitly BS Business Analytics and Applied AI, separate from the AI BS.",
         "required_and_choices": "No exact universal course is established: named math/programming courses have equivalent routes, foundations contain choices, and six electives obey at least3applications/at most3computing/at most2business. Named ETR1100/MIS3010 restored to option pool. Fixed0 does not mean no required coursework.",
         "elective_pools": "Named choices and open prefix/level/equivalent criteria retained.6electives are total across the three bins. No course counts twice. MQP needs eligible full-time Business faculty advisor.",
-        "prerequisites": "Actual CS2119/4341/4342 andMIS3730/3787 descriptions read. Recommended background remains advisory; admission to graduate business program is required before graduate business courses. Remaining descriptions/prerequisites unreviewed.",
+        "prerequisites": "Actual CS2119/4341/4342 andMIS3730/3787 descriptions read. Recommended background remains advisory; admission to graduate business program is required before graduate business courses. Remaining descriptions/prerequisites unreviewed. New course descriptions distinguish Recommended Background from mandatory prerequisite requirements; no degree role added.",
         "credits_and_units": "WPI1/3unit course rows retained. Source-generated category subtotals are not extra mandatory loads; six electives is controlling textual selection rule.",
-        "classification": "Default AI labels removed; business domain, mathematical, computing, systems and human-context subjects separated with limited-title or actual-description rationales. DS mixedother.",
+        "classification": "Default AI labels removed; business domain, mathematical, computing, systems and human-context subjects separated with limited-title or actual-description rationales. DS mixedother. Full current DS1010/2010 and FIN2070 descriptions now checked; DS2010 is AI/ML and FIN2070 applications. AI degree also verifies DS3010 mixed systems/AI, algorithms CS2223 and statistics MA2611/2612. Accessible course-description backlog remains in progress.",
         "family_composition": "No family inheritance/bindings; independently scoped standalone degree. Shared policy helpers do not imply shared credential.",
         "degree_wide_requirements": "University policy conflicts and unexplained graduate-course-count limit block certification. FIN2070 section heading saysFundamentals of Finance while its course row saysRisk Analysis for Decision Making; source-specific title retained."
       },
@@ -26589,11 +26687,11 @@
           "categories": {
             "mathematics": 8,
             "foundations": 4,
-            "other": 18,
-            "applications": 10,
+            "other": 16,
+            "applications": 11,
             "human_context": 2,
-            "systems": 1,
-            "ai_ml": 4
+            "ai_ml": 5,
+            "systems": 1
           }
         },
         "unresolved": {
@@ -26668,6 +26766,14 @@
             "https://wpi.cleancatalog.net/business/business-analytics-and-applied-ai-major",
             "https://wpi.cleancatalog.net/computer-science/cs-2119"
           ]
+        },
+        {
+          "issue": "FIN2070 slot heading differs from linked course title; earlier ledger bundled this with unresolved evidence.",
+          "correction": "Current linked course explicitly verifies FIN2070 Risk Analysis for Decision Making and financial-content subject. Retain slot-heading wording as context, without treating identity as blocked.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://wpi.cleancatalog.net/finance/fin-2070"
+          ]
         }
       ],
       "blockers": [
@@ -26681,11 +26787,12 @@
         },
         {
           "url": "https://wpi.cleancatalog.net/business/business-analytics-and-applied-ai-major",
-          "issue": "Referenced maximum number of graduate courses counting toward the undergraduate degree is not stated. A BS/MS percent-double-count limit is not a course-count limit; FIN2070 heading/row titles also differ."
+          "issue": "Referenced maximum number of graduate courses counting toward the undergraduate degree is not stated. A BS/MS percent-double-count limit is not a course-count limit."
         }
       ],
-      "correction_status": "Evidence-backed corrections retained; whole-degree audit blocked. Named unreviewed course descriptions remain a separate accessible-review backlog, not falsely called an access barrier.",
+      "correction_status": "Source-backed role and subject corrections retained; accessible content review remains in progress separately from genuine policy blockers.",
       "second_pass_status": "pending",
+      "accessible_work_remaining": "Represented course-content review remains accessible and incomplete, separately from retained source/access/applicability blockers. This workload is not classified as an access blocker.",
       "ledger": "research/degree-audit/west-purdue-wpi.json",
       "audit_date": "2026-10-11",
       "reviewer": "pilots_purdue_minor"
