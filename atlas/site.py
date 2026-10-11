@@ -602,6 +602,17 @@ def course_category_markup(course, sources):
     return label + '<small class="category-review-status">' + esc(status) + '</small><details class="category-review"><summary>Classification evidence</summary><p>' + esc(review.get('rationale') or 'Rationale not recorded') + '</p>' + ('<p>Candidate subjects: ' + esc(candidates) + '</p>' if candidates else '') + '<p>' + esc(review.get('locator') or 'Locator not recorded') + '</p><p>' + evidence + '</p><small>Taxonomy ' + esc(review.get('taxonomy_version')) + ' · reviewed ' + esc(review.get('reviewed_at')) + '</small></details>'
 
 
+
+def course_notes_markup(course):
+    notes = [note for note in course.get('notes', []) if isinstance(note, str) and note.strip()]
+    if not notes:
+        return ''
+    label = f"Course notes ({len(notes)})"
+    context = course.get('code') or course.get('name') or 'this course'
+    items = ''.join(f'<li>{esc(note)}</li>' for note in notes)
+    return f'<details class="course-notes"><summary>{label}<span class="sr-only"> for {esc(context)}</span></summary><ul>{items}</ul></details>'
+
+
 def program_page(p, base, family=None):
     institution = p.get("institution", {})
     courses = unique_courses(p)
@@ -612,7 +623,7 @@ def program_page(p, base, family=None):
         first_text = external(first.get("evidence_url"), first.get("value")) + ' <small>' + esc(first.get("uncertainty") or first.get("precision") or "") + '</small>'
     links = ' <span aria-hidden="true">/</span> '.join(external(link.get("url"), link.get("label") or human(link.get("kind"))) for link in p.get("links", []))
     missing_credits = sum(c.get("credits") is None for c in courses)
-    rows = ''.join(f'''<tr><th scope="row" id="course-{esc(c['id'])}">{esc(c.get('code') or 'Unknown')}<span>{esc(c.get('name') or 'Course name not verified')}</span><p class="course-description">{esc(c.get('description') or 'Description not recorded.')}</p></th><td>{course_category_markup(c, course_sources)}</td><td>{esc(c.get('credits'))}<small>{esc(human(c.get('credit_unit')))}</small></td><td>{esc(c.get('prerequisites') or 'Not recorded')}</td><td>{external(c.get('url'), 'Catalog')}{'<br>' + external(c.get('public_site'), 'Course site') if c.get('public_site') else ''}{'<br>' + external(c.get('syllabus'), 'Syllabus') if c.get('syllabus') else ''}</td></tr>''' for c in courses)
+    rows = ''.join(f'''<tr><th scope="row" id="course-{esc(c['id'])}">{esc(c.get('code') or 'Unknown')}<span>{esc(c.get('name') or 'Course name not verified')}</span><p class="course-description">{esc(c.get('description') or 'Description not recorded.')}</p>{course_notes_markup(c)}</th><td>{course_category_markup(c, course_sources)}</td><td>{esc(c.get('credits'))}<small>{esc(human(c.get('credit_unit')))}</small></td><td>{esc(c.get('prerequisites') or 'Not recorded')}</td><td>{external(c.get('url'), 'Catalog')}{'<br>' + external(c.get('public_site'), 'Course site') if c.get('public_site') else ''}{'<br>' + external(c.get('syllabus'), 'Syllabus') if c.get('syllabus') else ''}</td></tr>''' for c in courses)
     sources = ''.join(f'''<li id="source-{esc(s.get('id'))}"><h3>{external(s.get('url'), s.get('title') or 'Official source')}</h3><p>{esc(s.get('locator') or 'Locator not recorded')}</p><dl class="source-meta"><div><dt>Retrieved</dt><dd>{esc(s.get('fetched_at') or 'Not recorded')}</dd></div><div><dt>Source date</dt><dd>{esc(s.get('source_date'))}</dd></div><div><dt>Catalog year</dt><dd>{esc(s.get('catalog_year'))}</dd></div><div><dt>Confidence</dt><dd>{esc(human(s.get('confidence')))}</dd></div></dl></li>''' for s in p.get('sources', []))
     notes = ''.join(f'<li>{esc(n)}</li>' for n in p.get('notes', []))
     rankings = institution.get('rankings') or []
