@@ -1025,6 +1025,56 @@
       "catalog_year": "2026–27",
       "locator": "Full description, fixedunits, prerequisites and repeat/advisory fields",
       "confidence": "high"
+    },
+    {
+      "id": "ucsb-ai-bs-ge-current-general",
+      "url": "https://catalog.ucsb.edu/pages/rPLy4cgKMOtJPnaDpVTT#general-subject-area-requirements",
+      "title": "UCSB current catalog: General Subject Area Requirements",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Full visible current catalog section; read and compared with Engineering-specific applicability",
+      "confidence": "high"
+    },
+    {
+      "id": "ucsb-ai-bs-ge-current-satisfying",
+      "url": "https://catalog.ucsb.edu/pages/rPLy4cgKMOtJPnaDpVTT#satisfying-general-education1",
+      "title": "UCSB current catalog: Satisfying General Education",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Full visible current catalog section; read and compared with Engineering-specific applicability",
+      "confidence": "high"
+    },
+    {
+      "id": "ucsb-ai-bs-ge-current-special",
+      "url": "https://catalog.ucsb.edu/pages/rPLy4cgKMOtJPnaDpVTT#special-subject-area-requirements",
+      "title": "UCSB current catalog: Special Subject Area Requirements",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Full visible current catalog section; read and compared with Engineering-specific applicability",
+      "confidence": "high"
+    },
+    {
+      "id": "ucsb-ai-bs-ge-current-provisions",
+      "url": "https://catalog.ucsb.edu/pages/rPLy4cgKMOtJPnaDpVTT#general-provisions-governing-all-degree-candidates1",
+      "title": "UCSB current catalog: General Provisions Governing All Degree Candidates",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Full visible current catalog section; read and compared with Engineering-specific applicability",
+      "confidence": "high"
+    },
+    {
+      "id": "ucsb-ai-bs-ge-current-engineering",
+      "url": "https://catalog.ucsb.edu/pages/XKpjtzsyizq40mvKrD0E",
+      "title": "UCSB current catalog: General Education Requirements (ENGR)",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Full visible current catalog section; read and compared with Engineering-specific applicability",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -3876,7 +3926,7 @@
       "category": "other",
       "source_id": "ucsb-ai-bs-college-requirements",
       "source_text": null,
-      "summary": "Choose approved Area D courses. The public filtered catalog returned a loading shell; its finite pool is not yet verified.",
+      "summary": "Choose approved Area D courses. Current catalog filtered exports now establish the published pool; full pool integration and individual course-content review remain in progress. One course may count in only one general area.",
       "course_ids": []
     },
     {
@@ -3890,7 +3940,7 @@
       "category": "other",
       "source_id": "ucsb-ai-bs-college-requirements",
       "source_text": null,
-      "summary": "Choose approved Area E courses. The public filtered catalog returned a loading shell; its finite pool is not yet verified.",
+      "summary": "Choose approved Area E courses. Current catalog filtered exports now establish the published pool; full pool integration and individual course-content review remain in progress. One course may count in only one general area.",
       "course_ids": []
     },
     {
@@ -3904,7 +3954,7 @@
       "category": "other",
       "source_id": "ucsb-ai-bs-college-requirements",
       "source_text": null,
-      "summary": "Choose approved Area F courses. The public filtered catalog returned a loading shell; its finite pool is not yet verified.",
+      "summary": "Choose approved Area F courses. Current catalog filtered exports now establish the published pool; full pool integration and individual course-content review remain in progress. One course may count in only one general area.",
       "course_ids": []
     },
     {
@@ -3918,7 +3968,7 @@
       "category": "other",
       "source_id": "ucsb-ai-bs-college-requirements",
       "source_text": null,
-      "summary": "Choose approved Area G courses. The public filtered catalog returned a loading shell; its finite pool is not yet verified.",
+      "summary": "Choose approved Area G courses. Current catalog filtered exports now establish the published pool; full pool integration and individual course-content review remain in progress. One course may count in only one general area.",
       "course_ids": []
     },
     {
@@ -4652,7 +4702,7 @@
     {
       "id": "ucsb-ai-bs-closure-calgetc-context",
       "parent_id": null,
-      "title": "UC Cal-GETC context; college applicability unresolved",
+      "title": "UC Cal-GETC systemwide context; local current policy separately verified",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -4660,7 +4710,7 @@
       "category": "human_context",
       "source_id": "ucsb-ai-bs-closure-calgetc-context",
       "source_text": null,
-      "summary": "UC admissions identifies Cal-GETC as the available CCC pattern for entrants from fall2025 onward. Complete the pattern before transfer; otherwise the receiving college or school evaluates its own lower-division GE. Courses require C or better, including Pass/Credit only where equivalent to C. The pattern is not required for UC admission. This systemwide page does not establish UCSB Engineering specific substitutions, remaining requirements or certification treatment; retain that unresolved college decision rather than extend its IGETC rules by assumption.",
+      "summary": "The UC admissions source identifies Cal-GETC for CCC entrants from fall2025 onward, completion before transfer, and C-equivalent grades. It does not itself establish local Engineering substitutions. The subsequently reviewed current UCSB university GE policy explicitly recognizes certified full Cal-GETC and links Engineering; that local route and its partial-certification limits are mapped separately.",
       "course_ids": []
     },
     {
@@ -4718,13 +4768,83 @@
       "source_text": null,
       "summary": "Quarterly registration, fee payment and removal of blocks must be completed by applicable deadlines. Register at least one course and resolve blocks by the15thinstructional day to avoid lapsed enrollment. Undergraduate full-time minimum12units; Engineering/LettersandScience maximum21units in good standing or17on probation. These are quarterly enrollment limits, not extra degree credits; late/retroactive enrollment and late course changes follow the published college processes.",
       "course_ids": []
+    },
+    {
+      "id": "ucsb-ai-bs-progress-ge-current-general",
+      "parent_id": null,
+      "title": "Current general-subject scope and catalog cutoff",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "quarter_hours",
+      "category": "other",
+      "source_id": "ucsb-ai-bs-ge-current-general",
+      "source_text": null,
+      "summary": "General-area definitions and course lists apply to both Engineering and Letters and Science, but each college supplies its required counts. Areas B and C are expressly Letters and Science only. Additional approvals after the catalog cutoff may appear in GOLD; this is a published-catalog snapshot, not a live registration guarantee. The general page’s Engineering Area A2 list omits Writing105AI and the explicit online W variants included by the current Engineering-specific page; preserve that source-list difference rather than infer an exclusion or identity equivalence.",
+      "course_ids": []
+    },
+    {
+      "id": "ucsb-ai-bs-progress-ge-current-satisfying",
+      "parent_id": null,
+      "title": "Certified IGETC and Cal-GETC routes",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "quarter_hours",
+      "category": "other",
+      "source_id": "ucsb-ai-bs-ge-current-satisfying",
+      "source_text": null,
+      "summary": "The current university GE policy applies to all undergraduate colleges and expressly links Engineering. California community-college transfers with IGETC or Cal-GETC fully completed before matriculation and certified by the college satisfy the GE program. Partial certification may qualify when no more than two courses are lacking; the source literally names IGETC areas1–6 while discussing both patterns, so the receiving college determines completion of the partial program. The separate IGETC-for-STEM route permits at most three missing courses, one each in areas3,4,6, with certification and college consultation. Do not extend this STEM clause to Cal-GETC or infer a waiver of major or other university requirements.",
+      "course_ids": []
+    },
+    {
+      "id": "ucsb-ai-bs-progress-ge-current-special",
+      "parent_id": null,
+      "title": "Engineering special designations and petition scope",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "quarter_hours",
+      "category": "other",
+      "source_id": "ucsb-ai-bs-ge-current-special",
+      "source_text": null,
+      "summary": "Within the general-area courses, Engineering requires four designated writing courses, one ethnicity course, and one course in either European Traditions or World Cultures. Quantitative Relationships is Letters and Science only. Writing entails at least1800 non-exam words and substantial assessment weight. The special page’s permission to petition up to two other UCSB courses is expressly Letters and Science only, not an Engineering substitution rule; Engineering’s separately reviewed UCEAP petition exception remains distinct. Special designations overlay general areas rather than add seven disjoint courses.",
+      "course_ids": []
+    },
+    {
+      "id": "ucsb-ai-bs-progress-ge-current-provisions",
+      "parent_id": null,
+      "title": "General-area nonreuse and permitted overlaps",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "quarter_hours",
+      "category": "other",
+      "source_id": "ucsb-ai-bs-ge-current-provisions",
+      "source_text": null,
+      "summary": "For Engineering and Letters and Science, a major course may also satisfy GE, and a GE course may simultaneously satisfy American History and Institutions. A course bearing multiple general-area designations A–G may apply to only one such area. Multiple listed memberships therefore represent alternatives, not permission to count one course in two general areas.",
+      "course_ids": []
+    },
+    {
+      "id": "ucsb-ai-bs-progress-ge-current-engineering",
+      "parent_id": null,
+      "title": "Current Engineering GE distribution and published lists",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "quarter_hours",
+      "category": "other",
+      "source_id": "ucsb-ai-bs-ge-current-engineering",
+      "source_text": null,
+      "summary": "Engineering requires six courses across D/E/F/G: at least two D, two E, one F and one G. Four writing, one ethnicity and one European Traditions-or-World Cultures designation are overlays within GE. The page links the current filtered course catalog as the approved-list source. Its Area A list expressly includes Writing105AI and W105M/W107B/W107L/W107WC/W109ST; the broader general-area page’s Engineering-only list does not repeat those entries. Existing writing-option inventory is therefore still under exact-version/list reconciliation. Certified transfer alternatives and no-double-use across general areas are recorded separately.",
+      "course_ids": []
     }
   ],
   "notes": [
     "Current 2026–27 college GEAR page 16 supplies upper-division total 72 (36 core + 36 electives), science Lists A/B of 8/12 units, and Computer Science department grading language, superseding the ambiguous earlier worksheet fields. CMPSC 41 remains five units on the requirements page versus four on the website and GEAR sample plan; its scalar credit value is therefore null. Sample plans are not requirements.",
     "Current catalog restricts AWPE recognition to transfers from another UC, while the college overview describes a broader historical route. Both observations are retained; current catalog qualification is explicit.",
     "Filtered public catalog Area D page returned a JavaScript loading shell; zero displayed results is not evidence that the approved pool is empty. No login or hidden API access attempted.",
-    "Current GEAR supplies15 AHI department expressions; compressed suffix ranges and the printed Political Science152153 separator remain literal. AP African American Studies3+ satisfies AHI in this dated guide. Full IGETC can replace Engineering GE but not AHI; CalGETC not established. The petitions page expressly permits up to two approved UC EAP special-writing courses, qualifying the general transfer page UCSB-only wording. AI FAQ says no hidden curriculum requirements but does not identify a capstone; transfer/change-major entries begin2028, not current2026 admission.",
+    "Current GEAR supplies15 AHI department expressions; compressed suffix ranges and the printed Political Science152153 separator remain literal. AP African American Studies3+ satisfies AHI in this dated guide. Full IGETC can replace Engineering GE but not AHI; the later current university GE review separately establishes certified Cal-GETC applicability. The petitions page expressly permits up to two approved UC EAP special-writing courses, qualifying the general transfer page UCSB-only wording. AI FAQ says no hidden curriculum requirements but does not identify a capstone; transfer/change-major entries begin2028, not current2026 admission.",
     "2026-10-11 bounded official-source discovery found UC-wide Cal-GETC entry/completion guidance but no verified UCSB Engineering-specific substitution policy. Preserve the college applicability gap; an unsuccessful search is not evidence of rejection or absence of policy.",
     "2026-10-11 subject audit: unsupported classifications inferred from degree, department or elective/GE pool membership were reset to other. Only individually supported classifications carry a reviewed rationale; code-only records carry an evidence-insufficiency review. Remaining named but unreviewed courses are not certified.",
     "Thirty-five exact-code public CS department pages independently reviewed. Thirty-four are undated; CMPSC184 is explicitly Fall2017 and has no substantive description. Published CS/CE-major restrictions are not assumed waived for AI majors. CMPSC192 (1–5) and196 (2–4) units remain variable/null, with degree-level combined4-unit elective cap retained. CMPSC153A/ECE153A andCMPSC181/ECE181 explicit same-course statements are observed; identity deduplication awaits the paired ECE evidence review.",
@@ -4738,7 +4858,8 @@
     "Current catalog WRIT109ES remains an independently published four-unit record. Its department describes107EPas formerly109ES, but the current109ESrecord only excludesEnglish109Icredit. No cross-version/renumbering identity merge or automatic withdrawal of the older GEARpool code is inferred.",
     "Current2026–27requiredcourse review replaces undated188no-prerequisite observation:130A,165Aand165Barerequired;138recommended. Current130AstatesPSTAT120A/ECE139inbothrecommendedandprerequisitefields(concurrentallowed), bothretained. Calculus conditionalcredit reductions/repeat/AP exclusions remain distinct from ordinary4units. Currentmathalternateprerequisites include2B/3BIand4AIwhereexplicit.",
     "Currentpublicenrollment/registrationpolicies andcatalogRegulation10read: instructorpreparednessassessment andlate-addapproval do not explicitly establish a waiver of course major restrictions. Graduateenrollmentconditions are optional routes, not additional AIdegree requirements; LettersandScience-only300–499creditprohibition is not generalized to Engineering.",
-    "Current2026–27English146AI/146DSrecords close the historical-only version limitation: both4units andWriting2orupper-divisionstanding. Their suffix-family repeatmaximum is not a degree requirement. Current197genericrecordsupplies4units andWriting2/50/109orEnglish10orupperstanding; its categoryreview remains scoped to the three fullyreadFall2026sections and is not inferred from the genericrecord."
+    "Current2026–27English146AI/146DSrecords close the historical-only version limitation: both4units andWriting2orupper-divisionstanding. Their suffix-family repeatmaximum is not a degree requirement. Current197genericrecordsupplies4units andWriting2/50/109orEnglish10orupperstanding; its categoryreview remains scoped to the three fullyreadFall2026sections and is not inferred from the genericrecord.",
+    "Current2026–27 university GE policy expressly recognizes certified IGETC/Cal-GETC and links Engineering, closing the earlier college-applicability discovery gap. Partial-pattern and IGETC-for-STEM conditions remain exact. D/E/F/G public filtered CSV export has856distinct codes; content review and pool integration are in progress. No category inferred from a GE designation."
   ],
   "curriculum_audit": {
     "scope": "degree",
@@ -4777,9 +4898,10 @@
       "CMPSC 41 is five units on current GEAR requirement page, four on its illustrative plan and AI website; departmental clarification needed.",
       "Science List A/B allocations are verified as 8/12 units, but the finite department-approved course lists remain unavailable on inspected public sources.",
       "Curriculum webpage describes a capstone without identifying a course or requirement rule; GEAR does not resolve that identity.",
-      "AHI finite department expressions are mapped from GEAR; GE Areas D/E/F/G and special-designation pools remain unverified after a public catalog loading shell. GEAR names IGETC but does not establish CalGETC treatment.",
+      "AHI department expressions are mapped. D/E/F/G published memberships have been exported from the current official catalog; their course-content review and integration plus full special-designation pool review remain active. Cal-GETC applicability is now verified by the current university GE policy.",
       "Applicable public transfer, repeat, progression, notice and petition policies are mapped. Linked writing-petition guideline and Writing1/1E entries are reviewed; broader placement-specific procedures remain an advising route. No private advising/registration portal used.",
-      "WRIT1 unit value: undated individual guide4quarter units versus lower-division overview5; no source precedence established."
+      "WRIT1 unit value: undated individual guide4quarter units versus lower-division overview5; no source precedence established.",
+      "Current Engineering-specific Area A list includes105AI and explicit online W variants omitted by the current general-area page Engineering list; exact list/version reconciliation remains unresolved."
     ],
     "metadata_gaps": [
       "Elective names, descriptions, prerequisites and individual units not extracted."

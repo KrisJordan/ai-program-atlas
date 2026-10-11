@@ -33,7 +33,7 @@ def test_reviewed_pdf_observations_never_expand_compressed_ranges():
 def test_ucsb_curated_progress_rules_validate_and_keep_exact_blockers():
     d=json.loads(Path('data/programs/ucsb-ai-bs.json').read_text());validate_program(d)
     rows=[n for n in d['requirements']if n['id'].startswith('ucsb-ai-bs-progress-')]
-    assert len(rows)==41
+    assert len(rows)==46
     assert sum('-ahi-row-'in n['id']for n in rows)==15
     assert any('up to two UCEAP'in n['summary']for n in rows)
     assert any('at least25%'in n['summary']for n in rows)

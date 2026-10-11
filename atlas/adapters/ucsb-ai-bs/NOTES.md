@@ -209,3 +209,40 @@ future topics. Exact repeat limits and writing alternatives remain in the
 observed eligibility field. Roles, aliases and 20 fixed/61 option/2 contextual
 identity counts are unchanged. Remaining optional-course versions, approved GE
 pools and specific AI enrollment exceptions remain accessible audit work.
+
+
+### Current GE policy and published-pool discovery closure (2026-10-11)
+
+Full visible sections of the current [GE program](https://catalog.ucsb.edu/pages/rPLy4cgKMOtJPnaDpVTT#satisfying-general-education1)
+and [Engineering GE policy](https://catalog.ucsb.edu/pages/XKpjtzsyizq40mvKrD0E)
+were read through ordinary public navigation. The all-college policy expressly
+recognizes certified full Cal-GETC and links Engineering. This supersedes the
+earlier unresolved local-applicability finding; no inference from GEAR’s older
+IGETC wording was necessary. Partial certification requires no more than two
+missing courses and college consultation. The source still says IGETC areas1–6
+in that combined paragraph; its separate three-course STEM exception names
+IGETC only and is not extended to Cal-GETC. No major or other university waiver
+is inferred from GE certification.
+
+Engineering uses two D, two E, one F and one G courses, with four writing, one
+ethnicity and one European Traditions-or-World Cultures designation as overlays.
+Major and American History overlap are permitted; a course may serve only one
+A–G general area even when multiple area tags are published. The permission to
+petition two other UCSB writing courses on the special-subject page belongs to
+Letters and Science, not Engineering’s separately documented UCEAP exception.
+
+The linked course-search filters and ordinary Export all results CSV establish
+856 distinct published D/E/F/G code rows: D175, E299, F168, G273, with overlapping
+tags retained. The ignored CSV and visible filter capture are preserved. The
+new `ucsb_ge_catalog_pools` manifest/helper records only exact code/title/area
+membership with a full source-row hash; it does not certify hundreds of unread
+descriptions, assign subjects from GE tags, or emit degree requirements. Its
+pool integration and content review remain an explicit accessible queue. The
+HTML loading shell alone cannot refresh this CSV-backed observation.
+
+One current source-list inconsistency remains: the Engineering-specific Area A
+list includes105AI and W105M/W107B/W107L/W107WC/W109ST, while the general-area
+page’s Engineering-only list omits them. Preserve both source observations; do
+not silently drop existing105AI or merge online codes by label. Whole-degree
+status remains in progress, with science/capstone, credit/version and remaining
+GE course-content issues separately listed.
