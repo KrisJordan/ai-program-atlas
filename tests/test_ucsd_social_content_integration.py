@@ -21,7 +21,7 @@ def test_source_facts_preserve_context_and_unknown_identities():
     profile = requirement_profile(d)
     assert [profile[k]['count'] for k in ('required', 'options', 'unresolved')] == [8, 119, 2241]
     assert {k: v for k, v in profile['unresolved']['categories'].items() if v} == {
-        'other': 1331, 'human_context': 769, 'applications': 108,
+        'other': 1287, 'human_context': 786, 'applications': 135,
         'foundations': 7, 'systems': 23, 'mathematics': 3,
     }
     assert courses['SOCI 105']['credits'] == 6

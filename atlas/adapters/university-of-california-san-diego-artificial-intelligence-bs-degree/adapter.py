@@ -349,3 +349,12 @@ for _review_module in (cgs_reviews, mus_reviews):
             raise ValueError('UCSD CGS/MUS source needs explicit parser composition')
         SOURCES += (_review_url,)
         SOURCE_PARSERS[_review_url] = _review_parser
+
+from atlas.adapters import ucsd_biology_reviews as biology_reviews
+from atlas.adapters import ucsd_glbh_reviews as glbh_reviews
+for _review_module in (biology_reviews, glbh_reviews):
+    for _review_url, _review_parser in _review_module.SOURCE_PARSERS.items():
+        if _review_url in SOURCE_PARSERS:
+            raise ValueError('UCSD Biology/GLBH source needs explicit parser composition')
+        SOURCES += (_review_url,)
+        SOURCE_PARSERS[_review_url] = _review_parser

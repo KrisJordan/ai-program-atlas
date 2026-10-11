@@ -2,7 +2,7 @@ import importlib
 import json
 from pathlib import Path
 import pytest
-from atlas.adapters import ucsd_hila_reviews as hila, ucsd_sio_reviews as sio, ucsd_eds_reviews as eds, ucsd_cgs_reviews as cgs, ucsd_mus_reviews as mus
+from atlas.adapters import ucsd_hila_reviews as hila, ucsd_sio_reviews as sio, ucsd_eds_reviews as eds, ucsd_cgs_reviews as cgs, ucsd_mus_reviews as mus, ucsd_biology_reviews as bio, ucsd_glbh_reviews as glbh
 from atlas.curriculum_profile import requirement_profile
 
 PID=hila.SPEC['program_id']
@@ -25,7 +25,7 @@ def test_history_sio_integration_preserves_held_identity_and_roles():
     assert cs['POLI 117']['category_review']['status']=='unclassified'
     assert [requirement_profile(d)[k]['count']for k in ['required','options','unresolved']]==[8,119,2241]
 
-@pytest.mark.parametrize('module,subject,count,dispositions',[(hila,'HILA',187,13),(sio,'SIO',35,6),(eds,'EDS',31,1),(cgs,'CGS',24,0),(mus,'MUS',27,6)])
+@pytest.mark.parametrize('module,subject,count,dispositions',[(hila,'HILA',187,13),(sio,'SIO',35,6),(eds,'EDS',31,1),(cgs,'CGS',24,0),(mus,'MUS',27,6),(bio,'BIOL',34,3),(glbh,'GLBH',24,2)])
 def test_composed_source_replays_approved_metadata_only(module,subject,count,dispositions):
     s=module.SPEC['sources'][subject];p=Path(s['cache_path'])
     if not p.exists():pytest.skip('Optional ignored official chapter capture')
@@ -52,3 +52,16 @@ def test_music_study_and_cultural_ai_remain_conditional_content():
     assert any('Two production-course limitation' in n for n in cs['MUS 160B']['notes'])
     for code in ['MUS 8GS','MUS 19R','MUS 20R','MUS 126R','MUS 150GS','MUS 13AS']:
         assert cs[code]['category_review']['status']=='unclassified'
+
+
+def test_biology_global_health_eligibility_and_identity_limits():
+    d=json.loads(Path('data/programs',PID+'.json').read_text());cs={c['code']:c for c in d['courses']}
+    assert cs['BICD 136']['prerequisites']=='BILD 1, BILD 2 recommended.'
+    assert cs['BISP 182']['credits']is None and cs['BISP 193']['credits']is None
+    assert cs['GLBH 107']['category_review']['status']=='unclassified'
+    assert 'Refugee Health' in cs['GLBH 107']['name']
+    assert cs['GLBH 111']['prerequisites']is None
+    assert any('border' in n for n in cs['GLBH 111']['notes'])
+    assert cs['GLBH 150B']['prerequisites']=='GLBH 150A; department approval required.'
+    assert any('strictly enforces' in n for n in cs['BILD 10']['notes'])
+    assert not any('lab-specific' in n for n in cs['BILD 10']['notes'])

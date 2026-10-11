@@ -439,3 +439,7 @@ Primary read and integrated31 complete EDS descriptions, with138 unmatched. Actu
 ### UCSD CGS and Music, 2026-10-11
 
 CGS24 primary-read and MUS27 contributor-read descriptions integrated, with primary Music boundary checks and six unmatched-code dispositions. Themes do not determine subjects; cultural AI remains human-context, practical composition/performance applications, selected projects unknown. Context categories now1331other/769human/108applications/7foundations/23systems/3math; roles unchanged8/119/2241. Other accessible chapters remain active.
+
+### UCSD Biology and Global Health, 2026-10-11
+
+Thirty-four Biology descriptions and introductory policies were primary-read;24 GLBH current observations integrated after contributor full reads and primary boundary checks. Chapter-wide Biology rules, required-versus-recommended preparation, research restrictions, variable credits and older/current GLBH eligibility differences remain explicit. Five missing codes and one GLBH107 title/version hold are not guessed away. Roles unchanged8/119/2241; context categories1287other/786human/135applications/7foundations/23systems/3math. Remaining identified accessible chapters keep the audit in progress.
