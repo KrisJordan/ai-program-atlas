@@ -2,6 +2,14 @@
 
 Updated 2026-10-11. A published research project; **the full target cohort and catalog inventory remain incomplete**.
 
+## Immediate priority: degree correctness audit
+
+The user reported Case Western showing zero computing foundations despite required data structures and algorithms. Inventory expansion is paused. All **63 standalone degree records across 25 institutions** are assigned to disjoint evidence reviews, including a separate cross-program second pass. The [audit contract](docs/DEGREE_AUDIT.md) defines independent source checks, per-course rationale, exact versions, required/option/prerequisite roles, manual expected sets and genuine blockers. Earlier completeness labels do not certify this new correctness audit.
+
+Case Western's initial trace found correctly stored courses left `other` by a narrow classification helper. The verified core correction is committed: BA has eight fixed mapped courses (two foundations, three mathematics, three AI); BS adds one human-context course. Introductory programming remains a choice of one Python course or a Java-plus-Python bundle, represented by three option records. Full elective and degree-wide classification review remains in progress. Independent UI/source review and publication are pending; the live release below still contains the original error.
+
+Shared taxonomy v1 now separates source-reviewed, mixed, unclassified and legacy/unreviewed course classifications, with relational evidence in migration 010. Empty or zero mapped categories never establish actual subject absence. The new rank ordering and its eight additional browser tests remain queued for the same correction release. The audit will continue after that publication checkpoint.
+
 ## Verified publication
 
 - Repository: https://github.com/KrisJordan/ai-program-atlas

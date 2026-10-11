@@ -27,7 +27,7 @@ Statuses are `reviewed`, `mixed`, `unclassified`; mixed/unclassified records use
 
 Each assigned JSON file in `research/degree-audit/` is an object with `audit_date`, `reviewer`, `programs` (array). Every program entry contains:
 
-- `program_id`, `institution_id`, `status`: `audited` or `blocked` (while working `in_progress`). `audited` requires all checks below; a partial audit with inaccessible/unresolved evidence is `blocked`, with verified corrections retained.
+- `program_id`, `institution_id`, `status`: `audited` or `blocked` (while working `in_progress`). `audited` requires all checks below; a partial audit with inaccessible or conflicting authoritative evidence is `blocked`, with verified corrections retained. Accessible work that has not yet been reviewed stays `in_progress`; time or workload is not an access blocker.
 - `sources`: objects `{url, catalog_year, locator, checked_at, access_status}`. Include degree/host rules and the actual course-description sources reviewed, including blocked URLs. Exact version/cohort ambiguity must remain explicit.
 - `checks`: object of prose findings for `degree_identity`, `required_and_choices`, `elective_pools`, `prerequisites`, `credits_and_units`, `classification`, `family_composition`, `degree_wide_requirements`.
 - `expected_profile`: `{required:{count,categories}, options:{count,categories}, unresolved:{count,categories}}` for the independently reviewed current graph, or null if not independently established. Record manual expected course-ID sets in `expected_course_ids` with keys `required`, `options`, `unresolved`, or explain a large reproducible reviewed set in Markdown. Calling the profile function alone is not independent validation.
