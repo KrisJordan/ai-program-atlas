@@ -150,7 +150,8 @@ def parse_thematic(html, *, pid, plan, spec=None):
     if inactive:
         requirements.append(rule(root+'-inactive','Source flags inactive options',sid,parent=root,kind='note',category=category,
             summary='The '+observed['semester']+' page marks '+', '.join(inactive)+' inactive. They are excluded from eligible option groups; no university-wide withdrawal is inferred.'))
-    return dict(id=pid,courses=list(courses.values()),requirements=requirements)
+    from atlas.adapters.miami_limited_identity_reviews import apply_observed_categories
+    return apply_observed_categories(dict(id=pid,courses=list(courses.values()),requirements=requirements))
 
 
 def register(pid,sources,parsers):

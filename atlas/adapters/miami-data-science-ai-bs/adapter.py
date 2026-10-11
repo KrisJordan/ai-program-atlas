@@ -82,3 +82,6 @@ register_area_studies_context(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
 
 from atlas.adapters.miami_judaic_latin_urban_context_reviews import register as register_judaic_latin_urban_context
 register_judaic_latin_urban_context(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
+
+from atlas.adapters.miami_gss_context_reviews import register as register_gss_context
+register_gss_context(PROGRAM_ID,SOURCES,SOURCE_PARSERS)

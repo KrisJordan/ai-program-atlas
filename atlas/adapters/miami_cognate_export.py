@@ -148,4 +148,5 @@ def full_individualized_observation(result, *, pid):
         requirements.append(rule(root+'-'+key,area+' — dated attribute pool',SID,ids,
             parent=root,kind='note',category='human_context',summary=
             f"{len(selected)} identities in the October 2, 2026 Master List carry this attribute. Multiple area memberships do not duplicate a course or permit double-counting. Current CaneLink designation and individualized no-other-degree-requirement restrictions still apply. Source titles clipped with ellipses remain unknown; generic topics and transfer codes are not blanket approvals of every section or external course."))
-    return dict(id=pid,courses=list(courses.values()),requirements=requirements)
+    from atlas.adapters.miami_limited_identity_reviews import apply_observed_categories
+    return apply_observed_categories(dict(id=pid,courses=list(courses.values()),requirements=requirements))

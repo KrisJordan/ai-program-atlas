@@ -71,7 +71,14 @@ def test_curated_optional_routes_and_known_conflicts_preserved(pid):
     assert 'exactly 2' in rules[pid+'-thematic-at_0027-group-2']['summary']
     assert not any('st_0003' in r for r in rules)
     assert len([c for c in d['courses'] if c['code']=='APY 392'])==1
-    assert next(c for c in d['courses'] if c['code']=='AMS 335')['name'] is None
+    # The dated PDF clips this title; the independently read current AMS block
+    # supplies its full identity without changing the original PDF evidence.
+    dated=json.loads((ROOT/'research/miami-individualized-cognate-pool.json').read_text())
+    assert next(c for c in dated['rows'] if c['code']=='AMS 335')['name'] is None
+    current=next(c for c in d['courses'] if c['code']=='AMS 335')
+    assert current['name']=="Topics in American Studies: Women's and Gender Studies"
+    assert current['source_id']=='miami-context-courses-ams'
+    assert current['category_review']['source_ids']==['miami-context-courses-ams']
 
 
 @pytest.mark.parametrize('plan',list(pool.PLANS))

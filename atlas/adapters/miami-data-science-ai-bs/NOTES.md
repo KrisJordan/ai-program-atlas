@@ -158,3 +158,11 @@ The university general-education policy explicitly co-lists BPH202/HCS202/NUR202
 ## 2026-10-11 judaic latin urban contextual review
 
 47 complete official blocks now supply guarded observations and separate manual content reviews; exact source scopes and missing-code outcomes remain in `miami_judaic_latin_urban_context_reviews.json`. No contextual role, approval or equivalence is inferred.
+
+## 2026-10-11 Gender and Sexuality Studies contextual review
+
+23 complete official blocks now supply guarded observations and separately attached manual content reviews. Variable credits, prerequisite/permission restrictions, source conflicts and insufficient-topic records retain their precise scopes in `miami_gss_context_reviews.json`. No contextual row is promoted to a required course; no approval or equivalence is inferred. Source chapter edition remains unassigned where current navigation does not establish it.
+
+## 2026-10-11 finite represented-course content review closed
+
+All represented code identities now have an individual source-content disposition, including 23 GSS descriptions from the official department catalog. The remaining 36 older/transfer identities were inspected in the dated Master List or Fall 2026 thematic rows and visible course popups. Those popups direct readers to the generic Bulletin directory rather than providing descriptions. Thirty-four remain unclassified; two precise language/literature titles support explicitly limited human-context classifications. No missing description, credit or prerequisite is invented. Source dates and conditional cognate membership remain distinct from current course eligibility. The manual evidence and exact locators are in `miami_limited_identity_reviews.json`; observers never emit independent reviews. This closes the finite subject-content queue, not the whole-degree policy audit.
