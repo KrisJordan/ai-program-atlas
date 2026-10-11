@@ -215,7 +215,7 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']['description_reviewed_records']==205
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==247
     assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
         o=entry(code)['observations'][-1]
@@ -751,3 +751,47 @@ def test_instructor_mind_description_requires_published_code_link():
     with pytest.raises(ValueError,match='code link'):
         review.observe_minds_machines(html.replace('sp20/24.09','sp20/24.99'))
     assert entry('24.09')['observations'][-1]['category']=='human_context'
+
+
+def test_political_ocw_preserves_permission_recommendations_and_code_boundaries():
+    report=MANIFEST['ocw_political_review']
+    assert report['directory_results_observed']==97
+    assert report['public_course_pages_read']==report['public_syllabi_read']==22
+    assert len(report['upgraded_record_ids'])==42
+    middle=entry('17.568')['observations'][-1]
+    assert middle['prerequisites']=='MIT students need the permission of the instructors.'
+    assert any('Graduate course; advanced undergraduates' in text for text in middle['restrictions'])
+    congress=entry('17.251')['observations'][-1]
+    assert '4 or 5' in congress['prerequisites'] and '17.20' in congress['prerequisites']
+    cyber=entry('17.445')['observations'][-1]
+    assert 'Graduate students need the permission' in cyber['prerequisites']
+    assert cyber['category']=='human_context'
+    emerging=entry('17.449')['observations'][-1]
+    assert emerging['category']=='human_context' and any('helpful but explicitly not required' in text for text in emerging['restrictions'])
+    methods=entry('17.801')['observations'][-1]
+    assert methods['category']=='human_context' and 'not data analysis' in ' '.join(methods['restrictions'])
+    for code in ['17.447','17.483','17.803','17.811','17.567']:
+        assert entry(code)['observations'][-1]['evidence_basis']=='official_title_only'
+    composite=entry('17.565/17.567')['observations'][-1]
+    assert composite['observed_code']=='17.565' and composite['credits'] is None
+    assert any('distinct17.567' in text for text in composite['restrictions'])
+
+
+def test_actual_political_ocw_observations_replay_with_changed_text_withdrawal():
+    path=Path('/tmp/mit-hass-subjects/ocw-political-index.json')
+    if not path.exists():
+        pytest.skip('Optional ignored OCW Political Science captures')
+    seen=0
+    for source in json.loads(path.read_text()):
+        if not source['key'].endswith('-syllabus'):continue
+        cache=path.parent/('ocw-'+source['key']+'.html')
+        if not cache.exists():pytest.skip('Optional ignored public syllabus')
+        o=review.observe_ocw_syllabus(cache.read_text())[0]
+        for cid,row in MANIFEST['courses'].items():
+            e=next((e for e in row['observations'] if e['source_url']==source['url']),None)
+            if e is None:continue
+            c=dict(id=cid,code=row['listed_code'],name=row['listed_name'],source_id=row['listed_source_id'])
+            assert review.matched_review(c,o,source['url'],MANIFEST)==e
+            assert review.matched_review(c,{**o,'description':o['description']+' Changed.'},source['url'],MANIFEST) is None
+            seen+=1
+    assert seen==42
