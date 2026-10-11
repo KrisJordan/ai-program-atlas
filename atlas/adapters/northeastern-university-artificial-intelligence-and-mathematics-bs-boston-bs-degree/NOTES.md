@@ -43,3 +43,5 @@ Partner-course description review (2026-10-11): 1 existing course observations g
 ## Finite description inventory closure — 2026-10-11
 
 Finite course-description review complete (2026-10-11): all 34 currently listed course observations have source-backed original summaries. This closes the listed-course description queue only. Other offering-specific public sites/syllabi remain unreviewed, null preparation fields do not mean no restriction, and degree completeness remains partial pending the documented applicability boundaries.
+
+2026-10-11 independent primary-page/content audit: literal required/option identities and category aggregates were transcribed from the source and checked against the resolved profile. All represented course descriptions, hours and explicit eligibility were reviewed; original requirement graphs are unchanged. College-specific rules remain conditional at the exact home-college/cohort applicability boundary documented in research/degree-audit/northeastern-home-college-followup.md. No CS1800/1802 requirement is inherited where the degree instead prescribes mathematical reasoning.

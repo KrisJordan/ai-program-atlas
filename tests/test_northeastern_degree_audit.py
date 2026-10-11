@@ -366,3 +366,35 @@ def test_criminal_and_journalism_independent_profiles_have_no_unread_records(sub
         assert next(c for c in p['courses'] if c['code']=='JRNL 1102')['credits']==1
         assert next(c for c in p['courses'] if c['code']=='JRNL 5500')['category']=='foundations'
     assert e['status']=='blocked' and e['blockers']
+
+
+@pytest.mark.parametrize('subject,size,fixed,options', [('economics',50,18,32),('mathematics',34,20,14),('physics',49,25,24)])
+def test_economics_math_physics_manual_role_and_category_partitions(subject,size,fixed,options):
+    from atlas.families import resolve_program
+    from atlas.curriculum_profile import requirement_profile
+    pid=f'northeastern-university-artificial-intelligence-and-{subject}-bs-boston-bs-degree'
+    p=json.loads((ROOT/'data/programs'/f'{pid}.json').read_text())
+    f=json.loads((ROOT/'data/families/northeastern-ai-combined-degrees.json').read_text())
+    e=next(e for e in json.loads((ROOT/'research/degree-audit/northeastern.json').read_text())['programs'] if e['program_id']==pid)
+    assert len(p['courses'])==size and all(c.get('category_review') for c in p['courses'])
+    profile=requirement_profile(resolve_program(p,f))
+    assert profile['required']['count']==fixed and profile['options']['count']==options
+    for role in ['required','options','unresolved']:
+        assert profile[role]['count']==e['expected_profile'][role]['count']
+        assert profile[role]['categories']==e['expected_profile'][role]['categories']
+        assert profile[role]['classification']['unreviewed']==0
+    bycode={c['code']:c for c in p['courses']}
+    if subject in ['mathematics','physics']:
+        assert 'CS 1800' not in bycode and 'CS 1802' not in bycode
+        assert bycode['INSC 1000']['category_review']['status']=='unclassified'
+        assert bycode['EESC 2000']['category_review']['status']=='unclassified'
+    if subject=='physics':
+        for code in ['PHYS 1163','PHYS 1193']:
+            assert bycode[code]['id'] in e['expected_course_ids']['options']
+            assert bycode[code]['credits']==0
+        assert bycode['PHYS 1167']['id'] in e['expected_course_ids']['required']
+        assert bycode['PHYS 1167']['credits']==0
+    if subject=='economics':
+        assert bycode['ECON 4692']['id'] in e['expected_course_ids']['options']
+        assert bycode['ECON 4997']['id'] in e['expected_course_ids']['options']
+        assert 'ECON 2990' not in bycode and 'ECON 4996' not in bycode
