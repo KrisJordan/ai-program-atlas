@@ -16,14 +16,32 @@ An AI additional major for students whose primary degree is outside McCormick; t
 - Eleven unique AI units and explicitly scoped college rules
 - Related mathematics bundles, probability choice, STAT 202 exclusion and no internal double counting
 
-## Boundaries
+## Policy closure, 2026-10-11
 
-- Applicable AI pass/no-pass policy and additional home-school residence, grading and transfer restrictions have not been fully reviewed.
-- The linked 2025–2026 non-WCAS double-counting PDF has not been read; the current catalog warns that home-school restrictions can supersede its overlap explanation.
-- First-offered date is unknown; neither the catalog year nor an update date establishes a launch.
-- No concentration-specific assessed outcomes, descriptions, prerequisites, public course sites or example syllabi were verified in this bounded pass. Course titles and identities are observed; unknown exact course credits remain null.
-- The host bachelor’s degree and University Registration Requirement remain independent; this audit covers only the additional major.
-- Pool rows are alternatives, not a sum of compulsory units. Open elective categories remain eligibility rules.
+- [Courses and Credit](https://catalogs.northwestern.edu/undergraduate/requirements-policies/courses-credit/): Conditional home-school application; Quarter units and repeated credit; Advanced course entry
+- [Grades](https://catalogs.northwestern.edu/undergraduate/requirements-policies/grades/): Conditional home-school application; University P/N boundary; Incomplete coursework
+- [Undergraduate Registration Requirement](https://catalogs.northwestern.edu/undergraduate/requirements-policies/undergraduate-registration-requirement/): Conditional home-school application; Resident registration, distinct from an extra degree; Registration versus earned credits
+- [Pass / No Credit Option](https://www.mccormick.northwestern.edu/students/undergraduate/advising-registration/pass-no-credit-option.html): Conditional home-school application; McCormick P/N application and unresolved AI permission; External graded-credit P/N exception
+- [Transfer Credits](https://www.mccormick.northwestern.edu/students/undergraduate/advising-registration/transfer-credits.html): Conditional home-school application; McCormick equivalence approval and version discrepancy
+- [Judd A. and Marjorie Weinberg College of Arts and Sciences](https://catalogs.northwestern.edu/undergraduate/arts-sciences/): Conditional home-school application; Weinberg-student grade and overlap conditions; Weinberg transfer-student major residence
+- [School of Communication](https://catalogs.northwestern.edu/undergraduate/communication/): Conditional home-school application; SoC grade and overlap conditions; SoC eligibility statement conflicts with AI route
+- [Henry and Leigh Bienen School of Music](https://catalogs.northwestern.edu/undergraduate/music/): Conditional home-school application; Music-student overlap and P/N context; Bienen eligibility statement conflicts with AI route
+- [Medill School of Journalism, Media, Integrated Marketing Communications](https://catalogs.northwestern.edu/undergraduate/journalism-media-integrated-marketing-communications/): Conditional home-school application; Medill-student grade and P/N context
+- [School of Education and Social Policy](https://catalogs.northwestern.edu/undergraduate/education-social-policy/): Conditional home-school application; SESP-student overlap, grades and transfer
+- [Course Duplicates](https://www.mccormick.northwestern.edu/students/undergraduate/advising-registration/course-duplicates.html): Observed exclusion sets and approval procedures; home-school qualifiers retained
+- [Transfer Credit after Matriculation](https://www.registrar.northwestern.edu/registration-graduation/transfer-and-test-credit/transfer-credit-after-matriculating-at-nu.html): Observed exclusion sets and approval procedures; home-school qualifiers retained
+- [McCormick P/N Grade Option](https://www.mccormick.northwestern.edu/documents/students/undergraduate/advising/pass-no-credit-policies.pdf): Complete public PDF read and visually checked; date and applicability limits retained
+- [Non-WCAS double-counting guide](https://www.registrar.northwestern.edu/registration-graduation/graduation-preparation/double_counting_non_wcas-2025_2026.pdf): Complete public PDF read and visually checked; date and applicability limits retained
+
+All identified public policy branches are now inspected. Source-specific observations add quarter units, repeats, incomplete coursework, URR context, duplicate sets, transfer approvals and conditional school policies. The PDF guide is for WCAS credentials and does not grant AI-major overlap permission. The old P/N table is not evidence that the separately cataloged AI major follows CS rules.
+
+Remaining concrete boundaries:
+
+- AI-specific McCormick P/N permission remains unavailable: the current public page points to a January 2018 table with no AI entry. The CS rule is not silently assigned to AI.
+- Communication and Bienen general second-major restrictions conflict with the explicit non-McCormick AI route; an official exception or reconciliation is needed for those home schools.
+- The college’s 22-unit major GPA/transfer clauses do not expressly establish equivalent 19-unit non-McCormick AI rules. Home-school general rules are recorded conditionally, not treated as a universal resolution.
+
+Metadata and launch dates remain separately unverified. Whole host-degree curricula are outside the audit.
 
 ## Refresh
 

@@ -1,6 +1,6 @@
 # Additional-program depth at six confirmed universities
 
-Reviewed 2026-10-11. Five additional formal paths were verified at three institutions. All five new curriculum records are partial, with source-specific boundaries. Six universities remain confirmed; confirmation of one or more titles is not a claim of exhaustive institutional inventory.
+Reviewed 2026-10-11. Five additional formal paths were verified at three institutions. All five were partial at discovery. The subsequent [local policy closure](confirmed-path-policy-closure-2026-10-11.md) completes Rice’s specialization inventory; four records retain concrete boundaries. Six universities remain confirmed; confirmation of one or more titles is not a claim of exhaustive institutional inventory.
 
 | Institution | New records | Scope and boundaries |
 |---|---:|---|

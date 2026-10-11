@@ -16,16 +16,21 @@ A formal concentration within the Symbolic Systems bachelor’s major, distinct 
 - Conditional electives to retain five courses beyond the host core; combined SYMSYS 176S plus OSPGEN 47 option
 - Each course has a three-unit minimum; exact individual units remain unknown
 
-## Boundaries
+## Public policy closure, 2026-10-11
 
-- Later approved course nominations are available only in a Stanford-login spreadsheet; it was not accessed.
-- Standard Core Capstone options, applicable concentration grading/residence/transfer policies and declaration procedures have not been fully mapped.
-- This record maps the currently linked G4 requirements; the legacy G3 route is not reviewed.
-- First-offered date is unknown; neither the catalog year nor an update date establishes a launch.
-- No concentration-specific assessed outcomes, descriptions, prerequisites, public course sites or example syllabi were verified in this bounded pass. Course titles and identities are observed; unknown exact course credits remain null.
-- The public document view explicitly permits anyone with the link without signing in. HTTP refresh sees only its JavaScript shell, so document extraction is a separate rerunnable public-export parser.
-- Cross-list aliases in parentheses are not silently counted as additional courses. HAI Human Impact and Augmenting Human Capabilities lists are examples under open criteria, not exhaustive pools.
-- Fall 2020 describes G4 core implementation, not first offering of this concentration.
+- [Major Policies & Requirements](https://symsys.stanford.edu/undergraduates/major-policies-requirements): Concentration versus core grades; Five courses, units and cross-list equivalence; Internal overlap and contingent electives; Other major, minor and coterminal overlap; Version and graduation course plan
+- [How To Declare](https://symsys.stanford.edu/undergraduates/how-declare): Host-major declaration
+- [Undergrad Advising](https://symsys.stanford.edu/undergraduates/undergrad-advising): Concentration advisor eligibility and deadline; Advisor confirmation and capstone changes
+- [Replacement Petitions](https://symsys.stanford.edu/undergraduates/major-policies-requirements/nominations-and-petitions/replacement-petitions): Individual replacement petitions; External equivalence versus program elective; Online mathematics date restriction; Other replacement categories
+- [Undergraduate Transfer Credit](https://studentservices.stanford.edu/my-academics/earn-my-degree/undergraduate-degree-progress/test-transfer-credit/undergraduate): Transfer credit grade, units and duplicates; Transfer evaluation deadlines
+- [Course Nominations](https://symsys.stanford.edu/undergraduates/major-policies-requirements/nominations-and-petitions/course-nominations): Nomination decisions remain access-restricted
+- [Core Requirements](https://symsys.stanford.edu/undergraduates/major-policies-requirements/core-requirements): Capstone approval; Integrative Requirement standard options only, with the host-core practicum/presentation relationship distinguished
+
+The three standard integrative routes now have observed course identities and permission conditions. They are alternatives to concentration-specific integrative courses, not additional courses. The host-core practicum and presentation are distinguished from the concentration component. Concentration grades are D− minimum, core grades C−; optional CR is not permitted. Cross-application needs contingent electives to retain five concentration courses beyond the core. External transfer still needs the university’s C− threshold and approval, even though an internal concentration course may have a lower grade minimum.
+
+The public transfer, replacement-petition and nomination descriptions were read; no form was submitted and no login-only sheet was opened. The known restricted decisions sheet remains the material current-pool boundary. The public requirements are G4; a student using an eligible historical G3 version is outside this record’s reviewed scope.
+
+Descriptions, individual prerequisites/credit amounts, syllabi, explicit local outcomes and first-offered term remain unverified.
 
 ## Refresh
 

@@ -1,0 +1,21 @@
+# Local policy closure for five new formal AI paths
+
+Reviewed 2026-10-11, following the [six-university discovery pass](national-confirmed-depth-2026-10-11.md). The identified accessible policy queue is now inspected. This pass updates local routes rather than certifying their entire host degrees.
+
+| Route | Inventory status | Result and remaining boundary |
+|---|---|---|
+| Rice BSECE AI & Systems | Complete, local specialization only | Major GPA/letter grades, residence applicability, transfer and graduate-course approvals, repeats and explicit semester-hour units are mapped. The registrar’s noncredential/nontranscript warning remains prominent. |
+| Northwestern McCormick AI second major | Partial | General and McCormick rules are mapped. The linked P/N table is dated January 2018 and has no AI row. Public transfer guidance still describes 21 units while the current AI catalog uses 22; the four-unit transfer cap agrees. |
+| Northwestern non-McCormick AI second major | Partial | University and conditional Weinberg, Communication, Bienen, Medill and SESP policies are mapped. SoC/Bienen general restrictions conflict with the specific AI route; home-school eligibility and the 19-unit route’s precise major-grade/transfer applicability need reconciliation. |
+| Stanford Symbolic Systems AI | Partial | Public capstone, grade/unit/overlap, declaration, advisor and transfer/replacement rules are mapped. Approved additions after the linked September 2024 document are in a Stanford-login sheet that was not accessed. |
+| Stanford Symbolic Systems HAI | Partial | Same public-policy closure and restricted-decision boundary; example-based areas remain open criteria. |
+
+Rice’s [GA graduation](https://ga.rice.edu/undergraduate-students/academic-policies-procedures/graduation-requirements/) and [transfer](https://ga.rice.edu/undergraduate-students/academic-policies-procedures/transfer-credit/) pages disagree about whether one summer may satisfy the host degree’s four full-time resident semesters. That known host-degree discrepancy is retained explicitly. It is not converted into an invented specialization-only residence requirement; the applicable major upper-level residence rule is recorded at its actual major scope. The local complete audit does not certify the BSECE host degree.
+
+Northwestern’s catalog-linked [2025–2026 overlap guide](https://www.registrar.northwestern.edu/registration-graduation/graduation-preparation/double_counting_non_wcas-2025_2026.pdf) addresses non-WCAS students taking **WCAS** majors/minors. It does not grant overlap permission for the new McCormick AI major. The [January 2018 P/N table](https://www.mccormick.northwestern.edu/documents/students/undergraduate/advising/pass-no-credit-policies.pdf) omits AI; its CS rule is not silently assigned to the different AI major. Both PDFs were read and visually checked through bounded public requests with robots, status and format checks. Their text parsers are separate from ordinary HTML refresh.
+
+Stanford’s public [Core Requirements](https://symsys.stanford.edu/undergraduates/major-policies-requirements/core-requirements) supplies three standard integrative routes: continued honors work, an eligible project course/series, or approved supervised research. These are alternatives to a concentration-specific integrative course, not extra requirements on top of it. Host-core practicum and presentation are kept distinct. The [public nomination policy](https://symsys.stanford.edu/undergraduates/major-policies-requirements/nominations-and-petitions/course-nominations) confirms the login-only decisions boundary. No form or private spreadsheet was accessed.
+
+Exact source URLs, dates, rule provenance and review boundaries are registered in the five program records and adjacent adapter notes. Parsers do not emit review audits, completion status or verification dates. First-offered terms, explicit local assessed outcomes and most course metadata remain unknown.
+
+Validation: 132 focused discovery/policy tests passed, including changed eligibility, PDF-scope, dynamic course extraction and public-cache replay checks. An isolated fresh database ingested the current working tree, built the static site and passed the integrity check. The maintained database, shared schema, site code and PLAN were not edited.
