@@ -240,3 +240,27 @@ def test_historical_language_registration_is_not_a_current_general_prerequisite(
     assert any('audience/placement context' in n for n in streamlined['notes'])
     assert calligraphy['category']=='other' and calligraphy['category_review']['status']=='mixed'
     assert calligraphy['syllabus'].endswith('/pages/syllabus/')
+
+
+def test_browser_selected_semester_cannot_be_replayed_by_default_html():
+    sid='mit-ai-hass-review-music-visible-spring-2026'
+    captured=Path(m.INTEGRATED['cache_paths'][sid])
+    default=Path('/tmp/mit-hass-subjects/music-schedule.html')
+    if not captured.exists()or not default.exists():pytest.skip('Optional ignored browser and HTTP captures absent')
+    url=m.SPECS[sid]['url']
+    rows=m.parse(captured.read_text(),url)['courses']
+    assert len(rows)==4 and all(c['source_id']==sid for c in rows)
+    assert all(c['public_site']is None and c['syllabus']is None for c in rows)
+    assert not any(c['source_id']==sid for c in m.parse(default.read_text(),url)['courses'])
+    changed=json.loads(captured.read_text());changed['semester']='Spring 2025'
+    assert m.parse(json.dumps(changed),url)['courses']==[]
+
+
+def test_visible_theater_exact_code_and_formal_none_are_preserved():
+    sid='mit-ai-hass-review-theater-visible-spring-2025'
+    path=Path(m.INTEGRATED['cache_paths'][sid])
+    if not path.exists():pytest.skip('Optional ignored visible theater capture absent')
+    rows=m.parse(path.read_text(),m.SPECS[sid]['url'])['courses']
+    assert len(rows)==1 and rows[0]['code']=='21T.248'
+    assert rows[0]['credits']==12 and rows[0]['prerequisites']=='None'
+    assert rows[0]['public_site']is None and rows[0]['syllabus']is None
