@@ -344,5 +344,49 @@
       "Catalog edition and credit/calendar normalization unverified",
       "Public course sites and syllabi unverified"
     ]
+  },
+  "parent_programs": [
+    {
+      "id": "computer-science-engineering-bs",
+      "title": "Computer Science and Engineering",
+      "award_level": "BS CSE",
+      "award_label": "Bachelor of Science",
+      "relationship": "specialization",
+      "parent_program_id": null,
+      "eligibility": null,
+      "source_ids": [
+        "ohio-state-ai-specialization-identity",
+        "ohio-state-ai-specialization-cse-parent"
+      ],
+      "locator": "BSCSE and BSCIS Specializations heading and Artificial Intelligence entry; BS CSE program information degree definition.",
+      "reviewed_at": "2026-10-11"
+    },
+    {
+      "id": "computer-information-science-bs",
+      "title": "Computer and Information Science",
+      "award_level": "BS CIS",
+      "award_label": "Bachelor of Science",
+      "relationship": "specialization",
+      "parent_program_id": null,
+      "eligibility": null,
+      "source_ids": [
+        "ohio-state-ai-specialization-identity",
+        "ohio-state-ai-specialization-cis-parent"
+      ],
+      "locator": "BSCSE and BSCIS Specializations heading and Artificial Intelligence entry; BS CIS program information degree definition.",
+      "reviewed_at": "2026-10-11"
+    }
+  ],
+  "parent_program_review": {
+    "status": "verified",
+    "reviewed_at": "2026-10-11",
+    "source_ids": [
+      "ohio-state-ai-specialization-identity",
+      "ohio-state-ai-specialization-cse-parent",
+      "ohio-state-ai-specialization-cis-parent"
+    ],
+    "notes": [
+      "The specialization directory explicitly applies to two bachelor programs. BA CIS is not included. The two verified parents are kept separate."
+    ]
   }
 }

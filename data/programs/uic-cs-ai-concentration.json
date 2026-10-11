@@ -59,5 +59,33 @@
     "Identity verified from an official source; curriculum mapping is pending.",
     "The announcement says four of six technical electives will be in AI. The inspected current BS Computer Science catalog does not identify the concentration or its approved pool. Implementation and full requirements remain unverified, so status remains announced even though the planned term has begun. Early AI Integration and Progressive AI Integration are curriculum initiatives, not additional credential records.",
     "First offered, program learning outcomes and course metadata have not been verified."
-  ]
+  ],
+  "parent_programs": [
+    {
+      "id": "computer-science-bs",
+      "title": "Computer Science",
+      "award_level": "BS",
+      "award_label": "Bachelor of Science",
+      "relationship": "concentration",
+      "parent_program_id": null,
+      "eligibility": "Announced for Computer Science majors beginning Fall 2026.",
+      "source_ids": [
+        "uic-cs-ai-concentration-identity",
+        "uic-cs-ai-concentration-context"
+      ],
+      "locator": "AI curriculum announcement: AI concentration for Computer Science majors beginning Fall 2026; BS in Computer Science catalog heading and degree definition.",
+      "reviewed_at": "2026-10-11"
+    }
+  ],
+  "parent_program_review": {
+    "status": "verified",
+    "reviewed_at": "2026-10-11",
+    "source_ids": [
+      "uic-cs-ai-concentration-identity",
+      "uic-cs-ai-concentration-context"
+    ],
+    "notes": [
+      "Other computing majors listed in the announcement concern the revised programming sequence, not concentration eligibility. They are not added as parents. The inspected catalog establishes the parent award; the announcement establishes the AI relationship."
+    ]
+  }
 }

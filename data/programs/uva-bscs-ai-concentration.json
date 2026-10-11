@@ -643,5 +643,31 @@
       "Course descriptions, most prerequisites and public teaching resources remain unverified.",
       "Credit units and unstated course credit amounts remain unknown."
     ]
+  },
+  "parent_programs": [
+    {
+      "id": "computer-science-bs",
+      "title": "Computer Science",
+      "award_level": "BS",
+      "award_label": null,
+      "relationship": "concentration",
+      "parent_program_id": null,
+      "eligibility": "Use the published BS route; the page introduces the concentrations for Fall 2026.",
+      "source_ids": [
+        "uva-bscs-ai-concentration-identity"
+      ],
+      "locator": "AI Concentration advising page: separate BS Computer Science concentration section and requirements.",
+      "reviewed_at": "2026-10-11"
+    }
+  ],
+  "parent_program_review": {
+    "status": "verified",
+    "reviewed_at": "2026-10-11",
+    "source_ids": [
+      "uva-bscs-ai-concentration-identity"
+    ],
+    "notes": [
+      "The advising page distinguishes BA and BS routes. Each Atlas concentration record retains its own parent rather than assigning both awards to both curricula."
+    ]
   }
 }

@@ -121,6 +121,16 @@
       "catalog_year": null,
       "locator": "AI for Business Innovation entry, cohort note and specialization FAQs",
       "confidence": "high"
+    },
+    {
+      "id": "stony-brook-ai-business-innovation-specialization-parent-6",
+      "url": "https://www.stonybrook.edu/business/undergraduate/business-management-major.html",
+      "title": "Business Management Major",
+      "fetched_at": "2026-10-11T03:24:48+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Bachelor of Science in Business Management heading and AI for Business Innovation specialization list",
+      "confidence": "high"
     }
   ],
   "outcomes": [],
@@ -146,6 +156,34 @@
     ],
     "metadata_gaps": [
       "All course metadata and specialization-specific learning outcomes remain unverified."
+    ]
+  },
+  "parent_programs": [
+    {
+      "id": "business-management-bs",
+      "title": "Business Management",
+      "award_level": "BS",
+      "award_label": "Bachelor of Science",
+      "relationship": "specialization",
+      "parent_program_id": null,
+      "eligibility": "The specialization page excludes students graduating by May 2027.",
+      "source_ids": [
+        "stony-brook-ai-business-innovation-specialization-official",
+        "stony-brook-ai-business-innovation-specialization-parent-6"
+      ],
+      "locator": "Business Management Major: Bachelor of Science degree heading and five specializations including AI for Business Innovation.",
+      "reviewed_at": "2026-10-11"
+    }
+  ],
+  "parent_program_review": {
+    "status": "verified",
+    "reviewed_at": "2026-10-11",
+    "source_ids": [
+      "stony-brook-ai-business-innovation-specialization-official",
+      "stony-brook-ai-business-innovation-specialization-parent-6"
+    ],
+    "notes": [
+      "The separate parent-major page supplies the degree and award; the specialization page supplies the exact path and cohort limitation."
     ]
   }
 }

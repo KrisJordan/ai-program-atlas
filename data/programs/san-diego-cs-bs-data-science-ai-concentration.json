@@ -467,5 +467,33 @@
       "Course descriptions, prerequisites and public course sites/syllabi not reviewed.",
       "Concentration-specific learning outcomes and first offered date not verified."
     ]
+  },
+  "parent_programs": [
+    {
+      "id": "computer-science-bs",
+      "title": "Computer Science",
+      "award_level": "BS",
+      "award_label": null,
+      "relationship": "concentration",
+      "parent_program_id": null,
+      "eligibility": null,
+      "source_ids": [
+        "san-diego-cs-bs-data-science-ai-concentration-catalog",
+        "san-diego-cs-bs-data-science-ai-concentration-overview"
+      ],
+      "locator": "Rendered Computer Science BS program requirements heading; optional Data Science and Artificial Intelligence concentration subsection; separate program overview degree designation.",
+      "reviewed_at": "2026-10-11"
+    }
+  ],
+  "parent_program_review": {
+    "status": "verified",
+    "reviewed_at": "2026-10-11",
+    "source_ids": [
+      "san-diego-cs-bs-data-science-ai-concentration-catalog",
+      "san-diego-cs-bs-data-science-ai-concentration-overview"
+    ],
+    "notes": [
+      "The separately published BS curriculum establishes this parent. The other Computer Science award has its own concentration record and is not silently merged. Public rendered program fragments were reread; no restricted endpoint was bypassed."
+    ]
   }
 }

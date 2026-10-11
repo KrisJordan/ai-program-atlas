@@ -353,5 +353,31 @@
     "Metadata pass checked all nine routes against the department directory and current general catalog. Five exact electives (CS 342, 344M, 344R, 371R, 376) now have original summaries and source-qualified prerequisites. The aggregate CS 343(H), CS 363M (378H), CS 371N and named CS 378 Practical Applications of NLP retain null descriptions/prerequisites: current public sources do not establish an exact unambiguous route match. In particular the catalog uses X-prefixed codes and Principles of Machine Learning I rather than the PDF’s printed label; no equivalence is inferred.",
     "All nine source-printed 3xx course routes receive 3 semester credits under the separately registered official Course Numbers policy. The department’s weekly lecture hours were not used as credits. Course source_id identifies the description/prerequisite source for the five exact matches; the concentration PDF remains the requirement-pool authority, and the credit-policy source supports every numerical credit/unit value.",
     "Bounded local policy review covered the concentration directory, dated course-list PDF, dedicated legacy page and current academic advising page. They direct current CS students to an adviser but do not establish a separate concentration grade/residence threshold, declaration deadline, recognition process or eligible host-degree list. Confirmation is needed from UT CS undergraduate advising (under-info@cs.utexas.edu), including the PDF/legacy course conflict. Broader host-degree requirements remain outside this concentration inventory; no missing numerical policy is treated as zero or no requirement."
-  ]
+  ],
+  "parent_programs": [
+    {
+      "id": "computer-science-award-unverified",
+      "title": "Computer Science",
+      "award_level": null,
+      "award_label": null,
+      "relationship": "concentration",
+      "parent_program_id": null,
+      "eligibility": null,
+      "source_ids": [
+        "ut-austin-cs-ml-ai-concentration-directory"
+      ],
+      "locator": "Computer Science concentrations directory: undergraduate CS students and Machine Learning & Artificial Intelligence concentration.",
+      "reviewed_at": "2026-10-11"
+    }
+  ],
+  "parent_program_review": {
+    "status": "partial",
+    "reviewed_at": "2026-10-11",
+    "source_ids": [
+      "ut-austin-cs-ml-ai-concentration-directory"
+    ],
+    "notes": [
+      "The official directory identifies Computer Science students but does not assign eligible awards. The separate degree offerings do not prove whether BS, BSA or both qualify; award eligibility remains unresolved. No award is inferred from the host college or an AI hub."
+    ]
+  }
 }

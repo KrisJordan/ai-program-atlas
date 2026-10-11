@@ -384,6 +384,16 @@
       "catalog_year": null,
       "locator": "Faculty statement identifies Artificial Intelligence as CIS4210/5210; corroborates course identity, not a current syllabus term",
       "confidence": "high"
+    },
+    {
+      "id": "penn-concentration-ai-cs-parent-5",
+      "url": "https://www.cis.upenn.edu/computer-science-bse/",
+      "title": "Bachelor of Science in Engineering, Computer Science",
+      "fetched_at": "2026-10-11T03:24:47+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Degree heading and Computer Science BSE concentration eligibility paragraph",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -418,6 +428,34 @@
       "Core options have verified names, offering-specific descriptions and public course resources; current prerequisite evidence is limited to Fall2026 CIS4190/5190 and Summer2026 CIS5210.",
       "Individual credits remain unknown for all listed courses. Elective descriptions/prerequisites and additional public syllabi remain unverified.",
       "CIS4210 Fall2022 and CIS5200 Spring2023 examples do not establish current offering requirements."
+    ]
+  },
+  "parent_programs": [
+    {
+      "id": "computer-science-bse",
+      "title": "Computer Science",
+      "award_level": "BSE",
+      "award_label": "Bachelor of Science in Engineering",
+      "relationship": "concentration",
+      "parent_program_id": null,
+      "eligibility": null,
+      "source_ids": [
+        "penn-concentration-ai-cs-curriculum",
+        "penn-concentration-ai-cs-parent-5"
+      ],
+      "locator": "Concentrations page CSCI eligibility; Computer Science BSE degree page explicitly permits concentrations.",
+      "reviewed_at": "2026-10-11"
+    }
+  ],
+  "parent_program_review": {
+    "status": "verified",
+    "reviewed_at": "2026-10-11",
+    "source_ids": [
+      "penn-concentration-ai-cs-curriculum",
+      "penn-concentration-ai-cs-parent-5"
+    ],
+    "notes": [
+      "The source connects concentrations to Computer Science BSE. The separately discussed BAS and the separate Artificial Intelligence BSE are not established as parents of this record."
     ]
   }
 }

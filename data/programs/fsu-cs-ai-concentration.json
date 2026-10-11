@@ -395,5 +395,33 @@
       "Course descriptions, public course sites, example syllabi and source-stated program outcomes are unverified.",
       "Course prerequisites and credit units remain unknown except where explicitly sourced."
     ]
+  },
+  "parent_programs": [
+    {
+      "id": "computer-science-b-s",
+      "title": "Computer Science",
+      "award_level": "B.S.",
+      "award_label": null,
+      "relationship": "concentration",
+      "parent_program_id": null,
+      "eligibility": null,
+      "source_ids": [
+        "fsu-cs-ai-concentration-identity",
+        "fsu-cs-ai-concentration-context"
+      ],
+      "locator": "Undergraduate directory: AI Concentration link is a child of the B.S. Computer Science Major list item; separate B.A. list item has no such child.",
+      "reviewed_at": "2026-10-11"
+    }
+  ],
+  "parent_program_review": {
+    "status": "verified",
+    "reviewed_at": "2026-10-11",
+    "source_ids": [
+      "fsu-cs-ai-concentration-identity",
+      "fsu-cs-ai-concentration-context"
+    ],
+    "notes": [
+      "Parent evidence uses the actual nested undergraduate-directory structure, not mere page adjacency. The AI detail page remains limited and no full curriculum is inferred."
+    ]
   }
 }

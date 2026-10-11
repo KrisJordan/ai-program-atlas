@@ -649,6 +649,16 @@
       "catalog_year": null,
       "locator": "Exact LGST 2420 course block; description; no prerequisite field published",
       "confidence": "high"
+    },
+    {
+      "id": "penn-concentration-ai-business-parent-3",
+      "url": "https://undergrad.wharton.upenn.edu/flexible-curriculum/",
+      "title": "Wharton undergraduate flexible curriculum",
+      "fetched_at": "2026-10-11T03:24:43+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "BS in Economics heading; concentrations within the undergraduate degree",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -696,6 +706,36 @@
       "STAT4230 and LGST2420 descriptions are paraphrased from department sources; STAT4230 prerequisite alternatives and concurrent-enrollment permission are verified. Other descriptions and prerequisites remain unknown.",
       "Core credits remain sourced to concentration requirements. Additional individual credit values and public course resources are not comprehensively verified.",
       "Wharton syllabus contents could not be accessed through the safe fetcher; no syllabus links are promoted from unvisited contents."
+    ]
+  },
+  "parent_programs": [
+    {
+      "id": "economics-bs",
+      "title": "Economics",
+      "award_level": "BS",
+      "award_label": "Bachelor of Science",
+      "relationship": "concentration",
+      "parent_program_id": null,
+      "eligibility": null,
+      "source_ids": [
+        "penn-concentration-ai-business-curriculum",
+        "penn-concentration-ai-business-parent-3",
+        "penn-concentration-ai-business-credential"
+      ],
+      "locator": "Wharton Flexible Curriculum, BS in Economics; Concentrations introductory degree statement and Artificial Intelligence for Business listing.",
+      "reviewed_at": "2026-10-11"
+    }
+  ],
+  "parent_program_review": {
+    "status": "verified",
+    "reviewed_at": "2026-10-11",
+    "source_ids": [
+      "penn-concentration-ai-business-curriculum",
+      "penn-concentration-ai-business-parent-3",
+      "penn-concentration-ai-business-credential"
+    ],
+    "notes": [
+      "This is a concentration in the Wharton Economics bachelor award. Joint administration by OID and Statistics and Data Science is not a joint degree or two parent programs."
     ]
   }
 }

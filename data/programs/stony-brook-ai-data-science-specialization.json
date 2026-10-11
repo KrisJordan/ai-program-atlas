@@ -55,5 +55,31 @@
     "Official current admissions directory lists AI and Data Science within CS BS; readable Fall 2024 bulletin establishes declarable specialization and requirements. Current catalog URLs failed to return content. Concentration identity confirmed; current detailed curriculum remains unverified. Do not present 2024 rules as current.",
     "2026-10-10 curriculum follow-up confirmed that the readable specialization rules are explicitly Fall 2024. The current bulletin entry point https://www.stonybrook.edu/sb/bulletin/ hit a cross-origin robots redirect requiring review; fetch stopped. Historical course rules were not promoted as current. Curriculum remains pending, current activity unknown.",
     "2026-10-10 canonical access review: the main university host's robots policy permits the identified public pages. The current CS URL https://www.stonybrook.edu/catalog/undergraduate/program/computer-science-bs/ redirects to the catalog service, whose robots request fails TLS certificate verification. This transport/trust failure does not establish a publisher denial, discontinuation or current curriculum. TLS verification remains enabled; Fall 2024 requirements are still historical."
-  ]
+  ],
+  "parent_programs": [
+    {
+      "id": "computer-science-bachelor-of-science",
+      "title": "Computer Science",
+      "award_level": null,
+      "award_label": "Bachelor of Science",
+      "relationship": "specialization",
+      "parent_program_id": null,
+      "eligibility": null,
+      "source_ids": [
+        "stony-brook-ai-data-science-specialization-identity"
+      ],
+      "locator": "Computer Science bulletin Degrees and Requirements: major leads to Bachelor of Science; Specialization in Artificial Intelligence and Data Science section.",
+      "reviewed_at": "2026-10-11"
+    }
+  ],
+  "parent_program_review": {
+    "status": "verified",
+    "reviewed_at": "2026-10-11",
+    "source_ids": [
+      "stony-brook-ai-data-science-specialization-identity"
+    ],
+    "notes": [
+      "Parent relationship is explicit in the inspected current-fall24 bulletin route. Its version limitation is retained; this bounded review does not assert a newer full curriculum or derive an award from a department name."
+    ]
+  }
 }

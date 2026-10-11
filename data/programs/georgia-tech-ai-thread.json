@@ -749,5 +749,31 @@
     "The department required-course list is mapped separately from eight paired catalog routes. Full paired curricula, free-elective suggestions, overlapping-course substitutions and remaining completion/declaration policies are unexpanded; curriculum is partial.",
     "Department course credits are numeric but the credit unit is unnormalized. Alternative-course row titles are preserved as source labels; course-level descriptions/prerequisites are not inferred.",
     "No verified date of renaming, first offering or independent transcript credential."
-  ]
+  ],
+  "parent_programs": [
+    {
+      "id": "computer-science-bs",
+      "title": "Computer Science",
+      "award_level": "BS",
+      "award_label": "Bachelor of Science",
+      "relationship": "track",
+      "parent_program_id": null,
+      "eligibility": "The AI Thread is one of the two Threads selected for the Computer Science BS.",
+      "source_ids": [
+        "georgia-tech-ai-thread-catalog"
+      ],
+      "locator": "Bachelor of Science in Computer Science catalog, Threads curriculum: select two Threads; Artificial Intelligence entry.",
+      "reviewed_at": "2026-10-11"
+    }
+  ],
+  "parent_program_review": {
+    "status": "verified",
+    "reviewed_at": "2026-10-11",
+    "source_ids": [
+      "georgia-tech-ai-thread-catalog"
+    ],
+    "notes": [
+      "Georgia Tech calls this a Thread, normalized here as a track. A pair of Threads does not create multiple independent parent degrees."
+    ]
+  }
 }

@@ -105,5 +105,31 @@
     "2026-10-11: independent official public context read through the ordinary web reader. Default local scraper stopped because robots.txt returned403 for the main and Engineering hosts; no robots restriction was bypassed. The new adapter can parse a permitted future/public export and cannot manufacture curriculum from aims.",
     "Current catalog link observed on the Engineering CSE page resolves to https://catalog.ucmerced.edu/ and returned403 through the ordinary reader. This precise URL supplements the earlier unspecified catalog failure; it does not establish absence or discontinuation.",
     "The six outcomes are explicitly host CSE degree outcomes and do not claim to be additional or specific AI-emphasis outcomes."
-  ]
+  ],
+  "parent_programs": [
+    {
+      "id": "computer-science-and-engineering-b-s",
+      "title": "Computer Science and Engineering",
+      "award_level": "B.S.",
+      "award_label": null,
+      "relationship": "emphasis",
+      "parent_program_id": null,
+      "eligibility": null,
+      "source_ids": [
+        "uc-merced-cse-ai-emphasis-identity"
+      ],
+      "locator": "Official majors/minors directory: Computer Science and Engineering, B.S. entry contains Artificial Intelligence Emphasis.",
+      "reviewed_at": "2026-10-11"
+    }
+  ],
+  "parent_program_review": {
+    "status": "verified",
+    "reviewed_at": "2026-10-11",
+    "source_ids": [
+      "uc-merced-cse-ai-emphasis-identity"
+    ],
+    "notes": [
+      "This emphasis belongs to Computer Science and Engineering, not the separate Computer Science BS or the separately cataloged Artificial Intelligence BS. The independent public directory supplies the relationship despite the catalog-access barrier."
+    ]
+  }
 }

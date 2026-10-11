@@ -958,5 +958,31 @@
     "The finite 22-course-page queue is reviewed: 22 original description summaries, 21 source-stated prerequisite/corequisite strings, and one unstated prerequisite field (COM 1300) retained as null. COM 3640/4010 prerequisite-or-corequisite alternatives, COM 3800 corequisite and COM 4020 prerequisite alternatives remain explicit. Prerequisite presence does not establish course availability or individual eligibility.",
     "Institutional decisions remain for transfer acceptance, substitutions, CS summer permission and individual residence determinations. All 22 current linked course pages and the credit-policy immediate link chain were inspected successfully. Section-specific teaching sites/syllabi and launch-date or assessed-outcome research remain outside this bounded pass; they are not declared unavailable.",
     "Course source_id now identifies its exact catalog course page; the requirement node still cites the AI concentration table. The separately registered credit-hour-definition source supports semester normalization for every course and the total. Raw course-page parsers leave units unknown; applying the reviewed PDF definition is a separate curated step, and PDF refresh requires a permitted retrieval/extraction and visual review."
-  ]
+  ],
+  "parent_programs": [
+    {
+      "id": "computer-science-bs",
+      "title": "Computer Science",
+      "award_level": "BS",
+      "award_label": "Bachelor of Science",
+      "relationship": "concentration",
+      "parent_program_id": null,
+      "eligibility": "Published in the Yeshiva College undergraduate Computer Science program.",
+      "source_ids": [
+        "yeshiva-cs-ai-concentration-catalog"
+      ],
+      "locator": "Yeshiva College Computer Science, BS catalog heading; Bachelor of Science program definition and Artificial Intelligence concentration.",
+      "reviewed_at": "2026-10-11"
+    }
+  ],
+  "parent_program_review": {
+    "status": "verified",
+    "reviewed_at": "2026-10-11",
+    "source_ids": [
+      "yeshiva-cs-ai-concentration-catalog"
+    ],
+    "notes": [
+      "The inspected source establishes Yeshiva College Computer Science BS. A different college’s Computer Science BA is not inferred as another parent."
+    ]
+  }
 }

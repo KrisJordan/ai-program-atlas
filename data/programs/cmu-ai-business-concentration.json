@@ -529,5 +529,33 @@
       "Four of the nine course blocks state no prerequisite field; null means unknown, not no prerequisite.",
       "Current term availability and independent transcript notation are unverified."
     ]
+  },
+  "parent_programs": [
+    {
+      "id": "business-administration-b-s",
+      "title": "Business Administration",
+      "award_level": "B.S.",
+      "award_label": "Bachelor of Science",
+      "relationship": "concentration",
+      "parent_program_id": null,
+      "eligibility": null,
+      "source_ids": [
+        "cmu-ai-business-concentration-catalog",
+        "cmu-ai-business-concentration-tepper-policy"
+      ],
+      "locator": "Business Administration, B.S. catalog heading; Concentration Areas, Artificial Intelligence and Business; Tepper undergraduate degree description.",
+      "reviewed_at": "2026-10-11"
+    }
+  ],
+  "parent_program_review": {
+    "status": "verified",
+    "reviewed_at": "2026-10-11",
+    "source_ids": [
+      "cmu-ai-business-concentration-catalog",
+      "cmu-ai-business-concentration-tepper-policy"
+    ],
+    "notes": [
+      "BA in some concentration prose abbreviates Business Administration, not Bachelor of Arts. The catalog parent is Business Administration, B.S.; optional additional-major arrangements do not create another parent."
+    ]
   }
 }
