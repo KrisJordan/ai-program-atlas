@@ -1,5 +1,6 @@
 """Exact BS core subjects, separate from their Computer Science table grouping."""
 IDENTITIES = {
+    '99-101': ('Core@CMU', 'human_context'),
     '15-122': ('Principles of Imperative Computation', 'foundations'),
     '15-150': ('Principles of Functional Programming', 'foundations'),
     '15-210': ('Parallel and Sequential Data Structures and Algorithms', 'foundations'),

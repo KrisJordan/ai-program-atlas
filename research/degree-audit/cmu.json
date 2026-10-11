@@ -34,6 +34,20 @@
           "locator": "36-401 course description",
           "checked_at": "2026-10-11",
           "access_status": "accessible; inspected existing verified Fetcher cache"
+        },
+        {
+          "url": "https://coursecatalog.web.cmu.edu/intercollegeprograms/courses/",
+          "catalog_year": "2026-2027",
+          "locator": "99-101 Core@CMU exact current course block",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible via normal robots-aware Fetcher"
+        },
+        {
+          "url": "https://www.cmu.edu/c-cm/",
+          "catalog_year": null,
+          "locator": "Public Core4 course overview",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible via normal robots-aware Fetcher"
         }
       ],
       "checks": {
@@ -42,7 +56,7 @@
         "elective_pools": "Previous finite-pool extraction retained. Independent subject/identity review of all pools continues; a CS-table location does not determine subject category.",
         "prerequisites": "Reread core descriptions: C-minimum dependencies retained, and first-year seminar is limited to SCS first-years. These are not automatically new fixed course obligations. All elective prerequisites remain unreviewed.",
         "credits_and_units": "CMU official units retained. The five CS and two AI courses each state12units; seminar07-128 states3. No semester-hour conversion. Broader overlap/totals second pass ongoing.",
-        "classification": "Manual fixed arithmetic after independent structural correction:4foundations,4mathematics,1systems,2AI,2explicitly unclassified other. Seven technical CS/AI descriptions and four mathematical descriptions reviewed; the seminar uncertainties remain explicit.",
+        "classification": "Thirteen fixed identities independently reviewed:4foundations,4mathematics,2AI/ML,1systems,1human_context (99-101),1unclassified (07-128). University-wide current description establishes Core4 communication/collaboration/information/intercultural competencies; no programming subject is inferred from its historical course name. Remaining option/course inventory review continues.",
         "family_composition": "No family inheritance. Shared parser modules do not make BS/minor/additional-major curricula interchangeable; this correction is scoped to BS.",
         "degree_wide_requirements": "Earlier complete inventory and audit remain separate from this incomplete independent correctness review. Broader policy and pool recheck remains accessible work."
       },
@@ -82,11 +96,20 @@
           "evidence_urls": [
             "https://coursecatalog.web.cmu.edu/schools-colleges/schoolofcomputerscience/artificialintelligence/artificial-intelligence-bs/"
           ]
+        },
+        {
+          "issue": "Required99-101 subject was unknown from the degree table alone.",
+          "correction": "Current university-wide course description and public course site establish human-context literacy competencies; explicit reviewed category replaces unknown.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://coursecatalog.web.cmu.edu/intercollegeprograms/courses/",
+            "https://www.cmu.edu/c-cm/"
+          ]
         }
       ],
       "blockers": [],
       "remaining_work": [
-        "Find authoritative99-101 subject description; independently review remaining degree/elective identities, descriptions and policies. No access denial is asserted."
+        "Independently review remaining degree/elective identities, descriptions and university policies. 99-101 content is now resolved; no access denial is asserted for the remaining work."
       ],
       "correction_status": "Verified fixed-core subject correction; full audit continues",
       "second_pass_status": "pending"

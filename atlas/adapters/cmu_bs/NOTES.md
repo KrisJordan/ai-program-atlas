@@ -95,3 +95,10 @@ Continued through the official course-directory links for 15-151 and 15-259. The
 ## Required mathematics correction — 2026-10-11
 
 An independent second pass found that four plain required rows under the catalog’s explicit **All of the following** mathematics directive were incorrectly encoded as choose-one singleton pools. The source-specific parser now validates that directive and emits required all nodes for 21-120, 21-122, 21-241 and 36-401. Real conditional substitution, multivariable alternatives and probability bundles remain choices; no global singleton-pool rule is introduced. The corrected fixed total is thirteen: four foundations, four mathematics, one systems, two AI/ML and two explicitly unclassified seminar/orientation records. Mathematics and Statistics directory descriptions substantiate the four newly reviewed mathematics classifications. A synthetic fixture checks both these exact roles and failure on a changed selection directive. The full correctness audit remains in progress; this correction does not certify unreviewed option subjects or policies.
+
+
+## Required Core@CMU subject evidence — 2026-10-11
+
+The current university-wide course directory identifies99-101 as a3-unit literacy/communication/collaboration/intercultural competency course. Its verified public homepage corroborates Core4. This resolves one fixed unknown as human_context; fixed13 now has4foundations,4math,2AI,1systems,1human and1unknown (07-128). No requirement membership or credits changed. The full correctness audit remains in progress.
+
+Normal Fetcher denied the catalog/search popup under robots; no bypass was attempted. The separately published directory https://coursecatalog.web.cmu.edu/intercollegeprograms/courses/ and homepage https://www.cmu.edu/c-cm/ both permitted normal access. No LMS, restricted partner page or private syllabus was opened. Rerunnable observation validates the current course identity, catalog edition, competency content and credit amount without emitting a manual review.

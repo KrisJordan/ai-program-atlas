@@ -18,11 +18,25 @@ def test_independent_thirteen_course_core_and_explicit_unknowns():
  p=json.loads(Path('data/programs/cmu-bs-ai.json').read_text());validate_program(p)
  r=requirement_profile(p)['required']
  assert r['count']==13
- assert r['categories']==dict(foundations=4,mathematics=4,ai_ml=2,systems=1,human_context=0,applications=0,electives=0,other=2)
+ assert r['categories']==dict(foundations=4,mathematics=4,ai_ml=2,systems=1,human_context=1,applications=0,electives=0,other=1)
  fixed=['15-122','15-150','15-210','15-213','15-251','07-280','07-380','07-128','99-101','21-120','21-122','21-241','36-401']
  ledger=json.loads(Path('research/degree-audit/cmu.json').read_text())['programs'][0]
  assert {next(c['code']for c in p['courses']if c['id']==cid)for cid in ledger['expected_course_ids']['required']}==set(fixed)
- for code in ['07-128','99-101']:
+ for code in ['07-128']:
   c=next(c for c in p['courses']if c['code']==code)
   assert c['category']=='other'and c['category_review']['status']=='unclassified'
  assert '15-112'not in fixed
+
+
+def test_core_competency_description_and_changed_subject_guard():
+ import pytest
+ from atlas.adapters.cmu_bs.core_seminar import parse
+ html='<h1>Carnegie Mellon University-Wide Studies Courses</h1><p>2026-2027 Catalog</p><dl class="courseblock"><dt>99-101 Core@CMU</dt><dd>Fall and Spring: 3 units<br>Collaboration and Teamwork; Communication and Presentation; Information and Data Literacy; Intercultural and Global Literacy.</dd></dl>'
+ observed=parse(html)
+ c=observed['courses'][0]
+ assert c['category']=='human_context' and c['credits']==3 and c['prerequisites']is None
+ assert 'category_review'not in c and 'curriculum_audit'not in observed
+ changed=parse(html.replace('3 units','4 units'))
+ assert changed['courses'][0]['credits']==4 and changed['observed_description_digests']!=observed['observed_description_digests']
+ with pytest.raises(ValueError):parse(html.replace('Communication','Programming'))
+ with pytest.raises(ValueError):parse(html.replace('99-101 Core@CMU','99-102 Core@CMU'))

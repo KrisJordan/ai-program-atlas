@@ -353,3 +353,7 @@ from atlas.adapters.cmu_bs.core_enrichment import MINOR, OPTIONS, parse_minor_ac
 for _url in (MINOR, OPTIONS):
     SOURCES.append(_url)
     SOURCE_PARSERS[_url] = lambda html, url=_url: parse_minor_access(html, url)
+
+from .core_seminar import URL as CORE_SEMINAR_URL, SITE as CORE_COURSE_SITE, parse as parse_core_seminar
+SOURCES.extend([CORE_SEMINAR_URL, CORE_COURSE_SITE])
+SOURCE_PARSERS[CORE_SEMINAR_URL] = parse_core_seminar
