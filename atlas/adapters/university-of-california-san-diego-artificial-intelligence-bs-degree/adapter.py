@@ -276,3 +276,36 @@ for _review_url, _review_parser in comm_reviews.SOURCE_PARSERS.items():
         raise ValueError('UCSD COMM source needs explicit parser composition')
     SOURCES += (_review_url,)
     SOURCE_PARSERS[_review_url] = _review_parser
+
+from atlas.adapters import ucsd_chin_reviews as chin_reviews
+_CHIN_URL = chin_reviews.SPEC['sources']['CHIN']['url']
+_CHIN_MEMBERSHIP_PARSER = SOURCE_PARSERS[_CHIN_URL]
+
+def parse_reviewed_chinese(html):
+    result = _CHIN_MEMBERSHIP_PARSER(html)
+    content = chin_reviews.parse_observations(html)
+    courses = {c['id']: c for c in result['courses']}
+    for observation in content['courses']:
+        if observation['id'] not in courses:
+            raise ValueError('Reviewed Chinese content has no observed membership')
+        courses[observation['id']].update(observation)
+    return {**result, 'courses': list(courses.values()),
+            'source_dispositions': content['source_dispositions']}
+
+SOURCE_PARSERS[_CHIN_URL] = parse_reviewed_chinese
+
+# Anthropology's shared URL must retain the earlier ANTH/ANSC observations.
+from atlas.adapters import ucsd_anar_reviews as anar_reviews
+
+def parse_reviewed_anthropology(html):
+    outputs = [anth_ansc_reviews.parse_observations(html), anar_reviews.parse_observations(html)]
+    courses = [c for result in outputs for c in result['courses']]
+    if len({c['id'] for c in courses}) != len(courses):
+        raise ValueError('Duplicate reviewed Anthropology course ID')
+    return {'id': PROGRAM_ID, 'courses': courses,
+            'source_dispositions': [d for result in outputs for d in result['source_dispositions']]}
+
+_ANTHROPOLOGY_URL = anar_reviews.SPEC['sources']['ANAR']['url']
+if _ANTHROPOLOGY_URL not in SOURCE_PARSERS:
+    raise ValueError('Expected existing Anthropology source observer')
+SOURCE_PARSERS[_ANTHROPOLOGY_URL] = parse_reviewed_anthropology

@@ -418,3 +418,7 @@ All 53 exact USP blocks were read in full; four absent headings remain explicit.
 ### UCSD Communication integration — 2026-10-11
 
 Delegated review read all 41 exact current course blocks; primary checked seven boundary examples before integrating 39 approved observations. Four absent headings and two title/version holds remain explicit. The 31 human-context/four applied/one mixed/three unknown judgments preserve research-topic limits and distinguish production methods from media themes. Existing role-ID sets and counts are unchanged; current contextual subjects are1611other/543human/55applications/7foundations/23systems/2math. ANAR36 is under delegated review; additional identified chapters remain active.
+
+### UCSD Chinese and archaeology source batches — 2026-10-11
+
+Primary reviewed all41 Chinese descriptions; delegated review read28ANAR blocks with15 primary boundary checks. Exact methods versus language/culture classifications and variable/repeat/admission conditions are retained. Eight unmatchedANAR codes have bounded unknown dispositions. CHIN's same-URL membership parser retains43rules; Anthropology's existing72observations are composed with28ANAR records. Neither source enrichment changes the manually enumerated8/119/2241partition. Context categories now1547other/600human/62applications/7foundations/23systems/2math. Further identified accessible subjects remain in progress.

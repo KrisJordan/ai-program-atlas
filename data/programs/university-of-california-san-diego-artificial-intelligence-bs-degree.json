@@ -898,7 +898,7 @@
       "fetched_at": "2026-10-11T07:06:54+00:00",
       "source_date": null,
       "catalog_year": "2026–27",
-      "locator": "Delegated full-block course-content review; primary integration retains exact held identities and eligibility conditions",
+      "locator": "Delegated full-block course-content review; primary integration retains exact held identities and eligibility conditions; ANAR28 full-block contributor review with primary checks of 100/114–120/135/146/155/155S/157/157S/160/182",
       "confidence": "high"
     },
     {
@@ -959,6 +959,16 @@
       "source_date": null,
       "catalog_year": "2026–27",
       "locator": "Contributor read all 41 exact blocks among 45 targets; primary checked 101E/102D/102C/120P/124A/114J/194",
+      "confidence": "high"
+    },
+    {
+      "id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses",
+      "url": "https://catalog.ucsd.edu/courses/CHIN.html",
+      "title": "UC San Diego Chinese Studies course descriptions",
+      "fetched_at": "2026-10-11T01:33:32+00:00",
+      "source_date": null,
+      "catalog_year": "2026–27",
+      "locator": "All41 represented full course blocks, including nested-span descriptions20BM/196 and exact186CB anomaly",
       "confidence": "high"
     }
   ],
@@ -7276,15 +7286,30 @@
       "id": "ucsd-anar-117",
       "code": "ANAR 117",
       "name": "Archaeological Field and Lab Class, Southern California",
-      "description": null,
-      "prerequisites": "Upper-division standing or consent of instructor",
-      "credits": null,
+      "description": "Practices archaeological project design and field or laboratory data collection at Southern California sites.",
+      "prerequisites": "upper-division standing or consent of instructor.",
+      "credits": 8,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-dei-approved-pdf",
-      "url": "https://senate.ucsd.edu/media/513521/dei-list-of-courses.pdf",
+      "category": "applications",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+      "url": "https://catalog.ucsd.edu/courses/ANTH.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Eight quarter units. Fieldwork takes place in San Diego or adjacent counties. May be taken for credit up to two times. Program or materials fees may apply."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-dei-approved-pdf"
+        ],
+        "locator": "ANAR 117. Archaeological Field and Lab Class, Southern California (8)",
+        "rationale": "Research design, survey, excavation and laboratory analysis are explicitly hands-on archaeological methods, establishing applied domain practice.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-anbi-130",
@@ -10293,43 +10318,84 @@
       "id": "ucsd-anar-120",
       "code": "ANAR 120",
       "name": "Documenting Climate Change: Past and Present",
-      "description": null,
-      "prerequisites": "Upper-division standing or consent of instructor",
-      "credits": null,
+      "description": "Trains students in documenting past and present climate change, including work with geospatial data.",
+      "prerequisites": "upper-division standing or consent of instructor.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-climate-approved-pdf",
-      "url": "https://senate.ucsd.edu/media/742288/jtccer-course-list-fa25.pdf",
+      "category": "applications",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+      "url": "https://catalog.ucsd.edu/courses/ANTH.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-climate-approved-pdf"
+        ],
+        "locator": "ANAR 120. Documenting Climate Change: Past and Present (4)",
+        "rationale": "The explicit objectives are climate-documentation methods and geospatial data training, not historical-cultural interpretation or general software construction.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-anar-135",
       "code": "ANAR 135",
       "name": "Ancient Mediterranean Civilization",
-      "description": null,
-      "prerequisites": "Upper-division standing",
-      "credits": null,
+      "description": "Studies Mediterranean civilizations from the late Neolithic through the classical era through visits to archaeological sites.",
+      "prerequisites": "upper-division standing. Department approval required.",
+      "credits": 8,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-climate-approved-pdf",
-      "url": "https://senate.ucsd.edu/media/742288/jtccer-course-list-fa25.pdf",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+      "url": "https://catalog.ucsd.edu/courses/ANTH.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Eight quarter units. Students must apply for this study-abroad course; upper-division standing and department approval are required. May be taken for credit twice; program or materials fees may apply."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-climate-approved-pdf"
+        ],
+        "locator": "ANAR 135. Ancient Mediterranean Civilization (8)",
+        "rationale": "The course centers the origins and history of civilizations; site visits support that historical learning rather than establish technical excavation training.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-anar-153",
       "code": "ANAR 153",
       "name": "The Mysterious Maya",
-      "description": null,
-      "prerequisites": "Upper-division standing",
-      "credits": null,
+      "description": "Surveys Maya civilization through archaeology, anthropology and history from its early development to Spanish conquest.",
+      "prerequisites": "upper-division standing.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-climate-approved-pdf",
-      "url": "https://senate.ucsd.edu/media/742288/jtccer-course-list-fa25.pdf",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+      "url": "https://catalog.ucsd.edu/courses/ANTH.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-climate-approved-pdf"
+        ],
+        "locator": "ANAR 153. The Mysterious Maya (4)",
+        "rationale": "A historically bounded civilization survey supplies cultural and historical interpretation.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-ansc-134",
@@ -19323,197 +19389,367 @@
       "id": "ucsd-chin-165a",
       "code": "CHIN 165A",
       "name": "Business Chinese I",
-      "description": null,
+      "description": "Develops advanced Mandarin business communication, terminology and social conventions.",
       "prerequisites": "any one of the following or department approval through placement interview: CHIN 100CM, CHIN 100CN, CHIN 165B-C, CHIN 185A-B-C.",
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-language-chinese",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses",
       "url": "https://catalog.ucsd.edu/courses/CHIN.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses"
+        ],
+        "locator": "CHIN 165A. Business Chinese I (4); full current description and eligibility",
+        "rationale": "The source teaches communication skills in a business setting, not financial or management methods.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chin-165b",
       "code": "CHIN 165B",
       "name": "Business Chinese II",
-      "description": null,
+      "description": "Develops advanced Mandarin business communication, terminology and social conventions.",
       "prerequisites": "any one of the following or department approval through placement interview: CHIN 100CM, CHIN 100CN, CHIN 165A, CHIN 165C, CHIN 185A-B-C.",
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-language-chinese",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses",
       "url": "https://catalog.ucsd.edu/courses/CHIN.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses"
+        ],
+        "locator": "CHIN 165B. Business Chinese II (4); full current description and eligibility",
+        "rationale": "Business context supports explicit language learning rather than substantive business-method instruction.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chin-165c",
       "code": "CHIN 165C",
       "name": "Business Chinese III",
-      "description": null,
+      "description": "Develops advanced Mandarin business communication, terminology and social conventions.",
       "prerequisites": "any one of the following or department approval through placement interview: CHIN 100CM, CHIN 100CN, CHIN 165A-B, CHIN 185A-B-C.",
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-language-chinese",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses",
       "url": "https://catalog.ucsd.edu/courses/CHIN.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses"
+        ],
+        "locator": "CHIN 165C. Business Chinese III (4); full current description and eligibility",
+        "rationale": "The actual focus is oral and written communication, not business analytics or finance.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chin-169a",
       "code": "CHIN 169A",
       "name": "Medical Chinese I",
-      "description": null,
+      "description": "Develops conversational Mandarin and medical vocabulary for speaking, listening and reading in health-care settings.",
       "prerequisites": "any one of the following or department approval through placement interview: CHIN 165A-B-C, CHIN 169B, CHIN 182A-B-C.",
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-language-chinese",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses",
       "url": "https://catalog.ucsd.edu/courses/CHIN.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses"
+        ],
+        "locator": "CHIN 169A. Medical Chinese I (4); full current description and eligibility",
+        "rationale": "The medical setting is a language-learning context; no clinical or biomedical-method curriculum is described.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chin-169b",
       "code": "CHIN 169B",
       "name": "Medical Chinese II",
-      "description": null,
+      "description": "Develops conversational Mandarin and medical vocabulary for speaking, listening and reading in health-care settings.",
       "prerequisites": "any one of the following or department approval through placement interview: CHIN 165A-B-C, CHIN 169A, CHIN 182A-B-C.",
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-language-chinese",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses",
       "url": "https://catalog.ucsd.edu/courses/CHIN.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses"
+        ],
+        "locator": "CHIN 169B. Medical Chinese II (4); full current description and eligibility",
+        "rationale": "The source explicitly teaches medical communication rather than medicine itself.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chin-182a",
       "code": "CHIN 182A",
       "name": "Classical Chinese I",
-      "description": null,
+      "description": "Introduces classical Chinese structures and function words through pre-Qing fables.",
       "prerequisites": "any one of the following or department approval through placement interview: CHIN 165A-B-C, CHIN 169A-B, CHIN 182B-C, CHIN 185A-B-C.",
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-language-chinese",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses",
       "url": "https://catalog.ucsd.edu/courses/CHIN.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses"
+        ],
+        "locator": "CHIN 182A. Classical Chinese I (4); full current description and eligibility",
+        "rationale": "The actual curriculum is language and literary comprehension.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chin-182b",
       "code": "CHIN 182B",
       "name": "Classical Chinese II",
-      "description": null,
+      "description": "Studies classical Chinese structures and textual comprehension through philosophers including Kongzi and Mengzi.",
       "prerequisites": "any one of the following or department approval through placement interview: CHIN 165A-B-C, CHIN 169A-B, CHIN 182A, CHIN 182C, CHIN 185A-B-C.",
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-language-chinese",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses",
       "url": "https://catalog.ucsd.edu/courses/CHIN.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses"
+        ],
+        "locator": "CHIN 182B. Classical Chinese II (4); full current description and eligibility",
+        "rationale": "Philosophical selections support language and textual interpretation.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chin-182c",
       "code": "CHIN 182C",
       "name": "Classical Chinese III",
-      "description": null,
+      "description": "Studies classical Chinese through later texts, including Shiji and poetry, emphasizing structures and comprehension.",
       "prerequisites": "any one of the following or department approval through placement interview: CHIN 165A-B-C, CHIN 169A-B, CHIN 182A-B, CHIN 185A-B-C.",
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-language-chinese",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses",
       "url": "https://catalog.ucsd.edu/courses/CHIN.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses"
+        ],
+        "locator": "CHIN 182C. Classical Chinese III (4); full current description and eligibility",
+        "rationale": "Literary reading and language comprehension are explicit human-context subjects.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chin-185a",
       "code": "CHIN 185A",
       "name": "Readings in Chinese Culture and Society I",
-      "description": null,
+      "description": "Develops Mandarin reading and vocabulary through original texts and media about Chinese culture and society.",
       "prerequisites": "any one of the following or department approval through placement interview: CHIN 100CM, CHIN 100CN, CHIN 165A-B-C, CHIN 185B-C.",
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-language-chinese",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses",
       "url": "https://catalog.ucsd.edu/courses/CHIN.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses"
+        ],
+        "locator": "CHIN 185A. Readings in Chinese Culture and Society I (4); full current description and eligibility",
+        "rationale": "The stated content is linguistic and cultural interpretation.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chin-185b",
       "code": "CHIN 185B",
       "name": "Readings in Chinese Culture and Society II",
-      "description": null,
+      "description": "Develops Mandarin reading and vocabulary through original texts and media about Chinese culture and society.",
       "prerequisites": "any one of the following or department approval through placement interview: CHIN 100CM, CHIN 100CN, CHIN 165A-B-C, CHIN 185A, CHIN 185C.",
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-language-chinese",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses",
       "url": "https://catalog.ucsd.edu/courses/CHIN.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses"
+        ],
+        "locator": "CHIN 185B. Readings in Chinese Culture and Society II (4); full current description and eligibility",
+        "rationale": "The description centers cultural reading and language development.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chin-185c",
       "code": "CHIN 185C",
       "name": "Readings in Chinese Culture and Society III",
-      "description": null,
+      "description": "Develops Mandarin reading and vocabulary through original texts and media about Chinese culture and society.",
       "prerequisites": "any one of the following or department approval through placement interview: CHIN 100CM, CHIN 100CN, CHIN 165A-B-C, CHIN 185A-B.",
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-language-chinese",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses",
       "url": "https://catalog.ucsd.edu/courses/CHIN.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses"
+        ],
+        "locator": "CHIN 185C. Readings in Chinese Culture and Society III (4); full current description and eligibility",
+        "rationale": "Language skills and cultural interpretation are the explicit curriculum.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chin-186a",
       "code": "CHIN 186A",
       "name": "Readings in Chinese Economics, Politics, and Trade I",
-      "description": null,
+      "description": "Develops specialized Mandarin vocabulary, reading and translation through texts about economics, politics and trade.",
       "prerequisites": "any one of the following or department approval through placement interview: CHIN 100CM, CHIN 100CN, CHIN 186B-C.",
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-language-chinese",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses",
       "url": "https://catalog.ucsd.edu/courses/CHIN.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses"
+        ],
+        "locator": "CHIN 186A. Readings in Chinese Economics, Politics, and Trade I (4); full current description and eligibility",
+        "rationale": "Economics and trade supply reading topics; the course is explicitly advanced language instruction.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chin-186b",
       "code": "CHIN 186B",
       "name": "Readings in Chinese Economics, Politics, and Trade II",
-      "description": null,
+      "description": "Develops specialized Mandarin vocabulary, reading and translation through texts about economics, politics and trade.",
       "prerequisites": "any one of the following or department approval through placement interview: CHIN 100CM, CHIN 100CN, CHIN 186A, CHIN 186C.",
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-language-chinese",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses",
       "url": "https://catalog.ucsd.edu/courses/CHIN.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses"
+        ],
+        "locator": "CHIN 186B. Readings in Chinese Economics, Politics, and Trade II (4); full current description and eligibility",
+        "rationale": "The primary methods are linguistic reading and translation rather than economic analysis.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chin-186c",
       "code": "CHIN 186C",
       "name": "Readings in Chinese Economics, Politics, and Trade III",
-      "description": null,
+      "description": "Develops specialized Mandarin vocabulary, reading and translation through texts about economics, politics and trade.",
       "prerequisites": "any one of the following or department approval through placement interview: CHIN 100CM, CHIN 100CN, CHIN 186A, CHIN 186CB.",
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-language-chinese",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses",
       "url": "https://catalog.ucsd.edu/courses/CHIN.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "The printed prerequisite list ends with CHIN 186CB. This apparent code anomaly is preserved exactly, not silently changed to CHIN 186B."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses"
+        ],
+        "locator": "CHIN 186C. Readings in Chinese Economics, Politics, and Trade III (4); full current description and eligibility",
+        "rationale": "Language development remains the explicit purpose despite economic and political themes.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-lihl-112f",
@@ -24619,29 +24855,57 @@
       "id": "ucsd-anar-115",
       "code": "ANAR 115",
       "name": "Coastal Geomorphology and Environmental Change—Perspectives from Israel and the South-Eastern Mediterranean",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Studies coastal forms, sedimentary environments and environmental change through geomorphological research methods, emphasizing Israel.",
+      "prerequisites": "upper-division standing.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-table-environment",
-      "url": "https://docs.google.com/spreadsheets/u/0/d/e/2PACX-1vR-aC9cVI_o4xRZ8I_Go7Mkx-hSy6dcbPt8znZAuOFwDBI7lwfdAqtb1IgwV7D-poKWvNVJvlG3OA5V/pubhtml/sheet?headers=false&gid=1107304246",
+      "category": "applications",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+      "url": "https://catalog.ucsd.edu/courses/ANTH.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-table-environment"
+        ],
+        "locator": "ANAR 115. Coastal Geomorphology and Environmental Change—Perspectives from Israel and the South-Eastern Mediterranean (4)",
+        "rationale": "Coastal physical processes, research terminology and geomorphological methods are substantive earth-science knowledge and practice.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-anar-182",
       "code": "ANAR 182",
       "name": "Origins of Agriculture and Sedentism",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Examines explanations and evidence for the transition from mobile foraging to settled agricultural societies.",
+      "prerequisites": "upper-division standing.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-table-environment",
-      "url": "https://docs.google.com/spreadsheets/u/0/d/e/2PACX-1vR-aC9cVI_o4xRZ8I_Go7Mkx-hSy6dcbPt8znZAuOFwDBI7lwfdAqtb1IgwV7D-poKWvNVJvlG3OA5V/pubhtml/sheet?headers=false&gid=1107304246",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+      "url": "https://catalog.ucsd.edu/courses/ANTH.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "ANTH 3 is recommended preparation, not an additional stated prerequisite. The source labels this an archaeology-concentration course; that does not establish its AI-degree requirement role."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-table-environment"
+        ],
+        "locator": "ANAR 182. Origins of Agriculture and Sedentism (4)",
+        "rationale": "Theoretical interpretation of socio-evolutionary change organizes the course; it does not state practical farming or excavation-method training.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-anbi-132",
@@ -26661,30 +26925,62 @@
     {
       "id": "ucsd-anar-119s",
       "code": "ANAR 119S",
-      "name": "Archaeological Field and Laboratory Class",
-      "description": null,
-      "prerequisites": "Upper-division standing or instructor consent",
-      "credits": null,
+      "name": "Archaeological Field and Lab Class",
+      "description": "Introduces archaeological research design, excavation, data collection and post-excavation laboratory work in Moquegua, Peru.",
+      "prerequisites": "upper-division standing or consent of instructor.",
+      "credits": 8,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-sixth-elr-table",
-      "url": "https://docs.google.com/spreadsheets/u/0/d/e/2PACX-1vR7dTRWsk3I2X0t7p5IV-i19gVI3qRDpF5gdK6wA8p3G_H2qyDfkZASfQOEfoYy_-Tib_JlV_pjCjhv/pubhtml/sheet?headers=false&gid=1715831878",
+      "category": "applications",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+      "url": "https://catalog.ucsd.edu/courses/ANTH.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Eight quarter units. Field and laboratory work takes place in Moquegua, Peru. Course materials fees may apply.",
+        "Listed title: Archaeological Field and Laboratory Class. Current chapter title: Archaeological Field and Lab Class. The difference is a spelling, spacing, conjunction, capitalization or Lab/Laboratory variation; the specific subject remains aligned."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-sixth-elr-table"
+        ],
+        "locator": "ANAR 119S. Archaeological Field and Lab Class (8)",
+        "rationale": "The stated content teaches field and laboratory procedures, making applied archaeological methods primary.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-anar-155s",
       "code": "ANAR 155S",
       "name": "Study Abroad: Ancient Mesoamerica",
-      "description": null,
-      "prerequisites": "Application process; instructor consent",
-      "credits": null,
+      "description": "Introduces ancient Mesoamerica through visits to cities and museums, with itinerary and subject varying between offerings.",
+      "prerequisites": "students must apply and be accepted to the study abroad program to be given permission to enroll.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-sixth-elr-table",
-      "url": "https://docs.google.com/spreadsheets/u/0/d/e/2PACX-1vR7dTRWsk3I2X0t7p5IV-i19gVI3qRDpF5gdK6wA8p3G_H2qyDfkZASfQOEfoYy_-Tib_JlV_pjCjhv/pubhtml/sheet?headers=false&gid=1715831878",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+      "url": "https://catalog.ucsd.edu/courses/ANTH.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Itinerary and subject vary, and the course may be taken more than once. A combined maximum of twelve units applies across ANAR 155S and ANAR 155; this is not a twelve-unit requirement or a declaration of course identity.",
+        "Complementary to ANAR 154. Program or materials fees may apply. Students must apply and be accepted to the study-abroad program for permission to enroll."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-sixth-elr-table"
+        ],
+        "locator": "ANAR 155S. Study Abroad: Ancient Mesoamerica (4)",
+        "rationale": "The description establishes regionally bounded archaeological learning through cultural sites, without specifying a technical field-method objective.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-ansc-169",
@@ -28634,15 +28930,30 @@
       "id": "ucsd-anar-145s",
       "code": "ANAR 145S",
       "name": "Study Abroad: Egypt of the Pharaohs",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Introduces ancient Egyptian archaeology, history, art, architecture and hieroglyphs through visits to sites and museums.",
+      "prerequisites": "consent of instructor only.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-writing",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/udw/UDW_GE.html",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+      "url": "https://catalog.ucsd.edu/courses/ANTH.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Taught at Egyptian sites and museums. Complementary to ANAR 144, which is not stated as a prerequisite. Course/program fees may apply. Instructor consent only is the printed prerequisite."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-writing"
+        ],
+        "locator": "ANAR 145S. Study Abroad: Egypt of the Pharaohs (4)",
+        "rationale": "The specified content interprets an ancient civilization; field visits do not by themselves establish technical archaeological methods.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-anth-196a",
@@ -32657,16 +32968,31 @@
     {
       "id": "ucsd-anar-144",
       "code": "ANAR 144",
-      "name": "Pharaohs, Mummies, and Pyramids: Introduction to Egyptolog y",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Pharaohs, Mummies, and Pyramids: Introduction to Egyptology",
+      "description": "Surveys ancient Egyptian archaeology, history, art and architecture and the people who shaped the civilization.",
+      "prerequisites": "upper-division standing.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-africa",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/all-regions/africa.html",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+      "url": "https://catalog.ucsd.edu/courses/ANTH.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Listed title: Pharaohs, Mummies, and Pyramids: Introduction to Egyptolog y. Current chapter title: Pharaohs, Mummies, and Pyramids: Introduction to Egyptology. The difference is a spelling, spacing, conjunction, capitalization or Lab/Laboratory variation; the specific subject remains aligned."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-africa"
+        ],
+        "locator": "ANAR 144. Pharaohs, Mummies, and Pyramids: Introduction to Egyptology (4)",
+        "rationale": "The description is a historical-cultural survey rather than methods training.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-comm-104f",
@@ -33240,16 +33566,31 @@
     {
       "id": "ucsd-anar-118",
       "code": "ANAR 118",
-      "name": "Archaelogy of UC San Diego Campus",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Archaeology of the UC San Diego Campus",
+      "description": "Reviews early settlements on the UCSD campus and research on their inhabitants, environment and climate.",
+      "prerequisites": "upper-division standing or consent of instructor.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-north-america",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/all-regions/multiculturalism in north america -- FA21 and after.html",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+      "url": "https://catalog.ucsd.edu/courses/ANTH.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Listed title: Archaelogy of UC San Diego Campus. Current chapter title: Archaeology of the UC San Diego Campus. The difference is a spelling, spacing, conjunction, capitalization or Lab/Laboratory variation; the specific subject remains aligned."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-north-america"
+        ],
+        "locator": "ANAR 118. Archaeology of the UC San Diego Campus (4)",
+        "rationale": "The organizing objective is understanding early human lives; environmental background and discussion of research do not establish a coequal scientific-method curriculum.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-anth-120",
@@ -36832,114 +37173,232 @@
     {
       "id": "ucsd-anar-154",
       "code": "ANAR 154",
-      "name": "The Aztecs & Their Ancestors",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "The Aztecs and their Ancestors",
+      "description": "Surveys ancient Mexican societies through their economy, politics, kinship, religion and worldviews.",
+      "prerequisites": "upper-division standing.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-latin-america",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/all-regions/latin-america---fa21-and-after.html",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+      "url": "https://catalog.ucsd.edu/courses/ANTH.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Listed title: The Aztecs & Their Ancestors. Current chapter title: The Aztecs and their Ancestors. The difference is a spelling, spacing, conjunction, capitalization or Lab/Laboratory variation; the specific subject remains aligned."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-latin-america"
+        ],
+        "locator": "ANAR 154. The Aztecs and their Ancestors (4)",
+        "rationale": "Cultural and social organization through history is the explicit focus.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-anar-155",
       "code": "ANAR 155",
       "name": "Study Abroad: Ancient Mesoamerica",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Combines an introduction to Mesoamerican archaeology with practical field learning through visits to ancient cities and museums.",
+      "prerequisites": "students must apply to study abroad program and obtain consent of instructor.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
       "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-latin-america",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/all-regions/latin-america---fa21-and-after.html",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+      "url": "https://catalog.ucsd.edu/courses/ANTH.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "A combined maximum of twelve units applies across ANAR 155 and ANAR 155S. Program or materials fees may apply.",
+        "Students must apply to the study-abroad program and obtain instructor consent; do not replace this wording with the different acceptance requirement printed for ANAR 155S."
+      ],
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-latin-america"
+        ],
+        "locator": "ANAR 155. Study Abroad: Ancient Mesoamerica (4)",
+        "rationale": "The description explicitly promises practical field skills alongside regional archaeological study but does not specify the balance or detailed methods; human-context and applied-practice candidates are retained.",
+        "candidate_categories": [
+          "human_context",
+          "applications"
+        ]
+      }
     },
     {
       "id": "ucsd-anar-156",
       "code": "ANAR 156",
       "name": "The Archaeology of South America",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Traces South American societies from early settlement through the Inca and Spanish arrival using archaeological evidence.",
+      "prerequisites": "upper-division standing.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-latin-america",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/all-regions/latin-america---fa21-and-after.html",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+      "url": "https://catalog.ucsd.edu/courses/ANTH.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-latin-america"
+        ],
+        "locator": "ANAR 156. The Archaeology of South America (4)",
+        "rationale": "Archaeological evidence supports a historical account of social development.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-anar-157",
       "code": "ANAR 157",
       "name": "Early Empires of the Andes: The Middle Horizon",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Examines Wari and Tiwanaku empires through archaeological and ethnohistorical accounts of society, art, economy and conquest.",
+      "prerequisites": "upper-division standing or consent of instructor.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-latin-america",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/all-regions/latin-america---fa21-and-after.html",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+      "url": "https://catalog.ucsd.edu/courses/ANTH.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Students may not receive credit for both ANAR 157S and ANAR 157. No course identity or summer enrollment restriction is inferred for the unsuffixed course."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-latin-america"
+        ],
+        "locator": "ANAR 157. Early Empires of the Andes: The Middle Horizon (4)",
+        "rationale": "The course interprets the historical development of societies and empires; technology is one historical topic, not a technical practice objective.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-anar-157s",
       "code": "ANAR 157S",
       "name": "Early Empires of the Andes: The Middle Horizon",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Studies the Wari and Tiwanaku empires through archaeological and ethnohistorical evidence during summer study abroad.",
+      "prerequisites": "upper-division standing or consent of instructor.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-latin-america",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/all-regions/latin-america---fa21-and-after.html",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+      "url": "https://catalog.ucsd.edu/courses/ANTH.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Offered during summer study abroad. Students may not receive credit for both ANAR 157 and ANAR 157S; this exclusion does not certify identity."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-latin-america"
+        ],
+        "locator": "ANAR 157S. Early Empires of the Andes: The Middle Horizon (4)",
+        "rationale": "The substantive subject is cultural and political history, matching the stated historical inquiry rather than assuming methods from the study-abroad format.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-anar-158",
       "code": "ANAR 158",
       "name": "The Inca: Empire of the Andes",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Explores Inca history and culture using excavations, early colonial accounts and present-day Andean ethnography.",
+      "prerequisites": "upper-division standing or consent of instructor.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-latin-america",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/all-regions/latin-america---fa21-and-after.html",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+      "url": "https://catalog.ucsd.edu/courses/ANTH.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-latin-america"
+        ],
+        "locator": "ANAR 158. The Inca: Empire of the Andes (4)",
+        "rationale": "The sources are used to interpret culture and historical encounters, with no explicit excavation-skills objective.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-anar-159",
       "code": "ANAR 159",
       "name": "Pre-Hispanic Societies of the Caribbean Archipelago",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Studies pre-Hispanic Caribbean societies through material culture and connects colonial legacies to modern identity.",
+      "prerequisites": "upper-division standing.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-latin-america",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/all-regions/latin-america---fa21-and-after.html",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+      "url": "https://catalog.ucsd.edu/courses/ANTH.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-latin-america"
+        ],
+        "locator": "ANAR 159. Pre-Hispanic Societies of the Caribbean Archipelago (4)",
+        "rationale": "Historical social processes, colonialism and contemporary indigeneity establish human context.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-anar-160",
       "code": "ANAR 160",
       "name": "Ancient Maya: Archaeological Problems and Perspectives",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Studies a selected Maya region or site through archaeological, epigraphic and art-historical scholarship.",
+      "prerequisites": "upper-division standing and ANAR 153. Graduate students wishing to enroll should have already taken ANTH 202.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-latin-america",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/all-regions/latin-america---fa21-and-after.html",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+      "url": "https://catalog.ucsd.edu/courses/ANTH.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "May be taken for credit three times with content varying by region/site. Upper-division standing and ANAR 153 are required. The separate statement that graduate students should have taken ANTH 202 is retained with its graduate-student scope."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-latin-america"
+        ],
+        "locator": "ANAR 160. Ancient Maya: Archaeological Problems and Perspectives (4)",
+        "rationale": "Although the region varies, the stated primary literature and ancient Maya interpretive scope are specific enough for historical-cultural classification; no independent technical practice objective is supplied.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-ansc-106",
@@ -38230,15 +38689,28 @@
       "id": "ucsd-anar-124",
       "code": "ANAR 124",
       "name": "Archaeology of Asia",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Surveys Asian archaeology from early humans to states, examining how ancient societies shape present-day heritage.",
+      "prerequisites": "upper-division standing.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-asia-pacific",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/all-regions/asia-pacific.html",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+      "url": "https://catalog.ucsd.edu/courses/ANTH.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-asia-pacific"
+        ],
+        "locator": "ANAR 124. Archaeology of Asia (4)",
+        "rationale": "The description centers historical social development, achievements and cultural heritage rather than teaching a scientific technique.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-anbi-121",
@@ -38566,43 +39038,85 @@
       "id": "ucsd-chin-196",
       "code": "CHIN 196",
       "name": "Directed Thesis Research",
-      "description": null,
+      "description": "Conducts a faculty-supervised bachelor’s thesis in Chinese studies.",
       "prerequisites": "consent of instructor. (F,W,S)",
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "quarter_hours",
       "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-language-chinese",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses",
       "url": "https://catalog.ucsd.edu/courses/CHIN.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses"
+        ],
+        "locator": "CHIN 196. Directed Thesis Research (4); full current description and eligibility",
+        "rationale": "The selected thesis subject is not specified by the course description.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chin-198",
       "code": "CHIN 198",
       "name": "Directed Group Study in Chinese Studies",
-      "description": null,
+      "description": "Studies selected aspects of Chinese civilization through faculty-directed group work.",
       "prerequisites": "consent of instructor.",
       "credits": null,
       "credit_unit": "quarter_hours",
       "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-language-chinese",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses",
       "url": "https://catalog.ucsd.edu/courses/CHIN.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "The heading explicitly allows 2 or 4 quarter units. A scalar amount remains unknown; neither value is selected for the student.",
+        "The current source specifies P/NP grading only and instructor consent."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses"
+        ],
+        "locator": "CHIN 198. Directed Group Study in Chinese Studies (2 or 4); full current description and eligibility",
+        "rationale": "The particular selected topic is unspecified; no single subject category is certified from the program association.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chin-199",
       "code": "CHIN 199",
       "name": "Independent Study in Chinese Studies",
-      "description": null,
+      "description": "Undertakes faculty-supervised research or advanced reading in a selected Chinese-studies area.",
       "prerequisites": "consent of instructor.",
       "credits": null,
       "credit_unit": "quarter_hours",
       "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-language-chinese",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses",
       "url": "https://catalog.ucsd.edu/courses/CHIN.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "The heading explicitly allows 2 or 4 quarter units. A scalar amount remains unknown; neither value is selected for the student.",
+        "The current source specifies P/NP grading only and instructor consent."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses"
+        ],
+        "locator": "CHIN 199. Independent Study in Chinese Studies (2 or 4); full current description and eligibility",
+        "rationale": "The actual research or reading subject is unspecified.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-comm-104d",
@@ -43811,85 +44325,163 @@
       "id": "ucsd-anar-113",
       "code": "ANAR 113",
       "name": "Past, Present, and Future Perspectives on Natural Resources in Israel",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Examines Israel’s natural resources through ancient extraction and management cases and their modern economic roles.",
+      "prerequisites": "upper-division standing.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-middle-east",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/all-regions/middle-east.html",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+      "url": "https://catalog.ucsd.edu/courses/ANTH.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-middle-east"
+        ],
+        "locator": "ANAR 113. Past, Present, and Future Perspectives on Natural Resources in Israel (4)",
+        "rationale": "Resources organize historical and economic case studies; the source does not specify coequal geological analysis or extraction-method training.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-anar-114",
       "code": "ANAR 114",
       "name": "Environmental Hazards in Israel",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Uses Israeli geology and records of past disasters to assess earthquake, volcanic and tsunami hazards.",
+      "prerequisites": "upper-division standing.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-middle-east",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/all-regions/middle-east.html",
+      "category": "applications",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+      "url": "https://catalog.ucsd.edu/courses/ANTH.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-middle-east"
+        ],
+        "locator": "ANAR 114. Environmental Hazards in Israel (4)",
+        "rationale": "Understanding geology and current hazard risk is the primary scientific-domain objective; archaeological and historical records supply evidence.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-anar-116",
       "code": "ANAR 116",
       "name": "Sea Level Change—The Israel Case in World Perspective",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Introduces sea-level and climate research using proxies, marine indicators, dating methods and uncertainty.",
+      "prerequisites": "upper-division standing.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-middle-east",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/all-regions/middle-east.html",
+      "category": "applications",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+      "url": "https://catalog.ucsd.edu/courses/ANTH.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-middle-east"
+        ],
+        "locator": "ANAR 116. Sea Level Change—The Israel Case in World Perspective (4)",
+        "rationale": "The description explicitly teaches physical environmental research concepts and methods, not general mathematical theory or cultural history.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-anar-138",
       "code": "ANAR 138",
       "name": "Mesopotamia: The Emergence of Civilization",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Examines the emergence of the earliest cities and states in Mesopotamia and the ancient Near East.",
+      "prerequisites": "upper-division standing.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-middle-east",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/all-regions/middle-east.html",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+      "url": "https://catalog.ucsd.edu/courses/ANTH.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-middle-east"
+        ],
+        "locator": "ANAR 138. Mesopotamia: The Emergence of Civilization (4)",
+        "rationale": "Origins of cities and states are historical-social interpretation.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-anar-143",
       "code": "ANAR 143",
       "name": "Biblical Archaeology—Fact or Fiction",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Examines relationships among archaeological evidence, historical research, the Hebrew Bible and anthropological explanations.",
+      "prerequisites": "upper-division standing.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-middle-east",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/all-regions/middle-east.html",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+      "url": "https://catalog.ucsd.edu/courses/ANTH.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-middle-east"
+        ],
+        "locator": "ANAR 143. Biblical Archaeology—Fact or Fiction (4)",
+        "rationale": "Interpretation of evidence and historical-religious debate is central; an unspecified reference to new methods does not establish technical skills training.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-anar-165",
       "code": "ANAR 165",
       "name": "Marine and Coastal Archaeology and the Biblical Seas",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Studies ancient eastern Mediterranean maritime cultures through narratives, discoveries, ports and shipwrecks.",
+      "prerequisites": "upper-division standing.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-middle-east",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/all-regions/middle-east.html",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+      "url": "https://catalog.ucsd.edu/courses/ANTH.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-region-middle-east"
+        ],
+        "locator": "ANAR 165. Marine and Coastal Archaeology and the Biblical Seas (4)",
+        "rationale": "Human relationships with the sea and historical cultures organize the course, rather than underwater fieldwork or marine-science methods.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-ansc-133",
@@ -45154,253 +45746,511 @@
       "id": "ucsd-chin-10cn",
       "code": "CHIN 10CN",
       "name": "First-Year Chinese III",
-      "description": null,
+      "description": "The third course in the introductory Mandarin sequence develops pronunciation, grammar and vocabulary for beginning learners.",
       "prerequisites": "previous course or department approval through placement interview.",
-      "credits": 5.0,
+      "credits": 5,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-language-chinese",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses",
       "url": "https://catalog.ucsd.edu/courses/CHIN.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "The source states previous course or department approval through placement interview; no exact predecessor code or mandatory full sequence is inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses"
+        ],
+        "locator": "CHIN 10CN. First-Year Chinese III (5); full current description and eligibility",
+        "rationale": "The complete description explicitly teaches Mandarin communication and literacy; placement track is an audience condition, not a separate technical subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chin-10cm",
       "code": "CHIN 10CM",
       "name": "First-Year Chinese for Mandarin Speakers III",
-      "description": null,
+      "description": "The third course in the introductory Mandarin sequence develops pronunciation, grammar and vocabulary for learners with oral Mandarin and limited formal literacy. Character literacy is emphasized.",
       "prerequisites": "previous course or department approval through placement interview.",
-      "credits": 5.0,
+      "credits": 5,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-language-chinese",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses",
       "url": "https://catalog.ucsd.edu/courses/CHIN.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "The source states previous course or department approval through placement interview; no exact predecessor code or mandatory full sequence is inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses"
+        ],
+        "locator": "CHIN 10CM. First-Year Chinese for Mandarin Speakers III (5); full current description and eligibility",
+        "rationale": "The complete description explicitly teaches Mandarin communication and literacy; placement track is an audience condition, not a separate technical subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chin-10cd",
       "code": "CHIN 10CD",
       "name": "First-Year Chinese for Dialect Speakers III",
-      "description": null,
+      "description": "The third course in the introductory Mandarin sequence develops pronunciation, grammar and vocabulary for speakers of another Chinese dialect.",
       "prerequisites": "previous course or department approval through placement interview.",
-      "credits": 5.0,
+      "credits": 5,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-language-chinese",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses",
       "url": "https://catalog.ucsd.edu/courses/CHIN.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "The source states previous course or department approval through placement interview; no exact predecessor code or mandatory full sequence is inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses"
+        ],
+        "locator": "CHIN 10CD. First-Year Chinese for Dialect Speakers III (5); full current description and eligibility",
+        "rationale": "The complete description explicitly teaches Mandarin communication and literacy; placement track is an audience condition, not a separate technical subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chin-20an",
       "code": "CHIN 20AN",
       "name": "Second-Year Chinese I",
-      "description": null,
+      "description": "The first intermediate Mandarin course expands oral and written communication for learners with prior formal Chinese study.",
       "prerequisites": "previous course or department approval through placement interview.",
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-language-chinese",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses",
       "url": "https://catalog.ucsd.edu/courses/CHIN.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "The source states previous course or department approval through placement interview; no exact predecessor code or mandatory full sequence is inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses"
+        ],
+        "locator": "CHIN 20AN. Second-Year Chinese I (4); full current description and eligibility",
+        "rationale": "The actual course content is intermediate language communication, not a category inferred solely from its prefix.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chin-20am",
       "code": "CHIN 20AM",
       "name": "Second-Year Chinese for Mandarin Speakers I",
-      "description": null,
+      "description": "The first intermediate Mandarin course expands oral and written communication for learners with oral Mandarin and limited formal writing. Character literacy is emphasized.",
       "prerequisites": "previous course or department approval through placement interview.",
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-language-chinese",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses",
       "url": "https://catalog.ucsd.edu/courses/CHIN.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "The source states previous course or department approval through placement interview; no exact predecessor code or mandatory full sequence is inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses"
+        ],
+        "locator": "CHIN 20AM. Second-Year Chinese for Mandarin Speakers I (4); full current description and eligibility",
+        "rationale": "The actual course content is intermediate language communication, not a category inferred solely from its prefix.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chin-20ad",
       "code": "CHIN 20AD",
       "name": "Second-Year Chinese for Dialect Speakers I",
-      "description": null,
+      "description": "The first intermediate Mandarin course expands oral and written communication for speakers of another Chinese dialect.",
       "prerequisites": "previous course or department approval through placement interview.",
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-language-chinese",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses",
       "url": "https://catalog.ucsd.edu/courses/CHIN.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "The source states previous course or department approval through placement interview; no exact predecessor code or mandatory full sequence is inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses"
+        ],
+        "locator": "CHIN 20AD. Second-Year Chinese for Dialect Speakers I (4); full current description and eligibility",
+        "rationale": "The actual course content is intermediate language communication, not a category inferred solely from its prefix.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chin-20bn",
       "code": "CHIN 20BN",
       "name": "Second-Year Chinese II",
-      "description": null,
+      "description": "The second intermediate Mandarin course expands oral and written communication for learners with prior formal Chinese study.",
       "prerequisites": "previous course or department approval through placement interview.",
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-language-chinese",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses",
       "url": "https://catalog.ucsd.edu/courses/CHIN.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "The source states previous course or department approval through placement interview; no exact predecessor code or mandatory full sequence is inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses"
+        ],
+        "locator": "CHIN 20BN. Second-Year Chinese II (4); full current description and eligibility",
+        "rationale": "The actual course content is intermediate language communication, not a category inferred solely from its prefix.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chin-20bm",
       "code": "CHIN 20BM",
       "name": "Second-Year Chinese for Mandarin Speakers II",
-      "description": null,
+      "description": "The second intermediate Mandarin course expands oral and written communication for learners with oral Mandarin and limited formal writing. Character literacy is emphasized.",
       "prerequisites": "previous course or department approval through placement interview .",
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-language-chinese",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses",
       "url": "https://catalog.ucsd.edu/courses/CHIN.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "The source states previous course or department approval through placement interview; no exact predecessor code or mandatory full sequence is inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses"
+        ],
+        "locator": "CHIN 20BM. Second-Year Chinese for Mandarin Speakers II (4); full current description and eligibility",
+        "rationale": "The actual course content is intermediate language communication, not a category inferred solely from its prefix.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chin-20bd",
       "code": "CHIN 20BD",
       "name": "Second-Year Chinese for Dialect Speakers II",
-      "description": null,
+      "description": "The second intermediate Mandarin course expands oral and written communication for speakers of another Chinese dialect.",
       "prerequisites": "previous course or department approval through placement interview .",
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-language-chinese",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses",
       "url": "https://catalog.ucsd.edu/courses/CHIN.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "The source states previous course or department approval through placement interview; no exact predecessor code or mandatory full sequence is inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses"
+        ],
+        "locator": "CHIN 20BD. Second-Year Chinese for Dialect Speakers II (4); full current description and eligibility",
+        "rationale": "The actual course content is intermediate language communication, not a category inferred solely from its prefix.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chin-20cn",
       "code": "CHIN 20CN",
       "name": "Second-Year Chinese III",
-      "description": null,
+      "description": "The third intermediate Mandarin course expands oral and written communication for learners with prior formal Chinese study.",
       "prerequisites": "previous course or department approval through placement interview .",
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-language-chinese",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses",
       "url": "https://catalog.ucsd.edu/courses/CHIN.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "The source states previous course or department approval through placement interview; no exact predecessor code or mandatory full sequence is inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses"
+        ],
+        "locator": "CHIN 20CN. Second-Year Chinese III (4); full current description and eligibility",
+        "rationale": "The actual course content is intermediate language communication, not a category inferred solely from its prefix.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chin-20cm",
       "code": "CHIN 20CM",
       "name": "Second-Year Chinese for Mandarin Speakers III",
-      "description": null,
+      "description": "The third intermediate Mandarin course expands oral and written communication for learners with oral Mandarin and limited formal writing. Character literacy is emphasized.",
       "prerequisites": "previous course or department approval through placement interview .",
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-language-chinese",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses",
       "url": "https://catalog.ucsd.edu/courses/CHIN.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "The source states previous course or department approval through placement interview; no exact predecessor code or mandatory full sequence is inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses"
+        ],
+        "locator": "CHIN 20CM. Second-Year Chinese for Mandarin Speakers III (4); full current description and eligibility",
+        "rationale": "The actual course content is intermediate language communication, not a category inferred solely from its prefix.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chin-20cd",
       "code": "CHIN 20CD",
       "name": "Second-Year Chinese for Dialect Speakers III",
-      "description": null,
+      "description": "The third intermediate Mandarin course expands oral and written communication for speakers of another Chinese dialect.",
       "prerequisites": "previous course or department approval through placement interview.",
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-language-chinese",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses",
       "url": "https://catalog.ucsd.edu/courses/CHIN.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "The source states previous course or department approval through placement interview; no exact predecessor code or mandatory full sequence is inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses"
+        ],
+        "locator": "CHIN 20CD. Second-Year Chinese for Dialect Speakers III (4); full current description and eligibility",
+        "rationale": "The actual course content is intermediate language communication, not a category inferred solely from its prefix.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chin-100an",
       "code": "CHIN 100AN",
       "name": "Third-Year Chinese I",
-      "description": null,
+      "description": "The first advanced Mandarin course develops oral and written communication through Chinese history, society, education and literature.",
       "prerequisites": "previous course or department approval through placement interview .",
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-language-chinese",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses",
       "url": "https://catalog.ucsd.edu/courses/CHIN.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "The exact course description and placement route determine audience eligibility; parallel N/M codes are not merged from shared descriptive text.",
+        "The source states previous course or department approval through placement interview; no exact predecessor code or mandatory full sequence is inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses"
+        ],
+        "locator": "CHIN 100AN. Third-Year Chinese I (4); full current description and eligibility",
+        "rationale": "The complete description centers advanced language and cultural literacy; no unrelated technical content is inferred.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chin-100am",
       "code": "CHIN 100AM",
       "name": "Third-Year Chinese for Mandarin and Dialect Speakers I",
-      "description": null,
+      "description": "The first advanced Mandarin course develops oral and written communication through Chinese history, society, education and literature.",
       "prerequisites": "previous course or department approval through placement interview.",
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-language-chinese",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses",
       "url": "https://catalog.ucsd.edu/courses/CHIN.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "The exact course description and placement route determine audience eligibility; parallel N/M codes are not merged from shared descriptive text.",
+        "The source states previous course or department approval through placement interview; no exact predecessor code or mandatory full sequence is inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses"
+        ],
+        "locator": "CHIN 100AM. Third-Year Chinese for Mandarin and Dialect Speakers I (4); full current description and eligibility",
+        "rationale": "The complete description centers advanced language and cultural literacy; no unrelated technical content is inferred.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chin-100bn",
       "code": "CHIN 100BN",
       "name": "Third-Year Chinese II",
-      "description": null,
+      "description": "The second advanced Mandarin course develops oral and written communication through Chinese history, society, education and literature.",
       "prerequisites": "previous course or department approval through placement interview.",
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-language-chinese",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses",
       "url": "https://catalog.ucsd.edu/courses/CHIN.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "The exact course description and placement route determine audience eligibility; parallel N/M codes are not merged from shared descriptive text.",
+        "The source states previous course or department approval through placement interview; no exact predecessor code or mandatory full sequence is inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses"
+        ],
+        "locator": "CHIN 100BN. Third-Year Chinese II (4); full current description and eligibility",
+        "rationale": "The complete description centers advanced language and cultural literacy; no unrelated technical content is inferred.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chin-100bm",
       "code": "CHIN 100BM",
       "name": "Third-Year Chinese for Mandarin and Dialect Speakers II",
-      "description": null,
+      "description": "The second advanced Mandarin course develops oral and written communication through Chinese history, society, education and literature.",
       "prerequisites": "previous course or department approval through placement interview.",
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-language-chinese",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses",
       "url": "https://catalog.ucsd.edu/courses/CHIN.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "The exact course description and placement route determine audience eligibility; parallel N/M codes are not merged from shared descriptive text.",
+        "The source states previous course or department approval through placement interview; no exact predecessor code or mandatory full sequence is inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses"
+        ],
+        "locator": "CHIN 100BM. Third-Year Chinese for Mandarin and Dialect Speakers II (4); full current description and eligibility",
+        "rationale": "The complete description centers advanced language and cultural literacy; no unrelated technical content is inferred.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chin-100cn",
       "code": "CHIN 100CN",
       "name": "Third-Year Chinese III",
-      "description": null,
+      "description": "The third advanced Mandarin course develops oral and written communication through Chinese history, society, education and literature.",
       "prerequisites": "previous course or department approval through placement interview.",
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-language-chinese",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses",
       "url": "https://catalog.ucsd.edu/courses/CHIN.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "The exact course description and placement route determine audience eligibility; parallel N/M codes are not merged from shared descriptive text.",
+        "The source states previous course or department approval through placement interview; no exact predecessor code or mandatory full sequence is inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses"
+        ],
+        "locator": "CHIN 100CN. Third-Year Chinese III (4); full current description and eligibility",
+        "rationale": "The complete description centers advanced language and cultural literacy; no unrelated technical content is inferred.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chin-100cm",
       "code": "CHIN 100CM",
       "name": "Third-Year Chinese for Mandarin and Dialect Speakers III",
-      "description": null,
+      "description": "The third advanced Mandarin course develops oral and written communication through Chinese history, society, education and literature.",
       "prerequisites": "previous course or department approval through placement interview.",
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-language-chinese",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses",
       "url": "https://catalog.ucsd.edu/courses/CHIN.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "The exact course description and placement route determine audience eligibility; parallel N/M codes are not merged from shared descriptive text.",
+        "The source states previous course or department approval through placement interview; no exact predecessor code or mandatory full sequence is inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses"
+        ],
+        "locator": "CHIN 100CM. Third-Year Chinese for Mandarin and Dialect Speakers III (4); full current description and eligibility",
+        "rationale": "The complete description centers advanced language and cultural literacy; no unrelated technical content is inferred.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-hild-7gs",
@@ -48646,15 +49496,30 @@
       "id": "ucsd-anar-146",
       "code": "ANAR 146",
       "name": "Feeding the World",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Examines diets, agricultural origins, farming systems and crop modification in considering sustainable food production.",
+      "prerequisites": "upper-division standing.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-seventh-first",
-      "url": "https://seventh.ucsd.edu/academics/degree-requirements/degree-requirements-first.html",
+      "category": "applications",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+      "url": "https://catalog.ucsd.edu/courses/ANTH.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Students may not receive credit for ANAR 146 and ANAR 146R. No identity group is inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-seventh-first"
+        ],
+        "locator": "ANAR 146. Feeding the World (4)",
+        "rationale": "Food and agricultural systems are the substantive domain: dietary evolution, cultivation, farming methods and genetic crop modification. Historical development supports understanding that domain rather than a primarily cultural interpretation.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-anbi-174",
@@ -49157,7 +50022,22 @@
       "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-seventh-first",
       "url": "https://seventh.ucsd.edu/academics/degree-requirements/degree-requirements-first.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "No exact current identifier appears in the reviewed 2026–27 ANTH chapter. No replacement, cancellation or university-wide absence is inferred."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-seventh-first"
+        ],
+        "locator": "ANAR 135S; bounded exact-heading inventory",
+        "rationale": "The exact represented identifier is absent from the inspected current chapter. Neither another suffix nor a similarly named course establishes its identity or current content.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-ansc-138",
@@ -50917,16 +51797,33 @@
     {
       "id": "ucsd-anar-100",
       "code": "ANAR 100",
-      "name": "Special Topics in Anthropological Archaeology (when Latin American content)",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Special Topics in Anthropological Archaeology",
+      "description": "Offers changing topics in anthropological archaeology; the specific topic is supplied separately for each offering.",
+      "prerequisites": "upper-division standing or consent of instructor.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
       "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-discipline-latin-american",
-      "url": "https://catalog.ucsd.edu/curric/LATI-ug.html",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+      "url": "https://catalog.ucsd.edu/courses/ANTH.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "May be taken for credit four times. Specific current titles and descriptions are supplied in the Schedule of Classes and department website, not this generic block.",
+        "The represented pool permits this code when it has Latin American content. That offering-specific eligibility is unresolved by the current generic description; no blanket Latin American approval is inferred.",
+        "Listed title: Special Topics in Anthropological Archaeology (when Latin American content). Current chapter title: Special Topics in Anthropological Archaeology. The parenthetical pool qualifier is retained as conditional eligibility, not part of the catalog title."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-discipline-latin-american"
+        ],
+        "locator": "ANAR 100. Special Topics in Anthropological Archaeology (4)",
+        "rationale": "The selected subject is absent from this catalog block. Neither its archaeology label nor the pool’s conditional Latin American designation establishes the offering’s content.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-anar-105",
@@ -50940,7 +51837,22 @@
       "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-discipline-latin-american",
       "url": "https://catalog.ucsd.edu/curric/LATI-ug.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "No exact current identifier appears in the reviewed 2026–27 ANTH chapter. No replacement, cancellation or university-wide absence is inferred."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-discipline-latin-american"
+        ],
+        "locator": "ANAR 105; bounded exact-heading inventory",
+        "rationale": "The exact represented identifier is absent from the inspected current chapter. Neither another suffix nor a similarly named course establishes its identity or current content.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-ansc-100",
@@ -52002,7 +52914,22 @@
       "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-discipline-jewish",
       "url": "https://jewishstudies.ucsd.edu/courses/course_listing.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "No exact current identifier appears in the reviewed 2026–27 ANTH chapter. No replacement, cancellation or university-wide absence is inferred."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-discipline-jewish"
+        ],
+        "locator": "ANAR 103; bounded exact-heading inventory",
+        "rationale": "The exact represented identifier is absent from the inspected current chapter. Neither another suffix nor a similarly named course establishes its identity or current content.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-anar-125",
@@ -52016,7 +52943,22 @@
       "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-discipline-jewish",
       "url": "https://jewishstudies.ucsd.edu/courses/course_listing.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "No exact current identifier appears in the reviewed 2026–27 ANTH chapter. No replacement, cancellation or university-wide absence is inferred."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-discipline-jewish"
+        ],
+        "locator": "ANAR 125; bounded exact-heading inventory",
+        "rationale": "The exact represented identifier is absent from the inspected current chapter. Neither another suffix nor a similarly named course establishes its identity or current content.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-anar-141",
@@ -52030,7 +52972,22 @@
       "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-discipline-jewish",
       "url": "https://jewishstudies.ucsd.edu/courses/course_listing.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "No exact current identifier appears in the reviewed 2026–27 ANTH chapter. No replacement, cancellation or university-wide absence is inferred."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-discipline-jewish"
+        ],
+        "locator": "ANAR 141; bounded exact-heading inventory",
+        "rationale": "The exact represented identifier is absent from the inspected current chapter. Neither another suffix nor a similarly named course establishes its identity or current content.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-anar-142",
@@ -52044,7 +53001,22 @@
       "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-discipline-jewish",
       "url": "https://jewishstudies.ucsd.edu/courses/course_listing.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "No exact current identifier appears in the reviewed 2026–27 ANTH chapter. No replacement, cancellation or university-wide absence is inferred."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-discipline-jewish"
+        ],
+        "locator": "ANAR 142; bounded exact-heading inventory",
+        "rationale": "The exact represented identifier is absent from the inspected current chapter. Neither another suffix nor a similarly named course establishes its identity or current content.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-anar-190",
@@ -52058,7 +53030,22 @@
       "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-discipline-jewish",
       "url": "https://jewishstudies.ucsd.edu/courses/course_listing.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "No exact current identifier appears in the reviewed 2026–27 ANTH chapter. No replacement, cancellation or university-wide absence is inferred."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-discipline-jewish"
+        ],
+        "locator": "ANAR 190; bounded exact-heading inventory",
+        "rationale": "The exact represented identifier is absent from the inspected current chapter. Neither another suffix nor a similarly named course establishes its identity or current content.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-anar-191",
@@ -52072,7 +53059,22 @@
       "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-discipline-jewish",
       "url": "https://jewishstudies.ucsd.edu/courses/course_listing.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "No exact current identifier appears in the reviewed 2026–27 ANTH chapter. No replacement, cancellation or university-wide absence is inferred."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-anthropology-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-discipline-jewish"
+        ],
+        "locator": "ANAR 191; bounded exact-heading inventory",
+        "rationale": "The exact represented identifier is absent from the inspected current chapter. Neither another suffix nor a similarly named course establishes its identity or current content.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-hine-101",
@@ -52204,85 +53206,163 @@
       "id": "ucsd-chin-10an",
       "code": "CHIN 10AN",
       "name": "First-Year Chinese I",
-      "description": null,
+      "description": "The first course in the introductory Mandarin sequence develops pronunciation, grammar and vocabulary for beginning learners.",
       "prerequisites": "placement interview required for department approval to enroll.",
-      "credits": 5.0,
+      "credits": 5,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-language-chinese",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses",
       "url": "https://catalog.ucsd.edu/courses/CHIN.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses"
+        ],
+        "locator": "CHIN 10AN. First-Year Chinese I (5); full current description and eligibility",
+        "rationale": "The complete description explicitly teaches Mandarin communication and literacy; placement track is an audience condition, not a separate technical subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chin-10am",
       "code": "CHIN 10AM",
       "name": "First-Year Chinese for Mandarin Speakers I",
-      "description": null,
+      "description": "The first course in the introductory Mandarin sequence develops pronunciation, grammar and vocabulary for learners with oral Mandarin and limited formal literacy. Character literacy is emphasized.",
       "prerequisites": "placement interview required for department approval to enroll.",
-      "credits": 5.0,
+      "credits": 5,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-language-chinese",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses",
       "url": "https://catalog.ucsd.edu/courses/CHIN.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses"
+        ],
+        "locator": "CHIN 10AM. First-Year Chinese for Mandarin Speakers I (5); full current description and eligibility",
+        "rationale": "The complete description explicitly teaches Mandarin communication and literacy; placement track is an audience condition, not a separate technical subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chin-10ad",
       "code": "CHIN 10AD",
       "name": "First-Year Chinese for Dialect Speakers I",
-      "description": null,
+      "description": "The first course in the introductory Mandarin sequence develops pronunciation, grammar and vocabulary for speakers of another Chinese dialect.",
       "prerequisites": "placement interview required for department approval to enroll.",
-      "credits": 5.0,
+      "credits": 5,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-language-chinese",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses",
       "url": "https://catalog.ucsd.edu/courses/CHIN.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses"
+        ],
+        "locator": "CHIN 10AD. First-Year Chinese for Dialect Speakers I (5); full current description and eligibility",
+        "rationale": "The complete description explicitly teaches Mandarin communication and literacy; placement track is an audience condition, not a separate technical subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chin-10bn",
       "code": "CHIN 10BN",
       "name": "First-Year Chinese II",
-      "description": null,
+      "description": "The second course in the introductory Mandarin sequence develops pronunciation, grammar and vocabulary for beginning learners.",
       "prerequisites": "previous course or department approval through placement interview.",
-      "credits": 5.0,
+      "credits": 5,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-language-chinese",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses",
       "url": "https://catalog.ucsd.edu/courses/CHIN.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "The source states previous course or department approval through placement interview; no exact predecessor code or mandatory full sequence is inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses"
+        ],
+        "locator": "CHIN 10BN. First-Year Chinese II (5); full current description and eligibility",
+        "rationale": "The complete description explicitly teaches Mandarin communication and literacy; placement track is an audience condition, not a separate technical subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chin-10bm",
       "code": "CHIN 10BM",
       "name": "First-Year Chinese for Mandarin Speakers II",
-      "description": null,
+      "description": "The second course in the introductory Mandarin sequence develops pronunciation, grammar and vocabulary for learners with oral Mandarin and limited formal literacy. Character literacy is emphasized.",
       "prerequisites": "previous course or department approval through placement interview.",
-      "credits": 5.0,
+      "credits": 5,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-language-chinese",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses",
       "url": "https://catalog.ucsd.edu/courses/CHIN.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "The source states previous course or department approval through placement interview; no exact predecessor code or mandatory full sequence is inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses"
+        ],
+        "locator": "CHIN 10BM. First-Year Chinese for Mandarin Speakers II (5); full current description and eligibility",
+        "rationale": "The complete description explicitly teaches Mandarin communication and literacy; placement track is an audience condition, not a separate technical subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chin-10bd",
       "code": "CHIN 10BD",
       "name": "First-Year Chinese for Dialect Speakers II",
-      "description": null,
+      "description": "The second course in the introductory Mandarin sequence develops pronunciation, grammar and vocabulary for speakers of another Chinese dialect.",
       "prerequisites": "previous course or department approval through placement interview.",
-      "credits": 5.0,
+      "credits": 5,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-language-chinese",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses",
       "url": "https://catalog.ucsd.edu/courses/CHIN.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "The source states previous course or department approval through placement interview; no exact predecessor code or mandatory full sequence is inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chin-courses"
+        ],
+        "locator": "CHIN 10BD. First-Year Chinese for Dialect Speakers II (5); full current description and eligibility",
+        "rationale": "The complete description explicitly teaches Mandarin communication and literacy; placement track is an audience condition, not a separate technical subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-lipo-1a",
@@ -143661,7 +144741,9 @@
     "POLI113 source observations integrated from116represented codes. Three exact headings132B/133DD/134A are absent; no renumbering inferred. Six grouped headings explicitly publish multiple identifiers and are parsed as printed, without identity merging. POLI170A is mathematics from actual statistical methods;149 is domain intelligence methods, not AI;143 cyberwar remains political analysis.191A printed4–4sequence notation leaves creditsunknown.120J graduate-standing clause belongs to220J only.194SD requires concurrent197SD, not an extra universalAIcourse.124 explicitly namesSOCI188I, but the reciprocal source is not established; identity remains separate.",
     "HIEU74 represented codes now have bounded current-source dispositions:56approved observations,17missing exact headings, and122held for substantive Archaic-Period versus broaderBronze-Age-to-Peloponnesian-War title scope.124heading omits units;198allows1/2/3/4, so both scalarcredits remainunknown.124GS supplies an explicit mutualcredit exclusion, not transferable GlobalSeminar enrollment conditions. The chapter plusmark denotes before1800, not credits or prerequisites. Public-history145 combines interpretation and public-education project practice; five unspecified topic/study records remain unclassified. No course-role or identity changes.",
     "The current USP chapter supplies 53 of 57 represented exact headings: 33 human-context, 11 applied-domain, three mixed and six topic-dependent unclassified content reviews. USP129/130/154/165 remain unmatched, without renumbering or discontinuation inference. Studio and senior-sequence major restrictions, application/department approvals, recommendations and term limits remain course-specific; appearing in a college pool does not waive them. USP194 is a four-unit seminar attached to a separate six-unit internship. Explicit same-course statements are preserved as observations without automatic identity merging.",
-    "Communication chapter review read 41 exact blocks for 45 target codes, integrating 39 observations while retaining four missing headings and two title/version holds (102C and 120P). Explicit none in 102D remains distinct from an absent prerequisite field. Production and field-method courses are applications; critical design124A is mixed; unspecified topics/research remain unclassified. COMM194 is a four-unit seminar attached to a separate six-unit internship; its same-course clause is retained without automatic identity merging. No requirement-role changes."
+    "Communication chapter review read 41 exact blocks for 45 target codes, integrating 39 observations while retaining four missing headings and two title/version holds (102C and 120P). Explicit none in 102D remains distinct from an absent prerequisite field. Production and field-method courses are applications; critical design124A is mixed; unspecified topics/research remain unclassified. COMM194 is a four-unit seminar attached to a separate six-unit internship; its same-course clause is retained without automatic identity merging. No requirement-role changes.",
+    "All41 represented Chinese Studies blocks now have actual current-content dispositions:38 language/cultural communication and three unspecified study/thesis subjects. Medical and business language contexts do not establish clinical or finance-method curricula. CHIN198/199 explicitly permit2or4units, so scalarcredits remainnull; CHIN186C printed186CB prerequisite is preserved. Placement approval does not imply mandatory completion of every preceding course.",
+    "ANAR36 target review supplies28 current observations and eight missing exact headings. Scientific hazard/coastal/climate/field/lab methods are distinguished from historical surveys; ANAR100 topic-dependent Latin-American eligibility remainsunresolved.155/155S combined12-unit ceiling and distinct enrollment conditions remain separate;157/157S mutualcredit exclusions are not crosslisting. No new requirement roles or aliases."
   ],
   "curriculum_audit": {
     "scope": "degree",
