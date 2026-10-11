@@ -892,6 +892,41 @@
           "locator": "Exact individually reviewed course blocks: PHIL 1145",
           "checked_at": "2026-10-10T23:58:22+00:00",
           "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/afcs/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: AFCS 2600",
+          "checked_at": "2026-10-11T00:12:22+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/hist/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: HIST 2220",
+          "checked_at": "2026-10-11T00:12:24+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/insh/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: INSH 2102",
+          "checked_at": "2026-10-11T00:12:25+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/eeam/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: EEAM 2000",
+          "checked_at": "2026-10-11T00:12:32+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/jrnl/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: JRNL 2301",
+          "checked_at": "2026-10-10T22:53:17+00:00",
+          "access_status": "accessible"
         }
       ],
       "checks": {
@@ -900,7 +935,7 @@
         "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
         "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant. Independently verified the explicit CS 1800/1802 corequisite pair and degree preamble; CS 1802 is now nested beneath CS 1800. Other prerequisite alternatives are not additional degree obligations.",
         "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
-        "classification": "Current represented inventory: 78 course observations; 31 individually reviewed subject classifications, 2 explicitly mixed, 3 source-inspected but unclassified, and 42 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
+        "classification": "Current represented inventory: 78 course observations; 37 individually reviewed subject classifications, 2 explicitly mixed, 4 source-inspected but unclassified, and 35 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
         "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
         "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed."
       },
@@ -946,6 +981,27 @@
             "https://catalog.northeastern.edu/course-descriptions/mktg/",
             "https://catalog.northeastern.edu/course-descriptions/socl/"
           ]
+        },
+        {
+          "issue": "Unreviewed selected criminal/social/communication classifications required source-content verification.",
+          "correction": "Exact-code review corrections: HIST 2220: other → human_context; INSH 2102: other → human_context; SOCL 1280: other → human_context",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/afcs/",
+            "https://catalog.northeastern.edu/course-descriptions/hist/",
+            "https://catalog.northeastern.edu/course-descriptions/insh/",
+            "https://catalog.northeastern.edu/course-descriptions/phil/",
+            "https://catalog.northeastern.edu/course-descriptions/socl/"
+          ]
+        },
+        {
+          "issue": "Unreviewed selected journalism/communication/coding classifications required source-content verification.",
+          "correction": "Exact-code review corrections: JRNL 2301: other → human_context",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/eeam/",
+            "https://catalog.northeastern.edu/course-descriptions/jrnl/"
+          ]
         }
       ],
       "blockers": [
@@ -960,7 +1016,7 @@
     {
       "program_id": "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree",
       "institution_id": "northeastern-university",
-      "status": "in_progress",
+      "status": "blocked",
       "sources": [
         {
           "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-criminal-justice-bs-bos/",
@@ -1052,19 +1108,248 @@
           "locator": "Exact individually reviewed course blocks: PHIL 1145",
           "checked_at": "2026-10-10T23:58:22+00:00",
           "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/afcs/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: AFCS 3210, AFCS 2600",
+          "checked_at": "2026-10-11T00:12:22+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/crim/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: CRIM 1000, CRIM 1100, CRIM 1110, CRIM 1120, CRIM 1300, CRIM 1400, CRIM 1500, CRIM 1700, CRIM 2310, CRIM 2320, CRIM 2330, CRIM 2350, CRIM 2370, CRIM 2380, CRIM 3010, CRIM 3030, CRIM 3040, CRIM 3050, CRIM 3060, CRIM 3070, CRIM 3100, CRIM 3540, CRIM 3110, CRIM 3120, CRIM 3600, CRIM 4949, CRIM 3700, CRIM 4040",
+          "checked_at": "2026-10-10T22:53:20+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/hist/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: HIST 2220",
+          "checked_at": "2026-10-11T00:12:24+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/insh/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: INSH 2102",
+          "checked_at": "2026-10-11T00:12:25+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/jrnl/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: JRNL 3700",
+          "checked_at": "2026-10-10T22:53:17+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/university-academics/university-wide-requirements/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reread shared completion/eligibility sections and explicit Boston combined-degree scope; exact college assignment unresolved.",
+          "checked_at": "2026-10-10T22:59:30+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/university-academics/general-education-requirements/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reread shared completion/eligibility sections and explicit Boston combined-degree scope; exact college assignment unresolved.",
+          "checked_at": "2026-10-10T22:59:32+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/experiential-learning-graduation-requirement/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reread shared completion/eligibility sections and explicit Boston combined-degree scope; exact college assignment unresolved.",
+          "checked_at": "2026-10-10T23:01:06+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/graduation-requirements/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reread shared completion/eligibility sections and explicit Boston combined-degree scope; exact college assignment unresolved.",
+          "checked_at": "2026-10-10T23:01:08+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/degrees-majors-minors/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reread shared completion/eligibility sections and explicit Boston combined-degree scope; exact college assignment unresolved.",
+          "checked_at": "2026-10-10T22:18:06+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/progression-standards/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reread shared completion/eligibility sections and explicit Boston combined-degree scope; exact college assignment unresolved.",
+          "checked_at": "2026-10-10T23:01:11+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://www.khoury.northeastern.edu/programs/bs-in-artificial-intelligence-and-sociology/",
+          "catalog_year": null,
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-11T03:29:23+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://admissions.northeastern.edu/academics/combined-majors/",
+          "catalog_year": null,
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-11T03:29:25+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://cssh.northeastern.edu/",
+          "catalog_year": null,
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-11T03:29:26+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/social-sciences-humanities/sociology-anthropology/",
+          "catalog_year": "2026-2027",
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-11T03:29:28+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://www.khoury.northeastern.edu/current-undergraduate-students/",
+          "catalog_year": null,
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-11T03:30:47+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://cssh.northeastern.edu/resources/undergraduate-advising/",
+          "catalog_year": null,
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-11T03:30:48+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://cssh.northeastern.edu/socant",
+          "catalog_year": null,
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-11T03:30:52+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://www.khoury.northeastern.edu/current-undergraduate-students/undergraduate-advising-academic-support/",
+          "catalog_year": null,
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-11T03:31:05+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://www.khoury.northeastern.edu/current-undergraduate-students/undergraduate-advising-academic-support/academic-policies-and-procedures/",
+          "catalog_year": null,
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-11T03:31:07+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://cssh.northeastern.edu/resources/undergraduate-advising/undergraduate-advising-faqs/",
+          "catalog_year": null,
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-11T03:31:08+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://cssh.northeastern.edu/declare-a-major-and-minor/",
+          "catalog_year": null,
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-11T03:31:54+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://cssh.northeastern.edu/academic-progression-standards/",
+          "catalog_year": null,
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-11T03:31:55+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://cssh.northeastern.edu/transfer-credit-guidelines/",
+          "catalog_year": null,
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-11T03:31:57+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://service.northeastern.edu/registrar?id=kb_article_view&sysparm_article=KB000019923",
+          "catalog_year": null,
+          "locator": "HTTP success yielded an empty client-rendered registrar knowledge shell; no degree-specific contents could be inspected and no account was accessed.",
+          "checked_at": "2026-10-11T03:31:59+00:00",
+          "access_status": "insufficient_public_content"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/social-sciences-humanities/",
+          "catalog_year": "2026-2027",
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-11T03:33:01+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/",
+          "catalog_year": "2026-2027",
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-10T23:00:30+00:00",
+          "access_status": "accessible"
         }
       ],
       "checks": {
         "degree_identity": "Official catalog identity and exact award/campus are retained as Artificial Intelligence and Criminal Justice, BS (Boston). Current official page retrieved; catalog/cohort scope remains explicit.",
-        "required_and_choices": "Independently transcribed named-course roles from the individually reread degree page: 19 mapped fixed identities and 49 named alternatives; zero unbound identities in the represented graph. CS 1802 is separately supported by the degree preamble and CS description. These structural counts do not guarantee a student pathway: placement substitutions and home-college selections remain conditional. See the manual calculation note; category totals await remaining individual content review.",
-        "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage. This pass separately verified finite named alternatives and published open ranges; open level ranges and advisor-approved electives are criteria, not a falsely complete course inventory.",
-        "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant. Independently verified the explicit CS 1800/1802 corequisite pair and degree preamble; CS 1802 is now nested beneath CS 1800. Other prerequisite alternatives are not additional degree obligations.",
-        "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
-        "classification": "Current represented inventory: 68 course observations; 27 individually reviewed subject classifications, 2 explicitly mixed, 4 source-inspected but unclassified, and 35 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
-        "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
-        "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed."
+        "required_and_choices": "Source-transcribed 19 mapped fixed and 49 named option identities remain unchanged. Fixed set is the 12-identity AI core plus CRIM 1100/1110/1120/3600/4949, MATH 1341 and ECON 2350. Separate topical, institutional/crime-problem, systemic and integration selections remain distinct choices. Course identities shared among choices are not counted twice. Orientation/professional and writing choices remain conditional alternatives.",
+        "elective_pools": "Four Khoury elective hours preserve the specified level ranges/exclusions, named EECE/MKTG alternatives and adviser-approved extensions. Two additional CRIM courses at the 3000/4000/5000 level remain an open eight-hour criterion, not a falsely exhaustive copied catalog. Named social-issues and integration pools retain their distinct selections; 24 general-elective hours remain explicit.",
+        "prerequisites": "Every represented course block has been read, retaining explicit prerequisite grade/OR/concurrent conditions as eligibility rather than adding all prerequisite alternatives as degree courses. Degree preamble concurrency is represented for required CS 1800/1802 and the existing named lecture/lab pairs. No missing prerequisite statement is interpreted as none.",
+        "credits_and_units": "All 68 represented course identities and catalog semester-hour observations are inspected. The degree requires 128 total and 24 general-elective hours. Individual one-hour seminars and labs retain their own hours rather than inheriting a combined five-hour row. Degree choices retain published four/eight-hour loads; this review does not sum overlapping requirements into a fictitious student total.",
+        "classification": "Current represented inventory: 68 course observations; 60 individually reviewed subject classifications, 3 explicitly mixed, 5 source-inspected but unclassified, and 0 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
+        "family_composition": "The eight shared AI units and placement policy have been checked against this individual degree panel, preserving all nine bindings and exact local parent roles. The common university policies apply through explicit degree/Boston scope; college-specific applicability is not inherited from the catalog breadcrumb or course prefixes.",
+        "degree_wide_requirements": "The entire primary requirements panel and six shared university policies were reread: total credits, overall GPA/residency, NUpath/transfer/writing/capstone conditions, experiential requirement, graduation clearance, combined-major design and university progression. Exact allowed/designated home college and the resulting college-specific progression/graduation rules remain a documented institutional applicability question, with official advising research continuing. The profile counts mapped named identities, not a guaranteed individual student schedule or a credit-total solution. Additional official admissions, Khoury student/advising/policy, applicable college catalog and CSSH advising/declaration routes were inspected. Admissions defers individual award-college designation to Application Status Check. Khoury publishes adviser-mediated home-college change/stay conditions, not an unconditional program-specific menu. Additional current advising major-GPA/progression rules are documented as potentially supplemental, not contradictory merely because the dated catalog omits them; their exact college/cohort applicability remains explicit; see the companion home-college follow-up."
       },
-      "expected_profile": null,
+      "expected_profile": {
+        "required": {
+          "count": 19,
+          "categories": {
+            "foundations": 5,
+            "mathematics": 5,
+            "ai_ml": 1,
+            "systems": 2,
+            "human_context": 5,
+            "applications": 0,
+            "electives": 0,
+            "other": 1
+          }
+        },
+        "options": {
+          "count": 49,
+          "categories": {
+            "foundations": 0,
+            "mathematics": 1,
+            "ai_ml": 0,
+            "systems": 2,
+            "human_context": 37,
+            "applications": 2,
+            "electives": 0,
+            "other": 7
+          }
+        },
+        "unresolved": {
+          "count": 0,
+          "categories": {
+            "foundations": 0,
+            "mathematics": 0,
+            "ai_ml": 0,
+            "systems": 0,
+            "human_context": 0,
+            "applications": 0,
+            "electives": 0,
+            "other": 0
+          }
+        }
+      },
       "expected_course_ids": {
         "required": [
           "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-crim-1100",
@@ -1173,15 +1458,30 @@
             "https://catalog.northeastern.edu/course-descriptions/mktg/",
             "https://catalog.northeastern.edu/course-descriptions/socl/"
           ]
+        },
+        {
+          "issue": "Unreviewed selected criminal/social/communication classifications required source-content verification.",
+          "correction": "Exact-code review corrections: CRIM 1100: other → human_context; CRIM 1110: other → human_context; CRIM 1120: other → human_context; CRIM 1300: other → human_context; CRIM 1400: other → human_context; CRIM 1500: other → human_context; CRIM 1700: other → human_context; CRIM 2310: other → human_context; CRIM 2320: other → human_context; CRIM 2330: other → human_context; CRIM 2350: other → human_context; CRIM 2370: other → human_context; CRIM 2380: other → human_context; CRIM 3010: other → human_context; CRIM 3030: other → human_context; CRIM 3040: other → applications; CRIM 3050: other → human_context; CRIM 3060: other → human_context; CRIM 3070: other → human_context; CRIM 3100: other → human_context; CRIM 3110: other → human_context; CRIM 3120: other → human_context; CRIM 3600: other → human_context; CRIM 4949: other → human_context; CRIM 3700: other → mathematics; CRIM 4040: other → human_context; HIST 2220: other → human_context; INSH 2102: other → human_context; JRNL 3700: other → human_context; SOCL 1280: other → human_context",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/afcs/",
+            "https://catalog.northeastern.edu/course-descriptions/crim/",
+            "https://catalog.northeastern.edu/course-descriptions/hist/",
+            "https://catalog.northeastern.edu/course-descriptions/insh/",
+            "https://catalog.northeastern.edu/course-descriptions/jrnl/",
+            "https://catalog.northeastern.edu/course-descriptions/phil/",
+            "https://catalog.northeastern.edu/course-descriptions/socl/"
+          ]
         }
       ],
       "blockers": [
         {
-          "issue": "Exact allowed/designated home-college choices and resulting additional progression/graduation rules remain an institutional source clarification; catalog hosting context does not establish assignment.",
-          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-criminal-justice-bs-bos/"
+          "issue": "The current combined-major sources establish participating colleges and college-dependent choices, but do not give this exact 2026–27 Boston degree a complete allowed/designated home-college matrix. Admissions identifies individual award college in Application Status Check; Khoury advising offers conditional home-college changes with adviser review. Confirmation of this program’s permitted assignments and resulting additional college progression/residency/GPA/graduation rules is needed.",
+          "url": "https://admissions.northeastern.edu/academics/combined-majors/",
+          "supporting_url": "https://www.khoury.northeastern.edu/current-undergraduate-students/undergraduate-advising-academic-support/academic-policies-and-procedures/"
         }
       ],
-      "correction_status": "First category and parser corrections applied; remaining accessible individual review continues.",
+      "correction_status": "All represented named identities, course content, hours, explicit eligibility and source-transcribed role partitions are reviewed, with independent expected profile recorded. Corrected exact subject categories; original requirement graphs remain unchanged. Whole-degree closure awaits specific home-college applicability and clarification of the supplemental current Khoury policy scope, not unread represented course content.",
       "second_pass_status": "pending"
     },
     {
@@ -1272,6 +1572,41 @@
           "locator": "Exact individually reviewed course blocks: PHIL 1145",
           "checked_at": "2026-10-10T23:58:22+00:00",
           "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/afcs/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: AFCS 2600",
+          "checked_at": "2026-10-11T00:12:22+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/hist/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: HIST 2220",
+          "checked_at": "2026-10-11T00:12:24+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/insh/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: INSH 2102",
+          "checked_at": "2026-10-11T00:12:25+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/jrnl/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: JRNL 3700",
+          "checked_at": "2026-10-10T22:53:17+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/eeam/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: EEAM 2000",
+          "checked_at": "2026-10-11T00:12:32+00:00",
+          "access_status": "accessible"
         }
       ],
       "checks": {
@@ -1280,7 +1615,7 @@
         "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
         "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant. Independently verified the explicit CS 1800/1802 corequisite pair and degree preamble; CS 1802 is now nested beneath CS 1800. Other prerequisite alternatives are not additional degree obligations.",
         "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
-        "classification": "Current represented inventory: 63 course observations; 25 individually reviewed subject classifications, 2 explicitly mixed, 3 source-inspected but unclassified, and 33 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
+        "classification": "Current represented inventory: 63 course observations; 31 individually reviewed subject classifications, 2 explicitly mixed, 4 source-inspected but unclassified, and 26 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
         "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
         "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed."
       },
@@ -1316,6 +1651,19 @@
             "https://catalog.northeastern.edu/course-descriptions/eece/",
             "https://catalog.northeastern.edu/course-descriptions/inpr/",
             "https://catalog.northeastern.edu/course-descriptions/mktg/",
+            "https://catalog.northeastern.edu/course-descriptions/socl/"
+          ]
+        },
+        {
+          "issue": "Unreviewed selected criminal/social/communication classifications required source-content verification.",
+          "correction": "Exact-code review corrections: HIST 2220: other → human_context; INSH 2102: other → human_context; JRNL 3700: other → human_context; SOCL 1280: other → human_context",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/afcs/",
+            "https://catalog.northeastern.edu/course-descriptions/hist/",
+            "https://catalog.northeastern.edu/course-descriptions/insh/",
+            "https://catalog.northeastern.edu/course-descriptions/jrnl/",
+            "https://catalog.northeastern.edu/course-descriptions/phil/",
             "https://catalog.northeastern.edu/course-descriptions/socl/"
           ]
         }
@@ -1568,6 +1916,34 @@
           "locator": "Exact individually reviewed course blocks: PHIL 1145",
           "checked_at": "2026-10-10T23:58:22+00:00",
           "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/afcs/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: AFCS 2600",
+          "checked_at": "2026-10-11T00:12:22+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/hist/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: HIST 2220",
+          "checked_at": "2026-10-11T00:12:24+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/insh/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: INSH 2102",
+          "checked_at": "2026-10-11T00:12:25+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/jrnl/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: JRNL 3700",
+          "checked_at": "2026-10-10T22:53:17+00:00",
+          "access_status": "accessible"
         }
       ],
       "checks": {
@@ -1576,7 +1952,7 @@
         "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
         "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant. Independently verified the explicit CS 1800/1802 corequisite pair and degree preamble; CS 1802 is now nested beneath CS 1800. Other prerequisite alternatives are not additional degree obligations.",
         "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
-        "classification": "Current represented inventory: 50 course observations; 36 individually reviewed subject classifications, 2 explicitly mixed, 7 source-inspected but unclassified, and 5 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
+        "classification": "Current represented inventory: 50 course observations; 41 individually reviewed subject classifications, 2 explicitly mixed, 7 source-inspected but unclassified, and 0 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
         "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
         "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed."
       },
@@ -1613,6 +1989,19 @@
             "https://catalog.northeastern.edu/course-descriptions/eesh/",
             "https://catalog.northeastern.edu/course-descriptions/inpr/",
             "https://catalog.northeastern.edu/course-descriptions/mktg/",
+            "https://catalog.northeastern.edu/course-descriptions/socl/"
+          ]
+        },
+        {
+          "issue": "Unreviewed selected criminal/social/communication classifications required source-content verification.",
+          "correction": "Exact-code review corrections: HIST 2220: other → human_context; INSH 2102: other → human_context; JRNL 3700: other → human_context; SOCL 1280: other → human_context",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/afcs/",
+            "https://catalog.northeastern.edu/course-descriptions/hist/",
+            "https://catalog.northeastern.edu/course-descriptions/insh/",
+            "https://catalog.northeastern.edu/course-descriptions/jrnl/",
+            "https://catalog.northeastern.edu/course-descriptions/phil/",
             "https://catalog.northeastern.edu/course-descriptions/socl/"
           ]
         }
@@ -1962,6 +2351,20 @@
           "locator": "Exact individually reviewed course blocks: MKTG 4606",
           "checked_at": "2026-10-11T00:09:52+00:00",
           "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/afcs/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: AFCS 2600",
+          "checked_at": "2026-10-11T00:12:22+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/crim/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: CRIM 3030, CRIM 3060, CRIM 1400",
+          "checked_at": "2026-10-10T22:53:20+00:00",
+          "access_status": "accessible"
         }
       ],
       "checks": {
@@ -1970,7 +2373,7 @@
         "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
         "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant. Independently verified the explicit CS 1800/1802 corequisite pair and degree preamble; CS 1802 is now nested beneath CS 1800. Other prerequisite alternatives are not additional degree obligations.",
         "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
-        "classification": "Current represented inventory: 181 course observations; 29 individually reviewed subject classifications, 2 explicitly mixed, 4 source-inspected but unclassified, and 146 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
+        "classification": "Current represented inventory: 181 course observations; 33 individually reviewed subject classifications, 2 explicitly mixed, 4 source-inspected but unclassified, and 142 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
         "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
         "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed."
       },
@@ -2008,6 +2411,15 @@
             "https://catalog.northeastern.edu/course-descriptions/inpr/",
             "https://catalog.northeastern.edu/course-descriptions/mktg/"
           ]
+        },
+        {
+          "issue": "Unreviewed selected criminal/social/communication classifications required source-content verification.",
+          "correction": "Exact-code review corrections: CRIM 3030: other → human_context; CRIM 3060: other → human_context; CRIM 1400: other → human_context",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/afcs/",
+            "https://catalog.northeastern.edu/course-descriptions/crim/"
+          ]
         }
       ],
       "blockers": [
@@ -2022,7 +2434,7 @@
     {
       "program_id": "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree",
       "institution_id": "northeastern-university",
-      "status": "in_progress",
+      "status": "blocked",
       "sources": [
         {
           "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-journalism-bs-bos/",
@@ -2107,19 +2519,192 @@
           "locator": "Exact individually reviewed course blocks: PHIL 1145",
           "checked_at": "2026-10-10T23:58:22+00:00",
           "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/afcs/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: AFCS 2600",
+          "checked_at": "2026-10-11T00:12:22+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/hist/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: HIST 2220",
+          "checked_at": "2026-10-11T00:12:24+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/insh/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: INSH 2102",
+          "checked_at": "2026-10-11T00:12:25+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/jrnl/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: JRNL 3700",
+          "checked_at": "2026-10-10T22:53:17+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/eeam/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: EEAM 2000",
+          "checked_at": "2026-10-11T00:12:32+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/university-academics/university-wide-requirements/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reread shared completion/eligibility sections and explicit Boston combined-degree scope; exact college assignment unresolved.",
+          "checked_at": "2026-10-10T22:59:30+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/university-academics/general-education-requirements/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reread shared completion/eligibility sections and explicit Boston combined-degree scope; exact college assignment unresolved.",
+          "checked_at": "2026-10-10T22:59:32+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/experiential-learning-graduation-requirement/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reread shared completion/eligibility sections and explicit Boston combined-degree scope; exact college assignment unresolved.",
+          "checked_at": "2026-10-10T23:01:06+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/graduation-requirements/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reread shared completion/eligibility sections and explicit Boston combined-degree scope; exact college assignment unresolved.",
+          "checked_at": "2026-10-10T23:01:08+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/degrees-majors-minors/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reread shared completion/eligibility sections and explicit Boston combined-degree scope; exact college assignment unresolved.",
+          "checked_at": "2026-10-10T22:18:06+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/progression-standards/",
+          "catalog_year": "2026-2027",
+          "locator": "Individually reread shared completion/eligibility sections and explicit Boston combined-degree scope; exact college assignment unresolved.",
+          "checked_at": "2026-10-10T23:01:11+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://www.khoury.northeastern.edu/programs/bs-in-artificial-intelligence-and-sociology/",
+          "catalog_year": null,
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-11T03:29:23+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://admissions.northeastern.edu/academics/combined-majors/",
+          "catalog_year": null,
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-11T03:29:25+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://www.khoury.northeastern.edu/current-undergraduate-students/",
+          "catalog_year": null,
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-11T03:30:47+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://www.khoury.northeastern.edu/current-undergraduate-students/undergraduate-advising-academic-support/",
+          "catalog_year": null,
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-11T03:31:05+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://www.khoury.northeastern.edu/current-undergraduate-students/undergraduate-advising-academic-support/academic-policies-and-procedures/",
+          "catalog_year": null,
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-11T03:31:07+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://service.northeastern.edu/registrar?id=kb_article_view&sysparm_article=KB000019923",
+          "catalog_year": null,
+          "locator": "HTTP success yielded an empty client-rendered registrar knowledge shell; no degree-specific contents could be inspected and no account was accessed.",
+          "checked_at": "2026-10-11T03:31:59+00:00",
+          "access_status": "insufficient_public_content"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/",
+          "catalog_year": "2026-2027",
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-10T23:00:30+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/arts-media-design/",
+          "catalog_year": "2026-2027",
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-10T23:00:31+00:00",
+          "access_status": "accessible"
         }
       ],
       "checks": {
         "degree_identity": "Official catalog identity and exact award/campus are retained as Artificial Intelligence and Journalism, BS (Boston). Current official page retrieved; catalog/cohort scope remains explicit.",
-        "required_and_choices": "Independently transcribed named-course roles from the individually reread degree page: 25 mapped fixed identities and 21 named alternatives; zero unbound identities in the represented graph. CS 1802 is separately supported by the degree preamble and CS description. These structural counts do not guarantee a student pathway: placement substitutions and home-college selections remain conditional. See the manual calculation note; category totals await remaining individual content review.",
-        "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage. This pass separately verified finite named alternatives and published open ranges; open level ranges and advisor-approved electives are criteria, not a falsely complete course inventory.",
-        "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant. Independently verified the explicit CS 1800/1802 corequisite pair and degree preamble; CS 1802 is now nested beneath CS 1800. Other prerequisite alternatives are not additional degree obligations.",
-        "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
-        "classification": "Current represented inventory: 46 course observations; 24 individually reviewed subject classifications, 2 explicitly mixed, 3 source-inspected but unclassified, and 17 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
-        "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
-        "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed."
+        "required_and_choices": "Source-transcribed 25 fixed and 21 named option identities remain unchanged. The fixed set adds CY 4170, DS 4420, eight JRNL identities, MATH 1341, ECON 2350 and ENGW 1111 to the common AI core. JRNL 2301 also fulfills advanced writing but counts once; fixed CY 4170 wins over its optional occurrence. JRNL 3700 remains one identity across two option groups. The external-transfer residence condition remains a note rather than three extra enrollments.",
+        "elective_pools": "The four-hour Khoury range/named pool, social-issues choice and JRNL 3700/5500 integrative alternatives remain separate. Three JRNL courses totaling 12 hours remain an open degree-published criterion; the entire subject catalog is not invented as a closed eligible pool. The degree requires 20 general-elective hours.",
+        "prerequisites": "Every represented course block has been read, retaining explicit prerequisite grade/OR/concurrent conditions as eligibility rather than adding all prerequisite alternatives as degree courses. Degree preamble concurrency is represented for required CS 1800/1802 and the existing named lecture/lab pairs. No missing prerequisite statement is interpreted as none. JRNL 1101 and 1102 are reciprocal corequisites already represented together. JRNL 2201 has C-grade prerequisite alternatives, and JRNL 2301 has C-grade first-year writing alternatives; these are preserved without creating additional fixed identities.",
+        "credits_and_units": "All 46 represented identities and their course-catalog semester hours are inspected. The degree states 131 total and 20 general-elective hours. JRNL 1101/1102 is a four-hour lecture plus one-hour toolbox, not five hours each. C or higher applies to the specified Journalism Courses group; the separate required-journalism group is not silently given that same per-course clause. The degree explicitly requires a 2.000 GPA in all JRNL courses. Outside-transfer students need five four-hour JRNL courses at Northeastern including 2201/2301/4650; the one-hour toolbox does not satisfy that residence count.",
+        "classification": "Current represented inventory: 46 course observations; 39 individually reviewed subject classifications, 2 explicitly mixed, 5 source-inspected but unclassified, and 0 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
+        "family_composition": "The eight shared AI units and placement policy have been checked against this individual degree panel, preserving all nine bindings and exact local parent roles. The common university policies apply through explicit degree/Boston scope; college-specific applicability is not inherited from the catalog breadcrumb or course prefixes.",
+        "degree_wide_requirements": "The entire primary requirements panel and six shared university policies were reread: total credits, overall GPA/residency, NUpath/transfer/writing/capstone conditions, experiential requirement, graduation clearance, combined-major design and university progression. Exact allowed/designated home college and the resulting college-specific progression/graduation rules remain a documented institutional applicability question, with official advising research continuing. The profile counts mapped named identities, not a guaranteed individual student schedule or a credit-total solution. Additional official admissions, Khoury student/advising/policy, applicable college catalog and CSSH advising/declaration routes were inspected. Admissions defers individual award-college designation to Application Status Check. Khoury publishes adviser-mediated home-college change/stay conditions, not an unconditional program-specific menu. Additional current advising major-GPA/progression rules are documented as potentially supplemental, not contradictory merely because the dated catalog omits them; their exact college/cohort applicability remains explicit; see the companion home-college follow-up."
       },
-      "expected_profile": null,
+      "expected_profile": {
+        "required": {
+          "count": 25,
+          "categories": {
+            "foundations": 5,
+            "mathematics": 5,
+            "ai_ml": 2,
+            "systems": 2,
+            "human_context": 10,
+            "applications": 0,
+            "electives": 0,
+            "other": 1
+          }
+        },
+        "options": {
+          "count": 21,
+          "categories": {
+            "foundations": 1,
+            "mathematics": 0,
+            "ai_ml": 0,
+            "systems": 2,
+            "human_context": 11,
+            "applications": 1,
+            "electives": 0,
+            "other": 6
+          }
+        },
+        "unresolved": {
+          "count": 0,
+          "categories": {
+            "foundations": 0,
+            "mathematics": 0,
+            "ai_ml": 0,
+            "systems": 0,
+            "human_context": 0,
+            "applications": 0,
+            "electives": 0,
+            "other": 0
+          }
+        }
+      },
       "expected_course_ids": {
         "required": [
           "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-cs-1800",
@@ -2205,15 +2790,38 @@
             "https://catalog.northeastern.edu/course-descriptions/mktg/",
             "https://catalog.northeastern.edu/course-descriptions/socl/"
           ]
+        },
+        {
+          "issue": "Unreviewed selected criminal/social/communication classifications required source-content verification.",
+          "correction": "Exact-code review corrections: HIST 2220: other → human_context; INSH 2102: other → human_context; JRNL 3700: other → human_context; SOCL 1280: other → human_context",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/afcs/",
+            "https://catalog.northeastern.edu/course-descriptions/hist/",
+            "https://catalog.northeastern.edu/course-descriptions/insh/",
+            "https://catalog.northeastern.edu/course-descriptions/jrnl/",
+            "https://catalog.northeastern.edu/course-descriptions/phil/",
+            "https://catalog.northeastern.edu/course-descriptions/socl/"
+          ]
+        },
+        {
+          "issue": "Unreviewed selected journalism/communication/coding classifications required source-content verification.",
+          "correction": "Exact-code review corrections: JRNL 1101: other → human_context; JRNL 1102: other → human_context; JRNL 2201: other → human_context; JRNL 2301: other → human_context; JRNL 3610: other → human_context; JRNL 1150: other → human_context; JRNL 3550: other → human_context; JRNL 4650: other → human_context; JRNL 5500: other → foundations",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/eeam/",
+            "https://catalog.northeastern.edu/course-descriptions/jrnl/"
+          ]
         }
       ],
       "blockers": [
         {
-          "issue": "Exact allowed/designated home-college choices and resulting additional progression/graduation rules remain an institutional source clarification; catalog hosting context does not establish assignment.",
-          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-journalism-bs-bos/"
+          "issue": "The current combined-major sources establish participating colleges and college-dependent choices, but do not give this exact 2026–27 Boston degree a complete allowed/designated home-college matrix. Admissions identifies individual award college in Application Status Check; Khoury advising offers conditional home-college changes with adviser review. Confirmation of this program’s permitted assignments and resulting additional college progression/residency/GPA/graduation rules is needed.",
+          "url": "https://admissions.northeastern.edu/academics/combined-majors/",
+          "supporting_url": "https://www.khoury.northeastern.edu/current-undergraduate-students/undergraduate-advising-academic-support/academic-policies-and-procedures/"
         }
       ],
-      "correction_status": "First category and parser corrections applied; remaining accessible individual review continues.",
+      "correction_status": "All represented named identities, course content, hours, explicit eligibility and source-transcribed role partitions are reviewed, with independent expected profile recorded. Corrected exact subject categories; original requirement graphs remain unchanged. Whole-degree closure awaits specific home-college applicability and clarification of the supplemental current Khoury policy scope, not unread represented course content.",
       "second_pass_status": "pending"
     },
     {
@@ -2515,7 +3123,7 @@
         "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
         "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant. Independently verified the explicit CS 1800/1802 corequisite pair and degree preamble; CS 1802 is now nested beneath CS 1800. Other prerequisite alternatives are not additional degree obligations.",
         "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
-        "classification": "Current represented inventory: 51 course observations; 23 individually reviewed subject classifications, 2 explicitly mixed, 4 source-inspected but unclassified, and 22 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
+        "classification": "Current represented inventory: 51 course observations; 24 individually reviewed subject classifications, 2 explicitly mixed, 4 source-inspected but unclassified, and 21 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
         "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
         "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed."
       },
@@ -2863,6 +3471,13 @@
           "locator": "Exact individually reviewed course blocks: PHTH 2210",
           "checked_at": "2026-10-11T00:07:05+00:00",
           "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/crim/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: CRIM 3040",
+          "checked_at": "2026-10-10T22:53:20+00:00",
+          "access_status": "accessible"
         }
       ],
       "checks": {
@@ -2871,7 +3486,7 @@
         "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
         "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant. Independently verified the explicit CS 1800/1802 corequisite pair and degree preamble; CS 1802 is now nested beneath CS 1800. Other prerequisite alternatives are not additional degree obligations.",
         "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
-        "classification": "Current represented inventory: 98 course observations; 37 individually reviewed subject classifications, 1 explicitly mixed, 3 source-inspected but unclassified, and 57 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
+        "classification": "Current represented inventory: 98 course observations; 38 individually reviewed subject classifications, 1 explicitly mixed, 3 source-inspected but unclassified, and 56 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
         "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
         "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed."
       },
@@ -2921,6 +3536,15 @@
           "status": "corrected",
           "evidence_urls": [
             "https://catalog.northeastern.edu/course-descriptions/phth/"
+          ]
+        },
+        {
+          "issue": "Unreviewed selected criminal/social/communication classifications required source-content verification.",
+          "correction": "Exact-code review corrections: CRIM 3040: other → applications",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/crim/",
+            "https://catalog.northeastern.edu/course-descriptions/socl/"
           ]
         }
       ],
@@ -3056,6 +3680,118 @@
           "locator": "Individually reread completion/eligibility sections; applicability to current Boston combined degree is explicit except exact home-college assignment.",
           "checked_at": "2026-10-10T23:01:11+00:00",
           "access_status": "accessible"
+        },
+        {
+          "url": "https://www.khoury.northeastern.edu/programs/bs-in-artificial-intelligence-and-sociology/",
+          "catalog_year": null,
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-11T03:29:23+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://admissions.northeastern.edu/academics/combined-majors/",
+          "catalog_year": null,
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-11T03:29:25+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://cssh.northeastern.edu/",
+          "catalog_year": null,
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-11T03:29:26+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/social-sciences-humanities/sociology-anthropology/",
+          "catalog_year": "2026-2027",
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-11T03:29:28+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://www.khoury.northeastern.edu/current-undergraduate-students/",
+          "catalog_year": null,
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-11T03:30:47+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://cssh.northeastern.edu/resources/undergraduate-advising/",
+          "catalog_year": null,
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-11T03:30:48+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://cssh.northeastern.edu/socant",
+          "catalog_year": null,
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-11T03:30:52+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://www.khoury.northeastern.edu/current-undergraduate-students/undergraduate-advising-academic-support/",
+          "catalog_year": null,
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-11T03:31:05+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://www.khoury.northeastern.edu/current-undergraduate-students/undergraduate-advising-academic-support/academic-policies-and-procedures/",
+          "catalog_year": null,
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-11T03:31:07+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://cssh.northeastern.edu/resources/undergraduate-advising/undergraduate-advising-faqs/",
+          "catalog_year": null,
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-11T03:31:08+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://cssh.northeastern.edu/declare-a-major-and-minor/",
+          "catalog_year": null,
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-11T03:31:54+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://cssh.northeastern.edu/academic-progression-standards/",
+          "catalog_year": null,
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-11T03:31:55+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://cssh.northeastern.edu/transfer-credit-guidelines/",
+          "catalog_year": null,
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-11T03:31:57+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://service.northeastern.edu/registrar?id=kb_article_view&sysparm_article=KB000019923",
+          "catalog_year": null,
+          "locator": "HTTP success yielded an empty client-rendered registrar knowledge shell; no degree-specific contents could be inspected and no account was accessed.",
+          "checked_at": "2026-10-11T03:31:59+00:00",
+          "access_status": "insufficient_public_content"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/social-sciences-humanities/",
+          "catalog_year": "2026-2027",
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-11T03:33:01+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/",
+          "catalog_year": "2026-2027",
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-10T23:00:30+00:00",
+          "access_status": "accessible"
         }
       ],
       "checks": {
@@ -3066,7 +3802,7 @@
         "credits_and_units": "Independently checked all 37 exact course identities and stated individual semester hours, including labs/seminars separately from bundled row totals. The 128-hour program minimum matches the university minimum and the degree requires 28 general-elective hours. Choice overlap and placement substitutions prevent summing this inventory as a unique student load.",
         "classification": "Current represented inventory: 37 course observations; 29 individually reviewed subject classifications, 2 explicitly mixed, 6 source-inspected but unclassified, and 0 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
         "family_composition": "Individually verified the eight common required AI course units plus placement policy against this degree page; the nine shared bindings preserve the original parents and exact codes. The official combined-major policy supports one integrated major/degree, and the six shared university policy sources are individually reread. Hosting/breadcrumb context is not used to assign a home college.",
-        "degree_wide_requirements": "Reread universitywide, NUpath, experiential, graduation, combined-major and progression policies: 128 hours, 2.000 graduation GPA, 64 Northeastern-earned hours; NUpath competencies/writing/overlap/transfer eligibility; qualifying experiential engagement and explicit exemptions; graduation/degree audit clearance; combined-major integration/design minima; and university standing/probation/dismissal standards. Individual home-college additional requirements remain unresolved because the combined-major rule permits choice for most programs without identifying this program’s allowed/designated assignment. The explicit in-major capstone criterion and conditional generally-one-additional-semester probation appeal limit are now preserved in existing shared policy nodes; neither creates extra required course records."
+        "degree_wide_requirements": "Reread universitywide, NUpath, experiential, graduation, combined-major and progression policies: 128 hours, 2.000 graduation GPA, 64 Northeastern-earned hours; NUpath competencies/writing/overlap/transfer eligibility; qualifying experiential engagement and explicit exemptions; graduation/degree audit clearance; combined-major integration/design minima; and university standing/probation/dismissal standards. Individual home-college additional requirements remain unresolved because the combined-major rule permits choice for most programs without identifying this program’s allowed/designated assignment. The explicit in-major capstone criterion and conditional generally-one-additional-semester probation appeal limit are now preserved in existing shared policy nodes; neither creates extra required course records. Additional official admissions, Khoury student/advising/policy, applicable college catalog and CSSH advising/declaration routes were inspected. Admissions defers individual award-college designation to Application Status Check. Khoury publishes adviser-mediated home-college change/stay conditions, not an unconditional program-specific menu. Additional current advising major-GPA/progression rules are documented as potentially supplemental, not contradictory merely because the dated catalog omits them; their exact college/cohort applicability remains explicit; see the companion home-college follow-up."
       },
       "expected_profile": {
         "required": {
@@ -3341,6 +4077,69 @@
           "locator": "Individually reread completion/eligibility sections and explicit Boston combined-degree scope; exact home-college assignment unresolved.",
           "checked_at": "2026-10-10T23:01:11+00:00",
           "access_status": "accessible"
+        },
+        {
+          "url": "https://www.khoury.northeastern.edu/programs/bs-in-artificial-intelligence-and-sociology/",
+          "catalog_year": null,
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-11T03:29:23+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://admissions.northeastern.edu/academics/combined-majors/",
+          "catalog_year": null,
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-11T03:29:25+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://www.khoury.northeastern.edu/current-undergraduate-students/",
+          "catalog_year": null,
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-11T03:30:47+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://www.khoury.northeastern.edu/current-undergraduate-students/undergraduate-advising-academic-support/",
+          "catalog_year": null,
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-11T03:31:05+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://www.khoury.northeastern.edu/current-undergraduate-students/undergraduate-advising-academic-support/academic-policies-and-procedures/",
+          "catalog_year": null,
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-11T03:31:07+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://service.northeastern.edu/registrar?id=kb_article_view&sysparm_article=KB000019923",
+          "catalog_year": null,
+          "locator": "HTTP success yielded an empty client-rendered registrar knowledge shell; no degree-specific contents could be inspected and no account was accessed.",
+          "checked_at": "2026-10-11T03:31:59+00:00",
+          "access_status": "insufficient_public_content"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/",
+          "catalog_year": "2026-2027",
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-10T23:00:30+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/health-sciences/",
+          "catalog_year": "2026-2027",
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-11T03:33:03+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/health-sciences/academic-policies-procedures/",
+          "catalog_year": "2026-2027",
+          "locator": "Official home-college applicability follow-up; see northeastern-home-college-followup.md for exact scope.",
+          "checked_at": "2026-10-11T03:34:35+00:00",
+          "access_status": "accessible"
         }
       ],
       "checks": {
@@ -3351,7 +4150,7 @@
         "credits_and_units": "All 44 course identities and individual catalog hours are inspected. The program requires 128 total and 12 general-elective semester hours. Lecture/lab bundles are not assigned to each individual course. SLPA 4219 has three hours. The degree row requires four hours of SLPA 5107, while its general course catalog permits three-to-four-hour offerings; the requirement retains four and the course scalar remains null with its explicit variable-hour note. No synthetic credit reconciliation or extra degree blocker is inferred from those different source scopes.",
         "classification": "Current represented inventory: 44 course observations; 37 individually reviewed subject classifications, 2 explicitly mixed, 5 source-inspected but unclassified, and 0 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
         "family_composition": "Verified the eight common AI course units and placement policy against this degree page; nine family bindings retain original codes and parents. The official combined-major rule establishes one integrated degree, and the six shared university policy sources have been reread. No Bouvé/Khoury home-college assignment is inferred from course names or catalog placement.",
-        "degree_wide_requirements": "Reread the six shared university policy sources and applied the explicit Boston degree scope: overall credit/GPA/residency minima, NUpath and writing/transfer/overlap rules, in-major capstone with unit-controlled combined-major choice, qualifying experiential engagement/exemptions, graduation clearance, combined-major design criteria, and university standing/probation/dismissal/conditional appeal rules. The degree explicitly directs general electives to cover NUpath categories not satisfied by required coursework. Exact home-college assignment and resulting additional college rules remain unpublished for this specific program in the inspected sources."
+        "degree_wide_requirements": "Reread the six shared university policy sources and applied the explicit Boston degree scope: overall credit/GPA/residency minima, NUpath and writing/transfer/overlap rules, in-major capstone with unit-controlled combined-major choice, qualifying experiential engagement/exemptions, graduation clearance, combined-major design criteria, and university standing/probation/dismissal/conditional appeal rules. The degree explicitly directs general electives to cover NUpath categories not satisfied by required coursework. Exact home-college assignment and resulting additional college rules remain unpublished for this specific program in the inspected sources. Additional official admissions, Khoury student/advising/policy, applicable college catalog and CSSH advising/declaration routes were inspected. Admissions defers individual award-college designation to Application Status Check. Khoury publishes adviser-mediated home-college change/stay conditions, not an unconditional program-specific menu. Additional current advising major-GPA/progression rules are documented as potentially supplemental, not contradictory merely because the dated catalog omits them; their exact college/cohort applicability remains explicit; see the companion home-college follow-up."
       },
       "expected_profile": {
         "required": {
@@ -3503,7 +4302,7 @@
           "supporting_url": "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/degrees-majors-minors/"
         }
       ],
-      "correction_status": "All 44 represented identities, hours/source scope, explicit eligibility, role memberships and category decisions reviewed; independent expected profile recorded. CS 1802 omission corrected. Whole-degree closure is blocked only by program-specific home-college applicability, not unread course descriptions or unknown launch/resource metadata.",
+      "correction_status": "All 44 represented identities, hours/source scope, explicit eligibility, role memberships and category decisions reviewed; independent expected profile recorded. CS 1802 omission corrected. Whole-degree closure is blocked by program-specific home-college applicability and the scope of supplemental Khoury advising rules, not unread course descriptions or unknown launch/resource metadata.",
       "second_pass_status": "pending"
     },
     {

@@ -330,3 +330,39 @@ def test_speech_manual_profile_and_variable_offering_hours_remain_separate():
     assert any(r['credits']==4 and r['kind']=='all' for r in rows)
     assert next(c for c in program['courses'] if c['code']=='SLPA 4219')['credits']==3
     assert entry['status']=='blocked' and entry['blockers']
+
+
+@pytest.mark.parametrize('code,expected,status', [
+    ('CRIM 2370','human_context','reviewed'),('CRIM 3600','human_context','reviewed'),
+    ('CRIM 3700','mathematics','reviewed'),('CRIM 3040','applications','reviewed'),
+    ('CRIM 3540','other','mixed'),('CRIM 4949','human_context','reviewed'),
+    ('PHIL 1300','human_context','reviewed'),('JRNL 3700','human_context','reviewed'),
+    ('JRNL 5500','foundations','reviewed'),('JRNL 1102','human_context','reviewed'),
+    ('JRNL 1000','other','unclassified'),('EEAM 2000','other','unclassified')])
+def test_criminology_and_journalism_categories_follow_individual_content(code,expected,status):
+    d=CATEGORY_DECISIONS[code]
+    assert d['status']==status and category(code,d['name'],d['guard'])==expected
+    assert category(code,d['name'],'Changed subject without the reviewed descriptive evidence')=='other'
+    assert category(code,'Another course title',d['guard'])=='other'
+    if code=='CRIM 3540':assert d['candidate_categories']==['human_context','applications']
+
+
+@pytest.mark.parametrize('subject,size,fixed,options', [('criminal-justice',68,19,49),('journalism',46,25,21)])
+def test_criminal_and_journalism_independent_profiles_have_no_unread_records(subject,size,fixed,options):
+    from atlas.families import resolve_program
+    from atlas.curriculum_profile import requirement_profile
+    pid=f'northeastern-university-artificial-intelligence-and-{subject}-bs-boston-bs-degree'
+    p=json.loads((ROOT/'data/programs'/f'{pid}.json').read_text())
+    f=json.loads((ROOT/'data/families/northeastern-ai-combined-degrees.json').read_text())
+    e=next(e for e in json.loads((ROOT/'research/degree-audit/northeastern.json').read_text())['programs'] if e['program_id']==pid)
+    assert len(p['courses'])==size and all(c.get('category_review') for c in p['courses'])
+    profile=requirement_profile(resolve_program(p,f))
+    assert profile['required']['count']==fixed and profile['options']['count']==options
+    for role in ['required','options','unresolved']:
+        assert profile[role]['count']==e['expected_profile'][role]['count']
+        assert profile[role]['categories']==e['expected_profile'][role]['categories']
+        assert profile[role]['classification']['unreviewed']==0
+    if subject=='journalism':
+        assert next(c for c in p['courses'] if c['code']=='JRNL 1102')['credits']==1
+        assert next(c for c in p['courses'] if c['code']=='JRNL 5500')['category']=='foundations'
+    assert e['status']=='blocked' and e['blockers']
