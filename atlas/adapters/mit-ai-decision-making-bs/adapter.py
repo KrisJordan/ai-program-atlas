@@ -142,3 +142,8 @@ supplement = import_module('atlas.adapters.mit-ai-decision-making-bs.supplement'
 for module in (registrar, supplement):
     SOURCES.extend(module.SOURCE_PARSERS)
     SOURCE_PARSERS.update(module.SOURCE_PARSERS)
+
+# These field plans are optional degree-wide HASS branches, not AI-major slots.
+hass_fields = import_module('atlas.adapters.mit-ai-decision-making-bs.hass_fields')
+SOURCES.extend(hass_fields.SOURCE_PARSERS)
+SOURCE_PARSERS.update(hass_fields.SOURCE_PARSERS)
