@@ -144,3 +144,10 @@ Candidate `2d77063d` was not published: all required browser cases passed, but t
 ## Verified continuation — 65555101
 
 The frozen candidate described above passed all release gates and was published at 07:54 UTC on 2026-10-11. GitHub Actions 38122729680 built and deployed the exact SHA. Six live checks confirmed public data/profile equality, discovery and ranking views, current degree corrections, comparison reload/back/forward, Stevens mobile wrapping and course-note keyboard/no-JavaScript behavior. The target cohort and full degree audit remain incomplete; continuing research is not included in these verified publication totals.
+
+
+## Frozen continuation after 1c2c4d8 — verification pending
+
+Committed source and all primary ledgers are frozen before ingestion. Maintained schema 015 database: 84,279,296 bytes; repeat ingestion changes zero programs; integrity and foreign keys pass. Candidate coverage remains 168 programs/194 institutions, now with 25,758 course observations, 19,854 requirement nodes, 16,288 description summaries, 7,383 prerequisite statements, 301 actual teaching links and 265 syllabus links. These are candidate counts, not yet public totals.
+
+Primary degree review: two audited, 58 individually blocked, three in progress (MIT, UCSD, RIT); no full independent certification. Purdue and UCSB bounded reviews have exhausted their identified accessible queues and document exact remaining access/version limits. RIT has 449 represented identities and 32 local immersion paths, with 338 named content entries still unread at this snapshot. Helper contributions not yet integrated remain outside database counts. A UCSD joint undergraduate/graduate-heading omission is corrected with scoped eligibility retained. Clean tests, reconstruction/build reproducibility, CI/Pages and live checks must pass before publication. The verified public checkpoint remains 65555101.
