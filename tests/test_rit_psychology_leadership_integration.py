@@ -18,5 +18,5 @@ def test_nested_pairs_preparation_and_ai_overlap_remain_distinct():
     assert 'may not all come from the same discipline' in r['legal-studies-immersion']['summary']
     assert c['PSYC-101H']['prerequisites'] is None and c['PSYC-255']['credits']==3
     assert c['CRIM-510']['category']=='human_context'
-    profile=requirement_profile(d);assert [profile[k]['count'] for k in ['required','options','unresolved']]==[23,641,15]
-    assert len(c)==679 and sum(bool(x['description']) for x in c.values())==676
+    profile=requirement_profile(d);assert [profile[k]['count'] for k in ['required','options','unresolved']]==[23,709,15]
+    assert len(c)==747 and sum(bool(x['description']) for x in c.values())==744

@@ -24,5 +24,5 @@ def test_economics_preparation_and_explicit_ethics_whole_routes_remain_separate(
     assert c['HIST-326']['category']==c['PHIL-320']['category']=='human_context'
     assert c['PHIL-205']['category']=='mathematics'
     p=requirement_profile(d)
-    assert [p[k]['count'] for k in ['required','options','unresolved']]==[23,641,15]
+    assert [p[k]['count'] for k in ['required','options','unresolved']]==[23,709,15]
     assert d['curriculum_status']=='partial'

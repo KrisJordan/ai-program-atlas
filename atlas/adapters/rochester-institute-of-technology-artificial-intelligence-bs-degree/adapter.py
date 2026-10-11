@@ -110,3 +110,6 @@ for slug in ['dance-immersion', 'music-immersion', 'theatre-arts-immersion', 'th
     if url not in SOURCES:
         SOURCES.append(url)
     SOURCE_PARSERS[url] = parse_music_cards if slug == 'music-immersion' else partial(parse_performance_cards, url=url)
+
+from atlas.adapters.rit_visual_immersion_integration import register as register_visual_immersions
+register_visual_immersions(SOURCES,SOURCE_PARSERS)
