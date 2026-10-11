@@ -145,3 +145,12 @@ Caltech has one bounded no-qualifying-program finding after the current program 
 
 Course counts include elective pools and repeated observations across sibling programs. They are not unique institution-wide courses, required-course totals, completion percentages or quality scores. Complete refers to an explicitly reviewed scope: a complete minor/concentration/additional major does not certify the host degree. Metadata availability is separate. Zero pending in the loaded roster is not full target-cohort coverage; missing institutions remain outside that denominator.
 
+
+
+## Verified source-correction checkpoint — 531073fe
+
+Published 2026-10-11 from exact clean commit `531073fe5a33dca48080163c874f0fa19be3020a`. [CI and Pages run](https://github.com/KrisJordan/ai-program-atlas/actions/runs/38114281903) succeeded. Clean locked suite: 2,376 passed, 183 optional-cache/historical skips, all 54 mandatory Chromium tests passed. Maintained/fresh current facts agree; repeat ingest zero; FK and integrity pass; 175 deterministic files. SQLite 89,964,544 bytes.
+
+Live 168 programs/194 institutions, 24,248 course observations/19,560 nodes, 5,464 descriptions/4,606 prerequisites. Audit statuses: two primary audited, 23 individually blocked, 38 active; no full second pass certified. All projected profiles matched; desktop/390px filters, ranking panels, second majors, concentration parents, detail links, comparison reload/back/forward and keyboard checks passed without document overflow or JavaScript errors. Source-specific corrected fixed counts: MIT3, MarylandBA10, Northwestern13, Northeastern Environmental36. PublicHealth18 fixed/79 options. The target cohort remains incomplete; no expansion or audit-completion claim.
+
+Prior ddd112ac and640b89fb candidates were not published because clean tests identified stale expected roles or optional partial-observer assumptions; evidence-aligned regression fixes preceded this exact tested release. New research continues after this checkpoint.
