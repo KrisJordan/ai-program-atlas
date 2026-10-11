@@ -2,7 +2,7 @@ import importlib
 import json
 from pathlib import Path
 import pytest
-from atlas.adapters import ucsd_hila_reviews as hila, ucsd_sio_reviews as sio, ucsd_eds_reviews as eds, ucsd_cgs_reviews as cgs, ucsd_mus_reviews as mus, ucsd_biology_reviews as bio, ucsd_glbh_reviews as glbh, ucsd_psyc_reviews as psyc, ucsd_linguistics_reviews as ling, ucsd_physics_astronomy_reviews as physics, ucsd_chem_reviews as chem, ucsd_literature_first_reviews as lit, ucsd_engineering_reviews as eng, ucsd_health_development_reviews as health, ucsd_theatre_reviews as theatre, ucsd_environment_reviews as env, ucsd_management_interdisciplinary_reviews as inter, ucsd_area_religion_reviews as area
+from atlas.adapters import ucsd_hila_reviews as hila, ucsd_sio_reviews as sio, ucsd_eds_reviews as eds, ucsd_cgs_reviews as cgs, ucsd_mus_reviews as mus, ucsd_biology_reviews as bio, ucsd_glbh_reviews as glbh, ucsd_psyc_reviews as psyc, ucsd_linguistics_reviews as ling, ucsd_physics_astronomy_reviews as physics, ucsd_chem_reviews as chem, ucsd_literature_first_reviews as lit, ucsd_engineering_reviews as eng, ucsd_health_development_reviews as health, ucsd_theatre_reviews as theatre, ucsd_environment_reviews as env, ucsd_management_interdisciplinary_reviews as inter, ucsd_area_religion_reviews as area, ucsd_college_writing_reviews as college, ucsd_final_science_reviews as science, ucsd_japanese_aapi_reviews as japan
 from atlas.curriculum_profile import requirement_profile
 
 PID=hila.SPEC['program_id']
@@ -25,7 +25,7 @@ def test_history_sio_integration_preserves_held_identity_and_roles():
     assert cs['POLI 117']['category_review']['status']=='unclassified'
     assert [requirement_profile(d)[k]['count']for k in ['required','options','unresolved']]==[8,119,2241]
 
-@pytest.mark.parametrize('module,subject,count,dispositions',[(hila,'HILA',265,20),(sio,'SIO',35,6),(eds,'EDS',31,1),(cgs,'CGS',24,0),(mus,'MUS',27,6),(bio,'BIOL',34,3),(glbh,'GLBH',24,2),(psyc,'PSYC',14,2),(ling,'LING',25,14),(physics,'PHYS',14,1),(physics,'ASTR',10,1),(chem,'CHEM',13,1),(lit,'LTEA',110,15),(eng,'ECE',9,0),(eng,'MAE',6,3),(eng,'SE',5,0),(eng,'BENG',2,1),(eng,'NANO',3,0),(health,'HDS',8,2),(health,'PH',10,0),(theatre,'THEA',35,2),(env,'ENVR',6,0),(env,'ESYS',4,2),(inter,'MGT',7,1),(inter,'INTL',4,0),(inter,'CLAS',3,0),(inter,'HMNR',2,0),(inter,'LAWS',1,0),(inter,'CCS',1,0),(area,'AAS',11,0),(area,'LATI',14,2),(area,'RELI',8,2),(area,'JWSP',9,0)])
+@pytest.mark.parametrize('module,subject,count,dispositions',[(hila,'HILA',265,20),(sio,'SIO',35,6),(eds,'EDS',31,1),(cgs,'CGS',24,0),(mus,'MUS',27,6),(bio,'BIOL',34,3),(glbh,'GLBH',24,2),(psyc,'PSYC',14,2),(ling,'LING',25,14),(physics,'PHYS',14,1),(physics,'ASTR',10,1),(chem,'CHEM',13,1),(lit,'LTEA',110,15),(eng,'ECE',9,0),(eng,'MAE',6,3),(eng,'SE',5,0),(eng,'BENG',2,1),(eng,'NANO',3,0),(health,'HDS',8,2),(health,'PH',10,0),(theatre,'THEA',35,2),(env,'ENVR',6,0),(env,'ESYS',4,2),(inter,'MGT',7,1),(inter,'INTL',4,0),(inter,'CLAS',3,0),(inter,'HMNR',2,0),(inter,'LAWS',1,0),(inter,'CCS',1,0),(area,'AAS',11,0),(area,'LATI',14,2),(area,'RELI',8,2),(area,'JWSP',9,0),(college,'HUM',5,1),(college,'CAT',5,0),(college,'DOC',4,0),(college,'AWP',2,0),(college,'TMC',2,0),(college,'MCWP',1,0),(college,'MMW',1,0),(science,'ANTH',106,11),(science,'MATH',6,0),(science,'DSC',5,0),(science,'COGS',2,1),(science,'CSS',1,0),(japan,'JAPN',5,1),(japan,'AAPI',2,0)])
 def test_composed_source_replays_approved_metadata_only(module,subject,count,dispositions):
     s=module.SPEC['sources'][subject];p=Path(s['cache_path'])
     if not p.exists():pytest.skip('Optional ignored official chapter capture')
@@ -37,8 +37,11 @@ def test_composed_source_replays_approved_metadata_only(module,subject,count,dis
     saved={c['id']:c for c in json.loads(Path('data/programs',PID+'.json').read_text())['courses']}
     for c in r['courses']:
         assert 'category_review'not in c
-        assert all(saved[c['id']][k]==v for k,v in c.items()if k!='notes')
-        assert set(c['notes'])<=set(saved[c['id']]['notes'])
+        legacy_core_math = c['id'] in {'ucsd-math-20a','ucsd-math-20b'}
+        if legacy_core_math:
+            assert c['description'] is None and saved[c['id']]['description'] # Earlier partial metadata observer intentionally omits the reviewed description.
+        assert all(saved[c['id']][k]==v for k,v in c.items()if k!='notes' and not (legacy_core_math and k=='description'))
+        assert set(c.get('notes',[]))<=set(saved[c['id']].get('notes',[]))
 
 
 def test_music_study_and_cultural_ai_remain_conditional_content():
@@ -147,3 +150,25 @@ def test_health_environment_and_performance_conditions_are_not_universal_rules()
     assert cs['ESD 119']['description'] is None
     assert cs['ESD 119']['category_review']['status']=='unclassified'
     assert 'Neither source explicitly' in cs['ESD 119']['category_review']['rationale']
+
+
+def test_final_named_queue_preserves_code_only_backlog_and_scope():
+    d=json.loads(Path('data/programs',PID+'.json').read_text());cs={c['code']:c for c in d['courses']}
+    assert cs['HUM 1']['credits']==6
+    assert cs['HUM 2']['name']=='Rome, Christianity, and the Middle Ages'
+    assert cs['HUM 2']['category_review']['status']=='unclassified'
+    assert 'Revelle students only' in cs['HUM 1']['prerequisites']
+    assert 'concurrent enrollment in AWP 3' in cs['DOC 1']['prerequisites']
+    assert cs['CAT 90']['credits']==1
+    assert cs['JAPN 180']['credits']is None
+    assert cs['AAPI 87']['credits']==1
+    assert cs['SOC 102']['description']is None and cs['SOCI 102']['description']
+    assert cs['CSS 1']['category']=='foundations'
+    assert next(s for s in d['sources']if s['id']==cs['CSS 1']['source_id'])['catalog_year']=='2023–24'
+    ledger=json.loads(Path('research/degree-audit/west-purdue-wpi.json').read_text())
+    row=next(r for r in ledger['programs']if r['program_id']==PID)
+    pending=[c for c in cs.values()if 'not a review of course content' in c.get('category_review',{}).get('rationale','')]
+    assert len(pending)==652
+    assert row['status']=='in_progress'
+    assert '652' in row['accessible_work_remaining']
+    assert cs['MATH 109']['name']is None # A code-only insufficiency label is not a content review.

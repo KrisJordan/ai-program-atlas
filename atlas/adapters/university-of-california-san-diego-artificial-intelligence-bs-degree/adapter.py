@@ -447,3 +447,33 @@ for _review_module in (health_development_reviews, theatre_reviews, environment_
             raise ValueError('UCSD health/theatre/environment/interdisciplinary source needs explicit composition')
         SOURCES += (_review_url,)
         SOURCE_PARSERS[_review_url] = _review_parser
+
+from atlas.adapters import ucsd_college_writing_reviews as college_writing_reviews
+from atlas.adapters import ucsd_final_science_reviews as final_science_reviews
+from atlas.adapters import ucsd_japanese_aapi_reviews as japanese_aapi_reviews
+
+def _compose_disjoint_review_observers(previous, additional):
+    def observe(html):
+        base = previous(html)
+        added = additional(html)
+        courses = base.get('courses', []) + added.get('courses', [])
+        if len({course['id'] for course in courses}) != len(courses):
+            raise ValueError('Overlapping UCSD course observations require explicit review')
+        result = {**base, 'courses': courses,
+                  'source_dispositions': base.get('source_dispositions', []) + added.get('source_dispositions', [])}
+        if added.get('notes'):
+            result['notes'] = list(dict.fromkeys(base.get('notes', []) + added['notes']))
+        return result
+    return observe
+
+for _review_module in (college_writing_reviews, final_science_reviews, japanese_aapi_reviews):
+    for _review_url, _review_parser in _review_module.SOURCE_PARSERS.items():
+        if _review_url in SOURCE_PARSERS:
+            if _review_module is not final_science_reviews or _review_url not in (
+                'https://catalog.ucsd.edu/courses/ANTH.html',
+                'https://catalog.ucsd.edu/courses/MATH.html'):
+                raise ValueError('Unexpected source overlap in final UCSD review batch')
+            SOURCE_PARSERS[_review_url] = _compose_disjoint_review_observers(SOURCE_PARSERS[_review_url], _review_parser)
+        else:
+            SOURCES += (_review_url,)
+            SOURCE_PARSERS[_review_url] = _review_parser

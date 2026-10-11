@@ -467,3 +467,9 @@ All13 matching Chemistry blocks independently primary-read and integrated from t
 ### UCSD bounded135 health/interdisciplinary source pass —2026-10-11
 
 123 current observations and12 exact holds integrated. Source contributors read every matched complete block; primary independently read all17 health/development blocks plus18 consequential contributor blocks, retaining that review-scope distinction. No new requirement/identity relationships or universal permissions inferred. Actual PAR instruction distinguishes LATI175 applications from LATI150 humanities. Context934other/1046human/226applications/7foundations/24systems/4math; roles8/119/2241. Final49 known accessible descriptions/identity dispositions remain active.
+
+### UCSD named queue complete;652 code-only source checks still active —2026-10-11
+
+Final49 contributes45 metadata observations plus four holds, preserving CSS1's actual2023–24 edition and college-specific restrictions. Primary read the21 college and8 Japanese/AAPI blocks and SOC102 source mismatch; the science owner read18 current matches. Context903other/1069human/228applications/10foundations/24systems/7math, roles8/119/2241 unchanged.
+
+A closure cross-check found652 earlier code-only “not a review of course content” labels. They are **not** content-reviewed merely because `category_review` is populated. Those finite accessible chapter checks keep UCSD **in_progress**, separate from the genuine blockers. The originally named-course queue is exhausted; the whole represented inventory is not. COGS64/LTSP41/LIHL36/MATH35 lead the remaining queue.
