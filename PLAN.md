@@ -220,3 +220,5 @@ User requested aggregate CSRankings U.S. rank as the default homepage order. Imp
 - User explicitly requested universal application: shared renderer rules apply to every program, using actual course descendants and explicit general-education source/title labels. Biological/science subject matter alone never establishes a general-education role. Validate branch preservation across all exported pages before publication.
 
 - Universal scope includes nested degree trees: explicitly labeled general-education branches follow program courses at every level and start closed, retaining their own original headings. Added a non-MIT regression case for both root and nested source-labeled scopes.
+
+- Cross-program scope inspection caught an exclusion edge case: UCSD’s “AI major: 124 units excluding college general education” is program scope. Scope matching now requires an explicit general-education heading/source or GIR marker and respects exclusion/beyond wording. Added a regression case before final publication.

@@ -111,3 +111,14 @@ def test_nested_general_education_follows_program_courses(site_data):
     assert [n['id'] for n in children]==['requirement-major','requirement-general']
     assert soup.select_one('#requirement-major > details').has_attr('open')
     assert not soup.select_one('#requirement-general > details').has_attr('open')
+
+
+
+def test_major_excluding_general_education_remains_program_scope(site_data):
+    p=site_data['programs'][0]
+    p['sources']=[dict(id='source',title='Computer Science and Engineering undergraduate curriculum')]
+    p['requirements']=[rule('major',courses=[p['courses'][0]['id']],title='AI major: 124 units excluding college general education')]
+    soup=BeautifulSoup(requirement_tree(p),'html.parser')
+    assert soup.select_one('.requirements > #requirement-major')
+    assert not soup.select_one('#requirements-group-general-top')
+    assert soup.select_one('#requirement-major > details').has_attr('open')

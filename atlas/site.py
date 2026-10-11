@@ -629,8 +629,13 @@ def requirement_tree(p):
 
     def general_education(r):
         # Only explicit source/title labels establish institution-wide scope.
-        label = (r.get('title') or '') + ' ' + (sources.get(r.get('source_id'), {}).get('title') or '')
-        return bool(re.search(r'\bgeneral education\b|\bgeneral institute requirements\b|\bGIRs?\b', label, re.I))
+        title = (r.get('title') or '').strip()
+        source_title = (sources.get(r.get('source_id'), {}).get('title') or '').strip()
+        # A major described as excluding/beyond general education is program scope.
+        if re.search(r'\b(?:excluding|beyond|outside|not including)\b.*(?:general education|\bGIRs?\b)', title, re.I):
+            return False
+        scope_heading = r'^(?:(?:unified|engineering|university|college|institution(?:-wide)?|institute)\s+)*general\s+(?:education|institute\s+requirements)\b'
+        return bool(re.search(scope_heading, title, re.I) or re.search(scope_heading, source_title, re.I) or re.search(r'\(\s*GIRs?\s*\)', title, re.I))
 
     def course_title(c):
         return (c.get('name') or 'Course name not verified') + (' (' + c['code'] + ')' if c.get('code') else '')
