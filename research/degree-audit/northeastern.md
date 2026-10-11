@@ -190,3 +190,40 @@ Full source-table closure for the final two represented curricula: Business inde
 All24 degree panels now have individually reviewed represented-course role sets, and all1,674 current program-course observations have manual source-content dispositions. This is not a whole-degree audit-completion claim: exact home-college/cohort applicability and the remaining finite conditional-college-policy integration remain active. Source-inspected unknown special topics, missing offering details and null prerequisites are preserved. Business INTB1209 credit scope and International Affairs AFRS/AFCS prefix ambiguity remain explicit source issues; no invented waiver or identity mapping resolves them.
 
 The final finite public college-policy mapping adds 23 guarded, course-free conditional notes across seven degrees: CSSH clearance/change/re-entry supplements for five combinations, seven D’Amore-McKim policies for Business, and CAMD clearance for Journalism. Source participation was verified separately for every target; the shared family and all manual role/profile counts remain unchanged. The [closure note](../northeastern-college-policy-closure.md) documents exact scope, exclusions, approval conditions and validation. All 1,674 represented observations are source-reviewed. The remaining applicability decision is distinguished from these now-completed accessible policy mappings.
+
+## Terminal primary audit disposition — 2026-10-11
+
+All 24 primary entries are now individually **blocked**, with all accessible represented-course and finite public-policy review completed. This status does not mean the official pages were inaccessible or that the known graphs are unreviewed. It identifies a precise missing institutional applicability selector: the complete allowed/designated home-college and resulting cohort/policy matrix for each named combined degree. Admissions defers an individual awarding college to the applicant portal; the university says most programs permit choice without enumerating exceptions, and current Khoury advising gives conditional adviser-mediated routes. Neither a particular applicant’s assignment nor college hosting establishes a universal program-wide menu.
+
+The ledger records the exact program, Admissions, university, Khoury and partner-college URLs separately for every entry. Science’s public advising link delegates detailed home-change eligibility to student support. Business additionally retains the explicit INTB 1209 concentration-versus-major-credit conflict. Conditional approvals, ordinary prerequisites, closed/open elective criteria, null offering metadata, source-inspected unclassified subjects and differing rules for different cohorts are not themselves treated as contradictions or blockers.
+
+| Individually reviewed degree | Additional conditional college | Fixed | Options | Contextual |
+| --- | --- | ---: | ---: | ---: |
+| Chemical Engineering and Artificial Intelligence, BSChE (Boston) | College of Engineering | 39 | 7 | 0 |
+| Artificial Intelligence and Behavioral Neuroscience, BS (Boston) | College of Science | 23 | 49 | 0 |
+| Artificial Intelligence and Biochemistry, BS (Boston) | College of Science | 27 | 27 | 0 |
+| Artificial Intelligence and Biology, BS (Boston) | College of Science | 27 | 51 | 0 |
+| Artificial Intelligence and Business Administration, BS (Boston) | D’Amore-McKim School of Business | 21 | 151 | 8 |
+| Artificial Intelligence and Chemistry, BS (Boston) | College of Science | 29 | 27 | 0 |
+| Artificial Intelligence and Communication Studies, BS (Boston) | College of Arts, Media and Design | 15 | 63 | 0 |
+| Artificial Intelligence and Criminal Justice, BS (Boston) | College of Social Sciences and Humanities | 19 | 49 | 0 |
+| Artificial Intelligence and Design, BS (Boston) | College of Arts, Media and Design | 23 | 41 | 3 |
+| Artificial Intelligence and Ecology and Evolutionary Biology, BS (Boston) | College of Science | 27 | 46 | 0 |
+| Artificial Intelligence and Economics, BS (Boston) | College of Social Sciences and Humanities | 18 | 32 | 0 |
+| Artificial Intelligence and Environmental and Sustainability Sciences, BS (Boston) | College of Science | 22 | 60 | 0 |
+| Artificial Intelligence and Health Science, BS (Boston) | Bouvé College of Health Sciences | 26 | 26 | 0 |
+| Artificial Intelligence and International Affairs, BS (Boston) | College of Social Sciences and Humanities | 20 | 157 | 0 |
+| Artificial Intelligence and Journalism, BS (Boston) | College of Arts, Media and Design | 25 | 21 | 0 |
+| Artificial Intelligence and Linguistics, BS (Boston) | College of Science | 18 | 27 | 0 |
+| Artificial Intelligence and Mathematics, BS (Boston) | College of Science | 20 | 14 | 0 |
+| Artificial Intelligence and Philosophy, BS (Boston) | College of Social Sciences and Humanities | 17 | 33 | 0 |
+| Artificial Intelligence and Physics, BS (Boston) | College of Science | 25 | 24 | 0 |
+| Artificial Intelligence and Psychology, BS (Boston) | College of Science | 14 | 48 | 0 |
+| Artificial Intelligence and Public Health, BS (Boston) | Bouvé College of Health Sciences | 18 | 79 | 0 |
+| Artificial Intelligence and Sociology, BS (Boston) | College of Social Sciences and Humanities | 16 | 21 | 0 |
+| Artificial Intelligence and Speech-Language Pathology and Audiology, BS (Boston) | Bouvé College of Health Sciences | 30 | 14 | 0 |
+| Environmental Engineering and Artificial Intelligence, BSEnvE (Boston) | College of Engineering | 36 | 35 | 0 |
+
+The additional Chemical department read confirms the exact BSChE combination and hosting, but supplies no home-assignment exception to the university policy. Its Engineering hosting and award abbreviation are preserved rather than converted into proof of mandatory home designation. No private student records or restricted source workaround were used.
+
+Institutional confirmation needed: for each exact Boston 2026–2027 award, publish the permitted/required home colleges, entry/change/re-entry cohort applicability and the selection/override rules linking each designation to the already represented college policies. Where the program conditions seminars or co-op preparation on home college, confirm that mapping as well. This is a request specification, not a message sent or a promise of approval. All known role corrections, source-stated approval routes and conditional requirements remain reviewable meanwhile.
