@@ -214,7 +214,7 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']['description_reviewed_records']==169
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==174
     assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
         o=entry(code)['observations'][-1]
@@ -593,3 +593,28 @@ def test_literature_cancelled_offering_keeps_description_without_availability_cl
     hashes={review.observation_digest(o) for o in review.observe_literature(path.read_text())}
     saved=[o for r in MANIFEST['courses'].values() for o in r['observations'] if o['source_id']=='mit-ai-hass-review-literature-fall2024']
     assert len(saved)==7 and all(o['observation_digest'] in hashes for o in saved)
+
+
+def test_older_literature_spanish_language_does_not_invent_prerequisite():
+    utopia=entry('21L.637J [21G.717]')['observations'][-1]
+    conflict=entry('21L.638J [21G.738]')['observations'][-1]
+    assert utopia['catalog_year']==conflict['catalog_year']=='Fall 2022'
+    assert utopia['prerequisites']=='none'
+    assert conflict['prerequisites']=='One intermediate subject in Spanish or permission of instructor'
+    assert utopia['credits']==conflict['credits']==12
+    assert any('no intermediate-Spanish requirement is inferred' in r for r in utopia['restrictions'])
+    television=entry('21L.432J [CMS.315]')['observations'][-1]
+    assert television['observed_name']=='Understanding Television'
+    assert any('graduate version' in r for r in television['restrictions'])
+    checks=[r for r in MANIFEST['source_checks'] if 'fall+2023' in r['url']]
+    assert checks and 'CANCELLED' in checks[-1]['reason']
+
+
+@pytest.mark.parametrize('term,count',[('fall2022',4),('spring2023',1)])
+def test_older_literature_observations_replay(term,count):
+    path=Path('/tmp/mit-hass-subjects')/f'literature-{term}-visible.html'
+    if not path.exists():
+        pytest.skip('Optional ignored public Literature archive')
+    hashes={review.observation_digest(o) for o in review.observe_literature(path.read_text())}
+    saved=[o for r in MANIFEST['courses'].values() for o in r['observations'] if o['source_id']==f'mit-ai-hass-review-literature-{term}']
+    assert len(saved)==count and all(o['observation_digest'] in hashes for o in saved)
