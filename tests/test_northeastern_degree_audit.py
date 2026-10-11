@@ -652,3 +652,27 @@ def test_environmental_sciences_any_four_does_not_inherit_ecology_list_distribut
     assert cs['ENVR 1401']['category_review']['status']=='mixed'
     assert cs['PPUA 5260']['category_review']['candidate_categories']==['applications','human_context']
     assert 'CS 1800'not in cs and 'CS 1802'not in cs
+
+
+@pytest.mark.parametrize('code,expected,status',[('FINA 4335','foundations','reviewed'),('FINA 4350','mathematics','reviewed'),('FINA 4390','ai_ml','reviewed'),('FINA 4220','human_context','reviewed'),('FINA 4460','applications','reviewed'),('FINA 4370','applications','reviewed'),('FINA 4340','other','mixed'),('FINA 2720','other','mixed'),('FINA 4983','other','unclassified')])
+def test_finance_tools_and_algorithms_do_not_imply_one_subject(code,expected,status):
+    d=CATEGORY_DECISIONS[code]
+    assert d['status']==status and category(code,d['name'],d['guard'])==expected
+    assert category(code,'Changed identity',d['guard'])=='other'
+    assert category(code,d['name'],'Changed source content')=='other'
+
+
+def test_finance_observations_retain_concurrent_and_recommended_preparation():
+    pid='northeastern-university-artificial-intelligence-and-business-administration-bs-boston-bs-degree';p=json.loads((ROOT/'data/programs'/f'{pid}.json').read_text());cs={c['code']:c for c in p['courses']}
+    fina=[c for c in p['courses']if c['code'].startswith('FINA ')]
+    assert len(fina)==27 and all(c.get('category_review')for c in fina)
+    assert all(c['credits']==4 for c in fina)
+    assert 'may be taken concurrently' in cs['FINA 4335']['prerequisites']
+    assert 'Working knowledge of Excel or other spreadsheet programs' in cs['FINA 4610']['prerequisites']
+    assert 'Excel'not in (cs['FINA 4390']['prerequisites']or'')
+    assert any('FINA 4390' in n and 'strongly recommended' in n for n in p['notes'])
+    source=ROOT/'.cache/research/degree-audit-northeastern/fina.html'
+    if source.exists():
+        observed=import_module('atlas.adapters.'+pid+'.adapter').SOURCE_PARSERS['https://catalog.northeastern.edu/course-descriptions/fina/'](source.read_text())
+        assert len(observed['courses'])==27
+        for c in observed['courses']:assert c=={k:v for k,v in cs[c['code']].items()if k!='category_review'}
