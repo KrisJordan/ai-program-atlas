@@ -27,7 +27,7 @@ def parse(html, *, title, catalog_year='2026-2027'):
         rows = []
         for tr in table.select('tbody tr'):
             codes = [clean(c.get_text(' ', strip=True)) for c in tr.select('.code_bubble')]
-            if any(not re.fullmatch(r'[A-Z]+-\d+[A-Z]?', c) for c in codes):
+            if any(not re.fullmatch(r'[A-Z]+(?:/[A-Z]+)*-\d+[A-Z]?', c) for c in codes):
                 raise ValueError('Unrecognized exact course code')
             cells = [clean(c.get_text(' ', strip=True)) for c in tr.find_all(['td','th'])]
             if cells:

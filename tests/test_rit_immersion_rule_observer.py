@@ -43,3 +43,22 @@ def test_reviewed_stem_inventory_preserves_roles_conditions_and_unknowns():
     for r in rows.values():
         assert r['course_metadata_reviewed'] == 0
         assert all('category_review' not in g for g in r['groups'])
+
+
+def test_combined_subject_notation_is_retained_without_alias_inference():
+    r = parse(fixture('<tr><td><a class="code_bubble">PRFL/WGST-330</a></td><td>Performing Identity</td><td></td></tr>'), title=TITLE)
+    assert r['observed_tables'][0]['rows'][0]['course_codes'] == ['PRFL/WGST-330']
+    assert 'course_identity_groups' not in r
+
+
+def test_humanities_one_local_scope_and_topic_limits():
+    data = json.loads(Path('research/rit-immersion-routes-humanities-1.json').read_text())
+    rows = {r['id']: r for r in data['routes']}
+    assert len(rows) == 13
+    assert sum(len({c for g in r['groups'] for c in g['course_codes']}) for r in rows.values()) == 232
+    assert len({c for r in rows.values() for g in r['groups'] for c in g['course_codes']}) == 201
+    assert rows['comics-studies-immersion']['groups'][0]['course_codes'][-2] == 'PRFL/WGST-330'
+    assert any('100-level' in c for c in rows['analytic-and-expressive-communication-immersion']['conditions'])
+    assert any('Mesoamerica' in c for c in rows['american-indian-and-indigenous-studies-immersion']['conditions'])
+    assert any('ASLINT-BS' in c for c in rows['american-sign-language-and-deaf-cultural-studies-immersion']['conditions'])
+    assert all(r['course_metadata_reviewed'] == 0 for r in rows.values())
