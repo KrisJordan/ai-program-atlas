@@ -320,6 +320,16 @@
       "fetched_at": "2026-10-11T00:12:38+00:00",
       "locator": "Syllabus title; Classes (CS2000) and Labs (CS2001) sections. No term stated on this page; association with Fall 2026 is supported separately by the linked homepage.",
       "confidence": "high"
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-khoury-advising-policy",
+      "url": "https://www.khoury.northeastern.edu/current-undergraduate-students/undergraduate-advising-academic-support/academic-policies-and-procedures/",
+      "title": "Khoury Academic Policies and Procedures",
+      "fetched_at": "2026-10-11T03:31:07+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Exact conditional academic progression, major entry/home-change and graduation sections; current advising scope, not a catalog-year assignment.",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -4566,6 +4576,83 @@
         "id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-req-policy-concentration-catalog-year",
         "parent_id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-req-policy-combined",
         "source_id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-combined-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-khoury-conditional",
+        "id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-req-policy-khoury-conditional",
+        "parent_id": null,
+        "source_id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-khoury-advising-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-khoury-course-load",
+        "id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-req-policy-khoury-course-load",
+        "parent_id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-req-policy-khoury-conditional",
+        "source_id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-khoury-advising-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-khoury-graduation-gpa",
+        "id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-req-policy-khoury-graduation-gpa",
+        "parent_id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-req-policy-khoury-conditional",
+        "source_id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-khoury-advising-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-khoury-first-year-progression",
+        "id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-req-policy-khoury-first-year-progression",
+        "parent_id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-req-policy-khoury-conditional",
+        "source_id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-khoury-advising-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-khoury-later-progression",
+        "id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-req-policy-khoury-later-progression",
+        "parent_id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-req-policy-khoury-conditional",
+        "source_id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-khoury-advising-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-khoury-probation-plan",
+        "id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-req-policy-khoury-probation-plan",
+        "parent_id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-req-policy-khoury-conditional",
+        "source_id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-khoury-advising-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-khoury-major-dismissal",
+        "id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-req-policy-khoury-major-dismissal",
+        "parent_id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-req-policy-khoury-conditional",
+        "source_id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-khoury-advising-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-khoury-transfer-entry",
+        "id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-req-policy-khoury-transfer-entry",
+        "parent_id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-req-policy-khoury-conditional",
+        "source_id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-khoury-advising-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-khoury-business-transfer",
+        "id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-req-policy-khoury-business-transfer",
+        "parent_id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-req-policy-khoury-conditional",
+        "source_id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-khoury-advising-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-khoury-home-change",
+        "id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-req-policy-khoury-home-change",
+        "parent_id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-req-policy-khoury-conditional",
+        "source_id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-khoury-advising-policy",
+        "course_ids": []
+      },
+      {
+        "shared_id": "policy-khoury-graduation-clearance",
+        "id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-req-policy-khoury-graduation-clearance",
+        "parent_id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-req-policy-khoury-conditional",
+        "source_id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-khoury-advising-policy",
         "course_ids": []
       }
     ],

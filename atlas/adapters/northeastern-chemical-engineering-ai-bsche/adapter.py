@@ -97,3 +97,8 @@ _CHEMICAL_POLICIES = {url: (lambda html, profile=profile: _chemical_policy(html,
     for profile, (url, _, _) in PROFILES.items()}
 SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + tuple(_CHEMICAL_POLICIES)))
 SOURCE_PARSERS = {**SOURCE_PARSERS, **_CHEMICAL_POLICIES}
+
+# Conditional Khoury rules do not infer the student's home college.
+from atlas.adapters.northeastern_college_policies import KHOURY_URL, parse_khoury_policy
+SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + (KHOURY_URL,)))
+SOURCE_PARSERS = {**SOURCE_PARSERS, KHOURY_URL: lambda html: parse_khoury_policy(html, program_id=PROGRAM_ID)}

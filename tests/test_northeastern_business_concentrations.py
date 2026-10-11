@@ -108,7 +108,7 @@ def test_reviewed_seed_preserves_family_and_conditional_scopes():
     p=json.loads((ROOT/'data/programs'/f'{PID}.json').read_text())
     f=json.loads((ROOT/'data/families/northeastern-ai-combined-degrees.json').read_text())
     db.validate_program(p,f); r=resolve_program(p,f)
-    assert len([x for x in r['requirements'] if x['origin']=='family'])==56
+    assert len([x for x in r['requirements'] if x['origin']=='family'])==67
     assert len([x for x in p['requirements'] if x['parent_id']==PID+'-req-business-concentration-options'])==13
     optional=[x for x in p['requirements'] if x['parent_id']==PID+'-req-business-concentration-second-only']
     assert len(optional)==1 and optional[0]['title'].startswith('International Business')

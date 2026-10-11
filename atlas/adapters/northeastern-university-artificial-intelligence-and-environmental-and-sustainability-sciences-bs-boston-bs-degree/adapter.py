@@ -61,3 +61,8 @@ from atlas.adapters.northeastern_course_resources import register_resources
 _PUBLIC_CS_RESOURCES = register_resources(PROGRAM_ID)
 SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + tuple(_PUBLIC_CS_RESOURCES)))
 SOURCE_PARSERS = {**SOURCE_PARSERS, **_PUBLIC_CS_RESOURCES}
+
+# Conditional Khoury rules do not infer the student's home college.
+from atlas.adapters.northeastern_college_policies import KHOURY_URL, parse_khoury_policy
+SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + (KHOURY_URL,)))
+SOURCE_PARSERS = {**SOURCE_PARSERS, KHOURY_URL: lambda html: parse_khoury_policy(html, program_id=PROGRAM_ID)}

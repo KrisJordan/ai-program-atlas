@@ -72,3 +72,8 @@ parse, SOURCE_PARSERS = register_cs1802(parse, SOURCE_PARSERS, PROGRAM_ID)
 # Exact elective concurrency preserves the original choice ancestry.
 from atlas.adapters.northeastern_science_corequisites import register_science_corequisites
 parse, SOURCE_PARSERS = register_science_corequisites(parse, SOURCE_PARSERS, PROGRAM_ID, 'design')
+
+# Conditional Khoury rules do not infer the student's home college.
+from atlas.adapters.northeastern_college_policies import KHOURY_URL, parse_khoury_policy
+SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + (KHOURY_URL,)))
+SOURCE_PARSERS = {**SOURCE_PARSERS, KHOURY_URL: lambda html: parse_khoury_policy(html, program_id=PROGRAM_ID)}
