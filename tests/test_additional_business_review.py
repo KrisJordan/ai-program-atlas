@@ -61,3 +61,14 @@ def test_permitted_actual_capture_parses_match_reviewed_metadata(pid):
         assert all(c['description'] for c in result['courses'])
         assert not any(n.startswith('Changed descriptions') for n in result['notes'])
         assert 'last_verified' not in result
+
+
+def test_villanova_peer_source_qualifications_and_mixed_bi():
+    p=json.loads((ROOT/'data/programs'/f'{PIDS[0]}.json').read_text())
+    courses={c['code']:c for c in p['courses']}
+    assert courses['MIS 3060']['category']=='other'
+    assert courses['MIS 3060']['category_review']['status']=='mixed'
+    assert set(courses['MIS 3060']['category_review']['candidate_categories'])=={'systems','ai_ml'}
+    assert any('does not count as Finance elective' in n for n in courses['FIN 2360']['notes'])
+    assert any('junior or senior standing' in n for n in courses['MGT 3180']['notes'])
+    assert any('Maximum of 5 VSB minors' in n for n in courses['MKT 2240']['notes'])

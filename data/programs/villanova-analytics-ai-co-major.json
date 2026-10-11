@@ -347,7 +347,10 @@
         "locator": "FIN 2360 exact heading and description",
         "rationale": "Financial context does not change the explicit statistics/econometrics subject.",
         "candidate_categories": []
-      }
+      },
+      "notes": [
+        "The course description explicitly states: Class does not count as Finance elective. This limits use toward a Finance companion major; co-major option membership is retained."
+      ]
     },
     {
       "id": "villanova-mgt-3180",
@@ -377,7 +380,8 @@
         ]
       },
       "notes": [
-        "Current official title and description have divergent subject cues; the source body is recorded as published, without repairing the catalog by inference."
+        "Current official title and description have divergent subject cues; the source body is recorded as published, without repairing the catalog by inference.",
+        "The current course description requires junior or senior standing, in addition to the separately stated MGT 3170 :Y prerequisite. The :Y notation is preserved without interpretation."
       ]
     },
     {
@@ -463,21 +467,24 @@
       "prerequisites": "VSB 2006 and (VSB 2020 or SBI 3040) and (VSB 2009 or SBI 3020)",
       "credits": 3.0,
       "credit_unit": "unknown",
-      "category": "ai_ml",
+      "category": "other",
       "source_id": "villanova-analytics-ai-co-major-course-mis-3060",
       "url": "https://live-villanova-catalog.cleancatalog.io/management-information-systems/mis-3060",
       "public_site": null,
       "syllabus": null,
       "category_review": {
-        "status": "reviewed",
+        "status": "mixed",
         "taxonomy_version": "1",
         "reviewed_at": "2026-10-11",
         "source_ids": [
           "villanova-analytics-ai-co-major-course-mis-3060"
         ],
         "locator": "MIS 3060 exact heading and description",
-        "rationale": "The description explicitly places business-intelligence tools and architecture through generative AI.",
-        "candidate_categories": []
+        "rationale": "The source centers business-intelligence concepts, processes and tools and an end-to-end Modern Data Stack pipeline, viewed through generative AI. It does not establish a primary AI model/method curriculum, so systems and AI content remain mixed.",
+        "candidate_categories": [
+          "systems",
+          "ai_ml"
+        ]
       }
     },
     {
@@ -503,7 +510,10 @@
         "locator": "MKT 2240 exact heading and description",
         "rationale": "The source emphasizes marketing decision tools and practice, without specific AI methods.",
         "candidate_categories": []
-      }
+      },
+      "notes": [
+        "The source description literally states: Maximum of 5 VSB minors. Its meaning is not established; no individual eligibility or minor-count interpretation is inferred."
+      ]
     },
     {
       "id": "villanova-msa-8105",

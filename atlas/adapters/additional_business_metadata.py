@@ -57,6 +57,8 @@ def parse_metadata(html, *, pid, url):
         c.update(credits=credits,prerequisites=prereq,public_site=None,syllabus=None)
         if digest==review['description_sha256']:
             c.update(description=review['description'],category=review['category'])
+            if review.get('notes'):
+                c['notes']=review['notes']
         else:
             c.update(description=None,category='other');changes.append(review['code'])
         observations.append(c);digests[c['id']]=digest
