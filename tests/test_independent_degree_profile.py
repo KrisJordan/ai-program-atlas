@@ -78,3 +78,23 @@ def test_family_core_after_resolution_and_context_only_family_remain_distinct():
     profile=requirement_profile(p)
     assert profile['required']['count']==0  # Source framework notes cannot invent a fixed core.
     assert profile['unresolved']['count']>0
+
+
+def test_lehigh_explicit_fixed_and_options_match_independent_source_enumeration():
+    ledger=json.loads((ROOT/'research/degree-audit/independent-review.json').read_text())
+    entry=next(e for e in ledger['programs'] if e['program_id'].startswith('lehigh-'))
+    p=load(entry['program_id']);expected=entry['expected_course_ids']
+    assert len(expected['required'])==20 and len(expected['options'])==28
+    for role,ids in expected.items():
+        assert requirement_profile(p)[role]['count']==len(ids)
+        for cid in ids:
+            assert requirement_profile(only_course(p,cid))[role]['count']==1
+    assert set(expected['required']).isdisjoint(expected['options'])
+    assert set(expected['required'])|set(expected['options'])=={c['id'] for c in p['courses']}
+    subjects={c['code']:c['category'] for c in p['courses']}
+    assert subjects['CSE 027']=='foundations'  # Its AI title does not override software content.
+    assert subjects['CSE 140']=='mathematics'
+    assert subjects['CSE 211']=='systems'
+    assert subjects['CSE 252']=='human_context'
+    assert subjects['ISE 230']=='mathematics'
+    assert subjects['ECE 303']=='other'

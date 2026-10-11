@@ -247,6 +247,126 @@
         "No independent verification of every WPI course classification or degree-wide policy in this bounded pass."
       ],
       "result": "Specific graph-role correction source-verified; full-degree second pass partial."
+    },
+    {
+      "program_id": "lehigh-university-artificial-intelligence-machine-learning-and-data-science-bs-degree",
+      "institution_id": "lehigh-university",
+      "reviewed_commit": "8b43440",
+      "primary_audit": "research/degree-audit/national-degree-batch.json",
+      "second_pass_status": "partial",
+      "full_degree_verified": false,
+      "verified_scope": "Full mapped fixed/options identity partition and selected course subject descriptions; not all course classifications or degree-wide policies.",
+      "sources": [
+        {
+          "url": "https://engineering.lehigh.edu/cse/academics/undergraduate/bs-ai-ml-ds",
+          "locator": "Required Technical; Required Mathematics and Sciences; depth/general electives; sample sequence",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP200; robots-aware fetch"
+        },
+        {
+          "url": "https://catalog.lehigh.edu/coursesprogramsandcurricula/engineeringandappliedscience/",
+          "locator": "Minimum HSS: ECO001 and WRT001/003,WRT002/005",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP200; robots-aware fetch"
+        },
+        {
+          "url": "https://catalog.lehigh.edu/courselisting/cse/",
+          "locator": "CSE027,140,160,211,252,282 descriptions",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP200; robots-aware fetch"
+        },
+        {
+          "url": "https://catalog.lehigh.edu/courselisting/ise/",
+          "locator": "ISE230 description",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP200; robots-aware fetch"
+        },
+        {
+          "url": "https://catalog.lehigh.edu/courselisting/ece/",
+          "locator": "ECE303 description",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP200; robots-aware fetch"
+        },
+        {
+          "url": "https://catalog.lehigh.edu/courselisting/wrt/",
+          "locator": "Four writing alternatives and placement conditions",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP200; robots-aware fetch"
+        }
+      ],
+      "expected_course_ids": {
+        "required": [
+          "lehigh-cse-012",
+          "lehigh-cse-027",
+          "lehigh-cse-127",
+          "lehigh-cse-140",
+          "lehigh-cse-160",
+          "lehigh-cse-211",
+          "lehigh-cse-252",
+          "lehigh-cse-282",
+          "lehigh-cse-283",
+          "lehigh-cse-327",
+          "lehigh-cse-330",
+          "lehigh-engr-005",
+          "lehigh-engr-010",
+          "lehigh-chm-030",
+          "lehigh-math-021",
+          "lehigh-math-022",
+          "lehigh-math-231",
+          "lehigh-phy-011",
+          "lehigh-phy-012",
+          "lehigh-eco-001"
+        ],
+        "options": [
+          "lehigh-math-205",
+          "lehigh-math-241",
+          "lehigh-math-242",
+          "lehigh-cse-323",
+          "lehigh-cse-325",
+          "lehigh-cse-326",
+          "lehigh-cse-335",
+          "lehigh-cse-337",
+          "lehigh-cse-347",
+          "lehigh-cse-348",
+          "lehigh-cse-349",
+          "lehigh-math-312",
+          "lehigh-ise-230",
+          "lehigh-ise-240",
+          "lehigh-ise-309",
+          "lehigh-ece-303",
+          "lehigh-math-023",
+          "lehigh-math-310",
+          "lehigh-math-338",
+          "lehigh-math-339",
+          "lehigh-comm-165",
+          "lehigh-comm-351",
+          "lehigh-jour-025",
+          "lehigh-tlt-351",
+          "lehigh-wrt-001",
+          "lehigh-wrt-003",
+          "lehigh-wrt-002",
+          "lehigh-wrt-005"
+        ],
+        "unresolved": []
+      },
+      "expected_profile": null,
+      "observed_profile_counts": {
+        "required": 20,
+        "options": 28,
+        "unresolved": 0
+      },
+      "findings": [
+        "The source explicitly labels its11technical and6math/science courses required; PHY011/012 andECO001 add3 fixed identities. A source-total conflict does not turn individually explicit rows into optional courses.",
+        "The full named option union is3linear algebra+9depth+12general+4writing=28. Open eligibility predicates add no invented course records.",
+        "CSE027 is foundational software despite its AI title; CSE140 mathematical representations/proofs; CSE211 distributed data systems; CSE252 ethics/social issues; ISE230 stochastic mathematics. CSE160/282 andECE303 contain multiple evidenced subjects and remain mixed.",
+        "Main-table ECO001/WRT titles are inconsistent with course catalogs; canonical descriptions distinguish economics and writing rather than propagating obvious copied labels."
+      ],
+      "remaining": [
+        "130\u2013131 table minimum versus130highlight/sample and11free credits versus sample4+6 remain source conflicts.",
+        "Reuse of prescribed/depth courses in open electives remains unclear.",
+        "Not every course-description classification or degree-wide policy independently reread in this bounded pass."
+      ],
+      "result": "Mapped course roles and reviewed subject examples independently verified; full-degree second pass remains partial."
     }
   ],
   "cross_program_screen": [
