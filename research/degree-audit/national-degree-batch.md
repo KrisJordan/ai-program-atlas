@@ -328,3 +328,9 @@ Four public sources and six supporting COLL explanations establish universal und
 ## W&M current three-course content — 2026-10-11
 
 The independently Registrar-linked public PATH UI supplied actual Fall 2026 panels for DATA201, DATA202 and DATA305. All three show 3 credit hours; normalized unit remains unknown. Content supports AI/human-context/AI respectively, changing the bounded three-course profile from two unclassified to two AI. Exact section restrictions remain literal and are not inherited as additional degree obligations. The current DATA305 offering does not resolve the major diagram's AAI301 alternative identity. The source adapters reject unrendered/changed panels and never emit manual review certification; full audit remains in_progress.
+
+## W&M public-policy closure — 2026-10-11
+
+The remaining identified public policy queue is read and mapped, adding nine sources and twelve notes: explicit 120 academic credits/2.0 overall and major GPA; exact ten-row full-time continuance; grade calculation; conditional FlexTrack, probation, suspension and military-service rules; semester calendar; declaration and catalog-version context. The ten-row table is not a sourced ten-semester deadline. Public probation pages differ and retain both statements. The glossary identifies matriculation versus major-declaration catalog versions but does not settle the department curriculum mismatch.
+
+All three represented FAQ-course descriptions are reviewed. W&M primary status is now **blocked** solely at actual source boundaries: catalog robots HTTP202, incomplete major/capstone inventory and detailed BA residency/time-limit/unit rules, DATA305/AAI301 identity, language and probation applicability differences. The bounded profile remains three fixed identities (two AI, one human-context); this is not the full BA. Thirty-six public policy notes across nineteen sources supplement earlier declaration evidence. Independent second pass remains pending.

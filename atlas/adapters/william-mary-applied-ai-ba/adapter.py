@@ -31,3 +31,7 @@ SOURCES = tuple(SOURCE_PARSERS)
 from atlas.adapters.william_mary_course_review import register as register_path_courses
 register_path_courses(SOURCE_PARSERS)
 SOURCES = tuple(SOURCE_PARSERS)
+
+from atlas.adapters.william_mary_standing_review import register as register_standing_policies
+register_standing_policies(SOURCE_PARSERS)
+SOURCES = tuple(SOURCE_PARSERS)

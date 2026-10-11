@@ -3301,7 +3301,7 @@
     {
       "program_id": "william-mary-applied-ai-ba",
       "institution_id": "william-and-mary",
-      "status": "in_progress",
+      "status": "blocked",
       "sources": [
         {
           "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/",
@@ -3463,6 +3463,76 @@
           "locator": "Section 01, CRN 13505 actual public rendered description and restrictions",
           "checked_at": "2026-10-11",
           "access_status": "read"
+        },
+        {
+          "url": "https://www.wm.edu/offices/advising/forstudents/academicpolicies/contfulltime/index.php",
+          "catalog_year": null,
+          "locator": "Full public Continuance Requirements for Full-time Students; conditions and source differences retained",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://www.wm.edu/offices/studentsuccess/academic-wellbeing/resources/gradecalculation/index.php",
+          "catalog_year": null,
+          "locator": "Full public Grade Calculation; conditions and source differences retained",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://www.wm.edu/offices/advising/forstudents/academicpolicies/probation/index.php",
+          "catalog_year": null,
+          "locator": "Full public Academic Probation; conditions and source differences retained",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://www.wm.edu/offices/advising/forstudents/academicpolicies/suspension/index.php",
+          "catalog_year": null,
+          "locator": "Full public Academic Suspension; conditions and source differences retained",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://www.wm.edu/offices/advising/forstudents/academicpolicies/progress/index.php",
+          "catalog_year": null,
+          "locator": "Full public Normal Progress Toward a Degree; conditions and source differences retained",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://www.wm.edu/offices/advising/forstudents/academicpolicies/flextrackfaqs/index.php",
+          "catalog_year": null,
+          "locator": "Full public Policies for FlexTrack Students; conditions and source differences retained",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://www.wm.edu/offices/advising/forstudents/academicpolicies/active-duty/index.php",
+          "catalog_year": null,
+          "locator": "Full public Withdrawal from the University for Students Called to Active Duty; conditions and source differences retained",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://www.wm.edu/as/undergraduate/academic-resources/glossary/index.php",
+          "catalog_year": null,
+          "locator": "Full public Glossary of Terms; conditions and source differences retained",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://www.wm.edu/as/undergraduate/major/how-to-declare/index.php",
+          "catalog_year": null,
+          "locator": "Full public How to Declare Your Major; conditions and source differences retained",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://www.wm.edu/offices/advising/forstudents/academicpolicies/reinstatement/index",
+          "catalog_year": null,
+          "locator": "Actual linked reinstatement URL returned HTTP 404; public suspension page independently supplies return conditions",
+          "checked_at": "2026-10-11",
+          "access_status": "inaccessible"
         }
       ],
       "checks": {
@@ -3470,10 +3540,10 @@
         "required_and_choices": "FAQ names DATA201/202/305 as core taken at W&M. Linked example pathway labels Designing AI Agents AAI301 instead of DATA305 and offers DATA202/PHIL150 ethics alternatives. No equivalence, supersession or effective year is stated; preserve conflict rather than silently reconciling.",
         "elective_pools": "The linked graphic explicitly labels methods/elective examples and two elective slots. It is not an exhaustive approved list; named illustrative courses are not promoted into certified degree inventory.",
         "prerequisites": "Fall 2026 section-specific restrictions preserved verbatim. DATA201 lists CSCI140/141, equivalent-test score 1, DATA141/101 or AAI101 with D− minimum and undergraduate-level restrictions. Source comma/OR wording is not silently repaired. DATA305 requires DATA201 at D− or better. DATA202 has only level restriction in the inspected panel; no absence-of-prerequisite inference beyond that observation.",
-        "credits_and_units": "All three actual Fall 2026 section panels explicitly show 3 Credit Hours; normalized unit remains unknown. Their printed update timestamp is not a program launch or first-offering date. The independently reviewed public COLL page supplies 120-credit graduation overview; no totals computed from option breadth.",
+        "credits_and_units": "All three actual Fall 2026 section panels explicitly show 3 Credit Hours; normalized unit remains unknown. Their printed update timestamp is not a program launch or first-offering date. The independently reviewed public COLL page supplies 120-credit graduation overview; no totals computed from option breadth. Central continuance policy independently confirms 120 academic credits for graduation and normal-progress page explicitly establishes fall/spring semesters. This calendar does not normalize the unknown credit unit.",
         "classification": "All three observed FAQ-code courses now have actual Fall 2026 PATH descriptions: DATA201 major AI approaches/model evaluation and DATA305 generative agent workflows are ai_ml; DATA202 ethics/social/historical analysis is human_context. Not a subject assignment from short titles or program association. Current section labels retained with historical FAQ labels noted; no AAI301 equivalence inferred.",
         "family_composition": "Standalone BA major; its stated ability to pair with another major does not establish a family or remove university-degree scope.",
-        "degree_wide_requirements": "Current public registrar and Reves policies reviewed: explicit CDSP elective pass/fail eligibility and major/COLL/proficiency exclusions, post-matriculation transfer approval, Fall 2025 repeat examples, graduation application, university-wide CAE petitions and abroad credit/grade/residence/approval conditions. Study-abroad source states at least 60 W&M credits; no whole-degree 120 minimum inferred from its transfer-allocation wording. Full core, BA distributions/proficiencies, normalized credit unit and applicable grade/overlap rules remain unresolved at current catalog robots HTTP 202 and further public source review. Public COLL overview expressly applies to all undergraduate schools. Guide/other/transfer pages establish the 120-credit graduation overview, first-year C− minimums, separate domain/COLL distributions, language/math/arts alternatives, permitted proficiency overlap, prohibited COLL/domain duplication, and distinct incoming-transfer waivers. Credit units stay unknown; detailed ten-semester/residence/GPA and exact language shorthand applicability remain unresolved."
+        "degree_wide_requirements": "Public COLL, Registrar, Reves and advising sources now map the accessible degree-policy queue: 120 academic credits; 2.0 overall and major GPA; at least 60 W&M credits; COLL/proficiency distributions and transfer pathways; pass/fail exclusions; transfer and repeat rules; declarations, graduation application, exceptions, full-time continuance table, warning/probation, suspension, FlexTrack and active-duty conditions. Public general glossary distinguishes matriculation catalog for general education and declaration catalog for major requirements. Semester calendar is explicit. A ten-row continuance table is not inferred to establish a ten-semester deadline. Full major/capstone inventory, complete BA residency/time-limit details and credit-unit definition require unavailable current catalog evidence; source-specific language and probation differences remain unresolved."
       },
       "expected_profile": {
         "required": {
@@ -3513,10 +3583,21 @@
         },
         {
           "issue": "Default AI subject labels were unsupported by course-description evidence.",
-          "correction": "DATA201/305 remain unclassified; DATA202 has an explicitly limited official-title review.",
+          "correction": "All three actual Fall 2026 descriptions are reviewed: DATA201/305 ai_ml and DATA202 human_context. Current section titles, credits and restrictions replace unsupported metadata; no AAI301 equivalence inferred.",
           "status": "corrected",
           "evidence_urls": [
-            "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/"
+            "https://registration.wm.edu/?details&srcdb=202710&crn=12601",
+            "https://registration.wm.edu/?details&srcdb=202710&crn=12361",
+            "https://registration.wm.edu/?details&srcdb=202710&crn=13505"
+          ]
+        },
+        {
+          "issue": "Current continuance and separate probation pages differ on underload, intervention program and second-semester wording.",
+          "correction": "Retain both conditional statements without inventing precedence; mark exact applicability unresolved.",
+          "status": "unresolved",
+          "evidence_urls": [
+            "https://www.wm.edu/offices/advising/forstudents/academicpolicies/contfulltime/index.php",
+            "https://www.wm.edu/offices/advising/forstudents/academicpolicies/probation/index.php"
           ]
         }
       ],
@@ -3545,9 +3626,16 @@
             "https://www.wm.edu/as/undergraduate/coll/coll-planning-guide/index.php",
             "https://www.wm.edu/as/undergraduate/coll/bor-transfer-students/index.php"
           ]
+        },
+        {
+          "issue": "Current continuance and separate probation pages differ on underload, intervention program and second-semester wording.",
+          "urls": [
+            "https://www.wm.edu/offices/advising/forstudents/academicpolicies/contfulltime/index.php",
+            "https://www.wm.edu/offices/advising/forstudents/academicpolicies/probation/index.php"
+          ]
         }
       ],
-      "correction_status": "Six public registrar/Reves sources plus four COLL sources now supply 24 conditional/open-criteria notes. All six individual COLL explanations also read. Current catalog robots HTTP 202, three named FAQ observations and DATA305/AAI301 conflict remain; status in_progress while specific remaining public GPA/residence/ten-semester/metadata branches are reviewed. The three represented FAQ-code descriptions are now individually reviewed from current public PATH panels, with explicit amounts and section restrictions; this does not complete the unknown major inventory.",
+      "correction_status": "Accessible identified policy queue is source-reviewed and mapped: 36 public conditional/open-criteria notes across 19 policy sources, plus prior declaration evidence; all three represented FAQ-course descriptions are reviewed. Primary audit blocked only by current catalog robots HTTP202, incomplete authoritative major inventory and source conflicts in course identity/language/probation applicability. Detailed BA residency/time limits and normalized credit units remain unavailable at that catalog boundary. Full independent second pass pending; no accessible description backlog for the three mapped records.",
       "second_pass_status": "pending"
     },
     {

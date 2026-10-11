@@ -50,7 +50,7 @@ def test_integrated_policies_preserve_unresolved_identity_and_partial_scope():
     assert 'not as an unconditional two-attempt cap' in rules[m.PID+'-public-repeat-current']['summary']
     ledger=json.loads(Path('research/degree-audit/national-degree-batch.json').read_text())
     entry=next(r for r in ledger['programs'] if r['program_id']==m.PID)
-    assert entry['status']=='in_progress'
+    assert entry['status']=='blocked'
     assert entry['expected_profile']['required']['count']==3
     assert any(s['url']=='https://catalog.wm.edu/' and s['access_status']=='inaccessible' for s in entry['sources'])
     assert any('DATA' in b['issue'] or 'identity' in b['issue'] for b in entry['blockers'])
