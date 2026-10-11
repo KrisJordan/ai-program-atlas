@@ -183,3 +183,42 @@ def test_rice_residence_scope_is_not_rewritten_as_a_transfer_only_exception():
     assert len(finding['source_urls']) == 5
     assert any('/graduation-requirements/' in u for u in finding['source_urls'])
     assert any('/transfer-credit/' in u for u in finding['source_urls'])
+
+
+def test_ne_mathematics_all34_source_roles_categories_and_credit_units():
+    from atlas.families import resolve_program
+    pid = 'northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree'
+    p = load(pid)
+    family = json.loads((ROOT / 'data/families/northeastern-ai-combined-degrees.json').read_text())
+    before = deepcopy(p)
+    resolved = resolve_program(p, family)
+    e = entry(pid)
+    decisions = e['manual_course_decisions']
+    courses = {c['code']: c for c in resolved['courses']}
+    assert set(decisions) == set(courses) and len(courses) == 34
+    profile = requirement_profile(resolved)
+    for role in ['required', 'options', 'unresolved']:
+        assert profile[role]['count'] == e['expected_profile'][role]['count']
+        assert profile[role]['categories'] == e['expected_profile'][role]['categories']
+    for code, expected in decisions.items():
+        course = courses[code]
+        assert course['category'] == expected['category']
+        assert course['credits'] == expected['credits']
+        assert course['credit_unit'] == 'semester_hours'
+        isolated = {**resolved, 'courses': [course]}
+        assert requirement_profile(isolated)[expected['role']]['count'] == 1
+    assert p == before
+    assert 'CS 1800' not in courses and 'CS 1802' not in courses
+    assert 'MATH 1341' in courses['MATH 1342']['prerequisites']
+    for code in ['MATH 2321', 'MATH 2341']:
+        assert courses[code]['prerequisites'] is None
+    assert not e['full_degree_verified'] and e['second_pass_status'] == 'partial'
+
+
+def test_ne_mathematics_source_loads_are_not_summed_as_a_student_schedule():
+    pid = 'northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree'
+    rules = entry(pid)['source_load_rules']
+    assert (rules['published_degree_hours'], rules['general_elective_hours']) == (130, 24)
+    assert (rules['math_elective_count'], rules['math_elective_hours']) == (4, 16)
+    assert rules['khoury_elective_hours'] == 12
+    assert 'neither a source contradiction nor a corrected total' in rules['scope']

@@ -249,7 +249,7 @@
       },
       "checks": {
         "degree_identity": "AIE_BS, BS Artificial Intelligence Engineering, Engineering college; ends University Park. Minimum126 semester credits. 2026\u201327 rules do not replace pre-Summer2026 entry bulletins.",
-        "required_and_choices": "17 prescribed fixed identities and13 named alternatives. Introductory route is CMPSC131 OR (CMPSC121 AND DS120), not three separate substitutes. CMPSC132/122, CMPSC448/445 and two communication menus remain choices.",
+        "required_and_choices": "17 prescribed fixed identities and 13 named alternatives. Introductory route is CMPSC131 OR (CMPSC121 AND DS120), not three separate substitutes. CMPSC132/122, CMPSC448/445 and two communication menus remain choices.",
         "elective_pools": "27 technical credits with at least15 at400-level; three nontechnical credits and first-year seminar remain source-defined open/approval obligations, not invented finite course lists.",
         "prerequisites": "A-I370 concurrent DS305/CMPSC465/CMPSC462 preparation and alternative statistics/discrete prerequisites do not manufacture additional fixed courses. MATH225 conditional programming preparation is retained. AIE355 malformed source parentheses are not silently corrected.",
         "credits_and_units": "126degree minimum; major102\u2013103 and45GE include21overlap, not147\u2013148 distinct credits. Introductory programming route publishes3\u20134credits. No summing of mutually exclusive menus.",
@@ -917,7 +917,7 @@
         "required_and_choices": "Nine fixed identities;160 raw option records reduce to156 mapped identities after four explicit cross-list pairs. Capstone is six credits of (AIMA430 AND440) or supervised research;430prerequisite in440supports complete sequence rather than free mixing. Application focus is one selected area, not every focus.",
         "elective_pools": "Independently transcribed the entire named technical and nine application focus lists. A-I494 occurs in core and technical menus and IST256 in technical/enterprise, each one identity. Open CYBER300/400 predicate and ROTC credit route contribute no invented individual courses. Commonwealth-only BA241/242/FIN301/MGMT301/MKTG301/SCM301 excluded.",
         "prerequisites": "A-I370 conditional/concurrent courses do not become universally required. AIMA440 explicitly requires430. Cross-list course enrollment requirements remain metadata; they do not prove every applicant can take every option.",
-        "credits_and_units": "Minimum120; major67 with6GE overlap,45GE and14electives sum120 after overlap. Technical9>=3at400; application9>=3at300/400 and<=6ROTC. Cross-listed records retain individual3-credit source values; choices and degree loads unchanged.",
+        "credits_and_units": "Minimum120; major67 with6GE overlap,45GE and 14electives sum120 after overlap. Technical9>=3at400; application9>=3at300/400 and<=6ROTC. Cross-listed records retain individual3-credit source values; choices and degree loads unchanged.",
         "classification": "DS410/CMPSC410 scalable distributed programming ->systems,DS442/CMPSC442 AI algorithms ->ai_ml,MATH/STAT318 and414 probability ->mathematics, AIMA430/440AIprototyping/evaluation ->ai_ml. Other technical/focus subjects not reviewed merely from pool membership; remainingother records are not validated subject classifications.",
         "family_composition": "No inherited family or shared degree scope assumed. All169 source records preserved. Four disjoint reciprocal pairs canonicalized; IST/ETI301 and302 slash pairs remain unproven/separate.",
         "degree_wide_requirements": "Read degree page GE, C-or-better, writing, cultures andGPA summary. Full degree and all remaining course descriptions/approved GE pools remain outside this bounded second pass."
@@ -1123,11 +1123,447 @@
           ]
         }
       ],
-      "correction_status": "Independent evidence informed primary correction0ef4a05. Residence is the sole remaining policy conflict; individual permission/credit outcomes are conditions rather than missing universal requirements.",
+      "correction_status": "Independent evidence informed primary correction 0ef4a05. Residence is the sole remaining policy conflict; individual permission/credit outcomes are conditions rather than missing universal requirements.",
       "access_notes": [
         "Normal public pages only; no ESTHER, Degree Works or NetID login used and no people contacted.",
         "Initial local Fetcher attempts failed on network transport; approved ordinary network execution then fetched four registrar pages successfully at 03:44 UTC.",
         "Senate homepage returned an HTTP 500 through the web tool; no conclusion drawn from its unavailability. No restricted route was bypassed."
+      ]
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree",
+      "institution_id": "northeastern-university",
+      "primary_audit": "research/degree-audit/northeastern.json",
+      "reviewed_commits": [
+        "da25629"
+      ],
+      "status": "blocked",
+      "second_pass_status": "partial",
+      "full_degree_verified": false,
+      "verified_scope": "Full primary degree panel, all 34 represented course blocks, exact credit/description/prerequisite fields, family course bindings and six university policy sources. Science catalog/advising and Khoury policy scope also independently read. No full-degree certification across unresolved home-college applicability.",
+      "sources": [
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-mathematics-bs-bos/",
+          "catalog_year": "2026-2027",
+          "locator": "Entire degree Program Requirements tab and overview",
+          "checked_at": "2026-10-11",
+          "access_status": "Public official cached HTML independently read; original normal-fetch provenance in .cache/research/degree-audit-northeastern indexes. No fresh fetch claimed."
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+          "catalog_year": "2026-2027",
+          "locator": "All exact represented CS course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "Public official cached HTML independently read; original normal-fetch provenance in .cache/research/degree-audit-northeastern indexes. No fresh fetch claimed."
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/ds/",
+          "catalog_year": "2026-2027",
+          "locator": "All exact represented DS course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "Public official cached HTML independently read; original normal-fetch provenance in .cache/research/degree-audit-northeastern indexes. No fresh fetch claimed."
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/math/",
+          "catalog_year": "2026-2027",
+          "locator": "All exact represented MATH course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "Public official cached HTML independently read; original normal-fetch provenance in .cache/research/degree-audit-northeastern indexes. No fresh fetch claimed."
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/eece/",
+          "catalog_year": "2026-2027",
+          "locator": "All exact represented EECE course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "Public official cached HTML independently read; original normal-fetch provenance in .cache/research/degree-audit-northeastern indexes. No fresh fetch claimed."
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/mktg/",
+          "catalog_year": "2026-2027",
+          "locator": "All exact represented MKTG course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "Public official cached HTML independently read; original normal-fetch provenance in .cache/research/degree-audit-northeastern indexes. No fresh fetch claimed."
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/engw/",
+          "catalog_year": "2026-2027",
+          "locator": "All exact represented ENGW course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "Public official cached HTML independently read; original normal-fetch provenance in .cache/research/degree-audit-northeastern indexes. No fresh fetch claimed."
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/insc/",
+          "catalog_year": "2026-2027",
+          "locator": "All exact represented INSC course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "Public official cached HTML independently read; original normal-fetch provenance in .cache/research/degree-audit-northeastern indexes. No fresh fetch claimed."
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/eesc/",
+          "catalog_year": "2026-2027",
+          "locator": "All exact represented EESC course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "Public official cached HTML independently read; original normal-fetch provenance in .cache/research/degree-audit-northeastern indexes. No fresh fetch claimed."
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/inpr/",
+          "catalog_year": "2026-2027",
+          "locator": "All exact represented INPR course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "Public official cached HTML independently read; original normal-fetch provenance in .cache/research/degree-audit-northeastern indexes. No fresh fetch claimed."
+        },
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/university-academics/university-wide-requirements/",
+          "catalog_year": "2026-2027",
+          "locator": "Applicable complete policy paragraphs; exclude BA/NYC/nursing-only panels from Boston BS",
+          "checked_at": "2026-10-11",
+          "access_status": "Public official cached HTML independently read; original normal-fetch provenance in .cache/research/degree-audit-northeastern indexes. No fresh fetch claimed."
+        },
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/university-academics/general-education-requirements/",
+          "catalog_year": "2026-2027",
+          "locator": "Applicable complete policy paragraphs; exclude BA/NYC/nursing-only panels from Boston BS",
+          "checked_at": "2026-10-11",
+          "access_status": "Public official cached HTML independently read; original normal-fetch provenance in .cache/research/degree-audit-northeastern indexes. No fresh fetch claimed."
+        },
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/experiential-learning-graduation-requirement/",
+          "catalog_year": "2026-2027",
+          "locator": "Applicable complete policy paragraphs; exclude BA/NYC/nursing-only panels from Boston BS",
+          "checked_at": "2026-10-11",
+          "access_status": "Public official cached HTML independently read; original normal-fetch provenance in .cache/research/degree-audit-northeastern indexes. No fresh fetch claimed."
+        },
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/graduation-requirements/",
+          "catalog_year": "2026-2027",
+          "locator": "Applicable complete policy paragraphs; exclude BA/NYC/nursing-only panels from Boston BS",
+          "checked_at": "2026-10-11",
+          "access_status": "Public official cached HTML independently read; original normal-fetch provenance in .cache/research/degree-audit-northeastern indexes. No fresh fetch claimed."
+        },
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/degrees-majors-minors/",
+          "catalog_year": "2026-2027",
+          "locator": "Applicable complete policy paragraphs; exclude BA/NYC/nursing-only panels from Boston BS",
+          "checked_at": "2026-10-11",
+          "access_status": "Public official cached HTML independently read; original normal-fetch provenance in .cache/research/degree-audit-northeastern indexes. No fresh fetch claimed."
+        },
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/progression-standards/",
+          "catalog_year": "2026-2027",
+          "locator": "Applicable complete policy paragraphs; exclude BA/NYC/nursing-only panels from Boston BS",
+          "checked_at": "2026-10-11",
+          "access_status": "Public official cached HTML independently read; original normal-fetch provenance in .cache/research/degree-audit-northeastern indexes. No fresh fetch claimed."
+        },
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/science/",
+          "catalog_year": "2026-2027",
+          "locator": "Applicable complete policy paragraphs; exclude BA/NYC/nursing-only panels from Boston BS",
+          "checked_at": "2026-10-11",
+          "access_status": "Public official cached HTML independently read; original normal-fetch provenance in .cache/research/degree-audit-northeastern indexes. No fresh fetch claimed."
+        },
+        {
+          "url": "https://cos.northeastern.edu/college-of-science-life/advising-student-resources/",
+          "catalog_year": null,
+          "locator": "Applicable complete policy paragraphs; exclude BA/NYC/nursing-only panels from Boston BS",
+          "checked_at": "2026-10-11",
+          "access_status": "Public official cached HTML independently read; original normal-fetch provenance in .cache/research/degree-audit-northeastern indexes. No fresh fetch claimed."
+        },
+        {
+          "url": "https://www.khoury.northeastern.edu/current-undergraduate-students/undergraduate-advising-academic-support/academic-policies-and-procedures/",
+          "catalog_year": null,
+          "locator": "Applicable complete policy paragraphs; exclude BA/NYC/nursing-only panels from Boston BS",
+          "checked_at": "2026-10-11",
+          "access_status": "Public official cached HTML independently read; original normal-fetch provenance in .cache/research/degree-audit-northeastern indexes. No fresh fetch claimed."
+        }
+      ],
+      "checks": {
+        "degree_identity": "Official AI and Mathematics BS at Boston is a single combined major and award, not two independent degrees.",
+        "required_and_choices": "Manual source transcription establishes 20 baseline fixed identities and 14 named options. Nine MATH courses and DS4400/4420 are fixed; CS1800/1802 are not degree rows. Placement and home-college conditions remain explicit, not new unconditional course obligations.",
+        "elective_pools": "Open MATH3001\u20134999 except4000 four-course/16-hour criterion and Khoury12-hour subject-range criterion remain open predicates; the four named Khoury course identities are observed examples of the published list, not its whole possible universe. Writing has separate two- and three-option selections.",
+        "prerequisites": "All34 source blocks reread. Corequisites accompany labs; MATH1342 allows head-adviser permission; MATH2321/2341 preparation is recommended, not compulsory. Alternative prerequisite codes such as CS1800 are not additional fixed degree requirements.",
+        "credits_and_units": "Every represented course is 4 semester hours except CS2001/2101/1200/1210, INPR1000, INSC1000, EESC2000 and EECE2323 at 1. The page states 130 overall hours and 24 general-elective hours. No sum of overlapping rule amounts is treated as a student workload.",
+        "classification": "Independent content partition: fixed 5 foundations, 10 mathematics, 2 AI, 2 systems and 1 mixed other; options 2 systems, 5 human context, 1 domain application and 6 other. DS4200 is mixed visual design/perception/programming; EECE2160 mixes embedded hardware and programming. Five orientation/career seminars remain source-inspected unclassified, not CS foundations.",
+        "family_composition": "Resolved eight course-bearing shared bindings against the actual degree rows: two lecture/lab pairs plus six singleton rows. No CS1800 binding is added; shared DS4400 retains its local integrative parent. Variant DS4420 remains fixed.",
+        "degree_wide_requirements": "Six university sources support totals/residence, competencies/writing, experiential choices, graduation, combined-major rules and progression. Current Science and Khoury policies add conditions for their students; exact degree/cohort home-college assignment is not established. Catalog silence does not waive public advising rules."
+      },
+      "expected_profile": {
+        "required": {
+          "count": 20,
+          "categories": {
+            "foundations": 5,
+            "mathematics": 10,
+            "ai_ml": 2,
+            "systems": 2,
+            "human_context": 0,
+            "applications": 0,
+            "electives": 0,
+            "other": 1
+          }
+        },
+        "options": {
+          "count": 14,
+          "categories": {
+            "foundations": 0,
+            "mathematics": 0,
+            "ai_ml": 0,
+            "systems": 2,
+            "human_context": 5,
+            "applications": 1,
+            "electives": 0,
+            "other": 6
+          }
+        },
+        "unresolved": {
+          "count": 0,
+          "categories": {
+            "foundations": 0,
+            "mathematics": 0,
+            "ai_ml": 0,
+            "systems": 0,
+            "human_context": 0,
+            "applications": 0,
+            "electives": 0,
+            "other": 0
+          }
+        }
+      },
+      "expected_course_ids": {
+        "required": [
+          "northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree-cs-2000",
+          "northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree-cs-2001",
+          "northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree-cs-2100",
+          "northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree-cs-2101",
+          "northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree-ds-3500",
+          "northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree-ds-3000",
+          "northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree-math-1365",
+          "northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree-math-1341",
+          "northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree-math-1342",
+          "northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree-math-2321",
+          "northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree-math-2331",
+          "northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree-math-2341",
+          "northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree-math-3081",
+          "northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree-math-3175",
+          "northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree-math-3527",
+          "northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree-ds-4400",
+          "northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree-ds-4420",
+          "northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree-cs-3200",
+          "northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree-ds-4300",
+          "northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree-ds-4200"
+        ],
+        "options": [
+          "northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree-eece-2322",
+          "northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree-eece-2323",
+          "northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree-engw-1111",
+          "northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree-engw-1102",
+          "northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree-engw-3302",
+          "northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree-engw-3307",
+          "northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree-engw-3315",
+          "northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree-mktg-4606",
+          "northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree-cs-1200",
+          "northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree-inpr-1000",
+          "northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree-insc-1000",
+          "northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree-cs-1210",
+          "northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree-eesc-2000",
+          "northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree-eece-2160"
+        ],
+        "unresolved": []
+      },
+      "manual_course_decisions": {
+        "CS 2000": {
+          "role": "required",
+          "category": "foundations",
+          "credits": 4
+        },
+        "CS 2001": {
+          "role": "required",
+          "category": "foundations",
+          "credits": 1
+        },
+        "CS 2100": {
+          "role": "required",
+          "category": "foundations",
+          "credits": 4
+        },
+        "CS 2101": {
+          "role": "required",
+          "category": "foundations",
+          "credits": 1
+        },
+        "DS 3500": {
+          "role": "required",
+          "category": "foundations",
+          "credits": 4
+        },
+        "DS 3000": {
+          "role": "required",
+          "category": "mathematics",
+          "credits": 4
+        },
+        "MATH 1365": {
+          "role": "required",
+          "category": "mathematics",
+          "credits": 4
+        },
+        "MATH 1341": {
+          "role": "required",
+          "category": "mathematics",
+          "credits": 4
+        },
+        "MATH 1342": {
+          "role": "required",
+          "category": "mathematics",
+          "credits": 4
+        },
+        "MATH 2321": {
+          "role": "required",
+          "category": "mathematics",
+          "credits": 4
+        },
+        "MATH 2331": {
+          "role": "required",
+          "category": "mathematics",
+          "credits": 4
+        },
+        "MATH 2341": {
+          "role": "required",
+          "category": "mathematics",
+          "credits": 4
+        },
+        "MATH 3081": {
+          "role": "required",
+          "category": "mathematics",
+          "credits": 4
+        },
+        "MATH 3175": {
+          "role": "required",
+          "category": "mathematics",
+          "credits": 4
+        },
+        "MATH 3527": {
+          "role": "required",
+          "category": "mathematics",
+          "credits": 4
+        },
+        "DS 4400": {
+          "role": "required",
+          "category": "ai_ml",
+          "credits": 4
+        },
+        "DS 4420": {
+          "role": "required",
+          "category": "ai_ml",
+          "credits": 4
+        },
+        "CS 3200": {
+          "role": "required",
+          "category": "systems",
+          "credits": 4
+        },
+        "DS 4300": {
+          "role": "required",
+          "category": "systems",
+          "credits": 4
+        },
+        "DS 4200": {
+          "role": "required",
+          "category": "other",
+          "credits": 4
+        },
+        "EECE 2322": {
+          "role": "options",
+          "category": "systems",
+          "credits": 4
+        },
+        "EECE 2323": {
+          "role": "options",
+          "category": "systems",
+          "credits": 1
+        },
+        "ENGW 1111": {
+          "role": "options",
+          "category": "human_context",
+          "credits": 4
+        },
+        "ENGW 1102": {
+          "role": "options",
+          "category": "human_context",
+          "credits": 4
+        },
+        "ENGW 3302": {
+          "role": "options",
+          "category": "human_context",
+          "credits": 4
+        },
+        "ENGW 3307": {
+          "role": "options",
+          "category": "human_context",
+          "credits": 4
+        },
+        "ENGW 3315": {
+          "role": "options",
+          "category": "human_context",
+          "credits": 4
+        },
+        "MKTG 4606": {
+          "role": "options",
+          "category": "applications",
+          "credits": 4
+        },
+        "CS 1200": {
+          "role": "options",
+          "category": "other",
+          "credits": 1
+        },
+        "INPR 1000": {
+          "role": "options",
+          "category": "other",
+          "credits": 1
+        },
+        "INSC 1000": {
+          "role": "options",
+          "category": "other",
+          "credits": 1
+        },
+        "CS 1210": {
+          "role": "options",
+          "category": "other",
+          "credits": 1
+        },
+        "EESC 2000": {
+          "role": "options",
+          "category": "other",
+          "credits": 1
+        },
+        "EECE 2160": {
+          "role": "options",
+          "category": "other",
+          "credits": 4
+        }
+      },
+      "source_load_rules": {
+        "published_degree_hours": 130,
+        "general_elective_hours": 24,
+        "math_elective_count": 4,
+        "math_elective_hours": 16,
+        "khoury_elective_hours": 12,
+        "scope": "Source quantities are independent constraints, not an additive total. A disjoint-row diagnostic would give 136, but no disjointness or allowed overlap is established, so that calculation is neither a source contradiction nor a corrected total."
+      },
+      "discrepancies": [],
+      "blockers": [
+        {
+          "issue": "Exact permitted/designated home-college and cohort applicability remains unverified; Science change-home details link to university-sign-in-required instructions. Known college policies are conditional, not waived.",
+          "url": "https://cos.northeastern.edu/college-of-science-life/advising-student-resources/",
+          "supporting_urls": [
+            "https://catalog.northeastern.edu/undergraduate/science/",
+            "https://www.khoury.northeastern.edu/current-undergraduate-students/undergraduate-advising-academic-support/academic-policies-and-procedures/",
+            "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/degrees-majors-minors/"
+          ]
+        }
+      ],
+      "correction_status": "No seed/family correction needed in the mapped role/subject inventory. The existing home-college policy limitation remains; credit constraints are preserved without inventing overlap or disjointness.",
+      "access_notes": [
+        "Read official public HTML already retrieved normally by the primary researcher; no source fetch dates were refreshed.",
+        "No university account, SharePoint authentication or personal student college designation accessed."
       ]
     }
   ]
