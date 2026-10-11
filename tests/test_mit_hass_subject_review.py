@@ -215,7 +215,7 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']['description_reviewed_records']==277
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==300
     assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
         o=entry(code)['observations'][-1]
@@ -350,12 +350,12 @@ def test_anthropology_actual_directory_replays_title_observations():
 
 def test_economic_pool_does_not_certify_mathematics_computing_or_current_offering():
     for code in ['14.12','14.15[J]','14.17','14.18','14.78[J]']:
-        row=entry(code)['observations'][-1]
+        row=next(o for o in entry(code)['observations'] if o['source_id']=='mit-ai-hass-review-economics-titles')
         assert row['category']=='other' and row['status']=='unclassified'
         assert row['description_digest'] is None
     assert entry('14.70')['observations'][-1]['category']=='human_context'
     assert entry('14.27')['observations'][-1]['prerequisites']=='14.30 or 6.041'
-    assert entry('14.16')['observations'][-1]['prerequisites']=='14.03/14.04'
+    assert next(o for o in entry('14.16')['observations'] if o['source_id']=='mit-ai-hass-review-economics-titles')['prerequisites']=='14.03/14.04'
     assert entry('14.01')['observations'][-1]['prerequisites'] is None
     assert any('not offered in2026–27' in x for x in entry('14.73')['observations'][-1]['restrictions'])
 
@@ -874,3 +874,64 @@ def test_actual_anthropology_observer_h5_and_explicit_unit_amount_replay():
             assert review.matched_review(c,o,source['url'],MANIFEST)==e
             seen+=1
     assert seen==14
+
+
+def test_economics_actual_subject_focus_dated_identity_and_preparation_strength():
+    report=MANIFEST['ocw_economics_review']
+    assert report['directory_results_observed']==77
+    assert report['public_course_pages_read']==report['public_syllabi_read']==17
+    assert len(report['upgraded_record_ids'])==23
+    for code in ['14.12','14.15[J]','14.16']:
+        assert entry(code)['observations'][-1]['category']=='mathematics'
+    mixed=entry('14.03')['observations'][-1]
+    assert mixed['category']=='other' and mixed['status']=='mixed'
+    assert mixed['candidate_categories']==['mathematics','human_context']
+    for code in ['14.04','14.20','14.44','14.54']:
+        assert entry(code)['observations'][-1]['category']=='applications'
+    assert entry('14.73')['observations'][-1]['category']=='human_context'
+    assert 'no programming prerequisite' in entry('14.15[J]')['observations'][-1]['prerequisites']
+    assert 'recommended but not required' in entry('14.75')['observations'][-1]['prerequisites']
+    assert 'Econometrics is not a prerequisite' in entry('14.74')['observations'][-1]['prerequisites']
+    assert entry('14.74')['observations'][-1]['observed_name']=='Foundations of Development Policy'
+    assert entry('14.74')['listed_name']=='Foundations of Development Economics'
+    assert entry('14.27')['observations'][-1]['evidence_basis']=='official_title_only'
+    assert entry('14.42')['observations'][-1]['prerequisites'] is None
+    for code in ['14.01','14.02','14.13','14.16','14.73']:
+        e=entry(code)['observations'][-1]
+        assert e['prerequisites'] is None
+        assert any('Separate ' in x and 'syllabus prerequisite evidence' in x for x in e['restrictions'])
+    assert all(entry(code)['observations'][-1]['credits'] is None for code in ['14.01','14.12','14.16','14.73'])
+
+
+def test_ocw_description_excludes_separate_mitx_course_and_guards_embedded_prerequisite():
+    banner='<div id="course-banner"><span class="course-number-term-detail">14.73 | Spring 2011 | Undergraduate</span><h1>The Challenge of World Poverty</h1></div>'
+    body='<div id="expanded-description"><p>Poverty and public policy.</p><p><strong>MITx Online Version</strong></p><p>Create an account for14.73x.</p></div>'
+    assert review.observe_ocw_course(banner+body)[0]['description']=='Poverty and public policy.'
+    banner=banner.replace('14.73','14.20').replace('Spring 2011','Spring 2003')
+    syllabus='<div id="course-main-content"><h2>Introduction</h2><p>Industrial economics. Students must have completed microeconomics at the level of 14.01 before enrolling in 14.20.</p><h2>Grading</h2><p>Exams.</p></div>'
+    o=review.observe_ocw_syllabus(banner+syllabus)[0]
+    assert o['prerequisites']=='Students must have completed microeconomics at the level of 14.01 before enrolling in 14.20.'
+    assert 'Grading' not in o['description']
+    assert review.observe_ocw_syllabus((banner+syllabus).replace('must have completed','may have completed'))[0]['prerequisites'] is None
+
+
+def test_actual_economics_sources_replay_without_collapsing_page_provenance():
+    path=Path('/tmp/mit-hass-subjects/ocw-economics-index.json')
+    if not path.exists():pytest.skip('Optional ignored public OCW Economics captures')
+    seen=0
+    for source in json.loads(path.read_text()):
+        home=source['key'].startswith(('14-01-','14-02-','14-13-','14-16-','14-73-'))
+        if home==source['key'].endswith('-syllabus'):continue
+        cache=path.parent/('ocw-'+source['key']+'.html')
+        if not cache.exists():pytest.skip('Optional ignored course capture')
+        o=(review.observe_ocw_course if home else review.observe_ocw_syllabus)(cache.read_text())[0]
+        if o['code']=='14.20':assert o['prerequisites'].startswith('Students must have completed')
+        if o['code']=='14.73':assert 'MITx' not in o['description']
+        for cid,row in MANIFEST['courses'].items():
+            e=next((e for e in row['observations'] if e['source_url']==source['url']),None)
+            if e is None:continue
+            c=dict(id=cid,code=row['listed_code'],name=row['listed_name'],source_id=row['listed_source_id'])
+            assert review.matched_review(c,o,source['url'],MANIFEST)==e
+            assert review.matched_review(c,{**o,'term':'Spring 2099'},source['url'],MANIFEST) is None
+            seen+=1
+    assert seen==23

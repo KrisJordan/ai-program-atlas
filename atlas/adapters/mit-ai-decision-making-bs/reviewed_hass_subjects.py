@@ -428,7 +428,7 @@ def observe_ocw_syllabus(html):
     sections = {}
     for heading in main.find_all(['h2', 'h3', 'h4', 'h5']):
         title = clean(heading).rstrip(':')
-        if title not in ['Description', 'Course Description', 'Course Overview', 'Course Summary', 'Overview', 'Class Objectives', 'Objectives and Organization', 'Purpose', 'Prerequisites', 'Prerequisite']:
+        if title not in ['Description', 'Course Description', 'Course Overview', 'Course Summary', 'Overview', 'Class Objectives', 'Objectives and Organization', 'Purpose', 'Introduction', 'Goals for the Class', 'Prerequisites', 'Prerequisite']:
             continue
         content = []
         for sibling in heading.next_siblings:
@@ -437,13 +437,18 @@ def observe_ocw_syllabus(html):
             if hasattr(sibling, 'get_text'):
                 content.append(clean(sibling))
         sections[title] = clean(' '.join(content)) or None
-    description = next((sections[k] for k in ['Description', 'Course Description', 'Course Overview', 'Course Summary', 'Overview', 'Class Objectives', 'Objectives and Organization', 'Purpose'] if sections.get(k)), None)
+    description = next((sections[k] for k in ['Description', 'Course Description', 'Course Overview', 'Course Summary', 'Overview', 'Class Objectives', 'Objectives and Organization', 'Purpose', 'Introduction', 'Goals for the Class'] if sections.get(k)), None)
     if not description:
         raise ValueError('OCW syllabus actual description section missing')
+    prerequisites = sections.get('Prerequisites', sections.get('Prerequisite'))
+    if prerequisites is None and parts[0] == '14.20':
+        embedded = re.search(r'Students must have completed .+? before enrolling in 14\.20\.', description)
+        if embedded:
+            prerequisites = embedded.group(0)
     unit_match = re.match(r'This (\d+)-unit subject\b', description)
     return [dict(code=parts[0], name=name, term=parts[1], level=parts[2],
                  description=description,
-                 prerequisites=sections.get('Prerequisites', sections.get('Prerequisite')),
+                 prerequisites=prerequisites,
                  units=(unit_match[1] + ' units') if unit_match else None)]
 
 
@@ -472,6 +477,14 @@ def observe_ocw_course(html):
     title = clean(banner.find('h1'))
     if len(parts) != 3 or not re.fullmatch(r'(Fall|Spring|Summer|IAP) \d{4}', parts[1]) or not title:
         raise ValueError('OCW course code, term or title changed')
+    # The publisher separates a related MITx offering from the archived class.
+    # Do not fold enrollment marketing for that distinct course into this one.
+    for heading in list(body.find_all(['p', 'h2', 'h3', 'h4'])):
+        if clean(heading) == 'MITx Online Version':
+            for sibling in list(heading.next_siblings):
+                sibling.extract()
+            heading.decompose()
+            break
     for button in body.find_all('button'):
         button.decompose()
     if not clean(body):
