@@ -111,7 +111,12 @@ def test_curated_routes_conditional_rules_source_conflicts_and_business_exclusio
     assert 'blank' in rs[pid+'-thematic-at_0094']['summary']
     assert 'clarification' in rs[pid+'-thematic-ps_0017']['summary']
     assert d['curriculum_status']=='partial'
-    assert any('summer' in x for x in d['curriculum_audit']['unresolved_requirements'])
+    assert not any('summer' in x for x in d['curriculum_audit']['unresolved_requirements'])
+    summer=rs[pid+'-policy-summer-transfer-conflict']
+    assert summer['kind']=='note' and summer['course_ids']==[]
+    assert 'Session A' in summer['summary'] and 'Session B' in summer['summary']
+    assert 'does not grant transfer credit' in summer['summary']
+    assert 'financial aid' in summer['summary']
     assert any('zero unreviewed' in x for x in d['curriculum_audit']['unresolved_requirements'])
     assert len(d['courses'])==len({c['id'] for c in d['courses']})==len({c['code'] for c in d['courses']})
 
