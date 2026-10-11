@@ -431,3 +431,7 @@ Actual source review found that16of the17previously unmatched HIEU identifiers w
 ### UCSD History and Scripps integration, 2026-10-11
 
 HILA34 primary-read, HIUS/HIEA81 contributor-read and SIO35 contributor-read observations are now integrated, with primary boundary checks rather than a claim of an independent full reread. History's shared chapter preserves187 observations and13 dispositions across HIEU/HILA/HIUS/HIEA. Exact undergraduate Colloquia approval scope is structurally guarded; graduate extra papers do not become undergraduate prerequisites. SIO title-held105/113 retain unclassified older identities, and194's internship load remains separate. The manual role sets are unchanged8/119/2241; current context subject counts are1405other/713human/91applications/7foundations/23systems/2mathematics. Other identified accessible subject chapters keep this audit in progress.
+
+### UCSD Education Studies, 2026-10-11
+
+Primary read and integrated31 complete EDS descriptions, with138 unmatched. Actual eligibility includes ED25-only103 and course-scoped Summer Bridge/OASIS/Global Seminar admissions; many teaching courses require a separate139 practicum. Credits and source anomalies are retained exactly. No role changes:8fixed/119options/2241context; context subject categories1377other/728human/103applications/7foundations/23systems/3math. Identified unread subject chapters remain active, so audit status stays in progress.
