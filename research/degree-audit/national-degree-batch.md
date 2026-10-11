@@ -298,3 +298,7 @@ repeat-zero and integrity checks pass. Full independent second pass remains pend
 ## Status semantics correction — 2026-10-11
 
 Drexel, USF and William & Mary return to `in_progress`: their genuine inaccessible/conflicting sources remain recorded, but accessible description or independent public-policy work remains. Lehigh retains `blocked` after all 48 represented descriptions and applicable public policy sources were read; its contradictory credit totals and reuse boundary are source questions rather than backlog. This correction changes progress reporting, not curricular facts.
+
+## Rutgers history publication — 2026-10-11
+
+The current Rutgers catalog supplied 141 matching history codes in actual rendered 510/512 tabs; all 143 NJIT-listed history records were reviewed. Of these, 136 compatible current identities receive human-context reviews, five retain explicit title conflicts and two lack current exact entries. Topic-only entries use qualified exact-title evidence; explanatory descriptions are not invented. Current Rutgers content is independent of the denied SASN route. Paired headings are not merged. Rutgers credit units were separately verified in public Policy 10.2.4. Total NJIT reviewed source records is 363; 18 non-history Rutgers records and local degree policies remain in progress.

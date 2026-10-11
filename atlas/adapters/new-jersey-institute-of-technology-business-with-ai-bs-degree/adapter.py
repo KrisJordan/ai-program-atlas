@@ -179,3 +179,7 @@ SOURCES = tuple(SOURCE_PARSERS)
 from atlas.adapters.njit_arts_communication_reviews import URL as ARTS_URL, combine as combine_arts
 SOURCE_PARSERS[ARTS_URL] = partial(combine_arts, SOURCE_PARSERS[ARTS_URL])
 SOURCES = tuple(SOURCE_PARSERS)
+
+from atlas.adapters.njit_rutgers_history_reviews import SOURCE_PARSERS as RUTGERS_HISTORY_PARSERS
+SOURCE_PARSERS.update(RUTGERS_HISTORY_PARSERS)
+SOURCES = tuple(SOURCE_PARSERS)

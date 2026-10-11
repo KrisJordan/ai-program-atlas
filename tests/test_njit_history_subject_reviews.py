@@ -22,7 +22,7 @@ def test_history_observer_rejects_stale_or_missing_content(monkeypatch):
             m.parse(bad)
 
 
-def test_current_history_scope_excludes_title_only_rutgers_records():
+def test_njit_history_observer_does_not_claim_rutgers_source_content():
     p = json.loads(Path('data/programs/'+m.PID+'.json').read_text())
     courses = {c['code']:c for c in p['courses']}
     assert len(m.SPEC) == 44
@@ -32,4 +32,5 @@ def test_current_history_scope_excludes_title_only_rutgers_records():
     assert courses['HIST 387']['category'] == 'human_context'  # Computer history.
     rutgers = [c for c in p['courses'] if c['code'].startswith(('R510 ','R512 '))]
     assert len(rutgers) == 143
-    assert all('category_review' not in c for c in rutgers)
+    assert all(c['category_review']['source_ids'][0] != m.SOURCE_ID for c in rutgers)
+    # Their later independent current Rutgers review uses its own source evidence.
