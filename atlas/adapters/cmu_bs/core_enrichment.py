@@ -9,8 +9,8 @@ MATH = 'https://coursecatalog.web.cmu.edu/schools-colleges/melloncollegeofscienc
 STATS = 'https://coursecatalog.web.cmu.edu/schools-colleges/dietrichcollegeofhumanitiesandsocialsciences/departmentofstatistics/courses/'
 HISTORY = 'https://coursecatalog.web.cmu.edu/schools-colleges/schoolofcomputerscience/artificialintelligence/'
 DIRECTORIES = {
-    MATH: ('Department of Mathematical Sciences Courses', 'cmu-bs-ai-mathematics-directory', ('21-120', '21-122', '21-127', '21-241', '21-259', '21-266', '21-268', '21-269', '21-325', '21-425')),
-    STATS: ('Department of Statistics and Data Science Courses', 'cmu-bs-ai-statistics-directory', ('36-218', '36-225', '36-226', '36-235', '36-236', '36-401', '36-402')),
+    MATH: ('Department of Mathematical Sciences Courses', 'cmu-bs-ai-mathematics-directory', ('21-120', '21-122', '21-127', '21-150', '21-241', '21-259', '21-266', '21-268', '21-269', '21-325', '21-425')),
+    STATS: ('Department of Statistics and Data Science Courses', 'cmu-bs-ai-statistics-directory', ('36-218', '36-225', '36-226', '36-235', '36-236', '36-303', '36-401', '36-402')),
 }
 RESOURCES = {
     'https://www.math.cmu.edu/~jmackey/151_128/welcome.html': ('15-151', 'Mathematical Foundations for Computer Science', 'Fall 2023', 'cmu-15151-fall-2023-site', False),

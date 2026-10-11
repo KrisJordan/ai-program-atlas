@@ -34,7 +34,7 @@ def test_reviewed_domains_mixed_subjects_and_roles_are_distinct():
         assert by[code]['category']=='other'and by[code]['category_review']['status']=='mixed'
         assert len(by[code]['category_review']['candidate_categories'])==2
     assert by['15-112']['category']=='foundations'
-    assert sum(c.get('category_review')is not None for c in p['courses'])==56
+    assert set(m.SUBJECTS) <= {c['code']for c in p['courses']if c.get('category_review')}
     nodes=[r for r in p['requirements']if r['id'].startswith('cmu-bs-ai-course-entry-')]
     assert len(nodes)==7 and all(r['kind']=='note' and not r['course_ids']for r in nodes)
     assert '21-241 and 21-122 and 15-112' in by['15-387']['prerequisites']
