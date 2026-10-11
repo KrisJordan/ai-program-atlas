@@ -623,3 +623,32 @@ def test_ecology_full_profile_preserves_three_list_distribution_and_shared_optio
     assert 'CS 1800'not in cs and 'CS 1802'not in cs
     assert cs['PHYS 1163']['credits']==0
     assert 'permission' in cs['ENVR 3125']['prerequisites']
+
+
+@pytest.mark.parametrize('code,expected,status',[('POLS 2395','human_context','reviewed'),('PPUA 5268','human_context','reviewed'),('PPUA 5260','other','mixed')])
+def test_environmental_policy_uses_described_focus_not_environment_prefix(code,expected,status):
+    d=CATEGORY_DECISIONS[code]
+    assert d['status']==status and category(code,d['name'],d['guard'])==expected
+    assert category(code,'Changed identity',d['guard'])=='other'
+    assert category(code,d['name'],'Changed course content')=='other'
+
+
+def test_environmental_sciences_any_four_does_not_inherit_ecology_list_distribution():
+    from atlas.families import resolve_program
+    from atlas.curriculum_profile import requirement_profile
+    pid='northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree'
+    p=json.loads((ROOT/'data/programs'/f'{pid}.json').read_text());f=json.loads((ROOT/'data/families/northeastern-ai-combined-degrees.json').read_text());resolved=resolve_program(p,f);profile=requirement_profile(resolved)
+    assert profile['required']['count']==22 and profile['options']['count']==60 and profile['unresolved']['count']==0
+    assert len(p['courses'])==82 and all('category_review'in c for c in p['courses'])
+    nodes={r['id']:r for r in resolved['requirements']};choice=nodes[pid+'-req-environmental-and-sustainability-sciences-electives-course-choice']
+    assert choice['kind']=='choose_courses' and choice['count']==4 and choice['credits'] is None
+    assert '16-19' in choice['summary']
+    headings=[nodes[pid+'-req-'+k]for k in ['earth-oceans-and-environmental-change','conservation-restoration-and-management','sustainable-planning-and-development','environment-and-society']]
+    assert all(r['kind']=='note' and r['count'] is None and not r['course_ids']for r in headings)
+    assert sum(c['code']=='ENVR 5800'for c in p['courses'])==1
+    assert not any('At least one course from this list' in r['summary']for r in headings)
+    cs={c['code']:c for c in p['courses']}
+    assert cs['ENVR 1400']['category_review']['status']=='mixed'
+    assert cs['ENVR 1401']['category_review']['status']=='mixed'
+    assert cs['PPUA 5260']['category_review']['candidate_categories']==['applications','human_context']
+    assert 'CS 1800'not in cs and 'CS 1802'not in cs

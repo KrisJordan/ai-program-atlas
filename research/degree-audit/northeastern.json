@@ -3545,20 +3545,162 @@
           "locator": "Exact individually reviewed course blocks: EEMB 2302, EEMB 2303, EEMB 2400, EEMB 3460",
           "checked_at": "2026-10-11T00:07:07+00:00",
           "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/pols/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: POLS 2395",
+          "checked_at": "2026-10-11T00:12:34+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/ppua/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: PPUA 5260, PPUA 5268",
+          "checked_at": "2026-10-11T00:12:36+00:00",
+          "access_status": "accessible"
         }
       ],
       "checks": {
         "degree_identity": "Official catalog identity and exact award/campus are retained as Artificial Intelligence and Environmental and Sustainability Sciences, BS (Boston). Current official page retrieved; catalog/cohort scope remains explicit.",
-        "required_and_choices": "Individual structural source interpretation is in progress. Parser replay/family resolution alone is not independent validation. Existing all/choice/bundle graph retained at this checkpoint.",
-        "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
-        "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant.",
-        "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
-        "classification": "Current represented inventory: 82 course observations; 64 individually reviewed subject classifications, 6 explicitly mixed, 9 source-inspected but unclassified, and 3 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
-        "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
-        "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed. The shared declaration deadline, conditional change-major eligibility/advising and concentration catalog-year rules are now source-parsed course-free criteria; college-specific conditional transfer/progression mappings remain active. Current Khoury advising progression, graduation and conditional transfer/home-change rules now appear in eleven source-scoped course-free nodes. They remain conditional and do not infer assignment or override catalog/cohort scope. Other partner-college policy work continues. Nine conditional Science catalog criteria now preserve junior-year clearance, full/reduced course loads, grading restrictions, graduation GPA, semester-based first-year versus cumulative later GPA, and major/university dismissal/transitional rules. Exact Admissions COS participation was checked individually. No home assignment or BA-only requirement is inferred; remaining exact applicability and any additional accessible policy checks remain open."
+        "required_and_choices": "Complete primary degree table independently transcribed: 22 fixed and 60 named option identities. Eleven computing/AI identities (including DS 4420), the ecology pair, environmental-foundations pair, sustainable development, statistics pair/calculus and three-part chemistry are fixed. Dynamic Earth plus lab versus Earth’s Changing Cycles is a complete alternative, as is the two-part undergraduate GIS route versus ENVR 5260. Four integration/capstone alternatives remain optional rather than an automatic ENVR 4997 thesis obligation.",
+        "elective_pools": "The environmental elective rule is any four courses, with a stated sixteen-to-nineteen-hour range. Its topical headings do not impose one selection from each topic, unlike the separately reviewed Ecology degree. Preserve complete lab bundles and the ENVR 3125/3600 alternative as a single position. ENVR 5800 appears under two headings but remains one identity. Khoury ranges/exclusions and advisor-approved options stay explicit criteria without fabricated finite enumeration.",
+        "prerequisites": "All 82 represented blocks reviewed, including actual lab/corequisite relationships and optional-course entry conditions. ENVR 3125 descriptive laboratory-science-or-permission eligibility and ENVR 3300 instructor permission remain observed conditions, not added fixed prerequisites. Printed repeated ENVR 5260 prerequisite expression for ENVR 5563 is retained. Mixed broad environmental methods and unconstrained honors/thesis content retain those limits. Null formal prerequisite fields are not claims of no eligibility conditions.",
+        "credits_and_units": "The degree states 131 semester hours, sixteen general-elective hours and major science GPA 2.000 over ENVR/EEMB codes. Choice headers explicitly range from four to five hours for Earth/GIS routes and sixteen to nineteen for the four-course environmental elective; do not normalize these to a false exact load. Individual course hours and zero-hour chemistry recitation retain their observed values. Source subtotal/choice scopes are not summed into an invented disjoint earned total.",
+        "classification": "Current represented inventory: 82 course observations; 66 individually reviewed subject classifications, 7 explicitly mixed, 9 source-inspected but unclassified, and 0 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
+        "family_composition": "Inherited common AI/computing and placement units verified individually. This program fixes DS 4420 in its AI foundation while its local integrative requirement selects among CS 4991, ENVR 4050, ENVR 4971 and ENVR 4997; it does not inherit another degree’s capstone. MATH 1365/1465 remains the reasoning alternative, with no CS 1800/1802 addition.",
+        "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed. The shared declaration deadline, conditional change-major eligibility/advising and concentration catalog-year rules are now source-parsed course-free criteria; college-specific conditional transfer/progression mappings remain active. Current Khoury advising progression, graduation and conditional transfer/home-change rules now appear in eleven source-scoped course-free nodes. They remain conditional and do not infer assignment or override catalog/cohort scope. Other partner-college policy work continues. Nine conditional Science catalog criteria now preserve junior-year clearance, full/reduced course loads, grading restrictions, graduation GPA, semester-based first-year versus cumulative later GPA, and major/university dismissal/transitional rules. Exact Admissions COS participation was checked individually. No home assignment or BA-only requirement is inferred; remaining exact applicability and any additional accessible policy checks remain open. Complete Environmental/Sustainability table and all represented subjects now reviewed. Conditional Science/Khoury policy graphs remain mapped; exact home-college/cohort applicability and remaining accessible policy follow-up remain in progress."
       },
-      "expected_profile": null,
-      "expected_course_ids": null,
+      "expected_profile": {
+        "required": {
+          "count": 22,
+          "categories": {
+            "foundations": 5,
+            "mathematics": 4,
+            "ai_ml": 2,
+            "systems": 2,
+            "human_context": 1,
+            "applications": 5,
+            "electives": 0,
+            "other": 3
+          }
+        },
+        "options": {
+          "count": 60,
+          "categories": {
+            "foundations": 0,
+            "mathematics": 2,
+            "ai_ml": 0,
+            "systems": 2,
+            "human_context": 10,
+            "applications": 33,
+            "electives": 0,
+            "other": 13
+          }
+        },
+        "unresolved": {
+          "count": 0,
+          "categories": {
+            "foundations": 0,
+            "mathematics": 0,
+            "ai_ml": 0,
+            "systems": 0,
+            "human_context": 0,
+            "applications": 0,
+            "electives": 0,
+            "other": 0
+          }
+        }
+      },
+      "expected_course_ids": {
+        "required": [
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-cs-2000",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-cs-2001",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-cs-2100",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-cs-2101",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-cs-3200",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-ds-3500",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-ds-3000",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-ds-4200",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-ds-4300",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-ds-4400",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-ds-4420",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-eemb-2302",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-eemb-2303",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-envr-1400",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-envr-1401",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-envr-2515",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-envr-2500",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-envr-2501",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-math-1341",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-chem-1161",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-chem-1162",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-chem-1163"
+        ],
+        "options": [
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-cs-1200",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-inpr-1000",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-insc-1000",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-cs-1210",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-eesc-2000",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-math-1365",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-math-1465",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-eece-2160",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-eece-2322",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-eece-2323",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-mktg-4606",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-envr-1200",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-envr-1201",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-envr-2200",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-envr-3300",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-envr-3301",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-envr-5260",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-envr-4970",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-envr-2310",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-envr-2311",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-envr-2340",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-envr-2341",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-envr-3125",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-envr-3600",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-envr-4500",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-envr-4501",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-envr-5150",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-envr-5190",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-envr-5600",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-envr-5670",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-eemb-2400",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-eemb-3460",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-eemb-3465",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-eemb-4001",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-envr-4505",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-envr-5700",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-envr-5750",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-envr-3150",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-envr-3200",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-envr-5000",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-envr-5210",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-envr-5350",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-envr-5563",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-envr-5800",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-envr-5220",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-envr-5450",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-pols-2395",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-ppua-5260",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-ppua-5268",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-socl-2485",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-engw-1111",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-engw-1102",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-engw-3302",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-engw-3303",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-engw-3307",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-engw-3315",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-cs-4991",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-envr-4050",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-envr-4971",
+          "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree-envr-4997"
+        ],
+        "unresolved": []
+      },
       "discrepancies": [
         {
           "issue": "Legacy subject-prefix/title heuristics misclassified concrete courses: CS 1200 foundations -> other; CS 1210 foundations -> other; DS 3000 ai_ml -> mathematics; DS 4200 foundations -> other; CS 4991 foundations -> other",
@@ -3597,6 +3739,15 @@
             "https://catalog.northeastern.edu/course-descriptions/envr/",
             "https://catalog.northeastern.edu/course-descriptions/eemb/"
           ]
+        },
+        {
+          "issue": "Unreviewed selected environmental policy classifications required source-content verification.",
+          "correction": "Exact-code review corrections: PPUA 5268: other → human_context",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/pols/",
+            "https://catalog.northeastern.edu/course-descriptions/ppua/"
+          ]
         }
       ],
       "blockers": [
@@ -3605,7 +3756,7 @@
           "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-environmental-sustainability-sciences-bs-bos/"
         }
       ],
-      "correction_status": "First category and parser corrections applied; remaining accessible individual review continues.",
+      "correction_status": "All 82 represented observations and independent 22-fixed/60-option profile reviewed, retaining range loads and distinct four-course versus per-list criteria. Whole-degree policy applicability/follow-up remains in_progress.",
       "second_pass_status": "pending"
     },
     {
@@ -4040,6 +4191,13 @@
           "locator": "Complete exact course descriptions/registration fields reviewed via guarded environment contribution: ENVR 1110, ENVR 2515, ENVR 3150",
           "checked_at": "2026-10-11T00:07:04+00:00",
           "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/ppua/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: PPUA 5268",
+          "checked_at": "2026-10-11T00:12:36+00:00",
+          "access_status": "accessible"
         }
       ],
       "checks": {
@@ -4048,7 +4206,7 @@
         "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
         "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant. Independently verified the explicit CS 1800/1802 corequisite pair and degree preamble; CS 1802 is now nested beneath CS 1800. Other prerequisite alternatives are not additional degree obligations.",
         "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
-        "classification": "Current represented inventory: 181 course observations; 38 individually reviewed subject classifications, 2 explicitly mixed, 4 source-inspected but unclassified, and 137 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
+        "classification": "Current represented inventory: 181 course observations; 39 individually reviewed subject classifications, 2 explicitly mixed, 4 source-inspected but unclassified, and 136 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
         "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
         "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed. The shared declaration deadline, conditional change-major eligibility/advising and concentration catalog-year rules are now source-parsed course-free criteria; college-specific conditional transfer/progression mappings remain active. Current Khoury advising progression, graduation and conditional transfer/home-change rules now appear in eleven source-scoped course-free nodes. They remain conditional and do not infer assignment or override catalog/cohort scope. Other partner-college policy work continues. The five conditional CSSH transfer nodes now preserve petition/preapproval, grade/course eligibility, transfer caps/timing, evaluation and official transcript rules. Explicit Admissions Khoury/CSSH participation was checked individually; no home college is assigned. Other applicable college catalog/progression clauses remain active policy coverage work."
       },
@@ -4103,6 +4261,14 @@
           "evidence_urls": [
             "https://catalog.northeastern.edu/course-descriptions/envr/",
             "https://catalog.northeastern.edu/course-descriptions/eemb/"
+          ]
+        },
+        {
+          "issue": "Unreviewed selected environmental policy classifications required source-content verification.",
+          "correction": "Exact-code review corrections: PPUA 5268: other → human_context",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/ppua/"
           ]
         }
       ],
