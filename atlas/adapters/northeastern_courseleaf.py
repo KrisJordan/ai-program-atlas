@@ -54,7 +54,8 @@ def parse_catalog(html, *, program_id, title, url, required_sections, outcome_cl
     if requirement_scope not in {'degree', 'business_concentration'}:
         raise ValueError('Unsupported requirement scope')
     concentration = requirement_scope == 'business_concentration'
-    if not concentration and (award_level not in {'BS', 'other'} or (', BS (' if award_level == 'BS' else ', BSEnvE (') not in title):
+    award_markers = {'BS': (', BS (',), 'other': (', BSEnvE (', ', BSChE (')}
+    if not concentration and not any(marker in title for marker in award_markers.get(award_level, ())):
         raise ValueError('Award profile must match the exact reviewed program title')
     continued_choice_sections = continued_choice_sections or {}
     instruction_notes = instruction_notes or {}

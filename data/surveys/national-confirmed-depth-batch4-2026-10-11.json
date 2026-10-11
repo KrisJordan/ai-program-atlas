@@ -1,0 +1,304 @@
+[
+  {
+    "institution_id": "carnegie-mellon-university",
+    "status": "confirmed",
+    "checked_at": "2026-10-11",
+    "note": "Read the current all-degree directory, SCS degree/minor/concentration directory and Tepper BS concentration panel. Added AI and Business within the Business Administration BS: one required course and three independent choose-one groups, distinct from existing SCS AI degree/additional major/minor. Machine Learning and Intelligent Environments are not renamed AI. Qatar-only concentration context was not generalized to Pittsburgh. Other department suboptions and announcements are not exhaustively reviewed; confirmed is positive presence, not inventory completeness.",
+    "sources": [
+      {
+        "url": "https://coursecatalog.web.cmu.edu/degreesoffered/",
+        "title": "CMU Degrees Offered",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "locator": "2026–2027 degree/major/minor directory; SCS and Tepper links"
+      },
+      {
+        "url": "https://coursecatalog.web.cmu.edu/schools-colleges/schoolofcomputerscience/",
+        "title": "CMU School of Computer Science",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "locator": "Named SCS majors, minors and concentration directory"
+      },
+      {
+        "url": "https://coursecatalog.web.cmu.edu/schools-colleges/tepper/undergraduatebusinessadministrationprogram/business-administration-bs/",
+        "title": "CMU Business Administration BS",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "locator": "Concentrations panel: AI and Business exact heading, four course groups and general concentration rules"
+      }
+    ],
+    "discoveries": [
+      {
+        "title": "AI and Business",
+        "kind": "concentration",
+        "award_level": "concentration",
+        "url": "https://coursecatalog.web.cmu.edu/schools-colleges/tepper/undergraduatebusinessadministrationprogram/business-administration-bs/",
+        "program_id": "cmu-ai-business-concentration"
+      }
+    ]
+  },
+  {
+    "institution_id": "university-of-pennsylvania",
+    "status": "confirmed",
+    "checked_at": "2026-10-11",
+    "note": "Reviewed Penn undergraduate entry point, Engineering Programs & Options, CIS minors/second-major options and formal CSCI concentration list, and Wharton concentration directory. Existing AI BSE, CSCI AI concentration and AI for Business concentration cover the AI titles observed; no new title verified. The central catalog returned a JavaScript robot-verification challenge; stopped without bypass. College/Nursing and other departmental suboptions remain incompletely reviewed; this is not a university-wide absence or completeness claim.",
+    "sources": [
+      {
+        "url": "https://www.upenn.edu/academics/undergraduate",
+        "title": "Penn Undergraduate Academics",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "locator": "School and official catalog entry points"
+      },
+      {
+        "url": "https://catalog.upenn.edu/undergraduate/programs/",
+        "title": "Penn Undergraduate Programs catalog",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "locator": "Access boundary: JavaScript robot-verification challenge; no program table inspected"
+      },
+      {
+        "url": "https://academics.engineering.upenn.edu/ugrad/student-handbook/programs-options/",
+        "title": "Penn Engineering Programs & Options",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "locator": "Majors, departmental minors and interdisciplinary options; dual-major rules distinguish ARIN"
+      },
+      {
+        "url": "https://www.cis.upenn.edu/undergraduate-program-options/",
+        "title": "Penn CIS Program Options",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "locator": "CS/Data Science minors, second-major and dual-degree distinctions"
+      },
+      {
+        "url": "https://www.cis.upenn.edu/undergraduate-program-options/concentrations/",
+        "title": "Penn CSCI Degree Concentrations",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "locator": "Optional declared concentration list; existing AI entry"
+      },
+      {
+        "url": "https://undergrad.wharton.upenn.edu/concentrations/",
+        "title": "Wharton Concentrations",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "locator": "Named undergraduate concentrations including existing AI for Business"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "purdue-university",
+    "status": "confirmed",
+    "checked_at": "2026-10-11",
+    "note": "Reviewed current major finder visible first-page results, CS degree/track requirements and ECE degree/minor/concentration directory. Identified three additional official directory titles: Artificial Intelligence and Machine Learning—Computer Engineering concentration; Artificial Intelligence and Machine Learning—Electrical Engineering concentration; Artificial Intelligence and Machine Learning minor for students outside ECE. All three linked catalog pages returned 403; stopped. The general ECE page says the same ECE degrees are offered at West Lafayette and Indianapolis, but explicit campus applicability of these subpaths remains unverified. These remain research leads outside confirmed program count, not Purdue Global or other-campus credentials. CS Machine Intelligence is not an AI-titled record. The first-page major finder was not treated as an exhaustive 170-program review.",
+    "sources": [
+      {
+        "url": "https://admissions.purdue.edu/academics/majors/",
+        "title": "Purdue Undergraduate Majors",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "locator": "Visible first15 major results and West Lafayette/Indianapolis filters; not all loaded pages"
+      },
+      {
+        "url": "https://www.cs.purdue.edu/undergraduate/curriculum/index.html",
+        "title": "Purdue CS Undergraduate Curriculum",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "locator": "Current AI, CS, Data Science and CS minor links"
+      },
+      {
+        "url": "https://www.cs.purdue.edu/undergraduate/curriculum/bachelor.html",
+        "title": "Purdue CS Degree Requirements",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "locator": "Formal track list with campus labels; Machine Intelligence distinct title"
+      },
+      {
+        "url": "https://engineering.purdue.edu/ECE/Academics/Undergraduates",
+        "title": "Purdue ECE Undergraduate Programs",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "locator": "Degree and concentration links"
+      },
+      {
+        "url": "https://engineering.purdue.edu/ECE/Academics/Undergraduates/Curriculum",
+        "title": "Purdue ECE Degree Information",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "locator": "Three new AI/ML directory titles; Gaming explicitly Indianapolis-only; AI campus applicability not explicit"
+      },
+      {
+        "url": "https://engineering.purdue.edu/ECE/Academics",
+        "title": "Purdue ECE Academic Programs",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "locator": "Same ECE degree statement and both-campus EE/Computer Engineering descriptions; does not specifically place AI subpaths"
+      },
+      {
+        "url": "https://catalog.purdue.edu/preview_program.php?catoid=19&poid=35743",
+        "title": "Purdue AI/ML Computer Engineering concentration catalog",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "locator": "403 Forbidden; no requirements inspected"
+      },
+      {
+        "url": "https://catalog.purdue.edu/preview_program.php?catoid=19&poid=35742",
+        "title": "Purdue AI/ML Electrical Engineering concentration catalog",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "locator": "403 Forbidden; no requirements inspected"
+      },
+      {
+        "url": "https://catalog.purdue.edu/preview_program.php?catoid=19&poid=35714&returnto=25484",
+        "title": "Purdue AI/ML minor catalog",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "locator": "403 Forbidden; no requirements inspected"
+      },
+      {
+        "url": "https://engineering.purdue.edu/ECE/News/2021/ece-to-offer-new-minor-in-artificial-intelligence-machine-learning",
+        "title": "ECE proposed AI/ML minor announcement",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "locator": "2021 proposal, pending approval and expected fall2022; not treated as proof of first offering or current curriculum"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "georgia-institute-of-technology",
+    "status": "confirmed",
+    "checked_at": "2026-10-11",
+    "note": "Reviewed 2026–2027 program directory, BSCS Threads catalog and current department AI thread page. Added one formal Artificial Intelligence Thread concentration within BSCS, with eight paired-thread branches, not eight invented BS awards. Current catalog and department heading establish AI title despite legacy /intelligence URL. The two existing AI minors remain separate. Paired degree curricula, other departments and transcript notation remain incompletely reviewed.",
+    "sources": [
+      {
+        "url": "https://catalog.gatech.edu/programs/",
+        "title": "Georgia Tech Programs",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "locator": "2026–2027 program list and existing AI minors"
+      },
+      {
+        "url": "https://catalog.gatech.edu/programs/computer-science-bs/",
+        "title": "Georgia Tech BS Computer Science",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "locator": "Each student selects two threads; AI heading, eight paired curricula and C minimum grades"
+      },
+      {
+        "url": "https://www.cc.gatech.edu/academics/threads/intelligence",
+        "title": "Georgia Tech Artificial Intelligence Thread",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "locator": "Current exact title, required course list, Embodied/Approaches selection groups; suggestions outside mapped scope"
+      },
+      {
+        "url": "https://catalog.gatech.edu/programs/modeling-simulation-artificial-intelligence-computer-science-bs/",
+        "title": "Georgia Tech Modeling-Simulation & Artificial Intelligence paired BSCS",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "locator": "Linked paired route establishes full paired curriculum context; not expanded or counted as separate AI degree"
+      }
+    ],
+    "discoveries": [
+      {
+        "title": "Artificial Intelligence",
+        "kind": "concentration",
+        "award_level": "concentration",
+        "url": "https://catalog.gatech.edu/programs/computer-science-bs/",
+        "program_id": "georgia-tech-ai-thread"
+      }
+    ]
+  },
+  {
+    "institution_id": "northeastern-university",
+    "status": "confirmed",
+    "checked_at": "2026-10-11",
+    "note": "Reviewed 2026–2027 undergraduate and engineering catalog entry points plus Chemical Engineering undergraduate directory and linked current program catalog. Added Chemical Engineering and Artificial Intelligence, BSChE (Boston), 134 semester hours, distinct from 23 existing combined-degree family variants and two AI minors. The department page retains a legacy /bs-chds URL and Data Science PlusOne wording, but its Detailed Requirements link redirects to the current exact AI BSChE catalog. Local tables are parsed; no family inheritance or broad policy applicability is assumed. Remaining college-specific directories are not exhaustively reviewed.",
+    "sources": [
+      {
+        "url": "https://catalog.northeastern.edu/undergraduate/",
+        "title": "Northeastern Undergraduate Catalog",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "locator": "2026–2027 college/program navigation"
+      },
+      {
+        "url": "https://catalog.northeastern.edu/undergraduate/engineering/",
+        "title": "Northeastern College of Engineering",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "locator": "Department directory and undergraduate context"
+      },
+      {
+        "url": "https://che.northeastern.edu/academics/undergraduate-studies/",
+        "title": "Northeastern Chemical Engineering Undergraduate Studies",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "locator": "Explicit Chemical Engineering and AI BS listing"
+      },
+      {
+        "url": "https://che.northeastern.edu/academics/undergraduate-studies/bs-chds/",
+        "title": "Northeastern Chemical Engineering and AI BS",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "locator": "AI heading/overview and detailed-requirements link; legacy Data Science residue noted"
+      },
+      {
+        "url": "https://catalog.northeastern.edu/undergraduate/engineering/chemical/chemical-engineering-artificial-intelligence-bsche-bos/",
+        "title": "Chemical Engineering and Artificial Intelligence BSChE Boston",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "locator": "Exact2026–2027 title; local curriculum and134-semester-hour degree requirement"
+      }
+    ],
+    "discoveries": [
+      {
+        "title": "Chemical Engineering and Artificial Intelligence, BSChE (Boston)",
+        "kind": "degree",
+        "award_level": "other",
+        "url": "https://catalog.northeastern.edu/undergraduate/engineering/chemical/chemical-engineering-artificial-intelligence-bsche-bos/",
+        "program_id": "northeastern-chemical-engineering-ai-bsche"
+      }
+    ]
+  },
+  {
+    "institution_id": "university-at-buffalo-suny",
+    "status": "confirmed",
+    "checked_at": "2026-10-11",
+    "note": "Reviewed current undergraduate program finder, AI and Society degree/minor directory, CSE undergraduate directory and BSCS page. The eight AI+X degrees and two AI-related minors observed already have records. AI/ML/Data Mining appears on BSCS page as a research branch, not a declared curricular concentration; no new concentration invented. New AI-related masters excluded. Catalog restrictions from prior work were not retried. Other departmental suboptions and full current catalog remain incompletely reviewed.",
+    "sources": [
+      {
+        "url": "https://www.buffalo.edu/undergrad-programs.html",
+        "title": "Buffalo Undergraduate Academic Programs",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "locator": "Current program list including eight AI+X entries"
+      },
+      {
+        "url": "https://engineering.buffalo.edu/ai-society/academics.html",
+        "title": "Buffalo AI and Society Academics",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "locator": "Eight undergraduate degrees, two minors and separate graduate section"
+      },
+      {
+        "url": "https://engineering.buffalo.edu/computer-science-engineering/undergraduate.html",
+        "title": "Buffalo CSE Undergraduate Programs",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "locator": "BS/BA/minor/certificate directory; certificate excluded"
+      },
+      {
+        "url": "https://engineering.buffalo.edu/computer-science-engineering/undergraduate/degrees-and-programs/bs-in-computer-science.html",
+        "title": "Buffalo BS Computer Science",
+        "fetched_at": "2026-10-11",
+        "source_date": null,
+        "locator": "Curriculum overview and Main Branches of CS; AI branch described as research, not formal specialization"
+      }
+    ],
+    "discoveries": []
+  }
+]
