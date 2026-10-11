@@ -84,3 +84,19 @@ def parse(html):
 from .course_metadata import parse as parse_course_metadata, URL as COURSE_URL
 SOURCES = SOURCES + (COURSE_URL,)
 SOURCE_PARSERS = {SOURCES[0]: parse, COURSE_URL: parse_course_metadata}
+
+from atlas.adapters import ucsd_degree_policies as policies
+
+def parse_course_catalog(html):
+    metadata = parse_course_metadata(html)
+    tags = policies.parse_tags(html)
+    records = {c['id']: c for c in tags['courses']}
+    for c in metadata['courses']:
+        records.setdefault(c['id'], {}).update(c)
+    return {'id': PROGRAM_ID, 'curriculum_status': 'partial',
+            'courses': list(records.values()), 'requirements': tags['requirements']}
+
+SOURCES += (policies.DEGREE_URL,) + tuple(policies.COLLEGE_BASE + k + '/index.html' for k in policies.COLLEGES)
+SOURCE_PARSERS.update({COURSE_URL: parse_course_catalog, policies.DEGREE_URL: policies.parse_degree,
+                      policies.DEPARTMENT_URL: policies.parse_department})
+SOURCE_PARSERS.update({policies.COLLEGE_BASE + k + '/index.html': (lambda html, k=k: policies.parse_college(html, k)) for k in policies.COLLEGES})
