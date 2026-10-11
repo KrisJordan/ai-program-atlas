@@ -1673,3 +1673,13 @@ def test_older_sts_actual_source_replay_preserves_full_context_and_term_missingn
     path=Path('/tmp/mit-hass-subjects/detail-sts081-fa17.html')
     if path.exists():
         with pytest.raises(ValueError):review.observe_sts_archive_description(path.read_text())
+
+
+def test_sts_discovery_checkpoint_separates_indexes_from_full_content_review():
+    report=MANIFEST['sts_archive_discovery_checkpoint']
+    assert report['index_pages_inspected']==list(range(1,24))
+    assert len(report['recent_index_pages'])==2
+    assert report['description_observations_added_by_recent_pages']==0
+    assert len(set(report['remaining_title_only_record_ids']))==40
+    assert set(report['remaining_title_only_record_ids'])<=set(MANIFEST['courses'])
+    assert 'not a full read' in report['scope']
