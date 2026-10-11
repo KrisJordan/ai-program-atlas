@@ -2295,6 +2295,36 @@
       "catalog_year": null,
       "locator": "Complete blocks: FRE 101, FRE 102, FRE 105, FRE 201, FRE 202, FRE 203, FRE 280, FRE 301, FRE 302, FRE 303, FRE 310, FRE 321, FRE 322, FRE 325, FRE 330, FRE 340, FRE 345, FRE 346, FRE 360, FRE 363, FRE 364, FRE 365, FRE 366, FRE 401, FRE 422, FRE 432, FRE 442, FRE 446, FRE 295, FRE 395, FRE 396, FRE 397, FRE 398, FRE 399, FRE 495. Current public course chapter; exact descriptions and eligibility read separately from dated cognate membership. Mixed PDF navigation does not establish a course-catalog edition; no blanket foreign-language fulfillment inferred.",
       "confidence": "high"
+    },
+    {
+      "id": "miami-context-courses-ita",
+      "url": "https://bulletin.miami.edu/courses-az/ita/",
+      "title": "Miami Italian (ITA) contextual-course source review",
+      "fetched_at": "2026-10-11T05:50:42+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Complete blocks: ITA 101, ITA 102, ITA 106, ITA 201, ITA 202, ITA 206, ITA 280, ITA 301, ITA 310, ITA 311, ITA 312, ITA 314, ITA 315, ITA 316, ITA 317, ITA 319, ITA 321, ITA 330, ITA 363, ITA 364, ITA 365, ITA 444, ITA 446, ITA 295, ITA 395, ITA 396, ITA 397, ITA 398, ITA 399, ITA 495. Current public course chapter; complete descriptions and eligibility reviewed independently of contextual cognate membership. Mixed PDF links do not establish edition or credit applicability.",
+      "confidence": "high"
+    },
+    {
+      "id": "miami-context-courses-por",
+      "url": "https://bulletin.miami.edu/courses-az/por/",
+      "title": "Miami Portuguese (POR) contextual-course source review",
+      "fetched_at": "2026-10-11T05:51:10+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Complete blocks: POR 105, POR 201, POR 202, POR 301, POR 310, POR 321, POR 322, POR 353, POR 354, POR 363, POR 364, POR 295, POR 395, POR 396, POR 397, POR 398, POR 399, POR 495. Current public course chapter; complete descriptions and eligibility reviewed independently of contextual cognate membership. Mixed PDF links do not establish edition or credit applicability.",
+      "confidence": "high"
+    },
+    {
+      "id": "miami-context-courses-jpn",
+      "url": "https://bulletin.miami.edu/courses-az/jpn/",
+      "title": "Miami Japanese (JPN) contextual-course source review",
+      "fetched_at": "2026-10-11T05:50:43+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Complete blocks: JPN 101, JPN 102, JPN 201, JPN 202, JPN 203, JPN 204, JPN 210, JPN 432, JPN 447, JPN 295, JPN 395, JPN 495. Current public course chapter; complete descriptions and eligibility reviewed independently of contextual cognate membership. Mixed PDF links do not establish edition or credit applicability.",
+      "confidence": "high"
     }
   ],
   "courses": [
@@ -16655,365 +16685,651 @@
       "id": "miami-ai-technologies-business-bsba-ita-201",
       "code": "ITA 201",
       "name": "Intermediate Italian I",
-      "description": null,
+      "description": "Develops intermediate Italian grammar, speaking and writing through varied readings.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-ps_0057-fall2026",
-      "url": "https://cognates.miami.edu/PS_0057",
+      "source_id": "miami-context-courses-ita",
+      "url": "https://bulletin.miami.edu/courses-az/ita/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops intermediate Italian grammar, speaking and writing through varied readings. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-ita"
+        ],
+        "locator": "ITA 201 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-ita-202",
       "code": "ITA 202",
       "name": "Intermediate Italian II",
-      "description": null,
-      "prerequisites": "Prerequisite: ITA 201 or ITA 206.",
+      "description": "Develops Italian conversation and varied writing genres in preparation for advanced study.",
+      "prerequisites": "Prerequisite: ITA 201 or ITA 206 . Closed to native speakers.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-ps_0057-fall2026",
-      "url": "https://cognates.miami.edu/PS_0057",
+      "source_id": "miami-context-courses-ita",
+      "url": "https://bulletin.miami.edu/courses-az/ita/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops Italian conversation and varied writing genres in preparation for advanced study. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-ita"
+        ],
+        "locator": "ITA 202 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-ita-206",
       "code": "ITA 206",
       "name": "Intermediate Italian for Spanish Speakers",
-      "description": null,
-      "prerequisites": "Prerequisite: ITA 106.",
+      "description": "Builds on Spanish-language knowledge to develop increasingly complex Italian communication.",
+      "prerequisites": "Prerequisite: ITA 106 . Designed for Spanish heritage/native speakers or intermediate-proficiency learners.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0070-fall2026",
-      "url": "https://cognates.miami.edu/AT_0070",
+      "source_id": "miami-context-courses-ita",
+      "url": "https://bulletin.miami.edu/courses-az/ita/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Builds on Spanish-language knowledge to develop increasingly complex Italian communication. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-ita"
+        ],
+        "locator": "ITA 206 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-ita-280",
       "code": "ITA 280",
       "name": "21st Century Italian Cinema, Society and Culture",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "description": "Studies contemporary Italian cultural, political and social issues through films and experience in Italy.",
+      "prerequisites": "Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107.",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "source_id": "miami-context-courses-ita",
+      "url": "https://bulletin.miami.edu/courses-az/ita/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Studies contemporary Italian cultural, political and social issues through films and experience in Italy. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-ita"
+        ],
+        "locator": "ITA 280 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-ita-295",
       "code": "ITA 295",
       "name": "Transfer Credit",
-      "description": null,
+      "description": "Records external course credit without a direct university equivalent; the actual subject is not described. Published credit range: 1-3 credit hours.",
       "prerequisites": null,
       "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "miami-context-courses-ita",
+      "url": "https://bulletin.miami.edu/courses-az/ita/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "rationale": "Records external course credit without a direct university equivalent; the actual subject is not described. Published credit range: 1-3 credit hours. Actual external subject matter cannot be inferred from a language prefix.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-ita"
+        ],
+        "locator": "ITA 295 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-ita-301",
       "code": "ITA 301",
       "name": "Interpreting Literary and Cultural Texts in Italian",
-      "description": null,
-      "prerequisites": "Prerequisite: ITA 202.",
+      "description": "Develops methods for interpreting Italian literary and cultural materials and writing critically about them.",
+      "prerequisites": "Prerequisite: ITA 202 . Closed to native speakers formally educated in Italian.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0093-fall2026",
-      "url": "https://cognates.miami.edu/AT_0093",
+      "source_id": "miami-context-courses-ita",
+      "url": "https://bulletin.miami.edu/courses-az/ita/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops methods for interpreting Italian literary and cultural materials and writing critically about them. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-ita"
+        ],
+        "locator": "ITA 301 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-ita-310",
       "code": "ITA 310",
       "name": "Topics in Italian Studies in Translation",
-      "description": null,
-      "prerequisites": "Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107",
+      "description": "Studies a selected Italian literary topic, author or movement in English translation.",
+      "prerequisites": "Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107. Italian-minor use remains subject to departmental stipulations. May repeat when the topic varies; repeat eligibility does not establish unique-course credit.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-ps_0057-fall2026",
-      "url": "https://cognates.miami.edu/PS_0057",
+      "source_id": "miami-context-courses-ita",
+      "url": "https://bulletin.miami.edu/courses-az/ita/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Studies a selected Italian literary topic, author or movement in English translation. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-ita"
+        ],
+        "locator": "ITA 310 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-ita-311",
       "code": "ITA 311",
       "name": "To Hell and Back with Dante: Women, Men, Politics, and Poetry",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "description": "Examines central passages and themes of Dante’s Divine Comedy.",
+      "prerequisites": "Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107.",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "source_id": "miami-context-courses-ita",
+      "url": "https://bulletin.miami.edu/courses-az/ita/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Examines central passages and themes of Dante’s Divine Comedy. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-ita"
+        ],
+        "locator": "ITA 311 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-ita-312",
       "code": "ITA 312",
       "name": "Italian Civilization",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "description": "Studies Italian intellectual life, cultural production and political and social institutions.",
+      "prerequisites": "Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107.",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "source_id": "miami-context-courses-ita",
+      "url": "https://bulletin.miami.edu/courses-az/ita/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Studies Italian intellectual life, cultural production and political and social institutions. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-ita"
+        ],
+        "locator": "ITA 312 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-ita-314",
       "code": "ITA 314",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "name": "Topics in Early Modern Italian Literature in Translation",
+      "description": "Introduces selected aspects of early modern and Renaissance Italian literature in translation.",
+      "prerequisites": "Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107.",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "source_id": "miami-context-courses-ita",
+      "url": "https://bulletin.miami.edu/courses-az/ita/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Introduces selected aspects of early modern and Renaissance Italian literature in translation. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-ita"
+        ],
+        "locator": "ITA 314 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-ita-315",
       "code": "ITA 315",
       "name": "Topics in Gender and Sexuality in Translation",
-      "description": null,
-      "prerequisites": "Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107",
+      "description": "Examines gender and sexuality in Italy using cultural sources from different periods.",
+      "prerequisites": "Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107. The description explicitly excludes foreign-language requirement fulfillment.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-ps_0057-fall2026",
-      "url": "https://cognates.miami.edu/PS_0057",
+      "source_id": "miami-context-courses-ita",
+      "url": "https://bulletin.miami.edu/courses-az/ita/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Examines gender and sexuality in Italy using cultural sources from different periods. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-ita"
+        ],
+        "locator": "ITA 315 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-ita-316",
       "code": "ITA 316",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "name": "Topics in 18th- and 19th-Century Italian Literature in Translation",
+      "description": "Examines eighteenth- and nineteenth-century Italian literary topics in translation.",
+      "prerequisites": "Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107. The description explicitly excludes foreign-language requirement fulfillment.",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "source_id": "miami-context-courses-ita",
+      "url": "https://bulletin.miami.edu/courses-az/ita/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Examines eighteenth- and nineteenth-century Italian literary topics in translation. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-ita"
+        ],
+        "locator": "ITA 316 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-ita-317",
       "code": "ITA 317",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "name": "Topics in 20th Century Italian Literature in Translation",
+      "description": "Examines twentieth-century Italian literary topics in translation.",
+      "prerequisites": "Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107. The description explicitly excludes foreign-language requirement fulfillment.",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "source_id": "miami-context-courses-ita",
+      "url": "https://bulletin.miami.edu/courses-az/ita/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Examines twentieth-century Italian literary topics in translation. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-ita"
+        ],
+        "locator": "ITA 317 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-ita-319",
       "code": "ITA 319",
       "name": "Travels Italy",
-      "description": null,
-      "prerequisites": "Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107",
+      "description": "Analyzes representations of Italy and Italians, cultural encounters, ethnicity and stereotypes.",
+      "prerequisites": "Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107. The description explicitly excludes foreign-language requirement fulfillment.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-ps_0057-fall2026",
-      "url": "https://cognates.miami.edu/PS_0057",
+      "source_id": "miami-context-courses-ita",
+      "url": "https://bulletin.miami.edu/courses-az/ita/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Analyzes representations of Italy and Italians, cultural encounters, ethnicity and stereotypes. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-ita"
+        ],
+        "locator": "ITA 319 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-ita-321",
       "code": "ITA 321",
       "name": "Special Topics in Italian Literature",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "description": "Studies Italian literature, film or arts through a selected topic.",
+      "prerequisites": "Prerequisite: ITA 202 . May repeat when the topic varies; repeat eligibility does not establish unique-course credit.",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "source_id": "miami-context-courses-ita",
+      "url": "https://bulletin.miami.edu/courses-az/ita/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Studies Italian literature, film or arts through a selected topic. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-ita"
+        ],
+        "locator": "ITA 321 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-ita-330",
       "code": "ITA 330",
       "name": "Topics in Gender and Sexuality in Italian Culture",
-      "description": null,
-      "prerequisites": "Prerequisite: ITA 202.",
+      "description": "Studies gender and sexuality in Italian culture through historical and cultural materials.",
+      "prerequisites": "Prerequisite: ITA 202 . May repeat when the topic varies; repeat eligibility does not establish unique-course credit.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-ps_0057-fall2026",
-      "url": "https://cognates.miami.edu/PS_0057",
+      "source_id": "miami-context-courses-ita",
+      "url": "https://bulletin.miami.edu/courses-az/ita/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Studies gender and sexuality in Italian culture through historical and cultural materials. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-ita"
+        ],
+        "locator": "ITA 330 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-ita-363",
       "code": "ITA 363",
       "name": "Medieval and Renaissance Topics in Italian",
-      "description": null,
-      "prerequisites": "Prerequisite: ITA 202.",
+      "description": "Examines Italian culture and literature from its earliest documents through the Renaissance.",
+      "prerequisites": "Prerequisite: ITA 202 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0013-fall2026",
-      "url": "https://cognates.miami.edu/AT_0013",
+      "source_id": "miami-context-courses-ita",
+      "url": "https://bulletin.miami.edu/courses-az/ita/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Examines Italian culture and literature from its earliest documents through the Renaissance. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-ita"
+        ],
+        "locator": "ITA 363 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-ita-364",
       "code": "ITA 364",
       "name": "17th-19th Century Topics in Italian",
-      "description": null,
-      "prerequisites": "Prerequisite: ITA 202.",
+      "description": "Examines Italian culture and literature from the Baroque through the nineteenth century.",
+      "prerequisites": "Prerequisite: ITA 202 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0093-fall2026",
-      "url": "https://cognates.miami.edu/AT_0093",
+      "source_id": "miami-context-courses-ita",
+      "url": "https://bulletin.miami.edu/courses-az/ita/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Examines Italian culture and literature from the Baroque through the nineteenth century. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-ita"
+        ],
+        "locator": "ITA 364 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-ita-395",
       "code": "ITA 395",
       "name": "Transfer Credits",
-      "description": null,
+      "description": "Records external course credit without a direct university equivalent; the actual subject is not described. Published credit range: 1-3 credit hours.",
       "prerequisites": null,
       "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "miami-context-courses-ita",
+      "url": "https://bulletin.miami.edu/courses-az/ita/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "rationale": "Records external course credit without a direct university equivalent; the actual subject is not described. Published credit range: 1-3 credit hours. Actual external subject matter cannot be inferred from a language prefix.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-ita"
+        ],
+        "locator": "ITA 395 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-ita-396",
       "code": "ITA 396",
       "name": "Transfer Credits",
-      "description": null,
+      "description": "Records external course credit without a direct university equivalent; the actual subject is not described. Published credit range: 1-3 credit hours.",
       "prerequisites": null,
       "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "miami-context-courses-ita",
+      "url": "https://bulletin.miami.edu/courses-az/ita/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "rationale": "Records external course credit without a direct university equivalent; the actual subject is not described. Published credit range: 1-3 credit hours. Actual external subject matter cannot be inferred from a language prefix.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-ita"
+        ],
+        "locator": "ITA 396 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-ita-397",
       "code": "ITA 397",
       "name": "Transfer Credits",
-      "description": null,
+      "description": "Records external course credit without a direct university equivalent; the actual subject is not described. Published credit range: 1-3 credit hours.",
       "prerequisites": null,
       "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "miami-context-courses-ita",
+      "url": "https://bulletin.miami.edu/courses-az/ita/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "rationale": "Records external course credit without a direct university equivalent; the actual subject is not described. Published credit range: 1-3 credit hours. Actual external subject matter cannot be inferred from a language prefix.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-ita"
+        ],
+        "locator": "ITA 397 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-ita-398",
       "code": "ITA 398",
       "name": "Transfer Credits",
-      "description": null,
+      "description": "Records external course credit without a direct university equivalent; the actual subject is not described. Published credit range: 1-3 credit hours.",
       "prerequisites": null,
       "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "miami-context-courses-ita",
+      "url": "https://bulletin.miami.edu/courses-az/ita/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "rationale": "Records external course credit without a direct university equivalent; the actual subject is not described. Published credit range: 1-3 credit hours. Actual external subject matter cannot be inferred from a language prefix.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-ita"
+        ],
+        "locator": "ITA 398 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-ita-399",
       "code": "ITA 399",
       "name": "Transfer Credits",
-      "description": null,
+      "description": "Records external course credit without a direct university equivalent; the actual subject is not described. Published credit range: 1-3 credit hours.",
       "prerequisites": null,
       "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "miami-context-courses-ita",
+      "url": "https://bulletin.miami.edu/courses-az/ita/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "rationale": "Records external course credit without a direct university equivalent; the actual subject is not described. Published credit range: 1-3 credit hours. Actual external subject matter cannot be inferred from a language prefix.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-ita"
+        ],
+        "locator": "ITA 399 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-ita-444",
       "code": "ITA 444",
       "name": "Introduction to Translation",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "description": "Develops theoretical and practical translation between Italian and English.",
+      "prerequisites": "Prerequisite: ITA 202 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "source_id": "miami-context-courses-ita",
+      "url": "https://bulletin.miami.edu/courses-az/ita/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops theoretical and practical translation between Italian and English. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-ita"
+        ],
+        "locator": "ITA 444 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-ita-446",
       "code": "ITA 446",
       "name": "Cultural Debates: Public Speaking on Societal Issues",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "description": "Develops Italian academic conversation, argument and analysis through discussion and presentations.",
+      "prerequisites": "Prerequisite: ITA 202 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "source_id": "miami-context-courses-ita",
+      "url": "https://bulletin.miami.edu/courses-az/ita/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops Italian academic conversation, argument and analysis through discussion and presentations. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-ita"
+        ],
+        "locator": "ITA 446 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-ita-495",
       "code": "ITA 495",
       "name": "Transfer Credit",
-      "description": null,
+      "description": "Records external course credit without a direct university equivalent; the actual subject is not described. Published credit range: 1-3 credit hours.",
       "prerequisites": null,
       "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "miami-context-courses-ita",
+      "url": "https://bulletin.miami.edu/courses-az/ita/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "rationale": "Records external course credit without a direct university equivalent; the actual subject is not described. Published credit range: 1-3 credit hours. Actual external subject matter cannot be inferred from a language prefix.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-ita"
+        ],
+        "locator": "ITA 495 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-jmm-319",
@@ -17061,127 +17377,226 @@
       "id": "miami-ai-technologies-business-bsba-jpn-201",
       "code": "JPN 201",
       "name": "Intermediate Japanese I",
-      "description": null,
-      "prerequisites": "Prerequisite: JPN 102.",
+      "description": "Develops intermediate Japanese grammar, writing and reading with cultural and historical study.",
+      "prerequisites": "Prerequisite: JPN 102 . Closed to native speakers.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0052-fall2026",
-      "url": "https://cognates.miami.edu/AT_0052",
+      "source_id": "miami-context-courses-jpn",
+      "url": "https://bulletin.miami.edu/courses-az/jpn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops intermediate Japanese grammar, writing and reading with cultural and historical study. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-jpn"
+        ],
+        "locator": "JPN 201 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-jpn-202",
       "code": "JPN 202",
       "name": "Intermediate Japanese II",
-      "description": null,
-      "prerequisites": "Prerequisite: JPN 201.",
+      "description": "Develops Japanese communication, including honorific and respectful expression.",
+      "prerequisites": "Prerequisite: JPN 201 . Closed to native speakers.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0052-fall2026",
-      "url": "https://cognates.miami.edu/AT_0052",
+      "source_id": "miami-context-courses-jpn",
+      "url": "https://bulletin.miami.edu/courses-az/jpn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops Japanese communication, including honorific and respectful expression. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-jpn"
+        ],
+        "locator": "JPN 202 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-jpn-203",
       "code": "JPN 203",
       "name": "Advanced Japanese I",
-      "description": null,
-      "prerequisites": "Prerequisite: JPN 202.",
+      "description": "Advances Japanese comprehension, vocabulary and grammar alongside cultural study.",
+      "prerequisites": "Prerequisite: JPN 202 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0052-fall2026",
-      "url": "https://cognates.miami.edu/AT_0052",
+      "source_id": "miami-context-courses-jpn",
+      "url": "https://bulletin.miami.edu/courses-az/jpn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Advances Japanese comprehension, vocabulary and grammar alongside cultural study. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-jpn"
+        ],
+        "locator": "JPN 203 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-jpn-204",
       "code": "JPN 204",
       "name": "Advanced Japanese II",
-      "description": null,
-      "prerequisites": "Prerequisite: JPN 203.",
+      "description": "Extends advanced Japanese communication and analysis of Japanese culture.",
+      "prerequisites": "Prerequisite: JPN 203 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0052-fall2026",
-      "url": "https://cognates.miami.edu/AT_0052",
+      "source_id": "miami-context-courses-jpn",
+      "url": "https://bulletin.miami.edu/courses-az/jpn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Extends advanced Japanese communication and analysis of Japanese culture. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-jpn"
+        ],
+        "locator": "JPN 204 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-jpn-210",
       "code": "JPN 210",
-      "name": "Japan Uncovered: Introduction to Japanese Culture",
-      "description": null,
-      "prerequisites": null,
+      "name": "Introduction to Japanese Culture",
+      "description": "Studies historical, aesthetic, social and political influences on Japanese culture through an abroad program.",
+      "prerequisites": "Prerequisite: JPN 102 . Offered only through summer abroad in Japan. The prose also says “No language requirement” alongside the separately printed JPN 102 prerequisite; the meaning of that prose is not resolved or used to waive the prerequisite.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0052-fall2026",
-      "url": "https://cognates.miami.edu/AT_0052",
+      "source_id": "miami-context-courses-jpn",
+      "url": "https://bulletin.miami.edu/courses-az/jpn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Studies historical, aesthetic, social and political influences on Japanese culture through an abroad program. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-jpn"
+        ],
+        "locator": "JPN 210 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-jpn-295",
       "code": "JPN 295",
       "name": "Transfer Credit",
-      "description": null,
+      "description": "Records external course credit without a direct university equivalent; the actual subject is not described. Published credit range: 1-3 credit hours.",
       "prerequisites": null,
       "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "miami-context-courses-jpn",
+      "url": "https://bulletin.miami.edu/courses-az/jpn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "rationale": "Records external course credit without a direct university equivalent; the actual subject is not described. Published credit range: 1-3 credit hours. Actual external subject matter cannot be inferred from a language prefix.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-jpn"
+        ],
+        "locator": "JPN 295 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-jpn-395",
       "code": "JPN 395",
       "name": "Transfer Credit",
-      "description": null,
+      "description": "Records external course credit without a direct university equivalent; the actual subject is not described. Published credit range: 1-3 credit hours.",
       "prerequisites": null,
       "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "miami-context-courses-jpn",
+      "url": "https://bulletin.miami.edu/courses-az/jpn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "rationale": "Records external course credit without a direct university equivalent; the actual subject is not described. Published credit range: 1-3 credit hours. Actual external subject matter cannot be inferred from a language prefix.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-jpn"
+        ],
+        "locator": "JPN 395 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-jpn-447",
       "code": "JPN 447",
       "name": "Advance Conversation Through Japanese Theatrical Texts",
-      "description": null,
-      "prerequisites": "Prerequisite: JPN 203.",
+      "description": "Develops Japanese conversation and sociocultural understanding through performing arts.",
+      "prerequisites": "Prerequisite: JPN 203 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0052-fall2026",
-      "url": "https://cognates.miami.edu/AT_0052",
+      "source_id": "miami-context-courses-jpn",
+      "url": "https://bulletin.miami.edu/courses-az/jpn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops Japanese conversation and sociocultural understanding through performing arts. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-jpn"
+        ],
+        "locator": "JPN 447 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-jpn-495",
       "code": "JPN 495",
       "name": "Transfer Credit",
-      "description": null,
+      "description": "Records external course credit without a direct university equivalent; the actual subject is not described. Published credit range: 1-3 credit hours.",
       "prerequisites": null,
       "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "miami-context-courses-jpn",
+      "url": "https://bulletin.miami.edu/courses-az/jpn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "rationale": "Records external course credit without a direct university equivalent; the actual subject is not described. Published credit range: 1-3 credit hours. Actual external subject matter cannot be inferred from a language prefix.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-jpn"
+        ],
+        "locator": "JPN 495 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-jus-231",
@@ -19211,239 +19626,426 @@
       "id": "miami-ai-technologies-business-bsba-por-201",
       "code": "POR 201",
       "name": "Intermediate Portuguese I",
-      "description": null,
-      "prerequisites": "Prerequisite: POR 102 or POR 105.",
+      "description": "Develops intermediate Portuguese grammar, speaking and writing through varied readings.",
+      "prerequisites": "Prerequisite: POR 102 or POR 105 . Not open to native speakers.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0081-fall2026",
-      "url": "https://cognates.miami.edu/AT_0081",
+      "source_id": "miami-context-courses-por",
+      "url": "https://bulletin.miami.edu/courses-az/por/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops intermediate Portuguese grammar, speaking and writing through varied readings. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-por"
+        ],
+        "locator": "POR 201 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-por-202",
       "code": "POR 202",
       "name": "Intermediate Portuguese II",
-      "description": null,
-      "prerequisites": "Prerequisite: POR 201",
+      "description": "Develops Portuguese conversation and analytical writing through varied text genres.",
+      "prerequisites": "Prerequisite: POR 201 . Closed to native speakers.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0081-fall2026",
-      "url": "https://cognates.miami.edu/AT_0081",
+      "source_id": "miami-context-courses-por",
+      "url": "https://bulletin.miami.edu/courses-az/por/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops Portuguese conversation and analytical writing through varied text genres. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-por"
+        ],
+        "locator": "POR 202 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-por-295",
       "code": "POR 295",
       "name": "Transfer Credit",
-      "description": null,
+      "description": "Records external course credit without a direct university equivalent; the actual subject is not described. Published credit range: 1-3 credit hours.",
       "prerequisites": null,
       "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "miami-context-courses-por",
+      "url": "https://bulletin.miami.edu/courses-az/por/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "rationale": "Records external course credit without a direct university equivalent; the actual subject is not described. Published credit range: 1-3 credit hours. Actual external subject matter cannot be inferred from a language prefix.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-por"
+        ],
+        "locator": "POR 295 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-por-301",
       "code": "POR 301",
       "name": "Interpreting Literary and Cultural Texts in Portuguese",
-      "description": null,
-      "prerequisites": "Prerequisite: POR 202.",
+      "description": "Develops methods for interpreting Portuguese-language literary and cultural material and writing critically about it.",
+      "prerequisites": "Prerequisite: POR 202 . Closed to native speakers formally educated in Portuguese.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0009-fall2026",
-      "url": "https://cognates.miami.edu/AT_0009",
+      "source_id": "miami-context-courses-por",
+      "url": "https://bulletin.miami.edu/courses-az/por/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops methods for interpreting Portuguese-language literary and cultural material and writing critically about it. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-por"
+        ],
+        "locator": "POR 301 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-por-310",
       "code": "POR 310",
       "name": "Brazilian Women Writers in Translation",
-      "description": null,
-      "prerequisites": "Prerequisite: WRS 106 or ENG 106.",
+      "description": "Examines Brazilian women’s writing and its representations of social identities.",
+      "prerequisites": "Prerequisite: WRS 106 or ENG 106 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0009-fall2026",
-      "url": "https://cognates.miami.edu/AT_0009",
+      "source_id": "miami-context-courses-por",
+      "url": "https://bulletin.miami.edu/courses-az/por/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Examines Brazilian women’s writing and its representations of social identities. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-por"
+        ],
+        "locator": "POR 310 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-por-321",
       "code": "POR 321",
       "name": "Studies in Luso-Brazilian Literary Themes",
-      "description": null,
-      "prerequisites": "Prerequisite: POR 202.",
+      "description": "Studies Luso-Brazilian literature through thematic readings.",
+      "prerequisites": "Prerequisite: POR 202 . May repeat when the topic varies; repeat eligibility does not establish unique-course credit.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0009-fall2026",
-      "url": "https://cognates.miami.edu/AT_0009",
+      "source_id": "miami-context-courses-por",
+      "url": "https://bulletin.miami.edu/courses-az/por/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Studies Luso-Brazilian literature through thematic readings. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-por"
+        ],
+        "locator": "POR 321 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-por-322",
       "code": "POR 322",
       "name": "Topics in Luso-Brazilian Cultures",
-      "description": null,
-      "prerequisites": "Prerequisite: POR 202.",
+      "description": "Examines cultural and social issues in Portuguese-speaking societies.",
+      "prerequisites": "Prerequisite: POR 202 . May repeat when the topic varies; repeat eligibility does not establish unique-course credit.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0009-fall2026",
-      "url": "https://cognates.miami.edu/AT_0009",
+      "source_id": "miami-context-courses-por",
+      "url": "https://bulletin.miami.edu/courses-az/por/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Examines cultural and social issues in Portuguese-speaking societies. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-por"
+        ],
+        "locator": "POR 322 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-por-353",
       "code": "POR 353",
       "name": "Brazilian Poetry",
-      "description": null,
-      "prerequisites": "Prerequisite: POR 202.",
+      "description": "Studies Brazilian poetry from the colonial period onward.",
+      "prerequisites": "Prerequisite: POR 202 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0009-fall2026",
-      "url": "https://cognates.miami.edu/AT_0009",
+      "source_id": "miami-context-courses-por",
+      "url": "https://bulletin.miami.edu/courses-az/por/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Studies Brazilian poetry from the colonial period onward. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-por"
+        ],
+        "locator": "POR 353 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-por-354",
       "code": "POR 354",
       "name": "The Modern Brazilian Novel",
-      "description": null,
-      "prerequisites": "Prerequisite: POR 202.",
+      "description": "Studies major Brazilian novels published since 1865.",
+      "prerequisites": "Prerequisite: POR 202 . Portuguese minors must write all assignments in Portuguese; others may write in English, Portuguese or Spanish.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0009-fall2026",
-      "url": "https://cognates.miami.edu/AT_0009",
+      "source_id": "miami-context-courses-por",
+      "url": "https://bulletin.miami.edu/courses-az/por/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Studies major Brazilian novels published since 1865. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-por"
+        ],
+        "locator": "POR 354 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-por-363",
       "code": "POR 363",
       "name": "Contemporary Luso-Brazilian Film",
-      "description": null,
-      "prerequisites": "Prerequisite: POR 202.",
+      "description": "Examines Portuguese, Brazilian and Lusophone African cinema since the 1950s.",
+      "prerequisites": "Prerequisite: POR 202 . Portuguese minors must write all assignments in Portuguese; others may write in English, Portuguese or Spanish.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0009-fall2026",
-      "url": "https://cognates.miami.edu/AT_0009",
+      "source_id": "miami-context-courses-por",
+      "url": "https://bulletin.miami.edu/courses-az/por/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Examines Portuguese, Brazilian and Lusophone African cinema since the 1950s. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-por"
+        ],
+        "locator": "POR 363 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-por-364",
       "code": "POR 364",
       "name": "The Brazilian Short Story",
-      "description": null,
-      "prerequisites": "Prerequisite: POR 202.",
+      "description": "Studies Brazilian short stories published since 1890.",
+      "prerequisites": "Prerequisite: POR 202 . Portuguese minors must write all assignments in Portuguese; others may write in English, Portuguese or Spanish.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0009-fall2026",
-      "url": "https://cognates.miami.edu/AT_0009",
+      "source_id": "miami-context-courses-por",
+      "url": "https://bulletin.miami.edu/courses-az/por/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Studies Brazilian short stories published since 1890. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-por"
+        ],
+        "locator": "POR 364 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-por-395",
       "code": "POR 395",
       "name": "Transfer Credits",
-      "description": null,
+      "description": "Records external course credit without a direct university equivalent; the actual subject is not described. Published credit range: 1-3 credit hours.",
       "prerequisites": null,
       "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "miami-context-courses-por",
+      "url": "https://bulletin.miami.edu/courses-az/por/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "rationale": "Records external course credit without a direct university equivalent; the actual subject is not described. Published credit range: 1-3 credit hours. Actual external subject matter cannot be inferred from a language prefix.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-por"
+        ],
+        "locator": "POR 395 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-por-396",
       "code": "POR 396",
       "name": "Transfer Credits",
-      "description": null,
+      "description": "Records external course credit without a direct university equivalent; the actual subject is not described. Published credit range: 1-3 credit hours.",
       "prerequisites": null,
       "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "miami-context-courses-por",
+      "url": "https://bulletin.miami.edu/courses-az/por/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "rationale": "Records external course credit without a direct university equivalent; the actual subject is not described. Published credit range: 1-3 credit hours. Actual external subject matter cannot be inferred from a language prefix.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-por"
+        ],
+        "locator": "POR 396 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-por-397",
       "code": "POR 397",
       "name": "Transfer Credits",
-      "description": null,
+      "description": "Records external course credit without a direct university equivalent; the actual subject is not described. Published credit range: 1-3 credit hours.",
       "prerequisites": null,
       "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "miami-context-courses-por",
+      "url": "https://bulletin.miami.edu/courses-az/por/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "rationale": "Records external course credit without a direct university equivalent; the actual subject is not described. Published credit range: 1-3 credit hours. Actual external subject matter cannot be inferred from a language prefix.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-por"
+        ],
+        "locator": "POR 397 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-por-398",
       "code": "POR 398",
       "name": "Transfer Credits",
-      "description": null,
+      "description": "Records external course credit without a direct university equivalent; the actual subject is not described. Published credit range: 1-3 credit hours.",
       "prerequisites": null,
       "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "miami-context-courses-por",
+      "url": "https://bulletin.miami.edu/courses-az/por/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "rationale": "Records external course credit without a direct university equivalent; the actual subject is not described. Published credit range: 1-3 credit hours. Actual external subject matter cannot be inferred from a language prefix.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-por"
+        ],
+        "locator": "POR 398 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-por-399",
       "code": "POR 399",
       "name": "Transfer Credits",
-      "description": null,
+      "description": "Records external course credit without a direct university equivalent; the actual subject is not described. Published credit range: 1-3 credit hours.",
       "prerequisites": null,
       "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "miami-context-courses-por",
+      "url": "https://bulletin.miami.edu/courses-az/por/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "rationale": "Records external course credit without a direct university equivalent; the actual subject is not described. Published credit range: 1-3 credit hours. Actual external subject matter cannot be inferred from a language prefix.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-por"
+        ],
+        "locator": "POR 399 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-por-495",
       "code": "POR 495",
       "name": "Transfer Credit",
-      "description": null,
+      "description": "Records external course credit without a direct university equivalent; the actual subject is not described. Published credit range: 1-3 credit hours.",
       "prerequisites": null,
       "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "miami-context-courses-por",
+      "url": "https://bulletin.miami.edu/courses-az/por/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "rationale": "Records external course credit without a direct university equivalent; the actual subject is not described. Published credit range: 1-3 credit hours. Actual external subject matter cannot be inferred from a language prefix.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-por"
+        ],
+        "locator": "POR 495 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-rel-101",
@@ -31343,29 +31945,51 @@
       "id": "miami-ai-technologies-business-bsba-ita-101",
       "code": "ITA 101",
       "name": "Elementary Italian I",
-      "description": null,
-      "prerequisites": null,
+      "description": "Introduces Italian communication and cultural practices through everyday themes.",
+      "prerequisites": "Not open after two or more years of high-school Italian; closed to heritage and native Italian speakers.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-ps_0057-fall2026",
-      "url": "https://cognates.miami.edu/PS_0057",
+      "source_id": "miami-context-courses-ita",
+      "url": "https://bulletin.miami.edu/courses-az/ita/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Introduces Italian communication and cultural practices through everyday themes. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-ita"
+        ],
+        "locator": "ITA 101 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-ita-102",
       "code": "ITA 102",
       "name": "Elementary Italian II",
-      "description": null,
+      "description": "Continues elementary Italian communication and culture through personal, community and environmental themes.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-ps_0057-fall2026",
-      "url": "https://cognates.miami.edu/PS_0057",
+      "source_id": "miami-context-courses-ita",
+      "url": "https://bulletin.miami.edu/courses-az/ita/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Continues elementary Italian communication and culture through personal, community and environmental themes. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-ita"
+        ],
+        "locator": "ITA 102 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-spa-203",
@@ -32064,57 +32688,101 @@
       "id": "miami-ai-technologies-business-bsba-ita-106",
       "code": "ITA 106",
       "name": "Elementary Italian for Spanish Speakers",
-      "description": null,
-      "prerequisites": null,
+      "description": "Uses learners’ Spanish knowledge to accelerate elementary Italian language learning.",
+      "prerequisites": "Designed for heritage/native Spanish speakers or learners at Intermediate-Low proficiency after four to five years of high-school Spanish; no separately labeled prerequisite is printed.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0070-fall2026",
-      "url": "https://cognates.miami.edu/AT_0070",
+      "source_id": "miami-context-courses-ita",
+      "url": "https://bulletin.miami.edu/courses-az/ita/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Uses learners’ Spanish knowledge to accelerate elementary Italian language learning. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-ita"
+        ],
+        "locator": "ITA 106 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-jpn-101",
       "code": "JPN 101",
       "name": "Elementary Japanese I",
-      "description": null,
-      "prerequisites": null,
+      "description": "Introduces Japanese conversation, grammar, composition and writing systems.",
+      "prerequisites": "Closed to native speakers.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0052-fall2026",
-      "url": "https://cognates.miami.edu/AT_0052",
+      "source_id": "miami-context-courses-jpn",
+      "url": "https://bulletin.miami.edu/courses-az/jpn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Introduces Japanese conversation, grammar, composition and writing systems. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-jpn"
+        ],
+        "locator": "JPN 101 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-jpn-102",
       "code": "JPN 102",
       "name": "Elementary Japanese II",
-      "description": null,
-      "prerequisites": "Prerequisite: JPN 101.",
+      "description": "Continues elementary Japanese communication and cultural study.",
+      "prerequisites": "Prerequisite: JPN 101 . Closed to native speakers.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0052-fall2026",
-      "url": "https://cognates.miami.edu/AT_0052",
+      "source_id": "miami-context-courses-jpn",
+      "url": "https://bulletin.miami.edu/courses-az/jpn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Continues elementary Japanese communication and cultural study. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-jpn"
+        ],
+        "locator": "JPN 102 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-jpn-432",
       "code": "JPN 432",
       "name": "Business Japanese",
-      "description": null,
-      "prerequisites": null,
+      "description": "Develops Japanese oral and written communication for business situations.",
+      "prerequisites": "Designed for completion of JPN 202 or two college years of Japanese; no separately labeled prerequisite is printed.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0052-fall2026",
-      "url": "https://cognates.miami.edu/AT_0052",
+      "source_id": "miami-context-courses-jpn",
+      "url": "https://bulletin.miami.edu/courses-az/jpn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops Japanese oral and written communication for business situations. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-jpn"
+        ],
+        "locator": "JPN 432 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-lat-101",
@@ -32299,15 +32967,26 @@
       "id": "miami-ai-technologies-business-bsba-ita-365",
       "code": "ITA 365",
       "name": "20th-21st Century Topics in Italian",
-      "description": null,
-      "prerequisites": "Prerequisite: ITA 202.",
+      "description": "Examines twentieth- and twenty-first-century Italian culture and literature.",
+      "prerequisites": "Prerequisite: ITA 202 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0093-fall2026",
-      "url": "https://cognates.miami.edu/AT_0093",
+      "source_id": "miami-context-courses-ita",
+      "url": "https://bulletin.miami.edu/courses-az/ita/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Examines twentieth- and twenty-first-century Italian culture and literature. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-ita"
+        ],
+        "locator": "ITA 365 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-arh-344",
@@ -32495,15 +33174,26 @@
       "id": "miami-ai-technologies-business-bsba-por-105",
       "code": "POR 105",
       "name": "Beginning Portuguese for Spanish Speakers",
-      "description": null,
-      "prerequisites": null,
+      "description": "Accelerates introductory Portuguese for learners with relevant Romance-language backgrounds.",
+      "prerequisites": "Intended for three or more high-school Spanish years, one university Spanish year, Romance heritage/native speakers, or one or more college years of Spanish/Italian/French; closed to native Portuguese speakers.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0081-fall2026",
-      "url": "https://cognates.miami.edu/AT_0081",
+      "source_id": "miami-context-courses-por",
+      "url": "https://bulletin.miami.edu/courses-az/por/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Accelerates introductory Portuguese for learners with relevant Romance-language backgrounds. The described communication, literary interpretation or cultural inquiry supports human context; business settings do not imply a business-methods focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-por"
+        ],
+        "locator": "POR 105 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-bil-267",

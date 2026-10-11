@@ -100,3 +100,17 @@ def test_french_german_language_and_credit_scopes_remain_individual():
     assert m.SPEC['courses']['GER 395']['credits'] is None
     assert 'GER 400' not in m.SPEC['courses']
     assert m.SPEC['courses']['GER 442']['prerequisites'] is None
+
+
+def test_italian_portuguese_japanese_routes_do_not_erase_restrictions():
+    assert 'formally educated' in m.SPEC['courses']['ITA 301']['prerequisites']
+    assert 'departmental stipulations' in m.SPEC['courses']['ITA 310']['prerequisites']
+    assert 'excludes foreign-language' in m.SPEC['courses']['ITA 315']['prerequisites']
+    assert 'Portuguese minors must' in m.SPEC['courses']['POR 354']['prerequisites']
+    assert 'native Portuguese' in m.SPEC['courses']['POR 105']['prerequisites']
+    j=m.SPEC['courses']['JPN 210']
+    assert 'JPN 102' in j['prerequisites'] and 'not resolved' in j['prerequisites']
+    assert m.SPEC['courses']['JPN 432']['category']=='human_context'
+    assert 'two college years' in m.SPEC['courses']['JPN 432']['prerequisites']
+    assert m.SPEC['courses']['ITA 399']['category']=='other'
+    assert m.SPEC['courses']['JPN 495']['credits'] is None

@@ -45,3 +45,13 @@ Native/heritage restrictions and prior-study conditions remain individual. FRE 1
 The separate 143-block English contribution (`miami_eng_context_reviews`) was replayed into all four seeds: 572 observations, including 23 unclassified source-inspected topics/transfer records per degree. Its manual rationale and full-block guards remain separate from runtime observations. The combined reviewed count is now 1,443 program-course observations. Remaining accessible work is still in progress: 1,571 codes/6,284 observations, including 59 exact-identity follow-ups. The remaining-source JSON distinguishes located current blocks from descriptions actually read.
 
 Validation: 28 focused actual-source, semantic and policy tests passed; isolated four-degree ingest/repeat (4/0 changes), audit/integrity/foreign-key checks, 1,443 reviewed exports and static build passed.
+
+## Italian, Portuguese and Japanese — 2026-10-11
+
+All 30 Italian, 18 Portuguese and 12 Japanese represented complete blocks were read (60 codes,240 observations). Forty-three have explicit language, literary or cultural content; seventeen external-credit records remain source-inspected but unclassified with null scalars for their 1–3 ranges. JPN 432 is business communication, not business-methods instruction. ITA 106/206 and POR 105 preserve their different Spanish/Romance-language preparation scopes. Native-speaker exclusions, conditional Italian-minor use and required Portuguese-language assignments for Portuguese minors remain individual observations.
+
+The JPN 210 block prints a JPN 102 prerequisite while its prose also says “No language requirement.” The model preserves both and does not invent a waiver or treat this as a universally impossible route. Its summer-abroad-only offering remains explicit. The truncated ending of ITA 280's descriptive prose does not erase its separately printed writing prerequisite. No role, degree requirement or course identity was changed.
+
+Current reviewed total: 1,683 program-course observations. The exact remaining queue has 1,511 codes/6,044 observations, with 1,452 located current blocks and 59 identity follow-ups. Those located but unread descriptions remain accessible work in progress, not blocked work.
+
+Validation: 29 focused source/policy tests and isolated four-degree ingestion/repeat (4/0), integrity/foreign keys, 1,683 reviewed exports and static build passed.
