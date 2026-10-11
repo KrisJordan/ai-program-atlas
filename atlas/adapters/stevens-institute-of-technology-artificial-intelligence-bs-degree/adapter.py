@@ -200,3 +200,6 @@ register_fixed_metadata(SOURCES,SOURCE_PARSERS)
 
 from atlas.adapters.stevens_option_course_reviews import register as register_option_metadata
 register_option_metadata(SOURCES, SOURCE_PARSERS)
+
+from atlas.adapters.stevens_transition_policy import register as register_transition_policy
+register_transition_policy(SOURCES, SOURCE_PARSERS)
