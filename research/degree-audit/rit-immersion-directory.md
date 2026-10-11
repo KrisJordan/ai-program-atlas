@@ -1,13 +1,29 @@
 # RIT full immersion route queue — 2026-10-11
 
 The [public directory](https://www.rit.edu/study/immersions-and-minors) contains
-77 exact immersion titles and links. All are recorded in
-`research/rit-immersion-route-queue.json`; a confirmed route title is not a reviewed
-curriculum. Two routes currently have complete local rule and course-description
-reviews, comprising 51 route-course observations. A further 36 route rules (15 STEM, 13 humanities and eight language routes)
-are now reviewed without course-popup expansion. The remaining 39 need local
-rules read before expanding their eligible course records. The total distinct course
-inventory is **unknown**, not 51. This work remains in progress.
+77 exact immersion titles and links. All local overview/table/footnote rules
+are now reviewed through six disjoint contributions and the two earlier complete
+branches. `research/rit-immersion-route-queue.json` preserves every route's source,
+selection groups, preparation and exclusions. No route page was access-blocked.
+The degree review remains in progress because actual course content is still
+unread for most of this inventory.
+
+The full named worklist has **1,324 distinct-within-route references / 787 distinct
+printed identifiers**. These include preparation, historical substitution codes,
+combined-subject notation and conditional topic/campus entries; they are not 787
+proven distinct AI-eligible offerings. `research/rit-immersion-course-review-queue.json`
+records every identifier's route/group provenance. Of these identifiers, 59 have
+actual reviewed descriptions already in the degree seed, 11 have the separate
+new statistics contribution, three are historical-only references, and **714
+need actual course content**. The root owns 107 of those pending identifiers
+from the language routes. No unread description is labeled source-inspected
+unclassified.
+
+Global Experience uses an approval-based nine-credit rule without a finite code
+menu. Its rule is representable as an open criterion; it is not a missing finite
+pool to invent or expand into the entire university catalog. Consequently the
+total possible course universe remains unknown even though all 77 route rules
+are read. Arbitrary free electives and recursive prerequisites are not added.
 
 The [university immersion rule](https://www.rit.edu/generaleducation/immersions)
 requires three related general-education courses/nine hours, SIS declaration and
@@ -21,7 +37,7 @@ minors and are not imported into immersion rules.
 
 The directory defines the observed published route set. It does not close the
 university's open choice rule, certify all future approved routes, or make the
-two observed branches a complete degree inventory. Each branch contribution
+two fully mapped branches a complete degree inventory. Each branch contribution
 must preserve required, elective-choice and preparation roles, published amounts,
 local exclusions and approval conditions. Arbitrary free electives and recursive
 prerequisite universes are outside this queue.
