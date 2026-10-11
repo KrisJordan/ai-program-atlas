@@ -286,3 +286,20 @@ def test_all_ne_family_course_records_have_independent_subject_catalog_provenanc
             unknown+=c['description'] is None;zeros+=c['credits']==0
         assert p['curriculum_status']=='partial' and p['curriculum_audit']['unresolved_requirements']
     assert variants==23 and unknown>0 and zeros>0
+
+
+def test_partner_practicum_summary_requires_current_prose_and_emits_no_program_outcome():
+    html=page('<div class="courseblock"><p class="courseblocktitle">MKTG 4606. Research Practicum. (4 Hours)</p><p class="cb_desc">Includes active participation in client-centric challenges and applies data analytics, digital technology and machine learning.</p></div>',heading='Marketing (MKTG)')
+    parser=register_subject_sources('test-program',{'MKTG':['MKTG 4606']})['https://catalog.northeastern.edu/course-descriptions/mktg/']
+    result=parser(html)
+    assert 'research practicum' in result['courses'][0]['description']
+    assert result['requirements']==[] and 'outcomes' not in result and 'first_offered' not in result
+    changed=parser(html.replace('active participation in client-centric challenges','different teaching format'))
+    assert changed['courses'][0]['description'] is None
+
+
+def test_design_topics_description_retains_offering_variability():
+    html=page('<div class="courseblock"><p class="courseblocktitle">ARTG 3400. Topics In Interaction Design Inquiry. (4 Hours)</p><p class="cb_desc">Focuses on a specific interaction design topic. Topics vary each semester.</p></div>',heading='Art - Design (ARTG)')
+    parser=register_subject_sources('test-program',{'ARTG':['ARTG 3400']})['https://catalog.northeastern.edu/course-descriptions/artg/']
+    assert 'varies by offering' in parser(html)['courses'][0]['description']
+    assert parser(html.replace('Topics vary each semester.','Fixed topic.'))['courses'][0]['description'] is None

@@ -39,3 +39,7 @@ Remaining subject metadata review (2026-10-11, 2026–2027 official catalogs): 9
 ## Public CS course resources — 2026-10-11
 
 Instructor-linked public CS 2000 site explicitly covers Fall 2026 Boston/Oakland. Its linked public syllabus explicitly covers CS 2000 classes and CS 2001 labs but does not itself state a year; source notes retain that distinction. Both existing course records gain public site/syllabus URLs; catalog source IDs, credits, prerequisites, descriptions and requirement graphs remain unchanged. Three independent parsers validate instructor teaching link, course/term/campus scope and syllabus class/lab identity. Observations never replay seed data or certify freshness/completeness.
+
+## Partner-course description review — 2026-10-11
+
+Partner-course description review (2026-10-11): 3 existing course observations gain original guarded summaries of their official 2026–2027 descriptions. Topics courses retain offering variability. Course activities and aims are not promoted to assessed program outcomes, and placement in an alternative or elective group is unchanged. Existing registered subject parsers apply the new summaries only when the current scoped course description retains its reviewed evidence phrase; otherwise the observation description remains null. Credits, prerequisites, public resources and requirement graphs are unchanged.
