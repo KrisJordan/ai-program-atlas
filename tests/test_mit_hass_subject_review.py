@@ -215,7 +215,7 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']['description_reviewed_records']==448
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==460
     assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
         o=next(o for o in entry(code)['observations'] if o.get('evidence_basis')=='official_title_only')
@@ -354,7 +354,7 @@ def test_economic_pool_does_not_certify_mathematics_computing_or_current_offerin
         assert row['category']=='other' and row['status']=='unclassified'
         assert row['description_digest'] is None
     assert entry('14.70')['observations'][-1]['category']=='human_context'
-    assert entry('14.27')['observations'][-1]['prerequisites']=='14.30 or 6.041'
+    assert next(o for o in entry('14.27')['observations'] if o['source_id']=='mit-ai-hass-review-economics-titles')['prerequisites']=='14.30 or 6.041'
     assert next(o for o in entry('14.16')['observations'] if o['source_id']=='mit-ai-hass-review-economics-titles')['prerequisites']=='14.03/14.04'
     assert entry('14.01')['observations'][-1]['prerequisites'] is None
     assert any('not offered in2026–27' in x for x in entry('14.73')['observations'][-1]['restrictions'])
@@ -896,7 +896,7 @@ def test_economics_actual_subject_focus_dated_identity_and_preparation_strength(
     assert 'Econometrics is not a prerequisite' in entry('14.74')['observations'][-1]['prerequisites']
     assert entry('14.74')['observations'][-1]['observed_name']=='Foundations of Development Policy'
     assert entry('14.74')['listed_name']=='Foundations of Development Economics'
-    assert entry('14.27')['observations'][-1]['evidence_basis']=='official_title_only'
+    assert not any(o['evidence_basis']=='official_description' and o['source_id'].startswith('mit-ai-hass-review-ocw-') for o in entry('14.27')['observations'])
     assert entry('14.42')['observations'][-1]['prerequisites'] is None
     for code in ['14.01','14.02','14.13','14.16','14.73']:
         e=entry(code)['observations'][-1]
@@ -1683,3 +1683,46 @@ def test_sts_discovery_checkpoint_separates_indexes_from_full_content_review():
     assert len(set(report['remaining_title_only_record_ids']))==40
     assert set(report['remaining_title_only_record_ids'])<=set(MANIFEST['courses'])
     assert 'not a full read' in report['scope']
+
+
+def test_eecs_economics_annotations_keep_chart_revision_separate_from_course_edition():
+    report=MANIFEST['eecs_economics_annotation_followup']
+    assert len(report['upgraded_record_ids'])==12 and report['actual_subject_annotations_read']==11
+    for cid in report['upgraded_record_ids']:
+        e=MANIFEST['courses'][cid]['observations'][-1]
+        assert e['catalog_year'] is None and e['credits']==12
+        assert any('MEng chart does not change' in n for n in e['restrictions'])
+    assert entry('14.18')['observations'][-1]['category']=='mathematics'
+    assert entry('14.06')['observations'][-1]['candidate_categories']==['mathematics','applications']
+    assert entry('14.17')['observations'][-1]['candidate_categories']==['systems','applications']
+    assert entry('14.11')['observations'][-1]['status']=='unclassified'
+    assert entry('14.78[J]')['observations'][-1]['category']=='human_context'
+    assert entry('14.27')['observations'][-1]['prerequisites']=='14.01 and (6.3700 or 14.30)'
+    assert entry('14.05')['observations'][-1]['evidence_basis']=='official_title_only'
+    assert report['held'][0]['observed_name']=='Intermediate Macroeconomics'
+
+
+def test_eecs_economics_annotation_replay_withdraws_changed_title_prep_or_context():
+    path=Path('/tmp/mit-hass-subjects/econ-eecs-chart.html')
+    if not path.exists():pytest.skip('Optional public EECS Economics source capture')
+    observations=review.observe_eecs_economics_annotations(path.read_text())
+    assert len(observations)==11
+    for cid in MANIFEST['eecs_economics_annotation_followup']['upgraded_record_ids']:
+        row=MANIFEST['courses'][cid];e=row['observations'][-1]
+        o=next(o for o in observations if o['code']==e['observed_code'])
+        course=dict(id=cid,code=row['listed_code'],name=row['listed_name'],source_id=row['listed_source_id'])
+        assert review.matched_review(course,o,e['source_url'],MANIFEST)==e
+        for wrong in [{**o,'term':'2022-2023'},{**o,'prerequisites':'none'},{**o,'name':o['name']+' II'}]:
+            if wrong!=o:assert review.matched_review(course,wrong,e['source_url'],MANIFEST) is None
+    with pytest.raises(ValueError):review.observe_eecs_economics_annotations(path.read_text().replace('6-P14_2022','6-P14_2026'))
+    with pytest.raises(ValueError):review.observe_eecs_economics_annotations(path.read_text().replace('14.18 Mathematical Economic Modeling','14.98 Different subject'))
+
+
+def test_economics_conflicting_preparation_is_attributed_not_silently_reconciled():
+    discrepancy=MANIFEST['eecs_economics_annotation_followup']['source_discrepancies'][0]
+    assert discrepancy['code']=='14.27'
+    row=entry('14.27')
+    for key in ['earlier','new']:
+        o=next(o for o in row['observations'] if o['source_id']==discrepancy[key+'_source_id'])
+        assert o['prerequisites']==discrepancy[key+'_prerequisite']
+    assert any('not reconciled' in n for n in row['observations'][-1]['restrictions'])

@@ -851,3 +851,34 @@ def observe_sts_archive_description(html):
                  description=starts[code]+text.split(starts[code],1)[1],
                  prerequisites=prep[1] if prep else None, units=units[0] if units else None,
                  source_text=text, source_heading=title)]
+
+
+def observe_eecs_economics_annotations(html):
+    """Read explicit department annotations; chart revision is not annotation edition."""
+    soup = BeautifulSoup(html, 'html.parser')
+    heading = clean(soup.find('h3'))
+    if heading != 'Degree Requirements for 6-P14_2022 MNG in Computer Science, Economics, and Data Science':
+        raise ValueError('EECS Economics chart context changed')
+    codes = {'14.05','14.06','14.11','14.17','14.18','14.19','14.26','14.27','14.45','14.76','14.78'}
+    observed = {}
+    for block in soup.select('div.annotation'):
+        title = clean(block.find('b'))
+        match = re.fullmatch(r'(14\.\d+) (.+)', title)
+        if match is None or match[1] not in codes:
+            continue
+        text = clean(block)
+        prep = re.search(r'Prereqs:\s*(.*?)\s+Units:', text)
+        units = re.search(r'Units:\s*(\d+-\d+-\d+)', text)
+        description = ' '.join(clean(p) for p in block.find_all('p'))
+        if prep is None or units is None or not description:
+            raise ValueError('EECS Economics annotation description or metadata missing')
+        row = dict(code=match[1], name=match[2], description=description,
+                   prerequisites=prep[1], units=units[1], term=None,
+                   chart_context=heading, source_text=text,
+                   symbols=[i.get('src') for i in block.find_all('img')])
+        if row['code'] in observed and observed[row['code']] != row:
+            raise ValueError('Conflicting repeated Economics annotations: ' + row['code'])
+        observed[row['code']] = row
+    if set(observed) != codes:
+        raise ValueError('Reviewed Economics annotation inventory changed')
+    return list(observed.values())
