@@ -721,3 +721,14 @@ def test_design_contextual_recommendations_preserve_source_credits_and_permissio
     clearance=next(r for r in resolved['requirements'] if r['id']==pid+'-conditional-camd-clearance')
     assert clearance['kind']=='note' and clearance['course_ids']==[]
     assert 'College of Arts, Media and Design' in [u['name'] for u in seed['family']['hosting_units']]
+
+
+def test_business_and_international_ai_titles_do_not_override_actual_subject_content():
+    business=json.loads(next((ROOT/'data/programs').glob('northeastern-*business-administration*.json')).read_text())
+    international=json.loads(next((ROOT/'data/programs').glob('northeastern-*international-affairs*.json')).read_text())
+    for program,expected in [(business,{'MKTG 4604':'applications','INNO 3303':'applications','MKTG 2601':'foundations','MKTG 2602':'mathematics'}),(international,{'INTL 2600':'human_context','HIST 3330':'human_context','INTL 1000':'other'})]:
+        courses={c['code']:c for c in program['courses']}
+        for code,category in expected.items():
+            assert courses[code]['category']==category
+            assert courses[code]['category_review']['source_ids']==[program['id']+'-'+code.split()[0].lower()+'-courses']
+    assert any('ENTR 3217' in note and 'field' in note.lower() for note in business['notes'])
