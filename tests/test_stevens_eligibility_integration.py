@@ -20,7 +20,8 @@ def test_verified_rules_preserve_description_preparation_and_blank_unknowns():
 
 def test_terminal_access_boundary_is_specific_and_no_invented_denials():
     ledger=json.loads(Path('research/degree-audit/national-degree-batch.json').read_text());r=next(r for r in ledger['programs'] if r['program_id']==PID)
-    assert r['status']=='blocked' and len(r['blockers'])==3
+    assert r['status']=='blocked' and len(r['blockers'])==4
+    assert any('Workday' in b['issue'] and 'EN250/CE240/NANO200' in b['issue'] for b in r['blockers'])
     challenged=[s for s in r['sources'] if s['access_status']=='human_verification_required']
     assert len(challenged)==1 and challenged[0]['url']==SPEC['ENGR 116']['url']
     assert 'not individually attempted' in challenged[0]['locator']

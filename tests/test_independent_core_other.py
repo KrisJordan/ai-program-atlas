@@ -37,12 +37,15 @@ def test_manual_core_sets_and_totals_match_pinned_resolved_graph(review):
 def test_unavailable_sources_are_not_certified_as_zero():
     by = {e['program_id']: e for e in LEDGER['programs']}
     for pid in ['uc-merced-ai-bs',
-                'stevens-institute-of-technology-artificial-intelligence-bs-degree',
                 'university-of-south-florida-artificial-intelligence-bs-degree']:
         e = by[pid]
         assert e['dimensions']['fixed_requirements']['status'] == 'unverified'
         assert e['expected_course_ids']['required'] is None
         assert e['expected_profile']['required'] is None
+    stevens = by['stevens-institute-of-technology-artificial-intelligence-bs-degree']
+    assert stevens['dimensions']['fixed_requirements']['status'] == 'partial'
+    assert len(stevens['expected_course_ids']['required']) == 24
+    assert not stevens['full_degree_verified']
     # GE and other broad pools were deliberately not source-reviewed here.
     assert all(e['expected_course_ids']['unresolved'] is None for e in by.values())
     assert all(e['expected_profile']['options'] is None or
