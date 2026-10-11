@@ -19,4 +19,5 @@ def classify_observed(observation):
             c['category'] = expected[1] if c['name'] == expected[0] else 'other'
     from .reviewed_scs import classify_titles
     from .reviewed_quantitative import classify_titles as classify_quantitative
-    return classify_quantitative(classify_titles(observation))
+    from .reviewed_departments import classify_titles as classify_department_titles
+    return classify_department_titles(classify_quantitative(classify_titles(observation)))

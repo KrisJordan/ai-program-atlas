@@ -365,3 +365,6 @@ from .reviewed_quantitative import parse as parse_reviewed_quantitative
 from .core_enrichment import DIRECTORIES as QUANTITATIVE_DIRECTORIES
 for _quantitative_url in QUANTITATIVE_DIRECTORIES:
     SOURCE_PARSERS[_quantitative_url] = lambda html, url=_quantitative_url: parse_reviewed_quantitative(html, url)
+
+from .reviewed_departments import register as register_reviewed_departments
+register_reviewed_departments(SOURCES, SOURCE_PARSERS)
