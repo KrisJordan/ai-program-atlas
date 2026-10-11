@@ -136,3 +136,11 @@ The university general-education policy explicitly co-lists BPH202/HCS202/NUR202
 ## 2026-10-11 Classics (CLA) contextual review
 
 42 complete official blocks now supply guarded observations and separately attached manual content reviews. Variable credits, prerequisite/permission restrictions, source conflicts and insufficient-topic records retain their precise scopes in `miami_cla_context_reviews.json`. No contextual row is promoted to a required course; no approval or equivalence is inferred. Source chapter edition remains unassigned where current navigation does not establish it.
+
+## 2026-10-11 Architecture (ARC) contextual review
+
+50 complete official blocks now supply guarded observations and separately attached manual content reviews. Variable credits, prerequisite/permission restrictions, source conflicts and insufficient-topic records retain their precise scopes in `miami_arc_context_reviews.json`. No contextual row is promoted to a required course; no approval or equivalence is inferred. Source chapter edition remains unassigned where current navigation does not establish it.
+
+## 2026-10-11 Geography and Sustainable Development (GEG) contextual review
+
+47 complete official blocks now supply guarded observations and separately attached manual content reviews. Variable credits, prerequisite/permission restrictions, source conflicts and insufficient-topic records retain their precise scopes in `miami_geg_context_reviews.json`. No contextual row is promoted to a required course; no approval or equivalence is inferred. Source chapter edition remains unassigned where current navigation does not establish it.

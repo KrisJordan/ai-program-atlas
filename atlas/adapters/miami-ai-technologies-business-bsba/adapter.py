@@ -64,3 +64,9 @@ register_soc_context(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
 
 from atlas.adapters.miami_cla_context_reviews import register as register_cla_context
 register_cla_context(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
+
+from atlas.adapters.miami_arc_context_reviews import register as register_arc_context
+register_arc_context(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
+
+from atlas.adapters.miami_geg_context_reviews import register as register_geg_context
+register_geg_context(PROGRAM_ID,SOURCES,SOURCE_PARSERS)

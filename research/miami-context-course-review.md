@@ -129,3 +129,23 @@ The standalone42-block Classics contribution is integrated across allfour degree
 Current total:6,015 reviewed observations. Remaining:428codes/1,712observations, including369located currentblocks and59identityfollowups. Located but unread descriptions remain inprogress.
 
 Validation:52 focused shared-content, Classics, Art History and policy tests passed. Isolated four-degree ingestion/repeat(4/0), ledger/integrity/foreign keys,6,015 reviewed exports and static build passed; generated outputs removed.
+
+## Performance, architecture and geography — 2026-10-11
+
+All72 currently present represented Dance/Theatre blocks were read. Practical performance, technical production, choreography and teaching/therapy differ from historical interpretation, dramatic writing and communication. THA201 uses AI-generated characters and narratives for acting practice; it does not establish AI-methods instruction. DAN130's career orientation remains unclassified. Variable credits are retained, including tap and theatre-history ranges; crew laboratories have their printed one-credit amounts. DAN221's prior-training-or-permission condition, THA112's specific-major restriction, THA302's BGS-only restriction and THA245's hyphenated preparation alternatives remain explicit. Current descriptions do not supply the nine missing legacy Dance/Theatre identities, which remain separate follow-ups.
+
+The independently read ARC50 and GEG47 contributions are integrated. Architecture distinguishes technical design practice, interpretive context and mixed content; variable credits and concurrent-course requirements remain exact metadata. Geography distinguishes quantitative theory, practical mapping tools, human geography and substantive mixed science/social content. GIS and remote sensing are not classified as AI merely because software is used. GEG261 remains absent from its current chapter and receives no review.
+
+Current total:6,691 reviewed observations. Remaining:259codes/1,036observations, including200located currentblocks and59identityfollowups. No degree requirements or fixed/option roles were changed by this batch.
+
+The performance/architecture/geography integration passed54focused source/policy tests and isolated four-degree ingestion/repeat(4/0), ledger/integrity/foreign keys,6,691 reviewed exports and static build before the next75-source batch was added.
+
+## Environment, education and allied methods — 2026-10-11
+
+All75 assigned ECS/EPS/TAL/KIN/ISE/MAE complete blocks were read. Explicit statistical instruction in ECS204/ISE311 differs from applying decision models to resource management. Ecosystem science, environmental law and substantive mixed science-policy work retain different classifications. Fifteen external ECS credit placeholders and unspecified topic/internship content remain source-inspected but unclassified. Precise environmental-policy/humanities titles support only expressly limited classifications for ECS374/375, without inventing their actual term topics.
+
+Psychological intervention and instructional practice differ from social/ethical analysis, with coequal descriptions kept mixed. TAL103 expressly divides its content between psychological and social foundations. EPS420 does not qualify students for mental-health practice. EPS321's literal prerequisite/corequisite expression, its10-hour fieldwork and separate writing preparation remain visible; the source expression is not rewritten into an invented enrollment solution. TAL308's concurrent TAL306 and TAL434's pre-or-concurrent TAL330/332 are recorded as metadata, not promoted to degree requirements. KIN308's printed writing-course/FOOTE FELLOW alternatives remain literal. ECS485 requires acceptance for the specific Galapagos program. Contact hours and variable credit ranges are not converted to academic-credit scalars.
+
+Current total:6,991reviewed observations. Remaining:184codes/736observations, including125located currentblocks and59identityfollowups. The other currently located blocks are in disjoint contributor review; completion of this batch does not certify the whole degrees.
+
+Validation:55 focused shared-content, Architecture, Geography and policy tests passed after the75-source integration. Isolated four-degree ingestion/repeat(4/0), ledger/integrity/foreign keys,6,991 reviewed exports and static build passed; generated outputs removed.

@@ -227,3 +227,39 @@ def test_art_practice_interpretation_unspecified_topics_and_conditions():
     assert 'prohibits repeated credit' in m.SPEC['courses']['ART 510']['prerequisites']
     assert m.SPEC['courses']['ART 305']['prerequisites'] is None
     assert 'referenced course' in m.SPEC['courses']['ART 305']['description']
+
+
+def test_performance_content_and_nonstandard_eligibility_are_scoped():
+    assert m.SPEC['courses']['THA 201']['category']=='applications'
+    assert 'algorithm instruction is not established' in m.SPEC['courses']['THA 201']['description']
+    assert m.SPEC['courses']['THA 253']['category']=='applications'
+    assert m.SPEC['courses']['THA 107']['category']=='human_context'
+    assert m.SPEC['courses']['THA 301']['category']=='human_context'
+    assert m.SPEC['courses']['DAN 130']['review']['status']=='unclassified'
+    assert m.SPEC['courses']['DAN 250']['category']=='human_context'
+    assert 'formal ballet training or permission' in m.SPEC['courses']['DAN 221']['prerequisites']
+    assert 'for BGS students only' in m.SPEC['courses']['THA 302']['prerequisites']
+    assert 'BFA Comprehensive Musical Theatre majors only' in m.SPEC['courses']['THA 112']['prerequisites']
+    assert 'THA 101 OR THA 141 OR THA 142' in m.SPEC['courses']['THA 245']['prerequisites']
+    assert m.SPEC['courses']['THA 143']['credits']==1
+    assert m.SPEC['courses']['THA 161']['credits'] is None
+    assert m.SPEC['courses']['THA 384']['credits'] is None
+
+
+def test_environment_education_and_related_methods_keep_exact_scope():
+    assert m.SPEC['courses']['ECS 204']['category']=='mathematics'
+    assert m.SPEC['courses']['ISE 311']['category']=='mathematics'
+    assert m.SPEC['courses']['ECS 342']['category']=='applications'
+    assert m.SPEC['courses']['ECS 403']['review']['status']=='mixed'
+    assert m.SPEC['courses']['ECS 201']['review']['status']=='unclassified'
+    assert m.SPEC['courses']['ECS 572']['credits'] is None
+    assert '0-3' in m.SPEC['courses']['ECS 572']['description']
+    assert 'transfer credit only' in m.SPEC['courses']['ECS 391']['description']
+    assert 'Department of Biology' in m.SPEC['courses']['ECS 485']['prerequisites']
+    assert 'Requisite: ECS Major or ECS Minor or Prerequisite: ECS 215' in m.SPEC['courses']['ECS 415']['prerequisites']
+    assert 'Or Co-requisite: EPS 311' in m.SPEC['courses']['EPS 321']['prerequisites']
+    assert m.SPEC['courses']['TAL 103']['review']['status']=='mixed'
+    assert 'Co-Requisite: TAL 306' in m.SPEC['courses']['TAL 308']['prerequisites']
+    assert 'Pre- or Co-Requisite TAL 330 and TAL 332' in m.SPEC['courses']['TAL 434']['prerequisites']
+    assert 'FOOTE FELLOW' in m.SPEC['courses']['KIN 308']['prerequisites']
+    assert 'does not qualify' in m.SPEC['courses']['EPS 420']['description']
