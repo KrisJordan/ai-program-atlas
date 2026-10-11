@@ -2680,6 +2680,591 @@
           "status": "source_read_primary_mapping_pending"
         }
       ]
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree",
+      "institution_id": "northeastern-university",
+      "primary_audit": "research/degree-audit/northeastern.json",
+      "reviewed_commits": [
+        "e4d161b",
+        "4b555f4",
+        "e6bf1a1"
+      ],
+      "status": "blocked",
+      "second_pass_status": "partial",
+      "full_degree_verified": false,
+      "verified_scope": "Entire Health Science requirement panel; all52 represented courses (30 newly read blocks and22 exact blocks already independently inspected in earlier NE passes); role/identity/category/credit/prerequisite comparison; all applicable public Bouv\u00e9 policy paragraphs read, with conditional scope and pending primary mapping retained. Fresh isolated export/static render compared.",
+      "sources": [
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-health-science-bs-bos/",
+          "catalog_year": "2026-2027",
+          "locator": "Entire degree Program Requirements tab and overview",
+          "checked_at": "2026-10-11",
+          "access_status": "Public official cached HTML independently read; original normal-fetch provenance in .cache/research/degree-audit-northeastern indexes. No fresh fetch claimed."
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+          "catalog_year": "2026-2027",
+          "locator": "All exact represented CS course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "Public official cached HTML independently read; original normal-fetch provenance in .cache/research/degree-audit-northeastern indexes. No fresh fetch claimed."
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/ds/",
+          "catalog_year": "2026-2027",
+          "locator": "All exact represented DS course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "Public official cached HTML independently read; original normal-fetch provenance in .cache/research/degree-audit-northeastern indexes. No fresh fetch claimed."
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/math/",
+          "catalog_year": "2026-2027",
+          "locator": "All exact represented MATH course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "Public official cached HTML independently read; original normal-fetch provenance in .cache/research/degree-audit-northeastern indexes. No fresh fetch claimed."
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/engw/",
+          "catalog_year": "2026-2027",
+          "locator": "All exact represented ENGW course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "Public official cached HTML independently read; original normal-fetch provenance in .cache/research/degree-audit-northeastern indexes. No fresh fetch claimed."
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/inpr/",
+          "catalog_year": "2026-2027",
+          "locator": "All exact represented INPR course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "Public official cached HTML independently read; original normal-fetch provenance in .cache/research/degree-audit-northeastern indexes. No fresh fetch claimed."
+        },
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/university-academics/university-wide-requirements/",
+          "catalog_year": "2026-2027",
+          "locator": "Applicable complete policy paragraphs; exclude BA/NYC/nursing-only panels from Boston BS",
+          "checked_at": "2026-10-11",
+          "access_status": "Public official cached HTML independently read; original normal-fetch provenance in .cache/research/degree-audit-northeastern indexes. No fresh fetch claimed."
+        },
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/university-academics/general-education-requirements/",
+          "catalog_year": "2026-2027",
+          "locator": "Applicable complete policy paragraphs; exclude BA/NYC/nursing-only panels from Boston BS",
+          "checked_at": "2026-10-11",
+          "access_status": "Public official cached HTML independently read; original normal-fetch provenance in .cache/research/degree-audit-northeastern indexes. No fresh fetch claimed."
+        },
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/experiential-learning-graduation-requirement/",
+          "catalog_year": "2026-2027",
+          "locator": "Applicable complete policy paragraphs; exclude BA/NYC/nursing-only panels from Boston BS",
+          "checked_at": "2026-10-11",
+          "access_status": "Public official cached HTML independently read; original normal-fetch provenance in .cache/research/degree-audit-northeastern indexes. No fresh fetch claimed."
+        },
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/graduation-requirements/",
+          "catalog_year": "2026-2027",
+          "locator": "Applicable complete policy paragraphs; exclude BA/NYC/nursing-only panels from Boston BS",
+          "checked_at": "2026-10-11",
+          "access_status": "Public official cached HTML independently read; original normal-fetch provenance in .cache/research/degree-audit-northeastern indexes. No fresh fetch claimed."
+        },
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/degrees-majors-minors/",
+          "catalog_year": "2026-2027",
+          "locator": "Applicable complete policy paragraphs; exclude BA/NYC/nursing-only panels from Boston BS",
+          "checked_at": "2026-10-11",
+          "access_status": "Public official cached HTML independently read; original normal-fetch provenance in .cache/research/degree-audit-northeastern indexes. No fresh fetch claimed."
+        },
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/progression-standards/",
+          "catalog_year": "2026-2027",
+          "locator": "Applicable complete policy paragraphs; exclude BA/NYC/nursing-only panels from Boston BS",
+          "checked_at": "2026-10-11",
+          "access_status": "Public official cached HTML independently read; original normal-fetch provenance in .cache/research/degree-audit-northeastern indexes. No fresh fetch claimed."
+        },
+        {
+          "url": "https://www.khoury.northeastern.edu/current-undergraduate-students/undergraduate-advising-academic-support/academic-policies-and-procedures/",
+          "catalog_year": null,
+          "locator": "Applicable complete policy paragraphs; exclude BA/NYC/nursing-only panels from Boston BS",
+          "checked_at": "2026-10-11",
+          "access_status": "Public official cached HTML independently read; original normal-fetch provenance in .cache/research/degree-audit-northeastern indexes. No fresh fetch claimed."
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/biol/",
+          "catalog_year": "2026-2027",
+          "locator": "All represented BIOL course blocks, including prerequisites/corequisites and description-level recommendations",
+          "checked_at": "2026-10-11",
+          "access_status": "Public official cached HTML independently read; normal-fetch provenance in .cache/research/degree-audit-northeastern/subject-index.json. No new retrieval claimed."
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/chem/",
+          "catalog_year": "2026-2027",
+          "locator": "All represented CHEM course blocks, including prerequisites/corequisites and description-level recommendations",
+          "checked_at": "2026-10-11",
+          "access_status": "Public official cached HTML independently read; normal-fetch provenance in .cache/research/degree-audit-northeastern/subject-index.json. No new retrieval claimed."
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/econ/",
+          "catalog_year": "2026-2027",
+          "locator": "All represented ECON course blocks, including prerequisites/corequisites and description-level recommendations",
+          "checked_at": "2026-10-11",
+          "access_status": "Public official cached HTML independently read; normal-fetch provenance in .cache/research/degree-audit-northeastern/subject-index.json. No new retrieval claimed."
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/envr/",
+          "catalog_year": "2026-2027",
+          "locator": "All represented ENVR course blocks, including prerequisites/corequisites and description-level recommendations",
+          "checked_at": "2026-10-11",
+          "access_status": "Public official cached HTML independently read; normal-fetch provenance in .cache/research/degree-audit-northeastern/subject-index.json. No new retrieval claimed."
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/hsci/",
+          "catalog_year": "2026-2027",
+          "locator": "All represented HSCI course blocks, including prerequisites/corequisites and description-level recommendations",
+          "checked_at": "2026-10-11",
+          "access_status": "Public official cached HTML independently read; normal-fetch provenance in .cache/research/degree-audit-northeastern/subject-index.json. No new retrieval claimed."
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/phil/",
+          "catalog_year": "2026-2027",
+          "locator": "All represented PHIL course blocks, including prerequisites/corequisites and description-level recommendations",
+          "checked_at": "2026-10-11",
+          "access_status": "Public official cached HTML independently read; normal-fetch provenance in .cache/research/degree-audit-northeastern/subject-index.json. No new retrieval claimed."
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/phth/",
+          "catalog_year": "2026-2027",
+          "locator": "All represented PHTH course blocks, including prerequisites/corequisites and description-level recommendations",
+          "checked_at": "2026-10-11",
+          "access_status": "Public official cached HTML independently read; normal-fetch provenance in .cache/research/degree-audit-northeastern/subject-index.json. No new retrieval claimed."
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/psyc/",
+          "catalog_year": "2026-2027",
+          "locator": "All represented PSYC course blocks, including prerequisites/corequisites and description-level recommendations",
+          "checked_at": "2026-10-11",
+          "access_status": "Public official cached HTML independently read; normal-fetch provenance in .cache/research/degree-audit-northeastern/subject-index.json. No new retrieval claimed."
+        },
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/health-sciences/",
+          "catalog_year": "2026-2027",
+          "locator": "Entire Bouv\u00e9 introduction and academic policy page, with cohort/clinical/professional scope distinctions",
+          "checked_at": "2026-10-11",
+          "access_status": "Public official cached home-17/home-18 HTML independently read; provenance in homecollege-index.json. No new retrieval claimed."
+        },
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/health-sciences/academic-policies-procedures/",
+          "catalog_year": "2026-2027",
+          "locator": "Entire Bouv\u00e9 introduction and academic policy page, with cohort/clinical/professional scope distinctions",
+          "checked_at": "2026-10-11",
+          "access_status": "Public official cached home-17/home-18 HTML independently read; provenance in homecollege-index.json. No new retrieval claimed."
+        }
+      ],
+      "checks": {
+        "degree_identity": "Artificial Intelligence and Health Science, BS at Boston is one combined major and award, not a separate clinical credential or automatically two degrees.",
+        "required_and_choices": "Independent source sets contain26 baseline fixed and26 options. CS1802 inherits required status from requiredCS1800 and its explicit corequisite plus the degree preamble. ENVR2500/2501/2502 is one entire optional statistics bundle; its members are not three independent alternatives. PHTH pairs, calculus, statistics, philosophy and writing remain choices. DS4420 is fixed integration.",
+        "elective_pools": "Four-hour upper-level elective rule permits published CS/CY/DS subject ranges/exclusions and HSCI/PHTH4000+; this is an open eligibility rule, not a finite pool omitted from the52 mapped identities. Placement substitutes approved upper-level computing study separately.",
+        "prerequisites": "Read all source prerequisite/corequisite fields and inline conditions. PHTH2350 prior1260 and PHTH4540 prior2300/2350 are recommended, explicitly not required;4540 retains a separate required advanced-writing alternative. PHTH4120 combines writing and community-health groups. Course minimum grades and concurrent science labs remain exact rather than universal additional prerequisite courses.",
+        "credits_and_units": "Courses are4 semester hours except twelve one-hour labs/seminars and two explicitly zero-hour recitations(CHEM1163 fixed,ENVR2502 optional). Biology and chemistry lecture bundles total5; the three-course ENVR route totals5. Source total135, general electives16 and upper electives4 remain separate published constraints.",
+        "classification": "Fixed categories:5 foundations,3 mathematics,2 AI,2 systems,2 human context,11 applications and1 mixed other. Options:9 mathematics,10 human context,2 applications and5 unclassified other. CS2484 centers applied interface design; PHTH2515 institutional policy/finance and4120 discrimination are human context. Epidemiology4202 and intervention planning4540 are health-domain methods. Statistical courses are mathematics despite health/economics prefixes. Orientation/career seminars stay unclassified; DS4200 is mixed.",
+        "family_composition": "All eight course-bearing family bindings match local rows. CS1800 is a local fixed mathematics row with exactly one inherited concurrent1802; neither is imported into variants that lack it. DS4420 is local fixed integration; no invented science/health course equivalents or duplicate identities.",
+        "degree_wide_requirements": "The degree limits C-or-higher to PHTH core, statistics, science and chosen HSCI1000/2000; it does not impose that rule on all computing courses. Shared university declaration/progression/NUpath/experiential/residence rules and conditional Khoury mapping have source evidence. Complete Bouv\u00e9 academic/petition/probation/dismissal/appeal/clinical-scope text was inspected; primary mapping and exact degree/cohort applicability remain incomplete. Named professional-conduct departments and clinical requirements are not automatically applied to every Health Science student."
+      },
+      "expected_profile": {
+        "required": {
+          "count": 26,
+          "categories": {
+            "foundations": 5,
+            "mathematics": 3,
+            "ai_ml": 2,
+            "systems": 2,
+            "human_context": 2,
+            "applications": 11,
+            "electives": 0,
+            "other": 1
+          }
+        },
+        "options": {
+          "count": 26,
+          "categories": {
+            "foundations": 0,
+            "mathematics": 9,
+            "ai_ml": 0,
+            "systems": 0,
+            "human_context": 10,
+            "applications": 2,
+            "electives": 0,
+            "other": 5
+          }
+        },
+        "unresolved": {
+          "count": 0,
+          "categories": {
+            "foundations": 0,
+            "mathematics": 0,
+            "ai_ml": 0,
+            "systems": 0,
+            "human_context": 0,
+            "applications": 0,
+            "electives": 0,
+            "other": 0
+          }
+        }
+      },
+      "expected_course_ids": {
+        "required": [
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-cs-2000",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-cs-2001",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-cs-2100",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-cs-2101",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-ds-3500",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-cs-1800",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-cs-1802",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-ds-3000",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-ds-4400",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-ds-4420",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-cs-3200",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-ds-4300",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-phth-2515",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-phth-4120",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-cs-2484",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-phth-4202",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-phth-4540",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-biol-1111",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-biol-1112",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-biol-1113",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-biol-1114",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-chem-1161",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-chem-1162",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-chem-1163",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-psyc-1101",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-ds-4200"
+        ],
+        "options": [
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-math-1341",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-math-1241",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-econ-2350",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-envr-2500",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-envr-2501",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-envr-2502",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-math-3081",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-phth-2210",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-psyc-2320",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-engw-1111",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-engw-1102",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-engw-3302",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-engw-3315",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-phth-1260",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-phth-1261",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-phth-2300",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-phth-2301",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-phil-1145",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-phil-1165",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-phth-2350",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-phth-2351",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-cs-1200",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-hsci-1000",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-inpr-1000",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-cs-1210",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-hsci-2000"
+        ],
+        "unresolved": []
+      },
+      "manual_course_decisions": {
+        "CS 2000": {
+          "role": "required",
+          "category": "foundations",
+          "credits": 4
+        },
+        "CS 2001": {
+          "role": "required",
+          "category": "foundations",
+          "credits": 1
+        },
+        "CS 2100": {
+          "role": "required",
+          "category": "foundations",
+          "credits": 4
+        },
+        "CS 2101": {
+          "role": "required",
+          "category": "foundations",
+          "credits": 1
+        },
+        "DS 3500": {
+          "role": "required",
+          "category": "foundations",
+          "credits": 4
+        },
+        "CS 1800": {
+          "role": "required",
+          "category": "mathematics",
+          "credits": 4
+        },
+        "CS 1802": {
+          "role": "required",
+          "category": "mathematics",
+          "credits": 1
+        },
+        "DS 3000": {
+          "role": "required",
+          "category": "mathematics",
+          "credits": 4
+        },
+        "DS 4400": {
+          "role": "required",
+          "category": "ai_ml",
+          "credits": 4
+        },
+        "DS 4420": {
+          "role": "required",
+          "category": "ai_ml",
+          "credits": 4
+        },
+        "CS 3200": {
+          "role": "required",
+          "category": "systems",
+          "credits": 4
+        },
+        "DS 4300": {
+          "role": "required",
+          "category": "systems",
+          "credits": 4
+        },
+        "PHTH 2515": {
+          "role": "required",
+          "category": "human_context",
+          "credits": 4
+        },
+        "PHTH 4120": {
+          "role": "required",
+          "category": "human_context",
+          "credits": 4
+        },
+        "CS 2484": {
+          "role": "required",
+          "category": "applications",
+          "credits": 4
+        },
+        "PHTH 4202": {
+          "role": "required",
+          "category": "applications",
+          "credits": 4
+        },
+        "PHTH 4540": {
+          "role": "required",
+          "category": "applications",
+          "credits": 4
+        },
+        "BIOL 1111": {
+          "role": "required",
+          "category": "applications",
+          "credits": 4
+        },
+        "BIOL 1112": {
+          "role": "required",
+          "category": "applications",
+          "credits": 1
+        },
+        "BIOL 1113": {
+          "role": "required",
+          "category": "applications",
+          "credits": 4
+        },
+        "BIOL 1114": {
+          "role": "required",
+          "category": "applications",
+          "credits": 1
+        },
+        "CHEM 1161": {
+          "role": "required",
+          "category": "applications",
+          "credits": 4
+        },
+        "CHEM 1162": {
+          "role": "required",
+          "category": "applications",
+          "credits": 1
+        },
+        "CHEM 1163": {
+          "role": "required",
+          "category": "applications",
+          "credits": 0
+        },
+        "PSYC 1101": {
+          "role": "required",
+          "category": "applications",
+          "credits": 4
+        },
+        "DS 4200": {
+          "role": "required",
+          "category": "other",
+          "credits": 4
+        },
+        "MATH 1341": {
+          "role": "options",
+          "category": "mathematics",
+          "credits": 4
+        },
+        "MATH 1241": {
+          "role": "options",
+          "category": "mathematics",
+          "credits": 4
+        },
+        "ECON 2350": {
+          "role": "options",
+          "category": "mathematics",
+          "credits": 4
+        },
+        "ENVR 2500": {
+          "role": "options",
+          "category": "mathematics",
+          "credits": 4
+        },
+        "ENVR 2501": {
+          "role": "options",
+          "category": "mathematics",
+          "credits": 1
+        },
+        "ENVR 2502": {
+          "role": "options",
+          "category": "mathematics",
+          "credits": 0
+        },
+        "MATH 3081": {
+          "role": "options",
+          "category": "mathematics",
+          "credits": 4
+        },
+        "PHTH 2210": {
+          "role": "options",
+          "category": "mathematics",
+          "credits": 4
+        },
+        "PSYC 2320": {
+          "role": "options",
+          "category": "mathematics",
+          "credits": 4
+        },
+        "ENGW 1111": {
+          "role": "options",
+          "category": "human_context",
+          "credits": 4
+        },
+        "ENGW 1102": {
+          "role": "options",
+          "category": "human_context",
+          "credits": 4
+        },
+        "ENGW 3302": {
+          "role": "options",
+          "category": "human_context",
+          "credits": 4
+        },
+        "ENGW 3315": {
+          "role": "options",
+          "category": "human_context",
+          "credits": 4
+        },
+        "PHTH 1260": {
+          "role": "options",
+          "category": "human_context",
+          "credits": 4
+        },
+        "PHTH 1261": {
+          "role": "options",
+          "category": "human_context",
+          "credits": 4
+        },
+        "PHTH 2300": {
+          "role": "options",
+          "category": "human_context",
+          "credits": 4
+        },
+        "PHTH 2301": {
+          "role": "options",
+          "category": "human_context",
+          "credits": 4
+        },
+        "PHIL 1145": {
+          "role": "options",
+          "category": "human_context",
+          "credits": 4
+        },
+        "PHIL 1165": {
+          "role": "options",
+          "category": "human_context",
+          "credits": 4
+        },
+        "PHTH 2350": {
+          "role": "options",
+          "category": "applications",
+          "credits": 4
+        },
+        "PHTH 2351": {
+          "role": "options",
+          "category": "applications",
+          "credits": 4
+        },
+        "CS 1200": {
+          "role": "options",
+          "category": "other",
+          "credits": 1
+        },
+        "HSCI 1000": {
+          "role": "options",
+          "category": "other",
+          "credits": 1
+        },
+        "INPR 1000": {
+          "role": "options",
+          "category": "other",
+          "credits": 1
+        },
+        "CS 1210": {
+          "role": "options",
+          "category": "other",
+          "credits": 1
+        },
+        "HSCI 2000": {
+          "role": "options",
+          "category": "other",
+          "credits": 1
+        }
+      },
+      "source_load_rules": {
+        "published_degree_hours": 135,
+        "general_elective_hours": 16,
+        "upper_elective_hours": 4,
+        "statistics_route_hours": [
+          4,
+          5
+        ],
+        "envr_bundle_hours": 5,
+        "scope": "Published independent constraints, not an additive total. The mapped course counts include actual zero-hour recitations and do not represent credits or a student schedule."
+      },
+      "discrepancies": [],
+      "blockers": [
+        {
+          "issue": "Exact allowed/designated home college and cohort applicability is not established by general college participation or advisor-mediated change-home rules. No student-specific designation or approval is inferred.",
+          "url": "https://www.khoury.northeastern.edu/current-undergraduate-students/undergraduate-advising-academic-support/academic-policies-and-procedures/",
+          "supporting_urls": [
+            "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/degrees-majors-minors/",
+            "https://catalog.northeastern.edu/undergraduate/health-sciences/academic-policies-procedures/"
+          ]
+        }
+      ],
+      "correction_status": "No mapped course role/category/credit correction needed. Public Bouv\u00e9 policy mapping remains accessible work; exact home/cohort applicability remains unresolved. Shared declaration/Khoury correction commits were verified present.",
+      "access_notes": [
+        "Cached official course and policy pages were read with original fetch provenance retained. No fresh-source time was invented.",
+        "No restricted college forms, student records or authentication was accessed. Clinical/employer-specific outcomes and individual approvals are not certified."
+      ],
+      "accessible_follow_up": [
+        {
+          "issue": "Bouv\u00e9 full public policy has been independently read; conditional primary mapping remains pending. Includes major/cohort grade fallback, curriculum exception protocols, petitions and transfer preapproval, probation contracts/deadlines, twice-failed required-course dismissal, appeals and scoped clinical/professional rules.",
+          "source_urls": [
+            "https://catalog.northeastern.edu/undergraduate/health-sciences/academic-policies-procedures/"
+          ],
+          "status": "source_read_primary_mapping_pending"
+        }
+      ]
     }
   ]
 }

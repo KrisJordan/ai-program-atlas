@@ -334,3 +334,78 @@ def test_ne_linguistics_optional_preparation_and_variable_research_subjects():
     assert courses['LING 3412']['category'] == 'human_context'
     assert courses['CS 4120']['category'] == 'ai_ml'
     assert not entry(pid)['full_degree_verified']
+
+
+def test_ne_health_all52_independent_course_decisions():
+    from atlas.families import resolve_program
+    pid = 'northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree'
+    family = json.loads((ROOT / 'data/families/northeastern-ai-combined-degrees.json').read_text())
+    p = resolve_program(load(pid), family)
+    courses = {c['code']: c for c in p['courses']}
+    e = entry(pid)
+    assert set(courses) == set(e['manual_course_decisions']) and len(courses) == 52
+    for role, expected in e['expected_profile'].items():
+        actual = requirement_profile(p)[role]
+        assert (actual['count'], actual['categories']) == (expected['count'], expected['categories'])
+    for code, decision in e['manual_course_decisions'].items():
+        c = courses[code]
+        assert (c['category'], c['credits'], c['credit_unit']) == (
+            decision['category'], decision['credits'], 'semester_hours')
+        assert requirement_profile({**p, 'courses': [c]})[decision['role']]['count'] == 1
+    assert not e['full_degree_verified']
+
+
+def test_ne_health_whole_statistics_route_recommendations_and_grade_scope():
+    from atlas.families import resolve_program
+    pid = 'northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree'
+    family = json.loads((ROOT / 'data/families/northeastern-ai-combined-degrees.json').read_text())
+    p = resolve_program(load(pid), family)
+    courses = {c['code']: c for c in p['courses']}
+    groups = {g['id']: g for g in p['requirements']}
+    ids = {courses[code]['id'] for code in ['ENVR 2500', 'ENVR 2501', 'ENVR 2502']}
+    route = next(g for g in groups.values() if set(g['course_ids']) == ids)
+    assert route['kind'] == 'all' and groups[route['parent_id']]['kind'] == 'alternative'
+    assert sum(courses[code]['credits'] for code in ['ENVR 2500', 'ENVR 2501', 'ENVR 2502']) == 5
+    assert courses['ENVR 2502']['credits'] == 0 and courses['CHEM 1163']['credits'] == 0
+    assert courses['PHTH 2350']['prerequisites'] is None
+    assert 'PHTH 2300' not in courses['PHTH 4540']['prerequisites']
+    assert 'ENGW 3302' in courses['PHTH 4540']['prerequisites']
+    # The synopsis need not repeat every recommendation; required-prerequisite
+    # metadata must not promote it into an enrollment obligation.
+    grade = groups[pid+'-req-health-sciences-major-requirement-policy']['summary']
+    assert 'PHTH core, statistics, and science requirements' in grade
+    assert 'HSCI 1000 and HSCI 2000' in grade
+    concurrent = groups[pid+'-req-cs-1802-concurrent']
+    assert concurrent['course_ids'] == [courses['CS 1802']['id']]
+    assert courses['CS 1800']['id'] in groups[concurrent['parent_id']]['course_ids']
+
+
+def test_ne_health_fresh_export_and_render_match_manual_profile(conn, tmp_path):
+    from bs4 import BeautifulSoup
+    from atlas.family_store import ingest_family
+    from atlas.site import build
+    pid = 'northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree'
+    raw = load(pid)
+    family = json.loads((ROOT / 'data/families/northeastern-ai-combined-degrees.json').read_text())
+    with conn:
+        db.upsert_institution(conn, raw['institution'])
+    ingest_family(conn, family)
+    assert db.ingest_program(conn, raw)
+    assert not db.ingest_program(conn, raw)
+    data = db.export_data(conn)
+    p = next(x for x in data['programs'] if x['id'] == pid)
+    expected = entry(pid)['expected_profile']
+    for role, manual in expected.items():
+        actual = requirement_profile(p)[role]
+        assert (actual['count'], actual['categories']) == (manual['count'], manual['categories'])
+    build(data, tmp_path/'site', base_path='/ai-program-atlas/')
+    html = (tmp_path/'site'/'programs'/pid/'index.html').read_text()
+    soup = BeautifulSoup(html, 'html.parser')
+    for role in ['required', 'options']:
+        panel = soup.select_one(f'.profile-panel[data-profile="{role}"]')
+        assert panel.select_one('.profile-total').get_text().startswith('26 distinct')
+        for category, count in expected[role]['categories'].items():
+            label = panel.select_one(f'.category-row[data-category="{category}"] strong').get_text()
+            assert int(label.split()[0]) == count
+    assert '/ai-program-atlas/assets/' in html
+    assert not conn.execute('PRAGMA foreign_key_check').fetchall()
