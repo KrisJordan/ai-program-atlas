@@ -238,4 +238,15 @@ Remaining: the four lexical AI-literacy leads are **pending source review**, not
 ## MIT centric-area cross-reference and discoverability — 2026-10-11
 - Both official MIT sources re-fetched and parsed with robots-aware transport. The catalog explicitly groups five centric areas; the cohort-specific department uses a 19-route pool plus overlapping area flags. Area counts differ (catalog 3/5/3/4/5; department 4/5/3/4/7), so no cross-version merge or changed requirement logic is justified. Adjacent adapter notes record URLs, source hashes and boundaries.
 - Shared reading index places exact same-source contextual option groups inside their related choice pool. Preserve complete bundles, source rules, counts, original nodes and deep links; the flat original pool is accessible under All published option routes. This addresses the actual discoverability problem after the previous heading restoration.
-- Unit and real-source browser checks underway; publication pending. Data and audit facts remain unchanged.
+- Unit, real-source browser, clean/CI and live publication checks completed below. Data and audit facts remain unchanged.
+
+
+### Verified centric-group reading release
+
+Published source **8f885797914f07b91083d46002e84efc7228d643**; [full CI and Pages](https://github.com/KrisJordan/ai-program-atlas/actions/runs/38182676315) succeeded for that exact SHA. Clean locked Mac suite: **4,378 passed / 463 optional skips**. Linux CI: **3,814 passed / 1,027 optional source-cache/historical skips**. All **87 mandatory Chromium cases** pass, with the existing real-MIT desktop/mobile cases extended to assert the groups actually appear inside the Center pool, bundle membership and deep original-option reload.
+
+Fresh/maintained current facts agree, repeat ingestion changes zero programs, integrity/FKs pass and all 176 static files reproduce byte-for-byte. Public data.json is unchanged from the prior release. Every one of 20,000 original requirement IDs remains present exactly once across 168 pages; all new course links resolve. The strict same-parent/source and complete-route matching currently creates one reading index, for MIT's current Center pool. It does not infer new group relationships elsewhere or alter requirement ancestry/accounting.
+
+Six deployed files byte-match the clean build. Live desktop/mobile checks pass five group headings inside the Center block, source route counts4/5/3/4/7, keyboard expansion, complete 6.C01+6.C011 bundle display, full recorded-context navigation and original option-fragment reload through the closed full-pool disclosure. No browser errors or document overflow; live screenshots were inspected.
+
+The exact live memberships of the catalog's five areas and the department's five designation lists/19-route pool agree with their respective stored views. The two sources still differ; no source-precedence, new one-per-area ancestry, credit reconciliation or whole-degree certification is asserted. Existing cohort, program and taxonomy evidence priorities remain unchanged. This documentation closeout does not change the deployed source checkpoint.
