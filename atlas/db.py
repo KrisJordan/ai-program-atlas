@@ -16,6 +16,7 @@ from urllib.parse import urlparse
 from .awards import validate_award_options
 from .requirements import validate_curriculum_audit, validate_requirements
 from .taxonomy import validate_category_reviews
+from .course_identity import validate_course_identities
 
 STATES = {"pending", "inspected", "confirmed", "no_qualifying_program_found", "inaccessible"}
 OVERRIDE_FIELDS = {
@@ -232,6 +233,7 @@ def validate_program(program, family=None):
     validate_curriculum_audit(program)
     validate_award_options(program)
     validate_category_reviews(program)
+    validate_course_identities(program)
 
 
 def ingest_program(conn, program, run_id=None):
@@ -289,6 +291,8 @@ def ingest_program(conn, program, run_id=None):
         # The existence check also permits migration fixtures for older schemas.
         if conn.execute("SELECT 1 FROM sqlite_master WHERE name='program_awards'").fetchone():
             conn.execute("DELETE FROM program_awards WHERE program_id=?", (pid,))
+        if conn.execute("SELECT 1 FROM sqlite_master WHERE name='course_identity_groups'").fetchone():
+            conn.execute("DELETE FROM course_identity_groups WHERE program_id=?", (pid,))
         # FK-safe replacement order; overrides and revisions are intentionally untouched.
         for table in (
             "program_family_memberships",
@@ -364,6 +368,17 @@ def ingest_program(conn, program, run_id=None):
                     c.get("syllabus"),
                 ),
             )
+        for group in program.get("course_identity_groups", []):
+            conn.execute("INSERT INTO course_identity_groups VALUES (?,?,?,?,?,?,?)", (
+                pid, group["id"], group["canonical_course_id"], group["relation"],
+                group["reviewed_at"], group["locator"], group["rationale"],
+            ))
+            conn.executemany("INSERT INTO course_identity_members VALUES (?,?,?)", [
+                (pid, group["id"], cid) for cid in group["course_ids"]
+            ])
+            conn.executemany("INSERT INTO course_identity_sources VALUES (?,?,?)", [
+                (pid, group["id"], sid) for sid in group["source_ids"]
+            ])
         for course in program.get("courses", []):
             review = course.get("category_review")
             if not review:

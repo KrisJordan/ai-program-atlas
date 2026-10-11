@@ -43,7 +43,7 @@ def collect_ledgers(directory, programs):
     for path in sorted(Path(directory).glob("*.json")):
         data = json.loads(path.read_text())
         # Independent review has a separate schema; it must not replace primary audits.
-        if path.name == "independent-review.json":
+        if path.name.startswith("independent-"):
             continue
         for original in data.get("programs", []):
             entry = {**original, "ledger": f"research/degree-audit/{path.name}",

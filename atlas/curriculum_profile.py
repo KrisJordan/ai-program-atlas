@@ -7,6 +7,7 @@ open pools and alternative bundles prevent inferring a student's selected path.
 
 from collections import Counter
 from .taxonomy import CATEGORIES, classification_status
+from .course_identity import identity_map
 CHOICES = {"choose_courses", "choose_credits", "alternative"}
 
 
@@ -20,6 +21,7 @@ def requirement_profile(program: dict) -> dict:
     individual source units and conditional context and are never added together.
     """
     courses = {course["id"]: course for course in program.get("courses", [])}
+    identities = identity_map(program)
     groups = {group["id"]: group for group in program.get("requirements", [])}
     contexts = {}
 
@@ -48,7 +50,7 @@ def requirement_profile(program: dict) -> dict:
     unresolved_groups = 0
     for gid, group in groups.items():
         state = context(gid)
-        ids = set(group.get("course_ids", [])) & courses.keys()
+        ids = {identities[cid] for cid in group.get("course_ids", []) if cid in courses}
         memberships.update(ids)
         if state == "required":
             fixed.update(ids)
@@ -72,7 +74,7 @@ def requirement_profile(program: dict) -> dict:
                 "context": context(parent) if parent else "required",
             })
     options -= fixed
-    unresolved = courses.keys() - fixed - options
+    unresolved = set(identities.values()) - fixed - options
 
     def profile(ids):
         categories = dict.fromkeys(CATEGORIES, 0)
@@ -81,7 +83,8 @@ def requirement_profile(program: dict) -> dict:
             category = courses[cid].get("category")
             categories[category if category in categories else "other"] += 1
             classification[classification_status(courses[cid])] += 1
-        return {"count": len(ids), "categories": categories, "classification": classification}
+        return {"count": len(ids), "categories": categories, "classification": classification,
+                "source_record_count": sum(canonical in ids for canonical in identities.values())}
 
     return {
         "required": profile(fixed),
@@ -92,4 +95,7 @@ def requirement_profile(program: dict) -> dict:
         "unresolved_group_count": unresolved_groups,
         # Counts repeated identities, not extra workload or equivalent courses.
         "overlap_count": sum(count > 1 for count in memberships.values()),
+        "identity": {"source_records": len(courses), "mapped_identities": len(set(identities.values())),
+                     "crosslisted_aliases": len(courses) - len(set(identities.values())),
+                     "reviewed_groups": len(program.get("course_identity_groups", []))},
     }

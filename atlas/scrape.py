@@ -72,6 +72,8 @@ def scrape_one(conn, pid, module, fetcher, *, force=False):
                 raise ValueError("Scrapers cannot certify reviewed curriculum completeness")
             if any("category_review" in course for course in observed.get("courses", [])):
                 raise ValueError("Scrapers cannot certify independent course taxonomy reviews")
+            if "course_identity_groups" in observed:
+                raise ValueError("Scrapers cannot certify independent course identity reviews")
             validate_requirements(observed)
             fingerprint = digest(observed)
             with conn:
