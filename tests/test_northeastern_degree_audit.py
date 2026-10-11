@@ -743,3 +743,43 @@ def test_international_reciprocal_aliases_preserve_both_source_eligibility_recor
         assert courses[left]['category_review']['status']==courses[right]['category_review']['status']=='reviewed'
     assert courses['INTL 4500']['prerequisites']!=courses['ANTH 4500']['prerequisites']
     assert mapping[courses['ANTH 3100']['id']]!=mapping[courses['POLS 3100']['id']]
+
+
+def test_business_manual_role_sets_respect_second_only_concentration_and_fixed_reuse():
+    from atlas.families import resolve_program
+    from atlas.curriculum_profile import requirement_profile
+    review=json.loads((ROOT/'research/northeastern-business-role-review.json').read_text())
+    p=json.loads((ROOT/'data/programs'/(review['program_id']+'.json')).read_text())
+    resolved=resolve_program(p,json.loads((ROOT/'data/families/northeastern-ai-combined-degrees.json').read_text()))
+    lookup={c['id']:c for c in p['courses']}
+    for role,ids in review['expected_course_ids'].items():
+        for cid in ids:
+            group=next((g for g in p.get('course_identity_groups',[]) if cid in g['course_ids']),None)
+            members=group['course_ids'] if group else [cid]
+            subset={**resolved,'courses':[lookup[x] for x in members],'course_identity_groups':[group] if group else []}
+            assert requirement_profile(subset)[role]['count']==1
+    assert review['expected_codes']['unresolved']==['ENTR 3306','INTB 1209','INTB 2501','INTB 3310','INTB 3320','INTB 3330','INTB 4983','STRT 3301']
+    assert 'MKTG 4604' in review['expected_codes']['required']
+    assert 'MKTG 4604' in review['concentration_codes']['Marketing']
+    assert len(review['concentration_codes'])==14
+
+
+def test_international_manual_role_sets_preserve_regions_and_shared_identity_counts():
+    from atlas.families import resolve_program
+    from atlas.curriculum_profile import requirement_profile
+    review=json.loads((ROOT/'research/northeastern-international-role-review.json').read_text())
+    p=json.loads((ROOT/'data/programs'/(review['program_id']+'.json')).read_text())
+    resolved=resolve_program(p,json.loads((ROOT/'data/families/northeastern-ai-combined-degrees.json').read_text()))
+    lookup={c['id']:c for c in p['courses']}
+    for role,ids in review['expected_course_ids'].items():
+        for cid in ids:
+            group=next((g for g in p.get('course_identity_groups',[]) if cid in g['course_ids']),None)
+            members=group['course_ids'] if group else [cid]
+            subset={**resolved,'courses':[lookup[x] for x in members],'course_identity_groups':[group] if group else []}
+            assert requirement_profile(subset)[role]['count']==1
+    profile=requirement_profile(resolved)
+    assert [profile[r]['count']for r in ['required','options','unresolved']]==[20,157,0]
+    assert len(p['courses'])==181 and len(p['course_identity_groups'])==4
+    assert set(review['regional_codes'])=={'Africa','Asia','Europe','Latin America','Middle East'}
+    assert 'POLS 1160' in review['global_dynamics_codes']['Law, Diplomacy, and Global Governance']
+    assert 'POLS 1160' in review['expected_codes']['required']
