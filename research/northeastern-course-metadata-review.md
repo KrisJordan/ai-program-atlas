@@ -153,3 +153,14 @@ The machine-readable [remaining metadata inventory](northeastern-metadata-remain
 - **Five scalar credit fields remain null for the published variable/discrete offerings above.** Every course observation has a verified semester-hour unit and independent subject-catalog identity. No unresolved catalog identity/credit-source access gap remains in the existing1,593-record inventory.
 - **1,547 public-site fields and1,547 syllabus fields remain unreviewed.** The46 populated values per field are the repeated CS2000/2001 offering examples across23 concrete variants, not46 unique course websites. The protected Khoury directory remains an access boundary; independently public sources can still be researched normally.
 - No explicit program launch date or assessed program-level learning-outcome inventory has been established by these course-source passes. Existing source-stated program overview statements remain separately attributed. Home-college applicability still requires the precise institutional clarification documented in the companion review; no title, breadcrumb, seminar audience or partner affiliation resolves that boundary.
+
+## Psychology and speech-language methods — 2026-10-11
+
+Read the remaining31 Psychology and eight Speech-Language Pathology and Audiology descriptions in the registered official subject catalogs. Summaries distinguish theoretical courses, experimental laboratories, seminars with changing topics, and clinical communication methods. Course-level clinical training descriptions do not establish licensure or a program-level assessed outcome.
+
+PSYC3506 and3510 explicitly allow students who do not meet prerequisites to seek instructor permission; guarded notes retain that route without promising approval or altering the recorded prerequisite expression. Recommended preparation for sensation/perception remains advice. All previously available course-site links and lab/lecture identities remain unchanged.
+
+
+This batch reviewed 39 distinct source descriptions and added **46 description fields across 5 variants**, bringing the total to **1020 of1,593 course observations**. The exact remaining inventory now contains **573 accessible unreviewed observations across 514 codes**. All source timestamps remain the actual catalog fetch times. All requirement graphs, credit amounts, preparation fields and public-resource links remain unchanged.
+
+Validation: **141 Northeastern-focused tests passed**; all23 temporary ingest/repeat/export/build/integrity checks passed. All5 affected source registrations succeeded twice with zero repeat candidates/source changes. The queue integrity test verifies its counts and exact code/program membership against the concrete records.

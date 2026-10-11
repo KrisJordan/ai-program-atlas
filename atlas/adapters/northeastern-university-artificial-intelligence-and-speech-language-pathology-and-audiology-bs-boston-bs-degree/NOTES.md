@@ -43,3 +43,7 @@ Instructor-linked public CS 2000 site explicitly covers Fall 2026 Boston/Oakland
 Partner-course description review (2026-10-11): 2 existing course observations gain original guarded summaries of their official 2026–2027 descriptions. Topics courses retain offering variability. Course activities and aims are not promoted to assessed program outcomes, and placement in an alternative or elective group is unchanged. Existing registered subject parsers apply the new summaries only when the current scoped course description retains its reviewed evidence phrase; otherwise the observation description remains null. Credits, prerequisites, public resources and requirement graphs are unchanged.
 
 The final metadata inventory also restores the explicit published variable-credit range note for SLPA 5107 (3–4 hours). Its numeric credit field remains null; no default amount is selected.
+
+## Psychology and speech-language methods descriptions — 2026-10-11
+
+Psychology and speech-language methods description review (2026-10-11): 8 existing course observations gain original concise summaries of their official 2026–2027 descriptions. Offering variability, course activities and permission conditions retain their stated scope. Requirement choices, credits, preparation fields and public resource links remain unchanged. Live subject parsers require the reviewed evidence phrase in the scoped course description; unsupported summaries return null. No seed replay or freshness certification.

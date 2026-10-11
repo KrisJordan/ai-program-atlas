@@ -47,3 +47,7 @@ Partner-course description review (2026-10-11): 2 existing course observations g
 ## Science/engineering descriptions — 2026-10-11
 
 Science/engineering description review (2026-10-11): 4 existing course observations gain original guarded summaries of official 2026–2027 descriptions. Laboratories, zero-hour recitations and alternative course sequences remain distinct records. Varying seminar topics retain that limitation. No course-level aim is promoted to a program outcome. Existing subject parsers validate the current scoped course block before returning the guarded summary. No change to credits, prerequisites, public resource URLs, family binding or requirements.
+
+## Psychology and speech-language methods descriptions — 2026-10-11
+
+Psychology and speech-language methods description review (2026-10-11): 23 existing course observations gain original concise summaries of their official 2026–2027 descriptions. Offering variability, course activities and permission conditions retain their stated scope. Requirement choices, credits, preparation fields and public resource links remain unchanged. Live subject parsers require the reviewed evidence phrase in the scoped course description; unsupported summaries return null. No seed replay or freshness certification.

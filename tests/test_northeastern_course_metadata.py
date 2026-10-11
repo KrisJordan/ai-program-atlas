@@ -192,23 +192,28 @@ def test_additional_disciplinary_registration_prose_is_observed(subject,heading,
 def test_listed_disciplinary_courses_have_catalog_facts_without_forcing_descriptions():
     import json
     from pathlib import Path
-    root=Path(__file__).resolve().parents[1];observations=0;unknown_descriptions=0
+    from atlas.adapters.northeastern_course_metadata import SUMMARIES
+    root=Path(__file__).resolve().parents[1];observations=0
     for path in (root/'data/programs').glob('northeastern-*.json'):
         p=json.loads(path.read_text())
         if p.get('family',{}).get('id')!='northeastern-ai-combined-degrees':continue
         for c in p['courses']:
             sub=c['code'].split()[0]
             if sub not in {'BIOL','CHEM','ECON','PSYC','PHYS','PHIL'}:continue
-            observations+=1;unknown_descriptions+=c['description'] is None
+            observations+=1
+            if c['code'] not in SUMMARIES:
+                assert c['description'] is None
             assert c['source_id']==p['id']+'-'+sub.lower()+'-courses'
             assert c['credit_unit']=='semester_hours'
             assert any(s['id']==c['source_id'] and c['code'] in s['locator'] for s in p['sources'])
         assert p['curriculum_status']=='partial'
-    assert observations>250 and unknown_descriptions>100
+    assert observations>250
 
 
 @pytest.mark.parametrize(('subject','heading','code','prose','note'),[
     ('ENVR','Earth and Environmental Sciences (ENVR)','ENVR 3300','Students who do not meet course prerequisites may seek permission of instructor.','permission is not guaranteed'),
+    ('PSYC','Psychology (PSYC)','PSYC 3506','Students who do not meet course prerequisites may seek permission of instructor.','permission is not guaranteed'),
+    ('PSYC','Psychology (PSYC)','PSYC 3510','Students who do not meet course prerequisites may seek permission of instructor.','permission is not guaranteed'),
     ('PHTH','Public Health (PHTH)','PHTH 5222','Requires permission of instructor for students outside designated programs.','does not enumerate those programs'),
     ('JRNL','Journalism (JRNL)','JRNL 5360','International students wishing to register need to speak to the International Student and Scholar Institute prior to registration.','before registering'),
 ])
@@ -317,3 +322,24 @@ def test_physics_lecture_lab_and_zero_hour_recitation_stay_distinct():
     changed=parser(html.replace('interactive problem solving','a new teaching format'))
     assert changed['courses'][2]['description'] is None
     assert changed['courses'][0]['description']==result['courses'][0]['description']
+
+
+def test_remaining_metadata_queue_matches_concrete_records_without_absence_claims():
+    import json
+    from pathlib import Path
+    from collections import defaultdict
+    root=Path(__file__).resolve().parents[1]
+    queue=json.loads((root/'research/northeastern-metadata-remaining.json').read_text())
+    remaining=defaultdict(list);courses=[]
+    for path in sorted((root/'data/programs').glob('northeastern-*.json')):
+        p=json.loads(path.read_text())
+        if p.get('family',{}).get('id')!=queue['family_id']:continue
+        courses.extend(p['courses'])
+        for c in p['courses']:
+            if c['description'] is None:remaining[c['code']].append(p['id'])
+    assert {r['code']:r['program_ids'] for r in queue['unreviewed_descriptions']}==dict(remaining)
+    assert queue['description_scope']['accessible_unreviewed_unique_codes']==len(remaining)
+    assert queue['description_scope']['accessible_unreviewed_program_course_records']==sum(map(len,remaining.values()))
+    assert queue['counts']['course_observations']==len(courses)
+    for field in ['description','prerequisites','credits','public_site','syllabus']:
+        assert queue['counts'][field]==sum(c[field] is not None for c in courses)
