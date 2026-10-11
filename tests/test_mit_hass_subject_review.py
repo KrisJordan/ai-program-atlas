@@ -176,3 +176,24 @@ def test_cmsw_spring_visible_capture_replays_without_assuming_latest_term():
     hashes={review.observation_digest(o) for o in source}
     saved=[o for r in MANIFEST['courses'].values() for o in r['observations'] if o['source_id']=='mit-ai-hass-review-cmsw-spring2026']
     assert len(saved)==31 and all(o['observation_digest'] in hashes for o in saved)
+
+
+def test_cmsw_2025_interactive_writing_does_not_force_a_programming_path():
+    records=[r for r in MANIFEST['courses'].values() if any(o['source_id']=='mit-ai-hass-review-cmsw-fall2025' for o in r['observations'])]
+    obs={o['observed_code']:o for r in records for o in r['observations'] if o['source_id']=='mit-ai-hass-review-cmsw-fall2025'}
+    assert obs['CMS.618[J]']['category']=='human_context'
+    assert any('OR structuring text' in x for x in obs['CMS.618[J]']['restrictions'])
+    assert obs['CMS.560']['category']=='human_context'
+    assert obs['CMS.560']['prerequisites'] is None
+    changed=[r for r in MANIFEST['courses'].values() if r['listed_code']=='CMS.400']
+    assert changed and all(r['review_status']=='identity_review_needed' for r in changed)
+
+
+@pytest.mark.parametrize('term',['fall2025','spring2025'])
+def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
+    path=Path('/tmp/mit-hass-subjects')/f'cmsw-{term}-visible.html'
+    if not path.exists():
+        pytest.skip('Optional ignored public archived-term capture')
+    hashes={review.observation_digest(o) for o in review.observe_cmsw(path.read_text())}
+    saved=[o for r in MANIFEST['courses'].values() for o in r['observations'] if o['source_id']==f'mit-ai-hass-review-cmsw-{term}']
+    assert saved and all(o['observation_digest'] in hashes for o in saved)
