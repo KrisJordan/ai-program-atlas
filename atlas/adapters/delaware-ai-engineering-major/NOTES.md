@@ -22,3 +22,7 @@ Still partial: catalog403 remains a boundary; no bypass or regenerated catalog m
 
 See `research/degree-audit/buffalo-delaware-rit.md` and the adjacent per-program JSON for independently reviewed source scope, exact blockers, manual expected course sets and taxonomy rationales. Full degree audit remains blocked and curriculum remains partial; successful overview reads are not catalog completion. Every represented course now has a source-specific category review. Parser observations never emit these independent reviews.
 All 28 sample-plan observations remain contextual. Fourteen unequivocal exact titles receive limited classifications; fourteen remain unclassified. The parser no longer infers subjects from prefixes or broad keywords. Current 2026–27 catalog 403 and ELEG625 eligibility are still unresolved.
+
+## Fixed-requirement resolution attempt — 2026-10-11
+
+Reread all current sample-plan rows and the linked 2025 flowchart. The latter names ELEG405/ELEG398 without the current sample's ELEG625/ELEG397 alternatives and provides no current-cohort applicability statement. Neither supplies a verified current mandatory inventory; no fixed promotion, prerequisite/grade import or course change was made. The current catalog403 boundary was not retried. See [resolution proposal](../../../research/degree-audit/independent-resolution-delaware-furman.md) for complete replacement review rows, independent 28-ID/category enumeration and actual alternatives checked.

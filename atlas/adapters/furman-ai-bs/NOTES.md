@@ -11,3 +11,7 @@ The officially listed major detail URL https://www.furman.edu/academics/majors-m
 ## Degree correctness audit — 2026-10-11
 
 See [eight-degree audit](../../../research/degree-audit/west-purdue-wpi.md) and its adjacent per-program JSON ledger. This program is blocked for whole-degree certification by the specific evidence gaps recorded there. Verified role/subject corrections are retained; parser success and prior local curriculum labels are not a completed degree audit. Remaining course-content review work is distinguished from actual source barriers. Independent second pass remains pending.
+
+## Fixed-requirement resolution attempt — 2026-10-11
+
+Public Computer Science department and Program Overview pages explicitly name AI in their major-declaration instructions. Both were read; neither provides the AI BS curriculum. Their linked CSC105 introductory-course page gives Fall2026/Spring2027 themes for students from all majors, which do not establish AI degree requirements. No course records or subject claims were added. The known password boundary and earlier unrelated catalog lead were not retried. See [resolution proposal](../../../research/degree-audit/independent-resolution-delaware-furman.md) for exact sources, manual graph counts and limits; fixed, choice and classification judgments remain unverified.

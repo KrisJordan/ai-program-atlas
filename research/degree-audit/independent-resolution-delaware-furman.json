@@ -1,0 +1,336 @@
+{
+  "audit_date": "2026-10-11",
+  "reviewer": "resolve_delaware_furman",
+  "proposal_only": true,
+  "target_ledger": "research/degree-audit/independent-core-central.json",
+  "programs": [
+    {
+      "program_id": "delaware-ai-engineering-major",
+      "reviewed_at": "2026-10-11",
+      "reviewer": "independent-resolution-delaware-furman / resolve_delaware_furman",
+      "reviewed_content_hash": "3c6be795281d2c88bb6d4213e19fc78ff8c3f081d09f7931e6eaa2687688731a",
+      "dimensions": {
+        "fixed_requirements": {
+          "status": "unverified",
+          "summary": "The complete current department sequence remains explicitly a Sample Plan of Study with courses subject to change. The linked 2025 curriculum flowchart has no verified current cohort applicability and differs on named alternatives; it does not establish the 2026–27 fixed inventory.",
+          "evidence": [
+            {
+              "url": "https://www.ece.udel.edu/academics/undergraduate/artificial-intelligence-engineering-bs/",
+              "locator": "Sample Plan of Study: all four years; courses subject to change and direction to 2026–27 catalog"
+            },
+            {
+              "url": "https://www.ece.udel.edu/wp-content/uploads/2025/07/2025-AI-flowchart.pdf",
+              "locator": "Entire one-page term grid; ELEG405 and ELEG398, without ELEG625/ELEG397; no applicability statement for 2026–27"
+            }
+          ],
+          "limitations": [
+            "Current catalog requirement source previously returned HTTP403 and was not retried. The linked 2025 flowchart does not state applicable entry cohort or establish current mandatory roles. No fixed absence is certified."
+          ]
+        },
+        "choice_rules": {
+          "status": "partial",
+          "summary": "The sample explicitly permits ELEG 405 or 625 and ELEG 397 or 398. Both alternatives remain nested under sample-plan notes, so no binding elective load is inferred. Physics 207/227 and 208/228 are preserved as paired uncoded notes rather than invented separate titled records.",
+          "evidence": [
+            {
+              "url": "https://www.ece.udel.edu/academics/undergraduate/artificial-intelligence-engineering-bs/",
+              "locator": "Sample Plan of Study: all four years; courses subject to change and direction to 2026–27 catalog"
+            }
+          ],
+          "limitations": [
+            "These are illustrative alternatives, not certified graduation choice rules. Exact AI/STEM elective pools, undergraduate eligibility for ELEG 625 and individual course amounts remain unknown.",
+            "The older flowchart shows ELEG405 and ELEG398 without the current sample alternatives; the edition/applicability conflict is unresolved."
+          ]
+        },
+        "classification": {
+          "status": "partial",
+          "summary": "Fourteen unequivocal titles support limited subjects: two foundations, seven mathematics, three AI and two communication/ethics. Fourteen broad engineering/data/design titles remain unclassified; none has a full description in this source.",
+          "evidence": [
+            {
+              "url": "https://www.ece.udel.edu/academics/undergraduate/artificial-intelligence-engineering-bs/",
+              "locator": "Sample Plan of Study: all four years; courses subject to change and direction to 2026–27 catalog"
+            }
+          ],
+          "limitations": [
+            "This pass verifies title-limited decisions and uncertainty, not full course content. No department-prefix classification is used."
+          ]
+        }
+      },
+      "expected_course_ids": {
+        "required": [],
+        "options": [],
+        "unresolved": [
+          "delaware-cisc-106",
+          "delaware-cisc-210",
+          "delaware-cisc-220",
+          "delaware-cisc-320",
+          "delaware-cpeg-202",
+          "delaware-cpeg-457",
+          "delaware-eggg-101",
+          "delaware-eleg-305",
+          "delaware-eleg-310",
+          "delaware-eleg-381",
+          "delaware-eleg-397",
+          "delaware-eleg-398",
+          "delaware-eleg-401",
+          "delaware-eleg-404",
+          "delaware-eleg-405",
+          "delaware-eleg-491",
+          "delaware-eleg-498",
+          "delaware-eleg-499",
+          "delaware-eleg-625",
+          "delaware-engl-110",
+          "delaware-math-210",
+          "delaware-math-219",
+          "delaware-math-241",
+          "delaware-math-242",
+          "delaware-math-243",
+          "delaware-math-351",
+          "delaware-math-426",
+          "delaware-math-450"
+        ]
+      },
+      "expected_profile": {
+        "required": {
+          "count": 0,
+          "categories": {}
+        },
+        "options": {
+          "count": 0,
+          "categories": {}
+        },
+        "unresolved": {
+          "count": 28,
+          "categories": {
+            "foundations": 2,
+            "mathematics": 7,
+            "ai_ml": 3,
+            "human_context": 2,
+            "other": 14
+          }
+        }
+      },
+      "expected_profile_scope": "Complete represented sample-plan identities; no binding curriculum certification.",
+      "full_degree_verified": false,
+      "resolution_outcome": "unresolved_after_permitted_alternatives",
+      "sources": [
+        {
+          "url": "https://www.ece.udel.edu/academics/undergraduate/artificial-intelligence-engineering-bs/",
+          "catalog_year": null,
+          "locator": "Complete Sample Plan of Study, four years, two alternatives, paired physics and current catalog direction",
+          "checked_at": "2026-10-11",
+          "access_status": "readable",
+          "finding": "Readable saved official HTML and current web reader; still explicitly sample"
+        },
+        {
+          "url": "https://www.ece.udel.edu/wp-content/uploads/2025/07/2025-AI-flowchart.pdf",
+          "catalog_year": null,
+          "locator": "One-page Flowchart of AI Engineering Curriculum, term grid and named courses",
+          "checked_at": "2026-10-11",
+          "access_status": "readable",
+          "finding": "Readable public PDF; 2025 path, no current cohort applicability; ELEG405 and ELEG398 shown without current alternatives"
+        }
+      ],
+      "manual_category_course_ids": {
+        "foundations": [
+          "delaware-cisc-220",
+          "delaware-cisc-320"
+        ],
+        "mathematics": [
+          "delaware-math-241",
+          "delaware-math-242",
+          "delaware-math-243",
+          "delaware-math-351",
+          "delaware-math-210",
+          "delaware-math-450",
+          "delaware-math-426"
+        ],
+        "ai_ml": [
+          "delaware-eleg-381",
+          "delaware-eleg-405",
+          "delaware-eleg-404"
+        ],
+        "human_context": [
+          "delaware-engl-110",
+          "delaware-eleg-491"
+        ],
+        "other": [
+          "delaware-eggg-101",
+          "delaware-cisc-106",
+          "delaware-cpeg-202",
+          "delaware-cisc-210",
+          "delaware-math-219",
+          "delaware-eleg-310",
+          "delaware-eleg-305",
+          "delaware-eleg-625",
+          "delaware-eleg-397",
+          "delaware-eleg-398",
+          "delaware-cpeg-457",
+          "delaware-eleg-498",
+          "delaware-eleg-401",
+          "delaware-eleg-499"
+        ]
+      },
+      "checked_boundaries": [
+        {
+          "url": "https://catalog.udel.edu/preview_program.php?catoid=97&poid=98013&returnto=35894",
+          "access_status": "prior_http403_not_retried",
+          "locator": "2026–27 AI Engineering BS linked catalog"
+        }
+      ],
+      "manual_source_read_scope": "Exact source sections described in sources were read; requirement and subject sets describe mapped observations only. No inferred degree-wide fixed or choice set."
+    },
+    {
+      "program_id": "furman-ai-bs",
+      "reviewed_at": "2026-10-11",
+      "reviewer": "independent-resolution-delaware-furman / resolve_delaware_furman",
+      "reviewed_content_hash": "f8e4c03738647547f23ebf8136013874fe2047443e8060bc34122cdff1016f1c",
+      "dimensions": {
+        "fixed_requirements": {
+          "status": "unverified",
+          "summary": "The public directory confirms the undergraduate AI BS, and department/Program Overview pages explicitly describe declaring an AI major. Neither enumerates its fixed or choice curriculum. CSC105 themes are introductory opportunities for students from all majors and establish no AI degree obligation.",
+          "evidence": [
+            {
+              "url": "https://www.furman.edu/academics/majors-minors-programs/",
+              "locator": "Artificial Intelligence Major directory card: BS and undergraduate major; no requirements or course metadata"
+            },
+            {
+              "url": "https://www.furman.edu/academics/computer-science/",
+              "locator": "AI named in major declaration sentence"
+            },
+            {
+              "url": "https://www.furman.edu/academics/computer-science/program-overview/",
+              "locator": "AI major declaration sentence and Introductory Courses section"
+            },
+            {
+              "url": "https://www.furman.edu/academics/computer-science/program-overview/introductory-courses/",
+              "locator": "CSC105 themes, Fall 2026 and Spring 2027; introduction for all majors"
+            }
+          ],
+          "limitations": [
+            "The AI detail-page password boundary was not retried. The earlier different-program catalog403 is retained only as a historical note: its exact URL is not preserved in the adjacent source notes and it is not an independently established AI curriculum blocker. No named AI BS course obligation, choice pool or curriculum course classification is established by these alternatives. Empty mapped categories remain null; they do not certify no coursework."
+          ]
+        },
+        "choice_rules": {
+          "status": "unverified",
+          "summary": "The public directory confirms the undergraduate AI BS, and department/Program Overview pages explicitly describe declaring an AI major. Neither enumerates its fixed or choice curriculum. CSC105 themes are introductory opportunities for students from all majors and establish no AI degree obligation.",
+          "evidence": [
+            {
+              "url": "https://www.furman.edu/academics/majors-minors-programs/",
+              "locator": "Artificial Intelligence Major directory card: BS and undergraduate major; no requirements or course metadata"
+            },
+            {
+              "url": "https://www.furman.edu/academics/computer-science/",
+              "locator": "AI named in major declaration sentence"
+            },
+            {
+              "url": "https://www.furman.edu/academics/computer-science/program-overview/",
+              "locator": "AI major declaration sentence and Introductory Courses section"
+            },
+            {
+              "url": "https://www.furman.edu/academics/computer-science/program-overview/introductory-courses/",
+              "locator": "CSC105 themes, Fall 2026 and Spring 2027; introduction for all majors"
+            }
+          ],
+          "limitations": [
+            "The AI detail-page password boundary was not retried. The earlier different-program catalog403 is retained only as a historical note: its exact URL is not preserved in the adjacent source notes and it is not an independently established AI curriculum blocker. No named AI BS course obligation, choice pool or curriculum course classification is established by these alternatives. Empty mapped categories remain null; they do not certify no coursework."
+          ]
+        },
+        "classification": {
+          "status": "unverified",
+          "summary": "The public directory confirms the undergraduate AI BS, and department/Program Overview pages explicitly describe declaring an AI major. Neither enumerates its fixed or choice curriculum. CSC105 themes are introductory opportunities for students from all majors and establish no AI degree obligation.",
+          "evidence": [
+            {
+              "url": "https://www.furman.edu/academics/majors-minors-programs/",
+              "locator": "Artificial Intelligence Major directory card: BS and undergraduate major; no requirements or course metadata"
+            },
+            {
+              "url": "https://www.furman.edu/academics/computer-science/",
+              "locator": "AI named in major declaration sentence"
+            },
+            {
+              "url": "https://www.furman.edu/academics/computer-science/program-overview/",
+              "locator": "AI major declaration sentence and Introductory Courses section"
+            },
+            {
+              "url": "https://www.furman.edu/academics/computer-science/program-overview/introductory-courses/",
+              "locator": "CSC105 themes, Fall 2026 and Spring 2027; introduction for all majors"
+            }
+          ],
+          "limitations": [
+            "The AI detail-page password boundary was not retried. The earlier different-program catalog403 is retained only as a historical note: its exact URL is not preserved in the adjacent source notes and it is not an independently established AI curriculum blocker. No named AI BS course obligation, choice pool or curriculum course classification is established by these alternatives. Empty mapped categories remain null; they do not certify no coursework."
+          ]
+        }
+      },
+      "expected_course_ids": {
+        "required": [],
+        "options": [],
+        "unresolved": []
+      },
+      "expected_profile": {
+        "required": {
+          "count": 0,
+          "categories": null
+        },
+        "options": {
+          "count": 0,
+          "categories": null
+        },
+        "unresolved": {
+          "count": 0,
+          "categories": null
+        }
+      },
+      "expected_profile_scope": "Empty mapped graph only; all curriculum dimensions unverified.",
+      "full_degree_verified": false,
+      "resolution_outcome": "unresolved_after_permitted_alternatives",
+      "sources": [
+        {
+          "url": "https://www.furman.edu/academics/majors-minors-programs/",
+          "catalog_year": null,
+          "locator": "Both AI Major directory cards",
+          "checked_at": "2026-10-11",
+          "access_status": "readable",
+          "finding": "Readable saved official HTML and current web reader; BS undergraduate identity only"
+        },
+        {
+          "url": "https://www.furman.edu/academics/computer-science/",
+          "catalog_year": null,
+          "locator": "Mission, major declaration sentence, Program Overview link",
+          "checked_at": "2026-10-11",
+          "access_status": "readable",
+          "finding": "Readable web reader; AI explicitly declarable; no AI curriculum"
+        },
+        {
+          "url": "https://www.furman.edu/academics/computer-science/program-overview/",
+          "catalog_year": null,
+          "locator": "Major declaration sentence and Introductory Courses section",
+          "checked_at": "2026-10-11",
+          "access_status": "readable",
+          "finding": "Readable web reader; no AI fixed/choice curriculum"
+        },
+        {
+          "url": "https://www.furman.edu/academics/computer-science/program-overview/introductory-courses/",
+          "catalog_year": null,
+          "locator": "CSC105 introduction, both Fall 2026 themes and Spring 2027 Biowearables theme",
+          "checked_at": "2026-10-11",
+          "access_status": "readable",
+          "finding": "Readable web reader; courses for all majors, no AI BS requirement role"
+        }
+      ],
+      "manual_category_course_ids": null,
+      "checked_boundaries": [
+        {
+          "url": "https://www.furman.edu/academics/majors-minors-programs/artificial-intelligence-major/",
+          "access_status": "prior_password_gate_not_retried",
+          "locator": "AI major detail linked by directory"
+        }
+      ],
+      "manual_source_read_scope": "Exact source sections described in sources were read; requirement and subject sets describe mapped observations only. No inferred degree-wide fixed or choice set."
+    }
+  ],
+  "research_limits": [
+    "Official search batches returned mostly unrelated or out-of-domain results despite domain filters; these are not treated as evidence of absence. One indexed Delaware catalog-hosted four-year PDF lead was not opened because the catalog access boundary is already recorded.",
+    "Local robots-aware HTTP reads of new Furman department pages failed at robots.txt with transport ConnectError; successful public web-reader bodies were actually inspected. Cached official directory/Delaware department bodies were independently read.",
+    "No denied catalog, password-protected detail, alternate catalog endpoint, mirror, authentication or bypass was attempted. No general-education expansion, database or shared-ledger edit."
+  ]
+}
