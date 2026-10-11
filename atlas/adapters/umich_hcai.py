@@ -105,3 +105,15 @@ def parse_lsa_reviewed(text):
     if hashlib.sha256(clean(text).encode()).hexdigest()!=LSA_REVIEWED_HASH:
         raise ValueError('LSA policy changed or reader export unavailable; manual review required')
     return dict(id=PROGRAM_ID, requirements=[rule('umich-hcai-lsa-'+key,title,LSA_SID,parent='umich-hcai-root',kind='note',summary=summary) for key,title,summary in LSA_POLICIES])
+
+SI326_SYLLABUS='https://drive.google.com/file/d/1Bir3mDqHZ1O3RI9Nlo6jfS5A_q4snQry/view?usp=drive_open'
+
+def parse_si326_syllabus_reviewed(text):
+    """Read-only visible PDF text; no raw viewer shell or enrollment inference."""
+    if '<html' in text.lower() or '<script' in text.lower():
+        raise ValueError('Visible syllabus text required, not viewer HTML')
+    normalized=clean(text)
+    for phrase in ['SI 326: Understanding AI','Winter 2026 | 3 Credits','Prerequisites None','Programming Required No']:
+        if phrase not in normalized:
+            raise ValueError('Reviewed SI326 syllabus identity or metadata changed')
+    return dict(id=PROGRAM_ID,courses=[dict(id='umich-hcai-si-326',syllabus=SI326_SYLLABUS,prerequisites='Winter2026 example syllabus explicitly states no prerequisites and no programming requirement. The current catalog table leaves prerequisites blank; later offerings are not certified by this example.')])

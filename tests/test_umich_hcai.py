@@ -59,8 +59,8 @@ def test_seed_has_explicit_remaining_gaps_and_sources():
     assert d['first_offered']['value']=='Fall 2025'
     assert len(d['courses'])==25 and len(d['requirements'])==37
     assert sum(bool(c['description']) for c in d['courses'])==10
-    assert sum(bool(c['prerequisites']) for c in d['courses'])==4
-    assert all(c['syllabus'] is None for c in d['courses'])
+    assert sum(bool(c['prerequisites']) for c in d['courses'])==5
+    assert sum(c['syllabus'] is not None for c in d['courses'])==1
     mod=importlib.import_module('atlas.adapters.'+adapter.PROGRAM_ID+'.adapter')
     assert set(mod.SOURCES)<={s['url'] for s in d['sources']}
 
@@ -86,3 +86,16 @@ def test_lsa_home_rules_are_scoped_and_fail_closed(monkeypatch):
     assert not {'last_verified','curriculum_audit','curriculum_status'} & d.keys()
     with pytest.raises(ValueError):adapter.parse_lsa_reviewed(text+' changed')
     with pytest.raises(ValueError):adapter.parse_lsa_reviewed('<h1>Access denied</h1>')
+
+
+def test_syllabus_metadata_remains_offering_specific():
+    raw='SI 326: Understanding AI\nWinter 2026 | 3 Credits\nPrerequisites None\nProgramming Required No'
+    d=adapter.parse_si326_syllabus_reviewed(raw)
+    c=d['courses'][0]
+    assert c['syllabus']==adapter.SI326_SYLLABUS
+    assert 'later offerings are not certified' in c['prerequisites']
+    assert not {'source_id','description','credits','credit_unit'} & c.keys()
+    assert not {'last_verified','curriculum_status','curriculum_audit'} & d.keys()
+    for old,new in [('Winter 2026','Fall 2026'),('Prerequisites None','Prerequisites SI212'),('SI 326','SI 376')]:
+        with pytest.raises(ValueError):adapter.parse_si326_syllabus_reviewed(raw.replace(old,new))
+    with pytest.raises(ValueError):adapter.parse_si326_syllabus_reviewed('<html>'+raw+'</html>')

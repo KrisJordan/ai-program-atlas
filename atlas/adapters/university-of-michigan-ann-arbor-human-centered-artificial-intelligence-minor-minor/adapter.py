@@ -28,3 +28,7 @@ SOURCE_PARSERS.update({
     home.SOURCE_INFO['public-health']['url']: home.parse_public_health_reviewed,
 })
 SOURCES = (*SOURCES, *home.SOURCES)
+
+from atlas.adapters.umich_hcai import SI326_SYLLABUS, parse_si326_syllabus_reviewed
+SOURCES = (*SOURCES, SI326_SYLLABUS)
+SOURCE_PARSERS[SI326_SYLLABUS] = parse_si326_syllabus_reviewed
