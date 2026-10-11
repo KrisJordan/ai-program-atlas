@@ -46,7 +46,7 @@ def test_degree_pool_profile_preserves_fixed_overlap_and_open_predicates():
  from atlas.curriculum_profile import requirement_profile
  d=json.loads(Path('data/programs/'+PID+'.json').read_text())
  profile=requirement_profile(d)
- assert [profile[k]['count'] for k in ('required','options','unresolved')]==[32,349,0]
+ assert [profile[k]['count'] for k in ('required','options','unresolved')]==[32,348,0]
  # Four published code pools contain 350 records, with prescribed PHIL310
  # already fixed. This does not authorize using PHIL310 for two credit slots.
  assert sum(len(r['course_ids']) for r in d['requirements'] if r['id'] in {PID+'-'+k for k in POOLS})==350

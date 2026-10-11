@@ -444,7 +444,7 @@ def test_njit_required_subjects_and_enrollment_roles():
  p=json.loads(Path('data/programs/'+m.PID+'.json').read_text());courses={c['code'].replace(' ',''):c for c in p['courses']}
  assert len(NJIT_REQUIRED)==32
  profile=requirement_profile(p)
- assert profile['required']['count']==32 and profile['options']['count']==349
+ assert profile['required']['count']==32 and profile['options']['count']==348
  assert profile['required']['classification']=={'reviewed':24,'mixed':7,'unclassified':0,'unreviewed':1}
  assert courses['MGMT116']['category']=='mathematics'
  assert courses['MGMT216']['category']=='mathematics'

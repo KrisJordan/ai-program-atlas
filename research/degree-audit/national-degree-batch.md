@@ -256,3 +256,7 @@ Every primary named-course block is now reviewed, but all four comprehensive aud
 ## NJIT science subject subset — 2026-10-11
 
 Twenty-two actual GER option descriptions now have explicit subject reviews: 20 physical/environmental-science domain applications and two mixed biology/statistics/social-context courses. This keeps the 32 fixed /349 option graph and all nine laboratory-condition nodes unchanged. Lab-only subject evidence is the explicitly identified lecture association, never a guessed numeric pairing. R120 titles without NJIT descriptions remain unreviewed while further public source work is possible. This is not whole-degree or all-GER completion.
+
+## NJIT humanities/social-science subset and identity — 2026-10-11
+
+Fifty actual course blocks yield 43 primary, four mixed and three unclassified subjects. The quantitative-research course STS 307 is mathematics; philosophical/social AI analysis is human_context. Five courses explicitly prohibit satisfying both alternative GER allocations with the same selection, now retained as conditional notes. Reciprocal STS 378/LIT 378 co-listing supplies an independently reviewed identity group: 32 fixed/348 option identities from 32/349 source records. All records, choice quantities and lecture/lab conditions remain. Other similarly named or slash-separated options are not deduplicated. Remaining publicly accessible descriptions stay unfinished work, not fabricated access blockers.
