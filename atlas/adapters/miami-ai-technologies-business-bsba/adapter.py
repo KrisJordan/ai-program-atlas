@@ -79,3 +79,6 @@ register_judaic_latin_urban_context(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
 
 from atlas.adapters.miami_gss_context_reviews import register as register_gss_context
 register_gss_context(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
+
+from atlas.adapters.miami_policy_closure import register as register_policy_closure
+register_policy_closure(PROGRAM_ID,SOURCES,SOURCE_PARSERS)

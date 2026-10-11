@@ -62,7 +62,7 @@ def test_curated_optional_routes_and_known_conflicts_preserved(pid):
     summer=next(r for r in d['requirements'] if r['id']==pid+'-policy-summer-transfer-conflict')
     assert 'Session A' in summer['summary'] and 'Session B' in summer['summary']
     assert 'credit' in summer['summary'] and summer['kind']=='note'
-    assert any('50 pages, 2,075 identities' in s and '215 active' in s for s in d['curriculum_audit']['unresolved_requirements'])
+    assert '2075 unique course identities' in next(r['summary'] for r in d['requirements'] if r['id']==pid+'-cognate-directory-sample')
     if pid=='miami-data-science-ai-bs':assert next(r for r in d['requirements'] if r['title']=='Language course 200-level or higher')['credits']==9
     rules={r['id']:r for r in d['requirements']}
     assert rules[pid+'-cognate-directory-sample']['parent_id']==pid+'-supplement-individualized-overlap'

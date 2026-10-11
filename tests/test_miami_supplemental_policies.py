@@ -39,7 +39,10 @@ def test_seed_applicability_and_remaining_conflicts(pid):
  assert a.COGNATES in m.SOURCE_PARSERS and a.INDIVIDUALIZED in m.SOURCE_PARSERS
  assert (a.LANGUAGES in m.SOURCE_PARSERS)==('data-science' in pid)
  assert d['curriculum_status']=='partial' and not any('inconsistent summer' in x for x in d['curriculum_audit']['unresolved_requirements'])
- assert any('open route' in x for x in d['curriculum_audit']['unresolved_requirements'])
+ # An open approval route remains conditional evidence, not an unread-work blocker.
+ route=next(r for r in d['requirements'] if r['id']==pid+'-thematic-at_0045')
+ assert route['kind']=='note' and 'open approval route' in route['summary']
+ assert any('C-minus' in x for x in d['curriculum_audit']['unresolved_requirements'])
  heritage=next((r for r in d['requirements'] if r['id']==pid+'-supplement-spanish-heritage'),None)
  assert bool(heritage)==('data-science' in pid)
  if heritage:

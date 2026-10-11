@@ -109,7 +109,8 @@ def test_curated_routes_conditional_rules_source_conflicts_and_business_exclusio
     assert rs[pid+'-thematic-at_0045-group-1']['course_ids']==[]
     assert 'audition' in rs[pid+'-thematic-at_0102']['summary']
     assert 'blank' in rs[pid+'-thematic-at_0094']['summary']
-    assert 'clarification' in rs[pid+'-thematic-ps_0017']['summary']
+    assert 'child/adolescent-development obligation' in rs[pid+'-thematic-ps_0017']['summary']
+    assert 'positive minima' in rs[pid+'-thematic-ps_0017']['summary'].lower()
     assert d['curriculum_status']=='partial'
     assert not any('summer' in x for x in d['curriculum_audit']['unresolved_requirements'])
     summer=rs[pid+'-policy-summer-transfer-conflict']
@@ -117,7 +118,8 @@ def test_curated_routes_conditional_rules_source_conflicts_and_business_exclusio
     assert 'Session A' in summer['summary'] and 'Session B' in summer['summary']
     assert 'does not grant transfer credit' in summer['summary']
     assert 'financial aid' in summer['summary']
-    assert any('zero unreviewed' in x for x in d['curriculum_audit']['unresolved_requirements'])
+    assert all(c.get('category_review') for c in d['courses'])
+    assert any('C-minus' in x for x in d['curriculum_audit']['unresolved_requirements'])
     assert len(d['courses'])==len({c['id'] for c in d['courses']})==len({c['code'] for c in d['courses']})
 
 
