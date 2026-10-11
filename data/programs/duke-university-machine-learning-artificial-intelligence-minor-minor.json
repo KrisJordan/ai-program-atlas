@@ -65,6 +65,56 @@
       "catalog_year": null,
       "locator": "Minor; Restrictions on Majors, Minors, Certificates; Changing/Adding/Deleting",
       "confidence": "high"
+    },
+    {
+      "id": "duke-bulletin-grading",
+      "url": "https://undergraduate.bulletins.duke.edu/policies-procedures/grades",
+      "title": "C.3. Grading & Grade Requirements",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "C.3.a. Grades: Passing Grades and Satisfactory/Unsatisfactory grades; published tabs in public __NUXT_DATA__ payload",
+      "confidence": "high"
+    },
+    {
+      "id": "duke-bulletin-transfer",
+      "url": "https://undergraduate.bulletins.duke.edu/policies-procedures/transfer-entrance-credit",
+      "title": "C.4. Credit for Courses Taken Elsewhere",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "C.4.a. Entrance Credit; C.4.b. Incoming transfer; C.4.c. Post-matriculation transfer; published tabs in public __NUXT_DATA__ payload",
+      "confidence": "high"
+    },
+    {
+      "id": "duke-pratt-minor-policies",
+      "url": "https://undergraduate.bulletins.duke.edu/undergraduate-instruction/pratt-degree",
+      "title": "B.4. Pratt School Degree Requirements",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "B.4.b. Residence Requirement; B.4.e. Majors, Minors & Certificates; published tabs in public __NUXT_DATA__ payload",
+      "confidence": "high"
+    },
+    {
+      "id": "duke-trinity-su",
+      "url": "https://trinity.duke.edu/undergraduate/academic-policies/unsatisfactory-satisfactory-grading-option",
+      "title": "Trinity Satisfactory/Unsatisfactory Grading Option",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Public policy main content; local credential eligibility and transfer acceptance rules",
+      "confidence": "high"
+    },
+    {
+      "id": "duke-trinity-transfer",
+      "url": "https://trinity.duke.edu/undergraduate/academic-policies/transfer-credit",
+      "title": "Trinity Transfer Credit",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Public policy main content; local credential eligibility and transfer acceptance rules",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -880,6 +930,174 @@
       "source_text": null,
       "summary": "For Trinity students, at least half of minor coursework must be Duke course credits. The total of majors, minors and certificates may not exceed three. Trinity prohibits a major and minor in the same department except named exceptions. Program-specific overlap limits supersede general permission to double count; these Trinity policies are not asserted as Pratt rules.",
       "course_ids": []
+    },
+    {
+      "id": "duke-university-machine-learning-artificial-intelligence-minor-minor-grade-policy",
+      "parent_id": null,
+      "title": "D grades and credential requirements",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "duke-bulletin-grading",
+      "source_text": null,
+      "summary": "The bulletin treats D as a low pass that can satisfy other requirements, while limiting D-graded courses to two toward continuation and the 34-course-credit host degree total. This is a general policy, not an invented minimum AI-course grade.",
+      "course_ids": []
+    },
+    {
+      "id": "duke-university-machine-learning-artificial-intelligence-minor-minor-su-policy",
+      "parent_id": null,
+      "title": "S/U grading for program requirements",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "duke-bulletin-grading",
+      "source_text": null,
+      "summary": "A voluntarily S/U-graded course cannot satisfy major, minor or certificate requirements, including prerequisites, without the program DUS permission. S requires work equivalent to C- or better; U gives no credit. This exception requires individual approval, not automatic eligibility.",
+      "course_ids": []
+    },
+    {
+      "id": "duke-university-machine-learning-artificial-intelligence-minor-minor-entrance-policy",
+      "parent_id": null,
+      "title": "Entrance credit is subject to department acceptance",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "duke-bulletin-transfer",
+      "source_text": null,
+      "summary": "AP, IPC and prematriculation college credit may meet departmental major/minor requirements only to the extent permitted by that department. Prematriculation coursework must meet the published conditions, including B- or better and exclusion of work used for the high-school diploma; acceptance is not inferred for any listed AI course.",
+      "course_ids": []
+    },
+    {
+      "id": "duke-university-machine-learning-artificial-intelligence-minor-minor-incoming-transfer",
+      "parent_id": null,
+      "title": "Incoming transfer approval and local coursework",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "duke-bulletin-transfer",
+      "source_text": null,
+      "summary": "For students transferring into Duke, the academic unit must approve transfer courses toward the major/minor/certificate. At least half of each credential must be completed at Duke. This college/school-specific evaluation rule is separate from host-degree residency.",
+      "course_ids": []
+    },
+    {
+      "id": "duke-university-machine-learning-artificial-intelligence-minor-minor-post-transfer",
+      "parent_id": null,
+      "title": "Post-matriculation transfer approval",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "duke-bulletin-transfer",
+      "source_text": null,
+      "summary": "Individually arranged transfer courses require advance approval from the subject DUS and appropriate dean, followed by completion and final official transcript review. Limits are two such courses for Trinity students and four for Pratt students; academic-dismissal transfers are limited to two within those totals.",
+      "course_ids": []
+    },
+    {
+      "id": "duke-university-machine-learning-artificial-intelligence-minor-minor-away-transfer",
+      "parent_id": null,
+      "title": "Study-away transfer limits and approval",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "duke-bulletin-transfer",
+      "source_text": null,
+      "summary": "GEO-facilitated study away permits up to four credits per semester or eight per year, potentially two more for summer; combined study-away and individually arranged transfers cannot exceed ten courses. Pratt transfers may include at most two engineering courses. Relevant DUS approval, GEO arrangements and final transcript review are required; non-Duke summer programs require GEO approval.",
+      "course_ids": []
+    },
+    {
+      "id": "duke-university-machine-learning-artificial-intelligence-minor-minor-transfer-grades",
+      "parent_id": null,
+      "title": "Transfer grading and credit equivalence",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "duke-bulletin-transfer",
+      "source_text": null,
+      "summary": "Post-matriculation transfer courses require C- or better; P/F or equivalent grades are ineligible. The Registrar determines credit equivalence; Duke course credits are not assumed equivalent to semester or quarter hours. Transfer grades do not enter the Duke record/GPA, and work beyond the transfer limit cannot replace an earlier transfer course.",
+      "course_ids": []
+    },
+    {
+      "id": "duke-university-machine-learning-artificial-intelligence-minor-minor-pratt-engineering-minor",
+      "parent_id": null,
+      "title": "Pratt engineering-minor framework",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "duke-pratt-minor-policies",
+      "source_text": null,
+      "summary": "The ML/AI minor is open to engineering and non-engineering students. Engineering minors require at least five technical courses, including at least three upper-level courses. Introductory courses qualify only if they have substantial technical prerequisite content not otherwise covered by the primary major. At most one semester of independent study supervised in the offering unit may count.",
+      "course_ids": []
+    },
+    {
+      "id": "duke-university-machine-learning-artificial-intelligence-minor-minor-pratt-overlap",
+      "parent_id": null,
+      "title": "Pratt overlap rule — compare program-specific restrictions",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "duke-pratt-minor-policies",
+      "source_text": null,
+      "summary": "The bulletin excludes primary-major courses and substantially equivalent content, but permits at most one topically relevant upper-level elective cross-listed with the primary major. For an area without its own primary major it repeats the major-course exclusion. The ML/AI departmental major(s) no-overlap rule is stricter; no blanket overlap exception is granted by this record.",
+      "course_ids": []
+    },
+    {
+      "id": "duke-university-machine-learning-artificial-intelligence-minor-minor-pratt-context",
+      "parent_id": null,
+      "title": "Pratt host-degree and declaration context",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "duke-pratt-minor-policies",
+      "source_text": null,
+      "summary": "Pratt students change academic plans through DukeHub; seniors in their final two semesters contact the designated office. Approved IDEAS majors cannot add majors or minors. Pratt host-degree residency requires 17 Duke course credits including the final two semesters, with an approved last-two-course exception after more than four full Duke semesters; these host-degree credits are not additional minor requirements.",
+      "course_ids": []
+    },
+    {
+      "id": "duke-university-machine-learning-artificial-intelligence-minor-minor-trinity-su-context",
+      "parent_id": null,
+      "title": "Trinity S/U approvals and course eligibility",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "duke-trinity-su",
+      "source_text": null,
+      "summary": "For Trinity students, the program must permit S/U credit toward its requirements. A course must permit voluntary S/U; courses numbered 500 or higher additionally require instructor permission. Only one voluntary S/U course credit per semester or summer term may be requested, by the withdrawal deadline; the change cannot be reversed. This is not automatic permission for any AI course.",
+      "course_ids": []
+    },
+    {
+      "id": "duke-university-machine-learning-artificial-intelligence-minor-minor-trinity-transfer-context",
+      "parent_id": null,
+      "title": "Trinity individually arranged transfer-course conditions",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "duke-trinity-transfer",
+      "source_text": null,
+      "summary": "In addition to department acceptance and prior Dean/DUS approval, individually arranged transfer courses cannot coincide with Duke enrollment, including online Duke courses. Community/junior college work after Duke matriculation is ineligible. Summer courses require at least four weeks and 17 class meetings. A course previously passed at Duke with D-/D/D+ cannot receive replacement transfer credit. Overseas institutional accreditation must be confirmed; third-party transcript arrangements are ineligible. These conditions apply to Trinity students and do not import its general-education curriculum into this credential.",
+      "course_ids": []
     }
   ],
   "notes": [
@@ -887,26 +1105,36 @@
     "Special-topic examples retain their offering context in requirement notes. ECE 495 F24/F25 and ECE 590 S25/S26 are historical examples, not confirmed future availability. ME 555 has two named topic examples and is not counted as two compulsory courses.",
     "Preparatory programming, linear algebra and statistics courses are examples of expected knowledge, not a mandatory list of every example course.",
     "This partial inventory represents the minor only, not the host degree or an individual graduation audit.",
-    "Course inventory contains alternatives and elective examples; not every listed course is compulsory."
+    "Course inventory contains alternatives and elective examples; not every listed course is compulsory.",
+    "Review 2026-10-11: public 2026–27 bulletin tabs establish general grading, transfer approval and local-coursework policies; Trinity operational policies are explicitly scoped to Trinity students. The academic unit retains approval authority. No individual course acceptance or graduation eligibility is inferred."
   ],
   "curriculum_audit": {
     "scope": "minor",
-    "reviewed_at": "2026-10-10",
+    "reviewed_at": "2026-10-11",
     "source_ids": [
       "duke-ml-department",
       "duke-ml-bulletin",
-      "duke-trinity-minor-policy"
+      "duke-trinity-minor-policy",
+      "duke-bulletin-grading",
+      "duke-bulletin-transfer",
+      "duke-pratt-minor-policies",
+      "duke-trinity-su",
+      "duke-trinity-transfer"
     ],
     "sections": [
       "Department foundations and upper-level focus alternatives",
       "Special-topic approval and historical examples",
       "Prerequisite knowledge, substitutions, overlap and independent-study limits",
-      "2026–27 bulletin comparison; Trinity policy scope"
+      "2026–27 bulletin comparison; Trinity policy scope",
+      "C.3.a. Grades: Passing Grades and Satisfactory/Unsatisfactory grades",
+      "C.4.a. Entrance Credit; C.4.b. Incoming transfer; C.4.c. Post-matriculation transfer",
+      "B.4.b. Residence Requirement; B.4.e. Majors, Minors & Certificates",
+      "Trinity Satisfactory/Unsatisfactory Grading Option",
+      "Trinity Transfer Credit"
     ],
     "unresolved_requirements": [
       "Reconcile narrower 2026–27 bulletin focus pool with expanded undated department list.",
-      "Reconcile bulletin primary-major overlap restriction with department major(s) restriction.",
-      "Verify minor-specific grading and applicable Pratt residency/transfer policies before certifying complete local requirements."
+      "Reconcile the bulletin primary-major overlap restriction and Pratt one-cross-listed-elective exception with the department major(s) no-overlap restriction."
     ],
     "metadata_gaps": [
       "Course descriptions, per-course prerequisites and credit amounts have not been verified. Missing prerequisites do not mean no prerequisites.",

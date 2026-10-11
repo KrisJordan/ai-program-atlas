@@ -51,7 +51,7 @@ def test_vt_observes_changed_declaration_without_inventing_curriculum():
 @pytest.mark.parametrize('pid,n',[
  ('virginia-tech-artificial-intelligence-ai-minor-minor',0),
  ('duke-university-machine-learning-artificial-intelligence-minor-minor',25),
- ('duke-university-artificial-intelligence-applications-and-implications-minor-minor',47),
+ ('duke-university-artificial-intelligence-applications-and-implications-minor-minor',93),
 ])
 def test_reviewed_partial_records_keep_gaps_explicit(pid,n):
  p=json.loads((Path(__file__).resolve().parents[1]/'data/programs'/f'{pid}.json').read_text())

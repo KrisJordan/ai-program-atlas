@@ -86,7 +86,7 @@ def test_duke_nested_alternative_crosslists_topics_and_changed_rule():
 
 @pytest.mark.parametrize('pid,count',[
  ('boston-college-artificial-intelligence-concentration-concentration-concentration',1),
- ('duke-university-ai-and-machine-learning-concentration-concentration',87),
+ ('duke-university-ai-and-machine-learning-concentration-concentration',112),
 ])
 def test_partial_concentrations_keep_inventory_gaps_separate_from_metadata(pid,count):
  import importlib
