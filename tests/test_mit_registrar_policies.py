@@ -41,11 +41,16 @@ def test_entrance_gateway_is_cohort_specific_and_repeat_forfeiture_is_conditiona
     with pytest.raises(ValueError):sup.parse_ap_gateway(html.replace('Fall 2026','Fall 2027'))
 
 
-def test_curated_audit_preserves_hass_source_conflict():
+def test_curated_audit_distinguishes_prohibition_from_final_transfer_review():
     d=json.loads((ROOT/'data/programs/mit-ai-decision-making-bs.json').read_text())
     validate_program(d)
     assert d['curriculum_status']=='partial'
-    assert any('Distribution conflict' in gap for gap in d['curriculum_audit']['unresolved_requirements'])
+    assert not any('Distribution conflict' in gap or 'internal date conflict' in gap for gap in d['curriculum_audit']['unresolved_requirements'])
+    rules={r['id']:r for r in d['requirements']}
+    assert 'excludes external Distribution credit' in rules['mit-ai-registrar-hass-external']['summary']
+    final=rules['mit-ai-registrar-transfer-hass-conflict']['summary']
+    assert 'final signature' in final and 'neither grants an exception' in final
+    assert 'individual approval' in final
     assert any('earlier' in gap for gap in d['curriculum_audit']['unresolved_requirements'])
     urls={s['url'] for s in d['sources']}
     assert set(reg.SOURCE_PARSERS)|set(sup.SOURCE_PARSERS) <= urls
@@ -59,3 +64,13 @@ def test_optional_actual_source_cache_observation_has_no_review_claims(url,parse
     assert d['id']=='mit-ai-decision-making-bs'
     assert d['requirements']
     assert not {'curriculum_status','curriculum_audit','last_verified','first_offered','catalog_year'} & d.keys()
+
+
+def test_transfer_recommendation_requires_final_review_and_is_not_an_exception():
+    markers=[phrase for _,_,phrases,_ in reg.SPECS['transfer'][2] for phrase in phrases]
+    html='<h1>Transfer credit</h1><main>'+'. '.join(markers)+'</main>'
+    out=reg.parse('transfer',html)
+    assert 'neither grants an exception' in out['requirements'][1]['summary']
+    with pytest.raises(ValueError):
+        reg.parse('transfer',html.replace('email hassreq@mit.edu for a final signature','examiner approval is final'))
+    assert not {'curriculum_status','curriculum_audit','last_verified'} & out.keys()

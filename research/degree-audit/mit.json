@@ -423,18 +423,8 @@
       ],
       "blockers": [
         {
-          "issue": "The complete public 6-4_2025 departmental pool is represented separately from the unversioned catalog chart. The source labels lists Fall 2026 but includes @2027FA special offerings; official clarification of this internal date conflict and catalog/cohort precedence remains unresolved. No combined degree total or supersession is inferred.",
-          "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
-          "kind": "curriculum_source_question"
-        },
-        {
           "issue": "Reconcile 6.4300 credit discrepancy: chart 15 versus unversioned general CI-M list 12; versioned annotation uses a 4-0-11 breakdown. No publication-date/source-precedence assumption resolves the conflict.",
           "url": "https://catalog.mit.edu/degree-charts/eecs-subject-groupings/",
-          "kind": "curriculum_source_question"
-        },
-        {
-          "issue": "External HASS Distribution conflict: HASS requirement/substitution policies prohibit it, but the transfer-processing page describes signature handling for an examiner award. Seek office clarification before asserting an exception.",
-          "url": "https://registrar.mit.edu/registration-academics/academic-requirements/hass-requirement/substitutions-within-hass-requirement",
           "kind": "curriculum_source_question"
         },
         {
@@ -1533,7 +1523,17 @@
           "count": 0,
           "categories": {}
         }
-      }
+      },
+      "policy_reconciliations": [
+        {
+          "reviewed_at": "2026-10-11",
+          "source_ids": [
+            "mit-ai-decision-making-bs-registrar-hass",
+            "mit-ai-decision-making-bs-registrar-transfer"
+          ],
+          "finding": "External Distribution prohibition and examiner/final-office processing are compatible: a proposed designation is not an approved exception. Version6-4_2025 explicitly applies to Fall2025+ entrants; future-tagged planning entries are retained, not treated as a contradictory date. Concrete credit, identity and field-policy questions remain separately unresolved."
+        }
+      ]
     }
   ]
 }

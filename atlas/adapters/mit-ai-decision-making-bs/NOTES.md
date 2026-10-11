@@ -293,3 +293,10 @@ Seven current architecture Classes pages were inspected for these pending identi
 Contributions cd82912 and2fec76f add103 primary dispositions:100 limited title observations and three explicitly supported CMS same-subject descriptions for STS024, STS065J and21A505. These are description-supported occurrences, not three new independent full-text reads or certified merged identities. Differing STS047 and21A503/508 titles remain withheld. The current21A409 graduate annotation is retained. Broad methods/content titles remain unclassified.
 
 The seed now has754 manual dispositions, including410 HASS occurrences:142 supported by descriptions and268 title-only.416 HASS records remain active,17 have identity/version holds and two have conflicting descriptions. The separate58 architecture contribution is included once. Fixed3 and contextual field-plan handling remain unchanged; source-precedence and formal metadata gaps still prevent a completed full-degree audit.
+
+
+## Policy reconciliation — 2026-10-11
+
+A fresh whole-section read supersedes the earlier inferred HASS Distribution conflict: the HASS requirement and substitutions pages prohibit external Distribution credit. Transfer instructions describe examiner recommendations and final HASS-office signature; they do not establish an approved exception. Both procedural and substantive rules remain represented, with no individual approval assumed. This is no longer a blocker.
+
+Likewise, the department explicitly makes 6-4_2025 applicable to Fall2025 or later entrants. A planning list labeled as of Fall2026 may include future @2027FA offerings; that juxtaposition alone does not establish a contradictory curriculum. Exact term identities remain, while the unversioned chart is a separate reference. Concrete6.4300 units, field-pool/identity conflicts and earlier-entrant entrance-credit applicability remain unresolved; this correction does not certify full degree completion.
