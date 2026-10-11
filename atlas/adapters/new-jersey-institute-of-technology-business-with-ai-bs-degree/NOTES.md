@@ -2,7 +2,7 @@
 
 Reviewed 2026-10-10. Current 2026–27 catalog: https://catalog.njit.edu/undergraduate/management/management/business-with-ai-bs/
 
-Partial: 32 named course rows from the 120-credit eight-semester plan, nine open GER/free-elective slots, and four linked GER directory policy notes. FYS SEM has an explicit zero-credit value. Plan rows are not inferred prerequisites or recurring offerings. Credit amounts are preserved but normalization remains unknown.
+Partial: 32 named course rows from the 120-credit eight-semester plan, nine open GER/free-elective slots, and four linked GER directory policy notes. FYS SEM has an explicit zero-credit value. Plan rows are not inferred prerequisites or recurring offerings. Credit amounts are preserved; a later explicit university policy review below establishes semester-hour normalization.
 
 ## Further source inspection
 
@@ -81,3 +81,30 @@ already fixed and its additional GER eligibility does not add a second course
 or establish permission to fill two allocations with it. The mapped profile is
 32 fixed and 349 named options, not a student load. Whole-degree correctness and
 individual course-subject review remain in progress.
+
+
+### Fixed-course description review — 2026-10-11
+
+Read 31 of 32 fixed-course descriptions through ordinary public department catalog
+sections: management 22, computing 2, information systems 2, humanities 4 and math 1.
+The search-popup denials remain untouched; these are independently published
+catalog chapters. New parsers require the exact reviewed course block and never
+emit category-review or audit certification. Twenty-four subjects are primary
+and seven mixed; FYS SEM remains unknown/unreviewed with its published zero
+credits. The plan parser no longer assigns subjects from prefixes or keywords.
+
+MGMT116/216 and OM375 primarily teach statistical/optimization/decision methods;
+MIS385 teaches database systems; FIN410, MGMT435, IS392 and DS110 explicitly teach
+AI/ML methods. MGMT416 instead teaches managerial use of AI systems for business
+decisions. MGMT422 centers visual communication/storytelling. DS100, FIN320,
+MGMT232/432, MIS245, IS465 and PHIL310 combine substantial fields and remain mixed.
+The IS465 description expressly disclaims depth in any one subfield.
+
+Exact prerequisites and restrictions are preserved, including MTSM permission,
+class standing, the FIN218/310 preparation outside the printed core, and IS392's
+database prerequisites. They are conditional enrollment rules, not extra fixed
+degree rows or inferred waivers. PHIL335 expressly permits ENGL102 concurrently.
+DS100 explicitly states no prerequisites; blank statements elsewhere remain
+unknown. The PHIL310 course description confirms GER eligibility but does not
+resolve double use in the plan's separate allocations. Full audit remains in
+progress; large GER option descriptions and existing policy questions remain.

@@ -170,6 +170,56 @@
       "catalog_year": null,
       "confidence": "high",
       "locator": "Page1, definition and Units of Credit A\u2013C: semester credit hour and application across all NJIT schools/colleges"
+    },
+    {
+      "id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management",
+      "url": "https://catalog.njit.edu/undergraduate/management/management/",
+      "title": "NJIT management current course descriptions",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": "2026\u20132027",
+      "locator": "Individually read required-course blocks, credits and enrollment conditions",
+      "confidence": "high"
+    },
+    {
+      "id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-computing",
+      "url": "https://catalog.njit.edu/undergraduate/computing-sciences/",
+      "title": "NJIT computing current course descriptions",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": "2026\u20132027",
+      "locator": "Individually read required-course blocks, credits and enrollment conditions",
+      "confidence": "high"
+    },
+    {
+      "id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-information-systems",
+      "url": "https://catalog.njit.edu/undergraduate/computing-sciences/information-systems/",
+      "title": "NJIT information-systems current course descriptions",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": "2026\u20132027",
+      "locator": "Individually read required-course blocks, credits and enrollment conditions",
+      "confidence": "high"
+    },
+    {
+      "id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-humanities",
+      "url": "https://catalog.njit.edu/undergraduate/science-liberal-arts/humanities-and-social-sciences/",
+      "title": "NJIT humanities current course descriptions",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": "2026\u20132027",
+      "locator": "Individually read required-course blocks, credits and enrollment conditions",
+      "confidence": "high"
+    },
+    {
+      "id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-mathematics",
+      "url": "https://catalog.njit.edu/undergraduate/science-liberal-arts/mathematical-sciences/",
+      "title": "NJIT mathematics current course descriptions",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": "2026\u20132027",
+      "locator": "Individually read required-course blocks, credits and enrollment conditions",
+      "confidence": "high"
     }
   ],
   "outcomes": [],
@@ -178,71 +228,130 @@
       "id": "njit-acct-115",
       "code": "ACCT 115",
       "name": "Fundamentals of Financial Accounting",
-      "description": null,
-      "prerequisites": null,
+      "description": "Teaches financial accounting transactions, statements and interpretation for business decisions.",
+      "prerequisites": "Restrictions: Business and fintech majors except with permission of MTSM undergraduate advisor.",
       "credits": 3,
       "credit_unit": "semester_hours",
       "category": "applications",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-official",
-      "url": "https://catalog.njit.edu/search/?P=ACCT%20115",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management",
+      "url": "https://catalog.njit.edu/undergraduate/management/management/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management"
+        ],
+        "locator": "ACCT 115 complete course description",
+        "rationale": "Teaches financial accounting transactions, statements and interpretation for business decisions.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-ds-100",
       "code": "DS 100",
       "name": "Basic Foundations of Data Science",
-      "description": null,
-      "prerequisites": null,
+      "description": "Combines introductory Python/data handling, applied visualization and AI societal ethics without one established primary subject.",
+      "prerequisites": "Prerequisites: No prerequisites are required to enroll.",
       "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "applications",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-official",
-      "url": "https://catalog.njit.edu/search/?P=DS%20100",
+      "category": "other",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-computing",
+      "url": "https://catalog.njit.edu/undergraduate/computing-sciences/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-computing"
+        ],
+        "locator": "DS 100 complete course description",
+        "rationale": "Combines introductory Python/data handling, applied visualization and AI societal ethics without one established primary subject.",
+        "candidate_categories": [
+          "foundations",
+          "applications",
+          "human_context"
+        ]
+      }
     },
     {
       "id": "njit-engl-101",
       "code": "ENGL 101",
       "name": "English Composition: Introduction to Academic Writing",
-      "description": null,
-      "prerequisites": null,
+      "description": "Develops rhetorical analysis, argument and academic written communication.",
+      "prerequisites": "Prerequisites: Entrance is determined by placement-test score.",
       "credits": 3,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-official",
-      "url": "https://catalog.njit.edu/search/?P=ENGL%20101",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-humanities",
+      "url": "https://catalog.njit.edu/undergraduate/science-liberal-arts/humanities-and-social-sciences/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-humanities"
+        ],
+        "locator": "ENGL 101 complete course description",
+        "rationale": "Develops rhetorical analysis, argument and academic written communication.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-math-135",
       "code": "MATH 135",
       "name": "Calculus for Business",
-      "description": null,
-      "prerequisites": null,
+      "description": "Teaches differential/integral calculus and optimization with business applications.",
+      "prerequisites": "Prerequisite: MATH 107 with a grade of C or better or MATH 110 with a grade of C or better or NJIT placement. Intended for students with a major offered by SOM.",
       "credits": 3,
       "credit_unit": "semester_hours",
       "category": "mathematics",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-official",
-      "url": "https://catalog.njit.edu/search/?P=MATH%20135",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-mathematics",
+      "url": "https://catalog.njit.edu/undergraduate/science-liberal-arts/mathematical-sciences/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-mathematics"
+        ],
+        "locator": "MATH 135 complete course description",
+        "rationale": "Teaches differential/integral calculus and optimization with business applications.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-mgmt-190",
       "code": "MGMT 190",
       "name": "Introduction to Business",
-      "description": null,
-      "prerequisites": null,
+      "description": "Teaches management principles and practical business case analysis.",
+      "prerequisites": "Restriction: Freshman business and fintech majors except with permission of MTSM undergraduate advisor.",
       "credits": 3,
       "credit_unit": "semester_hours",
       "category": "applications",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-official",
-      "url": "https://catalog.njit.edu/search/?P=MGMT%20190",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management",
+      "url": "https://catalog.njit.edu/undergraduate/management/management/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management"
+        ],
+        "locator": "MGMT 190 complete course description",
+        "rationale": "Teaches management principles and practical business case analysis.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-fys-sem",
@@ -252,7 +361,7 @@
       "prerequisites": null,
       "credits": 0,
       "credit_unit": "semester_hours",
-      "category": "applications",
+      "category": "other",
       "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-official",
       "url": "https://catalog.njit.edu/search/?P=FYS%20SEM",
       "public_site": null,
@@ -262,365 +371,673 @@
       "id": "njit-ds-110",
       "code": "DS 110",
       "name": "Basic Foundations of Artificial Intelligence",
-      "description": null,
+      "description": "Introduces AI cognition, reasoning and symbolic models through Python tools and exercises.",
       "prerequisites": null,
       "credits": 3,
       "credit_unit": "semester_hours",
       "category": "ai_ml",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-official",
-      "url": "https://catalog.njit.edu/search/?P=DS%20110",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-computing",
+      "url": "https://catalog.njit.edu/undergraduate/computing-sciences/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-computing"
+        ],
+        "locator": "DS 110 complete course description",
+        "rationale": "Introduces AI cognition, reasoning and symbolic models through Python tools and exercises.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-econ-266",
       "code": "ECON 266",
       "name": "Macroeconomics",
-      "description": null,
-      "prerequisites": null,
+      "description": "Studies macroeconomic models of national income, production, employment, banking and economic policy.",
+      "prerequisites": "Students with ECON 201 credit cannot subsequently receive ECON 266 credit.",
       "credits": 3,
       "credit_unit": "semester_hours",
       "category": "applications",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-official",
-      "url": "https://catalog.njit.edu/search/?P=ECON%20266",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management",
+      "url": "https://catalog.njit.edu/undergraduate/management/management/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management"
+        ],
+        "locator": "ECON 266 complete course description",
+        "rationale": "Studies macroeconomic models of national income, production, employment, banking and economic policy.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-engl-102",
       "code": "ENGL 102",
       "name": "English Composition: Introduction to Writing for Research",
-      "description": null,
-      "prerequisites": null,
+      "description": "Develops research-based argument, source synthesis and documented written communication.",
+      "prerequisites": "Prerequisites: ENGL 100 with a grade of C or higher or ENGL 101 with a grade of C or higher.",
       "credits": 3,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-official",
-      "url": "https://catalog.njit.edu/search/?P=ENGL%20102",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-humanities",
+      "url": "https://catalog.njit.edu/undergraduate/science-liberal-arts/humanities-and-social-sciences/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-humanities"
+        ],
+        "locator": "ENGL 102 complete course description",
+        "rationale": "Develops research-based argument, source synthesis and documented written communication.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-mgmt-116",
       "code": "MGMT 116",
       "name": "Quantitative Analysis Appl Bus",
-      "description": null,
+      "description": "Centers on statistical concepts, optimization models, analysis and interpretation; business cases supply the application domain.",
       "prerequisites": null,
       "credits": 4,
       "credit_unit": "semester_hours",
-      "category": "applications",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-official",
-      "url": "https://catalog.njit.edu/search/?P=MGMT%20116",
+      "category": "mathematics",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management",
+      "url": "https://catalog.njit.edu/undergraduate/management/management/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management"
+        ],
+        "locator": "MGMT 116 complete course description",
+        "rationale": "Centers on statistical concepts, optimization models, analysis and interpretation; business cases supply the application domain.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-mgmt-290",
       "code": "MGMT 290",
       "name": "Business Law I",
-      "description": null,
+      "description": "Teaches legal principles, contracts, courts, dispute resolution and commercial legal reasoning.",
       "prerequisites": null,
       "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "applications",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-official",
-      "url": "https://catalog.njit.edu/search/?P=MGMT%20290",
+      "category": "human_context",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management",
+      "url": "https://catalog.njit.edu/undergraduate/management/management/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management"
+        ],
+        "locator": "MGMT 290 complete course description",
+        "rationale": "Teaches legal principles, contracts, courts, dispute resolution and commercial legal reasoning.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-mis-245",
       "code": "MIS 245",
       "name": "Introduction to Management Information Systems",
-      "description": null,
+      "description": "Combines information-system technologies, analysis/design and organizational information-management practice.",
       "prerequisites": null,
       "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "applications",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-official",
-      "url": "https://catalog.njit.edu/search/?P=MIS%20245",
+      "category": "other",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management",
+      "url": "https://catalog.njit.edu/undergraduate/management/management/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management"
+        ],
+        "locator": "MIS 245 complete course description",
+        "rationale": "Combines information-system technologies, analysis/design and organizational information-management practice.",
+        "candidate_categories": [
+          "systems",
+          "foundations",
+          "applications"
+        ]
+      }
     },
     {
       "id": "njit-mgmt-216",
       "code": "MGMT 216",
       "name": "Business Data Analytics",
-      "description": null,
-      "prerequisites": null,
+      "description": "Centers on statistical inference, regression, forecasting, simulation and decision analysis; software supports these methods.",
+      "prerequisites": "Prerequisites: MGMT 116 or MATH 105 .",
       "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "applications",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-official",
-      "url": "https://catalog.njit.edu/search/?P=MGMT%20216",
+      "category": "mathematics",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management",
+      "url": "https://catalog.njit.edu/undergraduate/management/management/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management"
+        ],
+        "locator": "MGMT 216 complete course description",
+        "rationale": "Centers on statistical inference, regression, forecasting, simulation and decision analysis; software supports these methods.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-mgmt-232",
       "code": "MGMT 232",
       "name": "Business with Big Data",
-      "description": null,
-      "prerequisites": null,
+      "description": "Surveys big-data infrastructure, analytical tools, business decision use and ethical considerations without a stated primary subject.",
+      "prerequisites": "Prerequisites: MGMT 190 , MGMT 116 .",
       "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "applications",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-official",
-      "url": "https://catalog.njit.edu/search/?P=MGMT%20232",
+      "category": "other",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management",
+      "url": "https://catalog.njit.edu/undergraduate/management/management/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management"
+        ],
+        "locator": "MGMT 232 complete course description",
+        "rationale": "Surveys big-data infrastructure, analytical tools, business decision use and ethical considerations without a stated primary subject.",
+        "candidate_categories": [
+          "systems",
+          "applications",
+          "human_context"
+        ]
+      }
     },
     {
       "id": "njit-fin-315",
       "code": "FIN 315",
       "name": "Fundamentals of Corporate Finance",
-      "description": null,
+      "description": "Studies corporate investment, financing, valuation and risk-management decisions.",
       "prerequisites": null,
       "credits": 3,
       "credit_unit": "semester_hours",
       "category": "applications",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-official",
-      "url": "https://catalog.njit.edu/search/?P=FIN%20315",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management",
+      "url": "https://catalog.njit.edu/undergraduate/management/management/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management"
+        ],
+        "locator": "FIN 315 complete course description",
+        "rationale": "Studies corporate investment, financing, valuation and risk-management decisions.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-is-392",
       "code": "IS 392",
       "name": "AI-Driven Text Analytics",
-      "description": null,
-      "prerequisites": null,
+      "description": "Teaches NLP, text mining, classification, topic models and LLM methods for unstructured text.",
+      "prerequisites": "Prerequisites: CS 100 or DS 100 , and IS 331 or CS 331 or MIS 385 .",
       "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "applications",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-official",
-      "url": "https://catalog.njit.edu/search/?P=IS%20392",
+      "category": "ai_ml",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-information-systems",
+      "url": "https://catalog.njit.edu/undergraduate/computing-sciences/information-systems/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-information-systems"
+        ],
+        "locator": "IS 392 complete course description",
+        "rationale": "Teaches NLP, text mining, classification, topic models and LLM methods for unstructured text.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-mrkt-330",
       "code": "MRKT 330",
       "name": "Principles of Marketing",
-      "description": null,
-      "prerequisites": null,
+      "description": "Studies marketing strategy, segmentation, products, pricing, promotion and distribution.",
+      "prerequisites": "Prerequisites: MGMT 190 or MGMT 390 or departmental approval.",
       "credits": 3,
       "credit_unit": "semester_hours",
       "category": "applications",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-official",
-      "url": "https://catalog.njit.edu/search/?P=MRKT%20330",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management",
+      "url": "https://catalog.njit.edu/undergraduate/management/management/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management"
+        ],
+        "locator": "MRKT 330 complete course description",
+        "rationale": "Studies marketing strategy, segmentation, products, pricing, promotion and distribution.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-om-375",
       "code": "OM 375",
       "name": "Business Operations Management and Analytics",
-      "description": null,
-      "prerequisites": null,
+      "description": "Centers on deterministic/probabilistic decision models and simulation techniques for operational problems.",
+      "prerequisites": "Prerequisite: MGMT 216 .",
       "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "applications",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-official",
-      "url": "https://catalog.njit.edu/search/?P=OM%20375",
+      "category": "mathematics",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management",
+      "url": "https://catalog.njit.edu/undergraduate/management/management/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management"
+        ],
+        "locator": "OM 375 complete course description",
+        "rationale": "Centers on deterministic/probabilistic decision models and simulation techniques for operational problems.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-hrm-301",
       "code": "HRM 301",
       "name": "Organizational Behavior",
-      "description": null,
-      "prerequisites": null,
+      "description": "Studies individual/group behavior, motivation, culture, power and organizational relationships.",
+      "prerequisites": "Restrictions: Junior or Senior standing.",
       "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "applications",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-official",
-      "url": "https://catalog.njit.edu/search/?P=HRM%20301",
+      "category": "human_context",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management",
+      "url": "https://catalog.njit.edu/undergraduate/management/management/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management"
+        ],
+        "locator": "HRM 301 complete course description",
+        "rationale": "Studies individual/group behavior, motivation, culture, power and organizational relationships.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-mgmt-399",
       "code": "MGMT 399",
       "name": "Career Planning",
-      "description": null,
-      "prerequisites": null,
+      "description": "Develops practical career preparation and transition-to-work skills.",
+      "prerequisites": "Restrictions: MTSM majors Junior or Senior standing.",
       "credits": 1,
       "credit_unit": "semester_hours",
       "category": "applications",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-official",
-      "url": "https://catalog.njit.edu/search/?P=MGMT%20399",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management",
+      "url": "https://catalog.njit.edu/undergraduate/management/management/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management"
+        ],
+        "locator": "MGMT 399 complete course description",
+        "rationale": "Develops practical career preparation and transition-to-work skills.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-mis-385",
       "code": "MIS 385",
       "name": "Database Systems for Managers",
-      "description": null,
-      "prerequisites": null,
+      "description": "Centers on relational databases, SQL, governance, security and database-system management.",
+      "prerequisites": "Prerequisites: CS 103 or CS 100 or CS 106 or DS 100 and MIS 245 .",
       "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "applications",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-official",
-      "url": "https://catalog.njit.edu/search/?P=MIS%20385",
+      "category": "systems",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management",
+      "url": "https://catalog.njit.edu/undergraduate/management/management/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management"
+        ],
+        "locator": "MIS 385 complete course description",
+        "rationale": "Centers on relational databases, SQL, governance, security and database-system management.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-phil-310",
       "code": "PHIL 310",
       "name": "Logic",
-      "description": null,
-      "prerequisites": null,
+      "description": "Combines informal reasoning and communication with formal symbolic logic, truth tables, proofs and quantification.",
+      "prerequisites": "Prerequisites: ENGL 102 with a grade of C or higher, and one History and Humanities GER 200 level course with a grade of C or higher. The course description says this satisfies the three-credit 300-level History and Humanities GER; it does not specify permission to reuse the same credits for additional plan allocations.",
       "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "human_context",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-official",
-      "url": "https://catalog.njit.edu/search/?P=PHIL%20310",
+      "category": "other",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-humanities",
+      "url": "https://catalog.njit.edu/undergraduate/science-liberal-arts/humanities-and-social-sciences/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-humanities"
+        ],
+        "locator": "PHIL 310 complete course description",
+        "rationale": "Combines informal reasoning and communication with formal symbolic logic, truth tables, proofs and quantification.",
+        "candidate_categories": [
+          "human_context",
+          "mathematics"
+        ]
+      }
     },
     {
       "id": "njit-fin-320",
       "code": "FIN 320",
       "name": "Fin Data Analytics",
-      "description": null,
-      "prerequisites": null,
+      "description": "Explicitly divides instruction between programming fundamentals and analytical practice in finance, without one defensible primary subject.",
+      "prerequisites": "Prerequisites: CS 100 or CS 103 or CS 106 , MATH 333 or MGMT 216 , and FIN 218 .",
       "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "applications",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-official",
-      "url": "https://catalog.njit.edu/search/?P=FIN%20320",
+      "category": "other",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management",
+      "url": "https://catalog.njit.edu/undergraduate/management/management/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management"
+        ],
+        "locator": "FIN 320 complete course description",
+        "rationale": "Explicitly divides instruction between programming fundamentals and analytical practice in finance, without one defensible primary subject.",
+        "candidate_categories": [
+          "foundations",
+          "applications"
+        ]
+      }
     },
     {
       "id": "njit-is-465",
       "code": "IS 465",
       "name": "Data Analytics for Business Information Systems",
-      "description": null,
-      "prerequisites": null,
+      "description": "Explicitly offers a broad shallow survey of statistics, database/warehouse systems, visualization, mining and optimization rather than a primary subfield.",
+      "prerequisites": "Prerequisites: ( CS 100 or DS 100 ), and ( MATH 105 or MATH 120 or MATH 225 or MATH 244 or MATH 279 or MATH 305 or MATH 333 or IE 331 or ECE 321 or MGMT 116 or MNET 315 ), and ( CS 331 or IS 331 or MIS 385 ).",
       "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "applications",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-official",
-      "url": "https://catalog.njit.edu/search/?P=IS%20465",
+      "category": "other",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-information-systems",
+      "url": "https://catalog.njit.edu/undergraduate/computing-sciences/information-systems/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-information-systems"
+        ],
+        "locator": "IS 465 complete course description",
+        "rationale": "Explicitly offers a broad shallow survey of statistics, database/warehouse systems, visualization, mining and optimization rather than a primary subfield.",
+        "candidate_categories": [
+          "mathematics",
+          "systems",
+          "ai_ml"
+        ]
+      }
     },
     {
       "id": "njit-mgmt-316",
       "code": "MGMT 316",
       "name": "Business Research Methods",
-      "description": null,
-      "prerequisites": null,
+      "description": "Teaches business research design, data collection, analysis and management reporting across business fields.",
+      "prerequisites": "Prerquisites: MGMT 216 , MIS 245 .",
       "credits": 3,
       "credit_unit": "semester_hours",
       "category": "applications",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-official",
-      "url": "https://catalog.njit.edu/search/?P=MGMT%20316",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management",
+      "url": "https://catalog.njit.edu/undergraduate/management/management/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management"
+        ],
+        "locator": "MGMT 316 complete course description",
+        "rationale": "Teaches business research design, data collection, analysis and management reporting across business fields.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-mgmt-322",
       "code": "MGMT 322",
       "name": "Cybersecurity Essentials for Business Leaders",
-      "description": null,
-      "prerequisites": null,
+      "description": "Teaches cybersecurity concepts, threats and defensive practices in organizational settings.",
+      "prerequisites": "Pre or Corequisites: HRM 301 , MIS 245 .",
       "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "applications",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-official",
-      "url": "https://catalog.njit.edu/search/?P=MGMT%20322",
+      "category": "systems",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management",
+      "url": "https://catalog.njit.edu/undergraduate/management/management/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management"
+        ],
+        "locator": "MGMT 322 complete course description",
+        "rationale": "Teaches cybersecurity concepts, threats and defensive practices in organizational settings.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-phil-335",
       "code": "PHIL 335",
       "name": "Ethical Issues in Business",
-      "description": null,
-      "prerequisites": null,
+      "description": "Examines ethical theories, rights, obligations and moral foundations of business.",
+      "prerequisites": "Prerequisites: ENGL 101 and ENGL 102 with a grade of C or higher; ENGL 102 may be taken concurrently as a corequisite.",
       "credits": 3,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-official",
-      "url": "https://catalog.njit.edu/search/?P=PHIL%20335",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-humanities",
+      "url": "https://catalog.njit.edu/undergraduate/science-liberal-arts/humanities-and-social-sciences/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-humanities"
+        ],
+        "locator": "PHIL 335 complete course description",
+        "rationale": "Examines ethical theories, rights, obligations and moral foundations of business.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-fin-410",
       "code": "FIN 410",
       "name": "Data Mining & Machine Learning",
-      "description": null,
-      "prerequisites": null,
+      "description": "Teaches data-mining and machine-learning concepts, methods, techniques and evaluation for financial data.",
+      "prerequisites": "Prerequisites: MATH 111 or MATH 135 , FIN 310 and FIN 320 .",
       "credits": 3,
       "credit_unit": "semester_hours",
       "category": "ai_ml",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-official",
-      "url": "https://catalog.njit.edu/search/?P=FIN%20410",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management",
+      "url": "https://catalog.njit.edu/undergraduate/management/management/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management"
+        ],
+        "locator": "FIN 410 complete course description",
+        "rationale": "Teaches data-mining and machine-learning concepts, methods, techniques and evaluation for financial data.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-mgmt-422",
       "code": "MGMT 422",
       "name": "Business Data Visualization and Storytelling",
-      "description": null,
-      "prerequisites": null,
+      "description": "Centers on presenting complex business information through visualization and storytelling; tools serve communication.",
+      "prerequisites": "Prerequisites: CS 100 , CS 103 or CS 106 , and MGMT 216 .",
       "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "applications",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-official",
-      "url": "https://catalog.njit.edu/search/?P=MGMT%20422",
+      "category": "human_context",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management",
+      "url": "https://catalog.njit.edu/undergraduate/management/management/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management"
+        ],
+        "locator": "MGMT 422 complete course description",
+        "rationale": "Centers on presenting complex business information through visualization and storytelling; tools serve communication.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-mgmt-435",
       "code": "MGMT 435",
       "name": "Business Intelligence with AI Techniques",
-      "description": null,
-      "prerequisites": null,
+      "description": "Teaches deep-learning fundamentals, model development, metrics and application to business intelligence.",
+      "prerequisites": "Restrictions: Senior Standing in MTSM.",
       "credits": 3,
       "credit_unit": "semester_hours",
       "category": "ai_ml",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-official",
-      "url": "https://catalog.njit.edu/search/?P=MGMT%20435",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management",
+      "url": "https://catalog.njit.edu/undergraduate/management/management/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management"
+        ],
+        "locator": "MGMT 435 complete course description",
+        "rationale": "Teaches deep-learning fundamentals, model development, metrics and application to business intelligence.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-mgmt-416",
       "code": "MGMT 416",
       "name": "Artificial Intelligence for Business Decisions",
-      "description": null,
-      "prerequisites": null,
+      "description": "Focuses on a manager\u2019s effective use of existing AI systems for business decisions, rather than primarily teaching AI algorithm development.",
+      "prerequisites": "Prerequisites: MIS 245 and MGMT 216 .",
       "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "ai_ml",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-official",
-      "url": "https://catalog.njit.edu/search/?P=MGMT%20416",
+      "category": "applications",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management",
+      "url": "https://catalog.njit.edu/undergraduate/management/management/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management"
+        ],
+        "locator": "MGMT 416 complete course description",
+        "rationale": "Focuses on a manager\u2019s effective use of existing AI systems for business decisions, rather than primarily teaching AI algorithm development.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-mgmt-432",
       "code": "MGMT 432",
       "name": "AI Strategy and Implementation for Business",
-      "description": null,
-      "prerequisites": null,
+      "description": "The team project combines AI application, implementation, project management and communication without a primary subject established.",
+      "prerequisites": "Restrictions: Senior Standing in MTSM.",
       "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "applications",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-official",
-      "url": "https://catalog.njit.edu/search/?P=MGMT%20432",
+      "category": "other",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management",
+      "url": "https://catalog.njit.edu/undergraduate/management/management/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management"
+        ],
+        "locator": "MGMT 432 complete course description",
+        "rationale": "The team project combines AI application, implementation, project management and communication without a primary subject established.",
+        "candidate_categories": [
+          "ai_ml",
+          "applications",
+          "human_context"
+        ]
+      }
     },
     {
       "id": "njit-com-200",
@@ -6587,7 +7004,12 @@
       "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-physics",
       "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-chemistry",
       "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-biology",
-      "new-jersey-institute-of-technology-business-with-ai-bs-degree-credit-definition"
+      "new-jersey-institute-of-technology-business-with-ai-bs-degree-credit-definition",
+      "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-management",
+      "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-computing",
+      "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-information-systems",
+      "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-humanities",
+      "new-jersey-institute-of-technology-business-with-ai-bs-degree-courses-mathematics"
     ],
     "sections": [
       "120-credit published plan",
@@ -6597,17 +7019,19 @@
       "GER minimum distribution and laboratory condition",
       "University graduation GPA, transfer/residency, external study, repetition and expiration rules",
       "Conditional science-option lecture/lab relationships in the current Physics, Chemistry and Biological Sciences course descriptions; 19 approved entries, nine option notes",
-      "Independent degree audit: university semester-credit definition and published GER choice roles; pool eligibility does not authorize course reuse"
+      "Independent degree audit: university semester-credit definition and published GER choice roles; pool eligibility does not authorize course reuse",
+      "31 of 32 fixed-course descriptions individually read through public department catalog pages; published prerequisites, restrictions and exact credits retained without turning preparation into extra fixed requirements"
     ],
     "unresolved_requirements": [
       "Degree-specific overlap/substitution rules remain unresolved: PHIL 310 appears both as a named degree requirement and in the GER 300+ approved pool; the reviewed pages do not explicitly authorize counting it in a second plan slot. Free-elective substitution limitations and any additional MTSM degree-wide graduation conditions need confirmation.",
       "Nine published NJIT science laboratory relationships are now mapped, including chemistry alternative lectures and BIOL 150 integrated laboratory. Remaining Rutgers-listed lecture/lab combinations and reconciliation of the R216 206 three-credit lab entry are not established by the inspected NJIT course blocks; no interchangeable-pair or credit correction is inferred."
     ],
     "metadata_gaps": [
-      "Most GER option descriptions, prerequisites, individual credits and normalized credit units remain unverified; blank source amounts are null.",
-      "Management course-search endpoints remain robots-disallowed. The school catalog provides direct course descriptions and restrictions, but those course metadata have not yet been curated into this policy-only update.",
+      "Most GER option descriptions, prerequisites and individual credit amounts remain unverified; blank source amounts are null. The university-wide semester-hour unit is independently verified.",
+      "Blocked management search popups were not retried. Independent public department catalog sections now supply 31 fixed-course descriptions and exact enrollment conditions; FYS SEM remains unknown.",
       "Public course sites and example syllabi remain unverified.",
-      "Explicit prerequisite/corequisite clauses are observed for the 19 reviewed science options where stated; absent clauses remain null. Other course descriptions/prerequisites are not exhaustively mapped."
+      "Explicit prerequisite/corequisite clauses are observed for the 19 reviewed science options where stated; absent clauses remain null. Other course descriptions/prerequisites are not exhaustively mapped.",
+      "FYS SEM remains subject-unreviewed with its explicit zero-credit plan amount; no standalone description was verified. GER option descriptions remain a separate incomplete classification inventory."
     ]
   }
 }

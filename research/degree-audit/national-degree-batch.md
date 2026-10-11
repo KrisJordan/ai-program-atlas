@@ -217,3 +217,16 @@ requirements but supplies no list; no other major's courses are imported.
 Both full-degree audits remain in progress while policy applicability and exact
 engineering list evidence remain unfinished. No completion is inferred from
 successful source replay or from finishing this descriptive subset.
+
+
+## NJIT fixed-course descriptions
+
+Thirty-one of 32 fixed records now have actual description reviews from five
+public department chapters. Twenty-four have a defensible primary subject and
+seven remain mixed; FYS SEM is unreviewed/unknown. The profile still contains 32
+fixed records and 349 named options; GER choices are not a student workload.
+Math/stats methods, database systems, AI methods, manager-facing AI use and
+communication are distinguished by the actual descriptions. Eligibility and
+credit restrictions remain separate from fixed degree obligations, and blocked
+search popups were not retried. Existing overlap/substitution/Rutgers evidence
+questions and GER subject review are not falsely certified by this subset.

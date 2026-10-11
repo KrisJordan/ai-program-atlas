@@ -34,7 +34,9 @@ def test_njit_seed_explicit_pools_no_duplicate_required_course():
  assert len(rules[PID+'-njit-natural']['course_ids'])==36
  assert courses['njit-r216-206']['credits']==3
  assert courses['njit-com-200']['credits'] is None
- assert courses['njit-phil-310']['source_id']==PID+'-official'
+ assert courses['njit-phil-310']['source_id']==PID+'-courses-humanities'
+ # Description enrichment preserves the same required identity and its plan provenance.
+ assert any('njit-phil-310' in r['course_ids'] and r['source_id']==PID+'-official' for r in d['requirements'])
  assert 'njit-phil-310' in rules[PID+'-njit-ger-300']['course_ids']
  assert not any('*' in c['code'] for c in courses.values())
  assert d['curriculum_status']=='partial' and d['curriculum_audit']['unresolved_requirements']

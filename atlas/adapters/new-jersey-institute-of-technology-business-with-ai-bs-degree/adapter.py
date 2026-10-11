@@ -91,15 +91,6 @@ def parse(html):
             if title is None or not re.fullmatch(r"[A-Z]+ (\d+|SEM)", code):
                 raise ValueError("Unrecognized course row")
             cid = "njit-" + code.lower().replace(" ", "-")
-            category = (
-                "ai_ml"
-                if any(k in text(title).lower() for k in ["artificial", " ai", "machine learning"])
-                else "mathematics"
-                if code.startswith("MATH")
-                else "human_context"
-                if code.startswith(("PHIL", "ENGL"))
-                else "applications"
-            )
             courses.append(
                 {
                     "id": cid,
@@ -109,7 +100,7 @@ def parse(html):
                     "prerequisites": None,
                     "credits": credits,
                     "credit_unit": "semester_hours",
-                    "category": category,
+                    "category": "other",
                     "source_id": SOURCE_ID,
                     "url": urljoin(SOURCES[0], anchor["href"]).replace(" ", "%20"),
                     "public_site": None,
@@ -164,4 +155,8 @@ SOURCES = tuple(SOURCE_PARSERS)
 
 from atlas.adapters.njit_science_options import SOURCE_PARSERS as SCIENCE_PARSERS
 SOURCE_PARSERS.update(SCIENCE_PARSERS)
+SOURCES = tuple(SOURCE_PARSERS)
+
+from atlas.adapters.njit_required_course_reviews import SOURCE_PARSERS as REQUIRED_PARSERS
+SOURCE_PARSERS.update(REQUIRED_PARSERS)
 SOURCES = tuple(SOURCE_PARSERS)

@@ -433,3 +433,46 @@ def test_psu_college_policy_observations_do_not_leak_between_degrees():
  summary=next(r['summary'] for r in p['requirements'] if r['id']==ist+'-ist-faq-exemption')
  assert 'exempt' in summary and 'distinct' in summary
  assert 'IST 495' not in {c['code'] for c in p['courses']}
+
+NJIT_REQUIRED=set('ACCT115 DS100 ENGL101 MATH135 MGMT190 FYSSEM DS110 ECON266 ENGL102 MGMT116 MGMT290 MIS245 MGMT216 MGMT232 FIN315 IS392 MRKT330 OM375 HRM301 MGMT399 MIS385 PHIL310 FIN320 IS465 MGMT316 MGMT322 PHIL335 FIN410 MGMT422 MGMT435 MGMT416 MGMT432'.split())
+
+
+def test_njit_required_subjects_and_enrollment_roles():
+ from atlas.adapters import njit_required_course_reviews as m
+ p=json.loads(Path('data/programs/'+m.PID+'.json').read_text());courses={c['code'].replace(' ',''):c for c in p['courses']}
+ assert len(NJIT_REQUIRED)==32
+ profile=requirement_profile(p)
+ assert profile['required']['count']==32 and profile['options']['count']==349
+ assert profile['required']['classification']=={'reviewed':24,'mixed':7,'unclassified':0,'unreviewed':1}
+ assert courses['MGMT116']['category']=='mathematics'
+ assert courses['MGMT216']['category']=='mathematics'
+ assert courses['OM375']['category']=='mathematics'
+ assert courses['MIS385']['category']=='systems'
+ assert courses['MGMT422']['category']=='human_context'
+ assert courses['MGMT416']['category']=='applications'
+ assert courses['FIN410']['category']=='ai_ml'
+ assert courses['PHIL310']['category_review']['status']=='mixed'
+ assert courses['FYSSEM']['credits']==0 and courses['FYSSEM']['category']=='other'
+ assert 'category_review' not in courses['FYSSEM']
+ assert 'No prerequisites' in courses['DS100']['prerequisites']
+ assert courses['DS110']['prerequisites'] is None
+ assert 'FIN 218' in courses['FIN320']['prerequisites']
+ assert 'FIN 310' in courses['FIN410']['prerequisites']
+ assert 'FIN218' not in NJIT_REQUIRED and 'FIN310' not in NJIT_REQUIRED
+ assert 'concurrently' in courses['PHIL335']['prerequisites']
+
+
+def test_njit_required_course_guard_and_exact_conditions(monkeypatch):
+ from bs4 import BeautifulSoup
+ from atlas.adapters import njit_required_course_reviews as m
+ html='<div class="courseblock"><p class="courseblocktitle">MGMT 116. Example Quantitative Course. 4 credits, 5 contact hours (3;2;0).</p><p>Prerequisites: EX 100 or EX 200. Restrictions: Junior standing. Quantitative methods.</p></div>'
+ text=' '.join(BeautifulSoup(html,'html.parser').get_text(' ',strip=True).split())
+ monkeypatch.setattr(m,'SPEC',{'MGMT 116':dict(key='example',url='https://example.edu/course',digest=hashlib.sha256(text.encode()).hexdigest(),description='Quantitative methods.',category='mathematics')})
+ result=m.parse_courses(html,'example');c=result['courses'][0]
+ assert c['credits']==4  # Credits, not contact hours.
+ assert c['prerequisites']=='Prerequisites: EX 100 or EX 200. Restrictions: Junior standing.'
+ assert 'category_review' not in c and 'curriculum_status' not in result
+ with pytest.raises(ValueError,match='course changed'):
+  m.parse_courses(html.replace('EX 200','EX 201'),'example')
+ with pytest.raises(ValueError,match='missing or duplicate'):
+  m.parse_courses('<h1>Access denied</h1>','example')
