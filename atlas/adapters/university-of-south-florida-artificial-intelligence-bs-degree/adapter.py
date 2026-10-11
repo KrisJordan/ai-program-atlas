@@ -44,3 +44,12 @@ def parse_registrar_faq(html):
         rule('usf-ai-grade-forgiveness', 'Grade-forgiveness limits', sid, kind='note', summary='Both attempts must be at USF; the repeat grade must be at least D. At most three forgiveness uses are allowed, with one repeat per course. Academic-dishonesty FF grades are excluded, and forgiveness cannot change courses counted toward an already awarded bachelor’s degree. This does not establish AI-major passing grades.')])
 
 SOURCE_PARSERS = {SOURCES[0]: parse, DEGREEWORKS_URL: parse_degreeworks, FAQ_URL: parse_registrar_faq}
+
+
+# Absolute imports also support the project's standalone adapter loaders.
+from importlib import import_module
+_university = import_module('atlas.adapters.university-of-south-florida-artificial-intelligence-bs-degree.university_policies')
+_metadata = import_module('atlas.adapters.university-of-south-florida-artificial-intelligence-bs-degree.course_metadata')
+SOURCE_PARSERS.update(_university.PARSERS)
+SOURCE_PARSERS.update(_metadata.PARSERS)
+SOURCES += tuple(_university.PARSERS) + tuple(_metadata.PARSERS)
