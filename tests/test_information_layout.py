@@ -6,11 +6,12 @@ from tests.test_site import site_data  # noqa: F401
 
 def test_detail_section_order_and_requirement_disclosure(site_data):
     p = deepcopy(site_data['programs'][0])
-    p['requirements'] = [dict(id=f'r-{n}',parent_id=f'r-{n-1}' if n else None,title=f'Group {n}',kind='all',course_ids=[],summary='A rule') for n in range(4)]
+    p['requirements'] = [dict(id=f'r-{n}',parent_id=f'r-{n-1}' if n else None,title=f'Group {n}',kind='all',course_ids=[p['courses'][0]['id']] if n==3 else [],summary='A rule') for n in range(4)]
     soup=BeautifulSoup(program_page(p,'/nested/atlas/'),'html.parser')
     ids=[node.get('id') for node in soup.select('main > section[id]')]
     assert ids.index('outcomes') < ids.index('curriculum') < ids.index('requirements') < ids.index('sources') < ids.index('evidence-context')
-    assert soup.select_one('.cohort-context').find_previous_sibling('section')['id']=='curriculum'
+    assert soup.select_one('.cohort-context').find_previous_sibling('section')['id']=='courses'
+    assert soup.select_one('.cohort-context').find_next_sibling('section')['id']=='sources'
     assert soup.select_one('#evidence-context .evidence-notice')
     assert soup.select_one('#evidence-context .degree-audit-program')
     for n in range(4):

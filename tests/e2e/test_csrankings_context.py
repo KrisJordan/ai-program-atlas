@@ -28,6 +28,8 @@ def test_research_context_direct_keyboard_comparison_history(browser,research_si
     try:
         assert page.goto(research_site+'programs/test-ai-0/').status==200
         panel=page.locator('#research-context')
+        assert panel.evaluate("node => node.previousElementSibling.classList.contains('cohort-context')")
+        assert panel.evaluate("node => node.nextElementSibling.id") == 'sources'
         expect(panel.locator('tbody tr')).to_have_count(6)
         expect(panel).to_contain_text('#175 of 197')
         expect(panel).to_contain_text('do not measure undergraduate teaching')

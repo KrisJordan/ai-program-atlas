@@ -51,13 +51,13 @@ def test_joint_collapse_ranges_filter_compare_history(page,site,tmp_path,site_da
 @pytest.mark.parametrize('width',[1440,390])
 def test_detail_drilldown_and_fragment_reveal(page,site,tmp_path,site_data,width):
     program=site_data['programs'][0]
-    program['requirements']=[dict(id=f'r-{n}',parent_id=f'r-{n-1}' if n else None,title=f'Group {n}',kind='all',course_ids=[],summary=f'Detail {n}') for n in range(4)]
+    program['requirements']=[dict(id=f'r-{n}',parent_id=f'r-{n-1}' if n else None,title=f'Group {n}',kind='all',course_ids=[program['courses'][0]['id']] if n==3 else [],summary=f'Detail {n}') for n in range(4)]
     build(site_data,tmp_path/'ai-program-atlas')
     page.set_viewport_size({'width':width,'height':900})
     page.goto(site+'programs/test-ai-0/')
     deep=page.locator('#requirement-r-2 > details')
     expect(deep).not_to_have_attribute('open','')
-    expect(deep.locator('summary .requirement-preview')).to_contain_text('Group 3')
+    expect(deep.locator(':scope > summary > .requirement-preview')).to_contain_text('Group 3')
     deep.locator(':scope > summary').focus();page.keyboard.press('Enter')
     expect(deep).to_have_attribute('open','')
     expect(page.locator('#requirement-r-3 > details')).not_to_have_attribute('open','')
@@ -65,4 +65,33 @@ def test_detail_drilldown_and_fragment_reveal(page,site,tmp_path,site_data,width
     expect(deep).to_have_attribute('open','')
     expect(page.locator('#requirement-r-3 > details')).to_have_attribute('open','')
     page.reload();expect(deep).to_have_attribute('open','')
+    assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
+
+
+@pytest.mark.parametrize('width',[1440,390])
+def test_readable_lists_grouped_notes_optional_fields_and_prerequisites(page,site,tmp_path,site_data,width):
+    from tests.test_requirement_readability import rule
+    program=site_data['programs'][0]
+    program['courses']=[dict(id=f'c{i}',code=f'CS {100+i}',name=f'Course title {i}',prerequisites='CS100 or instructor permission' if i==5 else None) for i in range(6)]
+    program['requirements']=[rule('policy',kind='note'),rule('root',title='Core'),rule('mid',parent='root'),rule('list',parent='mid',courses=[f'c{i}' for i in range(6)]),rule('nested-note',kind='note',parent='mid'),rule('optional',kind='note',title='Optional HASS field'),rule('optional-course',parent='optional',courses=['c0'])]
+    build(site_data,tmp_path/'ai-program-atlas')
+    page.set_viewport_size({'width':width,'height':900})
+    page.goto(site+'programs/test-ai-0/')
+    listing=page.locator('#requirement-list > details')
+    expect(listing).not_to_have_attribute('open','')
+    preview=listing.locator(':scope > summary > .requirement-preview')
+    for i in range(6):expect(preview).to_contain_text(f'Course title {i}')
+    expect(preview.locator('[role=listitem]')).to_have_count(6)
+    for key in ['notes-mid','other-top','optional-top']:
+        expect(page.locator(f'#requirements-group-{key} > details')).not_to_have_attribute('open','')
+    expect(page.locator('#course-c5').locator('..').locator('.prerequisite-titles')).to_contain_text('Course title 0')
+    page.goto(site+'programs/test-ai-0/#requirement-nested-note')
+    expect(page.locator('#requirements-group-notes-mid > details')).to_have_attribute('open','')
+    expect(page.locator('#requirement-nested-note > details')).to_have_attribute('open','')
+    page.reload();expect(page.locator('#requirement-nested-note > details')).to_have_attribute('open','')
+    page.goto(site+'programs/test-ai-0/')
+    optional=page.locator('#requirements-group-optional-top > details')
+    optional.locator(':scope > summary').focus();page.keyboard.press('Enter')
+    expect(optional).to_have_attribute('open','')
+    expect(page.get_by_role('heading',name='Optional HASS field',exact=True)).to_be_visible()
     assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')

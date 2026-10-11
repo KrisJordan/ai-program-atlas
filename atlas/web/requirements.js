@@ -7,7 +7,7 @@
     for (let node = target; node; node = node.parentElement) {
       if (node.tagName === 'DETAILS') node.open = true;
     }
-    const own = target.querySelector(':scope > details.requirement-disclosure');
+    const own = target.querySelector(':scope > details.requirement-disclosure, :scope > details.requirement-bundle-disclosure');
     if (own) own.open = true;
     requestAnimationFrame(() => target.scrollIntoView({block:'start'}));
   };

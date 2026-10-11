@@ -9,6 +9,7 @@ from pathlib import Path
 import re
 import shutil
 
+from atlas.course_references import reference_matcher, referenced_courses
 from atlas.curriculum_profile import requirement_profile
 from atlas.awards import major_award_buckets
 from atlas.rankings import institution_rank_context
@@ -609,20 +610,60 @@ def requirement_tree(p):
     course_map = {c["id"]: c for c in unique_courses(p)}
     ids = {r.get("id") for r in requirements}
     sources = {s.get('id'): s for s in p.get('sources', [])}
+    children_by_id = {}
+    for r in requirements:
+        children_by_id.setdefault(r.get('parent_id'), []).append(r)
     rendered = set()
+    course_branches = {}
+
+    def has_courses(r, seen=frozenset()):
+        rid = r.get('id')
+        if rid in seen:
+            return False
+        if rid not in course_branches:
+            course_branches[rid] = ((r.get('kind') != 'note' and bool(r.get('course_ids'))) or r.get('kind') in {'choose_courses', 'choose_credits', 'alternative'} or any(has_courses(child, seen | {rid}) for child in children_by_id.get(rid, [])))
+        return course_branches[rid]
+
+    def optional(r):
+        return bool(re.match(r'^\s*optional\b', r.get('title') or '', re.I))
+
+    def course_title(c):
+        return (c.get('name') or 'Course name not verified') + (' (' + c['code'] + ')' if c.get('code') else '')
+
+    def bundle(title, members, seen, depth, key):
+        if not members:
+            return ''
+        content = ''.join(render(r, seen, depth) for r in members)
+        return '<li class="requirement-bundle" id="requirements-group-' + esc(key) + '"><details class="requirement-bundle-disclosure"><summary><h3>' + esc(title) + '</h3><span class="requirement-rule">' + str(len(members)) + ' recorded branches · expand to inspect</span></summary><ul>' + content + '</ul></details></li>'
+
+    def render_level(nodes, seen, depth, root=False, parent='top'):
+        main, notes, other, options = [], [], [], []
+        for r in nodes:
+            if r.get('id') in seen or r.get('id') in rendered:
+                continue
+            if optional(r):
+                options.append(r)
+            elif root and not has_courses(r):
+                other.append(r)
+            elif r.get('kind') == 'note' or not has_courses(r):
+                notes.append(r)
+            else:
+                main.append(r)
+        return ''.join(render(r, seen, depth) for r in main) + bundle('Optional concentrations & fields', options, seen, depth, 'optional-' + parent) + bundle('Requirement notes', notes, seen, depth, 'notes-' + parent) + bundle('Other requirements', other, seen, depth, 'other-' + parent)
 
     def render(r, seen, depth=0):
         rid = r.get("id")
-        if rid in seen:
+        if rid in seen or rid in rendered:
             return ""
         seen = seen | {rid}
         rendered.add(rid)
         requirement_courses = [course_map[cid] for cid in dict.fromkeys(r.get("course_ids") or []) if cid in course_map]
         courses = "".join(f'<li><a href="#course-{esc(c["id"])}">{esc(c.get("code") or "Code unknown")} · {esc(c.get("name") or "Course name not verified")}</a></li>' for c in requirement_courses)
-        children = "".join(render(child, seen, depth + 1) for child in requirements if child.get("parent_id") == rid)
+        child_nodes = children_by_id.get(rid, [])
+        children = render_level(child_nodes, seen, depth + 1, parent=rid)
         selection = []
         if r.get("count") is not None:
-            noun = 'alternative' if r.get('kind') == 'alternative' else 'selection' if children else 'course'
+            noun = 'alternative' if r.get('kind') == 'alternative' else 'selection' if child_nodes else 'course'
             selection.append(f'{r["count"]} {noun}' + ('' if r['count'] == 1 else 's'))
         if r.get("credits") is not None:
             selection.append(f'{r["credits"]} {human(r.get("credit_unit"))}')
@@ -635,22 +676,33 @@ def requirement_tree(p):
         if r.get('component') in ('ai_core', 'domain', 'integration'):
             provenance_badges += badge({'ai_core': 'AI core', 'domain': 'Discipline', 'integration': 'Integration'}[r['component']])
         source_wording = '<details class="source-wording"><summary>Source wording</summary><blockquote>' + esc(r['source_text']) + '</blockquote></details>' if r.get('source_text') else ''
-        child_titles = [child.get('title') or 'Untitled group' for child in requirements if child.get('parent_id') == rid]
-        preview = '<span class="requirement-preview">Includes: ' + esc(' · '.join(child_titles[:4])) + (f' · +{len(child_titles) - 4} more groups' if len(child_titles) > 4 else '') + '</span>' if child_titles else ''
+        preview_titles = [course_title(c) for c in requirement_courses]
+        for child in child_nodes:
+            if not has_courses(child) or child.get('kind') == 'note' or optional(child):
+                continue
+            title = child.get('title') or 'Untitled group'
+            cc = [course_map[cid] for cid in child.get('course_ids', []) if cid in course_map]
+            if child.get('kind') == 'all' and len(cc) == 1 and title.strip().casefold() == (cc[0].get('code') or '').strip().casefold():
+                title = course_title(cc[0])
+            preview_titles.append(title)
+        # All-of lists retain every immediate title; choice pools are examples only.
+        shown = preview_titles if r.get('kind') == 'all' else preview_titles[:4]
+        preview = ''
+        if shown:
+            preview_label = 'Courses in this group' if r.get('kind') == 'all' else 'Options / branches include' if r.get('kind') != 'note' else 'Referenced courses / branches'
+            preview = '<span class="requirement-preview"><span class="requirement-preview-label">' + preview_label + '</span><span class="requirement-preview-list" role="list">' + ''.join('<span class="requirement-preview-item" role="listitem">' + esc(title) + '</span>' for title in shown) + '</span>' + ('<span class="requirement-preview-more">+' + str(len(preview_titles) - len(shown)) + ' more · expand for the full list</span>' if len(preview_titles) > len(shown) else '') + '</span>'
         rule = esc(operator + (' · ' + ' · '.join(selection) if selection else ''))
-        return f'''<li class="requirement" id="requirement-{esc(rid)}" data-requirement-depth="{depth}"><details class="requirement-disclosure" {"open" if depth < 2 else ""}><summary><h3 class="requirement-title">{esc(r.get('title'))}</h3><span class="requirement-rule">{rule}</span>{preview}</summary><div class="requirement-body"><div class="requirement-tags">{badge(operator)}{provenance_badges}</div><p>{esc(r.get('summary') or 'Requirement detail has not been extracted.')}</p>{source_wording}{course_list}{'<ul>' + children + '</ul>' if children else ''}{evidence}</div></details></li>'''
-
+        opened = depth < 2 and r.get('kind') != 'note' and has_courses(r) and not optional(r)
+        return f'''<li class="requirement" id="requirement-{esc(rid)}" data-requirement-depth="{depth}"><details class="requirement-disclosure" {"open" if opened else ""}><summary><h3 class="requirement-title">{esc(r.get('title'))}</h3><span class="requirement-rule">{rule}</span>{preview}</summary><div class="requirement-body"><div class="requirement-tags">{badge(operator)}{provenance_badges}</div><p>{esc(r.get('summary') or 'Requirement detail has not been extracted.')}</p>{source_wording}{course_list}{'<ul>' + children + '</ul>' if children else ''}{evidence}</div></details></li>'''
 
     roots = [r for r in requirements if not r.get("parent_id") or r.get("parent_id") not in ids]
     if not requirements:
         return '<p class="notice">Requirement structure has not yet been extracted. Consult the official catalog.</p>'
-    content = ''.join(render(r, set()) for r in roots)
+    content = render_level(roots, set(), 0, root=True)
     remaining = [r for r in requirements if r.get('id') not in rendered]
     if remaining:
         content += '<li class="notice">Some recorded groups have unresolved parent relationships. Their recorded rules are shown below; consult the source for their placement.</li>'
-        for r in remaining:
-            if r.get('id') not in rendered:
-                content += render(r, set())
+        content += render_level(remaining, set(), 0, root=True, parent='unresolved')
     return '<ul class="requirements">' + content + '</ul>'
 
 
@@ -702,7 +754,19 @@ def course_notes_markup(course):
     return f'<details class="course-notes"><summary>{label}<span class="sr-only"> for {esc(context)}</span></summary><ul>{items}</ul></details>'
 
 
-def program_page(p, base, family=None, research=None):
+def prerequisite_markup(course, matcher, program_id, base):
+    text = course.get('prerequisites')
+    if not text:
+        return 'Not recorded'
+    references = referenced_courses(text, matcher)
+    items = []
+    for reference in references:
+        href = ('#course-' if reference['program_id'] == program_id else base + 'programs/' + reference['program_id'] + '/#course-') + reference['id']
+        items.append('<li><a href="' + esc(href) + '">' + esc(reference['code']) + ' · ' + esc(reference['name']) + '</a></li>')
+    return '<p class="prerequisite-text">' + esc(text) + '</p>' + ('<span class="prerequisite-title-label">Referenced course titles</span><ul class="prerequisite-titles">' + ''.join(items) + '</ul>' if items else '')
+
+
+def program_page(p, base, family=None, research=None, institution_programs=()):
     institution = p.get("institution", {})
     courses = unique_courses(p)
     course_sources = {source['id']: source for source in p.get('sources', [])}
@@ -712,7 +776,8 @@ def program_page(p, base, family=None, research=None):
         first_text = external(first.get("evidence_url"), first.get("value")) + ' <small>' + esc(first.get("uncertainty") or first.get("precision") or "") + '</small>'
     links = ' <span aria-hidden="true">/</span> '.join(external(link.get("url"), link.get("label") or human(link.get("kind"))) for link in p.get("links", []))
     missing_credits = sum(c.get("credits") is None for c in courses)
-    rows = ''.join(f'''<tr><th scope="row" id="course-{esc(c['id'])}">{esc(c.get('code') or 'Unknown')}<span>{esc(c.get('name') or 'Course name not verified')}</span><p class="course-description">{esc(c.get('description') or 'Description not recorded.')}</p>{course_notes_markup(c)}</th><td>{course_category_markup(c, course_sources)}</td><td>{esc(c.get('credits'))}<small>{esc(human(c.get('credit_unit')))}</small></td><td>{esc(c.get('prerequisites') or 'Not recorded')}</td><td>{external(c.get('url'), 'Catalog')}{'<br>' + external(c.get('public_site'), 'Course site') if c.get('public_site') else ''}{'<br>' + external(c.get('syllabus'), 'Syllabus') if c.get('syllabus') else ''}</td></tr>''' for c in courses)
+    matcher = reference_matcher(p, institution_programs)
+    rows = ''.join(f'''<tr><th scope="row" id="course-{esc(c['id'])}">{esc(c.get('code') or 'Unknown')}<span>{esc(c.get('name') or 'Course name not verified')}</span><p class="course-description">{esc(c.get('description') or 'Description not recorded.')}</p>{course_notes_markup(c)}</th><td>{course_category_markup(c, course_sources)}</td><td>{esc(c.get('credits'))}<small>{esc(human(c.get('credit_unit')))}</small></td><td>{prerequisite_markup(c, matcher, p['id'], base)}</td><td>{external(c.get('url'), 'Catalog')}{'<br>' + external(c.get('public_site'), 'Course site') if c.get('public_site') else ''}{'<br>' + external(c.get('syllabus'), 'Syllabus') if c.get('syllabus') else ''}</td></tr>''' for c in courses)
     sources = ''.join(f'''<li id="source-{esc(s.get('id'))}"><h3>{external(s.get('url'), s.get('title') or 'Official source')}</h3><p>{esc(s.get('locator') or 'Locator not recorded')}</p><dl class="source-meta"><div><dt>Retrieved</dt><dd>{esc(s.get('fetched_at') or 'Not recorded')}</dd></div><div><dt>Source date</dt><dd>{esc(s.get('source_date'))}</dd></div><div><dt>Catalog year</dt><dd>{esc(s.get('catalog_year'))}</dd></div><div><dt>Confidence</dt><dd>{esc(human(s.get('confidence')))}</dd></div></dl></li>''' for s in p.get('sources', []))
     notes = ''.join(f'<li>{esc(n)}</li>' for n in p.get('notes', []))
     rankings = institution.get('rankings') or []
@@ -732,11 +797,11 @@ def program_page(p, base, family=None, research=None):
 <nav class="section-nav" aria-label="Program sections"><a href="#outcomes">Program aims &amp; outcomes</a><a href="#curriculum">Curriculum</a><a href="#requirements">Requirements</a><a href="#courses">Course records</a><a href="#sources">Sources</a><a href="#evidence-context">Evidence &amp; review</a></nav>
 <section id="outcomes" class="detail-section"><span class="eyebrow">01 / PROGRAM AIMS &amp; OUTCOMES</span><h2>Program aims &amp; outcomes</h2><div class="outcome-grid"><div><h3>Source statements</h3><p class="section-note">Statements summarized from official evidence. Types distinguish learning outcomes, program aims and career pathways where recorded; unclassified statements do not imply a learning outcome.</p>{outcomes(p, 'source_stated')}</div><div><h3>Inferred taxonomy</h3><p class="section-note">Editorial classifications. These are interpretations, not claims made by the institution.</p>{outcomes(p, 'inferred_taxonomy')}</div></div></section>
 <section id="curriculum" class="detail-section"><span class="eyebrow">02 / CURRICULUM PROFILE</span><h2>Required curriculum &amp; elective options</h2>{category_chart(p)}</section>
-{ranking_context}{research_program_markup(research, base)}
 <section id="requirements" class="detail-section"><span class="eyebrow">03 / PROGRAM STRUCTURE</span><h2>Requirements & choices</h2><p class="section-note">Nested groups preserve course choices and alternatives. The profile uses the resolved rules above the course level. Follow each group’s rule: elective pools and alternative paths do not make every listed course compulsory.</p>{requirement_tree(p)}</section>
 
 {family_context(p, family, base)}
 <section id="courses" class="detail-section"><span class="eyebrow">04 / COURSE RECORDS</span><h2>Inspect the building blocks</h2>{metadata_availability(p)}<p class="section-note">Credits retain their original units. “Not recorded” means the atlas lacks evidence; it does not mean a course has no prerequisites.</p><div class="table-scroll" role="region" aria-label="Course records" tabindex="0"><table class="course-table"><thead><tr><th scope="col">Course</th><th scope="col">Category</th><th scope="col">Credits</th><th scope="col">Prerequisites</th><th scope="col">Evidence</th></tr></thead><tbody>{rows}</tbody></table></div>{'<p class="notice">No course records extracted yet.</p>' if not courses else ''}</section>
+{ranking_context}{research_program_markup(research, base)}
 <section id="sources" class="detail-section"><span class="eyebrow">05 / THE PAPER TRAIL</span><h2>Sources & provenance</h2><ol class="sources">{sources}</ol></section>
 <section id="evidence-context" class="detail-section"><h2>Evidence &amp; review status</h2><div class="notice evidence-notice"><strong>Read the evidence in context.</strong><p>Verification: {esc(human(p.get('verification_status')))}. {missing_credits} of {len(courses)} course records have unknown credits. Unknown values are not zero. Recorded course credits must not be added to estimate degree requirements.</p><p class="curriculum-scope">{esc(curriculum_scope(p))}</p><p>First offered: {first_text}</p>{'<ul>' + notes + '</ul>' if notes else ''}</div>{degree_audit_program(p)}</section>'''
     return shell(p.get("title", "Program"), body, base)
@@ -895,8 +960,13 @@ def build(data: dict, output: Path, base_path: str = '/ai-program-atlas/') -> No
     family_map = {f['id']: dict(f) for f in data.get('families', [])}
     for family in family_map.values():
         family['_variant_labels'] = [(p['id'], (p.get('family') or {}).get('variant_label') or p.get('title')) for p in programs if p['id'] in family.get('variant_ids', [])]
+    institution_programs = {}
     for program in programs:
-        pages[f'programs/{program["id"]}/index.html'] = program_page(program, base, family_map.get((program.get('family') or {}).get('id')), institution_context(data, (program.get('institution') or {}).get('id')))
+        institution_id = (program.get('institution') or {}).get('id')
+        if institution_id:
+            institution_programs.setdefault(institution_id, []).append(program)
+    for program in programs:
+        pages[f'programs/{program["id"]}/index.html'] = program_page(program, base, family_map.get((program.get('family') or {}).get('id')), institution_context(data, (program.get('institution') or {}).get('id')), institution_programs.get((program.get('institution') or {}).get('id'), []))
     for relative, content in pages.items():
         target = output / relative
         target.parent.mkdir(parents=True, exist_ok=True)
