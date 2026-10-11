@@ -68,7 +68,7 @@ def test_curated_new_records_and_adapter_sources(pid):
     a=importlib.import_module('atlas.adapters.'+pid+'.adapter')
     assert a.SOURCES[0]==p['sources'][0]['url']
     assert p['program_kind']=='concentration' and p['curriculum_status']=='partial'
-    assert p['first_offered'] is None and p['catalog_year'] is None
+    assert p['first_offered'] is None and p['catalog_year']=='2026-2027'
     assert p['curriculum_audit']['unresolved_requirements'] and p['curriculum_audit']['metadata_gaps']
     assert not p['outcomes']
     with pytest.raises(ValueError): a.parse('<div id="app">Loading catalog</div>')
