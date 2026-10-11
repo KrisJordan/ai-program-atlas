@@ -67,3 +67,7 @@ Criminology international affairs and public policy options description review (
 ## History Africana and sociology alternatives descriptions — 2026-10-11
 
 History Africana and sociology alternatives description review (2026-10-11): 43 existing course observations gain original concise summaries of their official 2026–2027 descriptions. Offering variability, course activities and permission conditions retain their stated scope. Requirement choices, credits, preparation fields and public resource links remain unchanged. Live subject parsers require the reviewed evidence phrase in the scoped course description; unsupported summaries return null. No seed replay or freshness certification.
+
+## Anthropology languages and regional alternatives descriptions — 2026-10-11
+
+Anthropology languages and regional alternatives description review (2026-10-11): 27 existing course observations gain original concise summaries of their official 2026–2027 descriptions. Offering variability, course activities and permission conditions retain their stated scope. Requirement choices, credits, preparation fields and public resource links remain unchanged. Live subject parsers require the reviewed evidence phrase in the scoped course description; unsupported summaries return null. No seed replay or freshness certification.

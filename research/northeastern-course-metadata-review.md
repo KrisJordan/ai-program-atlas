@@ -255,3 +255,12 @@ Reviewed the official HIST, AFCS and SOCL descriptions for historical and region
 This batch reviewed 51 distinct source descriptions and added **55 description fields across 6 variants**, bringing the total to **1561 of1,593 course observations**. The exact remaining inventory now contains **32 accessible unreviewed observations across 30 codes**. All source timestamps remain the actual catalog fetch times. All requirement graphs, credit amounts, preparation fields and public-resource links remain unchanged.
 
 Validation: **149 Northeastern-focused tests passed**; all23 temporary ingest/repeat/export/build/integrity checks passed. All9 affected source registrations succeeded twice with zero repeat candidates/source changes. The queue integrity test verifies its counts and exact code/program membership against the concrete records.
+
+## Anthropology languages and regional alternatives — 2026-10-11
+
+Reviewed every remaining ANTH, ARAB, ASNS, DEAF, ENGL, FRNH, JPNS, LACS, SPNS and WMNS course block in the finite published inventory. Language of instruction is retained only where explicit, with a change test demonstrating that a Spanish-medium summary is not replayed after an English-medium revision. Anthropological and regional descriptions remain analyses of cultures rather than generalizations about populations. The accessible description queue is now exhausted for the existing 1,593 observations; no claim is made about future courses or unreviewed public teaching resources. Removed a stale test that required missing descriptions to persist forever; synthetic changed-source and missing-prerequisite tests still require unknown values when evidence is absent.
+
+
+This batch reviewed 30 distinct source descriptions and added **32 description fields across 4 variants**, bringing the total to **1593 of1,593 course observations**. The exact remaining inventory now contains **0 accessible unreviewed observations across 0 codes**. All source timestamps remain the actual catalog fetch times. All requirement graphs, credit amounts, preparation fields and public-resource links remain unchanged.
+
+Validation: **150 Northeastern-focused tests passed**; all23 temporary ingest/repeat/export/build/integrity checks passed. All12 affected source registrations succeeded twice with zero repeat candidates/source changes. The queue integrity test verifies its counts and exact code/program membership against the concrete records.

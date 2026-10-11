@@ -278,7 +278,7 @@ def test_all_ne_family_course_records_have_independent_subject_catalog_provenanc
     import json
     from pathlib import Path
     from atlas.scrape import adapters
-    root=Path(__file__).resolve().parents[1];registered=adapters();variants=0;unknown=0;zeros=0
+    root=Path(__file__).resolve().parents[1];registered=adapters();variants=0;zeros=0
     for path in (root/'data/programs').glob('northeastern-*.json'):
         p=json.loads(path.read_text())
         if p.get('family',{}).get('id')!='northeastern-ai-combined-degrees':continue
@@ -292,9 +292,9 @@ def test_all_ne_family_course_records_have_independent_subject_catalog_provenanc
             assert c['credit_unit']=='semester_hours'
             if c['credits'] is None:
                 assert any(n.startswith(c['code']+' subject catalog credit options:') for n in p['notes'])
-            unknown+=c['description'] is None;zeros+=c['credits']==0
+            zeros+=c['credits']==0
         assert p['curriculum_status']=='partial' and p['curriculum_audit']['unresolved_requirements']
-    assert variants==23 and unknown>0 and zeros>0
+    assert variants==23 and zeros>0
 
 
 def test_partner_practicum_summary_requires_current_prose_and_emits_no_program_outcome():
@@ -404,3 +404,10 @@ def test_same_title_africa_courses_keep_different_published_periods():
         summaries.append(parser(html)['courses'][0]['description'])
     assert 'mid-nineteenth' in summaries[0] and 'up to 1000' in summaries[1]
     assert summaries[0]!=summaries[1]
+
+
+def test_language_of_instruction_summary_requires_own_catalog_statement():
+    html=page('<div class="courseblock"><p class="courseblocktitle">SPNS 3240. Social Justice in Latin American Film. (4 Hours)</p><p class="cb_desc">Analyzes contemporary cinema. Conducted in Spanish.</p></div>',heading='Spanish (SPNS)')
+    parser=register_subject_sources('test-program',{'SPNS':['SPNS 3240']})['https://catalog.northeastern.edu/course-descriptions/spns/']
+    assert 'taught in Spanish' in parser(html)['courses'][0]['description']
+    assert parser(html.replace('Conducted in Spanish','Conducted in English'))['courses'][0]['description'] is None
