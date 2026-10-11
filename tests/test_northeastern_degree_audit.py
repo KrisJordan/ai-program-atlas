@@ -499,3 +499,28 @@ def test_psychology_nested_behavior_choice_and_nontransferable_lab_stay_separate
     lab=nodes[pid+'-req-psychology-laboratory-course-choice']
     assert lab['count']==1 and 'may not be fulfilled via transfer credit' in lab['summary']
     assert len(p['courses'])==62 and all('category_review' in c for c in p['courses'])
+
+
+@pytest.mark.parametrize('code,expected', [('BINF 6200','foundations'),('BNSC 1000','other'),('PT 5410','applications'),('PT 5411','applications'),('PSYC 3506','applications'),('PSYC 3510','applications'),('PSYC 4510','applications'),('PSYC 4570','applications')])
+def test_behavioral_neuroscience_subjects_preserve_biological_versus_software_scope(code,expected):
+    d=CATEGORY_DECISIONS[code]
+    assert category(code,d['name'],d['guard'])==expected
+    assert category(code,d['name'],'Unrelated changed content')=='other'
+    assert category(code,'Different course identity',d['guard'])=='other'
+
+
+def test_behavioral_manual_roles_keep_anatomy_bundle_and_advanced_nonreuse():
+    from atlas.families import resolve_program
+    from atlas.curriculum_profile import requirement_profile
+    pid='northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree'
+    p=json.loads((ROOT/'data/programs'/f'{pid}.json').read_text());f=json.loads((ROOT/'data/families/northeastern-ai-combined-degrees.json').read_text());resolved=resolve_program(p,f);profile=requirement_profile(resolved)
+    assert profile['required']['count']==23 and profile['options']['count']==49 and profile['unresolved']['count']==0
+    assert len(p['courses'])==72 and all('category_review'in c for c in p['courses'])
+    nodes={r['id']:r for r in resolved['requirements']}
+    pair=next(r for r in nodes.values() if set(r['course_ids'])=={pid+'-pt-5410',pid+'-pt-5411'})
+    assert pair['kind']=='all' and nodes[pair['parent_id']]['kind']=='alternative'
+    assert any('not taken to fulfill previous requirements' in r['summary'] and r['count']==2 for r in nodes.values())
+    assert sum(c['code']=='BIOL 5595' for c in p['courses'])==1
+    assert next(c for c in p['courses']if c['code']=='PT 5411')['credits']==1
+    assert next(c for c in p['courses']if c['code']=='BINF 6200')['category']=='foundations'
+    assert next(c for c in p['courses']if c['code']=='BINF 6310')['category_review']['status']=='mixed'

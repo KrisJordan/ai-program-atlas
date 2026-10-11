@@ -400,20 +400,152 @@
           "locator": "Exact conditional academic progression, major entry/home-change and graduation sections; current advising scope, not a catalog-year assignment.",
           "checked_at": "2026-10-11T03:31:07+00:00",
           "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/bnsc/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: BNSC 1000",
+          "checked_at": "2026-10-11T00:12:48+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/pt/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: PT 5410, PT 5411",
+          "checked_at": "2026-10-11T00:12:49+00:00",
+          "access_status": "accessible"
         }
       ],
       "checks": {
         "degree_identity": "Official catalog identity and exact award/campus are retained as Artificial Intelligence and Behavioral Neuroscience, BS (Boston). Current official page retrieved; catalog/cohort scope remains explicit.",
-        "required_and_choices": "Individual structural source interpretation is in progress. Parser replay/family resolution alone is not independent validation. Existing all/choice/bundle graph retained at this checkpoint.",
-        "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
-        "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant.",
-        "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
-        "classification": "Current represented inventory: 72 course observations; 52 individually reviewed subject classifications, 3 explicitly mixed, 5 source-inspected but unclassified, and 12 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
-        "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
-        "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed. The shared declaration deadline, conditional change-major eligibility/advising and concentration catalog-year rules are now source-parsed course-free criteria; college-specific conditional transfer/progression mappings remain active. Current Khoury advising progression, graduation and conditional transfer/home-change rules now appear in eleven source-scoped course-free nodes. They remain conditional and do not infer assignment or override catalog/cohort scope. Other partner-college policy work continues."
+        "required_and_choices": "Full primary table independently transcribed: 23 fixed identities and 49 named options. The common ten computing/AI identities, eleven foundational science/psychology records, MATH 1341 and integrative CS 4100 are fixed. Neurobiology is BIOL 3405 or 5595; neuroanatomy is the complete PT 5410/5411 bundle or PSYC 3200. Statistics, writing, psychology elective and second integrative course remain choices. BIOL 5595 is counted once despite an additional advanced-choice occurrence. The two advanced courses may not duplicate earlier requirements; EECE 2323 inherits the optional 2322 branch.",
+        "elective_pools": "Two advanced behavioral-neuroscience courses totaling eight hours must not already fulfill earlier requirements; preserve that explicit nonreuse criterion. The separate four-hour upper-division option retains the exact named choices and BIOL/BNSC/CS/CY/DS/PSYC level ranges/exclusions. Linked BNSC 4991 and PSYC 3200 endpoints remain range context rather than extra mandatory records. Sixteen general-elective hours are explicit.",
+        "prerequisites": "All 72 represented source blocks and eligibility fields inspected. PT 5410/5411 reciprocally require one another and are already an intact optional bundle; the source graduate-admission alternative in PT 5410 does not establish undergraduate eligibility. PSYC 3506/3510 explicitly allow seeking instructor permission when prerequisites are unmet; permission is not automatic. BINF 6310 retains the separate prior/concurrent programming eligibility. These conditions do not promote prerequisite paths into fixed degree obligations.",
+        "credits_and_units": "The source requires 130 total semester hours and sixteen general-elective hours. Statistics is a four-to-five-hour choice; anatomy is a four-hour course versus a four-plus-one-hour bundle. Individual credits and group alternatives retain their scopes. GPA 2.000 applies to BIOL, BNSC, CHEM, ENVR, MATH, PHYS and PSYC, not silently all AI courses. CHEM 1163 is a known zero-hour fixed recitation.",
+        "classification": "Current represented inventory: 72 course observations; 63 individually reviewed subject classifications, 3 explicitly mixed, 6 source-inspected but unclassified, and 0 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
+        "family_composition": "All shared course/placement bindings verified against this individual panel. CS 4100 is a local fixed AI integration course, while PSYC 4540 or BINF 6200 is a separate local alternative. Mathematics-reasoning alternatives do not acquire CS 1800/1802. Optional EECE concurrency is locally sourced and does not change the family.",
+        "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed. The shared declaration deadline, conditional change-major eligibility/advising and concentration catalog-year rules are now source-parsed course-free criteria; college-specific conditional transfer/progression mappings remain active. Current Khoury advising progression, graduation and conditional transfer/home-change rules now appear in eleven source-scoped course-free nodes. They remain conditional and do not infer assignment or override catalog/cohort scope. Other partner-college policy work continues. Full Behavioral Neuroscience primary panel and represented content now reviewed. Public Science college-policy mapping remains active, separately from exact home-college/cohort designation; no whole-degree audit completion is claimed."
       },
-      "expected_profile": null,
-      "expected_course_ids": null,
+      "expected_profile": {
+        "required": {
+          "count": 23,
+          "categories": {
+            "foundations": 5,
+            "mathematics": 2,
+            "ai_ml": 2,
+            "systems": 2,
+            "human_context": 0,
+            "applications": 11,
+            "electives": 0,
+            "other": 1
+          }
+        },
+        "options": {
+          "count": 49,
+          "categories": {
+            "foundations": 1,
+            "mathematics": 6,
+            "ai_ml": 0,
+            "systems": 2,
+            "human_context": 5,
+            "applications": 27,
+            "electives": 0,
+            "other": 8
+          }
+        },
+        "unresolved": {
+          "count": 0,
+          "categories": {
+            "foundations": 0,
+            "mathematics": 0,
+            "ai_ml": 0,
+            "systems": 0,
+            "human_context": 0,
+            "applications": 0,
+            "electives": 0,
+            "other": 0
+          }
+        }
+      },
+      "expected_course_ids": {
+        "required": [
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-cs-2000",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-cs-2001",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-cs-2100",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-cs-2101",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-cs-3200",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-ds-3500",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-ds-3000",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-ds-4200",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-ds-4300",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-ds-4400",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-biol-1107",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-biol-1108",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-biol-2299",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-biol-2301",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-biol-2302",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-chem-1161",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-chem-1162",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-chem-1163",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-chem-2311",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-chem-2312",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-psyc-1101",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-math-1341",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-cs-4100"
+        ],
+        "options": [
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-cs-1200",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-bnsc-1000",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-inpr-1000",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-insc-1000",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-cs-1210",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-eesc-2000",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-math-1365",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-math-1465",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-envr-2500",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-envr-2501",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-psyc-2320",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-engw-1111",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-engw-1102",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-engw-3302",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-engw-3307",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-engw-3315",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-biol-3405",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-biol-5595",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-pt-5410",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-pt-5411",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-psyc-3200",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-psyc-3404",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-psyc-3406",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-psyc-3450",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-psyc-3451",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-psyc-3452",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-psyc-3464",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-psyc-3466",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-biol-3415",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-biol-3425",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-biol-3601",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-biol-3605",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-biol-4705",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-biol-4709",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-biol-5601",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-psyc-3506",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-psyc-3508",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-psyc-3510",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-psyc-4510",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-psyc-4512",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-psyc-4514",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-psyc-4570",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-psyc-4540",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-binf-6200",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-binf-6310",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-eece-2160",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-eece-2322",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-eece-2323",
+          "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree-mktg-4606"
+        ],
+        "unresolved": []
+      },
       "discrepancies": [
         {
           "issue": "Legacy subject-prefix/title heuristics misclassified concrete courses: CS 1200 foundations -> other; CS 1210 foundations -> other; DS 3000 ai_ml -> mathematics; DS 4200 foundations -> other",
@@ -468,6 +600,17 @@
           "evidence_urls": [
             "https://catalog.northeastern.edu/course-descriptions/psyc/"
           ]
+        },
+        {
+          "issue": "Unreviewed selected behavioral neuroscience classifications required source-content verification.",
+          "correction": "Exact-code review corrections: PT 5410: other → applications; PT 5411: other → applications; PSYC 3200: other → applications; PSYC 3506: other → applications; PSYC 3508: other → applications; PSYC 3510: other → applications; PSYC 4510: other → applications; PSYC 4512: other → applications; PSYC 4514: other → applications; PSYC 4570: other → applications; BINF 6200: applications → foundations",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/binf/",
+            "https://catalog.northeastern.edu/course-descriptions/bnsc/",
+            "https://catalog.northeastern.edu/course-descriptions/psyc/",
+            "https://catalog.northeastern.edu/course-descriptions/pt/"
+          ]
         }
       ],
       "blockers": [
@@ -476,7 +619,7 @@
           "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-behavioral-neuroscience-bs-bos/"
         }
       ],
-      "correction_status": "First category and parser corrections applied; remaining accessible individual review continues.",
+      "correction_status": "All 72 represented identities/content/credits/eligibility and independent 23-fixed/49-option category partition checked. Applicable public college-policy mapping remains in_progress.",
       "second_pass_status": "pending"
     },
     {
