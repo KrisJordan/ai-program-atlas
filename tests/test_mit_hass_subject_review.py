@@ -154,7 +154,7 @@ def test_cmsw_actual_visible_capture_replays_approved_observations():
     hashes = {review.observation_digest(row) for row in rows}
     observations = [o for r in MANIFEST['courses'].values() for o in r['observations']
                     if o['source_id'] == 'mit-ai-hass-review-cmsw-fall2026']
-    assert len(observations) == 34
+    assert len(observations) == 35
     assert all(o['observation_digest'] in hashes for o in observations)
 
 
@@ -208,7 +208,7 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']['description_reviewed_records']==141
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==142
     assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
         o=entry(code)['observations'][-1]
@@ -302,3 +302,40 @@ def test_sts_actual_source_title_review_replays(tier):
     hashes={review.observation_digest(o) for o in review.observe_sts_titles(path.read_text())}
     saved=[o for r in MANIFEST['courses'].values() for o in r['observations'] if o['source_id']==f'mit-ai-hass-review-sts-tier-{tier}-titles']
     assert saved and all(o['observation_digest'] in hashes for o in saved)
+
+
+def test_anthropology_renamed_identity_and_broad_titles_are_not_silently_classified():
+    old=entry('21A.503/ 24.913/ STS.070')
+    assert old['review_status']=='identity_review_needed'
+    assert old['observations'][-1]['observed_name']=='The Human Past: Introduction to Archaeology'
+    assert not old['observations'][-1]['approved_for_integration']
+    for code in ['21A.511','21A.157','21A.406J']:
+        o=entry(code)['observations'][-1]
+        assert o['category']=='other' and o['status']=='unclassified'
+        assert o['description_digest'] is None
+    assert entry('21A.504J')['observations'][-1]['category']=='human_context'
+    grad=entry('21A.409J/11.238J')['observations'][-1]
+    assert any('graduate (G)' in text for text in grad['restrictions'])
+    sound=entry('21A.505')['observations'][-1]
+    assert sound['observed_code']=='CMS.406[J]' and sound['description_digest']
+    assert '21A.505[J]' in sound['source_metadata']['same_subject_as']
+
+
+def test_anthropology_title_parser_keeps_meeting_and_level_evidence_without_inference():
+    html='''<h1>MIT Anthropology Subjects</h1><table class="subjects-table"><tr>
+    <td>21A.550J/ STS.064J (meets with 21A.559)</td><td><a href="https://example.edu/catalog">DV Lab (U/G)</a></td></tr></table>'''
+    row=review.observe_anthropology_titles(html)[0]
+    assert row['code']=='21A.550J' and 'meets with 21A.559' in row['course_label']
+    assert row['name']=='DV Lab (U/G)' and row['description'] is None
+    assert 'category' not in row
+    with pytest.raises(ValueError,match='heading'):
+        review.observe_anthropology_titles(html.replace('MIT Anthropology Subjects','Subjects changed'))
+
+
+def test_anthropology_actual_directory_replays_title_observations():
+    path=Path('/tmp/mit-hass-subjects/anthropology-subjects.html')
+    if not path.exists():
+        pytest.skip('Optional ignored official Anthropology directory capture')
+    hashes={review.observation_digest(o) for o in review.observe_anthropology_titles(path.read_text())}
+    saved=[o for r in MANIFEST['courses'].values() for o in r['observations'] if o['source_id']=='mit-ai-hass-review-anthropology-titles']
+    assert len(saved)==32 and all(o['observation_digest'] in hashes for o in saved)

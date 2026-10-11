@@ -65,6 +65,33 @@ def observe_architecture(html):
     return rows
 
 
+def observe_anthropology_titles(html):
+    """Keep the current directory's literal codes, meeting clauses and level labels."""
+    soup = BeautifulSoup(html, 'html.parser')
+    if not any(clean(h) == 'MIT Anthropology Subjects' for h in soup.find_all('h1')):
+        raise ValueError('Anthropology subject heading changed')
+    rows = []
+    for table in soup.select('table.subjects-table'):
+        for node in table.find_all('tr'):
+            cells = node.find_all('td', recursive=False)
+            if len(cells) < 2:
+                continue
+            label = clean(cells[0])
+            match = re.match(r'(21A\.[\w]+)(?:\s|/|$)', label)
+            if match is None:
+                continue
+            name = clean(cells[1])
+            link = cells[1].find('a')
+            if not name or link is None:
+                raise ValueError('Anthropology subject lost paired title/link')
+            rows.append(dict(code=match[1], name=name, course_label=label,
+                             linked_url=link.get('href'), description=None,
+                             prerequisites=None, units=None, term=None))
+    if not rows:
+        raise ValueError('Anthropology subject tables missing')
+    return rows
+
+
 def observe_literature(html):
     soup = BeautifulSoup(html, 'html.parser')
     selected = soup.find('select', attrs={'name': 'semester'})
