@@ -19,6 +19,59 @@ IDENTITIES={
  'PSYC 203':('INTRODUCTION TO COGNITIVE PSYCHOLOGY','applications','topics in cognitive psychology'),
 }
 
+# Each option identity and marker was individually read; subjects are not inferred from pools.
+IDENTITIES.update({'MATH 101': ('SINGLE VARIABLE CALCULUS I', 'mathematics', 'limits, continuity'),
+ 'MATH 105': ('AP/OTH CREDIT IN CALCULUS I', 'mathematics', 'approved examinations in calculus'),
+ 'MATH 102': ('SINGLE VARIABLE CALCULUS II', 'mathematics', 'infinite sequences and series'),
+ 'MATH 106': ('AP/OTH CREDIT IN CALCULUS II', 'mathematics', 'approved examinations in calculus'),
+ 'MATH 221': ('HONORS CALCULUS III', 'mathematics', 'linear and multilinear algebra'),
+ 'MATH 354': ('HONORS LINEAR ALGEBRA', 'mathematics', 'construct mathematical proofs'),
+ 'MATH 355': ('LINEAR ALGEBRA', 'mathematics', 'systems of linear equations'),
+ 'CMOR 302': ('MATRIX ANALYSIS', 'mathematics', 'singular value decomposition'),
+ 'CMOR 303': ('MATRIX ANALYSIS FOR DATA SCIENCE', 'mathematics', 'gradient based methods'),
+ 'STAT 310': ('PROBABILITY AND STATISTICS', 'mathematics', 'confidence intervals'),
+ 'STAT 311': ('HONORS PROBABILITY AND MATHEMATICAL STATISTICS',
+              'mathematics',
+              'asymptotic statistical theory'),
+ 'STAT 314': ('COMPUTING FOR STATISTICAL ANALYSIS BRIDGE',
+              'mathematics',
+              'implement statistical methodology'),
+ 'STAT 315': ('PROBABILITY AND STATISTICS FOR DATA SCIENCE',
+              'mathematics',
+              'mathematical statistics and computation'),
+ 'DSCI 301': ('PROBABILITY AND STATISTICS FOR DATA SCIENCE',
+              'mathematics',
+              'mathematical statistics and computation'),
+ 'COMP 409': ('LOGIC AND COMPUTER SCIENCE AND ARTIFICIAL INTELLIGENCE',
+              'foundations',
+              'fundamental role in computer science'),
+ 'COMP 414': ('OPTIMIZATION: ALGORITHMS, COMPLEXITY AND APPROXIMATIONS',
+              'mathematics',
+              'smooth optimization techniques'),
+ 'COMP 480': ('PROBABILISTIC ALGORITHMS AND DATA STRUCTURE',
+              'foundations',
+              'advanced data structures and algorithms'),
+ 'COMP 585': ('PROBABILISTIC TOOLKIT FOR LEARNING AND COMPUTING',
+              'foundations',
+              'apply it in algorithm design'),
+ 'COMP 459': ('MACHINE LEARNING WITH GRAPHS', 'ai_ml', 'graph-based machine learning algorithms'),
+ 'COMP 631': ('INTRODUCTION TO INFORMATION RETRIEVAL', 'other', 'information retrieval systems'),
+ 'COMP 447': ('INTRODUCTION TO COMPUTER VISION', 'ai_ml', 'computer vision algorithms'),
+ 'ELEC 447': ('INTRODUCTION TO COMPUTER VISION', 'ai_ml', 'computer vision algorithms'),
+ 'COMP 484': ('NATURAL LANGUAGE PROCESSING', 'ai_ml', 'deep learning approaches'),
+ 'COMP 442': ('REINFORCEMENT LEARNING', 'ai_ml', 'algorithms for reinforcement learning'),
+ 'COMP 450': ('ALGORITHMIC AND AI-ENABLED ROBOTICS', 'ai_ml', 'artificial intelligence frameworks'),
+ 'ELEC 450': ('ALGORITHMIC AND AI-ENABLED ROBOTICS', 'ai_ml', 'artificial intelligence frameworks'),
+ 'MECH 450': ('ALGORITHMIC AND AI-ENABLED ROBOTICS', 'ai_ml', 'artificial intelligence frameworks'),
+ 'COMP 462': ('INTRODUCTION TO MODERN ROBOTICS', 'other', 'kinematics, dynamics'),
+ 'PSYC 430': ('COMPUTATIONAL MODELING OF COGNITIVE PROCESSES',
+              'applications',
+              'modeling cognitive processes'),
+ 'PSYC 468': ('HUMAN FACTORS IN ARTIFICIAL INTELLIGENCE',
+              'human_context',
+              'societal impacts of ai')})
+HEADINGS={'comp': 'Computer Science (COMP)', 'phil': 'Philosophy (PHIL)', 'psyc': 'Psychology (PSYC)', 'math': 'Mathematics (MATH)', 'cmor': 'Computational Applied Mathematics and Operations Research (CMOR)', 'stat': 'Statistics (STAT)', 'dsci': 'Data Science (DSCI)', 'elec': 'Electrical and Computer Engineering (ELEC)', 'mech': 'Mechanical Engineering (MECH)'}
+
 
 def classify_observed(courses):
  for c in courses:
@@ -30,7 +83,7 @@ def classify_observed(courses):
 
 
 def parse_descriptions(html,*,pid,department):
- s=BeautifulSoup(html,'html.parser');heading={'comp':'Computer Science (COMP)','phil':'Philosophy (PHIL)','psyc':'Psychology (PSYC)'}[department]
+ s=BeautifulSoup(html,'html.parser');heading=HEADINGS[department]
  if [clean(h.get_text(' ',strip=True))for h in s.find_all('h1')]!=[heading]:raise ValueError('Rice description heading changed')
  courses=[];digests={};requirements=[]
  for code,(title,category,marker) in IDENTITIES.items():
@@ -46,6 +99,23 @@ def parse_descriptions(html,*,pid,department):
   extras=[clean(x.get_text(' ',strip=True))for x in b.select('.courseblockextra')]
   prerequisites=[x for x in extras if x.startswith(('Prerequisite(s):','Corequisite(s):'))]
   c['prerequisites']=' '.join(prerequisites)or None
+  # Rice appends recommendations, cross-lists and exclusions inside the description paragraph.
+  label_pattern=r'(?:Cross-list:|Recommended [Pp]rerequisite\(s\):|Mutually Exclusive:|Graduate/Undergraduate Equivalency:|Course URL:)'
+  embedded=re.findall(r'('+label_pattern+r'.*?)(?='+label_pattern+r'|$)',body)
+  extras += [x for x in embedded if not x.startswith('Course URL:')]
+  facts=[x for x in extras if x.startswith(('Restrictions:', 'Recommended Prerequisite(s):', 'Recommended prerequisite(s):', 'Mutually Exclusive:', 'Cross-list:', 'Graduate/Undergraduate Equivalency:'))]
+  if facts:
+   requirements.append(rule(pid+'-course-entry-'+code.lower().replace(' ','-'),'Course-specific entry and credit conditions: '+code,sid,kind='note',summary=' '.join(facts)))
+  if code in ['MATH 101','MATH 102']:
+   marker='Should not be taken if student already has credit for'
+   if marker not in body or 'without permission' not in body:
+    raise ValueError('Rice calculus prior-credit permission changed')
+   eligibility=body[body.index(marker):].split('without permission',1)[0]+'without permission.'
+   if code=='MATH 101':
+    if 'Pre-Calculus Diagnostic Test is required for registration' not in body:
+     raise ValueError('Rice calculus diagnostic changed')
+    eligibility+=' Pre-Calculus Diagnostic Test is required for registration.'
+   requirements.append(rule(pid+'-calculus-entry-'+code.lower().replace(' ','-'),'Calculus prior-credit and placement conditions: '+code,sid,kind='note',summary=eligibility))
   courses.append(c);digests[c['id']]=hashlib.sha256(body.encode()).hexdigest()
   if code=='COMP 457':
    if 'both COMP 456 and COMP 457 must be taken in sequence, in the same academic year'not in body:raise ValueError('Rice senior design sequence condition changed')
@@ -67,7 +137,7 @@ def parse_descriptions(html,*,pid,department):
 
 
 def register(pid,sources,parsers):
- for dep in ['comp','phil','psyc']:
+ for dep in HEADINGS:
   url=BASE+dep+'/';sources+=(url,)
   parsers[url]=lambda html,dep=dep:parse_descriptions(html,pid=pid,department=dep)
  return sources

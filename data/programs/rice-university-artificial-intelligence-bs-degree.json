@@ -88,7 +88,7 @@
       "fetched_at": "2026-10-11T02:50:37+00:00",
       "source_date": null,
       "catalog_year": "2026-2027",
-      "locator": "Exact reviewed fixed course blocks; COMP option restrictions independently checked",
+      "locator": "Exact degree-listed course descriptions, prerequisite/recommendation, credit, level and cross-list fields",
       "confidence": "high"
     },
     {
@@ -98,7 +98,7 @@
       "fetched_at": "2026-10-11T02:50:40+00:00",
       "source_date": null,
       "catalog_year": "2026-2027",
-      "locator": "Exact reviewed fixed course blocks; COMP option restrictions independently checked",
+      "locator": "Exact degree-listed course descriptions, prerequisite/recommendation, credit, level and cross-list fields",
       "confidence": "high"
     },
     {
@@ -108,7 +108,67 @@
       "fetched_at": "2026-10-11T02:50:38+00:00",
       "source_date": null,
       "catalog_year": "2026-2027",
-      "locator": "Exact reviewed fixed course blocks; COMP option restrictions independently checked",
+      "locator": "Exact degree-listed course descriptions, prerequisite/recommendation, credit, level and cross-list fields",
+      "confidence": "high"
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-courses-math",
+      "url": "https://ga.rice.edu/programs-study/courses/math/",
+      "title": "Mathematics (MATH)",
+      "fetched_at": "2026-10-11T03:10:07+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Exact degree-listed course descriptions, prerequisite/recommendation, credit, level and cross-list fields",
+      "confidence": "high"
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-courses-cmor",
+      "url": "https://ga.rice.edu/programs-study/courses/cmor/",
+      "title": "Computational Applied Mathematics and Operations Research (CMOR)",
+      "fetched_at": "2026-10-11T03:10:09+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Exact degree-listed course descriptions, prerequisite/recommendation, credit, level and cross-list fields",
+      "confidence": "high"
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-courses-stat",
+      "url": "https://ga.rice.edu/programs-study/courses/stat/",
+      "title": "Statistics (STAT)",
+      "fetched_at": "2026-10-11T03:10:10+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Exact degree-listed course descriptions, prerequisite/recommendation, credit, level and cross-list fields",
+      "confidence": "high"
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-courses-dsci",
+      "url": "https://ga.rice.edu/programs-study/courses/dsci/",
+      "title": "Data Science (DSCI)",
+      "fetched_at": "2026-10-11T03:10:12+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Exact degree-listed course descriptions, prerequisite/recommendation, credit, level and cross-list fields",
+      "confidence": "high"
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-courses-elec",
+      "url": "https://ga.rice.edu/programs-study/courses/elec/",
+      "title": "Electrical and Computer Engineering (ELEC)",
+      "fetched_at": "2026-10-11T03:10:13+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Exact degree-listed course descriptions, prerequisite/recommendation, credit, level and cross-list fields",
+      "confidence": "high"
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-courses-mech",
+      "url": "https://ga.rice.edu/programs-study/courses/mech/",
+      "title": "Mechanical Engineering (MECH)",
+      "fetched_at": "2026-10-11T03:10:15+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Exact degree-listed course descriptions, prerequisite/recommendation, credit, level and cross-list fields",
       "confidence": "high"
     }
   ],
@@ -143,197 +203,351 @@
       "id": "rice-ai-math-101",
       "code": "MATH 101",
       "name": "SINGLE VARIABLE CALCULUS I",
-      "description": null,
+      "description": "Calculus of limits, differentiation and integration.",
       "prerequisites": null,
       "credits": 3.0,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "mathematics",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=MATH%20101",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-math",
+      "url": "https://ga.rice.edu/programs-study/courses/math/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-math"
+        ],
+        "locator": "MATH 101 exact course description",
+        "rationale": "Calculus of limits, differentiation and integration.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "rice-ai-math-105",
       "code": "MATH 105",
       "name": "AP/OTH CREDIT IN CALCULUS I",
-      "description": null,
+      "description": "Approved examination credit in calculus replaces MATH101; it does not earn distribution credit.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "mathematics",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=MATH%20105",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-math",
+      "url": "https://ga.rice.edu/programs-study/courses/math/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-math"
+        ],
+        "locator": "MATH 105 exact course description",
+        "rationale": "Approved examination credit in calculus replaces MATH101; it does not earn distribution credit.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "rice-ai-math-102",
       "code": "MATH 102",
       "name": "SINGLE VARIABLE CALCULUS II",
-      "description": null,
+      "description": "Further integration, sequences, series and parametric calculus.",
       "prerequisites": null,
       "credits": 3.0,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "mathematics",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=MATH%20102",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-math",
+      "url": "https://ga.rice.edu/programs-study/courses/math/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-math"
+        ],
+        "locator": "MATH 102 exact course description",
+        "rationale": "Further integration, sequences, series and parametric calculus.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "rice-ai-math-106",
       "code": "MATH 106",
       "name": "AP/OTH CREDIT IN CALCULUS II",
-      "description": null,
+      "description": "Approved examination credit in calculus replaces MATH102; it does not earn distribution credit.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "mathematics",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=MATH%20106",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-math",
+      "url": "https://ga.rice.edu/programs-study/courses/math/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-math"
+        ],
+        "locator": "MATH 106 exact course description",
+        "rationale": "Approved examination credit in calculus replaces MATH102; it does not earn distribution credit.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "rice-ai-cmor-302",
       "code": "CMOR 302",
       "name": "MATRIX ANALYSIS",
-      "description": null,
+      "description": "Linear systems, least squares, eigenvalues and singular value decomposition.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "mathematics",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=CMOR%20302",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-cmor",
+      "url": "https://ga.rice.edu/programs-study/courses/cmor/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-cmor"
+        ],
+        "locator": "CMOR 302 exact course description",
+        "rationale": "Linear systems, least squares, eigenvalues and singular value decomposition.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "rice-ai-cmor-303",
       "code": "CMOR 303",
       "name": "MATRIX ANALYSIS FOR DATA SCIENCE",
-      "description": null,
+      "description": "Matrix analysis and gradient methods for data science.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "mathematics",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=CMOR%20303",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-cmor",
+      "url": "https://ga.rice.edu/programs-study/courses/cmor/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-cmor"
+        ],
+        "locator": "CMOR 303 exact course description",
+        "rationale": "Matrix analysis and gradient methods for data science.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "rice-ai-math-221",
       "code": "MATH 221",
       "name": "HONORS CALCULUS III",
-      "description": null,
+      "description": "Multivariable calculus, topology, linear algebra and integration on manifolds.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "mathematics",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=MATH%20221",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-math",
+      "url": "https://ga.rice.edu/programs-study/courses/math/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-math"
+        ],
+        "locator": "MATH 221 exact course description",
+        "rationale": "Multivariable calculus, topology, linear algebra and integration on manifolds.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "rice-ai-math-354",
       "code": "MATH 354",
       "name": "HONORS LINEAR ALGEBRA",
-      "description": null,
+      "description": "Theoretical linear algebra with mathematical proofs.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "mathematics",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=MATH%20354",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-math",
+      "url": "https://ga.rice.edu/programs-study/courses/math/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-math"
+        ],
+        "locator": "MATH 354 exact course description",
+        "rationale": "Theoretical linear algebra with mathematical proofs.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "rice-ai-math-355",
       "code": "MATH 355",
       "name": "LINEAR ALGEBRA",
-      "description": null,
+      "description": "Linear algebra of systems, vector spaces, transformations, eigenvalues and spectral theory.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "mathematics",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=MATH%20355",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-math",
+      "url": "https://ga.rice.edu/programs-study/courses/math/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-math"
+        ],
+        "locator": "MATH 355 exact course description",
+        "rationale": "Linear algebra of systems, vector spaces, transformations, eigenvalues and spectral theory.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "rice-ai-stat-310",
       "code": "STAT 310",
       "name": "PROBABILITY AND STATISTICS",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "description": "Probability, sampling, estimation and hypothesis testing.",
+      "prerequisites": "Prerequisite(s): MATH 102 or MATH 106",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "mathematics",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=STAT%20310",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-stat",
+      "url": "https://ga.rice.edu/programs-study/courses/stat/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-stat"
+        ],
+        "locator": "STAT 310 exact course description",
+        "rationale": "Probability, sampling, estimation and hypothesis testing.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "rice-ai-stat-314",
       "code": "STAT 314",
       "name": "COMPUTING FOR STATISTICAL ANALYSIS BRIDGE",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "description": "Computational implementation of statistical methods, visualization and simulation; programming serves statistical analysis.",
+      "prerequisites": "Prerequisite(s): STAT 310 (may be taken concurrently)",
+      "credits": 1.0,
+      "credit_unit": "semester_hours",
       "category": "mathematics",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=STAT%20314",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-stat",
+      "url": "https://ga.rice.edu/programs-study/courses/stat/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-stat"
+        ],
+        "locator": "STAT 314 exact course description",
+        "rationale": "Computational implementation of statistical methods, visualization and simulation; programming serves statistical analysis.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "rice-ai-stat-311",
       "code": "STAT 311",
       "name": "HONORS PROBABILITY AND MATHEMATICAL STATISTICS",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "description": "Rigorous probability and statistics including stochastic modeling and asymptotic theory.",
+      "prerequisites": "Prerequisite(s): MATH 212 or MATH 222",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "mathematics",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=STAT%20311",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-stat",
+      "url": "https://ga.rice.edu/programs-study/courses/stat/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-stat"
+        ],
+        "locator": "STAT 311 exact course description",
+        "rationale": "Rigorous probability and statistics including stochastic modeling and asymptotic theory.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "rice-ai-stat-315",
       "code": "STAT 315",
       "name": "PROBABILITY AND STATISTICS FOR DATA SCIENCE",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "description": "Mathematical statistics with a computational laboratory using R and data projects.",
+      "prerequisites": "Prerequisite(s): MATH 102 or MATH 106",
+      "credits": 4.0,
+      "credit_unit": "semester_hours",
       "category": "mathematics",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=STAT%20315",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-stat",
+      "url": "https://ga.rice.edu/programs-study/courses/stat/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-stat"
+        ],
+        "locator": "STAT 315 exact course description",
+        "rationale": "Mathematical statistics with a computational laboratory using R and data projects.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "rice-ai-dsci-301",
       "code": "DSCI 301",
       "name": "PROBABILITY AND STATISTICS FOR DATA SCIENCE",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "other",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=DSCI%20301",
+      "description": "Mathematical statistics with a computational laboratory using R and data projects; cross-listed with STAT315.",
+      "prerequisites": "Prerequisite(s): MATH 102 or MATH 106",
+      "credits": 4.0,
+      "credit_unit": "semester_hours",
+      "category": "mathematics",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-dsci",
+      "url": "https://ga.rice.edu/programs-study/courses/dsci/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-dsci"
+        ],
+        "locator": "DSCI 301 exact course description",
+        "rationale": "Mathematical statistics with a computational laboratory using R and data projects; cross-listed with STAT315.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "rice-ai-comp-140",
@@ -342,10 +556,10 @@
       "description": "Computational problem solving and implementation in Python establish computing foundations.",
       "prerequisites": null,
       "credits": 4.0,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "foundations",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=COMP%20140",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "url": "https://ga.rice.edu/programs-study/courses/comp/",
       "public_site": null,
       "syllabus": null,
       "category_review": {
@@ -367,10 +581,10 @@
       "description": "Algorithmic techniques, correctness and efficiency establish computing foundations.",
       "prerequisites": "Prerequisite(s): COMP 140",
       "credits": 4.0,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "foundations",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=COMP%20182",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "url": "https://ga.rice.edu/programs-study/courses/comp/",
       "public_site": null,
       "syllabus": null,
       "category_review": {
@@ -392,10 +606,10 @@
       "description": "Programming, abstraction, encapsulation and test-driven software design establish computing foundations.",
       "prerequisites": "Prerequisite(s): COMP 182",
       "credits": 4.0,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "foundations",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=COMP%20215",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "url": "https://ga.rice.edu/programs-study/courses/comp/",
       "public_site": null,
       "syllabus": null,
       "category_review": {
@@ -417,10 +631,10 @@
       "description": "Instruction architecture, processor execution, memory, linking and caching establish computing systems rather than general programming.",
       "prerequisites": "Prerequisite(s): COMP 140",
       "credits": 4.0,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "systems",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=COMP%20222",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "url": "https://ga.rice.edu/programs-study/courses/comp/",
       "public_site": null,
       "syllabus": null,
       "category_review": {
@@ -442,10 +656,10 @@
       "description": "The course centers computational linear algebra, multivariable calculus and optimization methods, with AI applications; its primary subject is mathematics.",
       "prerequisites": "Prerequisite(s): ( MATH 102 or MATH 106 ) and COMP 182 and ( MATH 355 or MATH 354 or CMOR 302 or CMOR 303 or MATH 221 )",
       "credits": 3.0,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "mathematics",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=COMP%20282",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "url": "https://ga.rice.edu/programs-study/courses/comp/",
       "public_site": null,
       "syllabus": null,
       "category_review": {
@@ -467,10 +681,10 @@
       "description": "Data-management infrastructure, relational databases, accelerators and parallel AI computation establish systems; an AI application does not replace its infrastructure subject.",
       "prerequisites": "Prerequisite(s): COMP 215 and COMP 222 and COMP 345",
       "credits": 3.0,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "systems",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=COMP%20329",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "url": "https://ga.rice.edu/programs-study/courses/comp/",
       "public_site": null,
       "syllabus": null,
       "category_review": {
@@ -492,10 +706,10 @@
       "description": "Supervised and unsupervised learning, generalization and model evaluation establish AI/ML methods.",
       "prerequisites": "Prerequisite(s): COMP 282 and STAT 315",
       "credits": 3.0,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "ai_ml",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=COMP%20345",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "url": "https://ga.rice.edu/programs-study/courses/comp/",
       "public_site": null,
       "syllabus": null,
       "category_review": {
@@ -517,10 +731,10 @@
       "description": "Designing, engineering and evaluating intelligent decision-making agents establishes AI methods despite the source title spelling ARTIFICAL.",
       "prerequisites": "Prerequisite(s): COMP 215 and STAT 315 and COMP 282",
       "credits": 3.0,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "ai_ml",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=COMP%20346",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "url": "https://ga.rice.edu/programs-study/courses/comp/",
       "public_site": null,
       "syllabus": null,
       "category_review": {
@@ -542,10 +756,10 @@
       "description": "Deep neural architectures, optimization and representation learning establish AI/ML methods.",
       "prerequisites": "Prerequisite(s): COMP 345",
       "credits": 3.0,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "ai_ml",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=COMP%20348",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "url": "https://ga.rice.edu/programs-study/courses/comp/",
       "public_site": null,
       "syllabus": null,
       "category_review": {
@@ -567,10 +781,10 @@
       "description": "The first capstone develops a complex intelligent system with AI as a significant component; AI engineering is the central subject, with communication supporting that project.",
       "prerequisites": "Prerequisite(s): COMP 346",
       "credits": 4.0,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "ai_ml",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=COMP%20456",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "url": "https://ga.rice.edu/programs-study/courses/comp/",
       "public_site": null,
       "syllabus": null,
       "category_review": {
@@ -592,10 +806,10 @@
       "description": "The second capstone completes and evaluates the intelligent-system project; AI engineering is the central subject, with communication supporting that project.",
       "prerequisites": "Prerequisite(s): COMP 456 and COMP 329 and COMP 348",
       "credits": 4.0,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "ai_ml",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=COMP%20457",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "url": "https://ga.rice.edu/programs-study/courses/comp/",
       "public_site": null,
       "syllabus": null,
       "category_review": {
@@ -617,10 +831,10 @@
       "description": "Ethical effects of AI on fairness, privacy, democracy, labor and autonomy establish human context.",
       "prerequisites": null,
       "credits": 3.0,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=PHIL%20108",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-phil",
+      "url": "https://ga.rice.edu/programs-study/courses/phil/",
       "public_site": null,
       "syllabus": null,
       "category_review": {
@@ -642,10 +856,10 @@
       "description": "Perception, attention, language, memory and decision making are substantive cognitive-psychology domain knowledge; the course does not teach AI algorithms. Applications denotes this non-computing domain, not an invented AI application.",
       "prerequisites": null,
       "credits": 3.0,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "applications",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=PSYC%20203",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-psyc",
+      "url": "https://ga.rice.edu/programs-study/courses/psyc/",
       "public_site": null,
       "syllabus": null,
       "category_review": {
@@ -664,225 +878,407 @@
       "id": "rice-ai-comp-409",
       "code": "COMP 409",
       "name": "LOGIC AND COMPUTER SCIENCE AND ARTIFICIAL INTELLIGENCE",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "ai_ml",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=COMP%20409",
+      "description": "Logic as a foundational computing method across reasoning, verification, languages, databases and computability.",
+      "prerequisites": "Prerequisite(s): COMP 182 and COMP 215 and ( COMP 382 or ELEC 303 or STAT 310 or ECON 307 or STAT 311 or STAT 312 or STAT 315 or DSCI 301 or CMOR 302 or CMOR 303 or MATH 354 or MATH 355 )",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "foundations",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "url": "https://ga.rice.edu/programs-study/courses/comp/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-comp"
+        ],
+        "locator": "COMP 409 exact course description",
+        "rationale": "Logic as a foundational computing method across reasoning, verification, languages, databases and computability.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "rice-ai-comp-414",
       "code": "COMP 414",
       "name": "OPTIMIZATION: ALGORITHMS, COMPLEXITY AND APPROXIMATIONS",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "other",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=COMP%20414",
+      "description": "Continuous optimization theory and algorithms, including convex and nonconvex gradient methods.",
+      "prerequisites": "Prerequisite(s): ( ELEC 303 or STAT 310 or ECON 307 or STAT 312 or STAT 315 or DSCI 301 or STAT 311 ) and ( CMOR 302 or CMOR 303 or MATH 354 or MATH 355 )",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "mathematics",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "url": "https://ga.rice.edu/programs-study/courses/comp/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-comp"
+        ],
+        "locator": "COMP 414 exact course description",
+        "rationale": "Continuous optimization theory and algorithms, including convex and nonconvex gradient methods.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "rice-ai-comp-480",
       "code": "COMP 480",
       "name": "PROBABILISTIC ALGORITHMS AND DATA STRUCTURE",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "other",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=COMP%20480",
+      "description": "Randomized algorithms and data structures for efficient large-data computation.",
+      "prerequisites": "Prerequisite(s): COMP 382",
+      "credits": 4.0,
+      "credit_unit": "semester_hours",
+      "category": "foundations",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "url": "https://ga.rice.edu/programs-study/courses/comp/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-comp"
+        ],
+        "locator": "COMP 480 exact course description",
+        "rationale": "Randomized algorithms and data structures for efficient large-data computation.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "rice-ai-comp-585",
       "code": "COMP 585",
       "name": "PROBABILISTIC TOOLKIT FOR LEARNING AND COMPUTING",
-      "description": null,
+      "description": "Probabilistic tools for algorithm design and learning theory; a general computing-methods focus.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "other",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=COMP%20585",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "foundations",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "url": "https://ga.rice.edu/programs-study/courses/comp/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-comp"
+        ],
+        "locator": "COMP 585 exact course description",
+        "rationale": "Probabilistic tools for algorithm design and learning theory; a general computing-methods focus.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "rice-ai-psyc-430",
       "code": "PSYC 430",
       "name": "COMPUTATIONAL MODELING OF COGNITIVE PROCESSES",
-      "description": null,
+      "description": "Computational models of cognitive processes, with model evaluation and practical modeling; substantive psychology methods.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "other",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=PSYC%20430",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-psyc",
+      "url": "https://ga.rice.edu/programs-study/courses/psyc/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-psyc"
+        ],
+        "locator": "PSYC 430 exact course description",
+        "rationale": "Computational models of cognitive processes, with model evaluation and practical modeling; substantive psychology methods.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "rice-ai-psyc-468",
       "code": "PSYC 468",
       "name": "HUMAN FACTORS IN ARTIFICIAL INTELLIGENCE",
-      "description": null,
+      "description": "Human factors, trust, fairness, explanation, ethics and human-AI collaboration.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "ai_ml",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=PSYC%20468",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "human_context",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-psyc",
+      "url": "https://ga.rice.edu/programs-study/courses/psyc/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-psyc"
+        ],
+        "locator": "PSYC 468 exact course description",
+        "rationale": "Human factors, trust, fairness, explanation, ethics and human-AI collaboration.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "rice-ai-comp-459",
       "code": "COMP 459",
       "name": "MACHINE LEARNING WITH GRAPHS",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "description": "Graph-based machine learning, graphical models and representation learning.",
+      "prerequisites": "Prerequisite(s): COMP 382 and ( ELEC 303 or STAT 310 or ECON 307 or STAT 312 or STAT 315 or DSCI 301 or STAT 311 ) and ( CMOR 302 or CMOR 303 or MATH 354 or MATH 355 )",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "ai_ml",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=COMP%20459",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "url": "https://ga.rice.edu/programs-study/courses/comp/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-comp"
+        ],
+        "locator": "COMP 459 exact course description",
+        "rationale": "Graph-based machine learning, graphical models and representation learning.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "rice-ai-comp-631",
       "code": "COMP 631",
       "name": "INTRODUCTION TO INFORMATION RETRIEVAL",
-      "description": null,
+      "description": "Text and web retrieval systems combine systems design with mining algorithms; no single primary taxonomy category is established.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=COMP%20631",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "url": "https://ga.rice.edu/programs-study/courses/comp/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-comp"
+        ],
+        "locator": "COMP 631 exact course description",
+        "rationale": "Text and web retrieval systems combine systems design with mining algorithms; no single primary taxonomy category is established.",
+        "candidate_categories": [
+          "systems",
+          "ai_ml"
+        ]
+      }
     },
     {
       "id": "rice-ai-comp-447",
       "code": "COMP 447",
       "name": "INTRODUCTION TO COMPUTER VISION",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "description": "Computer vision methods from image processing through recognition with neural networks.",
+      "prerequisites": "Prerequisite(s): ELEC 378 or COMP 282 or COMP 329 or COMP 330 or COMP 341",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "ai_ml",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=COMP%20447",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "url": "https://ga.rice.edu/programs-study/courses/comp/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-comp"
+        ],
+        "locator": "COMP 447 exact course description",
+        "rationale": "Computer vision methods from image processing through recognition with neural networks.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "rice-ai-elec-447",
       "code": "ELEC 447",
       "name": "INTRODUCTION TO COMPUTER VISION",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "description": "Computer vision methods from image processing through recognition with neural networks; cross-listed with COMP447.",
+      "prerequisites": "Prerequisite(s): ELEC 378 or COMP 282 or COMP 329 or COMP 330 or COMP 341",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "ai_ml",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=ELEC%20447",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-elec",
+      "url": "https://ga.rice.edu/programs-study/courses/elec/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-elec"
+        ],
+        "locator": "ELEC 447 exact course description",
+        "rationale": "Computer vision methods from image processing through recognition with neural networks; cross-listed with COMP447.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "rice-ai-comp-484",
       "code": "COMP 484",
       "name": "NATURAL LANGUAGE PROCESSING",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "other",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=COMP%20484",
+      "description": "Natural-language processing methods including language models, transformers and deep learning.",
+      "prerequisites": "Prerequisite(s): COMP 341 or COMP 441 or COMP 345",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "url": "https://ga.rice.edu/programs-study/courses/comp/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-comp"
+        ],
+        "locator": "COMP 484 exact course description",
+        "rationale": "Natural-language processing methods including language models, transformers and deep learning.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "rice-ai-comp-442",
       "code": "COMP 442",
       "name": "REINFORCEMENT LEARNING",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "other",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=COMP%20442",
+      "description": "Reinforcement and imitation learning for sequential decisions and autonomous agents.",
+      "prerequisites": "Prerequisite(s): COMP 329 or COMP 330 or COMP 341 or COMP 345 or COMP 346 or COMP 414",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "url": "https://ga.rice.edu/programs-study/courses/comp/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-comp"
+        ],
+        "locator": "COMP 442 exact course description",
+        "rationale": "Reinforcement and imitation learning for sequential decisions and autonomous agents.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "rice-ai-comp-450",
       "code": "COMP 450",
       "name": "ALGORITHMIC AND AI-ENABLED ROBOTICS",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "description": "AI and algorithmic planning for robot motion and action, with programming projects.",
+      "prerequisites": "Prerequisite(s): COMP 321 and COMP 215",
+      "credits": 4.0,
+      "credit_unit": "semester_hours",
       "category": "ai_ml",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=COMP%20450",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "url": "https://ga.rice.edu/programs-study/courses/comp/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-comp"
+        ],
+        "locator": "COMP 450 exact course description",
+        "rationale": "AI and algorithmic planning for robot motion and action, with programming projects.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "rice-ai-elec-450",
       "code": "ELEC 450",
       "name": "ALGORITHMIC AND AI-ENABLED ROBOTICS",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "description": "AI and algorithmic planning for robot motion and action; cross-listed with COMP450 and MECH450.",
+      "prerequisites": "Prerequisite(s): COMP 321 and COMP 215",
+      "credits": 4.0,
+      "credit_unit": "semester_hours",
       "category": "ai_ml",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=ELEC%20450",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-elec",
+      "url": "https://ga.rice.edu/programs-study/courses/elec/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-elec"
+        ],
+        "locator": "ELEC 450 exact course description",
+        "rationale": "AI and algorithmic planning for robot motion and action; cross-listed with COMP450 and MECH450.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "rice-ai-mech-450",
       "code": "MECH 450",
       "name": "ALGORITHMIC AND AI-ENABLED ROBOTICS",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "description": "AI and algorithmic planning for robot motion and action; cross-listed with COMP450 and ELEC450.",
+      "prerequisites": "Prerequisite(s): COMP 321 and COMP 215",
+      "credits": 4.0,
+      "credit_unit": "semester_hours",
       "category": "ai_ml",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=MECH%20450",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-mech",
+      "url": "https://ga.rice.edu/programs-study/courses/mech/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-mech"
+        ],
+        "locator": "MECH 450 exact course description",
+        "rationale": "AI and algorithmic planning for robot motion and action; cross-listed with COMP450 and ELEC450.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "rice-ai-comp-462",
       "code": "COMP 462",
       "name": "INTRODUCTION TO MODERN ROBOTICS",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "ai_ml",
-      "source_id": "rice-university-artificial-intelligence-bs-degree-catalog",
-      "url": "https://ga.rice.edu/search/?P=COMP%20462",
+      "description": "Robot mechanics, control, manipulation, simulation and ROS span engineering practice and computing; no explicit dominant AI-methods focus is established.",
+      "prerequisites": "Prerequisite(s): COMP 215 and ( ELEC 303 or STAT 310 or ECON 307 or STAT 312 or STAT 315 or DSCI 301 or STAT 311 or CMOR 302 or CMOR 303 or MATH 354 or MATH 355 )",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "url": "https://ga.rice.edu/programs-study/courses/comp/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "rice-university-artificial-intelligence-bs-degree-courses-comp"
+        ],
+        "locator": "COMP 462 exact course description",
+        "rationale": "Robot mechanics, control, manipulation, simulation and ROS span engineering practice and computing; no explicit dominant AI-methods focus is established.",
+        "candidate_categories": [
+          "applications",
+          "systems"
+        ]
+      }
     }
   ],
   "requirements": [
@@ -1987,7 +2383,7 @@
       "category": "other",
       "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
       "source_text": null,
-      "summary": "COMP 585 and COMP 631 descriptions limit enrollment to Graduate level students. The undergraduate major lists these electives, but undergraduate permission has not been established.",
+      "summary": "COMP 585 and COMP 631 descriptions restrict enrollment to Graduate level students. The separately reviewed university registration rule permits out-of-level enrollment through an electronic override with instructor approval; these options are conditional on that approval, not automatically available.",
       "course_ids": []
     },
     {
@@ -2001,7 +2397,637 @@
       "category": "other",
       "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
       "source_text": null,
-      "summary": "COMP 345 and COMP 346 specifically list STAT 315 as a prerequisite. Choosing a different published degree statistics route does not establish a STAT 315 waiver and may require additional preparation. This known course-entry condition is not an extra universal fixed degree requirement or, by itself, a curriculum contradiction.",
+      "summary": "COMP345/346 explicitly require STAT315. STAT315 excludes prior STAT310/311 credit; the degree nevertheless publishes those courses with STAT314 as alternative statistics routes. This combined prerequisite-and-exclusion issue needs institutional interpretation; no automatic equivalence, waiver or extra fixed course is inferred. STAT314 additionally requires STAT310 (concurrent enrollment permitted), whereas the degree also lists STAT311+314 and the STAT310/311 descriptions exclude prior credit in the other.",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-comp-140",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: COMP 140",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Undergraduate, Undergraduate Professional or Visiting Undergraduate level students.",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-comp-182",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: COMP 182",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Undergraduate, Undergraduate Professional or Visiting Undergraduate level students.",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-comp-215",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: COMP 215",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Undergraduate, Undergraduate Professional or Visiting Undergraduate level students.",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-comp-222",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: COMP 222",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Undergraduate, Undergraduate Professional or Visiting Undergraduate level students.",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-comp-282",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: COMP 282",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Undergraduate, Undergraduate Professional or Visiting Undergraduate level students.",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-comp-329",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: COMP 329",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Undergraduate, Undergraduate Professional or Visiting Undergraduate level students.",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-comp-345",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: COMP 345",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Undergraduate, Undergraduate Professional or Visiting Undergraduate level students. Mutually Exclusive: Cannot register for COMP 345 if student has credit for COMP 447 / COMP 546 .",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-comp-346",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: COMP 346",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Undergraduate, Undergraduate Professional or Visiting Undergraduate level students.",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-comp-348",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: COMP 348",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Undergraduate, Undergraduate Professional or Visiting Undergraduate level students.",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-comp-456",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: COMP 456",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Undergraduate, Undergraduate Professional or Visiting Undergraduate level students.",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-comp-457",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: COMP 457",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Undergraduate, Undergraduate Professional or Visiting Undergraduate level students.",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-comp-409",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: COMP 409",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Undergraduate, Undergraduate Professional or Visiting Undergraduate level students. Graduate/Undergraduate Equivalency: COMP 509 .  Mutually Exclusive: Cannot register for COMP 409 if student has credit for COMP 509 .",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-comp-414",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: COMP 414",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Undergraduate, Undergraduate Professional or Visiting Undergraduate level students. Graduate/Undergraduate Equivalency: COMP 514 .  Mutually Exclusive: Cannot register for COMP 414 if student has credit for COMP 514 .",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-comp-480",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: COMP 480",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Undergraduate, Undergraduate Professional or Visiting Undergraduate level students. Graduate/Undergraduate Equivalency: COMP 580 .",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-comp-585",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: COMP 585",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Graduate level students. Recommended Prerequisite(s): COMP 382",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-comp-459",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: COMP 459",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Undergraduate, Undergraduate Professional or Visiting Undergraduate level students. Graduate/Undergraduate Equivalency: COMP 559 .  Mutually Exclusive: Cannot register for COMP 459 if student has credit for COMP 559 .",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-comp-631",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: COMP 631",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Graduate level students. Recommended Prerequisite(s): Linear Algebra and Basic Probability Theory",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-comp-447",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: COMP 447",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Undergraduate, Undergraduate Professional or Visiting Undergraduate level students. Cross-list: ELEC 447 .  Graduate/Undergraduate Equivalency: COMP 546 .  Mutually Exclusive: Cannot register for COMP 447 if student has credit for COMP 345 / COMP 546 .",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-comp-484",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: COMP 484",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Undergraduate, Undergraduate Professional or Visiting Undergraduate level students. Graduate/Undergraduate Equivalency: COMP 584 .  Mutually Exclusive: Cannot register for COMP 484 if student has credit for COMP 584 .",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-comp-442",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: COMP 442",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Undergraduate, Undergraduate Professional or Visiting Undergraduate level students. Graduate/Undergraduate Equivalency: COMP 552 .",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-comp-450",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: COMP 450",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Undergraduate, Undergraduate Professional or Visiting Undergraduate level students. Cross-list: ELEC 450 , MECH 450 .  Graduate/Undergraduate Equivalency: COMP 550 .  Mutually Exclusive: Cannot register for COMP 450 if student has credit for COMP 550 .",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-comp-462",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: COMP 462",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-comp",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Undergraduate, Undergraduate Professional or Visiting Undergraduate level students. Graduate/Undergraduate Equivalency: COMP 562 .  Mutually Exclusive: Cannot register for COMP 462 if student has credit for COMP 562 .",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-phil-108",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: PHIL 108",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-phil",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Undergraduate, Undergraduate Professional or Visiting Undergraduate level students.",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-psyc-203",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: PSYC 203",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-psyc",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Undergraduate, Undergraduate Professional or Visiting Undergraduate level students.",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-psyc-430",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: PSYC 430",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-psyc",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Undergraduate, Undergraduate Professional or Visiting Undergraduate level students. Graduate/Undergraduate Equivalency: PSYC 543 .  Recommended Prerequisite(s): PSYC 203 and one of PSYC 340 or CSCI 340 ; recommend one of: COMP 140 , COMP 160 , DSCI 101 , or CMOR 220  Mutually Exclusive: Cannot register for PSYC 430 if student has credit for PSYC 543 .",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-psyc-468",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: PSYC 468",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-psyc",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Undergraduate, Undergraduate Professional or Visiting Undergraduate level students. Graduate/Undergraduate Equivalency: PSYC 668 .  Recommended Prerequisite(s): PSYC 370 and PSYC 441  Mutually Exclusive: Cannot register for PSYC 468 if student has credit for PSYC 668 .",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-math-101",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: MATH 101",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-math",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Undergraduate, Undergraduate Professional or Visiting Undergraduate level students. Mutually Exclusive: Cannot register for MATH 101 if student has credit for MATH 105 / MATH 112 .",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-math-105",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: MATH 105",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-math",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Undergraduate, Undergraduate Professional or Visiting Undergraduate level students. Mutually Exclusive: Cannot register for MATH 105 if student has credit for MATH 101 / MATH 111 / MATH 112 .",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-math-102",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: MATH 102",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-math",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Undergraduate, Undergraduate Professional or Visiting Undergraduate level students. Mutually Exclusive: Cannot register for MATH 102 if student has credit for MATH 106 .",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-math-106",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: MATH 106",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-math",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Undergraduate, Undergraduate Professional or Visiting Undergraduate level students. Mutually Exclusive: Cannot register for MATH 106 if student has credit for MATH 102 .",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-math-221",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: MATH 221",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-math",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Undergraduate, Undergraduate Professional or Visiting Undergraduate level students.",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-math-354",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: MATH 354",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-math",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Undergraduate, Undergraduate Professional or Visiting Undergraduate level students. Recommended Prerequisite(s): MATH 102 or MATH 106 .  Mutually Exclusive: Cannot register for MATH 354 if student has credit for MATH 355 .",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-math-355",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: MATH 355",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-math",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Undergraduate, Undergraduate Professional or Visiting Undergraduate level students. Mutually Exclusive: Cannot register for MATH 355 if student has credit for MATH 354 .",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-cmor-302",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: CMOR 302",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-cmor",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Undergraduate, Undergraduate Professional or Visiting Undergraduate level students. Recommended Prerequisite(s): ( MATH 212 or MATH 222 ) and (CAAM 210 or CMOR 220 or COMP 140 )",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-cmor-303",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: CMOR 303",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-cmor",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Undergraduate, Undergraduate Professional or Visiting Undergraduate level students. Recommended Prerequisite(s): ( MATH 212 or MATH 222 ) and (CAAM 210 or CMOR 220 or COMP 140 or STAT 405 )",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-stat-310",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: STAT 310",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-stat",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Undergraduate, Undergraduate Professional or Visiting Undergraduate level students. Cross-list: ECON 307 .  Recommended prerequisite(s): MATH 212 .  Mutually Exclusive: Cannot register for STAT 310 if student has credit for DSCI 301 / STAT 311 / STAT 312 / STAT 315 .",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-stat-311",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: STAT 311",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-stat",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Undergraduate, Undergraduate Professional or Visiting Undergraduate level students. Mutually Exclusive: Cannot register for STAT 311 if student has credit for DSCI 301 / ECON 307 / STAT 310 / STAT 312 / STAT 315 .",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-stat-314",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: STAT 314",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-stat",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Undergraduate, Undergraduate Professional or Visiting Undergraduate level students.",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-stat-315",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: STAT 315",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-stat",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Undergraduate, Undergraduate Professional or Visiting Undergraduate level students. Cross-list: DSCI 301 .  Recommended Prerequisite(s): MATH 212 .  Mutually Exclusive: Cannot register for STAT 315 if student has credit for ECON 307 / STAT 310 / STAT 311 / STAT 312 .",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-dsci-301",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: DSCI 301",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-dsci",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Undergraduate, Undergraduate Professional or Visiting Undergraduate level students. Cross-list: STAT 315 .  Recommended Prerequisite(s): MATH 212 .  Mutually Exclusive: Cannot register for DSCI 301 if student has credit for ECON 307 / STAT 310 / STAT 311 / STAT 312 .",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-elec-447",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: ELEC 447",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-elec",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Undergraduate, Undergraduate Professional or Visiting Undergraduate level students. Cross-list: COMP 447 .  Graduate/Undergraduate Equivalency: ELEC 546 .  Mutually Exclusive: Cannot register for ELEC 447 if student has credit for ELEC 345/ ELEC 546 .",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-elec-450",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: ELEC 450",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-elec",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Undergraduate, Undergraduate Professional or Visiting Undergraduate level students. Cross-list: COMP 450 , MECH 450 .  Graduate/Undergraduate Equivalency: ELEC 550 .  Mutually Exclusive: Cannot register for ELEC 450 if student has credit for ELEC 550 .",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-course-entry-mech-450",
+      "parent_id": null,
+      "title": "Course-specific entry and credit conditions: MECH 450",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-mech",
+      "source_text": null,
+      "summary": "Restrictions: Enrollment is limited to Undergraduate, Undergraduate Professional or Visiting Undergraduate level students. Cross-list: COMP 450 , ELEC 450 .  Graduate/Undergraduate Equivalency: MECH 550 .  Mutually Exclusive: Cannot register for MECH 450 if student has credit for MECH 550 .",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-calculus-entry-math-101",
+      "parent_id": null,
+      "title": "Calculus prior-credit and placement conditions: MATH 101",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-math",
+      "source_text": null,
+      "summary": "Should not be taken if student already has credit for MATH 102 , MATH 211 , MATH 212 , or MATH 221 , without permission. Pre-Calculus Diagnostic Test is required for registration.",
+      "course_ids": []
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree-calculus-entry-math-102",
+      "parent_id": null,
+      "title": "Calculus prior-credit and placement conditions: MATH 102",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rice-university-artificial-intelligence-bs-degree-courses-math",
+      "source_text": null,
+      "summary": "Should not be taken if student already has credit for MATH 211 , MATH 212 , or MATH 221 , without permission.",
       "course_ids": []
     }
   ],
@@ -2014,9 +3040,11 @@
     "The graduation and transfer pages disagree on summer eligibility for the four-semester residency minimum. Both are GA pages; the GA precedence statement does not resolve this internal conflict. Curriculum remains partial pending clarification.",
     "Transfer and registration rules preserve C- eligibility, no pass/fail transfers, the summer transfer cap and study-abroad exception, external-study approvals, repeat/AP/transfer/cross-list accounting and instructor approval for graduate-level enrollment.",
     "2026-10-11 independent core correctness pass: official descriptions correct all13 fixed subject classifications (3 foundations,1 mathematics,5 AI/ML,2 systems,1 human context,1 applications). Exact ARTIFICAL source spellings are preserved. Capstone456/457 must be sequential in the same academic year. Full-degree correctness remains in progress; prerequisite/enrollment conflicts are explicitly retained.",
-    "COMP 345 and COMP 346 specifically list STAT 315 as a prerequisite. Choosing a different published degree statistics route does not establish a STAT 315 waiver and may require additional preparation. This known course-entry condition is not an extra universal fixed degree requirement or, by itself, a curriculum contradiction.",
     "Required COMP345 and listed elective COMP447 have reciprocal registration/credit exclusions in their descriptions. COMP447 remains a published option with an unresolved eligibility conflict, not a generally available alternative.",
-    "Listed electives COMP585 and COMP631 restrict enrollment to Graduate level students. Undergraduate permission for these named degree options has not been established."
+    "All43 degree-listed course identities and individual credit amounts were reviewed against exact2026\u20132027 department descriptions. Source-listed aliases remain separate option records but cross-list rules prohibit duplicate credit. Individual credit units are semester_hours, corroborated by the university registration policy, without conversion.",
+    "COMP631 and COMP462 retain explicit mixed reviews rather than an unsupported single subject. PSYC468 is human_context, COMP414 mathematics, and COMP409/480/585 computing foundations based on their actual descriptions.",
+    "COMP345/346 explicitly require STAT315. STAT315 excludes prior STAT310/311 credit; the degree nevertheless publishes those courses with STAT314 as alternative statistics routes. This combined prerequisite-and-exclusion issue needs institutional interpretation; no automatic equivalence, waiver or extra fixed course is inferred.",
+    "Three independently reviewed reciprocal cross-list groups preserve43 source records but yield39 mapped course identities:13 fixed and26 options. Statistics315/DSCI301, vision447 and the three robotics450 aliases are deduplicated only through explicit source evidence; selection quantities remain unchanged."
   ],
   "curriculum_audit": {
     "scope": "degree",
@@ -2040,13 +3068,63 @@
     ],
     "unresolved_requirements": [
       "Residency wording conflict within the General Announcements: graduation permits up to one summer within four full-time semesters; the transfer page states four full fall/spring semesters. An authoritative clarification is required before claiming a fully reconciled degree audit.",
-      "Term-designated FWIS/distribution/AD/LPAP options are represented as published eligibility rules; individual student substitutions still require the relevant program/advisor approvals. No unapproved substitution equivalence is asserted.",
       "Required COMP345 and listed elective COMP447 have reciprocal registration/credit exclusions in their descriptions. COMP447 remains a published option with an unresolved eligibility conflict, not a generally available alternative.",
-      "Listed electives COMP585 and COMP631 restrict enrollment to Graduate level students. Undergraduate permission for these named degree options has not been established."
+      "COMP345/346 explicitly require STAT315. STAT315 excludes prior STAT310/311 credit; the degree nevertheless publishes those courses with STAT314 as alternative statistics routes. This combined prerequisite-and-exclusion issue needs institutional interpretation; no automatic equivalence, waiver or extra fixed course is inferred. STAT314 additionally requires STAT310 (concurrent enrollment permitted), whereas the degree also lists STAT311+314 and the STAT310/311 descriptions exclude prior credit in the other."
     ],
     "metadata_gaps": [
-      "Course descriptions and prerequisites remain unextracted.",
-      "Individual credits absent from the catalog requirement tables remain unknown."
+      "No course-level subject classification remains unreviewed among43 listed identities; COMP631/462 are deliberately mixed. Public resource coverage remains incomplete. No individual student approval or term-specific distribution eligibility is certified."
     ]
-  }
+  },
+  "course_identity_groups": [
+    {
+      "id": "rice-ai-identity-statistics",
+      "relation": "crosslisted",
+      "canonical_course_id": "rice-ai-stat-315",
+      "course_ids": [
+        "rice-ai-stat-315",
+        "rice-ai-dsci-301"
+      ],
+      "source_ids": [
+        "rice-university-artificial-intelligence-bs-degree-courses-stat",
+        "rice-university-artificial-intelligence-bs-degree-courses-dsci"
+      ],
+      "locator": "Reciprocal Cross-list fields in exact STAT 315, DSCI 301 course descriptions",
+      "reviewed_at": "2026-10-11",
+      "rationale": "The individually inspected course descriptions explicitly and reciprocally identify these codes as cross-listings of the same course. This is not inferred from a slash, similar title or mutual-credit exclusion."
+    },
+    {
+      "id": "rice-ai-identity-vision",
+      "relation": "crosslisted",
+      "canonical_course_id": "rice-ai-comp-447",
+      "course_ids": [
+        "rice-ai-comp-447",
+        "rice-ai-elec-447"
+      ],
+      "source_ids": [
+        "rice-university-artificial-intelligence-bs-degree-courses-comp",
+        "rice-university-artificial-intelligence-bs-degree-courses-elec"
+      ],
+      "locator": "Reciprocal Cross-list fields in exact COMP 447, ELEC 447 course descriptions",
+      "reviewed_at": "2026-10-11",
+      "rationale": "The individually inspected course descriptions explicitly and reciprocally identify these codes as cross-listings of the same course. This is not inferred from a slash, similar title or mutual-credit exclusion."
+    },
+    {
+      "id": "rice-ai-identity-robotics",
+      "relation": "crosslisted",
+      "canonical_course_id": "rice-ai-comp-450",
+      "course_ids": [
+        "rice-ai-comp-450",
+        "rice-ai-elec-450",
+        "rice-ai-mech-450"
+      ],
+      "source_ids": [
+        "rice-university-artificial-intelligence-bs-degree-courses-comp",
+        "rice-university-artificial-intelligence-bs-degree-courses-elec",
+        "rice-university-artificial-intelligence-bs-degree-courses-mech"
+      ],
+      "locator": "Reciprocal Cross-list fields in exact COMP 450, ELEC 450, MECH 450 course descriptions",
+      "reviewed_at": "2026-10-11",
+      "rationale": "The individually inspected course descriptions explicitly and reciprocally identify these codes as cross-listings of the same course. This is not inferred from a slash, similar title or mutual-credit exclusion."
+    }
+  ]
 }
