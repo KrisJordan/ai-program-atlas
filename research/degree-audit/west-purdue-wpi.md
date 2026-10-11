@@ -443,3 +443,7 @@ CGS24 primary-read and MUS27 contributor-read descriptions integrated, with prim
 ### UCSD Biology and Global Health, 2026-10-11
 
 Thirty-four Biology descriptions and introductory policies were primary-read;24 GLBH current observations integrated after contributor full reads and primary boundary checks. Chapter-wide Biology rules, required-versus-recommended preparation, research restrictions, variable credits and older/current GLBH eligibility differences remain explicit. Five missing codes and one GLBH107 title/version hold are not guessed away. Roles unchanged8/119/2241; context categories1287other/786human/135applications/7foundations/23systems/3math. Remaining identified accessible chapters keep the audit in progress.
+
+### UCSD Psychology and legacy CSE omissions, 2026-10-11
+
+PSYC14 current observations integrated with139missing/162title hold; two CSE option review omissions now have actual full-source systems/AI decisions. Four completed COMM missing-code dispositions explicitly labeled unclassified. Roles remain8/119/2241; option counts change only subjects (95other,2systems,6foundations,4math,10AI,1human,1applications). Context categories1275other/791human/142applications/7foundations/23systems/3math. The accessible source queue remains active.

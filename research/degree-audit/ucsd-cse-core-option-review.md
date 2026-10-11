@@ -1,0 +1,7 @@
+# UCSD two legacy CSE option reviews — 2026-10-11
+
+A bounded review-label sweep identified CSE100 and150A as existing described option records without manual subject reviews. They were outside the earlier82-record remaining-CSE handoff. Both complete current blocks in the [2026–27 CSE chapter](https://catalog.ucsd.edu/courses/CSE.html) were re-read from the normal official capture.
+
+CSE100 teaches advanced structures, memory management, implementation and average/amortized performance with C++/STL: systems.150A teaches probabilistic AI reasoning, Bayesian networks and Markov decision processes: AI/ML. Each remains four units. Exact eligibility was already preserved and is unchanged:100 has optional C/C++ preparation, undergraduate restriction with graduate space permission, and100R credit exclusion.150A has a long prerequisite expression and named eligible majors with space-permitting alternatives. No Boolean precedence, equivalence, extra required course or admission waiver is inferred.
+
+The new full-block guards overlay these two observations onto the complete existing CSE observer, retaining all90 course observations and tagged requirements. Manual reviews are integrated separately. The source-held/missing CSE identities remain unresolved; this does not certify the whole degree. Four already-unmatched Communication records also receive explicit unclassified seed review labels rather than remaining indistinguishable from unread work; no new source claim is added.

@@ -2,7 +2,7 @@ import importlib
 import json
 from pathlib import Path
 import pytest
-from atlas.adapters import ucsd_hila_reviews as hila, ucsd_sio_reviews as sio, ucsd_eds_reviews as eds, ucsd_cgs_reviews as cgs, ucsd_mus_reviews as mus, ucsd_biology_reviews as bio, ucsd_glbh_reviews as glbh
+from atlas.adapters import ucsd_hila_reviews as hila, ucsd_sio_reviews as sio, ucsd_eds_reviews as eds, ucsd_cgs_reviews as cgs, ucsd_mus_reviews as mus, ucsd_biology_reviews as bio, ucsd_glbh_reviews as glbh, ucsd_psyc_reviews as psyc
 from atlas.curriculum_profile import requirement_profile
 
 PID=hila.SPEC['program_id']
@@ -25,7 +25,7 @@ def test_history_sio_integration_preserves_held_identity_and_roles():
     assert cs['POLI 117']['category_review']['status']=='unclassified'
     assert [requirement_profile(d)[k]['count']for k in ['required','options','unresolved']]==[8,119,2241]
 
-@pytest.mark.parametrize('module,subject,count,dispositions',[(hila,'HILA',187,13),(sio,'SIO',35,6),(eds,'EDS',31,1),(cgs,'CGS',24,0),(mus,'MUS',27,6),(bio,'BIOL',34,3),(glbh,'GLBH',24,2)])
+@pytest.mark.parametrize('module,subject,count,dispositions',[(hila,'HILA',187,13),(sio,'SIO',35,6),(eds,'EDS',31,1),(cgs,'CGS',24,0),(mus,'MUS',27,6),(bio,'BIOL',34,3),(glbh,'GLBH',24,2),(psyc,'PSYC',14,2)])
 def test_composed_source_replays_approved_metadata_only(module,subject,count,dispositions):
     s=module.SPEC['sources'][subject];p=Path(s['cache_path'])
     if not p.exists():pytest.skip('Optional ignored official chapter capture')

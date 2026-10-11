@@ -358,3 +358,26 @@ for _review_module in (biology_reviews, glbh_reviews):
             raise ValueError('UCSD Biology/GLBH source needs explicit parser composition')
         SOURCES += (_review_url,)
         SOURCE_PARSERS[_review_url] = _review_parser
+
+# Two legacy core-option records were outside the remaining-CSE handoff and
+# lacked manual content decisions. Overlay guarded facts without losing tags.
+from atlas.adapters import ucsd_cse_core_options_reviews as core_option_reviews
+_PREVIOUS_COMPLETE_CSE_PARSER = SOURCE_PARSERS[COURSE_URL]
+
+def parse_cse_with_reviewed_core_options(html):
+    result = _PREVIOUS_COMPLETE_CSE_PARSER(html)
+    courses = {course['id']: course for course in result['courses']}
+    for observation in core_option_reviews.parse_observations(html)['courses']:
+        if observation['id'] not in courses:
+            raise ValueError('Reviewed CSE core option lacks existing source identity')
+        courses[observation['id']].update(observation)
+    return {**result, 'courses': list(courses.values())}
+
+SOURCE_PARSERS[COURSE_URL] = parse_cse_with_reviewed_core_options
+
+from atlas.adapters import ucsd_psyc_reviews as psyc_reviews
+for _review_url, _review_parser in psyc_reviews.SOURCE_PARSERS.items():
+    if _review_url in SOURCE_PARSERS:
+        raise ValueError('UCSD Psychology source needs explicit parser composition')
+    SOURCES += (_review_url,)
+    SOURCE_PARSERS[_review_url] = _review_parser

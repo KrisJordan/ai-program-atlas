@@ -1060,6 +1060,16 @@
       "catalog_year": "2026–27",
       "locator": "Complete represented matching blocks and applicable chapter policies; bounded title holds retained",
       "confidence": "high"
+    },
+    {
+      "id": "university-of-california-san-diego-artificial-intelligence-bs-degree-psyc-courses",
+      "url": "https://catalog.ucsd.edu/courses/PSYC.html",
+      "title": "UC San Diego Psychology course descriptions",
+      "fetched_at": "2026-10-11T08:50:40+00:00",
+      "source_date": null,
+      "catalog_year": "2026–27",
+      "locator": "All represented matching blocks; current title/version hold retained",
+      "confidence": "high"
     }
   ],
   "outcomes": [],
@@ -2912,11 +2922,25 @@
       "prerequisites": "CSE 21 or MATH 154 or MATH 158 or MATH 184 or MATH 188 and CSE 12 and CSE 15L or CSE 29 or ECE 15; restricted to undergraduates. Graduate students will be allowed as space permits. Students may not receive credit for both CSE 100R and CSE 100. Recommended preparation (not a prerequisite): background in C or C++ programming.",
       "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
+      "category": "systems",
       "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-courses",
       "url": "https://catalog.ucsd.edu/courses/CSE.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Complete prerequisite/eligibility suffix remains literal; mixed AND/OR wording is not converted to a new requirement tree."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-courses"
+        ],
+        "locator": "CSE 100. Advanced Data Structures (4)",
+        "rationale": "The complete source teaches implementation, memory management and performance of advanced data structures; this is substantive computing-systems content.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-cse-100r",
@@ -2976,11 +3000,25 @@
       "prerequisites": "CSE 12 or DSC 40B and CSE 15L or CSE 29 or DSC 80 and COGS 118D or CSE 103 or ECE 109 or ECON 120A or MAE 108 or MATH 180A or MATH 180B or MATH 181A or MATH 183 or MATH 186 and MATH 20A and MATH 18 or MATH 31AH; restricted to students within the CS25, CS26, CS27, CS29, EC26, and DS25 majors. All other students will be allowed as space permits.",
       "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
+      "category": "ai_ml",
       "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-courses",
       "url": "https://catalog.ucsd.edu/courses/CSE.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Complete prerequisite/eligibility suffix remains literal; mixed AND/OR wording is not converted to a new requirement tree."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-courses"
+        ],
+        "locator": "CSE 150A. Introduction to Artificial Intelligence: Probabilistic Reasoning and Decision-Making (4) Tag: Theory/Abstraction",
+        "rationale": "The complete source explicitly teaches probabilistic AI reasoning, Bayesian networks and Markov decision processes, rather than merely an AI-themed application.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-cse-150b",
@@ -8037,7 +8075,18 @@
       "notes": [
         "No exact current heading was found in the reviewed 2026–27 COMM chapter. No substitution, cancellation or university-wide absence is inferred."
       ],
-      "category_review": null
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-comm-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-dei-approved-pdf"
+        ],
+        "locator": "COMM 140GS; previously completed exact current heading inventory",
+        "rationale": "The completed bounded Communication chapter review found no exact current heading for this represented identifier. This is an unresolved identity disposition, not an unread source or inferred discontinuation.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-comm-155",
@@ -9873,30 +9922,63 @@
     {
       "id": "ucsd-psyc-127",
       "code": "PSYC 127",
-      "name": "Sexual Health Inequities and Sexual Wellbeing",
-      "description": null,
-      "prerequisites": "PSYC 60 and PSYC 70 and PSYC 172",
-      "credits": null,
+      "name": "Sexual Health Inequities and Sexual Well-Being",
+      "description": "Critically examines sexual-health inequities and well-being through race, ethnicity, gender and sexual orientation.",
+      "prerequisites": "upper-division standing, PSYC 60, PSYC 70, PSYC 172.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-dei-approved-pdf",
-      "url": "https://senate.ucsd.edu/media/513521/dei-list-of-courses.pdf",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-psyc-courses",
+      "url": "https://catalog.ucsd.edu/courses/PSYC.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Open only to the printed major codes: PC25, PC26, PC28, PC29, PC30, PC31, PC32, PC33, PC34, PC35. Do not broaden this to every Psychology major or to AI majors.",
+        "Upper-division standing, PSYC 60, PSYC 70 and PSYC 172 are all printed prerequisites.",
+        "Listed title: Sexual Health Inequities and Sexual Wellbeing. Current title: Sexual Health Inequities and Sexual Well-Being. The difference is hyphenation, conjunction or article styling; the specific subject remains aligned."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-psyc-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-dei-approved-pdf"
+        ],
+        "locator": "PSYC 127. Sexual Health Inequities and Sexual Well-Being (4)",
+        "rationale": "The description emphasizes reflexive analysis of identity and inequity rather than clinical sexual-health procedures.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-psyc-131",
       "code": "PSYC 131",
-      "name": "Scientific Racism: Genetics, Intelligence, & Race",
-      "description": null,
-      "prerequisites": "Upper-division standing",
-      "credits": null,
+      "name": "Scientific Racism: Genetics, Intelligence, and Race",
+      "description": "Examines the historical development and use of scientific racism, including claims about genetics, intelligence and human differences.",
+      "prerequisites": "upper-division standing.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-dei-approved-pdf",
-      "url": "https://senate.ucsd.edu/media/513521/dei-list-of-courses.pdf",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-psyc-courses",
+      "url": "https://catalog.ucsd.edu/courses/PSYC.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Open only to the printed major codes: PC25, PC26, PC28, PC29, PC30, PC31, PC32, PC33, PC34, PC35. Upper-division standing is required.",
+        "Listed title: Scientific Racism: Genetics, Intelligence, & Race. Current title: Scientific Racism: Genetics, Intelligence, and Race. The difference is hyphenation, conjunction or article styling; the specific subject remains aligned."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-psyc-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-dei-approved-pdf"
+        ],
+        "locator": "PSYC 131. Scientific Racism: Genetics, Intelligence, and Race (4)",
+        "rationale": "The organizing subject is the history and implementation of racism; references to genetics or intelligence do not establish genetic-methods or AI instruction.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-ph-157",
@@ -11432,29 +11514,57 @@
       "id": "ucsd-psyc-42",
       "code": "PSYC 42",
       "name": "Psychosocial Foundations of the Climate Crisis",
-      "description": null,
+      "description": "Examines climate inaction, skepticism, justice, emotional responses, public policy and social mobilization.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-climate-approved-pdf",
-      "url": "https://senate.ucsd.edu/media/742288/jtccer-course-list-fa25.pdf",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-psyc-courses",
+      "url": "https://catalog.ucsd.edu/courses/PSYC.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-psyc-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-climate-approved-pdf"
+        ],
+        "locator": "PSYC 42. Psychosocial Foundations of the Climate Crisis (4)",
+        "rationale": "The stated questions center human responses, justice and collective political action rather than physical climate science or experimental psychology methods.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-psyc-185",
       "code": "PSYC 185",
-      "name": "Psychology of the Climate Crisis",
-      "description": null,
-      "prerequisites": "Upper-division standing",
-      "credits": null,
+      "name": "Psychology of Climate Crisis",
+      "description": "Uses psychology to examine climate beliefs, denial, delayed action and possibilities for societal responses.",
+      "prerequisites": "upper-division standing.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-climate-approved-pdf",
-      "url": "https://senate.ucsd.edu/media/742288/jtccer-course-list-fa25.pdf",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-psyc-courses",
+      "url": "https://catalog.ucsd.edu/courses/PSYC.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Listed title: Psychology of the Climate Crisis. Current title: Psychology of Climate Crisis. The difference is hyphenation, conjunction or article styling; the specific subject remains aligned."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-psyc-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-climate-approved-pdf"
+        ],
+        "locator": "PSYC 185. Psychology of Climate Crisis (4)",
+        "rationale": "Psychological concepts serve interpretation of public beliefs and collective action; no separate experimental-method objective is stated.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-esys-10",
@@ -27081,7 +27191,18 @@
       "notes": [
         "No exact current heading was found in the reviewed 2026–27 COMM chapter. No substitution, cancellation or university-wide absence is inferred."
       ],
-      "category_review": null
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-comm-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-table-law"
+        ],
+        "locator": "COMM 114M; previously completed exact current heading inventory",
+        "rationale": "The completed bounded Communication chapter review found no exact current heading for this represented identifier. This is an unresolved identity disposition, not an unread source or inferred discontinuation.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-comm-114n",
@@ -27679,21 +27800,50 @@
       "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-table-law",
       "url": "https://docs.google.com/spreadsheets/u/0/d/e/2PACX-1vR-aC9cVI_o4xRZ8I_Go7Mkx-hSy6dcbPt8znZAuOFwDBI7lwfdAqtb1IgwV7D-poKWvNVJvlG3OA5V/pubhtml/sheet?headers=false&gid=523589065",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-psyc-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-table-law"
+        ],
+        "locator": "PSYC 162. Psychology and the Law (4)",
+        "rationale": "The represented Environmental Policy title conflicts with current Psychology and the Law content; same code does not establish identity continuity.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "Integration withheld: the represented title is Environmental Policy, while the current block is Psychology and the Law. Current candidate analysis must not certify the older record or transfer metadata.",
+        "PSYC 60 is recommended preparation in the current block; upper-division standing is its stated prerequisite. These conditions are not transferred to the held older title."
+      ]
     },
     {
       "id": "ucsd-psyc-164",
       "code": "PSYC 164",
       "name": "Criminology",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Examines explanations of crime and criminal-justice responses through developmental, cultural, social and personality perspectives.",
+      "prerequisites": "upper-division standing.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-table-law",
-      "url": "https://docs.google.com/spreadsheets/u/0/d/e/2PACX-1vR-aC9cVI_o4xRZ8I_Go7Mkx-hSy6dcbPt8znZAuOFwDBI7lwfdAqtb1IgwV7D-poKWvNVJvlG3OA5V/pubhtml/sheet?headers=false&gid=523589065",
+      "category": "human_context",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-psyc-courses",
+      "url": "https://catalog.ucsd.edu/courses/PSYC.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-psyc-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-table-law"
+        ],
+        "locator": "PSYC 164. Criminology (4)",
+        "rationale": "The focus is interpretation of criminal behavior and social institutions; no concrete laboratory or investigative-procedure training is specified.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-soci-140",
@@ -29114,29 +29264,60 @@
       "id": "ucsd-psyc-116c",
       "code": "PSYC 116C",
       "name": "Laboratory in Clinical Psychology Research III",
-      "description": null,
-      "prerequisites": "PSYC-116B",
-      "credits": null,
+      "description": "Completes a sequence applying theory, research design and methods to an independent clinical-psychology laboratory study.",
+      "prerequisites": "PSYC 116B.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-sixth-elr-table",
-      "url": "https://docs.google.com/spreadsheets/u/0/d/e/2PACX-1vR7dTRWsk3I2X0t7p5IV-i19gVI3qRDpF5gdK6wA8p3G_H2qyDfkZASfQOEfoYy_-Tib_JlV_pjCjhv/pubhtml/sheet?headers=false&gid=1715831878",
+      "category": "applications",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-psyc-courses",
+      "url": "https://catalog.ucsd.edu/courses/PSYC.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Third course of a three-course sequence; PSYC 116B is the stated prerequisite."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-psyc-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-sixth-elr-table"
+        ],
+        "locator": "PSYC 116C. Laboratory in Clinical Psychology Research III (4)",
+        "rationale": "Explicit clinical research-design and laboratory methods establish applied psychological research practice.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-psyc-117",
       "code": "PSYC 117",
       "name": "Laboratory in Educational Research and Outreach",
-      "description": null,
-      "prerequisites": "PSYC-060 or COGS-014B and PSYC-070 or COGS-014A; upper-division standing; instructor consent",
-      "credits": null,
+      "description": "Provides experience conducting educational research and outreach with children in the San Diego region.",
+      "prerequisites": "upper-division standing, PSYC 60 or COGS 14B and PSYC 70 or COGS 14A. Instructor approval.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-sixth-elr-table",
-      "url": "https://docs.google.com/spreadsheets/u/0/d/e/2PACX-1vR7dTRWsk3I2X0t7p5IV-i19gVI3qRDpF5gdK6wA8p3G_H2qyDfkZASfQOEfoYy_-Tib_JlV_pjCjhv/pubhtml/sheet?headers=false&gid=1715831878",
+      "category": "applications",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-psyc-courses",
+      "url": "https://catalog.ucsd.edu/courses/PSYC.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "May be taken for credit three times. Open only to the printed major codes: PC26, PC28, PC29, PC30, PC31, PC32, PC33, PC34, CG32.",
+        "The exact printed prerequisite text mixes and/or without parentheses. Preserve it literally, including upper-division standing and instructor approval; do not invent Boolean precedence or drop either methods/statistics portion."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-psyc-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-sixth-elr-table"
+        ],
+        "locator": "PSYC 117. Laboratory in Educational Research and Outreach (4)",
+        "rationale": "Actual educational research and outreach are applied domain practice, not merely social commentary on education.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-se-140b",
@@ -30545,15 +30726,30 @@
       "id": "ucsd-psyc-2",
       "code": "PSYC 2",
       "name": "General Psychology: Biological Foundations",
-      "description": null,
-      "prerequisites": "None",
-      "credits": null,
+      "description": "Introduces relationships between brain function and behavior, including perception, memory, motivation, attention and cognition.",
+      "prerequisites": null,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-ge",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/index.html",
+      "category": "applications",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-psyc-courses",
+      "url": "https://catalog.ucsd.edu/courses/PSYC.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "The represented pool says None for prerequisites, while the current chapter supplies no prerequisite clause. The current observation remains null; this is not a new absence finding or a waiver of another source condition."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-psyc-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-ge"
+        ],
+        "locator": "PSYC 2. General Psychology: Biological Foundations (4)",
+        "rationale": "Biological and cognitive mechanisms are substantive psychology/neuroscience domain knowledge.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-anar-145s",
@@ -33801,35 +33997,76 @@
       "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-writing",
       "url": "https://roosevelt.ucsd.edu/academics/gen-ed/udw/UDW_GE.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-psyc-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-writing"
+        ],
+        "locator": "PSYC 139; exact heading inventory",
+        "rationale": "No exact heading matches this represented identifier in the inspected current chapter; no substitute or discontinuation is inferred.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "No exact PSYC 139 heading appears in the reviewed 2026–27 chapter. No replacement, cancellation or institution-wide absence is inferred."
+      ]
     },
     {
       "id": "ucsd-psyc-141",
       "code": "PSYC 141",
       "name": "Evolution and Human Nature",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Examines whether human behavior and reasoning can be explained through natural selection.",
+      "prerequisites": "upper-division standing.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-writing",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/udw/UDW_GE.html",
+      "category": "applications",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-psyc-courses",
+      "url": "https://catalog.ucsd.edu/courses/PSYC.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-psyc-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-writing"
+        ],
+        "locator": "PSYC 141. Evolution and Human Nature (4)",
+        "rationale": "Evolutionary explanations of behavior organize the course, establishing biological/behavioral science rather than cultural or ethical interpretation of the examples.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-psyc-168",
       "code": "PSYC 168",
       "name": "Psychological Disorders of Childhood",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Surveys childhood psychological disorders, emphasizing symptoms, assessment, causes, epidemiology and treatment.",
+      "prerequisites": "upper-division standing.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-writing",
-      "url": "https://roosevelt.ucsd.edu/academics/gen-ed/udw/UDW_GE.html",
+      "category": "applications",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-psyc-courses",
+      "url": "https://catalog.ucsd.edu/courses/PSYC.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-psyc-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-roosevelt-writing"
+        ],
+        "locator": "PSYC 168. Psychological Disorders of Childhood (4)",
+        "rationale": "Clinical disorder knowledge and assessment/treatment concepts are applied health and psychology content.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-reli-110b",
@@ -51609,7 +51846,18 @@
       "notes": [
         "No exact current heading was found in the reviewed 2026–27 COMM chapter. No substitution, cancellation or university-wide absence is inferred."
       ],
-      "category_review": null
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-comm-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-eighth-table"
+        ],
+        "locator": "COMM 106E; previously completed exact current heading inventory",
+        "rationale": "The completed bounded Communication chapter review found no exact current heading for this represented identifier. This is an unresolved identity disposition, not an unread source or inferred discontinuation.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-comm-110m",
@@ -51714,7 +51962,18 @@
       "notes": [
         "No exact current heading was found in the reviewed 2026–27 COMM chapter. No substitution, cancellation or university-wide absence is inferred."
       ],
-      "category_review": null
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-comm-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-eighth-table"
+        ],
+        "locator": "COMM 117GS; previously completed exact current heading inventory",
+        "rationale": "The completed bounded Communication chapter review found no exact current heading for this represented identifier. This is an unresolved identity disposition, not an unread source or inferred discontinuation.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-comm-124a",
@@ -55292,57 +55551,121 @@
       "id": "ucsd-psyc-111b",
       "code": "PSYC 111B",
       "name": "Research Methods II",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Practices collecting, organizing and analyzing research data and presenting scientific findings and experimental-method critiques.",
+      "prerequisites": "PSYC 111A; upper-division standing. Instructor and department approval.",
+      "credits": 6,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-seventh-first",
-      "url": "https://seventh.ucsd.edu/academics/degree-requirements/degree-requirements-first.html",
+      "category": "applications",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-psyc-courses",
+      "url": "https://catalog.ucsd.edu/courses/PSYC.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Six quarter units. PSYC 111A, upper-division standing, instructor approval and department approval are required.",
+        "Must be taken for a letter grade for the Psychology Honors Program; this stated purpose is retained rather than converted to a blanket rule for every use of the course."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-psyc-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-seventh-first"
+        ],
+        "locator": "PSYC 111B. Research Methods II (6)",
+        "rationale": "Statistical and graphical analysis supports conducting and communicating empirical research; the whole course is applied research practice rather than general statistical theory.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-psyc-115b",
       "code": "PSYC 115B",
       "name": "Laboratory in Cognitive Psychology II",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Extends training in designing, conducting and analyzing cognitive-psychology experiments.",
+      "prerequisites": "upper-division standing and PSYC 115A. Instructor and department approval.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-seventh-first",
-      "url": "https://seventh.ucsd.edu/academics/degree-requirements/degree-requirements-first.html",
+      "category": "applications",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-psyc-courses",
+      "url": "https://catalog.ucsd.edu/courses/PSYC.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "No credit for both PSYC 115 and PSYC 115B; no course identity is inferred.",
+        "Open only to the printed major codes: PC26, PC28, PC29, PC30, PC31, PC32, PC33, PC34, CG32. Upper-division standing and PSYC 115A are required, with instructor and department approval."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-psyc-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-seventh-first"
+        ],
+        "locator": "PSYC 115B. Laboratory in Cognitive Psychology II (4)",
+        "rationale": "Concrete cognitive experimental methods are the explicit primary subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-psyc-193l",
       "code": "PSYC 193L",
       "name": "Psychology Laboratory Topics",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Offers selected psychology laboratory topics that vary between offerings.",
+      "prerequisites": "upper-division standing, department approval, and PSYC 60 or COGS 14B or MATH 11 and PSYC 70 or COGS 14A.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
       "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-seventh-first",
-      "url": "https://seventh.ucsd.edu/academics/degree-requirements/degree-requirements-first.html",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-psyc-courses",
+      "url": "https://catalog.ucsd.edu/courses/PSYC.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "May be taken for credit twice as topics vary. Open only to the printed major codes: PC26, PC28, PC29, PC30, PC31, PC32, PC33, PC34, CG32.",
+        "The exact prerequisite suffix mixes and/or without parentheses and adds department approval. Preserve its PSYC 60/COGS 14B/MATH 11 and PSYC 70/COGS 14A wording without inventing precedence."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-psyc-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-seventh-first"
+        ],
+        "locator": "PSYC 193L. Psychology Laboratory Topics (4)",
+        "rationale": "The block does not identify the selected topic or methods; laboratory format and department alone do not establish a precise category.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-psyc-194a",
       "code": "PSYC 194A",
       "name": "Honors Thesis I",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Develops and presents a proposal for a faculty-guided honors research project to be carried out in the subsequent sequence.",
+      "prerequisites": "PSYC 110, PSYC 111A-B, department approval, psychology majors only, acceptance to the Honors Program.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
       "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-seventh-first",
-      "url": "https://seventh.ucsd.edu/academics/degree-requirements/degree-requirements-first.html",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-psyc-courses",
+      "url": "https://catalog.ucsd.edu/courses/PSYC.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Requires PSYC 110, PSYC 111A-B, department approval, psychology-major status and Honors Program acceptance. The proposal is for research in 194B-C, not an additional completed prerequisite.",
+        "Must be taken for a letter grade for the Psychology Honors Program."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-psyc-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-seventh-first"
+        ],
+        "locator": "PSYC 194A. Honors Thesis I (4)",
+        "rationale": "The research topic and substantive methods are unspecified, so an honors proposal format alone cannot certify a category.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-ph-193",
@@ -149605,7 +149928,9 @@
     "CGS24 complete current descriptions are human-context inquiry, including cultural AI108 and critical science-studies135; no technical field is inferred from a theme. Four-unit amounts, conditional prerequisites, combined repeat-credit ceilings and exclusions remain literal; cross-list statements do not create identity groups.",
     "MUS33 targets yield27 current observations and six unmatched codes. Five practical composition/performance courses are applications,17 cultural/historical studies human-context and five individually selected projects/studies unclassified.132R is recital preparation, not inferred online modality;160B major restrictions and unexplained production-course limitation remain exact.199variable1–4 credits remainnull.",
     "Biology37 target review maps34 current descriptions; BILD51/BIEB131/165 unmatched. Strict chapter prerequisites and initial30-minute attendance policy are preserved; the laboratory W rule is scoped to reviewed labs. BICD136 recommends BILD2 rather than requiring it. BISP182/193 variable units remainnull;193 printedP/PN and196 Honors/GPA restriction retained.",
-    "GLBH26 target review maps24 current observations,131unmatched and107title/version held. Missing current prerequisite labels do not waive older pool eligibility; those conditions remain source-specific notes.111 requires Tijuana border crossing and recommends prior global-health study, while150B requires150A and approval. No reciprocal ANSC label creates an automatic identity group."
+    "GLBH26 target review maps24 current observations,131unmatched and107title/version held. Missing current prerequisite labels do not waive older pool eligibility; those conditions remain source-specific notes.111 requires Tijuana border crossing and recommends prior global-health study, while150B requires150A and approval. No reciprocal ANSC label creates an automatic identity group.",
+    "PSYC16 targets now have14 current observations,139unmatched and162held because Environmental Policy conflicts with Psychology and the Law. Exact major-code admission lists, Honors letter grading and117/193L mixed prerequisite clauses remain literal.111B states6units; thirteen others4. No pool membership waives restrictions.",
+    "CSE100/150A complete current blocks were re-read to close two manual review omissions outside the earlier remaining-CSE handoff.100 is systems,150A AI/ML; full prior metadata and source tags remain composed. Four already-unmatched Communication records now have explicit unclassified review labels; no new content or missing-code claim is introduced."
   ],
   "curriculum_audit": {
     "scope": "degree",
