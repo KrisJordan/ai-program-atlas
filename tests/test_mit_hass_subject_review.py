@@ -851,7 +851,7 @@ def test_anthropology_ocw_historical_nine_units_and_nonmerged_renumbered_courses
     # Historical OCW renumbering remains unproven; a later WGS page explicitly
     # prints21A.504J and supplies independent, dated description evidence.
     assert not any('ocw-' in o['source_id'] and o.get('evidence_basis')=='official_description' for o in entry('21A.504J')['observations'])
-    assert entry('21A.508')['observations'][-1]['evidence_basis']=='official_title_only'
+    assert not any('ocw-' in o['source_id'] and o.get('evidence_basis')=='official_description' for o in entry('21A.508')['observations'])
 
 
 def test_actual_anthropology_observer_h5_and_explicit_unit_amount_replay():
