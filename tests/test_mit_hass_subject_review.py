@@ -215,7 +215,7 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']['description_reviewed_records']==370
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==374
     assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
         o=next(o for o in entry(code)['observations'] if o.get('evidence_basis')=='official_title_only')
@@ -1177,3 +1177,39 @@ def test_cultural_sources_replay_and_option_policy_changes_withdraw_review():
                 assert review.matched_review(c,changed,source['url'],MANIFEST) is None
             seen+=1
     assert seen==15
+
+
+def test_music_actual_practice_remains_mixed_and_different_versions_unmatched():
+    report=MANIFEST['ocw_music_review']
+    assert report['directory_results_observed']==46
+    assert len(report['upgraded_record_ids'])==4 and len(report['source_ids'])==3
+    assert len(report['withheld_description_reads'])==2
+    for code in ['21M.291','21M.293']:
+        e=entry(code)['observations'][-1]
+        assert e['category']=='other' and e['status']=='mixed'
+        assert e['candidate_categories']==['applications','human_context']
+        assert e['prerequisites'] is e['credits'] is None
+    supernatural=entry('21M.013J [21L.013J]')['observations'][-1]
+    assert supernatural['category']=='human_context'
+    assert 'no prerequisites' in supernatural['prerequisites']
+    assert entry('21M.220')['observations'][-1]['evidence_basis']=='official_title_only'
+    assert entry('21M.223J')['observations'][-1]['evidence_basis']=='official_code_only'
+
+
+def test_music_actual_observations_replay_with_changed_content_withdrawal():
+    path=Path('/tmp/mit-hass-subjects/ocw-music-index.json')
+    if not path.exists():pytest.skip('Optional ignored public Music OCW captures')
+    seen=0
+    for source in json.loads(path.read_text()):
+        matching=[(cid,row,e) for cid,row in MANIFEST['courses'].items() for e in row['observations'] if e['source_url']==source['url']]
+        if not matching:continue
+        cache=path.parent/('ocw-'+source['key']+'.html')
+        if not cache.exists():pytest.skip('Optional ignored public Music source')
+        parser=review.observe_ocw_syllabus if source['key'].endswith('-syllabus') else review.observe_ocw_course
+        o=parser(cache.read_text())[0]
+        for cid,row,e in matching:
+            c=dict(id=cid,code=row['listed_code'],name=row['listed_name'],source_id=row['listed_source_id'])
+            assert review.matched_review(c,o,source['url'],MANIFEST)==e
+            assert review.matched_review(c,{**o,'description':'A changed course focusing solely on computational music.'},source['url'],MANIFEST) is None
+            seen+=1
+    assert seen==4
