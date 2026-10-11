@@ -1,0 +1,39 @@
+# Northeastern AI + Communication Studies primary contribution — 2026-10-11
+
+Reviewed the full [2026–2027 degree requirements](https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-communication-studies-bs-bos/) and all 35 remaining course descriptions: 32 [COMM](https://catalog.northeastern.edu/course-descriptions/comm/), one [MSCR](https://catalog.northeastern.edu/course-descriptions/mscr/) and two [PREL](https://catalog.northeastern.edu/course-descriptions/prel/). These exact identities occur in 40 currently unreviewed observations across Communication Studies, Public Health, Business Administration and International Affairs. The manifest records only those concrete targets. Existing already-reviewed subjects remain the primary researcher's responsibility.
+
+All source pages were available through existing ordinary HTTP caches. Per-source original fetch timestamps and body hashes are preserved in `atlas/adapters/northeastern_communication_course_reviews.json`; raw source bodies remain ignored. Every selected full block was read, including its actual prerequisites, credits and attributes. The helper checks catalog version, subject heading, exact identities and complete block hashes before observing metadata. It emits neither a category-review audit nor expected profile sets. The manual review manifest, source panel digest and role sets are separate evidence for coordinator integration.
+
+## Course findings
+
+Thirty-four subjects concern communication, rhetoric, culture, law, interpersonal relations or social research and map to human context. COMM 1000 is an orientation and planning course without a substantive taxonomy subject; it remains other/unclassified. These are individual content decisions, not a department-prefix rule. COMM 2301 uses statistics to conduct and evaluate empirical communication research; its stated center is social-science inquiry rather than statistical theory. COMM 1255 includes practical online tools and Web markup within critical communication and culture, not a general programming curriculum. PREL 3625 teaches public-relations campaign planning and media relationships.
+
+All 35 descriptions are substantive and available. COMM 1000 carries one semester hour; the other 34 carry four. Missing prerequisite fields remain null, never an assertion of unrestricted enrollment. Many upper-level COMM courses retain explicit first-year-writing alternatives and C minimums. COMM 3409 additionally requires a stated communication-course alternative at D− or above. PREL 3625 retains its JRNL 3425 / PREL 1425 / COMM 218M alternatives. No prerequisite is promoted to a universal degree requirement. COMM 2941 permits one repeat and identifies a critical communication-technology topic area, although its specific semester topic is unknown.
+
+COMM 2304 and COMM 3304 explicitly identify WMNS cross-list counterparts. Those counterpart identities are not mapped in this degree and reciprocal source blocks were not reviewed here. The observation is preserved, but no identity group or merge is certified. This contribution found no new substantive enrollment conflict or source-access barrier. No term-specific course sites, syllabi or first-offered dates were inferred.
+
+## Independently transcribed requirement roles
+
+The manual sets are stored in `degree_review.expected_codes` and `expected_course_ids`; they were transcribed from the entire degree panel and the previously verified CS 1802 concurrent-seminar rule, not copied from the profile output. Tests then compare each expected identity's role with the resolved family graph.
+
+- **15 fixed identities:** CS 1800/1802, CS 2000/2001, CS 2100/2101, CS 3200, DS 3500, DS 3000, DS 4200, DS 4300, DS 4400, COMM 1101, ECON 2350 and MATH 1341. Categories: five foundations, five mathematics, two systems, one AI/ML, one human context and one mixed/other.
+- **63 named options:** the manifest retains every explicit named alternative under its original source choice. Categories after these reviews: 51 human context, three AI/ML, two systems, one application and six other. These totals reuse existing independently reviewed categories for the 43 subjects outside the newly read 35; they do not claim a new second reading of those descriptions.
+- **Zero contextual/unresolved mapped identities.** This describes the represented graph, not completeness of open elective pools, permitted home-college policy applicability or the whole degree audit.
+
+The integration section requires eight semester hours, with COMM 2625 or COMM 2941 and CS 4120 listed beneath that credit choice. CS 4120 remains an option in the profile; source-defined credit choice ancestry is not removed by calculating an apparent route from the displayed four-hour entries. The initial working interpretation promoted it, but the final source/contract review preserves the existing correct graph. No seed correction is needed.
+
+Other reviewed rules remain distinct: DS 4420 or DS 4440; four Khoury elective hours; COMM common-course alternative; four foundation hours; four cluster hours; eight writing-intensive hours; twelve communication-elective hours; four capstone hours; orientation/co-op/writing alternatives; and four computing-and-social-issues hours. EECE 2322 and 2323 remain a complete optional bundle. Open CS/CY/DS ranges, COMM courses not already used, MSCR ranges and advisor-approved advanced options remain explicit open rules. These named sets do not claim to enumerate those ranges. CS 2000/2001 placement substitution remains conditional rather than an assumed student pathway. Degree load is 128 semester hours, including at least sixteen general-elective hours; no more than two COMM grades below C may satisfy the degree.
+
+## Conditional CAMD policy
+
+Read the complete current [College of Arts, Media and Design catalog page](https://catalog.northeastern.edu/undergraduate/arts-media-design/) from `home-16.html`, originally fetched `2026-10-10T23:00:31+00:00`. Its authoritative scope is students **in CAMD**; a participating-college relationship does not establish the student's home college.
+
+The guarded contribution preserves three course-free conditional notes: university progression standards plus any individual program requirements; an assigned-advisor graduation-clearance meeting completed in the junior year; and university NUpath requirements. The extra BA requirement is not imported into this BS degree. The page's co-op timing is a normal eligibility description, not a new fixed graduation requirement. The exact home-college assignment remains outside what this page establishes. The coordinator should deduplicate any already represented universal NUpath/progression rules rather than count them twice.
+
+## Integration and validation
+
+Primary owner retains seeds, family, shared category registry and audit ledger. Integrate the 40 exact observations and manual reviews through the existing per-program subject sources; `attach_reviewed_sources` composes with broader observers without replacing their other courses. Register the conditional CAMD source only where its scope is retained. The full degree panel checker reports policy observations, never a new independent audit.
+
+Nine focused tests passed, including all actual cached blocks across the four targets, source drift, prerequisites, conditional policy scope and every manual role against the resolved graph. Accessible content in this contribution is finished. Whole-degree home-college applicability and final primary audit disposition remain with the coordinator; they are not silently resolved by this successful source review.
+
+The existing-database build succeeded for 168 programs and 194 institutions at `/tmp/atlas-ne-communication-review-site`. It checks the current build path, not integration of the new manifest. The maintained database was not changed.
