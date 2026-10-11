@@ -1,0 +1,326 @@
+[
+  {
+    "institution_id": "swarthmore-college",
+    "status": "inspected",
+    "checked_at": "2026-10-11",
+    "note": "The prior readable CS inspection remains the historical basis for inspected status. This depth attempt reached robot-verification pages at Academics and the formerly readable CS about URL (redirected to the main-site CS page); no new academic content was read. Stopped those routes without bypass. Current catalog, formal concentrations and announcements remain unresolved; this is an access-limited attempt, not a completed depth review or absence conclusion.",
+    "sources": [
+      {
+        "url": "https://www.swarthmore.edu/academics",
+        "title": "Swarthmore Academics — access attempt",
+        "fetched_at": "2026-10-11",
+        "locator": "Robot verification; academic content not read"
+      },
+      {
+        "url": "https://www.cs.swarthmore.edu/program/about.html",
+        "title": "Swarthmore CS about — access attempt",
+        "fetched_at": "2026-10-11",
+        "locator": "Redirected to https://www.swarthmore.edu/computer-science/about-computer-science; robot verification; content not read"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "united-states-air-force-academy",
+    "status": "inspected",
+    "checked_at": "2026-10-11",
+    "note": "Reviewed the official major/minor directory and AY2026-2027 Course of Instruction contents plus selected Computer Science, Cyber Science, Data Science and Electrical and Computer Engineering sections. Artificial Intelligence appears as CompSci 471 coursework in these broader programs, not as a separately verified AI-titled credential. This bounded review does not cover every internal option, minor or announcement; no absence conclusion.",
+    "sources": [
+      {
+        "url": "https://www.usafa.edu/academics/majors-minors/",
+        "title": "USAFA Majors & Minors",
+        "fetched_at": "2026-10-11",
+        "locator": "Named degree/minor directory, including CS, Cyber Science, Data Science and ECE"
+      },
+      {
+        "url": "https://www.usafa.edu/app/uploads/COI.pdf",
+        "title": "USAFA AY2026-2027 Course of Instruction Handbook",
+        "fetched_at": "2026-10-11",
+        "locator": "Title/edition, contents and selected CS/Cyber Science/Data Science/ECE sections; CompSci 471 Artificial Intelligence; CS PDF page index 157"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "washington-and-lee-university",
+    "status": "inspected",
+    "checked_at": "2026-10-11",
+    "note": "Reviewed the areas-of-study directory, CS overview and department requirements landing page, which names CS BA and BS; the directory also names Data Science and Data Science–Business Analytics minors. Both linked CS catalog award pages returned 403, so their requirements were not read and no alternate route was attempted. Other formal internal concentrations and current announcements remain unreviewed; no qualifying AI award verified and no absence conclusion.",
+    "sources": [
+      {
+        "url": "https://www.wlu.edu/academics/areas-of-study",
+        "title": "Washington and Lee Areas of Study",
+        "fetched_at": "2026-10-11",
+        "locator": "Degree/minor list; CS, Cognitive and Behavioral Science, Data Science and Data Science–Business Analytics"
+      },
+      {
+        "url": "https://www.wlu.edu/academics/areas-of-study/computer-science",
+        "title": "Washington and Lee Computer Science",
+        "fetched_at": "2026-10-11",
+        "locator": "CS BA/BS and minor overview"
+      },
+      {
+        "url": "https://www.wlu.edu/computer-science-department/about-the-department/computer-science-major-requirements",
+        "title": "Washington and Lee Computer Science Major Requirements",
+        "fetched_at": "2026-10-11",
+        "locator": "Majors links name Computer Science BA and BS; no catalog requirements embedded"
+      },
+      {
+        "url": "https://catalog.wlu.edu/preview_program.php?catoid=46&poid=2530",
+        "title": "Washington and Lee linked CS BA catalog — access attempt",
+        "fetched_at": "2026-10-11",
+        "locator": "403 Forbidden; content and catalog edition not verified"
+      },
+      {
+        "url": "https://catalog.wlu.edu/preview_program.php?catoid=46&poid=2531",
+        "title": "Washington and Lee linked CS BS catalog — access attempt",
+        "fetched_at": "2026-10-11",
+        "locator": "403 Forbidden; content and catalog edition not verified"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "university-of-richmond",
+    "status": "inspected",
+    "checked_at": "2026-10-11",
+    "note": "Read the official undergraduate catalog overview, including the named BSBA majors and existence of business-administration concentrations. The Programs page exposed its search control but no program records in the reader; CS and Robins department homepages timed out. Concentration titles and current CS/catalog details therefore remain unresolved, not absent. Prior inspected status is preserved; this pass adds a precise rendering/retrieval boundary rather than a completed program-directory review.",
+    "sources": [
+      {
+        "url": "https://catalog.richmond.edu/ug",
+        "title": "Richmond Undergraduate Colleges catalog overview",
+        "fetched_at": "2026-10-11",
+        "locator": "Academic Schools; BSBA majors and reference to business-administration concentrations"
+      },
+      {
+        "url": "https://catalog.richmond.edu/programs",
+        "title": "Richmond Programs — rendering limit",
+        "fetched_at": "2026-10-11",
+        "locator": "Programs search control rendered, but no program list or titles returned"
+      },
+      {
+        "url": "https://cs.richmond.edu/",
+        "title": "Richmond Computer Science — access attempt",
+        "fetched_at": "2026-10-11",
+        "locator": "Reader timeout; page content not verified"
+      },
+      {
+        "url": "https://robins.richmond.edu/",
+        "title": "Richmond Robins School of Business — access attempt",
+        "fetched_at": "2026-10-11",
+        "locator": "Reader timeout; page content not verified"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "bucknell-university",
+    "status": "inspected",
+    "checked_at": "2026-10-11",
+    "note": "Reviewed the major/minor directory, CS overview and 2026-2027 Arts and Sciences and Engineering CS catalog sections. The catalog names CS BA, CS BS, CS and Engineering BS and a CS minor; AI and machine learning appear in course/research contexts, including CSCI 357. No separately titled AI award was verified in these pages. Other departments, formal internal options and announcements remain outside this bounded review; no absence conclusion.",
+    "sources": [
+      {
+        "url": "https://www.bucknell.edu/academics/majors-minors",
+        "title": "Bucknell Majors and Minors",
+        "fetched_at": "2026-10-11",
+        "locator": "Named program directory"
+      },
+      {
+        "url": "https://www.bucknell.edu/academics/college-engineering/majors-departments/computer-science",
+        "title": "Bucknell Computer Science",
+        "fetched_at": "2026-10-11",
+        "locator": "Three degree routes; AI/ML course/research context"
+      },
+      {
+        "url": "https://coursecatalog.bucknell.edu/collegeofartsandsciencescurricula/areasofstudy/computersciencecsci/",
+        "title": "Bucknell 2026-2027 Computer Science catalog",
+        "fetched_at": "2026-10-11",
+        "locator": "BA/BS major requirements and CS course list"
+      },
+      {
+        "url": "https://coursecatalog.bucknell.edu/collegeofengineeringcurricula/areasofstudy/computersciencecsci/",
+        "title": "Bucknell 2026-2027 Computer Science & Engineering catalog",
+        "fetched_at": "2026-10-11",
+        "locator": "Named programs, major requirements and CSCI 357 course entry"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "franklin-and-marshall-college",
+    "status": "inspected",
+    "checked_at": "2026-10-11",
+    "note": "Reviewed the fields-of-study directory, certificate overview, CS and Cognitive Science pages and the CS artificial-intelligence page. Artificial Intelligence and the Liberal Arts is explicitly a certificate; it is excluded from the requested degree/minor/formal-concentration scope. CS major/minor and AI coursework/research do not establish another qualifying title. The linked catalog was not retrievable, and broader internal-track/announcement review remains unfinished; no absence conclusion.",
+    "sources": [
+      {
+        "url": "https://www.fandm.edu/fields-of-study/",
+        "title": "Franklin & Marshall Fields of Study",
+        "fetched_at": "2026-10-11",
+        "locator": "Artificial Intelligence and the Liberal Arts labeled Certificate"
+      },
+      {
+        "url": "https://www.fandm.edu/centers-institutes-and-initiatives/certificates/",
+        "title": "Franklin & Marshall Certificates",
+        "fetched_at": "2026-10-11",
+        "locator": "AI and the Liberal Arts certificate; interdisciplinary coursework and experience"
+      },
+      {
+        "url": "https://www.fandm.edu/fields-of-study/computer-science/",
+        "title": "Franklin & Marshall Computer Science",
+        "fetched_at": "2026-10-11",
+        "locator": "CS major/minor and advanced AI/ML topics"
+      },
+      {
+        "url": "https://www.fandm.edu/fields-of-study/cognitive-science/",
+        "title": "Franklin & Marshall Cognitive Science",
+        "fetched_at": "2026-10-11",
+        "locator": "Named Cognitive Science program"
+      },
+      {
+        "url": "https://www.fandm.edu/fields-of-study/computer-science/ai.html",
+        "title": "Franklin & Marshall Computer Science and AI",
+        "fetched_at": "2026-10-11",
+        "locator": "AI certificate, courses, teaching and research context; no separate degree/minor verified"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "union-college",
+    "status": "inspected",
+    "checked_at": "2026-10-11",
+    "note": "Reviewed the major/minor directory, CS page and 4+1 Business Master’s Pathway. AI in Business is explicitly an MS at Rochester’s Simon Business School following a Union BA/BS, not an AI-named Union undergraduate award. CS names a major, minor and interdepartmental major; AI appears in research context. Embedded requirements remained Loading and the linked catalog failed retrieval. Formal internal-track and broader announcement review remains incomplete; no absence conclusion.",
+    "sources": [
+      {
+        "url": "https://www.union.edu/academic/majors-minors",
+        "title": "Union Majors and Minors",
+        "fetched_at": "2026-10-11",
+        "locator": "Named undergraduate programs and 4+1 Business Master’s Pathway"
+      },
+      {
+        "url": "https://www.union.edu/academic/majors-minors/computer-science",
+        "title": "Union Computer Science",
+        "fetched_at": "2026-10-11",
+        "locator": "Major/minor/interdepartmental major and research; requirement blocks showed Loading"
+      },
+      {
+        "url": "https://www.union.edu/admissions/business-masters-pathway",
+        "title": "Union 4+1 Business Master’s Pathway",
+        "fetched_at": "2026-10-11",
+        "locator": "Partnership with Rochester Simon; AI in Business appears in the MS list"
+      },
+      {
+        "url": "https://catalog.union.edu/",
+        "title": "Union Academic Catalog — access attempt",
+        "fetched_at": "2026-10-11",
+        "locator": "Linked catalog could not be retrieved by the reader; requirements not verified"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "connecticut-college",
+    "status": "inspected",
+    "checked_at": "2026-10-11",
+    "note": "Reviewed the CS department and major pages, including learning-agent/robotics research and faculty AI interests. These describe the Computer Science major and research rather than an AI-named credential. The major/minor finder did not render its program list; the linked full catalog course list failed retrieval. Formal minor/concentration/pathway requirements and broader announcements remain unresolved; no absence conclusion.",
+    "sources": [
+      {
+        "url": "https://www.conncoll.edu/academics/majors-departments-programs/majors-and-minors/",
+        "title": "Connecticut College Majors and Minors — rendering limit",
+        "fetched_at": "2026-10-11",
+        "locator": "Major finder rendered without program records; pathway/certificate context only"
+      },
+      {
+        "url": "https://www.conncoll.edu/academics/majors-departments-programs/departments/computer-science/",
+        "title": "Connecticut College Computer Science department",
+        "fetched_at": "2026-10-11",
+        "locator": "CS study and robotics research"
+      },
+      {
+        "url": "https://www.conncoll.edu/academics/majors-departments-programs/majors-and-minors/computer-science/",
+        "title": "Connecticut College Majoring in Computer Science",
+        "fetched_at": "2026-10-11",
+        "locator": "Major, research and faculty interests; View Full Course List link failed retrieval"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "sewanee-the-university-of-the-south",
+    "status": "inspected",
+    "checked_at": "2026-10-11",
+    "note": "Reviewed Programs of Study, the Mathematics/CS/Data Science overview and 2026-2027 Mathematics and CS catalog, including the CS major. The catalog names CS and Data Science majors/minors; Artificial Intelligence is CSCI 356, an elective course, not a separately verified credential. Other departmental internal options and current announcements remain unreviewed; no absence conclusion.",
+    "sources": [
+      {
+        "url": "https://new.sewanee.edu/programs-of-study/",
+        "title": "Sewanee Programs of Study",
+        "fetched_at": "2026-10-11",
+        "locator": "Named program list and award-type labels"
+      },
+      {
+        "url": "https://new.sewanee.edu/programs-of-study/math-cs/",
+        "title": "Sewanee Mathematics, Computer Science and Data Science",
+        "fetched_at": "2026-10-11",
+        "locator": "Department overview and linked major/minor requirements"
+      },
+      {
+        "url": "https://e-catalog.sewanee.edu/arts-sciences/departments-interdisciplinary-programs/mathematics-computer-science/",
+        "title": "Sewanee 2026-2027 Mathematics and Computer Science catalog",
+        "fetched_at": "2026-10-11",
+        "locator": "Majors/minors and CSCI 356 Artificial Intelligence course"
+      },
+      {
+        "url": "https://e-catalog.sewanee.edu/arts-sciences/departments-interdisciplinary-programs/mathematics-computer-science/computer-science-major/",
+        "title": "Sewanee 2026-2027 Computer Science major",
+        "fetched_at": "2026-10-11",
+        "locator": "Requirements for the Major and electives"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "centre-college",
+    "status": "inspected",
+    "checked_at": "2026-10-11",
+    "note": "Reviewed the academic directory, catalog programs index and CS/Data Science sections. The index, department pages and Data Science major show 2026-2027; the linked CS major response instead showed 2025-2026, so it is not treated as current-year verification. Applied Machine Learning and Artificial Intelligence appear as Data Science required/elective courses, not AI-named credentials. Other internal options and announcements remain unfinished; no absence conclusion.",
+    "sources": [
+      {
+        "url": "https://www.centre.edu/academics/majors-minors-programs",
+        "title": "Centre Majors, Minors and Programs",
+        "fetched_at": "2026-10-11",
+        "locator": "Named undergraduate program directory"
+      },
+      {
+        "url": "https://centre.smartcatalogiq.com/en/catalog-and-handbooks/catalog/programs-of-study",
+        "title": "Centre 2026-2027 Programs of Study",
+        "fetched_at": "2026-10-11",
+        "locator": "Catalog edition and named program index"
+      },
+      {
+        "url": "https://centre.smartcatalogiq.com/en/catalog-and-handbooks/catalog/programs-of-study/computer-science",
+        "title": "Centre 2026-2027 Computer Science",
+        "fetched_at": "2026-10-11",
+        "locator": "Named CS major/minor links"
+      },
+      {
+        "url": "https://centre.smartcatalogiq.com/en/catalog-and-handbooks/catalog/programs-of-study/computer-science/computer-science-major",
+        "title": "Centre Computer Science major — edition mismatch",
+        "fetched_at": "2026-10-11",
+        "locator": "Retrieved response labeled 2025-2026, unlike parent page; not evidence of 2026-2027 requirements"
+      },
+      {
+        "url": "https://centre.smartcatalogiq.com/en/catalog-and-handbooks/catalog/programs-of-study/data-science",
+        "title": "Centre 2026-2027 Data Science",
+        "fetched_at": "2026-10-11",
+        "locator": "Named Data Science major/minor links"
+      },
+      {
+        "url": "https://centre.smartcatalogiq.com/en/catalog-and-handbooks/catalog/programs-of-study/data-science/data-science-major",
+        "title": "Centre 2026-2027 Data Science major",
+        "fetched_at": "2026-10-11",
+        "locator": "Requirements: DSC 340 Applied Machine Learning and CSC 372 Artificial Intelligence elective"
+      }
+    ],
+    "discoveries": []
+  }
+]
