@@ -148,3 +148,20 @@ WRIT1 follow-up: the previously cached, actually reread [individual guide](https
 The alternate official [images-path2026–27GEAR](https://engineering.ucsb.edu/sites/default/files/images/26-27_GEAR.pdf) was normally fetched and its AIrequirement/sample-plan pages visually read. Its whole-file hash differs, but all four previously reviewed applicable PDFpages13/14/16/17have identical whitespace-normalized text. The CMPSC41five/four-unit discrepancy and unspecified scienceListsA/Bremain; no capstone identity appears. ExistingCMPSC190AA–ZZopen criterion is already represented. This accessible comparison is completed rather than retained as a backlog item.
 
 English exact-code closure adds three represented dispositions from five full offering pages. The main department publishes historical146AIWinter2021and146DSWinter2023(the146AIURLmislabels spring) and threeFall2026ENGL197literary/cultural seminars. Their observed subjects arehuman context; actualprerequisites areunpublished here(CheckGOLD), unitsunstated. The current65options now have26human-context and15other; allrolecounts unchanged. Current applicability of the historical versions remainsunverified. DistinctFall2025ENGL155AIwasread butnot substituted. This work used the permitted main department host; robots-disallowedTranscriptions wasnotretried. MEcourse-content route pointsCanvas, andtheindependentlylinked publiccourse-searchrobots redirects toregistrarhelp, so no protecteddatawere accessed. Eighteen representedcode descriptions andexactversion/identityquestions remainactive/blocked as individually recorded; whole-degreein_progress remainshonest.
+
+### UCSB current catalog: reciprocal Critical AI identity (2026-10-11)
+
+Ordinary rendered 2026–27 catalog pages for GER155 and C LIT155 were individually
+read, including the full description, fixed four-unit amount, Area E and advisory
+same-course statements. Both expressly name the other code and ENGL155AI. The
+existing two represented codes therefore form one verified identity; historical
+ENGL146AI is not included. The humanities-centered critical analysis supports
+human_context. No published prerequisite field means unknown, not no restriction.
+
+Manual option accounting: prior65 code observations, minus one reciprocal alias,
+yields64 identities. Two formerly unclassified code observations become one
+human-context identity: human_context26→27 and other15→13. Fixed19 and contextual2
+stay unchanged; all86raw code records remain. The reviewed course-ID lists now
+use the canonical C-LIT155 identity. Seventy represented codes have bounded
+content dispositions; the16 remaining code descriptions and newly accessible
+catalog policies/pools remain active work. No whole-degree completion claimed.

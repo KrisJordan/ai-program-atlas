@@ -43,10 +43,10 @@ def test_real_seed_exact_roles_and_limits():
     assert 'No required prerequisites' in c['CMPSC 188']['prerequisites']
     assert 'recommended' in c['CMPSC 174A']['prerequisites']
     p=requirement_profile(d)
-    assert [p[k]['count']for k in ['required','options','unresolved']]==[19,65,2]
+    assert [p[k]['count']for k in ['required','options','unresolved']]==[19,64,2]
     assert p['options']['categories']['systems']==12
     assert p['options']['categories']['foundations']==8
-    assert not d.get('course_identity_groups')
+    assert d['course_identity_groups'][0]['course_ids']==['ucsb-c-lit-155','ucsb-ger-155']
 
 
 def test_registered_parsers_observe_all_available_cached_pages():
@@ -100,7 +100,7 @@ def test_writing_series_guard_and_no_automatic_identity_or_prerequisite_role(mon
     assert c['WRIT 109ES']['description'] is None
     assert 'formerly' in c['WRIT 107EP']['prerequisites']
     assert 'does not independently restate' in c['WRIT 50E']['prerequisites']
-    assert requirement_profile(d)['options']['categories']['human_context']==26
+    assert requirement_profile(d)['options']['categories']['human_context']==27
 
 
 def test_writing_actual_cache_matches_all25_read_blocks():
@@ -143,7 +143,7 @@ def test_english_offering_guards_do_not_infer_current_version_or_gold_prerequisi
     assert len(courses['ENGL 197']['category_review']['source_ids'])==3
     assert courses['ENGL 146AI']['code']!='ENGL 155AI'
     assert 'Winter2021' in courses['ENGL 146AI']['description']
-    assert requirement_profile(d)['options']['categories']['human_context']==26
+    assert requirement_profile(d)['options']['categories']['human_context']==27
 
 
 def test_english_all_five_actual_dated_offerings_are_guarded():
@@ -155,3 +155,40 @@ def test_english_all_five_actual_dated_offerings_are_guarded():
         assert len(result['courses'])==1 and result['requirements']==[]
         if result['courses'][0]['code']=='ENGL 197':
             assert 'description'not in result['courses'][0]  # individual topic cannot certify all sections
+
+
+def test_current_catalog_guard_keeps_manual_identity_and_roles_separate(monkeypatch):
+    from atlas.adapters import ucsb_catalog_course_content as current
+    html = '<main><h1>GER155</h1><h3>Full Course Title</h3><p>Synthetic critical analysis; Units Fixed 4; same-course statement.</p><h3>Programs</h3><p>Synthetic optional program.</p></main>'
+    fields = 'Synthetic critical analysis; Units Fixed 4; same-course statement.'
+    entry = dict(current.SPEC['GER 155'], fields_digest=hashlib.sha256(fields.encode()).hexdigest())
+    monkeypatch.setitem(current.SPEC, 'GER 155', entry)
+    result = current.parse(html, code='GER 155')
+    assert result['requirements'] == []
+    assert 'course_identity_groups' not in result
+    assert 'category_review' not in result['courses'][0]
+    assert result['courses'][0]['prerequisites'] is None
+    for changed in [html.replace('Fixed 4', 'Fixed 5'), html.replace('same-course', 'different-course'), html.replace('GER155', 'GER156'), '<main>Loading</main>']:
+        with pytest.raises(ValueError):
+            current.parse(changed, code='GER 155')
+
+
+def test_current_crosslisting_uses_reciprocal_evidence_and_retains_raw_codes():
+    d=json.loads(Path('data/programs/ucsb-ai-bs.json').read_text())
+    group=d['course_identity_groups'][0]
+    assert group['canonical_course_id']=='ucsb-c-lit-155'
+    assert len(group['source_ids'])==2
+    assert 'ucsb-engl-146ai'not in group['course_ids']
+    profile=requirement_profile(d)
+    assert profile['options']['count']==64
+    assert profile['options']['source_record_count']==65
+    assert profile['options']['categories']['human_context']==27
+    assert profile['options']['categories']['other']==13
+    from atlas.adapters import ucsb_catalog_course_content as current
+    for code, entry in current.SPEC.items():
+        cache=Path('.cache/research/ucsb-course-content')/('ger155-catalog-visible.html' if code=='GER 155' else 'clit155-catalog-visible.html')
+        if cache.exists():
+            result=current.parse(cache.read_text(), code=code)
+            assert result==current.parse(cache.read_text(),code=code)
+            seed=next(c for c in d['courses']if c['code']==code)
+            assert all(seed[k]==v for k,v in result['courses'][0].items())

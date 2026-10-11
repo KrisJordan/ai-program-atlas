@@ -85,3 +85,27 @@ The independently surfaced official `/sites/default/files/images/26-27_GEAR.pdf`
 The independent main English Department site permits normal fetching, unlike the Transcriptions host's robots-disallowed archive (not retried). Full exact-code descriptions were read for ENGL146AI(displayedWinter2021despite its spring-2021URL),146DS(Winter2023), and all three department-listed ENGL197Fall2026topics:Poetry andPainting;NovelThinking;BlackFantastic. All are literary/cultural analysis, not technicalAIcourses inferred from their topics. Historical146AI/DSapplicability remains explicit. ENGL197is variable: its seed summary combines the three observed current topics, while each source parser emits only its own topic note and bounded subject observation, not a universal description. None states units; prerequisites direct toGOLD, so actualprereqs remainnull.
 
 Fall2025ENGL155AIis a distinct observed code and is not substituted for146AIor C-LIT/GER155. RecentFall2025/Winter2026/Spring2026directories do not establish absence of the older exactcodes. Main ME requirements explicitly say individual course sites are nowCanvas; no login accessed. Department-linked public course search cannot be automatically retrieved under normal policy because its robots URL redirects cross-origin to registrarhelp; the redirect was inspected only to identify the barrier, not to bypass it. ComparativeLiterature's public2025–26offeringsPDF remains the next independentlead.
+
+### Current catalog browser closure: Critical AI 155 (2026-10-11)
+
+The GSS department's public courses page linked directly to the 2026–27 catalog
+course directory. Ordinary Chrome navigation rendered the actual directory and
+course body after its initial loading shell. This was not a denial or a hidden
+API workaround. Both [GER155](https://catalog.ucsb.edu/courses/GER%20155/general-aoYks)
+and [C LIT155](https://catalog.ucsb.edu/courses/C%20LIT%20155/general-aoYks) were read
+in full. They state four units, Area E, and reciprocal same-course statements
+naming German155, Comparative Literature155 and ENGL155AI. Their description
+centers humanities history/theory and philosophical/political implications of AI;
+`human_context` follows the actual content, not the AI title. No prerequisite
+field appears, retained unknown rather than asserting unrestricted eligibility.
+
+Both source-code records remain; the verified pair now counts once among options.
+The graph has 19 fixed, 64 option and 2 contextual identities, from 86 raw records.
+No ENGL146AI/155AI substitution is made. The parser guards the full visible field
+block and never emits identity certification or manual taxonomy reviews.
+
+The independently inspected Comparative Literature2025–26 offerings PDF and GSS
+2025–26 schedule confirm offerings only; they did not supply full descriptions.
+Sixteen exact course codes still need content review. Current catalog browsing
+also reopens GE/science/capstone and current-version checks as accessible work;
+old raw-shell observations cannot be treated as definitive access barriers.

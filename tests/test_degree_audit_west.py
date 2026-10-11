@@ -13,7 +13,10 @@ def program(pid):
 
 def assert_partition(d, fixed, options, unresolved):
     assert fixed.isdisjoint(options) and fixed.isdisjoint(unresolved) and options.isdisjoint(unresolved)
-    assert fixed|options|unresolved=={c['id']for c in d['courses']}
+    aliases = {cid: group['canonical_course_id']
+               for group in d.get('course_identity_groups', [])
+               for cid in group['course_ids']}
+    assert fixed|options|unresolved=={aliases.get(c['id'], c['id']) for c in d['courses']}
     observed=requirement_profile(d)
     for key,ids in [('required',fixed),('options',options),('unresolved',unresolved)]:
         counts=Counter(c['category']for c in d['courses']if c['id']in ids)
