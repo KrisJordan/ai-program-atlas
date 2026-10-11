@@ -26,7 +26,7 @@ def test_source_change_drops_stale_editorial_claims(monkeypatch):
  with pytest.raises(ValueError,match='identity changed'):parse(html.replace('Synthetic inquiry','New inquiry'))
 
 
-@pytest.mark.parametrize('award,n',[('BA',299),('BS',298)])
+@pytest.mark.parametrize('award,n',[('BA',336),('BS',335)])
 def test_reviewed_uger_semantics_and_reciprocal_identity(award,n):
  pid=f'case-western-reserve-university-artificial-intelligence-{award.lower()}-degree'
  p=json.loads(Path('data/programs',pid+'.json').read_text());cs={c['code']:c for c in p['courses']}
@@ -131,3 +131,23 @@ def test_science_conditions_and_variable_credit_range(award):
   obs=m.parse_descriptions(path.read_text(),pid=pid,award=award,department='astr')
   assert obs['observed_credit_ranges']=={cs['ASTR 351']['id']:'1 - 3 Units'}
   assert not any('Changed description' in n for n in obs['notes'])
+
+
+@pytest.mark.parametrize('award',['BA','BS'])
+def test_health_conditions_known_zero_and_unspecified_research(award):
+ pid=f'case-western-reserve-university-artificial-intelligence-{award.lower()}-degree'
+ p=json.loads(Path('data/programs',pid+'.json').read_text());cs={c['code']:c for c in p['courses']}
+ assert cs['NURS 277']['credits']==0
+ assert cs['NTRN 201']['prerequisites'] is None
+ assert 'Nutrition major and Senior standing' in cs['NTRN 350']['prerequisites']
+ assert 'Grade of C or better' in cs['NURS 373']['prerequisites'] and 'Coreq:' in cs['NURS 373']['prerequisites']
+ assert cs['PSCL 282']['category']==cs['PSCL 375']['category']=='mathematics'
+ assert cs['PSCL 395']['category_review']['status']=='unclassified'
+ assert cs['NURS 343']['category']=='human_context'
+ assert cs['NURS 293']['category_review']['status']=='mixed'
+ for dep,count in [('ntrn',17),('nurs',13),('pscl',7)]:
+  path=Path('/tmp/case-uger-audit',dep+'.html')
+  if path.exists():
+   obs=m.parse_descriptions(path.read_text(),pid=pid,award=award,department=dep)
+   assert len(obs['courses'])==count
+   assert not any('Changed description' in n for n in obs['notes'])

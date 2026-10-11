@@ -450,6 +450,36 @@
       "catalog_year": "2026-2027",
       "locator": "Exact reviewed UGER course blocks: EEPS 207, EEPS 390, EEPS 391, EEPS 392",
       "confidence": "high"
+    },
+    {
+      "id": "case-uger-courses-ntrn",
+      "url": "https://bulletin.case.edu/course-descriptions/ntrn/",
+      "title": "Nutrition (NTRN)",
+      "fetched_at": "2026-10-11T03:17:20+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Exact reviewed UGER course blocks: NTRN 350, NTRN 397, NTRN 201, NTRN 300, NTRN 320, NTRN 328, NTRN 200C, NTRN 200H, NTRN 200S, NTRN 200W, NTRN 340, NTRN 380, NTRN 200, NTRN 342, NTRN 343, NTRN 337, NTRN 341",
+      "confidence": "high"
+    },
+    {
+      "id": "case-uger-courses-nurs",
+      "url": "https://bulletin.case.edu/course-descriptions/nurs/",
+      "title": "Nursing (NURS)",
+      "fetched_at": "2026-10-11T03:17:22+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Exact reviewed UGER course blocks: NURS 280, NURS 290, NURS 293, NURS 320, NURS 373, NURS 112, NURS 204, NURS 277, NURS 326, NURS 343, NURS 372, NURS 210, NURS 260",
+      "confidence": "high"
+    },
+    {
+      "id": "case-uger-courses-pscl",
+      "url": "https://bulletin.case.edu/course-descriptions/pscl/",
+      "title": "Psychology (PSCL)",
+      "fetched_at": "2026-10-11T03:17:29+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Exact reviewed UGER course blocks: PSCL 220, PSCL 375, PSCL 386, PSCL 395, PSCL 282, PSCL 343, PSCL 334",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -4053,57 +4083,104 @@
       "id": "case-ba-uger-ntrn-350",
       "code": "NTRN 350",
       "name": "Community Nutrition",
-      "description": null,
-      "prerequisites": null,
+      "description": "Public-health nutrition practice, dietary behavior and population health, with professional communication and ethical considerations.",
+      "prerequisites": "Prereq: Nutrition major and Senior standing or Requisites Not Met permission.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=NTRN%20350",
+      "category": "applications",
+      "source_id": "case-uger-courses-ntrn",
+      "url": "https://bulletin.case.edu/course-descriptions/ntrn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-ntrn"
+        ],
+        "locator": "NTRN 350; current 2026–2027 course block",
+        "rationale": "The actual description centers on public-health nutrition practice, dietary behavior and population health, with professional communication and ethical considerations.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-nurs-280",
       "code": "NURS 280",
       "name": "Management of Chronic Illness in a Cultural Context",
-      "description": null,
-      "prerequisites": null,
+      "description": "Cross-cultural self-care practices used to manage chronic illness and promote wellness.",
+      "prerequisites": "Prereq: Academic Inquiry Seminar (AIQS) or SAGES First Seminar.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=NURS%20280",
+      "category": "applications",
+      "source_id": "case-uger-courses-nurs",
+      "url": "https://bulletin.case.edu/course-descriptions/nurs/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-nurs"
+        ],
+        "locator": "NURS 280; current 2026–2027 course block",
+        "rationale": "The actual description centers on cross-cultural self-care practices used to manage chronic illness and promote wellness.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-nurs-290",
       "code": "NURS 290",
       "name": "Aging Well",
-      "description": null,
+      "description": "Physiological, psychological and social factors in healthy aging, including evaluation of supportive services.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=NURS%20290",
+      "category": "applications",
+      "source_id": "case-uger-courses-nurs",
+      "url": "https://bulletin.case.edu/course-descriptions/nurs/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-nurs"
+        ],
+        "locator": "NURS 290; current 2026–2027 course block",
+        "rationale": "The actual description centers on physiological, psychological and social factors in healthy aging, including evaluation of supportive services.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-nurs-293",
       "code": "NURS 293",
       "name": "Opiate Addiction in America",
-      "description": null,
+      "description": "Addiction science and treatment considered together with stigma, criminalization, healthcare access and public policy.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=NURS%20293",
+      "source_id": "case-uger-courses-nurs",
+      "url": "https://bulletin.case.edu/course-descriptions/nurs/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-nurs"
+        ],
+        "locator": "NURS 293; current 2026–2027 course block",
+        "rationale": "The actual description centers on addiction science and treatment considered together with stigma, criminalization, healthcare access and public policy. These substantial domains are mixed without a single defensible primary subject.",
+        "candidate_categories": [
+          "applications",
+          "human_context"
+        ]
+      }
     },
     {
       "id": "case-ba-uger-orbh-222",
@@ -6759,29 +6836,51 @@
       "id": "case-ba-uger-ntrn-397",
       "code": "NTRN 397",
       "name": "Research Methods and Disciplinary Communications in Nutrition",
-      "description": null,
-      "prerequisites": null,
+      "description": "Nutrition research methods, critical interpretation of evidence and communication to professional and public audiences.",
+      "prerequisites": "Prereq: Declared Nutrition or Nutritional Biochemistry and Metabolism major and sophomore standing.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=NTRN%20397",
+      "category": "applications",
+      "source_id": "case-uger-courses-ntrn",
+      "url": "https://bulletin.case.edu/course-descriptions/ntrn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-ntrn"
+        ],
+        "locator": "NTRN 397; current 2026–2027 course block",
+        "rationale": "The actual description centers on nutrition research methods, critical interpretation of evidence and communication to professional and public audiences.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-nurs-320",
       "code": "NURS 320",
       "name": "Theoretical and Evidence Bases for Best Practice in Nursing",
-      "description": null,
-      "prerequisites": null,
+      "description": "Nursing research methods, evidence evaluation, quality improvement and implementation in clinical practice.",
+      "prerequisites": "Prereq: STAT 201 or PSCL 282 or ANTH 319 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=NURS%20320",
+      "category": "applications",
+      "source_id": "case-uger-courses-nurs",
+      "url": "https://bulletin.case.edu/course-descriptions/nurs/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-nurs"
+        ],
+        "locator": "NURS 320; current 2026–2027 course block",
+        "rationale": "The actual description centers on nursing research methods, evidence evaluation, quality improvement and implementation in clinical practice.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-phil-391",
@@ -7083,29 +7182,51 @@
       "id": "case-ba-uger-pscl-220",
       "code": "PSCL 220",
       "name": "The Self",
-      "description": null,
-      "prerequisites": null,
+      "description": "Historical and cultural constructions of selfhood, identity and self-presentation.",
+      "prerequisites": "Recommended preparation: PSCL 101 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=PSCL%20220",
+      "category": "human_context",
+      "source_id": "case-uger-courses-pscl",
+      "url": "https://bulletin.case.edu/course-descriptions/pscl/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-pscl"
+        ],
+        "locator": "PSCL 220; current 2026–2027 course block",
+        "rationale": "The actual description centers on historical and cultural constructions of selfhood, identity and self-presentation.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-pscl-375",
       "code": "PSCL 375",
       "name": "Research Design and Analysis",
-      "description": null,
-      "prerequisites": null,
+      "description": "Experimental research designs and statistical procedures used in behavioral research.",
+      "prerequisites": "Prereq: PSCL 101 and ( PSCL 282 or ANTH 319 or SOCI 307 or STAT 201 ).",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=PSCL%20375",
+      "category": "mathematics",
+      "source_id": "case-uger-courses-pscl",
+      "url": "https://bulletin.case.edu/course-descriptions/pscl/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-pscl"
+        ],
+        "locator": "PSCL 375; current 2026–2027 course block",
+        "rationale": "The actual description centers on experimental research designs and statistical procedures used in behavioral research.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-rlgn-201",
@@ -7848,15 +7969,26 @@
       "id": "case-ba-uger-nurs-373",
       "code": "NURS 373",
       "name": "Population Health Practicum",
-      "description": null,
-      "prerequisites": null,
+      "description": "Community nursing practicum using epidemiology, assessment and collaboration to design a population-health intervention.",
+      "prerequisites": "Prereq: Grade of C or better in NURS 315 and NURS 316 and NURS 318 . Coreq: NURS 371 and NURS 372 .",
       "credits": 4.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=NURS%20373",
+      "category": "applications",
+      "source_id": "case-uger-courses-nurs",
+      "url": "https://bulletin.case.edu/course-descriptions/nurs/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-nurs"
+        ],
+        "locator": "NURS 373; current 2026–2027 course block",
+        "rationale": "The actual description centers on community nursing practicum using epidemiology, assessment and collaboration to design a population-health intervention.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-posc-396",
@@ -7876,29 +8008,51 @@
       "id": "case-ba-uger-pscl-386",
       "code": "PSCL 386",
       "name": "Capstone Seminar: Adolescent Substance Use",
-      "description": null,
-      "prerequisites": null,
+      "description": "Research on adolescent substance use, prevention and treatment, culminating in evidence synthesis and public communication.",
+      "prerequisites": "Prereq: PSCL 375 and ( PSCL 282 or STAT 201 or SOCI 307 or ANTH 319 ).",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=PSCL%20386",
+      "category": "applications",
+      "source_id": "case-uger-courses-pscl",
+      "url": "https://bulletin.case.edu/course-descriptions/pscl/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-pscl"
+        ],
+        "locator": "PSCL 386; current 2026–2027 course block",
+        "rationale": "The actual description centers on research on adolescent substance use, prevention and treatment, culminating in evidence synthesis and public communication.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-pscl-395",
       "code": "PSCL 395",
       "name": "Capstone and Honors Program",
-      "description": null,
-      "prerequisites": null,
+      "description": "Supervised independent psychology research on a student-selected topic.",
+      "prerequisites": "Prereq: PSCL 375 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=PSCL%20395",
+      "source_id": "case-uger-courses-pscl",
+      "url": "https://bulletin.case.edu/course-descriptions/pscl/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-pscl"
+        ],
+        "locator": "PSCL 395; current 2026–2027 course block",
+        "rationale": "The source leaves the independent research topic unspecified. The psychology prefix and capstone approval do not establish the actual subject; no classification is inferred.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-rlgn-399",
@@ -8207,15 +8361,26 @@
       "id": "case-ba-uger-pscl-282",
       "code": "PSCL 282",
       "name": "Quantitative Methods in Psychology",
-      "description": null,
-      "prerequisites": null,
+      "description": "Statistical theory and basic analytical methods for psychological data.",
+      "prerequisites": "A student may receive credit for only one of the following: ANTH 319 , PSCL 282 , SOCI 307 , or STAT 201 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=PSCL%20282",
+      "category": "mathematics",
+      "source_id": "case-uger-courses-pscl",
+      "url": "https://bulletin.case.edu/course-descriptions/pscl/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-pscl"
+        ],
+        "locator": "PSCL 282; current 2026–2027 course block",
+        "rationale": "The actual description centers on statistical theory and basic analytical methods for psychological data.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-soci-307",
@@ -9967,85 +10132,151 @@
       "id": "case-ba-uger-ntrn-201",
       "code": "NTRN 201",
       "name": "Nutrition",
-      "description": null,
+      "description": "Nutrients, dietary sources and nutritional practices supporting health and wellbeing.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=NTRN%20201",
+      "category": "applications",
+      "source_id": "case-uger-courses-ntrn",
+      "url": "https://bulletin.case.edu/course-descriptions/ntrn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-ntrn"
+        ],
+        "locator": "NTRN 201; current 2026–2027 course block",
+        "rationale": "The actual description centers on nutrients, dietary sources and nutritional practices supporting health and wellbeing.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-ntrn-300",
       "code": "NTRN 300",
       "name": "Healthy Lifestyles as Preventive Medicine",
-      "description": null,
+      "description": "Evidence and practical skills for healthy lifestyles and chronic-disease prevention.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=NTRN%20300",
+      "category": "applications",
+      "source_id": "case-uger-courses-ntrn",
+      "url": "https://bulletin.case.edu/course-descriptions/ntrn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-ntrn"
+        ],
+        "locator": "NTRN 300; current 2026–2027 course block",
+        "rationale": "The actual description centers on evidence and practical skills for healthy lifestyles and chronic-disease prevention.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-ntrn-320",
       "code": "NTRN 320",
       "name": "Women's Wellness: From Food and Nutrition to Reproductive Health and Aging",
-      "description": null,
+      "description": "Nutrition and lifestyle influences on women’s health across the lifespan.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=NTRN%20320",
+      "category": "applications",
+      "source_id": "case-uger-courses-ntrn",
+      "url": "https://bulletin.case.edu/course-descriptions/ntrn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-ntrn"
+        ],
+        "locator": "NTRN 320; current 2026–2027 course block",
+        "rationale": "The actual description centers on nutrition and lifestyle influences on women’s health across the lifespan.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-ntrn-328",
       "code": "NTRN 328",
       "name": "Child Nutrition, Development and Health",
-      "description": null,
+      "description": "Nutritional influences on physical and cognitive development from pregnancy through adolescence.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=NTRN%20328",
+      "category": "applications",
+      "source_id": "case-uger-courses-ntrn",
+      "url": "https://bulletin.case.edu/course-descriptions/ntrn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-ntrn"
+        ],
+        "locator": "NTRN 328; current 2026–2027 course block",
+        "rationale": "The actual description centers on nutritional influences on physical and cognitive development from pregnancy through adolescence.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-nurs-112",
       "code": "NURS 112",
       "name": "Discovering Wellness",
-      "description": null,
-      "prerequisites": null,
+      "description": "Practical health and stress-management activities to build resilience and healthy habits.",
+      "prerequisites": "Coreq: NURS 115 .",
       "credits": 1.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=NURS%20112",
+      "category": "applications",
+      "source_id": "case-uger-courses-nurs",
+      "url": "https://bulletin.case.edu/course-descriptions/nurs/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-nurs"
+        ],
+        "locator": "NURS 112; current 2026–2027 course block",
+        "rationale": "The actual description centers on practical health and stress-management activities to build resilience and healthy habits.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-nurs-204",
       "code": "NURS 204",
       "name": "Emergency Response Essentials: Promoting Wellness and Community Health",
-      "description": null,
+      "description": "Recognition, prevention and response to health emergencies, including overdose, choking and bleeding.",
       "prerequisites": null,
       "credits": 2.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=NURS%20204",
+      "category": "applications",
+      "source_id": "case-uger-courses-nurs",
+      "url": "https://bulletin.case.edu/course-descriptions/nurs/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-nurs"
+        ],
+        "locator": "NURS 204; current 2026–2027 course block",
+        "rationale": "The actual description centers on recognition, prevention and response to health emergencies, including overdose, choking and bleeding.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-orbh-330",
@@ -10336,71 +10567,126 @@
       "id": "case-ba-uger-ntrn-200c",
       "code": "NTRN 200C",
       "name": "Case Cooks: Community",
-      "description": null,
-      "prerequisites": null,
+      "description": "Basic nutrition and cooking skills applied to food insecurity and community food resources.",
+      "prerequisites": "Please email instructor before registering if you have food allergies or sensitivities.",
       "credits": 1.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=NTRN%20200C",
+      "category": "applications",
+      "source_id": "case-uger-courses-ntrn",
+      "url": "https://bulletin.case.edu/course-descriptions/ntrn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-ntrn"
+        ],
+        "locator": "NTRN 200C; current 2026–2027 course block",
+        "rationale": "The actual description centers on basic nutrition and cooking skills applied to food insecurity and community food resources.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-ntrn-200h",
       "code": "NTRN 200H",
       "name": "Case Cooks: Healthy Lifestyles",
-      "description": null,
-      "prerequisites": null,
+      "description": "Beginner cooking, meal planning and economical preparation of healthy food.",
+      "prerequisites": "Please email instructor before registering if you have food allergies.",
       "credits": 1.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=NTRN%20200H",
+      "category": "applications",
+      "source_id": "case-uger-courses-ntrn",
+      "url": "https://bulletin.case.edu/course-descriptions/ntrn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-ntrn"
+        ],
+        "locator": "NTRN 200H; current 2026–2027 course block",
+        "rationale": "The actual description centers on beginner cooking, meal planning and economical preparation of healthy food.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-ntrn-200s",
       "code": "NTRN 200S",
       "name": "Case Cooks:Sports and Performance",
-      "description": null,
+      "description": "Food preparation, hydration and nutrition planning for physical activity and athletic performance.",
       "prerequisites": null,
       "credits": 1.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=NTRN%20200S",
+      "category": "applications",
+      "source_id": "case-uger-courses-ntrn",
+      "url": "https://bulletin.case.edu/course-descriptions/ntrn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-ntrn"
+        ],
+        "locator": "NTRN 200S; current 2026–2027 course block",
+        "rationale": "The actual description centers on food preparation, hydration and nutrition planning for physical activity and athletic performance.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-ntrn-200w",
       "code": "NTRN 200W",
       "name": "Case Cooks: Eating Wild",
-      "description": null,
+      "description": "Identification and preparation of nutritious wild foods, with beginner cooking practice.",
       "prerequisites": null,
       "credits": 1.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=NTRN%20200W",
+      "category": "applications",
+      "source_id": "case-uger-courses-ntrn",
+      "url": "https://bulletin.case.edu/course-descriptions/ntrn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-ntrn"
+        ],
+        "locator": "NTRN 200W; current 2026–2027 course block",
+        "rationale": "The actual description centers on identification and preparation of nutritious wild foods, with beginner cooking practice.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-nurs-277",
       "code": "NURS 277",
       "name": "BLS and First Aid for Healthcare Providers",
-      "description": null,
+      "description": "Basic life support and first-aid skills for healthcare practice, including CPR and emergency response.",
       "prerequisites": null,
       "credits": 0.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=NURS%20277",
+      "category": "applications",
+      "source_id": "case-uger-courses-nurs",
+      "url": "https://bulletin.case.edu/course-descriptions/nurs/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-nurs"
+        ],
+        "locator": "NURS 277; current 2026–2027 course block",
+        "rationale": "The actual description centers on basic life support and first-aid skills for healthcare practice, including CPR and emergency response.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-phed-50a",
@@ -11144,57 +11430,107 @@
       "id": "case-ba-uger-ntrn-340",
       "code": "NTRN 340",
       "name": "Global Food Systems: Environmental Issues, Sustainability, and Health",
-      "description": null,
+      "description": "Food production and nutritional quality examined alongside environmental change, sustainability and food security.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=NTRN%20340",
+      "source_id": "case-uger-courses-ntrn",
+      "url": "https://bulletin.case.edu/course-descriptions/ntrn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-ntrn"
+        ],
+        "locator": "NTRN 340; current 2026–2027 course block",
+        "rationale": "The actual description centers on food production and nutritional quality examined alongside environmental change, sustainability and food security. These substantial domains are mixed without a single defensible primary subject.",
+        "candidate_categories": [
+          "applications",
+          "human_context"
+        ]
+      }
     },
     {
       "id": "case-ba-uger-ntrn-380",
       "code": "NTRN 380",
       "name": "Pandemics: Biology, Policy and Society",
-      "description": null,
+      "description": "Pandemic biology and management integrated with legal, ethical and political responses.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=NTRN%20380",
+      "source_id": "case-uger-courses-ntrn",
+      "url": "https://bulletin.case.edu/course-descriptions/ntrn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-ntrn"
+        ],
+        "locator": "NTRN 380; current 2026–2027 course block",
+        "rationale": "The actual description centers on pandemic biology and management integrated with legal, ethical and political responses. These substantial domains are mixed without a single defensible primary subject.",
+        "candidate_categories": [
+          "applications",
+          "human_context"
+        ]
+      }
     },
     {
       "id": "case-ba-uger-nurs-326",
       "code": "NURS 326",
       "name": "Exploring the Intersection of Pain, Ethics, and Culture in Vulnerable Populations",
-      "description": null,
-      "prerequisites": null,
+      "description": "Ethical and cultural analysis of pain care, emphasizing vulnerable populations and equitable treatment.",
+      "prerequisites": "Prereq: Junior or Senior student standing.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=NURS%20326",
+      "category": "human_context",
+      "source_id": "case-uger-courses-nurs",
+      "url": "https://bulletin.case.edu/course-descriptions/nurs/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-nurs"
+        ],
+        "locator": "NURS 326; current 2026–2027 course block",
+        "rationale": "The actual description centers on ethical and cultural analysis of pain care, emphasizing vulnerable populations and equitable treatment.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-nurs-343",
       "code": "NURS 343",
       "name": "Ethics in Nursing and Health Care",
-      "description": null,
-      "prerequisites": null,
+      "description": "Ethical theories and decision frameworks applied to dilemmas in nursing and healthcare.",
+      "prerequisites": "Coreq: NURS 315 and NURS 316 .",
       "credits": 2.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=NURS%20343",
+      "category": "human_context",
+      "source_id": "case-uger-courses-nurs",
+      "url": "https://bulletin.case.edu/course-descriptions/nurs/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-nurs"
+        ],
+        "locator": "NURS 343; current 2026–2027 course block",
+        "rationale": "The actual description centers on ethical theories and decision frameworks applied to dilemmas in nursing and healthcare.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-phil-305",
@@ -12932,57 +13268,107 @@
       "id": "case-ba-uger-ntrn-200",
       "code": "NTRN 200",
       "name": "Case Cooks: Ethnic Eats",
-      "description": null,
-      "prerequisites": null,
+      "description": "Regional food cultures explored through healthy cooking practice and cultural exchange.",
+      "prerequisites": "Please email instructor before registering if you have food allergies.",
       "credits": 1.0,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=NTRN%20200",
+      "source_id": "case-uger-courses-ntrn",
+      "url": "https://bulletin.case.edu/course-descriptions/ntrn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-ntrn"
+        ],
+        "locator": "NTRN 200; current 2026–2027 course block",
+        "rationale": "The actual description centers on regional food cultures explored through healthy cooking practice and cultural exchange. These substantial domains are mixed without a single defensible primary subject.",
+        "candidate_categories": [
+          "applications",
+          "human_context"
+        ]
+      }
     },
     {
       "id": "case-ba-uger-ntrn-342",
       "code": "NTRN 342",
       "name": "Food Science",
-      "description": null,
-      "prerequisites": null,
+      "description": "Chemical, physical and biological properties of food, processing techniques and resulting nutritional quality.",
+      "prerequisites": "Prereq: CHEM 105 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=NTRN%20342",
+      "category": "applications",
+      "source_id": "case-uger-courses-ntrn",
+      "url": "https://bulletin.case.edu/course-descriptions/ntrn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-ntrn"
+        ],
+        "locator": "NTRN 342; current 2026–2027 course block",
+        "rationale": "The actual description centers on chemical, physical and biological properties of food, processing techniques and resulting nutritional quality.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-ntrn-343",
       "code": "NTRN 343",
       "name": "Dietary Patterns",
-      "description": null,
-      "prerequisites": null,
+      "description": "Nutritional evaluation of dietary patterns connected to food production, regulation and cultural traditions.",
+      "prerequisites": "Prereq: NTRN 201 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=NTRN%20343",
+      "source_id": "case-uger-courses-ntrn",
+      "url": "https://bulletin.case.edu/course-descriptions/ntrn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-ntrn"
+        ],
+        "locator": "NTRN 343; current 2026–2027 course block",
+        "rationale": "The actual description centers on nutritional evaluation of dietary patterns connected to food production, regulation and cultural traditions. These substantial domains are mixed without a single defensible primary subject.",
+        "candidate_categories": [
+          "applications",
+          "human_context"
+        ]
+      }
     },
     {
       "id": "case-ba-uger-nurs-372",
       "code": "NURS 372",
       "name": "Health in the Global Community",
-      "description": null,
-      "prerequisites": null,
+      "description": "Cultural, political, economic and environmental systems shaping global health outcomes and healthcare policy.",
+      "prerequisites": "Prereq: NURS 330 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=NURS%20372",
+      "category": "human_context",
+      "source_id": "case-uger-courses-nurs",
+      "url": "https://bulletin.case.edu/course-descriptions/nurs/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-nurs"
+        ],
+        "locator": "NURS 372; current 2026–2027 course block",
+        "rationale": "The actual description centers on cultural, political, economic and environmental systems shaping global health outcomes and healthcare policy.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-posc-160",
@@ -14112,29 +14498,51 @@
       "id": "case-ba-uger-ntrn-337",
       "code": "NTRN 337",
       "name": "Nutrition Communication, Counseling and Behavior Change Strategies",
-      "description": null,
-      "prerequisites": null,
+      "description": "Nutrition counseling and behavior-change communication, including interpretation of consumer information and food marketing.",
+      "prerequisites": "Prereq: NTRN 201 or Requisites Not Met permission.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=NTRN%20337",
+      "category": "applications",
+      "source_id": "case-uger-courses-ntrn",
+      "url": "https://bulletin.case.edu/course-descriptions/ntrn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-ntrn"
+        ],
+        "locator": "NTRN 337; current 2026–2027 course block",
+        "rationale": "The actual description centers on nutrition counseling and behavior-change communication, including interpretation of consumer information and food marketing.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-ntrn-341",
       "code": "NTRN 341",
       "name": "Food as Medicine: How What We Eat Influences How We Feel, Think, and Our Health Status",
-      "description": null,
-      "prerequisites": null,
+      "description": "Relationships between whole foods, dietary patterns, health and disease prevention, with culinary experience.",
+      "prerequisites": "Prereq: NTRN 201 or requisites not met permission.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=NTRN%20341",
+      "category": "applications",
+      "source_id": "case-uger-courses-ntrn",
+      "url": "https://bulletin.case.edu/course-descriptions/ntrn/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-ntrn"
+        ],
+        "locator": "NTRN 341; current 2026–2027 course block",
+        "rationale": "The actual description centers on relationships between whole foods, dietary patterns, health and disease prevention, with culinary experience.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-orbh-303",
@@ -14196,15 +14604,26 @@
       "id": "case-ba-uger-pscl-343",
       "code": "PSCL 343",
       "name": "Music Cognition",
-      "description": null,
-      "prerequisites": null,
+      "description": "Scientific research on music perception, cognitive processing and behavior, including neural and cultural influences.",
+      "prerequisites": "Prereq: Academic Inquiry Seminar (AIQS).",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=PSCL%20343",
+      "category": "applications",
+      "source_id": "case-uger-courses-pscl",
+      "url": "https://bulletin.case.edu/course-descriptions/pscl/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-pscl"
+        ],
+        "locator": "PSCL 343; current 2026–2027 course block",
+        "rationale": "The actual description centers on scientific research on music perception, cognitive processing and behavior, including neural and cultural influences.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-rlgn-209",
@@ -14780,29 +15199,51 @@
       "id": "case-ba-uger-nurs-210",
       "code": "NURS 210",
       "name": "Teaching/Learning in the Community",
-      "description": null,
-      "prerequisites": null,
+      "description": "Health-literacy assessment and culturally responsive patient education through classroom and community practice.",
+      "prerequisites": "Prereq: NURS 160 .",
       "credits": 1.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=NURS%20210",
+      "category": "applications",
+      "source_id": "case-uger-courses-nurs",
+      "url": "https://bulletin.case.edu/course-descriptions/nurs/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-nurs"
+        ],
+        "locator": "NURS 210; current 2026–2027 course block",
+        "rationale": "The actual description centers on health-literacy assessment and culturally responsive patient education through classroom and community practice.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-nurs-260",
       "code": "NURS 260",
       "name": "Evidence Based Public Policy in the Community",
-      "description": null,
-      "prerequisites": null,
+      "description": "Community health-promotion practice applying evidence, teamwork and public-policy interventions.",
+      "prerequisites": "Prereq: NURS 160 .",
       "credits": 1.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=NURS%20260",
+      "category": "applications",
+      "source_id": "case-uger-courses-nurs",
+      "url": "https://bulletin.case.edu/course-descriptions/nurs/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-nurs"
+        ],
+        "locator": "NURS 260; current 2026–2027 course block",
+        "rationale": "The actual description centers on community health-promotion practice applying evidence, teamwork and public-policy interventions.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-orbh-310",
@@ -14892,15 +15333,26 @@
       "id": "case-ba-uger-pscl-334",
       "code": "PSCL 334",
       "name": "Seminar and Volunteer Experience: Hospitalized Children",
-      "description": null,
-      "prerequisites": null,
+      "description": "Supervised volunteer work with children and adolescents, accompanied by seminar discussion.",
+      "prerequisites": "Prereq: PSCL 230 . In order to take the class, student must be either brand new to UH Volunteering or in good standing as a current UH volunteer.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=PSCL%20334",
+      "category": "applications",
+      "source_id": "case-uger-courses-pscl",
+      "url": "https://bulletin.case.edu/course-descriptions/pscl/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-pscl"
+        ],
+        "locator": "PSCL 334; current 2026–2027 course block",
+        "rationale": "The actual description centers on supervised volunteer work with children and adolescents, accompanied by seminar discussion.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-veal-334",
@@ -17298,7 +17750,8 @@
     "2026-10-11 coordinator review adds 53 UGER descriptions from Religious Studies, Ancient Near East/Egyptian Studies, Jewish Studies and Linguistics. The actual-subject review classifies applied language pedagogy separately from historical/cultural inquiry and preserves explicit course restrictions. Full correctness audit remains in progress.",
     "2026-10-11: all 69 mapped HSTY descriptions reviewed. Twelve reciprocal-source cross-list groups now reconcile 14 aliases while preserving every source record. Identity reconciliation is explicitly bounded to the listed groups; remaining unreviewed aliases and course subjects are not certified.",
     "Cognitive/communication-sciences review 2026-10-11 adds 19 actual course descriptions. COSI310 is critical clinical AI use, not an algorithm-design course. COGS399H/397 remain explicitly unclassified because individual research topics are unspecified. COGS250 joins the existing reciprocal Responsible AI cross-list group; all records and selection counts remain.",
-    "Science-description review 2026-10-11: Read all26 mapped astronomy, biochemistry, biology, business-technology, chemistry and earth-science course descriptions. AI tools in BTEC398 do not establish AI algorithm-method content; its domain is organizational innovation. BIOC211/250/277 retain mixed science/human-context categories. ASTR351 publishes1–3Units and a minimum3credits for UGER capstone use; scalarcredits remain null with the range explicitly preserved. EEPS391+392 remains a whole two-course option, each2Units. Major restrictions and instructor consent remain conditional eligibility, not extra fixed degree courses. Full correctness audit remains in progress."
+    "Science-description review 2026-10-11: Read all26 mapped astronomy, biochemistry, biology, business-technology, chemistry and earth-science course descriptions. AI tools in BTEC398 do not establish AI algorithm-method content; its domain is organizational innovation. BIOC211/250/277 retain mixed science/human-context categories. ASTR351 publishes1–3Units and a minimum3credits for UGER capstone use; scalarcredits remain null with the range explicitly preserved. EEPS391+392 remains a whole two-course option, each2Units. Major restrictions and instructor consent remain conditional eligibility, not extra fixed degree courses. Full correctness audit remains in progress.",
+    "Health-description review 2026-10-11: Read all 37 mapped nutrition, nursing and psychology descriptions. Mixed public-health science/policy courses remain other with explicit candidate categories; PSCL395 stays unclassified because its independent research topic is unspecified. PSCL282/375 are statistical methods, not AI. Source-stated nutrition-major and nursing prerequisites remain exact conditional eligibility. NURS277 has known zero credits. Missing prerequisite statements remain null. Full correctness audit remains in progress."
   ],
   "curriculum_audit": {
     "scope": "degree",
