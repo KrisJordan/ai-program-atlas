@@ -155,3 +155,7 @@ SOURCE_PARSERS.update(hass_departments.SOURCE_PARSERS)
 hass_open_fields = import_module('atlas.adapters.mit-ai-decision-making-bs.hass_open_fields')
 SOURCES.extend(hass_open_fields.SOURCE_PARSERS)
 SOURCE_PARSERS.update(hass_open_fields.SOURCE_PARSERS)
+
+hass_languages = import_module('atlas.adapters.mit-ai-decision-making-bs.hass_languages')
+SOURCES.extend(hass_languages.SOURCE_PARSERS)
+SOURCE_PARSERS.update(hass_languages.SOURCE_PARSERS)
