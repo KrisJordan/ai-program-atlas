@@ -149,3 +149,22 @@ Penn State review-state correction: 138 individually unread supporting-course
 descriptions are explicitly **unreviewed**, not source-inspected unclassified.
 A-I494 remains unclassified after actual description review. The four proven
 alias groups and 156 canonical options remain unchanged.
+
+## USF and Drexel: readable courses do not certify inaccessible degree policy
+
+USF's eight public CAI detail pages support seven retained primary classifications
+and one systems correction (CAI4624). The current brochure request is
+robots-disallowed, so its old named inventory was not recertified. Earlier
+semester-unit assumptions are removed; actual amounts remain. The known
+unreadable program-catalog endpoint is still a separate requirement boundary.
+
+Drexel's eleven prescribed courses were read directly: two AI, five foundations,
+three human context, one career-practice application. Their exact prerequisites
+and credits are retained independently of the requirement graph. The full audit
+remains blocked by exact university policy denials and unresolved ECEC455;
+remaining option/WI descriptions are unfinished accessible research.
+
+All fourteen assigned degrees now have individual primary audit ledger entries.
+This is not fourteen completed audits: four are blocked by specified evidence
+boundaries, and ten remain in progress. Corrected roles, identities and subjects
+are publishable independently of whole-degree audit completion.

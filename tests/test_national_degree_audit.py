@@ -296,3 +296,42 @@ def test_psu_unread_descriptions_are_unreviewed_not_inspected_unknown():
  assert courses['A-I 494']['category_review']['status']=='unclassified'
  assert sum('category_review' not in c for c in p['courses'])==138
  assert requirement_profile(p)['options']['classification']['unreviewed']==138
+
+
+def test_usf_review_does_not_recertify_brochure_or_infer_units():
+ pid='university-of-south-florida-artificial-intelligence-bs-degree'
+ p=json.loads(Path('data/programs/'+pid+'.json').read_text())
+ courses={c['code']:c for c in p['courses']}
+ assert courses['CAI 4624']['category']=='systems'
+ assert courses['CAI 4024']['category']=='human_context'
+ assert sum('category_review' in c for c in p['courses'])==8
+ assert all(c['credit_unit']=='unknown' for c in p['courses'])
+ assert all(r['credit_unit']=='unknown' for r in p['requirements'])
+ assert p['curriculum_status']=='partial'
+ ledger=json.loads(Path('research/degree-audit/national-degree-batch.json').read_text())
+ entry=next(e for e in ledger['programs'] if e['program_id']==pid)
+ assert entry['status']=='blocked' and entry['expected_profile'] is None
+ assert any(s['access_status']=='robots_disallowed' for s in entry['sources'])
+
+
+def test_drexel_prescribed_subjects_and_source_result_guard(monkeypatch):
+ from atlas.adapters import drexel_required_course_review as review
+ html='<article class="search-courseresult"><h3>CS 260 Example data structures 4.0 Credits</h3><div class="courseblock">Example structures and algorithms. Prerequisites: CS 265 [Min Grade: C]</div></article>'
+ text='CS 260 Example data structures 4.0 Credits Example structures and algorithms. Prerequisites: CS 265 [Min Grade: C]'
+ monkeypatch.setattr(review,'SPEC',{'CS 260':dict(id='drexel-cs-260',source_id='catalog',url='https://example.edu/course',digest=hashlib.sha256(text.encode()).hexdigest(),category='foundations',description='Example data structures.')})
+ r=review.parse(html,'CS 260')
+ assert r['courses'][0]['credits']==4
+ assert r['courses'][0]['prerequisites']=='Prerequisites: CS 265 [Min Grade: C]'
+ assert 'category_review' not in r['courses'][0]
+ with pytest.raises(ValueError,match='changed'):
+  review.parse(html.replace('Min Grade: C','Min Grade: B'),'CS 260')
+ with pytest.raises(ValueError,match='missing'):
+  review.parse(html.replace('search-courseresult','unrelated'),'CS 260')
+ p=json.loads(Path('data/programs/drexel-ai-ml-bs.json').read_text())
+ courses={c['code']:c for c in p['courses']}
+ expected={'CS 180','CS 260','CS 265','CS 380','INFO 212','INFO 215','SE 201','SE 310','PHIL 311','CIVC 101','COOP 101'}
+ assert {c['code'] for c in p['courses'] if c.get('category_review')}==expected
+ assert requirement_profile(p)['required']['count']==len(expected)==11
+ assert courses['INFO 215']['category']=='human_context'
+ assert courses['INFO 212']['category']=='foundations'
+ assert courses['COOP 101']['category']=='applications'

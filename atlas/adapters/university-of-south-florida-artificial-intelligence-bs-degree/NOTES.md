@@ -47,3 +47,19 @@ Final coverage: **29 course records, 28 requirement/policy nodes, eight descript
 ## Exact award label review — 2026-10-11
 
 The reviewed award option preserves **BSAI**, mapped to **BS**. Brochure page 2: BSAI Four Year Plan. BS normalization is independently supported by the registered official program source (same program, /academics/undergraduate/bsai.aspx), whose h1 reads Bachelor of Science in Artificial Intelligence. The abbreviation remains BSAI; no prefix-based inference. Existing program ID, award_level, title and requirement graph are unchanged. This optional mapping is reviewed metadata. Scrapers queue observations without replacing curated JSON; a parse result that omits award_options does not erase it. No parser or shared Northeastern helper change is needed.
+
+### Degree correctness review — 2026-10-11
+
+The current official identity page and eight CAI descriptions were reread.
+CAI4624 focuses on training/deployment infrastructure, distributed systems and
+cloud scaling, so its reviewed subject is systems. CAI4024 is ethics/human
+context; six other descriptions explicitly support AI content. Remaining
+course subjects are unreviewed.
+
+The current public brochure request was stopped by robots disallow at its exact
+registered URL. The web PDF reader also returned inaccessible, but no alternate
+route or access workaround was used. Its previously extracted course inventory
+retains the earlier provenance and is not freshly certified. The known catalog
+HTTP202 boundary was not retried. Unsupported semester_hours values inherited
+by old brochure courses/rules are now unknown; actual printed credit amounts
+remain. Whole-degree correctness is blocked by these requirement-source limits.

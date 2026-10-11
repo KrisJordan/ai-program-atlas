@@ -279,3 +279,7 @@ def parse(html):
 from atlas.adapters.drexel_degree_policies import SOURCE_PARSERS as POLICY_PARSERS
 SOURCE_PARSERS = {SOURCES[0]: parse, **POLICY_PARSERS}
 SOURCES = tuple(SOURCE_PARSERS)
+
+from atlas.adapters.drexel_required_course_review import register as register_reviewed_courses
+SOURCES=list(SOURCES)
+register_reviewed_courses(SOURCES,SOURCE_PARSERS)

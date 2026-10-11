@@ -1355,6 +1355,306 @@
       "blockers": [],
       "correction_status": "Current primary table reread and reviewed course subjects corrected; comprehensive audit in progress.",
       "second_pass_status": "pending"
+    },
+    {
+      "program_id": "university-of-south-florida-artificial-intelligence-bs-degree",
+      "institution_id": "university-of-south-florida",
+      "status": "blocked",
+      "sources": [
+        {
+          "url": "https://www.usf.edu/ai-cybersecurity-computing/academics/undergraduate/bsai.aspx",
+          "catalog_year": null,
+          "locator": "Current official identity, course/catalog/brochure navigation and curriculum overview",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://www.usf.edu/ai-cybersecurity-computing/documents/brochures/bellini-ug-bsai.pdf",
+          "catalog_year": null,
+          "locator": "Current bounded format-reviewed fetch stopped at robots disallow; prior brochure observations not refreshed",
+          "checked_at": "2026-10-11",
+          "access_status": "robots_disallowed"
+        },
+        {
+          "url": "https://catalog.usf.edu/preview_program.php?catoid=25&poid=13990",
+          "catalog_year": null,
+          "locator": "Prior exact official destination returned HTTP202; boundary preserved without retry",
+          "checked_at": "2026-10-10",
+          "access_status": "unreadable_http_202"
+        },
+        {
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/1000",
+          "catalog_year": "2026\u20132027",
+          "locator": "Exact CAI Course Details description and prerequisite/restriction fields",
+          "checked_at": "2026-10-11",
+          "access_status": "cached_source_read"
+        },
+        {
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/2001",
+          "catalog_year": "2026\u20132027",
+          "locator": "Exact CAI Course Details description and prerequisite/restriction fields",
+          "checked_at": "2026-10-11",
+          "access_status": "cached_source_read"
+        },
+        {
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/4002",
+          "catalog_year": "2026\u20132027",
+          "locator": "Exact CAI Course Details description and prerequisite/restriction fields",
+          "checked_at": "2026-10-11",
+          "access_status": "cached_source_read"
+        },
+        {
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/4024",
+          "catalog_year": "2026\u20132027",
+          "locator": "Exact CAI Course Details description and prerequisite/restriction fields",
+          "checked_at": "2026-10-11",
+          "access_status": "cached_source_read"
+        },
+        {
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/4105",
+          "catalog_year": "2026\u20132027",
+          "locator": "Exact CAI Course Details description and prerequisite/restriction fields",
+          "checked_at": "2026-10-11",
+          "access_status": "cached_source_read"
+        },
+        {
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/4203",
+          "catalog_year": "2026\u20132027",
+          "locator": "Exact CAI Course Details description and prerequisite/restriction fields",
+          "checked_at": "2026-10-11",
+          "access_status": "cached_source_read"
+        },
+        {
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/4624",
+          "catalog_year": "2026\u20132027",
+          "locator": "Exact CAI Course Details description and prerequisite/restriction fields",
+          "checked_at": "2026-10-11",
+          "access_status": "cached_source_read"
+        },
+        {
+          "url": "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/4841",
+          "catalog_year": "2026\u20132027",
+          "locator": "Exact CAI Course Details description and prerequisite/restriction fields",
+          "checked_at": "2026-10-11",
+          "access_status": "cached_source_read"
+        }
+      ],
+      "checks": {
+        "degree_identity": "Official current h1 confirms Bachelor of Science in Artificial Intelligence. Preserve BSAI exact award abbreviation and independently supported BS mapping.",
+        "required_and_choices": "Older brochure inventory remains 24 named prescribed records plus five civic/statistics choices. It is not freshly certified: current brochure robots policy prevents reread and definitive program catalog remains unreadable. No new mandatory course is inferred from course search results.",
+        "elective_pools": "Full AI-major elective eligibility list remains unavailable in the reviewed authoritative sources. Public course inventory establishes course identity/content, not automatic major eligibility. Existing GE eligibility predicates remain open rather than fictitious finite pools.",
+        "prerequisites": "Six of eight reviewed CAI blocks provide exact grade/Boolean/restriction conditions, including CAI4002 co-prerequisite COP4530 and Majors Only. Blank fields remain unknown; no extra fixed-degree obligation is inferred.",
+        "credits_and_units": "All eight CAI pages explicitly print 3 credit hours. None of the inspected sources establishes the normalized unit, so inherited semester_hours labels on brochure rows are removed. Group allocations and variable/missing individual amounts are not divided or invented.",
+        "classification": "Eight CAI descriptions independently reviewed. CAI4624 infrastructure corrected to systems; CAI4024 ethics human_context; six other explicit AI-method/introduction descriptions support ai_ml. Other 21 course subjects remain unreviewed.",
+        "family_composition": "Standalone concrete degree; no family inheritance.",
+        "degree_wide_requirements": "Current independently public registrar/GE/civic supplements remain mapped from prior evidence, but the inaccessible definitive catalog prevents certification of major totals/electives and detailed college/degree exceptions. Prior policy observations are not represented as a completed full-degree audit."
+      },
+      "expected_profile": null,
+      "expected_course_ids": {
+        "required": [],
+        "options": [],
+        "unresolved": []
+      },
+      "discrepancies": [
+        {
+          "issue": "CAI4624 infrastructure was labeled AI methods by a category default.",
+          "correction": "Actual description supports systems; seven other CAI descriptions reviewed individually.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://cloud.usf.edu/academic-programs/details/prefix/CAI/code/4624"
+          ]
+        },
+        {
+          "issue": "Legacy brochure records asserted semester-hour normalization without an explicit unit source.",
+          "correction": "Preserve original printed amounts, set normalized unit unknown until independently established.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://www.usf.edu/ai-cybersecurity-computing/academics/undergraduate/bsai.aspx",
+            "https://www.usf.edu/ai-cybersecurity-computing/documents/brochures/bellini-ug-bsai.pdf"
+          ]
+        }
+      ],
+      "blockers": [
+        {
+          "issue": "Definitive current AI major requirements remain unreadable at the official catalog destination.",
+          "url": "https://catalog.usf.edu/preview_program.php?catoid=25&poid=13990"
+        },
+        {
+          "issue": "Current brochure reinspection stopped at published robots disallow; prior extracted inventory cannot be freshly recertified.",
+          "url": "https://www.usf.edu/ai-cybersecurity-computing/documents/brochures/bellini-ug-bsai.pdf"
+        }
+      ],
+      "correction_status": "Eight-course subject review and conservative unit correction complete; comprehensive degree audit blocked by exact requirement-source boundaries.",
+      "second_pass_status": "pending"
+    },
+    {
+      "program_id": "drexel-ai-ml-bs",
+      "institution_id": "drexel-university",
+      "status": "blocked",
+      "sources": [
+        {
+          "url": "https://catalog.drexel.edu/undergraduate/computer-information-sciences/artificialintellicenceandmachinelearningbs/",
+          "catalog_year": null,
+          "locator": "Degree Requirements primary table and footnotes; sample plans distinguished from requirements",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://catalog.drexel.edu/search/?P=CS%20180",
+          "catalog_year": null,
+          "locator": "Exact course result block; current quarter catalog context, unverified normalized units",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://catalog.drexel.edu/search/?P=CS%20260",
+          "catalog_year": null,
+          "locator": "Exact course result block; current quarter catalog context, unverified normalized units",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://catalog.drexel.edu/search/?P=CS%20265",
+          "catalog_year": null,
+          "locator": "Exact course result block; current quarter catalog context, unverified normalized units",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://catalog.drexel.edu/search/?P=CS%20380",
+          "catalog_year": null,
+          "locator": "Exact course result block; current quarter catalog context, unverified normalized units",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://catalog.drexel.edu/search/?P=INFO%20212",
+          "catalog_year": null,
+          "locator": "Exact course result block; current quarter catalog context, unverified normalized units",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://catalog.drexel.edu/search/?P=INFO%20215",
+          "catalog_year": null,
+          "locator": "Exact course result block; current quarter catalog context, unverified normalized units",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://catalog.drexel.edu/search/?P=SE%20201",
+          "catalog_year": null,
+          "locator": "Exact course result block; current quarter catalog context, unverified normalized units",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://catalog.drexel.edu/search/?P=SE%20310",
+          "catalog_year": null,
+          "locator": "Exact course result block; current quarter catalog context, unverified normalized units",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://catalog.drexel.edu/search/?P=PHIL%20311",
+          "catalog_year": null,
+          "locator": "Exact course result block; current quarter catalog context, unverified normalized units",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://catalog.drexel.edu/search/?P=CIVC%20101",
+          "catalog_year": null,
+          "locator": "Exact course result block; current quarter catalog context, unverified normalized units",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://catalog.drexel.edu/search/?P=COOP%20101",
+          "catalog_year": null,
+          "locator": "Exact course result block; current quarter catalog context, unverified normalized units",
+          "checked_at": "2026-10-11",
+          "access_status": "read"
+        },
+        {
+          "url": "https://drexel0.sharepoint.com/:w:/s/DrexelOfficialPolicyCatalog/Ed48fuJ6fIFLpDWMxJ8aW3MBT2Gh6pjncEopwmb37l5MUQ",
+          "catalog_year": null,
+          "locator": "Exact official policy-directory target; prior robots denial preserved without retry",
+          "checked_at": "2026-10-11",
+          "access_status": "robots_disallowed"
+        },
+        {
+          "url": "https://drexel0.sharepoint.com/:w:/s/DrexelOfficialPolicyCatalog/EWmYwFuRX7hFij3uCWA87q4BXdnOfu_o9rwuWkz-cSgDUw",
+          "catalog_year": null,
+          "locator": "Exact official policy-directory target; prior robots denial preserved without retry",
+          "checked_at": "2026-10-11",
+          "access_status": "robots_disallowed"
+        }
+      ],
+      "checks": {
+        "degree_identity": "Current catalog explicitly awards BS in Artificial Intelligence & Machine Learning. 180 credits are the degree allocation in current quarter context; forthcoming semester policies are not applied retroactively.",
+        "required_and_choices": "Eleven unconditional named records independently checked. Programming, ML, discrete/math and writing alternatives remain choices; freshman/senior design alternatives are whole sequences. The eight-course AI elective allocation does not make every listed course fixed, and sequence components count only when not otherwise used.",
+        "elective_pools": "Finite AI electives and nested sequences retain high-performance-computing sequence exclusivity. Natural science 100\u2013400 subject criteria, free-elective 099\u2013499 rule and unused-MATH substitutions are open criteria, not incomplete finite catalogs. The 205 WI records represent overlay eligibility, not 205 additional required courses.",
+        "prerequisites": "All 11 prescribed course descriptions read. Preserve exact C/D minima, alternatives, freshman restrictions and SE310 parenthesized eligibility. CS380 requires CS270 even when a degree route uses another discrete alternative; this is conditional preparation, not an inferred contradiction or extra fixed course.",
+        "credits_and_units": "All 11 source course headers confirm individual numeric credits. The current program is quarter-based but normalized unit remains unknown without an explicit credit definition. Degree allocations, per-course amounts and nonacademic co-op DCUs remain distinct.",
+        "classification": "All 11 prescribed descriptions independently reviewed: two AI methods, five programming/software foundations, three social/ethical/civic human-context courses, one professional career-practice application. Remaining options and WI descriptions stay unreviewed.",
+        "family_composition": "Standalone degree. Alternative co-op/sample schedules are not merged as proof of equivalent course or degree requirements.",
+        "degree_wide_requirements": "Public school/co-op/WI policies previously mapped; definitive university graduation and transfer documents remain robots-disallowed. ECEC455 is untitled in primary sequence and absent from inspected current ECEC listing. UNIV failure replacement and thesis/conditional graduate-equivalence applicability remain exact unresolved source questions."
+      },
+      "expected_profile": null,
+      "expected_course_ids": {
+        "required": [
+          "drexel-cs-180",
+          "drexel-cs-260",
+          "drexel-cs-265",
+          "drexel-cs-380",
+          "drexel-info-212",
+          "drexel-info-215",
+          "drexel-se-201",
+          "drexel-se-310",
+          "drexel-phil-311",
+          "drexel-civc-101",
+          "drexel-coop-101"
+        ],
+        "options": [],
+        "unresolved": []
+      },
+      "discrepancies": [
+        {
+          "issue": "Prescribed course subject labels lacked independent descriptions.",
+          "correction": "Read exact11course records; systems-social INFO215 is human context and programming/software courses are foundations. Preserve course prerequisite conditions and actual credit headers.",
+          "status": "corrected_for_prescribed_subset",
+          "evidence_urls": [
+            "https://catalog.drexel.edu/search/?P=CS%20180",
+            "https://catalog.drexel.edu/search/?P=CS%20260",
+            "https://catalog.drexel.edu/search/?P=CS%20265",
+            "https://catalog.drexel.edu/search/?P=CS%20380",
+            "https://catalog.drexel.edu/search/?P=INFO%20212",
+            "https://catalog.drexel.edu/search/?P=INFO%20215",
+            "https://catalog.drexel.edu/search/?P=SE%20201",
+            "https://catalog.drexel.edu/search/?P=SE%20310",
+            "https://catalog.drexel.edu/search/?P=PHIL%20311",
+            "https://catalog.drexel.edu/search/?P=CIVC%20101",
+            "https://catalog.drexel.edu/search/?P=COOP%20101"
+          ]
+        }
+      ],
+      "blockers": [
+        {
+          "issue": "Authoritative undergraduate graduation requirements inaccessible under published robots policy.",
+          "url": "https://drexel0.sharepoint.com/:w:/s/DrexelOfficialPolicyCatalog/Ed48fuJ6fIFLpDWMxJ8aW3MBT2Gh6pjncEopwmb37l5MUQ"
+        },
+        {
+          "issue": "Authoritative undergraduate transfer policy inaccessible under published robots policy.",
+          "url": "https://drexel0.sharepoint.com/:w:/s/DrexelOfficialPolicyCatalog/EWmYwFuRX7hFij3uCWA87q4BXdnOfu_o9rwuWkz-cSgDUw"
+        },
+        {
+          "issue": "Primary elective sequence prints ECEC455 without title; current inspected ECEC course catalog lacks that code. No replacement/equivalence inferred.",
+          "url": "https://catalog.drexel.edu/undergraduate/computer-information-sciences/artificialintellicenceandmachinelearningbs/"
+        }
+      ],
+      "correction_status": "Prescribed subject/metadata review complete; full degree correctness blocked by precise policy and sequence-evidence gaps. Remaining accessible option descriptions are unfinished research.",
+      "second_pass_status": "pending"
     }
   ]
 }

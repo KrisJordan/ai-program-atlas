@@ -50,7 +50,7 @@ def parse_course(html, number):
         raise ValueError('Course description changed; paraphrase needs review')
     raw=field('lblcredithours')
     if not re.fullmatch(r'\d+(?:\.\d+)?',raw):raise ValueError('Variable or unrecognized credit amount')
-    c=course('usf','CAI '+number,name,'usf-ai-cai'+number,BASE+number,credits=float(raw),category='human_context' if number=='4024' else 'ai_ml')
+    c=course('usf','CAI '+number,name,'usf-ai-cai'+number,BASE+number,credits=float(raw),category='human_context' if number=='4024' else 'systems' if number=='4624' else 'ai_ml')
     c['description']='2026–2027 public course inventory: '+summary
     values=[(label,field(suffix)) for label,suffix in [('Prerequisites','lblprereq'),('Corequisites','lblCorequisites'),('Co-prerequisites','lblcoprereq'),('Course restrictions','lblcreq'),('Other information','lblOtherInfo')]]
     c['prerequisites']='; '.join(label+': '+value for label,value in values if value) or None

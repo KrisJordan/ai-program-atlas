@@ -63,3 +63,22 @@ replacement uses one credit versus the degree plan’s two-credit allocation;
 advising maintains conditional graduate-course equivalence/approved lists.
 These specific gaps retain **partial** status. The dated public WI list improves
 evidence but does not override course/section eligibility or transfer advising.
+
+### Degree correctness review — 2026-10-11
+
+The degree requirement table and eleven prescribed course result pages were
+independently reread. CS180/380 explicitly teach AI methods. CS260/265, INFO212
+and SE201/310 primarily teach programming, data structures and software design.
+INFO215, PHIL311 and CIVC101 center on social/ethical/civic analysis; COOP101
+centers on professional career preparation. Exact descriptions and prerequisite
+conditions are source-guarded; all eleven have manual category reviews. Other
+course descriptions remain unreviewed. Blank prerequisite fields are unknown,
+not assertions that no prerequisites exist.
+
+The reviewed fixed count is eleven, not the full degree workload. Prerequisites
+are not added as fixed course rows. Grouped sequences, open science/free/MATH
+criteria, excluded overlaps, and the WI overlay keep their existing roles.
+Current course credit headers match their individual amounts; normalized units
+remain unknown. Previously denied university policy documents were not retried.
+The comprehensive audit remains blocked by those exact source boundaries and
+the unresolved ECEC455 identity; accessible option metadata remains future work.
