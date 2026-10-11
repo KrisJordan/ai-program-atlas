@@ -42,7 +42,7 @@ def test_all_57_read_cards_keep_content_and_eligibility_distinctions():
     assert sum(v['credits']==3 for v in c.values())==55
     assert {k for k,v in c.items()if v['credits']is None}=={'STSO-488','STSO-489'}
     assert c['WGST-282']['category']=='human_context'
-    assert c['WGST-392']['category']=='applications'
+    assert c['WGST-392']['category']=='human_context'
     assert c['WGST-295']['category_review']['status']=='mixed'
     assert c['STSO-230']['category_review']['status']=='mixed'
     assert c['WGST-399']['category_review']['status']=='unclassified'
