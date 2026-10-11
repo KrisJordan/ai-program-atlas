@@ -41,9 +41,10 @@ def test_wrong_source_or_changed_policy_semantics_fails(bad):
 
 
 NUPATH='''<p>NUpath is competency based rather than course based. NUpath courses may not be taken pass/fail. NUpath applies to freshmen who entered in fall 2016 and later.</p>
-<h2>NUpath Requirements</h2><p>A set of 11 competencies.</p><ul>'''+''.join('<li>'+x+'</li>' for x in ['Natural and Designed World','Creative Expression','Interpreting Culture','Formal Reasoning','Societies','Data','Diversity','Ethics','Writing','Experience','Capstone'])+'''</ul>
+<h2>NUpath Requirements</h2><p>A set of 11 competencies.</p><ul>'''+''.join('<li>'+x+'</li>' for x in ['Natural and Designed World','Creative Expression','Interpreting Culture','Formal Reasoning','Societies','Data','Diversity','Ethics','Writing','Experience','Demonstrating Thought and Action in a Capstone'])+'''</ul>
 <p>There are no level restrictions or semester-hour restrictions. No course completed on a satisfactory/unsatisfactory grading basis qualifies. A single course can count for up to two of the following requirements. Up to five of the following eight requirements can be met by transferred credit.</p>
 <p>Transfer credits cannot be used to fulfill the capstone or experiential requirements; only the first-year writing requirement can be met by transferred or placement test credits.</p>
+<h3>Demonstrating Thought and Action in a Capstone</h3><p>Each student must take at least one course designated as a capstone experience. Students must complete a capstone in their major. For combined or double majors, the units may specify in which major to take the capstone or may leave the choice to the student.</p>
 <h3>First-Year Writing Requirement</h3><p>Earn a grade of C or better, or use qualifying advanced placement scores or appropriate transfer credit. The program uses guided self-placement and requires students bring an essay.</p>
 <h3>Advanced Writing Requirement</h3><p>Students must satisfy the first-year requirement, have a minimum of 64 semester hours and at least junior or senior standing. Transfer credit cannot be used. Earn C or better.</p>
 <h3>Writing-Intensive Courses in the Major</h3><p>Each major includes at least two additional writing-intensive courses.</p>'''
@@ -67,3 +68,22 @@ def test_combined_home_college_is_not_inferred_from_catalog_location():
     assert any('individual student’s choice' in r['summary'] for r in p['requirements'])
     assert any('at least 9' in r['summary'] and 'at most 2' in r['summary'] for r in p['requirements'])
     with pytest.raises(ValueError,match='semantics'):parse('combined',content.replace('Most combined majors allow the student to choose the home college','The catalog college is mandatory'))
+
+
+def test_capstone_is_in_major_without_requiring_one_per_combined_discipline():
+    result=parse('nupath',NUPATH)
+    node=next(r for r in result['requirements'] if r['id']=='test-program-req-policy-nupath-competency-11')
+    assert 'in the major' in node['summary']
+    assert 'may specify' in node['summary'] and 'extra capstone in every discipline' in node['summary']
+    assert node['kind']=='note' and node['course_ids']==[]
+    with pytest.raises(ValueError,match='semantics'):
+        parse('nupath',NUPATH.replace('Students must complete a capstone in their major','Any outside elective satisfies capstone'))
+
+
+def test_progression_appeal_limit_is_observed_and_stays_conditional():
+    content='''<p>Students maintain an overall GPA of 1.800 at the end of each semester of their freshman year and a minimum cumulative GPA of 2.000 thereafter. Earn at least 12 semester hours in the semester just completed. Individual colleges may have additional requirements. Academic Standing Committee reviews appeals. Dismissal may occur after two full-term academic semesters or below a 1.000 GPA or fewer than 4 earned semester hours, at the discretion of their college. Generally, a student on probation may be granted no more than one additional full-term academic semester.</p>'''
+    result=parse('progression',content)
+    node=next(r for r in result['requirements'] if r['id']=='test-program-req-policy-progression-dismissal')
+    assert 'generally allows no more than 1' in node['summary'] and node['kind']=='note'
+    changed=parse('progression',content.replace('no more than one','no more than two'))
+    assert 'generally allows no more than 2' in changed['requirements'][-1]['summary']

@@ -84,6 +84,11 @@ def parse_policy(html,*,program_id,profile):
         expected=int(match(r'set of (\d+) competencies',prose)[1])
         if len(names)!=expected:raise ValueError('NUpath competency list/count mismatch')
         for index,name in enumerate(names):add(f'nupath-competency-{index+1}',name,'Satisfy this published NUpath competency through an approved course or eligible university-recognized fulfillment; requirements may overlap only within the published limits.')
+        capstone=section(panel,'Demonstrating Thought and Action in a Capstone')
+        need(capstone,'Each student must take at least one course designated as a capstone experience','Students must complete a capstone in their major','the units may specify in which major to take the capstone or may leave the choice to the student')
+        target=next((r for r in rows if r['title']=='Demonstrating Thought and Action in a Capstone'),None)
+        if target is None:raise ValueError('NUpath capstone competency identity changed')
+        target['summary']='Complete at least one designated capstone course in the major. For combined or double majors, the academic units may specify the major for the capstone or allow the student to choose; this policy does not require an extra capstone in every discipline.'
         entry=match(r'freshmen who entered in fall (\d{4}) and later',prose)[1]
         add('nupath-applicability','NUpath applicability',f'Applies to first-year entrants from fall {entry}; previously admitted students with another core and transfer students with earlier entry years follow their applicable rules.')
         add('nupath-eligibility','Competency-based course eligibility','Use approved NUpath attributes in course/section listings. Major, minor, concentration or elective coursework can qualify without additional course-level or semester-hour restrictions. Pass/fail and satisfactory/unsatisfactory coursework cannot qualify. This is an eligibility criterion, not an invented extra course pool.')
@@ -120,7 +125,8 @@ def parse_policy(html,*,program_id,profile):
         add('progression-standing','University academic standing',f'Maintain overall GPA {gpa} at each first-year semester end and cumulative GPA {later} thereafter; earn at least {hours:g} semester hours in the completed semester. Individual colleges/programs may add progression criteria.')
         add('progression-incomplete','Incomplete grades and probation','When pending incomplete credits leave a student below full-time status, GPA determines temporary probation until the incomplete is resolved. Full-time students missing good-standing criteria are placed on academic probation for the following semester.')
         need(prose,'after two full-term academic semesters','below a 1.000 GPA or fewer than 4 earned semester hours','at the discretion of their college')
-        add('progression-dismissal','Dismissal and appeal policy','Two full-term semesters of continuing probation may lead to dismissal. A GPA below 1.000 or fewer than four earned hours in a semester or cumulatively may also trigger college-discretionary dismissal; pending incompletes are excluded. Students may appeal to their college Academic Standing Committee.')
+        appeal=number(match(r'no more than (\w+) additional full-term academic semester',prose)[1])
+        add('progression-dismissal','Dismissal and appeal policy',f'Two full-term semesters of continuing probation may lead to dismissal. A GPA below 1.000 or fewer than four earned hours in a semester or cumulatively may also trigger college-discretionary dismissal; pending incompletes are excluded. Students may appeal to their college Academic Standing Committee. A probation appeal generally allows no more than {appeal:g} additional full-term academic semester to regain good standing.')
     return dict(id=program_id,courses=[],requirements=rows,curriculum_status='partial',notes=['Policy-only source observation; review applicability and merge with program/family requirements. No review audit or completeness claim is emitted.'])
 
 

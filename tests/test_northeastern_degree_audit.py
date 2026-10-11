@@ -268,3 +268,31 @@ def test_independently_transcribed_named_course_roles_match_current_four_degree_
                 assert requirement_profile(singleton)[role]['count']==1,(entry['program_id'],cid,role)
         checked+=1
     assert checked>=4
+
+
+@pytest.mark.parametrize('code,expected,status', [
+    ('EECE 2160','other','mixed'),('EECE 2322','systems','reviewed'),('EECE 2323','systems','reviewed'),
+    ('INSH 3102','mathematics','reviewed'),('SOCL 2320','mathematics','reviewed'),
+    ('INSH 3101','human_context','reviewed'),('SOCL 2321','human_context','reviewed'),
+    ('SOCL 4528','human_context','reviewed'),('MKTG 4606','applications','reviewed'),
+    ('SOCL 4600','other','unclassified'),('INPR 1000','other','unclassified')])
+def test_individual_sociology_and_partner_content_does_not_follow_ai_degree_or_robotics_name(code,expected,status):
+    d=CATEGORY_DECISIONS[code]
+    assert d['status']==status and category(code,d['name'],d['guard'])==expected
+    assert category(code,d['name'],'Different content without reviewed evidence')=='other'
+    if code=='EECE 2160':assert d['candidate_categories']==['systems','foundations','applications']
+
+
+def test_sociology_manual_profile_has_no_unread_classifications_or_hidden_course_ids():
+    from atlas.families import resolve_program
+    from atlas.curriculum_profile import requirement_profile
+    pid='northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree'
+    p=json.loads((ROOT/'data/programs'/f'{pid}.json').read_text());f=json.loads((ROOT/'data/families/northeastern-ai-combined-degrees.json').read_text())
+    entry=next(e for e in json.loads((ROOT/'research/degree-audit/northeastern.json').read_text())['programs'] if e['program_id']==pid)
+    assert len(p['courses'])==37 and all(c.get('category_review') for c in p['courses'])
+    actual=requirement_profile(resolve_program(p,f))
+    for role in ['required','options','unresolved']:
+        assert actual[role]['count']==entry['expected_profile'][role]['count']
+        assert actual[role]['categories']==entry['expected_profile'][role]['categories']
+        assert actual[role]['classification']['unreviewed']==0
+    assert entry['blockers']  # Exact home-college applicability, not unknown dates/resources.
