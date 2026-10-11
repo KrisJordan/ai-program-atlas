@@ -10,6 +10,10 @@ Case Western's initial trace found correctly stored courses left `other` by a na
 
 Shared taxonomy v1 now separates source-reviewed, mixed, unclassified and legacy/unreviewed course classifications, with relational evidence in migration 010. Empty or zero mapped categories never establish actual subject absence. The new rank ordering and its eight additional browser tests remain queued for the same correction release. The audit will continue after that publication checkpoint.
 
+### First correction candidate (not yet published)
+
+Committed evidence reconstructed and ingested idempotently into migration-010 SQLite: **168 programs**, **46 complete / 115 partial / seven pending requirement inventories**, 23,999 course observations and 18,671 requirement nodes. The correctness ledger separately records **zero fully audited, one blocked, 27 in progress and 35 not yet documented** among 63 degrees; all are assigned. Case core and introductory alternatives, and WPI fixed/choice roles, have bounded independent checks. Lehigh/Northwestern/24 Northeastern degree corrections have primary evidence reviews with stated remaining scope. These figures do not certify full degree correctness. Maintained DB after compaction: 71,532,544 bytes. Clean tests, deployment and live verification are the next gate.
+
 ## Verified publication
 
 - Repository: https://github.com/KrisJordan/ai-program-atlas
