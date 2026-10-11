@@ -98,7 +98,8 @@ def parse(html: str) -> dict:
 
     result = enrich_requirements(blocks, observed, source, SOURCES[0])
     result["requirements"].extend(faq_requirements(soup))
-    return result
+    from .subjects import classify_observed
+    return classify_observed(result)
 
 
 PROGRAM_ID = "penn-bse-ai"
@@ -118,3 +119,6 @@ SOURCE_PARSERS[ABROAD] = parse_abroad
 # Shared public course observations, dispatched with the BSE's own program ID.
 from atlas.adapters.penn_cs.course_metadata import register_resources
 register_resources(PROGRAM_ID, SOURCES, SOURCE_PARSERS)
+
+from .core_resources import register as register_core_resources
+register_core_resources(SOURCES, SOURCE_PARSERS)

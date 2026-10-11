@@ -1,0 +1,141 @@
+{
+  "audit_date": "2026-10-11",
+  "reviewer": "pilots_cmu_penn",
+  "programs": [
+    {
+      "program_id": "penn-bse-ai",
+      "institution_id": "university-of-pennsylvania",
+      "status": "in_progress",
+      "sources": [
+        {
+          "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
+          "catalog_year": null,
+          "locator": "Curriculum requirements",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; ordinary robots-aware source inspected"
+        },
+        {
+          "url": "https://www.engineering.upenn.edu/~cis110/current/py/index.html",
+          "catalog_year": null,
+          "locator": "Visible course identity, subject statement and offering-specific preparation; historical when dated before current term",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; ordinary robots-aware source inspected"
+        },
+        {
+          "url": "https://www.engineering.upenn.edu/~cis120/current/",
+          "catalog_year": null,
+          "locator": "Visible course identity, subject statement and offering-specific preparation; historical when dated before current term",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; ordinary robots-aware source inspected"
+        },
+        {
+          "url": "https://www.engineering.upenn.edu/~cis120/current/syllabus/",
+          "catalog_year": null,
+          "locator": "Visible course identity, subject statement and offering-specific preparation; historical when dated before current term",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; ordinary robots-aware source inspected"
+        },
+        {
+          "url": "https://www.engineering.upenn.edu/~cis1210/current/",
+          "catalog_year": null,
+          "locator": "Visible course identity, subject statement and offering-specific preparation; historical when dated before current term",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; ordinary robots-aware source inspected"
+        },
+        {
+          "url": "https://www.cis.upenn.edu/~cis1600/current/",
+          "catalog_year": null,
+          "locator": "Visible course identity, subject statement and offering-specific preparation; historical when dated before current term",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; ordinary robots-aware source inspected"
+        },
+        {
+          "url": "https://sites.google.com/seas.upenn.edu/cis-2450-spring-2026/home",
+          "catalog_year": null,
+          "locator": "Visible course identity, subject statement and offering-specific preparation; historical when dated before current term",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; ordinary robots-aware source inspected"
+        },
+        {
+          "url": "https://catalog.upenn.edu/courses/cis/",
+          "catalog_year": null,
+          "locator": "Current course source access attempt",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal Fetcher stopped because catalog robots responseHTTP202 did not provide a usable policy; no catalog challenge bypass or authenticatedPath@Penn access attempted."
+        },
+        {
+          "url": "https://catalog.upenn.edu/courses/ese/",
+          "catalog_year": null,
+          "locator": "Current course source access attempt",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal Fetcher stopped because catalog robots responseHTTP202 did not provide a usable policy; no catalog challenge bypass or authenticatedPath@Penn access attempted."
+        },
+        {
+          "url": "https://www.engineering.upenn.edu/~cis3200/24fa/",
+          "catalog_year": null,
+          "locator": "Current course source access attempt",
+          "checked_at": "2026-10-11",
+          "access_status": "Directly linked Fall2024 algorithms offering returnedHTTP403; not bypassed. Fixed subject uses precise current program title Algorithms."
+        }
+      ],
+      "checks": {
+        "degree_identity": "Official live page identifies BSE in Artificial Intelligence; it states no catalog edition. This review does not substitute Wharton/CS concentration rules or a generic CSCI degree.",
+        "required_and_choices": "Primary eight-section curriculum reread. Ten fixed identities: five Computing courses and five named mathematics courses. Probability remains ESE3010/STAT4300; each of six AI areas chooses at least1CU. Optional concentrations remain conditional four-course selections from AI elective slots. AI-project30percent term-project condition remains explicit. Senior design chooses an engineering sequence, not an invented fixed code.",
+        "elective_pools": "All83 primary-page identities reviewed for subject evidence;35 ambiguous short titles/code-only entries are explicitly unclassified. The additional469 technical/general-education classification records remain under independent review. No CSCI-only technical-elective quota is imported into ARIN.",
+        "prerequisites": "Public Fall2026 CIS1210 requires prior CIS1200 and CIS1600 without exceptions. CIS1200 homepage assumes Java preparation but its linked same-term syllabus accepts basic experience in any programming language; no universal prerequisite is invented. CIS2450 evidence is Spring2026; its historical prerequisite is not promoted to current metadata. Current catalog descriptions remain unavailable at robotsHTTP202.",
+        "credits_and_units": "Program-level sections total37CU. Ten fixed courses are course identities, not an inferred10CU subtotal: individual course units remain null without evidence. Mathematics7CU includes a probability choice and a1CU natural-science slot; generic40CU depth policy is not imposed on this37CU curriculum.",
+        "classification": "Manual fixed arithmetic4foundations+5mathematics+1systems=10. CIS2450 content centers scalable/distributed analytics. Exact subject review replaces blanket AI-pool classification for software engineering, databases/cloud computing and mathematical optimization. Broad short titles remain unclassified rather than assumed AI.",
+        "family_composition": "No shared family inheritance. This standalone BSE does not inherit Wharton/CS concentration membership, credit rules or award identity.",
+        "degree_wide_requirements": "Previous canonical-handbook mapping retained with exact concentration, ethics, breadth andEAS5050 issues. Independent policy/overlap and469remaining identity review continues; unreviewed accessible evidence is not labeled a blocked completed audit."
+      },
+      "expected_profile": null,
+      "expected_course_ids": {
+        "required": [
+          "penn-cis-1100",
+          "penn-cis-1200",
+          "penn-cis-1210",
+          "penn-cis-3200",
+          "penn-cis-2450",
+          "penn-math-1400",
+          "penn-math-1410",
+          "penn-cis-1600",
+          "penn-ese-2030",
+          "penn-ese-4020"
+        ],
+        "options": null,
+        "unresolved": null
+      },
+      "discrepancies": [
+        {
+          "issue": "Program parser assigned subject from Computing/AI pool headings, incorrectly treating big data as foundations and all AI-pool software/database/optimization courses asAI.",
+          "correction": "Exact observed identity mapping distinguishes actual subject from requirement role. Manual source-backed reviews use public descriptions where available and precisely identified title-limited evidence otherwise; ambiguous identities remain other.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://ai.engineering.upenn.edu/academics/undergraduate/",
+            "https://sites.google.com/seas.upenn.edu/cis-2450-spring-2026/home"
+          ]
+        }
+      ],
+      "blockers": [
+        {
+          "issue": "Normal Fetcher stopped because catalog robots responseHTTP202 did not provide a usable policy; no catalog challenge bypass or authenticatedPath@Penn access attempted.",
+          "url": "https://catalog.upenn.edu/courses/cis/"
+        },
+        {
+          "issue": "Normal Fetcher stopped because catalog robots responseHTTP202 did not provide a usable policy; no catalog challenge bypass or authenticatedPath@Penn access attempted.",
+          "url": "https://catalog.upenn.edu/courses/ese/"
+        },
+        {
+          "issue": "Directly linked Fall2024 algorithms offering returnedHTTP403; not bypassed. Fixed subject uses precise current program title Algorithms.",
+          "url": "https://www.engineering.upenn.edu/~cis3200/24fa/"
+        }
+      ],
+      "remaining_work": [
+        "Independently review remaining469 technical/general-education identity dispositions and linked handbook scope/overlap rules; distinguish exact catalog-description barriers from available title/policy evidence.",
+        "Preserve existing four inventory source questions: concentration optionality, ethics eligibility,37CU breadth scope andEAS5050 TBS/no-credit conflict."
+      ],
+      "correction_status": "Primary83subject dispositions and fixed10 reviewed; full552record degree audit continues",
+      "second_pass_status": "pending"
+    }
+  ]
+}

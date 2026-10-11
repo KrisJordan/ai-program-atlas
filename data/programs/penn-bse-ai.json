@@ -10,43 +10,80 @@
       "id": "penn-cis-1100",
       "code": "CIS 1100",
       "name": "Python Programming",
-      "description": null,
+      "description": "The public Python offering teaches programming fundamentals and algorithmic thinking. The page does not state its offering term.",
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
       "category": "foundations",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://www.engineering.upenn.edu/~cis110/current/py/index.html",
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum",
+          "penn-bse-ai-core-cis1100"
+        ],
+        "locator": "Exact public offering identity and visible description; term unstated",
+        "rationale": "The public Python offering teaches programming fundamentals and algorithmic thinking. The page does not state its offering term.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-cis-1200",
       "code": "CIS 1200",
       "name": "Programming Languages",
-      "description": null,
+      "description": "The Fall2026 course and syllabus center modular program design, data abstraction, testing and functional/object-oriented programming.",
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
       "category": "foundations",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://www.engineering.upenn.edu/~cis120/current/",
+      "syllabus": "https://www.engineering.upenn.edu/~cis120/current/syllabus/",
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum",
+          "penn-bse-ai-core-cis1200",
+          "penn-bse-ai-core-cis1200-syllabus"
+        ],
+        "locator": "Exact public offering identity and visible description; Fall2026",
+        "rationale": "The Fall2026 course and syllabus center modular program design, data abstraction, testing and functional/object-oriented programming.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-cis-1210",
       "code": "CIS 1210",
       "name": "Data Structures",
-      "description": null,
-      "prerequisites": null,
+      "description": "The Fall2026 course explicitly teaches data structures and algorithms. Its listed CIS1200 and CIS1600 prerequisites require prior completion.",
+      "prerequisites": "Fall 2026 offering: CIS 1200 and CIS 1600 (These are pre requisites; you must have completed both courses before taking CIS 1210. Exceptions will not be granted.)",
       "credits": null,
       "credit_unit": "course_units",
       "category": "foundations",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://www.engineering.upenn.edu/~cis1210/current/",
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum",
+          "penn-bse-ai-core-cis1210"
+        ],
+        "locator": "Exact public offering identity and visible description; Fall2026",
+        "rationale": "The Fall2026 course explicitly teaches data structures and algorithms. Its listed CIS1200 and CIS1600 prerequisites require prior completion.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-cis-3200",
@@ -60,21 +97,44 @@
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": "https://www.engineering.upenn.edu/~cis3200/",
-      "syllabus": "https://www.engineering.upenn.edu/~cis3200/21fa/"
+      "syllabus": "https://www.engineering.upenn.edu/~cis3200/21fa/",
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact CIS 3200 title in primary program curriculum",
+        "rationale": "The exact published title establishes programming, software construction or algorithmic methods. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-cis-2450",
       "code": "CIS 2450",
       "name": "Big Data",
-      "description": null,
+      "description": "The Spring2026 offering centers scalable computation, data processing models and distributed analytics frameworks. This is historical offering evidence, not a verified Fall2026 prerequisite policy.",
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "foundations",
+      "category": "systems",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sites.google.com/seas.upenn.edu/cis-2450-spring-2026/home",
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum",
+          "penn-bse-ai-core-cis2450"
+        ],
+        "locator": "Exact public offering identity and visible description; Spring2026",
+        "rationale": "The Spring2026 offering centers scalable computation, data processing models and distributed analytics frameworks. This is historical offering evidence, not a verified Fall2026 prerequisite policy.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-ese-2000",
@@ -84,11 +144,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "ai_ml",
+      "category": "other",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact ESE 2000 title in primary program curriculum",
+        "rationale": "The program publishes only this short title/code. It does not establish a defensible primary subject; curriculum-pool membership is not a subject classification. Keep unclassified until authoritative descriptive evidence is available.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-cis-2210",
@@ -102,7 +173,18 @@
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact CIS 2210 title in primary program curriculum",
+        "rationale": "The exact published title establishes an explicit AI/ML subject or AI-focused subfield. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-cis-4210",
@@ -116,7 +198,18 @@
       "source_id": "penn-cis4210-fall-2022-site",
       "url": "https://artificial-intelligence-class.org/",
       "public_site": "https://artificial-intelligence-class.org/",
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact CIS 4210 title in primary program curriculum",
+        "rationale": "The exact published title establishes an explicit AI/ML subject or AI-focused subfield. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-cis-5210",
@@ -130,7 +223,18 @@
       "source_id": "penn-cis5210-summer-2026-syllabus",
       "url": "https://www.engineering.upenn.edu/~jyzh/courses/cis5210/26su/syllabus/",
       "public_site": "https://www.engineering.upenn.edu/~jyzh/courses/cis5210/26su/",
-      "syllabus": "https://www.engineering.upenn.edu/~jyzh/courses/cis5210/26su/syllabus/"
+      "syllabus": "https://www.engineering.upenn.edu/~jyzh/courses/cis5210/26su/syllabus/",
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact CIS 5210 title in primary program curriculum",
+        "rationale": "The exact published title establishes an explicit AI/ML subject or AI-focused subfield. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-cis-4190",
@@ -144,7 +248,18 @@
       "source_id": "penn-cis4190-5190-fall-2026",
       "url": "https://www.engineering.upenn.edu/~cis5190/fall2026/index.html",
       "public_site": "https://www.engineering.upenn.edu/~cis5190/fall2026/index.html",
-      "syllabus": "https://www.engineering.upenn.edu/~cis5190/fall2026/index.html"
+      "syllabus": "https://www.engineering.upenn.edu/~cis5190/fall2026/index.html",
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact CIS 4190 title in primary program curriculum",
+        "rationale": "The exact published title establishes an explicit AI/ML subject or AI-focused subfield. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-cis-5200",
@@ -158,7 +273,18 @@
       "source_id": "penn-cis5200-spring-2023-site",
       "url": "https://machine-learning-upenn.github.io/",
       "public_site": "https://machine-learning-upenn.github.io/",
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact CIS 5200 title in primary program curriculum",
+        "rationale": "The exact published title establishes an explicit AI/ML subject or AI-focused subfield. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-ese-2100",
@@ -168,11 +294,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "ai_ml",
+      "category": "other",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact ESE 2100 title in primary program curriculum",
+        "rationale": "The program publishes only this short title/code. It does not establish a defensible primary subject; curriculum-pool membership is not a subject classification. Keep unclassified until authoritative descriptive evidence is available.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-ese-2240",
@@ -182,11 +319,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "ai_ml",
+      "category": "other",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact ESE 2240 title in primary program curriculum",
+        "rationale": "The program publishes only this short title/code. It does not establish a defensible primary subject; curriculum-pool membership is not a subject classification. Keep unclassified until authoritative descriptive evidence is available.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-ese-3040",
@@ -196,11 +344,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "ai_ml",
+      "category": "mathematics",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact ESE 3040 title in primary program curriculum",
+        "rationale": "The exact published title establishes a mathematical or statistical method. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-ese-4210",
@@ -210,11 +369,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "ai_ml",
+      "category": "other",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact ESE 4210 title in primary program curriculum",
+        "rationale": "The program publishes only this short title/code. It does not establish a defensible primary subject; curriculum-pool membership is not a subject classification. Keep unclassified until authoritative descriptive evidence is available.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-cis-5810",
@@ -228,7 +398,18 @@
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact CIS 5810 title in primary program curriculum",
+        "rationale": "The exact published title establishes an explicit AI/ML subject or AI-focused subfield. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-cis-5300",
@@ -242,7 +423,18 @@
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact CIS 5300 title in primary program curriculum",
+        "rationale": "The exact published title establishes an explicit AI/ML subject or AI-focused subfield. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-ese-3060",
@@ -256,7 +448,18 @@
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact ESE 3060 title in primary program curriculum",
+        "rationale": "The exact published title establishes an explicit AI/ML subject or AI-focused subfield. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-cis-3500",
@@ -266,11 +469,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "ai_ml",
+      "category": "foundations",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact CIS 3500 title in primary program curriculum",
+        "rationale": "The exact published title establishes programming, software construction or algorithmic methods. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-ese-3600",
@@ -284,7 +498,18 @@
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact ESE 3600 title in primary program curriculum",
+        "rationale": "The exact published title establishes an explicit AI/ML subject or AI-focused subfield. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-nets-2120",
@@ -294,11 +519,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "ai_ml",
+      "category": "systems",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact NETS 2120 title in primary program curriculum",
+        "rationale": "The exact published title establishes databases or scalable computing infrastructure. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-nets-2130",
@@ -308,11 +544,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "ai_ml",
+      "category": "other",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact NETS 2130 title in primary program curriculum",
+        "rationale": "The program publishes only this short title/code. It does not establish a defensible primary subject; curriculum-pool membership is not a subject classification. Keep unclassified until authoritative descriptive evidence is available.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-cis-3333",
@@ -322,11 +569,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "ai_ml",
+      "category": "mathematics",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact CIS 3333 title in primary program curriculum",
+        "rationale": "The exact published title establishes a mathematical or statistical method. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-ese-5460",
@@ -340,7 +598,18 @@
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact ESE 5460 title in primary program curriculum",
+        "rationale": "The exact published title establishes an explicit AI/ML subject or AI-focused subfield. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-ese-5140",
@@ -354,7 +623,18 @@
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact ESE 5140 title in primary program curriculum",
+        "rationale": "The exact published title establishes an explicit AI/ML subject or AI-focused subfield. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-ese-4380",
@@ -368,7 +648,18 @@
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact ESE 4380 title in primary program curriculum",
+        "rationale": "The exact published title establishes an explicit AI/ML subject or AI-focused subfield. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-ese-6450",
@@ -382,7 +673,18 @@
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact ESE 6450 title in primary program curriculum",
+        "rationale": "The exact published title establishes an explicit AI/ML subject or AI-focused subfield. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-cis-6200",
@@ -396,7 +698,18 @@
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact CIS 6200 title in primary program curriculum",
+        "rationale": "The exact published title establishes an explicit AI/ML subject or AI-focused subfield. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-cis-6250",
@@ -410,7 +723,18 @@
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact CIS 6250 title in primary program curriculum",
+        "rationale": "The exact published title establishes an explicit AI/ML subject or AI-focused subfield. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-ese-6740",
@@ -420,11 +744,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "ai_ml",
+      "category": "mathematics",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact ESE 6740 title in primary program curriculum",
+        "rationale": "The exact published title establishes a mathematical or statistical method. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-cis-7000",
@@ -434,11 +769,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "ai_ml",
+      "category": "other",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact CIS 7000 title in primary program curriculum",
+        "rationale": "The program publishes only this short title/code. It does not establish a defensible primary subject; curriculum-pool membership is not a subject classification. Keep unclassified until authoritative descriptive evidence is available.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-ese-3030",
@@ -448,11 +794,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "ai_ml",
+      "category": "mathematics",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact ESE 3030 title in primary program curriculum",
+        "rationale": "The exact published title establishes a mathematical or statistical method. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-ese-5000",
@@ -462,11 +819,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "ai_ml",
+      "category": "other",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact ESE 5000 title in primary program curriculum",
+        "rationale": "The program publishes only this short title/code. It does not establish a defensible primary subject; curriculum-pool membership is not a subject classification. Keep unclassified until authoritative descriptive evidence is available.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-ese-5050",
@@ -476,11 +844,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "ai_ml",
+      "category": "other",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact ESE 5050 title in primary program curriculum",
+        "rationale": "The program publishes only this short title/code. It does not establish a defensible primary subject; curriculum-pool membership is not a subject classification. Keep unclassified until authoritative descriptive evidence is available.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-ese-5060",
@@ -490,11 +869,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "ai_ml",
+      "category": "mathematics",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact ESE 5060 title in primary program curriculum",
+        "rationale": "The exact published title establishes a mathematical or statistical method. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-ese-6050",
@@ -504,11 +894,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "ai_ml",
+      "category": "mathematics",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact ESE 6050 title in primary program curriculum",
+        "rationale": "The exact published title establishes a mathematical or statistical method. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-ese-6060",
@@ -518,11 +919,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "ai_ml",
+      "category": "mathematics",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact ESE 6060 title in primary program curriculum",
+        "rationale": "The exact published title establishes a mathematical or statistical method. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-ese-6190",
@@ -532,11 +944,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "ai_ml",
+      "category": "other",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact ESE 6190 title in primary program curriculum",
+        "rationale": "The program publishes only this short title/code. It does not establish a defensible primary subject; curriculum-pool membership is not a subject classification. Keep unclassified until authoritative descriptive evidence is available.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-ese-6180",
@@ -546,11 +969,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "ai_ml",
+      "category": "other",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact ESE 6180 title in primary program curriculum",
+        "rationale": "The program publishes only this short title/code. It does not establish a defensible primary subject; curriculum-pool membership is not a subject classification. Keep unclassified until authoritative descriptive evidence is available.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-meam-4600",
@@ -560,11 +994,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "ai_ml",
+      "category": "other",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact MEAM 4600 title in primary program curriculum",
+        "rationale": "The program publishes only this short title/code. It does not establish a defensible primary subject; curriculum-pool membership is not a subject classification. Keep unclassified until authoritative descriptive evidence is available.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-meam-5200",
@@ -574,11 +1019,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "ai_ml",
+      "category": "other",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact MEAM 5200 title in primary program curriculum",
+        "rationale": "The program publishes only this short title/code. It does not establish a defensible primary subject; curriculum-pool membership is not a subject classification. Keep unclassified until authoritative descriptive evidence is available.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-meam-6200",
@@ -588,11 +1044,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "ai_ml",
+      "category": "other",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact MEAM 6200 title in primary program curriculum",
+        "rationale": "The program publishes only this short title/code. It does not establish a defensible primary subject; curriculum-pool membership is not a subject classification. Keep unclassified until authoritative descriptive evidence is available.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-ese-6500",
@@ -602,11 +1069,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "ai_ml",
+      "category": "other",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact ESE 6500 title in primary program curriculum",
+        "rationale": "The program publishes only this short title/code. It does not establish a defensible primary subject; curriculum-pool membership is not a subject classification. Keep unclassified until authoritative descriptive evidence is available.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-ese-6150",
@@ -616,11 +1094,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "ai_ml",
+      "category": "other",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact ESE 6150 title in primary program curriculum",
+        "rationale": "The program publishes only this short title/code. It does not establish a defensible primary subject; curriculum-pool membership is not a subject classification. Keep unclassified until authoritative descriptive evidence is available.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-ese-6510",
@@ -630,11 +1119,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "ai_ml",
+      "category": "other",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact ESE 6510 title in primary program curriculum",
+        "rationale": "The program publishes only this short title/code. It does not establish a defensible primary subject; curriculum-pool membership is not a subject classification. Keep unclassified until authoritative descriptive evidence is available.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-cis-4120",
@@ -644,11 +1144,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "ai_ml",
+      "category": "other",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact CIS 4120 title in primary program curriculum",
+        "rationale": "The program publishes only this short title/code. It does not establish a defensible primary subject; curriculum-pool membership is not a subject classification. Keep unclassified until authoritative descriptive evidence is available.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-cis-5800",
@@ -662,7 +1173,18 @@
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact CIS 5800 title in primary program curriculum",
+        "rationale": "The exact published title establishes an explicit AI/ML subject or AI-focused subfield. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-cis-5360",
@@ -672,11 +1194,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "ai_ml",
+      "category": "other",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact CIS 5360 title in primary program curriculum",
+        "rationale": "The program publishes only this short title/code. It does not establish a defensible primary subject; curriculum-pool membership is not a subject classification. Keep unclassified until authoritative descriptive evidence is available.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-be-5210",
@@ -686,11 +1219,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "ai_ml",
+      "category": "other",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact BE 5210 title in primary program curriculum",
+        "rationale": "The program publishes only this short title/code. It does not establish a defensible primary subject; curriculum-pool membership is not a subject classification. Keep unclassified until authoritative descriptive evidence is available.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-cis-4500",
@@ -700,11 +1244,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "ai_ml",
+      "category": "systems",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact CIS 4500 title in primary program curriculum",
+        "rationale": "The exact published title establishes databases or scalable computing infrastructure. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-cis-6500",
@@ -714,11 +1269,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "ai_ml",
+      "category": "systems",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact CIS 6500 title in primary program curriculum",
+        "rationale": "The exact published title establishes databases or scalable computing infrastructure. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-nets-3120",
@@ -728,11 +1294,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "ai_ml",
+      "category": "other",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact NETS 3120 title in primary program curriculum",
+        "rationale": "The program publishes only this short title/code. It does not establish a defensible primary subject; curriculum-pool membership is not a subject classification. Keep unclassified until authoritative descriptive evidence is available.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-nets-4120",
@@ -742,11 +1319,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "ai_ml",
+      "category": "foundations",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact NETS 4120 title in primary program curriculum",
+        "rationale": "The exact published title establishes programming, software construction or algorithmic methods. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-ese-4040",
@@ -756,11 +1344,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "ai_ml",
+      "category": "other",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact ESE 4040 title in primary program curriculum",
+        "rationale": "The program publishes only this short title/code. It does not establish a defensible primary subject; curriculum-pool membership is not a subject classification. Keep unclassified until authoritative descriptive evidence is available.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-math-1400",
@@ -774,7 +1373,18 @@
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact MATH 1400 title in primary program curriculum",
+        "rationale": "The exact published title establishes a mathematical or statistical method. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-math-1410",
@@ -788,21 +1398,44 @@
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact MATH 1410 title in primary program curriculum",
+        "rationale": "The exact published title establishes a mathematical or statistical method. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-cis-1600",
       "code": "CIS 1600",
       "name": "Mathematics of Computer Science",
-      "description": null,
+      "description": "The Fall2026 description centers sets, functions, combinatorics, discrete probability, induction and graph theory.",
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
       "category": "mathematics",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://www.cis.upenn.edu/~cis1600/current/",
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum",
+          "penn-bse-ai-core-cis1600"
+        ],
+        "locator": "Exact public offering identity and visible description; Fall2026",
+        "rationale": "The Fall2026 description centers sets, functions, combinatorics, discrete probability, induction and graph theory.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-ese-2030",
@@ -816,7 +1449,18 @@
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact ESE 2030 title in primary program curriculum",
+        "rationale": "The exact published title establishes a mathematical or statistical method. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-stat-4300",
@@ -826,11 +1470,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "mathematics",
+      "category": "other",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact STAT 4300 title in primary program curriculum",
+        "rationale": "The program publishes only this short title/code. It does not establish a defensible primary subject; curriculum-pool membership is not a subject classification. Keep unclassified until authoritative descriptive evidence is available.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-ese-3010",
@@ -844,7 +1499,18 @@
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact ESE 3010 title in primary program curriculum",
+        "rationale": "The exact published title establishes a mathematical or statistical method. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-ese-4020",
@@ -858,7 +1524,18 @@
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact ESE 4020 title in primary program curriculum",
+        "rationale": "The exact published title establishes a mathematical or statistical method. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-meam-5170",
@@ -868,11 +1545,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "ai_ml",
+      "category": "other",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact MEAM 5170 title in primary program curriculum",
+        "rationale": "The program publishes only this short title/code. It does not establish a defensible primary subject; curriculum-pool membership is not a subject classification. Keep unclassified until authoritative descriptive evidence is available.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-meam-6230",
@@ -882,11 +1570,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "ai_ml",
+      "category": "other",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact MEAM 6230 title in primary program curriculum",
+        "rationale": "The program publishes only this short title/code. It does not establish a defensible primary subject; curriculum-pool membership is not a subject classification. Keep unclassified until authoritative descriptive evidence is available.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-meam-6240",
@@ -896,11 +1595,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "ai_ml",
+      "category": "other",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact MEAM 6240 title in primary program curriculum",
+        "rationale": "The program publishes only this short title/code. It does not establish a defensible primary subject; curriculum-pool membership is not a subject classification. Keep unclassified until authoritative descriptive evidence is available.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-ese-4230",
@@ -910,11 +1620,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "ai_ml",
+      "category": "other",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact ESE 4230 title in primary program curriculum",
+        "rationale": "The program publishes only this short title/code. It does not establish a defensible primary subject; curriculum-pool membership is not a subject classification. Keep unclassified until authoritative descriptive evidence is available.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-cis-4810",
@@ -928,7 +1649,18 @@
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact CIS 4810 title in primary program curriculum",
+        "rationale": "The exact published title establishes an explicit AI/ML subject or AI-focused subfield. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-cis-6800",
@@ -942,7 +1674,18 @@
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact CIS 6800 title in primary program curriculum",
+        "rationale": "The exact published title establishes an explicit AI/ML subject or AI-focused subfield. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-cis-6300",
@@ -956,7 +1699,18 @@
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact CIS 6300 title in primary program curriculum",
+        "rationale": "The exact published title establishes an explicit AI/ML subject or AI-focused subfield. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-cis-4230",
@@ -966,11 +1720,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact CIS 4230 title in primary program curriculum",
+        "rationale": "The program publishes only this short title/code. It does not establish a defensible primary subject; curriculum-pool membership is not a subject classification. Keep unclassified until authoritative descriptive evidence is available.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-lawm-5060",
@@ -984,7 +1749,18 @@
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact LAWM 5060 title in primary program curriculum",
+        "rationale": "The exact published title establishes law or philosophical analysis. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-cogs-1001",
@@ -994,11 +1770,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "human_context",
+      "category": "applications",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact COGS 1001 title in primary program curriculum",
+        "rationale": "The exact published title establishes substantive cognitive/neuroscience domain knowledge. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-ling-0500",
@@ -1008,11 +1795,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact LING 0500 title in primary program curriculum",
+        "rationale": "The program publishes only this short title/code. It does not establish a defensible primary subject; curriculum-pool membership is not a subject classification. Keep unclassified until authoritative descriptive evidence is available.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-ling-2500",
@@ -1022,11 +1820,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact LING 2500 title in primary program curriculum",
+        "rationale": "The program publishes only this short title/code. It does not establish a defensible primary subject; curriculum-pool membership is not a subject classification. Keep unclassified until authoritative descriptive evidence is available.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-ling-3810",
@@ -1036,11 +1845,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact LING 3810 title in primary program curriculum",
+        "rationale": "The program publishes only this short title/code. It does not establish a defensible primary subject; curriculum-pool membership is not a subject classification. Keep unclassified until authoritative descriptive evidence is available.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-psyc-1210",
@@ -1050,11 +1870,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "human_context",
+      "category": "applications",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact PSYC 1210 title in primary program curriculum",
+        "rationale": "The exact published title establishes substantive cognitive/neuroscience domain knowledge. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-psyc-1340",
@@ -1064,11 +1895,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact PSYC 1340 title in primary program curriculum",
+        "rationale": "The program publishes only this short title/code. It does not establish a defensible primary subject; curriculum-pool membership is not a subject classification. Keep unclassified until authoritative descriptive evidence is available.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-psyc-1230",
@@ -1078,11 +1920,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "human_context",
+      "category": "applications",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact PSYC 1230 title in primary program curriculum",
+        "rationale": "The exact published title establishes substantive cognitive/neuroscience domain knowledge. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-psyc-1310",
@@ -1092,11 +1945,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact PSYC 1310 title in primary program curriculum",
+        "rationale": "The program publishes only this short title/code. It does not establish a defensible primary subject; curriculum-pool membership is not a subject classification. Keep unclassified until authoritative descriptive evidence is available.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-psyc-2737",
@@ -1106,11 +1970,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact PSYC 2737 title in primary program curriculum",
+        "rationale": "The program publishes only this short title/code. It does not establish a defensible primary subject; curriculum-pool membership is not a subject classification. Keep unclassified until authoritative descriptive evidence is available.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-phil-1710",
@@ -1120,11 +1995,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact PHIL 1710 title in primary program curriculum",
+        "rationale": "The program publishes only this short title/code. It does not establish a defensible primary subject; curriculum-pool membership is not a subject classification. Keep unclassified until authoritative descriptive evidence is available.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-phil-2640",
@@ -1138,7 +2024,18 @@
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact PHIL 2640 title in primary program curriculum",
+        "rationale": "The exact published title establishes law or philosophical analysis. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-phil-4721",
@@ -1148,11 +2045,22 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "course_units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact PHIL 4721 title in primary program curriculum",
+        "rationale": "The program publishes only this short title/code. It does not establish a defensible primary subject; curriculum-pool membership is not a subject classification. Keep unclassified until authoritative descriptive evidence is available.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-phil-4840",
@@ -1166,7 +2074,18 @@
       "source_id": "penn-bse-ai-curriculum",
       "url": "https://ai.engineering.upenn.edu/academics/undergraduate/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-bse-ai-curriculum"
+        ],
+        "locator": "Exact PHIL 4840 title in primary program curriculum",
+        "rationale": "The exact published title establishes law or philosophical analysis. This is a limited title-based review; catalog descriptions are unavailable in this pass.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "penn-acct-2700",
@@ -8647,7 +9566,7 @@
       "category": "ai_ml",
       "source_id": "penn-bse-ai-technical-inventory",
       "source_text": null,
-      "summary": "These entries are marked ask and are not included as automatically approved options. Seek the CIS undergraduate chair’s decision with supporting documentation before counting one.",
+      "summary": "These entries are marked ask and are not included as automatically approved options. Seek the CIS undergraduate chair\u2019s decision with supporting documentation before counting one.",
       "course_ids": [
         "penn-cis-0099",
         "penn-cis-5990",
@@ -8731,7 +9650,7 @@
       "category": "ai_ml",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "Graduation requires clearing F/U, I and NR entries. Failed courses require repetition or an approved substitution; failures remain in the cumulative GPA. Starting Summer 2026, incomplete work in undergraduate Engineering courses must be completed by the following enrolled semester’s grade-mode deadline; the instructor must submit the change by that deadline or the converted F becomes permanent. Earlier I/NR conversion deadlines and any exceptions remain governed by the handbook.",
+      "summary": "Graduation requires clearing F/U, I and NR entries. Failed courses require repetition or an approved substitution; failures remain in the cumulative GPA. Starting Summer 2026, incomplete work in undergraduate Engineering courses must be completed by the following enrolled semester\u2019s grade-mode deadline; the instructor must submit the change by that deadline or the converted F becomes permanent. Earlier I/NR conversion deadlines and any exceptions remain governed by the handbook.",
       "course_ids": []
     },
     {
@@ -8787,7 +9706,7 @@
       "category": "ai_ml",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "The handbook’s two-social-science/two-humanities breadth rule is explicitly retained for 40-unit curricula and waived for some others. The AI degree lists 37 units; its exact breadth applicability needs department confirmation. The department-based SS/H classifications and exceptions are not yet fully enumerated here.",
+      "summary": "The handbook\u2019s two-social-science/two-humanities breadth rule is explicitly retained for 40-unit curricula and waived for some others. The AI degree lists 37 units; its exact breadth applicability needs department confirmation. The department-based SS/H classifications and exceptions are not yet fully enumerated here.",
       "course_ids": []
     },
     {
@@ -8801,7 +9720,7 @@
       "category": "ai_ml",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "The handbook’s specific SSH depth rule applies only to 40-unit Engineering curricula. Do not impose it as an additional requirement on the 37-unit AI curriculum.",
+      "summary": "The handbook\u2019s specific SSH depth rule applies only to 40-unit Engineering curricula. Do not impose it as an additional requirement on the 37-unit AI curriculum.",
       "course_ids": []
     },
     {
@@ -8843,7 +9762,7 @@
       "category": "ai_ml",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "Complete a critical writing seminar, preferably in year one and no later than year two. AP credit cannot satisfy writing. Writing may be pass/fail through the registrar process by the drop deadline, but dual-degree students must take it for a grade. WRIT classification determines its distribution slot; a free-elective classification does not automatically qualify within the AI program’s five-unit SS/H distribution.",
+      "summary": "Complete a critical writing seminar, preferably in year one and no later than year two. AP credit cannot satisfy writing. Writing may be pass/fail through the registrar process by the drop deadline, but dual-degree students must take it for a grade. WRIT classification determines its distribution slot; a free-elective classification does not automatically qualify within the AI program\u2019s five-unit SS/H distribution.",
       "course_ids": []
     },
     {
@@ -8987,7 +9906,7 @@
     {
       "id": "penn-bse-ai-college-natural-science-astronomy-and-astrophysics",
       "parent_id": null,
-      "title": "Astronomy and Astrophysics — natural-science category",
+      "title": "Astronomy and Astrophysics \u2014 natural-science category",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -9001,7 +9920,7 @@
     {
       "id": "penn-bse-ai-college-natural-science-astronomy-and-astrophysics-exception-0-0",
       "parent_id": null,
-      "title": "Astronomy and Astrophysics — exception",
+      "title": "Astronomy and Astrophysics \u2014 exception",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -9015,7 +9934,7 @@
     {
       "id": "penn-bse-ai-college-natural-science-astronomy-and-astrophysics-exception-0-1",
       "parent_id": null,
-      "title": "Astronomy and Astrophysics — exception",
+      "title": "Astronomy and Astrophysics \u2014 exception",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -9029,7 +9948,7 @@
     {
       "id": "penn-bse-ai-college-natural-science-biochemistry",
       "parent_id": null,
-      "title": "Biochemistry — natural-science category",
+      "title": "Biochemistry \u2014 natural-science category",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -9043,7 +9962,7 @@
     {
       "id": "penn-bse-ai-college-natural-science-bioengineering",
       "parent_id": null,
-      "title": "Bioengineering — natural-science category",
+      "title": "Bioengineering \u2014 natural-science category",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -9057,7 +9976,7 @@
     {
       "id": "penn-bse-ai-college-natural-science-biological-basis-of-behavior",
       "parent_id": null,
-      "title": "Biological Basis of Behavior — natural-science category",
+      "title": "Biological Basis of Behavior \u2014 natural-science category",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -9071,7 +9990,7 @@
     {
       "id": "penn-bse-ai-college-natural-science-biology",
       "parent_id": null,
-      "title": "Biology — natural-science category",
+      "title": "Biology \u2014 natural-science category",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -9085,7 +10004,7 @@
     {
       "id": "penn-bse-ai-college-natural-science-biophysics",
       "parent_id": null,
-      "title": "Biophysics — natural-science category",
+      "title": "Biophysics \u2014 natural-science category",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -9099,7 +10018,7 @@
     {
       "id": "penn-bse-ai-college-natural-science-cellular-and-molecular-biology",
       "parent_id": null,
-      "title": "Cellular and Molecular Biology — natural-science category",
+      "title": "Cellular and Molecular Biology \u2014 natural-science category",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -9113,7 +10032,7 @@
     {
       "id": "penn-bse-ai-college-natural-science-chemistry",
       "parent_id": null,
-      "title": "Chemistry — natural-science category",
+      "title": "Chemistry \u2014 natural-science category",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -9127,7 +10046,7 @@
     {
       "id": "penn-bse-ai-college-natural-science-chemistry-exception-0-0",
       "parent_id": null,
-      "title": "Chemistry — exception",
+      "title": "Chemistry \u2014 exception",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -9141,7 +10060,7 @@
     {
       "id": "penn-bse-ai-college-natural-science-chemistry-exception-0-1",
       "parent_id": null,
-      "title": "Chemistry — exception",
+      "title": "Chemistry \u2014 exception",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -9155,7 +10074,7 @@
     {
       "id": "penn-bse-ai-college-natural-science-computer-and-information-science",
       "parent_id": null,
-      "title": "Computer and Information Science — natural-science category",
+      "title": "Computer and Information Science \u2014 natural-science category",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -9169,7 +10088,7 @@
     {
       "id": "penn-bse-ai-college-natural-science-earth-and-environmental-science",
       "parent_id": null,
-      "title": "Earth and Environmental Science — natural-science category",
+      "title": "Earth and Environmental Science \u2014 natural-science category",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -9183,7 +10102,7 @@
     {
       "id": "penn-bse-ai-college-natural-science-electrical-and-systems-engineering",
       "parent_id": null,
-      "title": "Electrical and Systems Engineering — natural-science category",
+      "title": "Electrical and Systems Engineering \u2014 natural-science category",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -9197,7 +10116,7 @@
     {
       "id": "penn-bse-ai-college-natural-science-electrical-and-systems-engineering-exception-0-0",
       "parent_id": null,
-      "title": "Electrical and Systems Engineering — exception",
+      "title": "Electrical and Systems Engineering \u2014 exception",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -9211,7 +10130,7 @@
     {
       "id": "penn-bse-ai-college-natural-science-genomics-and-computational-biology",
       "parent_id": null,
-      "title": "Genomics and Computational Biology — natural-science category",
+      "title": "Genomics and Computational Biology \u2014 natural-science category",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -9225,7 +10144,7 @@
     {
       "id": "penn-bse-ai-college-natural-science-materials-science-engineering",
       "parent_id": null,
-      "title": "Materials Science Engineering — natural-science category",
+      "title": "Materials Science Engineering \u2014 natural-science category",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -9239,7 +10158,7 @@
     {
       "id": "penn-bse-ai-college-natural-science-materials-science-engineering-exception-0-0",
       "parent_id": null,
-      "title": "Materials Science Engineering — exception",
+      "title": "Materials Science Engineering \u2014 exception",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -9253,7 +10172,7 @@
     {
       "id": "penn-bse-ai-college-natural-science-mechanical-engineering-and-applied-mechanics",
       "parent_id": null,
-      "title": "Mechanical Engineering and Applied Mechanics — natural-science category",
+      "title": "Mechanical Engineering and Applied Mechanics \u2014 natural-science category",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -9267,7 +10186,7 @@
     {
       "id": "penn-bse-ai-college-natural-science-mechanical-engineering-and-applied-mechanics-exception-0-0",
       "parent_id": null,
-      "title": "Mechanical Engineering and Applied Mechanics — exception",
+      "title": "Mechanical Engineering and Applied Mechanics \u2014 exception",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -9281,7 +10200,7 @@
     {
       "id": "penn-bse-ai-college-natural-science-neuroscience",
       "parent_id": null,
-      "title": "Neuroscience — natural-science category",
+      "title": "Neuroscience \u2014 natural-science category",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -9295,7 +10214,7 @@
     {
       "id": "penn-bse-ai-college-natural-science-physics",
       "parent_id": null,
-      "title": "Physics — natural-science category",
+      "title": "Physics \u2014 natural-science category",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -9309,7 +10228,7 @@
     {
       "id": "penn-bse-ai-college-natural-science-physics-exception-0-0",
       "parent_id": null,
-      "title": "Physics — exception",
+      "title": "Physics \u2014 exception",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -9323,7 +10242,7 @@
     {
       "id": "penn-bse-ai-college-natural-science-physics-exception-0-1",
       "parent_id": null,
-      "title": "Physics — exception",
+      "title": "Physics \u2014 exception",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -9337,7 +10256,7 @@
     {
       "id": "penn-bse-ai-college-natural-science-psychology",
       "parent_id": null,
-      "title": "Psychology — natural-science category",
+      "title": "Psychology \u2014 natural-science category",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -9947,7 +10866,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "ASAM – Asian American Studies ( except where cross-listed with AMES, ENGL, FNAR, HIST, or SARS)",
+      "summary": "ASAM \u2013 Asian American Studies ( except where cross-listed with AMES, ENGL, FNAR, HIST, or SARS)",
       "course_ids": []
     },
     {
@@ -9961,7 +10880,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "COMM – Communications",
+      "summary": "COMM \u2013 Communications",
       "course_ids": []
     },
     {
@@ -9975,7 +10894,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "CRIM – Criminology",
+      "summary": "CRIM \u2013 Criminology",
       "course_ids": []
     },
     {
@@ -9989,7 +10908,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "ECON – Economics ( except ECON 0471, 0620, 2300 and 2310)",
+      "summary": "ECON \u2013 Economics ( except ECON 0471, 0620, 2300 and 2310)",
       "course_ids": []
     },
     {
@@ -10003,7 +10922,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "HSOC – Health and Societies",
+      "summary": "HSOC \u2013 Health and Societies",
       "course_ids": []
     },
     {
@@ -10017,7 +10936,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "INTR – International Relations",
+      "summary": "INTR \u2013 International Relations",
       "course_ids": []
     },
     {
@@ -10045,7 +10964,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "PPE – Philosophy, Politics and Economics",
+      "summary": "PPE \u2013 Philosophy, Politics and Economics",
       "course_ids": []
     },
     {
@@ -10059,7 +10978,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "PSCI – Political Science",
+      "summary": "PSCI \u2013 Political Science",
       "course_ids": []
     },
     {
@@ -10087,7 +11006,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "SOCI – Sociology ( except statistics, probability, and math courses)",
+      "summary": "SOCI \u2013 Sociology ( except statistics, probability, and math courses)",
       "course_ids": []
     },
     {
@@ -10115,7 +11034,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "URBS – Urban Studies",
+      "summary": "URBS \u2013 Urban Studies",
       "course_ids": []
     },
     {
@@ -10379,7 +11298,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "ANTH – Anthropology",
+      "summary": "ANTH \u2013 Anthropology",
       "course_ids": []
     },
     {
@@ -10393,7 +11312,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "ANCH – Ancient History",
+      "summary": "ANCH \u2013 Ancient History",
       "course_ids": []
     },
     {
@@ -10407,7 +11326,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "ARTH – Art History",
+      "summary": "ARTH \u2013 Art History",
       "course_ids": []
     },
     {
@@ -10421,7 +11340,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "ASAM – Asian American Studies (cross-listed with AMES, ENGL, FNAR, HIST, and SARS only) — 1520",
+      "summary": "ASAM \u2013 Asian American Studies (cross-listed with AMES, ENGL, FNAR, HIST, and SARS only) \u2014 1520",
       "course_ids": []
     },
     {
@@ -10435,7 +11354,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "ASLD – American Sign Language",
+      "summary": "ASLD \u2013 American Sign Language",
       "course_ids": []
     },
     {
@@ -10449,7 +11368,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "BIOE – Bioethics",
+      "summary": "BIOE \u2013 Bioethics",
       "course_ids": []
     },
     {
@@ -10463,7 +11382,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "CLST – Classical Studies (ANCH, CLST, LATN, GREK)",
+      "summary": "CLST \u2013 Classical Studies (ANCH, CLST, LATN, GREK)",
       "course_ids": []
     },
     {
@@ -10477,7 +11396,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "COML – Comparative Literature and Literary Theory",
+      "summary": "COML \u2013 Comparative Literature and Literary Theory",
       "course_ids": []
     },
     {
@@ -10491,7 +11410,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "DSGN – Design 0010, 1010, 1020, 1030, 1040, 1050, 2010, 2030, 2040, 2510, and 5001",
+      "summary": "DSGN \u2013 Design 0010, 1010, 1020, 1030, 1040, 1050, 2010, 2030, 2040, 2510, and 5001",
       "course_ids": []
     },
     {
@@ -10505,7 +11424,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "EALC – East Asia Languages and Civilizations",
+      "summary": "EALC \u2013 East Asia Languages and Civilizations",
       "course_ids": []
     },
     {
@@ -10519,7 +11438,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "ENGL – English",
+      "summary": "ENGL \u2013 English",
       "course_ids": []
     },
     {
@@ -10533,7 +11452,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "FNAR – Fine Arts",
+      "summary": "FNAR \u2013 Fine Arts",
       "course_ids": []
     },
     {
@@ -10547,7 +11466,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "FOLK – Folklore",
+      "summary": "FOLK \u2013 Folklore",
       "course_ids": []
     },
     {
@@ -10561,7 +11480,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "HIST – History",
+      "summary": "HIST \u2013 History",
       "course_ids": []
     },
     {
@@ -10575,7 +11494,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "HSSC – History and Sociology of Science",
+      "summary": "HSSC \u2013 History and Sociology of Science",
       "course_ids": []
     },
     {
@@ -10589,7 +11508,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "JWST – Jewish Studies",
+      "summary": "JWST \u2013 Jewish Studies",
       "course_ids": []
     },
     {
@@ -10603,7 +11522,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "LALS – Latin American and Latino Studies",
+      "summary": "LALS \u2013 Latin American and Latino Studies",
       "course_ids": []
     },
     {
@@ -10617,7 +11536,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "MUSC – Music",
+      "summary": "MUSC \u2013 Music",
       "course_ids": []
     },
     {
@@ -10631,7 +11550,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "MELC – Middle Eastern Languages and Cultures ( formerly NELC )",
+      "summary": "MELC \u2013 Middle Eastern Languages and Cultures ( formerly NELC )",
       "course_ids": []
     },
     {
@@ -10645,7 +11564,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "PHIL – Philosophy (except 5710, 4723, and all other logic courses)",
+      "summary": "PHIL \u2013 Philosophy (except 5710, 4723, and all other logic courses)",
       "course_ids": []
     },
     {
@@ -10659,7 +11578,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "RELS – Religious Studies",
+      "summary": "RELS \u2013 Religious Studies",
       "course_ids": []
     },
     {
@@ -10687,7 +11606,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "THAR – Theatre Arts",
+      "summary": "THAR \u2013 Theatre Arts",
       "course_ids": []
     },
     {
@@ -10701,7 +11620,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "VLST – Visual Studies",
+      "summary": "VLST \u2013 Visual Studies",
       "course_ids": []
     },
     {
@@ -10715,7 +11634,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "AFRC – Africana Studies 2321",
+      "summary": "AFRC \u2013 Africana Studies 2321",
       "course_ids": [
         "penn-afrc-2321"
       ]
@@ -10731,7 +11650,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "ARCH – Architecture 1010, 2010, 2020, 3010, 3020, 4010, 4110, 4120",
+      "summary": "ARCH \u2013 Architecture 1010, 2010, 2020, 3010, 3020, 4010, 4110, 4120",
       "course_ids": [
         "penn-arch-1010",
         "penn-arch-2010",
@@ -10754,7 +11673,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "CIMS – Cinema and Media Studies : 1002, 2850",
+      "summary": "CIMS \u2013 Cinema and Media Studies : 1002, 2850",
       "course_ids": [
         "penn-cims-1002",
         "penn-cims-2850"
@@ -10771,7 +11690,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "CIS – Computer & Information Science 1060 (ANTH 2580)",
+      "summary": "CIS \u2013 Computer & Information Science 1060 (ANTH 2580)",
       "course_ids": [
         "penn-cis-1060"
       ]
@@ -10787,7 +11706,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "ECON – Economics 0471, 0620",
+      "summary": "ECON \u2013 Economics 0471, 0620",
       "course_ids": [
         "penn-econ-0471",
         "penn-econ-0620"
@@ -10804,7 +11723,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "AFST – African Studies",
+      "summary": "AFST \u2013 African Studies",
       "course_ids": []
     },
     {
@@ -10818,7 +11737,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "AFRC – Africana Studies",
+      "summary": "AFRC \u2013 Africana Studies",
       "course_ids": []
     },
     {
@@ -10832,7 +11751,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "AAMW – Art and Archeology of the Mediterranean World",
+      "summary": "AAMW \u2013 Art and Archeology of the Mediterranean World",
       "course_ids": []
     },
     {
@@ -10846,7 +11765,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "CIMS – Cinema Media Studies",
+      "summary": "CIMS \u2013 Cinema Media Studies",
       "course_ids": []
     },
     {
@@ -10860,7 +11779,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "GSWS – Gender, Sex, and Women’s Studies",
+      "summary": "GSWS \u2013 Gender, Sex, and Women\u2019s Studies",
       "course_ids": []
     },
     {
@@ -10874,7 +11793,7 @@
       "category": "human_context",
       "source_id": "penn-bse-ai-canonical-handbook",
       "source_text": null,
-      "summary": "AFST, AFRC, AAMW, CIMS and GSWS follow their cross-listed department’s SS/H category; entries without a cross-list need case-by-case coordinator review. WRIT follows the separately mapped writing classification list.",
+      "summary": "AFST, AFRC, AAMW, CIMS and GSWS follow their cross-listed department\u2019s SS/H category; entries without a cross-list need case-by-case coordinator review. WRIT follows the separately mapped writing classification list.",
       "course_ids": []
     },
     {
@@ -10908,7 +11827,7 @@
     {
       "id": "penn-bse-ai-college-tbs-0",
       "parent_id": null,
-      "title": "CIS (CSE) — TBS classification",
+      "title": "CIS (CSE) \u2014 TBS classification",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -10927,7 +11846,7 @@
     {
       "id": "penn-bse-ai-college-tbs-1",
       "parent_id": null,
-      "title": "DSGN: — TBS classification",
+      "title": "DSGN: \u2014 TBS classification",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -10943,7 +11862,7 @@
     {
       "id": "penn-bse-ai-college-tbs-2",
       "parent_id": null,
-      "title": "EAS: — TBS classification",
+      "title": "EAS: \u2014 TBS classification",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -10992,7 +11911,7 @@
     {
       "id": "penn-bse-ai-college-tbs-3",
       "parent_id": null,
-      "title": "ENGR — TBS classification",
+      "title": "ENGR \u2014 TBS classification",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -11008,7 +11927,7 @@
     {
       "id": "penn-bse-ai-college-tbs-4",
       "parent_id": null,
-      "title": "ENVS: — TBS classification",
+      "title": "ENVS: \u2014 TBS classification",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -11025,7 +11944,7 @@
     {
       "id": "penn-bse-ai-college-tbs-5",
       "parent_id": null,
-      "title": "IPD: — TBS classification",
+      "title": "IPD: \u2014 TBS classification",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -11042,7 +11961,7 @@
     {
       "id": "penn-bse-ai-college-tbs-6",
       "parent_id": null,
-      "title": "LGST: — TBS classification",
+      "title": "LGST: \u2014 TBS classification",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -11059,7 +11978,7 @@
     {
       "id": "penn-bse-ai-college-tbs-7",
       "parent_id": null,
-      "title": "LAWM: — TBS classification",
+      "title": "LAWM: \u2014 TBS classification",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -11075,7 +11994,7 @@
     {
       "id": "penn-bse-ai-college-tbs-8",
       "parent_id": null,
-      "title": "MGMT — TBS classification",
+      "title": "MGMT \u2014 TBS classification",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -11093,7 +12012,7 @@
     {
       "id": "penn-bse-ai-college-tbs-9",
       "parent_id": null,
-      "title": "MKTG — TBS classification",
+      "title": "MKTG \u2014 TBS classification",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -11110,7 +12029,7 @@
     {
       "id": "penn-bse-ai-college-tbs-10",
       "parent_id": null,
-      "title": "NURS: — TBS classification",
+      "title": "NURS: \u2014 TBS classification",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -11126,7 +12045,7 @@
     {
       "id": "penn-bse-ai-college-tbs-11",
       "parent_id": null,
-      "title": "OIDD — TBS classification",
+      "title": "OIDD \u2014 TBS classification",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -11147,7 +12066,7 @@
     {
       "id": "penn-bse-ai-college-tbs-12",
       "parent_id": null,
-      "title": "PFP Free — TBS classification",
+      "title": "PFP Free \u2014 TBS classification",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -11161,7 +12080,7 @@
     {
       "id": "penn-bse-ai-college-tbs-13",
       "parent_id": null,
-      "title": "WH — TBS classification",
+      "title": "WH \u2014 TBS classification",
       "kind": "note",
       "count": null,
       "credits": null,
@@ -11297,7 +12216,7 @@
       "category": "ai_ml",
       "source_id": "penn-bse-ai-study-abroad",
       "source_text": null,
-      "summary": "Normally take4–4.5 Penn-equivalent CU. Host-required higher loads and qualifying dual degrees have exceptions; the XCAT section permits up to5.5CU for dual degrees. All abroad courses must appear on the Penn transcript, and grades enter the cumulative GPA. Pass/fail remains subject to Engineering policy and notice to the abroad advisor by5PM ET Friday of the ninth program week.",
+      "summary": "Normally take4\u20134.5 Penn-equivalent CU. Host-required higher loads and qualifying dual degrees have exceptions; the XCAT section permits up to5.5CU for dual degrees. All abroad courses must appear on the Penn transcript, and grades enter the cumulative GPA. Pass/fail remains subject to Engineering policy and notice to the abroad advisor by5PM ET Friday of the ninth program week.",
       "course_ids": []
     }
   ],
@@ -11314,10 +12233,15 @@
     "The old ugrad.seas.upenn.edu robots URL redirected to the current academic-services landing page, not a robots policy; this was a migration/review condition, not a demonstrated publisher denial. The canonical host has a valid robots policy and its handbook was subsequently inspected.",
     "Current canonical handbook policies and 49 writing classifications are mapped. General depth applies only to 40-unit curricula and is not imposed on the 37-unit AI degree. AI-specific ethics/breadth ambiguities remain visible instead of silently combining inconsistent rules.",
     "All visible college natural-science, mathematics, SS/H, TBS, Engineering and no-credit classification rules are now mapped. They classify potential options; they do not override ARIN requirements or impose all pool courses.",
-    "Handbook source numbering includes legacy codes and cohort/major-specific conditions. They are retained as factual policy notes without guessing modern equivalents or extending another program’s exceptions to ARIN. Names are null for code-only classification entries.",
+    "Handbook source numbering includes legacy codes and cohort/major-specific conditions. They are retained as factual policy notes without guessing modern equivalents or extending another program\u2019s exceptions to ARIN. Names are null for code-only classification entries.",
     "TBS lists EAS5050 while the no-credit list excludes it; preserve this additional source conflict. College ethics,37CU breadth and optional-concentration conflicts remain unresolved.",
     "Study-abroad and Consortium permission rules are represented from public sources. XCAT and student-specific approvals were not accessed or fabricated; no individually approved substitution or graduation clearance is implied.",
-    "2026-10-11: Reviewed the same cached official-linked public course evidence as the AI concentration and applied it to five existing BSE option records. CIS 4190/5190 identifies Fall 2026 and CIS 5210 Summer 2026; CIS 4210 Fall 2022 and CIS 5200 Spring 2023 are historical examples, with current prerequisite fields left unknown. All five individual credits remain unknown. Course objectives are not program-assessed outcomes; curriculum conflicts and partial status remain unchanged."
+    "2026-10-11: Reviewed the same cached official-linked public course evidence as the AI concentration and applied it to five existing BSE option records. CIS 4190/5190 identifies Fall 2026 and CIS 5210 Summer 2026; CIS 4210 Fall 2022 and CIS 5200 Spring 2023 are historical examples, with current prerequisite fields left unknown. All five individual credits remain unknown. Course objectives are not program-assessed outcomes; curriculum conflicts and partial status remain unchanged.",
+    "Independent subject review: all83 identities on the primary program curriculum now have explicit title-limited, public-description-supported or unclassified judgments. The remaining technical/general-education inventory is still under independent review; no all552-course audit is claimed.",
+    "The AI/ML pool heading is not a course subject. Exact program titles support Software Engineering as foundations, databases/cloud computing as systems, and named optimization/math methods as mathematics. Ambiguous short titles remain other/unclassified rather than inheriting AI/ML.",
+    "CIS1200 Fall2026 homepage assumes Java preparation, while its linked Fall2026 syllabus accepts basic experience in any programming language. Both statements are retained as offering evidence; no universal current catalog prerequisite is invented. CIS1210 explicitly requires prior CIS1200 and CIS1600 without exceptions.",
+    "The seas.upenn.edu alias triggered a cross-origin robots review stop. The existing verified engineering.upenn.edu host permits the same public course paths; its own robots policy was honored. CIS3200 Fall2024 returnedHTTP403 and was not bypassed. CIS3200 classification therefore uses the precise program-title Algorithms only.",
+    "CIS2450 public course evidence is Spring2026; CIS1100 Python page does not state a term. Both are identified accurately rather than labeled Fall2026. CatalogCIS/ESE robotsHTTP202 prevented current descriptions; no challenge or authenticated Path@Penn access was attempted."
   ],
   "institution": {
     "id": "university-of-pennsylvania",
@@ -11339,7 +12263,7 @@
   },
   "verification_status": "confirmed",
   "last_verified": "2026-10-10",
-  "overview": "Penn Engineering’s undergraduate AI degree, combining computing foundations, six AI core areas, AI electives and engineering design.",
+  "overview": "Penn Engineering\u2019s undergraduate AI degree, combining computing foundations, six AI core areas, AI electives and engineering design.",
   "links": [
     {
       "kind": "study",
@@ -11391,7 +12315,7 @@
     {
       "id": "penn-cis3200-archive",
       "url": "https://www.engineering.upenn.edu/~cis3200/",
-      "title": "CIS 3200: Intro to Algorithms — past offerings",
+      "title": "CIS 3200: Intro to Algorithms \u2014 past offerings",
       "fetched_at": "2026-10-10",
       "source_date": null,
       "catalog_year": null,
@@ -11401,7 +12325,7 @@
     {
       "id": "penn-cis3200-fall-2021-outline",
       "url": "https://www.engineering.upenn.edu/~cis3200/21fa/",
-      "title": "Introduction to Algorithms — Fall 2021",
+      "title": "Introduction to Algorithms \u2014 Fall 2021",
       "fetched_at": "2026-10-10",
       "source_date": null,
       "catalog_year": null,
@@ -11411,7 +12335,7 @@
     {
       "id": "penn-bse-ai-technical-policy",
       "url": "https://advising.cis.upenn.edu/tech-electives/",
-      "title": "Technical Electives — CIS Advising Handbook",
+      "title": "Technical Electives \u2014 CIS Advising Handbook",
       "locator": "Introductory ARIN applicability statement; subsequent CSCI-only scope boundary",
       "fetched_at": "2026-10-10",
       "source_date": null,
@@ -11431,8 +12355,8 @@
     {
       "id": "penn-bse-ai-canonical-handbook",
       "url": "https://academics.engineering.upenn.edu/ugrad/student-handbook/",
-      "title": "Penn Engineering Undergraduate Student Handbook — current canonical site",
-      "locator": "Numbered handbook sections 9,18,20,21,24–31,36,37,39,42,43,45,47,53–55,58–60,64–65; full category lists and exceptions",
+      "title": "Penn Engineering Undergraduate Student Handbook \u2014 current canonical site",
+      "locator": "Numbered handbook sections 9,18,20,21,24\u201331,36,37,39,42,43,45,47,53\u201355,58\u201360,64\u201365; full category lists and exceptions",
       "fetched_at": "2026-10-10",
       "source_date": null,
       "catalog_year": null,
@@ -11441,7 +12365,7 @@
     {
       "id": "penn-bse-ai-study-abroad",
       "url": "https://academics.engineering.upenn.edu/ugrad/student-handbook/academic-policies/study-abroad/",
-      "title": "Study Abroad — Penn Engineering Undergraduate Handbook",
+      "title": "Study Abroad \u2014 Penn Engineering Undergraduate Handbook",
       "fetched_at": "2026-10-10",
       "source_date": null,
       "catalog_year": null,
@@ -11451,7 +12375,7 @@
     {
       "id": "penn-cis4190-5190-fall-2026",
       "url": "https://www.engineering.upenn.edu/~cis5190/fall2026/index.html",
-      "title": "CIS 4190 / CIS 5190 Applied Machine Learning — Fall 2026",
+      "title": "CIS 4190 / CIS 5190 Applied Machine Learning \u2014 Fall 2026",
       "fetched_at": "2026-10-10",
       "source_date": null,
       "catalog_year": null,
@@ -11461,7 +12385,7 @@
     {
       "id": "penn-cis5210-summer-2026-site",
       "url": "https://www.engineering.upenn.edu/~jyzh/courses/cis5210/26su/",
-      "title": "CIS 5210 Artificial Intelligence — Summer 2026",
+      "title": "CIS 5210 Artificial Intelligence \u2014 Summer 2026",
       "fetched_at": "2026-10-10",
       "source_date": null,
       "catalog_year": null,
@@ -11471,7 +12395,7 @@
     {
       "id": "penn-cis5210-summer-2026-syllabus",
       "url": "https://www.engineering.upenn.edu/~jyzh/courses/cis5210/26su/syllabus/",
-      "title": "CIS 5210 Artificial Intelligence — Summer 2026",
+      "title": "CIS 5210 Artificial Intelligence \u2014 Summer 2026",
       "fetched_at": "2026-10-10",
       "source_date": null,
       "catalog_year": null,
@@ -11481,7 +12405,7 @@
     {
       "id": "penn-cis5200-spring-2023-site",
       "url": "https://machine-learning-upenn.github.io/",
-      "title": "CIS 5200 Machine Learning — Spring 2023",
+      "title": "CIS 5200 Machine Learning \u2014 Spring 2023",
       "fetched_at": "2026-10-10",
       "source_date": null,
       "catalog_year": null,
@@ -11491,7 +12415,7 @@
     {
       "id": "penn-cis4210-fall-2022-site",
       "url": "https://artificial-intelligence-class.org/",
-      "title": "CIS 4210 Artificial Intelligence — Fall 2022",
+      "title": "CIS 4210 Artificial Intelligence \u2014 Fall 2022",
       "fetched_at": "2026-10-10",
       "source_date": null,
       "catalog_year": null,
@@ -11516,6 +12440,66 @@
       "source_date": null,
       "catalog_year": null,
       "locator": "Faculty statement identifies Artificial Intelligence as CIS4210/5210; corroborates course identity, not a current syllabus term",
+      "confidence": "high"
+    },
+    {
+      "id": "penn-bse-ai-core-cis1100",
+      "url": "https://www.engineering.upenn.edu/~cis110/current/py/index.html",
+      "title": "CIS 1100 public course site (term unstated)",
+      "fetched_at": "2026-10-11T03:21:16+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Visible course identity, subject statement and offering-specific preparation; historical when dated before current term",
+      "confidence": "high"
+    },
+    {
+      "id": "penn-bse-ai-core-cis1200",
+      "url": "https://www.engineering.upenn.edu/~cis120/current/",
+      "title": "CIS 1200 public course site (Fall 2026)",
+      "fetched_at": "2026-10-11T03:20:13+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Visible course identity, subject statement and offering-specific preparation; historical when dated before current term",
+      "confidence": "high"
+    },
+    {
+      "id": "penn-bse-ai-core-cis1200-syllabus",
+      "url": "https://www.engineering.upenn.edu/~cis120/current/syllabus/",
+      "title": "CIS 1200 public syllabus (Fall 2026)",
+      "fetched_at": "2026-10-11T03:21:18+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Visible course identity, subject statement and offering-specific preparation; historical when dated before current term",
+      "confidence": "high"
+    },
+    {
+      "id": "penn-bse-ai-core-cis1210",
+      "url": "https://www.engineering.upenn.edu/~cis1210/current/",
+      "title": "CIS 1210 public course site (Fall 2026)",
+      "fetched_at": "2026-10-11T03:20:15+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Visible course identity, subject statement and offering-specific preparation; historical when dated before current term",
+      "confidence": "high"
+    },
+    {
+      "id": "penn-bse-ai-core-cis1600",
+      "url": "https://www.cis.upenn.edu/~cis1600/current/",
+      "title": "CIS 1600 public course site (Fall 2026)",
+      "fetched_at": "2026-10-11T03:20:16+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Visible course identity, subject statement and offering-specific preparation; historical when dated before current term",
+      "confidence": "high"
+    },
+    {
+      "id": "penn-bse-ai-core-cis2450",
+      "url": "https://sites.google.com/seas.upenn.edu/cis-2450-spring-2026/home",
+      "title": "CIS 2450 public course site (Spring 2026)",
+      "fetched_at": "2026-10-11T03:17:48+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Visible course identity, subject statement and offering-specific preparation; historical when dated before current term",
       "confidence": "high"
     }
   ],
