@@ -2,6 +2,14 @@
 
 Updated 2026-10-11. A published research project; **the full target cohort and catalog inventory remain incomplete**.
 
+## Current priorities — university evidence and additional majors
+
+The user prioritizes better evidence for remaining National University core inventories and independent correctness review of all five additional majors. Of the 15 remaining partial/unverified degree cores, 14 belong to National Universities; Furman is in the National Liberal Arts Colleges cohort and is deferred. University work covers eight Buffalo degrees, Purdue BA, Delaware, Stevens, UC Merced, USF and William & Mary. Search new permitted authoritative plans and source-version evidence; preserve existing restrictions and unresolved limits.
+
+Additional-major review covers CMU AI, both Northwestern AI second majors, Villanova Analytics & AI co-major, and Marquette Applied AI in Business. Verify fixed identities, choices, course classifications and credential eligibility within each additional-major scope. These reviews do not certify whole host degrees. The coordinator owns shared persistence and integration; six GPT-6.1 Sol medium agents own separate source investigations. The user caps all future thread work at GPT-6.1 Sol with medium reasoning or lower.
+
+Liberal arts roster expansion and Furman follow-up, minors, and concentrations are deprioritized. Existing records remain published with their evidence and missingness. National University cohort verification remains the relevant roster priority, but this bounded pass focuses on the named core inventories and five additional majors. Results and publication gates will be recorded below after independent acceptance.
+
 ## Immediate priority: degree correctness audit
 
 The user reported Case Western showing zero computing foundations despite required data structures and algorithms. Inventory expansion is paused. All **63 standalone degree records across 25 institutions** now have bounded primary outcomes and a separate independent review of fixed requirements, choice rules and chart classification. Fixed requirements are verified within stated scope for 48, partial for three and unverified for 12; these dimensions do not certify whole degrees. The [audit contract](docs/DEGREE_AUDIT.md) defines independent source checks, per-course rationale, exact versions, required/option/prerequisite roles, manual expected sets and genuine blockers. Earlier completeness labels do not certify this new correctness audit.

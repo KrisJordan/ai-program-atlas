@@ -1,6 +1,6 @@
 # AI Program Atlas
 
-The user's current project model preference is GPT-6.1 Sol with medium reasoning. Use that configuration for subsequent project research and implementation, including new delegated agents, unless the user changes it. Earlier Astra reviews remain historical evidence and are not a model preference for new work.
+The user's current thread-wide model limit is GPT-6.1 Sol with reasoning at most medium. Use GPT-6.1 Sol with medium or lower reasoning for all subsequent tasks, research, implementation, review and delegated agents in this thread, unless the user changes this limit. Earlier Astra reviews remain historical evidence and are not a model preference for new work.
 
 Read PLAN.md and docs/CONTRACT.md before edits. Preserve existing work. The coordinator owns SQLite schema, migrations and shared persistence; research agents own assigned adapters and evidence. Use stable IDs and source-backed facts. Unknown is null, never zero. Never infer absence from partial search or launch date from the oldest search hit. Keep raw fetched pages, credentials and private notes out of commits. Respect robots and HTTP access restrictions; do not bypass 401/403/paywalls. Run uv run pytest and uv run atlas build after changes. Browser checks must cover base-path and History API behavior. Update adapter NOTES.md and PLAN.md with exact coverage/remaining work. Commit incremental coherent changes. No changes to unrelated repositories.
 
