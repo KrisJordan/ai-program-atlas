@@ -95,3 +95,7 @@ Use `uv run atlas status`, `uv run atlas candidates`, adapter notes and task-spe
 ## Research integration verified — 2026-10-11
 
 Committed evidence through `351170d0` is ingested in the maintained database. Release f18086c passed clean locked-environment tests, fresh/maintained agreement, repeat ingest/build checks, successful GitHub CI/Pages deployment and live browser/JSON verification: 31 complete / 89 partial / 5 pending; 7838 course observations and 6922 requirement nodes. Michigan HCAI now has a public-handbook inventory; RIT’s two minors have complete scoped policy audits. Source-version conflicts at MIT/Penn/Purdue and home-college applicability at Northeastern remain explicit. Further committed research includes Case degree-scope audits, Miami policies, Drexel approved writing courses and Duke policies; those newer commits await the next frozen integration. Accessible research continues after this publication checkpoint.
+
+## Next research checkpoint — 2026-10-11
+
+Evidence through `bc71b611` is integrated locally: 33 complete/87 partial/5 pending inventories; 11963 observed course records; 8488 resolved requirement nodes. Case BA/BS now have complete degree-scope audits; Buffalo adds independently accessible general-education policies and dated Pathways candidates while its major catalogs stay unavailable. Northeastern course catalogs and multiple university policies substantially expand metadata. This checkpoint awaits a frozen clean test/build and verified deployment; the published counts above continue to describe f18086c.
