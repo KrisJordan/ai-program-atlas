@@ -1,0 +1,24 @@
+# RIT WGST/STSO actual course-card review
+
+Reviewed 2026-10-11: all57 assigned single-prefix identifiers, comprising42WGST and15STSO courses. The primary owner assigned `pilot_gender_sts_57` in the immersion course queue. This contribution edits no program seed, requirement graph, queue, or degree ledger.
+
+Four ordinary public pages were inspected in Chrome. Their rendered2026–2027 curriculum tables supplied the literal links; every assigned popup was opened and its full description, credit amount, eligibility and ancillary fields were read. No hidden endpoint, blocked catalog route, authentication bypass, or recursive prerequisite expansion was used. Source URLs and distinct registered-source IDs are in the adjacent JSON manifest. `fetched_at` is null because these are direct visible-browser observations, not a claimed saved HTTP fetch.
+
+- [Gender, Art, and Media](https://www.rit.edu/study/gender-art-and-media-immersion):17cards.
+- [Women’s and Gender Studies](https://www.rit.edu/study/womens-and-gender-studies-immersion):25additional cards.
+- [Environmental Studies](https://www.rit.edu/study/environmental-studies-immersion):12STSO cards.
+- [Science, Technology, and Society](https://www.rit.edu/study/science-technology-and-society-immersion):three additional STSO cards.
+
+Fifty-five cards explicitly print three credits. STSO-488 and489 instead print1–6credits. Their scalar amounts remain null; the separately printed three lecture contact hours are not substituted for the variable credit amount. Semester-hour interpretation cites the university policy already reviewed by the primary team, not a conversion from contact hours.
+
+Seven cards print prerequisite clauses: WGST237/240have psychology-course alternatives;265requiresCRIM110or equivalent;370requires at least second-year standing;392lists alternative writing/WGST courses or equivalent;399requires two WGST/core/co-listed or equivalent courses;STSO510requires two courses from its explicit broad list. Other missing prerequisite fields remain null, not “none.” The STSO510 body additionally requires enrollment in a departmental minor or immersion, or instructor permission. That audience condition is preserved independently of its prerequisite list.
+
+Both STSO variable-topic cards require departmental permission for minor/immersion application despite appearing in the public option lists. WGST449/459repeat credit requires a changed topic. The route relevance condition remains applicable toWGST399. WGST352is taught in English with Chinese films subtitled in English. WGST330,399andSTSO510have explicit writing-intensive attributes, retained in their individual records without asserting a complete university WI inventory.
+
+The blank WGST380table title is resolved by the actual popup: **Gender and Political Thought**, three credits, with a full description of gender in political theory and ethical-political frameworks. The title was not guessed from another code.
+
+Manual taxonomy reflects actual content:46human-context, one domain-practice creative-writing course, five mixed subjects and five unclassified variable-topic seminars. WGST282is a social/historical study of computing, not computing-method instruction. WGST392primarily produces and revises creative work. WGST295and305combine historical/social inquiry with a student-created craft/activist project;STSO230creates and applies a community-project evaluation framework;STSO550works with local organizations on applying sustainability concepts. WGST240substantively combines biological/physiological and psychological/social explanations of sexuality. The selected content ofWGST399/449/459andSTSO488/489is unspecified and remains unclassified. Mixed and unclassified records remain `other` with explicit candidate categories only for the mixed cases.
+
+The observer reads actual settled cards against the displayed route title, year and table membership, including credit ranges and full prerequisite text. It emits observed description text and no manual `category_review`, requirement change, completion, or identity grouping. Manual original summaries and source-based rationales reside separately in the manifest. Combined slash labels such asSTSO/WGST225and342are excluded from this57-code assignment; similar descriptions and generic cross-list wording do not authorize splitting, merging or substituting identities.
+
+Thirteen focused tests passed across this observer and the earlier biology observer. Tests cover variable-credit versus contact-hour semantics, actual-popup resolution of a blank table title, stale/changed/unbound structures, duplicate cards, observed text changes instead of seed replay, and material eligibility/content distinctions. Remaining work is primary-owner integration; these57cards have no unread content left in the assigned public-popup scope. This is not completion of the full RIT degree or every immersion pool.
