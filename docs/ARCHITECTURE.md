@@ -24,7 +24,7 @@ Bounded retries on transient failure only, sequential per-host pacing, explicit 
 
 ## CSRankings
 
-Public values are not imported pending reuse permission. Metadata records selected AI fields (ai, vision, mlmining, nlp, inforet), proposed 2016–2025 complete-year window and USA filter; each individual field and aggregate has explicit missing status. The source license and methodology are linked. The aggregate must never be invented from ordinal ranks or mistaken for undergraduate teaching quality. Computation and pinned source snapshot are recorded for a future authorized implementation.
+A pinned, deterministic importer computes five AI fields (ai, vision, mlmining, nlp, inforet) and their aggregate for 2016–2025, U.S. institutions. Competition ranks use rounded display scores across the full U.S. population before matching the project roster. Reviewed explicit aliases and missingness prevent absent institutions from becoming zeros. `data/csrankings.json` records methodology, source hashes, permission scope, attribution, full population and roster observations. Migration017 retains immutable snapshot revisions; transactional ingestion updates relational configuration/observations and rich metadata together, rejecting incomplete or inconsistent evidence. Export checks relational agreement against the reviewed snapshot. Original upstream JavaScript provides independent numerical verification. Public research context is separate from undergraduate curriculum and teaching quality.
 
 ## Static delivery
 

@@ -600,6 +600,8 @@ def set_override(conn, program_id, field, value, reason, evidence_url):
 
 
 def initialize_csrankings(conn):
+    if conn.execute("SELECT 1 FROM csrankings_config WHERE status='available'").fetchone():
+        return
     config = {
         "fields": ["ai", "vision", "mlmining", "nlp", "inforet"],
         "year_start": 2016,
@@ -730,7 +732,7 @@ def export_data(conn):
         "Confirmed means at least one official qualifying program found; it does not certify a complete institution inventory.",
         "Curriculum records may be partial. Missing courses, dates, prerequisites, outcomes and syllabi are unknown, not absent.",
         "Credit systems and degree structures differ. Course counts are observed records, not degree percentages or quality scores.",
-        "CSRankings values are not imported pending reuse permission. Publication rankings do not measure undergraduate teaching quality.",
+        "CSRankings publication research is separate from undergraduate teaching quality; absent or missing research observations are not quality scores.",
     ]
     curriculum = {
         status: sum(p.get("curriculum_status", "pending") == status for p in programs)
@@ -778,6 +780,7 @@ def export_data(conn):
     for program in programs:
         if program["id"] in additional_lookup:
             program["additional_major_audit"] = additional_lookup[program["id"]]
+    from .csrankings_store import export as export_csrankings
     return {
         "meta": {
             "generated_at": generated,
@@ -800,13 +803,5 @@ def export_data(conn):
             dict(r)
             for r in conn.execute("SELECT * FROM rankings ORDER BY category,rank,institution_id")
         ],
-        "csrankings": {
-            "methodology": config,
-            "observations": [
-                dict(r)
-                for r in conn.execute(
-                    "SELECT * FROM csrankings_observations ORDER BY institution_id,field"
-                )
-            ],
-        },
+        "csrankings": export_csrankings(conn, config),
     }

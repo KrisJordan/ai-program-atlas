@@ -55,6 +55,10 @@ def ingest_all(conn, data_dir):
             validate_ledger(additional, resolved)
             conn.execute("INSERT OR REPLACE INTO metadata VALUES (?,?)",
                          ("additional_major_audit", db.canonical(additional)))
+        research_path = data_dir / "csrankings.json"
+        if research_path.exists():
+            from .csrankings_store import ingest as ingest_csrankings
+            ingest_csrankings(conn, json.loads(research_path.read_text()))
     return changed
 
 

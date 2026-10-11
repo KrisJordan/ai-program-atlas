@@ -51,7 +51,9 @@ def test_upgrade_preserves_all_tables_history_overrides_and_foreign_keys(tmp_pat
     c.commit()
     before = snapshot(c)
     db.migrate(c)
-    assert snapshot(c) == before
+    after = snapshot(c)
+    assert {name: after[name] for name in before} == before
+    assert after['csrankings_revisions'] == []
     assert c.execute('PRAGMA foreign_keys').fetchone()[0] == 1
     assert not c.execute('PRAGMA foreign_key_check').fetchall()
     assert not next(r for r in c.execute('PRAGMA table_info(courses)') if r['name'] == 'code')['notnull']
@@ -63,7 +65,8 @@ def test_upgrade_preserves_all_tables_history_overrides_and_foreign_keys(tmp_pat
         c.execute('INSERT INTO course_notes VALUES (?,?,?,?)', (p['id'], 'missing', 0, 'Orphan'))
     db.migrate(c)
     assert not db.ingest_program(c, p)
-    assert snapshot(c) == before
+    assert {name: snapshot(c)[name] for name in before} == before
+    assert snapshot(c)['csrankings_revisions'] == []
     c.close()
 
 
