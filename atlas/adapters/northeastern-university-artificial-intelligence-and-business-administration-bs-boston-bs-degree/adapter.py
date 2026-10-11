@@ -96,3 +96,9 @@ SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + tuple(SOURCE_PARSERS)))
 from atlas.adapters.northeastern_business_remaining_reviews import attach_reviewed_sources
 SOURCE_PARSERS = attach_reviewed_sources(PROGRAM_ID, SOURCE_PARSERS)
 SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + tuple(SOURCE_PARSERS)))
+
+# Actual Business college conditions; no inferred home-college assignment.
+from atlas.adapters.northeastern_policy_closure import BUSINESS_CATALOG, observe_business
+from functools import partial
+SOURCES=tuple(dict.fromkeys(tuple(SOURCES)+(BUSINESS_CATALOG,)))
+SOURCE_PARSERS={**SOURCE_PARSERS,BUSINESS_CATALOG:partial(observe_business,program_id=PROGRAM_ID)}

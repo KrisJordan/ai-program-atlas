@@ -126,3 +126,10 @@ SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + tuple(SOURCE_PARSERS)))
 from atlas.adapters.northeastern_international_remaining_reviews import attach_reviewed_sources
 SOURCE_PARSERS = attach_reviewed_sources(PROGRAM_ID, SOURCE_PARSERS)
 SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + tuple(SOURCE_PARSERS)))
+
+# Verified Khoury/CSSH participation; only conditional additional policies.
+from atlas.adapters.northeastern_policy_closure import CSSH_CATALOG, CSSH_CHANGE, CSSH_PROGRESS, observe_cssh
+from functools import partial
+_CSSH_SUPPLEMENTS={url:partial(observe_cssh,program_id=PROGRAM_ID,source=url) for url in [CSSH_CATALOG,CSSH_CHANGE,CSSH_PROGRESS]}
+SOURCES=tuple(dict.fromkeys(tuple(SOURCES)+tuple(_CSSH_SUPPLEMENTS)))
+SOURCE_PARSERS={**SOURCE_PARSERS,**_CSSH_SUPPLEMENTS}

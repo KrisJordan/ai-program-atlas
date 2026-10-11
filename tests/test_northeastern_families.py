@@ -68,6 +68,10 @@ def test_reviewed_variant_reconstruction_preserves_entire_original_graph(pid):
     if transfer:
         assert len(transfer)==5 and all(r['kind']=='note' and not r['course_ids'] for r in transfer)
         rows=[r for r in rows if r not in transfer]
+    cssh_supplements=[r for r in rows if r['source_id'] in {pid+'-'+key for key in ['cssh-catalog-supplement','cssh-change-supplement','cssh-reentry-supplement']}]
+    if cssh_supplements:
+        assert len(cssh_supplements)==3 and all(r['kind']=='note' and not r['course_ids']for r in cssh_supplements)
+        rows=[r for r in rows if r not in cssh_supplements]
     science_policy=[r for r in rows if r['source_id']==pid+'-science-college-policy']
     if science_policy:
         assert len(science_policy)==9 and all(r['kind']=='note' and not r['course_ids'] for r in science_policy)

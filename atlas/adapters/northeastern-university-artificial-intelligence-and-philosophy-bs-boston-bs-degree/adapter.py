@@ -75,3 +75,10 @@ SOURCE_PARSERS = {**SOURCE_PARSERS, KHOURY_URL: lambda html: parse_khoury_policy
 from atlas.adapters.northeastern_college_policies import CSSH_TRANSFER_URL, parse_cssh_transfer
 SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + (CSSH_TRANSFER_URL,)))
 SOURCE_PARSERS = {**SOURCE_PARSERS, CSSH_TRANSFER_URL: lambda html: parse_cssh_transfer(html, program_id=PROGRAM_ID)}
+
+# Verified Khoury/CSSH participation; only conditional additional policies.
+from atlas.adapters.northeastern_policy_closure import CSSH_CATALOG, CSSH_CHANGE, CSSH_PROGRESS, observe_cssh
+from functools import partial
+_CSSH_SUPPLEMENTS={url:partial(observe_cssh,program_id=PROGRAM_ID,source=url) for url in [CSSH_CATALOG,CSSH_CHANGE,CSSH_PROGRESS]}
+SOURCES=tuple(dict.fromkeys(tuple(SOURCES)+tuple(_CSSH_SUPPLEMENTS)))
+SOURCE_PARSERS={**SOURCE_PARSERS,**_CSSH_SUPPLEMENTS}
