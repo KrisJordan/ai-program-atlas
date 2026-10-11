@@ -30,3 +30,8 @@ from atlas.adapters.northeastern_course_metadata import register_subject_sources
 _FOUNDATION_METADATA = register_subject_sources(PROGRAM_ID, {'MATH': ['MATH 1365', 'MATH 1465', 'MATH 1341', 'MATH 1342', 'MATH 2321', 'MATH 2341', 'MATH 3081'], 'CS': ['CS 1200', 'CS 1210', 'CS 2000', 'CS 2001', 'CS 2100', 'CS 2101', 'CS 3200']})
 SOURCES = tuple(SOURCES) + tuple(_FOUNDATION_METADATA)
 SOURCE_PARSERS = {**globals().get('SOURCE_PARSERS', {}), **_FOUNDATION_METADATA}
+
+# Writing, physics and philosophy metadata for reviewed existing courses.
+_CONTEXT_METADATA = register_subject_sources(PROGRAM_ID, {'ENGW': ['ENGW 1111', 'ENGW 1102', 'ENGW 3302', 'ENGW 3307', 'ENGW 3315'], 'PHYS': ['PHYS 1161', 'PHYS 1162', 'PHYS 1163']})
+SOURCES = tuple(SOURCES) + tuple(_CONTEXT_METADATA)
+SOURCE_PARSERS = {**SOURCE_PARSERS, **_CONTEXT_METADATA}

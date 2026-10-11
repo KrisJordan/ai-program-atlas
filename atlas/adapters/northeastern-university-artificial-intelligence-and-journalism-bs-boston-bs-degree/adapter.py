@@ -41,3 +41,8 @@ SOURCE_PARSERS = {**SOURCE_PARSERS, **_DISCIPLINE_METADATA}
 _DS_COMPLETION_METADATA = register_subject_sources(PROGRAM_ID, {'DS': ['DS 3500', 'DS 3000', 'DS 4200', 'DS 4300', 'DS 4400', 'DS 4420', 'DS 1300']})
 SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + tuple(_DS_COMPLETION_METADATA)))
 SOURCE_PARSERS = {**SOURCE_PARSERS, **_DS_COMPLETION_METADATA}
+
+# Writing, physics and philosophy metadata for reviewed existing courses.
+_CONTEXT_METADATA = register_subject_sources(PROGRAM_ID, {'ENGW': ['ENGW 1111'], 'PHIL': ['PHIL 1300', 'PHIL 1145']})
+SOURCES = tuple(SOURCES) + tuple(_CONTEXT_METADATA)
+SOURCE_PARSERS = {**SOURCE_PARSERS, **_CONTEXT_METADATA}

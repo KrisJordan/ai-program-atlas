@@ -36,3 +36,8 @@ SOURCE_PARSERS = {**globals().get('SOURCE_PARSERS', {}), **_FOUNDATION_METADATA}
 _DISCIPLINE_METADATA = register_subject_sources(PROGRAM_ID, {'ECON': ['ECON 2350']})
 SOURCES = tuple(SOURCES) + tuple(_DISCIPLINE_METADATA)
 SOURCE_PARSERS = {**SOURCE_PARSERS, **_DISCIPLINE_METADATA}
+
+# Writing, physics and philosophy metadata for reviewed existing courses.
+_CONTEXT_METADATA = register_subject_sources(PROGRAM_ID, {'ENGW': ['ENGW 1111', 'ENGW 1102', 'ENGW 3302', 'ENGW 3308', 'ENGW 3315']})
+SOURCES = tuple(SOURCES) + tuple(_CONTEXT_METADATA)
+SOURCE_PARSERS = {**SOURCE_PARSERS, **_CONTEXT_METADATA}

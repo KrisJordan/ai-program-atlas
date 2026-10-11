@@ -57,3 +57,15 @@ This adds **23 descriptions, 18 prerequisite statements and one fixed-credit val
 Combined additions through this follow-up: **365 descriptions, 128 prerequisite statements and 188 fixed-credit values**. These are added program-course fields, not distinct course counts or curriculum-completeness claims. All 23 programs remain partial at the established home-college applicability boundary.
 
 DS follow-up validation: **212 focused tests passed**; all-variant temporary ingest/repeat/export/build/integrity passed. All eight revised DS source registrations succeeded twice via the safe Fetcher/cache, with zero repeat candidates or source changes.
+
+## Writing, physics and philosophy — 2026-10-10
+
+The official [English Writing](https://catalog.northeastern.edu/course-descriptions/engw/), [Physics](https://catalog.northeastern.edu/course-descriptions/phys/) and [Philosophy](https://catalog.northeastern.edu/course-descriptions/phil/) catalogs returned HTTP 200 through the safe Fetcher at 23:58:19–22 UTC. The 2026–2027 source blocks support 29 distinct selected codes: all 12 ENGW codes already in the inventories, eight introductory PHYS lecture/lab/seminar/recitation codes, and nine PHIL logic/technology/AI-ethics codes. Remaining upper-level physics and philosophy options are outside this selected batch.
+
+This supplies **152 descriptions and 78 explicit prerequisite statements**, with fixed credits increasing **41→152**, across all 23 variants. The program-course observations comprise 110 writing, 22 physics and 20 philosophy records. Thirty-seven new source registrations observe the selections. Published C-grade alternatives for advanced writing remain intact; cross-college combined-major audiences in those course descriptions do not establish mandatory or allowed home-college assignments.
+
+PHYS 1152 and 1153 embed mandatory concurrent registration in prose rather than a corequisite label. The parser now observes that wording into a separate concurrent-registration note. It does not turn concurrent registration into prior completion. PHYS 1163’s explicitly published zero-hour value is preserved; PHYS 1151 has three lecture hours, distinct from its lab and seminar. PHIL and DS offerings with similar names remain separate catalog observations; no cross-list equivalence is inferred.
+
+Cumulative additions across these four checkpoints are **517 descriptions, 206 prerequisite statements and 299 fixed-credit values**. Course graphs and all 23 partial audit statuses remain intact. Learning-outcome assessment, program inception dates and home-college rules are not inferred from course descriptions.
+
+Writing/physics/philosophy validation completed 2026-10-11 UTC: **119 Northeastern-focused tests passed**. The broader discovery run passed 213 tests and encountered one unrelated concurrent Michigan adapter/source-registration mismatch; no Michigan files were edited. All 23 temporary records ingested/repeated/exported/built with integrity intact. All 37 new source registrations succeeded twice, with zero repeat candidates or source changes.

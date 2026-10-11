@@ -6,6 +6,35 @@ from atlas.adapters.northeastern_courseleaf import clean, slug, numeric, categor
 # Short editorial summaries of the linked official descriptions. Each has a
 # source phrase guard; changed prose cannot silently replay an unsupported summary.
 SUMMARIES = {
+    'ENGW 1102': ('concerns of multilingual writers', 'Develops research, revision and writing practices with attention to multilingual writers.'),
+    'ENGW 1111': ('writing in a workshop setting', 'Develops research and writing across audiences and genres through workshop practice.'),
+    'ENGW 1114': ('writing projects meet specific community needs', 'Develops writing and research through community service projects.'),
+    'ENGW 3302': ('relevant to technical professions and individual student goals', 'Develops research and communication in technical and professional genres.'),
+    'ENGW 3303': ('complex environmental concern', 'Develops environmental research reports through staged writing and revision.'),
+    'ENGW 3304': ('relevant for careers in business', 'Develops evidence-based writing and communication for business contexts.'),
+    'ENGW 3306': ('protocols, and care instructions', 'Develops writing and research practices for health professions.'),
+    'ENGW 3307': ('quantitative data and visual presentation of evidence', 'Develops scientific argument, evidence presentation and research-based writing.'),
+    'ENGW 3308': ('ethical presentation of evidence', 'Develops research writing and ethical evidence presentation in social sciences.'),
+    'ENGW 3309': ('framing of interpretive questions', 'Develops interpretive argument and textual evidence in humanities writing.'),
+    'ENGW 3314': ('alphabetic, visual, musical, and sculptural', 'Develops writing across artistic, media and design contexts and literacies.'),
+    'ENGW 3315': ('students interested in interdisciplinary study', 'Develops research, revision and writing across disciplinary contexts.'),
+    'PHYS 1145': ('problems in the life and health sciences', 'Applies mechanics, fluids and thermal physics to life and health sciences.'),
+    'PHYS 1146': ('Accompanies PHYS 1145', 'Investigates introductory life-science physics through laboratory experiments.'),
+    'PHYS 1151': ('intended primarily for engineering students', 'Develops calculus-based mechanics and fluid physics for engineering.'),
+    'PHYS 1152': ('Accompanies PHYS 1151', 'Investigates introductory engineering physics through laboratory experiments.'),
+    'PHYS 1153': ('organized approaches and use of mathematical techniques', 'Practices mathematical problem solving in mechanics and fluids.'),
+    'PHYS 1161': ('intended primarily for science students', 'Develops calculus-based mechanics and fluids with applications across sciences.'),
+    'PHYS 1162': ('Accompanies PHYS 1161', 'Investigates introductory physics concepts through laboratory experiments.'),
+    'PHYS 1163': ('interactive problem solving', 'Provides guided problem solving for introductory physics.'),
+    'PHIL 1115': ('deductive and inductive logic', 'Develops formal logic and methods of deductive and probabilistic reasoning.'),
+    'PHIL 1145': ('ethical issues raised by emerging technologies', 'Examines technology’s social dimensions and ethical implications.'),
+    'PHIL 1300': ('normative frameworks from epistemology and ethics', 'Examines digital technology’s effects on knowledge through ethics and epistemology.'),
+    'PHIL 3050': ('drawing conclusions from noisy data', 'Develops probabilistic inference and information theory for reasoning under uncertainty.'),
+    'PHIL 4050': ('aligning these impacts with social and ethical values', 'Examines AI’s societal effects and approaches to aligning technologies with ethical values.'),
+    'PHIL 4515': ('proof systems, decidability, computability, and metatheory', 'Develops first-order logic, proof methods and foundational metatheory.'),
+    'PHIL 4516': ('Bayesian epistemology', 'Studies inductive inference, Bayesian belief revision and rational decision making.'),
+    'PHIL 5005': ('avoiding bias, exploitation, and manipulation', 'Examines justice, rights and ethical responsibilities in information technologies.'),
+    'PHIL 5010': ('philosophical and ethical questions', 'Examines AI ethics, including fairness, responsibility, privacy and effects on work.'),
     'BIOL 1107': ('evolutionary principles, cellular structure and function', 'Introduces biological systems through evolution, cells, inheritance, energy and physiology.'),
     'BIOL 1108': ('genetic transmission, energy pathways, and physiology', 'Uses laboratory experiments to investigate foundational biological processes.'),
     'BIOL 2301': ('bioinformatics, genomics, and proteomics', 'Examines inheritance and gene function through molecular and population approaches.'),
@@ -137,6 +166,9 @@ def parse_subject(html, *, program_id, subject, heading, codes, url):
         if additional:
             condition = 'Additional course-description condition: ' + additional[1] + '.'
             prerequisites = (prerequisites + '; ' if prerequisites else '') + condition
+        concurrent = re.search(r'Requires concurrent registration in ([^.]+)\.', prose)
+        if concurrent:
+            metadata_notes.append(f'{code} subject catalog concurrent-registration condition: {concurrent[1].strip()}. This is not prior-completion eligibility.')
         for recommendation in re.findall(r'[^.]*\b(?:recommended|recommended preparation)\b[^.]*\.', prose, re.I):
             metadata_notes.append(f'{code} subject catalog recommended preparation (not a prerequisite): {recommendation.strip()}')
         if code == 'PSYC 2320' and 'Should be taken before the end of the sophomore year.' in prose:
@@ -154,6 +186,9 @@ def parse_subject(html, *, program_id, subject, heading, codes, url):
 
 
 SUBJECT_HEADINGS = {
+    'ENGW': 'English Writing (ENGW)',
+    'PHYS': 'Physics (PHYS)',
+    'PHIL': 'Philosophy (PHIL)',
     'DS': 'Data Science (DS)',
     'BIOL': 'Biology (BIOL)',
     'CHEM': 'Chemistry and Chemical Biology (CHEM)',

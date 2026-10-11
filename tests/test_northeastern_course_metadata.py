@@ -152,3 +152,25 @@ def test_every_existing_ne_family_ds_course_has_its_own_catalog_metadata():
             else:assert c['prerequisites']
         assert p['curriculum_status']=='partial' and p['curriculum_audit']['unresolved_requirements']
     assert variants==23 and observations==133
+
+
+def test_physics_concurrent_registration_in_prose_is_not_prior_completion():
+    html=page('<div class="courseblock"><p class="courseblocktitle">PHYS 1152. Lab for PHYS 1151. (1 Hour)</p><p class="cb_desc">Accompanies PHYS 1151. Requires concurrent registration in PHYS 1151 and PHYS 1153.</p></div>',heading='Physics (PHYS)')
+    parser=register_subject_sources('test-program',{'PHYS':['PHYS 1152']})['https://catalog.northeastern.edu/course-descriptions/phys/']
+    result=parser(html)
+    assert result['courses'][0]['prerequisites'] is None
+    assert any('concurrent-registration condition: PHYS 1151 and PHYS 1153' in n for n in result['notes'])
+    changed=parser(html.replace('PHYS 1151 and PHYS 1153','PHYS 1151 only'))
+    assert any('PHYS 1151 only' in n for n in changed['notes'])
+    assert not any('1153' in n for n in changed['notes'])
+
+
+def test_advanced_writing_grade_is_observed_without_inferring_home_college():
+    html=page('<div class="courseblock"><p class="courseblocktitle">ENGW 3302. Advanced Writing in the Technical Professions. (4 Hours)</p><p class="cb_desc">Offers instruction including cross-college combined majors, relevant to technical professions and individual student goals.</p><p class="courseblockextra">Prerequisite(s): ENGW 1111 with a minimum grade of C or ENGW 1102 with a minimum grade of C</p></div>',heading='English Writing (ENGW)')
+    parser=register_subject_sources('test-program',{'ENGW':['ENGW 3302']})['https://catalog.northeastern.edu/course-descriptions/engw/']
+    result=parser(html)
+    assert result['courses'][0]['description']
+    assert 'minimum grade of C' in result['courses'][0]['prerequisites']
+    assert 'family' not in result and 'hosting_unit' not in result
+    assert result['requirements']==[]
+    assert 'minimum grade of B' in parser(html.replace('minimum grade of C','minimum grade of B'))['courses'][0]['prerequisites']
