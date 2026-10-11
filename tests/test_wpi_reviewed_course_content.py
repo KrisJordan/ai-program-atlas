@@ -99,5 +99,34 @@ def test_ai_computing_mathematics_source_rules_preserve_option_scope():
     assert 'Suggested background (advisory)' in courses['MA 2210']['prerequisites']
     profile=requirement_profile(p)
     assert [profile[x]['count'] for x in ['required','options','unresolved']]==[6,211,2]
-    assert sum('wpi-ai-bs' in e['program_ids'] for e in m.SPEC.values())==77
+    assert sum('wpi-ai-bs' in e['program_ids'] for e in m.SPEC.values())==92
     assert not p.get('course_identity_groups')
+
+
+def test_graduate_native_credit_and_qualified_prerequisite_guard(monkeypatch):
+    from bs4 import BeautifulSoup
+    from atlas.adapters.cmu_bs.common import text
+    code='CS 542';entry=copy.deepcopy(m.SPEC[code])
+    desc='Synthetic database internals.';pr='Synthetic preparation would be helpful.'
+    html=f'<p>Graduate Catalog</p><main><h1>{code}: {entry["name"]}</h1><div class="field--name-field-description">{desc}</div><div class="field--name-field-credits"><div class="field__item">3</div></div><div class="field--name-field-pr"><div class="field__item">{pr}</div></div></main>'
+    entry['main_digest']=hashlib.sha256(text(BeautifulSoup(html,'html.parser').find('main')).encode()).hexdigest()
+    entry['description_digest']=hashlib.sha256(desc.encode()).hexdigest()
+    entry['prerequisite_digest']=hashlib.sha256(pr.encode()).hexdigest()
+    monkeypatch.setitem(m.SPEC,code,entry)
+    course=m.parse(html,program_id='wpi-ai-bs',code=code)['courses'][0]
+    assert course['credits']==3 and course['credit_unit']=='unknown'
+    assert 'would be helpful' in course['prerequisites']
+    assert entry['catalog_year'] is None and 'category_review' not in course
+    for changed in [html.replace('would be helpful','is required'),html.replace('Graduate Catalog','Unidentified Catalog'),html.replace('>3<','>4<')]:
+        with pytest.raises(ValueError):m.parse(changed,program_id='wpi-ai-bs',code=code)
+
+
+def test_graduate_mixtures_and_source_version_limits():
+    p=json.loads(Path('data/programs/wpi-ai-bs.json').read_text());c={x['code']:x for x in p['courses']}
+    for code in ['CS 555/DS 555','CS 553/DS 553','CS 586/DS 504','CS 547/DS 547']:
+        assert c[code]['category']=='other' and c[code]['category_review']['status']=='mixed'
+    assert c['CS 509']['category']=='foundations'
+    assert c['CS 585/DS 503']['category']=='systems'
+    assert c['CS 551/DS 551']['category']=='ai_ml'
+    grad=[e for e in m.SPEC.values() if e.get('catalog_heading')=='Graduate Catalog']
+    assert len(grad)==15 and all(e['catalog_year'] is None and e['credit_unit']=='unknown' for e in grad)

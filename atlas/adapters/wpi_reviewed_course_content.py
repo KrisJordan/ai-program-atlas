@@ -19,7 +19,7 @@ def parse(html, *, program_id, code):
     heading = main.find('h1') if main else None
     if not heading or text(heading) != code + ': ' + entry['name']:
         raise ValueError('WPI reviewed identity changed')
-    if 'Undergraduate Catalog 2026-2027' not in text(soup):
+    if entry.get('catalog_heading', 'Undergraduate Catalog 2026-2027') not in text(soup):
         raise ValueError('WPI reviewed catalog version changed')
     if entry.get('main_digest') and hashlib.sha256(text(main).encode()).hexdigest() != entry['main_digest']:
         raise ValueError('WPI complete reviewed course content changed')
@@ -35,6 +35,12 @@ def parse(html, *, program_id, code):
     if not units or text(units) != entry['units_text']:
         raise ValueError('WPI reviewed unit amount changed')
     recommended = 'Recommended background (not a mandatory prerequisite): ' + text(rec) if rec else None
+    prerequisite = main.find(class_='field--name-field-pr')
+    prerequisite = prerequisite.find(class_='field__item') if prerequisite else None
+    if entry.get('prerequisite_digest') is not None:
+        if not prerequisite or hashlib.sha256(text(prerequisite).encode()).hexdigest() != entry['prerequisite_digest']:
+            raise ValueError('WPI reviewed prerequisite field changed')
+        recommended = (recommended + '; ' if recommended else '') + 'Source field labeled Prerequisites: ' + text(prerequisite)
     if entry.get('description_prerequisites'):
         recommended = (recommended + '; ' if recommended else '') + 'Course eligibility: ' + entry['description_prerequisites']
     notes = ['Course-description observation only; advisory background does not add fixed or elective degree obligations.']
@@ -50,10 +56,12 @@ def parse(html, *, program_id, code):
         notes.append(code + ' ' + entry['eligibility_note'])
     if entry.get('offering_note'):
         notes.append(code + ' ' + entry['offering_note'])
+    if entry.get('credit_note'):
+        notes.append(code + ' ' + entry['credit_note'])
     key = entry.get('source_key', code.lower().replace(' ','-'))
     return {'id': program_id, 'courses': [dict(id=entry.get('course_id', 'wpi-'+key), code=code,
             name=entry['name'], description=entry['description'], prerequisites=recommended,
-            credits=float(Fraction(text(units))), credit_unit='units', category=entry['category'],
+            credits=float(Fraction(text(units))), credit_unit=entry.get('credit_unit', 'units'), category=entry['category'],
             source_id=program_id+'-course-'+key, url=entry['url'])],
             'requirements': [], 'notes': notes}
 
