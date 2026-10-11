@@ -128,6 +128,86 @@
       "catalog_year": null,
       "locator": "83-80 displayed residence/time rules and June 23, 2026 pending-implementation notice",
       "confidence": "high"
+    },
+    {
+      "id": "penn-state-ai-methods-applications-ist-bs-courses-eti",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/eti/",
+      "title": "ETI current course descriptions",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": "2026\u20132027",
+      "locator": "Individually reviewed degree-listed course descriptions and enrollment conditions",
+      "confidence": "high"
+    },
+    {
+      "id": "penn-state-ai-methods-applications-ist-bs-courses-ist",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/ist/",
+      "title": "IST current course descriptions",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": "2026\u20132027",
+      "locator": "Individually reviewed degree-listed course descriptions and enrollment conditions",
+      "confidence": "high"
+    },
+    {
+      "id": "penn-state-ai-methods-applications-ist-bs-courses-cyber",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/cyber/",
+      "title": "CYBER current course descriptions",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": "2026\u20132027",
+      "locator": "Individually reviewed degree-listed course descriptions and enrollment conditions",
+      "confidence": "high"
+    },
+    {
+      "id": "penn-state-ai-methods-applications-ist-bs-courses-psych",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/psych/",
+      "title": "PSYCH current course descriptions",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": "2026\u20132027",
+      "locator": "Individually reviewed degree-listed course descriptions and enrollment conditions",
+      "confidence": "high"
+    },
+    {
+      "id": "penn-state-ai-methods-applications-ist-bs-courses-sra",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/sra/",
+      "title": "SRA current course descriptions",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": "2026\u20132027",
+      "locator": "Individually reviewed degree-listed course descriptions and enrollment conditions",
+      "confidence": "high"
+    },
+    {
+      "id": "penn-state-ai-methods-applications-ist-bs-residence-procedure",
+      "url": "https://aappm.psu.edu/policy/l-13-limitations-on-source-and-time-for-credit-acquisition",
+      "title": "Local-residence requirement disclosure",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Complete public policy text; L-13 last approved 2012-11-01, L-4 last revised 2025-05-01, GE sections 142\u2013143 last revised 2022-10-18",
+      "confidence": "high"
+    },
+    {
+      "id": "penn-state-ai-methods-applications-ist-bs-transfer-completion-procedure",
+      "url": "https://aappm.psu.edu/policy/l-4-completion-of-degree-requirements-at-other-institutions",
+      "title": "Transfer review and graduation-document deadline",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Complete public policy text; L-13 last approved 2012-11-01, L-4 last revised 2025-05-01, GE sections 142\u2013143 last revised 2022-10-18",
+      "confidence": "high"
+    },
+    {
+      "id": "penn-state-ai-methods-applications-ist-bs-general-education-policy",
+      "url": "https://senate.psu.edu/curriculum/policies-rules-for-undergraduate-instruction-and-curriculum/140-00-general-education/",
+      "title": "General education distribution, breadth and overlap",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Complete public policy text; L-13 last approved 2012-11-01, L-4 last revised 2025-05-01, GE sections 142\u2013143 last revised 2022-10-18",
+      "confidence": "high"
     }
   ],
   "outcomes": [],
@@ -689,44 +769,81 @@
     {
       "id": "psu-a-i-285",
       "code": "A-I 285",
-      "name": null,
-      "description": null,
+      "name": "Experiential Learning Skills Lab",
+      "description": "Combines multidisciplinary AI solution projects, professional communication and internship preparation without establishing one primary subject.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 3,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-a-i",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/a-i/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-a-i"
+        ],
+        "locator": "A-I 285 complete course description and enrollment conditions",
+        "rationale": "Combines multidisciplinary AI solution projects, professional communication and internship preparation without establishing one primary subject.",
+        "candidate_categories": [
+          "ai_ml",
+          "human_context",
+          "applications"
+        ]
+      }
     },
     {
       "id": "psu-a-i-495",
       "code": "A-I 495",
-      "name": null,
-      "description": null,
+      "name": "Internship",
+      "description": "Supervised field experience or internship has an individually selected subject; the generic description does not establish its discipline.",
       "prerequisites": null,
       "credits": null,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-a-i",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/a-i/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-a-i"
+        ],
+        "locator": "A-I 495 complete course description and enrollment conditions",
+        "rationale": "Supervised field experience or internship has an individually selected subject; the generic description does not establish its discipline.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-cmpsc-432",
       "code": "CMPSC 432",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Exploratory Data Mining",
+      "description": "Centers on exploratory data-mining algorithms, including clustering, association and anomaly detection; programming implements these methods.",
+      "prerequisites": "Enforced Prerequisite at Enrollment: CMPSC 221 and ( CMPSC 465 or CMPSC 463 ) and ( STAT 318 or STAT 414 or STAT 418 )",
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "ai_ml",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-cmpsc",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/cmpsc/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-cmpsc"
+        ],
+        "locator": "CMPSC 432 complete course description and enrollment conditions",
+        "rationale": "Centers on exploratory data-mining algorithms, including clustering, association and anomaly detection; programming implements these methods.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-cmpsc-442",
@@ -781,72 +898,127 @@
     {
       "id": "psu-cmpsc-441",
       "code": "CMPSC 441",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Artificial Intelligence",
+      "description": "Centers on AI search, knowledge representation, planning, learning and neural networks.",
+      "prerequisites": "Enforced Prerequisite at Enrollment: CMPSC 462",
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "ai_ml",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-cmpsc",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/cmpsc/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-cmpsc"
+        ],
+        "locator": "CMPSC 441 complete course description and enrollment conditions",
+        "rationale": "Centers on AI search, knowledge representation, planning, learning and neural networks.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-cmpsc-446",
       "code": "CMPSC 446",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Data Mining",
+      "description": "Centers on pattern discovery, decision-tree and ensemble classification, clustering and graph mining.",
+      "prerequisites": "Enforced Prerequisite at Enrollment: MATH 220 and ( DS 220 or CMPSC 430 or CMPSC 431W ) and ( MATH 318 or STAT 318 or MATH 414 or STAT 414 )",
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "ai_ml",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-cmpsc",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/cmpsc/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-cmpsc"
+        ],
+        "locator": "CMPSC 446 complete course description and enrollment conditions",
+        "rationale": "Centers on pattern discovery, decision-tree and ensemble classification, clustering and graph mining.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-cyber-100",
       "code": "CYBER 100",
-      "name": null,
-      "description": null,
+      "name": "Computer Systems Literacy",
+      "description": "Introduces computing-system architecture and operation; computing theory supports system literacy.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "systems",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-cyber",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/cyber/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-cyber"
+        ],
+        "locator": "CYBER 100 complete course description and enrollment conditions",
+        "rationale": "Introduces computing-system architecture and operation; computing theory supports system literacy.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-cyber-262",
       "code": "CYBER 262",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Cyber-Defense Studio",
+      "description": "Hands-on network and host defense includes firewalls, intrusion detection and penetration testing.",
+      "prerequisites": "Enforced Prerequisite at Enrollment: ( CYBER 100 or CYBER 100S ) and ( IST 140 or CMPSC 121 or CMPSC 131 )",
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "systems",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-cyber",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/cyber/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-cyber"
+        ],
+        "locator": "CYBER 262 complete course description and enrollment conditions",
+        "rationale": "Hands-on network and host defense includes firewalls, intrusion detection and penetration testing.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-ist-220",
       "code": "IST 220",
-      "name": null,
-      "description": null,
+      "name": "Networking and Telecommunications",
+      "description": "Centers on network transmission, routing, protocols, internetworking hardware, security and communications management.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "systems",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-ist",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/ist/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-ist"
+        ],
+        "locator": "IST 220 complete course description and enrollment conditions",
+        "rationale": "Centers on network transmission, routing, protocols, internetworking hardware, security and communications management.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-ist-451",
@@ -893,16 +1065,31 @@
     {
       "id": "psu-sra-111",
       "code": "SRA 111",
-      "name": null,
-      "description": null,
+      "name": "Introduction to Security and Risk Analysis",
+      "description": "Explicitly combines technical information security with legal/social analysis and risk assessment across cyber and physical threats.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 3,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-sra",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/sra/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-sra"
+        ],
+        "locator": "SRA 111 complete course description and enrollment conditions",
+        "rationale": "Explicitly combines technical information security with legal/social analysis and risk assessment across cyber and physical threats.",
+        "candidate_categories": [
+          "systems",
+          "human_context",
+          "applications"
+        ]
+      }
     },
     {
       "id": "psu-sra-221",
@@ -921,72 +1108,131 @@
     {
       "id": "psu-ds-220",
       "code": "DS 220",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Data Management for Data Sciences",
+      "description": "Compares relational, key-value, column, vector and graph databases and distributed storage for data management.",
+      "prerequisites": "Enforced Prerequisite at Enrollment: C or better in CMPSC 121 or CMPSC 131 Enforced Concurrent at Enrollment: CMPSC 122 or CMPSC 132",
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "systems",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-ds",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/ds/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-ds"
+        ],
+        "locator": "DS 220 complete course description and enrollment conditions",
+        "rationale": "Compares relational, key-value, column, vector and graph databases and distributed storage for data management.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-ds-300",
       "code": "DS 300",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Privacy and Security for Data Sciences",
+      "description": "Centers on techniques, processes and design principles for protecting privacy and security of data systems.",
+      "prerequisites": "Enforced Prerequisite at Enrollment: C or better in ( DS 200 or STAT 200 ) and DS 220 and ( IST 230 or CMPSC 360 or MATH 311W )",
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "systems",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-ds",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/ds/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-ds"
+        ],
+        "locator": "DS 300 complete course description and enrollment conditions",
+        "rationale": "Centers on techniques, processes and design principles for protecting privacy and security of data systems.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-ds-320",
       "code": "DS 320",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Data Integration",
+      "description": "Centers on designing, implementing and evaluating integration of heterogeneous data using relational and other data representations.",
+      "prerequisites": "Enforced Prerequisites at Enrollment: DS 220 and (STAT/ MATH 318 or STAT/ MATH 414 or STAT/ MATH 418 ) Recommended Preparations: DS 310",
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "systems",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-ds",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/ds/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-ds"
+        ],
+        "locator": "DS 320 complete course description and enrollment conditions",
+        "rationale": "Centers on designing, implementing and evaluating integration of heterogeneous data using relational and other data representations.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-ds-330",
       "code": "DS 330",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Visual Analytics for Data Sciences",
+      "description": "Combines interactive visual-interface design, computational analytics and human analytical reasoning; no single subject predominates.",
+      "prerequisites": "Enforced Prerequisite at Enrollment: C or better in ( DS 200 or STAT 200 ) and ( CMPSC 122 or CMPSC 132 or IST 242 )",
+      "credits": 3,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-ds",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/ds/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-ds"
+        ],
+        "locator": "DS 330 complete course description and enrollment conditions",
+        "rationale": "Combines interactive visual-interface design, computational analytics and human analytical reasoning; no single subject predominates.",
+        "candidate_categories": [
+          "foundations",
+          "human_context",
+          "applications"
+        ]
+      }
     },
     {
       "id": "psu-ds-402",
       "code": "DS 402",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Emerging Trends in the Data Sciences",
+      "description": "Each repeatable offering studies a selected emerging data-science innovation; the generic description does not establish a stable primary subject.",
+      "prerequisites": "Enforced Prerequisite at Enrollment: DS 220",
+      "credits": 3,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-ds",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/ds/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-ds"
+        ],
+        "locator": "DS 402 complete course description and enrollment conditions",
+        "rationale": "Each repeatable offering studies a selected emerging data-science innovation; the generic description does not establish a stable primary subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-ds-410",
@@ -1041,58 +1287,105 @@
     {
       "id": "psu-ds-420",
       "code": "DS 420",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Network Analytics",
+      "description": "Combines statistical network models and properties with community detection, classification and embedding methods.",
+      "prerequisites": "Enforced Prerequisites at Enrollment: DS 220 and DS 310",
+      "credits": 3,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-ds",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/ds/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-ds"
+        ],
+        "locator": "DS 420 complete course description and enrollment conditions",
+        "rationale": "Combines statistical network models and properties with community detection, classification and embedding methods.",
+        "candidate_categories": [
+          "mathematics",
+          "ai_ml"
+        ]
+      }
     },
     {
       "id": "psu-ds-441",
       "code": "DS 441",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Information Retrieval and Organization",
+      "description": "Centers on information storage and retrieval systems, databases, web search and information organization.",
+      "prerequisites": "Enforced Prerequisite at Enrollment: C or better in MATH 141 and DS 220 and ( IST 230 or CMPSC 360 or MATH 311W )",
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "systems",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-ds",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/ds/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-ds"
+        ],
+        "locator": "DS 441 complete course description and enrollment conditions",
+        "rationale": "Centers on information storage and retrieval systems, databases, web search and information organization.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-ee-483",
       "code": "EE 483",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Introduction to Automation and Robotics Systems",
+      "description": "Centers on physical robotics motion/control and components such as actuators and sensors; the description does not assert AI methods.",
+      "prerequisites": "Enforced Prerequisite at Enrollment: EE 481",
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "applications",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-ee",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/ee/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-ee"
+        ],
+        "locator": "EE 483 complete course description and enrollment conditions",
+        "rationale": "Centers on physical robotics motion/control and components such as actuators and sensors; the description does not assert AI methods.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-ee-454",
       "code": "EE 454",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Fundamentals of Computer Vision",
+      "description": "Computer-vision methods cover segmentation, feature extraction, stereo/depth, motion and object recognition.",
+      "prerequisites": "Enforced Prerequisite at Enrollment: ( MATH 230 or MATH 231 ) and MATH 220 and( CMPSC 121 or CMPSC 131 or CMPSC 201 )",
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "ai_ml",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-ee",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/ee/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-ee"
+        ],
+        "locator": "EE 454 complete course description and enrollment conditions",
+        "rationale": "Computer-vision methods cover segmentation, feature extraction, stereo/depth, motion and object recognition.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-ee-456",
@@ -1122,72 +1415,130 @@
     {
       "id": "psu-ist-140",
       "code": "IST 140",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Introduction to Application Development",
+      "description": "Centers on program construction, problem solving, data representations, testing and debugging.",
+      "prerequisites": "Enforced Prerequisite at Enrollment: C or better in Math 21 or placement above the level of Math 21 in the mathematics placement test. Recommended Preparation: Math 22",
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "foundations",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-ist",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/ist/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-ist"
+        ],
+        "locator": "IST 140 complete course description and enrollment conditions",
+        "rationale": "Centers on program construction, problem solving, data representations, testing and debugging.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-ist-240",
       "code": "IST 240",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Introduction to Computer Languages",
+      "description": "Centers on programming-language paradigms, formal specification, types, bindings, control structures and processors.",
+      "prerequisites": "Enforced Prerequisite at Enrollment: C or better in IST 140 or CMPSC 101 or CMPSC 121 or CMPSC 131",
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "foundations",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-ist",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/ist/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-ist"
+        ],
+        "locator": "IST 240 complete course description and enrollment conditions",
+        "rationale": "Centers on programming-language paradigms, formal specification, types, bindings, control structures and processors.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-ist-242",
       "code": "IST 242",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Intermediate & Object-Oriented Application Development",
+      "description": "Centers on object-oriented programming, data structures, algorithms, application architectures and design patterns.",
+      "prerequisites": "Enforced Prerequisite at Enrollment: C or better in IST 140 or IST 240 or CMPSC 121 or CMPSC 131",
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "foundations",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-ist",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/ist/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-ist"
+        ],
+        "locator": "IST 242 complete course description and enrollment conditions",
+        "rationale": "Centers on object-oriented programming, data structures, algorithms, application architectures and design patterns.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-ist-250",
       "code": "IST 250",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Introduction to Web Design and Development",
+      "description": "Combines visual/information design and evaluation of websites with practical construction; no single primary subject is established.",
+      "prerequisites": "IST 110 is recommended to be taken before or at the same time as IST 250.",
+      "credits": 3,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-ist",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/ist/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-ist"
+        ],
+        "locator": "IST 250 complete course description and enrollment conditions",
+        "rationale": "Combines visual/information design and evaluation of websites with practical construction; no single primary subject is established.",
+        "candidate_categories": [
+          "foundations",
+          "applications"
+        ]
+      }
     },
     {
       "id": "psu-ist-256",
       "code": "IST 256",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Programming for the Web",
+      "description": "Centers on web programming in HTML/CSS/JavaScript, APIs and application-development frameworks.",
+      "prerequisites": "Enforced Prerequisites at Enrollment: IST 250 or IST 242 or CMPSC 122 or CMPSC 132",
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "foundations",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-ist",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/ist/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-ist"
+        ],
+        "locator": "IST 256 complete course description and enrollment conditions",
+        "rationale": "Centers on web programming in HTML/CSS/JavaScript, APIs and application-development frameworks.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-ist-311",
@@ -1348,156 +1699,277 @@
     {
       "id": "psu-math-425",
       "code": "MATH 425",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Introduction to Operations Research",
+      "description": "Centers on operations-research model formulation and mathematical allocation and inventory problems.",
+      "prerequisites": "Enforced Prerequisite at Enrollment: MATH 141 and MATH 220",
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "mathematics",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-math",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/math/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-math"
+        ],
+        "locator": "MATH 425 complete course description and enrollment conditions",
+        "rationale": "Centers on operations-research model formulation and mathematical allocation and inventory problems.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-math-429",
       "code": "MATH 429",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Introduction to Topology",
+      "description": "Studies metric/topological spaces, separation, compactness, connectedness and the fundamental group.",
+      "prerequisites": "Enforced Prerequisite at Enrollment: MATH 311W",
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "mathematics",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-math",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/math/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-math"
+        ],
+        "locator": "MATH 429 complete course description and enrollment conditions",
+        "rationale": "Studies metric/topological spaces, separation, compactness, connectedness and the fundamental group.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-math-430",
       "code": "MATH 430",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Linear Algebra and Discrete Models I",
+      "description": "Studies vector spaces, linear transformations, matrices, eigenvalues and linear equations.",
+      "prerequisites": "Enforced Prerequisite at Enrollment: MATH 220",
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "mathematics",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-math",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/math/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-math"
+        ],
+        "locator": "MATH 430 complete course description and enrollment conditions",
+        "rationale": "Studies vector spaces, linear transformations, matrices, eigenvalues and linear equations.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-math-448",
       "code": "MATH 448",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Mathematics of Finance",
+      "description": "Centers on mathematical finance models for pricing, hedging and optimization, including binomial and Black-Scholes models.",
+      "prerequisites": "Enforced Prerequisite at Enrollment: MATH 141 and ( STAT 200 or STAT 301 or MATH 318 or STAT 318 or STAT 401 or MATH 414 or STAT 414 )",
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "mathematics",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-math",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/math/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-math"
+        ],
+        "locator": "MATH 448 complete course description and enrollment conditions",
+        "rationale": "Centers on mathematical finance models for pricing, hedging and optimization, including binomial and Black-Scholes models.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-math-452",
       "code": "MATH 452",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Deep Learning Algorithms and Analysis",
+      "description": "Centers on deep neural networks, convolutional models, training algorithms and their mathematical analysis; numerical methods support these AI techniques.",
+      "prerequisites": "Enforced Prerequisite at Enrollment: MATH 220 and ( MATH 230 or MATH 231 ) and ( CMPSC 101 or CMPSC 121 or CMPSC 131 or CMPSC 200 or CMPSC 201 )",
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "ai_ml",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-math",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/math/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-math"
+        ],
+        "locator": "MATH 452 complete course description and enrollment conditions",
+        "rationale": "Centers on deep neural networks, convolutional models, training algorithms and their mathematical analysis; numerical methods support these AI techniques.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-math-455",
       "code": "MATH 455",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Introduction to Numerical Analysis I",
+      "description": "Studies numerical root finding, interpolation, quadrature and linear-system methods.",
+      "prerequisites": "Enforced Prerequisite at Enrollment: ( CMPSC 201 or CMPSC 202 or CMPSC 121 or CMPSC 131 ) and MATH 220 and ( MATH 230 or MATH 231 )",
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "mathematics",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-math",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/math/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-math"
+        ],
+        "locator": "MATH 455 complete course description and enrollment conditions",
+        "rationale": "Studies numerical root finding, interpolation, quadrature and linear-system methods.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-math-486",
       "code": "MATH 486",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Mathematical Theory of Games",
+      "description": "Studies mathematical game-theory models, theorems and optimal-strategy methods.",
+      "prerequisites": "Enforced Prerequisite at Enrollment: MATH 220",
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "mathematics",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-math",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/math/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-math"
+        ],
+        "locator": "MATH 486 complete course description and enrollment conditions",
+        "rationale": "Studies mathematical game-theory models, theorems and optimal-strategy methods.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-stat-380",
       "code": "STAT 380",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Data Science Through Statistical Reasoning and Computation",
+      "description": "Centers on statistical reasoning and inference through data case studies; programming and data preparation support the statistical analysis.",
+      "prerequisites": "Enforced Prerequisite at Enrollment: ( STAT 200 or DS 200 or PLSC 309 ) and STAT 184",
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "mathematics",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-stat",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/stat/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-stat"
+        ],
+        "locator": "STAT 380 complete course description and enrollment conditions",
+        "rationale": "Centers on statistical reasoning and inference through data case studies; programming and data preparation support the statistical analysis.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-stat-462",
       "code": "STAT 462",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Applied Regression Analysis",
+      "description": "Studies linear/multiple/nonlinear regression, correlation and model selection.",
+      "prerequisites": "Enforced Prerequisite at Enrollment: STAT 200 or STAT 240 or STAT 250 or STAT 401",
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "mathematics",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-stat",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/stat/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-stat"
+        ],
+        "locator": "STAT 462 complete course description and enrollment conditions",
+        "rationale": "Studies linear/multiple/nonlinear regression, correlation and model selection.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-stat-463",
       "code": "STAT 463",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Applied Time Series Analysis",
+      "description": "Studies time-series models, parameter estimation, forecasting, diagnostics and spectral methods.",
+      "prerequisites": "Enforced Prerequisite at Enrollment: ( STAT 300 or STAT 462 ) and ( STAT 318 or MATH 318 or STAT 414 or MATH 414 or STAT 418 or MATH 418 )",
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "mathematics",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-stat",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/stat/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-stat"
+        ],
+        "locator": "STAT 463 complete course description and enrollment conditions",
+        "rationale": "Studies time-series models, parameter estimation, forecasting, diagnostics and spectral methods.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-stat-464",
       "code": "STAT 464",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Applied Nonparametric Statistics",
+      "description": "Studies nonparametric tests, chi-square methods and correlation for nominal and ordinal data.",
+      "prerequisites": "Enforced Prerequisite at Enrollment: STAT 200 or STAT 240 or STAT 250 or STAT 401",
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "mathematics",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-stat",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/stat/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-stat"
+        ],
+        "locator": "STAT 464 complete course description and enrollment conditions",
+        "rationale": "Studies nonparametric tests, chi-square methods and correlation for nominal and ordinal data.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-aee-216",
@@ -2034,44 +2506,81 @@
     {
       "id": "psu-eti-300w",
       "code": "ETI 300W",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Development and Documentation of Enterprise Web",
+      "description": "Combines enterprise cloud infrastructure and development workflows with technical documentation and communication as explicit goals.",
+      "prerequisites": "Enforced Prerequisite at Enrollment: IST 210 and IST 220 and IST 256",
+      "credits": 3,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-eti",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/eti/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-eti"
+        ],
+        "locator": "ETI 300W complete course description and enrollment conditions",
+        "rationale": "Combines enterprise cloud infrastructure and development workflows with technical documentation and communication as explicit goals.",
+        "candidate_categories": [
+          "systems",
+          "foundations",
+          "human_context"
+        ]
+      }
     },
     {
       "id": "psu-eti-435",
       "code": "ETI 435",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Enterprise Analytics",
+      "description": "Centers on organizational use and governance of analytics, return on investment, talent and enterprise performance.",
+      "prerequisites": "Enforced Prerequisite at Enrollment: IST 210",
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "applications",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-eti",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/eti/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-eti"
+        ],
+        "locator": "ETI 435 complete course description and enrollment conditions",
+        "rationale": "Centers on organizational use and governance of analytics, return on investment, talent and enterprise performance.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-eti-461",
       "code": "ETI 461",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Database Management and Administration",
+      "description": "Centers on database administration, tuning, transactions, concurrency, recovery, query optimization, distributed databases and security.",
+      "prerequisites": "Enforced Prerequisite at Enrollment: ETI 300W",
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "systems",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-eti",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/eti/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-eti"
+        ],
+        "locator": "ETI 461 complete course description and enrollment conditions",
+        "rationale": "Centers on database administration, tuning, transactions, concurrency, recovery, query optimization, distributed databases and security.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-ist-301",
@@ -2090,16 +2599,27 @@
     {
       "id": "psu-eti-301",
       "code": "ETI 301",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Information and Organizations",
+      "description": "Centers on theories of work and organization and analysis of how IT changes organizational processes and information flows.",
+      "prerequisites": "Enforced Prerequisite at Enrollment: IST 210 and IST 220",
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "human_context",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-eti",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/eti/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-eti"
+        ],
+        "locator": "ETI 301 complete course description and enrollment conditions",
+        "rationale": "Centers on theories of work and organization and analysis of how IT changes organizational processes and information flows.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-ist-302",
@@ -2118,16 +2638,27 @@
     {
       "id": "psu-eti-302",
       "code": "ETI 302",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "IT Project Management",
+      "description": "Centers on professional IT project management: scope, planning, budget, schedule, quality and organizational change.",
+      "prerequisites": "Enforced Prerequisite at Enrollment: IST 210 and IST 220",
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "applications",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-eti",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/eti/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-eti"
+        ],
+        "locator": "ETI 302 complete course description and enrollment conditions",
+        "rationale": "Centers on professional IT project management: scope, planning, budget, schedule, quality and organizational change.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-hpa-101",
@@ -2678,170 +3209,302 @@
     {
       "id": "psu-psych-100",
       "code": "PSYCH 100",
-      "name": null,
-      "description": null,
+      "name": "Introductory Psychology",
+      "description": "Introduces empirical psychological science of behavior, cognition, development and physiological processes; this is psychology domain knowledge, not AI methods.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "applications",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-psych",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/psych/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-psych"
+        ],
+        "locator": "PSYCH 100 complete course description and enrollment conditions",
+        "rationale": "Introduces empirical psychological science of behavior, cognition, development and physiological processes; this is psychology domain knowledge, not AI methods.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-psych-212",
       "code": "PSYCH 212",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Introduction to Developmental Psychology",
+      "description": "Studies age-related psychological development through scientific theories, empirical methods and biological/social contexts.",
+      "prerequisites": "Enforced Prerequisite at Enrollment: PSYCH 100",
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "applications",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-psych",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/psych/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-psych"
+        ],
+        "locator": "PSYCH 212 complete course description and enrollment conditions",
+        "rationale": "Studies age-related psychological development through scientific theories, empirical methods and biological/social contexts.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-psych-221",
       "code": "PSYCH 221",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Introduction to Social Psychology",
+      "description": "Centers on social influence, attitudes, persuasion, conformity, culture, prejudice and interpersonal behavior.",
+      "prerequisites": "Enforced Prerequisite at Enrollment: PSYCH 100",
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "human_context",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-psych",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/psych/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-psych"
+        ],
+        "locator": "PSYCH 221 complete course description and enrollment conditions",
+        "rationale": "Centers on social influence, attitudes, persuasion, conformity, culture, prejudice and interpersonal behavior.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-psych-253",
       "code": "PSYCH 253",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Introduction to Psychology of Perception",
+      "description": "Studies sensory coding, visual/auditory perception and empirical methods of perceptual psychology.",
+      "prerequisites": "Enforced Prerequisite at Enrollment: PSYCH 100",
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "applications",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-psych",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/psych/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-psych"
+        ],
+        "locator": "PSYCH 253 complete course description and enrollment conditions",
+        "rationale": "Studies sensory coding, visual/auditory perception and empirical methods of perceptual psychology.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-psych-260",
       "code": "PSYCH 260",
-      "name": null,
-      "description": null,
+      "name": "Neurological Bases of Human Behavior",
+      "description": "Centers on nervous-system anatomy and physiology and their biological relationship to behavior and mental processes.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "applications",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-psych",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/psych/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-psych"
+        ],
+        "locator": "PSYCH 260 complete course description and enrollment conditions",
+        "rationale": "Centers on nervous-system anatomy and physiology and their biological relationship to behavior and mental processes.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-psych-413",
       "code": "PSYCH 413",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Cognitive Development",
+      "description": "The published description identifies psychological development of reasoning, perception and language.",
+      "prerequisites": "Enforced Prerequisite at Enrollment: PSYCH 100 and PSYCH 212",
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "applications",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-psych",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/psych/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-psych"
+        ],
+        "locator": "PSYCH 413 complete course description and enrollment conditions",
+        "rationale": "The published description identifies psychological development of reasoning, perception and language.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-psych-425",
       "code": "PSYCH 425",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Psychology of Human Emotion",
+      "description": "Studies and critiques psychological theories of emotional experience, understanding and expression.",
+      "prerequisites": "Enforced Prerequisite at Enrollment: PSYCH 100 and ( PSYCH 221 or PSYCH 232 or PSYCH 238 or PSYCH 243 or PSYCH 260 )",
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "applications",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-psych",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/psych/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-psych"
+        ],
+        "locator": "PSYCH 425 complete course description and enrollment conditions",
+        "rationale": "Studies and critiques psychological theories of emotional experience, understanding and expression.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-psych-426",
       "code": "PSYCH 426",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Language and Thought",
+      "description": "Studies cognitive psychology of language development, impairment and bilingualism; this is empirical cognition rather than generic language instruction.",
+      "prerequisites": "Enforced Prerequisite at Enrollment: PSYCH 100 or LING 1 or LING 100",
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "applications",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-psych",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/psych/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-psych"
+        ],
+        "locator": "PSYCH 426 complete course description and enrollment conditions",
+        "rationale": "Studies cognitive psychology of language development, impairment and bilingualism; this is empirical cognition rather than generic language instruction.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-psych-451",
       "code": "PSYCH 451",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Psychology of Action",
+      "description": "Studies human motor learning, planning and control through cognitive psychology and physiological evidence; robotics is a related application, not the primary method.",
+      "prerequisites": "Enforced Prerequisite at Enrollment: PSYCH 100 and PSYCH 256",
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "applications",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-psych",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/psych/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-psych"
+        ],
+        "locator": "PSYCH 451 complete course description and enrollment conditions",
+        "rationale": "Studies human motor learning, planning and control through cognitive psychology and physiological evidence; robotics is a related application, not the primary method.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-psych-452",
       "code": "PSYCH 452",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Learning and Memory",
+      "description": "Studies learning and memory through animal and human experiments; it does not describe machine learning.",
+      "prerequisites": "Enforced Prerequisite at Enrollment: PSYCH 100 and PSYCH 256",
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "applications",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-psych",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/psych/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-psych"
+        ],
+        "locator": "PSYCH 452 complete course description and enrollment conditions",
+        "rationale": "Studies learning and memory through animal and human experiments; it does not describe machine learning.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-psych-455",
       "code": "PSYCH 455",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Cognitive Neuroscience",
+      "description": "Studies neural bases of cognition with neuroanatomy, functional imaging and behavioral experiments.",
+      "prerequisites": "Enforced Prerequisite at Enrollment: PSYCH 256 or PSYCH 260A Recommended Preparation: PSYCH 200 or STAT 200",
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "applications",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-psych",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/psych/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-psych"
+        ],
+        "locator": "PSYCH 455 complete course description and enrollment conditions",
+        "rationale": "Studies neural bases of cognition with neuroanatomy, functional imaging and behavioral experiments.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "psu-psych-458",
       "code": "PSYCH 458",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Visual Cognition",
+      "description": "The published description identifies concepts and methods of human cognitive visual-spatial processing.",
+      "prerequisites": "Enforced Prerequisite at Enrollment: PSYCH 100 and ( PSYCH 253 or PSYCH 256 or PSYCH 260 )",
+      "credits": 3,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "penn-state-ai-methods-applications-ist-bs-catalog",
-      "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+      "category": "applications",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-courses-psych",
+      "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/psych/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "penn-state-ai-methods-applications-ist-bs-courses-psych"
+        ],
+        "locator": "PSYCH 458 complete course description and enrollment conditions",
+        "rationale": "The published description identifies concepts and methods of human cognitive visual-spatial processing.",
+        "candidate_categories": []
+      }
     }
   ],
   "requirements": [
@@ -3889,6 +4552,48 @@
       "source_text": null,
       "summary": "Senate 83-80 displays 36 of the final 60 baccalaureate credits in university/cooperative programs and a five-calendar-year limit for the last 60, plus stricter college authority and appeals. It also announces June 23, 2026 revisions with implementation procedures pending. Effective revised/cohort applicability is unresolved; this observation does not silently select a policy version.",
       "course_ids": []
+    },
+    {
+      "id": "penn-state-ai-methods-applications-ist-bs-residence-procedure",
+      "parent_id": null,
+      "title": "Local-residence requirement disclosure",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-residence-procedure",
+      "source_text": null,
+      "summary": "A college/campus/program may require up to 24 major credits locally. Specific courses cannot be mandated except a required senior seminar or capstone. Such requirements must appear in the academic plan, Bulletin major description and college/department graduation materials; advising must address them. Students can raise noncompliance with the undergraduate associate dean.",
+      "course_ids": []
+    },
+    {
+      "id": "penn-state-ai-methods-applications-ist-bs-transfer-completion-procedure",
+      "parent_id": null,
+      "title": "Transfer review and graduation-document deadline",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-transfer-completion-procedure",
+      "source_text": null,
+      "summary": "Before taking outside courses, use the transfer-credit tool and consult an adviser about transferability and degree applicability. Unevaluated courses require a current syllabus and formal review. Official credit documents must reach Admissions at least 30 days before the graduating semester\u2019s last class day; college approval is required for deadline exceptions.",
+      "course_ids": []
+    },
+    {
+      "id": "penn-state-ai-methods-applications-ist-bs-general-education-policy",
+      "parent_id": null,
+      "title": "General education distribution, breadth and overlap",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "penn-state-ai-methods-applications-ist-bs-general-education-policy",
+      "source_text": null,
+      "summary": "The 45-credit GE allocation is 15 foundations (9 writing/speaking, 6 quantification), 15 breadth (3 in each of five domains), 6 integrative studies and 9 exploration. Foundations require C and cannot be inter-domain; breadth also excludes inter-domain. Exploration requires 3 natural-science credits plus 6 from permitted domains, including limited advanced language. Breadth/exploration cannot use the major\u2019s own department/program or its cross-listed courses; integrative studies is exempt. Published flexibility permits appropriate 200\u2013499 substitutions and qualifying language beyond degree minima. Program-identified major overlap is limited by the domain caps; integrative-study courses cannot enter that overlap statement.",
+      "course_ids": []
     }
   ],
   "notes": [
@@ -3907,7 +4612,15 @@
       "penn-state-ai-methods-applications-ist-bs-courses-ds",
       "penn-state-ai-methods-applications-ist-bs-courses-aima",
       "penn-state-ai-methods-applications-ist-bs-courses-ee",
-      "penn-state-ai-methods-applications-ist-bs-degree-policy"
+      "penn-state-ai-methods-applications-ist-bs-degree-policy",
+      "penn-state-ai-methods-applications-ist-bs-courses-eti",
+      "penn-state-ai-methods-applications-ist-bs-courses-ist",
+      "penn-state-ai-methods-applications-ist-bs-courses-cyber",
+      "penn-state-ai-methods-applications-ist-bs-courses-psych",
+      "penn-state-ai-methods-applications-ist-bs-courses-sra",
+      "penn-state-ai-methods-applications-ist-bs-residence-procedure",
+      "penn-state-ai-methods-applications-ist-bs-transfer-completion-procedure",
+      "penn-state-ai-methods-applications-ist-bs-general-education-policy"
     ],
     "sections": [
       "Current program identity, minimum, major course table and C-grade designations",
@@ -3917,14 +4630,17 @@
       "Explicit Senate semester-hour definition",
       "All named core and immediate-alternative current course descriptions; prerequisite/corequisite restrictions",
       "Technical supporting pool and all University Park application-focus lists; Commonwealth business route distinguished; open CYBER and ROTC rules",
-      "Four explicit reciprocal cross-listed course pairs verified from both course blocks; all records preserved and canonical identity groups manually registered"
+      "Four explicit reciprocal cross-listed course pairs verified from both course blocks; all records preserved and canonical identity groups manually registered",
+      "51 additional technical/application option descriptions individually read, with exact prerequisite conditions and distinction between per-enrollment credit and repeatability maximum",
+      "Public L-13 local-residence disclosure and L-4 transfer-review/deadline procedures; GE142/143 distribution, major-department and cross-list overlap restrictions"
     ],
     "unresolved_requirements": [
       "The program requirements table controls the paired AIMA430/440 capstone route and variable A-I494 alternative. The illustrative semester plan is not independent permission for mixed combinations or double use of research credit. Remaining whole-degree college and policy applicability checks are unfinished.",
-      "Senate 83-80 announces June 23, 2026 revisions with implementation pending while displaying residence/time rules. Effective cohort applicability and any stricter college conditions need reconciliation."
+      "Senate 83-80 announces June 23, 2026 revisions with implementation pending while displaying residence/time rules. Effective cohort applicability and any stricter college conditions need reconciliation.",
+      "Senate 83-80 displays current residence/time rules and labels an approved revision pending implementation. Its exact linked legislation is robots-disallowed. Preserve the displayed rule and pending status; effective revised content cannot be established from this source. College-specific implementation checks remain unfinished."
     ],
     "metadata_gaps": [
-      "Full subjects, descriptions and prerequisites for code-only supporting options remain unclassified pending individual course-source review. No category is inferred from a department prefix or application focus.",
+      "87 supporting records remain without individual subject review. Ten degree-listed codes: SRA 221 and nine IST codes (301, 302, 311, 331, 411, 413, 451, 454, 456) have no blocks in the current IST subject listing; no ETI substitution or cross-list identity is inferred.",
       "Public course sites, example syllabi and actual first offering remain unverified.",
       "IST301/ETI301 and IST302/ETI302 are slash-paired in the degree list, but current ETI blocks do not assert cross-listing and current IST blocks are absent. They remain separate code identities; no equivalence is inferred."
     ]

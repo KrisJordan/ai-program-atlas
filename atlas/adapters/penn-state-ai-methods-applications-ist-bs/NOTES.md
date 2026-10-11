@@ -1,8 +1,8 @@
 # Artificial Intelligence Methods and Applications, B.S. (Information Sciences and Technology)
 
-[2026–27 official catalog](https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/) reviewed2026-10-11, HTTP200. University Park / College of Information Sciences and Technology, University Park; planAIMA_BS. Explicit BS award and numeric degree minimum parsed from requirement body, not an unrelated directory title.
+[2026–27 official catalog](https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/) reviewed 2026-10-11, HTTP 200. University Park / College of Information Sciences and Technology, University Park; plan AIMA_BS. Explicit BS award and numeric degree minimum parsed from requirement body, not an unrelated directory title.
 
-Partial: this discovery pass does not structure the accessible major curriculum or GE/overlap/degreewide policy branches. Next: full published requirement tables, cohort-specific entrance rules and degreewide audit. Keep Harrisburg Capital college separately scoped and excluded from University Park roster. No launch date inferred.
+Partial: the major tables, named supporting options and public university procedures are mapped. Remaining college-specific policy applicability and course-description gaps prevent a full degree audit. Harrisburg Capital College remains separately scoped and excluded from the University Park roster. No launch date is inferred.
 
 ## Degree correctness pass — 2026-10-11
 
@@ -31,13 +31,11 @@ Commonwealth business choices are not silently imported. The open CYBER 300/400
 rule and ROTC prefix rules remain predicates, not invented course inventories.
 Application options require choosing one focus and a nine-hour sequence, with
 the stated level minimum and ROTC cap. Cross-listed alternatives do not create
-permission to earn duplicate credit. Code-only subjects stay explicitly
-unclassified until their individual descriptions are reviewed.
+permission to earn duplicate credit. Code-only subjects remain unreviewed until their individual descriptions are read.
 
 The capstone table groups AIMA 430/440 together for six hours; the illustrative
-plan presents research as an alternative in each semester. Whether a mixed
-capstone/research route is permitted and whether A-I 494 can also satisfy the
-technical pool need explicit resolution; neither is inferred.
+plan presents research as an alternative in each semester. The primary table controls the whole capstone route; the sample plan does not
+authorize freely mixed combinations or double use of A-I 494 credit.
 
 Senate 83-80 currently announces June 23, 2026 revisions with implementation
 pending, while displaying residence/time rules. Effective cohort applicability
@@ -68,8 +66,35 @@ equivalence statement is found; they must not be merged from matching titles.
 
 ### Review-state correction
 
-The 138 supporting identities whose individual descriptions have not been read
-now have no category_review: they remain other/unreviewed. Degree-list inspection
+The earlier correction removed category_review from 138 unread supporting
+identities. The continuation below records actual subsequent description reviews. Degree-list inspection
 is not a completed subject review. A-I494 retains source-inspected unclassified
 status because its actual description leaves the research subject individually
 determined. Four cross-list groups and all mapped role counts are unchanged.
+
+### Supporting descriptions and public policy continuation — 2026-10-11
+
+Fifty-one additional course descriptions were individually read. The source-code
+inventory now has 72 primary-subject reviews, seven mixed reviews, three
+source-inspected unknowns and 87 genuinely unreviewed records. These totals
+include the four retained cross-listed alias records; the profile still counts
+nine fixed and 156 canonical option identities. The new descriptions distinguish
+human/animal learning from machine learning, physical robotics practice from AI
+methods, database infrastructure from data analysis, and professional project
+management from software construction. Variable internships and selected
+emerging topics do not receive a fabricated stable subject. Per-enrollment
+three-credit amounts are separate from repeatability maxima.
+
+Nine degree-listed IST codes (301, 302, 311, 331, 411, 413, 451, 454 and 456) and
+SRA221 have no descriptions in their current official subject listings. They
+remain degree-list identities without inferred replacements or aliases. PSYCH455
+explicitly lists PSYCH260A in an eligibility alternative; that exact source code
+is preserved, not silently changed to the separately listed PSYCH260.
+
+Public L-13, L-4 and GE142/143 policies now supply source-guarded residence
+disclosure, transfer review/deadline, distribution and major-department overlap
+rules. The exact legislation linked from Senate83-80 is robots-disallowed.
+The displayed existing residence rules and the pending-implementation notice
+are both retained; no revised effective policy is guessed. College-specific
+implementation and remaining course descriptions remain unfinished. The whole
+degree audit stays in progress.

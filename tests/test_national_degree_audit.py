@@ -291,11 +291,13 @@ def test_william_mary_partial_core_has_limited_subject_evidence():
 def test_psu_unread_descriptions_are_unreviewed_not_inspected_unknown():
  p=json.loads(Path('data/programs/penn-state-ai-methods-applications-ist-bs.json').read_text())
  courses={c['code']:c for c in p['courses']}
- assert 'category_review' not in courses['PSYCH 260']
- assert courses['PSYCH 260']['category']=='other'
+ assert 'category_review' not in courses['PHIL 103']
+ assert courses['PHIL 103']['category']=='other'
+ assert courses['PSYCH 260']['category']=='applications'
+ assert courses['PSYCH 260']['category_review']['status']=='reviewed'
  assert courses['A-I 494']['category_review']['status']=='unclassified'
- assert sum('category_review' not in c for c in p['courses'])==138
- assert requirement_profile(p)['options']['classification']['unreviewed']==138
+ assert sum('category_review' not in c for c in p['courses'])==87
+ assert requirement_profile(p)['options']['classification']['unreviewed']==87
 
 
 def test_usf_review_does_not_recertify_brochure_or_infer_units():
@@ -335,3 +337,68 @@ def test_drexel_prescribed_subjects_and_source_result_guard(monkeypatch):
  assert courses['INFO 215']['category']=='human_context'
  assert courses['INFO 212']['category']=='foundations'
  assert courses['COOP 101']['category']=='applications'
+
+
+def test_psu_supporting_subjects_are_description_specific():
+ p=json.loads(Path('data/programs/penn-state-ai-methods-applications-ist-bs.json').read_text())
+ c={x['code']:x for x in p['courses']}
+ assert c['MATH 452']['category']=='ai_ml'
+ assert c['EE 483']['category']=='applications'
+ assert c['DS 220']['category']=='systems'
+ assert c['IST 242']['category']=='foundations'
+ assert c['ETI 301']['category']=='human_context'
+ assert c['ETI 302']['category']=='applications'
+ assert c['PSYCH 452']['category']=='applications'  # Human/animal memory, not machine learning.
+ assert c['SRA 111']['category_review']['status']=='mixed'
+ assert c['DS 402']['category_review']['status']=='unclassified'
+ assert c['A-I 495']['credits'] is None
+ assert c['A-I 285']['credits']==3 and c['DS 402']['credits']==3
+ assert 'Recommended Preparations: DS 310' in c['DS 320']['prerequisites']
+ assert 'PSYCH 260A' in c['PSYCH 455']['prerequisites']  # Preserve published code; no correction by assumption.
+ assert 'category_review' not in c['IST 301']
+ assert 'category_review' not in c['SRA 221']
+
+
+def test_psu_supporting_repeatability_and_changed_source_guard(monkeypatch):
+ from bs4 import BeautifulSoup
+ from atlas.adapters import psu_degree_courses as module
+ pid='penn-state-ai-methods-applications-ist-bs'
+ html='''<div class="courseblock"><div class="courseblocktitle"><div class="course_codetitle">DS 402: Example Topics</div><div class="course_credits">3 Credits/Maximum of 9</div></div><div class="courseblockdesc">A changing topic.</div><div class="courseblockextra"><p>Enforced Prerequisite at Enrollment: EX 100 or EX 200</p></div></div>'''
+ text=' '.join(BeautifulSoup(html,'html.parser').get_text(' ',strip=True).split())
+ monkeypatch.setattr(module,'SCOPES',{pid:['DS 402']})
+ monkeypatch.setattr(module,'SPEC',{'DS 402':dict(digest=hashlib.sha256(text.encode()).hexdigest(),description='Variable topic.',category='other')})
+ result=module.parse_courses(html,pid,'ds')
+ course=result['courses'][0]
+ assert course['credits']==3  # Per enrollment, not repeatability ceiling.
+ assert course['prerequisites'].endswith('EX 100 or EX 200')
+ assert 'category_review' not in course and 'curriculum_audit' not in result
+ with pytest.raises(ValueError,match='block changed'):
+  module.parse_courses(html.replace('EX 200','EX 201'),pid,'ds')
+ with pytest.raises(ValueError,match='identities missing'):
+  module.parse_courses('<h1>Login</h1>',pid,'ds')
+
+
+def test_psu_policy_change_requires_review_and_does_not_certify(monkeypatch):
+ from atlas.adapters import psu_degree_policy_details as module
+ key='transfer-completion-procedure'
+ html='<main><h1>Example policy</h1><p>Documents are due thirty days before the last class.</p></main>'
+ spec=dict(title='Example deadline',summary='A reviewed deadline.',digest=hashlib.sha256(module.policy_text(html).encode()).hexdigest())
+ monkeypatch.setattr(module,'SPEC',{key:spec})
+ result=module.parse_policy(html,'example-program',key)
+ assert result['requirements'][0]['kind']=='note'
+ assert 'curriculum_audit' not in result and 'curriculum_status' not in result
+ with pytest.raises(ValueError,match='policy changed'):
+  module.parse_policy(html.replace('thirty','twenty'),'example-program',key)
+ with pytest.raises(ValueError,match='main content missing'):
+  module.parse_policy('<h1>Log in</h1>','example-program',key)
+
+
+@pytest.mark.parametrize('pid',['penn-state-ai-engineering-bs','penn-state-ai-methods-applications-ist-bs'])
+def test_psu_public_degree_procedures_preserve_conditions(pid):
+ p=json.loads(Path('data/programs/'+pid+'.json').read_text())
+ notes={r['id']:r['summary'] for r in p['requirements']}
+ assert '30 days' in notes[pid+'-transfer-completion-procedure']
+ assert 'up to 24' in notes[pid+'-residence-procedure']
+ assert 'cross-listed' in notes[pid+'-general-education-policy']
+ assert 'integrative studies is exempt' in notes[pid+'-general-education-policy'].lower()
+ assert p['curriculum_status']=='partial'

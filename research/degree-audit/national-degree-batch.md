@@ -168,3 +168,31 @@ All fourteen assigned degrees now have individual primary audit ledger entries.
 This is not fourteen completed audits: four are blocked by specified evidence
 boundaries, and ten remain in progress. Corrected roles, identities and subjects
 are publishable independently of whole-degree audit completion.
+
+## Penn State supporting descriptions and policy continuation
+
+Individually read 51 additional IST-degree option descriptions: 36 on previously
+accessible subject pages and 15 in newly inspected CYBER, SRA and PSYCH pages.
+The raw review coverage is now 72 primary, seven mixed, three inspected unknowns
+and 87 unreviewed. Four proved cross-list aliases remain; fixed/options counts
+stay 9/156 canonical, with 169 source records overall. Subject examples:
+MATH452 is deep learning; EE483 is physical robotics/control practice; DS220 and
+ETI461 are database systems; PSYCH452 is empirical animal/human learning and
+memory. Nothing is categorized from a department prefix alone.
+
+Current IST listings lack nine degree-listed codes, and SRA listings lack SRA221.
+These missing descriptions do not erase published degree options or establish
+ETI equivalence. Actual prerequisites stay enrollment conditions rather than
+new fixed degree rows. A-I285 and DS402 have three credits per enrollment;
+A-I495 remains variable-credit. Exact topic-dependent and mixed subjects remain
+unknown rather than being forced into AI.
+
+Both PSU degrees now include public L-13, L-4 and GE142/143 procedure notes.
+L-13 requires any local-major residence conditions to be disclosed in the plan,
+Bulletin and college/department requirements. L-4 specifies advance transfer
+review and the official-document deadline. GE breadth/exploration cannot use
+major-department or cross-listed courses, while integrative studies is exempt.
+The exact Senate83-80 approved-revision legislation link is robots-disallowed.
+The displayed current rules and explicit pending-implementation notice are both
+preserved. No future/revised policy is treated as already effective. These
+corrections do not complete either full degree audit.

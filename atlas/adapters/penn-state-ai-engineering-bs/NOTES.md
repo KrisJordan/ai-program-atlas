@@ -43,3 +43,14 @@ degree rules; they do not independently prevent verification. The authoritative
 program table controls capstone grouping, and the illustrative semester plan does
 not grant additional mixed-route permission. College/policy applicability and
 supporting-course descriptive evidence remain accessible work to finish.
+
+### Public university procedures — 2026-10-11
+
+Read the official L-13 residence disclosure procedure, L-4 external-credit
+completion procedure and GE142/143 rules. Source-guarded notes preserve local
+major-credit disclosure and appeal, advance transfer evaluation and the
+30-days-before-last-class official-document deadline, and GE breadth/exploration
+restrictions involving the major department and cross-listed courses. The exact
+Senate83-80 pending-revision legislation is robots-disallowed; no revised rule or
+effective date is inferred. The displayed policy remains distinguished from the
+pending revision. College-specific applicability remains unfinished.
