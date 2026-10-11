@@ -296,3 +296,37 @@ def test_sociology_manual_profile_has_no_unread_classifications_or_hidden_course
         assert actual[role]['categories']==entry['expected_profile'][role]['categories']
         assert actual[role]['classification']['unreviewed']==0
     assert entry['blockers']  # Exact home-college applicability, not unknown dates/resources.
+
+
+@pytest.mark.parametrize('code,expected,status', [
+    ('HLTH 1000','other','unclassified'),('SLPA 2000','other','unclassified'),
+    ('PHIL 1145','human_context','reviewed'),('PHTH 2210','mathematics','reviewed'),
+    ('SLPA 1101','applications','reviewed'),('SLPA 4219','applications','reviewed'),
+    ('SLPA 5107','applications','reviewed')])
+def test_speech_clinical_content_and_orientation_have_separate_reviewed_categories(code,expected,status):
+    decision=CATEGORY_DECISIONS[code]
+    assert decision['status']==status
+    assert category(code,decision['name'],decision['guard'])==expected
+    assert category(code,'Different identity',decision['guard'])=='other'
+    assert category(code,decision['name'],'Changed content without reviewed evidence')=='other'
+
+
+def test_speech_manual_profile_and_variable_offering_hours_remain_separate():
+    from atlas.families import resolve_program
+    from atlas.curriculum_profile import requirement_profile
+    pid='northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree'
+    program=json.loads((ROOT/'data/programs'/f'{pid}.json').read_text())
+    family=json.loads((ROOT/'data/families/northeastern-ai-combined-degrees.json').read_text())
+    entry=next(e for e in json.loads((ROOT/'research/degree-audit/northeastern.json').read_text())['programs'] if e['program_id']==pid)
+    assert len(program['courses'])==44 and all(c.get('category_review') for c in program['courses'])
+    actual=requirement_profile(resolve_program(program,family))
+    for role in ['required','options','unresolved']:
+        assert actual[role]['count']==entry['expected_profile'][role]['count']
+        assert actual[role]['categories']==entry['expected_profile'][role]['categories']
+        assert actual[role]['classification']['unreviewed']==0
+    course=next(c for c in program['courses'] if c['code']=='SLPA 5107')
+    assert course['credits'] is None
+    rows=[r for r in program['requirements'] if course['id'] in r.get('course_ids',[])]
+    assert any(r['credits']==4 and r['kind']=='all' for r in rows)
+    assert next(c for c in program['courses'] if c['code']=='SLPA 4219')['credits']==3
+    assert entry['status']=='blocked' and entry['blockers']
