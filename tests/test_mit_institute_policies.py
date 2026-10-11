@@ -81,3 +81,15 @@ def test_curated_scope_audit_exposes_version_reconciliation():
     assert not any('internal date conflict' in gap for gap in d['curriculum_audit']['unresolved_requirements'])
     assert next(c for c in d['courses'] if c['code'] == '6.4300')['credits'] is None
     assert d['outcomes'][0]['statement_type'] == 'program_aim'
+
+
+def test_physics_preparation_follows_actual_gir_section_not_code_prefix():
+    result=POLICIES.parse_gir(fixture('mit-gir.html'))
+    physics=next(r for r in result['requirements'] if r['title']=='Physics II (GIR)')
+    by={c['id']:c for c in result['courses']}
+    assert physics['course_ids']
+    for cid in physics['course_ids']:
+        assert by[cid]['prerequisites'].startswith('Prior credit for a Physics I (GIR) subject')
+    assert all(c['prerequisites'] is None for c in result['courses'] if c['id'] not in physics['course_ids'])
+    with pytest.raises(ValueError):
+        POLICIES.parse_gir(fixture('mit-gir.html').replace('without having first received credit for a Physics I','without a different prerequisite'))

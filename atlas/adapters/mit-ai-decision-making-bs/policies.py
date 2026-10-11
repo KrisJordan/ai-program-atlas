@@ -62,6 +62,8 @@ def parse_gir(html):
                 raise ValueError('Unrecognized science GIR code or section')
             credit = clean(row.find('td', class_='hourscol').get_text())
             c = course('mit-ai-gir', code, None, sid, GIR + '#sciencerequirementtext', credits=float(credit) if credit.isdigit() else None, unit='units')
+            if group['title'] == 'Physics II (GIR)':
+                c['prerequisites'] = 'Prior credit for a Physics I (GIR) subject; additional subject-specific prerequisites are not stated here.'
             courses.append(c)
             group['course_ids'].append(c['id'])
     if headings != expected or any(not r['course_ids'] for r in rules if r['kind'] == 'choose_courses'):

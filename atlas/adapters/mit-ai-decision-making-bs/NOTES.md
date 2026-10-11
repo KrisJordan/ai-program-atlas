@@ -443,3 +443,8 @@ Ordinary Chrome's public Architecture search displayed 115 OCW offerings. Three 
 ### Anthropology historical syllabi — 2026-10-11
 
 Contribution 15640dd supplies 14 actual-description upgrades from nine public Anthropology OCW syllabi. Meaning of Life is now description-supported cultural and ethical inquiry, rather than an unclassified broad title. The Spring 2014 Technology and Culture syllabus explicitly states nine units; this dated amount is not inferred from meeting hours or asserted for current offerings. Original compound labels remain separate source occurrences, without an automatic alias group. HASS now has 284 description-supported occurrences, 558 limited title judgments and three code-only unknowns. Accessible description work continues; the full primary audit remains in progress.
+
+
+### Shared Physics II preparation and ACT follow-up — 2026-10-11
+
+The actual catalog Science Requirement Physics section explicitly prohibits enrollment in any Physics II GIR without prior Physics I GIR credit. The parser now assigns that group-level preparation to each observed Physics II row, and otherwise-undescribed 8.021/8.022 records retain it with additional prerequisites unknown. No title, content, classification or fixed-role inference follows. A renewed approved-network normal Fetcher attempt to the linked ACT undergraduate site failed connecting to robots.txt (ConnectError), before policy/content could be inspected. This remains a transport boundary, not an institutional access denial.
