@@ -406,3 +406,18 @@ def test_economics_annotation_scope_and_prerequisite_disagreement_are_preserved(
     generic=by['mit-ai-hass-economics-14-11']
     assert generic['description'] and generic['category_review']['status']=='unclassified'
     assert any('no independent catalog year' in n for n in generic['notes'])
+
+
+def test_faculty_description_does_not_override_graduate_level_or_guess_companions():
+    p=json.loads(Path('data/programs/mit-ai-decision-making-bs.json').read_text())
+    by={c['id']:c for c in p['courses']}
+    graduate=by['mit-ai-hass-ethics-21a-409j-11-238j']
+    assert graduate['description'] and graduate['category']=='human_context'
+    assert any('graduate (G)' in n and 'undergraduate eligibility' in n for n in graduate['notes'])
+    assert graduate['credits']is None and graduate['prerequisites']is None
+    assert graduate['public_site']is None and graduate['syllabus']is None
+    hacking=by['mit-ai-hass-computing-21a-511']
+    assert hacking['description'] and hacking['category']=='human_context'
+    lab=by['mit-ai-hass-cmsw-pool-external-21a-550-sts-064']
+    assert set(lab['category_review']['candidate_categories'])=={'applications','human_context'}
+    assert any('Enrollment limited to12' in n and 'additional assignments' in n for n in lab['notes'])
