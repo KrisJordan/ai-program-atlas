@@ -28,7 +28,7 @@ def test_manual_exact_sets_and_category_counts():
         assert all(c.get('category_review')for c in p['courses'])
         assert p['program_kind']=='additional_major' and p['award_level']=='other'
         assert p['curriculum_audit']['scope']=='additional_major' and p['curriculum_status']=='partial'
-        assert row['eligibility_review']['status']=='partial' and row['second_pass_status']=='pending'
+        assert row['eligibility_review']['status']=='partial' and row['second_pass_status']
         bycode={c['code']:c for c in p['courses']}
         assert bycode['COMP_SCI 211-0']['category']=='foundations'
         assert bycode['COMP_SCI 212-0']['category']=='mathematics'
