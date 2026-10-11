@@ -51,7 +51,7 @@ def test_curated_audit_distinguishes_prohibition_from_final_transfer_review():
     final=rules['mit-ai-registrar-transfer-hass-conflict']['summary']
     assert 'final signature' in final and 'neither grants an exception' in final
     assert 'individual approval' in final
-    assert any('earlier' in gap for gap in d['curriculum_audit']['unresolved_requirements'])
+    assert any('Fall2025' in gap and 'robots-disallowed' in gap for gap in d['curriculum_audit']['unresolved_requirements'])
     urls={s['url'] for s in d['sources']}
     assert set(reg.SOURCE_PARSERS)|set(sup.SOURCE_PARSERS) <= urls
 

@@ -531,6 +531,20 @@
           "locator": "Actual Literature semester selection and expanded course panels",
           "checked_at": "2026-10-11",
           "access_status": "read; ordinary public browser visible page"
+        },
+        {
+          "url": "https://catalog.mit.edu/archive/",
+          "catalog_year": null,
+          "locator": "Official archive link from degree-chart footer; historical entrance-policy follow-up",
+          "checked_at": "2026-10-11",
+          "access_status": "Robots disallows fetch through normal Fetcher; body not fetched, no browser/mirror bypass."
+        },
+        {
+          "url": "https://act.mit.edu/academics/undergraduate/",
+          "catalog_year": null,
+          "locator": "Bounded approved-network retry of existing ACT source",
+          "checked_at": "2026-10-11",
+          "access_status": "Normal Fetcher: Transport failure at https://act.mit.edu/robots.txt: ConnectError; content not reached. Prior Chrome client-block error remains historical, not publisher denial."
         }
       ],
       "checks": {
@@ -1828,9 +1842,9 @@
           "kind": "curriculum_source_question"
         },
         {
-          "issue": "AP/international-exam applicability for earlier entrants before Fall 2026 remains unresolved.",
-          "url": "https://firstyear.mit.edu/academics-exploration/ap-transfer-credit/advanced-placement/",
-          "kind": "curriculum_source_question"
+          "issue": "The current entrance-credit gateway expressly applies only to Fall2026 entrants(Class2030) and provides no historical policy link. The official catalog archive linked from the degree chart was checked through the normal Fetcher and robots disallows https://catalog.mit.edu/archive/. Fall2025 entrance-credit applicability remains unknown; current rules are not extended backward.",
+          "url": "https://catalog.mit.edu/archive/",
+          "kind": "historical_cohort_access_boundary"
         },
         {
           "issue": "Current catalog subject 6 page returns an empty description container. Departmental annotations supply 248 of the 261 versioned records, including nine generic special-subject descriptions; 13 exact codes have no annotation. This is not an authentication denial.",

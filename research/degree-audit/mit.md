@@ -171,3 +171,10 @@ Remaining accessible descriptions continue under the frontend contribution; prim
 Contributions3b0391c and25a7e22 replace15 limited-title dispositions with actual term-specific Literature evidence:Spring2026eight source occurrences,Fall2025six andFall2026one. Explicit prerequisites, repeated-credit permissions and12unit or6unit amounts are retained. Latin611/612 are separate half-term subjects that combineoneHASS only by petition after both;612 requires611orpermission. Spanish636/639/640 retain intermediateSpanish orpermission and teaching-language conditions. Programming for interactivefiction489 is helpful rather than required, and literary504AIexamples do not make it anAI-method course. Generic707war/peace evidence is withheld from the separate AI-topic row.
 
 HASS845 now comprises160 description-supported occurrences,682 limited-title judgments and three code-only unknowns. All22 identity/description holds persist. Manual role sets remain3fixed,275options,908contextual. Fulldegreeaudit staysinprogress; bounded descriptions are not general current-offering or eligible-alias guarantees.
+
+
+## Historical entrant boundary — 2026-10-11
+
+The current official entrance-credit gateway was reread: it applies only toClass2030enteringFall2026 and says policies change by enteringclass. Its visible links provide no earliercohort policy. The degree-chart footer links https://catalog.mit.edu/archive/; the normal robots-aware Fetcher refused that path with`Robots disallows fetch`. No body, browser workaround or mirror was used. Thus the earlierentrant scope is a specific access/evidence boundary, not a contradiction in the current2026rules and not unfinished reading of an available archive. Fall2025credit applicability remains unknown.
+
+A bounded approved-network ACT retry again stopped before content: `Transport failure: https://act.mit.edu/robots.txt: ConnectError`. It establishes a transport boundary, not publisher denial or proof that the linked ACT PDF is unavailable. The existing separate PDF/webpage source discrepancy remains unmerged.
