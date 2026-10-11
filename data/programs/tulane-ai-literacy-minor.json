@@ -16,7 +16,7 @@
   "overview": "An interdisciplinary minor in conceptual and applied AI, social impacts and AI-assisted problem solving; the catalog explicitly distinguishes it from the technical AI minor.",
   "catalog_year": "2026-2027",
   "verification_status": "partial",
-  "last_verified": "2026-10-10",
+  "last_verified": "2026-10-11",
   "curriculum_status": "partial",
   "sources": [
     {
@@ -57,6 +57,26 @@
       "source_date": null,
       "catalog_year": "2026-2027",
       "locator": "CMPS 1500 and CMPS 1501 course blocks",
+      "confidence": "high"
+    },
+    {
+      "id": "tulane-literacy-declaration",
+      "url": "https://advising.tulane.edu/resources/declarations",
+      "title": "Major or Minor Declarations",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Declaring All Other Programs: three-step department approval and College Advising submission",
+      "confidence": "high"
+    },
+    {
+      "id": "tulane-university-credit-policy",
+      "url": "https://catalog.tulane.edu/university/",
+      "title": "The University — Academic Policies",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Credit-Hour; Curriculum Effective Date; catalog 2026–2027",
       "confidence": "high"
     }
   ],
@@ -208,7 +228,7 @@
       "code": "CMPS 1500",
       "name": "Intro to Computer Science I",
       "credits": 4,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "description": null,
       "prerequisites": "Corequisite: CMPS 1501 (zero-credit laboratory).",
       "category": "ai_ml",
@@ -282,7 +302,7 @@
       "kind": "all",
       "count": null,
       "credits": 15,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "other",
       "source_id": "tulane-ai-literacy-minor-catalog",
       "source_text": null,
@@ -296,7 +316,7 @@
       "kind": "all",
       "count": 1,
       "credits": 3,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "other",
       "source_id": "tulane-ai-literacy-minor-catalog",
       "source_text": null,
@@ -326,7 +346,7 @@
       "kind": "choose_courses",
       "count": 2,
       "credits": 6,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "other",
       "source_id": "tulane-ai-literacy-minor-catalog",
       "source_text": null,
@@ -451,7 +471,7 @@
       "kind": "choose_courses",
       "count": 2,
       "credits": 6,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "other",
       "source_id": "tulane-ai-literacy-minor-catalog",
       "source_text": null,
@@ -664,6 +684,34 @@
       "source_text": null,
       "summary": "SSE students may add one or two minors. At least 24 major credits must remain separate from minors/certificates; minor GPA is at least 2.000, subject to stricter department rules.",
       "course_ids": []
+    },
+    {
+      "id": "tulane-ai-literacy-minor-declaration-process",
+      "parent_id": null,
+      "title": "General declaration procedure",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "tulane-literacy-declaration",
+      "source_text": null,
+      "summary": "The advising page’s All Other Programs process applies to programs outside its named exceptions: obtain the Major/Minor Declaration Form, have the relevant department review and sign it after advising, then return it to College Advising for processing. Email submissions must use the Tulane account; physical submission is also accepted. Department-specific instructions may supplement this process; no form is submitted by this inventory.",
+      "course_ids": []
+    },
+    {
+      "id": "tulane-ai-literacy-minor-applicable-catalog",
+      "parent_id": null,
+      "title": "Catalog applicability and exception authority",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "tulane-university-credit-policy",
+      "source_text": null,
+      "summary": "New programs and curriculum changes become effective in fall and must appear in that academic year’s catalog. Students may complete requirements published for their program matriculation; the responsible dean resolves old/new-catalog disputes and exceptions. The current catalog edition does not establish this minor’s launch date.",
+      "course_ids": []
     }
   ],
   "notes": [
@@ -672,31 +720,34 @@
     "The published total is 15 credits with 3/6/6 group allocations. Individual table credits are blank. The separately checked CMPS 1500 catalog block states four credits and a zero-credit CMPS 1501 corequisite; how excess credit fits the six-credit group needs clarification. No invented three-credit value or normalized total is supplied.",
     "BUSG 4360/ENGP 3460 and CMPS 1100/1500 are each one OR option. Equivalent/special-topics options are open only with the named faculty committee approval.",
     "SSE-specific major overlap limits apply conditionally to SSE degree students; NTC hosts the minor. Other host-school-specific restrictions have not been exhaustively checked.",
-    "The title and catalog edition do not prove a launch date. Public sites/syllabi, other course prerequisites and credit normalization remain unknown."
+    "The title and catalog edition do not prove a launch date. Public sites/syllabi, other course prerequisites and credit normalization remain unknown.",
+    "2026-10-11: General declaration procedure is verified. University Credit-Hour policy explicitly bases academic credits on a semester; existing amounts normalized without conversion. The 4-credit CMPS 1500 versus 6-credit group/15-credit total discrepancy remains unresolved; no credit is discarded or invented."
   ],
   "curriculum_audit": {
     "scope": "minor",
-    "reviewed_at": "2026-10-10",
+    "reviewed_at": "2026-10-11",
     "source_ids": [
       "tulane-ai-literacy-minor-catalog",
       "tulane-ai-literacy-minor-ntc-policies",
       "tulane-ai-literacy-minor-sse-policies",
-      "tulane-ai-literacy-minor-cmps-catalog"
+      "tulane-ai-literacy-minor-cmps-catalog",
+      "tulane-literacy-declaration",
+      "tulane-university-credit-policy"
     ],
     "sections": [
       "Three groups and 14 named course options",
       "OR pairs and committee-approved equivalents",
       "Minor GPA and major/minor/certificate overlap",
       "NTC minor policies and conditional SSE restrictions",
-      "CMPS 1500 credit/corequisite cross-check"
+      "CMPS 1500 credit/corequisite cross-check",
+      "NTC general declaration process; university semester credit-hour definition and catalog applicability"
     ],
     "unresolved_requirements": [
-      "Clarify four-credit CMPS 1500 allocation within the six-credit problem-solving group and published 15-credit total",
-      "Minor declaration procedure and any additional non-SSE host-school restrictions not yet verified"
+      "Clarify four-credit CMPS 1500 allocation within the six-credit problem-solving group and published 15-credit total; the current minor table contains no allocation exception.",
+      "Additional program-specific declaration instructions and non-SSE host-school restrictions remain unverified."
     ],
     "metadata_gaps": [
       "All other individual credit values and prerequisite statements unverified",
-      "Credit unit normalization unverified",
       "Course descriptions, public course sites, syllabi and launch date unverified"
     ]
   }

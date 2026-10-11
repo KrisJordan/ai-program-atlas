@@ -187,3 +187,8 @@ def parse_school(html):
 
 
 SOURCE_PARSERS = {NTC_URL: parse_college, SSE_URL: parse_school}
+
+from atlas.adapters.tulane_literacy_policy_followup import DECLARATION,UNIVERSITY,parse_declaration,parse_university
+SOURCES=(*SOURCES,DECLARATION,UNIVERSITY)
+SOURCE_PARSERS[DECLARATION]=lambda html:parse_declaration(html,PROGRAM_ID)
+SOURCE_PARSERS[UNIVERSITY]=lambda html:parse_university(html,PROGRAM_ID)
