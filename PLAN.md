@@ -14,7 +14,7 @@ Shared taxonomy v1 now separates source-reviewed, mixed, unclassified and legacy
 
 The user requested three further discovery refinements: a source-confirmed **Second majors** group; the actual parent program and award on every concentration/track card; and an accessible **Find a program** pane collapsed by default with visible active-filter context. Migration 013 separates those curricular relationships from awards and preserves source evidence, unknowns and revisions. All five additional-major catalog pages were reread successfully; all 50 concentration relationships have been inspected individually. Existing category ranks, family membership, IDs, comparison selections and shareable filter state remain part of the required browser gate.
 
-The current published checkpoint carries these discovery refinements and subsequent degree corrections. It integrates all 63 primary audit entries: two primary reviews audited, 56 individually blocked, five in progress, and zero undocumented. No full independent second pass is certified. Migration through 015, repeat ingest (zero changes), database integrity and foreign keys passed; the maintained publication file is 80,265,216 bytes after compaction, retaining facts and history. Its 24,638 course observations and 19,743 requirement nodes contain 14,562 descriptions and 6,963 prerequisite statements. Course notes are now relationally stored and available through accessible HTML disclosures. The audit continues beyond publication.
+The current published checkpoint carries these discovery refinements and the bounded primary degree corrections. All 63 primary reviews have outcomes: **two audited, 61 individually blocked, zero in progress and zero pending**. No full independent second pass is certified. Schema 015, repeat ingestion (zero changes), database integrity and foreign keys passed; the maintained publication file is **88,653,824 bytes** after compaction, retaining facts and history. Its **26,119 course observations and 19,961 requirement nodes** contain **17,728 descriptions and 8,323 prerequisite statements**. Course notes are relationally stored and available through accessible HTML disclosures. Remaining degree evidence questions, target-cohort enumeration and institution-wide searches remain explicit.
 
 Rice received a fresh independent 14-source review of all 43 represented course records. The maintained database now agrees with its manually checked 13 fixed identities: three computing foundations (COMP 140/182/215), two systems (COMP 222/329), one mathematics, five AI, one human-context and one domain course. Three reciprocal cross-lists reduce its 30 option source records to 26 identities. Desktop/mobile required/options/comparison regressions passed; public instructor-approved registration procedures resolve the statistics and vision restrictions as conditional paths, without implying permission was granted. Inconsistent summer versus fall/spring residency wording remains the sole documented Rice policy blocker, so its full-degree second-pass status remains partial. Concentration parent reviews are 47 verified, two partial on the award, and one university-wide immersion with no specific verified parent.
 
@@ -22,8 +22,8 @@ Rice received a fresh independent 14-source review of all 43 represented course 
 
 - Repository: https://github.com/KrisJordan/ai-program-atlas
 - Site: https://krisjordan.github.io/ai-program-atlas/
-- Verified release: `6555510165abce8d4532e6ed06e9d38230c32a9c`, [successful CI and Pages deployment](https://github.com/KrisJordan/ai-program-atlas/actions/runs/38122729680).
-- Fresh locked uv environment and clean committed source: **3,249 tests passed**, including all **58 required Chromium tests**. The 438 skipped cases require optional ignored source caches or historical snapshots; no browser tests were skipped.
+- Verified release: `c90c128e7e341d751dd51e7c17007ade052eb592`, [successful CI and Pages deployment](https://github.com/KrisJordan/ai-program-atlas/actions/runs/38130959873).
+- Fresh locked uv environment and clean committed source: **4,083 tests passed**, including all **58 required Chromium tests**. The 454 skipped cases require optional ignored source caches or historical snapshots; no browser tests were skipped.
 - Fresh reconstruction and maintained publication copy passed integrity checks and agreed on current facts; additional historical coverage sources were preserved. Repeat ingest changed zero programs. Repeated static builds were byte-identical across 175 files.
 - Live Rice has 13 fixed mapped identities including three computing foundations and two systems courses, with all 13 classifications reviewed; its 30 option source records resolve to 26 identities. All five second-major labels, all 50 concentration parent contexts, collapsed filters and active query persistence passed desktop/mobile checks. Live Case BA/BS fixed foundations both equal two; three introductory programming alternatives remain option records. All six ranking category/type panels passed ascending rank checks on desktop/mobile, including filtering, explicit name sort and history.
 - Live public JSON matched these counts, and every projected curriculum profile and award bucket matched the source data. Live checks passed cohort tabs, BS/BSE/BA/Other filters, keyboard navigation, hidden comparison selection, profile toggling, reload/back/forward, comparison-clear focus, direct new and existing pages and 390px mobile layout. Screenshots were visually checked; no JavaScript errors or document overflow occurred. Family, empty-state, no-JS and multi-award cases also passed the required browser suite.
@@ -40,11 +40,11 @@ Rice received a fresh independent 14-source review of all 43 represented course 
 | Concrete programs | 168 |
 | Degrees / minors / concentrations / additional majors | 63 / 50 / 50 / 5 |
 | Complete / partial / pending requirement inventories | 46 / 115 / 7 |
-| Program-course records / resolved requirement nodes | 24,638 / 19,743 |
+| Program-course records / resolved requirement nodes | 26,119 / 19,961 |
 | Program families / concrete family variants | 2 / 31 |
-| Descriptions / prerequisite statements | 14,562 / 6,963 |
-| Credit amounts with verified units | 13,693 |
-| Public course sites / example syllabi | 294 / 261 |
+| Descriptions / prerequisite statements | 17,728 / 8,323 |
+| Credit amounts with verified units | 16,717 |
+| Public course sites / example syllabi | 305 / 269 |
 
 Caltech has one bounded no-qualifying-program finding after the current program directory and all 32 option/minor catalog pages were reviewed. It is a dated search result, not a claim about future offerings.
 
@@ -87,7 +87,7 @@ This status does **not** mean complete program evidence. Course descriptions, in
 
 ## Current continuation
 
-The verified public release remains **65555101** with the counts above. Its source, clean tests, CI/Pages and six live check scripts passed. Later source corrections are local until separately frozen and verified. Candidate 3d6587df was withheld after one outdated UCSB status assertion failed; the 3,550 other tests and deterministic reconstruction passed. The assertion is corrected with focused evidence checks. See [release history](research/release-history-2026-10-11.md).
+The verified public content checkpoint is **c90c128e**, with the counts above. Its clean locked tests, fresh/maintained reconstruction, deterministic build, CI/Pages and all six live checks passed. It includes the RIT theatre-note clarification that held the previous candidate. See [release history](research/release-history-2026-10-11.md).
 
 The current committed primary ledgers have **two audited, 61 individually blocked, zero in progress and zero pending**; full independent certification remains zero. Inventory expansion remains paused for all 63 degree reviews. Workload and unread accessible sources are never access blockers.
 
@@ -106,12 +106,10 @@ The current committed primary ledgers have **two audited, 61 individually blocke
 5. **Keep scope and missingness explicit.** The 115 partial published requirement inventories, course metadata, verified teaching sites/syllabi, launch dates and source-stated outcomes are separate gaps. A confirmed title is not an exhaustive institution search. Caltech's single bounded absence finding does not establish absence elsewhere.
 6. **Publish only tested snapshots.** Freeze committed evidence and primary ledgers, ingest into maintained SQLite, repeat to zero changes, verify foreign keys/integrity, compare fresh and maintained current facts, reproduce the build, run locked clean tests with required Chromium, push the exact tested SHA, then verify CI/Pages and the live site. Preserve newer agent work outside the snapshot.
 
-See the [audit contract](docs/DEGREE_AUDIT.md), source-specific adapter notes, dated survey ledgers and [release history](research/release-history-2026-10-11.md). `uv run atlas status` and `uv run atlas candidates` expose maintenance work. Refreshes queue observations for review and preserve manual corrections; they do not silently replace reviewed database facts. The full cohort and audit remain incomplete beyond any publication checkpoint.
+See the [audit contract](docs/DEGREE_AUDIT.md), source-specific adapter notes, dated survey ledgers and [release history](research/release-history-2026-10-11.md). `uv run atlas status` and `uv run atlas candidates` expose maintenance work. Refreshes queue observations for review and preserve manual corrections; they do not silently replace reviewed database facts. The full cohort and independent degree audit remain incomplete beyond this publication checkpoint.
 
-## Frozen source checkpoint 1358191 — release verification pending
+## Verified bounded primary checkpoint
 
-This snapshot compiles all 63 final primary ledgers and ingests only committed program evidence. It includes the RIT theatre-note clarification, completed bounded MIT/RIT source queues, all 652 UCSD code-only dispositions, guarded chapter prerequisites and precise UCSB missing-identity notes. Earlier withheld candidates remain documented in [release history](research/release-history-2026-10-11.md).
+Source ledgers were compiled at 1358191, then the maintained database and release plan were frozen as c90c128e. Only committed evidence entered that snapshot. All 652 former UCSD code-only records have actual descriptions or exact-heading dispositions; MIT and RIT have individually reconciled finite source queues. The release preserves remaining identity, edition, policy and access questions rather than certifying unresolved degrees.
 
-The maintained schema-015 database is **88,653,824 bytes** after compaction. Repeat ingestion changes zero programs; integrity and foreign keys pass. Candidate coverage remains 168 programs at 194 loaded institutions, with **26,119 course observations, 19,961 requirement nodes, 17,728 description summaries, 8,323 prerequisite statements, 16,717 known credit amounts with units, 305 teaching links and 269 syllabi**. Primary audit outcomes are **two audited, 61 individually blocked, zero in progress and zero pending**; full independent certification remains zero.
-
-These remain candidate totals until the clean locked test suite with required Chromium, fresh/maintained reconstruction comparison, deterministic build, CI/Pages and all live checks pass. The verified public checkpoint above remains 65555101. Full cohort enumeration and institution search completeness remain separate, unfinished work.
+The full target cohort remains incomplete, 114 loaded institutions have only partial inspection, and CSRankings numerical import remains held for reuse permission or qualified review. These limits are independent of the successful software and publication checks.
