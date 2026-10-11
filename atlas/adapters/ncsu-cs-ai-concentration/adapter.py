@@ -83,3 +83,7 @@ def parse(html):
         rule('ncsu-ai-host-gpa', 'Host CS major GPA condition', SOURCE_ID, kind='note', summary='Either earn at least a 2.0 major GPA over all CSC courses attempted at NC State, or, when that GPA is below 2.0, have no grade below C-minus in any CSC course used for major requirements.'),
         rule('ncsu-ai-host-entry', 'Host degree entry', SOURCE_ID, kind='note', summary='Students enter the CS degree after the Engineering First-Year curriculum through the college CODA process; detailed admission and concentration-declaration rules require separate review.')]
     return dict(id=PROGRAM_ID, title='Artificial Intelligence', award_level='concentration', program_kind='concentration', courses=list(t.courses.values()), requirements=requirements, outcomes=[dict(text='The concentration develops preparation in intelligent and autonomous systems, machine learning with real datasets, and intelligent computing platforms.', kind='source_stated', statement_type='program_aim', source_id=SOURCE_ID, locator='Artificial Intelligence Concentration overview')])
+
+from atlas.adapters.ncsu_ai_policies import SOURCE_PARSERS as POLICY_PARSERS
+SOURCE_PARSERS={SOURCES[0]:parse,**POLICY_PARSERS}
+SOURCES=tuple(dict.fromkeys([*SOURCES,*POLICY_PARSERS]))

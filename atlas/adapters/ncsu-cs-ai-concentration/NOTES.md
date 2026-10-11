@@ -25,3 +25,11 @@ The [official academic calendar](https://catalog.ncsu.edu/about/academic-calenda
 ## Refresh and validation
 
 The source-specific parser extracts current course rows and credit amounts and checks headings, cap, grade references and key policy conditions. It emits no audit, verification timestamp or completeness. Synthetic fixtures contain invented course titles and exercise source scoping, credit choices, one-credit options, missing identity, access gates and changed policy references. Raw official HTML remains in `/tmp` or ignored fetch cache, not committed.
+
+## Public policy follow-up — 2026-10-11
+
+40 courses, 20 nodes. Added twelve guarded policy observations from the AI department page, Curriculum Restrictions, and public Advising FAQ: admission course/GPA thresholds and review timing; department-approved AI CSC 495 option (catalog omission explicit); prior substitution/study-abroad approval; distinct credit-bearing slots; Group A exclusion; six-hour non-NC-State-GPA caps per host elective category; letter grading; application timing; Robotics-track exclusion; topic reuse; external transfer review. Do not use general host elective lists to expand the narrower concentration pools.
+
+DSA 405/406/412/435 are independently verified in the official Data Science subject page linked by the course directory: https://catalog.ncsu.edu/course-descriptions/dsc/ . The URL slug says dsc, but all four displayed codes are DSA and each is one credit. Descriptions/prerequisite skills now sourced. This resolves whether DSA identities exist, not whether older DSC plan labels are aliases. `/search/?P=DSA+...` is robots-disallowed to our fetcher; we did not bypass that route. The independently linked public subject document passed robots and HTTP200.
+
+Remaining source conflicts: C vs C-minus pool heading; department approved CSC495 absent from catalog list; department says apply after CSC230/316 while advising permits application while enrolled, with C-or-higher completion before review. No automated reconciliation. Additional local residency/exception rules and normalized units unverified; status remains partial. Host full degree is outside scope. Source-specific parsers emit observations only, never audit certification. Raw HTML stays ignored.
