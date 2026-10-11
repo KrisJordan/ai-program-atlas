@@ -27,7 +27,7 @@ HEADINGS = {
 def eligibility(body):
     """Keep explicit prerequisite/permission/credit exclusions, never infer none."""
     # The full suffix also retains qualifiers and cross-list text following a rule.
-    match = re.search(r'\b(?:Prereq(?:uisites?)?(?: or Coreq)?\s*:|Coreq\s*:|Recommended (?:preparation|background)|Admission to this course|Credit for at most|Students may earn credit for only|Students may not (?:receive|earn) credit)', body, re.I)
+    match = re.search(r'\b(?:Prereq(?:uisites?)?(?: or Coreq)?\s*:|Coreq\s*:|Recommended (?:preparation|background)|Admission to this course|Credit given for only|Credit for at most|Students cannot earn credit|A student may (?:not receive|receive) credit|Students may earn credit for only|Students may not (?:receive|earn) credit)', body, re.I)
     return body[match.start():] if match else None
 
 

@@ -29,3 +29,6 @@ SOURCE_PARSERS = {policies.DEGREE_URL: parse_degree_policy, policies.UGER_URL: p
 
 from atlas.adapters import case_degree_metadata
 SOURCES = case_degree_metadata.register(PROGRAM_ID, "BA", SOURCES, SOURCE_PARSERS)
+
+from atlas.adapters import case_uger_metadata
+SOURCES = case_uger_metadata.register(PROGRAM_ID, "BA", SOURCES, SOURCE_PARSERS)

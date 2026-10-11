@@ -296,6 +296,9 @@ def parse_uger(html, program_id, award):
         kind="note",
         summary="Quantitative reasoning requires a passing letter grade in an approved course of at least three credits; approved test and transfer credit may satisfy it. Moral/ethical reasoning, global perspectives, and human diversity each require passing letter grades in an approved course or sequence. Local/global engagement permits passing an approved course/sequence or participating in an approved activity. Transfer substitution for any perspective requires FSCUE appeal approval.",
     )
+    # UGER approval is not subject evidence; description parsers supply reviewed taxonomy.
+    for course in t.courses.values():
+        course["category"] = "other"
     return {
         "id": program_id,
         "courses": list(t.courses.values()),
