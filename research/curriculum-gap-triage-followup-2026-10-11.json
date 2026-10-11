@@ -1,0 +1,1139 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-11",
+  "snapshot_commit": "660706014c2df58d33b62bee8bb09eb5fa7d32de",
+  "historical_ledger": "research/curriculum-gap-triage.json",
+  "historical_snapshot_commit": "1eb6d3aaf8360a63e24bd58480eb94399ef37f0c",
+  "basis": "Committed program audits, registered official URLs, adjacent adapter NOTES and continuation commits; no new network claims in this reconciliation. Parent assignment list controls ownership as of this review.",
+  "counts": {
+    "all_programs": 125,
+    "current_status": {
+      "partial": 87,
+      "complete": 33,
+      "pending": 5
+    },
+    "historical_96_current_status": {
+      "partial": 87,
+      "complete": 4,
+      "pending": 5
+    },
+    "routing": {
+      "specific_access_or_authoritative_clarification_needed": 20,
+      "assigned_active_or_continuing_workstream": 61,
+      "resolved_by_later_committed_audit": 4,
+      "unassigned_public_review_candidate": 7,
+      "claimed_public_review_candidate": 1,
+      "conditional_public_followup_not_confirmed_blocked": 3
+    }
+  },
+  "resolved_historical_ids": [
+    "case-western-reserve-university-artificial-intelligence-ba-degree",
+    "case-western-reserve-university-artificial-intelligence-bs-degree",
+    "rit-ai-society-minor",
+    "rochester-institute-of-technology-artificial-intelligence-minor-minor"
+  ],
+  "methodology": [
+    "Historical ledger is unchanged. This supplement is another fixed snapshot, not a live ownership system.",
+    "Routing is editorial judgment, not an assertion that all unattempted URLs are accessible. Verify normal robots/auth/transport policy on each fetch.",
+    "Unresolved audit text remains the authoritative recorded gap; links/pointers below prevent copying an obsolete historical gap after later source work.",
+    "Metadata-only gaps (description, generic prerequisites, credit-unit normalization, launch dates, syllabus availability) do not establish missing requirements. Individual permission is not automatically an inventory gap when the published approval route is complete.",
+    "An open advisor-approved elective/subject route can be a complete rule; do not require enumeration of all university courses or all optional second degrees.",
+    "Rows routed to clarification include source conflicts, genuinely missing finite lists, and exact access conditions documented in their NOTES. They are not claims of publisher denial or program absence."
+  ],
+  "accessible_next_actions": [
+    {
+      "priority": 1,
+      "program_ids": [
+        "new-jersey-institute-of-technology-business-with-ai-bs-degree"
+      ],
+      "owner": "pilots_cmu_penn",
+      "kind": "accessible_review_plus_clarification",
+      "next_action": "Inspect the already-published science GER options and their ordinary official lecture/lab course descriptions, plus the school curriculum links, for explicit pairing and elective rules. Map confirmed pairs without inferring all listed lectures/labs are interchangeable. Preserve PHIL 310 reuse and any unresolved Rutgers lab-credit discrepancy.",
+      "urls": [
+        "https://catalog.njit.edu/undergraduate/academic-policies-procedures/general-education-requirements/natural-science-ger/",
+        "https://management.njit.edu/bachelors-science-business-ai"
+      ]
+    },
+    {
+      "priority": 2,
+      "program_ids": [
+        "stevens-institute-of-technology-artificial-intelligence-bs-degree"
+      ],
+      "owner": null,
+      "kind": "accessible_rendered_review_plus_applicability",
+      "next_action": "Use the ordinary public catalog browser to inspect math/science/general-elective eligibility and any linked School of Computing completion policy. First decide whether an open advisor-approved rule is already fully represented: do not demand an imaginary finite list. Keep SES/SSB-only HASS and 600-level applicability questions separate from course-description metadata.",
+      "urls": [
+        "https://stevens.catalog.prod.coursedog.com/programs/qT6Ld1CzBAhQsVKYFNVv/requirements-and-concentrations-n90Np",
+        "https://stevens.catalog.prod.coursedog.com/academic-policies-procedures/undergraduate-education/requirements-procedures#course-options"
+      ]
+    },
+    {
+      "priority": 3,
+      "program_ids": [
+        "mit-ai-decision-making-bs"
+      ],
+      "owner": null,
+      "kind": "accessible_broad_inventory_plus_source_conflicts",
+      "next_action": "Inspect the official HASS concentration directory and each selected eligible field plan not already represented by Computing and Society. Map open approval routes as such. This can reduce inventory gaps but cannot resolve 6-4_2025/Fall-2026/@2027FA applicability, 6.4300 credits, or external HASS Distribution conflicts without new authoritative evidence.",
+      "urls": [
+        "https://registrar.mit.edu/registration-academics/academic-requirements/hass-requirement/hass-concentrations",
+        "https://shass.mit.edu/for-students/undergraduate-study/computing-and-society-concentration/"
+      ]
+    },
+    {
+      "priority": 4,
+      "program_ids": [
+        "miami-ai-technologies-business-bsba",
+        "university-of-miami-artificial-intelligence-technologies-for-business-other-degree",
+        "university-of-miami-data-science-and-artificial-intelligence-ba-degree",
+        "miami-data-science-ai-bs"
+      ],
+      "owner": null,
+      "kind": "accessible_broad_inventory_plus_source_conflicts",
+      "next_action": "Follow the official general-education policy links to the approved cognate/attribute directory and Arts and Sciences links to language-specific heritage placement. Verify whether secondary-credential requirements are represented by an approved open route or require a bounded chosen credential inventory. Do not pretend every offered second major is a local AI requirement. Preserve transfer-summer wording and BS-language-credit conflicts.",
+      "urls": [
+        "https://bulletin.miami.edu/general-university-information/undergraduate-policies-and-procedures/general-education-requirements/",
+        "https://bulletin.miami.edu/undergraduate-academic-programs/arts-sciences/"
+      ]
+    },
+    {
+      "priority": 5,
+      "program_ids": [
+        "rochester-institute-of-technology-artificial-intelligence-bs-degree"
+      ],
+      "owner": null,
+      "kind": "bounded_public_followup_with_catalog_access_barrier",
+      "next_action": "Inspect the existing public AI/college sources for AI-specific writing-intensive and completion designations. Full GE/immersion pools remain access-dependent: the recorded registrar link redirects to a catalog whose robots preflight returned 202. Do not bypass that path or infer an AI WI designation from a course title. Retain MATH-190 immersion reuse conflict.",
+      "urls": [
+        "https://www.rit.edu/study/artificial-intelligence-bs",
+        "https://academiccatalog.rit.edu/programs/artificial-intelligence-bs/",
+        "https://www.rit.edu/policies/d020"
+      ]
+    },
+    {
+      "priority": 6,
+      "program_ids": [
+        "notre-dame-ai-essentials-business-minor"
+      ],
+      "owner": null,
+      "kind": "conditional_public_policy_review",
+      "next_action": "Inspect ordinary official undergraduate home-college policies for any explicit minor completion/transfer rule applicable to this all-majors minor. Missing additional-elective content and Mendoza/university pass-fail conflict still require authoritative clarification; generic department silence must not become a fabricated extra rule.",
+      "urls": [
+        "https://catalog.nd.edu/undergraduate/business/"
+      ]
+    },
+    {
+      "priority": 7,
+      "program_ids": [
+        "tulane-ai-literacy-minor"
+      ],
+      "owner": null,
+      "kind": "conditional_public_policy_review",
+      "next_action": "Inspect publicly linked non-SSE home-school minor restrictions only where the represented minor explicitly incorporates them. Generic declaration is already mapped; optional administrative detail alone is not an inventory gap. The CMPS 1500 credit/group-total conflict remains separate.",
+      "urls": [
+        "https://catalog.tulane.edu/newcomb-tulane/ai-literacy-minor/",
+        "https://catalog.tulane.edu/newcomb-tulane/"
+      ]
+    },
+    {
+      "priority": 8,
+      "program_ids": [
+        "university-of-maryland-college-park-human-centered-ai-ba-degree"
+      ],
+      "owner": null,
+      "kind": "conditional_public_viewer_review",
+      "next_action": "A public Google Drive viewer loaded, while its embedded download was robots-disallowed. A bounded ordinary viewer inspection may determine whether approved sequences are visibly readable; do not retry the denied download, invent hidden endpoints, or equate unread viewer content with login denial. General course prerequisites/individual permission are separate unless a program admission/completion rule.",
+      "urls": [
+        "https://arhu.umd.edu/academics/advising/global-engagement/"
+      ]
+    }
+  ],
+  "continuation_evidence": [
+    {
+      "commit": "bb7e726",
+      "scope": "Penn BSE classification pools and degreewide policy; four source/applicability conflicts remain."
+    },
+    {
+      "commit": "a2323b7",
+      "scope": "Columbia math alternatives and college/department minor policies; duplicate and overlap ambiguity remain."
+    },
+    {
+      "commit": "e7208bf",
+      "scope": "Duke public policies and substitutions; restricted Stellic and source conflicts remain."
+    },
+    {
+      "commit": "7f801e0",
+      "scope": "Georgia Tech eligibility and neuroscience discrepancy corroboration; exact ECE/participating-school clarification remains."
+    },
+    {
+      "commit": "e04bbaa",
+      "scope": "Notre Dame elective comparison and pass/fail scope; finite blank pool and policy conflicts remain."
+    },
+    {
+      "commit": "ee4d632",
+      "scope": "Penn State true minor directory and Villanova empty approved pool; missing public list rather than invented access denial."
+    }
+  ],
+  "reconciliation": [
+    {
+      "id": "boston-college-artificial-intelligence-concentration-concentration-concentration",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "specific_access_or_authoritative_clarification_needed",
+      "owner": null,
+      "audit_gap_count": 3,
+      "evidence_path": "data/programs/boston-college-artificial-intelligence-concentration-concentration-concentration.json",
+      "notes_path": "atlas/adapters/boston-college-artificial-intelligence-concentration-concentration-concentration/NOTES.md"
+    },
+    {
+      "id": "case-applied-ai-minor",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "pilots_purdue",
+      "audit_gap_count": 1,
+      "evidence_path": "data/programs/case-applied-ai-minor.json",
+      "notes_path": "atlas/adapters/case-applied-ai-minor/NOTES.md"
+    },
+    {
+      "id": "case-western-reserve-university-artificial-intelligence-ba-degree",
+      "previous_status": "partial",
+      "current_status": "complete",
+      "routing": "resolved_by_later_committed_audit",
+      "owner": "pilots_purdue",
+      "audit_gap_count": 0,
+      "evidence_path": "data/programs/case-western-reserve-university-artificial-intelligence-ba-degree.json",
+      "notes_path": "atlas/adapters/case-western-reserve-university-artificial-intelligence-ba-degree/NOTES.md"
+    },
+    {
+      "id": "case-western-reserve-university-artificial-intelligence-bs-degree",
+      "previous_status": "partial",
+      "current_status": "complete",
+      "routing": "resolved_by_later_committed_audit",
+      "owner": "pilots_purdue",
+      "audit_gap_count": 0,
+      "evidence_path": "data/programs/case-western-reserve-university-artificial-intelligence-bs-degree.json",
+      "notes_path": "atlas/adapters/case-western-reserve-university-artificial-intelligence-bs-degree/NOTES.md"
+    },
+    {
+      "id": "clemson-university-artificial-intelligence-minor-minor",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "survey_national",
+      "audit_gap_count": 2,
+      "evidence_path": "data/programs/clemson-university-artificial-intelligence-minor-minor.json",
+      "notes_path": "atlas/adapters/clemson-university-artificial-intelligence-minor-minor/NOTES.md"
+    },
+    {
+      "id": "columbia-ai-minor",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "specific_access_or_authoritative_clarification_needed",
+      "owner": null,
+      "audit_gap_count": 2,
+      "evidence_path": "data/programs/columbia-ai-minor.json",
+      "notes_path": "atlas/adapters/columbia-ai-minor/NOTES.md"
+    },
+    {
+      "id": "cornell-university-artificial-intelligence-minor-minor",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "survey_national",
+      "audit_gap_count": 1,
+      "evidence_path": "data/programs/cornell-university-artificial-intelligence-minor-minor.json",
+      "notes_path": "atlas/adapters/cornell-university-artificial-intelligence-minor-minor/NOTES.md"
+    },
+    {
+      "id": "delaware-ai-engineering-major",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "frontend",
+      "audit_gap_count": 3,
+      "evidence_path": "data/programs/delaware-ai-engineering-major.json",
+      "notes_path": "atlas/adapters/delaware-ai-engineering-major/NOTES.md"
+    },
+    {
+      "id": "drexel-ai-ml-bs",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "specific_access_or_authoritative_clarification_needed",
+      "owner": null,
+      "audit_gap_count": 4,
+      "evidence_path": "data/programs/drexel-ai-ml-bs.json",
+      "notes_path": "atlas/adapters/drexel-ai-ml-bs/NOTES.md"
+    },
+    {
+      "id": "duke-university-ai-and-machine-learning-concentration-concentration",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "specific_access_or_authoritative_clarification_needed",
+      "owner": null,
+      "audit_gap_count": 3,
+      "evidence_path": "data/programs/duke-university-ai-and-machine-learning-concentration-concentration.json",
+      "notes_path": "atlas/adapters/duke-university-ai-and-machine-learning-concentration-concentration/NOTES.md"
+    },
+    {
+      "id": "duke-university-artificial-intelligence-applications-and-implications-minor-minor",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "specific_access_or_authoritative_clarification_needed",
+      "owner": null,
+      "audit_gap_count": 2,
+      "evidence_path": "data/programs/duke-university-artificial-intelligence-applications-and-implications-minor-minor.json",
+      "notes_path": "atlas/adapters/duke-university-artificial-intelligence-applications-and-implications-minor-minor/NOTES.md"
+    },
+    {
+      "id": "duke-university-machine-learning-artificial-intelligence-minor-minor",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "specific_access_or_authoritative_clarification_needed",
+      "owner": null,
+      "audit_gap_count": 2,
+      "evidence_path": "data/programs/duke-university-machine-learning-artificial-intelligence-minor-minor.json",
+      "notes_path": "atlas/adapters/duke-university-machine-learning-artificial-intelligence-minor-minor/NOTES.md"
+    },
+    {
+      "id": "florida-international-university-artificial-intelligence-minor-minor",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "frontend",
+      "audit_gap_count": 3,
+      "evidence_path": "data/programs/florida-international-university-artificial-intelligence-minor-minor.json",
+      "notes_path": "atlas/adapters/florida-international-university-artificial-intelligence-minor-minor/NOTES.md"
+    },
+    {
+      "id": "furman-ai-bs",
+      "previous_status": "pending",
+      "current_status": "pending",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "root",
+      "audit_gap_count": 0,
+      "evidence_path": "data/programs/furman-ai-bs.json",
+      "notes_path": "atlas/adapters/furman-ai-bs/NOTES.md"
+    },
+    {
+      "id": "georgia-institute-of-technology-applications-of-artificial-intelligence-and-machine-learning-minor-minor",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "specific_access_or_authoritative_clarification_needed",
+      "owner": null,
+      "audit_gap_count": 2,
+      "evidence_path": "data/programs/georgia-institute-of-technology-applications-of-artificial-intelligence-and-machine-learning-minor-minor.json",
+      "notes_path": "atlas/adapters/georgia-institute-of-technology-applications-of-artificial-intelligence-and-machine-learning-minor-minor/NOTES.md"
+    },
+    {
+      "id": "georgia-institute-of-technology-computing-and-artificial-intelligence-minor-minor",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "specific_access_or_authoritative_clarification_needed",
+      "owner": null,
+      "audit_gap_count": 1,
+      "evidence_path": "data/programs/georgia-institute-of-technology-computing-and-artificial-intelligence-minor-minor.json",
+      "notes_path": "atlas/adapters/georgia-institute-of-technology-computing-and-artificial-intelligence-minor-minor/NOTES.md"
+    },
+    {
+      "id": "gonzaga-university-ai-in-engineering-and-applied-science-minor-minor",
+      "previous_status": "pending",
+      "current_status": "pending",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "root",
+      "audit_gap_count": 0,
+      "evidence_path": "data/programs/gonzaga-university-ai-in-engineering-and-applied-science-minor-minor.json",
+      "notes_path": "atlas/adapters/gonzaga-university-ai-in-engineering-and-applied-science-minor-minor/NOTES.md"
+    },
+    {
+      "id": "lehigh-university-artificial-intelligence-machine-learning-and-data-science-bs-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "specific_access_or_authoritative_clarification_needed",
+      "owner": null,
+      "audit_gap_count": 2,
+      "evidence_path": "data/programs/lehigh-university-artificial-intelligence-machine-learning-and-data-science-bs-degree.json",
+      "notes_path": "atlas/adapters/lehigh-university-artificial-intelligence-machine-learning-and-data-science-bs-degree/NOTES.md"
+    },
+    {
+      "id": "miami-ai-technologies-business-bsba",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "unassigned_public_review_candidate",
+      "owner": null,
+      "audit_gap_count": 2,
+      "evidence_path": "data/programs/miami-ai-technologies-business-bsba.json",
+      "notes_path": "atlas/adapters/miami-ai-technologies-business-bsba/NOTES.md"
+    },
+    {
+      "id": "miami-data-science-ai-bs",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "unassigned_public_review_candidate",
+      "owner": null,
+      "audit_gap_count": 5,
+      "evidence_path": "data/programs/miami-data-science-ai-bs.json",
+      "notes_path": "atlas/adapters/miami-data-science-ai-bs/NOTES.md"
+    },
+    {
+      "id": "mit-ai-decision-making-bs",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "unassigned_public_review_candidate",
+      "owner": null,
+      "audit_gap_count": 4,
+      "evidence_path": "data/programs/mit-ai-decision-making-bs.json",
+      "notes_path": "atlas/adapters/mit-ai-decision-making-bs/NOTES.md"
+    },
+    {
+      "id": "ncsu-cs-ai-concentration",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "frontend",
+      "audit_gap_count": 5,
+      "evidence_path": "data/programs/ncsu-cs-ai-concentration.json",
+      "notes_path": "atlas/adapters/ncsu-cs-ai-concentration/NOTES.md"
+    },
+    {
+      "id": "new-jersey-institute-of-technology-business-with-ai-bs-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "claimed_public_review_candidate",
+      "owner": "pilots_cmu_penn",
+      "audit_gap_count": 2,
+      "evidence_path": "data/programs/new-jersey-institute-of-technology-business-with-ai-bs-degree.json",
+      "notes_path": "atlas/adapters/new-jersey-institute-of-technology-business-with-ai-bs-degree/NOTES.md"
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "cohort",
+      "audit_gap_count": 1,
+      "evidence_path": "data/programs/northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree.json",
+      "notes_path": "atlas/adapters/northeastern-university-artificial-intelligence-and-behavioral-neuroscience-bs-boston-bs-degree/NOTES.md"
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "cohort",
+      "audit_gap_count": 1,
+      "evidence_path": "data/programs/northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree.json",
+      "notes_path": "atlas/adapters/northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree/NOTES.md"
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "cohort",
+      "audit_gap_count": 1,
+      "evidence_path": "data/programs/northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree.json",
+      "notes_path": "atlas/adapters/northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree/NOTES.md"
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-business-administration-bs-boston-bs-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "cohort",
+      "audit_gap_count": 1,
+      "evidence_path": "data/programs/northeastern-university-artificial-intelligence-and-business-administration-bs-boston-bs-degree.json",
+      "notes_path": "atlas/adapters/northeastern-university-artificial-intelligence-and-business-administration-bs-boston-bs-degree/NOTES.md"
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "cohort",
+      "audit_gap_count": 1,
+      "evidence_path": "data/programs/northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree.json",
+      "notes_path": "atlas/adapters/northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree/NOTES.md"
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-communication-studies-bs-boston-bs-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "cohort",
+      "audit_gap_count": 1,
+      "evidence_path": "data/programs/northeastern-university-artificial-intelligence-and-communication-studies-bs-boston-bs-degree.json",
+      "notes_path": "atlas/adapters/northeastern-university-artificial-intelligence-and-communication-studies-bs-boston-bs-degree/NOTES.md"
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "cohort",
+      "audit_gap_count": 1,
+      "evidence_path": "data/programs/northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree.json",
+      "notes_path": "atlas/adapters/northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree/NOTES.md"
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "cohort",
+      "audit_gap_count": 1,
+      "evidence_path": "data/programs/northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree.json",
+      "notes_path": "atlas/adapters/northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree/NOTES.md"
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "cohort",
+      "audit_gap_count": 1,
+      "evidence_path": "data/programs/northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree.json",
+      "notes_path": "atlas/adapters/northeastern-university-artificial-intelligence-and-ecology-and-evolutionary-biology-bs-boston-bs-degree/NOTES.md"
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-economics-bs-boston-bs-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "cohort",
+      "audit_gap_count": 1,
+      "evidence_path": "data/programs/northeastern-university-artificial-intelligence-and-economics-bs-boston-bs-degree.json",
+      "notes_path": "atlas/adapters/northeastern-university-artificial-intelligence-and-economics-bs-boston-bs-degree/NOTES.md"
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "cohort",
+      "audit_gap_count": 1,
+      "evidence_path": "data/programs/northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree.json",
+      "notes_path": "atlas/adapters/northeastern-university-artificial-intelligence-and-environmental-and-sustainability-sciences-bs-boston-bs-degree/NOTES.md"
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "cohort",
+      "audit_gap_count": 1,
+      "evidence_path": "data/programs/northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree.json",
+      "notes_path": "atlas/adapters/northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree/NOTES.md"
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-international-affairs-bs-boston-bs-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "cohort",
+      "audit_gap_count": 1,
+      "evidence_path": "data/programs/northeastern-university-artificial-intelligence-and-international-affairs-bs-boston-bs-degree.json",
+      "notes_path": "atlas/adapters/northeastern-university-artificial-intelligence-and-international-affairs-bs-boston-bs-degree/NOTES.md"
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "cohort",
+      "audit_gap_count": 1,
+      "evidence_path": "data/programs/northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree.json",
+      "notes_path": "atlas/adapters/northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree/NOTES.md"
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-linguistics-bs-boston-bs-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "cohort",
+      "audit_gap_count": 1,
+      "evidence_path": "data/programs/northeastern-university-artificial-intelligence-and-linguistics-bs-boston-bs-degree.json",
+      "notes_path": "atlas/adapters/northeastern-university-artificial-intelligence-and-linguistics-bs-boston-bs-degree/NOTES.md"
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "cohort",
+      "audit_gap_count": 1,
+      "evidence_path": "data/programs/northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree.json",
+      "notes_path": "atlas/adapters/northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree/NOTES.md"
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-philosophy-bs-boston-bs-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "cohort",
+      "audit_gap_count": 1,
+      "evidence_path": "data/programs/northeastern-university-artificial-intelligence-and-philosophy-bs-boston-bs-degree.json",
+      "notes_path": "atlas/adapters/northeastern-university-artificial-intelligence-and-philosophy-bs-boston-bs-degree/NOTES.md"
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-physics-bs-boston-bs-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "cohort",
+      "audit_gap_count": 1,
+      "evidence_path": "data/programs/northeastern-university-artificial-intelligence-and-physics-bs-boston-bs-degree.json",
+      "notes_path": "atlas/adapters/northeastern-university-artificial-intelligence-and-physics-bs-boston-bs-degree/NOTES.md"
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-psychology-bs-boston-bs-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "cohort",
+      "audit_gap_count": 1,
+      "evidence_path": "data/programs/northeastern-university-artificial-intelligence-and-psychology-bs-boston-bs-degree.json",
+      "notes_path": "atlas/adapters/northeastern-university-artificial-intelligence-and-psychology-bs-boston-bs-degree/NOTES.md"
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-public-health-bs-boston-bs-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "cohort",
+      "audit_gap_count": 1,
+      "evidence_path": "data/programs/northeastern-university-artificial-intelligence-and-public-health-bs-boston-bs-degree.json",
+      "notes_path": "atlas/adapters/northeastern-university-artificial-intelligence-and-public-health-bs-boston-bs-degree/NOTES.md"
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "cohort",
+      "audit_gap_count": 1,
+      "evidence_path": "data/programs/northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree.json",
+      "notes_path": "atlas/adapters/northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree/NOTES.md"
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "cohort",
+      "audit_gap_count": 1,
+      "evidence_path": "data/programs/northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree.json",
+      "notes_path": "atlas/adapters/northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree/NOTES.md"
+    },
+    {
+      "id": "northeastern-university-environmental-engineering-and-artificial-intelligence-bsenve-boston-other-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "cohort",
+      "audit_gap_count": 1,
+      "evidence_path": "data/programs/northeastern-university-environmental-engineering-and-artificial-intelligence-bsenve-boston-other-degree.json",
+      "notes_path": "atlas/adapters/northeastern-university-environmental-engineering-and-artificial-intelligence-bsenve-boston-other-degree/NOTES.md"
+    },
+    {
+      "id": "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "pilots_purdue",
+      "audit_gap_count": 4,
+      "evidence_path": "data/programs/northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree.json",
+      "notes_path": "atlas/adapters/northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree/NOTES.md"
+    },
+    {
+      "id": "notre-dame-ai-essentials-business-minor",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "conditional_public_followup_not_confirmed_blocked",
+      "owner": null,
+      "audit_gap_count": 2,
+      "evidence_path": "data/programs/notre-dame-ai-essentials-business-minor.json",
+      "notes_path": "atlas/adapters/notre-dame-ai-essentials-business-minor/NOTES.md"
+    },
+    {
+      "id": "penn-bse-ai",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "specific_access_or_authoritative_clarification_needed",
+      "owner": null,
+      "audit_gap_count": 4,
+      "evidence_path": "data/programs/penn-bse-ai.json",
+      "notes_path": "atlas/adapters/penn-bse-ai/NOTES.md"
+    },
+    {
+      "id": "penn-state-ai-engineering-minor",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "specific_access_or_authoritative_clarification_needed",
+      "owner": null,
+      "audit_gap_count": 1,
+      "evidence_path": "data/programs/penn-state-ai-engineering-minor.json",
+      "notes_path": "atlas/adapters/penn-state-ai-engineering-minor/NOTES.md"
+    },
+    {
+      "id": "purdue-ai-ba",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "pilots_purdue",
+      "audit_gap_count": 4,
+      "evidence_path": "data/programs/purdue-ai-ba.json",
+      "notes_path": "atlas/adapters/purdue-ai-ba/NOTES.md"
+    },
+    {
+      "id": "purdue-ai-bs",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "pilots_purdue",
+      "audit_gap_count": 6,
+      "evidence_path": "data/programs/purdue-ai-bs.json",
+      "notes_path": "atlas/adapters/purdue-ai-bs/NOTES.md"
+    },
+    {
+      "id": "rice-university-artificial-intelligence-bs-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "specific_access_or_authoritative_clarification_needed",
+      "owner": null,
+      "audit_gap_count": 2,
+      "evidence_path": "data/programs/rice-university-artificial-intelligence-bs-degree.json",
+      "notes_path": "atlas/adapters/rice-university-artificial-intelligence-bs-degree/NOTES.md"
+    },
+    {
+      "id": "rit-ai-society-minor",
+      "previous_status": "partial",
+      "current_status": "complete",
+      "routing": "resolved_by_later_committed_audit",
+      "owner": null,
+      "audit_gap_count": 0,
+      "evidence_path": "data/programs/rit-ai-society-minor.json",
+      "notes_path": "atlas/adapters/rit-ai-society-minor/NOTES.md"
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "unassigned_public_review_candidate",
+      "owner": null,
+      "audit_gap_count": 3,
+      "evidence_path": "data/programs/rochester-institute-of-technology-artificial-intelligence-bs-degree.json",
+      "notes_path": "atlas/adapters/rochester-institute-of-technology-artificial-intelligence-bs-degree/NOTES.md"
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-minor-minor",
+      "previous_status": "partial",
+      "current_status": "complete",
+      "routing": "resolved_by_later_committed_audit",
+      "owner": null,
+      "audit_gap_count": 0,
+      "evidence_path": "data/programs/rochester-institute-of-technology-artificial-intelligence-minor-minor.json",
+      "notes_path": "atlas/adapters/rochester-institute-of-technology-artificial-intelligence-minor-minor/NOTES.md"
+    },
+    {
+      "id": "stevens-institute-of-technology-artificial-intelligence-bs-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "unassigned_public_review_candidate",
+      "owner": null,
+      "audit_gap_count": 4,
+      "evidence_path": "data/programs/stevens-institute-of-technology-artificial-intelligence-bs-degree.json",
+      "notes_path": "atlas/adapters/stevens-institute-of-technology-artificial-intelligence-bs-degree/NOTES.md"
+    },
+    {
+      "id": "stevens-institute-of-technology-artificial-intelligence-minor-minor",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "specific_access_or_authoritative_clarification_needed",
+      "owner": null,
+      "audit_gap_count": 1,
+      "evidence_path": "data/programs/stevens-institute-of-technology-artificial-intelligence-minor-minor.json",
+      "notes_path": "atlas/adapters/stevens-institute-of-technology-artificial-intelligence-minor-minor/NOTES.md"
+    },
+    {
+      "id": "stony-brook-ai-business-innovation-specialization",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "specific_access_or_authoritative_clarification_needed",
+      "owner": null,
+      "audit_gap_count": 1,
+      "evidence_path": "data/programs/stony-brook-ai-business-innovation-specialization.json",
+      "notes_path": "atlas/adapters/stony-brook-ai-business-innovation-specialization/NOTES.md"
+    },
+    {
+      "id": "stony-brook-ai-data-science-specialization",
+      "previous_status": "pending",
+      "current_status": "pending",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "root",
+      "audit_gap_count": 0,
+      "evidence_path": "data/programs/stony-brook-ai-data-science-specialization.json",
+      "notes_path": "atlas/adapters/stony-brook-ai-data-science-specialization/NOTES.md"
+    },
+    {
+      "id": "tufts-ai-development-minor",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "specific_access_or_authoritative_clarification_needed",
+      "owner": null,
+      "audit_gap_count": 1,
+      "evidence_path": "data/programs/tufts-ai-development-minor.json",
+      "notes_path": "atlas/adapters/tufts-ai-development-minor/NOTES.md"
+    },
+    {
+      "id": "tulane-ai-literacy-minor",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "conditional_public_followup_not_confirmed_blocked",
+      "owner": null,
+      "audit_gap_count": 2,
+      "evidence_path": "data/programs/tulane-ai-literacy-minor.json",
+      "notes_path": "atlas/adapters/tulane-ai-literacy-minor/NOTES.md"
+    },
+    {
+      "id": "uc-merced-ai-bs",
+      "previous_status": "pending",
+      "current_status": "pending",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "root",
+      "audit_gap_count": 0,
+      "evidence_path": "data/programs/uc-merced-ai-bs.json",
+      "notes_path": "atlas/adapters/uc-merced-ai-bs/NOTES.md"
+    },
+    {
+      "id": "uc-merced-cse-ai-emphasis",
+      "previous_status": "pending",
+      "current_status": "pending",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "root",
+      "audit_gap_count": 0,
+      "evidence_path": "data/programs/uc-merced-cse-ai-emphasis.json",
+      "notes_path": "atlas/adapters/uc-merced-cse-ai-emphasis/NOTES.md"
+    },
+    {
+      "id": "ucsb-ai-bs",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "pilots_purdue",
+      "audit_gap_count": 5,
+      "evidence_path": "data/programs/ucsb-ai-bs.json",
+      "notes_path": "atlas/adapters/ucsb-ai-bs/NOTES.md"
+    },
+    {
+      "id": "university-at-buffalo-suny-ai-and-geospatial-analytics-bs-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "root",
+      "audit_gap_count": 5,
+      "evidence_path": "data/programs/university-at-buffalo-suny-ai-and-geospatial-analytics-bs-degree.json",
+      "notes_path": "atlas/adapters/university-at-buffalo-suny-ai-and-geospatial-analytics-bs-degree/NOTES.md"
+    },
+    {
+      "id": "university-at-buffalo-suny-ai-and-language-and-intercultural-competence-bs-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "root",
+      "audit_gap_count": 5,
+      "evidence_path": "data/programs/university-at-buffalo-suny-ai-and-language-and-intercultural-competence-bs-degree.json",
+      "notes_path": "atlas/adapters/university-at-buffalo-suny-ai-and-language-and-intercultural-competence-bs-degree/NOTES.md"
+    },
+    {
+      "id": "university-at-buffalo-suny-ai-and-language-technology-bs-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "root",
+      "audit_gap_count": 5,
+      "evidence_path": "data/programs/university-at-buffalo-suny-ai-and-language-technology-bs-degree.json",
+      "notes_path": "atlas/adapters/university-at-buffalo-suny-ai-and-language-technology-bs-degree/NOTES.md"
+    },
+    {
+      "id": "university-at-buffalo-suny-ai-and-logic-and-ontology-bs-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "root",
+      "audit_gap_count": 5,
+      "evidence_path": "data/programs/university-at-buffalo-suny-ai-and-logic-and-ontology-bs-degree.json",
+      "notes_path": "atlas/adapters/university-at-buffalo-suny-ai-and-logic-and-ontology-bs-degree/NOTES.md"
+    },
+    {
+      "id": "university-at-buffalo-suny-ai-and-philosophy-politics-economics-bs-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "root",
+      "audit_gap_count": 5,
+      "evidence_path": "data/programs/university-at-buffalo-suny-ai-and-philosophy-politics-economics-bs-degree.json",
+      "notes_path": "atlas/adapters/university-at-buffalo-suny-ai-and-philosophy-politics-economics-bs-degree/NOTES.md"
+    },
+    {
+      "id": "university-at-buffalo-suny-ai-and-policy-analysis-bs-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "root",
+      "audit_gap_count": 5,
+      "evidence_path": "data/programs/university-at-buffalo-suny-ai-and-policy-analysis-bs-degree.json",
+      "notes_path": "atlas/adapters/university-at-buffalo-suny-ai-and-policy-analysis-bs-degree/NOTES.md"
+    },
+    {
+      "id": "university-at-buffalo-suny-ai-and-quantitative-economics-bs-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "root",
+      "audit_gap_count": 5,
+      "evidence_path": "data/programs/university-at-buffalo-suny-ai-and-quantitative-economics-bs-degree.json",
+      "notes_path": "atlas/adapters/university-at-buffalo-suny-ai-and-quantitative-economics-bs-degree/NOTES.md"
+    },
+    {
+      "id": "university-at-buffalo-suny-ai-and-responsible-communication-bs-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "root",
+      "audit_gap_count": 5,
+      "evidence_path": "data/programs/university-at-buffalo-suny-ai-and-responsible-communication-bs-degree.json",
+      "notes_path": "atlas/adapters/university-at-buffalo-suny-ai-and-responsible-communication-bs-degree/NOTES.md"
+    },
+    {
+      "id": "university-at-buffalo-suny-ai-ethics-minor-minor",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "root",
+      "audit_gap_count": 3,
+      "evidence_path": "data/programs/university-at-buffalo-suny-ai-ethics-minor-minor.json",
+      "notes_path": "atlas/adapters/university-at-buffalo-suny-ai-ethics-minor-minor/NOTES.md"
+    },
+    {
+      "id": "university-at-buffalo-suny-artificial-intelligence-crime-and-society-minor-minor",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "root",
+      "audit_gap_count": 3,
+      "evidence_path": "data/programs/university-at-buffalo-suny-artificial-intelligence-crime-and-society-minor-minor.json",
+      "notes_path": "atlas/adapters/university-at-buffalo-suny-artificial-intelligence-crime-and-society-minor-minor/NOTES.md"
+    },
+    {
+      "id": "university-of-california-san-diego-artificial-intelligence-bs-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "pilots_purdue",
+      "audit_gap_count": 2,
+      "evidence_path": "data/programs/university-of-california-san-diego-artificial-intelligence-bs-degree.json",
+      "notes_path": "atlas/adapters/university-of-california-san-diego-artificial-intelligence-bs-degree/NOTES.md"
+    },
+    {
+      "id": "university-of-maryland-college-park-artificial-intelligence-computational-structures-for-ai-systems-bsai-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "specific_access_or_authoritative_clarification_needed",
+      "owner": null,
+      "audit_gap_count": 3,
+      "evidence_path": "data/programs/university-of-maryland-college-park-artificial-intelligence-computational-structures-for-ai-systems-bsai-degree.json",
+      "notes_path": "atlas/adapters/university-of-maryland-college-park-artificial-intelligence-computational-structures-for-ai-systems-bsai-degree/NOTES.md"
+    },
+    {
+      "id": "university-of-maryland-college-park-human-centered-ai-ba-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "conditional_public_followup_not_confirmed_blocked",
+      "owner": null,
+      "audit_gap_count": 2,
+      "evidence_path": "data/programs/university-of-maryland-college-park-human-centered-ai-ba-degree.json",
+      "notes_path": "atlas/adapters/university-of-maryland-college-park-human-centered-ai-ba-degree/NOTES.md"
+    },
+    {
+      "id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "specific_access_or_authoritative_clarification_needed",
+      "owner": null,
+      "audit_gap_count": 2,
+      "evidence_path": "data/programs/university-of-miami-artificial-intelligence-for-business-technology-minor-minor.json",
+      "notes_path": "atlas/adapters/university-of-miami-artificial-intelligence-for-business-technology-minor-minor/NOTES.md"
+    },
+    {
+      "id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "unassigned_public_review_candidate",
+      "owner": null,
+      "audit_gap_count": 2,
+      "evidence_path": "data/programs/university-of-miami-artificial-intelligence-technologies-for-business-other-degree.json",
+      "notes_path": "atlas/adapters/university-of-miami-artificial-intelligence-technologies-for-business-other-degree/NOTES.md"
+    },
+    {
+      "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "unassigned_public_review_candidate",
+      "owner": null,
+      "audit_gap_count": 4,
+      "evidence_path": "data/programs/university-of-miami-data-science-and-artificial-intelligence-ba-degree.json",
+      "notes_path": "atlas/adapters/university-of-miami-data-science-and-artificial-intelligence-ba-degree/NOTES.md"
+    },
+    {
+      "id": "university-of-michigan-ann-arbor-human-centered-artificial-intelligence-minor-minor",
+      "previous_status": "pending",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "root",
+      "audit_gap_count": 3,
+      "evidence_path": "data/programs/university-of-michigan-ann-arbor-human-centered-artificial-intelligence-minor-minor.json",
+      "notes_path": "atlas/adapters/university-of-michigan-ann-arbor-human-centered-artificial-intelligence-minor-minor/NOTES.md"
+    },
+    {
+      "id": "university-of-notre-dame-ai-analytics-in-business-minor-minor",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "specific_access_or_authoritative_clarification_needed",
+      "owner": null,
+      "audit_gap_count": 2,
+      "evidence_path": "data/programs/university-of-notre-dame-ai-analytics-in-business-minor-minor.json",
+      "notes_path": "atlas/adapters/university-of-notre-dame-ai-analytics-in-business-minor-minor/NOTES.md"
+    },
+    {
+      "id": "university-of-south-florida-artificial-intelligence-bs-degree",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "survey_national",
+      "audit_gap_count": 2,
+      "evidence_path": "data/programs/university-of-south-florida-artificial-intelligence-bs-degree.json",
+      "notes_path": "atlas/adapters/university-of-south-florida-artificial-intelligence-bs-degree/NOTES.md"
+    },
+    {
+      "id": "university-of-southern-california-applied-ai-in-business-minor-minor",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "survey_national",
+      "audit_gap_count": 2,
+      "evidence_path": "data/programs/university-of-southern-california-applied-ai-in-business-minor-minor.json",
+      "notes_path": "atlas/adapters/university-of-southern-california-applied-ai-in-business-minor-minor/NOTES.md"
+    },
+    {
+      "id": "ursinus-ai-minor",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "specific_access_or_authoritative_clarification_needed",
+      "owner": null,
+      "audit_gap_count": 1,
+      "evidence_path": "data/programs/ursinus-ai-minor.json",
+      "notes_path": "atlas/adapters/ursinus-ai-minor/NOTES.md"
+    },
+    {
+      "id": "uva-bacs-ai-concentration",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "frontend",
+      "audit_gap_count": 2,
+      "evidence_path": "data/programs/uva-bacs-ai-concentration.json",
+      "notes_path": "atlas/adapters/uva-bacs-ai-concentration/NOTES.md"
+    },
+    {
+      "id": "uva-bscs-ai-concentration",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "frontend",
+      "audit_gap_count": 1,
+      "evidence_path": "data/programs/uva-bscs-ai-concentration.json",
+      "notes_path": "atlas/adapters/uva-bscs-ai-concentration/NOTES.md"
+    },
+    {
+      "id": "villanova-analytics-ai-co-major",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "specific_access_or_authoritative_clarification_needed",
+      "owner": null,
+      "audit_gap_count": 1,
+      "evidence_path": "data/programs/villanova-analytics-ai-co-major.json",
+      "notes_path": "atlas/adapters/villanova-analytics-ai-co-major/NOTES.md"
+    },
+    {
+      "id": "virginia-tech-artificial-intelligence-ai-minor-minor",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "survey_national",
+      "audit_gap_count": 2,
+      "evidence_path": "data/programs/virginia-tech-artificial-intelligence-ai-minor-minor.json",
+      "notes_path": "atlas/adapters/virginia-tech-artificial-intelligence-ai-minor-minor/NOTES.md"
+    },
+    {
+      "id": "william-mary-ai-minor",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "survey_liberal",
+      "audit_gap_count": 1,
+      "evidence_path": "data/programs/william-mary-ai-minor.json",
+      "notes_path": "atlas/adapters/william-mary-ai-minor/NOTES.md"
+    },
+    {
+      "id": "william-mary-applied-ai-ba",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "survey_liberal",
+      "audit_gap_count": 3,
+      "evidence_path": "data/programs/william-mary-applied-ai-ba.json",
+      "notes_path": "atlas/adapters/william-mary-applied-ai-ba/NOTES.md"
+    },
+    {
+      "id": "william-mary-cs-ai-ml-concentration",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "survey_liberal",
+      "audit_gap_count": 1,
+      "evidence_path": "data/programs/william-mary-cs-ai-ml-concentration.json",
+      "notes_path": "atlas/adapters/william-mary-cs-ai-ml-concentration/NOTES.md"
+    },
+    {
+      "id": "william-mary-data-science-ai-specialization",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "survey_liberal",
+      "audit_gap_count": 1,
+      "evidence_path": "data/programs/william-mary-data-science-ai-specialization.json",
+      "notes_path": "atlas/adapters/william-mary-data-science-ai-specialization/NOTES.md"
+    },
+    {
+      "id": "wpi-ai-bs",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "pilots_purdue",
+      "audit_gap_count": 2,
+      "evidence_path": "data/programs/wpi-ai-bs.json",
+      "notes_path": "atlas/adapters/wpi-ai-bs/NOTES.md"
+    },
+    {
+      "id": "wpi-business-analytics-applied-ai-bs",
+      "previous_status": "partial",
+      "current_status": "partial",
+      "routing": "assigned_active_or_continuing_workstream",
+      "owner": "pilots_purdue",
+      "audit_gap_count": 3,
+      "evidence_path": "data/programs/wpi-business-analytics-applied-ai-bs.json",
+      "notes_path": "atlas/adapters/wpi-business-analytics-applied-ai-bs/NOTES.md"
+    }
+  ]
+}
