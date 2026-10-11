@@ -1,0 +1,5 @@
+# HTML selector compatibility
+
+2026-10-11: a live source-adapter addition exposed a basic selector failure with locked Soup Sieve 3.0.1 under Python 3.11.4 on the Mac Studio. A clean release environment reproduced it: tag `a`, combined `a.course`, attribute `[data-course-code]` and descendant `div a` selectors raised SelectorSyntaxError; class and ID selectors worked. Existing shipped adapters used the latter, explaining why their regression suite passed.
+
+The [upstream changelog](https://facelessuser.github.io/soupsieve/about/changelog/) documents substantial parser changes in 3.0. This project pins Soup Sieve to the 2.x compatibility line (`>=2.10,<3`) pending verification of a later major release. All six minimal selector cases pass with 2.10. This is an observed environment compatibility boundary, not a claim that every Python/runtime combination is affected. A dedicated regression prevents future dependency updates from silently restoring the failure. Source restrictions and HTTP handling are unchanged.
