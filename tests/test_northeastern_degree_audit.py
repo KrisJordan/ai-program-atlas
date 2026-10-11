@@ -700,3 +700,24 @@ def test_public_health_manual_profile_and_reciprocal_identity_keep_conditional_l
             from atlas.adapters.northeastern_courseleaf import clean
             soup=BeautifulSoup(path.read_text(),'html.parser');block=next(b for b in soup.select('.courseblock')if clean(b.select_one('.courseblocktitle')).startswith(code+'.'))
             assert 'Cross-listed with '+other in clean(block)
+
+
+def test_design_contextual_recommendations_preserve_source_credits_and_permissions():
+    from atlas.families import resolve_program
+    from atlas.curriculum_profile import requirement_profile
+    pid='northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree'
+    seed=json.loads((ROOT/'data/programs'/f'{pid}.json').read_text())
+    family=json.loads((ROOT/'data/families/northeastern-ai-combined-degrees.json').read_text())
+    resolved=resolve_program(seed,family);profile=requirement_profile(resolved)
+    assert [profile[r]['count'] for r in ['required','options','unresolved']]==[23,41,3]
+    courses={c['code']:c for c in seed['courses']}
+    assert courses['ARTG 5150']['credits']==3 and courses['ARTG 5330']['credits']==4
+    assert 'permission' in courses['ARTG 5100']['prerequisites'].lower()
+    for code in ['ARTG 2401','ARTG 5100','ARTG 5151']:
+        cid=courses[code]['id']
+        nodes=[r for r in resolved['requirements'] if cid in r['course_ids']]
+        assert len(nodes)==1 and nodes[0]['kind']=='note'
+        assert courses[code]['category_review']['source_ids']==[pid+'-artg-courses']
+    clearance=next(r for r in resolved['requirements'] if r['id']==pid+'-conditional-camd-clearance')
+    assert clearance['kind']=='note' and clearance['course_ids']==[]
+    assert 'College of Arts, Media and Design' in [u['name'] for u in seed['family']['hosting_units']]

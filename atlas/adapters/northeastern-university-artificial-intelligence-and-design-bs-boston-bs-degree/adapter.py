@@ -77,3 +77,24 @@ parse, SOURCE_PARSERS = register_science_corequisites(parse, SOURCE_PARSERS, PRO
 from atlas.adapters.northeastern_college_policies import KHOURY_URL, parse_khoury_policy
 SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + (KHOURY_URL,)))
 SOURCE_PARSERS = {**SOURCE_PARSERS, KHOURY_URL: lambda html: parse_khoury_policy(html, program_id=PROGRAM_ID)}
+
+# Exact design review composes with, rather than discards, broader metadata.
+from atlas.adapters.northeastern_design_course_reviews import attach_reviewed_sources
+SOURCE_PARSERS = attach_reviewed_sources(PROGRAM_ID, SOURCE_PARSERS)
+SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + tuple(SOURCE_PARSERS)))
+
+# Source-specific optional/recommended identities retain existing note ancestry.
+from atlas.adapters.northeastern_design_course_reviews import attach_contextual_courses
+_design_base_parse = parse
+def parse(html):
+    return attach_contextual_courses(_design_base_parse(html), html)
+
+# Explicitly documented CAMD participation supports conditional clearance only.
+from atlas.adapters.northeastern_communication_course_reviews import parse_camd_policy
+def parse_camd_clearance(html):
+    observed = parse_camd_policy(html, program_id=PROGRAM_ID)
+    observed['requirements'] = [r for r in observed['requirements'] if r['id'] == PROGRAM_ID+'-conditional-camd-clearance']
+    return observed
+_CAMD_URL = 'https://catalog.northeastern.edu/undergraduate/arts-media-design/'
+SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + (_CAMD_URL,)))
+SOURCE_PARSERS = {**SOURCE_PARSERS, _CAMD_URL: parse_camd_clearance}

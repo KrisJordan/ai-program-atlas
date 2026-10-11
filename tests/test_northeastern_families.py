@@ -100,6 +100,13 @@ def test_reviewed_variant_reconstruction_preserves_entire_original_graph(pid):
         for r in allocations:
             assert r['kind']=='note' and 'complete GE 1110/1111 substitute bundle' in r['summary']
             r['kind']='all';r['summary']='Listed course.'
+    if 'and-design-bs' in pid:
+        # Source-named optional/recommended courses enrich existing notes only.
+        expected={'artg-2400-condition':'artg-2401','design-option-policy':'artg-5100','integrative-requirements-policy':'artg-5151'}
+        for key,code in expected.items():
+            note=next(r for r in rows if r['id']==pid+'-req-'+key)
+            assert note['kind']=='note' and note['course_ids']==[pid+'-'+code]
+            note['course_ids']=[]
     if 'public-health' in pid:
         # Source publishes one hour per home-aligned pool, not five fixed courses.
         # Dedicated changed-source tests protect this deliberate ancestry repair.

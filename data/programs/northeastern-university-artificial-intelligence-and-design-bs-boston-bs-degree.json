@@ -274,7 +274,7 @@
       "source_date": null,
       "catalog_year": "2026-2027",
       "confidence": "high",
-      "locator": "All currently listed ARTG courses in this degree: ARTG 1001, ARTG 1002, ARTG 1270, ARTG 1271, ARTG 1290, ARTG 1291, ARTG 4550, ARTG 2810, ARTG 3810, ARTG 3462, ARTG 3464, ARTG 2252, ARTG 3452, ARTG 2242, ARTG 3444, ARTG 2400, ARTG 3400, ARTG 5330, ARTG 5150. Course identity, stated hours and explicit registration conditions; descriptions only when separately reviewed."
+      "locator": "All currently listed ARTG courses in this degree: ARTG 1001, ARTG 1002, ARTG 1270, ARTG 1271, ARTG 1290, ARTG 1291, ARTG 4550, ARTG 2810, ARTG 3810, ARTG 3462, ARTG 3464, ARTG 2252, ARTG 3452, ARTG 2242, ARTG 3444, ARTG 2400, ARTG 3400, ARTG 5330, ARTG 5150. Course identity, stated hours and explicit registration conditions; descriptions only when separately reviewed. Full contextual descriptions and registration conditions also reviewed for ARTG 2401, ARTG 5100, ARTG 5151."
     },
     {
       "id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-mktg-courses",
@@ -365,6 +365,16 @@
       "catalog_year": null,
       "locator": "Exact conditional academic progression, major entry/home-change and graduation sections; current advising scope, not a catalog-year assignment.",
       "confidence": "high"
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-camd-policy-review",
+      "url": "https://catalog.northeastern.edu/undergraduate/arts-media-design/",
+      "title": "College of Arts, Media and Design",
+      "fetched_at": "2026-10-10T23:00:31+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Graduation Clearance: assigned-advisor meeting in junior year, conditional CAMD scope. Official admissions identifies CAMD participation; home college remains unspecified.",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -405,15 +415,26 @@
       "id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artf-1000",
       "code": "ARTF 1000",
       "name": "Art and Design at Northeastern",
-      "description": "Introduces Art + Design students to academic resources, their major, university community and Boston’s cultural opportunities.",
+      "description": "Orientation to art/design studies, university resources and the college learning community.",
       "prerequisites": null,
-      "credits": 1.0,
+      "credits": 1,
       "credit_unit": "semester_hours",
       "category": "other",
       "source_id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artf-courses",
       "url": "https://catalog.northeastern.edu/course-descriptions/artf/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "locator": "ARTF 1000 complete course block",
+        "rationale": "Orientation and university resources do not establish a substantive taxonomy subject.",
+        "candidate_categories": [],
+        "source_ids": [
+          "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artf-courses"
+        ]
+      }
     },
     {
       "id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-inpr-1000",
@@ -823,351 +844,632 @@
       "id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artf-1220",
       "code": "ARTF 1220",
       "name": "Elements of Visual Composition",
-      "description": "Explores two-dimensional composition, color and visual principles through studio experimentation.",
+      "description": "Two-dimensional composition, color and visual principles practiced through studio experimentation.",
       "prerequisites": null,
-      "credits": 2.0,
+      "credits": 2,
       "credit_unit": "semester_hours",
-      "category": "other",
+      "category": "applications",
       "source_id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artf-courses",
       "url": "https://catalog.northeastern.edu/course-descriptions/artf/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "locator": "ARTF 1220 complete course block",
+        "rationale": "The actual description centers on two-dimensional composition, color and visual principles practiced through studio experimentation.",
+        "candidate_categories": [],
+        "source_ids": [
+          "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artf-courses"
+        ]
+      }
     },
     {
       "id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artf-1200",
       "code": "ARTF 1200",
       "name": "Representational Drawing",
-      "description": "Develops observational drawing, perspective and representation of physical objects and spaces.",
+      "description": "Representational drawing techniques for depicting physical objects and spaces on a two-dimensional surface.",
       "prerequisites": null,
-      "credits": 2.0,
+      "credits": 2,
       "credit_unit": "semester_hours",
-      "category": "other",
+      "category": "applications",
       "source_id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artf-courses",
       "url": "https://catalog.northeastern.edu/course-descriptions/artf/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "locator": "ARTF 1200 complete course block",
+        "rationale": "The actual description centers on representational drawing techniques for depicting physical objects and spaces on a two-dimensional surface.",
+        "candidate_categories": [],
+        "source_ids": [
+          "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artf-courses"
+        ]
+      }
     },
     {
       "id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artf-1210",
       "code": "ARTF 1210",
       "name": "Abstract Drawing",
-      "description": "Practices conceptual drawing and physical mark making to communicate abstract ideas and examine relationships between form and content.",
+      "description": "Conceptual drawing and physical mark-making to represent abstract ideas and information.",
       "prerequisites": null,
-      "credits": 2.0,
+      "credits": 2,
       "credit_unit": "semester_hours",
-      "category": "other",
+      "category": "applications",
       "source_id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artf-courses",
       "url": "https://catalog.northeastern.edu/course-descriptions/artf/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "locator": "ARTF 1210 complete course block",
+        "rationale": "The actual description centers on conceptual drawing and physical mark-making to represent abstract ideas and information.",
+        "candidate_categories": [],
+        "source_ids": [
+          "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artf-courses"
+        ]
+      }
     },
     {
       "id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artf-1230",
       "code": "ARTF 1230",
       "name": "Making with Form and Materials",
-      "description": "Develops three-dimensional forms through material experimentation, craft and digital fabrication, relating form to function and context.",
+      "description": "Three-dimensional making through materials, craft techniques and digital fabrication.",
       "prerequisites": null,
-      "credits": 2.0,
+      "credits": 2,
       "credit_unit": "semester_hours",
-      "category": "other",
+      "category": "applications",
       "source_id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artf-courses",
       "url": "https://catalog.northeastern.edu/course-descriptions/artf/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "locator": "ARTF 1230 complete course block",
+        "rationale": "The actual description centers on three-dimensional making through materials, craft techniques and digital fabrication.",
+        "candidate_categories": [],
+        "source_ids": [
+          "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artf-courses"
+        ]
+      }
     },
     {
       "id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artf-1240",
       "code": "ARTF 1240",
       "name": "Making with Video, Sound, and Animation",
-      "description": "Introduces moving-image and sound composition through experiments with time, sequencing, viewpoint and spatial relationships.",
+      "description": "Time-based art and design using video, sound, sequencing and animation.",
       "prerequisites": null,
-      "credits": 2.0,
+      "credits": 2,
       "credit_unit": "semester_hours",
-      "category": "other",
+      "category": "applications",
       "source_id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artf-courses",
       "url": "https://catalog.northeastern.edu/course-descriptions/artf/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "locator": "ARTF 1240 complete course block",
+        "rationale": "The actual description centers on time-based art and design using video, sound, sequencing and animation.",
+        "candidate_categories": [],
+        "source_ids": [
+          "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artf-courses"
+        ]
+      }
     },
     {
       "id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artf-1250",
       "code": "ARTF 1250",
       "name": "Designing Interactive Experiences",
-      "description": "Explores interactive experiences through rapid prototypes, mapping and analysis of environmental and audience responses.",
+      "description": "Interactive experience design through prototyping, mapping and analysis of experiential projects.",
       "prerequisites": null,
-      "credits": 2.0,
+      "credits": 2,
       "credit_unit": "semester_hours",
-      "category": "other",
+      "category": "applications",
       "source_id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artf-courses",
       "url": "https://catalog.northeastern.edu/course-descriptions/artf/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "locator": "ARTF 1250 complete course block",
+        "rationale": "The actual description centers on interactive experience design through prototyping, mapping and analysis of experiential projects.",
+        "candidate_categories": [],
+        "source_ids": [
+          "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artf-courses"
+        ]
+      }
     },
     {
       "id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-1001",
       "code": "ARTG 1001",
       "name": "Design Perspectives: An Introduction to Design in the World",
-      "description": "Introduces diverse theories, histories and practices of design through cases examining its effects and possibilities.",
+      "description": "Design histories, cultural perspectives, ethical consequences and social impacts.",
       "prerequisites": null,
-      "credits": 2.0,
+      "credits": 2,
       "credit_unit": "semester_hours",
-      "category": "other",
+      "category": "human_context",
       "source_id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses",
       "url": "https://catalog.northeastern.edu/course-descriptions/artg/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "locator": "ARTG 1001 complete course block",
+        "rationale": "The actual description centers on design histories, cultural perspectives, ethical consequences and social impacts.",
+        "candidate_categories": [],
+        "source_ids": [
+          "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses"
+        ]
+      }
     },
     {
       "id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-1002",
       "code": "ARTG 1002",
       "name": "Seminar for Design Perspectives",
-      "description": "Discusses and applies topics from the accompanying Design Perspectives course in a small-group seminar.",
+      "description": "Discussion and application of the separately reviewed cultural and social perspectives on design.",
       "prerequisites": null,
-      "credits": 2.0,
+      "credits": 2,
       "credit_unit": "semester_hours",
-      "category": "other",
+      "category": "human_context",
       "source_id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses",
       "url": "https://catalog.northeastern.edu/course-descriptions/artg/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "locator": "ARTG 1002 complete course block",
+        "rationale": "The actual description centers on discussion and application of the separately reviewed cultural and social perspectives on design.",
+        "candidate_categories": [],
+        "source_ids": [
+          "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses"
+        ]
+      }
     },
     {
       "id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-1270",
       "code": "ARTG 1270",
       "name": "Design: Process + Practices",
-      "description": "Introduces design practices through cases, workshops and practitioner presentations.",
+      "description": "Design practices examined through case studies, workshops and practitioner presentations.",
       "prerequisites": null,
-      "credits": 2.0,
+      "credits": 2,
       "credit_unit": "semester_hours",
-      "category": "other",
+      "category": "applications",
       "source_id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses",
       "url": "https://catalog.northeastern.edu/course-descriptions/artg/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "locator": "ARTG 1270 complete course block",
+        "rationale": "The actual description centers on design practices examined through case studies, workshops and practitioner presentations.",
+        "candidate_categories": [],
+        "source_ids": [
+          "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses"
+        ]
+      }
     },
     {
       "id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-1271",
       "code": "ARTG 1271",
       "name": "Studio for Design: Process + Practices",
-      "description": "Develops design inquiry and problem solving through iterative studio projects.",
+      "description": "Iterative studio design processes, audience research, feedback and problem solving.",
       "prerequisites": null,
-      "credits": 2.0,
+      "credits": 2,
       "credit_unit": "semester_hours",
-      "category": "other",
+      "category": "applications",
       "source_id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses",
       "url": "https://catalog.northeastern.edu/course-descriptions/artg/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "locator": "ARTG 1271 complete course block",
+        "rationale": "The actual description centers on iterative studio design processes, audience research, feedback and problem solving.",
+        "candidate_categories": [],
+        "source_ids": [
+          "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses"
+        ]
+      }
     },
     {
       "id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-1290",
       "code": "ARTG 1290",
       "name": "Typographic Systems",
-      "description": "Studies typography’s history, principles, cultural meaning and design applications.",
+      "description": "Typographic practice alongside historical development, cultural meaning and contextual research.",
       "prerequisites": "( ARTF 1200 with a minimum grade of D- or ARTF 1210 with a minimum grade of D- or ARTF 1230 with a minimum grade of D- or ARTF 1240 with a minimum grade of D- or COMM 112M with a minimum grade of D- or ARTF 1250 with a minimum grade of D- ); ( ARTF 1220 with a minimum grade of D- or ARTM 116M with a minimum grade of D- )",
-      "credits": 2.0,
+      "credits": 2,
       "credit_unit": "semester_hours",
       "category": "other",
       "source_id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses",
       "url": "https://catalog.northeastern.edu/course-descriptions/artg/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "locator": "ARTG 1290 complete course block",
+        "rationale": "The actual description centers on typographic practice alongside historical development, cultural meaning and contextual research. Applied visual-design practice and cultural/perceptual communication inquiry are both explicit, without an adequately narrow dominant taxonomy category.",
+        "candidate_categories": [
+          "applications",
+          "human_context"
+        ],
+        "source_ids": [
+          "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses"
+        ]
+      }
     },
     {
       "id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-1291",
       "code": "ARTG 1291",
       "name": "Studio for Typographic Systems",
-      "description": "Applies typographic organization, hierarchy and legibility through design projects.",
+      "description": "Typographic organization, visual hierarchy and legibility applied through graphic-design projects.",
       "prerequisites": null,
-      "credits": 2.0,
+      "credits": 2,
       "credit_unit": "semester_hours",
-      "category": "other",
+      "category": "applications",
       "source_id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses",
       "url": "https://catalog.northeastern.edu/course-descriptions/artg/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "locator": "ARTG 1291 complete course block",
+        "rationale": "The actual description centers on typographic organization, visual hierarchy and legibility applied through graphic-design projects.",
+        "candidate_categories": [],
+        "source_ids": [
+          "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses"
+        ]
+      }
     },
     {
       "id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-4550",
       "code": "ARTG 4550",
       "name": "Design Degree Project",
-      "description": "Develops and executes a culminating graphic, interaction or experience-design project.",
+      "description": "A comprehensive design project developed through practical methods, proposals and polished execution.",
       "prerequisites": "ARTG 3400 (may be taken concurrently) with a minimum grade of D- or ARTG 3444 (may be taken concurrently) with a minimum grade of D- or ARTG 3452 (may be taken concurrently) with a minimum grade of D- or ARTG 3464 (may be taken concurrently) with a minimum grade of D- or ARTG 3810 (may be taken concurrently) with a minimum grade of D- or ARTG 5000 (may be taken concurrently) with a minimum grade of D-",
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "semester_hours",
-      "category": "other",
+      "category": "applications",
       "source_id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses",
       "url": "https://catalog.northeastern.edu/course-descriptions/artg/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "locator": "ARTG 4550 complete course block",
+        "rationale": "The actual description centers on a comprehensive design project developed through practical methods, proposals and polished execution.",
+        "candidate_categories": [],
+        "source_ids": [
+          "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses"
+        ]
+      }
     },
     {
       "id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-2810",
       "code": "ARTG 2810",
       "name": "Creative Fabrication Design Principles",
-      "description": "Combines fieldwork and applied design projects to examine product experiences, accessibility, sustainability and social impact.",
+      "description": "Creative fabrication and product experiences using field research, sustainable practices and applied design.",
       "prerequisites": "(( ARTG 1270 (may be taken concurrently) with a minimum grade of D- ; ARTG 1271 (may be taken concurrently) with a minimum grade of D- ) or (ARTM 119M (may be taken concurrently) with a minimum grade of D- ; ARTM 11SM (may be taken concurrently) with a minimum grade of D- ) or ARTG 1250 (may be taken concurrently) with a minimum grade of D- ); (( ARTG 1290 (may be taken concurrently) with a minimum grade of D- ; ARTG 1291 (may be taken concurrently) with a minimum grade of D- ) or (ARTM 234M (may be taken concurrently) with a minimum grade of D- ; ARTM 23SM (may be taken concurrently) with a minimum grade of D- ) or ARTG 2250 (may be taken concurrently) with a minimum grade of D- )",
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "semester_hours",
-      "category": "other",
+      "category": "applications",
       "source_id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses",
       "url": "https://catalog.northeastern.edu/course-descriptions/artg/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "locator": "ARTG 2810 complete course block",
+        "rationale": "The actual description centers on creative fabrication and product experiences using field research, sustainable practices and applied design.",
+        "candidate_categories": [],
+        "source_ids": [
+          "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses"
+        ]
+      }
     },
     {
       "id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-3810",
       "code": "ARTG 3810",
       "name": "Topics in Creative Fabrication Inquiry",
-      "description": "Explores topic-specific three-dimensional fabrication through hands-on research, material processes, manufacturability and sustainable design.",
+      "description": "Creative fabrication, physical making and sustainable material processes through topic-specific projects.",
       "prerequisites": "ARTG 2242 with a minimum grade of D- or ARTG 2252 with a minimum grade of D- or ARTG 2400 with a minimum grade of D- or ARTG 2810 with a minimum grade of D- or ARTG 3462 with a minimum grade of D-",
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "semester_hours",
-      "category": "other",
+      "category": "applications",
       "source_id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses",
       "url": "https://catalog.northeastern.edu/course-descriptions/artg/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "locator": "ARTG 3810 complete course block",
+        "rationale": "The actual description centers on creative fabrication, physical making and sustainable material processes through topic-specific projects.",
+        "candidate_categories": [],
+        "source_ids": [
+          "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses"
+        ]
+      }
     },
     {
       "id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-3462",
       "code": "ARTG 3462",
       "name": "Experience Design Principles",
-      "description": "Uses design research, problem framing, scenarios and prototypes to propose experiences involving products, environments and services.",
+      "description": "Experience-design research, scenarios and prototypes for products, environments and services.",
       "prerequisites": "(( ARTG 1270 (may be taken concurrently) with a minimum grade of D- ; ARTG 1271 (may be taken concurrently) with a minimum grade of D- ) or (ARTM 119M (may be taken concurrently) with a minimum grade of D- ; ARTM 11SM (may be taken concurrently) with a minimum grade of D- ) or ARTG 1250 (may be taken concurrently) with a minimum grade of D- ); (( ARTG 1290 (may be taken concurrently) with a minimum grade of D- ; ARTG 1291 (may be taken concurrently) with a minimum grade of D- ) or (ARTM 234M (may be taken concurrently) with a minimum grade of D- ; ARTM 23SM (may be taken concurrently) with a minimum grade of D- ) or ARTG 2250 (may be taken concurrently) with a minimum grade of D- )",
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "semester_hours",
-      "category": "other",
+      "category": "applications",
       "source_id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses",
       "url": "https://catalog.northeastern.edu/course-descriptions/artg/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "locator": "ARTG 3462 complete course block",
+        "rationale": "The actual description centers on experience-design research, scenarios and prototypes for products, environments and services.",
+        "candidate_categories": [],
+        "source_ids": [
+          "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses"
+        ]
+      }
     },
     {
       "id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-3464",
       "code": "ARTG 3464",
       "name": "Topics In Experience Design Inquiry",
-      "description": "Examines a selected intermediate topic in experience design.",
+      "description": "Variable intermediate topics within experience design; the particular topic is unspecified.",
       "prerequisites": "ARTG 2242 with a minimum grade of D- or ARTG 2252 with a minimum grade of D- or ARTG 2400 with a minimum grade of D- or ARTG 2810 with a minimum grade of D- or ARTG 3462 with a minimum grade of D-",
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "semester_hours",
-      "category": "other",
+      "category": "applications",
       "source_id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses",
       "url": "https://catalog.northeastern.edu/course-descriptions/artg/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "locator": "ARTG 3464 complete course block",
+        "rationale": "The actual description centers on variable intermediate topics within experience design; the particular topic is unspecified. This is a limited design-domain classification; no semester-specific technique or subject is inferred.",
+        "candidate_categories": [],
+        "source_ids": [
+          "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses"
+        ]
+      }
     },
     {
       "id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-2252",
       "code": "ARTG 2252",
       "name": "Graphic Design Principles",
-      "description": "Applies graphic form, composition, typography and imagery to visual communication.",
+      "description": "Graphic-design processes using typography, imagery, composition and visual principles.",
       "prerequisites": "(( ARTG 1270 (may be taken concurrently) with a minimum grade of D- ; ARTG 1271 (may be taken concurrently) with a minimum grade of D- ) or (ARTM 119M (may be taken concurrently) with a minimum grade of D- ; ARTM 11SM (may be taken concurrently) with a minimum grade of D- ) or ARTG 1250 (may be taken concurrently) with a minimum grade of D- ); (( ARTG 1290 (may be taken concurrently) with a minimum grade of D- ; ARTG 1291 (may be taken concurrently) with a minimum grade of D- ) or (ARTM 234M (may be taken concurrently) with a minimum grade of D- ; ARTM 23SM (may be taken concurrently) with a minimum grade of D- ) or ARTG 2250 (may be taken concurrently) with a minimum grade of D- )",
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "semester_hours",
-      "category": "other",
+      "category": "applications",
       "source_id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses",
       "url": "https://catalog.northeastern.edu/course-descriptions/artg/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "locator": "ARTG 2252 complete course block",
+        "rationale": "The actual description centers on graphic-design processes using typography, imagery, composition and visual principles.",
+        "candidate_categories": [],
+        "source_ids": [
+          "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses"
+        ]
+      }
     },
     {
       "id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-3452",
       "code": "ARTG 3452",
       "name": "Topics In Graphic Design Inquiry",
-      "description": "Examines a selected intermediate topic in graphic design.",
+      "description": "Variable intermediate topics within graphic design; the specific topic is unspecified.",
       "prerequisites": "ARTG 2242 with a minimum grade of D- or ARTG 2252 with a minimum grade of D- or ARTG 2400 with a minimum grade of D- or ARTG 2810 with a minimum grade of D- or ARTG 3462 with a minimum grade of D-",
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "semester_hours",
-      "category": "other",
+      "category": "applications",
       "source_id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses",
       "url": "https://catalog.northeastern.edu/course-descriptions/artg/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "locator": "ARTG 3452 complete course block",
+        "rationale": "The actual description centers on variable intermediate topics within graphic design; the specific topic is unspecified. This is a limited design-domain classification; no semester-specific technique or subject is inferred.",
+        "candidate_categories": [],
+        "source_ids": [
+          "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses"
+        ]
+      }
     },
     {
       "id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-2242",
       "code": "ARTG 2242",
       "name": "Information Design Principles",
-      "description": "Develops visual systems for organizing and communicating complex information.",
+      "description": "Design of information graphics, visual systems and data-rich communication through studio work.",
       "prerequisites": "(( ARTG 1270 (may be taken concurrently) with a minimum grade of D- ; ARTG 1271 (may be taken concurrently) with a minimum grade of D- ) or (ARTM 119M (may be taken concurrently) with a minimum grade of D- ; ARTM 11SM (may be taken concurrently) with a minimum grade of D- ) or ARTG 1250 (may be taken concurrently) with a minimum grade of D- ); (( ARTG 1290 (may be taken concurrently) with a minimum grade of D- ; ARTG 1291 (may be taken concurrently) with a minimum grade of D- ) or (ARTM 234M (may be taken concurrently) with a minimum grade of D- ; ARTM 23SM (may be taken concurrently) with a minimum grade of D- ) or ARTG 2250 (may be taken concurrently) with a minimum grade of D- )",
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "semester_hours",
-      "category": "other",
+      "category": "applications",
       "source_id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses",
       "url": "https://catalog.northeastern.edu/course-descriptions/artg/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "locator": "ARTG 2242 complete course block",
+        "rationale": "The actual description centers on design of information graphics, visual systems and data-rich communication through studio work.",
+        "candidate_categories": [],
+        "source_ids": [
+          "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses"
+        ]
+      }
     },
     {
       "id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-3444",
       "code": "ARTG 3444",
       "name": "Topics in Information Design Inquiry",
-      "description": "Examines a selected intermediate topic in information design.",
+      "description": "Variable intermediate topics within information design; the specific topic is unspecified.",
       "prerequisites": "ARTG 2242 with a minimum grade of D- or ARTG 2252 with a minimum grade of D- or ARTG 2400 with a minimum grade of D- or ARTG 2810 with a minimum grade of D- or ARTG 3462 with a minimum grade of D-",
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "semester_hours",
-      "category": "other",
+      "category": "applications",
       "source_id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses",
       "url": "https://catalog.northeastern.edu/course-descriptions/artg/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "locator": "ARTG 3444 complete course block",
+        "rationale": "The actual description centers on variable intermediate topics within information design; the specific topic is unspecified. This is a limited design-domain classification; no semester-specific technique or subject is inferred.",
+        "candidate_categories": [],
+        "source_ids": [
+          "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses"
+        ]
+      }
     },
     {
       "id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-2400",
       "code": "ARTG 2400",
       "name": "Interaction Design Principles",
-      "description": "Develops interaction-design research, prototyping and usability testing for interfaces.",
+      "description": "Interaction design through stakeholder research, interface prototyping and usability evaluation.",
       "prerequisites": "(( ARTG 1270 (may be taken concurrently) with a minimum grade of D- ; ARTG 1271 (may be taken concurrently) with a minimum grade of D- ) or (ARTM 119M (may be taken concurrently) with a minimum grade of D- ; ARTM 11SM (may be taken concurrently) with a minimum grade of D- ) or ARTG 1250 (may be taken concurrently) with a minimum grade of D- ); (( ARTG 1290 (may be taken concurrently) with a minimum grade of D- ; ARTG 1291 (may be taken concurrently) with a minimum grade of D- ) or (ARTM 234M (may be taken concurrently) with a minimum grade of D- ; ARTM 23SM (may be taken concurrently) with a minimum grade of D- ) or ARTG 2250 (may be taken concurrently) with a minimum grade of D- )",
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "semester_hours",
-      "category": "other",
+      "category": "applications",
       "source_id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses",
       "url": "https://catalog.northeastern.edu/course-descriptions/artg/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "locator": "ARTG 2400 complete course block",
+        "rationale": "The actual description centers on interaction design through stakeholder research, interface prototyping and usability evaluation.",
+        "candidate_categories": [],
+        "source_ids": [
+          "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses"
+        ]
+      }
     },
     {
       "id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-3400",
       "code": "ARTG 3400",
       "name": "Topics In Interaction Design Inquiry",
-      "description": "Investigates a selected interaction-design topic that varies by offering.",
+      "description": "Variable intermediate topics within interaction design; the specific semester topic is unspecified.",
       "prerequisites": "ARTG 2242 with a minimum grade of D- or ARTG 2252 with a minimum grade of D- or ARTG 2400 with a minimum grade of D- or ARTG 2810 with a minimum grade of D- or ARTG 3462 with a minimum grade of D-",
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "semester_hours",
-      "category": "other",
+      "category": "applications",
       "source_id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses",
       "url": "https://catalog.northeastern.edu/course-descriptions/artg/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "locator": "ARTG 3400 complete course block",
+        "rationale": "The actual description centers on variable intermediate topics within interaction design; the specific semester topic is unspecified. This is a limited design-domain classification; no semester-specific technique or subject is inferred.",
+        "candidate_categories": [],
+        "source_ids": [
+          "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses"
+        ]
+      }
     },
     {
       "id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-5330",
       "code": "ARTG 5330",
       "name": "Visualization Technologies 1: Fundamentals",
-      "description": "Introduces programming for dynamic information analysis and delivery, including sensor data, mobile collection and shared visualizations.",
+      "description": "Programming languages for computational analysis and digital delivery of dynamic information.",
       "prerequisites": null,
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "semester_hours",
-      "category": "other",
+      "category": "foundations",
       "source_id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses",
       "url": "https://catalog.northeastern.edu/course-descriptions/artg/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "locator": "ARTG 5330 complete course block",
+        "rationale": "The actual description centers on programming languages for computational analysis and digital delivery of dynamic information.",
+        "candidate_categories": [],
+        "source_ids": [
+          "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses"
+        ]
+      }
     },
     {
       "id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-5150",
       "code": "ARTG 5150",
       "name": "Information Visualization Principles and Practices",
-      "description": "Studies information visualization theory, representation methods, perceptual tasks and practical examples, with introductory programming concepts.",
+      "description": "Information visualization integrating representation principles, perception, historical context and practical models.",
       "prerequisites": null,
-      "credits": 3.0,
+      "credits": 3,
       "credit_unit": "semester_hours",
       "category": "other",
       "source_id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses",
       "url": "https://catalog.northeastern.edu/course-descriptions/artg/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "locator": "ARTG 5150 complete course block",
+        "rationale": "The actual description centers on information visualization integrating representation principles, perception, historical context and practical models. Applied visual-design practice and cultural/perceptual communication inquiry are both explicit, without an adequately narrow dominant taxonomy category.",
+        "candidate_categories": [
+          "applications",
+          "human_context"
+        ],
+        "source_ids": [
+          "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses"
+        ]
+      }
     },
     {
       "id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-ds-4200",
@@ -1696,6 +1998,81 @@
         "locator": "EECE 2323 course block and reciprocal EECE 2322 corequisite",
         "rationale": "The laboratory designs, implements, simulates and tests a computer system on programmable logic using a hardware-description language.",
         "candidate_categories": []
+      }
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-2401",
+      "code": "ARTG 2401",
+      "name": "Interaction Design Principles Tools",
+      "description": "Web scripting, markup, CSS and front/back-end connections for interactive environments.",
+      "prerequisites": "ARTG 2400 (may be taken concurrently) with a minimum grade of D-",
+      "credits": 1,
+      "credit_unit": "semester_hours",
+      "category": "foundations",
+      "source_id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/artg/",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "locator": "ARTG 2401 complete course block",
+        "rationale": "The actual description centers on web scripting, markup, CSS and front/back-end connections for interactive environments.",
+        "candidate_categories": [],
+        "source_ids": [
+          "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses"
+        ]
+      }
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-5100",
+      "code": "ARTG 5100",
+      "name": "Information Design Studio 1: Principles",
+      "description": "Information-design studio projects organizing and communicating complex data through visual structures.",
+      "prerequisites": "Requires graduate standing or permission of program coordinator or instructor.",
+      "credits": 4,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/artg/",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "locator": "ARTG 5100 complete course block",
+        "rationale": "The actual description centers on information-design studio projects organizing and communicating complex data through visual structures.",
+        "candidate_categories": [],
+        "source_ids": [
+          "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses"
+        ]
+      }
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-5151",
+      "code": "ARTG 5151",
+      "name": "Information Design Critique Seminar",
+      "description": "Design critique, effective presentation and articulation of design problems through verbal feedback.",
+      "prerequisites": "ARTG 5150 (may be taken concurrently) with a minimum grade of C or ARTG 5150 (may be taken concurrently) with a minimum grade of C Can only be taken in conjunction with ARTG 5150 .",
+      "credits": 1,
+      "credit_unit": "semester_hours",
+      "category": "human_context",
+      "source_id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/artg/",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "locator": "ARTG 5151 complete course block",
+        "rationale": "The actual description centers on design critique, effective presentation and articulation of design problems through verbal feedback.",
+        "candidate_categories": [],
+        "source_ids": [
+          "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-courses"
+        ]
       }
     }
   ],
@@ -2695,7 +3072,9 @@
       "source_id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-catalog",
       "source_text": null,
       "summary": "with optional ARTG 2401 ",
-      "course_ids": []
+      "course_ids": [
+        "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-2401"
+      ]
     },
     {
       "id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-req-artg-3400",
@@ -2725,7 +3104,9 @@
       "source_id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-catalog",
       "source_text": null,
       "summary": "Instead of Topics in Information Design Inquiry ( ARTG 3444 ) , Information Design Studio 1: Principles ( ARTG 5100 ) is recommended for students considering the PlusOne in Information Design and Data Visualization.",
-      "course_ids": []
+      "course_ids": [
+        "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-5100"
+      ]
     },
     {
       "id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-req-integrative-requirements",
@@ -2799,7 +3180,9 @@
       "source_id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-catalog",
       "source_text": null,
       "summary": "For students who choose Information Visualization Principles and Practices ( ARTG 5150 ) , concurrent registration in Information Design Critique Seminar ( ARTG 5151 ) is recommended. It is suggested students consult with their academic advisor.",
-      "course_ids": []
+      "course_ids": [
+        "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-artg-5151"
+      ]
     },
     {
       "id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-req-supporting-courses",
@@ -3344,6 +3727,20 @@
       "course_ids": [
         "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-eece-2323"
       ]
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-conditional-camd-clearance",
+      "parent_id": null,
+      "title": "Conditional CAMD graduation clearance",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree-camd-policy-review",
+      "source_text": null,
+      "summary": "Students whose home college is CAMD must meet their assigned academic advisor to establish remaining graduation requirements; complete graduation clearance in the junior year to plan remaining work.",
+      "course_ids": []
     }
   ],
   "notes": [
@@ -3384,8 +3781,24 @@
     "Finite course-description review complete (2026-10-11): all 62 currently listed course observations have source-backed original summaries. This closes the listed-course description queue only. Other offering-specific public sites/syllabi remain unreviewed, null preparation fields do not mean no restriction, and degree completeness remains partial pending the documented applicability boundaries.",
     "Degree audit: CS 1802 is the explicitly specified one-hour corequisite seminar for fixed CS 1800. Its requirement is a child of CS 1800, supported by the degree preamble and reciprocal CS catalog corequisite conditions; other prerequisites have not been promoted to degree requirements.",
     "Subject-catalog metadata observation only; merge with program requirements after review. Credits are hours in the same semester catalog as the program. Missing prerequisite fields remain unknown.",
-    "Subject-catalog metadata observation only; merge with program requirements after review. Credits are hours in the same semester catalog as the program. Missing prerequisite fields remain unknown.",
-    "EECE 2323 subject catalog corequisite(s): EECE 2322. These are concurrent conditions, not prerequisites."
+    "EECE 2323 subject catalog corequisite(s): EECE 2322. These are concurrent conditions, not prerequisites.",
+    "ARTG 1001 concurrent corequisite(s): ARTG 1002. This observation does not add degree requirement membership.",
+    "ARTG 1002 concurrent corequisite(s): ARTG 1001. This observation does not add degree requirement membership.",
+    "ARTG 1270 concurrent corequisite(s): ARTG 1271. This observation does not add degree requirement membership.",
+    "ARTG 1271 concurrent corequisite(s): ARTG 1270. This observation does not add degree requirement membership.",
+    "ARTG 1290 concurrent corequisite(s): ARTG 1291. This observation does not add degree requirement membership.",
+    "ARTG 1291 concurrent corequisite(s): ARTG 1290. This observation does not add degree requirement membership.",
+    "ARTG 3400 repeat_limit: May be repeated twice.",
+    "ARTG 3444 repeat_limit: May be repeated twice.",
+    "ARTG 3452 repeat_limit: May be repeated twice.",
+    "ARTG 3464 repeat_limit: May be repeated up to two times for a maximum of 12 semester hours.",
+    "ARTG 3810 repeat_limit: May be repeated twice.",
+    "ARTG 5100 additional_prerequisite: Requires graduate standing or permission of program coordinator or instructor.",
+    "ARTG 5151 additional_prerequisite: Can only be taken in conjunction with ARTG 5150 .",
+    "ARTG 5330 repeat_limit: May be repeated once.",
+    "ARTG 5330 permission_route: Students who do not meet course restrictions may seek permission of instructor or program coordinator.",
+    "2026-10-11 design subject audit: complete individually reviewed ARTF/ARTG blocks establish the attached manual categories and observed registration conditions. Those conditions remain conditional course eligibility; they do not add fixed degree obligations. Subject decisions follow specific content rather than the host degree.",
+    "The three optional/recommended ARTG courses remain contextual identities: ARTG2401 optional alongside2400; ARTG5100 recommended for the stated PlusOne path with its explicit permission/graduate-standing condition; ARTG5151 recommended concurrent with5150. They do not create fixed or ordinary option obligations. ARTG5150 is three semester hours, while5330 is four; no mandatory seminar is invented to reconcile that difference."
   ],
   "curriculum_audit": {
     "scope": "degree",

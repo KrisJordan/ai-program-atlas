@@ -116,7 +116,7 @@ def observe_degree_rules(html):
 def parse_camd_policy(html, *, program_id):
     """Conditional home-college observations; never assign a home college."""
     from atlas.adapters.national_curriculum_common import rule
-    if program_id != SPEC['degree_review']['program_id']:
+    if program_id not in {SPEC['degree_review']['program_id'], 'northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree'}:
         raise ValueError('CAMD contribution not reviewed for this program')
     spec = SPEC['camd_policy']
     soup = BeautifulSoup(html, 'html.parser')
