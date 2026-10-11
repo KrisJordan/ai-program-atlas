@@ -263,3 +263,28 @@ def test_environment_education_and_related_methods_keep_exact_scope():
     assert 'Pre- or Co-Requisite TAL 330 and TAL 332' in m.SPEC['courses']['TAL 434']['prerequisites']
     assert 'FOOTE FELLOW' in m.SPEC['courses']['KIN 308']['prerequisites']
     assert 'does not qualify' in m.SPEC['courses']['EPS 420']['description']
+
+
+def test_exact_alphabetic_instrument_code_is_supported_but_changed_identity_is_not(monkeypatch):
+    html='<h1>Instruments (MIP)</h1><div class="courseblock"><p class="courseblocktitle">MIP BAS. Secondary Bassoon. 1 Credit Hour.</p><p>Technique and repertoire. Requisite: Frost School of Music only. Components: LSN.</p></div>'
+    block=BeautifulSoup(html,'html.parser').select_one('.courseblock')
+    item=dict(key='mip',name='Secondary Bassoon',program_ids=['example'],url='https://example.edu/mip/',block_hash=hashlib.sha256(clean(block.get_text(' ',strip=True)).encode()).hexdigest(),description='Practices bassoon technique and repertoire.',prerequisites='Requisite: Frost School of Music only.',category='applications')
+    monkeypatch.setattr(m,'SPEC',dict(sources={'mip':dict(heading='Instruments (MIP)')},courses={'MIP BAS':item}))
+    c=m.parse(html,pid='example',key='mip')['courses'][0]
+    assert c['code']=='MIP BAS' and c['credits']==1
+    assert 'category_review' not in c
+    for changed in [html.replace('MIP BAS','MIP CBS'),html.replace('1 Credit','2 Credit'),html.replace('Frost School of Music only','All students')]:
+        with pytest.raises(ValueError):m.parse(changed,pid='example',key='mip')
+
+
+def test_music_history_practice_mixed_content_and_restrictions_are_distinct():
+    assert m.SPEC['courses']['MCY 121']['category']=='human_context'
+    assert m.SPEC['courses']['MCY 335']['review']['status']=='mixed'
+    assert m.SPEC['courses']['MTC 123']['review']['status']=='mixed'
+    assert m.SPEC['courses']['MIP BAS']['category']=='applications'
+    assert m.SPEC['courses']['MIP BAS']['credits']==1
+    assert 'Frost School of Music only' in m.SPEC['courses']['MIP BAS']['prerequisites']
+    assert m.SPEC['courses']['MIP CBS']['prerequisites'] is None
+    assert 'unless in the BA in MIND program' in m.SPEC['courses']['MCY 124']['prerequisites']
+    assert m.SPEC['courses']['MIP 171']['credits']==2
+    assert m.SPEC['courses']['MVP VOS']['credits']==1

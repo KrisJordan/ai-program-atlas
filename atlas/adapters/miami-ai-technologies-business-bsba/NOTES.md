@@ -156,3 +156,11 @@ The university general-education policy explicitly co-lists BPH202/HCS202/NUR202
 ## 2026-10-11 Geography and Sustainable Development (GEG) contextual review
 
 47 complete official blocks now supply guarded observations and separately attached manual content reviews. Variable credits, prerequisite/permission restrictions, source conflicts and insufficient-topic records retain their precise scopes in `miami_geg_context_reviews.json`. No contextual row is promoted to a required course; no approval or equivalence is inferred. Source chapter edition remains unassigned where current navigation does not establish it.
+
+## 2026-10-11 area studies contextual review
+
+45 complete official blocks now supply guarded observations and separate manual content reviews; exact source scopes and missing-code outcomes remain in `miami_area_studies_context_reviews.json`. No contextual role, approval or equivalence is inferred.
+
+## 2026-10-11 judaic latin urban contextual review
+
+47 complete official blocks now supply guarded observations and separate manual content reviews; exact source scopes and missing-code outcomes remain in `miami_judaic_latin_urban_context_reviews.json`. No contextual role, approval or equivalence is inferred.

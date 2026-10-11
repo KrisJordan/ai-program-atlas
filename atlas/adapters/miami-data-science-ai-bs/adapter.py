@@ -76,3 +76,9 @@ register_arc_context(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
 
 from atlas.adapters.miami_geg_context_reviews import register as register_geg_context
 register_geg_context(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
+
+from atlas.adapters.miami_area_studies_context_reviews import register as register_area_studies_context
+register_area_studies_context(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
+
+from atlas.adapters.miami_judaic_latin_urban_context_reviews import register as register_judaic_latin_urban_context
+register_judaic_latin_urban_context(PROGRAM_ID,SOURCES,SOURCE_PARSERS)

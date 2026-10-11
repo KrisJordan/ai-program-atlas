@@ -149,3 +149,15 @@ Psychological intervention and instructional practice differ from social/ethical
 Current total:6,991reviewed observations. Remaining:184codes/736observations, including125located currentblocks and59identityfollowups. The other currently located blocks are in disjoint contributor review; completion of this batch does not certify the whole degrees.
 
 Validation:55 focused shared-content, Architecture, Geography and policy tests passed after the75-source integration. Isolated four-degree ingestion/repeat(4/0), ledger/integrity/foreign keys,6,991 reviewed exports and static build passed; generated outputs removed.
+
+## Music and final located regional/cultural blocks — 2026-10-11
+
+All33 currently present represented music blocks were read. Musical history/cultural analysis differs from instrumental, choral and therapeutic practice. MCY335 combines conflict analysis and peacebuilding service; MTC123 combines cognitive processes and interpretation, so both remain mixed. Individual lessons are one academic credit despite half-hour contact sessions. Ensemble amounts remain one or two credits as printed. Specific Frost-only restrictions and the BA MIND exception are retained; MIP CBS has no explicit prerequisite field and does not inherit the restriction printed on neighboring instruments.
+
+The shared observer now accepts the six exact reviewed three-letter secondary-instrument identities, still guarded by its explicit source/code inventory, exact heading, name and complete-block hash. This repairs a numeric-only code assumption without accepting arbitrary identities or replaying review certification. Twenty-five music transfer-code identities absent from linked current chapters remain within the separate59-code evidence queue.
+
+The final two contributed small-chapter groups add92actual blocks across AAS/AMS/ASG/CUB/GHS/JUS/LAS/URB. Their individual semantic, variable-credit and eligibility decisions are retained. GHS370 is absent and receives no fabricated metadata; LAS101's stated replacement of LAS201 is not treated as a mapped cross-list identity. Cultural interpretation, practical work and coequal mixed content remain distinct.
+
+All1,821 current blocks located in the original1,880-code contextual backlog have now been read and integrated. Across all four degree inventories there are7,491reviewed program-course observations. The remaining59codes/236observations need exact-identity/content-source review; there are zero located-but-unread current blocks in that finite queue. This is source-content progress, not a whole-degree audit certification: policy scope, specific source ambiguities and manual aggregates are still being checked.
+
+Validation:57 focused shared-content, regional/cultural and policy tests passed, including exact alphabetic-code mutation guards. Isolated four-degree ingestion/repeat(4/0), ledger/integrity/foreign keys,7,491 reviewed exports and static build passed; generated outputs removed.

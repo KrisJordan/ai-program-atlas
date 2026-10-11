@@ -35,7 +35,7 @@ def parse(html, *, pid, key):
         item = wanted[code]
         if hashlib.sha256(clean(block.get_text(' ', strip=True)).encode()).hexdigest() != item['block_hash']:
             raise ValueError('Miami contextual course changed; review required: ' + code)
-        match = re.fullmatch(r'([A-Z]+ \d+)\. (.*?)\. (\d+(?:\.\d+)?(?:-\d+(?:\.\d+)?)?) Credit Hours?\.', text)
+        match = re.fullmatch(r'([A-Z]+ (?:\d+|[A-Z]{3}))\. (.*?)\. (\d+(?:\.\d+)?(?:-\d+(?:\.\d+)?)?) Credit Hours?\.', text)
         if not match or match[2] != item['name']:
             raise ValueError('Miami contextual course identity/credit format changed')
         record = course(code, match[2], pid, 'miami-context-courses-' + key, item['url'],
