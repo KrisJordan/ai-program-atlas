@@ -37,3 +37,11 @@ def test_permissions_and_optional_dual_degree_do_not_promote_membership():
     assert 'not completed enrollment' in courses
     assert 'does not increase the single degree' in graduation
     assert 'before the first degree' in graduation
+
+
+def test_undergraduate_progression_and_proficiency_keep_scope():
+    grades=m.NOTES['grades'][0][2];general=' '.join(n[2] for n in m.NOTES['general'])
+    assert 'subject to a college' in grades and 'college exceptions' in grades
+    assert '13 credits' in grades
+    assert 'specifically approves MAS110 for the BBA' in general
+    assert 'not generalized' in general and 'does not award' in general

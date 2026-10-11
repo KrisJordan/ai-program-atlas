@@ -24,7 +24,7 @@ def test_heritage_courses_are_conditional_and_guarded(monkeypatch):
  html+=''.join('<div class="courseblock">SPA '+n+'. Synthetic title '+n+'. 3 Credit Hours.</div>' for n in ['107','207','208','307'])+'</main>'
  monkeypatch.setitem(a.HASHES,'languages',hashlib.sha256(a.observed_text(html,'languages').encode()).hexdigest())
  d=a.parse_source(html,pid='test',key='languages')
- assert len(d['courses'])==4 and len(d['requirements'])==3
+ assert len(d['courses'])==4 and len(d['requirements'])==6
  assert all(r['kind']=='note' for r in d['requirements'])
  assert 'does not meet' in d['requirements'][1]['summary']
  assert next(c for c in d['courses'] if c['code']=='SPA 307')['prerequisites'].startswith('SPA 208')
@@ -55,3 +55,10 @@ def test_optional_public_cache(key):
  p=Path('/tmp/miami-supplement')/(key+'.html')
  if not p.exists():pytest.skip('Optional raw source cache is not committed')
  assert a.parse_source(p.read_text(),pid='test',key=key)['requirements']
+
+
+def test_published_placement_table_remains_provisional_and_not_a_waiver():
+ text=' '.join(x[2] for x in a.POLICIES['languages'])
+ assert 'not overrides of individual course exclusions' in text
+ assert 'no exact route is inferred' in text
+ assert 'do not establish waiver of every credit' in text

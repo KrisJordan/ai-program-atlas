@@ -87,3 +87,13 @@ Follow-up: all 31 focused language/policy tests now pass, including preserved ex
 The 113-block Religion contribution is integrated across four degrees (452 observations). It distinguishes 97 historical/cultural/ethical subjects, two cognitive/psychological applications, two mixed subjects and twelve unspecified external-credit records. Fourteen ranges retain null scalar credits. Its evidence also prompted a narrow HIS412 correction: the actual classroom/community-work/reflection modules support mixed human-context and applied service content. All four HIS412 records now use that reviewed mixed rationale; source identity, eligibility and role remain unchanged.
 
 Current total: 3,775 reviewed observations; 988 codes/3,952 observations remain, including 929 exact current blocks and 59 identity follow-ups. Validation: 36 focused Religion/History/shared-content tests and isolated four-degree ingestion/repeat (4/0), integrity/foreign keys, review exports and static build passed.
+
+## Philosophy and anthropology contributions — 2026-10-11
+
+Eighty-four current Philosophy blocks and 52 Anthropology blocks add 544 source-reviewed observations across four programs, while retaining earlier PHI115/330 and APY313 reviews and same-source parser composition. Each contribution's manual decisions remain in its own manifest. Anthropology distinguishes biological/cognitive domain study from AI methods and ethics from biological techniques; APY501 retains its 2–6 credit range and mixed methods scope. APY361's one-sided GSS co-list statement does not establish a reciprocal identity group.
+
+PHI296 and PHI301 have no exact block in the current public chapter. Ordinary official search-form targets were robots-disallowed and were not retried through another route. Existing dated directory identities remain, without new descriptions, amounts or manual category reviews. These are precise missing-current-evidence outcomes within the 59 identity follow-ups, not a reason to stop accessible descriptions elsewhere. The PHI helper guards both the reviewed blocks and the complete current chapter-code inventory, requiring renewed review if an absent code appears.
+
+Current total: 4,319 reviewed observations. Remaining: 852 codes/3,408 observations, including 793 located current blocks and 59 identity follow-ups. Fifty-nine focused shared-content, Philosophy, Anthropology and policy tests passed. Policy-specific validation also passed 75 tests before the new contributions were integrated.
+
+The integrated four-degree ingest/repeat (4/0), integrity/foreign keys, 4,319 exact reviewed exports and static build passed; generated temporary outputs were then removed while official source caches were retained.

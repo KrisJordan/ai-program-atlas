@@ -33,6 +33,22 @@ NOTES={
 }
 
 
+# Source-reviewed undergraduate scopes; college exceptions remain conditional.
+HASHES.update(grades='a77329af5e58cfccb3d44e7695b3285aedf552c04f4646bad0a1a8fe7ddd5443',
+              general='9d1fbe8ba95306789176513a78a4666b720e803554dfbf5ffb49b47740f65cef')
+SOURCE_IDS.update(grades='miami-grades-policy',general='miami-general-education-policy')
+NOTES.update({
+ 'grades':[
+ ('conditional-progression','University progression thresholds and college exceptions',
+  'University probation thresholds are a Miami cumulative GPA below 1.7 for fewer than 33 earned credits, 1.8 for 33–64, 1.9 for 65–96 and 2.0 above 96. First-semester nontransfer freshmen instead trigger probation below a 1.3 semester GPA. Unsatisfactory degree progress can also trigger college action. Probation requires advising before the next semester and limits the load to 13 credits. Two consecutive probation semesters, or one with cumulative GPA below 1.0, make the student subject to a college academic-standards dismissal decision; nondismissal leaves probation in place. The source expressly permits college exceptions, so applicable business rules are not replaced.')],
+ 'general':[
+ ('quantitative-proficiency-scope','Published quantitative-proficiency criteria',
+  'University quantitative proficiency requires satisfactory MTH108 or higher mathematics, a statistics course approved by the college and University Curriculum Committee with appropriate academic consultation, or an equivalent. The source specifically approves MAS110 for the BBA; that named exception is not generalized to every business award. Approved test credit may satisfy the criterion. These are published criteria, not a claim that every numerical course is approved or that additional credits beyond a qualifying program course are mandatory.'),
+ ('writing-placement-scope','Initial writing placement and prerequisite preparation',
+  'For new students without prior college written-communication credit, the source places ACT English below 18, SAT reading/writing below 430 or TOEFL writing below 18 into WRS103; ACT18–31, SAT430–690 or TOEFL writing at least18 into WRS105; and ACT at least32 or SAT at least700 into WRS106/107 or ENG106. Placement and accepted-credit rules retain their own scope; exempting WRS105 does not award its credits. Written communication must be completed before junior classification. WRS103 is preparatory and is not automatically degree credit.')]
+})
+
+
 def parse(html, *, pid, key):
     if pid not in PROGRAMS or key not in HASHES:raise ValueError('Unreviewed Miami degree-policy scope')
     observed=parse_policy(html,pid=pid,code=key)

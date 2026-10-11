@@ -116,3 +116,15 @@ Current university course-information and graduation sections were reread. Seven
 ## 2026-10-11 Religious Studies (REL) contextual review
 
 113 complete official blocks now supply guarded observations and separately attached manual content reviews. Variable credits, prerequisite/permission restrictions, source conflicts and insufficient-topic records retain their precise scopes in `miami_rel_context_reviews.json`. No contextual row is promoted to a required course; no approval or equivalence is inferred. Source chapter edition remains unassigned where current navigation does not establish it.
+
+## 2026-10-11 progression and proficiency review
+
+Current public university probation/dismissal thresholds and quantitative/writing proficiency criteria now have conditional source-guarded notes. A dismissal threshold triggers a college decision, not automatic dismissal; explicit college exceptions remain. Named BBA quantitative eligibility is not generalized to BSBA. For Arts and Sciences degrees, the complete published multi-language placement guide is mapped with first-day diagnostic authority, native/heritage exclusions and optional post-proficiency continuation. This closes the prior unreviewed-placement-source item; it does not invent an unlisted track or waive a higher program-specific credit row.
+
+## 2026-10-11 Philosophy (PHI) contextual review
+
+84 complete official blocks now supply guarded observations and separately attached manual content reviews. Variable credits, prerequisite/permission restrictions, source conflicts and insufficient-topic records retain their precise scopes in `miami_phi_context_reviews.json`. No contextual row is promoted to a required course; no approval or equivalence is inferred. Source chapter edition remains unassigned where current navigation does not establish it.
+
+## 2026-10-11 Anthropology (APY) contextual review
+
+52 complete official blocks now supply guarded observations and separately attached manual content reviews. Variable credits, prerequisite/permission restrictions, source conflicts and insufficient-topic records retain their precise scopes in `miami_apy_context_reviews.json`. No contextual row is promoted to a required course; no approval or equivalence is inferred. Source chapter edition remains unassigned where current navigation does not establish it.

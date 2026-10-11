@@ -33,3 +33,13 @@ The source permits ordinary faculty/department permission through a PIN or form 
 The complete current policy digests guard observations; a changed rule requires renewed interpretation. The manual audit remains in progress while course-content review continues. No private student record or individual permission is accessed or inferred, and no new named courses enter the graph.
 
 Validation: 46 focused policy tests and isolated four-degree ingestion/repeat (4/0), integrity/foreign keys, 2,287 reviewed exports and static build passed.
+
+## Progression, proficiency and published placement — 2026-10-11
+
+The current undergraduate-policy overview, complete general-education page, complete advanced-writing page, grade-page GPA/credit-only/progression sections, and full Modern Languages placement introduction were read. Three additional university notes map probation and conditional dismissal, quantitative-proficiency criteria, and initial writing placement. They retain college exceptions and do not equate a dismissal threshold with a dismissal decision. The specific MAS110 BBA quantitative route is not extended to BSBA by title similarity; no unbounded approved-statistics inventory is invented.
+
+The Arts and Sciences degrees gain three course-free notes for every publicly listed introductory/intermediate language preparation route and optional continuation after proficiency. The guide itself is provisional: first-day diagnostics and individual course exclusions still apply. Its general recommendation after one or two high-school years therefore does not override a specific course's two-year exclusion. Native and heritage restrictions remain explicit. The prior claim that those accessible placement sections were unreviewed is removed. The sources do not promise a waiver of the BS program's entire higher nine-credit row, and no unlisted heritage track is invented.
+
+The reading also confirms that different advanced-writing requirements apply to a primary major versus two degrees. Prior notes already represent that scope accurately. Actual current academic requirements follow admission to degree status, while current administrative processes apply to all students. An individual private progress report is neither necessary to invent universal rules nor available as evidence of granted approvals.
+
+Validation: 75 focused policy tests passed, followed by 59 combined policy/content tests after source-contribution integration and an isolated four-degree build with unchanged course roles.

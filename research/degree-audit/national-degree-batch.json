@@ -1323,6 +1323,48 @@
           "locator": "113 complete represented course blocks manually reviewed; individual source scopes/rationales in miami_rel_context_reviews.json. Current public chapter captured on 2026-10-11; download-navigation labels do not establish the chapter edition.",
           "checked_at": "2026-10-11T05:51:12+00:00",
           "access_status": "accessible_cached_official_source"
+        },
+        {
+          "url": "https://bulletin.miami.edu/general-university-information/undergraduate-policies-and-procedures/grades/",
+          "locator": " Complete relevant public grades sections reread; conditional scope retained.",
+          "catalog_year": null,
+          "checked_at": "2026-10-11T05:57:02+00:00",
+          "access_status": "accessible_cached_official_source"
+        },
+        {
+          "url": "https://bulletin.miami.edu/general-university-information/undergraduate-policies-and-procedures/general-education-requirements/",
+          "locator": " Complete relevant public general sections reread; conditional scope retained.",
+          "catalog_year": null,
+          "checked_at": "2026-10-11T05:57:07+00:00",
+          "access_status": "accessible_cached_official_source"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/phi/",
+          "catalog_year": null,
+          "locator": "84 complete represented course blocks manually reviewed; individual source scopes/rationales in miami_phi_context_reviews.json. Current public chapter captured on 2026-10-11; download labels do not establish its edition. PHI296/301 are absent from this chapter.",
+          "checked_at": "2026-10-11T03:04:25+00:00",
+          "access_status": "accessible_cached_official_source"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/apy/",
+          "catalog_year": null,
+          "locator": "52 complete represented course blocks manually reviewed; individual source scopes/rationales in miami_apy_context_reviews.json. Current public chapter captured on 2026-10-11; no chapter edition is inferred from download-navigation labels.",
+          "checked_at": "2026-10-11T04:14:28+00:00",
+          "access_status": "accessible_cached_official_source"
+        },
+        {
+          "url": "https://bulletin.miami.edu/search/?search=PHI+296",
+          "catalog_year": null,
+          "locator": "PHI 296 exact official search-form target; current chapter lacks the code. Robots restriction respected; existing directory identity retained without new metadata.",
+          "checked_at": "2026-10-11",
+          "access_status": "robots_disallowed"
+        },
+        {
+          "url": "https://bulletin.miami.edu/search/?search=PHI+301",
+          "catalog_year": null,
+          "locator": "PHI 301 exact official search-form target; current chapter lacks the code. Robots restriction respected; existing directory identity retained without new metadata.",
+          "checked_at": "2026-10-11",
+          "access_status": "robots_disallowed"
         }
       ],
       "checks": {
@@ -1331,9 +1373,9 @@
         "elective_pools": "Numeric elective pools are published credit choices, not contextual notes. The named one-of component inside the four-W writing overlay is required, while overlap with major courses remains permitted. Main-table mapped roles are 21 fixed / 33 named options. The much larger university cognate inventory remains contextual, not a degree workload. No subject labels were inferred from elective or cognate membership.",
         "prerequisites": "Actual named-course prerequisites, pre/corequisites, standing restrictions and exclusions are recorded literally. Unlabeled eligibility lines stay qualified. Degree-table row evidence separately preserves approved-project, course-order and overlap conditions when the catalog supplies a normalized course title. Preparatory courses are not added as extra fixed obligations. A finance-major grade rule is not extended to these AI degrees.",
         "credits_and_units": "Published row/group amounts remain distinct from per-course credits; semester-hour definition is registered in existing university policy evidence. No range or grouped amount is divided between courses. Every primary-table named course now has the current catalog amount; variable project ranges are retained with null scalar credits. UMX100 is explicitly zero; CSC405 and professional-development alternatives are explicitly one credit. Degree/area totals remain independent constraints rather than sums over options. Current course-information source explicitly equates semester credits, semester hours, credit hours and credits within Miami’s semester system; other contact-hour amounts are not substituted for academic credit.",
-        "classification": "Every named primary-table fixed/option course has been read. Current full represented inventory: 1939 code records; 26 mixed, 808 reviewed, 117 unclassified, 988 unreviewed. Actual contextual-course descriptions are being reviewed in the finite queue research/miami-description-review-remaining.json. No category is inferred from cognate membership; newly reviewed contextual records retain their original role.",
+        "classification": "Every named primary-table fixed/option course has been read. Current full represented inventory: 1939 code records; 40 mixed, 927 reviewed, 120 unclassified, 852 unreviewed. Actual contextual-course descriptions are being reviewed in the finite queue research/miami-description-review-remaining.json. No category is inferred from cognate membership; newly reviewed contextual records retain their original role. PHI296 and PHI301 remain unreviewed: exact current blocks are absent and the official search route disallows crawling. This does not prevent continued review of other accessible courses.",
         "family_composition": "Standalone concrete degree; no family inheritance or degree variant collapse.",
-        "degree_wide_requirements": "Existing college/university policy evidence and unresolved questions remain in the seed audit. Independent rereading of all applicable degree-wide rules is unfinished; the role correction does not establish degree completeness. Complete current transfer-policy reread distinguishes enrollment, credit acceptance and aid restrictions: summer exclusion from one enrollment rule does not grant transfer credit. The prior categorical contradiction is corrected, with the summer-session credit exclusion and MATES preapproval discretion preserved. Remaining public policy and course-content review continues; this correction does not certify the whole degree. Additional current source review maps seven conditional public course/enrollment/graduation scope notes, including actual processed declarations and optional dual-degree approval. Requirements remain student/cohort scoped; ordinary approval conditions alone are not blockers."
+        "degree_wide_requirements": "Existing college/university policy evidence and unresolved questions remain in the seed audit. Independent rereading of all applicable degree-wide rules is unfinished; the role correction does not establish degree completeness. Complete current transfer-policy reread distinguishes enrollment, credit acceptance and aid restrictions: summer exclusion from one enrollment rule does not grant transfer credit. The prior categorical contradiction is corrected, with the summer-session credit exclusion and MATES preapproval discretion preserved. Remaining public policy and course-content review continues; this correction does not certify the whole degree. Additional current source review maps seven conditional public course/enrollment/graduation scope notes, including actual processed declarations and optional dual-degree approval. Requirements remain student/cohort scoped; ordinary approval conditions alone are not blockers. Current university progression and written/quantitative proficiency criteria reread and conditionally mapped; explicit college exceptions and declaration/approval rules retained."
       },
       "expected_profile": null,
       "expected_course_ids": {
@@ -1696,17 +1738,66 @@
           "locator": "113 complete represented course blocks manually reviewed; individual source scopes/rationales in miami_rel_context_reviews.json. Current public chapter captured on 2026-10-11; download-navigation labels do not establish the chapter edition.",
           "checked_at": "2026-10-11T05:51:12+00:00",
           "access_status": "accessible_cached_official_source"
+        },
+        {
+          "url": "https://bulletin.miami.edu/general-university-information/undergraduate-policies-and-procedures/grades/",
+          "locator": " Complete relevant public grades sections reread; conditional scope retained.",
+          "catalog_year": null,
+          "checked_at": "2026-10-11T05:57:02+00:00",
+          "access_status": "accessible_cached_official_source"
+        },
+        {
+          "url": "https://bulletin.miami.edu/general-university-information/undergraduate-policies-and-procedures/general-education-requirements/",
+          "locator": " Complete relevant public general sections reread; conditional scope retained.",
+          "catalog_year": null,
+          "checked_at": "2026-10-11T05:57:07+00:00",
+          "access_status": "accessible_cached_official_source"
+        },
+        {
+          "url": "https://bulletin.miami.edu/undergraduate-academic-programs/arts-sciences/modern-languages-literatures/",
+          "locator": " Complete relevant public languages sections reread; conditional scope retained.",
+          "catalog_year": null,
+          "checked_at": "2026-10-11T05:57:14+00:00",
+          "access_status": "accessible_cached_official_source"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/phi/",
+          "catalog_year": null,
+          "locator": "84 complete represented course blocks manually reviewed; individual source scopes/rationales in miami_phi_context_reviews.json. Current public chapter captured on 2026-10-11; download labels do not establish its edition. PHI296/301 are absent from this chapter.",
+          "checked_at": "2026-10-11T03:04:25+00:00",
+          "access_status": "accessible_cached_official_source"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/apy/",
+          "catalog_year": null,
+          "locator": "52 complete represented course blocks manually reviewed; individual source scopes/rationales in miami_apy_context_reviews.json. Current public chapter captured on 2026-10-11; no chapter edition is inferred from download-navigation labels.",
+          "checked_at": "2026-10-11T04:14:28+00:00",
+          "access_status": "accessible_cached_official_source"
+        },
+        {
+          "url": "https://bulletin.miami.edu/search/?search=PHI+296",
+          "catalog_year": null,
+          "locator": "PHI 296 exact official search-form target; current chapter lacks the code. Robots restriction respected; existing directory identity retained without new metadata.",
+          "checked_at": "2026-10-11",
+          "access_status": "robots_disallowed"
+        },
+        {
+          "url": "https://bulletin.miami.edu/search/?search=PHI+301",
+          "catalog_year": null,
+          "locator": "PHI 301 exact official search-form target; current chapter lacks the code. Robots restriction respected; existing directory identity retained without new metadata.",
+          "checked_at": "2026-10-11",
+          "access_status": "robots_disallowed"
         }
       ],
       "checks": {
         "degree_identity": "Current official degree identity and primary requirements reread; exact award and host-college distinction preserved.",
         "required_and_choices": "Read current degree curriculum table, fixed rows, explicit OR choices, major credit pools and writing overlay. Source ranges and open free-elective predicates remain unsummed.",
         "elective_pools": "Numeric elective pools are published credit choices, not contextual notes. The named one-of component inside the four-W writing overlay is required, while overlap with major courses remains permitted. Main-table mapped roles are 13 fixed / 44 named options. The much larger university cognate inventory remains contextual, not a degree workload. No subject labels were inferred from elective or cognate membership.",
-        "prerequisites": "Actual named-course prerequisites, pre/corequisites, standing restrictions and exclusions are recorded literally. Unlabeled eligibility lines stay qualified. Degree-table row evidence separately preserves approved-project, course-order and overlap conditions when the catalog supplies a normalized course title. Preparatory courses are not added as extra fixed obligations. A finance-major grade rule is not extended to these AI degrees.",
+        "prerequisites": "Actual named-course prerequisites, pre/corequisites, standing restrictions and exclusions are recorded literally. Unlabeled eligibility lines stay qualified. Degree-table row evidence separately preserves approved-project, course-order and overlap conditions when the catalog supplies a normalized course title. Preparatory courses are not added as extra fixed obligations. A finance-major grade rule is not extended to these AI degrees. Complete publicly listed language placement routes now reviewed and mapped; individual diagnostics and existing course exclusions govern, not inferred waiver or equivalence.",
         "credits_and_units": "Published row/group amounts remain distinct from per-course credits; semester-hour definition is registered in existing university policy evidence. No range or grouped amount is divided between courses. Every primary-table named course now has the current catalog amount; variable project ranges are retained with null scalar credits. UMX100 is explicitly zero; CSC405 and professional-development alternatives are explicitly one credit. Degree/area totals remain independent constraints rather than sums over options. The program nine-credit language row and 121 total are compatible with the college three-credit minimum and university 120-credit minimum; the sample plan does not control. Exact waiver extension to program-specific credits is not assumed. Current course-information source explicitly equates semester credits, semester hours, credit hours and credits within Miami’s semester system; other contact-hour amounts are not substituted for academic credit.",
-        "classification": "Every named primary-table fixed/option course has been read. Current full represented inventory: 1933 code records; 26 mixed, 803 reviewed, 116 unclassified, 988 unreviewed. Actual contextual-course descriptions are being reviewed in the finite queue research/miami-description-review-remaining.json. No category is inferred from cognate membership; newly reviewed contextual records retain their original role.",
+        "classification": "Every named primary-table fixed/option course has been read. Current full represented inventory: 1933 code records; 40 mixed, 922 reviewed, 119 unclassified, 852 unreviewed. Actual contextual-course descriptions are being reviewed in the finite queue research/miami-description-review-remaining.json. No category is inferred from cognate membership; newly reviewed contextual records retain their original role. PHI296 and PHI301 remain unreviewed: exact current blocks are absent and the official search route disallows crawling. This does not prevent continued review of other accessible courses.",
         "family_composition": "Standalone concrete degree; no family inheritance or degree variant collapse.",
-        "degree_wide_requirements": "Existing college/university policy evidence and unresolved questions remain in the seed audit. Independent rereading of all applicable degree-wide rules is unfinished; the role correction does not establish degree completeness. Complete current transfer-policy reread distinguishes enrollment, credit acceptance and aid restrictions: summer exclusion from one enrollment rule does not grant transfer credit. The prior categorical contradiction is corrected, with the summer-session credit exclusion and MATES preapproval discretion preserved. Remaining public policy and course-content review continues; this correction does not certify the whole degree. Additional current source review maps seven conditional public course/enrollment/graduation scope notes, including actual processed declarations and optional dual-degree approval. Requirements remain student/cohort scoped; ordinary approval conditions alone are not blockers."
+        "degree_wide_requirements": "Existing college/university policy evidence and unresolved questions remain in the seed audit. Independent rereading of all applicable degree-wide rules is unfinished; the role correction does not establish degree completeness. Complete current transfer-policy reread distinguishes enrollment, credit acceptance and aid restrictions: summer exclusion from one enrollment rule does not grant transfer credit. The prior categorical contradiction is corrected, with the summer-session credit exclusion and MATES preapproval discretion preserved. Remaining public policy and course-content review continues; this correction does not certify the whole degree. Additional current source review maps seven conditional public course/enrollment/graduation scope notes, including actual processed declarations and optional dual-degree approval. Requirements remain student/cohort scoped; ordinary approval conditions alone are not blockers. Current university progression and written/quantitative proficiency criteria reread and conditionally mapped; explicit college exceptions and declaration/approval rules retained."
       },
       "expected_profile": null,
       "expected_course_ids": {
@@ -2071,6 +2162,48 @@
           "locator": "113 complete represented course blocks manually reviewed; individual source scopes/rationales in miami_rel_context_reviews.json. Current public chapter captured on 2026-10-11; download-navigation labels do not establish the chapter edition.",
           "checked_at": "2026-10-11T05:51:12+00:00",
           "access_status": "accessible_cached_official_source"
+        },
+        {
+          "url": "https://bulletin.miami.edu/general-university-information/undergraduate-policies-and-procedures/grades/",
+          "locator": " Complete relevant public grades sections reread; conditional scope retained.",
+          "catalog_year": null,
+          "checked_at": "2026-10-11T05:57:02+00:00",
+          "access_status": "accessible_cached_official_source"
+        },
+        {
+          "url": "https://bulletin.miami.edu/general-university-information/undergraduate-policies-and-procedures/general-education-requirements/",
+          "locator": " Complete relevant public general sections reread; conditional scope retained.",
+          "catalog_year": null,
+          "checked_at": "2026-10-11T05:57:07+00:00",
+          "access_status": "accessible_cached_official_source"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/phi/",
+          "catalog_year": null,
+          "locator": "84 complete represented course blocks manually reviewed; individual source scopes/rationales in miami_phi_context_reviews.json. Current public chapter captured on 2026-10-11; download labels do not establish its edition. PHI296/301 are absent from this chapter.",
+          "checked_at": "2026-10-11T03:04:25+00:00",
+          "access_status": "accessible_cached_official_source"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/apy/",
+          "catalog_year": null,
+          "locator": "52 complete represented course blocks manually reviewed; individual source scopes/rationales in miami_apy_context_reviews.json. Current public chapter captured on 2026-10-11; no chapter edition is inferred from download-navigation labels.",
+          "checked_at": "2026-10-11T04:14:28+00:00",
+          "access_status": "accessible_cached_official_source"
+        },
+        {
+          "url": "https://bulletin.miami.edu/search/?search=PHI+296",
+          "catalog_year": null,
+          "locator": "PHI 296 exact official search-form target; current chapter lacks the code. Robots restriction respected; existing directory identity retained without new metadata.",
+          "checked_at": "2026-10-11",
+          "access_status": "robots_disallowed"
+        },
+        {
+          "url": "https://bulletin.miami.edu/search/?search=PHI+301",
+          "catalog_year": null,
+          "locator": "PHI 301 exact official search-form target; current chapter lacks the code. Robots restriction respected; existing directory identity retained without new metadata.",
+          "checked_at": "2026-10-11",
+          "access_status": "robots_disallowed"
         }
       ],
       "checks": {
@@ -2079,9 +2212,9 @@
         "elective_pools": "Numeric elective pools are published credit choices, not contextual notes. The named one-of component inside the four-W writing overlay is required, while overlap with major courses remains permitted. Main-table mapped roles are 22 fixed / 21 named options. The much larger university cognate inventory remains contextual, not a degree workload. No subject labels were inferred from elective or cognate membership.",
         "prerequisites": "Actual named-course prerequisites, pre/corequisites, standing restrictions and exclusions are recorded literally. Unlabeled eligibility lines stay qualified. Degree-table row evidence separately preserves approved-project, course-order and overlap conditions when the catalog supplies a normalized course title. Preparatory courses are not added as extra fixed obligations. A finance-major grade rule is not extended to these AI degrees.",
         "credits_and_units": "Published row/group amounts remain distinct from per-course credits; semester-hour definition is registered in existing university policy evidence. No range or grouped amount is divided between courses. Every primary-table named course now has the current catalog amount; variable project ranges are retained with null scalar credits. UMX100 is explicitly zero; CSC405 and professional-development alternatives are explicitly one credit. Degree/area totals remain independent constraints rather than sums over options. Current course-information source explicitly equates semester credits, semester hours, credit hours and credits within Miami’s semester system; other contact-hour amounts are not substituted for academic credit.",
-        "classification": "Every named primary-table fixed/option course has been read. Current full represented inventory: 1928 code records; 25 mixed, 798 reviewed, 117 unclassified, 988 unreviewed. Actual contextual-course descriptions are being reviewed in the finite queue research/miami-description-review-remaining.json. No category is inferred from cognate membership; newly reviewed contextual records retain their original role.",
+        "classification": "Every named primary-table fixed/option course has been read. Current full represented inventory: 1928 code records; 39 mixed, 917 reviewed, 120 unclassified, 852 unreviewed. Actual contextual-course descriptions are being reviewed in the finite queue research/miami-description-review-remaining.json. No category is inferred from cognate membership; newly reviewed contextual records retain their original role. PHI296 and PHI301 remain unreviewed: exact current blocks are absent and the official search route disallows crawling. This does not prevent continued review of other accessible courses.",
         "family_composition": "Standalone concrete degree; no family inheritance or degree variant collapse.",
-        "degree_wide_requirements": "Existing college/university policy evidence and unresolved questions remain in the seed audit. Independent rereading of all applicable degree-wide rules is unfinished; the role correction does not establish degree completeness. Complete current transfer-policy reread distinguishes enrollment, credit acceptance and aid restrictions: summer exclusion from one enrollment rule does not grant transfer credit. The prior categorical contradiction is corrected, with the summer-session credit exclusion and MATES preapproval discretion preserved. Remaining public policy and course-content review continues; this correction does not certify the whole degree. Additional current source review maps seven conditional public course/enrollment/graduation scope notes, including actual processed declarations and optional dual-degree approval. Requirements remain student/cohort scoped; ordinary approval conditions alone are not blockers."
+        "degree_wide_requirements": "Existing college/university policy evidence and unresolved questions remain in the seed audit. Independent rereading of all applicable degree-wide rules is unfinished; the role correction does not establish degree completeness. Complete current transfer-policy reread distinguishes enrollment, credit acceptance and aid restrictions: summer exclusion from one enrollment rule does not grant transfer credit. The prior categorical contradiction is corrected, with the summer-session credit exclusion and MATES preapproval discretion preserved. Remaining public policy and course-content review continues; this correction does not certify the whole degree. Additional current source review maps seven conditional public course/enrollment/graduation scope notes, including actual processed declarations and optional dual-degree approval. Requirements remain student/cohort scoped; ordinary approval conditions alone are not blockers. Current university progression and written/quantitative proficiency criteria reread and conditionally mapped; explicit college exceptions and declaration/approval rules retained."
       },
       "expected_profile": null,
       "expected_course_ids": {
@@ -2444,17 +2577,66 @@
           "locator": "113 complete represented course blocks manually reviewed; individual source scopes/rationales in miami_rel_context_reviews.json. Current public chapter captured on 2026-10-11; download-navigation labels do not establish the chapter edition.",
           "checked_at": "2026-10-11T05:51:12+00:00",
           "access_status": "accessible_cached_official_source"
+        },
+        {
+          "url": "https://bulletin.miami.edu/general-university-information/undergraduate-policies-and-procedures/grades/",
+          "locator": " Complete relevant public grades sections reread; conditional scope retained.",
+          "catalog_year": null,
+          "checked_at": "2026-10-11T05:57:02+00:00",
+          "access_status": "accessible_cached_official_source"
+        },
+        {
+          "url": "https://bulletin.miami.edu/general-university-information/undergraduate-policies-and-procedures/general-education-requirements/",
+          "locator": " Complete relevant public general sections reread; conditional scope retained.",
+          "catalog_year": null,
+          "checked_at": "2026-10-11T05:57:07+00:00",
+          "access_status": "accessible_cached_official_source"
+        },
+        {
+          "url": "https://bulletin.miami.edu/undergraduate-academic-programs/arts-sciences/modern-languages-literatures/",
+          "locator": " Complete relevant public languages sections reread; conditional scope retained.",
+          "catalog_year": null,
+          "checked_at": "2026-10-11T05:57:14+00:00",
+          "access_status": "accessible_cached_official_source"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/phi/",
+          "catalog_year": null,
+          "locator": "84 complete represented course blocks manually reviewed; individual source scopes/rationales in miami_phi_context_reviews.json. Current public chapter captured on 2026-10-11; download labels do not establish its edition. PHI296/301 are absent from this chapter.",
+          "checked_at": "2026-10-11T03:04:25+00:00",
+          "access_status": "accessible_cached_official_source"
+        },
+        {
+          "url": "https://bulletin.miami.edu/courses-az/apy/",
+          "catalog_year": null,
+          "locator": "52 complete represented course blocks manually reviewed; individual source scopes/rationales in miami_apy_context_reviews.json. Current public chapter captured on 2026-10-11; no chapter edition is inferred from download-navigation labels.",
+          "checked_at": "2026-10-11T04:14:28+00:00",
+          "access_status": "accessible_cached_official_source"
+        },
+        {
+          "url": "https://bulletin.miami.edu/search/?search=PHI+296",
+          "catalog_year": null,
+          "locator": "PHI 296 exact official search-form target; current chapter lacks the code. Robots restriction respected; existing directory identity retained without new metadata.",
+          "checked_at": "2026-10-11",
+          "access_status": "robots_disallowed"
+        },
+        {
+          "url": "https://bulletin.miami.edu/search/?search=PHI+301",
+          "catalog_year": null,
+          "locator": "PHI 301 exact official search-form target; current chapter lacks the code. Robots restriction respected; existing directory identity retained without new metadata.",
+          "checked_at": "2026-10-11",
+          "access_status": "robots_disallowed"
         }
       ],
       "checks": {
         "degree_identity": "Current official degree identity and primary requirements reread; exact award and host-college distinction preserved.",
         "required_and_choices": "Read current degree curriculum table, fixed rows, explicit OR choices, major credit pools and writing overlay. Source ranges and open free-elective predicates remain unsummed.",
         "elective_pools": "Numeric elective pools are published credit choices, not contextual notes. The named one-of component inside the four-W writing overlay is required, while overlap with major courses remains permitted. Main-table mapped roles are 7 fixed / 39 named options. The much larger university cognate inventory remains contextual, not a degree workload. No subject labels were inferred from elective or cognate membership.",
-        "prerequisites": "Actual named-course prerequisites, pre/corequisites, standing restrictions and exclusions are recorded literally. Unlabeled eligibility lines stay qualified. Degree-table row evidence separately preserves approved-project, course-order and overlap conditions when the catalog supplies a normalized course title. Preparatory courses are not added as extra fixed obligations. A finance-major grade rule is not extended to these AI degrees.",
+        "prerequisites": "Actual named-course prerequisites, pre/corequisites, standing restrictions and exclusions are recorded literally. Unlabeled eligibility lines stay qualified. Degree-table row evidence separately preserves approved-project, course-order and overlap conditions when the catalog supplies a normalized course title. Preparatory courses are not added as extra fixed obligations. A finance-major grade rule is not extended to these AI degrees. Complete publicly listed language placement routes now reviewed and mapped; individual diagnostics and existing course exclusions govern, not inferred waiver or equivalence.",
         "credits_and_units": "Published row/group amounts remain distinct from per-course credits; semester-hour definition is registered in existing university policy evidence. No range or grouped amount is divided between courses. Every primary-table named course now has the current catalog amount; variable project ranges are retained with null scalar credits. UMX100 is explicitly zero; CSC405 and professional-development alternatives are explicitly one credit. Degree/area totals remain independent constraints rather than sums over options. Current course-information source explicitly equates semester credits, semester hours, credit hours and credits within Miami’s semester system; other contact-hour amounts are not substituted for academic credit.",
-        "classification": "Every named primary-table fixed/option course has been read. Current full represented inventory: 1927 code records; 26 mixed, 797 reviewed, 116 unclassified, 988 unreviewed. Actual contextual-course descriptions are being reviewed in the finite queue research/miami-description-review-remaining.json. No category is inferred from cognate membership; newly reviewed contextual records retain their original role.",
+        "classification": "Every named primary-table fixed/option course has been read. Current full represented inventory: 1927 code records; 40 mixed, 916 reviewed, 119 unclassified, 852 unreviewed. Actual contextual-course descriptions are being reviewed in the finite queue research/miami-description-review-remaining.json. No category is inferred from cognate membership; newly reviewed contextual records retain their original role. PHI296 and PHI301 remain unreviewed: exact current blocks are absent and the official search route disallows crawling. This does not prevent continued review of other accessible courses.",
         "family_composition": "Standalone concrete degree; no family inheritance or degree variant collapse.",
-        "degree_wide_requirements": "Existing college/university policy evidence and unresolved questions remain in the seed audit. Independent rereading of all applicable degree-wide rules is unfinished; the role correction does not establish degree completeness. Complete current transfer-policy reread distinguishes enrollment, credit acceptance and aid restrictions: summer exclusion from one enrollment rule does not grant transfer credit. The prior categorical contradiction is corrected, with the summer-session credit exclusion and MATES preapproval discretion preserved. Remaining public policy and course-content review continues; this correction does not certify the whole degree. Additional current source review maps seven conditional public course/enrollment/graduation scope notes, including actual processed declarations and optional dual-degree approval. Requirements remain student/cohort scoped; ordinary approval conditions alone are not blockers."
+        "degree_wide_requirements": "Existing college/university policy evidence and unresolved questions remain in the seed audit. Independent rereading of all applicable degree-wide rules is unfinished; the role correction does not establish degree completeness. Complete current transfer-policy reread distinguishes enrollment, credit acceptance and aid restrictions: summer exclusion from one enrollment rule does not grant transfer credit. The prior categorical contradiction is corrected, with the summer-session credit exclusion and MATES preapproval discretion preserved. Remaining public policy and course-content review continues; this correction does not certify the whole degree. Additional current source review maps seven conditional public course/enrollment/graduation scope notes, including actual processed declarations and optional dual-degree approval. Requirements remain student/cohort scoped; ordinary approval conditions alone are not blockers. Current university progression and written/quantitative proficiency criteria reread and conditionally mapped; explicit college exceptions and declaration/approval rules retained."
       },
       "expected_profile": null,
       "expected_course_ids": {
