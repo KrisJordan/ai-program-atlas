@@ -367,6 +367,112 @@
         "Not every course-description classification or degree-wide policy independently reread in this bounded pass."
       ],
       "result": "Mapped course roles and reviewed subject examples independently verified; full-degree second pass remains partial."
+    },
+    {
+      "program_id": "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree",
+      "institution_id": "northwestern-university",
+      "reviewed_commit": "1cf26ad",
+      "primary_audit": "research/degree-audit/northwestern.json",
+      "second_pass_status": "partial",
+      "full_degree_verified": false,
+      "verified_scope": "All fixed course identities and subject categories; seven oral/innovation alternatives and four introductory programming alternatives; not all elective identities or college policies.",
+      "sources": [
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/engineering-applied-science/artificial-intelligence/artificial-intelligence-major/",
+          "catalog_year": "2026-2027",
+          "locator": "Requirement table",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched using robots-aware transport"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/engineering-applied-science/",
+          "catalog_year": "2026-2027",
+          "locator": "Requirement table",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched using robots-aware transport"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/comp_sci/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact core course-description blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched using robots-aware transport"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/gen_eng/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact core course-description blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched using robots-aware transport"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/dsgn/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact core course-description blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched using robots-aware transport"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/english/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact core course-description blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched using robots-aware transport"
+        }
+      ],
+      "expected_course_ids": {
+        "required": [
+          "nw-bse-math-220-1",
+          "nw-bse-math-220-2",
+          "nw-bse-math-228-1",
+          "nw-bse-comp-sci-212-0",
+          "nw-bse-comp-sci-208-0",
+          "nw-bse-comp-sci-211-0",
+          "nw-bse-comp-sci-348-0",
+          "nw-bse-comp-sci-349-0",
+          "nw-bse-gen-eng-231-0",
+          "nw-bse-gen-eng-241-0",
+          "nw-bse-dsgn-106-1",
+          "nw-bse-dsgn-106-2",
+          "nw-bse-english-106-1",
+          "nw-bse-english-106-2"
+        ],
+        "options": null,
+        "unresolved": null
+      },
+      "verified_option_subset": [
+        "nw-bse-comm-st-102-0",
+        "nw-bse-entrep-225-0",
+        "nw-bse-entrep-325-0",
+        "nw-bse-perf-st-103-0",
+        "nw-bse-perf-st-203-0",
+        "nw-bse-prdv-335-0",
+        "nw-bse-bmd-eng-390-2"
+      ],
+      "expected_profile": {
+        "required": {
+          "count": 14,
+          "categories": {
+            "foundations": 2,
+            "mathematics": 6,
+            "ai_ml": 2,
+            "human_context": 2,
+            "other": 2
+          }
+        },
+        "options": null,
+        "unresolved": null
+      },
+      "findings": [
+        "The college Select one heading governs seven unindented oral/innovation rows; these are options, not seven fixed courses. BMD_ENG 390-2 is mandatory only for biomedical engineering in the footnote.",
+        "Four half-unit writing/design records represent two units, while the profile correctly counts four distinct course records.",
+        "COMP_SCI 208/211 concern data structures and software construction; GEN_ENG 231/241 and COMP_SCI 212 concern mathematical methods. Mixed design records remain other."
+      ],
+      "remaining": [
+        "COMP_SCI 212 prerequisite uses 110/111 while the major introductory slot permits 180/111; no source equivalence established.",
+        "Full elective identity, classification and college-policy second pass remains unfinished."
+      ],
+      "result": "Source-backed fixed aggregate and choice correction independently verified; full-degree second pass partial."
     }
   ],
   "cross_program_screen": [
@@ -841,13 +947,33 @@
       "scope": "Resolved family semantics",
       "finding": "NortheasternCS2000/2001 inherited fixed occurrences remain counted once. Buffalo note-only framework does not invent fixed courses. Source placement/waiver caveats remain applicable.",
       "source_review": "Resolved graph/record review only; not a full family degree audit."
+    },
+    {
+      "programs": [
+        "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree",
+        "northeastern-university-artificial-intelligence-and-design-bs-boston-bs-degree"
+      ],
+      "reviewed_commit": "1eaf8bc",
+      "scope": "Shared course subject descriptions and resolved family roles, not complete degree profiles",
+      "finding": "Independent CS/DS descriptions support CS 1800 mathematics; CS 2000/2001/2100 and DS 3500 foundations; CS 3200 and DS 4300 systems; DS 3000 mathematics; DS 4200 mixed software, perception and communication. Shared inherited observations retain their reviewed subjects without selecting a degree pathway.",
+      "sources": [
+        "https://catalog.northeastern.edu/course-descriptions/cs/",
+        "https://catalog.northeastern.edu/course-descriptions/ds/"
+      ],
+      "checked_at": "2026-10-11",
+      "access_status": "HTTP 200; independently fetched using robots-aware transport after one transient transport retry",
+      "remaining": [
+        "CS 1800 explicitly lists CS 1802 concurrency; primary owner is repairing the omitted dependency, not treating every prerequisite as an additional degree requirement.",
+        "Not all 454 reviewed observations or 24 complete degrees independently checked."
+      ],
+      "second_pass_status": "partial"
     }
   ],
   "open_findings": [
     {
       "program_id": "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree",
       "issue": "Live fixed21 foundations0 other15; source-mapped COMP_SCI111/208/211/336 need course-evidence category review.",
-      "status": "routed to coordinator; no automatic reclassification"
+      "status": "Corrected in 1cf26ad; bounded fixed-set and choice-role second pass verified here. Full degree remains in progress."
     },
     {
       "program_id": "rice-university-artificial-intelligence-bs-degree",
@@ -862,7 +988,7 @@
     {
       "program_id": "wpi-ai-bs",
       "issue": "CS2022/MA2201 Discrete Mathematics observed as ai_ml from pool context; source-specific review required.",
-      "status": "routed to coordinator"
+      "status": "Corrected by primary audit in 146700c; bounded independent role check recorded, full taxonomy second pass unfinished."
     }
   ]
 }

@@ -98,3 +98,37 @@ def test_lehigh_explicit_fixed_and_options_match_independent_source_enumeration(
     assert subjects['CSE 252']=='human_context'
     assert subjects['ISE 230']=='mathematics'
     assert subjects['ECE 303']=='other'
+
+
+def test_northwestern_manual_fixed_set_excludes_oral_choice_menu():
+    ledger=json.loads((ROOT/'research/degree-audit/independent-review.json').read_text())
+    entry=next(e for e in ledger['programs'] if e['institution_id']=='northwestern-university')
+    p=load(entry['program_id']);profile=requirement_profile(p)
+    fixed=entry['expected_course_ids']['required']
+    assert profile['required']['count']==14==len(fixed)
+    expected=entry['expected_profile']['required']['categories']
+    assert profile['required']['categories']=={k:expected.get(k,0) for k in profile['required']['categories']}
+    for cid in fixed:
+        assert requirement_profile(only_course(p,cid))['required']['count']==1
+    for cid in entry['verified_option_subset']:
+        role=requirement_profile(only_course(p,cid))
+        assert role['required']['count']==0 and role['options']['count']==1
+    half_units=[c for c in p['courses'] if c['id'] in fixed and c['code'].startswith(('DSGN','ENGLISH'))]
+    assert len(half_units)==4 and sum(c['credits'] for c in half_units)==2
+
+
+def test_northeastern_source_reviewed_subjects_survive_family_resolution():
+    # Official CS/DS descriptions establish subjects independently of family/pool role.
+    expected={'CS 2000':'foundations','CS 2001':'foundations','CS 2100':'foundations',
+              'CS 3200':'systems','DS 3000':'mathematics','DS 3500':'foundations',
+              'DS 4200':'other','DS 4300':'systems'}
+    for variant in ['biology','design']:
+        p=load(f'northeastern-university-artificial-intelligence-and-{variant}-bs-boston-bs-degree')
+        courses={c['code']:c for c in p['courses']}
+        for code,category in expected.items():
+            c=courses[code]
+            assert c['category']==category
+            assert c['category_review']['status']==('mixed' if code=='DS 4200' else 'reviewed')
+            assert c['category_review']['source_ids']
+            role=requirement_profile(only_course(p,c['id']))
+            assert sum(role[k]['count'] for k in ['required','options','unresolved'])==1
