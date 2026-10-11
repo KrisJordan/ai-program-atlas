@@ -6,17 +6,11 @@ Updated 2026-10-11. A published research project; **the full target cohort and c
 
 - Repository: https://github.com/KrisJordan/ai-program-atlas
 - Site: https://krisjordan.github.io/ai-program-atlas/
-- Verified release: `8043d5c9a7a5c9b773283ca25f03730b5399fb04`, [successful CI and Pages deployment](https://github.com/KrisJordan/ai-program-atlas/actions/runs/38100283029).
-- Fresh locked uv environment and clean committed source: **1,193 tests passed**, including all **17 required Chromium tests**. The 96 skipped cases require optional ignored source caches or historical snapshots; no browser tests were skipped.
-- Fresh reconstruction and maintained publication copy passed integrity checks and agreed on current facts; additional historical coverage sources were preserved. Repeat ingest changed zero programs. Repeated static builds were byte-identical across 139 files.
+- Verified release: `7ae8cf4dfbb4f7b45c6baf8621347c2495acb375`, [successful CI and Pages deployment](https://github.com/KrisJordan/ai-program-atlas/actions/runs/38101661236).
+- Fresh locked uv environment and clean committed source: **1,322 tests passed**, including all **17 required Chromium tests**. The 111 skipped cases require optional ignored source caches or historical snapshots; no browser tests were skipped.
+- Fresh reconstruction and maintained publication copy passed integrity checks and agreed on current facts; additional historical coverage sources were preserved. Repeat ingest changed zero programs. Repeated static builds were byte-identical across 143 files.
 - Live public JSON matched these counts. Live checks passed keyboard family expansion, concrete comparison reload, discipline back/forward, direct program pages, learning/career statement distinctions and 390px mobile layout, with no JavaScript errors or horizontal overflow.
 - Dedicated local repository: `ai-program-atlas/` in this Mac Studio task. No existing personal website or unrelated repository was changed. Coordinated Astra high research and implementation use explicit ownership and incremental commits.
-
-## Integrated checkpoint awaiting release verification
-
-Evidence through `2eadb8c` has been integrated into the maintained database: **136 programs**, 67 confirmed institutions, 118 partially inspected, eight inaccessible and one bounded no-qualifying-program result (Caltech, with all 32 current option/minor catalog pages reviewed). This is a dated search finding, not a universal absence assertion. Requirements: **36 complete / 93 partial / 7 pending**, 22,480 program-course observations and 16,033 nodes. Repeat ingest changed zero programs; SQLite integrity and foreign keys passed. These figures are not yet the verified live release above.
-
-This checkpoint adds Binghamton's track and the Vanderbilt, Florida and Lewis & Clark minors; maps five previously pending curricula; completes the two SMU local scope audits; expands all published Miami cognate plans, all eight principal UCSD college pools and MIT HASS plans; and deepens the liberal-arts institution search. Conflicting current documents, advisor approval branches and inaccessible catalogs stay visible. National University depth reviews and remaining liberal-arts checks continue independently. Next: locked clean-checkout full tests, fresh/maintained comparison, deterministic build, CI/Pages and public browser verification.
 
 ## Published coverage
 
@@ -24,16 +18,18 @@ This checkpoint adds Binghamton's track and the Vanderbilt, Florida and Lewis & 
 | --- | ---: |
 | Institutions in loaded roster | 194 |
 | National Universities / National Liberal Arts Colleges | 108 / 86 |
-| Confirmed qualifying title / partially inspected / inaccessible | 63 / 123 / 8 |
-| Loaded institutions pending / absence conclusions | 0 / 0 |
-| Concrete programs | 132 |
-| Degrees / minors / concentrations / additional majors | 60 / 45 / 24 / 3 |
-| Complete / partial / pending requirement inventories | 33 / 87 / 12 |
-| Program-course records / resolved requirement nodes | 13,920 / 10,403 |
+| Confirmed qualifying title / partially inspected / inaccessible | 67 / 118 / 8 |
+| Loaded institutions pending / absence conclusions | 0 / 1 |
+| Concrete programs | 136 |
+| Degrees / minors / concentrations / additional majors | 60 / 48 / 25 / 3 |
+| Complete / partial / pending requirement inventories | 36 / 93 / 7 |
+| Program-course records / resolved requirement nodes | 22,480 / 16,033 |
 | Program families / concrete family variants | 2 / 31 |
-| Descriptions / prerequisite statements | 1,827 / 1,478 |
-| Credit amounts with verified units | 4,478 |
+| Descriptions / prerequisite statements | 1,839 / 2,651 |
+| Credit amounts with verified units | 8,591 |
 | Public course sites / example syllabi | 78 / 72 |
+
+Caltech has one bounded no-qualifying-program finding after the current program directory and all 32 option/minor catalog pages were reviewed. It is a dated search result, not a claim about future offerings.
 
 Course counts include elective pools and repeated observations across sibling programs. They are not unique institution-wide courses, required-course totals, completion percentages or quality scores. Complete refers to an explicitly reviewed scope: a complete minor/concentration/additional major does not certify the host degree. Metadata availability is separate. Zero pending in the loaded roster is not full target-cohort coverage; missing institutions remain outside that denominator.
 
@@ -130,3 +126,7 @@ Release `8043d5c` is verified live with 132 programs: 33 complete / 87 partial /
 A clean locked environment passed 1,193 tests with all 17 required browser cases. The 96 skips concern optional ignored source caches or historical snapshots. Repeat ingest changed zero programs, foreign keys/integrity passed, and 139 build files reproduced byte-for-byte. GitHub CI and Pages succeeded; live data matched, comparison reload/back/forward and keyboard expansion passed, every new identity page loaded directly, and the 390px checks found no overflow or JavaScript errors. The rejected `5b464d4` candidate was never published; its inspection-date inconsistency is repaired and covered by regression tests.
 
 Newer research commits are not included in these published metrics. They continue full Miami cognate pools, UCSD Marshall/Sixth and remaining colleges, MIT HASS fields, six new program curricula, Vanderbilt/Florida minors and deeper liberal-arts catalog review. Northeastern's 1,593 descriptions are now verified across 787 distinct codes; that finite metadata queue is complete, while home-college applicability remains partial. Publications remain checkpoints. Cohort enumeration, CSRankings permission, inaccessible sources and unresolved program-specific policy conflicts remain explicitly open.
+
+### Verified 136-program checkpoint (2026-10-11)
+
+Release `7ae8cf4d` passed 1,322 tests (all 17 Chromium cases), fresh/maintained current-fact comparison, repeat ingest, integrity and 143-file deterministic builds. CI/Pages run `38101661236` succeeded. Public JSON and browser verified the new Binghamton, Lewis & Clark, Vanderbilt and Florida details, complete SMU local audits, Caltech bounded coverage state, existing direct links, comparison reload/history, keyboard expansion and 390px layout. Root HTML is 2,785,533 bytes. New research commits after this release remain unreleased until a subsequent checkpoint.
