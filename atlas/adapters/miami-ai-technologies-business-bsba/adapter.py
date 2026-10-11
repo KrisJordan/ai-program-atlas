@@ -25,3 +25,6 @@ register_fixed_courses(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
 
 from atlas.adapters.miami_named_option_reviews import register as register_named_options
 register_named_options(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
+
+from atlas.adapters.miami_context_course_reviews import register as register_context_courses
+register_context_courses(PROGRAM_ID,SOURCES,SOURCE_PARSERS)

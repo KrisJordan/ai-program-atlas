@@ -25,3 +25,6 @@ register_named_options(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
 
 from atlas.adapters.miami_csc_option_reviews import register as register_csc_options
 register_csc_options(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
+
+from atlas.adapters.miami_context_course_reviews import register as register_context_courses
+register_context_courses(PROGRAM_ID,SOURCES,SOURCE_PARSERS)

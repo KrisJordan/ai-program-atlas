@@ -71,7 +71,10 @@ def test_degree_row_conditions_survive_normalized_catalog_names():
     assert courses['CSC 405']['credits'] == 1
     assert courses['CSC 506']['category_review']['status'] == 'mixed'
     ba = json.loads(Path('data/programs/university-of-miami-data-science-and-artificial-intelligence-ba-degree.json').read_text())
-    assert 'category_review' not in next(c for c in ba['courses'] if c['code']=='CSC 506')
+    csc506 = next(c for c in ba['courses'] if c['code']=='CSC 506')
+    assert csc506['category_review']['status'] == 'mixed'
+    # Independent contextual content review does not insert this BS-only primary option into the BA table.
+    assert not any(csc506['id'] in r['course_ids'] for r in ba['requirements'] if '-table-' in r['id'])
 
 
 def test_source_parser_keeps_pool_qualifiers_as_requirement_evidence():
