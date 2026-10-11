@@ -91,3 +91,14 @@ SOURCE_PARSERS[url] = partial(parse_immersion_rules, title='Black Studies Immers
 
 from atlas.adapters.rit_combined_sts_course_cards import register as register_combined_sts
 register_combined_sts(SOURCES,SOURCE_PARSERS)
+
+from atlas.adapters.rit_psychology_criminology_leadership_course_reviews import parse as parse_psych_lead_cards
+for slug in ['psychology-immersion', 'criminal-justice-immersion', 'legal-studies-immersion', 'deaf-leadership-immersion', 'diversity-inclusion-and-dialogue-immersion']:
+    url = 'https://www.rit.edu/study/' + slug
+    if url not in SOURCES:
+        SOURCES.append(url)
+    SOURCE_PARSERS[url] = partial(parse_psych_lead_cards, url=url)
+url = 'https://www.rit.edu/study/religious-studies-immersion'
+if url not in SOURCES:
+    SOURCES.append(url)
+SOURCE_PARSERS[url] = partial(parse_immersion_rules, title='Religious Studies Immersion')

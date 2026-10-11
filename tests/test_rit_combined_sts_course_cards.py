@@ -36,4 +36,4 @@ def test_manual_routes_map_one_actual_card_per_combined_label_without_merging_wg
         rule=r[PID+'-'+slug];assert rule['count']==3 and len(rule['course_ids'])==n
         assert PID+'-stso-342' in rule['course_ids'] and PID+'-wgst-342' not in rule['course_ids']
     assert c['STSO-488']['credits'] is None and c['STSO-489']['credits'] is None
-    p=requirement_profile(d);assert [p[k]['count'] for k in ['required','options','unresolved']]==[23,539,14]
+    p=requirement_profile(d);assert [p[k]['count'] for k in ['required','options','unresolved']]==[23,591,15]
