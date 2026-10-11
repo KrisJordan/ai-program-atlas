@@ -428,7 +428,7 @@ def observe_ocw_syllabus(html):
     sections = {}
     for heading in main.find_all(['h2', 'h3', 'h4', 'h5']):
         title = clean(heading).rstrip(':')
-        if title not in ['Description', 'Course Description', 'Course Overview', 'Course Summary', 'Overview', 'Class Objectives', 'Objectives and Organization', 'Purpose', 'Introduction', 'Goals for the Class', 'Prerequisites', 'Prerequisite']:
+        if title not in ['Description', 'Course Description', 'Course Overview', 'Course Summary', 'Overview', 'Class Objectives', 'Objectives and Organization', 'Purpose', 'Introduction', 'Goals for the Class', 'Course Goals and Organization', 'Prerequisites', 'Prerequisite']:
             continue
         content = []
         for sibling in heading.next_siblings:
@@ -437,7 +437,7 @@ def observe_ocw_syllabus(html):
             if hasattr(sibling, 'get_text'):
                 content.append(clean(sibling))
         sections[title] = clean(' '.join(content)) or None
-    description = next((sections[k] for k in ['Description', 'Course Description', 'Course Overview', 'Course Summary', 'Overview', 'Class Objectives', 'Objectives and Organization', 'Purpose', 'Introduction', 'Goals for the Class'] if sections.get(k)), None)
+    description = next((sections[k] for k in ['Description', 'Course Description', 'Course Overview', 'Course Summary', 'Overview', 'Class Objectives', 'Objectives and Organization', 'Purpose', 'Introduction', 'Goals for the Class', 'Course Goals and Organization'] if sections.get(k)), None)
     if not description:
         raise ValueError('OCW syllabus actual description section missing')
     prerequisites = sections.get('Prerequisites', sections.get('Prerequisite'))
@@ -445,7 +445,7 @@ def observe_ocw_syllabus(html):
         embedded = re.search(r'Students must have completed .+? before enrolling in 14\.20\.', description)
         if embedded:
             prerequisites = embedded.group(0)
-    unit_match = re.match(r'This (\d+)-unit subject\b', description)
+    unit_match = re.search(r'(?:^|[.!?] )This (\d+)-unit (?:subject|undergraduate-level course)\b', description)
     return [dict(code=parts[0], name=name, term=parts[1], level=parts[2],
                  description=description,
                  prerequisites=prerequisites,

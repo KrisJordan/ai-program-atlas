@@ -215,7 +215,7 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']['description_reviewed_records']==300
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==314
     assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
         o=entry(code)['observations'][-1]
@@ -935,3 +935,48 @@ def test_actual_economics_sources_replay_without_collapsing_page_provenance():
             assert review.matched_review(c,{**o,'term':'Spring 2099'},source['url'],MANIFEST) is None
             seen+=1
     assert seen==23
+
+
+def test_urban_dated_title_permissions_and_mixed_domain_subjects():
+    report=MANIFEST['ocw_urban_review']
+    assert report['directory_results_observed']==199
+    assert report['public_course_pages_read']==report['public_syllabi_read']==16
+    assert len(report['upgraded_record_ids'])==14
+    assert len(report['withheld_description_reads'])==4
+    current=entry('11.013[J]')['observations'][-1]
+    old=entry('11.013J [21H.217]')['observations'][-1]
+    assert (current['catalog_year'],current['credits'],current['credit_unit'])==('Spring 2025',12,'units')
+    assert old['catalog_year']=='Spring 2010' and old['credits'] is None
+    assert current['observed_name']=='American Urban History' and old['observed_name']=='American Urban History I'
+    assert 'permission of the instructor' in entry('11.166')['observations'][-1]['prerequisites']
+    assert 'OCW users do not need permission' in entry('11.166')['observations'][-1]['prerequisites']
+    assert entry('11.011')['observations'][-1]['category']=='human_context'
+    assert entry('11.001[J]')['observations'][-1]['category']=='applications'
+    for code in ['11.123','11.165']:
+        e=entry(code)['observations'][-1]
+        assert e['category']=='other' and e['status']=='mixed'
+        assert e['candidate_categories']==['applications','human_context']
+    for code in ['11.041','11.148','11.015[J]','11.025[J]']:
+        assert entry(code)['observations'][-1]['evidence_basis']=='official_title_only'
+
+
+def test_urban_actual_captures_replay_and_historical_unit_amount_is_guarded():
+    path=Path('/tmp/mit-hass-subjects/ocw-urban-index.json')
+    if not path.exists():pytest.skip('Optional ignored public OCW Urban Studies captures')
+    seen=0
+    for source in json.loads(path.read_text()):
+        if not source['key'].endswith('-syllabus'):continue
+        cache=path.parent/('ocw-'+source['key']+'.html')
+        if not cache.exists():pytest.skip('Optional ignored public syllabus')
+        html=cache.read_text();o=review.observe_ocw_syllabus(html)[0]
+        if o['code']=='11.013J' and o['term']=='Spring 2025':
+            assert o['units']=='12 units'
+            assert review.observe_ocw_syllabus(html.replace('This 12-unit undergraduate-level course','This undergraduate-level course'))[0]['units'] is None
+        for cid,row in MANIFEST['courses'].items():
+            e=next((e for e in row['observations'] if e['source_url']==source['url']),None)
+            if e is None:continue
+            c=dict(id=cid,code=row['listed_code'],name=row['listed_name'],source_id=row['listed_source_id'])
+            assert review.matched_review(c,o,source['url'],MANIFEST)==e
+            assert review.matched_review(c,{**o,'prerequisites':'Permission no longer required'},source['url'],MANIFEST) is None
+            seen+=1
+    assert seen==14
