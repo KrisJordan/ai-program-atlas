@@ -99,7 +99,7 @@ def test_ai_computing_mathematics_source_rules_preserve_option_scope():
     assert 'Suggested background (advisory)' in courses['MA 2210']['prerequisites']
     profile=requirement_profile(p)
     assert [profile[x]['count'] for x in ['required','options','unresolved']]==[6,211,2]
-    assert sum('wpi-ai-bs' in e['program_ids'] for e in m.SPEC.values())==144
+    assert sum('wpi-ai-bs' in e['program_ids'] for e in m.SPEC.values())==174
     assert not p.get('course_identity_groups')
 
 
@@ -164,3 +164,24 @@ def test_life_science_domain_content_and_scoped_credit_rules():
         assert 'CHE distribution' in c[code]['prerequisites']
         assert c[code]['credits']==pytest.approx(1/3)
     assert 'general chemistry' in m.SPEC['CH 2310']['audience_note']
+
+
+def test_variable_environment_topics_keep_unknown_fixed_credit(monkeypatch):
+    from bs4 import BeautifulSoup
+    from atlas.adapters.cmu_bs.common import text
+    p=json.loads(Path('data/programs/wpi-ai-bs.json').read_text());c={x['code']:x for x in p['courses']}
+    for code in ['ENV 2800','ENV 4800']:
+        assert c[code]['credits'] is None and c[code]['credit_unit']=='units'
+        assert c[code]['category_review']['status']=='unclassified'
+        assert '1/6–1/3' in m.SPEC[code]['credit_note']
+    assert c['ENV 2720']['category']=='human_context'
+    assert 'not required' in c['CE 3051']['prerequisites']
+    code='ENV 2800';entry=copy.deepcopy(m.SPEC[code]);desc='Synthetic changing topic.'
+    html=f'<p>Undergraduate Catalog 2026-2027</p><main><h1>{code}: {entry["name"]}</h1><div class="field--name-field-description">{desc}</div></main>'
+    entry['description_digest']=hashlib.sha256(desc.encode()).hexdigest()
+    entry['main_digest']=hashlib.sha256(text(BeautifulSoup(html,'html.parser').find('main')).encode()).hexdigest()
+    monkeypatch.setitem(m.SPEC,code,entry)
+    result=m.parse(html,program_id='wpi-ai-bs',code=code)
+    assert result['courses'][0]['credits'] is None and not result['requirements']
+    changed=html.replace('</main>','<div class="field--name-field-credits"><div class="field__item">1/3</div></div></main>')
+    with pytest.raises(ValueError):m.parse(changed,program_id='wpi-ai-bs',code=code)

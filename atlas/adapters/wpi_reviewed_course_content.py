@@ -32,7 +32,8 @@ def parse(html, *, program_id, code):
         digest = hashlib.sha256(value.encode()).hexdigest() if value is not None else None
         if digest != entry[key]:
             raise ValueError('WPI reviewed content changed: ' + code)
-    if not units or text(units) != entry['units_text']:
+    observed_units = text(units) if units else None
+    if observed_units != entry['units_text']:
         raise ValueError('WPI reviewed unit amount changed')
     recommended = 'Recommended background (not a mandatory prerequisite): ' + text(rec) if rec else None
     prerequisite = main.find(class_='field--name-field-pr')
@@ -43,6 +44,8 @@ def parse(html, *, program_id, code):
         recommended = (recommended + '; ' if recommended else '') + 'Source field labeled Prerequisites: ' + text(prerequisite)
     if entry.get('description_prerequisites'):
         recommended = (recommended + '; ' if recommended else '') + 'Course eligibility: ' + entry['description_prerequisites']
+    if entry.get('inline_recommended_background'):
+        recommended = (recommended + '; ' if recommended else '') + 'Recommended background from description (advisory): ' + entry['inline_recommended_background']
     notes = ['Course-description observation only; advisory background does not add fixed or elective degree obligations.']
     if entry.get('suggested_background'):
         recommended = (recommended + '; ' if recommended else '') + 'Suggested background (advisory): ' + entry['suggested_background']
@@ -63,7 +66,8 @@ def parse(html, *, program_id, code):
     key = entry.get('source_key', code.lower().replace(' ','-'))
     return {'id': program_id, 'courses': [dict(id=entry.get('course_id', 'wpi-'+key), code=code,
             name=entry['name'], description=entry['description'], prerequisites=recommended,
-            credits=float(Fraction(text(units))), credit_unit=entry.get('credit_unit', 'units'), category=entry['category'],
+            credits=float(Fraction(observed_units)) if observed_units is not None else None,
+            credit_unit=entry.get('credit_unit', 'units'), category=entry['category'],
             source_id=program_id+'-course-'+key, url=entry['url'])],
             'requirements': [], 'notes': notes}
 
