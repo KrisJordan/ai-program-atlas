@@ -20,11 +20,13 @@ def test_all_course_titles_and_note_grouping_preserve_graph(site_data):
     assert len(preview.select('[role=listitem]'))==6
     assert all(f'Course title {i}' in preview.get_text() for i in range(6))
     assert soup.select_one('.requirements > li')['id']=='requirement-main'
-    for key in ['other-top','notes-top','optional-top','notes-main']:
+    for key in ['other-top','optional-top','notes-main']:
         assert not soup.select_one('#requirements-group-'+key+' > details').has_attr('open')
     assert soup.select_one('#requirements-group-other-top #requirement-policy')
     assert soup.select_one('#requirements-group-other-top #requirement-empty-container')
-    assert soup.select_one('#requirements-group-notes-top #requirement-context-courses')
+    assert soup.select_one('.requirements > #requirement-context #requirement-context-courses')
+    assert not soup.select_one('#requirement-context > details').has_attr('open')
+    assert not soup.select_one('#requirements-group-notes-top')
     assert soup.select_one('#requirements-group-optional-top #requirement-optional-course')
     assert not soup.select_one('#requirement-optional > details').has_attr('open')
     assert [n['id'] for n in soup.select('.requirement')].count('requirement-list')==1
@@ -67,3 +69,33 @@ def test_titles_from_other_programs_are_institution_scoped_and_ambiguity_is_omit
     assert 'Unrelated institution title' not in soup.get_text()
     provider['courses'].append(dict(id='ambiguous',code='MATH100',name='Different exact title'))
     assert referenced_courses('MATH100',reference_matcher(p,[provider]))==[]
+
+
+def test_real_mit_course_contexts_and_general_education_preserve_source_graph():
+    import json
+    from pathlib import Path
+    p=json.loads((Path(__file__).resolve().parents[1]/'data/programs/mit-ai-decision-making-bs.json').read_text())
+    before=deepcopy(p);soup=BeautifulSoup(requirement_tree(p),'html.parser')
+    assert p==before
+    assert soup.select_one('.requirements > .requirement')['id']=='requirement-mit-ai-version-required'
+    for focus in ['data-centric','model-centric','decision-centric','computation-centric','human-centric']:
+        node=soup.select_one('#requirement-mit-ai-v2025-overlay-'+focus)
+        assert node.select_one(':scope > details').has_attr('open')
+        assert not node.find_parent(class_='requirement-bundle')
+        assert 'Course grouping / context' in node.select_one(':scope > details > summary').get_text()
+    general=soup.select_one('#requirements-group-general-top')
+    assert not general.select_one(':scope > details').has_attr('open')
+    assert len(general.select('.requirement'))==6
+    assert general.select_one('#requirement-mit-ai-gir-science-1')
+    assert not soup.select_one('#requirement-mit-ai-chart-reference > details').has_attr('open')
+    assert {n['id'] for n in soup.select('.requirement')}=={'requirement-'+r['id'] for r in p['requirements']}
+
+
+def test_general_education_scope_uses_explicit_source_labels_not_course_subject(site_data):
+    p=site_data['programs'][0]
+    p['sources']=[dict(id='general-source',title='General Education',url='https://example.edu/general/')]
+    p['requirements']=[dict(rule('general',courses=[p['courses'][0]['id']],title='Science selection'),source_id='general-source'),rule('major',courses=[p['courses'][0]['id']],title='Biology for AI research')]
+    soup=BeautifulSoup(requirement_tree(p),'html.parser')
+    assert soup.select_one('.requirements > .requirement')['id']=='requirement-major'
+    assert soup.select_one('#requirements-group-general-top #requirement-general')
+    assert not soup.select_one('#requirements-group-general-top #requirement-major')

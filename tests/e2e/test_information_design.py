@@ -95,3 +95,30 @@ def test_readable_lists_grouped_notes_optional_fields_and_prerequisites(page,sit
     expect(optional).to_have_attribute('open','')
     expect(page.get_by_role('heading',name='Optional HASS field',exact=True)).to_be_visible()
     assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
+
+
+@pytest.mark.parametrize('width',[1440,390])
+def test_real_mit_domain_context_order_and_compact_outcomes(page,site,tmp_path,width):
+    import json
+    from pathlib import Path
+    from atlas import db
+    seed=json.loads((Path(__file__).resolve().parents[2]/'data/programs/mit-ai-decision-making-bs.json').read_text())
+    conn=db.connect(tmp_path/'mit.sqlite');db.migrate(conn);db.ingest_program(conn,seed)
+    build(db.export_data(conn),tmp_path/'ai-program-atlas');conn.close()
+    page.set_viewport_size({'width':width,'height':950});page.goto(site+'programs/mit-ai-decision-making-bs/')
+    expect(page.locator('.requirements > .requirement').first).to_have_attribute('id','requirement-mit-ai-version-required')
+    for focus in ['data-centric','model-centric','decision-centric','computation-centric','human-centric']:
+        node=page.locator('#requirement-mit-ai-v2025-overlay-'+focus)
+        expect(node.locator(':scope > details > summary')).to_be_visible()
+        expect(node.locator(':scope > details')).to_have_attribute('open','')
+    general=page.locator('#requirements-group-general-top > details')
+    expect(general).not_to_have_attribute('open','')
+    general.locator(':scope > summary').focus();page.keyboard.press('Enter')
+    expect(page.get_by_role('heading',name='Biology (GIR)',exact=True)).to_be_visible()
+    page.goto(site+'programs/mit-ai-decision-making-bs/#requirement-mit-ai-gir-science-1')
+    page.reload();expect(general).to_have_attribute('open','')
+    expect(page.locator('#requirement-mit-ai-gir-science-1 > details')).to_have_attribute('open','')
+    assert page.locator('.outcomes .statement-text').first.evaluate('n=>getComputedStyle(n).display')=='inline'
+    assert page.locator('#requirement-mit-ai-version-required > details > summary .requirement-rule').evaluate('n=>getComputedStyle(n).display')=='inline'
+    expect(page.locator('#requirement-mit-ai-version-required > details > .requirement-body > .requirement-tags')).to_have_count(0)
+    assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')

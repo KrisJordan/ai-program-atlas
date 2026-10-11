@@ -627,6 +627,11 @@ def requirement_tree(p):
     def optional(r):
         return bool(re.match(r'^\s*optional\b', r.get('title') or '', re.I))
 
+    def general_education(r):
+        # Only explicit source/title labels establish institution-wide scope.
+        label = (r.get('title') or '') + ' ' + (sources.get(r.get('source_id'), {}).get('title') or '')
+        return bool(re.search(r'\bgeneral education\b|\bgeneral institute requirements\b|\bGIRs?\b', label, re.I))
+
     def course_title(c):
         return (c.get('name') or 'Course name not verified') + (' (' + c['code'] + ')' if c.get('code') else '')
 
@@ -634,22 +639,26 @@ def requirement_tree(p):
         if not members:
             return ''
         content = ''.join(render(r, seen, depth) for r in members)
-        return '<li class="requirement-bundle" id="requirements-group-' + esc(key) + '"><details class="requirement-bundle-disclosure"><summary><h3>' + esc(title) + '</h3><span class="requirement-rule">' + str(len(members)) + ' recorded branches · expand to inspect</span></summary><ul>' + content + '</ul></details></li>'
+        return '<li class="requirement-bundle" id="requirements-group-' + esc(key) + '"><details class="requirement-bundle-disclosure"><summary><h3>' + esc(title) + '</h3><span class="requirement-rule">' + str(len(members)) + ' recorded ' + ('branch' if len(members) == 1 else 'branches') + ' · expand to inspect</span></summary><ul>' + content + '</ul></details></li>'
 
     def render_level(nodes, seen, depth, root=False, parent='top'):
-        main, notes, other, options = [], [], [], []
+        main, notes, other, options, general = [], [], [], [], []
         for r in nodes:
             if r.get('id') in seen or r.get('id') in rendered:
                 continue
             if optional(r):
                 options.append(r)
+            elif root and has_courses(r) and general_education(r):
+                general.append(r)
             elif root and not has_courses(r):
                 other.append(r)
-            elif r.get('kind') == 'note' or not has_courses(r):
+            elif not has_courses(r):
                 notes.append(r)
             else:
                 main.append(r)
-        return ''.join(render(r, seen, depth) for r in main) + bundle('Optional concentrations & fields', options, seen, depth, 'optional-' + parent) + bundle('Requirement notes', notes, seen, depth, 'notes-' + parent) + bundle('Other requirements', other, seen, depth, 'other-' + parent)
+        if root:
+            main.sort(key=lambda r: r.get('kind') == 'note')
+        return ''.join(render(r, seen, depth) for r in main) + bundle('General education requirements', general, seen, depth, 'general-' + parent) + bundle('Optional concentrations & fields', options, seen, depth, 'optional-' + parent) + bundle('Requirement notes', notes, seen, depth, 'notes-' + parent) + bundle('Other requirements', other, seen, depth, 'other-' + parent)
 
     def render(r, seen, depth=0):
         rid = r.get("id")
@@ -668,7 +677,10 @@ def requirement_tree(p):
         if r.get("credits") is not None:
             selection.append(f'{r["credits"]} {human(r.get("credit_unit"))}')
         course_list = '<p class="course-list-label">Listed courses / options — follow the group rule</p><ul class="requirement-courses">' + courses + '</ul>' if courses else ''
+        structural_context = r.get('kind') == 'note' and has_courses(r)
         operator = {'all': 'Complete all items in this group', 'choose_courses': 'Choose courses', 'choose_credits': 'Choose by credit amount', 'alternative': 'Choose an alternative', 'note': 'Requirement note'}.get(r.get('kind'), human(r.get('kind')))
+        if structural_context:
+            operator = 'Course grouping / context'
         source = sources.get(r.get('source_id'), {})
         evidence = '<p class="requirement-evidence">' + external(source.get('url'), 'Requirement source') + '</p>' if source else '<p class="requirement-evidence">Requirement source not recorded.</p>'
         origin = {'family': 'Shared family requirement', 'variant': 'Local variant requirement', 'replacement': 'Variant replacement'}.get(r.get('origin'))
@@ -678,7 +690,7 @@ def requirement_tree(p):
         source_wording = '<details class="source-wording"><summary>Source wording</summary><blockquote>' + esc(r['source_text']) + '</blockquote></details>' if r.get('source_text') else ''
         preview_titles = [course_title(c) for c in requirement_courses]
         for child in child_nodes:
-            if not has_courses(child) or child.get('kind') == 'note' or optional(child):
+            if not has_courses(child) or optional(child):
                 continue
             title = child.get('title') or 'Untitled group'
             cc = [course_map[cid] for cid in child.get('course_ids', []) if cid in course_map]
@@ -692,8 +704,8 @@ def requirement_tree(p):
             preview_label = 'Courses in this group' if r.get('kind') == 'all' else 'Options / branches include' if r.get('kind') != 'note' else 'Referenced courses / branches'
             preview = '<span class="requirement-preview"><span class="requirement-preview-label">' + preview_label + '</span><span class="requirement-preview-list" role="list">' + ''.join('<span class="requirement-preview-item" role="listitem">' + esc(title) + '</span>' for title in shown) + '</span>' + ('<span class="requirement-preview-more">+' + str(len(preview_titles) - len(shown)) + ' more · expand for the full list</span>' if len(preview_titles) > len(shown) else '') + '</span>'
         rule = esc(operator + (' · ' + ' · '.join(selection) if selection else ''))
-        opened = depth < 2 and r.get('kind') != 'note' and has_courses(r) and not optional(r)
-        return f'''<li class="requirement" id="requirement-{esc(rid)}" data-requirement-depth="{depth}"><details class="requirement-disclosure" {"open" if opened else ""}><summary><h3 class="requirement-title">{esc(r.get('title'))}</h3><span class="requirement-rule">{rule}</span>{preview}</summary><div class="requirement-body"><div class="requirement-tags">{badge(operator)}{provenance_badges}</div><p>{esc(r.get('summary') or 'Requirement detail has not been extracted.')}</p>{source_wording}{course_list}{'<ul>' + children + '</ul>' if children else ''}{evidence}</div></details></li>'''
+        opened = depth < 2 and has_courses(r) and not optional(r) and (r.get('kind') != 'note' or depth > 0)
+        return f'''<li class="requirement" id="requirement-{esc(rid)}" data-requirement-depth="{depth}"><details class="requirement-disclosure" {"open" if opened else ""}><summary><h3 class="requirement-title">{esc(r.get('title'))}</h3><span class="requirement-rule">{rule}</span>{preview}</summary><div class="requirement-body">{'<div class="requirement-tags">' + provenance_badges + '</div>' if provenance_badges else ''}<p>{esc(r.get('summary') or 'Requirement detail has not been extracted.')}</p>{source_wording}{course_list}{'<ul>' + children + '</ul>' if children else ''}{evidence}</div></details></li>'''
 
     roots = [r for r in requirements if not r.get("parent_id") or r.get("parent_id") not in ids]
     if not requirements:
