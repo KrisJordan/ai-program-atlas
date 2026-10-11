@@ -115,3 +115,7 @@ SOURCE_PARSERS.update({shared.UC_WRITING_URL: shared.parse_uc_writing,
                       shared.SENATE_URL: shared.parse_senate,
                       shared.CLIMATE_URL: shared.parse_climate,
                       shared.DEGREE_URL: parse_degree_with_ahi})
+
+from atlas.adapters import ucsd_revelle_pools as revelle
+SOURCES += tuple(revelle.BASE + page + '.html' for page in revelle.PAGES)
+SOURCE_PARSERS.update({revelle.BASE + page + '.html': parser for page, parser in revelle.PARSERS.items()})
