@@ -1,0 +1,753 @@
+{
+  "reviewed_at": "2026-10-11",
+  "scope": "15 public immersion local-rule branches, not course-description or whole-degree completion",
+  "routes": [
+    {
+      "id": "applied-statistics-immersion",
+      "title": "Applied Statistics Immersion",
+      "url": "https://www.rit.edu/study/applied-statistics-immersion",
+      "catalog_year": "2026-2027",
+      "plan_code": "APSTAT-IM",
+      "reviewed_at": "2026-10-11",
+      "access_status": "public_browser_rendered",
+      "status": "rules_reviewed_course_metadata_pending",
+      "total_hours": 9,
+      "rule_summary": "Three listed electives, nine hours, with one at 300 level or above. Preparation is separate.",
+      "groups": [
+        {
+          "role": "preparation",
+          "selection_rule": "Both listed prerequisite courses.",
+          "course_codes": [
+            "MATH-181",
+            "MATH-182"
+          ],
+          "published_hours": 8
+        },
+        {
+          "role": "choice",
+          "selection_rule": "Choose three, including at least one course at 300 level or above.",
+          "course_codes": [
+            "MATH-251",
+            "MATH-301",
+            "MATH-505",
+            "STAT-205",
+            "STAT-257",
+            "STAT-305",
+            "STAT-325",
+            "STAT-330",
+            "STAT-335",
+            "STAT-345",
+            "STAT-405",
+            "STAT-406",
+            "STAT-415",
+            "STAT-521"
+          ],
+          "published_hours": 9
+        }
+      ],
+      "conditions": [
+        "University immersion no-program-overlap rule applies.",
+        "Closed to applied statistics and data analytics majors.",
+        "STAT-205 and STAT-257 cannot both receive credit.",
+        "AI-fixed MATH-251 cannot also fulfill this immersion; remove it from the AI-specific eligible choice pool."
+      ],
+      "unresolved_source_questions": [],
+      "course_metadata_reviewed": 0,
+      "evidence_locator": "Overview, rendered 2026–2027 curriculum tables and complete footnotes; course popups not expanded in this pass."
+    },
+    {
+      "id": "astronomy-immersion",
+      "title": "Astronomy Immersion",
+      "url": "https://www.rit.edu/study/astronomy-immersion",
+      "catalog_year": "2026-2027",
+      "plan_code": "ASTRO-IM",
+      "reviewed_at": "2026-10-11",
+      "access_status": "public_browser_rendered",
+      "status": "rules_reviewed_course_metadata_pending",
+      "total_hours": 9,
+      "rule_summary": "Two required courses plus one of four advanced electives; nine hours.",
+      "groups": [
+        {
+          "role": "preparation",
+          "selection_rule": "All four listed prerequisites.",
+          "course_codes": [
+            "MATH-181",
+            "MATH-182",
+            "PHYS-211",
+            "PHYS-212"
+          ],
+          "published_hours": 16
+        },
+        {
+          "role": "required",
+          "selection_rule": "Both courses.",
+          "course_codes": [
+            "PHYS-213",
+            "PHYS-220"
+          ],
+          "published_hours": 6
+        },
+        {
+          "role": "choice",
+          "selection_rule": "Choose one.",
+          "course_codes": [
+            "PHYS-370",
+            "PHYS-371",
+            "PHYS-372",
+            "PHYS-373"
+          ],
+          "published_hours": 3
+        }
+      ],
+      "conditions": [
+        "University immersion no-program-overlap rule applies.",
+        "Closed to physics majors.",
+        "At least one course at 300 level or above.",
+        "PHYS-213 precedes PHYS-370, PHYS-371 and PHYS-372.",
+        "All four electives run in alternate years; the Astronomy Minor Advisor supplies the schedule."
+      ],
+      "unresolved_source_questions": [],
+      "course_metadata_reviewed": 0,
+      "evidence_locator": "Overview, rendered 2026–2027 curriculum tables and complete footnotes; course popups not expanded in this pass."
+    },
+    {
+      "id": "biology-cellular-and-molecular-immersion",
+      "title": "Biology: Cellular and Molecular Immersion",
+      "url": "https://www.rit.edu/study/biology-cellular-and-molecular-immersion",
+      "catalog_year": "2026-2027",
+      "plan_code": "BIOLCM-IM",
+      "reviewed_at": "2026-10-11",
+      "access_status": "public_browser_rendered",
+      "status": "rules_reviewed_course_metadata_pending",
+      "total_hours": 10,
+      "rule_summary": "Molecular biology and its laboratory plus two electives; ten hours, not an inferred nine.",
+      "groups": [
+        {
+          "role": "required",
+          "selection_rule": "BIOL-206 (3 hours) and its BIOL-216 laboratory (1 hour).",
+          "course_codes": [
+            "BIOL-206",
+            "BIOL-216"
+          ],
+          "published_hours": 4
+        },
+        {
+          "role": "choice",
+          "selection_rule": "Choose two, including at least one 300-level-or-above course.",
+          "course_codes": [
+            "BIOL-265",
+            "BIOL-302",
+            "BIOL-311",
+            "BIOL-321",
+            "BIOL-322",
+            "BIOL-365",
+            "BIOL-427"
+          ],
+          "published_hours": 6
+        }
+      ],
+      "conditions": [
+        "University immersion no-program-overlap rule applies.",
+        "Excluded majors: biochemistry; bioinformatics and computational biology; biology; biomedical engineering; biomedical sciences; biotechnology and molecular bioscience; environmental science.",
+        "At least one elective at 300 level or above."
+      ],
+      "unresolved_source_questions": [],
+      "course_metadata_reviewed": 0,
+      "evidence_locator": "Overview, rendered 2026–2027 curriculum tables and complete footnotes; course popups not expanded in this pass."
+    },
+    {
+      "id": "biology-ecology-and-evolution-immersion",
+      "title": "Biology: Ecology and Evolution Immersion",
+      "url": "https://www.rit.edu/study/biology-ecology-and-evolution-immersion",
+      "catalog_year": "2026-2027",
+      "plan_code": "BIOLEE-IM",
+      "reviewed_at": "2026-10-11",
+      "access_status": "public_browser_rendered",
+      "status": "rules_reviewed_course_metadata_pending",
+      "total_hours": 9,
+      "rule_summary": "One foundation alternative and two electives. The foundation row says 3–4 hours and the total row says 9; preserve both.",
+      "groups": [
+        {
+          "role": "required_choice",
+          "selection_rule": "BIOL-265 or BIOL-240.",
+          "course_codes": [
+            "BIOL-265",
+            "BIOL-240"
+          ],
+          "published_hours": "3–4"
+        },
+        {
+          "role": "choice",
+          "selection_rule": "Choose two; selecting a course for the foundation does not create a second instance of that same course.",
+          "course_codes": [
+            "BIOL-211",
+            "BIOL-212",
+            "BIOL-240",
+            "BIOL-265",
+            "BIOL-365",
+            "BIOL-575",
+            "ENVS-305",
+            "ENVS-310",
+            "ENVS-531",
+            "MEDS-250",
+            "MEDS-251"
+          ],
+          "published_hours": 6
+        }
+      ],
+      "conditions": [
+        "University immersion no-program-overlap rule applies.",
+        "Excluded majors: biochemistry; bioinformatics and computational biology; biology; biomedical engineering; biomedical sciences; biotechnology and molecular bioscience; environmental science."
+      ],
+      "unresolved_source_questions": [
+        "The published elective row assigns six hours although some choices may vary; confirm individual card amounts before translating this as a fixed-credit sum."
+      ],
+      "course_metadata_reviewed": 0,
+      "evidence_locator": "Overview, rendered 2026–2027 curriculum tables and complete footnotes; course popups not expanded in this pass."
+    },
+    {
+      "id": "chemistry-immersion",
+      "title": "Chemistry Immersion",
+      "url": "https://www.rit.edu/study/chemistry-immersion",
+      "catalog_year": "2026-2027",
+      "plan_code": "CHEM-IM",
+      "reviewed_at": "2026-10-11",
+      "access_status": "public_browser_rendered",
+      "status": "rules_reviewed_course_metadata_pending",
+      "total_hours": 9,
+      "rule_summary": "Organic Chemistry I and two listed electives; nine hours. Whole preparation sequence or engineering chemistry alternative is separate.",
+      "groups": [
+        {
+          "role": "preparation_alternative",
+          "selection_rule": "Complete CHMG-141 + CHMG-145 + CHMG-142 + CHMG-146, or CHMG-131.",
+          "course_codes": [
+            "CHMG-141",
+            "CHMG-145",
+            "CHMG-142",
+            "CHMG-146",
+            "CHMG-131"
+          ],
+          "published_hours": null
+        },
+        {
+          "role": "required",
+          "selection_rule": "CHMO-231.",
+          "course_codes": [
+            "CHMO-231"
+          ],
+          "published_hours": 3
+        },
+        {
+          "role": "choice",
+          "selection_rule": "Choose two.",
+          "course_codes": [
+            "CHMA-211",
+            "CHMA-311",
+            "CHMB-402",
+            "CHMI-351",
+            "CHMO-232"
+          ],
+          "published_hours": 6
+        }
+      ],
+      "conditions": [
+        "University immersion no-program-overlap rule applies.",
+        "Closed to bioinformatics and computational biology, biology, biotechnology and molecular bioscience, and environmental science majors."
+      ],
+      "unresolved_source_questions": [],
+      "course_metadata_reviewed": 0,
+      "evidence_locator": "Overview, rendered 2026–2027 curriculum tables and complete footnotes; course popups not expanded in this pass."
+    },
+    {
+      "id": "climate-change-interdisciplinary-problem-immersion",
+      "title": "Climate Change: An Interdisciplinary Problem Immersion",
+      "url": "https://www.rit.edu/study/climate-change-interdisciplinary-problem-immersion",
+      "catalog_year": "2026-2027",
+      "plan_code": "CLIMATE-IM",
+      "reviewed_at": "2026-10-11",
+      "access_status": "public_browser_rendered",
+      "status": "rules_reviewed_course_metadata_pending",
+      "total_hours": 9,
+      "rule_summary": "One course from each of three separate menus; nine hours.",
+      "groups": [
+        {
+          "role": "required_choice",
+          "selection_rule": "Choose one; shared title is not certified cross-list identity.",
+          "course_codes": [
+            "CHEM-531",
+            "ENVS-531",
+            "PUBL-531"
+          ],
+          "published_hours": 3
+        },
+        {
+          "role": "choice",
+          "selection_rule": "Choose one humanities/policy elective.",
+          "course_codes": [
+            "HIST-345",
+            "PHIL-308",
+            "PUBL-530",
+            "SOIS-333",
+            "STSO-326",
+            "STSO-421",
+            "STSO-422"
+          ],
+          "published_hours": 3
+        },
+        {
+          "role": "choice",
+          "selection_rule": "Choose one science/technical elective.",
+          "course_codes": [
+            "ENVS-101",
+            "ENVS-111",
+            "ENVS-152H",
+            "ENVS-250",
+            "ENVS-305",
+            "ENVS-310",
+            "ESHS-360"
+          ],
+          "published_hours": 3
+        }
+      ],
+      "conditions": [
+        "University immersion no-program-overlap rule applies.",
+        "Closed to environmental science and environmental sustainability, health and safety majors."
+      ],
+      "unresolved_source_questions": [],
+      "course_metadata_reviewed": 0,
+      "evidence_locator": "Overview, rendered 2026–2027 curriculum tables and complete footnotes; course popups not expanded in this pass."
+    },
+    {
+      "id": "computational-linguistics-immersion",
+      "title": "Computational Linguistics Immersion",
+      "url": "https://www.rit.edu/study/computational-linguistics-immersion",
+      "catalog_year": "2026-2027",
+      "plan_code": "HLTCL-IM",
+      "reviewed_at": "2026-10-11",
+      "access_status": "public_browser_rendered",
+      "status": "rules_reviewed_course_metadata_pending",
+      "total_hours": 9,
+      "rule_summary": "Three of six listed courses; nine hours.",
+      "groups": [
+        {
+          "role": "choice",
+          "selection_rule": "Choose three.",
+          "course_codes": [
+            "LING-214",
+            "LING-301",
+            "LING-302",
+            "LING-351",
+            "LING-581",
+            "PSYC-431"
+          ],
+          "published_hours": 9
+        }
+      ],
+      "conditions": [
+        "University immersion no-program-overlap rule applies.",
+        "LING-351 and LING-581 are also AI-degree choices; immersion overlap must be checked against the student’s actual major selection, not presumed for every student."
+      ],
+      "unresolved_source_questions": [],
+      "course_metadata_reviewed": 0,
+      "evidence_locator": "Overview, rendered 2026–2027 curriculum tables and complete footnotes; course popups not expanded in this pass."
+    },
+    {
+      "id": "free-culture-and-free-and-open-source-computing-immersion",
+      "title": "Free Culture and Free and Open Source Computing Immersion",
+      "url": "https://www.rit.edu/study/free-culture-and-free-and-open-source-computing-immersion",
+      "catalog_year": "2026-2027",
+      "plan_code": "FREEOPN-IM",
+      "reviewed_at": "2026-10-11",
+      "access_status": "public_browser_rendered",
+      "status": "rules_reviewed_course_metadata_pending",
+      "total_hours": 9,
+      "rule_summary": "Two required courses and one elective; nine hours. Preserve the exact special-topic identity.",
+      "groups": [
+        {
+          "role": "required",
+          "selection_rule": "Both courses; DHSS-488 specifically Topic ID 4, Humanitarian Free & Open Source Software Development.",
+          "course_codes": [
+            "DHSS-488",
+            "ENGL-450"
+          ],
+          "published_hours": 6
+        },
+        {
+          "role": "choice",
+          "selection_rule": "Choose one.",
+          "course_codes": [
+            "COMM-303",
+            "COMM-304",
+            "ENGL-215",
+            "LING-581",
+            "ISCH-201",
+            "STSO-201",
+            "STSO-230",
+            "STSO-240",
+            "STSO-246"
+          ],
+          "published_hours": 3
+        },
+        {
+          "role": "historical_conditional",
+          "selection_rule": "Previously completed CSCI-101 or CINT-110 may replace ISCH-110; prior CINT-201 may replace ISCH-201. These are discontinued-course statements, not current offerings.",
+          "course_codes": [
+            "CSCI-101",
+            "CINT-110",
+            "CINT-201",
+            "ISCH-110",
+            "ISCH-201"
+          ],
+          "published_hours": null
+        }
+      ],
+      "conditions": [
+        "University immersion no-program-overlap rule applies."
+      ],
+      "unresolved_source_questions": [
+        "The overview mentions prior-course replacements for ISCH-110, which is absent from the current curriculum table. Do not invent a current ISCH-110 obligation or silently extend the stated substitution to a different requirement."
+      ],
+      "course_metadata_reviewed": 0,
+      "evidence_locator": "Overview, rendered 2026–2027 curriculum tables and complete footnotes; course popups not expanded in this pass."
+    },
+    {
+      "id": "geographic-information-systems-immersion",
+      "title": "Geographic Information Systems Immersion",
+      "url": "https://www.rit.edu/study/geographic-information-systems-immersion",
+      "catalog_year": "2026-2027",
+      "plan_code": "GIS-IM",
+      "reviewed_at": "2026-10-11",
+      "access_status": "public_browser_rendered",
+      "status": "rules_reviewed_course_metadata_pending",
+      "total_hours": 9,
+      "rule_summary": "Two required courses and one elective; nine hours.",
+      "groups": [
+        {
+          "role": "required",
+          "selection_rule": "Both courses.",
+          "course_codes": [
+            "IGME-382",
+            "IGME-384"
+          ],
+          "published_hours": 6
+        },
+        {
+          "role": "choice",
+          "selection_rule": "Choose one.",
+          "course_codes": [
+            "GCIS-123",
+            "IGME-386",
+            "IGME-484",
+            "IGME-489",
+            "IMGS-111",
+            "ISCH-370",
+            "ISTE-230",
+            "STAT-145"
+          ],
+          "published_hours": 3
+        }
+      ],
+      "conditions": [
+        "University immersion no-program-overlap rule applies.",
+        "Closed to game design and development and new media interactive development majors.",
+        "At least one course at 300 level or above.",
+        "GCIS-123 is also an AI programming-route choice; overlap depends on the student’s actual major route. ISCH-370 is not a mapped AI degree requirement."
+      ],
+      "unresolved_source_questions": [],
+      "course_metadata_reviewed": 0,
+      "evidence_locator": "Overview, rendered 2026–2027 curriculum tables and complete footnotes; course popups not expanded in this pass."
+    },
+    {
+      "id": "language-science-immersion",
+      "title": "Language Science Immersion",
+      "url": "https://www.rit.edu/study/language-science-immersion",
+      "catalog_year": "2026-2027",
+      "plan_code": "LANGSCI-IM",
+      "reviewed_at": "2026-10-11",
+      "access_status": "public_browser_rendered",
+      "status": "rules_reviewed_course_metadata_pending",
+      "total_hours": 9,
+      "rule_summary": "Introduction to Linguistics plus two electives; nine hours.",
+      "groups": [
+        {
+          "role": "required",
+          "selection_rule": "LING-214.",
+          "course_codes": [
+            "LING-214"
+          ],
+          "published_hours": 3
+        },
+        {
+          "role": "choice",
+          "selection_rule": "Choose two.",
+          "course_codes": [
+            "ANTH-220",
+            "LING-301",
+            "LING-302",
+            "LING-351",
+            "LING-356",
+            "LING-370",
+            "LING-449",
+            "LING-581",
+            "MLAS-351",
+            "MLJP-451"
+          ],
+          "published_hours": 6
+        }
+      ],
+      "conditions": [
+        "University immersion no-program-overlap rule applies.",
+        "No non-English language proficiency is required by the overview.",
+        "LING-351 and LING-581 are AI-degree choices; no reuse when selected for the major, rather than an unconditional exclusion."
+      ],
+      "unresolved_source_questions": [],
+      "course_metadata_reviewed": 0,
+      "evidence_locator": "Overview, rendered 2026–2027 curriculum tables and complete footnotes; course popups not expanded in this pass."
+    },
+    {
+      "id": "physics-immersion",
+      "title": "Physics Immersion",
+      "url": "https://www.rit.edu/study/physics-immersion",
+      "catalog_year": "2026-2027",
+      "plan_code": "PHYSICS-IM",
+      "reviewed_at": "2026-10-11",
+      "access_status": "public_browser_rendered",
+      "status": "rules_reviewed_course_metadata_pending",
+      "total_hours": 9,
+      "rule_summary": "Modern Physics I plus two electives, with an explicit replacement when the core course is a program requirement; nine hours.",
+      "groups": [
+        {
+          "role": "preparation",
+          "selection_rule": "PHYS-211 and PHYS-212.",
+          "course_codes": [
+            "PHYS-211",
+            "PHYS-212"
+          ],
+          "published_hours": 8
+        },
+        {
+          "role": "preparation_alternative",
+          "selection_rule": "MATH-171 + MATH-172, or MATH-181 + MATH-182.",
+          "course_codes": [
+            "MATH-171",
+            "MATH-172",
+            "MATH-181",
+            "MATH-182"
+          ],
+          "published_hours": null
+        },
+        {
+          "role": "required",
+          "selection_rule": "PHYS-213 unless already required by the home program; then replace it with PHYS-283 or another listed elective.",
+          "course_codes": [
+            "PHYS-213"
+          ],
+          "published_hours": 3
+        },
+        {
+          "role": "choice",
+          "selection_rule": "Choose two; at least one course at 300 level or above.",
+          "course_codes": [
+            "PHYS-283",
+            "PHYS-315",
+            "PHYS-320",
+            "PHYS-330",
+            "PHYS-411",
+            "PHYS-414",
+            "PHYS-440"
+          ],
+          "published_hours": 6
+        }
+      ],
+      "conditions": [
+        "University immersion no-program-overlap rule applies.",
+        "Closed to physics majors.",
+        "Preparation is separate from the three-course immersion."
+      ],
+      "unresolved_source_questions": [],
+      "course_metadata_reviewed": 0,
+      "evidence_locator": "Overview, rendered 2026–2027 curriculum tables and complete footnotes; course popups not expanded in this pass."
+    },
+    {
+      "id": "principles-computing-immersion",
+      "title": "Principles of Computing Immersion",
+      "url": "https://www.rit.edu/study/principles-computing-immersion",
+      "catalog_year": "2026-2027",
+      "plan_code": "COMPUTE-IM",
+      "reviewed_at": "2026-10-11",
+      "access_status": "public_browser_rendered",
+      "status": "rules_reviewed_course_metadata_pending",
+      "total_hours": 9,
+      "rule_summary": "Two required courses plus one elective; nine hours.",
+      "groups": [
+        {
+          "role": "required",
+          "selection_rule": "Both courses.",
+          "course_codes": [
+            "ISCH-110",
+            "ISCH-370"
+          ],
+          "published_hours": 6
+        },
+        {
+          "role": "choice",
+          "selection_rule": "Choose one.",
+          "course_codes": [
+            "ISCH-201",
+            "IGME-386",
+            "PUBL-363"
+          ],
+          "published_hours": 3
+        }
+      ],
+      "conditions": [
+        "University immersion no-program-overlap rule applies.",
+        "Overview intends this route for majors outside computing, mathematics or informatics and students with no computing background.",
+        "Named exclusions: applied mathematics, applied statistics and data analytics, bioinformatics and computational biology, computational mathematics, computer science, computing and information technologies, cybersecurity, computer engineering, game design and development, human-centered computing, new media interactive development, software engineering, web and mobile computing.",
+        "At least one course at 300 level or above."
+      ],
+      "unresolved_source_questions": [
+        "Artificial intelligence is not in the named exclusion list, but is within the overview’s computing audience restriction. Keep this as a published directory route with AI applicability unresolved; do not add it as an unrestricted eligible AI branch."
+      ],
+      "course_metadata_reviewed": 0,
+      "evidence_locator": "Overview, rendered 2026–2027 curriculum tables and complete footnotes; course popups not expanded in this pass."
+    },
+    {
+      "id": "quantum-information-science-and-technology-immersion",
+      "title": "Quantum Information Science and Technology Immersion",
+      "url": "https://www.rit.edu/study/quantum-information-science-and-technology-immersion",
+      "catalog_year": "2026-2027",
+      "plan_code": "QUANTUM-IM",
+      "reviewed_at": "2026-10-11",
+      "access_status": "public_browser_rendered",
+      "status": "rules_reviewed_course_metadata_pending",
+      "total_hours": 9,
+      "rule_summary": "One choice from each of three menus; nine hours.",
+      "groups": [
+        {
+          "role": "choice",
+          "selection_rule": "Choose one quantum course.",
+          "course_codes": [
+            "PHYS-251",
+            "CMPE-257"
+          ],
+          "published_hours": 3
+        },
+        {
+          "role": "choice",
+          "selection_rule": "Choose one mathematics course.",
+          "course_codes": [
+            "MATH-233",
+            "MATH-241",
+            "MATH-241H",
+            "MATH-367",
+            "MATH-367H"
+          ],
+          "published_hours": 3
+        },
+        {
+          "role": "choice",
+          "selection_rule": "Choose one ethics/technology course.",
+          "course_codes": [
+            "PUBL-201",
+            "PUBL-510",
+            "POLS-370",
+            "STSO-140",
+            "STSO-201",
+            "STSO-240"
+          ],
+          "published_hours": 3
+        }
+      ],
+      "conditions": [
+        "University immersion no-program-overlap rule applies.",
+        "At least one course at 300 level or above.",
+        "AI-fixed MATH-241 cannot also fulfill immersion; honors variants are separate source identities, not inferred aliases."
+      ],
+      "unresolved_source_questions": [],
+      "course_metadata_reviewed": 0,
+      "evidence_locator": "Overview, rendered 2026–2027 curriculum tables and complete footnotes; course popups not expanded in this pass."
+    },
+    {
+      "id": "science-film-photography-and-imaging-immersion",
+      "title": "Science of Film, Photography, and Imaging Immersion",
+      "url": "https://www.rit.edu/study/science-film-photography-and-imaging-immersion",
+      "catalog_year": "2026-2027",
+      "plan_code": "SCIMGS-IM",
+      "reviewed_at": "2026-10-11",
+      "access_status": "public_browser_rendered",
+      "status": "rules_reviewed_course_metadata_pending",
+      "total_hours": 9,
+      "rule_summary": "One required course and two electives. Choice row allows 6–8 hours and total row says 9; retain the variable amounts and minimum total.",
+      "groups": [
+        {
+          "role": "required",
+          "selection_rule": "SOFA-103.",
+          "course_codes": [
+            "SOFA-103"
+          ],
+          "published_hours": 3
+        },
+        {
+          "role": "choice",
+          "selection_rule": "Choose two.",
+          "course_codes": [
+            "IMGS-221",
+            "IMGS-261",
+            "IMGS-321",
+            "IMGS-341",
+            "IMGS-351"
+          ],
+          "published_hours": "6–8"
+        }
+      ],
+      "conditions": [
+        "University immersion no-program-overlap rule applies.",
+        "Closed to imaging science, motion picture science and photographic sciences majors."
+      ],
+      "unresolved_source_questions": [],
+      "course_metadata_reviewed": 0,
+      "evidence_locator": "Overview, rendered 2026–2027 curriculum tables and complete footnotes; course popups not expanded in this pass."
+    },
+    {
+      "id": "vertically-integrated-projects-immersion",
+      "title": "Vertically Integrated Projects Immersion",
+      "url": "https://www.rit.edu/study/vertically-integrated-projects-immersion",
+      "catalog_year": "2026-2027",
+      "plan_code": null,
+      "reviewed_at": "2026-10-11",
+      "access_status": "public_browser_rendered",
+      "status": "rules_reviewed_course_metadata_pending",
+      "total_hours": 9,
+      "rule_summary": "Nine credits in one and the same project, including at least three at ITDL-511. Repeated registrations are allowed by the credit-based structure; do not force three distinct course codes.",
+      "groups": [
+        {
+          "role": "required_credits",
+          "selection_rule": "At least three credits in ITDL-511; each registration is 1–3 credits.",
+          "course_codes": [
+            "ITDL-511"
+          ],
+          "published_hours": "at least 3"
+        },
+        {
+          "role": "choice_credits",
+          "selection_rule": "Remaining six credits in any combination of ITDL-211 and ITDL-511, each 1–3 credits.",
+          "course_codes": [
+            "ITDL-211",
+            "ITDL-511"
+          ],
+          "published_hours": 6
+        }
+      ],
+      "conditions": [
+        "University immersion no-program-overlap rule applies.",
+        "All nine credits must be in the same project; credits from different projects do not combine.",
+        "Every VIP GE registration requires instructor permission.",
+        "No plan code is shown on this page."
+      ],
+      "unresolved_source_questions": [],
+      "course_metadata_reviewed": 0,
+      "evidence_locator": "Overview, rendered 2026–2027 curriculum tables and complete footnotes; course popups not expanded in this pass."
+    }
+  ]
+}

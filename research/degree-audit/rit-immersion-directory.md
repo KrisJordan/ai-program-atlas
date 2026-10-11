@@ -4,8 +4,9 @@ The [public directory](https://www.rit.edu/study/immersions-and-minors) contains
 77 exact immersion titles and links. All are recorded in
 `research/rit-immersion-route-queue.json`; a confirmed route title is not a reviewed
 curriculum. Two routes currently have complete local rule and course-description
-reviews, comprising 51 route-course observations. The other 75 need local rules
-read before expanding their eligible course records. The total distinct course
+reviews, comprising 51 route-course observations. A further 15 STEM route rules
+are now reviewed without course-popup expansion. The remaining 60 need local
+rules read before expanding their eligible course records. The total distinct course
 inventory is **unknown**, not 51. This work remains in progress.
 
 The [university immersion rule](https://www.rit.edu/generaleducation/immersions)
