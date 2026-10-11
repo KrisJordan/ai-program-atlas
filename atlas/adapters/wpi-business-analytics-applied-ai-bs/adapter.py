@@ -144,6 +144,8 @@ def parse(html):
         p = next((p for p in top if common.description(p).startswith(prefix)), None)
         if p is None:
             raise ValueError("Elective category changed")
+        pool_ids = list(common.rows(p, PROGRAM_ID + "-catalog"))
+        electives["course_ids"] = list(dict.fromkeys(electives["course_ids"] + pool_ids))
         requirements.append(
             req(
                 "electives-" + key,
@@ -152,7 +154,7 @@ def parse(html):
                 count=count,
                 parent=electives["id"],
                 category="electives",
-                course_ids=list(common.rows(p, PROGRAM_ID + "-catalog")),
+                course_ids=pool_ids,
                 summary=summary,
             )
         )
@@ -215,3 +217,9 @@ def parse_business_bsms_faq(html):
 
 SOURCES.append(followup.BSMS_URL)
 SOURCE_PARSERS[followup.BSMS_URL] = parse_business_bsms_faq
+
+
+# Subject observations are independent of requirement slots and pool membership.
+from atlas.adapters.wpi_degree_subjects import observe as observe_subjects
+parse = observe_subjects(parse)
+SOURCE_PARSERS = {url: observe_subjects(parser) for url, parser in SOURCE_PARSERS.items()}

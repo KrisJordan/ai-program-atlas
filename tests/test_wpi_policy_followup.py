@@ -40,7 +40,7 @@ def test_bsms_scope_and_no_invented_course_count():
 
 
 @pytest.mark.parametrize(
-    "pid,count", [("wpi-ai-bs", 141), ("wpi-business-analytics-applied-ai-bs", 91)]
+    "pid,count", [("wpi-ai-bs", 142), ("wpi-business-analytics-applied-ai-bs", 91)]
 )
 def test_wpi_records_keep_unresolved_conflicts(pid, count):
     data = json.loads((Path("data/programs") / (pid + ".json")).read_text())

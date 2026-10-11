@@ -148,13 +148,19 @@ def parse(html):
             )
     core = req(
         "core",
-        "AI core",
-        kind="choose_credits",
+        "AI core distribution",
+        kind="all",
         credits=8 / 3,
         parent=root["id"],
         summary="8/3 units from the core pool, subject to the required bins; at least 2/3 must be at 4000 level or above.",
     )
     requirements.append(core)
+    total = req(
+        "core-selection-total", "AI core total — includes required foundation courses",
+        kind="choose_credits", credits=8 / 3, parent=core["id"],
+        summary="8/3 units in the entire core, including the required DS foundation sequence and bin selections. This is not 8/3 additional elective units; do not sum it with component loads.",
+    )
+    requirements.append(total)
     bins = []
     for g in detail.find_all("article", class_="node--type-elective-group"):
         button = g.find("button")
@@ -163,17 +169,23 @@ def parse(html):
             ("AI Foundations:", "AI Overview:", "Machine Learning:", "Interaction and Reasoning:")
         ):
             pool = common.rows(g, PROGRAM_ID + "-catalog")
-            core["course_ids"] += list(pool)
-            count = 3 if label.startswith("AI Foundations:") else 1
+            total["course_ids"] += list(pool)
+            foundation = label.startswith("AI Foundations:")
+            if foundation and (
+                label != "AI Foundations: Three of DS 1010, DS 2010, DS 3010"
+                or {c["code"] for c in pool.values()} != {"DS 1010", "DS 2010", "DS 3010"}
+            ):
+                raise ValueError("Closed required DS foundation sequence changed")
+            count = None if foundation else 1
             bins.append(
                 req(
                     "core-" + slug(label.split(":")[0]),
                     label.split(":")[0],
-                    kind="choose_courses",
+                    kind="all" if foundation else "choose_courses",
                     count=count,
                     parent=core["id"],
                     course_ids=list(pool),
-                    summary="Required minimum from this core bin.",
+                    summary="The source explicitly names all three DS foundation courses. They are included within, not additional to, the 8/3-unit core total." if foundation else "Required minimum from this core bin.",
                 )
             )
     if len(bins) != 4:
@@ -268,3 +280,9 @@ def parse_registrar_graduation(html):
 
 SOURCES.append(followup.GRADUATION_URL)
 SOURCE_PARSERS[followup.GRADUATION_URL] = parse_registrar_graduation
+
+
+# Subject observations are independent of requirement slots and pool membership.
+from atlas.adapters.wpi_degree_subjects import observe as observe_subjects
+parse = observe_subjects(parse)
+SOURCE_PARSERS = {url: observe_subjects(parser) for url, parser in SOURCE_PARSERS.items()}

@@ -180,7 +180,7 @@ def ai_degree_fixture():
         ),
         section(
             "<h4>AI Core Courses</h4>Choose 8/3 units; at least 2/3 units at the 4000-level",
-            group("AI Foundations: Three of", ["DS 1010", "DS 2010", "DS 3010"])
+            group("AI Foundations: Three of DS 1010, DS 2010, DS 3010", ["DS 1010", "DS 2010", "DS 3010"])
             + group("AI Overview: One of", ["CS 4341"])
             + group("Machine Learning: At least one", ["CS 4342"])
             + group("Interaction and Reasoning: At least one", ["CS 3041"]),
