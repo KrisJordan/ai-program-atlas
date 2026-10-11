@@ -111,5 +111,13 @@ def test_optional_actual_page_replay_matches_reviewed_source_slice(key,fn):
     d = fn(cache.read_text())
     p = json.loads((ROOT/'data/programs/mit-ai-decision-making-bs.json').read_text())
     sid = m.PID + '-hass-' + key + '-current'
-    for field in ['courses','requirements']:
-        assert d.get(field,[]) == [x for x in p[field] if x['source_id'] == sid]
+    # These lists observe identity/membership, not the separately reviewed course
+    # description or unit evidence that can enrich the curated records later.
+    expected={c['id']:c for c in p['courses'] if c['source_id']==sid}
+    assert {c['id'] for c in d.get('courses',[])}==set(expected)
+    for observed in d.get('courses',[]):
+        assert {k:observed[k] for k in ('id','code','name','source_id','url')} == {
+            k:expected[observed['id']][k] for k in ('id','code','name','source_id','url')}
+        assert observed['description'] is None and observed['credits'] is None
+        assert 'category_review' not in observed
+    assert d.get('requirements',[]) == [r for r in p['requirements'] if r['source_id']==sid]
