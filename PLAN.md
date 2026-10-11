@@ -12,6 +12,12 @@ Updated 2026-10-11. A published research project; **the full target cohort and c
 - Live public JSON matched these counts. Live checks passed keyboard family expansion, concrete comparison reload, discipline back/forward, direct program pages, learning/career statement distinctions and 390px mobile layout, with no JavaScript errors or horizontal overflow.
 - Dedicated local repository: `ai-program-atlas/` in this Mac Studio task. No existing personal website or unrelated repository was changed. Coordinated Astra high research and implementation use explicit ownership and incremental commits.
 
+## Integrated checkpoint awaiting release verification
+
+Evidence through `2eadb8c` has been integrated into the maintained database: **136 programs**, 67 confirmed institutions, 118 partially inspected, eight inaccessible and one bounded no-qualifying-program result (Caltech, with all 32 current option/minor catalog pages reviewed). This is a dated search finding, not a universal absence assertion. Requirements: **36 complete / 93 partial / 7 pending**, 22,480 program-course observations and 16,033 nodes. Repeat ingest changed zero programs; SQLite integrity and foreign keys passed. These figures are not yet the verified live release above.
+
+This checkpoint adds Binghamton's track and the Vanderbilt, Florida and Lewis & Clark minors; maps five previously pending curricula; completes the two SMU local scope audits; expands all published Miami cognate plans, all eight principal UCSD college pools and MIT HASS plans; and deepens the liberal-arts institution search. Conflicting current documents, advisor approval branches and inaccessible catalogs stay visible. National University depth reviews and remaining liberal-arts checks continue independently. Next: locked clean-checkout full tests, fresh/maintained comparison, deterministic build, CI/Pages and public browser verification.
+
 ## Published coverage
 
 | Measure | Verified count |
