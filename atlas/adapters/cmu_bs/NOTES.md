@@ -102,3 +102,10 @@ An independent second pass found that four plain required rows under the catalog
 The current university-wide course directory identifies99-101 as a3-unit literacy/communication/collaboration/intercultural competency course. Its verified public homepage corroborates Core4. This resolves one fixed unknown as human_context; fixed13 now has4foundations,4math,2AI,1systems,1human and1unknown (07-128). No requirement membership or credits changed. The full correctness audit remains in progress.
 
 Normal Fetcher denied the catalog/search popup under robots; no bypass was attempted. The separately published directory https://coursecatalog.web.cmu.edu/intercollegeprograms/courses/ and homepage https://www.cmu.edu/c-cm/ both permitted normal access. No LMS, restricted partner page or private syllabus was opened. Rerunnable observation validates the current course identity, catalog edition, competency content and credit amount without emitting a manual review.
+
+
+## SCS course correctness pass — 2026-10-11
+
+Read all51 represented SCS descriptions from the registered2026–2027 directory. Exact title/description-backed dispositions replace pool labels: probability/proof/optimization are mathematics, biological cognition and robot mechanics domain studies, and nine substantial subject mixtures remain other with explicit candidate categories. Formal prerequisites and stated units are observed; missing unit declarations for02-261/262 are not invented. Seven enrollment-condition notes preserve source restrictions without adding required courses. Public course links already verified remain separately dated examples.
+
+The observer validates all51identities and checks descriptive digests against the manually reviewed subject manifest. Changed source prose or titles are not silently treated as the same reviewed subject; parsers never emit category_review. Total independent subject coverage56of273, leaving217 for further accessible review. Degree correctness stays in_progress; fixed13 composition is unchanged by this optional/contextual pass.

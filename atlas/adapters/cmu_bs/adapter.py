@@ -357,3 +357,6 @@ for _url in (MINOR, OPTIONS):
 from .core_seminar import URL as CORE_SEMINAR_URL, SITE as CORE_COURSE_SITE, parse as parse_core_seminar
 SOURCES.extend([CORE_SEMINAR_URL, CORE_COURSE_SITE])
 SOURCE_PARSERS[CORE_SEMINAR_URL] = parse_core_seminar
+
+from .reviewed_scs import parse as parse_reviewed_scs
+SOURCE_PARSERS[COURSE_SOURCE] = parse_reviewed_scs
