@@ -59,7 +59,7 @@ def test_exact_manual_scope_and_content_evidence():
     assert sum(map(len,CODES_BY_URL.values()))==64
     assert all(x['credits']==3 and x['published_credit_text']=='(3 Credits)' for x in c.values())
     assert sum(x['prerequisites'] is not None for x in c.values())==22
-    assert Counter(x['category'] for x in c.values())=={'human_context':43,'applications':17,'mathematics':3,'other':1}
+    assert Counter(x['category'] for x in c.values())=={'human_context':43,'applications':18,'mathematics':3}
     assert all(x['description'] and x['category_review']['rationale'] and code in x['category_review']['locator'] for code,x in c.items())
     assert all(x['category_review']['source_ids']==[x['source_id']] for x in c.values())
     assert 'course_identity_groups' not in MANIFEST
@@ -69,8 +69,8 @@ def test_methods_versus_domain_or_history_and_exact_eligibility():
     c=MANIFEST['courses']
     assert {k for k,v in c.items() if v['category']=='mathematics'}=={'ECON-403','ECON-404','ECON-410'}
     assert c['ECON-411']['category']==c['ECON-430']['category']=='applications'
-    assert c['ECON-408']['category_review']['status']=='mixed'
-    assert c['ECON-408']['category_review']['candidate_categories']==['applications','human_context']
+    assert c['ECON-408']['category_review']['status']=='reviewed'
+    assert c['ECON-408']['category']=='applications' and c['ECON-408']['category_review']['candidate_categories']==[]
     assert all(c[k]['category']=='human_context' for k in ['HIST-180','HIST-282','HIST-326','HIST-480'])
     assert '1016-171T' in c['ECON-403']['prerequisites']
     assert any('not resolved' in n for n in c['ECON-401']['notes'])
