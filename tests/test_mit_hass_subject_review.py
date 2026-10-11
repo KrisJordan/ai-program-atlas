@@ -214,7 +214,7 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']['description_reviewed_records']==153
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==159
     assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
         o=entry(code)['observations'][-1]
@@ -533,3 +533,27 @@ def test_actual_literature_spring_description_upgrade_replays_and_changed_prereq
         assert review.matched_review(course,o,e['source_url'],MANIFEST)==e
         changed={**o,'prerequisites':'New prerequisite'}
         assert review.matched_review(course,changed,e['source_url'],MANIFEST) is None
+
+
+def test_literature_other_topic_is_not_transferred_to_specific_ai_topic():
+    rows=[r for r in MANIFEST['courses'].values() if r['listed_code']=='21L.707']
+    ai=next(r for r in rows if 'AI and' in r['listed_name'])
+    generic=next(r for r in rows if r['listed_name']=='Problems in Cultural Interpretation')
+    assert all(o.get('evidence_basis')=='official_title_only' for o in ai['observations'])
+    assert generic['observations'][-1]['observed_name'].endswith('The Art of War and Peace')
+    assert generic['observations'][-1]['catalog_year']=='Fall 2025'
+    narrative=entry('21L.489[J]')['observations'][-1]
+    assert narrative['category']=='human_context' and narrative['prerequisites']=='none'
+    assert any('programming or text-structuring alternatives' in r for r in narrative['restrictions'])
+
+
+def test_actual_literature_fall2025_upgrade_and_public_heading_only_boundary():
+    path=Path('/tmp/mit-hass-subjects/literature-fall2025-visible.html')
+    if not path.exists():
+        pytest.skip('Optional ignored public Literature archive')
+    rows=review.observe_literature(path.read_text());hashes={review.observation_digest(o) for o in rows}
+    saved=[o for r in MANIFEST['courses'].values() for o in r['observations'] if o['source_id']=='mit-ai-hass-review-literature-fall2025']
+    assert len(saved)==6 and all(o['observation_digest'] in hashes for o in saved)
+    checks=[r for r in MANIFEST['source_checks'] if r.get('status')=='public_heading_only']
+    assert {r['url'] for r in checks}=={'https://canvas.mit.edu/courses/39868','https://canvas.mit.edu/courses/39662','https://canvas.mit.edu/courses/39654'}
+    assert all('not proof of authentication-only' in r['reason'] for r in checks)
