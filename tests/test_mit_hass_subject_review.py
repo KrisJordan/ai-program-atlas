@@ -154,7 +154,7 @@ def test_cmsw_actual_visible_capture_replays_approved_observations():
     hashes = {review.observation_digest(row) for row in rows}
     observations = [o for r in MANIFEST['courses'].values() for o in r['observations']
                     if o['source_id'] == 'mit-ai-hass-review-cmsw-fall2026']
-    assert len(observations) == 33
+    assert len(observations) == 34
     assert all(o['observation_digest'] in hashes for o in observations)
 
 
@@ -183,7 +183,7 @@ def test_cmsw_spring_visible_capture_replays_without_assuming_latest_term():
     assert next(o for o in source if o['code']=='CMS.427[J]')['description'] is None
     hashes={review.observation_digest(o) for o in source}
     saved=[o for r in MANIFEST['courses'].values() for o in r['observations'] if o['source_id']=='mit-ai-hass-review-cmsw-spring2026']
-    assert len(saved)==31 and all(o['observation_digest'] in hashes for o in saved)
+    assert len(saved)==32 and all(o['observation_digest'] in hashes for o in saved)
 
 
 def test_cmsw_2025_interactive_writing_does_not_force_a_programming_path():
@@ -208,7 +208,7 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']['description_reviewed_records']==139
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==141
     assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
         o=entry(code)['observations'][-1]
@@ -272,3 +272,33 @@ def test_actual_political_pdf_title_review_replays_with_source_guards():
     assert all(o['observation_digest'] in hashes for o in saved)
     with pytest.raises(ValueError,match='Unrecognized PDF line'):
         review.observe_political_pdf_titles(text.replace('Models and Methods','Changed heading'))
+
+
+def test_sts_titles_preserve_unknowns_and_actual_crosslisted_content():
+    o=entry('STS.024')['observations'][-1]
+    assert o['observed_code']=='CMS.524[J]' and o['status']=='mixed'
+    assert o['category']=='other' and o['source_metadata']['same_subject_as']=='STS.024[J]'
+    assert entry('STS.081J')['observations'][-1]['status']=='unclassified'
+    assert entry('STS.085J')['observations'][-1]['category']=='human_context'
+    old=next(r for r in MANIFEST['courses'].values() if r['listed_name']=='Quantifying People: A History of Social Science')
+    assert old['review_status']=='identity_review_needed'
+    assert not old['observations'][-1]['approved_for_integration']
+
+
+def test_sts_title_parser_has_source_shape_guard_and_no_category_guess():
+    html='<h1>Tier II Subjects</h1><p><a href="https://example.edu/STS053">STS.053 Multidisciplinary Interactive Learning Through Problem-Solving</a></p>'
+    o=review.observe_sts_titles(html)[0]
+    assert o['code']=='STS.053' and o['description'] is None
+    assert 'category' not in o and o['prerequisites'] is None
+    with pytest.raises(ValueError,match='heading'):
+        review.observe_sts_titles(html.replace('Tier II Subjects','New title'))
+
+
+@pytest.mark.parametrize('tier',['i','ii'])
+def test_sts_actual_source_title_review_replays(tier):
+    path=Path('/tmp')/f'atlas-mit-hass-rest-sts-tier-{tier}.html'
+    if not path.exists():
+        pytest.skip('Optional ignored official STS title page')
+    hashes={review.observation_digest(o) for o in review.observe_sts_titles(path.read_text())}
+    saved=[o for r in MANIFEST['courses'].values() for o in r['observations'] if o['source_id']==f'mit-ai-hass-review-sts-tier-{tier}-titles']
+    assert saved and all(o['observation_digest'] in hashes for o in saved)

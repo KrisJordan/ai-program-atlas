@@ -262,3 +262,20 @@ def observe_political_pdf_titles(text):
                          term='Dated reference; URL says Updated July10 2024; no printed document date',
                          restrictions=restrictions))
     return rows
+
+
+def observe_sts_titles(html):
+    soup=BeautifulSoup(html,'html.parser')
+    headings=[clean(h) for h in soup.find_all(['h1','h2'])]
+    tiers=[h for h in headings if h in ['Tier I Subjects','Tier II Subjects']]
+    if len(tiers)!=1:
+        raise ValueError('STS tier source heading changed')
+    rows=[]
+    for link in soup.find_all('a',href=True):
+        match=re.fullmatch(r'(STS\.\d{3}J?)\s+(.+)',clean(link))
+        if match:
+            rows.append(dict(code=match[1],name=match[2],description=None,prerequisites=None,
+                             units=None,term=None,tier=tiers[0],linked_url=link['href']))
+    if not rows:
+        raise ValueError('STS tier subject list missing')
+    return rows
