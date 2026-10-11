@@ -63,3 +63,7 @@ retains the earlier provenance and is not freshly certified. The known catalog
 HTTP202 boundary was not retried. Unsupported semester_hours values inherited
 by old brochure courses/rules are now unknown; actual printed credit amounts
 remain. Whole-degree correctness is blocked by these requirement-source limits.
+
+### Audit status correction — 2026-10-11
+
+Eight CAI subject reviews and conservative unit correction complete. Other named-course metadata remain accessible through the public course inventory and are not yet reviewed; full audit remains in progress while exact catalog and brochure boundaries are retained. A source barrier does not convert still-accessible unfinished work into a completed blocked audit.

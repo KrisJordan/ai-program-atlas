@@ -294,3 +294,7 @@ applicability and BSAI AI Algorithms' 12-versus-18 total remain unresolved.
 Permission requirements themselves are not a contradiction or a granted waiver.
 72 focused tests, 44 course and 14 policy source replays, isolated SQLite/build,
 repeat-zero and integrity checks pass. Full independent second pass remains pending.
+
+## Status semantics correction — 2026-10-11
+
+Drexel, USF and William & Mary return to `in_progress`: their genuine inaccessible/conflicting sources remain recorded, but accessible description or independent public-policy work remains. Lehigh retains `blocked` after all 48 represented descriptions and applicable public policy sources were read; its contradictory credit totals and reuse boundary are source questions rather than backlog. This correction changes progress reporting, not curricular facts.

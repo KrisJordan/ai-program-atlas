@@ -315,7 +315,7 @@ def test_usf_review_does_not_recertify_brochure_or_infer_units():
  assert p['curriculum_status']=='partial'
  ledger=json.loads(Path('research/degree-audit/national-degree-batch.json').read_text())
  entry=next(e for e in ledger['programs'] if e['program_id']==pid)
- assert entry['status']=='blocked' and entry['expected_profile'] is None
+ assert entry['status']=='in_progress' and entry['expected_profile'] is None
  assert any(s['access_status']=='robots_disallowed' for s in entry['sources'])
 
 

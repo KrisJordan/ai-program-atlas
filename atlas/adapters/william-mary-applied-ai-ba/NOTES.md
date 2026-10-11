@@ -51,3 +51,7 @@ primary subject; DATA202 has a limited exact-title human-context review. Credits
 remain unknown. The comprehensive degree audit is blocked by the unreconciled
 source identity and incomplete authoritative requirements; known catalog gates
 were not retried.
+
+### Audit status correction — 2026-10-11
+
+Conservative subject correction complete. The catalog gate and department identity conflict are genuine boundaries, but independently public department metadata and university BA policy branches have not been exhausted; comprehensive audit remains in progress. A source barrier does not convert still-accessible unfinished work into a completed blocked audit.

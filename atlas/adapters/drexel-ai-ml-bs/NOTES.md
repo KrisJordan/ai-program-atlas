@@ -82,3 +82,7 @@ Current course credit headers match their individual amounts; normalized units
 remain unknown. Previously denied university policy documents were not retried.
 The comprehensive audit remains blocked by those exact source boundaries and
 the unresolved ECEC455 identity; accessible option metadata remains future work.
+
+### Audit status correction — 2026-10-11
+
+Prescribed subject/metadata review complete. Remaining accessible option descriptions are unfinished research, so the full audit remains in progress; exact SharePoint policy restrictions and missing ECEC 455 identity remain recorded source barriers. A source barrier does not convert still-accessible unfinished work into a completed blocked audit.
