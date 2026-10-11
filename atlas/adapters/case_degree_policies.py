@@ -267,6 +267,9 @@ def parse_uger(html, program_id, award):
             ids=list(dict.fromkeys(ids)),
             summary="Published approved options. Whole bundled rows require every named component; non-course options require the approval/certification printed below. Apply the governing duration, minimum credits, residency and overlap rules.",
         )
+        if index == 2:
+            require_phrases(table, ["MGMT 395", "Seminar (requires 3 sections)"])
+            group["summary"] += " The MGMT 395 route requires three sections, not a single one-credit enrollment."
         for bundle in bundles:
             t.group(
                 bundle["title"],

@@ -26,7 +26,7 @@ def test_source_change_drops_stale_editorial_claims(monkeypatch):
  with pytest.raises(ValueError,match='identity changed'):parse(html.replace('Synthetic inquiry','New inquiry'))
 
 
-@pytest.mark.parametrize('award,n',[('BA',404),('BS',403)])
+@pytest.mark.parametrize('award,n',[('BA',444),('BS',443)])
 def test_reviewed_uger_semantics_and_reciprocal_identity(award,n):
  pid=f'case-western-reserve-university-artificial-intelligence-{award.lower()}-degree'
  p=json.loads(Path('data/programs',pid+'.json').read_text());cs={c['code']:c for c in p['courses']}
@@ -166,6 +166,27 @@ def test_social_science_subjects_and_conditional_capstone(award):
  assert 'faculty project advisor' in cs['POSC 396']['prerequisites']
  assert cs['POSC 201']['prerequisites'] is None
  for dep,count in [('posc',36),('soci',32)]:
+  path=Path('/tmp/case-uger-audit',dep+'.html')
+  if path.exists():
+   obs=m.parse_descriptions(path.read_text(),pid=pid,award=award,department=dep)
+   assert len(obs['courses'])==count
+   assert not any('Changed description' in n for n in obs['notes'])
+
+
+@pytest.mark.parametrize('award',['BA','BS'])
+def test_professional_course_evidence_preserves_sequence_and_section_rules(award):
+ pid=f'case-western-reserve-university-artificial-intelligence-{award.lower()}-degree'
+ p=json.loads(Path('data/programs',pid+'.json').read_text());cs={c['code']:c for c in p['courses']}
+ assert cs['ACCT 100']['category']=='applications'
+ assert cs['MGMT 206']['category']=='applications'
+ assert cs['ORBH 330']['category_review']['status']=='mixed'
+ assert cs['EMAE 398']['category_review']['status']=='unclassified'
+ assert cs['MGMT 205']['credits']==cs['MGMT 206']['credits']==1.5
+ assert cs['MGMT 395']['credits']==1 and 'No credit for repeating' in cs['MGMT 395']['prerequisites']
+ assert 'three sections' in next(r['summary'] for r in p['requirements'] if r['title']=='Disciplinary Communication approved options')
+ assert 'only in combination with EBME 370' in cs['EBME 356']['prerequisites']
+ assert 'Recommended corequisite: EMSE 372' in cs['EMSE 320']['prerequisites']
+ for dep,count in [('ebme',2),('eche',1),('eciv',5),('emac',1),('emae',2),('emse',2),('acct',1),('entp',5),('mgmt',11),('orbh',10)]:
   path=Path('/tmp/case-uger-audit',dep+'.html')
   if path.exists():
    obs=m.parse_descriptions(path.read_text(),pid=pid,award=award,department=dep)

@@ -32,7 +32,7 @@ def fixture():
             "<h4>Courses that satisfy "
             + name
             + '</h4><table class="sc_courselist">'
-            + row("TEST " + str(100 + i), "0" if i == 6 else "3")
+            + (row("MGMT 395", "1").replace("Synthetic course MGMT 395", "Seminar (requires 3 sections)") if i == 2 else row("TEST " + str(100 + i), "0" if i == 6 else "3"))
         )
         if i == 2:
             html += '<tr><td class="codecol"><a class="code" href="/a">BUND 101</a> &amp; <a class="code" href="/b">BUND 102</a></td><td>First synthetic<br/>and Second synthetic</td><td class="hourscol">4</td></tr>'
@@ -145,3 +145,13 @@ def test_required_communication_choices_are_not_hidden_under_note(award):
     assert 'Some students for whom English is a second language enter AIQS 120 directly' in policy['summary']
     observed=p.parse_uger(fixture(),pid,award)
     assert next(r for r in observed['requirements'] if r['title']=='Communication sequence and Experience Portfolio')['kind']=='all'
+
+
+def test_real_uger_mgmt_sections_survive_course_title_normalization():
+ import hashlib
+ path=Path('.cache/http')/(hashlib.sha256(p.UGER_URL.encode()).hexdigest()+'.body')
+ if not path.exists():pytest.skip('Ignored actual UGER source absent')
+ observed=p.parse_uger(path.read_text(),'test','BA')
+ rule=next(r for r in observed['requirements'] if r['title']=='Disciplinary Communication approved options')
+ assert 'three sections' in rule['summary']
+ with pytest.raises(ValueError):p.parse_uger(path.read_text().replace('requires 3 sections','requires 2 sections'),'test','BA')
