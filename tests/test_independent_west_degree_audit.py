@@ -149,8 +149,10 @@ def test_rice_registration_permission_does_not_certify_credit_or_whole_degree():
     findings = {f['id']: f for f in e['policy_findings']}
     assert findings['statistics-prerequisite-routes']['classification'] == 'conditional_permission'
     vision = findings['vision-mutual-exclusion']
-    assert vision['classification'] == 'conditional_permission_with_credit_question'
+    assert vision['classification'] == 'conditional_permission'
     assert 'credit' in vision['unresolved_scope']
+    assert 'not separate inventory blockers' in vision['unresolved_scope']
+    assert len(e['blockers']) == 1
     assert 'https://registrar.rice.edu/students/common-errors' in vision['source_urls']
     assert 'https://registrar.rice.edu/students/reg_repeated_courses' in vision['source_urls']
     assert e['expected_profile'] is None  # A policy pass is not an all-course re-audit.
