@@ -1,4 +1,5 @@
 from .common import parse_catalog
+from .core_subjects import classify_observed
 from .requirements import enrich_requirements
 
 SOURCES = [
@@ -21,7 +22,7 @@ def parse(html: str) -> dict:
         },
     )
 
-    return enrich_requirements(html, observed, SOURCES[0])
+    return classify_observed(enrich_requirements(html, observed, SOURCES[0]))
 
 
 PROGRAM_ID = "cmu-bs-ai"
@@ -307,7 +308,7 @@ METADATA_CODES = (
 )
 SOURCES.append(COURSE_SOURCE)
 SOURCE_PARSERS = {
-    COURSE_SOURCE: lambda html: parse_metadata(html, pid=PROGRAM_ID, codes=METADATA_CODES)
+    COURSE_SOURCE: lambda html: classify_observed(parse_metadata(html, pid=PROGRAM_ID, codes=METADATA_CODES))
 }
 
 
