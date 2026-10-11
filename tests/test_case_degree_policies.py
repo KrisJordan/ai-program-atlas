@@ -86,8 +86,8 @@ def test_reviewed_degrees_validate_and_separate_school_rules(award):
     pid = "case-western-reserve-university-artificial-intelligence-" + award.lower() + "-degree"
     data = json.loads((Path("data/programs") / (pid + ".json")).read_text())
     validate_program(data)
-    assert data["curriculum_status"] == ("partial" if award == "BA" else "complete")
-    assert bool(data["curriculum_audit"]["unresolved_requirements"]) == (award == "BA")
+    assert data["curriculum_status"] == "complete"
+    assert not data["curriculum_audit"]["unresolved_requirements"]
     rule = next(
         r
         for r in data["requirements"]

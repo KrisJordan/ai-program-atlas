@@ -32,3 +32,6 @@ SOURCES = case_degree_metadata.register(PROGRAM_ID, "BA", SOURCES, SOURCE_PARSER
 
 from atlas.adapters import case_uger_metadata
 SOURCES = case_uger_metadata.register(PROGRAM_ID, "BA", SOURCES, SOURCE_PARSERS)
+
+from atlas.adapters import case_degree_permissions
+SOURCES = case_degree_permissions.register(PROGRAM_ID, SOURCES, SOURCE_PARSERS)

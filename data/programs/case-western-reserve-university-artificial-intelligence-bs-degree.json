@@ -280,6 +280,26 @@
       "catalog_year": "2026-2027",
       "locator": "Independent UGER description review: AIQS 100, AIQS 110, AIQS 120, AIQS 130",
       "confidence": "high"
+    },
+    {
+      "id": "case-registration-permissions",
+      "url": "https://case.edu/registrar/registration-classes/registration-information/permissions",
+      "title": "Permissions",
+      "fetched_at": "2026-10-11T00:05:26+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Requisites and career restrictions; approval is not automatic enrollment",
+      "confidence": "high"
+    },
+    {
+      "id": "case-faculty-permissions",
+      "url": "https://case.edu/registrar/general/student-information-system-sis/sis-resources/faculty-reviewing-permission-requests",
+      "title": "Faculty - Permission Requests",
+      "fetched_at": "2026-10-11T00:05:27+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Step 9: career restrictions forwarded to school administrator",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -15257,6 +15277,34 @@
       "source_text": null,
       "summary": "AI-related unlisted courses may satisfy specific requirements with prior academic-advisor permission. For technical electives, prior permission must instead come from the department chair or designee. The Group 2 any-CSDS rule remains an open eligible pool, limited to two of four electives; no double counting. Suggested two-course probability/statistics or numerical-methods/optimization sequences are recommendations, not extra required courses.",
       "course_ids": []
+    },
+    {
+      "id": "case-western-reserve-university-artificial-intelligence-bs-degree-registration-exception-process",
+      "parent_id": null,
+      "title": "Conditional requisite and career permission",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "case-registration-permissions",
+      "source_text": null,
+      "summary": "Course prerequisites, corequisites and other enrollment conditions remain binding unless Requisites Not Met permission is granted. Cross-career restrictions can additionally require approval from the student’s or course’s school registrar/dean. Listed graduate-program-restricted electives such as SCMG 462/463 are conditional options requiring the relevant permissions if the student does not meet their published conditions. Listing is not guaranteed enrollment or blanket waiver; after approval the student must still register.",
+      "course_ids": []
+    },
+    {
+      "id": "case-western-reserve-university-artificial-intelligence-bs-degree-career-permission-routing",
+      "parent_id": null,
+      "title": "Career permission requires administrator action",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "case-faculty-permissions",
+      "source_text": null,
+      "summary": "Career-restricted enrollment requests require action by the appropriate school registrar or administrator in addition to any instructor action. Permission can be granted or denied; approval does not itself enroll the student.",
+      "course_ids": []
     }
   ],
   "notes": [
@@ -15266,7 +15314,8 @@
     "UGER wellness zero-credit courses are explicit published zeros and still count by enrollment duration. Multi-course sequence totals do not become individual credits. Published title/code pools may overlap, so inventory counts are neither required-course totals nor unique university-wide courses.",
     "2026-10-11 correctness hotfix: exact CSDS core descriptions correct programming/data structures/algorithms to computing foundations and Discrete Mathematics to mathematics; ENGR 399 in the BS is human context. Category reviews are independent from requirement membership. Programming remains an alternative between CSDS 134 and the CSDS 132+237 bundle; prerequisites are metadata, not new fixed course obligations. The wider degree taxonomy remains unreviewed; the separate degree correctness audit is in progress, not certified by existing inventory completeness.",
     "2026-10-11 major-course audit: all named major course descriptions read. Prerequisites are course access conditions, not additional fixed degree requirements. Source-stated Units are not converted to semester hours without separate evidence. CSDS 102 requires no current or previous 300-level CSDS enrollment; CSDS 499 permits graduate standing OR Requisites Not Met permission; other advanced courses retain their own prerequisites or permissions. CSDS 463 heading and degree row agree, but its description cross-list footer says CSDS 466; no alias or equivalence inferred.",
-    "General-education metadata batch: 59 distinct additional descriptions read across 10 subjects (59 BA/58 BS records; ENGR399 was already reviewed for BS). AI-related philosophy and writing are classified from actual subject matter, not AI title words. Explicit permission, enrollment, placement and credit exclusions remain course metadata. Other general-education subjects remain unreviewed."
+    "General-education metadata batch: 59 distinct additional descriptions read across 10 subjects (59 BA/58 BS records; ENGR399 was already reviewed for BS). AI-related philosophy and writing are classified from actual subject matter, not AI title words. Explicit permission, enrollment, placement and credit exclusions remain course metadata. Other general-education subjects remain unreviewed.",
+    "Registrar policy review 2026-10-11 supersedes the earlier SCMG eligibility-conflict interpretation: the official general process explicitly permits requesting an override for unmet prerequisites, corequisites or other conditions, and separate school registrar/dean approval for career restrictions. The BA’s expressly listed SCMG462/463 options remain conditional on meeting their master’s-program restriction or receiving all necessary permissions; approval is never assumed. Optional course preparation/permission does not itself make the degree inventory incomplete."
   ],
   "curriculum_audit": {
     "scope": "degree",
@@ -15285,7 +15334,9 @@
       "case-degree-courses-phys",
       "case-degree-courses-pqhs",
       "case-degree-courses-stat",
-      "case-degree-courses-sybb"
+      "case-degree-courses-sybb",
+      "case-registration-permissions",
+      "case-faculty-permissions"
     ],
     "sections": [
       "Required major courses and bundled alternatives",
@@ -15300,7 +15351,8 @@
       "Wellness duration, repeat limits, physical movement, military waiver and transfer",
       "Quantitative reasoning and all four perspectives, letter grades and transfer appeals",
       "Secondary-major school exemption and department-approved open options",
-      "Independent current descriptions, amounts, prerequisite/restriction fields and subject rationale for all 72 named major course identities"
+      "Independent current descriptions, amounts, prerequisite/restriction fields and subject rationale for all 72 named major course identities",
+      "Registrar requisite/other-condition override and separate school career-permission process; no automatic approval or enrollment"
     ],
     "unresolved_requirements": [],
     "metadata_gaps": [

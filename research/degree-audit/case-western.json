@@ -5,7 +5,7 @@
     {
       "program_id": "case-western-reserve-university-artificial-intelligence-ba-degree",
       "institution_id": "case-western-reserve-university",
-      "status": "blocked",
+      "status": "in_progress",
       "sources": [
         {
           "url": "https://bulletin.case.edu/engineering/computer-data-sciences/artificial-intelligence-ba/",
@@ -132,13 +132,27 @@
           "locator": "Independent UGER description review: AIQS 100, AIQS 110, AIQS 120, AIQS 130",
           "checked_at": "2026-10-11",
           "access_status": "accessible; actual course descriptions independently read"
+        },
+        {
+          "url": "https://case.edu/registrar/registration-classes/registration-information/permissions",
+          "catalog_year": null,
+          "locator": "Requisites and career restrictions; approval is not automatic enrollment",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual public registrar policy reread"
+        },
+        {
+          "url": "https://case.edu/registrar/general/student-information-system-sis/sis-resources/faculty-reviewing-permission-requests",
+          "catalog_year": null,
+          "locator": "Step 9: career restrictions forwarded to school administrator",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual public registrar policy reread"
         }
       ],
       "checks": {
         "degree_identity": "Exact Artificial Intelligence, BA heading; 2026-2027 Bulletin; distinct award record.",
         "required_and_choices": "Independently read fixed core: MATH 121, MATH 307, CSDS 233, CSDS 302, CSDS 310, CSDS 330, CSDS 340, CSDS 395A. Introductory programming is CSDS 134 OR the complete CSDS 132+237 bundle, never three fixed requirements. Calculus II and probability are also alternatives; BS calculus III is an alternative.",
-        "elective_pools": "All named major-pool descriptions independently read (78 distinct identities across BA/BS). BA application alternatives retain the one 3–4-unit or two 1.5-unit route; current SCMG 462/463 descriptions impose graduate-program enrollment, unresolved against undergraduate listing. BS any-CSDS and prior-approval open options remain explicitly open. General-education subject review is still in progress.",
-        "prerequisites": "All named major descriptions reviewed, including credit exclusions, placements, invitation-only physics and permission-based advanced courses. CSDS 102 must precede any 300-level CSDS enrollment; CSDS 499 has an explicit permission alternative to graduate standing. SCMG 462/463 require enrollment in a named master’s program with no stated undergraduate exception. Prerequisites are not promoted to fixed degree obligations. First UGER batch preserves 59 additional identities’ observed prerequisites/corequisites, permission and credit exclusions; this includes AIQS registration placeholders and advisor consent, without making them new fixed degree courses.",
+        "elective_pools": "All named major-pool descriptions independently read (78 distinct identities across BA/BS). BA application alternatives retain the one 3–4-unit or two 1.5-unit route; current SCMG 462/463 descriptions impose graduate-program enrollment, conditional on the registrar’s requisite and, where applicable, separate career permission process. BS any-CSDS and prior-approval open options remain explicitly open. General-education subject review is still in progress.",
+        "prerequisites": "All named major descriptions reviewed, including credit exclusions, placements, invitation-only physics and permission-based advanced courses. CSDS 102 must precede any 300-level CSDS enrollment; CSDS 499 has an explicit permission alternative to graduate standing. SCMG 462/463 retain their named master’s-program enrollment restriction; the separately reviewed registrar policy provides a conditional requisite/other-condition override and school career-permission process, not a guaranteed waiver. Prerequisites are not promoted to fixed degree obligations. First UGER batch preserves 59 additional identities’ observed prerequisites/corequisites, permission and credit exclusions; this includes AIQS registration placeholders and advisor consent, without making them new fixed degree courses.",
         "credits_and_units": "Individual amounts observed for all named major course blocks, including 1.5-unit application courses. Description headers say Units; previously corroborated credit-hour units retained, otherwise unknown. No inferred semester-hour conversion.",
         "classification": "All 59 named major identities now have actual-description category reviews and original summaries. Mixed courses remain other with explicit candidate categories. General-education-only classifications remain legacy/unreviewed; independent overall profile is not yet established. First UGER batch adds 59 actual-description reviews; 118 program records now have independent subject reviews. Remaining 626 general-education records are still legacy/unreviewed.",
         "family_composition": "No family inheritance; BA and BS have independent catalog curricula and stable IDs.",
@@ -170,11 +184,13 @@
         },
         {
           "issue": "BA application listing conflicts with graduate-only SCMG 462/463 enrollment restrictions.",
-          "correction": "BA requirement inventory downgraded to partial; source-specific enrollment restrictions retained and no exception invented.",
-          "status": "unresolved",
+          "correction": "Earlier conflict interpretation superseded by actual registrar policies covering unmet course conditions and separate cross-career permissions. Retain exact enrollment restrictions and conditional approval route; restore BA scoped inventory complete, while full correctness audit remains in progress.",
+          "status": "corrected",
           "evidence_urls": [
             "https://bulletin.case.edu/course-descriptions/scmg/",
-            "https://bulletin.case.edu/engineering/computer-data-sciences/artificial-intelligence-ba/"
+            "https://bulletin.case.edu/engineering/computer-data-sciences/artificial-intelligence-ba/",
+            "https://case.edu/registrar/registration-classes/registration-information/permissions",
+            "https://case.edu/registrar/general/student-information-system-sis/sis-resources/faculty-reviewing-permission-requests"
           ]
         },
         {
@@ -203,7 +219,7 @@
           ]
         }
       ],
-      "correction_status": "Named major metadata and taxonomy expanded; full general-education audit remains in progress",
+      "correction_status": "Named major and first UGER course reviews plus required-choice and permission-policy corrections; remaining accessible general-education review in progress",
       "second_pass_status": "pending",
       "remaining_work": [
         {
@@ -215,12 +231,7 @@
           "url": "https://bulletin.case.edu/undergraduate-academics/unified-general-education-requirements/"
         }
       ],
-      "blockers": [
-        {
-          "issue": "Undergraduate eligibility of listed SCMG 462 and SCMG 463 remains contradicted by explicit master’s-program enrollment requirements.",
-          "url": "https://bulletin.case.edu/course-descriptions/scmg/"
-        }
-      ]
+      "blockers": []
     },
     {
       "program_id": "case-western-reserve-university-artificial-intelligence-bs-degree",
@@ -338,13 +349,27 @@
           "locator": "Independent UGER description review: AIQS 100, AIQS 110, AIQS 120, AIQS 130",
           "checked_at": "2026-10-11",
           "access_status": "accessible; actual course descriptions independently read"
+        },
+        {
+          "url": "https://case.edu/registrar/registration-classes/registration-information/permissions",
+          "catalog_year": null,
+          "locator": "Requisites and career restrictions; approval is not automatic enrollment",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual public registrar policy reread"
+        },
+        {
+          "url": "https://case.edu/registrar/general/student-information-system-sis/sis-resources/faculty-reviewing-permission-requests",
+          "catalog_year": null,
+          "locator": "Step 9: career restrictions forwarded to school administrator",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; actual public registrar policy reread"
         }
       ],
       "checks": {
         "degree_identity": "Exact Artificial Intelligence, BS heading; 2026-2027 Bulletin; distinct award record.",
         "required_and_choices": "Independently read fixed core: MATH 121, MATH 307, CSDS 233, CSDS 302, CSDS 310, CSDS 330, CSDS 340, CSDS 395A, ENGR 399. Introductory programming is CSDS 134 OR the complete CSDS 132+237 bundle, never three fixed requirements. Calculus II and probability are also alternatives; BS calculus III is an alternative.",
-        "elective_pools": "All named major-pool descriptions independently read (78 distinct identities across BA/BS). BA application alternatives retain the one 3–4-unit or two 1.5-unit route; current SCMG 462/463 descriptions impose graduate-program enrollment, unresolved against undergraduate listing. BS any-CSDS and prior-approval open options remain explicitly open. General-education subject review is still in progress.",
-        "prerequisites": "All named major descriptions reviewed, including credit exclusions, placements, invitation-only physics and permission-based advanced courses. CSDS 102 must precede any 300-level CSDS enrollment; CSDS 499 has an explicit permission alternative to graduate standing. SCMG 462/463 require enrollment in a named master’s program with no stated undergraduate exception. Prerequisites are not promoted to fixed degree obligations. First UGER batch preserves 59 additional identities’ observed prerequisites/corequisites, permission and credit exclusions; this includes AIQS registration placeholders and advisor consent, without making them new fixed degree courses.",
+        "elective_pools": "All named major-pool descriptions independently read (78 distinct identities across BA/BS). BA application alternatives retain the one 3–4-unit or two 1.5-unit route; current SCMG 462/463 descriptions impose graduate-program enrollment, conditional on the registrar’s requisite and, where applicable, separate career permission process. BS any-CSDS and prior-approval open options remain explicitly open. General-education subject review is still in progress.",
+        "prerequisites": "All named major descriptions reviewed, including credit exclusions, placements, invitation-only physics and permission-based advanced courses. CSDS 102 must precede any 300-level CSDS enrollment; CSDS 499 has an explicit permission alternative to graduate standing. SCMG 462/463 retain their named master’s-program enrollment restriction; the separately reviewed registrar policy provides a conditional requisite/other-condition override and school career-permission process, not a guaranteed waiver. Prerequisites are not promoted to fixed degree obligations. First UGER batch preserves 59 additional identities’ observed prerequisites/corequisites, permission and credit exclusions; this includes AIQS registration placeholders and advisor consent, without making them new fixed degree courses.",
         "credits_and_units": "Individual amounts observed for all named major course blocks, including 1.5-unit application courses. Description headers say Units; previously corroborated credit-hour units retained, otherwise unknown. No inferred semester-hour conversion.",
         "classification": "All 72 named major identities now have actual-description category reviews and original summaries. Mixed courses remain other with explicit candidate categories. General-education-only classifications remain legacy/unreviewed; independent overall profile is not yet established. First UGER batch adds 58 actual-description reviews; 130 program records now have independent subject reviews. Remaining 626 general-education records are still legacy/unreviewed.",
         "family_composition": "No family inheritance; BA and BS have independent catalog curricula and stable IDs.",
@@ -402,7 +427,7 @@
           ]
         }
       ],
-      "correction_status": "Named major metadata and taxonomy expanded; full general-education audit remains in progress",
+      "correction_status": "Named major and first UGER course reviews plus required-choice and permission-policy corrections; remaining accessible general-education review in progress",
       "second_pass_status": "pending",
       "remaining_work": [
         {

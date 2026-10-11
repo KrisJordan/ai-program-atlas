@@ -47,8 +47,9 @@ def test_reviewed_named_major_counts_and_conflicts(award,count):
  assert 'or Requisites Not Met permission' in courses['CSDS 499']['prerequisites']
  assert courses['CSDS 463']['code']=='CSDS 463' # inconsistent footer is not a rename
  if award=='BA':
-  assert p['curriculum_status']=='partial'
-  assert any('SCMG 462' in x for x in p['curriculum_audit']['unresolved_requirements'])
+  assert p['curriculum_status']=='complete'
+  assert not p['curriculum_audit']['unresolved_requirements']
+  assert any('Conditional requisite' in r['title'] for r in p['requirements'])
   for code in ['SCMG 462','SCMG 463']:
    assert 'Master of Supply Chain Management program' in courses[code]['prerequisites']
    assert courses[code]['credits']==1.5
