@@ -390,6 +390,66 @@
       "catalog_year": "2026-2027",
       "locator": "Exact reviewed UGER course blocks: COSI 226, COSI 310, COSI 345, COSI 364",
       "confidence": "high"
+    },
+    {
+      "id": "case-uger-courses-astr",
+      "url": "https://bulletin.case.edu/course-descriptions/astr/",
+      "title": "Astronomy (ASTR)",
+      "fetched_at": "2026-10-11T03:16:17+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Exact reviewed UGER course blocks: ASTR 350, ASTR 351",
+      "confidence": "high"
+    },
+    {
+      "id": "case-uger-courses-bioc",
+      "url": "https://bulletin.case.edu/course-descriptions/bioc/",
+      "title": "Biochemistry (BIOC)",
+      "fetched_at": "2026-10-11T03:16:20+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Exact reviewed UGER course blocks: BIOC 211, BIOC 240, BIOC 250, BIOC 277, BIOC 373, BIOC 393",
+      "confidence": "high"
+    },
+    {
+      "id": "case-uger-courses-biol",
+      "url": "https://bulletin.case.edu/course-descriptions/biol/",
+      "title": "Biology (BIOL)",
+      "fetched_at": "2026-10-11T03:16:21+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Exact reviewed UGER course blocks: BIOL 202, BIOL 302, BIOL 303, BIOL 308, BIOL 313, BIOL 334, BIOL 335, BIOL 370, BIOL 371, BIOL 386, BIOL 233, BIOL 309",
+      "confidence": "high"
+    },
+    {
+      "id": "case-uger-courses-btec",
+      "url": "https://bulletin.case.edu/course-descriptions/btec/",
+      "title": "Business Technology (BTEC)",
+      "fetched_at": "2026-10-11T03:16:23+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Exact reviewed UGER course blocks: BTEC 398",
+      "confidence": "high"
+    },
+    {
+      "id": "case-uger-courses-chem",
+      "url": "https://bulletin.case.edu/course-descriptions/chem/",
+      "title": "Chemistry (CHEM)",
+      "fetched_at": "2026-10-11T03:16:24+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Exact reviewed UGER course blocks: CHEM 306",
+      "confidence": "high"
+    },
+    {
+      "id": "case-uger-courses-eeps",
+      "url": "https://bulletin.case.edu/course-descriptions/eeps/",
+      "title": "Earth, Environmental, and Planetary Sciences (EEPS)",
+      "fetched_at": "2026-10-11T03:16:44+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Exact reviewed UGER course blocks: EEPS 207, EEPS 390, EEPS 391, EEPS 392",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -2137,71 +2197,135 @@
       "id": "case-ba-uger-bioc-211",
       "code": "BIOC 211",
       "name": "Antibiotics: From Miracle Drugs to Superbugs",
-      "description": null,
-      "prerequisites": null,
+      "description": "Antibiotic mechanisms and resistance considered alongside drug-development economics, global health and persuasive scientific communication.",
+      "prerequisites": "Prereq: Academic Inquiry Seminar (AIQS).",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=BIOC%20211",
+      "source_id": "case-uger-courses-bioc",
+      "url": "https://bulletin.case.edu/course-descriptions/bioc/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-bioc"
+        ],
+        "locator": "BIOC 211; current 2026–2027 course block",
+        "rationale": "The actual description centers on antibiotic mechanisms and resistance considered alongside drug-development economics, global health and persuasive scientific communication. These substantial domains are mixed without a single defensible primary subject.",
+        "candidate_categories": [
+          "applications",
+          "human_context"
+        ]
+      }
     },
     {
       "id": "case-ba-uger-bioc-240",
       "code": "BIOC 240",
       "name": "Discourses in Modern Biochemistry",
-      "description": null,
-      "prerequisites": null,
+      "description": "Philosophy, ethics and communication of biochemistry, including research integrity and contested biomedical technologies.",
+      "prerequisites": "Prereq: Academic Inquiry Seminar (AIQS).",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=BIOC%20240",
+      "category": "human_context",
+      "source_id": "case-uger-courses-bioc",
+      "url": "https://bulletin.case.edu/course-descriptions/bioc/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-bioc"
+        ],
+        "locator": "BIOC 240; current 2026–2027 course block",
+        "rationale": "The actual description centers on philosophy, ethics and communication of biochemistry, including research integrity and contested biomedical technologies.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-bioc-250",
       "code": "BIOC 250",
       "name": "A Brief History of Cancer",
-      "description": null,
-      "prerequisites": null,
+      "description": "Cancer science and treatment examined through historical, societal and ethical perspectives, with substantial written and oral argument.",
+      "prerequisites": "Prereq: Academic Inquiry Seminar (AIQS).",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=BIOC%20250",
+      "source_id": "case-uger-courses-bioc",
+      "url": "https://bulletin.case.edu/course-descriptions/bioc/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-bioc"
+        ],
+        "locator": "BIOC 250; current 2026–2027 course block",
+        "rationale": "The actual description centers on cancer science and treatment examined through historical, societal and ethical perspectives, with substantial written and oral argument. These substantial domains are mixed without a single defensible primary subject.",
+        "candidate_categories": [
+          "applications",
+          "human_context"
+        ]
+      }
     },
     {
       "id": "case-ba-uger-bioc-277",
       "code": "BIOC 277",
       "name": "Viruses and Human Disease",
-      "description": null,
-      "prerequisites": null,
+      "description": "Viral biology and disease examined together with pandemic policy, social consequences and ethical responses.",
+      "prerequisites": "Prereq: Academic Inquiry Seminar (AIQS).",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=BIOC%20277",
+      "source_id": "case-uger-courses-bioc",
+      "url": "https://bulletin.case.edu/course-descriptions/bioc/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-bioc"
+        ],
+        "locator": "BIOC 277; current 2026–2027 course block",
+        "rationale": "The actual description centers on viral biology and disease examined together with pandemic policy, social consequences and ethical responses. These substantial domains are mixed without a single defensible primary subject.",
+        "candidate_categories": [
+          "applications",
+          "human_context"
+        ]
+      }
     },
     {
       "id": "case-ba-uger-biol-202",
       "code": "BIOL 202",
       "name": "Biology's Survival Guide to College",
-      "description": null,
-      "prerequisites": null,
+      "description": "Human homeostasis and physiological responses to college stressors, applied to personal wellbeing.",
+      "prerequisites": "This course does not fulfill any requirements for minors or majors offered through the Department of Biology.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=BIOL%20202",
+      "category": "applications",
+      "source_id": "case-uger-courses-biol",
+      "url": "https://bulletin.case.edu/course-descriptions/biol/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-biol"
+        ],
+        "locator": "BIOL 202; current 2026–2027 course block",
+        "rationale": "The actual description centers on human homeostasis and physiological responses to college stressors, applied to personal wellbeing.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-chin-314",
@@ -2522,15 +2646,26 @@
       "id": "case-ba-uger-eeps-207",
       "code": "EEPS 207",
       "name": "Society and Natural Resources",
-      "description": null,
+      "description": "Historical and contemporary societal approaches to natural-resource management, conservation and sustainability.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=EEPS%20207",
+      "category": "human_context",
+      "source_id": "case-uger-courses-eeps",
+      "url": "https://bulletin.case.edu/course-descriptions/eeps/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-eeps"
+        ],
+        "locator": "EEPS 207; current 2026–2027 course block",
+        "rationale": "The actual description centers on historical and contemporary societal approaches to natural-resource management, conservation and sustainability.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-engl-200",
@@ -5521,155 +5656,276 @@
       "id": "case-ba-uger-astr-350",
       "code": "ASTR 350",
       "name": "Science Communication",
-      "description": null,
-      "prerequisites": null,
+      "description": "Scientific communication through literature reviews, proposals, visual explanations and writing for public audiences.",
+      "prerequisites": "Prereq: ASTR 222 . Students cannot receive credit for both USNA 250 and ASTR 350 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=ASTR%20350",
+      "category": "human_context",
+      "source_id": "case-uger-courses-astr",
+      "url": "https://bulletin.case.edu/course-descriptions/astr/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-astr"
+        ],
+        "locator": "ASTR 350; current 2026–2027 course block",
+        "rationale": "The actual description centers on scientific communication through literature reviews, proposals, visual explanations and writing for public audiences.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-bioc-373",
       "code": "BIOC 373",
       "name": "Biochemistry Senior Seminar",
-      "description": null,
-      "prerequisites": null,
+      "description": "Critical discussion of contemporary biochemical research literature and writing in disciplinary journal style.",
+      "prerequisites": "Prereq: BIOC 307 and BIOC 308 . Restricted to majors in Biochemistry.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=BIOC%20373",
+      "category": "applications",
+      "source_id": "case-uger-courses-bioc",
+      "url": "https://bulletin.case.edu/course-descriptions/bioc/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-bioc"
+        ],
+        "locator": "BIOC 373; current 2026–2027 course block",
+        "rationale": "The actual description centers on critical discussion of contemporary biochemical research literature and writing in disciplinary journal style.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-biol-302",
       "code": "BIOL 302",
       "name": "Human Learning and the Brain",
-      "description": null,
-      "prerequisites": null,
+      "description": "Neuroscience of learning and memory used to develop and communicate a personal theory of effective learning.",
+      "prerequisites": "Prereq: Undergraduate Student or Requisites Not Met Permission.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=BIOL%20302",
+      "category": "applications",
+      "source_id": "case-uger-courses-biol",
+      "url": "https://bulletin.case.edu/course-descriptions/biol/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-biol"
+        ],
+        "locator": "BIOL 302; current 2026–2027 course block",
+        "rationale": "The actual description centers on neuroscience of learning and memory used to develop and communicate a personal theory of effective learning.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-biol-303",
       "code": "BIOL 303",
       "name": "From Black Box to Toolbox: How Molecular Biology Moves Forward",
-      "description": null,
-      "prerequisites": null,
+      "description": "Experimental reasoning in molecular biology, examining research papers and developing a research proposal.",
+      "prerequisites": "Prereq: Undergraduate Student and BIOL 215 or Requisites Not Met permission.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=BIOL%20303",
+      "category": "applications",
+      "source_id": "case-uger-courses-biol",
+      "url": "https://bulletin.case.edu/course-descriptions/biol/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-biol"
+        ],
+        "locator": "BIOL 303; current 2026–2027 course block",
+        "rationale": "The actual description centers on experimental reasoning in molecular biology, examining research papers and developing a research proposal.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-biol-308",
       "code": "BIOL 308",
       "name": "From Cloning to CRISPR: Advancements and Prospects in Genetic Engineering",
-      "description": null,
-      "prerequisites": null,
+      "description": "Genetic engineering and genome-editing research, including experimental proposals and associated ethical questions.",
+      "prerequisites": "Prereq: BIOL 215 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=BIOL%20308",
+      "category": "applications",
+      "source_id": "case-uger-courses-biol",
+      "url": "https://bulletin.case.edu/course-descriptions/biol/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-biol"
+        ],
+        "locator": "BIOL 308; current 2026–2027 course block",
+        "rationale": "The actual description centers on genetic engineering and genome-editing research, including experimental proposals and associated ethical questions.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-biol-313",
       "code": "BIOL 313",
       "name": "Ecology and Evolution of City Life",
-      "description": null,
-      "prerequisites": null,
+      "description": "Ecological and evolutionary processes in urban environments, evaluated through research literature and student projects.",
+      "prerequisites": "Prereq: (Undergraduate Student and BIOL 214 ) or Requisites Not Met permission.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=BIOL%20313",
+      "category": "applications",
+      "source_id": "case-uger-courses-biol",
+      "url": "https://bulletin.case.edu/course-descriptions/biol/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-biol"
+        ],
+        "locator": "BIOL 313; current 2026–2027 course block",
+        "rationale": "The actual description centers on ecological and evolutionary processes in urban environments, evaluated through research literature and student projects.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-biol-334",
       "code": "BIOL 334",
       "name": "Disciplinary Communication Seminar in Cancer Biology",
-      "description": null,
-      "prerequisites": null,
+      "description": "Evaluation and communication of scientific research in cancer biology through extensive writing and presentation.",
+      "prerequisites": "Prereq: Undergraduate student and BIOL 214 and ( BIOL 215 or BIOL 216 ) or Requisites Not Met permission.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=BIOL%20334",
+      "category": "applications",
+      "source_id": "case-uger-courses-biol",
+      "url": "https://bulletin.case.edu/course-descriptions/biol/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-biol"
+        ],
+        "locator": "BIOL 334; current 2026–2027 course block",
+        "rationale": "The actual description centers on evaluation and communication of scientific research in cancer biology through extensive writing and presentation.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-biol-335",
       "code": "BIOL 335",
       "name": "Impacts of Bacterial Gene Regulation on the Environment and Human Health",
-      "description": null,
-      "prerequisites": null,
+      "description": "Bacterial transcriptional regulation and its roles in host-pathogen interactions and environmental remediation.",
+      "prerequisites": "Prereq: BIOL 326 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=BIOL%20335",
+      "category": "applications",
+      "source_id": "case-uger-courses-biol",
+      "url": "https://bulletin.case.edu/course-descriptions/biol/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-biol"
+        ],
+        "locator": "BIOL 335; current 2026–2027 course block",
+        "rationale": "The actual description centers on bacterial transcriptional regulation and its roles in host-pathogen interactions and environmental remediation.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-biol-370",
       "code": "BIOL 370",
       "name": "Seminar on Unifying Concepts in Neuroscience",
-      "description": null,
-      "prerequisites": null,
+      "description": "Neural organization across species and biological scales, culminating in a neuroscience research proposal.",
+      "prerequisites": "Prereq: Undergraduate Student and NEUR 201 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=BIOL%20370",
+      "category": "applications",
+      "source_id": "case-uger-courses-biol",
+      "url": "https://bulletin.case.edu/course-descriptions/biol/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-biol"
+        ],
+        "locator": "BIOL 370; current 2026–2027 course block",
+        "rationale": "The actual description centers on neural organization across species and biological scales, culminating in a neuroscience research proposal.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-biol-371",
       "code": "BIOL 371",
       "name": "Animal Welfare",
-      "description": null,
-      "prerequisites": null,
+      "description": "Scientific assessment of animal wellbeing, integrating historical attitudes with modern welfare protocols.",
+      "prerequisites": "Prereq: Academic Inquiry Seminar (AIQS) and BIOL 216 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=BIOL%20371",
+      "category": "applications",
+      "source_id": "case-uger-courses-biol",
+      "url": "https://bulletin.case.edu/course-descriptions/biol/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-biol"
+        ],
+        "locator": "BIOL 371; current 2026–2027 course block",
+        "rationale": "The actual description centers on scientific assessment of animal wellbeing, integrating historical attitudes with modern welfare protocols.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-chem-306",
       "code": "CHEM 306",
       "name": "Biochemistry Laboratory",
-      "description": null,
-      "prerequisites": null,
+      "description": "Biochemical laboratory methods for protein extraction, purification and characterization, with computational structural analysis.",
+      "prerequisites": "Prereq: CHEM 328 and ( CHEM 234 or CHEM 322 ).",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=CHEM%20306",
+      "category": "applications",
+      "source_id": "case-uger-courses-chem",
+      "url": "https://bulletin.case.edu/course-descriptions/chem/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-chem"
+        ],
+        "locator": "CHEM 306; current 2026–2027 course block",
+        "rationale": "The actual description centers on biochemical laboratory methods for protein extraction, purification and characterization, with computational structural analysis.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-chin-350",
@@ -6015,15 +6271,26 @@
       "id": "case-ba-uger-eeps-390",
       "code": "EEPS 390",
       "name": "Introduction to Geological Research",
-      "description": null,
+      "description": "Design and initial conduct of geological research, including scientific ethics, a written proposal and presentation.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=EEPS%20390",
+      "category": "applications",
+      "source_id": "case-uger-courses-eeps",
+      "url": "https://bulletin.case.edu/course-descriptions/eeps/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-eeps"
+        ],
+        "locator": "EEPS 390; current 2026–2027 course block",
+        "rationale": "The actual description centers on design and initial conduct of geological research, including scientific ethics, a written proposal and presentation.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-emac-355",
@@ -7062,57 +7329,101 @@
       "id": "case-ba-uger-astr-351",
       "code": "ASTR 351",
       "name": "Astronomy Capstone",
-      "description": null,
-      "prerequisites": null,
+      "description": "Supervised astronomy research with progress reports, a technical paper and public presentation.",
+      "prerequisites": "Prereq: ASTR 222 . For this course to satisfy the UGER Capstone requirement, a minimum of three credit hours are required.",
       "credits": null,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=ASTR%20351",
+      "category": "applications",
+      "source_id": "case-uger-courses-astr",
+      "url": "https://bulletin.case.edu/course-descriptions/astr/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-astr"
+        ],
+        "locator": "ASTR 351; current 2026–2027 course block",
+        "rationale": "The actual description centers on supervised astronomy research with progress reports, a technical paper and public presentation.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-bioc-393",
       "code": "BIOC 393",
       "name": "Senior Capstone Communication",
-      "description": null,
-      "prerequisites": null,
+      "description": "Communication component of the biochemistry laboratory-research capstone, completed in the graduating semester after research credit.",
+      "prerequisites": "Prereq: BIOC 391 . Undergraduate Biochemistry majors perform laboratory research for their capstone projects and are required to complete two courses: BIOC 391 and BIOC 393 . Students then enroll in BIOC 393 in their final, graduating semester.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=BIOC%20393",
+      "category": "applications",
+      "source_id": "case-uger-courses-bioc",
+      "url": "https://bulletin.case.edu/course-descriptions/bioc/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-bioc"
+        ],
+        "locator": "BIOC 393; current 2026–2027 course block",
+        "rationale": "The actual description centers on communication component of the biochemistry laboratory-research capstone, completed in the graduating semester after research credit.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-biol-386",
       "code": "BIOL 386",
       "name": "Biology Capstone - Selected Topics",
-      "description": null,
-      "prerequisites": null,
+      "description": "Instructor-selected biological research topics studied through literature, individual projects, peer review and a final poster and paper.",
+      "prerequisites": "Prereq: Undergraduate Student.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=BIOL%20386",
+      "category": "applications",
+      "source_id": "case-uger-courses-biol",
+      "url": "https://bulletin.case.edu/course-descriptions/biol/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-biol"
+        ],
+        "locator": "BIOL 386; current 2026–2027 course block",
+        "rationale": "The actual description centers on instructor-selected biological research topics studied through literature, individual projects, peer review and a final poster and paper. Although topics vary, the description explicitly bounds the projects to biological research; this is domain science rather than inferred computing.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-btec-398",
       "code": "BTEC 398",
       "name": "Digital Innovation and Transformation Lab (xLab)",
-      "description": null,
+      "description": "Team-based organizational innovation projects using AI and other tools for human-centered design, prototypes and implementation.",
       "prerequisites": null,
       "credits": 4.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=BTEC%20398",
+      "category": "applications",
+      "source_id": "case-uger-courses-btec",
+      "url": "https://bulletin.case.edu/course-descriptions/btec/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-btec"
+        ],
+        "locator": "BTEC 398; current 2026–2027 course block",
+        "rationale": "The actual description centers on team-based organizational innovation projects using AI and other tools for human-centered design, prototypes and implementation. AI-enabled tools support organizational projects; the source does not establish a course centered on AI algorithm methods.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-chst-398c",
@@ -7210,29 +7521,51 @@
       "id": "case-ba-uger-eeps-391",
       "code": "EEPS 391",
       "name": "Senior Project",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "First part of a supervised earth-science research project, with a proposal, data collection and a progress presentation.",
+      "prerequisites": "Recommended preparation: EEPS 390 . Both courses ( EEPS 391 and EEPS 392 ) must be completed to satisfy the UGER Capstone requirement.",
+      "credits": 2.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=EEPS%20391",
+      "category": "applications",
+      "source_id": "case-uger-courses-eeps",
+      "url": "https://bulletin.case.edu/course-descriptions/eeps/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-eeps"
+        ],
+        "locator": "EEPS 391; current 2026–2027 course block",
+        "rationale": "The actual description centers on first part of a supervised earth-science research project, with a proposal, data collection and a progress presentation.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-eeps-392",
       "code": "EEPS 392",
       "name": "Professional Presentation",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Scientific writing, posters and oral presentation used to communicate the completed earth-science senior project.",
+      "prerequisites": "Prereq or Coreq: EEPS 390 . Prereq: EEPS 391 . Both courses ( EEPS 391 and EEPS 392 ) must be completed to satisfy the UGER Capstone requirement.",
+      "credits": 2.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=EEPS%20392",
+      "category": "human_context",
+      "source_id": "case-uger-courses-eeps",
+      "url": "https://bulletin.case.edu/course-descriptions/eeps/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-eeps"
+        ],
+        "locator": "EEPS 392; current 2026–2027 course block",
+        "rationale": "The actual description centers on scientific writing, posters and oral presentation used to communicate the completed earth-science senior project.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-emae-398",
@@ -13297,15 +13630,26 @@
       "id": "case-ba-uger-biol-233",
       "code": "BIOL 233",
       "name": "The Life and Science of Ernest Everett Just",
-      "description": null,
+      "description": "Ernest Everett Just’s scientific career examined within African American history and institutional racial exclusion.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=BIOL%20233",
+      "category": "human_context",
+      "source_id": "case-uger-courses-biol",
+      "url": "https://bulletin.case.edu/course-descriptions/biol/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-biol"
+        ],
+        "locator": "BIOL 233; current 2026–2027 course block",
+        "rationale": "The actual description centers on ernest Everett Just’s scientific career examined within African American history and institutional racial exclusion.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-cogs-202",
@@ -14168,15 +14512,26 @@
       "id": "case-ba-uger-biol-309",
       "code": "BIOL 309",
       "name": "Biology Field Studies",
-      "description": null,
-      "prerequisites": null,
+      "description": "Field investigation of organisms and ecosystems, including direct observation and a designed biological research project.",
+      "prerequisites": "Prereq: BIOL 216 . Instructor consent required to register. Course may be repeated for credit up to two times if traveling to a new destination.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "case-unified-general-education",
-      "url": "https://bulletin.case.edu/search/?P=BIOL%20309",
+      "category": "applications",
+      "source_id": "case-uger-courses-biol",
+      "url": "https://bulletin.case.edu/course-descriptions/biol/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-uger-courses-biol"
+        ],
+        "locator": "BIOL 309; current 2026–2027 course block",
+        "rationale": "The actual description centers on field investigation of organisms and ecosystems, including direct observation and a designed biological research project.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-ba-uger-coop-1",
@@ -16942,7 +17297,8 @@
     "2026-10-11 UGER continuation: 50 HSTY descriptions reviewed by the coordinator and all 73 mapped PHED blocks reviewed by the degree researcher. Varsity/jogging blocks containing only approval labels have limited exact-title subject rationales and retain null descriptions. Physical-education choices remain duration-based unresolved records; zero source-stated credits are preserved.",
     "2026-10-11 coordinator review adds 53 UGER descriptions from Religious Studies, Ancient Near East/Egyptian Studies, Jewish Studies and Linguistics. The actual-subject review classifies applied language pedagogy separately from historical/cultural inquiry and preserves explicit course restrictions. Full correctness audit remains in progress.",
     "2026-10-11: all 69 mapped HSTY descriptions reviewed. Twelve reciprocal-source cross-list groups now reconcile 14 aliases while preserving every source record. Identity reconciliation is explicitly bounded to the listed groups; remaining unreviewed aliases and course subjects are not certified.",
-    "Cognitive/communication-sciences review 2026-10-11 adds 19 actual course descriptions. COSI310 is critical clinical AI use, not an algorithm-design course. COGS399H/397 remain explicitly unclassified because individual research topics are unspecified. COGS250 joins the existing reciprocal Responsible AI cross-list group; all records and selection counts remain."
+    "Cognitive/communication-sciences review 2026-10-11 adds 19 actual course descriptions. COSI310 is critical clinical AI use, not an algorithm-design course. COGS399H/397 remain explicitly unclassified because individual research topics are unspecified. COGS250 joins the existing reciprocal Responsible AI cross-list group; all records and selection counts remain.",
+    "Science-description review 2026-10-11: Read all26 mapped astronomy, biochemistry, biology, business-technology, chemistry and earth-science course descriptions. AI tools in BTEC398 do not establish AI algorithm-method content; its domain is organizational innovation. BIOC211/250/277 retain mixed science/human-context categories. ASTR351 publishes1–3Units and a minimum3credits for UGER capstone use; scalarcredits remain null with the range explicitly preserved. EEPS391+392 remains a whole two-course option, each2Units. Major restrictions and instructor consent remain conditional eligibility, not extra fixed degree courses. Full correctness audit remains in progress."
   ],
   "curriculum_audit": {
     "scope": "degree",

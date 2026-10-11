@@ -26,7 +26,7 @@ def test_source_change_drops_stale_editorial_claims(monkeypatch):
  with pytest.raises(ValueError,match='identity changed'):parse(html.replace('Synthetic inquiry','New inquiry'))
 
 
-@pytest.mark.parametrize('award,n',[('BA',273),('BS',272)])
+@pytest.mark.parametrize('award,n',[('BA',299),('BS',298)])
 def test_reviewed_uger_semantics_and_reciprocal_identity(award,n):
  pid=f'case-western-reserve-university-artificial-intelligence-{award.lower()}-degree'
  p=json.loads(Path('data/programs',pid+'.json').read_text());cs={c['code']:c for c in p['courses']}
@@ -111,3 +111,23 @@ def test_cognitive_subjects_and_hyphenated_prerequisites(award):
    observed=m.parse_descriptions(path.read_text(),pid=pid,award=award,department=dep)
    assert len(observed['courses'])==count
    assert all('Changed description' not in n for n in observed['notes'])
+
+
+@pytest.mark.parametrize('award',['BA','BS'])
+def test_science_conditions_and_variable_credit_range(award):
+ pid=f'case-western-reserve-university-artificial-intelligence-{award.lower()}-degree'
+ p=json.loads(Path('data/programs',pid+'.json').read_text());cs={c['code']:c for c in p['courses']}
+ assert cs['BTEC 398']['category']=='applications'
+ assert cs['BIOC 240']['category']=='human_context'
+ assert cs['BIOC 277']['category']=='other' and cs['BIOC 277']['category_review']['status']=='mixed'
+ assert 'Restricted to majors in Biochemistry' in cs['BIOC 373']['prerequisites']
+ assert 'Instructor consent' in cs['BIOL 309']['prerequisites']
+ assert cs['ASTR 351']['credits'] is None
+ assert 'minimum of three credit hours' in cs['ASTR 351']['prerequisites']
+ bundle=next(r for r in p['requirements'] if set(r['course_ids'])=={cs['EEPS 391']['id'],cs['EEPS 392']['id']})
+ assert bundle['kind']=='all' and cs['EEPS 391']['credits']==cs['EEPS 392']['credits']==2
+ path=Path('/tmp/case-uger-audit/astr.html')
+ if path.exists():
+  obs=m.parse_descriptions(path.read_text(),pid=pid,award=award,department='astr')
+  assert obs['observed_credit_ranges']=={cs['ASTR 351']['id']:'1 - 3 Units'}
+  assert not any('Changed description' in n for n in obs['notes'])

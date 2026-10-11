@@ -7,13 +7,13 @@ from bs4 import BeautifulSoup
 from atlas.adapters.national_curriculum_common import clean, course
 from atlas.adapters.case_degree_metadata import BASE, HEADINGS
 
-REVIEW_FILES=('case_uger_subject_reviews.json','case_uger_history_reviews.json','case_uger_wellness_reviews.json','case_uger_religion_reviews.json','case_uger_cognitive_reviews.json')
+REVIEW_FILES=('case_uger_subject_reviews.json','case_uger_history_reviews.json','case_uger_wellness_reviews.json','case_uger_religion_reviews.json','case_uger_cognitive_reviews.json','case_uger_science_reviews.json')
 REVIEWS={}
 for filename in REVIEW_FILES:
     new=json.loads(Path(__file__).with_name(filename).read_text())
     if REVIEWS.keys() & new.keys():raise ValueError('Duplicate Case UGER reviewed identity')
     REVIEWS.update(new)
-DEPARTMENTS={**HEADINGS,'aiqs':'Academic Inquiry Seminar (AIQS)','hsty':'History (HSTY)','phed':'Physical Education (PHED)','rlgn':'Religious Studies (RLGN)','anee':'Ancient Near East/Egyptian Studies (ANEE)','ling':'Linguistics (LING)','jwst':'Jewish Studies (JWST)','cogs':'Cognitive Science (COGS)','cosi':'Communication Sciences (COSI)'}
+DEPARTMENTS={**HEADINGS,'aiqs':'Academic Inquiry Seminar (AIQS)','hsty':'History (HSTY)','phed':'Physical Education (PHED)','rlgn':'Religious Studies (RLGN)','anee':'Ancient Near East/Egyptian Studies (ANEE)','ling':'Linguistics (LING)','jwst':'Jewish Studies (JWST)','cogs':'Cognitive Science (COGS)','cosi':'Communication Sciences (COSI)','astr':'Astronomy (ASTR)','bioc':'Biochemistry (BIOC)','biol':'Biology (BIOL)','btec':'Business Technology (BTEC)','chem':'Chemistry (CHEM)','eeps':'Earth, Environmental, and Planetary Sciences (EEPS)'}
 # Exact fragments selected from reviewed blocks; additions require source review.
 EXTRA_RULES={
  'CSDS 101':['The recommended pre-requisite is comfort with high school algebra.'],
@@ -40,23 +40,24 @@ def parse_descriptions(html,*,pid,award,department):
     soup=BeautifulSoup(html,'html.parser')
     if [clean(h.get_text(' ',strip=True)) for h in soup.find_all('h1')]!=[DEPARTMENTS[department]]:
         raise ValueError('Case UGER department identity changed: '+department)
-    courses=[];digests={};changed=[]
+    courses=[];digests={};changed=[];ranges={}
     for code,review in REVIEWS.items():
         if not code.startswith(department.upper()+' ') or award not in review['course_ids']:continue
         blocks=[b for b in soup.select('.courseblock') if b.select_one('.courseblocktitle') and clean(b.select_one('.courseblocktitle').get_text(' ',strip=True)).startswith(code+'. ')]
         if len(blocks)!=1:raise ValueError('Case UGER course missing or duplicated: '+code)
         b=blocks[0];header=clean(b.select_one('.courseblocktitle').get_text(' ',strip=True));desc=b.select_one('.courseblockdesc')
-        match=re.fullmatch(re.escape(code)+r'\. (.+)\. (\d+(?:\.\d+)?) Units?\.',header)
+        match=re.fullmatch(re.escape(code)+r'\. (.+)\. (\d+(?:\.\d+)?(?: - \d+(?:\.\d+)?)?) Units?\.',header)
         if not match or desc is None or match[1]!=review['title']:raise ValueError('Case UGER reviewed identity changed: '+code)
         body=clean(desc.get_text(' ',strip=True));digest=hashlib.sha256(body.encode()).hexdigest()
-        row=course('unused',code,match[1],'case-uger-courses-'+department,BASE+department+'/',credits=float(match[2]),unit='unknown');row['id']=review['course_ids'][award]
+        row=course('unused',code,match[1],'case-uger-courses-'+department,BASE+department+'/',credits=None if ' - ' in match[2] else float(match[2]),unit='unknown');row['id']=review['course_ids'][award]
         row['prerequisites']=eligibility(body,code)
+        if ' - ' in match[2]:ranges[row['id']]=match[2]+' Units'
         if digest==review['description_sha256']:
             row['description']=review['description'];row['category']=review['category']
         else:
             row['description']=None;row['category']='other';changed.append(code)
         courses.append(row);digests[row['id']]=digest
-    return dict(id=pid,curriculum_status='partial',courses=courses,requirements=[],observed_description_digests=digests,notes=['UGER course descriptions are distinct from approval-table membership. Units are not independently normalized; no prerequisite statement means unknown. No independent review emitted.']+(['Changed description needs review: '+', '.join(changed)] if changed else []))
+    return dict(id=pid,curriculum_status='partial',courses=courses,requirements=[],observed_description_digests=digests,observed_credit_ranges=ranges,notes=['UGER course descriptions are distinct from approval-table membership. Units are not independently normalized; no prerequisite statement means unknown. No independent review emitted.']+(['Changed description needs review: '+', '.join(changed)] if changed else []))
 
 
 def register(pid,award,sources,parsers):
