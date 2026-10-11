@@ -214,3 +214,12 @@ def parse_all_reviewed_cse(html):
     return {**original, 'courses': list(records.values())}
 
 SOURCE_PARSERS[COURSE_URL] = parse_all_reviewed_cse
+
+# Independent current PHIL/ECON blocks have no pre-existing same-URL observer.
+# Keep held/missing identities as dispositions; never replay manual reviews.
+from atlas.adapters import ucsd_phil_econ_reviews as phil_econ_reviews
+for _review_url, _review_parser in phil_econ_reviews.SOURCE_PARSERS.items():
+    if _review_url in SOURCE_PARSERS:
+        raise ValueError('UCSD PHIL/ECON source needs explicit parser composition')
+    SOURCES += (_review_url,)
+    SOURCE_PARSERS[_review_url] = _review_parser

@@ -4627,15 +4627,29 @@
           "locator": "Coordinator read82remaining exact course headings andfull description fields; six unmatched exact codes documented; primary integration replay guarded whole blocks",
           "checked_at": "2026-10-11",
           "access_status": "source content reviewed by delegated coordinator; integrated with exact source replay"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/PHIL.html",
+          "catalog_year": "2026–27",
+          "locator": "Independent contributor read all represented exact-code blocks; primary integrated65 approved rows, retained3 held/missing dispositions. No complete degree second-pass claim.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_http_200_full_blocks_reviewed_by_contributor"
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/ECON.html",
+          "catalog_year": "2026–27",
+          "locator": "Independent contributor read all represented exact-code blocks; primary integrated65 approved rows, retained3 held/missing dispositions. No complete degree second-pass claim.",
+          "checked_at": "2026-10-11",
+          "access_status": "public_http_200_full_blocks_reviewed_by_contributor"
         }
       ],
       "checks": {
         "degree_identity": "Catalog BS Artificial Intelligence; department2026–27 page is explicitly tentative, datedAugust3,2026. Version differences are retained.",
         "required_and_choices": "Eight fixed major courses independently enumerated. Major alternatives and elective pools remain options. College/cohort branches remain beneath their eight policy notes. AHI course route now beneath existing policy note because high-school/test/prior-college routes exist; climate pool beneath applicability note because transfers are exempt.",
         "elective_pools": "13explicit major-choice groups yield119distinct option records;50AHI course records become contextual/unresolved. CSEbreadth tag eligibility notes and conditional/dated GE lists are not promoted to universal course obligations.",
-        "prerequisites": "Required CSE12/25/30/55/101/151A entries read, along withMATH20A/20B. Mixedand/or catalog strings preserved, without invented grouping. New metadata adds no courses or prerequisite requirements. The82newCSErecords retain the entire published prerequisite suffix. EarlierCSE89PACErestriction and95tutorappointmentareexplicit. Conditionalcredit reductions, exclusions and remotevariant distinctions remain source-specific; inherited prerequisites do not become extra fixedcourses. Primary independently rereadall8existingcoreblocks and repairedsemicolon/sentence truncation. CSE25/55CS29priority has explicitspacepermission;100recommendation remainsoptional;151ACOGS188creditexclusionretained.",
-        "credits_and_units": "Quarter hours; required CSE entries4each, newly verified MATH20A/20B4each with prior-calculus credit reductions preserved. Major124 lower60 upper64 are source totals, not sums from unknown elective values. Computing22/24 variation retained without forced arithmetic. Exact82CSEheadings supply ordinary units (e.g.15L2,901,1705); conditionalearned-credit reductions remain separately stated, not substituted forordinaryamounts. Verifiedquarter-hourmappingreused.",
-        "classification": "CSE101 correctedAI→foundations; CSE30 foundations→systems. Required profile now2foundations/2math/3AI/1systems from actual descriptions. Broad GE/pool role-based labels removed; code-only entriesother with precise insufficiency rationale. Named unreviewed pool courses remain unreviewed. Coordinator-reviewed82CSEblocks integrated with per-course rationale;6unmatched identifiers remainunclassified. CSE20/21/103/106mathematics;105foundations;127systems;151BAI;194humancontext;193unspecifiedresearchother. MixedCSE5/5RretainAI/human candidates.",
+        "prerequisites": "Required CSE12/25/30/55/101/151A entries read, along withMATH20A/20B. Mixedand/or catalog strings preserved, without invented grouping. New metadata adds no courses or prerequisite requirements. The82newCSErecords retain the entire published prerequisite suffix. EarlierCSE89PACErestriction and95tutorappointmentareexplicit. Conditionalcredit reductions, exclusions and remotevariant distinctions remain source-specific; inherited prerequisites do not become extra fixedcourses. Primary independently rereadall8existingcoreblocks and repairedsemicolon/sentence truncation. CSE25/55CS29priority has explicitspacepermission;100recommendation remainsoptional;151ACOGS188creditexclusionretained. PHIL/ECON full eligibility suffixes retained. PHIL115 is philosophy-major/letter-grade restricted; PHIL27/28 letter-grade restriction is Warren-specific; ECON137 restricts majors/MA33 plus approval. PHIL110 sequence typo and PHIL185 inconsistent repeat clauses remain explicit program notes, not repaired.",
+        "credits_and_units": "Quarter hours; required CSE entries4each, newly verified MATH20A/20B4each with prior-calculus credit reductions preserved. Major124 lower60 upper64 are source totals, not sums from unknown elective values. Computing22/24 variation retained without forced arithmetic. Exact82CSEheadings supply ordinary units (e.g.15L2,901,1705); conditionalearned-credit reductions remain separately stated, not substituted forordinaryamounts. Verifiedquarter-hourmappingreused. Current ECON165T is2quarter units; other approvedPHIL/ECON ordinary amounts retained without adding conditional prerequisites to load.",
+        "classification": "CSE101 correctedAI→foundations; CSE30 foundations→systems. Required profile now2foundations/2math/3AI/1systems from actual descriptions. Broad GE/pool role-based labels removed; code-only entriesother with precise insufficiency rationale. Named unreviewed pool courses remain unreviewed. Coordinator-reviewed82CSEblocks integrated with per-course rationale;6unmatched identifiers remainunclassified. CSE20/21/103/106mathematics;105foundations;127systems;151BAI;194humancontext;193unspecifiedresearchother. MixedCSE5/5RretainAI/human candidates. PHIL/ECON contribution:65 approved current-content rows (57human context,7applications,1mathematics) integrated after source-specific guards; three held/missing records explicitly unclassified. PHIL12 logic/statistical inference is mathematics; philosophy-of-mathematics courses remain humanities; no prefix or GE-role category inference.",
         "family_composition": "No family inheritance/bindings; independently scoped standalone degree. Shared policy helpers do not imply shared credential.",
         "degree_wide_requirements": "Extensive college policies remain conditional. Specific edition, residence, transfer and approval conflicts still prevent whole-degree certification."
       },
@@ -4644,8 +4658,8 @@
           "count": 8,
           "categories": {
             "foundations": 2,
-            "systems": 1,
             "ai_ml": 3,
+            "systems": 1,
             "mathematics": 2
           }
         },
@@ -4654,20 +4668,22 @@
           "categories": {
             "other": 97,
             "foundations": 6,
-            "systems": 1,
             "mathematics": 4,
-            "applications": 1,
             "ai_ml": 9,
-            "human_context": 1
+            "human_context": 1,
+            "systems": 1,
+            "applications": 1
           }
         },
         "unresolved": {
           "count": 2241,
           "categories": {
-            "other": 2198,
+            "other": 2133,
             "foundations": 6,
             "systems": 23,
-            "applications": 14
+            "applications": 21,
+            "human_context": 57,
+            "mathematics": 1
           }
         }
       },
@@ -7065,6 +7081,15 @@
             "https://catalog.ucsd.edu/undergraduate/degree-requirements/index.html",
             "https://senate.ucsd.edu/Operating-Procedures/Senate-Manual/Regulations/600"
           ]
+        },
+        {
+          "issue": "68 PHIL/ECON contextual course records lacked actual current-description dispositions.",
+          "correction": "Integrated65 source-reviewed metadata rows; retained66thcurrentblock as a held identity/title conflict and two exact missing headings as unknown. No role changes.",
+          "status": "bounded_content_review_integrated",
+          "evidence_urls": [
+            "https://catalog.ucsd.edu/courses/PHIL.html",
+            "https://catalog.ucsd.edu/courses/ECON.html"
+          ]
         }
       ],
       "blockers": [
@@ -7091,9 +7116,13 @@
         {
           "url": "https://warren.ucsd.edu/academics/general-education/index.html",
           "issue": "Some legacy linked discipline hosts stopped at cross-origin robots redirects; no bypass. AP/IB and Chinese-course unit/source conflicts remain as individually recorded in adapter notes."
+        },
+        {
+          "url": "https://catalog.ucsd.edu/courses/ECON.html",
+          "issue": "ECON185 current Detecting Discrimination in Data and OR prerequisite conflict with June2026 DEI-listed Educational Equity title and AND prerequisite; current-content transfer to represented identity withheld. ECON163 andPHIL28GS lack exact current headings; no replacement inference."
         }
       ],
-      "correction_status": "In progress:82remaining CSEcourse descriptions and6unmatched exact identifiers incorporated from coordinator-reviewed source manifest; original8core and2calculus reviews retained. Requirement roles8fixed/119options/2241context unchanged. Substantial accessible other-subject content and policy applicability work remains alongside genuine source conflicts.",
+      "correction_status": "In progress:82remaining CSEcourse descriptions and6unmatched exact identifiers incorporated from coordinator-reviewed source manifest; original8core and2calculus reviews retained. Requirement roles8fixed/119options/2241context unchanged. Substantial accessible other-subject content and policy applicability work remains alongside genuine source conflicts. Independent PHIL/ECON65 current observations and3 held/missing dispositions integrated; existing manual8fixed/119options/2241context sets remain unchanged. Broader accessible description/policy queues remain in progress.",
       "second_pass_status": "pending",
       "accessible_work_remaining": "The accessible review continues across non-CSErepresented chapters (including MATH, COGS, POLI, ETHN, VIS, SOCIandothers). Six CSEexact identifiers8B/154/157/176B/186/5Aremain unmatched in the current chapter and need bounded historical/version follow-up; explicit154renumbering does not supply an absent historical description. The eight existingcoreCSEfull description blocks have now been reread; truncated prerequisite suffixes repaired, including major priority/space permission andcredit exclusions. Reciprocal crosslisting and specificcollege/cohort applicability remain independently unverified; no blanketidentityorpermissioninference."
     },

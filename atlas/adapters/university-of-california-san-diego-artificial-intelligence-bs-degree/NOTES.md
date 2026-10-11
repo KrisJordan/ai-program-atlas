@@ -180,3 +180,25 @@ Role counts remain8fixed/119options/2241contextual. Source-reviewed new content
 changes subject composition only; CSE5/5RAI/CS/DSexclusions do not disappear because
 of a collegeGEreference. Other subjects and college/cohort applicability remain
 accessible work; whole-degree status staysin_progress.
+
+
+### UCSD PHIL/ECON contribution integration (2026-10-11)
+
+The independent contributor read all66 available exact course blocks among68
+represented PHIL/ECON records. Primary integration applies65 guarded observations
+and manual subject dispositions; two absent exact codes and one substantive
+identity conflict remain unclassified. This is a bounded contribution, not an
+independent whole-degree audit. Existing8fixed/119option/2241contextual role sets
+are unchanged. The65 contextual subjects add57human-context,7domain applications
+and1mathematics disposition. Additional eligibility notes are preserved by code
+in program notes, including the source’s PHIL110 sequence typo and PHIL185 repeat
+wording; no prerequisite becomes a required degree course.
+
+Primary reinspection of the saved June2026 DEI PDF text and rendered table confirms
+that ECON185 actually bears the Educational Equity title and ECON120B AND MATH181B
+there. The current Economics chapter instead names Detecting Discrimination in
+Data and uses OR. This is not silently repaired as a parser-neighbor error; the
+current candidate remains in the contribution manifest pending identity/source
+clarification. ECON163 and PHIL28GS have no exact current headings, with no
+substitution or discontinuation inferred. Other accessible UCSD subjects remain
+active; SOCI87 is delegated separately for actual source-content review.
