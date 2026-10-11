@@ -152,3 +152,20 @@ No189C/Ddescription or explicit renumbering was observed. Combined with the curr
 degree's two opaque references, this is a precise unresolved identity/source issue,
 not permission to substituteA/Bor claim C/Dneverexisted. Current descriptions now
 cover84of86represented codes, with their historical/generic limitations retained.
+
+### All fixed courses: current-version field review (2026-10-11)
+
+Six remaining required CS pages and five required mathematics pages were read in
+full in the current catalog. All20fixedcourse identities now have current2026–27
+course-record evidence. Current188requires130A,165Aand165B, with138recommended;
+the prior undated department no-prerequisite observation is retained only as an
+older source observation. Current130ArepeatsPSTAT120A/ECE139in both Recommended
+Preparation and Prerequisites; preserve its required clause, concurrent allowance
+and the duplicate label rather than silently treating it as optional.
+
+Math3A/3Bordinary four-unit values coexist with two-unit reductions for prior34A/B,
+AP/othercourse credit exclusions and explicit low-grade repeat routes. These do
+not change the ordinary unit amount. Current4Aallows2B/3B/3BIand4B/6Aallow4AIwhere
+stated. All course-field guards cover these details; no parent-degree requirement
+is added from a prerequisite. Remaining current-option versions and GE/policy
+branches still prevent a complete whole-degree audit.

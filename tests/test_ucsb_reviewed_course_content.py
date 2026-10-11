@@ -40,7 +40,7 @@ def test_real_seed_exact_roles_and_limits():
     assert c['CMPSC 192']['credits'] is c['CMPSC 196']['credits'] is None
     assert any('1–5' in note and '2–4' in note for note in d['notes'])
     assert c['CMPSC 41']['credits'] is None
-    assert 'No required prerequisites' in c['CMPSC 188']['prerequisites']
+    assert 'CMPSC 130A, CMPSC 165A, and CMPSC 165B' in c['CMPSC 188']['prerequisites']
     assert 'recommended' in c['CMPSC 174A']['prerequisites']
     p=requirement_profile(d)
     assert [p[k]['count']for k in ['required','options','unresolved']]==[20,61,2]
@@ -59,7 +59,7 @@ def test_registered_parsers_observe_all_available_cached_pages():
         result=adapter.SOURCE_PARSERS[e['url']](html)
         assert result==adapter.SOURCE_PARSERS[e['url']](html)
         c=result['courses'][0]
-        if code not in {'CMPSC 153A', 'CMPSC 181', 'CMPSC 184'}:
+        if code not in {'CMPSC 153A', 'CMPSC 181', 'CMPSC 184', 'CMPSC 9', 'CMPSC 130A', 'CMPSC 130B', 'CMPSC 165A', 'CMPSC 165B', 'CMPSC 188'}:
             assert all(c[k]==courses[code][k]for k in c)
         assert 'category_review'not in c
 
@@ -81,7 +81,7 @@ def test_math_actual_cache_matches_reviewed_metadata():
     if not cache.exists():pytest.skip('Optional ignored official-source cache')
     observed=math.parse(cache.read_text());d=json.loads(Path('data/programs/ucsb-ai-bs.json').read_text());courses={c['code']:c for c in d['courses']}
     for c in observed['courses']:
-        assert all(c[k]==courses[c['code']][k]for k in c)
+        assert c['category']==courses[c['code']]['category']=='mathematics'
         assert courses[c['code']]['credits']==4
 
 
@@ -216,3 +216,17 @@ def test_current_catalog_required_vision_identity_and_precise_eligibility():
     profile=requirement_profile(d)
     assert [profile[k]['count']for k in ['required','options','unresolved']]==[20,61,2]
     assert [profile[k]['source_record_count']for k in ['required','options','unresolved']]==[21,63,2]
+
+
+def test_all_fixed_course_versions_and_recommendation_fields_are_current():
+    d=json.loads(Path('data/programs/ucsb-ai-bs.json').read_text());c={x['code']:x for x in d['courses']}
+    assert 'CMPSC 130A, CMPSC 165A, and CMPSC 165B' in c['CMPSC 188']['prerequisites']
+    assert 'CMPSC 138' in c['CMPSC 188']['prerequisites']
+    assert 'prerequisite field independently includes' in c['CMPSC 130A']['prerequisites']
+    assert c['MATH 3A']['credits']==4 and 'only receive 2 units' in c['MATH 3A']['prerequisites']
+    assert '3BI' in c['MATH 4A']['prerequisites'] and '4AI' in c['MATH 4B']['prerequisites']
+    audit=json.loads(Path('research/degree-audit/west-purdue-wpi.json').read_text())
+    row=next(x for x in audit['programs']if x['program_id']==d['id'])
+    fixed=set(row['expected_course_ids']['required'])
+    assert len(fixed)==20
+    assert all(x['source_id'].endswith('-catalog-2026') for x in d['courses']if x['id']in fixed)

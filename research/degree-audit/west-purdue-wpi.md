@@ -209,3 +209,11 @@ composition now reflects82actual descriptions; six exact missing codes remain
 unknown. No crosslist identities or contextualcollegeeligibility were inferred.
 The code-set partition is unchanged and the composedsource retains existingtags.
 Non-CSEchapters and policy applicability remain active accessiblework.
+
+UCSB fixed-course version follow-up:11full current records (sixCS/fivemath) close
+current-source review for all20fixedidentities. No role or category counts change.
+CMPSC188has explicit current prerequisites unlike the oldundateddepartmentpage.
+CMPSC130Aprobabilityis listed in both preparation and prerequisitefields, retained
+literally. Calculus conditionalcredit/AP/repeatrules and alternate mathpreparation
+remain distinct from ordinaryfour-unit values and from degreecourseobligations.
+Currentoptionalversions, approvalmechanisms andGEpoolsremainactivework.

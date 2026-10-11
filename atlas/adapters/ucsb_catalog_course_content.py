@@ -22,7 +22,7 @@ def parse(html, *, code):
     if heading is None or text(heading) != entry['heading']:
         raise ValueError('UCSB rendered course identity unavailable or changed')
     body = text(main)
-    if 'Full Course Title ' not in body or ' Programs ' not in body:
+    if 'Full Course Title ' not in body:
         raise ValueError('UCSB rendered course fields unavailable')
     fields = body.split('Full Course Title ', 1)[1].split(' Programs ', 1)[0]
     if hashlib.sha256(fields.encode()).hexdigest() != entry['fields_digest']:
