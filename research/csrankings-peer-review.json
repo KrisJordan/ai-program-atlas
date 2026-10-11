@@ -1,0 +1,615 @@
+{
+  "reviewer": "additional_cmu",
+  "reviewed_at": "2026-10-11",
+  "status": "accepted_bounded_review",
+  "upstream_commit": "5e8a27d68310c728a182b8bb3b6437c39bce0cad",
+  "computed_artifact_sha256": "1ba21b85133ee253de3c310fb2de4148e8bd368250afd9b9520e84952540ca53",
+  "crosswalk_sha256": "ddb2cd41b27b84a74ce13a5608e9ace234bded0e687d141cdb5f712c7e2cfab0",
+  "independent_upstream_result_sha256": "8bd8fbf9eb4fa864ae33e94d9a6b79b5e5668c37ea91a4026bbbe40849533148",
+  "method": "Execute original pinned JavaScript in Node VM; bypass only auto-start constructor, initialize original areaMap as constructor does, provide rendering chart selector stub. Original incremental aggregation, scoring and HTML rendering functions execute unchanged. Parse actual HTML rank/score cells. CSV decoder independent from importer.",
+  "sources": [
+    {
+      "filename": "csrankings.js",
+      "url": "https://raw.githubusercontent.com/emeryberger/CSrankings/5e8a27d68310c728a182b8bb3b6437c39bce0cad/csrankings.js",
+      "sha256": "444e6523c60b95415916532cc8bf5db179c33b5cd9f4a2e0abf01b549b717f54",
+      "bytes": 193198
+    },
+    {
+      "filename": "index.html",
+      "url": "https://raw.githubusercontent.com/emeryberger/CSrankings/5e8a27d68310c728a182b8bb3b6437c39bce0cad/index.html",
+      "sha256": "7481e91e881f3610d288968aefeb8c7bb539f8b4061d1e14872c2554cc6d4048",
+      "bytes": 62757
+    },
+    {
+      "filename": "faq.html",
+      "url": "https://raw.githubusercontent.com/emeryberger/CSrankings/5e8a27d68310c728a182b8bb3b6437c39bce0cad/faq.html",
+      "sha256": "5afd82bebfe6f71924ac0a6695e322035db48b456af1088af3130c9d0aa6d751",
+      "bytes": 15334
+    },
+    {
+      "filename": "COPYING",
+      "url": "https://raw.githubusercontent.com/emeryberger/CSrankings/5e8a27d68310c728a182b8bb3b6437c39bce0cad/COPYING",
+      "sha256": "a8abb07d9604a60e6633f48400875ad1288a60cc99ee340d47f4cfa1498f404e",
+      "bytes": 19121
+    },
+    {
+      "filename": "README.md",
+      "url": "https://raw.githubusercontent.com/emeryberger/CSrankings/5e8a27d68310c728a182b8bb3b6437c39bce0cad/README.md",
+      "sha256": "932c42eccf87b1134c16b782f5c9fd1461aca9e0fe73725822085d0207b79206",
+      "bytes": 5735
+    },
+    {
+      "filename": "generated-author-info.csv",
+      "url": "https://raw.githubusercontent.com/emeryberger/CSrankings/5e8a27d68310c728a182b8bb3b6437c39bce0cad/generated-author-info.csv",
+      "sha256": "c177ca0c2e3149a0129b1231b719c85fa3427c9d34e643cafd983e0a30debbce",
+      "bytes": 17788453
+    },
+    {
+      "filename": "csrankings.csv",
+      "url": "https://raw.githubusercontent.com/emeryberger/CSrankings/5e8a27d68310c728a182b8bb3b6437c39bce0cad/csrankings.csv",
+      "sha256": "4c3a13771132d9550fae875782445b322996efff7e47fc42e1aeaa4d5844b7a3",
+      "bytes": 4013553
+    },
+    {
+      "filename": "institutions.csv",
+      "url": "https://raw.githubusercontent.com/emeryberger/CSrankings/5e8a27d68310c728a182b8bb3b6437c39bce0cad/institutions.csv",
+      "sha256": "254ead69bb539611cdf05033d5c95064db23acabddeca762b581f8ca5a867a70",
+      "bytes": 50421
+    },
+    {
+      "filename": "countries.csv",
+      "url": "https://raw.githubusercontent.com/emeryberger/CSrankings/5e8a27d68310c728a182b8bb3b6437c39bce0cad/countries.csv",
+      "sha256": "acce45adae86cab202420db3390bd05cfcb5396291b564ad45312a14d4891450",
+      "bytes": 19677
+    }
+  ],
+  "configuration": {
+    "years": [
+      2016,
+      2025
+    ],
+    "geography": "us",
+    "fields": [
+      "ai",
+      "vision",
+      "mlmining",
+      "nlp",
+      "inforet"
+    ],
+    "venues": {
+      "ai": [
+        "aaai",
+        "ijcai"
+      ],
+      "vision": [
+        "cvpr",
+        "eccv",
+        "iccv"
+      ],
+      "mlmining": [
+        "icml",
+        "iclr",
+        "nips"
+      ],
+      "nlp": [
+        "acl",
+        "emnlp",
+        "naacl"
+      ],
+      "inforet": [
+        "sigir",
+        "www"
+      ]
+    },
+    "kdd": false,
+    "robotics_in_aggregate": false,
+    "ranking": "Math.round(10*score)/10 before descending sorting; alphabetical order within ties; default competition ranks",
+    "individual_score": "adjusted_count + 1",
+    "aggregate_score": "product(field_adjusted_count + 1) ** (1/5); no subtract-one; no faculty normalization"
+  },
+  "comparison": {
+    "observed_rows_compared": 961,
+    "exact_display_score_and_rank_mismatches": 0,
+    "field_count_and_raw_score_tolerance": 1e-12,
+    "floating_order_differences": 350,
+    "listed_us": 201,
+    "observed_population": {
+      "ai": 171,
+      "vision": 157,
+      "mlmining": 165,
+      "nlp": 151,
+      "inforet": 136,
+      "ai_aggregate": 181
+    },
+    "null_no_output_rows": 245
+  },
+  "representative_actual_upstream_results": {
+    "ai": [
+      {
+        "institution": "Carnegie Mellon University",
+        "rank": 1,
+        "score": 77.5,
+        "raw_score": 77.47336100000001,
+        "field_adjusted_counts": {
+          "ai": 76.47336100000001
+        }
+      },
+      {
+        "institution": "Massachusetts Inst. of Technology",
+        "rank": 7,
+        "score": 32.2,
+        "raw_score": 32.158767,
+        "field_adjusted_counts": {
+          "ai": 31.158766999999994
+        }
+      },
+      {
+        "institution": "Washington University in St. Louis",
+        "rank": 15,
+        "score": 28,
+        "raw_score": 28.02312,
+        "field_adjusted_counts": {
+          "ai": 27.02312
+        }
+      },
+      {
+        "institution": "Northwestern University",
+        "rank": 20,
+        "score": 26.2,
+        "raw_score": 26.234023,
+        "field_adjusted_counts": {
+          "ai": 25.234023
+        }
+      },
+      {
+        "institution": "Auburn University",
+        "rank": 108,
+        "score": 4.4,
+        "raw_score": 4.442109,
+        "field_adjusted_counts": {
+          "ai": 3.442109
+        }
+      }
+    ],
+    "vision": [
+      {
+        "institution": "Carnegie Mellon University",
+        "rank": 1,
+        "score": 101.7,
+        "raw_score": 101.72713000000003,
+        "field_adjusted_counts": {
+          "vision": 100.72713000000003
+        }
+      },
+      {
+        "institution": "Massachusetts Inst. of Technology",
+        "rank": 7,
+        "score": 73.9,
+        "raw_score": 73.90414899999998,
+        "field_adjusted_counts": {
+          "vision": 72.90414899999998
+        }
+      },
+      {
+        "institution": "Northwestern University",
+        "rank": 50,
+        "score": 12,
+        "raw_score": 11.989528,
+        "field_adjusted_counts": {
+          "vision": 10.989528
+        }
+      },
+      {
+        "institution": "Washington University in St. Louis",
+        "rank": 67,
+        "score": 6.8,
+        "raw_score": 6.7857199999999995,
+        "field_adjusted_counts": {
+          "vision": 5.7857199999999995
+        }
+      },
+      {
+        "institution": "Auburn University",
+        "rank": 71,
+        "score": 6.4,
+        "raw_score": 6.39821,
+        "field_adjusted_counts": {
+          "vision": 5.39821
+        }
+      }
+    ],
+    "mlmining": [
+      {
+        "institution": "Carnegie Mellon University",
+        "rank": 1,
+        "score": 320.7,
+        "raw_score": 320.65208700000005,
+        "field_adjusted_counts": {
+          "mlmining": 319.65208700000005
+        }
+      },
+      {
+        "institution": "Massachusetts Inst. of Technology",
+        "rank": 2,
+        "score": 274.8,
+        "raw_score": 274.77776600000016,
+        "field_adjusted_counts": {
+          "mlmining": 273.77776600000016
+        }
+      },
+      {
+        "institution": "Northwestern University",
+        "rank": 32,
+        "score": 60.7,
+        "raw_score": 60.65359599999999,
+        "field_adjusted_counts": {
+          "mlmining": 59.65359599999999
+        }
+      },
+      {
+        "institution": "Washington University in St. Louis",
+        "rank": 42,
+        "score": 37.8,
+        "raw_score": 37.75448999999999,
+        "field_adjusted_counts": {
+          "mlmining": 36.75448999999999
+        }
+      },
+      {
+        "institution": "Auburn University",
+        "rank": 90,
+        "score": 6.9,
+        "raw_score": 6.89803,
+        "field_adjusted_counts": {
+          "mlmining": 5.89803
+        }
+      }
+    ],
+    "nlp": [
+      {
+        "institution": "Carnegie Mellon University",
+        "rank": 1,
+        "score": 113.5,
+        "raw_score": 113.47390400000003,
+        "field_adjusted_counts": {
+          "nlp": 112.47390400000003
+        }
+      },
+      {
+        "institution": "Massachusetts Inst. of Technology",
+        "rank": 18,
+        "score": 34.9,
+        "raw_score": 34.895683,
+        "field_adjusted_counts": {
+          "nlp": 33.895683
+        }
+      },
+      {
+        "institution": "Northwestern University",
+        "rank": 64,
+        "score": 7.3,
+        "raw_score": 7.271933000000001,
+        "field_adjusted_counts": {
+          "nlp": 6.271933000000001
+        }
+      },
+      {
+        "institution": "Washington University in St. Louis",
+        "rank": 88,
+        "score": 3.1,
+        "raw_score": 3.08413,
+        "field_adjusted_counts": {
+          "nlp": 2.08413
+        }
+      },
+      {
+        "institution": "Auburn University",
+        "rank": 99,
+        "score": 2.5,
+        "raw_score": 2.51508,
+        "field_adjusted_counts": {
+          "nlp": 1.5150800000000002
+        }
+      }
+    ],
+    "inforet": [
+      {
+        "institution": "Carnegie Mellon University",
+        "rank": 3,
+        "score": 19,
+        "raw_score": 18.984946,
+        "field_adjusted_counts": {
+          "inforet": 17.984946
+        }
+      },
+      {
+        "institution": "Northwestern University",
+        "rank": 41,
+        "score": 3.8,
+        "raw_score": 3.84286,
+        "field_adjusted_counts": {
+          "inforet": 2.84286
+        }
+      },
+      {
+        "institution": "Massachusetts Inst. of Technology",
+        "rank": 53,
+        "score": 3.1,
+        "raw_score": 3.10952,
+        "field_adjusted_counts": {
+          "inforet": 2.10952
+        }
+      },
+      {
+        "institution": "Washington University in St. Louis",
+        "rank": 60,
+        "score": 2.9,
+        "raw_score": 2.8761900000000002,
+        "field_adjusted_counts": {
+          "inforet": 1.8761900000000002
+        }
+      },
+      {
+        "institution": "Auburn University",
+        "rank": 132,
+        "score": 1.1,
+        "raw_score": 1.14286,
+        "field_adjusted_counts": {
+          "inforet": 0.14286
+        }
+      }
+    ],
+    "ai_aggregate": [
+      {
+        "institution": "Carnegie Mellon University",
+        "rank": 1,
+        "score": 88.5,
+        "raw_score": 88.54942075926527,
+        "field_adjusted_counts": {
+          "ai": 76.47336100000001,
+          "vision": 100.72713000000003,
+          "mlmining": 319.65208700000005,
+          "nlp": 112.47390400000003,
+          "inforet": 17.984946
+        }
+      },
+      {
+        "institution": "Massachusetts Inst. of Technology",
+        "rank": 8,
+        "score": 37.2,
+        "raw_score": 37.16062169317871,
+        "field_adjusted_counts": {
+          "ai": 31.158766999999994,
+          "vision": 72.90414899999998,
+          "mlmining": 273.77776600000016,
+          "nlp": 33.895683,
+          "inforet": 2.10952
+        }
+      },
+      {
+        "institution": "Northwestern University",
+        "rank": 38,
+        "score": 14,
+        "raw_score": 13.975443327969062,
+        "field_adjusted_counts": {
+          "ai": 25.234023,
+          "vision": 10.989528,
+          "mlmining": 59.65359599999999,
+          "nlp": 6.271933000000001,
+          "inforet": 2.84286
+        }
+      },
+      {
+        "institution": "Washington University in St. Louis",
+        "rank": 59,
+        "score": 9.1,
+        "raw_score": 9.137055345331785,
+        "field_adjusted_counts": {
+          "ai": 27.02312,
+          "vision": 5.7857199999999995,
+          "mlmining": 36.75448999999999,
+          "nlp": 2.08413,
+          "inforet": 1.8761900000000002
+        }
+      },
+      {
+        "institution": "Auburn University",
+        "rank": 96,
+        "score": 3.5,
+        "raw_score": 3.549633572562748,
+        "field_adjusted_counts": {
+          "ai": 3.442109,
+          "vision": 5.39821,
+          "mlmining": 5.89803,
+          "nlp": 1.5150800000000002,
+          "inforet": 0.14286
+        }
+      }
+    ]
+  },
+  "tie_witnesses": {
+    "ai": [
+      {
+        "institution": "Arizona State University",
+        "rank": 4,
+        "score": 43.5,
+        "raw_score": 43.49759999999999,
+        "field_adjusted_counts": {
+          "ai": 42.49759999999999
+        }
+      },
+      {
+        "institution": "Univ. of Maryland - College Park",
+        "rank": 4,
+        "score": 43.5,
+        "raw_score": 43.548609,
+        "field_adjusted_counts": {
+          "ai": 42.548609
+        }
+      }
+    ],
+    "vision": [
+      {
+        "institution": "Oregon State University",
+        "rank": 30,
+        "score": 23.2,
+        "raw_score": 23.2146,
+        "field_adjusted_counts": {
+          "vision": 22.2146
+        }
+      },
+      {
+        "institution": "Univ. of California - Los Angeles",
+        "rank": 30,
+        "score": 23.2,
+        "raw_score": 23.16991699999999,
+        "field_adjusted_counts": {
+          "vision": 22.16991699999999
+        }
+      }
+    ],
+    "mlmining": [
+      {
+        "institution": "Univ. of California - Davis",
+        "rank": 47,
+        "score": 31.9,
+        "raw_score": 31.877527,
+        "field_adjusted_counts": {
+          "mlmining": 30.877527
+        }
+      },
+      {
+        "institution": "University at Buffalo",
+        "rank": 47,
+        "score": 31.9,
+        "raw_score": 31.892820000000004,
+        "field_adjusted_counts": {
+          "mlmining": 30.892820000000004
+        }
+      }
+    ],
+    "nlp": [
+      {
+        "institution": "Arizona State University",
+        "rank": 30,
+        "score": 20,
+        "raw_score": 19.989263,
+        "field_adjusted_counts": {
+          "nlp": 18.989263
+        }
+      },
+      {
+        "institution": "University of Texas at Austin",
+        "rank": 30,
+        "score": 20,
+        "raw_score": 20.043546,
+        "field_adjusted_counts": {
+          "nlp": 19.043546
+        }
+      }
+    ],
+    "inforet": [
+      {
+        "institution": "Univ. of California - Los Angeles",
+        "rank": 13,
+        "score": 8,
+        "raw_score": 8.016593,
+        "field_adjusted_counts": {
+          "inforet": 7.016593
+        }
+      },
+      {
+        "institution": "University of Southern California",
+        "rank": 13,
+        "score": 8,
+        "raw_score": 7.979769999999999,
+        "field_adjusted_counts": {
+          "inforet": 6.979769999999999
+        }
+      }
+    ],
+    "ai_aggregate": [
+      {
+        "institution": "Pennsylvania State University",
+        "rank": 25,
+        "score": 20.8,
+        "raw_score": 20.754075746834804,
+        "field_adjusted_counts": {
+          "ai": 28.212376999999993,
+          "vision": 10.133108000000002,
+          "mlmining": 35.957283999999994,
+          "nlp": 23.951320000000003,
+          "inforet": 11.839263
+        }
+      },
+      {
+        "institution": "Purdue University",
+        "rank": 25,
+        "score": 20.8,
+        "raw_score": 20.795837178673413,
+        "field_adjusted_counts": {
+          "ai": 20.332529,
+          "vision": 17.33325,
+          "mlmining": 78.59527899999998,
+          "nlp": 14.87301,
+          "inforet": 6.871429999999999
+        }
+      }
+    ]
+  },
+  "crosswalk_review": {
+    "rows": 194,
+    "status_counts": {
+      "matched": 91,
+      "not_listed": 103
+    },
+    "review": "Independently inspected all 91 mapped name pairs (62 exact,29 explicit abbreviations/campus/renaming), country=us and exact linked registry homepages. Inspected all103 unlisted names against complete registry and close-name candidates to detect overlooked aliases; no unsafe matching. Rutgers Newark/Camden kept separate from New Brunswick; DePauw not DePaul; academies and liberal arts colleges not assigned invented eligibility.",
+    "campus_body_evidence": [
+      {
+        "url": "https://www.cs.rutgers.edu/",
+        "locator": "Footer New Brunswick SAS logo/link and Piscataway address"
+      },
+      {
+        "url": "https://cs.unc.edu/",
+        "locator": "UNC Chapel Hill header and contact address"
+      },
+      {
+        "url": "https://cs.indiana.edu/",
+        "locator": "Redirected original linked department to Luddy IU Bloomington; header and Bloomington address"
+      },
+      {
+        "url": "https://cse.umn.edu/cs",
+        "locator": "Twin Cities logo link and Minneapolis contact address"
+      },
+      {
+        "url": "https://cse-report.engin.umich.edu/",
+        "locator": "Official indexed report title CSE, address2260HaywardStreet AnnArbor; actualbody403, no retry",
+        "capture_method": "Indexed official-source snippet; not fullbody",
+        "capture_sha256": "d46b146443cd869f55047558fe4a71563a0160e2f08d53055407d6ae941eb45b"
+      }
+    ]
+  },
+  "permission_review": "October11 project-owner statement authorizes this educational project only. No licensor letter or broader redistribution entitlement inferred. Official CC BY-NC-ND4.0 and DBLP attribution links retained. Raw upstream implementation/data remain ignored private cache.",
+  "missingness_review": "Observed, listed-no-selected-output, not-listed, outside-eligible, unresolved-match and missing-source are distinct. Current crosswalk uses only matched/not_listed; not_listed does not assert no CS PhD. All nonobservations stay null; component zero smoothing only within observed aggregate. This publication indicator does not assess undergraduate teaching or curriculum quality.",
+  "limitations": [
+    "Live interactive browser UI was not exercised; actual pinned upstream computation and HTML renderer were executed instead.",
+    "Michigan department and separate CSE report body returned403 and were not retried. Bounded institutional identity uses exact pinned registry department plus official indexed report AnnArboraddress; no fresh fullbody or curriculum claim.",
+    "Current affiliations, source rounded fractional credit, selected publication venues and upstream faculty coverage constrain interpretation."
+  ],
+  "unresolved_factual_blocks": [],
+  "source_locators": {
+    "csrankings.js": "parentMap lines29\u201346; nextTier122; aiAreas254; countryinfoFile265; inRegion536\u2013578; cache588\u2013677; aggregation680\u2013737; computeStats793\u2013815; rounding/rank1038\u20131114; areaMap initialization4030\u20134045; defaultuseDense3965",
+    "faq.html": "Authorship fractional credit351\u2013366; aggregate191\u2013215; fulltime eligibility447\u2013458; license125\u2013135",
+    "institutions.csv": "Complete registry rows filtered countryabbrv=us; named institution exact row and homepage",
+    "generated-author-info.csv": "name,dept,area,count,adjustedcount,year; 2016<=year<=2025 inclusive; selected rawvenue rows",
+    "README.md": "Acknowledgments, DBLP attribution and License sections",
+    "COPYING": "Unmodified official CC BY-NC-ND4.0 notice",
+    "index.html": "AI conference checkbox IDs and nexttier markers; DBLP snapshot datefooter",
+    "commit.json": "Official GitHub currentgh-pages commit sha and committerdate"
+  },
+  "validation": {
+    "focused_tests": "tests/test_csrankings_peer_review.py: original-source replay and exactfinalartifactpin",
+    "full_suite": "Coordinator-owned; not run by reviewer",
+    "isolated_database": "Reviewer has no database edits; importer/site integration validated by coordinator"
+  }
+}
