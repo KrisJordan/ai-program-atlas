@@ -154,3 +154,21 @@ def test_economics_limited_title_review_preserves_printed_prerequisites_and_rule
     actual=adapter.SOURCE_PARSERS[url](path.read_text())
     assert actual['requirements']==fields.parse_economics(path.read_text())['requirements']
     assert actual['observed_hass_description_digests']
+
+
+def test_same_french_url_observes_both_titles_and_term_specific_prose():
+    path=Path('/tmp/atlas-mit-hass-rest-french.html')
+    if not path.exists():pytest.skip('Optional public source capture absent')
+    url=m.SPECS['mit-ai-hass-review-french-spotlights']['url']
+    rows=m.parse(path.read_text(),url)['courses']
+    prose=[c for c in rows if c['source_id']=='mit-ai-hass-review-french-spotlights']
+    assert {c['code']for c in prose}=={'21G.312','21G.346'}
+    assert all(c['name'] is None and c['description'] for c in prose)
+    assert all(any('Spring 2027' in n for n in c['notes'])for c in prose)
+    assert any(c['source_id']!='mit-ai-hass-review-french-spotlights'for c in rows)
+    p=json.loads(Path('data/programs/mit-ai-decision-making-bs.json').read_text())
+    unknown=[c for c in p['courses']if c['id']in {'mit-ai-hass-language-placement-21g-342','mit-ai-hass-language-placement-21g-347','mit-ai-hass-music-21m-223j'}]
+    assert len(unknown)==3
+    assert all(c['category_review']['status']=='unclassified'and c['category']=='other'for c in unknown)
+    assert all(c['name'] is None and c['description'] is None and c['credits'] is None for c in unknown)
+    assert all(any('code-only observation' in n for n in c['notes'])for c in unknown)

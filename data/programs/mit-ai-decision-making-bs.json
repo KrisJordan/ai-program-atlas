@@ -1505,6 +1505,36 @@
       "catalog_year": null,
       "locator": "Clinic course11.074/11.274 participation and instructional structure",
       "confidence": "high"
+    },
+    {
+      "id": "mit-ai-hass-review-code-only-music",
+      "url": "https://music.mit.edu/program/degree-requirements/",
+      "title": "MIT music exact code-only observation",
+      "fetched_at": null,
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Actual course-title list and explicit annotations; no description inference",
+      "confidence": "high"
+    },
+    {
+      "id": "mit-ai-hass-review-french-spotlights",
+      "url": "https://languages.mit.edu/areas-of-study/french-studies/",
+      "title": "MIT French Spring2027 public course spotlights",
+      "fetched_at": "2026-10-11T01:06:05+00:00",
+      "source_date": null,
+      "catalog_year": "Spring 2027",
+      "locator": "Actual course-title list and explicit annotations; no description inference",
+      "confidence": "high"
+    },
+    {
+      "id": "mit-ai-hass-review-code-only-language_placement",
+      "url": "https://languages.mit.edu/language-placement-proficiency/",
+      "title": "MIT language_placement exact code-only observation",
+      "fetched_at": null,
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Actual course-title list and explicit annotations; no description inference",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -30260,15 +30290,33 @@
       "id": "mit-ai-hass-language-placement-21g-312",
       "code": "21G.312",
       "name": null,
-      "description": null,
+      "description": "French close reading and communication compare literary, journalistic, philosophical and scientific perspectives on oceans and responsibilities to other species.",
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-language-placement",
       "url": "https://languages.mit.edu/language-placement-proficiency/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://languages.mit.edu/areas-of-study/french-studies/",
+      "syllabus": null,
+      "notes": [
+        "Taught in French.",
+        "Published enrollment cap18; preregistered students have preference, first-day attendance preserves preference, and ordered priority favors declared majors, minors and concentrators before class-year order.",
+        "Observed departmental source term/version: Spring 2027. The original list identity is retained.",
+        "The original placement source supplied only this course code. Supplemental exact-code observation supplies the publisher-labeled Spring2027 topic only; no claim all historical or later versions share this topic."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-language-placement",
+          "mit-ai-hass-review-french-spotlights"
+        ],
+        "locator": "Spring2027 prose spotlight / 21G.312",
+        "rationale": "Actual spotlight centers French close reading, literary/cultural interpretation and communication; its scientific topic or use of cinema does not establish laboratory science or computing-method instruction.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-language-placement-21g-342",
@@ -30278,25 +30326,60 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-language-placement",
       "url": "https://languages.mit.edu/language-placement-proficiency/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://languages.mit.edu/language-placement-proficiency/",
+      "syllabus": null,
+      "notes": [
+        "Official code-only observation; title, description and content classification remain unknown.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Original code-only record retained. No guessed title, alias identity, prerequisite, credit amount or source-access barrier."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-language-placement",
+          "mit-ai-hass-review-code-only-language_placement"
+        ],
+        "locator": "language_placement rule / literal 21G.342 reference",
+        "rationale": "The actual official rule supplies a code reference only. No subject title or description was established for this observation; department prefix and concentration use do not establish subject content.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-language-placement-21g-346",
       "code": "21G.346",
       "name": null,
-      "description": null,
+      "description": "French literary and film analysis compares texts and adaptations, developing advanced language through discussion, writing and close analysis.",
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-language-placement",
       "url": "https://languages.mit.edu/language-placement-proficiency/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://languages.mit.edu/areas-of-study/french-studies/",
+      "syllabus": null,
+      "notes": [
+        "Taught in French.",
+        "Published enrollment cap18; preregistered students have preference, first-day attendance preserves preference, and ordered priority favors declared majors, minors and concentrators before class-year order.",
+        "Observed departmental source term/version: Spring 2027. The original list identity is retained.",
+        "The original placement source supplied only this course code. Supplemental exact-code observation supplies the publisher-labeled Spring2027 topic only; no claim all historical or later versions share this topic."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-language-placement",
+          "mit-ai-hass-review-french-spotlights"
+        ],
+        "locator": "Spring2027 prose spotlight / 21G.346",
+        "rationale": "Actual spotlight centers French close reading, literary/cultural interpretation and communication; its scientific topic or use of cinema does not establish laboratory science or computing-method instruction.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-language-placement-21g-347",
@@ -30306,11 +30389,28 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-language-placement",
       "url": "https://languages.mit.edu/language-placement-proficiency/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://languages.mit.edu/language-placement-proficiency/",
+      "syllabus": null,
+      "notes": [
+        "Official code-only observation; title, description and content classification remain unknown.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Original code-only record retained. No guessed title, alias identity, prerequisite, credit amount or source-access barrier."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-language-placement",
+          "mit-ai-hass-review-code-only-language_placement"
+        ],
+        "locator": "language_placement rule / literal 21G.347 reference",
+        "rationale": "The actual official rule supplies a code reference only. No subject title or description was established for this observation; department prefix and concentration use do not establish subject content.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-architecture-act-page-4-301",
@@ -36736,11 +36836,28 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-music-current",
       "url": "https://music.mit.edu/program/degree-requirements/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://music.mit.edu/program/degree-requirements/",
+      "syllabus": null,
+      "notes": [
+        "Official code-only observation; title, description and content classification remain unknown.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Original code-only record retained. No guessed title, alias identity, prerequisite, credit amount or source-access barrier."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-music-current",
+          "mit-ai-hass-review-code-only-music"
+        ],
+        "locator": "music rule / literal 21M.223J reference",
+        "rationale": "The actual official rule supplies a code reference only. No subject title or description was established for this observation; department prefix and concentration use do not establish subject content.",
+        "candidate_categories": []
+      }
     }
   ],
   "requirements": [
@@ -51927,7 +52044,8 @@
     "2026-10-11 policy reconciliation: external HASS Distribution remains prohibited. Examiner recommendations and the final HASS-office signature are a review procedure, not evidence of a granted exception or a source contradiction. Individual approvals are not assumed.",
     "2026-10-11:266 additional Economics and SHASS field-list observations receive limited manual title dispositions. Printed Economics prerequisites and year-specific unavailability are retained; broad methods, music/performance and interdisciplinary titles remain unclassified. No description is inferred from pool membership.",
     "2026-10-11:142 additional Computing and Society, Ethics, Linguistics, Urban, Education and CMS source-title observations receive bounded manual dispositions. Three malformed printed Ethics labels stay held rather than silently repaired. These are not verified descriptions or newly required degree subjects.",
-    "2026-10-11:actual public Cybersecurity Clinic content supplies a mixed course classification, registeredMIT/Harvard/Wellesley participation and first-attempt exam condition for field assignment. The unexplained suggested-pool asterisk is an annotation gap, not evidence of an extra requirement."
+    "2026-10-11:actual public Cybersecurity Clinic content supplies a mixed course classification, registeredMIT/Harvard/Wellesley participation and first-attempt exam condition for field assignment. The unexplained suggested-pool asterisk is an annotation gap, not evidence of an extra requirement.",
+    "2026-10-11:final five previously undisposed HASS references now have explicit dispositions:two exact-code FrenchSpring2027 topic descriptions and three code-only unknowns. Generic placement names staynull; term-specific topic evidence does not imply all offerings share that content."
   ],
   "curriculum_audit": {
     "scope": "degree",

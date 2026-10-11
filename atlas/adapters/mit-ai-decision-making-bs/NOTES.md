@@ -321,3 +321,10 @@ The primary seed has1162 manual dispositions:818 HASS comprising142 description-
 Normal robots-aware reads of https://urbancyberdefense.mit.edu/ and the July13,2026 official MITNews course account verify participation for registered MIT/Harvard/Wellesley students and an in-course first-attempt exam condition before field assignment. Technical cybersecurity, organizational capacity, client collaboration and public-service assessment support a mixed judgment, not a purely technical or departmental-title category. Formal prerequisite subjects and units remain unknown. Registered source snapshots are guarded; changed content withdraws the interpretation.
 
 The11.074 asterisk in the suggested concentration pool remains unexplained but is not itself proof of an extra academic condition. It is now a metadata annotation question, not an inventory blocker. The three-HASS-subject advisor-approved plan remains controlling. Primary HASS dispositions now include143 description-supported occurrences and675 title-only; fixed3 is unchanged. Five actual curriculum questions remain, along with explicit metadata/identity boundaries.
+
+
+## Final initial HASS dispositions — 2026-10-11
+
+Contributionafe616e supplies two exact-code FrenchSpring2027 prose observations and three explicit code-only unknowns. Generic placement rows retain null titles while the supplemental topic/term and enrollment conditions are recorded; no all-offerings content claim follows. French342/347 andMusic223 remain unknown, not inferred from prefixes. One URL may expose both course-list titles and prose spotlights; both guarded observers now compose without erasing existing language rules.
+
+1167 primary course records now have manual dispositions. HASS823 comprises145 description-supported occurrences (including the independentclinicreview),675 title-only and three code-only; remaining22 have20 identity/version holds and two source-description conflicts. This exhausts the initial pending-disposition queue, not the actual-description backlog or full-degree policy/identity audit. Those remain in progress; fixed3 and partial status stay unchanged.
