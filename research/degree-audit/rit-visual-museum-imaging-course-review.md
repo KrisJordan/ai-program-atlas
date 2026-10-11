@@ -1,0 +1,29 @@
+# RIT museum, visual-culture and imaging course cards
+
+Reviewed 2026-10-11. All **38 assigned visible menu labels** were opened and their full actual public popup cards read. These represent **37 distinct popup course codes**, because MUSE-388 was read once through its plain Art History label and once through the Museum Studies combined label. This count is not a required-course count or an assertion of 38 distinct academic identities.
+
+The source pages all displayed **2026–2027** curricula: [Art History](https://www.rit.edu/study/art-history-immersion), [Museum Studies](https://www.rit.edu/study/museum-studies-immersion), [Visual Culture](https://www.rit.edu/study/visual-culture-immersion), [Film Studies](https://www.rit.edu/study/film-studies-immersion), [Journalism](https://www.rit.edu/study/journalism-immersion), [Science of Film, Photography, and Imaging](https://www.rit.edu/study/science-film-photography-and-imaging-immersion), and [Geographic Information Systems](https://www.rit.edu/study/geographic-information-systems-immersion). The manual manifest binds each observation to the precise page used and records both `source_label` and `popup_code`.
+
+The three combined labels were clicked literally. The actual associations are:
+
+| Visible menu label | Actual popup heading code |
+| --- | --- |
+| MUSE/HIST-221 | MUSE-221 |
+| MUSE/VISL-388 | MUSE-388 |
+| COMM/VISL-390 | COMM-390 |
+
+These observations do not certify HIST-221, merge MUSE-388 with VISL-388, merge COMM-390 with VISL-390, or split one menu row into two requirements. All separately displayed assigned cards were actually read. The observer emits only the actual heading code plus an explicit observed label association. Its guard requires the literal verified label in the same route table; it rejects a guessed alternative heading. No course-identity group is authored.
+
+The priority Art History cards MUSE-224, MUSE-388, VISL-384 and VISL-388 all support **human-context** classification through exhibition history, gender and art, or cultural interpretation of dying. MUSE-388 and VISL-388 have closely related prose but retain their separate source identities and differing offering text; similarity is not an alias rule.
+
+All credits come from actual cards. Among the 38 observations, 35 print three credits, IMGS-261 and IMGS-351 print **four credits**, and MUSE-249 prints **1–3 credits**, retained as a null scalar with the range. Semester-hour normalization cites separately reviewed [RIT D01.4](https://www.rit.edu/policies/d014); runtime observations leave units unknown when their card says only Credits. No nine-credit route total was used to infer an individual amount. The imaging route itself permits a 6–8-credit elective selection while displaying a nine-hour total; these are separately scoped published statements, not a reason to alter individual cards.
+
+Eight observations have explicit eligibility text: six requisite/restriction fields and two statements in descriptions. SOFA-103 expressly publishes a mathematics **co-requisite**. IMGS-221 restricts registration to IMGS-BS, DIGCIME-BS, IMGS-MN or SCIMGS-IM; appearing in an immersion menu does not prove an individual's registered status. IMGS-261/321/341/351 retain their exact mathematics, physics or SOFA-103 preparation. MUSE-225 and MUSE-360 explicitly state that they have no prerequisite and are open to all majors, within their descriptions. The observer extracts those current sentences only when actually present. The other 30 observations have source-unreported prerequisite fields, not a “none” assertion.
+
+Manual observation classifications are **27 human-context, six applications, one mathematics, three mixed and one unclassified**. Every record has an original summary and individualized rationale. IMGS-261 explicitly develops complex numbers, linear algebra and Fourier methods. The other imaging cards teach domain science, perception or optical design. VISL-295 and VISL-440 combine cultural interpretation with explicit creative production; MUSE-241's defined variable scope includes both interpretation and creative exhibition deliverables. MUSE-249 leaves its current topic and method unspecified and remains source-inspected but unclassified. MUSE-241/244 preserve the different-topic condition on repeated enrollment; MUSE-226 may be site-specific.
+
+A transient GIS curriculum load error initially prevented the IMGS-111 link from appearing. One ordinary reload restored the public table, after which the complete IMGS-111 card was read successfully. No continuing barrier remains, and no hidden endpoint or alternative access mechanism was used. The primary reviewer independently corroborated its three credits, laboratory/lecture contact hours, absent prerequisite field and applications content from his already-loaded page; the contribution uses this reviewer's own full read.
+
+Deliverables: `atlas/adapters/rit_visual_museum_imaging_course_reviews.py/.json`, `tests/test_rit_visual_museum_imaging_course_reviews.py`, and this note. The parser accepts rendered HTML and an exact registered `url`, guards route title/year/table membership and the observed source-label-to-heading map, and extracts current fields without emitting manual categories or a curriculum audit. The primary reviewer owns integration into seed, queue and ledger. No requirement graph or existing course identity was edited here.
+
+Validation: **11 focused tests passed**, covering changed actual fields, source-label associations, guessed headings, variable and zero credits, explicit body prerequisites versus missing fields, incorrect source/year/identity, duplicate cards, the exact observation counts and individual taxonomy distinctions. Synthetic fixtures verify parser behavior; no automated replay of all actual popup HTML is claimed. All 38 actual cards were read through ordinary public UI.
