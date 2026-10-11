@@ -70,7 +70,7 @@ def test_filters_empty_reset_detail_and_base_path(page, site):
     page.get_by_role("link", name="View program").first.click()
     expect(page).to_have_url(site + "programs/test-ai-0/")
     expect(page.locator("h1")).to_have_text("Artificial Intelligence 0")
-    expect(page.get_by_text("1 unique documented course records.", exact=False)).to_be_visible()
+    expect(page.locator(".profile-uncertainty")).to_contain_text("1 course records have unresolved requirement roles")
     page.reload()
     expect(page.locator("h1")).to_have_text("Artificial Intelligence 0")
     assert not errors
@@ -174,7 +174,7 @@ def test_cohort_context_theme_matrix_and_unknown_categories(page, site):
     expect(ai.locator('td').nth(0).locator('a')).to_have_attribute('href', 'https://example.edu/outcome')
     expect(ai.locator('td').nth(1)).to_have_text('Not recorded')
     expect(ai.locator('td').nth(2)).to_have_text('Not recorded')
-    category = page.locator('.compare-table tr').filter(has=page.get_by_role('rowheader', name='Course categories', exact=True))
+    category = page.locator('.compare-table tr').filter(has=page.get_by_role('rowheader', name='Curriculum profile', exact=True))
     expect(category.locator('td').nth(2)).to_have_text('Not yet extracted')
     page.reload()
     expect(page.locator('.theme-table tbody tr')).to_have_count(2)
@@ -404,3 +404,62 @@ def test_explicit_family_collapse_survives_reload_and_history(page, site, tmp_pa
     page.go_forward()
     expect(family).to_have_attribute('open', '')
     assert '/ai-program-atlas/?' in page.url
+
+
+@pytest.mark.parametrize('width', [1440, 390])
+def test_required_profile_default_options_history_and_mobile(page,site,tmp_path,site_data,width):
+    from playwright.sync_api import expect
+    from tests.test_curriculum_profile_ui import profile_fixture
+    profile_fixture(site_data)
+    build(site_data,tmp_path/'ai-program-atlas')
+    errors=[]
+    page.on('pageerror',lambda error:errors.append(str(error)))
+    page.set_viewport_size({'width':width,'height':950})
+    page.goto(site+'programs/test-ai-0/')
+    required=page.locator('.profile-panel[data-profile="required"]')
+    options=page.locator('.profile-panel[data-profile="options"]')
+    expect(required).to_be_visible()
+    expect(options).not_to_be_visible()
+    expect(required).to_contain_text('2 distinct fixed required course records')
+    expect(required).to_contain_text('Other / unclassified')
+    page.locator('label[for=profile-options]').click()
+    expect(options).to_be_visible()
+    expect(required).not_to_be_visible()
+    expect(options).to_contain_text('14 distinct elective option records')
+    page.locator('.profile-choices > summary').click()
+    expect(page.locator('.profile-choices')).to_contain_text('1 course')
+    expect(page.locator('.profile-choices')).to_contain_text('6 Quarter hours')
+    expect(page.locator('.profile-choices a').first).to_have_attribute('href','https://example.edu/outcome')
+    assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
+    page.goto(site+'?compare=test-ai-0,test-ai-1')
+    expect(page.locator('#compare-profile')).to_have_value('required')
+    cell=page.locator('.compare-profile-cell').first
+    expect(cell).to_contain_text('2 distinct fixed required course records')
+    page.locator('#compare-profile').select_option('options')
+    expect(page.locator('.compare-profile-cell').first).to_contain_text('14 distinct elective option records')
+    assert 'profile=options' in page.url and '/ai-program-atlas/?' in page.url
+    page.reload()
+    expect(page.locator('#compare-profile')).to_have_value('options')
+    page.go_back()
+    expect(page.locator('#compare-profile')).to_have_value('required')
+    expect(page.locator('.compare-profile-cell').first).to_contain_text('2 distinct fixed required course records')
+    page.go_forward()
+    expect(page.locator('#compare-profile')).to_have_value('options')
+    assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
+    assert not errors
+
+
+def test_required_profile_detail_without_javascript(browser,site,tmp_path,site_data):
+    from playwright.sync_api import expect
+    from tests.test_curriculum_profile_ui import profile_fixture
+    profile_fixture(site_data)
+    build(site_data,tmp_path/'ai-program-atlas')
+    context=browser.new_context(java_script_enabled=False,viewport={'width':390,'height':900})
+    page=context.new_page()
+    page.goto(site+'programs/test-ai-0/')
+    expect(page.locator('.profile-panel[data-profile="required"]')).to_be_visible()
+    expect(page.locator('.profile-panel[data-profile="options"]')).not_to_be_visible()
+    page.locator('label[for=profile-options]').click()
+    expect(page.locator('.profile-panel[data-profile="options"]')).to_be_visible()
+    expect(page.locator('.profile-panel[data-profile="options"]')).to_contain_text('14 distinct elective option records')
+    context.close()

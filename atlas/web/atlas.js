@@ -16,6 +16,8 @@
   const byId = new Map(programs.map(p => [p.id, p]));
   const cards = [...document.querySelectorAll('[data-program-id]')];
   let selected = [];
+  let profileMode = 'required';
+  const profileControl = document.getElementById('compare-profile');
   let timer;
   // Search text and course counts are projected once at build time.
   const searchIndex = new Map(programs.map(p => [p.id, p.search_text.toLocaleLowerCase()]));
@@ -40,6 +42,33 @@
     }).join('') + '</dl><small>Populated fields with recorded source URLs. Missing prerequisites do not mean none.</small>';
   };
 
+  const selectionLabel = choice => {
+    const parts = [];
+    if (choice.count != null) {
+      const noun = choice.kind === 'alternative' ? 'alternative' : choice.has_children ? 'selection' : 'course';
+      parts.push(`Choose ${choice.count} ${noun}${choice.count === 1 ? '' : 's'}`);
+    } else if (choice.kind === 'alternative') parts.push('Choose an alternative');
+    if (choice.credits != null) parts.push(`${choice.credits} ${pretty(choice.credit_unit)} recorded`);
+    return parts.join(' · ') || 'Selection amount not recorded';
+  };
+  const profileCell = p => {
+    if (!p.course_profile.count) return '<div class="compare-profile-cell">Not yet extracted</div>';
+    const profile = p.curriculum_profile;
+    const group = profile[profileMode];
+    const label = profileMode === 'required' ? 'fixed required course' : 'elective option';
+    const note = profileMode === 'required' ? 'Mapped fixed course set; cohort, placement, waiver and substitution conditions in the sources still apply. Required choice blocks are separate below.' : 'Elective and required-choice candidates, not all compulsory. Fixed required courses are excluded.';
+    const empty = profileMode === 'required' ? 'A fixed required course set is not established; this does not mean there are no requirements.' : 'No option set is established by the structured rules.';
+    return `<div class="compare-profile-cell"><p class="profile-total">${group.count} distinct ${label} records</p><p class="profile-denominator">${note}</p>${group.count ? '<dl class="mini-counts">' + Object.entries(categories).map(([key,name]) => `<dt>${e(name)}</dt><dd>${group.categories[key] || 0}</dd>`).join('') + '</dl>' : '<p class="profile-unavailable">' + empty + '</p>'}<small>Distinct course IDs; not credit totals or degree shares.</small><p class="profile-uncertainty">${profile.unresolved.count} course records have unresolved roles.${profile.overlap_count ? ' ' + profile.overlap_count + ' course records appear in multiple groups and are counted once.' : ''}</p></div>`;
+  };
+  const profileChoices = p => {
+    const choices = p.curriculum_profile.choices;
+    if (!choices.length) return 'No structured selection rules recorded. Full requirements may contain unresolved notes.';
+    const sources = new Map((p.sources || []).map(source => [source.id,source]));
+    const contexts = {required:'Required selection',conditional:'Conditional selection',unresolved:'Selection context unresolved'};
+    const origins = {family:'Shared family requirement',variant:'Local variant requirement',replacement:'Variant replacement'};
+    return `<details class="profile-choices"><summary>${choices.length} documented selection rules</summary><ul>${choices.map(choice => `<li><strong>${e(choice.title)}</strong><div class="profile-choice-rule">${e(selectionLabel(choice))}</div><small>${e(contexts[choice.context] || contexts.unresolved)}${origins[choice.origin] ? ' · ' + e(origins[choice.origin]) : ''}</small><small>${link(sources.get(choice.source_id)?.url,'Source')} · <a href="${base}programs/${e(p.id)}/#requirement-${e(choice.id)}">Full requirement</a></small></li>`).join('')}</ul></details><small>Nested quantities are not summed. Course counts and credit units remain distinct; no pathway is selected.</small>`;
+  };
+
   function readState() {
     const params = new URLSearchParams(location.search);
     keys.forEach(key => {
@@ -47,6 +76,8 @@
       controls[key].value = value;
       if (key !== 'q' && ![...controls[key].options].some(o => o.value === value)) controls[key].value = '';
     });
+    profileMode = params.get('profile') === 'options' ? 'options' : 'required';
+    profileControl.value = profileMode;
     selected = [...new Set((params.get('compare') || '').split(','))].filter(id => byId.has(id)).slice(0, 4);
     expansionSpecified = params.has('expand');
     expanded = [...new Set((params.get('expand') || '').split(','))].filter(id => familyMap.has(id));
@@ -58,6 +89,7 @@
     const params = new URLSearchParams();
     keys.forEach(key => { if (controls[key].value) params.set(key, controls[key].value); });
     if (selected.length) params.set('compare', selected.join(','));
+    if (profileMode === 'options') params.set('profile', 'options');
     if (expanded.length || expansionSpecified) params.set('expand', expanded.join(','));
     const next = base + (params.size ? '?' + params.toString() : '') + location.hash;
     if (next !== location.pathname + location.search + location.hash) history.pushState(null, '', next);
@@ -132,12 +164,13 @@
       ['Course records', p => `${p.course_profile.count} unique records<small>${p.course_profile.unknown_credits} with unknown credits; not a degree total</small>`],
       ['Credit units', p => { const units = p.course_profile.credit_units.map(pretty); return e(units.join(', ') || 'Unknown') + '<small>No cross-calendar conversion</small>'; }],
       ['Requirement structure', p => { const roots = (p.requirements || []).filter(r => r.is_root); return roots.length ? '<ul>' + roots.map(r => `<li>${e(r.title)}<small>${e(pretty(r.kind))}${r.count != null ? ' · ' + e(requirementCount(r, p)) : ''}${r.credits != null ? ' · ' + e(r.credits) + ' ' + e(pretty(r.credit_unit)) : ''}</small></li>`).join('') + '</ul><small>Nested choices and full evidence on program page.</small>' : 'Not yet extracted'; }],
-      ['Course categories', p => p.course_profile.count ? '<dl class="mini-counts">' + Object.entries(categories).map(([key, label]) => `<dt>${e(label)}</dt><dd>${p.course_profile.categories[key]}</dd>`).join('') + '</dl><small>Observed course counts; incomplete curricula may omit categories.</small>' : 'Not yet extracted'],
+
       ['Program aims &amp; outcomes', p => outcomeList(p, 'source_stated')],
       ['Inferred taxonomy', p => outcomeList(p, 'inferred_taxonomy') + '<small>Editorial interpretation</small>'],
       ['Official evidence', p => (p.links || []).map(l => link(l.url, l.label || pretty(l.kind))).join('<br>') || 'Not recorded'],
     ];
     if (!items.some(p => p.family)) rows.splice(0, 4);
+    rows.unshift(['Curriculum profile', profileCell], ['Documented selection rules', profileChoices]);
     const themes = [...new Set(items.flatMap(p => (p.outcomes || []).filter(o => o.kind === 'inferred_taxonomy').map(o => o.text)))].sort((a, b) => a.localeCompare(b));
     const themeCell = (p, theme) => {
       const matches = (p.outcomes || []).filter(o => o.kind === 'inferred_taxonomy' && o.text === theme);
@@ -146,7 +179,7 @@
       return '<span class="badge">Documented inference</span>' + matches.map(o => '<small>' + link(sources.get(o.source_id)?.url, 'Supporting source') + '</small>').join('');
     };
     const themeMatrix = `<section class="theme-comparison" aria-labelledby="theme-title"><h3 id="theme-title">Recorded inferred themes</h3><p class="section-note">These are the exact inferred taxonomy labels stored in the records, shown as editorial interpretations with supporting sources. “Not recorded” is missing evidence, not proof that a program lacks a theme. Source statements about program aims and outcomes remain separate below.</p>${themes.length ? `<div class="table-scroll" role="region" aria-label="Recorded inferred theme matrix" tabindex="0"><table class="theme-table"><caption class="sr-only">Recorded inferred themes by program</caption><thead><tr><th scope="col">Theme</th>${items.map(p => `<th scope="col">${e(p.institution?.name)}<small>${e(p.title)}</small></th>`).join('')}</tr></thead><tbody>${themes.map(theme => `<tr><th scope="row">${e(theme)}</th>${items.map(p => '<td>' + themeCell(p, theme) + '</td>').join('')}</tr>`).join('')}</tbody></table></div>` : '<p class="notice">No inferred themes have been recorded for the selected programs.</p>'}</section>`;
-    target.innerHTML = themeMatrix + `<div class="table-scroll" role="region" aria-label="Program comparison" tabindex="0"><table class="compare-table"><caption class="sr-only">Comparison of ${items.length} selected programs. Credit units remain distinct and unknown values are not zero.</caption><thead><tr><th scope="col">Program context</th>${items.map(p => `<th scope="col"><small>${e(p.institution?.name)}</small><a href="${base}programs/${e(p.id)}/">${e(p.title)}</a><button type="button" class="text-button remove" data-remove="${e(p.id)}" aria-label="Remove ${e(p.title)} at ${e(p.institution?.name)}">Remove</button></th>`).join('')}</tr></thead><tbody>${rows.map(([title, content]) => `<tr><th scope="row">${title}</th>${items.map(p => '<td>' + content(p) + '</td>').join('')}</tr>`).join('')}</tbody></table></div>`;
+    target.innerHTML = `<div class="table-scroll" role="region" aria-label="Program comparison" tabindex="0"><table class="compare-table"><caption class="sr-only">Comparison of ${items.length} selected programs. Credit units remain distinct and unknown values are not zero.</caption><thead><tr><th scope="col">Program context</th>${items.map(p => `<th scope="col"><small>${e(p.institution?.name)}</small><a href="${base}programs/${e(p.id)}/">${e(p.title)}</a><button type="button" class="text-button remove" data-remove="${e(p.id)}" aria-label="Remove ${e(p.title)} at ${e(p.institution?.name)}">Remove</button></th>`).join('')}</tr></thead><tbody>${rows.map(([title, content]) => `<tr><th scope="row">${title}</th>${items.map(p => '<td>' + content(p) + '</td>').join('')}</tr>`).join('')}</tbody></table></div>` + themeMatrix;
     target.querySelectorAll('[data-remove]').forEach(button => button.addEventListener('click', () => {
       selected = selected.filter(id => id !== button.dataset.remove);
       writeState();
@@ -186,6 +219,7 @@
     clearTimeout(timer);
     writeState();
   }));
+  profileControl.addEventListener('change', () => { profileMode = profileControl.value; clearTimeout(timer); writeState(); announce(profileMode === 'required' ? 'Showing required curriculum profiles.' : 'Showing elective option profiles.'); });
   form.addEventListener('submit', event => { event.preventDefault(); clearTimeout(timer); writeState(); });
   controls.q.addEventListener('input', () => { clearTimeout(timer); timer = setTimeout(writeState, 220); });
   keys.filter(k => k !== 'q').forEach(key => controls[key].addEventListener('change', () => { clearTimeout(timer); if (key === 'discipline' && controls.discipline.value) programs.filter(p => (p.family?.disciplines || []).includes(controls.discipline.value)).forEach(p => { if (!expanded.includes(p.family.id)) expanded.push(p.family.id); }); writeState(); }));
