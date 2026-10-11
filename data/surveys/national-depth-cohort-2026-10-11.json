@@ -1,0 +1,369 @@
+[
+  {
+    "institution_id": "harvard-university",
+    "status": "inspected",
+    "checked_at": "2026-10-11",
+    "note": "Added the college concentration directory, detailed CS concentration requirements and formal CS secondary-field rules to the prior degree-route overview. AI is a course tag in CS requirements, not a separately established AI concentration; Basic, Honors, Joint and Mind/Brain/Behavior routes remain CS routes. Secondary rules distinguish cohorts including Class of 2027 and earlier. Other departments, special concentrations and current announcements remain incompletely reviewed; no qualifying AI title verified and no institution-wide absence conclusion.",
+    "sources": [
+      {
+        "url": "https://college.harvard.edu/academics/liberal-arts-sciences/concentrations",
+        "title": "Harvard College Concentrations",
+        "fetched_at": "2026-10-11",
+        "locator": "Named degree/concentration directory and CS entry; embedded course references span several years, not a single catalog edition"
+      },
+      {
+        "url": "https://csadvising.seas.harvard.edu/concentration/requirements/",
+        "title": "Harvard CS Concentration Requirements",
+        "fetched_at": "2026-10-11",
+        "locator": "Basic/Honors/Joint/MBB requirement table; AI course tag"
+      },
+      {
+        "url": "https://csadvising.seas.harvard.edu/secondary/",
+        "title": "Harvard CS Secondary Field",
+        "fetched_at": "2026-10-11",
+        "locator": "Formal secondary requirements and class-year-specific rules; AI one of several course tags"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "washington-university-in-st-louis",
+    "status": "inspected",
+    "checked_at": "2026-10-11",
+    "note": "Read 2026–2027 all-school major/minor lists and detailed CS BS and Business/CS BS requirements, plus Olin context. AI/ML appears among CS Methods options, and Business Analytics is a named concentration in the joint degree; neither verifies an AI-titled award. An Olin Generative AI course is coursework, not a credential. Other department-specific suboptions and announcements remain unreviewed; no qualifying AI title verified and no institution-wide absence conclusion.",
+    "sources": [
+      {
+        "url": "https://bulletin.wustl.edu/undergrad/majors/",
+        "title": "WashU 2026–2027 All Undergraduate Majors",
+        "fetched_at": "2026-10-11",
+        "locator": "All-school major and specialization directory"
+      },
+      {
+        "url": "https://bulletin.wustl.edu/undergrad/minors/",
+        "title": "WashU 2026–2027 All Undergraduate Minors",
+        "fetched_at": "2026-10-11",
+        "locator": "All-school minor directory"
+      },
+      {
+        "url": "https://bulletin.wustl.edu/undergrad/engineering/majors/cse-computer-science-bs/",
+        "title": "WashU 2026–2027 Computer Science BS",
+        "fetched_at": "2026-10-11",
+        "locator": "CS Methods options include AI and ML; general technical-elective structure"
+      },
+      {
+        "url": "https://bulletin.wustl.edu/undergrad/engineering/majors/cse-business-computer-science-bs/",
+        "title": "WashU 2026–2027 Business and Computer Science BS",
+        "fetched_at": "2026-10-11",
+        "locator": "Business Analytics concentration and Strategy & Leadership cluster; degree-specific requirements"
+      },
+      {
+        "url": "https://bulletin.wustl.edu/undergrad/business/",
+        "title": "WashU 2026–2027 Olin Business School",
+        "fetched_at": "2026-10-11",
+        "locator": "School context and SCOT 4505 Generative Artificial Intelligence course; no inference from a course title"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "rutgers-university-newark",
+    "status": "inspected",
+    "checked_at": "2026-10-11",
+    "note": "Read SAS-Newark major/minor taxonomy, detailed CS BA and Data Science minor, plus the explicitly Newark business major/concentration list and Management Science and Information Systems concentration. CS BA has general upper-level electives; MSIS concentration lists three systems/database/networking courses. Neither is an AI-titled qualification. Evidence is Newark-specific and is not inherited from New Brunswick, Camden or partner NJIT. Other schools and announcements remain incompletely reviewed; no qualifying AI title verified and no absence conclusion.",
+    "sources": [
+      {
+        "url": "https://sasn.rutgers.edu/academics/undergraduate-majors-minors",
+        "title": "Rutgers SAS-Newark Undergraduate Majors & Minors",
+        "fetched_at": "2026-10-11",
+        "locator": "Named school program taxonomy"
+      },
+      {
+        "url": "https://sasn.rutgers.edu/mathematics-and-computer-science",
+        "title": "Rutgers Newark Mathematics and Computer Science",
+        "fetched_at": "2026-10-11",
+        "locator": "Named BA majors and computing/data science minors"
+      },
+      {
+        "url": "https://sasn.rutgers.edu/mathematics-and-computer-science/ba-computer-science",
+        "title": "Rutgers Newark BA in Computer Science",
+        "fetched_at": "2026-10-11",
+        "locator": "60-credit major requirements and upper-level elective rule"
+      },
+      {
+        "url": "https://sasn.rutgers.edu/minor-data-science",
+        "title": "Rutgers Newark Minor in Data Science",
+        "fetched_at": "2026-10-11",
+        "locator": "Named non-AI minor and curriculum context"
+      },
+      {
+        "url": "https://www.business.rutgers.edu/undergraduate-newark",
+        "title": "Rutgers Business School Undergraduate Program in Newark",
+        "fetched_at": "2026-10-11",
+        "locator": "Choose Your Major and Choose Your Concentration lists"
+      },
+      {
+        "url": "https://www.business.rutgers.edu/undergraduate-newark/management-science-information-systems-concentration",
+        "title": "Rutgers Newark Management Science and Information Systems Concentration",
+        "fetched_at": "2026-10-11",
+        "locator": "Three named concentration courses; explicit Newark applicability"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "colorado-school-of-mines",
+    "status": "inspected",
+    "checked_at": "2026-10-11",
+    "note": "Read the 2026–2027 CS BS catalog beyond the earlier program/minor lists, including all seven named CS focus areas and their requirements. The taxonomy includes CS + Robotics & Intelligent Systems, CS + Data Science and CS + Business, but these titles are not AI-titled credentials. CSCI 404 Artificial Intelligence is a course within the reviewed curriculum. Other departments and announcements remain incompletely reviewed; no qualifying AI title verified and no institution-wide absence conclusion.",
+    "sources": [
+      {
+        "url": "https://catalog.mines.edu/undergraduate/academics/degrees/",
+        "title": "Mines 2026–2027 Academic Programs",
+        "fetched_at": "2026-10-11",
+        "locator": "21 BS degree directory; link to current CS program"
+      },
+      {
+        "url": "https://catalog.mines.edu/undergraduate/academics/degrees/bsincomputerscience/",
+        "title": "Mines 2026–2027 BS in Computer Science",
+        "fetched_at": "2026-10-11",
+        "locator": "Seven Focus Areas and associated tables; CSCI 404 Artificial Intelligence course"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "pepperdine-university",
+    "status": "inspected",
+    "checked_at": "2026-10-11",
+    "note": "Read Seaver undergraduate/CS overviews and selected 2026–2027 catalog sections: major/minor lists, CS BA/minor and Data Science BA/minor. The catalog identifies CS as a BA while the marketing directory still names a CS/Mathematics BS; the catalog identity is retained as distinct evidence. AI appears as DS 430 and in the Data Science description, not as a qualifying AI award. The full 510-page catalog, other Pepperdine schools and announcements were not audited; no institution-wide absence conclusion.",
+    "sources": [
+      {
+        "url": "https://seaver.pepperdine.edu/academics/programs/undergraduate/",
+        "title": "Pepperdine Seaver Undergraduate Programs",
+        "fetched_at": "2026-10-11",
+        "locator": "Marketing program directory including CS/Mathematics BS label"
+      },
+      {
+        "url": "https://seaver.pepperdine.edu/natural-science/undergraduate/computer-science/",
+        "title": "Pepperdine Seaver Computer Science",
+        "fetched_at": "2026-10-11",
+        "locator": "Program overview and curriculum themes"
+      },
+      {
+        "url": "https://seaver.pepperdine.edu/academics/catalog/",
+        "title": "Pepperdine Seaver Academic Catalog",
+        "fetched_at": "2026-10-11",
+        "locator": "Current catalog link explicitly 2026–2027"
+      },
+      {
+        "url": "https://seaver.pepperdine.edu/academics/content/seaver-catalog-2026-2027.pdf",
+        "title": "Pepperdine Seaver 2026–2027 Academic Catalog",
+        "fetched_at": "2026-10-11",
+        "locator": "PDF indices98–99 major/minor lists;330–334 CS/Data Science sections; DS430 course. Bounded selected-section review only"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "texas-christian-university",
+    "status": "inspected",
+    "checked_at": "2026-10-11",
+    "note": "Read university program listing, CS BS/minor overview and linked undergraduate catalog department section. The catalog confirms CS as BS major and BA/BS minor, but its program search did not supply a usable full requirement inventory. The directory’s Business Analytics entry is explicitly an MS, not an undergraduate AI credential. Full CS/concentration requirements, undergraduate business suboptions and announcements remain unresolved; no qualifying AI title verified and no absence conclusion.",
+    "sources": [
+      {
+        "url": "https://www.tcu.edu/academics/programs/",
+        "title": "TCU Majors & Programs",
+        "fetched_at": "2026-10-11",
+        "locator": "Readable fallback mixed-level program listing"
+      },
+      {
+        "url": "https://www.tcu.edu/academics/programs/computer-science.php",
+        "title": "TCU Computer Science",
+        "fetched_at": "2026-10-11",
+        "locator": "BS/minor identity and official catalog links"
+      },
+      {
+        "url": "https://undergraduate.catalog.tcu.edu/colleges/scienceandengineering/departments/info",
+        "title": "TCU undergraduate Computer Science catalog section",
+        "fetched_at": "2026-10-11",
+        "locator": "BS major/BA-BS minor applicability and limited department policies; not a full course inventory"
+      },
+      {
+        "url": "https://undergraduate.catalog.tcu.edu/programs",
+        "title": "TCU undergraduate Program Search — limited response",
+        "fetched_at": "2026-10-11",
+        "locator": "No usable program requirements obtained; later reader request returned error"
+      },
+      {
+        "url": "https://www.tcu.edu/academics/programs/business-analytics.php",
+        "title": "TCU Business Analytics",
+        "fetched_at": "2026-10-11",
+        "locator": "Explicit MS and graduate admission; excluded from undergraduate scope"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "yeshiva-university",
+    "status": "confirmed",
+    "checked_at": "2026-10-11",
+    "note": "Confirmed the current catalog’s Artificial Intelligence concentration within Yeshiva College CS BS, directly linked by the department. New yeshiva-cs-ai-concentration record maps 22 required course identities and 75 source-stated credits with unknown normalized units; local completion-policy audit remains partial. Spring 2026 guide summary says 74 while detailed plan/catalog say 75. Stern College CS BA/minor and Sy Syms business taxonomy were separately inspected and do not inherit the YC concentration. Other formal programs and announcements remain incompletely reviewed; no institution-wide completeness claim.",
+    "sources": [
+      {
+        "url": "https://www.yu.edu/yeshiva-college/ug/computer-science",
+        "title": "Yeshiva College Computer Science",
+        "fetched_at": "2026-10-11",
+        "locator": "BS track context and direct catalog/guide links"
+      },
+      {
+        "url": "https://yu.smartcatalogiq.com/en/current/university-catalog/undergraduate-programs/yeshiva-college/copy-of-computer-science-artificial-intelligence-bs",
+        "title": "Yeshiva College Computer Science BS — current catalog",
+        "fetched_at": "2026-10-11",
+        "locator": "Explicit AI concentration relationship and 22-row 75-credit requirement table; no visible edition year"
+      },
+      {
+        "url": "https://www.yu.edu/sites/default/files/inline-files/Complete-YC-CS-Guide-Spring-2026-v.3.0.5_0.pdf",
+        "title": "Complete Yeshiva College CS Guide, Spring 2026",
+        "fetched_at": "2026-10-11",
+        "locator": "AI track identity and credit-total discrepancy: PDF indices 4 and 6"
+      },
+      {
+        "url": "https://yu.smartcatalogiq.com/en/current/university-catalog/undergraduate-programs/stern-college-for-women/computer-science-ba",
+        "title": "Stern College Computer Science BA",
+        "fetched_at": "2026-10-11",
+        "locator": "Computer and Software Systems overview and local major requirements; separate school/award"
+      },
+      {
+        "url": "https://yu.smartcatalogiq.com/en/current/university-catalog/undergraduate-programs/stern-college-for-women/computer-science-minor",
+        "title": "Stern College Computer Science Minor",
+        "fetched_at": "2026-10-11",
+        "locator": "Separate non-AI minor identity"
+      },
+      {
+        "url": "https://yu.smartcatalogiq.com/en/current/university-catalog/undergraduate-programs/sy-syms-school-of-business",
+        "title": "Yeshiva Sy Syms School of Business catalog",
+        "fetched_at": "2026-10-11",
+        "locator": "Named undergraduate business degree/minor taxonomy"
+      }
+    ],
+    "discoveries": [
+      {
+        "title": "Artificial Intelligence",
+        "kind": "concentration",
+        "award_level": "concentration",
+        "url": "https://yu.smartcatalogiq.com/en/current/university-catalog/undergraduate-programs/yeshiva-college/copy-of-computer-science-artificial-intelligence-bs"
+      }
+    ]
+  },
+  {
+    "institution_id": "chapman-university",
+    "status": "inspected",
+    "checked_at": "2026-10-11",
+    "note": "Read Fowler undergraduate and engineering-minor lists, detailed CS BS overview and Argyros undergraduate major/minor taxonomy. AI appears as a CS research/career topic, not a separately verified credential. Earlier Collaborative Intelligence minor remains outside title scope; it is not renamed AI. The general finder exposed filters without program records and the linked catalog failed in the reader. Current catalog-level internal concentrations and other schools remain incompletely reviewed; no qualifying AI title verified and no absence conclusion.",
+    "sources": [
+      {
+        "url": "https://www.chapman.edu/academics/degrees-and-programs.aspx",
+        "title": "Chapman Undergraduate Degrees & Programs",
+        "fetched_at": "2026-10-11",
+        "locator": "Finder controls, without readable program-result records"
+      },
+      {
+        "url": "https://www.chapman.edu/engineering/academic-programs/undergraduate-programs/index.aspx",
+        "title": "Chapman Fowler Undergraduate Programs",
+        "fetched_at": "2026-10-11",
+        "locator": "Five engineering/computing bachelor degrees and minor links"
+      },
+      {
+        "url": "https://www.chapman.edu/engineering/academic-programs/undergraduate-programs/minors.aspx",
+        "title": "Chapman Engineering Minors",
+        "fetched_at": "2026-10-11",
+        "locator": "Named analytics, computer/electrical engineering, CS, game programming and information security minors"
+      },
+      {
+        "url": "https://www.chapman.edu/engineering/academic-programs/undergraduate-programs/bs-computer-science.aspx",
+        "title": "Chapman BS in Computer Science",
+        "fetched_at": "2026-10-11",
+        "locator": "AI career/research topics within CS; not formal concentration evidence"
+      },
+      {
+        "url": "https://www.chapman.edu/business/academic-programs/undergraduate/index.aspx",
+        "title": "Chapman Undergraduate Business Programs",
+        "fetched_at": "2026-10-11",
+        "locator": "Business Administration specialization and business minor taxonomy"
+      },
+      {
+        "url": "https://catalog.chapman.edu/",
+        "title": "Chapman Catalog — retrieval attempt",
+        "fetched_at": "2026-10-11",
+        "locator": "Linked Course Catalog returned reader Internal Error; exact access cause not established"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "elon-university",
+    "status": "inspected",
+    "checked_at": "2026-10-11",
+    "note": "Read the general program directory, new Engineering & Computing school’s fourteen-program taxonomy, detailed CS AB/BS overviews and the currently linked 2026–2027 CS BS catalog. AI appears as an AB elective direction and general computing subject, not a separately verified formal AI award. An older directory catalog link failed; ordinary navigation through the current school page exposed the readable current catalog. Other colleges and announcements remain unreviewed; no qualifying AI title verified and no institution-wide absence conclusion.",
+    "sources": [
+      {
+        "url": "https://www.elon.edu/u/academics/majors-minors-programs/",
+        "title": "Elon Majors, Minors & Programs",
+        "fetched_at": "2026-10-11",
+        "locator": "Named program directory; older CS catalog link failed"
+      },
+      {
+        "url": "https://www.elon.edu/u/academics/engineering-computing/explore/programs/",
+        "title": "Elon School of Engineering & Computing Programs",
+        "fetched_at": "2026-10-11",
+        "locator": "Fourteen majors/minors/concentrations taxonomy"
+      },
+      {
+        "url": "https://www.elon.edu/u/academics/engineering-computing/explore/programs/ab-in-computer-science/",
+        "title": "Elon AB in Computer Science",
+        "fetched_at": "2026-10-11",
+        "locator": "Formal program identity; AI described among elective directions"
+      },
+      {
+        "url": "https://www.elon.edu/u/academics/engineering-computing/explore/programs/bs-in-computer-science/",
+        "title": "Elon BS in Computer Science",
+        "fetched_at": "2026-10-11",
+        "locator": "Degree overview and current catalog link"
+      },
+      {
+        "url": "https://elon.smartcatalogiq.com/en/2026-2027/academic-catalog/academic-programs/school-of-engineering-and-computing/computer-science/computer-science-bs",
+        "title": "Elon 2026–2027 Computer Science BS",
+        "fetched_at": "2026-10-11",
+        "locator": "Current formal CS degree requirements; four upper-level CSC elective choices"
+      }
+    ],
+    "discoveries": []
+  },
+  {
+    "institution_id": "saint-louis-university",
+    "status": "inspected",
+    "checked_at": "2026-10-11",
+    "note": "Added detailed 2026–2027 CS BS requirements and the AI Literacy microcredential page to the earlier catalog program taxonomy. CS BS requires AI or Machine Learning as a course choice; AI Literacy is explicitly an undergraduate microcredential, excluded from degree/minor/concentration scope. AI MS and bachelor’s-to-AI-MS listings remain graduate pathways, not undergraduate AI awards. Other departmental suboptions and current announcements remain unreviewed; no qualifying AI title verified and no absence conclusion.",
+    "sources": [
+      {
+        "url": "https://catalog.slu.edu/programs/",
+        "title": "Saint Louis 2026–2027 Majors and Programs",
+        "fetched_at": "2026-10-11",
+        "locator": "Mixed award taxonomy explicitly distinguishes AI graduate credentials and undergraduate microcredential"
+      },
+      {
+        "url": "https://catalog.slu.edu/colleges-schools/science-engineering/computer-science/computer-science-bs/",
+        "title": "Saint Louis 2026–2027 Computer Science BS",
+        "fetched_at": "2026-10-11",
+        "locator": "82-credit major table; CSCI 4740 AI or 4750 ML course choice"
+      },
+      {
+        "url": "https://catalog.slu.edu/colleges-schools/science-engineering/computer-science/ai-literacy-micro/",
+        "title": "Saint Louis 2026–2027 Artificial Intelligence Literacy Microcredential",
+        "fetched_at": "2026-10-11",
+        "locator": "Explicit credential title/type; not promoted to a minor"
+      }
+    ],
+    "discoveries": []
+  }
+]
