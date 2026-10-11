@@ -119,6 +119,16 @@ def observe_economics_titles(html):
     return rows
 
 
+def observe_shass_field_titles(key, html):
+    """Reuse guarded literal field-list parsing, discarding its legacy taxonomy."""
+    from importlib import import_module
+    module = import_module('atlas.adapters.mit-ai-decision-making-bs.hass_fields')
+    parsed = module.parse_field(key, html)
+    return [dict(listed_id=row['id'], code=row['code'], name=row.get('name'),
+                 description=None, prerequisites=None, units=None, term=None,
+                 field=module.FIELDS[key]['title']) for row in parsed.get('courses', [])]
+
+
 def observe_literature(html):
     soup = BeautifulSoup(html, 'html.parser')
     selected = soup.find('select', attrs={'name': 'semester'})

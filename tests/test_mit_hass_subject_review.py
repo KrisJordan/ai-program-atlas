@@ -368,3 +368,35 @@ def test_actual_economics_concentration_observer_preserves_source_context():
     assert len(saved)==37 and all(o['observation_digest'] in hashes for o in saved)
     with pytest.raises(ValueError):
         review.observe_economics_titles(text.replace('One or two of:','One or three of:'))
+
+
+def test_history_title_reviews_do_not_classify_broad_titles_from_department():
+    for code in ['21H.228','21H.284','21H.321J [11.026]','21H.388']:
+        o=entry(code)['observations'][-1]
+        assert o['category']=='other' and o['status']=='unclassified'
+    for code in ['21H.165','21H.319','21H.333','21H.244J [21G.085]']:
+        o=entry(code)['observations'][-1]
+        assert o['category']=='human_context' and o['evidence_basis']=='official_title_only'
+        assert o['description_summary'] is None
+    # Prior substantively changed versions are not overwritten by a later old-list title review.
+    assert entry('21H.151')['review_status']=='identity_review_needed'
+
+
+def test_actual_shass_title_review_replays_all_nine_fields_and_rejects_policy_change():
+    source_specs=[(sid,s) for sid,s in MANIFEST['source_specs'].items() if s.get('parser')=='shass_field_titles']
+    assert len(source_specs)==9
+    matched=0
+    for sid,spec in source_specs:
+        path=Path('/tmp')/('atlas-mit-hass-'+spec['field_key']+'.html')
+        if not path.exists():
+            pytest.skip('Optional ignored SHASS field capture')
+        rows=review.observe_shass_field_titles(spec['field_key'],path.read_text())
+        assert all('category' not in row and row['description'] is None for row in rows)
+        hashes={review.observation_digest(o) for o in rows}
+        saved=[o for r in MANIFEST['courses'].values() for o in r['observations'] if o['source_id']==sid]
+        assert saved and all(o['observation_digest'] in hashes for o in saved)
+        matched+=len(saved)
+    assert matched==67
+    text=Path('/tmp/atlas-mit-hass-american-studies.html').read_text()
+    with pytest.raises(ValueError):
+        review.observe_shass_field_titles('american-studies',text.replace('taking four subjects','taking five subjects'))
