@@ -274,3 +274,7 @@ SOURCE_PARSERS = {
         for key, (url, title) in POLICIES.items()
     },
 }
+
+
+from atlas.adapters.additional_business_metadata import register
+register(PROGRAM_ID, SOURCES, SOURCE_PARSERS)

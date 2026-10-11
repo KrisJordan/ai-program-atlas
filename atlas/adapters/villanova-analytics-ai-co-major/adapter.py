@@ -12,7 +12,7 @@ SOURCES = [
 
 def parse(html: str) -> dict:
     verify_other_electives(html)
-    return parse_program(
+    result = parse_program(
         html,
         pid=PROGRAM_ID,
         title="Analytics & Artificial Intelligence",
@@ -20,6 +20,19 @@ def parse(html: str) -> dict:
         kind="additional_major",
         url=SOURCES[0],
     )
+    # Exact source OR is one of the three selectable elective slots.
+    elective = next(r for r in result['requirements'] if r['id'] == PROGRAM_ID + '-electives')
+    pair = ['villanova-mis-3050', 'villanova-mis-2030']
+    if not set(pair).issubset(elective['course_ids']):
+        raise ValueError('Database elective alternative membership changed')
+    elective['course_ids'] = [cid for cid in elective['course_ids'] if cid not in pair]
+    from atlas.adapters.cmu_bs.common import requirement
+    result['requirements'].append(requirement(
+        PROGRAM_ID, 'database-choice', 'MIS 3050 or MIS 2030: one elective slot',
+        PROGRAM_ID + '-identity', parent=elective['id'], kind='alternative', count=1,
+        credits=3, unit='unknown', category='other', course_ids=pair,
+        summary='If this elective slot is selected, choose MIS 3050 or MIS 2030; the two courses cannot fill two of the three elective slots.'))
+    return result
 
 
 from atlas.adapters.villanova_curriculum import parse_course
@@ -64,3 +77,8 @@ def verify_other_electives(html):
     value = " ".join(body.get_text(" ", strip=True).split())
     if value != "Total Credits" or body.find(["a", "article", "iframe", "object", "embed"]):
         raise ValueError("Other Approved Electives now contains content; review its inventory")
+
+
+# Register observed metadata after program extraction; no manual review emitted.
+from atlas.adapters.additional_business_metadata import register
+register(PROGRAM_ID, SOURCES, SOURCE_PARSERS)

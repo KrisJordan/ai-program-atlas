@@ -8,3 +8,7 @@ Completeness is for this additional major, not its entire primary degree. Award 
 
 
 2026-10-11 second-major relationship review: reread the official program catalog and retained its exact additional-major/second-major/co-major terminology and mandatory companion-major eligibility in `major_relationship`. The award remains unchanged. This manual evidence-backed relationship is separate from scraper observations; optional double-major compatibility is not equivalent. See `research/second-majors.md`.
+
+## Additional-major correctness review — 2026-10-11
+
+Actual 2026–2027 major/policy pages and nine linked department-course descriptions were reread. Local scope remains complete, with two fixed/seven option identities. INSY 4180 is human context, BUAN 3066 mathematics, FINA 4075/AIM 4410 applications; explicit AI/ML model courses remain AI. All nine exact course descriptions publish three credits, resolving three blank program-elective cells. Required INSY 4180 has completed-focus/BUAD 2001/senior-standing conditions; AIM 4410 has an instructor-consent alternative that is recorded without assuming permission. Source-specific metadata parsers use exact identities and description hashes, and emit no manual review/audit. Program search links are robots-disallowed; actual descriptions came from the independently linked public course directory/department pages. See `research/additional-major-review-business.json/.md` for all manual roles, category counts, source captures/hashes and bounded judgments. Whole primary-major/host degree remains outside scope.
