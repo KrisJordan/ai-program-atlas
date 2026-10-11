@@ -99,6 +99,39 @@ def requirement_profile(program: dict, *, include_course_ids: bool = False) -> d
                      "crosslisted_aliases": len(courses) - len(set(identities.values())),
                      "reviewed_groups": len(program.get("course_identity_groups", []))},
     }
+    # Separate workload metric: do not promote option identities into the fixed set.
+    load = dict(result["required"]["categories"])
+    counted, excluded = [], []
+    pools = {c["id"]: {identities[cid] for cid in groups[c["id"]].get("course_ids", []) if cid in courses} for c in choices}
+    for choice in choices:
+        group = groups[choice["id"]]
+        pool = pools[choice["id"]]
+        amount = choice["count"]
+        reason = None
+        if choice["context"] != "required": reason = "Conditional or unresolved context"
+        elif choice["kind"] != "choose_courses" or not isinstance(amount, int) or isinstance(amount, bool) or amount <= 0: reason = "No explicit positive course count"
+        elif any(g.get("parent_id") == choice["id"] for g in groups.values()): reason = "Nested selection"
+        elif len(pool) < amount or len(group.get("course_ids", [])) != len([cid for cid in group.get("course_ids", []) if cid in courses]): reason = "Incomplete option inventory"
+        elif pool & fixed or any(pool & other for gid, other in pools.items() if gid != choice["id"]): reason = "Overlapping course pools"
+        categories = {courses[cid].get("category", "other") for cid in pool}
+        category = next(iter(categories)) if len(categories) == 1 else None
+        # Reviewed rule-level mapping, not a claim about missing course descriptions.
+        # Catalog 2026–27, Requirements/Core Requirements, verified 2026-10-11.
+        umd = "university-of-maryland-college-park-artificial-intelligence-computational-structures-for-ai-systems-bsai-degree"
+        reviewed = {
+            umd + "-t0-r5": ("Introduction to Programming (one of the following):", {"umd-cmsc141", "umd-cmsc131", "umd-inst326"}),
+            umd + "-t0-r18": ("Continuation of Programming (one of the following):", {"umd-cmsc132", "umd-cmsc142"}),
+        }
+        evidence = reviewed.get(choice["id"])
+        if program.get("id") == umd and evidence and group.get("title") == evidence[0] and set(group.get("course_ids", [])) == evidence[1] and choice.get("source_id") == umd + "-catalog":
+            category = "foundations"
+        if not reason and (category not in CATEGORIES or category in {"other", "electives"}): reason = "Mixed or unclassified categories"
+        if reason:
+            excluded.append({"id": choice["id"], "reason": reason})
+        else:
+            load[category] += amount
+            counted.append({"id": choice["id"], "count": amount, "category": category, "source_id": choice["source_id"], "title": choice["title"]})
+    result["required_obligations"] = {"count": sum(load.values()), "categories": load, "fixed_count": len(fixed), "choice_count": sum(c["count"] for c in counted), "counted_choices": counted, "excluded_choices": excluded}
     if include_course_ids:
         result["course_ids"] = {"required": sorted(fixed), "options": sorted(options),
                                 "unresolved": sorted(unresolved)}

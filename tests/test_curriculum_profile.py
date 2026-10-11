@@ -86,3 +86,34 @@ def test_unknown_category_is_visible_and_no_graph_is_not_zero_curriculum():
     assert r["required"]["count"] == 0
     assert r["unresolved"]["categories"]["other"] == 1
     assert r["unresolved"]["count"] == 1
+
+
+def test_required_obligations_count_choose_n_without_promoting_candidates():
+    p = {'courses': [course('fixed','foundations')] + [course(x,'foundations') for x in 'abc'], 'requirements': [group('core',ids=['fixed']),group('pick','choose_courses','abc',count=2)]}
+    r=requirement_profile(p)
+    assert r['required']['count']==1
+    assert r['options']['count']==3
+    assert r['required_obligations']['categories']['foundations']==3
+    assert r['required_obligations']['choice_count']==2
+    for mutation in [dict(kind='choose_credits',count=None,credits=6),dict(count=4),dict(course_ids=['a','missing'])]:
+        q=deepcopy(p);q['requirements'][1].update(mutation)
+        assert requirement_profile(q)['required_obligations']['choice_count']==0
+
+
+def test_required_obligations_exclude_mixed_nested_and_overlapping_rules():
+    p={'courses':[course('a','foundations'),course('b','ai_ml')], 'requirements':[group('pick','choose_courses','ab',count=1)]}
+    assert requirement_profile(p)['required_obligations']['choice_count']==0
+    p['courses'][1]['category']='foundations'
+    assert requirement_profile(p)['required_obligations']['choice_count']==1
+    for extra in [group('fixed',ids=['a']),group('pick2','choose_courses',['b'],count=1),group('nested',ids=['a'],parent='pick')]:
+        q=deepcopy(p);q['requirements'].append(extra)
+        assert requirement_profile(q)['required_obligations']['choice_count']==0
+
+
+def test_umd_programming_rule_mapping_is_guarded_and_keeps_unknown_descriptions():
+    pid='university-of-maryland-college-park-artificial-intelligence-computational-structures-for-ai-systems-bsai-degree'
+    p={'id':pid,'courses':[course('umd-cmsc132','foundations'),course('umd-cmsc142')], 'requirements':[dict(group(pid+'-t0-r18','choose_courses',['umd-cmsc132','umd-cmsc142'],count=1), title='Continuation of Programming (one of the following):',source_id=pid+'-catalog')]}
+    assert requirement_profile(p)['required_obligations']['categories']['foundations']==1
+    assert p['courses'][1]['category']=='other'
+    p['requirements'][0]['course_ids'].append('changed')
+    assert requirement_profile(p)['required_obligations']['choice_count']==0

@@ -170,6 +170,8 @@ def shell(title, body, base, current="", payload=None):
     if payload is not None:
         serialized = json.dumps(payload, ensure_ascii=False, separators=(',', ':')).replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026")
         script = f'<script id="atlas-data" type="application/json">{serialized}</script><script src="{asset_url(base, "atlas.js")}" defer></script>'
+    if 'class="requirement-disclosure"' in body:
+        script += f'<script src="{asset_url(base, "requirements.js")}" defer></script>'
     return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)} · AI Program Atlas</title><meta name="description" content="A source-backed field guide to undergraduate artificial intelligence programs, curricula, and research context.">
@@ -307,15 +309,62 @@ def program_card(p, base):
 <div class="card-bottom"><a href="{base}programs/{esc(p['id'])}/">View program <span aria-hidden="true">→</span></a><label class="compare-choice js-only"><input type="checkbox" data-compare="{esc(p['id'])}"> Compare<span class="sr-only"> {esc(p.get('title'))} at {esc(institution.get('name'))}</span></label></div></article>'''
 
 
+REQUIRED_COLUMNS = [('foundations', 'Computing'), ('mathematics', 'Math'), ('ai_ml', 'AIML'), ('systems', 'Systems'), ('human_context', 'Human Context'), ('applications', 'Applications'), ('other', 'Other')]
+
+
+def directory_award_label(p):
+    if p.get('program_kind') == 'additional_major':
+        return '2ndMaj'
+    return ' / '.join(option['label'] if len(option['label']) <= 12 else option['normalized'].upper() for option in p.get('award_options', [])) or (p.get('award_level') if p.get('award_level') != 'other' else 'Unspecified')
+
+
+def directory_program_title(p):
+    title = p.get('title') or 'Program title not recorded'
+    labels = [option['label'] for option in p.get('award_options', [])] + [p.get('award_level'), 'Additional Major' if p.get('program_kind') == 'additional_major' else None]
+    for label in labels:
+        if label:
+            variants = [label, {'BS':'B.S.', 'BA':'B.A.'}.get(label, label)]
+            for text in variants:
+                title = re.sub(r',\s*' + re.escape(text) + r'(?=\s*\(|\s*$)', '', title, flags=re.I)
+    return title
+
+
+def required_directory_counts(p):
+    if not unique_courses(p):
+        return None
+    categories = requirement_profile(p)['required_obligations']['categories']
+    return {key: categories[key] + (categories.get('electives', 0) if key == 'other' else 0) for key, _ in REQUIRED_COLUMNS}
+
+
+def northeastern_joint(p):
+    # Display grouping is explicitly requested; it does not establish inheritance.
+    return (p.get('family', {}).get('id') == 'northeastern-ai-combined-degrees' or p['id'] == 'northeastern-chemical-engineering-ai-bsche') and p.get('program_kind') == 'degree'
+
+
 def program_table(programs, base):
     rows = []
-    for p in sorted(programs, key=directory_sort_key):
+    ordered = sorted(programs, key=directory_sort_key)
+    joint = [p for p in ordered if northeastern_joint(p)]
+    joint_emitted = False
+    for p in ordered:
+        if northeastern_joint(p) and not joint_emitted:
+            joint_emitted = True
+            profiles = [required_directory_counts(member) for member in joint]
+            count_cells = ''
+            for key, _ in REQUIRED_COLUMNS:
+                values = [profile[key] for profile in profiles if profile is not None]
+                label = str(min(values)) if values and min(values) == max(values) else str(min(values)) + '–' + str(max(values)) if values else '—'
+                count_cells += '<td data-joint-count="' + key + '" class="required-count">' + label + '</td>'
+            rows.append(f'''<tr class="directory-joint-group js-only" data-table-group="northeastern-joint-ai" {directory_sort_attributes(p, 'Joint Artificial Intelligence programs', 'northeastern-joint-ai')}><td><button type="button" class="joint-compare" data-table-expand aria-label="Choose a Northeastern joint program to compare">＋</button></td><th scope="row">{esc(p.get('institution', {}).get('name'))}</th><td><button type="button" class="joint-toggle" data-table-expand aria-expanded="false">(<span class="joint-awards">{esc(' / '.join(sorted({directory_award_label(member) for member in joint})))}</span>) Joint Artificial Intelligence programs <span class="joint-toggle-icon" aria-hidden="true">▸</span></button><small class="joint-summary">{len(joint)} programs · course-count ranges across variants</small></td><td>{esc('#' + str(p['_research_rank']) if p.get('_research_rank') is not None else '—')}</td><td>{external(p.get('_rank_context', {}).get('source_url'), '#' + str(p['_rank_context']['rank'])) if p.get('_rank_context', {}).get('rank') is not None else '—'}</td>{count_cells}</tr>''')
         rank = p.get('_research_rank')
         context = p.get('_rank_context', {})
         news_rank = context.get('rank')
-        award = 'Additional Major' if p.get('program_kind') == 'additional_major' else ' / '.join(o['label'] for o in p.get('award_options', [])) or (p.get('award_level') if p.get('award_level') != 'other' else 'Unspecified')
-        rows.append(f'''<tr data-row-id="{esc(p['id'])}" {directory_sort_attributes(p)}><th scope="row">{esc(p.get('institution', {}).get('name'))}</th><td><a class="directory-program-link" href="{base}programs/{esc(p['id'])}/">{esc(p.get('title'))}</a><label class="compare-choice js-only"><input type="checkbox" data-row-compare="{esc(p['id'])}"> Compare<span class="sr-only"> {esc(p.get('title'))} at {esc(p.get('institution', {}).get('name'))}</span></label></td><td>{esc('#' + str(rank) if rank is not None else 'Unavailable')}<small>CSRankings · U.S.</small></td><td>{external(context.get('source_url'), '#' + str(news_rank)) if news_rank is not None else 'Unverified'}<small>{esc(context.get('edition') or 'Edition unverified')} · {esc(human(context.get('verification_status')))}</small></td><td>{esc(award)}</td></tr>''')
-    return '<p class="directory-scroll-hint">Scroll the table to see rankings and degree types.</p><div class="directory-table-wrap table-scroll" role="region" aria-label="Program directory table" tabindex="0"><table class="directory-table"><caption class="sr-only">Undergraduate programs; institution rankings are context, not measures of undergraduate teaching quality.</caption><thead><tr>' + ''.join('<th scope="col">' + label + '</th>' for label in ['University', 'Program', '<a href="' + base + 'methodology/#research" title="CSRankings five-field aggregate U.S. publication rank">AI Ranking</a>', 'US News Ranking', 'Degree Type']) + '</tr></thead><tbody>' + ''.join(rows) + '</tbody></table></div>'
+        profile = required_directory_counts(p)
+        count_cells = ''.join('<td class="required-count" data-required-category="' + key + '" title="Fixed courses plus countable required choices">' + (str(profile[key]) if profile is not None else '—') + '</td>' for key, _ in REQUIRED_COLUMNS)
+        group_attr = ' data-joint-member="northeastern-joint-ai"' if northeastern_joint(p) else ''
+        rows.append(f'''<tr data-row-id="{esc(p['id'])}"{group_attr} {directory_sort_attributes(p)}><td><label class="compare-choice js-only"><input type="checkbox" data-row-compare="{esc(p['id'])}"><span class="sr-only">Compare {esc(p.get('title'))} at {esc(p.get('institution', {}).get('name'))}</span></label></td><th scope="row">{esc(p.get('institution', {}).get('name'))}</th><td><a class="directory-program-link" href="{base}programs/{esc(p['id'])}/"><span class="directory-award">({esc(directory_award_label(p))})</span> {esc(directory_program_title(p))}</a></td><td>{esc('#' + str(rank) if rank is not None else '—')}</td><td>{external(context.get('source_url'), '#' + str(news_rank)) if news_rank is not None else '—'}</td>{count_cells}</tr>''')
+    headers = '<th rowspan="2" scope="col"><span class="sr-only">Compare</span></th>' + ''.join('<th rowspan="2" scope="col">' + label + '</th>' for label in ['University', 'Program', '<a href="' + base + 'methodology/#research" title="CSRankings aggregate U.S. publication rank">AI Ranking</a>', 'US News Ranking']) + '<th colspan="7" scope="colgroup" class="required-heading">Required Curriculum</th>'
+    return '<p class="directory-scroll-hint">Scroll the table to see rankings and required curriculum.</p><div class="directory-table-wrap table-scroll" role="region" aria-label="Program directory table" tabindex="0"><table class="directory-table"><colgroup><col style="width:50px"><col style="width:180px"><col style="width:320px"><col style="width:68px"><col style="width:82px"><col style="width:90px"><col style="width:60px"><col style="width:60px"><col style="width:76px"><col style="width:90px"><col style="width:94px"><col style="width:60px"></colgroup><caption class="sr-only">Required curriculum counts mapped fixed course identities, not credit loads or the whole degree. Joint-program ranges are not totals.</caption><thead><tr>' + headers + '</tr><tr>' + ''.join('<th scope="col">' + label + '</th>' for _, label in REQUIRED_COLUMNS) + '</tr></thead><tbody>' + ''.join(rows) + '</tbody></table></div>'
 
 
 def family_group(family, members, base):
@@ -433,7 +482,7 @@ def root_page(data, base):
 <dialog id="filter-panel" class="filter-dialog" aria-labelledby="filter-title"><div class="dialog-heading"><h2 id="filter-title">Search &amp; filters</h2><button type="button" id="close-filters" aria-label="Close search and filters">Close</button></div><form id="filters" class="filters" role="search"><label class="search-label" for="search">Search programs<input type="search" id="search" name="q" placeholder="Institution, program, or course…" autocomplete="off"></label><div class="filter-row">{controls}</div><div class="filter-footer"><p class="filter-help">Course categories include elective options. Discipline filters use reviewed family membership. Exact awards and second-major eligibility are source verified; multiple offered awards count as one program.</p><button type="button" id="reset-filters" class="text-button">Reset filters</button></div><button type="button" id="apply-filters">Show results</button></form></dialog>
 <noscript><p class="notice">All documented programs are listed below. Enable JavaScript to filter and compare programs.</p></noscript>
 <div class="results-heading"><p id="result-count" role="status" aria-live="polite">{len(programs)} programs</p><label class="sort-control js-only" for="sort-order">Sort programs<select id="sort-order" name="sort"><option value="csrankings">CSRankings aggregate U.S. rank · ascending</option><option value="rank">U.S. News rank · ascending</option><option value="name">Institution name · A–Z</option></select></label></div>
-{cohort_directory(programs, institutions, families, base, cohort.get('edition') if isinstance(cohort, dict) else None, data.get('csrankings'))}<p class="directory-method-note">AI Ranking: CSRankings five-field aggregate U.S. publication rank. Missing ranks stay unavailable; ranking categories and credit systems are not interchangeable. <a href="{base}methodology/#research">Ranking methodology</a> · <a href="{base}coverage/">Coverage and limitations</a></p>
+{cohort_directory(programs, institutions, families, base, cohort.get('edition') if isinstance(cohort, dict) else None, data.get('csrankings'))}<p class="directory-method-note">Required Curriculum counts fixed courses plus mandatory choose-N selections with a clear category and no unresolved overlap. A choose-one block counts as one course, not its option-pool size. Credit-only, nested, mixed-category and overlapping choices remain separate; incomplete inventories can omit courses, and 0 means none mapped. Other includes unclassified and generic elective categories. Joint-program ranges reflect matching variants, not a combined curriculum. Missing inventories and ranks use —. AI Ranking is the CSRankings five-field aggregate U.S. publication rank. <a href="{base}methodology/#research">Ranking methodology</a> · <a href="{base}coverage/">Coverage and limitations</a></p>
 <div id="empty-state" class="empty-state" hidden><span class="eyebrow">NO MATCHES</span><h3>No programs match your filters.</h3><p>No documented program matches these filters. This does not establish that such a program does not exist.</p><button type="button" id="empty-reset">Clear filters</button></div></section>
 <div id="compare-tray" class="compare-tray" hidden><span id="tray-count">0 of 4 selected</span><a href="#comparison">Compare programs ↓</a></div><section id="comparison" class="comparison js-only" aria-labelledby="compare-title"><div class="section-heading"><div><span class="eyebrow">PROGRAM COMPARISON</span><h2 id="compare-title">Compare programs</h2></div><button type="button" id="clear-comparison" class="text-button">Clear selection</button></div><p class="comparison-intro">Choose up to four programs. Credit units and incomplete curricula stay visible; course counts are not measures of program quality.</p><label class="comparison-profile-control" for="compare-profile">Curriculum profile<select id="compare-profile"><option value="required">Required curriculum</option><option value="options">Elective options</option></select></label><div id="compare-status" role="status" aria-live="polite"></div><div id="comparison-content"><p class="comparison-placeholder">Select “Compare” on a program to begin.</p></div></section>
 <section class="method-callout"><span class="eyebrow">SOURCES & METHODS</span><h2>Check the evidence behind each record.</h2><p>Official sources, verification dates, requirement structure, and unknowns travel with the data. Source statements about program aims and outcomes are kept separate from editorial classifications.</p><a href="{base}methodology/">How to read this atlas →</a></section>'''
@@ -467,10 +516,13 @@ def profile_choices(program, profile):
     sources = {s.get('id'): s for s in program.get('sources', [])}
     contexts = {'required': 'Required selection', 'conditional': 'Conditional selection', 'unresolved': 'Selection context unresolved'}
     items = []
+    counted = {c["id"]: c for c in profile["required_obligations"]["counted_choices"]}
+    excluded = {c["id"]: c["reason"] for c in profile["required_obligations"]["excluded_choices"]}
     for choice in choices:
         context = contexts.get(choice.get('context'), 'Selection context unresolved')
         origin = {'family': 'Shared family requirement', 'variant': 'Local variant requirement', 'replacement': 'Variant replacement'}.get(choice.get('origin'))
-        items.append(f'<li><strong>{esc(choice.get("title"))}</strong><div class="profile-choice-rule">{esc(profile_selection(choice))}</div><small>{esc(context)}{esc(" · " + origin) if origin else ""}. Nested rules are not added together.</small>{"<p>" + esc(choice["summary"]) + "</p>" if choice.get("summary") else ""}<small>{external(sources.get(choice.get("source_id"), {}).get("url"), "Source")} · <a href="#requirement-{esc(choice.get("id"))}">Full requirement</a></small></li>')
+        accounting = "Counts as {} required {} selection(s).".format(counted[choice["id"]]["count"], CATEGORIES[counted[choice["id"]]["category"]]) if choice["id"] in counted else "Not added to counts: " + excluded.get(choice["id"], "context unresolved") + "."
+        items.append(f'<li><small>{esc(accounting)}</small><strong>{esc(choice.get("title"))}</strong><div class="profile-choice-rule">{esc(profile_selection(choice))}</div><small>{esc(context)}{esc(" · " + origin) if origin else ""}. Nested rules are not added together.</small>{"<p>" + esc(choice["summary"]) + "</p>" if choice.get("summary") else ""}<small>{external(sources.get(choice.get("source_id"), {}).get("url"), "Source")} · <a href="#requirement-{esc(choice.get("id"))}">Full requirement</a></small></li>')
     return f'<details class="profile-choices"><summary>{len(choices)} documented selection rules</summary><p class="profile-denominator">Course counts and credit amounts are different measures. Each rule retains its own unit and parent context; no pathway is selected for you.</p><ul>{"".join(items)}</ul></details>'
 
 
@@ -515,20 +567,21 @@ def category_chart(p):
         return '<div class="notice"><strong>Curriculum profile not yet extracted.</strong><p>No course records are available for this program. Category coverage is unknown; missing records do not mean the curriculum contains zero courses in a category.</p></div>'
     profile = curriculum_profile(p)
     panels = []
-    for mode, label in [('required', 'fixed required course'), ('options', 'elective option')]:
+    for mode, label in [('required', 'required course obligation'), ('options', 'elective option')]:
         group = profile[mode]
-        total = group['count']
+        plotted = profile['required_obligations'] if mode == 'required' else group
+        total = plotted['count']
         identity_note = profile_identity_note(profile, group)
         count_noun = 'identities' if identity_note else 'records'
         identity_markup = '<p class="profile-identity">' + esc(identity_note) + '</p>' if identity_note else ''
-        description = 'Mapped fixed course set; cohort, placement, waiver and substitution conditions in the sources still apply. Required choice blocks are separate below.' if mode == 'required' else 'Available elective and required-choice options, not courses every student must take. Fixed required courses are excluded from this option count.'
+        description = f"{group['count']} distinct fixed required course {count_noun} + {profile['required_obligations']['choice_count']} mandatory course selections. Countable choose-N blocks contribute N, not pool size. Credit-only, nested, mixed-category and overlapping rules remain separate below; source conditions still apply." if mode == 'required' else 'Available elective and required-choice options, not courses every student must take. Fixed required courses are excluded from this option count.'
         chart = ''
         if total:
-            maximum = max(group['categories'].values()) or 1
-            chart = '<div class="category-chart">' + ''.join(f'<div class="category-row" data-category="{key}"><span>{name}</span><div class="bar-track" aria-hidden="true"><span class="bar" style="width:{group["categories"].get(key, 0) / maximum * 100:.2f}%"></span></div><strong>{category_count_label(group["categories"].get(key, 0))}</strong></div>' for key, name in CATEGORIES.items()) + '</div>'
+            maximum = max(plotted['categories'].values()) or 1
+            chart = '<div class="category-chart">' + ''.join(f'<div class="category-row" data-category="{key}"><span>{name}</span><div class="bar-track" aria-hidden="true"><span class="bar" style="width:{plotted["categories"].get(key, 0) / maximum * 100:.2f}%"></span></div><strong>{category_count_label(plotted["categories"].get(key, 0))}</strong></div>' for key, name in CATEGORIES.items()) + '</div>'
         else:
             chart = '<p class="profile-unavailable">' + ('A fixed required course set is not established by the recorded rules. This does not mean there are no requirements.' if mode == 'required' else 'No elective option set is established by the recorded structured rules.') + '</p>'
-        panels.append(f'<div class="profile-panel" data-profile="{mode}"><p class="profile-total">{total} distinct {label} {count_noun}</p><p class="profile-denominator">{description}</p>{identity_markup}<p class="profile-taxonomy">{esc(taxonomy_coverage_note(group))}</p>{chart}</div>')
+        panels.append(f'<div class="profile-panel" data-profile="{mode}"><p class="profile-total">{str(total) + " required course obligations" if mode == "required" else str(total) + " distinct elective option " + count_noun}</p><p class="profile-denominator">{description}</p>{identity_markup}<p class="profile-taxonomy">{esc(taxonomy_coverage_note(group))}</p>{chart}</div>')
     uncertainty_noun = 'course identities' if profile.get('identity', {}).get('crosslisted_aliases') else 'course records'
     outside_count = profile["unresolved"]["count"]
     outside_noun = ('course identity' if profile.get('identity', {}).get('crosslisted_aliases') else 'course record') if outside_count == 1 else uncertainty_noun
@@ -537,7 +590,7 @@ def category_chart(p):
         uncertainty += f' {profile["unresolved_group_count"]} groups need their full recorded context.'
     if profile['overlap_count']:
         uncertainty += f' {profile["overlap_count"]} {uncertainty_noun} appear in multiple groups and are counted once.'
-    return '<div class="curriculum-profile"><p class="profile-denominator">Counts use distinct mapped course identities within each view, not credit totals or a share of the degree. Categories describe mapped records, including Other / unclassified. “0 mapped” means no mapped records classified in that category in this view—not evidence that the curriculum lacks that subject. Partial requirement or taxonomy evidence can omit relevant courses.</p><fieldset class="profile-switch"><legend>Curriculum view</legend><input class="sr-only" type="radio" name="curriculum-view" id="profile-required" value="required" checked><label for="profile-required">Required curriculum</label><input class="sr-only" type="radio" name="curriculum-view" id="profile-options" value="options"><label for="profile-options">Elective options</label><div class="profile-panels">' + ''.join(panels) + '</div></fieldset><p class="profile-uncertainty">' + esc(uncertainty) + '</p>' + course_identity_evidence(p) + profile_choices(p, profile) + '</div>'
+    return '<div class="curriculum-profile"><p class="profile-denominator">Required counts include fixed mapped course identities plus countable mandatory selections. Option counts show distinct candidate identities. These are not credit totals or shares of the degree. Categories describe mapped records, including Other / unclassified. “0 mapped” means no mapped records classified in that category in this view—not evidence that the curriculum lacks that subject. Partial requirement or taxonomy evidence can omit relevant courses.</p><fieldset class="profile-switch"><legend>Curriculum view</legend><input class="sr-only" type="radio" name="curriculum-view" id="profile-required" value="required" checked><label for="profile-required">Required curriculum</label><input class="sr-only" type="radio" name="curriculum-view" id="profile-options" value="options"><label for="profile-options">Elective options</label><div class="profile-panels">' + ''.join(panels) + '</div></fieldset><p class="profile-uncertainty">' + esc(uncertainty) + '</p>' + course_identity_evidence(p) + profile_choices(p, profile) + '</div>'
 
 def requirement_tree(p):
     requirements = p.get("requirements", [])
@@ -546,7 +599,7 @@ def requirement_tree(p):
     sources = {s.get('id'): s for s in p.get('sources', [])}
     rendered = set()
 
-    def render(r, seen):
+    def render(r, seen, depth=0):
         rid = r.get("id")
         if rid in seen:
             return ""
@@ -554,7 +607,7 @@ def requirement_tree(p):
         rendered.add(rid)
         requirement_courses = [course_map[cid] for cid in dict.fromkeys(r.get("course_ids") or []) if cid in course_map]
         courses = "".join(f'<li><a href="#course-{esc(c["id"])}">{esc(c.get("code") or "Code unknown")} · {esc(c.get("name") or "Course name not verified")}</a></li>' for c in requirement_courses)
-        children = "".join(render(child, seen) for child in requirements if child.get("parent_id") == rid)
+        children = "".join(render(child, seen, depth + 1) for child in requirements if child.get("parent_id") == rid)
         selection = []
         if r.get("count") is not None:
             noun = 'alternative' if r.get('kind') == 'alternative' else 'selection' if children else 'course'
@@ -570,7 +623,11 @@ def requirement_tree(p):
         if r.get('component') in ('ai_core', 'domain', 'integration'):
             provenance_badges += badge({'ai_core': 'AI core', 'domain': 'Discipline', 'integration': 'Integration'}[r['component']])
         source_wording = '<details class="source-wording"><summary>Source wording</summary><blockquote>' + esc(r['source_text']) + '</blockquote></details>' if r.get('source_text') else ''
-        return f'<li class="requirement" id="requirement-{esc(rid)}"><div>{badge(operator)}{provenance_badges}<h3>{esc(r.get("title"))}</h3></div>{"<p>" + esc(" · ".join(selection)) + "</p>" if selection else ""}<p>{esc(r.get("summary") or "Requirement detail has not been extracted.")}</p>{source_wording}{course_list}{"<ul>" + children + "</ul>" if children else ""}{evidence}</li>'
+        child_titles = [child.get('title') or 'Untitled group' for child in requirements if child.get('parent_id') == rid]
+        preview = '<span class="requirement-preview">Includes: ' + esc(' · '.join(child_titles[:4])) + (f' · +{len(child_titles) - 4} more groups' if len(child_titles) > 4 else '') + '</span>' if child_titles else ''
+        rule = esc(operator + (' · ' + ' · '.join(selection) if selection else ''))
+        return f'''<li class="requirement" id="requirement-{esc(rid)}" data-requirement-depth="{depth}"><details class="requirement-disclosure" {"open" if depth < 2 else ""}><summary><h3 class="requirement-title">{esc(r.get('title'))}</h3><span class="requirement-rule">{rule}</span>{preview}</summary><div class="requirement-body"><div class="requirement-tags">{badge(operator)}{provenance_badges}</div><p>{esc(r.get('summary') or 'Requirement detail has not been extracted.')}</p>{source_wording}{course_list}{'<ul>' + children + '</ul>' if children else ''}{evidence}</div></details></li>'''
+
 
     roots = [r for r in requirements if not r.get("parent_id") or r.get("parent_id") not in ids]
     if not requirements:
@@ -658,14 +715,18 @@ def program_page(p, base, family=None, research=None):
         ranking_context += '<p>Ranking provenance is not recorded for this institution.</p>'
     ranking_context += '</section>'
     body = f'''<div class="breadcrumb"><a href="{base}">Program index</a><span>/</span>{esc(institution.get('name'))}</div><section class="detail-hero"><div class="eyebrow">{esc(institution.get('name'))} / {esc(p.get('hosting_unit') or 'Hosting unit unknown')}</div><h1>{esc(p.get('title'))}</h1><p class="lede">{esc(p.get('overview') or 'Overview not yet recorded.')}</p><div class="detail-badges">{badge('No separate award' if (p.get('major_relationship') or {}).get('kind') == 'second_major_only' else p.get('award_level'))}{badge(human(p.get('program_kind')))}{badge(human(p.get('status')))}</div>{award_options_markup(p)}{major_relationship_markup(p)}{parent_context_markup(p)}<div class="official-links">{links}</div></section>
-{family_context(p, family, base)}<dl class="fact-grid"><div><dt>Calendar</dt><dd>{esc(human(institution.get('calendar')))}</dd></div><div><dt>Catalog year</dt><dd>{esc(p.get('catalog_year'))}</dd></div><div><dt>Last verified</dt><dd>{esc(date_value(p))}</dd></div><div><dt>Requirement inventory</dt><dd>{esc(evidence_label(p))}</dd></div></dl>
-<div class="notice evidence-notice"><strong>Read the evidence in context.</strong><p>Verification: {esc(human(p.get('verification_status')))}. {missing_credits} of {len(courses)} course records have unknown credits. Unknown values are not zero. Recorded course credits must not be added to estimate degree requirements.</p><p class="curriculum-scope">{esc(curriculum_scope(p))}</p><p>First offered: {first_text}</p>{'<ul>' + notes + '</ul>' if notes else ''}</div>{degree_audit_program(p)}{ranking_context}{research_program_markup(research, base)}
-<nav class="section-nav" aria-label="Program sections"><a href="#curriculum">Curriculum</a><a href="#requirements">Requirements</a><a href="#outcomes">Program aims &amp; outcomes</a><a href="#courses">Course records</a><a href="#sources">Sources</a></nav>
-<section id="curriculum" class="detail-section"><span class="eyebrow">01 / CURRICULUM PROFILE</span><h2>Required curriculum &amp; elective options</h2>{category_chart(p)}</section>
-<section id="requirements" class="detail-section"><span class="eyebrow">02 / PROGRAM STRUCTURE</span><h2>Requirements & choices</h2><p class="section-note">Nested groups preserve course choices and alternatives. The profile uses the resolved rules above the course level. Follow each group’s rule: elective pools and alternative paths do not make every listed course compulsory.</p>{requirement_tree(p)}</section>
-<section id="outcomes" class="detail-section"><span class="eyebrow">03 / PROGRAM AIMS &amp; OUTCOMES</span><h2>Program aims &amp; outcomes</h2><div class="outcome-grid"><div><h3>Source statements</h3><p class="section-note">Statements summarized from official evidence. Types distinguish learning outcomes, program aims and career pathways where recorded; unclassified statements do not imply a learning outcome.</p>{outcomes(p, 'source_stated')}</div><div><h3>Inferred taxonomy</h3><p class="section-note">Editorial classifications. These are interpretations, not claims made by the institution.</p>{outcomes(p, 'inferred_taxonomy')}</div></div></section>
+<dl class="fact-grid"><div><dt>Calendar</dt><dd>{esc(human(institution.get('calendar')))}</dd></div><div><dt>Catalog year</dt><dd>{esc(p.get('catalog_year'))}</dd></div><div><dt>Last verified</dt><dd>{esc(date_value(p))}</dd></div><div><dt>Requirement inventory</dt><dd>{esc(evidence_label(p))}</dd></div></dl>
+
+<nav class="section-nav" aria-label="Program sections"><a href="#outcomes">Program aims &amp; outcomes</a><a href="#curriculum">Curriculum</a><a href="#requirements">Requirements</a><a href="#courses">Course records</a><a href="#sources">Sources</a><a href="#evidence-context">Evidence &amp; review</a></nav>
+<section id="outcomes" class="detail-section"><span class="eyebrow">01 / PROGRAM AIMS &amp; OUTCOMES</span><h2>Program aims &amp; outcomes</h2><div class="outcome-grid"><div><h3>Source statements</h3><p class="section-note">Statements summarized from official evidence. Types distinguish learning outcomes, program aims and career pathways where recorded; unclassified statements do not imply a learning outcome.</p>{outcomes(p, 'source_stated')}</div><div><h3>Inferred taxonomy</h3><p class="section-note">Editorial classifications. These are interpretations, not claims made by the institution.</p>{outcomes(p, 'inferred_taxonomy')}</div></div></section>
+<section id="curriculum" class="detail-section"><span class="eyebrow">02 / CURRICULUM PROFILE</span><h2>Required curriculum &amp; elective options</h2>{category_chart(p)}</section>
+{ranking_context}{research_program_markup(research, base)}
+<section id="requirements" class="detail-section"><span class="eyebrow">03 / PROGRAM STRUCTURE</span><h2>Requirements & choices</h2><p class="section-note">Nested groups preserve course choices and alternatives. The profile uses the resolved rules above the course level. Follow each group’s rule: elective pools and alternative paths do not make every listed course compulsory.</p>{requirement_tree(p)}</section>
+
+{family_context(p, family, base)}
 <section id="courses" class="detail-section"><span class="eyebrow">04 / COURSE RECORDS</span><h2>Inspect the building blocks</h2>{metadata_availability(p)}<p class="section-note">Credits retain their original units. “Not recorded” means the atlas lacks evidence; it does not mean a course has no prerequisites.</p><div class="table-scroll" role="region" aria-label="Course records" tabindex="0"><table class="course-table"><thead><tr><th scope="col">Course</th><th scope="col">Category</th><th scope="col">Credits</th><th scope="col">Prerequisites</th><th scope="col">Evidence</th></tr></thead><tbody>{rows}</tbody></table></div>{'<p class="notice">No course records extracted yet.</p>' if not courses else ''}</section>
-<section id="sources" class="detail-section"><span class="eyebrow">05 / THE PAPER TRAIL</span><h2>Sources & provenance</h2><ol class="sources">{sources}</ol></section>'''
+<section id="sources" class="detail-section"><span class="eyebrow">05 / THE PAPER TRAIL</span><h2>Sources & provenance</h2><ol class="sources">{sources}</ol></section>
+<section id="evidence-context" class="detail-section"><h2>Evidence &amp; review status</h2><div class="notice evidence-notice"><strong>Read the evidence in context.</strong><p>Verification: {esc(human(p.get('verification_status')))}. {missing_credits} of {len(courses)} course records have unknown credits. Unknown values are not zero. Recorded course credits must not be added to estimate degree requirements.</p><p class="curriculum-scope">{esc(curriculum_scope(p))}</p><p>First offered: {first_text}</p>{'<ul>' + notes + '</ul>' if notes else ''}</div>{degree_audit_program(p)}</section>'''
     return shell(p.get("title", "Program"), body, base)
 
 
@@ -799,7 +860,7 @@ def methodology_page(data, base):
     body = f'''<section class="page-hero"><span class="eyebrow">HOW TO READ THE ATLAS</span><h1>Sources &amp; methodology</h1><p class="lede">An inspectable research index. Curriculum evidence and publication-based research context are separate; neither is a program-quality score.</p></section>
 <div class="method-layout"><nav class="method-nav" aria-label="Methodology sections"><a href="#scope">01 · Scope</a><a href="#evidence">02 · Evidence</a><a href="#curriculum-method">03 · Curriculum</a><a href="#research">04 · Research context</a><a href="#unknowns">05 · Limitations</a></nav><div class="prose"><section id="scope"><h2>01 / A precise inclusion rule</h2><p>Programs qualify when their official undergraduate title includes AI or Artificial Intelligence. This includes explicit AI compounds such as GenAI and GeoAI when the official source identifies their artificial-intelligence meaning; incidental letters in unrelated words do not qualify. Degrees, additional majors, minors, and concentrations remain separate program types. A general computer science program with AI electives does not qualify on that basis alone.</p><p>The intended institution scope comprises two independent U.S. News top-100 cohorts, inclusive of ties: National Universities and National Liberal Arts Colleges. Until complete membership is source-verified and recorded, the atlas is a pilot inventory. Consult the coverage ledger for what has actually been inspected.</p></section>
 <section id="evidence"><h2>02 / Follow the source</h2><p>Official university catalogs, program pages, and announcements support program records. Sources retain their URLs, retrieval dates, catalog years, locators, and confidence. The last verification date describes the research record, not a guarantee that the source has remained unchanged.</p><p>Launch dates are recorded only when evidence supports the date and its precision. The oldest search result is not treated as a program’s first offering. Source statements about program aims, learning outcomes and career pathways appear separately from inferred editorial themes. Statement types are shown only when explicitly recorded.</p></section>
-{degree_audit_summary(meta)}<section id="curriculum-method"><h2>03 / Compare structure with care</h2><p>Requirements preserve all-of groups, course-count choices, credit-count choices, and nested alternatives. A course can belong to multiple requirements. The required profile shows only fixed courses established by all-of rules with no choice or unresolved-note ancestor. The options profile shows documented elective and required-choice candidates, excluding fixed required courses. Each view deduplicates stable course IDs; note-only and unbound records stay unresolved rather than becoming compulsory. Categories use course-level classifications, including Other / unclassified. A zero category count means no mapped classified records in the selected view, not proven absence from the actual curriculum. Taxonomy coverage is independent of requirement-inventory completeness; a complete inventory can contain unclassified courses.</p><p>“Complete” describes the requirement inventory for the represented award at its recorded catalog year. A complete minor or concentration inventory does not cover the whole parent degree. Course descriptions, prerequisite statements, credit amounts, and known credit units have separate availability counts; a complete requirement inventory may still have missing course metadata.</p><p>Program families are grouped only when an explicit, sourced relationship has been recorded; titles are not used to infer membership. A family groups related programs but is not an additional award. Each named variant retains its stable program page and is compared as a concrete program. Shared, local variant and replacement requirement labels identify the recorded relationship; a local requirement is not necessarily unique to that variant. Missing labels mean the relationship has not been classified. Discipline filters use only recorded family membership.</p><p>The default required profile is a fixed course set, not an estimate of the entire degree: required choice blocks remain separate with their published choose-N or credit rules. No pathway is selected or averaged. Nested selection amounts are not added together, and course counts never share a denominator with credits. Family profiles use resolved variant requirements after exclusions and replacements. These counts do not measure depth, quality or student experience.</p><p>Quarter hours, semester hours, course units, and other units retain their original labels. No conversion or normalized total is inferred. Unknown credits are null, never zero. Missing prerequisites, descriptions, course sites, or syllabi remain explicitly unrecorded.</p></section>
+{degree_audit_summary(meta)}<section id="curriculum-method"><h2>03 / Compare structure with care</h2><p>Requirements preserve all-of groups, course-count choices, credit-count choices, and nested alternatives. A course can belong to multiple requirements. The required profile counts fixed courses established by all-of rules plus mandatory choose-N course selections with a clear category and no unresolved overlap. Each choose-N block contributes N, not its option-pool size. The options profile shows documented elective and required-choice candidates, excluding fixed required courses. Each view deduplicates stable course IDs; note-only and unbound records stay unresolved rather than becoming compulsory. Categories use course-level classifications, including Other / unclassified. A zero category count means no mapped classified records in the selected view, not proven absence from the actual curriculum. Taxonomy coverage is independent of requirement-inventory completeness; a complete inventory can contain unclassified courses.</p><p>“Complete” describes the requirement inventory for the represented award at its recorded catalog year. A complete minor or concentration inventory does not cover the whole parent degree. Course descriptions, prerequisite statements, credit amounts, and known credit units have separate availability counts; a complete requirement inventory may still have missing course metadata.</p><p>Program families are grouped only when an explicit, sourced relationship has been recorded; titles are not used to infer membership. A family groups related programs but is not an additional award. Each named variant retains its stable program page and is compared as a concrete program. Shared, local variant and replacement requirement labels identify the recorded relationship; a local requirement is not necessarily unique to that variant. Missing labels mean the relationship has not been classified. Discipline filters use only recorded family membership.</p><p>The default required profile counts documented course obligations, not the entire degree. Credit-only, nested, mixed-category and overlapping choices remain separate with their published rules. No pathway is selected or averaged. Nested selection amounts are not added together, and course counts never share a denominator with credits. Family profiles use resolved variant requirements after exclusions and replacements. These counts do not measure depth, quality or student experience.</p><p>Quarter hours, semester hours, course units, and other units retain their original labels. No conversion or normalized total is inferred. Unknown credits are null, never zero. Missing prerequisites, descriptions, course sites, or syllabi remain explicitly unrecorded.</p></section>
 <section id="research"><h2>04 / Research is context</h2>{research_markup}</section>
 <section id="unknowns"><h2>05 / What remains unknown</h2><p>Coverage is incomplete. A missing institution or program does not establish absence. A “no qualifying program found” conclusion requires a documented search of official sources. Inaccessible pages remain inaccessible; pending institutions remain pending.</p><ul>{limitations(meta)}</ul><p>Use this atlas to frame questions, then confirm current admission and graduation requirements with the institution.</p><a href="{base}coverage/">Inspect the coverage ledger →</a></section></div></div>'''
     return shell('Methodology', body, base, 'methodology')
@@ -816,7 +877,7 @@ def build(data: dict, output: Path, base_path: str = '/ai-program-atlas/') -> No
         if not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', p.get('id', '')):
             raise ValueError('Program IDs must be stable lowercase hyphenated slugs')
     (output / 'assets').mkdir(parents=True, exist_ok=True)
-    for asset in ('atlas.css', 'atlas.js'):
+    for asset in ('atlas.css', 'atlas.js', 'requirements.js'):
         shutil.copyfile(Path(__file__).parent / 'web' / asset, output / 'assets' / asset)
     pages = {'index.html': root_page(data, base), 'coverage/index.html': coverage_page(data, base), 'methodology/index.html': methodology_page(data, base)}
     family_map = {f['id']: dict(f) for f in data.get('families', [])}

@@ -23,6 +23,9 @@
   const cards = [...document.querySelectorAll('[data-program-id], [data-row-id]')];
   const viewControl = document.getElementById('directory-view');
   let selected = [];
+  let jointExpanded = false;
+  const jointRows = [...document.querySelectorAll('[data-joint-member]')];
+  const jointIds = new Set(jointRows.map(row => row.dataset.rowId));
   let profileMode = 'required';
   const sortControl = document.getElementById('sort-order');
   const profileControl = document.getElementById('compare-profile');
@@ -63,15 +66,16 @@
     if (!p.course_profile.count) return '<div class="compare-profile-cell">Not yet extracted</div>';
     const profile = p.curriculum_profile;
     const group = profile[profileMode];
+    const plotted = profileMode === 'required' ? profile.required_obligations : group;
     const classification = group.classification || {reviewed:0, mixed:0, unclassified:0, unreviewed:group.count};
     const label = profileMode === 'required' ? 'fixed required course' : 'elective option';
-    const note = profileMode === 'required' ? 'Mapped fixed course set; cohort, placement, waiver and substitution conditions in the sources still apply. Required choice blocks are separate below.' : 'Elective and required-choice candidates, not all compulsory. Fixed required courses are excluded.';
+    const note = profileMode === 'required' ? `${group.count} distinct fixed required course ${profile.identity?.crosslisted_aliases ? 'identities' : 'records'} + ${profile.required_obligations.choice_count} mandatory selections. Choose-N contributes N, not pool size. Credit-only, nested, mixed-category and overlapping rules remain separate.` : 'Elective and required-choice candidates, not all compulsory. Fixed required courses are excluded.';
     const identityNote = profile.identity?.crosslisted_aliases ? `<p class="profile-identity">${group.count} mapped course identities from ${group.source_record_count ?? group.count} retained source-code records in this view. Only explicitly verified cross-lists are combined. The course table retains every source code and its evidence.</p>` : '';
     const countNoun = identityNote ? 'identities' : 'records';
     const roleNoun = identityNote ? 'course identities' : 'course records';
     const outsideNoun = profile.unresolved.count === 1 ? (identityNote ? 'course identity' : 'course record') : roleNoun;
     const empty = profileMode === 'required' ? 'A fixed required course set is not established; this does not mean there are no requirements.' : 'No option set is established by the structured rules.';
-    return `<div class="compare-profile-cell"><p class="profile-total">${group.count} distinct ${label} ${countNoun}</p><p class="profile-denominator">${note}</p>${identityNote}<p class="profile-taxonomy">Taxonomy review: ${classification.reviewed} reviewed · ${classification.mixed} mixed · ${classification.unclassified} unclassified · ${classification.unreviewed} unreviewed, of ${group.count} mapped identities. Missing review is not verified classification. Requirement inventory completeness is separate.</p>${group.count ? '<dl class="mini-counts">' + Object.entries(categories).map(([key,name]) => `<dt>${e(name)}</dt><dd>${group.categories[key] || '0 mapped'}</dd>`).join('') + '</dl>' : '<p class="profile-unavailable">' + empty + '</p>'}<small>Distinct mapped course identities; not credit totals or degree shares. “0 mapped” means no mapped records classified here, not evidence that the curriculum lacks the subject. Partial requirement or taxonomy evidence can omit relevant courses.</small><p class="profile-uncertainty">${profile.unresolved.count} ${outsideNoun} ${profile.unresolved.count === 1 ? 'is' : 'are'} outside the fixed/option count profiles; see individual requirement rules for their context.${profile.overlap_count ? ' ' + profile.overlap_count + ' ' + roleNoun + ' appear in multiple groups and are counted once.' : ''}</p></div>`;
+    return `<div class="compare-profile-cell"><p class="profile-total">${profileMode === 'required' ? plotted.count + ' required course obligations' : group.count + ' distinct ' + label + ' ' + countNoun}</p><p class="profile-denominator">${note}</p>${identityNote}<p class="profile-taxonomy">Taxonomy review: ${classification.reviewed} reviewed · ${classification.mixed} mixed · ${classification.unclassified} unclassified · ${classification.unreviewed} unreviewed, of ${group.count} mapped identities. Missing review is not verified classification. Requirement inventory completeness is separate.</p>${group.count ? '<dl class="mini-counts">' + Object.entries(categories).map(([key,name]) => `<dt>${e(name)}</dt><dd>${plotted.categories[key] || '0 mapped'}</dd>`).join('') + '</dl>' : '<p class="profile-unavailable">' + empty + '</p>'}<small>Distinct mapped course identities; not credit totals or degree shares. “0 mapped” means no mapped records classified here, not evidence that the curriculum lacks the subject. Partial requirement or taxonomy evidence can omit relevant courses.</small><p class="profile-uncertainty">${profile.unresolved.count} ${outsideNoun} ${profile.unresolved.count === 1 ? 'is' : 'are'} outside the fixed/option count profiles; see individual requirement rules for their context.${profile.overlap_count ? ' ' + profile.overlap_count + ' ' + roleNoun + ' appear in multiple groups and are counted once.' : ''}</p></div>`;
   };
   const profileChoices = p => {
     const choices = p.curriculum_profile.choices;
@@ -103,6 +107,7 @@
     profileMode = params.get('profile') === 'options' ? 'options' : 'required';
     profileControl.value = profileMode;
     selected = [...new Set((params.get('compare') || '').split(','))].filter(id => byId.has(id)).slice(0, 4);
+    jointExpanded = params.has('joint') ? params.get('joint') === 'open' : selected.some(id => jointIds.has(id));
     expansionSpecified = params.has('expand');
     expanded = [...new Set((params.get('expand') || '').split(','))].filter(id => familyMap.has(id));
     if (!params.has('expand') && controls.discipline.value) programs.filter(p => (p.family?.disciplines || []).includes(controls.discipline.value)).forEach(p => { if (!expanded.includes(p.family.id)) expanded.push(p.family.id); });
@@ -115,6 +120,7 @@
     if (sortControl.value !== 'csrankings') params.set('sort', sortControl.value);
     keys.forEach(key => { if (controls[key].value) params.set(key, controls[key].value); });
     if (selected.length) params.set('compare', selected.join(','));
+    if (jointExpanded || selected.some(id => jointIds.has(id))) params.set('joint', jointExpanded ? 'open' : 'closed');
     if (profileMode === 'options') params.set('profile', 'options');
     Object.entries(pathState).forEach(([group,path]) => { if (path !== 'majors') params.set('path_' + group, path); });
     Object.entries(awardState).forEach(([group,award]) => { if (award) params.set('award_' + group, award); });
@@ -247,10 +253,17 @@
       }
       return 0;
     };
-    document.querySelectorAll('.program-grid, .family-variants, .directory-table tbody').forEach(container => {
+    document.querySelectorAll('.program-grid, .family-variants').forEach(container => {
       const entries = [...container.children];
       const ordered = [...entries].sort(compare);
       if (ordered.some((entry, index) => entry !== entries[index])) ordered.forEach(entry => container.append(entry));
+    });
+    document.querySelectorAll('.directory-table tbody').forEach(container => {
+      const children = [...container.children];
+      children.filter(row => !row.dataset.jointMember).sort(compare).forEach(row => {
+        container.append(row);
+        if (row.dataset.tableGroup) children.filter(child => child.dataset.jointMember === row.dataset.tableGroup).sort(compare).forEach(child => container.append(child));
+      });
     });
   }
 
@@ -267,8 +280,21 @@
     cards.forEach(card => {
       const program = byId.get(card.dataset.programId || card.dataset.rowId);
       const show = matches(program) && majorMatches(program) && pathState[program.cohort_group] === program.program_path;
-      card.hidden = !show;
+      card.dataset.matches = String(show);
+      card.hidden = !show || Boolean(card.dataset.jointMember && !jointExpanded);
       if (show) visibleIds.add(program.id);
+    });
+    document.querySelectorAll('[data-table-group]').forEach(group => {
+      const matching = jointRows.filter(row => row.dataset.matches === 'true');
+      group.hidden = !matching.length;
+      group.querySelector('.joint-awards').textContent = [...new Set(matching.map(row => { const p = byId.get(row.dataset.rowId); return p.award_options.length ? p.award_options.map(option => option.label.length <= 12 ? option.label : option.normalized.toUpperCase()).join(' / ') : p.award_level; }))].sort().join(' / ');
+      group.querySelectorAll('[data-table-expand]').forEach(button => button.setAttribute('aria-expanded', String(jointExpanded)));
+      group.querySelector('.joint-toggle-icon').textContent = jointExpanded ? '▾' : '▸';
+      group.querySelector('.joint-summary').textContent = `${matching.length} matching ${matching.length === 1 ? 'program' : 'programs'} · ${jointExpanded ? 'hide variants' : 'course-count ranges; open for variants'}`;
+      group.querySelectorAll('[data-joint-count]').forEach(cell => {
+        const values = matching.map(row => row.querySelector(`[data-required-category="${cell.dataset.jointCount}"]`).textContent).filter(text => text !== '—').map(Number);
+        cell.textContent = !values.length ? '—' : Math.min(...values) === Math.max(...values) ? String(values[0]) : `${Math.min(...values)}–${Math.max(...values)}`;
+      });
     });
     cohortSections.forEach(section => {
       const group = section.dataset.cohortGroup;
@@ -333,6 +359,7 @@
     clearTimeout(timer);
     writeState();
   }));
+  document.querySelectorAll('[data-table-expand]').forEach(button => button.addEventListener('click', () => { jointExpanded = !jointExpanded; clearTimeout(timer); writeState(); }));
   viewControl.addEventListener('change', () => { clearTimeout(timer); writeState(); });
   const openFilters = () => { if (!filterPanel.open) filterPanel.showModal(); controls.q.focus(); };
   const closeFilters = () => { clearTimeout(timer); writeState(); filterPanel.close(); };
