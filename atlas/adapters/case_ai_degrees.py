@@ -1,6 +1,7 @@
 """Observe the Case AI BA and BS major tables; university requirements remain reviewed gaps."""
 from atlas.adapters.national_curriculum_common import content, clean, require_phrases
 from atlas.adapters.degree_table_observations import Tables, reviewed_outcomes
+from atlas.adapters.case_degree_courses import classify_observed
 
 
 def parse_case(html, program_id, award, url):
@@ -42,4 +43,4 @@ def parse_case(html, program_id, award, url):
         (['professional responsibilities','legal and ethical principles'],'Make professional computing decisions informed by law and ethics.'),
         (['member or leader','team'],'Contribute to and lead teams working in the discipline.'),
         (['theory, techniques, and tools','assumptions','societal benefits and risks',"stakeholders' needs"],'Apply AI methods with awareness of their assumptions, societal impacts and stakeholder needs.')],sid)
-    return {'outcomes':outcomes,'id':program_id,'title':'Artificial Intelligence','award_level':award,'program_kind':'degree','courses':list(t.courses.values()),'requirements':t.rules}
+    return {'outcomes':outcomes,'id':program_id,'title':'Artificial Intelligence','award_level':award,'program_kind':'degree','courses':classify_observed(list(t.courses.values())),'requirements':t.rules}

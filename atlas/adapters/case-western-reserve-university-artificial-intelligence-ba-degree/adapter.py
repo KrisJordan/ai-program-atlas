@@ -26,3 +26,6 @@ def parse_uger_policy(html):
 
 
 SOURCE_PARSERS = {policies.DEGREE_URL: parse_degree_policy, policies.UGER_URL: parse_uger_policy}
+
+from atlas.adapters import case_degree_courses
+SOURCES = case_degree_courses.register(PROGRAM_ID, "BA", SOURCES, SOURCE_PARSERS)

@@ -44,7 +44,7 @@
     {
       "id": "case-western-reserve-university-artificial-intelligence-bs-degree-catalog",
       "url": "https://bulletin.case.edu/engineering/computer-data-sciences/artificial-intelligence-bs/",
-      "title": "Artificial Intelligence, BS \u2014 Case Western Reserve University Bulletin",
+      "title": "Artificial Intelligence, BS — Case Western Reserve University Bulletin",
       "fetched_at": "2026-10-10",
       "source_date": null,
       "catalog_year": "2026-2027",
@@ -69,6 +69,26 @@
       "source_date": null,
       "catalog_year": "2026-2027",
       "locator": "AI breadth classification; subject-wide breadth eligibility; communication/wellness/perspectives policies; all 13 approved tables and non-course options",
+      "confidence": "high"
+    },
+    {
+      "id": "case-degree-courses-csds",
+      "url": "https://bulletin.case.edu/course-descriptions/csds/",
+      "title": "Computer and Data Sciences (CSDS)",
+      "fetched_at": "2026-10-11T02:39:32+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Exact course blocks: CSDS 132, CSDS 134, CSDS 233, CSDS 237, CSDS 302, CSDS 310, CSDS 330, CSDS 340, CSDS 395A",
+      "confidence": "high"
+    },
+    {
+      "id": "case-degree-courses-engr",
+      "url": "https://bulletin.case.edu/course-descriptions/engr/",
+      "title": "Engineering Science (ENGR)",
+      "fetched_at": "2026-10-11T02:39:34+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Exact course blocks: ENGR 399",
       "confidence": "high"
     }
   ],
@@ -129,7 +149,18 @@
       "source_id": "case-western-reserve-university-artificial-intelligence-bs-degree-catalog",
       "url": "https://bulletin.case.edu/search/?P=MATH%20121",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-western-reserve-university-artificial-intelligence-bs-degree-catalog"
+        ],
+        "locator": "Program Requirements; MATH 121 Calculus for Science and Engineering I",
+        "rationale": "Limited title-based review: the exact official title unambiguously identifies calculus as mathematical theory. The full course description has not been reviewed.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-math-122",
@@ -191,15 +222,26 @@
       "id": "case-bs-engr-399",
       "code": "ENGR 399",
       "name": "Impact of Engineering on Society",
-      "description": null,
+      "description": "Ethical and professional responsibilities concerning unequal social impacts of engineering solutions.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "unknown",
-      "category": "other",
+      "category": "human_context",
       "source_id": "case-western-reserve-university-artificial-intelligence-bs-degree-catalog",
       "url": "https://bulletin.case.edu/search/?P=ENGR%20399",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-degree-courses-engr"
+        ],
+        "locator": "ENGR 399 course description; exact 2026-2027 identity",
+        "rationale": "Ethical and professional responsibilities concerning unequal social impacts of engineering solutions. This subject classification is independent of its requirement or elective role.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-phys-115",
@@ -289,127 +331,226 @@
       "id": "case-bs-csds-134",
       "code": "CSDS 134",
       "name": "Programming in Python",
-      "description": null,
+      "description": "Python programming and algorithmic problem solving, including data structures, recursion, object-oriented design and testing.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
+      "category": "foundations",
       "source_id": "case-western-reserve-university-artificial-intelligence-bs-degree-catalog",
       "url": "https://bulletin.case.edu/search/?P=CSDS%20134",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-degree-courses-csds"
+        ],
+        "locator": "CSDS 134 course description; exact 2026-2027 identity",
+        "rationale": "Python programming and algorithmic problem solving, including data structures, recursion, object-oriented design and testing. This subject classification is independent of its requirement or elective role.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-csds-132",
       "code": "CSDS 132",
       "name": "Programming in Java",
-      "description": null,
+      "description": "Java programming and algorithmic problem solving, including object-oriented design, data types and software testing.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "other",
+      "category": "foundations",
       "source_id": "case-western-reserve-university-artificial-intelligence-bs-degree-catalog",
       "url": "https://bulletin.case.edu/search/?P=CSDS%20132",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-degree-courses-csds"
+        ],
+        "locator": "CSDS 132 course description; exact 2026-2027 identity",
+        "rationale": "Java programming and algorithmic problem solving, including object-oriented design, data types and software testing. This subject classification is independent of its requirement or elective role.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-csds-237",
       "code": "CSDS 237",
       "name": "The Python Programming Language",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Python language and programming methods, including data structures, object-oriented design, files and software libraries.",
+      "prerequisites": "Prereq: CSDS 132 .",
+      "credits": 1.0,
       "credit_unit": "unknown",
-      "category": "other",
+      "category": "foundations",
       "source_id": "case-western-reserve-university-artificial-intelligence-bs-degree-catalog",
       "url": "https://bulletin.case.edu/search/?P=CSDS%20237",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-degree-courses-csds"
+        ],
+        "locator": "CSDS 237 course description; exact 2026-2027 identity",
+        "rationale": "Python language and programming methods, including data structures, object-oriented design, files and software libraries. This subject classification is independent of its requirement or elective role.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-csds-233",
       "code": "CSDS 233",
       "name": "Introduction to Data Structures",
-      "description": null,
-      "prerequisites": null,
+      "description": "Representation and manipulation of data structures, with searching, sorting, hashing and asymptotic analysis.",
+      "prerequisites": "Prereq: CSDS 132 or ECSE 132 or CSDS 134 .",
       "credits": 4.0,
       "credit_unit": "unknown",
-      "category": "other",
+      "category": "foundations",
       "source_id": "case-western-reserve-university-artificial-intelligence-bs-degree-catalog",
       "url": "https://bulletin.case.edu/search/?P=CSDS%20233",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-degree-courses-csds"
+        ],
+        "locator": "CSDS 233 course description; exact 2026-2027 identity",
+        "rationale": "Representation and manipulation of data structures, with searching, sorting, hashing and asymptotic analysis. This subject classification is independent of its requirement or elective role.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-csds-302",
       "code": "CSDS 302",
       "name": "Discrete Mathematics",
-      "description": null,
-      "prerequisites": null,
+      "description": "Discrete mathematical reasoning, proofs and induction, sets, relations, graphs and combinatorics.",
+      "prerequisites": "Prereq: MATH 122 or MATH 124 or MATH 126 .",
       "credits": 3.0,
       "credit_unit": "unknown",
-      "category": "other",
+      "category": "mathematics",
       "source_id": "case-western-reserve-university-artificial-intelligence-bs-degree-catalog",
       "url": "https://bulletin.case.edu/search/?P=CSDS%20302",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-degree-courses-csds"
+        ],
+        "locator": "CSDS 302 course description; exact 2026-2027 identity",
+        "rationale": "Discrete mathematical reasoning, proofs and induction, sets, relations, graphs and combinatorics. This subject classification is independent of its requirement or elective role.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-csds-310",
       "code": "CSDS 310",
       "name": "Algorithms",
-      "description": null,
-      "prerequisites": null,
+      "description": "Algorithm design and analysis, including asymptotic reasoning, recurrence relations, dynamic programming and graph algorithms.",
+      "prerequisites": "Prereq: ( CSDS 302 or ECSE 302 or MATH 304 with a C or higher) and ( CSDS 233 or ECSE 233 with a C or higher).",
       "credits": 3.0,
       "credit_unit": "unknown",
-      "category": "other",
+      "category": "foundations",
       "source_id": "case-western-reserve-university-artificial-intelligence-bs-degree-catalog",
       "url": "https://bulletin.case.edu/search/?P=CSDS%20310",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-degree-courses-csds"
+        ],
+        "locator": "CSDS 310 course description; exact 2026-2027 identity",
+        "rationale": "Algorithm design and analysis, including asymptotic reasoning, recurrence relations, dynamic programming and graph algorithms. This subject classification is independent of its requirement or elective role.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-csds-330",
       "code": "CSDS 330",
       "name": "Introduction to Artificial Intelligence",
-      "description": null,
-      "prerequisites": null,
+      "description": "Foundational AI methods: search, knowledge representation, reasoning under uncertainty, planning and introductory learning.",
+      "prerequisites": "Prereq: CSDS 233 . Prereq or Coreq: ( MATH 380 or OPRE 207 or STAT 301 or STAT 302 or STAT 312 or STAT 313 or STAT 332 or STAT 333 ).",
       "credits": 3.0,
       "credit_unit": "unknown",
       "category": "ai_ml",
       "source_id": "case-western-reserve-university-artificial-intelligence-bs-degree-catalog",
       "url": "https://bulletin.case.edu/search/?P=CSDS%20330",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-degree-courses-csds"
+        ],
+        "locator": "CSDS 330 course description; exact 2026-2027 identity",
+        "rationale": "Foundational AI methods: search, knowledge representation, reasoning under uncertainty, planning and introductory learning. This subject classification is independent of its requirement or elective role.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-csds-340",
       "code": "CSDS 340",
       "name": "Introduction to Machine Learning",
-      "description": null,
-      "prerequisites": null,
+      "description": "Machine-learning algorithms and implementations, including evaluation, scalability, missing data and bias.",
+      "prerequisites": "Prereq: ( CSDS 132 or CSDS 134 ) and ( MATH 122 or MATH 124 ) and ( MATH 201 or MATH 307 ) and ( MATH 380 or STAT 301 or STAT 312 or STAT 313 or STAT 332 ).",
       "credits": 3.0,
       "credit_unit": "unknown",
       "category": "ai_ml",
       "source_id": "case-western-reserve-university-artificial-intelligence-bs-degree-catalog",
       "url": "https://bulletin.case.edu/search/?P=CSDS%20340",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-degree-courses-csds"
+        ],
+        "locator": "CSDS 340 course description; exact 2026-2027 identity",
+        "rationale": "Machine-learning algorithms and implementations, including evaluation, scalability, missing data and bias. This subject classification is independent of its requirement or elective role.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-csds-395a",
       "code": "CSDS 395A",
       "name": "Senior Project in Artificial Intelligence",
-      "description": null,
-      "prerequisites": null,
+      "description": "AI capstone applying or developing models for practical problems, with engineering practice and project reporting.",
+      "prerequisites": "Prereq: Declared major in Artificial Intelligence and Senior standing.",
       "credits": 4.0,
       "credit_unit": "unknown",
       "category": "ai_ml",
       "source_id": "case-western-reserve-university-artificial-intelligence-bs-degree-catalog",
       "url": "https://bulletin.case.edu/search/?P=CSDS%20395A",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-degree-courses-csds"
+        ],
+        "locator": "CSDS 395A course description; exact 2026-2027 identity",
+        "rationale": "AI capstone applying or developing models for practical problems, with engineering practice and project reporting. This subject classification is independent of its requirement or elective role.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-math-307",
@@ -423,7 +564,18 @@
       "source_id": "case-western-reserve-university-artificial-intelligence-bs-degree-catalog",
       "url": "https://bulletin.case.edu/search/?P=MATH%20307",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "case-western-reserve-university-artificial-intelligence-bs-degree-catalog"
+        ],
+        "locator": "Program Requirements; MATH 307 Linear Algebra",
+        "rationale": "Limited title-based review: the exact official title unambiguously identifies linear algebra as mathematical theory. The full course description has not been reviewed.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "case-bs-math-380",
@@ -11944,7 +12096,7 @@
       "category": "other",
       "source_id": "case-unified-general-education",
       "source_text": null,
-      "summary": "Applies to matriculants from 2023\u20132024; earlier cohorts can elect a later Bulletin. A course may fulfill every requirement for which it is approved, except that a cross-listed course counts in only one breadth area. Pools are the complete published Bulletin inventory; later approvals may be added during the year.",
+      "summary": "Applies to matriculants from 2023–2024; earlier cohorts can elect a later Bulletin. A course may fulfill every requirement for which it is approved, except that a cross-listed course counts in only one breadth area. Pools are the complete published Bulletin inventory; later approvals may be added during the year.",
       "course_ids": []
     },
     {
@@ -13405,7 +13557,7 @@
       "category": "other",
       "source_id": "case-unified-general-education",
       "source_text": null,
-      "summary": "Weatherhead School of Management\u2014Certified Internship in Business, Management, or Economics",
+      "summary": "Weatherhead School of Management—Certified Internship in Business, Management, or Economics",
       "course_ids": []
     },
     {
@@ -13578,10 +13730,11 @@
     }
   ],
   "notes": [
-    "Complete is a reviewed degree-scope inventory of the cited 2026\u20132027 major, university degree page and Unified General Education Requirements, not an automated graduation certification. Open department-wide courses, SAGES capstone designations and approved substitutions are represented as approval rules rather than falsely finite lists.",
+    "Complete is a reviewed degree-scope inventory of the cited 2026–2027 major, university degree page and Unified General Education Requirements, not an automated graduation certification. Open department-wide courses, SAGES capstone designations and approved substitutions are represented as approval rules rather than falsely finite lists.",
     "UGER permits approved overlap with major/minor/breadth. Course options are not additive new degree credits: CSDS 310 is listed for disciplinary communication and CSDS 395A for capstone; programming options CSDS 132/134 are listed for quantitative reasoning. One cross-listed course counts in only one breadth area.",
     "Where an existing major course had null credits, a matching UGER code/title row supplies its numeric credit-hour observation; source case-unified-general-education supplies this additional metadata provenance. The original course identity source remains the major catalog.",
-    "UGER wellness zero-credit courses are explicit published zeros and still count by enrollment duration. Multi-course sequence totals do not become individual credits. Published title/code pools may overlap, so inventory counts are neither required-course totals nor unique university-wide courses."
+    "UGER wellness zero-credit courses are explicit published zeros and still count by enrollment duration. Multi-course sequence totals do not become individual credits. Published title/code pools may overlap, so inventory counts are neither required-course totals nor unique university-wide courses.",
+    "2026-10-11 correctness hotfix: exact CSDS core descriptions correct programming/data structures/algorithms to computing foundations and Discrete Mathematics to mathematics; ENGR 399 in the BS is human context. Category reviews are independent from requirement membership. Programming remains an alternative between CSDS 134 and the CSDS 132+237 bundle; prerequisites are metadata, not new fixed course obligations. The wider degree taxonomy remains unreviewed; the separate degree correctness audit is blocked, not certified by existing inventory completeness."
   ],
   "curriculum_audit": {
     "scope": "degree",
@@ -13610,7 +13763,7 @@
       "Individual course descriptions/prerequisites, public course sites and syllabi remain unverified",
       "Some course credits are absent or expressed as ranges/combined sequence totals; these remain null",
       "Previously recorded major course credit units remain unknown where not corroborated by a UGER credit-hour row",
-      "The published UGER inventory can receive later approvals during the academic year; this review covers the cited 2026\u20132027 Bulletin snapshot"
+      "The published UGER inventory can receive later approvals during the academic year; this review covers the cited 2026–2027 Bulletin snapshot"
     ]
   }
 }
