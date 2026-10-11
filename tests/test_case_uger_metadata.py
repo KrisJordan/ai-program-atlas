@@ -26,7 +26,7 @@ def test_source_change_drops_stale_editorial_claims(monkeypatch):
  with pytest.raises(ValueError,match='identity changed'):parse(html.replace('Synthetic inquiry','New inquiry'))
 
 
-@pytest.mark.parametrize('award,n',[('BA',235),('BS',234)])
+@pytest.mark.parametrize('award,n',[('BA',254),('BS',253)])
 def test_reviewed_uger_semantics_and_reciprocal_identity(award,n):
  pid=f'case-western-reserve-university-artificial-intelligence-{award.lower()}-degree'
  p=json.loads(Path('data/programs',pid+'.json').read_text());cs={c['code']:c for c in p['courses']}
@@ -39,11 +39,12 @@ def test_reviewed_uger_semantics_and_reciprocal_identity(award,n):
  assert cs['CSDS 101']['category']=='other'
  assert cs['PHIL 222']['prerequisites']=='Open to all students (no pre-requisites)'
  assert 'Capstone Advisor' in cs['MATH 352']['prerequisites']
- groups=p['course_identity_groups'];assert len(groups)==1
- assert groups[0]['course_ids']==[f'case-{award.lower()}-csds-132',f'case-{award.lower()}-uger-ecse-132']
+ groups=p['course_identity_groups'];assert len(groups)==12
+ java=next(g for g in groups if g['id'].endswith('java-crosslisting'))
+ assert java['course_ids']==[f'case-{award.lower()}-csds-132',f'case-{award.lower()}-uger-ecse-132']
  profile=requirement_profile(p)
- assert profile['identity']['crosslisted_aliases']==1
- assert profile['options']['source_record_count']==profile['options']['count']+1
+ assert profile['identity']['crosslisted_aliases']==14
+ assert profile['options']['source_record_count']==profile['options']['count']+14
  assert profile['required']['count']=={'BA':8,'BS':9}[award]
 
 
@@ -72,7 +73,7 @@ def test_history_and_wellness_review_is_precise_not_keyword_based(award):
  assert cs['PHED 332']['category']=='applications'
  assert cs['PHED 40B']['prerequisites'] is None # no copying the first-half restriction to the second-half course
  assert 'mastered intermediate swimming skills' in cs['PHED 30A']['prerequisites']
- for dep,count in [('hsty',50),('phed',73)]:
+ for dep,count in [('hsty',69),('phed',73)]:
   path=Path('/tmp/case-uger-audit',dep+'.html')
   if path.exists():
    observed=m.parse_descriptions(path.read_text(),pid=pid,award=award,department=dep)

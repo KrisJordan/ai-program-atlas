@@ -60,3 +60,7 @@ Coordinator review covers 50 exact history descriptions (see case-history-descri
 ## Religious studies, antiquity and language continuation
 
 The coordinator independently read all 53 assigned RLGN/ANEE/JWST/LING descriptions (separate reviewer JSON and dated note). The degree adapter registers their exact sources and source-body guards. LING333 is applied language teaching; other reviewed courses center on cultural, historical or religious inquiry, including ethical AI. ANEE381 senior/major restrictions remain explicit, and optional preparation is not made mandatory. BA now has 294 reviewed records, BS306; 450 per degree remain unreviewed. No full-degree audit is certified.
+
+## Remaining history and reciprocal identities
+
+The degree researcher read the remaining 19 HSTY blocks; all 69 mapped history courses now have content-based reviews. Reciprocal Offered-as statements were then independently compared for 12 listed groups (including the existing Java group), reconciling 14 aliases while retaining all records and requirement quantities. Groups cover ANEE/HSTY107,194,316; CSDS/ECSE132; HSTY/RLGN228; HSTY/JWST/RLGN254 and371; HSTY303/RLGN373; HSTY/HUMN349; HSTY/JWST389; HUMN/RLGN250; and JWST/RLGN220. This is bounded to reviewed aliases; other unreviewed aliases in those descriptions are not automatically certified. No credit exclusion or similar title establishes equivalence. BA has 313 reviewed course records, BS 325; 431 per degree remain unreviewed. Full audit and overall expected profile remain unfinished.
