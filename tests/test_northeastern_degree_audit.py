@@ -204,3 +204,27 @@ def test_optional_reviewed_live_degree_and_cs_sources_reconstruct_concurrent_chi
         assert course=={k:v for k,v in reviewed.items() if k!='category_review'}
         count+=1
     assert count==14
+
+
+@pytest.mark.parametrize('code,expected', [
+    ('ENGW 1111','human_context'),('ENGW 3302','human_context'),('ENGW 3304','human_context'),
+    ('ENGW 3307','human_context'),('PHYS 1151','applications'),('PHYS 1163','applications'),
+    ('PHYS 1191','applications'),('PHYS 4115','applications'),('PHYS 5116','mathematics')])
+def test_writing_and_physics_content_categories_are_identity_guarded(code,expected):
+    d=CATEGORY_DECISIONS[code]
+    assert category(code,d['name'],d['guard'])==expected
+    assert category(code,d['name'],'New topic without the reviewed content')=='other'
+    assert category(code,'Unrelated course with the same code',d['guard'])=='other'
+    assert d['rationale'] and d['url'].startswith('https://catalog.northeastern.edu/course-descriptions/')
+
+
+def test_zero_hour_physics_recitations_remain_distinct_domain_observations():
+    pid='northeastern-university-artificial-intelligence-and-physics-bs-boston-bs-degree'
+    p=json.loads((ROOT/'data/programs'/f'{pid}.json').read_text())
+    found=[]
+    for c in p['courses']:
+        if c['code'] not in ['PHYS 1163','PHYS 1167','PHYS 1193']:continue
+        found.append(c['code'])
+        assert c['credits']==0 and c['credit_unit']=='semester_hours'
+        assert c['category']=='applications' and c['category_review']['status']=='reviewed'
+    assert set(found)=={'PHYS 1163','PHYS 1167','PHYS 1193'}

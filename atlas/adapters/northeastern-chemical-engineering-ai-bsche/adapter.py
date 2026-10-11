@@ -65,3 +65,8 @@ SOURCE_PARSERS = {**globals().get("SOURCE_PARSERS", {}), **_AUDIT_METADATA}
 # Explicit degree-plus-subject concurrency, not inferred prerequisites.
 from atlas.adapters.northeastern_corequisites import register_cs1802
 parse, SOURCE_PARSERS = register_cs1802(parse, SOURCE_PARSERS, PROGRAM_ID)
+
+# Independently reviewed writing and physical-science subject evidence.
+_WRITING_PHYSICS_METADATA = register_subject_sources(PROGRAM_ID, {'ENGW': ['ENGW 1111', 'ENGW 3302', 'ENGW 3307', 'ENGW 3315'], 'PHYS': ['PHYS 1151', 'PHYS 1152', 'PHYS 1153']})
+SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + tuple(_WRITING_PHYSICS_METADATA)))
+SOURCE_PARSERS = {**SOURCE_PARSERS, **_WRITING_PHYSICS_METADATA}
