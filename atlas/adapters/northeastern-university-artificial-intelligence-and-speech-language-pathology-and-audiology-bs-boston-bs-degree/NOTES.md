@@ -47,3 +47,7 @@ The final metadata inventory also restores the explicit published variable-credi
 ## Psychology and speech-language methods descriptions — 2026-10-11
 
 Psychology and speech-language methods description review (2026-10-11): 8 existing course observations gain original concise summaries of their official 2026–2027 descriptions. Offering variability, course activities and permission conditions retain their stated scope. Requirement choices, credits, preparation fields and public resource links remain unchanged. Live subject parsers require the reviewed evidence phrase in the scoped course description; unsupported summaries return null. No seed replay or freshness certification.
+
+## Biology ecology and biochemical methods descriptions — 2026-10-11
+
+Biology ecology and biochemical methods description review (2026-10-11): 2 existing course observations gain original concise summaries of their official 2026–2027 descriptions. Offering variability, course activities and permission conditions retain their stated scope. Requirement choices, credits, preparation fields and public resource links remain unchanged. Live subject parsers require the reviewed evidence phrase in the scoped course description; unsupported summaries return null. No seed replay or freshness certification.

@@ -164,3 +164,14 @@ PSYC3506 and3510 explicitly allow students who do not meet prerequisites to seek
 This batch reviewed 39 distinct source descriptions and added **46 description fields across 5 variants**, bringing the total to **1020 of1,593 course observations**. The exact remaining inventory now contains **573 accessible unreviewed observations across 514 codes**. All source timestamps remain the actual catalog fetch times. All requirement graphs, credit amounts, preparation fields and public-resource links remain unchanged.
 
 Validation: **141 Northeastern-focused tests passed**; all23 temporary ingest/repeat/export/build/integrity checks passed. All5 affected source registrations succeeded twice with zero repeat candidates/source changes. The queue integrity test verifies its counts and exact code/program membership against the concrete records.
+
+## Biology ecology and biochemical methods — 2026-10-11
+
+Read the remaining24 Biology,13 Ecology/Evolution/Marine Biology, two Chemistry and one Bioinformatics descriptions from their registered official catalogs. The summaries cover laboratory methods, genomics, conservation, population modeling, biological research and remaining named biological options. Varying-topics and instructor-dependent research offerings retain those limits; a terse internship description remains terse rather than gaining invented placement duties.
+
+The Biology research capstone description retains its concurrent mentored-research context. The first honors-project course retains its pairing with a second project or college-defined equivalent; it does not become a universal degree requirement. The two organic-chemistry sequences and lecture/lab identities are unchanged. Higher-numbered bioinformatics/protein offerings are summarized only where the undergraduate catalog already lists them.
+
+
+This batch reviewed 40 distinct source descriptions and added **46 description fields across 9 variants**, bringing the total to **1066 of1,593 course observations**. The exact remaining inventory now contains **527 accessible unreviewed observations across 474 codes**. All source timestamps remain the actual catalog fetch times. All requirement graphs, credit amounts, preparation fields and public-resource links remain unchanged.
+
+Validation: **141 Northeastern-focused tests passed**; all23 temporary ingest/repeat/export/build/integrity checks passed. All12 affected source registrations succeeded twice with zero repeat candidates/source changes. The queue integrity test verifies its counts and exact code/program membership against the concrete records.

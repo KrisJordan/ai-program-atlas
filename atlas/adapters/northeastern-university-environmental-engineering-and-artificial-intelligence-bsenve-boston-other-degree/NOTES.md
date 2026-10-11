@@ -43,3 +43,7 @@ Partner-course description review (2026-10-11): 1 existing course observations g
 Science/engineering description review (2026-10-11): 12 existing course observations gain original guarded summaries of official 2026–2027 descriptions. Laboratories, zero-hour recitations and alternative course sequences remain distinct records. Varying seminar topics retain that limitation. No course-level aim is promoted to a program outcome. Existing subject parsers validate the current scoped course block before returning the guarded summary. No change to credits, prerequisites, public resource URLs, family binding or requirements.
 
 The final metadata inventory also restores the explicit published variable-credit range note for CIVE 5699 (1–4 hours). Its numeric credit field remains null; no default amount is selected.
+
+## Biology ecology and biochemical methods descriptions — 2026-10-11
+
+Biology ecology and biochemical methods description review (2026-10-11): 1 existing course observations gain original concise summaries of their official 2026–2027 descriptions. Offering variability, course activities and permission conditions retain their stated scope. Requirement choices, credits, preparation fields and public resource links remain unchanged. Live subject parsers require the reviewed evidence phrase in the scoped course description; unsupported summaries return null. No seed replay or freshness certification.
