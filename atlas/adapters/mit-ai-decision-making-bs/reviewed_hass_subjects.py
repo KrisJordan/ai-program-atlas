@@ -310,6 +310,9 @@ def observe_wgs_detail(html):
     if len(paragraphs) < 2 or 'Units:' not in paragraphs[0]:
         raise ValueError('WGS detail metadata/description changed')
     units = re.search(r'Units:\s*(\d+-\d+-\d+)', paragraphs[0])
+    tags = {clean(a) for a in soup.select('a.blog-item-tag')}
+    if not {'Fall', '2026-2027'} <= tags:
+        raise ValueError('Reviewed WGS detail teaching term changed')
     return dict(code=match[1], name=match[2], description=paragraphs[1],
                 units=units[1] if units else None, source_metadata=paragraphs[0],
                 prerequisites=None, term='Fall 2026-2027')

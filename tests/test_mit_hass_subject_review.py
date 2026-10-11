@@ -215,7 +215,7 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']['description_reviewed_records']==473
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==474
     assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
         o=next(o for o in entry(code)['observations'] if o.get('evidence_basis')=='official_title_only')
@@ -1798,3 +1798,25 @@ def test_philosophy_two_source_replay_withdraws_missing_or_changed_numbering():
     with pytest.raises(ValueError):review.observe_philosophy_renumbered_ethics(a.read_text(),n.read_text().replace('formerly 24.231','formerly 24.999'))
     with pytest.raises(ValueError):review.observe_philosophy_renumbered_ethics(a.read_text().replace('Fall 2009','Fall 2010'),n.read_text())
     assert review.matched_review(course,{**o,'numbering_support':{}},e['source_url'],MANIFEST) is None
+
+
+def test_wgs_global_justice_explicit_companion_preserves_dated_review_and_revision():
+    report=MANIFEST['wgs_global_justice_companion_followup'];e=entry('24.234')['observations'][-1]
+    assert '24.234 (U)' in e['source_metadata']
+    assert e['catalog_year']=='Fall 2026-2027' and e['credits']==12
+    assert e['status']=='mixed' and e['candidate_categories']==['applications','human_context']
+    old=entry('WGS.277J/EC.718')['observations']
+    assert old[0]['category']=='human_context' and not old[0]['approved_for_integration']
+    assert old[-1]['approved_for_integration'] and old[-1]['supersedes_review']['category']=='human_context'
+    assert 'not combined' in report['additional_page_scope']
+
+
+def test_wgs_global_justice_current_term_and_companion_payload_are_guarded():
+    p=Path('/tmp/mit-hass-subjects/wgs-wgs277-fa26.html')
+    if not p.exists():pytest.skip('Optional public WGS course detail capture')
+    o=review.observe_wgs_detail(p.read_text());row=entry('24.234');e=row['observations'][-1]
+    course=dict(id='mit-ai-hass-ethics-24-234',code=row['listed_code'],name=row['listed_name'],source_id=row['listed_source_id'])
+    assert review.matched_review(course,o,e['source_url'],MANIFEST)==e
+    changed=review.observe_wgs_detail(p.read_text().replace('24.234 (U)','24.999 (U)'))
+    assert review.matched_review(course,changed,e['source_url'],MANIFEST) is None
+    with pytest.raises(ValueError):review.observe_wgs_detail(p.read_text().replace('2026-2027','2027-2028'))
