@@ -240,3 +240,8 @@ Contribution46b86e1 provides24 actual-description upgrades from17 public OCW syl
 ### Public resource field audit
 
 Of846 populated course-site fields,818 were general evidence pages rather than verified course teaching websites and are now null. All evidence links remain registered. Retained28 course-specific teaching/syllabus occurrences,24 of which have actual public syllabus URLs. The parser resource binding is explicit per course and URL, after content validation. This corrects resource semantics without changing curriculum membership or subject judgments.
+
+
+### Political Science historical syllabi — 2026-10-11
+
+Contribution 95e34a3 supplies 42 actual-description upgrades from 22 public OCW syllabi. Each dated course identity and prerequisite is preserved: 17.568 requires permission for advanced undergraduates; 17.445 distinguishes graduate permission; 17.251 permits the stated AP score alternative. The 17.565 description does not extend to the distinct 17.567 IAP version in compound source labels; its separately published nine units remain intact. No identities or requirement roles change. HASS now has 248 description-supported occurrences, 594 limited title judgments and three code-only unknowns. Seventy occurrences link verified course teaching sites, including 66 syllabus links; generic curricular evidence remains in URL/source fields. The full primary audit remains in progress while accessible description and policy research continues.

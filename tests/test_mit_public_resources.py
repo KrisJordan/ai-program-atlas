@@ -45,3 +45,19 @@ def test_actual_ocw_syllabus_observation_keeps_resource_semantics():
     if not path.exists():pytest.skip('Optional actual public OCW syllabus capture absent')
     url=h.SPECS[sid]['url'];rows=h.parse(path.read_text(),url)['courses']
     assert rows and all(c['public_site']==url and c['syllabus']==url for c in rows)
+
+
+def test_political_syllabi_preserve_conditional_preparation_and_distinct_iap_version():
+    p=json.loads(Path('data/programs/mit-ai-decision-making-bs.json').read_text())
+    by={c['id']:c for c in p['courses']}
+    congress=by['mit-ai-hass-political-subfields-17-251']
+    assert '4 or 5' in congress['prerequisites']
+    assert congress['syllabus'].endswith('system-i-fall-2016/pages/syllabus/')
+    middle_east=by['mit-ai-hass-middle-eastern-studies-17-568']
+    assert 'permission' in middle_east['prerequisites']
+    assert any('advanced undergraduates' in n for n in middle_east['notes'])
+    iap=by['mit-ai-hass-political-subfields-17-567']
+    assert iap['credits']==9 and iap['description'] is None and iap['syllabus'] is None
+    composite=by['mit-ai-hass-middle-eastern-studies-17-565-17-567']
+    assert any('17.565 only' in n for n in composite['notes'])
+    assert composite['syllabus'].endswith('identity-spring-2019/pages/syllabus/')
