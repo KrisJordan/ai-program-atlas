@@ -37,7 +37,7 @@ def test_real_chapters_replay_exact_bounded_inventory():
     assert {d['code']for d in missing}=={'LATI 87','LATI 191','RELI 100','RELI 110B'}
     assert sum(c['credits']is None for c in rows)==5
     assert sum(c['category']=='other'for c in rows)==12
-    assert sum(c['category']=='human_context'for c in rows)==29
+    assert sum(c['category']=='human_context'for c in rows)==28
     assert next(c for c in rows if c['code']=='JWSP 196B')['prerequisites'].startswith('admission to Jewish Studies Honors Program; previous enrollment')
 
 
@@ -50,3 +50,5 @@ def test_precise_grade_approval_repeat_and_credit_exclusion_notes():
     assert e['AAS 191']['category']=='human_context' # social impacts of science, not biological methods
     assert e['LATI 150']['category']=='human_context' # oral-history practice, not inferred programming
     assert e['AAS 171']['category']=='applications'
+
+    assert e['LATI 175']['category']=='applications' # taught PAR techniques applied in a research proposal
