@@ -99,8 +99,9 @@ def test_writing_series_guard_and_no_automatic_identity_or_prerequisite_role(mon
     assert c['WRIT 2']['credits']==5 and c['WRIT 2E']['credits']==4
     assert c['WRIT 105CD']['category_review']['status']=='mixed'
     assert 'professional environmental writing' in c['WRIT 109ES']['description']
-    assert 'formerly' in c['WRIT 107EP']['prerequisites']
-    assert 'does not independently restate' in c['WRIT 50E']['prerequisites']
+    assert any('formerly WRIT109ES' in n for n in c['WRIT 107EP']['notes'])
+    assert 'Writing 2 or 2E or 2LK' in c['WRIT 50E']['prerequisites']
+    assert 'freshmen only' in c['WRIT 50E']['prerequisites']
     assert requirement_profile(d)['options']['categories']['human_context']==28
 
 
@@ -114,8 +115,8 @@ def test_writing_actual_cache_matches_all25_read_blocks():
         observed+=writing.parse((root/('writing-'+section+'.html')).read_text(),section=section)['courses']
     assert len(observed)==25
     for x in observed:
-        excluded=set(x) if x['code']in {'WRIT 1','WRIT 1E'} else set()
-        assert all(x[k]==c[x['code']][k]for k in x if k not in excluded)
+        assert x['category']==c[x['code']]['category']
+        assert x['source_id']!=c[x['code']]['source_id']  # exact older source observation, not a current refresh
         if x['code']=='WRIT 1':
             assert x['credits']==5 and c[x['code']]['credits'] is None
 
@@ -194,7 +195,7 @@ def test_current_crosslisting_uses_reciprocal_evidence_and_retains_raw_codes():
             result=current.parse(cache.read_text(), code=code)
             assert result==current.parse(cache.read_text(),code=code)
             seed=next(c for c in d['courses']if c['code']==code)
-            assert all(seed[k]==v for k,v in result['courses'][0].items() if not (code in {'CMPSC 41','WRIT 1'} and k=='credits'))
+            assert all(seed[k]==v for k,v in result['courses'][0].items() if not (code in {'CMPSC 41','WRIT 1','WRIT 50'} and k=='credits'))
 
 
 def test_current_catalog_required_vision_identity_and_precise_eligibility():
@@ -288,3 +289,19 @@ def test_current_entry_writing_preserves_narrow_eligibility_and_unit_conflict():
     assert '6 or lower' in c['WRIT 1']['prerequisites']
     assert c['WRIT 1']['source_id'].endswith('-catalog-2026')
     assert requirement_profile(d)['unresolved']['count']==2
+
+
+def test_all_represented_writing_versions_preserve_exact_alternatives():
+    from atlas.adapters import ucsb_catalog_course_content as current
+    d=json.loads(Path('data/programs/ucsb-ai-bs.json').read_text());c={x['code']:x for x in d['courses']}
+    writing=[x for x in d['courses']if x['code'].startswith('WRIT ')]
+    assert len(writing)==26
+    assert all(x['source_id'].endswith('-catalog-2026')for x in writing)
+    assert c['WRIT 50']['credits'] is None and current.SPEC['WRIT 50']['credits']==5
+    assert 'Exam: AP 36 >=4' in c['WRIT 105CW']['prerequisites']
+    assert 'Exam: IB BL >= 6' in c['WRIT 105SW']['prerequisites']
+    assert 'Spring 2005 and Summer 2011' in c['WRIT 107G']['prerequisites']
+    assert 'Summer 2003 and Spring 2010' in c['WRIT 107M']['prerequisites']
+    assert 'legal repeat' in c['WRIT 107WC']['prerequisites']
+    assert c['WRIT 105CD']['category_review']['status']=='mixed'
+    assert all(not any(i.startswith('ucsb-writ-')for i in g['course_ids']) for g in d['course_identity_groups'])

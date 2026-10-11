@@ -319,3 +319,23 @@ listing does not independently establish an override. Both records’ AWPE<=6
 wording is preserved alongside the separately reviewed current university CWP
 and transfer-only AWPE policy, rather than imposed as a universal exam rule.
 No required/option/context role changes or course-identity merges were made.
+
+
+### All represented writing choices: current-version closure (2026-10-11)
+
+All23 remaining represented writing course pages were read in full through
+actual directory links, bringing all26 represented WRIT records to current
+catalog evidence. Current WRIT50 publishes5units versus4in the earlier undated
+department page; both observations remain guarded and curated units are null.
+Current2E/50E specify freshmen and ECE/ChemE/ME/CE only, rather than a generic
+Engineering restriction.105CW/105SW/107WC explicitly allow encoded AP, IB and
+waiver alternatives; the exact source codes remain unexpanded.107G and107M
+have term-bounded prior-course credit exclusions.107WC’s legal-repeat statement
+is not treated as a cross-list identity. The older107EP “formerly109ES” statement
+is retained as a version note without merging two currently published records.
+
+Current descriptions confirm22 human-context dispositions and the mixed writing/
+coding105CD record in this batch; no category or role totals change. The five
+online codes named by the college-specific Area A page still need exact local
+list/identity review, and hundreds of GE pool descriptions are still unread.
+Current-version review of these26 records does not certify those other branches.
