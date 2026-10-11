@@ -65,6 +65,8 @@ def enrich_requirements(html, observed, url):
         summary="Seven subject requirements; some probability options require a two-course sequence.",
     )
     table = headings["Math and Statistics"].find_next("table")
+    if text(table.find("td")) != "All of the following:":
+        raise ValueError("CMU BS mathematics all-of directive changed")
     mode = "required"
     n = 0
     pn = 0
@@ -132,8 +134,8 @@ def enrich_requirements(html, observed, url):
                 "math-subject-" + str(n),
                 lines[0],
                 category="mathematics",
-                kind="choose_courses",
-                count=1,
+                kind="choose_courses" if alternatives else "all",
+                count=1 if alternatives else None,
                 parent=root["id"],
                 course_ids=ids,
                 summary=summary,

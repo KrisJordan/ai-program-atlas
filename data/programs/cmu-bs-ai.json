@@ -683,7 +683,18 @@
       "source_id": "cmu-bs-ai-mathematics-directory",
       "url": "https://coursecatalog.web.cmu.edu/schools-colleges/melloncollegeofscience/departmentofmathematicalsciences/courses/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "cmu-bs-ai-mathematics-directory"
+        ],
+        "locator": "21-120 official course description",
+        "rationale": "Differentiation and integration are the course’s core mathematical methods.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "cmu-21-122",
@@ -697,7 +708,18 @@
       "source_id": "cmu-bs-ai-mathematics-directory",
       "url": "https://coursecatalog.web.cmu.edu/schools-colleges/melloncollegeofscience/departmentofmathematicalsciences/courses/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "cmu-bs-ai-mathematics-directory"
+        ],
+        "locator": "21-122 official course description",
+        "rationale": "Integration techniques, differential equations, sequences and series are mathematical methods.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "cmu-21-241",
@@ -711,7 +733,18 @@
       "source_id": "cmu-bs-ai-mathematics-directory",
       "url": "https://coursecatalog.web.cmu.edu/schools-colleges/melloncollegeofscience/departmentofmathematicalsciences/courses/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "cmu-bs-ai-mathematics-directory"
+        ],
+        "locator": "21-241 official course description",
+        "rationale": "Linear systems, vector spaces, linear transformations and eigenvalues establish linear algebra.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "cmu-21-259",
@@ -893,7 +926,18 @@
       "source_id": "cmu-bs-ai-statistics-directory",
       "url": "https://coursecatalog.web.cmu.edu/schools-colleges/dietrichcollegeofhumanitiesandsocialsciences/departmentofstatistics/courses/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "cmu-bs-ai-statistics-directory"
+        ],
+        "locator": "36-401 official course description",
+        "rationale": "Regression, statistical inference and model checking establish mathematical/statistical methods.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "cmu-15-112",
@@ -4166,8 +4210,8 @@
       "id": "cmu-bs-ai-math-subject-2",
       "parent_id": "cmu-bs-ai-math-statistics",
       "title": "Differential and Integral Calculus",
-      "kind": "choose_courses",
-      "count": 1,
+      "kind": "all",
+      "count": null,
       "credits": null,
       "credit_unit": "units",
       "category": "mathematics",
@@ -4182,8 +4226,8 @@
       "id": "cmu-bs-ai-math-subject-3",
       "parent_id": "cmu-bs-ai-math-statistics",
       "title": "Integration and Approximation",
-      "kind": "choose_courses",
-      "count": 1,
+      "kind": "all",
+      "count": null,
       "credits": null,
       "credit_unit": "units",
       "category": "mathematics",
@@ -4198,8 +4242,8 @@
       "id": "cmu-bs-ai-math-subject-4",
       "parent_id": "cmu-bs-ai-math-statistics",
       "title": "Matrices and Linear Transformations",
-      "kind": "choose_courses",
-      "count": 1,
+      "kind": "all",
+      "count": null,
       "credits": null,
       "credit_unit": "units",
       "category": "mathematics",
@@ -4347,8 +4391,8 @@
       "id": "cmu-bs-ai-math-subject-6",
       "parent_id": "cmu-bs-ai-math-statistics",
       "title": "Modern Regression",
-      "kind": "choose_courses",
-      "count": 1,
+      "kind": "all",
+      "count": null,
       "credits": null,
       "credit_unit": "units",
       "category": "mathematics",
@@ -5192,7 +5236,8 @@
     "2026-10-11: 15-122 Fall 2026 site describes AP/equivalent/adviser entry paths and recommends concurrent/prior mathematics. The stored prerequisites retain the formal current catalog expression; site-specific entry guidance is not silently merged into catalog rules.",
     "2026-10-11: Existing program statements describe expected graduation learning, not measured attainment. Course learning-objective or grading pages do not establish program-assessed outcomes; no public program assessment results were verified in this bounded source set.",
     "2026-10-11: The current directory links a Fall 2023 15-151/21-128 site and public syllabus; these are historical examples, not current prerequisites. The 15-259/559 site identifies Fall 2026 and 12 units. Its linked syllabus.html is a lecture/chapter schedule without its own course identifier or year; it was reviewed but not promoted as an independently identified full syllabus. Catalog prerequisites remain authoritative metadata.",
-    "2026-10-11 independent core subject review: 15-213 is systems, not foundations merely because it appears in the Computer Science core table. Nine fixed records now comprise4foundations,1systems,2AI/ML and2explicitly unclassified seminar/orientation records. All broader elective/degree-wide subject classifications remain a separate ongoing correctness audit; requirement inventory completeness is not taxonomy certification."
+    "2026-10-11 independent core subject review: 15-213 is systems, not foundations merely because it appears in the Computer Science core table. The second-pass correction establishes thirteen fixed records: four foundations, four mathematics, one systems, two AI/ML and two explicitly unclassified seminar/orientation records. All broader elective/degree-wide subject classifications remain a separate ongoing correctness audit; requirement inventory completeness is not taxonomy certification.",
+    "Independent second pass corrected four mathematics rows under the catalog’s explicit All of the following directive:21-120,21-122,21-241 and36-401 are fixed, not one-option choices. Conditional15-151/21-127 substitution, multivariable-calculus alternatives and probability bundles remain choices. This source-specific correction does not promote arbitrary singleton option pools."
   ],
   "institution": {
     "id": "carnegie-mellon-university",

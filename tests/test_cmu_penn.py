@@ -660,3 +660,19 @@ def test_cmu_bs_math_conditions_and_full_primary_scope():
         adapter("cmu_bs").parse(
             bs_fixture().replace("maximum of nine (9) units", "maximum of twelve (12) units")
         )
+
+
+def test_cmu_bs_all_of_math_rows_are_fixed_but_real_alternatives_stay_choices():
+    parsed = adapter("cmu_bs").parse(bs_fixture())
+    requirements = {r["id"].rsplit("math-subject-", 1)[-1]: r for r in parsed["requirements"] if "math-subject-" in r["id"]}
+    for index, code in [("2", "21-120"), ("3", "21-122"), ("4", "21-241"), ("6", "36-401")]:
+        assert requirements[index]["kind"] == "all"
+        assert requirements[index]["count"] is None
+        assert requirements[index]["course_ids"] == ["cmu-" + code]
+    for index in ["1", "5"]:
+        assert requirements[index]["kind"] == "choose_courses"
+        assert requirements[index]["count"] == 1
+        assert len(requirements[index]["course_ids"]) > 1
+    assert next(r for r in parsed["requirements"] if r["id"].endswith("math-probability"))["kind"] == "alternative"
+    with pytest.raises(ValueError, match="mathematics all-of directive changed"):
+        adapter("cmu_bs").parse(bs_fixture().replace("All of the following:", "Choose one of the following:", 1))
