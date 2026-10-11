@@ -47,7 +47,7 @@ def test_optional_actual_current_pages():
     root=Path('.cache/research/wpi-content-review')
     if not root.exists():pytest.skip('Ignored current source pages unavailable')
     for code,entry in m.SPEC.items():
-        path=root/(entry.get('heading_code',code).lower().replace(' ','-').replace('/','_')+'.html')
+        path=root/entry.get('cache_filename', entry.get('heading_code',code).lower().replace(' ','-').replace('/','_')+'.html')
         if not path.exists():pytest.skip('Optional source page absent')
         for pid in entry['program_ids']:
             first=m.parse(path.read_text(),program_id=pid,code=code)
@@ -99,7 +99,7 @@ def test_ai_computing_mathematics_source_rules_preserve_option_scope():
     assert 'Suggested background (advisory)' in courses['MA 2210']['prerequisites']
     profile=requirement_profile(p)
     assert [profile[x]['count'] for x in ['required','options','unresolved']]==[6,211,2]
-    assert sum('wpi-ai-bs' in e['program_ids'] for e in m.SPEC.values())==174
+    assert sum('wpi-ai-bs' in e['program_ids'] for e in m.SPEC.values())==219
     assert not p.get('course_identity_groups')
 
 
@@ -129,7 +129,7 @@ def test_graduate_mixtures_and_source_version_limits():
     assert c['CS 585/DS 503']['category']=='systems'
     assert c['CS 551/DS 551']['category']=='ai_ml'
     grad=[e for e in m.SPEC.values() if e.get('catalog_heading')=='Graduate Catalog']
-    assert len(grad)==20 and all(e['catalog_year'] is None and e['credit_unit']=='unknown' for e in grad)
+    assert len(grad)==22 and all(e['catalog_year'] is None and e['credit_unit']=='unknown' for e in grad)
 
 
 def test_engineering_subjects_and_explicit_description_referral(monkeypatch):
@@ -185,3 +185,41 @@ def test_variable_environment_topics_keep_unknown_fixed_credit(monkeypatch):
     assert result['courses'][0]['credits'] is None and not result['requirements']
     changed=html.replace('</main>','<div class="field--name-field-credits"><div class="field__item">1/3</div></div></main>')
     with pytest.raises(ValueError):m.parse(changed,program_id='wpi-ai-bs',code=code)
+
+
+def test_complete_ai_source_inventory_and_independent_profile():
+    from collections import Counter
+    p=json.loads(Path('data/programs/wpi-ai-bs.json').read_text())
+    assert len(p['courses'])==219
+    for c in p['courses']:
+        assert c['description'] and c['code'] in m.SPEC
+        assert 'wpi-ai-bs' in m.SPEC[c['code']]['program_ids']
+        assert c['source_id'] in c['category_review']['source_ids']
+    assert Counter(c['category_review']['status'] for c in p['courses'])=={'reviewed':187,'mixed':22,'unclassified':10}
+    profile=requirement_profile(p)
+    assert {k:v for k,v in profile['options']['categories'].items() if v}=={
+        'foundations':11,'mathematics':28,'ai_ml':22,'systems':15,
+        'human_context':18,'applications':87,'other':30}
+    assert [profile[k]['count'] for k in ['required','options','unresolved']]==[6,211,2]
+    assert Counter(c['credits'] for c in p['courses'])=={1/3:191,3:22,None:6}
+    bycode={c['code']:c for c in p['courses']}
+    assert bycode['IMGD 5100']['credits']==3 and bycode['IMGD 5100']['credit_unit']=='unknown'
+    assert bycode['ECON 4800']['credits']==pytest.approx(1/3)
+    assert bycode['PSY 4800']['credits'] is None
+    assert 'particular PSY2800' in bycode['PSY 2411']['prerequisites']
+    assert 'not required' in m.SPEC['IMGD 4600']['audience_note']
+
+
+def test_degree_audit_minimum_bins_are_compatible_not_missing_slots():
+    p=json.loads(Path('data/programs/wpi-ai-bs.json').read_text());r={r['id']:r for r in p['requirements']}
+    for group in ['business','social-policy']:
+        assert r[f'wpi-ai-bs-concentration-{group}-total']['count']==6
+    assert [r[f'wpi-ai-bs-concentration-business-section-{i}']['count'] for i in range(3)]==[2,1,1]
+    assert all('Minimum' in r[f'wpi-ai-bs-concentration-business-section-{i}']['summary'] for i in range(3))
+    assert r['wpi-ai-bs-concentration-social-policy-section-1']['count']==3
+    assert 'Minimum' in r['wpi-ai-bs-concentration-social-policy-section-1']['summary']
+    audit=next(x for x in json.loads(Path('research/degree-audit/west-purdue-wpi.json').read_text())['programs'] if x['program_id']=='wpi-ai-bs')
+    assert audit['status']=='blocked' and len(audit['blockers'])==2
+    assert all('concentration-' not in b['url'] for b in audit['blockers'])
+    assert 'No known unread' in audit['accessible_work_remaining']
+    assert 'before the seminar' in audit['checks']['prerequisites']
