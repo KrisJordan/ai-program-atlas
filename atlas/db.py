@@ -771,6 +771,13 @@ def export_data(conn):
     for program in programs:
         if program["id"] in audit_lookup:
             program["degree_audit"] = audit_lookup[program["id"]]
+    from .additional_major_audit import audit_summary as additional_summary
+    additional_row = conn.execute("SELECT value_json FROM metadata WHERE key='additional_major_audit'").fetchone()
+    additional = additional_summary(json.loads(additional_row[0]) if additional_row else {}, programs)
+    additional_lookup = {entry["program_id"]: entry for entry in additional["programs"]}
+    for program in programs:
+        if program["id"] in additional_lookup:
+            program["additional_major_audit"] = additional_lookup[program["id"]]
     return {
         "meta": {
             "generated_at": generated,
@@ -778,6 +785,7 @@ def export_data(conn):
             "coverage_summary": summary,
             "curriculum_summary": curriculum,
             "degree_audit": audit,
+            "additional_major_audit": additional,
             "family_summary": {
                 "families": len(families),
                 "variants": sum(bool(p.get("family")) for p in programs),

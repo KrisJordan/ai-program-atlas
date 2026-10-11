@@ -659,15 +659,31 @@ def degree_audit_summary(meta):
 
 
 def degree_audit_program(program):
+    if program.get('program_kind') == 'additional_major':
+        return additional_major_audit_program(program)
     if program.get('program_kind') != 'degree':
         return ''
     audit = program.get('degree_audit')
     state = human(audit.get('status')) if audit else 'Pending'
     second = human(audit.get('second_pass_status') or 'pending') if audit else 'Pending'
     core = (audit or {}).get('core_review') or {}
+    return '<section class="notice degree-audit-program" aria-labelledby="program-audit-title"><h2 id="program-audit-title">Whole-degree correctness audit: ' + esc(state) + '</h2><p>Whole-degree independent second pass: ' + esc(second) + '. These statuses include applicable degree policies and are separate from requirement inventory and course metadata coverage.</p><h3>Bounded independent review</h3><p>Each judgment applies only to its stated source scope. Unresolved policies can coexist with verified fixed courses, choice rules or chart classifications.</p>' + review_dimensions(core) + '</section>'
+
+
+def additional_major_audit_program(program):
+    review = program.get('additional_major_audit')
+    if not review:
+        return ''
+    display = {**review, 'dimensions': {**review['dimensions'], 'eligibility': review['eligibility_review']}}
+    return '<section class="notice additional-major-audit-program" aria-labelledby="program-audit-title"><h2 id="program-audit-title">Additional-major correctness review</h2><p>This review covers the additional major and its eligibility rules. It does not certify the complete host degree.</p><p>' + esc(review['scope_summary']) + '</p>' + review_dimensions(display, additional=True) + '</section>'
+
+
+def review_dimensions(core, additional=False):
     dimensions = core.get('dimensions') or {}
     rows = []
     labels = [('fixed_requirements', 'Fixed requirements'), ('choice_rules', 'Choice rules'), ('classification', 'Chart classification')]
+    if additional:
+        labels.append(('eligibility', 'Second-major eligibility'))
     for key, label in labels:
         dimension = dimensions.get(key) or {}
         status = {'verified': 'Verified within stated scope', 'partial': 'Partially reviewed', 'unverified': 'Not verified from available evidence'}.get(dimension.get('status'), 'Not independently reviewed')
@@ -684,7 +700,7 @@ def degree_audit_program(program):
     provenance = ''
     if core:
         provenance = '<p class="review-provenance">Reviewed: ' + esc(core.get('reviewed_at') or 'Date not recorded') + ' · Reviewer: ' + esc(core.get('reviewer') or 'Not recorded') + '.</p>'
-    return '<section class="notice degree-audit-program" aria-labelledby="program-audit-title"><h2 id="program-audit-title">Whole-degree correctness audit: ' + esc(state) + '</h2><p>Whole-degree independent second pass: ' + esc(second) + '. These statuses include applicable degree policies and are separate from requirement inventory and course metadata coverage.</p><h3>Bounded independent review</h3><p>Each judgment applies only to its stated source scope. Unresolved policies can coexist with verified fixed courses, choice rules or chart classifications.</p>' + provenance + '<dl class="review-dimensions">' + ''.join(rows) + '</dl></section>'
+    return provenance + '<dl class="review-dimensions">' + ''.join(rows) + '</dl>'
 
 
 def coverage_page(data, base):

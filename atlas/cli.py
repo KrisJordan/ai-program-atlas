@@ -47,6 +47,14 @@ def ingest_all(conn, data_dir):
             validate_ledger(audit.get("programs", []), list(records.values()))
             conn.execute("INSERT OR REPLACE INTO metadata VALUES (?,?)",
                          ("degree_audit", db.canonical(audit)))
+        additional_path = data_dir / "additional-major-audit.json"
+        if additional_path.exists():
+            from .additional_major_audit import validate_ledger
+            additional = json.loads(additional_path.read_text())
+            resolved = [db.resolve_stored_program(conn, record) for record in records.values()]
+            validate_ledger(additional, resolved)
+            conn.execute("INSERT OR REPLACE INTO metadata VALUES (?,?)",
+                         ("additional_major_audit", db.canonical(additional)))
     return changed
 
 
@@ -71,6 +79,7 @@ def main(argv=None):
     )
     sub.add_parser("status")
     sub.add_parser("audit-report", help="Compile explicit research degree ledgers into reviewed data")
+    sub.add_parser("additional-audit-report", help="Compile independent additional-major reviews")
     sub.add_parser("compact", help="Reclaim unused SQLite pages without removing facts or history")
     sub.add_parser("candidates")
     review = sub.add_parser(
@@ -117,6 +126,16 @@ def main(argv=None):
             ledger = collect_ledgers(Path("research/degree-audit"), records)
             Path("data/degree-audit.json").write_text(json.dumps(ledger, indent=2) + "\n")
             print(f"Compiled {len(ledger['programs'])} explicit degree audit entries")
+        elif args.command == "additional-audit-report":
+            from .additional_major_audit import collect_ledgers
+            from .families import resolve_program
+            records = [json.loads(p.read_text()) for p in Path("data/programs").glob("*.json")]
+            families = {row["id"]: row for path in Path("data/families").glob("*.json")
+                        if (row := json.loads(path.read_text()))}
+            resolved = [resolve_program(p, families[p["family"]["id"]]) if p.get("family") else p for p in records]
+            ledger = collect_ledgers(Path("research"), resolved)
+            Path("data/additional-major-audit.json").write_text(json.dumps(ledger, indent=2) + "\n")
+            print(f"Compiled {len(ledger['programs'])} independent additional-major reviews")
         elif args.command == "compact":
             before = args.db.stat().st_size
             conn.execute("VACUUM")
