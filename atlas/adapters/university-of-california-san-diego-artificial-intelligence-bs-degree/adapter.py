@@ -223,3 +223,14 @@ for _review_url, _review_parser in phil_econ_reviews.SOURCE_PARSERS.items():
         raise ValueError('UCSD PHIL/ECON source needs explicit parser composition')
     SOURCES += (_review_url,)
     SOURCE_PARSERS[_review_url] = _review_parser
+
+# Delegated current social-science descriptions preserve conditional college
+# membership; these observers emit facts and dispositions, never manual audits.
+from atlas.adapters import ucsd_soci_reviews as soci_reviews
+from atlas.adapters import ucsd_anth_ansc_reviews as anth_ansc_reviews
+for _review_module in (soci_reviews, anth_ansc_reviews):
+    for _review_url, _review_parser in _review_module.SOURCE_PARSERS.items():
+        if _review_url in SOURCE_PARSERS:
+            raise ValueError('UCSD social-science source needs explicit parser composition')
+        SOURCES += (_review_url,)
+        SOURCE_PARSERS[_review_url] = _review_parser

@@ -202,3 +202,11 @@ current candidate remains in the contribution manifest pending identity/source
 clarification. ECON163 and PHIL28GS have no exact current headings, with no
 substitution or discontinuation inferred. Other accessible UCSD subjects remain
 active; SOCI87 is delegated separately for actual source-content review.
+
+### Sociology and anthropology content integration — 2026-10-11
+
+Delegated full-block reviews in `ucsd_soci_reviews` and `ucsd_anth_ansc_reviews` inspected 157 current descriptions among 162 represented identifiers. Primary integration replayed the whole-block/edition guards and independently checked consequential examples: SOCI 102/108 applied social-data methods, SOCI 105's six units and malformed conjoined prerequisite, SOCI 194's four units versus its separate six-unit internship, ANTH 43's mixed genetic/social content, ANTH 128A's six-unit climate fieldwork, ANTH 196B's B+ prerequisite, and ANSC 138/171's applied ethnographic methods. This is integration of delegated source review, not a claim that the primary independently reread every block.
+
+155 approved observations were integrated. SOCI 171 remains the represented *Technology and Science* identity, with the current *Technology and Society* observation withheld. ANSC 190GS retains the represented Southeast Asia/Bali identity while the current South Asia observation is withheld. SOCI 123/144P/158J, ANSC 116 and ANTH 44 have no exact current chapter heading; no cancellation or replacement is inferred. Both title/version scopes and unknown classifications are preserved.
+
+Source restrictions and repeat/cross-list details remain course-scoped notes and full eligibility suffixes. Approval, Global Seminar, Honors, UCDC and MMFRP rules are not waived by college-pool membership. No new identity group or requirement node was added. The manually established role sets remain **8 fixed / 119 options / 2,241 contextual records**. Accessible other-subject review remains in progress alongside the precise source conflicts; no whole-degree certification is implied.

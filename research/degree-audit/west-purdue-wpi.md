@@ -360,3 +360,9 @@ the prior bounded directory/search inspection, a separate source-identity gap.
 The already downloaded856-row GE export remains available for actual content
 review, so the overall degree audit remains in progress rather than hiding that
 accessible queue behind the new browser barrier.
+
+### UCSD delegated SOCI / ANTH / ANSC integration — 2026-10-11
+
+The contributor read all 157 available blocks for 162 represented identifiers in the 2026–27 Sociology and Anthropology chapters. Primary integration checked exact block guards and significant credit, eligibility and taxonomy cases, retaining 155 approved current observations and seven held/missing dispositions. The source-specific contribution notes document the original summaries and manual taxonomy rationale. This bounded integration is not a full independent second pass.
+
+The two source contributions preserve 139 human-context, six applications, four mixed and six topic-dependent unknown observations. SOCI 171 and ANSC 190GS have unresolved substantive title/region differences; five other identifiers have no exact current heading. SOCI 194's separate internship is not added to its four units, ANTH 196B's B+ condition remains exact, and conditional admission rules remain attached to their own courses. Expected category counts were recalculated only within the previously independently enumerated role-ID sets: **8 fixed / 119 options / 2,241 context**, with no graph change. Further accessible chapters remain active work.
