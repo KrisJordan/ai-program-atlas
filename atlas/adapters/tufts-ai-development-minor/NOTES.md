@@ -41,3 +41,9 @@ Both checklists require C- or better, limit A&S overlap to two courses (with maj
 The coordinator corrected the robots precedence implementation in `ca67dcf` using the standards-aware parser. The blank-versus-TBD placeholder does not alter course, credit, grade or overlap eligibility, so it is retained as an administrative ambiguity rather than an academic inventory gap. No individual graduation clearance is asserted. AI Development remains partial only for the substantive CS135/EE140-CS128 source discrepancy.
 
 After `ca67dcf`, a normal default-Fetcher replay of the original official Box link returned HTTP200 (38,892-byte viewer HTML) for each form, following the normal redirect policy. The viewer shell itself is not the PDF text; the document facts above come from the readable browser preview.
+
+## 2026-10-11 source-precedence review
+
+The separate department Policies and Documentation page (robots-aware HTTP200) also offers CS135 or EE140/CS128. Its AI Development section was isolated from graduate and other undergraduate programs. Neither it nor the current program page prints an effective date; neither states priority over the required checklist. The March25,2026 launch article establishes Fall2026 availability but does not specify core alternatives. Two agreeing webpages do not override the checklist by vote. The record stays partial for that substantive acceptance conflict. The broader policy’s omission of MATH65 is recorded as abbreviated wording, not an explicit ban, because both the detailed program and checklist support it.
+
+A source-specific section-hash observer is registered for future policy changes; it does not manufacture precedence or a complete audit. Existing browser-reviewed checklist evidence was reused rather than repeating Box access. The dated news source supplies a program_aim, not an assessed learning outcome. No course identities, amounts or units were guessed.

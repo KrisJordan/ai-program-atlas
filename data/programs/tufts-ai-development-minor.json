@@ -21,7 +21,7 @@
   "overview": "Reviewed AI minor course inventory, public checklist policies and graduation procedures; explicit source discrepancies remain unresolved.",
   "catalog_year": null,
   "verification_status": "partial",
-  "last_verified": "2026-10-10",
+  "last_verified": "2026-10-11",
   "curriculum_status": "partial",
   "links": [
     {
@@ -90,6 +90,26 @@
       "catalog_year": null,
       "locator": "Introductory submission timing and All Minors (SoE and A&S)",
       "confidence": "high"
+    },
+    {
+      "id": "tufts-development-department-policy",
+      "url": "https://engineering.tufts.edu/cs/current-students/policies-and-documentation",
+      "title": "Policies and Documentation — Minor in AI Development",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Minor in AI Development; CS135 or EE140/CS128 core alternative; no printed effective date",
+      "confidence": "high"
+    },
+    {
+      "id": "tufts-ai-minors-launch",
+      "url": "https://engineering.tufts.edu/news-events/news/department-computer-science-debuts-two-new-artificial-intelligence-minors",
+      "title": "Department of Computer Science Debuts Two New Artificial Intelligence Minors",
+      "fetched_at": "2026-10-11",
+      "source_date": "2026-03-25",
+      "catalog_year": null,
+      "locator": "March25,2026 publication; Fall2026 availability and Development minor aims; no core-course precedence statement",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -120,6 +140,13 @@
       "statement_type": "unspecified",
       "source_id": "tufts-ai-development-minor-identity",
       "locator": "Required core and available elective curriculum; analyst theme classification"
+    },
+    {
+      "text": "Prepare students for advanced study in AI through upper-level technical study of how to build core AI technologies.",
+      "kind": "source_stated",
+      "statement_type": "program_aim",
+      "source_id": "tufts-ai-minors-launch",
+      "locator": "Dated announcement: purpose of Minor in AI Development"
     }
   ],
   "courses": [
@@ -899,6 +926,20 @@
       "source_text": null,
       "summary": "The PDF checklist says to leave future-course grades blank, while the linked department graduation instructions say to enter TBD for next-semester courses. Both sources use IP for in-progress courses. This administrative discrepancy remains explicit; no source-precedence rule was found.",
       "course_ids": []
+    },
+    {
+      "id": "tufts-ai-development-minor-department-policy-conflict",
+      "parent_id": null,
+      "title": "Department policy corroboration does not resolve checklist conflict",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "tufts-development-department-policy",
+      "source_text": null,
+      "summary": "The separate department Policies and Documentation page also lists CS 135 or EE 140/CS 128 for the machine-learning core slot. The required checklist names only CS 135. No inspected source dates the alternatives or establishes which governs approval, so the alternative remains source-supported but not conclusively accepted for checklist completion.",
+      "course_ids": []
     }
   ],
   "notes": [
@@ -909,17 +950,20 @@
     "Inferred taxonomy summarizes available curriculum themes, including optional electives, rather than claiming institution-stated learning outcomes.",
     "Checklist file identity: cs-minor-aidev-checklist.pdf, visible in the public Box viewer on 2026-10-10 at https://tufts.app.box.com/v/cs-minor-aidev-checklist. No printed edition/date was observed, so source date/catalog year remain null. Login/signup buttons were optional; no authentication, hidden endpoints or download bypass was used.",
     "The local fetcher initially reported robots denial because its first-match parser ignored the more-specific Allow: /v/ alongside Disallow: /. This was a transport interpretation issue, not evidence that the document requires permission. Ordinary browser inspection followed the explicitly allowed shared-link path.",
-    "The blank-versus-TBD grade placeholder is an administrative annotation ambiguity, not a change to course, credit, grade or overlap eligibility. It remains documented but does not itself make the academic requirement inventory incomplete; no individual graduation clearance is implied."
+    "The blank-versus-TBD grade placeholder is an administrative annotation ambiguity, not a change to course, credit, grade or overlap eligibility. It remains documented but does not itself make the academic requirement inventory incomplete; no individual graduation clearance is implied.",
+    "2026-10-11: Separate department policy corroborates the machine-learning alternative but has no printed effective date. Its discrete-mathematics bullet omits the MATH65 option present on the program page and checklist; omission is not treated as an express prohibition. The March25,2026 launch announcement confirms Fall2026 availability but does not settle course-rule precedence. Checklist conflict remains partial; no new Box access attempt was needed."
   ],
   "curriculum_audit": {
     "scope": "minor",
-    "reviewed_at": "2026-10-10",
+    "reviewed_at": "2026-10-11",
     "source_ids": [
       "tufts-ai-development-minor-identity",
       "tufts-ai-development-minor-context-1",
       "tufts-ai-development-minor-forms-directory",
       "tufts-ai-development-minor-checklist",
-      "tufts-ai-development-minor-graduation-instructions"
+      "tufts-ai-development-minor-graduation-instructions",
+      "tufts-development-department-policy",
+      "tufts-ai-minors-launch"
     ],
     "sections": [
       "Program eligibility",
@@ -930,10 +974,11 @@
       "Minimum grade",
       "Public checklist: grade, overlap and signatures",
       "Minor graduation-paperwork submission procedure",
-      "Checklist/program-page and checklist/instructions agreement review"
+      "Checklist/program-page and checklist/instructions agreement review",
+      "Separate department policy and dated launch announcement checked for course-rule precedence; no resolution found"
     ],
     "unresolved_requirements": [
-      "Checklist requires CS 135 without the EE 140/CS 128 alternative permitted by the current program page; source precedence/acceptance remains unresolved."
+      "Required checklist names CS 135 without the EE 140/CS 128 alternative permitted by both the program page and separate department policy. No reviewed effective date or precedence rule resolves approval of the alternative."
     ],
     "metadata_gaps": [
       "Course descriptions, most prerequisites and public teaching resources remain unverified.",

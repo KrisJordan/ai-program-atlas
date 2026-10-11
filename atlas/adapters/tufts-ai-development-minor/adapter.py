@@ -25,3 +25,7 @@ SOURCE_PARSERS = {
     SOURCES[0]: parse,
     PAPERWORK_URL: lambda html: parse_paperwork(html, pid=PROGRAM_ID),
 }
+
+from atlas.adapters.tufts_development_policy_review import URL as DEPARTMENT_POLICY_URL,parse_policy as observe_department_policy
+SOURCES.append(DEPARTMENT_POLICY_URL)
+SOURCE_PARSERS[DEPARTMENT_POLICY_URL]=lambda html:observe_department_policy(html,PROGRAM_ID)
