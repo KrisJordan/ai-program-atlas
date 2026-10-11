@@ -138,7 +138,10 @@ def resolve_program(program, family=None):
         course_ids = binding.get("course_ids", [])
         if any(cid not in courses for cid in course_ids):
             raise ValueError("Shared binding references an unknown program course")
-        if sorted(courses[cid]["code"] for cid in course_ids) != sorted(
+        codes = [courses[cid].get("code") for cid in course_ids]
+        if any(not isinstance(code, str) or not code.strip() for code in codes):
+            raise ValueError("Shared binding requires reviewed known course codes")
+        if sorted(codes) != sorted(
             shared_node.get("course_codes", [])
         ):
             raise ValueError("Shared binding does not match reviewed course identities")

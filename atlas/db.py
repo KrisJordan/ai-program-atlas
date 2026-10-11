@@ -116,13 +116,24 @@ def migrate(conn: sqlite3.Connection) -> None:
         version = int(file.name.split("_")[0])
         if conn.execute("SELECT 1 FROM schema_migrations WHERE version=?", (version,)).fetchone():
             continue
+        # Rebuilding a referenced parent with FK enforcement enabled would
+        # cascade-delete its children. Disable only outside the transaction;
+        # validate the complete rebuilt graph before making it durable.
+        rebuild_courses = version == 16
+        if rebuild_courses:
+            conn.execute("PRAGMA foreign_keys=OFF")
         try:
             conn.executescript("BEGIN IMMEDIATE;\n" + file.read_text())
+            if rebuild_courses and conn.execute("PRAGMA foreign_key_check").fetchone():
+                raise sqlite3.IntegrityError("Course rebuild failed foreign key verification")
             conn.execute("INSERT INTO schema_migrations VALUES (?,?)", (version, now()))
             conn.commit()
         except Exception:
             conn.rollback()
             raise
+        finally:
+            if rebuild_courses:
+                conn.execute("PRAGMA foreign_keys=ON")
 
 
 def upsert_institution(conn, inst):
@@ -234,6 +245,18 @@ def validate_program(program, family=None):
         if item.get("source_id") and item["source_id"] not in source_ids:
             raise ValueError(f"Unknown source {item['source_id']}")
     for course in courses:
+        if not isinstance(course.get("id"), str) or not re.fullmatch(
+            r"[a-z0-9][a-z0-9-]*", course["id"]
+        ):
+            raise ValueError("Course ID must be a safe slug")
+        if "code" not in course or (course["code"] is not None and (
+            not isinstance(course["code"], str) or not course["code"].strip()
+        )):
+            raise ValueError("Course code must be a nonempty string or explicit null")
+        if course["code"] is None and (
+            not isinstance(course.get("name"), str) or not course["name"].strip()
+        ):
+            raise ValueError("Course with unknown code needs a source-stated name")
         if "notes" in course and (not isinstance(course["notes"], list) or any(
             not isinstance(note, str) or not note.strip() for note in course["notes"]
         )):
