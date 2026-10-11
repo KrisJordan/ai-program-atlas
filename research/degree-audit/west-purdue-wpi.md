@@ -165,3 +165,23 @@ stay unchanged; all86raw code records remain. The reviewed course-ID lists now
 use the canonical C-LIT155 identity. Seventy represented codes have bounded
 content dispositions; the16 remaining code descriptions and newly accessible
 catalog policies/pools remain active work. No whole-degree completion claimed.
+
+### UCSB current CS/ECE/ME records and role correction (2026-10-11)
+
+Sixteen complete current course pages add13new code dispositions and refresh3.
+Manual taxonomy follows the actual descriptions: introductory1AsurveysAItechniques;
+25teaches programming/data workflows;42formal computation;135mathematical foundations;
+183ethics with practical tools;184softwaredevelopment;139probability;153Aembedded
+systems;180/181/186/187andME107learning/visionmethods. No inherited prerequisites
+become extra degree requirements. Recommendations and consent alternatives remain
+explicit, and missing prerequisites remain unknown.
+
+Reciprocal153Aand181identities are now verified. For181the current degree expressly
+requires the course under either alias, so the graph's local rule isalland one
+canonical identity isfixed. Starting19fixed/64options/2context: remove both181options,
+add one fixedidentity, and deduplicate153Aoptions→20/61/2. Rawcounts21/63/2still sum86.
+No automatic one-member-pool promotion is used. Current181AI-major admission is
+explicitly allowed; other narrowed major restrictions remain exact policy questions.
+Science approval lists remain department-referred; currentprogrambody has two opaque
+references. Three exactcode descriptions plus broader accessiblecatalogreview remain,
+so whole-degree status isin_progress.

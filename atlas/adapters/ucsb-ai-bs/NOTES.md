@@ -109,3 +109,30 @@ The independently inspected Comparative Literature2025–26 offerings PDF and GS
 Sixteen exact course codes still need content review. Current catalog browsing
 also reopens GE/science/capstone and current-version checks as accessible work;
 old raw-shell observations cannot be treated as definitive access barriers.
+
+### Current catalog CS/ECE/ME batch (2026-10-11)
+
+Read the full current degree tree and16full current course records: CMPSC1A,25,
+41,42,135,183,187,184,153A,181; ECE139,153A,180,181,186; ME107. These close13
+previously unread code descriptions and replace historical/undated evidence for
+three others. Current184now has substantive software-development content.
+Current41states4units; the GEAR5unit inconsistency remains and curated unitsnull.
+ME107is3units, requiresME17or instructor consent, and merely recommendsPSTAT120A.
+The parser preserves full published eligibility, including concurrent math for25.
+
+Both current181records expressly allow AI upper-division students and identify
+each other as the same course. The required degree row plus reciprocal identity
+proof establishes one fixed course, not two choices; both codes are retained.
+Reciprocal153Astatements establish one option identity. Current42,139,153Aand180
+still list narrower majors despite their AI degree membership; policy applicability
+requires follow-up, not an inferred exemption. Counts are20fixed/61options/2context
+identities and21/63/2raw observations. Total83identities from86sourcecodes.
+
+The current program tree still refers scienceListsA/Bto the department, with8and12
+units; no finite pool was published there. It explicitly requires at least9field
+electives, retains the192/196combined4unit/GPA3.0restriction, and displays two opaque
+course references where the older worksheet had a sequence. The observedCSdirectory
+contains189A/Bbut not189C/D; do not substitute those identities without evidence.
+Remaining exact-code description follow-ups:189C,189Dandlegacy109ES. Current versions
+for datedEnglish records, other undated metadata, college GE pools and applicable
+approval policies remain accessible work.

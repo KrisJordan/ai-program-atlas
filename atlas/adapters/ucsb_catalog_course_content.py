@@ -34,9 +34,8 @@ def parse(html, *, code):
                   url=entry['url'])
     # Identity certification and taxonomy review are manual seed annotations.
     return dict(id='ucsb-ai-bs', courses=[course], requirements=[], notes=[
-        'Current catalog advisory text identifies German155, Comparative '
-        'Literature155 and ENGL155AI as the same course; observed text does '
-        'not itself certify an identity group or a mandatory degree role.'])
+        'Observed current catalog metadata does not itself certify a manual '
+        'taxonomy review, identity group or mandatory degree role.'])
 
 
 def attach(namespace):

@@ -83,3 +83,5 @@ from atlas.adapters import ucsb_english_content as english_content
 english_content.attach(globals())
 from atlas.adapters import ucsb_catalog_course_content as catalog_content
 catalog_content.attach(globals())
+# Full rendered program tree manually inspected; HTTP shell is not fresh evidence.
+SOURCES += ('https://catalog.ucsb.edu/programs/mcAVHSCZnQkOVw0EAf1m/program-requirements-kn5uw',)
