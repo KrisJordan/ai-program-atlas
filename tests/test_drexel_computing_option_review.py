@@ -46,4 +46,4 @@ def test_actual_review_dispositions_do_not_change_requirement_roles():
     # No observer emits requirement changes. CS383 remains in a choice, not a new fixed requirement.
     assert not any(r['kind']=='all' and r['course_ids']==[c['CS 383']['id']] for r in p['requirements'])
     e=next(x for x in json.loads(Path('research/degree-audit/national-degree-batch.json').read_text())['programs'] if x['program_id']==m.PID)
-    assert e['status'] in ('in_progress','blocked') and e['expected_profile'] is None
+    assert e['status'] in ('in_progress','blocked') and e['expected_profile']['required']['count']==11
