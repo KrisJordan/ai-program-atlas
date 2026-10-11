@@ -150,3 +150,7 @@ from atlas.adapters import ucsd_eighth_pools as eighth
 SOURCES += (eighth.FIRST_URL, eighth.TRANSFER_URL, eighth.TABLE_URL)
 SOURCE_PARSERS.update({eighth.FIRST_URL: eighth.parse_first, eighth.TRANSFER_URL: eighth.parse_transfer,
                       eighth.TABLE_URL: eighth.parse_table})
+
+from atlas.adapters import ucsd_seventh_pools as seventh
+SOURCES += (seventh.FIRST_URL, seventh.TRANSFER_URL)
+SOURCE_PARSERS.update({seventh.FIRST_URL: seventh.parse_first, seventh.TRANSFER_URL: seventh.parse_transfer})
