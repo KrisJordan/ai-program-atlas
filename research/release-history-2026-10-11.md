@@ -200,3 +200,12 @@ Commit `3846967` fixes the cause with wrapping scoped to source citation paragra
 The complete clean suite passed 3,193 tests, including the repaired mobile browser checks, and skipped 434 optional private-cache or historical cases. Three old RIT tests expected the earlier 43-record inventory to still equal the entire expanded degree graph. This candidate was not published. Fresh and maintained facts agreed, repeat ingestion was unchanged, and 175 static files were deterministic.
 
 Commit `acd03e6` declares the existing independent review's exact bounded inventory without altering its manually transcribed IDs, roles, or categories. New immersion records remain outside that independent certification. Tests still reject deletion of a reviewed course, changes to its role or subject, and promotion of later immersion additions into universal fixed requirements. All 44 affected tests pass. This is a scope correction, not an independent source review of new records.
+
+
+## Verified release 65555101 — 2026-10-11
+
+Exact remote SHA `6555510165abce8d4532e6ed06e9d38230c32a9c`; GitHub Actions [38122729680](https://github.com/KrisJordan/ai-program-atlas/actions/runs/38122729680) completed build and Pages deployment at 07:54 UTC. Clean locked tests: **3,249 passed**, 438 optional private-cache or historical cases skipped; all **58 required Chromium cases passed**. Schema 015 maintained database: 80,265,216 bytes. Fresh and maintained current facts agree; repeat ingestion changed zero programs; integrity, foreign keys and all 175 byte-identical static files passed.
+
+All six live scripts passed: public facts and projected profiles, rankings/audit, Rice and discovery refinements, current degree corrections, Stevens detail/comparison, and native course-note disclosures. Desktop and 390px mobile checks include keyboard, direct navigation, comparison reload/back/forward and no-JavaScript notes. Source fingerprints wrap without document overflow.
+
+Published coverage: 168 programs at 194 institutions; 24,638 course observations; 19,743 requirement nodes; 14,562 original description summaries; 6,963 prerequisite statements; 13,693 credit amounts with verified units; 294 actual teaching links; 261 syllabus links. Primary degree reviews: two audited, 56 individually blocked, five in progress. No full independent second-pass certification. The target cohort remains incomplete. Newer source commits are excluded from this exact verified checkpoint.

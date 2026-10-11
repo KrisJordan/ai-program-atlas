@@ -14,7 +14,7 @@ Shared taxonomy v1 now separates source-reviewed, mixed, unclassified and legacy
 
 The user requested three further discovery refinements: a source-confirmed **Second majors** group; the actual parent program and award on every concentration/track card; and an accessible **Find a program** pane collapsed by default with visible active-filter context. Migration 013 separates those curricular relationships from awards and preserves source evidence, unknowns and revisions. All five additional-major catalog pages were reread successfully; all 50 concentration relationships have been inspected individually. Existing category ranks, family membership, IDs, comparison selections and shareable filter state remain part of the required browser gate.
 
-The current published checkpoint carries these discovery refinements and subsequent degree corrections. It integrates all 63 primary audit entries: two primary reviews audited, 50 individually blocked, 11 in progress, and zero undocumented. No full independent second pass is certified. Migration through 014, repeat ingest (zero changes), database integrity and foreign keys passed; the maintained publication file is 72,622,080 bytes after compaction, retaining facts and history. Its 24,251 course observations and 19,687 requirement nodes contain 11,052 descriptions and 6,084 prerequisite statements. The audit continues beyond publication.
+The current published checkpoint carries these discovery refinements and subsequent degree corrections. It integrates all 63 primary audit entries: two primary reviews audited, 56 individually blocked, five in progress, and zero undocumented. No full independent second pass is certified. Migration through 015, repeat ingest (zero changes), database integrity and foreign keys passed; the maintained publication file is 80,265,216 bytes after compaction, retaining facts and history. Its 24,638 course observations and 19,743 requirement nodes contain 14,562 descriptions and 6,963 prerequisite statements. Course notes are now relationally stored and available through accessible HTML disclosures. The audit continues beyond publication.
 
 Rice received a fresh independent 14-source review of all 43 represented course records. The maintained database now agrees with its manually checked 13 fixed identities: three computing foundations (COMP 140/182/215), two systems (COMP 222/329), one mathematics, five AI, one human-context and one domain course. Three reciprocal cross-lists reduce its 30 option source records to 26 identities. Desktop/mobile required/options/comparison regressions passed; public instructor-approved registration procedures resolve the statistics and vision restrictions as conditional paths, without implying permission was granted. Inconsistent summer versus fall/spring residency wording remains the sole documented Rice policy blocker, so its full-degree second-pass status remains partial. Concentration parent reviews are 47 verified, two partial on the award, and one university-wide immersion with no specific verified parent.
 
@@ -22,8 +22,8 @@ Rice received a fresh independent 14-source review of all 43 represented course 
 
 - Repository: https://github.com/KrisJordan/ai-program-atlas
 - Site: https://krisjordan.github.io/ai-program-atlas/
-- Verified release: `dd797acc5dbf1523e2467df77f8a5b82ee02c83c`, [successful CI and Pages deployment](https://github.com/KrisJordan/ai-program-atlas/actions/runs/38119241621).
-- Fresh locked uv environment and clean committed source: **2,879 tests passed**, including all **56 required Chromium tests**. The 250 skipped cases require optional ignored source caches or historical snapshots; no browser tests were skipped.
+- Verified release: `6555510165abce8d4532e6ed06e9d38230c32a9c`, [successful CI and Pages deployment](https://github.com/KrisJordan/ai-program-atlas/actions/runs/38122729680).
+- Fresh locked uv environment and clean committed source: **3,249 tests passed**, including all **58 required Chromium tests**. The 438 skipped cases require optional ignored source caches or historical snapshots; no browser tests were skipped.
 - Fresh reconstruction and maintained publication copy passed integrity checks and agreed on current facts; additional historical coverage sources were preserved. Repeat ingest changed zero programs. Repeated static builds were byte-identical across 175 files.
 - Live Rice has 13 fixed mapped identities including three computing foundations and two systems courses, with all 13 classifications reviewed; its 30 option source records resolve to 26 identities. All five second-major labels, all 50 concentration parent contexts, collapsed filters and active query persistence passed desktop/mobile checks. Live Case BA/BS fixed foundations both equal two; three introductory programming alternatives remain option records. All six ranking category/type panels passed ascending rank checks on desktop/mobile, including filtering, explicit name sort and history.
 - Live public JSON matched these counts, and every projected curriculum profile and award bucket matched the source data. Live checks passed cohort tabs, BS/BSE/BA/Other filters, keyboard navigation, hidden comparison selection, profile toggling, reload/back/forward, comparison-clear focus, direct new and existing pages and 390px mobile layout. Screenshots were visually checked; no JavaScript errors or document overflow occurred. Family, empty-state, no-JS and multi-award cases also passed the required browser suite.
@@ -40,11 +40,11 @@ Rice received a fresh independent 14-source review of all 43 represented course 
 | Concrete programs | 168 |
 | Degrees / minors / concentrations / additional majors | 63 / 50 / 50 / 5 |
 | Complete / partial / pending requirement inventories | 46 / 115 / 7 |
-| Program-course records / resolved requirement nodes | 24,251 / 19,687 |
+| Program-course records / resolved requirement nodes | 24,638 / 19,743 |
 | Program families / concrete family variants | 2 / 31 |
-| Descriptions / prerequisite statements | 11,052 / 6,084 |
-| Credit amounts with verified units | 12,079 |
-| Public course sites / example syllabi | 191 / 173 |
+| Descriptions / prerequisite statements | 14,562 / 6,963 |
+| Credit amounts with verified units | 13,693 |
+| Public course sites / example syllabi | 294 / 261 |
 
 Caltech has one bounded no-qualifying-program finding after the current program directory and all 32 option/minor catalog pages were reviewed. It is a dated search result, not a claim about future offerings.
 
@@ -68,7 +68,7 @@ National Universities has 108 cited secondary-table members, including nine tied
 - [x] Carolina-blue/navy responsive sans-serif interface, keyboard navigation, filters, coverage ledger, detail pages and ranking methodology. No UNC marks or sponsorship claims.
 - [x] Explicit families, expandable variants, discipline filtering, concrete comparison URLs, common/local requirements, provenance and missingness. Stable IDs and base-path reload/back/forward work on GitHub Pages.
 - [x] Course-category and inferred-theme comparisons preserve credit units and separate source-stated learning outcomes, program aims and career pathways from editorial taxonomy. No opaque quality score.
-- [x] Compact directory projection reduced root HTML about 69% raw and 64% gzipped in a controlled same-data comparison. Live root HTML is 4,249,997 bytes; full static detail pages and data.json remain intact. No runtime fetch/server added.
+- [x] Compact directory projection reduced root HTML about 69% raw and 64% gzipped in a controlled same-data comparison. Live root HTML is 4,274,438 bytes; full static detail pages and data.json remain intact. No runtime fetch/server added.
 - [x] CI tests fresh reconstruction and publishes an updated copy of the maintained DB. Reviewed discovery classification corrections refresh correctly; manual program corrections and evidence history survive.
 
 ## Program families and current evidence
@@ -87,19 +87,15 @@ This status does **not** mean complete program evidence. Course descriptions, in
 
 ## Current work after the verified release
 
-### Verified source-correction release `dd797acc`
+### Verified source-correction release `65555101`
 
-The published snapshot contains **2 audited, 50 blocked and 11 in progress** out of 63 degrees. Full independent second-pass certification remains zero. RIT is in progress because accessible general-education/writing review remains; ordinary Lehigh/NJIT approval conditions have been removed from blocker descriptions. Actual unresolved source conflicts remain explicit.
+The published snapshot contains **2 audited, 56 blocked and 5 in progress** out of 63 degrees. Full independent second-pass certification remains zero. The exact release passed 3,249 clean tests including all 58 required Chromium cases, repeated zero-change ingestion, fresh/maintained current-fact equivalence and 175 byte-identical static files. GitHub CI/Pages and all six live desktop/mobile check scripts passed. Course-note disclosures work with keyboard and without JavaScript; source paragraphs wrap on mobile without clipping evidence.
 
-The exact release passed 2,879 clean tests including all 56 required Chromium cases, repeated zero-change ingestion, fresh/maintained current-fact equivalence and 175 byte-identical static files. GitHub CI/Pages and all five live desktop/mobile check scripts passed. Stevens has 24 fixed, 30 option and 25 contextual records, including 12 domain/application options; QF 102 version metadata and HASS 101 absent description remain visibly unknown. Rice, Case, MIT, Maryland, Northwestern and Northeastern corrected profiles, filters, sorting, keyboard navigation, direct pages and comparison reload/back/forward passed.
+Miami's four bounded reviews have finished reading all 7,727 observations. USF's 152-course general-education pool is reviewed; its exact catalog and brochure boundaries remain. Stevens has 24 fixed, 30 option and 25 contextual records, including 12 domain/application options; QF 102 version metadata and HASS 101 absent description remain unknown, and further Eligibility review reached human verification. MIT, Purdue, UCSD, UCSB and RIT remain in progress in the published ledger.
 
-Newer source commits remain separate from the exact verified release. Miami has finished reading all located contextual descriptions, with missing identities/policy review ongoing. MIT, UCSD and UCSB course evidence continues. USF public entry, transfer allocation and Policy 10-505 progression are committed after 58 focused tests and an isolated repeat-zero/integrity/build check; accessible general-education pool and manual aggregate review remain. Course-level notes already survive canonical SQLite export; relational querying and visible HTML disclosure are the next product correction.
+Newer source commits remain separate from this exact verified release. UCSB's 856 general-education rows have now been integrated locally. RIT's 77 local immersion rules are mapped with a deduplicated queue of actual course descriptions still to read; the approval-based Global Experience route has no finite course menu. Purdue's public course dashboard and identified policy pages provide accessible work. None of these newer changes is described as published until its own release gates pass.
 
-The 168-program correction release is a checkpoint. It includes the four paths committed before the audit priority change, completed RIT immersion/CMU concentration/WPI local inventory work, and verified degree-data corrections. **Inventory expansion is paused for the full 63-degree correctness audit.**
-
-The published audit ledger has **two primary reviews audited, 50 blocked, 11 in progress and zero awaiting documented results**; all are assigned. Bounded independent checks verify Case's fixed core/programming routes and WPI's fixed/choice roles without certifying their entire degrees. This checkpoint also includes reviewed Lehigh, Northwestern, Rice, Northeastern, RIT, Buffalo, Delaware and Penn State corrections; source-specific limits remain explicit. Accessible unfinished work remains in progress, never an invented access blocker.
-
-All requested navigation changes, required/options views, explicit second majors, concentration parents and collapsed filters are published and verified at `531073fe`. The maintained publication SQLite snapshot is 72,622,080 bytes through migration 013, retaining revisions and manual corrections. Migration 011 preserves source-known zero-credit requirements (not missing values), with positive credit-choice constraints; 91 focused tests and a maintained-copy migration preserved all facts/history/family bindings.
+The 168-program release is a checkpoint. **Inventory expansion is paused for the full 63-degree correctness audit.** Accessible unfinished work remains in progress, never an invented access blocker. Bounded independent checks remain separate from whole-degree certification. The maintained publication SQLite snapshot is 80,265,216 bytes through migration 015, retaining revisions and manual corrections.
 
 - **Required versus options:** profiles use resolved family graphs and separate fixed mapped courses, elective/required-choice option pools and unresolved roles. Counts are distinct IDs, never degree proportions or summed credits. Choice loads remain individual source rules. Large pools, overlapping groups, nested alternatives, unknown credits and family replacements have regression coverage. Real-data review found UCSD college/cohort branches falsely attached as universal roots; the adapter and seed now preserve their conditional ancestry, reducing fixed courses from 19 to eight without removing any evidence. Cohort, placement, waiver and substitution caveats remain visible.
 - **Homepage organization:** National Universities and National Liberal Arts Colleges use actual ranking evidence. Each group has Majors, Concentrations and Minors tabs; Majors includes separately labeled additional majors and BS/BSE/BA/Other filters. Verified multi-award options retain exact labels and evidence; unusual labels are not guessed from abbreviations or hosting units. Independent URL state, back/forward, active counts, family variants, comparison selections, keyboard operation and mobile layout passed clean and live publication checks.
@@ -128,7 +124,7 @@ The [initial gap triage](research/curriculum-gap-triage.md) is a dated starting 
 
 ### Publication discipline
 
-The verified public checkpoint is `dd797acc`; later commits are not described as published until their own clean build, tests, CI/Pages and live gates pass. The failed candidates and their repairs are retained in the release history.
+The verified public checkpoint is `65555101`; later commits are not described as published until their own clean build, tests, CI/Pages and live gates pass. The failed candidates and their repairs are retained in the release history.
 
 Course-note correction: the existing canonical snapshots and JSON preserved all course-level notes, but HTML previously omitted them. The new accessible disclosure has 13 passing site tests and 29 passing Chromium tests including no-JS keyboard activation and 390px layout. Migration 015 adds ordered relational note queries, backfilled from verified snapshots without changing source hashes or history. This correction awaits the next full publication gate.
 
@@ -143,3 +139,8 @@ The repaired candidate preserves 168 programs at 194 institutions and now has 24
 All 63 primary degree reviews are documented: **2 audited, 56 individually blocked and 5 in progress**, with no full independent certification. Miami's four bounded reviews closed after all 7,727 course observations were inspected. USF's 152-course general-education pool is fully read (170 represented courses total); its exact catalog/brochure boundaries remain. Stevens records 32 more Eligibility tabs, with 22 behind public human verification. MIT, Purdue, UCSD, UCSB and RIT still have accessible review work. RIT has two reviewed immersion branches while its full 77-route queue is being mapped. Further UCSB source contributions are committed independently and await primary integration; helper-only rows are not counted as database coverage. The last verified public release remains `dd797acc` until this candidate passes the full clean, CI/Pages and live gates.
 
 Candidate `2d77063d` was not published: all required browser cases passed, but three RIT assertions incorrectly applied a prior 43-record independent review to the enlarged immersion inventory. The other 3,193 tests passed and 434 optional cases skipped. The repair preserves every originally reviewed ID, role and category, explicitly bounds that independent review, rejects removal of reviewed courses, and does not certify new branch content. All 44 affected regression tests passed. The new candidate must pass the complete release gates.
+
+
+## Verified continuation — 65555101
+
+The frozen candidate described above passed all release gates and was published at 07:54 UTC on 2026-10-11. GitHub Actions 38122729680 built and deployed the exact SHA. Six live checks confirmed public data/profile equality, discovery and ranking views, current degree corrections, comparison reload/back/forward, Stevens mobile wrapping and course-note keyboard/no-JavaScript behavior. The target cohort and full degree audit remain incomplete; continuing research is not included in these verified publication totals.
