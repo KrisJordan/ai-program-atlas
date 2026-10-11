@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 from atlas.adapters.business_society_minors import clean
 
 SPECS={
+ 'd030':('D03.0 Registration',['II. Undergraduate Registration','IV. Adding and Dropping Courses','V. Independent Study (Undergraduate and Graduate)','VI. Inter-Institutional Registration']),
  'd015':('D01.5 University Writing Policy',['II. Writing Across the Curriculum Program Requirement for Undergraduate Programs']),
  'd011':('D01.1 Minors Policy',['I. Definition','II. Institutional parameters','III. Development / approval / administration processes']),
  'd020':('D02.0 Admission',['I. Undergraduate']),

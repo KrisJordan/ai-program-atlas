@@ -61,3 +61,22 @@ The adjacent ledger records manual expected ID sets and category totals. Focused
 Verification completed: 66 focused tests passed; six real cached Buffalo policy pages, the real Delaware sample plan and an exact public rendered RIT identity/credit field fragment parsed successfully. Isolated ingestion/build produced ten programs and 194 institutions; all ten exported profiles matched the manual ledger and all 2,551 taxonomy reviews survived storage/export. Repeat ingestion changed zero records and database integrity/foreign-key/tree checks passed. No shared database or publication files were edited.
 
 Integration finding: the legacy requirement-amount constraint rejected known zero despite allowing zero on courses. The coordinator supplies migration11 for zero-credit all/note/alternative requirements while credit-choice loads stay positive. Final source data retain numeric zero; neither a missing value nor an invented positive load replaces it.
+
+
+## Registration-policy clarification — 2026-10-11
+
+The permitted current [D03.0 policy](https://www.rit.edu/policies/d030) was read
+in full. It establishes prerequisite completion and departmental approval paths,
+including both departments' approval for undergraduate use of graduate courses.
+ISTE476 audience restrictions and EEEE485 preparation therefore remain explicit
+conditional enrollment issues; they are not by themselves proof of an impossible
+degree, nor are prerequisites promoted to extra fixed requirements. No individual
+waiver, equivalent or approval is asserted. Earlier language calling these
+ordinary conditions substantive curriculum conflicts is superseded by this check.
+
+Independent-study, add/drop and cross-registration conditions are also mapped.
+The source observer records section hashes and never re-certifies the audit.
+Current card/advising-version differences, CSCI431's self-referential exclusion,
+immersion overlap wording and the restricted approved-attribute catalog remain
+the concrete source boundaries. The registrar enrollment page was also read; its
+non-degree-specific approval language was not generalized to AI degree students.

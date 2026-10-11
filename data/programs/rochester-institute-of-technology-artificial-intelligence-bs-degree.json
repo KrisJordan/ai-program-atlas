@@ -170,6 +170,16 @@
       "catalog_year": "2026-2027",
       "locator": "Ordinary browser review 2026-10-11: expanded four-year curriculum and each distinct coded course link; not a direct HTTP catalog fetch",
       "confidence": "high"
+    },
+    {
+      "id": "rit-policy-d030",
+      "url": "https://www.rit.edu/policies/d030",
+      "title": "D03.0 Registration",
+      "fetched_at": "2026-10-11T04:50:47+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Sections II and IV–VI; effective/history dates differ, so no single inferred publication date",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -2246,6 +2256,48 @@
       "source_text": null,
       "summary": "The 2026–27 flowchart shows three separate immersion slots and labels MATH-190 as discrete mathematics, without an immersion designation. It therefore does not establish an exception to the university no-program-overlap rule or resolve the captured catalog’s extra Immersion 3 annotation.",
       "course_ids": []
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-registration-enrollment",
+      "parent_id": null,
+      "title": "Conditional course enrollment",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-policy-d030",
+      "source_text": null,
+      "summary": "Undergraduates must satisfy prerequisites for approved 100–500-level courses. Courses outside their usual plan require the offering department’s approval. Graduate-level courses may count when they fit the bachelor schedule and both home and offering departments approve. These are conditional routes, not granted waivers, automatic equivalents or added fixed courses.",
+      "course_ids": []
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-registration-adjustment",
+      "parent_id": null,
+      "title": "Registration and independent study",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-policy-d030",
+      "source_text": null,
+      "summary": "Ordinary add/drop lasts seven calendar days excluding Sundays/holidays; exceptional later changes require signed approval. Independent study requires a written proposal, agreed credits, faculty/administrative approval and evaluation. College/department limits and degree applicability remain locally determined.",
+      "course_ids": []
+    },
+    {
+      "id": "rochester-institute-of-technology-artificial-intelligence-bs-degree-registration-interinstitutional",
+      "parent_id": null,
+      "title": "Conditional cross-registration",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rit-policy-d030",
+      "source_text": null,
+      "summary": "Rochester-area cross-registration requires full-time home enrollment, a needed course unavailable at home, degree relevance and available space. It excludes summer, graduate students and graduate courses; host academic rules apply. Associated fees or overload charges may remain.",
+      "course_ids": []
     }
   ],
   "notes": [
@@ -2276,7 +2328,8 @@
       "rit-undergraduate-graduation",
       "rit-ai-bs-launch",
       "rit-ai-bs-advising-2026-2027",
-      "rit-ai-bs-rendered-2026-2027"
+      "rit-ai-bs-rendered-2026-2027",
+      "rit-policy-d030"
     ],
     "sections": [
       "All coded rows, alternative pairs and uncoded slots in typical sequence",
@@ -2290,19 +2343,19 @@
       "Public undergraduate graduation page: FYW options and wellness exceptions",
       "Dated launch article: 122-hour program and two co-op blocks; planned first cohort",
       "2026–27 School of Information advising PDF: explicit capstone WI designation, immersion layout and separately preserved elective list",
-      "2026–27 public rendered curriculum and all 40 current course-description popups: exact identities, credits, prerequisites, restrictions and subject rationale"
+      "2026–27 public rendered curriculum and all 40 current course-description popups: exact identities, credits, prerequisites, restrictions and subject rationale",
+      "D03.0 undergraduate prerequisites/department approvals, graduate-level permission, independent study and conditional cross-registration"
     ],
     "unresolved_requirements": [
       "IDAI-490 program WI is verified; the additional WI approved course pool and any applicable college-specific completion conditions remain incompletely inventoried.",
       "The complete approved general-education attribute inventory and chosen immersion requirements remain unverified. The public registrar course-list link redirects to a catalog endpoint whose robots response was unavailable (202).",
       "The MATH-190 Immersion 3 annotation appears beside a separate Immersion 3 slot, while university policy prohibits overlap with program requirements; clarification is required.",
       "The 2026–27 advising PDF lists CSCI-632 and LING-582/584, whereas the captured catalog uses CSCI-634 and omits those linguistics electives; authoritative reconciliation is required.",
-      "ISTE-476 is in the AI BS sequence, but its current enrollment restriction lists CMIT-BS, HCC-BS, WMC-BS, SOFTENG-BS, COMPSCI-BS or AISYS-MN and omits the AI BS. No exception was found in the reviewed sources.",
-      "EEEE-485 requires EEEE-346 or equivalent, which is not in the mapped fixed sequence; fulfillment or approved equivalence for AI BS students remains unverified.",
       "The CSCI-431 credit exclusion contains an apparent self-reference (CSCI-431 and CSCI-631). Its intended scope remains unclarified."
     ],
     "metadata_gaps": [
-      "Descriptions/prerequisites for three advising-only elective identities remain unknown. Twelve current prerequisite values remain null; thirteen cards had no separate prerequisite field, with LING581 expectations instead preserved from its description. Null is unknown, not no prerequisites. Exact public course sites and syllabi remain unverified."
+      "Descriptions/prerequisites for three advising-only elective identities remain unknown. Twelve current prerequisite values remain null; thirteen cards had no separate prerequisite field, with LING581 expectations instead preserved from its description. Null is unknown, not no prerequisites. Exact public course sites and syllabi remain unverified.",
+      "ISTE476 audience and EEEE485 preparation remain explicit course-entry conditions. D03.0 supplies a general departmental approval route, not a specific waiver or equivalent for an individual student."
     ]
   }
 }

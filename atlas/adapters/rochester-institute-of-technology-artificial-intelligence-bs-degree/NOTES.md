@@ -35,3 +35,22 @@ See `research/degree-audit/buffalo-delaware-rit.md` and the adjacent per-program
 All 40 current public course popups were read with exact identities; added original descriptions, 28 prerequisite/expectation summaries and verified alternative amounts. Twelve spurious context-to-AI-elective memberships were cleared. Public rendered cards can be rerun through rit_ai_degree_courses.parse_rendered_courses with exact degree/version context. HTTP-only page may omit those cards; direct catalog access is not bypassed. The new source uses fetched_at null because this was UI evidence. The current ISTE476 restriction omits AI BS, EEEE485 requires unmapped EEEE346/equivalent, and CSCI431 exclusion contains an apparent self-reference; advising-code and immersion conflicts remain. Current source explicitly confirms IDAI490 WI-PR.
 
 Zero-credit evidence: YOPS10 and IDAI499 course records, their mapped all-nodes, and the uncoded co-op preparation note preserve explicit numeric zero with semester units. This relies on the coordinator’s migration11 allowing zero-credit non-credit-choice requirements.
+
+
+## Registration-policy clarification — 2026-10-11
+
+The permitted current [D03.0 policy](https://www.rit.edu/policies/d030) was read
+in full. It establishes prerequisite completion and departmental approval paths,
+including both departments' approval for undergraduate use of graduate courses.
+ISTE476 audience restrictions and EEEE485 preparation therefore remain explicit
+conditional enrollment issues; they are not by themselves proof of an impossible
+degree, nor are prerequisites promoted to extra fixed requirements. No individual
+waiver, equivalent or approval is asserted. Earlier language calling these
+ordinary conditions substantive curriculum conflicts is superseded by this check.
+
+Independent-study, add/drop and cross-registration conditions are also mapped.
+The source observer records section hashes and never re-certifies the audit.
+Current card/advising-version differences, CSCI431's self-referential exclusion,
+immersion overlap wording and the restricted approved-attribute catalog remain
+the concrete source boundaries. The registrar enrollment page was also read; its
+non-degree-specific approval language was not generalized to AI degree students.

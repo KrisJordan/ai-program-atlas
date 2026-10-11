@@ -26,3 +26,9 @@ register(PROGRAM_ID, SOURCES, SOURCE_PARSERS, minor=False)
 
 from atlas.adapters.rit_general_education import register as register_general_education
 register_general_education(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
+
+# Public registration policy: degree-specific observation, no automatic waiver.
+from functools import partial
+from atlas.adapters.rit_policies import parse_policy
+SOURCES.append('https://www.rit.edu/policies/d030')
+SOURCE_PARSERS['https://www.rit.edu/policies/d030'] = partial(parse_policy, pid=PROGRAM_ID, code='d030')
