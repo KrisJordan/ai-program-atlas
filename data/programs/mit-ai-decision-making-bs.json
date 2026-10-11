@@ -1285,6 +1285,36 @@
       "catalog_year": null,
       "locator": "Dated PDF printed course rows; all three rendered pages reviewed; URL date is not a printed document date",
       "confidence": "high"
+    },
+    {
+      "id": "mit-ai-hass-review-sts-tier-i-titles",
+      "url": "https://sts-program.mit.edu/academics/undergraduate/tier-i-subjects/",
+      "title": "MIT STS Tier I public titles",
+      "fetched_at": "2026-10-11T01:10:37+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Actual course-title list and explicit annotations; no description inference",
+      "confidence": "high"
+    },
+    {
+      "id": "mit-ai-hass-review-sts-tier-ii-titles",
+      "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "title": "MIT STS Tier II public titles",
+      "fetched_at": "2026-10-11T01:10:38+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Actual course-title list and explicit annotations; no description inference",
+      "confidence": "high"
+    },
+    {
+      "id": "mit-ai-hass-review-anthropology-titles",
+      "url": "https://anthropology.mit.edu/undergraduate/subjects",
+      "title": "MIT Anthropology public subject directory titles",
+      "fetched_at": "2026-10-11T05:18:38+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Actual course-title list and explicit annotations; no description inference",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -10978,8 +11008,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-computing",
       "url": "https://shass.mit.edu/for-students/undergraduate-study/computing-and-society-concentration/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://anthropology.mit.edu/undergraduate/subjects",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Exact printed course label and title retained; minor plural/hyphen/punctuation differences do not alter this limited content observation. No role, level eligibility or identity group inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-computing",
+          "mit-ai-hass-review-anthropology-titles"
+        ],
+        "locator": "Subjects / literal 21A.311 row",
+        "rationale": "Limited official-title-only review: the precise title identifies cultural or social inquiry, communication, ethics or political/economic analysis; no computing-method claim follows from the object studied.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-computing-21a-500j",
@@ -10992,8 +11039,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-computing",
       "url": "https://shass.mit.edu/for-students/undergraduate-study/computing-and-society-concentration/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://anthropology.mit.edu/undergraduate/subjects",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Exact printed course label and title retained; minor plural/hyphen/punctuation differences do not alter this limited content observation. No role, level eligibility or identity group inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-computing",
+          "mit-ai-hass-review-anthropology-titles"
+        ],
+        "locator": "Subjects / literal 21A.500J row",
+        "rationale": "Limited official-title-only review: the precise title identifies cultural or social inquiry, communication, ethics or political/economic analysis; no computing-method claim follows from the object studied.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-computing-21a-504j",
@@ -11006,22 +11070,55 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-computing",
       "url": "https://shass.mit.edu/for-students/undergraduate-study/computing-and-society-concentration/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://anthropology.mit.edu/undergraduate/subjects",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Exact printed course label and title retained; minor plural/hyphen/punctuation differences do not alter this limited content observation. No role, level eligibility or identity group inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-computing",
+          "mit-ai-hass-review-anthropology-titles"
+        ],
+        "locator": "Subjects / literal 21A.504J row",
+        "rationale": "Limited official-title-only review: the precise title identifies cultural or social inquiry, communication, ethics or political/economic analysis; no computing-method claim follows from the object studied.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-computing-21a-505",
       "code": "21A.505",
       "name": "The Anthropology of Sound",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Analyzes sound perception, technologies, ownership and remix across cultures and history.",
+      "prerequisites": "None",
+      "credits": 12,
       "credit_unit": "units",
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-computing",
       "url": "https://shass.mit.edu/for-students/undergraduate-study/computing-and-society-concentration/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://cmsw.mit.edu/mit_subject/",
+      "syllabus": null,
+      "notes": [
+        "Observed departmental source term/version: Fall 2026. The original list identity is retained.",
+        "Actual CMS406 metadata explicitly names 21A505 as the same subject. Content reused with attributed clause; no course identity group or requirement-role change."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-computing",
+          "mit-ai-hass-review-cmsw-fall2026"
+        ],
+        "locator": "Fall2026 visible subject panel: CMS.406[J] / The Anthropology of Sound",
+        "rationale": "Actual description centers on cultural, communicative, historical or educational inquiry; technical media are not automatically computing-method instruction.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-computing-21a-511",
@@ -11031,11 +11128,29 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-computing",
       "url": "https://shass.mit.edu/for-students/undergraduate-study/computing-and-society-concentration/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://anthropology.mit.edu/undergraduate/subjects",
+      "syllabus": null,
+      "notes": [
+        "Printed meets-with clause is preserved separately; it does not certify identical courses or merge records.",
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Exact printed course label and title retained; minor plural/hyphen/punctuation differences do not alter this limited content observation. No role, level eligibility or identity group inferred."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-computing",
+          "mit-ai-hass-review-anthropology-titles"
+        ],
+        "locator": "Subjects / literal 21A.511 row",
+        "rationale": "Limited official-title-only review: this broad, practical or interdisciplinary title does not establish enough content for one subject category.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-computing-21h-383",
@@ -11545,11 +11660,28 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-computing",
       "url": "https://shass.mit.edu/for-students/undergraduate-study/computing-and-society-concentration/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-i-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-computing",
+          "mit-ai-hass-review-sts-tier-i-titles"
+        ],
+        "locator": "Tier I Subjects / literal STS.002 title",
+        "rationale": "Limited official-title-only review: broad interdisciplinary, practical or technical wording does not establish enough content to select a single taxonomy category.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-computing-sts-005j",
@@ -11559,11 +11691,28 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-computing",
       "url": "https://shass.mit.edu/for-students/undergraduate-study/computing-and-society-concentration/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-i-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-computing",
+          "mit-ai-hass-review-sts-tier-i-titles"
+        ],
+        "locator": "Tier I Subjects / literal STS.005J title",
+        "rationale": "Limited official-title-only review: broad interdisciplinary, practical or technical wording does not establish enough content to select a single taxonomy category.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-computing-sts-044",
@@ -11573,11 +11722,28 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-computing",
       "url": "https://shass.mit.edu/for-students/undergraduate-study/computing-and-society-concentration/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-computing",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.044 title",
+        "rationale": "Limited official-title-only review: broad interdisciplinary, practical or technical wording does not establish enough content to select a single taxonomy category.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-computing-sts-047",
@@ -11604,8 +11770,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-computing",
       "url": "https://shass.mit.edu/for-students/undergraduate-study/computing-and-society-concentration/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-computing",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.083 title",
+        "rationale": "Limited official-title-only review: the title explicitly identifies history, social/cultural inquiry, communication, ethics or policy. The technical object studied does not itself establish a computing-method subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-computing-sts-085j",
@@ -11618,8 +11801,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-computing",
       "url": "https://shass.mit.edu/for-students/undergraduate-study/computing-and-society-concentration/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-computing",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.085J title",
+        "rationale": "Limited official-title-only review: the title explicitly identifies history, social/cultural inquiry, communication, ethics or policy. The technical object studied does not itself establish a computing-method subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-computing-21t-424",
@@ -11864,8 +12064,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-african-and-african-diaspora-studies",
       "url": "https://shass.mit.edu/for-students/undergraduate-study/african-and-african-diaspora-studies-concentration/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-african-and-african-diaspora-studies",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.048 title",
+        "rationale": "Limited official-title-only review: the title explicitly identifies history, social/cultural inquiry, communication, ethics or policy. The technical object studied does not itself establish a computing-method subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-african-and-african-diaspora-studies-sts-088",
@@ -11875,11 +12092,28 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-african-and-african-diaspora-studies",
       "url": "https://shass.mit.edu/for-students/undergraduate-study/african-and-african-diaspora-studies-concentration/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-african-and-african-diaspora-studies",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.088 title",
+        "rationale": "Limited official-title-only review: broad interdisciplinary, practical or technical wording does not establish enough content to select a single taxonomy category.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-african-and-african-diaspora-studies-wgs-220j",
@@ -12178,8 +12412,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-african-and-african-diaspora-studies",
       "url": "https://shass.mit.edu/for-students/undergraduate-study/african-and-african-diaspora-studies-concentration/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://anthropology.mit.edu/undergraduate/subjects",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Exact printed course label and title retained; minor plural/hyphen/punctuation differences do not alter this limited content observation. No role, level eligibility or identity group inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-african-and-african-diaspora-studies",
+          "mit-ai-hass-review-anthropology-titles"
+        ],
+        "locator": "Subjects / literal 21A.135J row",
+        "rationale": "Limited official-title-only review: the precise title identifies cultural or social inquiry, communication, ethics or political/economic analysis; no computing-method claim follows from the object studied.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-african-and-african-diaspora-studies-24-908",
@@ -13110,11 +13361,28 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-american-studies",
       "url": "https://shass.mit.edu/for-students/undergraduate-study/american-studies-concentration/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://anthropology.mit.edu/undergraduate/subjects",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Exact printed course label and title retained; minor plural/hyphen/punctuation differences do not alter this limited content observation. No role, level eligibility or identity group inferred."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-american-studies",
+          "mit-ai-hass-review-anthropology-titles"
+        ],
+        "locator": "Subjects / literal 21A.406J row",
+        "rationale": "Limited official-title-only review: this broad, practical or interdisciplinary title does not establish enough content for one subject category.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-american-studies-sts-001",
@@ -13127,8 +13395,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-american-studies",
       "url": "https://shass.mit.edu/for-students/undergraduate-study/american-studies-concentration/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-i-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-american-studies",
+          "mit-ai-hass-review-sts-tier-i-titles"
+        ],
+        "locator": "Tier I Subjects / literal STS.001 title",
+        "rationale": "Limited official-title-only review: the title explicitly identifies history, social/cultural inquiry, communication, ethics or policy. The technical object studied does not itself establish a computing-method subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-american-studies-sts-039",
@@ -13141,8 +13426,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-american-studies",
       "url": "https://shass.mit.edu/for-students/undergraduate-study/american-studies-concentration/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-american-studies",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.039 title",
+        "rationale": "Limited official-title-only review: the title explicitly identifies history, social/cultural inquiry, communication, ethics or policy. The technical object studied does not itself establish a computing-method subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-american-studies-sts-048",
@@ -13155,8 +13457,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-american-studies",
       "url": "https://shass.mit.edu/for-students/undergraduate-study/american-studies-concentration/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-american-studies",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.048 title",
+        "rationale": "Limited official-title-only review: the title explicitly identifies history, social/cultural inquiry, communication, ethics or policy. The technical object studied does not itself establish a computing-method subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-american-studies-sts-049",
@@ -13166,11 +13485,28 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-american-studies",
       "url": "https://shass.mit.edu/for-students/undergraduate-study/american-studies-concentration/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-american-studies",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.049 title",
+        "rationale": "Limited official-title-only review: broad interdisciplinary, practical or technical wording does not establish enough content to select a single taxonomy category.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-american-studies-sts-050",
@@ -13183,8 +13519,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-american-studies",
       "url": "https://shass.mit.edu/for-students/undergraduate-study/american-studies-concentration/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-american-studies",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.050 title",
+        "rationale": "Limited official-title-only review: the title explicitly identifies history, social/cultural inquiry, communication, ethics or policy. The technical object studied does not itself establish a computing-method subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-american-studies-wgs-225j",
@@ -13394,8 +13747,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-american-studies",
       "url": "https://shass.mit.edu/for-students/undergraduate-study/american-studies-concentration/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://anthropology.mit.edu/undergraduate/subjects",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Exact printed course label and title retained; minor plural/hyphen/punctuation differences do not alter this limited content observation. No role, level eligibility or identity group inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-american-studies",
+          "mit-ai-hass-review-anthropology-titles"
+        ],
+        "locator": "Subjects / literal 21A.120 row",
+        "rationale": "Limited official-title-only review: the precise title identifies cultural or social inquiry, communication, ethics or political/economic analysis; no computing-method claim follows from the object studied.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-american-studies-21a-144",
@@ -13408,8 +13778,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-american-studies",
       "url": "https://shass.mit.edu/for-students/undergraduate-study/american-studies-concentration/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://anthropology.mit.edu/undergraduate/subjects",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Exact printed course label and title retained; minor plural/hyphen/punctuation differences do not alter this limited content observation. No role, level eligibility or identity group inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-american-studies",
+          "mit-ai-hass-review-anthropology-titles"
+        ],
+        "locator": "Subjects / literal 21A.144 row",
+        "rationale": "Limited official-title-only review: the precise title identifies cultural or social inquiry, communication, ethics or political/economic analysis; no computing-method claim follows from the object studied.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-ancient-and-medieval-studies-4-605",
@@ -15616,8 +16003,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-asian-and-asian-diaspora-studies",
       "url": "https://shass.mit.edu/for-students/undergraduate-study/asian-and-diaspora-studies-concentration/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://anthropology.mit.edu/undergraduate/subjects",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Exact printed course label and title retained; minor plural/hyphen/punctuation differences do not alter this limited content observation. No role, level eligibility or identity group inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-asian-and-asian-diaspora-studies",
+          "mit-ai-hass-review-anthropology-titles"
+        ],
+        "locator": "Subjects / literal 21A.141J row",
+        "rationale": "Limited official-title-only review: the precise title identifies cultural or social inquiry, communication, ethics or political/economic analysis; no computing-method claim follows from the object studied.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-latin-american-and-latino-a-studies-3-982",
@@ -15672,8 +16076,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-latin-american-and-latino-a-studies",
       "url": "https://shass.mit.edu/for-students/undergraduate-study/latin-american-and-latino-a-studies-concentration/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://anthropology.mit.edu/undergraduate/subjects",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Exact printed course label and title retained; minor plural/hyphen/punctuation differences do not alter this limited content observation. No role, level eligibility or identity group inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-latin-american-and-latino-a-studies",
+          "mit-ai-hass-review-anthropology-titles"
+        ],
+        "locator": "Subjects / literal 21A.133 row",
+        "rationale": "Limited official-title-only review: the precise title identifies cultural or social inquiry, communication, ethics or political/economic analysis; no computing-method claim follows from the object studied.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-latin-american-and-latino-a-studies-21a-506",
@@ -15686,8 +16107,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-latin-american-and-latino-a-studies",
       "url": "https://shass.mit.edu/for-students/undergraduate-study/latin-american-and-latino-a-studies-concentration/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://anthropology.mit.edu/undergraduate/subjects",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Exact printed course label and title retained; minor plural/hyphen/punctuation differences do not alter this limited content observation. No role, level eligibility or identity group inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-latin-american-and-latino-a-studies",
+          "mit-ai-hass-review-anthropology-titles"
+        ],
+        "locator": "Subjects / literal 21A.506 row",
+        "rationale": "Limited official-title-only review: the precise title identifies cultural or social inquiry, communication, ethics or political/economic analysis; no computing-method claim follows from the object studied.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-latin-american-and-latino-a-studies-21a-511",
@@ -15697,11 +16135,29 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-latin-american-and-latino-a-studies",
       "url": "https://shass.mit.edu/for-students/undergraduate-study/latin-american-and-latino-a-studies-concentration/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://anthropology.mit.edu/undergraduate/subjects",
+      "syllabus": null,
+      "notes": [
+        "Printed meets-with clause is preserved separately; it does not certify identical courses or merge records.",
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Exact printed course label and title retained; minor plural/hyphen/punctuation differences do not alter this limited content observation. No role, level eligibility or identity group inferred."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-latin-american-and-latino-a-studies",
+          "mit-ai-hass-review-anthropology-titles"
+        ],
+        "locator": "Subjects / literal 21A.511 row",
+        "rationale": "Limited official-title-only review: this broad, practical or interdisciplinary title does not establish enough content for one subject category.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-latin-american-and-latino-a-studies-21h-172j",
@@ -17146,8 +17602,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-religious-studies",
       "url": "https://shass.mit.edu/for-students/undergraduate-study/religious-studies-concentration/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://anthropology.mit.edu/undergraduate/subjects",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Exact printed course label and title retained; minor plural/hyphen/punctuation differences do not alter this limited content observation. No role, level eligibility or identity group inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-religious-studies",
+          "mit-ai-hass-review-anthropology-titles"
+        ],
+        "locator": "Subjects / literal 21A.00 row",
+        "rationale": "Limited official-title-only review: the precise title identifies cultural or social inquiry, communication, ethics or political/economic analysis; no computing-method claim follows from the object studied.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-religious-studies-21a-157",
@@ -17157,11 +17630,28 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-religious-studies",
       "url": "https://shass.mit.edu/for-students/undergraduate-study/religious-studies-concentration/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://anthropology.mit.edu/undergraduate/subjects",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Exact printed course label and title retained; minor plural/hyphen/punctuation differences do not alter this limited content observation. No role, level eligibility or identity group inferred."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-religious-studies",
+          "mit-ai-hass-review-anthropology-titles"
+        ],
+        "locator": "Subjects / literal 21A.157 row",
+        "rationale": "Limited official-title-only review: this broad, practical or interdisciplinary title does not establish enough content for one subject category.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-religious-studies-21a-520",
@@ -17174,8 +17664,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-religious-studies",
       "url": "https://shass.mit.edu/for-students/undergraduate-study/religious-studies-concentration/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://anthropology.mit.edu/undergraduate/subjects",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Exact printed course label and title retained; minor plural/hyphen/punctuation differences do not alter this limited content observation. No role, level eligibility or identity group inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-religious-studies",
+          "mit-ai-hass-review-anthropology-titles"
+        ],
+        "locator": "Subjects / literal 21A.520 row",
+        "rationale": "Limited official-title-only review: the precise title identifies cultural or social inquiry, communication, ethics or political/economic analysis; no computing-method claim follows from the object studied.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-religious-studies-21g-030j",
@@ -17412,8 +17919,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-religious-studies",
       "url": "https://shass.mit.edu/for-students/undergraduate-study/religious-studies-concentration/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-religious-studies",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.036 title",
+        "rationale": "Limited official-title-only review: the title explicitly identifies history, social/cultural inquiry, communication, ethics or policy. The technical object studied does not itself establish a computing-method subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-religious-studies-wgs-220j",
@@ -18445,11 +18969,28 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-philosophy-ethics",
       "url": "https://philosophy.mit.edu/undergraduate/#ethicsconcentration",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-i-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-philosophy-ethics",
+          "mit-ai-hass-review-sts-tier-i-titles"
+        ],
+        "locator": "Tier I Subjects / literal STS.011 title",
+        "rationale": "Limited official-title-only review: broad interdisciplinary, practical or technical wording does not establish enough content to select a single taxonomy category.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-ethics-sts-021j-wgs160j",
@@ -18518,8 +19059,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-philosophy-ethics",
       "url": "https://philosophy.mit.edu/undergraduate/#ethicsconcentration",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-philosophy-ethics",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.083 title",
+        "rationale": "Limited official-title-only review: the title explicitly identifies history, social/cultural inquiry, communication, ethics or policy. The technical object studied does not itself establish a computing-method subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-ethics-sts-084j-22-04j",
@@ -18834,11 +19392,28 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-philosophy-ethics",
       "url": "https://philosophy.mit.edu/undergraduate/#ethicsconcentration",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://anthropology.mit.edu/undergraduate/subjects",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Exact printed course label and title retained; minor plural/hyphen/punctuation differences do not alter this limited content observation. No role, level eligibility or identity group inferred."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-philosophy-ethics",
+          "mit-ai-hass-review-anthropology-titles"
+        ],
+        "locator": "Subjects / literal 21A.157 row",
+        "rationale": "Limited official-title-only review: this broad, practical or interdisciplinary title does not establish enough content for one subject category.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-ethics-21a-127j-11-045j-15-302j-17-045j",
@@ -18851,8 +19426,26 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-philosophy-ethics",
       "url": "https://philosophy.mit.edu/undergraduate/#ethicsconcentration",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://anthropology.mit.edu/undergraduate/subjects",
+      "syllabus": null,
+      "notes": [
+        "Printed meets-with clause is preserved separately; it does not certify identical courses or merge records.",
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Exact printed course label and title retained; minor plural/hyphen/punctuation differences do not alter this limited content observation. No role, level eligibility or identity group inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-philosophy-ethics",
+          "mit-ai-hass-review-anthropology-titles"
+        ],
+        "locator": "Subjects / literal 21A.127J row",
+        "rationale": "Limited official-title-only review: the precise title identifies cultural or social inquiry, communication, ethics or political/economic analysis; no computing-method claim follows from the object studied.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-ethics-21a-461",
@@ -18865,8 +19458,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-philosophy-ethics",
       "url": "https://philosophy.mit.edu/undergraduate/#ethicsconcentration",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://anthropology.mit.edu/undergraduate/subjects",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Exact printed course label and title retained; minor plural/hyphen/punctuation differences do not alter this limited content observation. No role, level eligibility or identity group inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-philosophy-ethics",
+          "mit-ai-hass-review-anthropology-titles"
+        ],
+        "locator": "Subjects / literal 21A.461 row",
+        "rationale": "Limited official-title-only review: the precise title identifies cultural or social inquiry, communication, ethics or political/economic analysis; no computing-method claim follows from the object studied.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-ethics-21a-301",
@@ -18879,8 +19489,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-philosophy-ethics",
       "url": "https://philosophy.mit.edu/undergraduate/#ethicsconcentration",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://anthropology.mit.edu/undergraduate/subjects",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Exact printed course label and title retained; minor plural/hyphen/punctuation differences do not alter this limited content observation. No role, level eligibility or identity group inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-philosophy-ethics",
+          "mit-ai-hass-review-anthropology-titles"
+        ],
+        "locator": "Subjects / literal 21A.301 row",
+        "rationale": "Limited official-title-only review: the precise title identifies cultural or social inquiry, communication, ethics or political/economic analysis; no computing-method claim follows from the object studied.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-ethics-21a-400",
@@ -18890,11 +19517,28 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-philosophy-ethics",
       "url": "https://philosophy.mit.edu/undergraduate/#ethicsconcentration",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://anthropology.mit.edu/undergraduate/subjects",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Exact printed course label and title retained; minor plural/hyphen/punctuation differences do not alter this limited content observation. No role, level eligibility or identity group inferred."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-philosophy-ethics",
+          "mit-ai-hass-review-anthropology-titles"
+        ],
+        "locator": "Subjects / literal 21A.400 row",
+        "rationale": "Limited official-title-only review: this broad, practical or interdisciplinary title does not establish enough content for one subject category.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-ethics-21a-409j-11-238j",
@@ -18907,8 +19551,26 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-philosophy-ethics",
       "url": "https://philosophy.mit.edu/undergraduate/#ethicsconcentration",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://anthropology.mit.edu/undergraduate/subjects",
+      "syllabus": null,
+      "notes": [
+        "Current directory explicitly labels this subject graduate (G); no undergraduate eligibility is inferred from its appearance in an older HASS list.",
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Exact printed course label and title retained; minor plural/hyphen/punctuation differences do not alter this limited content observation. No role, level eligibility or identity group inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-philosophy-ethics",
+          "mit-ai-hass-review-anthropology-titles"
+        ],
+        "locator": "Subjects / literal 21A.409J row",
+        "rationale": "Limited official-title-only review: the precise title identifies cultural or social inquiry, communication, ethics or political/economic analysis; no computing-method claim follows from the object studied.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-ethics-21a-506",
@@ -18921,8 +19583,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-philosophy-ethics",
       "url": "https://philosophy.mit.edu/undergraduate/#ethicsconcentration",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://anthropology.mit.edu/undergraduate/subjects",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Exact printed course label and title retained; minor plural/hyphen/punctuation differences do not alter this limited content observation. No role, level eligibility or identity group inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-philosophy-ethics",
+          "mit-ai-hass-review-anthropology-titles"
+        ],
+        "locator": "Subjects / literal 21A.506 row",
+        "rationale": "Limited official-title-only review: the precise title identifies cultural or social inquiry, communication, ethics or political/economic analysis; no computing-method claim follows from the object studied.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-ethics-21a-508",
@@ -18935,8 +19614,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-philosophy-ethics",
       "url": "https://philosophy.mit.edu/undergraduate/#ethicsconcentration",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://anthropology.mit.edu/undergraduate/subjects",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Exact printed course label and title retained; minor plural/hyphen/punctuation differences do not alter this limited content observation. No role, level eligibility or identity group inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-philosophy-ethics",
+          "mit-ai-hass-review-anthropology-titles"
+        ],
+        "locator": "Subjects / literal 21A.508 row",
+        "rationale": "Limited official-title-only review: the precise title identifies cultural or social inquiry, communication, ethics or political/economic analysis; no computing-method claim follows from the object studied.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-ethics-21l-024",
@@ -21010,8 +21706,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-anthropology",
       "url": "https://anthropology.mit.edu/undergraduate/requirements",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://anthropology.mit.edu/undergraduate/subjects",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Exact printed course label and title retained; minor plural/hyphen/punctuation differences do not alter this limited content observation. No role, level eligibility or identity group inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-anthropology",
+          "mit-ai-hass-review-anthropology-titles"
+        ],
+        "locator": "Subjects / literal 21A.00 row",
+        "rationale": "Limited official-title-only review: the precise title identifies cultural or social inquiry, communication, ethics or political/economic analysis; no computing-method claim follows from the object studied.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-anthropology-21a-01",
@@ -21024,8 +21737,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-anthropology",
       "url": "https://anthropology.mit.edu/undergraduate/requirements",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://anthropology.mit.edu/undergraduate/subjects",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Exact printed course label and title retained; minor plural/hyphen/punctuation differences do not alter this limited content observation. No role, level eligibility or identity group inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-anthropology",
+          "mit-ai-hass-review-anthropology-titles"
+        ],
+        "locator": "Subjects / literal 21A.01 row",
+        "rationale": "Limited official-title-only review: the precise title identifies cultural or social inquiry, communication, ethics or political/economic analysis; no computing-method claim follows from the object studied.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-anthropology-21a-157",
@@ -21035,11 +21765,28 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-anthropology",
       "url": "https://anthropology.mit.edu/undergraduate/requirements",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://anthropology.mit.edu/undergraduate/subjects",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Exact printed course label and title retained; minor plural/hyphen/punctuation differences do not alter this limited content observation. No role, level eligibility or identity group inferred."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-anthropology",
+          "mit-ai-hass-review-anthropology-titles"
+        ],
+        "locator": "Subjects / literal 21A.157 row",
+        "rationale": "Limited official-title-only review: this broad, practical or interdisciplinary title does not establish enough content for one subject category.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-linguistics-24-900",
@@ -21488,8 +22235,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-1",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-i-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-i-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-1",
+          "mit-ai-hass-review-sts-tier-i-titles"
+        ],
+        "locator": "Tier I Subjects / literal STS.001 title",
+        "rationale": "Limited official-title-only review: the title explicitly identifies history, social/cultural inquiry, communication, ethics or policy. The technical object studied does not itself establish a computing-method subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-1-sts-002",
@@ -21499,11 +22263,28 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-1",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-i-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-i-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-1",
+          "mit-ai-hass-review-sts-tier-i-titles"
+        ],
+        "locator": "Tier I Subjects / literal STS.002 title",
+        "rationale": "Limited official-title-only review: broad interdisciplinary, practical or technical wording does not establish enough content to select a single taxonomy category.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-1-sts-003",
@@ -21516,8 +22297,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-1",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-i-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-i-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-1",
+          "mit-ai-hass-review-sts-tier-i-titles"
+        ],
+        "locator": "Tier I Subjects / literal STS.003 title",
+        "rationale": "Limited official-title-only review: the title explicitly identifies history, social/cultural inquiry, communication, ethics or policy. The technical object studied does not itself establish a computing-method subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-1-sts-004",
@@ -21527,11 +22325,28 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-1",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-i-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-i-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-1",
+          "mit-ai-hass-review-sts-tier-i-titles"
+        ],
+        "locator": "Tier I Subjects / literal STS.004 title",
+        "rationale": "Limited official-title-only review: broad interdisciplinary, practical or technical wording does not establish enough content to select a single taxonomy category.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-1-sts-005j",
@@ -21541,11 +22356,28 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-1",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-i-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-i-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-1",
+          "mit-ai-hass-review-sts-tier-i-titles"
+        ],
+        "locator": "Tier I Subjects / literal STS.005J title",
+        "rationale": "Limited official-title-only review: broad interdisciplinary, practical or technical wording does not establish enough content to select a single taxonomy category.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-1-sts-006j",
@@ -21558,8 +22390,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-1",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-i-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-i-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-1",
+          "mit-ai-hass-review-sts-tier-i-titles"
+        ],
+        "locator": "Tier I Subjects / literal STS.006J title",
+        "rationale": "Limited official-title-only review: the title explicitly identifies history, social/cultural inquiry, communication, ethics or policy. The technical object studied does not itself establish a computing-method subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-1-sts-008",
@@ -21569,11 +22418,28 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-1",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-i-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-i-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-1",
+          "mit-ai-hass-review-sts-tier-i-titles"
+        ],
+        "locator": "Tier I Subjects / literal STS.008 title",
+        "rationale": "Limited official-title-only review: broad interdisciplinary, practical or technical wording does not establish enough content to select a single taxonomy category.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-1-sts-009",
@@ -21583,11 +22449,28 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-1",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-i-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-i-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-1",
+          "mit-ai-hass-review-sts-tier-i-titles"
+        ],
+        "locator": "Tier I Subjects / literal STS.009 title",
+        "rationale": "Limited official-title-only review: broad interdisciplinary, practical or technical wording does not establish enough content to select a single taxonomy category.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-1-sts-011",
@@ -21597,11 +22480,28 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-1",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-i-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-i-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-1",
+          "mit-ai-hass-review-sts-tier-i-titles"
+        ],
+        "locator": "Tier I Subjects / literal STS.011 title",
+        "rationale": "Limited official-title-only review: broad interdisciplinary, practical or technical wording does not establish enough content to select a single taxonomy category.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-1-sts-012",
@@ -21614,8 +22514,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-1",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-i-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-i-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-1",
+          "mit-ai-hass-review-sts-tier-i-titles"
+        ],
+        "locator": "Tier I Subjects / literal STS.012 title",
+        "rationale": "Limited official-title-only review: the title explicitly identifies history, social/cultural inquiry, communication, ethics or policy. The technical object studied does not itself establish a computing-method subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-1-sts-014",
@@ -21628,8 +22545,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-1",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-i-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-i-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-1",
+          "mit-ai-hass-review-sts-tier-i-titles"
+        ],
+        "locator": "Tier I Subjects / literal STS.014 title",
+        "rationale": "Limited official-title-only review: the title explicitly identifies history, social/cultural inquiry, communication, ethics or policy. The technical object studied does not itself establish a computing-method subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-1-sts-041",
@@ -21639,11 +22573,28 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-1",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-i-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-i-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-1",
+          "mit-ai-hass-review-sts-tier-i-titles"
+        ],
+        "locator": "Tier I Subjects / literal STS.041 title",
+        "rationale": "Limited official-title-only review: broad interdisciplinary, practical or technical wording does not establish enough content to select a single taxonomy category.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-020j",
@@ -21656,8 +22607,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.020J title",
+        "rationale": "Limited official-title-only review: the title explicitly identifies history, social/cultural inquiry, communication, ethics or policy. The technical object studied does not itself establish a computing-method subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-021j",
@@ -21670,8 +22638,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.021J title",
+        "rationale": "Limited official-title-only review: the title explicitly identifies history, social/cultural inquiry, communication, ethics or policy. The technical object studied does not itself establish a computing-method subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-022j",
@@ -21684,8 +22669,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.022J title",
+        "rationale": "Limited official-title-only review: the title explicitly identifies history, social/cultural inquiry, communication, ethics or policy. The technical object studied does not itself establish a computing-method subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-023j",
@@ -21698,22 +22700,59 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.023J title",
+        "rationale": "Limited official-title-only review: the title explicitly identifies history, social/cultural inquiry, communication, ethics or policy. The technical object studied does not itself establish a computing-method subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-024",
       "code": "STS.024",
       "name": "Thinking on Your Feet: Dance as a Learning Science",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Combines learning-science readings and school-reform inquiry with dance labs and choreographed teaching.",
+      "prerequisites": "None",
+      "credits": 12,
       "credit_unit": "units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://cmsw.mit.edu/mit_subject/",
+      "syllabus": null,
+      "notes": [
+        "No dance background required; limited to20.",
+        "Observed departmental source term/version: Spring 2026. The original list identity is retained.",
+        "Actual CMS/W metadata explicitly names this STS subject as the same subject; content reused with cited source, but no course-identity groups or requirement roles changed."
+      ],
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-cmsw-spring2026"
+        ],
+        "locator": "Select Spring2026, then public CMS.524[J] / Thinking on Your Feet: Dance as a Learning Science panel",
+        "rationale": "Substantial cultural/educational inquiry and artistic production both organize the actual description.",
+        "candidate_categories": [
+          "human_context",
+          "applications"
+        ]
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-031j",
@@ -21753,11 +22792,28 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.032 title",
+        "rationale": "Limited official-title-only review: broad interdisciplinary, practical or technical wording does not establish enough content to select a single taxonomy category.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-034",
@@ -21770,8 +22826,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.034 title",
+        "rationale": "Limited official-title-only review: the title explicitly identifies history, social/cultural inquiry, communication, ethics or policy. The technical object studied does not itself establish a computing-method subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-035",
@@ -21781,11 +22854,28 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.035 title",
+        "rationale": "Limited official-title-only review: broad interdisciplinary, practical or technical wording does not establish enough content to select a single taxonomy category.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-036",
@@ -21798,8 +22888,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.036 title",
+        "rationale": "Limited official-title-only review: the title explicitly identifies history, social/cultural inquiry, communication, ethics or policy. The technical object studied does not itself establish a computing-method subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-037j",
@@ -21812,8 +22919,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.037J title",
+        "rationale": "Limited official-title-only review: the title explicitly identifies history, social/cultural inquiry, communication, ethics or policy. The technical object studied does not itself establish a computing-method subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-038",
@@ -21823,11 +22947,28 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.038 title",
+        "rationale": "Limited official-title-only review: broad interdisciplinary, practical or technical wording does not establish enough content to select a single taxonomy category.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-039",
@@ -21840,8 +22981,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.039 title",
+        "rationale": "Limited official-title-only review: the title explicitly identifies history, social/cultural inquiry, communication, ethics or policy. The technical object studied does not itself establish a computing-method subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-040",
@@ -21854,8 +23012,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.040 title",
+        "rationale": "Limited official-title-only review: the title explicitly identifies history, social/cultural inquiry, communication, ethics or policy. The technical object studied does not itself establish a computing-method subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-041",
@@ -21865,11 +23040,28 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-i-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-sts-tier-i-titles"
+        ],
+        "locator": "Tier I Subjects / literal STS.041 title",
+        "rationale": "Limited official-title-only review: broad interdisciplinary, practical or technical wording does not establish enough content to select a single taxonomy category.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-042j",
@@ -21882,8 +23074,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.042J title",
+        "rationale": "Limited official-title-only review: the title explicitly identifies history, social/cultural inquiry, communication, ethics or policy. The technical object studied does not itself establish a computing-method subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-043",
@@ -21896,8 +23105,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.043 title",
+        "rationale": "Limited official-title-only review: the title explicitly identifies history, social/cultural inquiry, communication, ethics or policy. The technical object studied does not itself establish a computing-method subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-044",
@@ -21907,11 +23133,28 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.044 title",
+        "rationale": "Limited official-title-only review: broad interdisciplinary, practical or technical wording does not establish enough content to select a single taxonomy category.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-046j",
@@ -21924,8 +23167,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.046J title",
+        "rationale": "Limited official-title-only review: the title explicitly identifies history, social/cultural inquiry, communication, ethics or policy. The technical object studied does not itself establish a computing-method subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-047",
@@ -21935,11 +23195,28 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.047 title",
+        "rationale": "Limited official-title-only review: broad interdisciplinary, practical or technical wording does not establish enough content to select a single taxonomy category.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-048",
@@ -21952,8 +23229,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.048 title",
+        "rationale": "Limited official-title-only review: the title explicitly identifies history, social/cultural inquiry, communication, ethics or policy. The technical object studied does not itself establish a computing-method subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-049",
@@ -21963,11 +23257,28 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.049 title",
+        "rationale": "Limited official-title-only review: broad interdisciplinary, practical or technical wording does not establish enough content to select a single taxonomy category.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-050",
@@ -21980,8 +23291,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.050 title",
+        "rationale": "Limited official-title-only review: the title explicitly identifies history, social/cultural inquiry, communication, ethics or policy. The technical object studied does not itself establish a computing-method subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-051",
@@ -21994,8 +23322,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.051 title",
+        "rationale": "Limited official-title-only review: the title explicitly identifies history, social/cultural inquiry, communication, ethics or policy. The technical object studied does not itself establish a computing-method subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-053",
@@ -22005,11 +23350,28 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.053 title",
+        "rationale": "Limited official-title-only review: broad interdisciplinary, practical or technical wording does not establish enough content to select a single taxonomy category.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-055",
@@ -22022,8 +23384,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.055 title",
+        "rationale": "Limited official-title-only review: the title explicitly identifies history, social/cultural inquiry, communication, ethics or policy. The technical object studied does not itself establish a computing-method subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-057",
@@ -22036,8 +23415,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.057 title",
+        "rationale": "Limited official-title-only review: the title explicitly identifies history, social/cultural inquiry, communication, ethics or policy. The technical object studied does not itself establish a computing-method subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-059",
@@ -22047,11 +23443,28 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.059 title",
+        "rationale": "Limited official-title-only review: broad interdisciplinary, practical or technical wording does not establish enough content to select a single taxonomy category.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-060j",
@@ -22064,8 +23477,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.060J title",
+        "rationale": "Limited official-title-only review: the title explicitly identifies history, social/cultural inquiry, communication, ethics or policy. The technical object studied does not itself establish a computing-method subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-062",
@@ -22078,8 +23508,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.062 title",
+        "rationale": "Limited official-title-only review: the title explicitly identifies history, social/cultural inquiry, communication, ethics or policy. The technical object studied does not itself establish a computing-method subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-064j",
@@ -22089,25 +23536,58 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.064J title",
+        "rationale": "Limited official-title-only review: broad interdisciplinary, practical or technical wording does not establish enough content to select a single taxonomy category.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-065j",
       "code": "STS.065J",
       "name": "The Anthropology of Sound",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Analyzes sound perception, technologies, ownership and remix across cultures and history.",
+      "prerequisites": "None",
+      "credits": 12,
       "credit_unit": "units",
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://cmsw.mit.edu/mit_subject/",
+      "syllabus": null,
+      "notes": [
+        "Observed departmental source term/version: Fall 2026. The original list identity is retained.",
+        "Actual CMS/W metadata explicitly names this STS subject as the same subject; content reused with cited source, but no course-identity groups or requirement roles changed."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-cmsw-fall2026"
+        ],
+        "locator": "Fall2026 visible subject panel: CMS.406[J] / The Anthropology of Sound",
+        "rationale": "Actual description centers on cultural, communicative, historical or educational inquiry; technical media are not automatically computing-method instruction.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-066",
@@ -22117,11 +23597,28 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.066 title",
+        "rationale": "Limited official-title-only review: broad interdisciplinary, practical or technical wording does not establish enough content to select a single taxonomy category.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-074j",
@@ -22131,11 +23628,28 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.074J title",
+        "rationale": "Limited official-title-only review: broad interdisciplinary, practical or technical wording does not establish enough content to select a single taxonomy category.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-075j",
@@ -22148,8 +23662,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.075J title",
+        "rationale": "Limited official-title-only review: the title explicitly identifies history, social/cultural inquiry, communication, ethics or policy. The technical object studied does not itself establish a computing-method subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-081j",
@@ -22159,11 +23690,28 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.081J title",
+        "rationale": "Limited official-title-only review: broad interdisciplinary, practical or technical wording does not establish enough content to select a single taxonomy category.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-082j",
@@ -22176,8 +23724,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.082J title",
+        "rationale": "Limited official-title-only review: the title explicitly identifies history, social/cultural inquiry, communication, ethics or policy. The technical object studied does not itself establish a computing-method subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-083",
@@ -22190,8 +23755,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.083 title",
+        "rationale": "Limited official-title-only review: the title explicitly identifies history, social/cultural inquiry, communication, ethics or policy. The technical object studied does not itself establish a computing-method subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-084j",
@@ -22204,8 +23786,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.084J title",
+        "rationale": "Limited official-title-only review: the title explicitly identifies history, social/cultural inquiry, communication, ethics or policy. The technical object studied does not itself establish a computing-method subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-085j",
@@ -22218,8 +23817,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.085J title",
+        "rationale": "Limited official-title-only review: the title explicitly identifies history, social/cultural inquiry, communication, ethics or policy. The technical object studied does not itself establish a computing-method subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-086j",
@@ -22232,8 +23848,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.086J title",
+        "rationale": "Limited official-title-only review: the title explicitly identifies history, social/cultural inquiry, communication, ethics or policy. The technical object studied does not itself establish a computing-method subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-087",
@@ -22246,8 +23879,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.087 title",
+        "rationale": "Limited official-title-only review: the title explicitly identifies history, social/cultural inquiry, communication, ethics or policy. The technical object studied does not itself establish a computing-method subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-088",
@@ -22257,11 +23907,28 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
-      "category": "human_context",
+      "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.088 title",
+        "rationale": "Limited official-title-only review: broad interdisciplinary, practical or technical wording does not establish enough content to select a single taxonomy category.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-sts-tier-2-sts-089",
@@ -22274,8 +23941,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-sts-tier-2",
       "url": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-ii-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-sts-tier-2",
+          "mit-ai-hass-review-sts-tier-ii-titles"
+        ],
+        "locator": "Tier II Subjects / literal STS.089 title",
+        "rationale": "Limited official-title-only review: the title explicitly identifies history, social/cultural inquiry, communication, ethics or policy. The technical object studied does not itself establish a computing-method subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-language-placement-21g-302",
@@ -24783,8 +26467,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-cmsw-education",
       "url": "https://cmsw.mit.edu/education-and-teaching-licensure/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-i-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-cmsw-education",
+          "mit-ai-hass-review-sts-tier-i-titles"
+        ],
+        "locator": "Tier I Subjects / literal STS.014 title",
+        "rationale": "Limited official-title-only review: the title explicitly identifies history, social/cultural inquiry, communication, ethics or policy. The technical object studied does not itself establish a computing-method subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-cmsw-education-21a-150",
@@ -24797,8 +26498,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-cmsw-education",
       "url": "https://cmsw.mit.edu/education-and-teaching-licensure/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://anthropology.mit.edu/undergraduate/subjects",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Exact printed course label and title retained; minor plural/hyphen/punctuation differences do not alter this limited content observation. No role, level eligibility or identity group inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-cmsw-education",
+          "mit-ai-hass-review-anthropology-titles"
+        ],
+        "locator": "Subjects / literal 21A.150 row",
+        "rationale": "Limited official-title-only review: the precise title identifies cultural or social inquiry, communication, ethics or political/economic analysis; no computing-method claim follows from the object studied.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-cmsw-education-9-00",
@@ -26966,8 +28684,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-cmsw-pool",
       "url": "https://cmsw.mit.edu/academics/subject-lists/cms/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://anthropology.mit.edu/undergraduate/subjects",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Exact printed course label and title retained; minor plural/hyphen/punctuation differences do not alter this limited content observation. No role, level eligibility or identity group inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-cmsw-pool",
+          "mit-ai-hass-review-anthropology-titles"
+        ],
+        "locator": "Subjects / literal 21A.500J row",
+        "rationale": "Limited official-title-only review: the precise title identifies cultural or social inquiry, communication, ethics or political/economic analysis; no computing-method claim follows from the object studied.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-cmsw-pool-external-21a-502",
@@ -26980,8 +28715,25 @@
       "category": "human_context",
       "source_id": "mit-ai-decision-making-bs-hass-cmsw-pool",
       "url": "https://cmsw.mit.edu/academics/subject-lists/cms/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://anthropology.mit.edu/undergraduate/subjects",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Exact printed course label and title retained; minor plural/hyphen/punctuation differences do not alter this limited content observation. No role, level eligibility or identity group inferred."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-cmsw-pool",
+          "mit-ai-hass-review-anthropology-titles"
+        ],
+        "locator": "Subjects / literal 21A.502 row",
+        "rationale": "Limited official-title-only review: the precise title identifies cultural or social inquiry, communication, ethics or political/economic analysis; no computing-method claim follows from the object studied.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-cmsw-pool-external-21a-503-24-913-sts-070",
@@ -27019,11 +28771,29 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "unknown",
-      "category": "human_context",
+      "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-cmsw-pool",
       "url": "https://cmsw.mit.edu/academics/subject-lists/cms/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://anthropology.mit.edu/undergraduate/subjects",
+      "syllabus": null,
+      "notes": [
+        "Printed meets-with clause is preserved separately; it does not certify identical courses or merge records.",
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Exact printed course label and title retained; minor plural/hyphen/punctuation differences do not alter this limited content observation. No role, level eligibility or identity group inferred."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-cmsw-pool",
+          "mit-ai-hass-review-anthropology-titles"
+        ],
+        "locator": "Subjects / literal 21A.550J row",
+        "rationale": "Limited official-title-only review: this broad, practical or interdisciplinary title does not establish enough content for one subject category.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-cmsw-pool-external-21g-011",
@@ -27579,11 +29349,28 @@
       "prerequisites": null,
       "credits": null,
       "credit_unit": "unknown",
-      "category": "human_context",
+      "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-cmsw-pool",
       "url": "https://cmsw.mit.edu/academics/subject-lists/cms/",
-      "public_site": null,
-      "syllabus": null
+      "public_site": "https://sts-program.mit.edu/academics/undergraduate/tier-i-subjects/",
+      "syllabus": null,
+      "notes": [
+        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
+        "Observed departmental source term/version: not stated. The original list identity is retained.",
+        "Printed J notation preserved; no alias merges or prerequisite rule inferred from tier placement."
+      ],
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "mit-ai-decision-making-bs-hass-cmsw-pool",
+          "mit-ai-hass-review-sts-tier-i-titles"
+        ],
+        "locator": "Tier I Subjects / literal STS.008 title",
+        "rationale": "Limited official-title-only review: broad interdisciplinary, practical or technical wording does not establish enough content to select a single taxonomy category.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "mit-ai-hass-cmsw-pool-external-sts-056",
@@ -42967,7 +44754,8 @@
     "2026-10-11:69 additional CMS/W HASS records integrated from individually selected Fall2026, Spring2026, Fall2025 and Spring2025 public subject panels. Each record retains the actual observed term. Current-page refresh cannot silently replay archived-term metadata; same-subject labels, meets-with statements, title changes and malformed aliases remain separate evidence.",
     "2026-10-11:45 further HASS records have explicitly limited official-title-only manual dispositions. This adds no descriptions, credits or prerequisites. Unambiguous language instruction and cultural/history titles support bounded categories; broad public-health, calligraphy and environmental labels remain unclassified. Printed course-code/link mismatches and regular/hybrid variants remain held.",
     "2026-10-11:65 Political Science PDF records received explicit title-only dispositions. Thirteen broad methods/computing titles remain unclassified; department membership does not establish human-context content. The printed17.567 nine-unit IAP/MISTI condition is retained. No current offering or course-description verification is claimed.",
-    "2026-10-11:58 further architecture HASS source occurrences have bounded title-only dispositions, including explicit unknowns for broad design/culture titles. They do not establish current offerings or description/prerequisite completion. Seven current architecture class pages did not supply these exact pending codes; the separately linked ACT site was unread after normal transport and browser errors, not declared publisher-denied."
+    "2026-10-11:58 further architecture HASS source occurrences have bounded title-only dispositions, including explicit unknowns for broad design/culture titles. They do not establish current offerings or description/prerequisite completion. Seven current architecture class pages did not supply these exact pending codes; the separately linked ACT site was unread after normal transport and browser errors, not declared publisher-denied.",
+    "2026-10-11:103 further STS/Anthropology dispositions integrate100 limited title observations and three explicitly supported CMS same-subject descriptions. Same-subject evidence supports bounded content attribution without silently merging all source identities. Changed21A.503/508 andSTS.047 source titles remain held; graduate annotation21A.409 remains conditional."
   ],
   "curriculum_audit": {
     "scope": "degree",

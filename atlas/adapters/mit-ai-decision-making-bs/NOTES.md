@@ -286,3 +286,10 @@ The primary reviewer independently read the original seven source views for58 pr
 Printed credit values remain intact, including the nine-unit intensive design studio. The Middle Eastern source explicitly marks four represented architecture entries graduate-level; qualified undergraduate enrollment requires instructor permission. Distinct4.368 Public Sphere versus Public Space source labels remain unmerged. ACT webpage versus PDF eligibility questions also remain unchanged. Generic architecture pool construction now emits other until a specific reviewed observation supplies its category.
 
 Seven current architecture Classes pages were inspected for these pending identities without an exact code match. The separately linked ACT site failed the normal robots fetch with ConnectError; ordinary Chrome returned net::ERR_BLOCKED_BY_CLIENT for its robots URL. These are exact transport/browser boundaries, not publisher access denial. Original requirement pages/PDFs remain readable. The new source observer reuses manual judgments only on exact source payload, identity and source-ID matches, and never emits category_review. The maintained degree remains partial/in_progress.
+
+
+## STS and Anthropology integration — 2026-10-11
+
+Contributions cd82912 and2fec76f add103 primary dispositions:100 limited title observations and three explicitly supported CMS same-subject descriptions for STS024, STS065J and21A505. These are description-supported occurrences, not three new independent full-text reads or certified merged identities. Differing STS047 and21A503/508 titles remain withheld. The current21A409 graduate annotation is retained. Broad methods/content titles remain unclassified.
+
+The seed now has754 manual dispositions, including410 HASS occurrences:142 supported by descriptions and268 title-only.416 HASS records remain active,17 have identity/version holds and two have conflicting descriptions. The separate58 architecture contribution is included once. Fixed3 and contextual field-plan handling remain unchanged; source-precedence and formal metadata gaps still prevent a completed full-degree audit.

@@ -120,3 +120,13 @@ def test_political_titles_do_not_inherit_pool_category_and_keep_explicit_credit(
         assert by[code]['description'] is None
     assert by['17.567']['credits'] == 9
     assert any('MISTI' in n for n in by['17.567']['notes'])
+
+
+def test_explicit_cms_alias_content_keeps_sts_source_identity_and_mixed_scope():
+    p = json.loads(Path('data/programs/mit-ai-decision-making-bs.json').read_text())
+    rows = [c for c in p['courses'] if c['id'] in m.INTEGRATED['course_ids'] and c['code'] == 'STS.024']
+    assert rows and all(c['description'] and c['category'] == 'other' for c in rows)
+    assert all(c['category_review']['status'] == 'mixed' for c in rows)
+    assert all(c['source_id'] != 'mit-ai-hass-review-cmsw-spring2026' for c in rows)
+    merged = {cid for g in p.get('course_identity_groups', []) for cid in g['course_ids']}
+    assert not merged.intersection(c['id'] for c in rows)
