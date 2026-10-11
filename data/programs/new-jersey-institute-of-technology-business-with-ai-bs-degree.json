@@ -270,6 +270,26 @@
       "catalog_year": "2026–2027",
       "locator": "44 degree-listed HIST descriptions read; 89 R510 and 54 R512 entries inspected for description availability and found heading-only",
       "confidence": "high"
+    },
+    {
+      "id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-seminar-policy",
+      "url": "https://www.njit.edu/learningcommunities/first-year-seminar",
+      "title": "NJIT First Year Seminar goals and completion policy",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Purpose, course goals, attendance and Course Repetition Policy",
+      "confidence": "high"
+    },
+    {
+      "id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-art-option-review",
+      "url": "https://catalog.njit.edu/undergraduate/architecture-design/art-design/",
+      "title": "NJIT Art and Design course descriptions",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": "2026–2027",
+      "locator": "AD333 full course block; English/GER grades and excluded majors",
+      "confidence": "high"
     }
   ],
   "outcomes": [],
@@ -407,15 +427,26 @@
       "id": "njit-fys-sem",
       "code": "FYS SEM",
       "name": "First-Year Student Seminar",
-      "description": null,
+      "description": "University transition combines academic and study skills, campus resources, career connections, self-assessment and social adjustment; no one taxonomy subject dominates this broad orientation.",
       "prerequisites": null,
       "credits": 0,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-official",
-      "url": "https://catalog.njit.edu/search/?P=FYS%20SEM",
-      "public_site": null,
-      "syllabus": null
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-seminar-policy",
+      "url": "https://www.njit.edu/learningcommunities/first-year-seminar",
+      "public_site": "https://www.njit.edu/learningcommunities/first-year-seminar",
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-seminar-policy"
+        ],
+        "locator": "Course goals and completion policy",
+        "rationale": "University transition combines academic and study skills, campus resources, career connections, self-assessment and social adjustment; no one taxonomy subject dominates this broad orientation.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-ds-110",
@@ -2102,15 +2133,26 @@
       "id": "njit-ad-333",
       "code": "AD 333",
       "name": "Sketching for Art + Ideation",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Iterative drawing studies visual art and develops creative ideation and communication through sketching and interpretation of existing work.",
+      "prerequisites": "Prerequisites: ENGL 102 and a 200-level GER with a grade of C or higher. Restrictions: Not for ID, INTD, or DD majors.",
+      "credits": 3,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-njit-ger-300",
-      "url": "https://catalog.njit.edu/undergraduate/academic-policies-procedures/general-education-requirements/ger-300-level/",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-art-option-review",
+      "url": "https://catalog.njit.edu/undergraduate/architecture-design/art-design/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "new-jersey-institute-of-technology-business-with-ai-bs-degree-art-option-review"
+        ],
+        "locator": "AD333 complete description",
+        "rationale": "Iterative drawing studies visual art and develops creative ideation and communication through sketching and interpretation of existing work.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "njit-com-303",
@@ -8402,6 +8444,22 @@
       "course_ids": [
         "njit-sts-376"
       ]
+    },
+    {
+      "id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-seminar-completion",
+      "parent_id": null,
+      "title": "First-year seminar completion policy",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree-seminar-policy",
+      "source_text": null,
+      "summary": "The seminar is a graduation requirement for new first-time students. A satisfactory S grade is required; otherwise retake and pass before graduation. Retakes are online and asynchronous. Attendance is mandatory; two or more absences put the student at risk of failure, not an automatic stated failure rule. Participation in discussion is required.",
+      "course_ids": [
+        "njit-fys-sem"
+      ]
     }
   ],
   "notes": [
@@ -8438,7 +8496,9 @@
       "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-chemistry-environmental-science",
       "new-jersey-institute-of-technology-business-with-ai-bs-degree-science-subject-physics",
       "new-jersey-institute-of-technology-business-with-ai-bs-degree-humanities-subject-review",
-      "new-jersey-institute-of-technology-business-with-ai-bs-degree-history-subject-review"
+      "new-jersey-institute-of-technology-business-with-ai-bs-degree-history-subject-review",
+      "new-jersey-institute-of-technology-business-with-ai-bs-degree-seminar-policy",
+      "new-jersey-institute-of-technology-business-with-ai-bs-degree-art-option-review"
     ],
     "sections": [
       "120-credit published plan",
@@ -8452,7 +8512,8 @@
       "31 of 32 fixed-course descriptions individually read through public department catalog pages; published prerequisites, restrictions and exact credits retained without turning preparation into extra fixed requirements",
       "22 GER science option descriptions individually read: 20 physical/environmental-science domain subjects and 2 mixed biology courses; source-defined lab associations retained without inventing pairings.",
       "50 actual humanities/social-science option blocks reviewed; five explicit either-GER-but-not-both restrictions retained and reciprocal STS378/LIT378 identity reviewed without collapsing source records.",
-      "44 degree-listed HIST descriptions individually read; historical use of digital tools, science, medicine and AI law distinguished from technical-methods courses."
+      "44 degree-listed HIST descriptions individually read; historical use of digital tools, science, medicine and AI law distinguished from technical-methods courses.",
+      "Read current public FYS goals and S-grade/retake completion policy for new first-time students, plus AD 333 actual visual-art communication description. All 32 fixed subjects now independently reviewed, including orientation as unclassified."
     ],
     "unresolved_requirements": [
       "Degree-specific overlap/substitution rules remain unresolved: PHIL 310 appears both as a named degree requirement and in the GER 300+ approved pool; the reviewed pages do not explicitly authorize counting it in a second plan slot. Free-elective substitution limitations and any additional MTSM degree-wide graduation conditions need confirmation.",

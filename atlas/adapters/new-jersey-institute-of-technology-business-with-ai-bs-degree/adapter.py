@@ -171,3 +171,7 @@ SOURCE_PARSERS[HUMANITIES_URL] = partial(combine_humanities, SOURCE_PARSERS[HUMA
 from atlas.adapters.njit_history_subject_reviews import URL as HISTORY_URL, parse as parse_history
 SOURCE_PARSERS[HISTORY_URL] = parse_history
 SOURCES = tuple(SOURCE_PARSERS)
+
+from atlas.adapters.njit_seminar_art_reviews import SOURCE_PARSERS as SEMINAR_ART_PARSERS
+SOURCE_PARSERS.update(SEMINAR_ART_PARSERS)
+SOURCES = tuple(SOURCE_PARSERS)

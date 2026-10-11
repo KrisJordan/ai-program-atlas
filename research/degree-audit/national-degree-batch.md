@@ -268,3 +268,7 @@ Independent ordinary-browser review supplied all 20 remaining fixed descriptions
 ## NJIT history content — 2026-10-11
 
 All 44 named HIST option descriptions were read and independently classified from historical/legal/cultural content. Technical objects and research tools do not change the course's primary historical method. NJIT's chapter has 143 Rutgers history entries without explanatory descriptions; the official SASN history-list route was robots-denied and stopped. These remain unreviewed, with the source boundary recorded precisely rather than claiming all possible Rutgers routes are blocked. Total individually reviewed NJIT records is now 147; comprehensive audit remains in progress.
+
+## NJIT FYS and art option — 2026-10-11
+
+Public FYS course goals support a reviewed unclassified orientation rather than an unreviewed record; its S-grade graduation requirement and retake rule apply to new first-time students, with zero credits independently sourced to the degree plan. AD333 develops art and visual communication, with actual restrictions retained. All 32 fixed descriptions/goals are now reviewed (24 primary, 7 mixed, 1 unclassified); the remaining incomplete inventory is in named options and unresolved degree-policy questions.
