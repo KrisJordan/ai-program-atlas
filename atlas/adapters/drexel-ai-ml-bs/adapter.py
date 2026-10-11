@@ -286,3 +286,6 @@ register_reviewed_courses(SOURCES,SOURCE_PARSERS)
 
 from atlas.adapters.drexel_computing_option_review import register as register_computing_options
 register_computing_options(SOURCES, SOURCE_PARSERS)
+
+from atlas.adapters.drexel_degree_option_review import register as register_degree_options
+register_degree_options(SOURCES, SOURCE_PARSERS)
