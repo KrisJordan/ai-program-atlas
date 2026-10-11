@@ -111,3 +111,13 @@ SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + tuple(SOURCE_PARSERS)))
 from atlas.adapters.northeastern_international_affairs_reviews import attach_reviewed_sources
 SOURCE_PARSERS = attach_reviewed_sources(PROGRAM_ID, SOURCE_PARSERS)
 SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + tuple(SOURCE_PARSERS)))
+
+# Exact remaining Business subjects evidence composes with broader subject observations.
+from atlas.adapters.northeastern_business_remaining_reviews import attach_reviewed_sources
+SOURCE_PARSERS = attach_reviewed_sources(PROGRAM_ID, SOURCE_PARSERS)
+SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + tuple(SOURCE_PARSERS)))
+
+# Exact International social-science counterparts evidence composes with broader subject observations.
+from atlas.adapters.northeastern_international_social_reviews import attach_reviewed_sources
+SOURCE_PARSERS = attach_reviewed_sources(PROGRAM_ID, SOURCE_PARSERS)
+SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + tuple(SOURCE_PARSERS)))

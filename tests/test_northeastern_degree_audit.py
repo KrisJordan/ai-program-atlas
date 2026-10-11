@@ -732,3 +732,14 @@ def test_business_and_international_ai_titles_do_not_override_actual_subject_con
             assert courses[code]['category']==category
             assert courses[code]['category_review']['source_ids']==[program['id']+'-'+code.split()[0].lower()+'-courses']
     assert any('ENTR 3217' in note and 'field' in note.lower() for note in business['notes'])
+
+
+def test_international_reciprocal_aliases_preserve_both_source_eligibility_records():
+    from atlas.course_identity import identity_map
+    p=json.loads(next((ROOT/'data/programs').glob('northeastern-*international-affairs*.json')).read_text())
+    mapping=identity_map(p);courses={c['code']:c for c in p['courses']}
+    for left,right in [('INTL 2480','WMNS 2480'),('INTL 3300','JRNL 3300'),('INTL 4500','ANTH 4500')]:
+        assert mapping[courses[left]['id']]==mapping[courses[right]['id']]
+        assert courses[left]['category_review']['status']==courses[right]['category_review']['status']=='reviewed'
+    assert courses['INTL 4500']['prerequisites']!=courses['ANTH 4500']['prerequisites']
+    assert mapping[courses['ANTH 3100']['id']]!=mapping[courses['POLS 3100']['id']]

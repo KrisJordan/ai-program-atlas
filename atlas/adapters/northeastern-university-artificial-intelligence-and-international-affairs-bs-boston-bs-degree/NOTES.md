@@ -95,3 +95,7 @@ Finite course-description review complete (2026-10-11): all 180 currently listed
 2026-10-11 History contribution: exact title/version/complete-block guards protect original metadata summaries and reviewed registration conditions. Independent category reviews remain seed-only, while refresh composes observations without losing other same-subject courses. Course roles and unresolved whole-degree policy scope are unchanged.
 
 2026-10-11 International Affairs/Public Policy contribution: exact title/version/complete-block guards protect original metadata summaries and reviewed registration conditions. Independent category reviews remain seed-only, while refresh composes observations without losing other same-subject courses. Course roles and unresolved whole-degree policy scope are unchanged.
+
+2026-10-11 remaining Business subjects contribution: exact title/version/complete-block guards protect original metadata summaries and reviewed registration conditions. Independent category reviews remain seed-only, while refresh composes observations without losing other same-subject courses. Course roles and unresolved whole-degree policy scope are unchanged.
+
+2026-10-11 International social-science counterparts contribution: exact title/version/complete-block guards protect original metadata summaries and reviewed registration conditions. Independent category reviews remain seed-only, while refresh composes observations without losing other same-subject courses. Course roles and unresolved whole-degree policy scope are unchanged.
