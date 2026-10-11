@@ -5,3 +5,8 @@ SOURCES=('https://bulletin.miami.edu/undergraduate-academic-programs/arts-scienc
 SOURCE_ID='miami-data-science-ai-bs-catalog'
 def parse(html):
  return observe(html,PROGRAM_ID,'Data Science and Artificial Intelligence','BS','B.S. in Data Science and Artificial Intelligence',SOURCE_ID,SOURCES[0])
+
+from atlas.adapters.miami_policies import register
+SOURCES=list(SOURCES)
+SOURCE_PARSERS={SOURCES[0]:parse}
+register(PROGRAM_ID,SOURCES,SOURCE_PARSERS,minor=False,business=False)

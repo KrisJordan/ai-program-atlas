@@ -5,3 +5,8 @@ SOURCES = ('https://bulletin.miami.edu/undergraduate-academic-programs/business/
 SOURCE_ID = 'university-of-miami-artificial-intelligence-for-business-technology-minor-minor-curriculum'
 def parse(html: str) -> dict:
     return observe(html, PROGRAM_ID, 'Artificial Intelligence for Business Technology', SOURCE_ID, SOURCES[0], 'miami')
+
+from atlas.adapters.miami_policies import register
+SOURCES=list(SOURCES)
+SOURCE_PARSERS={SOURCES[0]:parse}
+register(PROGRAM_ID,SOURCES,SOURCE_PARSERS,minor=True,business=True)

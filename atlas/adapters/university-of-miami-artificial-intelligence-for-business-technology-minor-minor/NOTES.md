@@ -23,3 +23,13 @@ Course theme categories are editorial classifications; source-stated outcomes ar
 ## Adapter and metadata
 
 The adapter extracts observed headings, course entries, credit amounts and requirement groups. It returns partial candidates only, without review timestamps or completeness audits. Curated policy, outcome and metadata review is separate; changed source candidates require review. Fixtures are reduced structural examples, not full raw pages. Missing course fields, first-offered date and syllabus links remain unknown.
+
+## 2026-10-11 university and college policy review
+
+Reviewed public CourseLeaf policy pages with the robots-aware fetcher (all HTTP 200): Course Information, undergraduate Transfer Credit, Grades, Graduation, General Education, Advanced Writing, the undergraduate policy landing page and the applicable college. Degree records include the corresponding degree-wide rules; the minor includes only its credential relationship and applicable coursework policies. The source explicitly defines semester credit units, so existing numeric amounts are normalized without conversion. No missing credit amount is filled from a group total.
+
+The transfer page is internally inconsistent: its eligibility paragraph excepts summer from the concurrent-enrollment prohibition, but its excluded-course paragraph explicitly prohibits separate UM/outside summer sessions. The record stays partial, with both statements preserved and no permission inferred. Business residency remains stricter; its optional general overlap exception does not replace the AI program’s local restriction. Applicable source dates/editions remain unknown. Degree option inventories (cognate attributes and any selected additional credential) remain incomplete. Arts and Sciences also has a non-exhaustive excluded-elective list and unreviewed heritage-language placements; the BS’s 9-versus-3 language-credit and proposed-status issues remain visible.
+
+Policy reruns validate source identity and required headings, then hash actual content sections for a reviewer. They emit no audit, review timestamp or complete claim, and never replay these manually interpreted policies. Course metadata and student-specific DPR/term availability are separate gaps.
+
+Additional eligibility discrepancy: the current college BBA/BSBA tables list the AI minor under “Minors for Non-Business Majors,” while the program overview explicitly says it is for Miami Herbert Business students. Both were read; retain the local eligibility wording and flag non-business access unresolved rather than expanding eligibility.

@@ -5,7 +5,7 @@
     "name": "University of Miami",
     "aliases": [],
     "website": "https://www.miami.edu/",
-    "calendar": "unknown"
+    "calendar": "semester"
   },
   "title": "Artificial Intelligence for Business Technology",
   "award_level": "minor",
@@ -16,7 +16,7 @@
   "overview": "A 12-credit-hour minor for Miami Herbert Business students, with a separate Python prerequisite, AI programming, two Business Technology options and one business-discipline option.",
   "catalog_year": null,
   "verification_status": "confirmed",
-  "last_verified": "2026-10-10",
+  "last_verified": "2026-10-11",
   "curriculum_status": "partial",
   "links": [
     {
@@ -59,6 +59,46 @@
       "source_date": null,
       "catalog_year": null,
       "locator": "External Transfer Admission; Repeat Rules; Residency and Graduation Requirements; Major and Minor Areas of Specialization",
+      "confidence": "high"
+    },
+    {
+      "id": "miami-business-policy",
+      "url": "https://bulletin.miami.edu/undergraduate-academic-programs/business/",
+      "title": "Business",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Academic Policies; BBA and BSBA degree requirements",
+      "confidence": "high"
+    },
+    {
+      "id": "miami-course-information-policy",
+      "url": "https://bulletin.miami.edu/general-university-information/university-policies/course-information/",
+      "title": "Course Information",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Academic Credit / Application of Credit Hour Policy; Credit/No Credit; Repeat Rules",
+      "confidence": "high"
+    },
+    {
+      "id": "miami-grades-policy",
+      "url": "https://bulletin.miami.edu/general-university-information/undergraduate-policies-and-procedures/grades/",
+      "title": "Grades",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Credit Only Option; Grade Point Average; Grade Key",
+      "confidence": "high"
+    },
+    {
+      "id": "miami-transfer-policy",
+      "url": "https://bulletin.miami.edu/general-university-information/undergraduate-policies-and-procedures/undergraduate-transfer-credit-policy/",
+      "title": "Transfer Credit Policy for Undergraduate Students",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Transfer Credit Policy; Transfer Credit Process; Specific Department Rules",
       "confidence": "high"
     }
   ],
@@ -307,7 +347,7 @@
       "kind": "all",
       "count": null,
       "credits": 3.0,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "other",
       "source_id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-curriculum",
       "source_text": null,
@@ -323,7 +363,7 @@
       "kind": "choose_courses",
       "count": 2,
       "credits": 6.0,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "other",
       "source_id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-curriculum",
       "source_text": null,
@@ -346,7 +386,7 @@
       "kind": "choose_courses",
       "count": 1,
       "credits": 3.0,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "other",
       "source_id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-curriculum",
       "source_text": null,
@@ -453,34 +493,168 @@
       "category": "other",
       "source_id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-business-policies",
       "source_text": null,
-      "summary": "Minor coursework must be taken for a letter grade. Business courses may be completed no more than twice, including equivalent courses, and repeats cannot use CR/NC grading. Further university repeat/GPA treatment rules remain to be reviewed.",
+      "summary": "Minor coursework must be taken for a letter grade. Business courses may be completed no more than twice, including equivalent courses, and repeats cannot use CR/NC grading. University repeat/GPA treatment is represented in the additional policy notes.",
+      "course_ids": []
+    },
+    {
+      "id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-policy-transfer-eligibility",
+      "parent_id": null,
+      "title": "Transfer eligibility and residency",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "miami-transfer-policy",
+      "source_text": null,
+      "summary": "At least half of the credits in each major and minor must be completed through Miami; departments may require more. Transfer work must fall within ten years of initial Miami bachelor matriculation, with approved accreditation and faculty-approved equivalence. Only letter-graded work at C or better is eligible; C-minus, pass/fail and satisfactory/unsatisfactory work do not qualify. Upper-division equivalence cannot come from a two-year institution.",
+      "course_ids": []
+    },
+    {
+      "id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-policy-transfer-process",
+      "parent_id": null,
+      "title": "Transfer approval and repeat exclusions",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "miami-transfer-policy",
+      "source_text": null,
+      "summary": "Submit outside coursework through MATES and obtain approval before enrolling. Approved equivalence does not by itself establish applicability to a particular credential. Continuing students must send an official transcript by the end of the following semester; incoming students by the end of their first semester. Transfer grades are not in the regular UM GPA. Accepted transfer or examination credit cannot ordinarily be repeated for Miami credit; the source permits a specific program exception that removes examination credit before repeating.",
+      "course_ids": []
+    },
+    {
+      "id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-policy-summer-transfer-conflict",
+      "parent_id": null,
+      "title": "Unresolved summer concurrent-enrollment rule",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "miami-transfer-policy",
+      "source_text": null,
+      "summary": "The transfer eligibility section excludes summer from its concurrent-enrollment prohibition, while Courses Not Accepted prohibits concurrent outside enrollment and explicitly bars taking a Miami summer Session A course and an outside Session B course. These statements are inconsistent. No summer-transfer permission is inferred; university clarification is required. Business coursework also remains subject to the stricter business residency rule.",
+      "course_ids": []
+    },
+    {
+      "id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-policy-credit-only",
+      "parent_id": null,
+      "title": "Credit-only grading and later major changes",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "miami-course-information-policy",
+      "source_text": null,
+      "summary": "CR/NC is restricted to free electives rather than major, minor, general education or their prerequisite work. Eligible students must be sophomores or above, have a 3.00 cumulative GPA, and transfer students must first complete a Miami semester; at most one course per semester and nine credits total. A later major change can permit earlier credit-only electives by department-chair and dean discretion. This is not automatic permission for current required coursework.",
+      "course_ids": []
+    },
+    {
+      "id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-policy-test-credit-grading",
+      "parent_id": null,
+      "title": "Approved test credit and GPA treatment",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "miami-grades-policy",
+      "source_text": null,
+      "summary": "Accepted AP, IB, GCE, Cambridge Pre-U, CAPE Unit and CLEP equivalents may satisfy requirements with CR despite the ordinary credit-only restriction. CR/NC carries no GPA points. For graduation the university uses the lower of the Miami-only GPA and the combined GPA of Miami and all graded outside work, including work not accepted toward the degree.",
+      "course_ids": []
+    },
+    {
+      "id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-policy-repeat-rules",
+      "parent_id": null,
+      "title": "General and undergraduate repeat rules",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "miami-course-information-policy",
+      "source_text": null,
+      "summary": "Ordinarily a course can be repeated once unless the department chair or applicable dean authorizes more; repeatable-for-credit courses are separate. Under the general rule both grades count for D-plus or lower, or C-minus when C is required, and a passing repeat of D/D-plus (or applicable C-minus) increases required graduation hours by the repeated amount. Repeating an already sufficient grade earns no additional credit or GPA points. The undergraduate replacement option covers at most two Miami courses initially graded D/D-plus/F, repeated at Miami as the same course within two enrolled regular semesters; only the second grade counts, even if lower, but the first remains on the transcript. Integrity failures and courses already repeated more than once are excluded. Business-specific restrictions also apply to business coursework.",
+      "course_ids": []
+    },
+    {
+      "id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-policy-business-residence",
+      "parent_id": null,
+      "title": "Business coursework residence and study abroad",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "miami-business-policy",
+      "source_text": null,
+      "summary": "After admission to Miami, all business coursework for business and non-business students must be taken in residence unless a written exception is approved. Miami-sponsored study abroad counts in residence, but at most one course with a clear international/global business focus may count toward a business major/minor/cognate with approved equivalence. Required core and other discipline-required courses must be on campus; non-Miami study abroad receives no business equivalence.",
+      "course_ids": []
+    },
+    {
+      "id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-policy-business-repeats",
+      "parent_id": null,
+      "title": "Business repeat and threshold restrictions",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "miami-business-policy",
+      "source_text": null,
+      "summary": "Business coursework permits at most two completions, including equivalent course pairs, and a repeated course must receive a letter grade. Threshold courses can be repeated to establish the required grade. C-minus that is insufficient for a major/minor must use the general repeat rule, not the undergraduate replacement rule. Replacement repeats must be in residence; summer sessions do not consume the two-regular-semester window.",
+      "course_ids": []
+    },
+    {
+      "id": "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-policy-eligibility-conflict",
+      "parent_id": null,
+      "title": "Minor eligibility source discrepancy",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "miami-business-policy",
+      "source_text": null,
+      "summary": "The Business college BBA/BSBA tables list this minor under Minors for Non-Business Majors, while its own overview explicitly describes Miami Herbert Business students. The program-specific eligibility statement is preserved; eligibility for non-business students is not inferred from the directory label.",
       "course_ids": []
     }
   ],
   "notes": [
     "Course table publishes grouped credit amounts, not individual amounts for each option; individual values remain null until separately verified. Page footer links both 2025–26 and 2026–27 catalog PDFs, so the applicable edition remains null. Program-specific no-double-counting wording is retained without weakening it using broader school exceptions.",
-    "Course theme categories are editorial classifications; source-stated outcomes are labeled separately. Unknown prerequisite values do not mean there are no prerequisites."
+    "Course theme categories are editorial classifications; source-stated outcomes are labeled separately. Unknown prerequisite values do not mean there are no prerequisites.",
+    "2026-10-11: Miami Course Information / Academic Credit explicitly identifies academic credits, credit hours and hours as semester credits. Published amounts were normalized without conversion; missing individual amounts remain null.",
+    "2026-10-11 policy review retains partial status because the transfer page contradicts itself about concurrent outside summer enrollment. No source-date, catalog edition, course offering term or launch date is inferred."
   ],
   "curriculum_audit": {
     "scope": "minor",
-    "reviewed_at": "2026-10-10",
+    "reviewed_at": "2026-10-11",
     "source_ids": [
       "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-official",
       "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-curriculum",
-      "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-business-policies"
+      "university-of-miami-artificial-intelligence-for-business-technology-minor-minor-business-policies",
+      "miami-business-policy",
+      "miami-course-information-policy",
+      "miami-grades-policy",
+      "miami-transfer-policy"
     ],
     "sections": [
       "Program eligibility and overview",
       "Core and elective inventory",
-      "Program-local overlap and completion notes"
+      "Program-local overlap and completion notes",
+      "University transfer/residency, grading and repeat rules; explicit semester-credit definition"
     ],
     "unresolved_requirements": [
-      "Full linked university residency/transfer and repeat/GPA policies remain unreviewed.",
-      "Current course prerequisite structure has not been fully extracted."
+      "University transfer policy contains inconsistent summer concurrent-enrollment statements; applicability needs authoritative clarification.",
+      "Minor program overview identifies Business students, while college tables place it under minors for non-business majors; non-business eligibility needs clarification."
     ],
     "metadata_gaps": [
       "Most course descriptions and prerequisites remain unverified.",
-      "Public course sites, syllabi and first-offered date remain unverified."
+      "Public course sites, syllabi and first-offered date remain unverified.",
+      "Current individual course prerequisite statements remain unverified where null; following the prerequisite structure is required."
     ]
   }
 }
