@@ -219,7 +219,7 @@
       "checked_at": "2026-10-11",
       "catalog_year": null,
       "locator": "Minutes Archive",
-      "finding": "Public executive archive index; linked executive minutes were not read in this bounded pass."
+      "finding": "Linked 2024/2025 archive identified finite 14-document queue, subsequently selectively reviewed; see executive_minutes_queue."
     },
     {
       "url": "https://www.buffalo.edu/facultysenate/meetings/agendas/archive.html",
@@ -287,7 +287,7 @@
       "content_hash": null,
       "fetched_at": null,
       "checked_at": "2026-10-11",
-      "finding": "Attempt stopped at recorded transport, HTTP or byte-limit boundary; no source fact established."
+      "finding": "Guarded transport stopped at five megabytes. Later ordinary web-reader attempt failed; public browser selective page review succeeded with null source-body hash."
     },
     {
       "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate/_jcr_content/root/maincontent/par/collapsible_935818726/container/download_363966534/file.res/fs-10-22-24-minutes.pdf",
@@ -312,7 +312,7 @@
       "content_hash": null,
       "fetched_at": null,
       "checked_at": "2026-10-11",
-      "finding": "Attempt stopped at recorded transport, HTTP or byte-limit boundary; no source fact established."
+      "finding": "Guarded transport stopped at five megabytes. Later ordinary web-reader attempt failed; public browser selective page review succeeded with null source-body hash."
     },
     {
       "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate/_jcr_content/root/maincontent/par/collapsible_935818726/container/download_1713769732/file.res/fs%2012_17_24%20minutes.pdf",
@@ -404,6 +404,445 @@
       "page_count": 1,
       "checked_at": "2026-10-11",
       "finding": "One-page agenda for department-formation reading; ordinary attachment annotations located, no curriculum printed."
+    },
+    {
+      "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_404018847/file.res/FSEC-9-10-24-minutes.pdf",
+      "locator": "September 10, 2024 FSEC Meeting Minutes",
+      "discovered_from": "https://www.buffalo.edu/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes.html",
+      "catalog_year": null,
+      "access_status": "guarded_fetch_200_pdf",
+      "content_hash": "def6d3e2a431327f7cce445c0be1a18c84b24adbad2eca871e1ff1390d7850ae",
+      "fetched_at": "2026-10-11T13:48:50.340532+00:00",
+      "cache_body": ".cache/buffalo-followup/def6d3e2a431327f.pdf",
+      "page_count": 6,
+      "checked_at": "2026-10-11",
+      "finding": "Selective review of action items and AI-relevant passages found no exact approved AI+X core membership.",
+      "reviewed_pages": [
+        1
+      ]
+    },
+    {
+      "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_1552903093/file.res/FSEC-9-24-24-minutes.pdf",
+      "locator": "September 24, 2024 FSEC Meeting Minutes",
+      "discovered_from": "https://www.buffalo.edu/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes.html",
+      "catalog_year": null,
+      "access_status": "fetch_error",
+      "error": "Response exceeds 5000000 bytes: https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_1552903093/file.res/FSEC-9-24-24-minutes.pdf",
+      "content_hash": null,
+      "fetched_at": null,
+      "checked_at": "2026-10-11",
+      "finding": "Guarded transport stopped at five megabytes. Later ordinary web-reader attempt failed; public browser selective page review succeeded with null source-body hash."
+    },
+    {
+      "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_941870507/file.res/FSEC%2010-8-24%20minutes_edited.pdf",
+      "locator": "October 8, 2024 FSEC Meeting Minutes",
+      "discovered_from": "https://www.buffalo.edu/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes.html",
+      "catalog_year": null,
+      "access_status": "guarded_fetch_200_pdf",
+      "content_hash": "5cf9774d0e94cc221635bcad3939d9f066d592045da29426f0eb9194115884cb",
+      "fetched_at": "2026-10-11T13:48:53.373232+00:00",
+      "cache_body": ".cache/buffalo-followup/5cf9774d0e94cc22.pdf",
+      "page_count": 4,
+      "checked_at": "2026-10-11",
+      "finding": "Selective review of action items and AI-relevant passages found no exact approved AI+X core membership.",
+      "reviewed_pages": [
+        1,
+        2
+      ]
+    },
+    {
+      "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_1830700730/file.res/FSEC%2010_29_24%20minutes.pdf",
+      "locator": "October 29, 2024 FSEC Meeting Minutes",
+      "discovered_from": "https://www.buffalo.edu/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes.html",
+      "catalog_year": null,
+      "access_status": "fetch_error",
+      "error": "Response exceeds 5000000 bytes: https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_1830700730/file.res/FSEC%2010_29_24%20minutes.pdf",
+      "content_hash": null,
+      "fetched_at": null,
+      "checked_at": "2026-10-11",
+      "finding": "Guarded transport stopped at five megabytes. Later ordinary web-reader attempt failed; public browser selective page review succeeded with null source-body hash."
+    },
+    {
+      "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_1846267108/file.res/fsec%2011_12_24%20minutes.pdf",
+      "locator": "November 12, 2024 FSEC Meeting Minutes",
+      "discovered_from": "https://www.buffalo.edu/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes.html",
+      "catalog_year": null,
+      "access_status": "fetch_error",
+      "error": "Response exceeds 5000000 bytes: https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_1846267108/file.res/fsec%2011_12_24%20minutes.pdf",
+      "content_hash": null,
+      "fetched_at": null,
+      "checked_at": "2026-10-11",
+      "finding": "Guarded transport stopped at five megabytes. Later ordinary web-reader attempt failed; public browser selective page review succeeded with null source-body hash."
+    },
+    {
+      "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_974566257/file.res/fsec%2011_26_24%20minutes.pdf",
+      "locator": "November 26, 2024 FSEC Meeting Minutes",
+      "discovered_from": "https://www.buffalo.edu/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes.html",
+      "catalog_year": null,
+      "access_status": "guarded_fetch_200_pdf",
+      "content_hash": "7d4b8928316854c0d9261841c759b4eb272d7786d71a6444e540f5a70a41b7c1",
+      "fetched_at": "2026-10-11T13:48:58.168464+00:00",
+      "cache_body": ".cache/buffalo-followup/7d4b8928316854c0.pdf",
+      "page_count": 5,
+      "checked_at": "2026-10-11",
+      "finding": "Selective review of action items and AI-relevant passages found no exact approved AI+X core membership.",
+      "reviewed_pages": [
+        1,
+        2
+      ]
+    },
+    {
+      "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_1496193457/file.res/fsec%2012_10_24%20minutes.pdf",
+      "locator": "December 10, 2024 FSEC Meeting Minutes",
+      "discovered_from": "https://www.buffalo.edu/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes.html",
+      "catalog_year": null,
+      "access_status": "guarded_fetch_200_pdf",
+      "content_hash": "82fc5d3cc064744f9e3658fe80d6f6c766ac0bc4aeb7d45ccf5907812dfb4652",
+      "fetched_at": "2026-10-11T13:48:59.322816+00:00",
+      "cache_body": ".cache/buffalo-followup/82fc5d3cc064744f.pdf",
+      "page_count": 3,
+      "checked_at": "2026-10-11",
+      "finding": "Selective review of action items and AI-relevant passages found no exact approved AI+X core membership.",
+      "reviewed_pages": [
+        1
+      ]
+    },
+    {
+      "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_1575601227/file.res/fsec%201_28_25%20minutes.pdf",
+      "locator": "January 28, 2025 FSEC Meeting Minutes",
+      "discovered_from": "https://www.buffalo.edu/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes.html",
+      "catalog_year": null,
+      "access_status": "guarded_fetch_200_pdf",
+      "content_hash": "343d046a4cd4767a7774afb05483abacab3928a03e04f50bd462a3723360207f",
+      "fetched_at": "2026-10-11T13:49:00.897239+00:00",
+      "cache_body": ".cache/buffalo-followup/343d046a4cd4767a.pdf",
+      "page_count": 6,
+      "checked_at": "2026-10-11",
+      "finding": "Selective review of action items and AI-relevant passages found no exact approved AI+X core membership.",
+      "reviewed_pages": [
+        1,
+        3
+      ]
+    },
+    {
+      "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_1185244852/file.res/fsec%202_11_25%20minutes.pdf",
+      "locator": "February 11, 2025 FSEC Meeting Minutes",
+      "discovered_from": "https://www.buffalo.edu/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes.html",
+      "catalog_year": null,
+      "access_status": "guarded_fetch_200_pdf",
+      "content_hash": "aded07bb71a18d1985c3910707f6ed9bdd526965b2e2306078a06da413063de6",
+      "fetched_at": "2026-10-11T13:49:02.421106+00:00",
+      "cache_body": ".cache/buffalo-followup/aded07bb71a18d19.pdf",
+      "page_count": 7,
+      "checked_at": "2026-10-11",
+      "finding": "Selective review of action items and AI-relevant passages found no exact approved AI+X core membership.",
+      "reviewed_pages": [
+        1
+      ]
+    },
+    {
+      "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_220800874/file.res/fsec%202_25_25%20minutes.pdf",
+      "locator": "February 25, 2025 FSEC Meeting Minutes",
+      "discovered_from": "https://www.buffalo.edu/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes.html",
+      "catalog_year": null,
+      "access_status": "fetch_error",
+      "error": "Response exceeds 5000000 bytes: https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_220800874/file.res/fsec%202_25_25%20minutes.pdf",
+      "content_hash": null,
+      "fetched_at": null,
+      "checked_at": "2026-10-11",
+      "finding": "Guarded transport stopped at five megabytes. Later ordinary web-reader attempt failed; public browser selective page review succeeded with null source-body hash."
+    },
+    {
+      "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_776533808/file.res/fsec%203_11_25%20minutes.pdf",
+      "locator": "March 11, 2025 FSEC Meeting Minutes",
+      "discovered_from": "https://www.buffalo.edu/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes.html",
+      "catalog_year": null,
+      "access_status": "fetch_error",
+      "error": "Response exceeds 5000000 bytes: https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_776533808/file.res/fsec%203_11_25%20minutes.pdf",
+      "content_hash": null,
+      "fetched_at": null,
+      "checked_at": "2026-10-11",
+      "finding": "Guarded transport stopped at five megabytes. Later ordinary web-reader attempt failed; public browser selective page review succeeded with null source-body hash."
+    },
+    {
+      "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_478468010/file.res/fsec%204_8_25%20minutes%20final.pdf",
+      "locator": "April 8, 2025 FSEC Meeting Minutes",
+      "discovered_from": "https://www.buffalo.edu/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes.html",
+      "catalog_year": null,
+      "access_status": "fetch_error",
+      "error": "Response exceeds 5000000 bytes: https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_478468010/file.res/fsec%204_8_25%20minutes%20final.pdf",
+      "content_hash": null,
+      "fetched_at": null,
+      "checked_at": "2026-10-11",
+      "finding": "Guarded transport stopped at five megabytes. Later ordinary web-reader attempt failed; public browser selective page review succeeded with null source-body hash."
+    },
+    {
+      "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_2109882242/file.res/fsec%204_22_25%20minutes.pdf",
+      "locator": "April 22, 2025 FSEC Meeting Minutes",
+      "discovered_from": "https://www.buffalo.edu/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes.html",
+      "catalog_year": null,
+      "access_status": "fetch_error",
+      "error": "Response exceeds 5000000 bytes: https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_2109882242/file.res/fsec%204_22_25%20minutes.pdf",
+      "content_hash": null,
+      "fetched_at": null,
+      "checked_at": "2026-10-11",
+      "finding": "Guarded transport stopped at five megabytes. Later ordinary web-reader attempt failed; public browser selective page review succeeded with null source-body hash."
+    },
+    {
+      "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_671033627/file.res/FSEC%205_6_25%20Minutes.pdf",
+      "locator": "May 6, 2025 FSEC Meeting Minutes",
+      "discovered_from": "https://www.buffalo.edu/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes.html",
+      "catalog_year": null,
+      "access_status": "guarded_fetch_200_pdf",
+      "content_hash": "40d085cf376ac4db22e855c921e93f8be9c90574246f1bf3a9fb35dfe59f6003",
+      "fetched_at": "2026-10-11T13:49:10.102902+00:00",
+      "cache_body": ".cache/buffalo-followup/40d085cf376ac4db.pdf",
+      "page_count": 3,
+      "checked_at": "2026-10-11",
+      "finding": "Selective review of action items and AI-relevant passages found no exact approved AI+X core membership.",
+      "reviewed_pages": [
+        1
+      ]
+    },
+    {
+      "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate/_jcr_content/root/maincontent/par/collapsible_935818726/container/download_1009900620/file.res/fs-9-17-24-minutes.pdf",
+      "locator": "September 17, 2024 FS Meeting Minutes",
+      "access_status": "web_pdf_reader_unavailable",
+      "checked_at": "2026-10-11",
+      "content_hash": null,
+      "fetched_at": null,
+      "catalog_year": null,
+      "finding": "Ordinary web reader could not access document."
+    },
+    {
+      "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate/_jcr_content/root/maincontent/par/collapsible_935818726/container/download_1009900620/file.res/fs-9-17-24-minutes.pdf",
+      "locator": "September 17, 2024 FS Meeting Minutes; selective pages 1, 3",
+      "access_status": "public_browser_pdf_visual_review",
+      "checked_at": "2026-10-11",
+      "content_hash": null,
+      "fetched_at": null,
+      "catalog_year": null,
+      "page_count": 8,
+      "reviewed_pages": [
+        1,
+        3
+      ],
+      "finding": "Action list and appointments/promotion criteria discussion; no exact AI+X core inventory in inspected sections.",
+      "capture_limitation": "Read rendered public Chrome PDF pages; no full-body capture or source hash. Navigation timeout preceded eventual rendering; no transport bound enlarged."
+    },
+    {
+      "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate/_jcr_content/root/maincontent/par/collapsible_935818726/container/download_538299425/file.res/FS-11-19-24%20minutes.pdf",
+      "locator": "November 19, 2024 FS Meeting Minutes",
+      "access_status": "web_pdf_reader_unavailable",
+      "checked_at": "2026-10-11",
+      "content_hash": null,
+      "fetched_at": null,
+      "catalog_year": null,
+      "finding": "Ordinary web reader returned HTTP 400 content too large (30,225,018 bytes)."
+    },
+    {
+      "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate/_jcr_content/root/maincontent/par/collapsible_935818726/container/download_538299425/file.res/FS-11-19-24%20minutes.pdf",
+      "locator": "November 19, 2024 FS Meeting Minutes; selective pages 1, 5, 6, 7, 8",
+      "access_status": "public_browser_pdf_visual_review",
+      "checked_at": "2026-10-11",
+      "content_hash": null,
+      "fetched_at": null,
+      "catalog_year": null,
+      "page_count": 8,
+      "reviewed_pages": [
+        1,
+        5,
+        6,
+        7,
+        8
+      ],
+      "finding": "pp. 7–8 describe the SUNY RFP proposal, undergraduate AI+X partnership vision and future curriculum development if funded. No approved exact degree membership or cohort binding.",
+      "capture_limitation": "Read rendered public Chrome PDF pages; no full-body capture or source hash. Navigation timeout preceded eventual rendering; no transport bound enlarged."
+    },
+    {
+      "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_1552903093/file.res/FSEC-9-24-24-minutes.pdf",
+      "locator": "September 24, 2024 FSEC Meeting Minutes",
+      "access_status": "web_pdf_reader_unavailable",
+      "checked_at": "2026-10-11",
+      "content_hash": null,
+      "fetched_at": null,
+      "catalog_year": null,
+      "finding": "Ordinary web reader could not access document."
+    },
+    {
+      "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_1552903093/file.res/FSEC-9-24-24-minutes.pdf",
+      "locator": "September 24, 2024 FSEC Meeting Minutes; selective pages 1, 3",
+      "access_status": "public_browser_pdf_visual_review",
+      "checked_at": "2026-10-11",
+      "content_hash": null,
+      "fetched_at": null,
+      "catalog_year": null,
+      "page_count": 6,
+      "reviewed_pages": [
+        1,
+        3
+      ],
+      "finding": "Action overview and p. 3 SUNY resolutions: AI tools for research is a passed access resolution, not an AI+X curriculum inventory.",
+      "capture_limitation": "Read rendered public Chrome PDF pages; no full-body capture or source hash. Navigation timeout preceded eventual rendering; no transport bound enlarged."
+    },
+    {
+      "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_1830700730/file.res/FSEC%2010_29_24%20minutes.pdf",
+      "locator": "October 29, 2024 FSEC Meeting Minutes",
+      "access_status": "web_pdf_reader_unavailable",
+      "checked_at": "2026-10-11",
+      "content_hash": null,
+      "fetched_at": null,
+      "catalog_year": null,
+      "finding": "Ordinary web reader could not access document."
+    },
+    {
+      "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_1830700730/file.res/FSEC%2010_29_24%20minutes.pdf",
+      "locator": "October 29, 2024 FSEC Meeting Minutes; selective pages 1, 2",
+      "access_status": "public_browser_pdf_visual_review",
+      "checked_at": "2026-10-11",
+      "content_hash": null,
+      "fetched_at": null,
+      "catalog_year": null,
+      "page_count": 5,
+      "reviewed_pages": [
+        1,
+        2
+      ],
+      "finding": "Action overview and p. 2: NYS opportunity regarding AI education was tabled for lack of time; no core inventory.",
+      "capture_limitation": "Read rendered public Chrome PDF pages; no full-body capture or source hash. Navigation timeout preceded eventual rendering; no transport bound enlarged."
+    },
+    {
+      "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_1846267108/file.res/fsec%2011_12_24%20minutes.pdf",
+      "locator": "November 12, 2024 FSEC Meeting Minutes",
+      "access_status": "web_pdf_reader_unavailable",
+      "checked_at": "2026-10-11",
+      "content_hash": null,
+      "fetched_at": null,
+      "catalog_year": null,
+      "finding": "Ordinary web reader could not access document."
+    },
+    {
+      "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_1846267108/file.res/fsec%2011_12_24%20minutes.pdf",
+      "locator": "November 12, 2024 FSEC Meeting Minutes; selective pages 1, 2, 3",
+      "access_status": "public_browser_pdf_visual_review",
+      "checked_at": "2026-10-11",
+      "content_hash": null,
+      "fetched_at": null,
+      "catalog_year": null,
+      "page_count": 7,
+      "reviewed_pages": [
+        1,
+        2,
+        3
+      ],
+      "finding": "pp. 2–3 discuss the SUNY RFP proposal and anticipated undergraduate partnerships, with curricular governance involvement planned. No exact approved degree core or cohort binding.",
+      "capture_limitation": "Read rendered public Chrome PDF pages; no full-body capture or source hash. Navigation timeout preceded eventual rendering; no transport bound enlarged."
+    },
+    {
+      "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_220800874/file.res/fsec%202_25_25%20minutes.pdf",
+      "locator": "February 25, 2025 FSEC Meeting Minutes",
+      "access_status": "web_pdf_reader_unavailable",
+      "checked_at": "2026-10-11",
+      "content_hash": null,
+      "fetched_at": null,
+      "catalog_year": null,
+      "finding": "Ordinary web reader could not access document."
+    },
+    {
+      "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_220800874/file.res/fsec%202_25_25%20minutes.pdf",
+      "locator": "February 25, 2025 FSEC Meeting Minutes; selective pages 1, 3",
+      "access_status": "public_browser_pdf_visual_review",
+      "checked_at": "2026-10-11",
+      "content_hash": null,
+      "fetched_at": null,
+      "catalog_year": null,
+      "page_count": 7,
+      "reviewed_pages": [
+        1,
+        3
+      ],
+      "finding": "p. 3 describes SUNY AI initiatives and planned Fall 2026 AI competency in information literacy general education. This is not exact Buffalo degree core membership.",
+      "capture_limitation": "Read rendered public Chrome PDF pages; no full-body capture or source hash. Navigation timeout preceded eventual rendering; no transport bound enlarged."
+    },
+    {
+      "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_776533808/file.res/fsec%203_11_25%20minutes.pdf",
+      "locator": "March 11, 2025 FSEC Meeting Minutes",
+      "access_status": "web_pdf_reader_unavailable",
+      "checked_at": "2026-10-11",
+      "content_hash": null,
+      "fetched_at": null,
+      "catalog_year": null,
+      "finding": "Ordinary web reader could not access document."
+    },
+    {
+      "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_776533808/file.res/fsec%203_11_25%20minutes.pdf",
+      "locator": "March 11, 2025 FSEC Meeting Minutes; selective pages 1, 3, 4",
+      "access_status": "public_browser_pdf_visual_review",
+      "checked_at": "2026-10-11",
+      "content_hash": null,
+      "fetched_at": null,
+      "catalog_year": null,
+      "page_count": 7,
+      "reviewed_pages": [
+        1,
+        3,
+        4
+      ],
+      "finding": "Department proposal moved toward Senate first reading; bylaws, funding and AI jobs discussion. No exact required course sets.",
+      "capture_limitation": "Read rendered public Chrome PDF pages; no full-body capture or source hash. Navigation timeout preceded eventual rendering; no transport bound enlarged."
+    },
+    {
+      "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_478468010/file.res/fsec%204_8_25%20minutes%20final.pdf",
+      "locator": "April 8, 2025 FSEC Meeting Minutes",
+      "access_status": "web_pdf_reader_unavailable",
+      "checked_at": "2026-10-11",
+      "content_hash": null,
+      "fetched_at": null,
+      "catalog_year": null,
+      "finding": "Ordinary web reader could not access document."
+    },
+    {
+      "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_478468010/file.res/fsec%204_8_25%20minutes%20final.pdf",
+      "locator": "April 8, 2025 FSEC Meeting Minutes; selective pages 1, 3",
+      "access_status": "public_browser_pdf_visual_review",
+      "checked_at": "2026-10-11",
+      "content_hash": null,
+      "fetched_at": null,
+      "catalog_year": null,
+      "page_count": 6,
+      "reviewed_pages": [
+        1,
+        3
+      ],
+      "finding": "Action list includes amendment to department reporting clause; appointments discussed. No exact degree core set in inspected sections.",
+      "capture_limitation": "Read rendered public Chrome PDF pages; no full-body capture or source hash. Navigation timeout preceded eventual rendering; no transport bound enlarged."
+    },
+    {
+      "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_2109882242/file.res/fsec%204_22_25%20minutes.pdf",
+      "locator": "April 22, 2025 FSEC Meeting Minutes",
+      "access_status": "web_pdf_reader_unavailable",
+      "checked_at": "2026-10-11",
+      "content_hash": null,
+      "fetched_at": null,
+      "catalog_year": null,
+      "finding": "Ordinary web reader could not access document."
+    },
+    {
+      "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_2109882242/file.res/fsec%204_22_25%20minutes.pdf",
+      "locator": "April 22, 2025 FSEC Meeting Minutes; selective pages 1, 2, 3",
+      "access_status": "public_browser_pdf_visual_review",
+      "checked_at": "2026-10-11",
+      "content_hash": null,
+      "fetched_at": null,
+      "catalog_year": null,
+      "page_count": 6,
+      "reviewed_pages": [
+        1,
+        2,
+        3
+      ],
+      "finding": "Action list and overview concern minutes, calendar, grants and TA expenditures. No exact AI+X degree inventory in inspected sections.",
+      "capture_limitation": "Read rendered public Chrome PDF pages; no full-body capture or source hash. Navigation timeout preceded eventual rendering; no transport bound enlarged."
     }
   ],
   "unrequested_protected_attachment_leads": [
@@ -555,6 +994,21 @@
       "catalog_year": null,
       "current_cohort_applicability": null,
       "finding": "All AI+X curricula described as including an AI-and-ethics course. This meeting approved department formation, with curriculum approval expressly separate. No title/code inventory promoted."
+    },
+    {
+      "kind": "historical_proposal_stage_curriculum",
+      "urls": [
+        "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate/_jcr_content/root/maincontent/par/collapsible_935818726/container/download_538299425/file.res/FS-11-19-24%20minutes.pdf",
+        "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_1846267108/file.res/fsec%2011_12_24%20minutes.pdf"
+      ],
+      "locators": [
+        "November 12 pp. 2–3",
+        "November 19 pp. 7–8"
+      ],
+      "content_hash": null,
+      "catalog_year": null,
+      "current_cohort_applicability": null,
+      "finding": "Public browser minutes show proposal-stage undergraduate AI+X partnerships and future curricular development, not an approved binding inventory."
     }
   ],
   "programs": [
@@ -583,6 +1037,14 @@
             {
               "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate/_jcr_content/root/maincontent/par/collapsible_935818726/container/download_709701498/file.res/FS%204_15_25%20minutes.pdf",
               "locator": "April 15, 2025 FS Meeting Minutes, pp. 3–4; department formation versus curriculum approval; mandatory ethics obligation"
+            },
+            {
+              "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate/_jcr_content/root/maincontent/par/collapsible_935818726/container/download_538299425/file.res/FS-11-19-24%20minutes.pdf",
+              "locator": "November 19, 2024 FS Meeting Minutes; selective pages 1, 5, 6, 7, 8"
+            },
+            {
+              "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_1846267108/file.res/fsec%2011_12_24%20minutes.pdf",
+              "locator": "November 12, 2024 FSEC Meeting Minutes; selective pages 1, 2, 3"
             }
           ],
           "limitations": [
@@ -590,7 +1052,8 @@
             "Zero fixed mapped identities is a graph coverage result, not evidence of a degree with no required courses. ENG 105 and UBC 399 remain contextual pending full degree applicability/exception mapping.",
             "Named AI/society titles are introduced as examples; quantitative/geography topics and capstone lack exact coded fixed membership.",
             "Alternative department source is undated as a catalog/cohort edition. Known denied catalog routes were not retried. Search snippets do not supply complete source-read membership.",
-            "New historical governance evidence confirms an AI-and-ethics course obligation across AI+X but omits exact title/code and current cohort applicability; the department-formation vote explicitly did not approve curriculum. It cannot complete an exact core inventory."
+            "New historical governance evidence confirms an AI-and-ethics course obligation across AI+X but omits exact title/code and current cohort applicability; the department-formation vote explicitly did not approve curriculum. It cannot complete an exact core inventory.",
+            "November 2024 public governance discussion describes proposal-stage partnerships and future curriculum development. The finite 14-document executive queue supplies no exact binding degree core in the selectively inspected sections."
           ]
         },
         "choice_rules": {
@@ -1007,7 +1470,39 @@
         29,
         30,
         31,
-        32
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64
       ],
       "remaining_core_evidence": [
         "Current authoritative catalog/cohort applicability and exact mandatory course code/title membership.",
@@ -1040,6 +1535,14 @@
             {
               "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate/_jcr_content/root/maincontent/par/collapsible_935818726/container/download_709701498/file.res/FS%204_15_25%20minutes.pdf",
               "locator": "April 15, 2025 FS Meeting Minutes, pp. 3–4; department formation versus curriculum approval; mandatory ethics obligation"
+            },
+            {
+              "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate/_jcr_content/root/maincontent/par/collapsible_935818726/container/download_538299425/file.res/FS-11-19-24%20minutes.pdf",
+              "locator": "November 19, 2024 FS Meeting Minutes; selective pages 1, 5, 6, 7, 8"
+            },
+            {
+              "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_1846267108/file.res/fsec%2011_12_24%20minutes.pdf",
+              "locator": "November 12, 2024 FSEC Meeting Minutes; selective pages 1, 2, 3"
             }
           ],
           "limitations": [
@@ -1047,7 +1550,8 @@
             "Zero fixed mapped identities is a graph coverage result, not evidence of a degree with no required courses. ENG 105 and UBC 399 remain contextual pending full degree applicability/exception mapping.",
             "Eight language specializations are explicit; five titles are introduced as courses students might take. They do not establish mandatory course identities or exact language sequences.",
             "Alternative department source is undated as a catalog/cohort edition. Known denied catalog routes were not retried. Search snippets do not supply complete source-read membership.",
-            "New historical governance evidence confirms an AI-and-ethics course obligation across AI+X but omits exact title/code and current cohort applicability; the department-formation vote explicitly did not approve curriculum. It cannot complete an exact core inventory."
+            "New historical governance evidence confirms an AI-and-ethics course obligation across AI+X but omits exact title/code and current cohort applicability; the department-formation vote explicitly did not approve curriculum. It cannot complete an exact core inventory.",
+            "November 2024 public governance discussion describes proposal-stage partnerships and future curriculum development. The finite 14-document executive queue supplies no exact binding degree core in the selectively inspected sections."
           ]
         },
         "choice_rules": {
@@ -1464,7 +1968,39 @@
         29,
         30,
         31,
-        32
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64
       ],
       "remaining_core_evidence": [
         "Current authoritative catalog/cohort applicability and exact mandatory course code/title membership.",
@@ -1497,6 +2033,14 @@
             {
               "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate/_jcr_content/root/maincontent/par/collapsible_935818726/container/download_709701498/file.res/FS%204_15_25%20minutes.pdf",
               "locator": "April 15, 2025 FS Meeting Minutes, pp. 3–4; department formation versus curriculum approval; mandatory ethics obligation"
+            },
+            {
+              "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate/_jcr_content/root/maincontent/par/collapsible_935818726/container/download_538299425/file.res/FS-11-19-24%20minutes.pdf",
+              "locator": "November 19, 2024 FS Meeting Minutes; selective pages 1, 5, 6, 7, 8"
+            },
+            {
+              "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_1846267108/file.res/fsec%2011_12_24%20minutes.pdf",
+              "locator": "November 12, 2024 FSEC Meeting Minutes; selective pages 1, 2, 3"
             }
           ],
           "limitations": [
@@ -1504,7 +2048,8 @@
             "Zero fixed mapped identities is a graph coverage result, not evidence of a degree with no required courses. ENG 105 and UBC 399 remain contextual pending full degree applicability/exception mapping.",
             "Four broad component areas include data structures and algorithms, programming and software development, but no mandatory coded course set is listed. Do not misreport these foundations as absent.",
             "Alternative department source is undated as a catalog/cohort edition. Known denied catalog routes were not retried. Search snippets do not supply complete source-read membership.",
-            "New historical governance evidence confirms an AI-and-ethics course obligation across AI+X but omits exact title/code and current cohort applicability; the department-formation vote explicitly did not approve curriculum. It cannot complete an exact core inventory."
+            "New historical governance evidence confirms an AI-and-ethics course obligation across AI+X but omits exact title/code and current cohort applicability; the department-formation vote explicitly did not approve curriculum. It cannot complete an exact core inventory.",
+            "November 2024 public governance discussion describes proposal-stage partnerships and future curriculum development. The finite 14-document executive queue supplies no exact binding degree core in the selectively inspected sections."
           ]
         },
         "choice_rules": {
@@ -1921,7 +2466,39 @@
         29,
         30,
         31,
-        32
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64
       ],
       "remaining_core_evidence": [
         "Current authoritative catalog/cohort applicability and exact mandatory course code/title membership.",
@@ -1954,6 +2531,14 @@
             {
               "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate/_jcr_content/root/maincontent/par/collapsible_935818726/container/download_709701498/file.res/FS%204_15_25%20minutes.pdf",
               "locator": "April 15, 2025 FS Meeting Minutes, pp. 3–4; department formation versus curriculum approval; mandatory ethics obligation"
+            },
+            {
+              "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate/_jcr_content/root/maincontent/par/collapsible_935818726/container/download_538299425/file.res/FS-11-19-24%20minutes.pdf",
+              "locator": "November 19, 2024 FS Meeting Minutes; selective pages 1, 5, 6, 7, 8"
+            },
+            {
+              "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_1846267108/file.res/fsec%2011_12_24%20minutes.pdf",
+              "locator": "November 12, 2024 FSEC Meeting Minutes; selective pages 1, 2, 3"
             }
           ],
           "limitations": [
@@ -1961,7 +2546,8 @@
             "Zero fixed mapped identities is a graph coverage result, not evidence of a degree with no required courses. ENG 105 and UBC 399 remain contextual pending full degree applicability/exception mapping.",
             "A philosophy internship is explicitly required; five course titles are introduced as courses students may take. Neither the internship code nor a complete fixed course set is established.",
             "Alternative department source is undated as a catalog/cohort edition. Known denied catalog routes were not retried. Search snippets do not supply complete source-read membership.",
-            "New historical governance evidence confirms an AI-and-ethics course obligation across AI+X but omits exact title/code and current cohort applicability; the department-formation vote explicitly did not approve curriculum. It cannot complete an exact core inventory."
+            "New historical governance evidence confirms an AI-and-ethics course obligation across AI+X but omits exact title/code and current cohort applicability; the department-formation vote explicitly did not approve curriculum. It cannot complete an exact core inventory.",
+            "November 2024 public governance discussion describes proposal-stage partnerships and future curriculum development. The finite 14-document executive queue supplies no exact binding degree core in the selectively inspected sections."
           ]
         },
         "choice_rules": {
@@ -2378,7 +2964,39 @@
         29,
         30,
         31,
-        32
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64
       ],
       "remaining_core_evidence": [
         "Current authoritative catalog/cohort applicability and exact mandatory course code/title membership.",
@@ -2411,6 +3029,14 @@
             {
               "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate/_jcr_content/root/maincontent/par/collapsible_935818726/container/download_709701498/file.res/FS%204_15_25%20minutes.pdf",
               "locator": "April 15, 2025 FS Meeting Minutes, pp. 3–4; department formation versus curriculum approval; mandatory ethics obligation"
+            },
+            {
+              "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate/_jcr_content/root/maincontent/par/collapsible_935818726/container/download_538299425/file.res/FS-11-19-24%20minutes.pdf",
+              "locator": "November 19, 2024 FS Meeting Minutes; selective pages 1, 5, 6, 7, 8"
+            },
+            {
+              "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_1846267108/file.res/fsec%2011_12_24%20minutes.pdf",
+              "locator": "November 12, 2024 FSEC Meeting Minutes; selective pages 1, 2, 3"
             }
           ],
           "limitations": [
@@ -2418,7 +3044,8 @@
             "Zero fixed mapped identities is a graph coverage result, not evidence of a degree with no required courses. ENG 105 and UBC 399 remain contextual pending full degree applicability/exception mapping.",
             "Six titles follow might take; broad mandatory components and a capstone have no exact course identities. Examples are not fixed courses.",
             "Alternative department source is undated as a catalog/cohort edition. Known denied catalog routes were not retried. Search snippets do not supply complete source-read membership.",
-            "New historical governance evidence confirms an AI-and-ethics course obligation across AI+X but omits exact title/code and current cohort applicability; the department-formation vote explicitly did not approve curriculum. It cannot complete an exact core inventory."
+            "New historical governance evidence confirms an AI-and-ethics course obligation across AI+X but omits exact title/code and current cohort applicability; the department-formation vote explicitly did not approve curriculum. It cannot complete an exact core inventory.",
+            "November 2024 public governance discussion describes proposal-stage partnerships and future curriculum development. The finite 14-document executive queue supplies no exact binding degree core in the selectively inspected sections."
           ]
         },
         "choice_rules": {
@@ -2835,7 +3462,39 @@
         29,
         30,
         31,
-        32
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64
       ],
       "remaining_core_evidence": [
         "Current authoritative catalog/cohort applicability and exact mandatory course code/title membership.",
@@ -2868,6 +3527,14 @@
             {
               "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate/_jcr_content/root/maincontent/par/collapsible_935818726/container/download_709701498/file.res/FS%204_15_25%20minutes.pdf",
               "locator": "April 15, 2025 FS Meeting Minutes, pp. 3–4; department formation versus curriculum approval; mandatory ethics obligation"
+            },
+            {
+              "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate/_jcr_content/root/maincontent/par/collapsible_935818726/container/download_538299425/file.res/FS-11-19-24%20minutes.pdf",
+              "locator": "November 19, 2024 FS Meeting Minutes; selective pages 1, 5, 6, 7, 8"
+            },
+            {
+              "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_1846267108/file.res/fsec%2011_12_24%20minutes.pdf",
+              "locator": "November 12, 2024 FSEC Meeting Minutes; selective pages 1, 2, 3"
             }
           ],
           "limitations": [
@@ -2875,7 +3542,8 @@
             "Zero fixed mapped identities is a graph coverage result, not evidence of a degree with no required courses. ENG 105 and UBC 399 remain contextual pending full degree applicability/exception mapping.",
             "The department overview confirms the degree but its degree link leads directly to the previously restricted catalog host. That route was not followed; no fixed course list is printed here.",
             "Alternative department source is undated as a catalog/cohort edition. Known denied catalog routes were not retried. Search snippets do not supply complete source-read membership.",
-            "New historical governance evidence confirms an AI-and-ethics course obligation across AI+X but omits exact title/code and current cohort applicability; the department-formation vote explicitly did not approve curriculum. It cannot complete an exact core inventory."
+            "New historical governance evidence confirms an AI-and-ethics course obligation across AI+X but omits exact title/code and current cohort applicability; the department-formation vote explicitly did not approve curriculum. It cannot complete an exact core inventory.",
+            "November 2024 public governance discussion describes proposal-stage partnerships and future curriculum development. The finite 14-document executive queue supplies no exact binding degree core in the selectively inspected sections."
           ]
         },
         "choice_rules": {
@@ -3292,7 +3960,39 @@
         29,
         30,
         31,
-        32
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64
       ],
       "remaining_core_evidence": [
         "Current authoritative catalog/cohort applicability and exact mandatory course code/title membership.",
@@ -3325,13 +4025,22 @@
             {
               "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate/_jcr_content/root/maincontent/par/collapsible_935818726/container/download_709701498/file.res/FS%204_15_25%20minutes.pdf",
               "locator": "April 15, 2025 FS Meeting Minutes, pp. 3–4; department formation versus curriculum approval; mandatory ethics obligation"
+            },
+            {
+              "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate/_jcr_content/root/maincontent/par/collapsible_935818726/container/download_538299425/file.res/FS-11-19-24%20minutes.pdf",
+              "locator": "November 19, 2024 FS Meeting Minutes; selective pages 1, 5, 6, 7, 8"
+            },
+            {
+              "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_1846267108/file.res/fsec%2011_12_24%20minutes.pdf",
+              "locator": "November 12, 2024 FSEC Meeting Minutes; selective pages 1, 2, 3"
             }
           ],
           "limitations": [
             "A binding title-level inventory establishes 19 fixed titles and 16 options with choose-one, choose-two and choose-four rules. No course codes or exact catalog/cohort applicability are printed.",
             "Alternative department source is undated as a catalog/cohort edition. Known denied catalog routes were not retried. Search snippets do not supply complete source-read membership.",
             "Nineteen fixed title identities are established only within the department Required Courses source. Exact catalog codes, aliases and applicable catalog/cohort are unverified; no sibling major inherits this list.",
-            "New historical governance evidence confirms an AI-and-ethics course obligation across AI+X but omits exact title/code and current cohort applicability; the department-formation vote explicitly did not approve curriculum. It cannot complete an exact core inventory."
+            "New historical governance evidence confirms an AI-and-ethics course obligation across AI+X but omits exact title/code and current cohort applicability; the department-formation vote explicitly did not approve curriculum. It cannot complete an exact core inventory.",
+            "November 2024 public governance discussion describes proposal-stage partnerships and future curriculum development. The finite 14-document executive queue supplies no exact binding degree core in the selectively inspected sections."
           ]
         },
         "choice_rules": {
@@ -3958,7 +4667,39 @@
         29,
         30,
         31,
-        32
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64
       ],
       "remaining_core_evidence": [
         "Codes and exact current catalog/cohort applicability for the retained 19 fixed and 16 option title identities.",
@@ -3991,6 +4732,14 @@
             {
               "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate/_jcr_content/root/maincontent/par/collapsible_935818726/container/download_709701498/file.res/FS%204_15_25%20minutes.pdf",
               "locator": "April 15, 2025 FS Meeting Minutes, pp. 3–4; department formation versus curriculum approval; mandatory ethics obligation"
+            },
+            {
+              "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate/_jcr_content/root/maincontent/par/collapsible_935818726/container/download_538299425/file.res/FS-11-19-24%20minutes.pdf",
+              "locator": "November 19, 2024 FS Meeting Minutes; selective pages 1, 5, 6, 7, 8"
+            },
+            {
+              "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_1846267108/file.res/fsec%2011_12_24%20minutes.pdf",
+              "locator": "November 12, 2024 FSEC Meeting Minutes; selective pages 1, 2, 3"
             }
           ],
           "limitations": [
@@ -3998,7 +4747,8 @@
             "Zero fixed mapped identities is a graph coverage result, not evidence of a degree with no required courses. ENG 105 and UBC 399 remain contextual pending full degree applicability/exception mapping.",
             "Communication, programming/data and research-methods subject areas and capstone are stated, without exact coded fixed course inventory. The course-catalog link routes to the already reviewed overview.",
             "Alternative department source is undated as a catalog/cohort edition. Known denied catalog routes were not retried. Search snippets do not supply complete source-read membership.",
-            "New historical governance evidence confirms an AI-and-ethics course obligation across AI+X but omits exact title/code and current cohort applicability; the department-formation vote explicitly did not approve curriculum. It cannot complete an exact core inventory."
+            "New historical governance evidence confirms an AI-and-ethics course obligation across AI+X but omits exact title/code and current cohort applicability; the department-formation vote explicitly did not approve curriculum. It cannot complete an exact core inventory.",
+            "November 2024 public governance discussion describes proposal-stage partnerships and future curriculum development. The finite 14-document executive queue supplies no exact binding degree core in the selectively inspected sections."
           ]
         },
         "choice_rules": {
@@ -4415,7 +5165,39 @@
         29,
         30,
         31,
-        32
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64
       ],
       "remaining_core_evidence": [
         "Current authoritative catalog/cohort applicability and exact mandatory course code/title membership.",
@@ -4430,6 +5212,289 @@
     "implementation_changes": false,
     "maintained_database_touched": false,
     "independent_review": "Coordinator pending",
-    "focused_tests": "40 passed: fixed resolution, overviews, public policies, families"
+    "focused_tests": "40 passed: fixed resolution, overviews, public policies, families",
+    "executive_queue": "14/14 finite linked 2024/2025 documents selectively reviewed; 7 guarded captures rehashed, 7 ordinary browser visual reviews with null source-body hashes."
+  },
+  "executive_minutes_queue": {
+    "scope": "Finite 14 linked 2024/2025 executive minutes; selective action-item and AI-related review, not historical archive-wide exhaustion",
+    "dates": [
+      "September 10, 2024 FSEC Meeting Minutes",
+      "September 24, 2024 FSEC Meeting Minutes",
+      "October 8, 2024 FSEC Meeting Minutes",
+      "October 29, 2024 FSEC Meeting Minutes",
+      "November 12, 2024 FSEC Meeting Minutes",
+      "November 26, 2024 FSEC Meeting Minutes",
+      "December 10, 2024 FSEC Meeting Minutes",
+      "January 28, 2025 FSEC Meeting Minutes",
+      "February 11, 2025 FSEC Meeting Minutes",
+      "February 25, 2025 FSEC Meeting Minutes",
+      "March 11, 2025 FSEC Meeting Minutes",
+      "April 8, 2025 FSEC Meeting Minutes",
+      "April 22, 2025 FSEC Meeting Minutes",
+      "May 6, 2025 FSEC Meeting Minutes"
+    ],
+    "guarded_read_count": 7,
+    "oversized_count": 7,
+    "browser_reviews": [
+      {
+        "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_1552903093/file.res/FSEC-9-24-24-minutes.pdf",
+        "locator": "September 24, 2024 FSEC Meeting Minutes; selective pages 1, 3",
+        "access_status": "public_browser_pdf_visual_review",
+        "checked_at": "2026-10-11",
+        "content_hash": null,
+        "fetched_at": null,
+        "catalog_year": null,
+        "page_count": 6,
+        "reviewed_pages": [
+          1,
+          3
+        ],
+        "finding": "Action overview and p. 3 SUNY resolutions: AI tools for research is a passed access resolution, not an AI+X curriculum inventory.",
+        "capture_limitation": "Read rendered public Chrome PDF pages; no full-body capture or source hash. Navigation timeout preceded eventual rendering; no transport bound enlarged."
+      },
+      {
+        "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_1830700730/file.res/FSEC%2010_29_24%20minutes.pdf",
+        "locator": "October 29, 2024 FSEC Meeting Minutes; selective pages 1, 2",
+        "access_status": "public_browser_pdf_visual_review",
+        "checked_at": "2026-10-11",
+        "content_hash": null,
+        "fetched_at": null,
+        "catalog_year": null,
+        "page_count": 5,
+        "reviewed_pages": [
+          1,
+          2
+        ],
+        "finding": "Action overview and p. 2: NYS opportunity regarding AI education was tabled for lack of time; no core inventory.",
+        "capture_limitation": "Read rendered public Chrome PDF pages; no full-body capture or source hash. Navigation timeout preceded eventual rendering; no transport bound enlarged."
+      },
+      {
+        "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_1846267108/file.res/fsec%2011_12_24%20minutes.pdf",
+        "locator": "November 12, 2024 FSEC Meeting Minutes; selective pages 1, 2, 3",
+        "access_status": "public_browser_pdf_visual_review",
+        "checked_at": "2026-10-11",
+        "content_hash": null,
+        "fetched_at": null,
+        "catalog_year": null,
+        "page_count": 7,
+        "reviewed_pages": [
+          1,
+          2,
+          3
+        ],
+        "finding": "pp. 2–3 discuss the SUNY RFP proposal and anticipated undergraduate partnerships, with curricular governance involvement planned. No exact approved degree core or cohort binding.",
+        "capture_limitation": "Read rendered public Chrome PDF pages; no full-body capture or source hash. Navigation timeout preceded eventual rendering; no transport bound enlarged."
+      },
+      {
+        "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_220800874/file.res/fsec%202_25_25%20minutes.pdf",
+        "locator": "February 25, 2025 FSEC Meeting Minutes; selective pages 1, 3",
+        "access_status": "public_browser_pdf_visual_review",
+        "checked_at": "2026-10-11",
+        "content_hash": null,
+        "fetched_at": null,
+        "catalog_year": null,
+        "page_count": 7,
+        "reviewed_pages": [
+          1,
+          3
+        ],
+        "finding": "p. 3 describes SUNY AI initiatives and planned Fall 2026 AI competency in information literacy general education. This is not exact Buffalo degree core membership.",
+        "capture_limitation": "Read rendered public Chrome PDF pages; no full-body capture or source hash. Navigation timeout preceded eventual rendering; no transport bound enlarged."
+      },
+      {
+        "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_776533808/file.res/fsec%203_11_25%20minutes.pdf",
+        "locator": "March 11, 2025 FSEC Meeting Minutes; selective pages 1, 3, 4",
+        "access_status": "public_browser_pdf_visual_review",
+        "checked_at": "2026-10-11",
+        "content_hash": null,
+        "fetched_at": null,
+        "catalog_year": null,
+        "page_count": 7,
+        "reviewed_pages": [
+          1,
+          3,
+          4
+        ],
+        "finding": "Department proposal moved toward Senate first reading; bylaws, funding and AI jobs discussion. No exact required course sets.",
+        "capture_limitation": "Read rendered public Chrome PDF pages; no full-body capture or source hash. Navigation timeout preceded eventual rendering; no transport bound enlarged."
+      },
+      {
+        "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_478468010/file.res/fsec%204_8_25%20minutes%20final.pdf",
+        "locator": "April 8, 2025 FSEC Meeting Minutes; selective pages 1, 3",
+        "access_status": "public_browser_pdf_visual_review",
+        "checked_at": "2026-10-11",
+        "content_hash": null,
+        "fetched_at": null,
+        "catalog_year": null,
+        "page_count": 6,
+        "reviewed_pages": [
+          1,
+          3
+        ],
+        "finding": "Action list includes amendment to department reporting clause; appointments discussed. No exact degree core set in inspected sections.",
+        "capture_limitation": "Read rendered public Chrome PDF pages; no full-body capture or source hash. Navigation timeout preceded eventual rendering; no transport bound enlarged."
+      },
+      {
+        "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_2109882242/file.res/fsec%204_22_25%20minutes.pdf",
+        "locator": "April 22, 2025 FSEC Meeting Minutes; selective pages 1, 2, 3",
+        "access_status": "public_browser_pdf_visual_review",
+        "checked_at": "2026-10-11",
+        "content_hash": null,
+        "fetched_at": null,
+        "catalog_year": null,
+        "page_count": 6,
+        "reviewed_pages": [
+          1,
+          2,
+          3
+        ],
+        "finding": "Action list and overview concern minutes, calendar, grants and TA expenditures. No exact AI+X degree inventory in inspected sections.",
+        "capture_limitation": "Read rendered public Chrome PDF pages; no full-body capture or source hash. Navigation timeout preceded eventual rendering; no transport bound enlarged."
+      }
+    ],
+    "unchecked_queue": [],
+    "document_results": [
+      {
+        "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_404018847/file.res/FSEC-9-10-24-minutes.pdf",
+        "locator": "September 10, 2024 FSEC Meeting Minutes",
+        "result": "selectively_reviewed_guarded_capture",
+        "content_hash": "def6d3e2a431327f7cce445c0be1a18c84b24adbad2eca871e1ff1390d7850ae",
+        "reviewed_pages": [
+          1
+        ]
+      },
+      {
+        "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_1552903093/file.res/FSEC-9-24-24-minutes.pdf",
+        "locator": "September 24, 2024 FSEC Meeting Minutes",
+        "result": "selectively_reviewed_public_browser",
+        "content_hash": null,
+        "reviewed_pages": [
+          1,
+          3
+        ]
+      },
+      {
+        "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_941870507/file.res/FSEC%2010-8-24%20minutes_edited.pdf",
+        "locator": "October 8, 2024 FSEC Meeting Minutes",
+        "result": "selectively_reviewed_guarded_capture",
+        "content_hash": "5cf9774d0e94cc221635bcad3939d9f066d592045da29426f0eb9194115884cb",
+        "reviewed_pages": [
+          1,
+          2
+        ]
+      },
+      {
+        "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_1830700730/file.res/FSEC%2010_29_24%20minutes.pdf",
+        "locator": "October 29, 2024 FSEC Meeting Minutes",
+        "result": "selectively_reviewed_public_browser",
+        "content_hash": null,
+        "reviewed_pages": [
+          1,
+          2
+        ]
+      },
+      {
+        "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_1846267108/file.res/fsec%2011_12_24%20minutes.pdf",
+        "locator": "November 12, 2024 FSEC Meeting Minutes",
+        "result": "selectively_reviewed_public_browser",
+        "content_hash": null,
+        "reviewed_pages": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_974566257/file.res/fsec%2011_26_24%20minutes.pdf",
+        "locator": "November 26, 2024 FSEC Meeting Minutes",
+        "result": "selectively_reviewed_guarded_capture",
+        "content_hash": "7d4b8928316854c0d9261841c759b4eb272d7786d71a6444e540f5a70a41b7c1",
+        "reviewed_pages": [
+          1,
+          2
+        ]
+      },
+      {
+        "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_1496193457/file.res/fsec%2012_10_24%20minutes.pdf",
+        "locator": "December 10, 2024 FSEC Meeting Minutes",
+        "result": "selectively_reviewed_guarded_capture",
+        "content_hash": "82fc5d3cc064744f9e3658fe80d6f6c766ac0bc4aeb7d45ccf5907812dfb4652",
+        "reviewed_pages": [
+          1
+        ]
+      },
+      {
+        "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_1575601227/file.res/fsec%201_28_25%20minutes.pdf",
+        "locator": "January 28, 2025 FSEC Meeting Minutes",
+        "result": "selectively_reviewed_guarded_capture",
+        "content_hash": "343d046a4cd4767a7774afb05483abacab3928a03e04f50bd462a3723360207f",
+        "reviewed_pages": [
+          1,
+          3
+        ]
+      },
+      {
+        "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_1185244852/file.res/fsec%202_11_25%20minutes.pdf",
+        "locator": "February 11, 2025 FSEC Meeting Minutes",
+        "result": "selectively_reviewed_guarded_capture",
+        "content_hash": "aded07bb71a18d1985c3910707f6ed9bdd526965b2e2306078a06da413063de6",
+        "reviewed_pages": [
+          1
+        ]
+      },
+      {
+        "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_220800874/file.res/fsec%202_25_25%20minutes.pdf",
+        "locator": "February 25, 2025 FSEC Meeting Minutes",
+        "result": "selectively_reviewed_public_browser",
+        "content_hash": null,
+        "reviewed_pages": [
+          1,
+          3
+        ]
+      },
+      {
+        "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_776533808/file.res/fsec%203_11_25%20minutes.pdf",
+        "locator": "March 11, 2025 FSEC Meeting Minutes",
+        "result": "selectively_reviewed_public_browser",
+        "content_hash": null,
+        "reviewed_pages": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_478468010/file.res/fsec%204_8_25%20minutes%20final.pdf",
+        "locator": "April 8, 2025 FSEC Meeting Minutes",
+        "result": "selectively_reviewed_public_browser",
+        "content_hash": null,
+        "reviewed_pages": [
+          1,
+          3
+        ]
+      },
+      {
+        "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_2109882242/file.res/fsec%204_22_25%20minutes.pdf",
+        "locator": "April 22, 2025 FSEC Meeting Minutes",
+        "result": "selectively_reviewed_public_browser",
+        "content_hash": null,
+        "reviewed_pages": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "url": "https://www.buffalo.edu/content/www/facultysenate/meetings/minutes/faculty-senate-executive-committee-minutes/_jcr_content/root/maincontent/par/collapsible_1113555191/container/download_671033627/file.res/FSEC%205_6_25%20Minutes.pdf",
+        "locator": "May 6, 2025 FSEC Meeting Minutes",
+        "result": "selectively_reviewed_guarded_capture",
+        "content_hash": "40d085cf376ac4db22e855c921e93f8be9c90574246f1bf3a9fb35dfe59f6003",
+        "reviewed_pages": [
+          1
+        ]
+      }
+    ],
+    "closed_queue_count": 14,
+    "protected_attachments": "Known protected buffalo.box.com attachments not requested; no alternate endpoint or login attempted."
   }
 }

@@ -44,3 +44,5 @@ Independently read [Program structure; The learning experience](https://arts-sci
 ## Public advising and governance follow-up — 2026-10-11
 
 New public advising pages and 2024–25 senate minutes add historical mandatory AI-and-ethics obligation evidence, without an exact course title/code or current cohort applicability. The April 15 minutes explicitly separate department formation from curriculum approval. Fixed status remains unverified. See `research/university-core-followup-buffalo.json` and `.md` for new source attempts, captures, replacement-row proposals and remaining evidence. Senate attachment login and byte-limit boundaries were respected. No core identity, parser logic or whole-degree status changed.
+
+The follow-up also selectively reviewed all 14 linked 2024/2025 executive minutes, plus the two oversized Senate PDFs in the ordinary public viewer. Proposal-stage curricular discussion adds context but no exact title/code/cohort binding; statuses and canonical data remain unchanged. Exact reviewed pages and capture limits are in `research/university-core-followup-buffalo.json`.
