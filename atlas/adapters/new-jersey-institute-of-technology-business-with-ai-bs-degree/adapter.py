@@ -183,3 +183,7 @@ SOURCES = tuple(SOURCE_PARSERS)
 from atlas.adapters.njit_rutgers_history_reviews import SOURCE_PARSERS as RUTGERS_HISTORY_PARSERS
 SOURCE_PARSERS.update(RUTGERS_HISTORY_PARSERS)
 SOURCES = tuple(SOURCE_PARSERS)
+
+from atlas.adapters.njit_rutgers_other_reviews import SOURCE_PARSERS as RUTGERS_OTHER_PARSERS
+SOURCE_PARSERS.update(RUTGERS_OTHER_PARSERS)
+SOURCES = tuple(SOURCE_PARSERS)

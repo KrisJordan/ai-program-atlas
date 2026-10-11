@@ -32,7 +32,7 @@ def test_njit_seed_explicit_pools_no_duplicate_required_course():
  assert len(courses)==len(d['courses'])
  assert len(rules[PID+'-njit-ger-300']['course_ids'])==248
  assert len(rules[PID+'-njit-natural']['course_ids'])==36
- assert courses['njit-r216-206']['credits']==3
+ assert courses['njit-r216-206']['credits'] is None
  assert courses['njit-com-200']['credits'] == 3
  assert courses['njit-com-200']['source_id'] == PID+'-arts-communication-subject-review'
  assert courses['njit-phil-310']['source_id']==PID+'-courses-humanities'

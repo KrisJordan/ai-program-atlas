@@ -53,7 +53,7 @@ def test_seed_preserves_pool_and_outstanding_scope():
     d=json.loads(Path('data/programs/'+PID+'.json').read_text())
     c={c['code']:c for c in d['courses']};r={r['id']:r for r in d['requirements']}
     assert len(r[PID+'-njit-natural']['course_ids'])==36
-    assert c['R216 206']['credits']==3 and 'PHYS 122' not in c
+    assert c['R216 206']['credits'] is None and 'PHYS 122' not in c
     assert c['PHYS 202']['prerequisites'] is None
     assert c['PHYS 203']['prerequisites']=='Prerequisite: None'
     assert len([r for r in d['requirements'] if '-science-option-' in r['id']])==9

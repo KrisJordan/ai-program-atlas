@@ -302,3 +302,7 @@ Drexel, USF and William & Mary return to `in_progress`: their genuine inaccessib
 ## Rutgers history publication — 2026-10-11
 
 The current Rutgers catalog supplied 141 matching history codes in actual rendered 510/512 tabs; all 143 NJIT-listed history records were reviewed. Of these, 136 compatible current identities receive human-context reviews, five retain explicit title conflicts and two lack current exact entries. Topic-only entries use qualified exact-title evidence; explanatory descriptions are not invented. Current Rutgers content is independent of the denied SASN route. Paired headings are not merged. Rutgers credit units were separately verified in public Policy 10.2.4. Total NJIT reviewed source records is 363; 18 non-history Rutgers records and local degree policies remain in progress.
+
+## Remaining Rutgers option subjects — 2026-10-11
+
+The 18 remaining source records were individually reviewed against actual current subject tabs. Thirteen exact descriptions are available; five exact codes are absent. All 381 source records now have bounded reviews, including 12 unresolved identity/absence cases. The option graph remains 349 source-code records and 348 proven identities; 32 fixed identities are unchanged. Rutgers' one-credit ecology laboratory contradicts NJIT's three-credit listing, so the scalar is null with both source values retained. Credit conflicts do not alter published choice amounts or silently authorize substitutions. Full local policy closure remains in progress.

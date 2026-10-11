@@ -44,7 +44,8 @@ def test_science_scope_and_real_evidence_missingness():
     assert len(m.SPEC) == 22
     assert sum(courses[code]['category_review']['status']=='reviewed' for code in m.SPEC)==20
     assert all(courses[code]['category_review']['status']=='mixed' for code in ['BIOL 115','BIOL 150'])
-    assert all('category_review' not in courses[code] for code in ['R120 101','R120 102','R120 207','R120 208','R120 237'])
+    assert all(courses[code]['category_review']['source_ids'][0] == m.PID+'-rutgers-subject-120' for code in ['R120 101','R120 102','R120 207','R120 208','R120 237'])
+    # These later reviews cite independent current Rutgers evidence, not this NJIT-only observer.
     assert courses['PHYS 203']['prerequisites'] == 'Prerequisite: None'
-    assert courses['R216 206']['credits'] == 3
+    assert courses['R216 206']['credits'] is None
     assert sum('-science-option-' in r['id'] for r in p['requirements']) == 9
