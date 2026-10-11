@@ -63,3 +63,5 @@ Health economics and ethics options description review (2026-10-11): 3 existing 
 ## Finite description inventory closure — 2026-10-11
 
 Finite course-description review complete (2026-10-11): all 71 currently listed course observations have source-backed original summaries. This closes the listed-course description queue only. Other offering-specific public sites/syllabi remain unreviewed, null preparation fields do not mean no restriction, and degree completeness remains partial pending the documented applicability boundaries.
+
+2026-10-11 Linguistics-adjacent content audit: exact shared PSYC course observations receive individual source-backed subject reviews where present. PSYC 1101 is psychological domain knowledge, PSYC 2320 is statistical methods, and source-specific psycholinguistic choices retain their domain or unknown-topic scope. These are manual content reviews, never parser-emitted review stamps. Remaining available degree-specific content and policy checks are still in progress; no degree completeness is inferred from this shared metadata update.

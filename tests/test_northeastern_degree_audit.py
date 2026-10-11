@@ -398,3 +398,42 @@ def test_economics_math_physics_manual_role_and_category_partitions(subject,size
         assert bycode['ECON 4692']['id'] in e['expected_course_ids']['options']
         assert bycode['ECON 4997']['id'] in e['expected_course_ids']['options']
         assert 'ECON 2990' not in bycode and 'ECON 4996' not in bycode
+
+
+@pytest.mark.parametrize('code,expected', [
+    ('LING 1150','applications'), ('LING 2350','applications'),
+    ('LING 3412','human_context'), ('LING 3422','applications'),
+    ('LING 3424','applications'), ('LING 3450','applications'),
+    ('PSYC 1101','applications'), ('PSYC 2320','mathematics'),
+    ('PSYC 4610','applications'), ('PSYC 4658','applications'),
+    ('DEAF 2700','applications'), ('LING 4654','other'),
+    ('LING 4891','other'), ('LING 4991','other'),
+])
+def test_linguistics_decisions_do_not_confuse_language_structure_with_computing(code,expected):
+    decision=CATEGORY_DECISIONS[code]
+    assert category(code,decision['name'],decision['guard'])==expected
+    assert category(code,decision['name'],'Different current topic')=='other'
+    assert category(code,'Different identity',decision['guard'])=='other'
+
+
+def test_linguistics_named_options_preserve_eligibility_and_nonreuse_scope():
+    from atlas.families import resolve_program
+    from atlas.curriculum_profile import requirement_profile
+    pid='northeastern-university-artificial-intelligence-and-linguistics-bs-boston-bs-degree'
+    seed=json.loads((ROOT/'data/programs'/f'{pid}.json').read_text())
+    family=json.loads((ROOT/'data/families'/f"{seed['family']['id']}.json").read_text())
+    resolved=resolve_program(seed,family)
+    profile=requirement_profile(resolved)
+    assert profile['required']['count']==18 and profile['options']['count']==27
+    assert profile['unresolved']['count']==0
+    courses={c['code']:c for c in seed['courses']}
+    assert all('category_review' in c for c in courses.values())
+    assert 'PSYC 3464' in courses['PSYC 4610']['prerequisites']
+    assert 'AMSL 1102' in courses['DEAF 2700']['prerequisites']
+    assert 'PSYC 3464' not in courses and 'AMSL 1102' not in courses
+    assert 'CS 1800' not in courses and 'CS 1802' not in courses
+    assert courses['LING 4891']['category_review']['status']=='unclassified'
+    assert courses['PSYC 4658']['category_review']['status']=='reviewed'
+    rules=resolved['requirements']
+    assert any('not used to fulfill other degree requirements' in r['summary'] for r in rules)
+    assert any(r['kind']=='choose_courses' and r['count']==4 for r in rules)
