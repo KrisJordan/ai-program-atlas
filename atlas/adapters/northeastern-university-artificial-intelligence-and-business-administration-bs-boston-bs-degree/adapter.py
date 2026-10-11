@@ -61,3 +61,9 @@ SOURCE_PARSERS = {**SOURCE_PARSERS, **_BUSINESS_DESIGN_METADATA}
 _REMAINING_SUBJECT_METADATA = register_subject_sources(PROGRAM_ID, {'ANTH': ['ANTH 3441'], 'COOP': ['COOP 3945', 'COOP 3946', 'COOP 3947', 'COOP 3948'], 'EEBA': ['EEBA 2945', 'EEBA 2948'], 'HUSV': ['HUSV 2970'], 'IE': ['IE 3500']})
 SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + tuple(_REMAINING_SUBJECT_METADATA)))
 SOURCE_PARSERS = {**SOURCE_PARSERS, **_REMAINING_SUBJECT_METADATA}
+
+# Independently public offering-specific CS 2000/2001 resources.
+from atlas.adapters.northeastern_course_resources import register_resources
+_PUBLIC_CS_RESOURCES = register_resources(PROGRAM_ID)
+SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + tuple(_PUBLIC_CS_RESOURCES)))
+SOURCE_PARSERS = {**SOURCE_PARSERS, **_PUBLIC_CS_RESOURCES}

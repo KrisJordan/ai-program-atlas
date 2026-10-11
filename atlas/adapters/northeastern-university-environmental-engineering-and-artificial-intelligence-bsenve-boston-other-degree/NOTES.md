@@ -29,3 +29,7 @@ Engineering, environment, health and social-science metadata continuation (revie
 ## Remaining humanities language and ancillary course metadata — 2026-10-11
 
 Remaining subject metadata review (2026-10-11, 2026–2027 official catalogs): 2 existing course records gain independent identity, credits and explicit preparation facts. Known zero-hour experiential registrations remain zero; their presence does not make a co-op or internship mandatory. Conditional college seminar choices and degree requirements are preserved. Unreviewed descriptions and absent prerequisite statements remain unknown. Current HTML is parsed using exact subject headings and explicit existing-course selectors; missing or duplicate selected codes fail. No seed replay, freshness stamp, review audit or completeness promotion.
+
+## Public CS course resources — 2026-10-11
+
+Instructor-linked public CS 2000 site explicitly covers Fall 2026 Boston/Oakland. Its linked public syllabus explicitly covers CS 2000 classes and CS 2001 labs but does not itself state a year; source notes retain that distinction. Both existing course records gain public site/syllabus URLs; catalog source IDs, credits, prerequisites, descriptions and requirement graphs remain unchanged. Three independent parsers validate instructor teaching link, course/term/campus scope and syllabus class/lab identity. Observations never replay seed data or certify freshness/completeness.
