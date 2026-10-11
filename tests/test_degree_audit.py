@@ -51,3 +51,16 @@ def test_ledger_compilation_preserves_evidence_and_separates_second_pass(tmp_pat
     assert len(report["programs"]) == 1
     assert report["programs"][0]["ledger"] == "research/degree-audit/owner.json"
     assert report["programs"][0]["sources"] == entry()["sources"]
+
+
+def test_independent_expected_aggregates_cannot_silently_go_stale():
+    p = program()
+    p["courses"] = [dict(id="programming", category="foundations")]
+    p["requirements"] = [dict(id="core", kind="all", course_ids=["programming"])]
+    e = entry()
+    e["expected_profile"] = dict(required=dict(count=1, categories={"foundations": 1}),
+                                 options=None, unresolved=None)
+    assert audit_summary({"programs": [e]}, [p])["blocked"] == 1
+    p["courses"][0]["category"] = "other"
+    with pytest.raises(ValueError, match="stale"):
+        audit_summary({"programs": [e]}, [p])

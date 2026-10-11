@@ -58,6 +58,23 @@ def audit_summary(ledger, programs):
     entries = ledger.get("programs", [])
     validate_ledger(entries, programs)
     lookup = {e["program_id"]: e for e in entries}
+    # The export supplies family-resolved programs. Compare independent manual
+    # expectations to the exact graph being published, including partial scopes.
+    from .curriculum_profile import requirement_profile
+    from .taxonomy import CATEGORIES
+    for program in programs:
+        expected = lookup.get(program["id"], {}).get("expected_profile")
+        if not expected:
+            continue
+        actual = requirement_profile(program)
+        for role in ("required", "options", "unresolved"):
+            if expected.get(role) is None:
+                continue
+            counts = expected[role]
+            if (counts.get("count") != actual[role]["count"] or
+                    any(counts.get("categories", {}).get(c, 0) != actual[role]["categories"][c]
+                        for c in CATEGORIES)):
+                raise ValueError(f"Independent degree audit profile is stale: {program['id']} {role}")
     degrees = [p for p in programs if p.get("program_kind") == "degree"]
     counts = Counter(lookup.get(p["id"], {}).get("status", "pending") for p in degrees)
     return {"audit_date": ledger.get("audit_date"), "scope_programs": len(degrees),
