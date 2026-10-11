@@ -1,0 +1,182 @@
+"""Source observations for manual HASS judgments; never classify from a course code.
+
+This disjoint contribution does not register source parsers or change degree roles.
+The primary MIT adapter integrates only explicitly reviewed, unchanged observations.
+"""
+from __future__ import annotations
+
+import hashlib
+import json
+import re
+from pathlib import Path
+from urllib.parse import urljoin
+
+from bs4 import BeautifulSoup
+
+
+def clean(value):
+    return ' '.join((value.get_text(' ', strip=True) if hasattr(value, 'get_text') else value or '').split())
+
+
+def digest(value):
+    return hashlib.sha256(value.encode()).hexdigest() if value else None
+
+
+def observation_digest(observation):
+    return digest(json.dumps(observation, sort_keys=True, ensure_ascii=False, separators=(',', ':')))
+
+
+def unit_total(units_text, notation_html):
+    """Sum an observed numeric triplet only under MIT's published unit convention."""
+    text = clean(BeautifulSoup(notation_html, 'html.parser'))
+    if 'The total unit credit for a subject is obtained by adding together all the units shown.' not in text:
+        raise ValueError('MIT unit convention changed or missing')
+    match = re.match(r'^(\d+)-(\d+)-(\d+)(?:\s|;|$)', units_text or '')
+    return sum(map(int, match.groups())) if match else None
+
+
+def _field(node, name):
+    field = node.select_one('.field--name-field-' + name)
+    if field is None:
+        return None
+    return clean(field.select_one('.field__item') or field) or None
+
+
+def observe_architecture(html):
+    soup = BeautifulSoup(html, 'html.parser')
+    if not soup.find('h1') or clean(soup.find('h1')) != 'Classes':
+        raise ValueError('Architecture class directory heading changed')
+    rows = []
+    for node in soup.select('.expcol-wrap'):
+        code = _field(node, 'subject-number')
+        if not code:
+            continue
+        title = clean(node.select_one('.faux-full-title'))
+        if not title:
+            raise ValueError('Architecture subject lost its title')
+        rows.append(dict(
+            code=code, name=title, description=_field(node, 'subject-description'),
+            prerequisites=_field(node, 'prerequisites'), units=_field(node, 'course-units'),
+            term=clean(' '.join(filter(None, [_field(node, 'semester'), _field(node, 'year')]))),
+            enrollment=_field(node, 'enrollment'), preference=_field(node, 'preference-given-to'),
+            required_of=_field(node, 'required-of'), restricted_elective=_field(node, 'restricted-elective'),
+            repeated=_field(node, 'can-be-repeated-for-credit'),
+        ))
+    return rows
+
+
+def observe_literature(html):
+    soup = BeautifulSoup(html, 'html.parser')
+    selected = soup.find('select', attrs={'name': 'semester'})
+    if selected is None:
+        raise ValueError('Literature term selector missing')
+    term = selected.find('option', selected=True) or selected.find('option')
+    rows = []
+    for node in soup.select('.parentrow'):
+        link = node.select_one('.description-link')
+        if link is None:
+            continue
+        body = soup.find('div', class_='description-row', attrs={'data-course': link.get('data-course')})
+        if body is None:
+            raise ValueError('Literature subject lost its paired description panel')
+        meta = clean(body.find('p', recursive=False))
+        pre = re.search(r'Prereq:\s*(.*?)\s*Units:', meta)
+        rows.append(dict(
+            code=clean(link), name=clean(node.select_one('span')),
+            description=clean(body.select_one('.et-l--post')) or None,
+            prerequisites=pre.group(1) if pre else None,
+            units=meta.split('Units:', 1)[1].strip() if 'Units:' in meta else None,
+            term=clean(term), locator=link.get('data-course'),
+        ))
+    return rows
+
+
+def observe_history(html):
+    soup = BeautifulSoup(html, 'html.parser')
+    main = soup.find('main')
+    if main is None or main.find('h1') is None:
+        raise ValueError('History subject main heading missing')
+    heading = clean(main.find('h1'))
+    match = re.match(r'(21H\.[\w]+(?:\[J\])?)\s+(.+)', heading)
+    codes = [clean(a) for a in main.select('.cp-subject-catalog-field a')]
+    if match is None and (not codes or not re.fullmatch(r'21H\.[\w]+', codes[0])):
+        raise ValueError('History subject code/title format changed')
+    term = main.select_one('.taxonomy-subject-term')
+    return dict(code=match[1] if match else codes[0], name=match[2] if match else heading,
+                description=' '.join(clean(x) for x in main.select('p.wp-block-paragraph')) or None,
+                catalog_codes=codes, prerequisites=None, units=None,
+                term=clean(term).removeprefix('Term ').strip() if term else None)
+
+
+def observe_wgs(html):
+    soup = BeautifulSoup(html, 'html.parser')
+    if not any(clean(h) == 'Subjects' for h in soup.find_all('h1')):
+        raise ValueError('WGS subject directory heading changed')
+    rows = []
+    for node in soup.select('.summary-item'):
+        link = node.select_one('.summary-title-link')
+        if link is None:
+            continue
+        match = re.match(r'(WGS\.[\w]+)\s+(.+)', clean(link))
+        if match is None:
+            continue
+        rows.append(dict(code=match[1], name=match[2],
+                         description=clean(node.select_one('.summary-excerpt')) or None,
+                         source_url=urljoin('http://wgs.mit.edu/subjects', link['href']),
+                         prerequisites=None, units=None, term=None))
+    return rows
+
+
+def matched_review(course, observation, source_url, manifest=None):
+    """Return a saved decision only on an exact listed identity and observed payload.
+
+    This is reuse of a dated manual judgment, not a new review. It does not mutate
+    the course, sum MIT unit triplets, merge identities, or infer a required role.
+    """
+    if manifest is None:
+        manifest = json.loads(Path(__file__).with_name('reviewed_hass_subjects.json').read_text())
+    reviewed = manifest['courses'].get(course['id'])
+    if reviewed is None or reviewed.get('review_status') != 'reviewed':
+        return None
+    if (course.get('code'), course.get('name'), course.get('source_id')) != (reviewed['listed_code'], reviewed['listed_name'], reviewed['listed_source_id']):
+        return None
+    for evidence in reviewed.get('observations', []):
+        if evidence.get('approved_for_integration') and evidence.get('source_url') == source_url and evidence.get('observation_digest') == observation_digest(observation):
+            return evidence
+    return None
+
+
+def observe_performing_arts(html):
+    soup = BeautifulSoup(html, 'html.parser')
+    term = soup.select_one('.b-class-schedule__semester-select option[selected]')
+    if term is None:
+        raise ValueError('Performing arts selected term missing')
+    rows = []
+    for button in soup.select('.b-class-schedule__course-toggle'):
+        code = clean(button.select_one('.b-class-schedule__class-number'))
+        title = clean(button.select_one('.b-class-schedule__class-title'))
+        body = soup.find(id=button.get('aria-controls'))
+        if not code or body is None:
+            raise ValueError('Performing arts paired description missing')
+        paragraphs = [clean(p) for p in body.find_all('p')]
+        match = re.match(r'^(\d+-\d+-\d+)\s+units', paragraphs[0] if paragraphs else '')
+        rows.append(dict(code=code, name=title, description=' '.join(paragraphs[1:] if match else paragraphs) or None,
+                         units=match[1] if match else None, source_unit_line=paragraphs[0] if match else None,
+                         prerequisites=None, term=clean(term), locator=button.get('aria-controls')))
+    return rows
+
+
+def observe_wgs_detail(html):
+    soup = BeautifulSoup(html, 'html.parser')
+    title = clean(soup.select_one('h1.entry-title'))
+    match = re.match(r'(WGS\.[\w]+)\s+(.+)', title)
+    body = soup.select_one('.blog-item-content .sqs-html-content')
+    if match is None or body is None:
+        raise ValueError('WGS course-detail heading/body changed')
+    paragraphs = [clean(p) for p in body.find_all('p', recursive=False)]
+    if len(paragraphs) < 2 or 'Units:' not in paragraphs[0]:
+        raise ValueError('WGS detail metadata/description changed')
+    units = re.search(r'Units:\s*(\d+-\d+-\d+)', paragraphs[0])
+    return dict(code=match[1], name=match[2], description=paragraphs[1],
+                units=units[1] if units else None, source_metadata=paragraphs[0],
+                prerequisites=None, term='Fall 2026-2027')
