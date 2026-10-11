@@ -114,7 +114,7 @@ def test_writing_actual_cache_matches_all25_read_blocks():
         observed+=writing.parse((root/('writing-'+section+'.html')).read_text(),section=section)['courses']
     assert len(observed)==25
     for x in observed:
-        excluded={'credits','description'} if x['code']=='WRIT 1' else set()
+        excluded=set(x) if x['code']in {'WRIT 1','WRIT 1E'} else set()
         assert all(x[k]==c[x['code']][k]for k in x if k not in excluded)
         if x['code']=='WRIT 1':
             assert x['credits']==5 and c[x['code']]['credits'] is None
@@ -194,7 +194,7 @@ def test_current_crosslisting_uses_reciprocal_evidence_and_retains_raw_codes():
             result=current.parse(cache.read_text(), code=code)
             assert result==current.parse(cache.read_text(),code=code)
             seed=next(c for c in d['courses']if c['code']==code)
-            assert all(seed[k]==v for k,v in result['courses'][0].items() if not (code=='CMPSC 41' and k=='credits'))
+            assert all(seed[k]==v for k,v in result['courses'][0].items() if not (code in {'CMPSC 41','WRIT 1'} and k=='credits'))
 
 
 def test_current_catalog_required_vision_identity_and_precise_eligibility():
@@ -275,3 +275,16 @@ def test_current_english_metadata_does_not_generalize_seminar_subject(monkeypatc
     assert 'Fall 2026' in c['ENGL 197']['category_review']['rationale']
     assert 'future' in c['ENGL 197']['category_review']['rationale']
     assert all('ucsb-engl-146ai'not in g['course_ids'] for g in d['course_identity_groups'])
+
+
+def test_current_entry_writing_preserves_narrow_eligibility_and_unit_conflict():
+    from atlas.adapters import ucsb_catalog_course_content as current
+    d=json.loads(Path('data/programs/ucsb-ai-bs.json').read_text());c={x['code']:x for x in d['courses']}
+    assert current.SPEC['WRIT 1']['credits']==5 and c['WRIT 1']['credits'] is None
+    assert c['WRIT 1E']['credits']==4
+    assert 'Freshmen only' in c['WRIT 1E']['prerequisites']
+    assert 'Computer Engineering majors only' in c['WRIT 1E']['prerequisites']
+    assert 'AI is not among' in c['WRIT 1E']['prerequisites']
+    assert '6 or lower' in c['WRIT 1']['prerequisites']
+    assert c['WRIT 1']['source_id'].endswith('-catalog-2026')
+    assert requirement_profile(d)['unresolved']['count']==2

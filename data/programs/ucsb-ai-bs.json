@@ -1075,6 +1075,26 @@
       "catalog_year": "2026-2027",
       "locator": "Full visible current catalog section; read and compared with Engineering-specific applicability",
       "confidence": "high"
+    },
+    {
+      "id": "ucsb-ai-bs-writ1-catalog-2026",
+      "url": "https://catalog.ucsb.edu/courses/WRIT%201/general-aoYks",
+      "title": "UCSB current catalog WRIT 1",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Full current course fields including units, prerequisites, advisory and repeat limits",
+      "confidence": "high"
+    },
+    {
+      "id": "ucsb-ai-bs-writ1e-catalog-2026",
+      "url": "https://catalog.ucsb.edu/courses/WRIT%201E/general-aoYks",
+      "title": "UCSB current catalog WRIT 1E",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Full current course fields including units, prerequisites, advisory and repeat limits",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -3200,13 +3220,13 @@
       "id": "ucsb-writ-1",
       "code": "WRIT 1",
       "name": "Approaches to University Writing",
-      "description": "University writing develops critical reading, increasingly complex essays and a reflective composition process for academic participation. Unit conflict: the individual Writing1 guide states4quarter units, while the lower-division course overview states5; both are undated.",
-      "prerequisites": "No credit after English1, Writing1E or1LK.",
+      "description": "Practices critical reading, analysis of academic discourse and rhetorical strategies for university writing. Earning C or better satisfies the entry-level writing requirement.",
+      "prerequisites": "The current course field requires an unsatisfied Entry Level Writing Requirement and an Analytical Writing Placement Exam score of 6 or lower. No credit after English 1, Writing 1LK or Writing 1E, or an AP English score of at least3. Maximum5units with no additional-credit repeats. Current university placement/CWP policy is separately reviewed; this course-field AWPE wording does not establish a universal examination obligation.",
       "credits": null,
       "credit_unit": "quarter_hours",
       "category": "human_context",
-      "source_id": "ucsb-ai-bs-writing-lower-descriptions",
-      "url": "https://writing.ucsb.edu/courses/lower-division-courses",
+      "source_id": "ucsb-ai-bs-writ1-catalog-2026",
+      "url": "https://catalog.ucsb.edu/courses/WRIT%201/general-aoYks",
       "public_site": null,
       "syllabus": null,
       "category_review": {
@@ -3214,24 +3234,27 @@
         "taxonomy_version": "1",
         "reviewed_at": "2026-10-11",
         "source_ids": [
-          "ucsb-ai-bs-writing-lower-descriptions"
+          "ucsb-ai-bs-writ1-catalog-2026"
         ],
-        "locator": "Writing 1. Approaches to University Writing; applicable series unit/prerequisite paragraphs",
-        "rationale": "The full description emphasizes writing, rhetoric, audience and communication; its professional or AI topic does not establish technical AI methods or domain engineering content. Undated department description; catalog edition unknown.",
+        "locator": "WRIT 1 full current catalog description",
+        "rationale": "The actual description centers academic reading, rhetoric, exposition and written argument, supporting human context rather than computing content.",
         "candidate_categories": []
-      }
+      },
+      "notes": [
+        "Current catalog publishes5units; the undated individual Writing Program guide publishes4. The conflicting observations remain separately sourced and curated credits remain unknown."
+      ]
     },
     {
       "id": "ucsb-writ-1e",
       "code": "WRIT 1E",
       "name": "Approaches to University Writing for Engineers",
-      "description": "Academic writing for engineers develops critical reading and analysis through engineering and technology topics, including engineering ethics.",
-      "prerequisites": "College of Engineering enrollment.",
+      "description": "Practices academic reading, analysis, exposition and argument through examinations and revised papers, with attention to rhetorical strategies.",
+      "prerequisites": "The current course field requires an unsatisfied Entry Level Writing Requirement and an Analytical Writing Placement Exam score of 6 or lower. Freshmen only; ECE, Chemical Engineering, Mechanical Engineering and Computer Engineering majors only. No credit after English 1, Writing 1 or Writing 1LK, or an AP English score of at least3. Maximum4units with no additional-credit repeats. AI is not among the named majors; no automatic exception is inferred. Current university placement/CWP policy remains separately reviewed.",
       "credits": 4,
       "credit_unit": "quarter_hours",
       "category": "human_context",
-      "source_id": "ucsb-ai-bs-writing-lower-descriptions",
-      "url": "https://writing.ucsb.edu/courses/lower-division-courses",
+      "source_id": "ucsb-ai-bs-writ1e-catalog-2026",
+      "url": "https://catalog.ucsb.edu/courses/WRIT%201E/general-aoYks",
       "public_site": null,
       "syllabus": null,
       "category_review": {
@@ -3239,12 +3262,15 @@
         "taxonomy_version": "1",
         "reviewed_at": "2026-10-11",
         "source_ids": [
-          "ucsb-ai-bs-writing-lower-descriptions"
+          "ucsb-ai-bs-writ1e-catalog-2026"
         ],
-        "locator": "Writing 1E. Approaches to University Writing for Engineers; applicable series unit/prerequisite paragraphs",
-        "rationale": "The full description emphasizes writing, rhetoric, audience and communication; its professional or AI topic does not establish technical AI methods or domain engineering content. Undated department description; catalog edition unknown.",
+        "locator": "WRIT 1E full current catalog description",
+        "rationale": "The actual description centers academic reading, rhetoric, exposition and written argument, supporting human context rather than computing content.",
         "candidate_categories": []
-      }
+      },
+      "notes": [
+        "Current enrollment names four engineering major groups and freshmen only. A broad Engineering course title does not establish AI-major eligibility."
+      ]
     }
   ],
   "requirements": [
@@ -4682,7 +4708,7 @@
       "category": "other",
       "source_id": "ucsb-ai-bs-writing-course",
       "source_text": null,
-      "summary": "WRIT1 satisfies ELWR but has an unresolved4-versus5quarter-unit disagreement between the individual guide and lower-division overview; its curated credits remain null. WRIT1E is4quarter units in both sources and satisfies ELWR. They are placement-dependent alternatives, not both required. WRIT1 excludes credit after English1,WRIT1E or1LK; WRIT1E requires Engineering enrollment. Minimum-grade and timing rules remain in the separately reviewed university policy.",
+      "summary": "WRIT1/1E are placement-dependent entry-writing alternatives, not both required. Current catalog gives5/4units, but the undated individual guide says4forWRIT1; curatedWRIT1credits remain null. Current1E is freshmen and ECE/ChemE/ME/CE only, with no verified AI exception. Both course fields name unsatisfiedELWR andAWPE<=6; separately reviewed current university placement policy is not silently replaced. Prior equivalent-writing/AP credit restrictions are preserved in course metadata.",
       "course_ids": []
     },
     {
@@ -4859,7 +4885,8 @@
     "Current2026–27requiredcourse review replaces undated188no-prerequisite observation:130A,165Aand165Barerequired;138recommended. Current130AstatesPSTAT120A/ECE139inbothrecommendedandprerequisitefields(concurrentallowed), bothretained. Calculus conditionalcredit reductions/repeat/AP exclusions remain distinct from ordinary4units. Currentmathalternateprerequisites include2B/3BIand4AIwhereexplicit.",
     "Currentpublicenrollment/registrationpolicies andcatalogRegulation10read: instructorpreparednessassessment andlate-addapproval do not explicitly establish a waiver of course major restrictions. Graduateenrollmentconditions are optional routes, not additional AIdegree requirements; LettersandScience-only300–499creditprohibition is not generalized to Engineering.",
     "Current2026–27English146AI/146DSrecords close the historical-only version limitation: both4units andWriting2orupper-divisionstanding. Their suffix-family repeatmaximum is not a degree requirement. Current197genericrecordsupplies4units andWriting2/50/109orEnglish10orupperstanding; its categoryreview remains scoped to the three fullyreadFall2026sections and is not inferred from the genericrecord.",
-    "Current2026–27 university GE policy expressly recognizes certified IGETC/Cal-GETC and links Engineering, closing the earlier college-applicability discovery gap. Partial-pattern and IGETC-for-STEM conditions remain exact. D/E/F/G public filtered CSV export has856distinct codes; content review and pool integration are in progress. No category inferred from a GE designation."
+    "Current2026–27 university GE policy expressly recognizes certified IGETC/Cal-GETC and links Engineering, closing the earlier college-applicability discovery gap. Partial-pattern and IGETC-for-STEM conditions remain exact. D/E/F/G public filtered CSV export has856distinct codes; content review and pool integration are in progress. No category inferred from a GE designation.",
+    "Current WRIT1/1E full catalog records give5/4units respectively; WRIT1 remains null because its undated individual guide still says4. WRIT1E eligibility is freshmen in ECE/ChemE/ME/CE only, not blanket Engineering. Both course fields retain AWPE<=6 alongside the separately observed current university CWP/transfer-AWPE policy; no universal AWPE requirement or AI override is inferred."
   ],
   "curriculum_audit": {
     "scope": "degree",

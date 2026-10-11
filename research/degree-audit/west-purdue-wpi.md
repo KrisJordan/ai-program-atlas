@@ -304,3 +304,18 @@ current candidate remains in the contribution manifest pending identity/source
 clarification. ECON163 and PHIL28GS have no exact current headings, with no
 substitution or discontinuation inferred. Other accessible UCSD subjects remain
 active; SOCI87 is delegated separately for actual source-content review.
+
+
+### Current entry-writing field review (2026-10-11)
+
+Full current WRIT1/1E catalog records were read. They publish5/4units respectively;
+WRIT1’s curated units remain unknown because the separate undated individual
+Writing Program guide still publishes4, with no explained version relationship.
+The new5-unit observation is guarded independently instead of erasing the conflict.
+Both descriptions concern academic rhetoric and writing. Current1E eligibility
+is freshmen in ECE, Chemical Engineering, Mechanical Engineering or Computer
+Engineering only; the AI major is not named. A broad course title or college GE
+listing does not independently establish an override. Both records’ AWPE<=6
+wording is preserved alongside the separately reviewed current university CWP
+and transfer-only AWPE policy, rather than imposed as a universal exam rule.
+No required/option/context role changes or course-identity merges were made.
