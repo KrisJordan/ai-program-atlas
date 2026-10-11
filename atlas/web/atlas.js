@@ -9,6 +9,7 @@
   const familyMap = new Map(families.map(f => [f.id, f]));
   const familyPanels = [...document.querySelectorAll('[data-family-id]')];
   let expanded = [];
+  let expansionSpecified = false;
   const institutionMap = new Map(institutions.map(i => [i.id, i]));
   const form = document.getElementById('filters');
   const controls = Object.fromEntries(keys.map(k => [k, form.elements.namedItem(k)]));
@@ -47,6 +48,7 @@
       if (key !== 'q' && ![...controls[key].options].some(o => o.value === value)) controls[key].value = '';
     });
     selected = [...new Set((params.get('compare') || '').split(','))].filter(id => byId.has(id)).slice(0, 4);
+    expansionSpecified = params.has('expand');
     expanded = [...new Set((params.get('expand') || '').split(','))].filter(id => familyMap.has(id));
     if (!params.has('expand') && controls.discipline.value) programs.filter(p => (p.family?.disciplines || []).includes(controls.discipline.value)).forEach(p => { if (!expanded.includes(p.family.id)) expanded.push(p.family.id); });
     if (!params.has('expand')) selected.forEach(id => { const family = byId.get(id)?.family?.id; if (family && !expanded.includes(family)) expanded.push(family); });
@@ -56,7 +58,7 @@
     const params = new URLSearchParams();
     keys.forEach(key => { if (controls[key].value) params.set(key, controls[key].value); });
     if (selected.length) params.set('compare', selected.join(','));
-    if (expanded.length) params.set('expand', expanded.join(','));
+    if (expanded.length || expansionSpecified) params.set('expand', expanded.join(','));
     const next = base + (params.size ? '?' + params.toString() : '') + location.hash;
     if (next !== location.pathname + location.search + location.hash) history.pushState(null, '', next);
     render();
@@ -179,6 +181,7 @@
   familyPanels.forEach(panel => panel.querySelector(':scope > summary').addEventListener('click', event => {
     event.preventDefault();
     const id = panel.dataset.familyId;
+    expansionSpecified = true;
     expanded = expanded.includes(id) ? expanded.filter(value => value !== id) : [...expanded, id];
     clearTimeout(timer);
     writeState();
@@ -189,7 +192,13 @@
   const reset = () => { clearTimeout(timer); keys.forEach(key => { controls[key].value = ''; }); writeState(); };
   document.getElementById('reset-filters').addEventListener('click', reset);
   document.getElementById('empty-reset').addEventListener('click', () => { reset(); controls.q.focus(); });
-  document.getElementById('clear-comparison').addEventListener('click', () => { selected = []; writeState(); announce('Comparison cleared.'); });
+  document.getElementById('clear-comparison').addEventListener('click', () => {
+    selected = [];
+    writeState();
+    announce('Comparison cleared.');
+    document.getElementById('compare-title').setAttribute('tabindex', '-1');
+    document.getElementById('compare-title').focus({preventScroll: true});
+  });
   document.querySelectorAll('[data-compare]').forEach(input => input.addEventListener('change', () => {
     const id = input.dataset.compare;
     if (input.checked && selected.length === 4) { input.checked = false; announce('Choose up to four programs. Remove a selection to add another.'); return; }

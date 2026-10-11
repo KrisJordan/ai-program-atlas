@@ -364,3 +364,43 @@ def test_statement_types_stay_separate_from_inferred_themes(page, site, width):
     expect(section.locator('.outcomes').nth(1).locator('.statement-type')).to_have_text('Documented inference')
     assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
     assert not errors
+
+
+@pytest.mark.parametrize('width', [1440, 390])
+def test_clear_comparison_keeps_keyboard_focus(page, site, width):
+    from playwright.sync_api import expect
+    page.set_viewport_size({'width': width, 'height': 900})
+    page.goto(site + '?compare=test-ai-0,test-ai-1')
+    page.locator('#clear-comparison').focus()
+    page.keyboard.press('Enter')
+    expect(page.locator('#compare-title')).to_be_focused()
+    expect(page.locator('#compare-title')).to_be_visible()
+    expect(page.locator('#clear-comparison')).to_be_hidden()
+    expect(page.locator('#comparison-content')).to_contain_text('Select “Compare”')
+    expect(page.locator('#compare-status')).to_have_text('Comparison cleared.')
+    assert 'compare=' not in page.url
+
+
+@pytest.mark.parametrize('width', [1440, 390])
+@pytest.mark.parametrize('query', ['compare=test-ai-0', 'discipline=Economics'])
+def test_explicit_family_collapse_survives_reload_and_history(page, site, tmp_path, site_data, width, query):
+    from playwright.sync_api import expect
+    build(family_fixture(site_data), tmp_path / 'ai-program-atlas')
+    page.set_viewport_size({'width': width, 'height': 900})
+    page.goto(site + '?' + query)
+    family = page.locator('[data-family-id="test-family"]')
+    # An absent expansion parameter still reveals the selected/filtered variant.
+    expect(family).to_have_attribute('open', '')
+    family.locator(':scope > summary').click()
+    expect(family).not_to_have_attribute('open', '')
+    assert page.evaluate("new URLSearchParams(location.search).has('expand')")
+    assert page.evaluate("new URLSearchParams(location.search).get('expand')") == ''
+    page.reload()
+    expect(family).not_to_have_attribute('open', '')
+    family.locator(':scope > summary').click()
+    expect(family).to_have_attribute('open', '')
+    page.go_back()
+    expect(family).not_to_have_attribute('open', '')
+    page.go_forward()
+    expect(family).to_have_attribute('open', '')
+    assert '/ai-program-atlas/?' in page.url
