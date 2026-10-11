@@ -3879,10 +3879,39 @@
           "restrictions": [],
           "approved_for_integration": true,
           "identity_note": "Exact literal source list identity retained, including bracketed/slash labels. No current-offering, student eligibility or cross-list identity claim."
+        },
+        {
+          "observed_code": "21T.248",
+          "observed_name": "Contemporary American Theater, CI-H",
+          "evidence_basis": "official_description",
+          "description_summary": "Examines contemporary American playwriting and theater institutions through earlier influential playwrights and current independent productions, analyzing how plays reflect and challenge ideas of America.",
+          "description_digest": "a9fd1c02211f15c9eeeb9339de63fec1b891b7a405f88c64a687d816fe126faa",
+          "observation_digest": "8b37ecf5913c6d0e248ccfc394aca9e93676d339529fc976fea47c84c1115b2e",
+          "source_id": "mit-ai-hass-review-theater-visible-spring-2025",
+          "source_url": "https://theater.mit.edu/program/class-schedule/",
+          "catalog_year": "Spring 2025",
+          "locator": "Visible semester selection / expanded 21T.248 course panel",
+          "prerequisites": "None",
+          "units_text": "3-0-9",
+          "credits": 12,
+          "credit_unit": "units",
+          "unit_rule_source_url": "https://catalog.mit.edu/subjects/",
+          "category": "human_context",
+          "status": "reviewed",
+          "rationale": "Actual description emphasizes interpretation of dramatic writing, institutional change and cultural ideas of America; it is not inferred performance technique or technical media instruction.",
+          "candidate_categories": [],
+          "restrictions": [
+            "The actual Spring2025expanded panel prints Prereq:None and3-0-9MITunits. These are dated source statements, not a current registration guarantee.",
+            "Enrollment is limited, but the visible source does not state a cap or specific eligibility selection.",
+            "The public selector keeps a shared URL; the defaultFall2026HTTPresponse does not reproduce this selected-term observation.",
+            "Original title is preserved; CI-H is the displayed communication-intensive designation, not part of an invented new subject identity."
+          ],
+          "approved_for_integration": true,
+          "identity_note": "Exact21T.248code and title reviewed. Matching titles under older21Mnumbers are not merged without explicit renumbering evidence."
         }
       ],
       "missingness": [
-        "Title-only review; description, prerequisites and credit amount remain unknown."
+        "Specific enrollment cap and selection criteria are not stated."
       ]
     },
     "mit-ai-hass-american-studies-21w-742j": {
@@ -38438,6 +38467,16 @@
       "body_sha256": "9e140c2a3dc5e1d92009853698ad619b4f9a0680d2893c80ce57057570b16c1a",
       "capture_method": "ordinary_browser_visible_selected_term_dom_transcript",
       "transport_note": "Public semester selector retains the same URL. Capture only the visibly selected semester and expanded course panels; ordinary default HTTP HTML must fail this dated observer rather than replay saved facts. No hidden API or guessed endpoint used."
+    },
+    "mit-ai-hass-review-theater-visible-spring-2025": {
+      "url": "https://theater.mit.edu/program/class-schedule/",
+      "title": "MIT Theater Spring2025 expanded Contemporary American Theater panel",
+      "catalog_year": "Spring 2025",
+      "parser": "theater_semester_capture",
+      "fetched_at": null,
+      "body_sha256": "b9d6b7c11da45c3c22ddf7a49a642407645b778ff2fa3037737c950da49b253c",
+      "capture_method": "ordinary_browser_visible_selected_term_dom_transcript",
+      "transport_note": "The public semester selector retains one URL. Capture the visible selected term and expanded panel; ordinary defaultHTTPHTML must reject rather than replay this historical observation. No hidden API or guessed endpoint accessed."
     }
   },
   "source_checks": [
@@ -39389,8 +39428,8 @@
     "pending": 58
   },
   "evidence_counts": {
-    "description_reviewed_records": 379,
-    "title_only_reviewed_records": 383,
+    "description_reviewed_records": 380,
+    "title_only_reviewed_records": 382,
     "code_only_unknown_records": 3
   },
   "scope_notes": [
@@ -40432,5 +40471,29 @@
     "capture_method": "ordinary_browser_visible_selected_term_dom_transcript",
     "code_only_followup": "Visible21M.223FolkMusic description was read, but original21M.223Jjoint-subject identity is not explicitly established, so code-only disposition remains. Fall2025PirateSongs is21M.299, not listed282; no cross-number substitution.",
     "remaining_action": "All five visible semester options inspected for remaining listed Music matches. Other independent current source branches remain open; no absence or full-audit claim."
+  },
+  "theater_visible_semester_review": {
+    "semesters_inspected": [
+      "Fall 2026",
+      "Spring 2026",
+      "Fall 2025",
+      "Spring 2025",
+      "Fall 2024"
+    ],
+    "source_ids": [
+      "mit-ai-hass-review-theater-visible-spring-2025"
+    ],
+    "upgraded_record_ids": [
+      "mit-ai-hass-american-studies-21t-248"
+    ],
+    "capture_method": "ordinary_browser_visible_selected_term_dom_transcript",
+    "identity_followups": [
+      "Current21T.201ActingwithCamera versus listed21M.624",
+      "Current21T.242AsianAmericanTheater versus listed21M.706",
+      "Current21T.241ChinaonStage versus listed21M.700",
+      "Current21T.130PerformanceMedia versus listed21M.840",
+      "Current21T.424TopicsinPerformanceStudies versus listed21M.846"
+    ],
+    "remaining_action": "All five visible lists inspected. One exact remaining21T.248description reviewed; no cross-number substitution inferred. Explicit renumbering/version evidence remains a separate open follow-up rather than an access barrier."
   }
 }

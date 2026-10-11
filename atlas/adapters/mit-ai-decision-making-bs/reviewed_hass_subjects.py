@@ -570,3 +570,24 @@ def observe_music_semester_capture(payload):
     if not rows:
         raise ValueError('Music visible course panels missing')
     return rows
+
+
+def observe_theater_semester_capture(payload):
+    """Actual selected Theater panels; reject default HTTP or invented code aliases."""
+    try:
+        capture=json.loads(payload)
+    except (ValueError,TypeError) as exc:
+        raise ValueError('Theater selected-term browser capture required') from exc
+    if not isinstance(capture,dict) or capture.get('capture_kind')!='public_theater_semester_dom' or not re.fullmatch(r'(Fall|Spring) \d{4}',capture.get('semester','')):
+        raise ValueError('Theater visible semester identity missing')
+    rows=[]
+    for course in capture.get('courses',[]):
+        paragraphs=course.get('paragraphs',[])
+        if not re.fullmatch(r'21T\.[0-9]{3}J?',course.get('code','')) or not course.get('name') or len(paragraphs)<2:
+            raise ValueError('Theater visible code/title/description missing')
+        metadata=re.fullmatch(r'Prereq: (.+?)\n(\d+-\d+-\d+) units\. HASS-A; CI-H',paragraphs[0])
+        if metadata is None or not all(isinstance(p,str) and clean(p) for p in paragraphs):
+            raise ValueError('Theater visible prerequisite/unit line changed')
+        rows.append(dict(code=course['code'],name=clean(course['name']),term=capture['semester'],description=clean(' '.join(paragraphs[1:])),units=metadata[2],source_unit_line=clean(paragraphs[0]),prerequisites=metadata[1],locator='Visible semester selection / expanded '+course['code']+' course panel'))
+    if not rows:raise ValueError('Theater visible course panels missing')
+    return rows

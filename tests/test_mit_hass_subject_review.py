@@ -215,7 +215,7 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']['description_reviewed_records']==379
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==380
     assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
         o=next(o for o in entry(code)['observations'] if o.get('evidence_basis')=='official_title_only')
@@ -1259,3 +1259,29 @@ def test_music_visible_snapshots_replay_and_require_matching_semester():
                 assert review.matched_review(course,{**o,'units':'3-0-6'},evidence['source_url'],MANIFEST) is None
                 seen+=1
     assert seen==5
+
+
+def test_theater_visible_semester_keeps_exact_identity_and_explicit_none():
+    report=MANIFEST['theater_visible_semester_review']
+    assert len(report['semesters_inspected'])==5 and len(report['upgraded_record_ids'])==1
+    e=entry('21T.248')['observations'][-1]
+    assert e['catalog_year']=='Spring 2025' and e['prerequisites']=='None'
+    assert e['credits']==12 and e['category']=='human_context'
+    assert len(report['identity_followups'])==5
+    for code in ['21M.624','21M.706','21M.700','21M.840','21M.846']:
+        assert not any(e['source_id'] in report['source_ids'] for e in entry(code)['observations'])
+    raw=json.dumps({'capture_kind':'public_theater_semester_dom','semester':'Spring 2025','courses':[{'code':'21T.248','name':'Contemporary American Theater, CI-H','paragraphs':['Prereq: None\n3-0-9 units. HASS-A; CI-H','Reads contemporary plays in cultural context.']}]})
+    assert review.observe_theater_semester_capture(raw)[0]['prerequisites']=='None'
+    for wrong in ['<html>default current response</html>',raw.replace('21T.248','21M.248'),raw.replace('Prereq: None','Prereq unknown')]:
+        with pytest.raises(ValueError):review.observe_theater_semester_capture(wrong)
+
+
+def test_theater_visible_actual_capture_replays_and_withdraws_changed_permission():
+    path=Path('/tmp/mit-hass-subjects/theater-spring-2025-visible.json')
+    if not path.exists():pytest.skip('Optional public Theater visible DOM transcript')
+    o=review.observe_theater_semester_capture(path.read_text())[0]
+    cid=MANIFEST['theater_visible_semester_review']['upgraded_record_ids'][0];row=MANIFEST['courses'][cid];e=row['observations'][-1]
+    course=dict(id=cid,code=row['listed_code'],name=row['listed_name'],source_id=row['listed_source_id'])
+    assert review.matched_review(course,o,e['source_url'],MANIFEST)==e
+    assert review.matched_review(course,{**o,'prerequisites':'Permission of instructor'},e['source_url'],MANIFEST) is None
+    assert review.matched_review(course,{**o,'term':'Fall 2026'},e['source_url'],MANIFEST) is None
