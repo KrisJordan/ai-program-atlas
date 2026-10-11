@@ -169,3 +169,9 @@ from atlas.adapters import ucsd_warren_disciplines as warren_disciplines
 SOURCES += tuple(warren_disciplines.URLS.values())
 SOURCE_PARSERS.update({url: (lambda html, key=key: warren_disciplines.parse(html, key))
                       for key, url in warren_disciplines.URLS.items()})
+
+from atlas.adapters import ucsd_warren_languages as warren_languages
+SOURCES += (warren_languages.CHIN_URL, warren_languages.JAPN_URL, warren_languages.CLX_URL)
+SOURCE_PARSERS.update({warren_languages.CHIN_URL: warren_languages.parse_chinese,
+                      warren_languages.JAPN_URL: warren_languages.parse_japanese,
+                      warren_languages.CLX_URL: warren_languages.parse_chicanx})
