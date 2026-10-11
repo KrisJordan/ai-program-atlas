@@ -194,3 +194,11 @@ for url, metadata_parser in hass_metadata.SOURCE_PARSERS.items():
 gir_advising = import_module('atlas.adapters.mit-ai-decision-making-bs.gir_advising')
 SOURCES.extend(gir_advising.SOURCE_PARSERS)
 SOURCE_PARSERS.update(gir_advising.SOURCE_PARSERS)
+
+architecture_remainder = import_module('atlas.adapters.mit-ai-decision-making-bs.architecture_remainder')
+for url, architecture_parser in architecture_remainder.SOURCE_PARSERS.items():
+    if url in SOURCE_PARSERS:
+        SOURCE_PARSERS[url] = architecture_remainder.with_reviews(SOURCE_PARSERS[url], url)
+    else:
+        SOURCES.append(url)
+        SOURCE_PARSERS[url] = architecture_parser

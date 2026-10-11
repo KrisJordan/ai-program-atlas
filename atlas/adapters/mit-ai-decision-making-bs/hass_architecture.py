@@ -42,7 +42,7 @@ def parse_pdf_text(key,text):
         name=tail[:annotation.start()]
         # Visually confirmed PDFKit ligature mapping in the ACT file, not a course-number repair.
         if key=='act':name=name.replace('Introduc/on','Introduction')
-        c=course(prefix,code,name,sid,url,credits=int(unit[1]),unit='units',category='human_context')
+        c=course(prefix,code,name,sid,url,credits=int(unit[1]),unit='units')
         if c['id'] in cs:raise ValueError('Duplicate architecture PDF course row')
         cs[c['id']]=c;groups[group].append(c['id'])
     if not all(groups.values()):raise ValueError('Architecture PDF option pool missing')
@@ -72,7 +72,7 @@ def parse_act(html):
         for br in p.find_all('br'):br.replace_with('__BR__')
         for text in p.get_text(' ',strip=True).split('__BR__'):
             match=re.fullmatch(r'(4\.[A-Z0-9]+) — (.+)',clean(text))
-            if match:cs.append(course(prefix,match[1],match[2],sid,ACT,unit='units',category='human_context'))
+            if match:cs.append(course(prefix,match[1],match[2],sid,ACT,unit='units'))
     if not cs:raise ValueError('ACT webpage Group A pool missing')
     return dict(id=PID,courses=cs,requirements=[optional(prefix,'Art, Culture and Technology — webpage reference',sid),rule(prefix+'-a','Three Group A subjects in this webpage version',sid,[c['id'] for c in cs],parent=prefix,kind='choose_courses',count=3),rule(prefix+'-b','One History of Art subject: unresolved linked reference',sid,parent=prefix,kind='choose_courses',count=1,summary='This page points to Group A’s History of Art section at a legacy URL that returned 404. The separately linked ACT PDF supplies a specific six-subject Group 2 pool. The observed wording is not silently replaced with that PDF or the different History of Art subgroup in the current HTC PDF. Advisor/source-precedence clarification is needed. These source versions are not cumulative.')])
 
