@@ -473,6 +473,92 @@
         "Full elective identity, classification and college-policy second pass remains unfinished."
       ],
       "result": "Source-backed fixed aggregate and choice correction independently verified; full-degree second pass partial."
+    },
+    {
+      "program_id": "rice-university-artificial-intelligence-bs-degree",
+      "institution_id": "rice-university",
+      "reviewed_commit": "07e6ffc",
+      "primary_audit": "research/degree-audit/rice.json",
+      "second_pass_status": "partial",
+      "full_degree_verified": false,
+      "verified_scope": "All 13 fixed identities and their description-based subject categories, plus specified catalog conflicts; not all elective or university policies.",
+      "sources": [
+        {
+          "url": "https://ga.rice.edu/programs-study/departments-programs/engineering/artificial-intelligence/artificial-intelligence-bs/",
+          "catalog_year": "2026-2027",
+          "locator": "Major table",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched using robots-aware transport"
+        },
+        {
+          "url": "https://ga.rice.edu/programs-study/courses/comp/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact course descriptions and enrollment restrictions",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched using robots-aware transport"
+        },
+        {
+          "url": "https://ga.rice.edu/programs-study/courses/psyc/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact course descriptions and enrollment restrictions",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched using robots-aware transport"
+        },
+        {
+          "url": "https://ga.rice.edu/programs-study/courses/phil/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact course descriptions and enrollment restrictions",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched using robots-aware transport"
+        }
+      ],
+      "expected_course_ids": {
+        "required": [
+          "rice-ai-comp-140",
+          "rice-ai-comp-182",
+          "rice-ai-comp-215",
+          "rice-ai-comp-222",
+          "rice-ai-comp-282",
+          "rice-ai-comp-329",
+          "rice-ai-comp-345",
+          "rice-ai-comp-346",
+          "rice-ai-comp-348",
+          "rice-ai-comp-456",
+          "rice-ai-comp-457",
+          "rice-ai-phil-108",
+          "rice-ai-psyc-203"
+        ],
+        "options": null,
+        "unresolved": null
+      },
+      "expected_profile": {
+        "required": {
+          "count": 13,
+          "categories": {
+            "foundations": 3,
+            "mathematics": 1,
+            "systems": 2,
+            "ai_ml": 5,
+            "human_context": 1,
+            "applications": 1
+          }
+        },
+        "options": null,
+        "unresolved": null
+      },
+      "findings": [
+        "The degree table fixes 11 COMP identities plus PHIL 108 and PSYC 203. AP calculus alternatives, linear algebra and the statistics bundles are choices, not extra fixed courses.",
+        "COMP 140/182/215 teach programming and algorithmic methods; COMP 222/329 teach computer and AI infrastructure; COMP 282 centers mathematical optimization. AI degree/pool association alone does not determine subject.",
+        "COMP 456/457 center intelligent-system design with supporting communication and must run sequentially in one academic year. PHIL 108 concerns ethical/social issues and PSYC 203 cognitive psychology; the latter is domain knowledge, not an asserted AI application.",
+        "The elective rule requires three distinct areas out of five and one course in each chosen area; all listed options are not mandatory."
+      ],
+      "remaining": [
+        "COMP 345 and listed elective COMP 447 have reciprocal credit/registration exclusions.",
+        "Required COMP 345/346 name STAT 315 while degree statistics alternatives include STAT 310/311 with STAT 314. No equivalence or waiver inferred.",
+        "Listed COMP 585/631 restrict enrollment to graduate students; undergraduate permission unresolved.",
+        "Remaining elective descriptions and university policies have not received this independent second pass."
+      ],
+      "result": "Fixed identity/category aggregate and catalog conflicts independently verified; full-degree second pass remains partial."
     }
   ],
   "cross_program_screen": [
@@ -978,7 +1064,7 @@
     {
       "program_id": "rice-university-artificial-intelligence-bs-degree",
       "issue": "Live fixed13 foundations0 other10 warrants direct description review, not a missing-foundations conclusion.",
-      "status": "routed to coordinator"
+      "status": "Corrected in 07e6ffc; all 13 fixed descriptions independently verified here. Full degree retains explicit source conflicts and unfinished audit scope."
     },
     {
       "program_id": "penn-bse-ai",

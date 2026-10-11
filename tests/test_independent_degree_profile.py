@@ -132,3 +132,23 @@ def test_northeastern_source_reviewed_subjects_survive_family_resolution():
             assert c['category_review']['source_ids']
             role=requirement_profile(only_course(p,c['id']))
             assert sum(role[k]['count'] for k in ['required','options','unresolved'])==1
+
+
+def test_rice_manual_fixed_subjects_preserve_infrastructure_and_domain_distinctions():
+    ledger=json.loads((ROOT/'research/degree-audit/independent-review.json').read_text())
+    entry=next(e for e in ledger['programs'] if e['institution_id']=='rice-university')
+    p=load(entry['program_id']);profile=requirement_profile(p)
+    assert profile['required']['count']==13
+    expected=entry['expected_profile']['required']['categories']
+    assert profile['required']['categories']=={k:expected.get(k,0) for k in profile['required']['categories']}
+    assert profile['required']['classification']==dict(reviewed=13,mixed=0,unclassified=0,unreviewed=0)
+    for cid in entry['expected_course_ids']['required']:
+        assert requirement_profile(only_course(p,cid))['required']['count']==1
+    courses={c['code']:c for c in p['courses']}
+    assert courses['COMP 329']['category']=='systems'
+    assert courses['COMP 282']['category']=='mathematics'
+    assert courses['PSYC 203']['category']=='applications'
+    for code in ['COMP 447','COMP 585','COMP 631']:
+        assert requirement_profile(only_course(p,courses[code]['id']))['required']['count']==0
+    timing=[r for r in p['requirements'] if 'same academic year' in (r.get('summary') or '')]
+    assert len(timing)==1 and timing[0]['kind']=='note' and not timing[0]['course_ids']
