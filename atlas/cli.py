@@ -133,10 +133,10 @@ def main(argv=None):
             if not row:
                 raise ValueError("Unknown candidate ID")
             observed = json.loads(row["payload_json"])
-            current = json.loads(
+            current = db.program_record(
                 conn.execute(
-                    "SELECT record_json FROM programs WHERE id=?", (row["program_id"],)
-                ).fetchone()[0]
+                    "SELECT record_zlib,content_hash FROM programs WHERE id=?", (row["program_id"],)
+                ).fetchone()
             )
             current = db.resolve_stored_program(conn, current)
             before = json.dumps(
@@ -161,8 +161,8 @@ def main(argv=None):
         elif args.command == "check":
             problems = conn.execute("PRAGMA foreign_key_check").fetchall()
             result = conn.execute("PRAGMA integrity_check").fetchone()[0]
-            for row in conn.execute("SELECT record_json FROM programs"):
-                program = json.loads(row[0])
+            for row in conn.execute("SELECT record_zlib,content_hash FROM programs"):
+                program = db.program_record(row)
                 from .family_store import load_family
 
                 family = (

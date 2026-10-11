@@ -41,7 +41,7 @@ def test_migration_preserves_payload_metadata_and_is_repeatable(tmp_path):
     assert zlib.decompress(row['record_zlib']).decode() == payload
     assert len(row['record_zlib']) < len(payload.encode())
     assert db.revision_record(row) == record
-    assert conn.execute('SELECT record_json FROM programs').fetchone()[0] == before
+    assert db.canonical(db.program_record(conn.execute('SELECT record_zlib,content_hash FROM programs').fetchone())) == before
     db.migrate(conn)
     assert conn.execute('SELECT count(*) FROM program_revisions').fetchone()[0] == 1
     assert conn.execute('PRAGMA integrity_check').fetchone()[0] == 'ok'

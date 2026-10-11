@@ -64,16 +64,25 @@ def _compress_revision(text: str, content_hash: str) -> bytes:
     raw = text.encode("utf-8")
     json.loads(text)
     if hashlib.sha256(raw).hexdigest() != content_hash:
-        raise ValueError("Revision content hash mismatch")
+        raise ValueError("Canonical content hash mismatch")
     return zlib.compress(raw, level=9)
+
+
+def _decode_record(row, label) -> dict:
+    raw = zlib.decompress(row["record_zlib"])
+    if hashlib.sha256(raw).hexdigest() != row["content_hash"]:
+        raise ValueError(label + " content hash mismatch")
+    return json.loads(raw)
 
 
 def revision_record(row) -> dict:
     """Decode a revision row and verify its original canonical-content hash."""
-    raw = zlib.decompress(row["record_zlib"])
-    if hashlib.sha256(raw).hexdigest() != row["content_hash"]:
-        raise ValueError("Revision content hash mismatch")
-    return json.loads(raw)
+    return _decode_record(row, "Revision")
+
+
+def program_record(row) -> dict:
+    """Decode the current canonical snapshot; relational facts remain queryable."""
+    return _decode_record(row, "Program")
 
 
 def connect(path: str | Path) -> sqlite3.Connection:
@@ -87,7 +96,7 @@ def connect(path: str | Path) -> sqlite3.Connection:
 
 
 def migrate(conn: sqlite3.Connection) -> None:
-    # Used only by the transactional history-storage migration. The resulting
+    # Used only by the transactional canonical-snapshot storage migrations. The resulting
     # database needs no SQLite extension or custom function for ordinary reads.
     conn.create_function("atlas_compress_revision", 2, _compress_revision)
     conn.execute(
@@ -278,7 +287,7 @@ def ingest_program(conn, program, run_id=None):
             program.get("curriculum_status", "pending"),
             program["last_verified"],
             fingerprint,
-            canonical(program),
+            _compress_revision(canonical(program), fingerprint),
         )
         conn.execute(
             """INSERT INTO programs VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT(id) DO UPDATE SET
@@ -286,7 +295,7 @@ def ingest_program(conn, program, run_id=None):
             award_level=excluded.award_level,program_kind=excluded.program_kind,status=excluded.status,
             first_offered_json=excluded.first_offered_json,overview=excluded.overview,catalog_year=excluded.catalog_year,
             verification_status=excluded.verification_status,curriculum_status=excluded.curriculum_status,
-            last_verified=excluded.last_verified,content_hash=excluded.content_hash,record_json=excluded.record_json""",
+            last_verified=excluded.last_verified,content_hash=excluded.content_hash,record_zlib=excluded.record_zlib""",
             values,
         )
         # Optional award mappings must release source FKs before replacing sources.
@@ -524,10 +533,10 @@ def set_override(conn, program_id, field, value, reason, evidence_url):
         )
     if not reason.strip() or urlparse(evidence_url).scheme not in {"http", "https"}:
         raise ValueError("Overrides require a reason and HTTP(S) evidence link")
-    row = conn.execute("SELECT record_json FROM programs WHERE id=?", (program_id,)).fetchone()
+    row = conn.execute("SELECT record_zlib,content_hash FROM programs WHERE id=?", (program_id,)).fetchone()
     if not row:
         raise ValueError("Unknown program")
-    candidate = json.loads(row[0])
+    candidate = program_record(row)
     candidate[field] = value
     from .family_store import load_family
 
@@ -595,7 +604,7 @@ def export_data(conn):
     )
     programs = []
     for row in conn.execute("SELECT * FROM programs ORDER BY id"):
-        record = resolve_stored_program(conn, json.loads(row["record_json"]))
+        record = resolve_stored_program(conn, program_record(row))
         overrides = []
         for override in conn.execute(
             "SELECT * FROM manual_overrides WHERE program_id=? ORDER BY field", (row["id"],)

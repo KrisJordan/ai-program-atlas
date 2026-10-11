@@ -13,3 +13,12 @@ Before/after canonical exports matched exactly (SHA-256 `1f2df61563f4b3235c8404e
 106 focused storage, revision-history, family and core tests passed. New tests cover graph and export preservation, idempotence, Unicode/null values, primary/foreign/check constraints, child-link cascade behavior, migration failure rollback and compaction with history/overrides. Existing family checks cover inherited requirements independently of local row layout.
 
 `uv run atlas compact` runs SQLite `VACUUM` to reclaim unused pages after migration/import churn; it does not remove current facts, revisions, candidates or source observations. Table rebuilding temporarily allocates new pages before old pages become reusable, so migration itself is not a promise of immediate file-size reduction. The maintained file is compacted and checked before the next publication commit. Existing Git history is preserved.
+
+
+## Current canonical snapshots — migration 014
+
+The published database had grown to 89,964,544 bytes as course-description audits expanded. Current canonical JSON duplicated approximately 31 MB of relationally stored facts. Migration 014 compresses that snapshot losslessly while keeping the existing program parent table, IDs, hashes, relational child tables, manual overrides and complete revision history. The migration verifies every original canonical hash before dropping the duplicate text column. A corrupt hash rolls back the whole migration. Ordinary relational reads need no SQLite extension; Python's standard-library zlib decodes current snapshots through `atlas.db.program_record`.
+
+A copy of the exact 531073fe maintained database was migrated and compacted: **61,747,200 bytes**, down from 89,964,544. Its complete canonical public export was byte-identical, and ordered-row hashes for all 45 other nonmigration/nonprogram tables were unchanged. All 168 program snapshots decoded and matched original hashes. Integrity and foreign-key checks passed. This experiment did not overwrite the maintained publication database; that migration is applied at the next frozen integration.
+
+The new regression tests preserve original UTF-8 canonical bytes, child rows, overrides and revision payloads; test repeated migration, hash-corruption rollback and fail-closed decode; and exercise existing family composition, overrides and source-review workflows. No source evidence or research history is deleted to save space.

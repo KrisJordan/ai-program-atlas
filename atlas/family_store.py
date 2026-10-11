@@ -22,9 +22,9 @@ def ingest_family(conn, family, program_updates=None):
     if any(pid != program.get("id") for pid, program in updates.items()):
         raise ValueError("Program update mapping key must match record id")
     dependents = {
-        r["program_id"]: json.loads(r["record_json"])
+        r["program_id"]: db.program_record(r)
         for r in conn.execute(
-            "SELECT m.program_id,p.record_json FROM program_family_memberships m JOIN programs p ON p.id=m.program_id WHERE m.family_id=?",
+            "SELECT m.program_id,p.record_zlib,p.content_hash FROM program_family_memberships m JOIN programs p ON p.id=m.program_id WHERE m.family_id=?",
             (family["id"],),
         )
     }

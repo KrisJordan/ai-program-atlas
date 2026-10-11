@@ -303,8 +303,8 @@ def test_family_database_stores_shared_facts_once_and_exports_concrete_variants(
     assert conn.execute('SELECT count(*) FROM requirement_groups').fetchone()[0]==2
     assert conn.execute('SELECT count(*) FROM family_requirement_bindings').fetchone()[0]==2
     assert conn.execute('PRAGMA foreign_key_check').fetchall()==[]
-    for row in conn.execute('SELECT record_json FROM programs'):
-        raw=json.loads(row[0]);assert len(raw['requirements'])==1
+    for row in conn.execute('SELECT record_zlib,content_hash FROM programs'):
+        raw=db.program_record(row);assert len(raw['requirements'])==1
         assert all(n['id'].endswith('-domain') for n in raw['requirements'])
     data=db.export_data(conn)
     assert len(data['families'])==1 and len(data['programs'])==2
@@ -431,7 +431,7 @@ def test_ingest_all_existing_family_and_variants_roll_back_on_later_failure(fami
     from atlas.family_store import load_family
     conn,family=family_database;variant=synthetic_variant();db.ingest_program(conn,variant)
     family_before=load_family(conn,family['id'])
-    raw_before=conn.execute('SELECT record_json FROM programs WHERE id=?',(variant['id'],)).fetchone()[0]
+    raw_before=conn.execute('SELECT record_zlib FROM programs WHERE id=?',(variant['id'],)).fetchone()[0]
     data=tmp_path/'existing-input';(data/'families').mkdir(parents=True);(data/'programs').mkdir()
     changed=deepcopy(family);changed['name']='A new reviewed family label'
     (data/'families'/'family.json').write_text(json.dumps(changed))
@@ -441,7 +441,7 @@ def test_ingest_all_existing_family_and_variants_roll_back_on_later_failure(fami
     (data/'programs'/'z-invalid.json').write_text(json.dumps(bad))
     with pytest.raises(ValueError,match='Unknown source missing-source'):ingest_all(conn,data)
     assert load_family(conn,family['id'])==family_before
-    assert conn.execute('SELECT record_json FROM programs WHERE id=?',(variant['id'],)).fetchone()[0]==raw_before
+    assert conn.execute('SELECT record_zlib FROM programs WHERE id=?',(variant['id'],)).fetchone()[0]==raw_before
     assert conn.execute('SELECT count(*) FROM family_revisions').fetchone()[0]==1
     assert conn.execute('SELECT count(*) FROM program_revisions').fetchone()[0]==1
 
@@ -523,7 +523,7 @@ def test_family_schema_upgrade_preserves_existing_requirement_rows(tmp_path):
     db.migrate(conn)
     assert [tuple(row) for row in conn.execute('SELECT * FROM requirement_groups')]==before
     assert [tuple(row) for row in conn.execute('SELECT * FROM requirement_courses')]==membership
-    assert conn.execute('SELECT record_json FROM programs').fetchone()[0]==db.canonical(program)
+    assert db.program_record(conn.execute('SELECT record_zlib,content_hash FROM programs').fetchone())==program
     assert conn.execute('PRAGMA foreign_key_check').fetchall()==[]
     conn.close()
 
