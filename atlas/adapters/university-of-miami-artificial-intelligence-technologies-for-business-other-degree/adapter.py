@@ -13,3 +13,6 @@ register(PROGRAM_ID,SOURCES,SOURCE_PARSERS,minor=False,business=True)
 
 from atlas.adapters.miami_supplemental_policies import register as register_supplement
 register_supplement(PROGRAM_ID,SOURCES,SOURCE_PARSERS,arts=False)
+
+from atlas.adapters.miami_cognate_pools import register as register_cognate_pools
+register_cognate_pools(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
