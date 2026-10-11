@@ -132,3 +132,10 @@ SOURCE_PARSERS.update({url: (lambda html, key=key: warren.parse_table(html, key)
 from atlas.adapters import ucsd_marshall_pools as marshall
 SOURCES += (marshall.FIRST_URL, marshall.TRANSFER_URL, marshall.WRITING_URL, marshall.SELECTOR_URL)
 SOURCE_PARSERS.update({marshall.FIRST_URL: marshall.parse_first, marshall.TRANSFER_URL: marshall.parse_transfer})
+
+from atlas.adapters import ucsd_sixth_pools as sixth
+SOURCES += (sixth.PDF_URL, sixth.TRANSFER_URL, sixth.ELR_URL, sixth.PROPOSAL_URL, sixth.CAT90_URL, sixth.CAT125_URL) + tuple(sixth.TRACK_BASE + k + '.html' for k in sixth.TRACKS)
+SOURCE_PARSERS.update({sixth.TRANSFER_URL: sixth.parse_transfer, sixth.ELR_URL: sixth.parse_elr_table,
+                      sixth.PROPOSAL_URL: sixth.parse_proposal, sixth.CAT90_URL: sixth.parse_cat90,
+                      sixth.CAT125_URL: sixth.parse_cat125})
+SOURCE_PARSERS.update({sixth.TRACK_BASE + key + '.html': (lambda html, key=key: sixth.parse_track(html, key)) for key in sixth.TRACKS})
