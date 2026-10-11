@@ -62,7 +62,9 @@ def test_full_current_graph_matches_independent_source_role_enumeration():
  for key in expected:
   assert profile[key]['count']==a['expected_profile'][key]['count']
   assert {k:v for k,v in profile[key]['categories'].items()if v}==a['expected_profile'][key]['categories']
- assert a['status']=='in_progress'
+ assert a['status']=='blocked'
+ assert a['blockers'] and a['bounded_source_queue_review']['full_audit_certified'] is False
+ assert a['bounded_source_queue_review']['identified_unrestricted_unread_exact_pages']==0
 
 
 def test_hass_identity_groups_require_actual_same_subject_clause():

@@ -5,7 +5,7 @@
     {
       "program_id": "mit-ai-decision-making-bs",
       "institution_id": "massachusetts-institute-of-technology",
-      "status": "in_progress",
+      "status": "blocked",
       "sources": [
         {
           "url": "https://catalog.mit.edu/degree-charts/artifical-intelligence-decision-making-course-6-4/",
@@ -2134,17 +2134,52 @@
           "locator": "Actual identified course content and printed metadata; dated scope retained",
           "checked_at": "2026-10-11",
           "access_status": "read; normal robots-aware public Fetcher"
+        },
+        {
+          "url": "http://mitgsl.mit.edu/robots.txt",
+          "catalog_year": null,
+          "locator": "Published robots policy or redirect only; no target course access inferred",
+          "checked_at": "2026-10-11",
+          "access_status": "302; Redirect target is a homepage, not a robots policy document. No target course content requested after this unresolved cross-origin preflight. This is not a publisher denial."
+        },
+        {
+          "url": "https://mitgsl.mit.edu/robots.txt",
+          "catalog_year": null,
+          "locator": "Published robots policy or redirect only; no target course access inferred",
+          "checked_at": "2026-10-11",
+          "access_status": "302; Same homepage redirect; a readable policy on the canonical Languages origin does not silently supply policy for the legacy host."
+        },
+        {
+          "url": "https://languages.mit.edu/robots.txt",
+          "catalog_year": null,
+          "locator": "Published robots policy or redirect only; no target course access inferred",
+          "checked_at": "2026-10-11T09:32:23+00:00",
+          "access_status": "200; Canonical policy read normally: general disallow wp-admin, administrative AJAX allow, crawl-delay 30. Current canonical departmental source branches were already reviewed."
+        },
+        {
+          "url": "http://cmsw.mit.edu/robots.txt",
+          "catalog_year": null,
+          "locator": "Published robots policy or redirect only; no target course access inferred",
+          "checked_at": "2026-10-11",
+          "access_status": "301; Same-host HTTPS upgrade, not itself denial. Canonical policy checked separately."
+        },
+        {
+          "url": "https://cmsw.mit.edu/robots.txt",
+          "catalog_year": null,
+          "locator": "Published robots policy or redirect only; no target course access inferred",
+          "checked_at": "2026-10-11",
+          "access_status": "unresolved_transport_and_browser_boundary; Normal approved-network Fetcher returned ConnectError. Ordinary Chrome navigation returned net::ERR_BLOCKED_BY_CLIENT. No certificate bypass, target request or policy assumption. Previously readable CMS sources remain valid under their separately recorded captures."
         }
       ],
       "checks": {
         "degree_identity": "BS Artificial Intelligence and Decision Making,Course6-4. Department explicitly requires6-4_2025 for Fall2025+ entrants, with lists labeled Fall2026. Future special-offering tags are preserved, not treated as a date contradiction. Unversioned catalog chart remains a distinct reference, not an additive degree view.",
         "required_and_choices": "Actual6-4_2025 required section makes6.1010,6.1200 and6.1210 fixed. Other math/programming/center/designation/pool selections supply255 mapped option identities; six GIR science choices add20 option identities. Independently enumerated current graph therefore has3fixed,275options and904contextual identities. The latter derive from63unversioned chart/reference plus845HASS records, with four duplicateHASSaliases removed by explicitgroups: explicit field eligibility is conditional and several source-version conflicts remain. No blanket HASS promotion, additive option quantity or equivalence across versions is inferred.",
-        "elective_pools": "Versioned lists and39 HASS field inventories were previously mapped; subject and applicability second pass remains ongoing. Existing source questions are preserved. A public C22 topic is offered under21M.389/589, but its year and applicability to every generic offering are not stated; preserve as contextual evidence rather than substituting a topic into the degree pool.",
-        "prerequisites": "All248 annotated versioned prerequisite/corequisite fields were read. Same-semester lecture/module credit, cohort-limited subjects, conditional instructor permission and recommended preparation remain distinct from universal required courses. GIR review preserves split calculus registration/retake/term credit, first-year mathematics graduate restrictions, formal chemistry None versus intended preparation, biology lottery limits and physics placement/repeat/prerequisite-credit rules. All20 GIR rows have bounded dispositions; missing formal prerequisites remain null. The484 description-supported HASS occurrences preserve graduate-only conditions, auditions, repeat limits and half-term language accounting. Limited-title HASS and the remaining unmatched6.9030 reference description/prerequisites remain under separate source review; unknown fields are not no-prerequisite claims. The clinic exam is an in-course field-assignment condition, not a prior subject prerequisite. The61 matched original references retain explicitly dated annotation prerequisites/corequisites and permission clauses; none becomes a fixed degree obligation. The catalog-wide prior-Physics-I-credit rule now appears explicitly on otherwise-undescribed8.021 and8.022 records; additional prerequisites remain unknown.",
+        "elective_pools": "Versioned lists and 39 HASS field inventories have bounded primary dispositions. All identified accessible exact source branches in the finite HASS queue were reviewed; 52 Architecture remnants reconcile to the existing individual title reviews. Field applicability and source-version questions remain explicit. The public C22 topic under 21M.389/589 has no stated year or universal generic-offering applicability, so remains contextual.",
+        "prerequisites": "All248 annotated versioned prerequisite/corequisite fields were read. Same-semester lecture/module credit, cohort-limited subjects, conditional instructor permission and recommended preparation remain distinct from universal required courses. GIR review preserves split calculus registration/retake/term credit, first-year mathematics graduate restrictions, formal chemistry None versus intended preparation, biology lottery limits and physics placement/repeat/prerequisite-credit rules. All20 GIR rows have bounded dispositions; missing formal prerequisites remain null. The484 description-supported HASS occurrences preserve graduate-only conditions, auditions, repeat limits and half-term language accounting. Limited-title HASS and the remaining unmatched6.9030 reference description/prerequisites have individually documented missing-evidence dispositions after bounded source review; unknown fields are not no-prerequisite claims. The clinic exam is an in-course field-assignment condition, not a prior subject prerequisite. The61 matched original references retain explicitly dated annotation prerequisites/corequisites and permission clauses; none becomes a fixed degree obligation. The catalog-wide prior-Physics-I-credit rule now appears explicitly on otherwise-undescribed8.021 and8.022 records; additional prerequisites remain unknown.",
         "credits_and_units": "The current catalog Subjects notation explicitly defines total credit as the sum of the three numeric unit components. All 248 annotated versioned rows now have observed MIT-unit totals; 13 absent annotations remain null. Generic special-topic zero values are literal printed observations, not proof of current topic/offering. The 6.4300 chart/CI-M conflict remains separate. No conversion to semester hours. The dated6.C35 annotation keeps15units, but its unversioned reference is now null because the Common Ground detail reports12 with no year or published precedence. The C57/C571 index mislink to a C06 page is a navigation defect, not a curricular contradiction.",
         "classification": "All1189 source occurrences have bounded manual dispositions:261versioned,63unversioned reference,20GIR and845HASS. HASS845 comprises484 description-supported occurrences,358 limited title-only judgments and three code-only unknowns. The22 newly disposed held records comprise14precise human-context titles and eight unknown titles; all20identity/version holds and two source-description conflicts persist. This is not a full description or identity audit. Every mixed/unclassified record remains other. The63 original chart/CI-M references now include61 exact-code/title dated annotation content reviews, one independently dated Spring2024course-site content review, and one brief official instructor content identification. These remain distinct unversioned contextual occurrences; no classification is inferred merely from duplicate code.",
         "family_composition": "No family inheritance. Two reciprocal within-version EECS cross-list groups map five records to two identities. Two additional explicit CMS same-subject panels map six HASS source records to two identities:CMS524/STS024(Spring2026),CMS406/21A505/STS065(Fall2026). Their original list titles and joint labels match exactly; meets-with, historical, merely equivalent and differently titled versions are excluded.1189source records now map to1182identities; remaining aliases are not assumed resolved.",
-        "degree_wide_requirements": "Institute completion, residence, units beyond GIRs, grades, communication, HASS, science, laboratory, REST, PE/swimming, substitutions and transfer/exam policies are represented. The current graph has an independently enumerated full source-role baseline; optional field-plan inventories remain contextual while eligibility/version questions are unresolved. Known HASS transfer prohibition and final-review procedure are compatible. Current2026 entrance-credit policy is explicitly cohort-qualified; historical entrants remain a separate source scope. Five existing curriculum-source questions and actual-description backlog keep the full audit in progress."
+        "degree_wide_requirements": "Institute completion, residence, units beyond GIRs, grades, communication, HASS, science, laboratory, REST, PE/swimming, substitutions and transfer/exam policies are represented. The current graph has an independently enumerated full source-role baseline; optional field-plan inventories remain contextual while eligibility/version questions are unresolved. Known HASS transfer prohibition and final-review procedure are compatible. Current2026 entrance-credit policy is explicitly cohort-qualified; historical entrants remain a separate source scope. Specific curriculum, cohort, identity and metadata source questions keep the full audit blocked after bounded accessible-source closure; no current identified unrestricted unread exact teaching page remains. See mit-hass-bounded-closure.json for every remaining HASS occurrence, rather than treating a title-only judgment as a description review."
       },
       "expected_profile": {
         "required": {
@@ -3478,16 +3513,21 @@
           "issue": "14.27 prerequisite scopes disagree: the Economics concentration list prints14.30or6.041; the unversioned EECS6-P14annotation prints14.01and(6.3700or14.30). Both descriptions are individually observed, but no publication-date or numbering precedence resolves applicability. Preserve attributed statements with normalized prerequisite unknown; this metadata question does not invent a degree-inventory conflict.",
           "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-P14",
           "kind": "metadata_source_question"
+        },
+        {
+          "issue": "The finite 361-record HASS remainder has individual source dispositions: exact reviewed-source description gaps, existing identity/version conflicts and legacy teaching-link boundaries or nonmatches. Architecture 52 is reconciled, not delegated pending. Missing descriptions are not inferred from title or broad department membership; metadata and current eligibility remain unknown.",
+          "url": "https://web.mit.edu/is/courseweb/courses.html",
+          "kind": "bounded_individual_metadata_and_identity_questions",
+          "evidence_ledger": "research/degree-audit/mit-hass-bounded-closure.json"
         }
       ],
       "remaining_work": [
-        "Continue accessible actual-description research beyond358 limited HASS title judgments and three code-only unknowns. Twenty identity/version holds and two source conflicts remain explicit; no incompatible description/credit/prerequisite or alias inference was adopted.",
-        "Originalreference6.9030 has a brief instructor identification as photography, but its linked detailed course page returnsHTTP404. The department annotation remains untitled and is not enriched from the separate reference.6.8301 has datedSpring2024course-site content linked by the instructor. Continue full degree/source-role applicability review;8.021 remains absent from accessible descriptions.",
-        "Resolve or precisely retain existing curriculum-source questions, missing/generic annotations and enrollment-cap discrepancy; no full-degree audit certification yet.",
-        "For13 missing versioned annotations,12 have explicit historical numbering context; eight have explicitly stated future-number questions.21M.589 is absent from that table but has a separate permitted C22 topic page: no year or universal applicability is stated. Find exact current code/term content only through permitted public sources; do not reuse historical title as current description.",
-        "C57/C571 public Common Ground index links /optimization/, whose actual heading/codes are C06LinearAlgebraandOptimization/6.C06+18.C06. Do not reuse that mismatched detail for6.7200/7201; existing EECS6.C571 explicitly states former6.7201 and remains a separate occurrence."
+        "Institutional or newly published exact evidence is needed for the curriculum/cohort/identity questions listed in blockers. The bounded accessible primary source queue is closed; no full-degree audit is certified.",
+        "For every one of the 361 remaining HASS occurrences, mit-hass-bounded-closure.json records the exact identity, reviewed source IDs and source-specific missingness or boundary. These are 323 reviewed-source description gaps (including 52 Architecture), 22 identity/version questions and 16 legacy-source boundary/nonmatch records. Generic CV/publication discovery is not an unbounded pending queue.",
+        "The 13 missing versioned annotations, 8.021, 6.9030, future 6.Sxxx numbering questions and enrollment/credit/preparation discrepancies retain their exact documented evidence limits. Reopen only when a specifically relevant permitted source or institutional clarification becomes available.",
+        "C57/C571 index navigation points to the mismatched C06 page. Existing exact EECS observations remain valid; do not transfer C06 content or invent a curricular conflict from the navigation defect."
       ],
-      "correction_status": "All1189source occurrences have boundedmanualdispositions. Four reviewedcross-listgroups yield1182mappedidentities:3fixed,275options,904contextual. Fullprimaryaudit remainsin_progress; actual-description and policy/identitysource questions remain.",
+      "correction_status": "All 1189 source occurrences have bounded manual dispositions. Four reviewed cross-list groups yield 1182 mapped identities: 3 fixed, 275 options and 904 contextual. The finite identified accessible source queue is closed; full primary audit is blocked by individually recorded evidence questions, not lack of time or an unassigned description backlog.",
       "second_pass_status": "pending",
       "reviewed_course_ids": [
         "mit-ai-6-1000",
@@ -4983,9 +5023,16 @@
       "public_resource_review": {
         "reviewed_at": "2026-10-11",
         "cleared_generic_link_count": 818,
-        "retained_course_site_count": 215,
-        "retained_syllabus_count": 191,
+        "retained_course_site_count": 219,
+        "retained_syllabus_count": 195,
         "notes": "Public-site fields require actual course teaching or syllabus pages. Cleared catalog/concentration/department listing links remain in course URL, registered sources and review provenance. This metadata correction changes no category, credits, prerequisites or requirement membership."
+      },
+      "bounded_source_queue_review": {
+        "reviewed_at": "2026-10-11",
+        "path": "research/degree-audit/mit-hass-bounded-closure.json",
+        "sha256": "d0a8674d510ad5fbe360259c94e58245c15d155811ce46d43d15ab27db5f1712",
+        "identified_unrestricted_unread_exact_pages": 0,
+        "full_audit_certified": false
       }
     }
   ]
