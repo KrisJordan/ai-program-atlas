@@ -27,7 +27,7 @@ def test_published_restrictions_preserved_with_documented_request_route(a):
    assert 'Master of Supply Chain Management program' in c['prerequisites']
  ledger=json.loads(Path('research/degree-audit/case-western.json').read_text())
  entry=next(e for e in ledger['programs'] if e['program_id']==p['id'])
- assert entry['status']=='in_progress' and not entry['blockers']
+ assert entry['status']=='audited' and not entry['blockers']
 
 
 @pytest.mark.parametrize('url,parser',[(m.PERMISSIONS_URL,m.parse_permissions),(m.FACULTY_URL,m.parse_faculty)])

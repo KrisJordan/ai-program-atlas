@@ -39,13 +39,23 @@ def test_reviewed_uger_semantics_and_reciprocal_identity(award,n):
  assert cs['CSDS 101']['category']=='other'
  assert cs['PHIL 222']['prerequisites']=='Open to all students (no pre-requisites)'
  assert 'Capstone Advisor' in cs['MATH 352']['prerequisites']
- groups=p['course_identity_groups'];assert len(groups)==12
+ groups=p['course_identity_groups'];assert len(groups)=={'BA':37,'BS':38}[award]
  java=next(g for g in groups if g['id'].endswith('java-crosslisting'))
  assert java['course_ids']==[f'case-{award.lower()}-csds-132',f'case-{award.lower()}-uger-ecse-132']
  profile=requirement_profile(p)
- assert profile['identity']['crosslisted_aliases']==15
- assert profile['options']['source_record_count']==profile['options']['count']+15
+ aliases={'BA':54,'BS':55}[award]
+ assert profile['identity']['crosslisted_aliases']==aliases
+ assert profile['options']['source_record_count']==profile['options']['count']+aliases
  assert profile['required']['count']=={'BA':8,'BS':9}[award]
+ byid={c['id']:c for c in p['courses']}
+ codegroups=[{byid[c]['code'] for c in g['course_ids']} for g in groups]
+ manifest=json.loads(Path('atlas/adapters/case_degree_crosslist_reviews.json').read_text())
+ expected=manifest['groups']+(manifest['bs_only_groups'] if award=='BS' else [])
+ assert {frozenset(g) for g in codegroups}=={frozenset(g) for g in expected}
+ assert not any({'CHIN 350','CHIN 350D'}<=g for g in codegroups)
+ assert not any('ENGL 364C' in g for g in codegroups)
+ assert {'ENGL 364','HUMN 364'} in codegroups
+ assert 'ANEE 107 and ANEE 316' in cs['ANEE 381']['prerequisites']
 
 
 @pytest.mark.parametrize('award',['BA','BS'])

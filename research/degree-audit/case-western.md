@@ -1,3 +1,22 @@
+## Current primary audit — complete, 2026-10-11
+
+The primary audit now covers every mapped course record: BA 744 and BS 756. Each has a subject review based on the source body or an explicitly limited exact-title observation; mixed and unspecified subjects remain `other`. Coordinator reads cover 207 course identities across four separately committed batches; this is a combined primary research effort, not two independent reads of every record. The independent full-degree second pass remains pending.
+
+The actual degree tables establish eight fixed BA courses and nine fixed BS courses. Programming remains Python OR the whole Java-plus-Python-language bundle. The BA application requirement now has choice ancestry with its exact one 3–4-credit OR two 1.5-credit condition. The BS four-elective parent already lists its complete named pools directly; subgroup notes add limits without hiding those options. Major prerequisite, permission and credit-exclusion rules remain conditional eligibility, not extra fixed degree courses.
+
+A direct source-table calculation, independent of the adapters and profile traversal, takes fixed courses from the manually reread major tables, all other named major courses plus UGER tables 0–4 and 9–12 as options, and tables 5–8 as duration-governed wellness context. It verifies the union against every mapped code, then applies the separately source-reviewed identities. `case-profile-expectations.py` reproduces the calculation from ignored actual captures and reviewed seeds. Explicit canonical-ID sets and category totals are in the primary JSON ledger.
+
+| Award | Fixed | Named options | Duration-only context | Source records | Reconciled identities |
+|---|---:|---:|---:|---:|---:|
+| BA | 8 | 585 | 97 | 744 | 690 |
+| BS | 9 | 595 | 97 | 756 | 701 |
+
+The 97 duration-only identities are wellness offerings governed by semester-equivalents, not missing requirements or invented course-count choices. Open subject-wide breadth, any-CSDS electives, advisor-approved substitutions and non-course activities remain explicit open rules and do not imply a finite catalog of every possible future selection.
+
+Reciprocal current descriptions support 37 BA groups/54 aliases and 38 BS groups/55 aliases (the BS adds MATH406/PHIL306). `case_degree_crosslist_reviews.json` records exact groups and exclusions. CHIN350/350D retain different language-audience versions; ENGL364C retains its additional capstone conditions, while equivalent non-capstone ENGL364/HUMN364 are reconciled. The CSDS463/466 and ENGL266/365F source inconsistencies do not establish aliases. Credit exclusions alone never establish identity. Every original source record and its prerequisites remains available.
+
+The coordinator’s independent policy review (0944f7e) verified current bachelor/UGER/permission rules, all thirteen UGER code pools, eight whole-course sequences, eight engagement activities and the open SAGES capstone route. A final prerequisite-continuation check recovered the second ANEE381 sentence (ANEE107 and316). Credits retain exact numeric amounts, known zeros and unknown scalar ranges; no workload proportion or guaranteed enrollment is inferred. Historical batch notes below explain intermediate corrections, not current incomplete coverage.
+
 # Case Western degree correctness — bounded core correction
 
 Reviewed 2026-10-11 against the **2026–2027 Bulletin**. Both exact degree pages and the CSDS/ENGR description pages were read through the ordinary robots-aware Fetcher. The BA/BS cache fetch timestamps are 2026-10-10 22:44:57/56 UTC; descriptions were fetched 2026-10-11 02:39:32/34 UTC. Source bodies remain ignored, not published.

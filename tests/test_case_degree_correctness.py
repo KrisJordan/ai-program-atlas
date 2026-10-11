@@ -73,7 +73,15 @@ def test_reviewed_fixed_set_and_programming_bundle(award):
  assert next(c for c in p['courses'] if c['id']==f'case-{award.lower()}-csds-310')['prerequisites'].count('C or higher')==2
  audit=json.loads(Path('research/degree-audit/case-western.json').read_text())
  record=next(x for x in audit['programs'] if x['program_id']==pid)
- assert record['status']=='in_progress' and record['expected_profile'] is None
+ assert record['status']=='audited' and record['second_pass_status']=='pending'
+ assert not record['blockers']
+ for role in ['required','options','unresolved']:
+  assert record['expected_profile'][role]=={k:profile[role][k] for k in ['count','categories']}
+  assert len(record['expected_course_ids'][role])==profile[role]['count']
+ sets=[set(record['expected_course_ids'][role]) for role in ['required','options','unresolved']]
+ assert not any(sets[i]&sets[j] for i in range(3) for j in range(i+1,3))
+ aliases={cid for g in p['course_identity_groups'] for cid in g['course_ids'] if cid!=g['canonical_course_id']}
+ assert set.union(*sets)==set(byid)-aliases
  assert set(record['expected_course_ids']['required'])==fixed_ids
 
 
@@ -88,3 +96,10 @@ def test_optional_reread_catalog(award):
  assert next(c for c in d['courses'] if c['code']=='CSDS 302')['category']=='mathematics'
  assert BASE+'csds/' in m.SOURCE_PARSERS
  assert all('category_review' not in c for c in d['courses'])
+ if award=='BA':
+  application=next(r for r in d['requirements'] if r['title']=='Application elective')
+  assert application['kind']=='alternative' and application['count'] is None
+  assert '3–4 credits' in application['summary'] and 'two listed courses carrying 1.5 credits each' in application['summary']
+  p=json.loads(Path('data/programs',pid+'.json').read_text())
+  expected=json.loads(Path('research/degree-audit/case-western.json').read_text())['programs'][0]['expected_course_ids']
+  assert set(application['course_ids'])<=set(expected['options'])

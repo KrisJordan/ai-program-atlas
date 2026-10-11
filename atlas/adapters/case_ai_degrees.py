@@ -17,7 +17,7 @@ def parse_case(html, program_id, award, url):
         require_phrases(panel,['Choose three of the following','Choose one 3-4 credit course, or two 1.5 credit courses'])
         for i,title in enumerate(['Required courses','Societal impact course','Technical electives']):t.table(tables[i],title)
         ids=[cid for row in tables[3].find_all('tr') if (p:=t.row(row)) for cid in p['ids']]
-        t.group('Application elective',kind='note',ids=ids,summary='Choose one listed course carrying 3–4 credits, or two listed courses carrying 1.5 credits each. Individual credits are not supplied in this pool; the two selection routes must not be conflated.')
+        t.group('Application elective',kind='alternative',ids=ids,summary='Choose one listed course carrying 3–4 credits, or two listed courses carrying 1.5 credits each. Apply the exact individual course amount and enrollment conditions; these are two different selection routes.')
     else:
         require_phrases(panel,['Four technical electives are required','at most two courses from Group 2','Courses may not be double counted','prior permission from the department chair','Any AI Breadth course','Any CSDS course'])
         for i,title in enumerate(['Mathematics and engineering','Science course route','AI core','Mathematical foundations','AI breadth','Societal impact','Secure computing']):
