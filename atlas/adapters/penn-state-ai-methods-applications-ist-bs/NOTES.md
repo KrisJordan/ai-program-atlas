@@ -65,3 +65,11 @@ IST301/ETI301 and IST302/ETI302 are only slash-paired in the degree table. The
 current ETI descriptions do not assert cross-listing, and the current IST
 listing lacks the old codes. They remain separate until an authoritative
 equivalence statement is found; they must not be merged from matching titles.
+
+### Review-state correction
+
+The 138 supporting identities whose individual descriptions have not been read
+now have no category_review: they remain other/unreviewed. Degree-list inspection
+is not a completed subject review. A-I494 retains source-inspected unclassified
+status because its actual description leaves the research subject individually
+determined. Four cross-list groups and all mapped role counts are unchanged.

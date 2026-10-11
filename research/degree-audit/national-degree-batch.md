@@ -144,3 +144,8 @@ metadata. The technical core has six unconditional named identities; five
 specialization branches are conditional. Its printed AI Algorithms total remains
 inconsistent with its rows and major 18-credit specialization rule. Full audits
 remain in progress.
+
+Penn State review-state correction: 138 individually unread supporting-course
+descriptions are explicitly **unreviewed**, not source-inspected unclassified.
+A-I494 remains unclassified after actual description review. The four proven
+alias groups and 156 canonical options remain unchanged.

@@ -286,3 +286,13 @@ def test_william_mary_partial_core_has_limited_subject_evidence():
  assert all(c['credits'] is None for c in p['courses'])
  assert requirement_profile(p)['required']['count']==3
  assert p['curriculum_status']=='partial'
+
+
+def test_psu_unread_descriptions_are_unreviewed_not_inspected_unknown():
+ p=json.loads(Path('data/programs/penn-state-ai-methods-applications-ist-bs.json').read_text())
+ courses={c['code']:c for c in p['courses']}
+ assert 'category_review' not in courses['PSYCH 260']
+ assert courses['PSYCH 260']['category']=='other'
+ assert courses['A-I 494']['category_review']['status']=='unclassified'
+ assert sum('category_review' not in c for c in p['courses'])==138
+ assert requirement_profile(p)['options']['classification']['unreviewed']==138
