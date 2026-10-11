@@ -1,0 +1,521 @@
+{
+  "checked_at": "2026-10-11",
+  "purpose": "Bounded official-source membership reconciliation; research artifact, not auto-ingested cohort data.",
+  "baseline": {
+    "lac_institution_count": 86,
+    "institution_ids": [
+      "williams-college",
+      "amherst-college",
+      "bowdoin-college",
+      "claremont-mckenna-college",
+      "pomona-college",
+      "swarthmore-college",
+      "united-states-naval-academy",
+      "harvey-mudd-college",
+      "united-states-military-academy",
+      "wellesley-college",
+      "united-states-air-force-academy",
+      "vassar-college",
+      "washington-and-lee-university",
+      "hamilton-college",
+      "wesleyan-university",
+      "carleton-college",
+      "davidson-college",
+      "grinnell-college",
+      "barnard-college",
+      "middlebury-college",
+      "university-of-richmond",
+      "colby-college",
+      "colgate-university",
+      "college-of-the-holy-cross",
+      "smith-college",
+      "bates-college",
+      "haverford-college",
+      "macalester-college",
+      "bucknell-university",
+      "lafayette-college",
+      "bryn-mawr-college",
+      "denison-university",
+      "trinity-college",
+      "colorado-college",
+      "franklin-and-marshall-college",
+      "mount-holyoke-college",
+      "spelman-college",
+      "occidental-college",
+      "scripps-college",
+      "trinity-university",
+      "kenyon-college",
+      "skidmore-college",
+      "soka-university-of-america",
+      "pitzer-college",
+      "union-college",
+      "wabash-college",
+      "connecticut-college",
+      "hillsdale-college",
+      "depauw-university",
+      "rhodes-college",
+      "st-lawrence-university",
+      "st-olaf-college",
+      "sewanee-the-university-of-the-south",
+      "centre-college",
+      "gettysburg-college",
+      "furman-university",
+      "wheaton-college-illinois",
+      "thomas-aquinas-college",
+      "lawrence-university",
+      "saint-anselm-college",
+      "rollins-college",
+      "earlham-college",
+      "lewis-and-clark-college",
+      "whittier-college",
+      "hendrix-college",
+      "beloit-college",
+      "muhlenberg-college",
+      "berea-college",
+      "hope-college",
+      "saint-marys-college-indiana",
+      "allegheny-college",
+      "lycoming-college",
+      "college-of-saint-benedict",
+      "saint-johns-university-minnesota",
+      "kalamazoo-college",
+      "morehouse-college",
+      "randolph-macon-college",
+      "augustana-college-illinois",
+      "juniata-college",
+      "southwestern-university",
+      "lake-forest-college",
+      "ursinus-college",
+      "stonehill-college",
+      "college-of-wooster",
+      "washington-college",
+      "hobart-and-william-smith-colleges"
+    ],
+    "complete": false,
+    "enumeration_complete": false,
+    "cutoff_tie_count": null
+  },
+  "proposed_additions": [],
+  "proposed_sources": [],
+  "candidates": [
+    {
+      "candidate_id": "dickinson-college",
+      "name": "Dickinson College",
+      "status": "unresolved",
+      "checked_at": "2026-10-11",
+      "finding": "No usable 2027 overall LAC rank or explicit top100 statement found in the inspected official navigation, facts and recent-news pages.",
+      "sources": [
+        {
+          "url": "https://www.dickinson.edu/",
+          "title": "Homepage",
+          "observation": "Read navigation and featured content."
+        },
+        {
+          "url": "https://www.dickinson.edu/homepage/284/about_overview",
+          "title": "About Dickinson",
+          "observation": "No edition-specific ranking in inspected body."
+        },
+        {
+          "url": "https://www.dickinson.edu/homepage/1657/quick_facts",
+          "title": "Quick Facts",
+          "observation": "Institutional facts and outcomes do not establish rank."
+        },
+        {
+          "url": "https://www.dickinson.edu/news",
+          "title": "Latest News",
+          "observation": "Read current first page."
+        },
+        {
+          "url": "https://www.dickinson.edu/news?page=2",
+          "title": "Latest News, page2",
+          "observation": "Inspected returned listing; cached content showed September10 context, so freshness is not certified."
+        },
+        {
+          "url": "https://www.dickinson.edu/news?page=3",
+          "title": "Latest News, page3",
+          "observation": "Read September/summer2026 listing."
+        },
+        {
+          "url": "https://www.dickinson.edu/news?page=4",
+          "title": "Latest News, page4",
+          "observation": "Read September2026/late-summer listing."
+        }
+      ],
+      "remaining_work": [
+        "Unsearched archive pages and a reliable edition-specific ranking announcement remain necessary."
+      ]
+    },
+    {
+      "candidate_id": "gustavus-adolphus-college",
+      "name": "Gustavus Adolphus College",
+      "status": "wrong_edition",
+      "checked_at": "2026-10-11",
+      "finding": "A real official ranking article was found but dates to2024, so its overall66 cannot establish2027 membership.",
+      "sources": [
+        {
+          "url": "https://gustavus.edu/gustie-happenings",
+          "title": "Gustie Happenings",
+          "observation": "Recent index links an older rankings article."
+        },
+        {
+          "url": "https://gustavus.edu/news/gustavus-shows-breadth-depth-national-rankings",
+          "title": "Gustavus Shows Breadth, Depth in National Rankings",
+          "observation": "Published September24,2024; reports overall National Liberal Arts Colleges66. Rejected as wrong edition."
+        },
+        {
+          "url": "https://gustavus.edu/about",
+          "title": "About",
+          "observation": "No qualifying ranking evidence in inspected body."
+        },
+        {
+          "url": "https://gustavus.edu/admission-aid",
+          "title": "Admission & Aid",
+          "observation": "No qualifying ranking evidence in inspected body."
+        }
+      ],
+      "remaining_work": [
+        "A2027 overall ranking statement remains unresolved."
+      ]
+    },
+    {
+      "candidate_id": "st-johns-college-campus-unresolved",
+      "name": "St. John’s College — campus unresolved",
+      "status": "unresolved",
+      "checked_at": "2026-10-11",
+      "finding": "Homepage and news/index navigation did not establish separate2027 Annapolis or SantaFe ranks. No campus identity or numerical rank inferred.",
+      "sources": [
+        {
+          "url": "https://www.sjc.edu/",
+          "title": "Homepage",
+          "observation": "Homepage U.S.News reference did not establish an edition-specific overall rank."
+        },
+        {
+          "url": "https://www.sjc.edu/news",
+          "title": "News & Features",
+          "observation": "Read current category listings including2026 dates; no qualifying ranking statement identified."
+        },
+        {
+          "url": "https://www.sjc.edu/a-z-index",
+          "title": "A to Z Index",
+          "observation": "Inspected navigation only."
+        }
+      ],
+      "remaining_work": [
+        "Separate ranked-campus identity and official2027 overall evidence required."
+      ]
+    },
+    {
+      "candidate_id": "university-of-puget-sound",
+      "name": "University of Puget Sound",
+      "status": "access_unresolved",
+      "checked_at": "2026-10-11",
+      "finding": "Homepage returned reader Internal Error without an exposed HTTP cause; branch stopped.",
+      "sources": [
+        {
+          "url": "https://www.pugetsound.edu/",
+          "title": "Homepage",
+          "observation": "Internal Error; no ranking content credited."
+        }
+      ],
+      "remaining_work": [
+        "Independent permitted official announcement needed."
+      ]
+    },
+    {
+      "candidate_id": "wofford-college",
+      "name": "Wofford College",
+      "status": "unresolved",
+      "checked_at": "2026-10-11",
+      "finding": "Official2026 news archive and Fast Facts did not provide usable2027 overall ranking evidence in inspected content.",
+      "sources": [
+        {
+          "url": "https://www.wofford.edu/about/news",
+          "title": "Newsroom",
+          "observation": "Followed ordinary News Archives link."
+        },
+        {
+          "url": "https://www.wofford.edu/about/news/news-archives",
+          "title": "News Archives",
+          "observation": "Read2026 index, including September17–October5 entries; no ranking announcement listed in that inspected interval."
+        },
+        {
+          "url": "https://www.wofford.edu/about/fast-facts",
+          "title": "Fast Facts",
+          "observation": "Institutional facts; no qualifying U.S.News overall statement identified."
+        }
+      ],
+      "remaining_work": [
+        "Other official channels or later announcement may supply rank; no exclusion finding."
+      ]
+    },
+    {
+      "candidate_id": "luther-college",
+      "name": "Luther College",
+      "status": "wrong_edition",
+      "checked_at": "2026-10-11",
+      "finding": "Official ranking article explicitly concerns2026 and gives overall111. It cannot establish either inclusion or exclusion in2027.",
+      "sources": [
+        {
+          "url": "https://www.luther.edu/academics/outcomes",
+          "title": "Outcomes",
+          "observation": "Explicit2026 state-relative ranking is insufficient."
+        },
+        {
+          "url": "https://www.luther.edu/academics/outcomes/data-rankings",
+          "title": "Data and Rankings",
+          "observation": "Latest overall111 wording is accompanied by2026 references; followed its official article."
+        },
+        {
+          "url": "https://www.luther.edu/news/u-s-news-rankings-2026",
+          "title": "U.S. News ranks Luther College among the nation’s best for undergraduate teaching",
+          "observation": "Body explicitly names2026 U.S.News Best College rankings and overall111."
+        }
+      ],
+      "remaining_work": [
+        "2027 overall evidence remains needed; no2027 exclusion asserted."
+      ]
+    },
+    {
+      "candidate_id": "hanover-college",
+      "name": "Hanover College",
+      "status": "unresolved",
+      "checked_at": "2026-10-11",
+      "finding": "The official news index was readable across the2026 ranking-release period but exposed no qualifying2027 ranking article.",
+      "sources": [
+        {
+          "url": "https://www.hanover.edu/about/news/",
+          "title": "News & Events",
+          "observation": "Read recent2026 entries, including September16 and25 and October2–6."
+        }
+      ],
+      "remaining_work": [
+        "Other official rank evidence remains unreviewed."
+      ]
+    },
+    {
+      "candidate_id": "bennington-college",
+      "name": "Bennington College",
+      "status": "unresolved",
+      "checked_at": "2026-10-11",
+      "finding": "Read institutional newsroom and college-news listing. No usable2027 overall ranking statement was identified; listing freshness/coverage is limited.",
+      "sources": [
+        {
+          "url": "https://www.bennington.edu/newsroom",
+          "title": "Newsroom",
+          "observation": "Institutional news navigation."
+        },
+        {
+          "url": "https://www.bennington.edu/newsroom/college-news",
+          "title": "College News",
+          "observation": "Returned listing included September14,2026 and earlier entries, not a certified complete post-release archive."
+        }
+      ],
+      "remaining_work": [
+        "A current official2027 overall report remains needed."
+      ]
+    },
+    {
+      "candidate_id": "austin-college",
+      "name": "Austin College",
+      "status": "insufficient_scope",
+      "checked_at": "2026-10-11",
+      "finding": "Explicit2027 official announcement exists, but gives categories only, with no overall number or top100 assertion.",
+      "sources": [
+        {
+          "url": "https://www.austincollege.edu/news-events",
+          "title": "News & Events",
+          "observation": "Followed September ranking announcement from the official index."
+        },
+        {
+          "url": "https://www.austincollege.edu/news/~board/press-releases/post/us-news-world-report-college-rankings",
+          "title": "U.S. News & World Report College Rankings",
+          "observation": "Published September22,2026; explicitly2027. Lists Top Private Schools, Best Value, Undergraduate Teaching, Social Mobility. No overall rank or top100 bound."
+        }
+      ],
+      "remaining_work": [
+        "Numerical overall rank or explicit overall top100 membership needed."
+      ]
+    },
+    {
+      "candidate_id": "hampden-sydney-college",
+      "name": "Hampden-Sydney College",
+      "status": "unresolved",
+      "checked_at": "2026-10-11",
+      "finding": "Read current news index across September/October2026; no qualifying overall ranking statement identified.",
+      "sources": [
+        {
+          "url": "https://www.hsc.edu/",
+          "title": "Homepage",
+          "observation": "Inspected homepage and followed its News Index link; no qualifying overall ranking evidence credited."
+        },
+        {
+          "url": "https://www.hsc.edu/news-index",
+          "title": "News Index",
+          "observation": "Read items dated August26–October9,2026, including September21 and23."
+        }
+      ],
+      "remaining_work": [
+        "Other official ranking sources remain unreviewed."
+      ]
+    },
+    {
+      "candidate_id": "susquehanna-university",
+      "name": "Susquehanna University",
+      "status": "access_unresolved",
+      "checked_at": "2026-10-11",
+      "finding": "News route returned a restricted-URL fetch error. No retry or alternate bypass attempted.",
+      "sources": [
+        {
+          "url": "https://www.susqu.edu/news/",
+          "title": "News",
+          "observation": "Failed to fetch restricted URL; no content credited."
+        }
+      ],
+      "remaining_work": [
+        "An independent permitted source or authorized evidence is needed."
+      ]
+    },
+    {
+      "candidate_id": "wheaton-college-massachusetts",
+      "name": "Wheaton College, Massachusetts",
+      "status": "unresolved",
+      "checked_at": "2026-10-11",
+      "finding": "Ordinary public news and linked Accolades filter were readable; identified current PrincetonReview recognition, not a qualifying U.S.News overall statement.",
+      "sources": [
+        {
+          "url": "https://wheatoncollege.edu/news/",
+          "title": "Wheaton News",
+          "observation": "Read2026 current entries and followed Accolades category."
+        },
+        {
+          "url": "https://wheatoncollege.edu/news/?ws=true&ws_tax_news-category_127=1",
+          "title": "Wheaton News — Accolades",
+          "observation": "Visible2026 results include PrincetonReview recognition dated August26; this does not establish U.S.News membership."
+        }
+      ],
+      "remaining_work": [
+        "2027 overall U.S.News evidence remains required."
+      ]
+    },
+    {
+      "candidate_id": "whitman-college",
+      "name": "Whitman College",
+      "status": "access_unresolved",
+      "checked_at": "2026-10-11",
+      "finding": "Official stories route returned502 Bad Gateway; no ranking content credited and no repeated retry.",
+      "sources": [
+        {
+          "url": "https://www.whitman.edu/whitman-stories",
+          "title": "Whitman Stories",
+          "observation": "HTTP502 Bad Gateway."
+        }
+      ],
+      "remaining_work": [
+        "Independent official announcement remains unresolved."
+      ]
+    },
+    {
+      "candidate_id": "reed-college",
+      "name": "Reed College",
+      "status": "unresolved",
+      "checked_at": "2026-10-11",
+      "finding": "Reed Magazine was readable but surfaced older/current general stories without qualifying2027 rank evidence.",
+      "sources": [
+        {
+          "url": "https://www.reed.edu/reed-magazine/",
+          "title": "Reed Magazine",
+          "observation": "Read visible news/category entries; no ranking statement identified."
+        }
+      ],
+      "remaining_work": [
+        "No inference from survey nonparticipation; overall2027 inclusion/exclusion unresolved."
+      ]
+    },
+    {
+      "candidate_id": "new-college-of-florida",
+      "name": "New College of Florida",
+      "status": "insufficient_scope",
+      "checked_at": "2026-10-11",
+      "finding": "Explicit2027 official report supplies U.S.News component-metric ranks only. Other overall numbers in the article belong to WashingtonMonthly, not U.S.News.",
+      "sources": [
+        {
+          "url": "https://www.ncf.edu/news/new-college-of-florida-on-the-rise-across-three-national-rankings/",
+          "title": "New College of Florida on the Rise Across Three National Rankings",
+          "observation": "Published September22,2026. U.S.News2027 section gives financial resources14, entering-class profile37, full-time-faculty share88. No overall LAC rank or top100 assertion."
+        }
+      ],
+      "remaining_work": [
+        "Overall U.S.News rank/membership evidence required; metric ranks cannot supply it."
+      ]
+    },
+    {
+      "candidate_id": "sarah-lawrence-college",
+      "name": "Sarah Lawrence College",
+      "status": "access_unresolved",
+      "checked_at": "2026-10-11",
+      "finding": "Homepage/news navigation was accessible, but latest news response exposed a filter shell without article listings; no ranking content credited.",
+      "sources": [
+        {
+          "url": "https://www.sarahlawrence.edu/",
+          "title": "Homepage",
+          "observation": "Followed official News link."
+        },
+        {
+          "url": "https://www.sarahlawrence.edu/news-events/news/",
+          "title": "News from Sarah Lawrence College",
+          "observation": "Latest reader body supplied navigation/filter shell; no article evidence."
+        }
+      ],
+      "remaining_work": [
+        "Public rendered listing or independently accessible ranking article needed."
+      ]
+    },
+    {
+      "candidate_id": "hollins-university",
+      "name": "Hollins University",
+      "status": "access_unresolved",
+      "checked_at": "2026-10-11",
+      "finding": "Homepage returned reader Internal Error with no exposed HTTP cause; branch stopped.",
+      "sources": [
+        {
+          "url": "https://www.hollins.edu/",
+          "title": "Homepage",
+          "observation": "Internal Error; no ranking content credited."
+        }
+      ],
+      "remaining_work": [
+        "Independent permitted official ranking evidence required."
+      ]
+    },
+    {
+      "candidate_id": "principia-college",
+      "name": "Principia College",
+      "status": "unresolved",
+      "checked_at": "2026-10-11",
+      "finding": "Read current official news archive across the2026 release window; no qualifying ranking statement identified.",
+      "sources": [
+        {
+          "url": "https://www.principiacollege.edu/news",
+          "title": "Principia College News",
+          "observation": "Read dated October5, September18/4 and August17,2026 entries and older list; no qualifying announcement identified."
+        }
+      ],
+      "remaining_work": [
+        "Other official ranking reports remain unreviewed."
+      ]
+    }
+  ],
+  "search_limitations": [
+    "Eight targeted search queries returned largely unrelated or single-term results despite domain/phrase restrictions; they were not used as negative evidence.",
+    "Official navigation and news archives became the primary discovery route. A reviewed visible archive is not a certified complete announcement inventory.",
+    "No publisher table, blocked dataset, CSRankings route or previous-edition rank was used to infer membership."
+  ],
+  "prior_barriers_not_retried": [
+    "U.S.News restricted category tables",
+    "VMI official candidate article403",
+    "Agnes Scott linked news403",
+    "Andrew Reiter datasets403",
+    "CollegeAdvisor article403"
+  ],
+  "interpretation": "Zero proposed additions means no addition was verified in this bounded pass. It is not exclusion evidence for any candidate, a completed denominator, or a certified tie group."
+}
