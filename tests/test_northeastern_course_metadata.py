@@ -394,3 +394,13 @@ def test_model_nato_summary_does_not_turn_selective_conference_into_entitlement(
     assert 'conference is selective' in result['courses'][0]['description']
     assert result['requirements']==[] and 'outcomes' not in result
     assert parser(html.replace('Students may be selected','All students are required'))['courses'][0]['description'] is None
+
+
+def test_same_title_africa_courses_keep_different_published_periods():
+    summaries=[]
+    for subject,heading,prose in [('HIST','History (HIST)','Examines Africa from 1000 C.E. to the mid-19th century.'),('AFCS','Africana Studies (AFCS)','Examines patterns of trade up to 1000 C.E.')]:
+        html=page(f'<div class="courseblock"><p class="courseblocktitle">{subject} 2390. Africa and the World in Early Times. (4 Hours)</p><p class="cb_desc">{prose}</p></div>',heading=heading)
+        parser=register_subject_sources('test-program',{subject:[subject+' 2390']})[f'https://catalog.northeastern.edu/course-descriptions/{subject.lower()}/']
+        summaries.append(parser(html)['courses'][0]['description'])
+    assert 'mid-nineteenth' in summaries[0] and 'up to 1000' in summaries[1]
+    assert summaries[0]!=summaries[1]

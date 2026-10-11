@@ -246,3 +246,12 @@ Reviewed the official CRIM, INTL, POLS, PPUA and HUSV descriptions for research 
 This batch reviewed 81 distinct source descriptions and added **92 description fields across 6 variants**, bringing the total to **1506 of1,593 course observations**. The exact remaining inventory now contains **87 accessible unreviewed observations across 81 codes**. All source timestamps remain the actual catalog fetch times. All requirement graphs, credit amounts, preparation fields and public-resource links remain unchanged.
 
 Validation: **148 Northeastern-focused tests passed**; all23 temporary ingest/repeat/export/build/integrity checks passed. All14 affected source registrations succeeded twice with zero repeat candidates/source changes. The queue integrity test verifies its counts and exact code/program membership against the concrete records.
+
+## History Africana and sociology alternatives — 2026-10-11
+
+Reviewed the official HIST, AFCS and SOCL descriptions for historical and regional alternatives and sociological research methods. HIST 2390 and AFCS 2390 have the same title but describe different periods: the former spans 1000 CE to the mid-nineteenth century, while the latter ends at 1000 CE. They remain distinct source-backed descriptions, with a regression test preventing title-based scope reuse. Course claims about social phenomena are presented as topics of analysis rather than established outcomes or equivalence rules.
+
+
+This batch reviewed 51 distinct source descriptions and added **55 description fields across 6 variants**, bringing the total to **1561 of1,593 course observations**. The exact remaining inventory now contains **32 accessible unreviewed observations across 30 codes**. All source timestamps remain the actual catalog fetch times. All requirement graphs, credit amounts, preparation fields and public-resource links remain unchanged.
+
+Validation: **149 Northeastern-focused tests passed**; all23 temporary ingest/repeat/export/build/integrity checks passed. All9 affected source registrations succeeded twice with zero repeat candidates/source changes. The queue integrity test verifies its counts and exact code/program membership against the concrete records.
