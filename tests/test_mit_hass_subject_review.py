@@ -214,7 +214,7 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']['description_reviewed_records']==144
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==153
     assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
         o=entry(code)['observations'][-1]
@@ -502,3 +502,34 @@ def test_actual_final_code_and_description_observations_replay():
         hashes={review.observation_digest(o) for o in parser(path.read_text())}
         saved=[o for r in MANIFEST['courses'].values() for o in r['observations'] if o['source_id']=='mit-ai-hass-review-'+source]
         assert saved and all(o['observation_digest'] in hashes for o in saved)
+
+
+def test_literature_description_upgrades_preserve_half_term_bundle_and_dated_topics():
+    latin1=entry('21L.611')['observations'][-1];latin2=entry('21L.612')['observations'][-1]
+    assert latin1['credits']==latin2['credits']==6
+    assert latin1['prerequisites']=='none' and latin2['prerequisites']=='21L.611 or permission of instructor'
+    assert all(any('petition after both' in r for r in o['restrictions']) for o in [latin1,latin2])
+    assert latin1['catalog_year']==latin2['catalog_year']=='Spring 2026'
+    style=entry('21L.504J [WGS.140]')['observations'][-1]
+    assert style['category']=='human_context' and style['prerequisites']=='Permission of instructor'
+    assert style['observed_name'].endswith('Style in an Age of Sameness')
+    assert style['description_digest'] and style['evidence_basis']=='official_description'
+    spanish=entry('21L.636J [21G.716]')['observations'][-1]
+    assert spanish['catalog_year']=='Fall 2026'
+    assert spanish['prerequisites']=='One intermediate subject in Spanish or permission of instructor'
+
+
+def test_actual_literature_spring_description_upgrade_replays_and_changed_prerequisite_withdraws():
+    path=Path('/tmp/mit-hass-subjects/literature-spring2026-visible.html')
+    if not path.exists():
+        pytest.skip('Optional ignored expanded public Literature archive capture')
+    rows=review.observe_literature(path.read_text());byhash={review.observation_digest(o):o for o in rows}
+    saved=[(cid,r,o) for cid,r in MANIFEST['courses'].items() for o in r['observations'] if o['source_id']=='mit-ai-hass-review-literature-spring2026']
+    assert len(saved)==8
+    for cid,r,e in saved:
+        o=byhash[e['observation_digest']]
+        assert o['description'] and o['term']=='Spring 2026'
+        course=dict(id=cid,code=r['listed_code'],name=r['listed_name'],source_id=r['listed_source_id'])
+        assert review.matched_review(course,o,e['source_url'],MANIFEST)==e
+        changed={**o,'prerequisites':'New prerequisite'}
+        assert review.matched_review(course,changed,e['source_url'],MANIFEST) is None
