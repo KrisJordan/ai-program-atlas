@@ -145,3 +145,8 @@ SOURCES += (roosevelt.GE_URL, roosevelt.GRAD_URL, roosevelt.WRITING_URL) + tuple
 SOURCE_PARSERS.update({roosevelt.GE_URL: roosevelt.parse_ge, roosevelt.GRAD_URL: roosevelt.parse_graduation,
                       roosevelt.WRITING_URL: roosevelt.parse_writing})
 SOURCE_PARSERS.update({url: (lambda html, key=key: roosevelt.parse_region(html, key)) for key, url in roosevelt.REGION_URLS.items()})
+
+from atlas.adapters import ucsd_eighth_pools as eighth
+SOURCES += (eighth.FIRST_URL, eighth.TRANSFER_URL, eighth.TABLE_URL)
+SOURCE_PARSERS.update({eighth.FIRST_URL: eighth.parse_first, eighth.TRANSFER_URL: eighth.parse_transfer,
+                      eighth.TABLE_URL: eighth.parse_table})
