@@ -64,7 +64,7 @@ def test_exact_reviewed_scope_and_source_evidence():
     c=MANIFEST['courses']
     assert len(c)==107 and sum(map(len,CODES_BY_URL.values()))==107 and len(SOURCES)==8
     assert Counter(x['credits'] for x in c.values())=={3:91,4:16}
-    assert Counter(x['category'] for x in c.values())=={'applications':66,'human_context':41}
+    assert Counter(x['category'] for x in c.values())=={'human_context':107}
     assert sum(x['prerequisites'] is not None for x in c.values())==61
     assert all(x['description'] and x['category_review']['rationale'] for x in c.values())
     assert all(code in x['category_review']['locator'] for code,x in c.items())
@@ -79,9 +79,9 @@ def test_observed_conflicts_and_content_distinctions_are_preserved():
     assert any('prose says MLSP 201' in n and 'MLSP-202/202T' in n for n in c['MLSP-301']['notes'])
     assert 'MLJP-302 and (MLJP-315 or MLJP-310)' in c['MLJP-415']['prerequisites']
     assert c['MLJP-310']['prerequisites']=='Permission of the Instructor to enroll.'
-    assert c['MLFR-401']['category']=='applications'
+    assert c['MLFR-401']['category']=='human_context'
     assert c['MLSP-315']['category']=='human_context'
-    assert c['MLCH-410']['category']=='applications'
+    assert c['MLCH-410']['category']=='human_context'
     assert all(c[k]['category']=='human_context' for k in ['HIST-130','HIST-135','MLJP-451'])
     assert any('both' in n and 'language' in n for n in c['HIST-130']['notes'])
     assert any('six total credits' in n for n in c['ENGL-418']['notes'])
