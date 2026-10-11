@@ -202,3 +202,7 @@ for url, architecture_parser in architecture_remainder.SOURCE_PARSERS.items():
     else:
         SOURCES.append(url)
         SOURCE_PARSERS[url] = architecture_parser
+
+clinic_review = import_module('atlas.adapters.mit-ai-decision-making-bs.clinic_review')
+SOURCES.extend(clinic_review.SOURCE_PARSERS)
+SOURCE_PARSERS.update(clinic_review.SOURCE_PARSERS)

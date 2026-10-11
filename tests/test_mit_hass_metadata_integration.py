@@ -43,8 +43,14 @@ def test_integrated_evidence_preserves_term_rules_and_withholds_conflicts():
     assert sum(bool(c.get('description')) for c in integrated) >= 139
     limited = [c for c in integrated if any(o.get('evidence_basis') == 'official_title_only'
                and o['approved_for_integration'] for o in m.MANIFEST['courses'][c['id']]['observations'])]
-    assert limited and all(c['description'] is None for c in limited)
-    assert all('Limited official-title-only' in c['category_review']['rationale'] for c in limited)
+    assert limited
+    for c in limited:
+        if c['description'] is None:
+            assert 'Limited official-title-only' in c['category_review']['rationale']
+        else:
+            # A separately sourced content review can supersede the initial title disposition.
+            assert 'mit-ai-clinic-review-news' in c['category_review']['source_ids']
+            assert c['category_review']['status']=='mixed'
     assert {s['url'] for s in m.SPECS.values()} <= {s['url'] for s in p['sources']}
     greek = [c for c in integrated if c['code'] in {'21L.607', '21L.608'}]
     assert greek and all(c['credits'] == 6 for c in greek)

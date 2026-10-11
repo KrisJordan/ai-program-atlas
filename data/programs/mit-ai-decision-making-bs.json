@@ -1485,6 +1485,26 @@
       "catalog_year": null,
       "locator": "Actual course-title list and explicit annotations; no description inference",
       "confidence": "high"
+    },
+    {
+      "id": "mit-ai-clinic-review-home",
+      "url": "https://urbancyberdefense.mit.edu/",
+      "title": "MIT Cybersecurity Clinic: public course participation and structure",
+      "source_date": null,
+      "fetched_at": "2026-10-11T05:32:38+00:00",
+      "catalog_year": null,
+      "locator": "Clinic course11.074/11.274 participation and instructional structure",
+      "confidence": "high"
+    },
+    {
+      "id": "mit-ai-clinic-review-news",
+      "url": "https://news.mit.edu/2026/mit-cybersecurity-clinic-preventing-cyberattacks-0713",
+      "title": "How MIT students are helping to prevent cyberattacks",
+      "source_date": "2026-07-13",
+      "fetched_at": "2026-10-11T05:32:40+00:00",
+      "catalog_year": null,
+      "locator": "Clinic course11.074/11.274 participation and instructional structure",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -28280,31 +28300,37 @@
       "id": "mit-ai-hass-urban-11-074",
       "code": "11.074",
       "name": "Cybersecurity Clinic",
-      "description": null,
+      "description": "Students study cyberattack risks and defensive social engineering, then work in teams with public-sector or healthcare clients to assess vulnerabilities and recommend improvements. Technical security practices are combined with organizational capacity, communication and client collaboration.",
       "prerequisites": null,
       "credits": null,
       "credit_unit": "units",
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-urban",
       "url": "https://dusp.mit.edu/undergraduate",
-      "public_site": "https://dusp.mit.edu/undergraduate",
+      "public_site": "https://urbancyberdefense.mit.edu/",
       "syllabus": null,
       "notes": [
-        "Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.",
         "Observed departmental source term/version: not stated. The original list identity is retained.",
-        "Exact original source title/code retained, including dated special-subject topics and compound labels. No alias group, current offering or enrollment permission inferred."
+        "Exact original source title/code retained, including dated special-subject topics and compound labels. No alias group, current offering or enrollment permission inferred.",
+        "The public clinic site states participation is available to registered MIT, Harvard and Wellesley students. The first four weeks include instructional modules and a certification exam; the rest involves a team vulnerability assessment for a real client. This is a conditional course route, not a new fixed degree requirement. Formal prerequisite subjects and credit units are not stated here.",
+        "The July13,2026 official account says students must pass the preparatory exam on the first attempt to receive a field assignment. This is an in-course condition, not an inferred prior-course prerequisite. It describes technical security practice alongside organizational and client work. No current-term offering or approved concentration plan is assumed."
       ],
       "category_review": {
-        "status": "unclassified",
+        "status": "mixed",
         "taxonomy_version": "1",
         "reviewed_at": "2026-10-11",
         "source_ids": [
           "mit-ai-decision-making-bs-hass-urban",
-          "mit-ai-hass-review-list-titles-urban"
+          "mit-ai-clinic-review-home",
+          "mit-ai-clinic-review-news"
         ],
-        "locator": "urban public source / exact 11.074 / Cybersecurity Clinic",
-        "rationale": "Limited official-title-only review: subject balance or printed identity is insufficiently precise to select one category. Technical, methods, performance and variable-topic wording does not certify an underlying computing or other course.",
-        "candidate_categories": []
+        "locator": "Clinic home: Who We Are/Clinic; July13,2026 MITNews: Defensive social engineering/A roadmap for improvement",
+        "rationale": "Actual course account combines technical cybersecurity practices, organizational capacity, client communication and public-service assessment. Mixed systems and human-context/application content does not support a single dominant category; retain other. Enrollment and within-course field assignment conditions are distinct from prior-course prerequisites.",
+        "candidate_categories": [
+          "systems",
+          "human_context",
+          "applications"
+        ]
       }
     },
     {
@@ -49767,7 +49793,7 @@
       "category": "other",
       "source_id": "mit-ai-decision-making-bs-hass-urban",
       "source_text": null,
-      "summary": "The source marks 11.074 Cybersecurity Clinic with an asterisk without explaining it in this section. Its inclusion is a suggested option, not evidence of an additional requirement, current offering or unrestricted eligibility. Confirm any special condition with the department.",
+      "summary": "The suggested-pool source prints an unexplained asterisk on11.074. Preserve it as an unresolved source annotation; it does not itself establish an extra academic requirement. Separate public clinic evidence supplies participation and field-assignment conditions. The advisor-approved three-HASS-subject plan remains controlling.",
       "course_ids": []
     },
     {
@@ -51837,6 +51863,34 @@
       "source_text": null,
       "summary": "The first-year advising page limits its 18.02A route to students who successfully complete 18.01A in the first half of fall. The mathematics department also states general prerequisite equivalence across forms of 18.01; that general statement does not waive the specific sequence condition.",
       "course_ids": []
+    },
+    {
+      "id": "mit-ai-clinic-home",
+      "parent_id": "mit-ai-hass-urban",
+      "title": "Cybersecurity Clinic: participation and structure",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "mit-ai-clinic-review-home",
+      "source_text": null,
+      "summary": "The public clinic site states participation is available to registered MIT, Harvard and Wellesley students. The first four weeks include instructional modules and a certification exam; the rest involves a team vulnerability assessment for a real client. This is a conditional course route, not a new fixed degree requirement. Formal prerequisite subjects and credit units are not stated here.",
+      "course_ids": []
+    },
+    {
+      "id": "mit-ai-clinic-news",
+      "parent_id": "mit-ai-hass-urban",
+      "title": "Cybersecurity Clinic: field-assignment condition",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "mit-ai-clinic-review-news",
+      "source_text": null,
+      "summary": "The July13,2026 official account says students must pass the preparatory exam on the first attempt to receive a field assignment. This is an in-course condition, not an inferred prior-course prerequisite. It describes technical security practice alongside organizational and client work. No current-term offering or approved concentration plan is assumed.",
+      "course_ids": []
     }
   ],
   "notes": [
@@ -51872,7 +51926,8 @@
     "2026-10-11:103 further STS/Anthropology dispositions integrate100 limited title observations and three explicitly supported CMS same-subject descriptions. Same-subject evidence supports bounded content attribution without silently merging all source identities. Changed21A.503/508 andSTS.047 source titles remain held; graduate annotation21A.409 remains conditional.",
     "2026-10-11 policy reconciliation: external HASS Distribution remains prohibited. Examiner recommendations and the final HASS-office signature are a review procedure, not evidence of a granted exception or a source contradiction. Individual approvals are not assumed.",
     "2026-10-11:266 additional Economics and SHASS field-list observations receive limited manual title dispositions. Printed Economics prerequisites and year-specific unavailability are retained; broad methods, music/performance and interdisciplinary titles remain unclassified. No description is inferred from pool membership.",
-    "2026-10-11:142 additional Computing and Society, Ethics, Linguistics, Urban, Education and CMS source-title observations receive bounded manual dispositions. Three malformed printed Ethics labels stay held rather than silently repaired. These are not verified descriptions or newly required degree subjects."
+    "2026-10-11:142 additional Computing and Society, Ethics, Linguistics, Urban, Education and CMS source-title observations receive bounded manual dispositions. Three malformed printed Ethics labels stay held rather than silently repaired. These are not verified descriptions or newly required degree subjects.",
+    "2026-10-11:actual public Cybersecurity Clinic content supplies a mixed course classification, registeredMIT/Harvard/Wellesley participation and first-attempt exam condition for field assignment. The unexplained suggested-pool asterisk is an annotation gap, not evidence of an extra requirement."
   ],
   "curriculum_audit": {
     "scope": "degree",
@@ -51994,7 +52049,6 @@
     "unresolved_requirements": [
       "Reconcile 6.4300 credit discrepancy: chart 15 versus unversioned general CI-M list 12; versioned annotation uses a 4-0-11 breakdown. No publication-date/source-precedence assumption resolves the conflict.",
       "Ethics subject-identity clarification: its concentration list retains 24.120 and 24.237J, while the same page\u2019s major section calls these former numbers for 24.220 and 24.137J. Three printed cross-list labels also contain missing punctuation/concatenation. Both the observed labels and advisor petition route are retained; no automatic renumbering or corrected registration identity is inferred.",
-      "Urban Studies lists 11.074 Cybersecurity Clinic with an unexplained asterisk. The three-subject advisor-approved plan and all nine suggested combinations are represented; the department must clarify any special clinic condition. Suggestions do not imply unrestricted enrollment.",
       "ACT source precedence: its webpage directs Group B to the History of Art portion of a linked legacy page that returns 404, while the current undergraduate page links an ACT PDF with a specific six-subject history pool. The current HTC PDF\u2019s History of Art subgroup is different. Preserve the full ACT PDF plan and separate webpage reference; department clarification is required rather than silently merging or treating the later filename as supersession.",
       "CMS concentration links the full required/elective page, but its external-elective sampling and substitution permission are explicitly framed for majors. The four-HASS-subject criterion and education/media-content exclusion are mapped; the external list is retained only as reference pending concentration-advisor applicability clarification. Printed CMS.614 cross-list punctuation is retained rather than silently repaired.",
       "AP/international-exam applicability for earlier entrants before Fall 2026 remains unresolved."
@@ -52004,7 +52058,8 @@
       "Versioned observations supply248 prerequisite fields and MIT-unit totals. All261 versioned records have manual subject dispositions;13 exact annotations are absent and nine generic special-topic descriptions do not establish content. HASS and separate chart/GIR records remain under their own correctness review; public course sites/syllabi remain separate metadata gaps.",
       "The 6.4300 conflict remains an unknown credit amount; ranges remain ranges and the academic calendar remains unverified.",
       "Additional HASS field listings generally omit subject units, prerequisites and descriptions; only explicitly stated six-unit subjects receive credits. Printed cross-list codes and dated/historical titles are preserved as source observations, not verified current offerings or repaired catalog identities.",
-      "All20 represented GIR records have a manual disposition:19 have some actual departmental/advising content, including the brief18.01L public welcome;8.021 remains unclassified. Full formal prerequisites and detailed descriptions remain unknown where the inspected sources omit them."
+      "All20 represented GIR records have a manual disposition:19 have some actual departmental/advising content, including the brief18.01L public welcome;8.021 remains unclassified. Full formal prerequisites and detailed descriptions remain unknown where the inspected sources omit them.",
+      "Urban11.074 suggested-pool asterisk is unexplained; preserved without inferring an additional academic condition. Public clinic descriptions give participation and within-course field-assignment rules, but no formal prerequisite subjects or units."
     ]
   },
   "course_identity_groups": [

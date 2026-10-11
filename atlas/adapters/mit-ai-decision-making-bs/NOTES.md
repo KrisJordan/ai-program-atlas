@@ -314,3 +314,10 @@ Contributions456a91e, af3540c and8394bd3 add266 guarded manual dispositions from
 Contribution2db7909 adds142 approved title dispositions from Computing and Society, Ethics, Linguistics, Urban Studies, Education and the CMS pool. Three malformed Ethics registration strings stay held, not silently normalized. Broad subjects remain unknown; the observer hashes the actual source titles and never emits a review certification.
 
 The primary seed has1162 manual dispositions:818 HASS comprising142 description-supported occurrences and676 title-only, plus344 other represented records. Five code-only HASS observations remain active,20 identity/version holds and two source-description conflicts remain. Contextual field roles, fixed3 and partial degree status remain unchanged.
+
+
+## Cybersecurity Clinic follow-up — 2026-10-11
+
+Normal robots-aware reads of https://urbancyberdefense.mit.edu/ and the July13,2026 official MITNews course account verify participation for registered MIT/Harvard/Wellesley students and an in-course first-attempt exam condition before field assignment. Technical cybersecurity, organizational capacity, client collaboration and public-service assessment support a mixed judgment, not a purely technical or departmental-title category. Formal prerequisite subjects and units remain unknown. Registered source snapshots are guarded; changed content withdraws the interpretation.
+
+The11.074 asterisk in the suggested concentration pool remains unexplained but is not itself proof of an extra academic condition. It is now a metadata annotation question, not an inventory blocker. The three-HASS-subject advisor-approved plan remains controlling. Primary HASS dispositions now include143 description-supported occurrences and675 title-only; fixed3 is unchanged. Five actual curriculum questions remain, along with explicit metadata/identity boundaries.
