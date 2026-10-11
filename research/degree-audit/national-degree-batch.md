@@ -264,3 +264,7 @@ Fifty actual course blocks yield 43 primary, four mixed and three unclassified s
 ## Stevens fixed-course content closure — 2026-10-11
 
 Independent ordinary-browser review supplied all 20 remaining fixed descriptions plus settled Eligibility panels (40 source observations). The 24 prescribed identities now all have actual content reviews; general software capstones remain foundations and broad CS 101 seminar content remains unclassified. No subject is inferred from the AI degree. CS 583's competing preparation wording and grouped Eligibility expression remain explicit, as do five blank eligibility fields. Institutional unit normalization and remaining options/policy applicability are not certified.
+
+## NJIT history content — 2026-10-11
+
+All 44 named HIST option descriptions were read and independently classified from historical/legal/cultural content. Technical objects and research tools do not change the course's primary historical method. NJIT's chapter has 143 Rutgers history entries without explanatory descriptions; the official SASN history-list route was robots-denied and stopped. These remain unreviewed, with the source boundary recorded precisely rather than claiming all possible Rutgers routes are blocked. Total individually reviewed NJIT records is now 147; comprehensive audit remains in progress.

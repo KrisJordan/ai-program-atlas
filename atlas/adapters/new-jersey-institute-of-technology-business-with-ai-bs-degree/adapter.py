@@ -167,3 +167,7 @@ register_science_subjects(SOURCE_PARSERS)
 from functools import partial
 from atlas.adapters.njit_humanities_subject_reviews import URL as HUMANITIES_URL, combine as combine_humanities
 SOURCE_PARSERS[HUMANITIES_URL] = partial(combine_humanities, SOURCE_PARSERS[HUMANITIES_URL])
+
+from atlas.adapters.njit_history_subject_reviews import URL as HISTORY_URL, parse as parse_history
+SOURCE_PARSERS[HISTORY_URL] = parse_history
+SOURCES = tuple(SOURCE_PARSERS)
