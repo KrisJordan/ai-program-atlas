@@ -105,6 +105,16 @@
       "catalog_year": "2026-2027",
       "locator": "Individually reviewed exact course blocks: PHYS 1151, PHYS 1152, PHYS 1153",
       "confidence": "high"
+    },
+    {
+      "id": "northeastern-chemical-engineering-ai-bsche-chem-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/chem/",
+      "title": "Chemistry and Chemical Biology (CHEM)",
+      "fetched_at": "2026-10-10T23:53:59+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Individually reviewed exact course blocks: CHEM 1151, CHEM 1153",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -618,29 +628,51 @@
       "id": "northeastern-chemical-engineering-ai-bsche-chem-1151",
       "code": "CHEM 1151",
       "name": "General Chemistry for Engineers",
-      "description": null,
+      "description": "Introduces matter, reactions, thermodynamics, equilibrium and electrochemistry for engineering.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 4.0,
       "credit_unit": "semester_hours",
       "category": "applications",
-      "source_id": "northeastern-chemical-engineering-ai-bsche-catalog",
-      "url": "https://catalog.northeastern.edu/search/?P=CHEM%201151",
+      "source_id": "northeastern-chemical-engineering-ai-bsche-chem-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/chem/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northeastern-chemical-engineering-ai-bsche-chem-courses"
+        ],
+        "locator": "CHEM 1151 course block; description and any explicitly accompanying lecture context",
+        "rationale": "States of matter, chemical bonding, thermodynamics, equilibrium and electrochemistry are chemical-science domain content.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "northeastern-chemical-engineering-ai-bsche-chem-1153",
       "code": "CHEM 1153",
       "name": "Recitation for CHEM 1151",
-      "description": null,
+      "description": "Provides guided discussion and practice for engineering chemistry.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 0.0,
       "credit_unit": "semester_hours",
       "category": "applications",
-      "source_id": "northeastern-chemical-engineering-ai-bsche-catalog",
-      "url": "https://catalog.northeastern.edu/search/?P=CHEM%201153",
+      "source_id": "northeastern-chemical-engineering-ai-bsche-chem-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/chem/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northeastern-chemical-engineering-ai-bsche-chem-courses"
+        ],
+        "locator": "CHEM 1153 course block; description and any explicitly accompanying lecture context",
+        "rationale": "The zero-hour recitation discusses the explicitly reviewed general-chemistry problems and assignments of CHEM 1151.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "northeastern-chemical-engineering-ai-bsche-math-1341",

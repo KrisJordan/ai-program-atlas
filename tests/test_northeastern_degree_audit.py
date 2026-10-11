@@ -228,3 +228,19 @@ def test_zero_hour_physics_recitations_remain_distinct_domain_observations():
         assert c['credits']==0 and c['credit_unit']=='semester_hours'
         assert c['category']=='applications' and c['category_review']['status']=='reviewed'
     assert set(found)=={'PHYS 1163','PHYS 1167','PHYS 1193'}
+
+
+@pytest.mark.parametrize('code,expected,status', [
+    ('BIOL 2329','human_context','reviewed'),('BIOL 2407','applications','reviewed'),
+    ('BIOL 3405','applications','reviewed'),('BIOL 4709','applications','reviewed'),
+    ('BIOL 5595','applications','reviewed'),('BIOL 5601','applications','reviewed'),
+    ('BIOL 4701','other','mixed'),('BIOL 4991','other','unclassified'),
+    ('BIOL 4994','other','unclassified'),('CHEM 2321','applications','reviewed'),
+    ('CHEM 4750','other','unclassified')])
+def test_biological_learning_is_not_ai_and_unspecified_research_is_not_inherited(code,expected,status):
+    decision=CATEGORY_DECISIONS[code]
+    assert decision['status']==status
+    assert category(code,decision['name'],decision['guard'])==expected
+    assert category(code,decision['name'],'Different undocumented research subject')=='other'
+    if status=='mixed':assert decision['candidate_categories']==['applications','human_context']
+    if status=='unclassified':assert decision['candidate_categories']==[]
