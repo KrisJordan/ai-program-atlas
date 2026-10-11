@@ -414,3 +414,34 @@ def test_remaining_field_title_snapshot_keeps_performance_and_science_unknown():
     # Foundations in a literature/policy title does not establish programming content.
     assert entry('21L.001')['observations'][-1]['observed_name']=='Foundations of Western Literature: Homer to Dante'
     assert MANIFEST['full_audit_status']=='partial'
+
+
+def test_final_named_lists_keep_technical_and_variable_subjects_unknown():
+    for code in ['24.S00','11.074','11.154','9.00','CMS.603','MAS.110']:
+        o=entry(code)['observations'][-1]
+        assert o['status']=='unclassified' and o['category']=='other'
+        assert o['description_digest'] is None
+    for code in ['24.C40J/6.C40J','24.901','11.148','11.013[J]']:
+        o=entry(code)['observations'][-1]
+        assert o['category']=='human_context'
+    for code in ['STS.021J/WGS160J','STS.022J21A.407J/21G.057J/WGS.275J','17035J/21H.181J']:
+        r=entry(code)
+        assert r['review_status']=='identity_review_needed'
+        assert not r['observations'][-1]['approved_for_integration']
+
+
+@pytest.mark.parametrize('kind,file',[
+    ('computing','atlas-mit-hass-computing.html'),('ethics','atlas-mit-hass-philosophy.html'),
+    ('linguistics','atlas-mit-hass-rest-linguistics.html'),('urban','atlas-mit-hass-rest-urban-studies.html'),
+    ('education','atlas-mit-cmsw-browser-projection-education.html'),('cms_pool','atlas-mit-cmsw-browser-projection-pool.html')])
+def test_remaining_list_title_observations_replay_exact_public_source(kind,file):
+    path=Path('/tmp')/file
+    if not path.exists():
+        pytest.skip('Optional ignored public source capture')
+    rows=review.observe_remaining_list_titles(kind,path.read_text())
+    assert all('category' not in r and r['description'] is None for r in rows)
+    hashes={review.observation_digest(o) for o in rows}
+    saved=[o for r in MANIFEST['courses'].values() for o in r['observations'] if o['source_id']=='mit-ai-hass-review-list-titles-'+kind]
+    assert saved and all(o['observation_digest'] in hashes for o in saved)
+    changed=copy.deepcopy(rows[0]);changed['name']='Unseen changed subject'
+    assert review.observation_digest(changed) not in {o['observation_digest'] for o in saved}

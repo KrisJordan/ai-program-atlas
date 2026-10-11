@@ -129,6 +129,28 @@ def observe_shass_field_titles(key, html):
                  field=module.FIELDS[key]['title']) for row in parsed.get('courses', [])]
 
 
+def observe_remaining_list_titles(kind, html):
+    """Literal observations from named, guarded source lists; no category defaults."""
+    from importlib import import_module
+    parsers = {
+        'computing': ('supplement', 'parse_hass'),
+        'ethics': ('hass_departments', 'parse_philosophy'),
+        'linguistics': ('hass_open_fields', 'parse_linguistics'),
+        'urban': ('hass_open_fields', 'parse_urban'),
+        'education': ('hass_cmsw', 'parse_education'),
+        'cms_pool': ('hass_cmsw', 'parse_pool'),
+        'language_placement': ('hass_languages', 'parse_placement'),
+        'music': ('hass_music_theater', 'parse_music'),
+    }
+    if kind not in parsers:
+        raise ValueError('Unknown reviewed subject-list source')
+    module, name = parsers[kind]
+    parser = getattr(import_module('atlas.adapters.mit-ai-decision-making-bs.' + module), name)
+    return [dict(listed_id=row['id'], code=row['code'], name=row.get('name'),
+                 description=None, prerequisites=None, units=None, term=None,
+                 source_kind=kind) for row in parser(html).get('courses', [])]
+
+
 def observe_literature(html):
     soup = BeautifulSoup(html, 'html.parser')
     selected = soup.find('select', attrs={'name': 'semester'})
