@@ -142,3 +142,42 @@ def test_psu_whole_programming_and_capstone_routes_stay_grouped():
     assert 'DS 305' in courses['A-I 370']['prerequisites']
     # A condition to enroll in a core course does not promote its candidate courses.
     assert 'psu-ds-305' in entry(IST)['expected_course_ids']['options']
+
+
+def test_rice_registration_permission_does_not_certify_credit_or_whole_degree():
+    e = entry('rice-university-artificial-intelligence-bs-degree')
+    findings = {f['id']: f for f in e['policy_findings']}
+    assert findings['statistics-prerequisite-routes']['classification'] == 'conditional_permission'
+    vision = findings['vision-mutual-exclusion']
+    assert vision['classification'] == 'conditional_permission_with_credit_question'
+    assert 'credit' in vision['unresolved_scope']
+    assert 'https://registrar.rice.edu/students/common-errors' in vision['source_urls']
+    assert 'https://registrar.rice.edu/students/reg_repeated_courses' in vision['source_urls']
+    assert e['expected_profile'] is None  # A policy pass is not an all-course re-audit.
+    assert e['second_pass_status'] == 'partial' and not e['full_degree_verified']
+
+
+def test_rice_statistics_route_preparation_is_not_promoted_to_fixed_requirement():
+    p = load('rice-university-artificial-intelligence-bs-degree')
+    courses = {c['code']: c for c in p['courses']}
+    for code in ['STAT 310', 'STAT 311', 'STAT 314', 'STAT 315']:
+        isolated = {**p, 'courses': [courses[code]], 'course_identity_groups': []}
+        profile = requirement_profile(isolated)
+        assert profile['required']['count'] == 0
+        assert profile['options']['count'] == 1
+    for code in ['COMP 345', 'COMP 346']:
+        assert 'STAT 315' in courses[code]['prerequisites']
+    assert 'STAT 310' in courses['STAT 314']['prerequisites']
+    # Credit exclusion is neither reciprocal cross-list proof nor a waiver.
+    assert not any({courses['COMP 345']['id'], courses['COMP 447']['id']} <= set(g['course_ids'])
+                   for g in p['course_identity_groups'])
+
+
+def test_rice_residence_scope_is_not_rewritten_as_a_transfer_only_exception():
+    e = entry('rice-university-artificial-intelligence-bs-degree')
+    finding = next(f for f in e['policy_findings'] if f['id'] == 'summer-residence')
+    assert finding['classification'] == 'unresolved_source_conflict'
+    assert 'not a distinct stricter transfer-only policy' in finding['conclusion']
+    assert len(finding['source_urls']) == 5
+    assert any('/graduation-requirements/' in u for u in finding['source_urls'])
+    assert any('/transfer-credit/' in u for u in finding['source_urls'])

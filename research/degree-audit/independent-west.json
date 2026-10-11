@@ -930,6 +930,214 @@
         }
       ],
       "correction_status": "Four primary-reviewed identities independently confirmed in both course-description directions; no further merge inferred."
+    },
+    {
+      "program_id": "rice-university-artificial-intelligence-bs-degree",
+      "institution_id": "rice-university",
+      "primary_audit": "research/degree-audit/rice.json",
+      "reviewed_commits": [
+        "2508e11"
+      ],
+      "status": "blocked",
+      "second_pass_status": "partial",
+      "full_degree_verified": false,
+      "verified_scope": "Independent closure pass on three policy questions and their university-wide applicability. The complete major table and linked graduation/transfer/registration policies were reread; this entry does not claim another independent read of all 43 subject descriptions. Earlier comprehensive course/aggregate second pass remains in independent-review.json.",
+      "sources": [
+        {
+          "url": "https://ga.rice.edu/programs-study/departments-programs/engineering/artificial-intelligence/artificial-intelligence-bs/",
+          "catalog_year": "2026-2027",
+          "locator": "Entire degree Requirements and Policies tabs; statistics bundles, required AI core, perception elective, university-policy links",
+          "checked_at": "2026-10-11",
+          "access_status": "Official public content read; GA originals independently reread from existing normal-fetch cache, registrar pages read through public web and four policy pages saved with robots-aware Fetcher."
+        },
+        {
+          "url": "https://ga.rice.edu/programs-study/courses/comp/",
+          "catalog_year": "2026-2027",
+          "locator": "COMP345,346,447 complete course blocks, prerequisites and restrictions",
+          "checked_at": "2026-10-11",
+          "access_status": "Official public content read; GA originals independently reread from existing normal-fetch cache, registrar pages read through public web and four policy pages saved with robots-aware Fetcher."
+        },
+        {
+          "url": "https://ga.rice.edu/programs-study/courses/stat/",
+          "catalog_year": "2026-2027",
+          "locator": "STAT310,311,314,315 complete course blocks, prerequisites and restrictions",
+          "checked_at": "2026-10-11",
+          "access_status": "Official public content read; GA originals independently reread from existing normal-fetch cache, registrar pages read through public web and four policy pages saved with robots-aware Fetcher."
+        },
+        {
+          "url": "https://ga.rice.edu/undergraduate-students/academic-policies-procedures/graduation-requirements/",
+          "catalog_year": "2026-2027",
+          "locator": "All-bachelor requirements, residency footnotes, general education, applicable catalog and degree application",
+          "checked_at": "2026-10-11",
+          "access_status": "Official public content read; GA originals independently reread from existing normal-fetch cache, registrar pages read through public web and four policy pages saved with robots-aware Fetcher."
+        },
+        {
+          "url": "https://ga.rice.edu/undergraduate-students/academic-policies-procedures/transfer-credit/",
+          "catalog_year": "2026-2027",
+          "locator": "Entire transfer policy, especially general graduation reminder and pre/postmatriculation scope",
+          "checked_at": "2026-10-11",
+          "access_status": "Official public content read; GA originals independently reread from existing normal-fetch cache, registrar pages read through public web and four policy pages saved with robots-aware Fetcher."
+        },
+        {
+          "url": "https://ga.rice.edu/undergraduate-students/academic-policies-procedures/registration/",
+          "catalog_year": "2026-2027",
+          "locator": "Entire registration policy, especially full-time summer status, out-of-level permission and repeat credit",
+          "checked_at": "2026-10-11",
+          "access_status": "Official public content read; GA originals independently reread from existing normal-fetch cache, registrar pages read through public web and four policy pages saved with robots-aware Fetcher."
+        },
+        {
+          "url": "https://registrar.rice.edu/students/common-errors",
+          "catalog_year": null,
+          "locator": "Mutually Exclusive, Prerequisite and Test Score, Repeat Acknowledgment rows",
+          "checked_at": "2026-10-11",
+          "access_status": "Official public content read; GA originals independently reread from existing normal-fetch cache, registrar pages read through public web and four policy pages saved with robots-aware Fetcher."
+        },
+        {
+          "url": "https://registrar.rice.edu/students/special-registration",
+          "catalog_year": null,
+          "locator": "Instructor permission categories; electronic override request procedure",
+          "checked_at": "2026-10-11",
+          "access_status": "Official public content read; GA originals independently reread from existing normal-fetch cache, registrar pages read through public web and four policy pages saved with robots-aware Fetcher."
+        },
+        {
+          "url": "https://registrar.rice.edu/students/reg_repeated_courses",
+          "catalog_year": null,
+          "locator": "Nonrepeatable courses and cross-listed/equivalent credit rules",
+          "checked_at": "2026-10-11",
+          "access_status": "Official public content read; GA originals independently reread from existing normal-fetch cache, registrar pages read through public web and four policy pages saved with robots-aware Fetcher."
+        },
+        {
+          "url": "https://registrar.rice.edu/students/registration-FAQs",
+          "catalog_year": null,
+          "locator": "Prerequisite exception answer",
+          "checked_at": "2026-10-11",
+          "access_status": "Official public content read; GA originals independently reread from existing normal-fetch cache, registrar pages read through public web and four policy pages saved with robots-aware Fetcher."
+        },
+        {
+          "url": "https://registrar.rice.edu/students/preparing-for-graduation",
+          "catalog_year": null,
+          "locator": "Undergraduate university/department certification and pending residency status",
+          "checked_at": "2026-10-11",
+          "access_status": "Official public content read; GA originals independently reread from existing normal-fetch cache, registrar pages read through public web and four policy pages saved with robots-aware Fetcher."
+        },
+        {
+          "url": "https://registrar.rice.edu/students/degreeworks",
+          "catalog_year": null,
+          "locator": "Audit scope and Official Certifier substitution/exception role",
+          "checked_at": "2026-10-11",
+          "access_status": "Official public content read; GA originals independently reread from existing normal-fetch cache, registrar pages read through public web and four policy pages saved with robots-aware Fetcher."
+        },
+        {
+          "url": "https://registrar.rice.edu/students/transfer-credit/undergraduate",
+          "catalog_year": null,
+          "locator": "Entire undergraduate transfer guidance; no reconciliation of semester residence wording",
+          "checked_at": "2026-10-11",
+          "access_status": "Official public content read; GA originals independently reread from existing normal-fetch cache, registrar pages read through public web and four policy pages saved with robots-aware Fetcher."
+        }
+      ],
+      "checks": {
+        "degree_identity": "Official BS with a Major in Artificial Intelligence; independent major-table and policy-scope reread.",
+        "required_and_choices": "Required COMP345/346 stay fixed; STAT315 and STAT314 remain route options. Prerequisite exceptions do not add them as universal obligations.",
+        "elective_pools": "COMP447 remains a published choice with conditional registration and unresolved dual-credit applicability; it is not removed or promoted to fixed.",
+        "prerequisites": "Approved exceptions are expressly possible for COMP345/346 entry after alternate statistics routes and STAT314 entry after STAT311; an individual approval is not presumed.",
+        "credits_and_units": "Registration permission and degree-credit entitlement are separate. No extra credit total or equivalence is inferred from mutual exclusion.",
+        "classification": "No course subject changes; all-course classifications were not independently re-reviewed in this bounded policy pass.",
+        "family_composition": "No family composition applies.",
+        "degree_wide_requirements": "The major links the university GA policies. Graduation permits one summer within four full-time semesters; the transfer summary says fall/spring only without stating a separate cohort rule. Same-GA disagreement persists."
+      },
+      "expected_profile": null,
+      "expected_profile_scope": "Manual aggregate and all-course subject second pass recorded by the independent frontend reviewer; no profile call or copied primary set is presented here as new independent verification.",
+      "policy_findings": [
+        {
+          "id": "statistics-prerequisite-routes",
+          "classification": "conditional_permission",
+          "resolved_scope": "Enrollment mechanism",
+          "unresolved_scope": "Individual approval is not certified",
+          "source_urls": [
+            "https://ga.rice.edu/programs-study/departments-programs/engineering/artificial-intelligence/artificial-intelligence-bs/",
+            "https://ga.rice.edu/programs-study/courses/comp/",
+            "https://ga.rice.edu/programs-study/courses/stat/",
+            "https://registrar.rice.edu/students/common-errors",
+            "https://registrar.rice.edu/students/special-registration",
+            "https://registrar.rice.edu/students/registration-FAQs"
+          ],
+          "conclusion": "Students using STAT310/314 or STAT311/314 can request missing-prerequisite overrides for required COMP345/346; the STAT311/314 route also needs an approved STAT314 prerequisite exception. This does not require earning STAT315 after an excluded statistics course, establish automatic substitution, or add a universal fixed course."
+        },
+        {
+          "id": "vision-mutual-exclusion",
+          "classification": "conditional_permission_with_credit_question",
+          "resolved_scope": "An instructor-approved mutual-exclusion registration override is expressly available",
+          "unresolved_scope": "Whether credit for COMP447 may count alongside required COMP345 is not expressly answered by the inspected policies",
+          "source_urls": [
+            "https://ga.rice.edu/programs-study/departments-programs/engineering/artificial-intelligence/artificial-intelligence-bs/",
+            "https://ga.rice.edu/programs-study/courses/comp/",
+            "https://registrar.rice.edu/students/common-errors",
+            "https://registrar.rice.edu/students/reg_repeated_courses",
+            "https://ga.rice.edu/undergraduate-students/academic-policies-procedures/registration/",
+            "https://registrar.rice.edu/students/degreeworks"
+          ],
+          "conclusion": "The published option and reciprocal registration exclusions can coexist through conditional permission. Permission alone does not establish extra earned credit. A mutual-exclusion relationship is not sufficient evidence to merge course identities or declare them cross-listed/equivalent."
+        },
+        {
+          "id": "summer-residence",
+          "classification": "unresolved_source_conflict",
+          "resolved_scope": "Full-time summer status exists; both paragraphs were read in their full policy scope",
+          "unresolved_scope": "Applicable summer eligibility in the four-semester residence minimum",
+          "source_urls": [
+            "https://ga.rice.edu/undergraduate-students/academic-policies-procedures/graduation-requirements/",
+            "https://ga.rice.edu/undergraduate-students/academic-policies-procedures/transfer-credit/",
+            "https://ga.rice.edu/undergraduate-students/academic-policies-procedures/registration/",
+            "https://registrar.rice.edu/students/preparing-for-graduation",
+            "https://registrar.rice.edu/students/transfer-credit/undergraduate"
+          ],
+          "conclusion": "The transfer wording is introduced as a summary of general graduation rules, not a distinct stricter transfer-only policy. The GA-over-other-websites hierarchy does not resolve disagreement between two GA pages; registrar process pages supply no reconciliation."
+        }
+      ],
+      "discrepancies": [
+        {
+          "issue": "Earlier unresolved prerequisite/mutual-exclusion questions omitted a published registration exception mechanism.",
+          "correction": "Register the exact approval route while retaining individual approval and degree-credit limits.",
+          "status": "Reported to primary owner; primary seed/parser correction coordinated separately.",
+          "evidence_urls": [
+            "https://registrar.rice.edu/students/common-errors",
+            "https://registrar.rice.edu/students/special-registration"
+          ]
+        },
+        {
+          "issue": "Residence scope could be incorrectly explained as a transfer-only exception.",
+          "correction": "Keep the explicit same-GA wording disagreement; do not invent a special transfer-student cohort rule.",
+          "status": "Unresolved after independent whole-paragraph review.",
+          "evidence_urls": [
+            "https://ga.rice.edu/undergraduate-students/academic-policies-procedures/graduation-requirements/",
+            "https://ga.rice.edu/undergraduate-students/academic-policies-procedures/transfer-credit/"
+          ]
+        }
+      ],
+      "blockers": [
+        {
+          "issue": "Four-semester residence wording remains inconsistent inside the 2026\u201327 GA.",
+          "url": "https://ga.rice.edu/undergraduate-students/academic-policies-procedures/graduation-requirements/",
+          "related_urls": [
+            "https://ga.rice.edu/undergraduate-students/academic-policies-procedures/transfer-credit/",
+            "https://ga.rice.edu/undergraduate-students/academic-policies-procedures/registration/"
+          ]
+        },
+        {
+          "issue": "Published COMP447 option has a registration-override path, but degree-credit applicability alongside COMP345 remains unverified.",
+          "url": "https://ga.rice.edu/programs-study/courses/comp/",
+          "related_urls": [
+            "https://registrar.rice.edu/students/common-errors",
+            "https://registrar.rice.edu/students/reg_repeated_courses",
+            "https://ga.rice.edu/programs-study/departments-programs/engineering/artificial-intelligence/artificial-intelligence-bs/"
+          ]
+        }
+      ],
+      "correction_status": "No primary seed/adapter changes by this reviewer. Exact new policy evidence supplied to primary owner.",
+      "access_notes": [
+        "Normal public pages only; no ESTHER, Degree Works or NetID login used and no people contacted.",
+        "Initial local Fetcher attempts failed on network transport; approved ordinary network execution then fetched four registrar pages successfully at 03:44 UTC.",
+        "Senate homepage returned an HTTP 500 through the web tool; no conclusion drawn from its unavailability. No restricted route was bypassed."
+      ]
     }
   ]
 }
