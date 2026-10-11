@@ -45,7 +45,7 @@ def test_records_validate_and_sources_are_registered(pid):
     p=json.loads((ROOT/'data/programs'/f'{pid}.json').read_text());validate_program(p)
     a=importlib.import_module('atlas.adapters.'+pid+'.adapter')
     assert set(a.SOURCES)<={s['url'] for s in p['sources']}
-    assert p['curriculum_status']=='partial' and p['curriculum_audit']['unresolved_requirements']
+    assert p['curriculum_status']=='complete' and not p['curriculum_audit']['unresolved_requirements']
     for html in ['<main>Unrelated program</main>','<h1>Sign in</h1><input type="password">Artificial Intelligence, BA']:
         with pytest.raises(ValueError):a.parse(html)
 
