@@ -80,3 +80,7 @@ Course 405 is explicitly one credit; CSC 410–412 are variable 1–3 credits an
 ## 2026-10-11 contextual content review continuation
 
 Actual complete source blocks now supply further cognate-course metadata and manual content reviews. The four-degree batch adds 131 observations from 42 reread blocks, preserving original contextual roles, explicit nonbusiness/credit exclusions and source-version boundaries. A reviewed CSC 506 in the BA contextual inventory does not become a BA primary-table option. See research/miami-context-course-review.md and the exact running queue research/miami-description-review-remaining.json. Accessible remaining descriptions and whole-degree policies stay in progress.
+
+## 2026-10-11 transfer-scope correction
+
+Supersedes earlier summer-conflict wording: the complete current source separately regulates enrollment, transfer-credit acceptance and financial aid. Excluding summer from an enrollment prohibition does not grant transfer credit; the explicit UM Session A/outside Session B credit exclusion is preserved. This is not a contradictory permission grant and is removed as a standalone blocker. The current MATES rule requires evaluation and reserves the right to reject work lacking preapproval, rather than guaranteeing approval or asserting every such request is categorically impossible. Source-specific full-policy guard emits the two corrected existing note nodes with stable IDs. Other source questions and accessible course-review work remain in progress.

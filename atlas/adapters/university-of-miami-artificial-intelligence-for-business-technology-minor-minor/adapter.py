@@ -10,3 +10,6 @@ from atlas.adapters.miami_policies import register
 SOURCES=list(SOURCES)
 SOURCE_PARSERS={SOURCES[0]:parse}
 register(PROGRAM_ID,SOURCES,SOURCE_PARSERS,minor=True,business=True)
+
+from atlas.adapters.miami_transfer_scope import register as register_transfer_scope
+register_transfer_scope(PROGRAM_ID,SOURCES,SOURCE_PARSERS)

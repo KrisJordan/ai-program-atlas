@@ -31,7 +31,7 @@ def test_scoped_sources_units_and_conflicts(pid):
     if d['program_kind']=='degree':codes+=['graduation','general','writing','undergraduate']
     assert all(SPECS[k][0] in module.SOURCE_PARSERS and SPECS[k][0] in module.SOURCES for k in codes)
     assert d['curriculum_status']=='partial'
-    assert any('inconsistent summer' in x for x in d['curriculum_audit']['unresolved_requirements'])
+    assert not any('inconsistent summer' in x for x in d['curriculum_audit']['unresolved_requirements'])
     assert all(x['credit_unit']=='semester_hours' for x in d['courses']+d['requirements'] if x['credits'] is not None)
     assert any('second grade' in r['summary'] and 'lower' in r['summary'] for r in d['requirements'])
     if d['program_kind']=='minor':

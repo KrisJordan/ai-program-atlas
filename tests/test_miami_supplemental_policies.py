@@ -38,7 +38,7 @@ def test_seed_applicability_and_remaining_conflicts(pid):
  m=importlib.import_module('atlas.adapters.'+pid+'.adapter')
  assert a.COGNATES in m.SOURCE_PARSERS and a.INDIVIDUALIZED in m.SOURCE_PARSERS
  assert (a.LANGUAGES in m.SOURCE_PARSERS)==('data-science' in pid)
- assert d['curriculum_status']=='partial' and any('inconsistent summer' in x for x in d['curriculum_audit']['unresolved_requirements'])
+ assert d['curriculum_status']=='partial' and not any('inconsistent summer' in x for x in d['curriculum_audit']['unresolved_requirements'])
  assert any('open route' in x for x in d['curriculum_audit']['unresolved_requirements'])
  assert len([c for c in d['courses'] if c['source_id']==a.SOURCE_IDS['languages']])==(4 if 'data-science' in pid else 0)
 

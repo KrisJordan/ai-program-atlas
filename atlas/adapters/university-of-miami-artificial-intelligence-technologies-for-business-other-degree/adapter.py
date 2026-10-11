@@ -28,3 +28,6 @@ register_named_options(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
 
 from atlas.adapters.miami_context_course_reviews import register as register_context_courses
 register_context_courses(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
+
+from atlas.adapters.miami_transfer_scope import register as register_transfer_scope
+register_transfer_scope(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
