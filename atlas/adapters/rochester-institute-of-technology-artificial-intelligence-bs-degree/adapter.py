@@ -102,3 +102,11 @@ url = 'https://www.rit.edu/study/religious-studies-immersion'
 if url not in SOURCES:
     SOURCES.append(url)
 SOURCE_PARSERS[url] = partial(parse_immersion_rules, title='Religious Studies Immersion')
+
+from atlas.adapters.rit_performance_course_reviews import parse as parse_performance_cards
+from atlas.adapters.rit_music_harmonica_course import parse_composed as parse_music_cards
+for slug in ['dance-immersion', 'music-immersion', 'theatre-arts-immersion', 'theatre-design-and-stagecraft-immersion']:
+    url = 'https://www.rit.edu/study/' + slug
+    if url not in SOURCES:
+        SOURCES.append(url)
+    SOURCE_PARSERS[url] = parse_music_cards if slug == 'music-immersion' else partial(parse_performance_cards, url=url)

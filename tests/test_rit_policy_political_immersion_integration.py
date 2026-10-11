@@ -36,7 +36,7 @@ def test_local_rules_preserve_whole_menus_credits_and_ai_overlap():
     assert PID+'-math-241' not in r['quantum-information-science-and-technology-immersion-group-2']['course_ids']
     assert c['PUBL-589']['credits'] is None and c['SOIS-333']['credits']==3
     profile=requirement_profile(d)
-    assert [profile[k]['count'] for k in ['required','options','unresolved']]==[23,591,15]
-    assert len(c)==629 and sum(bool(x['description']) for x in c.values())==626
+    assert [profile[k]['count'] for k in ['required','options','unresolved']]==[23,641,15]
+    assert len(c)==679 and sum(bool(x['description']) for x in c.values())==676
     sources=[];parsers={};register(sources,parsers);register(sources,parsers)
     assert len(sources)==len(set(sources)) and set(sources)<={s['url'] for s in d['sources']}
