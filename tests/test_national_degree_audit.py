@@ -92,7 +92,10 @@ def test_psu_manual_course_sets_do_not_import_prerequisites_or_other_campus(pid,
  assert not required&options
  profile=requirement_profile(p)
  assert profile['required']['count']==len(required)
- assert profile['options']['count']==len(options)
+ canonical_options=options-({'CMPSC410','CMPSC442','STAT318','STAT414'} if 'methods' in pid else set())
+ assert profile['options']['count']==len(canonical_options)
+ assert profile['options']['source_record_count']==len(options)
+ assert {k:v for k,v in profile['options']['categories'].items() if v}==Counter(courses[code]['category'] for code in canonical_options)
  assert profile['unresolved']['count']==0
  assert 'CMPSC330' not in courses  # Prerequisite of a listed option, not a major row.
  assert 'MGMT301' not in courses  # Commonwealth-campus-only business focus.
@@ -135,3 +138,22 @@ def test_psu_sequence_alternative_parser_synthetic():
  assert 'curriculum_audit' not in result
  with pytest.raises(ValueError,match='course table missing'):
   parse_degree(html.replace('sc_courselist','other'),pid)
+
+
+def test_psu_real_identity_export_preserves_unproved_slash_pairs(tmp_path):
+ from atlas import db
+ p=json.loads(Path('data/programs/penn-state-ai-methods-applications-ist-bs.json').read_text())
+ conn=db.connect(tmp_path/'psu.sqlite');db.migrate(conn)
+ db.ingest_program(conn,p)
+ exported=db.export_data(conn)['programs'][0]
+ assert exported['course_identity_groups']==p['course_identity_groups']
+ assert len(exported['courses'])==169
+ profile=requirement_profile(exported)
+ assert profile['identity']==dict(source_records=169,mapped_identities=165,crosslisted_aliases=4,reviewed_groups=4)
+ assert profile['options']['count']==156
+ assert profile['options']['source_record_count']==160
+ grouped={cid for g in p['course_identity_groups'] for cid in g['course_ids']}
+ bycode={c['code'].replace(' ',''):c['id'] for c in p['courses']}
+ assert not {bycode[c] for c in ('IST301','ETI301','IST302','ETI302','PLSC418','PLSC418W')}&grouped
+ assert not conn.execute('PRAGMA foreign_key_check').fetchall()
+ conn.close()

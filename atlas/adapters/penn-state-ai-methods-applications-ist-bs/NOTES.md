@@ -41,6 +41,27 @@ technical pool need explicit resolution; neither is inferred.
 
 Senate 83-80 currently announces June 23, 2026 revisions with implementation
 pending, while displaying residence/time rules. Effective cohort applicability
-and stricter college conditions remain unresolved. These source questions keep
-the whole-degree audit blocked even though the observed graph is substantially
-more complete. Public course sites/syllabi remain separate metadata work.
+and stricter college conditions remain unresolved. These source questions remain an in-progress policy review; non-core
+prerequisites alone are not contradictory degree obligations. Public course sites/syllabi remain separate metadata work.
+
+### Audit status clarification
+
+The whole-degree correctness review is **in progress**, not access-blocked.
+Non-core prerequisites are known conditional preparation, not contradictory
+degree rules; they do not independently prevent verification. The authoritative
+program table controls capstone grouping, and the illustrative semester plan does
+not grant additional mixed-route permission. College/policy applicability and
+supporting-course descriptive evidence remain accessible work to finish.
+
+### Explicit code aliases
+
+The 160 option **code** identities are not 160 distinct offerings. Current course
+blocks reciprocally confirm four cross-listed pairs: DS410/CMPSC410,
+DS442/CMPSC442, MATH318/STAT318, and MATH414/STAT414. All eight records remain,
+with four manually reviewed identity groups; the known canonical option count
+is **156**. This is still a named inventory, not a student course load.
+
+IST301/ETI301 and IST302/ETI302 are only slash-paired in the degree table. The
+current ETI descriptions do not assert cross-listing, and the current IST
+listing lacks the old codes. They remain separate until an authoritative
+equivalence statement is found; they must not be merged from matching titles.

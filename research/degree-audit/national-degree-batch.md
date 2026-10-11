@@ -30,7 +30,7 @@ of prescribed/depth CSE courses inside the additional open elective allocation.
 Course prerequisites outside the displayed core are enrollment conditions, not
 silent additions. Those exact questions prevent whole-degree audit completion.
 
-## Penn State University Park: empty graphs replaced; policy conflicts remain
+## Penn State University Park: empty graphs replaced; policy review in progress
 
 Engineering's primary table has five prescribed rows followed by twelve
 C-minimum prescribed rows: **17 fixed**. Its named alternatives are three
@@ -40,8 +40,8 @@ The 27-hour technical and three-hour nontechnical pools are not supplied by the
 inspected department/degree pages and remain explicit gaps.
 
 IST's prescribed table has **9 fixed** identities. The manual named option union
-has **160** identities: the core alternatives, full technical list and applicable
-University Park application-focus lists, deduplicated by exact identity. The
+has **160 code records**: the core alternatives, full technical list and applicable
+University Park application-focus lists, deduplicated by exact code. The
 explicit sets in the test and JSON ledger are independently transcribed; the
 profile implementation did not generate them. Eleven supporting codes are printed
 without a linked course description; ignoring unlinked spans would lose actual
@@ -56,9 +56,34 @@ current enrollment rules expose preparation not in the displayed core. A-I 370
 is particularly material for Engineering: its explicit CMPSC132, STAT200/DS200
 and concurrent DS305/CMPSC465/CMPSC462 conditions differ from the published route.
 Prerequisites remain enrollment metadata, never silently added degree obligations.
-IST also has a table-versus-plan ambiguity about mixed capstone/research routes.
+The authoritative IST capstone table specifies the full AIMA 430/440 sequence; the illustrative plan does not establish a mixed capstone/research route.
 
 Senate83-80 displays a June 23, 2026 revision with implementation pending, alongside
 residence/time rules. Effective cohort applicability requires resolution. These
-specific source questions block whole-degree certification; unreviewed supporting
+policy-applicability questions remain under review; unreviewed supporting
 course metadata remains ordinary accessible work, not a claimed access restriction.
+
+### Penn State status clarification
+
+Both Penn State audits are **in progress**. Missing core coverage of a prerequisite
+is a conditional preparation requirement, not a contradiction. The course rules
+remain in metadata without adding them to fixed-course counts. The authoritative
+capstone table controls; illustrative semester placement is not a new eligibility
+route. Remaining accessible college, policy-version and supporting-description
+checks are unfinished research, not an access denial or automatic blocker.
+
+### Penn State corroborated cross-list identity review
+
+Reciprocal course blocks explicitly identify DS410/CMPSC410, DS442/CMPSC442,
+MATH318/STAT318 and MATH414/STAT414 as cross-listed. All eight source records
+remain, with matching manually reviewed subjects and four evidence-backed groups.
+The independently transcribed option set removes only CMPSC410, CMPSC442,
+STAT318 and STAT414 as aliases of the selected canonical records: **156 option
+identities from 160 code records**, plus nine fixed identities, or **165 mapped
+identities from 169 total records**. The actual SQLite export round trip is tested.
+
+The degree table also slash-pairs IST301/ETI301 and IST302/ETI302. Current ETI
+blocks do not declare cross-listing; the current IST directory lacks those codes.
+Neither pair is merged. PLSC418/418W are alternatives, not established aliases.
+Thus 165 is the current evidence-backed mapped count, not a certification that
+every potential historical identity relationship has been resolved.

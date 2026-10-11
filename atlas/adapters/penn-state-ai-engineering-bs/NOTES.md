@@ -32,6 +32,14 @@ those lists. They remain an incomplete finite pool, not all CSE courses.
 
 Senate 83-80 currently announces June 23, 2026 revisions with implementation
 pending, while displaying residence/time rules. Effective cohort applicability
-and stricter college conditions remain unresolved. These source questions keep
-the whole-degree audit blocked even though the observed graph is substantially
-more complete. Public course sites/syllabi remain separate metadata work.
+and stricter college conditions remain unresolved. These source questions remain an in-progress policy review; non-core
+prerequisites alone are not contradictory degree obligations. Public course sites/syllabi remain separate metadata work.
+
+### Audit status clarification
+
+The whole-degree correctness review is **in progress**, not access-blocked.
+Non-core prerequisites are known conditional preparation, not contradictory
+degree rules; they do not independently prevent verification. The authoritative
+program table controls capstone grouping, and the illustrative semester plan does
+not grant additional mixed-route permission. College/policy applicability and
+supporting-course descriptive evidence remain accessible work to finish.
