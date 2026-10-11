@@ -101,3 +101,45 @@ def parse_department_policies(html):
 SOURCE_PARSERS = {url:(lambda html,p=profile:parse_policy(html,p)) for url,profile in POLICY_PROFILES.items()}
 SOURCE_PARSERS[DEPARTMENT]=parse_department_policies
 SOURCES = SOURCES + tuple(POLICY_PROFILES) + (DEPARTMENT,)
+
+COURSE_PROFILES=json.loads(Path(__file__).with_name('reviewed-courses.json').read_text())
+CREDIT_PROFILE=json.loads(Path(__file__).with_name('reviewed-credit-policy.json').read_text())
+
+def parse_course_metadata(html,profile):
+    soup=BeautifulSoup(html,'html.parser')
+    for noise in soup.find_all(['nav','footer','script','style']):noise.decompose()
+    main=soup.find(id='main')
+    if main is None or main.h1 is None or ' '.join(main.h1.get_text(' ',strip=True).split())!=profile['code']+' '+profile['name']:
+        raise ValueError('Exact Yeshiva course code/title missing')
+    descriptions=main.select('.desc');amounts=main.select('.sc_credits .credits')
+    if len(descriptions)!=1 or len(amounts)!=1:
+        raise ValueError('Ambiguous course description/credit structure')
+    if any(n.get_text(' ',strip=True) for n in main.select('.sc_prereqs, .sc_coreqs')):
+        raise ValueError('New separately structured requisites need review')
+    residual=BeautifulSoup(str(main),'html.parser')
+    for node in residual.select('h1, .desc, .sc_credits, .sc_prereqs, .sc_coreqs'):
+        node.decompose()
+    if residual.get_text(' ',strip=True):
+        raise ValueError('New course restrictions or prose require review')
+    text=' '.join(descriptions[0].get_text(' ',strip=True).split())
+    parts=re.split(r'Prerequisites?\(s\):',text,maxsplit=1)
+    if policy_digest(parts[0].strip())!=profile['description_sha256']:
+        raise ValueError('Changed course narrative requires new summary review')
+    requisites=parts[1].strip() if len(parts)==2 else None
+    # A source page with no requisite statement remains unknown, not "none".
+    # Preserve corequisite and prerequisite-or-corequisite alternatives in the text.
+    credits=amounts[0].get_text(' ',strip=True)
+    if not re.fullmatch(r'\d+(?:\.\d+)?',credits):
+        raise ValueError('Unrecognized course credits')
+    cid=PROGRAM_ID+'-'+profile['code'].lower().replace(' ','-')
+    course=dict(id=cid,code=profile['code'],name=profile['name'],description=profile['description'],prerequisites=requisites,credits=float(credits),credit_unit='unknown',category='other',source_id=profile['source_id'],url=next((url for url,p in COURSE_PROFILES.items() if p['source_id']==profile['source_id']),None),public_site=None,syllabus=None)
+    return dict(id=PROGRAM_ID,courses=[course])
+
+def parse_credit_policy_pdf_text(text):
+    if policy_digest(text)!=CREDIT_PROFILE['sha256']:
+        raise ValueError('Changed institutional credit policy requires review')
+    return dict(id=PROGRAM_ID,notes=[CREDIT_PROFILE['summary']])
+
+CREDIT_POLICY_PDF_TEXT_PARSER=parse_credit_policy_pdf_text
+SOURCE_PARSERS.update({url:(lambda html,p=profile:parse_course_metadata(html,p)) for url,profile in COURSE_PROFILES.items()})
+SOURCES=SOURCES+tuple(COURSE_PROFILES)+('https://yu.smartcatalogiq.com/en/current/university-catalog/university-policies/undergraduate-policies/credit-hour-policy','https://www.yu.edu/provost/policies')
