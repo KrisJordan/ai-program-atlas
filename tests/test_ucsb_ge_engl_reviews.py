@@ -10,11 +10,13 @@ from atlas.adapters import ucsb_ge_engl_reviews as m
 def test_manual_english_content_decisions_and_precise_evidence_limits():
     e={e['code']:e for e in m.SPEC['entries']}
     assert len(e)==121
-    assert sum(x['category_review']['status']=='reviewed'for x in e.values())==107
+    assert sum(x['category_review']['status']=='reviewed'for x in e.values())==108
     assert {c for c,x in e.items()if x['category_review']['status']=='unclassified'}=={'ENGL 65AA','ENGL 122WE','ENGL 131AW'}
-    assert sum(x['category_review']['status']=='mixed'for x in e.values())==11
+    assert sum(x['category_review']['status']=='mixed'for x in e.values())==10
     assert set(e['ENGL 102QA']['category_review']['candidate_categories'])=={'human_context','mathematics','ai_ml'}
-    assert set(e['ENGL 155AI']['category_review']['candidate_categories'])=={'human_context','ai_ml'}
+    assert e['ENGL 155AI']['category']=='human_context'
+    assert e['ENGL 155AI']['category_review']['candidate_categories']==[]
+    assert 'design and construction' in e['ENGL 155AI']['category_review']['rationale']
     assert set(e['ENGL 170MB']['category_review']['candidate_categories'])=={'human_context','applications'}
     for code in ['ENGL 92SS','ENGL 92TC','ENGL 192CR','ENGL 192SS','ENGL 192WW']:
         assert e[code]['category']=='human_context'
