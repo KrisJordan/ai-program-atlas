@@ -45,6 +45,36 @@
       "catalog_year": null,
       "locator": "Overview, program description and illustrative careers; explicit statement that AI major has no alumni yet",
       "confidence": "high"
+    },
+    {
+      "id": "uc-merced-ai-bs-senate-review",
+      "url": "https://senate.ucmerced.edu/node/7946",
+      "title": "AY 2025–26 Senate Review Items",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": "2025-2026",
+      "locator": "AI BS review row: distributed 2026-03-03, due 2026-04-07, completed; linked proposal is unreadable",
+      "confidence": "high"
+    },
+    {
+      "id": "uc-merced-ai-bs-ugc-report",
+      "url": "https://senate.ucmerced.edu/sites/g/files/ufvvjh1616/f/page/documents/ugc_annual_report_ay_25-26.pdf",
+      "title": "UGC Annual Report AY 2025–2026",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": "2025-2026",
+      "locator": "Page 3, Campus and Systemwide Review Items: AI BS dated May 13; no course inventory",
+      "confidence": "high"
+    },
+    {
+      "id": "uc-merced-ai-bs-divco-report",
+      "url": "https://senate.ucmerced.edu/sites/g/files/ufvvjh1616/f/page/documents/divcoannualreport2025_2026.pdf",
+      "title": "Divisional Council Annual Report 2025–2026",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": "2025-2026",
+      "locator": "Page 6, Appendix A: endorsement of AI BS program proposal; no named courses",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -83,6 +113,7 @@
     "Program identity is verified. Public program context is now recorded separately; courses, requirements, prerequisites, credit totals and syllabi remain unextracted.",
     "Directory transfer-entry date 2027 is not treated as the program launch date. Catalog access returned 403.",
     "2026-10-11: independent official public context read through the ordinary web reader. Default local scraper stopped because robots.txt returned403 for the main and Engineering hosts; no robots restriction was bypassed. The new adapter can parse a permitted future/public export and cannot manufacture curriculum from aims.",
-    "Current catalog link observed on the Engineering CSE page resolves to https://catalog.ucmerced.edu/ and returned403 through the ordinary reader. This precise URL supplements the earlier unspecified catalog failure; it does not establish absence or discontinuation."
+    "Current catalog link observed on the Engineering CSE page resolves to https://catalog.ucmerced.edu/ and returned403 through the ordinary reader. This precise URL supplements the earlier unspecified catalog failure; it does not establish absence or discontinuation.",
+    "2026-10-11 bounded fixed-requirement follow-up: official Senate AY 2025–26 records identify an AI BS proposal review and endorsement, but contain no named curriculum. The precise Senate-linked proposal https://ucmerced.box.com/s/dcp2fpp8o1owv2lgqxmdpkzdnubi8jdu failed in the ordinary reader with a nonretryable redirect error. The denied catalog was not retried. Advising CSE requirements belong to a different degree. Fixed courses, choices, descriptions and category totals remain unverified; null expected totals are not zero."
   ]
 }

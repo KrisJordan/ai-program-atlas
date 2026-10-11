@@ -16,6 +16,24 @@ Independent engineering navigation led through Academic Departments to the CSE p
 
 Curriculum remains pending. Next: a publicly accessible current AI course-of-study and degreewide rules. Program aims cannot substitute for named requirements.
 
+## Fixed-requirement alternatives — 2026-10-11
+
+The [bounded follow-up](../../../research/degree-audit/independent-resolution-merced.md)
+records readable engineering/advising navigation and three dated Senate annual
+reports. The precise [AY 2025–26 review row](https://senate.ucmerced.edu/node/7946)
+links the AI BS proposal at
+`https://ucmerced.box.com/s/dcp2fpp8o1owv2lgqxmdpkzdnubi8jdu`; its ordinary-reader
+request failed with a nonretryable 500 unsafe-redirect error. No alternate route
+or retry was attempted. Senate review/endorsement is additional identity evidence,
+not a named adopted curriculum. CSE 2025–26 advising documents apply to another
+degree; none were inherited. The report year is not the AI BS catalog year.
+
+The catalog HTTP 403 was not retried. All independently expected course sets,
+counts and category totals remain null, and curriculum remains pending. The
+identity/context adapter is unchanged because none of these sources supports new
+course extraction. Exact unsuccessful meeting-document alternatives and the local
+Senate robots transport ConnectError are distinguished in the adjacent JSON.
+
 ## Degree correctness audit — 2026-10-11
 
 See [eight-degree audit](../../../research/degree-audit/west-purdue-wpi.md) and its adjacent per-program JSON ledger. This program is blocked for whole-degree certification by the specific evidence gaps recorded there. Verified role/subject corrections are retained; parser success and prior local curriculum labels are not a completed degree audit. Remaining course-content review work is distinguished from actual source barriers. Independent second pass remains pending.
