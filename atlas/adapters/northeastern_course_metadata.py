@@ -6,6 +6,16 @@ from atlas.adapters.northeastern_courseleaf import clean, slug, numeric, categor
 # Short editorial summaries of the linked official descriptions. Each has a
 # source phrase guard; changed prose cannot silently replay an unsupported summary.
 SUMMARIES = {
+    'MKTG 2201': ('evaluation of marketing efforts', 'Introduces marketing strategy, implementation and evaluation across organizational settings.'),
+    'ACCT 1201': ('interpret, analyze, and evaluate published corporate financial reports', 'Develops financial-statement analysis and examines accounting principles and reporting ethics.'),
+    'FINA 2201': ('time value of money', 'Develops financial analysis, valuation, financing and capital-management decisions.'),
+    'ORGB 3201': ('individual, interpersonal, group, organizational, and cross-cultural', 'Examines behavior, teams, leadership, culture and change within organizations.'),
+    'INNO 2301': ('transformed into commercial reality', 'Examines innovation processes and how ideas become products or services.'),
+    'MISM 2301': ('strategic role of information systems', 'Examines enterprise information systems, digital technologies and business data analysis.'),
+    'SCHM 2301': ('supply, inventory, and quality management', 'Studies supply chains, operations, logistics and the coordination of business processes.'),
+    'STRT 4501': ('analyze, formulate, and implement business strategy', 'Integrates strategic analysis and implementation through a business capstone experience.'),
+    'MGSC 2301': ('regression analysis in the context of business', 'Develops statistical inference and regression for analyzing business data.'),
+    'ARTG 2400': ('low- to high-fidelity prototyping techniques', 'Develops interaction-design research, prototyping and usability testing for interfaces.'),
     'EECE 2160': ('controlling physical devices via software', 'Combines digital design, programming and embedded systems to control robotic devices.'),
     'EECE 2322': ('construction of a simple processor', 'Develops digital logic, computer architecture and hardware models for a simple processor.'),
     'EECE 2323': ('computer system on field-programmable logic', 'Designs, simulates and tests a computer system using programmable logic.'),
@@ -181,6 +191,7 @@ def parse_subject(html, *, program_id, subject, heading, codes, url):
         for pattern, prefix in [
             (r'Requires previous coursework in ([^.]+)\.', 'Previous coursework in '),
             (r'Requires ([^.]+) to register\.', 'Registration requires '),
+            (r'Requires a working knowledge of ([^.]+)\.', 'Working knowledge of '),
         ]:
             condition_match = re.search(pattern, prose)
             if condition_match:
@@ -189,11 +200,14 @@ def parse_subject(html, *, program_id, subject, heading, codes, url):
         concurrent = re.search(r'Requires concurrent registration in ([^.]+)\.', prose)
         if concurrent:
             metadata_notes.append(f'{code} subject catalog concurrent-registration condition: {concurrent[1].strip()}. This is not prior-completion eligibility.')
-        for recommendation in re.findall(r'[^.]*\b(?:recommended|recommended preparation)\b[^.]*\.', prose, re.I):
+        for recommendation in (sentence for sentence in re.split(r'(?<=[.!?])\s+(?=[A-Z])', prose)
+                               if re.search(r'\brecommended\b', sentence, re.I)):
             metadata_notes.append(f'{code} subject catalog recommended preparation (not a prerequisite): {recommendation.strip()}')
         if code == 'PSYC 2320' and 'Should be taken before the end of the sophomore year.' in prose:
             metadata_notes.append('PSYC 2320 subject catalog timing advice: complete before the end of the sophomore year. This advice is separate from prerequisite eligibility.')
         scoped_conditions = {
+            'ARTG 5330': ('Students who do not meet course restrictions may seek permission of instructor or program coordinator.', 'Students outside course restrictions may seek instructor or program-coordinator permission; permission is not guaranteed.'),
+            'ENTR 3217': ('Required participation in spring break international field project.', 'Participation in a spring-break international field project is required. This is a course activity, not prior-completion eligibility.'),
             'ENVR 3300': ('Students who do not meet course prerequisites may seek permission of instructor.', 'Students who do not meet the prerequisites may seek instructor permission; permission is not guaranteed.'),
             'PHTH 5222': ('Requires permission of instructor for students outside designated programs.', 'Instructor permission is required outside designated programs. The description does not enumerate those programs; applicability remains conditional.'),
             'JRNL 5360': ('International students wishing to register need to speak to the International Student and Scholar Institute prior to registration.', 'International students must speak to the International Student and Scholar Institute before registering.'),
@@ -214,6 +228,21 @@ def parse_subject(html, *, program_id, subject, heading, codes, url):
 
 
 SUBJECT_HEADINGS = {
+    'MKTG': 'Marketing (MKTG)',
+    'FINA': 'Finance and Insurance (FINA)',
+    'MGMT': 'Management (MGMT)',
+    'INNO': 'Corporate Innovation (INNO)',
+    'ENTR': 'Entrepreneurship and Innovation (ENTR)',
+    'INTB': 'International Business (INTB)',
+    'ACCT': 'Accounting (ACCT)',
+    'SCHM': 'Supply Chain Management (SCHM)',
+    'BUSN': 'Business Administration (BUSN)',
+    'MISM': 'Management Information Systems (MISM)',
+    'ORGB': 'Organizational Behavior (ORGB)',
+    'STRT': 'Strategy (STRT)',
+    'MGSC': 'Management Science (MGSC)',
+    'ARTG': 'Art - Design (ARTG)',
+    'ARTF': 'Art - Fundamentals (ARTF)',
     'EECE': 'Electrical and Computer Engineering (EECE)',
     'ENVR': 'Earth and Environmental Sciences (ENVR)',
     'PHTH': 'Public Health (PHTH)',

@@ -232,3 +232,25 @@ def test_first_year_science_audience_does_not_assign_home_college_or_required_co
     assert 'family' not in observed and 'hosting_unit' not in observed
     assert 'curriculum_audit' not in observed and 'last_verified' not in observed
     assert parser(html.replace('(1 Hour)','(2 Hours)'))['courses'][0]['credits']==2
+
+
+def test_business_required_skills_and_recommended_experience_are_distinct():
+    html=page('<div class="courseblock"><p class="courseblocktitle">MGMT 3305. Power and Influence. (4 Hours)</p><p class="cb_desc">Previous work experience (e.g., part-time job or co-op) is recommended but not required for enrollment in the course.</p></div>',heading='Management (MGMT)')
+    parser=register_subject_sources('test-program',{'MGMT':['MGMT 3305']})['https://catalog.northeastern.edu/course-descriptions/mgmt/']
+    observed=parser(html)
+    assert observed['courses'][0]['prerequisites'] is None
+    assert any('Previous work experience (e.g., part-time job or co-op)' in n and 'not a prerequisite' in n for n in observed['notes'])
+    html=page('<div class="courseblock"><p class="courseblocktitle">FINA 4610. Finance course. (4 Hours)</p><p class="cb_desc">Requires a working knowledge of Excel or other spreadsheet programs.</p></div>',heading='Finance and Insurance (FINA)')
+    parser=register_subject_sources('test-program',{'FINA':['FINA 4610']})['https://catalog.northeastern.edu/course-descriptions/fina/']
+    assert 'Excel or other spreadsheet programs' in parser(html)['courses'][0]['prerequisites']
+    assert parser(html.replace('Requires a working knowledge of','Recommends experience with'))['courses'][0]['prerequisites'] is None
+
+
+def test_required_field_participation_does_not_create_prerequisite_or_universal_requirement():
+    prose='Required participation in spring break international field project.'
+    html=page(f'<div class="courseblock"><p class="courseblocktitle">ENTR 3217. Entrepreneurship course. (4 Hours)</p><p class="cb_desc">{prose}</p></div>',heading='Entrepreneurship and Innovation (ENTR)')
+    parser=register_subject_sources('test-program',{'ENTR':['ENTR 3217']})['https://catalog.northeastern.edu/course-descriptions/entr/']
+    observed=parser(html)
+    assert observed['courses'][0]['prerequisites'] is None and observed['requirements']==[]
+    assert any('spring-break international field project' in n for n in observed['notes'])
+    assert not any('field project' in n for n in parser(html.replace(prose,''))['notes'])
