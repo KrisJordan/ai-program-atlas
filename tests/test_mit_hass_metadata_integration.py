@@ -198,3 +198,17 @@ def test_literature_term_upgrade_preserves_bundle_and_preparation_limits():
     assert any('helpful, not a prerequisite' in n for n in narrative['notes'])
     current=[c for c in p['courses']if c['code']=='21L.707'and c['name']and 'AI'in c['name']]
     assert all(not c.get('description')or 'Art of War and Peace'not in c['description']for c in current)
+
+
+def test_urban_historical_units_do_not_cross_course_title_versions():
+    p=json.loads(Path('data/programs/mit-ai-decision-making-bs.json').read_text())
+    by={c['id']:c for c in p['courses']}
+    later=by['mit-ai-hass-urban-11-013-j']
+    earlier=by['mit-ai-hass-american-studies-11-013j']
+    assert later['name']=='American Urban History' and later['credits']==12
+    assert earlier['name']=='American Urban History I' and earlier['credits'] is None
+    assert 'spring-2025' in later['syllabus'] and 'spring-2010' in earlier['syllabus']
+    for held in ['mit-ai-hass-urban-11-041','mit-ai-hass-urban-11-148','mit-ai-hass-urban-11-015-j','mit-ai-hass-urban-11-025-j']:
+        assert by[held]['description'] is None
+    law=by['mit-ai-hass-african-and-african-diaspora-studies-11-166']
+    assert 'permission' in law['prerequisites'].lower()
