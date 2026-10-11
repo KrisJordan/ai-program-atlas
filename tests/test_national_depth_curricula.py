@@ -103,9 +103,10 @@ def test_pdf_prerequisite_blocks_are_observed_not_seed_replay():
 
 
 @pytest.mark.parametrize('key',['fsu','umass','rpi','smu-ba','smu-bs'])
-def test_curated_partial_scope_and_provenance(key):
+def test_curated_scope_and_provenance(key):
  p=json.loads((ROOT/'data/programs'/(CONFIG[key][0]+'.json')).read_text());db.validate_program(p)
- assert p['curriculum_status']=='partial' and p['curriculum_audit']['unresolved_requirements']
+ assert p['curriculum_status']==('complete' if key.startswith('smu-') else 'partial')
+ assert bool(p['curriculum_audit']['unresolved_requirements']) == (not key.startswith('smu-'))
  assert p['curriculum_audit']['scope']==p['program_kind']
  assert p['requirements'] and p['first_offered'] is None
 

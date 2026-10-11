@@ -14,7 +14,7 @@ The combined source title for COMPSCI 446/546 is preserved for both codes; separ
 
 ## Sources
 
-- [BS Artificial Intelligence Concentration Requirements](https://www.cics.umass.edu/academics/academic-policies/undergraduate-programs-policies/bs-ai-concentration-requirements): Program H1 and local eligibility/credential text; SMU uses the degree-specific FAQ paragraph; UIC uses the formal concentration announcement paragraph.
+- [BS Artificial Intelligence Concentration Requirements](https://www.cics.umass.edu/academics/academic-policies/undergraduate-programs-policies/bs-ai-concentration-requirements): BS Artificial Intelligence Concentration Requirements H1; BS Computer Science eligibility, required core and AI electives tables.
 - [BS in Computer Science Degree Requirements](https://www.cics.umass.edu/academics/academic-policies/undergraduate-programs-policies/bs-computer-science-degree-requirements): When Does a Course Count for the CS Major?; Saving a Course for a Graduate Program
 - [Credit for Prior Coursework](https://www.cics.umass.edu/academics/academic-policies/undergraduate-programs-policies/credit-prior-coursework): Entry eligibility, transfer evaluation, duplicate credit and prerequisite overrides
 

@@ -41,9 +41,9 @@ def test_scoped_identity_and_contract(key):
     db.validate_program(seed)
     observed = parse_identity(fixture(key), key)
     assert observed == {k: seed[k] for k in ('id', 'title', 'award_level', 'program_kind')}
-    assert seed['curriculum_status'] in ('pending', 'partial')
-    if seed['curriculum_status'] == 'partial':
-        assert seed['curriculum_audit']['unresolved_requirements']
+    assert seed['curriculum_status'] in ('pending', 'partial', 'complete')
+    if seed['curriculum_status'] != 'pending':
+        assert bool(seed['curriculum_audit']['unresolved_requirements']) == (seed['curriculum_status'] == 'partial')
         with pytest.raises(ValueError):
             load(key).parse(fixture(key))
     else:

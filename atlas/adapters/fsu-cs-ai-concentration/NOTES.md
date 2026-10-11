@@ -14,10 +14,12 @@ The linked PDF retains the same unresolved placeholders as the HTML. Course prer
 
 ## Sources
 
-- [(New) Artificial Intelligence Concentration](https://www.cs.fsu.edu/academics/undergraduate-programs/artificial-intelligence-concentration/): Program H1 and local eligibility/credential text; SMU uses the degree-specific FAQ paragraph; UIC uses the formal concentration announcement paragraph.
+- [(New) Artificial Intelligence Concentration](https://www.cs.fsu.edu/academics/undergraduate-programs/artificial-intelligence-concentration/): Artificial Intelligence Concentration H1, CS student eligibility paragraph and Required Coursework section.
 - [Undergraduate Programs](https://www.cs.fsu.edu/academics/undergraduate-programs/): BS Computer Science Major: AI concentration link
 - [Computer Science Concentration in AI — Flowchart](https://www.cs.fsu.edu/wp-content/uploads/2026/09/AI_Concentration_Flowchart.pdf): Page 1; 15-credit minimum, course prerequisite blocks and prerequisite diagram
 
 ## Refresh and review boundary
 
 The adapter extracts observed local rules and candidate course metadata. It emits partial status but no reviewer audit, verification timestamp or first-offered date. The manual audit records the unresolved completion conditions. The PDF text parser is tested separately after visual review; the generic HTTP client does not support binary refresh. No host-degree-wide completeness is implied.
+
+On 2026-10-11, ordinary Chrome navigation independently confirmed that the live department page still prints CAP 4XXX and COP 4XXX. The linked flowchart retains the same placeholders; neither source resolves final course identities.

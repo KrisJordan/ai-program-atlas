@@ -10,7 +10,7 @@ No first-offered date is inferred; program learning outcomes remain unverified.
 
 ## Sources
 
-- [Cognitive Science of Artificial Intelligence, Minor](https://hass.rpi.edu/cognitive-science/cognitive-science-artificial-intelligence): Program H1 and local eligibility/credential text; SMU uses the degree-specific FAQ paragraph; UIC uses the formal concentration announcement paragraph.
+- [Cognitive Science of Artificial Intelligence, Minor](https://hass.rpi.edu/cognitive-science/cognitive-science-artificial-intelligence): Cognitive Science of Artificial Intelligence, Minor H1; 16-credit minimum and illustrative course-topic list.
 
 ## Refresh and review boundary
 
