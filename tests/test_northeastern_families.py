@@ -72,6 +72,10 @@ def test_reviewed_variant_reconstruction_preserves_entire_original_graph(pid):
     if science_policy:
         assert len(science_policy)==9 and all(r['kind']=='note' and not r['course_ids'] for r in science_policy)
         rows=[r for r in rows if r not in science_policy]
+    bouve_policy=[r for r in rows if r['source_id']==pid+'-bouve-college-policy']
+    if bouve_policy:
+        assert len(bouve_policy)==15 and all(r['kind']=='note' and not r['course_ids'] for r in bouve_policy)
+        rows=[r for r in rows if r not in bouve_policy]
     if 'business-administration' in pid:
         # The reviewed follow-up adds independent concentration-source subtrees
         # and two main-page selection nodes; test those in the concentration suite.

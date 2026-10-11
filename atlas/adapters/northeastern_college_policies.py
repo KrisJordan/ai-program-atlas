@@ -130,3 +130,62 @@ def parse_science_policy(html,*,program_id):
     for key,title,guards,summary in SCIENCE_RULES:
         need(section(panel,title),*guards);rows.append(row(program_id+'-req-policy-science-'+key,title,summary,base))
     return dict(id=program_id,courses=[],requirements=rows,curriculum_status='partial',notes=['Conditional Science college observation; no inferred home assignment, course pool or whole-degree completion.'])
+
+BOUVE_URL='https://catalog.northeastern.edu/undergraduate/health-sciences/academic-policies-procedures/'
+BOUVE_RULES=[
+ ('curriculum','Academic Requirements',['pattern of attendance, and graduation year','Any exceptions to a student\'s curriculum plan','after consultation with the student\'s academic advisor',"university's minimum passing grade for the course will be accepted"],
+  'Where Bouvé rules apply, follow the major, attendance pattern and graduation-year curriculum, prerequisites and degree audit. Curriculum exceptions follow the program’s protocols after advisor consultation. Use the program’s published course minimum; where none is established, the university passing grade applies, alongside separately specified university writing minima. Do not invent a universal Bouvé C threshold.'),
+ ('petitions','Undergraduate Student Academic Petitions',['Taking one course while on co-op does not require this form','Taking any course(s) while on co-op requires “I Am Here” participation','Preapproval for a course to be taken for transfer credit','requires petition process with academic advisor'],
+  'Use the specified petition process for leave, policy waiver, major change, minor declaration, late registration, directed study or an academic-standing appeal. Two courses during co-op require the registration petition; one does not require that form, but any co-op coursework requires I Am Here participation. Seek outside-course transfer preapproval through the academic advisor; approval is not automatic.'),
+ ('probation','Collegewide Academic Probation Procedure',['before the end of week 2','no later than the end of week 3','weeks 4, 10, and 12','required to submit a second Academic Probation Contract','may be dismissed from Bouvé with an option to appeal'],
+  'For Bouvé probation, meet the advisor by week two, sign the contract and submit it to the program and Student Services designee by week three. Late submission may cause dismissal. Advisor checks occur in weeks four, ten and twelve, followed by term-end review. Restored standing ends probation; compliant students still below standing submit a second contract, while noncompliance may lead to dismissal with appeal.'),
+ ('major-dismissal','Academic Dismissal from Major',['failure to earn the minimum required grade in the same required course twice','effective the following academic semester','up to two semesters as a provisional Bouvé student','blocked from further registration'],
+  'Failure twice to earn the stipulated minimum in the same required course leads to Bouvé major/program dismissal effective the next semester; additional program grounds may apply. A student otherwise in university good standing may remain provisional for up to two semesters to enter another major; failure to move by then blocks registration.'),
+ ('university-dismissal','Academic Dismissal from the University',['not permitted to remain registered for courses in the immediate next academic term','If the university dismissal is successfully appealed'],
+  'A university dismissal under the applicable progression standard prevents immediate next-term registration. A successful appeal permits registration in the following academic term; no automatic reinstatement is inferred.'),
+ ('grade-appeal','Grade Appeals',['students should discuss their concerns with the course instructor','department chair- or school dean-level of the college that offers the course'],
+  'Start a grade concern with the course instructor under university appeals procedures. If unresolved, appeal through the college offering the course, which is not necessarily the student’s home college.'),
+ ('unit-appeal','Step 1: BCHS Unit-Level Appeal',['within 28 calendar days','academic determination is made available to the student','within 10 business days'],
+  'For a Bouvé unit-level academic determination, submit the appeal request and statement within twenty-eight calendar days after the determination becomes available. The unit Academic Standing Committee supplies its written decision within ten business days under its procedures.'),
+ ('higher-appeal','Step 2: Department Chair- or School Dean-Level Appeal',['within 28 calendar days of the posting of the grade','within 10 business days of receiving the report from the previous step','within 10 business days of receiving the appeal request'],
+  'A course-grade appeal request is due within twenty-eight calendar days after posting. A secondary unit-decision appeal goes to the specified department chair, school dean or Bouvé academic-affairs office within ten business days of the prior report; the receiving office supplies a written result within ten business days. The office depends on the actual program/school.'),
+ ('college-appeal','Step 3. College-Level Appeal',['within 10 business days of receiving the report from the previous step','The college dean will have the final decision','no later than 10 business days after receiving the appeal request'],
+  'An unresolved lower-level matter may proceed to the Bouvé Academic Affairs Committee; request the college hearing in writing within ten business days of the prior report. The dean makes the college decision and notifies the parties within ten business days of the request. Further university appeal exists only where permitted by the linked university process.'),
+ ('conduct','Bouvé College of Health Sciences Code of Professional Conduct',['Department of Applied Psychology (all programs)','Department of Communication Sciences and Disorders (all programs)','Department of Medical Sciences (all programs)','Department of Physical Therapy, Movement, and Rehabilitation Sciences (all programs)','School of Pharmacy and Pharmaceutical Sciences (all programs)','students in the above-mentioned Bouvé schools or departments'],
+  'The university conduct code applies generally. Bouvé’s additional professional code expressly covers its listed Applied Psychology, Communication Sciences and Disorders, Medical Sciences, Physical Therapy/Movement/Rehabilitation and Pharmacy programs; do not impose it universally from a health-related title. Within that scope, professional behavior includes accountability, respectful communication, confidentiality, integrity, appropriate appearance, teamwork and constructive improvement in academic, experiential and extracurricular settings.'),
+ ('experiential','Requirements for Clinical, Internships, and Practicum Courses',['Some Bouvé programs require courses with clinical, internship, or fieldwork components','cooperative education requirements that are distinct from clinical requirements','Students are responsible for any costs associated with transportation and/or housing','International students must consult','before enrolling in clinical, internship, practicum, off-campus directed study, co-op, or capstone courses'],
+  'Only when the actual program/course includes clinical, internship or fieldwork, follow its supplied evaluation/site policies; required travel and housing costs fall to the student. Co-op is distinct and also follows employer rules. International students must consult Global Services before the specified experiential enrollments. Site/program safety training is conditional; graduate nursing licensure is not added to this undergraduate degree.'),
+ ('screening','Background Checks',['If applicable','provide instructions and a deadline for completion','Failure to complete the check in a timely manner could jeopardize progression','Students are responsible for any fees'],
+  'If an assigned clinical site requires background or drug screening, follow the program’s instructions and deadline and pay applicable fees. A missed deadline can jeopardize progression; a site may deny placement under its requirements. No screening is asserted mandatory merely because the degree involves health.'),
+ ('health-clearance','Health Clearance Requirements',['Students must comply with any universitywide health requirements','any site-specific requirements prior to entering the clinical setting','prohibited from attending a clinical course or rotation until satisfactory evidence is provided','students are responsible for software account fees'],
+  'Follow applicable university health requirements. Before an actual clinical placement, satisfy program/site clearance and documentation; missing certification prevents attendance and can affect course completion. Where the program uses clearance software, the student pays its account fee. No particular immunization or clinical placement is inferred here.'),
+ ('clinical-conduct','Student Conduct',['Students assigned to a clinical site for instruction','failure to adhere to these rules may result in dismissal from that institution or site and clinical course failure','Bouvé College of Health Sciences Code of Professional Conduct','if applicable'],
+  'At an assigned clinical site, follow its rules and applicable university/program conduct standards; violations can cause site dismissal, clinical course failure and university discipline. Preserve patient/student record confidentiality under the published policies. The additional Bouvé professional code applies only where its stated scope holds.')]
+
+
+def parse_bouve_policy(html,*,program_id):
+    soup=BeautifulSoup(html,'html.parser')
+    for node in soup.find_all(['nav','aside','script','style','footer']):node.decompose()
+    title=soup.find(id='site-title');h1=title.find('h1') if title else None;panel=soup.find(id='textcontainer')
+    if h1 is None or text(h1)!='Academic Policies and Procedures' or panel is None:raise ValueError('Expected Bouvé college-policy identity/panel missing')
+    # This catalog page closes a formatting wrapper midway through Step 2.
+    # Traverse only this panel's descendants, bounded by heading rank, so that
+    # a wrapper boundary neither drops published text nor imports another rule.
+    from bs4 import NavigableString
+    import re
+    def scoped_section(title):
+        elements=list(panel.descendants)
+        heading=next((n for n in elements if getattr(n,'name',None) in ('h2','h3','h4') and text(n)==title),None)
+        if heading is None:raise ValueError('Expected Bouvé policy section missing')
+        parts=[]
+        for node in elements[elements.index(heading)+1:]:
+            if getattr(node,'name',None) in ('h2','h3','h4') and int(node.name[1])<=int(heading.name[1]):break
+            if isinstance(node,NavigableString):parts.append(str(node))
+        return re.sub(r'\s+',' ',''.join(parts)).strip()
+    need(scoped_section('Bouvé College of Health Sciences Code of Professional Conduct'),'Bouvé College of Health Sciences Code of Professional Conduct')
+    base=program_id+'-req-policy-bouve-conditional';sid=program_id+'-bouve-college-policy'
+    def row(rid,title,summary,parent):return dict(id=rid,parent_id=parent,title=title,kind='note',count=None,credits=None,credit_unit='unknown',category='other',source_id=sid,source_text=None,summary=summary,course_ids=[])
+    rows=[row(base,'Conditional Bouvé college policies','Apply only when the student’s actual college/program, course or clinical circumstances satisfy each published condition. Evidence that Bouvé participates in this combination does not assign its home college, guarantee clinical enrollment or impose graduate/professional-only requirements.',None)]
+    for key,title,guards,summary in BOUVE_RULES:
+        need(scoped_section(title),*guards);rows.append(row(program_id+'-req-policy-bouve-'+key,title,summary,base))
+    return dict(id=program_id,courses=[],requirements=rows,curriculum_status='partial',notes=['Conditional Bouvé policy observation; home/cohort applicability and actual clinical/professional scope remain student/program specific.'])

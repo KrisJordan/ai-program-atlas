@@ -68,3 +68,8 @@ parse, SOURCE_PARSERS = register_cs1802(parse, SOURCE_PARSERS, PROGRAM_ID)
 from atlas.adapters.northeastern_college_policies import KHOURY_URL, parse_khoury_policy
 SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + (KHOURY_URL,)))
 SOURCE_PARSERS = {**SOURCE_PARSERS, KHOURY_URL: lambda html: parse_khoury_policy(html, program_id=PROGRAM_ID)}
+
+# Verified Bouvé participation; rules remain conditional on actual applicability.
+from atlas.adapters.northeastern_college_policies import BOUVE_URL, parse_bouve_policy
+SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + (BOUVE_URL,)))
+SOURCE_PARSERS = {**SOURCE_PARSERS, BOUVE_URL: lambda html: parse_bouve_policy(html, program_id=PROGRAM_ID)}

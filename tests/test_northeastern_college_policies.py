@@ -128,3 +128,48 @@ def test_optional_science_actual_source_replay_and_changed_scope_guards():
     for old,new in [('semester GPA','cumulative GPA'),('1.800','1.500'),('up to two semesters','up to three semesters'),('College of Science','College of Other Studies')]:
         assert old in html
         with pytest.raises(ValueError):parse_science_policy(html.replace(old,new),program_id='test')
+
+
+BOUVE_PARTNERS={'health-science','public-health','speech-language-pathology-and-audiology'}
+
+
+def test_verified_bouve_partners_preserve_grade_hierarchy_and_clinical_scope():
+    from atlas.adapters.northeastern_college_policies import BOUVE_URL
+    for slug in BOUVE_PARTNERS:
+        pid=f'northeastern-university-artificial-intelligence-and-{slug}-bs-boston-bs-degree'
+        p=json.loads((ROOT/'data/programs'/f'{pid}.json').read_text());m=import_module('atlas.adapters.'+pid+'.adapter')
+        rules={r['id']:r for r in p['requirements'] if r['source_id']==pid+'-bouve-college-policy'}
+        assert len(rules)==15 and all(r['kind']=='note' and not r['course_ids'] for r in rules.values())
+        assert BOUVE_URL in m.SOURCES
+        assert 'does not assign' in rules[pid+'-req-policy-bouve-conditional']['summary']
+        assert 'university passing grade applies' in rules[pid+'-req-policy-bouve-curriculum']['summary']
+        assert 'universal Bouvé C threshold' in rules[pid+'-req-policy-bouve-curriculum']['summary']
+        assert 'same required course' in rules[pid+'-req-policy-bouve-major-dismissal']['summary']
+        assert 'week three' in rules[pid+'-req-policy-bouve-probation']['summary']
+        assert 'not impose it universally' in rules[pid+'-req-policy-bouve-conduct']['summary']
+        assert 'If an assigned clinical site' in rules[pid+'-req-policy-bouve-screening']['summary']
+        assert 'graduate nursing licensure is not added' in rules[pid+'-req-policy-bouve-experiential']['summary']
+
+
+def test_optional_bouve_actual_replay_guards_nested_wrappers_and_missing_semantics():
+    from atlas.adapters.northeastern_college_policies import parse_bouve_policy
+    from bs4 import BeautifulSoup
+    from atlas.adapters.northeastern_policies import text
+    cache=ROOT/'.cache/research/degree-audit-northeastern/home-18.html'
+    if not cache.exists():pytest.skip('Optional ignored official Bouvé source')
+    html=cache.read_text()
+    for slug in BOUVE_PARTNERS:
+        pid=f'northeastern-university-artificial-intelligence-and-{slug}-bs-boston-bs-degree';p=json.loads((ROOT/'data/programs'/f'{pid}.json').read_text())
+        assert {r['id']:r for r in parse_bouve_policy(html,program_id=pid)['requirements']}=={r['id']:r for r in p['requirements'] if r['source_id']==pid+'-bouve-college-policy'}
+    for old,new in [('same required course twice','same required course three times'),('week 2','week 4'),('week 3','week 5'),('up to two semesters','up to three semesters'),("university's minimum passing grade","college's grade of C")]:
+        assert old in html
+        with pytest.raises(ValueError):parse_bouve_policy(html.replace(old,new),program_id='test')
+    # A matching policy located solely in navigation cannot rescue a missing body.
+    with pytest.raises(ValueError):parse_bouve_policy('<nav>'+html+'</nav>',program_id='test')
+    # CourseLeaf closes a formatting wrapper midway through the higher appeal
+    # section. Both its grade deadline and its later decision deadline are needed.
+    soup=BeautifulSoup(html,'html.parser');panel=soup.find(id='textcontainer')
+    nodes=[n for n in panel.find_all('p') if 'The student must request the appeal by contacting' in text(n)]
+    assert nodes
+    for n in nodes:n.decompose()
+    with pytest.raises(ValueError):parse_bouve_policy(str(soup),program_id='test')
