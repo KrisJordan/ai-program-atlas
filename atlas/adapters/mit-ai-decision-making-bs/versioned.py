@@ -11,6 +11,7 @@ from atlas.adapters.national_curriculum_common import content, clean, course, ru
 policies = import_module('atlas.adapters.mit-ai-decision-making-bs.policies')
 PID, URL = policies.PID, policies.EMBEDDED
 SID = PID + '-versioned'
+core_subjects = import_module('atlas.adapters.mit-ai-decision-making-bs.core_subjects')
 ROOT_ID = 'mit-ai-version-required'
 LISTS = ['AI+D_AUS', 'AI+D_SERC', 'Application_CIM', 'CIM2',
          'Computation-centric', 'Data-centric', 'Decision-centric', 'EECS',
@@ -42,6 +43,7 @@ def parse(html):
     if reqlist is None:
         raise ValueError('Versioned required-subject section missing')
     courses = {}
+    core_digests = {}
 
     def observe(link):
         nobr = link.find('nobr')
@@ -60,6 +62,9 @@ def parse(html):
             text = clean(annotation.get_text(' ', strip=True))
             prereq = re.search(r'(Prereqs(?:/\[Coreqs\])?:.*?)\s+Units:', text)
             c['prerequisites'] = prereq[1] if prereq else None
+        if annotation:
+            digest = core_subjects.classify_annotation(c, clean(annotation.get_text(' ', strip=True)))
+            if digest: core_digests[c['id']] = digest
         # Unit triplets, ranges and arranged units are not silently summed.
         if c['id'] in courses and courses[c['id']] != c:
             raise ValueError('Conflicting versioned annotations: ' + code)
@@ -166,4 +171,4 @@ def parse(html):
         r['parent_id'] = ROOT_ID
         rules.append(r)
     rules.append(rule('mit-ai-v2025-eecs-eligibility', 'EECS option-pool eligibility', SID, parent=ROOT_ID, kind='note', summary='The EECS list describes subjects meeting departmental undergraduate requirements in Courses 6-1 through 6-5, excluding subjects of six units or fewer. Printed bundles remain whole options. Separate graduate lists supply additional expressly allowed routes; listing does not waive subject prerequisites.'))
-    return dict(id=PID, courses=list(courses.values()), requirements=rules)
+    return dict(id=PID, courses=list(courses.values()), requirements=rules, observed_core_description_digests=core_digests)

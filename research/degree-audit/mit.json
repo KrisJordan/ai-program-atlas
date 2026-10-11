@@ -1,0 +1,78 @@
+{
+  "audit_date": "2026-10-11",
+  "reviewer": "pilots_cmu_penn",
+  "programs": [
+    {
+      "program_id": "mit-ai-decision-making-bs",
+      "institution_id": "massachusetts-institute-of-technology",
+      "status": "in_progress",
+      "sources": [
+        {
+          "url": "https://catalog.mit.edu/degree-charts/artifical-intelligence-decision-making-course-6-4/",
+          "catalog_year": null,
+          "locator": "Degree chart",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; ordinary robots-aware Fetcher"
+        },
+        {
+          "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996",
+          "catalog_year": "6-4_2025; lists labeled Fall2026",
+          "locator": "Versioned foundation subject annotations",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; ordinary robots-aware Fetcher"
+        },
+        {
+          "url": "https://catalog.mit.edu/subjects/6/",
+          "catalog_year": null,
+          "locator": "Empty subject-description content container",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; empty descriptions"
+        }
+      ],
+      "checks": {
+        "degree_identity": "BS Artificial Intelligence and Decision Making,Course6-4. Current chart and explicitly cohort-qualified6-4_2025 view remain distinct; source list-term conflict not resolved.",
+        "required_and_choices": "Versioned foundation section explicitly fixes6.1010 and6.1210. Its programming preparation is a separate alternative; math/centers/elective bundles and designation overlays do not add fixed identities. Unversioned chart is contextual rather than cumulative.",
+        "elective_pools": "Versioned lists and39 HASS field inventories were previously mapped; subject and applicability second pass remains ongoing. Existing source questions are preserved.",
+        "prerequisites": "Actual annotated prerequisite expressions for both foundation courses reviewed. Neither references creates an additional unconditional degree node. Enrollment may be limited. Broader prerequisites remain unreviewed.",
+        "credits_and_units": "Source annotations give2-4-6 and5-0-7 unit triplets; this review does not infer summed values or convert units. Existing6.4300 source conflict remains.",
+        "classification": "Exactly two fixed versioned records, both foundations based on their actual descriptions. Unversioned duplicate codes do not inherit the review silently.",
+        "family_composition": "No family inheritance. Source views are not separate degrees and their course IDs are not merged by code alone.",
+        "degree_wide_requirements": "Existing degree/GIR/HASS work remains partial; remaining source precedence and applicability questions plus full classification second pass are outstanding."
+      },
+      "expected_profile": null,
+      "expected_course_ids": {
+        "required": [
+          "mit-ai-v2025-6-1010",
+          "mit-ai-v2025-6-1210"
+        ],
+        "options": null,
+        "unresolved": null
+      },
+      "discrepancies": [
+        {
+          "issue": "Generic table construction left the two versioned foundation courses as other despite their available descriptions.",
+          "correction": "Source annotation-specific subject observer, changed-description digests and manual seed category review. Separate catalog source occurrences retain their own status.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996"
+          ]
+        }
+      ],
+      "blockers": [
+        {
+          "issue": "Departmental list labeled Fall2026 includes@2027FA offerings and exact catalog/cohort precedence is unresolved.",
+          "url": "https://eecsis.mit.edu/degree_requirements.pcgi?program=6-4&plugin=1791675178996"
+        },
+        {
+          "issue": "Current catalog subject6 page returns an empty course-description container; departmental annotations provide the two core descriptions, so this is not an authentication denial.",
+          "url": "https://catalog.mit.edu/subjects/6/"
+        }
+      ],
+      "remaining_work": [
+        "Continue all other versioned subjects and GIR/HASS subject classification/prerequisite review; existing eight curriculum-source questions remain documented in the seed audit."
+      ],
+      "correction_status": "Verified two fixed foundation classifications; full audit continues",
+      "second_pass_status": "pending"
+    }
+  ]
+}
