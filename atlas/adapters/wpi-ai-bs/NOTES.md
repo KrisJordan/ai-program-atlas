@@ -21,3 +21,11 @@ The general science baseline is not additional credit above overlapping major sc
 ## Extraction and metadata
 
 Program, per-concentration, per-policy and selected course-page parsers inspect the supplied HTML. They return partial components, validate headings/clauses and observe changed course rows; they never emit the manual audit or verification date. Raw HTML is only in ignored cache. Three selected AI-degree course pages have short reviewed descriptions/advisory background; remaining metadata/public syllabi remain unverified. Focused synthetic tests cover nested probability choices, graduate wrappers, conditional topics, robotics exclusion, policy conversion and business prohibitions. Parent coordinator owns DB ingestion and family modeling.
+
+## Bounded policy follow-up — 2026-10-11
+
+The BS remains **partial, 219 course observations / 141 requirement nodes**. The public catalog's transfer-credit link redirects to a registrar URL explicitly disallowed by robots; the fetch stopped there. The denied URL was not retried with a removed query or another host, and no browser bypass was used. Existing published HUA thresholds remain contradictory; department resources still delegate evaluation rather than establish a controlling threshold.
+
+The accessible [registrar graduation page](https://www.wpi.edu/offices/registrar/graduation) gives a current undergraduate table: October 4 applications for fall/spring completion, July 15 for summer, with December/May/August conferral. It explicitly accepts December 2026 and May 2027 applications. The catalog's existing prior-term deadlines and September reference differ. Both are retained as source-specific notes; no silent precedence is chosen. Project/HUA completion submission still requires final project work and the applicable eCDR, already represented. Ceremony participation is not degree conferral; optional honors criteria were not imposed on the ordinary degree.
+
+The remaining blockers are the HUA language-transfer threshold and applicability of inconsistent graduation timing. No new finite major/concentration pool was missing. The new table parser reads actual undergraduate rows, excludes the graduate table, detects changed dates and emits partial candidates only. Separate advanced-methods concentration records are unchanged.

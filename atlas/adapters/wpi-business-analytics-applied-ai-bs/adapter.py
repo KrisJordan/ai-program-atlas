@@ -201,3 +201,17 @@ policies = importlib.import_module("atlas.adapters.wpi-ai-bs.degree_policies")
 policies.attach(globals())
 
 SOURCES.append("https://www.wpi.edu/academics/departments/humanities-arts/resources")
+
+from atlas.adapters import wpi_policy_followup as followup
+
+def parse_registrar_graduation(html):
+    return followup.parse_graduation(html, PROGRAM_ID)
+
+SOURCES.append(followup.GRADUATION_URL)
+SOURCE_PARSERS[followup.GRADUATION_URL] = parse_registrar_graduation
+
+def parse_business_bsms_faq(html):
+    return followup.parse_business_bsms(html, PROGRAM_ID)
+
+SOURCES.append(followup.BSMS_URL)
+SOURCE_PARSERS[followup.BSMS_URL] = parse_business_bsms_faq

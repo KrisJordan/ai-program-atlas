@@ -9,3 +9,13 @@ University scope: minimum15 academic units/eight in residence; HUA2-unit sequenc
 Five verified course pages (CS2119, CS4341, CS4342, MIS3730, MIS3787) provide source-specific title/unit/background observations and short reviewed descriptions. MIS3730’s course page title is singular “Business Application”; the enriched record follows that page. Other descriptions/prerequisites/syllabi remain unknown. WPI units are fractional, and its four seven-week terms within two semesters are classified `other`. A separately cited graduate-credit conversion exists; raw course values are not silently converted.
 
 All parsers return partial components without audit or timestamps. Source metadata records exact URLs and reviewed sections. Raw sources remain ignored; coordinator owns shared DB ingestion. Degree Resources was checked for the HUA transfer discrepancy; it delegates to the coordinator and catalog rather than supplying a definitive threshold.
+
+## Bounded policy follow-up — 2026-10-11
+
+Still **partial, 49 course observations / 91 requirement nodes**. The catalog-linked transfer page's redirect is robots-disallowed; no URL alteration, alternate host or browser bypass was attempted. HUA's B-/B/C language-transfer ambiguity remains unresolved.
+
+The [current registrar page](https://www.wpi.edu/offices/registrar/graduation) supplies October 4 fall/spring application deadlines and July 15 summer, with December/May/August conferral; it is accepting December 2026 and May 2027 applications. These coexist visibly with the catalog's differing prior-term deadlines and September reference. No automatic precedence was inferred.
+
+The accessible [BS/MS FAQ](https://www.wpi.edu/academics/undergraduate/bachelors-masters-degree-program/BS-MS-program-FAQs), Business section, confirms admission before graduate coursework and graduate-only shared credits. MBA and MS Financial Technology are excluded from that optional pathway; application review begins after sophomore C term. This narrows eligibility but supplies no universal graduate-course count cap. The major's referenced count limit therefore remains unresolved; percentage limits and examples from other departments were not converted into a fabricated number.
+
+Sources and actual parsers are registered. Focused synthetic fixtures verify the undergraduate deadline table, changed facts, business-section eligibility and continuing partial audits. Outstanding conditions are explicit source conflicts/omissions rather than absent basic degree mapping.

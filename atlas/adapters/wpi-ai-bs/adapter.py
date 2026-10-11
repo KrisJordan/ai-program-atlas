@@ -260,3 +260,11 @@ policies.attach(globals())
 
 # Clarification source: directs transfer decisions to the HUA coordinator/catalog.
 SOURCES.append("https://www.wpi.edu/academics/departments/humanities-arts/resources")
+
+from atlas.adapters import wpi_policy_followup as followup
+
+def parse_registrar_graduation(html):
+    return followup.parse_graduation(html, PROGRAM_ID)
+
+SOURCES.append(followup.GRADUATION_URL)
+SOURCE_PARSERS[followup.GRADUATION_URL] = parse_registrar_graduation
