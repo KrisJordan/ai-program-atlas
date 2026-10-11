@@ -21,13 +21,13 @@
   "overview": "Reviewed visible AI concentration curriculum with separate course choices and local policies; linked registrar requirements remain unverified.",
   "catalog_year": null,
   "verification_status": "partial",
-  "last_verified": "2026-10-10",
+  "last_verified": "2026-10-11",
   "curriculum_status": "partial",
   "links": [
     {
       "kind": "overview",
       "url": "https://uvacsadvising.org/ai-concentration.html",
-      "label": "Artificial Intelligence Concentration — BACS AI Concentration"
+      "label": "Artificial Intelligence Concentration \u2014 BACS AI Concentration"
     },
     {
       "kind": "catalog",
@@ -39,7 +39,7 @@
     {
       "id": "uva-bacs-ai-concentration-identity",
       "url": "https://uvacsadvising.org/ai-concentration.html",
-      "title": "Artificial Intelligence Concentration — BACS AI Concentration",
+      "title": "Artificial Intelligence Concentration \u2014 BACS AI Concentration",
       "fetched_at": "2026-10-10",
       "source_date": null,
       "catalog_year": null,
@@ -49,7 +49,7 @@
     {
       "id": "uva-bacs-ai-concentration-context-1",
       "url": "https://engineering.virginia.edu/department/computer-science/academics/undergraduate-programs/bs-computer-science",
-      "title": "BS in Computer Science — official advising-site link",
+      "title": "BS in Computer Science \u2014 official advising-site link",
       "fetched_at": "2026-10-10",
       "source_date": null,
       "catalog_year": null,
@@ -64,6 +64,36 @@
       "source_date": null,
       "catalog_year": null,
       "locator": "About the AI Concentration; BS/BA concentration sections",
+      "confidence": "high"
+    },
+    {
+      "id": "uva-bacs-ai-concentration-policies-policy",
+      "url": "https://uvacsadvising.org/policies.html",
+      "title": "Policies and Procedures",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Applicable prerequisite, elective-overlap, external-course and school-specific reuse policies",
+      "confidence": "high"
+    },
+    {
+      "id": "uva-bacs-ai-concentration-transfer-policy",
+      "url": "https://uvacsadvising.org/transfer.html",
+      "title": "Transferring Courses to UVA",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Applicable prerequisite, elective-overlap, external-course and school-specific reuse policies",
+      "confidence": "high"
+    },
+    {
+      "id": "uva-bacs-ai-concentration-college-minor-policy",
+      "url": "https://college.as.virginia.edu/minor-declaration-and-policy",
+      "title": "Minor Declaration and Policy",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Applicable prerequisite, elective-overlap, external-course and school-specific reuse policies",
       "confidence": "high"
     }
   ],
@@ -370,7 +400,7 @@
       "category": "other",
       "source_id": "uva-bacs-ai-concentration-identity",
       "source_text": null,
-      "summary": "The concentration appears on the transcript, not the diploma. Its courses may also count toward other major or minor requirements.",
+      "summary": "The concentration appears on the transcript, not the diploma. Its courses may also count toward other major or minor requirements. For BACS, see the separately sourced unresolved College major/minor reuse restriction; an exception is not certified.",
       "course_ids": []
     },
     {
@@ -398,7 +428,7 @@
       "category": "other",
       "source_id": "uva-bacs-ai-concentration-identity",
       "source_text": null,
-      "summary": "Concentration courses also satisfy BACS requirements; the two core courses satisfy the CS Restricted Electives. No additional courses beyond the host major are required for the concentration.",
+      "summary": "Concentration courses also satisfy BACS requirements; the two core courses satisfy the CS Restricted Electives. No additional courses beyond the host major are required for the concentration. For BACS, see the separately sourced unresolved College major/minor reuse restriction; an exception is not certified.",
       "course_ids": []
     },
     {
@@ -460,6 +490,118 @@
         "uva-cs-4501-ai-powered-cybersecurity",
         "uva-cs-4501-llms-and-software-engineering"
       ]
+    },
+    {
+      "id": "uva-bacs-ai-concentration-policy-prerequisites",
+      "parent_id": null,
+      "title": "Enforced course prerequisites",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "uva-bacs-ai-concentration-policies-policy",
+      "source_text": null,
+      "summary": "CS checks published prerequisites and required prerequisite grades at the start of each semester; successful registration alone does not establish eligibility. Individual course prerequisites still need separate verification.",
+      "course_ids": []
+    },
+    {
+      "id": "uva-bacs-ai-concentration-policy-overlap-content",
+      "parent_id": null,
+      "title": "CS elective content overlap",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "uva-bacs-ai-concentration-policies-policy",
+      "source_text": null,
+      "summary": "Two substantially overlapping electives cannot both count toward the CS degree. General 3000-level CS elective eligibility does not expand the concentration\u2019s specifically approved lists. For BACS, see the separately sourced unresolved College major/minor reuse restriction; an exception is not certified.",
+      "course_ids": []
+    },
+    {
+      "id": "uva-bacs-ai-concentration-policy-internships",
+      "parent_id": null,
+      "title": "Internships do not earn CS degree credit",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "uva-bacs-ai-concentration-policies-policy",
+      "source_text": null,
+      "summary": "An internship does not itself earn CS course credit. The special UNST internship courses may support enrollment/visa purposes but do not fulfill degree requirements or the AI concentration.",
+      "course_ids": []
+    },
+    {
+      "id": "uva-bacs-ai-concentration-policy-term-transfer",
+      "parent_id": null,
+      "title": "External study during regular terms",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "uva-bacs-ai-concentration-policies-policy",
+      "source_text": null,
+      "summary": "External coursework during a regular UVA fall/spring semester requires explicit written dean permission to transfer back. The regular-term restriction normally does not apply in summer or J-term; separate school and course approval rules still apply.",
+      "course_ids": []
+    },
+    {
+      "id": "uva-bacs-ai-concentration-policy-transfer-review",
+      "parent_id": null,
+      "title": "Review external courses before enrollment",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "uva-bacs-ai-concentration-transfer-policy",
+      "source_text": null,
+      "summary": "For a course absent from the student\u2019s school pre-approved list, request the relevant CS program director\u2019s review before enrollment, including the syllabus and proposed equivalence; then complete school approval paperwork.",
+      "course_ids": []
+    },
+    {
+      "id": "uva-bacs-ai-concentration-policy-transfer-posting",
+      "parent_id": null,
+      "title": "Transcript and prerequisite posting",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "uva-bacs-ai-concentration-transfer-policy",
+      "source_text": null,
+      "summary": "Send the external institution\u2019s official transcript to the appropriate dean\u2019s office. External work cannot meet a UVA prerequisite until completed and posted with its grade in SIS.",
+      "course_ids": []
+    },
+    {
+      "id": "uva-bacs-ai-concentration-policy-preapproved",
+      "parent_id": null,
+      "title": "School-specific pre-approved transfer procedure",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "uva-bacs-ai-concentration-transfer-policy",
+      "source_text": null,
+      "summary": "BACS students must submit the College transfer form before taking even a pre-approved course.",
+      "course_ids": []
+    },
+    {
+      "id": "uva-bacs-ai-concentration-policy-minor-conflict",
+      "parent_id": null,
+      "title": "Unresolved BACS major/minor reuse",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "uva-bacs-ai-concentration-college-minor-policy",
+      "source_text": null,
+      "summary": "College policy prohibits using a minor course for a major or another minor. The AI concentration page says concentration courses may also satisfy any major/minor, and all BACS concentration courses also meet major requirements. Whether the AI statement is an authorized exception is unverified; do not treat it as blanket reuse permission.",
+      "course_ids": []
     }
   ],
   "notes": [
@@ -467,25 +609,32 @@
     "Advising page supplies the complete visible local course lists and policies. Registrar page https://records.ureg.virginia.edu/preview_program.php?catoid=72&poid=11789 was inaccessible; no catalog-policy agreement is asserted.",
     "Each approved special topic has a separate course observation using its published common code. Topic labels are not separate catalog codes. BA MDST 3510 has no topic restriction stated here; the BS list limits it to AI Policy and Society.",
     "Credit unit normalization and course descriptions/prerequisites remain unverified. BACS manual-override CS 4501 individual credits are unstated and null.",
-    "Inferred taxonomy summarizes available curriculum themes, including optional electives; it is separate from source-stated learning outcomes."
+    "Inferred taxonomy summarizes available curriculum themes, including optional electives; it is separate from source-stated learning outcomes.",
+    "Independent public CS policies reviewed 2026-10-11. These rules do not broaden the AI elective lists or certify the parent degree. Registrar catalog restriction remains unresolved."
   ],
   "curriculum_audit": {
     "scope": "concentration",
-    "reviewed_at": "2026-10-10",
+    "reviewed_at": "2026-10-11",
     "source_ids": [
       "uva-bacs-ai-concentration-identity",
       "uva-bacs-ai-concentration-context-1",
-      "uva-bacs-ai-concentration-department-context"
+      "uva-bacs-ai-concentration-department-context",
+      "uva-bacs-ai-concentration-policies-policy",
+      "uva-bacs-ai-concentration-transfer-policy",
+      "uva-bacs-ai-concentration-college-minor-policy"
     ],
     "sections": [
       "Distinct BACS parent-degree section",
       "Two-course core and two elective requirements",
       "Approved special topics and manual override where applicable",
       "Declaration, transcript and overlap policies",
-      "Department-stated learning outcomes"
+      "Department-stated learning outcomes",
+      "Public CS prerequisites, overlapping content, internship credit and regular-term external enrollment rules",
+      "Distinct BACS/BSCS external-course preapproval procedures and transcript posting"
     ],
     "unresolved_requirements": [
-      "Linked registrar program page could not be inspected; additional catalog constraints or discrepancies remain unverified."
+      "Linked registrar program page could not be inspected; additional catalog constraints or discrepancies remain unverified.",
+      "AI concentration page permits major/minor overlap, but College and CS BACS policies prohibit major/minor reuse. An AI-specific exception has not been verified."
     ],
     "metadata_gaps": [
       "Course descriptions, most prerequisites and public teaching resources remain unverified.",

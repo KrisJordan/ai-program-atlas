@@ -16,3 +16,7 @@ def parse(html: str) -> dict:
 SOURCES.append(
     "https://engineering.virginia.edu/department/computer-science/cs-undergraduate-artificial-intelligence-concentrations"
 )
+
+from atlas.adapters.uva_ai_policies import parsers
+SOURCE_PARSERS={SOURCES[0]:parse,**parsers(PROGRAM_ID)}
+SOURCES=list(dict.fromkeys([*SOURCES,*SOURCE_PARSERS]))
