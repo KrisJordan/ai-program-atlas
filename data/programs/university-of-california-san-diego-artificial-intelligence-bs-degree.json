@@ -1170,6 +1170,16 @@
       "catalog_year": "2026–27",
       "locator": "All represented exact current complete blocks and applicable chapter rules; related heritage variants guarded separately",
       "confidence": "high"
+    },
+    {
+      "id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chem-courses",
+      "url": "https://catalog.ucsd.edu/courses/CHEM.html",
+      "title": "UC San Diego Chemistry course descriptions",
+      "fetched_at": "2026-10-11T09:04:58+00:00",
+      "source_date": null,
+      "catalog_year": "2026–27",
+      "locator": "All13 current represented complete blocks primary and contributor read; chapter section introductions checked",
+      "confidence": "high"
     }
   ],
   "outcomes": [],
@@ -7964,16 +7974,35 @@
     {
       "id": "ucsd-chem-117",
       "code": "CHEM 117",
-      "name": "Biomedical Research and Health Disparities",
-      "description": null,
-      "prerequisites": "CHEM 40B, CHEM 40CH, CHEM 41C",
-      "credits": null,
+      "name": "Biomedical Research in Health Disparities",
+      "description": "Surveys historical research harms, race and health outcomes alongside genomic and biological explanations of disparities and emerging biomedical interventions.",
+      "prerequisites": "CHEM 40B, 40CH, or 41C.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
       "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-dei-approved-pdf",
-      "url": "https://senate.ucsd.edu/media/513521/dei-list-of-courses.pdf",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chem-courses",
+      "url": "https://catalog.ucsd.edu/courses/CHEM.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "The prerequisite is an alternative: CHEM 40B, 40CH, or 41C. The earlier pool’s comma-only list is not treated as requiring all three courses.",
+        "Listed title: Biomedical Research and Health Disparities. Current title: Biomedical Research in Health Disparities. The change is the in/and preposition in the same biomedical-disparities subject or the explicit III sequence number for 6C/6CH; current content aligns without asserting a different course identity."
+      ],
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chem-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-dei-approved-pdf"
+        ],
+        "locator": "CHEM 117. Biomedical Research in Health Disparities (4)",
+        "rationale": "Historical harms and race-related disparities are explicit social inquiry, while genomics, biological mechanisms and personalized medicine form a distinct biomedical component. The description does not establish one as dominant.",
+        "candidate_categories": [
+          "human_context",
+          "applications"
+        ]
+      }
     },
     {
       "id": "ucsd-clas-120",
@@ -13064,57 +13093,124 @@
       "id": "ucsd-chem-11",
       "code": "CHEM 11",
       "name": "The Periodic Table",
-      "description": null,
+      "description": "Introduces atoms and small inorganic molecules as the basis of the material world.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-revelle-nat-science",
-      "url": "https://revelle.ucsd.edu/academics/general-education/nat-science.html",
+      "category": "applications",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chem-courses",
+      "url": "https://catalog.ucsd.edu/courses/CHEM.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Intended for nonscience majors; this is not stated as an exclusive major restriction. Credit cannot be received for both CHEM 4 and CHEM 11.",
+        "No formal Prerequisites clause is printed in this current block. Null records that omission, not absence of preparation or enrollment conditions."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chem-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-revelle-nat-science"
+        ],
+        "locator": "CHEM 11. The Periodic Table (4)",
+        "rationale": "Atomic and molecular chemistry is substantive domain science, independent of the nonscience-major audience.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chem-4",
       "code": "CHEM 4",
       "name": "Chemical Thinking",
-      "description": null,
+      "description": "Develops models of matter and structure-property relationships to explain and predict chemical behavior in preparation for general chemistry.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-revelle-nat-science",
-      "url": "https://revelle.ucsd.edu/academics/general-education/nat-science.html",
+      "category": "applications",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chem-courses",
+      "url": "https://catalog.ucsd.edu/courses/CHEM.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Enrollment is restricted to first-year and sophomore students. Concurrent MATH 3C, 4C, or 10A or higher is recommended, not required by this block.",
+        "One-quarter preparation for general chemistry. Credit cannot be received for both CHEM 4 and CHEM 11; this exclusion does not establish course identity.",
+        "No formal Prerequisites clause is printed in this current block. Null records that omission, not absence of preparation or enrollment conditions."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chem-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-revelle-nat-science"
+        ],
+        "locator": "CHEM 4. Chemical Thinking (4)",
+        "rationale": "Chemical models and material behavior define domain science; introductory preparation is not computer-science foundations.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chem-6c",
       "code": "CHEM 6C",
-      "name": "General Chemistry",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "General Chemistry III",
+      "description": "Continues general chemistry with reaction kinetics, acid-base equilibrium, electrochemistry, coordination compounds and introductory nuclear chemistry.",
+      "prerequisites": "CHEM 6B or 6BH.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-revelle-nat-science",
-      "url": "https://revelle.ucsd.edu/academics/general-education/nat-science.html",
+      "category": "applications",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chem-courses",
+      "url": "https://catalog.ucsd.edu/courses/CHEM.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Third quarter of a three-quarter sequence intended for science and engineering majors; this is an intended audience, not an exclusive major restriction.",
+        "CHEM 6C cannot be taken for credit after CHEM 6CH. The reverse order is explicitly allowed by the 6CH block, so the restriction is directional.",
+        "Listed title: General Chemistry. Current title: General Chemistry III. The change is the in/and preposition in the same biomedical-disparities subject or the explicit III sequence number for 6C/6CH; current content aligns without asserting a different course identity."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chem-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-revelle-nat-science"
+        ],
+        "locator": "CHEM 6C. General Chemistry III (4)",
+        "rationale": "The explicit content consists of chemical mechanisms and principles.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chem-6ch",
       "code": "CHEM 6CH",
-      "name": "Honors General Chemistry",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Honors General Chemistry III",
+      "description": "Studies the third-quarter general-chemistry topics at an accelerated honors level, including kinetics, equilibria and electrochemical, coordination and nuclear chemistry.",
+      "prerequisites": "CHEM 6BH and MATH 20B.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-revelle-nat-science",
-      "url": "https://revelle.ucsd.edu/academics/general-education/nat-science.html",
+      "category": "applications",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chem-courses",
+      "url": "https://catalog.ucsd.edu/courses/CHEM.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Third quarter of a three-quarter honors sequence intended for well-prepared science and engineering majors, not an exclusive major restriction.",
+        "May receive credit for CHEM 6CH after CHEM 6C, but may not subsequently take CHEM 6C for credit. Both CHEM 6BH and MATH 20B are required.",
+        "Listed title: Honors General Chemistry. Current title: Honors General Chemistry III. The change is the in/and preposition in the same biomedical-disparities subject or the explicit III sequence number for 6C/6CH; current content aligns without asserting a different course identity."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chem-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-revelle-nat-science"
+        ],
+        "locator": "CHEM 6CH. Honors General Chemistry III (4)",
+        "rationale": "The source explicitly refers to CHEM 6C content at a higher level and faster pace; that separately guarded block identifies chemical subject matter.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-astr-1",
@@ -27132,49 +27228,109 @@
       "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-table-environment",
       "url": "https://docs.google.com/spreadsheets/u/0/d/e/2PACX-1vR-aC9cVI_o4xRZ8I_Go7Mkx-hSy6dcbPt8znZAuOFwDBI7lwfdAqtb1IgwV7D-poKWvNVJvlG3OA5V/pubhtml/sheet?headers=false&gid=1107304246",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chem-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-table-environment"
+        ],
+        "locator": "CHEM 15; bounded current exact heading inventory",
+        "rationale": "No exact current CHEM15 heading matches the represented identifier; no substitute or discontinuation is inferred.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "No exact CHEM 15 heading appears in the reviewed 2026–27 Chemistry and Biochemistry chapter. No substitute, cancellation or university-wide absence is inferred."
+      ]
     },
     {
       "id": "ucsd-chem-171",
       "code": "CHEM 171",
       "name": "Environmental Chemistry I",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Introduces environmental chemistry through atmospheric pollution, ozone, climate, radioactive waste, resource use and energy choices.",
+      "prerequisites": "CHEM 6C or 6CH.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-table-environment",
-      "url": "https://docs.google.com/spreadsheets/u/0/d/e/2PACX-1vR-aC9cVI_o4xRZ8I_Go7Mkx-hSy6dcbPt8znZAuOFwDBI7lwfdAqtb1IgwV7D-poKWvNVJvlG3OA5V/pubhtml/sheet?headers=false&gid=1107304246",
+      "category": "applications",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chem-courses",
+      "url": "https://catalog.ucsd.edu/courses/CHEM.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Only one of CHEM 149A and CHEM 171 may receive credit. This exclusion alone does not establish an alias."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chem-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-table-environment"
+        ],
+        "locator": "CHEM 171. Environmental Chemistry I (4)",
+        "rationale": "The description frames environmental issues through chemical concerns and atmospheric science. Risks and benefits do not by themselves establish coequal political or ethical analysis.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chem-172",
       "code": "CHEM 172",
       "name": "Environmental Chemistry II",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Examines chemical cycles in solids and liquids across time, including disruptions from society, volcanism and extinction and examples beyond Earth.",
+      "prerequisites": "CHEM 6C or 6CH.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-table-environment",
-      "url": "https://docs.google.com/spreadsheets/u/0/d/e/2PACX-1vR-aC9cVI_o4xRZ8I_Go7Mkx-hSy6dcbPt8znZAuOFwDBI7lwfdAqtb1IgwV7D-poKWvNVJvlG3OA5V/pubhtml/sheet?headers=false&gid=1107304246",
+      "category": "applications",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chem-courses",
+      "url": "https://catalog.ucsd.edu/courses/CHEM.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "CHEM 171 is recommended preparation. CHEM 6C or 6CH is the actual prerequisite; the recommendation is not promoted into a required sequence."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chem-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-table-environment"
+        ],
+        "locator": "CHEM 172. Environmental Chemistry II (4)",
+        "rationale": "Environmental chemical processes and elemental cycles are primary; societal perturbations are studied within that physical framework.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chem-173",
       "code": "CHEM 173",
       "name": "Atmospheric Chemistry",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Applies chemistry to atmospheric composition, reactions, aerosols and geochemical cycles associated with ozone, acid rain and climate.",
+      "prerequisites": "CHEM 6C or 6CH.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-table-environment",
-      "url": "https://docs.google.com/spreadsheets/u/0/d/e/2PACX-1vR-aC9cVI_o4xRZ8I_Go7Mkx-hSy6dcbPt8znZAuOFwDBI7lwfdAqtb1IgwV7D-poKWvNVJvlG3OA5V/pubhtml/sheet?headers=false&gid=1107304246",
+      "category": "applications",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chem-courses",
+      "url": "https://catalog.ucsd.edu/courses/CHEM.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "May be coscheduled with CHEM 273; this does not establish course identity or impose graduate eligibility."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chem-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-warren-table-environment"
+        ],
+        "locator": "CHEM 173. Atmospheric Chemistry (4)",
+        "rationale": "Atmospheric chemical mechanisms are substantive scientific domain knowledge.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-comm-171",
@@ -55547,57 +55703,111 @@
       "id": "ucsd-chem-111",
       "code": "CHEM 111",
       "name": "Origins of Life and the Universe",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Traces chemical evolution from stars and planets to Earth’s atmosphere, oceans and early life, including searches for chemical evidence of life elsewhere.",
+      "prerequisites": "CHEM 6C or 6CH.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-seventh-first",
-      "url": "https://seventh.ucsd.edu/academics/degree-requirements/degree-requirements-first.html",
+      "category": "applications",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chem-courses",
+      "url": "https://catalog.ucsd.edu/courses/CHEM.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chem-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-seventh-first"
+        ],
+        "locator": "CHEM 111. Origins of Life and the Universe (4)",
+        "rationale": "Biogeochemical evolution and chemical detection techniques are scientific content, not historical-cultural interpretation despite a long time scale.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chem-145",
       "code": "CHEM 145",
       "name": "Biofuels and Renewable Materials",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Studies the chemistry, biochemical pathways, processing and analysis used to produce biofuels and renewable materials.",
+      "prerequisites": "CHEM 40B, 40BH, 41B, 140B, or 140BH.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-seventh-first",
-      "url": "https://seventh.ucsd.edu/academics/degree-requirements/degree-requirements-first.html",
+      "category": "applications",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chem-courses",
+      "url": "https://catalog.ucsd.edu/courses/CHEM.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chem-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-seventh-first"
+        ],
+        "locator": "CHEM 145. Biofuels and Renewable Materials (4)",
+        "rationale": "Chemical and biochemical production technologies and analytical practice are the explicit applied domain.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chem-151",
       "code": "CHEM 151",
       "name": "Molecules that Changed the World",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Explores notable natural molecules and how discovery, synthesis, modification and use of molecules affect society.",
+      "prerequisites": "CHEM 40A, 40AH, or 41A.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-seventh-first",
-      "url": "https://seventh.ucsd.edu/academics/degree-requirements/degree-requirements-first.html",
+      "category": "applications",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chem-courses",
+      "url": "https://catalog.ucsd.edu/courses/CHEM.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chem-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-seventh-first"
+        ],
+        "locator": "CHEM 151. Molecules that Changed the World (4)",
+        "rationale": "Molecular discovery and chemical synthesis organize the description. Societal effects provide context without a separately stated social-analysis method or objective.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-chem-174",
       "code": "CHEM 174",
       "name": "Chemical Principles of Marine Systems",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Explains the distribution and aqueous behavior of seawater elements through atomic structure, bonding and periodic chemical properties.",
+      "prerequisites": "CHEM 6C or 6CH.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-seventh-first",
-      "url": "https://seventh.ucsd.edu/academics/degree-requirements/degree-requirements-first.html",
+      "category": "applications",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chem-courses",
+      "url": "https://catalog.ucsd.edu/courses/CHEM.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "The current description explicitly cross-lists SIO 141 and disallows credit for both SIO 141 and CHEM 174. The reviewed current SIO chapter has no exact SIO 141 heading; this one-sided current evidence is retained for primary identity/version review, with no identity group emitted."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chem-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-seventh-first"
+        ],
+        "locator": "CHEM 174. Chemical Principles of Marine Systems (4)",
+        "rationale": "Marine chemical mechanisms establish a domain-science subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-phys-1a",
@@ -55917,7 +56127,8 @@
         "candidate_categories": []
       },
       "notes": [
-        "No exact current identifier appears in the reviewed 2026–27 SIO chapter. No replacement, cancellation or university-wide absence is inferred."
+        "No exact current identifier appears in the reviewed 2026–27 SIO chapter. No replacement, cancellation or university-wide absence is inferred.",
+        "Positive counterpart evidence: current2026–27 CHEM174 explicitly cross-lists SIO141 and excludes duplicate credit. The earlier SIO-chapter observation remains only absence of an exact SIO141 heading; this does not establish course nonexistence. CHEM174 source: https://catalog.ucsd.edu/courses/CHEM.html. No automatic identity group or copied course observation is introduced here."
       ]
     },
     {
@@ -56921,15 +57132,31 @@
       "id": "ucsd-chem-143c",
       "code": "CHEM 143C",
       "name": "Organic Chemistry Laboratory",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Identifies unknown organic compounds using chemical and physical laboratory techniques.",
+      "prerequisites": "CHEM 43A, 43AM, 143A, 143AM, or 143AH and CHEM 40B, 40BH, 41B, 140B, or 140BH.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-seventh-first",
-      "url": "https://seventh.ucsd.edu/academics/degree-requirements/degree-requirements-first.html",
+      "category": "applications",
+      "source_id": "university-of-california-san-diego-artificial-intelligence-bs-degree-chem-courses",
+      "url": "https://catalog.ucsd.edu/courses/CHEM.html",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "notes": [
+        "Enrollment is limited to Chemistry and Biochemistry department majors unless space is available; students outside those majors are not absolutely prohibited. Program or materials fees may apply.",
+        "The printed prerequisite clause contains alternative laboratory courses and alternative lecture courses joined by and. Its compressed numbering and AND/OR wording are preserved without an unsupported Boolean expansion."
+      ],
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-chem-courses",
+          "university-of-california-san-diego-artificial-intelligence-bs-degree-seventh-first"
+        ],
+        "locator": "CHEM 143C. Organic Chemistry Laboratory (4)",
+        "rationale": "Organic-compound identification is concrete laboratory practice.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "ucsd-cogs-194",
@@ -152272,7 +152499,8 @@
     "CSE100/150A complete current blocks were re-read to close two manual review omissions outside the earlier remaining-CSE handoff.100 is systems,150A AI/ML; full prior metadata and source tags remain composed. Four already-unmatched Communication records now have explicit unclassified review labels; no new content or missing-code claim is introduced.",
     "Remaining History85 target review supplies78 current observations, five unmatched codes and two source-content/title holds. HISA199 variable1–4 retains the separate pool requirement to take4; HITO193 heading6units conflicts with POLI194/USP194 chapter4units. Exact Colloquia approval and undergraduate/graduate scope remain guarded; no identity or credit reconciliation by assumption.",
     "Linguistics39 targets receive25 exact current observations;13 unsuffixed heritage-language identities and LISP15 remain unmatched. Thirty-nine related F/W/P blocks were inspected but are not automatic substitutes or added options. Ten Spanish/Portuguese components state2.5units each and retain required paired enrollment separately.",
-    "PHYS/ASTR26 targets receive24 current observations,PHYS13unmatched andASTR150title/version held. PHYS1A/B/C each3units permit lab/lecture in separate terms;PHYS11 explicitmathcorequisite is retained. Astronomy154 mixes statistics andML methods, while60is social antiracism. Chapter-wide Physics enrollment/sequence policies retain actual scope."
+    "PHYS/ASTR26 targets receive24 current observations,PHYS13unmatched andASTR150title/version held. PHYS1A/B/C each3units permit lab/lecture in separate terms;PHYS11 explicitmathcorequisite is retained. Astronomy154 mixes statistics andML methods, while60is social antiracism. Chapter-wide Physics enrollment/sequence policies retain actual scope.",
+    "CHEM14 target review maps13 current4-unit observations, with15unmatched.117 combines health-disparity history/social harms with biomedical science; twelveothers have substantive chemical-domain content.6CHafter6C credit permission is directional,172onlyrecommends171, and143C restricted-major admission has a space-available route.174 provides positive current cross-list evidence forSIO141 despite its missing SIOchapterheading; identity reconciliation remains separate."
   ],
   "curriculum_audit": {
     "scope": "degree",

@@ -403,3 +403,10 @@ for _review_module in (linguistics_reviews, physics_astronomy_reviews):
             raise ValueError('UCSD Linguistics/Physics/Astronomy source needs explicit parser composition')
         SOURCES += (_review_url,)
         SOURCE_PARSERS[_review_url] = _review_parser
+
+from atlas.adapters import ucsd_chem_reviews as chem_reviews
+for _review_url, _review_parser in chem_reviews.SOURCE_PARSERS.items():
+    if _review_url in SOURCE_PARSERS:
+        raise ValueError('UCSD Chemistry source needs explicit parser composition')
+    SOURCES += (_review_url,)
+    SOURCE_PARSERS[_review_url] = _review_parser

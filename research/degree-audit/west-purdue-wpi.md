@@ -455,3 +455,7 @@ Seventy-eight source observations integrated from the remaining85-target History
 ### UCSD Linguistics and Physics/Astronomy, 2026-10-11
 
 Forty-nine approved descriptions integrated across65 targets. Primary read25 exact Linguistics/language blocks plus39 related seasonal variants; contributor read25 Physics/Astronomy matches with primary nine-block and policy checks. Fourteen Linguistics unmatched exact codes and two Physics/Astronomy missing/title holds remain. Paired2.5-unit language components and separate-term physics-lab permission are preserved. Context categories1159other/879human/170applications/7foundations/23systems/3math; roles unchanged8/119/2241. Other accessible chapters remain active.
+
+### UCSD Chemistry, 2026-10-11
+
+All13 matching Chemistry blocks independently primary-read and integrated from the contributor, with15unmatched. Exact directional credit and optional preparation retained. CHEM174 supplies positiveSIO141cross-list evidence despite that code's missing own-chapter heading; separate identity reconciliation remains needed, not an absence inference. Context1147other/879human/182applications/7foundations/23systems/3math;8/119/2241roles unchanged. Remaining public source work active.

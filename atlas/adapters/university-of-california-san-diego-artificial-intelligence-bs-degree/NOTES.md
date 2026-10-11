@@ -305,3 +305,9 @@ All25 exact Linguistics/language target blocks and39 related heritage-language v
 The contributor read25 exact PHYS/ASTR blocks among26targets; primary checked nine consequential blocks and the full Physics preamble. Twenty-four observations integrated:22applications,60human-context,154mixedmath/AI. PHYS13 missing andASTR150title/version held. Twenty4-unit, three3-unit lectures and154five-unit amounts remain exact. Physics1lectures permit separate-term labs;11requires a math corequisite rather than merely recommending it. Physics4requirements apply to physics majors/core upper-division study, not all AI students.
 
 Roles remain8/119/2241. Context categories1159other/879human/170applications/7foundations/23systems/3math. Remaining Literature, Chemistry and other represented chapters remain accessible active work. No whole-degree certification is implied.
+
+### Chemistry current content — 2026-10-11
+
+Contributor and primary each read all13 exact current Chemistry blocks among14targets and section introductions. Twelve are chemical-domain applications;117 combines biomedical/genomic content with historical harms and race/health disparities.15 remains unmatched. All approved headings state4units.6CH-after6C credit is permitted but the reverse is excluded;172recommends171 without requiring it.4first/sophomore enrollment differs from optional math;143C permits nondepartment majors when space is available.
+
+CHEM174 explicitly cross-listsSIO141 and excludes duplicate credit. This positive current counterpart evidence is now retained on SIO141, qualifying the earlier exact-heading absence in the SIO chapter. No unsupported nonexistence claim, automatic alias merge or copied course observation is made. Context categories1147other/879human/182applications/7foundations/23systems/3math; roles8/119/2241 unchanged. Other accessible sources remain active.

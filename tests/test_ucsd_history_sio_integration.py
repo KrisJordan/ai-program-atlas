@@ -2,7 +2,7 @@ import importlib
 import json
 from pathlib import Path
 import pytest
-from atlas.adapters import ucsd_hila_reviews as hila, ucsd_sio_reviews as sio, ucsd_eds_reviews as eds, ucsd_cgs_reviews as cgs, ucsd_mus_reviews as mus, ucsd_biology_reviews as bio, ucsd_glbh_reviews as glbh, ucsd_psyc_reviews as psyc, ucsd_linguistics_reviews as ling, ucsd_physics_astronomy_reviews as physics
+from atlas.adapters import ucsd_hila_reviews as hila, ucsd_sio_reviews as sio, ucsd_eds_reviews as eds, ucsd_cgs_reviews as cgs, ucsd_mus_reviews as mus, ucsd_biology_reviews as bio, ucsd_glbh_reviews as glbh, ucsd_psyc_reviews as psyc, ucsd_linguistics_reviews as ling, ucsd_physics_astronomy_reviews as physics, ucsd_chem_reviews as chem
 from atlas.curriculum_profile import requirement_profile
 
 PID=hila.SPEC['program_id']
@@ -25,7 +25,7 @@ def test_history_sio_integration_preserves_held_identity_and_roles():
     assert cs['POLI 117']['category_review']['status']=='unclassified'
     assert [requirement_profile(d)[k]['count']for k in ['required','options','unresolved']]==[8,119,2241]
 
-@pytest.mark.parametrize('module,subject,count,dispositions',[(hila,'HILA',265,20),(sio,'SIO',35,6),(eds,'EDS',31,1),(cgs,'CGS',24,0),(mus,'MUS',27,6),(bio,'BIOL',34,3),(glbh,'GLBH',24,2),(psyc,'PSYC',14,2),(ling,'LING',25,14),(physics,'PHYS',14,1),(physics,'ASTR',10,1)])
+@pytest.mark.parametrize('module,subject,count,dispositions',[(hila,'HILA',265,20),(sio,'SIO',35,6),(eds,'EDS',31,1),(cgs,'CGS',24,0),(mus,'MUS',27,6),(bio,'BIOL',34,3),(glbh,'GLBH',24,2),(psyc,'PSYC',14,2),(ling,'LING',25,14),(physics,'PHYS',14,1),(physics,'ASTR',10,1),(chem,'CHEM',13,1)])
 def test_composed_source_replays_approved_metadata_only(module,subject,count,dispositions):
     s=module.SPEC['sources'][subject];p=Path(s['cache_path'])
     if not p.exists():pytest.skip('Optional ignored official chapter capture')
@@ -93,3 +93,13 @@ def test_language_half_units_and_physics_scope_are_preserved():
     assert cs['ASTR 150']['category_review']['status']=='unclassified'
     assert cs['ASTR 154']['credits']==5
     assert set(cs['ASTR 154']['category_review']['candidate_categories'])=={'mathematics','ai_ml'}
+
+
+def test_chemistry_directional_credit_and_positive_counterpart_evidence():
+    d=json.loads(Path('data/programs',PID+'.json').read_text());cs={c['code']:c for c in d['courses']}
+    assert cs['CHEM 117']['category_review']['status']=='mixed'
+    assert cs['CHEM 172']['prerequisites']=='CHEM 6C or 6CH.'
+    assert any('CHEM 171 is recommended preparation' in n for n in cs['CHEM 172']['notes'])
+    assert any('May receive credit for CHEM 6CH after CHEM 6C' in n for n in cs['CHEM 6CH']['notes'])
+    assert any('Positive counterpart evidence' in n for n in cs['SIO 141']['notes'])
+    assert cs['CHEM 15']['category_review']['status']=='unclassified'
