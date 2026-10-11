@@ -19,3 +19,10 @@ The DATA 317 prerequisite is DATA 110 and 117; DATA 320 and 420I require DATA 12
 The source-specific adapter reads the visible CourseLeaf content, scoped course table and course blocks. It extracts current codes, names, choices and amounts. Policy recipes require the relevant visible heading and material clauses; changed conditions fail for review. Reviewed description/outcome paraphrases are bound to hashes of the actual observed source text, so a changed description does not retain the old paraphrase. No parser reads the seed or emits audits, completion or verification timestamps.
 
 Synthetic fixtures test changed choice counts, independent course credits/names/prerequisites, missing blocks, navigation-only titles and gates. Optional ignored-cache replays cover all six refresh sources and materially changed policy guards. A manual audit—not a successful scrape—confers completeness.
+
+
+## DATA 117 taxonomy correction / 2026-10-11
+
+Re-read the [official 2026–27 DATA catalog](https://catalog.unc.edu/courses/data/), DATA 117 exact block and concluding aim. Reviewed as **Domain studies & applications**: interdisciplinary AI literacy and responsible application in a student's field, with supporting ethics/societal themes. The catalog does not identify substantive model-development, training/inference or algorithm-analysis objectives; this judgment does not claim an independently inspected syllabus or exact technical depth. The stored category_review cites that block and explains the focus. The mixed three-course core group no longer claims an AI/ML category.
+
+Adapter proposals use Applications for the exact reviewed identity/description; changed DATA 117 title or description produces Other pending review. Parsers never emit category_review. Scrape observations remain a candidate queue and cannot erase the curated correction. Other UNC courses and the minor's requirement-completeness audit are unchanged. For future classifications use docs/DEGREE_AUDIT.md's clarified rubric.

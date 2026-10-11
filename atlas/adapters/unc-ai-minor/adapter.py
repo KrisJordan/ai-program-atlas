@@ -16,7 +16,9 @@ REGISTRATION = 'https://catalog.unc.edu/policies-procedures/registration-enrollm
 GRADES = 'https://catalog.unc.edu/policies-procedures/attendance-grading-examination/'
 SOURCES = (CATALOG, COURSES, DEGREE, TRANSFER, REGISTRATION, GRADES)
 CODES = ('DATA 110','DATA 117','DATA 120','DATA 317','DATA 320','DATA 420I','DATA 520')
-CATEGORIES = ('foundations','ai_ml','human_context','applications','human_context','human_context','human_context')
+DATA117_TITLE = 'AI Unlocked for Curious Minds'
+DATA117_APPLICATIONS_DESCRIPTION_HASH = '38077a91a33fe0a381dca19e91db40b11ad499a445e1b4d68b029cb4ac1237c2'
+CATEGORIES = ('foundations','applications','human_context','applications','human_context','human_context','human_context')
 
 def text(node):
     return re.sub(r'\s+', ' ', node.get_text(' ', strip=True)).strip() if node else ''
@@ -63,14 +65,16 @@ def parse(html):
             code=text(a); namecell=BeautifulSoup(str(cells[1]),'html.parser')
             for sup in namecell.select('sup'):sup.decompose()
             name=text(namecell);hours=text(cells[-1]); credit=float(hours) if re.fullmatch(r'\d+(?:\.\d+)?',hours) else None
-            courses.append(dict(id=cid(code),code=code,name=name,description=None,prerequisites=None,credits=credit,credit_unit='semester_hours' if credit is not None else 'unknown',category=dict(zip(CODES,CATEGORIES)).get(code,'other'),source_id=PROGRAM_ID+'-catalog',url=CATALOG,public_site=None,syllabus=None))
+            category=dict(zip(CODES,CATEGORIES)).get(code,'other')
+            if code=='DATA 117' and name!=DATA117_TITLE:category='other'
+            courses.append(dict(id=cid(code),code=code,name=name,description=None,prerequisites=None,credits=credit,credit_unit='semester_hours' if credit is not None else 'unknown',category=category,source_id=PROGRAM_ID+'-catalog',url=CATALOG,public_site=None,syllabus=None))
             (electives if pool else core).append(cid(code))
         if 'listsum' in row.get('class',[]):total=float(text(cells[-1]))
     if not core or not electives or not choice or total is None:raise ValueError('Incomplete minor inventory')
     bt=text(body)
     if not all(p in bt for p in ['at least nine hours','2.000','Honors version available','Enrollment and GPA restrictions may apply']):
         raise ValueError('Minor policy changed; review required')
-    req=[rule('total','Minor total',f'Complete the published {total:g} semester-hour minor. The elective pool is not an additional requirement.',kind='all',credits=total),rule('core','Required core',f'Complete all {len(core)} core courses.',kind='all',course_ids=core,parent=PROGRAM_ID+'-total',category='ai_ml'),rule('electives','Minor electives',f'Choose {choice[0]} courses totaling {choice[1]:g} semester hours from the published pool.',kind='choose_courses',count=choice[0],credits=choice[1],course_ids=electives,parent=PROGRAM_ID+'-total',category='electives'),rule('residence','Minor residence','Complete at least nine core semester hours at UNC–Chapel Hill.'),rule('gpa','Minor GPA','Earn at least 2.000 cumulative GPA in minor core coursework.'),rule('honors','Honors alternatives','An honors version meets the same requirement; applicable honors enrollment and GPA restrictions still apply. DATA 110 and DATA 120 are marked as offering honors versions.')]
+    req=[rule('total','Minor total',f'Complete the published {total:g} semester-hour minor. The elective pool is not an additional requirement.',kind='all',credits=total),rule('core','Required core',f'Complete all {len(core)} core courses.',kind='all',course_ids=core,parent=PROGRAM_ID+'-total',category='other'),rule('electives','Minor electives',f'Choose {choice[0]} courses totaling {choice[1]:g} semester hours from the published pool.',kind='choose_courses',count=choice[0],credits=choice[1],course_ids=electives,parent=PROGRAM_ID+'-total',category='electives'),rule('residence','Minor residence','Complete at least nine core semester hours at UNC–Chapel Hill.'),rule('gpa','Minor GPA','Earn at least 2.000 cumulative GPA in minor core coursework.'),rule('honors','Honors alternatives','An honors version meets the same requirement; applicable honors enrollment and GPA restrictions still apply. DATA 110 and DATA 120 are marked as offering honors versions.')]
     result = dict(id=PROGRAM_ID,title='Artificial Intelligence Minor',program_kind='minor',award_level='minor',courses=courses,requirements=req)
     overview = m.select_one('#textcontainer')
     statements = [text(li) for li in overview.select('li')] if overview else []
@@ -94,7 +98,10 @@ def parse_courses(html):
         description=text(block.select_one('.courseblockextra'))
         digest=hashlib.sha256(description.encode()).hexdigest()
         prereq=text(block.select_one('.detail-requisites'))
-        out.append(dict(id=cid(code),code=code,name=title,description=DESCRIPTION_PARAPHRASES.get(digest),prerequisites=prereq.removeprefix('Requisites: ').strip() or None,credits=float(credit[1]),credit_unit='semester_hours',category=dict(zip(CODES,CATEGORIES))[code],source_id=PROGRAM_ID+'-courses',url=COURSES,public_site=None,syllabus=None))
+        category=dict(zip(CODES,CATEGORIES))[code]
+        # This is a candidate proposal, bound to the actually reviewed evidence.
+        if code=='DATA 117' and (title!=DATA117_TITLE or digest!=DATA117_APPLICATIONS_DESCRIPTION_HASH):category='other'
+        out.append(dict(id=cid(code),code=code,name=title,description=DESCRIPTION_PARAPHRASES.get(digest),prerequisites=prereq.removeprefix('Requisites: ').strip() or None,credits=float(credit[1]),credit_unit='semester_hours',category=category,source_id=PROGRAM_ID+'-courses',url=COURSES,public_site=None,syllabus=None))
     if {c['code'] for c in out} != set(CODES):raise ValueError('Listed minor course block missing')
     return dict(id=PROGRAM_ID,courses=out)
 

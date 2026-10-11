@@ -97,3 +97,43 @@ def test_bounded_survey_covers_exact_claims_without_absence_inference():
     assert sum(r['status']=='confirmed' for r in rows)==1
     assert sum(r['status']=='inspected' for r in rows)==9
     assert all(r['sources'] and r['note'] and r['checked_at']=='2026-10-11' for r in rows)
+
+
+def test_data117_application_proposals_are_identity_and_description_bound(monkeypatch):
+    description='Synthetic cross-disciplinary practical AI literacy.'
+    monkeypatch.setattr(a,'DATA117_APPLICATIONS_DESCRIPTION_HASH',hashlib.sha256(description.encode()).hexdigest())
+    fixture=course_fixture().replace('Example topic 1',a.DATA117_TITLE).replace('Synthetic description 1.',description)
+    course=lambda html:next(c for c in a.parse_courses(html)['courses'] if c['code']=='DATA 117')
+    assert course(fixture)['category']=='applications'
+    assert 'category_review' not in course(fixture)
+    assert course(fixture.replace(description,'Different technical methods.'))['category']=='other'
+    assert course(fixture.replace(a.DATA117_TITLE,'Changed identity'))['category']=='other'
+    table=a.parse(minor_fixture().replace('Example topic 1',a.DATA117_TITLE))
+    assert next(c for c in table['courses'] if c['code']=='DATA 117')['category']=='applications'
+    assert next(r for r in table['requirements'] if r['id'].endswith('-core'))['category']=='other'
+
+
+def test_curated_data117_review_survives_ingestion_and_changed_scrape(tmp_path):
+    from types import SimpleNamespace
+    from atlas.http import FetchResult
+    from atlas.scrape import scrape_one
+    from atlas.curriculum_profile import requirement_profile
+    seed=json.loads((ROOT/'data/programs/unc-ai-minor.json').read_text())
+    conn=db.connect(tmp_path/'atlas.sqlite');db.migrate(conn)
+    assert db.ingest_program(conn,seed)
+    assert not db.ingest_program(conn,seed)
+    before=db.export_data(conn)['programs']
+    c=next(c for c in before[0]['courses'] if c['id']=='unc-data-117')
+    assert c['category']=='applications' and c['category_review']['status']=='reviewed'
+    assert c['category_review']['source_ids']==['unc-ai-minor-courses']
+    assert requirement_profile(before[0])['required']['categories']['ai_ml']==0
+    assert requirement_profile(before[0])['required']['categories']['applications']==1
+    class Fetch:
+        def fetch(self,url,force=False):
+            return FetchResult(url,course_fixture(),'changed-source-hash','2026-10-11',200,False)
+    module=SimpleNamespace(SOURCES=[a.COURSES],parse=a.parse_courses)
+    assert scrape_one(conn,seed['id'],module,Fetch())['new_candidates']==1
+    assert scrape_one(conn,seed['id'],module,Fetch())['new_candidates']==0
+    assert db.export_data(conn)['programs']==before
+    assert not conn.execute('PRAGMA foreign_key_check').fetchall()
+    conn.close()

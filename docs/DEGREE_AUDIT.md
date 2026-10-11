@@ -8,12 +8,18 @@ Categories describe subject matter, never whether a course is an elective. Class
 
 - `foundations`: programming, data structures, algorithm design/analysis, general software construction and foundational computer-science methods. Mathematical logic/proof may instead be mathematics when that is the actual focus.
 - `mathematics`: mathematical/statistical theory and methods, including calculus, linear algebra, probability and statistics; economics/business department membership does not establish this category.
-- `ai_ml`: explicit artificial intelligence or machine-learning methods and AI-focused subfields. A course in an AI degree is not automatically AI.
+- `ai_ml`: technical AI/ML methods and AI-focused subfields, evidenced by objectives or substantive topics such as search/reasoning algorithms, model construction/training, inference, learning algorithms or their analysis. An introductory course can qualify when it teaches these methods; advanced prerequisites or a high course number are not required. AI in a title, general explanations of how AI works, tool use or membership in an AI degree are insufficient.
 - `systems`: architecture, operating systems, networks, databases, security and computing infrastructure when these are the actual focus.
 - `human_context`: ethics, law, social/cultural/political analysis, communication and human implications of technology. Generic writing/language courses can fit this category with explicit rationale.
-- `applications`: substantive domain knowledge or applied domain practice outside the other categories. Explain the domain; do not infer an AI application merely from a degree association.
+- `applications`: substantive domain knowledge or applied domain practice outside the other categories, including cross-disciplinary AI literacy, responsible practical use of AI tools and prompt workflows when those are the primary learning aims. Explain the domain/practice; do not infer an AI application merely from a degree association. A technical ML course using domain examples still belongs in AI/ML when learning those methods is the primary aim.
 - `electives`: legacy label, not a subject category; newly reviewed courses use their actual subject or `other`.
 - `other`: unknown, insufficient evidence, genuinely mixed content without a defensible primary subject, or content outside this taxonomy. Preserve mixed candidate categories explicitly; never split one course into fractional counts.
+
+For every new review, identify the primary learning activity from the actual description, outcomes or syllabus. Distinguish learning AI methods from using existing AI systems. Ethics, governance or societal analysis as the primary activity belongs in `human_context`, even if tools are discussed. Where substantial method, application and human-context content has no evidenced primary focus, retain `other` with `status: mixed` and candidate categories. Missing evidence stays unclassified. Do not infer a precise technical depth, pedagogy or quality from a short catalog description.
+
+Record the source identity/version, locator, date and rationale explaining the primary focus and any competing themes. Source changes require a new review; deterministic adapters only propose candidates and cannot issue or overwrite manual review judgments. Lexical searches are review triage, never automatic classification. Existing legacy AI/ML labels need source review before being called reviewed.
+
+UNC DATA 117 is a worked example: the [2026–27 catalog](https://catalog.unc.edu/courses/data/) emphasizes cross-disciplinary understanding and responsible application. Its supported primary category is Applications; the catalog does not establish a technical-methods course or a measured depth assessment. Its ethics themes do not by themselves establish an ethics-primary course.
 
 Course records may add `category_review`:
 
