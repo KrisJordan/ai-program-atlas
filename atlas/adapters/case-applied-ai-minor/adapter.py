@@ -40,3 +40,24 @@ from atlas.adapters.case_minor_courses import register
 SOURCES = list(SOURCES)
 SOURCE_PARSERS = {}
 register(PROGRAM_ID, SOURCES, SOURCE_PARSERS)
+
+PERMISSIONS_URL = 'https://case.edu/registrar/registration-classes/registration-information/permissions'
+FACULTY_PERMISSIONS_URL = 'https://case.edu/registrar/general/student-information-system-sis/sis-resources/faculty-reviewing-permission-requests'
+
+def parse_permissions(html):
+ s=BeautifulSoup(html,'html.parser')
+ if not any(clean(h.get_text())=='Permissions' for h in s.find_all('h1')):
+  raise ValueError('Case registrar permission heading missing')
+ headings={clean(h.get_text()):h for h in s.find_all('h2')}
+ values={}
+ for name in ['Requisites Have Not Been Met','There is a Career Restriction']:
+  h=headings.get(name)
+  if h is None:raise ValueError('Permission category missing')
+  values[name]=clean(h.find_next('p').get_text(' ',strip=True))
+ if 'Requisites Not Met' not in values['Requisites Have Not Been Met'] or 'registrar or dean' not in values['There is a Career Restriction']:
+  raise ValueError('Permission authority/conditions changed')
+ row=requirement(PROGRAM_ID,'registration-exception-process','Course requisites and career permission process','case-registration-permissions',[],kind='note',summary='Unmet course conditions require an approved requisites override. Cross-career restrictions may additionally require permission from the student or course school registrar/dean. Approval does not enroll the student automatically. This general process is not evidence of a blanket undergraduate exception for BUAI 446 or SCMG 462/463; their named master-program restrictions remain unresolved for this minor.')
+ return dict(id=PROGRAM_ID,curriculum_status='partial',requirements=[row])
+
+SOURCES += [PERMISSIONS_URL,FACULTY_PERMISSIONS_URL]
+SOURCE_PARSERS[PERMISSIONS_URL] = parse_permissions
