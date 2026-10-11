@@ -209,3 +209,8 @@ Exact remote SHA `6555510165abce8d4532e6ed06e9d38230c32a9c`; GitHub Actions [381
 All six live scripts passed: public facts and projected profiles, rankings/audit, Rice and discovery refinements, current degree corrections, Stevens detail/comparison, and native course-note disclosures. Desktop and 390px mobile checks include keyboard, direct navigation, comparison reload/back/forward and no-JavaScript notes. Source fingerprints wrap without document overflow.
 
 Published coverage: 168 programs at 194 institutions; 24,638 course observations; 19,743 requirement nodes; 14,562 original description summaries; 6,963 prerequisite statements; 13,693 credit amounts with verified units; 294 actual teaching links; 261 syllabus links. Primary degree reviews: two audited, 56 individually blocked, five in progress. No full independent second-pass certification. The target cohort remains incomplete. Newer source commits are excluded from this exact verified checkpoint.
+
+
+## Frozen continuation 3d6587df — not published
+
+The source snapshot 1c2c4d8 produced 25,758 course observations, 19,854 requirement nodes, 16,288 descriptions, 7,383 prerequisite statements, 301 teaching links and 265 syllabus links. The 84,279,296-byte maintained schema-015 database passed repeat-zero ingestion and integrity checks. Fresh and maintained facts agreed, and 175 build files reproduced byte-for-byte. The full clean run passed 3,550 tests, including every required browser case, with 453 optional-cache/historical skips, but one UCSB status assertion still expected in-progress after the documented bounded closure. Candidate publication was withheld. Commit 16e1d84 corrects that evidence-specific assertion; its 20 focused tests passed. A new frozen release must pass all gates.
