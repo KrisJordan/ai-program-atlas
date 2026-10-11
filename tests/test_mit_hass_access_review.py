@@ -43,9 +43,12 @@ def test_field_review_has_evidence_for_every_status_and_preserves_open_questions
     rows = review['fields']
     assert len({r['field'] for r in rows}) == len(rows)
     assert dict(Counter(r['status'] for r in rows)) == review['counts']
-    expected_accessible = {'Music', 'Theater Arts'}
-    accessible = {r['field'] for r in rows if r['status'] == 'accessible_unreviewed'}
-    assert expected_accessible <= accessible
+    for field in {'Music', 'Theater Arts'}:
+        row = next(r for r in rows if r['field'] == field)
+        assert row['status'] == 'mapped'
+        assert row['transport_correction'] and row['requirements_review']
+        current = [sources[sid] for sid in row['source_ids'] if sid.endswith('-current')]
+        assert len(current) == 1 and '/program/degree-requirements/' in current[0]['url']
     for row in rows:
         if row['field'] in {'Comparative Media Studies', 'Education', 'English Language Studies (ELS)', 'Writing'}:
             assert row['previous_barrier'] and row['browser_followup']

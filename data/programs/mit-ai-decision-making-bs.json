@@ -825,6 +825,26 @@
       "catalog_year": null,
       "locator": "Normal Fetcher with approved network execution; robots/TLS checks retained. Current homepage navigation links /program/degree-requirements/. Requirements not yet reviewed.",
       "confidence": "high"
+    },
+    {
+      "id": "mit-ai-decision-making-bs-hass-music-current",
+      "url": "https://music.mit.edu/program/degree-requirements/",
+      "title": "Music degree requirements — concentration tab",
+      "fetched_at": "2026-10-11T02:32:14+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Music Concentration tab; introductory suggestions, performance combinations, HASS/CI-H context and proposal meeting. Page lists Fall 2026 and Spring 2027 advisors but gives no curriculum effective date.",
+      "confidence": "high"
+    },
+    {
+      "id": "mit-ai-decision-making-bs-hass-theater-current",
+      "url": "https://theater.mit.edu/program/degree-requirements/",
+      "title": "Theater Arts degree requirements — concentration tab",
+      "fetched_at": "2026-10-11T02:32:24+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "The Concentration in Theater Arts tab: three-to-four-course criterion, stated 36-credit minimum and production-practicum allowance. No curriculum effective date stated.",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -17384,6 +17404,104 @@
       "url": "https://cmsw.mit.edu/academics/subject-lists/cms/",
       "public_site": null,
       "syllabus": null
+    },
+    {
+      "id": "mit-ai-hass-music-21m-011",
+      "code": "21M.011",
+      "name": "Introduction to Western Music",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "human_context",
+      "source_id": "mit-ai-decision-making-bs-hass-music-current",
+      "url": "https://music.mit.edu/program/degree-requirements/",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "mit-ai-hass-music-21m-030",
+      "code": "21M.030",
+      "name": "Introduction to Musics of the World",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "human_context",
+      "source_id": "mit-ai-decision-making-bs-hass-music-current",
+      "url": "https://music.mit.edu/program/degree-requirements/",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "mit-ai-hass-music-21m-051",
+      "code": "21M.051",
+      "name": "Fundamentals of Music",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "human_context",
+      "source_id": "mit-ai-decision-making-bs-hass-music-current",
+      "url": "https://music.mit.edu/program/degree-requirements/",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "mit-ai-hass-music-21m-053",
+      "code": "21M.053",
+      "name": "Rhythms of the World",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "human_context",
+      "source_id": "mit-ai-decision-making-bs-hass-music-current",
+      "url": "https://music.mit.edu/program/degree-requirements/",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "mit-ai-hass-music-21m-065",
+      "code": "21M.065",
+      "name": "Introduction to Musical Composition",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "human_context",
+      "source_id": "mit-ai-decision-making-bs-hass-music-current",
+      "url": "https://music.mit.edu/program/degree-requirements/",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "mit-ai-hass-music-21m-080",
+      "code": "21M.080",
+      "name": "Introduction to Music Technology",
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "human_context",
+      "source_id": "mit-ai-decision-making-bs-hass-music-current",
+      "url": "https://music.mit.edu/program/degree-requirements/",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "mit-ai-hass-music-21m-223j",
+      "code": "21M.223J",
+      "name": null,
+      "description": null,
+      "prerequisites": null,
+      "credits": null,
+      "credit_unit": "units",
+      "category": "human_context",
+      "source_id": "mit-ai-decision-making-bs-hass-music-current",
+      "url": "https://music.mit.edu/program/degree-requirements/",
+      "public_site": null,
+      "syllabus": null
     }
   ],
   "requirements": [
@@ -32285,6 +32403,129 @@
         "mit-ai-hass-cmsw-pool-external-sts-056",
         "mit-ai-hass-cmsw-pool-external-sts-085-6-805"
       ]
+    },
+    {
+      "id": "mit-ai-hass-music",
+      "parent_id": null,
+      "title": "Optional HASS field: Music",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "mit-ai-decision-making-bs-hass-music-current",
+      "source_text": null,
+      "summary": "This field plan applies only when selected for the degree’s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
+      "course_ids": []
+    },
+    {
+      "id": "mit-ai-hass-music-four",
+      "parent_id": "mit-ai-hass-music",
+      "title": "Four-subject Music concentration",
+      "kind": "choose_courses",
+      "count": 4,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "mit-ai-decision-making-bs-hass-music-current",
+      "source_text": null,
+      "summary": "Select four Music subjects with the concentration advisor. Meet the surname-assigned advisor before submitting the proposal. The introductory suggestions are not a closed concentration pool or a mandatory introductory sequence; experienced students may begin at an appropriate level.",
+      "course_ids": []
+    },
+    {
+      "id": "mit-ai-hass-music-introductory",
+      "parent_id": "mit-ai-hass-music",
+      "title": "Suggested Music introductions",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "mit-ai-decision-making-bs-hass-music-current",
+      "source_text": null,
+      "summary": "Students with little or no previous music experience may start with one or more listed introductions. These examples do not impose an introductory-subject minimum.",
+      "course_ids": [
+        "mit-ai-hass-music-21m-011",
+        "mit-ai-hass-music-21m-030",
+        "mit-ai-hass-music-21m-051",
+        "mit-ai-hass-music-21m-053",
+        "mit-ai-hass-music-21m-065",
+        "mit-ai-hass-music-21m-080"
+      ]
+    },
+    {
+      "id": "mit-ai-hass-music-performance",
+      "parent_id": "mit-ai-hass-music",
+      "title": "Optional ensemble combinations",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "mit-ai-decision-making-bs-hass-music-current",
+      "source_text": null,
+      "summary": "The concentration section permits performance study described as two semesters of two different ensembles. For three semesters (two of one ensemble and one of another), the odd term may pair with another half-term or six-unit curriculum subject. Preserve the stated combination criteria; do not treat every six-unit performance enrollment as a full concentration subject or infer an additional mandatory ensemble load.",
+      "course_ids": []
+    },
+    {
+      "id": "mit-ai-hass-music-hass-ci",
+      "parent_id": "mit-ai-hass-music",
+      "title": "Music HASS Arts and CI-H context",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "mit-ai-decision-making-bs-hass-music-current",
+      "source_text": null,
+      "summary": "Most 9/12-unit Music subjects can meet HASS Arts Distribution; two six-unit performance subjects may combine for HASS Arts. The listed introductory CI-H subjects and the joint-listed seminar can meet communication requirements; the seminar also qualifies for the concentration. Its title is not stated on this page. These designations do not waive registrar concentration overlap or approval rules.",
+      "course_ids": [
+        "mit-ai-hass-music-21m-011",
+        "mit-ai-hass-music-21m-030",
+        "mit-ai-hass-music-21m-223j"
+      ]
+    },
+    {
+      "id": "mit-ai-hass-theater",
+      "parent_id": null,
+      "title": "Optional HASS field: Theater Arts",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "mit-ai-decision-making-bs-hass-theater-current",
+      "source_text": null,
+      "summary": "This field plan applies only when selected for the degree’s HASS concentration. Generic registrar HASS/grading/overlap and advisor-approval policies remain applicable. These are not additional AI-major subjects.",
+      "course_ids": []
+    },
+    {
+      "id": "mit-ai-hass-theater-selection",
+      "parent_id": "mit-ai-hass-theater",
+      "title": "Theater Arts three-to-four-course plan and stated minimum",
+      "kind": "note",
+      "count": null,
+      "credits": 36,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "mit-ai-decision-making-bs-hass-theater-current",
+      "source_text": null,
+      "summary": "Complete three to four 9–12-unit courses in the Theater Arts curriculum, with the concentration advisor and general HASS approval rules. The page states a minimum of 36 credits; this source-stated amount remains in unknown normalized units rather than assuming a credits-to-units conversion. Course count is a range, not exactly three or exactly four. This is an open departmental curriculum criterion, not a fabricated closed course pool.",
+      "course_ids": []
+    },
+    {
+      "id": "mit-ai-hass-theater-practicum",
+      "parent_id": "mit-ai-hass-theater",
+      "title": "Theater production practicum limit",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "mit-ai-decision-making-bs-hass-theater-current",
+      "source_text": null,
+      "summary": "Up to nine units of acting, directing or design practicum in Theater Arts productions may count toward this concentration. This is a permitted contribution within the plan, not an additional nine-unit requirement. The major’s CI-M/thesis structure and the minor’s separate curriculum are not concentration obligations.",
+      "course_ids": []
     }
   ],
   "notes": [
@@ -32292,7 +32533,7 @@
     "The public requirements endpoint is embedded by the official EECS Course 6-4 page. Its plugin timestamp is a request cache-buster, not source publication metadata. No student-specific audit or authenticated resource was accessed.",
     "The full public 6-4_2025 departmental inventory is mapped in a separate conditional tree: programming bundles, three math slots, both foundations, five Center options, three elective routes, graduate pools and seven designation overlays. The unversioned chart is a separately labeled reference tree; these are not cumulative requirements. Course IDs are distinct across the two source contexts.",
     "The chart gives 6.4300 as 15 units; its linked general CI-M list gives 12. The versioned department annotation shows 4-0-11, but no unit-definition or source-precedence decision is inferred. Curated credits remain null pending explicit reconciliation.",
-    "Science GIR choices are mapped from six official sections. Their catalog table lists codes and units without titles; names remain unknown. HASS designation, distribution, concentration and advisor-approval criteria are rules, not a fabricated finite course list. Field-specific HASS concentration requirements remain unreviewed.",
+    "Science GIR choices are mapped from six official sections. Their catalog table lists codes and units without titles; names remain unknown. HASS designation, distribution, concentration and advisor-approval criteria are rules, not a fabricated finite course list. All 43 registrar-listed field plans now have reviewed local rules; four preserve explicit source questions in the field ledger.",
     "REST and laboratory normal routes are named by the Course 6-4 chart. Institute criteria, departmental restriction, joint-subject exception and laboratory-designated unit accounting are recorded. Optional substitute-pool membership is not asserted exhaustively.",
     "Institute rules now include three-term attendance, petitions, communication pace/placement, HASS deadlines, transfer PE reduction, degree application and clearance. CAP academic-standing review is distinguished from the financial-aid GPA criterion and from a graduation GPA minimum.",
     "The department explicitly permits declaring Course 6-4 starting Fall 2022. This is declaration availability, not verified first instruction; first_offered stays null.",
@@ -32306,9 +32547,10 @@
     "Political Science’s linked public PDF has now been extracted and visually checked on all three pages: 66 distinct named subjects in seven overlapping subfield groups. Its URL update label is July 10, 2024, not a printed publication date. Current-offering claims remain unverified. The two specific enrollment restrictions and 17.567 nine-unit IAP annotation are preserved; PDFKit ligature errors were corrected only after visual verification.",
     "2026-10-11: seven further HASS plans and the STS Tier I/Tier II/transfer policies are mapped. STS contains source-specific observations for the same STS.041 in both tiers, not two countable subjects. History’s legacy directory URL returned an unrelated course page; only the actual current Undergraduate Studies navigation page supplies its concentration rules. Anthopology’s 33 source-stated credits remain unconverted.",
     "2026-10-11: all eleven Global Languages field plans and their shared placement/transfer policies are represented. Semester-IV progression and advisor-approved combinations are open criteria, not missing finite pools. Eight individual language pages refer to those central requirements; their differing enrollment priorities are preserved. The Other Languages and SILC pages were independently inspected and refer back to the same central rules. The transfer contact roster is labeled AY2024 and is not certified as current.",
-    "2026-10-11: the 43-field registrar HASS queue is exhausted for currently accessible field-rule sources: 37 plans mapped (with explicit Ethics/ACT/Urban source questions); six department-detail barriers remain precisely documented. The independent CMS/W and Music/Theater catalog pages do not supply their local concentration inventories. Architecture PDFs and the corroborating Literature sheet were visually checked on every page and parsed offline; ordinary fetches respected robots/TLS. No inaccessible page is claimed verified.",
-    "2026-10-11 browser follow-up: normal Chrome read the four CMS/W concentration pages and the full CMS subject list without a security interstitial or certificate bypass. Education and Writing redirected to new canonical routes recorded in sources. Default Fetcher TLS issuer validation still fails. Browser robots.txt alone reported ERR_BLOCKED_BY_CLIENT; no sitewide denial or authentication requirement is inferred. All previously captured CMS/W curriculum-access gaps are replaced by actual observations; Music/Theater new-host policy barriers remain.",
-    "2026-10-11 transport correction: a network-enabled ordinary Fetcher successfully read both newly linked Music/Theater homepages under normal robots/TLS checks. The previously reported generic ConnectError did not establish a publisher access barrier. Both remaining local concentration inventories are now accessible-unreviewed, with exact linked degree-requirement URLs recorded in the audit."
+    "Historical checkpoint, superseded by the current Music/Theater review below: 2026-10-11: the 43-field registrar HASS queue is exhausted for currently accessible field-rule sources: 37 plans mapped (with explicit Ethics/ACT/Urban source questions); six department-detail barriers remain precisely documented. The independent CMS/W and Music/Theater catalog pages do not supply their local concentration inventories. Architecture PDFs and the corroborating Literature sheet were visually checked on every page and parsed offline; ordinary fetches respected robots/TLS. No inaccessible page is claimed verified.",
+    "Historical checkpoint, superseded by the current Music/Theater review below: 2026-10-11 browser follow-up: normal Chrome read the four CMS/W concentration pages and the full CMS subject list without a security interstitial or certificate bypass. Education and Writing redirected to new canonical routes recorded in sources. Default Fetcher TLS issuer validation still fails. Browser robots.txt alone reported ERR_BLOCKED_BY_CLIENT; no sitewide denial or authentication requirement is inferred. All previously captured CMS/W curriculum-access gaps are replaced by actual observations; Music/Theater new-host policy barriers remain.",
+    "Historical checkpoint, superseded by the current Music/Theater review below: 2026-10-11 transport correction: a network-enabled ordinary Fetcher successfully read both newly linked Music/Theater homepages under normal robots/TLS checks. The previously reported generic ConnectError did not establish a publisher access barrier. Both remaining local concentration inventories are now accessible-unreviewed, with exact linked degree-requirement URLs recorded in the audit.",
+    "2026-10-11 current Music/Theater follow-up: both linked requirement pages returned HTTP 200 through approved-network normal robots/TLS checks. Both concentration tabs are mapped as conditional open plans, not major/minor inventories. Music has six optional introductions and a title-unstated 21M.223J seminar observation; Theater states three to four 9–12-unit courses, minimum 36 credits (normalized unit unknown), and up to nine practicum units. All 43 HASS fields now have reviewed local rules: 39 mapped and four source questions. Earlier access chronology is historical; degree/cohort and source conflicts keep the degree partial."
   ],
   "curriculum_audit": {
     "scope": "degree",
@@ -32392,7 +32634,9 @@
       "mit-ai-decision-making-bs-hass-cmsw-pool",
       "mit-ai-decision-making-bs-hass-mta-browser-migration",
       "mit-ai-decision-making-bs-hass-music-migration-home",
-      "mit-ai-decision-making-bs-hass-theater-migration-home"
+      "mit-ai-decision-making-bs-hass-theater-migration-home",
+      "mit-ai-decision-making-bs-hass-music-current",
+      "mit-ai-decision-making-bs-hass-theater-current"
     ],
     "sections": [
       "Programming alternatives with two-subject bundles",
@@ -32422,7 +32666,8 @@
       "Anthropology 1+2 and source-stated 33-credit minimum; History open plan and MIT minimum; Linguistics 1+1+1; WGS 1+2/minor overlap; Literature tier/sampling/transfer rules; Urban suggested plans; STS Tier I/II complete lists and local approval/transfer conditions",
       "Eleven Global Languages HASS routes: nine semester-IV progression criteria, Theory of Language two-language-plus-theory plan, SILC three twelve-unit subjects; declaration/placement/transfer and eight language-specific enrollment contexts",
       "Design full 1-of-2 studio plus visual-communication plus elective plan; HTC 13/14-subject 3+1 pools; ACT coherent PDF 14/6-subject 3+1 pools alongside conflicting webpage reference; architecture major-overlap context; corroborating Literature sheet; independently inspected CMS/W and Music/Theater catalog boundaries",
-      "Browser-verified CMS four-subject HASS/media-content rule and all 78 CMS plus 45 external-reference rows; Education 1+2/2+1 alternatives with 14 term-sensitive elective observations; ELS open three-subject criterion and matriculation context; Writing four-subject HASS/CI-HW/minor-form constraints"
+      "Browser-verified CMS four-subject HASS/media-content rule and all 78 CMS plus 45 external-reference rows; Education 1+2/2+1 alternatives with 14 term-sensitive elective observations; ELS open three-subject criterion and matriculation context; Writing four-subject HASS/CI-HW/minor-form constraints",
+      "Current Music four-subject open concentration plan, six introductory suggestions, unnamed joint seminar/CI-H eligibility and optional ensemble combinations; Theater Arts three-to-four 9–12-unit course criterion, stated 36-credit minimum and nine-unit production-practicum allowance; generic HASS approval and overlap retained"
     ],
     "unresolved_requirements": [
       "The complete public 6-4_2025 departmental pool is represented separately from the unversioned catalog chart. The source labels lists Fall 2026 but includes @2027FA special offerings; official clarification of this internal date conflict and catalog/cohort precedence remains unresolved. No combined degree total or supersession is inferred.",
@@ -32432,7 +32677,7 @@
       "Urban Studies lists 11.074 Cybersecurity Clinic with an unexplained asterisk. The three-subject advisor-approved plan and all nine suggested combinations are represented; the department must clarify any special clinic condition. Suggestions do not imply unrestricted enrollment.",
       "ACT source precedence: its webpage directs Group B to the History of Art portion of a linked legacy page that returns 404, while the current undergraduate page links an ACT PDF with a specific six-subject history pool. The current HTC PDF’s History of Art subgroup is different. Preserve the full ACT PDF plan and separate webpage reference; department clarification is required rather than silently merging or treating the later filename as supersession.",
       "CMS concentration links the full required/elective page, but its external-elective sampling and substitution permission are explicitly framed for majors. The four-HASS-subject criterion and education/media-content exclusion are mapped; the external list is retained only as reference pending concentration-advisor applicability clarification. Printed CMS.614 cross-list punctuation is retained rather than silently repaired.",
-      "Music and Theater Arts requirements remain accessible but unreviewed at https://music.mit.edu/program/degree-requirements/ and https://theater.mit.edu/program/degree-requirements/, as linked from current official homepages. Approved network execution successfully passed normal robots/TLS checks and read both homepages. Earlier generic ConnectError was execution-environment-specific; Chrome robots-only ERR_BLOCKED_BY_CLIENT is historical and not publisher denial. AP/international-exam applicability for earlier entrants before Fall 2026 remains unresolved."
+      "AP/international-exam applicability for earlier entrants before Fall 2026 remains unresolved."
     ],
     "metadata_gaps": [
       "GIR science tables provide codes and units without titles; those names stay unknown.",

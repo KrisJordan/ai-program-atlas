@@ -169,3 +169,7 @@ for module in (hass_architecture, hass_access_review):
 hass_cmsw = import_module('atlas.adapters.mit-ai-decision-making-bs.hass_cmsw')
 SOURCES.extend(hass_cmsw.SOURCE_PARSERS)
 SOURCE_PARSERS.update(hass_cmsw.SOURCE_PARSERS)
+
+hass_music_theater = import_module('atlas.adapters.mit-ai-decision-making-bs.hass_music_theater')
+SOURCES.extend(hass_music_theater.SOURCE_PARSERS)
+SOURCE_PARSERS.update(hass_music_theater.SOURCE_PARSERS)
