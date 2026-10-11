@@ -897,7 +897,7 @@ def parse_subject(html, *, program_id, subject, heading, codes, url):
             metadata_notes.append(f'{code} subject catalog credit options: {hours} semester hours. The scalar credit amount remains unknown; alternatives are not added together.')
         cid = program_id + '-' + slug(code)
         courses[code] = dict(id=cid, code=code, name=name, description=description, prerequisites=prerequisites,
-            credits=numeric(hours), credit_unit='semester_hours', category=category(code,name),
+            credits=numeric(hours), credit_unit='semester_hours', category=category(code,name,prose),
             source_id=program_id+'-'+subject.lower()+'-courses', url=url, public_site=None, syllabus=None)
     missing = wanted - courses.keys()
     if missing: raise ValueError('Selected courses missing from official catalog: ' + ', '.join(sorted(missing)))
@@ -906,6 +906,7 @@ def parse_subject(html, *, program_id, subject, heading, codes, url):
 
 
 SUBJECT_HEADINGS = {
+    'GE': 'General Engineering (GE)',
     'AFCS': 'Africana Studies (AFCS)',
     'ANTH': 'Anthropology (ANTH)',
     'ARAB': 'Arabic (ARAB)',

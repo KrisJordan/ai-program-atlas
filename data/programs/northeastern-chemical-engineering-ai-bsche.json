@@ -45,6 +45,46 @@
       "catalog_year": null,
       "locator": "Program heading, Overview and Detailed Requirements link; legacy PlusOne data-science wording retained as source inconsistency",
       "confidence": "high"
+    },
+    {
+      "id": "northeastern-chemical-engineering-ai-bsche-ge-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/ge/",
+      "title": "General Engineering (GE)",
+      "fetched_at": "2026-10-10T22:53:24+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Individually reviewed course blocks: GE 1501, GE 1502, GE 1000. Identity, published hours, prerequisite/corequisite conditions and descriptive category evidence.",
+      "confidence": "high"
+    },
+    {
+      "id": "northeastern-chemical-engineering-ai-bsche-cs-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+      "title": "Computer Science (CS)",
+      "fetched_at": "2026-10-10T23:49:52+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Individually reviewed course blocks: CS 1800, CS 2000, CS 2001, CS 2100, CS 2101, CS 3200. Identity, published hours, prerequisite/corequisite conditions and descriptive category evidence.",
+      "confidence": "high"
+    },
+    {
+      "id": "northeastern-chemical-engineering-ai-bsche-ds-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/ds/",
+      "title": "Data Science (DS)",
+      "fetched_at": "2026-10-10T22:22:37+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Individually reviewed course blocks: DS 3500, DS 3000, DS 4200, DS 4300, DS 4400. Identity, published hours, prerequisite/corequisite conditions and descriptive category evidence.",
+      "confidence": "high"
+    },
+    {
+      "id": "northeastern-chemical-engineering-ai-bsche-math-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/math/",
+      "title": "Mathematics (MATH)",
+      "fetched_at": "2026-10-10T23:49:50+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Individually reviewed course blocks: MATH 1341, MATH 1342, MATH 2321, MATH 2341, MATH 3081, MATH 3082. Identity, published hours, prerequisite/corequisite conditions and descriptive category evidence.",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -229,183 +269,330 @@
       "id": "northeastern-chemical-engineering-ai-bsche-ge-1501",
       "code": "GE 1501",
       "name": "Cornerstone of Engineering 1",
-      "description": null,
+      "description": "Introduces engineering design and programming through projects, laboratories and an original design solution.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 4.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "northeastern-chemical-engineering-ai-bsche-catalog",
-      "url": "https://catalog.northeastern.edu/search/?P=GE%201501",
+      "category": "applications",
+      "source_id": "northeastern-chemical-engineering-ai-bsche-ge-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/ge/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northeastern-chemical-engineering-ai-bsche-ge-courses"
+        ],
+        "locator": "GE 1501 course block; description, not department or degree label",
+        "rationale": "Hands-on engineering design and prototypes are the organizing domain practice; programming and graphics are supporting tools.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "northeastern-chemical-engineering-ai-bsche-ge-1502",
       "code": "GE 1502",
       "name": "Cornerstone of Engineering 2",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Continues project-based engineering design with analysis, programming, ethical reasoning and working prototypes.",
+      "prerequisites": "GE 1501 (may be taken concurrently) with a minimum grade of D- or ENGR 150M (may be taken concurrently) with a minimum grade of D-",
+      "credits": 4.0,
       "credit_unit": "semester_hours",
-      "category": "other",
-      "source_id": "northeastern-chemical-engineering-ai-bsche-catalog",
-      "url": "https://catalog.northeastern.edu/search/?P=GE%201502",
+      "category": "applications",
+      "source_id": "northeastern-chemical-engineering-ai-bsche-ge-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/ge/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northeastern-chemical-engineering-ai-bsche-ge-courses"
+        ],
+        "locator": "GE 1502 course block; description, not department or degree label",
+        "rationale": "The course continues engineering analysis, design, modeling and prototype construction using software and ethical reasoning as tools.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "northeastern-chemical-engineering-ai-bsche-cs-1800",
       "code": "CS 1800",
       "name": "Discrete Structures",
-      "description": null,
+      "description": "Develops discrete structures, logic, proofs and counting methods for computing.",
       "prerequisites": null,
       "credits": 4.0,
       "credit_unit": "semester_hours",
-      "category": "foundations",
-      "source_id": "northeastern-chemical-engineering-ai-bsche-catalog",
-      "url": "https://catalog.northeastern.edu/search/?P=CS%201800",
+      "category": "mathematics",
+      "source_id": "northeastern-chemical-engineering-ai-bsche-cs-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/cs/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northeastern-chemical-engineering-ai-bsche-cs-courses"
+        ],
+        "locator": "CS 1800 course block; description, not department or degree label",
+        "rationale": "Sets, relations, induction, proof, logic and counting form discrete mathematical methods; computing motivates their use.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "northeastern-chemical-engineering-ai-bsche-cs-2000",
       "code": "CS 2000",
       "name": "Introduction to Program Design and Implementation",
-      "description": null,
+      "description": "Introduces programming, dataset analysis and ethical issues in software design.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 4.0,
       "credit_unit": "semester_hours",
       "category": "foundations",
-      "source_id": "northeastern-chemical-engineering-ai-bsche-catalog",
-      "url": "https://catalog.northeastern.edu/search/?P=CS%202000",
+      "source_id": "northeastern-chemical-engineering-ai-bsche-cs-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/cs/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northeastern-chemical-engineering-ai-bsche-cs-courses"
+        ],
+        "locator": "CS 2000 course block; description, not department or degree label",
+        "rationale": "The course teaches program construction, coding and introductory data processing to students without programming experience.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "northeastern-chemical-engineering-ai-bsche-cs-2001",
       "code": "CS 2001",
       "name": "Lab for CS 2000",
-      "description": null,
+      "description": "Provides experiments supporting introductory programming coursework.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 1.0,
       "credit_unit": "semester_hours",
       "category": "foundations",
-      "source_id": "northeastern-chemical-engineering-ai-bsche-catalog",
-      "url": "https://catalog.northeastern.edu/search/?P=CS%202001",
+      "source_id": "northeastern-chemical-engineering-ai-bsche-cs-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/cs/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northeastern-chemical-engineering-ai-bsche-cs-courses"
+        ],
+        "locator": "CS 2001 course block; description, not department or degree label",
+        "rationale": "The lab explicitly accompanies the introductory program-design course and practices its computing topics.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "northeastern-chemical-engineering-ai-bsche-cs-2100",
       "code": "CS 2100",
       "name": "Program Design and Implementation 1",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Develops program design, object-oriented abstractions and software engineering practices.",
+      "prerequisites": "CS 2000 with a minimum grade of D- or CIS 200M with a minimum grade of D- or CS 2500 with a minimum grade of D-",
+      "credits": 4.0,
       "credit_unit": "semester_hours",
       "category": "foundations",
-      "source_id": "northeastern-chemical-engineering-ai-bsche-catalog",
-      "url": "https://catalog.northeastern.edu/search/?P=CS%202100",
+      "source_id": "northeastern-chemical-engineering-ai-bsche-cs-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/cs/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northeastern-chemical-engineering-ai-bsche-cs-courses"
+        ],
+        "locator": "CS 2100 course block; description, not department or degree label",
+        "rationale": "Data/object-oriented design, data structures, abstraction, testing and software construction are the central methods.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "northeastern-chemical-engineering-ai-bsche-cs-2101",
       "code": "CS 2101",
       "name": "Lab for CS 2100",
-      "description": null,
+      "description": "Provides experiments supporting program design coursework.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 1.0,
       "credit_unit": "semester_hours",
       "category": "foundations",
-      "source_id": "northeastern-chemical-engineering-ai-bsche-catalog",
-      "url": "https://catalog.northeastern.edu/search/?P=CS%202101",
+      "source_id": "northeastern-chemical-engineering-ai-bsche-cs-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/cs/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northeastern-chemical-engineering-ai-bsche-cs-courses"
+        ],
+        "locator": "CS 2101 course block; description, not department or degree label",
+        "rationale": "The lab explicitly accompanies the reviewed program-design and software-construction course.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "northeastern-chemical-engineering-ai-bsche-cs-3200",
       "code": "CS 3200",
       "name": "Introduction to Databases",
-      "description": null,
-      "prerequisites": null,
+      "description": "Develops relational database design, SQL and introductory database-system techniques.",
+      "prerequisites": "CS 2000 with a minimum grade of D- or CIS 200M with a minimum grade of D- or CS 2100 with a minimum grade of D- or CIS 201M with a minimum grade of D- or CS 2500 with a minimum grade of D- or DS 2000 with a minimum grade of D- or DS 2500 with a minimum grade of D- or EECE 2560 with a minimum grade of D-",
       "credits": 4.0,
       "credit_unit": "semester_hours",
       "category": "systems",
-      "source_id": "northeastern-chemical-engineering-ai-bsche-catalog",
-      "url": "https://catalog.northeastern.edu/search/?P=CS%203200",
+      "source_id": "northeastern-chemical-engineering-ai-bsche-cs-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/cs/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northeastern-chemical-engineering-ai-bsche-cs-courses"
+        ],
+        "locator": "CS 3200 course block; description, not department or degree label",
+        "rationale": "Relational database design, query processing, indexing, concurrency and recovery are database-system methods.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "northeastern-chemical-engineering-ai-bsche-ds-3500",
       "code": "DS 3500",
       "name": "Advanced Programming with Data",
-      "description": null,
-      "prerequisites": null,
+      "description": "Develops robust software architectures and data pipelines using substantial datasets.",
+      "prerequisites": "CS 2100 with a minimum grade of D- or DS 2500 with a minimum grade of D-",
       "credits": 4.0,
       "credit_unit": "semester_hours",
       "category": "foundations",
-      "source_id": "northeastern-chemical-engineering-ai-bsche-catalog",
-      "url": "https://catalog.northeastern.edu/search/?P=DS%203500",
+      "source_id": "northeastern-chemical-engineering-ai-bsche-ds-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/ds/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northeastern-chemical-engineering-ai-bsche-ds-courses"
+        ],
+        "locator": "DS 3500 course block; description, not department or degree label",
+        "rationale": "Software architectures, reusable APIs, testing and maintainable data pipelines center on general software design and implementation.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "northeastern-chemical-engineering-ai-bsche-ds-3000",
       "code": "DS 3000",
       "name": "Mathematical Foundations of Artificial Intelligence",
-      "description": null,
-      "prerequisites": null,
+      "description": "Studies the mathematical basis of AI through linear algebra, probability and computational exercises.",
+      "prerequisites": "CS 2100 with a minimum grade of D- or CIS 201M with a minimum grade of D- or CS 2510 with a minimum grade of D- or DS 2500 with a minimum grade of D-",
       "credits": 4.0,
       "credit_unit": "semester_hours",
-      "category": "ai_ml",
-      "source_id": "northeastern-chemical-engineering-ai-bsche-catalog",
-      "url": "https://catalog.northeastern.edu/search/?P=DS%203000",
+      "category": "mathematics",
+      "source_id": "northeastern-chemical-engineering-ai-bsche-ds-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/ds/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northeastern-chemical-engineering-ai-bsche-ds-courses"
+        ],
+        "locator": "DS 3000 course block; description, not department or degree label",
+        "rationale": "The description explicitly emphasizes linear algebra, probability and numerical mathematical foundations, using AI as their motivating application.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "northeastern-chemical-engineering-ai-bsche-ds-4200",
       "code": "DS 4200",
       "name": "Information Presentation and Visualization",
-      "description": null,
-      "prerequisites": null,
+      "description": "Studies how to design, implement and evaluate visual representations of data.",
+      "prerequisites": "CS 2100 with a minimum grade of D- or CIS 201M with a minimum grade of D- or CS 2510 with a minimum grade of D- or DS 2500 with a minimum grade of D-",
       "credits": 4.0,
       "credit_unit": "semester_hours",
-      "category": "foundations",
-      "source_id": "northeastern-chemical-engineering-ai-bsche-catalog",
-      "url": "https://catalog.northeastern.edu/search/?P=DS%204200",
+      "category": "other",
+      "source_id": "northeastern-chemical-engineering-ai-bsche-ds-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/ds/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northeastern-chemical-engineering-ai-bsche-ds-courses"
+        ],
+        "locator": "DS 4200 course block; description, not department or degree label",
+        "rationale": "Visualization combines programming, perception, visual communication and domain presentation; the description does not establish one defensible primary category among these.",
+        "candidate_categories": [
+          "foundations",
+          "human_context",
+          "applications"
+        ]
+      }
     },
     {
       "id": "northeastern-chemical-engineering-ai-bsche-ds-4300",
       "code": "DS 4300",
       "name": "Large-Scale Information Storage and Retrieval",
-      "description": null,
-      "prerequisites": null,
+      "description": "Studies scalable data storage, distributed databases and retrieval methods.",
+      "prerequisites": "( CS 3100 with a minimum grade of D- or CIS 310M with a minimum grade of D- or CS 3500 with a minimum grade of D- or DS 3500 with a minimum grade of D- ); CS 3200 with a minimum grade of D-",
       "credits": 4.0,
       "credit_unit": "semester_hours",
       "category": "systems",
-      "source_id": "northeastern-chemical-engineering-ai-bsche-catalog",
-      "url": "https://catalog.northeastern.edu/search/?P=DS%204300",
+      "source_id": "northeastern-chemical-engineering-ai-bsche-ds-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/ds/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northeastern-chemical-engineering-ai-bsche-ds-courses"
+        ],
+        "locator": "DS 4300 course block; description, not department or degree label",
+        "rationale": "Distributed databases, storage architectures, reliability and data retrieval are computing infrastructure methods.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "northeastern-chemical-engineering-ai-bsche-ds-4400",
       "code": "DS 4400",
       "name": "Machine Learning",
-      "description": null,
-      "prerequisites": null,
+      "description": "Introduces predictive modeling and major supervised and unsupervised learning methods.",
+      "prerequisites": "DS 3000 with a minimum grade of D- or CIS 250M with a minimum grade of D- or ( MATH 2331 with a minimum grade of D- ; MATH 3081 with a minimum grade of D- )",
       "credits": 4.0,
       "credit_unit": "semester_hours",
       "category": "ai_ml",
-      "source_id": "northeastern-chemical-engineering-ai-bsche-catalog",
-      "url": "https://catalog.northeastern.edu/search/?P=DS%204400",
+      "source_id": "northeastern-chemical-engineering-ai-bsche-ds-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/ds/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northeastern-chemical-engineering-ai-bsche-ds-courses"
+        ],
+        "locator": "DS 4400 course block; description, not department or degree label",
+        "rationale": "Supervised and unsupervised learning, predictive models, model evaluation and learning algorithms are the explicit central content.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "northeastern-chemical-engineering-ai-bsche-chem-1151",
@@ -439,71 +626,126 @@
       "id": "northeastern-chemical-engineering-ai-bsche-math-1341",
       "code": "MATH 1341",
       "name": "Calculus 1 for Science and Engineering",
-      "description": null,
+      "description": "Develops differentiation, its scientific applications, and introductory integration.",
       "prerequisites": null,
       "credits": 4.0,
       "credit_unit": "semester_hours",
       "category": "mathematics",
-      "source_id": "northeastern-chemical-engineering-ai-bsche-catalog",
-      "url": "https://catalog.northeastern.edu/search/?P=MATH%201341",
+      "source_id": "northeastern-chemical-engineering-ai-bsche-math-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/math/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northeastern-chemical-engineering-ai-bsche-math-courses"
+        ],
+        "locator": "MATH 1341 course block; description, not department or degree label",
+        "rationale": "Limits, differentiation, integration and the fundamental theorem of calculus are the central content.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "northeastern-chemical-engineering-ai-bsche-math-1342",
       "code": "MATH 1342",
       "name": "Calculus 2 for Science and Engineering",
-      "description": null,
-      "prerequisites": null,
+      "description": "Continues integration methods, series, and introductory vectors and spatial motion.",
+      "prerequisites": "Additional course-description condition: MATH 1341 or permission of head mathematics advisor.",
       "credits": 4.0,
       "credit_unit": "semester_hours",
       "category": "mathematics",
-      "source_id": "northeastern-chemical-engineering-ai-bsche-catalog",
-      "url": "https://catalog.northeastern.edu/search/?P=MATH%201342",
+      "source_id": "northeastern-chemical-engineering-ai-bsche-math-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/math/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northeastern-chemical-engineering-ai-bsche-math-courses"
+        ],
+        "locator": "MATH 1342 course block; description, not department or degree label",
+        "rationale": "Integration techniques, infinite series and vectors are the central mathematical topics.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "northeastern-chemical-engineering-ai-bsche-math-2321",
       "code": "MATH 2321",
       "name": "Calculus 3 for Science and Engineering",
-      "description": null,
+      "description": "Develops multivariable differentiation, multiple integrals and vector calculus.",
       "prerequisites": null,
       "credits": 4.0,
       "credit_unit": "semester_hours",
       "category": "mathematics",
-      "source_id": "northeastern-chemical-engineering-ai-bsche-catalog",
-      "url": "https://catalog.northeastern.edu/search/?P=MATH%202321",
+      "source_id": "northeastern-chemical-engineering-ai-bsche-math-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/math/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northeastern-chemical-engineering-ai-bsche-math-courses"
+        ],
+        "locator": "MATH 2321 course block; description, not department or degree label",
+        "rationale": "Multivariable calculus, vector fields and integration theorems are the taught mathematical methods.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "northeastern-chemical-engineering-ai-bsche-math-2341",
       "code": "MATH 2341",
       "name": "Differential Equations and Linear Algebra for Engineering",
-      "description": null,
+      "description": "Combines differential-equation methods and linear algebra for engineering applications.",
       "prerequisites": null,
       "credits": 4.0,
       "credit_unit": "semester_hours",
       "category": "mathematics",
-      "source_id": "northeastern-chemical-engineering-ai-bsche-catalog",
-      "url": "https://catalog.northeastern.edu/search/?P=MATH%202341",
+      "source_id": "northeastern-chemical-engineering-ai-bsche-math-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/math/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northeastern-chemical-engineering-ai-bsche-math-courses"
+        ],
+        "locator": "MATH 2341 course block; description, not department or degree label",
+        "rationale": "Differential equations, numerical methods, transforms and linear algebra are the taught methods, with engineering applications.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "northeastern-chemical-engineering-ai-bsche-math-3081",
       "code": "MATH 3081",
       "name": "Probability and Statistics",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "description": "Develops probability distributions and limit theory, then introduces statistical inference.",
+      "prerequisites": "MATH 1342 with a minimum grade of D- or MATH 211M with a minimum grade of D- or MATH 1252 with a minimum grade of D- or MATH 1242 with a minimum grade of D-",
+      "credits": 4.0,
       "credit_unit": "semester_hours",
       "category": "mathematics",
-      "source_id": "northeastern-chemical-engineering-ai-bsche-catalog",
-      "url": "https://catalog.northeastern.edu/search/?P=MATH%203081",
+      "source_id": "northeastern-chemical-engineering-ai-bsche-math-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/math/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northeastern-chemical-engineering-ai-bsche-math-courses"
+        ],
+        "locator": "MATH 3081 course block; description, not department or degree label",
+        "rationale": "Probability distributions, expectation, limit theorems and statistical inference are the core content.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "northeastern-chemical-engineering-ai-bsche-math-3082",
@@ -511,13 +753,24 @@
       "name": "Recitation for MATH 3081",
       "description": null,
       "prerequisites": null,
-      "credits": null,
+      "credits": 0.0,
       "credit_unit": "semester_hours",
       "category": "mathematics",
-      "source_id": "northeastern-chemical-engineering-ai-bsche-catalog",
-      "url": "https://catalog.northeastern.edu/search/?P=MATH%203082",
+      "source_id": "northeastern-chemical-engineering-ai-bsche-math-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/math/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northeastern-chemical-engineering-ai-bsche-math-courses"
+        ],
+        "locator": "MATH 3082 course block; description, not department or degree label",
+        "rationale": "The recitation explicitly reinforces the reviewed probability/statistics course.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "northeastern-chemical-engineering-ai-bsche-phys-1151",
@@ -593,15 +846,26 @@
       "id": "northeastern-chemical-engineering-ai-bsche-ge-1000",
       "code": "GE 1000",
       "name": "First-Year Seminar",
-      "description": null,
+      "description": "Introduces university resources, community participation and academic planning for first-year students.",
       "prerequisites": null,
       "credits": 1.0,
       "credit_unit": "semester_hours",
       "category": "other",
-      "source_id": "northeastern-chemical-engineering-ai-bsche-catalog",
-      "url": "https://catalog.northeastern.edu/search/?P=GE%201000",
+      "source_id": "northeastern-chemical-engineering-ai-bsche-ge-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/ge/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northeastern-chemical-engineering-ai-bsche-ge-courses"
+        ],
+        "locator": "GE 1000 course block; description, not department or degree label",
+        "rationale": "University transition, support resources and major exploration are orientation, not a fixed technical domain.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "northeastern-chemical-engineering-ai-bsche-engw-1111",

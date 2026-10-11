@@ -9,3 +9,5 @@ Partial: separate university, engineering and NUpath policies, exact home-colleg
 ## Exact award label review — 2026-10-11
 
 The reviewed award option preserves **BSChE**, mapped to **other**. Catalog #site-title h1: Chemical Engineering and Artificial Intelligence, BSChE (Boston). The exact discipline-specific award is retained; not equated with generic BSE. Existing program ID, award_level, title and requirement graph are unchanged. This optional mapping is reviewed metadata. Scrapers queue observations without replacing curated JSON; a parse result that omits award_options does not erase it. No parser or shared Northeastern helper change is needed.
+
+2026-10-11 correctness audit checkpoint: exact CS/DS/MATH/GE subject descriptions now supply independently reviewed categories and missing published metadata. Reviews are manual evidence and are never emitted by source adapters. The BSChE remains outside the 23-variant family. The degree audit remains in progress, including the CS 1800/1802 concurrent-seminar dependency and engineering substitution/degree-wide requirements; no parser replay certifies audit completion. See `research/degree-audit/northeastern.md`.

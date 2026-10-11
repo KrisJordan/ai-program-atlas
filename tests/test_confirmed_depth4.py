@@ -83,5 +83,16 @@ def test_reviewed_seed_and_optional_live_replay(pid):
     if pid == IDS[0]:
         assert all(r in seed['requirements'] for r in requirements)
         assert {(c['id'],c['code'],c['name']) for c in courses}=={(c['id'],c['code'],c['name']) for c in seed['courses']}
+    elif pid == IDS[2]:
+        # The degree page supplies requirement rows; independently reviewed
+        # subject pages now enrich credits/prerequisites and manual taxonomy.
+        assert requirements == seed['requirements']
+        actual = {c['id']:c for c in seed['courses']}
+        assert {(c['id'],c['code'],c['name']) for c in courses} == {(c['id'],c['code'],c['name']) for c in seed['courses']}
+        for observed in courses:
+            assert 'category_review' not in observed
+            if observed['credits'] is not None:
+                assert observed['credits'] == actual[observed['id']]['credits']
+                assert observed['credit_unit'] == actual[observed['id']]['credit_unit']
     else:
         assert requirements==seed['requirements'] and courses==seed['courses']

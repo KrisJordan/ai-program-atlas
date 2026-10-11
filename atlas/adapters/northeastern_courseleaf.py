@@ -6,6 +6,8 @@ open course ranges and conditional substitutions remain explicitly partial.
 from __future__ import annotations
 
 import re
+import json
+from pathlib import Path
 from urllib.parse import urljoin
 from bs4 import BeautifulSoup
 
@@ -18,16 +20,21 @@ def slug(value):
     return re.sub(r'[^a-z0-9]+', '-', value.lower()).strip('-')
 
 
-def category(code, name):
-    """Editorial taxonomy, not a university designation."""
-    subject = code.split()[0]
-    if subject in {'MATH', 'ECON', 'MGSC'} or 'Statistics' in name: return 'mathematics'
-    if subject in {'PHIL', 'POLS', 'AFCS', 'ENGW'}: return 'human_context'
-    if any(x in name.lower() for x in ('machine learning', 'neural network', 'artificial intelligence')): return 'ai_ml'
-    if subject in {'CS', 'DS'}:
-        return 'systems' if any(x in name.lower() for x in ('database', 'storage', 'retrieval')) else 'foundations'
-    if subject in {'BIOL', 'CHEM', 'EEMB', 'BINF', 'MKTG', 'ACCT', 'FINA', 'ORGB', 'INTB', 'INNO', 'MISM', 'SCHM', 'STRT'}: return 'applications'
-    return 'other'
+CATEGORY_DECISIONS = json.loads(Path(__file__).with_name('northeastern_reviewed_categories.json').read_text())
+
+
+def category(code, name, description=None):
+    """Exact reviewed identities only; no prefix, degree or keyword inference.
+
+    This is an observation category, not an independent category_review audit.
+    A subject-page observation also checks the specific description evidence.
+    """
+    decision = CATEGORY_DECISIONS.get(code)
+    if not decision or decision['name'] != name:
+        return 'other'
+    if description is not None and decision['guard'] not in description:
+        return 'other'
+    return decision['category']
 
 
 def numeric(text):
@@ -181,7 +188,7 @@ def parse_catalog(html, *, program_id, title, url, required_sections, outcome_cl
                 unitmatch = re.search(r'(one|two|three|four|five|six|seven|eight|nine|ten|\d+) (?:semester hours|credits)\b', text, re.I)
                 numbers = dict(one=1,two=2,three=3,four=4,five=5,six=6,seven=7,eight=8,nine=9,ten=10)
                 amount = (numbers.get(unitmatch[1].lower(), int(unitmatch[1]) if unitmatch[1].isdigit() else None) if unitmatch else None)
-                if unitmatch and re.match(r'Complete\s+(?:one|two|three|four|five|six|seven|eight|nine|ten|\d+)\s+(?:semester hours|credits)\b', text, re.I):
+                if unitmatch and re.match(r'Complete\s+(?:a minimum of\s+)?(?:one|two|three|four|five|six|seven|eight|nine|ten|\d+)\s+(?:semester hours|credits)\b', text, re.I):
                     if credit is not None and credit != amount:
                         raise ValueError('Conflicting credit-choice amounts')
                     choice = rule(area['title'] + ' credit choice', parent['id'], 'choose_credits', credits=amount, summary=summarize_rule(text) + range_note)

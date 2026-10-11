@@ -18,3 +18,9 @@ def parse(html):
             requirement['summary'] = 'Required engineering coursework does not explicitly satisfy NUpath IC, SI, DD or EX. A successful co-op may fulfill EX; students must cover remaining categories with general electives.'
     for outcome in result['outcomes']: outcome['statement_type'] = 'program_aim'
     return result
+
+# Exact independently reviewed course-description observations from the degree audit.
+from atlas.adapters.northeastern_course_metadata import register_subject_sources
+_AUDIT_METADATA = register_subject_sources(PROGRAM_ID, {'GE': ['GE 1501', 'GE 1502', 'GE 1000'], 'CS': ['CS 1800', 'CS 2000', 'CS 2001', 'CS 2100', 'CS 2101', 'CS 3200'], 'DS': ['DS 3500', 'DS 3000', 'DS 4200', 'DS 4300', 'DS 4400'], 'MATH': ['MATH 1341', 'MATH 1342', 'MATH 2321', 'MATH 2341', 'MATH 3081', 'MATH 3082']})
+SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + tuple(_AUDIT_METADATA)))
+SOURCE_PARSERS = {**globals().get("SOURCE_PARSERS", {}), **_AUDIT_METADATA}
