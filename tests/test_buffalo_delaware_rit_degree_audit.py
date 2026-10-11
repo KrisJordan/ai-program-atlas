@@ -39,7 +39,7 @@ def test_rit_uncoded_slots_have_no_accidental_elective_memberships():
     p=load(PROGRAM_ID);r={r['id']:r for r in p['requirements']}
     for suffix in ['global','natural','scientific','ethical','artistic','immersion','open','prep','wellness','total','first-year-admission','transfer-admission']:
         assert r[PROGRAM_ID+'-'+suffix]['course_ids']==[]
-    assert all(r[PROGRAM_ID+'-'+suffix]['credits'] is None and '0 credits' in r[PROGRAM_ID+'-'+suffix]['summary'] for suffix in ['sequence-4','sequence-19','prep'])
+    assert all(r[PROGRAM_ID+'-'+suffix]['credits']==0 and '0 semester credits' in r[PROGRAM_ID+'-'+suffix]['summary'] for suffix in ['sequence-4','sequence-19','prep'])
     assert len(r[PROGRAM_ID+'-ai-electives']['course_ids'])==3
     assert len(r[PROGRAM_ID+'-robotics-option']['course_ids'])==2
     assert len(r[PROGRAM_ID+'-advising-elective-conflict']['course_ids'])==7
