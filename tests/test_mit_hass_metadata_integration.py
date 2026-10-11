@@ -423,3 +423,15 @@ def test_faculty_description_does_not_override_graduate_level_or_guess_companion
     lab=by['mit-ai-hass-cmsw-pool-external-21a-550-sts-064']
     assert set(lab['category_review']['candidate_categories'])=={'applications','human_context'}
     assert any('Enrollment limited to12' in n and 'additional assignments' in n for n in lab['notes'])
+
+
+def test_wgs_global_justice_companion_keeps_mixed_design_and_social_scope():
+    seed=json.loads(Path('data/programs/mit-ai-decision-making-bs.json').read_text())
+    by={c['id']:c for c in seed['courses']}
+    for cid in ['mit-ai-hass-ethics-24-234','mit-ai-hass-ethics-wgs-277j-ec-718']:
+        c=by[cid]
+        assert c['description'] and c['credits']==12 and c['prerequisites']is None
+        assert c['category']=='other' and c['category_review']['status']=='mixed'
+        assert set(c['category_review']['candidate_categories'])=={'applications','human_context'}
+        assert any('meets with' in n for n in c['notes'])
+    assert not any(set(g.get('course_ids',[])) >= {'mit-ai-hass-ethics-24-234','mit-ai-hass-ethics-wgs-277j-ec-718'} for g in seed.get('course_identity_groups',[]))
