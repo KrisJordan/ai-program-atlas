@@ -135,3 +135,7 @@ Migration 014 is ready for frozen integration: current canonical program snapsho
 Stevens independent role enumeration corrected three named math/science options previously stranded as context. Its verified graph now has 24 fixed, 30 mapped option and 25 contextual records. The choose-two rule remains open and conditional; source eligibility, not the displayed pool size, determines permitted selections. Focused source/profile suite: 107 passed.
 
 Stevens transition-policy follow-up read the current school FAQ, dated communication and full Humanities/AP tabs; no explicit resolution of the two school-scoped AI applicability questions was found. Two desktop/mobile Chromium regressions passed the corrected 24/30/25 role counts and comparison reload/back/forward. The primary review remains in progress while remaining selected course Eligibility tabs are inspected.
+
+### Frozen candidate after a64c2b6 (verification pending)
+
+Committed source and primary ledgers were archived before ingestion. The maintained database is migrated through 014 and compacted to 64,876,544 bytes, retaining historical rows and corrections. It contains 168 programs at 194 loaded institutions, 24,251 course observations, 19,623 requirement nodes, 6,302 description summaries and 5,082 prerequisite statements. Repeat ingest changed zero programs; integrity and foreign keys passed. This candidate is not yet the verified public release; the publication section above remains the live checkpoint until clean tests, CI and live checks succeed.
