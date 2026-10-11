@@ -47,6 +47,11 @@ EXPECTED={
  'ecology-and-evolutionary-biology':{'phys-1161-phys-1162':(['PHYS 1163'],'options')},
 }
 
+# Six individually source-checked elective lectures additionally require their
+# one-hour lab; these expectations are independent of adapter PROFILES.
+for partner in ['biology','biochemistry','chemistry','ecology-and-evolutionary-biology','design','behavioral-neuroscience']:
+    EXPECTED.setdefault(partner,{})['eece-2322']=(['EECE 2323'],'options')
+
 @pytest.mark.parametrize('partner',EXPECTED)
 def test_four_reviewed_degree_additions_have_independent_expected_roles_and_deltas(partner):
     pid='northeastern-university-artificial-intelligence-and-'+partner+'-bs-boston-bs-degree'
@@ -59,14 +64,14 @@ def test_four_reviewed_degree_additions_have_independent_expected_roles_and_delt
         while node:
             kinds.append(node['kind']);node=groups.get(node['parent_id']) if node.get('parent_id') else None
         assert 'note' not in kinds
-        assert ('options' if 'alternative' in kinds else 'required')==expected_role
+        assert ('options' if any(k in {'alternative','choose_courses','choose_credits'} for k in kinds) else 'required')==expected_role
     old=deepcopy(p);old['requirements']=[r for r in old['requirements'] if not newids.intersection(r['course_ids'])];old['courses']=[c for c in old['courses'] if c['id'] not in newids]
     before=requirement_profile(old);after=requirement_profile(p)
     assert {role:after[role]['count']-before[role]['count'] for role in delta}==delta
     for c in p['courses']:
         if c['id'] in newids:
-            assert c['category']=='applications' and c['category_review']['status']=='reviewed'
-            assert c['credits']==(1 if c['code'] in ['PHYS 1152','PHYS 1153','PHYS 1162'] else 0)
+            assert c['category']==('systems' if c['code']=='EECE 2323' else 'applications') and c['category_review']['status']=='reviewed'
+            assert c['credits']==(1 if c['code'] in ['PHYS 1152','PHYS 1153','PHYS 1162','EECE 2323'] else 0)
 
 
 @pytest.mark.parametrize('partner',EXPECTED)
@@ -82,3 +87,17 @@ def test_optional_official_degree_and_subject_replay_preserves_exact_children(pa
             if any(c['id'] in r['course_ids'] for r in result['requirements']):
                 reviewed=next(x for x in p['courses'] if x['id']==c['id'])
                 assert c=={k:v for k,v in reviewed.items() if k!='category_review'}
+
+
+def test_optional_digital_lab_requires_reciprocal_concurrency_and_exact_credit():
+    html='''<div id="site-title"><h1>Electrical and Computer Engineering (EECE)</h1></div><div id="textcontainer">
+    <div class="courseblock"><p class="courseblocktitle">EECE 2322. Fundamentals of Digital Design and Computer Organization. (4 Hours)</p><p class="cb_desc">Digital design.</p><p class="courseblockextra">Corequisite(s): EECE 2323</p></div>
+    <div class="courseblock"><p class="courseblocktitle">EECE 2323. Lab for EECE 2322. (1 Hour)</p><p class="cb_desc">Design and implement a computer system.</p><p class="courseblockextra">Corequisite(s): EECE 2322</p></div></div>'''
+    profile=('eece-2322',['EECE 2322'],'electives','choose_credits','options',['EECE 2323'])
+    empty=lambda html:dict(courses=[],requirements=[],notes=[])
+    result=observe_subject(html,'test','EECE',[profile],empty)
+    assert result['courses'][0]['credits']==1
+    assert result['requirements'][0]['parent_id']=='test-req-eece-2322'
+    assert 'category_review' not in result['courses'][0]
+    for before,after in [('Corequisite(s): EECE 2323','Prerequisite(s): EECE 2323'),('Corequisite(s): EECE 2322','Corequisite(s): EECE 2160'),('(1 Hour)','(4 Hours)'),('Lab for EECE 2322','Lab for EECE 2160')]:
+        with pytest.raises(ValueError):observe_subject(html.replace(before,after),'test','EECE',[profile],empty)

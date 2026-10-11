@@ -329,7 +329,8 @@ def test_speech_manual_profile_and_variable_offering_hours_remain_separate():
     rows=[r for r in program['requirements'] if course['id'] in r.get('course_ids',[])]
     assert any(r['credits']==4 and r['kind']=='all' for r in rows)
     assert next(c for c in program['courses'] if c['code']=='SLPA 4219')['credits']==3
-    assert entry['status']=='blocked' and entry['blockers']
+    assert entry['status'] in {'in_progress','blocked'} and entry['blockers']
+    if entry['status']=='in_progress':assert 'accessible conditional' in entry['checks']['degree_wide_requirements']
 
 
 @pytest.mark.parametrize('code,expected,status', [
@@ -365,7 +366,8 @@ def test_criminal_and_journalism_independent_profiles_have_no_unread_records(sub
     if subject=='journalism':
         assert next(c for c in p['courses'] if c['code']=='JRNL 1102')['credits']==1
         assert next(c for c in p['courses'] if c['code']=='JRNL 5500')['category']=='foundations'
-    assert e['status']=='blocked' and e['blockers']
+    assert e['status'] in {'in_progress','blocked'} and e['blockers']
+    if e['status']=='in_progress':assert 'accessible conditional' in e['checks']['degree_wide_requirements']
 
 
 @pytest.mark.parametrize('subject,size,fixed,options', [('economics',50,18,32),('mathematics',34,20,14),('physics',49,25,24)])
@@ -437,3 +439,12 @@ def test_linguistics_named_options_preserve_eligibility_and_nonreuse_scope():
     rules=resolved['requirements']
     assert any('not used to fulfill other degree requirements' in r['summary'] for r in rules)
     assert any(r['kind']=='choose_courses' and r['count']==4 for r in rules)
+
+
+@pytest.mark.parametrize('code,expected,status', [('ENVR 2500','mathematics','reviewed'),('ENVR 2501','mathematics','reviewed'),('BIOC 1000','other','unclassified'),('BINF 6310','other','mixed')])
+def test_science_statistics_and_bioinformatics_content_scope(code,expected,status):
+    d=CATEGORY_DECISIONS[code]
+    assert d['status']==status
+    assert category(code,d['name'],d['guard'])==expected
+    assert category(code,d['name'],'New subject content')=='other'
+    if code=='BINF 6310':assert set(d['candidate_categories'])=={'foundations','applications'}

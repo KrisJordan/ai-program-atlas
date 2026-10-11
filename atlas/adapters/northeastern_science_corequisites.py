@@ -29,8 +29,23 @@ PROFILES = {
         ('phys-1161-phys-1162',['PHYS 1161','PHYS 1162'],'physics-course-choice','alternative','options',['PHYS 1163']),
     ],
 }
+# Individually checked degree tables list the lecture as an elective; each
+# degree preamble requires its subject-catalog concurrent laboratory.
+for _partner, _parent in {
+    'biology': 'khoury-approved-electives-credit-choice',
+    'biochemistry': 'khoury-approved-electives-credit-choice',
+    'chemistry': 'khoury-approved-elective-credit-choice',
+    'ecology-and-evolutionary-biology': 'khoury-approved-electives-credit-choice',
+    'design': 'khoury-approved-elective-credit-choice',
+    'behavioral-neuroscience': 'upper-division-elective-credit-choice',
+}.items():
+    PROFILES.setdefault(_partner, []).append(
+        ('eece-2322', ['EECE 2322'], _parent, 'choose_credits', 'options', ['EECE 2323']))
+
 # Exact content statements reviewed in the current official subject catalogs.
 CONDITIONS = {
+    'EECE 2322': 'Corequisite(s): EECE 2323',
+    'EECE 2323': 'Corequisite(s): EECE 2322',
     'CHEM 1161': 'Corequisite(s): CHEM 1162 , CHEM 1163',
     'CHEM 1163': 'Corequisite(s): CHEM 1161 , CHEM 1162',
     'CHEM 2161': 'Corequisite(s): CHEM 2162 , CHEM 2163',
@@ -49,6 +64,7 @@ CONDITIONS = {
     'PHYS 1163': 'Corequisite(s): PHYS 1161 , PHYS 1162',
 }
 FACTS = {
+    'EECE 2323': ('Lab for EECE 2322',1),
     'CHEM 1163': ('Recitation for CHEM 1161',0),
     'CHEM 2163': ('Recitation for CHEM 2161',0),
     'CHEM 2323': ('Recitation for CHEM 2321',0),

@@ -57,3 +57,5 @@ Criminology international affairs and public policy options description review (
 ## Finite description inventory closure — 2026-10-11
 
 Finite course-description review complete (2026-10-11): all 82 currently listed course observations have source-backed original summaries. This closes the listed-course description queue only. Other offering-specific public sites/syllabi remain unreviewed, null preparation fields do not mean no restriction, and degree completeness remains partial pending the documented applicability boundaries.
+
+2026-10-11 source audit continuation: reviewed exact ENVR 2500/2501 statistical content and, where present, BIOC orientation and mixed BINF 6310 content. Updated manual decisions do not come from the parser; unchanged course identity/content guards continue to protect refreshed observations. Available conditional declaration/transfer policy mapping remains in progress, separate from exact home-college applicability.

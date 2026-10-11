@@ -219,7 +219,7 @@
       "source_date": null,
       "catalog_year": "2026-2027",
       "confidence": "high",
-      "locator": "All currently listed EECE courses in this degree: EECE 2160, EECE 2322. Course identity, stated hours and explicit registration conditions; descriptions only when separately reviewed."
+      "locator": "All currently listed EECE courses in this degree: EECE 2160, EECE 2322. Course identity, stated hours and explicit registration conditions; descriptions only when separately reviewed. Independently reviewed concurrent EECE 2323 laboratory and reciprocal EECE 2322 conditions."
     },
     {
       "id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-eemb-courses",
@@ -878,11 +878,22 @@
       "prerequisites": null,
       "credits": 4.0,
       "credit_unit": "semester_hours",
-      "category": "other",
+      "category": "mathematics",
       "source_id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-envr-courses",
       "url": "https://catalog.northeastern.edu/course-descriptions/envr/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-envr-courses"
+        ],
+        "locator": "ENVR 2500 course block; description and any explicitly accompanying lecture context",
+        "rationale": "The source explicitly centers mathematical foundations of statistics, probability, inference, estimation and parametric/nonparametric tests. Biological data provide the application context, not a different primary subject.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-envr-2501",
@@ -892,11 +903,22 @@
       "prerequisites": null,
       "credits": 1.0,
       "credit_unit": "semester_hours",
-      "category": "other",
+      "category": "mathematics",
       "source_id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-envr-courses",
       "url": "https://catalog.northeastern.edu/course-descriptions/envr/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-envr-courses"
+        ],
+        "locator": "ENVR 2501 course block; description and any explicitly accompanying lecture context",
+        "rationale": "The laboratory accompanies the explicitly statistical ENVR 2500 and applies its statistical topics in R; using a programming environment does not make the primary subject general software construction.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-engw-1111",
@@ -1893,11 +1915,25 @@
       "prerequisites": "BINF 6200 (may be taken concurrently) with a minimum grade of C- or BINF 6200 (may be taken concurrently) with a minimum grade of C- or DS 2500 with a minimum grade of C-",
       "credits": 4.0,
       "credit_unit": "semester_hours",
-      "category": "applications",
+      "category": "other",
       "source_id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-binf-courses",
       "url": "https://catalog.northeastern.edu/course-descriptions/binf/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-binf-courses"
+        ],
+        "locator": "BINF 6310 course block; description and any explicitly accompanying lecture context",
+        "rationale": "The detailed source substantially combines biological sequence analysis and molecular/sequencing concepts with general command-line, Linux, DevOps/version-control and pipeline skills. No defensible single primary category is imposed; explicit mixed foundations and biological-domain content is preserved.",
+        "candidate_categories": [
+          "foundations",
+          "applications"
+        ]
+      }
     },
     {
       "id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-biol-4707",
@@ -2149,6 +2185,31 @@
         ],
         "locator": "PHYS 1163 course block, including explicitly accompanying lecture and concurrent registration evidence",
         "rationale": "The recitation supports interactive problem solving for the reviewed mechanics and fluids of PHYS 1161; zero credit hours do not erase its distinct course identity.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-eece-2323",
+      "code": "EECE 2323",
+      "name": "Lab for EECE 2322",
+      "description": "Designs, simulates and tests a computer system using programmable logic.",
+      "prerequisites": null,
+      "credits": 1.0,
+      "credit_unit": "semester_hours",
+      "category": "systems",
+      "source_id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-eece-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/eece/",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-eece-courses"
+        ],
+        "locator": "EECE 2323 course block and reciprocal EECE 2322 corequisite",
+        "rationale": "The laboratory designs, implements, simulates and tests a computer system on programmable logic using a hardware-description language.",
         "candidate_categories": []
       }
     }
@@ -3961,6 +4022,22 @@
         "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-phys-1162",
         "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-phys-1163"
       ]
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-req-eece-2322-concurrent",
+      "parent_id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-req-eece-2322",
+      "title": "Concurrent courses for EECE 2322",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-eece-courses",
+      "source_text": null,
+      "summary": "Explicit subject-catalog concurrency applies when this lecture/pair is taken. The degree requires specified corequisite labs/recitations; these courses inherit this exact branch and are not unrelated prerequisite obligations.",
+      "course_ids": [
+        "northeastern-university-artificial-intelligence-and-biology-bs-boston-bs-degree-eece-2323"
+      ]
     }
   ],
   "notes": [
@@ -4011,7 +4088,10 @@
     "Partner-course description review (2026-10-11): 14 existing course observations gain original guarded summaries of their official 2026–2027 descriptions. Topics courses retain offering variability. Course activities and aims are not promoted to assessed program outcomes, and placement in an alternative or elective group is unchanged.",
     "Biology ecology and biochemical methods description review (2026-10-11): 18 existing course observations gain original concise summaries of their official 2026–2027 descriptions. Offering variability, course activities and permission conditions retain their stated scope. Requirement choices, credits, preparation fields and public resource links remain unchanged.",
     "Finite course-description review complete (2026-10-11): all 72 currently listed course observations have source-backed original summaries. This closes the listed-course description queue only. Other offering-specific public sites/syllabi remain unreviewed, null preparation fields do not mean no restriction, and degree completeness remains partial pending the documented applicability boundaries.",
-    "Degree audit: explicitly specified science corequisite laboratories/recitations are mapped beneath their exact lecture or lecture/lab pair. Alternatives retain their original parent choices; zero-hour recitations remain distinct and unrelated prerequisites are not expanded."
+    "Degree audit: explicitly specified science corequisite laboratories/recitations are mapped beneath their exact lecture or lecture/lab pair. Alternatives retain their original parent choices; zero-hour recitations remain distinct and unrelated prerequisites are not expanded.",
+    "Subject-catalog metadata observation only; merge with program requirements after review. Credits are hours in the same semester catalog as the program. Missing prerequisite fields remain unknown.",
+    "Subject-catalog metadata observation only; merge with program requirements after review. Credits are hours in the same semester catalog as the program. Missing prerequisite fields remain unknown.",
+    "EECE 2323 subject catalog corequisite(s): EECE 2322. These are concurrent conditions, not prerequisites."
   ],
   "curriculum_audit": {
     "scope": "degree",

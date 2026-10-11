@@ -372,6 +372,20 @@
           "locator": "Exact individually reviewed course blocks: PSYC 2320, PSYC 1101",
           "checked_at": "2026-10-10T23:54:02+00:00",
           "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/envr/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: ENVR 2500, ENVR 2501",
+          "checked_at": "2026-10-11T00:07:04+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/binf/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: BINF 6310",
+          "checked_at": "2026-10-11T00:12:37+00:00",
+          "access_status": "accessible"
         }
       ],
       "checks": {
@@ -380,7 +394,7 @@
         "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
         "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant.",
         "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
-        "classification": "Current represented inventory: 71 course observations; 41 individually reviewed subject classifications, 2 explicitly mixed, 5 source-inspected but unclassified, and 23 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
+        "classification": "Current represented inventory: 72 course observations; 44 individually reviewed subject classifications, 3 explicitly mixed, 5 source-inspected but unclassified, and 20 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
         "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
         "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed."
       },
@@ -413,6 +427,24 @@
           "status": "corrected",
           "evidence_urls": [
             "https://catalog.northeastern.edu/course-descriptions/psyc/"
+          ]
+        },
+        {
+          "issue": "Unreviewed selected biology/statistics classifications required source-content verification.",
+          "correction": "Exact-code review corrections: ENVR 2500: other → mathematics; ENVR 2501: other → mathematics; BINF 6310: applications → other",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/envr/",
+            "https://catalog.northeastern.edu/course-descriptions/binf/"
+          ]
+        },
+        {
+          "issue": "The named optional EECE 2322 lecture lacked its source-required concurrent EECE 2323 laboratory.",
+          "correction": "Added the one-hour EECE 2323 beneath the exact optional lecture node, preserving the degree elective branch and credit criterion. Reciprocal subject conditions and each individual degree preamble/ancestor path are guarded.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-behavioral-neuroscience-bs-bos/",
+            "https://catalog.northeastern.edu/course-descriptions/eece/"
           ]
         }
       ],
@@ -513,20 +545,141 @@
           "locator": "Exact individually reviewed course blocks: EESC 2000",
           "checked_at": "2026-10-11T00:12:27+00:00",
           "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/envr/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: ENVR 2500, ENVR 2501",
+          "checked_at": "2026-10-11T00:07:04+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/bioc/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: BIOC 1000",
+          "checked_at": "2026-10-11T00:12:51+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/binf/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: BINF 6310",
+          "checked_at": "2026-10-11T00:12:37+00:00",
+          "access_status": "accessible"
         }
       ],
       "checks": {
         "degree_identity": "Official catalog identity and exact award/campus are retained as Artificial Intelligence and Biochemistry, BS (Boston). Current official page retrieved; catalog/cohort scope remains explicit.",
-        "required_and_choices": "Individual structural source interpretation is in progress. Parser replay/family resolution alone is not independent validation. Existing all/choice/bundle graph retained at this checkpoint.",
-        "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
-        "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant. Individually verified and mapped the explicit CHEM/PHYS concurrent courses beneath their exact lecture/pair nodes, preserving original required versus alternative ancestry and actual zero/one-hour values.",
-        "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
-        "classification": "Current represented inventory: 53 course observations; 40 individually reviewed subject classifications, 3 explicitly mixed, 6 source-inspected but unclassified, and 4 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
-        "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
-        "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed."
+        "required_and_choices": "Full primary degree panel independently transcribed into 27 mapped fixed identities and 27 named options. Complete lecture/lab/recitation pairs retain their required or optional ancestry. EECE 2323 is conditional on choosing EECE 2322, under that exact elective branch; no degree-wide promotion. Home-dependent overview/professional courses and placement substitutions remain conditional. Literal expected IDs were authored independently of the profile implementation. Statistics remains ENVR 2500+2501 or MATH 3081. CHEM 3331+3332 versus CHEM 5620 is a bundle alternative. Bioinformatics/genomics and biology-capstone/chemistry-research are two distinct integrative choices, not four requirements.",
+        "elective_pools": "Intermediate/advanced science elective remains one course from the exact BIOL/CHEM/EEMB/ENVR/MATH/PHYS level ranges, without inventing a closed list or automatic no-overlap condition. Khoury ranges/exclusions and conditional adviser extensions remain; sixteen general-elective hours are explicit.",
+        "prerequisites": "Every represented course description and published prerequisite field has been inspected. Prerequisite alternatives and minimum grades remain eligibility, not extra fixed degree obligations. Explicit concurrent CHEM and EECE requirements are mapped only where supported by the individual degree preamble and exact parent branch. ENVR 2500/2501 reciprocal concurrence preserves the statistics pair. BINF 6310 retains its source concurrent BINF 6200 or DS 2500 C-minus eligibility; duplicated source wording is not reconciled into new obligations.",
+        "credits_and_units": "All 54 represented identities/semester hours reviewed; the source degree minimum is131 hours, with16 general-elective hours. Statistics is a4–5-hour alternative and bioanalytical/protein chemistry a3–5-hour alternative, not fixed per-member credits. The source GPA2.000 scope is BIOL/CHEM/MATH/PHYS; the zero-hour CHEM1163 remains a separate concurrent record.",
+        "classification": "Current represented inventory: 54 course observations; 43 individually reviewed subject classifications, 4 explicitly mixed, 7 source-inspected but unclassified, and 0 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
+        "family_composition": "All inherited common course units and placement policy checked against this individual degree table. Mathematical-reasoning alternatives remain local; no CS 1800/1802 is inferred from other family members. Subject-based concurrency attaches locally beneath exact degree branches and does not change shared family requirements.",
+        "degree_wide_requirements": "Primary degree invokes universitywide and NUpath requirements; six represented shared policies and Science/Khoury public college rules have been read. Additional accessible conditional declaration/internal-transfer policy clauses identified by independent review remain to be mapped; this accessible work keeps status in_progress. Exact home-college/cohort applicability remains a separate institutional boundary, not an excuse to stop available policy work."
       },
-      "expected_profile": null,
-      "expected_course_ids": null,
+      "expected_profile": {
+        "required": {
+          "count": 27,
+          "categories": {
+            "foundations": 5,
+            "mathematics": 3,
+            "ai_ml": 1,
+            "systems": 2,
+            "human_context": 0,
+            "applications": 15,
+            "electives": 0,
+            "other": 1
+          }
+        },
+        "options": {
+          "count": 27,
+          "categories": {
+            "foundations": 0,
+            "mathematics": 5,
+            "ai_ml": 0,
+            "systems": 2,
+            "human_context": 5,
+            "applications": 5,
+            "electives": 0,
+            "other": 10
+          }
+        },
+        "unresolved": {
+          "count": 0,
+          "categories": {
+            "foundations": 0,
+            "mathematics": 0,
+            "ai_ml": 0,
+            "systems": 0,
+            "human_context": 0,
+            "applications": 0,
+            "electives": 0,
+            "other": 0
+          }
+        }
+      },
+      "expected_course_ids": {
+        "required": [
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-cs-2000",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-cs-2001",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-cs-2100",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-cs-2101",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-cs-3200",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-ds-3500",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-ds-3000",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-ds-4200",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-ds-4300",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-ds-4400",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-biol-1107",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-biol-1108",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-biol-2299",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-biol-2301",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-biol-2302",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-biol-2309",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-chem-1161",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-chem-1162",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-chem-1163",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-chem-2311",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-chem-2312",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-chem-2313",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-chem-2314",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-math-1341",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-math-1342",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-biol-3611",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-biol-3612"
+        ],
+        "options": [
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-cs-1200",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-inpr-1000",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-insc-1000",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-cs-1210",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-eesc-2000",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-bioc-1000",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-math-1365",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-math-1465",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-eece-2160",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-eece-2322",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-eece-2323",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-mktg-4606",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-engw-1111",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-engw-1102",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-engw-3302",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-engw-3307",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-engw-3315",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-envr-2500",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-envr-2501",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-math-3081",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-chem-3331",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-chem-3332",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-chem-5620",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-binf-6310",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-biol-5591",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-biol-4701",
+          "northeastern-university-artificial-intelligence-and-biochemistry-bs-boston-bs-degree-chem-4750"
+        ],
+        "unresolved": []
+      },
       "discrepancies": [
         {
           "issue": "Legacy subject-prefix/title heuristics misclassified concrete courses: CS 1200 foundations -> other; CS 1210 foundations -> other; DS 3000 ai_ml -> mathematics; DS 4200 foundations -> other",
@@ -565,6 +718,25 @@
             "https://catalog.northeastern.edu/course-descriptions/inpr/",
             "https://catalog.northeastern.edu/course-descriptions/mktg/"
           ]
+        },
+        {
+          "issue": "Unreviewed selected biology/statistics classifications required source-content verification.",
+          "correction": "Exact-code review corrections: ENVR 2500: other → mathematics; ENVR 2501: other → mathematics; BINF 6310: applications → other",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/envr/",
+            "https://catalog.northeastern.edu/course-descriptions/bioc/",
+            "https://catalog.northeastern.edu/course-descriptions/binf/"
+          ]
+        },
+        {
+          "issue": "The named optional EECE 2322 lecture lacked its source-required concurrent EECE 2323 laboratory.",
+          "correction": "Added the one-hour EECE 2323 beneath the exact optional lecture node, preserving the degree elective branch and credit criterion. Reciprocal subject conditions and each individual degree preamble/ancestor path are guarded.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-biochemistry-bs-bos/",
+            "https://catalog.northeastern.edu/course-descriptions/eece/"
+          ]
         }
       ],
       "blockers": [
@@ -573,7 +745,7 @@
           "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-biochemistry-bs-bos/"
         }
       ],
-      "correction_status": "First category and parser corrections applied; remaining accessible individual review continues.",
+      "correction_status": "Represented identities, subject decisions and independent role/category partitions complete; available conditional policy mappings still in progress, with exact home-college applicability separately unresolved.",
       "second_pass_status": "pending"
     },
     {
@@ -671,6 +843,20 @@
           "locator": "Exact individually reviewed course blocks: EESC 2000",
           "checked_at": "2026-10-11T00:12:27+00:00",
           "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/envr/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: ENVR 2500, ENVR 2501",
+          "checked_at": "2026-10-11T00:07:04+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/binf/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: BINF 6310",
+          "checked_at": "2026-10-11T00:12:37+00:00",
+          "access_status": "accessible"
         }
       ],
       "checks": {
@@ -679,7 +865,7 @@
         "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
         "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant. Individually verified and mapped the explicit CHEM/PHYS concurrent courses beneath their exact lecture/pair nodes, preserving original required versus alternative ancestry and actual zero/one-hour values.",
         "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
-        "classification": "Current represented inventory: 77 course observations; 52 individually reviewed subject classifications, 3 explicitly mixed, 11 source-inspected but unclassified, and 11 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
+        "classification": "Current represented inventory: 78 course observations; 55 individually reviewed subject classifications, 4 explicitly mixed, 11 source-inspected but unclassified, and 8 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
         "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
         "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed."
       },
@@ -731,6 +917,24 @@
             "https://catalog.northeastern.edu/course-descriptions/eece/",
             "https://catalog.northeastern.edu/course-descriptions/inpr/",
             "https://catalog.northeastern.edu/course-descriptions/mktg/"
+          ]
+        },
+        {
+          "issue": "Unreviewed selected biology/statistics classifications required source-content verification.",
+          "correction": "Exact-code review corrections: ENVR 2500: other → mathematics; ENVR 2501: other → mathematics; BINF 6310: applications → other",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/envr/",
+            "https://catalog.northeastern.edu/course-descriptions/binf/"
+          ]
+        },
+        {
+          "issue": "The named optional EECE 2322 lecture lacked its source-required concurrent EECE 2323 laboratory.",
+          "correction": "Added the one-hour EECE 2323 beneath the exact optional lecture node, preserving the degree elective branch and credit criterion. Reciprocal subject conditions and each individual degree preamble/ancestor path are guarded.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-biology-bs-bos/",
+            "https://catalog.northeastern.edu/course-descriptions/eece/"
           ]
         }
       ],
@@ -961,20 +1165,129 @@
           "locator": "Exact individually reviewed course blocks: EESC 2000",
           "checked_at": "2026-10-11T00:12:27+00:00",
           "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/envr/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: ENVR 2500, ENVR 2501",
+          "checked_at": "2026-10-11T00:07:04+00:00",
+          "access_status": "accessible"
         }
       ],
       "checks": {
         "degree_identity": "Official catalog identity and exact award/campus are retained as Artificial Intelligence and Chemistry, BS (Boston). Current official page retrieved; catalog/cohort scope remains explicit.",
-        "required_and_choices": "Individual structural source interpretation is in progress. Parser replay/family resolution alone is not independent validation. Existing all/choice/bundle graph retained at this checkpoint.",
-        "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
-        "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant. Individually verified and mapped the explicit CHEM/PHYS concurrent courses beneath their exact lecture/pair nodes, preserving original required versus alternative ancestry and actual zero/one-hour values.",
-        "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
-        "classification": "Current represented inventory: 55 course observations; 45 individually reviewed subject classifications, 2 explicitly mixed, 6 source-inspected but unclassified, and 2 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
-        "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
-        "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed."
+        "required_and_choices": "Full primary degree panel independently transcribed into 29 mapped fixed identities and 27 named options. Complete lecture/lab/recitation pairs retain their required or optional ancestry. EECE 2323 is conditional on choosing EECE 2322, under that exact elective branch; no degree-wide promotion. Home-dependent overview/professional courses and placement substitutions remain conditional. Literal expected IDs were authored independently of the profile implementation. Chemistry has two separate complete organic-chemistry alternative bundles; recitations for the chemistry-major variants inherit those alternatives. General/analytical concurrent recitations are fixed. Senior research is fixed but its unspecified topic remains unclassified.",
+        "elective_pools": "Advanced Chemistry requires one four-hour course, named CHEM 3410 or the published CHEM 3501–4628 range. Numeric endpoints are range criteria, not separate mandatory courses or a purported complete inventory. Khoury level ranges/exclusions, conditional adviser extensions and twenty-four general-elective hours remain explicit.",
+        "prerequisites": "Every represented course description and published prerequisite field has been inspected. Prerequisite alternatives and minimum grades remain eligibility, not extra fixed degree obligations. Explicit concurrent CHEM and EECE requirements are mapped only where supported by the individual degree preamble and exact parent branch. ENVR 2500/2501 reciprocal concurrence preserves the statistics pair. BINF 6310 retains its source concurrent BINF 6200 or DS 2500 C-minus eligibility; duplicated source wording is not reconciled into new obligations.",
+        "credits_and_units": "All 56 represented identities/semester hours reviewed; the source degree minimum is130 hours, with24 general-elective hours. Zero-hour CHEM recitations remain known zero. GPA2.000 applies to the specified CHEM/MATH/PHYS code scope, not silently to all courses or only CHEM. Lecture/laboratory bundle totals are not repeated for each course.",
+        "classification": "Current represented inventory: 56 course observations; 48 individually reviewed subject classifications, 2 explicitly mixed, 6 source-inspected but unclassified, and 0 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
+        "family_composition": "All inherited common course units and placement policy checked against this individual degree table. Mathematical-reasoning alternatives remain local; no CS 1800/1802 is inferred from other family members. Subject-based concurrency attaches locally beneath exact degree branches and does not change shared family requirements.",
+        "degree_wide_requirements": "Primary degree invokes universitywide and NUpath requirements; six represented shared policies and Science/Khoury public college rules have been read. Additional accessible conditional declaration/internal-transfer policy clauses identified by independent review remain to be mapped; this accessible work keeps status in_progress. Exact home-college/cohort applicability remains a separate institutional boundary, not an excuse to stop available policy work."
       },
-      "expected_profile": null,
-      "expected_course_ids": null,
+      "expected_profile": {
+        "required": {
+          "count": 29,
+          "categories": {
+            "foundations": 5,
+            "mathematics": 5,
+            "ai_ml": 1,
+            "systems": 2,
+            "human_context": 0,
+            "applications": 14,
+            "electives": 0,
+            "other": 2
+          }
+        },
+        "options": {
+          "count": 27,
+          "categories": {
+            "foundations": 0,
+            "mathematics": 2,
+            "ai_ml": 0,
+            "systems": 2,
+            "human_context": 5,
+            "applications": 12,
+            "electives": 0,
+            "other": 6
+          }
+        },
+        "unresolved": {
+          "count": 0,
+          "categories": {
+            "foundations": 0,
+            "mathematics": 0,
+            "ai_ml": 0,
+            "systems": 0,
+            "human_context": 0,
+            "applications": 0,
+            "electives": 0,
+            "other": 0
+          }
+        }
+      },
+      "expected_course_ids": {
+        "required": [
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-cs-2000",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-cs-2001",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-cs-2100",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-cs-2101",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-cs-3200",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-ds-3500",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-ds-3000",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-ds-4200",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-ds-4300",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-ds-4400",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-envr-2500",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-envr-2501",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-chem-1161",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-chem-1162",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-chem-1163",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-chem-2161",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-chem-2162",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-chem-2163",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-chem-2321",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-chem-2322",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-chem-2323",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-math-1341",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-math-1342",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-phys-1151",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-phys-1152",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-phys-1153",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-chem-3401",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-chem-3402",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-chem-4750"
+        ],
+        "options": [
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-cs-1200",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-inpr-1000",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-insc-1000",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-cs-1210",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-eesc-2000",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-math-1365",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-math-1465",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-eece-2160",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-eece-2322",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-eece-2323",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-mktg-4606",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-engw-1111",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-engw-1102",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-engw-3302",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-engw-3307",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-engw-3315",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-chem-2311",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-chem-2312",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-chem-2315",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-chem-2316",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-chem-2324",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-chem-2313",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-chem-2314",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-chem-2317",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-chem-2318",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-chem-2325",
+          "northeastern-university-artificial-intelligence-and-chemistry-bs-boston-bs-degree-chem-3410"
+        ],
+        "unresolved": []
+      },
       "discrepancies": [
         {
           "issue": "Legacy subject-prefix/title heuristics misclassified concrete courses: CS 1200 foundations -> other; CS 1210 foundations -> other; DS 3000 ai_ml -> mathematics; DS 4200 foundations -> other",
@@ -1021,6 +1334,23 @@
             "https://catalog.northeastern.edu/course-descriptions/inpr/",
             "https://catalog.northeastern.edu/course-descriptions/mktg/"
           ]
+        },
+        {
+          "issue": "Unreviewed selected biology/statistics classifications required source-content verification.",
+          "correction": "Exact-code review corrections: ENVR 2500: other → mathematics; ENVR 2501: other → mathematics",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/envr/"
+          ]
+        },
+        {
+          "issue": "The named optional EECE 2322 lecture lacked its source-required concurrent EECE 2323 laboratory.",
+          "correction": "Added the one-hour EECE 2323 beneath the exact optional lecture node, preserving the degree elective branch and credit criterion. Reciprocal subject conditions and each individual degree preamble/ancestor path are guarded.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-chemistry-bs-bos/",
+            "https://catalog.northeastern.edu/course-descriptions/eece/"
+          ]
         }
       ],
       "blockers": [
@@ -1029,7 +1359,7 @@
           "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-chemistry-bs-bos/"
         }
       ],
-      "correction_status": "First category and parser corrections applied; remaining accessible individual review continues.",
+      "correction_status": "Represented identities, subject decisions and independent role/category partitions complete; available conditional policy mappings still in progress, with exact home-college applicability separately unresolved.",
       "second_pass_status": "pending"
     },
     {
@@ -1244,7 +1574,7 @@
     {
       "program_id": "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree",
       "institution_id": "northeastern-university",
-      "status": "blocked",
+      "status": "in_progress",
       "sources": [
         {
           "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-criminal-justice-bs-bos/",
@@ -1535,7 +1865,7 @@
         "credits_and_units": "All 68 represented course identities and catalog semester-hour observations are inspected. The degree requires 128 total and 24 general-elective hours. Individual one-hour seminars and labs retain their own hours rather than inheriting a combined five-hour row. Degree choices retain published four/eight-hour loads; this review does not sum overlapping requirements into a fictitious student total.",
         "classification": "Current represented inventory: 68 course observations; 60 individually reviewed subject classifications, 3 explicitly mixed, 5 source-inspected but unclassified, and 0 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
         "family_composition": "The eight shared AI units and placement policy have been checked against this individual degree panel, preserving all nine bindings and exact local parent roles. The common university policies apply through explicit degree/Boston scope; college-specific applicability is not inherited from the catalog breadcrumb or course prefixes.",
-        "degree_wide_requirements": "The entire primary requirements panel and six shared university policies were reread: total credits, overall GPA/residency, NUpath/transfer/writing/capstone conditions, experiential requirement, graduation clearance, combined-major design and university progression. Exact allowed/designated home college and the resulting college-specific progression/graduation rules remain a documented institutional applicability question, with official advising research continuing. The profile counts mapped named identities, not a guaranteed individual student schedule or a credit-total solution. Additional official admissions, Khoury student/advising/policy, applicable college catalog and CSSH advising/declaration routes were inspected. Admissions defers individual award-college designation to Application Status Check. Khoury publishes adviser-mediated home-college change/stay conditions, not an unconditional program-specific menu. Additional current advising major-GPA/progression rules are documented as potentially supplemental, not contradictory merely because the dated catalog omits them; their exact college/cohort applicability remains explicit; see the companion home-college follow-up."
+        "degree_wide_requirements": "The entire primary requirements panel and six shared university policies were reread: total credits, overall GPA/residency, NUpath/transfer/writing/capstone conditions, experiential requirement, graduation clearance, combined-major design and university progression. Exact allowed/designated home college and the resulting college-specific progression/graduation rules remain a documented institutional applicability question, with official advising research continuing. The profile counts mapped named identities, not a guaranteed individual student schedule or a credit-total solution. Additional official admissions, Khoury student/advising/policy, applicable college catalog and CSSH advising/declaration routes were inspected. Admissions defers individual award-college designation to Application Status Check. Khoury publishes adviser-mediated home-college change/stay conditions, not an unconditional program-specific menu. Additional current advising major-GPA/progression rules are documented as potentially supplemental, not contradictory merely because the dated catalog omits them; their exact college/cohort applicability remains explicit; see the companion home-college follow-up. Independent review identified additional accessible conditional university declaration and college transfer-policy clauses not yet represented. These are active mapping work, so the entry returns to in_progress while preserving the separate exact home-college blocker."
       },
       "expected_profile": {
         "required": {
@@ -1709,7 +2039,7 @@
           "supporting_url": "https://www.khoury.northeastern.edu/current-undergraduate-students/undergraduate-advising-academic-support/academic-policies-and-procedures/"
         }
       ],
-      "correction_status": "All represented named identities, course content, hours, explicit eligibility and source-transcribed role partitions are reviewed, with independent expected profile recorded. Corrected exact subject categories; original requirement graphs remain unchanged. Whole-degree closure awaits specific home-college applicability and clarification of the supplemental current Khoury policy scope, not unread represented course content.",
+      "correction_status": "All represented named identities, course content, hours, explicit eligibility and source-transcribed role partitions are reviewed, with independent expected profile recorded. Corrected exact subject categories; original requirement graphs remain unchanged. Whole-degree closure awaits specific home-college applicability and clarification of the supplemental current Khoury policy scope, not unread represented course content. Additional publicly accessible conditional policy clauses are being mapped; status is in_progress until that work is finished.",
       "second_pass_status": "pending"
     },
     {
@@ -1843,7 +2173,7 @@
         "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
         "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant. Independently verified the explicit CS 1800/1802 corequisite pair and degree preamble; CS 1802 is now nested beneath CS 1800. Other prerequisite alternatives are not additional degree obligations.",
         "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
-        "classification": "Current represented inventory: 63 course observations; 31 individually reviewed subject classifications, 2 explicitly mixed, 4 source-inspected but unclassified, and 26 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
+        "classification": "Current represented inventory: 64 course observations; 32 individually reviewed subject classifications, 2 explicitly mixed, 4 source-inspected but unclassified, and 26 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
         "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
         "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed."
       },
@@ -1893,6 +2223,15 @@
             "https://catalog.northeastern.edu/course-descriptions/jrnl/",
             "https://catalog.northeastern.edu/course-descriptions/phil/",
             "https://catalog.northeastern.edu/course-descriptions/socl/"
+          ]
+        },
+        {
+          "issue": "The named optional EECE 2322 lecture lacked its source-required concurrent EECE 2323 laboratory.",
+          "correction": "Added the one-hour EECE 2323 beneath the exact optional lecture node, preserving the degree elective branch and credit criterion. Reciprocal subject conditions and each individual degree preamble/ancestor path are guarded.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-design-bs-bos/",
+            "https://catalog.northeastern.edu/course-descriptions/eece/"
           ]
         }
       ],
@@ -2000,6 +2339,13 @@
           "locator": "Exact individually reviewed course blocks: EESC 2000",
           "checked_at": "2026-10-11T00:12:27+00:00",
           "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/envr/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: ENVR 2500, ENVR 2501",
+          "checked_at": "2026-10-11T00:07:04+00:00",
+          "access_status": "accessible"
         }
       ],
       "checks": {
@@ -2008,7 +2354,7 @@
         "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
         "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant. Individually verified and mapped the explicit CHEM/PHYS concurrent courses beneath their exact lecture/pair nodes, preserving original required versus alternative ancestry and actual zero/one-hour values.",
         "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
-        "classification": "Current represented inventory: 72 course observations; 35 individually reviewed subject classifications, 2 explicitly mixed, 5 source-inspected but unclassified, and 30 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
+        "classification": "Current represented inventory: 73 course observations; 38 individually reviewed subject classifications, 2 explicitly mixed, 5 source-inspected but unclassified, and 28 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
         "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
         "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed."
       },
@@ -2052,6 +2398,23 @@
             "https://catalog.northeastern.edu/course-descriptions/inpr/",
             "https://catalog.northeastern.edu/course-descriptions/mktg/"
           ]
+        },
+        {
+          "issue": "Unreviewed selected biology/statistics classifications required source-content verification.",
+          "correction": "Exact-code review corrections: ENVR 2500: other → mathematics; ENVR 2501: other → mathematics",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/envr/"
+          ]
+        },
+        {
+          "issue": "The named optional EECE 2322 lecture lacked its source-required concurrent EECE 2323 laboratory.",
+          "correction": "Added the one-hour EECE 2323 beneath the exact optional lecture node, preserving the degree elective branch and credit criterion. Reciprocal subject conditions and each individual degree preamble/ancestor path are guarded.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-ecology-evolutionary-biology-bs-bos/",
+            "https://catalog.northeastern.edu/course-descriptions/eece/"
+          ]
         }
       ],
       "blockers": [
@@ -2066,7 +2429,7 @@
     {
       "program_id": "northeastern-university-artificial-intelligence-and-economics-bs-boston-bs-degree",
       "institution_id": "northeastern-university",
-      "status": "blocked",
+      "status": "in_progress",
       "sources": [
         {
           "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-economics-bs-bos/",
@@ -2335,8 +2698,8 @@
         "prerequisites": "Exact represented CS/DS/MATH/PHYS or ECON subject blocks were previously read individually and remain identity/description guarded. All stated prerequisite alternatives and minimum grades remain eligibility, not automatic extra degree obligations. This primary-page pass checked explicit lecture/lab/recitation bundles and the degree preamble; no unspecified prerequisite statement is treated as none.",
         "credits_and_units": "All 50 represented course identities and catalog semester-hour observations are reviewed. The degree states 128 total and 24 general-elective hours. ECON 2315/2316/2350/2560 must average 2.000; this is an average across the stated set, not a silently added C minimum in each course. Senior capstone topic/research credits retain their source scope. Aggregate degree/choice credits are not assigned to each member of a lab pair.",
         "classification": "Current represented inventory: 50 course observations; 41 individually reviewed subject classifications, 2 explicitly mixed, 7 source-inspected but unclassified, and 0 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
-        "family_composition": "Every shared course unit and placement binding was checked against the individual primary degree panel, preserving all original node IDs and parent roles. DS 4400 remains a required integration course in Mathematics rather than being lost from the shared core. Source-specific math/physics choices are local. No family-wide CS 1800 requirement is invented for degrees that instead prescribe mathematical reasoning.",
-        "degree_wide_requirements": "All six shared university policy sources and the full primary degree panel were reread. The exact participating-college entries are explicit in Admissions, which separately places individual award-college designation in Application Status Check. Khoury advising provides adviser-mediated conditional home changes and supplemental major-GPA/progression rules; catalog omission is not a contradiction. The unresolved issue is exact degree/cohort allowed/designated home-college applicability and the resulting college rules, not unread represented course content. CSSH catalog follows university progression and requires graduation clearance. Its Experiential Liberal Arts requirement is explicitly for majors entirely within CSSH and is not assigned to this cross-college combination. Current public CSSH advising/FAQ/declaration routes were read and do not publish this degree-specific home matrix."
+        "family_composition": "Each inherited common course unit and placement binding was checked against the individual Economics degree panel, preserving original IDs and parent roles. ECON 2560 is the local integrative requirement, while Economics calculus/capstone options remain local. No Mathematics-specific DS 4420 or integrative DS 4400 claim applies to this degree.",
+        "degree_wide_requirements": "All six shared university policy sources and the full primary degree panel were reread. The exact participating-college entries are explicit in Admissions, which separately places individual award-college designation in Application Status Check. Khoury advising provides adviser-mediated conditional home changes and supplemental major-GPA/progression rules; catalog omission is not a contradiction. The unresolved issue is exact degree/cohort allowed/designated home-college applicability and the resulting college rules, not unread represented course content. CSSH catalog follows university progression and requires graduation clearance. Its Experiential Liberal Arts requirement is explicitly for majors entirely within CSSH and is not assigned to this cross-college combination. Current public CSSH advising/FAQ/declaration routes were read and do not publish this degree-specific home matrix. Independent review identified additional accessible conditional university declaration and college transfer-policy clauses not yet represented. These are active mapping work, so the entry returns to in_progress while preserving the separate exact home-college blocker."
       },
       "expected_profile": {
         "required": {
@@ -2491,7 +2854,7 @@
           "supporting_url": "https://www.khoury.northeastern.edu/current-undergraduate-students/undergraduate-advising-academic-support/academic-policies-and-procedures/"
         }
       ],
-      "correction_status": "All represented course identities/content, credit scopes, prerequisite eligibility and source-transcribed required/options/category partitions reviewed. Shared policies and applicable public college-policy routes read. Whole-degree certification is blocked at the specific home-college applicability boundary; no unknown dates/resources are used as blockers.",
+      "correction_status": "All represented course identities/content, credit scopes, prerequisite eligibility and source-transcribed required/options/category partitions reviewed. Shared policies and applicable public college-policy routes read. Whole-degree certification is blocked at the specific home-college applicability boundary; no unknown dates/resources are used as blockers. Additional publicly accessible conditional policy clauses are being mapped; status is in_progress until that work is finished.",
       "second_pass_status": "pending"
     },
     {
@@ -2582,6 +2945,13 @@
           "locator": "Exact individually reviewed course blocks: EESC 2000",
           "checked_at": "2026-10-11T00:12:27+00:00",
           "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/envr/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: ENVR 2500, ENVR 2501",
+          "checked_at": "2026-10-11T00:07:04+00:00",
+          "access_status": "accessible"
         }
       ],
       "checks": {
@@ -2590,7 +2960,7 @@
         "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
         "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant.",
         "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
-        "classification": "Current represented inventory: 82 course observations; 26 individually reviewed subject classifications, 2 explicitly mixed, 6 source-inspected but unclassified, and 48 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
+        "classification": "Current represented inventory: 82 course observations; 28 individually reviewed subject classifications, 2 explicitly mixed, 6 source-inspected but unclassified, and 46 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
         "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
         "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed."
       },
@@ -2616,6 +2986,14 @@
             "https://catalog.northeastern.edu/course-descriptions/inpr/",
             "https://catalog.northeastern.edu/course-descriptions/mktg/",
             "https://catalog.northeastern.edu/course-descriptions/socl/"
+          ]
+        },
+        {
+          "issue": "Unreviewed selected biology/statistics classifications required source-content verification.",
+          "correction": "Exact-code review corrections: ENVR 2500: other → mathematics; ENVR 2501: other → mathematics",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/envr/"
           ]
         }
       ],
@@ -2716,6 +3094,13 @@
           "locator": "Exact individually reviewed course blocks: PSYC 2320, PSYC 1101",
           "checked_at": "2026-10-10T23:54:02+00:00",
           "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/envr/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: ENVR 2500, ENVR 2501",
+          "checked_at": "2026-10-11T00:07:04+00:00",
+          "access_status": "accessible"
         }
       ],
       "checks": {
@@ -2724,7 +3109,7 @@
         "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
         "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant. Independently verified the explicit CS 1800/1802 corequisite pair and degree preamble; CS 1802 is now nested beneath CS 1800. Other prerequisite alternatives are not additional degree obligations.",
         "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
-        "classification": "Current represented inventory: 52 course observations; 32 individually reviewed subject classifications, 1 explicitly mixed, 3 source-inspected but unclassified, and 16 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
+        "classification": "Current represented inventory: 52 course observations; 34 individually reviewed subject classifications, 1 explicitly mixed, 3 source-inspected but unclassified, and 14 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
         "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
         "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed."
       },
@@ -2766,6 +3151,14 @@
           "status": "corrected",
           "evidence_urls": [
             "https://catalog.northeastern.edu/course-descriptions/psyc/"
+          ]
+        },
+        {
+          "issue": "Unreviewed selected biology/statistics classifications required source-content verification.",
+          "correction": "Exact-code review corrections: ENVR 2500: other → mathematics; ENVR 2501: other → mathematics",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/envr/"
           ]
         }
       ],
@@ -2942,7 +3335,7 @@
     {
       "program_id": "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree",
       "institution_id": "northeastern-university",
-      "status": "blocked",
+      "status": "in_progress",
       "sources": [
         {
           "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-journalism-bs-bos/",
@@ -3170,7 +3563,7 @@
         "credits_and_units": "All 46 represented identities and their course-catalog semester hours are inspected. The degree states 131 total and 20 general-elective hours. JRNL 1101/1102 is a four-hour lecture plus one-hour toolbox, not five hours each. C or higher applies to the specified Journalism Courses group; the separate required-journalism group is not silently given that same per-course clause. The degree explicitly requires a 2.000 GPA in all JRNL courses. Outside-transfer students need five four-hour JRNL courses at Northeastern including 2201/2301/4650; the one-hour toolbox does not satisfy that residence count.",
         "classification": "Current represented inventory: 46 course observations; 39 individually reviewed subject classifications, 2 explicitly mixed, 5 source-inspected but unclassified, and 0 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
         "family_composition": "The eight shared AI units and placement policy have been checked against this individual degree panel, preserving all nine bindings and exact local parent roles. The common university policies apply through explicit degree/Boston scope; college-specific applicability is not inherited from the catalog breadcrumb or course prefixes.",
-        "degree_wide_requirements": "The entire primary requirements panel and six shared university policies were reread: total credits, overall GPA/residency, NUpath/transfer/writing/capstone conditions, experiential requirement, graduation clearance, combined-major design and university progression. Exact allowed/designated home college and the resulting college-specific progression/graduation rules remain a documented institutional applicability question, with official advising research continuing. The profile counts mapped named identities, not a guaranteed individual student schedule or a credit-total solution. Additional official admissions, Khoury student/advising/policy, applicable college catalog and CSSH advising/declaration routes were inspected. Admissions defers individual award-college designation to Application Status Check. Khoury publishes adviser-mediated home-college change/stay conditions, not an unconditional program-specific menu. Additional current advising major-GPA/progression rules are documented as potentially supplemental, not contradictory merely because the dated catalog omits them; their exact college/cohort applicability remains explicit; see the companion home-college follow-up."
+        "degree_wide_requirements": "The entire primary requirements panel and six shared university policies were reread: total credits, overall GPA/residency, NUpath/transfer/writing/capstone conditions, experiential requirement, graduation clearance, combined-major design and university progression. Exact allowed/designated home college and the resulting college-specific progression/graduation rules remain a documented institutional applicability question, with official advising research continuing. The profile counts mapped named identities, not a guaranteed individual student schedule or a credit-total solution. Additional official admissions, Khoury student/advising/policy, applicable college catalog and CSSH advising/declaration routes were inspected. Admissions defers individual award-college designation to Application Status Check. Khoury publishes adviser-mediated home-college change/stay conditions, not an unconditional program-specific menu. Additional current advising major-GPA/progression rules are documented as potentially supplemental, not contradictory merely because the dated catalog omits them; their exact college/cohort applicability remains explicit; see the companion home-college follow-up. Independent review identified additional accessible conditional university declaration and college transfer-policy clauses not yet represented. These are active mapping work, so the entry returns to in_progress while preserving the separate exact home-college blocker."
       },
       "expected_profile": {
         "required": {
@@ -3329,13 +3722,13 @@
           "supporting_url": "https://www.khoury.northeastern.edu/current-undergraduate-students/undergraduate-advising-academic-support/academic-policies-and-procedures/"
         }
       ],
-      "correction_status": "All represented named identities, course content, hours, explicit eligibility and source-transcribed role partitions are reviewed, with independent expected profile recorded. Corrected exact subject categories; original requirement graphs remain unchanged. Whole-degree closure awaits specific home-college applicability and clarification of the supplemental current Khoury policy scope, not unread represented course content.",
+      "correction_status": "All represented named identities, course content, hours, explicit eligibility and source-transcribed role partitions are reviewed, with independent expected profile recorded. Corrected exact subject categories; original requirement graphs remain unchanged. Whole-degree closure awaits specific home-college applicability and clarification of the supplemental current Khoury policy scope, not unread represented course content. Additional publicly accessible conditional policy clauses are being mapped; status is in_progress until that work is finished.",
       "second_pass_status": "pending"
     },
     {
       "program_id": "northeastern-university-artificial-intelligence-and-linguistics-bs-boston-bs-degree",
       "institution_id": "northeastern-university",
-      "status": "blocked",
+      "status": "in_progress",
       "sources": [
         {
           "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-linguistics-bs-bos/",
@@ -3542,7 +3935,7 @@
         "credits_and_units": "All 45 represented course identities and semester-hour observations checked. The degree states 130 total hours, sixteen general-elective hours and minimum LING GPA 2.000. Four structure choices total sixteen hours; the research and seminar choices are four hours each; two additional non-reused linguistics electives total eight. Five-hour computing lecture/laboratory bundles are not five hours per course. Named identity counts do not compute a student-specific credit total.",
         "classification": "Current represented inventory: 45 course observations; 35 individually reviewed subject classifications, 2 explicitly mixed, 8 source-inspected but unclassified, and 0 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
         "family_composition": "Each inherited common course unit and placement policy checked against this individual degree panel. DS 4420 and NLP integration remain local additions; exact family bindings preserve original node IDs/parents. Placement substitutes advanced CS/CY/DS work under the published condition; the mapped-fixed profile is not a guarantee that every student takes the introductory pair.",
-        "degree_wide_requirements": "All six shared university policy sources and the full primary degree panel were reread. The exact participating-college entries are explicit in Admissions, which separately places individual award-college designation in Application Status Check. Khoury advising provides adviser-mediated conditional home changes and supplemental major-GPA/progression rules; catalog omission is not a contradiction. The unresolved issue is exact degree/cohort allowed/designated home-college applicability and the resulting college rules, not unread represented course content. Science catalog requires four-course load with labs/recitations and twelve-hour progression, conditional approved reduced loads, S/U only outside major/minor/NUpath, major/overall GPA2.000, junior-year clearance, and major dismissal/transitional limits. These are documented for Science students, without assuming every combined-degree student has that assignment. BA-specific rules do not apply to these BS awards. The public Science advising page points exact home-college change instructions to a university-login-required support site."
+        "degree_wide_requirements": "All six shared university policy sources and the full primary degree panel were reread. The exact participating-college entries are explicit in Admissions, which separately places individual award-college designation in Application Status Check. Khoury advising provides adviser-mediated conditional home changes and supplemental major-GPA/progression rules; catalog omission is not a contradiction. The unresolved issue is exact degree/cohort allowed/designated home-college applicability and the resulting college rules, not unread represented course content. Science catalog requires four-course load with labs/recitations and twelve-hour progression, conditional approved reduced loads, S/U only outside major/minor/NUpath, major/overall GPA2.000, junior-year clearance, and major dismissal/transitional limits. These are documented for Science students, without assuming every combined-degree student has that assignment. BA-specific rules do not apply to these BS awards. The public Science advising page points exact home-college change instructions to a university-login-required support site. Independent review identified additional accessible conditional university declaration and college transfer-policy clauses not yet represented. These are active mapping work, so the entry returns to in_progress while preserving the separate exact home-college blocker."
       },
       "expected_profile": {
         "required": {
@@ -3681,13 +4074,13 @@
           "supporting_url": "https://northeastern.sharepoint.com/:u:/r/sites/COSUndergrad/SitePages/COS-Change-of-Major-Page.aspx?csf=1&web=1&e=T9lfKy"
         }
       ],
-      "correction_status": "All represented identities, contents, credits, prerequisite eligibility and independently transcribed role/category partitions reviewed. Six shared university policies and relevant public Science/Khoury policy and home-college routes inspected. Whole-degree certification remains blocked at exact home-college/cohort applicability, not at unread course content.",
+      "correction_status": "All represented identities, contents, credits, prerequisite eligibility and independently transcribed role/category partitions reviewed. Six shared university policies and relevant public Science/Khoury policy and home-college routes inspected. Whole-degree certification remains blocked at exact home-college/cohort applicability, not at unread course content. Additional publicly accessible conditional policy clauses are being mapped; status is in_progress until that work is finished.",
       "second_pass_status": "pending"
     },
     {
       "program_id": "northeastern-university-artificial-intelligence-and-mathematics-bs-boston-bs-degree",
       "institution_id": "northeastern-university",
-      "status": "blocked",
+      "status": "in_progress",
       "sources": [
         {
           "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-mathematics-bs-bos/",
@@ -3873,7 +4266,7 @@
         "credits_and_units": "All 34 represented identities and catalog semester hours are reviewed. The degree states 130 total and 24 general-elective hours, and minimum 2.000 GPA in MATH courses. Four-hour mathematical courses remain separate from paired computing laboratory loads; overview/co-op one-hour records remain distinct. Fixed profile identities are not a student-specific credit sum.",
         "classification": "Current represented inventory: 34 course observations; 27 individually reviewed subject classifications, 2 explicitly mixed, 5 source-inspected but unclassified, and 0 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
         "family_composition": "Every shared course unit and placement binding was checked against the individual primary degree panel, preserving all original node IDs and parent roles. DS 4400 remains a required integration course in Mathematics rather than being lost from the shared core. Source-specific math/physics choices are local. No family-wide CS 1800 requirement is invented for degrees that instead prescribe mathematical reasoning.",
-        "degree_wide_requirements": "All six shared university policy sources and the full primary degree panel were reread. The exact participating-college entries are explicit in Admissions, which separately places individual award-college designation in Application Status Check. Khoury advising provides adviser-mediated conditional home changes and supplemental major-GPA/progression rules; catalog omission is not a contradiction. The unresolved issue is exact degree/cohort allowed/designated home-college applicability and the resulting college rules, not unread represented course content. Science catalog requires four-course load with labs/recitations and twelve-hour progression, conditional approved reduced loads, S/U only outside major/minor/NUpath, major/overall GPA2.000, junior-year clearance, and major dismissal/transitional limits. These are documented for Science students, without assuming every combined-degree student has that assignment. BA-specific rules do not apply to these BS awards. The public Science advising page points exact home-college change instructions to a university-login-required support site."
+        "degree_wide_requirements": "All six shared university policy sources and the full primary degree panel were reread. The exact participating-college entries are explicit in Admissions, which separately places individual award-college designation in Application Status Check. Khoury advising provides adviser-mediated conditional home changes and supplemental major-GPA/progression rules; catalog omission is not a contradiction. The unresolved issue is exact degree/cohort allowed/designated home-college applicability and the resulting college rules, not unread represented course content. Science catalog requires four-course load with labs/recitations and twelve-hour progression, conditional approved reduced loads, S/U only outside major/minor/NUpath, major/overall GPA2.000, junior-year clearance, and major dismissal/transitional limits. These are documented for Science students, without assuming every combined-degree student has that assignment. BA-specific rules do not apply to these BS awards. The public Science advising page points exact home-college change instructions to a university-login-required support site. Independent review identified additional accessible conditional university declaration and college transfer-policy clauses not yet represented. These are active mapping work, so the entry returns to in_progress while preserving the separate exact home-college blocker."
       },
       "expected_profile": {
         "required": {
@@ -3991,7 +4384,7 @@
           "supporting_url": "https://northeastern.sharepoint.com/:u:/r/sites/COSUndergrad/SitePages/COS-Change-of-Major-Page.aspx?csf=1&web=1&e=T9lfKy"
         }
       ],
-      "correction_status": "All represented course identities/content, credit scopes, prerequisite eligibility and source-transcribed required/options/category partitions reviewed. Shared policies and applicable public college-policy routes read. Whole-degree certification is blocked at the specific home-college applicability boundary; no unknown dates/resources are used as blockers.",
+      "correction_status": "All represented course identities/content, credit scopes, prerequisite eligibility and source-transcribed required/options/category partitions reviewed. Shared policies and applicable public college-policy routes read. Whole-degree certification is blocked at the specific home-college applicability boundary; no unknown dates/resources are used as blockers. Additional publicly accessible conditional policy clauses are being mapped; status is in_progress until that work is finished.",
       "second_pass_status": "pending"
     },
     {
@@ -4134,7 +4527,7 @@
     {
       "program_id": "northeastern-university-artificial-intelligence-and-physics-bs-boston-bs-degree",
       "institution_id": "northeastern-university",
-      "status": "blocked",
+      "status": "in_progress",
       "sources": [
         {
           "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-physics-bs-bos/",
@@ -4327,7 +4720,7 @@
         "credits_and_units": "All 49 represented course identities and catalog semester hours are reviewed, including zero-hour PHYS 1163/1167/1193 recitations. Five-hour lecture/lab bundles are not five hours per record. The degree states 132 total and 16 general-elective hours, and a minimum 2.000 PHYS GPA. PHYS 5116 is mathematics based on its network-model description; that subject distinction does not alter its optional role.",
         "classification": "Current represented inventory: 49 course observations; 42 individually reviewed subject classifications, 2 explicitly mixed, 5 source-inspected but unclassified, and 0 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
         "family_composition": "Every shared course unit and placement binding was checked against the individual primary degree panel, preserving all original node IDs and parent roles. DS 4400 remains a required integration course in Mathematics rather than being lost from the shared core. Source-specific math/physics choices are local. No family-wide CS 1800 requirement is invented for degrees that instead prescribe mathematical reasoning.",
-        "degree_wide_requirements": "All six shared university policy sources and the full primary degree panel were reread. The exact participating-college entries are explicit in Admissions, which separately places individual award-college designation in Application Status Check. Khoury advising provides adviser-mediated conditional home changes and supplemental major-GPA/progression rules; catalog omission is not a contradiction. The unresolved issue is exact degree/cohort allowed/designated home-college applicability and the resulting college rules, not unread represented course content. Science catalog requires four-course load with labs/recitations and twelve-hour progression, conditional approved reduced loads, S/U only outside major/minor/NUpath, major/overall GPA2.000, junior-year clearance, and major dismissal/transitional limits. These are documented for Science students, without assuming every combined-degree student has that assignment. BA-specific rules do not apply to these BS awards. The public Science advising page points exact home-college change instructions to a university-login-required support site."
+        "degree_wide_requirements": "All six shared university policy sources and the full primary degree panel were reread. The exact participating-college entries are explicit in Admissions, which separately places individual award-college designation in Application Status Check. Khoury advising provides adviser-mediated conditional home changes and supplemental major-GPA/progression rules; catalog omission is not a contradiction. The unresolved issue is exact degree/cohort allowed/designated home-college applicability and the resulting college rules, not unread represented course content. Science catalog requires four-course load with labs/recitations and twelve-hour progression, conditional approved reduced loads, S/U only outside major/minor/NUpath, major/overall GPA2.000, junior-year clearance, and major dismissal/transitional limits. These are documented for Science students, without assuming every combined-degree student has that assignment. BA-specific rules do not apply to these BS awards. The public Science advising page points exact home-college change instructions to a university-login-required support site. Independent review identified additional accessible conditional university declaration and college transfer-policy clauses not yet represented. These are active mapping work, so the entry returns to in_progress while preserving the separate exact home-college blocker."
       },
       "expected_profile": {
         "required": {
@@ -4469,7 +4862,7 @@
           "supporting_url": "https://northeastern.sharepoint.com/:u:/r/sites/COSUndergrad/SitePages/COS-Change-of-Major-Page.aspx?csf=1&web=1&e=T9lfKy"
         }
       ],
-      "correction_status": "All represented course identities/content, credit scopes, prerequisite eligibility and source-transcribed required/options/category partitions reviewed. Shared policies and applicable public college-policy routes read. Whole-degree certification is blocked at the specific home-college applicability boundary; no unknown dates/resources are used as blockers.",
+      "correction_status": "All represented course identities/content, credit scopes, prerequisite eligibility and source-transcribed required/options/category partitions reviewed. Shared policies and applicable public college-policy routes read. Whole-degree certification is blocked at the specific home-college applicability boundary; no unknown dates/resources are used as blockers. Additional publicly accessible conditional policy clauses are being mapped; status is in_progress until that work is finished.",
       "second_pass_status": "pending"
     },
     {
@@ -4694,6 +5087,13 @@
           "locator": "Exact individually reviewed course blocks: PSYC 2320, PSYC 1101",
           "checked_at": "2026-10-10T23:54:02+00:00",
           "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/envr/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: ENVR 2500, ENVR 2501",
+          "checked_at": "2026-10-11T00:07:04+00:00",
+          "access_status": "accessible"
         }
       ],
       "checks": {
@@ -4702,7 +5102,7 @@
         "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
         "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant. Independently verified the explicit CS 1800/1802 corequisite pair and degree preamble; CS 1802 is now nested beneath CS 1800. Other prerequisite alternatives are not additional degree obligations.",
         "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
-        "classification": "Current represented inventory: 98 course observations; 40 individually reviewed subject classifications, 1 explicitly mixed, 3 source-inspected but unclassified, and 54 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
+        "classification": "Current represented inventory: 98 course observations; 42 individually reviewed subject classifications, 1 explicitly mixed, 3 source-inspected but unclassified, and 52 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
         "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
         "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed."
       },
@@ -4770,6 +5170,14 @@
           "evidence_urls": [
             "https://catalog.northeastern.edu/course-descriptions/psyc/"
           ]
+        },
+        {
+          "issue": "Unreviewed selected biology/statistics classifications required source-content verification.",
+          "correction": "Exact-code review corrections: ENVR 2500: other → mathematics; ENVR 2501: other → mathematics",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/envr/"
+          ]
         }
       ],
       "blockers": [
@@ -4784,7 +5192,7 @@
     {
       "program_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree",
       "institution_id": "northeastern-university",
-      "status": "blocked",
+      "status": "in_progress",
       "sources": [
         {
           "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-sociology-bs-bos/",
@@ -5026,7 +5434,7 @@
         "credits_and_units": "Independently checked all 37 exact course identities and stated individual semester hours, including labs/seminars separately from bundled row totals. The 128-hour program minimum matches the university minimum and the degree requires 28 general-elective hours. Choice overlap and placement substitutions prevent summing this inventory as a unique student load.",
         "classification": "Current represented inventory: 37 course observations; 29 individually reviewed subject classifications, 2 explicitly mixed, 6 source-inspected but unclassified, and 0 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
         "family_composition": "Individually verified the eight common required AI course units plus placement policy against this degree page; the nine shared bindings preserve the original parents and exact codes. The official combined-major policy supports one integrated major/degree, and the six shared university policy sources are individually reread. Hosting/breadcrumb context is not used to assign a home college.",
-        "degree_wide_requirements": "Reread universitywide, NUpath, experiential, graduation, combined-major and progression policies: 128 hours, 2.000 graduation GPA, 64 Northeastern-earned hours; NUpath competencies/writing/overlap/transfer eligibility; qualifying experiential engagement and explicit exemptions; graduation/degree audit clearance; combined-major integration/design minima; and university standing/probation/dismissal standards. Individual home-college additional requirements remain unresolved because the combined-major rule permits choice for most programs without identifying this program’s allowed/designated assignment. The explicit in-major capstone criterion and conditional generally-one-additional-semester probation appeal limit are now preserved in existing shared policy nodes; neither creates extra required course records. Additional official admissions, Khoury student/advising/policy, applicable college catalog and CSSH advising/declaration routes were inspected. Admissions defers individual award-college designation to Application Status Check. Khoury publishes adviser-mediated home-college change/stay conditions, not an unconditional program-specific menu. Additional current advising major-GPA/progression rules are documented as potentially supplemental, not contradictory merely because the dated catalog omits them; their exact college/cohort applicability remains explicit; see the companion home-college follow-up."
+        "degree_wide_requirements": "Reread universitywide, NUpath, experiential, graduation, combined-major and progression policies: 128 hours, 2.000 graduation GPA, 64 Northeastern-earned hours; NUpath competencies/writing/overlap/transfer eligibility; qualifying experiential engagement and explicit exemptions; graduation/degree audit clearance; combined-major integration/design minima; and university standing/probation/dismissal standards. Individual home-college additional requirements remain unresolved because the combined-major rule permits choice for most programs without identifying this program’s allowed/designated assignment. The explicit in-major capstone criterion and conditional generally-one-additional-semester probation appeal limit are now preserved in existing shared policy nodes; neither creates extra required course records. Additional official admissions, Khoury student/advising/policy, applicable college catalog and CSSH advising/declaration routes were inspected. Admissions defers individual award-college designation to Application Status Check. Khoury publishes adviser-mediated home-college change/stay conditions, not an unconditional program-specific menu. Additional current advising major-GPA/progression rules are documented as potentially supplemental, not contradictory merely because the dated catalog omits them; their exact college/cohort applicability remains explicit; see the companion home-college follow-up. Independent review identified additional accessible conditional university declaration and college transfer-policy clauses not yet represented. These are active mapping work, so the entry returns to in_progress while preserving the separate exact home-college blocker."
       },
       "expected_profile": {
         "required": {
@@ -5154,13 +5562,13 @@
           "supporting_url": "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/degrees-majors-minors/"
         }
       ],
-      "correction_status": "All 37 represented course identities, hours, source-stated eligibility, role memberships and category decisions reviewed, with independent expected profile; CS 1802 omission corrected. Shared policy capstone/appeal criteria corrected. Whole-degree closure is blocked only on exact home-college assignment and resulting college-specific rules, not unattempted course review.",
+      "correction_status": "All 37 represented course identities, hours, source-stated eligibility, role memberships and category decisions reviewed, with independent expected profile; CS 1802 omission corrected. Shared policy capstone/appeal criteria corrected. Whole-degree closure is blocked only on exact home-college assignment and resulting college-specific rules, not unattempted course review. Additional publicly accessible conditional policy clauses are being mapped; status is in_progress until that work is finished.",
       "second_pass_status": "pending"
     },
     {
       "program_id": "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree",
       "institution_id": "northeastern-university",
-      "status": "blocked",
+      "status": "in_progress",
       "sources": [
         {
           "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-speech-language-pathology-audiology-bs-bos/",
@@ -5374,7 +5782,7 @@
         "credits_and_units": "All 44 course identities and individual catalog hours are inspected. The program requires 128 total and 12 general-elective semester hours. Lecture/lab bundles are not assigned to each individual course. SLPA 4219 has three hours. The degree row requires four hours of SLPA 5107, while its general course catalog permits three-to-four-hour offerings; the requirement retains four and the course scalar remains null with its explicit variable-hour note. No synthetic credit reconciliation or extra degree blocker is inferred from those different source scopes.",
         "classification": "Current represented inventory: 44 course observations; 37 individually reviewed subject classifications, 2 explicitly mixed, 5 source-inspected but unclassified, and 0 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
         "family_composition": "Verified the eight common AI course units and placement policy against this degree page; nine family bindings retain original codes and parents. The official combined-major rule establishes one integrated degree, and the six shared university policy sources have been reread. No Bouvé/Khoury home-college assignment is inferred from course names or catalog placement.",
-        "degree_wide_requirements": "Reread the six shared university policy sources and applied the explicit Boston degree scope: overall credit/GPA/residency minima, NUpath and writing/transfer/overlap rules, in-major capstone with unit-controlled combined-major choice, qualifying experiential engagement/exemptions, graduation clearance, combined-major design criteria, and university standing/probation/dismissal/conditional appeal rules. The degree explicitly directs general electives to cover NUpath categories not satisfied by required coursework. Exact home-college assignment and resulting additional college rules remain unpublished for this specific program in the inspected sources. Additional official admissions, Khoury student/advising/policy, applicable college catalog and CSSH advising/declaration routes were inspected. Admissions defers individual award-college designation to Application Status Check. Khoury publishes adviser-mediated home-college change/stay conditions, not an unconditional program-specific menu. Additional current advising major-GPA/progression rules are documented as potentially supplemental, not contradictory merely because the dated catalog omits them; their exact college/cohort applicability remains explicit; see the companion home-college follow-up."
+        "degree_wide_requirements": "Reread the six shared university policy sources and applied the explicit Boston degree scope: overall credit/GPA/residency minima, NUpath and writing/transfer/overlap rules, in-major capstone with unit-controlled combined-major choice, qualifying experiential engagement/exemptions, graduation clearance, combined-major design criteria, and university standing/probation/dismissal/conditional appeal rules. The degree explicitly directs general electives to cover NUpath categories not satisfied by required coursework. Exact home-college assignment and resulting additional college rules remain unpublished for this specific program in the inspected sources. Additional official admissions, Khoury student/advising/policy, applicable college catalog and CSSH advising/declaration routes were inspected. Admissions defers individual award-college designation to Application Status Check. Khoury publishes adviser-mediated home-college change/stay conditions, not an unconditional program-specific menu. Additional current advising major-GPA/progression rules are documented as potentially supplemental, not contradictory merely because the dated catalog omits them; their exact college/cohort applicability remains explicit; see the companion home-college follow-up. Independent review identified additional accessible conditional university declaration and college transfer-policy clauses not yet represented. These are active mapping work, so the entry returns to in_progress while preserving the separate exact home-college blocker."
       },
       "expected_profile": {
         "required": {
@@ -5526,7 +5934,7 @@
           "supporting_url": "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/degrees-majors-minors/"
         }
       ],
-      "correction_status": "All 44 represented identities, hours/source scope, explicit eligibility, role memberships and category decisions reviewed; independent expected profile recorded. CS 1802 omission corrected. Whole-degree closure is blocked by program-specific home-college applicability and the scope of supplemental Khoury advising rules, not unread course descriptions or unknown launch/resource metadata.",
+      "correction_status": "All 44 represented identities, hours/source scope, explicit eligibility, role memberships and category decisions reviewed; independent expected profile recorded. CS 1802 omission corrected. Whole-degree closure is blocked by program-specific home-college applicability and the scope of supplemental Khoury advising rules, not unread course descriptions or unknown launch/resource metadata. Additional publicly accessible conditional policy clauses are being mapped; status is in_progress until that work is finished.",
       "second_pass_status": "pending"
     },
     {

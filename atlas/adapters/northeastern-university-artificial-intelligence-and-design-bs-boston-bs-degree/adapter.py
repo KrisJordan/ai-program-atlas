@@ -68,3 +68,7 @@ SOURCE_PARSERS = {**SOURCE_PARSERS, **_PUBLIC_CS_RESOURCES}
 # Explicit degree-plus-subject concurrency, not inferred prerequisites.
 from atlas.adapters.northeastern_corequisites import register_cs1802
 parse, SOURCE_PARSERS = register_cs1802(parse, SOURCE_PARSERS, PROGRAM_ID)
+
+# Exact elective concurrency preserves the original choice ancestry.
+from atlas.adapters.northeastern_science_corequisites import register_science_corequisites
+parse, SOURCE_PARSERS = register_science_corequisites(parse, SOURCE_PARSERS, PROGRAM_ID, 'design')
