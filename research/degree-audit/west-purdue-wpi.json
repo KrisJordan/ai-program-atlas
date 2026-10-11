@@ -5,7 +5,7 @@
     {
       "program_id": "purdue-ai-bs",
       "institution_id": "purdue-university",
-      "status": "in_progress",
+      "status": "blocked",
       "sources": [
         {
           "url": "https://www.cs.purdue.edu/undergraduate/curriculum/bachelor-ai.html",
@@ -66,7 +66,7 @@
         {
           "url": "https://www.purdue.edu/science/Current_Students/curriculum_and_degree_requirements/college-of-science-core-requirements.html",
           "catalog_year": null,
-          "locator": "Approved language sequences, Written/Oral Communication and STS dashboard pools, and AI-specific course restrictions remain unresolved.",
+          "locator": "College core and advisor-approved language routes reviewed; WC/OC/STS/AI dashboard pools subsequently resolved. Finite language sequences and AI-specific restrictions not established.",
           "checked_at": "2026-10-11",
           "access_status": "Existing access barrier/conflict reviewed from source notes; no denied-route retry."
         },
@@ -139,17 +139,59 @@
           "locator": "Visible public Tableau filters/PWLdefinition and788-row crosstab;135four-outcome PWL rows individually read with approval terms",
           "checked_at": "2026-10-11",
           "access_status": "read: ordinary public Chrome dashboard and user-visible CSV export"
+        },
+        {
+          "url": "https://www.purdue.edu/science/Current_Students/advising/handbook/Advising-and-Registration-Policies.html",
+          "catalog_year": null,
+          "locator": "Complete main policy block and all visible link destinations; guarded source observation integrated",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200 through normal Fetcher; full cached policy reread by primary and contributor"
+        },
+        {
+          "url": "https://www.purdue.edu/science/Current_Students/advising/handbook/Science-Core-Curriculum-Policy.html",
+          "catalog_year": null,
+          "locator": "Complete main policy block and all visible link destinations; guarded source observation integrated",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200 through normal Fetcher; full cached policy reread by primary and contributor"
+        },
+        {
+          "url": "https://www.purdue.edu/science/Current_Students/advising/handbook/Credit Raise Policy.html",
+          "catalog_year": null,
+          "locator": "Complete main policy block and all visible link destinations; guarded source observation integrated",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200 through normal Fetcher; full cached policy reread by primary and contributor"
+        },
+        {
+          "url": "https://www.purdue.edu/science/Current_Students/advising/handbook/Course-Repeat-Policy.html",
+          "catalog_year": null,
+          "locator": "Complete main policy block and all visible link destinations; guarded source observation integrated",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200 through normal Fetcher; full cached policy reread by primary and contributor"
+        },
+        {
+          "url": "https://www.purdue.edu/science/Current_Students/advising/handbook/Pass No Pass Option.html",
+          "catalog_year": null,
+          "locator": "Complete main policy block and all visible link destinations; guarded source observation integrated",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200 through normal Fetcher; full cached policy reread by primary and contributor"
+        },
+        {
+          "url": "https://www.purdue.edu/science/Current_Students/advising/handbook/purdue-math-summer-exam-policy.html",
+          "catalog_year": null,
+          "locator": "Complete main policy block and all visible link destinations; guarded source observation integrated",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200 through normal Fetcher; full cached policy reread by primary and contributor"
         }
       ],
       "checks": {
         "degree_identity": "Separate College of Science BS; department requirements explicitly apply from Fall2026. Current catalog edition remains inaccessible, so catalog_year is not invented.",
         "required_and_choices": "Nine exact single-course core obligations; seven core alternatives, CS selectives2+1, philosophy selective1, and one3-hour capstone route. NLP undergraduate/graduate pair is one selectable route. Added missing C-grade, transfer and graduate-eligibility notes; prerequisites are not added as fixed degree courses.",
-        "elective_pools": "Major pools reread. College calculus alternatives and comprehensive culture/GE code-title tables remain observed pools, with contextual requirements rather than1,681 additional obligations. Repeated course numbers with different printed titles retain distinct source identities. Current UCC135PWL approval rows reviewed: WC10/OC9/STS94/AI22. WC/STS explicit one-course requirements now have finite choice lists. OC/AI remain context to avoid inventing additional course load or substituting majors without evidence. Dashboard gives no course-content metadata.",
-        "prerequisites": "CS180/182/373 canonical outlines are dated June2025, distinct from Fall2026 plan. CS182 requiresCS180; capstone requires373/381/471 atC or better, all already fixed. Other course-level prerequisites remain unreviewed or unavailable; no automatic prerequisite closure. Only CS18200 among the inspected outlines explicitly states a prerequisite, CS18000; absent fields stay unknown. Dated outline preparation is not silently certified for Fall2026.",
+        "elective_pools": "Major pools reread. College calculus alternatives and comprehensive culture/GE code-title tables remain observed pools, with contextual requirements rather than additional obligations. Repeated course numbers with different printed titles retain distinct source identities. Current UCC135PWL approval rows reviewed: WC10/OC9/STS94/AI22. WC/STS explicit one-course requirements now have finite choice lists. OC/AI remain context to avoid inventing additional course load or substituting majors without evidence. Dashboard gives no course-content metadata.",
+        "prerequisites": "CS180/182/373 canonical outlines are dated June2025, distinct from Fall2026 plan. CS182 requiresCS180; capstone requires373/381/471 atC or better, all already fixed. Other course-level prerequisites remain unavailable through the identified current catalog/detail sources; no automatic prerequisite closure. Only CS18200 among the inspected outlines explicitly states a prerequisite, CS18000; absent fields stay unknown. Dated outline preparation is not silently certified for Fall2026.",
         "credits_and_units": "Semester credit hours.50–51core range retained; MA26100/27101 four/five alternatives retained. Unknown selective and pool credits stay null. Level/semester columns are not credits.",
         "classification": "Exact titles and canonical CS101/182 descriptions checked. Removed pool/department-derived classifications; CS182 remains mixed mathematics/foundations. Named unreviewed pool entries remain other without fabricated independent reviews. Eleven distinct full canonical outlines were read across the two Purdue records. These supply dated content dispositions, not current catalog verification. CS34800 is systems from its database-focused outline; CS48300 retains foundations with the directory proposed-status caveat. The other inspected subject categories remain supported. New UCC membership-only records remain unclassified; no AI/STS label becomes a course subject. Already reviewed dated CS101outline integrated into its new BS observation, with current-version limits.",
         "family_composition": "No family inheritance/bindings; independently scoped standalone degree. Shared policy helpers do not imply shared credential.",
-        "degree_wide_requirements": "College policies are represented but university and current major-plan gaps remain. Whole-degree certification is blocked."
+        "degree_wide_requirements": "Six complete public handbook policies add 15 notes without new course obligations. Registration/advising procedures, the three-area overlap restriction, overload approval, repeat attempts including W and conditional fourth attempt, simultaneous P/NP limits and Spring 2020-only exception, summer math exam arrangements and external prerequisite posting are represented. Current catalog degree-wide rules remain inaccessible; the literal P/NP level label and summer/year-round scope are not reconciled by assumption."
       },
       "expected_profile": {
         "required": {
@@ -2045,16 +2087,28 @@
         },
         {
           "url": "https://www.purdue.edu/science/Current_Students/curriculum_and_degree_requirements/college-of-science-core-requirements.html",
-          "issue": "Approved language sequences, Written/Oral Communication and STS dashboard pools, and AI-specific course restrictions remain unresolved."
+          "issue": "Public language route is advisor-approved without a finite current sequence inventory; AI-specific restricted elective applicability is not established. The four UCC outcome pools are now represented."
         },
         {
           "url": "https://tableau.it.purdue.edu/t/public/views/ActiveUCCRequirementCourses/ActiveUCCRequirementCourses",
           "issue": "AI working-competency22approved codes do not identify the publishedAImajor core; major reconciliation remains unverified. Approval membership alone supplies no course descriptions, credits or prerequisites."
+        },
+        {
+          "url": "https://selfservice.mypurdue.purdue.edu/",
+          "issue": "Previously observed robots restriction on linked course details; no retry or bypass. Broad GE/culture membership sources omit exact current descriptions, prerequisites and credits; no such metadata is inferred."
+        },
+        {
+          "url": "https://www.purdue.edu/science/Current_Students/advising/handbook/Pass No Pass Option.html",
+          "issue": "Literal 5000-level general-education P/NP exception is not silently changed to 50000-level; exact intended level remains unverified."
+        },
+        {
+          "url": "https://www.purdue.edu/science/Current_Students/advising/handbook/purdue-math-summer-exam-policy.html",
+          "issue": "Summer-specific title/FAQ versus opening all-Math-from-Summer-2026 wording retained; year-round applicability not independently established."
         }
       ],
-      "correction_status": "Evidence-backed corrections retained; whole-degree audit blocked. Named unreviewed course descriptions remain a separate accessible-review backlog, not falsely called an access barrier. Public UCC dashboard branch resolved135PWL memberships; six specifically linked CollegeSciencepolicy pages are still active work. Currentcatalog403, selfservice robots denial and broad title-only culture/GE metadata remain distinct source barriers, not fabricated content review.",
+      "correction_status": "Bounded accessible queue closed with verified corrections retained. Whole-degree audit is blocked by specific current-source access and published-rule ambiguities, not by a falsely labeled accessible description backlog. Profile remains 9 fixed, 140 option and 1684 contextual records; source membership is not subject-content review.",
       "second_pass_status": "pending",
-      "accessible_work_remaining": "Ten represented BS major codes now have full dated canonical outline dispositions, but the large named/college contextual course-content backlog remains accessible and incomplete. No claim of current catalog verification follows from historic outlines. Known catalog access and degree-wide applicability gaps remain separate."
+      "accessible_work_remaining": "No identified unread source remains in this bounded Purdue queue. All six public handbook policies, all 11 matching BS canonical outlines, current term/directory link targets, culture/GE membership tables, experiential routes, and four UCC outcome pools have dispositions. Broad pool course metadata leads to the denied catalog or robots-disallowed detail host; membership tables contain no descriptions or prerequisites. This is not a claim that no other public resource exists, nor a requirement for an unbounded search by every course title."
     },
     {
       "program_id": "purdue-ai-ba",

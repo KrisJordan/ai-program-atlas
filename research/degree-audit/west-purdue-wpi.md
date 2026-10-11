@@ -395,4 +395,11 @@ Primary accepted80 reciprocal GE identities after reading the independent report
 
 ### UCSD political science checkpoint — 2026-10-11
 
-Integrated113 currentPOLI observations and three missing-code dispositions after guarded replay and primary checks of methods, units and eligibility boundaries. Six grouped source headings remain multiple observations, not guessed equivalences.191A's4–4notation remains unknown scalarcredits;194SD's concurrent197SD is course-scoped;124/SOCI188I one-sided identity is not automatically merged. Exact graph roles remain8fixed/119options/2241context. Additional source-ready HIEU evidence is queued separately.
+Integrated113 currentPOLI observations and three missing-code dispositions after guarded replay and primary checks of methods, units and eligibility boundaries. Six grouped source headings remain multiple observations, not guessed equivalences.191A's4–4notation remains unknown scalarcredits;194SD's concurrent197SD is course-scoped;124/SOCI188I one-sided identity is not automatically merged. Exact graph roles remain8fixed/119options/2241context. HIEU was integrated in the same checkpoint: 56 current observations, 17 missing headings and one substantive title hold; omitted/variable units and course-specific eligibility remain explicit.
+
+
+### Purdue bounded source closure — 2026-10-11
+
+The public UCC dashboard's 135 current PWL approvals close the four finite WC/OC/STS/AI membership branches. Six complete public handbook pages add 15 guarded policy notes, independently reread during integration. Neither contribution supplies invented course content or extra fixed load. Exact roles remain 9 fixed / 140 options / 1,684 context; 1,833 observations remain distinct where printed titles differ.
+
+All specifically identified accessible branches are dispositioned. The primary status is now blocked because the current degree catalog is denied, linked course details are robots-disallowed, and published applicability/grouping questions remain unresolved. The membership-only culture/GE tables are fully represented but cannot establish missing descriptions, prerequisites or credits. There is no known unread source in this bounded queue; this statement does not claim all possible internet sources were exhausted. Literal P/NP level wording and summer math scope are retained as qualifications, alongside chemistry, university degree-wide rules, language sequence approval and AI-specific overlap/competency applicability. No whole-degree or independent second-pass certification is asserted.

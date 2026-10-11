@@ -608,3 +608,10 @@ SOURCE_PARSERS = {url: observe_subjects(parser, PROGRAM_ID) for url, parser in S
 # Dated departmental outlines observe content without claiming current catalog access.
 from atlas.adapters import purdue_canonical_course_reviews
 purdue_canonical_course_reviews.attach(globals())
+
+# Full reviewed public handbook blocks add policy observations, never courses.
+from atlas.adapters import purdue_science_policy_reviews
+if set(purdue_science_policy_reviews.PARSERS) & set(SOURCE_PARSERS):
+    raise ValueError("Purdue handbook source parser collision")
+SOURCES += purdue_science_policy_reviews.SOURCES
+SOURCE_PARSERS.update(purdue_science_policy_reviews.PARSERS)
