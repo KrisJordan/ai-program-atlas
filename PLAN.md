@@ -6,9 +6,9 @@ Updated 2026-10-11. A published research project; **the full target cohort and c
 
 - Repository: https://github.com/KrisJordan/ai-program-atlas
 - Site: https://krisjordan.github.io/ai-program-atlas/
-- Verified release: `98a9cc4396d42799c249d9ed1eeedbb7e3f02e5b`, [successful CI and Pages deployment](https://github.com/KrisJordan/ai-program-atlas/actions/runs/38098755345).
-- Fresh locked uv environment and clean committed source: **974 tests passed**, including all **17 required Chromium tests**. The 74 skipped cases require optional ignored source caches or historical snapshots; no browser tests were skipped.
-- Fresh reconstruction and maintained publication copy passed integrity checks and agreed on current facts; additional historical coverage sources were preserved. Repeat ingest changed zero programs. Repeated static builds were byte-identical across 133 files.
+- Verified release: `8043d5c9a7a5c9b773283ca25f03730b5399fb04`, [successful CI and Pages deployment](https://github.com/KrisJordan/ai-program-atlas/actions/runs/38100283029).
+- Fresh locked uv environment and clean committed source: **1,193 tests passed**, including all **17 required Chromium tests**. The 96 skipped cases require optional ignored source caches or historical snapshots; no browser tests were skipped.
+- Fresh reconstruction and maintained publication copy passed integrity checks and agreed on current facts; additional historical coverage sources were preserved. Repeat ingest changed zero programs. Repeated static builds were byte-identical across 139 files.
 - Live public JSON matched these counts. Live checks passed keyboard family expansion, concrete comparison reload, discipline back/forward, direct program pages, learning/career statement distinctions and 390px mobile layout, with no JavaScript errors or horizontal overflow.
 - Dedicated local repository: `ai-program-atlas/` in this Mac Studio task. No existing personal website or unrelated repository was changed. Coordinated Astra high research and implementation use explicit ownership and incremental commits.
 
@@ -18,22 +18,22 @@ Updated 2026-10-11. A published research project; **the full target cohort and c
 | --- | ---: |
 | Institutions in loaded roster | 194 |
 | National Universities / National Liberal Arts Colleges | 108 / 86 |
-| Confirmed qualifying title / partially inspected / inaccessible | 58 / 128 / 8 |
+| Confirmed qualifying title / partially inspected / inaccessible | 63 / 123 / 8 |
 | Loaded institutions pending / absence conclusions | 0 / 0 |
-| Concrete programs | 126 |
-| Degrees / minors / concentrations / additional majors | 60 / 44 / 19 / 3 |
-| Complete / partial / pending requirement inventories | 33 / 87 / 6 |
-| Program-course records / resolved requirement nodes | 12,036 / 8,613 |
+| Concrete programs | 132 |
+| Degrees / minors / concentrations / additional majors | 60 / 45 / 24 / 3 |
+| Complete / partial / pending requirement inventories | 33 / 87 / 12 |
+| Program-course records / resolved requirement nodes | 13,920 / 10,403 |
 | Program families / concrete family variants | 2 / 31 |
-| Descriptions / prerequisite statements | 1,212 / 1,256 |
-| Credit amounts with verified units | 4,218 |
-| Public course sites / example syllabi | 68 / 64 |
+| Descriptions / prerequisite statements | 1,827 / 1,478 |
+| Credit amounts with verified units | 4,478 |
+| Public course sites / example syllabi | 78 / 72 |
 
 Course counts include elective pools and repeated observations across sibling programs. They are not unique institution-wide courses, required-course totals, completion percentages or quality scores. Complete refers to an explicitly reviewed scope: a complete minor/concentration/additional major does not certify the host degree. Metadata availability is separate. Zero pending in the loaded roster is not full target-cohort coverage; missing institutions remain outside that denominator.
 
 ## Cohort definition and boundaries
 
-Qualifying official undergraduate titles contain AI or Artificial Intelligence. Degrees, additional majors, minors and formal concentrations/tracks/emphases are distinct. Ordinary electives, research centers, informal interest areas, graduate credentials and surveyed certificates are excluded or retained as leads.
+Qualifying official undergraduate titles contain AI or Artificial Intelligence, including source-defined GenAI and GeoAI compounds. Degrees, additional majors, minors and formal concentrations/tracks/emphases are distinct. Ordinary electives, research centers, informal interest areas, graduate credentials and surveyed certificates are excluded or retained as leads.
 
 The target is **2027 U.S. News Best Colleges**, separately covering every institution ranked 100 or better in **National Universities** and **National Liberal Arts Colleges**, including all cutoff ties. The edition was released September 22, 2026. Category ranks are never combined.
 
@@ -49,7 +49,7 @@ National Universities has 108 cited secondary-table members, including nine tied
 - [x] Carolina-blue/navy responsive sans-serif interface, keyboard navigation, filters, coverage ledger, detail pages and ranking methodology. No UNC marks or sponsorship claims.
 - [x] Explicit families, expandable variants, discipline filtering, concrete comparison URLs, common/local requirements, provenance and missingness. Stable IDs and base-path reload/back/forward work on GitHub Pages.
 - [x] Course-category and inferred-theme comparisons preserve credit units and separate source-stated learning outcomes, program aims and career pathways from editorial taxonomy. No opaque quality score.
-- [x] Compact directory projection reduced root HTML about 69% raw and 64% gzipped in a controlled same-data comparison. Live root HTML is 2,304,964 bytes; full static detail pages and data.json remain intact. No runtime fetch/server added.
+- [x] Compact directory projection reduced root HTML about 69% raw and 64% gzipped in a controlled same-data comparison. Live root HTML is 2,404,905 bytes; full static detail pages and data.json remain intact. No runtime fetch/server added.
 - [x] CI tests fresh reconstruction and publishes an updated copy of the maintained DB. Reviewed discovery classification corrections refresh correctly; manual program corrections and evidence history survive.
 
 ## Program families and current evidence
@@ -85,8 +85,8 @@ Each adapter's NOTES.md states evidence, interpretations, exact conflicts, metad
 
 1. **Cohort:** obtain a permitted authoritative 2027 roster for both categories and all cutoff ties; complete missing liberal-arts enumeration. Preserve secondary/inferred/membership-only labels until resolved.
 2. **CSRankings:** numerical import remains held pending permission or qualified reuse review. Methodology records ai,vision,mlmining,nlp,inforet, proposed 2016–2025 window, U.S. filter, pinned source snapshot and computation method. Values remain null, not zero quality. Publication research does not measure undergraduate teaching quality. See [research note](research/csrankings.md).
-3. **Access:** eight loaded institutions remain inaccessible. The six currently published pending curricula have documented barriers; additional program-specific links remain blocked or unread. See [access review](research/access-review.md), [pending curriculum barriers](research/pending-curriculum-barriers.md) and adapter notes. No bypass of robots/auth/403/password gates.
-4. **Curricula:** Six published inventories remain pending and87 partial. Verify finite pools, nested alternatives, policy applicability and source conflicts before promoting completeness.
+3. **Access:** eight loaded institutions remain inaccessible. Six published pending curricula have documented barriers; six newly verified program identities have curriculum extraction underway. Additional program-specific links remain blocked or unread. See [access review](research/access-review.md), [pending curriculum barriers](research/pending-curriculum-barriers.md) and adapter notes. No bypass of robots/auth/403/password gates.
+4. **Curricula:** Twelve published inventories remain pending and 87 partial. Verify finite pools, nested alternatives, policy applicability and source conflicts before promoting completeness.
 5. **Metadata:** many descriptions, prerequisites, public course sites and example syllabi remain unknown. Verify exact course identity and term; preserve historical labels and link rather than redistribute.
 6. **Institution depth:** directory searches alone do not establish absence. Continue bounded catalog/minor/concentration searches and documented leads. No absence conclusion has been asserted.
 
@@ -115,3 +115,12 @@ Newer survey observations now survive older files loaded later, while earlier ev
 Remaining accessible work is assigned at UCSD's other college pools, UCSB and MIT, Miami's remaining finite cognate lists, and deeper catalog discovery at 30 institutions. Official identity leads at Florida State, UMass Amherst and RPI are being researched separately and are not included in this frozen count. Both ranking-cohort completeness flags and the CSRankings permission boundary remain unchanged.
 
 The `5b464d4` candidate passed 1,115 tests (including required browser tests) but was **not published**: fresh/maintained export comparison exposed order-dependent institution inspection dates. Commit `6ab229a` derives that date from all current program verifications and survey observations, repairing old imports without changing their evidence. The replacement freeze through `e16c6de0` includes later Warren/MIT evidence and 20 deeper liberal-arts inspections: 13,920 program-course observations, 10,403 requirement nodes, and the same 126-program/status counts. It awaits a new clean verification. The official-title rule now explicitly includes source-defined GenAI and GeoAI compounds; their new records are still in research and outside this freeze.
+
+
+## Verified checkpoint and continuing work — 2026-10-11
+
+Release `8043d5c` is verified live with 132 programs: 33 complete / 87 partial / 12 pending curricula, 13,920 program-course observations and 10,403 resolved requirement nodes. The final committed source includes six new official identities at FSU, UMass Amherst, RPI, SMU and UIC, added after the 126-program database freeze. CI reconstructs the publication copy from every committed record; that copy and a fresh database agreed on current facts. UIC remains announced on its April 2026 evidence, not presumed active from elapsed time.
+
+A clean locked environment passed 1,193 tests with all 17 required browser cases. The 96 skips concern optional ignored source caches or historical snapshots. Repeat ingest changed zero programs, foreign keys/integrity passed, and 139 build files reproduced byte-for-byte. GitHub CI and Pages succeeded; live data matched, comparison reload/back/forward and keyboard expansion passed, every new identity page loaded directly, and the 390px checks found no overflow or JavaScript errors. The rejected `5b464d4` candidate was never published; its inspection-date inconsistency is repaired and covered by regression tests.
+
+Newer research commits are not included in these published metrics. They continue full Miami cognate pools, UCSD Marshall/Sixth and remaining colleges, MIT HASS fields, six new program curricula, Vanderbilt/Florida minors and deeper liberal-arts catalog review. Northeastern's 1,593 descriptions are now verified across 787 distinct codes; that finite metadata queue is complete, while home-college applicability remains partial. Publications remain checkpoints. Cohort enumeration, CSRankings permission, inaccessible sources and unresolved program-specific policy conflicts remain explicitly open.
