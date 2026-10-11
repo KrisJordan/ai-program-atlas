@@ -145,6 +145,46 @@
       "catalog_year": null,
       "locator": "One-page PDF, department program list; visually inspected; AI not listed",
       "confidence": "high"
+    },
+    {
+      "id": "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree-courses-comp_sci",
+      "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/comp_sci/",
+      "title": "COMP_SCI official course descriptions",
+      "fetched_at": "2026-10-10T22:12:23+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Exact blocks: COMP_SCI 111-0, COMP_SCI 180-0, COMP_SCI 208-0, COMP_SCI 211-0, COMP_SCI 212-0, COMP_SCI 348-0, COMP_SCI 349-0",
+      "confidence": "high"
+    },
+    {
+      "id": "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree-courses-gen_eng",
+      "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/gen_eng/",
+      "title": "GEN_ENG official course descriptions",
+      "fetched_at": "2026-10-11T02:45:06+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Exact blocks: GEN_ENG 150-0, GEN_ENG 151-0, GEN_ENG 231-0, GEN_ENG 241-0",
+      "confidence": "high"
+    },
+    {
+      "id": "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree-courses-dsgn",
+      "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/dsgn/",
+      "title": "DSGN official course descriptions",
+      "fetched_at": "2026-10-11T02:45:08+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Exact blocks: DSGN 106-1, DSGN 106-2",
+      "confidence": "high"
+    },
+    {
+      "id": "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree-courses-english",
+      "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/english/",
+      "title": "ENGLISH official course descriptions",
+      "fetched_at": "2026-10-11T02:45:09+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Exact blocks: ENGLISH 106-1, ENGLISH 106-2",
+      "confidence": "high"
     }
   ],
   "outcomes": [],
@@ -161,7 +201,18 @@
       "source_id": "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree-catalog",
       "url": "https://catalogs.northwestern.edu/search/?P=MATH%20220-1",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree-catalog"
+        ],
+        "locator": "MATH 220-1 Single-Variable Differential Calculus",
+        "rationale": "Limited precise-title review: differential/integral calculus is mathematical theory. The complete description has not yet been reviewed.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "nw-bse-math-220-2",
@@ -175,7 +226,18 @@
       "source_id": "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree-catalog",
       "url": "https://catalogs.northwestern.edu/search/?P=MATH%20220-2",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree-catalog"
+        ],
+        "locator": "MATH 220-2 Single-Variable Integral Calculus",
+        "rationale": "Limited precise-title review: differential/integral calculus is mathematical theory. The complete description has not yet been reviewed.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "nw-bse-math-228-1",
@@ -189,21 +251,43 @@
       "source_id": "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree-catalog",
       "url": "https://catalogs.northwestern.edu/search/?P=MATH%20228-1",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree-catalog"
+        ],
+        "locator": "MATH 228-1 Multivariable Differential Calculus for Engineering",
+        "rationale": "Limited precise-title review: differential/integral calculus is mathematical theory. The complete description has not yet been reviewed.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "nw-bse-comp-sci-212-0",
       "code": "COMP_SCI 212-0",
       "name": "Math Foundations of CS Part 1: Discrete Math for CS",
-      "description": null,
+      "description": "Finite and structural mathematics, logic, sets and graph theory establish mathematical foundations.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 1.0,
       "credit_unit": "units",
-      "category": "other",
+      "category": "mathematics",
       "source_id": "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree-catalog",
       "url": "https://catalogs.northwestern.edu/search/?P=COMP_SCI%20212-0",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree-courses-comp_sci"
+        ],
+        "locator": "COMP_SCI 212-0 exact course description",
+        "rationale": "Finite and structural mathematics, logic, sets and graph theory establish mathematical foundations.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "nw-bse-physics-135-1",
@@ -223,85 +307,151 @@
       "id": "nw-bse-comp-sci-180-0",
       "code": "COMP_SCI 180-0",
       "name": "Software Design & Composition",
-      "description": null,
+      "description": "Design, specification, testing and debugging of production software establish general software foundations.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 1.0,
       "credit_unit": "units",
-      "category": "other",
+      "category": "foundations",
       "source_id": "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree-catalog",
       "url": "https://catalogs.northwestern.edu/search/?P=COMP_SCI%20180-0",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree-courses-comp_sci"
+        ],
+        "locator": "COMP_SCI 180-0 exact course description",
+        "rationale": "Design, specification, testing and debugging of production software establish general software foundations.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "nw-bse-comp-sci-111-0",
       "code": "COMP_SCI 111-0",
       "name": "Fundamentals of Computer Programming",
-      "description": null,
+      "description": "Recursive algorithms, software testing and programming paradigms establish foundational programming.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 1.0,
       "credit_unit": "units",
-      "category": "other",
+      "category": "foundations",
       "source_id": "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree-catalog",
       "url": "https://catalogs.northwestern.edu/search/?P=COMP_SCI%20111-0",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree-courses-comp_sci"
+        ],
+        "locator": "COMP_SCI 111-0 exact course description",
+        "rationale": "Recursive algorithms, software testing and programming paradigms establish foundational programming.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "nw-bse-comp-sci-208-0",
       "code": "COMP_SCI 208-0",
       "name": "Data Structures & Algorithms (Formerly Comp_Sci 214)",
-      "description": null,
+      "description": "Design, implementation and performance analysis of data structures and their algorithms establish computing foundations.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 1.0,
       "credit_unit": "units",
-      "category": "other",
+      "category": "foundations",
       "source_id": "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree-catalog",
       "url": "https://catalogs.northwestern.edu/search/?P=COMP_SCI%20208-0",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree-courses-comp_sci"
+        ],
+        "locator": "COMP_SCI 208-0 exact course description",
+        "rationale": "Design, implementation and performance analysis of data structures and their algorithms establish computing foundations.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "nw-bse-comp-sci-211-0",
       "code": "COMP_SCI 211-0",
       "name": "Programming in Systems-Level Languages",
-      "description": null,
+      "description": "The description explicitly centers foundational software design, C/C++ programming and manual memory management; systems-level language usage alone does not make it an architecture or operating-systems course.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 1.0,
       "credit_unit": "units",
-      "category": "other",
+      "category": "foundations",
       "source_id": "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree-catalog",
       "url": "https://catalogs.northwestern.edu/search/?P=COMP_SCI%20211-0",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree-courses-comp_sci"
+        ],
+        "locator": "COMP_SCI 211-0 exact course description",
+        "rationale": "The description explicitly centers foundational software design, C/C++ programming and manual memory management; systems-level language usage alone does not make it an architecture or operating-systems course.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "nw-bse-comp-sci-348-0",
       "code": "COMP_SCI 348-0",
       "name": "Introduction to Artificial Intelligence",
-      "description": null,
+      "description": "Core AI techniques include knowledge-based problem solving, hypothesis exploration, vision and neural networks.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 1.0,
       "credit_unit": "units",
       "category": "ai_ml",
       "source_id": "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree-catalog",
       "url": "https://catalogs.northwestern.edu/search/?P=COMP_SCI%20348-0",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree-courses-comp_sci"
+        ],
+        "locator": "COMP_SCI 348-0 exact course description",
+        "rationale": "Core AI techniques include knowledge-based problem solving, hypothesis exploration, vision and neural networks.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "nw-bse-comp-sci-349-0",
       "code": "COMP_SCI 349-0",
       "name": "Machine Learning",
-      "description": null,
+      "description": "Algorithms that learn from experience, including Bayesian learning and reinforcement learning, establish AI/ML.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 1.0,
       "credit_unit": "units",
       "category": "ai_ml",
       "source_id": "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree-catalog",
       "url": "https://catalogs.northwestern.edu/search/?P=COMP_SCI%20349-0",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree-courses-comp_sci"
+        ],
+        "locator": "COMP_SCI 349-0 exact course description",
+        "rationale": "Algorithms that learn from experience, including Bayesian learning and reinforcement learning, establish AI/ML.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "nw-bse-comp-sci-337-0",
@@ -2393,113 +2543,207 @@
       "id": "nw-bse-gen-eng-150-0",
       "code": "GEN_ENG 150-0",
       "name": "Programming for Engineers",
-      "description": null,
+      "description": "Procedural and object-oriented programming, data abstraction and recursion establish computing foundations.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 1.0,
       "credit_unit": "units",
-      "category": "other",
+      "category": "foundations",
       "source_id": "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree-college",
       "url": "https://catalogs.northwestern.edu/search/?P=GEN_ENG%20150-0",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree-courses-gen_eng"
+        ],
+        "locator": "GEN_ENG 150-0 exact course description",
+        "rationale": "Procedural and object-oriented programming, data abstraction and recursion establish computing foundations.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "nw-bse-gen-eng-151-0",
       "code": "GEN_ENG 151-0",
       "name": "Honors Programming for Engineers",
-      "description": null,
+      "description": "Procedural and object-oriented programming, data abstraction and recursion establish computing foundations in the honors section.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 1.0,
       "credit_unit": "units",
-      "category": "other",
+      "category": "foundations",
       "source_id": "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree-college",
       "url": "https://catalogs.northwestern.edu/search/?P=GEN_ENG%20151-0",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree-courses-gen_eng"
+        ],
+        "locator": "GEN_ENG 151-0 exact course description",
+        "rationale": "Procedural and object-oriented programming, data abstraction and recursion establish computing foundations in the honors section.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "nw-bse-gen-eng-231-0",
       "code": "GEN_ENG 231-0",
       "name": "Probability and Statistics for Engineers",
-      "description": null,
+      "description": "Probability, distributions, inference, hypothesis testing and regression establish mathematics/statistics.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 1.0,
       "credit_unit": "units",
-      "category": "other",
+      "category": "mathematics",
       "source_id": "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree-college",
       "url": "https://catalogs.northwestern.edu/search/?P=GEN_ENG%20231-0",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree-courses-gen_eng"
+        ],
+        "locator": "GEN_ENG 231-0 exact course description",
+        "rationale": "Probability, distributions, inference, hypothesis testing and regression establish mathematics/statistics.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "nw-bse-gen-eng-241-0",
       "code": "GEN_ENG 241-0",
       "name": "Linear Algebra for Engineers",
-      "description": null,
+      "description": "Linear systems, vector spaces, eigenvalues, decompositions and least squares establish mathematics.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 1.0,
       "credit_unit": "units",
-      "category": "other",
+      "category": "mathematics",
       "source_id": "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree-college",
       "url": "https://catalogs.northwestern.edu/search/?P=GEN_ENG%20241-0",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree-courses-gen_eng"
+        ],
+        "locator": "GEN_ENG 241-0 exact course description",
+        "rationale": "Linear systems, vector spaces, eigenvalues, decompositions and least squares establish mathematics.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "nw-bse-dsgn-106-1",
       "code": "DSGN 106-1",
       "name": "Design Thinking and Communication",
-      "description": null,
+      "description": "Integrated user-centered design, fabrication, teamwork and technical communication cross applied design and human communication; no single primary category is imposed.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 0.5,
       "credit_unit": "units",
       "category": "other",
       "source_id": "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree-college",
       "url": "https://catalogs.northwestern.edu/search/?P=DSGN%20106-1",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree-courses-dsgn"
+        ],
+        "locator": "DSGN 106-1 exact course description",
+        "rationale": "Integrated user-centered design, fabrication, teamwork and technical communication cross applied design and human communication; no single primary category is imposed.",
+        "candidate_categories": [
+          "applications",
+          "human_context"
+        ]
+      }
     },
     {
       "id": "nw-bse-dsgn-106-2",
       "code": "DSGN 106-2",
       "name": "Design Thinking and Communication",
-      "description": null,
+      "description": "Integrated user-centered design, ethics, teamwork and technical communication cross applied design and human context; no single primary category is imposed.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 0.5,
       "credit_unit": "units",
       "category": "other",
       "source_id": "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree-college",
       "url": "https://catalogs.northwestern.edu/search/?P=DSGN%20106-2",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree-courses-dsgn"
+        ],
+        "locator": "DSGN 106-2 exact course description",
+        "rationale": "Integrated user-centered design, ethics, teamwork and technical communication cross applied design and human context; no single primary category is imposed.",
+        "candidate_categories": [
+          "applications",
+          "human_context"
+        ]
+      }
     },
     {
       "id": "nw-bse-english-106-1",
       "code": "ENGLISH 106-1",
       "name": "Writing in Special Contexts",
-      "description": null,
+      "description": "Expository writing instruction paired with another discipline establishes communication within human context.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 0.5,
       "credit_unit": "units",
-      "category": "other",
+      "category": "human_context",
       "source_id": "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree-college",
       "url": "https://catalogs.northwestern.edu/search/?P=ENGLISH%20106-1",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree-courses-english"
+        ],
+        "locator": "ENGLISH 106-1 exact course description",
+        "rationale": "Expository writing instruction paired with another discipline establishes communication within human context.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "nw-bse-english-106-2",
       "code": "ENGLISH 106-2",
       "name": "Writing in Special Contexts",
-      "description": null,
+      "description": "Expository writing instruction paired with another discipline establishes communication within human context.",
       "prerequisites": null,
-      "credits": null,
+      "credits": 0.5,
       "credit_unit": "units",
-      "category": "other",
+      "category": "human_context",
       "source_id": "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree-college",
       "url": "https://catalogs.northwestern.edu/search/?P=ENGLISH%20106-2",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree-courses-english"
+        ],
+        "locator": "ENGLISH 106-2 exact course description",
+        "rationale": "Expository writing instruction paired with another discipline establishes communication within human context.",
+        "candidate_categories": []
+      }
     },
     {
       "id": "nw-bse-comm-st-102-0",
@@ -5501,12 +5745,12 @@
       "category": "other",
       "source_id": "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree-college",
       "source_text": null,
-      "summary": "Select 1 listed option. A bundled row requires every course in that option.",
+      "summary": "Select one innovation/oral-communication option. Writing/design bundles remain required; these unindented source rows are alternatives, not seven fixed courses.",
       "course_ids": []
     },
     {
       "id": "nw-bse-college-r52",
-      "parent_id": "nw-bse-college-r48",
+      "parent_id": "nw-bse-college-r51",
       "title": "Public Speaking",
       "kind": "all",
       "count": null,
@@ -5522,7 +5766,7 @@
     },
     {
       "id": "nw-bse-college-r53",
-      "parent_id": "nw-bse-college-r48",
+      "parent_id": "nw-bse-college-r51",
       "title": "Principles of Entrepreneurship",
       "kind": "all",
       "count": null,
@@ -5538,7 +5782,7 @@
     },
     {
       "id": "nw-bse-college-r54",
-      "parent_id": "nw-bse-college-r48",
+      "parent_id": "nw-bse-college-r51",
       "title": "Engineering Entrepreneurship",
       "kind": "all",
       "count": null,
@@ -5554,7 +5798,7 @@
     },
     {
       "id": "nw-bse-college-r55",
-      "parent_id": "nw-bse-college-r48",
+      "parent_id": "nw-bse-college-r51",
       "title": "Analysis and Performance of Text",
       "kind": "all",
       "count": null,
@@ -5570,7 +5814,7 @@
     },
     {
       "id": "nw-bse-college-r56",
-      "parent_id": "nw-bse-college-r48",
+      "parent_id": "nw-bse-college-r51",
       "title": "Performance Culture and Communication",
       "kind": "all",
       "count": null,
@@ -5586,7 +5830,7 @@
     },
     {
       "id": "nw-bse-college-r57",
-      "parent_id": "nw-bse-college-r48",
+      "parent_id": "nw-bse-college-r51",
       "title": "Engineering Improv: From Allowing to Application",
       "kind": "all",
       "count": null,
@@ -5602,7 +5846,7 @@
     },
     {
       "id": "nw-bse-college-r58",
-      "parent_id": "nw-bse-college-r48",
+      "parent_id": "nw-bse-college-r51",
       "title": "Biomedical Engineering Design",
       "kind": "all",
       "count": null,
@@ -6215,7 +6459,8 @@
     "Public theme rules supply approved department predicates, explicit allowed/excluded course categories, a language exception and approval procedure; no private MAS access was needed. Catalog theme deadline is junior winter, public page says end of sophomore year. Public transfer page calls major21units, current catalog/AI major22; public P/N says8courses, catalog8units. These discrepancies remain unresolved.",
     "The BSE AI major is available as a second major from other home schools, but this degree record maps the McCormick48unit pathway and does not claim a full other-school degree audit. At least11majorunits must be unique to the AI major, unused in other credentials.",
     "The14printed introductory advanced-elective exceptions are now represented, including AP/IB-awarded COMP_SCI1CA. No individual unit amount is inferred for unquantified course rows; combined lecture/lab rows remain bundles.",
-    "The linked P/N PDF is dated2018-01-22 and contains no AI entry; its CS rule is not presumed to govern AI. All public duplicate-course sets are mapped as exclusions with source code spellings, order/date qualifiers and combination notation preserved, not as alternative credit permissions."
+    "The linked P/N PDF is dated2018-01-22 and contains no AI entry; its CS rule is not presumed to govern AI. All public duplicate-course sets are mapped as exclusions with source code spellings, order/date qualifiers and combination notation preserved, not as alternative credit permissions.",
+    "2026-10-11 independent correctness pass: seven unindented innovation/oral-communication rows are a select-one pool, not seven fixed courses. The fixed mapped set drops from 21 to 14 course records. Design/English half-unit sequences remain fixed; DSGN 106-1/106-2 are explicitly mixed applied-design/human-communication subjects (other), not forced into one category. Foundations/mathematics corrections come from actual core descriptions. Course prerequisites retain catalog wording and are not additional fixed-degree rules. Full-degree correctness work remains in progress."
   ],
   "curriculum_audit": {
     "scope": "degree",

@@ -1,0 +1,118 @@
+{
+  "audit_date": "2026-10-11",
+  "reviewer": "pilots_cmu_penn",
+  "programs": [
+    {
+      "program_id": "northwestern-university-artificial-intelligence-major-bs-in-engineering-bse-degree",
+      "institution_id": "northwestern-university",
+      "status": "in_progress",
+      "sources": [
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/engineering-applied-science/artificial-intelligence/artificial-intelligence-major/",
+          "catalog_year": "2026-2027",
+          "locator": "Requirement table",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; ordinary robots-aware Fetcher"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/engineering-applied-science/",
+          "catalog_year": "2026-2027",
+          "locator": "Requirement table",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; ordinary robots-aware Fetcher"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/comp_sci/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact core course-description blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; ordinary robots-aware Fetcher"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/gen_eng/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact core course-description blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; ordinary robots-aware Fetcher"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/dsgn/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact core course-description blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; ordinary robots-aware Fetcher"
+        },
+        {
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/english/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact core course-description blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; ordinary robots-aware Fetcher"
+        }
+      ],
+      "checks": {
+        "degree_identity": "2026-2027 Artificial Intelligence Major, BS in Engineering; McCormick degree, separate from secondary-major variants.",
+        "required_and_choices": "Seven innovation/oral communication alternatives were incorrectly fixed because they lack indentation. Explicit Select one now governs them. Manual fixed set contains 14 records. Programming major slot remains 180 OR111; engineering programming remains150 OR151. Writing/design require the two paired half-unit sequences.",
+        "elective_pools": "Five of six breadth domains, four advanced electives, seven technical electives, societal-impact choice and college science/theme alternatives remain separate. Full finite-pool second-pass identity review is still underway.",
+        "prerequisites": "Core CS/engineering/design/writing blocks reviewed. 208/211 concurrent-registration restrictions preserved as metadata. Some descriptions retain legacy identifiers such as214 and GEN_ENG205; no silent equivalence is imposed. COMP_SCI212 still names110/111 although major permits180/111; placement/substitution applicability needs institutional clarification.",
+        "credits_and_units": "Actual course descriptions state units: design and English106 are0.5 each; reviewed CS/engineering courses1 each. No quarter-hour conversion. Four fixed half-unit writing/design records count as four course records, not four units.",
+        "classification": "Required core:2 foundations,6 mathematics,2AI,2 human context and2mixed-design other. Four programming option records reviewed as foundations. Exact descriptions, not prefixes, support classifications.",
+        "family_composition": "No family inheritance. Corrections apply to standalone BSE record only; no assumptions about a secondary major.",
+        "degree_wide_requirements": "College core table reread and structural defect corrected. Existing residency/theme/P-N/transfer policy mapping remains partial with its published source conflicts; broader audit continues."
+      },
+      "expected_profile": null,
+      "expected_course_ids": {
+        "required": [
+          "nw-bse-math-220-1",
+          "nw-bse-math-220-2",
+          "nw-bse-math-228-1",
+          "nw-bse-comp-sci-212-0",
+          "nw-bse-comp-sci-208-0",
+          "nw-bse-comp-sci-211-0",
+          "nw-bse-comp-sci-348-0",
+          "nw-bse-comp-sci-349-0",
+          "nw-bse-gen-eng-231-0",
+          "nw-bse-gen-eng-241-0",
+          "nw-bse-dsgn-106-1",
+          "nw-bse-dsgn-106-2",
+          "nw-bse-english-106-1",
+          "nw-bse-english-106-2"
+        ],
+        "options": null,
+        "unresolved": null
+      },
+      "discrepancies": [
+        {
+          "issue": "Unindented rows under an explicit Select one directive reset generic table choice scope and promoted seven alternatives to fixed.",
+          "correction": "Source-specific design-table observer reparents exactly the observed choice rows under the actual choice node; required writing/design bundles stay fixed.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalogs.northwestern.edu/undergraduate/engineering-applied-science/"
+          ]
+        },
+        {
+          "issue": "Narrow title heuristic left programming, data structures and engineering mathematics as other.",
+          "correction": "Exact source identities and official descriptions support categories; mixed design courses explicitly retain other.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalogs.northwestern.edu/undergraduate/courses-az/comp_sci/",
+            "https://catalogs.northwestern.edu/undergraduate/courses-az/gen_eng/",
+            "https://catalogs.northwestern.edu/undergraduate/courses-az/dsgn/",
+            "https://catalogs.northwestern.edu/undergraduate/courses-az/english/"
+          ]
+        }
+      ],
+      "blockers": [
+        {
+          "issue": "COMP_SCI212 prerequisite wording uses110/111 while the current major introductory slot permits180/111; no published equivalence was established in this pass.",
+          "url": "https://catalogs.northwestern.edu/undergraduate/courses-az/comp_sci/"
+        }
+      ],
+      "remaining_work": [
+        "Review remaining major/elective course descriptions and existing school policy discrepancies before independently establishing full option/unresolved sets."
+      ],
+      "correction_status": "Verified structural and core taxonomy corrections; audit continues",
+      "second_pass_status": "pending"
+    }
+  ]
+}

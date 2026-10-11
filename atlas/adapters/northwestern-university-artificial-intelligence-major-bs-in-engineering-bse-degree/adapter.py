@@ -29,3 +29,6 @@ SOURCE_PARSERS = {SOURCES[0]: parse, policies.COLLEGE_URL: policies.parse_colleg
 for _key, _url in [('theme-faq', policies.FAQ_URL), ('registration', policies.REGISTRATION_URL),
                    ('transfer-public', policies.TRANSFER_URL), ('pn-public', policies.PN_URL)]:
     SOURCE_PARSERS[_url] = lambda html, key=_key: policies.parse_public(html, key)
+
+from atlas.adapters import northwestern_degree_courses
+SOURCES = northwestern_degree_courses.register(PROGRAM_ID, SOURCES, SOURCE_PARSERS)

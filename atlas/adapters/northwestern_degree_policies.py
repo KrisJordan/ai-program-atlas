@@ -1,3 +1,4 @@
+from atlas.adapters.northwestern_degree_courses import classify_observed
 """Actual public McCormick tables and policies; no advising-system access."""
 import re
 from bs4 import BeautifulSoup
@@ -44,6 +45,31 @@ def parse_major_exceptions(html,url):
     return {'id':PID,'curriculum_status':'partial','courses':cs,'requirements':rows}
 
 
+def parse_design_table(t, table):
+    """The seven unindented oral-communication rows form one explicit choice."""
+    guard(text(table), ['Writing and Design', 'Innovation/Oral Communication', 'Select one of the following:'])
+    root = t.table(table, 'Three design, communications and innovation units')
+    choices = [r for r in t.rules if r['parent_id'] == root['id'] and r['kind'] == 'alternative']
+    if len(choices) != 1: raise ValueError('McCormick innovation choice changed')
+    choice = choices[0]
+    pool = []; selecting = False
+    for row in table.find_all('tr'):
+        value = text(row)
+        if value == 'Select one of the following:':
+            selecting = True
+            continue
+        if selecting:
+            observed = t.row(row)
+            if observed is None: raise ValueError('Unexpected row inside innovation choice')
+            pool.extend(observed['ids'])
+    if not pool: raise ValueError('Innovation choice pool missing')
+    for r in t.rules:
+        if r['parent_id'] == root['id'] and set(r['course_ids']) & set(pool):
+            r['parent_id'] = choice['id']
+    choice['summary'] = 'Select one innovation/oral-communication option. Writing/design bundles remain required; these unindented source rows are alternatives, not seven fixed courses.'
+    return root
+
+
 def parse_college(html):
     s,v=document(html,'Robert R. McCormick School of Engineering and Applied Science')
     guard(v,['Lab courses may count','at least 11 units of credit','no more than 4 units of transfer credit','winter quarter of their junior year','not less than 2.0','no more than 3 of these units','No more than 8 units taken P/N'])
@@ -53,7 +79,7 @@ def parse_college(html):
     t=Tables('nw-bse-college',PID+'-college',COLLEGE_URL,unit='units')
     sci=t.table(tables[1],'Approved basic-science pool',kind='choose_credits',interpret_choices=False);sci['credits']=4;sci['summary']='Four science units total, including the AI major’s required physics alternative and three additional units. Count an already-used physics unit only once. Laboratories count only with their corresponding lectures; bundled options remain bundled.'
     t.table(tables[2],'Three engineering-foundations units')
-    t.table(tables[3],'Three design, communications and innovation units')
+    parse_design_table(t, tables[3])
     # Stable shared course IDs allow overlap with the major record, not duplicate instances.
     mapping={i:i.replace('nw-bse-college-','nw-bse-',1)for i in t.courses}
     for c in t.courses.values():c['id']=mapping[c['id']]
@@ -70,7 +96,7 @@ def parse_college(html):
       ('pn','Catalog P/N limits','No more than eight P/N units toward the 48-unit degree, and at most one per quarter in years one/two. No P/N in mathematics, engineering foundations, sciences or design/communication/innovation. Theme permits any 300-level course but at most four at 100/200 level. Major P/N eligibility is delegated to the department; do not assume permission.'),
       ('exemptions','Approved placement and exemptions','Approved tests or individually reviewed prior coursework may grant credit or an exemption reducing required units. Such approval never removes the separate registration requirement; no particular waiver is presumed.')]
     t.rules.extend(rule(k,title,'college',summary)for k,title,summary in specs)
-    return {'id':PID,'curriculum_status':'partial','courses':list(t.courses.values()),'requirements':t.rules}
+    return {'id':PID,'curriculum_status':'partial','courses':classify_observed(list(t.courses.values())),'requirements':t.rules}
 
 
 def parse_urr(html):

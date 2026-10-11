@@ -1,3 +1,4 @@
+from atlas.adapters.northwestern_degree_courses import classify_observed
 """Northwestern AI major observations with domain choices and open elective pools."""
 from atlas.adapters.national_curriculum_common import content,clean,require_phrases
 from atlas.adapters.degree_table_observations import Tables
@@ -24,4 +25,4 @@ def parse_northwestern(html,pid,url):
     t.table(tables[9],'Seven technical electives: displayed additional pool',kind='choose_courses',count=7,interpret_choices=False)
     t.group('Open technical elective eligibility',kind='note',summary='Any 300- or 400-level COMP_SCI course may also satisfy a technical-elective slot. The displayed additional pool does not enumerate this open departmental category.')
     t.group('Degree-wide requirements remain applicable',kind='note',summary='The 48-unit degree consists of a 26-unit core and a 22-unit major. Students must also meet the Undergraduate Registration Requirement and home-school degree requirements. Full school and university policy mapping remains pending.')
-    return dict(id=pid,title='Artificial Intelligence Major, BS in Engineering',award_level='BSE',program_kind='degree',courses=list(t.courses.values()),requirements=t.rules)
+    return dict(id=pid,title='Artificial Intelligence Major, BS in Engineering',award_level='BSE',program_kind='degree',courses=classify_observed(list(t.courses.values())),requirements=t.rules)
