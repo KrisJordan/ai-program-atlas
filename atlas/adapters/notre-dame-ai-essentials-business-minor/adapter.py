@@ -12,3 +12,7 @@ def parse(html: str) -> dict:
 from atlas.adapters.notre_dame_followup import COLLEGE_URL, parse_college
 SOURCES += (COLLEGE_URL,)
 SOURCE_PARSERS = {COLLEGE_URL: lambda html: parse_college(html, PROGRAM_ID)}
+
+from atlas.adapters.nd_home_policies import register as register_home
+SOURCES = list(SOURCES)
+register_home(PROGRAM_ID, SOURCES, SOURCE_PARSERS)

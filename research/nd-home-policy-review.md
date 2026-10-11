@@ -1,0 +1,11 @@
+# Notre Dame AI Essentials: home-college scope review
+
+Reviewed 2026-10-11; 2026–2027 catalog. All five school/college overview URLs returned public HTTP 200 through the robots-aware fetcher. Raw pages remain outside the repository. This bounded review adds five conditional policies from three sources to the all-majors AI Essentials minor; it does not certify complete curriculum coverage.
+
+- [Arts and Letters](https://catalog.nd.edu/undergraduate/arts-letters/): Cross-Counting and Pass/Fail. Replacement/unique-course baseline is recorded conditionally, with the primary minor's overlap permission still unresolved for these students. The college's minor-discipline grading prohibition is recorded.
+- [Engineering](https://catalog.nd.edu/undergraduate/engineering/): Course Multi-Counting Policy explicitly treats outside-college credentials through their home college or an agreement. Internal Engineering overlap is not transferred to Mendoza.
+- [Science](https://catalog.nd.edu/undergraduate/science/): combination options explicitly include Mendoza minors; director/dean approval, substantial-overlap prohibition, three counting tiers and 50% unique courses are recorded. The general completion expectation is conditional, not an invented absolute time limit.
+- [Keough](https://catalog.nd.edu/undergraduate/keough-school-global-affairs/): overview reviewed; no applicable outside-unit completion/transfer rule was resolved. Rules for hosted Keough minors were not imposed on Keough students taking Mendoza's minor.
+- [Architecture school](https://catalog.nd.edu/undergraduate/architecture/) and [department](https://catalog.nd.edu/undergraduate/architecture/architecture/): public overviews reviewed; no applicable outside-unit minor policy was resolved. The department page's large course inventory does not establish policy absence elsewhere.
+
+Unknowns remain the primary program's empty additional-elective accordion, Arts and Letters overlap reconciliation, Mendoza/university grading ambiguity, and additional Keough/Architecture applicability. University transfer rules and cross-college approval were already mapped. No raw sources or personal approvals are committed. Each successful new parser validates source identity, selected policy boundaries and a digest of the reviewed policy text; changed text requires fresh review.

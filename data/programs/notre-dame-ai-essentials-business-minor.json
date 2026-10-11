@@ -55,6 +55,36 @@
       "source_date": null,
       "fetched_at": "2026-10-10",
       "confidence": "high"
+    },
+    {
+      "id": "notre-dame-ai-essentials-business-minor-home-arts-letters",
+      "url": "https://catalog.nd.edu/undergraduate/arts-letters/",
+      "title": "College of Arts and Letters — 2026–2027 Bulletin",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Cross-Counting; Pass/Fail",
+      "confidence": "high"
+    },
+    {
+      "id": "notre-dame-ai-essentials-business-minor-home-engineering",
+      "url": "https://catalog.nd.edu/undergraduate/engineering/",
+      "title": "College of Engineering — 2026–2027 Bulletin",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Course Multi-Counting Policy: explicit outside-college scope",
+      "confidence": "high"
+    },
+    {
+      "id": "notre-dame-ai-essentials-business-minor-home-science",
+      "url": "https://catalog.nd.edu/undergraduate/science/",
+      "title": "College of Science — 2026–2027 Bulletin",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Degree Programs: combination approval, completion and three counting tiers",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -432,6 +462,76 @@
       "source_text": null,
       "summary": "The public additional-approved-electives accordion contains an empty content container. No finite additional pool or approval rule can be verified from this section; it is not evidence that no additional electives exist.",
       "course_ids": []
+    },
+    {
+      "id": "notre-dame-ai-essentials-business-minor-home-arts-letters-overlap",
+      "parent_id": null,
+      "title": "Arts and Letters home-college overlap — reconciliation needed",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "notre-dame-ai-essentials-business-minor-home-arts-letters",
+      "source_text": null,
+      "summary": "For Arts and Letters students, the college describes replacing a shared program requirement with an approved course and retaining five unique minor courses/15 credits. University/college requirements may still overlap. The AI Essentials page separately allows three major credits to overlap; the public sources do not explain how that permission interacts with this college baseline. A joint approved exception is not inferred.",
+      "course_ids": []
+    },
+    {
+      "id": "notre-dame-ai-essentials-business-minor-home-arts-letters-grading",
+      "parent_id": null,
+      "title": "Arts and Letters home-college grading",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "notre-dame-ai-essentials-business-minor-home-arts-letters",
+      "source_text": null,
+      "summary": "The Arts and Letters elective pass/fail option requires dean permission and junior/senior standing. It excludes courses in declared major, supplementary-major or minor disciplines and university/college core requirements. This is a home-college condition, not permission to use pass/fail in this minor.",
+      "course_ids": []
+    },
+    {
+      "id": "notre-dame-ai-essentials-business-minor-home-engineering-scope",
+      "parent_id": null,
+      "title": "Engineering students taking an outside-college credential",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "notre-dame-ai-essentials-business-minor-home-engineering",
+      "source_text": null,
+      "summary": "Engineering explicitly limits its internal multi-counting rule to Engineering programs. An outside-college secondary credential follows its home college’s policies or an agreement between the colleges; questions go to the Associate Dean for Undergraduate Programs. Engineering’s internal unlimited overlap rule is not applied to this Mendoza minor.",
+      "course_ids": []
+    },
+    {
+      "id": "notre-dame-ai-essentials-business-minor-home-science-approval",
+      "parent_id": null,
+      "title": "Science home-college approval and completion",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "notre-dame-ai-essentials-business-minor-home-science",
+      "source_text": null,
+      "summary": "Science expressly includes Mendoza minors among cross-college combinations. Program directors and the Science dean must formally accept the combination; substantial overlap prevents approval. Changes to a minor are generally expected not to extend study beyond eight semesters or require an overload.",
+      "course_ids": []
+    },
+    {
+      "id": "notre-dame-ai-essentials-business-minor-home-science-unique",
+      "parent_id": null,
+      "title": "Science home-college uniqueness and counting",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "notre-dame-ai-essentials-business-minor-home-science",
+      "source_text": null,
+      "summary": "For Science students, a course may count once at each listed tier: university/core; college/primary major; and other programs, subject to the stated exception for a defined Science program. Each program must have at least 50% unique courses. This condition supplements the AI minor’s own overlap limit; it is not a new universal credit minimum.",
+      "course_ids": []
     }
   ],
   "notes": [
@@ -447,7 +547,10 @@
     "source_ids": [
       "notre-dame-ai-essentials-business-minor-curriculum",
       "notre-dame-ai-essentials-business-minor-academic-code",
-      "notre-dame-ai-essentials-business-minor-college-policy"
+      "notre-dame-ai-essentials-business-minor-college-policy",
+      "notre-dame-ai-essentials-business-minor-home-arts-letters",
+      "notre-dame-ai-essentials-business-minor-home-engineering",
+      "notre-dame-ai-essentials-business-minor-home-science"
     ],
     "sections": [
       "Program eligibility and overview",
@@ -455,11 +558,14 @@
       "Program-local overlap and completion notes",
       "2026 university academic code: credit definition, grading, transfer, repeats and cross-college overlap",
       "Mendoza college credential-completion and pass/fail wording; host-degree scope distinguished",
-      "Rerunnable source-specific catalog/college or empty-additional-elective observations; conflicts retained"
+      "Rerunnable source-specific catalog/college or empty-additional-elective observations; conflicts retained",
+      "Conditional Arts and Letters, Engineering and Science rules for home-college students; Keough and Architecture overview review remained inconclusive"
     ],
     "unresolved_requirements": [
       "Additional approved electives section remained empty after public-browser expansion; the full finite approved list is unresolved.",
-      "College-specific minor completion/transfer and first-course pass/fail applicability for students from different home colleges require further review."
+      "Arts and Letters replacement/unique-course baseline and the AI minor’s three-credit overlap permission need an explicit applicable reconciliation; no cross-college exception is assumed.",
+      "The Mendoza first-minor-course pass/fail wording still differs from the university prohibition; applicability is unresolved.",
+      "Keough and Architecture public overview review did not resolve additional outside-college minor completion/transfer rules. University transfer/dean-approval rules are mapped; silence is not an exemption."
     ],
     "metadata_gaps": [
       "Most formal course prerequisites and some descriptions remain unverified.",
