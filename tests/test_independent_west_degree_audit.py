@@ -222,3 +222,71 @@ def test_ne_mathematics_source_loads_are_not_summed_as_a_student_schedule():
     assert (rules['math_elective_count'], rules['math_elective_hours']) == (4, 16)
     assert rules['khoury_elective_hours'] == 12
     assert 'neither a source contradiction nor a corrected total' in rules['scope']
+
+
+def test_ne_physics_all49_independent_course_decisions():
+    from atlas.families import resolve_program
+    pid = 'northeastern-university-artificial-intelligence-and-physics-bs-boston-bs-degree'
+    p = load(pid)
+    before = deepcopy(p)
+    family = json.loads((ROOT / 'data/families/northeastern-ai-combined-degrees.json').read_text())
+    resolved = resolve_program(p, family)
+    e = entry(pid)
+    courses = {c['code']: c for c in resolved['courses']}
+    assert set(courses) == set(e['manual_course_decisions']) and len(courses) == 49
+    profile = requirement_profile(resolved)
+    for role, expected in e['expected_profile'].items():
+        assert profile[role]['count'] == expected['count']
+        assert profile[role]['categories'] == expected['categories']
+    for code, decision in e['manual_course_decisions'].items():
+        course = courses[code]
+        assert course['category'] == decision['category']
+        assert course['credits'] == decision['credits']
+        assert course['credit_unit'] == 'semester_hours'
+        assert requirement_profile({**resolved, 'courses': [course]})[decision['role']]['count'] == 1
+    assert not {'CS 1800', 'CS 1802', 'DS 4420'} & set(courses)
+    assert p == before
+    assert not e['full_degree_verified'] and e['second_pass_status'] == 'partial'
+
+
+def test_ne_physics_whole_routes_zero_recitations_and_undergraduate_permission():
+    from atlas.families import resolve_program
+    pid = 'northeastern-university-artificial-intelligence-and-physics-bs-boston-bs-degree'
+    family = json.loads((ROOT / 'data/families/northeastern-ai-combined-degrees.json').read_text())
+    p = resolve_program(load(pid), family)
+    courses = {c['code']: c for c in p['courses']}
+    groups = {g['id']: g for g in p['requirements']}
+    for numbers in [('1161', '1162', '1163'), ('1191', '1192', '1193')]:
+        ids = {courses['PHYS ' + n]['id'] for n in numbers}
+        bundle = next(g for g in groups.values() if set(g['course_ids']) == ids)
+        assert bundle['kind'] == 'all'
+        assert groups[bundle['parent_id']]['kind'] == 'alternative'
+        assert sum(courses['PHYS ' + n]['credits'] for n in numbers) == 5
+    for code, role in [('PHYS 1163', 'options'), ('PHYS 1193', 'options'), ('PHYS 1167', 'required')]:
+        assert courses[code]['credits'] == 0
+        assert requirement_profile({**p, 'courses': [courses[code]]})[role]['count'] == 1
+    for code, category, role in [('PHYS 5116', 'mathematics', 'options'),
+                                  ('PHYS 5318', 'applications', 'required')]:
+        assert courses[code]['category'] == category
+        assert 'PHYS 2303' in courses[code]['prerequisites']
+        assert 'or graduate program admission' in courses[code]['prerequisites']
+        assert requirement_profile({**p, 'courses': [courses[code]]})[role]['count'] == 1
+    for code in ['MATH 1365', 'MATH 1465']:
+        assert requirement_profile({**p, 'courses': [courses[code]]})['options']['count'] == 1
+
+
+def test_ne_physics_resolved_storage_preserves_reviewed_roles_and_known_zeros(conn):
+    from atlas.family_store import ingest_family
+    pid = 'northeastern-university-artificial-intelligence-and-physics-bs-boston-bs-degree'
+    family = json.loads((ROOT / 'data/families/northeastern-ai-combined-degrees.json').read_text())
+    with conn:
+        db.upsert_institution(conn, load(pid)['institution'])
+    ingest_family(conn, family)
+    assert db.ingest_program(conn, load(pid))
+    assert not db.ingest_program(conn, load(pid))
+    saved = next(p for p in db.export_data(conn)['programs'] if p['id'] == pid)
+    profile = requirement_profile(saved)
+    assert (profile['required']['count'], profile['options']['count']) == (25, 24)
+    courses = {c['code']: c for c in saved['courses']}
+    assert all(courses[code]['credits'] == 0 for code in ['PHYS 1163', 'PHYS 1193', 'PHYS 1167'])
+    assert not conn.execute('PRAGMA foreign_key_check').fetchall()
