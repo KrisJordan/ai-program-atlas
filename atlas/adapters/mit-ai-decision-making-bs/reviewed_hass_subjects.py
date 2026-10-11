@@ -205,6 +205,25 @@ def observe_literature(html):
     return rows
 
 
+def observe_literature_aliases(html):
+    """Retain explicit same-subject and meets-with clauses without merging IDs.
+
+    A separate observer keeps earlier primary-code observation digests stable.
+    Only manually approved, exact source clauses can support an alias review.
+    """
+    soup = BeautifulSoup(html, 'html.parser')
+    rows = []
+    for row in observe_literature(html):
+        body = soup.find('div', class_='description-row', attrs={'data-course': row['locator']})
+        meta = clean(body.find('p', recursive=False))
+        same = re.search(r'Same subject as:\s*(.*?)(?:Meets with:|Prereq:|Units:|$)', meta)
+        meets = re.search(r'Meets with:\s*(.*?)(?:Prereq:|Units:|$)', meta)
+        if same is not None:
+            rows.append({**row, 'same_subject_as': same[1].strip(),
+                         'meets_with': meets[1].strip() if meets else None})
+    return rows
+
+
 def observe_history(html):
     soup = BeautifulSoup(html, 'html.parser')
     main = soup.find('main')

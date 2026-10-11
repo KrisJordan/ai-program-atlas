@@ -176,3 +176,11 @@ Four additional subjects support five records: Arthurian Literature (Fall2021, o
 Only two primary21L records remain title-only after this bounded archive search:21L632 **North America through French Eyes** and21L715 **Media in Cultural Context**. Neither exact match appeared in the inspected selector inventory. Other public department/course branches remain to be checked; this is **not** a finding of discontinuation, publisher restriction or universal description absence. Cross-listed records with a different primary code also require their own exact evidence mapping, not automatic identity merging.
 
 Current approved depth: **179description-supported records,583limited-title records,3code-only unknowns**. Counts765approved/20held/2conflicting/58delegated remain unchanged. The primary MIT audit remains active.
+
+## Different public panel resolves Hamilton description gap
+
+The CMS Spring2026 panel for CMS427 exposes metadata without a description. The **Literature Spring2026 panel for21L500** does provide the full description and explicitly states **Same subject as CMS427[J],21T247[J]**. Both existing CMS427 source records now gain that actual dated description: musical-theater history, representation, critical analysis and creative communication, with12units and no prerequisite. The earlier unknown title observations remain preserved.
+
+A separate `observe_literature_aliases` observer binds the exact same-subject clause into the digest while leaving prior primary-code digests stable. Replacing same-subject with meets-with, changing the aliases or changing content withdraws the manual judgment. No identity group is created. Composite Russian077/618 language variants and the differently titled Empire record were not automatically upgraded from similar cross-list text. New registered source ID: `mit-ai-hass-review-literature-aliases-spring2026`; cache remains `literature-spring2026-visible.html`.
+
+Approved depth: **181description-supported records,581limited-title records,3code-only unknowns**. This resolves one concrete accessible-source gap, not the remaining departmental description backlog or full degree audit.

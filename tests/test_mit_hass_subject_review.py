@@ -174,8 +174,9 @@ def test_cmsw_archived_term_credits_and_missing_description_are_not_imputed():
     assert obs['CMS.593[J]']['prerequisites']=='CMS.592'
     assert all(o['catalog_year']=='Spring 2026' for o in obs.values())
     hamilton=[r for r in MANIFEST['courses'].values() if r['listed_code'].startswith('CMS.427')]
-    assert hamilton and all(r['review_status']=='pending' or all(o.get('evidence_basis')=='official_title_only' and o['status']=='unclassified' for o in r['observations']) for r in hamilton)
-    assert all(any('description' in x for x in r['missingness']) for r in hamilton)
+    assert hamilton and all(r['observations'][0]['evidence_basis']=='official_title_only' for r in hamilton)
+    assert all(not any(o['source_id']=='mit-ai-hass-review-cmsw-spring2026' for o in r['observations']) for r in hamilton)
+    assert all(r['observations'][-1]['source_id']=='mit-ai-hass-review-literature-aliases-spring2026' for r in hamilton)
     changed=next(r for r in rows if r['listed_name']=='Intersectionality, Neurodiversity, and Disability')
     assert changed['review_status']=='identity_review_needed'
 
@@ -214,7 +215,7 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']['description_reviewed_records']==179
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==181
     assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
         o=entry(code)['observations'][-1]
@@ -645,3 +646,28 @@ def test_latest_matching_archived_literature_descriptions_replay(term,count):
     hashes={review.observation_digest(o) for o in review.observe_literature(path.read_text())}
     saved=[o for r in MANIFEST['courses'].values() for o in r['observations'] if o['source_id']==f'mit-ai-hass-review-literature-{term}']
     assert len(saved)==count and all(o['observation_digest'] in hashes for o in saved)
+
+
+def test_literature_same_subject_guard_is_not_meets_with_or_code_inference():
+    html='''<select name="semester"><option selected>Spring 2026</option></select>
+    <div class="parentrow"><a class="description-link" data-course="h">21L.500[J]</a><span>How We Got to Hamilton (New!)</span></div>
+    <div class="description-row" data-course="h"><p>Same subject as: CMS.427[J], 21T.247[J] Prereq: none Units: 3-0-9</p><div class="et-l--post">Critical theater history.</div></div>'''
+    o=review.observe_literature_aliases(html)[0]
+    assert o['same_subject_as']=='CMS.427[J], 21T.247[J]' and o['meets_with'] is None
+    assert review.observe_literature_aliases(html.replace('Same subject as:','Meets with:'))==[]
+    assert review.observe_literature(html)[0].get('same_subject_as') is None  # old primary-code digest stays stable
+
+
+def test_actual_hamilton_literature_description_withdraws_if_alias_clause_changes():
+    path=Path('/tmp/mit-hass-subjects/literature-spring2026-visible.html')
+    if not path.exists():
+        pytest.skip('Optional ignored public Literature capture')
+    o=next(o for o in review.observe_literature_aliases(path.read_text()) if o['code']=='21L.500[J]')
+    assert o['description'] and o['same_subject_as']=='CMS.427[J], 21T.247[J]'
+    rows=[(cid,r) for cid,r in MANIFEST['courses'].items() if r['listed_code'].startswith('CMS.427')]
+    assert len(rows)==2
+    for cid,r in rows:
+        e=r['observations'][-1];course=dict(id=cid,code=r['listed_code'],name=r['listed_name'],source_id=r['listed_source_id'])
+        assert e['category']=='human_context' and e['credits']==12 and e['prerequisites']=='none'
+        assert review.matched_review(course,o,e['source_url'],MANIFEST)==e
+        assert review.matched_review(course,{**o,'same_subject_as':'CMS.999[J]'},e['source_url'],MANIFEST) is None
