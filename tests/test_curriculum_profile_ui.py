@@ -73,7 +73,7 @@ def test_zero_category_is_mapping_absence_and_complete_inventory_is_not_taxonomy
     required=profile.find(attrs={'data-profile':'required'})
     assert required.find(attrs={'data-category':'foundations'}).find('strong').get_text()=='0 mapped'
     assert 'not evidence that the curriculum lacks that subject' in profile.get_text()
-    assert '2 unreviewed, of 2 mapped records' in required.find(class_='profile-taxonomy').get_text()
+    assert '2 unreviewed, of 2 mapped identities' in required.find(class_='profile-taxonomy').get_text()
     assert 'Requirement inventory completeness is separate' in profile.get_text()
     assert 'Legacy / unreviewed classification' in page.find(class_='course-table').get_text()
 
@@ -103,3 +103,30 @@ def test_degree_correctness_audit_is_separate_from_inventory_status(site_data,tm
         assert 'Independent second pass verified' in audit.get_text()
     detail=BeautifulSoup((tmp_path/'programs/test-ai-0/index.html').read_text(),'html.parser')
     assert 'Degree correctness audit: In progress' in detail.find(class_='degree-audit-program').get_text()
+
+
+def test_identity_note_appears_only_for_documented_aliases():
+    from atlas.site import profile_identity_note
+    group={'count':2,'source_record_count':3}
+    assert profile_identity_note({},group)==''
+    assert profile_identity_note({'identity':{'crosslisted_aliases':0}},group)==''
+    note=profile_identity_note({'identity':{'crosslisted_aliases':1}},group)
+    assert '2 mapped course identities from 3 retained source-code records' in note
+    assert 'Only explicitly verified cross-lists' in note
+
+
+def test_real_penn_state_aliases_keep_codes_and_source_evidence(site_data,tmp_path):
+    from pathlib import Path
+    pid='penn-state-ai-methods-applications-ist-bs'
+    program=json.loads((Path(__file__).resolve().parents[1]/'data/programs'/f'{pid}.json').read_text())
+    site_data['programs']=[program]
+    site_data['institutions']=[program['institution']]
+    build(site_data,tmp_path)
+    soup=BeautifulSoup((tmp_path/'programs'/pid/'index.html').read_text(),'html.parser')
+    note=soup.select_one('[data-profile=options] .profile-identity').get_text()
+    assert '156 mapped course identities from 160 retained source-code records' in note
+    evidence=soup.select_one('.profile-identities')
+    assert 'DS 410 / CMPSC 410' in evidence.get_text()
+    assert 'MATH 318 / STAT 318' in evidence.get_text()
+    assert evidence.find('a',href='https://bulletins.psu.edu/university-course-descriptions/undergraduate/ds/')
+    assert 'IST 301 / ETI 301' not in evidence.get_text()

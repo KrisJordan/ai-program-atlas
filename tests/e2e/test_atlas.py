@@ -523,3 +523,34 @@ def test_case_corrected_fixed_foundations_and_source_review_are_visible(page,sit
     dt=page.locator('.compare-profile-cell dt',has_text='Computing foundations')
     expect(dt.locator('+ dd')).to_have_text('2')
     expect(page.locator('.compare-profile-cell .profile-taxonomy')).to_contain_text('8 reviewed')
+
+
+def test_crosslisted_identity_denominator_detail_comparison_mobile(page,site,tmp_path,site_data,monkeypatch):
+    from playwright.sync_api import expect
+    import atlas.site as publishing
+    from tests.test_curriculum_profile_ui import profile_fixture
+    profile_fixture(site_data)
+    original=publishing.curriculum_profile
+    def projected_profile(program):
+        profile=original(program)
+        # Synthetic aggregate contract: one reviewed alias is retained in the source table.
+        profile['identity']={'source_records':18,'mapped_identities':17,'crosslisted_aliases':1,'reviewed_groups':1}
+        for name in ['required','options','unresolved']:
+            profile[name]['source_record_count']=profile[name]['count']+int(name=='required')
+        return profile
+    monkeypatch.setattr(publishing,'curriculum_profile',projected_profile)
+    build(site_data,tmp_path/'ai-program-atlas')
+    page.set_viewport_size({'width':390,'height':950})
+    errors=[];page.on('pageerror',lambda error:errors.append(str(error)))
+    page.goto(site+'programs/test-ai-0/')
+    expect(page.locator('[data-profile=required] .profile-identity')).to_contain_text('2 mapped course identities from 3 retained source-code records')
+    expect(page.locator('[data-profile=required] .profile-total')).to_contain_text('2 distinct fixed required course identities')
+    assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
+    page.goto(site+'?compare=test-ai-0')
+    expect(page.locator('.compare-profile-cell .profile-identity')).to_contain_text('2 mapped course identities from 3 retained source-code records')
+    page.locator('#compare-profile').select_option('options')
+    expect(page.locator('.compare-profile-cell .profile-identity')).to_contain_text('14 mapped course identities from 14 retained source-code records')
+    page.reload()
+    expect(page.locator('#compare-profile')).to_have_value('options')
+    assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
+    assert not errors

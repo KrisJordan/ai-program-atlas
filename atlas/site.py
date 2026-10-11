@@ -424,8 +424,31 @@ def taxonomy_coverage_note(group):
     coverage = group.get('classification') or dict(reviewed=0, mixed=0, unclassified=0, unreviewed=group['count'])
     return (f"Taxonomy review: {coverage['reviewed']} reviewed · {coverage['mixed']} mixed · "
             f"{coverage['unclassified']} unclassified · {coverage['unreviewed']} unreviewed, "
-            f"of {group['count']} mapped records. Missing review is not verified classification. "
+            f"of {group['count']} mapped identities. Missing review is not verified classification. "
             "Requirement inventory completeness is separate.")
+
+
+def profile_identity_note(profile, group):
+    identity = profile.get('identity') or {}
+    if not identity.get('crosslisted_aliases'):
+        return ''
+    records = group.get('source_record_count', group['count'])
+    return (f"{group['count']} mapped course identities from {records} retained source-code records in this view. "
+            "Only explicitly verified cross-lists are combined. The course table retains every source code and its evidence.")
+
+
+def course_identity_evidence(p):
+    groups = p.get('course_identity_groups') or []
+    if not groups:
+        return ''
+    courses = {c['id']: c for c in p.get('courses', [])}
+    sources = {s['id']: s for s in p.get('sources', [])}
+    rows = []
+    for group in groups:
+        codes = ' / '.join(courses.get(cid, {}).get('code') or cid for cid in group['course_ids'])
+        links = ' · '.join(external(sources.get(sid, {}).get('url'), 'Source') for sid in group['source_ids'])
+        rows.append('<li><strong>' + esc(codes) + '</strong> — one course identity.<p>' + esc(group['rationale']) + '</p><small>' + esc(group['locator']) + ' · ' + links + '</small></li>')
+    return '<details class="profile-identities"><summary>Verified cross-list identities (' + str(len(groups)) + ' groups)</summary><ul>' + ''.join(rows) + '</ul></details>'
 
 
 def category_chart(p):
@@ -437,6 +460,9 @@ def category_chart(p):
     for mode, label in [('required', 'fixed required course'), ('options', 'elective option')]:
         group = profile[mode]
         total = group['count']
+        identity_note = profile_identity_note(profile, group)
+        count_noun = 'identities' if identity_note else 'records'
+        identity_markup = '<p class="profile-identity">' + esc(identity_note) + '</p>' if identity_note else ''
         description = 'Mapped fixed course set; cohort, placement, waiver and substitution conditions in the sources still apply. Required choice blocks are separate below.' if mode == 'required' else 'Available elective and required-choice options, not courses every student must take. Fixed required courses are excluded from this option count.'
         chart = ''
         if total:
@@ -444,13 +470,14 @@ def category_chart(p):
             chart = '<div class="category-chart">' + ''.join(f'<div class="category-row" data-category="{key}"><span>{name}</span><div class="bar-track" aria-hidden="true"><span class="bar" style="width:{group["categories"].get(key, 0) / maximum * 100:.2f}%"></span></div><strong>{category_count_label(group["categories"].get(key, 0))}</strong></div>' for key, name in CATEGORIES.items()) + '</div>'
         else:
             chart = '<p class="profile-unavailable">' + ('A fixed required course set is not established by the recorded rules. This does not mean there are no requirements.' if mode == 'required' else 'No elective option set is established by the recorded structured rules.') + '</p>'
-        panels.append(f'<div class="profile-panel" data-profile="{mode}"><p class="profile-total">{total} distinct {label} records</p><p class="profile-denominator">{description}</p><p class="profile-taxonomy">{esc(taxonomy_coverage_note(group))}</p>{chart}</div>')
-    uncertainty = f'{profile["unresolved"]["count"]} course records have unresolved requirement roles; they are excluded from both views.'
+        panels.append(f'<div class="profile-panel" data-profile="{mode}"><p class="profile-total">{total} distinct {label} {count_noun}</p><p class="profile-denominator">{description}</p>{identity_markup}<p class="profile-taxonomy">{esc(taxonomy_coverage_note(group))}</p>{chart}</div>')
+    uncertainty_noun = 'course identities' if profile.get('identity', {}).get('crosslisted_aliases') else 'course records'
+    uncertainty = f'{profile["unresolved"]["count"]} {uncertainty_noun} have unresolved requirement roles; they are excluded from both views.'
     if profile['unresolved_group_count']:
         uncertainty += f' {profile["unresolved_group_count"]} groups need their full recorded context.'
     if profile['overlap_count']:
-        uncertainty += f' {profile["overlap_count"]} course records appear in multiple groups and are counted once.'
-    return '<div class="curriculum-profile"><p class="profile-denominator">Counts use distinct course IDs within each view, not credit totals or a share of the degree. Categories describe mapped records, including Other / unclassified. “0 mapped” means no mapped records classified in that category in this view—not evidence that the curriculum lacks that subject. Partial requirement or taxonomy evidence can omit relevant courses.</p><fieldset class="profile-switch"><legend>Curriculum view</legend><input class="sr-only" type="radio" name="curriculum-view" id="profile-required" value="required" checked><label for="profile-required">Required curriculum</label><input class="sr-only" type="radio" name="curriculum-view" id="profile-options" value="options"><label for="profile-options">Elective options</label><div class="profile-panels">' + ''.join(panels) + '</div></fieldset><p class="profile-uncertainty">' + esc(uncertainty) + '</p>' + profile_choices(p, profile) + '</div>'
+        uncertainty += f' {profile["overlap_count"]} {uncertainty_noun} appear in multiple groups and are counted once.'
+    return '<div class="curriculum-profile"><p class="profile-denominator">Counts use distinct mapped course identities within each view, not credit totals or a share of the degree. Categories describe mapped records, including Other / unclassified. “0 mapped” means no mapped records classified in that category in this view—not evidence that the curriculum lacks that subject. Partial requirement or taxonomy evidence can omit relevant courses.</p><fieldset class="profile-switch"><legend>Curriculum view</legend><input class="sr-only" type="radio" name="curriculum-view" id="profile-required" value="required" checked><label for="profile-required">Required curriculum</label><input class="sr-only" type="radio" name="curriculum-view" id="profile-options" value="options"><label for="profile-options">Elective options</label><div class="profile-panels">' + ''.join(panels) + '</div></fieldset><p class="profile-uncertainty">' + esc(uncertainty) + '</p>' + course_identity_evidence(p) + profile_choices(p, profile) + '</div>'
 
 def requirement_tree(p):
     requirements = p.get("requirements", [])
