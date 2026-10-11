@@ -1,52 +1,38 @@
-# Maryland AI curriculum research
+# Maryland Artificial Intelligence: Computational Structures for AI Systems BSAI
 
-Reviewed 2026-10-10. Official catalog fetched through the robots-aware fetcher; raw HTML remains outside the repository. Parser validates title and table inventory, extracts actual rows, nested choices and approval footnotes, and emits only partial observations. It never refreshes the curated audit or launch evidence.
-
-AI Algorithms specialization prints 12 total credits while the major specifies an 18-credit specialization and two electives. This source discrepancy requires clarification.
-
-University-wide graduation/general education and linked college requirements remain unreviewed.
-
-Catalog AI Algorithms total conflicts with the 18-credit specialization rule.
-
-Launch evidence: https://today.umd.edu/umd-to-launch-2-bachelors-degrees-to-explore-technical-human-dimensions-of-ai
+Reviewed 2026-10-11. **Primary audit blocked at the specific source gaps below.** All available represented exact course blocks, catalog tables and applicable public university/college rules have been read. Full independent second pass remains pending. Inventory `partial` and degree-audit status are separate.
 
 Catalog: https://academiccatalog.umd.edu/undergraduate/colleges-schools/computer-mathematical-natural-sciences/computer-science/artificial-intelligence-computational-structures-ai-systems-major/
 
-## University closure and selected metadata — 2026-10-11
+## Requirements and manual identity check
 
-The BSAI now has **85 course observations, 76 requirement nodes and six explicitly classified learning outcomes**. Shared university rules cover credit/residence/upper-level minima, major enrollment and GPA, General Education choices and overlap (including its 40-credit minimum), transfer acceptance/applicability/caps/level, degree applications, incompletes, Pass-Fail and repeat limits. General Education uses official term-designation criteria rather than a fabricated permanent pool.
+Manually transcribed the six unconditionally fixed identities CSAI101,MATH141,PHIL211,INST204,CMSC351,CSAI216 and 79 named alternatives/specialization identities from every published table. All five routes retain local conditions and counts; topic versions remain separate.
 
-The linked CMNS declaration page gives college-wide timing but does not place the new AI degree within its named program-specific admission groups. The separate Computer Science limited-enrollment requirements are **not inherited by inference**. AI-specific gateway/transition applicability remains unverified. The catalog’s AI Algorithms 12-versus-18-credit inconsistency also remains unchanged.
+Five finite specialization pools and core alternatives fully reviewed. AI Algorithms still prints 12 total despite four required three-credit courses plus two electives and the major 18-credit rule. General Education uses published term-designation, distribution and overlap criteria; no invented permanent pool.
 
-Official MATH, CMSC and INST course listings provide metadata for **34 existing course observations**, including **eight concise descriptions and 34 prerequisite/restriction statements**. The new CMSC141/142 and INST436 entries are absent from those current listings; their missing metadata remains unknown. Generic CMSC498 metadata is deliberately not copied into the two topic-specific curriculum options. Published prerequisites, department permissions and other-program restrictions are preserved; a curriculum listing alone is not evidence of an enrollment waiver. Public sites and syllabi remain unverified.
+Concrete standalone award; specializations are local conditional routes. No cross-list groups asserted: shared credit exclusions and one-sided joint-offering language do not establish reciprocal undergraduate identity, and topic versions remain distinct.
 
-All new sources used the normal robots-aware public fetcher. The record stays **partial** at these concrete requirement/source boundaries, separate from course-metadata missingness.
+The source-transcribed fixed/option sets are in `tests/test_maryland_policy_closure.py`; the full expected partition and subject totals are in the primary national ledger. Every represented identity is checked. No credit-exclusion relation is promoted to cross-list identity.
 
-## Exact award label review — 2026-10-11
+## Course and policy evidence
 
-The reviewed award option preserves **BSAI**, mapped to **BS**. Overview, second paragraph: Bachelor of Science in Artificial Intelligence: Computational Structures for AI Systems (BSAI). The explicit full-name expansion supports BS normalization; this is not inference from the abbreviation or hosting school. Existing program ID, award_level, title and requirement graph are unchanged. This optional mapping is reviewed metadata. Scrapers queue observations without replacing curated JSON; a parse result that omits award_options does not erase it. No parser or shared Northeastern helper change is needed.
+All available exact current blocks reviewed: 60 dispositions, with 25 absent exact entries or topic versions unclassified. Subject decisions distinguish programming/algorithms, mathematical theory, social analysis, domain practice and mixed content.
 
-### Individual subject review — 2026-10-11
+All available exact current description blocks and their prerequisite/corequisite, permission, restriction, recommended preparation, exclusion and repeat clauses were reviewed. Conditional access is preserved without importing prerequisites into fixed requirements or granting exceptions. General registration and college repeat/external-study policies are mapped.
 
-The course-metadata factory previously defaulted to AI/ML regardless of source
-content. Reviewed blocks now have exact-content guards and manual subject
-reviews; other parsed course observations default to unknown subject. Reviewed
-MATH content is mathematical theory; CMSC131/132/351 and INST326 are programming
-and algorithms; CMSC250 is discrete mathematics; CMSC422 is ML; INST204 is
-algorithmic-bias/social analysis; CMSC320 combines statistics, learning and
-systems and retains mixed subject status. Only records present in this degree
-receive the applicable review. Enrollment and credit-exclusion clauses remain
-verbatim metadata, not invented degree obligations or cross-list equivalences.
+Degree minimum 120 semester hours is source-established. Fixed course amounts, variable ranges, grouped quantities and selection counts stay distinct; unknown quantities are not inferred. University residence, upper-major credit, transfer caps/levels, repeat and overlap limits are mapped. CMNS uses its stricter 17-credit ordinary fall/spring load; university and college exceptions remain conditional. AI Algorithms arithmetic conflict remains unresolved.
 
-Full degree correctness remains in progress. The technical BSAI's AI Algorithms
-12-versus-18-credit inconsistency and all prior policy questions remain explicit.
+Reviewed current degree, General Education, transfer, academic-record, registration and progression rules, plus applicable college advising/declaration, exceptions, graduation and academic policies. Covered GPA/grades, residence, minimum/upper-level hours, final-major membership, general-education alternatives/overlap, transfer acceptance versus applicability, repeats, standing/clemency, approved plans, conditional external/graduate credit and exceptions. Current LEP list does not name these AI programs; no Computer Science gateway is inherited. CMNS program-specific declaration groups omit the new AI name; generic college rules are preserved without inventing an internal-change procedure or overload threshold.
 
-## Full available course-content pass — 2026-10-11
+Across both degrees, 148 distinct actual current blocks yield 153 program observations: 150 description-based reviews and three explicitly limited Latin title judgments. `maryland_full_course_reviews` keeps exact block hashes, manually authored summaries and classifications; changed/missing blocks fail closed. New policy source guards compose with existing URL observers, preserving earlier rules. Scrapers do not emit curated audit certification. The current AIME chapter was also inspected and does not establish replacements for missing HCAI/CSAI entries.
 
-Reviewed all available exact current course blocks for this represented inventory. **60 course records have current-block dispositions; 25 missing entries or topic-specific versions remain unclassified.** Across both Maryland degrees, 148 distinct current blocks produce 153 program observations. Three Latin blocks have no description paragraph: their precise elementary/intermediate language titles support a explicitly limited human-context judgment; no unseen description is asserted. The remaining 150 program observations have full description-based review.
+## Exact remaining gaps
 
-The ordinary robots-aware chapter fetch found current HCAI and CSAI chapter URLs return HTTP 404. Other absent exact codes are not replaced by similar titles or former codes. Generic CMSC498/IMDM498/GEOG398 blocks do not certify particular topic versions, nor does generic PHIL438 certify PHIL438L. Current catalog restrictions, permissions, recommended preparation and repeat conditions remain enrollment metadata, not new fixed degree courses or automatic waivers. Mutually exclusive credit is not enough for identity merging.
+- Missing exact current description evidence for 25 represented records: CSAI101, CMSC141, CSAI220, CSAI221, CMSC142, CSAI102, CSAI103, CSAI104, CSAI216, CSAI473, CMSC498-CMSC498E, CMSC498-CMSC498Y, CSAI427, CSAI461, IMDM498-IMDM498E, INST436, CSAI370, CSAI424, CSAI432, CSAI460, GEOG398-GEOG398E, CSAI433, CSAI435, CSAI491, CSAI431. HCAI/CSAI chapters returned 404; absent exact and topic-version blocks cannot be replaced with generic parent or similarly named material. Sources: https://academiccatalog.umd.edu/search/?P=CMSC498, https://academiccatalog.umd.edu/search/?P=GEOG398, https://academiccatalog.umd.edu/search/?P=IMDM498, https://academiccatalog.umd.edu/undergraduate/colleges-schools/computer-mathematical-natural-sciences/computer-science/artificial-intelligence-computational-structures-ai-systems-major/
+- AI Algorithms specialization gives 12 total credits while its four required three-credit courses plus two electives and general specialization rule imply 18; no authoritative correction was found. Sources: https://academiccatalog.umd.edu/undergraduate/colleges-schools/computer-mathematical-natural-sciences/computer-science/artificial-intelligence-computational-structures-ai-systems-major/
 
-Logical metatheory is mathematics; geospatial/data algorithms are foundations; social AI courses are human context; linguistic and behavioral science are domain knowledge. Broad graphics/game/visualization or statistical-learning combinations retain mixed status. The dated language-reference paths keep their scope and conditions; updated current course metadata does not declare that reference current or settle its grading conflict.
+Public course sites and example syllabi remain unverified. Raw copyrighted responses and viewer captures are ignored local research material, not repository assets.
 
-The source-specific manifest stores hashes, original summaries and explicit judgments. Changed or missing blocks fail without emitting manual certifications. The rerunnable observer is registered in each program adapter. Validation: 51 focused tests, 44 actual chapter observations, isolated two-program SQLite export/static build, repeat ingest zero changes and clean integrity/foreign keys. Requirement-role counts are unchanged by this content pass. Comprehensive policy, exact role/identity and source-gap closure remain in progress.
+## Validation
+
+72 focused tests passed. Replayed 44 actual course-chapter observations and 14 new program-policy observations. Isolated two-program SQLite ingest/export/static build passed; second ingest changed zero records and integrity/foreign-key checks were clean. Manual BA profile: 10 fixed / 59 options / 52 contextual. Manual BSAI profile: 6 fixed / 79 options / 0 contextual. These checks validate the represented graph; they do not resolve the listed source gaps.

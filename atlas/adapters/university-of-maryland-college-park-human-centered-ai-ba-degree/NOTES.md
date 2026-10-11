@@ -1,73 +1,40 @@
-# Maryland AI curriculum research
+# Maryland Human-Centered Artificial Intelligence BA
 
-Reviewed 2026-10-10. Official catalog fetched through the robots-aware fetcher; raw HTML remains outside the repository. Parser validates title and table inventory, extracts actual rows, nested choices and approval footnotes, and emits only partial observations. It never refreshes the curated audit or launch evidence.
-
-Six-course specialization pools preserve the extra GVPT170 requirement and course-content approval footnotes.
-
-University-wide graduation/general education and linked college requirements remain unreviewed.
-
-Launch evidence: https://today.umd.edu/umd-to-launch-2-bachelors-degrees-to-explore-technical-human-dimensions-of-ai
+Reviewed 2026-10-11. **Primary audit blocked at the specific source gaps below.** All available represented exact course blocks, catalog tables and applicable public university/college rules have been read. Full independent second pass remains pending. Inventory `partial` and degree-audit status are separate.
 
 Catalog: https://academiccatalog.umd.edu/undergraduate/colleges-schools/arts-humanities/philosophy/human-centered-artificial-intelligence-major/
 
-## University/college closure and selected metadata — 2026-10-11
+## Requirements and manual identity check
 
-Before the public-viewer review below, the BA had **70 course observations, 69 requirement nodes and five explicitly classified learning outcomes**. University sources add minimum degree/residence/upper-level hours, major enrollment and GPA, General Education area counts and choices, lab/outside-major requirements, Big Question overlay, diversity alternatives, the 40-credit minimum, transfer acceptance versus applicability, transfer caps and levels, degree applications, incompletes, Pass-Fail and repeat rules. Approved term designation is a criterion, not an invented finite General Education pool.
+Manually transcribed all six technical and three human core identities plus explicit college MATH115: 10 fixed. Seven named specialization pools plus HCAI490 internship-alternative give 59 unique named options. GVPT170 remains conditional on Law/Policy; Language/Cognition needs at least two LING and two PHIL; approval footnotes retained. The 51 dated language references and conditional ARHU158 are contextual.
 
-ARHU sources add 39 upper-level credits, conditional first-year ARHU158, major grade/residence conditions, advising milestones and Global Engagement. Its proficiency option and three alternative routes are a choice tree, not cumulative requirements. The explicit MATH115 requirement is now a course observation; its official course block supplies name, credits, description and prerequisites. Official INST blocks add three more metadata observations. Five catalog program learning outcomes are short paraphrases, not career claims.
+Seven finite catalog specialization pools, capstone internship replacement, dated placement-dependent language paths and current Global Engagement alternatives were reviewed. The public plan permits proposing a custom specialization for case-by-case approval without publishing another finite pool. General Education is controlled by current official designations and overlap criteria, not a fabricated permanent list.
 
-The [Global Engagement page](https://arhu.umd.edu/academics/advising/global-engagement/) links a [language-sequence PDF viewer](https://drive.google.com/file/d/1Lk076FdbP8aXNku8kzuKZkkMnQeEZGkI/view?usp=sharing). The public viewer loaded, but its exact embedded `drive.usercontent.google.com/uc` download URL was disallowed by robots. Retrieval stopped; no alternate download or preview path was tried. Exact approved language sequences remain a concrete access gap. The examples on the college page are not promoted to a complete sequence inventory.
+Concrete standalone award; specializations are local conditional routes. No cross-list groups asserted: shared credit exclusions and one-sided joint-offering language do not establish reciprocal undergraduate identity, and topic versions remain distinct.
 
-Selected metadata: **two descriptions and four prerequisite/restriction statements**. The current INST listing has no blocks for listed INST430/431/432/433/436; metadata stays unknown without an inference of program withdrawal. Course enrollment restrictions and prerequisites remain visible, with no invented AI exception. Public course sites/syllabi and most other course metadata remain unknown. The record remains **partial** because of the sequence source barrier and unresolved applicability of restrictions to some listed options.
+The source-transcribed fixed/option sets are in `tests/test_maryland_policy_closure.py`; the full expected partition and subject totals are in the primary national ledger. Every represented identity is checked. No credit-exclusion relation is promoted to cross-list identity.
 
-## Ordinary public language viewer review — 2026-10-11
+## Course and policy evidence
 
-The prior sequence access gap is **partly resolved through the permitted public viewer**, not through the blocked download. Chrome's ordinary Google Drive viewer exposed readable page text and the rendered two-page document without a sign-in requirement. Page 1's heading/date, sequence rows, bold-underlined terminal courses, and placement/grading/ASL notes were inspected visually. Page 2 reiterates the three routes already mapped. No download, print, alternate preview, hidden app state or download-endpoint request was used. The existing `drive.usercontent.google.com/uc` robots denial remains in force.
+All available exact current blocks reviewed: 93 dispositions, with 28 absent exact entries or topic versions unclassified. Subject decisions distinguish programming/algorithms, mathematical theory, social analysis, domain practice and mixed content. Three Latin classifications explicitly use precise official titles because their complete blocks lack descriptions.
 
-The document is explicitly **September 2023**, although still linked by the current college page. Added **24 dated placement-dependent path notes and two context/condition notes**, with **51 concrete course codes and published credit amounts**. The BA now has **121 course observations and 95 requirement nodes**. These are alternative progression references, not 51 new universally required courses. Courses are codes-only with unknown names, descriptions and catalog prerequisites. Arrows do not become prerequisite metadata. Credit units use the already verified Maryland semester system; no path totals are invented.
+All available exact current description blocks and their prerequisite/corequisite, permission, restriction, recommended preparation, exclusion and repeat clauses were reviewed. Conditional access is preserved without importing prerequisites into fixed requirements or granting exceptions. General registration and college repeat/external-study policies are mapped. The linked public plan additionally establishes MATH115-or-higher preparation for HCAI121/HCAI200; full HCAI entries remain absent.
 
-The Chinese non-heritage path requires **CHIN102 and CHIN103** at its terminal, not either one; the KORA211/212 path is heritage-only. Both alternative Russian paths end at RUSS102. Historical Arabic104/105 renumbering is excluded from current course observations. FOLA138_/139_/148_/149_ and158_/159_ retain their literal suffix placeholders in notes, without fabricated concrete course identities. ASL has a qualified advising/availability rule but no verified fixed pool in this reference. Asterisked languages require online placement; other languages call for department consultation. Existing proficiency and non-language alternatives remain intact.
+Degree minimum 120 semester hours is source-established. Fixed course amounts, variable ranges, grouped quantities and selection counts stay distinct; unknown quantities are not inferred. University residence, upper-major credit, transfer caps/levels, repeat and overlap limits are mapped. ARHU 39 upper-level credits applies to fall-2024 college entrants; the older 45-credit webpage statement retains its historical cohort.
 
-### Exact remaining applicability gaps
+Reviewed current degree, General Education, transfer, academic-record, registration and progression rules, plus applicable college advising/declaration, exceptions, graduation and academic policies. Covered GPA/grades, residence, minimum/upper-level hours, final-major membership, general-education alternatives/overlap, transfer acceptance versus applicability, repeats, standing/clemency, approved plans, conditional external/graduate credit and exceptions. Current LEP list does not name these AI programs; no Computer Science gateway is inherited. Read both rendered pages of the public HCAI plan: benchmarks, college mathematics, conditional ARHU158 and custom proposal. Dated language grading/sequence applicability remains the precise college source gap.
 
-- **Source conflict:** the September2023 PDF says the final sequence course must be letter-graded with minimum D-. Both the current ARHU catalog and current Global Engagement page say all sequence courses may use Pass-Fail, subject to eligibility, major/minor and GenEd exclusions. Neither statement is silently chosen as the operative rule for the 2026–2027 degree. College clarification or a current replacement reference is needed.
-- **Scope:** the current policy permits a designated level of one language **or one level of two different languages**. The dated PDF lists one-language paths only; its examples do not certify every current two-language combination, language-level definition, suffix-specific offering or ASL path. The current page itself directs students to ARHU advising for required sequences.
-- Previously documented applicability of selected restricted major courses remains unresolved. Course metadata/outcomes/launch gaps remain separate from these requirement gaps. Status stays **partial**.
+Across both degrees, 148 distinct actual current blocks yield 153 program observations: 150 description-based reviews and three explicitly limited Latin title judgments. `maryland_full_course_reviews` keeps exact block hashes, manually authored summaries and classifications; changed/missing blocks fail closed. New policy source guards compose with existing URL observers, preserving earlier rules. Scrapers do not emit curated audit certification. The current AIME chapter was also inspected and does not establish replacements for missing HCAI/CSAI entries.
 
-`maryland_language_sequences.parse` is rerunnable against a reviewer-captured **visible page-one text** with row line breaks (plain text or AX `text` lines). It validates the edition, conditions, complete subject/path inventory, code order, conjunctions, heritage/placement labels and the visually reviewed terminal identities; it extracts credit amounts. A raw Drive HTML shell without rendered text fails closed. It makes no network requests, returns no audit/freshness/completeness, and does not imply unattended PDF retrieval works. The ignored local visible-text capture is `var/maryland-visible-language.txt`; synthetic changed-policy/credit/identity/heritage fixtures are committed. Raw source pages/PDFs are not committed.
+## Exact remaining gaps
 
-Validation: `uv run pytest -q tests/test_maryland_language_sequences.py tests/test_maryland_degree_policies.py` — **36 passed** (including available policy-source cache replays). An isolated one-program CLI ingest, SQLite/tree check and static build passed under `var/maryland-viewer-check/`; the maintained database was not changed.
+- Missing exact current description evidence for 28 represented records: HCAI100, HCAI120, HCAI121, HCAI200, HCAI300, HCAI301, HCAI410, JOUR389W, JOUR458A, INST430, INST431, INST432, INST433, INST436, HIST338F, PHIL438-PHIL438L, ARCH418J, COMM449A, HCAI490, ARAB106, ARAB107, ITAL121, ITAL122, KORA211, KORA212, LATN120, RUSS111, RUSS112. HCAI/CSAI chapters returned 404; absent exact and topic-version blocks cannot be replaced with generic parent or similarly named material. Sources: https://academiccatalog.umd.edu/search/?P=PHIL438, https://academiccatalog.umd.edu/undergraduate/colleges-schools/arts-humanities/philosophy/human-centered-artificial-intelligence-major/, https://drive.google.com/file/d/1Lk076FdbP8aXNku8kzuKZkkMnQeEZGkI/view?usp=sharing
+- Still-linked September 2023 one-language reference requires final letter grading (D- minimum), while current college sources allow eligible sequence courses Pass-Fail. Current application of that dated reference and complete designated levels for the two-language/ASL/suffix-specific paths require current college clarification. Public sources direct students to advising; the blocked download was not bypassed. Sources: https://drive.google.com/file/d/1Lk076FdbP8aXNku8kzuKZkkMnQeEZGkI/view?usp=sharing, https://arhu.umd.edu/academics/advising/global-engagement/
 
-### Degree correctness review — 2026-10-11
+The current public HCAI plan was visually read through the normal linked Drive viewer; see `research/degree-audit/maryland-public-plan-review.md`. No download, print, hidden state or alternate endpoint was used. Its undated status remains explicit. The September-2023 language reference was separately read through the permitted viewer; its exact embedded download remained robots-disallowed. `maryland_language_sequences.parse` accepts reviewed visible page-one text and fails on an unrendered Drive shell; it does not claim unattended PDF retrieval. Its 24 one-language paths provide 51 contextual codes, not 51 universal requirements. FOLA suffix placeholders are not invented identities; ASL and two-language combinations retain advising scope.
 
-The requirements introduction explicitly permits an internship in place of the capstone seminar. HCAI490 is therefore a named option, not universally fixed. The alternative has an uncoded internship note; no course or credit amount is invented. Current mapped roles become 9 fixed / 59 named options; MATH115 and college-language contextual records retain their unresolved roles pending applicability review.
+Public course sites and example syllabi remain unverified. Raw copyrighted responses and viewer captures are ignored local research material, not repository assets.
 
-This is a bounded requirement-role correction. Whole-degree correctness remains
-in progress; existing partial curriculum status and substantive source questions
-are preserved. Synthetic tests distinguish explicit choices from context, and
-current cached catalog replay agrees with the reviewed seed roles.
+## Validation
 
-### Individual subject review — 2026-10-11
-
-The course-metadata factory previously defaulted to AI/ML regardless of source
-content. Reviewed blocks now have exact-content guards and manual subject
-reviews; other parsed course observations default to unknown subject. Reviewed
-MATH content is mathematical theory; CMSC131/132/351 and INST326 are programming
-and algorithms; CMSC250 is discrete mathematics; CMSC422 is ML; INST204 is
-algorithmic-bias/social analysis; CMSC320 combines statistics, learning and
-systems and retains mixed subject status. Only records present in this degree
-receive the applicable review. Enrollment and credit-exclusion clauses remain
-verbatim metadata, not invented degree obligations or cross-list equivalences.
-
-Full degree correctness remains in progress. The technical BSAI's AI Algorithms
-12-versus-18-credit inconsistency and all prior policy questions remain explicit.
-
-## Full available course-content pass — 2026-10-11
-
-Reviewed all available exact current course blocks for this represented inventory. **93 course records have current-block dispositions; 28 missing entries or topic-specific versions remain unclassified.** Across both Maryland degrees, 148 distinct current blocks produce 153 program observations. Three Latin blocks have no description paragraph: their precise elementary/intermediate language titles support a explicitly limited human-context judgment; no unseen description is asserted. The remaining 150 program observations have full description-based review.
-
-The ordinary robots-aware chapter fetch found current HCAI and CSAI chapter URLs return HTTP 404. Other absent exact codes are not replaced by similar titles or former codes. Generic CMSC498/IMDM498/GEOG398 blocks do not certify particular topic versions, nor does generic PHIL438 certify PHIL438L. Current catalog restrictions, permissions, recommended preparation and repeat conditions remain enrollment metadata, not new fixed degree courses or automatic waivers. Mutually exclusive credit is not enough for identity merging.
-
-Logical metatheory is mathematics; geospatial/data algorithms are foundations; social AI courses are human context; linguistic and behavioral science are domain knowledge. Broad graphics/game/visualization or statistical-learning combinations retain mixed status. The dated language-reference paths keep their scope and conditions; updated current course metadata does not declare that reference current or settle its grading conflict.
-
-The source-specific manifest stores hashes, original summaries and explicit judgments. Changed or missing blocks fail without emitting manual certifications. The rerunnable observer is registered in each program adapter. Validation: 51 focused tests, 44 actual chapter observations, isolated two-program SQLite export/static build, repeat ingest zero changes and clean integrity/foreign keys. Requirement-role counts are unchanged by this content pass. Comprehensive policy, exact role/identity and source-gap closure remain in progress.
+72 focused tests passed. Replayed 44 actual course-chapter observations and 14 new program-policy observations. Isolated two-program SQLite ingest/export/static build passed; second ingest changed zero records and integrity/foreign-key checks were clean. Manual BA profile: 10 fixed / 59 options / 52 contextual. Manual BSAI profile: 6 fixed / 79 options / 0 contextual. These checks validate the represented graph; they do not resolve the listed source gaps.

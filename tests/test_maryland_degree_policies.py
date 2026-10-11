@@ -52,7 +52,8 @@ def test_curated_degree_scope_and_unknowns_remain_explicit(pid):
         assert {c['code'] for c in d['courses']} >= {'MATH115','ARHU158'}
     else:
         assert any('12-credit' in g and '18-credit' in g for g in d['curriculum_audit']['unresolved_requirements'])
-        assert any('limited-enrollment' in g for g in d['curriculum_audit']['unresolved_requirements'])
+        assert 'does not list either AI degree' in rules[pid+'-closure-lep-scope']['summary']
+        assert 'Computer Science gateway' in rules[pid+'-closure-lep-scope']['summary']
 
 
 CASES=[]

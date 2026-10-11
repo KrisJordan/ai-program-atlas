@@ -207,14 +207,15 @@ def test_maryland_capstone_requires_explicit_replacement_permission():
  args=dict(pid='test-ba',title='Human-Centered Artificial Intelligence',award='BA',url='https://example.edu/catalog')
  result=parse(html,**args)
  profile=requirement_profile(result)
- assert [profile[k]['count'] for k in ('required','options','unresolved')]==[1,1,1]
+ # The same source explicitly names college MATH115, so it is fixed.
+ assert [profile[k]['count'] for k in ('required','options','unresolved')]==[2,1,0]
  assert next(r for r in result['requirements'] if 'umd-hcai490' in r['course_ids'])['kind']=='alternative'
  assert len(result['courses'])==3  # No invented internship code.
  assert 'curriculum_audit' not in result
  with pytest.raises(ValueError):
   parse(html.replace('Students may replace this course with an internship.','An internship may be interesting.'),**args)
  p=json.loads(Path('data/programs/university-of-maryland-college-park-human-centered-ai-ba-degree.json').read_text())
- assert [requirement_profile(p)[k]['count'] for k in ('required','options')]==[9,59]
+ assert [requirement_profile(p)[k]['count'] for k in ('required','options')]==[10,59]
 
 
 def test_miami_bte_description_guard_never_emits_manual_review(monkeypatch):
@@ -445,7 +446,7 @@ def test_njit_required_subjects_and_enrollment_roles():
  assert len(NJIT_REQUIRED)==32
  profile=requirement_profile(p)
  assert profile['required']['count']==32 and profile['options']['count']==348
- assert profile['required']['classification']=={'reviewed':24,'mixed':7,'unclassified':0,'unreviewed':1}
+ assert profile['required']['classification']=={'reviewed':24,'mixed':7,'unclassified':1,'unreviewed':0}
  assert courses['MGMT116']['category']=='mathematics'
  assert courses['MGMT216']['category']=='mathematics'
  assert courses['OM375']['category']=='mathematics'
@@ -455,7 +456,7 @@ def test_njit_required_subjects_and_enrollment_roles():
  assert courses['FIN410']['category']=='ai_ml'
  assert courses['PHIL310']['category_review']['status']=='mixed'
  assert courses['FYSSEM']['credits']==0 and courses['FYSSEM']['category']=='other'
- assert 'category_review' not in courses['FYSSEM']
+ assert courses['FYSSEM']['category_review']['status']=='unclassified'
  assert 'No prerequisites' in courses['DS100']['prerequisites']
  assert courses['DS110']['prerequisites'] is None
  assert 'FIN 218' in courses['FIN320']['prerequisites']

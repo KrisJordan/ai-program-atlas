@@ -143,7 +143,8 @@ def parse(html, *, pid, title, award, url):
             req(slug(label),label,kind='note',parent=root['id'],summary=summary)
         math = course('MATH115',None,source,url,institution='umd',unit='semester_hours',category='mathematics')
         courses[math['id']] = math
-        next(n for n in nodes if n['id']==pid+'-college-requirements')['course_ids']=[math['id']]
+        college_math = next(n for n in nodes if n['id']==pid+'-college-requirements')
+        college_math.update(kind='all', title='Named college mathematics requirement', course_ids=[math['id']], summary='The catalog expressly includes MATH115 in the college requirements in addition to the 16-course major. Keep it separate from the technical-core subtotal; no individual substitution is presumed.')
         # Introductory prose is deliberately not interpreted from table titles alone.
         intro = ' '.join(text(n) for n in section.find_all(['p','li']) if not n.find_parent('table'))
         if 'internship' in intro.lower():

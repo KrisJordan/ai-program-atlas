@@ -18,3 +18,7 @@ def parse(html):
 from atlas.adapters.maryland_full_course_reviews import parsers as full_course_parsers
 SOURCE_PARSERS.update(full_course_parsers(PROGRAM_ID))
 SOURCES=tuple(dict.fromkeys(SOURCES+tuple(SOURCE_PARSERS)))
+
+from atlas.adapters.maryland_policy_closure import register as register_closure_policies
+SOURCE_PARSERS = register_closure_policies(SOURCE_PARSERS, PROGRAM_ID)
+SOURCES=tuple(dict.fromkeys(SOURCES+tuple(SOURCE_PARSERS)))

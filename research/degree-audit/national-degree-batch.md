@@ -272,3 +272,25 @@ All 44 named HIST option descriptions were read and independently classified fro
 ## NJIT FYS and art option — 2026-10-11
 
 Public FYS course goals support a reviewed unclassified orientation rather than an unreviewed record; its S-grade graduation requirement and retake rule apply to new first-time students, with zero credits independently sourced to the degree plan. AD333 develops art and visual communication, with actual restrictions retained. All 32 fixed descriptions/goals are now reviewed (24 primary, 7 mixed, 1 unclassified); the remaining incomplete inventory is in named options and unresolved degree-policy questions.
+
+## NJIT communication, literature and theater — 2026-10-11
+
+Integrated the separate 71-course review without changing requirement roles. Seventy explanatory descriptions and one explicitly limited exact-title review produce 66 primary, four mixed and one unclassified subject decisions. All 32 fixed and 188 option source-code records are now reviewed; 161 Rutgers-prefixed options remain unreviewed. The explicit STS 378/LIT 378 identity still reduces 349 option source records to 348 mapped identities. Whole-degree audit remains in progress; neither reviewed subject counts nor successful parser replays certify missing policies or descriptions.
+
+
+## Maryland primary closure — 2026-10-11
+
+Both degrees now have all accessible represented current course blocks and public
+policy sources reviewed. The BA college MATH115 correction produces a manual
+10/59/52 fixed/option/context partition; BSAI remains 6/79/0. Source-transcribed
+identity sets, the 51 dated language identities and current per-course subject
+dispositions establish the expected counts without treating prerequisites as
+fixed requirements. Public plan benchmarks, custom proposal and preparation are
+registered; college-specific load, repeat and grade rules remain scoped.
+
+Both primary entries are **blocked**, with exact missing current/topic entries
+and source contradictions listed individually. Dated language sequence/grading
+applicability and BSAI AI Algorithms' 12-versus-18 total remain unresolved.
+Permission requirements themselves are not a contradiction or a granted waiver.
+72 focused tests, 44 course and 14 policy source replays, isolated SQLite/build,
+repeat-zero and integrity checks pass. Full independent second pass remains pending.
