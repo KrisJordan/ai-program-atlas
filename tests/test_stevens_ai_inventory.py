@@ -27,7 +27,7 @@ def test_rendered_inventory_preserves_conditional_lab_crosslist_and_open_pools()
     assert nodes[PID+'-technical-electives']['count']==1
     assert len(nodes[PID+'-technical-electives']['course_ids'])==2
     assert courses['CS 558 / CPE 558']['name'] is None
-    assert nodes[PID+'-math-science-electives']['course_ids']==[]
+    assert nodes[PID+'-math-science-electives']['course_ids']==['stevens-en-250']
     assert nodes[PID+'-general-electives']['course_ids']==[]
     assert 'CS 501' not in courses and 'CS 396' not in courses
     assert not {'curriculum_audit','last_verified'} & r.keys()

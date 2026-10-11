@@ -53,7 +53,7 @@ def parse(html):
     require_phrases(math,['complete two Math/Science electives','Any 3-credit Physics (PEP), Chemistry (CH), Biology (BIO) or Mathematics (MA) course','required course in the degree program','equivalent to another course counted towards the degree','prior approval','following courses may also count'])
     value=clean(math.get_text(' ',strip=True));excluded=re.findall(r'MA \d+',value)
     extras=labels(math)
-    add('math-science-electives','Math/science electives','choose_courses',count=2,summary='Choose two 3-credit PEP, CH, BIO or MA courses, or the separately named additional options, with prior academic-advisor approval. Required and equivalent coursework is excluded. Published examples of excluded equivalents: '+', '.join(excluded)+'. This is an open eligibility rule, not an incomplete finite list.')
+    add('math-science-electives','Math/science electives','choose_courses',extras,count=2,summary='Choose two 3-credit PEP, CH, BIO or MA courses, or the separately named additional options, with prior academic-advisor approval. Required and equivalent coursework is excluded. Published examples of excluded equivalents: '+', '.join(excluded)+'. This is an open eligibility rule, not an incomplete finite list.')
     add('math-science-extra-options','Additional math/science options','note',extras,summary='These named courses may also satisfy the open math/science-elective rule; they are not the entire eligible pool.')
     tech=panel('Technical Electives');require_phrases(tech,['prior approval','from the following list'])
     m=re.search(r'complete (\d+) Technical electives',clean(tech.get_text(' ',strip=True)))

@@ -90,3 +90,17 @@ def test_optional_actual_public_description_replay(code):
         assert result['requirements'][0]['kind'] == 'note'
     if code == 'QF 102':
         assert result['courses'] == []
+
+
+def test_independent_named_role_union_does_not_promote_context_or_open_pools():
+    from atlas.curriculum_profile import requirement_profile
+    from atlas.degree_audit import audit_summary
+    p = json.loads(Path('data/programs/'+m.PID+'.json').read_text())
+    ledger = json.loads(Path('research/degree-audit/national-degree-batch.json').read_text())
+    entry = next(r for r in ledger['programs'] if r['program_id'] == m.PID)
+    assert [entry['expected_profile'][r]['count'] for r in ('required','options','unresolved')] == [24,30,25]
+    assert 'stevens-hass-101' in entry['expected_course_ids']['unresolved']
+    assert 'stevens-cs-545' in entry['expected_course_ids']['options']
+    assert 'stevens-hst-381' not in entry['expected_course_ids']['required']
+    assert requirement_profile(p)['options']['classification'] == dict(reviewed=24,mixed=6,unclassified=0,unreviewed=0)
+    audit_summary({'programs':[entry]}, [p])
