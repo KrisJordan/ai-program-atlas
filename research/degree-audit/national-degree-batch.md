@@ -25,10 +25,12 @@ course metadata parser pins exact reviewed block content, fails on change and
 never manufactures the manual review object.
 
 The main page still says 130–131 in its table and 130 in its highlight/sample;
-free electives say 11 while the sample allocates 4 + 6. It does not clarify reuse
-of prescribed/depth CSE courses inside the additional open elective allocation.
-Course prerequisites outside the displayed core are enrollment conditions, not
-silent additions. Those exact questions prevent whole-degree audit completion.
+free electives say 11 while the sample allocates 4 + 6. These numeric conflicts
+prevent whole-degree audit completion. Required, depth and additional electives
+remain separate allocations without presumed duplicate fulfillment. Non-core
+prerequisites are conditional enrollment rules; the current undergraduate catalog
+explicitly permits authorized permission or equivalent outside preparation. No
+blanket waiver or reuse decision is needed to represent these ordinary rules.
 
 ## Penn State University Park: empty graphs replaced; policy review in progress
 
@@ -297,7 +299,7 @@ repeat-zero and integrity checks pass. Full independent second pass remains pend
 
 ## Status semantics correction — 2026-10-11
 
-Drexel, USF and William & Mary return to `in_progress`: their genuine inaccessible/conflicting sources remain recorded, but accessible description or independent public-policy work remains. Lehigh retains `blocked` after all 48 represented descriptions and applicable public policy sources were read; its contradictory credit totals and reuse boundary are source questions rather than backlog. This correction changes progress reporting, not curricular facts.
+Drexel, USF and William & Mary return to `in_progress`: their genuine inaccessible/conflicting sources remain recorded, but accessible description or independent public-policy work remains. Lehigh retains `blocked` after all 48 represented descriptions and applicable public policy sources were read; its contradictory credit totals are source questions rather than backlog; separate allocations and conditional preparation do not themselves require an exception. This correction changes progress reporting, not curricular facts.
 
 ## Rutgers history publication — 2026-10-11
 
@@ -313,7 +315,7 @@ All 381 represented source-code records and currently available applicable publi
 
 The independent inventory is read directly from the displayed plan (32 named courses) and four approved tables (64 + 248 + 36 + 2 = 350 distinct pool codes). Removing fixed PHIL310 leaves 349 option source records; reciprocal STS378/LIT378 evidence removes one alias identity, giving **32 fixed / 348 option / 0 contextual**, with 381 source records and 380 mapped identities. Fixed categories: mathematics 4, AI 4, systems 2, human context 6, applications 8, other 8. Options: mathematics 1, human context 278, applications 41, other 28. Exact source-derived ID sets are in the ledger; these are inventory counts, not a student load or summed credit total.
 
-The primary audit now becomes **blocked**, not audited: PHIL310's duplicate-allocation applicability is unresolved; five current Rutgers history identities conflict with NJIT titles; seven exact Rutgers entries are absent; ecology laboratory R216206 is three credits in NJIT and one at Rutgers. The scalar stays null. Full descriptions, selected-topic details, syllabi and program outcome/date evidence remain explicitly missing where unavailable; bounded exact-title reviews do not fabricate them. Accessible unread research is no longer asserted as a blocker for this program.
+The primary audit remains **blocked**, not audited: five current Rutgers history identities conflict with NJIT titles; seven exact Rutgers entries are absent; ecology laboratory R216206 is three credits in NJIT and one at Rutgers. The scalar stays null. Full descriptions, selected-topic details, syllabi and program outcome/date evidence remain explicitly missing where unavailable; bounded exact-title reviews do not fabricate them. Accessible unread research is no longer asserted as a blocker for this program. The fixed three-credit PHIL 310 row and separate six-credit GER-300 allocation remain distinct; eligibility does not imply duplicate fulfillment. An exceptional petition is conditional, not a missing ordinary-plan decision.
 
 ## W&M public policy supplement — 2026-10-11
 

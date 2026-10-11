@@ -53,4 +53,5 @@ def test_degree_pool_profile_preserves_fixed_overlap_and_open_predicates():
  assert sum(len(r['course_ids']) for r in d['requirements'] if r['id'] in {PID+'-'+k for k in POOLS})==350
  assert all(c['credit_unit']=='semester_hours' for c in d['courses'])
  assert any(s['id']==PID+'-credit-definition' and s['source_date'] is None for s in d['sources'])
- assert any('PHIL 310' in q for q in d['curriculum_audit']['unresolved_requirements'])
+ assert not any('PHIL 310' in q for q in d['curriculum_audit']['unresolved_requirements'])
+ assert 'no duplicate fulfillment is assumed' in next(r['summary'] for r in d['requirements'] if r['id']==PID+'-total')
