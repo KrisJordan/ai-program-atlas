@@ -161,3 +161,7 @@ SOURCE_PARSERS = {SOURCES[0]: parse, SOURCES[1]: parse_award}
 from atlas.adapters.njit_degree_policies import SOURCE_PARSERS as POLICY_PARSERS
 SOURCE_PARSERS.update(POLICY_PARSERS)
 SOURCES = tuple(SOURCE_PARSERS)
+
+from atlas.adapters.njit_science_options import SOURCE_PARSERS as SCIENCE_PARSERS
+SOURCE_PARSERS.update(SCIENCE_PARSERS)
+SOURCES = tuple(SOURCE_PARSERS)
