@@ -1,6 +1,7 @@
 """Published parent evidence survives a clean build and every presentation surface."""
 import io
 import subprocess
+import shutil
 import tarfile
 from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
@@ -23,9 +24,14 @@ def parent_inventory(tmp_path_factory):
     """Exclude concurrent uncommitted research from this release-data regression."""
     root = Path(__file__).resolve().parents[2]
     folder = tmp_path_factory.mktemp('committed-parent-evidence')
-    archive = subprocess.run(['git', 'archive', 'HEAD', 'data', 'research/degree-audit'], cwd=root, check=True, capture_output=True).stdout
-    with tarfile.open(fileobj=io.BytesIO(archive)) as source:
-        source.extractall(folder, filter='data')
+    if (root/'.git').exists():
+        archive = subprocess.run(['git', 'archive', 'HEAD', 'data', 'research/degree-audit'], cwd=root, check=True, capture_output=True).stdout
+        with tarfile.open(fileobj=io.BytesIO(archive)) as source:
+            source.extractall(folder, filter='data')
+    else:
+        # Release source archives already contain a frozen snapshot and no .git.
+        shutil.copytree(root/'data', folder/'data')
+        shutil.copytree(root/'research/degree-audit', folder/'research/degree-audit')
     connection = db.connect(folder/'atlas.sqlite')
     db.migrate(connection)
     ingest_all(connection, folder/'data')

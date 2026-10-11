@@ -41,7 +41,8 @@ def test_case_manual_fixed_sets_and_intro_route_are_not_interchangeable():
             role=requirement_profile(only_course(p,cid))
             assert role['required']['count']==0 and role['options']['count']==1
         # Quantities describe two alternative routes, never three mandatory courses.
-        assert sum(r[k]['count'] for k in ['required','options','unresolved'])==len({c['id'] for c in p['courses']})
+        assert sum(r[k]['count'] for k in ['required','options','unresolved']) == r['identity']['mapped_identities']
+        assert sum(r[k]['source_record_count'] for k in ['required','options','unresolved']) == len({c['id'] for c in p['courses']})
 
 
 def test_cmu_and_penn_source_identified_data_structures_are_comparable_fixed_records():
