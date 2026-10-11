@@ -31,3 +31,5 @@ Michigan is no longer pending: its current handbook/course-table inventory is pa
 ### Additional confirmed program — 2026-10-11
 
 The separate Michigan Engineering Artificial Intelligence minor is now confirmed by an independently public Engineering news report, updated April9,2026. Its detailed curriculum is pending: the department entry and indexed committee proposal were unavailable, and no current requirements were inferred from the news. This adds a sixth pending inventory, rather than changing the five original unresolved records. It is not the UMSI Human-Centered AI minor. See its dedicated adapter notes.
+
+The specific Michigan CSE [Artificial Intelligence Minor page](https://cse.engin.umich.edu/academics/undergraduate/minors/artificial-intelligence-minor/) was newly discovered and attempted on 11 October 2026. The public reader returned 403. This is now the precise unverified curriculum target; discovery of its URL and search snippet does not resolve the pending inventory.
