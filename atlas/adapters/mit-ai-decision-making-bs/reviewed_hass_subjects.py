@@ -664,3 +664,32 @@ def observe_wgs_archive_detail(html):
                  description=description, units=units[1], source_text=source_text,
                  source_metadata=metadata, topic_context=topic_context,
                  prerequisites=prep[1].strip() if prep else None)]
+
+
+def observe_dlab_course(html):
+    """Read course-specific D-Lab fields without turning page anecdotes into dates."""
+    soup = BeautifulSoup(html, 'html.parser')
+    title = clean(soup.select_one('h1.page-header'))
+    article = soup.select_one('article.course')
+    body = article.select_one('.field--name-body') if article else None
+    info = article.select_one('.course-information') if article else None
+    if not title.startswith('D-Lab:') or body is None or info is None:
+        raise ValueError('D-Lab course identity or content missing')
+    fields = {}
+    for field in info.select('.field'):
+        label = field.select_one('.field--label')
+        value = field.select_one('.field--item')
+        if label is not None and value is not None:
+            fields[clean(label)] = clean(value)
+    if not fields.get('Course #') or not re.fullmatch(r'\d+-\d+-\d+', fields.get('Units (credit hours)', '')):
+        raise ValueError('D-Lab course number or unit statement changed')
+    prep_heading = next((p for p in body.find_all('p') if clean(p) == 'Prerequisites'), None)
+    prep = prep_heading.find_next_sibling('p') if prep_heading else None
+    if prep is None:
+        raise ValueError('D-Lab explicit prerequisite section missing')
+    description = clean(body)
+    if len(description) < 100:
+        raise ValueError('D-Lab actual description missing')
+    return [dict(code=fields['Course #'], name=title, term=None,
+                 description=description, prerequisites=clean(prep),
+                 units=fields['Units (credit hours)'], source_fields=fields)]

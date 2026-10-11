@@ -215,7 +215,7 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']['description_reviewed_records']==414
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==415
     assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
         o=next(o for o in entry(code)['observations'] if o.get('evidence_basis')=='official_title_only')
@@ -959,7 +959,7 @@ def test_urban_dated_title_permissions_and_mixed_domain_subjects():
         assert e['category']=='other' and e['status']=='mixed'
         assert e['candidate_categories']==['applications','human_context']
     for code in ['11.041','11.148','11.015[J]','11.025[J]']:
-        assert entry(code)['observations'][-1]['evidence_basis']=='official_title_only'
+        assert not any('ocw-' in o['source_id'] and o.get('evidence_basis')=='official_description' for o in entry(code)['observations'])
 
 
 def test_urban_actual_captures_replay_and_historical_unit_amount_is_guarded():
@@ -1426,3 +1426,25 @@ def test_wgs_archive_actual_pages_replay_and_do_not_transfer_terms_or_topics():
         assert review.matched_review(course,o,e['source_url'],MANIFEST)==e
         for wrong in [{**o,'term':'Fall 2026-2027'},{**o,'topic_context':['Different topic']},{**o,'description':o['description']+' Changed.'},{**o,'source_metadata':o['source_metadata']+' Prereq: Permission'}]:
             assert review.matched_review(course,wrong,e['source_url'],MANIFEST) is None
+
+
+def test_dlab_department_evidence_keeps_historical_travel_and_unknown_edition():
+    report=MANIFEST['dlab_department_review'];e=entry('11.025[J]')['observations'][-1]
+    assert len(report['upgraded_record_ids'])==1 and e['catalog_year'] is None
+    assert e['credits']==12 and e['units_text']=='3-2-7'
+    assert e['status']=='mixed' and e['candidate_categories']==['applications','human_context']
+    assert e['prerequisites'].startswith('None. Please attend the first class session')
+    assert any('2022–23' in n and 'conditional' in n for n in e['restrictions'])
+    assert any('catalog edition' in n for n in e['restrictions'])
+    with pytest.raises(ValueError):review.observe_dlab_course('<h1 class="page-header">D-Lab: Development</h1>')
+
+
+def test_dlab_actual_source_guards_units_cross_registration_and_class_size():
+    path=Path('/tmp/mit-hass-subjects/urban-dept-dlab-development.html')
+    if not path.exists():pytest.skip('Optional public D-Lab course capture')
+    cid=MANIFEST['dlab_department_review']['upgraded_record_ids'][0];row=MANIFEST['courses'][cid];e=row['observations'][-1]
+    o=review.observe_dlab_course(path.read_text())[0]
+    course=dict(id=cid,code=row['listed_code'],name=row['listed_name'],source_id=row['listed_source_id'])
+    assert review.matched_review(course,o,e['source_url'],MANIFEST)==e
+    for wrong in [{**o,'term':'Fall 2026'},{**o,'units':'3-2-9'},{**o,'source_fields':{**o['source_fields'],'Class Size':'10 students'}},{**o,'prerequisites':'Permission of instructor'}]:
+        assert review.matched_review(course,wrong,e['source_url'],MANIFEST) is None
