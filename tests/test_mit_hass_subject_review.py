@@ -215,7 +215,7 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']['description_reviewed_records']==380
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==384
     assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
         o=next(o for o in entry(code)['observations'] if o.get('evidence_basis')=='official_title_only')
@@ -1285,3 +1285,32 @@ def test_theater_visible_actual_capture_replays_and_withdraws_changed_permission
     assert review.matched_review(course,o,e['source_url'],MANIFEST)==e
     assert review.matched_review(course,{**o,'prerequisites':'Permission of instructor'},e['source_url'],MANIFEST) is None
     assert review.matched_review(course,{**o,'term':'Fall 2026'},e['source_url'],MANIFEST) is None
+
+
+def test_archaeology_descriptions_preserve_mixed_content_and_title_version_hold():
+    report=MANIFEST['ocw_archaeology_review']
+    assert len(report['upgraded_record_ids'])==4 and len(report['source_ids'])==3
+    assert report['public_syllabi_read']==3
+    for cid in report['upgraded_record_ids']:
+        e=MANIFEST['courses'][cid]['observations'][-1]
+        assert e['status']=='mixed' and e['category']=='other'
+        assert e['candidate_categories']==['applications','human_context']
+        assert e['prerequisites'] is None and e['credits'] is None
+    held=report['withheld_description_reads'][0]
+    assert held['listed_name']=='Human Evolution: Data from Palaeontology, Archaeology, and Materials Science'
+    assert MANIFEST['courses'][held['record_id']]['observations'][-1]['evidence_basis']=='official_title_only'
+    e=entry('3.094')['observations'][-1]
+    assert any('not a prerequisite' in note for note in e['restrictions'])
+
+
+def test_actual_archaeology_description_replay_rejects_changed_evidence():
+    report=MANIFEST['ocw_archaeology_review']
+    for cid in report['upgraded_record_ids']:
+        row=MANIFEST['courses'][cid];e=row['observations'][-1]
+        path=Path('/tmp/mit-hass-subjects/ocw-'+e['source_url'].rstrip('/').split('/')[-1]+'.html')
+        if not path.exists():pytest.skip('Optional public archaeology course captures')
+        o=review.observe_ocw_course(path.read_text())[0]
+        course=dict(id=cid,code=row['listed_code'],name=row['listed_name'],source_id=row['listed_source_id'])
+        assert review.matched_review(course,o,e['source_url'],MANIFEST)==e
+        for wrong in [{**o,'term':'Fall 2026'},{**o,'description':o['description']+' Changed.'},{**o,'name':'Different course'}]:
+            assert review.matched_review(course,wrong,e['source_url'],MANIFEST) is None
