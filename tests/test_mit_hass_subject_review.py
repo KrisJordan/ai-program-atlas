@@ -215,7 +215,7 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']['description_reviewed_records']==390
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==395
     assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
         o=next(o for o in entry(code)['observations'] if o.get('evidence_basis')=='official_title_only')
@@ -1355,4 +1355,33 @@ def test_cms_actual_sources_replay_and_withdraw_changed_prerequisites():
         o=(review.observe_ocw_syllabus if spec['parser']=='ocw_syllabus' else review.observe_ocw_course)(path.read_text())[0]
         course=dict(id=cid,code=row['listed_code'],name=row['listed_name'],source_id=row['listed_source_id'])
         assert review.matched_review(course,o,e['source_url'],MANIFEST)==e
+        assert review.matched_review(course,{**o,'prerequisites':'Permission required'},e['source_url'],MANIFEST) is None
+
+
+def test_concourse_observer_retains_corequisite_and_undated_source_fields():
+    raw='<h2>Core Concourse Classes</h2><div class="class"><div class="top">CC.110<span>CI-H</span></div><a class="title">Becoming Human</a><div class="teaser"><div class="text"><p>Prereq: None.<br>Coreq: CC.010 or CC.A10<br>Units: 3-6-3</p><p>Explores the question of the good life.</p></div></div></div>'
+    o=review.observe_concourse_subject(raw)[0]
+    assert o['code']=='CC.110' and o['term'] is None
+    assert o['prerequisites']=='None. Coreq: CC.010 or CC.A10' and o['units']=='3-6-3'
+    with pytest.raises(ValueError):review.observe_concourse_subject(raw.replace('Core Concourse Classes','Generic directory'))
+    with pytest.raises(ValueError):review.observe_concourse_subject(raw.replace('Explores the question of the good life.','Description missing'))
+    report=MANIFEST['concourse_department_review']
+    assert len(report['upgraded_record_ids'])==5
+    assert entry('CC.110')['observations'][-1]['credits']==12
+    assert entry('CC.111J/17.04J')['observations'][-1]['prerequisites'] is None
+    assert entry('CC.111J/17.04J')['observations'][-1]['credits'] is None
+    assert entry('CC.116')['observations'][-1]['evidence_basis']=='official_title_only'
+
+
+def test_concourse_actual_pages_replay_and_changed_eligibility_withdraws():
+    report=MANIFEST['concourse_department_review']
+    for cid in report['upgraded_record_ids']:
+        row=MANIFEST['courses'][cid];e=row['observations'][-1]
+        key=e['source_id'].removeprefix('mit-ai-hass-review-concourse-')
+        path=Path('/tmp/mit-hass-subjects/concourse-'+key+'.html')
+        if not path.exists():pytest.skip('Optional public Concourse detail captures')
+        o=review.observe_concourse_subject(path.read_text())[0]
+        course=dict(id=cid,code=row['listed_code'],name=row['listed_name'],source_id=row['listed_source_id'])
+        assert review.matched_review(course,o,e['source_url'],MANIFEST)==e
+        assert review.matched_review(course,{**o,'source_text':o['source_text']+' Eligibility changed.'},e['source_url'],MANIFEST) is None
         assert review.matched_review(course,{**o,'prerequisites':'Permission required'},e['source_url'],MANIFEST) is None

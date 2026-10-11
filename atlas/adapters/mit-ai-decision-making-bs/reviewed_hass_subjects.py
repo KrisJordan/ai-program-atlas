@@ -591,3 +591,34 @@ def observe_theater_semester_capture(payload):
         rows.append(dict(code=course['code'],name=clean(course['name']),term=capture['semester'],description=clean(' '.join(paragraphs[1:])),units=metadata[2],source_unit_line=clean(paragraphs[0]),prerequisites=metadata[1],locator='Visible semester selection / expanded '+course['code']+' course panel'))
     if not rows:raise ValueError('Theater visible course panels missing')
     return rows
+
+
+def observe_concourse_subject(html):
+    """Read public Concourse detail fields, without assigning a catalog year."""
+    soup = BeautifulSoup(html, 'html.parser')
+    if not any(clean(h) == 'Core Concourse Classes' for h in soup.find_all('h2')):
+        raise ValueError('Concourse detail heading missing')
+    block = soup.select_one('.class')
+    top = block.select_one('.top') if block else None
+    title = block.select_one('.title') if block else None
+    body = block.select_one('.teaser .text') if block else None
+    if top is None or title is None or body is None:
+        raise ValueError('Concourse identity or description fields missing')
+    for flag in top.find_all('span'):
+        flag.decompose()
+    code = clean(top)
+    if not re.fullmatch(r'(?:CC|21H)\.\d+(?:/(?:\d+|CC|21H)\.\d+)?', code):
+        raise ValueError('Concourse printed course label changed')
+    text = clean(body)
+    start = re.search(r'\b(?:Explores (?:the question|questions|the ambitions)|Students read early modern|This course surveys)\b', text)
+    if start is None:
+        raise ValueError('Concourse subject description missing or changed')
+    description = text[start.start():]
+    if description.endswith(' L. Rabieh'):
+        description = description[:-len(' L. Rabieh')]
+    metadata = text[:start.start()]
+    prep = re.search(r'Prereq:\s*(.+?)(?=\s+Units:|$)', metadata)
+    units = re.search(r'Units:\s*(\d+-\d+-\d+)(?:\s|$)', metadata)
+    return [dict(code=code, name=clean(title), term=None, description=description,
+                 prerequisites=prep.group(1).strip() if prep else None,
+                 units=units.group(1) if units else None, source_text=text)]
