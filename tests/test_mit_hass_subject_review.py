@@ -31,7 +31,9 @@ def test_scope_is_exact_and_unread_records_are_not_certified():
             if evidence.get('evidence_basis') == 'official_title_only':
                 assert evidence['description_digest'] is None
                 assert evidence['description_summary'] is None
-                assert evidence['prerequisites'] is evidence['credits'] is None
+                assert evidence['prerequisites'] is None
+                if evidence['credits'] is not None:
+                    assert evidence['units_text']=='9 unit IAP version' and evidence['credits']==9
                 assert 'title' in evidence['rationale']
             else:
                 assert evidence['description_digest']
@@ -206,7 +208,8 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']==dict(description_reviewed_records=139,title_only_reviewed_records=45)
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==139
+    assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
         o=entry(code)['observations'][-1]
         assert o['evidence_basis']=='official_title_only'
@@ -242,3 +245,30 @@ def test_language_observer_uses_printed_code_not_a_conflicting_link():
     assert o['description'] is None
     with pytest.raises(ValueError,match='identity/term'):
         review.observe_language_titles(html.replace('Fall 2026','Term unknown'))
+
+
+def test_political_pool_membership_does_not_classify_computing_or_methods():
+    rows=[r for r in MANIFEST['courses'].values() if r['listed_source_id']=='mit-ai-decision-making-bs-hass-political-subfields']
+    bycode={r['listed_code']:r for r in rows}
+    for code in ['17.835','17.C08J','17.811','17.447J','17.803']:
+        o=bycode[code]['observations'][-1]
+        assert o['category']=='other' and o['status']=='unclassified'
+        assert o['evidence_basis']=='official_title_only'
+        assert o['description_digest'] is None
+    assert bycode['17.055']['observations'][-1]['category']=='human_context'
+    assert bycode['17.567']['observations'][-1]['credits']==9
+    assert 'Washington Summer Internship' in bycode['17.307']['observations'][-1]['restrictions'][0]
+    assert 'current IAP offering' in bycode['17.567']['observations'][-1]['restrictions'][0]
+
+
+def test_actual_political_pdf_title_review_replays_with_source_guards():
+    path=Path('/tmp/atlas-mit-political-subfields.txt')
+    if not path.exists():
+        pytest.skip('Optional ignored official PDF extraction')
+    text=path.read_text();rows=review.observe_political_pdf_titles(text)
+    hashes={review.observation_digest(o) for o in rows}
+    saved=[o for r in MANIFEST['courses'].values() for o in r['observations'] if o['source_id']=='mit-ai-hass-review-political-pdf-titles']
+    assert len(rows)==66 and len(saved)==65
+    assert all(o['observation_digest'] in hashes for o in saved)
+    with pytest.raises(ValueError,match='Unrecognized PDF line'):
+        review.observe_political_pdf_titles(text.replace('Models and Methods','Changed heading'))

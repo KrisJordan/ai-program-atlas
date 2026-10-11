@@ -243,3 +243,22 @@ def observe_language_titles(html):
     if not rows:
         raise ValueError('Global Languages schedule rows missing')
     return rows
+
+
+def observe_political_pdf_titles(text):
+    """Re-observe the dated, public PDF titles without inheriting pool taxonomy."""
+    import importlib.util
+    path=Path(__file__).with_name('political_pdf.py')
+    spec=importlib.util.spec_from_file_location('mit_political_title_source',path)
+    source=importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(source)
+    parsed=source.parse_text(text)
+    rows=[]
+    for c in parsed['courses']:
+        restrictions=[n['summary'] for n in parsed['requirements']
+                      if n.get('title','').startswith('Conditional enrollment:') and c['id'] in n.get('course_ids',[])]
+        rows.append(dict(code=c['code'],name=c['name'],description=None,prerequisites=None,
+                         credits=c['credits'],units='9 unit IAP version' if c['credits']==9 else None,
+                         term='Dated reference; URL says Updated July10 2024; no printed document date',
+                         restrictions=restrictions))
+    return rows
