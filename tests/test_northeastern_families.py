@@ -62,6 +62,12 @@ def test_reviewed_variant_reconstruction_preserves_entire_original_graph(pid):
     # The independent source/role/delta tests in test_northeastern_science_corequisites
     # verify these additions; every original degree node still matches its hash.
     rows=[r for r in rows if r not in science]
+    # New source-scoped conditional CSSH transfer nodes are replayed in the
+    # college-policy suite; exclude only these five non-course additions.
+    transfer=[r for r in rows if r['source_id']==pid+'-cssh-transfer-policy']
+    if transfer:
+        assert len(transfer)==5 and all(r['kind']=='note' and not r['course_ids'] for r in transfer)
+        rows=[r for r in rows if r not in transfer]
     if 'business-administration' in pid:
         # The reviewed follow-up adds independent concentration-source subtrees
         # and two main-page selection nodes; test those in the concentration suite.

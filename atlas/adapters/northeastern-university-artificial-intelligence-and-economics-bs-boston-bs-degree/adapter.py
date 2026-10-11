@@ -78,3 +78,8 @@ parse, SOURCE_PARSERS = register_cs1802(parse, SOURCE_PARSERS, PROGRAM_ID)
 from atlas.adapters.northeastern_college_policies import KHOURY_URL, parse_khoury_policy
 SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + (KHOURY_URL,)))
 SOURCE_PARSERS = {**SOURCE_PARSERS, KHOURY_URL: lambda html: parse_khoury_policy(html, program_id=PROGRAM_ID)}
+
+# Officially documented CSSH participation; transfer rules stay conditional.
+from atlas.adapters.northeastern_college_policies import CSSH_TRANSFER_URL, parse_cssh_transfer
+SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + (CSSH_TRANSFER_URL,)))
+SOURCE_PARSERS = {**SOURCE_PARSERS, CSSH_TRANSFER_URL: lambda html: parse_cssh_transfer(html, program_id=PROGRAM_ID)}

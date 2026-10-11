@@ -66,3 +66,31 @@ def test_all24_registered_adapters_preserve_scoped_reviewed_policy_graph():
             observed=m.SOURCE_PARSERS[KHOURY_URL](cache.read_text())['requirements'];lookup={r['id']:r for r in stored}
             for r in observed:assert all(lookup[r['id']][k]==v for k,v in r.items())
     assert count==24
+
+
+def cssh_document():
+    return '''<main id="content"><h1>Transfer Credit Guidelines</h1><p>Students must petition to have the credit count; petitions are reviewed by the Office of the Provost. Before registering for any courses at an institution outside of Northeastern, keep an approved petition on file; requests after a student has enrolled or completed the coursework potentially may not be approved. Credits must come from an approved and accredited institution. Students must earn a C or higher. Pass/fail courses will not transfer. Award the number of credits as the other institution attributes to the course or less. A maximum of 80 credits from a four-year institution and 60 credits from a two-year institution (combined total of 80). Courses may not be Remedial/Developmental/ESL/Physical Education/Non-academic. Students have up to one semester after matriculation to finalize transfer credit. Submit a course description and syllabus for evaluation, with an official, approved evaluation from a Northeastern University evaluator. Provide an official transcript in its original sealed envelope. Opened transcripts cannot be accepted; electronic records are emailed directly to your academic advisor.</p></main>'''
+
+
+def test_cssh_transfer_limits_are_conditional_and_semantic_changes_fail():
+    from atlas.adapters.northeastern_college_policies import parse_cssh_transfer
+    p=parse_cssh_transfer(cssh_document(),program_id='test')
+    assert len(p['requirements'])==5 and not p['courses']
+    assert all(r['kind']=='note' and not r['course_ids'] for r in p['requirements'])
+    assert 'does not itself assign' in p['requirements'][0]['summary']
+    for old,new in [('C or higher','D or higher'),('Pass/fail courses will not transfer','Pass/fail courses will transfer'),('combined total of 80','combined total of 100'),('Transfer Credit Guidelines','Other rules')]:
+        assert old in cssh_document()
+        with pytest.raises(ValueError):parse_cssh_transfer(cssh_document().replace(old,new),program_id='test')
+
+
+def test_five_explicit_cssh_partners_register_only_conditional_transfer_rules():
+    from atlas.adapters.northeastern_college_policies import CSSH_TRANSFER_URL
+    expected={'economics','sociology','criminal-justice','philosophy','international-affairs'}
+    cache=ROOT/'.cache/research/degree-audit-northeastern/home-12.html'
+    for slug in expected:
+        pid=f'northeastern-university-artificial-intelligence-and-{slug}-bs-boston-bs-degree'
+        p=json.loads((ROOT/'data/programs'/f'{pid}.json').read_text());m=import_module('atlas.adapters.'+pid+'.adapter')
+        rows={r['id']:r for r in p['requirements'] if r['source_id']==pid+'-cssh-transfer-policy'}
+        assert len(rows)==5 and all(r['kind']=='note' and not r['course_ids'] for r in rows.values())
+        assert CSSH_TRANSFER_URL in m.SOURCES
+        if cache.exists():assert {r['id']:r for r in m.SOURCE_PARSERS[CSSH_TRANSFER_URL](cache.read_text())['requirements']}==rows

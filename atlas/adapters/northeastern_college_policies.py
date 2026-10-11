@@ -68,3 +68,33 @@ def parse_khoury_policy(html,*,program_id):
         need(section(panel,title),*guards)
         rows.append(row(program_id+'-req-policy-khoury-'+key,title,summary,root))
     return dict(id=program_id,courses=[],requirements=rows,curriculum_status='partial',notes=['Conditional Khoury policy observation; no home assignment, course enrollment, category review or complete audit is inferred.'])
+
+CSSH_TRANSFER_URL='https://cssh.northeastern.edu/transfer-credit-guidelines/'
+
+
+def parse_cssh_transfer(html,*,program_id):
+    soup=BeautifulSoup(html,'html.parser')
+    for node in soup.find_all(['nav','aside','script','style','footer']):node.decompose()
+    panel=soup.find('main',id='content');heading=panel.find('h1') if panel else None
+    if heading is None or text(heading)!='Transfer Credit Guidelines':raise ValueError('Expected CSSH transfer policy identity/panel missing')
+    prose=text(panel)
+    need(prose,'must petition to have the credit count','reviewed by the Office of the Provost',
+         'Before registering for any courses at an institution outside of Northeastern',
+         'approved petition on file','after a student has enrolled or completed the coursework potentially may not be approved',
+         'from an approved and accredited','earn a C or higher','Pass/fail courses will not transfer',
+         'number of credits as the other institution attributes to the course or less',
+         'A maximum of 80 credits from a four-year institution and 60 credits from a two-year institution (combined total of 80)',
+         'may not be Remedial/Developmental/ESL/Physical Education/Non-academic',
+         'up to one semester after matriculation to finalize transfer credit',
+         'course description and syllabus for evaluation','official, approved evaluation from a Northeastern University evaluator',
+         'official transcript','original sealed envelope','Opened transcripts cannot be accepted',
+         'emailed directly to your academic advisor')
+    sid=program_id+'-cssh-transfer-policy';base=program_id+'-req-policy-cssh-transfer'
+    claims=[
+      ('','Conditional CSSH transfer-credit scope','Apply these published CSSH guidelines only when the student’s college/advising and transfer circumstances make them applicable. CSSH participation in a combined major does not itself assign a home college.'),
+      ('petition','Post-matriculation transfer petition','Before outside registration, petition through the academic advisor for Provost review and keep the approved petition on file. Deficiency, unavailable relevant study or other permitted circumstances may support a request. A petition after enrollment/completion may not be approved; permission is not automatic.'),
+      ('eligibility','Eligible transfer coursework','Use an approved accredited institution, academic-credit coursework and grade C or higher; pass/fail and remedial, developmental, ESL, physical-education or nonacademic courses do not qualify. Credit awarded is no more than the originating institution’s course credit and can be less.'),
+      ('limits','Transfer limits and finalization','The page permits at most eighty credits from a four-year institution or sixty from a two-year institution, with a combined maximum of eighty. Finalize transfer credit within one semester after matriculation. Preserve these published scopes alongside any degree-specific residency rule; this is not permission for a particular transfer.'),
+      ('evaluation','Evaluation and official records','Obtain an official approved Northeastern evaluation before petition consideration; for an unlisted course provide its description and syllabus to the advisor for departmental evaluation. After completion submit the official transcript promptly, in an unopened sealed envelope or sent electronically directly to the advisor. Opened transcripts are not accepted.')]
+    rows=[dict(id=base+('-'+key if key else ''),parent_id=base if key else None,title=title,kind='note',count=None,credits=None,credit_unit='unknown',category='other',source_id=sid,source_text=None,summary=summary,course_ids=[]) for key,title,summary in claims]
+    return dict(id=program_id,courses=[],requirements=rows,curriculum_status='partial',notes=['Conditional CSSH transfer-policy observation; no home-college assignment, course equivalence or approval inferred.'])
