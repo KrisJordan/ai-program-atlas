@@ -448,3 +448,28 @@ def test_science_statistics_and_bioinformatics_content_scope(code,expected,statu
     assert category(code,d['name'],d['guard'])==expected
     assert category(code,d['name'],'New subject content')=='other'
     if code=='BINF 6310':assert set(d['candidate_categories'])=={'foundations','applications'}
+
+
+@pytest.mark.parametrize('code,expected', [('ENVR 2502','mathematics'),('HSCI 1000','other'),('HSCI 2000','other'),('PHTH 1260','human_context'),('PHTH 1261','human_context'),('PHTH 2300','human_context'),('PHTH 2350','applications'),('PHTH 2515','human_context'),('PHTH 4120','human_context'),('PHTH 4202','applications'),('PHTH 4540','applications'),('PHIL 1165','human_context')])
+def test_health_context_does_not_override_actual_content(code,expected):
+    d=CATEGORY_DECISIONS[code]
+    assert category(code,d['name'],d['guard'])==expected
+    assert category(code,'New identity',d['guard'])=='other'
+    assert category(code,d['name'],'Entirely different course content')=='other'
+
+
+def test_health_science_manual_roles_preserve_statistics_bundle_and_recommendations():
+    from atlas.families import resolve_program
+    from atlas.curriculum_profile import requirement_profile
+    pid='northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree'
+    p=json.loads((ROOT/'data/programs'/f'{pid}.json').read_text())
+    f=json.loads((ROOT/'data/families/northeastern-ai-combined-degrees.json').read_text())
+    result=requirement_profile(resolve_program(p,f));cs={c['code']:c for c in p['courses']}
+    assert result['required']['count']==26 and result['options']['count']==26 and result['unresolved']['count']==0
+    assert all('category_review' in c for c in cs.values())
+    assert cs['ENVR 2502']['credits']==0
+    assert cs['PHTH 2350']['prerequisites'] is None
+    assert 'PHTH 2300' not in (cs['PHTH 4540']['prerequisites'] or '')
+    assert 'ENGW 3302' in cs['PHTH 4540']['prerequisites']
+    assert any('recommended' in n and 'PHTH 2350' in n for n in p['notes'])
+    assert 'EECE 2322' not in cs  # No elective pool copied from another variant.

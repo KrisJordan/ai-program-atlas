@@ -1056,6 +1056,13 @@
           "locator": "Exact conditional academic progression, major entry/home-change and graduation sections; current advising scope, not a catalog-year assignment.",
           "checked_at": "2026-10-11T03:31:07+00:00",
           "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/phth/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: PHTH 2515",
+          "checked_at": "2026-10-11T00:07:05+00:00",
+          "access_status": "accessible"
         }
       ],
       "checks": {
@@ -1064,7 +1071,7 @@
         "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
         "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant. Independently verified the explicit CS 1800/1802 corequisite pair and degree preamble; CS 1802 is now nested beneath CS 1800. Other prerequisite alternatives are not additional degree obligations.",
         "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
-        "classification": "Current represented inventory: 180 course observations; 29 individually reviewed subject classifications, 2 explicitly mixed, 3 source-inspected but unclassified, and 146 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
+        "classification": "Current represented inventory: 180 course observations; 30 individually reviewed subject classifications, 2 explicitly mixed, 3 source-inspected but unclassified, and 145 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
         "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
         "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed. The shared declaration deadline, conditional change-major eligibility/advising and concentration catalog-year rules are now source-parsed course-free criteria; college-specific conditional transfer/progression mappings remain active. Current Khoury advising progression, graduation and conditional transfer/home-change rules now appear in eleven source-scoped course-free nodes. They remain conditional and do not infer assignment or override catalog/cohort scope. Other partner-college policy work continues."
       },
@@ -1100,6 +1107,14 @@
             "https://catalog.northeastern.edu/course-descriptions/eece/",
             "https://catalog.northeastern.edu/course-descriptions/inpr/",
             "https://catalog.northeastern.edu/course-descriptions/mktg/"
+          ]
+        },
+        {
+          "issue": "Unreviewed selected health sciences classifications required source-content verification.",
+          "correction": "Exact-code review corrections: PHTH 2515: other → human_context",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/phth/"
           ]
         }
       ],
@@ -3178,20 +3193,125 @@
           "locator": "Exact conditional academic progression, major entry/home-change and graduation sections; current advising scope, not a catalog-year assignment.",
           "checked_at": "2026-10-11T03:31:07+00:00",
           "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/hsci/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: HSCI 1000, HSCI 2000",
+          "checked_at": "2026-10-11T00:12:40+00:00",
+          "access_status": "accessible"
         }
       ],
       "checks": {
         "degree_identity": "Official catalog identity and exact award/campus are retained as Artificial Intelligence and Health Science, BS (Boston). Current official page retrieved; catalog/cohort scope remains explicit.",
-        "required_and_choices": "Individual structural source interpretation is in progress. Parser replay/family resolution alone is not independent validation. Existing all/choice/bundle graph retained at this checkpoint.",
-        "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
-        "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant. Independently verified the explicit CS 1800/1802 corequisite pair and degree preamble; CS 1802 is now nested beneath CS 1800. Other prerequisite alternatives are not additional degree obligations.",
-        "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
-        "classification": "Current represented inventory: 52 course observations; 34 individually reviewed subject classifications, 1 explicitly mixed, 3 source-inspected but unclassified, and 14 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
-        "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
-        "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed. The shared declaration deadline, conditional change-major eligibility/advising and concentration catalog-year rules are now source-parsed course-free criteria; college-specific conditional transfer/progression mappings remain active. Current Khoury advising progression, graduation and conditional transfer/home-change rules now appear in eleven source-scoped course-free nodes. They remain conditional and do not infer assignment or override catalog/cohort scope. Other partner-college policy work continues."
+        "required_and_choices": "Full primary requirements panel independently transcribed:26 fixed identities and 26 named options. The common twelve computing/math/AI identities, CS 2484, four fixed PHTH courses, eight science/psychology identities and integrative DS 4420 form the fixed set. Three public-health core pairs remain distinct alternatives; calculus, writing, philosophy and statistics are separate choices. ENVR 2500/2501/2502 forms one complete statistics route, with the zero-hour recitation included; it does not make all seven statistics course records required. Home-college orientation/co-op choices retain their conditions.",
+        "elective_pools": "Four upper-division elective hours retain the exact CS/CY/DS level ranges/exclusions plus HSCI/PHTH 4000-or-higher eligibility. No unnamed course pool is invented. Sixteen general-elective hours remain explicit, and named choices count identities without assuming a student selects every option.",
+        "prerequisites": "All 52 represented descriptions and registration fields reviewed. PHTH 2350 recommends 1260 but expressly does not require it; PHTH 4540 likewise recommends 2300/2350 separately from its actual C-minimum writing prerequisite. PHTH 4202 permits multiple C-minimum statistics alternatives; these stay conditional eligibility, not additional universal obligations. Exact degree concurrence maps CS 1802; explicitly listed science/statistics bundles preserve their source roles.",
+        "credits_and_units": "The source degree requires 135 semester hours and sixteen general-elective hours. Statistics routes are 4–5 hours, with ENVR 2502 known zero. The PHTH core, statistics and science groups require C or higher; students taking HSCI 1000/2000 must also earn C or higher. This does not invent a C minimum in every unrelated AI course. Course facts and aggregate bundle credits remain separate.",
+        "classification": "Current represented inventory: 52 course observations; 46 individually reviewed subject classifications, 1 explicitly mixed, 5 source-inspected but unclassified, and 0 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
+        "family_composition": "Every shared computing/AI unit and placement policy verified in this degree panel. CS 2484 HCI, advanced DS 4420 integration, required health/science courses and specific choices remain local. No Khoury named elective courses are imported from other family variants; this degree instead publishes its own upper-division range criterion.",
+        "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed. The shared declaration deadline, conditional change-major eligibility/advising and concentration catalog-year rules are now source-parsed course-free criteria; college-specific conditional transfer/progression mappings remain active. Current Khoury advising progression, graduation and conditional transfer/home-change rules now appear in eleven source-scoped course-free nodes. They remain conditional and do not infer assignment or override catalog/cohort scope. Other partner-college policy work continues. The full concrete Health Science panel has now been reread. Exact Bouvé/Khoury applicability and remaining public Bouvé policy mapping remain active; subject work is complete, not a whole-degree certification."
       },
-      "expected_profile": null,
-      "expected_course_ids": null,
+      "expected_profile": {
+        "required": {
+          "count": 26,
+          "categories": {
+            "foundations": 5,
+            "mathematics": 3,
+            "ai_ml": 2,
+            "systems": 2,
+            "human_context": 2,
+            "applications": 11,
+            "electives": 0,
+            "other": 1
+          }
+        },
+        "options": {
+          "count": 26,
+          "categories": {
+            "foundations": 0,
+            "mathematics": 9,
+            "ai_ml": 0,
+            "systems": 0,
+            "human_context": 10,
+            "applications": 2,
+            "electives": 0,
+            "other": 5
+          }
+        },
+        "unresolved": {
+          "count": 0,
+          "categories": {
+            "foundations": 0,
+            "mathematics": 0,
+            "ai_ml": 0,
+            "systems": 0,
+            "human_context": 0,
+            "applications": 0,
+            "electives": 0,
+            "other": 0
+          }
+        }
+      },
+      "expected_course_ids": {
+        "required": [
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-cs-1800",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-cs-1802",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-cs-2000",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-cs-2001",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-cs-2100",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-cs-2101",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-cs-3200",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-ds-3500",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-ds-3000",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-ds-4200",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-ds-4300",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-ds-4400",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-cs-2484",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-phth-2515",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-phth-4120",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-phth-4202",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-phth-4540",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-biol-1111",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-biol-1112",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-biol-1113",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-biol-1114",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-chem-1161",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-chem-1162",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-chem-1163",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-psyc-1101",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-ds-4420"
+        ],
+        "options": [
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-cs-1200",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-hsci-1000",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-inpr-1000",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-cs-1210",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-hsci-2000",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-math-1341",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-math-1241",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-engw-1111",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-engw-1102",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-engw-3302",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-engw-3315",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-phth-1260",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-phth-1261",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-phth-2300",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-phth-2301",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-phth-2350",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-phth-2351",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-econ-2350",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-envr-2500",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-envr-2501",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-envr-2502",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-math-3081",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-phth-2210",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-psyc-2320",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-phil-1145",
+          "northeastern-university-artificial-intelligence-and-health-science-bs-boston-bs-degree-phil-1165"
+        ],
+        "unresolved": []
+      },
       "discrepancies": [
         {
           "issue": "Legacy subject-prefix/title heuristics misclassified concrete courses: CS 1200 foundations -> other; CS 1210 foundations -> other; CS 1800 foundations -> mathematics; CS 2484 foundations -> applications; DS 3000 ai_ml -> mathematics; DS 4200 foundations -> other",
@@ -3237,6 +3357,17 @@
           "evidence_urls": [
             "https://catalog.northeastern.edu/course-descriptions/envr/"
           ]
+        },
+        {
+          "issue": "Unreviewed selected health sciences classifications required source-content verification.",
+          "correction": "Exact-code review corrections: PHTH 1260: other → human_context; PHTH 1261: other → human_context; PHTH 2300: other → human_context; PHTH 2301: other → human_context; PHTH 2350: other → applications; PHTH 2351: other → applications; PHTH 2515: other → human_context; PHTH 4120: other → human_context; PHTH 4202: other → applications; PHTH 4540: other → applications; ENVR 2502: other → mathematics",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/envr/",
+            "https://catalog.northeastern.edu/course-descriptions/hsci/",
+            "https://catalog.northeastern.edu/course-descriptions/phil/",
+            "https://catalog.northeastern.edu/course-descriptions/phth/"
+          ]
         }
       ],
       "blockers": [
@@ -3245,7 +3376,7 @@
           "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-health-science-bs-bos/"
         }
       ],
-      "correction_status": "First category and parser corrections applied; remaining accessible individual review continues.",
+      "correction_status": "All 52 represented course identities, subject decisions, source credits/eligibility and independent 26/26 role/category partition reviewed. Applicable college-policy mapping remains in_progress; no completed degree audit claimed.",
       "second_pass_status": "pending"
     },
     {
@@ -5227,6 +5358,20 @@
           "locator": "Exact conditional academic progression, major entry/home-change and graduation sections; current advising scope, not a catalog-year assignment.",
           "checked_at": "2026-10-11T03:31:07+00:00",
           "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/hsci/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: HSCI 1000, HSCI 2000",
+          "checked_at": "2026-10-11T00:12:40+00:00",
+          "access_status": "accessible"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/phil/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact individually reviewed course blocks: PHIL 1165",
+          "checked_at": "2026-10-10T23:58:22+00:00",
+          "access_status": "accessible"
         }
       ],
       "checks": {
@@ -5235,7 +5380,7 @@
         "elective_pools": "Source ranges, named options and approval conditions require individual review; this checkpoint does not certify full eligible-pool coverage.",
         "prerequisites": "The reviewed subject blocks preserve stated prerequisites and concurrent conditions separately. Unknown prerequisites stay unknown; prerequisite alternatives are not automatically extra degree courses. CS 1802 applicability is tracked where relevant. Independently verified the explicit CS 1800/1802 corequisite pair and degree preamble; CS 1802 is now nested beneath CS 1800. Other prerequisite alternatives are not additional degree obligations.",
         "credits_and_units": "Reviewed exact subject blocks were checked for names and published semester hours. Bundle totals and numeric credit alternatives are not split or summed. Degree-wide totals and nonreviewed subject blocks are still under review.",
-        "classification": "Current represented inventory: 98 course observations; 42 individually reviewed subject classifications, 1 explicitly mixed, 3 source-inspected but unclassified, and 52 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
+        "classification": "Current represented inventory: 98 course observations; 54 individually reviewed subject classifications, 1 explicitly mixed, 5 source-inspected but unclassified, and 38 still awaiting available content review. Each manual review cites an exact registered source and course-specific rationale; mixed/unclassified records use other. The audit decision table checks exact identities and description evidence, never department prefixes or elective/degree membership.",
         "family_composition": "Existing 23-variant family remains unchanged. Exact shared core and policy bindings require source-by-source review; no new shared inheritance is claimed.",
         "degree_wide_requirements": "Home-college applicability remains an explicit source boundary; independently accessible policies will still be reviewed. The shared declaration deadline, conditional change-major eligibility/advising and concentration catalog-year rules are now source-parsed course-free criteria; college-specific conditional transfer/progression mappings remain active. Current Khoury advising progression, graduation and conditional transfer/home-change rules now appear in eleven source-scoped course-free nodes. They remain conditional and do not infer assignment or override catalog/cohort scope. Other partner-college policy work continues."
       },
@@ -5310,6 +5455,17 @@
           "status": "corrected",
           "evidence_urls": [
             "https://catalog.northeastern.edu/course-descriptions/envr/"
+          ]
+        },
+        {
+          "issue": "Unreviewed selected health sciences classifications required source-content verification.",
+          "correction": "Exact-code review corrections: ENVR 2502: other → mathematics; PHTH 1260: other → human_context; PHTH 1261: other → human_context; PHTH 2300: other → human_context; PHTH 2301: other → human_context; PHTH 2350: other → applications; PHTH 2351: other → applications; PHTH 2515: other → human_context; PHTH 4120: other → human_context; PHTH 4202: other → applications; PHTH 4540: other → applications",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.northeastern.edu/course-descriptions/envr/",
+            "https://catalog.northeastern.edu/course-descriptions/hsci/",
+            "https://catalog.northeastern.edu/course-descriptions/phil/",
+            "https://catalog.northeastern.edu/course-descriptions/phth/"
           ]
         }
       ],
