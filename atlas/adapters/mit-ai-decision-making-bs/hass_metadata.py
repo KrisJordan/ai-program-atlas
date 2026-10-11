@@ -7,14 +7,14 @@ from atlas.adapters.national_curriculum_common import course, rule
 PID='mit-ai-decision-making-bs'
 observer=import_module('atlas.adapters.mit-ai-decision-making-bs.reviewed_hass_subjects')
 MANIFEST=json.loads(Path(__file__).with_name('reviewed_hass_subjects.json').read_text())
-PARSERS={k:getattr(observer,'observe_'+k)for k in ['architecture','literature','history','wgs','wgs_detail','performing_arts','cmsw','language_titles','political_pdf_titles','sts_titles','anthropology_titles']}
+PARSERS={k:getattr(observer,'observe_'+k)for k in ['architecture','literature','history','wgs','wgs_detail','performing_arts','cmsw','language_titles','political_pdf_titles','sts_titles','anthropology_titles','economics_titles','shass_field_titles']}
 INTEGRATED=json.loads(Path(__file__).with_name('integrated_hass_scope.json').read_text())
 SPECS={sid:MANIFEST['source_specs'][sid]for sid in INTEGRATED['source_ids']}
 
 
 def parse(html,url):
     spec=next(s for s in SPECS.values()if s['url']==url)
-    observations=PARSERS[spec['parser']](html)
+    observations=(PARSERS[spec['parser']](spec['field_key'],html) if spec['parser']=='shass_field_titles' else PARSERS[spec['parser']](html))
     if isinstance(observations,dict):observations=[observations]
     rows=[];digests={}
     for cid in INTEGRATED['course_ids']:
@@ -30,6 +30,8 @@ def parse(html,url):
         c['notes']=list(review['restrictions'])
         if review.get('evidence_basis') == 'official_title_only':
             c['notes'].append('Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.')
+        if review.get('evidence_basis') == 'official_code_only':
+            c['notes'].append('Official code-only observation; title, description and content classification remain unknown.')
         c['notes'].append('Observed departmental source term/version: '+str(review['catalog_year']or'not stated')+'. The original list identity is retained.')
         if review.get('identity_note'):c['notes'].append(review['identity_note'])
         rows.append(c);digests[cid]=observer.observation_digest(o)

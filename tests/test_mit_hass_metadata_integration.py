@@ -130,3 +130,21 @@ def test_explicit_cms_alias_content_keeps_sts_source_identity_and_mixed_scope():
     assert all(c['source_id'] != 'mit-ai-hass-review-cmsw-spring2026' for c in rows)
     merged = {cid for g in p.get('course_identity_groups', []) for cid in g['course_ids']}
     assert not merged.intersection(c['id'] for c in rows)
+
+
+def test_economics_limited_title_review_preserves_printed_prerequisites_and_rules():
+    p=json.loads(Path('data/programs/mit-ai-decision-making-bs.json').read_text())
+    by={c['id']:c for c in p['courses']}
+    assert by['mit-ai-hass-economics-14-16']['prerequisites']=='14.03/14.04'
+    assert by['mit-ai-hass-economics-14-27']['prerequisites']=='14.30 or 6.041'
+    assert by['mit-ai-hass-economics-14-15-j']['category_review']['status']=='unclassified'
+    assert by['mit-ai-hass-economics-14-16']['description'] is None
+    assert by['mit-ai-hass-economics-14-16']['credits'] is None
+    path=Path('/tmp/atlas-mit-hass-economics.html')
+    if not path.exists():pytest.skip('Optional public source capture absent')
+    fields=importlib.import_module('atlas.adapters.mit-ai-decision-making-bs.hass_departments')
+    adapter=importlib.import_module('atlas.adapters.mit-ai-decision-making-bs.adapter')
+    url=m.SPECS['mit-ai-hass-review-economics-titles']['url']
+    actual=adapter.SOURCE_PARSERS[url](path.read_text())
+    assert actual['requirements']==fields.parse_economics(path.read_text())['requirements']
+    assert actual['observed_hass_description_digests']
