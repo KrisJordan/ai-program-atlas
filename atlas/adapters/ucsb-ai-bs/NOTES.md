@@ -169,3 +169,23 @@ not change the ordinary unit amount. Current4Aallows2B/3B/3BIand4B/6Aallow4AIwhe
 stated. All course-field guards cover these details; no parent-degree requirement
 is added from a prerequisite. Remaining current-option versions and GE/policy
 branches still prevent a complete whole-degree audit.
+
+### Public enrollment and approval policy closure (2026-10-11)
+
+Read full currentcatalogRegulation10 and Registrar QuarterlyEnrollment/Course
+Registration pages, following the public catalog links. Instructor authority to
+assess preparedness is explicit, but no general major-restriction waiver is stated.
+The late-add code after instructionalday5requires instructor approval and lasts
+through the add deadline; the page does not say it overrides a major restriction.
+Prerequisites are checked at registration and beforequarter, with drops if unmet.
+No account or GOLDsource was accessed.
+
+Optional undergraduate graduate-course enrollment requiresGPA3.0and12relevant
+upper-division units atB or better, courseinstructor and departmentchair approvals; the
+deanapproval stated here applies additionally toCreativeStudies. Allowednumbers
+are200–299and500GroupStudies/SpecialTopics; other500coursesunavailable. The300–499
+bachelor-credit restriction is expresslyLettersandScience, not generalized to
+Engineering. Quarterlyloadminimum12, Engineeringmaximum21goodstanding/17probation,
+and enrollmentcompletiondeadlines are separate from degreecredit requirements.
+These policy branches are closed as read; specificAImajor-restrictionapplicability,
+currentoptionalversions andGEpools remain accessible follow-up work.

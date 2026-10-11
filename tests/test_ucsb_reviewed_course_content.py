@@ -230,3 +230,28 @@ def test_all_fixed_course_versions_and_recommendation_fields_are_current():
     fixed=set(row['expected_course_ids']['required'])
     assert len(fixed)==20
     assert all(x['source_id'].endswith('-catalog-2026') for x in d['courses']if x['id']in fixed)
+
+
+def test_registration_policy_guards_conditions_without_automatic_major_waiver(monkeypatch):
+    from atlas.adapters import ucsb_registration_review as registration
+    html='<main><h1>Course Registration</h1><p>GPA 3.0; subject to instructor and department approval.</p></main>'
+    entry={**registration.SPEC['registration'],'body_digest':hashlib.sha256(text(BeautifulSoup(html,'html.parser').main).encode()).hexdigest()}
+    monkeypatch.setitem(registration.SPEC,'registration',entry)
+    result=registration.parse(html,key='registration')
+    assert result['courses']==[]
+    assert all(r['kind']=='note' and not r['course_ids']for r in result['requirements'])
+    assert any('does not say' in r['summary']for r in result['requirements'])
+    assert any('LettersandScience' in r['summary']for r in result['requirements'])
+    result['requirements'].clear()
+    assert registration.parse(html,key='registration')['requirements']
+    with pytest.raises(ValueError):registration.parse(html.replace('3.0','2.0'),key='registration')
+
+
+def test_optional_registration_source_replay():
+    from atlas.adapters import ucsb_registration_review as registration
+    for key in registration.SPEC:
+        cache=Path('.cache/research/ucsb-course-content')/('policy-'+key+'-reviewed.html')
+        if not cache.exists():pytest.skip('Optional private source cache')
+        result=registration.parse(cache.read_text(),key=key)
+        assert result==registration.parse(cache.read_text(),key=key)
+        assert 'curriculum_audit'not in result

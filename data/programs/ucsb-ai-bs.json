@@ -965,6 +965,36 @@
       "catalog_year": "2026\u201327",
       "locator": "Full course fields, including prerequisite and separate recommended/advisory/repeat labels",
       "confidence": "high"
+    },
+    {
+      "id": "ucsb-ai-bs-catalog-authority-2026",
+      "url": "https://catalog.ucsb.edu/pages/C2Hel8i91Tnxny3zOsMs",
+      "title": "Authority of Instructors - Regulation 10",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": "2026\u201327",
+      "locator": "Full public policy body; source scope and exceptions preserved",
+      "confidence": "high"
+    },
+    {
+      "id": "ucsb-ai-bs-catalog-registration-2026",
+      "url": "https://registrar.sa.ucsb.edu/enrollment/quarterly-enrollment/course-registration",
+      "title": "Course Registration",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Full public policy body; source scope and exceptions preserved",
+      "confidence": "high"
+    },
+    {
+      "id": "ucsb-ai-bs-catalog-enrollment-2026",
+      "url": "https://registrar.sa.ucsb.edu/enrollment/quarterly-enrollment",
+      "title": "Quarterly Enrollment",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Full public policy body; source scope and exceptions preserved",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -4601,6 +4631,62 @@
       "source_text": null,
       "summary": "UC admissions identifies Cal-GETC as the available CCC pattern for entrants from fall2025 onward. Complete the pattern before transfer; otherwise the receiving college or school evaluates its own lower-division GE. Courses require C or better, including Pass/Credit only where equivalent to C. The pattern is not required for UC admission. This systemwide page does not establish UCSB Engineering specific substitutions, remaining requirements or certification treatment; retain that unresolved college decision rather than extend its IGETC rules by assumption.",
       "course_ids": []
+    },
+    {
+      "id": "ucsb-ai-bs-preparedness",
+      "parent_id": null,
+      "title": "Instructor assessment of preparation",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "quarter_hours",
+      "category": "ai_ml",
+      "source_id": "ucsb-ai-bs-catalog-authority-2026",
+      "source_text": null,
+      "summary": "Each instructor may determine whether a student is prepared to enter or continue the subject, subject to nondiscrimination and grievance rules. The source does not expressly waive course major restrictions; preparedness discretion is not recorded as blanket AI-major permission.",
+      "course_ids": []
+    },
+    {
+      "id": "ucsb-ai-bs-registration-prerequisites",
+      "parent_id": null,
+      "title": "Prerequisite checking and course approval",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "quarter_hours",
+      "category": "ai_ml",
+      "source_id": "ucsb-ai-bs-catalog-registration-2026",
+      "source_text": null,
+      "summary": "Prerequisites appear in GOLDcourse information and are checked at registration and again before the quarter; students who do not meet them are dropped. Instructor approval and a course approval code permit adds after the fifth instructional day through the add deadline; the page does not say that such a late-add code overrides a major restriction.",
+      "course_ids": []
+    },
+    {
+      "id": "ucsb-ai-bs-graduate-enrollment",
+      "parent_id": null,
+      "title": "Conditional undergraduate graduate-course registration",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "quarter_hours",
+      "category": "ai_ml",
+      "source_id": "ucsb-ai-bs-catalog-registration-2026",
+      "source_text": null,
+      "summary": "The optional graduate-course route typically serves exceptionally qualified seniors: cumulative GPA3.0and12upper-division units in the relevant major atB or better, with course instructor and offering-department chair approval; Creative Studies students also need their college dean. Eligible numbers are200\u2013299and500-level GroupStudies/SpecialTopics; other500-level courses are unavailable. The stated300\u2013499bachelor-credit prohibition is specifically LettersandScience, so it is not generalized to Engineering.",
+      "course_ids": []
+    },
+    {
+      "id": "ucsb-ai-bs-registration-load",
+      "parent_id": null,
+      "title": "Quarterly enrollment completion and study load",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "quarter_hours",
+      "category": "ai_ml",
+      "source_id": "ucsb-ai-bs-catalog-enrollment-2026",
+      "source_text": null,
+      "summary": "Quarterly registration, fee payment and removal of blocks must be completed by applicable deadlines. Register at least one course and resolve blocks by the15thinstructional day to avoid lapsed enrollment. Undergraduate full-time minimum12units; Engineering/LettersandScience maximum21units in good standing or17on probation. These are quarterly enrollment limits, not extra degree credits; late/retroactive enrollment and late course changes follow the published college processes.",
+      "course_ids": []
     }
   ],
   "notes": [
@@ -4619,7 +4705,8 @@
     "Current 2026\u201327 catalog rendered through ordinary public navigation: C LIT155 and GER155 each have4quarter units and reciprocal same-course statements. Both code records remain; their elective identity counts once. No prerequisite is published in these records, so prerequisite metadata remains unknown. The same-course statement names ENGL155AI, not the separately represented historical ENGL146AI.",
     "2026\u201327 current catalog review adds13previously unread exact course descriptions and refreshes CMPSC184/153A/181. Current41states4units, but GEAR5conflict remains unresolved. CMPSC181/ECE181explicitly permits AI upper-division students; CMPSC42, ECE139, CMPSC/ECE153A and ECE180still publish narrower major eligibility despite AI degree use. Do not invent an AI exception. ME107is3units with ME17or instructor consent; PSTAT120Ais recommended only. Required vision has reciprocal identity proof and counts once as fixed.",
     "Current catalog WRIT109ES remains an independently published four-unit record. Its department describes107EPas formerly109ES, but the current109ESrecord only excludesEnglish109Icredit. No cross-version/renumbering identity merge or automatic withdrawal of the older GEARpool code is inferred.",
-    "Current2026\u201327requiredcourse review replaces undated188no-prerequisite observation:130A,165Aand165Barerequired;138recommended. Current130AstatesPSTAT120A/ECE139inbothrecommendedandprerequisitefields(concurrentallowed), bothretained. Calculus conditionalcredit reductions/repeat/AP exclusions remain distinct from ordinary4units. Currentmathalternateprerequisites include2B/3BIand4AIwhereexplicit."
+    "Current2026\u201327requiredcourse review replaces undated188no-prerequisite observation:130A,165Aand165Barerequired;138recommended. Current130AstatesPSTAT120A/ECE139inbothrecommendedandprerequisitefields(concurrentallowed), bothretained. Calculus conditionalcredit reductions/repeat/AP exclusions remain distinct from ordinary4units. Currentmathalternateprerequisites include2B/3BIand4AIwhereexplicit.",
+    "Currentpublicenrollment/registrationpolicies andcatalogRegulation10read: instructorpreparednessassessment andlate-addapproval do not explicitly establish a waiver of course major restrictions. Graduateenrollmentconditions are optional routes, not additional AIdegree requirements; LettersandScience-only300\u2013499creditprohibition is not generalized to Engineering."
   ],
   "curriculum_audit": {
     "scope": "degree",

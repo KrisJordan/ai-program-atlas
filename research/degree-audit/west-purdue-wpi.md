@@ -217,3 +217,11 @@ CMPSC130Aprobabilityis listed in both preparation and prerequisitefields, retain
 literally. Calculus conditionalcredit/AP/repeatrules and alternate mathpreparation
 remain distinct from ordinaryfour-unit values and from degreecourseobligations.
 Currentoptionalversions, approvalmechanisms andGEpoolsremainactivework.
+
+UCSB publicapprovalpolicy closure: actualcatalogRegulation10 andRegistrar quarterly/
+course-registration bodies were fullyread. They establish preparednessdiscretion,
+late-addcodeapproval, repeatedprerequisitechecks and optionalgraduateenrollment
+conditions, but not a blanketAImajor waiver. Exact college applicability is retained
+for graduatecoursecredit/deanapprovalrules. Fourguardednote nodes contain no course
+references or additionaldegree-load assumptions. Major-restrictionapplicability is
+still an evidence question, not inferred impossibility or automatic permission.
