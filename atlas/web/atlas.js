@@ -23,9 +23,11 @@
   const cards = [...document.querySelectorAll('[data-program-id], [data-row-id]')];
   const viewControl = document.getElementById('directory-view');
   let selected = [];
-  let jointExpanded = false;
+  const tableGroups = {
+    'northeastern-joint-ai': {param: 'joint', expanded: false},
+    'buffalo-ai-plus-x': {param: 'buffalo', expanded: false}
+  };
   const jointRows = [...document.querySelectorAll('[data-joint-member]')];
-  const jointIds = new Set(jointRows.map(row => row.dataset.rowId));
   let profileMode = 'required';
   const sortControl = document.getElementById('sort-order');
   const profileControl = document.getElementById('compare-profile');
@@ -110,7 +112,9 @@
     profileMode = params.get('profile') === 'options' ? 'options' : 'required';
     profileControl.value = profileMode;
     selected = [...new Set((params.get('compare') || '').split(','))].filter(id => byId.has(id)).slice(0, 4);
-    jointExpanded = params.has('joint') ? params.get('joint') === 'open' : selected.some(id => jointIds.has(id));
+    Object.entries(tableGroups).forEach(([id, group]) => {
+      group.expanded = params.has(group.param) ? params.get(group.param) === 'open' : jointRows.some(row => row.dataset.jointMember === id && selected.includes(row.dataset.rowId));
+    });
     expansionSpecified = params.has('expand');
     expanded = [...new Set((params.get('expand') || '').split(','))].filter(id => familyMap.has(id));
     if (!params.has('expand') && controls.discipline.value) programs.filter(p => (p.family?.disciplines || []).includes(controls.discipline.value)).forEach(p => { if (!expanded.includes(p.family.id)) expanded.push(p.family.id); });
@@ -123,7 +127,9 @@
     if (sortControl.value !== 'csrankings') params.set('sort', sortControl.value);
     keys.forEach(key => { if (controls[key].value) params.set(key, controls[key].value); });
     if (selected.length) params.set('compare', selected.join(','));
-    if (jointExpanded || selected.some(id => jointIds.has(id))) params.set('joint', jointExpanded ? 'open' : 'closed');
+    Object.entries(tableGroups).forEach(([id, group]) => {
+      if (group.expanded || jointRows.some(row => row.dataset.jointMember === id && selected.includes(row.dataset.rowId))) params.set(group.param, group.expanded ? 'open' : 'closed');
+    });
     if (profileMode === 'options') params.set('profile', 'options');
     Object.entries(pathState).forEach(([group,path]) => { if (path !== 'majors') params.set('path_' + group, path); });
     Object.entries(awardState).forEach(([group,award]) => { if (award) params.set('award_' + group, award); });
@@ -284,11 +290,12 @@
       const program = byId.get(card.dataset.programId || card.dataset.rowId);
       const show = matches(program) && majorMatches(program) && pathState[program.cohort_group] === program.program_path;
       card.dataset.matches = String(show);
-      card.hidden = !show || Boolean(card.dataset.jointMember && !jointExpanded);
+      card.hidden = !show || Boolean(card.dataset.jointMember && !tableGroups[card.dataset.jointMember].expanded);
       if (show) visibleIds.add(program.id);
     });
     document.querySelectorAll('[data-table-group]').forEach(group => {
-      const matching = jointRows.filter(row => row.dataset.matches === 'true');
+      const jointExpanded = tableGroups[group.dataset.tableGroup].expanded;
+      const matching = jointRows.filter(row => row.dataset.jointMember === group.dataset.tableGroup && row.dataset.matches === 'true');
       group.hidden = !matching.length;
       group.querySelector('.joint-awards').textContent = [...new Set(matching.map(row => { const p = byId.get(row.dataset.rowId); return p.award_options.length ? p.award_options.map(option => option.label.length <= 12 ? option.label : option.normalized.toUpperCase()).join(' / ') : p.award_level; }))].sort().join(' / ');
       group.querySelectorAll('[data-table-expand]').forEach(button => button.setAttribute('aria-expanded', String(jointExpanded)));
@@ -362,7 +369,7 @@
     clearTimeout(timer);
     writeState();
   }));
-  document.querySelectorAll('[data-table-expand]').forEach(button => button.addEventListener('click', () => { jointExpanded = !jointExpanded; clearTimeout(timer); writeState(); }));
+  document.querySelectorAll('[data-table-expand]').forEach(button => button.addEventListener('click', () => { const group = tableGroups[button.closest('[data-table-group]').dataset.tableGroup]; group.expanded = !group.expanded; clearTimeout(timer); writeState(); }));
   viewControl.addEventListener('change', () => { clearTimeout(timer); writeState(); });
   const openFilters = () => { if (!filterPanel.open) filterPanel.showModal(); controls.q.focus(); };
   const closeFilters = () => { clearTimeout(timer); writeState(); filterPanel.close(); };
