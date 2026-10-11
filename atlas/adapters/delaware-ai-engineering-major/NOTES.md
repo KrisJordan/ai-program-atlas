@@ -26,3 +26,7 @@ All 28 sample-plan observations remain contextual. Fourteen unequivocal exact ti
 ## Fixed-requirement resolution attempt — 2026-10-11
 
 Reread all current sample-plan rows and the linked 2025 flowchart. The latter names ELEG405/ELEG398 without the current sample's ELEG625/ELEG397 alternatives and provides no current-cohort applicability statement. Neither supplies a verified current mandatory inventory; no fixed promotion, prerequisite/grade import or course change was made. The current catalog403 boundary was not retried. See [resolution proposal](../../../research/degree-audit/independent-resolution-delaware-furman.md) for complete replacement review rows, independent 28-ID/category enumeration and actual alternatives checked.
+
+## Public planning-source follow-up — 2026-10-11
+
+See [planning-source conflict follow-up](../../../research/university-core-followup-plan-conflicts.md) and its complete proposed bounded review rows. Public advising/governance alternatives establish no governing current inventory sufficient to close this program's remaining core gap. Prior course facts, review statuses and source-specific version limits are retained. Known denied routes were not retried; no personal audit or contact with people. Full-degree status is not certified.

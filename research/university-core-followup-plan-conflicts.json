@@ -1,0 +1,644 @@
+{
+  "review_date": "2026-10-11",
+  "reviewer": "university_plan_conflicts",
+  "proposal_only": true,
+  "scope": "Complete proposed replacement bounded-core rows for coordinator independent acceptance. Follow-up source applicability only; prior manually checked identity/category sets are retained and explicitly attributed. No full-degree certification.",
+  "programs": [
+    {
+      "program_id": "purdue-ai-ba",
+      "reviewed_at": "2026-10-11",
+      "reviewer": "university-core-followup-plan-conflicts / university_plan_conflicts",
+      "reviewed_content_hash": "3977442614053507f6950f3ef5a6ce27d8261723a12b433d31beae209c4e0885",
+      "dimensions": {
+        "fixed_requirements": {
+          "status": "partial",
+          "summary": "Prior bounded finding retained: Five fixed CS identities are individually enumerated by the department BA plan and match the graph. A complete fixed major inventory remains unestablished because the source gives eight philosophy courses/24 hours without naming their fixed/choice structure.",
+          "evidence": [
+            {
+              "url": "https://www.cla.purdue.edu/academic/philosophy/students/undergraduate/majors/artificial-intelligence/index.html",
+              "locator": "Plan of Study: five required CS codes; introductory paragraph eight specialized philosophy courses; 24 philosophy and 15 CS hours"
+            }
+          ],
+          "limitations": [
+            "Complete eight-course philosophy inventory and its required/optional divisions are not published on the accessible department plan. The linked denied catalog was not retried. Five fixed computing identities do not establish the complete fixed major set.",
+            "The department page was modified October 15, 2025; its source-specific CS 17600/24300 titles are older than the Fall 2026 directory. Course descriptions and title-version equivalence are unresolved. Individual BA course credits remain null; 15 CS hours cannot be divided equally or replaced with BS credits.",
+            "This follow-up checks new public planning/governance alternatives; earlier identity/category conclusions remain attributed to the prior review and are not newly certified by these alternatives."
+          ]
+        },
+        "choice_rules": {
+          "status": "partial",
+          "summary": "Prior bounded finding retained: Eight specialized philosophy courses/24 hours are preserved as an unresolved group with no invented menu. No current offering-directory course is promoted to a major requirement.",
+          "evidence": [
+            {
+              "url": "https://www.cla.purdue.edu/academic/philosophy/students/undergraduate/majors/artificial-intelligence/index.html",
+              "locator": "Plan of Study: five required CS codes; introductory paragraph eight specialized philosophy courses; 24 philosophy and 15 CS hours"
+            }
+          ],
+          "limitations": [
+            "The internal required/optional philosophy structure and approved options are not established by the overview.",
+            "Current philosophy offerings cannot identify degree requirements, and no BS philosophy choice pool is inherited into this independent BA.",
+            "This follow-up checks new public planning/governance alternatives; earlier identity/category conclusions remain attributed to the prior review and are not newly certified by these alternatives."
+          ]
+        },
+        "classification": {
+          "status": "partial",
+          "summary": "Prior bounded finding retained: Actual CS 10100/18000/18200 outlines support mixed/programming/mixed. CS 17600 and CS 24300 retain explicitly limited title evidence from the BA plan, while the Fall 2026 directory uses different printed titles.",
+          "evidence": [
+            {
+              "url": "https://www.cs.purdue.edu/academic-programs/courses/canonical/cs10100.html",
+              "locator": "Full digital-literacy outline"
+            },
+            {
+              "url": "https://www.cs.purdue.edu/academic-programs/courses/canonical/cs180.html",
+              "locator": "Full Programming I outline linked as CS 18000"
+            },
+            {
+              "url": "https://www.cs.purdue.edu/academic-programs/courses/canonical/cs182.html",
+              "locator": "Full Foundations outline"
+            },
+            {
+              "url": "https://www.cs.purdue.edu/academic-programs/courses/index.html",
+              "locator": "Fall 2026 West Lafayette CS 17600/24300 rows"
+            }
+          ],
+          "limitations": [
+            "Current CS 17600/24300 full descriptions and title-version reconciliation remain unverified; canonical outlines have dated scope. No philosophy course content was inferred.",
+            "This follow-up checks new public planning/governance alternatives; earlier identity/category conclusions remain attributed to the prior review and are not newly certified by these alternatives."
+          ]
+        }
+      },
+      "expected_course_ids": {
+        "required": [
+          "purdue-cs-10100",
+          "purdue-cs-17600",
+          "purdue-cs-18000",
+          "purdue-cs-18200",
+          "purdue-cs-24300"
+        ],
+        "options": [],
+        "unresolved": []
+      },
+      "expected_profile": {
+        "required": {
+          "count": 5,
+          "categories": {
+            "foundations": 2,
+            "ai_ml": 1,
+            "other": 2
+          }
+        },
+        "options": {
+          "count": 0,
+          "categories": {}
+        },
+        "unresolved": {
+          "count": 0,
+          "categories": {}
+        }
+      },
+      "expected_profile_scope": "Only the five explicitly named department-plan CS records; empty other sets do not mean no philosophy or college requirements.",
+      "full_degree_verified": false,
+      "resolution_scope": "Department-major fixed membership, source choice branches and bounded content review; no whole-degree policy certification.",
+      "source_dispositions": [
+        {
+          "url": "https://www.cla.purdue.edu/academic/philosophy/students/undergraduate/majors/artificial-intelligence/index.html",
+          "checked_at": "2026-10-11",
+          "access_status": "accessible; reread complete department page"
+        },
+        {
+          "url": "https://selfservice.mypurdue.purdue.edu/",
+          "checked_at": "2026-10-11",
+          "access_status": "known robots-disallowed linked detail host; not retried"
+        },
+        {
+          "url": "http://catalog.purdue.edu/preview_program.php?catoid=19&poid=35726",
+          "checked_at": "2026-10-11",
+          "access_status": "known HTTP 403 catalog plan; not retried"
+        }
+      ],
+      "corrections": [
+        "No source-backed requirement or course-fact discrepancy found in the curated record. Parser-only correction guards malformed duplicate/truncated/conditional branches."
+      ],
+      "prior_review_file": "research/degree-audit/independent-resolution-purdue.json",
+      "prior_identity_and_category_review_retained": true,
+      "resolution_outcome": "unresolved_after_new_permitted_public_links",
+      "followup_sources": [
+        {
+          "url": "https://www.cla.purdue.edu/academic/philosophy/students/undergraduate/majors/artificial-intelligence/index.html",
+          "locator": "Plan of Study, eight-course introduction, full-plan link, Last modified footer",
+          "finding": "Five computing identities and aggregate eight philosophy courses/24 hours; no philosophy table. Full plan still links the recorded restricted catalog.",
+          "checked_at": "2026-10-11",
+          "source_date": "2025-10-15",
+          "catalog_year": null,
+          "access_status": "readable",
+          "new_to_followup": false,
+          "saved_source_path": "var/university-core-followup-plan-conflicts/open2.web-reader.json",
+          "saved_source_sha256": "1df906f56932cf46a97b19828c3b6f26b4b427accbe5405e61092801dd3ba523",
+          "saved_source_format": "public_web_reader_output_batch"
+        },
+        {
+          "url": "https://www.cla.purdue.edu/academic/philosophy/students/undergraduate/index.html",
+          "locator": "Majors and Course Offerings navigation, modification footer",
+          "finding": "Hub links same AI page and offering directory; no alternate curriculum or dated adopted BA plan. Already investigated historically; current reread supplies no new curriculum.",
+          "checked_at": "2026-10-11",
+          "source_date": "2025-10-15",
+          "catalog_year": null,
+          "access_status": "readable",
+          "new_to_followup": false,
+          "saved_source_path": "var/university-core-followup-plan-conflicts/open4.web-reader.json",
+          "saved_source_sha256": "d62179ffc662c73ecb4e199a9fd9bf0e21bfbbb6369472e894bf832f5b08f7c0",
+          "saved_source_format": "public_web_reader_output_batch"
+        }
+      ],
+      "hierarchy_and_version": {
+        "established": "Department BA page expressly directs readers to linked full plan; page modification date is 2025-10-15.",
+        "not_established": "Eight philosophy identities, fixed/choice structure, current plan edition, or equivalence of older CS titles to Fall2026 titles.",
+        "governing_inventory_verified": false
+      },
+      "next_evidence_needed": "A permitted readable, cohort-dated full BA major requirement table naming the philosophy core and approved choices."
+    },
+    {
+      "program_id": "william-mary-applied-ai-ba",
+      "reviewed_at": "2026-10-11",
+      "reviewer": "university-core-followup-plan-conflicts / university_plan_conflicts",
+      "reviewed_content_hash": "e9ee129a34f1088b027047fce7a80ca6fa7010f8638f935a4024776a70fcf865",
+      "dimensions": {
+        "fixed_requirements": {
+          "status": "partial",
+          "summary": "Prior bounded finding retained: Available-source limit: the current department FAQ explicitly calls DATA201/202/305 core requirements normally taken at W&M, supporting the exact three mapped fixed identities. Its linked Example Pathway instead labels Designing AI Agents AAI301 and offers DATA202 or PHIL150 as an ethics choice. No source hierarchy, equivalence or complete approved major table resolves either conflict. The FAQ subset remains partial.",
+          "evidence": [
+            {
+              "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/",
+              "locator": "Curriculum / main degree requirements / explicitly named FAQ core"
+            },
+            {
+              "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/ba_ai_coursework.png",
+              "locator": "Entire Example Pathway: AAI301 Designing AI Agents and AI Ethics Course Options DATA202/PHIL150"
+            }
+          ],
+          "limitations": [
+            "Example Pathway AAI301 versus FAQ DATA305 is unresolved; no rename/cross-list is inferred. Example ethics choice DATA202/PHIL150 versus FAQ core DATA202 is unresolved. Known catalog robots HTTP202 was not retried. The complete 30-credit major, capstone identity and additional fixed courses remain unverified.",
+            "This follow-up checks new public planning/governance alternatives; earlier identity/category conclusions remain attributed to the prior review and are not newly certified by these alternatives."
+          ]
+        },
+        "choice_rules": {
+          "status": "partial",
+          "summary": "Prior bounded finding retained: Reread the current FAQ substitution, independent-research and study-abroad approval rules and visually inspected the entire linked Example Pathway. The image gives two electives and examples of ethics/methods courses, without proving a closed approved pool or governing curriculum edition; those examples cannot add fixed courses or certify full option membership.",
+          "evidence": [
+            {
+              "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/",
+              "locator": "Actual requirement tables, alternative rows, branch footnotes and uncoded choice slots"
+            },
+            {
+              "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/ba_ai_coursework.png",
+              "locator": "Entire Example Pathway: ethics/methods alternatives and 2x Electives with Example Course Options"
+            }
+          ],
+          "limitations": [
+            "DATA202/PHIL150 ethics choice and DATA305/AAI301 identity conflict have no published version hierarchy. Methods and elective examples are not exhaustive approved pools; no additional image-only course was promoted. Broad degree-wide policy/GE rules are outside this pass.",
+            "This follow-up checks new public planning/governance alternatives; earlier identity/category conclusions remain attributed to the prior review and are not newly certified by these alternatives."
+          ]
+        },
+        "classification": {
+          "status": "partial",
+          "summary": "Prior bounded finding retained: All three Fall 2026 registration descriptions were reread. DATA201 explicitly teaches AI modeling approaches, DATA305 RAG/prompt pipelines/agentic workflows, and DATA202 ethical/social interpretation. Their subject distribution is two AI/ML and one human context.",
+          "evidence": [
+            {
+              "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/",
+              "locator": "Current actual course descriptions; fixed-category total where independently checked"
+            },
+            {
+              "url": "https://registration.wm.edu/?details&srcdb=202710&crn=12601",
+              "locator": "DATA 201 Fall 2026 Catalog Description and Registration Restrictions"
+            },
+            {
+              "url": "https://registration.wm.edu/?details&srcdb=202710&crn=12361",
+              "locator": "DATA 202 Fall 2026 Catalog Description and Registration Restrictions"
+            },
+            {
+              "url": "https://registration.wm.edu/?details&srcdb=202710&crn=13505",
+              "locator": "DATA 305 Fall 2026 Catalog Description and Registration Restrictions"
+            }
+          ],
+          "limitations": [
+            "Category totals are verified only for the explicitly enumerated fixed subset; option and contextual classifications are not independently totaled in this pass.",
+            "This follow-up checks new public planning/governance alternatives; earlier identity/category conclusions remain attributed to the prior review and are not newly certified by these alternatives."
+          ]
+        }
+      },
+      "expected_course_ids": {
+        "required": [
+          "wm-applied-ai-data-201",
+          "wm-applied-ai-data-202",
+          "wm-applied-ai-data-305"
+        ],
+        "options": null,
+        "unresolved": null
+      },
+      "expected_profile": {
+        "required": {
+          "count": 3,
+          "categories": {
+            "foundations": 0,
+            "mathematics": 0,
+            "ai_ml": 2,
+            "systems": 0,
+            "human_context": 1,
+            "applications": 0,
+            "electives": 0,
+            "other": 0
+          }
+        },
+        "options": null,
+        "unresolved": null
+      },
+      "source_captures": [
+        {
+          "path": "/tmp/atlas-resolution-wm-major.html",
+          "sha256": "fc11f67ed4e8874360c32b62f7cf2532315b60c301fd17992002537ed666557c"
+        },
+        {
+          "path": "/tmp/wm-ba-pathway.png",
+          "sha256": "7c42a4e5cbfdeccb0f704a6d301451a3e744c1af418a347d525b1e1e2e61cc60"
+        },
+        {
+          "path": "/tmp/atlas-wm-current-courses.json",
+          "sha256": "afb6736f9d918b01f23f3de935daf1b80f4a84853ec960d748333b5e1978ae36"
+        }
+      ],
+      "full_degree_verified": false,
+      "checked_subject_subset": {
+        "course_ids": [
+          "wm-applied-ai-data-201",
+          "wm-applied-ai-data-202",
+          "wm-applied-ai-data-305"
+        ],
+        "count": 3,
+        "categories": {
+          "foundations": 0,
+          "mathematics": 0,
+          "ai_ml": 2,
+          "systems": 0,
+          "human_context": 1,
+          "applications": 0,
+          "electives": 0,
+          "other": 0
+        },
+        "role_membership_verified": "FAQ subset only; full major unresolved"
+      },
+      "prior_review_file": "research/degree-audit/independent-resolution-usf-wm.json",
+      "prior_identity_and_category_review_retained": true,
+      "resolution_outcome": "unresolved_after_new_permitted_public_links",
+      "followup_sources": [
+        {
+          "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/",
+          "locator": "30-credit major and study-abroad FAQ DATA201/202/305, capstone residence",
+          "finding": "FAQ still conflicts with prior example pathway; no effective edition or precedence statement.",
+          "checked_at": "2026-10-11",
+          "source_date": null,
+          "catalog_year": null,
+          "access_status": "readable",
+          "new_to_followup": false,
+          "saved_source_path": "var/university-core-followup-plan-conflicts/open1.web-reader.json",
+          "saved_source_sha256": "324ccb76bb91643fd4eec652f9e3b15cb1a6344e1636f21fd055ce366ab0d55c",
+          "saved_source_format": "public_web_reader_output_batch"
+        },
+        {
+          "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/declare-ba-aai/",
+          "locator": "Steps0\u20135, especially Step2 declaration download and advisor review",
+          "finding": "New public advising lead instructs students to edit electives and review with advisor; no populated course table. AAI101 suggestion is not a mandatory major requirement.",
+          "checked_at": "2026-10-11",
+          "source_date": null,
+          "catalog_year": null,
+          "access_status": "readable",
+          "new_to_followup": true,
+          "saved_source_path": "var/university-core-followup-plan-conflicts/open2.web-reader.json",
+          "saved_source_sha256": "1df906f56932cf46a97b19828c3b6f26b4b427accbe5405e61092801dd3ba523",
+          "saved_source_format": "public_web_reader_output_batch"
+        },
+        {
+          "url": "https://www.wm.edu/offices/registrar/_documents/degree/declaration_of_major_form.pdf",
+          "locator": "All3 extracted pages; page3 Requirements for Major/Core Courses and Electives blank worksheet; Rev8/2025",
+          "finding": "Linked form is generic blank worksheet, not an Applied AI curriculum. Its revision date cannot establish the current major version.",
+          "checked_at": "2026-10-11",
+          "source_date": "2025-08",
+          "catalog_year": null,
+          "access_status": "readable",
+          "new_to_followup": true,
+          "saved_source_path": "var/university-core-followup-plan-conflicts/open3.web-reader.json",
+          "saved_source_sha256": "0d290a0bcad51d03d7fcb1eaacd93ff50343b40bb72e87b2520abfba1c56f11a",
+          "saved_source_format": "public_web_reader_output_batch"
+        },
+        {
+          "url": "https://cdsp.wm.edu/academics/undergraduate/undergrad_forms/",
+          "locator": "Complete Undergraduate Forms list",
+          "finding": "Public list has internship/graduate-credit forms, no populated Applied AI plan; no DocuSign workflow entered.",
+          "checked_at": "2026-10-11",
+          "source_date": null,
+          "catalog_year": null,
+          "access_status": "readable",
+          "new_to_followup": true,
+          "saved_source_path": "var/university-core-followup-plan-conflicts/open3.web-reader.json",
+          "saved_source_sha256": "0d290a0bcad51d03d7fcb1eaacd93ff50343b40bb72e87b2520abfba1c56f11a",
+          "saved_source_format": "public_web_reader_output_batch"
+        },
+        {
+          "url": "https://cdsp.wm.edu/academics/degree-pathways/",
+          "locator": "Full degree pathways body",
+          "finding": "Broad degree overview supplies no adopted Applied AI requirement table or conflict reconciliation.",
+          "checked_at": "2026-10-11",
+          "source_date": null,
+          "catalog_year": null,
+          "access_status": "readable",
+          "new_to_followup": true,
+          "saved_source_path": "var/university-core-followup-plan-conflicts/open9.web-reader.json",
+          "saved_source_sha256": "eaec33a69aa344119ee3b11a93a6691fff9fb60c7407bda7c9863d5749ad63ba",
+          "saved_source_format": "public_web_reader_output_batch"
+        },
+        {
+          "url": "https://cdsp.wm.edu/about/policies/bylaws/",
+          "locator": "Revision adoption/approval dates; ArticleVI\u00a71; ArticleVII\u00a72",
+          "finding": "March2026 faculty revision and April2026 Board approval; faculty determine school-specific requirements, Committee on Undergraduate Studies may approve catalog/routine degree changes. No actual course-change decision, equivalence or FAQ/image precedence.",
+          "checked_at": "2026-10-11",
+          "source_date": "2026-04-24",
+          "catalog_year": null,
+          "access_status": "readable",
+          "new_to_followup": true,
+          "saved_source_path": "var/university-core-followup-plan-conflicts/open7.web-reader.json",
+          "saved_source_sha256": "4c37f5d6876b8d18705db445a41b6568216db5190e23472c7984dd089d530d44",
+          "saved_source_format": "public_web_reader_output_batch"
+        }
+      ],
+      "hierarchy_and_version": {
+        "established": "Published bylaws assign school requirements to voting faculty, subject to university policy/approval; Undergraduate Studies committee has delegated catalog/routine requirement-change authority. Bylaws revised by faculty2026-03-02 and approved by Board2026-04-24.",
+        "not_established": "No adopted Applied AI table, change decision or effective cohort resolves DATA305 versus AAI301 or fixed DATA202 versus DATA202/PHIL150. Generic worksheet Rev8/2025 is not the major version.",
+        "governing_inventory_verified": false
+      },
+      "next_evidence_needed": "A permitted published approved major table or dated course-change decision with entry-cohort applicability resolving both code/ethics conflicts and complete capstone/methods/elective rules."
+    },
+    {
+      "program_id": "delaware-ai-engineering-major",
+      "reviewed_at": "2026-10-11",
+      "reviewer": "university-core-followup-plan-conflicts / university_plan_conflicts",
+      "reviewed_content_hash": "3c6be795281d2c88bb6d4213e19fc78ff8c3f081d09f7931e6eaa2687688731a",
+      "dimensions": {
+        "fixed_requirements": {
+          "status": "unverified",
+          "summary": "Prior bounded finding retained: The complete current department sequence remains explicitly a Sample Plan of Study with courses subject to change. The linked 2025 curriculum flowchart has no verified current cohort applicability and differs on named alternatives; it does not establish the 2026\u201327 fixed inventory.",
+          "evidence": [
+            {
+              "url": "https://www.ece.udel.edu/academics/undergraduate/artificial-intelligence-engineering-bs/",
+              "locator": "Sample Plan of Study: all four years; courses subject to change and direction to 2026\u201327 catalog"
+            },
+            {
+              "url": "https://www.ece.udel.edu/wp-content/uploads/2025/07/2025-AI-flowchart.pdf",
+              "locator": "Entire one-page term grid; ELEG405 and ELEG398, without ELEG625/ELEG397; no applicability statement for 2026\u201327"
+            }
+          ],
+          "limitations": [
+            "Current catalog requirement source previously returned HTTP403 and was not retried. The linked 2025 flowchart does not state applicable entry cohort or establish current mandatory roles. No fixed absence is certified.",
+            "This follow-up checks new public planning/governance alternatives; earlier identity/category conclusions remain attributed to the prior review and are not newly certified by these alternatives."
+          ]
+        },
+        "choice_rules": {
+          "status": "partial",
+          "summary": "Prior bounded finding retained: The sample explicitly permits ELEG 405 or 625 and ELEG 397 or 398. Both alternatives remain nested under sample-plan notes, so no binding elective load is inferred. Physics 207/227 and 208/228 are preserved as paired uncoded notes rather than invented separate titled records.",
+          "evidence": [
+            {
+              "url": "https://www.ece.udel.edu/academics/undergraduate/artificial-intelligence-engineering-bs/",
+              "locator": "Sample Plan of Study: all four years; courses subject to change and direction to 2026\u201327 catalog"
+            }
+          ],
+          "limitations": [
+            "These are illustrative alternatives, not certified graduation choice rules. Exact AI/STEM elective pools, undergraduate eligibility for ELEG 625 and individual course amounts remain unknown.",
+            "The older flowchart shows ELEG405 and ELEG398 without the current sample alternatives; the edition/applicability conflict is unresolved.",
+            "This follow-up checks new public planning/governance alternatives; earlier identity/category conclusions remain attributed to the prior review and are not newly certified by these alternatives."
+          ]
+        },
+        "classification": {
+          "status": "partial",
+          "summary": "Prior bounded finding retained: Fourteen unequivocal titles support limited subjects: two foundations, seven mathematics, three AI and two communication/ethics. Fourteen broad engineering/data/design titles remain unclassified; none has a full description in this source.",
+          "evidence": [
+            {
+              "url": "https://www.ece.udel.edu/academics/undergraduate/artificial-intelligence-engineering-bs/",
+              "locator": "Sample Plan of Study: all four years; courses subject to change and direction to 2026\u201327 catalog"
+            }
+          ],
+          "limitations": [
+            "This pass verifies title-limited decisions and uncertainty, not full course content. No department-prefix classification is used.",
+            "This follow-up checks new public planning/governance alternatives; earlier identity/category conclusions remain attributed to the prior review and are not newly certified by these alternatives."
+          ]
+        }
+      },
+      "expected_course_ids": {
+        "required": [],
+        "options": [],
+        "unresolved": [
+          "delaware-cisc-106",
+          "delaware-cisc-210",
+          "delaware-cisc-220",
+          "delaware-cisc-320",
+          "delaware-cpeg-202",
+          "delaware-cpeg-457",
+          "delaware-eggg-101",
+          "delaware-eleg-305",
+          "delaware-eleg-310",
+          "delaware-eleg-381",
+          "delaware-eleg-397",
+          "delaware-eleg-398",
+          "delaware-eleg-401",
+          "delaware-eleg-404",
+          "delaware-eleg-405",
+          "delaware-eleg-491",
+          "delaware-eleg-498",
+          "delaware-eleg-499",
+          "delaware-eleg-625",
+          "delaware-engl-110",
+          "delaware-math-210",
+          "delaware-math-219",
+          "delaware-math-241",
+          "delaware-math-242",
+          "delaware-math-243",
+          "delaware-math-351",
+          "delaware-math-426",
+          "delaware-math-450"
+        ]
+      },
+      "expected_profile": {
+        "required": {
+          "count": 0,
+          "categories": {}
+        },
+        "options": {
+          "count": 0,
+          "categories": {}
+        },
+        "unresolved": {
+          "count": 28,
+          "categories": {
+            "foundations": 2,
+            "mathematics": 7,
+            "ai_ml": 3,
+            "human_context": 2,
+            "other": 14
+          }
+        }
+      },
+      "expected_profile_scope": "Complete represented sample-plan identities; no binding curriculum certification.",
+      "full_degree_verified": false,
+      "resolution_outcome": "unresolved_after_new_permitted_public_links",
+      "sources": [
+        {
+          "url": "https://www.ece.udel.edu/academics/undergraduate/artificial-intelligence-engineering-bs/",
+          "catalog_year": null,
+          "locator": "Complete Sample Plan of Study, four years, two alternatives, paired physics and current catalog direction",
+          "checked_at": "2026-10-11",
+          "access_status": "readable",
+          "finding": "Readable saved official HTML and current web reader; still explicitly sample",
+          "saved_source_path": "var/resolution-delaware-furman/delaware-department.html",
+          "saved_source_sha256": "f92f8a4bd2ee98e300ff2fdd8662f2df17ec1772716abd65d62b49fe83c4d1fb",
+          "saved_source_format": "official_cached_html"
+        },
+        {
+          "url": "https://www.ece.udel.edu/wp-content/uploads/2025/07/2025-AI-flowchart.pdf",
+          "catalog_year": null,
+          "locator": "One-page Flowchart of AI Engineering Curriculum, term grid and named courses",
+          "checked_at": "2026-10-11",
+          "access_status": "readable",
+          "finding": "Readable public PDF; 2025 path, no current cohort applicability; ELEG405 and ELEG398 shown without current alternatives",
+          "saved_source_path": "var/resolution-delaware-furman/delaware-flowchart.web-reader.txt",
+          "saved_source_sha256": "792ad7a5cfe765c08cc51d2605c45babe86f5f2954a7e87a633f26745861650f",
+          "saved_source_format": "public_web_reader_output"
+        }
+      ],
+      "manual_category_course_ids": {
+        "foundations": [
+          "delaware-cisc-220",
+          "delaware-cisc-320"
+        ],
+        "mathematics": [
+          "delaware-math-241",
+          "delaware-math-242",
+          "delaware-math-243",
+          "delaware-math-351",
+          "delaware-math-210",
+          "delaware-math-450",
+          "delaware-math-426"
+        ],
+        "ai_ml": [
+          "delaware-eleg-381",
+          "delaware-eleg-405",
+          "delaware-eleg-404"
+        ],
+        "human_context": [
+          "delaware-engl-110",
+          "delaware-eleg-491"
+        ],
+        "other": [
+          "delaware-eggg-101",
+          "delaware-cisc-106",
+          "delaware-cpeg-202",
+          "delaware-cisc-210",
+          "delaware-math-219",
+          "delaware-eleg-310",
+          "delaware-eleg-305",
+          "delaware-eleg-625",
+          "delaware-eleg-397",
+          "delaware-eleg-398",
+          "delaware-cpeg-457",
+          "delaware-eleg-498",
+          "delaware-eleg-401",
+          "delaware-eleg-499"
+        ]
+      },
+      "checked_boundaries": [
+        {
+          "url": "https://catalog.udel.edu/preview_program.php?catoid=97&poid=98013&returnto=35894",
+          "access_status": "prior_http403_not_retried",
+          "locator": "2026\u201327 AI Engineering BS linked catalog"
+        }
+      ],
+      "manual_source_read_scope": "Exact source sections described in sources were read; requirement and subject sets describe mapped observations only. No inferred degree-wide fixed or choice set.",
+      "prior_review_file": "research/degree-audit/independent-resolution-delaware-furman.json",
+      "prior_identity_and_category_review_retained": true,
+      "followup_sources": [
+        {
+          "url": "https://www.ece.udel.edu/academics/undergraduate/artificial-intelligence-engineering-bs/",
+          "locator": "Full Sample Plan, two alternatives, Course Flowchart link, 2026\u201327 Course Catalog direction",
+          "finding": "Still expressly sample; ELEG405/625 and397/398 alternatives retained. Live page still links older2025 flowchart; no new cohort applicability statement.",
+          "checked_at": "2026-10-11",
+          "source_date": null,
+          "catalog_year": null,
+          "access_status": "readable",
+          "new_to_followup": false,
+          "saved_source_path": "var/university-core-followup-plan-conflicts/open6.web-reader.json",
+          "saved_source_sha256": "07e884be27749bb6b974cb609a0a8040ef3a77413c3296a7d35a9dbf5777706a",
+          "saved_source_format": "public_web_reader_output_batch"
+        },
+        {
+          "url": "https://www.ece.udel.edu/academics/undergraduate/",
+          "locator": "Undergraduate Majors and current-student/resource links",
+          "finding": "New hub explicitly links AI major but supplies no binding curriculum/cohort table.",
+          "checked_at": "2026-10-11",
+          "source_date": null,
+          "catalog_year": null,
+          "access_status": "readable",
+          "new_to_followup": true,
+          "saved_source_path": "var/university-core-followup-plan-conflicts/open1.web-reader.json",
+          "saved_source_sha256": "324ccb76bb91643fd4eec652f9e3b15cb1a6344e1636f21fd055ce366ab0d55c",
+          "saved_source_format": "public_web_reader_output_batch"
+        },
+        {
+          "url": "https://www.ece.udel.edu/academics/undergraduate/faq/",
+          "locator": "Technical electives, sample order, minimum CISC grades, senior design",
+          "finding": "Prior FAQ reread: sample order general examples; grade/capstone language specifically Electrical/Computer Engineering. Does not establish AI-specific2026 requirements.",
+          "checked_at": "2026-10-11",
+          "source_date": null,
+          "catalog_year": null,
+          "access_status": "readable",
+          "new_to_followup": false,
+          "saved_source_path": "var/university-core-followup-plan-conflicts/open3.web-reader.json",
+          "saved_source_sha256": "0d290a0bcad51d03d7fcb1eaacd93ff50343b40bb72e87b2520abfba1c56f11a",
+          "saved_source_format": "public_web_reader_output_batch"
+        },
+        {
+          "url": "https://www.ece.udel.edu/business-resources/",
+          "locator": "Business Operations and Governing Policies links",
+          "finding": "New department resource lead lists business/safety and bylaws/personnel links, no AI major plan. No unrelated personnel document followed.",
+          "checked_at": "2026-10-11",
+          "source_date": null,
+          "catalog_year": null,
+          "access_status": "readable",
+          "new_to_followup": true,
+          "saved_source_path": "var/university-core-followup-plan-conflicts/open4.web-reader.json",
+          "saved_source_sha256": "d62179ffc662c73ecb4e199a9fd9bf0e21bfbbb6369472e894bf832f5b08f7c0",
+          "saved_source_format": "public_web_reader_output_batch"
+        },
+        {
+          "url": "https://www.ece.udel.edu/wp-content/uploads/2025/07/2025-AI-flowchart.pdf",
+          "locator": "Entire single-page extracted curriculum grid; ELEG405/ELEG398 and prerequisite/corequisite legend",
+          "finding": "Actual current department link still opens2025-path PDF; no2026\u201327 cohort statement; no arrows/grades imported.",
+          "checked_at": "2026-10-11",
+          "source_date": null,
+          "catalog_year": null,
+          "access_status": "readable",
+          "new_to_followup": false,
+          "saved_source_path": "var/university-core-followup-plan-conflicts/open8.web-reader.json",
+          "saved_source_sha256": "27f7972bffe60a7129aa874e696a1fb2d42412f8f1da48cc73c43a6a52588b06",
+          "saved_source_format": "public_web_reader_output_batch"
+        }
+      ],
+      "hierarchy_and_version": {
+        "established": "Current AI department sample explicitly says courses subject to change and refers to2026\u201327 catalog; linked flowchart URL remains2025/07/2025-AI-flowchart.pdf.",
+        "not_established": "2025 flowchart entry-cohort applicability or current mandatory fixed/choice inventory; no statement makes sample or older flowchart controlling over2026\u201327 catalog.",
+        "governing_inventory_verified": false
+      },
+      "next_evidence_needed": "A permitted readable2026\u201327 mandatory major table, or an authoritative cohort-dated advising plan establishing applicability and reconciling sample/flowchart alternatives."
+    }
+  ],
+  "research_limits": [
+    "Known denied/challenged/robots/password routes were not retried; no alternate catalog endpoint, authentication, mirror or contact with people.",
+    "Two official-domain search batches returned irrelevant/out-of-domain results; they establish no absence and supplied no accepted source evidence.",
+    "Web-reader captures preserve tool output, not original server bytes. No program, adapter logic, shared ledger, compiled data, maintained database, schema, PLAN or site fact changed."
+  ]
+}

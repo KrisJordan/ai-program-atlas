@@ -51,3 +51,7 @@ For the five represented BA records, no known unread publicly linked description
 ## Fixed-major resolution disposition — 2026-10-11
 
 The department page was reread in full. Five named CS identities are verified, while the eight philosophy-course identities and their fixed/optional structure remain unspecified on this accessible source. A complete fixed major set cannot be established, so the proposed replacement review remains partial. Older BA titles and null individual credits remain source-specific; no BS facts or current offering membership are inherited. Exact manual identities/categories, permitted-alternative dispositions and limits are in [Purdue resolution](../../../research/degree-audit/independent-resolution-purdue.md). Known denied catalog/detail routes were not retried. Refresh now rejects truncated, duplicated or substituted computing lists against the exact five-source-identity inventory, without adding review status to observations.
+
+## Public planning-source follow-up — 2026-10-11
+
+See [planning-source conflict follow-up](../../../research/university-core-followup-plan-conflicts.md) and its complete proposed bounded review rows. Public advising/governance alternatives establish no governing current inventory sufficient to close this program's remaining core gap. Prior course facts, review statuses and source-specific version limits are retained. Known denied routes were not retried; no personal audit or contact with people. Full-degree status is not certified.

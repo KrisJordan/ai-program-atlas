@@ -114,3 +114,7 @@ fixed/capstone identities and approved choices. Known catalog robots HTTP202 was
 not retried. No seed or adapter change is justified; bounded dimensions remain
 partial. See [resolution evidence](../../../research/degree-audit/independent-resolution-usf-wm.md)
 and its complete proposed replacement core rows for coordinator application.
+
+## Public planning-source follow-up — 2026-10-11
+
+See [planning-source conflict follow-up](../../../research/university-core-followup-plan-conflicts.md) and its complete proposed bounded review rows. Public advising/governance alternatives establish no governing current inventory sufficient to close this program's remaining core gap. Prior course facts, review statuses and source-specific version limits are retained. Known denied routes were not retried; no personal audit or contact with people. Full-degree status is not certified.
