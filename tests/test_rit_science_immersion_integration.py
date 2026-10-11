@@ -28,7 +28,7 @@ def test_science_preparation_is_context_and_local_core_is_optional():
     assert PID+'-biol-575' not in r['cellular-biology-electives']['course_ids']
     assert PID+'-phys-251' not in r['physics-electives']['course_ids']
     p=requirement_profile(d)
-    assert [p[k]['count'] for k in ['required','options','unresolved']]==[23,709,15]
+    assert [p[k]['count'] for k in ['required','options','unresolved']]==[23,770,17]
     assert d['curriculum_status']=='partial'
 
 

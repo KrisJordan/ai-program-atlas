@@ -1,87 +1,110 @@
 # Artificial Intelligence BS — current audit state
 
-Reviewed 2026-10-11. The primary degree audit is **in progress**, not complete or
-wholly inaccessible. The current reviewed graph has 23 fixed course identities,
-412 options and 14 unresolved/context identities (three advising-only and eleven preparation-only). The 2026–2027 public
-study curriculum states 122 semester hours, six core alternative pairs and two AI
-electives across four options (five course codes, including a robotics pair).
-Two zero-credit co-op placements reuse one course identity. Uncoded GE,
-immersion, open electives, co-op preparation and two distinct wellness
-requirements are represented without fabricated course membership.
+Reviewed 2026-10-11. The bounded accessible primary review is closed; the full
+degree audit is **blocked at specific source gaps**, not complete. The current
+graph has 810 source identities: 23 fixed, 770 conditional options and 17
+preparation/context records. It contains 807 actual descriptions and 333
+prerequisite/eligibility statements; three advising-only identities lack
+independently verified current descriptions. These counts describe mapped
+records, not the number of courses a student must take or fully deduplicated
+institutional offerings.
 
-All 40 current public course popups were read. Their credits and 28 prerequisite
-or expectation statements are mapped; absent prerequisite fields stay unknown.
-The 31 represented finite immersion branches supply 406 additional actual-description records. Every represented course has a source-specific taxonomy review, including three
-advising-only identities for which current descriptions are unavailable. Exact
-profile sets and role corrections are in the RIT row of
-`research/degree-audit/buffalo-delaware-rit.json`.
+The 2026–2027 public study curriculum states 122 semester hours, six core
+alternative pairs and two AI electives across four entries (five codes, including
+a robotics pair). Two zero-credit co-op placements reuse one identity. Uncoded
+GE, open electives, co-op preparation and two distinct wellness requirements do
+not acquire fabricated course membership.
 
-## Verified university policies
+All 77 published immersion paths are represented: 76 conditional candidate
+branches, including approval-based Global Experience, and Principles of Computing
+as excluded context. Its required ISCH-370 explicitly prohibits GCCIS degree
+credit even when enrollment is approved. The same source-listed course is excluded
+from GIS degree-credit choices. GCIS-123 and ISTE-230 are major alternatives,
+not universally fixed; their GIS memberships retain the no-reuse condition when
+chosen for the major. ISCH-201 has approval-only wording; ISCH-110 names Computer
+Science majors specifically. These restrictions are not interchangeable.
 
-Public D02.0, D05.0, D12.0, D01.4, D01.5 and D03.0 supply undergraduate transfer,
-grades/repeats/P–N, 2.0 GPA, 25-percent RIT residency, the 120-hour institutional
-floor, catalog applicability, semester-credit definition, writing, GE and
-registration conditions. The degree’s 122 hours are not replaced by that floor.
-The BS framework is 60 GE hours within the degree, with eight perspectives,
-three-course/nine-hour immersion and program-course overlap limits. Wellness
-exceptions and two different activities/levels are mapped.
+The named source queue has 787 literal labels: 784 current observations integrated
+and three historical-only references. All 1,321 current within-route references
+have reviewed metadata; no identified current card or local graph remains unread.
+Combined menu labels bind only their actual opened popup identity. Same titles,
+slashes, substitutes and credit exclusions do not certify aliases. Exact manual
+sets and category totals are recorded in the RIT primary ledger. The earlier
+independent degree check remains bounded; a separate eight-route independent
+check does not certify this entire expanded graph.
 
-D03.0 provides conditional departmental approvals for out-of-plan courses and
-both departments’ approval for undergraduate use of graduate courses. ISTE476’s
-restricted audience and EEEE485’s preparation therefore remain explicit entry
-conditions; neither proves an impossible degree. No waiver or equivalence is
-asserted, and prerequisites are not added to fixed degree requirements.
+## Verified university policies and exact remaining boundaries
 
-The public 2026–27 advising PDF explicitly designates IDAI490 as WI-PR, closing
-that identity gap. Three WI courses must fit existing degree hours. The current
-UWP/committee follow-up records AP/transfer FYW exemptions, the exceptional
-WI-GE petition criteria and the web deadline, plus UWRT150’s public description
-and an explicitly **undated sample syllabus**. This is example metadata, not a
-current section syllabus or a program outcome. See the separate source review
-`research/degree-audit/rit-writing-closure.md`.
+Public D02.0, D05.0, D12.0, D01.4, D01.5 and D03.0 cover transfer, grades/repeats,
+P–N, 2.0 GPA, 25-percent RIT residency, the 120-hour institutional floor,
+matriculation/advised catalog applicability, semester-credit meaning, writing,
+GE and registration. The BS framework has 60 GE hours, eight perspectives and a
+three-course/nine-hour immersion outside major requirements. The degree's
+122-hour sequence is retained. Conditional approvals are not waivers and
+prerequisites are not silently added as fixed degree obligations.
 
-## Exact remaining boundaries and accessible queue
+The advising PDF designates IDAI-490 WI-PR. Public UWP/committee and petition
+sources cover three WI courses within existing degree hours, FYW AP/transfer
+exemptions and exceptional WI-GE criteria/timing. UWRT-150's undated sample
+syllabus is explicitly an example, not a current section or program outcome.
+Current-student curriculum guidance was reread through the actual program-page
+link: it directs students to their Academic Advising Report and the catalog for
+their matriculation/advised year. It does not reconcile the differing public
+catalog and advising menus.
 
-- Current WRTG/GE attributes are directed to SIS. The UWC dated-list reference
-  has no actual link. The FAQ’s public search URL returns an invalid-site error;
-  ordinary SIS landing navigation renders RIT Login. No sign-in was attempted.
-  The registrar catalog route previously stopped at robots HTTP 202 and was not
-  retried. The linked science list explicitly dates to March 2013 and is not used
-  as a current pool.
-- Public immersion curricula do render in an ordinary browser. The directory
-  has 77 immersion links; all local route rules are now reviewed. Thirty-one branches
-  have represented course records, plus an open Global Experience rule; the full named queue still has 338 unread
-  identifiers. No blanket catalog-access claim or full GE closure is justified.
-- The current AI sequence annotates MATH190 as Immersion3 and separately lists
-  another Immersion3 slot. The advising chart instead shows three separate
-  immersion slots; university and Mathematics-immersion policy prohibit program
-  overlap. The Mathematics route lists MATH190 under prerequisites, not in its
-  30-course elective pool. No overlap exception is inferred.
-- Advising lists CSCI632/LING582/LING584, whereas the rendered catalog uses
-  CSCI634 and omits those linguistics electives. Pools remain separate.
-- CSCI431’s credit exclusion has an apparent self-reference; no correction is
-  guessed.
-- The UWP FYW FAQ names ISTE150 for selected online students, but its own prize
-  section and the graduation page name ISTE110. UWRT150 stays the AI sequence
-  course. No alternative-code equivalence is inferred.
-- Remaining college-specific completion checks and accessible immersion course
-  descriptions are work in progress, not access blockers.
+The remaining boundaries are specific:
 
-The March 25, 2026 launch article explicitly updated August 17 describes a planned
-Fall 2026 cohort. It does not independently verify first instruction; planned
-first-offered evidence and announced status remain qualified. Program aims are
-not recast as assessed outcomes.
+- The full current GE/WI attribute inventory is directed to SIS. The official
+  public-search URL returned an invalid site; the landing page rendered RIT Login.
+  No sign-in or bypass was attempted. A prior registrar course-search robots 202
+  boundary remains intact. The independently public study routes were accessible;
+  their successful review does not prove the full GE attribute universe. The linked
+  science recommendation list is explicitly March 2013 and is historical.
+- The degree sequence annotates MATH-190 as Immersion 3 beside a separate
+  Immersion 3 slot, whereas advising shows three immersion slots and policy
+  prohibits major overlap. Mathematics lists MATH-190 as preparation, not in its
+  elective menu. No overlap exception is invented.
+- The 2026–2027 advising PDF lists CSCI-632 and LING-582/584; the rendered catalog
+  uses CSCI-634 and omits those linguistics electives. Their current applicability
+  remains unreconciled and their source pools remain separate.
+- Transmedia permits ENGL-377 instead of DHSS-500, but the overview requires
+  DHSS/ITDL-500 first or concurrently without explaining the alternative.
+  Free Culture retains historical ISCH-110 substitution wording even though its
+  current table requires a specific DHSS-488 topic instead. That generic course
+  card does not supply an offering-specific Topic ID #4 description.
+- Other explicit qualifications remain alongside the relevant rules: Spanish
+  HIST-130/135 dual-group placement and MLSP-301 prose/formal prerequisite
+  difference; untagged Latino language/culture distribution; Global Experience
+  approval scope; and Psychology's broader 2xx/3xx criterion. Open criteria are
+  not fabricated finite pools. The UWP ISTE-150/110 discrepancy does not change
+  the AI sequence's UWRT-150 requirement.
 
-## Rerun boundary
+CSCI-431 was reread in its full current public card. Its literal restriction says
+students cannot take and receive credit if they have taken CSCI-431 and CSCI-631.
+The self-reference and conjunction are preserved; on its face this is a prior-
+credit condition, not a prohibition on initial entry or a standalone full-degree
+blocker. No editorial OR rule or cross-list identity is inferred.
 
-The HTTP study adapter observes the actual overview/co-op statement and parses
-course cards only when supplied a rendered capture. `rit_ai_degree_courses`
-requires exact rendered degree/version context. Public policy/writing adapters
-observe current content and links, never emit manual reviews, audit completion,
-or new verification timestamps. The advising and writing PDF helpers are manual
-format adapters: re-fetch through ordinary robots-aware access, extract and
-visually inspect relevant pages before updating a reviewed digest. Raw captures
-stay ignored. No direct catalog access restriction was bypassed.
+Actual credit ranges and count rules are separate: four-credit language/imaging
+courses are not assigned three credits from route totals; Music/Theatre repeated
+ensemble bundles are not three distinct identities; VIP requires nine credits
+on one project, including at least three at the advanced level. Topic, placement,
+audience, campus and permission conditions remain explicit. Planned Fall 2026
+launch evidence is not proof of first instruction, and program aims are not
+recast as assessed outcomes.
+
+## Rerun and validation boundary
+
+The study adapter observes the actual overview/co-op statement; course observers
+require rendered cards, exact page/version context, source table bindings and
+current values. Composition handles only reviewed source-card scopes. No observer
+replays a seed, certifies a manual classification, emits an audit or invents a
+verification timestamp. Policy and advising-PDF manual digest boundaries remain
+explicit; raw captures stay ignored. No direct catalog restriction was bypassed.
+
+The following dated sections retain incremental research history; their earlier
+counts are superseded by the current state above. See the separate bounded
+closure note for final validation and manual role calculation.
 
 ## Mathematics immersion branch — 2026-10-11
 

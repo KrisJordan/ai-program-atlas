@@ -20,7 +20,7 @@ def test_six_routes_keep_local_requirements_and_exact_exclusion_scope():
     assert any('instructor' in n for n in c['ENGL-389']['notes'])
     assert all(c[code]['category']=='applications' for code in ['COMM-223','COMM-322','COMM-421'])
     profile=requirement_profile(d)
-    assert [profile[k]['count'] for k in ['required','options','unresolved']]==[23,709,15]
-    assert len(c)==747 and sum(bool(x['description']) for x in c.values())==744
+    assert [profile[k]['count'] for k in ['required','options','unresolved']]==[23,770,17]
+    assert len(c)==810 and sum(bool(x['description']) for x in c.values())==807
     spec=importlib.util.spec_from_file_location('rit_writing_integration',Path('atlas/adapters')/PID/'adapter.py');a=importlib.util.module_from_spec(spec);spec.loader.exec_module(a)
     assert set(a.SOURCES)<={s['url'] for s in d['sources']}

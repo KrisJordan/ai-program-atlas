@@ -24,7 +24,7 @@ def test_queue_keeps_unknown_course_total_and_all_published_routes():
     q = json.loads(Path('research/rit-immersion-route-queue.json').read_text())
     assert len(q['routes']) == len({r['url'] for r in q['routes']}) == 77
     assert q['queue_totals']['total_distinct_route_courses'] is None
-    assert q['status'] == 'in_progress'
+    assert q['status'] == 'bounded_review_closed'
     for route in q['routes']:
         if route['status'] == 'identity_reviewed_rules_unread':
             assert route['rules'] is None and route['course_codes'] is None
@@ -41,9 +41,9 @@ def test_all_routes_have_rules_but_named_content_queue_is_not_full_completion():
     union={c for r in q['routes'] for c in r['course_codes']}
     assert len(union)==787
     assert union=={c['code'] for c in work['courses']}
-    assert work['review_state_counts']=={'existing_reviewed_description':721,'historical_reference_only':3,'reviewed_contribution_not_integrated':63}
+    assert work['review_state_counts']=={'existing_reviewed_description':784,'historical_reference_only':3}
     assert len([c for c in work['courses'] if c['assigned_reviewer']=='root_languages'])==107
     assert len(work['open_routes'])==1 and work['open_routes'][0]['id']=='global-experience-immersion'
     assert q['queue_totals']['total_distinct_route_courses'] is None
-    assert q['status']==work['status']=='in_progress'
+    assert q['status']==work['status']=='bounded_review_closed'
     assert 'PRFL/WGST-330' in union and not any('category_review' in c for c in work['courses'])

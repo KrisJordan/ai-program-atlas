@@ -113,3 +113,9 @@ for slug in ['dance-immersion', 'music-immersion', 'theatre-arts-immersion', 'th
 
 from atlas.adapters.rit_visual_immersion_integration import register as register_visual_immersions
 register_visual_immersions(SOURCES,SOURCE_PARSERS)
+
+from atlas.adapters.rit_remaining_immersion_integration import register as register_remaining_immersions
+register_remaining_immersions(SOURCES,SOURCE_PARSERS)
+
+from atlas.adapters.rit_current_curriculum_guidance import register as register_curriculum_guidance
+register_curriculum_guidance(SOURCES,SOURCE_PARSERS)

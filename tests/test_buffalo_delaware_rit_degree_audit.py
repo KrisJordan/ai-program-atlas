@@ -27,10 +27,10 @@ def test_independently_reviewed_profiles_and_sources(entry):
         assert profile[kind]['count']==entry['expected_profile'][kind]['count']
         assert profile[kind]['categories']==entry['expected_profile'][kind]['categories']
     assert p['curriculum_status']=='partial'
-    expected_status = 'in_progress' if entry['program_id'] == PROGRAM_ID else 'blocked'
+    expected_status = 'blocked'
     assert entry['status'] == expected_status
     if entry['program_id'] == PROGRAM_ID:
-        assert 'accessible GE/WI pool review' in entry['checks']['degree_wide_requirements']
+        assert 'All identified accessible immersion work is complete' in entry['checks']['degree_wide_requirements']
         assert all('not fully mapped' not in b.get('gap', '') for b in entry['blockers'])
     assert entry['blockers'] and entry['second_pass_status']=='pending'
     sources={s['id'] for s in p['sources']}
@@ -51,13 +51,13 @@ def test_rit_uncoded_slots_have_no_accidental_elective_memberships():
 
 def test_rit_actual_subjects_and_eligibility_are_preserved():
     p=load(PROGRAM_ID);c={c['code']:c for c in p['courses']}
-    assert len([x for x in c.values() if x['description']])==744
-    assert len([x for x in c.values() if x['prerequisites']])==302
+    assert len([x for x in c.values() if x['description']])==807
+    assert len([x for x in c.values() if x['prerequisites']])==333
     for code,category in {'IDAI-360':'mathematics','ISTE-230':'systems','IDAI-485':'systems','SWEN-261':'foundations','IDAI-490':'foundations','YOPS-10':'other','PSYC-223':'applications'}.items():
         assert c[code]['category']==category
     assert 'AISYS-MN' in c['ISTE-476']['prerequisites'] and 'AI BS' not in c['ISTE-476']['prerequisites']
     assert c['EEEE-485']['prerequisites']=='EEEE-346 or equivalent.'
-    assert 'self-reference' in c['CSCI-431']['prerequisites']
+    assert 'if they have taken CSCI-431 and CSCI-631' in c['CSCI-431']['prerequisites']
     assert c['CSCI-634']['credits']==3 and c['CSCI-634']['credit_unit']=='semester_hours'
     assert c['YOPS-10']['credits']==0 and c['IDAI-499']['credits']==0
     assert c['LING-581']['prerequisites'].startswith('The description expects')

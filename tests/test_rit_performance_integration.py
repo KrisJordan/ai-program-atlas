@@ -35,5 +35,5 @@ def test_repeated_ensemble_bundles_are_not_three_distinct_course_identities():
     assert r['theatre-design-and-stagecraft-immersion-group-1']['kind']=='all'
     assert c['PRFN-250']['category']==c['PRFN-341']['category']==c['SOIS-240']['category']=='human_context'
     assert c['PRFN-243']['category_review']['status']=='mixed'
-    p=requirement_profile(d);assert [p[k]['count'] for k in ['required','options','unresolved']]==[23,709,15]
-    assert len(c)==747 and sum(bool(x['description']) for x in c.values())==744
+    p=requirement_profile(d);assert [p[k]['count'] for k in ['required','options','unresolved']]==[23,770,17]
+    assert len(c)==810 and sum(bool(x['description']) for x in c.values())==807

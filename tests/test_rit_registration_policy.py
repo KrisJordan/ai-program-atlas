@@ -21,7 +21,7 @@ def test_registration_observation_detects_changes_without_granting_waivers():
 def test_conditional_registration_does_not_change_course_roles():
     p=json.loads(Path('data/programs',PID+'.json').read_text())
     profile=requirement_profile(p)
-    assert [profile[k]['count'] for k in ['required','options','unresolved']]==[23,709,15]
+    assert [profile[k]['count'] for k in ['required','options','unresolved']]==[23,770,17]
     rules=[r for r in p['requirements'] if r['source_id']=='rit-policy-d030']
     assert len(rules)==3 and all(r['kind']=='note' and not r['course_ids'] for r in rules)
     assert 'both home and offering departments approve' in rules[0]['summary']

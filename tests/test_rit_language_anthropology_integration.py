@@ -33,5 +33,5 @@ def test_whole_language_paths_credits_and_shared_identity_conditions_are_retaine
     assert set(first['course_ids'])=={PID+'-anth-'+n for n in ['102','104','105']}
     assert not(set(first['course_ids']) & set(r['cultural-anthropology-immersion']['course_ids']))
     p=requirement_profile(d)
-    assert [p[k]['count'] for k in ['required','options','unresolved']]==[23,709,15]
+    assert [p[k]['count'] for k in ['required','options','unresolved']]==[23,770,17]
     assert d['curriculum_status']=='partial'
