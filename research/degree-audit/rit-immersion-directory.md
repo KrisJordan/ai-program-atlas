@@ -12,9 +12,9 @@ The full named worklist has **1,324 distinct-within-route references / 787 disti
 printed identifiers**. These include preparation, historical substitution codes,
 combined-subject notation and conditional topic/campus entries; they are not 787
 proven distinct AI-eligible offerings. `research/rit-immersion-course-review-queue.json`
-records every identifier's route/group provenance. Of these identifiers, 59 have
-actual reviewed descriptions already in the degree seed, 11 have the separate
-new statistics contribution, three are historical-only references, and **714
+records every identifier's route/group provenance. Of these identifiers, 70 have
+actual reviewed descriptions in the degree seed (including the eleven newly
+integrated statistics records), three are historical-only references, and **714
 need actual course content**. The root owns 107 of those pending identifiers
 from the language routes. No unread description is labeled source-inspected
 unclassified.

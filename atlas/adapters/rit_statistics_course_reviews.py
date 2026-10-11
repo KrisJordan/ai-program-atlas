@@ -38,3 +38,9 @@ def parse(html):
         raise ValueError('Duplicate statistics cards')
     return {'id':PID,'courses':courses,'requirements':[],
             'observed_immersion_tables':observation['observed_tables']}
+
+
+def register(sources, parsers):
+    if URL not in sources:
+        sources.append(URL)
+    parsers[URL] = parse

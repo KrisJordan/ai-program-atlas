@@ -2,7 +2,7 @@
 
 Reviewed 2026-10-11. The primary degree audit is **in progress**, not complete or
 wholly inaccessible. The current reviewed graph has 23 fixed course identities,
-59 options and six unresolved/context identities (three advising-only and three preparation-only). The 2026–2027 public
+70 options and six unresolved/context identities (three advising-only and three preparation-only). The 2026–2027 public
 study curriculum states 122 semester hours, six core alternative pairs and two AI
 electives across four options (five course codes, including a robotics pair).
 Two zero-credit co-op placements reuse one course identity. Uncoded GE,
@@ -11,7 +11,7 @@ requirements are represented without fabricated course membership.
 
 All 40 current public course popups were read. Their credits and 28 prerequisite
 or expectation statements are mapped; absent prerequisite fields stay unknown.
-The additional Mathematics branch supplies 31 new actual-description records. Every represented course has a source-specific taxonomy review, including three
+The Mathematics, AI in Society and Applied Statistics branches supply 56 additional actual-description records. Every represented course has a source-specific taxonomy review, including three
 advising-only identities for which current descriptions are unavailable. Exact
 profile sets and role corrections are in the RIT row of
 `research/degree-audit/buffalo-delaware-rit.json`.
@@ -49,9 +49,9 @@ current section syllabus or a program outcome. See the separate source review
   retried. The linked science list explicitly dates to March 2013 and is not used
   as a current pool.
 - Public immersion curricula do render in an ordinary browser. The directory
-  has 77 immersion links; the Mathematics route’s requirements were inspected,
-  and all 37 course cards are now reviewed/mapped. The other 75 routes remain accessible
-  work. No blanket catalog-access claim or full GE closure is justified yet.
+  has 77 immersion links; all local route rules are now reviewed. Three branches
+  have represented course records; the full named queue still has 714 unread
+  identifiers. No blanket catalog-access claim or full GE closure is justified.
 - The current AI sequence annotates MATH190 as Immersion3 and separately lists
   another Immersion3 slot. The advising chart instead shows three separate
   immersion slots; university and Mathematics-immersion policy prohibit program
@@ -106,7 +106,31 @@ DHSS101 and VISL234 combine interpretation with substantial digital/art practice
 and remain mixed. No separate prerequisite statements were present, so null
 remains unknown. The route's required STSO320 is conditional for the AI degree,
 under the same optional-immersion parent; it is not an extra fixed AI core.
-The degree now represents 88 identities, with 85 descriptions. The separate
+This branch contributes fourteen of the current degree’s 99 identities and 96
+descriptions. The separate
 standalone immersion record was not edited. Source-specific observations reuse
 its actual local-table parser but do not transfer its aims or completeness to
 the host degree. See `research/degree-audit/rit-society-immersion-route.md`.
+
+
+## Full immersion rule queue and Applied Statistics — 2026-10-11
+
+All 77 published immersion overviews, current curriculum tables and footnotes
+are now read across coordinated contributions. The exact queue has 1,324
+within-route named references / 787 literal identifiers, including preparation,
+historical substitution and combined-subject notation. Seventy identifiers now
+have actual reviewed descriptions in this degree, three are historical-only,
+and 714 remain unread. Global Experience is an open approval-based nine-credit
+route; no finite course pool is invented. Current SIS/GE/WI access boundaries
+remain distinct from the accessible public immersion pages.
+
+Applied Statistics adds eleven actual STAT cards to the two existing elective
+MATH records. Choose three of 13 eligible codes, nine hours, at least one at
+300 level; fixed AI MATH-251 cannot be reused. The route's separate MATH-181/182
+preparation is already AI-fixed and is not counted again. STAT-205/257 credit
+exclusion, exact individual prerequisites/equivalents and engineering audience
+conditions remain visible. Ten new courses are mathematics; STAT-330 is applied
+data-visualization practice based on its actual description. STAT-325's two WI
+attributes do not imply guaranteed term availability. The mapped graph is now
+23 fixed / 70 options / 6 contextual identities; the whole-degree audit remains
+in progress. Research rule evidence is not a completed course-content audit.

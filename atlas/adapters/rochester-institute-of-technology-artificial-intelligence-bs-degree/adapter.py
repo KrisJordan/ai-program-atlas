@@ -41,3 +41,6 @@ register_math_immersion(SOURCES, SOURCE_PARSERS)
 
 from atlas.adapters.rit_society_immersion_route import register as register_society_immersion
 register_society_immersion(SOURCES, SOURCE_PARSERS)
+
+from atlas.adapters.rit_statistics_course_reviews import register as register_statistics_immersion
+register_statistics_immersion(SOURCES, SOURCE_PARSERS)

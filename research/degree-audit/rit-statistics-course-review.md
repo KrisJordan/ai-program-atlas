@@ -29,5 +29,7 @@ facts, but emits no manual review, audit or stale curriculum requirements. Tests
 exercise changed fields, identity/version/body failures and the manual scope.
 They are synthetic fixtures, not a claimed replay of exported live HTML. The
 ordinary public UI evidence was read directly; no hidden catalog endpoint or
-restricted search was used. The manual contribution remains separate from seed
-integration until the full route queue is assembled.
+restricted search was used. The contribution is now integrated after all 77 route rules were assembled.
+The eleven new options plus existing MATH-301/505 form the 13-code eligible
+statistics choice menu; fixed AI MATH-251 is excluded by the no-overlap rule.
+Current aggregate is 23 fixed / 70 options / 6 contextual identities (99 total).

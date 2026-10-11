@@ -33,3 +33,22 @@ def test_manual_review_retains_enrollment_conditions_and_separate_subject_judgme
     assert 'STAT-405' in c['STAT-406']['prerequisites']
     assert 'Writing Intensive: General Education' in c['STAT-325']['attributes']
     assert 'STAT-145' in c['STAT-205']['restrictions'][0]
+
+
+def test_integrated_statistics_branch_has_exact_conditional_role_and_manual_count():
+    from atlas.adapters.rit_statistics_course_reviews import PID, SID, URL
+    from atlas.db import validate_program
+    from atlas.curriculum_profile import requirement_profile
+    d=json.loads(Path('data/programs/'+PID+'.json').read_text());validate_program(d)
+    r=next(x for x in d['requirements'] if x['id']==PID+'-applied-statistics-immersion')
+    assert r['kind']=='choose_courses' and r['count']==3 and r['credits']==9
+    assert len(r['course_ids'])==13 and PID+'-math-251' not in r['course_ids']
+    assert r['parent_id']==PID+'-immersion-observed-routes'
+    prep=next(x for x in d['requirements'] if x['id']==PID+'-applied-statistics-preparation')
+    assert prep['kind']=='note' and prep['course_ids']==[PID+'-math-181',PID+'-math-182']
+    assert SID in {s['id'] for s in d['sources']}
+    c={x['code']:x for x in d['courses']}
+    assert c['STAT-330']['category']=='applications' and 'STAT-145' in c['STAT-205']['prerequisites']
+    profile=requirement_profile(d)
+    assert [profile[k]['count'] for k in ['required','options','unresolved']]==[23,70,6]
+    assert d['curriculum_status']=='partial'
