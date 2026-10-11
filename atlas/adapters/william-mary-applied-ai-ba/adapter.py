@@ -19,3 +19,7 @@ def parse_public_policies(html):
 
 SOURCES = SOURCES + (ADVISING,)
 SOURCE_PARSERS[ADVISING] = parse_public_policies
+
+from atlas.adapters.william_mary_ba_policy_review import register as register_ba_public_policies
+register_ba_public_policies(SOURCE_PARSERS)
+SOURCES = tuple(SOURCE_PARSERS)
