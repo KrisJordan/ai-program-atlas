@@ -227,3 +227,16 @@ The bounded Strobe follow-up found an explicit photography identification in the
 The public EECS numbering table was verified in normal Chrome as well as by ordinary Fetcher. Its twelve exact rows and eight future6.Sxxx statements are visible content. Retain the Fall2022 scope and both source views; no unidentified6.Sxxx replacement or exclusion from the present degree pool is inferred. The parser adds only contextual note nodes; current missing titles and classifications stay unknown. This makes the remaining metadata questions more precise without manufacturing a curricular contradiction.
 
 The remaining21M.589 branch has an accessible public C22 topic description, not a blanket generic-course description. The actual sound/computation/ML content and stated12units/permission are recorded as topic context with unspecified year. Original course metadata and all counts remain unchanged. This narrows the gap from unread content to the scope/applicability of an undated topic; no denied catalog was accessed.
+
+### Additional credit source distinction
+
+6.C35 has15units in the dated6-4_2025 annotation and12 in the undated Common Ground C35/C85 detail. Preserve the dated value; the unversioned reference is null pending scope/precedence clarification. All profile categories, roles and identity counts are unchanged. The C57/C571 index's C06 target is a navigation defect, not an academic eligibility rule or curricular inconsistency.
+
+
+### Historical OCW and instructor descriptions — 2026-10-11
+
+Contribution46b86e1 provides24 actual-description upgrades from17 public OCW syllabi and the department-linked Spring2020 Minds and Machines instructor page. Historical code/title/term bindings and formal preparation remain explicit; old titles never authorize current renumbering or availability assumptions. Decisions, Games, and Rational Choice24.222 combines mathematical decision/game methods with philosophical agency/values, so it now remains other with mixed mathematics/human_context candidates. No identity groups change. HASS now has206 description-supported occurrences,636 limited-title dispositions and three code-onlyunknowns. Full primary audit remains in progress while accessible source branches continue.
+
+### Public resource field audit
+
+Of846 populated course-site fields,818 were general evidence pages rather than verified course teaching websites and are now null. All evidence links remain registered. Retained28 course-specific teaching/syllabus occurrences,24 of which have actual public syllabus URLs. The parser resource binding is explicit per course and URL, after content validation. This corrects resource semantics without changing curriculum membership or subject judgments.

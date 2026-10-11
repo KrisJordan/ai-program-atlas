@@ -6,8 +6,9 @@ from atlas.adapters.national_curriculum_common import course, rule
 
 PID='mit-ai-decision-making-bs'
 observer=import_module('atlas.adapters.mit-ai-decision-making-bs.reviewed_hass_subjects')
+public_resources=import_module('atlas.adapters.mit-ai-decision-making-bs.public_resources')
 MANIFEST=json.loads(Path(__file__).with_name('reviewed_hass_subjects.json').read_text())
-PARSERS={k:getattr(observer,'observe_'+k)for k in ['architecture','literature','history','wgs','wgs_detail','performing_arts','cmsw','language_titles','political_pdf_titles','sts_titles','anthropology_titles','economics_titles','shass_field_titles','remaining_list_titles','french_spotlights','literature_aliases']}
+PARSERS={k:getattr(observer,'observe_'+k)for k in ['architecture','literature','history','wgs','wgs_detail','performing_arts','cmsw','language_titles','political_pdf_titles','sts_titles','anthropology_titles','economics_titles','shass_field_titles','remaining_list_titles','french_spotlights','literature_aliases','ocw_syllabus','minds_machines']}
 INTEGRATED=json.loads(Path(__file__).with_name('integrated_hass_scope.json').read_text())
 SPECS={sid:MANIFEST['source_specs'][sid]for sid in INTEGRATED['source_ids']}
 
@@ -35,6 +36,7 @@ def parse(html,url):
         o,review=matches[0]
         c=course('mit-ai-hass',r['listed_code'],r['listed_name'],review['source_id'],url,unit='units');c['id']=cid
         c.update(category=review['category'],description=review['description_summary'],prerequisites=review['prerequisites'],credits=review['credits'])
+        c.update(public_resources.observed_resources(cid,url))
         c['notes']=list(review['restrictions'])
         if review.get('evidence_basis') == 'official_title_only':
             c['notes'].append('Limited official-title-only classification; no course description was verified. Credit or prerequisite fields require separately explicit source observations.')

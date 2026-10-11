@@ -408,3 +408,18 @@ These historical titles and future-number statements are contextual notes. They 
 ### Public C22 topic context — 2026-10-11
 
 The official Computing C22 Audio Computing page returned HTTP200 through the normal Fetcher. Its visible facts identify21M.389/21M.589, Fall with no year, undergraduate/graduate levels,12MITunits and instructor permission; its paragraph combines computational audio, signal/acoustical analysis, machine learning and domain applications, with extra graduate assignments. These observations are retained in a guarded contextual note. They do not fill a generic untitled21M.589 record's name, units, prerequisite or category, establish current-year offering, or merge undergraduate and graduate identities. A changed topic paragraph, code pairing or scope field cannot replay the old note.
+
+### C35 unit discrepancy and C57 navigation defect — 2026-10-11
+
+The public Common Ground C35/C85 detail explicitly lists12units, prerequisiteNone andSpring without a year for6.C35/6.C85/11.C35/11.C85. The distinct6-4_2025 EECS annotation gives6.C3515units. Its dated record retains15; the unversioned chart reference now keeps unknown credits with both source amounts recorded. The current instructor-linked site identifies Spring2026 but supplies no unit amount on its home or logistics pages. No source precedence, role change or identity merge is inferred. The rerunnable detail parser records observed source fields only, and the reference annotation supplement withholds disputed units.
+
+The Common Ground index's C57/C571 OptimizationMethods card links `/optimization/`, but that actual page identifies C06LinearAlgebraandOptimization and6.C06/18.C06. This is a verified source-navigation defect, not evidence of a C57 curriculum contradiction or permission to copy C06 metadata. The existing6.C571 annotation's explicit former6.7201 statement remains preserved separately.
+
+
+### Historical OCW and instructor descriptions — 2026-10-11
+
+Contribution46b86e1 provides24 actual-description upgrades from17 public OCW syllabi and the department-linked Spring2020 Minds and Machines instructor page. Historical code/title/term bindings and formal preparation remain explicit; old titles never authorize current renumbering or availability assumptions. Decisions, Games, and Rational Choice24.222 combines mathematical decision/game methods with philosophical agency/values, so it now remains other with mixed mathematics/human_context candidates. No identity groups change. HASS now has206 description-supported occurrences,636 limited-title dispositions and three code-onlyunknowns. Full primary audit remains in progress while accessible source branches continue.
+
+### Course resource semantics correction — 2026-10-11
+
+Audited all846 populated `public_site` fields. Cleared818 generic catalog, concentration, departmental directory and descriptive-course-entry links; their curriculum evidence remains in course URLs, registered sources and category-review provenance. Retained28 actual course teaching/syllabus links, including24 public syllabus occurrences. A dedicated reviewed course-ID/URL manifest prevents an evidence page or another course's site from being promoted to a teaching resource. The EECS annotation supplement now emits no public site; HASS enrichment emits resources only after an exact source-content match and a reviewed course-specific resource binding. Generic Literature/CMS listings, course catalog descriptions, subject pools and renumbering tables are not teaching websites. Actual historical OCW syllabi and exact instructor course sites retain their term limits. No categories, credits, prerequisite facts or requirement roles change in this correction.

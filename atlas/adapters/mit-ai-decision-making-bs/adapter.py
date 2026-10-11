@@ -230,3 +230,7 @@ SOURCE_PARSERS.update(numbering_context.SOURCE_PARSERS)
 audio_topic_context = import_module('atlas.adapters.mit-ai-decision-making-bs.audio_topic_context')
 SOURCES.extend(audio_topic_context.SOURCE_PARSERS)
 SOURCE_PARSERS.update(audio_topic_context.SOURCE_PARSERS)
+
+common_ground_context = import_module('atlas.adapters.mit-ai-decision-making-bs.common_ground_context')
+SOURCES.extend(common_ground_context.SOURCE_PARSERS)
+SOURCE_PARSERS.update(common_ground_context.SOURCE_PARSERS)

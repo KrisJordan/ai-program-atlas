@@ -33,7 +33,7 @@ def observe(parsed):
             credits=None if review['withhold_credits'] else actual['credits'],
             credit_unit=actual['credit_unit'], category=review['category'],
             source_id=actual['source_id'], url=actual['url'],
-            public_site=actual['url'], syllabus=None, notes=list(review['notes']),
+            public_site=None, syllabus=None, notes=list(review['notes']),
         ))
     return result
 
