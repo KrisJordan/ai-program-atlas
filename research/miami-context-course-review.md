@@ -117,3 +117,15 @@ The inspected university quantitative-proficiency policy affirmatively identifie
 Current total: 5,543 reviewed program-course observations. Remaining: 546 codes/2,184 observations, comprising 487 located current blocks and 59 exact-identity follow-ups. The four audits remain in progress while accessible source work continues.
 
 Validation: 50 focused source, identity and policy tests passed, followed by isolated four-degree ingestion/repeat (4/0), ledger/integrity/foreign-key checks, 5,543 reviewed exports and static build. Temporary generated outputs were removed.
+
+## Studio art and classics — 2026-10-11
+
+All76 represented studio-art complete blocks were read, including the same-chapter descriptions explicitly referenced by continuation courses. Sixty-six establish practical studio/design subjects; two establish historical or interpretive art analysis; ART315 combines social-change analysis with community art production. Seven externally unspecified or variable practice/theory records remain unclassified. Digital imaging, web design and software-assisted printmaking do not establish programming instruction. A continuation reference establishes the stated medium/content but is not automatically converted into a formal prerequisite when the source does not label one.
+
+ART593's required placement and portfolio remain explicit, and its1–6credit range is not normalized to three. ART510 explicitly prohibits repeated credit while ART411 allows it. The required printmaking preparation alternatives for ART356 remain alternatives. No code or requirement role changed.
+
+The standalone42-block Classics contribution is integrated across allfour degrees, preserving38human-context and4unclassified decisions. CLA201 is missing from the current chapter and receives no fabricated description or review. CLA101/102's printed legacy course references remain literal rather than being treated as renumbering evidence.
+
+Current total:6,015 reviewed observations. Remaining:428codes/1,712observations, including369located currentblocks and59identityfollowups. Located but unread descriptions remain inprogress.
+
+Validation:52 focused shared-content, Classics, Art History and policy tests passed. Isolated four-degree ingestion/repeat(4/0), ledger/integrity/foreign keys,6,015 reviewed exports and static build passed; generated outputs removed.

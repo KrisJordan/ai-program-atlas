@@ -144,3 +144,7 @@ Current public university probation/dismissal thresholds and quantitative/writin
 ## 2026-10-11 health statistics identity review
 
 The university general-education policy explicitly co-lists BPH202/HCS202/NUR202 in both the Nursing and Public Health quantitative-proficiency listings. Matching actual current subject blocks corroborate that identity. The manual group retains all three contextual source records and counts one identity; no course is promoted and those other degrees’ approval does not establish AI-degree credit eligibility. Guarded metadata observers cannot manufacture this identity review.
+
+## 2026-10-11 Classics (CLA) contextual review
+
+42 complete official blocks now supply guarded observations and separately attached manual content reviews. Variable credits, prerequisite/permission restrictions, source conflicts and insufficient-topic records retain their precise scopes in `miami_cla_context_reviews.json`. No contextual row is promoted to a required course; no approval or equivalence is inferred. Source chapter edition remains unassigned where current navigation does not establish it.

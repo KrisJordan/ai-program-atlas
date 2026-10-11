@@ -210,3 +210,20 @@ def test_source_verified_health_statistics_identity_preserves_context_and_record
         text=clean(BeautifulSoup(cache.read_text(),'html.parser').get_text(' ',strip=True))
         assert 'NUR 202 Introductory Statistics in Health Care (also listed as BPH 202 and HCS 202 )' in text
         assert 'BPH 202 Introductory Statistics in Health Care (also listed as NUR 202 and HCS 202 )' in text
+
+
+def test_art_practice_interpretation_unspecified_topics_and_conditions():
+    for code in ['ART 109','ART 254','ART 292','ART 354','ART 554']:
+        assert m.SPEC['courses'][code]['category']=='applications'
+    assert m.SPEC['courses']['ART 407']['category']=='human_context'
+    assert m.SPEC['courses']['ART 517']['category']=='human_context'
+    assert m.SPEC['courses']['ART 315']['review']['status']=='mixed'
+    for code in ['ART 180','ART 206','ART 255','ART 306','ART 406','ART 506','ART 555']:
+        assert m.SPEC['courses'][code]['review']['status']=='unclassified'
+    assert m.SPEC['courses']['ART 555']['credits'] is None
+    assert m.SPEC['courses']['ART 593']['credits'] is None
+    assert 'Portfolio required' in m.SPEC['courses']['ART 593']['prerequisites']
+    assert 'ART 251 OR ART 252 OR ART 253 OR ART 254 OR ART 255' in m.SPEC['courses']['ART 356']['prerequisites']
+    assert 'prohibits repeated credit' in m.SPEC['courses']['ART 510']['prerequisites']
+    assert m.SPEC['courses']['ART 305']['prerequisites'] is None
+    assert 'referenced course' in m.SPEC['courses']['ART 305']['description']

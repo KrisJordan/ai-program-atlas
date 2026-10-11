@@ -2535,6 +2535,26 @@
       "catalog_year": null,
       "locator": "49 additional complete assigned course blocks. Current public chapter captured on 2026-10-11; mixed download-navigation labels do not establish the course edition.",
       "confidence": "high"
+    },
+    {
+      "id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
+      "title": "Miami Art (ART) contextual-course source review",
+      "fetched_at": "2026-10-11T05:50:06+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Complete blocks: ART 101, ART 102, ART 103, ART 104, ART 105, ART 107, ART 109, ART 180, ART 202, ART 206, ART 210, ART 217, ART 251, ART 252, ART 253, ART 254, ART 255, ART 260, ART 261, ART 262, ART 263, ART 268, ART 291, ART 292, ART 293, ART 294, ART 301, ART 302, ART 305, ART 306, ART 310, ART 311, ART 312, ART 315, ART 317, ART 318, ART 351, ART 352, ART 353, ART 354, ART 356, ART 361, ART 362, ART 363, ART 364, ART 368, ART 391, ART 392, ART 401, ART 402, ART 405, ART 406, ART 407, ART 410, ART 411, ART 417, ART 418, ART 451, ART 452, ART 453, ART 454, ART 462, ART 468, ART 491, ART 493, ART 506, ART 510, ART 517, ART 551, ART 552, ART 553, ART 554, ART 555, ART 562, ART 591, ART 593. Current official chapter; all76 represented complete blocks read, including explicitly referenced same-chapter continuation descriptions. No edition inferred from mixed PDF links.",
+      "confidence": "high"
+    },
+    {
+      "id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
+      "title": "Miami Classics (CLA) contextual-course review",
+      "fetched_at": "2026-10-11T05:50:16+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "42 additional complete assigned course blocks. Current public chapter; mixed download-navigation labels do not establish the course edition. CLA 101/102 retain literal references to absent CLA 219/220 without inferred renumbering.",
+      "confidence": "high"
     }
   ],
   "courses": [
@@ -5394,15 +5414,26 @@
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-222",
       "code": "CLA 222",
       "name": "Sexuality and Gender in the Ancient World",
-      "description": null,
+      "description": "Examines sexuality, gender and power in ancient Greek and Roman life.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-ps_0031-fall2026",
-      "url": "https://cognates.miami.edu/PS_0031",
+      "source_id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Examines sexuality, gender and power in ancient Greek and Roman life. The actual historical, literary, philosophical or cultural inquiry supports human_context.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-cla"
+        ],
+        "locator": "CLA 222 complete current official course block; contextual membership is not credit approval."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-gss-210",
@@ -8219,1037 +8250,1854 @@
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-101",
       "code": "ART 101",
       "name": "Introduction to Drawing I",
-      "description": null,
+      "description": "Practices drawing with contour, proportion, perspective, shading and gesture.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "human_context",
-      "source_id": "miami-cognate-at_0005-fall2026",
-      "url": "https://cognates.miami.edu/AT_0005",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Practices drawing with contour, proportion, perspective, shading and gesture. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 101 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-102",
       "code": "ART 102",
       "name": "Introduction to Drawing II",
-      "description": null,
+      "description": "Explores experimental drawing through movement, texture, color and compositional changes.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "human_context",
-      "source_id": "miami-cognate-at_0005-fall2026",
-      "url": "https://cognates.miami.edu/AT_0005",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Explores experimental drawing through movement, texture, color and compositional changes. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 102 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-103",
       "code": "ART 103",
       "name": "Two-Dimensional Design",
-      "description": null,
+      "description": "Develops two-dimensional compositions using visual elements and their relationships.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "human_context",
-      "source_id": "miami-cognate-at_0005-fall2026",
-      "url": "https://cognates.miami.edu/AT_0005",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops two-dimensional compositions using visual elements and their relationships. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 103 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-104",
       "code": "ART 104",
       "name": "Intro to 3D Design",
-      "description": null,
+      "description": "Develops three-dimensional form and sculptural creativity as preparation for material-based studios.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "human_context",
-      "source_id": "miami-cognate-at_0005-fall2026",
-      "url": "https://cognates.miami.edu/AT_0005",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops three-dimensional form and sculptural creativity as preparation for material-based studios. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 104 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-105",
       "code": "ART 105",
       "name": "Figure Drawing",
-      "description": null,
-      "prerequisites": "Prerequisite: ART 101.",
+      "description": "Draws the human figure using anatomy, proportion, perspective and expressive gesture.",
+      "prerequisites": "Prerequisite: ART 101 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "human_context",
-      "source_id": "miami-cognate-at_0005-fall2026",
-      "url": "https://cognates.miami.edu/AT_0005",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Draws the human figure using anatomy, proportion, perspective and expressive gesture. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 105 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-107",
       "code": "ART 107",
       "name": "Introduction to Drawing III",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "description": "Extends drawing into historical and alternative spatial systems, materials and color.",
+      "prerequisites": "Prerequisite: ART 101 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Extends drawing into historical and alternative spatial systems, materials and color. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 107 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-109",
       "code": "ART 109",
       "name": "Introduction to Electronic Media",
-      "description": null,
+      "description": "Uses desktop-publishing and digital-imaging tools for visual work; software construction is not specified.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "human_context",
-      "source_id": "miami-cognate-at_0005-fall2026",
-      "url": "https://cognates.miami.edu/AT_0005",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Uses desktop-publishing and digital-imaging tools for visual work; software construction is not specified. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 109 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-180",
       "code": "ART 180",
       "name": "Studies in Studio Art",
-      "description": null,
+      "description": "Records external studio-art credit without an exact local equivalent; actual content is unspecified. Published credit range: 1-3 credit hours.",
       "prerequisites": null,
       "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "rationale": "Records external studio-art credit without an exact local equivalent; actual content is unspecified. Published credit range: 1-3 credit hours. The current source leaves the actual external or variable subject unspecified.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 180 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-202",
       "code": "ART 202",
       "name": "Introduction to Painting",
-      "description": null,
+      "description": "Introduces easel-painting materials and techniques.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "human_context",
-      "source_id": "miami-cognate-at_0005-fall2026",
-      "url": "https://cognates.miami.edu/AT_0005",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Introduces easel-painting materials and techniques. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 202 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-206",
       "code": "ART 206",
-      "name": null,
-      "description": null,
+      "name": "Special Topics in Studio Art for Undergraduate Students",
+      "description": "Explores instructor-selected studio-art practice or theory; the actual topic and balance are not specified.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "rationale": "Explores instructor-selected studio-art practice or theory; the actual topic and balance are not specified. The current source leaves the actual external or variable subject unspecified.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 206 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-210",
       "code": "ART 210",
       "name": "Introduction to Digital Photography",
-      "description": null,
+      "description": "Develops digital-photography camera, lens and image-processing techniques.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops digital-photography camera, lens and image-processing techniques. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 210 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-217",
       "code": "ART 217",
       "name": "Introduction to Sculpture",
-      "description": null,
+      "description": "Develops sculpture concepts, craftsmanship and material choices.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "human_context",
-      "source_id": "miami-cognate-at_0005-fall2026",
-      "url": "https://cognates.miami.edu/AT_0005",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops sculpture concepts, craftsmanship and material choices. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 217 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-251",
       "code": "ART 251",
       "name": "Introduction to Printmaking",
-      "description": null,
+      "description": "Introduces relief and intaglio printmaking processes.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "human_context",
-      "source_id": "miami-cognate-at_0005-fall2026",
-      "url": "https://cognates.miami.edu/AT_0005",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Introduces relief and intaglio printmaking processes. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 251 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-252",
       "code": "ART 252",
       "name": "Introduction to Lithography",
-      "description": null,
+      "description": "Creates lithographic prints through plate and stone preparation, imaging, processing and printing.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "human_context",
-      "source_id": "miami-cognate-at_0005-fall2026",
-      "url": "https://cognates.miami.edu/AT_0005",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Creates lithographic prints through plate and stone preparation, imaging, processing and printing. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 252 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-253",
       "code": "ART 253",
       "name": "Silkscreen I",
-      "description": null,
+      "description": "Introduces screen-printing techniques, including multiple runs and photographic methods.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "human_context",
-      "source_id": "miami-cognate-at_0005-fall2026",
-      "url": "https://cognates.miami.edu/AT_0005",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Introduces screen-printing techniques, including multiple runs and photographic methods. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 253 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-254",
       "code": "ART 254",
       "name": "Computer Applications for Printmaking",
-      "description": null,
+      "description": "Uses software to manipulate images and plan prints; programming content is not stated.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "human_context",
-      "source_id": "miami-cognate-at_0005-fall2026",
-      "url": "https://cognates.miami.edu/AT_0005",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Uses software to manipulate images and plan prints; programming content is not stated. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 254 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-255",
       "code": "ART 255",
       "name": "Changing Topics in Printmaking",
-      "description": null,
+      "description": "Offers changing printmaking readings or techniques outside the regular curriculum; the particular topic is unspecified.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "rationale": "Offers changing printmaking readings or techniques outside the regular curriculum; the particular topic is unspecified. The current source leaves the actual external or variable subject unspecified.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 255 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-260",
       "code": "ART 260",
       "name": "Special topics in Ceramics",
-      "description": null,
+      "description": "Develops clay-modeling skills through changing ceramic-forming topics.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops clay-modeling skills through changing ceramic-forming topics. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 260 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-261",
       "code": "ART 261",
       "name": "Hand-Built Ceramics I",
-      "description": null,
+      "description": "Introduces hand-built ceramic forms, glazing and firing.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "human_context",
-      "source_id": "miami-cognate-at_0005-fall2026",
-      "url": "https://cognates.miami.edu/AT_0005",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Introduces hand-built ceramic forms, glazing and firing. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 261 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-262",
       "code": "ART 262",
       "name": "Wheel Thrown Ceramics I",
-      "description": null,
+      "description": "Introduces wheel-based ceramic forming, glazing and firing.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "human_context",
-      "source_id": "miami-cognate-at_0062-fall2026",
-      "url": "https://cognates.miami.edu/AT_0062",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Introduces wheel-based ceramic forming, glazing and firing. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 262 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-263",
       "code": "ART 263",
       "name": "Introduction to Glass Blowing",
-      "description": null,
-      "prerequisites": "Prerequisite: ART 104.",
+      "description": "Forms glass objects using molten glass, a blowpipe and specialized tools.",
+      "prerequisites": "Prerequisite: ART 104 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "human_context",
-      "source_id": "miami-cognate-at_0005-fall2026",
-      "url": "https://cognates.miami.edu/AT_0005",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Forms glass objects using molten glass, a blowpipe and specialized tools. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 263 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-268",
       "code": "ART 268",
       "name": "Figure in Clay I",
-      "description": null,
+      "description": "Models the human figure in clay through anatomical, proportional and gestural study.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "human_context",
-      "source_id": "miami-cognate-at_0005-fall2026",
-      "url": "https://cognates.miami.edu/AT_0005",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Models the human figure in clay through anatomical, proportional and gestural study. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 268 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-291",
       "code": "ART 291",
       "name": "Graphic Design I",
-      "description": null,
-      "prerequisites": "Prerequisite: ART 109.",
+      "description": "Applies visual-design fundamentals to graphic communication.",
+      "prerequisites": "Prerequisite: ART 109 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "human_context",
-      "source_id": "miami-cognate-at_0005-fall2026",
-      "url": "https://cognates.miami.edu/AT_0005",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Applies visual-design fundamentals to graphic communication. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 291 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-292",
       "code": "ART 292",
       "name": "Multimedia I/ Web Design",
-      "description": null,
-      "prerequisites": "Prerequisite: ART 109.",
+      "description": "Introduces web design through time-based media; software implementation is not specified.",
+      "prerequisites": "Prerequisite: ART 109 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "human_context",
-      "source_id": "miami-cognate-at_0035-fall2026",
-      "url": "https://cognates.miami.edu/AT_0035",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Introduces web design through time-based media; software implementation is not specified. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 292 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-293",
       "code": "ART 293",
       "name": "Typography",
-      "description": null,
+      "description": "Develops typographic and image compositions through lettering, arrangement, aesthetics and historical context.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops typographic and image compositions through lettering, arrangement, aesthetics and historical context. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 293 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-294",
       "code": "ART 294",
       "name": "Multimedia II/ Animation",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "description": "Creates animation through time-based media.",
+      "prerequisites": "Prerequisite: ART 109 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Creates animation through time-based media. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 294 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-301",
       "code": "ART 301",
       "name": "Intermediate Painting I",
-      "description": null,
-      "prerequisites": "Prerequisite: ART 202.",
+      "description": "Experiments with oil and acrylic painting for creative expression.",
+      "prerequisites": "Prerequisite: ART 202 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "human_context",
-      "source_id": "miami-cognate-at_0077-fall2026",
-      "url": "https://cognates.miami.edu/AT_0077",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Experiments with oil and acrylic painting for creative expression. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 301 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-302",
       "code": "ART 302",
       "name": "Intermediate Painting II",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "description": "Develops creative oil and acrylic painting through experimentation.",
+      "prerequisites": "Prerequisite: ART 202 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops creative oil and acrylic painting through experimentation. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 302 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-305",
       "code": "ART 305",
       "name": "Intermediate Figure Drawing",
-      "description": null,
+      "description": "Continues figure-drawing practice from ART105; the referenced course establishes anatomical and gestural drawing content.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Continues figure-drawing practice from ART105; the referenced course establishes anatomical and gestural drawing content. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 305 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-306",
       "code": "ART 306",
-      "name": null,
-      "description": null,
+      "name": "Special Topics in Studio Art for Undergraduate Students",
+      "description": "Explores instructor-selected studio-art practice or theory; the actual topic and balance are not specified.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "rationale": "Explores instructor-selected studio-art practice or theory; the actual topic and balance are not specified. The current source leaves the actual external or variable subject unspecified.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 306 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-310",
       "code": "ART 310",
       "name": "Intermediate Digital Photography",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "description": "Develops experimental digital fine-art photography and image-processing practice.",
+      "prerequisites": "Prerequisite: ART 210 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops experimental digital fine-art photography and image-processing practice. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 310 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-311",
       "code": "ART 311",
       "name": "Color Digital Photography",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "description": "Develops digital color photography through color theory, image editing and fine-art printing.",
+      "prerequisites": "Prerequisite: ART 310 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops digital color photography through color theory, image editing and fine-art printing. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 311 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-312",
       "code": "ART 312",
       "name": "Alternative Processes Photography",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "description": "Uses historical photographic processes for creative image-making.",
+      "prerequisites": "Prerequisite: ART 311 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Uses historical photographic processes for creative image-making. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 312 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-315",
       "code": "ART 315",
       "name": "Socially Engaged Art",
-      "description": null,
+      "description": "Combines study of art and social change with individual and collaborative community art-making.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "mixed",
+        "rationale": "Combines study of art and social change with individual and collaborative community art-making. Social-change analysis and practical community art-making are both substantive.",
+        "candidate_categories": [
+          "human_context",
+          "applications"
+        ],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 315 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-317",
       "code": "ART 317",
       "name": "Intermediate Sculpture I",
-      "description": null,
-      "prerequisites": "Prerequisite: ART 217.",
+      "description": "Develops sculptural meaning through symbolism, materials and technical processes.",
+      "prerequisites": "Prerequisite: ART 217 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "human_context",
-      "source_id": "miami-cognate-at_0037-fall2026",
-      "url": "https://cognates.miami.edu/AT_0037",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops sculptural meaning through symbolism, materials and technical processes. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 317 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-318",
       "code": "ART 318",
       "name": "Intermediate Sculpture II",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "description": "Continues ART317 sculpture work; the referenced course establishes symbolic and material practice.",
+      "prerequisites": "Prerequisite: ART 317 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Continues ART317 sculpture work; the referenced course establishes symbolic and material practice. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 318 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-351",
       "code": "ART 351",
       "name": "Intaglio/Relief II",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "description": "Extends relief and intaglio printing into additional traditional and photographic processes.",
+      "prerequisites": "Prerequisite: ART 251 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Extends relief and intaglio printing into additional traditional and photographic processes. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 351 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-352",
       "code": "ART 352",
       "name": "Lithography II",
-      "description": null,
+      "description": "Extends lithography into color printing and combinations with other print media.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Extends lithography into color printing and combinations with other print media. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 352 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-353",
       "code": "ART 353",
       "name": "Silkscreen II",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "description": "Extends screen printing into canvas, larger formats and advanced photographic techniques.",
+      "prerequisites": "Prerequisite: ART 253 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Extends screen printing into canvas, larger formats and advanced photographic techniques. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 353 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-354",
       "code": "ART 354",
-      "name": null,
-      "description": null,
+      "name": "Computer Assisted Printmaking: Lithography and Silkscreen",
+      "description": "Uses digital printing and color separations to prepare lithographic and screen-printing work.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Uses digital printing and color separations to prepare lithographic and screen-printing work. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 354 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-356",
       "code": "ART 356",
       "name": "Intermediate Printmaking",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "description": "Develops an individually agreed printmaking project within named relief, lithographic, screen or digital techniques.",
+      "prerequisites": "Pre-requisite: ART 251 OR ART 252 OR ART 253 OR ART 254 OR ART 255 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops an individually agreed printmaking project within named relief, lithographic, screen or digital techniques. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 356 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-361",
       "code": "ART 361",
       "name": "Hand-Built Ceramics II",
-      "description": null,
-      "prerequisites": "Prerequisite: ART 261.",
+      "description": "Continues ART261 hand-built ceramics; the referenced course establishes forming, glazing and firing practice.",
+      "prerequisites": "Prerequisite: ART 261 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "human_context",
-      "source_id": "miami-cognate-at_0061-fall2026",
-      "url": "https://cognates.miami.edu/AT_0061",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Continues ART261 hand-built ceramics; the referenced course establishes forming, glazing and firing practice. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 361 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-362",
       "code": "ART 362",
       "name": "Wheel Thrown Ceramics II",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "description": "Continues ART262 wheel-thrown ceramics; the referenced course establishes forming, glazing and firing practice.",
+      "prerequisites": "Prerequisite: ART 262 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Continues ART262 wheel-thrown ceramics; the referenced course establishes forming, glazing and firing practice. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 362 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-363",
       "code": "ART 363",
       "name": "Cast Glass Sculpture",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "description": "Creates cast-glass sculpture through sand and lost-wax methods.",
+      "prerequisites": "Prerequisite: ART 263 or ART 104 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Creates cast-glass sculpture through sand and lost-wax methods. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 363 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-364",
       "code": "ART 364",
       "name": "Intermediate Glass Blowing",
-      "description": null,
-      "prerequisites": "Prerequisite: ART 263.",
+      "description": "Explores intermediate glass-working techniques.",
+      "prerequisites": "Prerequisite: ART 263 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "human_context",
-      "source_id": "miami-cognate-at_0037-fall2026",
-      "url": "https://cognates.miami.edu/AT_0037",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Explores intermediate glass-working techniques. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 364 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-368",
       "code": "ART 368",
       "name": "Figure in Clay II",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "description": "Develops intermediate human-figure modeling in clay through anatomy, form and gesture.",
+      "prerequisites": "Prerequisite: ART 268 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops intermediate human-figure modeling in clay through anatomy, form and gesture. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 368 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-391",
       "code": "ART 391",
       "name": "Graphic Design II",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "description": "Develops conceptual graphic design using visual rhetorical strategies.",
+      "prerequisites": "Prerequisite: ART 291 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops conceptual graphic design using visual rhetorical strategies. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 391 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-392",
       "code": "ART 392",
       "name": "Multimedia III",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "description": "Creates video, installation, multimedia and interactive-animation work.",
+      "prerequisites": "Prerequisite: ART 109 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Creates video, installation, multimedia and interactive-animation work. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 392 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-401",
       "code": "ART 401",
       "name": "Advanced Painting I",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "description": "Develops an individual painting style.",
+      "prerequisites": "Prerequisite: ART 301 and ART 302 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops an individual painting style. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 401 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-402",
       "code": "ART 402",
       "name": "Advanced Painting II",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "description": "Continues ART401 painting practice and individual stylistic development.",
+      "prerequisites": "Prerequisite: ART 401 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Continues ART401 painting practice and individual stylistic development. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 402 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-405",
       "code": "ART 405",
       "name": "Advanced Figure Drawing",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "description": "Continues advanced figure drawing from ART305 and its referenced ART105 anatomical and gestural practice.",
+      "prerequisites": "Prerequisite: ART 305 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Continues advanced figure drawing from ART305 and its referenced ART105 anatomical and gestural practice. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 405 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-406",
       "code": "ART 406",
-      "name": null,
-      "description": null,
+      "name": "Special Topics in Studio Art for Undergraduate Students",
+      "description": "Explores instructor-selected studio-art practice or theory; the actual topic and balance are not specified.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "rationale": "Explores instructor-selected studio-art practice or theory; the actual topic and balance are not specified. The current source leaves the actual external or variable subject unspecified.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 406 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-407",
       "code": "ART 407",
       "name": "Special Topics: Renaissance and Baroque Art",
-      "description": null,
-      "prerequisites": "Prerequisite: ARH 132.",
+      "description": "Studies changing topics in Renaissance and Baroque art through a seminar.",
+      "prerequisites": "Prerequisite: ARH 132 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0006-fall2026",
-      "url": "https://cognates.miami.edu/AT_0006",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Studies changing topics in Renaissance and Baroque art through a seminar. The actual focus is historical or interpretive art analysis.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 407 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-410",
       "code": "ART 410",
       "name": "Advanced Digital Photography I",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "description": "Develops an individual digital-imaging style through a semester-long thematic project.",
+      "prerequisites": "Prerequisite: ART 311 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops an individual digital-imaging style through a semester-long thematic project. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 410 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-411",
       "code": "ART 411",
       "name": "Experimental Photography",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "description": "Explores instructor-selected experimental photographic practice, with studio-lighting and artist-book examples.",
+      "prerequisites": "Prerequisite: ART 311 . May be repeated for credit.",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Explores instructor-selected experimental photographic practice, with studio-lighting and artist-book examples. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 411 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-417",
       "code": "ART 417",
       "name": "Advanced Sculpture I",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "description": "Creates individual and collaborative installations and site-specific art.",
+      "prerequisites": "Prerequisite: ART 317 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Creates individual and collaborative installations and site-specific art. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 417 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-418",
       "code": "ART 418",
       "name": "Advanced Sculpture II",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "description": "Develops an individual sculptural visual vocabulary.",
+      "prerequisites": "Prerequisite: ART 417 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops an individual sculptural visual vocabulary. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 418 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-451",
       "code": "ART 451",
       "name": "Intaglio/Relief III",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "description": "Continues ART351 relief and intaglio printmaking; its referenced process instruction establishes the medium and practice.",
+      "prerequisites": "Prerequisite: ART 351 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Continues ART351 relief and intaglio printmaking; its referenced process instruction establishes the medium and practice. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 451 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-452",
       "code": "ART 452",
       "name": "Lithography III",
-      "description": null,
+      "description": "Continues ART352 lithography; its referenced course establishes color and mixed-print-media practice.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Continues ART352 lithography; its referenced course establishes color and mixed-print-media practice. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 452 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-453",
       "code": "ART 453",
       "name": "Silkscreen III",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "description": "Continues ART353 screen printing; its referenced course establishes advanced print-production practice.",
+      "prerequisites": "Prerequisite: ART 353 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Continues ART353 screen printing; its referenced course establishes advanced print-production practice. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 453 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-454",
       "code": "ART 454",
       "name": "Computer Assisted Printmaking: Intaglio and Relief",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "description": "Extends computer-assisted printmaking into photographic etching and relief processes.",
+      "prerequisites": "Prerequisite: ART 354 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Extends computer-assisted printmaking into photographic etching and relief processes. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 454 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-462",
       "code": "ART 462",
       "name": "Advanced Ceramics",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "description": "Develops expressive ceramic practice through hand-building or wheel techniques.",
+      "prerequisites": "Prerequisite: ART 361 or ART 362 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops expressive ceramic practice through hand-building or wheel techniques. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 462 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-468",
       "code": "ART 468",
       "name": "Figure in Clay III",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "description": "Develops advanced figurative clay modeling and expressive handling of form and anatomy.",
+      "prerequisites": "Prerequisite: ART 368 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops advanced figurative clay modeling and expressive handling of form and anatomy. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 468 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-491",
       "code": "ART 491",
       "name": "Graphic Design III",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "description": "Develops advanced graphic page layouts and typography for advertising and related design projects.",
+      "prerequisites": "Prerequisite: ART 391 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops advanced graphic page layouts and typography for advertising and related design projects. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 491 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-493",
       "code": "ART 493",
       "name": "Illustration",
-      "description": null,
+      "description": "Creates illustrations for print, digital media, portfolios and exhibitions.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "human_context",
-      "source_id": "miami-cognate-at_0002-fall2026",
-      "url": "https://cognates.miami.edu/AT_0002",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Creates illustrations for print, digital media, portfolios and exhibitions. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 493 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-506",
       "code": "ART 506",
-      "name": null,
-      "description": null,
+      "name": "Special Topics in Studio Art for Undergraduate Students",
+      "description": "Explores instructor-selected studio-art practice or theory; the actual topic and balance are not specified.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "rationale": "Explores instructor-selected studio-art practice or theory; the actual topic and balance are not specified. The current source leaves the actual external or variable subject unspecified.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 506 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-510",
       "code": "ART 510",
       "name": "Advanced Digital Photography 2",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "description": "Develops an individually agreed advanced digital-photography project; classification is limited to the explicit medium and cited ART410 preparation.",
+      "prerequisites": "Prerequisite: ART 410 . The source explicitly prohibits repeated credit.",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops an individually agreed advanced digital-photography project; classification is limited to the explicit medium and cited ART410 preparation. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 510 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-517",
       "code": "ART 517",
       "name": "Advanced Sculpture III",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "description": "Examines ongoing sculpture in relation to historical and contemporary interpretive issues.",
+      "prerequisites": "Prerequisite: ART 418 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Examines ongoing sculpture in relation to historical and contemporary interpretive issues. The actual focus is historical or interpretive art analysis.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 517 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-551",
       "code": "ART 551",
       "name": "Intaglio/Relief IV",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "description": "Develops individually agreed advanced relief and intaglio printmaking work.",
+      "prerequisites": "Prerequisite: ART 451 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops individually agreed advanced relief and intaglio printmaking work. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 551 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-552",
       "code": "ART 552",
       "name": "Lithography IV",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "description": "Develops individually agreed advanced lithographic work.",
+      "prerequisites": "Prerequisite: ART 452 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops individually agreed advanced lithographic work. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 552 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-553",
       "code": "ART 553",
       "name": "Silkscreen IV",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "description": "Develops advanced screen-printing work.",
+      "prerequisites": "Prerequisite: ART 453 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops advanced screen-printing work. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 553 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-554",
       "code": "ART 554",
       "name": "Computer Assisted Printmaking",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "description": "Develops individually agreed advanced computer-assisted printmaking work.",
+      "prerequisites": "Prerequisite: ART 454 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops individually agreed advanced computer-assisted printmaking work. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 554 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-555",
       "code": "ART 555",
       "name": "Topics in Printmaking",
-      "description": null,
+      "description": "Offers changing printmaking readings or technical concerns; the actual topic and balance are not specified. Published credit range: 1-6 credit hours.",
       "prerequisites": null,
       "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "rationale": "Offers changing printmaking readings or technical concerns; the actual topic and balance are not specified. Published credit range: 1-6 credit hours. The current source leaves the actual external or variable subject unspecified.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 555 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-562",
       "code": "ART 562",
       "name": "Contemporary Ceramic Art",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "description": "Develops ceramic technique and artistic style in relation to contemporary practice.",
+      "prerequisites": "Prerequisite: ART 462 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops ceramic technique and artistic style in relation to contemporary practice. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 562 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cca-103",
@@ -10055,43 +10903,76 @@
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-101",
       "code": "CLA 101",
       "name": "Greek and Roman Mythology",
-      "description": null,
-      "prerequisites": null,
+      "description": "Interprets Greek and Roman mythology through political, cultural and social themes in texts and material evidence.",
+      "prerequisites": "Requisite: Not Allow Enrollment in CLA 220 if already Enrolled/Took CLA 219.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0096-fall2026",
-      "url": "https://cognates.miami.edu/AT_0096",
+      "source_id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Interprets Greek and Roman mythology through political, cultural and social themes in texts and material evidence. The actual historical, literary, philosophical or cultural inquiry supports human_context.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-cla"
+        ],
+        "locator": "CLA 101 complete current official course block; contextual membership is not credit approval."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-102",
       "code": "CLA 102",
       "name": "Writing on Greek and Roman Mythology",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "description": "Provides companion writing work on Greek and Roman mythology; the description refers to enrollment in CLA 220 without establishing renumbering or equivalence.",
+      "prerequisites": "Requisite: Not Allow Enrollment in CLA 219 if already Enrolled/Took CLA 220.",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "source_id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Provides companion writing work on Greek and Roman mythology; the description refers to enrollment in CLA 220 without establishing renumbering or equivalence. The actual historical, literary, philosophical or cultural inquiry supports human_context.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-cla"
+        ],
+        "locator": "CLA 102 complete current official course block; contextual membership is not credit approval."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-105",
       "code": "CLA 105",
       "name": "Greek Civilization",
-      "description": null,
+      "description": "Introduces important concepts, events and people in Greek culture.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0096-fall2026",
-      "url": "https://cognates.miami.edu/AT_0096",
+      "source_id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Introduces important concepts, events and people in Greek culture. The actual historical, literary, philosophical or cultural inquiry supports human_context.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-cla"
+        ],
+        "locator": "CLA 105 complete current official course block; contextual membership is not credit approval."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-201",
@@ -10111,519 +10992,926 @@
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-210",
       "code": "CLA 210",
       "name": "The Greek and Latin Roots of English",
-      "description": null,
+      "description": "Analyzes English vocabulary derived from Greek and Latin, emphasizing legal and medical terms.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0097-fall2026",
-      "url": "https://cognates.miami.edu/AT_0097",
+      "source_id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "The actual course teaches linguistic roots and word construction, not medical practice; its communication/language subject supports human_context.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-cla"
+        ],
+        "locator": "CLA 210 complete current official course block; contextual membership is not credit approval."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-211",
       "code": "CLA 211",
       "name": "Medical Terminology",
-      "description": null,
+      "description": "Studies medical vocabulary through Greek and Latin word construction, with historical context for ancient contributions to medicine.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "source_id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "The actual course teaches linguistic roots and word construction, not medical practice; its communication/language subject supports human_context.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-cla"
+        ],
+        "locator": "CLA 211 complete current official course block; contextual membership is not credit approval."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-221",
       "code": "CLA 221",
       "name": "Sports and Society in the Ancient World",
-      "description": null,
+      "description": "Examines athletics and spectacle in ancient society through texts, images and architectural evidence.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-ps_0020-fall2026",
-      "url": "https://cognates.miami.edu/PS_0020",
+      "source_id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Examines athletics and spectacle in ancient society through texts, images and architectural evidence. The actual historical, literary, philosophical or cultural inquiry supports human_context.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-cla"
+        ],
+        "locator": "CLA 221 complete current official course block; contextual membership is not credit approval."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-224",
       "code": "CLA 224",
       "name": "The Heroic Journey",
-      "description": null,
+      "description": "Introduces the recurring heroic-journey motif in storytelling; the available description ends abruptly while naming the monomyth.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0096-fall2026",
-      "url": "https://cognates.miami.edu/AT_0096",
+      "source_id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "The surviving description explicitly identifies a heroic-journey storytelling motif, supporting a limited literary human_context review. The truncated text does not support additional topics.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-cla"
+        ],
+        "locator": "CLA 224 complete current official course block; contextual membership is not credit approval."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-225",
       "code": "CLA 225",
       "name": "Magic and the Occult in Antiquity",
-      "description": null,
+      "description": "Interprets evidence for ancient Mediterranean magic and occult traditions, especially in Graeco-Roman Egypt.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-ps_0020-fall2026",
-      "url": "https://cognates.miami.edu/PS_0020",
+      "source_id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Interprets evidence for ancient Mediterranean magic and occult traditions, especially in Graeco-Roman Egypt. The actual historical, literary, philosophical or cultural inquiry supports human_context.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-cla"
+        ],
+        "locator": "CLA 225 complete current official course block; contextual membership is not credit approval."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-226",
       "code": "CLA 226",
       "name": "Greek and Roman Art",
-      "description": null,
+      "description": "Surveys Greek and Roman art and architecture in historical, political and religious context.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "source_id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Surveys Greek and Roman art and architecture in historical, political and religious context. The actual historical, literary, philosophical or cultural inquiry supports human_context.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-cla"
+        ],
+        "locator": "CLA 226 complete current official course block; contextual membership is not credit approval."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-231",
       "code": "CLA 231",
       "name": "Sciences in Ancient Greece and Rome",
-      "description": null,
+      "description": "Examines the origins and development of scientific inquiry in ancient Greece and Rome.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0095-fall2026",
-      "url": "https://cognates.miami.edu/AT_0095",
+      "source_id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Examines the origins and development of scientific inquiry in ancient Greece and Rome. The actual historical, literary, philosophical or cultural inquiry supports human_context.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-cla"
+        ],
+        "locator": "CLA 231 complete current official course block; contextual membership is not credit approval."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-232",
       "code": "CLA 232",
       "name": "Ancient Greek and Roman Law",
-      "description": null,
+      "description": "Uses ancient trials to examine Greek and Roman legal systems and the cultures and values shaping them.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0096-fall2026",
-      "url": "https://cognates.miami.edu/AT_0096",
+      "source_id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Uses ancient trials to examine Greek and Roman legal systems and the cultures and values shaping them. The actual historical, literary, philosophical or cultural inquiry supports human_context.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-cla"
+        ],
+        "locator": "CLA 232 complete current official course block; contextual membership is not credit approval."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-233",
       "code": "CLA 233",
       "name": "Ancient Medicine",
-      "description": null,
+      "description": "Surveys historical evidence, ideas and practices of ancient medicine.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-ps_0020-fall2026",
-      "url": "https://cognates.miami.edu/PS_0020",
+      "source_id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Surveys historical evidence, ideas and practices of ancient medicine. The actual historical, literary, philosophical or cultural inquiry supports human_context.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-cla"
+        ],
+        "locator": "CLA 233 complete current official course block; contextual membership is not credit approval."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-243",
       "code": "CLA 243",
       "name": "Ancient Politics: Theory and Practice in Greece and Rome",
-      "description": null,
+      "description": "Introduces Greek and Roman political institutions and models of statecraft.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-ps_0020-fall2026",
-      "url": "https://cognates.miami.edu/PS_0020",
+      "source_id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Introduces Greek and Roman political institutions and models of statecraft. The actual historical, literary, philosophical or cultural inquiry supports human_context.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-cla"
+        ],
+        "locator": "CLA 243 complete current official course block; contextual membership is not credit approval."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-246",
       "code": "CLA 246",
       "name": "Ancient Rhetorical Theory",
-      "description": null,
+      "description": "Examines the history and concepts of ancient Greek and Roman theories of persuasion.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0096-fall2026",
-      "url": "https://cognates.miami.edu/AT_0096",
+      "source_id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Examines the history and concepts of ancient Greek and Roman theories of persuasion. The actual historical, literary, philosophical or cultural inquiry supports human_context.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-cla"
+        ],
+        "locator": "CLA 246 complete current official course block; contextual membership is not credit approval."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-271",
       "code": "CLA 271",
       "name": "Ancient Philosophy",
-      "description": null,
+      "description": "Explores ancient philosophical approaches to knowledge, ethics, justice, freedom and human relationships.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "source_id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Explores ancient philosophical approaches to knowledge, ethics, justice, freedom and human relationships. The actual historical, literary, philosophical or cultural inquiry supports human_context.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-cla"
+        ],
+        "locator": "CLA 271 complete current official course block; contextual membership is not credit approval."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-301",
       "code": "CLA 301",
       "name": "Ancient Greece",
-      "description": null,
+      "description": "Surveys Greek civilization from the Late Bronze Age through the end of political independence in the fourth century BCE.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "source_id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Surveys Greek civilization from the Late Bronze Age through the end of political independence in the fourth century BCE. The actual historical, literary, philosophical or cultural inquiry supports human_context.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-cla"
+        ],
+        "locator": "CLA 301 complete current official course block; contextual membership is not credit approval."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-302",
       "code": "CLA 302",
       "name": "The Hellenistic Age",
-      "description": null,
+      "description": "Examines Alexander's conquests and the subsequent spread of Greek culture through the end of the Hellenistic period.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "source_id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Examines Alexander's conquests and the subsequent spread of Greek culture through the end of the Hellenistic period. The actual historical, literary, philosophical or cultural inquiry supports human_context.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-cla"
+        ],
+        "locator": "CLA 302 complete current official course block; contextual membership is not credit approval."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-303",
       "code": "CLA 303",
       "name": "The Roman Republic",
-      "description": null,
+      "description": "Surveys Roman civilization during the Republic through the Battle of Actium.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-ps_0020-fall2026",
-      "url": "https://cognates.miami.edu/PS_0020",
+      "source_id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Surveys Roman civilization during the Republic through the Battle of Actium. The actual historical, literary, philosophical or cultural inquiry supports human_context.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-cla"
+        ],
+        "locator": "CLA 303 complete current official course block; contextual membership is not credit approval."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-304",
       "code": "CLA 304",
       "name": "The Roman Empire",
-      "description": null,
+      "description": "Surveys Roman civilization under the emperors through the fall of the western empire.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-ps_0020-fall2026",
-      "url": "https://cognates.miami.edu/PS_0020",
+      "source_id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Surveys Roman civilization under the emperors through the fall of the western empire. The actual historical, literary, philosophical or cultural inquiry supports human_context.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-cla"
+        ],
+        "locator": "CLA 304 complete current official course block; contextual membership is not credit approval."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-305",
       "code": "CLA 305",
       "name": "What is a Classic?",
-      "description": null,
+      "description": "Examines how cultures designate works as classics through comparative readings beginning with Greek and Roman literature.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0096-fall2026",
-      "url": "https://cognates.miami.edu/AT_0096",
+      "source_id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Examines how cultures designate works as classics through comparative readings beginning with Greek and Roman literature. The actual historical, literary, philosophical or cultural inquiry supports human_context.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-cla"
+        ],
+        "locator": "CLA 305 complete current official course block; contextual membership is not credit approval."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-310",
       "code": "CLA 310",
       "name": "Survey of Ancient Greek Literature and Culture",
-      "description": null,
+      "description": "Studies Greek culture and literature from Homer to Aristotle, using English translations and considering later influence.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0096-fall2026",
-      "url": "https://cognates.miami.edu/AT_0096",
+      "source_id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Studies Greek culture and literature from Homer to Aristotle, using English translations and considering later influence. The actual historical, literary, philosophical or cultural inquiry supports human_context.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-cla"
+        ],
+        "locator": "CLA 310 complete current official course block; contextual membership is not credit approval."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-311",
       "code": "CLA 311",
       "name": "Survey of Classical Latin Literature and Culture",
-      "description": null,
+      "description": "Introduces Roman literary genres and authors in translation and their Greek literary inheritance.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-ps_0020-fall2026",
-      "url": "https://cognates.miami.edu/PS_0020",
+      "source_id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Introduces Roman literary genres and authors in translation and their Greek literary inheritance. The actual historical, literary, philosophical or cultural inquiry supports human_context.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-cla"
+        ],
+        "locator": "CLA 311 complete current official course block; contextual membership is not credit approval."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-315",
       "code": "CLA 315",
       "name": "The Classical Epic Tradition",
-      "description": null,
+      "description": "Traces the Western epic tradition from classical antiquity through medieval, Renaissance and modern works.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0096-fall2026",
-      "url": "https://cognates.miami.edu/AT_0096",
+      "source_id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Traces the Western epic tradition from classical antiquity through medieval, Renaissance and modern works. The actual historical, literary, philosophical or cultural inquiry supports human_context.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-cla"
+        ],
+        "locator": "CLA 315 complete current official course block; contextual membership is not credit approval."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-322",
       "code": "CLA 322",
       "name": "Monsters and Fantastical Creatures in Western Antiquity and Other Cultures",
-      "description": null,
+      "description": "Interprets monsters and fantastic creatures in texts and images as expressions of fears and cultural imagination.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0095-fall2026",
-      "url": "https://cognates.miami.edu/AT_0095",
+      "source_id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Interprets monsters and fantastic creatures in texts and images as expressions of fears and cultural imagination. The actual historical, literary, philosophical or cultural inquiry supports human_context.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-cla"
+        ],
+        "locator": "CLA 322 complete current official course block; contextual membership is not credit approval."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-323",
       "code": "CLA 323",
       "name": "The Ancient World on Screen",
-      "description": null,
+      "description": "Examines modern screen and game representations and adaptations of Greek and Roman antiquity.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-ps_0020-fall2026",
-      "url": "https://cognates.miami.edu/PS_0020",
+      "source_id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Examines modern screen and game representations and adaptations of Greek and Roman antiquity. The actual historical, literary, philosophical or cultural inquiry supports human_context.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-cla"
+        ],
+        "locator": "CLA 323 complete current official course block; contextual membership is not credit approval."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-324",
       "code": "CLA 324",
       "name": "Classical Myth and Contemporary Art",
-      "description": null,
+      "description": "Uses art and literary criticism to analyze contemporary adaptations of classical myth, including feminist perspectives.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0089-fall2026",
-      "url": "https://cognates.miami.edu/AT_0089",
+      "source_id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Uses art and literary criticism to analyze contemporary adaptations of classical myth, including feminist perspectives. The actual historical, literary, philosophical or cultural inquiry supports human_context.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-cla"
+        ],
+        "locator": "CLA 324 complete current official course block; contextual membership is not credit approval."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-325",
       "code": "CLA 325",
       "name": "The Vampire in Folklore, Fiction, and Film",
-      "description": null,
+      "description": "Examines vampires and related monsters in folklore, literature and screen media through questions about humanity and mortality.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "source_id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Examines vampires and related monsters in folklore, literature and screen media through questions about humanity and mortality. The actual historical, literary, philosophical or cultural inquiry supports human_context.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-cla"
+        ],
+        "locator": "CLA 325 complete current official course block; contextual membership is not credit approval."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-326",
       "code": "CLA 326",
       "name": "What Does it Mean to be Human",
-      "description": null,
+      "description": "Explores what counts as human through classical texts, films and discussion of AI, robotics and technological embodiment; it does not specify AI engineering methods.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "source_id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "AI and robotics are objects of philosophical and cultural inquiry through classical literature and films; the description does not teach AI implementation or mathematical methods.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-cla"
+        ],
+        "locator": "CLA 326 complete current official course block; contextual membership is not credit approval."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-327",
       "code": "CLA 327",
       "name": "Heroes Ancient and Modern",
-      "description": null,
+      "description": "Compares heroic figures across cultures and periods, including their relationships to divinity and civic leadership.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-ps_0019-fall2026",
-      "url": "https://cognates.miami.edu/PS_0019",
+      "source_id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Compares heroic figures across cultures and periods, including their relationships to divinity and civic leadership. The actual historical, literary, philosophical or cultural inquiry supports human_context.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-cla"
+        ],
+        "locator": "CLA 327 complete current official course block; contextual membership is not credit approval."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-340",
       "code": "CLA 340",
       "name": "Greek Tragedy",
-      "description": null,
+      "description": "Studies Greek tragedies by Aeschylus, Sophocles and Euripides in translation.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0096-fall2026",
-      "url": "https://cognates.miami.edu/AT_0096",
+      "source_id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Studies Greek tragedies by Aeschylus, Sophocles and Euripides in translation. The actual historical, literary, philosophical or cultural inquiry supports human_context.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-cla"
+        ],
+        "locator": "CLA 340 complete current official course block; contextual membership is not credit approval."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-341",
       "code": "CLA 341",
       "name": "Comedy in Ancient Athens and Rome",
-      "description": null,
+      "description": "Analyzes Greek and Roman comic drama in cultural context and its later reception by Shakespeare and Molière.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "source_id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Analyzes Greek and Roman comic drama in cultural context and its later reception by Shakespeare and Molière. The actual historical, literary, philosophical or cultural inquiry supports human_context.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-cla"
+        ],
+        "locator": "CLA 341 complete current official course block; contextual membership is not credit approval."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-360",
       "code": "CLA 360",
       "name": "Women in Greek and Roman Antiquity",
-      "description": null,
+      "description": "Examines women's lives, status and influence in ancient Greece and Rome through historical, literary and material evidence.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0097-fall2026",
-      "url": "https://cognates.miami.edu/AT_0097",
+      "source_id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Examines women's lives, status and influence in ancient Greece and Rome through historical, literary and material evidence. The actual historical, literary, philosophical or cultural inquiry supports human_context.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-cla"
+        ],
+        "locator": "CLA 360 complete current official course block; contextual membership is not credit approval."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-370",
       "code": "CLA 370",
       "name": "Self and Other in the Ancient World",
-      "description": null,
+      "description": "Analyzes Greek and Roman representations of outsiders in texts and material sources.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0096-fall2026",
-      "url": "https://cognates.miami.edu/AT_0096",
+      "source_id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Analyzes Greek and Roman representations of outsiders in texts and material sources. The actual historical, literary, philosophical or cultural inquiry supports human_context.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-cla"
+        ],
+        "locator": "CLA 370 complete current official course block; contextual membership is not credit approval."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-372",
       "code": "CLA 372",
       "name": "Greek Religion",
-      "description": null,
+      "description": "Interprets ancient Greek religious practices and beliefs through texts and material culture.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0097-fall2026",
-      "url": "https://cognates.miami.edu/AT_0097",
+      "source_id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Interprets ancient Greek religious practices and beliefs through texts and material culture. The actual historical, literary, philosophical or cultural inquiry supports human_context.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-cla"
+        ],
+        "locator": "CLA 372 complete current official course block; contextual membership is not credit approval."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-373",
       "code": "CLA 373",
       "name": "Religions of Rome",
-      "description": null,
+      "description": "Interprets Roman religious practices, state cults and responses to other faiths through texts and archaeological evidence.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-ps_0020-fall2026",
-      "url": "https://cognates.miami.edu/PS_0020",
+      "source_id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Interprets Roman religious practices, state cults and responses to other faiths through texts and archaeological evidence. The actual historical, literary, philosophical or cultural inquiry supports human_context.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-cla"
+        ],
+        "locator": "CLA 373 complete current official course block; contextual membership is not credit approval."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-401",
       "code": "CLA 401",
       "name": "Special Topics in Classics",
-      "description": null,
+      "description": "Studies a selected classical author, text or topic named in an offering-specific subtitle; the selected content is not supplied.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "rationale": "The actual block identifies only an offering-specific topic or broad classical-studies area, not selected substantive content; departmental scope is insufficient for an independent subject classification.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-cla"
+        ],
+        "locator": "CLA 401 complete current official course block; contextual membership is not credit approval."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-402",
       "code": "CLA 402",
       "name": "Special Topics in Classics",
-      "description": null,
+      "description": "Studies a selected classical author, text or topic named in an offering-specific subtitle; the selected content is not supplied.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "rationale": "The actual block identifies only an offering-specific topic or broad classical-studies area, not selected substantive content; departmental scope is insufficient for an independent subject classification.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-cla"
+        ],
+        "locator": "CLA 402 complete current official course block; contextual membership is not credit approval."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-403",
       "code": "CLA 403",
       "name": "Special Topics in Classics",
-      "description": null,
+      "description": "Studies a selected classical author, text or topic named in an offering-specific subtitle; the selected content is not supplied.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "rationale": "The actual block identifies only an offering-specific topic or broad classical-studies area, not selected substantive content; departmental scope is insufficient for an independent subject classification.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-cla"
+        ],
+        "locator": "CLA 403 complete current official course block; contextual membership is not credit approval."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-422",
       "code": "CLA 422",
       "name": "Aristophanes",
-      "description": null,
+      "description": "Reads plays by Aristophanes in ancient Greek.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "source_id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Reads plays by Aristophanes in ancient Greek. The actual historical, literary, philosophical or cultural inquiry supports human_context.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-cla"
+        ],
+        "locator": "CLA 422 complete current official course block; contextual membership is not credit approval."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-505",
       "code": "CLA 505",
       "name": "Seminar in Ancient Studies",
-      "description": null,
+      "description": "Seminar topics concern Greek and Roman studies, but selected subject matter is not specified.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "rationale": "The actual block identifies only an offering-specific topic or broad classical-studies area, not selected substantive content; departmental scope is insufficient for an independent subject classification.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-cla"
+        ],
+        "locator": "CLA 505 complete current official course block; contextual membership is not credit approval."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cub-201",
@@ -40700,15 +41988,26 @@
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cla-106",
       "code": "CLA 106",
       "name": "Roman Civilization",
-      "description": null,
+      "description": "Introduces important concepts, events and people in ancient Roman culture.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-ps_0020-fall2026",
-      "url": "https://cognates.miami.edu/PS_0020",
+      "source_id": "miami-context-courses-cla",
+      "url": "https://bulletin.miami.edu/courses-az/cla/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Introduces important concepts, events and people in ancient Roman culture. The actual historical, literary, philosophical or cultural inquiry supports human_context.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-cla"
+        ],
+        "locator": "CLA 106 complete current official course block; contextual membership is not credit approval."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-eng-315",
@@ -42709,29 +44008,51 @@
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-591",
       "code": "ART 591",
       "name": "Portfolio/Business of Design",
-      "description": null,
+      "description": "Develops a supervised graphic-design portfolio and professional design practices.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
-      "category": "human_context",
-      "source_id": "miami-cognate-at_0002-fall2026",
-      "url": "https://cognates.miami.edu/AT_0002",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops a supervised graphic-design portfolio and professional design practices. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 591 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-art-593",
       "code": "ART 593",
       "name": "Seminar in Professional Practices",
-      "description": null,
-      "prerequisites": null,
+      "description": "Combines required professional design or multimedia placement with classroom discussion of professional practice. Published credit range: 1-6 credit hours.",
+      "prerequisites": "Portfolio required. Required professional design or multimedia placement.",
       "credits": null,
       "credit_unit": "semester_hours",
-      "category": "human_context",
-      "source_id": "miami-cognate-at_0002-fall2026",
-      "url": "https://cognates.miami.edu/AT_0002",
+      "category": "applications",
+      "source_id": "miami-context-courses-art",
+      "url": "https://bulletin.miami.edu/courses-az/art/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Combines required professional design or multimedia placement with classroom discussion of professional practice. Published credit range: 1-6 credit hours. The described studio or design practice supplies a domain classification; tool use does not establish computing foundations.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-art"
+        ],
+        "locator": "ART 593 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree-ita-106",

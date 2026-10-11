@@ -61,3 +61,6 @@ register_arh_context(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
 
 from atlas.adapters.miami_soc_context_reviews import register as register_soc_context
 register_soc_context(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
+
+from atlas.adapters.miami_cla_context_reviews import register as register_cla_context
+register_cla_context(PROGRAM_ID,SOURCES,SOURCE_PARSERS)
