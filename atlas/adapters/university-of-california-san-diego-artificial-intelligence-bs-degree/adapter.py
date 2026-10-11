@@ -160,3 +160,7 @@ SOURCES += (transfer_options.HUM_URL, transfer_options.REVELLE_URL, transfer_opt
 SOURCE_PARSERS.update({transfer_options.HUM_URL: transfer_options.parse_humanities,
                       transfer_options.REVELLE_URL: transfer_options.parse_revelle_transfer,
                       transfer_options.MARSHALL_URL: transfer_options.parse_marshall_service})
+
+from atlas.adapters import ucsd_exam_credit as exam_credit
+SOURCES += (exam_credit.AP_URL, exam_credit.IB_URL, exam_credit.WARREN_URL)
+SOURCE_PARSERS.update({exam_credit.WARREN_URL: exam_credit.parse_warren})
