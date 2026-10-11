@@ -80,9 +80,10 @@ def test_manual_subject_dispositions_and_edition_are_explicit():
     entries = module.SPEC['courses']
     unknown = {f'HIS {n}' for n in [192,193,194,292,293,294,296,392,393,394,396,397,592,593,594]}
     assert len(entries) == 151
-    assert Counter(e['category'] for e in entries.values()) == {'human_context':136,'other':15}
+    assert Counter(e['category'] for e in entries.values()) == {'human_context':135,'other':16}
     assert {c for c,e in entries.items() if e['review']['status'] == 'unclassified'} == unknown
     assert sum(e['credit_range'] is not None for e in entries.values()) == 13
+    assert entries['HIS 412']['review']['candidate_categories'] == ['human_context','applications']
     assert entries['HIS 501']['category'] == 'human_context'  # actual description specifies African history
     assert entries['HIS 330']['category'] == 'human_context'  # historical scientific change, not physics methods
     assert entries['HIS 316']['prerequisites'] == 'Prerequisite: One HIS Course.'
