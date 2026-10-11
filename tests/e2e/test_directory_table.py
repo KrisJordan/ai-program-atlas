@@ -106,3 +106,27 @@ def test_table_rank_sort_includes_all_family_variants(page,site,tmp_path,site_da
     page.go_back();expect(page.locator('#sort-order')).to_have_value('name')
     page.go_forward();expect(page.locator('#sort-order')).to_have_value('rank')
     assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
+
+
+@pytest.mark.parametrize('width',[1440,390])
+def test_concentration_parent_line_and_minor_labels_reload(page,site,tmp_path,site_data,width):
+    from atlas.site import build
+    p=site_data['programs'][3]
+    p['parent_programs']=[dict(title='Business Administration',award_level='B.S.')]
+    build(site_data,tmp_path/'ai-program-atlas')
+    page.set_viewport_size({'width':width,'height':950})
+    page.goto(site)
+    page.locator('#tab-lac-concentrations').click()
+    row=page.locator('[data-row-id=test-ai-3]')
+    expect(row).to_be_visible()
+    expect(row.locator('.directory-parent em')).to_have_text('Parent: BS Business Administration')
+    expect(row.locator('.directory-award')).to_have_count(0)
+    page.reload();expect(row.locator('.directory-parent')).to_contain_text('BS Business Administration')
+    page.locator('#tab-lac-minors').click()
+    expect(page.locator('[data-row-id=test-ai-1]')).to_be_visible()
+    expect(page.locator('[data-row-id=test-ai-1] .directory-award')).to_have_count(0)
+    page.go_back();expect(row).to_be_visible()
+    page.go_forward();expect(page.locator('[data-row-id=test-ai-1]')).to_be_visible()
+    assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
+    page.goto(site+'programs/test-ai-1/')
+    expect(page.locator('.detail-badges .badge')).to_have_text(['Minor','Active'])

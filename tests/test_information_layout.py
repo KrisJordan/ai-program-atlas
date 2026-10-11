@@ -40,3 +40,19 @@ def test_table_grouped_headers_and_award_prefix(site_data,tmp_path):
     assert not row.select('td:nth-child(4) small,td:nth-child(5) small')
     additional=soup.select_one('[data-row-id=test-ai-2] .directory-program-link')
     assert '(2ndMaj)' in additional.get_text()
+
+
+def test_concentration_parent_line_and_minor_award_prefixes(site_data,tmp_path):
+    p=site_data['programs'][3]
+    p['parent_programs']=[dict(title='Business Administration',award_level='B.S.'),dict(title='Computer Science',award_level='BA')]
+    build(site_data,tmp_path)
+    soup=BeautifulSoup((tmp_path/'index.html').read_text(),'html.parser')
+    row=soup.select_one('[data-row-id=test-ai-3]')
+    assert row.select_one('.directory-parent em').get_text()=='Parent: BS Business Administration; BA Computer Science'
+    assert not row.select_one('.directory-award')
+    assert not soup.select_one('[data-row-id=test-ai-1] .directory-award')
+    p['parent_programs']=[]
+    build(site_data,tmp_path)
+    assert 'Parent: Not yet verified' in (tmp_path/'index.html').read_text()
+    minor=BeautifulSoup((tmp_path/'programs/test-ai-1/index.html').read_text(),'html.parser')
+    assert [n.get_text() for n in minor.select('.detail-badges .badge')]==['Minor','Active']

@@ -329,6 +329,17 @@ def directory_program_title(p):
     return title
 
 
+def directory_parent_line(p):
+    if p.get('program_kind') != 'concentration':
+        return ''
+    labels = []
+    for parent in p.get('parent_programs', []):
+        award = parent.get('award_level') or parent.get('award_label') or ''
+        award = {'B.S.': 'BS', 'B.A.': 'BA', 'Bachelor of Science': 'BS', 'Bachelor of Arts': 'BA', 'Bachelor of Science in Engineering': 'BSE'}.get(award, award)
+        labels.append(' '.join(value for value in [award, parent.get('title')] if value))
+    return '<small class="directory-parent"><em>Parent: ' + esc('; '.join(labels) if labels else 'Not yet verified') + '</em></small>'
+
+
 def required_directory_counts(p):
     if not unique_courses(p):
         return None
@@ -361,10 +372,11 @@ def program_table(programs, base):
         news_rank = context.get('rank')
         profile = required_directory_counts(p)
         count_cells = ''.join('<td class="required-count" data-required-category="' + key + '" title="Fixed courses plus countable required choices">' + (str(profile[key]) if profile is not None else '—') + '</td>' for key, _ in REQUIRED_COLUMNS)
+        award_prefix = '' if p.get('program_kind') in {'concentration', 'minor'} else '<span class="directory-award">(' + esc(directory_award_label(p)) + ')</span> '
         group_attr = ' data-joint-member="northeastern-joint-ai"' if northeastern_joint(p) else ''
-        rows.append(f'''<tr data-row-id="{esc(p['id'])}"{group_attr} {directory_sort_attributes(p)}><td><label class="compare-choice js-only"><input type="checkbox" data-row-compare="{esc(p['id'])}"><span class="sr-only">Compare {esc(p.get('title'))} at {esc(p.get('institution', {}).get('name'))}</span></label></td><th scope="row">{esc(p.get('institution', {}).get('name'))}</th><td><a class="directory-program-link" href="{base}programs/{esc(p['id'])}/"><span class="directory-award">({esc(directory_award_label(p))})</span> {esc(directory_program_title(p))}</a></td><td>{esc('#' + str(rank) if rank is not None else '—')}</td><td>{external(context.get('source_url'), '#' + str(news_rank)) if news_rank is not None else '—'}</td>{count_cells}</tr>''')
+        rows.append(f'''<tr data-row-id="{esc(p['id'])}"{group_attr} {directory_sort_attributes(p)}><td><label class="compare-choice js-only"><input type="checkbox" data-row-compare="{esc(p['id'])}"><span class="sr-only">Compare {esc(p.get('title'))} at {esc(p.get('institution', {}).get('name'))}</span></label></td><th scope="row">{esc(p.get('institution', {}).get('name'))}</th><td><a class="directory-program-link" href="{base}programs/{esc(p['id'])}/">{award_prefix}{esc(directory_program_title(p))}</a>{directory_parent_line(p)}</td><td>{esc('#' + str(rank) if rank is not None else '—')}</td><td>{external(context.get('source_url'), '#' + str(news_rank)) if news_rank is not None else '—'}</td>{count_cells}</tr>''')
     headers = '<th rowspan="2" scope="col"><span class="sr-only">Compare</span></th>' + ''.join('<th rowspan="2" scope="col">' + label + '</th>' for label in ['University', 'Program', '<a href="' + base + 'methodology/#research" title="CSRankings aggregate U.S. publication rank">AI Ranking</a>', 'US News Ranking']) + '<th colspan="7" scope="colgroup" class="required-heading">Required Curriculum</th>'
-    return '<p class="directory-scroll-hint">Scroll the table to see rankings and required curriculum.</p><div class="directory-table-wrap table-scroll" role="region" aria-label="Program directory table" tabindex="0"><table class="directory-table"><colgroup><col style="width:50px"><col style="width:180px"><col style="width:320px"><col style="width:68px"><col style="width:82px"><col style="width:90px"><col style="width:60px"><col style="width:60px"><col style="width:76px"><col style="width:90px"><col style="width:94px"><col style="width:60px"></colgroup><caption class="sr-only">Required curriculum counts mapped fixed course identities, not credit loads or the whole degree. Joint-program ranges are not totals.</caption><thead><tr>' + headers + '</tr><tr>' + ''.join('<th scope="col">' + label + '</th>' for _, label in REQUIRED_COLUMNS) + '</tr></thead><tbody>' + ''.join(rows) + '</tbody></table></div>'
+    return '<p class="directory-scroll-hint">Scroll the table to see rankings and required curriculum.</p><div class="directory-table-wrap table-scroll" role="region" aria-label="Program directory table" tabindex="0"><table class="directory-table"><colgroup><col style="width:50px"><col style="width:180px"><col style="width:320px"><col style="width:68px"><col style="width:82px"><col style="width:90px"><col style="width:60px"><col style="width:60px"><col style="width:76px"><col style="width:90px"><col style="width:94px"><col style="width:60px"></colgroup><caption class="sr-only">Required curriculum counts fixed courses plus countable mandatory selections, not credit loads or the whole degree. Joint-program ranges are not totals.</caption><thead><tr>' + headers + '</tr><tr>' + ''.join('<th scope="col">' + label + '</th>' for _, label in REQUIRED_COLUMNS) + '</tr></thead><tbody>' + ''.join(rows) + '</tbody></table></div>'
 
 
 def family_group(family, members, base):
@@ -714,7 +726,7 @@ def program_page(p, base, family=None, research=None):
     else:
         ranking_context += '<p>Ranking provenance is not recorded for this institution.</p>'
     ranking_context += '</section>'
-    body = f'''<div class="breadcrumb"><a href="{base}">Program index</a><span>/</span>{esc(institution.get('name'))}</div><section class="detail-hero"><div class="eyebrow">{esc(institution.get('name'))} / {esc(p.get('hosting_unit') or 'Hosting unit unknown')}</div><h1>{esc(p.get('title'))}</h1><p class="lede">{esc(p.get('overview') or 'Overview not yet recorded.')}</p><div class="detail-badges">{badge('No separate award' if (p.get('major_relationship') or {}).get('kind') == 'second_major_only' else p.get('award_level'))}{badge(human(p.get('program_kind')))}{badge(human(p.get('status')))}</div>{award_options_markup(p)}{major_relationship_markup(p)}{parent_context_markup(p)}<div class="official-links">{links}</div></section>
+    body = f'''<div class="breadcrumb"><a href="{base}">Program index</a><span>/</span>{esc(institution.get('name'))}</div><section class="detail-hero"><div class="eyebrow">{esc(institution.get('name'))} / {esc(p.get('hosting_unit') or 'Hosting unit unknown')}</div><h1>{esc(p.get('title'))}</h1><p class="lede">{esc(p.get('overview') or 'Overview not yet recorded.')}</p><div class="detail-badges">{'' if p.get('program_kind') in {'minor', 'concentration'} else badge('No separate award' if (p.get('major_relationship') or {}).get('kind') == 'second_major_only' else p.get('award_level'))}{badge(human(p.get('program_kind')))}{badge(human(p.get('status')))}</div>{award_options_markup(p)}{major_relationship_markup(p)}{parent_context_markup(p)}<div class="official-links">{links}</div></section>
 <dl class="fact-grid"><div><dt>Calendar</dt><dd>{esc(human(institution.get('calendar')))}</dd></div><div><dt>Catalog year</dt><dd>{esc(p.get('catalog_year'))}</dd></div><div><dt>Last verified</dt><dd>{esc(date_value(p))}</dd></div><div><dt>Requirement inventory</dt><dd>{esc(evidence_label(p))}</dd></div></dl>
 
 <nav class="section-nav" aria-label="Program sections"><a href="#outcomes">Program aims &amp; outcomes</a><a href="#curriculum">Curriculum</a><a href="#requirements">Requirements</a><a href="#courses">Course records</a><a href="#sources">Sources</a><a href="#evidence-context">Evidence &amp; review</a></nav>
