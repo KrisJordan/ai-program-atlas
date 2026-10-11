@@ -76,6 +76,8 @@ def test_curated_scope_audit_exposes_version_reconciliation():
     validate_program(d)
     assert d['curriculum_status'] == 'partial' and d['catalog_year'] is None
     assert d['first_offered'] is None
-    assert any('6-4_2025' in gap for gap in d['curriculum_audit']['unresolved_requirements'])
+    assert any('6-4_2025' in note and 'Fall 2025' in note for note in d['notes'])
+    assert any('6.4300' in gap for gap in d['curriculum_audit']['unresolved_requirements'])
+    assert not any('internal date conflict' in gap for gap in d['curriculum_audit']['unresolved_requirements'])
     assert next(c for c in d['courses'] if c['code'] == '6.4300')['credits'] is None
     assert d['outcomes'][0]['statement_type'] == 'program_aim'

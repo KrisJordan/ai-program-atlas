@@ -48,3 +48,17 @@ def test_independent_versioned_role_sets_include_required_discrete_math():
  assert profile['required']['count']==3 and profile['options']['count']==255 and profile['unresolved']['count']==0
  assert set(expected['required']).isdisjoint(expected['options'])
  assert len(expected['options'])==255
+
+
+def test_full_current_graph_matches_independent_source_role_enumeration():
+ p=json.loads(Path('data/programs/mit-ai-decision-making-bs.json').read_text())
+ a=json.loads(Path('research/degree-audit/mit.json').read_text())['programs'][0]
+ expected=a['expected_course_ids'];profile=requirement_profile(p)
+ assert len(expected['required'])==3 and len(expected['options'])==275 and len(expected['unresolved'])==908
+ assert len(set().union(*(set(x)for x in expected.values())))==1186
+ assert set(c['id']for c in p['courses']if c['id'].startswith('mit-ai-gir-'))<=set(expected['options'])
+ assert all(cid.startswith('mit-ai-hass-')or not cid.startswith(('mit-ai-v2025-','mit-ai-gir-'))for cid in expected['unresolved'])
+ for key in expected:
+  assert profile[key]['count']==a['expected_profile'][key]['count']
+  assert {k:v for k,v in profile[key]['categories'].items()if v}==a['expected_profile'][key]['categories']
+ assert a['status']=='in_progress'

@@ -206,3 +206,7 @@ for url, architecture_parser in architecture_remainder.SOURCE_PARSERS.items():
 clinic_review = import_module('atlas.adapters.mit-ai-decision-making-bs.clinic_review')
 SOURCES.extend(clinic_review.SOURCE_PARSERS)
 SOURCE_PARSERS.update(clinic_review.SOURCE_PARSERS)
+
+hass_hold_dispositions = import_module('atlas.adapters.mit-ai-decision-making-bs.hass_hold_dispositions')
+for url in hass_hold_dispositions.URLS:
+    SOURCE_PARSERS[url] = hass_hold_dispositions.with_dispositions(SOURCE_PARSERS[url], url)
