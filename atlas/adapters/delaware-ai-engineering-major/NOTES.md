@@ -9,3 +9,11 @@ The prior other-award placeholder is resolved to BS. Sample terms do not establi
 Next: accessible authoritative mandatory degree requirements, total credits, AI/STEM/breadth/writing/multicultural pools, grade/residency/transfer/overlap rules, course descriptions/prerequisites and calendar. No launch date or public syllabus inferred.
 
 Adapter actually reads the four year containers and observed sample rows, detects alternatives and source omission, and requires the explicit BS heading. It does not present the sample as a complete degree or generate a review audit.
+
+## Independent public policy review — 2026-10-11
+
+Added 11 college/university policy nodes: entry-year catalog and complete degree audit; approved exceptions; senior checkout; incomplete grades; prior transfer evaluation; transfer accreditation/grade/exclusion rules; semester conversion and transfer GPA; 70% content equivalence; current-student approval/residency check; major-dependent breadth eligibility. Registrar explicitly uses UD semester credits, so unit is normalized without filling unknown individual amounts. Actual public pages fetched HTTP200 with robots preflight: college Undergraduate Advisement, Transfer Credit Information, and registrar How to Transfer Undergraduate Courses. Source parsers guard material rules and emit no audits.
+
+Reviewed ECE undergraduate FAQ but did not import its C-minus threshold for CISC106/210/220/361: it explicitly names Electrical or Computer Engineering, not AI Engineering. Its general technical-elective wording likewise does not define the AI/STEM pools. The AI program links a 2025 flowchart; this older sample does not replace the restricted2026–27 catalog. Public registrar Degrees & Graduation mainly supplies administrative clearance/diploma timing, not complete degree requirements.
+
+Still partial: catalog403 remains a boundary; no bypass or regenerated catalog mirror. Totaldegree credits, exact AI/STEM/breadth/writing/multicultural pools, AI-specific grades/GPA/residency and ELEG625 eligibility remain unresolved. Independent policy evidence reduces gaps without turning the sample sequence into a certified inventory. Raw pages stay ignored.

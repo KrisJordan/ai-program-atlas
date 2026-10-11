@@ -141,3 +141,7 @@ def parse(html):
         "courses": courses,
         "requirements": requirements,
     }
+
+from atlas.adapters.delaware_ai_policies import SOURCE_PARSERS as POLICY_PARSERS
+SOURCE_PARSERS={SOURCES[0]:parse,**POLICY_PARSERS}
+SOURCES=tuple(dict.fromkeys([*SOURCES,*POLICY_PARSERS]))
