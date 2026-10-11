@@ -943,12 +943,30 @@ def observe_philosophy_numbering(html):
 
 def observe_philosophy_renumbered_ethics(archive_html, numbering_html):
     """Require both the historical description and explicit independent numbering proof."""
-    proof = next((r for r in observe_philosophy_numbering(numbering_html)
-                  if r['code'] == '24.130' and r['former_code'] == '24.231'
-                  and r['title'] == 'Ethics (CI-M)'), None)
-    if proof is None:
+    proofs = [r for r in observe_philosophy_numbering(numbering_html) if r['code'] == '24.130']
+    proof = proofs[0] if len(proofs) == 1 else None
+    if proof is None or proof['former_code'] != '24.231' or proof['title'] != 'Ethics (CI-M)':
         raise ValueError('Exact Ethics former-number support missing')
     rows = observe_ocw_syllabus(archive_html)
     if len(rows) != 1 or (rows[0]['code'], rows[0]['name'], rows[0]['term']) != ('24.231', 'Ethics', 'Fall 2009'):
         raise ValueError('Historical Ethics identity or term changed')
     return [{**rows[0], 'numbering_support': proof}]
+
+
+def observe_history_free_expression_syllabus(text):
+    """Read the faculty-linked syllabus; its filename does not establish an offering date."""
+    text = clean(text)
+    identity = '21H.317: Free Expression, Pluralism, and the University'
+    if identity not in text or 'Malick W. Ghachem MIT History' not in text:
+        raise ValueError('Free Expression syllabus identity or instructor missing')
+    start = 'The purpose of this seminar is to explore'
+    end = 'Course readings, expectations, and assignments'
+    if start not in text or end not in text or 'Schedule of seminar meetings and readings' not in text:
+        raise ValueError('Free Expression description or syllabus structure missing')
+    description = start + text.split(start, 1)[1].split(end, 1)[0]
+    assignments = text.split(end, 1)[1].split('Schedule of seminar meetings and readings', 1)[0].strip()
+    if len(description) < 100 or 'Graduate students' not in assignments:
+        raise ValueError('Free Expression substantive description or graduate context missing')
+    return [dict(code='21H.317', name='Free Expression, Pluralism, and the University',
+                 term=None, units=None, prerequisites=None, description=description.strip(),
+                 assignments=assignments, syllabus_digest=digest(text))]

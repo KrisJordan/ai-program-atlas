@@ -215,7 +215,7 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']['description_reviewed_records']==474
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==476
     assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
         o=next(o for o in entry(code)['observations'] if o.get('evidence_basis')=='official_title_only')
@@ -1820,3 +1820,43 @@ def test_wgs_global_justice_current_term_and_companion_payload_are_guarded():
     changed=review.observe_wgs_detail(p.read_text().replace('24.234 (U)','24.999 (U)'))
     assert review.matched_review(course,changed,e['source_url'],MANIFEST) is None
     with pytest.raises(ValueError):review.observe_wgs_detail(p.read_text().replace('2026-2027','2027-2028'))
+
+
+def test_history_free_expression_preserves_missing_date_and_graduate_context():
+    report=MANIFEST['history_faculty_followup']
+    assert report['faculty_pages_read']==22 and len(report['source_checks'])==22
+    assert len(report['upgraded_record_ids'])==2
+    assert report['barriers'][0]['status']=='transport_failure'
+    for cid in report['upgraded_record_ids']:
+        e=MANIFEST['courses'][cid]['observations'][-1]
+        assert e['observed_code']=='21H.317' and e['category']=='human_context'
+        assert all(e[k] is None for k in ['catalog_year','credits','prerequisites'])
+        assert any('Graduate students' in n for n in e['restrictions'])
+        assert any('2024–2025' in n for n in e['restrictions'])
+
+
+def test_history_free_expression_fixture_does_not_infer_term_from_schedule():
+    text='Malick W. Ghachem MIT History 21H.317: Free Expression, Pluralism, and the University The purpose of this seminar is to explore American universities and the historical and legal controversies surrounding free speech and academic freedom. Course readings, expectations, and assignments Graduate students complete additional readings. Due September 2024. Schedule of seminar meetings and readings'
+    o,=review.observe_history_free_expression_syllabus(text)
+    assert o['term'] is o['units'] is o['prerequisites'] is None
+    assert 'Graduate students' in o['assignments'] and 'Due' not in o['description']
+    with pytest.raises(ValueError):review.observe_history_free_expression_syllabus(text.replace('21H.317','21H.999'))
+    with pytest.raises(ValueError):review.observe_history_free_expression_syllabus(text.replace('The purpose of this seminar is to explore','Title only'))
+
+
+def test_history_free_expression_actual_pdf_replay_withdraws_changed_context():
+    path=Path('/tmp/mit-hass-subjects/history-free-expression.txt')
+    if not path.exists():pytest.skip('Optional faculty-linked public syllabus text')
+    o,=review.observe_history_free_expression_syllabus(path.read_text())
+    for cid in MANIFEST['history_faculty_followup']['upgraded_record_ids']:
+        row=MANIFEST['courses'][cid];e=row['observations'][-1]
+        course=dict(id=cid,code=row['listed_code'],name=row['listed_name'],source_id=row['listed_source_id'])
+        assert review.matched_review(course,o,e['source_url'],MANIFEST)==e
+        changed=review.observe_history_free_expression_syllabus(path.read_text().replace('Graduate students','Graduate students and all undergraduates'))[0]
+        assert review.matched_review(course,changed,e['source_url'],MANIFEST) is None
+
+
+def test_philosophy_ethics_rejects_contradictory_former_number_even_with_valid_clause():
+    html='<h1>Welcome to the MIT Philosophy Undergraduate Program</h1><p>24.130 Ethics (CI-M) (formerly 24.231)<br>24.130 Ethics (CI-M) (formerly 24.999)</p>'
+    with pytest.raises(ValueError,match='former-number'):
+        review.observe_philosophy_renumbered_ethics('unread archive',html)
