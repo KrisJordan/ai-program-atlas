@@ -59,3 +59,5 @@ Finite course-description review complete (2026-10-11): all 68 currently listed 
 ## Exact award label review — 2026-10-11
 
 The reviewed award option preserves **BSEnvE**, mapped to **other**. Catalog #site-title h1: Environmental Engineering and Artificial Intelligence, BSEnvE (Boston). The exact discipline-specific award is retained; not equated with generic BSE. Existing program ID, award_level, title and requirement graph are unchanged. This optional mapping is reviewed metadata. Scrapers queue observations without replacing curated JSON; a parse result that omits award_options does not erase it. No parser or shared Northeastern helper change is needed.
+
+2026-10-11 degree audit: fixed CS 1800 explicitly corequires the one-hour CS 1802 seminar; the degree preamble requires specified corequisite recitations/tools. The degree observer guards this preamble and fixed CS 1800 ancestry, while the CS observer separately guards reciprocal corequisite statements and exact CS 1802 identity/hours. The new child rule inherits CS 1800 context; no unrelated prerequisite is promoted. Manual category review is never emitted by the observer.

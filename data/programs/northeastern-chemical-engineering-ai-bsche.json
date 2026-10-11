@@ -63,7 +63,7 @@
       "fetched_at": "2026-10-10T23:49:52+00:00",
       "source_date": null,
       "catalog_year": "2026-2027",
-      "locator": "Individually reviewed course blocks: CS 1800, CS 2000, CS 2001, CS 2100, CS 2101, CS 3200. Identity, published hours, prerequisite/corequisite conditions and descriptive category evidence.",
+      "locator": "Individually reviewed course blocks: CS 1800, CS 2000, CS 2001, CS 2100, CS 2101, CS 3200. Identity, published hours, prerequisite/corequisite conditions and descriptive category evidence. CS 1802 seminar block and reciprocal CS 1800/CS 1802 corequisite statements (degree audit).",
       "confidence": "high"
     },
     {
@@ -970,6 +970,31 @@
         ],
         "locator": "GE 1111 official course-description block",
         "rationale": "The description uses engineering analysis and design problems to teach computation, matrix tools and microcontrollers. Its primary domain practice is engineering problem solving; it is not evidence of an AI specialization.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "northeastern-chemical-engineering-ai-bsche-cs-1802",
+      "code": "CS 1802",
+      "name": "Seminar for CS 1800",
+      "description": "Reinforces CS 1800 discrete-structures material through seminar discussion, quizzes and assignments.",
+      "prerequisites": null,
+      "credits": 1.0,
+      "credit_unit": "semester_hours",
+      "category": "mathematics",
+      "source_id": "northeastern-chemical-engineering-ai-bsche-cs-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northeastern-chemical-engineering-ai-bsche-cs-courses"
+        ],
+        "locator": "CS 1802 seminar description, together with CS 1800 discrete-structures description and reciprocal corequisite conditions",
+        "rationale": "The seminar accompanies the explicitly reviewed discrete-structures course and reinforces its mathematical topics through discussion and assignments.",
         "candidate_categories": []
       }
     }
@@ -2186,6 +2211,22 @@
         "northeastern-chemical-engineering-ai-bsche-ge-1111"
       ],
       "summary": "Both courses in the chosen pair are required."
+    },
+    {
+      "id": "northeastern-chemical-engineering-ai-bsche-req-cs-1802-concurrent",
+      "parent_id": "northeastern-chemical-engineering-ai-bsche-req-cs-1800",
+      "title": "CS 1802 concurrent seminar",
+      "kind": "all",
+      "count": null,
+      "credits": 1,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "northeastern-chemical-engineering-ai-bsche-cs-courses",
+      "source_text": null,
+      "summary": "CS 1800 requires concurrent CS 1802. The degree preamble requires specified corequisite recitations/tools; this seminar inherits the CS 1800 requirement context.",
+      "course_ids": [
+        "northeastern-chemical-engineering-ai-bsche-cs-1802"
+      ]
     }
   ],
   "notes": [
@@ -2193,7 +2234,8 @@
     "The current chemical-engineering department page and old detailed-requirements URL retain data-science URL/PlusOne residue. The requirements link redirects to the current 2026–2027 Chemical Engineering and Artificial Intelligence BSChE catalog; legacy data-science curricula were not silently substituted.",
     "No family inheritance is asserted in this bounded discovery pass. The AI component resembles the DS-based environmental-engineering variant, but shared policies and all bindings require an independent family review. The existing 23 family variants are unchanged.",
     "First offering and formal program launch remain unknown. Course descriptions, prerequisites and split bundle credits remain missing unless the local table states them.",
-    "Degree correctness audit: footnote 1 permits GE 1110 plus GE 1111 instead of GE 1501 plus GE 1502. The two complete pairs are an alternative; repeated Cornerstone rows allocate credits across degree areas and do not create fixed extra enrollments. Both new course identities and four-hour values are independently checked in the GE subject catalog."
+    "Degree correctness audit: footnote 1 permits GE 1110 plus GE 1111 instead of GE 1501 plus GE 1502. The two complete pairs are an alternative; repeated Cornerstone rows allocate credits across degree areas and do not create fixed extra enrollments. Both new course identities and four-hour values are independently checked in the GE subject catalog.",
+    "Degree audit: CS 1802 is the explicitly specified one-hour corequisite seminar for fixed CS 1800. Its requirement is a child of CS 1800, supported by the degree preamble and reciprocal CS catalog corequisite conditions; other prerequisites have not been promoted to degree requirements."
   ],
   "award_options": [
     {

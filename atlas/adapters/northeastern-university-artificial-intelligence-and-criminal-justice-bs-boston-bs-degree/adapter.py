@@ -67,3 +67,7 @@ from atlas.adapters.northeastern_course_resources import register_resources
 _PUBLIC_CS_RESOURCES = register_resources(PROGRAM_ID)
 SOURCES = tuple(dict.fromkeys(tuple(SOURCES) + tuple(_PUBLIC_CS_RESOURCES)))
 SOURCE_PARSERS = {**SOURCE_PARSERS, **_PUBLIC_CS_RESOURCES}
+
+# Explicit degree-plus-subject concurrency, not inferred prerequisites.
+from atlas.adapters.northeastern_corequisites import register_cs1802
+parse, SOURCE_PARSERS = register_cs1802(parse, SOURCE_PARSERS, PROGRAM_ID)

@@ -30,7 +30,8 @@ def ne():
         '<tr><td class="codecol"><a class="code" href="/course/">'+code+'</a></td><td>Cornerstone of Engineering '+code[-1]+'</td><td class="hourscol"></td></tr>'
         for code in ['GE 1501','GE 1502','GE 1501','GE 1501','GE 1502'])+'</table>'
     footnote = '<dl><dt>1</dt><dd>Students can substitute Engineering Design (GE 1110) and Engineering Problem Solving and Computation (GE 1111) for Cornerstone of Engineering 1 (GE 1501) and Cornerstone of Engineering 2 (GE 1502).</dd></dl>'
-    return base[:-6] + allocations + footnote + '</div>'
+    concurrency = '<p>Also complete any corequisite labs, recitations, clinicals, or tools courses where specified.</p><table class="sc_courselist"><tr><td class="codecol"><a class="code" href="/course/">CS 1800</a></td><td>Discrete Structures</td><td class="hourscol">4</td></tr></table>'
+    return base[:-6] + allocations + footnote + concurrency + '</div>'
 
 def test_cmu_four_independent_groups_and_real_changes():
     m=adapter(IDS[0]); r=m.parse(cmu())
@@ -92,9 +93,9 @@ def test_reviewed_seed_and_optional_live_replay(pid):
     elif pid == IDS[2]:
         # The degree page supplies requirement rows; independently reviewed
         # subject pages now enrich credits/prerequisites and manual taxonomy.
-        assert requirements == seed['requirements']
+        assert requirements == [r for r in seed['requirements'] if not r['id'].endswith('-req-cs-1802-concurrent')]
         actual = {c['id']:c for c in seed['courses']}
-        assert {(c['id'],c['code'],c['name']) for c in courses} == {(c['id'],c['code'],c['name']) for c in seed['courses']}
+        assert {(c['id'],c['code'],c['name']) for c in courses} == {(c['id'],c['code'],c['name']) for c in seed['courses'] if c['code'] != 'CS 1802'}
         for observed in courses:
             assert 'category_review' not in observed
             if observed['credits'] is not None:

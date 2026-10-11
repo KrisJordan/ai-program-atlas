@@ -92,7 +92,7 @@ def test_engineering_substitution_is_two_complete_bundles_not_four_fixed_courses
     module=import_module('atlas.adapters.'+pid+'.adapter')
     parsed=module.parse(ne())
     profile=requirement_profile(parsed)
-    assert profile['required']['count']==1  # Synthetic CHME 4512 only.
+    assert profile['required']['count']==2  # Synthetic CHME 4512 and CS 1800.
     assert profile['options']['count']==4
     bundles=[r for r in parsed['requirements'] if r['parent_id']==pid+'-req-introductory-engineering-bundle']
     assert {tuple(c.rsplit('-ge-',1)[1] for c in r['course_ids']) for r in bundles}=={('1501','1502'),('1110','1111')}
@@ -110,13 +110,97 @@ def test_engineering_reviewed_seed_has_no_fixed_cornerstone_override():
     pid='northeastern-chemical-engineering-ai-bsche'
     seed=json.loads((ROOT/'data/programs'/f'{pid}.json').read_text())
     # Independent delta: original 40 fixed minus the two substituted GE
-    # identities; three writing options plus all four engineering identities.
+    # identities plus the independently verified concurrent CS 1802 seminar;
+    # three writing options plus all four engineering identities.
     profile=requirement_profile(seed)
-    assert profile['required']['count']==38
+    assert profile['required']['count']==39
     assert profile['options']['count']==7
     assert profile['unresolved']['count']==0
-    assert len(seed['courses'])==45
+    assert len(seed['courses'])==46
     for code in ['GE 1110','GE 1111']:
         c=next(c for c in seed['courses'] if c['code']==code)
         assert c['credits']==4 and c['credit_unit']=='semester_hours'
         assert c['category_review']['status']=='reviewed'
+
+
+def cs_concurrency_document():
+    return '<div id="site-title"><h1>Computer Science (CS)</h1></div><div id="textcontainer">'+''.join(
+        '<div class="courseblock"><p class="courseblocktitle">'+code+'. '+name+'. ('+hours+' Hour'+('s' if hours!='1' else '')+')</p>'
+        '<p class="cb_desc">'+description+'</p><p class="courseblockextra">Corequisite(s): '+concurrent+'</p></div>'
+        for code,name,hours,description,concurrent in [
+            ('CS 1800','Discrete Structures','4','Studies discrete mathematical structures.','CS 1802'),
+            ('CS 1802','Seminar for CS 1800','1','Accompanies CS 1800 through discussion.','CS 1800')])+'</div>'
+
+
+def test_concurrent_seminar_observer_requires_reciprocal_evidence_and_never_emits_review():
+    from atlas.adapters.northeastern_corequisites import observe_cs1802
+    def base(html):
+        return parse_subject(html,program_id='test',subject='CS',heading='Computer Science (CS)',
+                             codes=['CS 1800'],url='https://catalog.northeastern.edu/course-descriptions/cs/')
+    result=observe_cs1802(cs_concurrency_document(),'test',base)
+    rule=result['requirements'][0]
+    assert rule['parent_id']=='test-req-cs-1800' and rule['course_ids']==['test-cs-1802']
+    assert rule['credits']==1 and rule['source_id']=='test-cs-courses'
+    assert all('category_review' not in c for c in result['courses'])
+    for before,after in [('Corequisite(s): CS 1802','Prerequisite(s): CS 1802'),
+                         ('Corequisite(s): CS 1800','Corequisite(s): CS 9999'),
+                         ('Seminar for CS 1800','Unrelated seminar'),('(1 Hour)','(2 Hours)')]:
+        with pytest.raises(ValueError):
+            observe_cs1802(cs_concurrency_document().replace(before,after),'test',base)
+
+
+def test_degree_concurrency_guard_rejects_missing_policy_and_conditional_ancestry():
+    from atlas.adapters.northeastern_corequisites import guard_degree
+    policy='<div id="programrequirementstextcontainer">Also complete any corequisite labs, recitations, clinicals, or tools courses where specified</div>'
+    def observer(kind):
+        return lambda html: dict(requirements=[
+            dict(id='root',parent_id=None,kind=kind,course_ids=[]),
+            dict(id='test-req-cs-1800',parent_id='root',kind='all',course_ids=['test-cs-1800'])])
+    assert guard_degree(observer('all'),'test')(policy)
+    for kind in ['alternative','choose_courses','choose_credits','note']:
+        with pytest.raises(ValueError,match='conditional ancestry'):
+            guard_degree(observer(kind),'test')(policy)
+    with pytest.raises(ValueError,match='applicability'):
+        guard_degree(observer('all'),'test')(policy.replace('Also complete','Optionally take'))
+
+
+def test_exact_fourteen_degree_seminars_inherit_existing_fixed_parent():
+    from atlas.families import resolve_program
+    families={x['id']:x for p in (ROOT/'data/families').glob('*.json') for x in [json.loads(p.read_text())]}
+    affected=[]
+    for path in (ROOT/'data/programs').glob('northeastern*.json'):
+        program=json.loads(path.read_text())
+        if not any(c['code']=='CS 1800' for c in program['courses']):continue
+        affected.append(program['id'])
+        resolved=resolve_program(program,families.get(program.get('family',{}).get('id')))
+        groups={r['id']:r for r in resolved['requirements']}
+        node=groups[program['id']+'-req-cs-1802-concurrent']
+        assert node['parent_id']==program['id']+'-req-cs-1800'
+        while node:
+            assert node['kind']=='all'
+            node=groups.get(node['parent_id']) if node.get('parent_id') else None
+        course=next(c for c in program['courses'] if c['code']=='CS 1802')
+        assert course['credits']==1 and course['category']=='mathematics'
+        assert course['category_review']['status']=='reviewed'
+    assert len(affected)==14
+
+
+def test_optional_reviewed_live_degree_and_cs_sources_reconstruct_concurrent_children():
+    cache=ROOT/'.cache/research/degree-audit-northeastern'
+    if not (cache/'cs.html').exists():pytest.skip('Optional official CS source cache')
+    count=0
+    for path in (ROOT/'data/programs').glob('northeastern*.json'):
+        p=json.loads(path.read_text())
+        if not any(c['code']=='CS 1802' for c in p['courses']):continue
+        source=cache/(p['id']+'.html')
+        if not source.exists():pytest.skip('Optional official degree source cache')
+        m=import_module('atlas.adapters.'+p['id']+'.adapter')
+        degree=m.parse(source.read_text())
+        assert any(r['id']==p['id']+'-req-cs-1800' for r in degree['requirements'])
+        observed=m.SOURCE_PARSERS['https://catalog.northeastern.edu/course-descriptions/cs/']((cache/'cs.html').read_text())
+        assert all(r in p['requirements'] for r in observed['requirements'])
+        course=next(c for c in observed['courses'] if c['code']=='CS 1802')
+        reviewed=next(c for c in p['courses'] if c['code']=='CS 1802')
+        assert course=={k:v for k,v in reviewed.items() if k!='category_review'}
+        count+=1
+    assert count==14

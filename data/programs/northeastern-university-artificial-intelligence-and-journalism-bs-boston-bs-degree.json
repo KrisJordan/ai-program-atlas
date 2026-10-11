@@ -178,7 +178,7 @@
       "fetched_at": "2026-10-10T23:49:52+00:00",
       "source_date": null,
       "catalog_year": "2026-2027",
-      "locator": "Selected course blocks: CS 1200, CS 1210, CS 1800, CS 2000, CS 2001, CS 2100, CS 2101, CS 3200. Titles, catalog hours, descriptions, prerequisite/corequisite labels and explicit prose conditions.",
+      "locator": "Selected course blocks: CS 1200, CS 1210, CS 1800, CS 2000, CS 2001, CS 2100, CS 2101, CS 3200. Titles, catalog hours, descriptions, prerequisite/corequisite labels and explicit prose conditions. CS 1802 seminar block and reciprocal CS 1800/CS 1802 corequisite statements (degree audit).",
       "confidence": "high"
     },
     {
@@ -1183,6 +1183,31 @@
       "url": "https://catalog.northeastern.edu/course-descriptions/jrnl/",
       "public_site": null,
       "syllabus": null
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-cs-1802",
+      "code": "CS 1802",
+      "name": "Seminar for CS 1800",
+      "description": "Reinforces CS 1800 discrete-structures material through seminar discussion, quizzes and assignments.",
+      "prerequisites": null,
+      "credits": 1.0,
+      "credit_unit": "semester_hours",
+      "category": "mathematics",
+      "source_id": "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-cs-courses",
+      "url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-cs-courses"
+        ],
+        "locator": "CS 1802 seminar description, together with CS 1800 discrete-structures description and reciprocal corequisite conditions",
+        "rationale": "The seminar accompanies the explicitly reviewed discrete-structures course and reinforces its mathematical topics through discussion and assignments.",
+        "candidate_categories": []
+      }
     }
   ],
   "requirements": [
@@ -2421,6 +2446,22 @@
       "source_text": null,
       "summary": "131 total semester hours required",
       "course_ids": []
+    },
+    {
+      "id": "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-req-cs-1802-concurrent",
+      "parent_id": "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-req-cs-1800",
+      "title": "CS 1802 concurrent seminar",
+      "kind": "all",
+      "count": null,
+      "credits": 1,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-cs-courses",
+      "source_text": null,
+      "summary": "CS 1800 requires concurrent CS 1802. The degree preamble requires specified corequisite recitations/tools; this seminar inherits the CS 1800 requirement context.",
+      "course_ids": [
+        "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-cs-1802"
+      ]
     }
   ],
   "notes": [
@@ -2453,7 +2494,8 @@
     "Public syllabus explicitly covers CS 2000 classes and CS 2001 labs. It is linked by the separately verified Fall 2026 site but does not itself state an offering year; catalog credits and prerequisites remain separate.",
     "Partner-course description review (2026-10-11): 6 existing course observations gain original guarded summaries of their official 2026–2027 descriptions. Topics courses retain offering variability. Course activities and aims are not promoted to assessed program outcomes, and placement in an alternative or elective group is unchanged.",
     "Communication journalism and design options description review (2026-10-11): 8 existing course observations gain original concise summaries of their official 2026–2027 descriptions. Offering variability, course activities and permission conditions retain their stated scope. Requirement choices, credits, preparation fields and public resource links remain unchanged.",
-    "Finite course-description review complete (2026-10-11): all 45 currently listed course observations have source-backed original summaries. This closes the listed-course description queue only. Other offering-specific public sites/syllabi remain unreviewed, null preparation fields do not mean no restriction, and degree completeness remains partial pending the documented applicability boundaries."
+    "Finite course-description review complete (2026-10-11): all 45 currently listed course observations have source-backed original summaries. This closes the listed-course description queue only. Other offering-specific public sites/syllabi remain unreviewed, null preparation fields do not mean no restriction, and degree completeness remains partial pending the documented applicability boundaries.",
+    "Degree audit: CS 1802 is the explicitly specified one-hour corequisite seminar for fixed CS 1800. Its requirement is a child of CS 1800, supported by the degree preamble and reciprocal CS catalog corequisite conditions; other prerequisites have not been promoted to degree requirements."
   ],
   "curriculum_audit": {
     "scope": "degree",

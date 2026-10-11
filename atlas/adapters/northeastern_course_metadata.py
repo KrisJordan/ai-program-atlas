@@ -6,6 +6,7 @@ from atlas.adapters.northeastern_courseleaf import clean, slug, numeric, categor
 # Short editorial summaries of the linked official descriptions. Each has a
 # source phrase guard; changed prose cannot silently replay an unsupported summary.
 SUMMARIES = {
+    'CS 1802': ('Accompanies CS 1800', 'Reinforces CS 1800 discrete-structures material through seminar discussion, quizzes and assignments.'),
     'ANTH 1101': ('basic concepts in cultural anthropology', 'Introduces cultural anthropology through comparative societies and their responses to globalization and social change.'),
     'ANTH 2305': ('local responses and/or resistances', 'Examines globalization, production, urbanization and labor migration through their effects on developing and postcolonial societies and local responses.'),
     'ANTH 2315': ('ritual, myth, healing, and identity', 'Compares religious practices and beliefs through anthropological theories, methods and focused cases.'),

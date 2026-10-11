@@ -48,6 +48,14 @@ def program(pid):return json.loads((ROOT/'data/programs'/f'{pid}.json').read_tex
 def test_reviewed_variant_reconstruction_preserves_entire_original_graph(pid):
     p=program(pid);f=family();db.validate_program(p,f);resolved=resolve_program(p,f)
     rows=[{k:v for k,v in r.items() if k not in ANNOTATIONS} for r in resolved['requirements'] if not r.get('family_requirement_id','').startswith('policy-')]
+    # The audit adds a separately sourced concurrent seminar beneath the original
+    # CS 1800 node. Preserve every historical degree node unchanged; dedicated
+    # concurrency tests verify the added source rule, ancestry and course facts.
+    added=[r for r in rows if r['id']==pid+'-req-cs-1802-concurrent']
+    for r in added:
+        assert r['parent_id']==pid+'-req-cs-1800' and r['source_id']==pid+'-cs-courses'
+        assert r['kind']=='all' and r['course_ids']==[pid+'-cs-1802']
+    rows=[r for r in rows if r not in added]
     if 'business-administration' in pid:
         # The reviewed follow-up adds independent concentration-source subtrees
         # and two main-page selection nodes; test those in the concentration suite.

@@ -83,3 +83,5 @@ Anthropology languages and regional alternatives description review (2026-10-11)
 ## Finite description inventory closure — 2026-10-11
 
 Finite course-description review complete (2026-10-11): all 97 currently listed course observations have source-backed original summaries. This closes the listed-course description queue only. Other offering-specific public sites/syllabi remain unreviewed, null preparation fields do not mean no restriction, and degree completeness remains partial pending the documented applicability boundaries.
+
+2026-10-11 degree audit: fixed CS 1800 explicitly corequires the one-hour CS 1802 seminar; the degree preamble requires specified corequisite recitations/tools. The degree observer guards this preamble and fixed CS 1800 ancestry, while the CS observer separately guards reciprocal corequisite statements and exact CS 1802 identity/hours. The new child rule inherits CS 1800 context; no unrelated prerequisite is promoted. Manual category review is never emitted by the observer.
