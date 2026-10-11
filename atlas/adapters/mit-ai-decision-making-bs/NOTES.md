@@ -238,3 +238,10 @@ The observer reapplies a title judgment only to the exact saved record identity 
 The actual required-subject section says three mathematics subjects and prints6.1200 alone, followed by two explicitly labeled One of rows. The previous generic option wrapper incorrectly made that first subject optional. The parser now guards this exact source structure and makes only the bare row fixed. The corrected fixed set is6.1200 Mathematics for Computer Science,6.1010 Fundamentals of Programming, and6.1210 Introduction to Algorithms: one mathematics and two foundations identities. This supersedes the earlier two-fixed count.
 
 Five Center subject choices are now a counted choice node, retaining each printed bundle; designation overlays remain notes because they reuse completed subjects. Independent source sets were reconstructed from the actual required-section choices and the six expressly eligible elective lists, excluding designation-only lists. The adjacent JSON records those exact versioned identity sets and counts. Full chart/GIR/HASS role certification remains separate.
+
+
+## First actual HASS metadata integration — 2026-10-11
+
+The separate primary contribution8871c1f was replayed against24 actual cached source pages and integrated70 matched HASS records. Full source payload digests guard descriptions, terms, prerequisite fields and restrictions. Literary study of probability remains human context; digital-art and musical practice are domain subjects, and mixed music/culture is explicit. No subject role or identity group changes follow from these metadata additions.
+
+Seven renamed/version-ambiguous records and two WGS231 conflicting descriptions remain withheld;766 HASS records remain active work rather than falsely labeled inaccessible. The half-term Greek/Latin completion and petition rules are preserved as conditional HASS accounting, not duplicate identities. Graduate4.604 permission is not assigned to undergraduate4.603. See REVIEWED_HASS.md and the contribution manifest for exact observations and source boundaries.

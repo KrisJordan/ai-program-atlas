@@ -182,3 +182,7 @@ SOURCE_PARSERS.update(subject_conventions.SOURCE_PARSERS)
 gir_subjects = import_module('atlas.adapters.mit-ai-decision-making-bs.gir_subjects')
 SOURCES.extend(gir_subjects.SOURCE_PARSERS)
 SOURCE_PARSERS.update(gir_subjects.SOURCE_PARSERS)
+
+hass_metadata = import_module('atlas.adapters.mit-ai-decision-making-bs.hass_metadata')
+SOURCES.extend(hass_metadata.SOURCE_PARSERS)
+SOURCE_PARSERS.update(hass_metadata.SOURCE_PARSERS)
