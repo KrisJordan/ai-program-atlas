@@ -2245,6 +2245,26 @@
       "catalog_year": null,
       "locator": "Complete blocks: WRS 233, WRS 210, WRS 230, WRS 232, WRS 250, WRS 306, WRS 310, WRS 331, WRS 332, WRS 333, WRS 335, WRS 345, WRS 355, WRS 365, WRS 410, WRS 431. Current public course chapter: copyright/download navigation includes 2026–2027 and a stale 2025–2026 PDF label. No enrollment-cohort edition is assigned from navigation alone.",
       "confidence": "high"
+    },
+    {
+      "id": "miami-context-courses-arb",
+      "url": "https://bulletin.miami.edu/courses-az/arb/",
+      "title": "Miami Arabic (ARB) contextual-course source review",
+      "fetched_at": "2026-10-11T05:50:01+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Complete blocks: ARB 101, ARB 102, ARB 201, ARB 202, ARB 203, ARB 204, ARB 207, ARB 208, ARB 251, ARB 310, ARB 312, ARB 315, ARB 394, ARB 410. Current public course chapter; exact content and eligibility are independent of dated cognate membership. No cohort, renumbering or language-requirement equivalence is inferred.",
+      "confidence": "high"
+    },
+    {
+      "id": "miami-context-courses-chi",
+      "url": "https://bulletin.miami.edu/courses-az/chi/",
+      "title": "Miami Chinese (CHI) contextual-course source review",
+      "fetched_at": "2026-10-11T05:50:15+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Complete blocks: CHI 101, CHI 102, CHI 201, CHI 202, CHI 203, CHI 204, CHI 210, CHI 251, CHI 295, CHI 301, CHI 310, CHI 311, CHI 312, CHI 315, CHI 322, CHI 395, CHI 495. Current public course chapter; exact content and eligibility are independent of dated cognate membership. No cohort, renumbering or language-requirement equivalence is inferred.",
+      "confidence": "high"
     }
   ],
   "courses": [
@@ -5274,71 +5294,126 @@
       "id": "miami-ai-technologies-business-bsba-arb-202",
       "code": "ARB 202",
       "name": "Intermediate Arabic II",
-      "description": null,
-      "prerequisites": "Prerequisite: ARB 201.",
+      "description": "Integrates Arabic communication skills with study of Arab society, history and culture.",
+      "prerequisites": "Prerequisite: ARB 201 . Closed to native speakers.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0046-fall2026",
-      "url": "https://cognates.miami.edu/AT_0046",
+      "source_id": "miami-context-courses-arb",
+      "url": "https://bulletin.miami.edu/courses-az/arb/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Integrates Arabic communication skills with study of Arab society, history and culture. Language communication or cultural interpretation is the explicit focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-arb"
+        ],
+        "locator": "ARB 202 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-arb-203",
       "code": "ARB 203",
       "name": "Advanced Arabic",
-      "description": null,
-      "prerequisites": "Prerequisite: ARB 202.",
+      "description": "Develops advanced Arabic listening, speaking, reading and writing with cultural study.",
+      "prerequisites": "Prerequisite: ARB 202 . Closed to students who graduated from an Arabic-medium high school.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0046-fall2026",
-      "url": "https://cognates.miami.edu/AT_0046",
+      "source_id": "miami-context-courses-arb",
+      "url": "https://bulletin.miami.edu/courses-az/arb/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops advanced Arabic listening, speaking, reading and writing with cultural study. Language communication or cultural interpretation is the explicit focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-arb"
+        ],
+        "locator": "ARB 203 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-arb-204",
       "code": "ARB 204",
       "name": "Arabic 204: Advanced Arabic II",
-      "description": null,
-      "prerequisites": "Prerequisite: ARB 203.",
+      "description": "Advances Arabic communication, textual interpretation and grammatical accuracy.",
+      "prerequisites": "Prerequisite: ARB 203 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0046-fall2026",
-      "url": "https://cognates.miami.edu/AT_0046",
+      "source_id": "miami-context-courses-arb",
+      "url": "https://bulletin.miami.edu/courses-az/arb/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Advances Arabic communication, textual interpretation and grammatical accuracy. Language communication or cultural interpretation is the explicit focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-arb"
+        ],
+        "locator": "ARB 204 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-arb-207",
       "code": "ARB 207",
       "name": "Arabic for Heritage Learners",
-      "description": null,
-      "prerequisites": null,
+      "description": "Develops heritage learners’ Arabic reading, writing and debate through cultural, literary and artistic material.",
+      "prerequisites": "The description specifies heritage learners who have completed the equivalent of ARB 201; no separately labeled prerequisite field is printed.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0046-fall2026",
-      "url": "https://cognates.miami.edu/AT_0046",
+      "source_id": "miami-context-courses-arb",
+      "url": "https://bulletin.miami.edu/courses-az/arb/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops heritage learners’ Arabic reading, writing and debate through cultural, literary and artistic material. Language communication or cultural interpretation is the explicit focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-arb"
+        ],
+        "locator": "ARB 207 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-arb-208",
       "code": "ARB 208",
       "name": "Arabic for Heritage Learners II",
-      "description": null,
-      "prerequisites": "Prerequisite: ARB 202 or ARB 207.",
+      "description": "Extends heritage Arabic communication, cultural interpretation and language accuracy.",
+      "prerequisites": "Prerequisite: ARB 202 or ARB 207 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0046-fall2026",
-      "url": "https://cognates.miami.edu/AT_0046",
+      "source_id": "miami-context-courses-arb",
+      "url": "https://bulletin.miami.edu/courses-az/arb/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Extends heritage Arabic communication, cultural interpretation and language accuracy. Language communication or cultural interpretation is the explicit focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-arb"
+        ],
+        "locator": "ARB 208 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-arb-295",
@@ -5358,43 +5433,76 @@
       "id": "miami-ai-technologies-business-bsba-arb-310",
       "code": "ARB 310",
       "name": "Topics in Arabic Literature and Culture in Translation",
-      "description": null,
-      "prerequisites": "Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107",
+      "description": "Studies selected Arabic-speaking literary and cultural traditions in English translation.",
+      "prerequisites": "Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107. Taught in English and explicitly does not fulfill the Arts and Sciences foreign-language requirement; different-topic repeats may earn credit.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0046-fall2026",
-      "url": "https://cognates.miami.edu/AT_0046",
+      "source_id": "miami-context-courses-arb",
+      "url": "https://bulletin.miami.edu/courses-az/arb/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Studies selected Arabic-speaking literary and cultural traditions in English translation. Language communication or cultural interpretation is the explicit focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-arb"
+        ],
+        "locator": "ARB 310 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-arb-312",
       "code": "ARB 312",
       "name": "Arab Cultures: A Cultural History of the Arab World",
-      "description": null,
-      "prerequisites": "Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107",
+      "description": "Examines Arab cultural and intellectual history through literature and visual arts.",
+      "prerequisites": "Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107. Taught in English and explicitly does not fulfill the Arts and Sciences foreign-language requirement.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0046-fall2026",
-      "url": "https://cognates.miami.edu/AT_0046",
+      "source_id": "miami-context-courses-arb",
+      "url": "https://bulletin.miami.edu/courses-az/arb/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Examines Arab cultural and intellectual history through literature and visual arts. Language communication or cultural interpretation is the explicit focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-arb"
+        ],
+        "locator": "ARB 312 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-arb-315",
       "code": "ARB 315",
       "name": "Topics in Gender and Sexuality in Translation",
-      "description": null,
-      "prerequisites": "Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107",
+      "description": "Examines gender and sexuality in the Arab world through literary and cultural analysis.",
+      "prerequisites": "Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107. Taught in English and explicitly does not fulfill the Arts and Sciences foreign-language requirement; different-topic repeats may earn credit.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0046-fall2026",
-      "url": "https://cognates.miami.edu/AT_0046",
+      "source_id": "miami-context-courses-arb",
+      "url": "https://bulletin.miami.edu/courses-az/arb/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Examines gender and sexuality in the Arab world through literary and cultural analysis. Language communication or cultural interpretation is the explicit focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-arb"
+        ],
+        "locator": "ARB 315 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-arb-395",
@@ -5414,15 +5522,26 @@
       "id": "miami-ai-technologies-business-bsba-arb-410",
       "code": "ARB 410",
       "name": "Language and Power in the Arab World",
-      "description": null,
-      "prerequisites": "Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107",
+      "description": "Studies Arabic sociolinguistics, language registers and their cultural and political implications.",
+      "prerequisites": "Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107. Taught in English and explicitly does not fulfill the Arts and Sciences foreign-language requirement.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0046-fall2026",
-      "url": "https://cognates.miami.edu/AT_0046",
+      "source_id": "miami-context-courses-arb",
+      "url": "https://bulletin.miami.edu/courses-az/arb/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Studies Arabic sociolinguistics, language registers and their cultural and political implications. Language communication or cultural interpretation is the explicit focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-arb"
+        ],
+        "locator": "ARB 410 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-arb-495",
@@ -7724,211 +7843,376 @@
       "id": "miami-ai-technologies-business-bsba-chi-201",
       "code": "CHI 201",
       "name": "Intermediate Chinese I",
-      "description": null,
-      "prerequisites": "Prerequisite: CHI 102.",
+      "description": "Develops intermediate Chinese language skills alongside customs, history and culture.",
+      "prerequisites": "Prerequisite: CHI 102 . Closed to native speakers.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0098-fall2026",
-      "url": "https://cognates.miami.edu/AT_0098",
+      "source_id": "miami-context-courses-chi",
+      "url": "https://bulletin.miami.edu/courses-az/chi/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops intermediate Chinese language skills alongside customs, history and culture. Language communication or cultural interpretation is the explicit focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-chi"
+        ],
+        "locator": "CHI 201 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-chi-202",
       "code": "CHI 202",
       "name": "Intermediate Chinese II",
-      "description": null,
-      "prerequisites": "Prerequisite: CHI 201.",
+      "description": "Advances intermediate Mandarin reading, writing, speaking and listening.",
+      "prerequisites": "Prerequisite: CHI 201 . Closed to native speakers.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0098-fall2026",
-      "url": "https://cognates.miami.edu/AT_0098",
+      "source_id": "miami-context-courses-chi",
+      "url": "https://bulletin.miami.edu/courses-az/chi/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Advances intermediate Mandarin reading, writing, speaking and listening. Language communication or cultural interpretation is the explicit focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-chi"
+        ],
+        "locator": "CHI 202 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-chi-203",
       "code": "CHI 203",
       "name": "Advanced Chinese",
-      "description": null,
-      "prerequisites": "Prerequisite: CHI 202.",
+      "description": "Develops advanced Chinese comprehension, vocabulary, grammar and cultural understanding.",
+      "prerequisites": "Prerequisite: CHI 202 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0098-fall2026",
-      "url": "https://cognates.miami.edu/AT_0098",
+      "source_id": "miami-context-courses-chi",
+      "url": "https://bulletin.miami.edu/courses-az/chi/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops advanced Chinese comprehension, vocabulary, grammar and cultural understanding. Language communication or cultural interpretation is the explicit focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-chi"
+        ],
+        "locator": "CHI 203 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-chi-204",
       "code": "CHI 204",
       "name": "Advanced Chinese II",
-      "description": null,
-      "prerequisites": "Prerequisite: CHI 203.",
+      "description": "Extends advanced Chinese language skills and cultural understanding.",
+      "prerequisites": "Prerequisite: CHI 203 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0098-fall2026",
-      "url": "https://cognates.miami.edu/AT_0098",
+      "source_id": "miami-context-courses-chi",
+      "url": "https://bulletin.miami.edu/courses-az/chi/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Extends advanced Chinese language skills and cultural understanding. Language communication or cultural interpretation is the explicit focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-chi"
+        ],
+        "locator": "CHI 204 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-chi-210",
       "code": "CHI 210",
-      "name": null,
-      "description": null,
+      "name": "Experiencing Chinese Culture through Art and Design",
+      "description": "Explores Chinese cultural values through arts, design, site visits, interviews and projects in Beijing.",
       "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "source_id": "miami-context-courses-chi",
+      "url": "https://bulletin.miami.edu/courses-az/chi/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Explores Chinese cultural values through arts, design, site visits, interviews and projects in Beijing. Language communication or cultural interpretation is the explicit focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-chi"
+        ],
+        "locator": "CHI 210 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-chi-251",
       "code": "CHI 251",
       "name": "Mandarin Chinese Conversation through Media",
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
-      "credit_unit": "unknown",
+      "description": "Develops Mandarin communication and cultural interpretation using contemporary media and creative performance.",
+      "prerequisites": "Prerequisite: CHI 201 .",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "source_id": "miami-context-courses-chi",
+      "url": "https://bulletin.miami.edu/courses-az/chi/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops Mandarin communication and cultural interpretation using contemporary media and creative performance. Language communication or cultural interpretation is the explicit focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-chi"
+        ],
+        "locator": "CHI 251 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-chi-295",
       "code": "CHI 295",
       "name": "Transfer Credit",
-      "description": null,
+      "description": "Records external 200-level credit without a direct university equivalent; the specific subject is not described. Published credit range: 1-3 credit hours.",
       "prerequisites": null,
       "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "miami-context-courses-chi",
+      "url": "https://bulletin.miami.edu/courses-az/chi/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "rationale": "Records external 200-level credit without a direct university equivalent; the specific subject is not described. Published credit range: 1-3 credit hours. The external topic or work is not determined by the course prefix.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-chi"
+        ],
+        "locator": "CHI 295 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-chi-301",
       "code": "CHI 301",
       "name": "Advanced Reading and Diction Chinese",
-      "description": null,
-      "prerequisites": "Prerequisite: CHI 204",
+      "description": "Develops advanced Chinese fluency through formal speech, literature, debate and journalism.",
+      "prerequisites": "Prerequisite: CHI 204 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0047-fall2026",
-      "url": "https://cognates.miami.edu/AT_0047",
+      "source_id": "miami-context-courses-chi",
+      "url": "https://bulletin.miami.edu/courses-az/chi/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops advanced Chinese fluency through formal speech, literature, debate and journalism. Language communication or cultural interpretation is the explicit focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-chi"
+        ],
+        "locator": "CHI 301 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-chi-310",
       "code": "CHI 310",
       "name": "Topics in Chinese Literature and Culture in Translation",
-      "description": null,
-      "prerequisites": "Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107",
+      "description": "Examines selected Chinese-speaking literary and cultural traditions in English translation.",
+      "prerequisites": "Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107. Taught in English and explicitly does not fulfill the Arts and Sciences foreign-language requirement; different-topic repeats may earn credit.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0047-fall2026",
-      "url": "https://cognates.miami.edu/AT_0047",
+      "source_id": "miami-context-courses-chi",
+      "url": "https://bulletin.miami.edu/courses-az/chi/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Examines selected Chinese-speaking literary and cultural traditions in English translation. Language communication or cultural interpretation is the explicit focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-chi"
+        ],
+        "locator": "CHI 310 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-chi-311",
       "code": "CHI 311",
       "name": "Comparative Literature in East Asia",
-      "description": null,
-      "prerequisites": "Prerequisite: WRS 106 or ENG 106.",
+      "description": "Studies East Asian literary traditions and comparative interpretation through recurring themes.",
+      "prerequisites": "Prerequisite: WRS 106 or ENG 106 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0047-fall2026",
-      "url": "https://cognates.miami.edu/AT_0047",
+      "source_id": "miami-context-courses-chi",
+      "url": "https://bulletin.miami.edu/courses-az/chi/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Studies East Asian literary traditions and comparative interpretation through recurring themes. Language communication or cultural interpretation is the explicit focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-chi"
+        ],
+        "locator": "CHI 311 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-chi-312",
       "code": "CHI 312",
       "name": "The Esoteric and the Mundane in the Chinese Literary Tradition",
-      "description": null,
-      "prerequisites": "Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107",
+      "description": "Examines Chinese literary genres and ideas of humanity, divinity and monstrosity through historical texts.",
+      "prerequisites": "Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0098-fall2026",
-      "url": "https://cognates.miami.edu/AT_0098",
+      "source_id": "miami-context-courses-chi",
+      "url": "https://bulletin.miami.edu/courses-az/chi/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Examines Chinese literary genres and ideas of humanity, divinity and monstrosity through historical texts. Language communication or cultural interpretation is the explicit focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-chi"
+        ],
+        "locator": "CHI 312 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-chi-315",
       "code": "CHI 315",
       "name": "The Powerful Women of Medieval China in History, Fiction, and Modern Media",
-      "description": null,
-      "prerequisites": "Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107",
+      "description": "Analyzes representations of medieval Chinese ruling-class women in history, literature and screen media.",
+      "prerequisites": "Prerequisite: WRS 106 or ENG 106 or WRS 107 or ENG 107.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0098-fall2026",
-      "url": "https://cognates.miami.edu/AT_0098",
+      "source_id": "miami-context-courses-chi",
+      "url": "https://bulletin.miami.edu/courses-az/chi/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Analyzes representations of medieval Chinese ruling-class women in history, literature and screen media. Language communication or cultural interpretation is the explicit focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-chi"
+        ],
+        "locator": "CHI 315 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-chi-322",
       "code": "CHI 322",
       "name": "Cultural Topics",
-      "description": null,
-      "prerequisites": null,
+      "description": "Analyzes Chinese cultural texts and themes using Chinese-language reading and writing.",
+      "prerequisites": "Open only to students with native or native-level Chinese fluency.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0047-fall2026",
-      "url": "https://cognates.miami.edu/AT_0047",
+      "source_id": "miami-context-courses-chi",
+      "url": "https://bulletin.miami.edu/courses-az/chi/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Analyzes Chinese cultural texts and themes using Chinese-language reading and writing. Language communication or cultural interpretation is the explicit focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-chi"
+        ],
+        "locator": "CHI 322 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-chi-395",
       "code": "CHI 395",
       "name": "Transfer Credit",
-      "description": null,
+      "description": "Records external 300-level credit without a direct university equivalent; the specific subject is not described. Published credit range: 1-3 credit hours.",
       "prerequisites": null,
       "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "miami-context-courses-chi",
+      "url": "https://bulletin.miami.edu/courses-az/chi/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "rationale": "Records external 300-level credit without a direct university equivalent; the specific subject is not described. Published credit range: 1-3 credit hours. The external topic or work is not determined by the course prefix.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-chi"
+        ],
+        "locator": "CHI 395 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-chi-495",
       "code": "CHI 495",
       "name": "Transfer Credit",
-      "description": null,
+      "description": "Records external 400-level credit without a direct university equivalent; the specific subject is not described. Published credit range: 1-3 credit hours.",
       "prerequisites": null,
       "credits": null,
-      "credit_unit": "unknown",
-      "category": "human_context",
-      "source_id": "miami-cognate-directory-20261002",
-      "url": "https://cognates.miami.edu/courses/individualized",
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "miami-context-courses-chi",
+      "url": "https://bulletin.miami.edu/courses-az/chi/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "rationale": "Records external 400-level credit without a direct university equivalent; the specific subject is not described. Published credit range: 1-3 credit hours. The external topic or work is not determined by the course prefix.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-chi"
+        ],
+        "locator": "CHI 495 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-cim-101",
@@ -28126,57 +28410,101 @@
       "id": "miami-ai-technologies-business-bsba-arb-101",
       "code": "ARB 101",
       "name": "Elementary Arabic I",
-      "description": null,
-      "prerequisites": null,
+      "description": "Introduces Arabic writing, grammar, pronunciation, reading and translation.",
+      "prerequisites": "Closed to native speakers.",
       "credits": 4.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0046-fall2026",
-      "url": "https://cognates.miami.edu/AT_0046",
+      "source_id": "miami-context-courses-arb",
+      "url": "https://bulletin.miami.edu/courses-az/arb/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Introduces Arabic writing, grammar, pronunciation, reading and translation. Language communication or cultural interpretation is the explicit focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-arb"
+        ],
+        "locator": "ARB 101 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-arb-102",
       "code": "ARB 102",
       "name": "Elementary Arabic II",
-      "description": null,
-      "prerequisites": "Prerequisite: ARB 101.",
+      "description": "Develops spoken and written Modern Standard Arabic.",
+      "prerequisites": "Prerequisite: ARB 101 . Closed to native speakers.",
       "credits": 4.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0046-fall2026",
-      "url": "https://cognates.miami.edu/AT_0046",
+      "source_id": "miami-context-courses-arb",
+      "url": "https://bulletin.miami.edu/courses-az/arb/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops spoken and written Modern Standard Arabic. Language communication or cultural interpretation is the explicit focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-arb"
+        ],
+        "locator": "ARB 102 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-arb-201",
       "code": "ARB 201",
       "name": "Intermediate Arabic I",
-      "description": null,
-      "prerequisites": "Prerequisite: ARB 102.",
+      "description": "Practices intermediate spoken and written Modern Standard Arabic.",
+      "prerequisites": "Prerequisite: ARB 102 . Closed to native speakers.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0046-fall2026",
-      "url": "https://cognates.miami.edu/AT_0046",
+      "source_id": "miami-context-courses-arb",
+      "url": "https://bulletin.miami.edu/courses-az/arb/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Practices intermediate spoken and written Modern Standard Arabic. Language communication or cultural interpretation is the explicit focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-arb"
+        ],
+        "locator": "ARB 201 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-arb-394",
       "code": "ARB 394",
       "name": "Arabic Internship",
-      "description": null,
-      "prerequisites": "Prerequisite: ARB 204.",
+      "description": "A supervised external internship applies prior skills in a selected Arabic-speaking organization; its actual work varies. Published credit range: 1-3 credit hours.",
+      "prerequisites": "Prerequisite: ARB 204 . Requires an internship application and MLL faculty permission. Normally 27 internship hours per credit; at most three internship credits count toward the degree.",
       "credits": null,
       "credit_unit": "semester_hours",
-      "category": "human_context",
-      "source_id": "miami-cognate-at_0046-fall2026",
-      "url": "https://cognates.miami.edu/AT_0046",
+      "category": "other",
+      "source_id": "miami-context-courses-arb",
+      "url": "https://bulletin.miami.edu/courses-az/arb/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "rationale": "A supervised external internship applies prior skills in a selected Arabic-speaking organization; its actual work varies. Published credit range: 1-3 credit hours. The external topic or work is not determined by the course prefix.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-arb"
+        ],
+        "locator": "ARB 394 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-apy-415",
@@ -28613,29 +28941,51 @@
       "id": "miami-ai-technologies-business-bsba-chi-101",
       "code": "CHI 101",
       "name": "Elementary Chinese (Mandarin)",
-      "description": null,
+      "description": "Introduces Mandarin conversation, grammar, reading and composition.",
       "prerequisites": null,
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0098-fall2026",
-      "url": "https://cognates.miami.edu/AT_0098",
+      "source_id": "miami-context-courses-chi",
+      "url": "https://bulletin.miami.edu/courses-az/chi/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Introduces Mandarin conversation, grammar, reading and composition. Language communication or cultural interpretation is the explicit focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-chi"
+        ],
+        "locator": "CHI 101 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-chi-102",
       "code": "CHI 102",
       "name": "Elementary Chinese (Mandarin)",
-      "description": null,
-      "prerequisites": "Prerequisite: CHI 101.",
+      "description": "Continues elementary Mandarin conversation, grammar, reading and composition.",
+      "prerequisites": "Prerequisite: CHI 101 .",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-at_0098-fall2026",
-      "url": "https://cognates.miami.edu/AT_0098",
+      "source_id": "miami-context-courses-chi",
+      "url": "https://bulletin.miami.edu/courses-az/chi/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Continues elementary Mandarin conversation, grammar, reading and composition. Language communication or cultural interpretation is the explicit focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-chi"
+        ],
+        "locator": "CHI 102 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-cca-408",
@@ -28834,15 +29184,26 @@
       "id": "miami-ai-technologies-business-bsba-arb-251",
       "code": "ARB 251",
       "name": "Levantine Colloquial Arabic I",
-      "description": null,
-      "prerequisites": "Prerequisite: ARB 201.",
+      "description": "Develops Levantine colloquial Arabic comprehension and communication across social and artistic contexts.",
+      "prerequisites": "Prerequisite: ARB 201 . Closed to native speakers educated in Arabic-medium schools; beginning heritage learners may be accommodated.",
       "credits": 3.0,
       "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "miami-cognate-ps_0055-fall2026",
-      "url": "https://cognates.miami.edu/PS_0055",
+      "source_id": "miami-context-courses-arb",
+      "url": "https://bulletin.miami.edu/courses-az/arb/",
       "public_site": null,
-      "syllabus": null
+      "syllabus": null,
+      "category_review": {
+        "status": "reviewed",
+        "rationale": "Develops Levantine colloquial Arabic comprehension and communication across social and artistic contexts. Language communication or cultural interpretation is the explicit focus.",
+        "candidate_categories": [],
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-11",
+        "source_ids": [
+          "miami-context-courses-arb"
+        ],
+        "locator": "ARB 251 complete current course-description block; contextual membership is not credit eligibility."
+      }
     },
     {
       "id": "miami-ai-technologies-business-bsba-mll-404",

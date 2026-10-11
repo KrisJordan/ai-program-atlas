@@ -77,3 +77,15 @@ def test_content_distinguishes_ai_tools_statistics_and_unknown_topics():
     assert m.SPEC['courses']['PSY 375']['review']['status']=='unclassified'
     assert m.SPEC['courses']['PSY 225']['prerequisites'] is None
     assert 'PSY Major or PSY Minor or NEU major' in m.SPEC['courses']['PSY 291']['prerequisites']
+
+
+def test_language_heritage_exclusions_and_external_credit_stay_explicit():
+    assert 'Closed to native speakers' in m.SPEC['courses']['ARB 101']['prerequisites']
+    assert 'equivalent of ARB 201' in m.SPEC['courses']['ARB 207']['prerequisites']
+    assert 'does not fulfill' in m.SPEC['courses']['ARB 410']['prerequisites']
+    assert 'native or native-level' in m.SPEC['courses']['CHI 322']['prerequisites']
+    assert m.SPEC['courses']['CHI 295']['review']['status']=='unclassified'
+    assert m.SPEC['courses']['CHI 295']['credits'] is None
+    assert '1-3' in m.SPEC['courses']['CHI 295']['description']
+    assert 'at most three' in m.SPEC['courses']['ARB 394']['prerequisites']
+    assert 'ARB 295' not in m.SPEC['courses']  # No invented match to the current Arabic chapter.
