@@ -17,7 +17,7 @@
   "catalog_year": null,
   "verification_status": "confirmed",
   "last_verified": "2026-10-11",
-  "curriculum_status": "pending",
+  "curriculum_status": "partial",
   "links": [
     {
       "kind": "catalog",
@@ -35,12 +35,149 @@
       "catalog_year": null,
       "locator": "Program heading, award/host and requirements",
       "confidence": "high"
+    },
+    {
+      "id": "delaware-cs-ai-robotics-concentration-committee-faq",
+      "url": "https://ucpc.cis.udel.edu/pages/2-students/faq.html",
+      "title": "CIS Undergraduate Committee Student FAQ",
+      "fetched_at": "2026-10-11T02:20:48+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "General and BS Computer Science: catalog, grading, exceptions, declaration, independent-study exclusion",
+      "confidence": "high"
+    },
+    {
+      "id": "delaware-cs-ai-robotics-concentration-technical-approvals",
+      "url": "https://ucpc.cis.udel.edu/pages/2-students/techelect.html",
+      "title": "CIS Undergraduate Committee Approved Technical Electives",
+      "fetched_at": "2026-10-11T02:20:49+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Dated 2024 Summer, 2024 Fall and 2025 Spring AI/Robotics approvals; historical observations only",
+      "confidence": "high"
+    },
+    {
+      "id": "delaware-cs-ai-robotics-concentration-resources",
+      "url": "https://www.cis.udel.edu/academics/undergraduate-programs/resources/",
+      "title": "CIS Undergraduate Resources",
+      "fetched_at": "2026-10-11T02:20:46+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Public links to program/curriculum committee and catalog resources",
+      "confidence": "high"
     }
   ],
-  "outcomes": [],
+  "outcomes": [
+    {
+      "text": "Understand cognition and develop intelligent systems through reasoning, language, learning, perception, navigation and interaction.",
+      "kind": "source_stated",
+      "statement_type": "program_aim",
+      "source_id": "delaware-cs-ai-robotics-concentration-catalog",
+      "locator": "AI and Robotics expanded program option"
+    }
+  ],
   "courses": [],
-  "requirements": [],
+  "requirements": [
+    {
+      "id": "delaware-cs-ai-robotics-concentration-declaration",
+      "parent_id": null,
+      "title": "Declare the concentration",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "delaware-cs-ai-robotics-concentration-committee-faq",
+      "source_text": null,
+      "summary": "Choose a concentration as early as possible, and no later than the second semester of sophomore year before third-year registration. No advisor approval is required to select one; changing it later may delay graduation. The default traditional BS and its advisor-approved focus area are separate paths.",
+      "course_ids": []
+    },
+    {
+      "id": "delaware-cs-ai-robotics-concentration-independent-study",
+      "parent_id": null,
+      "title": "Independent-study exclusion",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "delaware-cs-ai-robotics-concentration-committee-faq",
+      "source_text": null,
+      "summary": "Independent study cannot be used as a concentration course. Its separate use as a CISC elective or in an advisor-approved traditional focus area does not establish AI/Robotics concentration credit.",
+      "course_ids": []
+    },
+    {
+      "id": "delaware-cs-ai-robotics-concentration-grading",
+      "parent_id": null,
+      "title": "Pass/fail and audit restrictions",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "delaware-cs-ai-robotics-concentration-committee-faq",
+      "source_text": null,
+      "summary": "Pass/fail coursework cannot meet major or minor requirements. Audited courses earn no credit. No concentration-specific minimum grade is established by this FAQ.",
+      "course_ids": []
+    },
+    {
+      "id": "delaware-cs-ai-robotics-concentration-substitution",
+      "parent_id": null,
+      "title": "Exceptions and substitutions",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "delaware-cs-ai-robotics-concentration-committee-faq",
+      "source_text": null,
+      "summary": "Department permission is required for exceptional substitutions. A different course requires the Course Requirement Substitution Form; other exceptions go to the Undergraduate Curriculum and Program Committee.",
+      "course_ids": []
+    },
+    {
+      "id": "delaware-cs-ai-robotics-concentration-catalog",
+      "parent_id": null,
+      "title": "Applicable catalog edition",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "delaware-cs-ai-robotics-concentration-committee-faq",
+      "source_text": null,
+      "summary": "The university catalog controls degree requirements; use the student’s matriculation-year program description unless the student has changed to a later catalog year. Detailed current AI/Robotics course choices remain unverified.",
+      "course_ids": []
+    }
+  ],
   "notes": [
-    "Public CIS page says concentrations are official university credentials appearing on transcripts, normally selected by the end of year2. Standard/honors links do not by themselves establish distinct AI awards. Known catalog restrictions were not retried; detailed local concentration requirements remain pending."
-  ]
+    "The public BS page confirms a transcript-recognized AI and Robotics concentration. The current course core, finite elective pool, selection counts and grade/overlap constraints remain unverified because detailed standard/honors links point to the known restricted catalog. The catalog was not retried.",
+    "An independently public departmental committee FAQ provides declaration timing, lack of advisor approval for choosing a formal concentration, the independent-study exclusion, pass/fail/audit limits, exception handling and applicable catalog-year rules. The FAQ is undated and includes historical program examples; these observations do not replace the controlling catalog.",
+    "The committee technical-elective page records CISC440 Computer Graphics under Spring 2025, CISC367-012 Introduction to Mobile Robot Programming under Fall 2024, and CISC367-012 Introduction to Robot Programming under Summer 2024 as AI/Robotics restricted electives. These dated approvals are not treated as the current complete pool or promoted to required-course records.",
+    "The traditional BS focus area is informal, separately advisor-approved and permits some independent-study credit; those rules do not apply to the formal AI/Robotics concentration. Standard and honors catalog links do not alone establish separate AI program identities. First-offered date remains unknown."
+  ],
+  "curriculum_audit": {
+    "scope": "concentration",
+    "reviewed_at": "2026-10-11",
+    "source_ids": [
+      "delaware-cs-ai-robotics-concentration-catalog",
+      "delaware-cs-ai-robotics-concentration-committee-faq",
+      "delaware-cs-ai-robotics-concentration-technical-approvals",
+      "delaware-cs-ai-robotics-concentration-resources"
+    ],
+    "sections": [
+      "Formal concentration identity and transcript recognition",
+      "Public program aim",
+      "Independent committee declaration and exception rules",
+      "Concentration independent-study exclusion",
+      "General pass/fail/audit and controlling catalog-year guidance",
+      "Dated technical-elective approvals assessed as historical"
+    ],
+    "unresolved_requirements": [
+      "Current required courses, complete eligible elective pool, selection counts/credits and concentration-specific grade/overlap/completion constraints are unavailable from the inspected independent public sources. The linked catalog remains a known access limitation and was not retried."
+    ],
+    "metadata_gaps": [
+      "No current course inventory or individual course metadata established.",
+      "First-offered date, catalog edition, credit-unit normalization and academic calendar remain unknown."
+    ]
+  }
 }
