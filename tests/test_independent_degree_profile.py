@@ -198,7 +198,7 @@ def test_rit_actual_zero_credits_and_context_do_not_create_elective_memberships(
 
 def test_cmu_plain_required_math_singletons_are_not_optional_menus():
     p=load('cmu-bs-ai');profile=requirement_profile(p)
-    expected={'foundations':4,'mathematics':4,'systems':1,'ai_ml':2,'other':2}
+    expected={'foundations':4,'mathematics':4,'systems':1,'ai_ml':2,'human_context':1,'other':1}
     assert profile['required']['count']==13
     assert profile['required']['categories']=={k:expected.get(k,0) for k in profile['required']['categories']}
     for code in ['21-120','21-122','21-241','36-401']:
@@ -207,6 +207,9 @@ def test_cmu_plain_required_math_singletons_are_not_optional_menus():
     for code in ['15-151','21-127']:
         assert requirement_profile(only_course(p,'cmu-'+code))['options']['count']==1
     assert next(c for c in p['courses'] if c['id']=='cmu-15-213')['category']=='systems'
+    core = next(c for c in p['courses'] if c['id']=='cmu-99-101')
+    assert core['category']=='human_context' and core['credits']==3
+    assert core['category_review']['status']=='reviewed'
 
 
 def test_rice_full_independent_inventory_preserves_manual_roles_and_crosslists():
@@ -252,3 +255,63 @@ def test_rice_rendered_required_chart_cannot_lose_reviewed_computing_foundations
     assert '13 reviewed' in required.select_one('.profile-taxonomy').get_text()
     assert '26 distinct' in options.select_one('.profile-total').get_text()
     assert '30 retained source-code records' in options.get_text()
+
+
+def test_northeastern_four_manual_sets_survive_family_resolution_and_rendering():
+    from bs4 import BeautifulSoup
+    from atlas.site import category_chart
+    ledger = json.loads((ROOT/'research/degree-audit/independent-review.json').read_text())
+    manual = ledger['northeastern_four_course_review']
+    entries = [e for e in ledger['programs'] if e.get('course_review_reference')=='northeastern_four_course_review']
+    assert len(entries)==4 and len(manual)==108
+    assert sum(len(e['reviewed_course_codes']) for e in entries)==195
+    for entry in entries:
+        p = load(entry['program_id'])
+        courses = {c['id']:c for c in p['courses']}
+        observed = requirement_profile(p)
+        chart = BeautifulSoup(category_chart(p), 'html.parser')
+        assert set(courses)==set().union(*(set(ids) for ids in entry['expected_course_ids'].values()))
+        for role,ids in entry['expected_course_ids'].items():
+            expected = entry['expected_profile'][role]
+            assert observed[role]['count']==expected['count']
+            assert observed[role]['categories']=={k:expected['categories'].get(k,0) for k in observed[role]['categories']}
+            assert observed[role]['classification']=={k:expected['classification'].get(k,0) for k in observed[role]['classification']}
+            for cid in ids:
+                course = courses[cid]
+                source_review = manual[course['code']]
+                assert course['name']==source_review['title']
+                assert course['category']==source_review['category']
+                assert course['category_review']['status']==source_review['status']
+                assert requirement_profile(only_course(p,cid))[role]['count']==1
+            if role!='unresolved':
+                panel = chart.select_one(f'[data-profile={role}]')
+                assert f"{expected['count']} distinct" in panel.select_one('.profile-total').get_text()
+                for category,value in observed[role]['categories'].items():
+                    assert panel.select_one(f'[data-category={category}] strong').get_text()==(str(value) if value else '0 mapped')
+        assert observed['identity']['source_records']==len(courses)
+        assert observed['identity']['mapped_identities']==len(courses)
+        assert observed['identity']['crosslisted_aliases']==0
+        assert all(observed[r]['classification']['unreviewed']==0 for r in ['required','options','unresolved'])
+        assert not entry['full_degree_verified'] and entry['second_pass_status']=='partial'
+
+
+def test_northeastern_role_overlays_corequisites_and_variable_hours_do_not_inflate_workload():
+    journalism = load('northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree')
+    courses = {c['code']:c for c in journalism['courses']}
+    for code in ['CY 4170','JRNL 2301']:
+        cid = courses[code]['id']
+        assert len([r for r in journalism['requirements'] if cid in r.get('course_ids',[])])>1
+        role = requirement_profile(only_course(journalism,cid))
+        assert role['required']['count']==1 and role['options']['count']==0
+    role = requirement_profile(only_course(journalism,courses['JRNL 3700']['id']))
+    assert role['required']['count']==0 and role['options']['count']==1
+    # Equivalent wording alone is not source proof of a cross-list identity.
+    for code in ['DS 1300','PHIL 1300']:
+        assert requirement_profile(only_course(journalism,courses[code]['id']))['options']['count']==1
+    for code in ['CS 1800','CS 1802']:
+        assert requirement_profile(only_course(journalism,courses[code]['id']))['required']['categories']['mathematics']==1
+    speech = load('northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree')
+    course = next(c for c in speech['courses'] if c['code']=='SLPA 5107')
+    assert course['credits'] is None
+    assert any(r.get('credits')==4 and course['id'] in r.get('course_ids',[]) for r in speech['requirements'])
+    assert next(c for c in speech['courses'] if c['code']=='SLPA 4219')['credits']==3

@@ -1722,7 +1722,7 @@
     {
       "program_id": "cmu-bs-ai",
       "institution_id": "carnegie-mellon-university",
-      "reviewed_commit": "2a80350",
+      "reviewed_commit": "4b41714",
       "primary_audit": "research/degree-audit/cmu.json",
       "second_pass_status": "partial",
       "full_degree_verified": false,
@@ -1741,6 +1741,14 @@
           "locator": "15-122/150/210/213/251 and 07-128/280/380 exact descriptions",
           "checked_at": "2026-10-11",
           "access_status": "HTTP 200; independent robots-aware fetch"
+        },
+        {
+          "url": "https://coursecatalog.web.cmu.edu/intercollegeprograms/courses/",
+          "catalog_year": "2026-2027",
+          "locator": "99-101 Core@CMU exact courseblock",
+          "checked_at": "2026-10-11",
+          "access_status": "Independently read primary-owner HTTP200 capture fetched2026-10-11T03:43:29+00:00; no fresh request claimed",
+          "content_hash": "810838c4c66edf0cf4dee573a80c331b0af3e97844c0126894cdcc356f926726"
         }
       ],
       "expected_course_ids": {
@@ -1770,7 +1778,8 @@
             "mathematics": 4,
             "systems": 1,
             "ai_ml": 2,
-            "other": 2
+            "other": 1,
+            "human_context": 1
           }
         },
         "options": null,
@@ -1779,13 +1788,1217 @@
       "findings": [
         "Independent source reread found four math rows under an explicit All of the following heading incorrectly stored as singleton choices: 21-120,21-122,21-241 and36-401. Primary repair 2a80350 changes only these required rows; prior fixed9 is superseded.",
         "15-151 conditionally permits21-127; multivariable calculus and probability retain real alternatives. Conditional preparation15-112 remains contextual, not automatically required of every student.",
-        "15-213 concerns execution, storage and communication infrastructure; four other fixedCS courses concern programming, algorithms and computing theory.07-280/380 concernAI/ML. Seminar07-128 andCore99-101 remain explicitly unclassified.",
-        "Four added math subjects are supported by precise degree-table titles; units remain10,10,11 and9 rather than converted credit hours."
+        "15-213 concerns execution, storage and communication infrastructure; four other fixedCS courses concern programming, algorithms and computing theory.07-280/380 concernAI/ML. Seminar07-128 remains explicitly unclassified.",
+        "Four added math subjects are supported by precise degree-table titles; units remain10,10,11 and9 rather than converted credit hours.",
+        "Independently read the exact newly sourced99-101 description: collaboration/teamwork, communication/presentation, information/data literacy and intercultural/global literacy support human_context. It carries3CMU units; no computing foundation or mathematical course is inferred from general information literacy. This evidence supersedes its prior unclassified status."
       ],
       "remaining": [
-        "Remaining option classifications, Core99-101 detailed subject evidence and university-policy second pass remain unfinished."
+        "Remaining option classifications,07-128 substantive subject evidence and university-policy second pass remain unfinished."
       ],
       "result": "Independent counterexample corrected and13-course fixed aggregate verified; full-degree second pass remains partial."
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree",
+      "institution_id": "northeastern-university",
+      "reviewed_commit": "d522fd1",
+      "primary_audit": "research/degree-audit/northeastern.json",
+      "second_pass_status": "partial",
+      "full_degree_verified": false,
+      "verified_scope": "All represented course descriptions and manual subject/status judgments, literal named required/choice sets, shared family resolution and deduplicated displayed aggregate. Open subject-range electives and home-college/cohort policies are not claimed fully resolved.",
+      "course_review_reference": "northeastern_four_course_review",
+      "reviewed_course_codes": [
+        "CS 1200",
+        "CS 1210",
+        "CS 1800",
+        "CS 1802",
+        "CS 2000",
+        "CS 2001",
+        "CS 2100",
+        "CS 2101",
+        "CS 3200",
+        "DS 3000",
+        "DS 3500",
+        "DS 4200",
+        "DS 4300",
+        "DS 4400",
+        "EECE 2160",
+        "EECE 2322",
+        "EECE 2323",
+        "EESH 2000",
+        "ENGW 1102",
+        "ENGW 1111",
+        "ENGW 1114",
+        "ENGW 3302",
+        "ENGW 3308",
+        "ENGW 3315",
+        "INPR 1000",
+        "INSH 3101",
+        "INSH 3102",
+        "MATH 1341",
+        "MKTG 4606",
+        "SOCL 1000",
+        "SOCL 1101",
+        "SOCL 2320",
+        "SOCL 2321",
+        "SOCL 2485",
+        "SOCL 3300",
+        "SOCL 4528",
+        "SOCL 4600"
+      ],
+      "sources": [
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:38+00:00",
+          "content_hash": "452d61ad1569d87c06d7fe42ed7d1a7eafc7d463a50366fe4fdf9d9bdcc07b63"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/ds/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:41+00:00",
+          "content_hash": "aeda639a4775a860defb71fa8a8af09475f3d499fdcc2cd25e794301712be55b"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/math/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:45+00:00",
+          "content_hash": "a7c8ab8f61b2e34632a99b73fc4e8023282a97f28b523f1bd0841b3d6a3d72bb"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/engw/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:46+00:00",
+          "content_hash": "44c7b3901dc0dabbc20e4daf778b6e7d97cbee0c8f10b46973ad5f2e2362daf5"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/eece/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:47+00:00",
+          "content_hash": "6ecab9526077595e25f7c52e47f75cf30528dedd6128f3f3a8f28ad36de94328"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/eesh/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:49+00:00",
+          "content_hash": "79b77c6e686b022a53f6951dfcdf8976d28d089da2d66f643e12952be4eb5c43"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/inpr/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:50+00:00",
+          "content_hash": "5340ea5c6e9bf1f60a636fc41905b2ae5236ce56524cb34661846e90cdb43982"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/mktg/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:52+00:00",
+          "content_hash": "ec1ff73b42471ba5918d8f023fbdd5863c61df5215153e621c1e75f9611960e6"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/socl/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:53+00:00",
+          "content_hash": "2dc5bcbb986593db97ba9925cedefa8a2cd4c46c21d42cf8d7833f139080a09c"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/insh/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:44:01+00:00",
+          "content_hash": "ad6cdb3a8a3cbad9d69e69db6d849388cd863b0478aff5d769eb92951853957d"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-sociology-bs-bos/",
+          "catalog_year": "2026-2027",
+          "locator": "Program Requirements tables, preamble and stated overlay/choice rules",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:44:08+00:00",
+          "content_hash": "380caabb5862dbf7aab3691e929c4a950d08004ed08d55837777812596701e88"
+        }
+      ],
+      "expected_course_ids": {
+        "required": [
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-cs-1800",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-cs-1802",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-cs-2000",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-cs-2001",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-cs-2100",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-cs-2101",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-cs-3200",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-ds-3000",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-ds-3500",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-ds-4200",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-ds-4300",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-ds-4400",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-math-1341",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-socl-1101",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-socl-3300",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-socl-4600"
+        ],
+        "options": [
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-cs-1200",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-cs-1210",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-eece-2160",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-eece-2322",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-eece-2323",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-eesh-2000",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-engw-1102",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-engw-1111",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-engw-1114",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-engw-3302",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-engw-3308",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-engw-3315",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-inpr-1000",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-insh-3101",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-insh-3102",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-mktg-4606",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-socl-1000",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-socl-2320",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-socl-2321",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-socl-2485",
+          "northeastern-university-artificial-intelligence-and-sociology-bs-boston-bs-degree-socl-4528"
+        ],
+        "unresolved": []
+      },
+      "expected_profile": {
+        "required": {
+          "count": 16,
+          "categories": {
+            "foundations": 5,
+            "systems": 2,
+            "mathematics": 4,
+            "other": 2,
+            "ai_ml": 1,
+            "human_context": 2
+          },
+          "classification": {
+            "reviewed": 14,
+            "mixed": 1,
+            "unclassified": 1
+          }
+        },
+        "options": {
+          "count": 21,
+          "categories": {
+            "human_context": 10,
+            "other": 6,
+            "systems": 2,
+            "mathematics": 2,
+            "applications": 1
+          },
+          "classification": {
+            "reviewed": 15,
+            "unclassified": 5,
+            "mixed": 1
+          }
+        },
+        "unresolved": {
+          "count": 0,
+          "categories": {},
+          "classification": {}
+        }
+      },
+      "findings": [
+        "The degree preamble directs completion of listed corequisite labs/seminars; CS1800 and reciprocal CS1802 source fields support the one-hour fixed mathematics seminar. Standard CS2000/2001 rows retain the explicit placement/substitution condition; these are mapped fixed records, not a guarantee of every student pathway.",
+        "Subject-range and adviser-approved pools remain open criteria, not enumerated mandatory courses. No source title or identical description establishes an unverified cross-list merge.",
+        "All represented descriptions have been read. Explicit mixed/unclassified statuses remain distinct from absent review; source-read orientation/career seminars and an unconstrained research topic are not guessed into foundations."
+      ],
+      "remaining": [
+        "Program-specific allowed/designated home college and resulting college/cohort policy scope require institutional confirmation. This pass does not independently certify all college or university rules.",
+        "Open subject-prefix/elective pools can include courses not enumerated in the represented inventory; the exact named-course aggregate is not the total number of all available offerings."
+      ],
+      "result": "Represented course inventory, manual roles and subject totals independently verified; whole-degree second pass remains partial."
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree",
+      "institution_id": "northeastern-university",
+      "reviewed_commit": "d522fd1",
+      "primary_audit": "research/degree-audit/northeastern.json",
+      "second_pass_status": "partial",
+      "full_degree_verified": false,
+      "verified_scope": "All represented course descriptions and manual subject/status judgments, literal named required/choice sets, shared family resolution and deduplicated displayed aggregate. Open subject-range electives and home-college/cohort policies are not claimed fully resolved.",
+      "course_review_reference": "northeastern_four_course_review",
+      "reviewed_course_codes": [
+        "BIOL 2217",
+        "BIOL 2218",
+        "CS 1200",
+        "CS 1210",
+        "CS 1800",
+        "CS 1802",
+        "CS 2000",
+        "CS 2001",
+        "CS 2100",
+        "CS 2101",
+        "CS 3200",
+        "CS 4120",
+        "DS 3000",
+        "DS 3500",
+        "DS 4200",
+        "DS 4300",
+        "DS 4400",
+        "EECE 2160",
+        "EECE 2322",
+        "EECE 2323",
+        "ENGW 1102",
+        "ENGW 1111",
+        "ENGW 3302",
+        "ENGW 3306",
+        "ENGW 3315",
+        "HLTH 1000",
+        "INPR 1000",
+        "MATH 1341",
+        "MKTG 4606",
+        "PHIL 1145",
+        "PHTH 2210",
+        "PHYS 1145",
+        "PHYS 1146",
+        "SLPA 1101",
+        "SLPA 1102",
+        "SLPA 1103",
+        "SLPA 1200",
+        "SLPA 1203",
+        "SLPA 1205",
+        "SLPA 2000",
+        "SLPA 4219",
+        "SLPA 4500",
+        "SLPA 4651",
+        "SLPA 5107"
+      ],
+      "sources": [
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:38+00:00",
+          "content_hash": "452d61ad1569d87c06d7fe42ed7d1a7eafc7d463a50366fe4fdf9d9bdcc07b63"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/ds/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:41+00:00",
+          "content_hash": "aeda639a4775a860defb71fa8a8af09475f3d499fdcc2cd25e794301712be55b"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/math/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:45+00:00",
+          "content_hash": "a7c8ab8f61b2e34632a99b73fc4e8023282a97f28b523f1bd0841b3d6a3d72bb"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/engw/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:46+00:00",
+          "content_hash": "44c7b3901dc0dabbc20e4daf778b6e7d97cbee0c8f10b46973ad5f2e2362daf5"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/eece/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:47+00:00",
+          "content_hash": "6ecab9526077595e25f7c52e47f75cf30528dedd6128f3f3a8f28ad36de94328"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/inpr/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:50+00:00",
+          "content_hash": "5340ea5c6e9bf1f60a636fc41905b2ae5236ce56524cb34661846e90cdb43982"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/mktg/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:52+00:00",
+          "content_hash": "ec1ff73b42471ba5918d8f023fbdd5863c61df5215153e621c1e75f9611960e6"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/phil/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:55+00:00",
+          "content_hash": "d6ed575d57801c5bbe4d470c353b9c29e16fe0e71301b40c4203dfea660cf556"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/phys/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:44:10+00:00",
+          "content_hash": "213ab883040c9a4489b5dc6a5e9f1e322cd1aa4319055bd186f6da8a6bf16916"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/biol/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:44:11+00:00",
+          "content_hash": "f3efe2e0e5e57357a871694ff035585c43f70063117bae2536d80f491e40d038"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/hlth/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:44:13+00:00",
+          "content_hash": "575210262d309f952ae8e9f3822a43059c27f3562dac1c193317ff9286c5a5ae"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/phth/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:44:14+00:00",
+          "content_hash": "cfe8bf946752447af27819c66eeece85b5205e5d73212b10ec0afe4d6c666950"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/slpa/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:44:16+00:00",
+          "content_hash": "9fc3cfe2a0d986e86e6e6d11fc4b60a3bf05e6523c150d9254e7e13e5f67c782"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-speech-language-pathology-audiology-bs-bos/",
+          "catalog_year": "2026-2027",
+          "locator": "Program Requirements tables, preamble and stated overlay/choice rules",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:44:17+00:00",
+          "content_hash": "2ad37bd9a64360876d20cab066944160c464a7761d7f60ca0de1fd7f70890232"
+        }
+      ],
+      "expected_course_ids": {
+        "required": [
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-biol-2217",
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-biol-2218",
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-cs-1800",
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-cs-1802",
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-cs-2000",
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-cs-2001",
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-cs-2100",
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-cs-2101",
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-cs-3200",
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-cs-4120",
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-ds-3000",
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-ds-3500",
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-ds-4200",
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-ds-4300",
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-ds-4400",
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-math-1341",
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-phil-1145",
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-phth-2210",
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-phys-1145",
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-phys-1146",
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-slpa-1101",
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-slpa-1102",
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-slpa-1103",
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-slpa-1200",
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-slpa-1203",
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-slpa-1205",
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-slpa-4219",
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-slpa-4500",
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-slpa-4651",
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-slpa-5107"
+        ],
+        "options": [
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-cs-1200",
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-cs-1210",
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-eece-2160",
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-eece-2322",
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-eece-2323",
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-engw-1102",
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-engw-1111",
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-engw-3302",
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-engw-3306",
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-engw-3315",
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-hlth-1000",
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-inpr-1000",
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-mktg-4606",
+          "northeastern-university-artificial-intelligence-and-speech-language-pathology-and-audiology-bs-boston-bs-degree-slpa-2000"
+        ],
+        "unresolved": []
+      },
+      "expected_profile": {
+        "required": {
+          "count": 30,
+          "categories": {
+            "applications": 14,
+            "foundations": 5,
+            "other": 1,
+            "ai_ml": 2,
+            "systems": 2,
+            "mathematics": 5,
+            "human_context": 1
+          },
+          "classification": {
+            "reviewed": 29,
+            "mixed": 1
+          }
+        },
+        "options": {
+          "count": 14,
+          "categories": {
+            "human_context": 5,
+            "other": 6,
+            "systems": 2,
+            "applications": 1
+          },
+          "classification": {
+            "reviewed": 8,
+            "unclassified": 5,
+            "mixed": 1
+          }
+        },
+        "unresolved": {
+          "count": 0,
+          "categories": {},
+          "classification": {}
+        }
+      },
+      "findings": [
+        "The degree preamble directs completion of listed corequisite labs/seminars; CS1800 and reciprocal CS1802 source fields support the one-hour fixed mathematics seminar. Standard CS2000/2001 rows retain the explicit placement/substitution condition; these are mapped fixed records, not a guarantee of every student pathway.",
+        "Subject-range and adviser-approved pools remain open criteria, not enumerated mandatory courses. No source title or identical description establishes an unverified cross-list merge.",
+        "All represented descriptions have been read. Explicit mixed/unclassified statuses remain distinct from absent review; source-read orientation/career seminars and an unconstrained research topic are not guessed into foundations."
+      ],
+      "remaining": [
+        "Program-specific allowed/designated home college and resulting college/cohort policy scope require institutional confirmation. This pass does not independently certify all college or university rules.",
+        "Open subject-prefix/elective pools can include courses not enumerated in the represented inventory; the exact named-course aggregate is not the total number of all available offerings."
+      ],
+      "result": "Represented course inventory, manual roles and subject totals independently verified; whole-degree second pass remains partial."
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree",
+      "institution_id": "northeastern-university",
+      "reviewed_commit": "d522fd1",
+      "primary_audit": "research/degree-audit/northeastern.json",
+      "second_pass_status": "partial",
+      "full_degree_verified": false,
+      "verified_scope": "All represented course descriptions and manual subject/status judgments, literal named required/choice sets, shared family resolution and deduplicated displayed aggregate. Open subject-range electives and home-college/cohort policies are not claimed fully resolved.",
+      "course_review_reference": "northeastern_four_course_review",
+      "reviewed_course_codes": [
+        "AFCS 2600",
+        "AFCS 3210",
+        "CRIM 1000",
+        "CRIM 1100",
+        "CRIM 1110",
+        "CRIM 1120",
+        "CRIM 1300",
+        "CRIM 1400",
+        "CRIM 1500",
+        "CRIM 1700",
+        "CRIM 2310",
+        "CRIM 2320",
+        "CRIM 2330",
+        "CRIM 2350",
+        "CRIM 2370",
+        "CRIM 2380",
+        "CRIM 3010",
+        "CRIM 3030",
+        "CRIM 3040",
+        "CRIM 3050",
+        "CRIM 3060",
+        "CRIM 3070",
+        "CRIM 3100",
+        "CRIM 3110",
+        "CRIM 3120",
+        "CRIM 3540",
+        "CRIM 3600",
+        "CRIM 3700",
+        "CRIM 4040",
+        "CRIM 4949",
+        "CS 1200",
+        "CS 1210",
+        "CS 1800",
+        "CS 1802",
+        "CS 2000",
+        "CS 2001",
+        "CS 2100",
+        "CS 2101",
+        "CS 3200",
+        "CY 4170",
+        "CY 5240",
+        "DS 1300",
+        "DS 3000",
+        "DS 3500",
+        "DS 4200",
+        "DS 4300",
+        "DS 4400",
+        "ECON 2350",
+        "EECE 2160",
+        "EECE 2322",
+        "EECE 2323",
+        "EESH 2000",
+        "ENGW 1102",
+        "ENGW 1111",
+        "ENGW 3302",
+        "ENGW 3308",
+        "ENGW 3315",
+        "HIST 2220",
+        "INPR 1000",
+        "INSH 2102",
+        "JRNL 3700",
+        "MATH 1341",
+        "MKTG 4606",
+        "PHIL 1145",
+        "PHIL 1300",
+        "SOCL 1280",
+        "SOCL 2485",
+        "SOCL 4528"
+      ],
+      "sources": [
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:38+00:00",
+          "content_hash": "452d61ad1569d87c06d7fe42ed7d1a7eafc7d463a50366fe4fdf9d9bdcc07b63"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/cy/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:40+00:00",
+          "content_hash": "bdd217586c1a2337d3a1505d8a4e8182d9a85d23cc6e6b7f864578bedc5eab3e"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/ds/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:41+00:00",
+          "content_hash": "aeda639a4775a860defb71fa8a8af09475f3d499fdcc2cd25e794301712be55b"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/econ/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:43+00:00",
+          "content_hash": "b2a364f1743cc890b3ee16dc480195d6bb441be18b8bc2e9594b42f29dae2a96"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/math/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:45+00:00",
+          "content_hash": "a7c8ab8f61b2e34632a99b73fc4e8023282a97f28b523f1bd0841b3d6a3d72bb"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/engw/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:46+00:00",
+          "content_hash": "44c7b3901dc0dabbc20e4daf778b6e7d97cbee0c8f10b46973ad5f2e2362daf5"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/eece/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:47+00:00",
+          "content_hash": "6ecab9526077595e25f7c52e47f75cf30528dedd6128f3f3a8f28ad36de94328"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/eesh/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:49+00:00",
+          "content_hash": "79b77c6e686b022a53f6951dfcdf8976d28d089da2d66f643e12952be4eb5c43"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/inpr/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:50+00:00",
+          "content_hash": "5340ea5c6e9bf1f60a636fc41905b2ae5236ce56524cb34661846e90cdb43982"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/mktg/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:52+00:00",
+          "content_hash": "ec1ff73b42471ba5918d8f023fbdd5863c61df5215153e621c1e75f9611960e6"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/socl/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:53+00:00",
+          "content_hash": "2dc5bcbb986593db97ba9925cedefa8a2cd4c46c21d42cf8d7833f139080a09c"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/phil/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:55+00:00",
+          "content_hash": "d6ed575d57801c5bbe4d470c353b9c29e16fe0e71301b40c4203dfea660cf556"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/afcs/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:56+00:00",
+          "content_hash": "d376f3c28e07f6f0d148302015640d05df15aa4db534262cd4226f501ee06700"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/crim/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:58+00:00",
+          "content_hash": "f809af17a2a4b6460d0f4e6e47dbe1a64b3b0d2eb1a9224b0500a74e2e3b4ee4"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/hist/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:59+00:00",
+          "content_hash": "7e5f29970fc1eabf87a36437ae98d0d717751317b51d33ef7043b16da248d149"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/insh/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:44:01+00:00",
+          "content_hash": "ad6cdb3a8a3cbad9d69e69db6d849388cd863b0478aff5d769eb92951853957d"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/jrnl/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:44:02+00:00",
+          "content_hash": "7adba1af93de4370adf98369455bcfd08dede3a901c669f8a3ef0593432eafa9"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-criminal-justice-bs-bos/",
+          "catalog_year": "2026-2027",
+          "locator": "Program Requirements tables, preamble and stated overlay/choice rules",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:44:04+00:00",
+          "content_hash": "dc8aad7bc2090ad575c6d418431bf1d86b61fe2c7218468c26d6cb961753e243"
+        }
+      ],
+      "expected_course_ids": {
+        "required": [
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-crim-1100",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-crim-1110",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-crim-1120",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-crim-3600",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-crim-4949",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-cs-1800",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-cs-1802",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-cs-2000",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-cs-2001",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-cs-2100",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-cs-2101",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-cs-3200",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-ds-3000",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-ds-3500",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-ds-4200",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-ds-4300",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-ds-4400",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-econ-2350",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-math-1341"
+        ],
+        "options": [
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-afcs-2600",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-afcs-3210",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-crim-1000",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-crim-1300",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-crim-1400",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-crim-1500",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-crim-1700",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-crim-2310",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-crim-2320",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-crim-2330",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-crim-2350",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-crim-2370",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-crim-2380",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-crim-3010",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-crim-3030",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-crim-3040",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-crim-3050",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-crim-3060",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-crim-3070",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-crim-3100",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-crim-3110",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-crim-3120",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-crim-3540",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-crim-3700",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-crim-4040",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-cs-1200",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-cs-1210",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-cy-4170",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-cy-5240",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-ds-1300",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-eece-2160",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-eece-2322",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-eece-2323",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-eesh-2000",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-engw-1102",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-engw-1111",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-engw-3302",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-engw-3308",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-engw-3315",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-hist-2220",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-inpr-1000",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-insh-2102",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-jrnl-3700",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-mktg-4606",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-phil-1145",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-phil-1300",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-socl-1280",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-socl-2485",
+          "northeastern-university-artificial-intelligence-and-criminal-justice-bs-boston-bs-degree-socl-4528"
+        ],
+        "unresolved": []
+      },
+      "expected_profile": {
+        "required": {
+          "count": 19,
+          "categories": {
+            "human_context": 5,
+            "foundations": 5,
+            "other": 1,
+            "ai_ml": 1,
+            "systems": 2,
+            "mathematics": 5
+          },
+          "classification": {
+            "reviewed": 18,
+            "mixed": 1
+          }
+        },
+        "options": {
+          "count": 49,
+          "categories": {
+            "human_context": 37,
+            "applications": 2,
+            "mathematics": 1,
+            "systems": 2,
+            "other": 7
+          },
+          "classification": {
+            "reviewed": 42,
+            "unclassified": 5,
+            "mixed": 2
+          }
+        },
+        "unresolved": {
+          "count": 0,
+          "categories": {},
+          "classification": {}
+        }
+      },
+      "findings": [
+        "The degree preamble directs completion of listed corequisite labs/seminars; CS1800 and reciprocal CS1802 source fields support the one-hour fixed mathematics seminar. Standard CS2000/2001 rows retain the explicit placement/substitution condition; these are mapped fixed records, not a guarantee of every student pathway.",
+        "Subject-range and adviser-approved pools remain open criteria, not enumerated mandatory courses. No source title or identical description establishes an unverified cross-list merge.",
+        "All represented descriptions have been read. Explicit mixed/unclassified statuses remain distinct from absent review; source-read orientation/career seminars and an unconstrained research topic are not guessed into foundations."
+      ],
+      "remaining": [
+        "Program-specific allowed/designated home college and resulting college/cohort policy scope require institutional confirmation. This pass does not independently certify all college or university rules.",
+        "Open subject-prefix/elective pools can include courses not enumerated in the represented inventory; the exact named-course aggregate is not the total number of all available offerings."
+      ],
+      "result": "Represented course inventory, manual roles and subject totals independently verified; whole-degree second pass remains partial."
+    },
+    {
+      "program_id": "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree",
+      "institution_id": "northeastern-university",
+      "reviewed_commit": "d522fd1",
+      "primary_audit": "research/degree-audit/northeastern.json",
+      "second_pass_status": "partial",
+      "full_degree_verified": false,
+      "verified_scope": "All represented course descriptions and manual subject/status judgments, literal named required/choice sets, shared family resolution and deduplicated displayed aggregate. Open subject-range electives and home-college/cohort policies are not claimed fully resolved.",
+      "course_review_reference": "northeastern_four_course_review",
+      "reviewed_course_codes": [
+        "AFCS 2600",
+        "CS 1200",
+        "CS 1210",
+        "CS 1800",
+        "CS 1802",
+        "CS 2000",
+        "CS 2001",
+        "CS 2100",
+        "CS 2101",
+        "CS 3200",
+        "CY 4170",
+        "CY 5240",
+        "DS 1300",
+        "DS 3000",
+        "DS 3500",
+        "DS 4200",
+        "DS 4300",
+        "DS 4400",
+        "DS 4420",
+        "ECON 2350",
+        "EEAM 2000",
+        "EECE 2160",
+        "EECE 2322",
+        "EECE 2323",
+        "ENGW 1111",
+        "HIST 2220",
+        "INPR 1000",
+        "INSH 2102",
+        "JRNL 1000",
+        "JRNL 1101",
+        "JRNL 1102",
+        "JRNL 1150",
+        "JRNL 2201",
+        "JRNL 2301",
+        "JRNL 3550",
+        "JRNL 3610",
+        "JRNL 3700",
+        "JRNL 4650",
+        "JRNL 5500",
+        "MATH 1341",
+        "MKTG 4606",
+        "PHIL 1145",
+        "PHIL 1300",
+        "SOCL 1280",
+        "SOCL 2485",
+        "SOCL 4528"
+      ],
+      "sources": [
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:38+00:00",
+          "content_hash": "452d61ad1569d87c06d7fe42ed7d1a7eafc7d463a50366fe4fdf9d9bdcc07b63"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/cy/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:40+00:00",
+          "content_hash": "bdd217586c1a2337d3a1505d8a4e8182d9a85d23cc6e6b7f864578bedc5eab3e"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/ds/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:41+00:00",
+          "content_hash": "aeda639a4775a860defb71fa8a8af09475f3d499fdcc2cd25e794301712be55b"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/econ/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:43+00:00",
+          "content_hash": "b2a364f1743cc890b3ee16dc480195d6bb441be18b8bc2e9594b42f29dae2a96"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/math/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:45+00:00",
+          "content_hash": "a7c8ab8f61b2e34632a99b73fc4e8023282a97f28b523f1bd0841b3d6a3d72bb"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/engw/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:46+00:00",
+          "content_hash": "44c7b3901dc0dabbc20e4daf778b6e7d97cbee0c8f10b46973ad5f2e2362daf5"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/eece/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:47+00:00",
+          "content_hash": "6ecab9526077595e25f7c52e47f75cf30528dedd6128f3f3a8f28ad36de94328"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/inpr/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:50+00:00",
+          "content_hash": "5340ea5c6e9bf1f60a636fc41905b2ae5236ce56524cb34661846e90cdb43982"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/mktg/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:52+00:00",
+          "content_hash": "ec1ff73b42471ba5918d8f023fbdd5863c61df5215153e621c1e75f9611960e6"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/socl/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:53+00:00",
+          "content_hash": "2dc5bcbb986593db97ba9925cedefa8a2cd4c46c21d42cf8d7833f139080a09c"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/phil/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:55+00:00",
+          "content_hash": "d6ed575d57801c5bbe4d470c353b9c29e16fe0e71301b40c4203dfea660cf556"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/afcs/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:56+00:00",
+          "content_hash": "d376f3c28e07f6f0d148302015640d05df15aa4db534262cd4226f501ee06700"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/hist/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:43:59+00:00",
+          "content_hash": "7e5f29970fc1eabf87a36437ae98d0d717751317b51d33ef7043b16da248d149"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/insh/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:44:01+00:00",
+          "content_hash": "ad6cdb3a8a3cbad9d69e69db6d849388cd863b0478aff5d769eb92951853957d"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/jrnl/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:44:02+00:00",
+          "content_hash": "7adba1af93de4370adf98369455bcfd08dede3a901c669f8a3ef0593432eafa9"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/course-descriptions/eeam/",
+          "catalog_year": "2026-2027",
+          "locator": "Exact selected course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:44:05+00:00",
+          "content_hash": "62ca9793755337e9e88b7f08584f79be3caec11ac5a9e99866df82c493ce2dcb"
+        },
+        {
+          "url": "https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/artificial-intelligence-journalism-bs-bos/",
+          "catalog_year": "2026-2027",
+          "locator": "Program Requirements tables, preamble and stated overlay/choice rules",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independently fetched through robots-aware transport",
+          "fetched_at": "2026-10-11T03:44:07+00:00",
+          "content_hash": "1293d81d17ddb8282a39c426382b5f5802973f588663390a28718d47c27a8282"
+        }
+      ],
+      "expected_course_ids": {
+        "required": [
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-cs-1800",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-cs-1802",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-cs-2000",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-cs-2001",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-cs-2100",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-cs-2101",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-cs-3200",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-cy-4170",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-ds-3000",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-ds-3500",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-ds-4200",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-ds-4300",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-ds-4400",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-ds-4420",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-econ-2350",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-engw-1111",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-jrnl-1101",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-jrnl-1102",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-jrnl-1150",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-jrnl-2201",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-jrnl-2301",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-jrnl-3550",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-jrnl-3610",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-jrnl-4650",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-math-1341"
+        ],
+        "options": [
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-afcs-2600",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-cs-1200",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-cs-1210",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-cy-5240",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-ds-1300",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-eeam-2000",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-eece-2160",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-eece-2322",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-eece-2323",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-hist-2220",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-inpr-1000",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-insh-2102",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-jrnl-1000",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-jrnl-3700",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-jrnl-5500",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-mktg-4606",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-phil-1145",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-phil-1300",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-socl-1280",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-socl-2485",
+          "northeastern-university-artificial-intelligence-and-journalism-bs-boston-bs-degree-socl-4528"
+        ],
+        "unresolved": []
+      },
+      "expected_profile": {
+        "required": {
+          "count": 25,
+          "categories": {
+            "human_context": 10,
+            "foundations": 5,
+            "other": 1,
+            "ai_ml": 2,
+            "systems": 2,
+            "mathematics": 5
+          },
+          "classification": {
+            "reviewed": 24,
+            "mixed": 1
+          }
+        },
+        "options": {
+          "count": 21,
+          "categories": {
+            "human_context": 11,
+            "foundations": 1,
+            "other": 6,
+            "systems": 2,
+            "applications": 1
+          },
+          "classification": {
+            "reviewed": 15,
+            "unclassified": 5,
+            "mixed": 1
+          }
+        },
+        "unresolved": {
+          "count": 0,
+          "categories": {},
+          "classification": {}
+        }
+      },
+      "findings": [
+        "The degree preamble directs completion of listed corequisite labs/seminars; CS1800 and reciprocal CS1802 source fields support the one-hour fixed mathematics seminar. Standard CS2000/2001 rows retain the explicit placement/substitution condition; these are mapped fixed records, not a guarantee of every student pathway.",
+        "Subject-range and adviser-approved pools remain open criteria, not enumerated mandatory courses. No source title or identical description establishes an unverified cross-list merge.",
+        "All represented descriptions have been read. Explicit mixed/unclassified statuses remain distinct from absent review; source-read orientation/career seminars and an unconstrained research topic are not guessed into foundations."
+      ],
+      "remaining": [
+        "Program-specific allowed/designated home college and resulting college/cohort policy scope require institutional confirmation. This pass does not independently certify all college or university rules.",
+        "Open subject-prefix/elective pools can include courses not enumerated in the represented inventory; the exact named-course aggregate is not the total number of all available offerings."
+      ],
+      "result": "Represented course inventory, manual roles and subject totals independently verified; whole-degree second pass remains partial."
     }
   ],
   "cross_program_screen": [
@@ -2303,5 +3516,979 @@
       "issue": "CS2022/MA2201 Discrete Mathematics observed as ai_ml from pool context; source-specific review required.",
       "status": "Corrected by primary audit in 146700c; bounded independent role check recorded, full taxonomy second pass unfinished."
     }
-  ]
+  ],
+  "northeastern_four_course_review": {
+    "CS 2000": {
+      "title": "Introduction to Program Design and Implementation",
+      "category": "foundations",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+      "locator": "CS 2000 exact description and entry fields",
+      "source_block_sha256": "ff754ed98c1ebf503c68afdca6276eeaee8d99c13fad6bf421312aceb4dfcfa6"
+    },
+    "CS 2001": {
+      "title": "Lab for CS 2000",
+      "category": "foundations",
+      "status": "reviewed",
+      "hours": "1",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+      "locator": "CS 2001 exact description and entry fields",
+      "source_block_sha256": "b260eb62f13dd7472d2f782f63a0df7d4c510511b396974e580b78a547d6d145"
+    },
+    "CS 2100": {
+      "title": "Program Design and Implementation 1",
+      "category": "foundations",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+      "locator": "CS 2100 exact description and entry fields",
+      "source_block_sha256": "586943e9d09782fefc2e1db97595213b7d7c555210a2873a826735b0c83741d0"
+    },
+    "CS 2101": {
+      "title": "Lab for CS 2100",
+      "category": "foundations",
+      "status": "reviewed",
+      "hours": "1",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+      "locator": "CS 2101 exact description and entry fields",
+      "source_block_sha256": "c08b3d7b722fdb0614def5dd9ff844d2f6cf9a812a9bdfea15c49962fc6188e7"
+    },
+    "DS 3500": {
+      "title": "Advanced Programming with Data",
+      "category": "foundations",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/ds/",
+      "locator": "DS 3500 exact description and entry fields",
+      "source_block_sha256": "4cc53c904b78c5a613227abf27d8ab4e5f75932decf60ea8d726f87d473ab710"
+    },
+    "JRNL 5500": {
+      "title": "Coding for Digital Storytelling",
+      "category": "foundations",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/jrnl/",
+      "locator": "JRNL 5500 exact description and entry fields",
+      "source_block_sha256": "4bfd2068df50928fa03c52d059baeb4b932b3b66f403cdcab5aa15ce9231ac22"
+    },
+    "CRIM 3700": {
+      "title": "Analyzing and Using Data on Crime and Justice",
+      "category": "mathematics",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/crim/",
+      "locator": "CRIM 3700 exact description and entry fields",
+      "source_block_sha256": "e0cdac592f08e435b4c6990bc991072252eb7527ebb6ea13d919d68ae2837ce3"
+    },
+    "CS 1800": {
+      "title": "Discrete Structures",
+      "category": "mathematics",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+      "locator": "CS 1800 exact description and entry fields",
+      "source_block_sha256": "c0156075b71c898ca24b12b84e8f92f43da4b5f1e96fdab25a4adcd68fcb4ce2"
+    },
+    "CS 1802": {
+      "title": "Seminar for CS 1800",
+      "category": "mathematics",
+      "status": "reviewed",
+      "hours": "1",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+      "locator": "CS 1802 exact description and entry fields",
+      "source_block_sha256": "1d9974689782f2edd68dec03b3a1b19ff9a8ca11e7af9ce165df7eb3bb3ba1f2"
+    },
+    "DS 3000": {
+      "title": "Mathematical Foundations of Artificial Intelligence",
+      "category": "mathematics",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/ds/",
+      "locator": "DS 3000 exact description and entry fields",
+      "source_block_sha256": "32b656f55309ad4432641bf8a27212093abf5729caffcbd98f04aafd55096b1d"
+    },
+    "ECON 2350": {
+      "title": "Statistics for Economists",
+      "category": "mathematics",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/econ/",
+      "locator": "ECON 2350 exact description and entry fields",
+      "source_block_sha256": "aeaafc857c3fd520cc718905fc138c8dc3252559a7d076fb0fc8549719b999d5"
+    },
+    "INSH 3102": {
+      "title": "Introduction to Statistics in the Social Sciences",
+      "category": "mathematics",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/insh/",
+      "locator": "INSH 3102 exact description and entry fields",
+      "source_block_sha256": "0079cd98cb438aea53dc02eae664ba9d5623a18fd13dff30513c3468545c052b"
+    },
+    "MATH 1341": {
+      "title": "Calculus 1 for Science and Engineering",
+      "category": "mathematics",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/math/",
+      "locator": "MATH 1341 exact description and entry fields",
+      "source_block_sha256": "7af45516bb77539ef28f45ebb739442d2258e7fe94f9dbeb193e0bfd63894a64"
+    },
+    "PHTH 2210": {
+      "title": "Foundations of Biostatistics",
+      "category": "mathematics",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/phth/",
+      "locator": "PHTH 2210 exact description and entry fields",
+      "source_block_sha256": "4e4cf9c8740757872e834ba31e25a75ba69414273481747bca2e1602224d65f7"
+    },
+    "SOCL 2320": {
+      "title": "Statistical Analysis in Sociology",
+      "category": "mathematics",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/socl/",
+      "locator": "SOCL 2320 exact description and entry fields",
+      "source_block_sha256": "6029e74daeb4e32c0deb5cd8d51cf6ceebf70777f6b35f4ae942238548bd027a"
+    },
+    "CS 3200": {
+      "title": "Introduction to Databases",
+      "category": "systems",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+      "locator": "CS 3200 exact description and entry fields",
+      "source_block_sha256": "2b98c4ad3e6fdcb8b005dee4874b77b5f965b684e88b1ad7c0facec84d3f2679"
+    },
+    "DS 4300": {
+      "title": "Large-Scale Information Storage and Retrieval",
+      "category": "systems",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/ds/",
+      "locator": "DS 4300 exact description and entry fields",
+      "source_block_sha256": "177757a9ed2c3cb5e39e7808590ac3fb2cdce1bb5405a03a55d6ee3fadc400b8"
+    },
+    "EECE 2322": {
+      "title": "Fundamentals of Digital Design and Computer Organization",
+      "category": "systems",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/eece/",
+      "locator": "EECE 2322 exact description and entry fields",
+      "source_block_sha256": "9d23d1376d38e9a80c5faabbec6eec29bc81654d857bdff0fe7fd363cf2f142e"
+    },
+    "EECE 2323": {
+      "title": "Lab for EECE 2322",
+      "category": "systems",
+      "status": "reviewed",
+      "hours": "1",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/eece/",
+      "locator": "EECE 2323 exact description and entry fields",
+      "source_block_sha256": "029c2a00205d3e5123fc17a7b2d4e5da9f1ab349aea06dd8b31e6c998b4683a6"
+    },
+    "CS 4120": {
+      "title": "Natural Language Processing",
+      "category": "ai_ml",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+      "locator": "CS 4120 exact description and entry fields",
+      "source_block_sha256": "8ce6cc7f08578734f1acb6bfb4e5175b5b9bbc83473d9250cc7eb44d8bb67fe6"
+    },
+    "DS 4400": {
+      "title": "Machine Learning",
+      "category": "ai_ml",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/ds/",
+      "locator": "DS 4400 exact description and entry fields",
+      "source_block_sha256": "c160bd5c051e597e518ca1393c9763b3b420bba8584c0addcd09c7bf9846e01a"
+    },
+    "DS 4420": {
+      "title": "Advanced Machine Learning",
+      "category": "ai_ml",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/ds/",
+      "locator": "DS 4420 exact description and entry fields",
+      "source_block_sha256": "acb8c85043d55af7975a140efd25c2944d627e5ff22cc1614fc0c6d8147a85dc"
+    },
+    "BIOL 2217": {
+      "title": "Integrated Anatomy and Physiology 1",
+      "category": "applications",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/biol/",
+      "locator": "BIOL 2217 exact description and entry fields",
+      "source_block_sha256": "e3da7bf621fdf75016732337b487880682fce03b4c8f5819f877fa51c5a0cefa"
+    },
+    "BIOL 2218": {
+      "title": "Lab for BIOL 2217",
+      "category": "applications",
+      "status": "reviewed",
+      "hours": "1",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/biol/",
+      "locator": "BIOL 2218 exact description and entry fields",
+      "source_block_sha256": "cea05cb34ada29b2f541d6cb0bee91b36455c29ca77e3c1dddd03ae1410da374"
+    },
+    "CRIM 3040": {
+      "title": "Psychology of Crime",
+      "category": "applications",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/crim/",
+      "locator": "CRIM 3040 exact description and entry fields",
+      "source_block_sha256": "927daaa647f72156b2d691f2d9a20c529d1a4fb5faf1c18ee4e9d2c97616bb68"
+    },
+    "MKTG 4606": {
+      "title": "Digital, Analytics, Technology, and Automation Research Practicum",
+      "category": "applications",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/mktg/",
+      "locator": "MKTG 4606 exact description and entry fields",
+      "source_block_sha256": "c0e62e52f11fc482de2bd6f8cab8d52e5e0545e55698212b6026f58a2382e143"
+    },
+    "PHYS 1145": {
+      "title": "Physics for Life Sciences 1",
+      "category": "applications",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/phys/",
+      "locator": "PHYS 1145 exact description and entry fields",
+      "source_block_sha256": "22a6f4c0c7061fb0be55adc68142f6c46ea34ae2a0e9481479f5cbecbab491b5"
+    },
+    "PHYS 1146": {
+      "title": "Lab for PHYS 1145",
+      "category": "applications",
+      "status": "reviewed",
+      "hours": "1",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/phys/",
+      "locator": "PHYS 1146 exact description and entry fields",
+      "source_block_sha256": "e6c5355d7952608bdfc211c4d3343b02410a4f32202f9d74d74544e1e755e1c7"
+    },
+    "SLPA 1101": {
+      "title": "Bridging Minds: Introduction to Speech, Language, and Hearing Sciences",
+      "category": "applications",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/slpa/",
+      "locator": "SLPA 1101 exact description and entry fields",
+      "source_block_sha256": "14f1020c589abcd68fe2ec5580e12e341b8607c7f2350d20ceba95abc50f97ef"
+    },
+    "SLPA 1102": {
+      "title": "Language Development",
+      "category": "applications",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/slpa/",
+      "locator": "SLPA 1102 exact description and entry fields",
+      "source_block_sha256": "78b577a0a4b509b18e8c7200deca9d7f12ff148ae346a63170aa4a8f3cf42e4d"
+    },
+    "SLPA 1103": {
+      "title": "Anatomy and Physiology of Speech and Hearing Mechanism",
+      "category": "applications",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/slpa/",
+      "locator": "SLPA 1103 exact description and entry fields",
+      "source_block_sha256": "5f1e7462bd6135169a8530cb310c5ee13f0d25e2d42d7290ef51b2b11a9f8aee"
+    },
+    "SLPA 1200": {
+      "title": "Phonetics",
+      "category": "applications",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/slpa/",
+      "locator": "SLPA 1200 exact description and entry fields",
+      "source_block_sha256": "9953d094e6a098a6650b095c7a57301c2501769dbc0d89aa709578a8011b1334"
+    },
+    "SLPA 1203": {
+      "title": "Introduction to Audiology",
+      "category": "applications",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/slpa/",
+      "locator": "SLPA 1203 exact description and entry fields",
+      "source_block_sha256": "de59af756feb6f256dfe5c743118f3449ca6938772293649fd93df92c2279fa2"
+    },
+    "SLPA 1205": {
+      "title": "Speech and Hearing Science",
+      "category": "applications",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/slpa/",
+      "locator": "SLPA 1205 exact description and entry fields",
+      "source_block_sha256": "6ba26a73ac5c28a74a6e19516a5036fabeec39659e11af26b3ccd7b188292cf6"
+    },
+    "SLPA 4219": {
+      "title": "Introduction to Aural Rehabilitation",
+      "category": "applications",
+      "status": "reviewed",
+      "hours": "3",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/slpa/",
+      "locator": "SLPA 4219 exact description and entry fields",
+      "source_block_sha256": "95116c1b6ba68cfbe98448a492dbd525bcce5d350b742df3d082703cb0cc4d9a"
+    },
+    "SLPA 4500": {
+      "title": "Language Disorders across the Life Span",
+      "category": "applications",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/slpa/",
+      "locator": "SLPA 4500 exact description and entry fields",
+      "source_block_sha256": "dd5c29cbe11133a3688e1861f4c5c802fc96e3f9d3e3db30a69576cb5f318eb3"
+    },
+    "SLPA 4651": {
+      "title": "Speech Disorders across the Life Span",
+      "category": "applications",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/slpa/",
+      "locator": "SLPA 4651 exact description and entry fields",
+      "source_block_sha256": "7e3ff5e93e9c7ddf0c6e1c492bf67a7c7254c9ace010c371a262f0b8f6401e7b"
+    },
+    "SLPA 5107": {
+      "title": "Clinical Procedures",
+      "category": "applications",
+      "status": "reviewed",
+      "hours": "3-4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/slpa/",
+      "locator": "SLPA 5107 exact description and entry fields",
+      "source_block_sha256": "45270f915e25c82db24ab939d31cd99eba51286e7c4d1bc8c2013ebd5cdd1f30"
+    },
+    "AFCS 2600": {
+      "title": "Issues in Race, Science, and Technology",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/afcs/",
+      "locator": "AFCS 2600 exact description and entry fields",
+      "source_block_sha256": "585eed6764a656880ee149ca6fe18e320b79bc00e7ce418bd735912202f58e2a"
+    },
+    "AFCS 3210": {
+      "title": "Black Abolition Studies: Carcerality, Liberation, and Resistance",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/afcs/",
+      "locator": "AFCS 3210 exact description and entry fields",
+      "source_block_sha256": "5572a098b9b6354e8f9c28d924a793f108fad362b4a96e75fb256cfd2285d9e7"
+    },
+    "CRIM 1100": {
+      "title": "Introduction to Criminal Justice",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/crim/",
+      "locator": "CRIM 1100 exact description and entry fields",
+      "source_block_sha256": "5e27a4ceb3db01efe21c3cf02bdbb612f3f633e043a272e5489a4f740e62c009"
+    },
+    "CRIM 1110": {
+      "title": "Criminal Due Process",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/crim/",
+      "locator": "CRIM 1110 exact description and entry fields",
+      "source_block_sha256": "649f6bd6d05ef826e3f383d873a39aed33e0f025319d86f38a17d0429ec003fd"
+    },
+    "CRIM 1120": {
+      "title": "Criminology",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/crim/",
+      "locator": "CRIM 1120 exact description and entry fields",
+      "source_block_sha256": "5668d1962ba341d96cae002a18dcaf41cea088be0a2a15b5014cbac653600dd1"
+    },
+    "CRIM 1300": {
+      "title": "The Death Penalty",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/crim/",
+      "locator": "CRIM 1300 exact description and entry fields",
+      "source_block_sha256": "e9618cad82479b365101e2fa5a407e2609e79ef02341172560215e656e04c8d9"
+    },
+    "CRIM 1400": {
+      "title": "Human Trafficking",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/crim/",
+      "locator": "CRIM 1400 exact description and entry fields",
+      "source_block_sha256": "43dbe6da107666a0e3c3b500cefbf3ed1db448768dea3ae5a644b1f17bdb56e4"
+    },
+    "CRIM 1500": {
+      "title": "Corruption, Integrity, and Accountability",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/crim/",
+      "locator": "CRIM 1500 exact description and entry fields",
+      "source_block_sha256": "706fbb186de51ebf59604d0aab94e3537bb4f7a8f552dff7f4391cecdf92ba4e"
+    },
+    "CRIM 1700": {
+      "title": "Crime, Media, and Politics",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/crim/",
+      "locator": "CRIM 1700 exact description and entry fields",
+      "source_block_sha256": "c921de57327cdb4075f096915a1cb2ab29c8067efb88665ca09c72c4c463426f"
+    },
+    "CRIM 2310": {
+      "title": "Courts: The Third Branch of Government",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/crim/",
+      "locator": "CRIM 2310 exact description and entry fields",
+      "source_block_sha256": "794a06350c14d711a4d22cfc6383b6282d12d9c9c17191d3f0ee85c6cecf509b"
+    },
+    "CRIM 2320": {
+      "title": "Youth Crime and Justice",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/crim/",
+      "locator": "CRIM 2320 exact description and entry fields",
+      "source_block_sha256": "56d037c7e35190bf770a7993c04a8f76b7f0aa6911cdf832ad4a93fad2f4a39d"
+    },
+    "CRIM 2330": {
+      "title": "Punishment in the Age of Mass Incarceration",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/crim/",
+      "locator": "CRIM 2330 exact description and entry fields",
+      "source_block_sha256": "de22afa2934fec8b7971efb23983b65b01983fc204236e438fe1373834e4299f"
+    },
+    "CRIM 2350": {
+      "title": "Policing a Democratic Society",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/crim/",
+      "locator": "CRIM 2350 exact description and entry fields",
+      "source_block_sha256": "a500a5ac81025adafa060b084a672cc5ecae05435d357a517ba5af80ecde09ea"
+    },
+    "CRIM 2370": {
+      "title": "Restorative Justice: Transforming the System",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/crim/",
+      "locator": "CRIM 2370 exact description and entry fields",
+      "source_block_sha256": "4eea6d58c1b2cb59cb9d25e911acaba32ae9ed9f937e9f559524c89403e27546"
+    },
+    "CRIM 2380": {
+      "title": "Black Families and Incarceration",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/crim/",
+      "locator": "CRIM 2380 exact description and entry fields",
+      "source_block_sha256": "0edec30a6e79c2053a16c6e780d5f0845589025376683507adf5d439f0f1dd13"
+    },
+    "CRIM 3010": {
+      "title": "Criminal Violence",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/crim/",
+      "locator": "CRIM 3010 exact description and entry fields",
+      "source_block_sha256": "4a8d39580ddc27e28c5c3ed3c403355a832249841f5f87acc3b51ac7e05cd3b2"
+    },
+    "CRIM 3030": {
+      "title": "Global Criminology",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/crim/",
+      "locator": "CRIM 3030 exact description and entry fields",
+      "source_block_sha256": "34777b7000edab80b27d71523493a76ef5d7a536fee11c2aa30b159a406957ce"
+    },
+    "CRIM 3050": {
+      "title": "Organized Crime",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/crim/",
+      "locator": "CRIM 3050 exact description and entry fields",
+      "source_block_sha256": "188ee64a4f509051b56980476ce09814474db48137b48e33c80f2b0f53f7600a"
+    },
+    "CRIM 3060": {
+      "title": "Political Crime and Terrorism",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/crim/",
+      "locator": "CRIM 3060 exact description and entry fields",
+      "source_block_sha256": "615828626bb8591a5e7cf6a0d67245d2afba43b00d1e588caddd16e6abdc1492"
+    },
+    "CRIM 3070": {
+      "title": "Corporate and White-Collar Crime",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/crim/",
+      "locator": "CRIM 3070 exact description and entry fields",
+      "source_block_sha256": "edd37b58b1a5d41b7141374af1396fcb7dc49d6f6d108e9397d916fdf7448679"
+    },
+    "CRIM 3100": {
+      "title": "Criminal Law",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/crim/",
+      "locator": "CRIM 3100 exact description and entry fields",
+      "source_block_sha256": "a0438233e71792cab96ca6b15e175efe541d2928a1881c32e1eb4adf1fa1cadd"
+    },
+    "CRIM 3110": {
+      "title": "Gender, Crime, and Justice",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/crim/",
+      "locator": "CRIM 3110 exact description and entry fields",
+      "source_block_sha256": "ecfc5b8c6920a55650972517ebdaa735b61fb5853abc820462f81b6b43b1d745"
+    },
+    "CRIM 3120": {
+      "title": "Race, Crime, and Justice",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/crim/",
+      "locator": "CRIM 3120 exact description and entry fields",
+      "source_block_sha256": "cdc7508896bf19f6ca4e952d80a409e6a9e872cf3ffa0188cce242719546b00d"
+    },
+    "CRIM 3600": {
+      "title": "Criminal Justice Research Methods",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/crim/",
+      "locator": "CRIM 3600 exact description and entry fields",
+      "source_block_sha256": "8e4ba0b5e8cd79b94bd9b68e5c2853ee89e7f9e7a6bf74b5db78c63d250b7263"
+    },
+    "CRIM 4040": {
+      "title": "Crime Prevention",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/crim/",
+      "locator": "CRIM 4040 exact description and entry fields",
+      "source_block_sha256": "ab81ed6a401f2ecb22ab47a2621721e5929b629a5288754b2dc9681bd79b3e99"
+    },
+    "CRIM 4949": {
+      "title": "Senior Capstone Seminar",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/crim/",
+      "locator": "CRIM 4949 exact description and entry fields",
+      "source_block_sha256": "82f2ce9a1d2a8de3f0385d01c3f1bba65bd5c6cad3141b20107144686388e500"
+    },
+    "CY 4170": {
+      "title": "The Law, Ethics, and Policy of Data and Digital Technologies",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/cy/",
+      "locator": "CY 4170 exact description and entry fields",
+      "source_block_sha256": "7dafee951637d8e36eee02be3c06a5e4d44f11e5ac9c3c51551a1bad4ed187a4"
+    },
+    "CY 5240": {
+      "title": "Cyberlaw: Privacy, Ethics, and Digital Rights",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/cy/",
+      "locator": "CY 5240 exact description and entry fields",
+      "source_block_sha256": "d8463de80a09dfe27b665c6563f78f524e28993af291344b9f96abb3ec029cf2"
+    },
+    "DS 1300": {
+      "title": "Knowledge in a Digital World",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/ds/",
+      "locator": "DS 1300 exact description and entry fields",
+      "source_block_sha256": "ed0693696eb7ab9fcb89645ec03cb2073d7c283b1e5d493c2f1b2d110e6c15c1"
+    },
+    "ENGW 1102": {
+      "title": "First-Year Writing for Multilingual Writers",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/engw/",
+      "locator": "ENGW 1102 exact description and entry fields",
+      "source_block_sha256": "51ee5fb0eb933e85cc673656d8c6bb446541727a44a5933c669820dab909d3f9"
+    },
+    "ENGW 1111": {
+      "title": "First-Year Writing",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/engw/",
+      "locator": "ENGW 1111 exact description and entry fields",
+      "source_block_sha256": "27bc792ffaa980c34d1ee259432d847d23769cd6cd90445339c1dbe7a535186a"
+    },
+    "ENGW 1114": {
+      "title": "First-Year Writing with Service-Learning",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/engw/",
+      "locator": "ENGW 1114 exact description and entry fields",
+      "source_block_sha256": "302b3d1a90da3ed3a235111214f908a781e3eddab3ec2b4a979d250c064d9746"
+    },
+    "ENGW 3302": {
+      "title": "Advanced Writing in the Technical Professions",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/engw/",
+      "locator": "ENGW 3302 exact description and entry fields",
+      "source_block_sha256": "f61bc57fa76dc22962c468f39d21850a49307171eb7388667c500eed58f9926c"
+    },
+    "ENGW 3306": {
+      "title": "Advanced Writing in the Health Professions",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/engw/",
+      "locator": "ENGW 3306 exact description and entry fields",
+      "source_block_sha256": "09d65d7af1dee1a0162add9842202807094787c432383964e783e77f0c922f95"
+    },
+    "ENGW 3308": {
+      "title": "Advanced Writing in the Social Sciences",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/engw/",
+      "locator": "ENGW 3308 exact description and entry fields",
+      "source_block_sha256": "6ef05471adcdd59abb81e2c187dbcd49823c3ad133ffa61b783241fbffd61ec2"
+    },
+    "ENGW 3315": {
+      "title": "Interdisciplinary Advanced Writing in the Disciplines",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/engw/",
+      "locator": "ENGW 3315 exact description and entry fields",
+      "source_block_sha256": "5d9fbe847aacf6a33283702065e487b0f6de5f75e56d8105bf3d2db0d99831cc"
+    },
+    "HIST 2220": {
+      "title": "History of Technology",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/hist/",
+      "locator": "HIST 2220 exact description and entry fields",
+      "source_block_sha256": "720be34669cbfa60dfcca165cabc60683a2ab87fceae21f70fb04ddd98ce0eb8"
+    },
+    "INSH 2102": {
+      "title": "Bostonography: The City through Data, Texts, Maps, and Networks",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/insh/",
+      "locator": "INSH 2102 exact description and entry fields",
+      "source_block_sha256": "0b33f6a2487db9e2163cb5e24c7c1ac648276e8d79cb999d4e53db2e17d069de"
+    },
+    "INSH 3101": {
+      "title": "Research Methods in the Social Sciences",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/insh/",
+      "locator": "INSH 3101 exact description and entry fields",
+      "source_block_sha256": "8b474be06acdd30d24ab55cb94b67a5b99eff3b89728bbbaa1331c43c680d9ab"
+    },
+    "JRNL 1101": {
+      "title": "Journalism 1: Fundamentals of Reporting and Writing",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/jrnl/",
+      "locator": "JRNL 1101 exact description and entry fields",
+      "source_block_sha256": "cbb83335bcff1cca05f04a1119ff33c6fa51eecce34d5e330692f113adc91688"
+    },
+    "JRNL 1102": {
+      "title": "Journalist\u2019s Toolbox",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "1",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/jrnl/",
+      "locator": "JRNL 1102 exact description and entry fields",
+      "source_block_sha256": "8c1b1b82d458ec0dd32c11f83777d46df3c8c87c2a7b73fa2d5bce817fe14cf9"
+    },
+    "JRNL 1150": {
+      "title": "Understanding Today\u2019s News",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/jrnl/",
+      "locator": "JRNL 1150 exact description and entry fields",
+      "source_block_sha256": "91f51f27951ab801321d131c25d3f038d960a9c782cf264848a4f2aefd2b27a1"
+    },
+    "JRNL 2201": {
+      "title": "Journalism 2: Intermediate Reporting",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/jrnl/",
+      "locator": "JRNL 2201 exact description and entry fields",
+      "source_block_sha256": "5fa661d74750feacb6edfe1999c4f6fe6a8422627f891425d85dee9dbed13793"
+    },
+    "JRNL 2301": {
+      "title": "Visual Storytelling in Journalism",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/jrnl/",
+      "locator": "JRNL 2301 exact description and entry fields",
+      "source_block_sha256": "5e0d52a68c1222b4360eaeab29320c5c29c13a2b344f6a3dfa2121d7a5a1f4f3"
+    },
+    "JRNL 3550": {
+      "title": "The First Amendment and the Media",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/jrnl/",
+      "locator": "JRNL 3550 exact description and entry fields",
+      "source_block_sha256": "4d154c822d467edef6f719e50bc5e5555262dfc6bcb84ace99f691bcb3cf73c1"
+    },
+    "JRNL 3610": {
+      "title": "Digital Storytelling and Social Media",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/jrnl/",
+      "locator": "JRNL 3610 exact description and entry fields",
+      "source_block_sha256": "16f23a4eeb91aaa7efca57a945c825de49d1208d9db810a5c602d48472360faf"
+    },
+    "JRNL 3700": {
+      "title": "Data Storytelling",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/jrnl/",
+      "locator": "JRNL 3700 exact description and entry fields",
+      "source_block_sha256": "f6e89f52ae10bc835d65cc362af41b4413d95b31edd78a0bef5882cff0768972"
+    },
+    "JRNL 4650": {
+      "title": "Ethics and Diversity in the News Media",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/jrnl/",
+      "locator": "JRNL 4650 exact description and entry fields",
+      "source_block_sha256": "375e531910d4b427e7d47e6cfd41895e2bd9ed2598d80caabbe2f3059da71bef"
+    },
+    "PHIL 1145": {
+      "title": "Technology and Human Values",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/phil/",
+      "locator": "PHIL 1145 exact description and entry fields",
+      "source_block_sha256": "20e9ca0a8e0a4172d778157d012dec9a8cbaabf27ef5ab26d2e9508f5b1a1b4a"
+    },
+    "PHIL 1300": {
+      "title": "Knowledge in a Digital World",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/phil/",
+      "locator": "PHIL 1300 exact description and entry fields",
+      "source_block_sha256": "53c779490f0bfdd950579bdb6072ba20bbec1af89f5e3351f6e5bf6cdfe4f9c3"
+    },
+    "SOCL 1101": {
+      "title": "Introduction to Sociology",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/socl/",
+      "locator": "SOCL 1101 exact description and entry fields",
+      "source_block_sha256": "e934ed34b1c422777f5a696ab0b19dc59082d296d1f3c3b09983ec39cd3d2d38"
+    },
+    "SOCL 1280": {
+      "title": "The Twenty-First-Century Workplace",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/socl/",
+      "locator": "SOCL 1280 exact description and entry fields",
+      "source_block_sha256": "81d55b456f66732d016e8b403b6f27ca49b8d568fded29c4852aa561359b53b6"
+    },
+    "SOCL 2321": {
+      "title": "Research Methods in Sociology",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/socl/",
+      "locator": "SOCL 2321 exact description and entry fields",
+      "source_block_sha256": "8806e28b6791be45503c18a97e07f4afdfd1bbf6de217e27588e1950f182f829"
+    },
+    "SOCL 2485": {
+      "title": "Environment, Technology, and Society",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/socl/",
+      "locator": "SOCL 2485 exact description and entry fields",
+      "source_block_sha256": "f6a79e44618c2afc1ab9a5ad7f3bbed21523b37a644f4a57f2539be3bfe2b663"
+    },
+    "SOCL 3300": {
+      "title": "Social Theory",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/socl/",
+      "locator": "SOCL 3300 exact description and entry fields",
+      "source_block_sha256": "0b63f3d2ab04490e73240d6f05a66ba8d26f9735d61f5cc420217d858a169af9"
+    },
+    "SOCL 4528": {
+      "title": "Technology and Society",
+      "category": "human_context",
+      "status": "reviewed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/socl/",
+      "locator": "SOCL 4528 exact description and entry fields",
+      "source_block_sha256": "ecd2b8168c2a3dc072b4f1abaf541a416de4f175b6ee33a8c2709d54bd5cbe61"
+    },
+    "CRIM 3540": {
+      "title": "Substance Use and Social Justice",
+      "category": "other",
+      "status": "mixed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/crim/",
+      "locator": "CRIM 3540 exact description and entry fields",
+      "source_block_sha256": "42636fe2219353975b9b5c76866be463344139ca56834cd96315bbabba6f2b20"
+    },
+    "DS 4200": {
+      "title": "Information Presentation and Visualization",
+      "category": "other",
+      "status": "mixed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/ds/",
+      "locator": "DS 4200 exact description and entry fields",
+      "source_block_sha256": "92119d2e0397333b4d05065a3854228077ff272f5f27b02f63839426e391044e"
+    },
+    "EECE 2160": {
+      "title": "Embedded Design: Enabling Robotics",
+      "category": "other",
+      "status": "mixed",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/eece/",
+      "locator": "EECE 2160 exact description and entry fields",
+      "source_block_sha256": "e0deae63e4beb22ccad3103672366d24aa86a739f51378aeec3798e0f10c1353"
+    },
+    "CRIM 1000": {
+      "title": "Criminal Justice at Northeastern",
+      "category": "other",
+      "status": "unclassified",
+      "hours": "1",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/crim/",
+      "locator": "CRIM 1000 exact description and entry fields",
+      "source_block_sha256": "393622f345d65bf946af6d271cc68ae101675a5c3609e53d5719d4dc34600a4c"
+    },
+    "CS 1200": {
+      "title": "First Year Seminar",
+      "category": "other",
+      "status": "unclassified",
+      "hours": "1",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+      "locator": "CS 1200 exact description and entry fields",
+      "source_block_sha256": "79bac09895c0a018862e18922144ceade7d85d41e6706a4851671bec18e4d40b"
+    },
+    "CS 1210": {
+      "title": "Professional Development for Khoury Co-op",
+      "category": "other",
+      "status": "unclassified",
+      "hours": "1",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+      "locator": "CS 1210 exact description and entry fields",
+      "source_block_sha256": "713aad633a33cd9584640ca4543968b20b92a6c25cda440f067180d6b7540011"
+    },
+    "EEAM 2000": {
+      "title": "Professional Development for Co-op",
+      "category": "other",
+      "status": "unclassified",
+      "hours": "1",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/eeam/",
+      "locator": "EEAM 2000 exact description and entry fields",
+      "source_block_sha256": "b025389c6e5ac834bd6db3c87810015a57ddc599d9583a81fc38bd116e757ea4"
+    },
+    "EESH 2000": {
+      "title": "Professional Development for Co-op",
+      "category": "other",
+      "status": "unclassified",
+      "hours": "1",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/eesh/",
+      "locator": "EESH 2000 exact description and entry fields",
+      "source_block_sha256": "f6c708554765d65af8a0e2a72582dc5aa7746d077f12ba5a9e10bb47a08a39aa"
+    },
+    "HLTH 1000": {
+      "title": "College: An Introduction",
+      "category": "other",
+      "status": "unclassified",
+      "hours": "1",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/hlth/",
+      "locator": "HLTH 1000 exact description and entry fields",
+      "source_block_sha256": "af3e84f5d372574af8a2a7b7b5142dd6ed089841098ff3de1956f7ff3db394ca"
+    },
+    "INPR 1000": {
+      "title": "First-Year Interdisciplinary Seminar",
+      "category": "other",
+      "status": "unclassified",
+      "hours": "1",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/inpr/",
+      "locator": "INPR 1000 exact description and entry fields",
+      "source_block_sha256": "03ffa92fd86117a624b12b85293a84134c3120a8ca88ef610ea604b7434f4f83"
+    },
+    "JRNL 1000": {
+      "title": "Journalism at Northeastern",
+      "category": "other",
+      "status": "unclassified",
+      "hours": "1",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/jrnl/",
+      "locator": "JRNL 1000 exact description and entry fields",
+      "source_block_sha256": "44a5a47640579f37ede5a6936128e4dfcb3bc8ccfdfc214d6dbf03bcc5667c6f"
+    },
+    "SLPA 2000": {
+      "title": "Introduction to Co-op",
+      "category": "other",
+      "status": "unclassified",
+      "hours": "1",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/slpa/",
+      "locator": "SLPA 2000 exact description and entry fields",
+      "source_block_sha256": "dd82e3d7576e3eae0453bc21f9a408e75f92e1f01ea28d9ea0c91fa6ded310da"
+    },
+    "SOCL 1000": {
+      "title": "Sociology at Northeastern",
+      "category": "other",
+      "status": "unclassified",
+      "hours": "1",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/socl/",
+      "locator": "SOCL 1000 exact description and entry fields",
+      "source_block_sha256": "d801fd0e683d91836d893cc711253cf7124e85071b0c6f614127e9f8c7dbaef2"
+    },
+    "SOCL 4600": {
+      "title": "Senior Seminar",
+      "category": "other",
+      "status": "unclassified",
+      "hours": "4",
+      "source_url": "https://catalog.northeastern.edu/course-descriptions/socl/",
+      "locator": "SOCL 4600 exact description and entry fields",
+      "source_block_sha256": "a396e18d938e98acde2f06b84b2a1ab97f00efc153f26eef791321ce9d626ea5"
+    }
+  }
 }
